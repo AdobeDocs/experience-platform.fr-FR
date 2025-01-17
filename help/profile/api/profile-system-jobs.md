@@ -5,10 +5,10 @@ type: Documentation
 description: Adobe Experience Platform vous permet de supprimer un jeu de données ou un lot de la banque de profils afin de supprimer les données du profil client en temps réel qui ne sont plus nécessaires ou qui ont été ajoutées par erreur. Pour ce faire, vous devez utiliser l’API Profile pour créer une tâche système Profile ou supprimer une requête.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 3664d3d1f6433bce4678ab8b17c008c064d8e943
+source-git-commit: 16778d0edbad4539a4ff5084a2f22ca5f08e83ec
 workflow-type: tm+mt
-source-wordcount: '1977'
-ht-degree: 36%
+source-wordcount: '2020'
+ht-degree: 35%
 
 ---
 
@@ -64,6 +64,8 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 >[!TAB Microsoft Azure]
 
++++ Exemple de requête pour afficher vos tâches système.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -72,11 +74,15 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
++++
+
 >[!TAB Amazon Web Services (AWS)]
 
 >[!IMPORTANT]
 >
 >Vous **devez** utiliser l’en-tête de requête `x-sandbox-id` au lieu de l’en-tête de requête `x-sandbox-name` lors de l’utilisation de ce point d’entrée avec AWS.
+
++++ Exemple de requête pour afficher vos tâches système.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
@@ -85,6 +91,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-id: {SANDBOX_ID}' \
 ```
+
++++
 
 >[!ENDTABS]
 
@@ -133,8 +141,6 @@ Une réponse réussie comprend un tableau « enfants » avec un objet pour chaqu
 }
 ```
 
-+++
-
 | Propriété | Description |
 | -------- | ----------- |
 | `_page.count` | Nombre total de requêtes. Cette réponse a été tronquée pour l’espace. |
@@ -142,6 +148,8 @@ Une réponse réussie comprend un tableau « enfants » avec un objet pour chaqu
 | `jobType` | Type de tâche en cours de création. Dans ce cas, il renverra toujours `"DELETE"`. |
 | `status` | État de la requête de suppression. Les valeurs possibles sont `"NEW"`, `"PROCESSING"`, `"COMPLETED"` et `"ERROR"`. |
 | `metrics` | Objet contenant le nombre d’enregistrements traités (`"recordsProcessed"`) et la durée, en secondes, du traitement de la requête, ou la durée nécessaire à l’exécution de la requête (`"timeTakenInSec"`). |
+
++++
 
 >[!TAB Amazon Web Services (AWS)]
 
@@ -222,6 +230,8 @@ POST /system/jobs
 
 >[!TAB Microsoft Azure]
 
++++ Exemple de requête pour supprimer un jeu de données.
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/system/jobs \
@@ -235,6 +245,8 @@ curl -X POST \
       }'
 ```
 
++++
+
 | Propriété | Description |
 | -------- | ----------- |
 | `dataSetId` | Identifiant du jeu de données à supprimer. |
@@ -244,6 +256,8 @@ curl -X POST \
 >[!IMPORTANT]
 >
 >Vous **devez** utiliser l’en-tête de requête `x-sandbox-id` au lieu de l’en-tête de requête `x-sandbox-name` lors de l’utilisation de ce point d’entrée avec AWS.
+
++++ Exemple de requête pour supprimer un jeu de données.
 
 ```shell
 curl -X POST \
@@ -257,6 +271,8 @@ curl -X POST \
         "dataSetId": "5c802d3cd83fc114b741c4b5"
       }'
 ```
+
++++
 
 | Propriété | Description |
 | -------- | ----------- |
@@ -290,12 +306,12 @@ Une réponse réussie renvoie les détails de la requête de suppression créée
 }
 ```
 
-+++
-
 | Propriété | Description |
 | -------- | ----------- |
 | `id` | Identifiant unique généré par le système et en lecture seule pour la requête de suppression. |
 | `dataSetId` | Identifiant du jeu de données, tel que spécifié dans la requête POST. |
+
++++
 
 >[!TAB Amazon Web Services (AWS)]
 
@@ -322,14 +338,14 @@ Une réponse réussie renvoie les détails de la requête système nouvellement 
 }
 ```
 
-+++
-
 | Propriété | Description |
 | -------- | ----------- |
 | `requestId` | Identifiant de la tâche système. |
 | `requestType` | Type de la tâche système. Les valeurs possibles sont `BACKFILL_TTL`, `DELETE_EE_BATCH` et `TRUNCATE_DATASET`. |
 | `status` | Statut de la tâche système. Les valeurs possibles sont `NEW`, `SUCCESS`, `ERROR`, `FAILED` et `IN-PROGRESS`. |
 | `properties` | Un objet contenant des identifiants de lot et/ou de jeu de données de la tâche système. |
+
++++
 
 >[!ENDTABS]
 
@@ -359,6 +375,8 @@ POST /system/jobs
 
 >[!TAB Microsoft Azure]
 
++++ Exemple de requête de suppression d’un lot.
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/system/jobs \
@@ -373,6 +391,8 @@ curl -X POST \
       }'
 ```
 
++++
+
 | Propriété | Description |
 | -------- | ----------- |
 | `datasetId` | Identifiant du jeu de données pour le lot que vous souhaitez supprimer. |
@@ -383,6 +403,8 @@ curl -X POST \
 >[!IMPORTANT]
 >
 >Vous **devez** utiliser l’en-tête de requête `x-sandbox-id` au lieu de l’en-tête de requête `x-sandbox-name` lors de l’utilisation de ce point d’entrée avec AWS.
+
++++ Exemple de requête de suppression d’un lot.
 
 ```shell
 curl -X POST \
@@ -398,13 +420,14 @@ curl -X POST \
       }'
 ```
 
++++
+
 | Propriété | Description |
 | -------- | ----------- |
 | `datasetId` | Identifiant du jeu de données pour le lot que vous souhaitez supprimer. |
 | `batchId` | L’identifiant du lot que vous souhaitez supprimer. |
 
 >[!ENDTABS]
-
 
 **Réponse**
 
@@ -417,6 +440,8 @@ curl -X POST \
 >[!TAB Microsoft Azure]
 
 Une réponse réussie renvoie les détails de la requête de suppression créée, y compris un identifiant unique généré par le système et en lecture seule pour la requête. Vous pouvez l’utiliser pour rechercher la requête et en vérifier l’état. Le `"status"` pour la requête au moment de sa création est `"NEW"` jusqu’à ce qu’elle commence à être traitée. La valeur `"batchId"` dans la réponse doit correspondre à la valeur `"batchId"` envoyée dans la requête.
+
++++ Réponse réussie pour la création d’une requête de suppression.
 
 ```json
 {
@@ -436,6 +461,8 @@ Une réponse réussie renvoie les détails de la requête de suppression créée
 | `id` | Identifiant unique généré par le système et en lecture seule pour la requête de suppression. |
 | `datasetId` | L’identifiant du jeu de données spécifié. |
 | `batchId` | Identifiant du lot, tel que spécifié dans la requête POST. |
+
++++
 
 >[!TAB Amazon Web Services (AWS)]
 
@@ -462,14 +489,14 @@ Une réponse réussie renvoie les détails de la requête système nouvellement 
 }
 ```
 
-+++
-
 | Propriété | Description |
 | -------- | ----------- |
 | `requestId` | Identifiant de la tâche système. |
 | `requestType` | Type de la tâche système. Les valeurs possibles sont `BACKFILL_TTL`, `DELETE_EE_BATCH` et `TRUNCATE_DATASET`. |
 | `status` | Statut de la tâche système. Les valeurs possibles sont `NEW`, `SUCCESS`, `ERROR`, `FAILED` et `IN-PROGRESS`. |
 | `properties` | Un objet contenant des identifiants de lot et/ou de jeu de données de la tâche système. |
+
++++
 
 >[!ENDTABS]
 
@@ -517,13 +544,17 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 >[!TAB Microsoft Azure]
 
++++ Exemple de requête pour afficher une tâche de profil.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 >[!TAB Amazon Web Services (AWS)]
 
@@ -531,13 +562,17 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 >
 >Vous **devez** utiliser l’en-tête de requête `x-sandbox-id` au lieu de l’en-tête de requête `x-sandbox-name` lors de l’utilisation de ce point d’entrée avec AWS.
 
++++ Exemple de requête pour afficher une tâche de profil.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-id: {SANDBOX_ID}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}'
 ```
+
++++
 
 >[!ENDTABS]
 
@@ -553,6 +588,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 >[!TAB Microsoft Azure]
 
 La réponse fournit les détails de la requête de suppression, y compris son état mis à jour. L’identifiant de la requête de suppression dans la réponse (la valeur `"id"`) doit correspondre à l’identifiant envoyé dans le chemin d’accès de la requête.
+
++++ Réponse réussie pour l’affichage d’une requête de suppression.
 
 ```json
 {
@@ -572,6 +609,8 @@ La réponse fournit les détails de la requête de suppression, y compris son é
 | `jobType` | Le type de traitement en cours de création ; dans ce cas, il renvoie toujours des `"DELETE"`. |
 | `status` | État de la requête de suppression. Les valeurs possibles sont `NEW`, `PROCESSING`, `COMPLETED` et `ERROR`. |
 | `metrics` | Un tableau qui inclut le nombre d’enregistrements ayant été traités (`"recordsProcessed"`) et la durée, en secondes, du traitement de la requête, ou la durée nécessaire à l’exécution de la requête (`"timeTakenInSec"`). |
+
++++
 
 >[!TAB Amazon Web Services (AWS)]
 
@@ -598,14 +637,14 @@ Une réponse réussie renvoie les détails de la requête système spécifiée.
 }
 ```
 
-+++
-
 | Propriété | Description |
 | -------- | ----------- |
 | `requestId` | Identifiant de la tâche système. |
 | `requestType` | Type de la tâche système. Les valeurs possibles sont `BACKFILL_TTL`, `DELETE_EE_BATCH` et `TRUNCATE_DATASET`. |
 | `status` | Statut de la tâche système. Les valeurs possibles sont `NEW`, `SUCCESS`, `ERROR`, `FAILED` et `IN-PROGRESS`. |
 | `properties` | Un objet contenant des identifiants de lot et/ou de jeu de données de la tâche système. |
+
++++
 
 >[!ENDTABS]
 
@@ -626,45 +665,18 @@ DELETE /system/jobs/{DELETE_REQUEST_ID}
 ```
 
 | Paramètre | Description |
-|---|---|
+| --------- | ----------- |
 | {DELETE_REQUEST_ID} | Identifiant de la requête de suppression que vous souhaitez supprimer. |
 
 **Requête**
 
->[!IMPORTANT]
->
->La requête suivante diffère entre les instances Azure et AWS.
-
->[!BEGINTABS]
-
->[!TAB Microsoft Azure]
-
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
+curl -X POST https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
-
->[!TAB Amazon Web Services (AWS)]
-
->[!IMPORTANT]
->
->Vous **devez** utiliser l’en-tête de requête `x-sandbox-id` au lieu de l’en-tête de requête `x-sandbox-name` lors de l’utilisation de ce point d’entrée avec AWS.
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-id: {SANDBOX_ID}' \
-```
-
->[!ENDTABS]
-
 
 **Réponse**
 
