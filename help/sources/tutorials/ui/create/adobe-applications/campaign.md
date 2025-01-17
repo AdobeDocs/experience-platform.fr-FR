@@ -3,16 +3,16 @@ keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;c
 title: Créer une connexion source Adobe Campaign Managed Cloud Services à l’aide de l’interface utilisateur de Platform
 description: Découvrez comment connecter Adobe Experience Platform à Adobe Campaign Managed Cloud Services à l’aide de l’interface utilisateur de Platform.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 77d755e4ebf97521efa1dfdfe9ee40312800ad28
 workflow-type: tm+mt
-source-wordcount: '1149'
-ht-degree: 46%
+source-wordcount: '1185'
+ht-degree: 45%
 
 ---
 
 # Créer une connexion source Adobe Campaign Managed Cloud Services à l’aide de l’interface utilisateur de Platform
 
-Ce tutoriel décrit les étapes à suivre pour créer une connexion source afin d’apporter vos données Adobe Campaign Managed Cloud Services à Adobe Experience Platform.
+Ce tutoriel décrit les étapes à suivre pour créer une connexion source afin d’importer vos données Adobe Campaign Managed Cloud Services dans Adobe Experience Platform.
 
 ## Prise en main
 
@@ -30,7 +30,7 @@ Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également utiliser la barre de recherche pour réduire les sources affichées.
 
-Sous la catégorie **[!UICONTROL Adobe applications]**, sélectionnez **[!UICONTROL Adobe Campaign Managed Cloud Services]**, puis **[!UICONTROL Ajouter des données]**.
+Dans la catégorie **[!UICONTROL Applications d’Adobe]**, sélectionnez **[!UICONTROL Adobe Campaign Managed Cloud Services]** puis **[!UICONTROL Ajouter des données]**.
 
 ![Catalogue des sources affichant la carte Adobe Campaign Managed Cloud Services.](../../../../images/tutorials/create/campaign/catalog.png)
 
@@ -54,19 +54,19 @@ Sous la catégorie **[!UICONTROL Adobe applications]**, sélectionnez **[!UICONT
 >abstract="Nom de l’entité définie dans la base de données Adobe Campaign."
 >text="Learn more in documentation"
 
-L’étape [!UICONTROL Sélectionner les données] s’affiche et vous fournit une interface pour configurer votre [!UICONTROL instance Adobe Campaign], le [!UICONTROL mapping de ciblage] et le [!UICONTROL nom du schéma].
+L’étape [!UICONTROL Sélectionner les données] s’affiche, vous fournissant une interface pour configurer votre [!UICONTROL instance Adobe Campaign], [!UICONTROL Mapping de ciblage] et [!UICONTROL Nom du schéma].
 
 | Propriété | Description |
 | --- | --- |
 | Instance Adobe Campaign | Nom de l’instance d’environnement Adobe Campaign que vous utilisez. |
-| Mapping de ciblage | Les objets techniques utilisés par Campaign pour diffuser des messages et contiennent tous les paramètres techniques requis pour envoyer des diffusions. |
-| Nom du schéma | Nom de l’entité de schéma que vous apportez à Platform. Les options incluent Journal de diffusion et Journal de suivi. |
+| Mapping de ciblage | Les objets techniques utilisés par Campaign pour diffuser des messages, et contenant tous les paramètres techniques requis pour envoyer des diffusions. |
+| Nom du schéma | Nom de l’entité de schéma que vous apportez à Platform. Les options incluent le log de diffusion et le log de tracking. |
 
 ![Interface dans laquelle vous pouvez configurer votre instance Adobe Campaign, le mapping de ciblage et le nom du schéma.](../../../../images/tutorials/create/campaign/select-data.png)
 
-Une fois que vous avez renseigné les valeurs de votre instance Campaign, du mapping de ciblage et du nom du schéma, l’écran se met à jour pour afficher un aperçu de votre schéma ainsi qu’un exemple de jeu de données. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
+Une fois que vous avez fourni des valeurs pour votre instance Campaign, le mapping de ciblage et le nom du schéma, l’écran se met à jour pour afficher un aperçu de votre schéma ainsi qu’un exemple de jeu de données. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
-![ Aperçu de la hiérarchie de votre schéma ainsi qu’un exemple de votre jeu de données ](../../../../images/tutorials/create/campaign/preview.png)
+![Un aperçu de la hiérarchie de votre schéma, ainsi qu’un exemple de votre jeu de données](../../../../images/tutorials/create/campaign/preview.png)
 
 ### Utiliser un jeu de données existant
 
@@ -80,29 +80,31 @@ Une fois un jeu de données sélectionné, donnez un nom à votre flux de donné
 
 ### Utiliser un nouveau jeu de données
 
-Pour utiliser un nouveau jeu de données, sélectionnez **[!UICONTROL Nouveau jeu de données]**, puis fournissez un nom de jeu de données de sortie et une description facultative. Sélectionnez ensuite un schéma à mapper à l’aide de l’option [!UICONTROL Recherche avancée] ou en faisant défiler la liste des schémas existants dans le menu déroulant. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
+Pour utiliser un nouveau jeu de données, sélectionnez **[!UICONTROL Nouveau jeu de données]** puis fournissez un nom de jeu de données de sortie et une description facultative. Sélectionnez ensuite un schéma à mapper à l’aide de l’option [!UICONTROL Recherche avancée] ou en faisant défiler la liste des schémas existants dans le menu déroulant. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 ![Interface affichant la nouvelle option de jeu de données.](../../../../images/tutorials/create/campaign/new-dataset.png)
 
 ### Activer les alertes
 
-Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données. Sélectionnez une alerte dans la liste pour vous abonner et recevoir des notifications sur l’état de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des sources dans l’interface utilisateur](../../alerts.md).
+Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données. Sélectionnez une alerte dans la liste pour vous abonner et recevoir des notifications sur le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des sources dans l’interface utilisateur](../../alerts.md).
 
 Lorsque vous avez terminé de renseigner votre flux de données, sélectionnez **[!UICONTROL Suivant]**.
 
-![Une sélection de différents types d’alerte que vous pouvez activer pour votre flux de données.](../../../../images/tutorials/create/campaign/alerts.png)
+![Sélection de différents types d’alerte que vous pouvez activer pour votre flux de données.](../../../../images/tutorials/create/campaign/alerts.png)
 
 ### Mappage des champs de données à un schéma XDM
 
 L’interface de [!UICONTROL mappage] fournit un outil complet pour mapper les champs sources de votre schéma source aux champs XDM cibles correspondants dans le schéma cible.
 
-Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [guide de l’interface utilisateur de la préparation des données](../../../../../data-prep/ui/mapping.md).
+Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [ Guide de l’interface utilisateur de la préparation des données ](../../../../../data-prep/ui/mapping.md).
 
 >[!IMPORTANT]
 >
->Lors du mappage de vos champs source aux champs XDM cible, vous devez vous assurer que vous mappez votre champ d’identité principale désigné avec son champ XDM cible approprié.
+>Lors du mappage de vos champs source aux champs XDM cibles, vous devez vous assurer de mapper le champ d’identité principale désigné à son champ XDM cible approprié.
+>
+>Pour chaque audience, vous pouvez ajouter jusqu’à 20 champs à mapper à Adobe Campaign. Vous pouvez modifier cette limite en mettant à jour la valeur de l’option `NmsCdp_Aep_Sources_Max_Columns` dans le dossier Administration > Plateforme > Options de l’explorateur Campaign.
 
-Une fois le mappage de vos données source réussi, sélectionnez **[!UICONTROL Suivant]**.
+Une fois vos données source mappées, sélectionnez **[!UICONTROL Suivant]**.
 
 ![Arborescence de mappage avec quatre champs de données source mappés à leurs champs de schéma XDM correspondants.](../../../../images/tutorials/create/campaign/mapping.png)
 
@@ -115,29 +117,29 @@ L’écran de **[!UICONTROL Révision]** s’affiche, vous permettant dʼexamine
 
 Une fois que vous avez vérifié votre flux de données, sélectionnez **[!UICONTROL Terminer]** et patientez quelques instants le temps que le flux de données soit créé.
 
-![Une page de révision présentant des informations sur la connexion et le jeu de données.](../../../../images/tutorials/create/campaign/review.png)
+![Page de révision affichant les informations de connexion et de jeu de données.](../../../../images/tutorials/create/campaign/review.png)
 
 ### Surveillance de l’activité du jeu de données
 
-Une fois votre flux de données créé, vous pouvez surveiller les données qui sont ingérées par celui-ci pour afficher des informations sur les taux ingérés et les lots réussis et en échec.
+Une fois votre flux de données créé, vous pouvez surveiller les données ingérées et afficher les informations sur les taux d’ingestion, ainsi que sur les lots réussis et en échec.
 
-Pour commencer à afficher votre activité de jeu de données, sélectionnez **[!UICONTROL Flux de données]** dans le catalogue de sources.
+Pour commencer à afficher votre activité de jeu de données, sélectionnez **[!UICONTROL Flux de données]** dans le catalogue des sources.
 
-![Page du catalogue des sources avec l’onglet de l’en-tête du flux de données sélectionné.](../../../../images/tutorials/create/campaign/dataflows.png)
+![Page du catalogue des sources avec l’onglet en-tête des flux de données sélectionné.](../../../../images/tutorials/create/campaign/dataflows.png)
 
 Sélectionnez ensuite le jeu de données cible dans la liste des flux de données qui s’affichent.
 
-![Liste des flux de données existants avec le jeu de données cible Logs de diffusion Adobe Campaign sélectionné.](../../../../images/tutorials/create/campaign/target-dataset.png)
+![Liste des flux de données existants avec le jeu de données cible Journaux de diffusion Adobe Campaign sélectionné.](../../../../images/tutorials/create/campaign/target-dataset.png)
 
-La page d’activité du jeu de données s’affiche. À partir de là, vous pouvez consulter des informations sur les performances de votre flux de données, notamment le taux d’ingestion, les lots réussis et les lots en échec.
+La page d’activité du jeu de données s’affiche. À partir de là, vous pouvez afficher des informations sur les performances de votre flux de données, notamment le taux d’ingestion, les lots réussis et les lots en échec.
 
-Cette page vous fournit également une interface permettant de mettre à jour la description des métadonnées de votre flux de données, d’activer les diagnostics d’ingestion et d’erreur partiels et d’ajouter de nouvelles données à votre jeu de données.
+Cette page vous fournit également une interface pour mettre à jour la description des métadonnées de votre flux de données, activer les diagnostics d’ingestion partielle et d’erreur, ainsi qu’ajouter de nouvelles données à votre jeu de données.
 
 ![Interface avec des graphiques représentant le taux d’ingestion d’un jeu de données sélectionné.](../../../../images/tutorials/create/campaign/dataset-activity.png)
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé un flux de données pour importer vos données de logs de diffusion et de tracking Campaign v8 dans Platform. Ces données entrantes peuvent désormais être utilisées par les services de Platform en aval, comme [!DNL Real-Time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
+En suivant attentivement ce tutoriel, vous avez créé un flux de données pour importer vos données de logs de diffusion et de logs de tracking Campaign v8 dans Platform. Ces données entrantes peuvent désormais être utilisées par les services de Platform en aval, comme [!DNL Real-Time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
 
 * [Présentation de [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
 * [Présentation de [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)
