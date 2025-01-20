@@ -1,33 +1,33 @@
 ---
-title: Création d’audiences à l’aide de SQL
-description: Découvrez comment utiliser l’extension d’audience SQL dans Adobe Experience Platform Data Distiller pour créer, gérer et publier des audiences à l’aide de commandes SQL. Ce guide couvre tous les aspects du cycle de vie de l’audience, notamment la création, la mise à jour et la suppression de profils, ainsi que l’utilisation de définitions d’audience pilotées par les données pour cibler des destinations basées sur des fichiers.
+title: Créer des audiences à l’aide de SQL
+description: Découvrez comment utiliser l’extension d’audience SQL dans Adobe Experience Platform Data Distiller pour créer, gérer et publier des audiences à l’aide de commandes SQL. Ce guide couvre tous les aspects du cycle de vie des audiences, notamment la création, la mise à jour et la suppression de profils, ainsi que l’utilisation de définitions d’audience pilotées par les données pour cibler les destinations basées sur des fichiers.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: 7db055f598e3fa7d5a50214a0cfa86e28e5bfe47
+source-git-commit: c66a7cf779c1b6e55ace86916985087dfaa3363b
 workflow-type: tm+mt
 source-wordcount: '1481'
 ht-degree: 1%
 
 ---
 
-# Création d’audiences à l’aide de SQL
+# Créer des audiences à l’aide de SQL
 
-Utilisez l’extension d’audience SQL pour créer des audiences avec des données du lac de données, y compris toute entité de dimension existante (comme les attributs du client ou les informations sur les produits).
+Utilisez l’extension d’audience SQL pour créer des audiences avec des données du lac de données, y compris toutes les entités de dimension existantes (telles que les attributs du client ou les informations sur le produit).
 
-L’utilisation de cette extension SQL améliore votre capacité à créer des audiences, car vous n’avez pas besoin de données brutes dans vos profils lors de la définition de segments d’audience. Les audiences créées à l’aide de cette méthode sont automatiquement enregistrées dans l’espace de travail Audience, où vous pouvez les cibler davantage vers des destinations basées sur des fichiers.
+L’utilisation de cette extension SQL améliore votre capacité à créer des audiences, car vous n’avez pas besoin de données brutes dans vos profils lors de la définition des segments d’audience. Les audiences créées à l’aide de cette méthode sont automatiquement enregistrées dans l’espace de travail Audience , où vous pouvez les cibler davantage vers des destinations basées sur des fichiers.
 
-![Infographie montrant le workflow d’extension de l’audience SQL. Les étapes incluent la création d’audiences avec Query Service à l’aide de commandes SQL, leur gestion dans l’interface utilisateur de Platform, afin de les activer dans des destinations basées sur des fichiers.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
+![Infographie présentant le workflow d’extension d’audience SQL. Les étapes incluent la création d’audiences avec Query Service à l’aide de commandes SQL, leur gestion dans l’interface utilisateur de Platform et leur activation dans des destinations basées sur des fichiers.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
 
 Ce document explique comment utiliser l’extension d’audience SQL dans Adobe Experience Platform Data Distiller pour créer, gérer et publier des audiences à l’aide de commandes SQL.
 
-## Cycle de vie de la création d’audience dans Data Distiller {#audience-creation-lifecycle}
+## Cycle de vie de la création d’audiences dans Data Distiller {#audience-creation-lifecycle}
 
-Pour créer, gérer et activer vos audiences, procédez comme suit. Les audiences créées s’intègrent de manière transparente dans le &quot;flux d’audience&quot;, de sorte que vous puissiez créer des segments à partir des audiences de base et des destinations basées sur des fichiers cibles (par exemple, les chargements CSV ou les emplacements de stockage dans le cloud) pour la sensibilisation des clients. Le &quot;flux d’audience&quot; fait référence à l’ensemble du processus de création, de gestion et d’activation d’audiences, assurant une intégration transparente entre les destinations.
+Pour créer, gérer et activer vos audiences, procédez comme suit. Les audiences créées s’intègrent de manière transparente dans le « flux d’audience ». Vous pouvez ainsi créer des segments à partir d’audiences de base et cibler des destinations basées sur des fichiers (par exemple, des chargements CSV ou des emplacements d’espace de stockage) pour la sensibilisation des clients. « Flux d’audience » fait référence à l’ensemble du processus de création, de gestion et d’activation des audiences, assurant ainsi une intégration transparente entre les destinations.
 
-Dans le cadre de votre &quot;flux d’audience&quot;, utilisez les commandes SQL suivantes pour [créer](#create-audience), [modifier](#add-profiles-to-audience) et [supprimer](#delete-audience) des audiences dans Adobe Experience Platform.
+Dans le cadre de votre « flux d’audience », utilisez les commandes SQL suivantes pour [créer](#create-audience), [modifier](#add-profiles-to-audience) et [supprimer](#delete-audience) des audiences dans Adobe Experience Platform.
 
 ### Créer une audience {#create-audience}
 
-Utilisez la commande `CREATE AUDIENCE AS SELECT` pour définir une nouvelle audience. L’audience créée est enregistrée dans un jeu de données et enregistrée dans l’espace de travail [!UICONTROL Audiences] sous Data Distiller.
+Utilisez la commande `CREATE AUDIENCE AS SELECT` pour définir une nouvelle audience. L’audience créée est enregistrée dans un jeu de données et enregistrée dans l’espace de travail [!UICONTROL Audiences] sous Distiller de données.
 
 ```sql
 CREATE AUDIENCE table_name  
@@ -37,21 +37,21 @@ AS (select_query)
 
 **Paramètres**
 
-Utilisez ces paramètres pour définir votre requête de création d&#39;audience SQL :
+Utilisez les paramètres suivants pour définir votre requête de création d&#39;audience SQL :
 
 | Paramètre | Description |
 |--------------------|------------------------------------------------------------------|
 | `schema` | Facultatif. Définit le schéma XDM du jeu de données créé par la requête. |
 | `table_name` | Nom de la table et de l&#39;audience. |
-| `primary_identity` | Indique la colonne d’identité principale de l’audience. |
-| `identity_namespace` | Espace de noms de l’identité. Vous pouvez utiliser un espace de noms existant ou en créer un nouveau. Pour afficher les espaces de noms disponibles, utilisez la commande `SHOW NAMESPACE`. Pour créer un espace de noms, utilisez `CREATE NAMESPACE`. Par exemple : `CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')`. |
-| `select_query` | Une instruction SELECT définissant l’audience. La syntaxe de la requête SELECT se trouve dans la section [Requêtes SELECT](../sql/syntax.md#select-queries) . |
+| `primary_identity` | Indique la colonne d’identité principale pour l’audience. |
+| `identity_namespace` | Espace de noms de l’identité. Vous pouvez utiliser un espace de noms existant ou en créer un nouveau. Pour afficher les espaces de noms disponibles, utilisez la commande `SHOW NAMESPACES` . Pour créer un espace de noms, utilisez `CREATE NAMESPACE`. Par exemple : `CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')`. |
+| `select_query` | Instruction SELECT définissant l’audience. La syntaxe de la requête SELECT se trouve dans la section [Requêtes SELECT](../sql/syntax.md#select-queries). |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->Pour offrir une plus grande flexibilité pour les structures de données complexes, vous pouvez imbriquer des attributs enrichis lors de la définition d’audiences. Les attributs enrichis, tels que `orders`, `total_revenue`, `recency`, `frequency` et `monetization`, peuvent être utilisés pour filtrer les audiences selon les besoins.
+>Pour offrir une plus grande flexibilité pour les structures de données complexes, vous pouvez imbriquer des attributs enrichis lors de la définition des audiences. Les attributs enrichis, tels que `orders`, `total_revenue`, `recency`, `frequency` et `monetization`, peuvent être utilisés pour filtrer les audiences selon les besoins.
 
 **Exemple :**
 
@@ -63,16 +63,16 @@ WITH (primary_identity=userId, identity_namespace=lumaCrmId)
 AS SELECT userId, orders, total_revenue, recency, frequency, monetization FROM profile_dim_customer;
 ```
 
-Dans cet exemple, la colonne `userId` est identifiée en tant que colonne d’identité et un espace de noms approprié (`lumaCrmId`) est affecté. Les autres colonnes (`orders`, `total_revenue`, `recency`, `frequency` et `monetization`) sont des attributs enrichis qui fournissent un contexte supplémentaire pour l’audience.
+Dans cet exemple, la colonne `userId` est identifiée comme colonne d’identité et un espace de noms approprié (`lumaCrmId`) est attribué. Les colonnes restantes (`orders`, `total_revenue`, `recency`, `frequency` et `monetization`) sont des attributs enrichis qui fournissent un contexte supplémentaire pour l’audience.
 
 **Limites :**
 
-Tenez compte des limites suivantes lors de l’utilisation de SQL pour la création d’audience :
+Gardez à l’esprit les limites suivantes lorsque vous utilisez SQL pour la création d’audiences :
 
-- La colonne d’identité principale **doit** se trouver au niveau le plus élevé du jeu de données, sans être imbriquée dans d’autres attributs ou catégories.
-- Les audiences externes créées à l’aide de commandes SQL ont une période de conservation de 30 jours. Au bout de 30 jours, ces audiences sont automatiquement supprimées, ce qui est un élément important de la planification des stratégies de gestion de l’audience.
+- La colonne d’identité principale **doit** se trouve au niveau le plus élevé du jeu de données, sans être imbriquée dans d’autres attributs ou catégories.
+- Les audiences externes créées à l’aide de commandes SQL ont une période de conservation de 30 jours. Au bout de 30 jours, ces audiences sont automatiquement supprimées, ce qui est un élément important à prendre en compte pour la planification des stratégies de gestion des audiences.
 
-### Ajout de profils à une audience existante {#add-profiles-to-audience}
+### Ajouter des profils à une audience existante {#add-profiles-to-audience}
 
 Utilisez la commande `INSERT INTO` pour ajouter des profils (ou des audiences entières) à une audience existante.
 
@@ -83,12 +83,12 @@ SELECT select_query
 
 **Paramètres**
 
-Le tableau ci-dessous explique les paramètres requis pour la commande `INSERT INTO` :
+Le tableau ci-dessous décrit les paramètres requis pour la commande `INSERT INTO` :
 
 | Paramètre | Description |
 |----------------|--------------------------------------------------------------------------------|
-| `table_name` | Nom de la table qui a été créée dans le cadre de la commande de création d’audience. |
-| `select_query` | Instruction SELECT. La syntaxe de la requête SELECT se trouve dans la section Requêtes SELECT . |
+| `table_name` | Nom de la table créée dans le cadre de la commande de création d’audience. |
+| `select_query` | Instruction SELECT. La syntaxe de la requête SELECT se trouve dans la section Requêtes SELECT. |
 
 {style="table-layout:auto"}
 
@@ -103,11 +103,11 @@ SELECT userId, orders, total_revenue, recency, frequency, monetization FROM cust
 
 ### Exemple d’audience de modèle RFM {#rfm-model-audience-example}
 
-L’exemple suivant montre comment créer une audience à l’aide du modèle Récence, Fréquence et Monétisation (RFM) . Cet exemple segmente les clients en fonction de leur taux de récence, de fréquence et de monétisation afin d’identifier les groupes clés, tels que les clients fidèles, les nouveaux clients et les clients à forte valeur ajoutée.
+L’exemple suivant montre comment créer une audience à l’aide du modèle Récence, fréquence et monétisation (RFM). Cet exemple segmente les clients en fonction de leurs scores de récence, de fréquence et de monétisation pour identifier des groupes clés, tels que les clients fidèles, les nouveaux clients et les clients à forte valeur ajoutée.
 
 <!--  Q) Since the focus of this document is on external audiences, or should I just include this temporarily? We could simply provide a link to the separate RFM modeling documentation rather than including the full example here. (Add link to new RFM document when it is published) -->
 
-La requête suivante crée un schéma pour l’audience RFM. L’instruction configure des champs pour contenir les informations sur les clients telles que `userId`, `days_since_last_purchase`, `orders`, `total_revenue`, etc.
+La requête suivante crée un schéma pour l’audience RFM. Le relevé configure des champs pour contenir des informations sur le client telles que `userId`, `days_since_last_purchase`, `orders`, `total_revenue`, etc.
 
 ```sql
 CREATE Audience adls_rfm_profile
@@ -124,7 +124,7 @@ SELECT
 WHERE false;
 ```
 
-Après avoir créé l’audience, renseignez-la avec les données client et segmentez les profils en fonction de leurs scores RFM. L’instruction SQL ci-dessous utilise la fonction `NTILE(4)` pour classer les clients en quartiles en fonction de leurs scores RFM (récence, fréquence, monétisation). Ces scores classent les clients en six segments, tels que &quot;Core&quot;, &quot;Loyal&quot; et &quot;Whales&quot;. Les données client segmentées sont alors insérées dans la table `adls_rfm_profile` de l&#39;audience.&quot;
+Après avoir créé l’audience, renseignez-la avec des données client et segmentez les profils en fonction de leurs scores RFM. L’instruction SQL ci-dessous utilise la fonction `NTILE(4)` pour classer les clients en quartiles en fonction de leurs scores RFM (Récence, Fréquence, Monétisation). Ces scores classent les clients en six segments, tels que « Principal », « Fidèle » et « Baleines ». Les données client segmentées sont ensuite insérées dans le tableau des `adls_rfm_profile` d’audience. »
 
 ```sql
 INSERT INTO Audience adls_rfm_profile
@@ -173,7 +173,7 @@ FROM (
 );
 ```
 
-### Suppression d’une audience (DROP AUDIENCE) {#delete-audience}
+### Supprimer une audience {#delete-audience}
 
 Utilisez la commande `DROP AUDIENCE` pour supprimer une audience existante. Si l’audience n’existe pas, une exception se produit, sauf si `IF EXISTS` est spécifié.
 
@@ -183,13 +183,13 @@ DROP AUDIENCE [IF EXISTS] [db_name.]table_name
 
 **Paramètres**
 
-La table contient les paramètres requis pour la commande `DROP AUDIENCE` :
+Le tableau contient les paramètres nécessaires à la commande `DROP AUDIENCE` :
 
 | Paramètre | Description |
 |----------------|----------------------------------------------------------------------------------------|
-| `IF EXISTS` | Facultatif. Si spécifié, dans le cas où la table est introuvable, aucune exception n’est générée. |
+| `IF EXISTS` | Facultatif. Si spécifié, dans le cas où la table est introuvable, aucune exception n&#39;est générée. |
 | `db_name` | Indique le groupe de données utilisé pour qualifier le jeu de données d’audience. |
-| `table_name` | Nom de la table qui a été créée dans le cadre de la commande de création d’audience. |
+| `table_name` | Nom de la table créée dans le cadre de la commande de création d’audience. |
 
 {style="table-layout:auto"}
 
@@ -203,25 +203,25 @@ DROP AUDIENCE IF EXISTS aud_test;
 
 ### Enregistrement et disponibilité automatiques des audiences {#registration-and-availability}
 
-Les audiences créées à l’aide de l’extension SQL sont automatiquement enregistrées sous Data Distiller [!UICONTROL Origin] dans l’espace de travail Audience. Une fois enregistrées, ces audiences sont disponibles pour le ciblage dans des destinations basées sur des fichiers, ce qui améliore la segmentation et les stratégies de ciblage. Ce processus ne nécessite aucune configuration supplémentaire, ce qui rationalise la gestion de l’audience. Pour plus d’informations sur la manière d’afficher, de gérer et de créer des audiences dans l’interface utilisateur de Platform, consultez la [présentation d’Audience Portal](../../segmentation/ui/audience-portal.md).
+Les audiences créées à l’aide de l’extension SQL sont automatiquement enregistrées sous la Distiller de données [!UICONTROL Origine] dans l’espace de travail Audience . Une fois enregistrées, ces audiences sont disponibles pour le ciblage dans les destinations basées sur des fichiers, ce qui améliore la segmentation et les stratégies de ciblage. Ce processus ne nécessite aucune configuration supplémentaire, ce qui simplifie la gestion des audiences. Pour plus d’informations sur l’affichage, la gestion et la création d’audiences dans l’interface utilisateur de Platform, consultez la [présentation d’Audience Portal](../../segmentation/ui/audience-portal.md).
 
 <!-- Q) Do you know how long it takes for the audience to register? This info would help manage user expectations. -->
 
-![L’espace de travail Audience dans Adobe Experience Platform, présentant les audiences Distiller de données automatiquement publiées et prêtes à l’emploi.](../images/data-distiller/sql-audiences/audiences.png)
+![L’espace de travail Audience dans Adobe Experience Platform, qui affiche les audiences Data Distiller automatiquement publiées et prêtes à l’emploi.](../images/data-distiller/sql-audiences/audiences.png)
 
 ## Activer des audiences vers les destinations {#activate-audiences}
 
-Activez vos audiences en les ciblant sur n’importe quelle destination basée sur des fichiers, telle que [!DNL Amazon S3], [!DNL SFTP] ou [!DNL Azure Blob]. Les attributs d’audience enrichis peuvent être affinés et filtrés selon les besoins.
+Activez vos audiences en les ciblant vers une destination basée sur des fichiers, telle que [!DNL Amazon S3], [!DNL SFTP] ou [!DNL Azure Blob]. Les attributs d’audience enrichis sont disponibles pour un affinement et un filtrage supplémentaires, si nécessaire.
 
-![ Diagramme de flux des types de destinations Adobe Experience Platform, présentant les destinations publiques et privées/personnalisées, y compris les options de lot et de diffusion en continu.](../images/data-distiller/sql-audiences/destination-types.png)
+![Organigramme des types de destination Adobe Experience Platform, présentant les destinations publiques et privées/personnalisées, y compris les options de lot et de diffusion en continu.](../images/data-distiller/sql-audiences/destination-types.png)
 
 ## Clarifications des fonctionnalités {#faqs}
 
-Cette section traite des questions fréquentes sur la création et la gestion d’audiences externes à l’aide de SQL dans Data Distiller.
+Cette section répond aux questions fréquentes sur la création et la gestion des audiences externes à l’aide de SQL dans Data Distiller.
 
 **Questions** :
 
-- La création d’audience est-elle prise en charge uniquement pour les jeux de données plats ?
+- La création d’audiences est-elle prise en charge uniquement pour les jeux de données plats ?
 
 +++Réponse
 
@@ -229,19 +229,19 @@ Actuellement, la création de l’audience est limitée aux attributs plats (au 
 
 +++
 
-- La création d’audience génère-t-elle un ou plusieurs jeux de données uniques ou varie-t-elle en fonction de la configuration ?
+- La création de l’audience entraîne-t-elle la création d’un ou de plusieurs jeux de données ou varie-t-elle selon la configuration ?
 
 +++Réponse
 
-Il existe un mappage un-à-un entre une audience et un jeu de données.
+Il existe un mappage direct entre une audience et un jeu de données.
 
 +++
 
-- Le jeu de données créé lors de la création de l’audience est-il marqué pour Profile ?
+- Le jeu de données créé lors de la création de l’audience est-il marqué pour Profil ?
 
 +++Réponse
 
-Non, le jeu de données créé lors de la création de l’audience n’est pas marqué pour Profile.
+Non, le jeu de données créé lors de la création de l’audience n’est pas marqué pour le profil.
 
 +++
 
@@ -249,49 +249,49 @@ Non, le jeu de données créé lors de la création de l’audience n’est pas 
 
 +++Réponse
 
-Oui, le jeu de données associé à l’audience est créé sur le lac de données. Les attributs de ce jeu de données sont disponibles dans le compositeur d’audience et le flux de destination sous forme d’attributs enrichis.
+Oui, le jeu de données associé à l’audience est créé sur le lac de données. Les attributs de ce jeu de données sont disponibles dans le compositeur d’audience et le flux de destination en tant qu’attributs enrichis.
 
 +++
 
-- Les attributs de l’audience sont-ils limités aux destinations basées sur des fichiers de lot d’entreprise ? (Oui ou Non)
+- Les attributs de l’audience sont-ils limités aux destinations basées sur des fichiers par lots d’entreprise ? (Oui ou Non)
 
 +++Réponse
 
-Non. Les attributs enrichis dans l’audience peuvent être utilisés dans des destinations par lots d’entreprise et des destinations basées sur des fichiers. Si vous rencontrez une erreur du type &quot;Les identifiants de segment suivants ont des espaces de noms non autorisés pour cette destination : e917f626-a038-42f7-944c-xyxyx&quot;, créez un segment dans Data Distiller et utilisez-le avec n’importe quelle destination disponible.
+Non. Les attributs enrichis de l’audience peuvent être utilisés dans les destinations d’entreprise par lots et basées sur des fichiers. Si vous rencontrez une erreur du type « Les identifiants de segment suivants comportent des espaces de noms qui ne sont pas autorisés pour cette destination : e917f626-a038-42f7-944c-xyxyxyx », créez un segment dans Data Distiller et utilisez-le avec toute destination disponible.
 
 +++
 
-- Puis-je créer une audience d’audiences qui utilise une audience Distiller de données ?
+- Puis-je créer une audience d’audiences qui utilise une audience de Distiller de données ?
 
 +++Réponse
 
-Oui, vous pouvez créer une audience qui utilise une audience Distiller de données.
+Oui, vous pouvez créer une audience d’audiences qui utilise une audience de Distiller de données.
 
 +++
 
-- Ces audiences s’affichent-elles dans Adobe Journey Optimizer ? Dans le cas contraire, que se passe-t-il lorsque je crée une audience dans le créateur de règles qui inclut tous les membres de cette audience ?
+- Ces audiences apparaissent-elles dans Adobe Journey Optimizer ? Dans le cas contraire, que se passe-t-il lorsque je crée une audience dans le créateur de règles qui inclut tous les membres de cette audience ?
 
 +++Réponse
 
-Les audiences Distiller de données sont également disponibles dans Adobe Journey Optimizer. Vous pouvez utiliser les audiences Distiller de données dans Adobe Journey Optimizer et filtrer les résultats en fonction des attributs enrichis.
+Les audiences de Distiller de données sont également disponibles dans Adobe Journey Optimizer. Vous pouvez utiliser les audiences de Distiller de données dans Adobe Journey Optimizer et filtrer les résultats en fonction des attributs enrichis.
 
 +++
 
-- Les audiences Data Distiller sont-elles supprimées tous les 30 jours puisqu’elles sont des audiences externes ?
+- Les audiences du Distiller de données sont-elles supprimées tous les 30 jours, puisqu’il s’agit d’audiences externes ?
 
 +++Réponse
 
-Oui, les audiences Distiller de données sont supprimées tous les 30 jours puisqu’il s’agit d’audiences externes.
+Oui, les audiences du Distiller de données sont supprimées tous les 30 jours, car il s’agit d’audiences externes.
 
 +++
 
 ## Étapes suivantes
 
-Après avoir lu ce document, vous avez appris à utiliser l’extension d’audience SQL dans Data Distiller pour créer, gérer et publier efficacement des audiences à l’aide de commandes SQL. Vous pouvez désormais personnaliser les définitions d’audience en fonction de vos besoins commerciaux uniques et les activer dans différentes destinations, afin d’optimiser vos stratégies marketing et vos décisions basées sur les données.
+Vous êtes arrivé au bout de ce document. À présent, vous savez comment utiliser l’extension d’audience SQL dans Data Distiller pour créer, gérer et publier efficacement des audiences à l’aide de commandes SQL. Vous pouvez désormais personnaliser les définitions d’audience en fonction des besoins uniques de votre entreprise et les activer dans différentes destinations, optimisant ainsi vos stratégies marketing et vos décisions axées sur les données.
 
-Vous pouvez ensuite lire la documentation suivante pour développer et optimiser vos stratégies de gestion de l’audience Platform :
+Vous pouvez ensuite lire la documentation suivante pour développer et optimiser vos stratégies de gestion des audiences Platform :
 
-- **Explorer l’évaluation de l’audience** : découvrez les [méthodes d’évaluation de l’audience dans Adobe Experience Platform](../../segmentation/home.md#evaluate-segments) : segmentation par flux pour les mises à jour en temps réel, segmentation par lots pour le traitement planifié ou à la demande et segmentation de périphérie pour l’évaluation instantanée sur l’Edge Network.
-- **Intégration avec les destinations** : lisez le guide sur l’[exportation de fichiers à la demande vers des destinations par lot](../../destinations/ui/export-file-now.md) à l’aide de l’interface utilisateur Destinations de plateforme.
-- **Réviser les performances de l’audience** : analysez les performances de vos audiences définies par SQL sur différents canaux. Utilisez les informations sur les données pour ajuster et améliorer vos définitions d’audience et vos stratégies de ciblage. Lisez le document sur [Audience insights](../../dashboards/insights/audiences.md) pour savoir comment accéder aux requêtes SQL et les adapter aux informations sur les audiences dans Adobe Real-Time CDP. Vous pouvez ensuite créer vos propres insights et transformer les données brutes en informations exploitables en personnalisant le tableau de bord Audiences afin de visualiser et d’utiliser efficacement ces informations pour une meilleure prise de décision.
+- **Explorer l’évaluation de l’audience** : découvrez les [méthodes d’évaluation de l’audience dans Adobe Experience Platform](../../segmentation/home.md#evaluate-segments) : segmentation par flux pour les mises à jour en temps réel, segmentation par lots pour le traitement planifié ou à la demande et segmentation Edge pour l’évaluation instantanée sur l’Edge Network.
+- **Intégration aux destinations** : lisez le guide sur la manière d’[exporter des fichiers à la demande vers des destinations par lots](../../destinations/ui/export-file-now.md) à l’aide de l’interface utilisateur des destinations de Platform.
+- **Revoir les performances des audiences** : analysez les performances de vos audiences définies par SQL sur différents canaux. Utilisez les informations sur les données pour ajuster et améliorer vos définitions d’audience et vos stratégies de ciblage. Lisez le document sur [les informations sur l’audience](../../dashboards/insights/audiences.md) pour savoir comment accéder aux requêtes SQL pour les informations sur l’audience dans Adobe Real-Time CDP et les adapter. Vous pouvez ensuite créer vos propres informations et transformer les données brutes en informations exploitables en personnalisant le tableau de bord des audiences afin de visualiser et d’utiliser efficacement ces informations pour une meilleure prise de décision.
 
