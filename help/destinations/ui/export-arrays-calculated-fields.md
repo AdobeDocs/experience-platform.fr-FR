@@ -1,16 +1,16 @@
 ---
-title: Exporter des objets de tableau de Real-Time CDP vers des destinations d’espace de stockage
+title: Exporter des objets de tableau de Real-Time CDP vers des destinations d’espace de stockage dans le cloud
 type: Tutorial
 description: Découvrez comment utiliser des champs calculés pour exporter des tableaux de Real-Time CDP vers des destinations d’espace de stockage sous forme de chaînes.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: a99fc58b8296b2b9ce6e30d14857529570cd3e8a
 workflow-type: tm+mt
 source-wordcount: '1622'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
-# Exporter des objets de tableau de Real-Time CDP vers des destinations d’espace de stockage {#export-arrays-cloud-storage}
+# Exporter des objets de tableau de Real-Time CDP vers des destinations d’espace de stockage dans le cloud {#export-arrays-cloud-storage}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
