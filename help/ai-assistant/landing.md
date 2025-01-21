@@ -3,9 +3,9 @@ title: Assistant AI dans la documentation du produit Adobe Experience Platform
 description: Prise en main de l’assistant AI dans Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 3c100042ab828e10326d314fcaa00278cc8eb694
+source-git-commit: 676466184e84dabfeb52947c3d3a777032ca728f
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '821'
 ht-degree: 1%
 
 ---
@@ -23,17 +23,22 @@ Commencez par lire le matériel dans les liens ci-dessous pour vous familiariser
 <table style="table-layout:fixed">
   <tr style="border: 0;">
     <td>
-    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png" style="width:" 100%;max-height: 100%"></a>
+    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png" style"="width:100%;max-height:100%&quot;"></a>
     <div><strong>Comprendre vos objets de données</strong><br/>Récupérez des informations opérationnelles relatives à vos objets de données pour obtenir une meilleure vue sur leurs statuts, leur utilisation et l’impact de la liaison.</div>
     </td>
     <td>
-    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png" style="width:" 100%;max-height: 100%"></a>
+    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png"  style="width:100%;max-height:100%"></a>
     <div><strong>Améliorer votre apprentissage</strong><br/>Découvrir, résoudre les problèmes et améliorer votre compréhension des connaissances sur les produits sans interrompre vos workflows.</div>
+    </td>
+    <td>
+    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"><a>
+    <div><strong>Consultez la liste de lecture des vidéos de l’assistant AI</strong><br/>Découvrez les nombreux défis et cas d’utilisation différents que vous pouvez résoudre avec l’assistant AI.</div>
     </td>
   </tr>
   <tr style="border: 0;">
     <td align="center"><a href="./home.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="./home.md#product-knowledge"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
+    <td align="center"><a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
@@ -152,6 +157,7 @@ Lisez les exemples de cas d’utilisation de l’assistant AI suivants :
 * [Désencombrez vos audiences et optimisez vos opérations marketing](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
 * [Vérifiez les dépendances et minimisez les risques lors des mises à jour des données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 * [Réduisez les risques lors des mises à jour des données en vérifiant les dépendances en quelques secondes](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
+* [Découvrir et déployer de nouvelles fonctionnalités plus rapidement](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125)
 
 >[!TAB Contenu vidéo supplémentaire]
 
