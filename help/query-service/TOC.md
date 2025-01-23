@@ -5,10 +5,10 @@ breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: c3065710e5f50541b074fc493df07130221d8078
+source-git-commit: 20869e76976ff3868f1d4dbc7c6d97b58682e5c3
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 73%
+source-wordcount: '397'
+ht-degree: 71%
 
 ---
 
@@ -50,6 +50,7 @@ Implémentation de modèles {#implement-models}
       - [Classification](advanced-statistics/implement-models/classification.md)
       - [Clustering](advanced-statistics/implement-models/clustering.md)
 Exemples {#examples}
+      - [Filtrage des robots à l’aide des statistiques et du machine learning](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
       - [Prédire l’attrition des clients à l’aide d’une régression logistique SQL](advanced-statistics/examples/predict-customer-churn.md)
 - Audiences de Distiller de données {#data-distiller-audiences}
    - [Créer des audiences externes à l’aide de SQL](data-distiller-audiences/overview.md)
@@ -58,6 +59,7 @@ Exemples {#examples}
    - [Navigation abandonnée](use-cases/abandoned-browse.md)
    - [Analyse de l’attribution](use-cases/attribution-analysis.md)
    - [Filtrage des robots](use-cases/bot-filtering.md)
+   - [Filtrage des robots à l’aide des statistiques et introduction au machine learning](use-cases/statistics-and-ml-bot-filtering-stub.md)
    - [Créer un rapport de tendance d’événements](use-cases/trended-report-of-events.md)
    - [Analyse du consentement](use-cases/consent-analysis.md)
    - [Valeur durée de vie client](use-cases/customer-lifetime-value.md)
