@@ -5,10 +5,10 @@ breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 83d15e8d6488a400a87f111ec97f06401431b339
+source-git-commit: c3065710e5f50541b074fc493df07130221d8078
 workflow-type: tm+mt
-source-wordcount: '369'
-ht-degree: 76%
+source-wordcount: '382'
+ht-degree: 73%
 
 ---
 
@@ -25,32 +25,34 @@ ht-degree: 76%
    - [Utilisation des licences](data-distiller/license-usage.md)
    - Jeux de données dérivés {#derived-datasets}
       - [Vue d’ensemble](data-distiller/derived-datasets/overview.md)
-      - [Création de jeux de données dérivés avec SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
-      - [Création de jeux de données dérivés basés sur des déciles](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - Statistiques SQL pour les rapports d’application étendue {#sql-insights}
+      - [Créer des jeux de données dérivés avec SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
+      - [Créer des jeux de données dérivés basés sur des déciles](data-distiller/derived-datasets/decile-based-derived-attributes.md)
+   - Informations SQL pour les {#sql-insights} de reporting d’application étendus
       - [Vue d’ensemble](data-distiller/sql-insights/overview.md)
       - [Mode de requête pro](data-distiller/sql-insights/query-pro-mode.md)
       - [Envoi de requêtes accélérées](data-distiller/sql-insights/send-accelerated-queries.md)
       - [Guide sur le modèle de données d’insights de rapports](data-distiller/sql-insights/reporting-insights-data-model.md)
    - Pipelines de fonctionnalités AI/ML {#ml-feature-pipelines}
       - [Vue d’ensemble](data-distiller/ml-feature-pipelines/overview.md)
-      - [Connexion aux notebooks Jupyter](data-distiller/ml-feature-pipelines/establish-connection.md)
+      - [Se connecter aux notebooks Jupyter](data-distiller/ml-feature-pipelines/establish-connection.md)
       - [Analyse exploratoire des données](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
-      - [Fonctionnalités de conception pour ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
-      - [Exportation des données dans des environnements ML](data-distiller/ml-feature-pipelines/export-data.md)
-      - [Workflow d’enrichissement de pipeline de données AI/ML de bout en bout](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
-- Statistiques Distiller de données et apprentissage automatique {#advanced-statistics}
+      - [Fonctionnalités d’ingénierie pour ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
+      - [Exporter des données vers des environnements ML](data-distiller/ml-feature-pipelines/export-data.md)
+      - [Workflow de bout en bout d’enrichissement du pipeline de données AI/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+- Statistiques de Distiller de données et {#advanced-statistics} de machine learning
    - [Vue d’ensemble](advanced-statistics/overview.md)
    - [Conception des fonctionnalités](advanced-statistics/feature-engineering.md)
    - [Modèles](advanced-statistics/models.md)
-Mise en oeuvre de modèles {#implement-models}
-      - [Mise en oeuvre de modèles](advanced-statistics/implement-models/implement-models.md)
+   - [Transformation de fonction](advanced-statistics/feature-transformation.md)
+Implémentation de modèles {#implement-models}
+      - [Implémentation de modèles](advanced-statistics/implement-models/implement-models.md)
       - [Régression](advanced-statistics/implement-models/regression.md)
       - [Classification](advanced-statistics/implement-models/classification.md)
-      - [Mise en cluster](advanced-statistics/implement-models/clustering.md)
-   - [Transformation des fonctionnalités](advanced-statistics/feature-transformation.md)
-- Audiences Distiller de données {#data-distiller-audiences}
-   - [Création d’audiences externes à l’aide de SQL](data-distiller-audiences/overview.md)
+      - [Clustering](advanced-statistics/implement-models/clustering.md)
+Exemples {#examples}
+      - [Prédire l’attrition des clients à l’aide d’une régression logistique SQL](advanced-statistics/examples/predict-customer-churn.md)
+- Audiences de Distiller de données {#data-distiller-audiences}
+   - [Créer des audiences externes à l’aide de SQL](data-distiller-audiences/overview.md)
 - Exemples {#use-cases}
    - [Vue d’ensemble](use-cases/overview.md)
    - [Navigation abandonnée](use-cases/abandoned-browse.md)
@@ -64,8 +66,9 @@ Mise en oeuvre de modèles {#implement-models}
    - [Correspondance approximative](use-cases/fuzzy-match.md)
    - [Répertorier les pages vues d’un utilisateur ou d’une utilisatrice](use-cases/list-visitor-sessions.md)
    - [Répertorier les visiteurs et visiteuses selon leurs vues de page](use-cases/visitors-by-number-of-page-views.md)
+   - [Prédire l’attrition des clients à l’aide de SQL](use-cases/predict-customer-churn-stub.md)
    - [Score de propension](use-cases/propensity-score.md)
-   - [Récupération d’enregistrements similaires avec des fonctions d’ordre supérieur](use-cases/retrieve-similar-records.md)
+   - [Récupérer des enregistrements similaires avec des fonctions d’ordre supérieur](use-cases/retrieve-similar-records.md)
    - [Renvoyer et utiliser des variables de marchandisage à partir de données d’analyse](use-cases/merchandising-variables.md)
    - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [Afficher le rapport de cumul pour un visiteur ou une visiteuse](use-cases/roll-up-report-of-a-visitor.md)
@@ -79,14 +82,14 @@ Mise en oeuvre de modèles {#implement-models}
    - [Dédoublonnage des données](key-concepts/deduplication.md)
    - [Échantillon de jeux de données](key-concepts/dataset-samples.md)
    - [Calcul des statistiques des jeux de données](key-concepts/dataset-statistics.md)
-- Hypercubes Data Distiller {#hypercubes}
-   - [Analyse efficace des données volumineuses avec des hypercubes](hypercubes/overview.md)
+- {#hypercubes} d’hypercubes de Distiller de données
+   - [Analyse Big Data efficace avec des hypercubes](hypercubes/overview.md)
 - Connexion des clients à Query Service {#clients}
    - [Présentation de la connexion des clients](clients/overview.md)
    - [Modes SSL](./clients/ssl-modes.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
    - [DbVisualizer](./clients/dbvisulaizer.md)
-   - [Copilot GitHub](./clients/github-copilot.md)
+   - [Copilote GitHub](./clients/github-copilot.md)
    - [Notebook Jupyter](clients//jupyter-notebook.md)
    - [Looker](clients/looker.md)
    - [Postico](clients/postico.md)
@@ -113,10 +116,10 @@ Mise en oeuvre de modèles {#implement-models}
    - [Modèles de requête](api/query-templates.md)
    - [Requêtes accélérées](api/accelerated-queries.md)
    - [Abonnements aux alertes](api/alert-subscriptions.md)
-- API Data Distiller Authorization {#auth-api}
+- {#auth-api} de l’API Data Distiller Authorization
    - [Vue d’ensemble](auth-api/overview.md)
    - [Prise en main](auth-api/getting-started.md)
-   - [Accès IP](auth-api/ip-access.md)
+   - [Accès à l’adresse IP](auth-api/ip-access.md)
    - [Valider](auth-api/validate.md)
 - Gouvernance des données {#data-governance}
    - [Aperçu](data-governance/overview.md)
