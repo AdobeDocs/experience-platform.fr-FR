@@ -3,10 +3,10 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: SDK web Adobe Experience Platform;SDK web Platform;SDK web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 3a50468a7596b9ba870920a8188ae50b40aaef69
+source-git-commit: 08b07aa874b9ca9b5ea76850d6c0320bddddc85e
 workflow-type: tm+mt
-source-wordcount: '2085'
-ht-degree: 78%
+source-wordcount: '2149'
+ht-degree: 76%
 
 ---
 
@@ -16,25 +16,37 @@ ht-degree: 78%
 Ce document présente les notes de mise à jour du SDK web d’Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.25.0 - mercredi 23 janvier 2024 {#2-25-0}
+
+**Correction et améliorations**
+
+- Ajout de la validation des options à la commande `setDebug`.
+- Ajout d’un avertissement lors de la configuration d’une fonction `onBeforeLinkClickSend` ou d’un qualificateur de lien de téléchargement lorsque la collecte de clics est désactivée.
+- Correction d’un problème où les propositions rendues n’étaient pas incluses dans les notifications d’affichage
+
+**Nouvelles fonctionnalités**
+
+- Mise en œuvre d’un système de secours pour le domaine Edge configuré lorsque les cookies tiers sont activés et que les requêtes vers adobedc.demdex.net sont bloquées.
+
 ## Version 2.24.1 - samedi 6 décembre 2024
 
 **Correction et améliorations**
 
-- Correction d’un problème de dépendance lié au [moteur de règles Adobe Experience Platform](https://github.com/adobe/aepsdk-rulesengine-typescript/), qui provoquait des erreurs dans certaines intégrations de clients. Le Web SDK requiert désormais la version 2.0.3 ou ultérieure du [moteur de règles Adobe Experience Platform](https://github.com/adobe/aepsdk-rulesengine-typescript/).
+- Correction d’un problème de dépendance lié au moteur de règles [Adobe Experience Platform](https://github.com/adobe/aepsdk-rulesengine-typescript/), qui provoquait des erreurs dans certaines intégrations client. Web SDK nécessite désormais [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/) version 2.0.3 ou ultérieure.
 
 ## Version 2.24.0 - vendredi 31 octobre 2024
 
 **Nouvelles fonctionnalités**
 
-- [Les remplacements de jeux de données](../datastreams/overrides.md) sont désormais pris en charge lors du démarrage de sessions multimédia.
+- Les [remplacements de flux de données](../datastreams/overrides.md) sont désormais pris en charge au démarrage des sessions multimédia.
 
-- Ajout de la prise en charge des jetons de réponse Adobe Target dans le crochet de surveillance [`onContentRendering`](monitoring-hooks.md#onContentRendering).
+- Ajout de la prise en charge des jetons de réponse Adobe Target dans le hook de surveillance [`onContentRendering`](monitoring-hooks.md#onContentRendering).
 
 **Correctifs et améliorations**
 
-- Lorsque plusieurs messages in-app sont renvoyés, seul celui ayant la priorité la plus élevée s’affiche. Les autres sont enregistrés comme supprimés.
-- Les remplacements de flux de données vides ne sont plus envoyés à l’Edge Network, ce qui réduit les conflits potentiels avec les configurations de routage côté serveur.
-- Changement du nom des composants de messages de journalisation suivants, afin de s’aligner sur d’autres SDK d’Adobe :
+- Lorsque plusieurs messages in-app sont renvoyés, seul celui dont la priorité est la plus élevée s’affiche. Les autres sont enregistrés comme supprimés.
+- Les remplacements de trains de données vides ne sont plus envoyés à l’Edge Network, ce qui réduit les conflits potentiels avec les configurations de routage côté serveur.
+- Les noms des composants de messages de journalisation suivants ont été renommés pour s’aligner sur les autres SDK d’Adobe :
    - `DecisioningEngine` a été renommé `RulesEngine`
    - `LegacyMediaAnalytics` a été renommé `MediaAnalyticsBridge`
    - `Privacy` a été renommé `Consent`
@@ -46,7 +58,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 **Nouvelles fonctionnalités**
 
-- Ajout de la prise en charge de la demande de l’[ID CORE](identity/overview.md#tracking-coreid-web-sdk) dans la commande [getIdentity](commands/getidentity.md#get-identity-using-the-web-sdk-javascript-library) .
+- Ajout de la prise en charge de la demande de l’[CORE ID](identity/overview.md#tracking-coreid-web-sdk) dans la commande [getIdentity](commands/getidentity.md#get-identity-using-the-web-sdk-javascript-library).
 
 **Correctifs et améliorations**
 
@@ -56,29 +68,29 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 **Nouvelles fonctionnalités**
 
-- Ajout de la prise en charge des hooks de surveillance de la personnalisation.
+- Ajout de la prise en charge des points d’extension de surveillance de la personnalisation.
 
 **Correctifs et améliorations**
 
-- Suppression de la prise en charge d’Internet Explorer, réduisant la taille du fichier gzip de la bibliothèque de 9 %.
-- Correction d’un problème en raison duquel les détails des liens d’Activity Map n’étaient pas initialisés lorsque le crochet de moniteur `onInstanceConfigured` était appelé.
-- Correction d’un problème en raison duquel les destinations de cookies n’étaient pas définies sur le chemin correct.
+- Suppression de la prise en charge d’Internet Explorer, réduisant la taille d’espace mémoire de la bibliothèque de 9 %.
+- Correction d’un problème où les détails des liens d’Activity Map n’étaient pas initialisés lorsque le hook de moniteur `onInstanceConfigured` était appelé.
+- Correction d’un problème en raison duquel les destinations de cookies n’étaient pas définies sur le bon chemin d’accès.
 - Correction d’un problème client lié à l’appel à .
-- Correction d’un problème en raison duquel un codage d’URL non valide dans le paramètre `adobe_mc` provoquait l’échec des appels [sendEvent](commands/sendevent/overview.md).
+- Correction d’un problème en raison duquel un codage d’URL non valide dans le paramètre `adobe_mc` entraînait l’échec des appels [sendEvent](commands/sendevent/overview.md).
 
 ## Version 2.21.1 - vendredi 18 juillet 2024
 
 **Correctifs et améliorations**
 
-- Correction d’une erreur de création lors de l’utilisation de la bibliothèque NPM.
+- Correction d’une erreur de build lors de l’utilisation de la bibliothèque NPM.
 
 ## Version 2.21.0 - mercredi 16 juillet 2024
 
 **Nouvelles fonctionnalités**
 
-- Ajout de la prise en charge du suivi automatique de l’interaction des propositions.
-- Ajout d’un script de génération personnalisé qui fournit un fichier alloy.js.
-- Amélioration de la collecte des clics avec Activity Map et la prise en charge des regroupements d’événements.
+- Ajout de la prise en charge du suivi automatique des interactions de propositions.
+- Ajout d’un script de build personnalisé qui fournit un fichier alloy.js.
+- Amélioration de la collecte de clics avec la prise en charge d’Activity Map et du regroupement d’événements.
 
 ## Version 2.20.0 - mercredi 21 mai 2024
 
@@ -88,15 +100,15 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 **Correctifs et améliorations**
 
-- Correction d’un bogue en raison duquel le contenu par défaut était masqué par le fragment de code de masquage préalable lorsque le consentement était exclu.
+- Correction d’un bug en raison duquel le contenu par défaut était masqué par le fragment de code de masquage préalable lorsque le consentement était refusé.
 
 ## Version 2.19.2 - 10 janvier 2024
 
 **Correctifs et améliorations**
 
 - Correction d’un problème en raison duquel les erreurs d’identité masquaient d’autres erreurs et transformaient les erreurs d’identité en avertissements.
-- Correction d’un problème en raison duquel le bas des appels de page n’était jamais envoyé lorsqu’un appel de haut de page avec `renderDecisions` défini sur `false` était présent.
-- Correction d’un problème en raison duquel Web SDK ne pouvait pas lire les identités inter-domaines lorsqu’il y avait plusieurs paramètres de chaîne de requête `adobe_mc`.
+- Correction d’un problème en raison duquel les appels du bas de la page n’étaient jamais envoyés lorsqu’il existait un appel du haut de la page avec `renderDecisions` défini sur `false`.
+- Correction d’un problème en raison duquel Web SDK ne pouvait pas lire les identités interdomaines lorsqu’il existait plusieurs paramètres de chaîne de requête `adobe_mc`.
 
 ## Version 2.19.1 - 10 novembre 2023
 
@@ -109,8 +121,8 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 **Nouvelles fonctionnalités**
 
 - Ajout de la prise en charge du rendu des messages in-app d’Adobe Journey Optimizer.
-- Ajout de la prise en charge des [événements de haut et de bas de page](use-cases/top-bottom-page-events.md).
-- Ajout de l’option [`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) à la commande `sendEvent` pour contrôler la demande de la portée à l’échelle de la page et de la surface par défaut.
+- Ajout de la prise en charge des [événements haut et bas de page](use-cases/top-bottom-page-events.md).
+- Ajout de [`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) option à la commande `sendEvent` pour contrôler la demande de portée dans toute la page et de surface par défaut.
 
 **Correctifs et améliorations**
 
@@ -175,7 +187,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 - Ajout de la prise en charge de la [Migration complète page par page](home.md#migrating-to-web-sdk). Le profil Adobe Target est désormais conservé lorsqu’un visiteur ou un visiteuse passe d’une page at.js à une page SDK web.
 - Ajout de la prise en charge configurable des [Indicateurs clients d’agent utilisateur à forte entropie](/help/web-sdk/use-cases/client-hints.md).
-- Ajout de la prise en charge de la commande [`applyResponse`](/help/web-sdk/commands/applyresponse.md). Cela permet une personnalisation hybride via l’[API Edge Network Server](../server-api/overview.md).
+- Ajout de la prise en charge de la commande [`applyResponse`](/help/web-sdk/commands/applyresponse.md) . Cela permet une personnalisation hybride via l’[API Edge Network Server](../server-api/overview.md).
 - Les liens du mode QA fonctionnent désormais sur plusieurs pages.
 
 **Correctifs et améliorations**
@@ -263,13 +275,13 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 ## Version 2.4.0 - Mars 2021
 
-- SDK peut désormais être installé en tant que [package NPM](/help/web-sdk/install/npm.md).
+- Le SDK peut désormais être installé en tant que package [NPM](/help/web-sdk/install/npm.md).
 - Ajout de la prise en charge d’une option `out` lors de la [configuration du consentement par défaut](/help/web-sdk/commands/configure/defaultconsent.md), qui ignore tous les événements jusqu’à ce que le consentement soit reçu (l’option `pending` existante met les événements en file d’attente et les envoie une fois le consentement reçu).
 - Le rappel [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) peut désormais être utilisé pour empêcher l’envoi d’un événement.
 - Utilise désormais un groupe de champs de schéma XDM au lieu de `meta.personalization` lors de l’envoi d’événements au sujet du contenu personnalisé rendu ou sur lequel l’utilisateur ou l’utilisatrice a cliqué.
-- La commande [`getIdentity`](/help/web-sdk/commands/getidentity.md) renvoie désormais l’identifiant de région de périphérie à côté de l’identité.
+- La commande [`getIdentity`](/help/web-sdk/commands/getidentity.md) renvoie désormais l’identifiant de zone géographique Edge ainsi que l’identité.
 - Amélioration et gestion plus efficace des avertissements et des erreurs reçus du serveur.
-- Ajout de la prise en charge de la norme Consent 2.0 d’Adobe pour la commande [`setConsent`](/help/web-sdk/commands/setconsent.md).
+- Ajout de la prise en charge de la norme de consentement 2.0 d’Adobe pour la commande [`setConsent`](/help/web-sdk/commands/setconsent.md).
 - Une fois reçues, les préférences de consentement sont hachées et stockées dans un espace de stockage local afin d’optimiser l’intégration entre les CMP, le SDK web de Platform et le Platform Edge Network. Si vous collectez des préférences de consentement, nous vous recommandons d’appeler `setConsent` à chaque chargement de page.
 - Ajout des deux [hooks de surveillance](https://github.com/adobe/alloy/wiki/Monitoring-Hooks) suivants : `onCommandResolved` et `onCommandRejected`.
 - Correction de bug : les événements de notification d’interaction de personnalisation contenaient des informations en double sur la même activité lorsqu’un utilisateur ou une utilisatrice accédait à une nouvelle vue d’application monopage, revenait à la vue d’origine, puis cliquait sur un élément éligible à la conversion.
@@ -287,8 +299,8 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 ## Version 2.2.0 - Octobre 2020
 
-- Bug Fix : l’objet Opt-in empêchait Web SDK d’effectuer des appels lorsque `idMigrationEnabled` est `true`.
-- Bug Fix : sensibilisez Web SDK aux demandes qui doivent renvoyer des offres de personnalisation pour éviter un problème de scintillement.
+- Correction de bug : l’objet Opt-in empêchait Web SDK d’effectuer des appels lorsque `idMigrationEnabled` était `true`.
+- Correction de bug : sensibilisation de Web SDK aux requêtes qui doivent renvoyer des offres de personnalisation afin d’éviter tout problème de scintillement.
 
 ## Version 2.1.0 - Août 2020
 
@@ -296,5 +308,5 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 - Prise en charge de la norme de consentement IAB 2.0.
 - Prise en charge de la transmission d’identifiants supplémentaires dans la commande `setConsent`.
 - Prise en charge du remplacement de l’`datasetId` dans la commande `sendEvent`.
-- Hooks de surveillance de l’assistance ([En savoir plus](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
+- Prise en charge des hooks de surveillance ([En savoir plus](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
 - Transmission de `environment: browser` dans les données contextuelles des détails d’implémentation.

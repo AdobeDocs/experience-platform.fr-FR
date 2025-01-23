@@ -2,16 +2,29 @@
 title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: c38456ab44f3e143a0120f1a756105213a46fab5
-workflow-type: ht
-source-wordcount: '2332'
-ht-degree: 100%
+source-git-commit: 08b07aa874b9ca9b5ea76850d6c0320bddddc85e
+workflow-type: tm+mt
+source-wordcount: '2413'
+ht-degree: 96%
 
 ---
 
 # Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 
 Ce document contient les notes de mise à jour de l’extension de balises du SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, voir les [notes de mise à jour du SDK Web Platform](/help/web-sdk/release-notes.md).
+
+## Version 2.28.0 - mercredi 23 janvier 2024
+
+**Correctifs et améliorations**
+
+- Correction d’un problème en raison duquel les remplacements du conteneur de synchronisation des identifiants ne pouvaient pas être définis sans activer l’Audience Manager.
+- Correction d’un problème en raison duquel les remplacements de configuration des trains de données étaient désactivés lors de la mise à niveau vers la dernière version.
+- Correction d’un problème en raison duquel les utilisateurs ne pouvaient pas enregistrer les paramètres de collecte de clics automatiques de Target.
+
+**Nouvelles fonctionnalités**
+
+- Ajout d’une nouvelle fonctionnalité permettant de basculer entre les noms techniques et les noms d’affichage dans l’objet XDM.
+- Contient [version 2.25.0](../../../../web-sdk/release-notes.md#2-25-0) du SDK Web Adobe Experience Platform.
 
 ## Version 2.27.0 - 31 octobre 2024
 
@@ -340,8 +353,8 @@ Contient la version 2.3.0 de la bibliothèque SDK Web Adobe Experience Platfo
 - Changements liés à `Get Decisions` :
    - Suppression de la commande `getDecisions`.
    - Ajout d’une option `scopes` à la commande `sendEvent`. Les décisions sont renvoyées dans la promesse `sendEvent` résolue.
-   - Ajout d’une portée intégrée `__view__` qui résultera en un renvoi d’offres à l’échelle de la page/vue. (offres du compositeur d’expérience visuelle dans Target, par exemple.)
-Ces décisions ne sont renvoyées par la commande `sendEvent` que si `renderDecisions` est défini sur false.
+   - Ajout d’une portée intégrée `__view__` qui résultera en un renvoi d’offres à l’échelle de la page/vue. (Offres du compositeur d’expérience visuelle dans Target, par exemple).
+Ces décisions sont renvoyées à partir de la commande `sendEvent` uniquement si `renderDecisions` est défini sur false.
    - Ajout d’un événement `Decisions Received`, qui se déclenche lorsque des décisions deviennent disponibles.
 - Combinaison de plusieurs notifications de personnalisation sous un seul appel de serveur.
 - Correction d’un problème en raison duquel l’ID de fusion des événements était réinitialisé chaque fois que l’élément de données était référencé.
