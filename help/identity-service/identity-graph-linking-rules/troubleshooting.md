@@ -2,7 +2,7 @@
 title: Guide de dépannage des règles de liaison de graphiques d’identités
 description: Découvrez comment résoudre les problèmes courants des règles de liaison des graphiques d’identités.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
+source-git-commit: 4d9954dd61b56125ae1e828432c8cc359806d280
 workflow-type: tm+mt
 source-wordcount: '3286'
 ht-degree: 0%
@@ -171,7 +171,7 @@ Si vos données sont envoyées au lac de données, mais pas à Profile, et que v
   FROM dataset_name)) WHERE col.id != _testimsorg.identification.core.email and key = 'Email' 
 ```
 
-Ces requêtes supposent que :
+Cette requête suppose que :
 
 * Une identité est envoyée à partir de l’identityMap et une autre identité est envoyée à partir d’un descripteur d’identité. **REMARQUE** : dans les schémas de modèle de données d’expérience (XDM), le descripteur d’identité est le champ marqué comme une identité.
 * Le CRMID est envoyé via identityMap. Si le CRMID est envoyé en tant que champ, supprimez le `key='Email'` de la clause WHERE.
