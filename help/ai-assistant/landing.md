@@ -3,9 +3,9 @@ title: Assistant AI dans la documentation du produit Adobe Experience Platform
 description: Prise en main de l’assistant AI dans Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: fcda4dc3ecdd4ae9272f1cc65cabb20b6236c71a
+source-git-commit: 8022195e755df92b7ceacea52214f81593994e2a
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '810'
 ht-degree: 1%
 
 ---
@@ -156,7 +156,6 @@ Lisez les exemples de cas d’utilisation de l’assistant AI suivants :
 * [Réduire le temps d’intégration des nouveaux membres de votre équipe](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
 * [Désencombrez vos audiences et optimisez vos opérations marketing](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
 * [Vérifiez les dépendances et minimisez les risques lors des mises à jour des données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
-* [Réduisez les risques lors des mises à jour des données en vérifiant les dépendances en quelques secondes](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 * [Découvrir et déployer de nouvelles fonctionnalités plus rapidement](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125)
 
 >[!TAB Contenu vidéo supplémentaire]
