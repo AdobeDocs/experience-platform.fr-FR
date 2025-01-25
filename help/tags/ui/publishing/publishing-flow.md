@@ -2,14 +2,19 @@
 title: Flux de publication
 description: Découvrez le processus de création des bibliothèques, de test et d’approbation des versions pour la production dans Adobe Experience Platform.
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
 workflow-type: tm+mt
-source-wordcount: '1490'
-ht-degree: 97%
+source-wordcount: '1509'
+ht-degree: 96%
 
 ---
 
-# Flux de publication
+# Flux de publication {#publishing-flow}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_publishing_flow"
+>title="Flux de publication"
+>abstract="Découvrez les niveaux d’autorisations utilisateur requis pour le flux de publication, y compris les droits Développer, Approuver et Publish."
 
 >[!NOTE]
 >
@@ -112,7 +117,7 @@ Ce qui est inclus en amont dépend de l’étape actuelle de la bibliothèque. P
 
 ![](./images/approval-workflow/upstream.png)
 
-Lors de la modification d’une bibliothèque dans l’interface utilisateur, toutes les ressources héritées du amont sont représentées dans la section **[!UICONTROL Resources Upstream]**. Pour afficher ces ressources, sélectionnez l’onglet Développer situé sous l’en-tête de la section.
+Lors de la modification d’une bibliothèque dans l’interface utilisateur, toutes les ressources héritées des éléments en amont sont représentées dans la section **[!UICONTROL Ressources en amont]**. Pour afficher ces ressources, sélectionnez l’onglet Développer situé sous l’en-tête de la section.
 
 ![](./images/approval-workflow/upstream-collapse.png)
 
