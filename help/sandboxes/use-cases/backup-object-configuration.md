@@ -1,7 +1,8 @@
 ---
 title: Sauvegarde des configurations d’objet à l’aide de l’outil Sandbox
 description: Pour réinitialiser les sandbox en toute sécurité et ajouter la prise en charge des versions, sauvegardez les configurations d’objet (ou les métadonnées) à l’aide des packages d’outils de sandbox. Les packages de sauvegarde empêchent la perte de configurations critiques telles que les schémas, les jeux de données et les audiences, en particulier pendant les itérations de développement.
-source-git-commit: f0cbee2663682f0afae6d7e4b174f250fcb3df53
+exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
+source-git-commit: 2a700788d9b59bcdb4195e34d77eccd278803d42
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 3%
