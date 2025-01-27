@@ -5,9 +5,9 @@ breadcrumb-title: Guide de Segmentation Service
 user-guide-description: Créez des audiences à partir de vos données de profil client en temps réel à l’aide des définitions de segment générées par Adobe Experience Platform ou de sources externes.
 feature: Segments
 role: User
-source-git-commit: 0bbee2100ed6fdc0f40457965e195d07de6eb2a1
+source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: '192'
 ht-degree: 92%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 92%
 
 - [Présentation de Segmentation Service](home.md)
 - [Types de données de segmentation](data-types.md)
-- [Barrières de sécurité de la segmentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [ Mécanismes de sécurisation de la segmentation ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - API Segmentation {#api}
    - [Vue d’ensemble](api/overview.md)
    - [Prise en main](api/getting-started.md)
@@ -36,7 +36,7 @@ ht-degree: 92%
    - [Audience Portal](ui/audience-portal.md)
    - [Composition de l’audience](ui/audience-composition.md)
    - [Créateur de segments](ui/segment-builder.md)
-   - [Composition d’audiences fédérées (disponibilité limitée)](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/home)
+   - [Composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/home)
    - [Audiences de compte](ui/account-audiences.md)
    - [Audiences semblables](ui/lookalike-audiences.md)
    - [Audiences de prospects](ui/prospect-audience.md)

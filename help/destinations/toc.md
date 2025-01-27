@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: c5543997747daa336b0a5bb40c46aa720e8bcadd
+source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
 workflow-type: tm+mt
-source-wordcount: '1273'
+source-wordcount: '1271'
 ht-degree: 84%
 
 ---
@@ -67,7 +67,7 @@ ht-degree: 84%
       * [(Beta) Connexion de synchronisation de personne avec Marketo Engage](./catalog/adobe/marketo-engage-person-sync.md)
       * [Connexion Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
       * [Partage d’audiences Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr)
-      * [Connexion à la composition d’audiences fédérées (disponibilité limitée)](https://www.adobe.com/go/destinations-federated-audience-composition)
+      * [Connexion à la composition d’audiences fédérées](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinations publicitaires{#advertising}
       * [(Beta) Distribution d’audiences Acxiom](./catalog/advertising/acxiom-audience-distribution.md)
       * [Présentation des destinations publicitaires](./catalog/advertising/overview.md)
