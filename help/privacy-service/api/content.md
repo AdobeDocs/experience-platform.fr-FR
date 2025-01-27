@@ -1,33 +1,28 @@
 ---
-title: Point de terminaison de l’API de contenu
-description: Découvrez comment récupérer vos données d’accès à l’aide de l’API Privacy Service.
+title: Point d’entrée de l’API Content
+description: Découvrez comment récupérer vos données d’accès à l’aide de l’API du Privacy Service.
 role: Developer
-badgePrivateBeta: label="Private Beta" type="Informative"
 exl-id: b3b7ea0f-957d-4e51-bf92-121e9ae795f5
-source-git-commit: e3a453ad166fe244b82bd1f90e669579fcf09d17
+source-git-commit: ac54398ae8e9e06ea3581baf867ab1cf650042a2
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 6%
+source-wordcount: '669'
+ht-degree: 5%
 
 ---
 
-# Point de terminaison du contenu
+# Point d’entrée de contenu
 
->[!IMPORTANT]
->
->Le point d’entrée `/content` est actuellement en version bêta et votre entreprise n’y a peut-être pas encore accès. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
+Utilisez le point d’entrée `/content` pour récupérer en toute sécurité *les informations d’accès* (les informations qu’un titulaire de confidentialité peut légitimement demander à accéder) pour vos clients. L’URL de téléchargement fournie dans la réponse à une requête de GET `/jobs/{JOB_ID}` pointe vers un point d’entrée de service Adobe. Vous pouvez ensuite envoyer une requête de GET à `/jobs/:JOB_ID/content` pour renvoyer vos données client au format JSON. Cette méthode d’accès met en œuvre plusieurs couches d’authentification et de contrôle d’accès pour améliorer la sécurité.
 
-Utilisez le point de terminaison `/content` pour récupérer en toute sécurité les *informations d’accès* (informations auxquelles un sujet de confidentialité peut demander l’accès) pour vos clients. L’URL de téléchargement fournie dans la réponse à une requête de GET `/jobs/{JOB_ID}` pointe vers un point de terminaison de service Adobe. Vous pouvez ensuite adresser une demande de GET à `/jobs/:JOB_ID/content` pour renvoyer vos données client au format JSON. Cette méthode d’accès met en oeuvre plusieurs couches d’authentification et de contrôle d’accès afin d’améliorer la sécurité.
-
-Avant d’utiliser ce guide, reportez-vous au [guide de prise en main](./getting-started.md) pour plus d’informations sur les en-têtes d’authentification requis présentés dans l’exemple d’appel API ci-dessous.
+Avant d’utiliser ce guide, reportez-vous au [ guide de prise en main ](./getting-started.md) pour plus d’informations sur les en-têtes d’authentification requis présentés dans l’exemple d’appel API ci-dessous.
 
 >[!TIP]
 >
->Si vous ne connaissez pas actuellement l’ID de tâche pour les informations d’accès dont vous avez besoin, appelez le point de terminaison `/jobs` et utilisez des paramètres de requête supplémentaires pour filtrer les résultats. Vous trouverez une liste complète des paramètres de requête disponibles dans le [guide de point de terminaison des tâches de confidentialité](./privacy-jobs.md).
+>Si vous ne connaissez pas l’ID de tâche pour les informations d’accès dont vous avez besoin, appelez le point d’entrée `/jobs` et utilisez des paramètres de requête supplémentaires pour filtrer les résultats. Vous trouverez une liste complète des paramètres de requête disponibles dans le [guide des points d’entrée des tâches de confidentialité](./privacy-jobs.md).
 
-## Récupération des informations sur les tâches de confidentialité
+## Récupération des informations de tâche relatives à la confidentialité
 
-Pour récupérer des informations sur une tâche spécifique, telles que son état de traitement actuel, incluez `jobId` dans le chemin d’accès d’une requête de GET au point de terminaison `/jobs`.
+Pour récupérer des informations sur une tâche spécifique, telles que son statut de traitement actuel, incluez la `jobId` de cette tâche dans le chemin d’accès d’une requête de GET vers le point d’entrée `/jobs`.
 
 **Format d’API**
 
@@ -53,7 +48,7 @@ Une réponse réussie renvoie les détails de la tâche spécifiée.
 
 >[!NOTE]
 >
->Les tâches de confidentialité doivent avoir l’état `complete` pour contenir le `downloadUrl`.
+>Les tâches relatives à la confidentialité doivent avoir le statut `complete` pour contenir les `downloadUrl`.
 
 ```json
 {
@@ -87,36 +82,36 @@ Une réponse réussie renvoie les détails de la tâche spécifiée.
 |----------------------|---------------------------------------------------------------------------------------------------------------|
 | `jobId` | Identifiant unique de la tâche de confidentialité. |
 | `requestId` | Identifiant unique de la requête spécifique envoyée au Privacy Service. |
-| `userKey` | `userKey` est la valeur `key` que vous avez fournie lors de l’envoi de la demande d’accès à des informations personnelles. La valeur `key` est votre opportunité de fournir un identifiant pour le sujet de données qui vous semble logique. Il s’agit généralement d’un identifiant unique créé par votre système pour effectuer le suivi de ce sujet de données. CONSEIL : vous pouvez répertorier toutes les tâches de confidentialité actives et comparer votre `key` à chaque tâche. |
-| `action` | Type d’action demandée. Les valeurs acceptées sont `access` et `delete`. |
-| `status` | État actuel de la tâche de confidentialité. |
-| `submittedBy` | Adresse électronique de la personne qui a envoyé la tâche de confidentialité. |
+| `userKey` | `userKey` est la valeur `key` que vous avez fournie lors de l’envoi de la demande d’accès à des informations personnelles. La valeur `key` est votre possibilité de fournir un identifiant qui vous semble logique pour le titulaire de données. Il s’agit généralement d’un identifiant unique créé par votre système pour suivre ce titulaire de données. CONSEIL : vous pouvez répertorier toutes les tâches de confidentialité actives et comparer vos `key` à chaque tâche. |
+| `action` | Type d’action demandé. Les valeurs acceptées sont `access` et `delete`. |
+| `status` | Statut actuel de la tâche de confidentialité. |
+| `submittedBy` | Adresse e-mail de la personne qui a envoyé la tâche de confidentialité. |
 | `createdDate` | Date et heure de création de la tâche de confidentialité. |
 | `lastModifiedDate` | Date et heure de la dernière modification de la tâche de confidentialité. |
-| `userIds` | Tableau contenant les identifiants d’utilisateur et les informations connexes. |
-| `userIds.namespace` | Espace de noms utilisé pour l’identifiant de l’utilisateur. |
-| `userIds.value` | La valeur réelle de l’identifiant de l’utilisateur. |
+| `userIds` | Tableau contenant les identifiants d’utilisateur et les informations associées. |
+| `userIds.namespace` | Espace de noms utilisé pour l’identifiant utilisateur. |
+| `userIds.value` | Valeur réelle de l’identifiant utilisateur. |
 | `userIds.type` | Type d’identifiant (par exemple `standard` ou `custom`). |
 | `userIds.namespaceId` | Identifiant de l’espace de noms utilisé pour classer et gérer les identités utilisateur. |
-| `userIds.isDeletedClientSide` | Valeur booléenne indiquant si l’identifiant a été supprimé du côté client. |
-| `productResponses` | Tableau contenant les réponses de différents produits ou services liés à la tâche de confidentialité. |
-| `productResponses.product` | Nom du produit ou du service qui a été utilisé pour acquérir des informations sur le sujet des données. |
-| `productResponses.retryCount` | Nombre de tentatives pour la requête. |
+| `userIds.isDeletedClientSide` | Valeur booléenne indiquant si l’identifiant a été supprimé côté client. |
+| `productResponses` | Un tableau contenant les réponses de différents produits ou services liés à la tâche de confidentialité. |
+| `productResponses.product` | Nom du produit ou du service utilisé pour obtenir des informations sur le titulaire de données. |
+| `productResponses.retryCount` | Nombre de reprises de la demande. |
 | `productResponses.processedDate` | Date et heure auxquelles la réponse du produit a été traitée. |
-| `productResponses.productStatusResponse` | Objet contenant l’état de la réponse du produit. |
-| `productResponses.productStatusResponse.status` | État de la réponse du produit. |
-| `downloadURL` | Cet attribut fournit un point de terminaison qui peut être appelé pendant 60 jours après la fin de la tâche. L’état de la tâche doit être `complete` et `action` doit être `access`. Sinon, ce champ est absent. |
-| `regulation` | Cadre réglementaire dans lequel la demande d’accès à des informations personnelles est en cours de traitement, par exemple `gdpr`, `ccpa`, `lgpd_bra`, `pdpa_tha`, etc. |
+| `productResponses.productStatusResponse` | Un objet contenant le statut de la réponse du produit. |
+| `productResponses.productStatusResponse.status` | Statut de la réponse du produit. |
+| `downloadURL` | Cet attribut fournit un point d’entrée, que vous pouvez appeler pendant 60 jours après la fin de la tâche. Le statut du traitement doit être `complete` et le `action` doit être `access`. Dans le cas contraire, ce champ est absent. |
+| `regulation` | Le cadre réglementaire dans lequel la demande d’accès à des informations personnelles est traitée, tel que `gdpr`, `ccpa`, `lgpd_bra`, `pdpa_tha`, etc. |
 
 {style="table-layout:auto"}
 
 ## Récupération des informations d’accès client {#retrieve-access-data}
 
-Pour obtenir les &quot;informations d’accès&quot; générées en réponse à la requête de votre sujet de données, envoyez une demande de GET au point de terminaison `/jobs/{JOB_ID}/content`. La réponse est un fichier zip (*.zip) qui contient un dossier avec des sous-dossiers pour chaque produit contenant des données sur le sujet de données.
+Pour obtenir les « informations d’accès » générées en réponse à la requête de votre titulaire de données, envoyez une requête de GET au point d’entrée `/jobs/{JOB_ID}/content`. La réponse est un fichier zip (*.zip) qui contient un dossier avec des sous-dossiers pour chaque produit qui contient des données sur le titulaire de données.
 
 >[!TIP]
 >
->Pour effectuer cette requête, vous avez besoin d’un identifiant de tâche spécifique. Si vous devez récupérer l’identifiant de tâche spécifique, envoyez d’abord une requête GET au point de terminaison `/jobs` et utilisez des paramètres de requête supplémentaires pour filtrer les résultats. Vous trouverez des informations détaillées, notamment les paramètres de requête autorisés, dans le [guide de point de terminaison des tâches de confidentialité](./privacy-jobs.md).
+>Vous avez besoin d’un ID de tâche spécifique pour effectuer cette requête. Si vous devez récupérer l’identifiant de tâche spécifique, envoyez d’abord une requête de GET au point d’entrée `/jobs` et utilisez des paramètres de requête supplémentaires pour filtrer les résultats. Vous trouverez des informations détaillées, y compris les paramètres de requête autorisés, dans le guide [Privacy jobs endpoint guide](./privacy-jobs.md).
 
 **Format d’API**
 
@@ -126,7 +121,7 @@ GET /jobs/{JOB_ID}/content
 
 **Requête**
 
-La requête suivante renvoie &quot;informations d’accès&quot; pour l’ID de tâche fourni dans la requête.
+La requête suivante renvoie « informations d’accès » pour l’ID de tâche fourni dans la requête.
 
 ```shell
 curl -X GET \
