@@ -2,7 +2,7 @@
 title: Algorithme d’optimisation des identités
 description: Découvrez l’algorithme d’optimisation des identités dans Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: f067f8d4628d76b4a87b9dd97d1d703c54688871
+source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 2%
@@ -25,7 +25,7 @@ Lisez cette section pour plus d’informations sur les espaces de noms uniques e
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_uniquenamespace"
->title="Configuration de l’algorithme"
+>title="Espace de noms unique"
 >abstract="Un graphique ne peut pas avoir deux identités avec un espace de noms unique. Si un graphique tente de dépasser cette limite, les liens les plus récents sont conservés et les liens les plus anciens sont supprimés."
 
 Un espace de noms unique détermine les liens qui sont supprimés en cas de réduction du graphique.

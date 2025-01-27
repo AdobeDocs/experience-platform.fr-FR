@@ -2,7 +2,7 @@
 title: Règles de liaison des graphiques d’identités
 description: Découvrez les règles de liaison des graphiques d’identités dans Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: af36856dbf37e69cbc5c6952c583f583fd5b8e96
+source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
 workflow-type: tm+mt
 source-wordcount: '1440'
 ht-degree: 3%
@@ -37,7 +37,7 @@ Cette section présente des exemples de scénarios que vous pouvez prendre en co
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
->title="Scénarios de réduction des graphiques"
+>title="Scénarios de réduction du graphique"
 >abstract="Il existe plusieurs raisons pour lesquelles les graphiques peuvent être « réduits » ou représenter plusieurs entités de personne."
 
 Il existe des instances où plusieurs connexions peuvent se produire sur un seul appareil :
