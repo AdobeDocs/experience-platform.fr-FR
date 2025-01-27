@@ -3,7 +3,7 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: SDK web Adobe Experience Platform;SDK web Platform;SDK web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 08b07aa874b9ca9b5ea76850d6c0320bddddc85e
+source-git-commit: 5bf69773d0502185bbe8db3b13cb2684d6d06ac4
 workflow-type: tm+mt
 source-wordcount: '2149'
 ht-degree: 76%
@@ -16,13 +16,13 @@ ht-degree: 76%
 Ce document présente les notes de mise à jour du SDK web d’Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
-## Version 2.25.0 - mercredi 23 janvier 2024 {#2-25-0}
+## Version 2.25.0 - vendredi 23 janvier 2025
 
 **Correction et améliorations**
 
 - Ajout de la validation des options à la commande `setDebug`.
 - Ajout d’un avertissement lors de la configuration d’une fonction `onBeforeLinkClickSend` ou d’un qualificateur de lien de téléchargement lorsque la collecte de clics est désactivée.
-- Correction d’un problème où les propositions rendues n’étaient pas incluses dans les notifications d’affichage
+- Correction d’un problème où les propositions rendues n’étaient pas incluses dans les notifications d’affichage.
 
 **Nouvelles fonctionnalités**
 
