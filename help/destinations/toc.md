@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
+source-git-commit: e916488be3d10e47193e66c1f9516cb5da93c3a7
 workflow-type: tm+mt
-source-wordcount: '1271'
+source-wordcount: '1270'
 ht-degree: 84%
 
 ---
@@ -103,7 +103,7 @@ ht-degree: 84%
       * [Connexion PubMatic Connect](./catalog/advertising/pubmatic.md)
       * [Connexion Snapchat Ads](./catalog/advertising/snap-inc.md)
       * [Connexion à The Trade Desk](./catalog/advertising/tradedesk.md)
-      * [(Version bêta) Connexion CRM à The Trade Desk](./catalog/advertising/tradedesk-emails.md)
+      * [Connexion CRM à The Trade Desk](./catalog/advertising/tradedesk-emails.md)
       * [Extension Twitter Universal Website Tag](./catalog/advertising/twitter-uwt.md)
       * [Connexion Yahoo/Verizon DataX](./catalog/advertising/datax.md)
    * Destinations Analytics {#analytics}
