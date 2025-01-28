@@ -2,14 +2,20 @@
 title: Logique de liaison du service d’identités
 description: Découvrez comment Identity Service lie des identités disparates pour créer une vue d’ensemble complète d’un client.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: f067f8d4628d76b4a87b9dd97d1d703c54688871
+source-git-commit: 627b2e5ecde28b26e7d4717e13713c38c3c09651
 workflow-type: tm+mt
-source-wordcount: '968'
-ht-degree: 2%
+source-wordcount: '971'
+ht-degree: 3%
 
 ---
 
-# Logique de liaison d’Identity Service
+# Logique de liaison d’Identity Service {#identity-service-linking-logic}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_simulatedgraph"
+>title="Graphe simulé"
+>abstract="Les identités sont liées lorsque l’espace de noms d’identité et la valeur d’identité correspondent."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-linking-logic" text="En savoir plus"
 
 Un lien entre deux identités est établi lorsque l’espace de noms d’identité et les valeurs d’identité correspondent.
 
@@ -29,12 +35,7 @@ Une identité représente une entité du monde réel. S’il existe un lien éta
 | Un utilisateur final se connecte à l’aide de Google Chrome, puis de Firefox. | Le CRMID est lié à deux ECID différents. | Une personne (CRMID) est associée à 2 navigateurs web (**Remarque** : chaque navigateur possède son propre ECID). |
 | Un ingénieur de données ingère un enregistrement CRM qui comprend deux champs marqués comme identité : CRMID et E-mail. | CRMID et Email sont liés. | Une personne (CRMID) est associée à l’adresse e-mail. |
 
-## Comprendre la logique de liaison d’Identity Service {#identity-linking-logic}
-
->[!CONTEXTUALHELP]
->id="platform_identities_simulatedgraph"
->title="Graphe simulé"
->abstract="Les identités sont liées lorsque l’espace de noms d’identité et la valeur d’identité correspondent."
+## Comprendre la logique de liaison d’Identity Service
 
 Une identité se compose d’un espace de noms d’identité et d’une valeur d’identité.
 

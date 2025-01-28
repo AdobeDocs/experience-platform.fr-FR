@@ -2,14 +2,20 @@
 title: Algorithme d’optimisation des identités
 description: Découvrez l’algorithme d’optimisation des identités dans Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1563'
 ht-degree: 2%
 
 ---
 
-# Algorithme d’optimisation des identités
+# Algorithme d’optimisation des identités {#identity-optimization-algorithm}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_uniquenamespace"
+>title="Espace de noms unique"
+>abstract="Un graphique ne peut pas avoir deux identités avec un espace de noms unique. Si un graphique tente de dépasser cette limite, les liens les plus récents sont conservés et les liens les plus anciens sont supprimés."
+>additional-url="http://www.adobe.com/go/identity-ido-algo" text="En savoir plus"
 
 >[!AVAILABILITY]
 >
@@ -22,11 +28,6 @@ L’algorithme d’optimisation des identités est un algorithme de graphique su
 Lisez cette section pour plus d’informations sur les espaces de noms uniques et la priorité des espaces de noms. Ces deux concepts servent de paramètres d’entrée requis par l’algorithme d’optimisation des identités.
 
 ### Espace de noms unique {#unique-namespace}
-
->[!CONTEXTUALHELP]
->id="platform_identities_uniquenamespace"
->title="Espace de noms unique"
->abstract="Un graphique ne peut pas avoir deux identités avec un espace de noms unique. Si un graphique tente de dépasser cette limite, les liens les plus récents sont conservés et les liens les plus anciens sont supprimés."
 
 Un espace de noms unique détermine les liens qui sont supprimés en cas de réduction du graphique.
 

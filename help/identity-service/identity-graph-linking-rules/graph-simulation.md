@@ -2,14 +2,20 @@
 title: Guide de l’interface utilisateur de la simulation graphique
 description: Découvrez comment utiliser la simulation de graphiques dans l’interface utilisateur d’Identity Service.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '1484'
-ht-degree: 4%
+source-wordcount: '1461'
+ht-degree: 3%
 
 ---
 
-# Guide de l’interface utilisateur de [!DNL Graph Simulation]
+# Guide de l’interface utilisateur de [!DNL Graph Simulation] {#graph-simulation}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphsimulation"
+>title="Simulation de graphique"
+>abstract="Simulez des graphiques pour comprendre la façon dont le service d’identités lie les identités et la façon dont fonctionne l’algorithme d’optimisation des identités."
+>additional-url="http://www.adobe.com/go/identity-graph-simulation" text="En savoir plus"
 
 >[!AVAILABILITY]
 >
@@ -50,12 +56,6 @@ Visionneuse de graphiques simulés : la visionneuse de graphiques simulés affic
 >[!ENDTABS]
 
 ## Ajouter des événements {#add-events}
-
->[!CONTEXTUALHELP]
->id="platform_identities_graphsimulation"
->title="Simulation de graphique"
->abstract="Simulez des graphiques pour comprendre la façon dont le service d’identités lie les identités et la façon dont fonctionne l’algorithme d’optimisation des identités."
->text="Learn more in documentation"
 
 Pour commencer, sélectionnez **[!UICONTROL Ajouter des événements]**.
 
@@ -132,16 +132,6 @@ Pour supprimer un événement, sélectionnez les points de suspension (`...`) en
 ![ Icône Supprimer l’événement sélectionnée.](../images/graph-simulation/delete.png)
 
 ## Configurer l’algorithme {#configure-algorithm}
-
->[!CONTEXTUALHELP]
->id="platform_identities_algorithmconfiguration"
->title="Configuration de l’algorithme"
->abstract="Configurez un espace de noms unique et une priorité d’espace de noms adaptée à vos identités ingérées."
-
->[!CONTEXTUALHELP]
->id="platform_identities_namespacepriority"
->title="Priorité de l’espace de noms"
->abstract="La priorité de l’espace de noms détermine la manière dont les liens sont supprimés du graphique d’identités."
 
 >[!IMPORTANT]
 >
