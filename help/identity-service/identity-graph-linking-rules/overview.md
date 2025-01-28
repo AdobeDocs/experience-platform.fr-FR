@@ -2,9 +2,9 @@
 title: Règles de liaison des graphiques d’identités
 description: Découvrez les règles de liaison des graphiques d’identités dans Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 42c2b2afff49422a539d573280e9bc3f30369c3f
+source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
-source-wordcount: '1443'
+source-wordcount: '1436'
 ht-degree: 3%
 
 ---
@@ -29,17 +29,16 @@ Les documents suivants sont essentiels à la compréhension des règles de liais
 * [Interface utilisateur de simulation de graphique](./graph-simulation.md)
 * [Interface utilisateur des paramètres d’identité](./identity-settings-ui.md)
 
-## Exemples de scénarios où la réduction du graphique peut se produire {#example-scenarios-where-graph-collapse-could-happen}
-
-Cette section présente des exemples de scénarios que vous pouvez prendre en compte lors de la configuration des règles de liaison de graphiques d’identités.
-
-### Appareil partagé {#shared-device}
+## Scénarios de réduction des graphiques {#graph-collapse-scenarios}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
 >title="Scénarios de réduction du graphique"
 >abstract="Il existe plusieurs raisons pour lesquelles les graphiques peuvent être « réduits » ou représenter plusieurs entités de personne."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-graph-linking-rules/overview" text="En savoir plus"
+
+Cette section présente des exemples de scénarios que vous pouvez prendre en compte lors de la configuration des règles de liaison de graphiques d’identités.
+
+### Appareil partagé
 
 Il existe des instances où plusieurs connexions peuvent se produire sur un seul appareil :
 
