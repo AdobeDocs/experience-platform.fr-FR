@@ -3,9 +3,9 @@ title: Activer les audiences vers des destinations d’export de profils par lot
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations de profils par lots.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: de9c838c8a9d07165b4cc8a602df0c627a8b749c
+source-git-commit: b4b185cab4defbf9559089e5152075674dab52d1
 workflow-type: tm+mt
-source-wordcount: '4395'
+source-wordcount: '4387'
 ht-degree: 52%
 
 ---
@@ -439,25 +439,32 @@ Lors de l’exportation de profils vers des destinations basées sur des fichier
 
 * **Sélection déterministe** : lorsque plusieurs profils ont des clés de déduplication identiques et la même date et heure de référence, la logique de déduplication détermine le profil à exporter en triant les valeurs d’autres colonnes sélectionnées (à l’exclusion des types complexes tels que les tableaux, les mappages ou les objets). Les valeurs triées sont évaluées dans l&#39;ordre lexicographique, et le premier profil est sélectionné.
 
-* **Exemple de scénario** :\
-  Tenez compte des données suivantes, où la clé de déduplication est la colonne `Email` :\
-  |E-mail*|prénom|nom_de_famille|horodatage|\
-  |—|—|—|—|\
-  |test1@test.com|John|Morris|2024-10-12T09:50|\
-  |test1@test.com|John|Doe|2024-10-12T09:50|\
-  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+* **Exemple de scénario**
 
-  Après déduplication, le fichier d&#39;export contiendra :\
-  |E-mail*|prénom|nom_de_famille|horodatage|\
-  |—|—|—|—|\
-  |test1@test.com|John|Doe|2024-10-12T09:50|\
-  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+Tenez compte des données suivantes, où la clé de déduplication est la colonne `Email` :
 
-  **Explication** : par `test1@test.com`, les deux profils partagent la même clé de déduplication et le même horodatage. L’algorithme trie les valeurs des colonnes `first_name` et `last_name` de manière lexicographique. Puisque les prénoms sont identiques, l&#39;égalité est résolue en utilisant la colonne `last_name`, où « Doe » vient avant « Morris ».
+| Adresse e-mail* | first_name | nom_de_famille | date et heure |
+|---|---|---|---|  
+| `test1@test.com` | John | Morris | 2024-10-12T09:50 |
+| `test1@test.com` | John | Doe | 2024-10-12T09:50 |
+| `test2@test.com` | Frank | Smith | 2024-10-12T09:50 |
 
-* **Fiabilité améliorée** : ce processus de déduplication mis à jour garantit que les exécutions successives avec les mêmes coordonnées produiront toujours les mêmes résultats, ce qui améliore la cohérence.
+{style="table-layout:auto"}
 
-### [!BADGE Beta]{type=Informative} Exportez des tableaux via des champs calculés {#export-arrays-calculated-fields}
+Après déduplication, le fichier d&#39;export contiendra :
+
+| Adresse e-mail* | first_name | nom_de_famille | date et heure |
+|---|---|---|---|  
+| `test1@test.com` | John | Doe | 2024-10-12T09:50 |
+| `test2@test.com` | Frank | Smith | 2024-10-12T09:50 |
+
+{style="table-layout:auto"}
+
+**Explication** : par `test1@test.com`, les deux profils partagent la même clé de déduplication et le même horodatage. L’algorithme trie les valeurs des colonnes `first_name` et `last_name` de manière lexicographique. Puisque les prénoms sont identiques, l&#39;égalité est résolue en utilisant la colonne `last_name`, où « Doe » vient avant « Morris ».
+
+**Fiabilité améliorée** : ce processus de déduplication mis à jour garantit que les exécutions successives avec les mêmes coordonnées produiront toujours les mêmes résultats, ce qui améliore la cohérence.
+
+### Exporter des tableaux par le biais de champs calculés {#export-arrays-calculated-fields}
 
 Certains clients bêta peuvent exporter des objets de tableau depuis l’Experience Platform vers des destinations d’espace de stockage. En savoir plus sur l’[exportation de tableaux et de champs calculés](/help/destinations/ui/export-arrays-calculated-fields.md) et contactez votre représentant d’Adobe pour accéder à la fonctionnalité.
 
@@ -474,10 +481,10 @@ En raison d’une limitation connue, vous ne pouvez actuellement pas utiliser la
 
 >[!NOTE]
 >
-Pour les destinations d’espace de stockage, les attributs suivants sont ajoutés par défaut au mappage :
+>Pour les destinations d’espace de stockage, les attributs suivants sont ajoutés par défaut au mappage :
 >
-* `segmentMembership.seg_namespace.seg_id.status`
-* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
+>* `segmentMembership.seg_namespace.seg_id.status`
+>* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
 
 Les exportations de fichiers varient comme suit, selon que `segmentMembership.seg_namespace.seg_id.status` est sélectionné :
 
@@ -500,9 +507,9 @@ En tant que solution temporaire, si vous devez ajouter des espaces de noms d’i
 
 >[!IMPORTANT]
 > 
-Toutes les destinations d’espace de stockage du catalogue peuvent afficher une étape améliorée [[!UICONTROL Mappage] ](#mapping) qui remplace l’étape **[!UICONTROL Sélectionner des attributs]** décrite dans cette section.
+>Toutes les destinations d’espace de stockage du catalogue peuvent afficher une étape améliorée [[!UICONTROL Mappage] ](#mapping) qui remplace l’étape **[!UICONTROL Sélectionner des attributs]** décrite dans cette section.
 >
-Cette étape **[!UICONTROL Sélectionner des attributs]** reste affichée pour les destinations de marketing par e-mail des Marketings Cloud Adobe Campaign, Oracle Responsys, Oracle Eloqua et Salesforce.
+>Cette étape **[!UICONTROL Sélectionner des attributs]** reste affichée pour les destinations de marketing par e-mail des Marketings Cloud Adobe Campaign, Oracle Responsys, Oracle Eloqua et Salesforce.
 
 Pour les destinations basées sur un profil, vous devez sélectionner les attributs de profil à envoyer à la destination cible.
 
@@ -522,15 +529,15 @@ Pour les destinations basées sur un profil, vous devez sélectionner les attrib
 
 >[!NOTE]
 >
-Adobe Experience Platform préremplit votre sélection avec quatre attributs recommandés couramment utilisés de votre schéma : `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
+> Adobe Experience Platform préremplit votre sélection avec quatre attributs recommandés couramment utilisés de votre schéma : `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
 
 ![Image montrant les attributs recommandés préremplis à l’étape de mappage du workflow d’activation de l’audience.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
-En raison d’une limitation connue, vous ne pouvez actuellement pas utiliser la fenêtre **[!UICONTROL Sélectionner un champ]** pour ajouter `segmentMembership.seg_namespace.seg_id.status` à vos exportations de fichiers. Au lieu de cela, vous devez coller manuellement la valeur `xdm: segmentMembership.seg_namespace.seg_id.status` dans le champ de schéma, comme illustré ci-dessous.
+>En raison d’une limitation connue, vous ne pouvez actuellement pas utiliser la fenêtre **[!UICONTROL Sélectionner un champ]** pour ajouter `segmentMembership.seg_namespace.seg_id.status` à vos exportations de fichiers. Au lieu de cela, vous devez coller manuellement la valeur `xdm: segmentMembership.seg_namespace.seg_id.status` dans le champ de schéma, comme illustré ci-dessous.
 >
-![Enregistrement de l’écran montrant la solution de contournement de l’appartenance à une audience à l’étape de mappage du workflow d’activation.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+>![Enregistrement de l’écran montrant la solution de contournement de l’appartenance à une audience à l’étape de mappage du workflow d’activation.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 Les exportations de fichiers varient comme suit, selon que `segmentMembership.seg_namespace.seg_id.status` est sélectionné :
 * Si le champ `segmentMembership.seg_namespace.seg_id.status` est sélectionné, les fichiers exportés incluent les membres **[!UICONTROL actifs]** dans l’instantané complet initial ainsi que les membres **[!UICONTROL actifs]** et **[!UICONTROL expirés]** dans les exportations incrémentielles suivantes.
@@ -538,14 +545,14 @@ Les exportations de fichiers varient comme suit, selon que `segmentMembership.se
 
 ## Sélectionner les attributs d’enrichissement {#select-enrichment-attributes}
 
-[!CONTEXTUALHELP]
-id="platform_destinations_activate_exclude_enrichment_attributes"
-title="Exclure les attributs d’enrichissement"
-abstract="Activez cette option pour exporter les profils des audiences chargées personnalisées sélectionnées vers votre destination, tout en excluant leurs attributs."
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_exclude_enrichment_attributes"
+>title="Exclure les attributs d’enrichissement"
+>abstract="Activez cette option pour exporter les profils des audiences chargées personnalisées sélectionnées vers votre destination, tout en excluant leurs attributs."
 
 >[!IMPORTANT]
 >
-Cette étape s’affiche uniquement si vous avez sélectionné **[!UICONTROL Chargement personnalisé]** audiences lors de l’étape [sélection d’audiences](#select-audiences).
+>Cette étape s’affiche uniquement si vous avez sélectionné **[!UICONTROL Chargement personnalisé]** audiences lors de l’étape [sélection d’audiences](#select-audiences).
 
 Les attributs d’enrichissement correspondent aux audiences chargées personnalisées ingérées dans Experience Platform en tant que **[!UICONTROL Chargements personnalisés]**. Au cours de cette étape, vous pouvez sélectionner les attributs à exporter vers votre destination, pour chaque audience externe sélectionnée.
 
@@ -572,12 +579,12 @@ Sélectionnez **[!UICONTROL Suivant]** pour passer à l’étape [Réviser](#rev
 
 >[!NOTE]
 > 
-Si des libellés d’utilisation des données ont été appliqués à certains champs d’un jeu de données (plutôt qu’à l’ensemble du jeu), l’application de ces libellés au niveau du champ sur l’activation se fait dans les conditions suivantes :
+>Si des libellés d’utilisation des données ont été appliqués à certains champs d’un jeu de données (plutôt qu’à l’ensemble du jeu), l’application de ces libellés au niveau du champ sur l’activation se fait dans les conditions suivantes :
 >
-* Les champs sont utilisés dans la définition de l’audience.
-* Les champs sont configurés en tant qu’attributs prévisionnels pour la destination cible.
+>* Les champs sont utilisés dans la définition de l’audience.
+>* Les champs sont configurés en tant qu’attributs prévisionnels pour la destination cible.
 >
-Par exemple, si le champ `person.name.firstName` comporte certains libellés d’utilisation des données entrant en conflit avec l’action marketing de la destination, une violation de la politique d’utilisation des données s’afficherait dans l’étape de révision. Pour plus d’informations, voir [Gouvernance des données dans Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+> Par exemple, si le champ `person.name.firstName` comporte certains libellés d’utilisation des données entrant en conflit avec l’action marketing de la destination, une violation de la politique d’utilisation des données s’afficherait dans l’étape de révision. Pour plus d’informations, voir [Gouvernance des données dans Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 Sur la page **[!UICONTROL Vérifier]**, vous pouvez voir un résumé de votre sélection. Sélectionnez **[!UICONTROL Annuler]** pour interrompre le flux, **[!UICONTROL Précédent]** pour modifier vos paramètres ou **[!UICONTROL Terminer]** pour confirmer votre sélection et commencer à envoyer les données à la destination.
 
@@ -585,10 +592,10 @@ Sur la page **[!UICONTROL Vérifier]**, vous pouvez voir un résumé de votre s�
 
 ### Évaluation des politiques de consentement {#consent-policy-evaluation}
 
-[!CONTEXTUALHELP]
-id="platform_governance_policies_viewApplicableConsentPolicies"
-title="Affichage des politiques de consentement applicables"
-abstract="Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL Afficher les politiques de consentement applicables]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l&#39;activation qui en résulte. Ce contrôle est désactivé si votre entreprise n&#39;a pas accès aux SKU mentionnés ci-dessus."
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_viewApplicableConsentPolicies"
+>title="Affichage des politiques de consentement applicables"
+>abstract="Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL Afficher les politiques de consentement applicables]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l&#39;activation qui en résulte. Ce contrôle est désactivé si votre entreprise n&#39;a pas accès aux SKU mentionnés ci-dessus."
 
 Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL Afficher les politiques de consentement applicables]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l&#39;activation qui en résulte. Pour plus d’informations, consultez [ Évaluation des politiques de consentement ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
 
