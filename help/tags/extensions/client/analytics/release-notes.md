@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension Adobe Analytics
 description: Dernières notes de mise à jour pour lʼextension de balise Adobe Analytics dans Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: c783906b20db2b86d58aea7b3a94bde007c0a465
-workflow-type: ht
-source-wordcount: '1451'
-ht-degree: 100%
+source-git-commit: 5f4e157a39bf927b3821931d55f968862b2ed16d
+workflow-type: tm+mt
+source-wordcount: '1524'
+ht-degree: 95%
 
 ---
 
@@ -16,6 +16,14 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 >[!NOTE]
 >
 >L’extension de balises Analytics est régulièrement mise à jour en réponse aux mises à jour apportées à la [Bibliothèque JavaScript AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=fr). Voir [Notes de mise à jour d’AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr) pour plus d’informations sur les versions spécifiques mentionnées ci-dessous.
+
+## mardi 28 octobre 2024
+
+**Extension Adobe Analytics 1.9.6**
+
+**Fonctionnalités** :
+
+* Ajout d’une nouvelle fonctionnalité permettant aux utilisateurs d’afficher et de modifier une version JSON de l’[action Définir les variables](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables). L’extension Adobe Web SDK comprend également une action pour [renseigner une variable d’analyse](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types) en fournissant le format JSON. En copiant les données JSON de l’extension AA vers l’extension Web SDK, les clients effectuant une migration peuvent facilement transférer plusieurs paramètres à la fois au lieu d’ajouter manuellement chaque variable.
 
 ## 12 août 2024
 
