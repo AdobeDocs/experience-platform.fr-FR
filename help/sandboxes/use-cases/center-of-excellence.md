@@ -1,7 +1,8 @@
 ---
 title: Activer un centre d’excellence à l’aide de l’outil Sandbox
 description: Créez un centre d’excellence à l’aide de l’outil sandbox en créant un package « sandbox doré » pour normaliser les bonnes pratiques sur plusieurs sandbox.
-source-git-commit: f0cbee2663682f0afae6d7e4b174f250fcb3df53
+exl-id: 6f242ad5-bb02-4a6d-b255-d196dd5fe4b8
+source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
 workflow-type: tm+mt
 source-wordcount: '881'
 ht-degree: 7%
@@ -12,7 +13,7 @@ ht-degree: 7%
 
 Créez un centre d’excellence à l’aide de l’outil sandbox en créant un package « sandbox doré » pour normaliser les bonnes pratiques sur plusieurs sandbox.
 
-![Présentation de l’exportation de packages dans différentes organisations](../images/use-cases/packages-across-orgs.png)
+![Présentation de l’exportation de packages dans différentes organisations](../images/use-cases/packages-across-orgs.png){zoomable="yes"}
 
 ## Pourquoi envisager ce cas d’utilisation {#why-this-use-case}
 
