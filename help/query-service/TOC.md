@@ -5,10 +5,10 @@ breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 20869e76976ff3868f1d4dbc7c6d97b58682e5c3
+source-git-commit: e63ecbd14db2e9e4f35fb89aaaa406a4c584416a
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 71%
+source-wordcount: '402'
+ht-degree: 70%
 
 ---
 
@@ -23,6 +23,7 @@ ht-degree: 71%
 - Data Distiller {#data-distiller}
    - [Aperçu](data-distiller/overview.md)
    - [Utilisation des licences](data-distiller/license-usage.md)
+   - [Conseils pour optimiser la valeur](data-distiller/top-tips-to-maximize-value.md)
    - Jeux de données dérivés {#derived-datasets}
       - [Vue d’ensemble](data-distiller/derived-datasets/overview.md)
       - [Créer des jeux de données dérivés avec SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
@@ -43,13 +44,13 @@ ht-degree: 71%
    - [Vue d’ensemble](advanced-statistics/overview.md)
    - [Conception des fonctionnalités](advanced-statistics/feature-engineering.md)
    - [Modèles](advanced-statistics/models.md)
-   - [Transformation de fonction](advanced-statistics/feature-transformation.md)
-Implémentation de modèles {#implement-models}
+   - [Transformation de caractéristiques](advanced-statistics/feature-transformation.md)
+   - Implémentation de modèles {#implement-models}
       - [Implémentation de modèles](advanced-statistics/implement-models/implement-models.md)
       - [Régression](advanced-statistics/implement-models/regression.md)
       - [Classification](advanced-statistics/implement-models/classification.md)
-      - [Clustering](advanced-statistics/implement-models/clustering.md)
-Exemples {#examples}
+      - [Mise en cluster](advanced-statistics/implement-models/clustering.md)
+   - Exemples {#examples}
       - [Filtrage des robots à l’aide des statistiques et du machine learning](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
       - [Prédire l’attrition des clients à l’aide d’une régression logistique SQL](advanced-statistics/examples/predict-customer-churn.md)
 - Audiences de Distiller de données {#data-distiller-audiences}
