@@ -3,9 +3,9 @@ title: Assistant AI dans la documentation du produit Adobe Experience Platform
 description: Prise en main de l’assistant AI dans Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 8022195e755df92b7ceacea52214f81593994e2a
+source-git-commit: 96e138cc12fdedaa73e3aaf69341806271413680
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '851'
 ht-degree: 1%
 
 ---
@@ -144,6 +144,14 @@ Pour plus d’informations, consultez la documentation sur la [vérification des
 Regardez la vidéo suivante pour découvrir comment utiliser l’assistant AI pour exécuter une analyse d’impact plus efficace avant que des modifications ne soient apportées à vos objets de données.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3441680/?learn=on)
+
+### Utilisation de l’assistant AI pour le service clientèle
+
+Regardez la vidéo suivante pour découvrir comment utiliser l’assistant AI pour le service clientèle afin de résoudre en toute simplicité les problèmes sans quitter vos workflows.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+
+Pour plus d’informations, consultez la documentation sur l’[utilisation de l’assistant AI pour le service clientèle](./new-features/customer-support.md).
 
 ## Bibliothèque de cas d’utilisation de l’assistant AI
 
