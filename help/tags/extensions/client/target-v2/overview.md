@@ -2,10 +2,10 @@
 title: Présentation de l’extension Adobe Target v2
 description: Découvrez l’extension de balise Adobe Target v2 dans Adobe Experience Platform.
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 5b88692117c984cd6331e7886d5bf0846309acee
 workflow-type: tm+mt
-source-wordcount: '1318'
-ht-degree: 93%
+source-wordcount: '1351'
+ht-degree: 88%
 
 ---
 
@@ -31,7 +31,7 @@ Pour configurer l’extension, ouvrez l’onglet Extensions, survolez-la avec la
 
 ### Paramètres at.js
 
-Tous les paramètres at.js, à l’exception de la temporisation, sont automatiquement extraits de la configuration at.js de l’interface utilisateur de Target. L’extension récupère uniquement les paramètres de l’interface utilisateur de Target lors de son premier ajout. De ce fait, tous les paramètres doivent être gérés dans l’interface utilisateur si d’autres mises à jour sont nécessaires.
+Tous les paramètres at.js, à l’exception de la temporisation, sont automatiquement extraits de la configuration at.js de l’interface utilisateur de Target. L’extension récupère les paramètres de l’interface utilisateur de Target uniquement lors de l’ajout initial. De ce fait, tous les paramètres doivent être gérés dans l’interface utilisateur si d’autres mises à jour sont nécessaires.
 
 Les options de configuration disponibles sont les suivantes :
 
@@ -69,11 +69,13 @@ Ajoutez cette action à votre règle de balise pour charger Target dans le cadre
 
 Aucune configuration n’est nécessaire.
 
-### Charger Target avec la prise de décision sur l’appareil
+### Chargement de Target avec prise de décision sur l’appareil
 
-Ajoutez cette action à votre règle de balise pour charger Target avec [la prise de décision sur l’appareil](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=fr) activée dans le cadre de votre règle. Cela charge la bibliothèque at.js sur la page avec la prise de décision sur l’appareil activée. Dans la plupart des mises en œuvre, Target doit être chargé sur chacune des pages de votre site. Adobe recommande d’utiliser l’action Charger Target avec la prise de décision sur l’appareil uniquement si elle est précédée d’un appel de Target. Dans le cas contraire, vous pourriez rencontrer des problèmes, comme un retard de l’appel d’Analytics.
+Ajoutez cette action à votre règle de balise pour charger Target avec [la prise de décision sur l’appareil](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=fr) activée dans le cadre de votre règle. Cela charge la bibliothèque at.js sur la page avec la prise de décision sur l’appareil activée. Dans la plupart des mises en œuvre, Target doit être chargé sur chacune des pages de votre site. L’Adobe recommande d’utiliser l’action Charger Target avec la prise de décision sur l’appareil uniquement si elle est précédée d’un appel de Target. Dans le cas contraire, vous pourriez rencontrer des problèmes, comme un retard de l’appel d’Analytics.
 
-Aucune configuration n’est nécessaire.
+>[!IMPORTANT]
+>
+>N’utilisez une requête de chargement de page avec la prise de décision sur l’appareil que si elle est déjà configurée. L’ajout de cette action à votre règle augmentera la taille de votre lot de lancement final, car il inclut le moteur de règles de prise de décision sur l’appareil.
 
 ### Add Params to All Requests (Ajout de paramètres à toutes les requêtes)
 
@@ -133,8 +135,8 @@ Voici quelques éléments à garder à l’esprit lors de l’utilisation du fra
    * Lorsque la réponse de chargement de page a été reçue
    * Lorsque la requête de chargement de page arrive à expiration
    * Lorsque le fragment lui-même arrive à expiration.
-* L’action &quot;Fire Page Load Request&quot; (Déclencher la requête de chargement de page) doit être utilisée sur toutes les pages à l’aide du fragment de code de masquage préalable afin de minimiser la durée du masquage.
-* Le masquage du corps doit également être activé dans l’action de requête de chargement de page de la règle de chargement de page que vous utilisez pour Target. Dans le cas contraire, tous les chargements de page restent masqués pendant le délai d’expiration.
+* L’action « Déclencher la requête de chargement de page » doit être utilisée sur toutes les pages qui utilisent le fragment de code de masquage préalable afin de réduire la durée de ce dernier.
+* Le masquage du corps doit également être activé dans l’action Requête de chargement de page de la règle Chargement de page que vous utilisez pour Target. Dans le cas contraire, tous les chargements de page restent masqués pendant le délai d’expiration.
 
 Le fragment de code de masquage préalable se présente comme suit et peut être réduit. Les options configurables se trouvent à la fin :
 
