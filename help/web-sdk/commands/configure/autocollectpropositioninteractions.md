@@ -2,7 +2,7 @@
 title: autoCollectPropositionInteractions
 description: Découvrez comment configurer Experience Platform Web SDK pour collecter automatiquement les données de lien.
 exl-id: c70db76a-3f2f-45a6-86ab-36efcb18d20f
-source-git-commit: 405f161dee633b7230be944cd17093616826e27f
+source-git-commit: 55c656e7fd08e98b75c20f0688a6697baf533291
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 1%
@@ -123,11 +123,11 @@ alloy("sendEvent", {
 ## Activer le suivi des clics des propositions et interactions automatiques par le biais de l’extension de balises Web SDK {#tag-extension}
 
 1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
-2. Accédez à **Collecte de données** > **Balises**.
-3. Sélectionnez la propriété de balise de votre choix.
-4. Accédez à **Extensions**, puis sélectionnez **Configurer** sur la carte Adobe Experience Platform Web SDK.
-5. Faites défiler l’écran jusqu’à la section **[!UICONTROL Collecte de données]**, puis cochez la case **Activer le suivi des propositions et des liens d’interaction**.
-6. Sélectionnez **Enregistrer**, puis publiez vos modifications.
+1. Accédez à **Collecte de données** > **Balises**.
+1. Sélectionnez la propriété de balise de votre choix.
+1. Accédez à **Extensions**, puis sélectionnez **Configurer** sur la carte Adobe Experience Platform Web SDK.
+1. Faites défiler l’écran jusqu’à la section **[!UICONTROL Collecte de données]**, puis cochez la case **Activer le suivi des propositions et des liens d’interaction**.
+1. Sélectionnez **Enregistrer**, puis publiez vos modifications.
 
 ## Activer le suivi des liens des propositions et interactions automatiques via la bibliothèque JavaScript Web SDK {#library}
 
