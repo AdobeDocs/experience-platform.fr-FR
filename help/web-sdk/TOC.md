@@ -6,7 +6,7 @@ breadcrumb-title: Guide du SDK web
 user-guide-description: Interagissez avec les services Experience Cloud via le réseau Edge.
 feature: Web SDK
 role: Developer
-source-git-commit: 7231d3a5ad9553707392c32004d02e355e3c919f
+source-git-commit: d5bf1b207900009829454d0b7aa095a08c1e1718
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 52%
@@ -18,15 +18,15 @@ ht-degree: 52%
 
 * [Présentation du SDK web](home.md)
 * [Notes de mise à jour](release-notes.md)
-* Installation du SDK Web {#install}
+* {#install} d’installation de Web SDK
    * [Vue d’ensemble](install/overview.md)
-   * [Installation du SDK Web à l’aide de l’extension de balise](install/extension.md)
-   * [Installation du SDK Web à l’aide de la bibliothèque JavaScript](install/library.md)
-   * [Installation du SDK Web à l’aide du package NPM](install/npm.md)
+   * [Installation de Web SDK à l’aide de l’extension de balise](install/extension.md)
+   * [Installation de Web SDK à l’aide de la bibliothèque JavaScript](install/library.md)
+   * [Installer le SDK Web à l’aide du package NPM](install/npm.md)
 * Commandes {#commands}
-   * configure {#configure}
+   * configuration des {#configure}
       * [Vue d’ensemble](commands/configure/overview.md)
-      * [autoTrackPropositionInteractionsEnabled](commands/configure/autotrackpropositioninteractionsenabled.md)
+      * [autoCollectPropositionInteractions](commands/configure/autocollectpropositioninteractions.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
       * [clickCollection](commands/configure/clickcollection.md)
       * [contexte](commands/configure/context.md)
@@ -41,7 +41,7 @@ ht-degree: 52%
       * [onBeforeEventSend](commands/configure/onbeforeeventsend.md)
       * [onBeforeLinkClickSend](commands/configure/onbeforelinkclicksend.md)
       * [orgId](commands/configure/orgid.md)
-      * [prehideStyle](commands/configure/prehidingstyle.md)
+      * [prehidingStyle](commands/configure/prehidingstyle.md)
       * [targetMigrationEnabled](commands/configure/targetmigrationenabled.md)
       * [thirdPartyCookiesEnabled](commands/configure/thirdpartycookiesenabled.md)
    * sendEvent {#sendevent}
@@ -64,7 +64,7 @@ ht-degree: 52%
    * [sendMediaEvent](commands/sendmediaevent.md)
    * [subscribeRulesetItems](commands/subscriberulesetitems.md)
    * [Configurer les remplacements de trains de données](commands/datastream-overrides.md)
-   * [Réponses de commande](commands/command-responses.md)
+   * [Réponses aux commandes](commands/command-responses.md)
 
 * Identité {#identity}
    * [Aperçu](identity/overview.md)
@@ -91,7 +91,7 @@ ht-degree: 52%
    * Adobe Journey Optimizer {#ajo}
       * [Aperçu](personalization/ajo/overview.md)
       * [Implémentation d’applications d’une seule page](personalization/ajo/web-spa-implementation.md)
-      * [Configuration de la prise en charge de la messagerie web in-app dans le SDK web](personalization/web-in-app-messaging.md)
+      * [Configuration de la prise en charge de la messagerie web in-app dans Web SDK](personalization/web-in-app-messaging.md)
 
 * Consentement {#consent}
    * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
@@ -101,13 +101,13 @@ ht-degree: 52%
 
 * Cas d’utilisation {#use-cases}
    * [Vue d’ensemble](use-cases/overview.md)
-   * [Envoi de données à Adobe Analytics à l’aide du SDK Web](use-cases/adobe-analytics.md)
-   * [Conseils sur le client de l’agent utilisateur](use-cases/client-hints.md)
-   * [Collecte de données commerciales](use-cases/collect-commerce-data.md)
-   * [Configuration d’une CSP](use-cases/configuring-a-csp.md)
+   * [Envoyer des données à Adobe Analytics à l’aide de Web SDK](use-cases/adobe-analytics.md)
+   * [Indications du client de l’agent utilisateur](use-cases/client-hints.md)
+   * [Collecter des données commerciales](use-cases/collect-commerce-data.md)
+   * [Configuration d’un fichier CSP](use-cases/configuring-a-csp.md)
    * [Méthodes de débogage](use-cases/debugging.md)
-   * [Utilisation de plusieurs instances de SDK Web](use-cases/multiple-instances.md)
-   * [Configuration des événements de page supérieure et inférieure](use-cases/top-bottom-page-events.md)
-* [Surveillance des hooks](monitoring-hooks.md)
+   * [Utilisation de plusieurs instances Web SDK](use-cases/multiple-instances.md)
+   * [Configurer les événements des pages supérieure et inférieure](use-cases/top-bottom-page-events.md)
+* [Crochets de surveillance](monitoring-hooks.md)
 * [Questions fréquentes](faq.md)
 * [Ressources](resources.md)
