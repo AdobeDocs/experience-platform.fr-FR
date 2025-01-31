@@ -1,11 +1,12 @@
 ---
-keywords: destinations publicitaires;destinations;destinations de plateforme
+keywords: destinations publicitaires;destinations;destinations platform
 title: Présentation des destinations publicitaires
-description: Connectez Adobe Experience Platform à une plateforme publicitaire tierce (par ex. DSP, réseau publicitaire, SSP) et partagez des audiences pseudonymes sur ces plateformes.
-source-git-commit: 07e01847c6e24564682161e88122948d200ab733
+description: Connectez Adobe Experience Platform à une plateforme publicitaire tierce (par exemple, DSP, réseau publicitaire, SSP) et partagez des audiences pseudonymes avec ces plateformes.
+exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
+source-git-commit: e2dfa2ee23d854ff3a8ecba4a1cf3e4a1e72f0f7
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 49%
+source-wordcount: '273'
+ht-degree: 48%
 
 ---
 
@@ -13,7 +14,7 @@ ht-degree: 49%
 
 ## Vue d’ensemble {#overview}
 
-Connectez Adobe Experience Platform à des plateformes publicitaires telles que les plateformes côté demande (DSP), les plateformes côté offre (SSP) et les réseaux publicitaires afin de partager des audiences connues et pseudonymes avec ces plateformes.
+Connectez Adobe Experience Platform à des plateformes publicitaires telles que les plateformes côté demande (DSP), les plateformes côté offre (SSP) et les réseaux publicitaires pour partager des audiences connues et pseudonymes avec ces plateformes.
 
 Lors de la connexion à une destination publicitaire, vos audiences sont envoyées sous forme d’identifiants à la plateforme de destination, où elles sont mappées à un identifiant connu par la plateforme de destination.
 
@@ -21,13 +22,13 @@ Lors de la connexion à une destination publicitaire, vos audiences sont envoyé
 
 Actuellement, Experience Platform prend en charge les destinations publicitaires répertoriées ci-dessous.
 
-Pour comprendre la différence entre les connexions et les extensions, voir [Connexions](../../destination-types.md#connections) dans la page Types et catégories de destination.
+Pour comprendre la différence entre les connexions et les extensions, consultez [Connexions](../../destination-types.md#connections) sur la page Types et catégories de destinations.
 
 ### Connexions
 
-* [(Beta) Répartition d’audiences simultanées](acxiom-audience-distribution.md)
+* [(Beta) Distribution d’audiences Acxiom](acxiom-audience-distribution.md)
 * [Connexion Adobe Advertising Cloud](adobe-advertising-cloud-connection.md)
-* [Connexion Amazon Ads (Beta)](amazon-ads.md)
+* [Connexion Amazon Ads](amazon-ads.md)
 * [(Version bêta) Connexion Criteo](criteo.md)
 * [Connexion Google Display &amp; Video 360](google-dv360.md)
 * [Connexion Google Ads](google-ads-destination.md)
@@ -38,7 +39,7 @@ Pour comprendre la différence entre les connexions et les extensions, voir [Con
 * [Connexion en temps réel en flux continu Magnite](magnite-streaming.md)
 * [Connexion Microsoft Bing](bing.md)
 * [Connexion Liste des Clients Pinterest](pinterest.md)
-* [Destination PubMatic Connect](pubmatic.md)
+* [Destination de connexion PubMatic](pubmatic.md)
 * [(Version bêta) Connexion à Snapchat Ads](snap-inc.md)
 * [Connexion à The Trade Desk](tradedesk.md)
 * [(Version bêta) Connexion CRM à The Trade Desk](tradedesk-emails.md)
@@ -49,7 +50,7 @@ Pour comprendre la différence entre les connexions et les extensions, voir [Con
 * [Extension Adobe Advertising Cloud](adobe-advertising-cloud.md)
 * [Extension Awin Advertising Conversion Tag](awin-conversiontag.md)
 * [Extension Awin Advertising Mastertag](awin-mastertag.md)
-* [Extension de suivi des événements universels Bing Ads](bing-ads.md)
+* [Extension Bing Ads Universal Event Tracking](bing-ads.md)
 * [Extension Branch](branch.md)
 * [Extension DoubleClick Floodlight](doubleclick-floodlight.md)
 * [Extension Pixel Facebook](facebook-pixel.md)
@@ -60,6 +61,6 @@ Pour comprendre la différence entre les connexions et les extensions, voir [Con
 * [Extension Pinterest Conversion Tracking](pinterest-extension.md)
 * [Extension Twitter Universal Website Tag](twitter-uwt.md)
 
-## Connexion à une nouvelle destination publicitaire {#connect-destination}
+## Se connecter à une nouvelle destination publicitaire {#connect-destination}
 
-Pour envoyer des audiences vers des destinations publicitaires pour vos campagnes, Platform doit d’abord se connecter à la destination. Voir le [tutoriel sur la création de destinations](../../ui/connect-destination.md) pour des informations détaillées sur la configuration d’une nouvelle destination.
+Pour envoyer des audiences vers des destinations publicitaires pour vos campagnes, Platform doit d’abord se connecter à la destination . Voir le [tutoriel sur la création de destinations](../../ui/connect-destination.md) pour des informations détaillées sur la configuration d’une nouvelle destination.
