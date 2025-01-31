@@ -6,9 +6,9 @@ user-guide-description: Découvrez comment déployer et gérer des balises d’a
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 82d6d2e7d0d7f0f9484c4ebcd34339fd63e04b59
+source-git-commit: 1b2f8e5a9cc85887efe9d623baa346956ae5d93d
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '775'
 ht-degree: 96%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 96%
    * [Déploiement de balises JavaScript pour la gestion du consentement client](./ui/client-side/consent.md)
    * [Prise en charge de la politique de sécurité du contenu (CSP)](./ui/client-side/content-security-policy.md)
    * [Prise en charge de l’intégrité des sous-ressources (SRI)](./ui/client-side/sri.md)
-   * [Sécurité du calque de transport](./ui/client-side/transport-layer-security.md)
+   * [Transport Layer Security (sécurité de la couche de transport)](./ui/client-side/transport-layer-security.md)
 * Transfert d’événement {#event-forwarding}
    * [Aperçu](./ui/event-forwarding/overview.md)
    * [Prise en main](./ui/event-forwarding/getting-started.md)
@@ -206,9 +206,8 @@ ht-degree: 96%
       * [Lecture Vimeo](https://exchange.adobe.com/apps/ec/108937)
       * [Web Vitals](https://exchange.adobe.com/apps/ec/106769)
       * [XDM Composer](https://exchange.adobe.com/apps/ec/106062)
-      * [Yahoo Dot](https://exchange.adobe.com/apps/ec/106062)
       * [Yext Conversion Tracking](https://exchange.adobe.com/apps/ec/103174)
-      * [[!DNL Youtube] Lecture](https://exchange.adobe.com/apps/ec/103174)
+      * [[!DNL Youtube] Lecture](https://exchange.adobe.com/apps/ec/104160)
       * [!DNL YouTube] suivi vidéo {#youtube}
          * [Aperçu](./extensions/client/youtube/overview.md)
          * [Notes de mise à jour](./extensions/client/youtube/release-notes.md)
@@ -249,7 +248,7 @@ ht-degree: 96%
          * [Aperçu](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}
          * [Aperçu](./extensions/server/twitter/overview.md)
-      * [!DNL Tiktok] API des événements web {#tiktok}
+      * {#tiktok} de l’API d’événements web [!DNL Tiktok]
          * [Aperçu](./extensions/server/tiktok/overview.md)
       * [!DNL The Trade Desk] {#thetradedesk}
          * [Aperçu](./extensions/server/tradedesk/overview.md)
@@ -265,7 +264,7 @@ ht-degree: 96%
       * [Octroyer un accès utilisateur](./extension-dev/submit/access.md)
       * [Développer une extension](./extension-dev/submit/develop.md)
       * [Créer une liste Exchange](./extension-dev/submit/create-listing.md)
-      * [Créer un fichier zip de package d’extension](./extension-dev/submit/create-extension-package-zip.md)
+      * [Créer un package d’extension zip](./extension-dev/submit/create-extension-package-zip.md)
       * [Téléchargement et implémentation de tests de bout en bout](./extension-dev/submit/upload-and-test.md)
       * [Publication d’une extension](./extension-dev/submit/release.md)
    * [Configuration d’extension](./extension-dev/configuration.md)
@@ -300,7 +299,7 @@ ht-degree: 96%
       * [Règles](./api/endpoints/rules.md)
       * [Composants de règle](./api/endpoints/rule-components.md)
       * [Packages d’extension](./api/endpoints/extension-packages.md)
-      * [Autorisations d’utilisation des modules d’extension](./api/endpoints/extension-package-usage-authorizations.md)
+      * [Autorisations d’utilisation des packages d’extension](./api/endpoints/extension-package-usage-authorizations.md)
       * [Extensions](./api/endpoints/extensions.md)
       * [Bibliothèques](./api/endpoints/libraries.md)
       * [Versions](./api/endpoints/builds.md)
