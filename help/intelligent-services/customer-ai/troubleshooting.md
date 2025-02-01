@@ -6,9 +6,9 @@ title: Dépannage des erreurs de l’IA dédiée aux clients
 description: Trouvez des réponses aux erreurs courantes de l’IA dédiée aux clients.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1755'
 ht-degree: 31%
 
 ---
@@ -21,7 +21,7 @@ L’IA dédiée aux clients affiche des erreurs lorsque l’entraînement, la no
 
 Dans le cas où **[!UICONTROL Échec]** ou **[!UICONTROL Problème d’entraînement]** s’affiche, vous pouvez sélectionner le statut d’exécution pour ouvrir un panneau latéral. Le panneau latéral contient le **[!UICONTROL statut de votre dernière exécution]** et les **[!UICONTROL détails de la dernière exécution]**. Les **[!UICONTROL détails de la dernière exécution]** contiennent des informations sur les raisons de l’échec de l’exécution. Dans le cas où l’IA dédiée aux clients ne peut pas fournir de détails sur votre erreur, contactez l’assistance avec le code d’erreur fourni.
 
-<img src="./images/errors/last-run-details.png" width="300" /><br />
+![](./images/errors/last-run-details.png){width=300}
 
 ## Impossible d’accéder à l’IA dédiée aux clients dans Chrome en navigation privée
 
@@ -39,7 +39,7 @@ Pour contourner ce problème, vous devez ajouter experience.adobe.com en tant qu
 
 Si vous recevez l’erreur « [!UICONTROL La qualité du modèle est médiocre. Nous vous recommandons de créer une application avec la configuration modifiée.] ». Suivez les étapes recommandées ci-dessous pour résoudre les problèmes.
 
-<img src="./images/errors/model-quality.png" width="300" /><br />
+![](./images/errors/model-quality.png){width=300}
 
 ### Correctif recommandé
 
