@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Expiration des données de profils pseudonymes
 description: Ce document fournit des conseils généraux sur la configuration de l’expiration des données de profils pseudonymes dans Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 208f327d35749c97ac77f337493d8759e8622dcd
+source-git-commit: 9d38fdae0fc65048d02a4337375004edafedd1b6
 workflow-type: tm+mt
-source-wordcount: '1039'
-ht-degree: 67%
+source-wordcount: '1065'
+ht-degree: 65%
 
 ---
 
@@ -22,6 +22,11 @@ Dans Adobe Experience Platform, vous pouvez configurer les délais d’expiratio
 >title="Qu&#39;est-ce qu&#39;un profil pseudonyme ?"
 >abstract="Un profil pseudonyme est un profil qui possède un espace de noms d’identité pseudonyme ou inconnu, ou un profil qui n’a eu aucune activité pendant une période donnée."
 >text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_profile_pseudonymousprofile_dataexpiration"
+>title="Expiration des données de profils pseudonymes"
+>abstract="L’expiration des données de profils pseudonymes représente le nombre de jours pendant lesquels un profil pseudonyme reste dans Adobe Experience Platform avant d’être supprimé."
 
 Un profil est pris en compte pour l’expiration des données pseudonymes s’il répond aux conditions suivantes :
 
