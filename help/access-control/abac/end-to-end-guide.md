@@ -1,25 +1,25 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;contrôle d’accès basé sur les attributs;
-title: Guide de bout en bout du contrôle d’accès basé sur les attributs
-description: Ce document fournit un guide de bout en bout sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform
+title: Guide complet du contrôle d’accès basé sur les attributs
+description: Ce document fournit un guide complet sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 5b9200b9e534519ce2f3c1a529a30b032642ab7f
+source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
 workflow-type: tm+mt
-source-wordcount: '1794'
-ht-degree: 23%
+source-wordcount: '1593'
+ht-degree: 10%
 
 ---
 
-# Guide de bout en bout du contrôle d’accès basé sur les attributs
+# Guide complet du contrôle d’accès basé sur les attributs
 
-Utilisez le contrôle d’accès basé sur les attributs sur Adobe Experience Platform pour offrir à vous-même et à d’autres clients soucieux de la confidentialité multimarque une plus grande flexibilité pour gérer l’accès des utilisateurs. L’accès à des objets individuels, tels que les champs de schéma et les audiences, peut être accordé avec des stratégies basées sur les attributs et le rôle de l’objet. Cette fonctionnalité vous permet d’accorder ou de révoquer l’accès à des objets individuels pour des utilisateurs Platform spécifiques au sein de votre organisation.
+Utilisez le contrôle d’accès basé sur les attributs sur Adobe Experience Platform pour vous offrir, ainsi qu’aux autres clients soucieux de la confidentialité des marques, une plus grande flexibilité en matière de gestion de l’accès utilisateur. L’accès à des objets individuels, tels que des champs de schéma et des audiences, peut être accordé avec des politiques basées sur les attributs et le rôle de l’objet. Cette fonctionnalité vous permet d’accorder ou de révoquer l’accès à des objets individuels pour des utilisateurs Platform spécifiques au sein de votre organisation.
 
-Cette fonctionnalité vous permet de classer les champs de schéma, les audiences, etc. avec des libellés qui définissent les portées d’utilisation des données ou de l’organisation. Vous pouvez appliquer ces mêmes étiquettes aux parcours, aux offres et aux autres objets de Adobe Journey Optimizer. En parallèle, les administrateurs peuvent définir des stratégies d’accès concernant les champs de schéma du modèle de données d’expérience (XDM) et mieux gérer les utilisateurs ou les groupes (utilisateurs internes, externes ou tiers) pouvant accéder à ces champs.
+Cette fonctionnalité vous permet de classer les champs de schéma, les audiences, etc. avec des libellés qui définissent l’utilisation de l’organisation ou des données. Vous pouvez appliquer les mêmes libellés aux parcours, aux offres et aux autres objets dans Adobe Journey Optimizer. En parallèle, les administrateurs peuvent définir des politiques d’accès relatives aux champs de schéma du modèle de données d’expérience (XDM) et mieux gérer les utilisateurs ou les groupes (utilisateurs internes, externes ou tiers) pouvant accéder à ces champs.
 
 >[!NOTE]
 >
->Ce document se concentre sur le cas d’utilisation des stratégies de contrôle d’accès. Si vous essayez de configurer des stratégies pour régir l’ **utilisation** des données plutôt que de déterminer les utilisateurs de Platform qui y ont accès, reportez-vous au guide de bout en bout sur la [gouvernance des données](../../data-governance/e2e.md) à la place.
+>Ce document se concentre sur le cas d’utilisation des politiques de contrôle d’accès. Si vous essayez de configurer des politiques pour régir l’**utilisation** des données plutôt que de déterminer à quels utilisateurs de Platform ont accès, consultez plutôt le guide complet sur la [gouvernance des données](../../data-governance/e2e.md) .
 
 ## Prise en main
 
@@ -32,158 +32,135 @@ Ce tutoriel nécessite une connaissance pratique des composants Platform suivant
 
 ### Présentation du cas d’utilisation
 
-Vous accédez à un exemple de workflow de contrôle d’accès basé sur les attributs dans lequel vous allez créer et affecter des rôles, des libellés et des stratégies afin de configurer si vos utilisateurs peuvent ou non accéder à des ressources spécifiques de votre organisation. Ce guide utilise un exemple de limitation de l’accès aux données sensibles pour démontrer le workflow. Ce cas pratique est décrit ci-dessous :
+Vous allez passer en revue un exemple de workflow de contrôle d’accès basé sur les attributs dans lequel vous allez créer et attribuer des rôles, des libellés et des politiques afin de configurer si vos utilisateurs peuvent ou non accéder à des ressources spécifiques de votre organisation. Ce guide utilise un exemple de restriction de l’accès aux données sensibles pour démontrer le workflow. Ce cas d’utilisation est décrit ci-dessous :
 
-Vous êtes un prestataire de santé et souhaitez configurer l’accès aux ressources de votre entreprise.
+Vous êtes un prestataire de soins de santé et souhaitez configurer l’accès aux ressources de votre entreprise.
 
-* Votre équipe marketing interne doit pouvoir accéder aux données **[!UICONTROL PHI/ données d’intégrité réglementées]**.
-* Votre agence externe ne doit pas pouvoir accéder aux données **[!UICONTROL PHI/ données d’intégrité réglementées]**.
+* Votre équipe de marketing interne devrait pouvoir accéder aux données **[!UICONTROL ISP/données réglementées en matière de santé]**.
+* Votre organisme externe ne devrait pas être en mesure d&#39;accéder aux données **[!UICONTROL ISP/données réglementées en matière de santé]**.
 
-Pour ce faire, vous devez configurer les rôles, les ressources et les stratégies.
+Pour ce faire, vous devez configurer des rôles, des ressources et des politiques.
 
-Vous allez :
+Tu pourras :
 
-* [Étiqueter les rôles de vos utilisateurs](#label-roles) : utilisez l’exemple d’un prestataire de services de santé (ACME Business Group) dont le groupe marketing travaille avec des agences externes.
-* [Étiqueter vos ressources (champs de schéma et audiences)](#label-resources) : Attribuez l’étiquette **[!UICONTROL PHI/Definated Health Data]** aux ressources de schéma et aux audiences.
-* [Activez la stratégie qui les reliera ](#policy) : activez la stratégie par défaut pour empêcher l’accès aux champs de schéma et aux audiences en connectant les libellés de vos ressources aux libellés de votre rôle. Les utilisateurs disposant de libellés correspondants auront alors accès au champ de schéma et au segment dans tous les environnements de test.
+* [Étiqueter les rôles pour vos utilisateurs](#label-roles) : utilisez l&#39;exemple d&#39;un fournisseur de soins de santé (ACME Business Group) dont le groupe marketing travaille avec des agences externes.
+* [Étiqueter vos ressources (champs et audiences de schéma)](#label-resources) : attribuez le libellé **[!UICONTROL ISP/Données de santé réglementées]** aux ressources et audiences de schéma.
+* [Activer la politique qui les liera](#policy) : activez la politique par défaut pour empêcher l’accès aux champs de schéma et aux audiences en connectant les libellés de vos ressources aux libellés de votre rôle. Les utilisateurs avec les libellés correspondants auront alors accès au champ et au segment du schéma dans tous les sandbox.
 
 ## Autorisations
 
-[!UICONTROL Autorisations] est la zone de l’Experience Cloud dans laquelle les administrateurs peuvent définir des rôles utilisateur et des stratégies afin de gérer les autorisations pour les fonctionnalités et les objets dans une application de produit.
+[!UICONTROL Autorisations] est la zone d’Experience Cloud dans laquelle les administrateurs peuvent définir des rôles utilisateur et des politiques afin de gérer les autorisations pour les fonctionnalités et objets d’une application de produit.
 
-Grâce aux [!UICONTROL autorisations], vous pouvez créer et gérer des rôles et attribuer les autorisations de ressources souhaitées pour ces rôles. [!UICONTROL Autorisations] vous permet également de gérer les étiquettes, les environnements de test et les utilisateurs associés à un rôle spécifique.
+Grâce aux [!UICONTROL autorisations], vous pouvez créer et gérer des rôles et attribuer les autorisations de ressources souhaitées pour ces rôles. Les [!UICONTROL autorisations] vous permettent également de gérer les libellés, les sandbox et les utilisateurs associés à un rôle spécifique.
 
-Contactez votre administrateur système pour obtenir un accès si vous ne disposez pas de droits d’administrateur.
+Contactez votre administrateur système pour obtenir l’accès si vous ne disposez pas des privilèges d’administrateur.
 
-Une fois que vous disposez des droits d’administrateur, accédez à [Adobe Experience Cloud](https://experience.adobe.com/) et connectez-vous à l’aide de vos informations d’identification d’Adobe. Une fois connecté, la page **[!UICONTROL Overview]** s’affiche pour votre organisation pour laquelle vous disposez des droits d’administrateur. Cette page présente les produits auxquels votre organisation est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’organisation. Sélectionnez **[!UICONTROL Autorisations]** pour ouvrir l’espace de travail de votre intégration Platform.
+Une fois que vous disposez des privilèges d’administrateur, accédez à [Adobe Experience Cloud](https://experience.adobe.com/) et connectez-vous à l’aide de vos informations d’identification d’Adobe. Une fois la connexion effectuée, la page **[!UICONTROL Aperçu]** s’affiche pour l’organisation pour laquelle vous disposez de droits d’administrateur. Cette page affiche les produits auxquels votre organisation est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’organisation. Sélectionnez **[!UICONTROL Autorisations]** pour ouvrir l’espace de travail en vue de votre intégration Platform.
 
-![Image montrant le produit Autorisations sélectionné dans Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
+![Image illustrant le produit Autorisations sélectionné dans Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
-L’espace de travail Autorisations de l’interface utilisateur de Platform s’affiche, s’ouvrant sur la page **[!UICONTROL Overview]** .
+L’espace de travail Autorisations pour l’interface utilisateur de Platform s’affiche, s’ouvrant sur la page **[!UICONTROL Aperçu]**.
 
 ## Appliquer des libellés à un rôle {#label-roles}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="Que sont les libellés ?"
->abstract="Les libellés vous permettent de classer les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Platform fournit plusieurs libellés d&#39;utilisation des données « de base » définis par Adobe, qui couvrent un large éventail de restrictions courantes applicables à la gouvernance des données. Par exemple, les libellés « S » (Sensibles) tels que DSR (données réglementées en matière de santé) servent à catégoriser les données qui font référence aux informations de santé protégées (ISP). Vous pouvez également définir vos propres libellés personnalisés en fonction des besoins de votre entreprise."
+>abstract="Utilisez des libellés pour classer les jeux de données et les champs en fonction des politiques d’utilisation et d’accès qui s’appliquent à ces données. Platform fournit plusieurs libellés d’utilisation des données <strong>principaux</strong> définis par l’Adobe, qui couvrent un large éventail de restrictions courantes applicables à la gouvernance des données. Par exemple, les libellés Sensible <strong>S</strong> tels que DSR (données réglementées en matière de santé) vous permettent de catégoriser les données qui font référence aux informations de santé protégées (ISP). Vous pouvez également définir vos propres libellés personnalisés en fonction des besoins de votre entreprise."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=fr#understanding-data-usage-labels" text="Présentation des libellés d’utilisation des données"
 
->[!CONTEXTUALHELP]
->id="platform_permissions_labels_about_create"
->title="Créer un libellé"
->abstract="Vous pouvez créer vos propres libellés personnalisés selon les besoins de votre entreprise. Les libellés personnalisés peuvent être utilisés pour appliquer à vos données à la fois des configurations de gouvernance des données et de contrôle d&#39;accès."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=fr#manage-labels" text="Gérer les libellés personnalisés"
+Les rôles sont des moyens de classer les types d’utilisateurs interagissant avec votre instance Platform et sont des blocs élémentaires des politiques de contrôle d’accès. Un rôle possède un jeu d’autorisations déterminé et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès dont ils ont besoin.
 
->[!CONTEXTUALHELP]
->id="platform_permissions_roles_about"
->title="Que sont les rôles ?"
->abstract="Les rôles sont des moyens de classer les types d’utilisateurs qui interagissent avec votre instance Platform et constituent des blocs élémentaires des politiques de contrôle d’accès. Un rôle possède un jeu d’autorisations déterminé et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=fr" text="Gérer les rôles"
+Pour commencer, sélectionnez **[!UICONTROL Rôles]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Entité professionnelle ACME]**.
 
->[!CONTEXTUALHELP]
->id="platform_permissions_roles_about_create"
->title="Créer un rôle"
->abstract="Vous pouvez créer un rôle pour mieux classer les utilisateurs qui ont accès à votre instance Platform. Par exemple, vous pouvez créer un rôle pour une équipe marketing interne et lui appliquer le libellé RHD. Cela permettra à l&#39;équipe d&#39;accéder aux informations de santé protégées (ISP). Vous pouvez également créer un rôle pour une agence externe et refuser l&#39;accès à ce rôle aux données ISP en vous abstenant d&#39;appliquer le libellé RHD à ce rôle."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=fr#create-a-new-role" text="Créer un rôle"
+![Image montrant l’entité professionnelle ACME sélectionnée dans Rôles](../images/abac-end-to-end-user-guide/abac-select-role.png)
 
->[!CONTEXTUALHELP]
->id="platform_permissions_roles_details"
->title="Présentation des rôles"
->abstract="La boîte de dialogue de présentation des rôles affiche les ressources et les sandbox auxquelles un rôle donné peut accéder."
+Sélectionnez ensuite **[!UICONTROL Libellés]** puis sélectionnez **[!UICONTROL Ajouter des libellés]**.
 
-Les rôles sont des moyens de catégoriser les types d’utilisateurs qui interagissent avec votre instance Platform et sont des blocs élémentaires des stratégies de contrôle d’accès. Un rôle possède un ensemble donné d’autorisations et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès dont ils ont besoin.
+![Image illustrant la sélection de l’option Ajouter des libellés dans l’onglet Libellés ](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
 
-Pour commencer, sélectionnez **[!UICONTROL Rôles]** dans le volet de navigation de gauche, puis **[!UICONTROL ACME Business Group]**.
+Une liste de tous les libellés de votre organisation s’affiche. Sélectionnez **[!UICONTROL RHD]** pour ajouter l’étiquette pour **[!UICONTROL ISP/données réglementées en matière de santé]** puis sélectionnez **[!UICONTROL Enregistrer]**.
 
-![Image montrant le groupe opérationnel ACME sélectionné dans les rôles](../images/abac-end-to-end-user-guide/abac-select-role.png)
-
-Ensuite, sélectionnez **[!UICONTROL Étiquettes]**, puis **[!UICONTROL Ajouter des étiquettes]**.
-
-![Image montrant l’ajout de libellés sélectionnés dans l’onglet Étiquettes](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
-
-Une liste de tous les libellés de votre organisation s’affiche. Sélectionnez **[!UICONTROL RHD]** pour ajouter le libellé pour **[!UICONTROL PHI/Definated Health Data]** et sélectionnez ensuite **[!UICONTROL Save]**.
-
-![Image montrant l&#39;étiquette RHD en cours de sélection et d&#39;enregistrement](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
+![Image illustrant le libellé RHD sélectionné et enregistré](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
 >[!NOTE]
 >
->Lors de l’ajout d’un groupe d’organisation à un rôle, tous les utilisateurs de ce groupe sont ajoutés au rôle . Toute modification apportée au groupe d’organisations (utilisateurs supprimés ou ajoutés) sera automatiquement mise à jour dans le rôle .
+>Lors de l’ajout d’un groupe d’organisations à un rôle, tous les utilisateurs de ce groupe seront ajoutés au rôle. Toute modification apportée au groupe d’organisations (utilisateurs supprimés ou ajoutés) sera automatiquement mise à jour dans le rôle.
 
 ## Application de libellés aux champs de schéma {#label-resources}
 
-Maintenant que vous avez configuré un rôle utilisateur avec l’étiquette [!UICONTROL RHD], l’étape suivante consiste à ajouter le même libellé aux ressources que vous souhaitez contrôler pour ce rôle.
+Maintenant que vous avez configuré un rôle d’utilisateur avec le libellé [!UICONTROL RHD], l’étape suivante consiste à ajouter ce même libellé aux ressources que vous souhaitez contrôler pour ce rôle.
 
-Dans la barre de navigation supérieure, sélectionnez le **sélecteur d’applications**, représenté par l’icône ![ du sélecteur d’applications](/help/images/icons/apps.png), puis sélectionnez **[!UICONTROL Experience Platform]**.
+Dans le volet de navigation supérieur, sélectionnez le **sélecteur d’applications**, représenté par l’icône ![sélecteur d’applications](/help/images/icons/apps.png), puis sélectionnez **[!UICONTROL Experience Platform]**.
 
-![Image montrant l’Experience Platform sélectionné dans le menu déroulant du sélecteur d’applications](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
+![Image montrant la sélection de l’Experience Platform dans le menu déroulant du sélecteur d’applications](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
 
-Sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche, puis **[!UICONTROL ACME Healthcare]** dans la liste des schémas qui s’affichent.
+Sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL ACME Healthcare]** dans la liste des schémas qui s’affichent.
 
-![Image montrant le schéma ACME Health care sélectionné dans l’onglet Schémas](../images/abac-end-to-end-user-guide/abac-select-schema.png)
+![Image illustrant le schéma ACME Healthcare sélectionné dans l’onglet Schémas ](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
-Sélectionnez ensuite **[!UICONTROL Étiquettes]** pour afficher une liste qui affiche les champs associés à votre schéma. À partir de là, vous pouvez attribuer des étiquettes à un ou plusieurs champs à la fois. Sélectionnez les champs **[!UICONTROL BloodGluglucose]** et **[!UICONTROL InsulinLevel]**, puis sélectionnez **[!UICONTROL Appliquer les étiquettes d’accès et de gouvernance des données]**.
+Sélectionnez ensuite **[!UICONTROL Libellés]** pour afficher une liste qui affiche les champs associés à votre schéma. À partir de là, vous pouvez attribuer des libellés à un ou plusieurs champs à la fois. Sélectionnez les champs **[!UICONTROL Glucose sanguin]** et **[!UICONTROL Niveau d’insuline]**, puis sélectionnez **[!UICONTROL Appliquer l’accès et les étiquettes de gouvernance des données]**.
 
-![Image montrant le BloodGluglucose et l&#39;insulineLevel sélectionnés et l&#39;application des étiquettes d&#39;accès et de gouvernance des données sélectionnées](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
+![Image montrant les valeurs Glycémie et Niveau d’insuline sélectionnés et appliquant l’accès et les étiquettes de gouvernance des données sélectionnées](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
 
-La boîte de dialogue **[!UICONTROL Modifier les libellés]** s’affiche, vous permettant de choisir les libellés que vous souhaitez appliquer aux champs du schéma. Pour ce cas d’utilisation, sélectionnez l’étiquette **[!UICONTROL PHI/Definated Health Data]** , puis sélectionnez **[!UICONTROL Save]**.
+La boîte de dialogue **[!UICONTROL Modifier les libellés]** s’affiche et vous permet de choisir les libellés à appliquer aux champs du schéma. Pour ce cas d’utilisation, sélectionnez l’étiquette **[!UICONTROL ISP/données réglementées en matière de santé]** puis sélectionnez **[!UICONTROL Enregistrer]**.
 
-![Image montrant l&#39;étiquette RHD en cours de sélection et d&#39;enregistrement](../images/abac-end-to-end-user-guide/abac-select-schema-labels.png)
-
->[!NOTE]
->
->Lorsqu’un libellé est ajouté à un champ, il est appliqué à la ressource parent de ce champ (une classe ou un groupe de champs). Si la classe ou le groupe de champs parent est utilisé par d’autres schémas, ces derniers hériteront du même libellé.
-
-## Application d’étiquettes à des audiences
+![Image illustrant le libellé RHD sélectionné et enregistré](../images/abac-end-to-end-user-guide/abac-select-schema-labels.png)
 
 >[!NOTE]
 >
->Toute audience qui utilise un attribut étiqueté doit également être étiquetée si vous souhaitez que les mêmes restrictions d’accès s’appliquent à elle.
+>Lorsqu’un libellé est ajouté à un champ, il est appliqué à la ressource parent de ce champ (une classe ou un groupe de champs). Si la classe parent ou le groupe de champs est utilisé par d’autres schémas, ces schémas hériteront du même libellé.
 
-Une fois que vous avez terminé d’étiqueter vos champs de schéma, vous pouvez maintenant commencer à libeller vos audiences.
+## Application de libellés aux audiences
 
-Sélectionnez **[!UICONTROL Audiences]** dans le volet de navigation de gauche, sous la section **[!UICONTROL Clients]** . Une liste des audiences disponibles dans votre organisation s’affiche. Dans cet exemple, les deux audiences suivantes doivent être étiquetées, car elles contiennent des données d’intégrité sensibles :
+>[!NOTE]
+>
+>Toute audience qui utilise un attribut étiqueté doit également être étiquetée si vous souhaitez lui appliquer les mêmes restrictions d’accès.
 
-* Glucide sanguin > 100
-* Insuline &lt;50
+Une fois que vous avez terminé d’étiqueter vos champs de schéma, vous pouvez commencer à étiqueter vos audiences.
 
-Sélectionnez **[!UICONTROL Glucide de sang >100]** (par nom d’audience et non la case à cocher) pour commencer à étiqueter l’audience.
+Sélectionnez **[!UICONTROL Audiences]** dans le volet de navigation de gauche, sous la section **[!UICONTROL Clients]**. Une liste des audiences disponibles dans votre organisation s’affiche. Dans cet exemple, les deux audiences suivantes doivent être étiquetées , car elles contiennent des données d’intégrité sensibles :
 
-![Image montrant le glucose dans le sang >100 sélectionné dans l&#39;onglet Audiences](../images/abac-end-to-end-user-guide/abac-select-audience.png)
+* Glycémie >100
+* Insuline &lt; 50
+
+Sélectionnez **[!UICONTROL Glucose sanguin > 100]** (en fonction du nom de l’audience et non de la case à cocher) pour commencer à libeller l’audience.
+
+![Image montrant la glycémie >100 sélectionnée dans l’onglet Audiences](../images/abac-end-to-end-user-guide/abac-select-audience.png)
 
 L’écran **[!UICONTROL Détails]** du segment s’affiche. Sélectionnez **[!UICONTROL Gérer l’accès]**.
 
-![Image montrant la sélection de l’accès Manages](../images/abac-end-to-end-user-guide/abac-audience-fields-manage-access.png)
+![Image illustrant la sélection de Gère l’accès](../images/abac-end-to-end-user-guide/abac-audience-fields-manage-access.png)
 
-La boîte de dialogue **[!UICONTROL Appliquer les étiquettes d’accès et de gouvernance des données]** s’affiche, ce qui vous permet de choisir les étiquettes à appliquer à l’audience. Pour ce cas d’utilisation, sélectionnez l’étiquette **[!UICONTROL PHI/Definated Health Data]** , puis sélectionnez **[!UICONTROL Save]**.
+La boîte de dialogue **[!UICONTROL Appliquer l’accès et les libellés de gouvernance des données]** s’affiche et vous permet de choisir les libellés à appliquer à l’audience. Pour ce cas d’utilisation, sélectionnez l’étiquette **[!UICONTROL ISP/données réglementées en matière de santé]** puis sélectionnez **[!UICONTROL Enregistrer]**.
 
-![Image montrant la sélection de l&#39;étiquette RHD et de l&#39;enregistrement sélectionné](../images/abac-end-to-end-user-guide/abac-select-audience-labels.png)
+![Image montrant la sélection du libellé RHD et l’enregistrement sélectionné](../images/abac-end-to-end-user-guide/abac-select-audience-labels.png)
 
 Répétez les étapes ci-dessus avec **[!UICONTROL Insuline &lt;50]**.
 
 >[!NOTE]
 >
-> Affectez des étiquettes créées dans l’espace de travail [!UICONTROL Autorisations] (comme les étiquettes de segment ci-dessus) à divers objets dans Adobe Journey Optimizer à l’aide du [ contrôle d’accès au niveau de l’objet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access).&quot;
+> Attribuez les libellés créés dans l’espace de travail [!UICONTROL Autorisations] (comme les libellés de segment ci-dessus) à divers objets dans Adobe Journey Optimizer à l’aide de [Contrôle d’accès au niveau de l’objet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access). »
 
 ## Activer la politique de contrôle d’accès {#policy}
 
-La stratégie de contrôle d’accès par défaut utilise des libellés pour définir les rôles utilisateur ayant accès à des ressources Platform spécifiques. Dans cet exemple, l’accès aux champs de schéma et aux audiences sera refusé dans tous les environnements de test pour les utilisateurs qui ne sont pas dans un rôle dont les libellés correspondants sont dans le champ de schéma.
+La politique de contrôle d’accès par défaut utilise des libellés pour définir les rôles utilisateur ayant accès à des ressources Platform spécifiques. Dans cet exemple, l’accès aux champs de schéma et aux audiences sera refusé dans tous les sandbox pour les utilisateurs qui ne disposent pas d’un rôle avec les libellés correspondants dans le champ de schéma.
 
-Pour activer la stratégie de contrôle d’accès, sélectionnez [!UICONTROL Autorisations] dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Stratégies]**.
+Pour activer la politique de contrôle d’accès, sélectionnez [!UICONTROL Autorisations] dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Politiques]**.
 
-![Liste des stratégies affichées](../images/abac-end-to-end-user-guide/abac-policies-page.png)
+![ Liste des politiques affichées ](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-Sélectionnez ensuite les points de suspension (`...`) en regard de l’option **[!UICONTROL Default-Field-Level-Access-Control-Policy]**. Une liste déroulante affiche les commandes pour modifier, activer, supprimer ou dupliquer le rôle. Sélectionnez **[!UICONTROL Activer]** dans la liste déroulante.
+Sélectionnez ensuite les points de suspension (`...`) à côté du **[!UICONTROL Default-Field-Level-Access-Control-Policy]**. Une liste déroulante affiche alors les commandes permettant de modifier, activer, supprimer ou dupliquer le rôle. Sélectionnez **[!UICONTROL Activer]** dans la liste déroulante.
 
-![Liste déroulante pour activer la stratégie](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
+![Liste déroulante pour activer la politique](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-La boîte de dialogue Activer la stratégie s’affiche et vous invite à confirmer l’activation. Sélectionnez **[!UICONTROL Confirmer]**.
+La boîte de dialogue Activer la politique s’affiche et vous invite à confirmer l’activation. Sélectionnez **[!UICONTROL Confirmer]**.
 
-![Boîte de dialogue Activer la stratégie](../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
+![Activer la boîte de dialogue Politique](../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
 
-La confirmation de l’activation de la stratégie est reçue et vous êtes renvoyé à la page [!UICONTROL Stratégies] .
+Une confirmation d’activation de la politique est reçue et vous revenez à la page [!UICONTROL Politiques].
 
-![Activer la confirmation de stratégie](../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
+![Activer la confirmation de politique](../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 
 <!-- ## Create an access control policy {#policy}
 
@@ -264,10 +241,10 @@ Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears wh
 
 ## Étapes suivantes
 
-Vous avez terminé l’application des libellés à un rôle, à des champs de schéma et à des audiences. L’agence externe affectée à ces rôles ne peut pas afficher ces libellés et leurs valeurs dans le schéma, le jeu de données et la vue de profil. Ces champs ne peuvent pas non plus être utilisés dans la définition de segment lors de l’utilisation du créateur de segments.
+Vous avez terminé l’application des libellés à un rôle, des champs de schéma et des audiences. L’agence externe affectée à ces rôles ne peut pas afficher ces libellés et leurs valeurs dans la vue schéma, jeu de données et profil. L’utilisation de ces champs est également limitée dans la définition de segment lors de l’utilisation du créateur de segments.
 
 Pour plus d’informations sur le contrôle d’accès basé sur les attributs, consultez la [présentation du contrôle d’accès basé sur les attributs](./overview.md).
 
-La vidéo suivante est destinée à vous aider à comprendre le contrôle d’accès basé sur les attributs et explique comment configurer les rôles, les ressources et les stratégies.
+La vidéo suivante est destinée à vous aider à comprendre le contrôle d’accès basé sur les attributs et explique comment configurer des rôles, des ressources et des politiques.
 
 >[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
