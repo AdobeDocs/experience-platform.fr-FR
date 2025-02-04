@@ -5,7 +5,7 @@ exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '968'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -34,7 +34,7 @@ Une identité représente une entité du monde réel. S’il existe un lien éta
 | Un utilisateur final se connecte à l’aide de Google Chrome, puis de Firefox. | Le CRMID est lié à deux ECID différents. | Une personne (CRMID) est associée à 2 navigateurs web (**Remarque** : chaque navigateur possède son propre ECID). |
 | Un ingénieur de données ingère un enregistrement CRM qui comprend deux champs marqués comme identité : CRMID et E-mail. | CRMID et Email sont liés. | Une personne (CRMID) est associée à l’adresse e-mail. |
 
-## Comprendre la logique de liaison d’Identity Service
+## Comprendre la logique de liaison d’Identity Service
 
 Une identité se compose d’un espace de noms d’identité et d’une valeur d’identité.
 

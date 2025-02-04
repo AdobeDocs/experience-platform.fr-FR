@@ -14,7 +14,7 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_identities_namespacepriority"
 >title="Priorité de l’espace de noms"
->abstract="La priorité de l’espace de noms détermine la manière dont les liens sont supprimés du graphique d’identités."
+>abstract="La priorité de l’espace de noms détermine la manière dont les liens sont supprimés du graphe d’identité."
 
 >[!AVAILABILITY]
 >

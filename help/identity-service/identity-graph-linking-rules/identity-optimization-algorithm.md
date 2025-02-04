@@ -5,7 +5,7 @@ exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '1560'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_identities_uniquenamespace"
 >title="Espace de noms unique"
->abstract="Un graphique ne peut pas avoir deux identités avec un espace de noms unique. Si un graphique tente de dépasser cette limite, les liens les plus récents sont conservés et les liens les plus anciens sont supprimés."
+>abstract="Un graphe ne peut pas avoir deux identités avec un espace de noms unique. Si un graphe tente de dépasser cette limite, les liens les plus récents sont conservés et les liens les plus anciens sont supprimés."
 
 >[!AVAILABILITY]
 >
@@ -78,7 +78,7 @@ En cas de violation de la contrainte d’espace de noms unique, l’algorithme d
 
 La section suivante décrit le comportement de l’algorithme d’optimisation des identités dans des scénarios tels que l’appareil partagé ou l’ingestion de données avec le même horodatage.
 
-### Appareil partagé
+### Périphérique partagé
 
 Un appareil partagé fait référence à un appareil utilisé par plusieurs personnes. Par exemple, un appareil partagé peut être un ordinateur portable ou une tablette que vous partagez avec un partenaire ou un membre de la famille, un ordinateur de bibliothèque ou un kiosque public.
 

@@ -29,20 +29,20 @@ Les documents suivants sont essentiels à la compréhension des règles de liais
 * [Interface utilisateur de simulation de graphique](./graph-simulation.md)
 * [Interface utilisateur des paramètres d’identité](./identity-settings-ui.md)
 
-## Scénarios de réduction des graphiques {#graph-collapse-scenarios}
+## Scénarios de réduction du graphe {#graph-collapse-scenarios}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
 >title="Scénarios de réduction du graphique"
->abstract="Il existe plusieurs raisons pour lesquelles les graphiques peuvent être « réduits » ou représenter plusieurs entités de personne."
+>abstract="Il existe plusieurs raisons pour lesquelles les graphes peuvent être « réduits » ou représenter plusieurs entités de personne."
 
 Cette section présente des exemples de scénarios que vous pouvez prendre en compte lors de la configuration des règles de liaison de graphiques d’identités.
 
-### Appareil partagé
+### Périphérique partagé
 
 Il existe des instances où plusieurs connexions peuvent se produire sur un seul appareil :
 
-| Appareil partagé | Description |
+| Périphérique partagé | Description |
 | --- | --- |
 | Ordinateurs familiaux et tablettes | Le mari et la femme se connectent à leurs comptes bancaires respectifs. |
 | Kiosque public | Les voyageurs à l’aéroport se connectent en utilisant leur carte de fidélité pour enregistrer leurs bagages et imprimer leur carte d’embarquement. |
