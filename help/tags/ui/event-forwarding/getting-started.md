@@ -3,7 +3,7 @@ title: Prise en main du transfert dʼévénements
 description: Suivez ce tutoriel détaillé pour commencer à utiliser le transfert d’événement dans Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 0a95d09eb1ce59e45d52372c4b08725c009001c3
+source-git-commit: e9f98e1f94aa6ae2ecf29940912d296813611d4c
 workflow-type: tm+mt
 source-wordcount: '887'
 ht-degree: 84%
@@ -33,9 +33,9 @@ Après avoir envoyé les données au réseau Edge, vous pouvez basculer sur des 
 
 ## Conditions préalables
 
-* Connexions Adobe Real-Time CDP, Prime ou Ultimate (contactez l’équipe de votre compte Adobe pour connaître les tarifs)
+* Adobe Real-Time CDP Connections, Prime ou Ultimate (contactez l’équipe de votre compte d’Adobe pour connaître les prix)
 * Transfert d’événement dans Adobe Experience Platform
-* SDK Web Adobe Experience Platform, SDK Mobile ou API de serveur Edge Network configurés pour envoyer des données à l’Edge Network
+* API Adobe Experience Platform Web SDK, Mobile SDK ou Edge Network Server configurée pour envoyer des données à Edge Network
 * Mettez en correspondance les données avec le modèle de données dʼexpérience (XDM) (cette mise en correspondance peut être effectuée à lʼaide de balises).
 
 ## Créer un schéma XDM
@@ -46,7 +46,7 @@ Créez votre schéma dans Adobe Experience Platform.
 
 1. Donnez un nom et une brève description au schéma.
 
-1. Vous pouvez ajouter le groupe de champs &quot;Détails web ExperienceEvent&quot; en sélectionnant **[!UICONTROL Ajouter]** en regard de **[!UICONTROL Groupes de champs]**.
+1. Vous pouvez ajouter le groupe de champs « Détails web ExperienceEvent » en sélectionnant **[!UICONTROL Ajouter]** en regard de **[!UICONTROL Groupes de champs]**.
 
    >[!NOTE]
    >
@@ -58,13 +58,13 @@ Pour plus d’informations sur les schémas, voir [Aide du système XDM (Modèle
 
 ## Création dʼune propriété de transfert dʼévénements
 
-Dans l’espace de travail **[!UICONTROL Tags]**, créez une propriété de type **[!UICONTROL Edge]**.
+Dans l’espace de travail **[!UICONTROL Balises]**, créez une propriété de type **[!UICONTROL Edge]**.
 
 1. Sélectionnez **[!UICONTROL Nouvelle propriété]**.
 
 1. Attribuez un nom à la propriété.
 
-1. Choisissez le type de plateforme &quot;Edge&quot;.
+1. Choisissez le type de plateforme « Edge ».
 
 1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
@@ -75,18 +75,18 @@ notez les identifiants de lʼenvironnement. Si lʼorganisation Adobe utilisée d
 
 Pour créer votre flux de données dans Adobe Experience Platform, utilisez l’identifiant d’environnement généré lors de la création de la propriété de transfert d’événement.
 
-1. Sélectionnez **[!UICONTROL Datastreams]** dans le volet de navigation de gauche.
+1. Sélectionnez **[!UICONTROL Flux de données]** dans le volet de navigation de gauche.
 
 1. Nommez la configuration et donnez une description facultative.
 La description permet d’identifier les configurations dans une liste de plusieurs configurations.
 
 1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
-## Activation du transfert dʼévénements
+## Activation du transfert dʼévénements {#enable-event-forwarding}
 
 Ensuite, configurez Edge Network pour envoyer des données au transfert dʼévénements et à dʼautres produits Adobe.
 
-1. Dans l’espace de travail **[!UICONTROL Datastreams]**, sélectionnez la propriété que vous avez créée.
+1. Dans l’espace de travail **[!UICONTROL Flux de données]**, sélectionnez la propriété que vous avez créée.
 
 1. Sélectionnez l’environnement de développement, de production ou d’évaluation.
 
@@ -104,13 +104,13 @@ Après la configuration, prenez note des identifiants d’environnement pour la 
 
 Créez votre propriété dans l’espace de travail **[!UICONTROL Balises]**, puis accédez à **[!UICONTROL Extensions]** et sélectionnez l’extension SDK Web Experience Platform dans le catalogue pour la configurer et l’installer.
 
-Pour plus d’informations sur les options de configuration, voir la [documentation de l’extension SDK Web](../../extensions/client/web-sdk/overview.md) .
+Consultez la [documentation de l’extension Web SDK](../../extensions/client/web-sdk/overview.md) pour plus d’informations sur les options de configuration.
 
 ## Création dʼune règle de balise pour envoyer des données au SDK Web Platform
 
 Quand les éléments ci-dessus sont en place, créez les définitions des données, règles, etc. qui utilisent le transfert dʼévénements et les balises, mais qui ont uniquement besoin dʼune seule requête provenant de la page.
 
-Créez une règle de chargement de page à l’aide de l’extension SDK Web Platform et du type d’action &quot;Envoyer l’événement&quot; :
+Créez une règle de chargement de page à l’aide de l’extension Platform Web SDK et du type d’action « Envoyer l’événement » :
 
 1. Ouvrez lʼonglet **[!UICONTROL Règles]**, puis sélectionnez **[!UICONTROL Créer une règle]**.
 

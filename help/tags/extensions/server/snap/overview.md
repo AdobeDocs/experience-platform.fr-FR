@@ -1,23 +1,26 @@
 ---
-title: Intégration de l’API de conversions Snapchat Adobe
-description: Cette API d’événements web Adobe Experience Platform vous permet de partager des interactions de site web directement avec Snapchat.
+title: Présentation de l’extension de l’API de conversions Snapchat
+description: Utilisez la conversion Snapchat pour envoyer des données d’événement côté serveur à Snap.
 last-substantial-update: 2025-01-20T00:00:00Z
-source-git-commit: 6403c339b2407410e282a25a0382845214bb6a95
+source-git-commit: 79e19b12dd39208827c215094b6c8ec9163d6624
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '965'
 ht-degree: 4%
 
 ---
 
-# Présentation de l’extension d’API de conversions [!DNL Snapchat]
+# Présentation de l’extension API [!DNL Snapchat] Conversions
 
 L’extension [!DNL Snap] de l’API de conversion est une interface sécurisée du serveur [Edge Network ](/help/server-api/overview.md) qui vous permet de partager des informations avec [!DNL Snapchat] directement sur les actions des utilisateurs sur vos sites web. Vous pouvez tirer parti des règles de transfert d’événement pour envoyer des données du **[!DNL Adobe Experience Platform Edge Network]** à **[!DNL Snapchat]** à l’aide de l’extension d’API de conversion **[!DNL Snap]**.
 
 ## Conditions préalables de [!DNL Snapchat] {#prerequisites}
 
-Pour utiliser l’API [!DNL Snapchat] Conversions, vous devez disposer d’une propriété [ Transfert d’événement ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started) configurée dans le Adobe Experience Platform et des [ autorisations requises ](https://experienceleague.adobe.com/en/docs/experience-platform/collection/permissions) pour modifier la propriété.
+Pour utiliser l’API [!DNL Snapchat] Conversions :
 
-Créez un [flux de données](/help/tags/ui/event-forwarding/getting-started.md) et ajoutez-y le [service de transfert d’événement](/help/tags/ui/event-forwarding/getting-started#enable-event-forwarding).
+* Vous devez disposer d’une [propriété Transfert d’événement](/help/tags/ui/event-forwarding/getting-started.md) configurée dans Adobe Experience Platform.
+* Vous devez également disposer des [autorisations requises](/help/collection/permissions.md) pour modifier la propriété.
+
+Créez un [flux de données](/help/tags/ui/event-forwarding/getting-started.md) et ajoutez-y le [service de transfert d’événement](/help/tags/ui/event-forwarding/getting-started.md#enable-event-forwarding).
 
 Un compte **[!DNL Snapchat]** [Business Manager](https://business.snapchat.com/) est requis pour utiliser l’API Conversions. Business Manager aide les annonceurs à intégrer les efforts marketing de **[!DNL Snapchat]** dans leur entreprise et avec des partenaires externes. Consultez l’article **[!DNL Snapchat]** [centre d’aide](https://businesshelp.snapchat.com/s/article/get-started?language=en_US) sur la création d’un compte Business Manager si vous n’en avez pas.
 
@@ -34,7 +37,7 @@ Une fois la propriété souhaitée sélectionnée, procédez comme suit :
 1. Dans le panneau de navigation de gauche, sélectionnez **[!UICONTROL Extensions]**.
 2. Recherchez l’extension **[!UICONTROL Snap Conversion API Extension]** et sélectionnez **[!UICONTROL Installer]**.
 
-   ![Image illustrant le bouton d’installation](../../../images/extensions/server/snap/install.png).
+   ![Image illustrant le bouton d’installation](../../../images/extensions/server/snap/install.png)
 
 3. Dans l’écran de configuration, saisissez les valeurs suivantes :
 
@@ -43,17 +46,17 @@ Une fois la propriété souhaitée sélectionnée, procédez comme suit :
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 
-![Image illustrant l’ID de pixel et le bouton Jeton API](../../../images/extensions/server/snap/configure.png).
+![Image illustrant l’ID de pixel et le bouton de jeton API](../../../images/extensions/server/snap/configure.png)
 <!-- 
 ![[!DNL Snap] configuration screen for the [!DNL Snap] conversion API extension.](../../../images/extensions/server/snap/configure.png) -->
 
 ## Création d’éléments de données {#create-data-elements}
 
-Pour transmettre des points de données en tant que paramètres à l’extension de l’API Conversions [!DNL Snapchat], vous devez créer des [éléments de données](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) pour chaque point de données. Procédez comme suit :
+Pour envoyer des données à l’extension d’API [!DNL Snapchat] Conversions, créez [éléments de données](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) pour chaque paramètre de données. Procédez comme suit :
 
 1. Accédez à **[!UICONTROL Création]**>**[!UICONTROL Éléments de données]** dans l’écran **[!UICONTROL Informations sur la propriété]** de votre propriété, puis sélectionnez **[!UICONTROL Ajouter un élément de données]**.
 
-   ![Image illustrant le bouton Ajouter un élément de données](../../../images/extensions/server/snap/add_data_element.png).
+   ![Image illustrant le bouton Ajouter un élément de données](../../../images/extensions/server/snap/add_data_element.png)
 
 2. Saisissez un nom pour l’élément de données.
 
@@ -61,19 +64,19 @@ Pour transmettre des points de données en tant que paramètres à l’extension
 
 4. Dans le menu déroulant, sélectionnez l’élément approprié, puis renseignez le champ [!UICONTROL Chemin] dans le panneau de droite pour référencer les données de votre choix dans le schéma.
 
-   ![Image illustrant l’écran Créer un élément de données](../../../images/extensions/server/snap/create_data_element.png).
+   ![Image illustrant l’écran Créer un élément de données ](../../../images/extensions/server/snap/create_data_element.png)
 
 Par exemple, si vous créez un élément de données qui fait référence à `snapClickId` dans le schéma illustré ci-dessous :
 
-![Image illustrant le schéma ](../../../images/extensions/server/snap/schema.png).
+![Image illustrant le schéma ](../../../images/extensions/server/snap/schema.png)
 
 Vous devez configurer l’élément de données car `snapClickId` se trouve sous `_snap.inc.exchange` dans le schéma XDM.
 
-![Image illustrant l’écran Modifier l’élément de données](../../../images/extensions/server/snap/edit_data_element.png).
+![Image illustrant l’écran Modifier l’élément de données](../../../images/extensions/server/snap/edit_data_element.png)
 
-Consultez la [documentation des propriétés de transfert d’événement](/help/tags/ui/event-forwarding/overview#data-elements.md) pour plus d’informations sur la création d’éléments de données.
+Consultez la [documentation des propriétés de transfert d’événement](/help/tags/ui/event-forwarding/overview.md#data-elements) pour plus d’informations sur la création d’éléments de données.
 
-## Créer des règles pour envoyer des événements de conversion à accrocher {#create-snap-rules}
+## Créer des règles pour envoyer des événements de conversion à Snap {#create-snap-rules}
 
 Les [règles](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) sont utilisées pour déclencher des extensions dans Platform. Cette section explique comment créer des règles dans votre propriété de transfert d’événement pour envoyer des événements de conversion à Snap à l’aide de l’extension de l’API Conversions.
 
@@ -81,11 +84,11 @@ Les [règles](https://experienceleague.adobe.com/en/docs/platform-learn/implemen
 
 1. Accédez à votre propriété de transfert d’événement et sélectionnez **[!UICONTROL Règles]** dans le menu Création. Cliquez ensuite sur **[!UICONTROL Créer une règle]**.
 
-   ![Image illustrant les règles dans le volet de navigation de gauche](../../../images/extensions/server/snap/create_new_rule.png).
+   ![Image illustrant les règles dans le volet de navigation de gauche](../../../images/extensions/server/snap/create_new_rule.png)
 
 2. Nommez la règle et configurez une condition pour déclencher l’événement Snap. Par exemple, pour envoyer un événement `PURCHASE` chaque fois qu&#39;un événement inclut un numéro de commande, définissez une condition afin de vérifier si l&#39;interaction de l&#39;utilisateur contient un numéro de commande fournisseur valide.
 
-   ![Image illustrant l’écran de configuration des conditions](../../../images/extensions/server/snap/action_configuration.png).
+   ![Image illustrant l’écran de configuration des conditions](../../../images/extensions/server/snap/action_configuration.png)
 
 3. Après avoir enregistré la condition, ajoutez une action pour déclencher l’API de conversion Snap. Dans le panneau de gauche :
 
@@ -95,7 +98,7 @@ Les [règles](https://experienceleague.adobe.com/en/docs/platform-learn/implemen
 
    * Nommez la règle en conséquence.
 
-   ![Image illustrant l’écran de configuration de l’action](../../../images/extensions/server/snap/action_configuration.png).
+   ![Image illustrant l’écran de configuration de l’action](../../../images/extensions/server/snap/action_configuration.png)
 
 4. Configurez les [valeurs de paramètre CAPI](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters) à envoyer pour l’événement dans la section **[!UICONTROL Liaisons de données]** du panneau de droite. Les champs de l’extension sont mappés aux paramètres CAPI comme illustré ci-dessous. Pour plus d’informations sur chaque paramètre, consultez la [documentation de l’API de conversions Snapchat](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters).
 
@@ -136,17 +139,15 @@ Les [règles](https://experienceleague.adobe.com/en/docs/platform-learn/implemen
 | Utilisation limitée des données | `data_processing_options` |
 | URL de la page | `event_source_url` |
 
+{style="table-layout:auto"}
+
 ### Champs obligatoires et facultatifs
 
-* Champs obligatoires :
+Chaque événement nécessite une `event_source`, toujours définie sur `WEB.`. Pour la correspondance, au moins l’un des champs ou l’une des combinaisons suivantes est également requis :
 
-   * Tous les événements auront `event_source` définis sur `WEB`.
-
-   * Au moins l’un des champs ou combinaisons suivants est requis pour la correspondance :
-
-      * E-mail
-      * Numéro de téléphone
-      * Adresse IP et agent utilisateur
+* E-mail
+* Numéro de téléphone
+* Adresse IP et agent utilisateur
 
 **Remarques complémentaires :**
 
@@ -175,21 +176,21 @@ Exemple :
 }
 ```
 
-Pour utiliser la [valeur des conversions personnalisées et le compte rendu des performances des retour sur dépenses publicitaires](https://businesshelp.snapchat.com/s/article/custom-conversions-value-roas?language=en_US), incluez les paramètres pertinents dans le champ `contents`. Par exemple, `brand`, `item_price`, `id`.
+Pour utiliser la [valeur des conversions personnalisées et le compte rendu des performances des retour sur dépenses publicitaires](https://businesshelp.snapchat.com/s/article/custom-conversions-value-roas?language=en_US), incluez les paramètres pertinents dans le champ `contents`. Un exemple de configuration d’événement d’achat peut se présenter comme suit : `brand`, `item_price`, `id`.
 
 Exemple de configuration pour un événement `Purchase` :
 
-[Image montrant les liaisons de données.](../../../images/extensions/server/snap/data_bindings.png)
+![Image illustrant les liaisons de données](../../../images/extensions/server/snap/data_bindings.png)
 
 Les champs facultatifs peuvent être définis comme illustré ci-dessous :
 
-[Image montrant les champs facultatifs.](../../../images/extensions/server/snap/optional_fields.png)
+![Image montrant les champs facultatifs](../../../images/extensions/server/snap/optional_fields.png)
 
 Une fois que vous avez défini le nom, la condition et l’action de la règle comme décrit ci-dessus, enregistrez la règle et assurez-vous qu’elle est activée.
 
-[Image illustrant la règle activée .](../../../images/extensions/server/snap/enabled_rule.png)
+![Image illustrant la règle activée](../../../images/extensions/server/snap/enabled_rule.png)
 
-Vous pouvez maintenant publier ces modifications dans votre propriété. Pour plus d’informations, consultez la documentation sur le [flux de publication](https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview).
+Vous pouvez maintenant publier ces modifications dans votre propriété. Pour plus d’informations, consultez la documentation sur [flux de publication](/help/tags/ui/publishing/overview.md)(https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview) .
 
 ## Résolution des problèmes {#troubleshoot}
 
