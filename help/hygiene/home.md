@@ -1,11 +1,11 @@
 ---
-title: Présentation de la gestion avancée du cycle de vie des données
-description: La gestion avancée du cycle de vie des données vous permet de gérer le cycle de vie de vos données en mettant à jour ou en purgeant des enregistrements obsolètes ou inexacts.
+title: Présentation De La Gestion Avancée Du Cycle De Vie Des Données
+description: La gestion avancée du cycle de vie des données vous permet de gérer le cycle de vie des données en mettant à jour ou en purgeant des enregistrements obsolètes ou inexacts.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 1f82403d4f8f5639f6a9181a7ea98bd27af54904
+source-git-commit: 6ef09957d1eb2c07e5607105c782c36f20344bfa
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 53%
+source-wordcount: '828'
+ht-degree: 34%
 
 ---
 
@@ -22,40 +22,46 @@ Adobe Experience Platform offre un ensemble d’outils fiables pour gérer des o
 >
 >Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead. -->
 
-Ces activités peuvent être effectuées à l’aide de l’[[!UICONTROL  espace de travail de l’interface utilisateur de cycle de vie des données]](#ui) ou de l’ [ API d’hygiène des données](#api). Lorsqu’une tâche de cycle de vie des données s’exécute, le système fournit des mises à jour de transparence à chaque étape du processus. Pour plus d’informations sur la représentation de chaque type de traitement dans le système, consultez la section sur [la chronologie et la transparence](#timelines-and-transparency).
+Ces activités peuvent être effectuées à l’aide de l’espace de travail de l’interface utilisateur [[!UICONTROL cycle de vie des données] ](#ui) ou de l’API [Data Hygiene](#api). Lorsqu’une tâche du cycle de vie des données s’exécute, le système fournit des mises à jour de transparence à chaque étape du processus. Pour plus d’informations sur la représentation de chaque type de traitement dans le système, consultez la section sur [la chronologie et la transparence](#timelines-and-transparency).
 
 >[!NOTE]
 >
->La gestion avancée du cycle de vie des données prend en charge les suppressions de jeux de données par le biais du [point d’entrée d’expiration du jeu de données](./api/dataset-expiration.md) et les suppressions d’identifiants (données au niveau de la ligne) à l’aide d’identités primaires via le [point d’entrée de l’ordre de travail](./api/workorder.md). Vous pouvez également gérer les [expirations de jeux de données](./ui/dataset-expiration.md) et les [ suppressions d’enregistrements](./ui/record-delete.md) via l’interface utilisateur de Platform. Pour plus d’informations, consultez la documentation liée . Notez que le cycle de vie des données ne prend pas en charge la suppression par lots.
+>Advanced Data Lifecycle Management prend en charge les suppressions de jeux de données via le [point d’entrée d’expiration du jeu de données](./api/dataset-expiration.md) et les suppressions d’identifiants (données au niveau des lignes) à l’aide d’identités principales via le [point d’entrée d’ordre de travail](./api/workorder.md). Vous pouvez également gérer les [ expirations de jeux de données ](./ui/dataset-expiration.md) et [ suppressions d’enregistrements ](./ui/record-delete.md) via l’interface utilisateur de Platform. Pour plus d’informations, consultez la documentation associée . Notez que le cycle de vie des données ne prend pas en charge la suppression de lots.
 
-## [!UICONTROL  Espace de travail de l’interface utilisateur du cycle de vie des données] {#ui}
+## Espace de travail de l’interface utilisateur [!UICONTROL cycle de vie des données] {#ui}
 
-L’espace de travail [!UICONTROL Data Lifecycle] de l’interface utilisateur de Platform vous permet de configurer et de planifier les opérations de cycle de vie des données, ce qui vous permet de vous assurer que vos enregistrements sont conservés comme prévu.
+L’espace de travail [!UICONTROL Cycle de vie des données] de l’interface utilisateur de Platform vous permet de configurer et de planifier des opérations de cycle de vie des données et de vous assurer que les enregistrements sont conservés comme prévu.
 
-Pour obtenir des instructions détaillées sur la gestion des tâches de cycle de vie des données dans l’interface utilisateur, consultez le [guide de l’interface utilisateur du cycle de vie des données](./ui/overview.md).
+Pour obtenir des instructions détaillées sur la gestion des tâches du cycle de vie des données dans l’interface utilisateur, consultez le [guide de l’interface utilisateur du cycle de vie des données](./ui/overview.md).
 
 ## API Data Hygiene {#api}
 
-L’interface utilisateur de [!UICONTROL cycle de vie des données] repose sur l’API Data Hygiene, dont les points d’entrée sont disponibles pour que vous puissiez les utiliser directement si vous préférez automatiser vos activités de cycle de vie des données. Pour plus d’informations, consultez le [Guide de l’API Data Hygiene](./api/overview.md).
+L’interface utilisateur [!UICONTROL Cycle de vie des données] repose sur l’API Data Hygiene, dont vous pouvez utiliser les points d’entrée directement si vous préférez automatiser les activités de cycle de vie des données. Pour plus d’informations, consultez le [Guide de l’API Data Hygiene](./api/overview.md).
 
-## Chronologie et transparence
+## Chronologie et transparence {#timelines-and-transparency}
 
-[ Les demandes de suppression d’enregistrements ](./ui/record-delete.md) et d’expiration de jeux de données ont chacune leur propre chronologie de traitement et fournissent des mises à jour de transparence à des points clés de leurs workflows respectifs.
-
-<!-- ### Dataset expirations {#dataset-expiration-transparency} -->
+Les demandes [suppression d’enregistrements](./ui/record-delete.md) et d’expiration de jeu de données ont chacune leur propre chronologie de traitement et fournissent des mises à jour de transparence à des points clés de leurs workflows respectifs.
 
 Ce qui suit se produit lorsqu’une [requête d’expiration de jeu de données](./ui/dataset-expiration.md) est créée :
 
 | Étape | Durée après expiration planifiée | Description |
 | --- | --- | --- |
-| La requête a été soumise | 0 heure | Un gestionnaire de données ou un analyste de la confidentialité soumet une requête pour qu’un jeu de données arrive à expiration à un moment donné. La requête est visible dans l’ [!UICONTROL  interface utilisateur du cycle de vie des données ] après son envoi et reste dans un état en attente jusqu’à l’expiration planifiée, après laquelle la requête s’exécutera. |
-| Jeu de données déposé | 1 heure | Le jeu de données est supprimé de la [page d’inventaire du jeu de données](../catalog/datasets/user-guide.md) dans l’interface utilisateur. Les données du lac de données sont uniquement supprimées de manière réversible et le resteront jusqu’à la fin du processus, après quoi elles seront supprimées définitivement. |
+| La requête a été soumise | 0 heure | Un gestionnaire de données ou un analyste de la confidentialité soumet une demande pour qu’un jeu de données expire à un moment donné. La requête est visible dans l’[!UICONTROL interface utilisateur du cycle de vie des données] après avoir été soumise, et reste dans un statut en attente jusqu’à l’heure d’expiration planifiée, après quoi la requête s’exécutera. |
+| Le jeu de données est marqué pour suppression | 0-2 heures | Une fois la requête exécutée, le jeu de données est marqué pour suppression. Si vous utilisez le stockage de données Amazon Web Services (AWS), ce processus peut prendre jusqu’à deux heures. Pendant ce temps, les opérations telles que la segmentation par lots et en flux continu, la prévisualisation ou l’estimation, l’exportation et l’accès ignorent ce jeu de données. |
+| Jeu de données déposé | 3 heures | **Une heure après que le jeu de données est marqué pour suppression**, il est entièrement supprimé du système. À ce stade, le jeu de données est supprimé de la [page d’inventaire des jeux de données](../catalog/datasets/user-guide.md) dans l’interface utilisateur. Toutefois, les données du lac de données ne sont que supprimées de manière réversible à ce stade et le resteront jusqu’à ce que le processus de suppression définitive soit terminé. |
 | Nombre de profils mis à jour | 30 heures | Selon le contenu du jeu de données supprimé, certains profils peuvent être supprimés du système si tous leurs attributs de composant sont liés à ce jeu de données. 30 heures après la suppression du jeu de données, toutes les modifications résultantes dans le nombre total de profils sont répercutées dans les [widgets du tableau de bord](../dashboards/guides/profiles.md#profile-count-trend) et d’autres rapports. |
 | Audiences mises à jour | 48 heures | Une fois tous les profils affectés mis à jour, toutes les [audiences](../segmentation/home.md) connexes sont mises à jour pour refléter leur nouvelle taille. Selon le jeu de données supprimé et les attributs que vous segmentez, la taille de chaque audience peut augmenter ou diminuer en raison de la suppression. |
 | Destinations et parcours mis à jour | 50 heures | Les [Parcours](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=fr), [destinations](../destinations/home.md), et [campagnes](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=fr) sont mis à jour en fonction des modifications apportées aux segments connexes. |
-| Suppression définitive terminée | 15 jours | Toutes les données relatives au jeu de données sont supprimées définitivement du lac de données. L’état [de la tâche de cycle de vie des données](./ui/browse.md#view-details) qui a supprimé le jeu de données est mis à jour pour refléter cela. |
+| Suppression définitive terminée | 15 jours | Toutes les données relatives au jeu de données sont supprimées définitivement du lac de données. Le [statut de la tâche du cycle de vie des données](./ui/browse.md#view-details) qui a supprimé le jeu de données est mis à jour pour refléter cette situation. |
 
 {style="table-layout:auto"}
+
+>[!IMPORTANT]
+>
+>Les suppressions de jeux de données dans Amazon Web Services (AWS) sont soumises à une latence d’environ trois heures avant que les modifications ne soient entièrement appliquées. Cela inclut jusqu’à deux heures pour que le jeu de données soit marqué pour suppression, suivies d’une heure supplémentaire avant qu’il ne soit complètement supprimé du système. En revanche, les demandes de suppression pour les instances Platform qui utilisent Azure Data Lake entraînent des modifications immédiates dans toutes les fonctions commerciales.
+>
+>Pour les utilisateurs AWS, ce délai peut avoir un impact sur la segmentation par lots, la segmentation par flux, les aperçus, les estimations, les exportations et l’accès aux données. Cette latence affecte uniquement les clients qui utilisent AWS, car les utilisateurs d’Azure Data Lake bénéficient de mises à jour immédiates. Pour les utilisateurs d’AWS, les demandes de suppression peuvent prendre jusqu’à trois heures pour se propager entièrement sur tous les systèmes affectés. Ajustez vos attentes en conséquence.
+
 
 <!-- ### Record deletes {#record-delete-transparency}
 
@@ -74,4 +80,4 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 
 ## Étapes suivantes
 
-Ce document fournit un aperçu des fonctionnalités du cycle de vie des données de Platform. Pour commencer à effectuer des demandes d’hygiène des données dans l’interface utilisateur, reportez-vous au [guide de l’interface utilisateur](./ui/overview.md). Pour savoir comment créer des tâches du cycle de vie des données par programmation, reportez-vous au [guide de l’API Data Hygiene](./api/overview.md)
+Ce document présente une vue d’ensemble des fonctionnalités de cycle de vie des données de Platform. Pour commencer à effectuer des demandes d’hygiène des données dans l’interface utilisateur, reportez-vous au [guide de l’interface utilisateur](./ui/overview.md). Pour savoir comment créer des tâches de cycle de vie des données par programmation, reportez-vous au guide de l’API [ Data Hygiene ](./api/overview.md)
