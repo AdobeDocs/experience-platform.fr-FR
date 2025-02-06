@@ -3,9 +3,9 @@ title: Assistant AI dans la documentation du produit Adobe Experience Platform
 description: Prise en main de l’assistant AI dans Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 96e138cc12fdedaa73e3aaf69341806271413680
+source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '899'
 ht-degree: 1%
 
 ---
@@ -109,7 +109,15 @@ Regardez la vidéo suivante pour en savoir plus sur les connaissances des produi
 
 >[!VIDEO](https://video.tv.adobe.com/v/3441024?learn=on)
 
-Pour plus d’informations, consultez la section [ Connaissance des produits dans l’assistant AI ](home.md#product-knowledge)
+Pour plus d’informations, consultez la section [ Connaissance des produits dans l’assistant AI ](home.md#product-knowledge).
+
+### Informations opérationnelles dans l’assistant d’IA
+
+Regardez la vidéo suivante pour découvrir comment utiliser l’assistant AI pour récupérer vos informations opérationnelles et obtenir une vue d’ensemble complète de vos objets de données.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
+
+Pour plus d’informations, consultez la section [ Informations opérationnelles dans l’assistant AI ](home.md#operational-insights).
 
 ### Utiliser les connaissances des produits de l’assistant AI pour réduire le temps d’intégration
 
@@ -165,6 +173,7 @@ Lisez les exemples de cas d’utilisation de l’assistant AI suivants :
 * [Désencombrez vos audiences et optimisez vos opérations marketing](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
 * [Vérifiez les dépendances et minimisez les risques lors des mises à jour des données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 * [Découvrir et déployer de nouvelles fonctionnalités plus rapidement](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125)
+* [Révolutionner le service clientèle avec l’assistant IA](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416)
 
 >[!TAB Contenu vidéo supplémentaire]
 
