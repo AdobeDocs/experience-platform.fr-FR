@@ -3,10 +3,10 @@ title: Exporter des objets de tableau de Real-Time CDP vers des destinations d�
 type: Tutorial
 description: Découvrez comment utiliser des champs calculés pour exporter des tableaux de Real-Time CDP vers des destinations d’espace de stockage sous forme de chaînes.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: a99fc58b8296b2b9ce6e30d14857529570cd3e8a
+source-git-commit: 6b182df562ea59d537050aa26e3c813fc2007e9f
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 7%
+source-wordcount: '1698'
+ht-degree: 6%
 
 ---
 
@@ -72,6 +72,11 @@ Notez les limites connues suivantes qui s’appliquent actuellement à cette fon
 ## Comment exporter des champs calculés {#how-to-export-calculated-fields}
 
 >[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_maps_objects"
+>title="Activer le schéma de sortie hiérarchique"
+>abstract="<p> Activez/désactivez ce paramètre **on** pour activer l’exportation de tableaux, de mappages et d’objets vers des fichiers JSON ou Parquet.</p><p>Lorsque ce bouton est désactivé, vous pouvez utiliser l’option Champs calculés lors de l’activation des audiences, mais vous ne pouvez pas exporter des tableaux, mappages et objets vers des fichiers JSON ou Parquet</p>"
+
+>[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
 >title="Activer le schéma de sortie hiérarchique"
 >abstract="Activez cette option pour exporter des structures hiérarchiques telles que des tableaux."
@@ -79,7 +84,7 @@ Notez les limites connues suivantes qui s’appliquent actuellement à cette fon
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="« Ajouter des champs calculés » désactivé"
->abstract="Cette commande est désactivée, car vous avez choisi d’exporter des structures plates lors de la connexion à la destination."
+>abstract="Ce contrôle est désactivé car vous avez sélectionné le bouton **Exporter des tableaux, des mappages, des objets** *activé* lors de la configuration de cette connexion de destination. Pour utiliser les champs calculés et les fonctions disponibles dans , configurez une nouvelle connexion de destination à l’aide du bouton bascule **Exporter des tableaux, des mappages** des objets *désactivé*."
 
 À l’étape de mappage du workflow d’activation pour les destinations d’espace de stockage, sélectionnez **[!UICONTROL Ajouter un champ calculé]**.
 
