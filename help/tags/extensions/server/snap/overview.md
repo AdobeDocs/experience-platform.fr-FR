@@ -2,9 +2,10 @@
 title: Présentation de l’extension de l’API de conversions Snapchat
 description: Utilisez la conversion Snapchat pour envoyer des données d’événement côté serveur à Snap.
 last-substantial-update: 2025-01-20T00:00:00Z
-source-git-commit: 79e19b12dd39208827c215094b6c8ec9163d6624
+exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
+source-git-commit: 7cece312a2f019d48653dbd208cc8b7593ab0ee3
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '964'
 ht-degree: 4%
 
 ---
@@ -24,7 +25,7 @@ Créez un [flux de données](/help/tags/ui/event-forwarding/getting-started.md) 
 
 Un compte **[!DNL Snapchat]** [Business Manager](https://business.snapchat.com/) est requis pour utiliser l’API Conversions. Business Manager aide les annonceurs à intégrer les efforts marketing de **[!DNL Snapchat]** dans leur entreprise et avec des partenaires externes. Consultez l’article **[!DNL Snapchat]** [centre d’aide](https://businesshelp.snapchat.com/s/article/get-started?language=en_US) sur la création d’un compte Business Manager si vous n’en avez pas.
 
-Un **[!DNL Snap Pixel]** (https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) doit être configuré dans le gestionnaire de publicités Snapchat et vous devez avoir accès à l’affichage du `Pixel ID`. Le `Pixel ID` se trouve dans la section **[!UICONTROL Gestionnaire d’événements]**(https://businesshelp.snapchat.com/s/article/events-manager?language=en_US).
+Un [!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) doit être configuré dans le gestionnaire de publicités Snapchat et vous devez avoir accès à l’affichage du `Pixel ID`. Le `Pixel ID` se trouve dans la section [!UICONTROL [Gestionnaire d’événements]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US).
 
 Vous avez besoin d’un jeton API statique de longue durée. Pour obtenir ce jeton, consultez la [[!DNL Snapchat] documentation de l’API de conversion](https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted#access-token).
 
@@ -190,7 +191,7 @@ Une fois que vous avez défini le nom, la condition et l’action de la règle c
 
 ![Image illustrant la règle activée](../../../images/extensions/server/snap/enabled_rule.png)
 
-Vous pouvez maintenant publier ces modifications dans votre propriété. Pour plus d’informations, consultez la documentation sur [flux de publication](/help/tags/ui/publishing/overview.md)(https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview) .
+Vous pouvez maintenant publier ces modifications dans votre propriété. Pour plus d’informations, consultez la documentation sur le [flux de publication](/help/tags/ui/publishing/overview.md).
 
 ## Résolution des problèmes {#troubleshoot}
 
