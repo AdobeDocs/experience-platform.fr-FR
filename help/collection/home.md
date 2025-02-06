@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;collecte de données;lancement;sdk web
+keywords: Experience Platform;accueil;rubriques populaires;collecte de données;launch;sdk web
 solution: Experience Platform
 title: Présentation de la collecte de données
 description: Découvrez les différentes technologies impliquées dans la collecte de données relatives aux expériences client dans Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b8332686043311c4dd3afeff12300fbd2827498c
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '472'
 ht-degree: 100%
 
 ---
@@ -51,10 +51,6 @@ Platform Edge Network est un réseau de serveurs distribué dans le monde entier
 En outre, les flux de données sont intégrés à plusieurs fonctionnalités Platform qui permettent de s’assurer que toutes les données sensibles que vous envoyez sont traitées de manière appropriée et en respect des politiques organisationnelles et des réglementations juridiques. Consultez la section sur [la gestion des données sensibles](../datastreams/overview.md#sensitive) dans la documentation sur les flux de données pour plus d’informations.
 
 ![Solutions de flux de données et d’Adobe](./images/home/adobe-solutions.png)
-
->[!NOTE]
->
->Pour une présentation détaillée de Platform Edge Network, reportez-vous à [cette présentation interactive du produit](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1).
 
 ## Transfert d’événement
 
