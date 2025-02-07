@@ -2,10 +2,10 @@
 title: Source de la zone d’atterrissage des données
 description: Découvrez comment connecter Data Landing Zone à Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: b9a409db2f1aee852faf9038a25236b78f76d4dd
+source-git-commit: 1d4dd60180ef2a3cbf6dcd565c2f09dd575716b9
 workflow-type: tm+mt
-source-wordcount: '1282'
-ht-degree: 22%
+source-wordcount: '1316'
+ht-degree: 21%
 
 ---
 
@@ -299,6 +299,12 @@ Enfin, accédez à l’URL générée pour vous connecter directement à la cons
 
 ## Connecter [!DNL Data Landing Zone] à l’Experience Platform
 
+>[!IMPORTANT]
+>
+>- Pour vous connecter à la source, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les sources]** et **[!UICONTROL Gérer les sources]**. Pour plus d’informations, consultez la [présentation du contrôle d’accès](../../../access-control/home.md) ou contactez l’administrateur de votre produit pour obtenir les autorisations requises.
+>
+>- Les liens privés ne sont actuellement pas pris en charge lors de la connexion à l’Experience Platform à l’aide du [!DNL Data Landing Zone]. Les seules méthodes d’accès prises en charge sont les méthodes répertoriées [ici](#manage-the-contents-of-your-data-landing-zone).
+
 La documentation ci-dessous fournit des informations sur la manière d’importer des données de votre conteneur [!DNL Data Landing Zone] dans Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 
 ### Utiliser les API
@@ -310,8 +316,4 @@ La documentation ci-dessous fournit des informations sur la manière d’importe
 
 - [Connexion  [!DNL Data Landing Zone]  Platform à l’aide de l’interface utilisateur](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [Créer un flux de données pour une connexion de stockage dans le cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
-
->[!IMPORTANT]
->
->Les liens privés ne sont actuellement pas pris en charge lors de la connexion à l’Experience Platform à l’aide du [!DNL Data Landing Zone]. Les seules méthodes d’accès prises en charge sont les méthodes répertoriées [ici](#manage-the-contents-of-your-data-landing-zone).
 
