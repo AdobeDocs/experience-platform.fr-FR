@@ -3,10 +3,10 @@ title: Amazon Ads
 description: Amazon Ads offre toute une gamme de solutions pour vous aider à atteindre vos objectifs publicitaires. Les partenaires de vente enregistrés, les vendeurs et vendeuses, les marchands de livres, les auteures et auteurs Kindle Direct Publishing (KDP), les personnes développant des applications et/ou les agences peuvent tirer parti du connecteur. L’intégration d’Amazon Ads à Adobe Experience Platform offre une intégration clé en main aux produits Amazon Ads, y compris Amazon DSP (ADSP). À l’aide de la destination Amazon Ads dans Adobe Experience Platform, les utilisateurs et utilisatrices peuvent définir des audiences d’annonceurs pour le ciblage et l’activation sur Amazon DSP.
 last-substantial-update: 2025-01-07T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 8543f76565f22b8cdfb0be71a1332696bc079ec7
+source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
 workflow-type: tm+mt
-source-wordcount: '1837'
-ht-degree: 49%
+source-wordcount: '1819'
+ht-degree: 50%
 
 ---
 
@@ -98,10 +98,6 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 >Après avoir enregistré la configuration de destination, vous ne pourrez pas modifier l’ID publicitaire [!DNL Amazon Ads], même si vous vous authentifiez à nouveau via votre compte Amazon. Pour utiliser un autre ID publicitaire [!DNL Amazon Ads], vous devez créer une nouvelle connexion de destination. Les annonceurs qui sont déjà configurés sur une intégration avec ADSP pour doivent créer un nouveau flux de destination s’ils souhaitent que leurs audiences soient diffusées vers l’AMC ou un autre compte ADSP.
 
 * **[!UICONTROL Zone géographique des annonceurs]** : sélectionnez la zone géographique dans laquelle votre annonceur est hébergé. Pour plus d’informations sur les marchés pris en charge par chaque zone géographique, consultez la [documentation Amazon Ads](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
-
->[!IMPORTANT]
->
->La mise à jour pour inclure le signal de consentement **[!UICONTROL Amazon Ads]** est prévue pour le 7 février 2025.
 
 * **[!UICONTROL Signal de consentement Amazon Ads]** : vérifiez que toutes les données envoyées via cette connexion ont consenti à utiliser des données personnelles à des fins publicitaires. « ACCORDÉ » indique le consentement donné par Amazon pour utiliser les données personnelles du client à des fins publicitaires. Les valeurs autorisées sont « ACCORDÉ » et « REFUSÉ ». Tous les enregistrements envoyés par le biais de connexions avec « REFUSÉ » seront rejetés pour une utilisation ultérieure dans Amazon Ads.
 

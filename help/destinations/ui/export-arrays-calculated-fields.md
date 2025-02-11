@@ -3,9 +3,9 @@ title: Exporter des objets de tableau de Real-Time CDP vers des destinations d�
 type: Tutorial
 description: Découvrez comment utiliser des champs calculés pour exporter des tableaux de Real-Time CDP vers des destinations d’espace de stockage sous forme de chaînes.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 6b182df562ea59d537050aa26e3c813fc2007e9f
+source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
 workflow-type: tm+mt
-source-wordcount: '1698'
+source-wordcount: '1730'
 ht-degree: 6%
 
 ---
@@ -73,8 +73,8 @@ Notez les limites connues suivantes qui s’appliquent actuellement à cette fon
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_maps_objects"
->title="Activer le schéma de sortie hiérarchique"
->abstract="<p> Activez/désactivez ce paramètre **on** pour activer l’exportation de tableaux, de mappages et d’objets vers des fichiers JSON ou Parquet.</p><p>Lorsque ce bouton est désactivé, vous pouvez utiliser l’option Champs calculés lors de l’activation des audiences, mais vous ne pouvez pas exporter des tableaux, mappages et objets vers des fichiers JSON ou Parquet</p>"
+>title="Exporter des tableaux, mappages et objets"
+>abstract="<p> Activez/désactivez ce paramètre <b>on</b> pour activer l’exportation de tableaux, de mappages et d’objets vers des fichiers JSON ou Parquet. Vous pouvez sélectionner ces types d’objets dans la vue du champ source de l’étape de mappage.</p><p>Grâce à ce bouton <b>désactivé</b>, vous pouvez utiliser l’option champs calculés et appliquer diverses fonctions de transformation des données lors de l’activation des audiences. Cependant, vous pouvez <i>pas</i> exporter des tableaux, des mappages et des objets vers des fichiers JSON ou Parquet et devez configurer une destination distincte à cet effet.</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
