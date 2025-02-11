@@ -2,9 +2,9 @@
 title: Présentation d’Audience Portal
 description: Découvrez comment utiliser Audience Portal pour afficher, gérer et créer des audiences dans Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
+source-git-commit: 9f4facebcd55dc15761db1bf744acfef9ccb15ff
 workflow-type: tm+mt
-source-wordcount: '4569'
+source-wordcount: '4597'
 ht-degree: 54%
 
 ---
@@ -233,6 +233,8 @@ L’évaluation d’audience flexible vous permet d’exécuter une tâche de se
 >
 Lors de la sélection des audiences pour une évaluation d’audience flexible, les conditions suivantes s’appliquent :
 >
+- Vous pouvez uniquement utiliser l’évaluation d’audience flexible **deux fois** par jour. Cette limite est réinitialisée à minuit (UTC).
+- Vous disposez d’un **maximum** de 50 exécutions d’évaluation d’audience flexibles par an.
 - Toutes les audiences **doivent** ont une origine de « Segmentation Service ».
 - Toutes les audiences **doivent** doivent être évaluées à l’aide de la segmentation par lots.
 - Toutes les audiences **doivent** doivent être basées sur les personnes.
