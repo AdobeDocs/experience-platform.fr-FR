@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Application automatique des politiques
 description: Ce document présente l’application automatique des politiques d’utilisation de données lors de l’activation d’audiences vers des destinations dans Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: b0c4a26c2e8bb90a3494fcd6eb76c4d0d7421219
+source-git-commit: f9072a0fc287c8061a3d28972096577317a0a2c9
 workflow-type: tm+mt
-source-wordcount: '2118'
-ht-degree: 80%
+source-wordcount: '2116'
+ht-degree: 78%
 
 ---
 
 # Application automatique des politiques
 
-Les libellés et stratégies d’utilisation des données sont disponibles pour tous les utilisateurs de Adobe Experience Platform. Définissez des stratégies d’utilisation des données et appliquez des libellés d’utilisation des données afin de vous assurer que toutes les données sensibles, identifiables ou contractuelles sont traitées avec précision. Ces mesures permettent d’appliquer les règles de gouvernance des données de votre entreprise sur la manière dont les données peuvent être consultées, traitées, stockées et partagées.
+Les libellés et politiques d’utilisation des données sont disponibles pour tous les utilisateurs de Adobe Experience Platform. Définissez des politiques d’utilisation des données et appliquez des libellés d’utilisation des données pour vous assurer que toutes les données sensibles, identifiables ou contractuelles sont traitées avec précision. Ces mesures permettent d’appliquer les règles de gouvernance des données de votre organisation en ce qui concerne la manière dont les données peuvent être accessibles, traitées, stockées et partagées.
 
-Pour vous aider à protéger votre organisation contre les risques et passifs potentiels, Platform applique automatiquement les stratégies d’utilisation en cas de violation lors de l’activation d’audiences vers des destinations.
+Pour protéger votre organisation des risques et responsabilités potentiels, Platform applique automatiquement les politiques d’utilisation en cas de violation lors de l’activation des audiences vers les destinations.
 
 >[!IMPORTANT]
 >
@@ -46,7 +46,7 @@ Lorsqu’une audience est activée pour la première fois, [!DNL Policy Service]
 
 >[!NOTE]
 >
->Si des libellés d’utilisation des données n’ont été appliqués qu’à certains champs d’un jeu de données (plutôt qu’à l’ensemble du jeu), l’application de ces libellés au niveau du champ sur l’activation se fait uniquement dans les conditions suivantes :
+>Si des libellés d’utilisation des données n’ont été appliqués qu’à certains champs, l’application de ces libellés au niveau du champ sur l’activation ne se produit que si au moins l’une des conditions suivantes est remplie :
 >
 >* Les champs sont utilisés dans l’audience.
 >* Les champs sont configurés en tant qu’attributs prévisionnels pour la destination cible.
@@ -70,8 +70,8 @@ Chaque étape de la chronologie ci-dessus représente une entité qui peut contr
 | --- | --- |
 | Jeu de données | Les jeux de données contiennent des libellés d’utilisation des données (appliqués au niveau du champ de schéma ou du champ de l’intégralité du jeu de données) qui définissent les cas d’utilisation pour lesquels l’intégralité du jeu de données ou des champs spécifiques peut être utilisée. Des violations de politique se produisent si un jeu de données ou un champ contenant certains libellés est utilisé à des fins limitées par une politique.<br><br>Tous les attributs de consentement collectés auprès de vos clients sont également stockés dans des jeux de données. Si vous avez accès aux politiques de consentement, tous les profils qui ne répondent pas aux exigences d’attribut de consentement de vos politiques seront exclus des audiences qui sont activées vers une destination. |
 | Politique de fusion | Les politiques de fusion sont les règles utilisées par Platform pour déterminer le classement par priorité des données lors de la fusion de fragments provenant de plusieurs jeux de données. Des violations de politique se produisent si vos politiques de fusion sont configurées de telle sorte que les jeux de données dotés de libellés limités sont activés pour une destination. Pour plus d’informations, consultez la [présentation des politiques de fusion](../../profile/merge-policies/overview.md). |
-| Audience | Les règles de segmentation définissent les attributs à inclure dans les profils clients. En fonction des champs inclus dans une définition de segment, l’audience hérite des libellés d’utilisation appliqués pour ces champs. Des violations de stratégie se produiront si vous tentez d’activer une audience dont les libellés hérités sont limités par les stratégies applicables de la destination cible, en fonction de son cas d’utilisation marketing. |
-| Destination | Lors de la configuration d’une destination, une action marketing (parfois appelée cas d’utilisation marketing) peut être définie. Ce cas d’utilisation correspond à une action marketing telle que définie dans une politique. En d’autres termes, l’action marketing que vous définissez comme une destination détermine les politiques d’utilisation des données et de consentement applicables à cette destination.<br><br> Des violations de stratégie d’utilisation des données se produisent si vous tentez d’activer une audience dont les libellés d’utilisation sont limités pour l’action marketing de la destination cible.<br><br>(Version Beta) Lorsqu’une audience est activée, tous les profils qui ne contiennent pas les attributs de consentement requis pour l’action marketing (tels que définis par vos politiques de consentement) sont exclus de l’audience activée. |
+| Audience | Les règles de segmentation définissent les attributs à inclure dans les profils clients. En fonction des champs inclus dans une définition de segment, l’audience hérite des libellés d’utilisation appliqués pour ces champs. Des violations de politique se produisent si vous tentez d’activer une audience dont les libellés hérités sont limités par les politiques applicables de la destination cible, en fonction de son cas d’utilisation marketing. |
+| Destination | Lors de la configuration d’une destination, une action marketing (parfois appelée cas d’utilisation marketing) peut être définie. Ce cas d’utilisation correspond à une action marketing telle que définie dans une politique. En d’autres termes, l’action marketing que vous définissez comme une destination détermine les politiques d’utilisation des données et de consentement applicables à cette destination.<br><br>Des violations de politique d’utilisation des données se produisent si vous tentez d’activer une audience dont les libellés d’utilisation sont limités pour l’action marketing de la destination cible.<br><br>(Version Beta) Lorsqu’une audience est activée, tous les profils qui ne contiennent pas les attributs de consentement requis pour l’action marketing (tels que définis par vos politiques de consentement) sont exclus de l’audience activée. |
 
 >[!IMPORTANT]
 >
@@ -92,37 +92,37 @@ Les sections ci-dessous décrivent les différents messages d’application de p
 
 Si une violation de politique se produit lors de la tentative d’activation d’une audience (ou de la [modification d’une audience déjà activée](#policy-enforcement-for-activated-audiences)), l’action est bloquée et une fenêtre contextuelle s’affiche indiquant qu’une ou plusieurs politiques ont été violées. Une fois qu’une violation a été déclenchée, le bouton **[!UICONTROL Enregistrer]** est désactivé pour l’entité à modifier jusqu’à ce que les composants appropriés soient mis à jour pour se conformer aux politiques d’utilisation des données.
 
-Sélectionnez un nom de stratégie pour afficher les détails de cette violation.
+Sélectionnez un nom de politique pour afficher les détails de cette violation.
 
-![Boîte de dialogue indiquant qu’une violation de stratégie s’est produite avec le nom de la stratégie mis en surbrillance.](../images/enforcement/violation-policy-select.png)
+![Une boîte de dialogue indiquant qu’une violation de politique s’est produite avec le nom de la politique mis en surbrillance.](../images/enforcement/violation-policy-select.png)
 
 Le message relatif à la violation présente un résumé de la politique enfreinte, y compris les conditions configurées pour être vérifiées par la politique, l’action spécifique qui a déclenché la violation ainsi qu’une liste de résolutions possibles pour le problème.
 
-![Une boîte de dialogue de violation de stratégie avec le résumé de violation mis en surbrillance.](../images/enforcement/violation-summary.png)
+![Boîte de dialogue de violation de la politique avec le résumé de la violation mis en surbrillance.](../images/enforcement/violation-summary.png)
 
 Un graphique relatif à la parenté des données s’affiche sous le résumé de la violation. Cela vous permet de visualiser les jeux de données, les politiques de fusion, les audiences et les destinations impliqués dans la violation de la politique. L’entité que vous modifiez actuellement est mise en surbrillance dans le graphique, ce qui indique le point du flux à l’origine de la violation. Vous pouvez sélectionner un nom d’entité dans le graphique pour ouvrir la page de détails de l’entité en question.
 
-![Boîte de dialogue de violation de politique avec le graphique de lignage de données surligné.](../images/enforcement/data-lineage.png)
+![Boîte de dialogue de violation de la politique avec le graphique de parenté des données mis en surbrillance.](../images/enforcement/data-lineage.png)
 
-Vous pouvez également utiliser l’icône **[!UICONTROL Filtre]** (![Icône de filtre).](/help/images/icons/filter.png)) pour filtrer les entités affichées par catégorie. Au moins deux catégories doivent être sélectionnées pour que les données s’affichent.
+Vous pouvez également utiliser l’icône **[!UICONTROL Filtre]** (![Icône Filtrer.](/help/images/icons/filter.png)) pour filtrer les entités affichées par catégorie. Au moins deux catégories doivent être sélectionnées pour que les données s’affichent.
 
-![Une boîte de dialogue de violation de politique avec le filtre de traçabilité des données et le menu déroulant mis en surbrillance.](../images/enforcement/lineage-filter.png)
+![Boîte de dialogue de violation de la politique avec le filtre de parenté des données et le menu déroulant en surbrillance.](../images/enforcement/lineage-filter.png)
 
 Sélectionnez **[!UICONTROL Vue Liste]** pour afficher la parenté des données sous forme de liste. Pour revenir au graphique visuel, sélectionnez **[!UICONTROL Chemin parcouru]**.
 
-![Une boîte de dialogue de violation de stratégie avec la vue de chemin de lignage de données mise en surbrillance.](../images/enforcement/list-view.png)
+![Boîte de dialogue de violation de la politique avec la vue de chemin de parenté des données mise en surbrillance.](../images/enforcement/list-view.png)
 
 #### Libellés appliqués avec succès {#labels-successfully-applied}
 
-Si vous créez des stratégies d’utilisation des données avant de libeller vos champs de schéma, vous risquez de rencontrer une boîte de dialogue de violation de stratégie de gouvernance dès que vous appliquez des libellés à votre schéma. Dans ce cas, vous pouvez étiqueter une partie de votre schéma. L’onglet [!UICONTROL Étiquettes appliquées avec succès] indique quelles étiquettes ont été appliquées avec succès, car il n’existe aucune restriction de stratégie pour ce champ.
+Si vous créez des politiques d’utilisation des données avant d’étiqueter vos champs de schéma, vous pouvez rencontrer une boîte de dialogue de violation de la politique de gouvernance dès que vous appliquez des libellés à votre schéma. Dans ce cas, vous pouvez étiqueter correctement une partie de votre schéma. L’onglet [!UICONTROL  Libellés appliqués avec succès ] indique quels libellés ont été appliqués avec succès, car il n’existe aucune restriction de politique pour ce champ.
 
-Utilisez le diagramme de lignage de données pour comprendre les autres modifications de configuration à effectuer avant de pouvoir ajouter le libellé à votre champ de schéma.
+Utilisez le diagramme de parenté des données pour comprendre quelles autres modifications de configuration doivent être apportées avant de pouvoir ajouter le libellé à votre champ de schéma.
 
-![Une boîte de dialogue de violation de stratégie avec l’onglet [!UICONTROL Étiquettes correctement appliquées] mis en surbrillance.](../images/enforcement/labels-successfully-applied.png)
+![Boîte de dialogue de violation de la politique avec l’onglet [!UICONTROL  Libellés appliqués avec succès] mis en surbrillance.](../images/enforcement/labels-successfully-applied.png)
 
 ### Évaluation des politiques de consentement {#consent-policy-evaluation}
 
-Lors de l’activation d’une audience vers une destination, vous pouvez voir comment vos [stratégies de consentement](../policies/user-guide.md) affectent la portée de votre audience au cours de l’ [étape de révision du workflow [!UICONTROL  Activation des destinations]](#pre-activation-evaluation).
+Lors de l’activation d’une audience vers une destination, vous pouvez voir comment vos [ politiques de consentement ](../policies/user-guide.md) affectent la portée de votre audience pendant l’étape de révision [ du workflow [!UICONTROL  Activer des destinations ]](#pre-activation-evaluation).
 
 >[!NOTE]
 >
@@ -140,11 +140,11 @@ Ces améliorations permettent une plus grande confiance dans votre stratégie ma
 
 #### Évaluation préalable à l’activation {#pre-activation-evaluation}
 
-Une fois que vous avez atteint l’étape **[!UICONTROL Réviser]** lors de l’ [activation d’une destination](../../destinations/ui/activation-overview.md), sélectionnez **[!UICONTROL Afficher les stratégies appliquées]**.
+Une fois que vous avez atteint l’étape **[!UICONTROL Réviser]** lors de l’[activation d’une destination](../../destinations/ui/activation-overview.md), sélectionnez **[!UICONTROL Afficher les politiques appliquées]**.
 
 ![Bouton Afficher les politiques appliquées dans le workflow d’activation de la destination](../images/enforcement/view-applied-policies.png)
 
-Une boîte de dialogue de vérification de stratégie s’affiche, vous montrant un aperçu de la manière dont vos stratégies de consentement affectent l’audience approuvée des audiences à activer.
+Une boîte de dialogue de vérification de politique s’affiche, vous montrant un aperçu de la manière dont vos politiques de consentement affectent l’audience consentante des audiences à activer.
 
 ![Boîte de dialogue de vérification de la politique de consentement dans l’interface utilisateur de Platform](../images/enforcement/consent-policy-check.png)
 
