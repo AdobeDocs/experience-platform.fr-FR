@@ -3,18 +3,18 @@ title: Assistant AI dans la documentation du produit Adobe Experience Platform
 description: Prise en main de l’assistant AI dans Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
+source-git-commit: 49c06a1dfb3431ce8fe416d35a22567ce614107a
 workflow-type: tm+mt
-source-wordcount: '899'
-ht-degree: 1%
+source-wordcount: '902'
+ht-degree: 0%
 
 ---
 
 # Assistant AI dans la documentation du produit Adobe Experience Platform
 
-L’assistant AI dans Adobe Experience Platform est un outil de conversation que vous pouvez utiliser pour accélérer vos workflows avec des applications et des services Experience Platform. Utilisez l’assistant d’IA pour accroître votre productivité globale, améliorer votre compréhension des connaissances sur les produits et des informations opérationnelles, ainsi que pour recueillir des recommandations relatives à vos requêtes et cas d’utilisation métier.
+L’assistant AI dans Adobe Experience Platform est un outil de conversation que vous pouvez utiliser pour accélérer vos workflows avec les applications et services Experience Platform. Utilisez l’assistant d’IA pour accroître votre productivité globale, améliorer votre compréhension des connaissances sur les produits et des informations opérationnelles, ainsi que pour recueillir des recommandations relatives à vos requêtes et cas d’utilisation métier.
 
-L’assistant AI prend en charge Experience Platform, Real-Time CDP, Adobe Journey Optimizer et Customer Journey Analytics.
+AI Assistant prend en charge Experience Platform, Real-Time CDP, Adobe Journey Optimizer et Customer Journey Analytics.
 
 ## Commencer
 
@@ -42,10 +42,9 @@ Commencez par lire le matériel dans les liens ci-dessous pour vous familiariser
     </tr>
 </table>
 
-
 ## Nouvelles fonctionnalités
 
-Découvrez les dernières améliorations apportées à l’assistant AI, y compris les fonctionnalités actuellement en cours d’Alpha ou Beta.
+Obtenez un aperçu des dernières améliorations apportées à l’assistant AI, y compris les fonctionnalités actuellement dans les étapes Alpha ou Beta.
 
 >[!BEGINTABS]
 
@@ -82,6 +81,21 @@ Vous pouvez utiliser l’assistant AI pour le service clientèle afin de résoud
 [![Image](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/customer-support.md)
 
 >[!ENDTABS]
+
+## Fonctionnalités de sécurité de l’assistant AI {#security}
+
+
+Regardez la vidéo suivante pour plus d’informations sur les fonctionnalités de sécurité de l’assistant AI :
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
+
+>[!BEGINSHADEBOX]
+
+**Consultez la fiche d’information sur la sécurité de l’assistant AI**
+
+Pour plus d’informations sur AI Assistant, consultez la [fiche d’information sur la sécurité de l’AI Assistant dans Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
+
+>[!ENDSHADEBOX]
 
 ## Bibliothèque vidéo
 
@@ -184,20 +198,6 @@ Regardez les vidéos suivantes pour découvrir d’autres exemples de cas d’ut
 
 >[!ENDTABS]
 
-## Ressources supplémentaires
-
->[!BEGINSHADEBOX]
-
-**Consultez la fiche d’information sur la sécurité de l’assistant AI**
-
-Pour plus d’informations sur AI Assistant, consultez la [fiche d’information sur la sécurité de l’AI Assistant dans Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
-
->[!ENDSHADEBOX]
-
-Regardez la vidéo suivante pour plus d’informations sur les fonctionnalités de sécurité de l’assistant AI :
-
->[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
-
 Parcourez les liens ci-dessous pour mieux comprendre les cas d’utilisation, les fonctionnalités et bien plus encore de l’assistant AI.
 
 <table style="table-layout:fixed"><tr style="border: 0;">
@@ -207,7 +207,7 @@ Parcourez les liens ci-dessous pour mieux comprendre les cas d’utilisation, le
 <td><strong>Adobe Journey Optimizer</strong><br/>
 <a href="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank"> Documentation </a>
 </td>
-<td><strong>Customer Journey Analytics </strong><br/>
+<td><strong>Customer Journey Analytics</strong><br/>
 <a href="https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant" target="_blank"> Documentation </a>
 </td>
 </tr></table>
