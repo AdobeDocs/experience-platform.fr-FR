@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires
 title: Traitement des demandes d’accès à des informations personnelles dans le service d’identités
 description: Adobe Experience Platform Privacy Service traite les demandes des clients en matière dʼaccès, d’opt-out de vente ou de suppression de leurs données personnelles conformément aux nombreuses réglementations en matière de confidentialité. Ce document couvre les concepts essentiels associés au traitement des demandes d’accès à des informations personnelles pour le service d’identités.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: a75a5603eacc1b4625a19adfddbb2f4bb81f66d3
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 64%
+source-wordcount: '1000'
+ht-degree: 60%
 
 ---
 
@@ -18,7 +18,7 @@ Ce document couvre les concepts essentiels associés au traitement des demandes 
 
 >[!NOTE]
 >
->Ce guide porte uniquement sur la manière d’effectuer des demandes d’accès à des informations personnelles pour la banque de données d’identité dans Experience Platform. Si vous prévoyez également d’effectuer des demandes d’accès à des informations personnelles pour le lac de données de Platform ou [!DNL Real-Time Customer Profile], reportez-vous au guide sur le [traitement des demandes d’accès à des informations personnelles dans le lac de données](../catalog/privacy.md) et au guide sur le [traitement des demandes d’accès à des informations personnelles pour Profile](../profile/privacy.md) en plus de ce tutoriel.
+>Ce guide porte uniquement sur la manière d’effectuer des demandes d’accès à des informations personnelles pour la banque de données d’identité dans Experience Platform. Si vous prévoyez également d’effectuer des demandes d’accès à des informations personnelles pour le lac de données ou le [!DNL Real-Time Customer Profile] de Platform, reportez-vous au guide sur [le traitement des demandes d’accès à des informations personnelles dans le lac de données](../catalog/privacy.md) et au guide sur [le traitement des demandes d’accès à des informations personnelles pour Profile](../profile/privacy.md) en plus de ce tutoriel.
 >
 >Pour savoir comment effectuer des demandes d’accès à des informations personnelles pour d’autres applications Adobe Experience Cloud, reportez-vous à la [documentation du Privacy Service](../privacy-service/experience-cloud-apps.md).
 
@@ -52,7 +52,7 @@ La requête suivante crée une tâche de confidentialité dans le cadre du RGPD 
 
 >[!TIP]
 >
->Lorsque vous supprimez un espace de noms personnalisé à l’aide de l’API, vous devez spécifier le symbole d’identité comme espace de noms, au lieu du nom d’affichage.
+>Lors de la suppression d’identités à l’aide de la suppression conforme au RGPD, vous devez spécifier le symbole d’identité comme espace de noms et non comme nom d’affichage.
 
 ```shell
 curl -X POST \
@@ -92,11 +92,11 @@ curl -X POST \
 }'
 ```
 
-### Utiliser l’interface utilisateur
+### Utilisation de l’interface utilisateur
 
 >[!TIP]
 >
->Lorsque vous supprimez un espace de noms personnalisé à l’aide de l’interface utilisateur, vous devez spécifier le symbole d’identité comme espace de noms, au lieu du nom d’affichage. En outre, vous ne pouvez pas supprimer les espaces de noms personnalisés dans l’interface utilisateur pour les sandbox hors production.
+>Lors de la suppression d’identités à l’aide de la suppression conforme au RGPD, vous devez spécifier le symbole d’identité comme espace de noms et non comme nom d’affichage.
 
 Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à sélectionner **[!UICONTROL Identité]** sous **[!UICONTROL Produits]** afin de traiter les tâches pour les données stockées dans [!DNL Identity Service].
 
@@ -104,19 +104,19 @@ Lors de la création de requêtes de tâche dans l’interface utilisateur, veil
 
 ## Traitement des demandes de suppression
 
-Lorsquʼ[!DNL Experience Platform] reçoit une requête DELETE de la part de [!DNL Privacy Service], [!DNL Platform] envoie une confirmation à [!DNL Privacy Service] pour confirmer que la requête a été reçue et que les données concernées ont été marquées pour suppression. La suppression de l’identité individuelle est basée sur l’espace de noms et/ou la valeur d’identifiant fournis. En outre, la suppression a lieu pour tous les environnements de test associés à une organisation donnée.
+Lorsquʼ[!DNL Experience Platform] reçoit une requête DELETE de la part de [!DNL Privacy Service], [!DNL Platform] envoie une confirmation à [!DNL Privacy Service] pour confirmer que la requête a été reçue et que les données concernées ont été marquées pour suppression. La suppression de l’identité individuelle est basée sur l’espace de noms et/ou la valeur d’identifiant fournis. En outre, la suppression a lieu pour tous les sandbox associés à une organisation donnée.
 
-Selon que vous avez également inclus Real-time Customer Profile (`ProfileService`) et le lac de données (`aepDataLake`) en tant que produits dans votre demande d’accès à des informations personnelles pour Identity Service (`identity`), différents ensembles de données liés à l’identité sont supprimés du système à des moments potentiellement différents :
+Selon que vous ayez également inclus le profil client en temps réel (`ProfileService`) et le lac de données (`aepDataLake`) en tant que produits dans votre demande d’accès à des informations personnelles pour Identity Service (`identity`), différents ensembles de données liés à l’identité sont supprimés du système à des moments potentiellement différents :
 
 | Produits inclus | Effets |
 | --- | --- |
-| `identity` uniquement | L’identité fournie est supprimée dès que Platform envoie la confirmation que la demande de suppression a été reçue. Le profil construit à partir de ce graphique d’identités reste, mais ne sera pas mis à jour lorsque de nouvelles données seront ingérées, car les associations d’identités sont désormais supprimées. Les données associées au profil restent également dans le lac de données. |
+| `identity` uniquement | L’identité fournie est supprimée dès que Platform envoie la confirmation que la demande de suppression a été reçue. Le profil construit à partir de ce graphique d’identité reste, mais ne sera pas mis à jour lorsque de nouvelles données seront ingérées, car les associations d’identités sont désormais supprimées. Les données associées au profil restent également dans le lac de données. |
 | `identity` et `ProfileService` | L’identité fournie est supprimée dès que Platform envoie la confirmation que la demande de suppression a été reçue. Les données associées au profil restent dans le lac de données. |
-| `identity` et `aepDataLake` | L’identité fournie est supprimée dès que Platform envoie la confirmation que la demande de suppression a été reçue. Le profil construit à partir de ce graphique d’identités reste, mais ne sera pas mis à jour lorsque de nouvelles données seront ingérées, car les associations d’identités sont désormais supprimées.<br><br>Lorsque le produit de lac de données répond que la demande a été reçue et qu’il est en cours de traitement, les données associées au profil sont supprimées de manière réversible et ne sont donc accessibles par aucun service [!DNL Platform]. Une fois la tâche terminée, les données sont complètement supprimées du lac de données. |
-| `identity`, `ProfileService` et `aepDataLake` | L’identité fournie est supprimée dès que Platform envoie la confirmation que la demande de suppression a été reçue.<br><br>Lorsque le produit de lac de données répond que la demande a été reçue et qu’il est en cours de traitement, les données associées au profil sont supprimées de manière réversible et ne sont donc accessibles par aucun service [!DNL Platform]. Une fois la tâche terminée, les données sont complètement supprimées du lac de données. |
+| `identity` et `aepDataLake` | L’identité fournie est supprimée dès que Platform envoie la confirmation que la demande de suppression a été reçue. Le profil construit à partir de ce graphique d’identité reste, mais ne sera pas mis à jour lorsque de nouvelles données seront ingérées, car les associations d’identités sont désormais supprimées.<br><br>Lorsque le produit de lac de données répond que la demande a été reçue et est en cours de traitement, les données associées au profil sont supprimées de manière réversible et ne sont donc accessibles par aucun service de [!DNL Platform]. Une fois la tâche terminée, les données sont complètement supprimées du lac de données. |
+| `identity`, `ProfileService` et `aepDataLake` | L’identité fournie est supprimée dès que Platform envoie la confirmation que la demande de suppression a été reçue.<br><br>Lorsque le produit de lac de données répond que la demande a été reçue et est en cours de traitement, les données associées au profil sont supprimées de manière réversible et ne sont donc accessibles par aucun service de [!DNL Platform]. Une fois la tâche terminée, les données sont complètement supprimées du lac de données. |
 
-Reportez-vous à la [[!DNL Privacy Service] documentation](../privacy-service/home.md#monitor) pour plus d’informations sur les états des tâches de suivi.
+Reportez-vous à la [[!DNL Privacy Service] documentation](../privacy-service/home.md#monitor) pour plus d’informations sur le suivi des statuts des tâches.
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez découvert les concepts importants liés au traitement des demandes d’accès à des informations personnelles dans [!DNL Identity Service]. Pour plus d&#39;informations sur le traitement des demandes d&#39;accès à des informations personnelles pour d&#39;autres applications [!DNL Experience Cloud], consultez le document sur [[!DNL Privacy Service] et [!DNL Experience Cloud] applications](../privacy-service/experience-cloud-apps.md).
+En lisant ce document, vous avez découvert les concepts importants liés au traitement des demandes d’accès à des informations personnelles dans [!DNL Identity Service]. Pour plus d’informations sur le traitement des demandes d’accès à des informations personnelles pour d’autres applications [!DNL Experience Cloud], consultez le document sur les [[!DNL Privacy Service] et [!DNL Experience Cloud] applications](../privacy-service/experience-cloud-apps.md).
