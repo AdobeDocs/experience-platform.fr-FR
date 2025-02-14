@@ -2,9 +2,9 @@
 keywords: Experience Platform;accueil;rubriques populaires;api;API;XDM;système XDM;modèle de données d’expérience;modèle de données;interface utilisateur;espace de travail;schéma;schémas;
 solution: Experience Platform
 title: Création et modification de schémas dans l’interface utilisateur
-description: Découvrez les principes de base de la création et de la modification de schémas dans l’interface utilisateur de l’Experience Platform.
+description: Découvrez les bases de la création et de la modification de schémas dans l’interface utilisateur d’Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 24b26e256fb346ccd1a03984f3e0d199c640159c
+source-git-commit: 9691ce1ca560acce7a9512df7eb92e61962bc467
 workflow-type: tm+mt
 source-wordcount: '4072'
 ht-degree: 3%
@@ -159,7 +159,7 @@ La [!DNL Schema Editor] réapparaît avec les champs fournis par le groupe de ch
 
 >[!NOTE]
 >
-Dans l’éditeur de schémas, les classes et les groupes de champs standard (générés par l’Adobe) sont indiqués par l’icône de cadenas (icône de cadenas ![A).](/help/images/icons/lock-closed.png). Le cadenas s’affiche dans le rail de gauche à côté du nom de la classe ou du groupe de champs, ainsi qu’à côté de tout champ du diagramme de schéma qui fait partie d’une ressource générée par le système.
+Dans l’éditeur de schémas, les classes et les groupes de champs standard (générés par Adobe) sont indiqués par l’icône de cadenas ![icône de cadenas A.](/help/images/icons/lock-closed.png). Le cadenas s’affiche dans le rail de gauche à côté du nom de la classe ou du groupe de champs, ainsi qu’à côté de tout champ du diagramme de schéma qui fait partie d’une ressource générée par le système.
 >
 ![Éditeur de schémas avec l’icône de cadenas mise en surbrillance](../../images/ui/explore/schema-editor-padlock-icon.png)
 
