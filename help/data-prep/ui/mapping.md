@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; mapper csv ; mapper le fichier csv ; mapper le fichier csv à xdm ; mapper csv à xdm ; guide de lʼinterface utilisateur ; mappeur ; mappage ; data prep ; préparation des données ; préparer des données ;
 title: Guide de l’interface utilisateur de la préparation des données
-description: Ce document fournit des instructions sur la manière d’utiliser les fonctions de préparation des données dans l’interface utilisateur de Platform pour mapper des fichiers CSV à un schéma XDM.
+description: Découvrez comment utiliser les fonctions de préparation de données dans l’interface utilisateur d’Experience Platform pour mapper des fichiers CSV à un schéma XDM.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 06aa84aaccf3aeb45bfe19f8741b6bca96258d89
 workflow-type: tm+mt
-source-wordcount: '1847'
-ht-degree: 90%
+source-wordcount: '1471'
+ht-degree: 36%
 
 ---
 
 # Guide de l’interface utilisateur de la préparation des données
 
-Ce document fournit des instructions sur l’utilisation des fonctions de préparation des données dans l’interface utilisateur d’Adobe Experience Platform pour mapper des fichiers CSV à un schéma XDM.
+Lisez ce guide pour savoir comment utiliser les fonctions de mappage [préparation des données](../home.md) dans l’interface utilisateur de Adobe Experience Platform pour mapper des fichiers CSV à un schéma [modèle de données d’expérience (XDM)](../../xdm/home.md).
 
 ## Prise en main
 
@@ -25,63 +25,22 @@ Ce tutoriel nécessite une connaissance pratique des composants Platform suivant
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 * [Sources](../../sources/home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
 
-## Détails du flux de données
+## Accès à l’interface de mappage dans l’interface utilisateur
 
->[!TIP]
->
->Vous pouvez accéder aux détails du flux de données en sélectionnant n’importe quelle source dans le catalogue des sources. Pour plus d’informations, consultez la [présentation des sources](../../sources/home.md).
+Vous pouvez accéder à l’interface de mappage dans l’interface utilisateur par le biais de deux chemins différents.
 
-Avant de pouvoir mapper vos données CSV à un schéma XDM, vous devez d’abord établir les détails de votre flux de données.
+1. Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Workflows]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Mapper CSV à un schéma XDM]**. Indiquez ensuite les détails de votre flux de données et sélectionnez les données à ingérer. Lorsque vous avez terminé, vous accédez à l’interface de mappage dans laquelle vous pouvez configurer le mappage entre vos données source et un schéma XDM.
+2. Vous pouvez également accéder à l’interface de mappage via l’espace de travail des sources.
 
-La page [!UICONTROL Détails du flux de données] vous permet de choisir si vous souhaitez ingérer vos données CSV dans un jeu de données cible existant ou un nouveau jeu de données cible. Un jeu de données existant est fourni avec un schéma cible préconfiguré pour mapper vos données, tandis qu’un nouveau jeu de données nécessite que vous sélectionniez un schéma existant, ou que vous créiez un nouveau schéma pour mapper vos données.
+## Mappage de fichiers CSV dans un schéma XDM
 
-### Utiliser un jeu de données cible existant
+Utilisez l’interface de mappage et l’ensemble d’outils complet qu’elle fournit pour mapper les champs de données de votre schéma source à leurs champs XDM cibles appropriés dans le schéma cible.
 
-Pour ingérer vos données CSV dans un jeu de données existant, sélectionnez **[!UICONTROL Jeu de données existant]**. Vous pouvez soit récupérer un jeu de données existant à l’aide de l’option de [!UICONTROL Recherche avancée], soit en faisant défiler la liste des jeux de données existants dans le menu déroulant.
-
-Une fois un jeu de données sélectionné, donnez un nom à votre flux de données et une description facultative.
-
-Au cours de ce processus, vous pouvez également activer les [!UICONTROL diagnostics d’erreur] et l’[!UICONTROL ingestion partielle]. Le [!UICONTROL diagnostic d’erreur] permet de générer un message d’erreur détaillé pour tout enregistrement erroné survenant dans votre flux de données, tandis que l’[!UICONTROL ingestion partielle] vous permet d’ingérer des données contenant des erreurs, jusqu’à un certain seuil que vous définissez manuellement. Pour plus d’informations, consultez la [présentation de l’ingestion par lots partiels](../../ingestion/batch-ingestion/partial.md).
-
-![existing-dataset](../images/ui/mapping/existing-dataset.png)
-
-### Utiliser un nouveau jeu de données cible
-
-Pour ingérer vos données CSV dans un nouveau jeu de données, sélectionnez **[!UICONTROL Nouveau jeu de données]** puis fournissez un nom de jeu de données de sortie et une description facultative. Sélectionnez ensuite un schéma à mapper à l’aide de l’option [!UICONTROL Recherche avancée] ou en faisant défiler la liste des schémas existants dans le menu déroulant.
-
-Une fois le schéma sélectionné, donnez un nom à votre flux de données et une description facultative, puis appliquez les [!UICONTROL diagnostics d’erreur] et les paramètres d’[!UICONTROL ingestion partielle] que vous souhaitez pour votre flux de données. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
-
-![new-dataset](../images/ui/mapping/new-dataset.png)
-
-## Sélectionner les données
-
-L’étape [!UICONTROL Sélectionner les données] apparaît, vous offrant une interface pour charger vos fichiers locaux et prévisualiser leur structure et leur contenu. Sélectionnez **[!UICONTROL Choisir les fichiers]** pour charger un fichier CSV à partir de votre système local. Vous pouvez également faire glisser et déposer le fichier CSV que vous souhaitez charger dans le panneau [!UICONTROL Glisser-déposer des fichiers].
-
->[!TIP]
->
->Seuls les fichiers CSV sont actuellement pris en charge par le chargement de fichiers locaux. La taille maximale de chaque fichier est de 1 Go.
-
-![choose-files](../images/ui/mapping/choose-files.png)
-
-Une fois votre fichier chargé, l’interface de prévisualisation se met à jour pour afficher le contenu et la structure du fichier.
-
-![preview-sample-data](../images/ui/mapping/preview-sample-data.png)
-
-En fonction de votre fichier, vous pouvez sélectionner un délimiteur de colonne tel que des tabulations, des virgules, des barres verticales ou un délimiteur de colonne personnalisé pour vos données source. Sélectionnez la flèche déroulante **[!UICONTROL Délimiteur]**, puis sélectionnez le délimiteur approprié dans le menu.
-
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
-
-![délimiteur](../images/ui/mapping/delimiter.png)
-
-## Mappage
-
-L’interface de **[!UICONTROL mappage]** vous fournit un outil complet pour mapper les champs source de votre schéma source à leurs champs XDM cibles appropriés dans le schéma cible.
-
-![map-csv-to-xdm](../images/ui/mapping/map-csv-to-xdm.png)
+![Interface de mappage dans l’interface utilisateur d’Experience Platform.](../images/ui/mapping/base_mapping.png)
 
 ### Comprendre l’interface de mappage {#mapping-interface}
 
-L’interface de mappage comprend un tableau de bord qui fournit des informations sur l’intégrité de vos champs de mappage dans le contexte du workflow d’ingestion. Le tableau de bord affiche les détails suivants concernant vos champs de mappage :
+Reportez-vous au tableau de bord en haut de l’interface pour plus d’informations sur l’intégrité de vos champs de mappage dans le contexte du workflow d’ingestion. Le tableau de bord affiche les détails suivants concernant vos champs de mappage :
 
 | Propriété | Description |
 | --- | --- |
@@ -90,38 +49,24 @@ L’interface de mappage comprend un tableau de bord qui fournit des information
 | [!UICONTROL Champs d’identité] | Affiche le nombre total de champs de mappage définis comme identité. Ces champs de mappage sont représentés par une icône d’empreinte. |
 | [!UICONTROL Erreurs] | Affiche le nombre de champs de mappage comportant des erreurs. |
 
-![panneau-supérieur](../images/ui/mapping/top-panel.png)
+{style="table-layout:auto"}
 
-L’interface de mappage propose également un panneau d’options parmi lesquelles vous pouvez choisir afin de mieux interagir ou de filtrer les champs de mappage.
+Vous pouvez ensuite utiliser les options répertoriées dans l’en-tête pour mieux interagir ou filtrer les champs de mappage.
 
-![second-panel](../images/ui/mapping/second-panel.png)
-
-Pour rechercher un jeu de mappages particulier, sélectionnez **[!UICONTROL Rechercher les champs sources]** et saisissez le nom des données sources à isoler.
-
-![recherche](../images/ui/mapping/search.png)
-
-Sélectionnez **[!UICONTROL Tous les champs sources]** pour afficher un menu déroulant des options de filtrage afin de mieux préciser votre vue de l’interface de mappage.
-
-Les options de filtrage sont les suivantes :
-
-| Champs sources | Description |
+| Option | Description |
 | --- | --- |
-| [!UICONTROL Tous les champs sources] | Cette option affiche tous les champs sources de votre schéma source. Cette option est affichée par défaut. |
-| [!UICONTROL Champs obligatoires] | Cette option filtre le schéma source pour n’afficher que les champs nécessaires à la réalisation du mappage. |
-| [!UICONTROL Champs d’identité] | Cette option filtre le schéma source pour n’afficher que les champs marqués pour l’identité. |
-| [!UICONTROL Champs mappés] | Cette option filtre le schéma source pour n’afficher que les champs déjà mappés. |
-| [!UICONTROL Champs non mappés] | Cette option filtre le schéma source pour n’afficher que les champs qui doivent encore être mappés. |
-| [!UICONTROL Champs avec recommandation] | Cette option filtre le schéma source pour n’afficher que les champs contenant des recommandations de mappage. |
+| [!UICONTROL Rechercher les champs sources] | Utilisez la barre de recherche pour accéder à un champ source spécifique. |
+| [!UICONTROL Tous les champs] | Sélectionnez **[!UICONTROL Tous les champs]** pour afficher un menu déroulant des options permettant de filtrer vos mappages. Les options de filtrage disponibles sont les suivantes :<ul><li>**[!UICONTROL Champs obligatoires]** : filtre l’interface pour afficher uniquement les champs requis pour terminer le workflow.</li><li> **[!UICONTROL Champs d’identité]** : filtre l’interface pour afficher uniquement les champs marqués comme identités.</li><li>**[!UICONTROL Champs mappés]** : filtre l’interface pour afficher uniquement les champs déjà mappés.</li><li>**[!UICONTROL Champs non mappés]** : filtre l’interface pour afficher uniquement les champs qui doivent encore être mappés.</li><li>**[!UICONTROL Champs comportant des erreurs]** : filtre l’interface pour n’afficher que les champs comportant des erreurs.</li></ul> |
+| [!UICONTROL Nouveau type de champ ] | Sélectionnez **[!UICONTROL Nouveau type de champ]** pour ajouter un nouveau champ ou un champ calculé. Pour plus d’informations, consultez la section sur [l’ajout d’un nouveau type de champ](#add-a-new-field-type). |
+| [!UICONTROL Importer des mappages] | Sélectionnez **[!UICONTROL Importer des mappages]** pour importer des mappages à partir d’un fichier ou d’un flux de données existant. Pour plus d’informations, consultez la section sur l’[importation de mappages](#import-mapping). |
+| [!UICONTROL  Valider ] | Sélectionnez **[!UICONTROL Valider]** pour vérifier les erreurs dans vos mappages. |
+| [!UICONTROL Télécharger le modèle] | Sélectionnez **[!UICONTROL Télécharger le modèle]** pour exporter et télécharger un fichier CSV de vos mappages. |
+| [!UICONTROL Prévisualiser les données] | Sélectionnez **[!UICONTROL Prévisualiser les données]** pour utiliser le panneau de prévisualisation et inspecter la structure et le contenu de votre jeu de données source. |
+| [!UICONTROL Tout effacer] | Sélectionnez **[!UICONTROL Effacer tout]** pour supprimer tous les mappages dans l’interface. |
 
-Sélectionnez **[!UICONTROL Champs comportant des erreurs]** pour afficher tous les champs de mappage contenant des erreurs.
+{style="table-layout:auto"}
 
-![filtrer](../images/ui/mapping/filter.png)
-
-Une vue isolée des champs de mappage comportant des erreurs s’affiche, ce qui vous permet de corriger les erreurs par le biais de recommandations de mappage intelligent ou de l’arborescence de mappage manuel.
-
-![fields-with-errors](../images/ui/mapping/fields-with-errors.png)
-
-### Ajout d’un nouveau type de champ
+### Ajout d’un nouveau type de champ {#add-a-new-field-type}
 
 Vous pouvez ajouter un nouveau champ de mappage ou un champ calculé en sélectionnant **[!UICONTROL Nouveau type de champ]**.
 
@@ -129,23 +74,19 @@ Vous pouvez ajouter un nouveau champ de mappage ou un champ calculé en sélecti
 
 Pour ajouter un nouveau champ de mappage, sélectionnez **[!UICONTROL Nouveau type de champ]**, puis **[!UICONTROL Ajouter un nouveau champ]** dans le menu déroulant qui s’affiche.
 
-![add-new-field](../images/ui/mapping/add-new-field.png)
+![Interface de mappage avec le bouton « Ajouter un nouveau champ » sélectionné.](../images/ui/mapping/add_new_field.png)
 
 Sélectionnez ensuite le champ source que vous souhaitez ajouter dans l’arborescence du schéma source qui s’affiche, puis sélectionnez **[!UICONTROL Sélectionner]**.
 
-![select-new-field](../images/ui/mapping/select-new-field.png)
+![Schéma source avec « pays » sélectionné comme nouveau champ supplémentaire.](../images/ui/mapping/source_field.png)
 
 L’interface de mappage est mise à jour avec le champ source que vous avez sélectionné et un champ cible vide. Sélectionnez **[!UICONTROL Mapper le champ cible]** pour commencer à mapper le nouveau champ source à son champ XDM cible approprié.
 
-![map-target-field](../images/ui/mapping/map-target-field.png)
+![Interface de mappage avec un nouveau champ source non mappé.](../images/ui/mapping/new_field_added.png)
 
 Une arborescence de schéma cible interactive s’affiche, vous permettant de parcourir manuellement le schéma cible et de trouver le champ XDM cible approprié pour votre champ source.
 
-![manual-mapping](../images/ui/mapping/manual-mapping.png)
-
-Lorsque vous avez terminé, sélectionnez l’icône de schéma pour fermer l’interface du schéma cible.
-
-![schema-tree](../images/ui/mapping/schema-tree.png)
+![Arborescence interactive du schéma cible avec un nouveau champ cible sélectionné.](../images/ui/mapping/add_target_field.png)
 
 #### Champs calculés {#calculated-fields}
 
@@ -153,9 +94,9 @@ Les champs calculés permettent de créer des valeurs en fonction des attributs 
 
 Pour créer un champ calculé, sélectionnez **[!UICONTROL Nouveau type de champ]**, puis **[!UICONTROL Ajouter un champ calculé]**.
 
-![add-calculated-field](../images/ui/mapping/add-calculated-field.png)
+![Interface de mappage avec le bouton « Ajouter un champ calculé » sélectionné.](../images/ui/mapping/new_calculated_field.png)
 
-Le panneau **[!UICONTROL Créer un champ calculé]** sʼaffiche. La boîte de dialogue de gauche contient les champs, fonctions et opérateurs pris en charge dans les champs calculés. Sélectionnez lʼun des onglets pour commencer à ajouter des fonctions, des champs ou des opérateurs à lʼéditeur dʼexpression.
+La fenêtre **[!UICONTROL Créer un champ calculé]** s’affiche. Utilisez l’interface pour saisir vos champs calculés et reportez-vous à la boîte de dialogue à gauche pour les champs, fonctions et opérateurs pris en charge.
 
 | Tabulation | Description |
 | --- | ----------- |
@@ -163,83 +104,59 @@ Le panneau **[!UICONTROL Créer un champ calculé]** sʼaffiche. La boîte de di
 | [!UICONTROL Champ] | Lʼonglet Champs répertorie les champs et attributs disponibles dans le schéma source. |
 | [!UICONTROL Opérateur] | Lʼonglet Opérateurs répertorie les opérateurs disponibles pour la transformation des données. |
 
-![Onglets](../images/ui/mapping/tabs.png)
+![Interface des champs calculés](../images/ui/mapping/calculated_field.png)
 
 Vous pouvez ajouter manuellement des champs, des fonctions et des opérateurs à lʼaide de lʼéditeur dʼexpression situé au centre. Sélectionnez lʼéditeur pour commencer à créer une expression. Une fois que vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]** pour continuer.
 
-![create-calculated-field](../images/ui/mapping/create-calculated-field.png)
+### Importer le mapping {#import-mapping}
 
-### Importer le mapping {#import}
+Vous pouvez réduire le temps de configuration manuelle de votre processus d’ingestion de données et limiter les erreurs à l’aide de la fonctionnalité de mappage d’importation de la préparation des données. Vous pouvez importer des mappages à partir d’un flux existant ou d’un fichier exporté.
 
-Vous pouvez réutiliser le mappage d’un flux de données existant afin de réduire la durée de configuration manuelle de votre ingestion de données et de limiter les erreurs. Sélectionnez **[!UICONTROL Import mapping]** pour réutiliser un mapping existant.
+>[!BEGINTABS]
 
-![import-mapping](../images/ui/mapping/import-mapping.png)
+>[!TAB Importer le mappage à partir du flux]
 
-La fenêtre [!UICONTROL Mappage d’importation] s’affiche, vous fournissant une liste de flux de données parmi lesquels choisir.
+Si vous disposez de plusieurs flux de données basés sur des fichiers sources et des schémas cibles similaires, vous pouvez importer des mappages existants et les réutiliser pour de nouveaux flux de données.
 
-Sélectionnez l’icône d’aperçu pour prévisualiser le mappage du flux de données que vous avez sélectionné.
+Pour importer le mappage d’un flux de données existant, sélectionnez **[!UICONTROL Importer des mappages]** puis **[!UICONTROL Importer le mappage à partir d’un flux]**.
 
-![list-mapping](../images/ui/mapping/list-mapping.png)
+![Interface de mappage avec « importer le mappage » et « importer le mappage à partir du flux » sélectionnés.](../images/ui/mapping/import_from_flow.png)
 
-La fenêtre d’aperçu vous permet d’examiner le mappage existant avant de l’importer dans votre flux de données. Une fois que vous avez vérifié le mappage, vous pouvez sélectionner **[!UICONTROL Précédent]** pour revenir à la liste des flux de données et inspecter un autre ensemble de mappages, ou vous pouvez sélectionner **[!UICONTROL Sélectionner]** pour continuer.
+Ensuite, utilisez la fenêtre pop-up pour localiser le flux de données dont vous souhaitez importer le mappage. Au cours de cette étape, vous pouvez également utiliser la fonction de recherche pour isoler un flux de données spécifique et récupérer ses mappages. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Sélectionner]**.
 
-![preview-mapping](../images/ui/mapping/preview-mapping.png)
+![Liste des flux de données existants dont les mappages correspondants peuvent être importés.](../images/ui/mapping/import_flow_window.png)
 
-Vous pouvez également sélectionner le mappage à importer dans la fenêtre de liste des flux de données. Sélectionnez le flux de données qui contient le mappage à importer, puis sélectionnez **[!UICONTROL Sélectionner]** pour continuer.
+>[!TAB Importer le mappage depuis un fichier]
 
-![select-mapping](../images/ui/mapping/select-mapping.png)
+Dans certains cas, vous devrez peut-être mettre en œuvre un grand nombre de mappages pour vos données. Vous pouvez le faire manuellement avec l’interface de mappage, mais vous pouvez également exporter votre modèle de mappage et configurer vos mappages dans une feuille de calcul hors ligne pour gagner du temps et éviter les délais d’expiration des utilisateurs sur Experience Platform.
 
-L’interface se met à jour avec le mappage que vous avez importé.
+Pour importer le mappage d’un fichier exporté, sélectionnez **[!UICONTROL Importer les mappages]** puis **[!UICONTROL Importer le mappage à partir d’un fichier]**.
 
->[!NOTE]
->
->Tous les jeux de mappages existants que vous établissez ou que vous recommandez de mapper sont remplacés par le mappage que vous avez importé à partir d’un flux de données existant.
+![L’interface de mappage avec « importer le mappage » et « importer le mappage à partir d’un fichier » sélectionnée.](../images/ui/mapping/import_from_file.png)
 
-![mapping-import](../images/ui/mapping/mapping-imported.png)
+Utilisez ensuite la fenêtre [!UICONTROL Télécharger le modèle] pour télécharger une copie CSV de vos mappages. Vous pouvez ensuite configurer vos mappages localement sur votre appareil, à l’aide de n’importe quel logiciel prenant en charge la modification des types de fichiers CSV. Au cours de cette étape, vous devez vous assurer que vous utilisez uniquement les champs fournis dans votre fichier source et votre schéma cible.
 
-Sélectionnez **[!UICONTROL Prévisualiser des données]** pour afficher les résultats de mappage de 100 lignes maximum de données d’exemple du jeu de données sélectionné.
+![Fenêtre de modèle de chargement qui affiche des options permettant de télécharger et de charger un fichier csv exporté des mappages.](../images/ui/mapping/upload_template.png)
 
-![preview-data](../images/ui/mapping/preview-data.png)
++++Sélectionner pour afficher un exemple de fichier de mappage exporté
 
-Lors de la prévisualisation, la colonne d’identité est considérée comme le premier champ, car il s’agit des informations clés nécessaires à la validation des résultats du mappage. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Fermer]**.
+![Fichier csv téléchargé du modèle de mappage.](../images/ui/mapping/mapping_csv_file.png)
 
-![prévisualisation-écran](../images/ui/mapping/preview-screen.png)
++++
 
-Pour supprimer tous les champs de mappage, sélectionnez **[!UICONTROL Effacer tous les mappages]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Télécharger le fichier]** et sélectionnez le fichier csv mis à jour de vos mappages. Patientez quelques instants le temps que le système traite, puis sélectionnez **[!UICONTROL Terminé]**.
 
-![effacer-tous](../images/ui/mapping/clear-all.png)
+![La fenêtre de chargement du modèle avec un nouveau fichier chargé.](../images/ui/mapping/upload_successful.png)
 
-### Utilisation de lʼinterface de mappage
+>[!ENDTABS]
 
-Platform fournit automatiquement des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation ou corriger les champs de mappage dupliqués afin d’effacer les erreurs.
+Une fois vos mappages terminés, vous pouvez sélectionner **[!UICONTROL Terminer]** et passer à l’étape suivante pour terminer votre flux de données.
 
-![mapping-interface](../images/ui/mapping/mapping-interface.png)
-
-Sélectionnez l’icône en forme d’ampoule dans le champ cible que vous souhaitez ajuster.
-
-![mapping-recc](../images/ui/mapping/mapping-recc.png)
-
-Le panneau contextuel des [!UICONTROL recommandations de mappage] apparaît, affichant une liste des champs cibles recommandés qui peuvent être mappés à un champ source particulier. Par défaut, la première recommandation est automatiquement appliquée.
-
-Parfois, plusieurs recommandations sont disponibles pour le schéma source. Dans ce cas, la vignette de mappage affiche la recommandation dominante, suivie d’une icône contenant le nombre de recommandations supplémentaires disponibles. Si vous sélectionnez l’icône en forme d’ampoule, une liste des recommandations supplémentaires s’affiche. Vous pouvez choisir l’une des autres recommandations en cochant la case en regard de la recommandation que vous souhaitez mapper à la place.
-
-À partir de là, vous pouvez modifier le champ cible sélectionné pour corriger une erreur ou répondre à votre cas d’utilisation.
-
-Vous pouvez également sélectionner **[!UICONTROL Sélectionner manuellement]** pour utiliser manuellement l’arborescence interactive de mappage de schéma cible.
-
-![recc-panel](../images/ui/mapping/recc-panel.png)
-
-L’interface de mappage de schéma cible apparaît dans la même vue que vos champs de mappage, ce qui vous permet de modifier les paires de mappage dans le même écran. Sélectionnez le champ cible qui correspond à votre cas d’utilisation ou qui corrige vos erreurs.
-
-![select-target-field](../images/ui/mapping/select-target-field.png)
-
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Terminer]** pour continuer.
-
-![terminer](../images/ui/mapping/finish.png)
+![L’interface de mappage avec un ensemble complet de mappages.](../images/ui/mapping/completed_mappings.png)
 
 ## Étapes suivantes
 
-Grâce à la lecture de ce document, vous avez réussi à mapper un fichier CSV à un schéma XDM cible en utilisant l’interface de mappage dans l’interface utilisateur de Platform. Pour plus d’informations, consultez les documents suivants :
+Vous pouvez désormais mapper un fichier CSV à un schéma XDM cible à l’aide de l’interface de mappage dans l’interface utilisateur d’Experience Platform. Pour plus d’informations, consultez les documents suivants :
 
 * [Présentation de la préparation des données](../home.md)
 * [Présentation des sources](../../sources/home.md)
