@@ -2,9 +2,9 @@
 title: Assistant AI dans Adobe Experience Platform
 description: Découvrez comment utiliser l’assistant d’IA pour parcourir et comprendre les concepts d’Experience Platform et de Real-Time Customer Data Platform, ainsi que des informations d’utilisation sur vos objets.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 0ee9135b2b303f4abcc4d5e5c7345e2bff9332f3
+source-git-commit: 4fd40d66ecc2fe7604e157fcd230883c6c48d761
 workflow-type: tm+mt
-source-wordcount: '1759'
+source-wordcount: '1734'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 Lisez ce guide pour savoir comment utiliser l’assistant AI dans l’interface utilisateur de Adobe Experience Platform.
 
-## Accéder à l’assistant AI dans l’interface utilisateur de l’Experience Platform
+## Accéder à l’assistant AI dans l’interface utilisateur d’Experience Platform
 
-Pour lancer l’assistant AI, sélectionnez l’icône **[!UICONTROL Assistant AI]** dans l’en-tête supérieur de l’interface utilisateur de l’Experience Platform.
+Pour lancer l’assistant AI, sélectionnez l’icône **[!UICONTROL Assistant AI]** dans l’en-tête supérieur de l’interface utilisateur d’Experience Platform.
 
-![Page d’accueil de l’Experience Platform, avec l’icône Assistant AI sélectionnée et l’interface de l’Assistant AI ouverte.](./images/ai-assistant-full-icon.png)
+![Page d’accueil d’Experience Platform, avec l’icône Assistant AI sélectionnée et l’interface de l’Assistant AI ouverte.](./images/ai-assistant-full-icon.png)
 
 L’interface de l’assistant d’IA s’affiche et vous fournit immédiatement des informations pour commencer. Vous pouvez utiliser les options fournies sous [!UICONTROL Idées pour commencer] afin de répondre à des questions et à des commandes telles que :
 
@@ -29,17 +29,17 @@ L’interface de l’assistant d’IA s’affiche et vous fournit immédiatement
 
 >[!NOTE]
 >
->Le workflow ci-après est un exemple qui utilise le processus de création de schéma d’événement d’expérience pour illustrer comment vous pouvez utiliser l’assistant AI lors de l’utilisation de l’interface utilisateur de l’Experience Platform.
+>Le workflow suivant est un exemple qui utilise le processus de création de schéma d’événement d’expérience pour illustrer comment vous pouvez utiliser l’assistant AI lors de l’utilisation de l’interface utilisateur d’Experience Platform.
 
 Supposons que vous créiez un **schéma d’échange d’appareils sous forme d’événement**. Lors du processus de création du schéma d’événement d’expérience, vous tombez sur le champ `eventType` . « À ce stade, vous avez la possibilité de quitter votre workflow et de vous reporter aux [principes de base d’une composition de schémas](../xdm/schema/composition.md) de la documentation, ou vous pouvez utiliser l’assistant AI pour récupérer les réponses à vos questions et trouver des ressources supplémentaires via les liens de documentation recommandés par l’assistant AI. »
 
 Pour commencer, entrez votre question dans la zone de texte fournie à cet effet. Dans l’exemple ci-dessous, l’assistant AI reçoit la question « **Quel est le champ eventType dans un schéma ExperienceEvent ?** »
 
-![Assistant IA pour Experience Platform avec la question suivante préparée pour l’interrogation : « Quel est le champ eventType dans un schéma ExperienceEvent ?](./images/question.png)
+![Assistant AI pour Experience Platform avec la question suivante préparée pour l’interrogation : « Quel est le champ eventType dans un schéma ExperienceEvent ?](./images/question.png)
 
 L’assistant AI interroge ensuite sa base de connaissances et calcule une réponse. Après quelques instants, l’assistant AI renvoie une réponse et des suggestions associées que vous pouvez utiliser comme invites de suivi.
 
-![Assistant IA pour Experience Platform avec une réponse à la requête précédente.](./images/answer.png)
+![Assistant AI pour Experience Platform avec une réponse à la requête précédente.](./images/answer.png)
 
 Après avoir reçu une réponse de l’assistant d’IA, vous pouvez choisir parmi de nombreuses options pour décider comment vous souhaitez procéder.
 
@@ -87,7 +87,7 @@ Dans l’exemple ci-dessous, l’assistant AI est invité à répondre à la req
 
 ![Une question sur les informations opérationnelles.](./images/op-insights-question.png)
 
-L’assistant AI répond ensuite avec un tableau répertoriant vos flux de données et leurs identifiants correspondants. Pour afficher l’ensemble du tableau de données, sélectionnez l’icône de développement en haut à droite.
+L’assistant AI répond ensuite avec un tableau répertoriant vos flux de données et leurs identifiants correspondants. Sélectionnez l’icône de téléchargement (![icône de téléchargement](/help/images/icons/download.png)) pour télécharger le tableau au format CSV. Pour afficher le tableau entier, sélectionnez l’icône Développer (![icône Développer](/help/images/icons/expand.png)).
 
 ![Réponse d’informations opérationnelles](./images/op-insights-answer.png)
 
@@ -100,10 +100,6 @@ Lorsqu’une question sur les informations opérationnelles lui est posée, l’
 ![Assistant AI fournissant une explication sur la manière dont il a calculé sa réponse.](./images/answer-explained.png)
 
 Vous pouvez également fournir des filtres et des modifications à vos questions, et demander à l’assistant AI de rendre ses résultats en fonction des filtres que vous incluez. Par exemple, vous pouvez demander à l’assistant AI de vous montrer une tendance du nombre de définitions de segment dans l’ordre de leur date de création, de supprimer des définitions de segment avec zéro profil total et d’utiliser des noms de mois au lieu de nombres entiers lors de l’affichage des données.
-
-**Remarque :** les réponses des informations opérationnelles sont actuellement en version bêta. Sélectionnez l’icône d’info-bulle dans l’interface utilisateur de l’assistant AI pour afficher l’avis Beta et un lien vers la documentation.
-
-Icône d’info-bulle de l’assistant ![AI sélectionnée.](./images/op-insights-beta-note.png)
 
 +++
 

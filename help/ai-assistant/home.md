@@ -2,9 +2,9 @@
 title: Présentation de l’assistant AI dans Adobe Experience Platform
 description: Découvrez l’assistant IA, ses nuances, ses cas d’utilisation et comment l’utiliser pour accélérer votre workflow avec Adobe Experience Platform et Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
+source-git-commit: e90333d09585c8aa0ef176dcfc4717e86364fd54
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '927'
 ht-degree: 15%
 
 ---
@@ -49,13 +49,13 @@ Il existe deux catégories de questions à prendre en compte avant d’interroge
 
 ### Connaissances du produit {#product-knowledge}
 
-La connaissance des produits fait référence à des concepts et à des sujets reposant sur une documentation Experience League. Les questions relatives à la connaissance des produits peuvent être spécifiées de manière plus détaillée dans les sous-groupes suivants :
+La connaissance des produits fait référence aux concepts et aux sujets reposant sur la documentation d’Experience League. Les questions relatives à la connaissance des produits peuvent être spécifiées de manière plus détaillée dans les sous-groupes suivants :
 
 | Connaissances du produit | Exemples |
 | --- | --- |
 | Apprentissage par points | <ul><li>Quelle est la différence entre une identité et une clé primaire ou étrangère ?</li><li>Que sont les audiences semblables ?</li></ul> |
 | Ouvrir la découverte | <ul><li>Comment exporter ce jeu de données ?</li><li>Existe-t-il des schémas pour les clients du secteur de la santé ?</li></ul> |
-| Dépannage | <ul><li>Pourquoi ne puis-je pas activer un schéma détenu par l’Adobe pour le profil ?</li><li>Pourquoi ne puis-je pas supprimer un segment ?</li></ul> |
+| Dépannage | <ul><li>Pourquoi ne puis-je pas activer un schéma détenu par Adobe pour le profil ?</li><li>Pourquoi ne puis-je pas supprimer un segment ?</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -64,10 +64,6 @@ Regardez la vidéo suivante pour plus d’informations sur les connaissances du 
 >[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 ### Informations opérationnelles {#operational-insights}
-
->[!IMPORTANT]
->
->Les réponses des informations opérationnelles sont en version bêta. Toute personne ayant accès à l’autorisation **Afficher les informations opérationnelles** aura accès aux réponses des informations opérationnelles.
 
 Les informations opérationnelles se rapportent aux réponses que l’assistant AI génère sur vos objets de métadonnées (attributs, audiences, flux de données, jeux de données, destinations, parcours, schémas et sources), y compris les nombres, les recherches et l’impact de la parenté. Il n’examine aucune donnée du sandbox.
 
@@ -100,7 +96,7 @@ Regardez la vidéo suivante pour plus d’informations sur les informations opé
 
 Actuellement, la portée de l’assistant AI est la suivante :
 
-* [Connaissance des produits](./home.md#product-knowledge) : l’assistant AI peut répondre aux questions sur la connaissance des produits pour Experience Platform, Real-Time Customer Data Platform et Adobe Journey Optimizer. Vous pouvez également approfondir les rubriques de connaissance des produits pour Customer Journey Analytics, mais uniquement par le biais de l’interface utilisateur de Customer Journey Analytics.
+* [Connaissance des produits](./home.md#product-knowledge) : l’assistant AI peut répondre aux questions sur la connaissance des produits pour Experience Platform, Real-Time Customer Data Platform et Adobe Journey Optimizer. Vous pouvez également approfondir les rubriques de connaissance des produits Customer Journey Analytics, mais uniquement via l’interface utilisateur de Customer Journey Analytics.
 * [Informations opérationnelles ](./home.md#operational-insights) : vous pouvez poser des questions à l’assistant AI sur les informations opérationnelles relatives aux objets de données suivants : attributs, audiences, flux de données, jeux de données, destinations, parcours, schémas et sources.
 
 ## Étapes suivantes
