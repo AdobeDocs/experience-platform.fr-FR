@@ -1,23 +1,23 @@
 ---
-description: Découvrez comment surveiller les flux de données pour les destinations à l’aide de l’interface utilisateur de l’Experience Platform.
+description: Découvrez comment surveiller les flux de données pour les destinations à l’aide de l’interface utilisateur d’Experience Platform.
 solution: Experience Platform
 title: Surveillance des flux de données pour les destinations dans l’interface utilisateur
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: f10706fbbde9cef112460f5431af24d09b0e0460
+source-git-commit: b814becaed88ce23527dc58f7ec056c05a48379f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3637'
+ht-degree: 12%
 
 ---
 
 # Surveillance des flux de données pour les destinations dans l’interface utilisateur
 
-Utilisez les différentes destinations du catalogue d’Experience Platform pour activer vos données de Platform vers d’innombrables partenaires externes. Platform facilite le processus de suivi du flux de données vers les destinations en offrant de la transparence aux flux de données.
+Utilisez les différentes destinations du catalogue Experience Platform pour activer vos données de Platform vers d’innombrables partenaires externes. Platform facilite le processus de suivi du flux de données vers les destinations en offrant de la transparence aux flux de données.
 
 Le tableau de bord de surveillance vous fournit une représentation visuelle du parcours d’un flux de données, y compris la destination vers laquelle les données sont activées, le type de données que vous consultez, les données exportées par exécution de flux de données, etc.
 
-Ce tutoriel vous explique comment surveiller les flux de données directement dans l’espace de travail des destinations ou utiliser le tableau de bord de surveillance pour surveiller les flux de données vers vos destinations à l’aide de l’interface utilisateur de l’Experience Platform.
+Ce tutoriel vous explique comment surveiller les flux de données directement dans l’espace de travail des destinations ou utiliser le tableau de bord de surveillance pour surveiller les flux de données vers vos destinations à l’aide de l’interface utilisateur d’Experience Platform.
 
 ## Prise en main {#getting-started}
 
@@ -86,7 +86,7 @@ Une liste d’exécutions individuelles et de leurs mesures spécifiques s’aff
 
 Chaque exécution de flux de données affiche les détails suivants :
 
-- **[!UICONTROL Démarrage de l’exécution du flux de données]** : heure de démarrage de l’exécution du flux de données. Pour les exécutions de flux de données en continu, l’Experience Platform capture les mesures en fonction du début de l’exécution du flux de données, sous la forme de mesures horaires. Cela signifie que pour les exécutions de flux de données en continu, si une exécution de flux de données a démarré, par exemple à 22 h 30, la mesure affiche l’heure de début à 22 h dans l’interface utilisateur.
+- **[!UICONTROL Démarrage de l’exécution du flux de données]** : heure de démarrage de l’exécution du flux de données. Pour les exécutions de flux de données en continu, Experience Platform capture les mesures en fonction du début de l’exécution du flux de données, sous la forme de mesures horaires. Cela signifie que pour les exécutions de flux de données en continu, si une exécution de flux de données a démarré, par exemple à 22 h 30, la mesure affiche l’heure de début à 22 h dans l’interface utilisateur.
 - **[!UICONTROL Temps de traitement]** : temps nécessaire à l’exécution du flux de données.
    - Pour les exécutions **[!UICONTROL terminées]**, la mesure Temps de traitement affiche toujours une heure.
    - Pour les exécutions de flux de données qui sont toujours à l’état **[!UICONTROL traitement]**, la fenêtre permettant de capturer toutes les mesures reste ouverte pendant plus d’une heure, afin de traiter toutes les mesures qui correspondent à l’exécution du flux de données. Par exemple, une exécution de flux de données ayant démarré à 9 h 30 peut rester en état de traitement pendant une heure et trente minutes pour capturer et traiter toutes les mesures. Ensuite, une fois la fenêtre de traitement fermée et le statut de l’exécution du flux de données mis à jour sur **terminé**, le temps de traitement affiché est remplacé par une heure.
@@ -97,7 +97,7 @@ Chaque exécution de flux de données affiche les détails suivants :
 
   >[!IMPORTANT]
   >
-  > Depuis octobre 2024, Adobe propose une mise à jour améliorant la précision des rapports pour les destinations de streaming. Cette amélioration assure un meilleur alignement entre les rapports de l’Experience Platform et des plateformes de destination.
+  > Depuis octobre 2024, Adobe propose une mise à jour améliorant la précision des rapports pour les destinations de streaming. Cette amélioration assure un meilleur alignement entre les rapports Experience Platform et les plateformes de destination.
   >
   > Avant cette mise à jour, **[!UICONTROL Identités en échec]** incluait toutes les reprises d’activation. Après cette mise à jour, seule la dernière reprise d’activation est incluse dans le nombre total.
   > 
@@ -121,7 +121,12 @@ La page de détails affiche également une liste des identités ayant échoué e
 
 #### (Beta) Surveillance de l’exécution du flux de données au niveau de l’audience pour les destinations de diffusion en continu {#audience-level-dataflow-runs-for-streaming-destinations}
 
-Vous pouvez afficher des informations sur les identités activées, exclues ou en échec réparties au niveau de l’audience, pour chaque audience qui fait partie du flux de données. La surveillance au niveau de l’audience pour les destinations de diffusion en streaming est actuellement disponible pour la [[!DNL Google Customer Match + Display & Video 360] destination](/help/destinations/catalog/advertising/google-customer-match-dv360.md) uniquement.
+Vous pouvez afficher des informations sur les identités activées, exclues ou en échec réparties au niveau de l’audience, pour chaque audience qui fait partie du flux de données.
+
+La surveillance au niveau de l’audience pour les destinations de diffusion en streaming est actuellement disponible uniquement pour les destinations suivantes :
+
+- [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
+- [[!DNL Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ![Surveillance au niveau de l’audience pour les destinations de diffusion en streaming.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
