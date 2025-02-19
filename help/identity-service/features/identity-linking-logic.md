@@ -9,7 +9,7 @@ ht-degree: 3%
 
 ---
 
-# Logique de liaison d’Identity Service {#identity-service-linking-logic}
+# Logique de liaison d’Identity Service {#identity-service-linking-logic}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_simulatedgraph"
@@ -78,7 +78,7 @@ Identity Service reconnaît que CRMID:60013ABC existe déjà dans votre graphiqu
 
 ## Scénario client
 
-Vous êtes un ingénieur de données et vous ingérez le jeu de données CRM (enregistrement de profil) ci-dessous dans Experience Platform.
+Vous êtes ingénieur de données et vous ingérez le jeu de données CRM (enregistrement de profil) suivant dans Experience Platform.
 
 | CRMID** | Téléphone* | Adresse e-mail* | Prénom | Nom |
 | --- | --- | --- | --- | --- |

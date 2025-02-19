@@ -5,7 +5,7 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '1436'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte d’Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
+>Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
 
 Avec le service d’identités Adobe Experience Platform et le profil client en temps réel, il est facile de supposer que vos données sont parfaitement ingérées et que tous les profils fusionnés représentent une seule personne par le biais d’un identifiant de personne, tel qu’un CRMID. Cependant, il existe des scénarios possibles où certaines données pourraient essayer de fusionner plusieurs profils disparates en un seul profil (« réduction du graphique »). Pour éviter ces fusions indésirables, vous pouvez utiliser les configurations fournies par le biais des règles de liaison de graphiques d’identités et permettre une personnalisation précise de vos utilisateurs.
 
@@ -21,19 +21,19 @@ Avec le service d’identités Adobe Experience Platform et le profil client en 
 
 Les documents suivants sont essentiels à la compréhension des règles de liaison des graphiques d’identités.
 
-* [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
+* [Algorithme d’optimisation de l’identité](./identity-optimization-algorithm.md)
 * [Guide de mise en œuvre](./implementation-guide.md)
-* [Exemples de configurations de graphique](./example-configurations.md)
+* [Exemples de configurations de graphes](./example-configurations.md)
 * [Résolution des problèmes et FAQ](./troubleshooting.md)
-* [Priorité des espaces de noms](./namespace-priority.md)
+* [Priorité d’espace de noms](./namespace-priority.md)
 * [Interface utilisateur de simulation de graphique](./graph-simulation.md)
 * [Interface utilisateur des paramètres d’identité](./identity-settings-ui.md)
 
-## Scénarios de réduction du graphe {#graph-collapse-scenarios}
+## Scénarios de réduction de graphe {#graph-collapse-scenarios}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
->title="Scénarios de réduction du graphique"
+>title="Scénarios de réduction de graphe"
 >abstract="Il existe plusieurs raisons pour lesquelles les graphes peuvent être « réduits » ou représenter plusieurs entités de personne."
 
 Cette section présente des exemples de scénarios que vous pouvez prendre en compte lors de la configuration des règles de liaison de graphiques d’identités.
@@ -94,8 +94,8 @@ Grâce aux règles de liaison des graphiques d’identités, vous pouvez :
 | Terminologie | Description |
 | --- | --- |
 | Espace de noms unique | Un espace de noms unique est un espace de noms d’identité configuré pour être distinct dans le contexte d’un graphique d’identités. Vous pouvez configurer un espace de noms pour qu’il soit unique à l’aide de l’interface utilisateur. Une fois qu’un espace de noms est défini comme unique, un graphique ne peut avoir qu’une seule identité contenant cet espace de noms. |
-| Priorité des espaces de noms | La priorité des espaces de noms fait référence à l’importance relative des espaces de noms par rapport aux autres. La priorité de l’espace de noms peut être configurée via l’interface utilisateur. Vous pouvez classer les espaces de noms dans un graphique d’identités donné. Une fois activée, la priorité des noms est utilisée dans divers scénarios, comme la saisie pour l’algorithme d’optimisation des identités et la détermination de l’identité principale pour les fragments d’événement d’expérience. |
-| Algorithme d’optimisation des identités | L’algorithme d’optimisation des identités garantit que les instructions créées en configurant un espace de noms unique et des priorités d’espace de noms sont appliquées dans un graphique d’identités donné. |
+| Priorité d’espace de noms | La priorité des espaces de noms fait référence à l’importance relative des espaces de noms par rapport aux autres. La priorité de l’espace de noms peut être configurée via l’interface utilisateur. Vous pouvez classer les espaces de noms dans un graphique d’identités donné. Une fois activée, la priorité des noms est utilisée dans divers scénarios, comme la saisie pour l’algorithme d’optimisation des identités et la détermination de l’identité principale pour les fragments d’événement d’expérience. |
+| Algorithme d’optimisation de l’identité | L’algorithme d’optimisation des identités garantit que les instructions créées en configurant un espace de noms unique et des priorités d’espace de noms sont appliquées dans un graphique d’identités donné. |
 
 ### Espace de noms unique {#unique-namespace}
 
@@ -118,7 +118,7 @@ Si vous ne configurez pas d’espace de noms unique, vous pouvez obtenir des fus
 
 Vous devez configurer un espace de noms unique pour informer l’algorithme d’optimisation des identités afin d’appliquer des limitations aux données d’identité ingérées dans un graphique d’identités donné.
 
-### Priorité des espaces de noms {#namespace-priority}
+### Priorité d’espace de noms {#namespace-priority}
 
 La priorité des espaces de noms fait référence à l’importance relative des espaces de noms par rapport aux autres. La priorité des espaces de noms est configurable via l’interface utilisateur et vous pouvez classer les espaces de noms dans un graphique d’identités donné.
 
@@ -129,13 +129,13 @@ Les espaces de noms uniques et les priorités des espaces de noms peuvent être 
 | | Service d’identités | Profil client en temps réel |
 | --- | --- | --- |
 | Espace de noms unique | Dans Identity Service, l’algorithme d’optimisation des identités fait référence à des espaces de noms uniques pour déterminer les données d’identité ingérées par un graphique d’identités donné. | Les espaces de noms uniques n’affectent pas le profil client en temps réel. |
-| Priorité des espaces de noms | Dans Identity Service, pour les graphiques comportant plusieurs calques, la priorité de l’espace de noms détermine que les liens appropriés sont supprimés. | Lorsqu’un événement d’expérience est ingéré dans Profile, l’espace de noms avec la priorité la plus élevée devient l’identité principale du fragment de profil. |
+| Priorité d’espace de noms | Dans Identity Service, pour les graphiques comportant plusieurs calques, la priorité de l’espace de noms détermine que les liens appropriés sont supprimés. | Lorsqu’un événement d’expérience est ingéré dans Profile, l’espace de noms avec la priorité la plus élevée devient l’identité principale du fragment de profil. |
 
 * La priorité de l’espace de noms n’affecte pas le comportement du graphique lorsque la limite de 50 identités par graphique est atteinte.
 * **La priorité de l’espace de noms est une valeur numérique** attribuée à un espace de noms indiquant son importance relative. Il s’agit d’une propriété d’un espace de noms .
 * L&#39;identité de Principal **est l&#39;identité dans laquelle un fragment de profil est stocké**. Un fragment de profil est un enregistrement de données qui stocke des informations sur un certain utilisateur ou une certaine utilisatrice : attributs (généralement ingérés via des enregistrements CRM) ou événements (généralement ingérés à partir d’événements d’expérience ou de données en ligne).
 * La priorité de l’espace de noms détermine l’identité principale des fragments d’événement d’expérience.
-   * Pour les enregistrements de profil, vous pouvez utiliser l’espace de travail des schémas dans l’interface utilisateur de l’Experience Platform pour définir les champs d’identité, y compris l’identité principale. Pour plus d’informations, consultez le guide sur la [définition de champs d’identité dans l’interface utilisateur](../../xdm/ui/fields/identity.md).
+   * Pour les enregistrements de profil, vous pouvez utiliser l’espace de travail des schémas dans l’interface utilisateur d’Experience Platform pour définir les champs d’identité, y compris l’identité principale. Pour plus d’informations, consultez le guide sur la [définition de champs d’identité dans l’interface utilisateur](../../xdm/ui/fields/identity.md).
 * Si un événement d’expérience comporte plusieurs identités de la priorité d’espace de noms la plus élevée dans le mappage d’identité, il sera rejeté de l’ingestion, car il sera considéré comme des « données incorrectes ». Par exemple, si identityMap contient des `{ECID: 111, CRMID: John, CRMID: Jane}`, l’événement entier sera rejeté comme données incorrectes, car il implique que l’événement est associé à la fois aux `CRMID: John` et aux `CRMID: Jane` simultanément.
 
 Pour plus d’informations, consultez le guide sur la [priorité des espaces de noms](./namespace-priority.md).
@@ -144,10 +144,10 @@ Pour plus d’informations, consultez le guide sur la [priorité des espaces de 
 
 Pour plus d’informations sur les règles de liaison de graphiques d’identités, consultez la documentation suivante :
 
-* [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
+* [Algorithme d’optimisation de l’identité](./identity-optimization-algorithm.md)
 * [Guide de mise en œuvre](./implementation-guide.md)
-* [Exemples de configurations de graphique](./example-configurations.md)
+* [Exemples de configurations de graphes](./example-configurations.md)
 * [Résolution des problèmes et FAQ](./troubleshooting.md)
-* [Priorité des espaces de noms](./namespace-priority.md)
+* [Priorité d’espace de noms](./namespace-priority.md)
 * [Interface utilisateur de simulation de graphique](./graph-simulation.md)
 * [Interface utilisateur des paramètres d’identité](./identity-settings-ui.md)

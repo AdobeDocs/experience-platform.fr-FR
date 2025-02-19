@@ -5,11 +5,11 @@ exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '2796'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
-# Exemples de configurations de graphique {#examples-of-graph-configurations}
+# Exemples de configurations de graphes {#examples-of-graph-configurations}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_algorithmconfiguration"
@@ -18,7 +18,7 @@ ht-degree: 6%
 
 >[!AVAILABILITY]
 >
->Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte d’Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
+>Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
 
 >[!NOTE]
 >
@@ -767,9 +767,9 @@ CRMID: Tom, ECID: 111
 Pour plus d’informations sur les règles de liaison de graphiques d’identités, consultez la documentation suivante :
 
 * [Aperçu des règles de liaison des graphiques d’identités](./overview.md)
-* [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
+* [Algorithme d’optimisation de l’identité](./identity-optimization-algorithm.md)
 * [Guide de mise en œuvre](./implementation-guide.md)
 * [Résolution des problèmes et FAQ](./troubleshooting.md)
-* [Priorité des espaces de noms](./namespace-priority.md)
+* [Priorité d’espace de noms](./namespace-priority.md)
 * [Interface utilisateur de simulation de graphique](./graph-simulation.md)
 * [Interface utilisateur des paramètres d’identité](./identity-settings-ui.md)

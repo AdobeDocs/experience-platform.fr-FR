@@ -1,5 +1,5 @@
 ---
-title: Priorité des espaces de noms
+title: Priorité d’espace de noms
 description: Découvrez la priorité des espaces de noms dans Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
@@ -9,16 +9,16 @@ ht-degree: 3%
 
 ---
 
-# Priorité des espaces de noms {#namespace-priority}
+# Priorité d’espace de noms {#namespace-priority}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_namespacepriority"
->title="Priorité de l’espace de noms"
->abstract="La priorité de l’espace de noms détermine la manière dont les liens sont supprimés du graphe d’identité."
+>title="Priorité d’espace de noms"
+>abstract="La priorité de l’espace de noms détermine comment les liens sont supprimés du graphique d’identité."
 
 >[!AVAILABILITY]
 >
->Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte d’Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
+>Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
 
 Chaque implémentation client est unique et adaptée pour répondre aux objectifs d’une organisation particulière. Par conséquent, l’importance d’un espace de noms donné varie d’un client à l’autre. Voici quelques exemples concrets :
 
@@ -143,7 +143,7 @@ Si les critères de qualification du segment étaient uniquement basés sur des 
 
 ## Implications sur les autres services Experience Platform {#implications}
 
-Cette section décrit comment la priorité de l’espace de noms peut affecter d’autres services Experience Platform.
+Cette section décrit l’impact de la priorité des espaces de noms sur d’autres services Experience Platform.
 
 ### Gestion avancée du cycle de vie des données
 
@@ -179,7 +179,7 @@ Lors de la sélection de vos données, vous devez spécifier un espace de noms, 
 
 Cette configuration permet de calculer les scores uniquement à l’aide d’événements authentifiés.
 
-Pour plus d’informations, consultez les documents sur [Attribution AI ](../../intelligent-services/attribution-ai/overview.md) et [Customer AI](../../intelligent-services/customer-ai/overview.md).
+Pour plus d’informations, consultez les documents sur l’[IA dédiée à l’attribution](../../intelligent-services/attribution-ai/overview.md) et l’[IA dédiée aux clients](../../intelligent-services/customer-ai/overview.md).
 
 ### Destinations créées par les partenaires
 
@@ -192,7 +192,7 @@ Pour plus d’informations sur les destinations créées par les partenaires, li
 
 ### Privacy Service
 
-Les [demandes de suppression de mots de Privacy Service ](../privacy.md) fonctionnent de la manière suivante, pour une identité donnée :
+Les [demandes de suppression de Privacy Service](../privacy.md) fonctionnent de la manière suivante, pour une identité donnée :
 
 * Real-Time Customer Profile : supprime tout fragment de profil avec une valeur d’identité spécifiée comme identité principale. **L’identité principale sur le profil sera désormais déterminée en fonction de la priorité de l’espace de noms.**
 * Lac de données : supprime tout enregistrement ayant l’identité spécifiée comme identité principale ou secondaire.

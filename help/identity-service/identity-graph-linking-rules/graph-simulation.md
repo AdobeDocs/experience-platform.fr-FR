@@ -13,12 +13,12 @@ ht-degree: 3%
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphsimulation"
->title="Simulation de graphique"
->abstract="Simulez des graphes pour comprendre comment Identity Service lie les identités et comment fonctionne l’algorithme d’optimisation des identités."
+>title="Simulation de graphes"
+>abstract="Simulez des graphiques pour comprendre comment Identity Service lie les identités et comment fonctionne l’algorithme d’optimisation des identités."
 
 >[!AVAILABILITY]
 >
->Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte d’Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
+>Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
 
 [!DNL Graph Simulation] est un outil de l’interface utilisateur d’Identity Service que vous pouvez utiliser pour simuler le comportement d’un graphique d’identités selon une combinaison particulière d’identités et la manière dont vous configurez l’algorithme [optimisation des identités](./identity-optimization-algorithm.md).
 
@@ -177,9 +177,9 @@ Dans l’exemple de graphique ci-dessous, une ligne pointillée existe entre `{E
 Grâce à la lecture de ce document, vous savez désormais comment utiliser l’outil [!DNL Graph Simulation] pour mieux comprendre comment vos données d’identité sont traitées selon un ensemble particulier de règles et de configurations. Pour plus d’informations, consultez les documents suivants :
 
 * [Aperçu des règles de liaison des graphiques d’identités](./overview.md)
-* [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
+* [Algorithme d’optimisation de l’identité](./identity-optimization-algorithm.md)
 * [Guide de mise en œuvre](./implementation-guide.md)
 * [Résolution des problèmes et FAQ](./troubleshooting.md)
-* [Exemples de configurations de graphique](./example-configurations.md)
-* [Priorité des espaces de noms](./namespace-priority.md)
+* [Exemples de configurations de graphes](./example-configurations.md)
+* [Priorité d’espace de noms](./namespace-priority.md)
 * [Interface utilisateur des paramètres d’identité](./identity-settings-ui.md)

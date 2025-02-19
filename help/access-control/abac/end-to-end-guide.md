@@ -55,7 +55,7 @@ Grâce aux [!UICONTROL autorisations], vous pouvez créer et gérer des rôles e
 
 Contactez votre administrateur système pour obtenir l’accès si vous ne disposez pas des privilèges d’administrateur.
 
-Une fois que vous disposez des privilèges d’administrateur, accédez à [Adobe Experience Cloud](https://experience.adobe.com/) et connectez-vous à l’aide de vos informations d’identification d’Adobe. Une fois la connexion effectuée, la page **[!UICONTROL Aperçu]** s’affiche pour l’organisation pour laquelle vous disposez de droits d’administrateur. Cette page affiche les produits auxquels votre organisation est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’organisation. Sélectionnez **[!UICONTROL Autorisations]** pour ouvrir l’espace de travail en vue de votre intégration Platform.
+Une fois que vous disposez des privilèges d’administrateur, accédez à [Adobe Experience Cloud](https://experience.adobe.com/) et connectez-vous à l’aide de vos informations d’identification Adobe. Une fois la connexion effectuée, la page **[!UICONTROL Aperçu]** s’affiche pour l’organisation pour laquelle vous disposez de droits d’administrateur. Cette page affiche les produits auxquels votre organisation est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’organisation. Sélectionnez **[!UICONTROL Autorisations]** pour ouvrir l’espace de travail en vue de votre intégration Platform.
 
 ![Image illustrant le produit Autorisations sélectionné dans Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
@@ -66,7 +66,7 @@ L’espace de travail Autorisations pour l’interface utilisateur de Platform s
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="Que sont les libellés ?"
->abstract="Utilisez des libellés pour classer les jeux de données et les champs en fonction des politiques d’utilisation et d’accès qui s’appliquent à ces données. Platform fournit plusieurs libellés d’utilisation des données <strong>principaux</strong> définis par l’Adobe, qui couvrent un large éventail de restrictions courantes applicables à la gouvernance des données. Par exemple, les libellés Sensible <strong>S</strong> tels que DSR (données réglementées en matière de santé) vous permettent de catégoriser les données qui font référence aux informations de santé protégées (ISP). Vous pouvez également définir vos propres libellés personnalisés en fonction des besoins de votre entreprise."
+>abstract="Utilisez des libellés pour classer les jeux de données et les champs en fonction des politiques d’utilisation et d’accès qui s’appliquent à ces données. Platform fournit plusieurs libellés d’utilisation des données <strong>principaux</strong> définis par Adobe, qui couvrent un large éventail de restrictions courantes applicables à la gouvernance des données. Par exemple, les libellés Sensible <strong>S</strong> tels que DSR (données réglementées en matière de santé) vous permettent de catégoriser les données qui font référence aux informations de santé protégées (ISP). Vous pouvez également définir vos propres libellés personnalisés en fonction des besoins de votre entreprise."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=fr#understanding-data-usage-labels" text="Présentation des libellés d’utilisation des données"
 
 Les rôles sont des moyens de classer les types d’utilisateurs interagissant avec votre instance Platform et sont des blocs élémentaires des politiques de contrôle d’accès. Un rôle possède un jeu d’autorisations déterminé et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès dont ils ont besoin.
@@ -93,7 +93,7 @@ Maintenant que vous avez configuré un rôle d’utilisateur avec le libellé [!
 
 Dans le volet de navigation supérieur, sélectionnez le **sélecteur d’applications**, représenté par l’icône ![sélecteur d’applications](/help/images/icons/apps.png), puis sélectionnez **[!UICONTROL Experience Platform]**.
 
-![Image montrant la sélection de l’Experience Platform dans le menu déroulant du sélecteur d’applications](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
+![Image montrant la sélection d’Experience Platform dans le menu déroulant du sélecteur d’applications](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
 
 Sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL ACME Healthcare]** dans la liste des schémas qui s’affichent.
 

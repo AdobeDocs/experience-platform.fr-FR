@@ -5,7 +5,7 @@ exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
 source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
 workflow-type: tm+mt
 source-wordcount: '1509'
-ht-degree: 96%
+ht-degree: 97%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 96%
 >[!CONTEXTUALHELP]
 >id="platform_tags_publishing_flow"
 >title="Flux de publication"
->abstract="Découvrez les niveaux d’autorisations utilisateur requis pour le flux de publication, y compris les droits Développer, Approuver et Publish."
+>abstract="Découvrez les niveaux d’autorisation requis des utilisateurs et utilisatrices pour le flux de publication, y compris les droits de développement, d’approbation et de publication."
 
 >[!NOTE]
 >

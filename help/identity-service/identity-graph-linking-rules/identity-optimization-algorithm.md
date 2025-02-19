@@ -1,15 +1,15 @@
 ---
-title: Algorithme d’optimisation des identités
+title: Algorithme d’optimisation de l’identité
 description: Découvrez l’algorithme d’optimisation des identités dans Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '1560'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
-# Algorithme d’optimisation des identités {#identity-optimization-algorithm}
+# Algorithme d’optimisation de l’identité {#identity-optimization-algorithm}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_uniquenamespace"
@@ -18,7 +18,7 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte d’Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
+>Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
 
 L’algorithme d’optimisation des identités est un algorithme de graphique sur Identity Service qui permet de s’assurer qu’un graphique d’identités est représentatif d’une seule personne et, par conséquent, empêche la fusion indésirable d’identités sur le profil client en temps réel.
 
@@ -45,7 +45,7 @@ Un espace de noms que vous déclarez unique est automatiquement configuré pour 
 >
 >* Tous les espaces de noms qui sont des identifiants de personne et qui sont utilisés dans le sandbox pour générer des graphiques d’identités doivent être marqués comme un espace de noms unique. Dans le cas contraire, vous risquez de voir des résultats de liaison indésirables.
 
-### Priorité des espaces de noms {#namespace-priority}
+### Priorité d’espace de noms {#namespace-priority}
 
 La priorité de l’espace de noms détermine la manière dont l’algorithme d’optimisation des identités supprime les liens.
 
@@ -167,8 +167,8 @@ Pour plus d’informations sur les règles de liaison de graphiques d’identit�
 
 * [Aperçu des règles de liaison des graphiques d’identités](./overview.md)
 * [Guide de mise en œuvre](./implementation-guide.md)
-* [Exemples de configurations de graphique](./example-configurations.md)
+* [Exemples de configurations de graphes](./example-configurations.md)
 * [Résolution des problèmes et FAQ](./troubleshooting.md)
-* [Priorité des espaces de noms](./namespace-priority.md)
+* [Priorité d’espace de noms](./namespace-priority.md)
 * [Interface utilisateur de simulation de graphique](./graph-simulation.md)
 * [Interface utilisateur des paramètres d’identité](./identity-settings-ui.md)
