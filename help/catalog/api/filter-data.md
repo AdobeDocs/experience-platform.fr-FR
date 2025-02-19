@@ -1,31 +1,33 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;filtre;filtre;filtrer les données;filtrer les données;filtrer les données;période
+keywords: Experience Platform;accueil;rubriques les plus consultées;filtre;Filtrer les données;Filtrer les données;période
 solution: Experience Platform
-title: Filtrage des données du catalogue à l’aide des paramètres de requête
-description: L’API Catalog Service permet de filtrer les données de réponse à l’aide de paramètres de requête de demande. En ce qui concerne le catalogue, l’une des bonnes pratiques consiste à utiliser des filtres dans tous les appels API, réduisant ainsi la charge de l’API et contribuant à améliorer les performances globales.
+title: Filtrage Des Données De Catalogue À L’Aide De Paramètres De Requête
+description: Utilisez des paramètres de requête pour filtrer les données de réponse dans l’API Catalog Service et récupérer uniquement les informations dont vous avez besoin. Appliquez des filtres à vos appels API pour réduire la charge et améliorer les performances, assurant ainsi une récupération des données plus rapide et plus efficace.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 75099d39fbdb9488105a9254bbbcca9b12349238
+source-git-commit: 14ecb971af3f6cdcc605caa05ef6609ecb9b38fd
 workflow-type: tm+mt
-source-wordcount: '2117'
-ht-degree: 82%
+source-wordcount: '2339'
+ht-degree: 68%
 
 ---
 
-# Filtrage des données [!DNL Catalog] à l’aide de paramètres de requête
+# Filtrer [!DNL Catalog] données à l’aide de paramètres de requête
 
-L’API [!DNL Catalog Service] permet de filtrer les données de réponse à l’aide de paramètres de requête de requête de requête. L&#39;une des bonnes pratiques pour [!DNL Catalog] consiste à utiliser des filtres dans tous les appels API, car ils réduisent la charge de l&#39;API et contribuent à améliorer les performances globales.
+Pour améliorer les performances et récupérer des résultats pertinents, utilisez les paramètres de requête pour filtrer les données de réponse de l’API [!DNL Catalog Service].
 
-Ce document décrit les méthodes les plus courantes de filtrage des objets [!DNL Catalog] dans l’API. Il est recommandé de référencer ce document lors de la lecture du [guide de développement du catalogue](getting-started.md) pour en savoir plus sur la façon d’interagir avec l’API [!DNL Catalog]. Pour plus d&#39;informations générales sur [!DNL Catalog Service], consultez la [[!DNL Catalog] présentation](../home.md).
+Découvrez les méthodes de filtrage courantes pour les objets [!DNL Catalog] dans l’API. Utilisez ce document avec le [Guide du développeur du catalogue](getting-started.md) pour plus d’informations sur les interactions d’API. Pour obtenir des informations [!DNL Catalog Service] générales, consultez la [[!DNL Catalog] présentation](../home.md).
 
-## Limiter les objets renvoyés
+## Limiter les objets renvoyés {#limit-returned-objects}
 
-Le paramètre de requête `limit` limite le nombre d’objets renvoyés dans une réponse. Les réponses [!DNL Catalog] sont automatiquement mesurées en fonction des limites configurées :
+Le paramètre de requête `limit` limite le nombre d’objets renvoyés dans une réponse. [!DNL Catalog] réponses suivent des limites prédéfinies :
 
-* Si aucun paramètre `limit` n’est spécifié, le nombre maximal d’objets par payload de réponse est de 20.
+* Si le paramètre `limit` n’est pas spécifié, le nombre maximal d’objets par réponse est de 20.
 * Pour les requêtes des jeux de données, si `observableSchema` est demandé en utilisant le paramètre de requête `properties`, le nombre maximal de jeux de données renvoyés est de 20.
-* La limite globale pour toutes les autres requêtes de catalogue est de 100 objets.
-* Des paramètres `limit` non valides (y compris `limit=0`) génèrent des réponses d’erreur de niveau 400 qui indiquent les plages appropriées.
-* Les limites ou les décalages transmis en tant que paramètres de requête ont priorité sur ceux transmis en tant qu’en-têtes.
+* Pour les jetons d’utilisateur, la limite maximale est de 1.
+* Pour les jetons de service, la limite maximale est de 20.
+* La limite globale pour les autres requêtes de catalogue est de 100 objets.
+* Les valeurs de `limit` non valides (y compris `limit=0`) entraînent des réponses d’erreur de niveau 400 spécifiant des plages correctes.
+* Les limites ou décalages transmis en tant que paramètres de requête sont prioritaires sur ceux des en-têtes.
 
 **Format d’API**
 
@@ -35,8 +37,8 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Type d’objet [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
-| `{LIMIT}` | Un entier indiquant le nombre d’objets à renvoyer, compris entre 1 et 100. |
+| `{OBJECT_TYPE}` | Type d’objet [!DNL Catalog] à récupérer. Objets valides : <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{LIMIT}` | Nombre entier spécifiant le nombre d’objets à renvoyer (plage : 1-100). |
 
 **Requête**
 
@@ -73,13 +75,13 @@ Une réponse réussie renvoie une liste de jeux de données, limitée au nombre 
 }
 ```
 
-## Limiter les propriétés affichées
+## Limiter les propriétés affichées {#limit-displayed-properties}
 
 Même lorsque le nombre d’objets renvoyés est filtré à l’aide du paramètre `limit`, les objets renvoyés eux-mêmes peuvent souvent contenir plus d’informations que nécessaire. Pour réduire davantage la charge sur le système, il est recommandé de filtrer les réponses afin d’inclure uniquement les propriétés dont vous avez besoin.
 
 Le paramètre `properties` filtre les objets de réponse pour renvoyer uniquement un ensemble de propriétés spécifiées. Ce paramètre peut être défini pour renvoyer une ou plusieurs propriétés.
 
-Le paramètre `properties` peut accepter toutes les propriétés d’objet de niveau. `sampleKey` peut être extrait à l’aide de `?properties=subItem.sampleKey`.
+Le paramètre `properties` peut accepter n&#39;importe quelle propriété d&#39;objet de niveau. Les `sampleKey` peuvent être extraites à l’aide de `?properties=subItem.sampleKey`.
 
 ```json
 {
@@ -103,9 +105,9 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Type d’objet [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Type de [!DNL Catalog] objet à récupérer. Les objets valides sont : <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{PROPERTY}` | Le nom d’un attribut à inclure dans le corps de la réponse. |
-| `{OBJECT_ID}` | L’identifiant unique d’un objet [!DNL Catalog] spécifique en cours de récupération. |
+| `{OBJECT_ID}` | Identifiant unique d’un objet [!DNL Catalog] spécifique récupéré. |
 
 **Requête**
 
@@ -122,7 +124,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste d’objets [!DNL Catalog] avec uniquement les propriétés demandées affichées.
+Une réponse réussie renvoie une liste d’objets [!DNL Catalog] avec seulement les propriétés demandées affichées.
 
 ```json
 {
@@ -158,7 +160,7 @@ En fonction de la réponse ci-dessus, vous pouvez en déduire ce qui suit :
 >
 >Dans la propriété `schemaRef` de chaque jeu de données, le numéro de version indique la dernière version mineure du schéma. Pour plus d’informations, reportez-vous à la section [contrôle de version des schémas](../../xdm/api/getting-started.md#versioning) du guide de l’API XDM.
 
-## Décalage de l’index de départ de la liste de réponses
+## Décalage de l’index de départ de la liste de réponses {#offset-starting-index}
 
 Le paramètre de requête `start` décale la liste de réponses vers l’avant d’un nombre spécifié, en utilisant une numérotation à partir de zéro. Par exemple, `start=2` décalerait la réponse pour qu’elle commence à partir du troisième objet répertorié.
 
@@ -206,11 +208,11 @@ Certains objets Catalog prennent en charge l’utilisation d’un attribut `tags
 Quelques limites doivent être prises en compte lors de l’utilisation de balises :
 
 * Les seuls objets Catalog qui prennent actuellement en charge les balises sont les jeux de données, les lots et les connexions.
-* Les noms de balise sont propres à votre organisation.
+* Les noms de balises sont propres à votre organisation.
 * Les processus Adobe peuvent se servir de balises pour certains comportements. Le préfixe standard « adobe » est ajouté au nom de ces balises. Par conséquent, vous devriez éviter cette pratique lors de la déclaration des noms de balise.
-* Les noms de balise suivants sont réservés à l’utilisation sur [!DNL Experience Platform] et ne peuvent donc pas être déclarés comme nom de balise pour votre organisation :
-   * `unifiedProfile` : ce nom de balise est réservé à l’ingestion des jeux de données par [[!DNL Real-Time Customer Profile]](../../profile/home.md).
-   * `unifiedIdentity` : ce nom de balise est réservé à l’ingestion des jeux de données par [[!DNL Identity Service]](../../identity-service/home.md).
+* Les noms de balise suivants sont réservés à l’utilisation dans [!DNL Experience Platform] et ne peuvent donc pas être déclarés comme nom de balise pour votre organisation :
+   * `unifiedProfile` : ce nom de balise est réservé aux jeux de données à ingérer par [[!DNL Real-Time Customer Profile]](../../profile/home.md).
+   * `unifiedIdentity` : ce nom de balise est réservé aux jeux de données à ingérer par [[!DNL Identity Service]](../../identity-service/home.md).
 
 Vous trouverez ci-dessous un exemple de jeu de données contenant une propriété `tags`. Les balises de cette propriété prennent la forme de paires clé-valeur, où chaque valeur de balise apparaît sous la forme d’une matrice contenant une seule chaîne :
 
@@ -253,7 +255,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Type d’objet [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`batches`</li><li>`dataSets`</li></ul> |
+| `{OBJECT_TYPE}` | Type de [!DNL Catalog] objet à récupérer. Les objets valides sont : <ul><li>`batches`</li><li>`dataSets`</li></ul> |
 | `{TAG_NAME}` | Le nom de la balise à utiliser pour filtrer. |
 | `{TAG_VALUE}` | La valeur de la balise à utiliser pour filtrer. Prend en charge les caractères génériques (`*`). |
 
@@ -320,7 +322,7 @@ Une réponse réussie renvoie une liste de jeux de données qui contiennent `sam
 
 ## Filtrage par période
 
-Certains points de terminaison de l’API [!DNL Catalog] comportent des paramètres de requête qui permettent des requêtes de plage, le plus souvent dans le cas de dates.
+Certains points d’entrée de l’API [!DNL Catalog] disposent de paramètres de requête qui permettent les requêtes à intervalles de temps, le plus souvent dans le cas de dates.
 
 **Format d’API**
 
@@ -347,7 +349,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie contient une liste d’objets [!DNL Catalog] compris dans la plage de dates spécifiée. À moins qu’une limite ne soit également spécifiée, la réponse contient 20 objets maximum.
+Une réponse réussie contient une liste d’objets [!DNL Catalog] qui se trouvent dans la période spécifiée. À moins qu’une limite ne soit également spécifiée, la réponse contient 20 objets maximum.
 
 ```json
 {
@@ -411,7 +413,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie contient une liste d’objets [!DNL Catalog] triés selon le paramètre `orderBy` . À moins qu’une limite ne soit également spécifiée, la réponse contient 20 objets maximum.
+Une réponse réussie contient une liste d’objets [!DNL Catalog] qui sont triés en fonction du paramètre `orderBy` . À moins qu’une limite ne soit également spécifiée, la réponse contient 20 objets maximum.
 
 ```json
 {
@@ -450,10 +452,14 @@ Une réponse réussie contient une liste d’objets [!DNL Catalog] triés selon 
 
 ## Filtrage par propriété
 
-[!DNL Catalog] fournit deux méthodes de filtrage par propriété, décrites plus en détail dans les sections suivantes :
+[!DNL Catalog] propose deux méthodes de filtrage par propriété, qui sont décrites plus en détail dans les sections suivantes :
 
 * [Utilisation de filtres simples](#using-simple-filters) : filtrez pour qu’une propriété spécifique corresponde à une valeur spécifique.
 * [Utilisation du paramètre de propriété](#using-the-property-parameter) : utilisez des expressions conditionnelles pour un filtre se basant sur l’existence ou non d’une propriété ou sur la correspondance, la ressemblance ou la possibilité de comparer ou non la valeur d’une propriété à une autre valeur spécifiée ou à une expression régulière.
+
+>[!NOTE]
+>
+>Tout attribut d’un objet Catalog peut être utilisé pour filtrer les résultats dans l’API Catalog Service.
 
 ### Utilisation de filtres simples {#using-simple-filters}
 
@@ -474,7 +480,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Type d’objet [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Type de [!DNL Catalog] objet à récupérer. Les objets valides sont : <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{PROPERTY_NAME}` | Le nom de la propriété dont la valeur est celle que vous souhaitez utiliser pour filtrer. |
 | `{VALUE}` | Une valeur de propriété qui détermine les résultats à inclure (ou à exclure, selon la requête). |
 
@@ -524,7 +530,23 @@ Une réponse réussie contient une liste de jeux de données excluant ceux dont 
 
 Le paramètre de requête `property` offre plus de flexibilité pour le filtrage basé sur les propriétés que les filtres simples. En complément du filtrage selon qu’une propriété possède ou non une valeur spécifique, le paramètre `property`peut utiliser d’autres opérateurs de comparaison (tels que « more-than »,`>`, et « less-than », `<`), ainsi que des expressions régulières pour filtrer selon les valeurs de propriété. Il peut également filtrer selon l’existence ou l’absence d’une propriété, quelle que soit sa valeur.
 
-Le paramètre `property` peut accepter toutes les propriétés d’objet de niveau. `sampleKey` peut être utilisé pour le filtrage à l’aide de `?properties=subItem.sampleKey`.
+Utilisez une esperluette (`&`) pour combiner plusieurs filtres et affiner votre requête dans une seule requête. Lorsque vous filtrez par plusieurs champs, une relation de `AND` est appliquée par défaut.
+
+>[!NOTE]
+>
+>Si vous combinez plusieurs paramètres de `property` dans une seule requête, au moins l’un d’eux doit s’appliquer au champ `id` ou `created`. La requête suivante renvoie des objets où `id` est `abc123` **AND** `name` n’est pas `test` :
+>
+>```http
+>GET /datasets?property=id==abc123&property=name!=test
+>```
+
+Si vous utilisez plusieurs paramètres de `property` sur le même champ, seul le dernier paramètre spécifié prend effet.
+
+>[!IMPORTANT]
+>
+>Vous **ne pouvez pas** utiliser un seul paramètre de `property` pour filtrer plusieurs champs à la fois. Chaque champ doit avoir son propre paramètre `property`. L’exemple suivant (`property=id>abc,name==myDataset`) n’est **pas** autorisé, car il tente d’appliquer des conditions aux `id` et aux `name` dans un **paramètre de `property` unique**.
+
+Le paramètre `property` peut accepter n&#39;importe quelle propriété d&#39;objet de niveau. `sampleKey` pouvez être utilisé pour le filtrage à l’aide de `?properties=subItem.sampleKey`.
 
 ```json
 {
@@ -546,7 +568,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Type d’objet [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Type de [!DNL Catalog] objet à récupérer. Les objets valides sont : <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{CONDITION}` | Une instruction conditionnelle qui indique la propriété pour laquelle formuler une requête et la manière dont sa valeur doit être évaluée. Vous en trouverez des exemples ci-dessous. |
 
 La valeur du paramètre `property` prend en charge plusieurs types différents d’instructions conditionnelles. Le tableau suivant décrit la syntaxe de base pour les instructions prises en charge :
@@ -562,10 +584,12 @@ La valeur du paramètre `property` prend en charge plusieurs types différents d
 | &lt;= | Renvoie uniquement les objets dont les valeurs de propriété sont inférieures (ou égales) à un montant donné. | `property=version<=1.0.0` |
 | > | Renvoie uniquement les objets dont les valeurs de propriété sont supérieures (mais pas égales) à un montant donné. | `property=version>1.0.0` |
 | >= | Renvoie uniquement les objets dont les valeurs de propriété sont supérieures (ou égales) à un montant donné. | `property=version>=1.0.0` |
+| * | Un caractère générique s’applique à n’importe quelle propriété de chaîne et correspond à n’importe quelle séquence de caractères. Utilisez `**` pour échapper un astérisque littéral. | `property=name==te*st` |
+| &amp; | Combine plusieurs paramètres de `property` avec une relation `AND` entre eux. | `property=id==abc&property=name!=test` |
 
 >[!NOTE]
 >
->La propriété `name` prend en charge l’utilisation d’un caractère générique `*`, sous la forme d’une chaîne de recherche entière ou d’une partie de celle-ci. Les caractères génériques correspondent à des caractères vides, de sorte que la chaîne de recherche `te*st` correspond à la valeur « test ». Les astérisques sont évités en les doublant (`**`). Un double astérisque dans une chaîne de recherche représente un astérisque unique sous forme de chaîne littérale.
+>La propriété `name` prend en charge l’utilisation d’un `*` de caractères génériques, soit comme chaîne de recherche complète, soit comme partie de celle-ci. Les caractères génériques correspondent à des caractères vides, de sorte que la chaîne de recherche `te*st` correspond à la valeur « test ». Les astérisques sont évités en les doublant (`**`). Un double astérisque dans une chaîne de recherche représente un astérisque unique sous forme de chaîne littérale.
 
 **Requête**
 
@@ -619,12 +643,38 @@ Une réponse réussie contient une liste de jeux de données dont les numéros d
 }
 ```
 
-## Combinaison de plusieurs filtres
+## Filtrer des tableaux avec le paramètre de propriété {#filter-arrays}
 
-A l’aide d’une esperluette (`&`), vous pouvez combiner plusieurs filtres dans une même requête. Lorsque des conditions supplémentaires sont ajoutées à une requête, une relation ET est présumée.
+Utilisez des opérateurs d’égalité et d’inégalité pour inclure ou exclure des valeurs spécifiques lors du filtrage des résultats en fonction des propriétés du tableau.
+
+### Filtres d’égalité {#equality-filters}
+
+Pour filtrer un champ de tableau selon plusieurs valeurs, utilisez des paramètres de propriété distincts pour chaque valeur. Utilisez des filtres d’égalité pour renvoyer uniquement les entrées des données du tableau qui correspondent aux valeurs spécifiées.
+
+>[!NOTE]
+>
+>L’obligation d’inclure des `id` ou des `created` lors du filtrage de plusieurs champs ne s’applique **pas** lors du filtrage de plusieurs valeurs dans un champ de tableau.
+
+L’exemple de requête ci-dessous renvoie uniquement les résultats du tableau qui comprend à la fois `val1` et `val2`.
 
 **Format d’API**
 
 ```http
-GET /{OBJECT_TYPE}?{FILTER_1}={VALUE}&{FILTER_2}={VALUE}&{FILTER_3}={VALUE}
+GET /{OBJECT_TYPE}?property=arrayField=val1&property=arrayField=val2
 ```
+
+### Filtres d’inégalité {#inequality-filters}
+
+Utilisez des opérateurs d’inégalité (`!=`) sur un champ de tableau pour exclure toute entrée dans les données où le tableau contient les valeurs spécifiées.
+
+**Format d’API**
+
+```http
+GET /{OBJECT_TYPE}?property=arrayField!=val1&property=arrayField!=val2
+```
+
+Cette requête renvoie des documents où arrayField ne contient ni `val1` ni `val2`.
+
+### Égalité et limites des filtres d’inégalité {#equality-inequality-limitations}
+
+Vous ne pouvez pas appliquer à la fois l’égalité (`=`) et l’inégalité (`!=`) au même champ dans une seule requête.
