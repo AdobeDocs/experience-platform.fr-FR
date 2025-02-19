@@ -1,35 +1,41 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;contrôle d’accès basé sur les attributs;ABAC
-title: Environnements de test de contrôle d’accès en fonction des attributs
-description: Ce document fournit des informations sur la gestion des environnements de test par le biais de l’interface Autorisations dans Adobe Experience Cloud.
+title: Sandbox de contrôle d’accès basé sur les attributs
+description: Ce document fournit des informations sur la gestion des sandbox via l’interface Autorisations dans Adobe Experience Cloud
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '217'
-ht-degree: 28%
+source-wordcount: '259'
+ht-degree: 24%
 
 ---
 
-# Gestion des sandbox
+# Gestion des sandbox {#mange-sandboxes}
 
-Les sandbox constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience digitale. Tout le contenu et les actions réalisés dans un sandbox sont limités à celui-ci et n’en affectent aucun autre. Pour plus d’informations sur les environnements de test, consultez la [présentation des environnements de test](../../../sandboxes/home.md).
+>[!CONTEXTUALHELP]
+>id="platform_permissions_sandboxes_about"
+>title="Que sont les sandbox ?"
+>abstract="Les sandbox sont des partitions virtuelles au sein d’une seule instance de Platform. Tout le contenu et les actions réalisés dans un sandbox sont limités à celui-ci et n’en affectent pas d’autres. L’accès aux sandbox est géré par l’intermédiaire des rôles."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home" text="Présentation des sandbox"
 
-## Configuration des environnements de test
+Les sandbox constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience digitale. Tout le contenu et les actions réalisés dans un sandbox sont limités à celui-ci et n’en affectent aucun autre. Pour plus d’informations sur les sandbox, consultez la [présentation des sandbox](../../../sandboxes/home.md).
 
-Pour afficher les détails et les rôles attribués à un environnement de test, sélectionnez l’onglet **[!UICONTROL Sandbox]** .
+## Configuration des sandbox
 
-![flac-sandbox-tab](../../images/flac-ui/flac-sandboxes-tab.png)
+Pour afficher les détails et les rôles auxquels un sandbox est affecté/avec, sélectionnez l’onglet **[!UICONTROL Sandbox]**.
 
-Une liste des environnements de test s’affiche. Sélectionnez l’environnement de test à afficher dans la liste. Vous pouvez également utiliser la barre de recherche pour rechercher l’environnement de test en saisissant son nom.
+![flac-sandboxes-tab](../../images/flac-ui/flac-sandboxes-tab.png)
 
-L’onglet Détails fournit un aperçu de l’environnement de test. L’aperçu affiche le nom, le type, la région, la date de modification de l’environnement de test, les personnes ayant modifié l’environnement de test et l’état de l’environnement de test.
+Une liste de sandbox s’affiche. Sélectionnez le sandbox à afficher dans la liste. Vous pouvez également utiliser la barre de recherche pour rechercher le sandbox en saisissant son nom.
 
-![flac-sandbox-details](../../images/flac-ui/flac-sandboxes-details.png)
+L’onglet Détails donne un aperçu du sandbox. La présentation affiche le nom, le type, la région, la date de modification, l’auteur de la modification et le statut du sandbox.
 
-Sélectionnez l’onglet **[!UICONTROL Rôles]** pour afficher les rôles auxquels l’environnement de test est affecté.
+![flac-sandboxes-details](../../images/flac-ui/flac-sandboxes-details.png)
 
-![flac-sandboxes-rôles](../../images/flac-ui/flac-sandboxes-roles.png)
+Sélectionnez l’onglet **[!UICONTROL Rôles]** pour afficher les rôles auxquels le sandbox est affecté.
+
+![flac-sandboxes-roles](../../images/flac-ui/flac-sandboxes-roles.png)
 
 ## Étapes suivantes
 
-Vous avez maintenant appris à afficher les détails de l’environnement de test et les rôles auxquels il est actuellement affecté. Pour un aperçu général des environnements de test en Experience Platform, reportez-vous à la [documentation de présentation des environnements de test](../../sanboxes/../ui/overview.md).
+Vous avez maintenant appris à afficher les détails du sandbox et les rôles qui lui sont actuellement attribués. Pour une présentation générale des sandbox dans Experience Platform, reportez-vous à la [documentation de présentation des sandbox](../../sanboxes/../ui/overview.md).

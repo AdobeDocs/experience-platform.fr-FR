@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès
 title: Gestion des autorisations de rôle du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur la configuration des autorisations pour un rôle dans l’interface Autorisations d’Adobe Experience Cloud.
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 207317d16a21cc2461ebd3f7867735735227c173
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '1608'
-ht-degree: 35%
+source-wordcount: '1699'
+ht-degree: 33%
 
 ---
 
@@ -120,11 +120,17 @@ La vidéo suivante est destinée à vous aider à comprendre la création d’un
 
 ## Gestion des informations d’identification d’API pour un rôle {#manage-api-credentials-for-role}
 
+>[!CONTEXTUALHELP]
+>id="platform_permissions_apicredentials_about"
+>title="Que sont les informations d’identification d’API ?"
+>abstract="Les informations d’identification d’API sont attribuées aux rôles pour accorder aux utilisateurs et aux développeurs l’accès aux API Platform. Grâce aux API Platform, vous pouvez effectuer par programmation des opérations CRUD (Create, Read, Update, Delete) de base sur les données, telles que la configuration des attributs calculés, l’accès aux données/entités, l’exportation des données, la suppression des données ou lots inutiles, etc."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide" text="Guide de l’API Platform"
+
 >[!IMPORTANT]
 >
 > Pour utiliser et gérer les informations d’identification d’API dans [!UICONTROL Autorisations], les utilisateurs doivent disposer de droits d’administrateur système.
 
-Pour utiliser les API de l’Experience Platform en tant qu’utilisateur ou développeur, un administrateur système doit ajouter les informations d’identification de l’API en plus du jeu d’autorisations donné au rôle. Pour obtenir un guide complet sur la création et l’attribution des informations d’identification d’API, ainsi que les autorisations nécessaires, reportez-vous au tutoriel détaillé dans [Authentification et accès aux API Experience Platform ](../../../landing/api-authentication.md#generate-credentials).
+Pour utiliser les API d’Experience Platform en tant qu’utilisateur ou développeur, un administrateur système doit ajouter des informations d’identification d’API en plus du jeu d’autorisations donné à un rôle. Pour obtenir un guide complet sur la création et l’attribution des informations d’identification d’API, ainsi que les autorisations nécessaires, reportez-vous au tutoriel détaillé dans [Authentification et accès aux API Experience Platform](../../../landing/api-authentication.md#generate-credentials).
 
 Sélectionnez l’onglet **[!UICONTROL Informations d’identification de l’API]** pour ouvrir l’espace de travail Informations d’identification de l’API des rôles, puis sélectionnez **[!UICONTROL Ajouter des informations d’identification d’API]** pour affecter les informations d’identification d’API au rôle.
 
@@ -148,7 +154,13 @@ La boîte de dialogue **[!UICONTROL Supprimer les informations d’identificatio
 
 Vous revenez sur l’onglet **[!UICONTROL Informations d’identification d’API]**.
 
-## Gestion des groupes d’utilisateurs pour un rôle
+## Gestion des groupes d’utilisateurs pour un rôle {#manage-user-groups}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_usergroups_about"
+>title="Que sont les groupes d’utilisateurs ?"
+>abstract="Les groupes d’utilisateurs sont des ensembles de plusieurs utilisateurs qui partagent l’accès aux mêmes fonctions. L’accès aux ressources au sein d’une organisation est géré par l’intermédiaire de rôles affectés à des groupes d’utilisateurs."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Gérer les rôles"
 
 Les groupes d’utilisateurs consistent en plusieurs utilisateurs qui ont été regroupés et qui disposent des accès pour exécuter les mêmes fonctions.
 
@@ -174,11 +186,11 @@ La boîte de dialogue **[!UICONTROL Supprimer un groupe d’utilisateurs]** s’
 
 Vous revenez sur l’onglet **[!UICONTROL Groupes d’utilisateurs]**.
 
-## Ajouter des utilisateurs à l’Experience Platform
+## Ajout d’utilisateurs à Experience Platform
 
 En tant qu’administrateur système, vous pouvez accorder l’accès développeur à un utilisateur afin qu’il puisse [créer des intégrations](../../../landing/api-authentication.md#generate-credentials) dans Adobe Developer Console.
 
-Pour ajouter un Experience Platform utilisateur, connectez-vous à l&#39;Admin Console [](https://adminconsole.adobe.com) et sélectionnez **[!UICONTROL Ajouter des utilisateurs]**.
+Pour ajouter un utilisateur Experience Platform, connectez-vous à [Admin Console](https://adminconsole.adobe.com) et sélectionnez **[!UICONTROL Ajouter des utilisateurs]**.
 
 ![Tableau de bord Adobe Admin Console avec l’option Ajouter des utilisateurs mise en surbrillance.](../../images/flac-ui/product-profile-add-users.png)
 

@@ -1,38 +1,44 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;contrôle d’accès basé sur les attributs;ABAC
 title: Gestion des utilisateurs du contrôle d’accès basé sur les attributs
-description: Ce document fournit des informations sur la gestion des utilisateurs et des groupes d’utilisateurs par le biais de l’interface Autorisations dans Adobe Experience Cloud.
+description: Ce document fournit des informations sur la gestion des utilisateurs et des groupes d’utilisateurs via l’interface Autorisations dans Adobe Experience Cloud
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: d410e7ea635471f2bbc93c9d332ad7e2f619d054
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '285'
 ht-degree: 5%
 
 ---
 
-# Gérer les utilisateurs
+# Gérer les utilisateurs {#manage-users}
 
-Si vous souhaitez afficher les détails et les rôles des utilisateurs auxquels ils sont affectés, sélectionnez l’onglet **[!UICONTROL Utilisateurs]** .
+>[!CONTEXTUALHELP]
+>id="platform_permissions_users_about"
+>title="Que sont les utilisateurs ?"
+>abstract="Les utilisateurs sont les personnes qui ont accès à Experience Platform. L’accès d’un utilisateur individuel aux ressources d’une organisation est géré par l’intermédiaire de rôles."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Gérer les rôles"
 
-![Page Utilisateurs affichée avec l&#39;onglet [!UICONTROL Utilisateurs] mis en surbrillance.](../../images/flac-ui/flac-users-tab.png)
+Si vous souhaitez afficher les détails de l’utilisateur et les rôles qui lui sont attribués, sélectionnez l’onglet **[!UICONTROL Utilisateurs]**.
 
-Une liste d’utilisateurs s’affiche. Sélectionnez l’utilisateur que vous souhaitez afficher dans la liste. Vous pouvez également utiliser la barre de recherche pour rechercher l’utilisateur en saisissant son nom ou son adresse électronique.
+![Page Utilisateurs affichée avec l’onglet [!UICONTROL Utilisateurs] en surbrillance.](../../images/flac-ui/flac-users-tab.png)
 
-L’onglet Détails présente un aperçu de l’utilisateur. La présentation affiche le nom des utilisateurs, le type de compte, l’adresse électronique, l’ID d’authentification, les coordonnées et les détails de l’emplacement.
+Une liste d’utilisateurs s’affiche. Sélectionnez l’utilisateur que vous souhaitez afficher dans la liste. Vous pouvez également utiliser la barre de recherche pour rechercher un utilisateur en saisissant son nom ou son adresse e-mail.
 
-![Page de détails de l&#39;utilisateur avec l&#39;onglet [!UICONTROL Détails] et le profil utilisateur mis en surbrillance.](../../images/flac-ui/flac-users-details.png)
+L’onglet Détails donne un aperçu de l’utilisateur. La vue d’ensemble affiche le nom des utilisateurs, le type de compte, l’adresse e-mail, l’identifiant d’authentification, les coordonnées et les détails du lieu.
 
-Sélectionnez l’onglet **[!UICONTROL Rôles]** pour afficher les rôles attribués à l’utilisateur.
+![Page de détails de l’utilisateur avec l’onglet [!UICONTROL Détails] et le profil utilisateur en surbrillance.](../../images/flac-ui/flac-users-details.png)
 
-![Page Rôles affichée avec l&#39;onglet [!UICONTROL Rôles] et rôle en surbrillance.](../../images/flac-ui/flac-users-roles.png)
+Sélectionnez l’onglet **[!UICONTROL Rôles]** pour afficher les rôles auxquels l’utilisateur est affecté.
 
-## Contrôle d’accès des développeurs et des API avec autorisations des Experience Platform
+![Page Rôles affichée avec l’onglet [!UICONTROL Rôles] et le rôle en surbrillance.](../../images/flac-ui/flac-users-roles.png)
+
+## Contrôle d’accès des développeurs et des API avec autorisations Experience Platform
 
 >[!NOTE]
 >
->Seuls les administrateurs système peuvent afficher et gérer les informations d’identification de l’API dans les autorisations.
+>Seuls les administrateurs système ont la possibilité d’afficher et de gérer les informations d’identification d’API dans les autorisations.
 
-La transition vers les autorisations Adobe Experience Platform comprend d’autres étapes à suivre pour le workflow de l’API développeur qui dépendait auparavant des rôles. Pour plus d’informations, consultez le guide sur l’ [authentification API](../../../landing/api-authentication.md) .
+La transition vers les autorisations Adobe Experience Platform comporte des étapes supplémentaires qui doivent être effectuées pour le workflow de l’API de développement qui dépendait précédemment des rôles. Pour plus d’informations, consultez le guide sur l’[authentification des API](../../../landing/api-authentication.md).
 
 La vidéo suivante est destinée à vous aider à comprendre les informations d’identification des développeurs et des API.
 
@@ -40,4 +46,4 @@ La vidéo suivante est destinée à vous aider à comprendre les informations d�
 
 ## Étapes suivantes
 
-Vous avez maintenant appris à afficher les détails des utilisateurs et les rôles auxquels ils sont actuellement ajoutés. Pour en savoir plus sur le contrôle d’accès basé sur les attributs, consultez la [présentation du contrôle d’accès basé sur les attributs](../overview.md).
+Vous avez maintenant appris à afficher les détails de l’utilisateur et les rôles auxquels il est actuellement ajouté. Pour en savoir plus sur le contrôle d’accès basé sur les attributs, consultez la [présentation du contrôle d’accès basé sur les attributs](../overview.md).

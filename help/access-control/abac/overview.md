@@ -3,31 +3,26 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Présentation du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform.
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 37131ce16b70bfaa737ee1cd896d0042e06bab15
 workflow-type: tm+mt
-source-wordcount: '1864'
+source-wordcount: '1860'
 ht-degree: 82%
 
 ---
 
 # Présentation du contrôle d’accès basé sur les attributs {#attribute-based-access-control-overview}
 
->[!CONTEXTUALHELP]
->id="platform_accesscontrol_abac_labelusageaccesspolicy"
->title="Politique d’accès d’utilisation des libellés"
->abstract=""
-
 Le contrôle d’accès basé sur les attributs est une fonctionnalité d’Adobe Experience Platform qui permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs. Les attributs peuvent être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ ou à un segment de schéma. Un administrateur définit des politiques d’accès qui comprennent des attributs afin de gérer les autorisations d’accès des utilisateurs.
 
-Utilisez cette fonctionnalité pour étiqueter les champs de schéma du modèle de données d’expérience (XDM) avec des libellés qui définissent les portées d’utilisation des données ou de l’organisation. En parallèle, les administrateurs peuvent utiliser l’interface d’administration des utilisateurs et des rôles pour définir des politiques d’accès relatives aux champs de schéma XDM. Cela permet ainsi une meilleure gestion des accès accordés aux utilisateurs ou aux groupes d’utilisateurs (utilisateurs internes, externes ou tiers). Enfin, le contrôle d’accès basé sur les attributs permet aux administrateurs de gérer l’accès à des segments spécifiques.
+Utilisez cette fonctionnalité pour libeller les champs de schéma du modèle de données d’expérience (XDM) avec des libellés qui définissent l’utilisation de l’organisation ou des données. En parallèle, les administrateurs peuvent utiliser l’interface d’administration des utilisateurs et des rôles pour définir des politiques d’accès relatives aux champs de schéma XDM. Cela permet ainsi une meilleure gestion des accès accordés aux utilisateurs ou aux groupes d’utilisateurs (utilisateurs internes, externes ou tiers). Enfin, le contrôle d’accès basé sur les attributs permet aux administrateurs de gérer l’accès à des segments spécifiques.
 
 >[!IMPORTANT]
 >
->Le contrôle d’accès basé sur les attributs ne doit pas être confondu avec les fonctionnalités de gouvernance des données des Experience Platform, qui vous permettent d’utiliser des libellés et des stratégies pour contrôler la manière dont les données sont utilisées dans Platform plutôt que les utilisateurs de votre organisation qui y ont accès. Pour plus d’informations, consultez la [présentation de la gouvernance des données](../../data-governance/home.md) .
+>Le contrôle d’accès basé sur les attributs ne doit pas être confondu avec les fonctionnalités de gouvernance des données d’Experience Platform, qui vous permettent d’utiliser des libellés et des politiques pour contrôler l’utilisation des données dans Platform plutôt que de déterminer à qui les utilisateurs et utilisatrices de votre organisation ont accès. Pour plus d’informations, consultez la [présentation de la gouvernance des données](../../data-governance/home.md).
 
 Grâce au contrôle d’accès basé sur les attributs, les administrateurs de votre organisation peuvent contrôler l’accès des utilisateurs aux données personnelles sensibles (SPD), aux informations d’identification personnelle (PII) et à d’autres types de données personnalisées sur l’ensemble des workflows et ressources de Platform. Les administrateurs peuvent définir des rôles d’utilisateur qui n’ont accès qu’à des champs spécifiques et aux données correspondant à ces champs.
 
-La vidéo suivante est destinée à vous aider à comprendre le contrôle d’accès basé sur les attributs et explique comment configurer les rôles, les ressources et les stratégies.
+La vidéo suivante est destinée à vous aider à comprendre le contrôle d’accès basé sur les attributs et explique comment configurer des rôles, des ressources et des politiques.
 
 >[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
 
@@ -51,7 +46,7 @@ Le contrôle d’accès basé sur les attributs comprend les composants suivants
 
 >[!IMPORTANT]
 >
->Une fois que votre organisation est activée pour le contrôle d’accès basé sur les attributs, vous pouvez commencer à utiliser les autorisations sur Adobe Experience Cloud, au lieu des rôles dans Adobe Admin Console, pour gérer les autorisations pour les utilisateurs, les fonctionnalités, les étiquettes et d’autres ressources de votre organisation.
+>Une fois que votre organisation a activé le contrôle d’accès basé sur les attributs, vous pouvez commencer à utiliser les autorisations sur Adobe Experience Cloud, au lieu des rôles dans Adobe Admin Console, pour gérer les autorisations des utilisateurs, les fonctionnalités, les libellés et autres ressources de votre organisation.
 
 La zone dédiée aux autorisations dans Experience Cloud permet aux administrateurs de définir des rôles d’utilisateur et des politiques d’accès. Ils peuvent ainsi gérer les autorisations d’accès aux fonctionnalités et objets dans une application de produit.
 
@@ -67,19 +62,19 @@ Les sections suivantes fournissent des informations sur la manière dont le cont
 
 ### Contrôle d’accès
 
-Platform exploite les rôles [Adobe Admin Console](https://adminconsole.adobe.com) pour lier les utilisateurs à des autorisations et des environnements de test. Les autorisations contrôlent l’accès à de nombreuses fonctionnalités de Platform, notamment la modélisation des données, la gestion des profils et l’administration des sandbox. Une fois que votre organisation est activée pour le contrôle d’accès basé sur les attributs, vous pouvez commencer à utiliser les autorisations sur Adobe Experience Cloud, au lieu des rôles dans Adobe Admin Console, pour gérer les autorisations pour les utilisateurs, les fonctionnalités, les étiquettes et d’autres ressources de votre organisation.
+Platform exploite les rôles [Adobe Admin Console](https://adminconsole.adobe.com) pour lier les utilisateurs à des autorisations et des sandbox. Les autorisations contrôlent l’accès à de nombreuses fonctionnalités de Platform, notamment la modélisation des données, la gestion des profils et l’administration des sandbox. Une fois que votre organisation a activé le contrôle d’accès basé sur les attributs, vous pouvez commencer à utiliser les autorisations sur Adobe Experience Cloud, au lieu des rôles dans Adobe Admin Console, pour gérer les autorisations des utilisateurs, les fonctionnalités, les libellés et autres ressources de votre organisation.
 
 La disponibilité du contrôle d’accès basé sur les attributs est limitée pour les clients qui achètent des offres Healthcare et/ou Privacy Shield. Cette fonctionnalité inclut les éléments suivants :
 
 * Interface des autorisations : permet de définir les rôles utilisateur, les autorisations et les politiques pour le contrôle d’accès basé sur les attributs.
 
-* Étiquetage : ajoutez, modifiez et supprimez des étiquettes pour les rôles utilisateur, les champs de schéma, les segments et d’autres objets pris en charge afin d’exploiter les stratégies de contrôle d’accès. **Remarque :** Tout segment qui utilise un attribut étiqueté doit également être étiqueté si vous souhaitez que les mêmes restrictions d’accès s’y appliquent.
+* Étiquetage : permet d’ajouter, de modifier et de supprimer les libellés des rôles utilisateur, des champs de schéma, des segments et d’autres objets pris en charge, afin d’exploiter les politiques de contrôle d’accès. **Remarque :** tout segment qui utilise un attribut étiqueté doit également être étiqueté si vous souhaitez que les mêmes restrictions d’accès lui soient appliquées.
 
 Les workflows d’administration pour toutes les applications Experience Platform exécutées depuis Admin Console sont en cours de basculement vers la nouvelle interface d’autorisations.
 
 >[!IMPORTANT]
 >
->Vos rôles sont automatiquement migrés vers l’interface Autorisations lorsque votre organisation est activée. Les rôles en Admin Console resteront inchangés pour l’instant. Veuillez **ne pas** modifier vos rôles une fois votre organisation activée.
+>Vos rôles sont automatiquement migrés vers l’interface Autorisations lorsque votre organisation est activée. Les rôles dans Admin Console restent inchangés pour l’instant. Ne modifiez **pas** rôles une fois que votre organisation a été activée.
 
 Pour plus d’informations sur le contrôle d’accès, consultez la [présentation du contrôle d’accès](../home.md).
 
@@ -98,7 +93,7 @@ En tant qu’administrateur, vous pouvez utiliser des fonctionnalités de contr�
 >
 >En résumé, souvenez-vous des implications suivantes quand vous utilisez des destinations et un contrôle d’accès basé sur les attributs :
 >
->* Vous pouvez uniquement activer les audiences auxquelles vous êtes autorisé à accéder et à afficher dans [Audience Portal](/help/segmentation/ui/audience-portal.md#browse) et [sélectionner l’étape de segment](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) du workflow d’activation.
+>* Vous pouvez activer uniquement les audiences auxquelles vous avez l’autorisation d’accéder et que vous pouvez afficher dans [Audience Portal](/help/segmentation/ui/audience-portal.md#browse) et [l’étape de sélection de segment](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) du workflow d’activation.
 >* Dans l’[étape de mappage du processus d’activation](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), vous pouvez uniquement afficher et sélectionner pour activation les champs auxquels vous avez accès.
 >* Si vous souhaitez activer des segments supplémentaires vers une destination existante et que vous n’avez pas accès à tous les champs mappés à l’exportation, le workflow d’activation est bloqué pour vous.
 
@@ -125,7 +120,7 @@ En tant qu’administrateur, vous pouvez utiliser des fonctionnalités de contr�
 
 Pour plus d’informations sur Profil, consultez la [Présentation des profils](../../profile/home.md).
 
-### Segmentation Service
+### Service de segmentation
 
 [!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
 
@@ -142,7 +137,7 @@ Le modèle de données d’expérience (XDM) est une spécification open source 
 
 Avec le contrôle d’accès basé sur les attributs, vous pouvez :
 
-* [appliquer des étiquettes d’utilisation des données aux groupes et classes de champs](../../xdm/tutorials/labels.md). Cela permet à plusieurs schémas avec les mêmes groupes ou classes de champs d’avoir des champs balisés avec les mêmes attributs, selon les configurations au niveau du groupe de champs ou de la classe ;
+* [appliquer des étiquettes d’utilisation des données aux groupes et classes de champs](../../xdm/tutorials/labels.md). Cela permet d’avoir plusieurs schémas avec les mêmes groupes ou classes de champs et ayant des champs balisés avec les mêmes attributs, selon les configurations au niveau du groupe ou de la classe des champs ;
 * Configurer l’accès des utilisateurs et utilisatrices avec des champs de schéma XDM spécifiques en fonction des jeux d’autorisations appliqués aux rôles affectés aux utilisateurs et utilisatrices.
 
 Pour plus d’informations sur XDM, consultez la [présentation du système XDM](../../xdm/home.md).
