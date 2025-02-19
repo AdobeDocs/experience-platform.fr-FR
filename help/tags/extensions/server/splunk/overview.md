@@ -2,7 +2,7 @@
 title: Présentation de l’extension Splunk
 description: Découvrez l’extension Splunk pour le transfert d’événement dans Adobe Experience Platform.
 exl-id: 653b5897-493b-44f2-aeea-be492da2b108
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 98%
@@ -38,6 +38,7 @@ Pour configurer l’extension, vous devez également disposer des valeurs techni
 
 * Un [jeton de collecteur d’événements](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector#Create_an_Event_Collector_token_on_Splunk_Cloud_Platform). Les jetons sont généralement au format UUIDv4, comme celui-ci : `12345678-1234-1234-1234-1234567890AB`.
 * L’adresse et port de l’instance de plateforme Splunk pour votre organisation. L’adresse et le port d’une instance de plateforme adoptent généralement le format suivant : `mysplunkserver.example.com:443`.
+
   >[!IMPORTANT]
   >
   > Les points d’entrée Splunk référencés dans le transfert d’événement ne doivent utiliser que le port `443`. Les ports non standard ne sont actuellement pas pris en charge dans les implémentations de transfert d’événement.
@@ -92,6 +93,6 @@ Après avoir créé et exécuté la règle de transfert d’événement, vérifi
 
 Ce document explique comment installer et configurer l’extension de transfert d’événement Splunk dans l’interface utilisateur. Pour plus d’informations sur la collecte de données d’événement dans Splunk, consultez la documentation officielle :
 
-* [Configuration et utilisation du collecteur d’événements HTTP dans Splunk Web](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector)
+* [Configurer et utiliser le collecteur d’événements HTTP dans Splunk Web](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector)
 * [Configurer l’authentification avec des jetons](https://docs.splunk.com/Documentation/Splunk/8.2.5/Security/Setupauthenticationwithtokens#Prerequisites_for_activating_tokens)
 * [Dépannage du collecteur d’événements HTTP](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector) (répertorie également un compendium de [codes d’erreur possibles](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector#Possible_error_codes))

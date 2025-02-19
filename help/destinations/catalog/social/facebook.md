@@ -3,7 +3,7 @@ keywords: connexion facebook;connexion facebook;destinations facebook;facebook;i
 title: Connexion Facebook
 description: Activez les profils dans vos campagnes Facebook pour cibler votre audience et effectuer des personnalisat ions ou encore des suppressions reposant sur les e-mails hachés.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '2091'
 ht-degree: 28%
@@ -18,7 +18,7 @@ Activez les profils de vos campagnes [!DNL Facebook] pour le ciblage, la personn
 
 Vous pouvez utiliser cette destination pour le ciblage d’audience dans [!DNL Facebook's] famille d’applications prises en charge par [!DNL Custom Audiences], notamment [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] et [!DNL Messenger]. La sélection de l’application sur laquelle vous souhaitez exécuter la campagne est indiquée au niveau de l’emplacement dans [!DNL Facebook Ads Manager].
 
-Destination ![Facebook dans l’interface utilisateur de Adobe Experience Platform.](../../assets/catalog/social/facebook/catalog.png)
+![Destination Facebook dans l’interface utilisateur de Adobe Experience Platform.](../../assets/catalog/social/facebook/catalog.png)
 
 ## Cas d’utilisation
 
@@ -54,7 +54,7 @@ Cette section décrit les types d’audiences que vous pouvez exporter vers cett
 
 | Origine de l’audience | Pris en charge | Description |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiences générées via l’Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Audiences générées via Experience Platform [Segmentation Service](../../../segmentation/home.md). |
 | Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
@@ -70,20 +70,23 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 {style="table-layout:auto"}
 
-## Conditions préalables relatives au compte facebook {#facebook-account-prerequisites}
+## Conditions préalables relatives au compte Facebook {#facebook-account-prerequisites}
 
 Avant d’envoyer vos audiences à [!DNL Facebook], veillez à respecter les exigences suivantes :
 
 * Votre compte utilisateur [!DNL Facebook] doit disposer d’un accès complet au [!DNL Facebook Business Account] propriétaire du compte publicitaire que vous utilisez.
 * L’autorisation **[!DNL Manage campaigns]** doit être activée pour votre compte utilisateur [!DNL Facebook] pour le compte publicitaire que vous prévoyez d’utiliser.
-* Le compte professionnel **Adobe Experience Cloud** doit être ajouté en tant que partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Voir [Ajouter des partenaires à votre Business Manager](https://www.facebook.com/business/help/1717412048538897) dans la documentation de Facebook pour plus d’informations.
+* Le compte professionnel **Adobe Experience Cloud** doit être ajouté en tant que partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Voir [Ajouter des partenaires à votre Business Manager](https://www.facebook.com/business/help/1717412048538897) dans la documentation Facebook pour plus d’informations.
+
   >[!IMPORTANT]
   >
   > Lors de la configuration des autorisations pour Adobe Experience Cloud, vous devez activer l’autorisation **Gérer des campagnes**. L’autorisation est requise pour l’intégration [!DNL Adobe Experience Platform].
+
 * Lisez et signez les Conditions d’utilisation [!DNL Facebook Custom Audiences]. Pour ce faire, rendez-vous sur `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973`, où `accountID` est votre [!DNL Facebook Ad Account ID]. Assurez-vous que la section `business_id=206617933627973` est présente dans l’URL lorsque vous signez les Conditions d’utilisation.
+
   >[!IMPORTANT]
   >
-  >Lors de la signature des conditions d’utilisation de [!DNL Facebook Custom Audiences], veillez à utiliser le même compte utilisateur que celui utilisé pour vous authentifier dans l’API Facebook.
+  >Lors de la signature des Conditions d’utilisation de [!DNL Facebook Custom Audiences], veillez à utiliser le même compte utilisateur que celui utilisé pour vous authentifier dans l’API Facebook.
 
 ## Exigences de correspondance des identifiants {#id-matching-requirements}
 
@@ -127,7 +130,7 @@ Si vous choisissez de hacher les adresses e-mail vous-même, veillez à respecte
 
 ## Utilisation d’espaces de noms personnalisés {#custom-namespaces}
 
-Avant de pouvoir utiliser l’espace de noms `Extern_ID` pour envoyer des données à [!DNL Facebook], veillez à synchroniser vos propres identifiants à l’aide de [!DNL Facebook Pixel]. Pour plus d’informations, consultez la documentation officielle de [Facebook](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers).
+Avant de pouvoir utiliser l’espace de noms `Extern_ID` pour envoyer des données à [!DNL Facebook], veillez à synchroniser vos propres identifiants à l’aide de [!DNL Facebook Pixel]. Voir la [documentation officielle de Facebook](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) pour plus d’informations.
 
 ## Se connecter à la destination {#connect}
 
@@ -149,12 +152,12 @@ La vidéo ci-dessous montre également les étapes à suivre pour configurer une
 
 1. Recherchez la destination Facebook dans le catalogue de destinations et sélectionnez **[!UICONTROL Configurer]**.
 2. Sélectionnez **[!UICONTROL Se connecter à la destination]**.
-   ![Étape S’authentifier auprès de Facebook affichée dans le workflow d’activation.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
-3. Saisissez vos informations d’identification Facebook et sélectionnez **Connexion**.
+   ![Étape S’authentifier sur Facebook affichée dans le workflow d’activation.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+3. Saisissez vos identifiants Facebook et sélectionnez **Connexion**.
 
 ### Actualiser les informations d’identification d’authentification {#refresh-authentication-credentials}
 
-Les jetons facebook expirent tous les 60 jours. Une fois le jeton expiré, les exportations de données vers la destination cessent de fonctionner. Pour éviter cette situation, réauthentifiez-vous en procédant comme suit :
+Les jetons Facebook expirent tous les 60 jours. Une fois le jeton expiré, les exportations de données vers la destination cessent de fonctionner. Pour éviter cette situation, réauthentifiez-vous en procédant comme suit :
 
 1. Accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Comptes]**
 2. (Facultatif) Utilisez les filtres disponibles sur la page pour afficher uniquement les comptes Facebook.
@@ -218,7 +221,7 @@ Voir [Activer les données d’audience vers des destinations d’export d’aud
 
 Dans l’étape **[!UICONTROL Planning des segments]** vous devez indiquer l’[!UICONTROL origine de l’audience] lors de l’envoi d’audiences à [!DNL Facebook Custom Audiences].
 
-![Liste déroulante Origine de l’audience affichée à l’étape d’activation de Facebook.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Liste déroulante Origine de l’audience affichée à l’étape d’activation Facebook.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ### Exemple de mappage : activation des données d’audience dans [!DNL Facebook Custom Audience] {#example-facebook}
 
@@ -271,6 +274,6 @@ Cette erreur se produit lorsque les clients utilisent des comptes nouvellement c
 >
 >Veillez à accepter le [!DNL Facebook Custom Audience Terms of Service] sous `business ID 206617933627973`, comme illustré dans le modèle d’URL de la section [Conditions préalables du compte](#facebook-account-prerequisites).
 
-Si vous recevez le message d’erreur `400 Bad Request` après avoir suivi les étapes des conditions préalables du compte [Facebook](#facebook-account-prerequisites) patientez quelques jours pour que les autorisations [!DNL Facebook] prennent effet.
+Si vous recevez le message d’erreur `400 Bad Request` après avoir suivi les étapes de la section [Conditions préalables du compte Facebook](#facebook-account-prerequisites), patientez quelques jours pour que les autorisations [!DNL Facebook] prennent effet.
 
 
