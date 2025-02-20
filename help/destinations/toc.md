@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: e2dfa2ee23d854ff3a8ecba4a1cf3e4a1e72f0f7
+source-git-commit: f6fb88cbc89d419e3dbb39c9cc8958f9455b2953
 workflow-type: tm+mt
-source-wordcount: '1269'
+source-wordcount: '1268'
 ht-degree: 83%
 
 ---
@@ -46,8 +46,8 @@ ht-degree: 83%
       * [Activer les audiences vers des destinations sélectionnées en fonction des identifiants LiveRamp](./ui/activate-curated-destinations.md)
       * [Activer les audiences de prospects vers des destinations](./ui/activate-prospect-audiences.md)
       * [Activer les audiences de compte vers les destinations](./ui/activate-account-audiences.md)
-      * [Exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur Experience Platform](./ui/export-file-now.md)
-      * [Exporter des jeux de données à l’aide de l’interface utilisateur Experience Platform](./ui/export-datasets.md)
+      * [Exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur d’Experience Platform](./ui/export-file-now.md)
+      * [Exporter des jeux de données à l’aide de l’interface utilisateur d’Experience Platform](./ui/export-datasets.md)
       * [(Version bêta) Utiliser l’attribut XDM de l’heure de la dernière qualification dans les nouvelles destinations de stockage dans le cloud en version bêta](./ui/activate-last-qualification-time.md)
       * [Utiliser des champs calculés pour exporter des tableaux en tant que chaînes](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Afficher les détails de la destination](./ui/destination-details-page.md)
@@ -64,7 +64,7 @@ ht-degree: 83%
       * [Présentation des destinations Adobe](./catalog/adobe/overview.md)
       * [Audiences Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Connexion Marketo Engage](./catalog/adobe/marketo-engage.md)
-      * [(Beta) Connexion de synchronisation de personne avec Marketo Engage](./catalog/adobe/marketo-engage-person-sync.md)
+      * [(Beta) Connexion de synchronisation des personnes Marketo Engage](./catalog/adobe/marketo-engage-person-sync.md)
       * [Connexion Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
       * [Partage d’audiences Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr)
       * [Connexion à la composition d’audiences fédérées](https://www.adobe.com/go/destinations-federated-audience-composition)
@@ -78,7 +78,7 @@ ht-degree: 83%
       * [Extension Awin Advertiser Mastertag](./catalog/advertising/awin-mastertag.md)
       * [Extension Bing Ads Universal Event Tracking (UET)](./catalog/advertising/bing-ads.md)
       * [Extension Branch](./catalog/advertising/branch.md)
-      * [(Version bêta) Connexion Criteo](./catalog/advertising/criteo.md)
+      * [Connexion Criteo](./catalog/advertising/criteo.md)
       * [Connexion Demandbase](./catalog/advertising/demandbase.md)
       * [Extension DoubleClick Floodlight (Version Beta)](./catalog/advertising/doubleclick-floodlight.md)
       * [Extension Pixel Facebook](./catalog/advertising/facebook-pixel.md)
@@ -204,7 +204,7 @@ ht-degree: 83%
    * Destinations sociales{#social}
       * [Présentation des destinations sociales](./catalog/social/overview.md)
       * [Connexion Facebook](./catalog/social/facebook.md)
-      * [(Entreprises) Connexion Audiences LinkedIn correspondantes](./catalog/social/linkedin-b2b.md)
+      * [Connexion à LinkedIn Matched Audiences (Entreprises)](./catalog/social/linkedin-b2b.md)
       * [Connexion des audiences correspondantes linkedIn](./catalog/social/linkedin.md)
       * [Connexion à TikTok](./catalog/social/tiktok.md)
       * [Connexion [!DNL Twitter Custom Audiences]](./catalog/social/twitter.md)
