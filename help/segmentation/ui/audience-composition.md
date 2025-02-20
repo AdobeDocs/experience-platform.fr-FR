@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur d’Audiences
 description: La Composition d’audience dans l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail propose des commandes intuitives pour créer et modifier des audiences pour votre organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 3c0fdab5d7561238a64e79e5bab5fd4843fccb0a
+source-git-commit: 65871f307468428ee0e3b67c1a6577e913f3a312
 workflow-type: tm+mt
-source-wordcount: '1952'
-ht-degree: 80%
+source-wordcount: '2228'
+ht-degree: 70%
 
 ---
 
@@ -28,7 +28,7 @@ La fenêtre contextuelle **[!UICONTROL Propriétés de la composition]** s’aff
 
 >[!NOTE]
 >
->Si vous n’attribuez pas **non** à votre composition un titre, celui-ci sera &quot;Composition&quot; suivi par la date et l’heure de création par défaut. De plus, chaque composition **must** possède son propre nom unique.
+>Si vous ne donnez **pas** à votre composition un titre, elle aura un titre de « Composition » suivi par la date et l’heure de création par défaut. En outre, chaque composition **doit** possède son propre nom unique.
 
 Après avoir mis à jour les détails de votre composition, sélectionnez **[!UICONTROL Enregistrer]** pour confirmer ces mises à jour. La zone de travail de composition de l’audience réapparaît.
 
@@ -36,7 +36,17 @@ La zone de travail de composition de l’audience se compose de quatre types de
 
 ## [!UICONTROL Audience] {#audience-block}
 
-Le type de bloc **[!UICONTROL Audience]** permet d’ajouter les sous-audiences de votre choix pour composer votre nouvelle audience plus grande. Par défaut, un bloc **[!UICONTROL Audience]** est inclus dans la partie supérieure de la zone de travail de composition.
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_audience"
+>title="Bloc d’audience"
+>abstract="Le bloc Audience permet d’identifier les sous-audiences que vous souhaitez utiliser pour composer votre nouvelle audience."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_merge_types"
+>title="Types de fusion"
+>abstract="Les types de fusion déterminent le mode de combinaison des sous-audiences sélectionnées. Les valeurs prises en charge sont Union, Intersection et Exclure le chevauchement."
+
+Le type de bloc **[!UICONTROL Audience]** permet d’ajouter les sous-audiences que vous souhaitez utiliser pour composer votre nouvelle audience plus grande. Par défaut, un bloc **[!UICONTROL Audience]** est inclus dans la partie supérieure de la zone de travail de composition.
 
 Lorsque vous sélectionnez le bloc **[!UICONTROL Audience]**, le rail de droite affiche des commandes d’étiquetage de l’audience, d’ajout d’audiences au bloc et de création de règles personnalisées pour le bloc d’audience.
 
@@ -54,9 +64,9 @@ Pour ajouter des audiences au bloc Audience : Sélectionnez **[!UICONTROL Ajout
 
 >[!IMPORTANT]
 >
->Notez que les audiences **uniquement** définies à l’aide de la stratégie de fusion par défaut s’affichent.
+>Notez que **seules** les audiences définies à l’aide de la politique de fusion par défaut s’affichent.
 >
->En outre, seules les audiences **publiées** créées à l’aide du créateur de segments peuvent être utilisées. Les audiences créées à l’aide de la composition d’audience et des audiences générées en externe sont **non** disponibles.
+>En outre, seules les audiences **publiées** créées à l’aide du créateur de segments peuvent être utilisées. Les audiences créées à l’aide de la composition de l’audience et les audiences générées en externe ne sont **pas** disponibles.
 
 Une liste d’audiences s’affiche. Sélectionnez les audiences que vous souhaitez inclure, puis **[!UICONTROL Ajouter]** pour les ajouter à votre bloc d’audience.
 
@@ -88,7 +98,17 @@ Une fois que vous avez ajouté une règle personnalisée, sélectionnez **[!UICO
 
 ## [!UICONTROL Exclure] {#exclude-block}
 
-Le type de bloc **[!UICONTROL Exclure]** vous permet d’exclure une sous-audience ou des attributs spécifiés de votre nouvelle audience plus large.
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude"
+>title="Exclure le bloc"
+>abstract="Le bloc Exclure permet d’exclure des audiences ou attributs spécifiés de votre composition."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude_type"
+>title="Type d’exclusion"
+>abstract="Vous pouvez exclure les profils appartenant à une audience spécifique (Exclure par audience) ou exclure les profils en fonction d’un attribut spécifique (Exclure par attribut)."
+
+Le type de bloc **[!UICONTROL Exclure]** permet d’exclure une sous-audience ou des attributs spécifiés de votre nouvelle audience plus grande.
 
 Pour ajouter un bloc **[!UICONTROL Exclure]**, sélectionnez l’icône **+**, puis **[!UICONTROL Exclure]**.
 
@@ -106,9 +126,9 @@ Si vous excluez par audience, vous pouvez sélectionner l’audience à exclure 
 
 >[!IMPORTANT]
 >
->Seules les audiences **publiées** créées à l’aide du créateur de segments peuvent être utilisées. Les audiences créées à l’aide de la composition d’audience et des audiences générées en externe sont **non** disponibles.
+>Seules les audiences **publiées** créées à l’aide du créateur de segments peuvent être utilisées. Les audiences créées à l’aide de la composition de l’audience et les audiences générées en externe ne sont **pas** disponibles.
 
-Une liste d’audiences s’affiche. Sélectionnez **[!UICONTROL Ajouter]** pour ajouter l’audience que vous souhaitez exclure à votre bloc d’exclusion.
+Une liste d’audiences s’affiche. Sélectionnez **[!UICONTROL Ajouter]** pour ajouter l’audience à exclure à votre bloc d’exclusion.
 
 ![Une liste d’audiences s’affiche. Dans cette boîte de dialogue, vous pouvez sélectionner l’audience à ajouter.](../images/ui/audience-composition/select-audience.png)
 
@@ -124,9 +144,29 @@ Une liste d’attributs de profil s’affiche. Sélectionnez le type d’attribu
 
 >[!IMPORTANT]
 >
->Lors de l’exclusion par attribut, vous ne pouvez spécifier que la valeur **one** à exclure. L’utilisation de n’importe quel séparateur, tel qu’une virgule ou un point-virgule, n’entraîne que l’exclusion de cette valeur exacte. Par exemple, si vous définissez la valeur sur `red, blue`, le terme `red, blue` sera exclu de l’attribut, mais **not** entraînera l’exclusion du terme `red` ou `blue`.
+>Lors de l’exclusion par attribut, vous ne pouvez spécifier qu’**une seule valeur** exclure. L’utilisation d’un type de séparateur, tel qu’une virgule ou un point-virgule, entraîne uniquement l’exclusion de cette valeur exacte. Par exemple, la définition de la valeur sur `red, blue` entraîne l’exclusion du terme `red, blue` de l’attribut, mais **pas** l’exclusion du terme `red` ou `blue`.
 
 ## [!UICONTROL Enrichir] {#enrich-block}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich"
+>title="Enrichir le bloc"
+>abstract="Le bloc Enrichir vous permet d’enrichir votre audience avec des attributs supplémentaires provenant de jeux de données Adobe Experience Platform."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_dataset"
+>title="Jeu de données d’enrichissement"
+>abstract="Le jeu de données d’enrichissement contient les données que vous souhaitez associer à la composition."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich_criteria"
+>title="Critères d’enrichissement"
+>abstract="Les critères d’enrichissement incluent la clé de jointure Source et la clé de jointure du jeu de données d’enrichissement. Ces deux clés réconcilient le jeu de données source et le jeu de données d’enrichissement."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich_attributes"
+>title="Attributs d’enrichissement"
+>abstract="Les attributs d’enrichissement sont les attributs que vous souhaitez associer à la composition."
 
 >[!IMPORTANT]
 >
@@ -206,6 +246,16 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ## [!UICONTROL Classement] {#rank-block}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_ranking"
+>title="Bloc de classement"
+>abstract="Le bloc Classement vous permet de classer les profils en fonction d’un attribut spécifique et de les inclure dans votre composition."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_rank_profilelimit_text"
+>title="Ajouter une limite de profil"
+>abstract="Le bouton (bascule) Ajouter une limite de profil permet de spécifier un nombre maximal de profils à inclure dans le cadre du processus de classement."
+
 Le type de bloc **[!UICONTROL Classement]** permet de classer et de trier les profils en fonction d’un attribut spécifié et d’inclure ces profils classés dans votre composition.
 
 Pour ajouter un bloc **[!UICONTROL Classement]**, sélectionnez l’icône **+**, puis **[!UICONTROL Classement]**.
@@ -226,13 +276,28 @@ Une liste d’attributs de profil s’affiche. Dans cette fenêtre contextuelle,
 
 Après avoir sélectionné l’attribut, vous pouvez sélectionner l’ordre de classement. Il s’agit d’un ordre croissant (du plus bas au plus élevé) ou décroissant (du plus élevé au plus bas).
 
-De plus, vous pouvez limiter le nombre de profils renvoyés en activant le bouton d’activation/désactivation **[!UICONTROL Ajouter la limite de profil]** . Lorsque ce bouton est activé, vous pouvez définir le nombre maximal de profils renvoyés dans le champ **[!UICONTROL Profils inclus]**.
+En outre, vous pouvez limiter le nombre de profils renvoyés en activant le bouton **[!UICONTROL Ajouter une limite de profil]**. Lorsque ce bouton est activé, vous pouvez définir le nombre maximal de profils renvoyés dans le champ **[!UICONTROL Profils inclus]**.
 
-![Le bouton bascule Ajouter la limite du profil est mis en surbrillance, ce qui vous permet de limiter le nombre de profils renvoyés.](../images/ui/audience-composition/add-profile-limit.png)
+![Le bouton (bascule) Ajouter une limite de profil est mis en surbrillance, ce qui vous permet de limiter le nombre de profils renvoyés.](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL Fractionner] {#split-block}
 
-Le type de bloc **[!UICONTROL Fractionner]** vous permet de fractionner votre nouvelle audience en différentes sous-audiences. Vous pouvez fractionner cette audience en fonction d’un pourcentage ou d’un attribut. Lors de la division de votre audience en sous-audiences, cette division est **non** persistante. Cela signifie que les profils peuvent se trouver dans différentes sous-audiences pour chaque évaluation.
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split"
+>title="Fractionner le bloc"
+>abstract="Le bloc Fractionner permet de diviser votre composition en plusieurs chemins d’accès."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_type"
+>title="Type Partage"
+>abstract="Vous pouvez fractionner votre composition par Partage en pourcentage ou Partage des attributs. Le pourcentage de partage divise les profils de manière aléatoire en plusieurs chemins d’accès. Le partage des attributs permet de partager les profils en fonction d’un attribut spécifié."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_otherprofiles_text"
+>title="Autres profils"
+>abstract="Le bouton « Autres profils » vous permet de créer un chemin d’accès supplémentaire avec les profils restants qui ne correspondent à aucune des conditions spécifiées des autres chemins d’accès."
+
+Le type de bloc **[!UICONTROL Fractionner]** vous permet de fractionner votre nouvelle audience en différentes sous-audiences. Vous pouvez fractionner cette audience en fonction d’un pourcentage ou d’un attribut. Lors de la division de votre audience en sous-audiences, cette division n’est **pas** persistante. Cela signifie que les profils peuvent se trouver dans différentes sous-audiences pour chaque évaluation.
 
 Pour ajouter un bloc **[!UICONTROL Fractionner]**, sélectionnez l’icône **+**, puis **[!UICONTROL Fractionner]**.
 
@@ -270,16 +335,16 @@ En outre, vous pouvez activer le bouton **[!UICONTROL Autres profils]** pour cr�
 
 >[!IMPORTANT]
 >
->Lors de la publication de la composition de votre audience, il peut s’écouler jusqu’à 48 heures avant qu’elle ne soit évaluée et activée pour être utilisée dans des services en aval tels qu’une destination Real-Time CDP ou un canal Adobe Journey Optimizer.
+>Lors de la publication de la composition de votre audience, notez qu’il peut s’écouler jusqu’à 48 heures avant qu’elle soit évaluée et activée pour une utilisation dans des services en aval tels qu’une destination Real-Time CDP ou un canal Adobe Journey Optimizer.
 
-Après avoir créé votre composition, vous pouvez l’enregistrer et la publier en sélectionnant **[!UICONTROL Publish]**.
+Après avoir créé votre composition, vous pouvez l’enregistrer et la publier en sélectionnant **[!UICONTROL Publier]**.
 
-![Le bouton Publish est mis en surbrillance et vous montre comment enregistrer et publier votre composition.](../images/ui/audience-composition/publish.png)
+![Le bouton Publier est mis en surbrillance et vous montre comment enregistrer et publier votre composition.](../images/ui/audience-composition/publish.png)
 
 En cas d’erreur lors de la création de l’audience, une alerte s’affiche, vous indiquant comment résoudre le problème.
 
-![Le bouton Publish est mis en surbrillance et vous montre comment enregistrer et publier votre composition.](../images/ui/audience-composition/audience-alert.png)
+![Le bouton Publier est mis en surbrillance et vous montre comment enregistrer et publier votre composition.](../images/ui/audience-composition/audience-alert.png)
 
 ## Étapes suivantes
 
-Composition d’audience fournit un workflow riche qui vous permet de créer des compositions à partir des différents types de blocs. Pour en savoir plus sur d’autres parties de l’interface utilisateur de Segmentation Service, veuillez lire le [Guide d’utilisation de Segmentation Service](./overview.md).
+La composition de l’audience fournit un workflow complet qui vous permet de créer des compositions à partir des différents types de bloc. Pour en savoir plus sur d’autres parties de l’interface utilisateur de Segmentation Service, veuillez lire le [Guide d’utilisation de Segmentation Service](./overview.md).
