@@ -5,10 +5,10 @@ product: experience platform
 type: Documentation
 description: Découvrez les performances et les mécanismes de sécurisation appliqués par le système pour les données de profil et la segmentation, afin de garantir une utilisation optimale des fonctionnalités de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1150b7726a7cabe6df6bbc7a850fb4d48afa208e
+source-git-commit: 5d972b6b4f59ca58ff3c4b76383db9ee7667dba3
 workflow-type: tm+mt
-source-wordcount: '2511'
-ht-degree: 58%
+source-wordcount: '2523'
+ht-degree: 57%
 
 ---
 
@@ -118,7 +118,7 @@ Les mécanismes de sécurisation décrits dans cette section font référence au
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --------- | ----- | ---------- | ----------- |
-| Audiences par sandbox | 4 000 | Mécanisme de sécurisation des performances | Vous pouvez avoir jusqu’à 4 000 audiences **actives** par sandbox. Vous pouvez avoir plus de 4 000 sandbox par organisation, à condition qu’il y ait moins de 4 000 audiences dans chaque sandbox **individuel**. Cela inclut les audiences par lots, en flux continu et Edge. Toute tentative de création d’audiences supplémentaires peut affecter les performances du système. En savoir plus sur la [création d’audiences](/help/segmentation/ui/segment-builder.md) via le créateur de segments. |
+| Audiences par sandbox | 4 000 | Mécanisme de sécurisation des performances | Vous pouvez avoir jusqu’à 4 000 audiences **actives** par sandbox. Vous pouvez avoir plus de 4 000 audiences par organisation, à condition qu’il y en ait moins de 4 000 dans chaque sandbox **individuel**. Cela inclut les audiences par lots, en flux continu et Edge. Toute tentative de création d’audiences supplémentaires peut affecter les performances du système. En savoir plus sur la [création d’audiences](/help/segmentation/ui/segment-builder.md) via le créateur de segments. |
 | Audiences Edge par sandbox | 150 | Mécanisme de sécurisation des performances | Vous pouvez avoir jusqu’à 150 audiences Edge **actives** par sandbox. Vous pouvez avoir plus de 150 audiences Edge par organisation, à condition qu’il y en ait moins de 150 dans chaque sandbox **individuel**. Toute tentative de création d’audiences Edge supplémentaires peut affecter les performances du système. En savoir plus sur les [ audiences Edge ](/help/segmentation/methods/edge-segmentation.md). |
 | Débit d’Edge dans tous les sandbox | 1 500 TR/S | Mécanisme de sécurisation des performances | La segmentation d’Edge prend en charge une valeur maximale de 1 500 événements entrants par seconde entrant dans l’Edge Network Adobe Experience Platform. La segmentation Edge peut prendre jusqu’à 350 millisecondes pour traiter un événement entrant après qu’il a accédé à Adobe Experience Platform Edge Network. En savoir plus sur les [ audiences Edge ](/help/segmentation/methods/edge-segmentation.md). |
 | Audiences de diffusion en continu par sandbox | 500 | Mécanisme de sécurisation des performances | Vous pouvez avoir jusqu’à 500 audiences **actives** en flux continu par sandbox. Vous pouvez avoir plus de 500 audiences de diffusion en continu par organisation, à condition qu’il y en ait moins de 500 dans chaque sandbox **individuel**. Cela inclut les audiences en flux continu et Edge. Toute tentative de création d’audiences de diffusion en continu supplémentaires peut affecter les performances du système. En savoir plus sur les [ audiences de diffusion en continu ](/help/segmentation/methods/streaming-segmentation.md). |
@@ -162,7 +162,7 @@ Les attributs indépendants du temps, également appelés « données d’enreg
 
 Bien que la banque de données de profil conservant les données de profil ne soit pas un magasin relationnel, Profile permet l’intégration à de petites entités de dimension afin de créer des audiences d’une manière simplifiée et intuitive. Cette intégration est connue sous le nom de [ segmentation d’entités multiples ](../segmentation/tutorials/multi-entity-segmentation.md).
 
-Votre entreprise peut également définir des classes XDM pour décrire des éléments autres que des individus, tels que des magasins, des produits ou des propriétés. Ces schémas non [!DNL XDM Individual Profile] sont appelés « entités de dimension » (également appelées « entités de recherche ») et ne contiennent pas de données de série temporelle. Les schémas qui représentent des entités de dimension sont liés à des entités de profil par le biais de l’utilisation de [relations de schéma](../xdm/tutorials/relationship-ui.md).
+Votre entreprise peut également définir des classes XDM pour décrire des éléments autres que des individus, tels que des magasins, des produits ou des propriétés. Ces schémas, qui sont modélisés à l’aide de classes XDM autres que la classe XDM Individual Profile, sont appelés « entités de dimension » (également appelées « entités de recherche ») et ne contiennent pas de données de série temporelle. Les schémas qui représentent des entités de dimension sont liés à des entités de profil par le biais de l’utilisation de [relations de schéma](../xdm/tutorials/relationship-ui.md).
 
 Les entités de dimension fournissent des données de recherche qui aident et simplifient les définitions de segment multi-entités. Elles doivent être suffisamment petites pour que le moteur de segmentation puisse charger l’ensemble des données en mémoire pour un traitement optimal (recherche de point rapide).
 
