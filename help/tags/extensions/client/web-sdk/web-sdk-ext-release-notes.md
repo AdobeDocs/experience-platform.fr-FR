@@ -5,7 +5,7 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 source-git-commit: 5bf69773d0502185bbe8db3b13cb2684d6d06ac4
 workflow-type: tm+mt
 source-wordcount: '2413'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -17,14 +17,14 @@ Ce document contient les notes de mise à jour de l’extension de balises du SD
 
 **Correctifs et améliorations**
 
-- Correction d’un problème en raison duquel les remplacements du conteneur de synchronisation des identifiants ne pouvaient pas être définis sans activer l’Audience Manager.
+- Correction d’un problème en raison duquel les remplacements du conteneur de synchronisation des identifiants ne pouvaient pas être définis sans activer Audience Manager.
 - Correction d’un problème en raison duquel les remplacements de configuration des trains de données étaient désactivés lors de la mise à niveau vers la dernière version.
-- Correction d’un problème en raison duquel les utilisateurs ne pouvaient pas enregistrer les paramètres de collecte de clics automatiques de Target.
+- Correction d’un problème en raison duquel les utilisateurs et les utilisatrices ne pouvaient pas enregistrer les paramètres de collecte de clics automatiques de Target.
 
 **Nouvelles fonctionnalités**
 
 - Ajout d’une nouvelle fonctionnalité permettant de basculer entre les noms techniques et les noms d’affichage dans l’objet XDM.
-- Contient [version 2.25.0](../../../../web-sdk/release-notes.md#2-25-0) du SDK Web Adobe Experience Platform.
+- Contient la [version 2.25.0](../../../../web-sdk/release-notes.md#2-25-0) du SDK web d’Adobe Experience Platform.
 
 ## Version 2.27.0 - 31 octobre 2024
 
@@ -266,7 +266,7 @@ Contient la version 2.7.0 de la bibliothèque SDK Web Adobe Experience Platfo
 
 Contient la version 2.6.4 de la bibliothèque SDK Web Adobe Experience Platform.
 
-- Il n’existe plus d’avertissement d’obsolescence pour `container.buildInfo.environment.`.
+- Il n’existe plus d’avertissement d’obsolescence pour `container.buildInfo.environment.`
 
 ## Version 2.7.0 - 16 août 2021
 
