@@ -1,9 +1,10 @@
 ---
 solution: Experience Platform
-title: Ignorer la mise à jour des contraintes de temps de l’année
-description: Découvrez comment résoudre un problème avec la contrainte d’année ignorée.
+title: Ignorer la mise à jour de la contrainte de temps d'année
+description: Découvrez comment résoudre un problème lié à la contrainte de temps Ignorer l’année .
+hidefromtoc: true
 exl-id: 44bb8817-e32d-4806-ad4e-b1840313e768
-source-git-commit: 006950092f69d378b064c795b117166343e5d8f2
+source-git-commit: c7d71113ddcef6aca8b2637814b46e589a6b7fdf
 workflow-type: tm+mt
 source-wordcount: '246'
 ht-degree: 8%
@@ -19,12 +20,12 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->Vous pouvez uniquement utiliser la contrainte temporelle &quot;ignorer l’année&quot; dans une définition de segment évaluée à l’aide de la **segmentation par lots**. L’ajout de la contrainte temporelle &quot;ignorer l’année&quot; à votre définition de segment rendra l’audience résultante **inéligible** pour la segmentation par flux ou en périphérie.
+>Vous pouvez uniquement utiliser la contrainte de temps « ignorer l’année » dans une définition de segment évaluée à l’aide de la **segmentation par lots**. L’ajout de la contrainte de temps « ignorer l’année » à votre définition de segment rendra l’audience obtenue **inéligible** pour la segmentation en flux continu ou Edge.
 
-La version de février 2024 pour Adobe Experience Platform a introduit des modifications dans le service de segmentation Adobe Experience Platform, qui résout un problème lié à l’option &quot;ignorer l’année&quot; dans la création et l’évaluation d’audiences.
+La version de février 2024 de Adobe Experience Platform a introduit des modifications dans Adobe Experience Platform Segmentation Service qui résout un problème avec l’option « ignorer l’année » dans la création et l’évaluation d’audiences.
 
-L’option &quot;ignorer l’année&quot; est conçue pour ignorer le composant Année d’une date lors de l’évaluation de l’audience. Vous pouvez utiliser cette option dans les cas où la relation temporelle entre différents événements est importante, mais que l’année spécifique n’est pas importante, par exemple dans un champ de date de naissance.
+L’option « ignorer l’année » est conçue pour ignorer le composant d’année d’une date lors de l’exécution des évaluations d’audience. Vous pouvez utiliser cette option dans les situations où la relation temporelle entre différents événements est importante, mais où l’année spécifique n’est pas importante, comme un champ de date de naissance.
 
-Cependant, au cours des années bissextiles telles que 2024, le système sous-jacent n’a pas géré correctement cette option, ce qui a entraîné des évaluations d’audience inexactes. Par conséquent, si l’option &quot;ignorer l’année&quot; est activée dans une année bissextile, l’évaluation de l’audience échoue un jour.
+Cependant, au cours des années bissextiles comme 2024, le système sous-jacent n’a pas géré correctement cette option, ce qui a entraîné des évaluations d’audience inexactes. Par conséquent, si l’option « ignorer l’année » est activée au cours d’une année bissextile, l’évaluation de l’audience manquerait un jour.
 
-Si vous avez créé une audience avant la publication de ce correctif, vous devez simplement la réenregistrer dans le créateur de segments pour appliquer le correctif. Si vous ne savez pas si votre audience est affectée par cette résolution, le créateur de segments invite l’utilisateur si l’audience existante est affectée par ce problème.
+Si vous avez créé une audience avant la publication de ce correctif, il vous suffit de réenregistrer l’audience dans le créateur de segments pour appliquer le correctif. Si vous ne savez pas si votre audience est affectée par cette résolution, le créateur de segments demandera à l’utilisateur si l’audience existante est affectée par ce problème.

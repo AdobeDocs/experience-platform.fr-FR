@@ -4,7 +4,7 @@ title: Confidentialité dans Adobe Real-Time Customer Data Platform
 description: Adobe Real-Time Customer Data Platform vous permet de rationaliser le processus de mise en conformité de vos opérations de données avec les règles de confidentialité.
 feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
+source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 86%
@@ -27,9 +27,9 @@ Les réglementations légales relatives à la confidentialité, telles que le [!
 
 ## Fonctionnalités de désinscription
 
-[!DNL Real-Time CDP] permet aux clients de refuser (opt-out) que leurs données personnelles soient incluses dans les cas d’utilisation de segmentation. Les préférences d’exclusion des clients sont capturées et stockées par [!DNL Real-Time Customer Profile] et peuvent être appliquées en excluant les utilisateurs qui se sont désinscrits d’une audience à l’aide d’une logique booléenne (&quot;AND NOT&quot;) dans le prédicat de segment.
+[!DNL Real-Time CDP] permet aux clients de refuser (opt-out) que leurs données personnelles soient incluses dans les cas d’utilisation de segmentation. Les préférences de désinscription des clients sont capturées et stockées par [!DNL Real-Time Customer Profile] et peuvent être appliquées en excluant les utilisateurs qui se sont désinscrits d’une audience à l’aide d’une logique booléenne (« AND NOT ») dans le prédicat de segment.
 
-Consultez le document sur le [respect des demandes de désinscription](../../segmentation/consents.md) dans la documentation du service de segmentation d’Adobe Experience Platform pour plus d’informations.
+Consultez le document sur le [respect des demandes de désinscription](../../segmentation/tutorials/consents.md) dans la documentation du service de segmentation d’Adobe Experience Platform pour plus d’informations.
 
 ## Prise en charge de l’IAB TCF 2.0
 

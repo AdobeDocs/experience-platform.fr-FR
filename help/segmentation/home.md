@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Présentation de Segmentation Service
 description: Découvrez Adobe Experience Platform Segmentation Service et le rôle qu’il occupe dans l’écosystème de Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
+source-git-commit: acc0c1b3f088e412c68557a4a7310889f2ad65a7
 workflow-type: tm+mt
-source-wordcount: '1679'
+source-wordcount: '1665'
 ht-degree: 93%
 
 ---
@@ -67,7 +67,6 @@ Outre les compositions d’audience et les définitions de segment, vous pouvez 
 >id="platform_segments_evaluation_streaming"
 >title="Évaluation par diffusion en continu"
 >abstract="La segmentation en flux continu est un processus continu de sélection des données qui met à jour vos audiences en réponse à l’activité des utilisateurs et des utilisatrices."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=fr" text="Évaluer les événements en temps quasi réel grâce à la segmentation par flux"
 
 Platform prend actuellement en charge trois méthodes d’évaluation des audiences : segmentation en flux continu, segmentation par lots et segmentation Edge.
 
@@ -75,7 +74,7 @@ Platform prend actuellement en charge trois méthodes d’évaluation des audie
 
 La segmentation en flux continu est un processus continu de sélection des données qui met à jour vos audiences en réponse à l’activité des utilisateurs et des utilisatrices. Une fois qu’une audience a été créée et enregistrée, la définition de segment est appliquée aux données entrantes dans [!DNL Real-Time Customer Profile]. Les ajouts et les suppressions de l’audience sont traités régulièrement, ce qui vous permet de vous assurer que l’audience cible reste pertinente.
 
-Pour plus d’informations sur la segmentation par flux, consultez la [documentation sur la segmentation par flux](./api/streaming-segmentation.md).
+Pour plus d’informations sur la segmentation par flux, consultez la [documentation sur la segmentation par flux](./methods/streaming-segmentation.md).
 
 ### Segmentation par lots {#batch}
 
@@ -94,11 +93,10 @@ Les audiences par lots sont automatiquement évaluées toutes les 24 heures. Si
 >id="platform_segments_evaluation_edge"
 >title="Évaluation Edge"
 >abstract="La segmentation Edge permet d’évaluer instantanément les segments dans Platform sur le réseau Edge, en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=fr" text="Guide de l’interface utilisateur de segmentation Edge"
 
-La segmentation Edge permet d’évaluer les segments dans Platform instantanément [sur l’Edge Network ](../web-sdk/home.md) en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
+La segmentation Edge permet d’évaluer les segments dans Platform instantanément [sur Edge Network](../landing/edge-and-hub-comparison.md), en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
 
-Pour en savoir plus sur la segmentation Edge, consultez la [documentation API](./api/edge-segmentation.md) ou la [documentation de l’interface utilisateur](./ui/edge-segmentation.md).
+Pour en savoir plus sur la segmentation Edge, consultez la [documentation API](./methods/edge-segmentation.md) ou la [documentation de l’interface utilisateur](./methods/edge-segmentation.md).
 
 ## Accéder aux résultats de la segmentation
 
@@ -165,7 +163,7 @@ En attribuant une variable à l’attribut de l’État d’achat, votre défini
 
 ### Segmentation d’entités multiples {#multi-entity}
 
-Grâce à la fonction de segmentation d’entités multiples avancée, vous pouvez élargir les données [!DNL Real-Time Customer Profile] avec des données supplémentaires basées sur des produits, des boutiques ou d’autres personnes non-personnes, également appelées entités « de dimension ». Par conséquent, [!DNL Segmentation Service] peut accéder à d’autres champs pendant la définition de segment comme s’ils étaient natifs de la banque de données de [!DNL Profile]. La segmentation d’entités multiples offre une certaine souplesse dans l’identification des audiences en fonction des données qui correspondent à vos propres besoins commerciaux. Pour plus d’informations, notamment sur les cas d’utilisation et les workflows, consultez le [guide de segmentation d’entités multiples](multi-entity-segmentation.md).
+Grâce à la fonction de segmentation d’entités multiples avancée, vous pouvez élargir les données [!DNL Real-Time Customer Profile] avec des données supplémentaires basées sur des produits, des boutiques ou d’autres personnes non-personnes, également appelées entités « de dimension ». Par conséquent, [!DNL Segmentation Service] peut accéder à d’autres champs pendant la définition de segment comme s’ils étaient natifs de la banque de données de [!DNL Profile]. La segmentation d’entités multiples offre une certaine souplesse dans l’identification des audiences en fonction des données qui correspondent à vos propres besoins commerciaux. Pour plus d’informations, notamment sur les cas d’utilisation et les workflows, consultez le [guide de segmentation d’entités multiples](./tutorials/multi-entity-segmentation.md).
 
 ## [!DNL Segmentation Service] types de données
 

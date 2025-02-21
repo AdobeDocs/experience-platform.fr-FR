@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guide de l’IU de Segmentation Service
 description: Découvrez comment créer et gérer des audiences et des définitions de segment dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
+source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
 workflow-type: tm+mt
 source-wordcount: '1043'
 ht-degree: 74%
@@ -23,9 +23,9 @@ L’utilisation des définitions de segment et d’audience exige une compréhen
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md) : permet la création de profils client en rapprochant des identités de sources de données disparates ingérées dans [!DNL Platform].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../../xdm/schema/best-practices.md).
 
-Vous devez également comprendre les termes clés suivants utilisés dans ce document et comprendre la différence entre eux :
+Vous devriez également comprendre les termes clés suivants utilisés dans ce document et comprendre la différence entre eux :
 
-- **Audience** : un groupe de personnes qui partagent des comportements et/ou des caractéristiques similaires. Cette collection de personnes peut être générée par Adobe Experience Platform à l’aide de définitions de segment (audience générée par Platform), de la composition de l’audience ou à partir de sources externes telles que les téléchargements personnalisés (audience générée en externe).
+- **Audience** : un groupe de personnes qui partagent des comportements et/ou des caractéristiques similaires. Cette collection de personnes peut être générée par Adobe Experience Platform à l’aide de définitions de segment (audience générée par Platform) ou d’une composition d’audience, ou à partir de sources externes telles que des chargements personnalisés (audience générée en externe).
 - **Définition de segment** : les règles utilisées par Adobe Experience Platform pour décrire les caractéristiques ou le comportement clés d’une audience cible.
 - **Segmenter** : acte de séparation des profils en audiences.
 
@@ -47,9 +47,9 @@ Pour en savoir plus, consultez le [guide du tableau de bord Audiences](../../das
 
 ## Parcourir {#browse}
 
-Sélectionnez l’onglet **[!UICONTROL Parcourir]** pour afficher le portail Audience. Audience Portal fournit une liste de toutes les audiences qui appartiennent à votre organisation et à votre environnement de test et inclut des détails tels que le nombre de profils, l’origine, la date de création, la date de dernière modification, les balises et la ventilation.
+Sélectionnez l’onglet **[!UICONTROL Parcourir]** pour afficher Audience Portal. Le portail Audience fournit une liste de toutes les audiences qui appartiennent à votre organisation et à votre sandbox. Il inclut des détails tels que le nombre de profils, l’origine, la date de création, la date de dernière modification, les balises et la répartition.
 
-En outre, Audience Portal vous permet de créer de nouvelles audiences à l’aide du créateur de segments ou de la composition de l’audience, ainsi que d’importer des audiences générées en externe dans Platform.
+En outre, Audience Portal vous permet de créer de nouvelles audiences à l’aide du créateur de segments ou de la composition d’audiences, ainsi que d’importer des audiences générées en externe dans Platform.
 
 Pour plus d’informations sur Audience Portal, consultez la [présentation d’Audience Portal](./audience-portal.md).
 
@@ -61,13 +61,13 @@ Sélectionnez l’onglet **[!UICONTROL Compositions]** pour afficher la liste de
 
 Par défaut, cette vue répertorie les informations sur les audiences, notamment les éléments suivants : Nom, Statut, Date de création, Créé par, Dernière date de mise à jour et Dernière mise à jour par.
 
-Une icône de points de suspension se trouve à côté de chaque audience. Cette option affiche la liste des actions rapides disponibles pour l’audience.
+Une icône de points de suspension se trouve à côté de chaque audience. La sélection de cette option affiche une liste des actions rapides disponibles pour l’audience.
 
 | Action | Description |
 | ------ | ----------- |
 | Dupliquer | Copie l’audience sélectionnée. |
-| Gérer l’accès | Gère les étiquettes d’accès qui appartiennent à l’audience. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
-| Supprimer | Supprime l’audience sélectionnée. Les audiences qui sont utilisées dans des destinations en aval ou qui sont dépendantes d’autres audiences **ne peuvent pas** être supprimées. Pour plus d’informations sur la suppression d’audience, consultez la [FAQ sur la segmentation](../faq.md#lifecycle-states). |
+| Gérer l’accès | Gère les libellés d’accès appartenant à l’audience. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
+| Supprimer | Supprime l’audience sélectionnée. Les audiences utilisées dans des destinations en aval ou qui sont des dépendances dans d’autres audiences **ne peuvent pas** peuvent pas être supprimées. Pour plus d’informations sur la suppression d’audience, consultez la [FAQ sur la segmentation](../faq.md#lifecycle-states). |
 
 Vous pouvez sélectionner l’icône ![Personnaliser le tableau](/help/images/icons/column-settings.png) pour modifier les champs affichés.
 
@@ -92,15 +92,15 @@ La page Composition d’audience s’affiche avec les blocs de création qui com
 
 ## Composition d’audiences fédérées {#fac}
 
-Outre les compositions d’audience et les définitions de segment, vous pouvez utiliser la fonction Adobe la composition d’audiences fédérées pour créer de nouvelles audiences à partir de jeux de données d’entreprise sans copier de données sous-jacentes et stocker ces audiences dans Adobe Experience Platform Audience Portal. Vous pouvez également enrichir les audiences existantes dans Adobe Experience Platform en utilisant des données d’audience composites qui ont été fédérées à partir de l’entrepôt de données d’entreprise. Veuillez lire le guide sur la [Composition de l’audience fédérée](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+Outre les compositions d’audience et les définitions de segment, vous pouvez utiliser la composition d’audience fédérée d’Adobe pour créer de nouvelles audiences à partir de jeux de données d’entreprise sans copier les données sous-jacentes et stocker ces audiences dans Adobe Experience Platform Audience Portal. Vous pouvez également enrichir les audiences existantes dans Adobe Experience Platform en utilisant les données d’audience composées qui ont été fédérées à partir de l’entrepôt de données d’entreprise. Veuillez lire le guide sur la [Composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/home).
 
-![Liste des audiences créées dans la composition d’audiences fédérées de votre organisation.](../images/ui/overview/federated-audience-composition.png)
+![Liste des audiences créées dans la composition d’audiences fédérées pour votre organisation.](../images/ui/overview/federated-audience-composition.png)
 
 ## Segmentation en flux continu {#streaming-segmentation}
 
 La segmentation en flux continu est la possibilité d’effectuer une segmentation sur [!DNL Platform] en temps quasi réel, tout en se concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification pour la segmentation se produit désormais lorsque les données entrent dans [!DNL Platform], ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation.
 
-Vous trouverez plus d’informations sur la segmentation en flux continu dans le [guide d’utilisation de la segmentation en flux continu](./streaming-segmentation.md).
+Vous trouverez plus d’informations sur la segmentation en flux continu dans le [guide d’utilisation de la segmentation en flux continu](../methods/streaming-segmentation.md).
 
 >[!NOTE]
 >
@@ -110,7 +110,7 @@ Vous trouverez plus d’informations sur la segmentation en flux continu dans le
 
 La segmentation Edge permet d’évaluer les audiences dans Platform instantanément sur le serveur Edge, en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
 
-Vous trouverez plus d’informations sur la segmentation Edge dans le [guide de l’interface utilisateur de segmentation Edge](./edge-segmentation.md).
+Vous trouverez plus d’informations sur la segmentation Edge dans le [guide de l’interface utilisateur de segmentation Edge](../methods/edge-segmentation.md).
 
 ## Violations de politique
 

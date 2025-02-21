@@ -2,7 +2,7 @@
 title: Vue d’ensemble du profil client en temps réel
 description: Le profil client en temps réel fusionne des données provenant de diverses sources et permet d’accéder à ces données sous la forme de profils clients individuels et d’événements de séries temporelles associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 7d515401eb49ffd2ad5cf0bd074896b274c4fb05
+source-git-commit: fc53d1b32eb3fc0251f307d5b2f076b1153a2931
 workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 97%
@@ -135,7 +135,7 @@ La gouvernance des données est gérée sur plusieurs points. Il s’agit notamm
 
 ### Gestion des demandes d’exclusion et de confidentialité des données
 
-[!DNL Experience Platform] permet à vos clients d’envoyer des demandes de désinscription associées à l’utilisation et au stockage de leurs données dans le [!DNL Real-Time Customer Profile]. Pour plus d’informations sur la gestion des demandes d’exclusion, consultez la documentation sur le [respect des demandes d’exclusion](../segmentation/consents.md).
+[!DNL Experience Platform] permet à vos clients d’envoyer des demandes de désinscription associées à l’utilisation et au stockage de leurs données dans le [!DNL Real-Time Customer Profile]. Pour plus d’informations sur la gestion des demandes d’exclusion, consultez la documentation sur le [respect des demandes d’exclusion](../segmentation/tutorials/consents.md).
 
 ## Étapes suivantes et ressources supplémentaires
 

@@ -5,7 +5,7 @@ product: experience platform
 type: Documentation
 description: Découvrez les performances et les mécanismes de sécurisation appliqués par le système pour les données de profil et la segmentation, afin de garantir une utilisation optimale des fonctionnalités de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1f682fc5c109f3dc8a7ed8513260a1a3c3108bbb
+source-git-commit: 1150b7726a7cabe6df6bbc7a850fb4d48afa208e
 workflow-type: tm+mt
 source-wordcount: '2511'
 ht-degree: 58%
@@ -28,7 +28,7 @@ Ce document fournit des limites d’utilisation et de débit par défaut pour vo
 
 ## Prise en main
 
-Les services Experience Platform ci-dessous sont impliqués dans la modélisation des données du profil client en temps réel :
+Les services Experience Platform suivants sont impliqués dans la modélisation des données du profil client en temps réel :
 
 * [[!DNL Real-Time Customer Profile]](home.md) : créez des profils clients unifiés à l’aide de données provenant de plusieurs sources.
 * [Identités](../identity-service/home.md) : associez les identités à partir de sources de données disparates lors de leur ingestion dans Platform.
@@ -41,7 +41,7 @@ Ce document comprend deux types de limites par défaut :
 
 | Type de mécanisme de sécurisation | Description |
 | -------------- | ----------- |
-| **Mécanisme de sécurisation des performances (limite soft)** | Les mécanismes de sécurisation de performances sont des limites d’utilisation liées à la portée de vos cas d’utilisation. Si vous dépassez les mécanismes de sécurisation des performances, vous pouvez rencontrer une dégradation des performances et une latence. L’Adobe n’est pas responsable de cette dégradation des performances. Les clients qui dépassent régulièrement un mécanisme de sécurisation des performances peuvent choisir de se procurer une licence pour une capacité supplémentaire afin d’éviter une dégradation des performances. |
+| **Mécanisme de sécurisation des performances (limite soft)** | Les mécanismes de sécurisation de performances sont des limites d’utilisation liées à la portée de vos cas d’utilisation. Si vous dépassez les mécanismes de sécurisation des performances, vous pouvez rencontrer une dégradation des performances et une latence. Adobe n’est pas responsable de cette dégradation des performances. Les clients qui dépassent régulièrement un mécanisme de sécurisation des performances peuvent choisir de se procurer une licence pour une capacité supplémentaire afin d’éviter une dégradation des performances. |
 | **Mécanismes de sécurisation appliqués par le système (limite Hard)** | Les mécanismes de sécurisation appliqués par le système sont appliqués par l’interface utilisateur ou l’API Real-Time CDP. Il s’agit de limites que vous ne pouvez pas dépasser, car l’interface utilisateur et l’API vous en empêcheront ou renverront une erreur. |
 
 {style="table-layout:auto"}
@@ -119,12 +119,12 @@ Les mécanismes de sécurisation décrits dans cette section font référence au
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --------- | ----- | ---------- | ----------- |
 | Audiences par sandbox | 4 000 | Mécanisme de sécurisation des performances | Vous pouvez avoir jusqu’à 4 000 audiences **actives** par sandbox. Vous pouvez avoir plus de 4 000 sandbox par organisation, à condition qu’il y ait moins de 4 000 audiences dans chaque sandbox **individuel**. Cela inclut les audiences par lots, en flux continu et Edge. Toute tentative de création d’audiences supplémentaires peut affecter les performances du système. En savoir plus sur la [création d’audiences](/help/segmentation/ui/segment-builder.md) via le créateur de segments. |
-| Audiences Edge par sandbox | 150 | Mécanisme de sécurisation des performances | Vous pouvez avoir jusqu’à 150 audiences Edge **actives** par sandbox. Vous pouvez avoir plus de 150 audiences Edge par organisation, à condition qu’il y en ait moins de 150 dans chaque sandbox **individuel**. Toute tentative de création d’audiences Edge supplémentaires peut affecter les performances du système. En savoir plus sur les [ audiences Edge ](/help/segmentation/ui/edge-segmentation.md). |
-| Débit d’Edge dans tous les sandbox | 1 500 TR/S | Mécanisme de sécurisation des performances | La segmentation d’Edge prend en charge une valeur maximale de 1 500 événements entrants par seconde entrant dans l’Edge Network Adobe Experience Platform. La segmentation Edge peut prendre jusqu’à 350 millisecondes pour traiter un événement entrant après qu’il a accédé à l’Edge Network Adobe Experience Platform. En savoir plus sur les [ audiences Edge ](/help/segmentation/ui/edge-segmentation.md). |
-| Audiences de diffusion en continu par sandbox | 500 | Mécanisme de sécurisation des performances | Vous pouvez avoir jusqu’à 500 audiences **actives** en flux continu par sandbox. Vous pouvez avoir plus de 500 audiences de diffusion en continu par organisation, à condition qu’il y en ait moins de 500 dans chaque sandbox **individuel**. Cela inclut les audiences en flux continu et Edge. Toute tentative de création d’audiences de diffusion en continu supplémentaires peut affecter les performances du système. En savoir plus sur les [ audiences de diffusion en continu ](/help/segmentation/ui/streaming-segmentation.md). |
-| Débit de diffusion en continu sur toutes les sandbox | 1 500 TR/S | Mécanisme de sécurisation des performances | La segmentation en flux continu prend en charge une valeur maximale de 1 500 événements entrants par seconde. La segmentation en flux continu peut prendre jusqu’à 5 minutes pour qualifier un profil pour l’appartenance à un segment. En savoir plus sur les [ audiences de diffusion en continu ](/help/segmentation/ui/streaming-segmentation.md). |
+| Audiences Edge par sandbox | 150 | Mécanisme de sécurisation des performances | Vous pouvez avoir jusqu’à 150 audiences Edge **actives** par sandbox. Vous pouvez avoir plus de 150 audiences Edge par organisation, à condition qu’il y en ait moins de 150 dans chaque sandbox **individuel**. Toute tentative de création d’audiences Edge supplémentaires peut affecter les performances du système. En savoir plus sur les [ audiences Edge ](/help/segmentation/methods/edge-segmentation.md). |
+| Débit d’Edge dans tous les sandbox | 1 500 TR/S | Mécanisme de sécurisation des performances | La segmentation d’Edge prend en charge une valeur maximale de 1 500 événements entrants par seconde entrant dans l’Edge Network Adobe Experience Platform. La segmentation Edge peut prendre jusqu’à 350 millisecondes pour traiter un événement entrant après qu’il a accédé à Adobe Experience Platform Edge Network. En savoir plus sur les [ audiences Edge ](/help/segmentation/methods/edge-segmentation.md). |
+| Audiences de diffusion en continu par sandbox | 500 | Mécanisme de sécurisation des performances | Vous pouvez avoir jusqu’à 500 audiences **actives** en flux continu par sandbox. Vous pouvez avoir plus de 500 audiences de diffusion en continu par organisation, à condition qu’il y en ait moins de 500 dans chaque sandbox **individuel**. Cela inclut les audiences en flux continu et Edge. Toute tentative de création d’audiences de diffusion en continu supplémentaires peut affecter les performances du système. En savoir plus sur les [ audiences de diffusion en continu ](/help/segmentation/methods/streaming-segmentation.md). |
+| Débit de diffusion en continu sur toutes les sandbox | 1 500 TR/S | Mécanisme de sécurisation des performances | La segmentation en flux continu prend en charge une valeur maximale de 1 500 événements entrants par seconde. La segmentation en flux continu peut prendre jusqu’à 5 minutes pour qualifier un profil pour l’appartenance à un segment. En savoir plus sur les [ audiences de diffusion en continu ](/help/segmentation/methods/streaming-segmentation.md). |
 | Audiences par lot par sandbox | 4 000 | Mécanisme de sécurisation des performances | Vous pouvez avoir jusqu’à 4 000 audiences par lots **actives** par sandbox. Vous pouvez avoir plus de 4 000 audiences par lot par organisation, à condition qu’il y en ait moins de 4 000 dans chaque sandbox **individuel**. Toute tentative de création d’audiences par lots supplémentaires peut affecter les performances du système. |
-| Audiences de compte par sandbox | 50 | Mécanisme de sécurisation mis en œuvre par le système | Vous pouvez créer un maximum de 50 audiences de compte dans un sandbox. Une fois que vous avez atteint 50 audiences dans un sandbox, la commande **[!UICONTROL Créer une audience]** est désactivée lors de la tentative de création d’une audience de compte. En savoir plus sur les [ audiences de compte ](/help/segmentation/ui/account-audiences.md). |
+| Audiences de compte par sandbox | 50 | Mécanisme de sécurisation mis en œuvre par le système | Vous pouvez créer un maximum de 50 audiences de compte dans un sandbox. Une fois que vous avez atteint 50 audiences dans un sandbox, la commande **[!UICONTROL Créer une audience]** est désactivée lors de la tentative de création d’une audience de compte. En savoir plus sur les [ audiences de compte ](/help/segmentation/types/account-audiences.md). |
 | Compositions publiées par sandbox | 10 | Mécanisme de sécurisation des performances | Vous pouvez avoir un maximum de 10 compositions publiées dans un sandbox. Consultez le guide de l’interface utilisateur pour en savoir plus sur la [ composition de l’audience ](/help/segmentation/ui/audience-composition.md). |
 | Taille maximale d’audience | 30 % | Mécanisme de sécurisation des performances | L’adhésion maximale recommandée d’une audience est de 30 % du nombre total de profils dans le système. Il est possible de créer des audiences avec plus de 30 % des profils en tant que membres ou plusieurs audiences volumineuses, mais cela aura un impact sur les performances du système. |
 
@@ -158,9 +158,9 @@ Les attributs indépendants du temps, également appelés « données d’enreg
 
 ![Infographie décrivant les différences entre les données d’enregistrement et les données de série temporelle.](images/guardrails/profile-entity.png)
 
-#### entité de Dimension
+#### Entité Dimension
 
-Bien que la banque de données de profil conservant les données de profil ne soit pas un magasin relationnel, Profile permet l’intégration à de petites entités de dimension afin de créer des audiences d’une manière simplifiée et intuitive. Cette intégration est connue sous le nom de [ segmentation d’entités multiples ](../segmentation/multi-entity-segmentation.md).
+Bien que la banque de données de profil conservant les données de profil ne soit pas un magasin relationnel, Profile permet l’intégration à de petites entités de dimension afin de créer des audiences d’une manière simplifiée et intuitive. Cette intégration est connue sous le nom de [ segmentation d’entités multiples ](../segmentation/tutorials/multi-entity-segmentation.md).
 
 Votre entreprise peut également définir des classes XDM pour décrire des éléments autres que des individus, tels que des magasins, des produits ou des propriétés. Ces schémas non [!DNL XDM Individual Profile] sont appelés « entités de dimension » (également appelées « entités de recherche ») et ne contiennent pas de données de série temporelle. Les schémas qui représentent des entités de dimension sont liés à des entités de profil par le biais de l’utilisation de [relations de schéma](../xdm/tutorials/relationship-ui.md).
 
@@ -170,7 +170,7 @@ Les entités de dimension fournissent des données de recherche qui aident et si
 
 ### Fragments de profil
 
-Dans ce document, plusieurs mécanismes de sécurisation font référence à des « fragments de profil ». Dans l’Experience Platform, plusieurs fragments de profil sont fusionnés pour former le profil client en temps réel. Chaque fragment représente une identité principale unique et l’enregistrement correspondant ou l’ensemble complet de données d’événement pour cet identifiant, dans un jeu de données déterminé. Pour en savoir plus sur les fragments de profil, consultez la section [Présentation des profils](home.md#profile-fragments-vs-merged-profiles).
+Dans ce document, plusieurs mécanismes de sécurisation font référence à des « fragments de profil ». Dans Experience Platform, plusieurs fragments de profil sont fusionnés pour former le profil client en temps réel. Chaque fragment représente une identité principale unique et l’enregistrement correspondant ou l’ensemble complet de données d’événement pour cet identifiant, dans un jeu de données déterminé. Pour en savoir plus sur les fragments de profil, consultez la section [Présentation des profils](home.md#profile-fragments-vs-merged-profiles).
 
 ### Politiques de fusion {#merge-policies}
 
@@ -182,7 +182,7 @@ Plusieurs suites de rapports peuvent être activées pour Profil si tous les con
 
 ## Étapes suivantes
 
-Consultez la documentation suivante pour plus d’informations sur les autres mécanismes de sécurisation des services Experience Platform, sur les informations de latence de bout en bout et sur les informations de licence dans les documents de description du produit Real-Time CDP :
+Consultez la documentation suivante pour plus d’informations sur les autres mécanismes de sécurisation des services Experience Platform, sur les informations de latence de bout en bout et les informations de licence dans les documents de description du produit Real-Time CDP :
 
 * [Mécanismes de sécurisation de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
 * [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.

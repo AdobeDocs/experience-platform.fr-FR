@@ -1,16 +1,16 @@
 ---
-title: Interagir et acquérir de nouveaux clients sans dépendre de cookies tiers
+title: Interagissez et achetez de nouveaux clients sans dépendre de cookies tiers
 description: Découvrez comment interagir et acquérir de nouveaux clientes et clients grâce à des cas d’utilisation de prospection, sans recourir à des cookies tiers.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '2074'
 ht-degree: 85%
 
 ---
 
-# Interagir et acquérir de nouveaux clients sans dépendre de cookies tiers
+# Interagissez et achetez de nouveaux clients sans dépendre de cookies tiers
 
 >[!AVAILABILITY]
 >
@@ -20,17 +20,17 @@ Utilisez la prise en charge de données tierces dans Real-Time CDP pour dévelo
 
 ![Vue d’ensemble détaillée du cas d’utilisation de la prospection de clientèle.](/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png)
 
-## Pourquoi tenir compte de ce cas pratique ? {#why-this-use-case}
+## Pourquoi envisager ce cas d’utilisation {#why-this-use-case}
 
-Les marques font face simultanément à des défis intimidants liés à l’exécution responsable des cas d’utilisation d’acquisition client haut de gamme sans dépendance à l’égard des cookies tiers, à des budgets limités et à une demande plus élevée en matière de transparence et de retour sur dépenses publicitaires.
+Les marques sont simultanément confrontées à d’énormes défis liés à l’exécution responsable de cas d’utilisation d’acquisition client au sommet de l’entonnoir, sans dépendre de cookies tiers, de budgets limités et d’une demande accrue de transparence et de retour sur dépenses publicitaires.
 
-Adobe Real-Time Customer Data Platform peut aider les marques à passer en toute sécurité leurs cas d’utilisation pris en charge par la plateforme de gestion des données (DMP) à des solutions sans cookie et ce, d’une manière qui apporte toute la sophistication et la puissance de la segmentation en libre-service, du traitement de l’audience et de l’activation dans un seul système. Tout cela sans compromettre l&#39;insistance inébranlable de l&#39;Adobe sur une utilisation responsable des données via un cadre de gouvernance et de consentement des données breveté.
+Adobe Real-Time Customer Data Platform peut aider les marques à faire passer en toute sécurité leurs cas d’utilisation pris en charge par Data Management Platform (DMP) à des alternatives sans cookies et ce, d’une manière qui apporte toute la sophistication et la puissance de la segmentation en libre-service, du traitement des audiences et de l’activation dans un seul système. Tout cela sans compromettre l’accent indéfectible d’Adobe sur l’utilisation responsable des données au moyen d’un cadre breveté de gouvernance des données et de consentement.
 
-Par exemple, suivez les étapes décrites dans ce cas pratique lorsque vous devez exécuter une campagne pour attirer des prospects afin qu’ils deviennent des utilisateurs ou des clients connus.
+Par exemple, suivez les étapes décrites dans ce cas d’utilisation lorsque vous devez exécuter une campagne pour attirer des prospects désireux de devenir des utilisateurs ou des clients connus.
 
 ## Prérequis et planification {#prerequisites-and-planning}
 
-Lorsque vous envisagez de contacter et d’acquérir de nouveaux clients, tenez compte des conditions préalables suivantes dans votre processus de planification :
+Lorsque vous envisagez de communiquer avec de nouveaux clients et d’en acquérir de nouveaux, tenez compte des conditions préalables suivantes dans votre processus de planification :
 
 * Quelle est la cadence à laquelle vous prévoyez que les profils fournis par les partenaires soient introduits dans Real-Time CDP et actualisés ?
 * Quelles sont les identités requises par vos destinations en aval ?
@@ -53,7 +53,7 @@ Avant de développer Real-Time CDP pour atteindre et acquérir une nouvelle cli
 
 ## Présentation vidéo {#video-walkthrough}
 
-Consultez le tutoriel vidéo ci-dessous pour découvrir comment atteindre et interagir avec les audiences de prospects :
+Regardez le tutoriel vidéo ci-dessous pour découvrir comment atteindre et impliquer les audiences de prospects :
 
 >[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
 
@@ -71,7 +71,7 @@ Parcourez les sections ci-dessous, qui contiennent des liens vers d’autres doc
 * [Jeux de données](/help/catalog/datasets/overview.md)
 * [Sources](/help/sources/home.md)
 * [Profils de prospects](/help/profile/ui/prospect-profile.md)
-* [Audiences de prospects](/help/segmentation/ui/prospect-audience.md)
+* [Audiences de prospects](/help/segmentation/types/prospect-audiences.md)
 * [Destinations](/help/destinations/home.md)
 
 ### Détails sous licence des profils tiers obtenus du partenaire {#license-profiles-from-partner}
@@ -110,7 +110,7 @@ La classe **[!UICONTROL XDM Individual Prospect Profile]** est préconfigurée a
 
 ![Champs préconfigurés pour la classe XDM Individual Prospect Profile.](/help/rtcdp/assets/partner-data/prospecting/preconfigured-fields-individual-prospect-class.png)
 
-Ensuite, vous devez sélectionner l’identité partnerID que vous avez créée précédemment comme identité principale du schéma. Les enregistrements de profil doivent comporter un identifiant principal. Cette étape est nécessaire pour s’assurer que les données de prospect peuvent être chargées dans la banque de profils et mises à disposition pour la segmentation et l’activation.
+Ensuite, vous devez sélectionner l’identité partnerID que vous avez créée précédemment comme identité principale du schéma. Les enregistrements de profil doivent comporter un identifiant principal. Cette étape est nécessaire pour s’assurer que les données du prospect peuvent être chargées dans la banque de profils et mises à disposition pour la segmentation et l’activation.
 
 >[!AVAILABILITY]
 >
@@ -124,7 +124,7 @@ Notez que le schéma n’est pas encore activé pour le profil. Activez le bouto
 
 #### Ajouter le libellé de gouvernance des données tierces à tous les champs du schéma
 
-Envisagez d’ajouter des libellés de gouvernance des données tierces à tous les champs qui constituent le schéma. Vous garantissez ainsi une utilisation responsable de données tierces et minimisez le risque de fuite de données. Pour en savoir plus sur les [étiquettes de gouvernance des données tierces](../../data-governance/labels/reference.md#partner-ecosystem-labels).
+Envisagez d’ajouter des libellés de gouvernance des données tierces à tous les champs qui constituent le schéma. Vous garantissez ainsi une utilisation responsable de données tierces et minimisez le risque de fuite de données. Obtenez plus d’informations sur [les étiquettes de gouvernance des données tierces](../../data-governance/labels/reference.md#partner-ecosystem-labels).
 
 Pour ce faire, procédez comme suit :
 
@@ -197,7 +197,7 @@ Vous pouvez également sélectionner n’importe quel profil de prospect pour un
 
 ![Vue de la méthode d’inspection des profils de prospects.](/help/rtcdp/assets/partner-data/prospecting/inspect-prospect-profile.gif)
 
-En savoir plus sur les [profils de prospect](/help/profile/ui/prospect-profile.md).
+En savoir plus sur les [profils de prospects](/help/profile/ui/prospect-profile.md).
 
 ### Créer des audiences de prospects {#create-prospect-audiences}
 
@@ -213,20 +213,20 @@ Notez que l’expérience de création d’audiences pour les profils de prospec
 * Évaluation de profil par lots uniquement.
 * Pas de prise en charge de la création d’audiences basées sur des événements de série temporelle.
 
-En savoir plus sur les [audiences prospect](/help/segmentation/ui/prospect-audience.md).
+En savoir plus sur les [audiences de prospects](/help/segmentation/types/prospect-audiences.md).
 
 ### Activer les profils de prospects vers des destinations {#activate-to-destinations}
 
-Utilisez les audiences de prospects en les exportant vers des destinations. Actuellement, seules certaines destinations de stockage dans le cloud prennent en charge l’activation des profils de prospect.
+Utilisez les audiences de prospects en les exportant vers des destinations. Actuellement, seules certaines destinations de stockage dans le cloud prennent en charge l’activation des profils de prospects.
 
 ![Destinations qui prennent en charge les audiences de prospects.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
-[En savoir plus](/help/destinations/ui/activate-prospect-audiences.md) sur l’activation des prospects vers les destinations de stockage dans le cloud.
+[En savoir plus](/help/destinations/ui/activate-prospect-audiences.md) sur l’activation des prospects vers des destinations d’espace de stockage.
 
 ## Autres cas d’utilisation réalisés grâce à la prise en charge des données des partenaires {#other-use-cases}
 
 Explorez d’autres cas d’utilisation activés grâce à la prise en charge des données des partenaires dans Real-Time CDP :
 
 * [Complétez les profils propriétaires avec les attributs des partenaires de données de confiance pour améliorer votre base de données, obtenir de nouvelles informations sur votre base de clientèle et optimiser l’audience.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* [Personnalisez des expériences sur site pour des visiteurs inconnus à l’aide de la reconnaissance de visiteurs avec l’aide d’un partenaire](/help/rtcdp/partner-data/onsite-personalization.md) pendant la visite sans que l’utilisateur s’authentifie ou n’ait un historique antérieur avec votre marque.
-* [Activation étendue des profils de prospects et des audiences de prospects](/help/destinations/ui/activate-prospect-audiences.md) pour sélectionner des destinations.
+* [Personnalisez les expériences sur site pour les visiteurs inconnus à l’aide de la reconnaissance des visiteurs assistée par un partenaire](/help/rtcdp/partner-data/onsite-personalization.md) au cours de la visite sans que l’utilisateur ne s’authentifie ou n’ait d’historique avec votre marque.
+* [Activation étendue des profils et des audiences de prospects](/help/destinations/ui/activate-prospect-audiences.md) pour sélectionner des destinations.

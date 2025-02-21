@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: e74d04119593dddcaf6a5c710b685c606f5998d6
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
-source-wordcount: '4955'
+source-wordcount: '4976'
 ht-degree: 66%
 
 ---
@@ -36,11 +36,11 @@ Les blocs de création de base des définitions de segment sont les attributs et
 
 >[!NOTE]
 >
->Si vous sélectionnez la bulle d’informations d’un attribut, vous pouvez visualiser la répartition des valeurs, également appelées données récapitulatives, du champ. Ils sont **uniquement** disponibles dans l’onglet Attributs et ne peuvent pas être utilisés dans l’onglet Événements ou audiences.
+>Si vous sélectionnez la bulle d’informations d’un attribut, vous pouvez visualiser la répartition des valeurs, également appelée données de synthèse, du champ. Ils sont **uniquement** disponibles dans l’onglet Attributs et ne sont pas disponibles dans l’onglet Événements ou Audiences .
 >
->Des données récapitulatives s’affichent si l’attribut répond aux critères suivants : toutes les valeurs de l’attribut comportent 100 caractères ou moins et l’attribut contient 3 000 valeurs uniques ou moins.
+>Des données récapitulatives apparaissent si l’attribut répond aux critères suivants : toutes les valeurs de l’attribut comportent 100 caractères ou moins et il existe 3 000 valeurs uniques ou moins pour l’attribut.
 >
->Cependant, un attribut **not** possède des données récapitulatives s’il s’agit de données multi-entités liées au profil par le biais d’une relation. Par exemple, si vous avez un schéma personnalisé appelé `Vehicle`, les **propriétés** dans le schéma `Vehicle` auront **et non** des données récapitulatives.
+>Cependant, un attribut n’aura **pas** de données récapitulatives s’il s’agit de données multi-entités liées au profil par le biais d’une relation. Par exemple, si vous disposez d’un schéma personnalisé appelé `Vehicle`, les **propriétés** du schéma `Vehicle` ne contiennent **pas** de données de résumé.
 
 Vous pouvez voir ces blocs de création dans la section **[!UICONTROL Champs]** sur le côté gauche de l’espace de travail [!DNL Segment Builder]. Les **[!UICONTROL champs]** contiennent un onglet pour chacun des blocs de création principaux : « [!UICONTROL attributs] », « [!UICONTROL événements] », et « [!UICONTROL audiences] ».
 
@@ -119,7 +119,7 @@ Une fois les suites de rapports mappées, vous pouvez utiliser ces nouveaux cham
 
 >[!NOTE]
 >
->Pour les audiences créées dans Platform, seules les audiences ayant la stratégie de fusion **same** s’affichent.
+>Pour les audiences créées dans Platform, seules les audiences qui ont la **même** politique de fusion s’affichent.
 
 L’onglet **[!UICONTROL Audiences]** répertorie toutes les audiences importées de sources externes, telles que Adobe Audience Manager ou Customer Journey Analytics, ainsi que les audiences créées dans [!DNL Experience Platform].
 
@@ -133,11 +133,11 @@ Vous pouvez passer la souris sur l’option ⓘ située à côté d’une audien
 
 >[!IMPORTANT]
 >
->Depuis la version de juin 2024, les contraintes de temps &quot;Ce mois-ci&quot; et &quot;Cette année&quot; représentent respectivement &quot;le mois à jour&quot; et &quot;l’année à jour&quot;. Par exemple, si vous avez créé une audience le 18 juillet à la recherche de &quot;tous les clients dont l’anniversaire a lieu ce mois-ci&quot;, l’audience obtiendra tous les clients dont l’anniversaire a eu lieu du 1er au 31 juillet. Le 1er août, ce public recevra tous les clients dont l&#39;anniversaire a lieu du 1er au 31 août.
+>Depuis la version de juin 2024, les contraintes de temps « Ce mois-ci » et « Cette année » représentent respectivement le « cumul mois par mois » et « cumul année par année ». Par exemple, si vous avez créé une audience le 18 juillet à la recherche de « tous les clients dont l’anniversaire se produit ce mois-ci », l’audience obtiendra tous les clients dont l’anniversaire s’est produit du 1er au 31 juillet. Le 1er août, cette audience recevra tous les clients dont l’anniversaire aura lieu du 1er au 31 août.
 >
->Auparavant, &quot;Ce mois-ci&quot; et &quot;cette année&quot; représentaient respectivement 30 et 365 jours, ce qui ne rendait pas compte des mois de 31 jours et des années bissextiles.
+>Auparavant, « Ce mois-ci » et « Cette année » représentaient respectivement 30 jours et 365 jours, ce qui ne tenait pas compte des mois comportant 31 jours et des années bissextiles.
 >
->Pour mettre à jour la logique de vos audiences, réenregistrez les audiences créées précédemment.
+>Pour mettre à jour la logique de vos audiences, veuillez enregistrer à nouveau vos audiences créées précédemment.
 
 Une définition de segment est un ensemble de règles utilisées pour décrire les caractéristiques ou les comportements clés d’une audience cible. Ces règles sont créées à l’aide de la zone de travail du créateur de règles, au centre du [!DNL Segment Builder].
 
@@ -234,13 +234,17 @@ La fonction de comptage est maintenant ajoutée. Vous pouvez maintenant sélecti
 
 ![Une liste des fonctions de comptage s’affiche et est mise en surbrillance.](../images/ui/segment-builder/select-count.png)
 
-### Contraintes temporelles {#time-constraints}
+### Contraintes de temps {#time-constraints}
 
-Les contraintes de temps vous permettent d’appliquer des restrictions de temps aux attributs temporels, aux événements et à la séquence entre les événements.
+Les contraintes de temps vous permettent d’appliquer des restrictions temporelles aux attributs basés sur le temps, aux événements et à la séquence entre les événements.
 
 >[!IMPORTANT]
 >
->Si vous avez créé une définition de segment avec les contraintes de temps &quot;Ce mois-ci&quot; ou &quot;Cette année&quot; avant juin 2024, vous devez enregistrer à nouveau vos définitions de segment. Avant juin 2024, &quot;Ce mois-ci&quot; était basé sur 30 jours et &quot;Cette année&quot; était basé sur 365 jours.
+>Si vous avez créé une définition de segment avec les contraintes de temps « Ce mois-ci » ou « Cette année » avant juin 2024, vous devrez enregistrer à nouveau vos définitions de segment. Avant juin 2024, la valeur « Ce mois-ci » était basée sur 30 jours et la valeur « Cette année » était basée sur 365 jours.
+
+>[!NOTE]
+>
+>Les contraintes de temps [ignorer l’année](./ignore-year.md) et [au niveau des règles](./segment-refactoring.md) ont toutes deux été précédemment restructurées, avec plus d’informations disponibles dans les présentations liées.
 
 La liste des contraintes de temps disponibles est la suivante :
 
@@ -248,55 +252,55 @@ La liste des contraintes de temps disponibles est la suivante :
 
 >[!NOTE]
 >
->Toutes les contraintes de temps sont basées sur l’UTC.
+>Toutes les contraintes de temps sont basées sur le fuseau horaire UTC.
 >
->De plus, si la case à cocher [!UICONTROL Ignorer l’année] est activée, l’année sera **pas** comparée dans le cadre de l’évaluation de la définition de segment.
+>En outre, si la case [!UICONTROL Ignorer l’année] est activée, l’année n’est **pas** comparée dans le cadre de l’évaluation de la définition de segment.
 
-| Contrainte horaire | Description | Peut activer l’année ignorée | Exemple |
+| Contrainte horaire | Description | Peut activer ignorer l’année | Exemple |
 | --------------- | ----------- | ------------------- | ------- |
-| Today | L’attribut ou l’événement comparé **must** se produit aujourd’hui. | Oui | ![Exemple de contrainte horaire &quot;Aujourd’hui&quot; utilisée.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
-| Hier | L’attribut ou l’événement en cours de comparaison **must** a lieu hier. | Oui | ![Exemple de contrainte d’heure &quot;Hier&quot; utilisée.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
-| Ce mois-ci | L’attribut ou l’événement en cours de comparaison **must** se produit ce mois-ci du calendrier. | Oui | ![Exemple de contrainte horaire &quot;Ce mois-ci&quot; utilisée.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
-| Cette année | L’attribut ou l’événement comparé **must** a lieu cette année calendaire. | Non | ![Exemple de contrainte horaire &quot;Cette année&quot; utilisée.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
-| Date personnalisée | L’attribut ou l’événement en cours de comparaison **must** se produit à la date indiquée. | Oui | ![Exemple de contrainte d&#39;heure &quot;Date personnalisée&quot; utilisée.](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
-| En dernier | L’attribut ou l’événement en cours de comparaison **must** se produit au cours de la dernière période choisie. Cette période est **incluse** jusqu’à l’heure d’évaluation. | Non | ![Exemple de contrainte d’heure &quot;In last&quot; utilisée.](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
-| De (à) | L’attribut ou l’événement en cours de comparaison **must** se produit dans les deux dates calendaires sélectionnées. Cette période est **incluse** des deux dates. | Oui, si date personnalisée | ![Exemple de &quot;De à&quot; utilisé.](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
-| Durant | L’attribut ou l’événement en cours de comparaison **must** se produit au cours du mois ou de l’année sélectionné. Si un mois est sélectionné, vous devez choisir le mois et l’année au cours desquels l’attribut ou l’événement a eu lieu.  Si une année est sélectionnée, vous devez simplement choisir l’année dans laquelle l’attribut ou l’événement a eu lieu. Si vous sélectionnez un mois, vous pouvez également activer la case à cocher [!UICONTROL Ignorer l&#39;année] . | Oui | ![Exemple de contrainte de temps &quot;Durant&quot; utilisée.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
-| Dans (+/-) | L’attribut ou l’événement comparé **must** se produit dans les jours, semaines, mois ou années suivant la date sélectionnée. Cette période est **incluse** des deux dates. La date sélectionnée peut être aujourd’hui, hier ou une autre date personnalisée de votre choix. | Oui | ![Exemple de contrainte temporelle &quot;Within&quot; utilisée.](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
-| Avant | L’attribut ou l’événement en cours de comparaison **doit** a lieu avant la date sélectionnée. La date sélectionnée peut être une date personnalisée de votre choix ou une sélection entre jours, semaines, mois ou années auparavant. | Oui | ![Exemple de contrainte horaire &quot;Avant&quot; utilisée.](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
-| Après | L’attribut ou l’événement en cours de comparaison **must** se produit après la date sélectionnée. La date sélectionnée peut être une date personnalisée de votre choix ou une sélection entre jours, semaines, mois ou années auparavant. | Oui | ![Exemple de contrainte de temps &quot;Après&quot; utilisée.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
-| Plage variable | L’attribut ou l’événement en cours de comparaison doit se produire entre les deux dates relatives. Les dates peuvent être représentées en secondes, minutes, heures, jours, semaines, mois ou années. | Non | ![Exemple de contrainte temporelle &quot;Plage variable&quot; utilisée.](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
-| Dans le suivant | L’attribut ou l’événement en cours de comparaison doit se produire au cours de la période sélectionnée suivante. Les périodes sélectionnées comprennent les minutes, les heures, les jours, les semaines, les mois et les années. | Non | ![Exemple de contrainte d&#39;heure &quot;Dans la prochaine&quot; utilisée.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
-| Existe | L’attribut existe. | Non | ![Exemple de contrainte temporelle &quot;Existe&quot; utilisée.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
-| N’existe pas | L’attribut n’existe pas. | Non | ![Exemple de contrainte temporelle &quot;N’existe pas&quot; utilisée.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+| Today | L’attribut ou l’événement comparé **doit** se produire aujourd’hui. | Oui | ![Exemple de contrainte de temps « Today » utilisée.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Hier | L’attribut ou l’événement comparé **doit** se produire hier. | Oui | ![Exemple de la contrainte de temps « Hier » utilisée.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
+| Ce mois-ci | L’attribut ou l’événement comparé **doit** se produire ce mois calendaire. | Oui | ![Exemple de contrainte de temps « Ce mois-ci » utilisée.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
+| Cette année | L’attribut ou l’événement comparé **doit** se produire cette année civile. | Non | ![Exemple de contrainte de temps « Cette année » utilisée.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
+| Date personnalisée | L’attribut ou l’événement comparé **doit** se produire à la date donnée. | Oui | ![Exemple de contrainte d’heure « Date personnalisée » utilisée.](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
+| Au cours des | L’attribut ou l’événement comparé **doit** se produire au cours de la dernière période choisie. Cette période est **inclusive** jusqu’à l’heure de l’évaluation. | Non | ![Exemple de la contrainte d’heure « En dernier » utilisée.](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
+| De (vers) | L’attribut ou l’événement comparé **doit** se produire au cours des deux dates de calendrier sélectionnées. Cette période est **incluse** des deux dates. | Oui, si date personnalisée | ![Exemple de l’utilisation de « De à ».](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
+| Pendant | L’attribut ou l’événement comparé **doit** se produire au cours du mois ou de l’année sélectionné(e). Si un mois est sélectionné, vous devez choisir à la fois le mois et l’année au cours desquels l’attribut ou l’événement a eu lieu.  Si une année est sélectionnée, vous devez simplement choisir l’année dans laquelle l’attribut ou l’événement a eu lieu. Si vous sélectionnez un mois, vous pouvez également activer la case à cocher [!UICONTROL Ignorer l’année]. | Oui | ![Exemple de la contrainte de temps « During » utilisée.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
+| Dans (+/-) | L’attribut ou l’événement comparé **doit** se produire dans les jours, semaines, mois ou années suivant la date sélectionnée. Cette période est **incluse** des deux dates. La date sélectionnée peut être aujourd’hui, hier ou une autre date personnalisée de votre choix. | Oui | ![Exemple de contrainte de temps « Dans » utilisée.](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
+| Avant | L’attribut ou l’événement comparé **doit** se produire avant la date sélectionnée. La date sélectionnée peut être une date personnalisée de votre choix ou une sélection entre des jours, des semaines, des mois ou des années auparavant. | Oui | ![Exemple de contrainte de temps « Avant » utilisée.](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
+| Après | L’attribut ou l’événement comparé **doit** se produire après la date sélectionnée. La date sélectionnée peut être une date personnalisée de votre choix ou une sélection entre des jours, des semaines, des mois ou des années auparavant. | Oui | ![Exemple de contrainte de temps « After » utilisée.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
+| Plage de roulement | L’attribut ou l’événement comparé doit se produire entre les deux dates relatives. Les dates peuvent être exprimées en secondes, minutes, heures, jours, semaines, mois ou années. | Non | ![Exemple de contrainte de temps « Plage roulante » utilisée.](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
+| Dans suivant | L’attribut ou l’événement comparé doit se produire au cours de la période suivante sélectionnée. Les périodes sélectionnées comprennent les minutes, les heures, les jours, les semaines, les mois et les années. | Non | ![Exemple de contrainte de temps « In next » utilisée.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
+| Existe | L’attribut existe. | Non | ![Exemple de contrainte de temps « Exists » utilisée.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
+| N’existe pas | L’attribut n’existe pas. | Non | ![Exemple de contrainte de temps « N’existe pas » utilisée.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
 
 +++
 
-Lorsque vous appliquez une contrainte temporelle à un événement, vous pouvez l’appliquer au niveau de la zone de travail, au niveau de la carte ou entre les événements.
+Lorsque vous appliquez une contrainte de temps à un événement, vous pouvez l’appliquer au niveau de la zone de travail, de la carte ou entre des événements.
 
 #### Contrainte au niveau de la zone de travail
 
-Pour appliquer une contrainte temporelle au niveau de la zone de travail, sélectionnez l’icône d’horloge qui s’affiche au-dessus de la chronologie des événements.
+Pour appliquer une contrainte de temps au niveau de la zone de travail, sélectionnez l’icône d’horloge qui s’affiche au-dessus de la chronologie des événements.
 
-![Le sélecteur de contraintes temporelles au niveau de la zone de travail est mis en surbrillance.](../images/ui/segment-builder/time-constraints/canvas-level.png)
+![Le sélecteur de contrainte de temps au niveau de la zone de travail est mis en surbrillance.](../images/ui/segment-builder/time-constraints/canvas-level.png)
 
-Lorsque vous appliquez une contrainte temporelle au niveau de la zone de travail, celle-ci s’applique à tous les événements **1} de l’audience.**
+Lorsque vous appliquez une contrainte de temps au niveau de la zone de travail, elle s’applique à **tous** les événements de l’audience.
 
-#### Contrainte de niveau carte
+#### Contrainte au niveau de la carte
 
-Pour appliquer une contrainte de niveau carte, sélectionnez la carte sur laquelle vous souhaitez appliquer la contrainte de temps, suivie de l’icône représentant des ellipses, et de la **[!UICONTROL règle d’application de la durée]**. Vous pouvez ainsi sélectionner une contrainte temporelle dans le conteneur **[!UICONTROL Règles d’événement]**.
+Pour appliquer une contrainte au niveau de la carte, sélectionnez la carte sur laquelle vous souhaitez appliquer la contrainte de temps, puis l’icône représentant des points de suspension et **[!UICONTROL Appliquer la règle de temps]**. Vous pouvez ainsi sélectionner une contrainte de temps dans le conteneur **[!UICONTROL Règles d’événement]**.
 
-![Le sélecteur de contraintes temporelles de niveau carte est mis en surbrillance.](../images/ui/segment-builder/time-constraints/card-level.png)
+![Le sélecteur de contrainte de temps au niveau de la carte est mis en surbrillance.](../images/ui/segment-builder/time-constraints/card-level.png)
 
-Lorsque vous appliquez une contrainte temporelle au niveau de la carte, elle s’applique à l’événement **specified** dans l’audience.
+Lorsque vous appliquez une contrainte de temps au niveau de la carte, cela applique la contrainte de temps à l’événement **spécifié** dans l’audience.
 
 #### Contrainte entre événements
 
-Pour appliquer une contrainte temporelle entre les événements, sélectionnez l’icône d’horloge entre les deux événements sur lesquels vous souhaitez appliquer la contrainte temporelle.
+Pour appliquer une contrainte de temps entre des événements, sélectionnez l’icône d’horloge entre les deux événements auxquels vous souhaitez appliquer la contrainte de temps.
 
-![ Le sélecteur de contraintes de temps entre les événements est mis en surbrillance.](../images/ui/segment-builder/time-constraints/between-event.png)
+![Le sélecteur de contrainte de temps entre les événements est mis en surbrillance.](../images/ui/segment-builder/time-constraints/between-event.png)
 
-Lorsque vous appliquez une contrainte temporelle entre l’événement, elle s’applique à la contrainte temporelle entre **et les événements.**
+Lorsque vous appliquez une contrainte de temps entre l’événement, elle s’applique également au temps **entre** les événements.
 
 La liste des contraintes de temps disponibles pour cette opération diffère de la liste principale des contraintes de temps et se présente comme suit :
 
@@ -304,17 +308,17 @@ La liste des contraintes de temps disponibles pour cette opération diffère de 
 
 | Contrainte horaire | Description |
 | --------------- | ----------- |
-| Après | Le dernier événement **doit avoir lieu au moins** après l’événement précédent. |
-| Within | Les deux événements **must** ont lieu pendant la période répertoriée dans la contrainte temporelle. |
+| Après | Ce dernier événement **au moins** doit avoir lieu après l&#39;événement précédent. |
+| Dans | Les deux événements **doivent** ont lieu pendant la période répertoriée dans la contrainte de temps. |
 
 >[!NOTE]
 >
->Lors de l’utilisation de la contrainte de temps &quot;Après&quot;, ce dernier événement peut avoir lieu pendant plus de la durée indiquée dans la contrainte de temps. >
->Par exemple, si vous avez un événement Page vue et un événement Checkout (Passage en caisse) et que vous placez la contrainte temporelle &quot;Après 1 heure&quot; entre ces deux événements, une définition de segment avec un événement Checkout (Passage en caisse) 2 heures après l’événement Page vue est admissible.
+>Lors de l’utilisation de la contrainte de temps « Après », le dernier événement peut avoir lieu plus longtemps que la durée répertoriée dans la contrainte de temps. >
+>Par exemple, si vous disposez d’un événement Page vue et d’un événement Passage en caisse et que vous appliquez la contrainte de temps « Après 1 heure » entre ces deux événements, une définition de segment avec un événement Passage en caisse 2 heures après l’événement Page vue est éligible.
 >
->En outre, ces deux contraintes de temps peuvent être utilisées en coordination les unes avec les autres.
+>En outre, ces deux contraintes de temps peuvent être utilisées en coordination l&#39;une avec l&#39;autre.
 >
->Par exemple, si vous avez un événement Page vue et un événement Checkout (Passage en caisse) et que vous placez les contraintes de temps &quot;Après 1 heure&quot; et &quot;Dans les 24 heures&quot;, une définition de segment avec un événement Checkout (Passage en caisse) 12 heures après l’événement Page vue est admissible, mais une définition de segment avec un événement Checkout (Passage en caisse) 36 heures après l’événement Page vue ne peut pas être.
+>Par exemple, si vous disposez d’un événement Page vue et d’un événement Passage en caisse et que vous appliquez les contraintes de temps « Après 1 heure » et « Dans les 24 heures », une définition de segment avec un événement Passage en caisse 12 heures après l’événement Page vue est éligible, mais une définition de segment avec un événement Passage en caisse 36 heures après l’événement Page vue ne l’est pas.
 
 +++
 
@@ -353,7 +357,7 @@ Vous pouvez sélectionner une politique de fusion qui correspond à votre object
 
 Pour sélectionner une politique de fusion pour votre définition de segment, sélectionnez l’icône en forme d’engrenage dans l’onglet **[!UICONTROL Champs]**, puis utilisez le menu déroulant **[!UICONTROL Politique de fusion]** pour sélectionner la politique de fusion à utiliser.
 
-![Le sélecteur de politique de fusion est mis en surbrillance. Vous pouvez ainsi choisir la stratégie de fusion à sélectionner pour votre définition de segment.](../images/ui/segment-builder/merge-policy-selector.png)
+![Le sélecteur de politique de fusion est mis en surbrillance. Vous pouvez ainsi choisir la politique de fusion à sélectionner pour votre définition de segment.](../images/ui/segment-builder/merge-policy-selector.png)
 
 ## Propriétés de définition de segment {#segment-properties}
 
@@ -368,17 +372,17 @@ Pour sélectionner une politique de fusion pour votre définition de segment, s�
 >abstract="Vous pouvez actualiser les estimations de votre définition de segment pour afficher immédiatement un aperçu du nombre de profils admissibles pour la définition de segment proposé. Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=fr#estimate-and-preview-an-audience" text="Estimation et prévisualisation d’une audience"
 
-Lors de la création d’une définition de segment, la section **[!UICONTROL Propriétés de l’audience]** sur le côté droit de l’espace de travail affiche une estimation de la taille de la définition de segment résultante, ce qui vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même.
+Lors de la création d’une définition de segment, la section **[!UICONTROL Propriétés de l’audience]** située dans la partie droite de l’espace de travail affiche une estimation de la taille de la définition de segment obtenue, ce qui vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même.
 
-**[!UICONTROL Profils qualifiés]** indique le nombre **actuel** de profils qui correspondent aux règles de la définition de segment. Ce nombre est mis à jour toutes les 24 heures, après l’exécution de la tâche d’évaluation de segment.
+**[!UICONTROL Profils qualifiés]** indique le nombre **réel** de profils qui correspondent aux règles de la définition de segment. Ce nombre est mis à jour toutes les 24 heures, après l’exécution de la tâche d’évaluation de segment.
 
-L’horodatage des profils qualifiés indique la tâche d’évaluation de segment **batch** la plus récente et est **not** affiché pour les définitions de segment évaluées à l’aide de la segmentation par flux ou en périphérie. Si vous modifiez la définition de segment, le nombre de profils qualifiés reste le même jusqu’à l’exécution de la tâche d’évaluation de segment suivante.
+La date et l’heure des profils qualifiés indiquent la tâche d’évaluation de segment **par lots** la plus récente et s’affichent **non** pour les définitions de segment évaluées à l’aide de la segmentation Edge ou en flux continu. Si vous modifiez la définition de segment, le nombre de profils qualifiés restera le même jusqu’à l’exécution de la tâche d’évaluation de segment suivante.
 
-**[!UICONTROL Profils estimés]** indique un nombre **approximatif** de profils en fonction de l’ **exemple de tâche**. Vous pouvez voir une version mise à jour de cette valeur après avoir ajouté de nouvelles règles ou conditions et sélectionné **[!UICONTROL Actualiser l’estimation]**. La sélection de la bulle d’informations donne le seuil d’erreur et l’exemple de temps de tâche le plus récent.
+**[!UICONTROL Profils estimés]** indique un nombre **approximatif** de profils basés sur l’**exemple de tâche**. Une version mise à jour de cette valeur s’affiche après l’ajout des nouvelles règles ou conditions et la sélection de **[!UICONTROL Actualiser l’estimation]**. La sélection de la bulle d’informations donne le seuil d’erreur et l’exemple de temps le plus récent.
 
-![ Les profils qualifiés et les profils estimés sont mis en surbrillance dans la section Propriétés de l’audience.](../images/ui/segment-builder/audience-estimates.png)
+![Les profils qualifiés et les profils estimés sont mis en surbrillance dans la section Propriétés de l’audience.](../images/ui/segment-builder/audience-estimates.png)
 
-La section **[!UICONTROL Propriétés d’audience]** vous permet également de spécifier des informations importantes sur votre définition de segment, y compris son nom, sa description et son type d’évaluation. Les noms des définitions de segment sont utilisés pour identifier votre définition de segment parmi celles définies par votre organisation et doivent donc être descriptifs, concis et uniques.
+La section **[!UICONTROL Propriétés de l’audience]** vous permet également de spécifier des informations importantes sur votre définition de segment, y compris son nom, sa description et son type d’évaluation. Les noms des définitions de segment sont utilisés pour identifier votre définition de segment parmi celles définies par votre organisation et doivent donc être descriptifs, concis et uniques.
 
 Au fur et à mesure que vous continuez à créer votre définition de segment, vous pouvez visualiser un aperçu paginé de l’audience en sélectionnant **[!UICONTROL Afficher les profils]**.
 
@@ -386,17 +390,17 @@ Au fur et à mesure que vous continuez à créer votre définition de segment, v
 
 >[!NOTE]
 >
->Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour. S’il y a moins d’un million d’entités dans votre banque de profils, l’ensemble des données est utilisé ; entre 1 et 20 millions d’entités, 1 million d’entités sont utilisées ; et pour plus de 20 millions d’entités, 5 % du total des entités est utilisé.
+>Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour. S’il y a moins d’un million d’entités dans votre banque de profils, le jeu de données complet est utilisé ; pour entre 1 et 20 millions d’entités, 1 million d’entités sont utilisées ; et pour plus de 20 millions d’entités, 5 % du total des entités sont utilisées.
 >
->En outre, cette estimation est basée sur la date de la dernière exécution de l’exemple de tâche de profil. Cela signifie que si vous utilisez une fonction de date relative telle que &quot;Aujourd’hui&quot; ou &quot;Cette semaine&quot;, l’estimation basera ses calculs sur le dernier exemple de temps d’exécution de tâche de profil. Par exemple, si nous sommes aujourd’hui le 24 janvier et que le dernier exemple de tâche de profil s’est exécuté le 22 janvier, la fonction de date relative &quot;Hier&quot; sera basée sur le 21 janvier et non le 23 janvier.
+>En outre, cette estimation est basée sur la date de la dernière exécution de l’exemple de tâche de profil. Cela signifie que si vous utilisez une fonction de date relative telle que « Aujourd’hui » ou « Cette semaine », l’estimation basera ses calculs sur la dernière heure d’exécution de l’échantillon de tâche de profil. Par exemple, si la date d’aujourd’hui est le 24 janvier et que le dernier exemple de tâche de profil s’est exécuté le 22 janvier, la fonction de date relative « Hier » sera basée sur le 21 janvier, et non sur le 23 janvier.
 >
 >Vous trouverez plus d’informations sur la génération d’estimations de définitions de segments dans la [section Génération d’estimations](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) du tutoriel sur la création de définitions de segments.
 
 Vous pouvez également sélectionner votre méthode d’évaluation. Si vous savez quelle méthode d’évaluation vous voulez utiliser, vous pouvez sélectionner la méthode d’évaluation souhaitée à l’aide de la liste déroulante. Si vous souhaitez savoir pour quels types d’évaluation cette définition de segment est admissible, vous pouvez sélectionner l’icône Parcourir ![icône de dossier avec une loupe](/help/images/icons/folder-search.png) pour voir la liste des méthodes d’évaluation de définition de segment disponibles.
 
-L’[!UICONTROL Éligibilité de la méthode d’évaluation] s’affiche. Cette fenêtre contextuelle affiche les méthodes d’évaluation disponibles, à savoir par lots, en flux continu et Edge. La fenêtre contextuelle affiche les méthodes d’évaluation éligibles et non éligibles. Selon les paramètres que vous avez utilisés dans votre définition de segment, il se peut qu’elle ne soit pas admissible pour certaines méthodes d’évaluation. Pour plus d’informations sur les exigences de chaque méthode d’évaluation, veuillez lire les présentations sur la [segmentation en flux continu](./streaming-segmentation.md#query-types) ou la [segmentation Edge](./edge-segmentation.md#query-types).
+L’[!UICONTROL Éligibilité de la méthode d’évaluation] s’affiche. Cette fenêtre contextuelle affiche les méthodes d’évaluation disponibles, à savoir par lots, en flux continu et Edge. La fenêtre contextuelle affiche les méthodes d’évaluation éligibles et non éligibles. Selon les paramètres que vous avez utilisés dans votre définition de segment, il se peut qu’elle ne soit pas admissible pour certaines méthodes d’évaluation. Pour plus d’informations sur les exigences de chaque méthode d’évaluation, veuillez lire les présentations sur la [segmentation en flux continu](../methods/streaming-segmentation.md#query-types) ou la [segmentation Edge](../methods/edge-segmentation.md#query-types).
 
-Vous pouvez également modifier la méthode d’évaluation de la définition de segment une fois que vous avez fini de la créer. Si vous changez la méthode d’évaluation d’Edge ou de Streaming en Batch, vous ne pourrez **pas** la redéfinir sur Edge ou Streaming. La modification de la méthode d’évaluation prend effet **uniquement** une fois que vous avez sélectionné **[!UICONTROL Enregistrer]** dans la fenêtre contextuelle. L’annulation de la boîte de dialogue **conserve** la méthode d’évaluation d’origine.
+Vous pouvez également modifier la méthode d’évaluation de la définition de segment une fois que vous avez terminé de la créer. Si vous modifiez la méthode d’évaluation d’Edge ou de Streaming en Batch, vous ne pourrez **pas** la remodifier en Edge ou en Streaming. La modification de la méthode d’évaluation **uniquement** prend effet une fois que vous avez sélectionné **[!UICONTROL Enregistrer]** dans la fenêtre contextuelle. L’annulation de la boîte de dialogue **conserve** la méthode d’évaluation d’origine.
 
 ![La fenêtre contextuelle d’éligibilité de la méthode d’évaluation s’affiche. Elle affiche les méthodes d’évaluation éligibles et non éligibles pour la définition de segment.](../images/ui/segment-builder/select-evaluation-method.png)
 

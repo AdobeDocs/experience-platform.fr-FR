@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’octobre 2023 d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2023 pour Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 100%
@@ -70,7 +70,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Fonction | Description |
 | ----------- | ----------- |
 | (Beta) Prise en charge des fonctions de hachage dans les champs calculés | En plus des fonctions spécifiques à l&#39;[exportation de tableaux](../../destinations/ui/export-arrays-calculated-fields.md) ou d&#39;éléments d’un tableau, vous pouvez désormais utiliser des [fonctions de hachage](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) supplémentaires pour hacher des attributs dans les fichiers exportés. Les fonctions de hachage prises en charge sont les suivantes : `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
-| (disponibilité générale limitée) Activation des audiences de compte vers certaines destinations | Les clientes et clients Real-Time CDP B2B peuvent désormais activer les [audiences de compte](../../segmentation/ui/account-audiences.md) vers certaines destinations. Pour plus d’informations sur cette fonctionnalité, consultez le [tutoriel sur l’activation des audiences de compte](/help/destinations/ui/activate-account-audiences.md). |
+| (disponibilité générale limitée) Activation des audiences de compte vers certaines destinations | Les clientes et clients Real-Time CDP B2B peuvent désormais activer les [audiences de compte](../../segmentation/types/account-audiences.md) vers certaines destinations. Pour plus d’informations sur cette fonctionnalité, consultez le [tutoriel sur l’activation des audiences de compte](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ Pour plus d’informations sur les sandbox, consultez la [présentation des sand
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Audiences de compte (disponibilité générale limitée) | Dans l’édition B2B de Real-time Customer Data Platform, vous pouvez désormais utiliser la segmentation de compte pour offrir une expérience complète de segmentation marketing simple et sophistiquée, depuis les audiences basées sur les personnes vers les audiences basées sur les comptes. Pour plus d’informations sur cette fonctionnalité, consultez la [vue d’ensemble des audiences de compte](../../segmentation/ui/account-audiences.md). |
+| Audiences de compte (disponibilité générale limitée) | Dans l’édition B2B de Real-time Customer Data Platform, vous pouvez désormais utiliser la segmentation de compte pour offrir une expérience complète de segmentation marketing simple et sophistiquée, depuis les audiences basées sur les personnes vers les audiences basées sur les comptes. Pour plus d’informations sur cette fonctionnalité, consultez la [vue d’ensemble des audiences de compte](../../segmentation/types/account-audiences.md). |
 
 Pour en savoir plus sur Segmentation Service, consultez la [vue d’ensemble de Segmentation Service](../../segmentation/home.md).
 

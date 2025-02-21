@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Août 2023
 description: Les notes de mise à jour d’août 2023 pour Adobe Experience Platform.
 exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1741'
 ht-degree: 46%
@@ -29,7 +29,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 ## Real-Time Customer Data Platform {#rtcdp}
 
-Basé sur Experience Platform, Real-Time Customer Data Platform ([!DNL Real-Time CDP]) aide les entreprises à rassembler des données connues et inconnues pour activer les profils clients avec une prise de décision intelligente tout au long du parcours client.
+Basée sur Experience Platform, Real-Time Customer Data Platform ([!DNL Real-Time CDP]) aide les entreprises à rassembler des données connues et inconnues pour activer les profils des clients et clientes avec une prise de décision intelligente sur l’ensemble du parcours client.
 
 [!DNL Real-Time CDP] associe plusieurs sources de données d’entreprise pour créer des profils client en temps réel. Les segments créés à partir de ces profils peuvent ensuite être envoyés vers des destinations en aval afin de fournir des expériences personnalisées et individuelles aux clients et clientes sur tous les canaux et appareils.
 
@@ -37,12 +37,12 @@ Basé sur Experience Platform, Real-Time Customer Data Platform ([!DNL Real-Time
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Guide de cas d’utilisation du réengagement intelligent | Le guide de cas d’utilisation [Réengagement intelligent](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) fournit des détails sur la manière de réengager un client qui a abandonné une conversion avant de l’exécuter de manière intelligente et responsable. Ce guide utilise les exemples de parcours suivants pour réengager les clients : <ul><li>Parcours de réengagement - Ciblage des clients qui ont abandonné la navigation sur les produits.</li><li>Parcours de panier abandonné : ciblage des clients qui ont placé des produits dans le panier mais n’ont pas encore effectué l’achat.</li><li>Parcours de confirmation de commande - Se concentrer sur les achats de produits</li></ul> Utilisez le lien d’options de retour détaillé au bas du [guide d’utilisation du réengagement intelligent](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) pour fournir des commentaires. |
-| Prise en charge des données du partenaire | Exécutez le marketing entonnoir supérieur dans Real-Time CDP, avec les profils de prospect et les identifiants de partenaire d’origine pour atteindre de nouveaux clients et enrichir vos données propriétaires : <ul><li>Acquisition des clients et capacité d’adressage : tirez parti des identifiants sans cookie et des informations d’identification personnelles hachées des partenaires de données de votre choix pour atteindre les nouveaux clients nets et réduire la dépendance aux cookies tiers.</li><li>Marketing entonnoir complet dans un seul système : segmentation en libre-service, traitement de l’audience et activation native pour les clients potentiels et connus dans un seul système.</li><li>Fondement de la confiance : gérez les données et les profils des partenaires avec une utilisation des données brevetée, l’étiquetage, les contrôles d’accès, etc. afin de mieux commercialiser les données de manière responsable. Pour plus d’informations, lisez les guides de cas pratique suivants : les guides de cas pratique de prospection sont désormais disponibles. Lisez les guides de cas d’utilisation de la prospection pour découvrir comment engager et acquérir de nouveaux clients par le biais de cas d’utilisation de la prospection :<ul><li>[ ](../../rtcdp/partner-data/prospecting.md)</li><li>[La personnalisation sur site](../../rtcdp/partner-data/onsite-personalization.md)</li><li>[Compléter les profils propriétaires](../../rtcdp/partner-data/supplement-first-party-profiles.md)</li><li>[Activer les audiences de prospects](../../destinations/ui/activate-prospect-audiences.md)</li></ul> |
+| Guide de cas d’utilisation du réengagement intelligent | Le guide de cas d’utilisation [réengagement intelligent](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) fournit des détails sur la manière de réengager les clients qui ont abandonné une conversion avant de l’effectuer de manière intelligente et responsable. Ce guide utilise les exemples de parcours suivants pour réengager les clients : <ul><li>Parcours de réengagement - Ciblage des clients qui ont abandonné la navigation sur les produits.</li><li>Parcours de panier abandonné - Ciblage des clients et clientes qui ont placé des produits dans le panier mais n’ont pas encore effectué l’achat.</li><li>Parcours de confirmation de commande - Accent sur les achats de produits</li></ul> Veuillez utiliser le lien Options de commentaires détaillé au bas du guide [Cas d’utilisation de réengagement intelligent](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) pour fournir des commentaires. |
+| Assistance en matière de données partenaires | Exécutez le marketing de l’entonnoir supérieur dans Real-Time CDP, avec des profils de prospects et des identifiants de partenaire provenant de partenaires pour atteindre de nouveaux clients et enrichir vos données propriétaires : <ul><li>Acquisition et adressabilité des clients : utilisez des identifiants sans cookie et des informations d’identification personnelles hachées auprès des partenaires de données de votre choix pour atteindre de nouveaux clients et réduire la dépendance aux cookies tiers.</li><li>Marketing en entonnoir complet dans un seul système : segmentation en libre-service, traitement de l’audience et activation native pour les clients potentiels et connus dans un seul système.</li><li>Principes de base de la confiance : gérez les données et les profils des partenaires à l’aide de données brevetées, d’étiquettes, de contrôles d’accès et bien plus encore pour commercialiser de manière responsable. Lisez les guides de cas d’utilisation suivants pour plus d’informations : Les guides de cas d’utilisation de prospection sont désormais disponibles. Lisez les guides de cas d’utilisation de prospection pour savoir comment interagir et acquérir de nouveaux clients par le biais de cas d’utilisation de prospection :<ul><li>[Prospection](../../rtcdp/partner-data/prospecting.md)</li><li>[La personnalisation sur site](../../rtcdp/partner-data/onsite-personalization.md)</li><li>[Compléter les profils propriétaires](../../rtcdp/partner-data/supplement-first-party-profiles.md)</li><li>[Activer les audiences de prospects](../../destinations/ui/activate-prospect-audiences.md)</li></ul> |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations, consultez la [présentation de Real-Time CDP](../../rtcdp/overview.md).
+Pour plus d&#39;informations, veuillez lire la présentation de Real-Time CDP [](../../rtcdp/overview.md).
 
 ## Contrôle d’accès basé sur les attributs {#abac}
 
@@ -54,7 +54,7 @@ Grâce au contrôle d’accès basé sur les attributs, les administrateurs de v
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Configuration de l’environnement de test de stratégie d’autorisations | La nouvelle fonctionnalité [configuration de l’environnement de test des stratégies d’autorisation](../../access-control/abac/ui/policies.md) vous permet d’appliquer une stratégie de contrôle d’accès basée sur les attributs sur l’ensemble des environnements de test ou sur un nombre sélectionné d’environnements de test, en fonction de vos besoins et de vos exigences. |
+| Configuration de la sandbox de la politique d’autorisations | La nouvelle fonctionnalité [configuration des sandbox des politiques d’autorisation](../../access-control/abac/ui/policies.md) vous permet d’appliquer une politique de contrôle d’accès basée sur les attributs à l’ensemble des sandbox ou à un nombre sélectionné de sandbox, selon vos besoins et exigences. |
 
 {style="table-layout:auto"}
 
@@ -68,7 +68,7 @@ Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Cas d’utilisation de l’analyse du consentement et du suivi | Découvrez comment créer un tableau de bord de consentement pour divers cas d’utilisation marketing pour les données Real-Time CDP avec le [document d’analyse et de suivi de consentement](../../dashboards/insights-use-cases/consent-analysis.md). Il explique comment créer une audience avec les attributs appropriés pour vos besoins professionnels, puis utiliser les informations à l’aide de widgets préconfigurés dans l’interface utilisateur de Adobe Experience Platform. Il fournit également des instructions sur la création de votre propre widget personnalisé avec la fonction de tableaux de bord définis par l’utilisateur. Le document couvre les cas d’utilisation des tendances de consentement et de chevauchement du consentement. |
+| Cas d’utilisation de l’analyse et du suivi du consentement | Découvrez comment créer un tableau de bord de consentement pour divers cas d’utilisation marketing pour les données Real-Time CDP avec le [document d’analyse et de suivi du consentement](../../dashboards/insights-use-cases/consent-analysis.md). Il explique comment créer une audience avec les attributs appropriés aux besoins de votre entreprise, puis utiliser les informations grâce à l’utilisation de widgets préconfigurés dans l’interface utilisateur de Adobe Experience Platform. Elle fournit également des instructions sur la création de votre propre widget personnalisé à l’aide de la fonctionnalité de tableaux de bord définis par l’utilisateur. Le document couvre les tendances de consentement et les cas d’utilisation de chevauchement de consentement. |
 
 {style="table-layout:auto"}
 
@@ -82,7 +82,7 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 
 | Type | Fonctionnalité | Description |
 | --- | --- | --- |
-| Balises et transfert d’événement | [Balises Experience Platform (Chine)](/help/tags/ui/publishing/premium-cdn.md) | La nouvelle fonctionnalité Balises Experience Platform (Chine) améliore la fiabilité et la latence du site web, ce qui accélère les temps de réponse pour les clients qui déploient des balises sur des sites web en Chine. Les clients peuvent désormais utiliser le code JavaScript dans la bibliothèque de balises lors de l’implémentation de sites web en Chine. Cette fonctionnalité a également été ajoutée au protocole UPP (Unified Provisioning Protocol), ce qui permet d’automatiser le déploiement des produits après leur achat. |
+| Balises et transfert d’événement | [Balises Experience Platform (Chine)](/help/tags/ui/publishing/premium-cdn.md) | La nouvelle fonctionnalité Experience Platform Tags (Chine) améliore la fiabilité et la latence des sites web, ce qui accélère les temps de réponse pour les clients qui déploient des balises sur des sites web en Chine. Les clients peuvent désormais utiliser le code JavaScript dans la bibliothèque de balises lors de l’implémentation de sites web en Chine. Cette fonctionnalité a également été ajoutée au protocole UPP (Unified Provisioning Protocol), ce qui permet d’automatiser le déploiement des produits après leur achat. |
 
 {style="table-layout:auto"}
 
@@ -96,9 +96,9 @@ Adobe Experience Platform propose un ensemble riche de fonctionnalités permet
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Modifications apportées aux workflows d’ingestion de données | Les lignes de données contenant des valeurs supérieures au type de données spécifié (par exemple, les longues données transmises sous la forme d’un type de données entier) seront désormais rejetées et les messages d’erreur seront signalés. Auparavant, ces lignes étaient rejetées sans avertissement. |
+| Modifications des workflows d’ingestion de données | Les lignes de données contenant des valeurs supérieures au type de données spécifié (par exemple, des données longues transmises sous la forme d’un type de données entier) seront désormais rejetées et des messages d’erreur seront signalés. Auparavant, ces lignes étaient rejetées sans avertissement. |
 
-Pour plus d’informations, consultez la [présentation de l’ingestion de données](../../ingestion/home.md).
+Pour plus d’informations, consultez la [présentation de l’ingestion des données](../../ingestion/home.md).
 
 ## Préparation de données {#data-prep}
 
@@ -108,7 +108,7 @@ La préparation des données permet aux personnes travaillant dans l’ingénier
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Prise en charge du filtrage des identités secondaires | Vous pouvez désormais utiliser la préparation de données pour filtrer les identités provenant d’Adobe Analytics, telles qu’AAID et AACUSTOMID. Si elles sont filtrées, ces identités ne sont pas ingérées dans Real-Time Customer Profile. Les données non filtrées continueront à être ingérées dans le lac de données. |
+| Prise en charge du filtrage des identités secondaires | Vous pouvez désormais utiliser la préparation de données pour filtrer les identités provenant d’Adobe Analytics, telles que l’AAID et l’AACUSTOMID. Si elles sont filtrées, ces identités ne sont pas ingérées dans le profil client en temps réel. Les données non filtrées continueront à être ingérées dans le lac de données. |
 
 {style="table-layout:auto"}
 
@@ -120,8 +120,8 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 **Fonctionnalités nouvelles ou mises à jour** {#destinations-new-updated-functionality}
 
-- Vous pouvez désormais [activer les audiences de prospects](../../destinations/ui/activate-prospect-audiences.md) vers les destinations de stockage dans le cloud.
-- La [barrière de sécurité d’activation](../../destinations/guardrails.md#general-activation-guardrails) générale de 100 destinations maximum par environnement de test a été mise à jour pour être une _limite stricte_.
+- Vous pouvez désormais [activer les audiences de prospects](../../destinations/ui/activate-prospect-audiences.md) vers des destinations d’espace de stockage.
+- Le mécanisme de sécurisation général [mécanisme de sécurisation de l’activation](../../destinations/guardrails.md#general-activation-guardrails) d’un maximum de 100 destinations par sandbox a été mis à jour pour devenir une _limite stricte_.
 
 Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
 
@@ -133,7 +133,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Classe | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1758/files) | Utilisez cette classe pour importer les profils de prospect provenant des cas d’utilisation d’acquisition client les plus récents des fournisseurs de données. Pour consulter des exemples et en savoir plus, reportez-vous à la documentation [[!UICONTROL XDM Individual Prospect Profile]](../../xdm/classes/prospect.md) . |
+| Classe | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1758/files) | Utilisez cette classe pour importer des profils de prospects provenant des cas d’utilisation d’acquisition de clients en haut de l’entonnoir des fournisseurs de données. Reportez-vous à la documentation [[!UICONTROL Profil de prospect individuel XDM]](../../xdm/classes/prospect.md) pour voir des exemples et en savoir plus. |
 
 {style="table-layout:auto"}
 
@@ -141,8 +141,8 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description de la mise à jour |
 | --- | --- | --- |
-| Extension ([!UICONTROL Extension complète Adobe Analytics ExperienceEvent]) | [[!UICONTROL Données contextuelles]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL  Objet map ] de données contextuelles ajouté à l’ [!UICONTROL extension complète Adobe Analytics ExperienceEvent] afin de fournir des données contextuelles pour Adobe Analytics. |
-| Groupe de champs | Multiple | Plusieurs champs ont été ajoutés à [[!UICONTROL Enriched Event Segment Details]](https://github.com/adobe/xdm/pull/1760/files). |
+| Extension ([!UICONTROL Extension complète Adobe Analytics ExperienceEvent]) | [[!UICONTROL  Données contextuelles ]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL Données contextuelles] objet map ajouté à l’[!UICONTROL extension complète Adobe Analytics ExperienceEvent] pour fournir des données contextuelles à Adobe Analytics. |
+| Groupe de champs | Multiple | Plusieurs champs ajoutés à [[!UICONTROL Détails de segment d’événement enrichi]](https://github.com/adobe/xdm/pull/1760/files). |
 
 {style="table-layout:auto"}
 
@@ -156,9 +156,9 @@ Le service d’identités d’Adobe Experience Platform vous offre la possibil
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Modifications des limites des graphiques d’identités | D’ici la fin du mois de septembre, le graphique d’identités passera à 50 identités par graphique, et la dernière identité sera ingérée. Par conséquent, l’identité la plus ancienne sera supprimée en fonction de l’horodatage d’ingestion et du type d’identité, les types d’identité de cookie étant d’abord supprimés. Aujourd’hui, les graphiques d’identités sont limités à 150 identités par graphique. Une fois cette limite atteinte, les graphiques ne sont plus mis à jour. Contactez le représentant de votre compte pour demander un changement de type d’identité si votre environnement de test de production contient : <ul><li>Un espace de noms personnalisé dans lequel les identifiants de personne (tels que les identifiants CRM) sont configurés en tant que type d’identité Cookie/Périphérique.</li><li>Un espace de noms personnalisé dans lequel les identifiants de cookie/périphérique sont configurés en tant que type d’identité multi-périphérique.</li></ul> L’ingénierie d’Adobe traitera manuellement ces demandes. Pour plus d’informations, consultez les [mécanismes de sécurité pour les données du Service d’identités](../../identity-service/guardrails.md). |
+| Modifications des limites des graphiques d’identités | D’ici la fin septembre, le graphique d’identités passera à 50 identités par graphique et la dernière identité sera ingérée. Par conséquent, l’identité la plus ancienne sera supprimée en fonction de la date et de l’heure d’ingestion et du type d’identité, les types d’identité des cookies étant supprimés en premier. Aujourd’hui, les graphiques d’identités sont limités à 150 identités par graphique. Une fois cette limite atteinte, les graphiques ne sont plus mis à jour. Veuillez contacter votre représentant de compte pour demander un changement de type d’identité si votre sandbox de production contient : <ul><li>Un espace de noms personnalisé dans lequel les identifiants de personne (tels que les identifiants CRM) sont configurés en tant que type d’identité Cookie/Périphérique.</li><li>Un espace de noms personnalisé dans lequel les identifiants de cookie/périphérique sont configurés en tant que type d’identité multi-périphérique.</li></ul> L’ingénierie d’Adobe traitera manuellement ces demandes. Pour plus d’informations, consultez les [mécanismes de sécurité pour les données du Service d’identités](../../identity-service/guardrails.md). |
 
-Pour plus d’informations, consultez la [présentation d’Identity Service](../../identity-service/home.md).
+Pour plus d’informations, reportez-vous à la [présentation du service d’identités](../../identity-service/home.md).
 
 ## Segmentation Service {#segmentation}
 
@@ -168,7 +168,7 @@ Pour plus d’informations, consultez la [présentation d’Identity Service](..
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Audiences analogue (disponibilité limitée) | Les audiences semblables fournissent des insights intelligents sur chacune de vos audiences, en exploitant les insights basés sur l’apprentissage automatique pour identifier et cibler les clients à forte valeur ajoutée dans vos campagnes marketing. Avec les audiences look-alike, vous pouvez créer des audiences étendues qui ciblent des clients similaires à vos audiences hautement performantes ou des clients ciblés similaires aux audiences converties précédemment. Pour plus d’informations sur les audiences look-alike, consultez la [présentation des audiences look-alike](../../segmentation/ui/lookalike-audiences.md). |
+| Audiences semblables (disponibilité limitée) | Les audiences semblables fournissent des informations intelligentes sur chacune de vos audiences, en tirant parti des informations basées sur le machine learning pour identifier et cibler les clients à forte valeur ajoutée avec vos campagnes marketing. Les audiences semblables vous permettent de créer des audiences étendues qui ciblent des clients similaires à vos audiences hautement performantes ou des clients similaires à des audiences converties précédemment. Pour plus d’informations sur les audiences semblables, veuillez lire la [présentation des audiences semblables](../../segmentation/types/account-audiences.md). |
 
 {style="table-layout:auto"}
 
@@ -182,9 +182,9 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Disponibilité générale de [!DNL SugarCRM] | [!DNL SugarCRM] sources sont désormais disponibles. Utilisez les [!DNL SugarCRM Accounts & Contacts] et les sources [!DNL SugarCRM Events] pour importer des données à partir de votre compte [!DNL SugarCRM] dans Experience Platform. Pour plus d’informations, consultez la [[!DNL SugarCRM] vue d’ensemble](../../sources/connectors/crm/sugarcrm.md). |
-| Prise en charge de l’ingestion à la demande pour les flux de données de sources dans l’interface utilisateur | Vous pouvez désormais créer des exécutions de flux à la demande pour un flux de données de sources existantes dans l’interface utilisateur. Pour plus d’informations, consultez le guide sur la [création d’une exécution de flux à la demande pour les sources à l’aide de l’interface utilisateur](../../sources/tutorials/ui/on-demand-ingestion.md). |
-| Prise en charge du nouveau champ `correlationID` pour Adobe Analytics | Le champ `_experience.decisioning.propositions.scopeDetails.correlationID` est maintenant disponible dans le schéma du connecteur source Adobe Analytics. Ce champ est utilisé pour prendre en charge les classifications A4T et sera renseigné à compter de septembre 2023. |
+| Disponibilité générale des [!DNL SugarCRM] | [!DNL SugarCRM] sources sont désormais disponibles. Utilisez les [!DNL SugarCRM Accounts & Contacts] et les sources [!DNL SugarCRM Events] pour importer des données à partir de votre compte [!DNL SugarCRM] dans Experience Platform. Pour plus d’informations, consultez la [[!DNL SugarCRM] vue d’ensemble](../../sources/connectors/crm/sugarcrm.md). |
+| Prise en charge de l’ingestion à la demande des flux de données sources dans l’interface utilisateur | Vous pouvez désormais créer des exécutions de flux à la demande pour un flux de données de sources existant dans l’interface utilisateur. Pour plus d’informations, consultez le guide sur la [création d’une exécution de flux à la demande pour les sources à l’aide de l’interface utilisateur](../../sources/tutorials/ui/on-demand-ingestion.md). |
+| Prise en charge d’un nouveau champ `correlationID` pour Adobe Analytics | Le champ `_experience.decisioning.propositions.scopeDetails.correlationID` est maintenant disponible dans le schéma du connecteur source Adobe Analytics. Ce champ est utilisé pour la prise en charge des classifications A4T et sera renseigné à partir de septembre 2023. |
 
 {style="table-layout:auto"}
 

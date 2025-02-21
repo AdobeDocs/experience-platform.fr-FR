@@ -1,16 +1,16 @@
 ---
-title: Personnaliser les expériences sur site pour les visiteurs inconnus à l’aide de la reconnaissance des visiteurs avec l’aide de partenaires
+title: Personnaliser des expériences sur site pour les visiteurs inconnus à l’aide de la reconnaissance des visiteurs assistée par des partenaires
 description: Découvrez comment utiliser la reconnaissance des visiteurs et visiteuses par les partenaires pour personnaliser les expériences sur site de vos visiteurs et visiteuses.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
 workflow-type: tm+mt
 source-wordcount: '2673'
 ht-degree: 89%
 
 ---
 
-# Personnaliser les expériences sur site pour les visiteurs inconnus à l’aide de la reconnaissance des visiteurs avec l’aide de partenaires
+# Personnaliser des expériences sur site pour les visiteurs inconnus à l’aide de la reconnaissance des visiteurs assistée par des partenaires
 
 >[!AVAILABILITY]
 >
@@ -20,13 +20,13 @@ Découvrez comment utiliser la reconnaissance par les partenaires pour offrir de
 
 ![Infographie décrivant comment utiliser les attributs fournis par les partenaires pour offrir des expériences personnalisées à vos visiteurs et visiteuses.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-overview.png)
 
-## Pourquoi tenir compte de ce cas pratique ? {#why-this-use-case}
+## Pourquoi envisager ce cas d’utilisation {#why-this-use-case}
 
-La fragmentation des expériences numériques, qui fait que les consommateurs interagissent avec les marques de nombreuses façons, est très réelle et devient de plus en plus difficile à résoudre. Les meilleures stratégies d’engagement des clients pour des expériences cohérentes, des recommandations ciblées et des interactions sur mesure sont toutes limitées par la reconnaissance des utilisateurs.
+La fragmentation des expériences digitales, à mesure que les consommateurs interagissent avec les marques de multiples manières, est très réelle et devient de plus en plus difficile à résoudre. La reconnaissance des utilisateurs et utilisatrices limite les meilleures stratégies d’engagement client pour offrir des expériences cohérentes, des recommandations ciblées et des interactions personnalisées.
 
-C’est là que la reconnaissance en temps réel par les partenaires peut faire une différence significative. Adobe permet aux partenaires d’identité de se connecter à nos offres sophistiquées de collecte de données côté client et d’optimisation de l’expérience de pointe sur le marché, afin d’augmenter efficacement la barre de diffusion de l’expérience à partir de la première visite, sans historique préalable ni authentification.
+C’est là que la reconnaissance en temps réel assistée par un partenaire peut faire une différence significative. Adobe permet aux partenaires d’identité de se connecter à nos offres sophistiquées de collecte de données côté client et d’optimisation de l’expérience de pointe, afin de relever efficacement la barre en matière de diffusion d’expérience à partir de la première visite, sans historique ni authentification préalable.
 
-Cela est particulièrement utile pour les secteurs verticaux qui ont des taux d’authentification bas, comme les biens d’emballage de consommation, le commerce de détail en ligne, etc.
+Cela s’avère particulièrement utile pour les marchés verticaux présentant de faibles taux d’authentification, tels que les biens de consommation emballés, la vente au détail en ligne, etc.
 
 ## Exemple de secteur {#industry-example}
 
@@ -39,7 +39,7 @@ Cette marque choisit d’exploiter la technologie de reconnaissance des partenai
 Lorsque vous envisagez d’utiliser des attributs fournis par les partenaires pour offrir des expériences personnalisées à vos visiteurs et visiteuses authentifiés et non authentifiés, tenez compte des conditions préalables suivantes dans votre processus de planification :
 
 * Quelles entrées sont attendues par la technologie de reconnaissance de votre partenaire afin de pouvoir superposer des attributs supplémentaires ?
-* Dans quelle mesure êtes-vous à l’aise pour fournir de la personnalisation sur différents canaux et pour différents cas d’utilisation basés sur des jeux de données dérivés de manière probabiliste, par rapport à des attributs confirmés déterministes ?
+* Dans quelle mesure seriez-vous à l’aise de fournir une personnalisation dans différents canaux et pour différents cas d’utilisation basés sur des jeux de données dérivés de manière probabiliste, par rapport aux attributs confirmés de manière déterministe ?
 * Comment l’expérience d’une personne visiteuse préauthentifiée mais reconnue doit-elle changer lorsqu’elle s’authentifie ?
 
 ### Fonctionnalités de l’interface utilisateur, composants Platform et produits Experience Cloud que vous allez utiliser {#ui-functionality-and-elements}
@@ -56,13 +56,13 @@ Pour mettre en œuvre ce cas d’utilisation avec succès, vous devez utiliser p
    * [Libellés d’utilisation des données](/help/data-governance/labels/overview.md)
    * [Jeux de données](/help/catalog/datasets/overview.md)
 * Personnalisation des propriétés web
-   * [Segmentation Edge](/help/segmentation/ui/edge-segmentation.md)
+   * [Segmentation Edge](/help/segmentation/methods/edge-segmentation.md)
    * [Destinations de personnalisation Edge](/help/destinations/destination-types.md#edge-personalization-destinations)
    * [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) (ou une plateforme de personnalisation de votre choix. Ce tutoriel de cas d’utilisation met en évidence Adobe Target en tant que moteur de personnalisation)
 
 ## Présentation vidéo {#video-walkthrough}
 
-Consultez le tutoriel vidéo ci-dessous pour découvrir comment personnaliser les expériences sur site pour les visiteurs inconnus :
+Regardez le tutoriel vidéo ci-dessous pour une présentation détaillée de la personnalisation des expériences sur site pour les visiteurs inconnus :
 
 >[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
 
@@ -257,13 +257,13 @@ Entrez `interact` dans la zone de recherche et actualisez la page. Les appels r�
 
 Vous pouvez à présent créer et activer des audiences pour la personnalisation.
 
-#### Création d’une audience et configuration de la segmentation Edge
+#### Créer une audience et configurer la segmentation Edge
 
 Dans l’interface utilisateur de Platform, accédez à **[!UICONTROL Client]** > **[!UICONTROL Audiences]** et créez une audience pour capturer les visiteurs de votre site web.
 
-![Vue de la navigation vers les audiences.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
+![Vue sur la navigation vers les audiences.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 
-Vous devez configurer votre audience avec la [segmentation Edge](/help/segmentation/ui/edge-segmentation.md) afin que l’appartenance à l’audience de vos visiteurs soit évaluée en temps réel lorsqu’ils visitent votre propriété web.
+Vous devez configurer votre audience avec la [segmentation Edge](/help/segmentation/methods/edge-segmentation.md) afin que l’appartenance à l’audience de vos visiteurs soit évaluée en temps réel, lorsqu’ils visitent votre propriété web.
 
 Veillez également à configurer une [politique de fusion Active-On-Edge](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) pour les audiences Edge.
 
@@ -287,4 +287,4 @@ Explorez d’autres cas d’utilisation activés grâce à la prise en charge de
 
 * [Complétez les profils propriétaires avec les attributs des partenaires de données de confiance pour améliorer votre base de données, obtenir de nouvelles informations sur votre base de clientèle et optimiser l’audience.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * Utilisez la prise en charge de données tierces dans Real-Time CDP pour [développer votre base de profils avec les profils de prospects des partenaires de données et interagissez avec eux pour acquérir ou atteindre une nouvelle clientèle](/help/rtcdp/partner-data/prospecting.md).
-* [Activation étendue des profils de prospects et des audiences de prospects](/help/destinations/ui/activate-prospect-audiences.md) pour sélectionner des destinations.
+* [Activation étendue des profils et des audiences de prospects](/help/destinations/ui/activate-prospect-audiences.md) pour sélectionner des destinations.
