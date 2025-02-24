@@ -4,18 +4,14 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de Query Editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 4c11a35ce914cd0b1aa0084368f5a5929f883963
+source-git-commit: e1ecdb5d701093d9c73b6a05dad9a4dd848e0083
 workflow-type: tm+mt
-source-wordcount: '2807'
+source-wordcount: '2745'
 ht-degree: 24%
 
 ---
 
 # Guide de l’interface utilisateur de Query Editor
-
->[!NOTE]
->
->L’ancien éditeur a été abandonné le 24 mai 2024. Il n’est plus accessible. Vous pouvez désormais utiliser l’[Éditeur de requêtes amélioré](#enhanced-editor-toggle) pour écrire, valider et exécuter vos requêtes
 
 Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’[!DNL Experience Platform]. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans [!DNL Experience Platform].
 
@@ -42,10 +38,6 @@ Query Editor prend quelques secondes pour s’initialiser et se connecter à Que
 Les requêtes exécutées à partir du Query Editor s’exécutent de manière interactive, ce qui signifie que si vous fermez le navigateur ou quittez la page, la requête est annulée. Il en va de même pour les requêtes effectuées pour générer des jeux de données à partir de sorties de requête.
 
 ## Création de requêtes à l’aide de l’éditeur de requêtes amélioré {#query-authoring}
-
->[!NOTE]
->
->L’ancien éditeur a été abandonné le 24 mai 2024. Il n’est plus accessible. Vous pouvez désormais utiliser l’éditeur de requêtes amélioré pour écrire, valider et exécuter vos requêtes.
 
 Avec Query Editor, vous pouvez écrire, exécuter et enregistrer des requêtes de données d’expérience client. Toutes les requêtes exécutées ou enregistrées dans Query Editor sont disponibles pour tous les utilisateurs de votre organisation qui ont accès à Query Service.
 
@@ -101,11 +93,11 @@ Une boîte de dialogue de confirmation s’affiche. Sélectionnez **[!UICONTROL 
 
 ### Nombre de résultats {#result-count}
 
-Le Query Editor a une sortie de ligne maximale de 50 000. Vous pouvez choisir le nombre de lignes à afficher en même temps dans la console du Query Editor. Pour modifier le nombre de lignes affichées dans la console, sélectionnez la liste déroulante **[!UICONTROL Nombre de résultats]** et sélectionnez l’une des options suivantes : 50, 100, 150, 300 et 500.
+Le Query Editor a une sortie de ligne maximale de 50 000. Vous pouvez choisir le nombre de lignes à afficher en même temps dans la console du Query Editor. Pour modifier le nombre de lignes affichées dans la console, sélectionnez la liste déroulante **[!UICONTROL Nombre de résultats]** et sélectionnez l’une des options suivantes : 50, 100, 150, 300, 500 et 1 000.
 
 >[!NOTE]
 >
->Comme l’interface utilisateur de Platform ne peut prendre en charge que 500 lignes au maximum, la transmission d’une valeur LIMIT supérieure à 500 est ignorée.
+>Comme l’interface utilisateur de Platform peut prendre en charge jusqu’à 1 000 lignes, la transmission d’une valeur LIMIT supérieure à 1 000 est ignorée.
 
 ![Query Editor avec le menu déroulant Nombre de résultats mis en surbrillance.](../images/ui/query-editor/result-count.png)
 
@@ -204,8 +196,8 @@ Si une requête a été planifiée, alors l’onglet [!UICONTROL Requêtes plani
 
 >[!AVAILABILITY]
 >
-Le rail de navigation des jeux de données est uniquement disponible pour les clients de Distiller de données. Votre interface utilisateur de Platform peut ne pas contenir le rail de navigation du jeu de données de gauche. Les autres images de ce document peuvent ne pas refléter le rail de navigation du jeu de données. Pour plus d’informations, contactez le représentant de votre Adobe.<br>
-L’explorateur d’objets est actuellement disponible uniquement dans une version **limitée**. Contactez votre représentant ou représentante de l’Adobe pour obtenir un accès anticipé à la version.
+Le rail de navigation des jeux de données est uniquement disponible pour les clients de Distiller de données. Votre interface utilisateur de Platform peut ne pas contenir le rail de navigation du jeu de données de gauche. Les autres images de ce document peuvent ne pas refléter le rail de navigation du jeu de données. Pour plus d’informations, contactez votre représentant Adobe.<br>
+L’explorateur d’objets est actuellement disponible uniquement dans une version **limitée**. Contactez votre représentant ou représentante Adobe pour obtenir un accès anticipé à la version.
 
 Utilisez l’explorateur d’objets pour rechercher et filtrer facilement des jeux de données. L’explorateur d’objets réduit le temps passé à rechercher des tables et des jeux de données dans des environnements volumineux avec de nombreux jeux de données. Grâce à un accès simplifié aux données et métadonnées pertinentes, vous pouvez vous concentrer davantage sur la création de requêtes et moins sur la navigation.
 
@@ -249,7 +241,7 @@ La console affiche uniquement les erreurs résultant de l’exécution d’une r
 
 ### Résultats de requête {#query-results}
 
-Une fois une requête terminée, les résultats sont affichés dans l’onglet **[!UICONTROL Résultats]**, en regard de l’onglet **[!UICONTROL Console]**. Cette vue affiche la sortie tabulaire de votre requête, affichant entre 50 et 500 lignes de résultats en fonction du nombre de [résultats](#result-count) choisi. Il vous permet de vérifier que votre requête produit la sortie attendue. Pour générer un jeu de données avec votre requête, supprimez les limites sur les lignes renvoyées, puis exécutez la requête avec `CREATE TABLE tablename AS SELECT` pour générer un jeu de données avec la sortie. Consultez le [tutoriel sur la génération de jeux de données](./create-datasets.md) pour apprendre à générer un jeu de données à partir des résultats de requête dans Query Editor.
+Une fois une requête terminée, les résultats sont affichés dans l’onglet **[!UICONTROL Résultats]**, en regard de l’onglet **[!UICONTROL Console]**. Cette vue affiche la sortie tabulaire de votre requête, affichant entre 50 et 1 000 lignes de résultats en fonction du nombre de [résultats](#result-count) choisi. Il vous permet de vérifier que votre requête produit la sortie attendue. Pour générer un jeu de données avec votre requête, supprimez les limites sur les lignes renvoyées, puis exécutez la requête avec `CREATE TABLE tablename AS SELECT` pour générer un jeu de données avec la sortie. Consultez le [tutoriel sur la génération de jeux de données](./create-datasets.md) pour apprendre à générer un jeu de données à partir des résultats de requête dans Query Editor.
 
 ![L’onglet Résultats de la console du Query Editor affiche les résultats de l’exécution d’une requête.](../images/ui/query-editor/query-results.png)
 
@@ -261,7 +253,7 @@ Query Service fournit des solutions à divers cas d’utilisation dans des scén
 
 ## Tutoriel vidéo sur l’exécution de requêtes avec Query Service {#query-tutorial-video}
 
-La vidéo suivante montre comment exécuter des requêtes dans l’interface Adobe Experience Platform et dans un client PSQL. La vidéo montre également l’utilisation de propriétés individuelles dans un objet XDM, des fonctions définies par l’Adobe et comment utiliser les requêtes CREATE TABLE AS SELECT (CTAS).
+La vidéo suivante montre comment exécuter des requêtes dans l’interface Adobe Experience Platform et dans un client PSQL. La vidéo explique également l’utilisation de propriétés individuelles dans un objet XDM, les fonctions définies par Adobe et l’utilisation des requêtes CREATE TABLE AS SELECT (CTAS).
 
 >[!NOTE]
 >
