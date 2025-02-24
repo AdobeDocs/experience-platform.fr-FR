@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur d’Audiences
 description: La Composition d’audience dans l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail propose des commandes intuitives pour créer et modifier des audiences pour votre organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 65871f307468428ee0e3b67c1a6577e913f3a312
+source-git-commit: f2abd9445c6b725c166f031407e330a2c15e9edb
 workflow-type: tm+mt
-source-wordcount: '2228'
-ht-degree: 70%
+source-wordcount: '2342'
+ht-degree: 66%
 
 ---
 
@@ -39,7 +39,7 @@ La zone de travail de composition de l’audience se compose de quatre types de
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_audience"
 >title="Bloc d’audience"
->abstract="Le bloc Audience permet d’identifier les sous-audiences que vous souhaitez utiliser pour composer votre nouvelle audience."
+>abstract="Le bloc Audience permet d’ajouter les sous-audiences que vous souhaitez utiliser pour composer votre nouvelle audience."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_merge_types"
@@ -83,6 +83,11 @@ Les audiences sélectionnées s’affichent maintenant dans le rail de droite lo
 | [!UICONTROL Exclure le chevauchement] | Les audiences sont combinées, avec seulement les audiences partagées dans **une, mais pas toutes** celles ajoutées. Il s’agit de l’équivalent d’une opération XOR. |
 
 ### [!UICONTROL Créer une règle] {#build-rule}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_rule_builder"
+>title="Créateur de segments"
+>abstract="Vous pouvez utiliser le créateur de segments pour ajouter une règle personnalisée à votre composition."
 
 Pour ajouter une règle personnalisée au bloc Audience, sélectionnez **[!UICONTROL Créer une règle]**.
 
@@ -134,7 +139,12 @@ Une liste d’audiences s’affiche. Sélectionnez **[!UICONTROL Ajouter]** pour
 
 ### Exclure par attribut {#exclude-attribute}
 
-Si vous excluez par attribut, vous pouvez sélectionner les attributs à exclure en sélectionnant l’icône de ![filtre](/help/images/icons/project-edit.png) dans la section **[!UICONTROL Règle d’exclusion]**.
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude_attribute"
+>title="Exclure par attribut"
+>abstract="Lorsque vous excluez par attribut, vous pouvez exclure des profils spécifiques de l’affichage dans votre composition en fonction des attributs sélectionnés."
+
+Si vous excluez par attribut, vous pouvez sélectionner les attributs à exclure en sélectionnant l’icône ![filtre](/help/images/icons/project-edit.png) dans la section **[!UICONTROL Règle d’exclusion]**. L’exclusion de l’attribut vous permet d’exclure tout profil contenant cet attribut de l’audience obtenue.
 
 ![La section d’attribut est mise en surbrillance, vous indiquant où sélectionner l’attribut à exclure.](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -307,6 +317,16 @@ Vous pouvez fractionner une audience de deux façons : par pourcentage ou par a
 
 ### Fractionner par pourcentage {#split-percentage}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_percentage"
+>title="Fractionner par pourcentage"
+>abstract="Vous pouvez diviser l’audience de manière aléatoire en plusieurs audiences, en fonction du nombre de chemins et des pourcentages fournis."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_persistent"
+>title="Division persistante"
+>abstract="Vous pouvez rendre la division en pourcentage persistante en activant cette option et en sélectionnant l’espace de noms d’identité sur lequel la division doit persister."
+
 Lors du fractionnement par pourcentage, les audiences sont réparties de manière aléatoire en fonction du nombre de chemins et des pourcentages fournis.
 
 Par exemple, vous pouvez avoir trois chemins, chacun avec un pourcentage de profils différent.
@@ -331,7 +351,12 @@ En outre, vous pouvez activer le bouton **[!UICONTROL Autres profils]** pour cr�
 
 ![Le bouton « Autres profils » est mis en surbrillance.](../images/ui/audience-composition/split-other-profiles.png)
 
-## Publier votre audience
+## Publier votre audience {#publish}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_publish"
+>title="Publier"
+>abstract="Vous pouvez publier votre composition pour créer la ou les audiences obtenues dans Adobe Experience Platform."
 
 >[!IMPORTANT]
 >
