@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Février 2025
 description: Les notes de mise à jour de février 2025 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8786ac8ab42d2b9e0c43000bbc6604462ea06f64
+source-git-commit: 300be2f922f81f0666a794815cb27777802efb60
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1542'
 ht-degree: 21%
 
 ---
@@ -39,14 +39,13 @@ L’Assistant IA dans Adobe Experience Platform est une expérience conversat
 
 | Fonctionnalité | Description |
 | --- | --- |
+| Disponibilité générale des informations opérationnelles | Les informations opérationnelles sur l’assistant d’IA sont désormais disponibles en disponibilité générale. Les informations opérationnelles se rapportent aux réponses que l’assistant AI génère sur vos objets de métadonnées (attributs, audiences, flux de données, jeux de données, destinations, parcours, schémas et sources), y compris les nombres, les recherches et l’impact de la parenté. Les informations opérationnelles n’examinent aucune donnée dans le sandbox. Pour plus d’informations, consultez le guide de l’interface utilisateur de l’assistant [AI](../../ai-assistant/ui-guide.md). |
 | Prise en charge de la saisie semi-automatique des questions | Lors de la saisie d’une question dans l’assistant AI, vous pouvez désormais effectuer une sélection dans une liste de questions recommandées que l’assistant AI fournit. Utilisez cette fonctionnalité pour accélérer davantage vos workflows avec l’assistant d’IA. Pour plus d’informations, consultez le guide sur l’[utilisation de la saisie automatique des questions avec l’assistant AI](../../ai-assistant/ui-guide.md#use-question-autocomplete). |
 | Prise en charge de l’observabilité des jeux de données | Vous pouvez désormais utiliser l’assistant AI pour répondre aux questions sur des mesures de jeux de données spécifiques, telles que les tailles de stockage et le nombre de lignes. Les questions d’observabilité des données prennent en charge les qualificateurs que vous pouvez utiliser pour filtrer vos requêtes selon une certaine période. Pour plus d’informations, consultez le guide sur les questions de l’assistant [AI](../../ai-assistant/questions.md). |
 
 {style="table-layout:auto"}
 
 Pour plus d’informations, consultez la présentation de l’assistant [AI](../../ai-assistant/home.md).
-
-<!-- | General availability of operational insights | Operational insights in AI Assistant are now in GA. Operational insights refer to answers AI Assistant generates about your metadata objects (attributes, audiences, dataflows, datasets, destinations, journeys, schemas, and sources), including counts, lookups, and lineage impact. Operational insights does not look at any data within the sandbox. For more information, read the [AI Assistant UI guide](../../ai-assistant/ui-guide.md). | -->
 
 ## Catalog Service {#catalog-service}
 
