@@ -6,9 +6,9 @@ user-guide-description: Découvrez comment déployer et gérer des balises d’a
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 18690a72c8a84c6426677b3e8993d8453a8e7cf1
+source-git-commit: 77432a559009d29711a8afa4ca6d8f6ea11d70cf
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '776'
 ht-degree: 95%
 
 ---
@@ -90,6 +90,8 @@ ht-degree: 95%
       * Adobe Client Data Layer (ACDL) {#client-data-layer}
          * [Aperçu](./extensions/client/client-data-layer/overview.md)
          * [Notes de mise à jour](./extensions/client/client-data-layer/release-notes.md)
+      * {#contentanalytics} Adobe Content Analytics
+         * [Vue d’ensemble](./extensions/client/content-analytics/overview.md)
       * Adobe ContextHub {#contexthub}
          * [Aperçu](./extensions/client/contexthub/overview.md)
       * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
