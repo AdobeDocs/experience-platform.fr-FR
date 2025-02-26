@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Champs de mappage pour le connecteur Source Adobe Analytics
 description: Mappez les champs Adobe Analytics aux champs XDM à l’aide du connecteur Source Analytics.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 15d63db308ea9d2daf7660b463785d04ff94e296
+source-git-commit: ae8a54f8e9fafe782cb24e54e5b638d83d468e3a
 workflow-type: tm+mt
 source-wordcount: '2415'
 ht-degree: 70%
@@ -188,7 +188,7 @@ Certains champs provenant d’ADC doivent être transformés, ce qui nécessite 
 
 Certains champs (appelés « valeurs de publication ») contiennent des données après l’ajustement de leurs valeurs par Adobe à l’aide des règles de traitement, des règles VISTA et des tables de recherche. La plupart des valeurs post ont un équivalent prétraité.
 
-Le connecteur source Analytics envoie des données prétraitées dans un jeu de données dans Experience Platform. Vous pouvez transformer ces données en leur équivalent post-traité à l’aide de transformations. Pour en savoir plus sur l’exécution de ces transformations à l’aide de Query Service, consultez [Fonctions définies par Adobe](/help/query-service/sql/adobe-defined-functions.md) dans le guide d’utilisation de Query Service.
+Le connecteur source Analytics envoie des données prétraitées dans un jeu de données dans Experience Platform. Vous pouvez transformer ces données en données correspondantes post-traitées à l’aide de transformations. Pour en savoir plus sur l’exécution de ces transformations à l’aide de Query Service, consultez [Fonctions définies par Adobe](/help/query-service/sql/adobe-defined-functions.md) dans le guide d’utilisation de Query Service.
 
 Pour en savoir plus sur l’exécution de ces transformations à l’aide de Query Service, consultez [Fonctions définies par Adobe](/help/query-service/sql/adobe-defined-functions.md) dans le guide d’utilisation de Query Service.
 
