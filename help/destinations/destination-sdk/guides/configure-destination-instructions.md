@@ -2,7 +2,7 @@
 description: Cette page répertorie et décrit les étapes de configuration d’une destination de diffusion en continu à l’aide de Destination SDK.
 title: Utiliser Destination SDK pour configurer une destination de diffusion en continu
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 804370a778a4334603f3235df94edaa91b650223
 workflow-type: tm+mt
 source-wordcount: '865'
 ht-degree: 58%
@@ -17,7 +17,7 @@ Cette page décrit comment utiliser les informations dans la section [Options de
 
 ## Conditions préalables {#prerequisites}
 
-Avant de passer aux étapes illustrées ci-dessous, consultez la page [Prise en main de la Destination SDK](../getting-started.md) pour plus d’informations sur l’obtention des informations d’identification d’authentification d’Adobe I/O nécessaires et d’autres conditions préalables requises pour utiliser les API Destination SDK. Cela suppose que vous avez rempli les conditions préalables au partenariat et à l’autorisation et que vous êtes prêt à commencer à développer votre destination.
+Avant de passer aux étapes illustrées ci-dessous, veuillez lire la page de prise en main de Destination SDK [](../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification Adobe I/O nécessaires et d’autres conditions préalables pour travailler avec les API Destination SDK. Cela suppose que vous ayez rempli les conditions préalables de partenariat et d’autorisation et que vous soyez prêt à commencer à développer votre destination.
 
 ## Étapes à suivre pour utiliser les options de configuration de Destination SDK afin de configurer votre destination. {#steps}
 
@@ -56,13 +56,13 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Étape 2 : créer une configuration de destination {#create-destination-configuration}
 
-Vous trouverez ci-dessous un exemple de configuration d’un modèle de destination, créé à l’aide du point d’entrée d’API `/destinations`. Voir [Création d’une configuration de destination](../authoring-api/destination-configuration/create-destination-configuration.md) pour plus d’informations.
+Vous trouverez ci-dessous un exemple de configuration d’un modèle de destination, créé à l’aide du point d’entrée d’API `/destinations`. Pour plus d’informations, voir [création d’une configuration de destination](../authoring-api/destination-configuration/create-destination-configuration.md).
 
 Pour connecter la configuration du serveur et du modèle de l’étape 1 à cette configuration de destination, ajoutez l’ID d’instance de la configuration de serveur et de modèle en tant que `destinationServerId` ici.
 
 >[!IMPORTANT]
 >
->Pour créer une destination en temps réel correctement configurée (diffusion en continu), vous *devez* ajouter au moins une identité cible dans `identityNamespaces`, comme illustré ci-dessous. Si aucune identité cible n’est configurée, les utilisateurs ne pourront pas aller plus loin que l’[Étape de mappage](../../ui/activate-segment-streaming-destinations.md#mapping) du workflow d’activation.
+>Pour créer une destination en temps réel (streaming) correctement configurée, vous *devez* ajouter au moins une identité cible dans `identityNamespaces`, comme illustré ci-dessous. Si aucune identité cible n’est configurée, les utilisateurs ne pourront pas aller plus loin que l’[Étape de mappage](../../ui/activate-segment-streaming-destinations.md#mapping) du workflow d’activation.
 
 ```shell
 POST platform.adobe.io/data/core/activation/authoring/destinations
@@ -117,12 +117,14 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
          "acceptsCustomNamespaces":true
       }
    },
-   "audienceMetadataConfig":{
+   "segmentMappingConfig":{
       "mapExperiencePlatformSegmentName":false,
       "mapExperiencePlatformSegmentId":false,
-      "mapUserInput":false,
+      "mapUserInput":false
+   },
+   "audienceMetadataConfig":{
       "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
-   },   
+   },  
    "aggregation":{
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
@@ -150,7 +152,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## Étape 3 : créer un modèle de transformation de message : utilisez un langage de modèle pour spécifier le format de sortie du message {#create-transformation-template}
 
-En fonction des payloads pris en charge par votre destination, vous devez créer un modèle qui transforme le format des données exportées à partir du format XDM d’Adobe dans un format pris en charge par votre destination. Voir des exemples de modèles dans la section [Utilisation d’un langage de modèle pour les transformations d’identité, d’attributs et d’appartenance à une audience](../functionality/destination-server/message-format.md#using-templating) et utilisez l’ [outil de création de modèles](../testing-api/streaming-destinations/create-template.md) fourni par Adobe.
+En fonction des payloads pris en charge par votre destination, vous devez créer un modèle qui transforme le format des données exportées à partir du format XDM d’Adobe dans un format pris en charge par votre destination. Consultez les exemples de modèles dans la section [Utilisation d’une langue de modèle pour les transformations d’identité, d’attributs et d’appartenance à une audience](../functionality/destination-server/message-format.md#using-templating) et utilisez l’outil de création de modèles [ fourni par Adobe](../testing-api/streaming-destinations/create-template.md).
 
 Une fois que vous avez conçu un modèle de transformation de messages qui vous convient, ajoutez-le à la configuration de serveur et de modèle que vous avez créée à l’étape 1.
 
@@ -229,10 +231,12 @@ Si vous utilisez une configuration de métadonnées d’audience, vous devez la 
          "acceptsCustomNamespaces":true
       }
    },
-   "audienceMetadataConfig":{
+   "segmentMappingConfig":{
       "mapExperiencePlatformSegmentName":false,
       "mapExperiencePlatformSegmentId":false,
-      "mapUserInput":false,
+      "mapUserInput":false
+   },
+   "audienceMetadataConfig":{
       "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
    },   
    "aggregation":{
@@ -267,26 +271,26 @@ Selon que vous spécifiez `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ou `
 
 >[!NOTE]
 >
->`CUSTOMER_AUTHENTICATION` est le plus courant des deux règles d’authentification. Il est à utiliser si vous demandez aux utilisateurs de fournir une sorte d’authentification à votre destination avant de pouvoir configurer une connexion et exporter des données.
+>`CUSTOMER_AUTHENTICATION` est la plus commune des deux règles d’authentification. C’est celle à utiliser si vous demandez aux utilisateurs de fournir une forme d’authentification à la destination avant de pouvoir configurer une connexion et exporter des données.
 
 Si vous avez sélectionné `"authenticationRule": "CUSTOMER_AUTHENTICATION"` dans la configuration de destination et que votre destination prend en charge la méthode d’authentification OAuth 2, lisez [Authentification OAuth 2](../functionality/destination-configuration/oauth2-authorization.md).
 
-Si vous avez sélectionné `"authenticationRule": "PLATFORM_AUTHENTICATION"`, vous devez créer une [configuration des informations d’identification](../credentials-api/create-credential-configuration.md).
+Si vous avez sélectionné `"authenticationRule": "PLATFORM_AUTHENTICATION"`, vous devez créer une configuration [informations d’identification](../credentials-api/create-credential-configuration.md).
 
 ## Étape 6 : tester votre destination {#test-destination}
 
 Une fois votre destination configurée à l’aide des points d’entrée de configuration dans les étapes précédentes, vous pouvez utiliser l’[outil de test des destinations](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) afin de tester l’intégration entre Adobe Experience Platform et votre destination.
 
-Dans le cadre du processus de test de votre destination, vous devez utiliser l’interface utilisateur d’Experience Platform pour créer des segments que vous activerez vers votre destination. Reportez-vous aux deux ressources ci-dessous pour savoir comment créer des audiences dans Experience Platform :
+Dans le cadre du processus de test de votre destination, vous devez utiliser l’interface utilisateur d’Experience Platform pour créer des segments que vous activerez vers votre destination. Reportez-vous aux deux ressources ci-dessous pour obtenir des instructions sur la création d’audiences dans Experience Platform :
 
-* [Création d’une page de documentation sur l’audience](/help/segmentation/ui/audience-portal.md#create-audience)
-* [Présentation vidéo de création d’une audience](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [Création d’une page de documentation sur les audiences](/help/segmentation/ui/audience-portal.md#create-audience)
+* [Présentation vidéo Créer une audience](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Étape 7 : publier votre destination {#publish-destination}
 
 >[!NOTE]
 >
->Cette étape n’est pas requise si vous créez une destination privée à des fins personnelles et que vous ne souhaitez pas la publier dans le catalogue de destinations pour que d’autres clients puissent l’utiliser.
+>Cette étape n’est pas obligatoire si vous créez une destination privée pour votre propre usage et que vous ne souhaitez pas la publier dans le catalogue des destinations pour que d’autres clients puissent l’utiliser.
 
 Une fois votre destination configurée et testée, utilisez l’[API de publication de destination](../publishing-api/create-publishing-request.md) afin d’envoyer votre configuration à Adobe pour révision.
 
@@ -294,14 +298,14 @@ Une fois votre destination configurée et testée, utilisez l’[API de publicat
 
 >[!NOTE]
 >
->Cette étape n’est pas requise si vous créez une destination privée à des fins personnelles et que vous ne souhaitez pas la publier dans le catalogue de destinations pour que d’autres clients puissent l’utiliser.
+>Cette étape n’est pas obligatoire si vous créez une destination privée pour votre propre usage et que vous ne souhaitez pas la publier dans le catalogue des destinations pour que d’autres clients puissent l’utiliser.
 
 Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI) créant une [intégration personnalisée](../overview.md#productized-custom-integrations), utilisez le [processus de documentation en libre-service](../docs-framework/documentation-instructions.md) pour créer une page de documentation du produit pour votre destination dans le [Catalogue des destinations Experience Platform](/help/destinations/catalog/overview.md).
 
-## Étape 9 : envoi de la destination pour la révision de l’Adobe {#submit-for-review}
+## Étape 9 : envoyer la destination pour révision Adobe {#submit-for-review}
 
 >[!NOTE]
 >
->Cette étape n’est pas requise si vous créez une destination privée à des fins personnelles et que vous ne souhaitez pas la publier dans le catalogue de destinations pour que d’autres clients puissent l’utiliser.
+>Cette étape n’est pas obligatoire si vous créez une destination privée pour votre propre usage et que vous ne souhaitez pas la publier dans le catalogue des destinations pour que d’autres clients puissent l’utiliser.
 
-Enfin, avant que la destination puisse être publiée dans le catalogue des Experience Platform et visible par tous les clients Experience Platform, vous devez envoyer officiellement la destination pour la révision de l’Adobe. Trouvez des informations complètes sur la manière de [soumettre pour révision une destination productisée créée dans Destination SDK](../guides/submit-destination.md).
+Enfin, avant que la destination puisse être publiée dans le catalogue Experience Platform et visible par tous les clients Experience Platform, vous devez envoyer officiellement la destination pour révision Adobe. Obtenez des informations complètes sur la manière d’[envoyer pour révision une destination personnalisée créée dans Destination SDK](../guides/submit-destination.md).

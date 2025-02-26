@@ -2,10 +2,10 @@
 description: Découvrez comment configurer les paramètres de métadonnées d’audience pour les destinations créées avec Destination SDK.
 title: Configuration des métadonnées d’audience
 exl-id: ae71df4f-b753-4084-835f-03559b4986cb
-source-git-commit: 20cb2dbfbfc8e73c765073818c8e7e561d4e6629
+source-git-commit: 804370a778a4334603f3235df94edaa91b650223
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 90%
+source-wordcount: '406'
+ht-degree: 86%
 
 ---
 
@@ -15,9 +15,9 @@ Pendant l’exportation de données d’Experience Platform vers votre destinat
 
 Destination SDK propose des outils que vous pouvez utiliser pour créer, mettre à jour ou supprimer des audiences par programmation dans la plateforme de destination.
 
-Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la documentation [options de configuration](../configuration-options.md) ou consultez le guide sur la [ utilisation de la Destination SDK pour configurer une destination de diffusion en continu](../../guides/configure-destination-instructions.md#create-destination-configuration).
+Pour comprendre la place de ce composant dans une intégration créée avec Destination SDK, consultez le diagramme de la documentation [options de configuration](../configuration-options.md) ou consultez le guide sur la [utilisation de Destination SDK pour configurer une destination de diffusion en streaming](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
-Vous pouvez configurer le modèle de métadonnées d’audience via le point d’entrée `/authoring/audience-templates`. Après avoir créé la configuration de métadonnées d’audience, vous pouvez utiliser le point d’entrée `/authoring/destinations` pour configurer la section `audienceMetadataConfig`. Cette section indique à votre destination les métadonnées d’audience qu’elle doit mapper sur le modèle d’audience.
+Vous pouvez configurer le modèle de métadonnées d’audience via le point d’entrée `/authoring/audience-templates`. Après avoir créé la configuration des métadonnées d’audience, vous pouvez utiliser le point d’entrée `/authoring/destinations` pour configurer les sections `segmentMappingConfig` et `audienceMetadataConfig`. Cette section indique à votre destination les métadonnées d’audience qu’elle doit mapper sur le modèle d’audience.
 
 Pour obtenir des exemples d’appels API détaillés dans lesquels vous pouvez configurer les composants affichés sur cette page, consultez les pages de référence de l’API suivantes.
 
@@ -44,10 +44,12 @@ Pour en savoir plus sur les types d’intégration qui prennent en charge les fo
 Pendant la création de la configuration des métadonnées d’audience, vous pouvez utiliser les paramètres décrits dans le tableau ci-dessous pour configurer les paramètres de mappage des audiences.
 
 ```json
-  "audienceMetadataConfig":{
+"segmentMappingConfig": {
    "mapExperiencePlatformSegmentName":false,
    "mapExperiencePlatformSegmentId":false,
    "mapUserInput":false,
+ },
+"audienceMetadataConfig":{
    "audienceTemplateId":"YOUR_AUDIENCE_TEMPLATE_ID"
 }
 ```
