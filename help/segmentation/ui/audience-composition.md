@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur d’Audiences
 description: La Composition d’audience dans l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail propose des commandes intuitives pour créer et modifier des audiences pour votre organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: f2abd9445c6b725c166f031407e330a2c15e9edb
+source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
-source-wordcount: '2342'
-ht-degree: 66%
+source-wordcount: '2313'
+ht-degree: 65%
 
 ---
 
@@ -60,7 +60,7 @@ Lorsque vous sélectionnez le bloc **[!UICONTROL Audience]**, le rail de droite 
 
 Pour ajouter des audiences au bloc Audience : Sélectionnez **[!UICONTROL Ajouter une audience]**.
 
-![Le bouton Ajouter une audience est mis en surbrillance.](../images/ui/audience-composition/add-audience.png)
+![Le bouton Ajouter une audience est mis en surbrillance.](../images/ui/audience-composition/select-add-audience.png)
 
 >[!IMPORTANT]
 >
@@ -91,7 +91,7 @@ Les audiences sélectionnées s’affichent maintenant dans le rail de droite lo
 
 Pour ajouter une règle personnalisée au bloc Audience, sélectionnez **[!UICONTROL Créer une règle]**.
 
-![Le bouton Créer une règle est mis en surbrillance.](../images/ui/audience-composition/build-rule.png)
+![Le bouton Créer une règle est mis en surbrillance.](../images/ui/audience-composition/select-build-rule.png)
 
 Le créateur de segments s’affiche. Vous pouvez utiliser le créateur de segments pour créer une règle personnalisée que l’audience doit suivre. Vous trouverez plus d’informations sur l’utilisation du créateur de segments dans le [Guide du créateur de segments](./segment-builder.md).
 
@@ -196,7 +196,7 @@ Pour sélectionner le jeu de données avec lequel enrichir l’audience, sélect
 
 La fenêtre contextuelle **[!UICONTROL Sélectionner un jeu de données]** s’affiche. Choisissez le jeu de données à enrichir, puis cliquez sur **[!UICONTROL Sélectionner]** pour enrichir le jeu de données.
 
-![Sélection du jeu de données souhaité.](../images/ui/audience-composition/enrich-dataset-selected.png)
+![Sélection du jeu de données souhaité.](../images/ui/audience-composition/select-dataset.png)
 
 >[!IMPORTANT]
 >
@@ -212,27 +212,21 @@ La section **[!UICONTROL Critères d’enrichissement]** s’affiche maintenant 
 
 Pour sélectionner la **[!UICONTROL clé de jointure source]**, cliquez sur l’icône ![Filtrer](/help/images/icons/project-edit.png).
 
-![L’icône de filtre de la [!UICONTROL clé de jointure source] est mise en surbrillance.](../images/ui/audience-composition/enrich-select-source-join-key.png)
-
 La fenêtre contextuelle de **[!UICONTROL Sélection d’un attribut de profil]** s’affiche. Choisissez l’attribut de profil à utiliser comme clé de jointure source, puis cliquez sur **[!UICONTROL Sélectionner]** pour choisir cet attribut comme clé de jointure source.
 
-![L’attribut à utiliser comme clé de jointure source est mis en surbrillance.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
+![L’attribut à utiliser comme clé de jointure source est mis en surbrillance.](../images/ui/audience-composition/select-source-join-key.png)
 
 Pour sélectionner la **[!UICONTROL clé de jointure du jeu de données d’enrichissement]**, cliquez sur l’icône ![Filtrer](/help/images/icons/project-edit.png).
 
-![L’icône de filtre de la [!UICONTROL clé de jointure du jeu de données d’enrichissement] est mise en surbrillance.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
-
 La fenêtre contextuelle **[!UICONTROL Attributs d’enrichissement]** s’affiche. Choisissez l’attribut à utiliser comme clé de jointure du jeu de données d’enrichissement, puis cliquez sur **[!UICONTROL Sélectionner]** pour choisir cet attribut comme clé de jointure de votre jeu de données d’enrichissement.
 
-![L’attribut à utiliser comme clé de jointure du jeu de données d’enrichissement est mis en surbrillance.](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
+![L’attribut à utiliser comme clé de jointure du jeu de données d’enrichissement est mis en surbrillance.](../images/ui/audience-composition/select-enrichment-dataset-join-key.png)
 
 Maintenant que vous avez ajouté vos deux clés de jointure, la section **[!UICONTROL Attributs d’enrichissement]** s’affiche. Vous pouvez maintenant ajouter l’attribut avec lequel vous souhaitez optimiser votre audience. Pour ajouter ces attributs, sélectionnez **[!UICONTROL Ajouter un attribut]**.
 
-![Le bouton [!UICONTROL Ajouter un attribut] est mis en surbrillance.](../images/ui/audience-composition/enrich-select-add-attribute.png)
-
 La fenêtre contextuelle **[!UICONTROL Attributs d’enrichissement]** s’affiche. Vous pouvez sélectionner les attributs du jeu de données pour enrichir votre audience, puis cliquez sur **[!UICONTROL Sélectionner]** pour ajouter les attributs à votre audience.
 
-![Les attributs d’enrichissement à ajouter sont mis en surbrillance.](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
+![Les attributs d’enrichissement à ajouter sont mis en surbrillance.](../images/ui/audience-composition/select-enrichment-attribute.png)
 
 <!-- ## [!UICONTROL Join] {#join-block}
 
@@ -282,13 +276,13 @@ Pour sélectionner l’attribut par lequel classer les audiences, sélectionnez 
 
 Une liste d’attributs de profil s’affiche. Dans cette fenêtre contextuelle, vous pouvez sélectionner le type d’attribut selon lequel vous souhaitez classer votre audience. Cliquez sur **[!UICONTROL Sélectionner]** pour l’ajouter à votre bloc de classement. Notez que l’attribut sélectionné peut **uniquement** être composé de chiffres.
 
-![Une liste d’attributs s’affiche.](../images/ui/audience-composition/select-attribute-rank.png)
+![Une liste d’attributs s’affiche.](../images/ui/audience-composition/rank-attribute.png)
 
 Après avoir sélectionné l’attribut, vous pouvez sélectionner l’ordre de classement. Il s’agit d’un ordre croissant (du plus bas au plus élevé) ou décroissant (du plus élevé au plus bas).
 
 En outre, vous pouvez limiter le nombre de profils renvoyés en activant le bouton **[!UICONTROL Ajouter une limite de profil]**. Lorsque ce bouton est activé, vous pouvez définir le nombre maximal de profils renvoyés dans le champ **[!UICONTROL Profils inclus]**.
 
-![Le bouton (bascule) Ajouter une limite de profil est mis en surbrillance, ce qui vous permet de limiter le nombre de profils renvoyés.](../images/ui/audience-composition/add-profile-limit.png)
+![Le bouton (bascule) Ajouter une limite de profil est mis en surbrillance, ce qui vous permet de limiter le nombre de profils renvoyés.](../images/ui/audience-composition/add-profile-limit-rank.png)
 
 ## [!UICONTROL Fractionner] {#split-block}
 
@@ -307,7 +301,7 @@ En outre, vous pouvez limiter le nombre de profils renvoyés en activant le bout
 >title="Autres profils"
 >abstract="Le bouton « Autres profils » vous permet de créer un chemin d’accès supplémentaire avec les profils restants qui ne correspondent à aucune des conditions spécifiées des autres chemins d’accès."
 
-Le type de bloc **[!UICONTROL Fractionner]** vous permet de fractionner votre nouvelle audience en différentes sous-audiences. Vous pouvez fractionner cette audience en fonction d’un pourcentage ou d’un attribut. Lors de la division de votre audience en sous-audiences, cette division n’est **pas** persistante. Cela signifie que les profils peuvent se trouver dans différentes sous-audiences pour chaque évaluation.
+Le type de bloc **[!UICONTROL Fractionner]** vous permet de fractionner votre nouvelle audience en différentes sous-audiences. Vous pouvez fractionner cette audience en fonction d’un pourcentage ou d’un attribut.
 
 Pour ajouter un bloc **[!UICONTROL Fractionner]**, sélectionnez l’icône **+**, puis **[!UICONTROL Fractionner]**.
 
@@ -325,23 +319,25 @@ Vous pouvez fractionner une audience de deux façons : par pourcentage ou par a
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_persistent"
 >title="Division persistante"
->abstract="Vous pouvez rendre la division en pourcentage persistante en activant cette option et en sélectionnant l’espace de noms d’identité sur lequel la division doit persister."
+>abstract="Vous pouvez rendre le partage en pourcentage persistant en activant cette option et en sélectionnant un espace de noms d’identité."
 
 Lors du fractionnement par pourcentage, les audiences sont réparties de manière aléatoire en fonction du nombre de chemins et des pourcentages fournis.
 
-Par exemple, vous pouvez avoir trois chemins, chacun avec un pourcentage de profils différent.
+![Le partage en pourcentage est mis en surbrillance.](../images/ui/audience-composition/split-by-percentage.png)
 
-![La répartition en nombre d’audiences et de pourcentages enregistrés s’affiche.](../images/ui/audience-composition/percentages.png)
+Vous pouvez également fournir une identité, ce qui rendrait le partage en fonction du pourcentage persistant. Les types d’identité disponibles incluent tous les espaces de noms d’identité disponibles dans votre organisation.
+
+![La case à cocher Fractionner par identité est mise en surbrillance. En outre, la liste déroulante qui vous permet de sélectionner avec une identité à fractionner est mise en surbrillance.](../images/ui/audience-composition/split-by-identity.png)
 
 ### Fractionner par attribut {#split-attribute}
 
 Lors du fractionnement par attribut, les audiences sont fractionnées en fonction des attributs fournis. Pour sélectionner l’attribut du fractionnement, sélectionnez le bloc **[!UICONTROL Fractionner]**, puis l’icône de ![filtrage](/help/images/icons/project-edit.png).
 
-![Le bouton de filtrage est sélectionné et indique comment filtrer par attribut.](../images/ui/audience-composition/select-split-attribute.png)
+![Le bouton de filtrage est sélectionné et indique comment filtrer par attribut.](../images/ui/audience-composition/split-by-attribute.png)
 
 Une liste d’attributs de profil s’affiche. Sélectionnez le type d’attribut, puis **[!UICONTROL Sélectionner]** pour l’ajouter à votre bloc de fractionnement.
 
-![Une liste d’attributs s’affiche.](../images/ui/audience-composition/select-attribute-exclude.png)
+![Une liste d’attributs s’affiche.](../images/ui/audience-composition/select-attribute.png)
 
 Après avoir sélectionné l’attribut, vous pouvez choisir les profils qui appartiendront à une sous-audience en ajoutant les valeurs dans le champ **[!UICONTROL Valeurs]**.
 

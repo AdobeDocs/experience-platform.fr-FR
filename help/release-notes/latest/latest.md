@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Février 2025
 description: Les notes de mise à jour de février 2025 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 300be2f922f81f0666a794815cb27777802efb60
+source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
-source-wordcount: '1542'
-ht-degree: 21%
+source-wordcount: '1645'
+ht-degree: 23%
 
 ---
 
@@ -24,6 +24,7 @@ Mises à jour des fonctionnalités et de la documentation existantes dans Adobe 
 - [Préparation des données](#data-prep)
 - [Destinations](#destinations)
 - [Sources](#sources)
+- [Service de segmentation](#segmentation)
 - [Mises à jour de la documentation](#documentation-updates)
    - [Comparaison entre le réseau et le hub Edge](#edge)
    - [API Flow Service développée pour les sources](#flow-service)
@@ -107,6 +108,18 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 - Lors de l’exportation de profils vers des destinations basées sur des fichiers, la déduplication garantit qu’un seul profil est exporté lorsque plusieurs profils partagent la même clé de déduplication et le même horodatage de référence. Cette version comprend une mise à jour du processus de déduplication, afin de s’assurer que les exécutions successives avec les mêmes coordonnées produiront toujours les mêmes résultats, ce qui améliore la cohérence. [En savoir plus](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-same-timestamp).
 
 Pour plus d’informations, reportez-vous à la [vue d’ensemble des destinations](../../destinations/home.md).
+
+## Service de segmentation {#segmentation-service}
+
+[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Division persistante | La composition de l’audience prend désormais en charge les divisions persistantes. Le fractionnement des audiences peut rester constant lors du fractionnement par profil en ajoutant un espace de noms d’identité à votre bloc Fractionner . Vous trouverez plus d’informations sur cette fonctionnalité dans la [documentation sur la composition de l’audience](../../segmentation/ui/audience-composition.md). |
+
+Pour plus d’informations sur [!DNL Segmentation Service], consultez la [présentation de la segmentation](../../segmentation/home.md).
 
 ## Sources {#sources}
 
