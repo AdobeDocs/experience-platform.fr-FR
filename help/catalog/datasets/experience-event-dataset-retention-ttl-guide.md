@@ -1,9 +1,10 @@
 ---
 title: Gestion de la conservation des jeux de données d’événements d’expérience dans le lac de données à l’aide de TTL
 description: Découvrez comment évaluer, définir et gérer la conservation des jeux de données d’événements d’expérience dans le lac de données à l’aide de configurations de durée de vie (TTL) avec des API Adobe Experience Platform. Ce guide explique comment l’expiration au niveau des lignes de TTL prend en charge les politiques de conservation des données, optimise l’efficacité du stockage et garantit une gestion efficace du cycle de vie des données. Elle fournit également des cas d’utilisation et des bonnes pratiques pour vous aider à appliquer efficacement la durée de vie.
-source-git-commit: 74b6e5f10f7532745180760adf1d96bc57e7b590
+exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
+source-git-commit: affaeb0869423292a44eb7ada8343482bb163ca6
 workflow-type: tm+mt
-source-wordcount: '2106'
+source-wordcount: '2196'
 ht-degree: 1%
 
 ---
@@ -28,6 +29,12 @@ La durée de vie est utile pour gérer les données sensibles au temps qui perde
 - Améliorez les performances des requêtes en réduisant au minimum les données non pertinentes.
 - Maintenez l’hygiène des données en ne conservant que les informations pertinentes.
 - Optimisez la conservation des données pour soutenir les objectifs commerciaux.
+
+>[!NOTE]
+>
+>La rétention du jeu de données d’événement d’expérience s’applique aux données d’événement stockées dans le lac de données. Si vous gérez la rétention dans Real-Time Customer Data Platform, pensez à utiliser les options [Expiration des événements d’expérience](../../profile/event-expirations.md) et [Expiration des profils pseudonymes](../../profile/pseudonymous-profiles.md) avec les paramètres de rétention du lac de données.
+>
+>Les configurations de durée de vie permettent d’optimiser le stockage en fonction des droits. Bien que les données du magasin de profils (utilisées dans Real-Time CDP) puissent être considérées comme obsolètes et supprimées après 30 jours, les mêmes données d’événement dans le lac de données peuvent rester disponibles pendant 12 à 13 mois (ou plus longtemps selon les droits) pour les cas d’utilisation d’Analytics et de Data Distiller.
 
 ### Exemple de secteur {#industry-example}
 
@@ -121,7 +128,7 @@ Une réponse réussie renvoie la configuration de durée de vie du jeu de donné
                 "rowExpiration": {
                     "defaultValue": "P12M",
                     "maxValue": "P12M",
-                    "minValue": "P7D"
+                    "minValue": "P30D"
                 }
             },
             "adobe_unifiedProfile": {  
@@ -254,7 +261,7 @@ Une réponse réussie affiche la configuration de durée de vie du jeu de donné
 | `extensions` | Conteneur pour les métadonnées supplémentaires liées au jeu de données. |
 | `extensions.adobe_lakeHouse` | Spécifie les paramètres liés à l’architecture de stockage, y compris les configurations d’expiration au niveau des lignes |
 | `rowExpiration` | L’objet contient des paramètres de durée de vie qui définissent la période de conservation du jeu de données. |
-| `rowExpiration.ttlValue` | Définit la durée avant que les enregistrements du jeu de données ne soient automatiquement supprimés. Utilise le format de période ISO-8601 (par exemple, `P3M` pour 3 mois ou `P7D` pour une semaine). |
+| `rowExpiration.ttlValue` | Définit la durée avant que les enregistrements du jeu de données ne soient automatiquement supprimés. Utilise le format de période ISO-8601 (par exemple, `P3M` pour 3 mois ou `P30D` pour une semaine). |
 | `rowExpiration.valueStatus` | La chaîne indique si le paramètre de durée de vie est une valeur système par défaut ou une valeur personnalisée définie par un utilisateur. Les valeurs possibles sont : `default`, `custom`. |
 | `rowExpiration.setBy` | Indique qui a effectué la dernière modification du paramètre TTL. Les valeurs possibles sont les suivantes : `user` (défini manuellement) ou `service` (affecté automatiquement). |
 | `rowExpiration.updated` | Date et heure de la dernière mise à jour de TTL. Cette valeur indique la date de la dernière modification du paramètre de durée de vie. |
@@ -418,4 +425,3 @@ Maintenant que vous avez appris à gérer les paramètres de TTL pour l’expira
 - Tâches de conservation : découvrez comment planifier et automatiser les expirations de jeux de données dans l’interface utilisateur de Platform à l’aide du [guide de l’interface utilisateur du cycle de vie des données](../../hygiene/ui/dataset-expiration.md) ou vérifiez les configurations de conservation des jeux de données et que les enregistrements expirés sont supprimés.
 - [Guide du point d’entrée de l’API d’expiration de jeu de données](../../hygiene/api/dataset-expiration.md) : découvrez comment supprimer des jeux de données entiers plutôt que seulement des lignes. Découvrez comment planifier, gérer et automatiser l’expiration des jeux de données à l’aide de l’API pour garantir une conservation efficace des données.
 - [Présentation des politiques d’utilisation des données](../../data-governance/policies/overview.md) : découvrez comment aligner votre stratégie de conservation des données sur les exigences de conformité plus larges et les restrictions d’utilisation marketing.
-
