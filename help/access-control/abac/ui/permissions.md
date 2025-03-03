@@ -6,7 +6,7 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
 source-wordcount: '1699'
-ht-degree: 33%
+ht-degree: 39%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 33%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
 >title="Que sont les rôles ?"
->abstract="Les rôles définissent l’accès d’un administrateur, d’un spécialiste ou d’un utilisateur final aux ressources de votre organisation. Ils catégorisent les utilisateurs interagissant avec votre instance Platform et sont les blocs de construction des politiques de contrôle d’accès. Un rôle possède un jeu d’autorisations déterminé et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin."
+>abstract="Les rôles définissent l’accès d’un administrateur, d’une administratrice, d’un ou d’une spécialiste ou encore d’un utilisateur final ou d’une utilisatrice finale, aux ressources de votre organisation. Ils catégorisent les personnes interagissant avec votre instance Platform et constituent les blocs de construction des politiques de contrôle d’accès. Un rôle possède un jeu d’autorisations déterminé et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=fr" text="Gérer les rôles"
 
 >[!IMPORTANT]
@@ -51,10 +51,10 @@ Pour supprimer un filtre, sélectionnez « X » sur l’icône de pilule du fi
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_details"
->title="Présentation des rôles"
->abstract="La boîte de dialogue de présentation des rôles affiche les détails du rôle, y compris les ressources et les sandbox auxquels un rôle donné peut accéder. Vous pouvez gérer les libellés, les utilisateurs, les groupes d’utilisateurs et d’utilisatrices, ainsi que les informations d’identification d’API pour le rôle en accédant à l’onglet correspondant dans l’espace de travail du rôle."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="Gérer les libellés d’un rôle"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="Gérer les utilisateurs et utilisatrices pour un rôle"
+>title="Vue d’ensemble des rôles"
+>abstract="La boîte de dialogue de la vue d’ensemble des rôles affiche les ressources et les sandbox auxquelles un rôle donné peut accéder. Vous pouvez gérer les libellés, les personnes, les groupes de personnes, ainsi que les informations d’identification d’API pour le rôle en accédant à l’onglet correspondant dans l’espace de travail du rôle."
+>additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="Gérer les libellés d’un rôle"
+>additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="Gérer les personnes utilisant un rôle"
 
 Sélectionnez le rôle dans l’onglet **[!UICONTROL Rôles]** qui ouvre le tableau de bord [!UICONTROL Détails] du rôle.
 
@@ -96,7 +96,7 @@ L’écran suivant vous invite à choisir les ressources de sandbox à inclure d
 
 ![Tableau de bord des ressources du rôle avec le menu déroulant des ressources du sandbox en surbrillance.](../../images/flac-ui/flac-add-role-permission.png)
 
-## Gérer les utilisateurs et utilisatrices pour un rôle
+## Gérer les personnes utilisant un rôle
 
 Sélectionnez l’onglet **[!UICONTROL Utilisateurs]** pour ouvrir les rôles [!UICONTROL Utilisateurs] de l’espace de travail, puis sélectionnez **[!UICONTROL Ajouter des utilisateurs]** pour affecter des utilisateurs au rôle.
 

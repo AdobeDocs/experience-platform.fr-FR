@@ -2,10 +2,11 @@
 title: Effectuer des transformations sur les données exportées vers des destinations d’espace de stockage à l’aide de champs calculés
 type: Tutorial
 description: Découvrez comment utiliser la fonctionnalité de champs calculés pour effectuer des transformations sur les données exportées vers des destinations d’espace de stockage
-source-git-commit: 6122ddc078101c26061e8662de3fcdcb1cb65992
+exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
+source-git-commit: 9ce451f54f180aa6ee1831ba08e178ba1a8c8e2f
 workflow-type: tm+mt
 source-wordcount: '1600'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -44,7 +45,7 @@ Pour utiliser des champs calculés pour les transformations de données :
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="« Ajouter des champs calculés » désactivé"
->abstract="Ce contrôle est désactivé car vous avez sélectionné le bouton **Exporter des tableaux, des mappages, des objets** *activé* lors de la configuration de cette connexion de destination. Pour utiliser les champs calculés et les fonctions disponibles dans , configurez une nouvelle connexion de destination à l’aide du bouton bascule **Exporter des tableaux, des mappages** des objets *désactivé*."
+>abstract="Cette commande est désactivée, car vous avez *activé* le bouton **Exporter des tableaux, des mappages et des objets** lors de la configuration de cette connexion de destination. Pour utiliser les champs calculés et les fonctions disponibles, configurez une nouvelle connexion de destination avec le bouton bascule **Exporter des tableaux, des mappages et des objets** *désactivé*."
 
 À l’étape de mappage du workflow d’activation pour les destinations d’espace de stockage, sélectionnez **[!UICONTROL Ajouter un champ calculé]**.
 

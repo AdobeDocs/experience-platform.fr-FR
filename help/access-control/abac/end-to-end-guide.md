@@ -7,7 +7,7 @@ exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
 workflow-type: tm+mt
 source-wordcount: '1593'
-ht-degree: 10%
+ht-degree: 13%
 
 ---
 
@@ -66,7 +66,7 @@ L’espace de travail Autorisations pour l’interface utilisateur de Platform s
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="Que sont les libellés ?"
->abstract="Utilisez des libellés pour classer les jeux de données et les champs en fonction des politiques d’utilisation et d’accès qui s’appliquent à ces données. Platform fournit plusieurs libellés d’utilisation des données <strong>principaux</strong> définis par Adobe, qui couvrent un large éventail de restrictions courantes applicables à la gouvernance des données. Par exemple, les libellés Sensible <strong>S</strong> tels que DSR (données réglementées en matière de santé) vous permettent de catégoriser les données qui font référence aux informations de santé protégées (ISP). Vous pouvez également définir vos propres libellés personnalisés en fonction des besoins de votre entreprise."
+>abstract="Utilisez les libellés pour classer et consulter les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Platform fournit plusieurs libellés d’utilisation des données <strong>de base</strong> définis par Adobe, qui couvrent un large éventail de restrictions courantes applicables à la gouvernance des données. Les libellés <strong>S</strong> (Sensibles) tels que DSR (données réglementées en matière de santé) servent à catégoriser les données qui font référence aux informations de santé protégées (ISP). Vous pouvez également définir vos propres libellés personnalisés en fonction des besoins de votre entreprise."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=fr#understanding-data-usage-labels" text="Présentation des libellés d’utilisation des données"
 
 Les rôles sont des moyens de classer les types d’utilisateurs interagissant avec votre instance Platform et sont des blocs élémentaires des politiques de contrôle d’accès. Un rôle possède un jeu d’autorisations déterminé et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès dont ils ont besoin.
