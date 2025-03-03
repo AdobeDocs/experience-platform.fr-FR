@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;activation;dépannage;mécanismes de sécurisation;instructions;limite
-title: Barrières de sécurité par défaut pour l’activation des données
+title: Mécanismes de sécurisation par défaut pour l’activation des données
 solution: Experience Platform
 product: experience platform
 type: Documentation
 description: En savoir plus sur l’utilisation par défaut de l’activation des données et les limites de débit.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: d01e9b6d64e9040df11c45750c784079a0289477
+source-git-commit: 818d751996cb84440f620ada50c6e6ec33cff40d
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 48%
+source-wordcount: '1666'
+ht-degree: 49%
 
 ---
 
-# Barrières de sécurité pour l’activation des données
+# Mécanismes de sécurisation pour l’activation des données
 
 >[!IMPORTANT]
 >
->Vérifiez vos droits de licence dans votre commande de ventes et la [description du produit](https://helpx.adobe.com/fr/legal/product-descriptions.html) correspondante sur les limites d’utilisation réelles en plus de cette page de garde-fous.
+>Vérifiez vos droits de licence dans votre commande client et la [Description du produit](https://helpx.adobe.com/fr/legal/product-descriptions.html) correspondante sur les limites d’utilisation réelles en plus de cette page de mécanismes de sécurisation.
 
 Cette page fournit les limites d’utilisation et de débit par défaut en ce qui concerne le comportement d’activation. Lors de la révision des mécanismes de sécurisation suivants, on suppose que vous avez correctement [connecté aux destinations](/help/destinations/ui/connect-destination.md).
 
@@ -27,21 +27,21 @@ Cette page fournit les limites d’utilisation et de débit par défaut en ce qu
 >* Les limites décrites dans ce document sont constamment améliorées. Consultez régulièrement les mises à jour.
 >* Selon les limites individuelles en aval, certaines destinations peuvent avoir des mécanismes de sécurisation plus stricts que ceux documentés sur cette page. Veillez également à vérifier la page du [catalogue](/help/destinations/catalog/overview.md) de la destination à laquelle vous vous connectez et activez les données.
 
-## Types de protection {#limit-types}
+## Types de mécanismes de sécurisation {#limit-types}
 
 Ce document comprend deux types de limites par défaut :
 
-| Type de protection | Description |
+| Type de mécanisme de sécurisation | Description |
 |----------|---------|
-| **Barrière de sécurité des performances (limite de soft)** | Les barrières de performance sont des limites d’utilisation liées à la portée de vos cas d’utilisation. Lorsque vous dépassez les barrières de performance, vous pouvez rencontrer une dégradation des performances et une latence. Adobe n’est pas responsable d’une telle dégradation des performances. Les clients qui dépassent systématiquement une barrière de performance peuvent choisir d’acquérir une capacité supplémentaire afin d’éviter une dégradation des performances. |
-| **Barrières de sécurité système (limite stricte)** | Les barrières de sécurité appliquées par le système sont appliquées par l’interface utilisateur ou l’API de Real-Time CDP. Il s’agit de limites que vous ne pouvez pas dépasser, car l’interface utilisateur et l’API vous empêcheront de le faire ou renverront une erreur. |
+| **Mécanisme de sécurisation des performances (limite soft)** | Les mécanismes de sécurisation de performances sont des limites d’utilisation liées à la portée de vos cas d’utilisation. Si vous dépassez les mécanismes de sécurisation des performances, vous pouvez rencontrer une dégradation des performances et une latence. Adobe n’est pas responsable de cette dégradation des performances. Les clients qui dépassent régulièrement un mécanisme de sécurisation des performances peuvent choisir de se procurer une licence pour une capacité supplémentaire afin d’éviter une dégradation des performances. |
+| **Mécanismes de sécurisation appliqués par le système (limite Hard)** | Les mécanismes de sécurisation appliqués par le système sont appliqués par l’interface utilisateur ou l’API Real-Time CDP. Il s’agit de limites que vous ne pouvez pas dépasser, car l’interface utilisateur et l’API vous en empêcheront ou renverront une erreur. |
 
 {style="table-layout:auto"}
 
 
 ## Limites d’activation {#activation-limits}
 
-Les barrières de sécurité suivantes fournissent des limites recommandées lors de l’activation des données Real-Time Customer Profile vers les destinations.
+Les mécanismes de sécurisation suivants fournissent des limites recommandées lors de l’activation des données du profil client en temps réel vers les destinations.
 
 ### Mécanismes de sécurisation générales de l’activation {#general-activation-guardrails}
 
@@ -49,11 +49,11 @@ Les mécanismes de sécurisation ci-dessous s’appliquent généralement à l�
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
-| Nombre maximal d’audiences vers une seule destination | 250 | Protecteur des performances | Il est recommandé de mapper un maximum de 250 audiences à une seule destination dans un flux de données. <br><br> Si vous devez activer plus de 250 audiences vers une destination, vous pouvez effectuer l’une des opérations suivantes : <ul><li> Dissociez les audiences que vous ne souhaitez plus activer, ou</li><li>Créez un nouveau flux de données vers la destination souhaitée et mappez les audiences à ce nouveau flux de données.</li></ul> <br> Notez que dans le cas de certaines destinations, vous pouvez être limité à moins de 250 audiences mappées à la destination. Ces destinations sont répertoriées plus bas sur la page, dans leurs sections respectives. |
-| Nombre maximal d’attributs mappés vers une destination | 50 | Protecteur des performances | Dans le cas de plusieurs destinations et types de destination, vous pouvez sélectionner des attributs de profil et des identités à mapper pour l’exportation. Pour des performances optimales, un maximum de 50 attributs doit être mappé dans un flux de données vers une destination. |
-| Nombre maximal de destinations | 100 | Barrière de sécurité mise en place par le système | Vous pouvez créer un maximum de 100 destinations auxquelles vous pouvez vous connecter et activer des données, *par sandbox*. Les [destinations de personnalisation Edge (personnalisation personnalisée)](#edge-destinations-activation) peuvent représenter un maximum de 10 sur les 100 destinations recommandées. |
-| Type de données activées vers les destinations | Données de profil, y compris les identités et le mappage d’identités | Barrière de sécurité mise en place par le système | Actuellement, il n’est possible d’exporter que des *attributs d’enregistrement de profil* vers les destinations. Pour l’instant, les attributs XDM qui décrivent les données d’événement ne sont pas pris en charge pour l’exportation. |
-| Type de données activées vers les destinations : prise en charge des attributs de tableau et de mappage | Partiellement disponible | Barrière de sécurité mise en place par le système | Vous pouvez exporter des attributs de tableau vers des [destinations basées sur des fichiers](/help/destinations/destination-types.md#file-based). Vous devez toujours utiliser la fonction `array_to_string` pour aplatir le tableau en une chaîne dans le fichier cible. [En savoir plus](/help/release-notes/2024/october-2024.md#destinations-new-updated-functionality) sur la fonctionnalité. <br><br> À l’heure actuelle, il n’est **pas** possible d’exporter des *attributs de mappage* vers des destinations. L’exception à cette règle est le [mappage d’identités](/help/xdm/field-groups/profile/identitymap.md), qui est exporté à la fois dans les activations par flux et basées sur des fichiers. |
+| Nombre maximal d’audiences vers une seule destination | 250 | Mécanisme de sécurisation des performances | Il est recommandé de mapper un maximum de 250 audiences à une seule destination dans un flux de données. <br><br> Si vous devez activer plus de 250 audiences vers une destination, vous pouvez effectuer l’une des opérations suivantes : <ul><li> Annuler le mappage des audiences que vous ne souhaitez plus activer, ou</li><li>Créez un nouveau flux de données vers la destination souhaitée et mappez des audiences à ce nouveau flux de données.</li></ul> <br> Notez que dans le cas de certaines destinations, vous pouvez être limité à moins de 250 audiences mappées à la destination. Ces destinations sont répertoriées plus bas sur la page, dans leurs sections respectives. |
+| Nombre maximal d’attributs mappés vers une destination | 50 | Mécanisme de sécurisation des performances | Dans le cas de plusieurs destinations et types de destination, vous pouvez sélectionner des attributs de profil et des identités à mapper pour l’exportation. Pour des performances optimales, un maximum de 50 attributs doit être mappé dans un flux de données vers une destination. |
+| Nombre maximal de destinations | 100 | Mécanisme de sécurisation mis en œuvre par le système | Vous pouvez créer un maximum de 100 destinations auxquelles vous pouvez vous connecter et activer des données, *par sandbox*. Les [destinations de personnalisation Edge (personnalisation personnalisée)](#edge-destinations-activation) peuvent représenter un maximum de 10 sur les 100 destinations recommandées. |
+| Type de données activées vers les destinations | Données de profil, y compris les identités et le mappage d’identités | Mécanisme de sécurisation mis en œuvre par le système | Actuellement, il n’est possible d’exporter que des *attributs d’enregistrement de profil* vers les destinations. Pour l’instant, les attributs XDM qui décrivent les données d’événement ne sont pas pris en charge pour l’exportation. |
+| Type de données activées vers les destinations : prise en charge des attributs de tableau et de mappage | Partiellement disponible | Mécanisme de sécurisation mis en œuvre par le système | Vous pouvez exporter des attributs de tableau vers des [destinations basées sur des fichiers](/help/destinations/destination-types.md#file-based). [En savoir plus](/help/destinations/ui/export-arrays-calculated-fields.md) à propos de la fonctionnalité. |
 
 {style="table-layout:auto"}
 
@@ -73,9 +73,9 @@ Les mécanismes de sécurisation ci-dessous s’appliquent à l’activation par
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
-| Fréquence d’activation | Exportation complète quotidienne ou exportation incrémentielle plus fréquente toutes les 3, 6, 8 ou 12 heures. | Barrière de sécurité mise en place par le système | Consultez les sections de documentation [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) pour plus d’informations sur les incréments de fréquence pour les exportations par lots. |
-| Nombre maximal d’audiences pouvant être exportées à une heure donnée | 100 | Protecteur des performances | Il est recommandé d’ajouter un maximum de 100 audiences aux flux de données de destination des lots. |
-| Nombre maximum de lignes (enregistrements) par fichier à activer | 5 million | Barrière de sécurité mise en place par le système | Adobe Experience Platform fractionne automatiquement les fichiers exportés à raison de 5 millions d’enregistrements (lignes) par fichier. Chaque ligne représente un profil. Les noms de fichiers fractionnés sont ajoutés avec un nombre indiquant que le fichier fait partie d’une exportation plus importante, comme : `filename.csv`, `filename_2.csv`, `filename_3.csv`. Pour plus d’informations, reportez-vous à la [section de planification](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) du tutoriel d’activation des destinations par lot. |
+| Fréquence d’activation | Exportation complète quotidienne ou exportation incrémentielle plus fréquente toutes les 3, 6, 8 ou 12 heures. | Mécanisme de sécurisation mis en œuvre par le système | Consultez les sections de documentation [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) pour plus d’informations sur les incréments de fréquence pour les exportations par lots. |
+| Nombre maximal d’audiences pouvant être exportées à une heure donnée | 100 | Mécanisme de sécurisation des performances | Il est recommandé d’ajouter un maximum de 100 audiences aux flux de données de destination par lots. |
+| Nombre maximum de lignes (enregistrements) par fichier à activer | 5 million | Mécanisme de sécurisation mis en œuvre par le système | Adobe Experience Platform fractionne automatiquement les fichiers exportés à raison de 5 millions d’enregistrements (lignes) par fichier. Chaque ligne représente un profil. Les noms de fichiers fractionnés sont ajoutés avec un nombre indiquant que le fichier fait partie d’une exportation plus importante, comme : `filename.csv`, `filename_2.csv`, `filename_3.csv`. Pour plus d’informations, reportez-vous à la [section de planification](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) du tutoriel d’activation des destinations par lot. |
 
 {style="table-layout:auto"}
 
@@ -85,8 +85,8 @@ Les mécanismes de sécurisation ci-dessous s’appliquent à la méthode d’[a
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
-| Audiences activées par tâche d’activation ad hoc | 80 | Barrière de sécurité mise en place par le système | Actuellement, chaque tâche d’activation ad hoc peut activer jusqu’à 80 audiences. Si vous tentez d’activer plus de 80 audiences par tâche, la tâche échouera. Ce comportement peut faire l’objet de modifications dans les prochaines versions. |
-| Tâches d’activation ad hoc simultanées par audience | 1 | Barrière de sécurité mise en place par le système | N’exécutez pas plusieurs tâches d’activation ad hoc simultanées par audience. |
+| Audiences activées par traitement d’activation ad hoc | 80 | Mécanisme de sécurisation mis en œuvre par le système | Actuellement, chaque traitement d’activation ad hoc peut activer jusqu’à 80 audiences. Si vous tentez d’activer plus de 80 audiences par traitement, celui-ci échouera. Ce comportement peut faire l’objet de modifications dans les prochaines versions. |
+| Traitements d’activation ad hoc simultanés par audience | 1 | Mécanisme de sécurisation mis en œuvre par le système | N’exécutez pas plusieurs traitements d’activation ad hoc simultanés par audience. |
 
 {style="table-layout:auto"}
 
@@ -96,15 +96,15 @@ Les mécanismes de sécurisation ci-dessous s’appliquent à l’activation par
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
-| Nombre maximal de destinations de [Personnalisation personnalisée](/help/destinations/catalog/personalization/custom-personalization.md) | 10 | Protecteur des performances | Vous pouvez configurer des flux de données vers 10 destinations de personnalisation personnalisée par sandbox. |
-| Nombre maximal d’attributs mappés à une destination de personnalisation par sandbox | 30 | Barrière de sécurité mise en place par le système | Un maximum de 30 attributs peuvent être mappés dans un flux de données à une destination de personnalisation, par sandbox. |
-| Nombre maximal d’audiences mappées à une seule destination [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) | 50 | Protecteur des performances | Vous pouvez activer un maximum de 50 audiences dans un flux d’activation vers une seule destination Adobe Target. |
+| Nombre maximal de destinations de [Personnalisation personnalisée](/help/destinations/catalog/personalization/custom-personalization.md) | 10 | Mécanisme de sécurisation des performances | Vous pouvez configurer des flux de données vers 10 destinations de personnalisation personnalisée par sandbox. |
+| Nombre maximal d’attributs mappés à une destination de personnalisation par sandbox | 30 | Mécanisme de sécurisation mis en œuvre par le système | Un maximum de 30 attributs peuvent être mappés dans un flux de données à une destination de personnalisation, par sandbox. |
+| Nombre maximal d’audiences mappées à une seule destination [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) | 50 | Mécanisme de sécurisation des performances | Vous pouvez activer un maximum de 50 audiences dans un flux d’activation vers une seule destination Adobe Target. |
 
 {style="table-layout:auto"}
 
-### Exports de jeux de données {#dataset-exports}
+### Exportations de jeux de données {#dataset-exports}
 
-Les exportations de jeux de données sont actuellement prises en charge dans un **[!UICONTROL premier complet, puis incrémentiel]** [modèle](/help/destinations/ui/export-datasets.md#scheduling). Les barrières de sécurité décrites dans cette section *s’appliquent à la première exportation complète* qui se produit après la configuration d’un workflow d’exportation de jeux de données.
+Les exportations de jeux de données sont actuellement prises en charge selon un **[!UICONTROL modèle complet, puis incrémentiel]** [](/help/destinations/ui/export-datasets.md#scheduling). Les mécanismes de sécurisation décrits dans cette section *s’appliquent à la première exportation complète* qui se produit une fois qu’un workflow d’exportation de jeu de données est configuré.
 
 <!--
 
@@ -118,34 +118,34 @@ Les exportations de jeux de données sont actuellement prises en charge dans un 
 
 #### Types de jeux de données {#dataset-types}
 
-Les barrières de sécurité à l’exportation des jeux de données s’appliquent à deux types de jeux de données exportés depuis un Experience Platform, comme décrit ci-dessous :
+Les mécanismes de sécurisation de l’exportation des jeux de données s’appliquent à deux types de jeux de données exportés depuis Experience Platform, comme décrit ci-dessous :
 
-**Jeux de données basés sur le schéma des événements d’expérience XDM**
-Dans le cas de jeux de données basés sur le schéma d’événements d’expérience XDM, le schéma de jeu de données comprend une colonne de niveau supérieur *horodatage* . Les données sont ingérées de manière à ajouter uniquement.
+**Jeux de données basés sur le schéma d’événements d’expérience XDM**
+Dans le cas des jeux de données basés sur le schéma d’événements d’expérience XDM, le schéma du jeu de données inclut une colonne de niveau supérieur *horodatage*. Les données sont ingérées en ajout uniquement.
 
 **Jeux de données basés sur le schéma XDM Individual Profile**
-Dans le cas de jeux de données basés sur le schéma XDM Individual Profile, le schéma de jeu de données n’inclut pas une colonne de niveau supérieur *horodatage*. Les données sont ingérées de manière positive.
+Dans le cas de jeux de données basés sur le schéma XDM Individual Profile, le schéma du jeu de données n’inclut pas de colonne de niveau supérieur *timestamp*. Les données sont ingérées en upsert.
 
-La barrière de sécurité logicielle ci-dessous s’applique à tous les jeux de données exportés hors d’Experience Platform. Examinez également les garde-fous durs plus loin ci-dessous, spécifiques à différents types de jeux de données et de compression.
+Le mécanisme de sécurisation logiciel ci-dessous s’applique à tous les jeux de données exportés depuis Experience Platform. Examinez également les mécanismes de sécurisation stricts ci-dessous, spécifiques aux différents types de jeux de données et de compression.
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
-| Taille des jeux de données exportés | 5 milliards d’enregistrements | Protecteur des performances | La limite décrite ici pour les exportations de jeux de données est un *garde-fous souple*. Par exemple, bien que l’interface utilisateur ne vous empêche pas d’exporter des jeux de données de plus de 5 milliards d’enregistrements, le comportement est imprévisible et les exportations peuvent échouer ou présenter une latence d’exportation très longue. |
+| Taille des jeux de données exportés | 5 milliards d’enregistrements | Mécanisme de sécurisation des performances | La limite décrite ici pour les exportations de jeux de données est un *mécanisme de sécurisation souple*. Par exemple, bien que l’interface utilisateur ne vous empêche pas d’exporter des jeux de données de plus de 5 milliards d’enregistrements, le comportement est imprévisible et les exportations peuvent échouer ou présenter une latence d’exportation très longue. |
 
 {style="table-layout:auto"}
 
-#### Barrières de sécurité pour les exportations planifiées de jeux de données
+#### Mécanismes de sécurisation pour les exportations de jeux de données planifiées
 
-Pour les exportations planifiées ou récurrentes de jeux de données, les barrières de sécurité ci-dessous sont identiques pour les deux formats du fichier exporté (JSON ou parquet) et sont regroupées par type de jeu de données.
+Pour les exportations de jeux de données planifiées ou récurrentes, les mécanismes de sécurisation ci-dessous sont identiques pour les deux formats du fichier exporté (JSON ou parquet) et sont regroupés par type de jeu de données.
 
 >[!WARNING]
 >
->Les exportations vers les fichiers JSON sont prises en charge en mode compressé uniquement.
+>Les exportations vers des fichiers JSON sont uniquement prises en charge en mode compressé.
 
-| Type de jeu de données | Mécanisme de sécurisation | Type de protection | Description |
+| Type de jeu de données | Mécanisme de sécurisation | Type de mécanisme de sécurisation | Description |
 ---------|----------|---------|-------|
-| Jeux de données basés sur le **schéma des événements d’expérience XDM** | 365 derniers jours de données | Barrière de sécurité mise en place par le système | Les données de la dernière année civile sont exportées. |
-| Jeux de données basés sur le **schéma XDM Individual Profile** | Dix milliards d’enregistrements sur tous les fichiers exportés dans un flux de données | Barrière de sécurité mise en place par le système | Le nombre d’enregistrements du jeu de données doit être inférieur à dix milliards pour les fichiers JSON ou parquet compressés et à un million pour les fichiers parquet non compressés. Dans le cas contraire, l’exportation échoue. Réduisez la taille du jeu de données que vous essayez d’exporter s’il est supérieur au seuil autorisé. |
+| Jeux de données basés sur le schéma **XDM Experience Events** | 365 derniers jours de données | Mécanisme de sécurisation mis en œuvre par le système | Les données de la dernière année civile sont exportées. |
+| Jeux de données basés sur le schéma **XDM Individual Profile** | Dix milliards d’enregistrements sur tous les fichiers exportés dans un flux de données | Mécanisme de sécurisation mis en œuvre par le système | Le nombre d’enregistrements du jeu de données doit être inférieur à dix milliards pour les fichiers JSON ou parquet compressés et à un million pour les fichiers parquet non compressés. Dans le cas contraire, l’exportation échouera. Réduisez la taille du jeu de données que vous essayez d’exporter s’il est supérieur au seuil autorisé. |
 
 {style="table-layout:auto"}
 
@@ -168,7 +168,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 
 -->
 
-En savoir plus sur l’ [exportation de jeux de données](/help/destinations/ui/export-datasets.md).
+En savoir plus sur l’[exportation de jeux de données](/help/destinations/ui/export-datasets.md).
 
 
 ### Mécanismes de sécurisation de Destination SDK {#destination-sdk-guardrails}
@@ -177,8 +177,8 @@ En savoir plus sur l’ [exportation de jeux de données](/help/destinations/ui/
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
-| Nombre maximal de [destinations personnalisées privées](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Protecteur des performances | Vous pouvez créer un maximum de 5 destinations de diffusion en continu ou par lots privées à l’aide de Destination SDK. Contactez un représentant de l’assistance clientèle si vous devez créer plus de 5 destinations de ce type. |
-| Politique d’exportation de profils pour Destination SDK | <ul><li>`maxBatchAgeInSecs` (1 800 minimum et 3 600 maximum)</li><li>`maxNumEventsInBatch` (1 000 minimum et 10 000 maximum)</li></ul> | Barrière de sécurité mise en place par le système | Lors de l’utilisation de l’option [agrégation configurable](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) pour votre destination, gardez à l’esprit les valeurs minimale et maximale qui déterminent la fréquence d’envoi des messages HTTP vers votre destination basée sur l’API et le nombre de profils que les messages doivent inclure. |
+| Nombre maximal de [destinations personnalisées privées](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Mécanisme de sécurisation des performances | Vous pouvez créer un maximum de 5 destinations de diffusion en continu ou par lots privées à l’aide de Destination SDK. Contactez un représentant de l’assistance clientèle si vous devez créer plus de 5 destinations de ce type. |
+| Politique d’exportation de profils pour Destination SDK | <ul><li>`maxBatchAgeInSecs` (1 800 au minimum et 3 600 au maximum)</li><li>`maxNumEventsInBatch` (1 000 au minimum et 10 000 au maximum)</li></ul> | Mécanisme de sécurisation mis en œuvre par le système | Lors de l’utilisation de l’option [agrégation configurable](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) pour votre destination, gardez à l’esprit les valeurs minimale et maximale qui déterminent la fréquence d’envoi des messages HTTP vers votre destination basée sur l’API et le nombre de profils que les messages doivent inclure. |
 
 {style="table-layout:auto"}
 
@@ -194,10 +194,10 @@ Détails sur les seuils de limitations ou les limites pour des destinations donn
 
 ## Étapes suivantes
 
-Pour plus d’informations sur les barrières de sécurité des autres services Experience Platform, sur les informations de latence de bout en bout et les informations de licence des documents Description du produit Real-Time CDP, consultez la documentation suivante :
+Consultez la documentation suivante pour plus d’informations sur les autres mécanismes de sécurisation des services Experience Platform, sur les informations de latence de bout en bout et les informations de licence dans les documents de description du produit Real-Time CDP :
 
-* [Barrières de sécurité Real-Time CDP](/help/rtcdp/guardrails/overview.md)
+* [Mécanismes de sécurisation de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
 * [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.
-* [Real-Time Customer Data Platform (Édition B2C - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (édition B2C - packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
 * [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 * [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
