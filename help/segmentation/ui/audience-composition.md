@@ -3,14 +3,24 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur d’Audiences
 description: La Composition d’audience dans l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail propose des commandes intuitives pour créer et modifier des audiences pour votre organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
+source-git-commit: 758ec9de9bf3e6bb9853c9455c69e0b5ca7948d5
 workflow-type: tm+mt
-source-wordcount: '2313'
-ht-degree: 65%
+source-wordcount: '2344'
+ht-degree: 64%
 
 ---
 
 # Guide de l’interface utilisateur de la Composition d’audience
+
+>[!AVAILABILITY]
+>
+>Pour utiliser cette fonctionnalité, vous devez disposer des autorisations suivantes :
+>
+>- Gestion des segments
+>- Gestion des profils
+>- Gestion des politiques de fusion
+>
+>Vous trouverez plus d’informations sur les autorisations dans Platform dans la [présentation du contrôle d’accès](../../access-control/home.md#permissions).
 
 >[!NOTE]
 >
