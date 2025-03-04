@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: En savoir plus sur l’utilisation par défaut de l’activation des données et les limites de débit.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 818d751996cb84440f620ada50c6e6ec33cff40d
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '1666'
 ht-degree: 49%
@@ -53,7 +53,7 @@ Les mécanismes de sécurisation ci-dessous s’appliquent généralement à l�
 | Nombre maximal d’attributs mappés vers une destination | 50 | Mécanisme de sécurisation des performances | Dans le cas de plusieurs destinations et types de destination, vous pouvez sélectionner des attributs de profil et des identités à mapper pour l’exportation. Pour des performances optimales, un maximum de 50 attributs doit être mappé dans un flux de données vers une destination. |
 | Nombre maximal de destinations | 100 | Mécanisme de sécurisation mis en œuvre par le système | Vous pouvez créer un maximum de 100 destinations auxquelles vous pouvez vous connecter et activer des données, *par sandbox*. Les [destinations de personnalisation Edge (personnalisation personnalisée)](#edge-destinations-activation) peuvent représenter un maximum de 10 sur les 100 destinations recommandées. |
 | Type de données activées vers les destinations | Données de profil, y compris les identités et le mappage d’identités | Mécanisme de sécurisation mis en œuvre par le système | Actuellement, il n’est possible d’exporter que des *attributs d’enregistrement de profil* vers les destinations. Pour l’instant, les attributs XDM qui décrivent les données d’événement ne sont pas pris en charge pour l’exportation. |
-| Type de données activées vers les destinations : prise en charge des attributs de tableau et de mappage | Partiellement disponible | Mécanisme de sécurisation mis en œuvre par le système | Vous pouvez exporter des attributs de tableau vers des [destinations basées sur des fichiers](/help/destinations/destination-types.md#file-based). [En savoir plus](/help/destinations/ui/export-arrays-calculated-fields.md) à propos de la fonctionnalité. |
+| Type de données activées vers les destinations : prise en charge des attributs de tableau et de mappage | Partiellement disponible | Mécanisme de sécurisation mis en œuvre par le système | Vous pouvez exporter des attributs de tableau vers des [destinations basées sur des fichiers](/help/destinations/destination-types.md#file-based). [En savoir plus](/help/destinations/ui/export-arrays-maps-objects.md) à propos de la fonctionnalité. |
 
 {style="table-layout:auto"}
 

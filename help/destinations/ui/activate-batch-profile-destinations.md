@@ -3,9 +3,9 @@ title: Activer les audiences vers des destinations d’export de profils par lot
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations de profils par lots.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: b4b185cab4defbf9559089e5152075674dab52d1
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
-source-wordcount: '4387'
+source-wordcount: '4374'
 ht-degree: 52%
 
 ---
@@ -63,9 +63,9 @@ Pour sélectionner les audiences à activer vers la destination, utilisez les ca
 
 Vous pouvez effectuer un choix parmi plusieurs types d’audiences, selon leur origine :
 
-* **[!UICONTROL Segmentation Service]** : audiences générées dans l’Experience Platform par Segmentation Service. Voir la [documentation sur la segmentation](../../segmentation/ui/overview.md) pour plus d’informations.
-* **[!UICONTROL Chargement personnalisé]** : audiences générées en dehors de l’Experience Platform et chargées dans Platform au format CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [importation d’une audience](../../segmentation/ui/audience-portal.md#import-audience).
-* Autres types d’audiences provenant d’autres solutions d’Adobe, telles que [!DNL Audience Manager].
+* **[!UICONTROL Segmentation Service]** : audiences générées dans Experience Platform par le service de segmentation. Voir la [documentation sur la segmentation](../../segmentation/ui/overview.md) pour plus d’informations.
+* **[!UICONTROL Chargement personnalisé]** : audiences générées en dehors d’Experience Platform et chargées dans Platform au format CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [importation d’une audience](../../segmentation/ui/audience-portal.md#import-audience).
+* Autres types d’audiences, provenant d’autres solutions Adobe, telles que [!DNL Audience Manager].
 
 ![Cases à cocher affichées lors de la sélection d’une ou de plusieurs audiences à activer.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
@@ -92,7 +92,7 @@ Experience Platform définit automatiquement un planning par défaut pour chaque
 
 Pour modifier plusieurs plannings en même temps, sélectionnez les audiences à l’aide des cases à cocher situées sur le côté gauche de l’écran, puis sélectionnez **[!UICONTROL Modifier le planning]**. Le planning que vous configurez sera ensuite appliqué à tous les fichiers exportés pour les audiences sélectionnées.
 
-![Image de l’interface utilisateur de l’Experience Platform affichant l’option Modifier le planning pour plusieurs audiences sélectionnées.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
+![Image de l’interface utilisateur d’Experience Platform affichant l’option Modifier le planning pour plusieurs audiences sélectionnées.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
 
 >[!TIP]
 >
@@ -214,14 +214,14 @@ Le nom de destination et l’ID d’audience ne peuvent pas être supprimés des
 | **[!UICONTROL Texte personnalisé]** | Tout texte personnalisé que vous souhaitez ajouter aux noms de fichier. |
 | **[!UICONTROL Identifiant de destination]** | Identifiant du flux de données de destination que vous utilisez pour exporter l’audience. |
 | **[!UICONTROL Nom de la destination]** | Nom du flux de données de destination que vous utilisez pour exporter l’audience. |
-| **[!UICONTROL Nom de l’organisation]** | Nom de votre organisation dans l’Experience Platform. |
+| **[!UICONTROL Nom de l’organisation]** | Nom de votre organisation dans Experience Platform. |
 | **[!UICONTROL Nom du sandbox]** | Identifiant du sandbox que vous utilisez pour exporter l’audience. |
 
 {style="table-layout:auto"}
 
 Pour modifier plusieurs noms de fichier en même temps, sélectionnez les audiences à l’aide des cases à cocher situées sur le côté gauche de l’écran, puis sélectionnez **[!UICONTROL Modifier le nom du fichier]**. Les options de nom de fichier que vous configurez seront ensuite appliquées à tous les fichiers exportés pour les audiences sélectionnées.
 
-![Image de l’interface utilisateur de l’Experience Platform affichant l’option Modifier le nom de fichier pour plusieurs audiences sélectionnées.](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
+![Image de l’interface utilisateur d’Experience Platform affichant l’option Modifier le nom de fichier pour plusieurs audiences sélectionnées.](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
 
 Sélectionnez **[!UICONTROL Appliquer les modifications]** pour confirmer votre sélection.
 
@@ -270,7 +270,7 @@ Au cours de cette étape, vous devez sélectionner les attributs de profil à aj
 
    >[!NOTE]
    >
-   >Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients et clientes. Pour demander l’accès à cette fonctionnalité, contactez votre représentant d’Adobe.
+   >Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients et clientes. Pour demander l’accès à cette fonctionnalité, contactez votre représentant Adobe.
 
    ![Enregistrement montrant la réorganisation des champs de mapping par glisser-déposer.](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
 
@@ -464,9 +464,9 @@ Après déduplication, le fichier d&#39;export contiendra :
 
 **Fiabilité améliorée** : ce processus de déduplication mis à jour garantit que les exécutions successives avec les mêmes coordonnées produiront toujours les mêmes résultats, ce qui améliore la cohérence.
 
-### Exporter des tableaux par le biais de champs calculés {#export-arrays-calculated-fields}
+### Effectuer des transformations de données via des champs calculés {#calculated-fields}
 
-Certains clients bêta peuvent exporter des objets de tableau depuis l’Experience Platform vers des destinations d’espace de stockage. En savoir plus sur l’[exportation de tableaux et de champs calculés](/help/destinations/ui/export-arrays-calculated-fields.md) et contactez votre représentant d’Adobe pour accéder à la fonctionnalité.
+Vous pouvez utiliser le contrôle [Champs calculés](/help/destinations/ui/data-transformations-calculated-fields.md) pour effectuer diverses transformations de données sur les données exportées vers des destinations basées sur des fichiers.
 
 ### Limites connues {#known-limitations}
 
@@ -509,7 +509,7 @@ En tant que solution temporaire, si vous devez ajouter des espaces de noms d’i
 > 
 >Toutes les destinations d’espace de stockage du catalogue peuvent afficher une étape améliorée [[!UICONTROL Mappage] ](#mapping) qui remplace l’étape **[!UICONTROL Sélectionner des attributs]** décrite dans cette section.
 >
->Cette étape **[!UICONTROL Sélectionner des attributs]** reste affichée pour les destinations de marketing par e-mail des Marketings Cloud Adobe Campaign, Oracle Responsys, Oracle Eloqua et Salesforce.
+>Cette étape **[!UICONTROL Sélectionner des attributs]** reste affichée pour les destinations de marketing par e-mail Adobe Campaign, Oracle Responsys, Oracle Eloqua et Salesforce Marketing Cloud.
 
 Pour les destinations basées sur un profil, vous devez sélectionner les attributs de profil à envoyer à la destination cible.
 
@@ -601,7 +601,7 @@ Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &
 
 ### Vérifications des politiques d’utilisation des données {#data-usage-policy-checks}
 
-À l’étape **[!UICONTROL Révision]**, l’Experience Platform vérifie également les violations de la politique d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la politique. Vous ne pouvez pas terminer le workflow d’activation de l’audience tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de politique, consultez la section sur les violations de politique d’utilisation des données [data usage policy violations](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) dans la documentation sur la gouvernance des données .
+À l’étape **[!UICONTROL Révision]**, Experience Platform vérifie également les violations de la politique d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la politique. Vous ne pouvez pas terminer le workflow d’activation de l’audience tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de politique, consultez la section sur les violations de politique d’utilisation des données [data usage policy violations](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) dans la documentation sur la gouvernance des données .
 
 ![Exemple de violation de la politique de données affiché dans le workflow d’activation.](../assets/common/data-policy-violation.png)
 

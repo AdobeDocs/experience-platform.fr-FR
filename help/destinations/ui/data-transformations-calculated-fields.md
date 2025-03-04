@@ -3,10 +3,10 @@ title: Effectuer des transformations sur les données exportées vers des destin
 type: Tutorial
 description: Découvrez comment utiliser la fonctionnalité de champs calculés pour effectuer des transformations sur les données exportées vers des destinations d’espace de stockage
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
-source-git-commit: 9ce451f54f180aa6ee1831ba08e178ba1a8c8e2f
+source-git-commit: 14c672ef57e0b0247020075552c782ed18db8484
 workflow-type: tm+mt
-source-wordcount: '1600'
-ht-degree: 4%
+source-wordcount: '1595'
+ht-degree: 3%
 
 ---
 
@@ -16,8 +16,15 @@ ht-degree: 4%
 >id="platform_destinations_export_arrays_flat_files"
 >title="Ajouter des champs calculés"
 >abstract="<p>Utilisez le contrôle **Ajouter un champ calculé** pour effectuer diverses transformations de données sur les données exportées vers des destinations d’espace de stockage. Par exemple, vous pouvez appliquer un hachage aux données, concaténer des tableaux en chaînes, etc."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=fr#examples" text="Exemples"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=fr#known-limitations" text="Limites connues"
+
+<!--
+
+disable additional URLs for a while
+
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html#examples" text="Examples"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html#known-limitations" text="Known limitations"
+
+-->
 
 >[!AVAILABILITY]
 >
@@ -32,7 +39,7 @@ Pour effectuer diverses transformations sur les données exportées vers des des
 
 Pour utiliser des champs calculés pour les transformations de données :
 
-1. [Connexion](/help/destinations/ui/connect-destination.md) à une destination d’espace de stockage souhaitée. Lors de la connexion à la destination cloud souhaitée, activez l’option **[!UICONTROL Exporter des tableaux, des mappages]** des objets [ désactivée](/help/destinations/ui/export-arrays-calculated-fields.md##export-arrays-maps-objects-toggle).
+1. [Connexion](/help/destinations/ui/connect-destination.md) à une destination d’espace de stockage souhaitée. Lors de la connexion à la destination cloud souhaitée, activez l’option **[!UICONTROL Exporter des tableaux, des mappages]** des objets [ désactivée](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
 2. Parcourez les [étapes d’activation pour les destinations de stockage dans le cloud](/help/destinations/ui/activate-batch-profile-destinations.md) et accédez à l’étape [mappage](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 
 ## Utilisation des champs calculés {#how-to-export-calculated-fields}
@@ -51,7 +58,7 @@ Pour utiliser des champs calculés pour les transformations de données :
 
 >[!TIP]
 >
->Le contrôle **[!UICONTROL Ajouter un champ calculé]** est désactivé pour les connexions de destination pour lesquelles le contrôle **[!UICONTROL Exporter des tableaux, des mappages et des objets]** a été désactivé. [En savoir plus](/help/destinations/ui/export-arrays-calculated-fields.md#export-arrays-maps-objects-toggle).
+>Le contrôle **[!UICONTROL Ajouter un champ calculé]** est désactivé pour les connexions de destination pour lesquelles le contrôle **[!UICONTROL Exporter des tableaux, des mappages et des objets]** a été désactivé. [En savoir plus](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
 
 ![Ajouter un champ calculé en surbrillance à l’étape de mappage du workflow d’activation par lots.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
