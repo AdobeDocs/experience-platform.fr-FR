@@ -2,18 +2,14 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Février 2025
 description: Notes de mise à jour de février 2025 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: e8c1d7d3b5cc205b9258b4fec5dc7fa68d0d3b27
 workflow-type: tm+mt
-source-wordcount: '1645'
-ht-degree: 88%
+source-wordcount: '1628'
+ht-degree: 87%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform
-
->[!TIP]
->
->Cette version comprend des améliorations du module complémentaire Composition d’audiences fédérées. Pour plus d’informations, consultez les [notes de mise à jour de la Composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/release-notes).
 
 **Date de mise à jour : 18 février 2025**
 
@@ -23,6 +19,7 @@ Mises à jour des fonctionnalités et de la documentation existantes dans Adobe 
 - [Catalog Service](#catalog-service)
 - [Préparation des données](#data-prep)
 - [Destinations](#destinations)
+- [Composition d’une audience fédérée](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/release-notes){target="_blank"}
 - [Sources](#sources)
 - [Service de segmentation](#segmentation)
 - [Mises à jour de la documentation](#documentation-updates)
