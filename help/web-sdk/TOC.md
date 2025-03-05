@@ -6,10 +6,10 @@ breadcrumb-title: Guide du SDK web
 user-guide-description: Interagissez avec les services Experience Cloud via le réseau Edge.
 feature: Web SDK
 role: Developer
-source-git-commit: d5bf1b207900009829454d0b7aa095a08c1e1718
+source-git-commit: bed63cb9be1ffe39a538d1c3f8be9065ffb2ca28
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 52%
+source-wordcount: '239'
+ht-degree: 50%
 
 ---
 
@@ -23,6 +23,7 @@ ht-degree: 52%
    * [Installation de Web SDK à l’aide de l’extension de balise](install/extension.md)
    * [Installation de Web SDK à l’aide de la bibliothèque JavaScript](install/library.md)
    * [Installer le SDK Web à l’aide du package NPM](install/npm.md)
+   * [Créer une version SDK Web personnalisée à l’aide du package NPM](install/create-custom-build.md)
 * Commandes {#commands}
    * configuration des {#configure}
       * [Vue d’ensemble](commands/configure/overview.md)
