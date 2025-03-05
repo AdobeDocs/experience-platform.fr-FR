@@ -3,10 +3,10 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: SDK web Adobe Experience Platform;SDK web Platform;SDK web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5bf69773d0502185bbe8db3b13cb2684d6d06ac4
+source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
 workflow-type: tm+mt
-source-wordcount: '2149'
-ht-degree: 76%
+source-wordcount: '2285'
+ht-degree: 72%
 
 ---
 
@@ -15,6 +15,18 @@ ht-degree: 76%
 
 Ce document présente les notes de mise à jour du SDK web d’Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Version 2.26.0 - jeudi 5 mars 2025
+
+**Nouvelles fonctionnalités**
+
+- Vous pouvez désormais utiliser le package NPM Web SDK pour créer des versions SDK Web personnalisées et sélectionner uniquement les composants de bibliothèque dont vous avez besoin. Cela permet de réduire la taille de la bibliothèque et d’optimiser les temps de chargement. Consultez la documentation sur la [création d’une version de Web SDK personnalisée à l’aide du package NPM](install/create-custom-build.md).
+- La commande [`getIdentity`](commands/getidentity.md) lit désormais automatiquement l’ECID directement à partir du cookie d’identité `kndctr`. Si vous appelez `getIdentity` avec l’espace de noms `ECID` et qu’il existe déjà un cookie d’identité, Web SDK n’effectue plus de requête à Edge Network pour obtenir l’identité. Il lit désormais l’identité à partir du cookie.
+
+**Correctifs et améliorations**
+
+- Correction d’un problème en raison duquel les commandes `getIdentity` ne renvoyaient pas l’identité après l’envoi d’un appel `collect`.
+- Correction d’un problème en raison duquel les redirections de personnalisation provoquaient le scintillement du contenu avant la redirection.
 
 ## Version 2.25.0 - vendredi 23 janvier 2025
 
@@ -45,8 +57,8 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 **Correctifs et améliorations**
 
 - Lorsque plusieurs messages in-app sont renvoyés, seul celui dont la priorité est la plus élevée s’affiche. Les autres sont enregistrés comme supprimés.
-- Les remplacements de trains de données vides ne sont plus envoyés à l’Edge Network, ce qui réduit les conflits potentiels avec les configurations de routage côté serveur.
-- Les noms des composants de messages de journalisation suivants ont été renommés pour s’aligner sur les autres SDK d’Adobe :
+- Les remplacements de trains de données vides ne sont plus envoyés à Edge Network, ce qui réduit les conflits potentiels avec les configurations de routage côté serveur.
+- Les noms des composants de messages de journalisation suivants ont été renommés pour s’aligner sur les autres SDK Adobe :
    - `DecisioningEngine` a été renommé `RulesEngine`
    - `LegacyMediaAnalytics` a été renommé `MediaAnalyticsBridge`
    - `Privacy` a été renommé `Consent`
