@@ -2,9 +2,9 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: 16ffdd0e28687c04b4b8a2b33f10ddceea9ec03a
 workflow-type: tm+mt
-source-wordcount: '4830'
+source-wordcount: '4832'
 ht-degree: 28%
 
 ---
@@ -83,7 +83,7 @@ La politique de fusion par défaut spécifique à l’organisation est automatiq
 
 ### Où puis-je activer les audiences générées en externe ?
 
-Une audience générée de manière externe peut être mappée à n’importe quelle destination et être utilisée dans des campagnes Adobe Journey Optimizer.
+Une audience générée de manière externe peut être mappée à n’importe quelle destination et être utilisée dans les campagnes et parcours Adobe Journey Optimizer.
 
 ### Puis-je supprimer une audience générée en externe ?
 
@@ -266,7 +266,7 @@ Ce comportement n’est pas pris en charge. Cependant, vous pouvez modifier la v
 
 À ce stade, non. Cependant, cette fonctionnalité pourrait être disponible à l’avenir.
 
-## Composition de l’audience
+## Composition d’audiences
 
 La section suivante répertorie les questions relatives à la composition de l’audience.
 
@@ -278,7 +278,7 @@ Le créateur de segments est plus adapté à la création d’audiences **créat
 
 Le tableau suivant illustre la différence entre les deux services :
 
-| Créateur de segments | Composition de l’audience |
+| Créateur de segments | Composition d’audiences |
 | --------------- | -------------------- |
 | <ul><li>Génération d’audiences à une seule étape</li><li>Crée les blocs de base des audiences à partir des données de profil, de série temporelle et multi-entités</li><li>Utilisé pour créer **audience unique**</li></ul> | <ul><li>Génération d’audiences à plusieurs étapes, à l’aide d’opérations basées sur des ensembles</li><li>Utilise les audiences créées par le créateur de segments et applique des options d’enrichissement des données, telles que le classement des attributs de profil et le fractionnement en sous-audiences</li><li>Permet de créer **plusieurs** audiences à la fois</li></ul> |
 
