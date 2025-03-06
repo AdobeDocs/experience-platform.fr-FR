@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de Query Editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: e1ecdb5d701093d9c73b6a05dad9a4dd848e0083
+source-git-commit: ae189e2f6d303043e32e6ca658161bcdf4c28dc6
 workflow-type: tm+mt
-source-wordcount: '2745'
-ht-degree: 24%
+source-wordcount: '2682'
+ht-degree: 25%
 
 ---
 
@@ -192,12 +192,7 @@ Si une requête a été planifiée, alors l’onglet [!UICONTROL Requêtes plani
 >
 >Les requêtes non exécutées ne sont pas enregistrées dans le journal. Pour que la requête soit disponible dans Query Service, elle doit être exécutée ou enregistrée dans Query Editor.
 
-### [!BADGE Disponibilité limitée]{type=Informative} Explorateur d’objets {#object-browser}
-
->[!AVAILABILITY]
->
-Le rail de navigation des jeux de données est uniquement disponible pour les clients de Distiller de données. Votre interface utilisateur de Platform peut ne pas contenir le rail de navigation du jeu de données de gauche. Les autres images de ce document peuvent ne pas refléter le rail de navigation du jeu de données. Pour plus d’informations, contactez votre représentant Adobe.<br>
-L’explorateur d’objets est actuellement disponible uniquement dans une version **limitée**. Contactez votre représentant ou représentante Adobe pour obtenir un accès anticipé à la version.
+### Explorateur d’objets {#object-browser}
 
 Utilisez l’explorateur d’objets pour rechercher et filtrer facilement des jeux de données. L’explorateur d’objets réduit le temps passé à rechercher des tables et des jeux de données dans des environnements volumineux avec de nombreux jeux de données. Grâce à un accès simplifié aux données et métadonnées pertinentes, vous pouvez vous concentrer davantage sur la création de requêtes et moins sur la navigation.
 
@@ -221,7 +216,7 @@ Outre les recherches rapides, vous pouvez désormais accéder facilement aux mé
 
 #### Explorer les tables enfants
 
-Pour explorer les tableaux enfants ou liés, sélectionnez la flèche déroulante en regard d’un nom de tableau dans la liste. Cela développe la table pour afficher toutes les tables enfants associées, et donne une vue claire de la structure des données et permet des constructions de requête plus complexes. L’icône en regard du nom du champ indique le type de données de la colonne, to vous aident à l’identifier lors de requêtes complexes.
+Pour explorer les tableaux enfants ou liés, sélectionnez la flèche déroulante en regard d’un nom de tableau dans la liste. Cela développe la table pour afficher toutes les tables enfants associées, et donne une vue claire de la structure des données et permet des constructions de requête plus complexes. L’icône en regard du nom du champ indique le type de données de la colonne, afin de vous aider à l’identifier lors de requêtes complexes.
 
 ![Query Editor avec la liste de tableau filtrée affichée.](../images/ui/query-editor/child-table-list.png)
 
@@ -237,7 +232,7 @@ La console fournit des informations sur l’état et le fonctionnement de Query 
 
 >[!NOTE]
 >
-La console affiche uniquement les erreurs résultant de l’exécution d’une requête. Elle n’affiche pas les erreurs de validation de requête qui se produisent avant l’exécution d’une requête.
+>La console affiche uniquement les erreurs résultant de l’exécution d’une requête. Elle n’affiche pas les erreurs de validation de requête qui se produisent avant l’exécution d’une requête.
 
 ### Résultats de requête {#query-results}
 
@@ -257,7 +252,7 @@ La vidéo suivante montre comment exécuter des requêtes dans l’interface Ado
 
 >[!NOTE]
 >
-L’interface utilisateur illustrée dans la vidéo est obsolète, mais la logique utilisée dans le workflow reste la même.
+>L’interface utilisateur illustrée dans la vidéo est obsolète, mais la logique utilisée dans le workflow reste la même.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
