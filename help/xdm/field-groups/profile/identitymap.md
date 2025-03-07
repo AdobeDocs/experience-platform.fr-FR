@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;schéma;Schéma;XDM;profil individuel;champs;schémas;Schémas;identityMap;mappage d’identités;Mappage d’identités;conception de schéma;mappage;Mappage;schéma d’union;union
 title: Groupe de champs de schéma IdentityMap
-description: Découvrez la classe XDM Individual Profile.
+description: En savoir plus sur la classe XDM Individual Profile.
 exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: cfa3e5c6811f148376a2d2012f5687be6fad2299
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 76%
+source-wordcount: '152'
+ht-degree: 63%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 76%
 >
 >Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document sur les [mises à jour des noms de groupes de champs](../name-updates.md).
 
-[!UICONTROL IdentityMap] est un groupe de champs de schéma standard pour la classe [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md). Le groupe de champs fournit un champ de mappage unique, qui contient un ensemble d’identités utilisateur saisies par espace de noms.
+[!UICONTROL IdentityMap] est un groupe de champs de schéma standard pour la classe [[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md) et un groupe de champs compatible pour la classe [[!UICONTROL XDM Individual Profile]](../../classes/individual-profile.md). Le groupe de champs fournit un champ de mappage unique, qui contient un ensemble d’identités utilisateur saisies par espace de noms.
 
-![ Diagramme du groupe de champs de schéma [!UICONTROL IdentityMap]](../../images/field-groups/identitymap.png)
+![Diagramme du groupe de champs de schéma [!UICONTROL IdentityMap]](../../images/field-groups/identitymap.png)
 
 Pour plus d’informations sur les cas d’utilisation des mappages dʼidentités et leurs avantages et inconvénients, consultez la section correspondante sur la page consacrée aux [principes de base de la composition des schémas](../../schema/composition.md#identityMap).
 
