@@ -5,10 +5,10 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: b18f93078d3cdbd0498b5b282236ac9b7bad153c
+source-git-commit: b900ef8cbbab78071d462484f088e17eb20fe9b6
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 97%
+source-wordcount: '1047'
+ht-degree: 96%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 97%
          - [Connecteur Marketo Engage](connectors/adobe-applications/marketo/marketo.md)
          - [Guide d’authentification Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [Espaces de noms et schémas B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
-         - [Guide de migration de mappage ECID](connectors/adobe-applications/marketo/migration.md)
+         - [Guide de migration du mappage ECID](connectors/adobe-applications/marketo/migration.md)
    - Publicité {#advertising}
       - [Connecteur Google Ads](connectors/advertising/ads.md)
       - [Pinterest Ads](connectors/advertising/pinterest-ads.md)
@@ -92,7 +92,7 @@ ht-degree: 97%
       - [Connecteur de streaming Snowflake](connectors/databases/snowflake-streaming.md)
       - [Connecteur Snowflake](connectors/databases/snowflake.md)
       - [Connecteur Teradata Vantage](connectors/databases/teradata-vantage.md)
-   - Partenaire de données et d’identité {#data-partner}
+   - {#data-partner} de partenaire de données et d’identité
       - [Ingestion de données Acxiom](connectors/data-partners/acxiom-data-ingestion.md)
       - [Import de données de prospection Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Résolution d’identité d’entreprise Merkury](connectors/data-partners/merkury.md)
@@ -190,8 +190,8 @@ ht-degree: 97%
          - [Campagne MailChimp](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [Membres MailChimp](tutorials/api/create/marketing-automation/mailchimp-members.md)
          - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
-         - [Oracle des activités NetSuite](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
-         - [Oracle des entités NetSuite](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
+         - [Activités Oracle NetSuite](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
+         - [Entités Oracle NetSuite](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
          - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
          - [PathFactory](tutorials/api/create/marketing-automation/pathfactory.md)
          - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
@@ -303,9 +303,11 @@ ht-degree: 97%
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Streaming Snowflake](tutorials/ui/create/databases/snowflake-streaming.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
-      - Partenaire de données et d’identité {#data-partner}
+      - {#data-partner} de partenaire de données et d’identité
          - [Ingestion de données Acxiom](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Import de données de prospection Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Intention de Bombora](tutorials/ui/create/data-partners/bombora.md)
+         - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
          - [Résolution d’identité d’entreprise Merkury](tutorials/ui/create/data-partners/merkury.md)
       - eCommerce {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
@@ -321,8 +323,8 @@ ht-degree: 97%
          - [Campagnes Mailchimp](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [Membres Mailchimp](tutorials/ui/create/marketing-automation/mailchimp-members.md)
          - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
-         - [Oracle des activités NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
-         - [Oracle des entités NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
+         - [Activités Oracle NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
+         - [Entités Oracle NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
          - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
@@ -348,7 +350,7 @@ ht-degree: 97%
       - [Flux de données de connexion aux paiements](tutorials/ui/dataflow/payments.md)
       - [Flux de données de connexion au protocole](tutorials/ui/dataflow/protocols.md)
    - [Créer un flux de données de sources à l’aide de modèles dans l’interface utilisateur](tutorials/ui/templates.md)
-   - [Filtrage des objets de sources](tutorials/ui/filter.md)
+   - [Filtrer les objets sources](tutorials/ui/filter.md)
    - [Ingérer des données chiffrées](tutorials/ui/encryped-ingestion.md)
    - [Ingestion à la demande](tutorials/ui/on-demand-ingestion.md)
    - [Surveiller les flux de données par lots](tutorials/ui/monitor.md)
