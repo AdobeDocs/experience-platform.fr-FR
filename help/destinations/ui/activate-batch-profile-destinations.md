@@ -3,9 +3,9 @@ title: Activer les audiences vers des destinations d’export de profils par lot
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations de profils par lots.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
 workflow-type: tm+mt
-source-wordcount: '4374'
+source-wordcount: '4405'
 ht-degree: 52%
 
 ---
@@ -64,18 +64,18 @@ Pour sélectionner les audiences à activer vers la destination, utilisez les ca
 Vous pouvez effectuer un choix parmi plusieurs types d’audiences, selon leur origine :
 
 * **[!UICONTROL Segmentation Service]** : audiences générées dans Experience Platform par le service de segmentation. Voir la [documentation sur la segmentation](../../segmentation/ui/overview.md) pour plus d’informations.
-* **[!UICONTROL Chargement personnalisé]** : audiences générées en dehors d’Experience Platform et chargées dans Platform au format CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [importation d’une audience](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Chargement personnalisé]** : audiences générées en dehors d’Experience Platform et chargées dans Platform au format CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [importation d’une audience](../../segmentation/ui/audience-portal.md#import-audience). La sélection des audiences issues des **[!UICONTROL chargements personnalisés]** active automatiquement l’étape [Sélectionner des attributs d’enrichissement](#select-enrichment-attributes).
 * Autres types d’audiences, provenant d’autres solutions Adobe, telles que [!DNL Audience Manager].
+
+>[!IMPORTANT]
+>
+>Lors de l’activation d’audiences de chargement personnalisées vers des destinations basées sur des fichiers par lots, il existe une limite de 10 audiences de ce type que vous pouvez activer dans un flux de données.
 
 ![Cases à cocher affichées lors de la sélection d’une ou de plusieurs audiences à activer.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
->La sélection des audiences issues des **[!UICONTROL chargements personnalisés]** active automatiquement l’étape [Sélectionner des attributs d’enrichissement](#select-enrichment-attributes).
-
->[!TIP]
->
->Vous pouvez supprimer des audiences des flux d’activation existants de la page **[!UICONTROL Données d’activation]**. Voir la [documentation dédiée](../ui/destination-details-page.md#bulk-remove) pour plus d’informations.
+>Pour supprimer des audiences des flux d’activation existants, utilisez la page **[!UICONTROL Données d’activation]**. Pour plus d’informations, consultez la section sur la [suppression de plusieurs audiences des flux d’activation](../ui/destination-details-page.md#bulk-remove).
 
 ## Planifier l’export d’audience {#scheduling}
 
