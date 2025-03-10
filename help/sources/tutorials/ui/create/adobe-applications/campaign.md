@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;c
 title: Créer une connexion source Adobe Campaign Managed Cloud Services à l’aide de l’interface utilisateur de Platform
 description: Découvrez comment connecter Adobe Experience Platform à Adobe Campaign Managed Cloud Services à l’aide de l’interface utilisateur de Platform.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: 77d755e4ebf97521efa1dfdfe9ee40312800ad28
+source-git-commit: 67f42c155bf34f2b8adc3b08536bb3310bb77390
 workflow-type: tm+mt
-source-wordcount: '1185'
-ht-degree: 45%
+source-wordcount: '1233'
+ht-degree: 43%
 
 ---
 
@@ -30,7 +30,7 @@ Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également utiliser la barre de recherche pour réduire les sources affichées.
 
-Dans la catégorie **[!UICONTROL Applications d’Adobe]**, sélectionnez **[!UICONTROL Adobe Campaign Managed Cloud Services]** puis **[!UICONTROL Ajouter des données]**.
+Dans la catégorie **[!UICONTROL Applications Adobe]**, sélectionnez **[!UICONTROL Adobe Campaign Managed Cloud Services]** puis **[!UICONTROL Ajouter des données]**.
 
 ![Catalogue des sources affichant la carte Adobe Campaign Managed Cloud Services.](../../../../images/tutorials/create/campaign/catalog.png)
 
@@ -136,6 +136,12 @@ La page d’activité du jeu de données s’affiche. À partir de là, vous pou
 Cette page vous fournit également une interface pour mettre à jour la description des métadonnées de votre flux de données, activer les diagnostics d’ingestion partielle et d’erreur, ainsi qu’ajouter de nouvelles données à votre jeu de données.
 
 ![Interface avec des graphiques représentant le taux d’ingestion d’un jeu de données sélectionné.](../../../../images/tutorials/create/campaign/dataset-activity.png)
+
+
+>[!IMPORTANT]
+>
+>Vous ne pouvez pas renvoyer d’anciens journaux d’événements avec la source Adobe Campaign Managed Cloud Services. Si un renvoi est requis, utilisez un workflow ou une implémentation personnalisés pour exporter des données vers Amazon S3 ou Azure Blob, ou depuis Amazon S3 ou Azure Blob vers un jeu de données Adobe Experience Platform.
+
 
 ## Étapes suivantes
 
