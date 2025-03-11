@@ -6,7 +6,7 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
 source-wordcount: '1699'
-ht-degree: 39%
+ht-degree: 45%
 
 ---
 
@@ -118,13 +118,13 @@ La vidéo suivante est destinée à vous aider à comprendre la création d’un
 
 >[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
-## Gestion des informations d’identification d’API pour un rôle {#manage-api-credentials-for-role}
+## Gérer les informations d’identification d’API pour un rôle {#manage-api-credentials-for-role}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_apicredentials_about"
->title="Que sont les informations d’identification d’API ?"
->abstract="Les informations d’identification d’API sont attribuées aux rôles pour accorder aux utilisateurs et aux développeurs l’accès aux API Platform. Grâce aux API Platform, vous pouvez effectuer par programmation des opérations CRUD (Create, Read, Update, Delete) de base sur les données, telles que la configuration des attributs calculés, l’accès aux données/entités, l’exportation des données, la suppression des données ou lots inutiles, etc."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide" text="Guide de l’API Platform"
+>title="Que sont les informations d’identification d’API ?"
+>abstract="Les informations d’identification d’API sont attribuées aux rôles pour accorder aux utilisateurs et utilisatrices, et aux développeurs et développeuses, l’accès aux API Platform. Grâce aux API Platform, vous pouvez effectuer par programmation des opérations CRUD (créer, lire, mettre à jour, supprimer) de base sur les données, telles que la configuration des attributs calculés, l’accès aux données/entités, l’export des données, la suppression des données ou lots inutiles, etc."
+>additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/landing/platform-apis/api-guide" text="Guide des API Platform"
 
 >[!IMPORTANT]
 >
@@ -154,13 +154,13 @@ La boîte de dialogue **[!UICONTROL Supprimer les informations d’identificatio
 
 Vous revenez sur l’onglet **[!UICONTROL Informations d’identification d’API]**.
 
-## Gestion des groupes d’utilisateurs pour un rôle {#manage-user-groups}
+## Gérer des groupes d’utilisateurs et d’utilisatrices pour un rôle {#manage-user-groups}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_usergroups_about"
->title="Que sont les groupes d’utilisateurs ?"
->abstract="Les groupes d’utilisateurs sont des ensembles de plusieurs utilisateurs qui partagent l’accès aux mêmes fonctions. L’accès aux ressources au sein d’une organisation est géré par l’intermédiaire de rôles affectés à des groupes d’utilisateurs."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Gérer les rôles"
+>title="Que sont les groupes d’utilisateurs et d’utilisatrices ?"
+>abstract="Les groupes d’utilisateurs et d’utilisatrices sont des ensembles d’utilisateurs et d’utilisatrices qui partagent l’accès aux mêmes fonctions. L’accès aux ressources au sein d’une organisation est géré par l’intermédiaire de rôles affectés à des groupes d’utilisateurs et d’utilisatrices."
+>additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Gérer les rôles"
 
 Les groupes d’utilisateurs consistent en plusieurs utilisateurs qui ont été regroupés et qui disposent des accès pour exécuter les mêmes fonctions.
 

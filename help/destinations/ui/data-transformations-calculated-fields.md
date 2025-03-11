@@ -6,7 +6,7 @@ exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
 source-git-commit: 14c672ef57e0b0247020075552c782ed18db8484
 workflow-type: tm+mt
 source-wordcount: '1595'
-ht-degree: 3%
+ht-degree: 8%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
 >title="Ajouter des champs calculés"
->abstract="<p>Utilisez le contrôle **Ajouter un champ calculé** pour effectuer diverses transformations de données sur les données exportées vers des destinations d’espace de stockage. Par exemple, vous pouvez appliquer un hachage aux données, concaténer des tableaux en chaînes, etc."
+>abstract="<p>Utilisez la commande **Ajouter un champ calculé** pour effectuer diverses transformations sur les données exportées vers des destinations d’espace de stockage dans le cloud. Par exemple, vous pouvez appliquer un hachage aux données, concaténer des tableaux en chaînes, etc."
 
 <!--
 
@@ -42,12 +42,12 @@ Pour utiliser des champs calculés pour les transformations de données :
 1. [Connexion](/help/destinations/ui/connect-destination.md) à une destination d’espace de stockage souhaitée. Lors de la connexion à la destination cloud souhaitée, activez l’option **[!UICONTROL Exporter des tableaux, des mappages]** des objets [ désactivée](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
 2. Parcourez les [étapes d’activation pour les destinations de stockage dans le cloud](/help/destinations/ui/activate-batch-profile-destinations.md) et accédez à l’étape [mappage](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 
-## Utilisation des champs calculés {#how-to-export-calculated-fields}
+## Utiliser des champs calculés {#how-to-export-calculated-fields}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
 >title="Activer le schéma de sortie hiérarchique"
->abstract="Activez ce paramètre pour activer l’exportation de tableaux, de mappages et d’objets vers des fichiers JSON ou Parquet."
+>abstract="Activez ce paramètre pour activer l’export de tableaux, de mappages et d’objets vers des fichiers JSON ou Parquet."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"

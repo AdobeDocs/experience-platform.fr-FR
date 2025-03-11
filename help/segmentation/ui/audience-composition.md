@@ -6,7 +6,7 @@ exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 source-git-commit: 758ec9de9bf3e6bb9853c9455c69e0b5ca7948d5
 workflow-type: tm+mt
 source-wordcount: '2344'
-ht-degree: 64%
+ht-degree: 79%
 
 ---
 
@@ -48,7 +48,7 @@ La zone de travail de composition de l’audience se compose de quatre types de
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_audience"
->title="Bloc d’audience"
+>title="Bloc Audience"
 >abstract="Le bloc Audience permet d’ajouter les sous-audiences que vous souhaitez utiliser pour composer votre nouvelle audience."
 
 >[!CONTEXTUALHELP]
@@ -170,8 +170,8 @@ Une liste d’attributs de profil s’affiche. Sélectionnez le type d’attribu
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_enrich"
->title="Enrichir le bloc"
->abstract="Le bloc Enrichir vous permet d’enrichir votre audience avec des attributs supplémentaires provenant de jeux de données Adobe Experience Platform."
+>title="Bloc Enrichir"
+>abstract="Le bloc Enrichir vous permet d’enrichir votre audience avec des attributs supplémentaires provenant de jeux de données d’Adobe Experience Platform."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_dataset"
@@ -262,7 +262,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_ranking"
->title="Bloc de classement"
+>title="Bloc Classement"
 >abstract="Le bloc Classement vous permet de classer les profils en fonction d’un attribut spécifique et de les inclure dans votre composition."
 
 >[!CONTEXTUALHELP]
@@ -298,18 +298,18 @@ En outre, vous pouvez limiter le nombre de profils renvoyés en activant le bout
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split"
->title="Fractionner le bloc"
->abstract="Le bloc Fractionner permet de diviser votre composition en plusieurs chemins d’accès."
+>title="Bloc Partager"
+>abstract="Le bloc Partager permet de diviser votre composition en plusieurs chemins d’accès."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_type"
 >title="Type Partage"
->abstract="Vous pouvez fractionner votre composition par Partage en pourcentage ou Partage des attributs. Le pourcentage de partage divise les profils de manière aléatoire en plusieurs chemins d’accès. Le partage des attributs permet de partager les profils en fonction d’un attribut spécifié."
+>abstract="Vous pouvez partager votre composition en pourcentage ou en attributs. Le partage en pourcentage partage les profils de manière aléatoire en plusieurs chemins d’accès. Le partage en attributs vous permet de partager les profils en fonction d’un attribut spécifique."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_otherprofiles_text"
 >title="Autres profils"
->abstract="Le bouton « Autres profils » vous permet de créer un chemin d’accès supplémentaire avec les profils restants qui ne correspondent à aucune des conditions spécifiées des autres chemins d’accès."
+>abstract="Le bouton (bascule) Autres profils vous permet de créer un chemin d’accès supplémentaire avec les profils restants qui ne correspondent à aucune des conditions spécifiées des autres chemins d’accès."
 
 Le type de bloc **[!UICONTROL Fractionner]** vous permet de fractionner votre nouvelle audience en différentes sous-audiences. Vous pouvez fractionner cette audience en fonction d’un pourcentage ou d’un attribut.
 
@@ -324,11 +324,11 @@ Vous pouvez fractionner une audience de deux façons : par pourcentage ou par a
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_percentage"
 >title="Fractionner par pourcentage"
->abstract="Vous pouvez diviser l’audience de manière aléatoire en plusieurs audiences, en fonction du nombre de chemins et des pourcentages fournis."
+>abstract="Vous pouvez partager l’audience de manière aléatoire en plusieurs audiences, en fonction du nombre de chemins et des pourcentages fournis."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_persistent"
->title="Division persistante"
+>title="Partage persistant"
 >abstract="Vous pouvez rendre le partage en pourcentage persistant en activant cette option et en sélectionnant un espace de noms d’identité."
 
 Lors du fractionnement par pourcentage, les audiences sont réparties de manière aléatoire en fonction du nombre de chemins et des pourcentages fournis.
@@ -362,7 +362,7 @@ En outre, vous pouvez activer le bouton **[!UICONTROL Autres profils]** pour cr�
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_publish"
 >title="Publier"
->abstract="Vous pouvez publier votre composition pour créer la ou les audiences obtenues dans Adobe Experience Platform."
+>abstract="Vous pouvez publier votre composition pour créer les audiences obtenues dans Adobe Experience Platform."
 
 >[!IMPORTANT]
 >

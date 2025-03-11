@@ -6,17 +6,17 @@ exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
 source-wordcount: '285'
-ht-degree: 5%
+ht-degree: 15%
 
 ---
 
-# Gérer les utilisateurs {#manage-users}
+# Gérer les utilisateurs et les utilisatrices {#manage-users}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_users_about"
->title="Que sont les utilisateurs ?"
->abstract="Les utilisateurs sont les personnes qui ont accès à Experience Platform. L’accès d’un utilisateur individuel aux ressources d’une organisation est géré par l’intermédiaire de rôles."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Gérer les rôles"
+>title="Que sont les utilisateurs et utilisatrices ?"
+>abstract="Il s’agit de personnes qui ont accès à Experience Platform. Leur accès aux ressources d’une organisation est géré par l’intermédiaire de rôles."
+>additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Gérer les rôles"
 
 Si vous souhaitez afficher les détails de l’utilisateur et les rôles qui lui sont attribués, sélectionnez l’onglet **[!UICONTROL Utilisateurs]**.
 

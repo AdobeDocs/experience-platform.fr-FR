@@ -6,7 +6,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '884'
-ht-degree: 7%
+ht-degree: 15%
 
 ---
 
@@ -61,12 +61,12 @@ En plus des tableaux, vous pouvez également exporter des mappages et des objets
 
 [Connectez-vous](/help/destinations/ui/connect-destination.md) à une destination d’espace de stockage souhaitée, suivez les [étapes d’activation pour les destinations d’espace de stockage](/help/destinations/ui/activate-batch-profile-destinations.md) et accédez à l’étape [mappage](/help/destinations/ui/activate-batch-profile-destinations.md#mapping). Lors de la connexion à la destination cloud souhaitée, vous devez activer le bouton (bascule) **[!UICONTROL Exporter des tableaux, des mappages]** des objets . Pour plus d’informations, reportez-vous à la section ci-dessous.
 
-## Basculement entre les tableaux, mappages et objets d’exportation {#export-arrays-maps-objects-toggle}
+## Bouton bascule Exporter des tableaux, mappages et objets {#export-arrays-maps-objects-toggle}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_maps_objects"
 >title="Exporter des tableaux, mappages et objets"
->abstract="<p> <b>Activez</b> ce paramètre pour activer l’export de tableaux, de mappages et d’objets vers des fichiers JSON ou Parquet. Vous pouvez sélectionner ces types d’objets dans la vue du champ source de l’étape de mappage. Lorsque le bouton (bascule) est activé, vous ne pouvez pas utiliser l’option champs calculés à l’étape de mappage.</p><p>Grâce à ce bouton <b>désactivé</b>, vous pouvez utiliser l’option Champs calculés et appliquer diverses fonctions de transformation des données lors de l’activation des audiences. Cependant, vous <i>ne pouvez pas</i> exporter de tableaux, de mappages et d’objets vers des fichiers JSON ou Parquet et devez configurer une destination distincte à cet effet.</p>"
+>abstract="<p> <b>Activez</b> ce paramètre pour activer l’export de tableaux, de mappages et d’objets vers des fichiers JSON ou Parquet. Vous pouvez sélectionner ces types d’objets dans la vue du champ source de l’étape de mappage. Lorsque le bouton (bascule) est activé, vous ne pouvez pas utiliser l’option champs calculés à l’étape de mappage.</p><p>Lorsque ce bouton (bascule) est <b>désactivé</b>, vous pouvez utiliser l’option de champs calculés et appliquer diverses fonctions de transformation des données lors de l’activation des audiences. Cependant, vous <i>ne pouvez pas</i> exporter de tableaux, de mappages et d’objets vers des fichiers JSON ou Parquet et devez configurer une destination distincte à cet effet.</p>"
 
 Lors de la connexion à une destination d’espace de stockage, vous pouvez activer ou désactiver le bouton **[!UICONTROL Exporter des tableaux, mappages]** objets.
 
@@ -74,7 +74,7 @@ Lors de la connexion à une destination d’espace de stockage, vous pouvez acti
 
 **Activez** ce paramètre pour activer l’export de tableaux, de mappages et d’objets vers des fichiers JSON ou Parquet. Vous pouvez sélectionner ces types d’objets dans la vue du champ source de l’[étape de mappage](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) lors de l’activation d’audiences vers des destinations d’espace de stockage. Cependant, lorsque ce paramètre est activé, vous ne pouvez pas utiliser l’option champs calculés pour transformer les données lors de l’activation.
 
-Grâce à ce bouton **désactivé**, vous pouvez utiliser l’option Champs calculés et appliquer diverses fonctions de transformation des données lors de l’activation des audiences. Cependant, vous ne pouvez pas exporter des tableaux, des mappages et des objets vers des fichiers JSON ou Parquet et devez configurer une destination distincte à cet effet.
+Lorsque ce bouton (bascule) est **désactivé**, vous pouvez utiliser l’option de champs calculés et appliquer diverses fonctions de transformation des données lors de l’activation des audiences. Cependant, vous ne pouvez pas exporter des tableaux, des mappages et des objets vers des fichiers JSON ou Parquet et devez configurer une destination distincte à cet effet.
 
 ## Basculement entre les tableaux, mappages et objets d’exportation *activé* {#export-arrays-maps-objects-toggle-on}
 
