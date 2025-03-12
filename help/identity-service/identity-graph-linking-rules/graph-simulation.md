@@ -2,9 +2,9 @@
 title: Guide de l’interface utilisateur de la simulation graphique
 description: Découvrez comment utiliser la simulation de graphiques dans l’interface utilisateur d’Identity Service.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 5c7a47916e6e79881842279794bc72e0e5bd32d3
+source-git-commit: 31d4c895294e779ef39639710fad0e517fa03cf2
 workflow-type: tm+mt
-source-wordcount: '1487'
+source-wordcount: '1504'
 ht-degree: 3%
 
 ---
@@ -23,6 +23,10 @@ ht-degree: 3%
 >* Votre compte doit être configuré avec l’autorisation **Afficher le graphique d’identités** pour accéder à l’outil de [!DNL Graph Simulation]. Pour plus d’informations, consultez le guide [ sur les autorisations dans le contrôle d’accès basé sur les attributs](../../access-control/abac/ui/permissions.md).
 
 [!DNL Graph Simulation] est un outil de l’interface utilisateur d’Identity Service que vous pouvez utiliser pour simuler le comportement d’un graphique d’identités selon une combinaison particulière d’identités et la manière dont vous configurez l’algorithme [optimisation des identités](./identity-optimization-algorithm.md).
+
+Regardez la vidéo suivante pour plus d’informations sur l’utilisation de l’interface [!DNL Graph Simulation] dans l’espace de travail de l’interface utilisateur d’Identity Service :
+
+>[!VIDEO](https://video.tv.adobe.com/v/3444032/?learn=on&enablevpops)
 
 Lisez ce document pour découvrir comment utiliser [!DNL Graph Simulation] pour mieux comprendre le comportement du graphique d’identités et le fonctionnement de l’algorithme du graphique.
 
@@ -86,7 +90,7 @@ Répétez ensuite les mêmes étapes pour ajouter un deuxième événement. Pour
 
 ![Interface des événements mise à jour avec deux événements.](../images/graph-simulation/two-events.png)
 
-### Charger un exemple {#load-example}
+### Charger l’exemple {#load-example}
 
 Sélectionnez **[!UICONTROL Charger l’exemple]** pour configurer un exemple de graphique avec un algorithme prédéfini et une configuration d’événement.
 

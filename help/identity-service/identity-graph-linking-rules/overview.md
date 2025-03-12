@@ -2,9 +2,9 @@
 title: Règles de liaison des graphiques d’identités
 description: Découvrez les règles de liaison des graphiques d’identités dans Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
+source-git-commit: 31d4c895294e779ef39639710fad0e517fa03cf2
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1449'
 ht-degree: 5%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 5%
 >Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
 
 Avec le service d’identités Adobe Experience Platform et le profil client en temps réel, il est facile de supposer que vos données sont parfaitement ingérées et que tous les profils fusionnés représentent une seule personne par le biais d’un identifiant de personne, tel qu’un CRMID. Cependant, il existe des scénarios possibles où certaines données pourraient essayer de fusionner plusieurs profils disparates en un seul profil (« réduction du graphique »). Pour éviter ces fusions indésirables, vous pouvez utiliser les configurations fournies par le biais des règles de liaison de graphiques d’identités et permettre une personnalisation précise de vos utilisateurs.
+
+Regardez la vidéo suivante pour plus d’informations sur l’utilisation des règles de liaison de graphiques d’identités :
+
+>[!VIDEO](https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops)
 
 ## Commencer
 
