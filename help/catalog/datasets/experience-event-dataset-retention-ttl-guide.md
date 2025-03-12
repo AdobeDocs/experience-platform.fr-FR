@@ -2,9 +2,9 @@
 title: Gestion de la conservation des jeux de données d’événements d’expérience dans le lac de données à l’aide de TTL
 description: Découvrez comment évaluer, définir et gérer la conservation des jeux de données d’événements d’expérience dans le lac de données à l’aide de configurations de durée de vie (TTL) avec des API Adobe Experience Platform. Ce guide explique comment l’expiration au niveau des lignes de TTL prend en charge les politiques de conservation des données, optimise l’efficacité du stockage et garantit une gestion efficace du cycle de vie des données. Elle fournit également des cas d’utilisation et des bonnes pratiques pour vous aider à appliquer efficacement la durée de vie.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: affaeb0869423292a44eb7ada8343482bb163ca6
+source-git-commit: 3b5fcc3eec6f2c2e749c86a7baf9995fb88b27d6
 workflow-type: tm+mt
-source-wordcount: '2196'
+source-wordcount: '2336'
 ht-degree: 1%
 
 ---
@@ -416,6 +416,20 @@ La création de rapports sur l’utilisation des jeux de données historiques es
 
 +++Réponse
 Non, une fois qu’une politique de conservation est appliquée, toutes les données antérieures à la période de conservation sont supprimées définitivement et ne peuvent pas être récupérées.
++++
+
+### Quelle est la durée de vie minimale que je peux configurer sur un jeu de données Événement d’expérience de lac de données ?
+
++++Réponse
+La durée de vie minimale d’un jeu de données Événement d’expérience de lac de données est de 30 jours. Le lac de données fonctionne comme un système de sauvegarde et de récupération de traitement lors de l’ingestion et du traitement initiaux. Par conséquent, les données doivent rester dans le lac de données pendant au moins 30 jours après l’ingestion avant de pouvoir expirer.
++++
+
+### Que se passe-t-il si je dois conserver certains champs du lac de données plus longtemps que ne le permet ma politique de TTL ?
+
++++Réponse
+Utilisez la Distiller de données pour conserver des champs spécifiques au-delà de la durée de vie du jeu de données tout en respectant vos limites d’utilisation. Créez une tâche qui n’écrit régulièrement que les champs nécessaires dans un jeu de données dérivé. Ce workflow assure la conformité avec une durée de vie plus courte tout en préservant les données critiques pour une utilisation prolongée.
+
+Pour plus d’informations, consultez le guide [Créer des jeux de données dérivés avec SQL](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md).
 +++
 
 ## Étapes suivantes {#next-steps}
