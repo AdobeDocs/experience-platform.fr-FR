@@ -2,10 +2,10 @@
 title: Présentation d’Audience Portal
 description: Découvrez comment utiliser Audience Portal pour afficher, gérer et créer des audiences dans Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 9f4facebcd55dc15761db1bf744acfef9ccb15ff
+source-git-commit: a862e532382472eadf29aee2568c550b1a71211a
 workflow-type: tm+mt
-source-wordcount: '4597'
-ht-degree: 54%
+source-wordcount: '4609'
+ht-degree: 53%
 
 ---
 
@@ -113,9 +113,9 @@ Si la répartition est sélectionnée, l’affichage présente un graphique à b
 
 | État | Description |
 | ------ | ----------- |
-| [!UICONTROL Réalisé] | Nombre de profils qui **ont rempli les critères** du segment au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
-| [!UICONTROL Existant] | Nombre de profils qui **sont restés** dans le segment au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
-| [!UICONTROL Sortant] | Nombre de profils qui **sont sortis** du segment au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
+| [!UICONTROL Réalisé] | Nombre de profils qui **ont rempli les critères** pour l’audience au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
+| [!UICONTROL Existant] | Nombre de profils qui **sont restés** dans l’audience au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. Ce champ est **calculé** et n’apparaît pas dans l’objet `segmentMembership`. |
+| [!UICONTROL Sortant] | Nombre de profils qui **ont quitté** l’audience au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
 
 Après avoir sélectionné les champs à afficher, vous pouvez également redimensionner la largeur des colonnes affichées. Pour ce faire, faites glisser la zone entre les colonnes ou sélectionnez la ![icône de flèche](/help/images/icons/chevron-down.png) de la colonne à redimensionner, suivie de **[!UICONTROL Redimensionner la colonne]**.
 
@@ -400,7 +400,7 @@ Une fenêtre contextuelle s’affiche, vous permettant de choisir entre composer
 
 ![Fenêtre contextuelle qui affiche les deux types of audiences que vous pouvez créer.](../images/ui/audience-portal/create-audience-type.png)
 
-### Composition de l’audience {#audience-composition}
+### Composition d’audiences {#audience-composition}
 
 Sélectionner **[!UICONTROL Composer les audiences]** vous conduit à la Composition de l’audience. Cet espace de travail fournit des commandes intuitives pour la création et la modification des audiences, telles que le glisser-déposer de mosaïques utilisées pour représenter les différentes actions. Pour en savoir plus sur la création d’audiences, veuillez lire le [guide de la Composition d’audience](./audience-composition.md).
 
