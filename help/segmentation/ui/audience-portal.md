@@ -2,7 +2,7 @@
 title: Présentation d’Audience Portal
 description: Découvrez comment utiliser Audience Portal pour afficher, gérer et créer des audiences dans Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: a862e532382472eadf29aee2568c550b1a71211a
+source-git-commit: 5220fa9be3f567d72f864d35596f6b219f15fb9d
 workflow-type: tm+mt
 source-wordcount: '4609'
 ht-degree: 53%
@@ -114,7 +114,7 @@ Si la répartition est sélectionnée, l’affichage présente un graphique à b
 | État | Description |
 | ------ | ----------- |
 | [!UICONTROL Réalisé] | Nombre de profils qui **ont rempli les critères** pour l’audience au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
-| [!UICONTROL Existant] | Nombre de profils qui **sont restés** dans l’audience au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. Ce champ est **calculé** et n’apparaît pas dans l’objet `segmentMembership`. |
+| [!UICONTROL Existant] | Nombre de profils qui **sont restés** dans l’audience au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. Ce champ est **calculé** et n’apparaît pas dans l’objet [`segmentMembership`. ](../../xdm/field-groups/profile/segmentation.md). |
 | [!UICONTROL Sortant] | Nombre de profils qui **ont quitté** l’audience au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
 
 Après avoir sélectionné les champs à afficher, vous pouvez également redimensionner la largeur des colonnes affichées. Pour ce faire, faites glisser la zone entre les colonnes ou sélectionnez la ![icône de flèche](/help/images/icons/chevron-down.png) de la colonne à redimensionner, suivie de **[!UICONTROL Redimensionner la colonne]**.
