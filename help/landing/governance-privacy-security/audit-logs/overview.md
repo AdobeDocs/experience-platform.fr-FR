@@ -4,7 +4,7 @@ description: Découvrez comment les journaux d’audit vous permettent de savoir
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: acbd46b5810a491d838f1c4c3366d19c91c15d51
+source-git-commit: 9bc80c2ee01e7a739db55cc7fc77ea19e609b265
 workflow-type: tm+mt
 source-wordcount: '1466'
 ht-degree: 37%
@@ -89,7 +89,7 @@ Vous pouvez afficher les journaux d’audit de différentes fonctionnalités d�
 
 Les journaux d’audit sont conservés pendant 365 jours, après quoi ils seront supprimés du système. Si vous avez besoin de données de plus de 365 jours, vous devez exporter régulièrement les journaux pour répondre aux exigences de votre politique interne.
 
-Votre méthode de demande des journaux d’audit modifie la période autorisée et le nombre d’enregistrements auxquels vous aurez accès. L’[exportation des journaux](#export-audit-logs) vous permet de revenir 365 jours en arrière (par intervalles de 90 jours) à un maximum de 1 000 enregistrements, où comme l’[interface utilisateur du journal d’activité](#filter-audit-logs) dans Experience Platform affiche les 90 derniers jours à un maximum de 1 000 enregistrements.
+Votre méthode de demande des journaux d’audit modifie la période autorisée et le nombre d’enregistrements auxquels vous aurez accès. L’[ Exportation des journaux ](#export-audit-logs) vous permet de revenir 365 jours en arrière (par intervalles de 90 jours) à un maximum de 10 000 enregistrements, où comme l’[interface utilisateur du journal d’activité](#filter-audit-logs) dans Experience Platform affiche les 90 derniers jours à un maximum de 1 000 enregistrements.
 
 Sélectionnez un événement dans la liste pour afficher ses détails dans le rail de droite.
 
