@@ -3,10 +3,10 @@ title: LISTE AUTORISÉE d’adresses IP pour les destinations de stockage dans l
 type: Documentation
 description: Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre liste autorisée pour exporter en toute sécurité des données d’Experience Platform vers des destinations d’espace de stockage.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 118b0b5e6a1936b644da4153fe7bfeb872ae137e
+source-git-commit: ee4c42a2298c588590b1535524ed8f3dfe13b603
 workflow-type: tm+mt
-source-wordcount: '299'
-ht-degree: 5%
+source-wordcount: '249'
+ht-degree: 6%
 
 ---
 
@@ -40,14 +40,14 @@ Adobe vous recommande d’ajouter les plages d’adresses IP suivantes à un pla
 ## Requis pour tous les clients {#all-customers}
 
 * `52.247.108.70`
+<!-- 
+## US customers running on AWS {#aws}
 
-## Clients aux États-Unis utilisant AWS {#aws}
-
-La plage d’adresses IP ci-dessous s’applique aux clients Experience Platform s’exécutant sur Amazon Web Services (AWS). Pour plus d’informations, consultez la [Présentation d’Experience Platform Multi-Cloud](../../../landing/multi-cloud.md).
+The IP range below applies to Experience Platform customers running on Amazon Web Services (AWS). See the [Experience Platform Multi-Cloud overview](../../../landing/multi-cloud.md) for more information.
 
 >[!NOTE]
 >
->Cette plage d’adresses IP n’est pas prise en charge pour les clients s’exécutant sur AWS qui utilisent des destinations basées sur des fichiers pour exporter des données vers Amazon S3.
+>This IP range is not supported for customers running on AWS who use file-based destinations to export data to Amazon S3. -->
 
 * `66.117.18.0/24`
 
