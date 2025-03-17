@@ -1,13 +1,13 @@
 ---
-keywords: Adresse IP, plage IP, destinations de liste autorisée, liste autorisée, liste autorisée des destinations de diffusion en continu
+keywords: Adresses IP, plage d’adresses IP, destinations de liste autorisée placer sur la liste autorisée place sur la liste autorisée,,
 title: Liste autorisée d’adresses IP pour les destinations en flux continu
 type: Documentation
-description: Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre liste autorisée afin d’exporter en toute sécurité des données d’Experience Platform vers votre point de terminaison API REST HTTP, Amazon Kinesis ou votre instance Azure Event Hubs.
+description: Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre liste autorisée de données pour exporter en toute sécurité des données d’Experience Platform vers votre point d’entrée de l’API HTTP REST, Amazon Kinesis ou votre instance Azure Event Hubs.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: ccb0f80334241afd3f8d8b6ce2833cfd39b223ac
+source-git-commit: 118b0b5e6a1936b644da4153fe7bfeb872ae137e
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 9%
+source-wordcount: '307'
+ht-degree: 8%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 9%
 
 >[!IMPORTANT]
 >
-> * Adobe vous recommande de mettre cette page en signet et de la revoir tous les trois mois pour rechercher les dernières adresses IP. Adobe ne fournit pas de notification pour les nouvelles plages d’adresses IP.
-> * La liste des adresses IP documentées ici *ne s’applique pas à toutes les destinations que vous créez à l’aide de [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).*
+> * Adobe vous recommande d’ajouter un signet à cette page et de la consulter tous les trois mois pour rechercher les dernières adresses IP. Adobe ne fournit pas de notification des nouvelles plages d’adresses IP.
+> * La liste des adresses IP documentée ici *ne s’applique pas* aux destinations que vous créez à l’aide de [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
 
 ## Vue d’ensemble {#overview}
 
@@ -26,13 +26,13 @@ Les plages d’adresses IP documentées ici s’appliquent aux destinations suiv
 * [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
 * [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
 
-Le trafic sortant de l’Experience Platform vers ces destinations passe toujours par les adresses IP répertoriées sur cette page.
+Le trafic sortant d’Experience Platform vers ces destinations passe toujours par les adresses IP répertoriées sur cette page.
 
-Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre liste autorisée afin d’exporter en toute sécurité des données de l’Experience Platform vers votre point d’entrée HTTP, [!DNL Amazon Kinesis] ou [!DNL Azure Event Hubs]. Cette fonctionnalité est particulièrement utile si votre point de terminaison HTTP se trouve derrière un pare-feu d’entreprise ou si les normes de sécurité et de conformité de votre entreprise nécessitent qu’une liste de plages d’adresses IP soit placée sur la liste autorisée.
+Placer sur la liste autorisée Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre pour exporter en toute sécurité des données d’Experience Platform vers votre point d’entrée HTTP, votre [!DNL Amazon Kinesis] ou votre instance [!DNL Azure Event Hubs]. Cette fonctionnalité est particulièrement utile si votre point d’entrée HTTP se trouve derrière un pare-feu d’entreprise ou si les normes de sécurité et de conformité de votre entreprise exigent qu’une liste de plages d’adresses IP soit placée sur la liste autorisée.
 
 Vous pouvez définir des contrôles d’accès réseau via votre pare-feu réseau. En spécifiant la plage d’adresses IP appropriée, vous pouvez autoriser le trafic pour le service de transfert de données.
 
-Adobe vous recommande d’ajouter les plages d’adresses IP suivantes à une liste autorisée avant de travailler avec les destinations mentionnées ci-dessus sur cette page. Si vous ne parvenez pas à ajouter votre plage d’adresses IP spécifique à une région à votre liste autorisée, des erreurs ou des performances peuvent se produire lors de l’utilisation de ces destinations de diffusion en continu.
+Adobe vous recommande d’ajouter les plages d’adresses IP suivantes à un place sur la liste autorisée de données avant d’utiliser les destinations mentionnées ci-dessus sur cette page. Si vous n’ajoutez pas votre plage d’adresses IP spécifique à une région à votre place sur la liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de ces destinations de diffusion en streaming.
 
 ## VA7 : clients des États-Unis et des Amériques {#us-americas}
 
@@ -57,6 +57,12 @@ Adobe vous recommande d’ajouter les plages d’adresses IP suivantes à une li
 `52.254.107.0/28`
 `52.254.107.144/28`
 `20.22.83.112`
+
+## VA6 : clients des États-Unis et des Amériques utilisant AWS {#aws}
+
+La plage d’adresses IP ci-dessous s’applique aux clients Experience Platform s’exécutant sur Amazon Web Services (AWS). Pour plus d’informations, consultez la [Présentation d’Experience Platform Multi-Cloud](../../../landing/multi-cloud.md).
+
+`66.117.18.0/24`
 
 ## NLD2 : clients EMEA {#emea}
 
@@ -113,7 +119,7 @@ Adobe vous recommande d’ajouter les plages d’adresses IP suivantes à une li
 `20.53.206.128`
 `20.227.35.177`
 
-## CAN2 : clients canadiens {#can}
+## CAN2 : clients du Canada {#can}
 
 `20.104.46.128/28`
 `20.104.46.160/28`
@@ -141,7 +147,7 @@ Adobe vous recommande d’ajouter les plages d’adresses IP suivantes à une li
 `20.200.94.116`
 `20.200.94.83`
 
-## GBR9 : clients de Grande-Bretagne {#gbr}
+## GBR9 : clients de la Grande-Bretagne {#gbr}
 
 `20.254.3.48/28`
 `20.254.4.0/28`
