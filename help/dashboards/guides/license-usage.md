@@ -46,7 +46,7 @@ ht-degree: 25%
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
 >title="Heures de calcul prévues"
 >abstract="Votre utilisation est susceptible d’atteindre la quantité autorisée sous licence. Pour évaluer ou réduire vos heures de calcul, accédez à Requêtes > Journal pour consulter l’historique de vos requêtes. Si vous n’avez pas l’autorisation d’accéder à l’espace de travail Requêtes, contactez votre administrateur ou administratrice."
->additional-url="https://experience.adobe.com/#/platform/query/log.html" text="Espace de travail Journal des requêtes"
+>additional-url="https://experience.adobe.com/#/platform/query/log.html?lang=fr" text="Espace de travail Journal des requêtes"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
@@ -57,21 +57,21 @@ ht-degree: 25%
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_engageableprofiles"
->title="Profils Engageables Prévus"
+>title="Profils prévus pouvant permettre un engagement"
 >abstract="Votre utilisation est susceptible d’atteindre la quantité autorisée sous licence. Pour réduire l’utilisation, vous pouvez configurer les expirations des données des jeux de données ou des profils pseudonymes pour les sandbox et les jeux de données."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=fr" text="Expirations des événements d’expérience"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_businesspersonprofile"
->title="Profil professionnel prévu"
+>title="Profil de personnes commerciales prédit"
 >abstract="Votre utilisation est susceptible d’atteindre la quantité autorisée sous licence. Pour réduire l’utilisation, vous pouvez configurer les expirations des données des jeux de données ou des profils pseudonymes pour les sandbox et les jeux de données."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=fr" text="Expirations des événements d’expérience"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_corehours"
->title="Heures de base prévues"
+>title="Heures principales prévues"
 >abstract="Votre utilisation est susceptible d’atteindre la quantité autorisée sous licence. Pour réduire l’utilisation, vous pouvez configurer les expirations des données des jeux de données ou des profils pseudonymes pour les sandbox et les jeux de données."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=fr" text="Expirations des événements d’expérience"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"
@@ -85,7 +85,7 @@ ht-degree: 25%
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_cjaRowsAvailable"
->title="Lignes CJA Prédites Disponibles"
+>title="Lignes CJA prédites disponibles"
 >abstract="Votre utilisation est susceptible d’atteindre la quantité autorisée sous licence. Pour réduire l’utilisation, vous pouvez configurer les expirations des données des jeux de données ou des profils pseudonymes pour les sandbox et les jeux de données."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=fr" text="Expirations des événements d’expérience"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"

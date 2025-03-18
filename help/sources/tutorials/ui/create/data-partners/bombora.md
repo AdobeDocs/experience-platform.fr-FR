@@ -3,10 +3,11 @@ title: Connecter Bombora Intent à Experience Platform à l’aide de l’interf
 description: Découvrez comment connecter Bombora Intent à Experience Platform
 hide: true
 hidefromtoc: true
-source-git-commit: 81a615b9826ed69bb050cae9c074a4e457ba128a
+exl-id: 76a4fed5-b2d5-46d5-9245-b52792a7d323
+source-git-commit: 911aad600dd2618ba98d2ccee737aaedea4f2735
 workflow-type: tm+mt
 source-wordcount: '365'
-ht-degree: 28%
+ht-degree: 53%
 
 ---
 
@@ -43,14 +44,14 @@ Sélectionnez **[!DNL Bombora Intent]** sous la catégorie *[!UICONTROL B2B]*, p
 >[!CONTEXTUALHELP]
 >id="platform_sources_bombora_domain"
 >title="Source du domaine"
->abstract="Bien qu’Adobe utilise XDM accountOrganization.website, il se peut que certains clients utilisent des champs personnalisés pour leurs sites web respectifs. Par conséquent, vous devez vous assurer que la source de votre domaine est le champ domaine/site web qui correspondra à vos enregistrements de compte Bombora par rapport aux comptes Experience Platform."
+>abstract="Bien qu’Adobe utilise le champ XDM accountOrganization.website, il se peut que des clientes et clients utilisent des champs personnalisés pour leurs sites web respectifs. Par conséquent, vous devez vous assurer que la source de votre domaine est le champ domaine/site web qui correspondra à vos enregistrements de compte Bombora par rapport aux comptes Experience Platform."
 
 ## Planifier le flux de données {#schedule-dataflow}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_bombora_schedule"
->title="Planifier votre flux de données"
->abstract="Bombora lâche des données une fois par semaine le lundi matin à 17h00 UTC. Par conséquent, vous devez configurer l’heure de début de l’ingestion après 17 h 00 UTC. De plus, vous devez confirmer l’heure d’ingestion avec Bombora, car il peut modifier son planning lors de l’envoi de fichiers vers Adobe."
+>title="Planifier le flux de données"
+>abstract="Bombora délivre des données une fois par semaine, le lundi à 17 h 00 UTC. Par conséquent, vous devez configurer l’heure de début de l’ingestion après 17 h 00 UTC. De plus, lors de l’envoi de fichiers à Adobe, vous devez confirmer l’heure d’ingestion avec Bombora, car leur planning pourrait être modifié."
 
 
 ## Vérifier le flux de données {#review-dataflow}

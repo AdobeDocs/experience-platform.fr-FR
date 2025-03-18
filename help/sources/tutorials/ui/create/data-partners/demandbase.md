@@ -3,10 +3,11 @@ title: Connecter Demandbase Intent à Experience Platform à l’aide de l’int
 description: Découvrez comment connecter Demandbase Intent à Experience Platform
 hide: true
 hidefromtoc: true
-source-git-commit: 81a615b9826ed69bb050cae9c074a4e457ba128a
+exl-id: 7dc87067-cdf6-4dde-b077-19666dcb12e2
+source-git-commit: 911aad600dd2618ba98d2ccee737aaedea4f2735
 workflow-type: tm+mt
 source-wordcount: '365'
-ht-degree: 28%
+ht-degree: 53%
 
 ---
 
@@ -43,13 +44,13 @@ Sélectionnez **[!DNL Demandbase Intent]** sous la catégorie *[!UICONTROL B2B]*
 >[!CONTEXTUALHELP]
 >id="platform_sources_demandbase_domain"
 >title="Source du domaine"
->abstract="Bien qu’Adobe utilise XDM accountOrganization.website, il se peut que certains clients utilisent des champs personnalisés pour leurs sites web respectifs. Par conséquent, vous devez vous assurer que votre source de domaine est le champ domaine/site web qui correspondra à vos enregistrements de compte Demandbase par rapport aux comptes Experience Platform."
+>abstract="Bien qu’Adobe utilise le champ XDM accountOrganization.website, il se peut que des clientes et clients utilisent des champs personnalisés pour leurs sites web respectifs. Par conséquent, vous devez vous assurer que votre source de domaine est le champ domaine/site web qui correspondra à vos enregistrements de compte Demandbase par rapport aux comptes Experience Platform."
 
 ## Planifier le flux de données {#schedule-dataflow}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_demandbase_schedule"
->title="Planifier votre flux de données"
->abstract="Demandbase envoie les données une fois par semaine le lundi matin à 17h00 UTC. Par conséquent, vous devez configurer l’heure de début de l’ingestion après 17 h 00 UTC. En outre, vous devez confirmer l’heure d’ingestion avec Demandbase, car ils peuvent modifier leur planning lors de l’envoi de fichiers vers Adobe."
+>title="Planifier le flux de données"
+>abstract="Demandbase délivre des données une fois par semaine, le lundi à 17 h 00 UTC. Par conséquent, vous devez configurer l’heure de début de l’ingestion après 17 h 00 UTC. De plus, lors de l’envoi de fichiers à Adobe, vous devez confirmer l’heure d’ingestion avec Demandbase, car leur planning pourrait être modifié."
 
 ## Vérifier le flux de données {#review-dataflow}
