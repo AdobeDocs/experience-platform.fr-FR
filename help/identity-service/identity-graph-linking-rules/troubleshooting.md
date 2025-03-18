@@ -2,7 +2,7 @@
 title: Guide de dépannage des règles de liaison de graphiques d’identités
 description: Découvrez comment résoudre les problèmes courants des règles de liaison des graphiques d’identités.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 4d9954dd61b56125ae1e828432c8cc359806d280
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '3286'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte d’Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
+>Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
 
 Lorsque vous testez et validez les règles de liaison de graphiques d’identités, vous pouvez rencontrer certains problèmes liés à l’ingestion des données et au comportement du graphique. Lisez ce document pour savoir comment résoudre certains problèmes courants que vous pouvez rencontrer lors de l’utilisation de règles de liaison de graphiques d’identités.
 
@@ -40,7 +40,7 @@ Il est important de noter les facteurs suivants :
 
 >[!NOTE]
 >
->* Cette section suppose que les données ont bien été ingérées dans le lac de données et qu’il n’y a pas eu de syntaxe ou d’autres erreurs qui empêcheraient l’ingestion des données dans Experience Platform en premier lieu.
+>* Cette section suppose que les données ont bien été ingérées dans le lac de données et qu’il n’y a pas eu de syntaxe ou d’autres erreurs qui auraient empêché l’ingestion des données dans Experience Platform en premier lieu.
 >
 >* Les exemples utilisent ECID comme espace de noms de cookie et CRMID comme espace de noms de personne.
 
@@ -192,7 +192,7 @@ L’algorithme d’optimisation des identités honore [les liens les plus récem
 >
 >* Un seul jeu de données est en cours d’utilisation (cela n’interrogera pas plusieurs jeux de données).
 >
->* Les données ne sont pas supprimées du lac de données en raison d’une suppression par [gestion avancée du cycle de vie des données](../../hygiene/home.md), [Privacy Service ](../../privacy-service/home.md) ou d’autres services procédant à la suppression.
+>* Les données ne sont pas supprimées du lac de données en raison d’une suppression par [Gestion avancée du cycle de vie des données](../../hygiene/home.md), [Privacy Service](../../privacy-service/home.md) ou d’autres services procédant à la suppression.
 
 Tout d’abord, vous devez collecter les informations suivantes :
 
@@ -320,7 +320,7 @@ Vous pouvez utiliser la requête suivante dans le jeu de données d’exportatio
 
 Cette section présente une liste de réponses aux questions fréquentes sur les règles de liaison des graphiques d’identités.
 
-## Algorithme d’optimisation des identités {#identity-optimization-algorithm}
+## Algorithme d’optimisation de l’identité {#identity-optimization-algorithm}
 
 Lisez cette section pour obtenir des réponses aux questions fréquentes sur l’algorithme d’optimisation des identités [Identity Optimization](./identity-optimization-algorithm.md).
 
@@ -363,7 +363,7 @@ Les points clés à souligner sont les suivants :
 >* Les ECID et les espaces de noms d’e-mail/de téléphone non uniques peuvent passer d’une personne à une autre.
 >* Si un parcours comporte une condition d’attente et si ces espaces de noms non uniques sont utilisés pour rechercher un profil sur un parcours, le message de parcours peut être envoyé à la mauvaise personne.
 
-## Priorité des espaces de noms
+## Priorité d’espace de noms
 
 Lisez cette section pour obtenir des réponses aux questions fréquentes sur la [priorité des espaces de noms](./namespace-priority.md).
 
@@ -373,7 +373,7 @@ Il existe deux « compartiments » d’espaces de noms : espaces de noms de pers
 
 ### Si le profil client en temps réel n’utilise plus l’indicateur « primary » sur identityMap, cette valeur doit-elle toujours être envoyée ?
 
-Oui, l’indicateur « primary » sur identityMap est utilisé par d’autres services. Pour plus d’informations, consultez le guide sur [les implications de la priorité des espaces de noms sur d’autres services Experience Platform ](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services).
+Oui, l’indicateur « primary » sur identityMap est utilisé par d’autres services. Pour plus d’informations, consultez le guide sur [les implications de la priorité des espaces de noms sur d’autres services Experience Platform](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services).
 
 ### La priorité de l’espace de noms s’appliquera-t-elle aux jeux de données d’enregistrement de profil dans le profil client en temps réel ?
 

@@ -2,9 +2,9 @@
 title: Guide de mise en œuvre des règles de liaison des graphiques d’identités
 description: Découvrez les étapes recommandées à suivre lors de l’implémentation de vos données avec les configurations de règles de liaison de graphiques d’identités .
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
-source-wordcount: '1585'
+source-wordcount: '1688'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte d’Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
+>Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
 
 Lisez ce document pour obtenir un guide détaillé que vous pouvez suivre lors de l’implémentation de vos données avec Adobe Experience Platform Identity Service.
 
@@ -26,7 +26,7 @@ Esquisse détaillée :
 4. [Utilisez l’interface utilisateur des paramètres d’identité pour désigner vos espaces de noms uniques et configurer le classement des priorités de vos espaces de noms](#identity-settings)
 5. [Créer un schéma de modèle de données d’expérience (XDM)](#schema)
 6. [Créer un jeu de données](#dataset)
-7. [Ingérer vos données vers Experience Platform](#ingest)
+7. [Ingestion de données dans Experience Platform](#ingest)
 
 ## Conditions préalables à la mise en œuvre {#prerequisites-for-implementation}
 
@@ -60,7 +60,7 @@ Si vous utilisez le [connecteur source Adobe Analytics](../../sources/tutorials/
 
 ### Événements d’expérience XDM
 
-Pendant votre processus de pré-implémentation, vous devez vous assurer que les événements authentifiés que votre système enverra à l’Experience Platform contiennent toujours un identifiant de personne, tel que CRMID.
+Pendant votre processus de pré-implémentation, assurez-vous que les événements authentifiés que votre système enverra à Experience Platform contiennent toujours un identifiant de personne, tel que CRMID.
 
 >[!BEGINTABS]
 
@@ -120,26 +120,28 @@ Pendant votre processus de pré-implémentation, vous devez vous assurer que les
 
 >[!ENDTABS]
 
-Vous devez vous assurer de disposer d’une identité complète lors de l’envoi d’événements à l’aide d’événements d’expérience XDM.
+Pendant votre processus de pré-implémentation, vous devez vous assurer que les événements authentifiés que votre système enverra à Experience Platform contiennent toujours un identifiant de personne **unique** tel qu’un CRMID.
 
-+++Sélectionner pour afficher un exemple d’événement avec une identité complète
+* (Recommandé) Événements authentifiés avec un identifiant de personne.
+* (Non recommandé) Événements authentifiés avec deux identifiants de personne.
+* (Non recommandé) Événements authentifiés sans identifiant de personne.
 
-```json
-    "identityMap": {
-        "ECID": [
-            {
-                "id": "24165048599243194405404369473457348936",
-                "primary": false
-            }
-        ]
-    }
-```
+Si votre système envoie deux identifiants de personne, l’implémentation peut échouer à l’exigence d’espace de noms de personne unique. Par exemple, si la carte des identités de votre implémentation du SDK web contient un CRMID, un customerID et un espace de noms ECID, deux personnes qui partagent un appareil peuvent être associées de manière incorrecte à des espaces de noms différents.
+
+Dans Identity Service, cette implémentation peut se présenter comme suit :
+
+* `timestamp1` = John se connecte -> le système capture les `CRMID: John, ECID: 111`.
+* `timestamp2` = Jane se connecte -> le système capture les `customerID: Jane, ECID: 111`.
+
++++Voir à quoi pourrait ressembler l’implémentation dans la simulation graphique
+
+![Interface utilisateur de simulation de graphique avec un exemple de graphique rendu.](../images/implementation/example-graph.png)
 
 +++
 
 ## Définition des autorisations {#set-permissions}
 
-La première étape du processus d’implémentation d’Identity Service consiste à ajouter votre compte d’Experience Platform à un rôle doté des autorisations nécessaires. Votre administrateur peut configurer les autorisations de votre compte en accédant à l’interface utilisateur Autorisations dans Adobe Experience Cloud. À partir de là, votre compte doit être ajouté à un rôle avec les autorisations suivantes :
+La première étape du processus de mise en œuvre d’Identity Service consiste à ajouter votre compte Experience Platform à un rôle doté des autorisations nécessaires. Votre administrateur peut configurer les autorisations de votre compte en accédant à l’interface utilisateur Autorisations dans Adobe Experience Cloud. À partir de là, votre compte doit être ajouté à un rôle avec les autorisations suivantes :
 
 * [!UICONTROL Afficher les paramètres d’identité] : appliquez cette autorisation pour pouvoir afficher les espaces de noms uniques et la priorité des espaces de noms sur la page de navigation des espaces de noms d’identité.
 * [!UICONTROL Modifier les paramètres d’identité] : appliquez cette autorisation pour pouvoir modifier et enregistrer vos paramètres d’identité.
@@ -190,10 +192,10 @@ Pour plus d’informations sur la création d’un jeu de données, consultez le
 * Au moins un schéma XDM. (Selon vos données et votre cas d’utilisation spécifique, vous devrez peut-être créer des schémas de profil et d’événement d’expérience.)
 * Un jeu de données basé sur votre schéma.
 
-Une fois que vous disposez de tous les éléments répertoriés ci-dessus, vous pouvez commencer à ingérer vos données dans Experience Platform. Vous pouvez effectuer l’ingestion des données de plusieurs manières différentes. Vous pouvez utiliser les services suivants pour rendre vos données Experience Platform :
+Une fois que vous disposez de tous les éléments répertoriés ci-dessus, vous pouvez commencer à ingérer vos données dans Experience Platform. Vous pouvez effectuer l’ingestion des données de plusieurs manières différentes. Vous pouvez utiliser les services suivants pour importer vos données dans Experience Platform :
 
 * [Ingestion par lots et par flux](../../ingestion/home.md)
-* [Collecte de données dans l’Experience Platform](../../collection/home.md)
+* [Collecte de données dans Experience Platform](../../collection/home.md)
 * [Sources Experience Platform](../../sources/home.md)
 
 >[!TIP]
@@ -251,9 +253,9 @@ Cet exemple montre également que Tom et Summer sont deux entités de personne d
 Pour plus d’informations sur les règles de liaison de graphiques d’identités, consultez la documentation suivante :
 
 * [Aperçu des règles de liaison des graphiques d’identités](./overview.md)
-* [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
-* [Exemples de configurations de graphique](./example-configurations.md)
+* [Algorithme d’optimisation de l’identité](./identity-optimization-algorithm.md)
+* [Exemples de configurations de graphes](./example-configurations.md)
 * [Résolution des problèmes et FAQ](./troubleshooting.md)
-* [Priorité des espaces de noms](./namespace-priority.md)
+* [Priorité d’espace de noms](./namespace-priority.md)
 * [Interface utilisateur de simulation de graphique](./graph-simulation.md)
 * [Interface utilisateur des paramètres d’identité](./identity-settings-ui.md)
