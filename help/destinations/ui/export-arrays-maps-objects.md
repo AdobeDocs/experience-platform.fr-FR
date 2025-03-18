@@ -3,10 +3,10 @@ title: Exportez des tableaux, mappages et objets de Real-Time CDP vers des desti
 type: Tutorial
 description: Découvrez comment exporter des tableaux, des mappages et des objets de Real-Time CDP vers des destinations d’espace de stockage.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 99093e0bbcd3c3560ebe201fdac72e83e67dae43
 workflow-type: tm+mt
-source-wordcount: '884'
-ht-degree: 15%
+source-wordcount: '862'
+ht-degree: 16%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 15%
 
 >[!AVAILABILITY]
 >
->La fonctionnalité d’exportation de baies vers des destinations d’espace de stockage est généralement disponible pour les destinations suivantes : [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md),
+>La fonctionnalité d’exportation de tableaux et d’autres objets complexes vers des destinations d’espace de stockage est généralement disponible pour les destinations suivantes : [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md),
 
-Découvrez comment exporter des tableaux de Real-Time CDP vers des [destinations de stockage dans le cloud](/help/destinations/catalog/cloud-storage/overview.md). Lisez ce document pour comprendre le workflow d’exportation, les cas d’utilisation activés par cette fonctionnalité et les limites connues.
+Découvrez comment exporter des tableaux, des mappages et des objets de Real-Time CDP vers des [destinations d’espace de stockage](/help/destinations/catalog/cloud-storage/overview.md). Lisez ce document pour comprendre le workflow d’exportation, les cas d’utilisation activés par cette fonctionnalité et les limites connues.
 
 Utilisez cette page comme référence pour tout ce que vous souhaitez savoir sur l’exportation de tableaux, de mappages et d’autres types d’objets à partir d’Experience Platform.
 
@@ -52,8 +52,6 @@ organizations = [{
   latestInteraction: "2024-09-08"
 }]
 ```
-
-Vous trouverez ci-dessous [des exemples détaillés](#examples) sur la manière dont vous pouvez utiliser diverses fonctions pour accéder aux éléments de tableaux, transformer et filtrer des tableaux, joindre des éléments de tableau en chaîne, etc.
 
 En plus des tableaux, vous pouvez également exporter des mappages et des objets d’Experience Platform vers la destination d’espace de stockage de votre choix. Pour en savoir plus sur les [mappages](/help/xdm/ui/fields/map.md) et [objets](/help/xdm/ui/fields/object.md), consultez Experience Platform.
 
