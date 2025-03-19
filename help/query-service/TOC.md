@@ -5,10 +5,10 @@ breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: e63ecbd14db2e9e4f35fb89aaaa406a4c584416a
+source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
 workflow-type: tm+mt
-source-wordcount: '402'
-ht-degree: 70%
+source-wordcount: '400'
+ht-degree: 71%
 
 ---
 
@@ -23,7 +23,6 @@ ht-degree: 70%
 - Data Distiller {#data-distiller}
    - [Aperçu](data-distiller/overview.md)
    - [Utilisation des licences](data-distiller/license-usage.md)
-   - [Conseils pour optimiser la valeur](data-distiller/top-tips-to-maximize-value.md)
    - Jeux de données dérivés {#derived-datasets}
       - [Vue d’ensemble](data-distiller/derived-datasets/overview.md)
       - [Créer des jeux de données dérivés avec SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
@@ -40,6 +39,7 @@ ht-degree: 70%
       - [Fonctionnalités d’ingénierie pour ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Exporter des données vers des environnements ML](data-distiller/ml-feature-pipelines/export-data.md)
       - [Workflow de bout en bout d’enrichissement du pipeline de données AI/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+   - [Session Du Summit 2025](data-distiller/top-tips-to-maximize-value.md)
 - Statistiques de Distiller de données et {#advanced-statistics} de machine learning
    - [Vue d’ensemble](advanced-statistics/overview.md)
    - [Conception des fonctionnalités](advanced-statistics/feature-engineering.md)

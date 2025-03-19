@@ -1,17 +1,15 @@
 ---
-title: Conseils pour optimiser la valeur avec Adobe Experience Platform Data Distiller
+title: Conseils pour optimiser la valeur avec Adobe Experience Platform Data Distiller - OS656
 description: Découvrez comment tirer le meilleur parti de Adobe Experience Platform Data Distiller en enrichissant les données du profil client en temps réel et en utilisant des informations comportementales pour créer des audiences ciblées. Cette ressource comprend un échantillon de jeu de données et une étude de cas montrant comment appliquer le modèle Récence, Fréquence, Monétaire (RFM) pour la segmentation de la clientèle.
-hide: true
-hidefromtoc: true
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: c7a6a37679541dc37bdfed33b72d2396db7ce054
+source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
 workflow-type: tm+mt
-source-wordcount: '3506'
+source-wordcount: '3657'
 ht-degree: 0%
 
 ---
 
-# Conseils pratiques pour optimiser la valeur de avec Adobe Experience Platform Data Distiller
+# Conseils pour optimiser la valeur avec Adobe Experience Platform Data Distiller - OS656
 
 Cette page contient l’exemple de jeu de données vous permettant d’appliquer ce que vous avez appris dans la session Adobe Summit « OS656 - Conseils pratiques pour optimiser la valeur avec Adobe Experience Platform Data Distiller ». Vous apprendrez à accélérer les mises en œuvre d’Adobe Real-Time Customer Data Platform et de Journey Optimizer en enrichissant les données du profil client en temps réel. Cet enrichissement tire parti d’informations détaillées sur les modèles de comportement des clients pour créer des audiences pour la diffusion et l’optimisation de l’expérience.
 
@@ -53,7 +51,7 @@ Pour charger un fichier CSV dans Adobe Experience Platform, procédez comme suit
 
 #### Créer un jeu de données à partir d’un fichier CSV {#create-a-dataset}
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Workflows]** dans le rail de navigation de gauche, puis sélectionnez **[!UICONTROL Créer un jeu de données à partir d’un fichier CSV]** dans les options disponibles. Une nouvelle barre latérale s’affiche à droite de l’écran. Sélectionnez **[!UICONTROL Lancer]**.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le rail de navigation de gauche, suivi de **[!UICONTROL Créer un jeu de données]**. Sélectionnez ensuite **[!UICONTROL Créer un jeu de données à partir d’un fichier CSV]** dans les options disponibles.
 
 Le panneau [!UICONTROL Configurer le jeu de données] s’affiche. Dans le champ **[!UICONTROL Nom]**, saisissez le nom du jeu de données sous la forme « luma_web_data » et sélectionnez **[!UICONTROL Suivant]**.
 
@@ -135,7 +133,7 @@ Les requêtes suivantes montrent comment identifier et exclure les commandes ann
 Cette première requête sélectionne tous les identifiants d’achat non nuls associés à une annulation et les agrège à l’aide de `GROUP BY`. Les identifiants d’achat obtenus doivent être exclus du jeu de données.
 
 ```sql
-CREATE OR replace VIEW orders_cancelled
+CREATE VIEW orders_cancelled
 AS
   SELECT purchase_id
   FROM   luma_web_data
@@ -241,7 +239,7 @@ Les résultats ressemblent à l’image ci-dessous.
 Pour améliorer l’efficacité et la réutilisation des requêtes, créez un `VIEW` pour stocker les valeurs RFM agrégées.
 
 ```sql
-CREATE OR replace VIEW rfm_values
+CREATE VIEW rfm_values
 AS
   SELECT userid,
          DATEDIFF(current_date, MAX(purchase_date)) AS days_since_last_purchase,
@@ -258,7 +256,7 @@ Le résultat ressemble à l’image suivante, mais avec un identifiant différen
 Là encore, il est recommandé d’exécuter une requête d’exploration simple pour examiner les données de la vue. Utilisez l’instruction suivante.
 
 ```sql
-SELECT * FROM RFM_Values;
+SELECT * FROM rfm_values;
 ```
 
 La capture d’écran suivante présente un exemple de résultat de la requête, affichant les valeurs RFM calculées pour chaque utilisateur. Le résultat correspond à l&#39;identifiant de vue de la requête `CREATE VIEW`.
@@ -289,7 +287,7 @@ SELECT userid,
        NTILE(4)
          OVER (
            ORDER BY total_revenue DESC)                AS monetization
-FROM   rfm_val ues; 
+FROM rfm_values; 
 ```
 
 Les résultats ressemblent aux images ci-dessous.
@@ -320,6 +318,10 @@ AS
              ORDER BY total_revenue DESC)                AS monetization
   FROM   rfm_values;
 ```
+
+Le résultat ressemble à l’image suivante, mais avec un ID d’affichage différent.
+
+![Boîte de dialogue Résultats de la requête pour la VUE &#39;rfm_scores&#39;.](../images/data-distiller/top-tips-to-maximize-value/rfm_score-view-result.png)
 
 #### Modéliser les segments RFM {#model-rfm-segments}
 
@@ -398,7 +400,7 @@ Les captures d’écran suivantes affichent un exemple de résultat de la requê
 
 ### Étape 4 : utiliser SQL pour ingérer par lots des données RFM dans le profil client en temps réel {#sql-batch-ingest-rfm-data}
 
-Ensuite, le lot ingère les données client enrichies avec RFM dans le profil client en temps réel. Commencez par créer un jeu de données activé pour Profile et insérez les données transformées à l’aide de SQL.
+Ensuite, ingérez par lots des données client enrichies avec RFM dans le profil client en temps réel. Commencez par créer un jeu de données activé pour Profile et insérez les données transformées à l’aide de SQL.
 
 #### Créer un jeu de données dérivé pour stocker les attributs RFM {#create-a-derived-dataset}
 
@@ -426,7 +428,13 @@ Dans cette instruction SQL :
 >
 >Pour plus d’informations sur la définition des champs d’identité et l’utilisation des espaces de noms d’identité, reportez-vous à la [documentation du service d’identités](../../identity-service/home.md) ou au guide sur la [définition d’un champ d’identité dans l’interface utilisateur de Adobe Experience Platform](../../xdm/ui/fields/identity.md).
 
-Le code SQL suivant crée une table activée pour Profile pour stocker les attributs RFM
+Query Editor prenant en charge l’exécution séquentielle, vous pouvez inclure les requêtes de création de table et d’insertion de données dans une seule session. Le code SQL suivant crée d&#39;abord une table activée pour Profile pour stocker les attributs RFM. Ensuite, il insère les données client enrichies RFM de `rfm_model_segment` dans la table `adls_rfm_profile`, en structurant chaque enregistrement sous votre espace de noms spécifique au client, qui est requis pour l’ingestion du profil client en temps réel.
+
+Query Editor prenant en charge l’exécution séquentielle, vous pouvez exécuter les requêtes de création de table et d’insertion de données dans une seule session. Le code SQL suivant crée d&#39;abord une table activée pour Profile pour stocker les attributs RFM. Ensuite, il insère les données client enrichies RFM de `rfm_model_segment` dans la table `adls_rfm_profile`, en s’assurant que chaque enregistrement est correctement structuré sous votre espace de noms spécifique au client (`_{TENANT_ID}`). Cet espace de noms est essentiel pour l’ingestion du profil client en temps réel et la résolution précise des identités.
+
+>[!IMPORTANT]
+>
+>Remplacez `_{TENANT_ID}` par l’espace de noms du client de votre organisation. Cet espace de noms est propre à votre organisation et garantit que toutes les données ingérées sont correctement affectées dans Adobe Experience Platform.
 
 ```sql
 CREATE TABLE IF NOT EXISTS adls_rfm_profile (
@@ -439,11 +447,16 @@ CREATE TABLE IF NOT EXISTS adls_rfm_profile (
     monetization INTEGER, -- Monetary score
     rfm_model TEXT -- RFM segment classification
 ) WITH (LABEL = 'PROFILE'); -- Enable the table for Real-Time Customer Profile
+
+INSERT INTO adls_rfm_profile
+SELECT STRUCT(userId, days_since_last_purchase, orders, total_revenue, recency,
+              frequency, monetization, rfm_model) _{TENANT_ID}
+FROM rfm_model_segment;
 ```
 
 Le résultat de cette requête ressemble aux créations de jeux de données précédentes de ce playbook, mais avec un identifiant différent.
 
-Après avoir créé le jeu de données, accédez à Jeux de données > Parcourir > `adls_rfm_profile` pour vérifier que le jeu de données est vide.
+Après avoir créé le jeu de données, accédez à **[!UICONTROL Jeux de données]** > **[!UICONTROL Parcourir]** > `adls_rfm_profile` pour vérifier que le jeu de données est vide.
 
 ![L’espace de travail des jeux de données avec les détails du jeu de données « adls_rfm_profile » affiché et le bouton (bascule) activé pour le profil mis en surbrillance.](../images/data-distiller/top-tips-to-maximize-value/profile-enabled-toggle.png)
 
@@ -459,12 +472,12 @@ Assurez-vous que l’ordre des champs dans la requête `SELECT` de l’instructi
 
 >[!NOTE]
 >
->Cette requête s’exécute en mode batch, qui nécessite la création d’un cluster pour exécuter le processus. L’opération lit les données du lac de données, les traite dans le cluster et réécrit les résultats dans le lac de données.
+>Cette requête s’exécute en mode batch, ce qui nécessite la création d’un cluster pour exécuter le processus. L’opération lit les données du lac de données, les traite dans le cluster et réécrit les résultats dans le lac de données.
 
 ```sql
 INSERT INTO adls_rfm_profile
 SELECT Struct(userid, days_since_last_purchase, orders, total_revenue, recency,
-              frequency, monetization, rfm_model) _pfreportingonprod
+              frequency, monetization, rfm_model) _{TENANT_ID}
 FROM   rfm_model_segment; 
 ```
 
@@ -490,10 +503,10 @@ Pour plus d’informations sur la planification de requêtes, consultez la docum
 
 La vue [!UICONTROL Détails de la planification] s’affiche. À partir de là, saisissez les détails suivants pour configurer le planning :
 
-- **[!UICONTROL Fréquence D’Exécution]** : **Annuel**
-- **[!UICONTROL Jour d’exécution]** : **30 avril**
-- **[!UICONTROL Heure d’exécution de la planification]** : **23 h UTC**
-- **[!UICONTROL Période de planification]** : **1er avril - 31 mai 2024**
+- **[!UICONTROL Fréquence D’Exécution]** : **Hebdomadaire**
+- **[!UICONTROL Jour d&#39;exécution]** : **lundi et mardi**
+- **[!UICONTROL Heure d’exécution de la planification]** : **10 h 10 UTC**
+- **[!UICONTROL Période de planification]** : **17 mars au 30 avril 2025**
 
 Sélectionnez **[!UICONTROL Enregistrer]** pour confirmer le planning.
 
@@ -518,11 +531,11 @@ Choisissez l’approche qui convient le mieux à votre workflow.
 
 Utilisez la commande `CREATE AUDIENCE AS SELECT` pour définir une nouvelle audience. L’audience créée est enregistrée dans un jeu de données et enregistrée dans l’espace de travail **[!UICONTROL Audiences]** sous **[!UICONTROL Distiller de données]**.
 
-Les audiences créées à l’aide de l’extension SQL sont automatiquement enregistrées sous l’origine [!UICONTROL Distiller de données] dans l’espace de travail [!UICONTROL Audiences]. Dans l’interface utilisateur [!UICONTROL Audiences], vous pouvez afficher, gérer et activer vos audiences selon vos besoins.
+Les audiences créées à l’aide de l’extension SQL sont automatiquement enregistrées sous l’origine [!UICONTROL Distiller de données] dans l’espace de travail [!UICONTROL Audiences]. Dans [Audience Portal](../../segmentation/ui/audience-portal.md), vous pouvez afficher, gérer et activer vos audiences selon vos besoins.
 
-![Espace de travail Audiences affichant les audiences disponibles.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
+![Audience Portal présentant les audiences disponibles.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
 
-![Espace de travail Audiences présentant les audiences disponibles avec la barre latérale de filtrage et la Distiller de données sélectionnées.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png)
+![Audience Portal présentant les audiences disponibles avec la barre latérale de filtrage et la Distiller de données sélectionnées.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png)
 
 Pour plus d’informations sur les audiences SQL, consultez la [documentation sur les audiences Data Distiller](../data-distiller-audiences/overview.md). Pour savoir comment gérer les audiences dans l’interface utilisateur, consultez la [présentation du portail Audiences](../../segmentation/ui/audience-portal.md#audience-list).
 
@@ -534,19 +547,19 @@ Pour créer une audience, utilisez les commandes SQL suivantes :
 -- Define an audience for best customers based on RFM scores
 CREATE AUDIENCE rfm_best_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = queryService
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
-    WHERE _pfreportingonprod.recency = 1 
-        AND _pfreportingonprod.frequency = 1 
-        AND _pfreportingonprod.monetization = 1 
+    WHERE _{TENANT_ID}.recency = 1 
+        AND _{TENANT_ID}.frequency = 1 
+        AND _{TENANT_ID}.monetization = 1 
 );
 
 -- Define an audience that includes all customers
 CREATE AUDIENCE rfm_all_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = queryService
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
@@ -555,33 +568,33 @@ WITH (
 -- Define an audience for core customers based on email identity
 CREATE AUDIENCE rfm_core_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = Email
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
-    WHERE _pfreportingonprod.recency = 1 
-        AND _pfreportingonprod.frequency = 1 
-        AND _pfreportingonprod.monetization = 1 
+    WHERE _{TENANT_ID}.recency = 1 
+        AND _{TENANT_ID}.frequency = 1 
+        AND _{TENANT_ID}.monetization = 1 
 );
 ```
 
 #### Insérer une audience {#insert-an-audience}
 
-Pour ajouter des profils à une audience existante, utilisez la commande `INSERT INTO` . Vous pouvez ainsi ajouter des profils individuels ou des segments d’audience entiers à un jeu de données d’audience existant.
+Pour ajouter des profils à une audience existante, utilisez la commande `INSERT INTO` . Vous pouvez ainsi ajouter des profils individuels ou des audiences entières à un jeu de données d’audience existant.
 
 ```sql
 -- Insert profiles into the audience dataset
 INSERT INTO AUDIENCE adls_rfm_audience 
 SELECT 
-    _pfreportingonprod.userId, 
-    _pfreportingonprod.days_since_last_purchase, 
-    _pfreportingonprod.orders, 
-    _pfreportingonprod.total_revenue, 
-    _pfreportingonprod.recency, 
-    _pfreportingonprod.frequency, 
-    _pfreportingonprod.monetization 
+    _{TENANT_ID}.userId, 
+    _{TENANT_ID}.days_since_last_purchase, 
+    _{TENANT_ID}.orders, 
+    _{TENANT_ID}.total_revenue, 
+    _{TENANT_ID}.recency, 
+    _{TENANT_ID}.frequency, 
+    _{TENANT_ID}.monetization 
 FROM adls_rfm_profile 
-WHERE _pfreportingonprod.rfm_model = '6. Slipping - Once Loyal, Now Gone';
+WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
 ```
 
 #### Ajout de profils à une audience {#add-profiles-to-audience}

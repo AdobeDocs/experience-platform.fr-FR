@@ -3,9 +3,10 @@ title: Utilisation de cas d’utilisation de l’expérience client pour atteind
 description: Découvrez un cadre pratique pour relier les objectifs de votre entreprise à des expériences client réelles. Utilisez les feuilles de calcul incluses pour élaborer des stratégies, affiner et appliquer des cas d’utilisation efficacement dans Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: d8cfbbf7482a6501a58dfde8c8c25ee8d46b06d8
+exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
+source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
@@ -20,3 +21,5 @@ Découvrez un cadre pratique pour relier les objectifs de votre entreprise à de
 - Favorisez la collaboration entre les équipes pour obtenir des résultats de cas d’utilisation efficaces.
 - Appliquez un framework de maturité pour faire évoluer les cas d’utilisation afin d’augmenter l’impact commercial.
 - Utilisez Adobe Experience Platform pour accélérer la réalisation de valeur.
+
+Téléchargez cette [ressource PDF](../assets/summit/20250110-summit-session-s651-leave-behind.pdf) pour explorer une approche structurée pour définir, évaluer et faire évoluer les cas d’utilisation de l’expérience client. Découvrez comment aligner les objectifs commerciaux avec un impact mesurable, exploiter les données pour la personnalisation et activer efficacement les cas d’utilisation dans Adobe Experience Platform.
