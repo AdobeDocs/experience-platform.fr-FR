@@ -2,7 +2,7 @@
 title: Conseils pour optimiser la valeur avec Adobe Experience Platform Data Distiller - OS656
 description: Découvrez comment tirer le meilleur parti de Adobe Experience Platform Data Distiller en enrichissant les données du profil client en temps réel et en utilisant des informations comportementales pour créer des audiences ciblées. Cette ressource comprend un échantillon de jeu de données et une étude de cas montrant comment appliquer le modèle Récence, Fréquence, Monétaire (RFM) pour la segmentation de la clientèle.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
+source-git-commit: fac4ca20f15bdfd765b73fde9db8dd7e2fc1a149
 workflow-type: tm+mt
 source-wordcount: '3657'
 ht-degree: 0%
@@ -328,11 +328,11 @@ Le résultat ressemble à l’image suivante, mais avec un ID d’affichage diff
 Une fois les scores RFM calculés, les clients peuvent être classés dans les six segments prioritaires suivants :
 
 1. `Core` : meilleurs clients avec une récence, une fréquence et une valeur monétaire élevées (récence = 1, fréquence = 1, monétaire = 1).
-2. `Loyal` : clients fréquents qui sont cohérents, mais qui ne sont pas les plus dépensiers (fréquence = 1).
-3. `Whales` : les plus dépensiers, indépendamment de la Récence et de la Fréquence (Monétaire = 1).
-4. `Promising` : Dépensiers fréquents mais inférieurs (fréquence = 1, 2, 3 ; monétaire = 2, 3, 4).
-5. `Rookies` : nouveaux clients avec une fréquence faible (Récence = 1, Fréquence = 4).
-6. `Slipping` : clients anciennement fidèles avec une activité réduite (Récence = 2, 3, 4 ; Fréquence = 4).
+1. `Loyal` : clients fréquents qui sont cohérents, mais qui ne sont pas les plus dépensiers (fréquence = 1).
+1. `Whales` : les plus dépensiers, indépendamment de la Récence et de la Fréquence (Monétaire = 1).
+1. `Promising` : Dépensiers fréquents mais inférieurs (fréquence = 1, 2, 3 ; monétaire = 2, 3, 4).
+1. `Rookies` : nouveaux clients avec une fréquence faible (Récence = 1, Fréquence = 4).
+1. `Slipping` : clients anciennement fidèles avec une activité réduite (Récence = 2, 3, 4 ; Fréquence = 4).
 
 Pour rationaliser l’accès et la réutilisation, créez un `VIEW` qui stocke les segments, scores et valeurs RFM.
 
