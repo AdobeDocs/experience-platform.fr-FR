@@ -2,9 +2,9 @@
 title: Conseils pour optimiser la valeur avec Adobe Experience Platform Data Distiller - OS656
 description: Découvrez comment tirer le meilleur parti de Adobe Experience Platform Data Distiller en enrichissant les données du profil client en temps réel et en utilisant des informations comportementales pour créer des audiences ciblées. Cette ressource comprend un échantillon de jeu de données et une étude de cas montrant comment appliquer le modèle Récence, Fréquence, Monétaire (RFM) pour la segmentation de la clientèle.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: cfa8395e68ed828be5095a979d5bf0ea6e9a9ae9
+source-git-commit: 30db967fc94d8f5b9ded22ce81da3d51001610af
 workflow-type: tm+mt
-source-wordcount: '3658'
+source-wordcount: '3704'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,16 @@ Grâce à l’étude de cas Luma, vous allez analyser les données comportementa
 ## Prérequis
 
 Pour exécuter ce cas d’utilisation, votre instance Adobe Experience Platform doit disposer d’une licence pour [Data Distiller](./overview.md). Pour plus d’informations, contactez votre représentant Adobe.
+
+Vous devez également connaître l’identifiant client de votre **organisation**, qui est requis pour exécuter des requêtes. Votre identifiant client est la première partie de l’URL lorsque vous vous connectez à Experience Platform, qui apparaît immédiatement après le symbole @.
+
+Par exemple, dans l’URL suivante :
+
+```http
+https://experience.adobe.com/#/@pfreportingonprod/sname:prod/platform/home
+```
+
+L’ID du client est `pfreportingonprod`.
 
 ## Présentation du modèle RFM {#rfm-overview}
 
