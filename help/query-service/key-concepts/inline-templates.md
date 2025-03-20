@@ -2,7 +2,7 @@
 title: Modèles intégrés
 description: Découvrez comment réutiliser plusieurs conditions dans de nombreuses requêtes à l’aide de modèles intégrés.
 exl-id: 78959070-f9e5-4736-b72a-a8ef518bfa4f
-source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
+source-git-commit: ef4c7f20710f56ca0de7c0dfdb99751ff2fe8ebe
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 100%
@@ -42,7 +42,7 @@ Lors de l’exécution de la requête, Query Service remplace le nom du modèle
 
 Vous pouvez utiliser des modèles pour stocker une ou plusieurs conditions. Il n’est pas nécessaire qu’ils constituent à eux seuls une requête complète. Si votre modèle contient une requête valide, vous pouvez exécuter la requête simplement en appelant le nom du modèle précédé d’un symbole de hachage. Par exemple, si vous avez stocké `SELECT * FROM JUNE_2023_LOYALTY_MEMBERS;` comme modèle nommé `JUNE_2023_LOYALTY_MEMBERS`, la commande `#JUNE_2023_LOYALTY_MEMBERS;` exécute la requête valide contenue dans le modèle.
 
->
+>[!NOTE]
 >
 >Dans l’interface utilisateur d’Adobe Experience Platform, les modèles intégrés sous la forme de requêtes paramétrées ne sont pris en charge qu’au niveau parent. Cela signifie que les requêtes paramétrées ne fonctionnent que lorsqu’elles sont utilisées dans le modèle d’origine. Le modèle enfant doit être un modèle statique et ne peut pas comporter de paramètres dynamiques. Consultez la [documentation des requêtes paramétrées](../ui/parameterized-queries.md) pour en savoir plus.
 
