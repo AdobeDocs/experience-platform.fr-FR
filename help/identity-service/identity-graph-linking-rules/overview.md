@@ -2,14 +2,19 @@
 title: Règles de liaison des graphiques d’identités
 description: Découvrez les règles de liaison des graphiques d’identités dans Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
 workflow-type: tm+mt
-source-wordcount: '1449'
-ht-degree: 5%
+source-wordcount: '1476'
+ht-degree: 4%
 
 ---
 
-# Aperçu des règles de liaison des graphiques d’identités
+# Aperçu des règles de liaison des graphiques d’identités {#identity-graph-linking-rules-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_linkingrules_overview"
+>title="Règles de liaison des graphiques d’identités"
+>abstract="Pour éviter ces fusions indésirables, vous pouvez utiliser les configurations fournies par le biais des règles de liaison de graphiques d’identités et permettre une personnalisation précise de vos utilisateurs."
 
 >[!AVAILABILITY]
 >
