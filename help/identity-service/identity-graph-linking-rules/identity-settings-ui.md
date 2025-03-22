@@ -2,9 +2,9 @@
 title: Interface utilisateur des paramètres d’identité
 description: Découvrez comment utiliser l’interface utilisateur des paramètres d’identité.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 0b4d9a493df6125decc6c46ddcd404f0bb1c9c6a
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '641'
 ht-degree: 3%
 
 ---
@@ -13,9 +13,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
->
->* Votre compte doit disposer de l’autorisation **Afficher le graphique d’identités** pour accéder aux paramètres d’identité dans l’interface utilisateur. Pour plus d’informations, consultez le guide [ sur les autorisations dans le contrôle d’accès basé sur les attributs](../../access-control/abac/ui/permissions.md).
+>Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
 
 Les paramètres d’identité sont une fonctionnalité de l’interface utilisateur du service d’identités Adobe Experience Platform que vous pouvez utiliser pour désigner des espaces de noms uniques et configurer la priorité des espaces de noms.
 
@@ -31,6 +29,15 @@ Lisez les documents suivants avant de commencer à utiliser les paramètres d’
 * [Exemples de configurations de graphes](./example-configurations.md)
 * [Priorité d’espace de noms](./namespace-priority.md)
 * [Simulation de graphique](./graph-simulation.md)
+
+### Définition des autorisations {#set-permissions}
+
+Ensuite, vous devez vous assurer que votre compte dispose des autorisations suivantes :
+
+* **[!UICONTROL Afficher les paramètres d’identité]** : appliquez cette autorisation pour pouvoir afficher les espaces de noms uniques et la priorité des espaces de noms sur la page de navigation des espaces de noms d’identité.
+* **[!UICONTROL Modifier les paramètres d’identité]** : appliquez cette autorisation pour pouvoir modifier et enregistrer vos paramètres d’identité.
+
+Contactez votre administrateur si vous ne disposez pas de ces autorisations. Pour plus d’informations , consultez le [guide des autorisations](../../access-control/abac/ui/permissions.md).
 
 ## Configurer vos paramètres d’identité
 

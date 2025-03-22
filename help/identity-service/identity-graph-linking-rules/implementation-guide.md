@@ -2,9 +2,9 @@
 title: Guide de mise en œuvre des règles de liaison des graphiques d’identités
 description: Découvrez les étapes recommandées à suivre lors de l’implémentation de vos données avec les configurations de règles de liaison de graphiques d’identités .
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
+source-git-commit: 2dadb3a0a79f4d187dd096177130802f511a6917
 workflow-type: tm+mt
-source-wordcount: '1725'
+source-wordcount: '1778'
 ht-degree: 2%
 
 ---
@@ -65,11 +65,16 @@ Si vous utilisez le [connecteur source Adobe Analytics](../../sources/tutorials/
 >title="Assurez-vous de disposer d’un identifiant de personne unique"
 >abstract="Pendant votre processus de pré-implémentation, vous devez vous assurer que les événements authentifiés que votre système enverra à Experience Platform contiennent toujours un identifiant de personne **unique** tel qu’un CRMID."
 
-Pendant votre processus de pré-implémentation, assurez-vous que les événements authentifiés que votre système enverra à Experience Platform contiennent toujours un identifiant de personne, tel que CRMID.
+Pendant votre processus de pré-implémentation, vous devez vous assurer que les événements authentifiés que votre système enverra à Experience Platform contiennent toujours un identifiant de personne **unique** tel qu’un CRMID.
+
+* (Recommandé) Événements authentifiés avec un identifiant de personne.
+* (Non recommandé) Événements authentifiés avec deux identifiants de personne.
+* (Non recommandé) Événements authentifiés sans identifiant de personne.
+
 
 >[!BEGINTABS]
 
->[!TAB Événements authentifiés avec identifiant de personne]
+>[!TAB Événements authentifiés avec un identifiant de personne]
 
 ```json
 {
@@ -98,8 +103,57 @@ Pendant votre processus de pré-implémentation, assurez-vous que les événemen
 }
 ```
 
->[!TAB Événements authentifiés sans identifiant de personne]
+>[!TAB Événements authentifiés avec deux identifiants de personne]
 
+Si votre système envoie deux identifiants de personne, l’implémentation peut échouer à l’exigence d’espace de noms de personne unique. Par exemple, si identityMap dans votre implémentation webSDK contient un CRMID, un customerID et un espace de noms ECID, rien ne garantit que chaque événement contiendra à la fois CRMID et customerID.
+
+Idéalement, vous devez envoyer une payload similaire à ce qui suit :
+
+```json
+{
+  "_id": "test_id",
+  "identityMap": {
+      "ECID": [
+          {
+              "id": "62486695051193343923965772747993477018",
+              "primary": false
+          }
+      ],
+      "CRMID": [
+          {
+              "id": "John",
+              "primary": true
+          }
+      ],
+      "customerID": [
+          {
+            "id": "Jane",
+            "primary": false
+          }
+      ],
+  },
+  "timestamp": "2024-09-24T15:02:32+00:00",
+  "web": {
+      "webPageDetails": {
+          "URL": "https://business.adobe.com/",
+          "name": "Adobe Business"
+      }
+  }
+}
+```
+
+Cependant, il est important de noter que si vous pouvez envoyer deux identifiants de personne, il n’existe aucune garantie qu’une réduction indésirable du graphique sera évitée en raison d’erreurs d’implémentation ou de données. Considérez le scénario suivant :
+
+* `timestamp1` = John se connecte -> le système capture les `CRMID: John, ECID: 111`. Toutefois, `customerID: John` n’est pas présent dans ce payload d’événement.
+* `timestamp2` = Jane se connecte -> le système capture les `customerID: Jane, ECID: 111`. Toutefois, `CRMID: Jane` n’est pas présent dans ce payload d’événement.
+
+Par conséquent, il est recommandé d’envoyer un seul identifiant de personne avec vos événements authentifiés.
+
+Dans la simulation de graphique, cette ingestion peut se présenter comme suit :
+
+![Interface utilisateur de simulation de graphique avec un exemple de graphique rendu.](../images/implementation/example-graph.png)
+
+>[!TAB Événements authentifiés sans identifiant de personne]
 
 ```json
 {
@@ -122,27 +176,7 @@ Pendant votre processus de pré-implémentation, assurez-vous que les événemen
 }
 ```
 
-
 >[!ENDTABS]
-
-Pendant votre processus de pré-implémentation, vous devez vous assurer que les événements authentifiés que votre système enverra à Experience Platform contiennent toujours un identifiant de personne **unique** tel qu’un CRMID.
-
-* (Recommandé) Événements authentifiés avec un identifiant de personne.
-* (Non recommandé) Événements authentifiés avec deux identifiants de personne.
-* (Non recommandé) Événements authentifiés sans identifiant de personne.
-
-Si votre système envoie deux identifiants de personne, l’implémentation peut échouer à l’exigence d’espace de noms de personne unique. Par exemple, si la carte des identités de votre implémentation du SDK web contient un CRMID, un customerID et un espace de noms ECID, deux personnes qui partagent un appareil peuvent être associées de manière incorrecte à des espaces de noms différents.
-
-Dans Identity Service, cette implémentation peut se présenter comme suit :
-
-* `timestamp1` = John se connecte -> le système capture les `CRMID: John, ECID: 111`.
-* `timestamp2` = Jane se connecte -> le système capture les `customerID: Jane, ECID: 111`.
-
-+++Voir à quoi pourrait ressembler l’implémentation dans la simulation graphique
-
-![Interface utilisateur de simulation de graphique avec un exemple de graphique rendu.](../images/implementation/example-graph.png)
-
-+++
 
 ## Définition des autorisations {#set-permissions}
 
