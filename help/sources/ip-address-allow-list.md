@@ -1,27 +1,29 @@
 ---
-description: Découvrez les adresses IP que vous devez ajouter à votre liste autorisée de données pour utiliser correctement les sources Adobe Experience Platform.
-title: LISTE AUTORISÉE d’adresses IP pour les sources
+description: Découvrez les adresses IP que vous devez ajouter à votre place sur la liste autorisée pour utiliser correctement les sources Adobe Experience Platform.
+title: PLACER SUR LA LISTE AUTORISÉE Adresse IP associée aux sources
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: bb0e84ff26027e92d617b7fd0b85979dff501a7d
+source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 30%
+source-wordcount: '242'
+ht-degree: 11%
 
 ---
 
 # Liste autorisée d’adresses IP
 
-Vous pouvez définir des contrôles d’accès réseau via votre pare-feu réseau. En spécifiant la plage d’adresses IP source appropriée, vous pouvez autoriser le flux de trafic pour le service de transfert de données. Les adresses IP suivantes doivent être ajoutées à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources.
+Vous pouvez définir des contrôles d’accès réseau via votre pare-feu réseau. En spécifiant la plage d’adresses IP source appropriée, vous pouvez autoriser le flux de trafic pour le service de transfert de données. Les adresses IP suivantes doivent être ajoutées à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre place sur la liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources.
 
-## LISTE AUTORISÉE d’adresses IP pour les sources de lots {#batch}
+## PLACER SUR LA LISTE AUTORISÉE Adresses IP pour les sources se connectant à Experience Platform sur [!DNL Azure] {#azure}
 
-Vous devez ajouter les adresses IP suivantes à votre liste autorisée de données pour permettre le flux de trafic pour le service de transfert de données des sources par lots.
+### Sources de lots sur Experience Platform sur [!DNL Azure] {#batch}
+
+Vous devez ajouter les adresses IP suivantes à votre place sur la liste autorisée pour permettre le flux de trafic pour le service de transfert de données pour les sources par lots.
 
 >[!BEGINTABS]
 
 >[!TAB VA7 : Amérique du Nord]
 
-### VA7 : Amérique du Nord
+#### VA7 : Amérique du Nord
 
 - `20.42.2.0/23`
 - `20.42.4.0/26`
@@ -48,7 +50,7 @@ Vous devez ajouter les adresses IP suivantes à votre liste autorisée de donné
 
 >[!TAB NLD2 : Europe]
 
-### NLD2 : Europe
+#### NLD2 : Europe
 
 - `13.69.67.192/28`
 - `13.69.107.112/28`
@@ -60,7 +62,7 @@ Vous devez ajouter les adresses IP suivantes à votre liste autorisée de donné
 
 >[!TAB AUS5 : Australie]
 
-### AUS5 : Australie
+#### AUS5 : Australie
 
 - `13.70.74.144/28`
 - `20.37.193.0/25`
@@ -75,7 +77,7 @@ Vous devez ajouter les adresses IP suivantes à votre liste autorisée de donné
 
 >[!TAB CAN2 : Canada]
 
-### CAN2 : Canada
+#### CAN2 : Canada
 
 - `13.71.175.80/28`
 - `20.38.147.224/28`
@@ -88,7 +90,7 @@ Vous devez ajouter les adresses IP suivantes à votre liste autorisée de donné
 
 >[!TAB IND2 : Inde]
 
-### IND2 : Inde
+#### IND2 : Inde
 
 - `20.43.121.48/28`
 - `20.192.42.0/24`
@@ -102,15 +104,15 @@ Vous devez ajouter les adresses IP suivantes à votre liste autorisée de donné
 
 >[!ENDTABS]
 
-## LISTE AUTORISÉE d’adresses IP pour les sources en flux continu {#streaming}
+### Sources de diffusion en continu sur Experience Platform sur [!DNL Azure] {#streaming}
 
-Vous devez ajouter les adresses IP suivantes à votre liste autorisée de données pour permettre au trafic de circuler pour le service de transfert de données pour les sources en flux continu telles que [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) et [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
+Vous devez ajouter les adresses IP suivantes à votre place sur la liste autorisée pour permettre au trafic de circuler pour le service de transfert de données pour les sources en flux continu telles que [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) et [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
 
 >[!BEGINTABS]
 
 >[!TAB VA7 : Amérique du Nord]
 
-### VA7 : Amérique du Nord
+#### VA7 : Amérique du Nord
 
 - `52.254.106.240/28`
 - `52.254.107.144/28`
@@ -137,7 +139,7 @@ Vous devez ajouter les adresses IP suivantes à votre liste autorisée de donné
 
 >[!TAB NLD2 : Europe]
 
-### NLD2 : Europe
+#### NLD2 : Europe
 
 - `51.138.17.0/28`
 - `51.138.16.176/28`
@@ -164,7 +166,7 @@ Vous devez ajouter les adresses IP suivantes à votre liste autorisée de donné
 
 >[!TAB AUS5 : Australie]
 
-### AUS5 : Australie
+#### AUS5 : Australie
 
 - `20.40.188.194`
 - `20.53.206.128`
@@ -194,7 +196,7 @@ Vous devez ajouter les adresses IP suivantes à votre liste autorisée de donné
 
 >[!TAB CAN2 : Canada]
 
-### CAN2 : Canada
+#### CAN2 : Canada
 
 - `20.200.70.240/28`
 - `20.200.94.116`
@@ -224,7 +226,7 @@ Vous devez ajouter les adresses IP suivantes à votre liste autorisée de donné
 
 >[!TAB GBR9 : Royaume-Uni]
 
-### GBR9 : Royaume-Uni
+#### GBR9 : Royaume-Uni
 
 - `20.254.2.128/28`
 - `20.26.131.71`
@@ -254,7 +256,7 @@ Vous devez ajouter les adresses IP suivantes à votre liste autorisée de donné
 
 >[!TAB IND2 : Inde]
 
-### IND2 : Inde
+#### IND2 : Inde
 
 - `4.224.74.0/28`
 - `20.244.79.80/28`
@@ -285,3 +287,9 @@ Vous devez ajouter les adresses IP suivantes à votre liste autorisée de donné
 - `4.188.4.138`
 
 >[!ENDTABS]
+
+## Adresses IP à placer sur la liste autorisée pour la connexion des sources à Experience Platform on [!DNL Amazon Web Services] (AWS) {#aws}
+
+Vous devez ajouter l’adresse IP suivante à votre place sur la liste autorisée pour connecter votre source à Experience Platform sur AWS :
+
+- `66.117.18.0/24`
