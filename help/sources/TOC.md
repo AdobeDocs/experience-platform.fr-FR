@@ -5,10 +5,10 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: b900ef8cbbab78071d462484f088e17eb20fe9b6
+source-git-commit: 3ada2136e712abd1dad956cd579d6877b3e729c9
 workflow-type: tm+mt
-source-wordcount: '1047'
-ht-degree: 96%
+source-wordcount: '1059'
+ht-degree: 95%
 
 ---
 
@@ -236,6 +236,7 @@ ht-degree: 96%
    - [Supprimer des flux de données](tutorials/api/delete-dataflows.md)
    - [Ingérer des données chiffrées](tutorials/api/encrypt-data.md)
    - [Enregistrer un flux de données en tant que brouillon](tutorials/api/draft.md)
+   - [Application de libellés d’accès à un flux de données](tutorials/api/labels.md)
 - Tutoriels sur l’interface utilisateur {#ui-tutorials}
    - Créer une connexion source {#create}
       - Applications Adobe {#adobe-applications}
@@ -361,6 +362,7 @@ ht-degree: 96%
    - [Supprimer des flux de données](tutorials/ui/delete.md)
    - [S’abonner aux alertes sur les sources](tutorials/ui/alerts.md)
    - [Enregistrer un flux de données en tant que brouillon](tutorials/ui/draft.md)
+   - [Application de libellés d’accès à un flux de données](tutorials/ui/labels.md)
 - Sources en libre-service (SDK par lots) {#sdk}
    - [Aperçu](sources-sdk/overview.md)
    - Configurer votre spécification de connexion {#config}
