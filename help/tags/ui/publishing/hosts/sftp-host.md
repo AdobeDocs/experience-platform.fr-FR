@@ -2,10 +2,10 @@
 title: Hôtes SFTP
 description: Découvrez comment configurer les balises dans Adobe Experience Platform pour diffuser des versions de bibliothèque sur un serveur SFTP sécurisé et auto-hébergé.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: b3c3bf0a39a30e8c9baf81ec20945497acef5465
+source-git-commit: 5b362d28eb3be5e2a45464390c694f7ae59f899c
 workflow-type: tm+mt
-source-wordcount: '810'
-ht-degree: 39%
+source-wordcount: '875'
+ht-degree: 36%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 39%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Experience Platform vous permet de diffuser les versions de bibliothèque de balises sur un serveur SFTP sécurisé que vous hébergez, ce qui vous permet de mieux contrôler le stockage et la gestion de vos versions. Ce guide explique comment configurer un hôte SFTP pour une propriété de balise dans l’interface utilisateur de l’Experience Platform ou dans l’interface utilisateur de la collecte de données.
+Experience Platform vous permet de diffuser les versions de bibliothèque de balises sur un serveur SFTP sécurisé que vous hébergez, ce qui vous permet de mieux contrôler le stockage et la gestion de vos versions. Ce guide explique comment configurer un hôte SFTP pour une propriété de balise dans l’interface utilisateur d’Experience Platform ou l’interface utilisateur de la collecte de données.
 
 >[!NOTE]
 >
->Vous pouvez également choisir d’utiliser un hôte géré par Adobe à la place. Pour plus d’informations, consultez le guide sur les [hôtes gérés par l’Adobe ](./managed-by-adobe-host.md).
+>Vous pouvez également choisir d’utiliser un hôte géré par Adobe à la place. Pour plus d’informations, consultez le guide sur les [hôtes gérés par Adobe](./managed-by-adobe-host.md).
 >
 >Pour plus d’informations sur les avantages et les limites des bibliothèques d’auto-hébergement, consultez le [ guide d’auto-hébergement ](./self-hosting-libraries.md).
 
@@ -36,6 +36,22 @@ Une paire de clés publique/privée doit être installée sur votre serveur SFTP
 La clé privée est utilisée pour chiffrer la clé publique. Vous devrez fournir votre clé privée pendant le processus de création de l’hôte SFTP. Consultez la section sur le [chiffrement des valeurs](../../../api/guides/encrypting-values.md) dans le guide de l’API Reactor pour obtenir des instructions sur le chiffrement des clés publiques. Utilisez la clé GPG de l’environnement de production, sauf si vous savez que vous avez besoin d’une clé spécifique. Enfin, vous pouvez chiffrer votre clé privée depuis n’importe quel ordinateur. Il n’est donc pas nécessaire d’installer GPG sur votre serveur pour réaliser cette manipulation.
 
 ### Placer sur la liste autorisée Adresses IP de Platform
+
+>[!IMPORTANT]
+>
+> Le 23 juin 2025, Adobe Launch mettra à jour les adresses IP externes utilisées pour prendre en charge le type d’hôte SFTP et la fonctionnalité d’API de rappel. Pour continuer à utiliser l’une de ces fonctionnalités, assurez-vous que vos règles de pare-feu autorisent le trafic provenant des nouvelles adresses IP.
+>
+> Pour maintenir un accès ininterrompu, nous vous recommandons d’ajouter les nouvelles adresses IP maintenant et de supprimer les anciennes après le 23 juin 2025.
+>
+>**Anciennes adresses IP :**
+> * `184.72.239.68`
+> * `23.20.85.113`
+> * `54.226.193.184`
+>
+>**Nouvelles adresses IP :**
+> * `34.227.138.75 `
+> * `44.194.43.191`
+> * `3.215.163.18`
 
 Vous devrez peut-être approuver un ensemble d’adresses IP à utiliser dans le pare-feu de votre entreprise pour permettre à Platform d’atteindre votre serveur SFTP et de s’y connecter. Ces adresses IP sont les suivantes :
 
