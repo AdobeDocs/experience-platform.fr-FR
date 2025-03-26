@@ -5,9 +5,9 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: 3ada2136e712abd1dad956cd579d6877b3e729c9
+source-git-commit: 86f17ed4dc012481c2b4a7f1a40b492bfac5e137
 workflow-type: tm+mt
-source-wordcount: '1059'
+source-wordcount: '1061'
 ht-degree: 95%
 
 ---
@@ -95,6 +95,7 @@ ht-degree: 95%
    - {#data-partner} de partenaire de données et d’identité
       - [Ingestion de données Acxiom](connectors/data-partners/acxiom-data-ingestion.md)
       - [Import de données de prospection Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
+      - [Intention de Bombora](connectors/data-partners/bombora.md)
       - [Résolution d’identité d’entreprise Merkury](connectors/data-partners/merkury.md)
    - eCommerce {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
