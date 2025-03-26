@@ -1,13 +1,13 @@
 ---
 keywords: segmentation;segmentation rtcdp;segmentation de real time customer data platform
 title: Service de segmentation de Real-Time Customer Data Platform
-description: Adobe Real-Time Customer Data Platform repose sur Adobe Experience Platform et utilise de nombreux services et fonctionnalités Experience Platform. Grâce au service de segmentation, vous pouvez proposer un marketing sur mesure en divisant vos clients en groupes restreints aux caractéristiques similaires.
+description: Adobe Real-Time Customer Data Platform repose sur Adobe Experience Platform et utilise de nombreux services et fonctionnalités d’Experience Platform. Grâce au service de segmentation, vous pouvez proposer un marketing sur mesure en divisant vos clients en groupes restreints aux caractéristiques similaires.
 feature: Get Started, Audiences, Segments
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 96c5df4f172815d3b1904ab6614b1ce02d11dbaf
 workflow-type: tm+mt
 source-wordcount: '543'
-ht-degree: 78%
+ht-degree: 75%
 
 ---
 
@@ -19,11 +19,11 @@ Real-Time CDP repose sur Adobe Experience Platform et utilise de nombreux ser
 
 ## Segmentation
 
-La segmentation est le processus de définition d’attributs ou de comportements spécifiques partagés par un sous-ensemble de profils de votre banque de profils afin de distinguer un groupe de clients potentiels de votre base. Par exemple, dans une campagne par e-mail intitulée « Avez-vous oublié d’acheter vos baskets ? », vous souhaitez peut-être connaître l’audience de tous les utilisateurs ayant recherché des baskets au cours des 30 derniers jours sans effectuer d’achat. En utilisant différentes définitions de segment, vous pouvez vous concentrer sur vos différentes audiences, afin de fournir une expérience marketing plus personnalisée.
+La segmentation est le processus de définition d’attributs ou de comportements spécifiques partagés par un sous-ensemble de profils de votre banque de profils afin de distinguer un groupe de clients potentiels de votre base de clients. Par exemple, dans une campagne par e-mail intitulée « Avez-vous oublié d’acheter vos baskets ? », vous souhaitez peut-être connaître l’audience de tous les utilisateurs ayant recherché des baskets au cours des 30 derniers jours sans effectuer d’achat. En utilisant différentes définitions de segment, vous pouvez vous concentrer sur vos différentes audiences, offrant ainsi une expérience marketing plus personnalisée.
 
-## [!DNL Segment Builder]
+## [!DNL Audience Builder]
 
-[!DNL Platform] vous permet de créer et d’accéder facilement aux définitions de segment, ainsi que d’utiliser différents blocs de création pour caractériser davantage vos audiences. Pour plus d’informations sur l’utilisation du créateur de segments, consultez le [guide sur le créateur de segments](./segment-builder-guide.md).
+[!DNL Platform] vous permet de créer et d’accéder facilement à des définitions de segment, ainsi que d’utiliser différents blocs de création pour caractériser vos audiences avec plus de précision. Pour plus d’informations sur l’utilisation du Créateur d’audience, consultez le [guide du Créateur d’audience](./audience-builder.md).
 
 ## IA dédiée aux clients
 
