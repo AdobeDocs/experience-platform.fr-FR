@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Surveillance des flux de données pour les destinations dans l’interface utilisateur
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: b814becaed88ce23527dc58f7ec056c05a48379f
+source-git-commit: 7f3560eaccecc8f42bbfa7d27b82ad71397df035
 workflow-type: tm+mt
-source-wordcount: '3637'
-ht-degree: 12%
+source-wordcount: '3620'
+ht-degree: 11%
 
 ---
 
@@ -97,12 +97,12 @@ Chaque exécution de flux de données affiche les détails suivants :
 
   >[!IMPORTANT]
   >
-  > Depuis octobre 2024, Adobe propose une mise à jour améliorant la précision des rapports pour les destinations de streaming. Cette amélioration assure un meilleur alignement entre les rapports Experience Platform et les plateformes de destination.
+  > À partir de mars 2025, Adobe déploie une mise à jour pour accroître la précision des rapports pour les destinations de diffusion en streaming. Cette amélioration assure un meilleur alignement entre les rapports dans Experience Platform et les plateformes de destination.
   >
   > Avant cette mise à jour, **[!UICONTROL Identités en échec]** incluait toutes les reprises d’activation. Après cette mise à jour, seule la dernière reprise d’activation est incluse dans le nombre total.
   > 
-  > Cette amélioration s’applique actuellement à la destination [Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md) mais sera progressivement déployée vers d’autres destinations de streaming Experience Platform.
-  > Suite à cette amélioration, les personnes utilisant la [destination Ciblage par liste de clients de Google](../../destinations/catalog/advertising/google-customer-match.md) peuvent constater une baisse attendue de leur nombre d’**[!UICONTROL identités ayant échoué]**.
+  > Cette amélioration s’applique à toutes les destinations de diffusion en continu.
+  > Suite à cette amélioration, les utilisateurs des destinations de diffusion en continu peuvent voir une baisse attendue de leur nombre d’**[!UICONTROL identités en échec]**.
 
 
 - **[!UICONTROL Taux d’activation]** : pourcentage d’identités reçues qui ont été activées avec succès. La formule suivante montre comment cette valeur est calculée :
