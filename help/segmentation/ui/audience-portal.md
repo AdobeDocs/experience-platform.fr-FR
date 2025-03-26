@@ -2,10 +2,10 @@
 title: Présentation d’Audience Portal
 description: Découvrez comment utiliser Audience Portal pour afficher, gérer et créer des audiences dans Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
+source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
 workflow-type: tm+mt
-source-wordcount: '4561'
-ht-degree: 52%
+source-wordcount: '4310'
+ht-degree: 55%
 
 ---
 
@@ -220,33 +220,9 @@ Lorsque vous appliquez des actions en masse à des audiences, les conditions sui
 - Vous **ne pouvez pas** supprimer une audience utilisée dans une activation de destination.
 - Si vous sélectionnez un filtre, les audiences sélectionnées **seront** réinitialisées.
 
-#### [!BADGE Disponibilité limitée]{type=Informative} Évaluation flexible des audiences {#flexible-audience-evaluation}
+#### Évaluation d’audience flexible {#flexible-audience-evaluation}
 
-L’évaluation d’audience flexible vous permet d’exécuter une tâche de segmentation à la demande. Choisissez les audiences que vous souhaitez évaluer et sélectionnez **[!UICONTROL Évaluer les audiences]**.
-
->[!IMPORTANT]
->
-Lors de la sélection des audiences pour une évaluation d’audience flexible, les conditions suivantes s’appliquent :
->
-- Vous pouvez uniquement utiliser l’évaluation d’audience flexible **deux fois** par jour. Cette limite est réinitialisée à minuit (UTC).
-- Vous disposez d’un **maximum** de 50 exécutions d’évaluation d’audience flexibles par an.
-- Toutes les audiences **doivent** ont une origine de « Segmentation Service ».
-- Toutes les audiences **doivent** doivent être évaluées à l’aide de la segmentation par lots.
-- Toutes les audiences **doivent** doivent être basées sur les personnes.
-- Les audiences peuvent **uniquement** être activées vers des destinations dans Platform.
-- Vous pouvez uniquement sélectionner un maximum de 20 audiences.
-
-![Les audiences pour lesquelles vous souhaitez utiliser l’évaluation d’audience flexible sont sélectionnées.](../images/ui/audience-portal/evaluate-audiences.png)
-
-La fenêtre contextuelle **[!UICONTROL Évaluer les audiences à la demande]** s’affiche. Elle répertorie les audiences qui seront évaluées avec la tâche de segmentation à la demande. Si une audience ne peut pas être évaluée à la demande, elle sera automatiquement supprimée de la tâche d’évaluation. Vérifiez que les audiences répertoriées sont celles que vous souhaitez évaluer.
-
-![Les audiences qui peuvent être évaluées à l’aide de l’évaluation d’audience flexible s’affichent.](../images/ui/audience-portal/evaluate-audiences-modal.png)
-
-Une fois les audiences correctes répertoriées, vous pouvez poursuivre la requête et l’évaluation d’audience flexible commencera. Vous pouvez consulter le statut de cette évaluation d’audience dans la vue [suivi des tâches d’évaluation](../../dataflows/ui/monitor-audiences.md#evaluation-job-details).
-
->[!NOTE]
->
-Si vous exécutez l’évaluation d’audience flexible, vous devez vous assurer que la fréquence est définie sur **[!UICONTROL Après l’évaluation du segment]**. L’exécution de l’évaluation d’audience flexible sur des audiences déjà définies pour être activées [après l’évaluation des segments](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) active les audiences dès que la tâche d’évaluation d’audience flexible se termine, indépendamment des tâches d’activation quotidiennes précédentes.
+L’évaluation d’audience flexible vous permet d’exécuter une tâche de segmentation à la demande. Pour en savoir plus sur l’évaluation d’audience flexible, consultez le [guide d’évaluation d’audience flexible](../methods/flexible-audience-evaluation.md).
 
 ## Détails de l’audience {#audience-details}
 
@@ -302,7 +278,7 @@ Pour les audiences et compositions générées par Platform, la section **[!UICO
 
 >[!NOTE]
 >
-La mise à jour du nombre total d’audiences peut prendre jusqu’à 30 minutes une fois la tâche d’exportation terminée.
+>La mise à jour du nombre total d’audiences peut prendre jusqu’à 30 minutes une fois la tâche d’exportation terminée.
 
 Les estimations sont générées en utilisant une taille d’échantillon des données d’exemple du jour. S’il y a moins d’un million d’entités dans votre banque de profils, le jeu de données complet est utilisé ; pour entre 1 et 20 millions d’entités, 1 million d’entités sont utilisées ; et pour plus de 20 millions d’entités, 5 % du total des entités sont utilisées. Vous trouverez plus d’informations sur la génération d’estimations dans la [section sur la génération d’estimations](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) du tutoriel sur la création d’audiences.
 
@@ -312,7 +288,7 @@ Pour les audiences dont l’origine est **[!UICONTROL Chargement personnalisé]*
 
 >[!NOTE]
 >
-Jusqu’à 30 minutes peuvent être nécessaires après la tâche d’exportation pour que le nombre de profils de l’audience soit entièrement mis à jour.
+>Jusqu’à 30 minutes peuvent être nécessaires après la tâche d’exportation pour que le nombre de profils de l’audience soit entièrement mis à jour.
 
 ![La section Détails de l’ingestion de la page Détails de l’audience s’affiche.](../images/ui/audience-portal/audience-details-ingestion-details.png)
 
@@ -330,7 +306,7 @@ Jusqu’à 30 minutes peuvent être nécessaires après la tâche d’exportatio
 
 >[!NOTE]
 >
-L’application de libellés d’utilisation des données au schéma est recommandée. Vous **ne pouvez pas** appliquer un libellé d’utilisation des données directement à l’audience.
+>L’application de libellés d’utilisation des données au schéma est recommandée. Vous **ne pouvez pas** appliquer un libellé d’utilisation des données directement à l’audience.
 
 ### Destinations activées {#activated-destinations}
 
@@ -338,7 +314,7 @@ La section **[!UICONTROL Destinations activées]** affiche les destinations pour
 
 >[!NOTE]
 >
-Les destinations sont une fonctionnalité disponible avec [!DNL Adobe Real-Time Customer Data Platform] et vous permettent d’exporter des données vers des plateformes externes. Pour plus d’informations sur les destinations, veuillez lire la [présentation des destinations](../../destinations/home.md). Pour savoir comment activer un segment vers une destination, voir la [présentation de l’activation](../../destinations/ui/activation-overview.md).
+> Les destinations sont une fonctionnalité disponible avec [!DNL Adobe Real-Time Customer Data Platform] et vous permettent d’exporter des données vers des plateformes externes. Pour plus d’informations sur les destinations, veuillez lire la [présentation des destinations](../../destinations/home.md). Pour savoir comment activer un segment vers une destination, voir la [présentation de l’activation](../../destinations/ui/activation-overview.md).
 
 ### Exemples de profils {#profile-samples}
 
@@ -364,10 +340,10 @@ Des informations plus détaillées sur chaque [!DNL Profile] peuvent être consu
 
 ## Segmentation planifiée {#scheduled-segmentation}
 
-[!CONTEXTUALHELP]
-id="platform_segments_browse_addallsegmentstoschedule"
-title="Ajouter toutes les audiences à planifier"
-abstract="Activez cette option pour inclure toutes les audiences évaluées à l’aide de la segmentation par lots dans la mise à jour planifiée quotidienne. Désactivez cette option pour supprimer toutes les audiences de la mise à jour planifiée."
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_addallsegmentstoschedule"
+>title="Ajouter toutes les audiences à planifier"
+>abstract="Activez cette option pour inclure toutes les audiences évaluées à l’aide de la segmentation par lots dans la mise à jour planifiée quotidienne. Désactivez cette option pour supprimer toutes les audiences de la mise à jour planifiée."
 
 Une fois les audiences créées, vous pouvez les évaluer par le biais d’une évaluation sur demande ou planifiée (continue). L’évaluation consiste à déplacer les données [!DNL Real-Time Customer Profile] par le biais de traitements de segment afin de former des audiences correspondantes. Une fois créées, les audiences sont enregistrées et stockées afin de pouvoir être exportées à l’aide d’API [!DNL Experience Platform].
 
@@ -379,7 +355,7 @@ Vous pouvez activer les audiences pour une évaluation planifiée à l’aide de
 
 >[!NOTE]
 >
-L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) politiques de fusion pour [!DNL XDM Individual Profile]. Si votre organisation compte plus de cinq politiques de fusion pour [!DNL XDM Individual Profile] dans une seul sandbox, vous ne pourrez pas procéder à l’évaluation planifiée.
+>L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) politiques de fusion pour [!DNL XDM Individual Profile]. Si votre organisation compte plus de cinq politiques de fusion pour [!DNL XDM Individual Profile] dans une seul sandbox, vous ne pourrez pas procéder à l’évaluation planifiée.
 
 Actuellement, les plannings ne peuvent être créés qu’à l’aide de l’API. Pour obtenir des instructions détaillées sur la création, la modification et l’utilisation des plannings à l’aide de l’API, suivez le tutoriel relatif à l’évaluation des résultats de segmentation et à leur accès, en particulier la section sur [l’évaluation planifiée à l’aide de l’API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
@@ -393,7 +369,7 @@ Vous pouvez sélectionner **[!UICONTROL Créer une audience]** pour créer une a
 
 Une fenêtre contextuelle s’affiche, vous permettant de choisir entre composer une audience ou créer des règles.
 
-![Fenêtre contextuelle qui affiche les deux types of audiences que vous pouvez créer.](../images/ui/audience-portal/create-audience-type.png)
+![Une fenêtre contextuelle qui affiche les deux types d’audiences que vous pouvez créer.](../images/ui/audience-portal/create-audience-type.png)
 
 ### Composition d’audiences {#audience-composition}
 
@@ -417,7 +393,7 @@ Outre les compositions d’audience et les définitions de segment, vous pouvez 
 
 >[!IMPORTANT]
 >
-Pour importer une audience générée en externe, vous **devez** disposer des autorisations suivantes : [!UICONTROL Afficher les segments], [!UICONTROL Gérer les segments] et [!UICONTROL Importer une audience]. Pour plus d’informations sur ces autorisations, consultez la [présentation du contrôle d’accès](../../access-control/home.md#permissions).
+>Pour importer une audience générée en externe, vous **devez** disposer des autorisations suivantes : [!UICONTROL Afficher les segments], [!UICONTROL Gérer les segments] et [!UICONTROL Importer une audience]. Pour plus d’informations sur ces autorisations, consultez la [présentation du contrôle d’accès](../../access-control/home.md#permissions).
 
 Vous pouvez sélectionner **[!UICONTROL Importer une audience]** pour importer une audience générée en externe.
 
@@ -429,11 +405,11 @@ Le workflow **[!UICONTROL Importer un fichier CSV d’audience]** s’affiche. V
 
 >[!NOTE]
 >
-L’audience générée en externe **doit** être au format CSV, disposer d’un **maximum** de 25 colonnes et être inférieure à 1 Go.
+>L’audience générée en externe **doit** être au format CSV, disposer d’un **maximum** de 25 colonnes et être inférieure à 1 Go.
 >
-De plus, vous **pouvez pas utiliser** espaces ou des tirets dans la première ligne ou les colonnes associées du fichier CSV.
+>De plus, vous **pouvez pas utiliser** espaces ou des tirets dans la première ligne ou les colonnes associées du fichier CSV.
 >
-Par exemple, la valeur de la première ligne peut être « Prénom » ou « Prénom », mais elle ne peut pas être « Prénom » ou « Prénom ».
+>Par exemple, la valeur de la première ligne peut être « Prénom » ou « Prénom », mais elle ne peut pas être « Prénom » ou « Prénom ».
 
 Après avoir sélectionné le fichier CSV à importer, une liste de données d’exemple s’affiche pour cette audience générée en externe. Après avoir confirmé que les données d’exemple sont correctes, sélectionnez **[!UICONTROL Suivant]**.
 
@@ -449,10 +425,10 @@ Vous pouvez également ajouter des détails supplémentaires à votre audience g
 
 >[!NOTE]
 >
-Si vous utilisez un identifiant d’audience externe personnalisé, il doit respecter les instructions suivantes :
+>Si vous utilisez un identifiant d’audience externe personnalisé, il doit respecter les instructions suivantes :
 >
-- Il **doit** commencer par une lettre (a-z ou A-Z), un trait de soulignement (_) ou un signe dollar ($).
-- Tous les caractères suivants peuvent être des caractères alphanumériques (a-z, A-Z, 0-9), des traits de soulignement (_) ou des signes dollar ($).
+> - Il **doit** commencer par une lettre (a-z ou A-Z), un trait de soulignement (_) ou un signe dollar ($).
+> - Tous les caractères suivants peuvent être des caractères alphanumériques (a-z, A-Z, 0-9), des traits de soulignement (_) ou des signes dollar ($).
 
 Après avoir renseigné les détails de votre audience, sélectionnez **[!UICONTROL Suivant]**.
 
@@ -466,11 +442,11 @@ Une fois que les détails sont corrects, sélectionnez **[!UICONTROL Terminer]**
 
 >[!IMPORTANT]
 >
-Par défaut, les audiences générées en externe ont une expiration de données de 30 jours. L’expiration des données est réinitialisée si l’audience est mise à jour ou modifiée d’une manière ou d’une autre.
+>Par défaut, les audiences générées en externe ont une expiration de données de 30 jours. L’expiration des données est réinitialisée si l’audience est mise à jour ou modifiée d’une manière ou d’une autre.
 >
-En outre, si votre audience générée en externe contient des informations sensibles et/ou liées aux soins de santé, vous **devez** appliquer les libellés d’utilisation des données nécessaires avant de l’activer vers une destination. Étant donné que les variables des audiences générées en externe sont stockées dans le lac de données plutôt que dans le profil client en temps réel, vous ne devez **pas** inclure les données de consentement dans votre fichier CSV.
+>En outre, si votre audience générée en externe contient des informations sensibles et/ou liées aux soins de santé, vous **devez** appliquer les libellés d’utilisation des données nécessaires avant de l’activer vers une destination. Étant donné que les variables des audiences générées en externe sont stockées dans le lac de données plutôt que dans le profil client en temps réel, vous ne devez **pas** inclure les données de consentement dans votre fichier CSV.
 >
-Pour plus d’informations sur l’application de libellés d’utilisation des données, consultez la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). Pour en savoir plus sur les libellés d’utilisation des données sur Platform en général, consultez la [présentation des libellés d’utilisation des données](../../data-governance/labels/overview.md). Pour en savoir plus sur le fonctionnement du consentement dans les audiences générées en externe, veuillez lire la [FAQ sur les audiences](../faq.md#consent).
+>Pour plus d’informations sur l’application de libellés d’utilisation des données, consultez la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). Pour en savoir plus sur les libellés d’utilisation des données sur Platform en général, consultez la [présentation des libellés d’utilisation des données](../../data-governance/labels/overview.md). Pour en savoir plus sur le fonctionnement du consentement dans les audiences générées en externe, veuillez lire la [FAQ sur les audiences](../faq.md#consent).
 
 ## Étapes suivantes
 
