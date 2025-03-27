@@ -2,10 +2,10 @@
 title: Créer une connexion de base Microsoft Dynamics à l’aide de l’API Flow Service
 description: Découvrez comment connecter Platform à un compte Microsoft Dynamics à l’aide de l’API Flow Service.
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
-source-git-commit: bda26fa4ecf4f54cb36ffbedf6a9aa13faf7a09d
+source-git-commit: 4e119056c0ab89cfc79eeb46e6f870c89356dc7d
 workflow-type: tm+mt
-source-wordcount: '1102'
-ht-degree: 23%
+source-wordcount: '1330'
+ht-degree: 20%
 
 ---
 
@@ -264,6 +264,44 @@ Une réponse réussie renvoie le répertoire des tables et des vues [!DNL Dynami
 
 +++
 
+### Utilisation de la clé primaire pour optimiser l’exploration des données
+
+>[!NOTE]
+>
+>Vous pouvez uniquement utiliser des attributs autres que de recherche lors de l’utilisation de l’approche par clé primaire de l’optimisation.
+
+Vous pouvez optimiser vos requêtes d’exploration en fournissant des `primaryKey` dans le cadre de vos paramètres de requête. Vous devez spécifier la clé primaire de la table [!DNL Dynamics] lors de l’inclusion de `primaryKey` en tant que paramètre de requête.
+
+**Format d’API**
+
+```http
+GET /connections/{BASE_CONNECTION_ID}/explore?preview=true&object={OBJECT}&objectType={OBJECT_TYPE}&previewCount=10&primaryKey={PRIMARY_KEY}
+```
+
+| Paramètres de requête | Description |
+| --- | --- |
+| `{BASE_CONNECTION_ID}` | Identifiant de la connexion de base. Utilisez cet identifiant pour explorer le contenu et la structure de votre source. |
+| `preview` | Valeur booléenne qui active la prévisualisation des données. |
+| `{OBJECT}` | Objet [!DNL Dynamics] à explorer. |
+| `{OBJECT_TYPE}` | Type de l’objet. |
+| `previewCount` | Restriction qui limite l’aperçu renvoyé à un certain nombre d’enregistrements uniquement. |
+| `{PRIMARY_KEY}` | Clé primaire de la table que vous récupérez pour prévisualisation. |
+
+**Requête**
+
++++Sélectionner pour afficher l’exemple de requête
+
+```shell
+curl -X GET \
+  'https://platform-stage.adobe.io/data/foundation/flowservice/connections/dd668808-25da-493f-8782-f3433b976d1e/explore?preview=true&object=lead&objectType=table&previewCount=10&primaryKey=leadid' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
++++
 
 ## Examiner la structure d’un tableau
 
@@ -581,6 +619,74 @@ Une réponse réussie renvoie l’identifiant de connexion source nouvellement g
 ```
 
 +++
+
+### Utilisation de la clé primaire pour optimiser votre flux de données
+
+Vous pouvez également optimiser votre flux de données [!DNL Dynamics] en spécifiant la clé primaire dans les paramètres du corps de la requête.
+
+**Format d’API**
+
+```http
+POST /sourceConnections
+```
+
+**Requête**
+
+La requête suivante crée une connexion source [!DNL Dynamics] lors de la spécification de la clé primaire comme `contactid`.
+
++++Sélectionner pour afficher l’exemple de requête
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Dynamics Source Connection",
+      "description": "Dynamics Source Connection",
+      "baseConnectionId": "dd668808-25da-493f-8782-f3433b976d1e",
+      "data": {
+          "format": "tabular"
+      },
+      "params": {
+          "tableName": "contact",
+          "primaryKey": "contactid"
+      },
+      "connectionSpec": {
+          "id": "38ad80fe-8b06-4938-94f4-d4ee80266b07",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Propriété | Description |
+| --- | --- |
+| `baseConnectionId` | Identifiant de la connexion de base. |
+| `data.format` | Format des données. |
+| `params.tableName` | Nom de la table en [!DNL Dynamics]. |
+| `params.primaryKey` | Clé primaire de la table qui optimisera les requêtes. |
+| `connectionSpec.id` | Identifiant de spécification de connexion correspondant à la source [!DNL Dynamics]. |
+
++++
+
+**Réponse**
+
+Une réponse réussie renvoie l’identifiant de connexion source nouvellement généré et son etag correspondant.
+
++++Sélectionner pour afficher l’exemple de réponse
+
+```json
+{
+    "id": "e566bab3-1b58-428c-b751-86b8cc79a3b4",
+    "etag": "\"82009592-0000-0200-0000-678121030000\""
+}
+```
+
++++
+
 
 ## Étapes suivantes
 
