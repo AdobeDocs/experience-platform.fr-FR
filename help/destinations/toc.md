@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 9b41ec996c254840952ae3c45dfdddd8ac172085
+source-git-commit: cbc626dbb12f69114c48a0920bf56ec2aabe13de
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1281'
 ht-degree: 82%
 
 ---
@@ -82,6 +82,7 @@ ht-degree: 82%
       * [Extension Branch](./catalog/advertising/branch.md)
       * [Connexion Criteo](./catalog/advertising/criteo.md)
       * [Connexion Demandbase](./catalog/advertising/demandbase.md)
+      * [Connexion Demandbase People](./catalog/advertising/demandbase-people.md)
       * [Extension DoubleClick Floodlight (Version Beta)](./catalog/advertising/doubleclick-floodlight.md)
       * [Extension Pixel Facebook](./catalog/advertising/facebook-pixel.md)
       * [Extension Flashtalking OneTag](./catalog/advertising/flashtalking.md)
