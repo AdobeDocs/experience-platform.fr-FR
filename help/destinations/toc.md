@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 9b9cecc9e1a6e5979fa8eb454cef677b8995f1b6
+source-git-commit: 9b41ec996c254840952ae3c45dfdddd8ac172085
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1278'
 ht-degree: 82%
 
 ---
@@ -78,6 +78,7 @@ ht-degree: 82%
       * [Extension Awin Advertiser Conversion Tag](./catalog/advertising/awin-conversiontag.md)
       * [Extension Awin Advertiser Mastertag](./catalog/advertising/awin-mastertag.md)
       * [Extension Bing Ads Universal Event Tracking (UET)](./catalog/advertising/bing-ads.md)
+      * [Connexion Bombora](./catalog/advertising/bombora.md)
       * [Extension Branch](./catalog/advertising/branch.md)
       * [Connexion Criteo](./catalog/advertising/criteo.md)
       * [Connexion Demandbase](./catalog/advertising/demandbase.md)
