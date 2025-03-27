@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Mars 2025
 description: Les notes de mise à jour de mars 2025 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b96e1186669c77530a10f1f177c1d99947c27f3b
+source-git-commit: 445bf302baadf478a39b0c11a31ccfe25d5dd726
 workflow-type: tm+mt
 source-wordcount: '1185'
 ht-degree: 27%
@@ -16,6 +16,7 @@ ht-degree: 27%
 Mises à jour des fonctionnalités et de la documentation existantes dans Adobe Experience Platform :
 
 - [Notes de mise à jour d’Adobe Experience Platform](#adobe-experience-platform-release-notes)
+
    - [Tableaux de bord](#dashboards)
    - [Destinations](#destinations)
    - [Service de segmentation](#segmentation-service)
