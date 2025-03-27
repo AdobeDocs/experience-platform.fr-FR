@@ -3,9 +3,9 @@ title: Assistant AI dans la documentation du produit Adobe Experience Platform
 description: Prise en main de l’assistant AI dans Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: b26a1f12c9ea07d4dd077f1f3c1578e6c69866a7
+source-git-commit: a34c3cae803c9e70530dbd382fbec2ece17fc71a
 workflow-type: tm+mt
-source-wordcount: '1059'
+source-wordcount: '1095'
 ht-degree: 0%
 
 ---
@@ -97,11 +97,9 @@ For more information about AI Assistant, read the [security fact sheet for AI As
 
 >[!ENDSHADEBOX] -->
 
-## Bibliothèque vidéo
+## Présentation des principes de base
 
-Regardez les vidéos suivantes pour approfondir vos connaissances sur les fonctionnalités de l’assistant d’IA et les cas pratiques :
-
-### Présentation des principes de base
+Regardez les vidéos suivantes pour en savoir plus sur certains aspects fondamentaux de l’assistant d’IA.
 
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -252,7 +250,9 @@ Regardez les vidéos suivantes pour approfondir vos connaissances sur les foncti
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
-### Bibliothèque de cas d’utilisation
+## Bibliothèque de cas d’utilisation
+
+Regardez les vidéos suivantes pour en savoir plus sur les cas d’utilisation de l’assistant AI.
 
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -416,7 +416,7 @@ Regardez les vidéos suivantes pour approfondir vos connaissances sur les foncti
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
-## Bibliothèque de cas d’utilisation de l’assistant AI
+## Cas d’utilisation supplémentaires
 
 >[!BEGINTABS]
 
@@ -439,6 +439,14 @@ Regardez les vidéos suivantes pour découvrir d’autres exemples de cas d’ut
 * [Déverrouiller les informations opérationnelles avec l’assistant IA](https://www.youtube.com/watch?v=fGgFwAOZle8)
 
 >[!ENDTABS]
+
+### Améliorez votre productivité avec l’assistant d’IA
+
+Lisez ce qui suit pour obtenir un guide pratique sur la façon d’accroître votre productivité avec l’assistant d’IA.
+
+* [Optimisez votre productivité avec l’assistant d’IA](./assets/landing/ai-assistant-lab-workbook.pdf)
+
+## Étapes suivantes
 
 Parcourez les liens ci-dessous pour mieux comprendre les cas d’utilisation, les fonctionnalités et bien plus encore de l’assistant AI.
 
