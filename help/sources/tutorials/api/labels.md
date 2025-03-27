@@ -1,9 +1,8 @@
 ---
 title: Appliquez des libellés d’accès pour gérer l’accès des utilisateurs aux flux de données sources à l’aide de l’API
 description: Découvrez comment utiliser l’API Flow Service pour appliquer des libellés d’accès et gérer l’accès des utilisateurs et utilisatrices à vos flux de données sources.
-hide: true
-hidefromtoc: true
-source-git-commit: 80fb60abdf33eb2a7ca691a9a48a811c632b34fc
+exl-id: 572d6838-3e4c-4fd5-89fa-32cad6280325
+source-git-commit: f57fa04e668fa9c61b9b15778e74969edffae0fa
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 11%
