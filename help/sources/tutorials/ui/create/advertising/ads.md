@@ -1,27 +1,23 @@
 ---
-title: Création d’une connexion Google Ads Source dans l’interface utilisateur
-description: Découvrez comment créer une connexion source Google Ads à l’aide de l’interface utilisateur de Adobe Experience Platform.
+title: Connexion de Google Ads à Experience Platform à l’aide de l’interface utilisateur
+description: Découvrez comment connecter votre compte Google Ads à Adobe Experience Platform dans l’interface utilisateur.
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: ce3dabe4ab08a41e581b97b74b3abad352e3267c
+source-git-commit: ac90eea69f493bf944a8f9920426a48d62faaa6c
 workflow-type: tm+mt
-source-wordcount: '680'
-ht-degree: 29%
+source-wordcount: '854'
+ht-degree: 11%
 
 ---
 
-# Créer une connexion source Google Ads dans l’interface utilisateur
-
->[!WARNING]
->
->La source [!DNL Google Ads] est temporairement indisponible. Adobe s’efforce de résoudre les problèmes liés à cette source.
+# Connexion d’[!DNL Google Ads] à Experience Platform à l’aide de l’interface utilisateur
 
 >[!NOTE]
 >
->La source Google Ads est en version bêta. Pour plus d’informations sur l’utilisation de sources bêta étiquetées, consultez la [Présentation des sources](../../../../home.md#terms-and-conditions) .
+>La source [!DNL Google Ads] est en version Beta. Consultez la [ Présentation des sources ](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Ce tutoriel décrit les étapes à suivre pour créer une connexion source Google Ads à l’aide de l’interface utilisateur de Adobe Experience Platform.
+Lisez ce guide pour savoir comment connecter votre compte [!DNL Google Ads] à Adobe Experience Platform à l’aide de l’espace de travail des sources dans l’interface utilisateur d’Experience Platform.
 
-## Prise en main
+## Commencer
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform : 
 
@@ -30,47 +26,72 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
    * [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 
-Si vous disposez déjà d’une connexion Google Ads valide, vous pouvez ignorer le reste de ce document et passer au tutoriel sur la [configuration d’un flux de données](../../dataflow/advertising.md)
+Si vous disposez déjà d’une connexion [!DNL Google Ads] valide, vous pouvez ignorer le reste de ce document et passer au tutoriel sur [la configuration d’un flux de données](../../dataflow/advertising.md)
 
 ### Collecter les informations d’identification requises
 
-Pour accéder à votre plateforme de compte Google Ads, vous devez fournir les valeurs suivantes :
+Pour plus d’informations sur l’authentification, consultez la [[!DNL Google Ads] présentation de la source](../../../../connectors/advertising/ads.md).
 
-| Informations d’identification | Description |
-| ---------- | ----------- |
-| ID du client | L’ID client est le numéro de compte correspondant au compte client Google Ads que vous souhaitez gérer avec l’API Google Ads. Cet identifiant suit le modèle de `123-456-7890`. |
-| Identifiant client de connexion | L’ID de client de connexion est le numéro de compte qui correspond à votre compte de gestionnaire de publicités Google et qui est utilisé pour récupérer les données de rapport d’un client opérationnel spécifique. Pour plus d’informations sur l’ID de client de connexion, consultez la [documentation de l’API Google Ads](https://developers.google.com/search-ads/reporting/concepts/login-customer-id). |
-| Jeton de développeur | Le jeton de développement vous permet d’accéder à l’API Google Ads. Vous pouvez utiliser le même jeton de développement pour effectuer des requêtes sur tous vos comptes Google Ads. Récupérez votre jeton de développeur en [vous connectant à votre compte de gestionnaire](https://ads.google.com/home/tools/manager-accounts/), puis en accédant à la page du centre d’API. |
-| Actualiser le jeton | Le jeton d’actualisation fait partie de l’authentification [!DNL OAuth2]. Ce jeton vous permet de régénérer vos jetons d’accès après leur expiration. |
-| Identifiant client | L’ID client est utilisé en tandem avec le secret client dans le cadre de l’authentification [!DNL OAuth2]. Ensemble, l’ID client et le secret client permettent à votre application d’opérer pour le compte de votre compte en identifiant votre application à Google. |
-| Secret client | Le secret client est utilisé en tandem avec l’ID client dans le cadre de l’authentification [!DNL OAuth2]. Ensemble, l’ID client et le secret client permettent à votre application d’opérer pour le compte de votre compte en identifiant votre application à Google. |
+## Connecter votre compte Google Ads
 
-Lisez le document de présentation de l’API pour [plus d’informations sur la prise en main de Google Ads](https://developers.google.com/google-ads/api/docs/first-call/overview).
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Vous pouvez sélectionner la catégorie appropriée dans le panneau *[!UICONTROL Catégories]*. Vous pouvez également utiliser la barre de recherche pour accéder à la source spécifique que vous souhaitez utiliser.
 
-## Connexion à votre compte Google Ads
+Pour utiliser [!DNL Google Ads], sélectionnez la carte source **[!UICONTROL Google Ads]** sous *[!UICONTROL Advertising]* puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
-
-Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
-
-Sous la catégorie **[!UICONTROL Advertising]**, sélectionnez **[!UICONTROL Google Ads]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
-
-![Catalogue des sources dans l’interface utilisateur Experience Platform.](../../../../images/tutorials/create/ads/catalog.png).
-
-La page **[!UICONTROL Se connecter à Google Ads]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+![Le catalogue de sources dans l’interface utilisateur d’Experience Platform.](../../../../images/tutorials/create/ads/catalog.png).
 
 ### Compte existant
 
-Pour connecter un compte existant, sélectionnez le compte Google Ads avec lequel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]** puis sélectionnez le compte à utiliser dans la liste des comptes de l’interface.
+
+Une fois votre compte sélectionné, sélectionnez **[!UICONTROL Suivant]** pour passer à l’étape suivante.
 
 ![Page de sélection des comptes existants dans le workflow des sources.](../../../../images/tutorials/create/ads/existing.png).
 
 ### Nouveau compte
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**.  Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification Google Ads. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
+Si vous ne disposez pas d’un compte existant, vous devez créer un compte en fournissant les informations d’authentification nécessaires qui correspondent à votre source.
+
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** puis indiquez un nom de compte et éventuellement une description pour les détails de votre compte. Ensuite, fournissez les valeurs d’authentification appropriées pour authentifier votre source par rapport à Experience Platform :
+
+* **Identifiant client** : l’identifiant client est le numéro de compte qui correspond au compte client [!DNL Google Ads] que vous souhaitez gérer avec l’API [!DNL Google Ads]. Cet identifiant suit le modèle de `123-456-7890`.
+* **ID de client de connexion** : l’ID de client de connexion est le numéro de compte qui correspond à votre compte [!DNL Google Ads] Manager et qui est utilisé pour récupérer les données de rapport d’un client opérationnel spécifique. Pour plus d’informations sur l’ID de client de connexion, consultez la documentation de l’API [[!DNL Google Ads] ](https://developers.google.com/search-ads/reporting/concepts/login-customer-id).
+* **Jeton de développeur** : le jeton de développeur vous permet d’accéder à l’API [!DNL Google Ads]. Vous pouvez utiliser le même jeton de développement pour effectuer des requêtes sur tous vos comptes [!DNL Google Ads]. Récupérez votre jeton de développeur en [vous connectant à votre compte Manager](https://ads.google.com/home/tools/manager-accounts/) puis en accédant à la page du Centre API.
+* **Jeton d’actualisation** : le jeton d’actualisation fait partie de l’authentification [!DNL OAuth2]. Ce jeton vous permet de régénérer vos jetons d’accès après leur expiration.
+* **Identifiant client** : l’identifiant client est utilisé conjointement avec le secret client dans le cadre de l’authentification [!DNL OAuth2]. Ensemble, l’identifiant client et le secret client permettent à votre application d’opérer pour le compte de votre compte en identifiant votre application à [!DNL Google].
+* **Secret client** : le secret client est utilisé conjointement avec l’identifiant client dans le cadre de l’authentification [!DNL OAuth2]. Ensemble, l’identifiant client et le secret client permettent à votre application d’opérer pour le compte de votre compte en identifiant votre application à [!DNL Google].
+* Version de l’API **[!DNL Google Ads]** : version actuelle de l’API prise en charge par [!DNL Google Ads]. Bien que la dernière version soit `v18`, la dernière version prise en charge sur Experience Platform est `v17`.
+
+Une fois vos informations d’identification saisies, sélectionnez **[!UICONTROL Se connecter à la source]** et patientez quelques instants le temps que la connexion soit traitée. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 ![Nouvelle interface de compte dans le workflow des sources.](../../../../images/tutorials/create/ads/new.png).
 
-## Étapes suivantes
+## Sélectionner les données {#select-data}
+
+Avec [!DNL Google Ads], vous devez fournir la liste des attributs à ingérer pendant la phase de sélection des données du workflow. Pour récupérer ces attributs, vous devez utiliser l’[[!DNL Google Ads Query Builder]](https://developers.google.com/google-ads/api/fields/v17/overview_query_builder) .
+
+Dans la [!DNL Google Ads Query Builder], accédez au type de ressource que vous souhaitez utiliser, puis utilisez le sélecteur d’attributs pour sélectionner vos attributs, segments et mesures.
+
+![Sélecteur d’attributs dans le Query Builder Google Ads.](../../../../images/tutorials/create/ads/attributes.png)
+
+Les attributs que vous sélectionnez renseignent le panneau [!DNL Google Ads Query Language]. Veillez à utiliser le mode [!DNL Standard], puis sélectionnez **[!DNL Enter or edit a query]**.
+
+![Attributs sélectionnés, regroupés dans une requête.](../../../../images/tutorials/create/ads/enter-query.png)
+
+Sélectionnez ensuite **[!DNL Validate Query]** pour valider votre requête [!DNL Google Ads].
+
+![Programme de validation du Query Builder de Google Ads.](../../../../images/tutorials/create/ads/validate-query.png)
+
+En cas de réussite, le [!DNL Google Ads Query Builder] renvoie un message indiquant que votre requête est valide. Copiez ensuite **uniquement les attributs** à partir de la requête.
+
+![Requête validée avec succès.](../../../../images/tutorials/create/ads/copy-query.png)
+
+Revenez à la phase de sélection des données du workflow des sources dans l’interface utilisateur d’Experience Platform, puis collez les attributs dans le panneau *[!UICONTROL Attributs de liste]*.
+
+Sélectionnez **[!UICONTROL Aperçu]** pour prévisualiser les données, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+
+![Panneau Attributs de liste dans le workflow des sources.](../../../../images/tutorials/create/ads/list-attributes.png)
+
+## Créer un flux de données pour ingérer des données publicitaires
 
 En suivant ce tutoriel, vous avez établi une connexion à votre compte Google Ads. Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données publicitaires dans Platform](../../dataflow/advertising.md).
