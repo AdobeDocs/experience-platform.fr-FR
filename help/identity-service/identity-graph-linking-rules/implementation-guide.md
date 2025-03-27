@@ -2,9 +2,9 @@
 title: Guide de mise en œuvre des règles de liaison des graphiques d’identités
 description: Découvrez les étapes recommandées à suivre lors de l’implémentation de vos données avec les configurations de règles de liaison de graphiques d’identités .
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 2dadb3a0a79f4d187dd096177130802f511a6917
+source-git-commit: 83815c4911f867329d5fb7731763141d950f85bf
 workflow-type: tm+mt
-source-wordcount: '1778'
+source-wordcount: '1819'
 ht-degree: 2%
 
 ---
@@ -67,10 +67,9 @@ Si vous utilisez le [connecteur source Adobe Analytics](../../sources/tutorials/
 
 Pendant votre processus de pré-implémentation, vous devez vous assurer que les événements authentifiés que votre système enverra à Experience Platform contiennent toujours un identifiant de personne **unique** tel qu’un CRMID.
 
-* (Recommandé) Événements authentifiés avec un identifiant de personne.
-* (Non recommandé) Événements authentifiés avec deux identifiants de personne.
-* (Non recommandé) Événements authentifiés sans identifiant de personne.
-
+* (Recommandé) Événements authentifiés avec un identifiant de personne unique.
+* (Non recommandé) Événements authentifiés avec deux identifiants de personne uniques. Si vous disposez de plusieurs identifiants de personne uniques, vous pouvez rencontrer une réduction indésirable du graphique.
+* (Non recommandé) Événements authentifiés sans identifiants de personne uniques. Si vous ne disposez d’aucun identifiant de personne unique, les événements authentifiés et non authentifiés seront stockés par rapport à l’ECID.
 
 >[!BEGINTABS]
 
