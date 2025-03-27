@@ -1,22 +1,36 @@
 ---
-title: Exportez des tableaux, mappages et objets de Real-Time CDP vers des destinations d’espace de stockage
+title: Exporter des tableaux, des mappages et des objets à partir de Real-Time CDP
 type: Tutorial
 description: Découvrez comment exporter des tableaux, des mappages et des objets de Real-Time CDP vers des destinations d’espace de stockage.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 99093e0bbcd3c3560ebe201fdac72e83e67dae43
+source-git-commit: 2d59a92d7ff1e0be7977a90df460190a3b417809
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 16%
+source-wordcount: '1095'
+ht-degree: 13%
 
 ---
 
-# Exportez des tableaux, mappages et objets de Real-Time CDP vers des destinations d’espace de stockage {#export-arrays-cloud-storage}
+# Exporter des tableaux, des mappages et des objets à partir de Real-Time CDP {#export-arrays-cloud-storage}
 
 >[!AVAILABILITY]
 >
->La fonctionnalité d’exportation de tableaux et d’autres objets complexes vers des destinations d’espace de stockage est généralement disponible pour les destinations suivantes : [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md),
+>La fonctionnalité d’exportation de tableaux et d’autres objets complexes vers des destinations d’espace de stockage est généralement disponible pour les destinations suivantes : [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md).
+>
+>De plus, vous pouvez exporter des champs de type mappage vers les destinations suivantes : [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [API HTTP](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md).
 
-Découvrez comment exporter des tableaux, des mappages et des objets de Real-Time CDP vers des [destinations d’espace de stockage](/help/destinations/catalog/cloud-storage/overview.md). Lisez ce document pour comprendre le workflow d’exportation, les cas d’utilisation activés par cette fonctionnalité et les limites connues.
+
+Découvrez comment exporter des tableaux, des mappages et des objets de Real-Time CDP vers des [destinations d’espace de stockage](/help/destinations/catalog/cloud-storage/overview.md). De plus, vous pouvez exporter des champs de type mappage vers des [destinations d’entreprise](/help/destinations/destination-types.md#advanced-enterprise-destinations) et des [destinations de personnalisation Edge limitées](/help/destinations/destination-types.md#edge-personalization-destinations). Lisez ce document pour comprendre le workflow d’exportation, les cas d’utilisation activés par cette fonctionnalité et les limites connues. Consultez le tableau ci-dessous pour comprendre les fonctionnalités disponibles par type de destination.
+
+| Type de destination | Possibilité d’exporter des tableaux, mappages et autres objets personnalisés |
+|---|---|
+| Destinations de stockage dans le cloud créées par Adobe (Amazon S3, Azure Blob, Azure Data Lake Storage Gen2, zone d’atterrissage des données, stockage dans le cloud Google, SFTP) | Oui, avec le bouton (bascule) Activer l’exportation de tableaux, de mappages et d’objets lors de la configuration d’une connexion de destination. |
+| Destinations de marketing par e-mail basées sur des fichiers (Adobe Campaign, Oracle Eloqua, Oracle Responsys, Salesforce Marketing Cloud) | Non |
+| Destinations de stockage dans le cloud existantes personnalisées créées par les partenaires (destinations personnalisées basées sur des fichiers créées via Destination SDK) | Non |
+| Destinations d’entreprise (Amazon Kinesis, Azure Event Hubs, API HTTP) | Partiellement. Vous pouvez sélectionner et exporter des objets de type map à l’étape de mapping du workflow d’activation. |
+| Destinations de streaming (par exemple : Facebook, Braze, le ciblage par liste de clients de Google, etc.) | Non |
+| Destinations de personnalisation Edge (Adobe Target) | Partiellement. Vous pouvez sélectionner et exporter des objets de type map à l’étape de mapping du workflow d’activation. |
+
+{style="table-layout:auto"}
 
 Utilisez cette page comme référence pour tout ce que vous souhaitez savoir sur l’exportation de tableaux, de mappages et d’autres types d’objets à partir d’Experience Platform.
 
@@ -24,9 +38,9 @@ Utilisez cette page comme référence pour tout ce que vous souhaitez savoir sur
 
 Obtenez les informations les plus importantes sur les fonctionnalités de cette section, et continuez ci-dessous vers les autres sections du document pour obtenir des informations détaillées.
 
-* La possibilité d’exporter des tableaux, des mappages et des objets dépend de votre sélection du bouton (bascule) **Exporter des tableaux, des mappages, des objets**. En savoir plus à ce sujet [plus bas sur la page](#export-arrays-maps-objects-toggle).
-* Vous pouvez exporter des tableaux, des mappages et des objets vers des destinations d’espace de stockage uniquement, dans des fichiers `JSON` et `Parquet`. Les audiences de personnes et de prospects sont prises en charge, contrairement aux audiences de compte.
-* Vous *pouvez* exporter des tableaux, des mappages et des objets vers des fichiers CSV, mais uniquement en utilisant la fonctionnalité de champs calculés et en les concaténant dans une chaîne à l’aide de la fonction `array_to_string` .
+* Pour les destinations de stockage dans le cloud, la possibilité d’exporter des tableaux, des mappages et des objets dépend de votre sélection du bouton (bascule) **Exporter des tableaux, des mappages, des objets**. En savoir plus à ce sujet [plus bas sur la page](#export-arrays-maps-objects-toggle).
+* Vous pouvez exporter des tableaux, des mappages et des objets vers des destinations d’espace de stockage dans des fichiers `JSON` et `Parquet`. Pour les destinations de personnalisation d’entreprise et Edge, le type de données exporté est `JSON`. Les audiences de personnes et de prospects sont prises en charge, contrairement aux audiences de compte.
+* Pour les destinations de stockage dans le cloud basées sur des fichiers, vous *pouvez* exporter des tableaux, des mappages et des objets vers des fichiers CSV, mais uniquement en utilisant la fonctionnalité de champs calculés et en les concaténant dans une chaîne à l’aide de la fonction `array_to_string`.
 
 ## Tableaux et autres types d’objets dans Platform {#arrays-strings-other-objects}
 
@@ -59,6 +73,10 @@ En plus des tableaux, vous pouvez également exporter des mappages et des objets
 
 [Connectez-vous](/help/destinations/ui/connect-destination.md) à une destination d’espace de stockage souhaitée, suivez les [étapes d’activation pour les destinations d’espace de stockage](/help/destinations/ui/activate-batch-profile-destinations.md) et accédez à l’étape [mappage](/help/destinations/ui/activate-batch-profile-destinations.md#mapping). Lors de la connexion à la destination cloud souhaitée, vous devez activer le bouton (bascule) **[!UICONTROL Exporter des tableaux, des mappages]** des objets . Pour plus d’informations, reportez-vous à la section ci-dessous.
 
+>[!NOTE]
+>
+>Pour les destinations de personnalisation d’entreprise et Edge, la prise en charge de l’exportation des champs de type mappage est disponible sans qu’il soit nécessaire de sélectionner un bouton (bascule) **[!UICONTROL Exporter des tableaux, des mappages, des objets]** . Ce bouton (bascule) n’est pas disponible ni requis lors de la connexion à ces types de destinations.
+
 ## Bouton bascule Exporter des tableaux, mappages et objets {#export-arrays-maps-objects-toggle}
 
 >[!CONTEXTUALHELP]
@@ -66,7 +84,7 @@ En plus des tableaux, vous pouvez également exporter des mappages et des objets
 >title="Exporter des tableaux, mappages et objets"
 >abstract="<p> <b>Activez</b> ce paramètre pour activer l’export de tableaux, de mappages et d’objets vers des fichiers JSON ou Parquet. Vous pouvez sélectionner ces types d’objets dans la vue du champ source de l’étape de mappage. Lorsque le bouton (bascule) est activé, vous ne pouvez pas utiliser l’option champs calculés à l’étape de mappage.</p><p>Lorsque ce bouton (bascule) est <b>désactivé</b>, vous pouvez utiliser l’option de champs calculés et appliquer diverses fonctions de transformation des données lors de l’activation des audiences. Cependant, vous <i>ne pouvez pas</i> exporter de tableaux, de mappages et d’objets vers des fichiers JSON ou Parquet et devez configurer une destination distincte à cet effet.</p>"
 
-Lors de la connexion à une destination d’espace de stockage, vous pouvez activer ou désactiver le bouton **[!UICONTROL Exporter des tableaux, mappages]** objets.
+Lors de la connexion à une destination d’espace de stockage basé sur des fichiers, vous pouvez activer ou désactiver le bouton **[!UICONTROL Exporter des tableaux, des mappages]** des objets.
 
 ![Le bouton (bascule) Exporter des tableaux, mappages et objets est activé ou désactivé, et la fenêtre contextuelle est mise en surbrillance.](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif)
 
