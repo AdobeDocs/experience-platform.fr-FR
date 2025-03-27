@@ -4,9 +4,9 @@ title: Tableau de bord d’utilisation de la licence
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 7332b39b0e213632e595dc52eda390aa0b9a24ec
+source-git-commit: 03b35ecf940f9b1cb40d8b1243ff530f38bcdcd4
 workflow-type: tm+mt
-source-wordcount: '3483'
+source-wordcount: '3367'
 ht-degree: 17%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 17%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
 >title="Audience adressable prévue"
->abstract="L’audience adressable est l’ensemble des profils de personne dans le profil client en temps réel que votre entreprise est autorisée à engager. Cela inclut les profils directement identifiables et pseudonymes.<br>Votre utilisation peut atteindre la quantité sous licence. Pour réduire l’utilisation, configurez l’expiration des données de jeux de données ou de profils pseudonymes."
+>abstract="L’audience adressable est l’ensemble des profils de personne dans le profil client en temps réel que votre entreprise est autorisée à engager. Cette mesure inclut les profils directement identifiables et pseudonymes.<br>Votre utilisation peut atteindre la quantité sous licence. Pour réduire l’utilisation, configurez l’expiration des données de jeux de données ou de profils pseudonymes."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=fr" text="Expirations des événements d’expérience"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"
 
@@ -134,7 +134,7 @@ ht-degree: 17%
 
 Vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise via le tableau de bord Adobe Experience Platform [!UICONTROL Utilisation des licences]. Les informations affichées ici sont capturées lors d’un instantané quotidien de votre instance Platform.
 
-Les rapports d’utilisation de licence offrent un haut degré de granularité sur les mesures d’utilisation de licence. Le tableau de bord fournit des mesures d’utilisation pour chaque produit acheté (et les modules complémentaires associés), l’utilisation consolidée des mesures dans tous les sandbox de production ou de développement et la mesure d’utilisation d’un sandbox spécifique. Les applications Experience Platform suivantes peuvent être suivies avec des mesures d’utilisation : Real-Time Customer Data Platform, Adobe Journey Optimizer et Customer Journey Analytics.
+Les rapports d’utilisation des licences offrent un haut degré de granularité. La plupart des mesures sont partagées entre plusieurs produits et reflètent l’utilisation agrégée sur tous les produits qui les utilisent, et non les totaux par produit. Le tableau de bord fournit une utilisation consolidée de ces mesures dans tous les sandbox de production ou de développement, ainsi que la mesure d’utilisation d’un sandbox spécifique. Les applications Experience Platform suivantes peuvent être suivies avec des mesures d’utilisation : Real-Time Customer Data Platform, Adobe Journey Optimizer et Customer Journey Analytics.
 
 Ce guide explique comment accéder au tableau de bord d’utilisation des licences et l’utiliser dans l’interface utilisateur. Il fournit également des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
 
@@ -152,36 +152,87 @@ Les données de ce tableau de bord s’affichent exactement comme elles apparais
 
 ## Exploration du tableau de bord d’utilisation des licences {#explore}
 
-Pour accéder au tableau de bord d’utilisation de la licence dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Utilisation de la licence]** dans le rail de gauche. L’onglet [!UICONTROL Aperçu] s’ouvre et affiche une liste des produits disponibles.
+Pour accéder au tableau de bord d’utilisation de la licence dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Utilisation de la licence]** dans le rail de gauche. Le tableau de bord contient deux onglets : **[!UICONTROL Mesures]** et **[!UICONTROL Produits]**.
 
 >[!NOTE]
 >
->Le tableau de bord d’utilisation de la licence n’est pas activé par défaut. Les utilisateurs doivent disposer de l’autorisation « Afficher le tableau de bord d’utilisation des licences » pour pouvoir consulter le tableau de bord. Pour obtenir des instructions sur l’octroi des autorisations d’accès pour l’affichage du tableau de bord d’utilisation des licences, consultez le guide [autorisations des tableaux de bord](../permissions.md).
+>Le tableau de bord d’utilisation de la licence n’est pas activé par défaut. Les utilisateurs doivent disposer de l’autorisation « Afficher le tableau de bord d’utilisation des licences » pour afficher le tableau de bord. Pour obtenir des instructions sur l’octroi des autorisations d’accès, reportez-vous au guide [autorisations des tableaux de bord](../permissions.md).
 
-![Onglet Aperçu du tableau de bord d’utilisation des licences, avec l’utilisation des licences mise en surbrillance dans la barre latérale de navigation gauche.](../images/license-usage/dashboard-overview.png)
+## Onglet [!UICONTROL  Mesures ] {#metrics-tab}
 
-## Onglet [!UICONTROL Aperçu] {#overview-tab}
+L’onglet **[!UICONTROL Mesures]** fournit une vue centralisée de toutes les mesures d’utilisation des licences de votre organisation. Comme la plupart des mesures sont partagées entre les produits, il n’existe pas de répartition distincte par produit pour ces mesures.
 
-Le tableau de bord [!UICONTROL  Utilisation des licences ] affiche deux tableaux distincts : **Produits principaux** et **Modules complémentaires**.
+Le tableau des mesures comprend les colonnes suivantes :
 
-- **[!UICONTROL Tableau des produits principaux]** : ce tableau répertorie les principaux produits Adobe Experience Platform sous licence par votre entreprise. Chaque produit principal possède ses propres mesures, suivi de l’utilisation et vues d’exploration au niveau du sandbox. Ces produits principaux fournissent les mesures clés pour le suivi et les modules complémentaires sont inclus dans ces mesures.
+| Nom de la colonne | Description |
+|---|---|
+| **[!UICONTROL Nom de la mesure]** | Nom de la mesure d’utilisation de licence. Chaque entrée comprend une icône d’informations (`ⓘ`) qui affiche une description et une liste des produits associés. |
+| **[!UICONTROL sous licence]** | Nombre d’unités que votre entreprise est autorisée à utiliser, tel que défini dans votre contrat. Cette mesure équivaut à la valeur du **Montant de la licence** dans l’onglet Produits . |
+| **[!UICONTROL Mesuré]** | Quantité de la mesure actuellement utilisée par votre organisation. |
+| **[!UICONTROL Utilisation %]** | Pourcentage de la valeur sous licence actuellement utilisé. |
+| **[!UICONTROL Utilisation prévue %]** | Plage prévue d’utilisation des mesures au cours des 6 prochaines semaines. |
 
-- **[!UICONTROL Tableau des modules complémentaires]** : ce tableau répertorie les produits supplémentaires dont le montant des licences est combiné aux mesures prises en charge par les produits principaux. Les modules complémentaires n’ont pas de mesures distinctes, mais améliorent le suivi de l’utilisation des produits principaux auxquels ils sont associés.
+Utilisez le bouton (bascule) **[!UICONTROL Production]** ou **[!UICONTROL Développement]** du sandbox pour filtrer les mesures affichées par les sandbox.
+
+>[!NOTE]
+>
+>Les rapports de consommation sont cumulatifs par type de sandbox. Sélectionner [!UICONTROL Production] ou [!UICONTROL Développement] affiche l’utilisation combinée sur tous les sandbox de ce type.
+
+![L’onglet Mesures du tableau de bord d’utilisation des licences affiche une liste de mesures, de montants de licence et de données d’utilisation.](../images/license-usage/metrics-tab.png)
+
+>[!WARNING]
+>
+>L’autorisation d’affichage du tableau de bord d’utilisation de la licence doit être spécifiée au niveau du sandbox. Ajoutez des autorisations à chaque sandbox individuel pour les afficher dans le tableau de bord. Cette limitation sera corrigée dans une version ultérieure. En attendant, la solution de contournement suivante est disponible :
+>
+>1. Création d’un profil de produit dans le Adobe Admin Console.
+>2. Sous Autorisation dans la catégorie Sandbox , ajoutez tous les sandbox que vous souhaitez afficher dans le tableau de bord d’utilisation des licences.
+>3. Dans la catégorie Autorisation du tableau de bord des utilisateurs , ajoutez l’autorisation « Afficher le tableau de bord d’utilisation des licences ».
+
+### Afficher les détails de la mesure {#view-metric-details}
+
+Pour afficher les détails d’utilisation d’une mesure spécifique, sélectionnez un nom de mesure dans la liste. Une vue détaillée de la mesure s’affiche, notamment :
+
+- Graphique linéaire historique montrant l’utilisation au fil du temps
+- Comparaison des valeurs sous licence et des valeurs mesurées
+- Utilisation par sandbox individuel
+- Sélecteur de sandbox pour filtrer les données
+- Une option d’exportation pour le téléchargement CSV
+
+Cette visualisation vous permet de suivre les tendances, de comprendre comment chaque sandbox contribue à l’utilisation globale et d’exporter les données pour une analyse hors ligne.
+
+Chaque graphique comprend des menus déroulants pour filtrer les données. Utilisez le menu déroulant des périodes pour ajuster la période de recherche en amont (par défaut : 30 derniers jours) ou utilisez le menu déroulant des sandbox pour afficher l’utilisation d’un sandbox de production ou de développement spécifique.
+
+![Vue détaillée des mesures d’audience adressables avec graphique d’utilisation historique, tableau sandbox et bouton d’exportation.](../images/license-usage/metric-details-view.png)
+
+Vous pouvez également sélectionner une **[!UICONTROL Date personnalisée]** pour choisir la période affichée.
+
+![Onglet Aperçu du tableau de bord d’utilisation des licences avec les options de période personnalisée en surbrillance.](../images/license-usage/custom-date-range.png)
+
+### Exportation CSV {#export-metric-usage-data}
+
+Vous pouvez exporter les données historiques d’utilisation de la mesure et du sandbox sélectionnés au format CSV directement à partir de la vue des détails de la mesure. Sélectionnez l&#39;icône **[!UICONTROL Exporter]** pour télécharger les données du graphique sous forme de tableau. Le fichier CSV exporté facilite l’analyse des tendances hors ligne ou le partage d’informations d’utilisation entre les équipes.
+
+## Onglet [!UICONTROL Produits] {#products-tab}
+
+L’onglet **[!UICONTROL Produits]** présente les données d’utilisation des licences regroupées par produits achetés et par modules complémentaires associés. L’onglet [!UICONTROL Products] contient deux tableaux :
+
+- **[!UICONTROL Tableau des produits principaux]** : ce tableau répertorie les principaux produits Adobe Experience Platform sous licence par votre entreprise. Chaque produit répertorie sa mesure principale, le suivi de l’utilisation et l’utilisation prévue.
+- **[!UICONTROL Tableau des modules complémentaires]** : répertorie les éléments supplémentaires dont les montants de licence contribuent aux mesures de base du produit. Les modules complémentaires n’ont pas de mesures distinctes, mais améliorent le suivi de l’utilisation des produits principaux auxquels ils sont associés.
 
 | Nom de la colonne | Description |
 |---|---|
 | **[!UICONTROL Produit]** | La solution Adobe sous licence de votre entreprise. |
 | **[!UICONTROL Mesure De Principal]** | Mesure principale utilisée pour le suivi au sein de ce produit. |
-| **[!UICONTROL Montant de la licence]** | Valeur convenue dans le contrat pour le montant maximal de la mesure de Principal, comme convenu dans votre contrat de licence de produit. |
-| **[!UICONTROL Utilisation]** | Quantité de la mesure principale utilisée. Cette valeur fournit l’utilisation totale de cette mesure dans tous les sandbox, qu’il s’agisse de production ou de développement. |
+| **[!UICONTROL Montant de la licence]** | Valeur sous-traitée pour le montant maximal de la mesure principale. |
+| **[!UICONTROL Utilisation]** | Quantité de la mesure principale utilisée. |
 | **[!UICONTROL Utilisation %]** | Pourcentage de la mesure principale utilisée en fonction du montant de votre licence. |
-| **[!UICONTROL Utilisation de la prédiction]** | Pourcentage d’utilisation prévu de votre mesure principale en fonction du montant de votre licence. |
+| **[!UICONTROL Utilisation prévue]** | Pourcentage d’utilisation prévu de votre mesure principale. |
 
 >[!NOTE]
 >
->Le montant des licences pour les modules complémentaires est inclus dans le [!UICONTROL Montant de la licence] des produits principaux. Par exemple, si vous achetez un pack de cinq sandbox en tant que module complémentaire, le montant est ajouté à celui du produit de base. Le tableau des modules complémentaires affiche un [!UICONTROL Montant de la licence] spécifique au module complémentaire, mais l’utilisation réelle est suivie via le produit de base.
+>Le [!UICONTROL Montant de la licence] pour les modules complémentaires est inclus dans le montant total de la licence du produit principal. Les modules complémentaires ne sont pas suivis séparément, mais améliorent les fonctionnalités de leurs produits associés. Par exemple, si vous achetez un pack de cinq sandbox en tant que module complémentaire, le montant est ajouté à celui du produit de base. Le tableau des modules complémentaires affiche un [!UICONTROL Montant de la licence] spécifique au module complémentaire, mais l’utilisation réelle est suivie via le produit de base.
 
-Les tableaux indiquent la mesure principale pour chaque produit, car chaque produit peut effectuer le suivi de nombreuses mesures.
+![Onglet Produits du tableau de bord d’utilisation des licences avec des tableaux pour les produits principaux et les modules complémentaires.](../images/license-usage/products-tab.png)
 
 ### Utilisation prédite {#predicted-usage}
 
@@ -205,17 +256,13 @@ Gérez et optimisez vos ressources de licence de manière proactive avec des pr�
 >
 >Les prévisions sont actualisées chaque semaine, le vendredi. La date d’actualisation est incluse dans une icône d’informations (![Cette icône d’informations.](../images/license-usage/info-icon.png)) au-dessus du titre de la colonne.
 
-Pour afficher un résumé de l’utilisation des droits d’un produit, sélectionnez un produit dans le tableau [!UICONTROL Produits principaux].
+Affichez un résumé de l’utilisation des droits d’un produit dans l’onglet [!UICONTROL Produit] sous le tableau [!UICONTROL Produits principaux].
 
-![[!UICONTROL  Utilisation de la licence] [!UICONTROL Présentation] avec un produit et la colonne Utilisation prévue mise en surbrillance.](../images/license-usage/product-predicted-usage.png)
-
-L’onglet Résumé s’affiche. Vous pouvez utiliser les prédictions granulaires disponibles dans les onglets [!UICONTROL Résumé] et [!UICONTROL Détails] pour garantir une prise de décision éclairée afin d’utiliser efficacement la licence.
+![Onglet [!UICONTROL Utilisation de la licence] [!UICONTROL Produit] avec un produit et la colonne Utilisation prévue mise en surbrillance.](../images/license-usage/product-predicted-usage.png)
 
 >[!NOTE]
 >
 >Notez que les prédictions d’utilisation des licences sont des approximations basées sur l’utilisation passée. Il vous incombe de comprendre l’utilisation réelle par votre organisation et de vous assurer que cette utilisation ne dépasse pas la portée de la licence de votre organisation avec Adobe.
-
-![Vue récapitulative d’un produit Platform avec la colonne d’utilisation prévue mise en surbrillance.](../images/license-usage/summary-predicted-usage.png)
 
 Le pourcentage d&#39;utilisation prévu est déterminé comme suit :
 
@@ -236,66 +283,11 @@ La fonctionnalité d’utilisation prévue prend en charge les mesures suivantes
 - [!UICONTROL Profils engageables]
 - [!UICONTROL Volume total de données]
 
-## Onglet [!UICONTROL Résumé] {#summary-tab}
-
-Pour afficher plus de mesures et d’informations détaillées sur l’utilisation de votre licence de produit, sélectionnez un nom de produit dans la liste. La vue [!UICONTROL Résumé] de ce produit s’affiche. Toutes les mesures disponibles s’affichent dans l’onglet [!UICONTROL Résumé]. Les mesures disponibles dépendent du produit sous licence. Cette vue fournit **une vue consolidée de toutes les mesures dans tous les sandbox de production ou de développement**. Le même niveau d’analyse est fourni pour les sandbox de production et de développement.
-
-![Vue récapitulative d’un produit Platform qui affiche toutes les mesures disponibles pour ce produit.](../images/license-usage/summary-tab.png)
-
-Dans l’onglet Résumé , le tableau comprend la colonne [!UICONTROL Mesure]. Ces descriptions lisibles par l’utilisateur indiquent toutes les mesures utilisées pour ce type de sandbox.
-
-### Sélectionner un sandbox {#select-sandbox}
-
-Pour changer l’affichage entre les types de sandbox de production et de développement, sélectionnez [!UICONTROL sandbox de production] ou [!UICONTROL sandbox de développement]. Le type de sandbox sélectionné est indiqué par le bouton radio en regard du nom du sandbox.
-
-Les rapports de consommation pour les sandbox sont cumulatifs pour tous les sandbox du même type. En d’autres termes, la sélection des options [!UICONTROL Production] ou [!UICONTROL Développement] fournit des rapports de consommation pour tous les sandbox de production ou de développement, respectivement.
-
-![Vue récapitulative d’un produit Platform avec les sandbox de production et de développement mis en surbrillance.](../images/license-usage/summary-tab-sandboxes.png)
-
->[!WARNING]
->
->L’autorisation d’affichage du tableau de bord d’utilisation de la licence doit être spécifiée au niveau du sandbox. Ajoutez des autorisations à chaque sandbox individuel pour les afficher dans le tableau de bord. Cette limitation sera corrigée dans une version ultérieure. En attendant, la solution de contournement suivante est disponible :
->
->1. Création d’un profil de produit dans le Adobe Admin Console.
->2. Sous Autorisation dans la catégorie Sandbox , ajoutez tous les sandbox que vous souhaitez afficher dans le tableau de bord d’utilisation des licences.
->3. Dans la catégorie Autorisation du tableau de bord des utilisateurs , ajoutez l’autorisation « Afficher le tableau de bord d’utilisation des licences ».
-
-## Onglet [!UICONTROL Détails] {#details-tab}
-
-Pour afficher **une mesure d’utilisation particulière d’un sandbox spécifique**, accédez à l’onglet [!UICONTROL Détails]. L’onglet [!UICONTROL Détails] affiche tous les sandbox disponibles dans les sandbox de production ou de développement.
-
-![Onglet Détails du tableau de bord Utilisation de la licence.](../images/license-usage/details-tab.png)
-
-Dans cette vue, vous pouvez sélectionner ![Icône Inspecter .](/help/images/icons/inspect.png) en regard d’un nom de sandbox pour afficher la visualisation de cette mesure. Une boîte de dialogue s’ouvre avec une visualisation pour cette mesure.
-
-### Visualisations {#visualizations}
-
-Chaque widget de visualisation comprend les aspects suivants :
-
-- Graphique linéaire suivant les modifications de la mesure au fil du temps
-- Une clé pour le graphique linéaire
-- Nom du sandbox
-- Menu déroulant permettant d’ajuster la période du graphique linéaire
-
-Les graphiques linéaires comparent les chiffres d’utilisation de votre organisation au total disponible avec la licence de votre organisation et fournissent un pourcentage de l’utilisation totale.
-
-![Visualisation d’une mesure.](../images/license-usage/visualization.png)
-
-La période de recherche en amont de l’analyse peut être ajustée à partir du menu déroulant. Valeur par défaut des 30 derniers jours
-
-Pour sélectionner une période, vous pouvez utiliser le menu déroulant des périodes pour sélectionner la période à afficher dans le tableau de bord. Plusieurs options sont disponibles, y compris la valeur par défaut des 30 derniers jours.
-
-![Boîte de dialogue de visualisation avec le menu déroulant de la période en surbrillance.](../images/license-usage/date-range.png)
-
-Vous pouvez également sélectionner **[!UICONTROL Date personnalisée]** pour choisir la période affichée.
-
-![Onglet Aperçu du tableau de bord d’utilisation des licences avec les options de période personnalisée en surbrillance.](../images/license-usage/custom-date-range.png)
-
 ## Mesures disponibles {#available-metrics}
 
 >[!IMPORTANT]
 >
->À compter du 20 août, les clients disposant de droits pour « [!UICONTROL Richesse moyenne du profil] » et « [!UICONTROL Stockage total] » ont plutôt vu « [!UICONTROL Volume total de données] » dans le tableau de bord d’utilisation des licences. Les droits des clients n’ont pas été modifiés, mais les mesures de suivi ont été simplifiées. Le [!UICONTROL  Volume total de données ] représente les données disponibles dans le profil client en temps réel pour les workflows d’engagement et de personnalisation. Cette mesure simplifiée a amélioré la gestion et la mesure de l’utilisation du profil client en temps réel. Les clients sont invités à contacter leur représentant Adobe pour plus d’informations sur cette modification.
+>À compter du 20 août, les clients disposant de droits pour « [!UICONTROL Richesse moyenne du profil] » et « [!UICONTROL Stockage total] » ont plutôt vu « [!UICONTROL Volume total de données] » dans le tableau de bord d’utilisation des licences. Les droits des clients n’ont pas été modifiés, mais les mesures de suivi ont été simplifiées. Le [!UICONTROL  Volume total de données ] représente les données disponibles dans le profil client en temps réel pour les workflows d’engagement et de personnalisation. Cette mesure simplifiée a amélioré la gestion et la mesure de l’utilisation du profil client en temps réel. Nous recommandons aux clients de contacter leur représentant Adobe pour plus d’informations sur cette modification.
 
 Le tableau de bord d’utilisation des licences établit des rapports sur plusieurs mesures uniques qui s’appliquent à plusieurs produits dans l’organisation. Les mesures disponibles sont les suivantes :
 
@@ -306,7 +298,7 @@ Le tableau de bord d’utilisation des licences établit des rapports sur plusie
 | [!UICONTROL Packs d’utilisateurs d’Adhoc Query Service] | Un module complémentaire pour augmenter vos droits d’utilisateurs Query Service simultanés autorisés de cinq utilisateurs Query Service simultanés supplémentaires et d’une requête ad hoc supplémentaire en cours d’exécution simultanée par pack. Plusieurs packs d’utilisateurs de requêtes ad hoc supplémentaires peuvent être sous licence. |
 | [!UICONTROL Richesse moyenne du profil] | **Obsolète** - La somme de toutes les données de production stockées à tout moment dans le service de profil Hub, divisée par cinq fois le nombre de profils professionnels autorisés. [!UICONTROL richesse moyenne du profil] est une fonctionnalité partagée. |
 | [!UICONTROL Lignes CJA Disponibles] | Lignes de données moyennes par jour disponibles pour analyse dans Customer Journey Analytics. |
-| [!UICONTROL Attributs calculés] | Données comportementales de profil agrégées basées sur des événements d’expérience converties en attribut de profil et pouvant être incluses dans un profil de personne. |
+| [!UICONTROL Attributs calculés] | Données comportementales de profil agrégées basées sur des événements d’expérience convertis en attribut de profil et pouvant être inclus dans un profil de personne. |
 | [!UICONTROL Audience des consommateurs] | Nombre de profils de personnes identifiés comme « Audience des consommateurs » sur la commande client. |
 | [!UICONTROL Taille de l’exportation des données] | La quantité de données envoyées par le biais des activations de jeux de données au cours d’une année. |
 | [!UICONTROL Exportations de données] | La taille totale des jeux de données qui peuvent être exportés vers une solution non Adobe (directement ou indirectement) au cours d’une année. |
@@ -321,14 +313,11 @@ Le tableau de bord d’utilisation des licences établit des rapports sur plusie
 | [!UICONTROL Volume total de données] | Quantité totale de données disponibles pour le profil client en temps réel à utiliser dans les workflows d’engagement. Pour en savoir plus, consultez les [questions fréquentes sur le volume total de données](../../landing/license-usage-and-guardrails/total-data-volume.md). |
 | [!UICONTROL Volume total de données sortantes] | Volume annuel cumulé de données exportées de Adobe Experience Platform vers des entrepôts de données tiers. |
 
-<!-- Approval needed on my revision above.
-Original PM version: | [!UICONTROL Total Volume of Data Egress] | The cumulative annual amount of data processed from third-party data warehouses. | -->
-
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 
 >[!TIP]
 >
->Vous pouvez vérifier vos droits de licence dans votre commande client pour calculer des mesures telles que votre « quota de stockage ».<br>Par exemple,<ul><li>Allocation de stockage = Nombre de « profils autorisés » dans votre contrat X Richesse moyenne du profil</li></ul>
+>Vous pouvez vérifier vos droits de licence dans votre commande client pour calculer des mesures telles que votre « Allocation de stockage ».<br>Par exemple,<ul><li>Allocation de stockage = Nombre de « profils autorisés » dans votre contrat X Richesse moyenne du profil</li></ul>
 
 La disponibilité de ces mesures et la définition spécifique de chacune d’elles varient en fonction des licences achetées par votre entreprise. Pour obtenir des définitions détaillées de chaque mesure, reportez-vous à la documentation de description du produit appropriée :
 
