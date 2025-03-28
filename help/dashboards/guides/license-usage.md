@@ -4,10 +4,10 @@ title: Tableau de bord d’utilisation de la licence
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 03b35ecf940f9b1cb40d8b1243ff530f38bcdcd4
+source-git-commit: 243a99748d31cddcb8a550d52f9bb390726644be
 workflow-type: tm+mt
-source-wordcount: '3367'
-ht-degree: 17%
+source-wordcount: '3408'
+ht-degree: 16%
 
 ---
 
@@ -144,11 +144,11 @@ Pour une présentation générale de l’interface utilisateur de Platform, cons
 
 Le tableau de bord [!UICONTROL  Utilisation des licences ] affiche la liste de tous les produits Experience Platform que vous avez achetés et de tous les modules complémentaires associés. Depuis ce tableau de bord, vous pouvez obtenir un instantané des données liées aux licences de l’entreprise pour Experience Platform dans n’importe quel sandbox associé.
 
-Les données de ce tableau de bord s’affichent exactement comme elles apparaissent au moment précis où l’instantané a été pris. En d’autres termes, l’instantané n’est pas une approximation ou un échantillon des données, et le tableau de bord n’est pas mis à jour en temps réel.
+Les données de ce tableau de bord s’affichent exactement telles qu’elles s’affichaient au moment précis où l’instantané a été pris. Il ne s’agit pas d’une approximation ou d’un échantillon, mais le tableau de bord n’est pas mis à jour en temps réel.
 
 >[!NOTE]
 >
->Les modifications ou mises à jour apportées aux données depuis la prise dʼun instantané ne seront pas reflétées dans le tableau de bord avant la prise de lʼinstantané suivant.
+>La plupart des mesures du tableau de bord sont mises à jour quotidiennement, en fonction d’un instantané de votre instance Platform. [!UICONTROL Lignes CJA disponibles] est une exception qui est mise à jour tous les mois. Les mesures étiquetées avec des « packs », telles que [!UICONTROL Packs d’utilisateurs Adhoc Query Service], [!UICONTROL Nombre de packs de richesse de profil] et [!UICONTROL Nombre de packs de segmentation en flux continu], reflètent les droits de licence pour les offres de modules complémentaires et ne font pas le suivi de l’utilisation continue. Les modifications apportées après l’instantané ne sont pas visibles tant que l’instantané suivant n’a pas été pris.
 
 ## Exploration du tableau de bord d’utilisation des licences {#explore}
 
