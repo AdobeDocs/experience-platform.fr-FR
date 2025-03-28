@@ -3,9 +3,9 @@ title: Point d’entrée de l’API Audiences
 description: Utilisez le point d’entrée audiences dans l’API Adobe Experience Platform Segmentation Service pour créer, gérer et mettre à jour des audiences par programmation pour votre organisation.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
+source-git-commit: 7b1dedeab8df9678134474045cb87b27550f7fb6
 workflow-type: tm+mt
-source-wordcount: '1452'
+source-wordcount: '1590'
 ht-degree: 6%
 
 ---
@@ -20,7 +20,7 @@ Les points d’entrée utilisés dans ce guide font partie de l’API [!DNL Adob
 
 ## Récupération d’une liste d’audiences {#list}
 
-Vous pouvez récupérer une liste de toutes les audiences de votre organisation en effectuant une requête GET au point d’entrée `/audiences`.
+Vous pouvez récupérer une liste de toutes les audiences de votre organisation en envoyant une requête GET au point d’entrée `/audiences`.
 
 **Format d’API**
 
@@ -202,7 +202,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec une liste d’audiences cr
 
 ## Création d’une audience {#create}
 
-Vous pouvez créer une audience en effectuant une requête de POST au point d’entrée `/audiences`.
+Vous pouvez créer une audience en effectuant une requête POST vers le point d’entrée `/audiences`.
 
 **Format d’API**
 
@@ -422,9 +422,9 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur l’au
 
 +++
 
-## Mettre à jour une audience {#put}
+## Remplacer une audience {#put}
 
-Vous pouvez mettre à jour (remplacer) une audience spécifique en adressant une requête de PUT au point d’entrée `/audiences` et en fournissant l’identifiant de l’audience que vous souhaitez mettre à jour dans le chemin de requête.
+Vous pouvez mettre à jour (remplacer) une audience spécifique en adressant une requête PUT au point d’entrée `/audiences` et en fournissant l’identifiant de l’audience que vous souhaitez mettre à jour dans le chemin de requête.
 
 **Format d’API**
 
@@ -453,6 +453,11 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
     "namespace": "AEPSegments",
     "description": "Last 30 days",
     "type": "SegmentDefinition",
+    "expression": {
+        "type": "PQL",
+        "format": "pql/text",
+        "value": "workAddress.country=\"US\""
+    }
     "lifecycleState": "published",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "labels": [
@@ -468,6 +473,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `namespace` | Espace de noms de l’audience. |
 | `description` | Description de l’audience. |
 | `type` | Champ généré par le système qui indique si l’audience est générée par Platform ou est une audience générée en externe. Les valeurs possibles sont `SegmentDefinition` et `ExternalSegment`. Une `SegmentDefinition` fait référence à une audience générée dans Platform, tandis qu’une `ExternalSegment` fait référence à une audience qui n’a pas été générée dans Platform. |
+| `expression` | Objet contenant l’expression PQL de l’audience. |
 | `lifecycleState` | Statut de l’audience. Les valeurs possibles sont `draft`, `published` et `inactive`. `draft` représente le moment où l’audience est créée, le moment `published` où elle est publiée et le moment `inactive` où elle n’est plus active. |
 | `datasetId` | Identifiant du jeu de données dans lequel se trouvent les données de l’audience. |
 | `labels` | Utilisation des données au niveau de l’objet et libellés de contrôle d’accès basés sur les attributs pertinents pour l’audience. |
@@ -496,6 +502,81 @@ Une réponse réussie renvoie un statut HTTP 200 avec les détails de votre audi
     "description": "Last 30 days",
     "type": "SegmentDefinition",
     "lifecycleState": "published",
+    "createdBy": "{CREATED_BY_ID}",
+    "datasetId": "6254cf3c97f8e31b639fb14d",
+    "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
+    "creationTime": 1650251290000,
+    "updateEpoch": 1650251290,
+    "updateTime": 1650251290000,
+    "createEpoch": 1650251290
+}
+```
+
++++
+
+## Mettre à jour une audience {#patch}
+
+Vous pouvez mettre à jour une audience spécifique en adressant une requête PATCH au point d’entrée `/audiences` et en fournissant l’identifiant de l’audience que vous souhaitez mettre à jour dans le chemin de requête.
+
+**Format d’API**
+
+```http
+PATCH /audiences/{AUDIENCE_ID}
+```
+
+| Paramètre | Description |
+| --------- | ----------- |
+| `{AUDIENCE_ID}` | Identifiant de l’audience à mettre à jour. Notez qu’il s’agit du champ `id` et **’est pas** le champ `audienceId`. |
+
+**Requête**
+
++++ Exemple de requête pour mettre à jour une audience.
+
+```shell
+curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180-97a5-58af4aa285ab5
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '[
+    {
+        "op": "add",
+        "path": "/lifecycleState",
+        "value": "inactive"
+    }
+ ]'
+```
+
+| Propriété | Description |
+| -------- | ----------- |
+| `op` | Type d’opération PATCH effectuée. Pour ce point d’entrée, cette valeur est **toujours** `/add`. |
+| `path` | Chemin d’accès au champ à mettre à jour. Les champs générés par le système, tels que `id`, `audienceId` et `namespace` **ne peuvent pas** être modifiés. |
+| `value` | Nouvelle valeur affectée à la propriété spécifiée dans `path`. |
+
++++
+
+**Réponse**
+
+Une réponse réussie renvoie le statut HTTP 200 avec l’audience mise à jour.
+
++++Exemple de réponse lors de l’application d’un correctif à un champ dans une audience.
+
+```json
+{
+    "id": "60ccea95-1435-4180-97a5-58af4aa285ab5",
+    "audienceId": "test-platform-audience-id",
+    "name": "New Platform audience",
+    "namespace": "AEPSegments",
+    "imsOrgId": "{ORG_ID}",
+    "sandbox": {
+        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "description": "Last 30 days",
+    "type": "SegmentDefinition",
+    "lifecycleState": "inactive",
     "createdBy": "{CREATED_BY_ID}",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
