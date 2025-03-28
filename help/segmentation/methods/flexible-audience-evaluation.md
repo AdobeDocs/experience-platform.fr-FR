@@ -2,15 +2,19 @@
 title: Guide d’évaluation d’audience flexible
 description: Découvrez comment utiliser l’évaluation d’audience flexible pour exécuter des traitements de segmentation par lots sur demande.
 role: Developer, User
-source-git-commit: 5c86161a2f9442d99426f2c05fb762cf50004049
+exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
+source-git-commit: 71818ee273749bb5053286c5b8bbd07a4429c341
 workflow-type: tm+mt
-source-wordcount: '996'
-ht-degree: 7%
+source-wordcount: '1049'
+ht-degree: 6%
 
 ---
 
-
 # Guide d’évaluation d’audience flexible
+
+>[!AVAILABILITY]
+>
+>L’évaluation flexible des audiences est **uniquement** disponible sur les instances d’Experience Platform s’exécutant sur [!DNL Microsoft Azure]. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](../../landing/multi-cloud.md).
 
 L’évaluation d’audience flexible vous permet d’exécuter une tâche de segmentation par lots à la demande. Grâce à une évaluation d’audience flexible, vous pouvez exécuter des lancements de campagne ad hoc, des communications juste à temps ou d’autres activités sensibles au facteur temps.
 
@@ -33,7 +37,7 @@ Lorsque vous exécutez l’évaluation d’audience flexible, gardez à l’espr
 
 >[!NOTE]
 >
->Vous *pouvez* acheter d’autres exécutions d’évaluation d’audience flexibles par an. Pour plus d’informations, contactez l’Assistance clientèle d’Adobe.
+>Vous pouvez acheter des exécutions d’évaluation d’audience flexibles supplémentaires par an. Pour plus d’informations, contactez l’Assistance clientèle d’Adobe.
 
 ## Accès {#access}
 
@@ -326,6 +330,14 @@ La vidéo suivante montre comment accéder à l’évaluation d’audience flexi
 
 La section suivante répertorie les questions fréquentes relatives à l’évaluation flexible des audiences.
 
+### Quand puis-je activer une audience à l’aide de l’évaluation d’audience flexible ?
+
++++ Réponse
+
+Vous pouvez activer une audience à l’aide de l’évaluation d’audience flexible immédiatement après sa création.
+
++++
+
 ### Puis-je exécuter la planification avec une évaluation d’audience flexible ?
 
 +++ Réponse
@@ -373,4 +385,3 @@ Seules les audiences ayant l’origine Segmentation Service sont prises en charg
 Les exécutions d’évaluation d’audience flexibles créées à l’aide de l’API ou de l’interface utilisateur sont comptabilisées jusqu’à la limite maximale. Cependant, l’exécution quotidienne de la tâche de segmentation par lots qui s’exécute de nuit ne contribue **pas** à cette limite.
 
 +++
-
