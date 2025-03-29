@@ -2,7 +2,7 @@
 title: Priorité d’espace de noms
 description: Découvrez la priorité des espaces de noms dans Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 8157eaf3d79523995fd50d02234e7873cffcea14
 workflow-type: tm+mt
 source-wordcount: '1801'
 ht-degree: 3%
@@ -73,11 +73,11 @@ Actuellement, la priorité de l’espace de noms influence le comportement du sy
 
 ![Diagramme de la portée de l’application de priorité d’espace de noms](../images/namespace-priority/application-scope.png)
 
-### Service d’identités : algorithme d’optimisation des identités
+## Service d’identités : algorithme d’optimisation des identités
 
 Pour les structures de graphique relativement complexes, la priorité de l’espace de noms joue un rôle important pour s’assurer que les liens corrects sont supprimés lorsque des scénarios de réduction du graphique se produisent. Pour plus d’informations, consultez la présentation de l’algorithme d’optimisation des identités [Identity Optimization](../identity-graph-linking-rules/identity-optimization-algorithm.md).
 
-### Profil client en temps réel : détermination d’identité principale pour les événements d’expérience
+## Profil client en temps réel : détermination d’identité principale pour les événements d’expérience
 
 * Une fois que vous avez configuré des paramètres d’identité pour un sandbox donné, l’identité principale des événements d’expérience est déterminée par la priorité d’espace de noms la plus élevée dans la configuration.
    * En effet, les événements d’expérience sont dynamiques par nature. Un mappage d’identités peut contenir trois identités ou plus. La priorité de l’espace de noms garantit que l’espace de noms le plus important est associé à l’événement d’expérience.
@@ -122,7 +122,7 @@ Compte tenu des configurations décrites ci-dessus, les actions des utilisateurs
 
 {style="table-layout:auto"}
 
-### Segmentation Service : stockage des métadonnées d’appartenance à un segment
+## Segmentation Service : stockage des métadonnées d’appartenance à un segment
 
 ![Diagramme de stockage de l’appartenance à un segment](../images/namespace-priority/segment-membership-storage.png)
 
@@ -139,7 +139,7 @@ Supposons, par exemple, qu’il existe deux profils :
 
 Si John et Jane partagent un appareil, l’ECID (navigateur web) est transféré d’une personne à une autre. Toutefois, cela n’influence pas les informations d’appartenance à un segment stockées contre John et Jane.
 
-Si les critères de qualification du segment étaient uniquement basés sur des événements anonymes stockés par rapport à l’ECID, Jane serait éligible à ce segment
+Si les critères de qualification du segment étaient uniquement basés sur des événements anonymes stockés par rapport à l’ECID, Jane serait éligible à ce segment.
 
 ## Implications sur les autres services Experience Platform {#implications}
 

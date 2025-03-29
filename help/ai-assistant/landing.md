@@ -3,9 +3,9 @@ title: Assistant AI dans la documentation du produit Adobe Experience Platform
 description: Prise en main de l’assistant AI dans Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: a34c3cae803c9e70530dbd382fbec2ece17fc71a
+source-git-commit: eb62627e81f361d21026cba368802ebace4a8dde
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1156'
 ht-degree: 0%
 
 ---
@@ -441,6 +441,10 @@ Regardez les vidéos suivantes pour découvrir d’autres exemples de cas d’ut
 >[!ENDTABS]
 
 ### Améliorez votre productivité avec l’assistant d’IA
+
+>[!NOTE]
+>
+>La dernière mise à jour de ce classeur a eu lieu le 31 mars 2025. Depuis, certaines capacités ont peut-être évolué ou se sont élargies. En outre, certaines fonctionnalités référencées dans ce guide peuvent encore être en accès anticipé. Si vous rencontrez un élément qui n’est pas encore disponible dans votre environnement et que vous souhaitez l’explorer, contactez votre équipe de compte Adobe pour demander un accès anticipé.
 
 Lisez ce qui suit pour obtenir un guide pratique sur la façon d’accroître votre productivité avec l’assistant d’IA.
 
