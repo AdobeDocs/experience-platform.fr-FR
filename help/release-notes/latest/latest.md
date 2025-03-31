@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Mars 2025
 description: Les notes de mise à jour de mars 2025 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 16056a35624b4a053e9f50acef0ec3f63254a065
+source-git-commit: edcdf84a8cb954c15f7dd235fb14cf14e11e22c8
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1250'
 ht-degree: 26%
 
 ---
@@ -19,7 +19,8 @@ Mises à jour des fonctionnalités et de la documentation existantes dans Adobe 
 
    - [Tableaux de bord](#dashboards)
    - [Destinations](#destinations)
-   - [Service de segmentation](#segmentation-service)
+   - [Composition d’audiences fédérées](#federated-audience-composition)
+   - [Segmentation Service](#segmentation-service)
    - [Sources](#sources)
 
 ## Tableaux de bord {#dashboards}
@@ -62,6 +63,10 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 {style="table-layout:auto"}
 
 Pour plus d’informations, reportez-vous à la [vue d’ensemble des destinations](../../destinations/home.md).
+
+## Composition d’audiences fédérées {#federated-audience-composition}
+
+Pour plus d’informations sur les dernières mises à jour de la composition des audiences fédérées, lisez les [notes de mise à jour dédiées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/release-notes) ici.
 
 ## Service de segmentation {#segmentation-service}
 
