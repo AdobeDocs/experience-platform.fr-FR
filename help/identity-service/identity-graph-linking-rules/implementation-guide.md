@@ -5,7 +5,7 @@ exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 source-git-commit: 83815c4911f867329d5fb7731763141d950f85bf
 workflow-type: tm+mt
 source-wordcount: '1819'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
@@ -58,14 +58,14 @@ Avec un espace de noms unique (dans ce cas, un CRMID au lieu de deux espaces de 
 
 Si vous utilisez le [connecteur source Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) pour ingérer des données, vous devez accorder à vos ECID une priorité supérieure à celle de l’Adobe Analytics ID (AAID), car le service d’identités bloque l’AAID. En donnant la priorité à l’ECID, vous pouvez demander au profil client en temps réel de stocker les événements non authentifiés dans l’ECID plutôt que dans l’AAID.
 
-### Événements d’expérience XDM {#xdm-experience-events}
+### Événement d’expérience XDM {#xdm-experience-events}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_xdm"
->title="Assurez-vous de disposer d’un identifiant de personne unique"
->abstract="Pendant votre processus de pré-implémentation, vous devez vous assurer que les événements authentifiés que votre système enverra à Experience Platform contiennent toujours un identifiant de personne **unique** tel qu’un CRMID."
+>title="Assurez-vous de disposer d’un identifiant de personne unique."
+>abstract="Pendant votre processus de pré-implémentation, vous devez vous assurer que les événements authentifiés que votre système enverra à Experience Platform contiennent toujours un identifiant de personne **unique**, tel qu’un CRMID."
 
-Pendant votre processus de pré-implémentation, vous devez vous assurer que les événements authentifiés que votre système enverra à Experience Platform contiennent toujours un identifiant de personne **unique** tel qu’un CRMID.
+Pendant votre processus de pré-implémentation, vous devez vous assurer que les événements authentifiés que votre système enverra à Experience Platform contiennent toujours un identifiant de personne **unique**, tel qu’un CRMID.
 
 * (Recommandé) Événements authentifiés avec un identifiant de personne unique.
 * (Non recommandé) Événements authentifiés avec deux identifiants de personne uniques. Si vous disposez de plusieurs identifiants de personne uniques, vous pouvez rencontrer une réduction indésirable du graphique.
@@ -290,7 +290,7 @@ Cet exemple montre également que Tom et Summer sont deux entités de personne d
 
 Pour plus d’informations sur les règles de liaison de graphiques d’identités, consultez la documentation suivante :
 
-* [Aperçu des règles de liaison des graphiques d’identités](./overview.md)
+* [Vue d’ensemble des règles de liaison des graphiques d’identités](./overview.md)
 * [Algorithme d’optimisation de l’identité](./identity-optimization-algorithm.md)
 * [Exemples de configurations de graphes](./example-configurations.md)
 * [Résolution des problèmes et FAQ](./troubleshooting.md)

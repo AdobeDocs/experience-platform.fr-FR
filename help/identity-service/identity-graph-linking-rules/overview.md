@@ -5,22 +5,22 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
-# Aperçu des règles de liaison des graphiques d’identités {#identity-graph-linking-rules-overview}
+# Vue d’ensemble des règles de liaison des graphiques d’identités {#identity-graph-linking-rules-overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
 >title="Règles de liaison des graphiques d’identités"
->abstract="Pour éviter ces fusions indésirables, vous pouvez utiliser les configurations fournies par le biais des règles de liaison de graphiques d’identités et permettre une personnalisation précise de vos utilisateurs."
+>abstract="Pour éviter ces fusions indésirables, vous pouvez utiliser les configurations fournies par le biais des règles de liaison de graphiques d’identités et permettre une personnalisation précise de vos utilisateurs et utilisatrices."
 
 >[!AVAILABILITY]
 >
 >Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
 
-Avec le service d’identités Adobe Experience Platform et le profil client en temps réel, il est facile de supposer que vos données sont parfaitement ingérées et que tous les profils fusionnés représentent une seule personne par le biais d’un identifiant de personne, tel qu’un CRMID. Cependant, il existe des scénarios possibles où certaines données pourraient essayer de fusionner plusieurs profils disparates en un seul profil (« réduction du graphique »). Pour éviter ces fusions indésirables, vous pouvez utiliser les configurations fournies par le biais des règles de liaison de graphiques d’identités et permettre une personnalisation précise de vos utilisateurs.
+Avec le service d’identités Adobe Experience Platform et le profil client en temps réel, il est facile de supposer que vos données sont parfaitement ingérées et que tous les profils fusionnés représentent une seule personne par le biais d’un identifiant de personne, tel qu’un CRMID. Cependant, il existe des scénarios possibles où certaines données pourraient essayer de fusionner plusieurs profils disparates en un seul profil (« réduction du graphique »). Pour éviter ces fusions indésirables, vous pouvez utiliser les configurations fournies par le biais des règles de liaison de graphiques d’identités et permettre une personnalisation précise de vos utilisateurs et utilisatrices.
 
 Regardez la vidéo suivante pour plus d’informations sur l’utilisation des règles de liaison de graphiques d’identités :
 
