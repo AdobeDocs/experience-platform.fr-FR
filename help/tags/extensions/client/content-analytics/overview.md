@@ -1,12 +1,10 @@
 ---
 title: Présentation de l’extension Adobe Content Analytics
 description: Découvrez l’extension de balise Adobe Content Analytics dans Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
-source-git-commit: 80bfaeb7fec229e77c83230a01b75a200cf37e29
+source-git-commit: 5f852b69b0eb0a5e6a9119f14eb9e1f51c8a2e33
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
@@ -78,7 +76,8 @@ Dans la section **[!UICONTROL Capture et définition d’expérience]**, vous po
 1. Activez **[!UICONTROL Inclure des expériences]**.
 1. Facultatif. spécifiez les paramètres de rendu du contenu sur votre site web. Les paramètres consistent en zéro ou plusieurs combinaisons d’une **[!UICONTROL Expression régulière du domaine]** et **[!UICONTROL Paramètres de requête]**.
    1. Saisissez une **[!UICONTROL Expression régulière du domaine]** par exemple `^(?!.*\b(store|help|admin)\b)`.
-   1. Spécifiez une liste de paramètres de requête séparés par des virgules **[!UICONTROL par exemple]** `outdoors, patio, kitchen`.
+   1. Spécifiez une liste de **[!UICONTROL paramètres de requête]** séparés par des virgules, par exemple `outdoors, patio, kitchen`.
+Utilisez ![Fermer](./assets/CrossSize300.svg) pour supprimer des paramètres individuels, ou **[!UICONTROL Effacer tout]** pour supprimer tous les paramètres.
 1. Sélectionnez **[!UICONTROL Supprimer]** si vous souhaitez supprimer une combinaison de paramètres d’expression régulière de domaine et de requête.
 1. Sélectionnez **[!UICONTROL Ajouter une expression régulière]** si vous souhaitez ajouter une autre combinaison d’une expression régulière et de paramètres de requête.
 
