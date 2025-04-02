@@ -4,10 +4,10 @@ title: Liste autorisée d’adresses IP pour les destinations en flux continu
 type: Documentation
 description: Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre liste autorisée de données pour exporter en toute sécurité des données d’Experience Platform vers votre point d’entrée de l’API HTTP REST, Amazon Kinesis ou votre instance Azure Event Hubs.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: ee4c42a2298c588590b1535524ed8f3dfe13b603
+source-git-commit: 7cf15550d7619e247052efc4d9b4c72c5d32641a
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 9%
+source-wordcount: '307'
+ht-degree: 8%
 
 ---
 
@@ -57,12 +57,12 @@ Adobe vous recommande d’ajouter les plages d’adresses IP suivantes à un pla
 `52.254.107.0/28`
 `52.254.107.144/28`
 `20.22.83.112`
-<!-- 
-## VA6: US and Americas customers running on AWS {#aws}
 
-The IP range below applies to Experience Platform customers running on Amazon Web Services (AWS). See the [Experience Platform Multi-Cloud overview](../../../landing/multi-cloud.md) for more information.
+## VA6 : clients des États-Unis et des Amériques utilisant AWS {#aws}
 
-`66.117.18.0/24` -->
+La plage d’adresses IP ci-dessous s’applique aux clients Experience Platform s’exécutant sur Amazon Web Services (AWS). Pour plus d’informations, consultez la [Présentation d’Experience Platform Multi-Cloud](../../../landing/multi-cloud.md).
+
+`66.117.18.0/24`
 
 ## NLD2 : clients EMEA {#emea}
 
