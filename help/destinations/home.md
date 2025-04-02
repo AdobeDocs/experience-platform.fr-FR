@@ -2,10 +2,10 @@
 title: Présentation des destinations
 description: Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant dʼAdobe Experience Platform. Vous pouvez utiliser les destinations dans Adobe Experience Platform pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 6d97f132788a249e0bf5c293e34d9d529325f099
+source-git-commit: 8d57694ffe0ac962b988ebcf9f35fbb7bf816c04
 workflow-type: tm+mt
-source-wordcount: '1231'
-ht-degree: 63%
+source-wordcount: '1359'
+ht-degree: 57%
 
 ---
 
@@ -39,13 +39,13 @@ Les commandes de l’[espace de travail des destinations](./ui/destinations-work
 * parcourir le catalogue des plateformes de destination dans lesquelles vous pouvez activer vos données ;
 * créer, modifier, activer et désactiver des flux de données vers les destinations du catalogue ;
 * créer un compte dans un emplacement de stockage ou lier Platform au compte dans la plateforme des destinations ;
-* Sélectionnez les audiences ou les jeux de données qui doivent être activés vers les destinations.
-* Sélectionnez les [champs de modèle de données d’expérience (XDM)](../xdm/home.md) à exporter lors de l’activation d’audiences vers certaines destinations comme les destinations de marketing par e-mail, les plateformes CRM, les emplacements de stockage dans le cloud, etc.
-* Activez différents types de profils et d’audiences vers les destinations : les personnes, les comptes et les prospects.
+* Sélectionner les audiences ou les jeux de données à activer pour les destinations ;
+* Sélectionnez les [champs de modèle de données d’expérience (XDM)](../xdm/home.md) à exporter lors de l’activation d’audiences vers certaines destinations telles que les destinations de marketing par e-mail, les plateformes CRM, les emplacements d’espace de stockage, etc.
+* Activez différents types de profils et d’audiences vers les destinations : personnes, comptes et prospects.
 
 ## Types et catégories de destination {#types-and-categories}
 
-Avec Experience Platform, vous pouvez activer des données vers différents types de destinations, afin de répondre à vos cas d’utilisation d’activation. Les destinations vont des intégrations basées sur les API aux intégrations avec les systèmes de réception de fichiers, en passant par les destinations de recherche de profil, etc. Pour plus d’informations sur toutes les destinations disponibles, consultez la [présentation des types et catégories de destination](./destination-types.md).
+Avec Experience Platform, vous pouvez activer des données vers différents types de destinations, afin de répondre à vos cas d’utilisation d’activation. Les destinations vont des intégrations basées sur les API aux intégrations avec les systèmes de réception de fichiers, en passant par les destinations de recherche de profil, etc. Pour plus d’informations sur toutes les destinations disponibles, lisez la [présentation des types et catégories de destination](./destination-types.md).
 
 ## Destinations créées par Adobe et les partenaires {#adobe-and-partner-built-destinations}
 
@@ -55,24 +55,24 @@ Pour les connecteurs créés et gérés par un partenaire, les problèmes liés 
 
 ## Destinations et contrôles d’accès {#access-controls}
 
-La fonctionnalité de destinations de Platform fonctionne avec les autorisations de contrôle d’accès d’Adobe Experience Platform. Selon le niveau d’autorisation de l’utilisateur, vous pouvez afficher, gérer et activer les destinations. Pour plus d’informations sur les autorisations individuelles, accédez au [contrôle d’accès dans Adobe Experience Platform](../access-control/home.md) et faites défiler la page vers le bas du tableau.
+La fonctionnalité de destinations de Platform fonctionne avec les autorisations de contrôle d’accès d’Adobe Experience Platform. Selon le niveau d’autorisation de l’utilisateur, vous pouvez afficher, gérer et activer les destinations. Pour plus d’informations sur les autorisations individuelles, accédez à [contrôle d’accès dans Adobe Experience Platform](../access-control/home.md) et faites défiler la page vers le bas, jusqu’au tableau.
 
-Le tableau suivant décrit les combinaisons d’autorisations et d’autorisations requises pour effectuer certaines actions sur les destinations.
+Le tableau suivant décrit les autorisations et combinaisons d’autorisations requises pour effectuer certaines actions sur les destinations.
 
 | Niveau d’autorisation | Description |
 | ---- | ---- |
-| **[!UICONTROL Affichage des destinations]** | Pour accéder à l’onglet des destinations dans l’interface utilisateur de l’Experience Platform, vous avez besoin de l’ **** [ autorisation de contrôle d’accès](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Gérer les destinations]** | Pour vous connecter aux destinations, vous avez besoin des **** et des **** [ ](/help/access-control/home.md#permissions) autorisations de contrôle d’accès. |
-| **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** | Pour activer les audiences vers les destinations et activer l’[ étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous avez besoin des ****, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [ ](/help/access-control/home.md#permissions) autorisations de contrôle d’accès. |
-| **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les segments sans mappage]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** | Pour ajouter ou supprimer des audiences des flux de données existants sans avoir accès à l’[étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous avez besoin des ****, **[!UICONTROL Activer des segments sans mappage]**, **[!UICONTROL Afficher des profils]** et **** [ {autorisations de contrôle d’accès](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Gérer et activer les destinations de jeu de données]** | Pour exporter des jeux de données vers des destinations, vous avez besoin des **** **** [ autorisations de contrôle d’accès](/help/access-control/home.md#permissions) et de   autorisations de gérer et d’activer les destinations de jeu de données. |
-| **[!UICONTROL Afficher un graphique d’identité]** | Pour exporter des *identités* vers des destinations, vous avez besoin de l&#39;**** [ ](/help/access-control/home.md#permissions) <br> autorisation de contrôle d&#39;accès ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"} |
+| **[!UICONTROL Affichage des destinations]** | Pour accéder à l’onglet Destinations dans l’interface utilisateur d’Experience Platform, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher les destinations]** [](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Affichage Des Destinations]**, **[!UICONTROL Gestion Des Destinations]** | Pour vous connecter aux destinations, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Affichage des profils]** et **[!UICONTROL Affichage des segments]** | Pour activer les audiences vers les destinations et activer l’[étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous devez disposer des **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Affichage des profils]** et **[!UICONTROL Affichage des segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation de segments sans mappage]**, **[!UICONTROL Affichage des profils]** et **[!UICONTROL Affichage des segments]** | Pour ajouter ou supprimer des audiences de flux de données existants sans avoir accès à l’[étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous devez disposer des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer des segments sans mappage]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Gestion et activation des destinations de jeu de données]** | Pour exporter des jeux de données vers des destinations, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer et activer les destinations de jeu de données]** [](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Afficher un graphique d’identité]** | Pour exporter des *identités* vers les destinations, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
 Le diagramme ci-dessous affiche visuellement les autorisations dont vous avez besoin en fonction des opérations que vous souhaitez effectuer sur les destinations.
 
-![Diagramme présentant les autorisations requises pour effectuer certaines actions sur les destinations.](/help/destinations/assets/overview/permissions-diagram.png)
+![Diagramme affichant les autorisations requises pour effectuer certaines actions sur les destinations.](/help/destinations/assets/overview/permissions-diagram.png)
 
 Pour plus d’informations sur les contrôles d’accès, consultez le [Guide de l’utilisateur du contrôle d’accès](../access-control/ui/overview.md).
 
@@ -84,13 +84,21 @@ Grâce au contrôle d’accès basé sur les attributs, vous pouvez appliquer de
 
 Pour plus d’informations sur le fonctionnement des destinations avec les contrôles d’accès basés sur les attributs, consultez la section [Présentation du contrôle d’accès basé sur les attributs](../access-control/abac/overview.md#destinations).
 
+## Suppression de profils des destinations {#profile-removal}
+
+Lorsqu’un profil est supprimé d’une audience activée vers une destination, ce profil est également supprimé de l’audience correspondante dans la plateforme de destination. Par exemple, si un profil est supprimé d’une audience précédemment activée sur LinkedIn, ce profil est supprimé de l’[!UICONTROL audience correspondante LinkedIn] associée.
+
+La suppression de profils des destinations, également appelée non segmentation, se produit à la même cadence que la segmentation. Dès qu’un profil est supprimé d’une audience dans Experience Platform, le prochain flux de données planifié vers la destination reflète cette modification et supprime le profil de l’audience de destination.
+
+La vitesse réelle à laquelle la suppression du profil prend effet dans la plateforme de destination peut varier en fonction du comportement d’ingestion et de traitement de la destination.
+
 ## Surveillance des destinations {#destinations-monitoring}
 
 Après avoir établi une connexion à une destination et terminé le workflow d’activation, vous pouvez surveiller les exportations de données vers votre système de réception. Lisez le [guide sur la surveillance des flux de données vers les destinations dans l’interface utilisateur](/help/dataflows/ui/monitor-destinations.md) pour plus d’informations.
 
 ![Exemple de page de surveillance des destinations.](./assets/overview/monitoring-page-example.png)
 
-Vous pouvez également vérifier si les données arrivent à votre destination. La plupart des pages de documentation de destination du catalogue ont une *section Validation de l’exportation des données*, qui indique comment vous pouvez archiver la plateforme de destination sur laquelle les données sont importées depuis l’Experience Platform. Affichez un exemple de cette section pour la [destination Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
+Vous pouvez également vérifier si les données arrivent à votre destination. La plupart des pages de documentation des destinations du catalogue ont une section *Valider l’exportation des données*, qui indique comment vous pouvez vérifier dans la plateforme de destination que les données sont importées depuis Experience Platform. Consultez un exemple de cette section pour la destination [Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
 
 ## Restrictions de gouvernance des données concernant l’activation des données vers les destinations {#data-governance}
 
@@ -118,9 +126,9 @@ Pour plus d’informations sur les violations de politique de données dans le w
 
 ## Conditions générales {#terms-and-conditions}
 
-En utilisant l’une des destinations étiquetées en version bêta (&quot;Beta&quot;), Vous reconnaissez que le Beta est fourni ***&quot;tel quel&quot; sans garantie de quelque type que ce soit***.
+En utilisant l’une des destinations libellées comme étant en version Beta (« Beta »), vous reconnaissez que le Beta est fourni ***« en l’état », sans garantie d’aucune sorte***.
 
-Adobe n’a aucune obligation de tenir à jour, corriger, mettre à jour, modifier, remplacer ou prendre en charge cette version Beta. Nous vous conseillons d’utiliser l’ Informatif et de ne pas vous fier de quelque manière que ce soit au bon fonctionnement ou aux bonnes performances de ce Beta et/ou du matériel d’accompagnement. La version Beta est considérée comme étant une information confidentielle dʼAdobe.
+Adobe n’a aucune obligation de tenir à jour, corriger, mettre à jour, modifier, remplacer ou prendre en charge cette version Beta. Il est conseillé d’utiliser le Beta et/ou les éléments qui l’accompagnent pour vous informer et de ne pas vous fier, de quelque manière que ce soit, au bon fonctionnement ou aux performances de ce dernier. La version Beta est considérée comme étant une information confidentielle dʼAdobe.
 
 Tout « commentaire » (informations relatives à la version Beta, y compris, mais sans s’y limiter, les problèmes ou défauts rencontrés lors de son utilisation, les suggestions, les améliorations et les recommandations) que vous fournissez à Adobe est par la présente cédé à Adobe. Cela inclut tous les droits, titres et intérêts relatifs à ces commentaires.
 
