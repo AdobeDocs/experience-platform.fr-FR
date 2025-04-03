@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestion des libellés d’utilisation des données dans l’interface utilisateur
 description: Ce guide détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: a5efc45f0043cd6eb4a209737b9e430c85ea2f14
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1548'
-ht-degree: 92%
+source-wordcount: '1552'
+ht-degree: 87%
 
 ---
 
@@ -15,14 +15,14 @@ ht-degree: 92%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
->title="Gouverner l’utilisation des données dans Platform"
+>title="Régir l’utilisation des données dans Experience Platform"
 >abstract="<h2>Description</h2><p>La structure de gouvernance des données dans Experience Platform vous permet de libeller les attributs et les schémas en fonction des restrictions d’utilisation des données et de configurer des politiques qui identifient et respectent ces restrictions pour des actions marketing spécifiques.</p>"
 
 Ce guide d’utilisation détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur [!DNL Experience Platform].
 
 ## Gérer les libellés {#manage-labels}
 
-Pour appliquer des libellés à vos données, vous devez obtenir l’autorisation de **[!UICONTROL gestion des libellés d’utilisation]** afin de les utiliser sur le sandbox de production par défaut appelé « prod ». Pour créer un libellé personnalisé, vous devez également disposer de droits d’administration sur le profil de produit. Chaque organisation ne dispose que d’une seule liste de libellés applicables. Vous **ne pouvez pas** supprimer des étiquettes. Vous pouvez plutôt les supprimer des jeux de données ou des champs auxquels ils sont appliqués.
+Pour appliquer des libellés à vos données, vous devez obtenir l’autorisation de **[!UICONTROL gestion des libellés d’utilisation]** afin de les utiliser sur le sandbox de production par défaut appelé « prod ». Pour créer un libellé personnalisé, vous devez également disposer de droits d’administration sur le profil de produit. Chaque organisation ne dispose que d’une seule liste de libellés applicables. Vous **ne pouvez pas** supprimer les libellés. Vous pouvez plutôt les supprimer des jeux de données ou des champs auxquels ils sont appliqués.
 
 Veuillez consulter le guide sur la façon de [configurer des autorisations](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) ou la [vue d’ensemble du contrôle d’accès](../../access-control/home.md) pour plus d’informations sur l’attribution d’une autorisation. Si vous n’avez pas accès à Admin Console de votre organisation, contactez l’administrateur ou l’administratrice de cette dernière.
 
@@ -32,11 +32,11 @@ Vous pouvez ajouter des libellés directement à un schéma ou à des champs de 
 
 >[!NOTE]
 >
->Si vos stratégies d’utilisation des données ont été créées avant que vous n’ayez étiqueté votre champ, vous risquez de rencontrer une boîte de dialogue de violation de stratégie de gouvernance lorsque vous appliquez des libellés à votre nouveau schéma. Cette boîte de dialogue indique que l’application de ce libellé violera une stratégie d’utilisation existante. Utilisez le diagramme de lignage de données pour comprendre les autres modifications de configuration à effectuer avant de pouvoir ajouter le libellé à votre champ de schéma.
+>Si vos politiques d’utilisation des données ont été créées avant l’attribution d’une étiquette à votre champ, vous pouvez rencontrer une boîte de dialogue de violation de la politique de gouvernance lorsque vous appliquez des étiquettes à votre nouveau schéma. Cette boîte de dialogue indique que l’application de ce libellé enfreindra une politique d’utilisation existante. Utilisez le diagramme de parenté des données pour comprendre quelles autres modifications de configuration doivent être apportées avant de pouvoir ajouter le libellé à votre champ de schéma.
 >
->![La violation de la politique de gouvernance des données a détecté une boîte de dialogue avec le résumé de la violation et le diagramme de traçabilité des données mis en surbrillance.](../images/labels/policy-violation-dialog.png)
+>![Boîte de dialogue Non-respect des règles de gouvernance des données détecté avec le résumé des violations et le diagramme de traçabilité des données en surbrillance.](../images/labels/policy-violation-dialog.png)
 >
->Pour plus d’informations sur les violations de stratégie, consultez la [documentation sur les violations de stratégie d’utilisation des données](../enforcement/auto-enforcement.md#data-usage-violation) .
+>Pour plus d’informations sur les violations de politique](../enforcement/auto-enforcement.md#data-usage-violation) consultez la [ documentation sur les violations de politique d’utilisation des données .
 
 Pour gérer les libellés d’utilisation des données au niveau du schéma, vous devez sélectionner un schéma existant ou en créer un nouveau. Après votre connexion à Adobe Experience Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche pour ouvrir l’espace de travail **[!UICONTROL Schémas]**. Cette page répertorie tous les schémas créés appartenant à votre organisation, ainsi que des détails utiles relatifs à chaque schéma.
 
@@ -61,11 +61,11 @@ Une boîte de dialogue s’affiche, vous permettant d’appliquer et de gérer d
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
 >title="Instructions"
->abstract="<ol><li>Sélectionnez <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=fr">Jeux de données</a> dans le volet de navigation de gauche, puis cliquez sur le jeu de données dont vous souhaitez restreindre les données.</li><li>Dans la vue des détails du jeu de données, sélectionnez l’onglet <b>Gouvernance des données</b>.</li><li>Sélectionnez les champs du jeu de données que vous souhaitez restreindre, puis cliquez sur <b>Modifier les libellés de gouvernance</b> pour libeller les données en fonction des restrictions d’utilisation.</li><li>Une fois les données libellées, sélectionnez <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=fr">Stratégies</a> dans le volet de navigation de gauche et cliquez sur <b>Créer une stratégie</b>.</li><li>Créez une <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=fr#create-governance-policy">Stratégie de gouvernance des données</a>, puis sélectionnez les libellés d’utilisation des données que la stratégie appliquera à la stratégie.</li><li>Sélectionnez la ou les actions marketing que la stratégie refusera pour toutes les données contenant ces libellés. Une fois la stratégie créée, sélectionnez-la dans la liste et activez-la à l’aide du bouton (bascule) du rail de droite.</li><li>En fonction de la stratégie activée, Platform empêche l’utilisation des données contenant les libellés spécifiés pour la ou les actions marketing définies. Cette implémentation a lieu automatiquement lorsque vous tentez d’activer des données libellées vers une destination avec des actions marketing associées (cas d’utilisation).</li></ol>"
+>abstract="<ol><li>Sélectionnez <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=fr">Jeux de données</a> dans le volet de navigation de gauche, puis cliquez sur le jeu de données dont vous souhaitez restreindre les données.</li><li>Dans la vue des détails du jeu de données, sélectionnez l’onglet <b>Gouvernance des données</b>.</li><li>Sélectionnez les champs du jeu de données que vous souhaitez restreindre, puis cliquez sur <b>Modifier les libellés de gouvernance</b> pour libeller les données en fonction des restrictions d’utilisation.</li><li>Une fois les données libellées, sélectionnez <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=fr">Stratégies</a> dans le volet de navigation de gauche et cliquez sur <b>Créer une stratégie</b>.</li><li>Créez une <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=fr#create-governance-policy">Stratégie de gouvernance des données</a>, puis sélectionnez les libellés d’utilisation des données que la stratégie appliquera à la stratégie.</li><li>Sélectionnez la ou les actions marketing que la stratégie refusera pour toutes les données contenant ces libellés. Une fois la stratégie créée, sélectionnez-la dans la liste et activez-la à l’aide du bouton (bascule) du rail de droite.</li><li>Pour chaque politique activée, Experience Platform empêche toute donnée contenant les libellés spécifiés d’être utilisée pour la ou les actions marketing définies. Cette implémentation a lieu automatiquement lorsque vous tentez d’activer des données libellées vers une destination avec des actions marketing associées (cas d’utilisation).</li></ol>"
 
 >[!IMPORTANT]
 >
->Les libellés ne peuvent plus être appliqués aux champs au niveau du jeu de données. Ce workflow a été abandonné au profit de l’application des libellés au niveau du schéma. Les libellés précédemment appliqués au niveau de l’objet du jeu de données seront toujours pris en charge par l’interface utilisateur de Platform jusqu’au 31 mai 2024. Pour garantir la cohérence de vos libellés sur tous les schémas, les libellés précédemment attachés aux champs au niveau du jeu de données doivent être migrés au niveau du schéma par vous-même au cours de l’année à venir. Consultez la documentation pour obtenir des instructions sur la [Migration des libellés précédemment appliqués du jeu de données au niveau du schéma](../e2e.md#migrate-labels).
+>Les libellés ne peuvent plus être appliqués aux champs au niveau du jeu de données. Ce workflow a été abandonné au profit de l’application des libellés au niveau du schéma. Les libellés précédemment appliqués au niveau de l’objet du jeu de données seront toujours pris en charge par l’interface utilisateur d’Experience Platform jusqu’au 31 mai 2024. Pour garantir la cohérence de vos libellés sur tous les schémas, les libellés précédemment attachés aux champs au niveau du jeu de données doivent être migrés au niveau du schéma par vous-même au cours de l’année à venir. Consultez la documentation pour obtenir des instructions sur la [Migration des libellés précédemment appliqués du jeu de données au niveau du schéma](../e2e.md#migrate-labels).
 
 Pour appliquer des libellés à l’ensemble du jeu de données, accédez à l’onglet **[!UICONTROL Gouvernance des données]** de l’espace de travail **[!UICONTROL Jeux de données]**. L’espace de travail vous permet de gérer les libellés d’utilisation des données au niveau du jeu de données.
 
@@ -120,7 +120,7 @@ Le bouton (bascule) **[!UICONTROL Afficher les libellés hérités]** est activ�
 >[!CONTEXTUALHELP]
 >id="platform_governance_createlabels"
 >title="Créer des libellés"
->abstract="Les libellés vous permettent de classer les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Platform fournit un ensemble standard de libellés que vous pouvez utiliser, mais vous pouvez également créer des libellés personnalisés spécifiques à votre organisation."
+>abstract="Les libellés vous permettent de classer les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Experience Platform fournit un ensemble standard de libellés que vous pouvez utiliser, mais vous pouvez également créer des libellés personnalisés spécifiques à votre organisation."
 
 Vous pouvez créer vos propres libellés d’utilisation personnalisés dans l’espace de travail **[!UICONTROL Politiques]** de l’interface utilisateur [!DNL Experience Platform]. Sélectionnez **[!UICONTROL Politiques]** dans le volet de navigation de gauche, puis cliquez sur **[!UICONTROL Libellés]** pour afficher une liste des libellés existants. À partir de là, cliquez sur **[!UICONTROL Créer un libellé]**.
 

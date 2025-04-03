@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès
 title: Création d’un rôle de contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur la gestion des rôles via l’interface Autorisations dans Adobe Experience Cloud
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '618'
-ht-degree: 30%
+source-wordcount: '619'
+ht-degree: 28%
 
 ---
 
@@ -19,7 +19,7 @@ Les rôles définissent l’accès d’un administrateur, d’une administratric
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="Créer un rôle"
->abstract="Créez de nouveaux rôles pour mieux classer les personnes interagissant avec votre instance Platform. Par exemple, vous pouvez créer un rôle pour une équipe marketing interne et lui appliquer le libellé RHD. Cela permettra à l’équipe d’accéder aux informations de santé protégées (ISP). Vous pouvez également créer un rôle pour une agence externe et refuser l’accès à ce rôle aux données ISP en vous abstenant d’appliquer le libellé RHD à ce rôle."
+>abstract="Créez de nouveaux rôles pour mieux classer les utilisateurs interagissant avec votre instance Experience Platform. Par exemple, vous pouvez créer un rôle pour une équipe marketing interne et lui appliquer le libellé RHD. Cela permettra à l’équipe d’accéder aux informations de santé protégées (ISP). Vous pouvez également créer un rôle pour une agence externe et refuser l’accès à ce rôle aux données ISP en vous abstenant d’appliquer le libellé RHD à ce rôle."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=fr" text="Gérer un rôle"
 >additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="Appliquer des libellés à un rôle"
 

@@ -4,10 +4,10 @@ description: Découvrez comment les journaux d’audit vous permettent de savoir
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 9bc80c2ee01e7a739db55cc7fc77ea19e609b265
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1466'
-ht-degree: 37%
+source-wordcount: '1476'
+ht-degree: 31%
 
 ---
 
@@ -16,19 +16,19 @@ ht-degree: 37%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="Principales actions"
->abstract="Ce widget affiche les principaux types d&#39;actions exécutées dans Experience Platform au cours de la période sélectionnée. Pour afficher la liste complète des actions enregistrées dans Platform, sélectionnez **Audits** dans le volet de navigation de gauche."
+>abstract="Ce widget affiche les principaux types d&#39;actions exécutées dans Experience Platform au cours de la période sélectionnée. Pour afficher la liste complète des actions enregistrées dans Experience Platform, sélectionnez **Audits** dans le volet de navigation de gauche."
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
 >title="Utilisateurs principaux"
->abstract="Ce widget affiche les utilisateurs ayant exécuté le plus d&#39;actions dans Experience Platform au cours de la période sélectionnée. Pour afficher la liste complète des actions enregistrées dans Platform, sélectionnez **Audits** dans le volet de navigation de gauche."
+>abstract="Ce widget affiche les utilisateurs ayant exécuté le plus d&#39;actions dans Experience Platform au cours de la période sélectionnée. Pour afficher la liste complète des actions enregistrées dans Experience Platform, sélectionnez **Audits** dans le volet de navigation de gauche."
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
->title="Surveiller les activités des utilisateurs et utilisatrices dans Platform"
->abstract="<h2>Description</h2><p>Vous pouvez surveiller l’activité des utilisateurs et utilisatrices pour divers services et fonctionnalités de Platform sous la forme de journaux d’audit. Ces journaux forment un journal d’audit qui enregistre <b>qui</b> a effectué <b>quelle</b> action et <b>quand</b>. Les journaux d’audit peuvent vous aider à résoudre les problèmes liés à Platform et aider votre entreprise à se conformer efficacement aux politiques de gestion des données d’entreprise et aux exigences réglementaires.</p>"
+>title="Surveillance des activités des utilisateurs dans Experience Platform"
+>abstract="<h2>Description</h2><p>Vous pouvez surveiller l’activité des utilisateurs et utilisatrices pour divers services et fonctionnalités d’Experience Platform sous la forme de journaux d’audit. Ces journaux forment un journal d’audit qui enregistre <b>qui</b> a effectué <b>quelle</b> action et <b>quand</b>. Les journaux d’audit peuvent vous aider à résoudre les problèmes liés à Experience Platform et à vous conformer efficacement aux politiques de gestion des données d’entreprise et aux exigences réglementaires.</p>"
 
-Afin d’accroître la transparence et la visibilité des activités exécutées dans le système, Adobe Experience Platform vous permet d’auditer l’activité des utilisateurs et utilisatrices pour divers services et fonctionnalités sous la forme de « journaux d’audit ». Ces journaux forment un journal d’audit qui peut vous aider à résoudre les problèmes liés à Platform et à respecter efficacement les politiques de gestion des données d’entreprise et les exigences réglementaires.
+Afin d’accroître la transparence et la visibilité des activités exécutées dans le système, Adobe Experience Platform vous permet d’auditer l’activité des utilisateurs et utilisatrices pour divers services et fonctionnalités sous la forme de « journaux d’audit ». Ces journaux constituent un journal d’audit qui peut vous aider à résoudre les problèmes liés à Experience Platform et à respecter efficacement les politiques de gestion des données d’entreprise et les exigences réglementaires.
 
 Pour faire simple, un journal d’audit indique **qui** effectué **quelle** action et **quand**. Chaque action enregistrée dans un journal contient des métadonnées qui indiquent le type d’action, la date et l’heure, l’ID d’e-mail de l’utilisateur ou de l’utilisatrice qui a exécuté l’action et des attributs supplémentaires liés au type d’action.
 
@@ -36,7 +36,7 @@ Pour faire simple, un journal d’audit indique **qui** effectué **quelle** act
 >
 > Les métadonnées des actions **Ajouter un utilisateur** et **Supprimer un utilisateur** dans la ressource **Rôle** ne contiennent pas l’ID d’e-mail de l’utilisateur qui a exécuté l’action. À la place, les journaux affichent l’ID d’e-mail généré par le système (system@adobe.com).
 
-Ce document couvre les journaux d’audit dans Platform, y compris la manière de les afficher et de les gérer dans l’interface utilisateur ou l’API.
+Ce document couvre les journaux d’audit dans Experience Platform, y compris la manière de les afficher et de les gérer dans l’interface utilisateur ou l’API.
 
 ## Types d’événements capturés par les logs d’audit {#category}
 
@@ -74,7 +74,7 @@ Le tableau suivant décrit les actions sur lesquelles les ressources sont enregi
 
 Lorsque la fonctionnalité est activée pour votre organisation, les journaux d’audit sont automatiquement collectés au fur et à mesure de l’activité. Vous n’avez pas besoin d’activer manuellement la collecte des journaux.
 
-Pour afficher et exporter les journaux d’audit, l’autorisation de contrôle d’accès **[!UICONTROL Afficher le journal d’activité de l’utilisateur]** doit être accordée (pour la catégorie [!UICONTROL Gouvernance des données]). Pour savoir comment gérer les autorisations individuelles pour les fonctionnalités de Platform, reportez-vous à la [documentation sur le contrôle d’accès](../../../access-control/home.md).
+Pour afficher et exporter les journaux d’audit, l’autorisation de contrôle d’accès **[!UICONTROL Afficher le journal d’activité de l’utilisateur]** doit être accordée (pour la catégorie [!UICONTROL Gouvernance des données]). Pour savoir comment gérer les autorisations individuelles pour les fonctionnalités Experience Platform, reportez-vous à la [documentation sur le contrôle d’accès](../../../access-control/home.md).
 
 ## Gérer les journaux d’audit dans l’interface utilisateur {#managing-audit-logs-in-the-ui}
 
@@ -83,7 +83,7 @@ Pour afficher et exporter les journaux d’audit, l’autorisation de contrôle 
 >title="Instructions"
 >abstract="<ul><li>Sélectionnez <b>Audits</b> dans le volet de navigation de gauche. L’espace de travail Audits affiche une liste des journaux enregistrés, triés par défaut du plus récent au moins récent.</li>   <li> REMARQUE : les journaux d’audit sont conservés pendant 365 jours, après quoi ils seront supprimés du système. Par conséquent, vous ne pouvez revenir en arrière que pendant une période maximale de 365 jours. Si vous devez revenir sur des données datant de plus de 365 jours, vous devez exporter régulièrement les journaux afin de répondre aux exigences de votre politique interne. </li><li>Sélectionnez un événement dans la liste pour afficher ses détails dans le rail de droite. </li><li>Sélectionnez l’icône en forme d’entonnoir pour afficher une liste de contrôles de filtre permettant de limiter les résultats. Seuls les 1 000 derniers enregistrements sont affichés, quels que soient les différents filtres sélectionnés. </li><li>Pour exporter la liste actuelle des journaux d’audit, sélectionnez **Journal de téléchargement**.</li><li>Pour plus d’informations sur cette fonctionnalité, voir l’<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=fr">aperçu des journaux d’audit</a> sur Experience League.</li></ul>"
 
-Vous pouvez afficher les journaux d’audit de différentes fonctionnalités d’Experience Platform dans l’espace de travail **[!UICONTROL Audits]** de l’interface utilisateur de Platform. L’espace de travail affiche une liste des journaux enregistrés, triés par défaut du plus récent au moins récent.
+Vous pouvez afficher les journaux d’audit de différentes fonctionnalités d’Experience Platform dans l’espace de travail **[!UICONTROL Audits]** de l’interface utilisateur d’Experience Platform. L’espace de travail affiche une liste des journaux enregistrés, triés par défaut du plus récent au moins récent.
 
 ![Tableau de bord Contrôles en surbrillance Contrôles dans le menu de gauche.](../../images/audit-logs/audits.png)
 
@@ -171,7 +171,7 @@ Pour savoir comment gérer les journaux d’audit des activités dans Adobe Admi
 
 ## Étapes suivantes et ressources supplémentaires
 
-Ce guide explique comment gérer les journaux d’audit dans Experience Platform. Pour plus d’informations sur la surveillance des activités de Platform, consultez la documentation sur [Observability Insights](../../../observability/home.md) et [la surveillance de l’ingestion des données](../../../ingestion/quality/monitor-data-ingestion.md).
+Ce guide explique comment gérer les journaux d’audit dans Experience Platform. Pour plus d’informations sur la surveillance des activités d’Experience Platform, consultez la documentation sur [Observability Insights](../../../observability/home.md) et [la surveillance de l’ingestion des données](../../../ingestion/quality/monitor-data-ingestion.md).
 
 Pour mieux comprendre les journaux d’audit dans Experience Platform, regardez la vidéo suivante :
 
