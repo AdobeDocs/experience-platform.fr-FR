@@ -3,9 +3,9 @@ title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Plat
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2580'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -13,18 +13,18 @@ ht-degree: 93%
 
 Ce document contient les notes de mise à jour de l’extension de balises du SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, voir les [notes de mise à jour du SDK Web Platform](/help/web-sdk/release-notes.md).
 
-## Version 2.29.0 - jeudi 5 mars 2025
+## Version 2.29.0 - 5 mars 2025
 
 **Nouvelles fonctionnalités**
 
-- Vous pouvez désormais créer des versions SDK Web personnalisées et choisir les composants dont vous avez besoin dans l’interface utilisateur de l’extension de balise. Cela peut entraîner des versions plus petites en excluant les composants inutilisés. Consultez la documentation sur la [création d’une version SDK Web personnalisée](web-sdk-extension-configuration.md#custom-build).
-- Contient [version 2.26.0](../../../../web-sdk/release-notes.md#2-26-0) du SDK Web Adobe Experience Platform.
+- Vous pouvez désormais créer des versions SDK web personnalisées et choisir les composants dont vous avez besoin à partir de l’interface d’utilisation de l’extension des balises. Vous pouvez ainsi obtenir des versions plus petites en excluant des composants non utilisés. Consultez la documentation sur la [création de versions SDK web personnalisées](web-sdk-extension-configuration.md#custom-build).
+- Contient la [version 2.26.0](../../../../web-sdk/release-notes.md#2-26-0) du SDK web d’Adobe Experience Platform.
 
 **Correctifs et améliorations**
 
-- Ajout de la gestion des éléments de données manquants dans les actions [mettre à jour la variable](action-types.md#update-variable). Auparavant, la modification d’une action de mise à jour de variable avec un élément de données manquant affichait un message d’erreur. Vous pouvez désormais choisir un autre élément de données et tous les paramètres de l’action Mettre à jour la variable sont toujours appliqués. Les éléments de données peuvent être manquants s’ils sont supprimés ou si une propriété Balises est dupliquée.
-- Ajout de la prise en charge de l’ouverture d’un nouvel onglet avec l’action [rediriger avec identité](action-types.md#redirect-with-identity). Désormais, lors de l’utilisation de l’action , l’attribut `target` de la balise d’ancrage est utilisé lors de la redirection du navigateur.
-- Correction d’un problème en raison duquel Adobe Audience Manager ne pouvait pas être désactivé dans les remplacements de configuration.
+- Ajout de la gestion gracieuse des éléments de données manquants dans les actions [Mettre à jour la variable](action-types.md#update-variable). Auparavant, la modification d’une action Mettre à jour la variable contenant un élément de données manquant s’affichait comme message d’erreur. À présent, vous pouvez choisir un autre élément de données afin d’appliquer l’action Mettre à jour la variable à tous les paramètres. Des éléments de données peuvent être manquants s’ils sont supprimés ou si une propriété Balises est en double.
+- Ajout de la prise en charge de l’ouverture d’un nouvel onglet avec l’action [Redirection vers une identité](action-types.md#redirect-with-identity). À présent, si vous utilisez cette action, l’attribut `target` de la balise d’ancrage est utilisé pour rediriger le navigateur.
+- Correction d’un problème en raison duquel Adobe Audience Manager ne pouvait pas être désactivé dans les remplacements de la configuration.
 
 ## Version 2.28.0 - vendredi 23 janvier 2025
 
