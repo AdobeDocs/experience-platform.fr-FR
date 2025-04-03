@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
 title: Présentation de Segmentation Service
-description: Découvrez Adobe Experience Platform Segmentation Service et le rôle qu’il occupe dans l’écosystème de Platform.
+description: Découvrez Adobe Experience Platform Segmentation Service et le rôle qu’il joue dans l’écosystème Experience Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
+source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 93%
+source-wordcount: '1679'
+ht-degree: 84%
 
 ---
 
-# Présentation de [!DNL Segmentation Service]
+# Vue d’ensemble d’[!DNL Segmentation Service]
 
-Le [!DNL Segmentation Service] d’Adobe Experience Platform fournit une interface utilisateur et une API RESTful qui vous permettent de créer des audiences par le biais de définitions de segment ou d’autres sources à partir de vos données [!DNL Real-Time Customer Profile]. Ces audiences sont configurées et conservées de manière centralisée sur [!DNL Platform] et sont facilement accessibles à partir de n’importe quelle solution Adobe.
+Le [!DNL Segmentation Service] d’Adobe Experience Platform fournit une interface utilisateur et une API RESTful qui vous permettent de créer des audiences par le biais de définitions de segment ou d’autres sources à partir de vos données [!DNL Real-Time Customer Profile]. Ces audiences sont configurées et conservées de manière centralisée sur [!DNL Experience Platform] et sont facilement accessibles à partir de n’importe quelle solution Adobe.
 
 Ce document offre une présentation de [!DNL Segmentation Service] et de son rôle dans Adobe Experience Platform.
 
@@ -20,7 +20,7 @@ Ce document offre une présentation de [!DNL Segmentation Service] et de son rô
 
 Vous devez comprendre les termes clés suivants utilisés dans ce document :
 
-- **Audience** : un groupe de personnes qui partagent des comportements et/ou des caractéristiques similaires. Ce groupe de personnes peut être généré par Adobe Experience Platform à l’aide de définitions de segment (audience générée par Platform) ou à partir de sources externes (audience générée en externe).
+- **Audience** : un groupe de personnes qui partagent des comportements et/ou des caractéristiques similaires. Cette collection de personnes peut être générée par Adobe Experience Platform à l’aide de définitions de segment (audience générée par Experience Platform) ou à partir de sources externes (audience générée en externe).
 - **Définition de segment** : l’ensemble des règles utilisées par Adobe Experience Platform pour décrire les caractéristiques ou le comportement clés d’une audience cible.
 - **Segmenter** : acte de séparation des profils en audiences.
 
@@ -28,15 +28,15 @@ Vous devez comprendre les termes clés suivants utilisés dans ce document :
 
 La segmentation est le processus de définition d’attributs ou de comportements spécifiques partagés par un sous-ensemble de profils de votre banque de profils afin de distinguer un groupe de clients potentiels de votre base de clients. Par exemple, dans une campagne par e-mail intitulée « Avez-vous oublié d’acheter vos baskets ? », vous souhaitez peut-être connaître l’audience de tous les utilisateurs ayant recherché des baskets au cours des 30 derniers jours sans effectuer d’achat.
 
-Une fois qu’une audience a été définie sur le plan conceptuel, elle est créée dans [!DNL Experience Platform]. En règle générale, les audiences sont créées par la personne spécialiste du marketing ou des audiences, bien que certaines organisations préfèrent qu’elles soient créées par leur propre service marketing, en collaboration avec leur propre personnel chargé de l’analyse des données. Lors de la révision des données envoyées à [!DNL Platform], la personne qui analyse les données peut créer l’audience de deux manières. Elle peut créer une définition de segment en sélectionnant les champs et les valeurs qui seront utilisés pour créer les règles ou les conditions de l’audience, ou composer une audience à l’aide de la composition de l’audience.
+Une fois qu’une audience a été définie sur le plan conceptuel, elle est créée dans [!DNL Experience Platform]. En règle générale, les audiences sont créées par la personne spécialiste du marketing ou des audiences, bien que certaines organisations préfèrent qu’elles soient créées par leur propre service marketing, en collaboration avec leur propre personnel chargé de l’analyse des données. Lors de la révision des données envoyées à [!DNL Experience Platform], la personne qui analyse les données peut créer l’audience de deux manières. Elle peut créer une définition de segment en sélectionnant les champs et les valeurs qui seront utilisés pour créer les règles ou les conditions de l’audience, ou composer une audience à l’aide de la composition de l’audience.
 
 ## Créer des audiences
 
-Les audiences peuvent être créées de deux manières différentes sur Adobe Experience Platform : elles peuvent être directement composées en tant qu’audiences ou par le biais de définitions de segment dérivées de Platform.
+Vous pouvez créer des audiences de plusieurs manières sur Adobe Experience Platform, notamment par le biais de compositions, de définitions de segment, de données fédérées et de Data Distiller.
 
 ### Composition de l’audience
 
-Lorsque vous composez directement une audience sur Platform, utilisez la composition de l’audience. Pour savoir comment utiliser la fonctionnalité de composition d’audience pour créer une audience, consultez le [Guide de la composition d’audience](./ui/audience-composition.md).
+Lors de la composition directe d’une audience sur Experience Platform, vous pouvez utiliser la composition de l’audience. Pour savoir comment utiliser la fonctionnalité de composition d’audience pour créer une audience, consultez le [Guide de la composition d’audience](./ui/audience-composition.md).
 
 ### Définitions de segment
 
@@ -61,7 +61,7 @@ Outre les compositions d’audience et les définitions de segment, vous pouvez 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="Méthodes d’évaluation"
->abstract="Platform prend actuellement en charge trois méthodes d’évaluation des audiences : segmentation en flux continu, segmentation par lots et segmentation Edge."
+>abstract="Experience Platform prend actuellement en charge trois méthodes d’évaluation des audiences : segmentation par flux, segmentation par lots et segmentation Edge."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
@@ -69,7 +69,7 @@ Outre les compositions d’audience et les définitions de segment, vous pouvez 
 >abstract="La segmentation en flux continu est un processus continu de sélection des données qui met à jour vos audiences en réponse à l’activité des utilisateurs et des utilisatrices."
 >additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/segmentation/methods/streaming-segmentation" text="Évaluer les événements en temps quasi réel grâce à la segmentation en flux continu"
 
-Platform prend actuellement en charge trois méthodes d’évaluation des audiences : segmentation en flux continu, segmentation par lots et segmentation Edge.
+Experience Platform prend actuellement en charge trois méthodes d’évaluation des audiences : segmentation par flux, segmentation par lots et segmentation Edge.
 
 ### Segmentation en flux continu {#streaming}
 
@@ -93,12 +93,12 @@ Les audiences par lots sont automatiquement évaluées toutes les 24 heures. Si
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="Évaluation Edge"
->abstract="La segmentation Edge permet d’évaluer instantanément les segments dans Platform sur le réseau Edge, en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante."
+>abstract="La segmentation Edge permet d’évaluer les segments dans Experience Platform instantanément sur Edge Network, en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante."
 >additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/segmentation/methods/edge-segmentation" text="Guide de segmentation Edge"
 
-La segmentation Edge permet d’évaluer les segments dans Platform instantanément [sur Edge Network](../landing/edge-and-hub-comparison.md), en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
+La segmentation Edge permet d’évaluer les segments dans Experience Platform instantanément [sur Edge Network](../landing/edge-and-hub-comparison.md), en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
 
-Pour en savoir plus sur la segmentation Edge, consultez la [documentation API](./methods/edge-segmentation.md) ou la [documentation de l’interface utilisateur](./methods/edge-segmentation.md).
+Pour en savoir plus sur la segmentation Edge, veuillez lire la [présentation de la segmentation Edge](./methods/edge-segmentation.md).
 
 ## Accéder aux résultats de la segmentation
 
@@ -122,7 +122,7 @@ Lors de la création d’une nouvelle définition de segment, vous devez fournir
 
 Les politiques de fusion sont des règles utilisées par [!DNL Profile] pour déterminer comment les données seront hiérarchisées et combinées dans une vue unifiée sous certaines conditions.
 
-Si aucune politique de fusion n’est définie, la politique de fusion par défaut de [!DNL Platform] est utilisée. Si vous préférez utiliser une politique de fusion spécifique à votre organisation, vous pouvez créer la vôtre et la marquer comme valeur par défaut de votre organisation.
+Si aucune politique de fusion n’est définie, la politique de fusion par défaut de [!DNL Experience Platform] est utilisée. Si vous préférez utiliser une politique de fusion spécifique à votre organisation, vous pouvez créer la vôtre et la marquer comme valeur par défaut de votre organisation.
 
 Pour plus d’informations sur les politiques de fusion, consultez le [guide des politiques de fusion](../profile/api/merge-policies.md).
 
@@ -137,6 +137,7 @@ Outre le nom et la politique de fusion, le [!DNL Segment Builder] vous offre un 
 ## Fonctionnalités de segmentation avancées
 
 Les définitions de segment peuvent être configurées pour générer une audience en continu en combinant l’[ingestion de données en flux continu](../ingestion/streaming-ingestion/overview.md) avec l’une des fonctionnalités de segmentation avancées suivantes :
+
 - [Segmentation séquentielle](#sequential)
 - [Segmentation dynamique](#dynamic)
 - [Segmentation d’entités multiples](#multi-entity)

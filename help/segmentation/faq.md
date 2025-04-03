@@ -2,16 +2,16 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 16ffdd0e28687c04b4b8a2b33f10ddceea9ec03a
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '4832'
-ht-degree: 28%
+source-wordcount: '4842'
+ht-degree: 27%
 
 ---
 
 # Questions fréquentes
 
-L’interface utilisateur et l’API RESTful du [!DNL Segmentation Service] d’Adobe Experience Platform vous permettent de créer des audiences par le biais de définitions de segment ou d’autres sources à partir de vos données [!DNL Real-Time Customer Profile]. Ces audiences sont configurées et conservées de manière centralisée sur Platform et sont facilement accessibles à partir de n’importe quelle solution Adobe. Vous trouverez ci-dessous les questions fréquentes sur les audiences et la segmentation.
+L’interface utilisateur et l’API RESTful du [!DNL Segmentation Service] d’Adobe Experience Platform vous permettent de créer des audiences par le biais de définitions de segment ou d’autres sources à partir de vos données [!DNL Real-Time Customer Profile]. Ces audiences sont configurées et conservées de manière centralisée sur Experience Platform et sont facilement accessibles depuis n’importe quelle solution Adobe. Vous trouverez ci-dessous les questions fréquentes sur les audiences et la segmentation.
 
 ## Audience Portal
 
@@ -35,7 +35,7 @@ Pour charger des audiences générées en externe, vous devez disposer des autor
 
 Lorsque vous chargez une audience générée en externe, un jeu de données est créé et visible dans l’inventaire des jeux de données. Le nom du jeu de données sera le **même** que le nom de l’audience générée en externe que vous avez chargée.
 
-### Qu’est-ce qu’une audience générée en externe composée de et qu’advient-il de ces données lorsqu’elles sont importées dans Platform ?
+### Qu’est-ce qu’une audience générée en externe composée de et qu’advient-il de ces données lorsqu’elles sont importées dans Experience Platform ?
 
 Pendant le workflow d’importation d’audience externe, vous devez spécifier la colonne du fichier CSV qui correspond à l’**identité de Principal**. Parmi les exemples d’identité principale figurent l’adresse e-mail, l’ECID ou un espace de noms d’identité personnalisé spécifique à une organisation.
 
@@ -45,9 +45,9 @@ Toutes les autres données de l’audience générée en externe sont considér�
 
 Bien que l’audience générée en externe puisse être référencée lors de la création d’audiences à l’aide du créateur de segments, les attributs de profil individuels **ne peuvent pas** être utilisés.
 
-### Puis-je réconcilier des données d’audience générées en externe avec un profil existant dans Platform ?
+### Puis-je réconcilier des données d’audience générées en externe avec un profil existant dans Experience Platform ?
 
-Oui, l’audience générée en externe sera fusionnée avec le profil existant dans Platform si les identifiants principaux correspondent. La réconciliation des données peut prendre jusqu’à 24 heures. Si les données de profil n’existent pas déjà, un profil est créé lors de l’ingestion des données.
+Oui, l’audience générée en externe sera fusionnée avec le profil existant dans Experience Platform si les identifiants principaux correspondent. La réconciliation de ces données peut prendre jusqu’à 24 heures. Si les données de profil n’existent pas déjà, un profil est créé lors de l’ingestion des données.
 
 ### Comment les préférences de consentement des clients sont-elles respectées pour les audiences générées en externe qui sont importées dans Audience Portal ?{#consent}
 
@@ -135,7 +135,7 @@ Le graphique suivant explique les différents statuts de cycle de vie, ce qu’i
 | --- | --- | --- | --- | --- | --- | --- | --- | -- |
 | Brouillon | Une audience à l’état **Brouillon** est une audience qui est toujours en développement et qui n’est pas encore prête à être utilisée dans d’autres services. | Oui, mais peut être caché. | Non | Oui | Peuvent être importées ou mises à jour pendant le processus d’affinement. | Évalué pour obtenir des chiffres de publication précis. | Oui, mais son utilisation n’est pas recommandée. | Oui |
 | Publié | Une audience dont l’état est **Publié** est une audience prête à être utilisée dans tous les services en aval. | Oui | Oui | Oui | Peuvent être importés ou mis à jour. | Évalué à l’aide de la segmentation par lots, en flux continu ou Edge. | Oui | Oui |
-| Inactif | Une audience dont l’état est **Inactive** est une audience qui n’est actuellement pas utilisée. Il existe toujours dans Platform, mais il ne sera **pas** utilisable tant qu’il ne sera pas marqué comme brouillon ou publié. | Non, mais peut être affiché. | Non | Non | Plus mise à jour. | N’est plus évalué ou mis à jour par Platform. | Non | Oui |
+| Inactif | Une audience dont l’état est **Inactive** est une audience qui n’est actuellement pas utilisée. Il existe toujours dans Experience Platform, mais il ne sera **pas** utilisable tant qu’il ne sera pas marqué comme brouillon ou publié. | Non, mais peut être affiché. | Non | Non | Plus mise à jour. | n’est plus évalué ou mis à jour par Experience Platform. | Non | Oui |
 | Supprimé | Une audience dont l’état est **Supprimée** est une audience qui a été supprimée. L’exécution de la suppression réelle des données peut prendre jusqu’à quelques minutes. | Non | Non | Non | Les données sous-jacentes sont supprimées. | Aucune évaluation ni exécution de données ne se produit une fois la suppression terminée. | Non | Non |
 
 ### Dans quels états puis-je modifier mes audiences ?
@@ -272,7 +272,7 @@ La section suivante répertorie les questions relatives à la composition de l�
 
 ### Quand dois-je utiliser la composition de l’audience plutôt que le créateur de segments ?
 
-La composition de l’audience et le créateur de segments jouent tous deux un rôle important dans la création d’audiences dans Platform.
+La composition de l’audience et le créateur de segments jouent tous deux un rôle important dans la création d’audiences dans Experience Platform.
 
 Le créateur de segments est plus adapté à la création d’audiences **création** (pour créer une audience à partir de zéro), tandis que la composition de l’audience est plus adaptée au traitement et à la personnalisation de l’audience **pour créer de nouvelles audiences basées sur une audience existante**.
 
@@ -308,12 +308,12 @@ Le placement du composant de composition suit une structure rigide comme suit :
 
 En outre, les restrictions suivantes(?) appliquer lors de l’utilisation de ces blocs :
 
-- Fractionner le bloc
+- Bloc Partager
    - Ce bloc ne prend en charge que les types de données **String**. Le bloc Fractionner ne prend **pas** en charge le type de données date ou booléen.
    - En outre, ce bloc ne prend **pas** en charge les attributs d’enrichissement.
 - Exclure le bloc
    - Ce bloc ne prend **pas** en charge le type de données date ou booléen.
-- Bloc de classement
+- Bloc Classement
    - Ce bloc ne prend **pas** en charge les attributs d’enrichissement.
 
 Pour plus d’informations sur l’utilisation de la composition de l’audience, lisez le [Guide de l’interface utilisateur de la composition d’audience](./ui/audience-composition.md).
@@ -376,9 +376,9 @@ Par conséquent, lorsque des modifications sont apportées au profil, telles que
 
 Supposons, par exemple, que vous ayez créé deux audiences qui s’excluent mutuellement : l’audience A est destinée aux personnes qui vivent à Washington et l’audience B est destinée aux personnes qui ne vivent **pas** à Washington. Il existe deux profils : le profil 1 pour une personne qui vit à Washington et le profil 2 pour une personne qui vit en Oregon.
 
-Lorsque le traitement d’évaluation de segmentation par lots s’exécute, le profil 1 passe à l’audience A, tandis que le profil 2 passe à l’audience B. Plus tard, mais avant l’exécution du traitement d’évaluation de segmentation par lots du lendemain, un événement qui réconcilie les deux profils entre dans Platform. Par conséquent, un seul profil fusionné contenant les profils 1 et 2 est créé.
+Lorsque le traitement d’évaluation de segmentation par lots s’exécute, le profil 1 passe à l’audience A, tandis que le profil 2 passe à l’audience B. Plus tard, mais avant l’exécution du traitement d’évaluation de segmentation par lots du lendemain, un événement qui réconcilie les deux profils entre dans Experience Platform. Par conséquent, un seul profil fusionné contenant les profils 1 et 2 est créé.
 
-Jusqu’à l’exécution de la tâche d’évaluation de segment par lot suivante, le nouveau profil fusionné aura une appartenance à l’audience dans **les deux** profil 1 et profil 2. Par conséquent, cela signifie qu’elle sera membre des **à la fois** audience A et audience B, bien que ces audiences aient des définitions contradictoires. Pour l’utilisateur final, il s’agit de la **exactement même situation** qu’avant la connexion des profils, puisqu’il n’y avait toujours qu’une seule personne concernée et que Platform ne disposait tout simplement **pas** d’informations suffisantes pour connecter les deux profils.
+Jusqu’à l’exécution de la tâche d’évaluation de segment par lot suivante, le nouveau profil fusionné aura une appartenance à l’audience dans **les deux** profil 1 et profil 2. Par conséquent, cela signifie qu’elle sera membre des **à la fois** audience A et audience B, bien que ces audiences aient des définitions contradictoires. Pour l’utilisateur final, il s’agit de la **exactement la même situation** qu’avant la connexion des profils, puisqu’il n’y avait toujours qu’une seule personne concernée et qu’Experience Platform ne disposait tout simplement **pas** d’informations suffisantes pour connecter les deux profils.
 
 Si vous utilisez la recherche de profil pour récupérer le profil nouvellement créé et examiner son appartenance à l’audience, elle indique qu’elle est membre des **deux** audience A et audience B, malgré le fait que ces deux audiences ont des définitions contradictoires. Une fois la tâche d’évaluation de segmentation par lots quotidienne exécutée, l’appartenance à l’audience sera mise à jour pour refléter cet état mis à jour des données de profil.
 
@@ -430,4 +430,4 @@ La disponibilité d’une définition de segment peut prendre jusqu’à une heu
 
 ### Existe-t-il des limitations aux données diffusées en continu dans ?
 
-Pour que les données diffusées soient utilisées dans la segmentation en flux continu, il **doit** y avoir un espacement entre les événements diffusés en flux continu. Si un trop grand nombre d’événements sont diffusés en continu dans la même seconde, Platform traite ces événements comme des données générées par les robots et ils sont ignorés. En règle générale, vous devez disposer d’au **moins** cinq secondes entre les données d’événement pour vous assurer que les données sont correctement utilisées.
+Pour que les données diffusées soient utilisées dans la segmentation en flux continu, il **doit** y avoir un espacement entre les événements diffusés en flux continu. Si un trop grand nombre d’événements sont diffusés en continu dans la même seconde, Experience Platform traite ces événements comme des données générées par les robots et ils sont ignorés. En règle générale, vous devez disposer d’au **moins** cinq secondes entre les données d’événement pour vous assurer que les données sont correctement utilisées.

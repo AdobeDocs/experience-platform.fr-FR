@@ -3,9 +3,9 @@ title: Point d’entrée de l’API Audiences
 description: Utilisez le point d’entrée audiences dans l’API Adobe Experience Platform Segmentation Service pour créer, gérer et mettre à jour des audiences par programmation pour votre organisation.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 7b1dedeab8df9678134474045cb87b27550f7fb6
+source-git-commit: 2ec6bacb44dc9b31fcd5cb4c457ba109a921aa84
 workflow-type: tm+mt
-source-wordcount: '1590'
+source-wordcount: '1592'
 ht-degree: 6%
 
 ---
@@ -472,7 +472,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `name` | Nom de l’audience. |
 | `namespace` | Espace de noms de l’audience. |
 | `description` | Description de l’audience. |
-| `type` | Champ généré par le système qui indique si l’audience est générée par Platform ou est une audience générée en externe. Les valeurs possibles sont `SegmentDefinition` et `ExternalSegment`. Une `SegmentDefinition` fait référence à une audience générée dans Platform, tandis qu’une `ExternalSegment` fait référence à une audience qui n’a pas été générée dans Platform. |
+| `type` | Champ généré par le système qui indique si l’audience est générée par Platform ou est une audience générée en externe. Les valeurs possibles sont `SegmentDefinition` et `ExternalSegment`. Un `SegmentDefinition` fait référence à une audience générée dans Experience Platform, tandis qu’un `ExternalSegment` fait référence à une audience qui n’a pas été générée dans Experience Platform. |
 | `expression` | Objet contenant l’expression PQL de l’audience. |
 | `lifecycleState` | Statut de l’audience. Les valeurs possibles sont `draft`, `published` et `inactive`. `draft` représente le moment où l’audience est créée, le moment `published` où elle est publiée et le moment `inactive` où elle n’est plus active. |
 | `datasetId` | Identifiant du jeu de données dans lequel se trouvent les données de l’audience. |
@@ -482,7 +482,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 
 **Réponse**
 
-Une réponse réussie renvoie un statut HTTP 200 avec les détails de votre audience nouvellement mise à jour. Notez que les détails de votre audience seront différents selon qu’il s’agit d’une audience générée par Platform ou d’une audience générée en externe.
+Une réponse réussie renvoie un statut HTTP 200 avec les détails de votre audience nouvellement mise à jour. Notez que les détails de votre audience seront différents selon qu’il s’agit d’une audience générée par Experience Platform ou d’une audience générée en externe.
 
 +++Exemple de réponse lors de la mise à jour d’une audience entière.
 
@@ -490,7 +490,7 @@ Une réponse réussie renvoie un statut HTTP 200 avec les détails de votre audi
 {
     "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
     "audienceId": "test-platform-audience-id",
-    "name": "New Platform audience",
+    "name": "New Experience Platform audience",
     "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -565,7 +565,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec l’audience mise à jour.
 {
     "id": "60ccea95-1435-4180-97a5-58af4aa285ab5",
     "audienceId": "test-platform-audience-id",
-    "name": "New Platform audience",
+    "name": "New Experience Platform audience",
     "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {

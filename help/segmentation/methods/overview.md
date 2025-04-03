@@ -2,9 +2,9 @@
 title: Méthodes d’évaluation d’audience
 description: Découvrez les différents types de méthodes d’évaluation disponibles sur Adobe Experience Platform.
 exl-id: 54513369-42fa-4bab-803a-21d6dcd87660
-source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '242'
 ht-degree: 5%
 
 ---
@@ -25,7 +25,7 @@ L’évaluation d’audience flexible vous permet d’exécuter une tâche de se
 
 ## Segmentation par streaming
 
-La segmentation par flux est une méthode d’évaluation de segmentation que vous pouvez utiliser pour évaluer les audiences en temps quasi réel tout en vous concentrant sur la richesse des données. Vous pouvez utiliser la segmentation en flux continu pour segmenter rapidement les données en flux continu telles qu’elles arrivent dans Platform.
+La segmentation par flux est une méthode d’évaluation de segmentation que vous pouvez utiliser pour évaluer les audiences en temps quasi réel tout en vous concentrant sur la richesse des données. Vous pouvez utiliser la segmentation en flux continu pour segmenter rapidement les données en flux continu telles qu’elles se présentent dans Experience Platform.
 
 Pour plus d’informations sur la segmentation en flux continu, consultez la [présentation de la segmentation en flux continu](./streaming-segmentation.md).
 

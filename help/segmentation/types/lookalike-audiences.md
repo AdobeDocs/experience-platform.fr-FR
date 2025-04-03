@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Audiences Similaires
 description: Découvrez comment cibler de nouvelles audiences à forte valeur ajoutée dans Adobe Experience Platform à l’aide d’audiences semblables.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '2192'
+source-wordcount: '2193'
 ht-degree: 10%
 
 ---
@@ -33,7 +33,7 @@ Avant de commencer à utiliser des audiences semblables, veillez à bien compren
 
 Pour utiliser des informations semblables, l’audience de base **doit** doit répondre aux critères d’éligibilité suivants :
 
-- L’audience de base **doit** doit être créée dans Platform.
+- L’audience de base **doit** doit être créée dans Experience Platform.
    - Les audiences générées de manière externe ne sont **pas** éligibles aux informations semblables.
 - L’audience de base **doit** se trouve dans la politique de fusion par défaut.
 - L’audience de base **ne doit** pas utiliser de champs limités par la gouvernance des données.

@@ -3,10 +3,10 @@ title: Audiences de prospects
 description: Découvrez comment créer et utiliser des audiences de prospects pour cibler une clientèle inconnue à l’aide d’informations tierces.
 type: Documentation
 exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
-source-git-commit: 78cb7fd24b858859226c737affbb4e93783c884d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 79%
+source-wordcount: '393'
+ht-degree: 72%
 
 ---
 
@@ -56,7 +56,7 @@ Pour plus d’informations sur l’utilisation du créateur de segments, lisez l
 
 ## Exemples d’utilisation {#use-cases}
 
-Pour savoir comment utiliser la fonctionnalité d’audiences de prospects dans Experience Platform en combinaison avec d’autres fonctionnalités de Platform, consultez la documentation de cas d’utilisation suivante :
+Pour découvrir comment utiliser la fonctionnalité d’audiences de prospects dans Experience Platform en combinaison avec d’autres fonctionnalités d’Experience Platform, veuillez lire la documentation de cas d’utilisation suivante :
 
 - [Atteindre et acquérir une nouvelle clientèle à l’aide de la fonctionnalité de prospection](../../rtcdp/partner-data/prospecting.md)
 

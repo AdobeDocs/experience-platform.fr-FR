@@ -2,9 +2,9 @@
 title: Présentation d’Audience Portal
 description: Découvrez comment utiliser Audience Portal pour afficher, gérer et créer des audiences dans Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
+source-git-commit: c1f06b14cb33a0fc29a50a2851c1fb52ae82c45d
 workflow-type: tm+mt
-source-wordcount: '4310'
+source-wordcount: '4356'
 ht-degree: 55%
 
 ---
@@ -26,6 +26,7 @@ Dans Audience Portal, vous pouvez accomplir les tâches suivantes :
    - [Utilisation du créateur de segments pour créer une audience](#segment-builder)
    - [Utilisation de la composition de l’audience pour créer une audience](#audience-composition)
    - [Utilisez la composition d’audience fédérée pour créer une audience à l’aide des données de votre entrepôt de données existant](#fac)
+   - [Utilisation de Data Distiller pour créer une audience](#data-distiller)
 - [Importer des audiences générées de manière externe](#import-audience)
 
 Pour ouvrir Audience Portal, sélectionnez l’onglet **[!UICONTROL Parcourir]** dans la section Segmentation .
@@ -57,7 +58,7 @@ Une icône de points de suspension se trouve à côté de chaque audience. Cette
 | [!UICONTROL Modifier] | Service de segmentation | Ouvre le créateur de segments pour modifier votre audience. Notez que si votre audience a été créée via l’API, vous ne pourrez **pas** la modifier à l’aide du créateur de segments. Pour plus d’informations sur l’utilisation du créateur de segments, consultez le [Guide de l’interface utilisateur du créateur de segments](./segment-builder.md). |
 | [!UICONTROL Ouvrir la composition] | Composition de l’audience | Ouvre la composition Audience pour afficher votre audience. Pour plus d’informations sur la composition d’audience, consultez le [Guide de l’interface utilisateur de la composition d’audience](./audience-composition.md). |
 | [!UICONTROL Activer vers la destination] | Service de segmentation | Active l’audience vers une destination. Pour plus d’informations sur l’activation d’une audience vers une destination, consultez la [vue d’ensemble de l’activation](../../destinations/ui/activation-overview.md). |
-| [!UICONTROL Partager avec des partenaires] | Composition d’audience, chargement personnalisé, Segmentation Service | Partage votre audience avec d’autres utilisateurs de Platform. Pour plus d’informations sur cette fonctionnalité, consultez la [vue d’ensemble de la correspondance de segments](./segment-match/overview.md). |
+| [!UICONTROL Partager avec des partenaires] | Composition d’audience, chargement personnalisé, Segmentation Service | Partage votre audience avec d’autres utilisateurs Experience Platform. Pour plus d’informations sur cette fonctionnalité, consultez la [vue d’ensemble de la correspondance de segments](./segment-match/overview.md). |
 | [!UICONTROL Gérer les balises] | Composition d’audience, chargement personnalisé, Segmentation Service | Gère les balises définies par l’utilisateur et appartenant à l’audience. Pour plus d’informations sur cette fonctionnalité, consultez la section sur [le filtrage et le balisage](#manage-audiences). |
 | [!UICONTROL Déplacer vers le dossier] | Composition d’audience, chargement personnalisé, Segmentation Service | Gère le dossier auquel appartient l’audience. Pour plus d’informations sur cette fonctionnalité, consultez la section sur [le filtrage et le balisage](#manage-audiences). |
 | [!UICONTROL Copier] | Service de segmentation | Duplique l’audience sélectionnée. Vous trouverez plus d’informations sur cette fonction dans la [FAQ sur la segmentation](../faq.md#copy). |
@@ -274,7 +275,7 @@ Sélectionner **[!UICONTROL Modifier les propriétés]** vous permet de modifier
 
 ### Total des audiences {#audience-total}
 
-Pour les audiences et compositions générées par Platform, la section **[!UICONTROL Audience totale]** indique le nombre total de profils qui remplissent les critères de l’audience.
+Pour les audiences et compositions générées par Experience Platform, la section **[!UICONTROL Audience totale]** indique le nombre total de profils qui remplissent les critères de l’audience.
 
 >[!NOTE]
 >
@@ -297,7 +298,7 @@ Pour les audiences dont l’origine est **[!UICONTROL Chargement personnalisé]*
 | Nombre de profils | Nombre total de profils qui remplissent les critères de l’audience. |
 | Nom du jeu de données | Nom du jeu de données dans lequel l’audience a été ingérée. Vous pouvez sélectionner le nom du jeu de données pour plus d’informations sur le jeu de données. Pour en savoir plus sur les jeux de données, consultez le [guide de l’interface utilisateur des jeux de données](../../catalog/datasets/user-guide.md). |
 | Lot de jeux de données | Identifiant du jeu de données dans lequel l’audience a été ingérée. Vous pouvez sélectionner l’identifiant du lot pour plus d’informations sur le lot. Pour en savoir plus sur les lots, consultez le [guide de surveillance de l’ingestion des données](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
-| Lot de profils | Identifiant du lot qui a créé les profils sur Platform. Vous pouvez sélectionner l’identifiant du lot pour plus d’informations sur le lot. Pour en savoir plus sur les lots, consultez le [guide de surveillance de l’ingestion des données](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Lot de profils | Identifiant du lot qui a créé les profils sur Experience Platform. Vous pouvez sélectionner l’identifiant du lot pour plus d’informations sur le lot. Pour en savoir plus sur les lots, consultez le [guide de surveillance de l’ingestion des données](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
 | Schéma | Nom du schéma auquel l’audience appartient. Vous pouvez sélectionner le nom du schéma pour afficher des informations sur la structure du schéma et appliquer des libellés d’utilisation des données. Pour plus d’informations, consultez le guide [Gestion des libellés d’utilisation des données pour un schéma](../../xdm/tutorials/labels.md). |
 | Enregistrements ingérés | Nombre d’enregistrements ingérés dans le jeu de données. |
 | Échec des enregistrements | Nombre d’enregistrements qui n’ont pas pu être ingérés dans le jeu de données. |
@@ -385,9 +386,17 @@ Sélectionner **[!UICONTROL Créer une règle]** vous dirige vers le créateur d
 
 ### Composition d’audiences fédérées {#fac}
 
-Outre les compositions d’audience et les définitions de segment, vous pouvez utiliser la composition d’audience fédérée d’Adobe pour créer de nouvelles audiences à partir de jeux de données d’entreprise sans copier les données sous-jacentes et stocker ces audiences dans Adobe Experience Platform Audience Portal. Vous pouvez également enrichir les audiences existantes dans Adobe Experience Platform en utilisant les données d’audience composées qui ont été fédérées à partir de l’entrepôt de données d’entreprise. Veuillez lire le guide sur la [Composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/home).
+Vous pouvez utiliser la composition d’audiences fédérées d’Adobe pour créer de nouvelles audiences à partir de jeux de données d’entreprise sans copier les données sous-jacentes et stocker ces audiences dans Adobe Experience Platform Audience Portal.
+
+Vous pouvez également enrichir les audiences existantes dans Adobe Experience Platform en utilisant les données d’audience composées qui ont été fédérées à partir de l’entrepôt de données d’entreprise. Veuillez lire le guide sur la [Composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/home).
 
 ![Liste des audiences créées dans la composition d’audiences fédérées pour votre organisation.](../images/ui/overview/federated-audience-composition.png)
+
+### Data Distiller {#data-distiller}
+
+Vous pouvez utiliser l’extension SQL de Distiller de données pour créer des audiences à partir du lac de données. Ces données incluent les entités de dimension existantes telles que les attributs du client ou les informations sur les produits.
+
+Vous trouverez plus d’informations sur Data Distiller dans le guide [création d’audiences à l’aide de SQL](../../query-service/data-distiller-audiences/overview.md).
 
 ## Importer une audience {#import-audience}
 
@@ -446,7 +455,7 @@ Une fois que les détails sont corrects, sélectionnez **[!UICONTROL Terminer]**
 >
 >En outre, si votre audience générée en externe contient des informations sensibles et/ou liées aux soins de santé, vous **devez** appliquer les libellés d’utilisation des données nécessaires avant de l’activer vers une destination. Étant donné que les variables des audiences générées en externe sont stockées dans le lac de données plutôt que dans le profil client en temps réel, vous ne devez **pas** inclure les données de consentement dans votre fichier CSV.
 >
->Pour plus d’informations sur l’application de libellés d’utilisation des données, consultez la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). Pour en savoir plus sur les libellés d’utilisation des données sur Platform en général, consultez la [présentation des libellés d’utilisation des données](../../data-governance/labels/overview.md). Pour en savoir plus sur le fonctionnement du consentement dans les audiences générées en externe, veuillez lire la [FAQ sur les audiences](../faq.md#consent).
+>Pour plus d’informations sur l’application de libellés d’utilisation des données, consultez la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). Pour en savoir plus sur les libellés d’utilisation des données dans Experience Platform en général, consultez la [ présentation des libellés d’utilisation des données ](../../data-governance/labels/overview.md). Pour en savoir plus sur le fonctionnement du consentement dans les audiences générées en externe, veuillez lire la [FAQ sur les audiences](../faq.md#consent).
 
 ## Étapes suivantes
 

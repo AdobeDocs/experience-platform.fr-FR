@@ -4,9 +4,9 @@ description: Découvrez comment créer et utiliser des audiences de compte pour 
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 78cb7fd24b858859226c737affbb4e93783c884d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1495'
 ht-degree: 23%
 
 ---
@@ -53,7 +53,7 @@ Pour créer une audience de compte, sélectionnez **[!UICONTROL Créer une audie
 
 ![Le bouton [!UICONTROL Créer une audience] est mis en surbrillance sur la page de navigation de l’audience du compte.](../images/types/account/select-create-audience.png)
 
-Le créateur de segments s’affiche. Les attributs de compte et les audiences s’affichent dans la barre de navigation de gauche. Sous l’onglet [!UICONTROL Attributs], vous pouvez ajouter des attributs créés par Platform et des attributs personnalisés.
+Le créateur de segments s’affiche. Les attributs de compte et les audiences s’affichent dans la barre de navigation de gauche. Sous l’onglet [!UICONTROL Attributs], vous pouvez ajouter des attributs créés par Experience Platform et des attributs personnalisés.
 
 ![Le créateur de segments s’affiche. Notez que seuls les attributs et les audiences s’affichent.](../images/types/account/segment-builder.png)
 
@@ -100,7 +100,7 @@ Lors de la connexion de l’opportunité à la personne, vous pouvez choisir par
 
 Après avoir établi la relation souhaitée, vous pouvez ajouter les personnes-audiences requises à votre définition de segment.
 
-## Activer l&#39;audience {#activate}
+## Activer l’audience {#activate}
 
 >[!NOTE]
 >
@@ -116,7 +116,7 @@ La page [!UICONTROL Activer la destination] s’affiche. Pour plus d’informati
 
 ## Étapes suivantes {#next-steps}
 
-Vous êtes arrivé au bout de ce guide. À présent, vous comprenez mieux comment créer et utiliser les audiences de votre compte dans Adobe Experience Platform. Pour savoir comment utiliser d’autres types d’audiences dans Platform, veuillez lire la [présentation des types d’audiences](./overview.md).
+Vous êtes arrivé au bout de ce guide. À présent, vous comprenez mieux comment créer et utiliser les audiences de votre compte dans Adobe Experience Platform. Pour savoir comment utiliser d’autres types d’audiences dans Experience Platform, veuillez lire la [présentation des types d’audiences](./overview.md).
 
 ## Annexe {#appendix}
 

@@ -1,15 +1,15 @@
 ---
 title: Guide de segmentation d’Edge
-description: Découvrez comment utiliser la segmentation Edge pour évaluer les audiences dans Platform instantanément sur le serveur Edge, en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
+description: Découvrez comment utiliser la segmentation Edge pour évaluer les audiences dans Experience Platform instantanément sur le serveur Edge, en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 7ed92ed7573f82a2da2fc96f0868fe6f97a61899
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1152'
-ht-degree: 25%
+source-wordcount: '1154'
+ht-degree: 26%
 
 ---
 
-# Guide de segmentation d’Edge
+# Guide de segmentation Edge
 
 La segmentation Edge permet d’évaluer les définitions de segment dans Adobe Experience Platform instantanément [sur le serveur Edge](../../landing/edge-and-hub-comparison.md), en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
 
@@ -302,7 +302,7 @@ Dans la liste des filtres disponibles, accédez à **Fréquence des mises à jou
 
 ![La fréquence de mise à jour d’Edge est sélectionnée, affichant toutes les audiences de l’organisation qui sont évaluées à l’aide de la segmentation Edge.](../images/methods/edge/filter-edge.png)
 
-Pour en savoir plus sur l’affichage des audiences dans Platform, veuillez lire le guide [Audience Portal](../ui/audience-portal.md).
+Pour en savoir plus sur l’affichage des audiences dans Experience Platform, consultez le guide [Audience Portal](../ui/audience-portal.md).
 
 >[!ENDTABS]
 

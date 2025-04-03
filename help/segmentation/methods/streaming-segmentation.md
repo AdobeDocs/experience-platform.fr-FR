@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de segmentation en flux continu
 description: Découvrez la segmentation en flux continu, notamment en quoi elle consiste, comment créer une audience évaluée à l’aide de la segmentation en flux continu et comment afficher vos audiences créées à l’aide de la segmentation en flux continu.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 3f0cfd6c36344f481751bf05236df4fb288eab60
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1253'
-ht-degree: 32%
+source-wordcount: '1256'
+ht-degree: 31%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 32%
 
 La segmentation en flux continu est la possibilité d’évaluer les audiences dans Adobe Experience Platform en temps quasi réel tout en se concentrant sur la richesse des données.
 
-Avec la segmentation en flux continu, la qualification d’audience se produit désormais lorsque les données en flux continu entrent dans Platform, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Vous pouvez ainsi évaluer les données telles qu’elles sont transmises à Platform, ce qui permet de maintenir automatiquement à jour l’appartenance à une audience.
+Avec la segmentation en flux continu, la qualification d’audience se produit désormais lorsque les données en flux continu entrent dans Experience Platform, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Vous pouvez ainsi évaluer les données telles qu’elles sont transmises à Experience Platform, ce qui permet de maintenir automatiquement à jour l’appartenance à une audience.
 
 ## Types de requête éligibles {#query-types}
 
@@ -312,7 +312,7 @@ Dans les filtres disponibles, accédez à **[!UICONTROL Fréquence des mises à 
 
 ![La fréquence de mise à jour en flux continu est sélectionnée, affichant toutes les audiences de l’organisation qui sont évaluées à l’aide de la segmentation en flux continu.](../images/methods/streaming/filter-streaming.png)
 
-Pour en savoir plus sur l’affichage des audiences dans Platform, veuillez lire le guide [Audience Portal](../ui/audience-portal.md).
+Pour en savoir plus sur l’affichage des audiences dans Experience Platform, consultez le guide [Audience Portal](../ui/audience-portal.md).
 
 >[!ENDTABS]
 

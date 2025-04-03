@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur d’Audiences
 description: La Composition d’audience dans l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail propose des commandes intuitives pour créer et modifier des audiences pour votre organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 758ec9de9bf3e6bb9853c9455c69e0b5ca7948d5
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '2344'
+source-wordcount: '2345'
 ht-degree: 79%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 79%
 >- Gestion des profils
 >- Gestion des politiques de fusion
 >
->Vous trouverez plus d’informations sur les autorisations dans Platform dans la [présentation du contrôle d’accès](../../access-control/home.md#permissions).
+>Vous trouverez plus d’informations sur les autorisations dans Experience Platform dans la [présentation du contrôle d’accès](../../access-control/home.md#permissions).
 
 >[!NOTE]
 >
@@ -328,7 +328,7 @@ Vous pouvez fractionner une audience de deux façons : par pourcentage ou par a
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_persistent"
->title="Partage persistant"
+>title="Division persistante"
 >abstract="Vous pouvez rendre le partage en pourcentage persistant en activant cette option et en sélectionnant un espace de noms d’identité."
 
 Lors du fractionnement par pourcentage, les audiences sont réparties de manière aléatoire en fonction du nombre de chemins et des pourcentages fournis.

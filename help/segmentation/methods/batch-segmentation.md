@@ -1,13 +1,13 @@
 ---
 title: Guide de segmentation par lots
 description: Découvrez la segmentation par lots, notamment en quoi elle consiste, comment créer une audience évaluée à l’aide de la segmentation par lots et comment afficher vos audiences créées à l’aide de la segmentation par lots.
-source-git-commit: cffd7bad831f0f58bd2b62585bfd0b84280b1732
+exl-id: b6fba2fb-8eec-4429-92fd-ece5c79d379d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '550'
 ht-degree: 10%
 
 ---
-
 
 # Guide de segmentation par lots
 
@@ -279,7 +279,7 @@ Dans les filtres disponibles, accédez à **[!UICONTROL Fréquence des mises à 
 
 ![La fréquence de mise à jour par lots est sélectionnée, affichant toutes les audiences de l’organisation qui sont évaluées à l’aide de la segmentation par lots.](../images/methods/batch/filter-batch.png)
 
-Pour en savoir plus sur l’affichage des audiences dans Platform, veuillez lire le guide [Audience Portal](../ui/audience-portal.md).
+Pour en savoir plus sur l’affichage des audiences dans Experience Platform, consultez le guide [Audience Portal](../ui/audience-portal.md).
 
 >[!ENDTABS]
 

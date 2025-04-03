@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;segmentation;Segmentation;Correspondance de segments;correspondance de segments
 solution: Experience Platform
 title: Questions fréquentes sur la correspondance de segments
-description: La correspondance de segments est un service de partage de segments dans Adobe Experience Platform qui permet à deux personnes ou plus utilisant Platform d’échanger des données de segment de manière sécurisée, régulée et respectueuse de la confidentialité.
+description: La correspondance des segments est un service de partage de segments dans Adobe Experience Platform qui permet à deux utilisateurs d’Experience Platform ou plus d’échanger des données de segment de manière sécurisée, régulée et respectueuse de la confidentialité.
 exl-id: cfa9db16-0bc3-4d25-914d-0d923eccb5a3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
-source-wordcount: '414'
-ht-degree: 100%
+source-wordcount: '415'
+ht-degree: 87%
 
 ---
 
@@ -23,7 +23,7 @@ Aucune donnée de clientèle ou de segment n’est déplacée dans les sandbox p
 
 Il s’agit d’un processus à sens unique, ce qui signifie que les identifiants préhachés d’origine ne sont pas exposés et ne peuvent pas faire l’objet d’une ingénierie inversée.
 
-Ces structures de données possèdent des propriétés uniques qui permettent à l’ingénierie d’effectuer des opérations d’union et d’intersection entre elles, même si les informations codées sont considérablement compressées ou hachées. Ces opérations permettent à [!DNL Segment Match] d’obtenir l’intersection estimée de deux structures de données composées d’identifiants à partir de deux sandbox différentes sans avoir à comparer les valeurs réelles. Puisque [!DNL Segment Match] utilise uniquement les structures de données, les identifiants ne quittent jamais les stockages de profils de leurs organisations respectives à des fins d’estimation. Cela permet à Adobe de répondre aux exigences de confidentialité et de sécurité des clientes et clients tout en offrant des outils d’estimation très précis pour guider les accords de collaboration sur les données.
+Ces structures de données possèdent des propriétés uniques qui permettent à l’ingénierie d’effectuer des opérations d’union et d’intersection entre elles, même si les informations codées sont considérablement compressées ou hachées. Ces opérations permettent à [!DNL Segment Match] d’obtenir l’intersection estimée de deux structures de données composées d’identifiants à partir de deux sandbox différentes sans avoir à comparer les valeurs réelles. Puisque [!DNL Segment Match] utilise uniquement les structures de données, les identifiants ne quittent jamais les stockages de profils de leurs organisations respectives à des fins d’estimation. Cela permet à Adobe de répondre aux exigences de confidentialité et de sécurité des clients tout en offrant des outils d’estimation très précis pour guider les accords de collaboration sur les données.
 
 ## Quel est le processus derrière la désignation des identités qui reçoivent les identifiants de segment partagés ?
 

@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Respect du consentement dans les définitions de segment
 description: Découvrez comment respecter les préférences de consentement des clients pour la collecte et le partage de données personnelles dans les opérations de segmentation.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: bf0e5065e771b748ee9d6ae3c431e76f08552983
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '678'
-ht-degree: 0%
+source-wordcount: '680'
+ht-degree: 2%
 
 ---
 
@@ -24,7 +24,7 @@ Si un client ou une cliente a retiré ou refusé le consentement pour que ses do
 
 Le respect des valeurs de consentement du client ou de la cliente nécessite une compréhension des différents services [!DNL Adobe Experience Platform] impliqués. Avant de commencer ce tutoriel, assurez-vous de connaître les services suivants :
 
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel Platform organise les données de l’expérience client.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : framework normalisé selon lequel Experience Platform organise les données de l’expérience client.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [[!DNL Adobe Experience Platform Segmentation Service]](../home.md) : permet de créer des audiences à partir de données [!DNL Real-Time Customer Profile].
 
@@ -75,7 +75,7 @@ Avec les valeurs de consentement **[!UICONTROL Collecte de données]** et **[!UI
 
 Vous êtes arrivé au bout de ce tutoriel. À présent, vous devriez mieux comprendre comment respecter les consentements et préférences des clients lors de la création de définitions de segment dans Experience Platform.
 
-Pour plus d’informations sur la gestion du consentement dans Platform, consultez la documentation suivante :
+Pour plus d’informations sur la gestion du consentement dans Experience Platform, consultez la documentation suivante :
 
 * [Traitement du consentement à l’aide de la norme Adobe](../../landing/governance-privacy-security/consent/adobe/overview.md)
 * [Traitement du consentement à l’aide de la norme IAB TCF 2.0](../../landing/governance-privacy-security/consent/iab/overview.md)

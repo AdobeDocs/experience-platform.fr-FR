@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: dc36c5e2eb109d1728f2290ee61e69f458929ba7
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '4976'
-ht-degree: 66%
+source-wordcount: '4980'
+ht-degree: 64%
 
 ---
 
@@ -76,11 +76,11 @@ Par défaut, seuls les champs de schéma renseignés de votre banque de données
 
 Vous pouvez utiliser les données d’une ou de plusieurs suites de rapports Adobe Analytics comme événements dans la segmentation.
 
-Lors de l’utilisation de données provenant d’une seule suite de rapports Analytics, Platform ajoutera automatiquement des descripteurs et des noms conviviaux aux eVars, ce qui facilite la recherche de ces champs dans [!DNL Segment Builder].
+Lors de l’utilisation de données provenant d’une seule suite de rapports Analytics, Experience Platform ajoute automatiquement des descripteurs et des noms conviviaux aux eVars, ce qui facilite la recherche de ces champs dans [!DNL Segment Builder].
 
 ![Image montrant comment les variables génériques (eVars) sont mappées avec un nom convivial d’utilisateur.](../images/ui/segment-builder/single-report-suite.png)
 
-Lors de l’utilisation de données provenant de plusieurs suites de rapports Analytics, Platform **ne pourra pas** ajouter automatiquement de descripteurs ou de noms conviviaux aux eVars. Par conséquent, avant d’utiliser les données de suites de rapports Analytics, vous devez les mapper aux champs XDM. Vous trouverez plus d’informations sur le mappage des variables Analytics à XDM dans le [guide de connexion source Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
+Lors de l’utilisation de données provenant de plusieurs suites de rapports Analytics, Experience Platform **ne peut pas** ajoute automatiquement de descripteurs ou de noms conviviaux aux eVars. Par conséquent, avant d’utiliser les données de suites de rapports Analytics, vous devez les mapper aux champs XDM. Vous trouverez plus d’informations sur le mappage des variables Analytics à XDM dans le [guide de connexion source Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
 
 Supposons, par exemple, que vous ayez deux suites de rapports avec les variables suivantes :
 
@@ -119,7 +119,7 @@ Une fois les suites de rapports mappées, vous pouvez utiliser ces nouveaux cham
 
 >[!NOTE]
 >
->Pour les audiences créées dans Platform, seules les audiences qui ont la **même** politique de fusion s’affichent.
+>Pour les audiences créées dans Experience Platform, seules les audiences qui ont la **même** politique de fusion s’affichent.
 
 L’onglet **[!UICONTROL Audiences]** répertorie toutes les audiences importées de sources externes, telles que Adobe Audience Manager ou Customer Journey Analytics, ainsi que les audiences créées dans [!DNL Experience Platform].
 
@@ -182,7 +182,7 @@ Veuillez noter qu’un maximum de 250 valeurs est autorisé. Si vous dépassez 
 
 Vous pouvez faire glisser une audience depuis l’onglet **[!UICONTROL Audience]** sur la zone de travail du créateur de règles pour référencer l’appartenance à l’audience dans la nouvelle définition de segment. Cela vous permet d’inclure ou d’exclure l’appartenance à une audience en tant qu’attribut dans les nouvelles règles de définition de segment.
 
-Pour les [!DNL Platform]audiences créées à l’aide du [!DNL Segment Builder], vous avez la possibilité de convertir l’audience en un ensemble de règles utilisées dans la définition de segment pour cette audience. Cette conversion effectue une copie de la logique de règle, qui peut ensuite être modifiée sans affecter la définition de segment d’origine. Assurez-vous d’avoir enregistré les modifications récentes apportées à votre définition de segment avant de la convertir en logique de règle.
+Pour les [!DNL Experience Platform]audiences créées à l’aide du [!DNL Segment Builder], vous avez la possibilité de convertir l’audience en un ensemble de règles utilisées dans la définition de segment pour cette audience. Cette conversion effectue une copie de la logique de règle, qui peut ensuite être modifiée sans affecter la définition de segment d’origine. Assurez-vous d’avoir enregistré les modifications récentes apportées à votre définition de segment avant de la convertir en logique de règle.
 
 >[!NOTE]
 >
@@ -349,11 +349,11 @@ Après avoir selectionné **[!UICONTROL Déplier le conteneur]**, le conteneur e
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Politiques de fusion"
->abstract="Une politique de fusion permet de fusionner les différents jeux de données pour former votre profil. Platform a fourni une politique de fusion par défaut ; vous pouvez également créer une politique de fusion par défaut dans les profils. Choisissez une politique de fusion correspondant à votre objectif marketing pour cette audience."
+>abstract="Une politique de fusion permet de fusionner les différents jeux de données pour former votre profil. Experience Platform a fourni une politique de fusion par défaut, ou vous pouvez créer une politique de fusion par défaut dans Profils. Choisissez une politique de fusion correspondant à votre objectif marketing pour cette audience."
 
-[!DNL Experience Platform] vous permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chaque client. Lors du regroupement de ces données, les politiques de fusion sont les règles utilisées par [!DNL Platform] pour déterminer comment les données seront hiérarchisées et quelles données seront combinées pour créer un profil.
+[!DNL Experience Platform] vous permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chaque client. Lors du regroupement de ces données, les politiques de fusion sont les règles utilisées par [!DNL Experience Platform] pour déterminer comment les données seront hiérarchisées et quelles données seront combinées pour créer un profil.
 
-Vous pouvez sélectionner une politique de fusion qui correspond à votre objectif marketing pour cette audience ou utiliser la politique de fusion par défaut fournie par [!DNL Platform]. Vous pouvez créer plusieurs politiques de fusion propres à votre organisation, y compris créer votre propre politique de fusion par défaut. Pour obtenir des instructions détaillées sur la création de politiques de fusion pour votre organisation, commencez par lire la [présentation des politiques de fusion](../../profile/merge-policies/overview.md).
+Vous pouvez sélectionner une politique de fusion qui correspond à votre objectif marketing pour cette audience ou utiliser la politique de fusion par défaut fournie par [!DNL Experience Platform]. Vous pouvez créer plusieurs politiques de fusion propres à votre organisation, y compris créer votre propre politique de fusion par défaut. Pour obtenir des instructions détaillées sur la création de politiques de fusion pour votre organisation, commencez par lire la [présentation des politiques de fusion](../../profile/merge-policies/overview.md).
 
 Pour sélectionner une politique de fusion pour votre définition de segment, sélectionnez l’icône en forme d’engrenage dans l’onglet **[!UICONTROL Champs]**, puis utilisez le menu déroulant **[!UICONTROL Politique de fusion]** pour sélectionner la politique de fusion à utiliser.
 

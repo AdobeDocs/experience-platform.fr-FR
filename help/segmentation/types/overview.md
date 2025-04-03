@@ -1,13 +1,13 @@
 ---
 title: Types d’audience
 description: Découvrez les différents types d’audiences que vous pouvez créer sur Adobe Experience Platform.
-source-git-commit: c7d71113ddcef6aca8b2637814b46e589a6b7fdf
+exl-id: c95c6276-d1a4-4d92-95cf-60d895c3fe10
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '251'
 ht-degree: 2%
 
 ---
-
 
 # Types d’audience
 
@@ -19,7 +19,7 @@ Une audience de personnes est une audience créée à l’aide des données de p
 
 Pour plus d’informations sur les audiences individuelles, veuillez lire la [présentation des audiences individuelles](./people-audiences.md).
 
-## [!BADGE édition B2C] audience semblable
+## [!BADGE B2C Edition ] audience semblable
 
 Une audience semblable est une audience créée en analysant une audience à forte valeur ajoutée avec un modèle de machine learning similaire. Le modèle similaire peut créer une audience qui correspond au seuil de similarité de l’audience de grande valeur analysée.
 
@@ -39,4 +39,4 @@ Pour plus d’informations sur les audiences de prospects, veuillez lire la [pr�
 
 ## Étapes suivantes
 
-Après avoir lu cette présentation, vous avez maintenant une meilleure compréhension des différents types of audiences disponibles sur Platform. Pour en savoir plus sur les différentes méthodes d’évaluation, veuillez lire le [aperçu des méthodes d’évaluation](../methods/overview.md).
+Après avoir lu cette présentation, vous avez maintenant une meilleure compréhension des différents types of audiences disponibles sur Experience Platform. Pour en savoir plus sur les différentes méthodes d’évaluation, veuillez lire le [aperçu des méthodes d’évaluation](../methods/overview.md).

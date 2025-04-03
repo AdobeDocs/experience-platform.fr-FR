@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
 title: Types de données pris en charge dans Segmentation Service
-description: Tous les types de données de modèle de données d’expérience (XDM) sont pris en charge dans Adobe Segmentation Service. Les règles qui constituent une définition de segment sont contextualisées par les types de données suivantes.
+description: Tous les types de données des modèles de données d’expérience (XDM) sont pris en charge dans Adobe Segmentation Service. Les règles qui constituent une définition de segment sont contextualisées par les types de données suivantes.
 exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '480'
 ht-degree: 52%
 
 ---
 
 # Types de données pris en charge dans Segmentation Service
 
-Tous les types de données de modèle de données d’expérience (XDM) sont pris en charge dans Adobe Experience Platform Segmentation Service. Les règles qui constituent une définition de segment sont contextualisées par les types de données suivantes.
+Tous les types de données des modèles de données d’expérience (XDM) sont pris en charge dans Adobe Experience Platform Segmentation Service. Les règles qui constituent une définition de segment sont contextualisées par les types de données suivantes.
 
 ## Données de chaîne
 
-Les définitions de segment utilisent des données de chaîne pour définir des contraintes non numériques pour les audiences, telles que &quot;nom du pays&quot; ou &quot;niveau du programme de fidélité&quot;.
+Les définitions de segment utilisent des données de chaîne pour définir des contraintes non numériques pour les audiences, telles que « nom du pays » ou « niveau du programme de fidélité ».
 
 Les données de chaîne sont incluses dans les définitions de segment à l’aide d’instructions logiques, inclusives/exclusives et comparatives. Une fois qu’un attribut de chaîne est ajouté à votre définition de segment, vous pouvez utiliser des instructions appropriées à la chaîne pour l’évaluer par rapport à d’autres champs de chaîne.
 
@@ -32,12 +32,12 @@ Les données de date vous permettent d’attribuer un contexte temporel à vos d
 
 | Exemple de champ | Instructions en fonction de la date | Chronologie |
 | ------------- | ------------------------ | --------- |
-| person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | En fonction du jour où la définition de segment a été créée. |
+| person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | Pertinent pour le jour où la définition de segment a été créée. |
 | person.lastPurchase | `in last`, `during`, `before`, `after`, `within` | En fonction d’une semaine ou d’un mois donné. |
 
 ## Événements Experience
 
-En tant que schéma Adobe Experience Platform, [!DNL XDM ExperienceEvents] enregistre les interactions client explicites et implicites avec les applications intégrées à [!DNL Platform], y compris un instantané du système au moment de l’interaction. [!DNL ExperienceEvents] sont des enregistrements de faits. Ainsi, il s’agit d’une source de données disponible lors de la définition de segment.
+En tant que schéma Adobe Experience Platform, [!DNL XDM ExperienceEvents] enregistrer les interactions client explicites et implicites avec les applications intégrées à Experience Platform, y compris un instantané du système au moment où l’interaction a eu lieu. [!DNL ExperienceEvents] sont des enregistrements de faits. Ainsi, il s’agit d’une source de données disponible lors de la définition de segment.
 
 Comme le montre le tableau ci-dessous, les données d’événement sont générées à l’aide de mots-clés qui aident à affiner le comportement des événements et à spécifier des attributs d’événement.
 
@@ -50,19 +50,19 @@ Comme le montre le tableau ci-dessous, les données d’événement sont génér
 
 ### Partage d&#39;audiences
 
-Les audiences externes peuvent également être utilisées comme composants d’une nouvelle définition de segment, en ajoutant leurs règles d’attributs aux nouvelles définitions de segment.
+Les audiences externes peuvent également être utilisées comme composants d’une nouvelle définition de segment, en ajoutant leurs règles d’attribut aux nouvelles définitions de segment.
 
-Actuellement, seule Adobe Audience Manager est prise en charge en tant qu’audience externe, avec des sources supplémentaires activées à l’avenir. Vous trouverez plus d’informations sur l’utilisation des audiences Adobe Audience Manager avec Platform dans le [guide de partage d’audience dans la documentation Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr).
+Actuellement, seul Adobe Audience Manager est pris en charge en tant qu’audience externe, des sources supplémentaires étant activées à l’avenir. Vous trouverez plus d’informations sur l’utilisation des audiences Adobe Audience Manager avec Experience Platform dans le guide [partage d’audiences](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr) de la documentation de Adobe Audience Manager.
 
-### Partage des définitions de segment
+### Partage de la définition de segment
 
-Les définitions de segment créées dans Platform peuvent être utilisées dans d’autres [services principaux Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=fr). Pour activer cette fonctionnalité, vous devez contacter votre architecte de solution ou votre consultant.
+Les définitions de segment créées dans Experience Platform peuvent être utilisées dans d’autres [services principaux de Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=fr). Pour activer cette fonctionnalité, vous devez contacter votre architecte de solution ou votre consultant.
 
 ## Autres types de données
 
-Outre les types de données mentionnés ci-dessus, la liste des types de données pris en charge inclut également :
+Outre les types de données mentionnés ci-dessus, la liste des types de données pris en charge comprend également :
 
-- URI (Uniform Resource Identifier)
+- Identifiant de ressource uniforme (URI)
 - Enum
 - Nombre
 - Long
