@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Mars 2025
 description: Les notes de mise à jour de mars 2025 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: edcdf84a8cb954c15f7dd235fb14cf14e11e22c8
+source-git-commit: f0879683629ba10ed1b799e52f0adf332f079daf
 workflow-type: tm+mt
 source-wordcount: '1250'
-ht-degree: 95%
+ht-degree: 93%
 
 ---
 
@@ -90,7 +90,7 @@ Utilisez les sources dans Experience Platform pour ingérer des données à par
 | Fonctionnalité | Description |
 | --- | --- |
 | [!DNL Bombora Intent] | La source [!DNL Bombora Intent] est désormais disponible dans le catalogue des sources. Utilisez cette source pour : <ul><li>Intégrer les données d’intention Company Surge de Bombora pour identifier les comptes qui recherchent activement vos produits ou services.</li><li>Hiérarchiser les comptes de marché afin de créer des segments précis et d’exécuter des campagnes ABM hyper-ciblées, veillant à ce que vos efforts marketing se concentrent sur les comptes les plus susceptibles d’être convertis.</li><li>Tirer parti des stratégies axées sur les intentions pour optimiser les dépenses publicitaires, stimuler l’engagement et maximiser le retour sur investissement.</li></ul> Pour plus d’informations, consultez le guide sur la [connexion d’un compte  [!DNL Bombora]  à Experience Platform](../../sources/tutorials/ui/create/data-partners/bombora.md). |
-| [!DNL Demandbase Intent] | La source [!DNL Demandbase Intent] est désormais disponible dans le catalogue des sources. Utilisez cette source pour : <ul><li>Intégrez les données d’intention de comptes de Demandbase pour identifier les comptes à taux d’intérêt élevé en fonction des engagements en temps réel.</li><li>En donnant la priorité aux signaux d’intention les plus forts, vous pouvez créer des segments précis et diffuser des campagnes hyper-ciblées afin de vous assurer que vos efforts marketing se concentrent sur les comptes les plus susceptibles d’être convertis.</li><li>Activez les stratégies basées sur l’intention pour optimiser les dépenses publicitaires, augmenter l’engagement et le retour sur investissement.</li></ul> Pour plus d’informations, consultez le guide sur la [connexion d’un compte  [!DNL Demandbase]  à Experience Platform](../../sources/tutorials/ui/create/data-partners/demandbase.md). |
+| [!DNL Demandbase Intent] | La source [!DNL Demandbase Intent] est désormais disponible dans le catalogue de sources. Utilisez cette source pour : <ul><li>Intégrez les données d’intention de comptes de Demandbase pour identifier les comptes à taux d’intérêt élevé en fonction des engagements en temps réel.</li><li>En donnant la priorité aux signaux d’intention les plus forts, vous pouvez créer des segments précis et diffuser des campagnes hyper-ciblées afin de vous assurer que vos efforts marketing se concentrent sur les comptes les plus susceptibles d’être convertis.</li><li>Activez les stratégies basées sur l’intention pour optimiser les dépenses publicitaires, augmenter l’engagement et le retour sur investissement.</li></ul> Pour plus d’informations, consultez le guide sur la [connexion d’un compte  [!DNL Demandbase]  à Experience Platform](../../sources/tutorials/ui/create/data-partners/demandbase.md). |
 
 {style="table-layout:auto"}
 
