@@ -1,8 +1,8 @@
 ---
-source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
+source-git-commit: 67adfddf57d3b10bb80688cf0f0a109a704f4fa5
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 95%
+source-wordcount: '351'
+ht-degree: 98%
 
 ---
 # Contribuer au contenu
@@ -30,20 +30,6 @@ Les corrections mineures ou les clarifications que vous envoyez à titre d’exe
 ### Modifications majeures ou nouveaux articles de membres de la communauté
 
 Si vous faites partie de la communauté Adobe et si vous souhaitez créer un article ou soumettre des modifications importantes, cliquez sur l’onglet **Issues** du référentiel GitHub pour soumettre un problème. Cet envoi démarre une discussion avec l’équipe de documentation. Vous devez collaborer avec l’auteur (ou un autre employé d’Adobe) afin de publier du nouveau contenu.
-
-<!--
-If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
--->
-
-### Modifications majeures ou nouveaux articles des employés Adobe
-
-Si vous êtes rédacteur technique, chef de programme ou développeur de l’équipe de produits en charge d’une solution Adobe Experience Cloud, et que votre travail implique de créer ou de contribuer à des articles techniques, utilisez le référentiel privé à l’adresse `https://git.corp.adobe.com/AdobeDocs`. Pour plus dʼinformations, voir le [guide de collaboration interne](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html).
-
-<!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
-
-## Contacter lʼéquipe de documentation Experience Platform
-
-Comme nous lʼavons indiqué plus haut, les membres de la communauté Adobe peuvent soumettre une question qui sera confiée au rédacteur approprié. Si vous êtes un employé Adobe, vous pouvez soumettre une question ou contacter directement lʼéquipe de documentation Experience Platform. Pour trouver le rédacteur de leads pour une zone spécifique d’Experience Platform, consultez le wiki de documentation de [Adobe Experience Platform](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
 
 ## Outils et configuration
 
