@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point d’entrée de l’API Metrics
 description: Découvrez comment récupérer des mesures d’observabilité dans Experience Platform à l’aide de l’API Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 3b217f7bcb60f762b5d380d82076cfb17d7a2d13
 workflow-type: tm+mt
-source-wordcount: '1278'
-ht-degree: 25%
+source-wordcount: '1294'
+ht-degree: 24%
 
 ---
 
@@ -277,7 +277,7 @@ Le tableau suivant répertorie les différents codes d’erreur qui peuvent êtr
 
 | Code d’erreur | Titre | Description |
 | --- | --- | --- |
-| `INSGHT-1000-400` | Payload de requête incorrecte | Un problème est survenu avec la payload de requête. Assurez-vous de correspondre exactement au formatage de la payload comme illustré [ci-dessus](#v2). L’une des raisons possibles peut déclencher cette erreur :<ul><li>Champs obligatoires manquants, tels que `aggregator`</li><li>Mesures non valides</li><li>La requête contient un agrégateur non valide</li><li>Une date de début se situe après une date de fin</li></ul> |
+| `INSGHT-1000-400` | Payload de requête incorrecte | Un problème est survenu avec la payload de requête. Assurez-vous de correspondre exactement au formatage de la payload comme illustré [ci-dessus](#v2). L’une des raisons possibles peut déclencher cette erreur :<ul><li>Champs obligatoires manquants, tels que `aggregator`</li><li>Mesures non valides</li><li>La requête contient un agrégateur non valide</li><li>Une date de début se situe après une date de fin</li><li>La requête a une période (entre les dates de début et de fin) de plus de 32 jours</li></ul> |
 | `INSGHT-1001-400` | Échec de la requête de mesures | Une erreur s’est produite lors de la tentative d’interrogation de la base de données de mesures en raison d’une requête incorrecte ou de l’impossibilité d’analyser la requête elle-même. Assurez-vous que la requête est correctement formatée avant de réessayer. |
 | `INSGHT-1001-500` | Échec de la requête de mesures | Une erreur s’est produite lors de la tentative d’interrogation de la base de données de mesures en raison d’une erreur de serveur. Effectuez à nouveau la requête et si le problème persiste, contactez l’assistance Adobe. |
 | `INSGHT-1002-500` | Erreur de service | La demande n’a pas pu être traitée en raison d’une erreur interne. Effectuez à nouveau la requête et si le problème persiste, contactez l’assistance Adobe. |
