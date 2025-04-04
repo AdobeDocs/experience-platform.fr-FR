@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Questions fréquentes sur Query Service et Data Distiller
 description: Ce document contient les questions les plus fréquentes et les réponses associées relatives à Query Service et à Data Distiller. Les rubriques incluent l’exportation de données, les outils tiers et les erreurs PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: ef4c7f20710f56ca0de7c0dfdb99751ff2fe8ebe
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '5024'
-ht-degree: 83%
+source-wordcount: '5029'
+ht-degree: 81%
 
 ---
 
@@ -118,7 +118,7 @@ Les étapes suivantes décrivent comment afficher une vue tabulaire d’un jeu d
 - Une fois connecté(e) à Experience Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche de l’interface utilisateur pour accéder au tableau de bord [!UICONTROL Jeux de données].
 - L’onglet pour [!UICONTROL Parcourir] les jeux de données s’ouvre. Vous pouvez utiliser la barre de recherche pour affiner les options disponibles. Sélectionnez un jeu de données dans la liste.
 
-![Tableau de bord Jeux de données dans l’interface utilisateur de Platform avec la barre de recherche et un jeu de données en surbrillance.](./images/troubleshooting/dataset-selection.png)
+![Tableau de bord Jeux de données dans l’interface utilisateur d’Experience Platform avec la barre de recherche et un jeu de données en surbrillance.](./images/troubleshooting/dataset-selection.png)
 
 - L’écran [!UICONTROL Activité des jeux de données] s’affiche. Sélectionnez **[!UICONTROL Prévisualiser le jeu de données]** pour ouvrir une boîte de dialogue du schéma XDM et une vue tabulaire des données aplaties du jeu de données sélectionné. Vous trouverez plus de détails dans la [documentation sur la prévisualisation d’un jeu de données](../catalog/datasets/user-guide.md#preview-a-dataset).
 
@@ -287,7 +287,7 @@ SELECT count(1) FROM myTableName
 ### Puis-je échantillonner mes données ?
 
 +++Réponse
-Cette fonctionnalité est actuellement en développement. Des informations détaillées seront disponibles dans les [notes de mise à jour](../release-notes/latest/latest.md) et par le biais des boîtes de dialogue de l’interface utilisateur de Platform une fois que la fonctionnalité sera prête à être publiée.
+Cette fonctionnalité est actuellement en développement. Des détails seront disponibles dans les [notes de mise à jour](../release-notes/latest/latest.md) et dans les boîtes de dialogue de l’interface utilisateur d’Experience Platform, une fois que la fonctionnalité sera prête à être publiée.
 +++
 
 ### Quelles fonctions d’assistant sont prises en charge par Query Service ?
@@ -522,7 +522,7 @@ Il n’existe aucune limite de simultanéité des requêtes, car les requêtes p
 Il existe des fonctionnalités de surveillance et d’alerte permettant de vérifier les statuts et les activités des requêtes. Voir les documents concernant l’[intégration du journal d’audit de Query Service](./data-governance/audit-log-guide.md) et les [journaux de requête](./ui/overview.md#log) pour plus d’informations.
 +++
 
-### Existe-t-il un moyen de restaurer les mises à jour ? Par exemple, en cas d’erreur ou si certains calculs doivent être reconfigurés lors de l’écriture de données dans Platform, comment ce scénario doit-il être géré ?
+### Existe-t-il un moyen de restaurer les mises à jour ? Par exemple, en cas d’erreur ou si certains calculs doivent être reconfigurés lors de l’écriture de données dans Experience Platform, comment ce scénario doit-il être géré ?
 
 +++Réponse
 Actuellement, nous ne prenons pas en charge les restaurations ou les mises à jour de cette manière.
@@ -563,7 +563,7 @@ Il existe trois approches pour restreindre l’accès. En voici la liste :
 
 +++
 
-### Une fois les données renvoyées par Query Service, existe-t-il des vérifications pouvant être exécutées par Platform pour s’assurer qu’elles n’ont renvoyé aucune donnée protégée ?
+### Une fois les données renvoyées par Query Service, existe-t-il des vérifications pouvant être exécutées par Experience Platform pour s’assurer qu’elles n’ont renvoyé aucune donnée protégée ?
 
 - Query Service prend en charge le contrôle d’accès basé sur les attributs. Vous pouvez restreindre l’accès aux données au niveau de la colonne, de la feuille et/ou au niveau struct. Consultez la documentation pour en savoir plus sur le contrôle d’accès basé sur les attributs.
 
@@ -652,7 +652,7 @@ L’infrastructure principale est constamment améliorée afin d’optimiser l�
 ### L’action « Créer une requête » est bloquée sur « Initialisation de la connexion... » lors de la tentative de connexion à Query Service. Comment résoudre le problème ?
 
 +++Réponse
-Si l’action « Créer une requête » est bloquée sur « Initialisation de la connexion... », il s’agit probablement d’un problème de connexion ou de session. Actualisez le navigateur si vous utilisez l’interface utilisateur de Platform et réessayez.
+Si l’action « Créer une requête » est bloquée sur « Initialisation de la connexion... », il s’agit probablement d’un problème de connexion ou de session. Actualisez le navigateur si vous utilisez l’interface utilisateur d’Experience Platform et réessayez.
 +++
 
 ## Échantillon de jeux de données

@@ -2,18 +2,18 @@
 title: Présentation du connecteur source SFTP
 description: Découvrez comment connecter un serveur SFTP à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1221'
-ht-degree: 51%
+source-wordcount: '1226'
+ht-degree: 45%
 
 ---
 
 # Connecteur SFTP
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
-Lisez ce document pour connaître les étapes préalables requises pour connecter votre compte [!DNL SFTP] à un Experience Platform.
+Lisez ce document pour connaître les étapes préalables à suivre pour connecter votre compte [!DNL SFTP] à Experience Platform.
 
 >[!TIP]
 >
@@ -21,7 +21,7 @@ Lisez ce document pour connaître les étapes préalables requises pour connecte
 
 ## Conditions préalables {#prerequisites}
 
-Lisez cette section pour connaître les étapes préalables requises afin de connecter votre source [!DNL SFTP] à un Experience Platform.
+Lisez cette section pour connaître les étapes préalables à suivre pour connecter votre source [!DNL SFTP] à Experience Platform.
 
 ### Liste autorisée d’adresses IP
 
@@ -40,11 +40,11 @@ La liste suivante inclut les contraintes dont vous devez tenir compte lorsque vo
 
 ### Configurer une clé privée OpenSSH codée en Base64 pour [!DNL SFTP]
 
-Le [!DNL SFTP] source prend en charge l’authentification à l’aide d’une clé privée clé privée OpenSSH codée [!DNL Base64]. Pour plus d’informations sur la génération de votre clé privée OpenSSH codée en Base64 et la connexion [!DNL SFTP] vers Platform, reportez-vous aux étapes ci-dessous.
+Le [!DNL SFTP] source prend en charge l’authentification à l’aide d’une clé privée clé privée OpenSSH codée [!DNL Base64]. Pour plus d’informations sur la génération de votre clé privée OpenSSH codée en Base64 et la connexion de [!DNL SFTP] à Experience Platform, reportez-vous aux étapes ci-dessous.
 
 >[!BEGINTABS]
 
->[!TAB Windows]
+>[!TAB  Windows ]
 
 ### utilisateurs [!DNL Windows]
 
@@ -96,7 +96,7 @@ Exécutez ensuite la commande suivante tout en fournissant le chemin d’accès 
 C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\id_rsa" -Encoding byte)) > C:\Users\lucy\.ssh\id_rsa_base64
 ```
 
-La commande ci-dessus enregistre la clé privée encodée [!DNL Base64] dans le chemin d’accès au fichier que vous avez désigné. Vous pouvez ensuite utiliser cette clé privée pour vous authentifier auprès de [!DNL SFTP] et vous connecter à Platform.
+La commande ci-dessus enregistre la clé privée encodée [!DNL Base64] dans le chemin d’accès au fichier que vous avez désigné. Vous pouvez ensuite utiliser cette clé privée pour vous authentifier auprès de [!DNL SFTP] et vous connecter à Experience Platform.
 
 >[!TAB Mac]
 
@@ -158,24 +158,9 @@ Vous devez fournir des valeurs pour les informations d’identification suivante
 
 >[!BEGINTABS]
 
->[!TAB Authentification de base]
+>[!TAB  Authentification de base ]
 
-Indiquez les valeurs appropriées pour les informations d’identification suivantes afin d’authentifier votre serveur [!DNL SFTP] à l’aide de l’authentification de base.
-
-| Informations d’identification | Description |
-| ---------- | ----------- |
-| `host` | Nom ou adresse IP associé à votre serveur [!DNL SFTP]. |
-| `port` | Port du serveur [!DNL SFTP] auquel vous vous connectez. Si elle n’est pas fournie, la valeur par défaut est `22`. |
-| `username` | Nom d’utilisateur ayant accès à votre serveur [!DNL SFTP]. |
-| `password` | Mot de passe de votre serveur [!DNL SFTP]. |
-| `maxConcurrentConnections` | Ce paramètre vous permet de spécifier une limite maximale pour le nombre de connexions simultanées que Platform va créer lors de la connexion à votre serveur SFTP. Vous devez définir cette valeur sur une valeur inférieure à la limite définie par SFTP. **Remarque** : lorsque ce paramètre est activé pour un compte SFTP existant, il n’affecte que les flux de données futurs et non les flux de données existants. |
-| `folderPath` | Chemin d’accès au dossier auquel vous souhaitez accorder l’accès. [!DNL SFTP] source, vous pouvez fournir le chemin du dossier pour spécifier l’accès de l’utilisateur au sous-dossier de votre choix. |
-| `disableChunking` | Lors de l’ingestion des données, la source [!DNL SFTP] peut d’abord récupérer la longueur du fichier, le diviser en plusieurs parties, puis les lire en parallèle. Vous pouvez activer ou désactiver cette valeur pour spécifier si votre serveur [!DNL SFTP] peut récupérer des longueurs de fichier ou lire des données à partir d’un décalage spécifique. |
-| `connectionSpec.id` | (API uniquement) La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions base et source. L’identifiant de spécification de connexion pour [!DNL SFTP] est `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
-
->[!TAB Authentification de clé publique SSH]
-
-Indiquez les valeurs appropriées pour les informations d’identification suivantes afin d’authentifier votre serveur [!DNL SFTP] à l’aide de l’authentification par clé publique SSH.
+Indiquez les valeurs appropriées pour les informations d’identification suivantes afin d’authentifier le serveur [!DNL SFTP] à l’aide de l’authentification de base.
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
@@ -183,18 +168,33 @@ Indiquez les valeurs appropriées pour les informations d’identification suiva
 | `port` | Port du serveur [!DNL SFTP] auquel vous vous connectez. Si elle n’est pas fournie, la valeur par défaut est `22`. |
 | `username` | Nom d’utilisateur ayant accès à votre serveur [!DNL SFTP]. |
 | `password` | Mot de passe de votre serveur [!DNL SFTP]. |
-| `privateKeyContent` | Contenu de clé privée SSH codée en Base64. Le type de clé OpenSSH doit être classé en tant que RSA ou DSA. |
-| `passPhrase` | L’expression de passe ou le mot de passe pour déchiffrer la clé privée si le fichier de clé ou le contenu de la clé est protégé par une expression de passe. Si PrivateKeyContent est protégé par mot de passe, ce paramètre doit être utilisé avec comme valeur le mot de passe de PrivateKeyContent. |
-| `maxConcurrentConnections` | Ce paramètre vous permet de spécifier une limite maximale pour le nombre de connexions simultanées que Platform va créer lors de la connexion à votre serveur SFTP. Vous devez définir cette valeur sur une valeur inférieure à la limite définie par SFTP. **Remarque** : lorsque ce paramètre est activé pour un compte SFTP existant, il n’affecte que les flux de données futurs et non les flux de données existants. |
-| `folderPath` | Chemin d’accès au dossier auquel vous souhaitez accorder l’accès. [!DNL SFTP] source, vous pouvez fournir le chemin du dossier pour spécifier l’accès de l’utilisateur au sous-dossier de votre choix. |
-| `disableChunking` | Lors de l’ingestion des données, la source [!DNL SFTP] peut d’abord récupérer la longueur du fichier, le diviser en plusieurs parties, puis les lire en parallèle. Vous pouvez activer ou désactiver cette valeur pour spécifier si votre serveur [!DNL SFTP] peut récupérer des longueurs de fichier ou lire des données à partir d’un décalage spécifique. |
-| `connectionSpec.id` | (API uniquement) La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions base et source. L’identifiant de spécification de connexion pour [!DNL SFTP] est `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
+| `maxConcurrentConnections` | Ce paramètre permet de spécifier une limite maximale de connexions simultanées qu’Experience Platform créera lors de la connexion à votre serveur SFTP. Vous devez définir cette valeur pour qu’elle soit inférieure à la limite définie par SFTP. **Remarque** : lorsque ce paramètre est activé pour un compte SFTP existant, il affecte uniquement les flux de données futurs et non les flux de données existants. |
+| `folderPath` | Chemin d’accès au dossier auquel vous souhaitez accorder l’accès. [!DNL SFTP] source, vous pouvez indiquer le chemin d’accès au dossier pour spécifier l’accès des utilisateurs au sous-dossier de votre choix. |
+| `disableChunking` | Lors de l’ingestion de données, la source de [!DNL SFTP] peut d’abord récupérer la longueur du fichier, diviser le fichier en plusieurs parties, puis les lire en parallèle. Vous pouvez activer ou désactiver cette valeur pour spécifier si votre serveur [!DNL SFTP] peut récupérer les longueurs de fichier ou lire les données à partir d’un décalage spécifique. |
+| `connectionSpec.id` | (API uniquement) La spécification de connexion renvoie les propriétés de connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL SFTP] est `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
+
+>[!TAB authentification par clé publique SSH]
+
+Indiquez les valeurs appropriées pour les informations d’identification suivantes afin d’authentifier le serveur [!DNL SFTP] à l’aide de l’authentification par clé publique SSH.
+
+| Informations d’identification | Description |
+| ---------- | ----------- |
+| `host` | Nom ou adresse IP associé à votre serveur [!DNL SFTP]. |
+| `port` | Port du serveur [!DNL SFTP] auquel vous vous connectez. Si elle n’est pas fournie, la valeur par défaut est `22`. |
+| `username` | Nom d’utilisateur ayant accès à votre serveur [!DNL SFTP]. |
+| `password` | Mot de passe de votre serveur [!DNL SFTP]. |
+| `privateKeyContent` | Contenu de clé privée SSH codé en Base64. Le type de clé OpenSSH doit être classé comme RSA ou DSA. |
+| `passPhrase` | Le mot de passe ou le mot de passe pour déchiffrer la clé privée si le fichier de clé ou le contenu de la clé est protégé par un mot de passe. Si PrivateKeyContent est protégé par mot de passe, ce paramètre doit être utilisé avec la phrase secrète de PrivateKeyContent comme valeur. |
+| `maxConcurrentConnections` | Ce paramètre permet de spécifier une limite maximale de connexions simultanées qu’Experience Platform créera lors de la connexion à votre serveur SFTP. Vous devez définir cette valeur pour qu’elle soit inférieure à la limite définie par SFTP. **Remarque** : lorsque ce paramètre est activé pour un compte SFTP existant, il affecte uniquement les flux de données futurs et non les flux de données existants. |
+| `folderPath` | Chemin d’accès au dossier auquel vous souhaitez accorder l’accès. [!DNL SFTP] source, vous pouvez indiquer le chemin d’accès au dossier pour spécifier l’accès des utilisateurs au sous-dossier de votre choix. |
+| `disableChunking` | Lors de l’ingestion de données, la source de [!DNL SFTP] peut d’abord récupérer la longueur du fichier, diviser le fichier en plusieurs parties, puis les lire en parallèle. Vous pouvez activer ou désactiver cette valeur pour spécifier si votre serveur [!DNL SFTP] peut récupérer les longueurs de fichier ou lire les données à partir d’un décalage spécifique. |
+| `connectionSpec.id` | (API uniquement) La spécification de connexion renvoie les propriétés de connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL SFTP] est `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
 
 >[!ENDTABS]
 
 ## Connexion de SFTP à Experience Platform
 
-La documentation ci-dessous fournit des informations sur la connexion d’un serveur SFTP à un Experience Platform à l’aide d’API ou de l’interface utilisateur :
+La documentation ci-dessous fournit des informations sur la connexion d’un serveur SFTP à Experience Platform à l’aide d’API ou de l’interface utilisateur :
 
 ### Utiliser les API
 

@@ -1,53 +1,53 @@
 ---
-title: Définition des champs de mappage dans l’interface utilisateur
-description: Découvrez comment définir un champ de mappage dans l’interface utilisateur de l’Experience Platform.
+title: Définir des champs de mappage dans l’interface utilisateur
+description: Découvrez comment définir un champ de mappage dans l’interface utilisateur d’Experience Platform.
 exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
-source-git-commit: ee27fc42a1ee23ef650d320df64e5970a84d0d38
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
 
-# Définition des champs de mappage dans l’interface utilisateur
+# Définir des champs de mappage dans l’interface utilisateur
 
-Adobe Experience Platform vous permet de personnaliser entièrement la structure de vos classes XDM (Experience Data Model) personnalisées, de groupes de champs de schéma et de types de données.
+Adobe Experience Platform vous permet de personnaliser entièrement la structure de vos classes de modèle de données d’expérience (XDM), groupes de champs de schéma et types de données personnalisés.
 
 Vous pouvez également définir des champs de mappage dans l’éditeur de schémas pour modéliser des structures de données flexibles et dynamiques ou stocker une collection de paires clé-valeur.
 
-Lors de la définition d’un nouveau champ dans l’interface utilisateur de Platform, utilisez la liste déroulante **[!UICONTROL Type]** et sélectionnez &quot;**[!UICONTROL Map]**&quot; dans la liste.
+Lors de la définition d’un nouveau champ dans l’interface utilisateur (IU) d’Experience Platform, utilisez la liste déroulante **[!UICONTROL Type]** et sélectionnez « **[!UICONTROL Mapper]** » dans la liste.
 
-![Éditeur de schémas avec liste déroulante Type et valeur de carte mise en surbrillance.](../../images/ui/fields/special/map.png)
+![Éditeur de schémas avec la liste déroulante Type et la valeur Mapper mises en surbrillance.](../../images/ui/fields/special/map.png)
 
-Une propriété [!UICONTROL Type de valeur de carte] s’affiche. Cette valeur est requise pour les types de données [!UICONTROL Map]. Les valeurs disponibles pour la carte sont [!UICONTROL String] et [!UICONTROL Integer]. Sélectionnez une valeur dans la liste déroulante des options disponibles.
+Une propriété [!UICONTROL Type de valeur map] s’affiche. Cette valeur est requise pour les types de données [!UICONTROL Map]. Les valeurs disponibles pour le mappage sont [!UICONTROL Chaîne] et [!UICONTROL Entier]. Sélectionnez une valeur dans la liste déroulante des options disponibles.
 
-![La liste déroulante de l’éditeur de schémas avec le [!UICONTROL type de valeur de carte] mise en surbrillance.](../../images/ui/fields/special/map-value-type.png)
+![Éditeur de schémas avec la liste déroulante [!UICONTROL Type de valeur de mappage] mise en surbrillance.](../../images/ui/fields/special/map-value-type.png)
 
-Une fois que vous avez configuré le sous-champ, vous devez l’affecter à un groupe de champs. Utilisez le menu déroulant **[!UICONTROL Groupe de champs]** ou champ de recherche, et sélectionnez **[!UICONTROL Appliquer]**. Vous pouvez continuer à ajouter des champs à l’objet à l’aide du même processus, ou sélectionner **[!UICONTROL Enregistrer]** pour confirmer vos paramètres.
+Une fois le sous-champ configuré, vous devez l’affecter à un groupe de champs. Utilisez le menu déroulant **[!UICONTROL Groupe de champs]** ou le champ de recherche, puis sélectionnez **[!UICONTROL Appliquer]**. Vous pouvez continuer à ajouter des champs à l’objet en utilisant le même processus ou sélectionner **[!UICONTROL Enregistrer]** pour confirmer vos paramètres.
 
-![Enregistrement de la sélection et des paramètres de groupe de champs appliqués.](../../images/ui/fields/special/assign-to-field-group.gif)
+![Enregistrement de la sélection du groupe de champs et des paramètres appliqués.](../../images/ui/fields/special/assign-to-field-group.gif)
 
 ## Restrictions d’utilisation {#restrictions}
 
-XDM impose les restrictions suivantes à l’utilisation de ce type de données :
+XDM place les restrictions suivantes sur l’utilisation de ce type de données :
 
 * Les types de carte DOIVENT être de type `object`.
-* Les types de carte NE DOIVENT PAS avoir de propriétés définies (en d’autres termes, ils définissent des objets &quot;vides&quot;).
-* Les types de carte DOIVENT inclure un champ `additionalProperties.type` qui décrit les valeurs qui peuvent être placées dans le mappage, `string` ou `integer`.
-* La segmentation d’entités multiples ne peut être définie que sur la base des clés de mappage et non des valeurs.
-* Les cartes ne sont pas prises en charge pour les audiences de compte.
+* Les propriétés des types de carte NE DOIVENT PAS ÊTRE définies (en d’autres termes, ils définissent des objets « vides »).
+* Les types de mappage DOIVENT inclure un champ `additionalProperties.type` qui décrit les valeurs qui peuvent être placées dans le mappage, que ce soit `string` ou `integer`.
+* La segmentation d’entités multiples peut uniquement être définie en fonction des clés de mappage et non des valeurs.
+* Les mappages ne sont pas pris en charge pour les audiences de compte.
 
-Assurez-vous que vous utilisez uniquement des champs de type map lorsque cela est absolument nécessaire, car ils présentent les inconvénients suivants en termes de performances :
+Assurez-vous d’utiliser uniquement des champs de type carte lorsqu’ils sont absolument nécessaires, car ils présentent les inconvénients de performance suivants :
 
-* Le temps de réponse de [Adobe Experience Platform Query Service](../../../query-service/home.md) se dégrade de trois secondes à dix secondes pour 100 millions d’enregistrements.
-* Les cartes doivent comporter moins de 16 clés, sinon elles risquent d’être détériorées.
+* Le temps de réponse de [Adobe Experience Platform Query Service](../../../query-service/home.md) passe de trois secondes à dix secondes pour 100 millions d’enregistrements.
+* Les cartes doivent comporter moins de 16 clés, faute de quoi elles risquent d’être dégradées davantage.
 
 >[!NOTE]
 >
->L’interface utilisateur de Platform présente des limites quant à la manière dont elle peut extraire les clés des champs de type map. Bien que les champs de type objet puissent être développés, les mappages s’affichent sous la forme d’un champ unique. Les champs de mappage créés par le biais de l’API Schema Registry qui ne sont pas des types de données string ou integer s’affichent sous la forme de types de données &quot;[!UICONTROL Complex]&quot;.
+>L’interface utilisateur d’Experience Platform présente des limites dans la façon dont elle peut extraire les clés des champs de type carte. Alors que les champs de type objet peuvent être développés, les mappages s’affichent sous la forme d’un seul champ à la place. Les champs de mappage créés via l’API Schema Registry qui ne sont pas de type chaîne ou entier s’affichent sous la forme de types de données « [!UICONTROL Complexes] ».
 
 ## Étapes suivantes
 
-Après avoir lu ce document, vous pouvez désormais définir des champs de mappage dans l’interface utilisateur de Platform. N’oubliez pas que vous ne pouvez utiliser que des classes et des groupes de champs pour ajouter des champs aux schémas. Pour en savoir plus sur la gestion de ces ressources dans l’interface utilisateur, consultez les guides sur la création et la modification des [classes](../resources/classes.md) et des [groupes de champs](../resources/field-groups.md).
+Après lecture de ce document, vous êtes désormais en mesure de définir des champs de mappage dans l’interface utilisateur d’Experience Platform. N’oubliez pas que vous ne pouvez utiliser que des classes et des groupes de champs pour ajouter des champs aux schémas. Pour en savoir plus sur la gestion de ces ressources dans l’interface utilisateur, consultez les guides sur la création et la modification de [classes](../resources/classes.md) et de [groupes de champs](../resources/field-groups.md).
 
-Pour plus d’informations sur les fonctionnalités de l’espace de travail [!UICONTROL Schémas], consultez la [[!UICONTROL présentation des schémas] de l’espace de travail](../overview.md).
+Pour plus d’informations sur les fonctionnalités de l’espace de travail [!UICONTROL Schémas], consultez la présentation de l’espace de travail [[!UICONTROL Schémas]](../overview.md).

@@ -1,11 +1,11 @@
 ---
 title: Mettre à jour des flux de données à l’aide de l’API Flow Service
-description: Découvrez comment créer un flux de données, y compris son nom, sa description et sa planification, à l’aide de l’API Flow Service.
+description: Découvrez comment créer un flux de données, y compris son nom, sa description et son planning à l’aide de l’API Flow Service.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '656'
-ht-degree: 87%
+source-wordcount: '661'
+ht-degree: 75%
 
 ---
 
@@ -15,7 +15,7 @@ Ce tutoriel décrit les étapes à suivre pour mettre à jour un flux de donnée
 
 >[!TIP]
 >
->Votre connexion source et votre connexion cible doivent être mappées à un seul flux de données. Vous ne devez pas mettre à jour vos connexions source et cible séparément, car les modifications ne seront pas répercutées dans le flux de données correspondant. Si votre cas d’utilisation nécessite une mise à jour de vos connexions source et cible, vous devez créer une nouvelle paire de connexions source et cible, ainsi qu’un nouveau flux de données.
+>Votre connexion source et votre connexion cible doivent être mappées à un seul flux de données. Vous ne devez pas mettre à jour vos connexions source et cible séparément, car les modifications ne seront pas répercutées dans leur flux de données correspondant. Si votre cas d’utilisation nécessite une mise à jour de vos connexions source et cible, vous devez créer une nouvelle paire de connexions source et cible, ainsi qu’un nouveau flux de données.
 
 ## Prise en main
 
@@ -23,12 +23,12 @@ Pour suivre ce tutoriel, vous devez disposer d’un identifiant de flux valide. 
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sources](../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform.
+* [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-### Utiliser les API Platform
+### Utilisation des API Experience Platform
 
-Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Platform, consultez le guide [Prise en main des API Platform](../../../landing/api-guide.md).
+Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Experience Platform, consultez le guide [Prise en main des API Experience Platform](../../../landing/api-guide.md).
 
 ## Rechercher des détails du flux de données
 

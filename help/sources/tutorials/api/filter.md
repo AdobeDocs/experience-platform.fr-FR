@@ -1,19 +1,19 @@
 ---
-title: Filtrage Des Données Au Niveau De La Ligne Pour Un Source À L’Aide De L’API Flow Service
-description: Ce tutoriel décrit les étapes de filtrage des données au niveau de la source à l’aide de l’API Flow Service
+title: Filtrer les données au niveau des lignes pour un Source à l’aide de l’API Flow Service
+description: Ce tutoriel décrit les étapes à suivre pour filtrer les données au niveau source à l’aide de l’API Flow Service
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1820'
-ht-degree: 16%
+source-wordcount: '1823'
+ht-degree: 15%
 
 ---
 
-# Filtrage des données au niveau des lignes pour une source à l’aide de l’API [!DNL Flow Service]
+# Filtrer les données au niveau des lignes pour une source à l’aide de l’API [!DNL Flow Service]
 
 >[!AVAILABILITY]
 >
->La prise en charge du filtrage des données au niveau des lignes n’est actuellement disponible que pour les sources suivantes :
+>Actuellement, la prise en charge du filtrage des données au niveau des lignes n’est disponible que pour les sources suivantes :
 >
 >* [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md)
 >* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
@@ -21,28 +21,28 @@ ht-degree: 16%
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 >* [[!DNL Marketo Engage] activités standard](../../connectors/adobe-applications/marketo/marketo.md)
 
-Lisez ce guide pour savoir comment filtrer les données au niveau des lignes pour une source à l’aide de l’ [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lisez ce guide pour savoir comment filtrer les données au niveau des lignes pour une source à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Commencer
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [Sources ](../../home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
-* [Sandbox](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sources ](../../home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
+* [Sandbox](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-### Utiliser les API Platform
+### Utilisation des API Experience Platform
 
-Pour plus d’informations sur la manière d’effectuer des appels vers les API Platform, consultez le guide [Prise en main des API Platform](../../../landing/api-guide.md).
+Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Experience Platform, consultez le guide [Prise en main des API Experience Platform](../../../landing/api-guide.md).
 
-## Filtrage des données source {#filter-source-data}
+## Filtrer les données sources {#filter-source-data}
 
-Les étapes suivantes décrivent les étapes à suivre pour filtrer les données au niveau de la ligne pour votre source.
+Les étapes suivantes permettent de filtrer les données au niveau des lignes pour votre source.
 
-### Récupération des spécifications de connexion {#retrieve-your-connection-specs}
+### Récupérer les spécifications de connexion {#retrieve-your-connection-specs}
 
 La première étape du filtrage des données au niveau des lignes pour votre source consiste à récupérer les spécifications de connexion de votre source et à déterminer les opérateurs et la langue pris en charge par votre source.
 
-Pour récupérer la spécification de connexion d’une source donnée, envoyez une requête GET au point de terminaison `/connectionSpecs` de l’API [!DNL Flow Service] et fournissez le nom de propriété de votre source dans le cadre de vos paramètres de requête.
+Pour récupérer la spécification de connexion d’une source donnée, envoyez une requête GET au point d’entrée `/connectionSpecs` de l’API [!DNL Flow Service] et indiquez le nom de la propriété de votre source dans vos paramètres de requête.
 
 **Format d’API**
 
@@ -52,7 +52,7 @@ GET /connectionSpecs/{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --- | --- |
-| `{QUERY_PARAMS}` | Paramètres de requête facultatifs selon lesquels filtrer les résultats. Vous pouvez récupérer la spécification de connexion [!DNL Google BigQuery] en appliquant la propriété `name` et en spécifiant `"google-big-query"` dans votre recherche. |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs pour le filtrage des résultats. Vous pouvez récupérer la spécification de connexion [!DNL Google BigQuery] en appliquant la propriété `name` et en spécifiant `"google-big-query"` dans votre recherche. |
 
 +++Requête
 
@@ -71,7 +71,7 @@ curl -X GET \
 
 +++Réponse
 
-Une réponse réussie renvoie le code d’état 200 et les spécifications de connexion pour [!DNL Google BigQuery], y compris des informations sur son langage de requête pris en charge et les opérateurs logiques.
+Une réponse réussie renvoie le code d’état 200 et les spécifications de connexion pour [!DNL Google BigQuery], y compris des informations sur son langage de requête pris en charge et ses opérateurs logiques.
 
 ```json
 "attributes": {
@@ -100,12 +100,12 @@ Une réponse réussie renvoie le code d’état 200 et les spécifications de co
 
 | Propriété | Description |
 | --- | --- |
-| `attributes.filterAtSource.enabled` | Détermine si la source interrogée prend en charge le filtrage des données au niveau de la ligne. |
-| `attributes.filterAtSource.queryLanguage` | Détermine le langage de requête pris en charge par la source interrogée. |
-| `attributes.filterAtSource.logicalOperators` | Détermine les opérateurs logiques que vous pouvez utiliser pour filtrer les données au niveau de la ligne pour votre source. |
-| `attributes.filterAtSource.comparisonOperators` | Détermine les opérateurs de comparaison que vous pouvez utiliser pour filtrer les données au niveau de la ligne pour votre source. Pour plus d’informations sur les opérateurs de comparaison, reportez-vous au tableau ci-dessous. |
-| `attributes.filterAtSource.columnNameEscapeChar` | Détermine le caractère à utiliser pour échapper les colonnes. |
-| `attributes.filterAtSource.valueEscapeChar` | Détermine la manière dont les valeurs seront entourées lors de l’écriture d’une requête SQL. |
+| `attributes.filterAtSource.enabled` | Détermine si la source interrogée prend en charge le filtrage des données au niveau des lignes. |
+| `attributes.filterAtSource.queryLanguage` | Détermine la langue de requête prise en charge par la source interrogée. |
+| `attributes.filterAtSource.logicalOperators` | Détermine les opérateurs logiques que vous pouvez utiliser pour filtrer les données au niveau des lignes pour votre source. |
+| `attributes.filterAtSource.comparisonOperators` | Détermine les opérateurs de comparaison que vous pouvez utiliser pour filtrer les données au niveau des lignes pour votre source. Pour plus d’informations sur les opérateurs de comparaison, consultez le tableau ci-dessous. |
+| `attributes.filterAtSource.columnNameEscapeChar` | Détermine le caractère à utiliser pour les colonnes d&#39;échappement. |
+| `attributes.filterAtSource.valueEscapeChar` | Détermine comment les valeurs seront entourées lors de l&#39;écriture d&#39;une requête SQL. |
 
 {style="table-layout:auto"}
 
@@ -115,13 +115,13 @@ Une réponse réussie renvoie le code d’état 200 et les spécifications de co
 
 | Opérateur | Description |
 | --- | --- |
-| `==` | Filtre selon si la propriété est égale à la valeur fournie. |
-| `!=` | Filtre selon si la propriété n’est pas égale à la valeur fournie. |
-| `<` | Filtre selon si la propriété est inférieure à la valeur fournie. |
-| `>` | Filtre selon si la propriété est supérieure ou non à la valeur fournie. |
-| `<=` | Filtre selon si la propriété est inférieure ou égale à la valeur fournie. |
-| `>=` | Filtre selon si la propriété est supérieure ou égale à la valeur fournie. |
-| `like` | Filtre en utilisant une clause `WHERE` pour rechercher un modèle spécifié. |
+| `==` | Filtre en fonction de si la propriété est égale à la valeur fournie. |
+| `!=` | Filtre en fonction de si la propriété n’est pas égale à la valeur fournie. |
+| `<` | Filtre en fonction de si la valeur de la propriété est inférieure à la valeur fournie. |
+| `>` | Filtre en fonction de si la propriété est supérieure à la valeur fournie. |
+| `<=` | Filtre en fonction de si la propriété est inférieure ou égale à la valeur fournie. |
+| `>=` | Filtre selon que la propriété est supérieure ou égale à la valeur fournie. |
+| `like` | Filtre en étant utilisé dans une clause de `WHERE` pour rechercher un modèle spécifié. |
 | `in` | Filtre selon si la propriété se trouve dans une plage spécifiée. |
 
 {style="table-layout:auto"}
@@ -130,7 +130,7 @@ Une réponse réussie renvoie le code d’état 200 et les spécifications de co
 
 Une fois que vous avez identifié les opérateurs logiques et le langage de requête pris en charge par votre source, vous pouvez utiliser Profile Query Language (PQL) pour spécifier les conditions de filtrage à appliquer à vos données source.
 
-Dans l’exemple ci-dessous, les conditions sont appliquées uniquement à la sélection des données qui correspondent aux valeurs fournies pour les types de noeuds répertoriés en tant que paramètres.
+Dans l’exemple ci-dessous, les conditions sont appliquées pour sélectionner uniquement les données égales aux valeurs fournies pour les types de nœuds répertoriés en tant que paramètres.
 
 ```json
 {
@@ -155,7 +155,7 @@ Dans l’exemple ci-dessous, les conditions sont appliquées uniquement à la s�
 
 ### Prévisualiser vos données {#preview-your-data}
 
-Vous pouvez prévisualiser vos données en envoyant une requête de GET au point de terminaison `/explore` de l’API [!DNL Flow Service] tout en fournissant `filters` dans le cadre de vos paramètres de requête et en spécifiant vos conditions d’entrée PQL dans [!DNL Base64].
+Vous pouvez prévisualiser vos données en adressant une requête GET au point d’entrée `/explore` de l’API [!DNL Flow Service], tout en fournissant des `filters` dans le cadre de vos paramètres de requête et en spécifiant vos conditions d’entrée PQL dans [!DNL Base64].
 
 **Format d’API**
 
@@ -165,9 +165,9 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 | Paramètre | Description |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | L’identifiant de connexion de base de votre source. |
-| `{TABLE_PATH}` | La propriété path de la table que vous souhaitez inspecter. |
-| `{FILTERS}` | Vos conditions de filtrage PQL codées dans [!DNL Base64]. |
+| `{BASE_CONNECTION_ID}` | Identifiant de connexion de base de votre source. |
+| `{TABLE_PATH}` | Propriété de chemin d&#39;accès de la table à inspecter. |
+| `{FILTERS}` | Vos conditions de filtrage PQL codées en [!DNL Base64]. |
 
 +++Requête
 
@@ -334,7 +334,7 @@ Une réponse réussie renvoie le contenu et la structure de vos données.
 
 ### Créer une connexion source pour les données filtrées
 
-Pour créer une connexion source et ingérer des données filtrées, envoyez une requête de POST au point de terminaison `/sourceConnections` et fournissez vos conditions de filtrage dans les paramètres du corps de la requête.
+Pour créer une connexion source et ingérer des données filtrées, envoyez une requête POST au point d’entrée `/sourceConnections` et indiquez vos conditions de filtrage dans les paramètres du corps de la requête.
 
 **Format d’API**
 
@@ -393,7 +393,7 @@ curl -X POST \
 
 +++Réponse
 
-Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion source nouvellement créée.
+Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion source qui vient d’être créée.
 
 ```json
 {
@@ -404,25 +404,25 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion sour
 
 +++
 
-## Filtrage des entités d’activité pour [!DNL Marketo Engage] {#filter-for-marketo}
+## Filtrage des entités d’activité pour les [!DNL Marketo Engage] {#filter-for-marketo}
 
-Vous pouvez utiliser le filtrage au niveau des lignes pour filtrer les entités d’activité lors de l’utilisation du [[!DNL Marketo Engage] connecteur source](../../connectors/adobe-applications/marketo/marketo.md). Actuellement, vous pouvez uniquement filtrer les entités d’activité et les types d’activité standard. Les activités personnalisées restent régies par les [[!DNL Marketo] mappages de champs](../../connectors/adobe-applications/mapping/marketo.md).
+Vous pouvez utiliser le filtrage au niveau des lignes pour filtrer les entités d’activité lors de l’utilisation du [[!DNL Marketo Engage]  connecteur source ](../../connectors/adobe-applications/marketo/marketo.md). Actuellement, vous ne pouvez filtrer que les entités d’activité et les types d’activité standard. Les activités personnalisées restent régies sous [[!DNL Marketo] mappages de champs](../../connectors/adobe-applications/mapping/marketo.md).
 
 ### [!DNL Marketo] types d’activité standard {#marketo-standard-activity-types}
 
-Le tableau suivant décrit les types d’activité standard pour [!DNL Marketo]. Utilisez ce tableau comme référence pour vos critères de filtrage.
+Le tableau suivant décrit les types d’activités standard pour [!DNL Marketo]. Utilisez ce tableau comme référence pour vos critères de filtrage.
 
-| Identifiant de type d’activité | Nom du type d’activité |
+| Identifiant du type d’activité | Nom du type d’activité |
 | --- | --- |
-| 1 | Visite de page web |
+| 1 | Page web de la visite |
 | 2 | Remplir le formulaire |
-| 3 | Cliquez sur Lien |
+| 3 | Clic sur le lien |
 | 6 | Envoyer un courrier électronique |
 | 7 | E-mail remis |
 | 8 | E-mail non remis |
-| 9 | Désabonner les e-mails |
-| 10 | Ouvrir le courrier électronique |
-| 11 | Cliquez sur Courriel |
+| 9 | E-mail de désabonnement |
+| 10 | Ouvrir l’e-mail |
+| 11 | Cliquez sur E-mail |
 | 12 | Nouveau prospect |
 | 21 | Convertir le prospect |
 | 22 | Modifier le score |
@@ -435,11 +435,11 @@ Le tableau suivant décrit les types d’activité standard pour [!DNL Marketo].
 | 36 | Mettre à jour l’opportunité |
 | 46 | Moment intéressant |
 | 101 | Modifier l’étape Revenu |
-| 104 | Changement d’état dans la progression |
+| 104 | Modifier le statut en cours |
 | 110 | Appeler le Webhook |
-| 113 | Ajouter à l’alimentation |
-| 114 | Modifier le suivi de l’infirmière |
-| 115 | Changement de cadence d&#39;infirmière |
+| 113 | Ajouter à la suite |
+| 114 | Modifier le suivi de maturation |
+| 115 | Modifier le rythme de maturation |
 
 {style="table-layout:auto"}
 
@@ -447,20 +447,20 @@ Suivez les étapes ci-dessous pour filtrer vos entités d’activité standard l
 
 ### Créer un brouillon de flux de données
 
-Créez tout d’abord un [[!DNL Marketo] flux de données](../ui/create/adobe-applications/marketo.md) et enregistrez-le en tant que brouillon. Pour obtenir des instructions détaillées sur la création d’un flux de données de brouillon, reportez-vous à la documentation suivante :
+Créez tout d’abord un [[!DNL Marketo] flux de données](../ui/create/adobe-applications/marketo.md) et enregistrez-le en tant que brouillon. Consultez la documentation suivante pour obtenir des instructions détaillées sur la création d’un brouillon de flux de données :
 
-* [Enregistrement d’un flux de données en tant que brouillon à l’aide de l’interface utilisateur](../ui/draft.md)
-* [Enregistrement d’un flux de données en tant que brouillon à l’aide de l’API](../api/draft.md)
+* [Enregistrer un flux de données en tant que brouillon dans l’interface utilisateur](../ui/draft.md)
+* [Enregistrer un flux de données en tant que brouillon à l’aide de l’API](../api/draft.md)
 
-### Récupération de votre identifiant de flux de données
+### Récupérer l’identifiant du flux de données
 
-Une fois que vous disposez d’un flux de données en version préliminaire, vous devez récupérer son identifiant correspondant.
+Une fois que vous disposez d’un brouillon de flux de données, vous devez récupérer son identifiant correspondant.
 
-Dans l’interface utilisateur, accédez au catalogue des sources, puis sélectionnez **[!UICONTROL Flux de données]** dans l’en-tête supérieur. Utilisez la colonne d’état pour identifier tous les flux de données enregistrés en mode préliminaire, puis sélectionnez le nom de votre flux de données. Ensuite, utilisez le panneau **[!UICONTROL Propriétés]** situé à droite pour localiser votre identifiant de flux de données.
+Dans l’interface utilisateur d’, accédez au catalogue de sources, puis sélectionnez **[!UICONTROL Flux de données]** dans l’en-tête supérieur. Utilisez la colonne Statut pour identifier tous les flux de données enregistrés en mode brouillon, puis sélectionnez le nom de votre flux de données. Ensuite, utilisez le panneau **[!UICONTROL Propriétés]** sur la droite pour localiser votre identifiant de flux de données.
 
-### Récupération des détails de votre flux de données
+### Récupérer les détails de votre flux de données
 
-Ensuite, vous devez récupérer les détails de votre flux de données, en particulier l’identifiant de connexion source associé à votre flux de données. Pour récupérer les détails de votre flux de données, envoyez une requête GET au point de terminaison `/flows` et fournissez votre identifiant de flux de données comme paramètre de chemin d’accès.
+Ensuite, vous devez récupérer les détails de votre flux de données, en particulier l’identifiant de connexion source associé à votre flux de données. Pour récupérer les détails de votre flux de données, envoyez une requête GET au point d’entrée `/flows` et indiquez votre identifiant de flux de données comme paramètre de chemin d’accès.
 
 **Format d’API**
 
@@ -470,11 +470,11 @@ GET /flows/{FLOW_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{FLOW_ID}` | L’identifiant du flux de données que vous souhaitez récupérer. |
+| `{FLOW_ID}` | Identifiant du flux de données à récupérer. |
 
 +++Requête
 
-La requête suivante récupère des informations sur l’identifiant de flux de données : `a7e88a01-40f9-4ebf-80b2-0fc838ff82ef`.
+La requête suivante récupère des informations sur l’ID de flux de données : `a7e88a01-40f9-4ebf-80b2-0fc838ff82ef`.
 
 ```shell
 curl -X GET \
@@ -489,7 +489,7 @@ curl -X GET \
 
 +++Réponse
 
-Une réponse réussie renvoie les détails de votre flux de données, y compris des informations sur les connexions source et cible correspondantes. Vous devez prendre note de vos identifiants de connexion source et cible, car ces valeurs sont requises ultérieurement pour publier votre flux de données.
+Une réponse réussie renvoie les détails de votre flux de données, y compris les informations sur les connexions source et cible correspondantes. Vous devez prendre note de vos identifiants de connexion source et cible, car ces valeurs sont requises ultérieurement, afin de publier votre flux de données.
 
 ```json {line-numbers="true" start-line="1" highlight="23, 26"}
 {
@@ -589,9 +589,9 @@ Une réponse réussie renvoie les détails de votre flux de données, y compris 
 
 +++
 
-### Récupération des détails de votre connexion source
+### Récupérer les détails de votre connexion source
 
-Ensuite, utilisez votre ID de connexion source et envoyez une requête GET au point de terminaison `/sourceConnections` pour récupérer les détails de votre connexion source.
+Ensuite, utilisez votre identifiant de connexion source et envoyez une requête GET au point d’entrée `/sourceConnections` pour récupérer les détails de votre connexion source.
 
 **Format d’API**
 
@@ -674,15 +674,15 @@ Une réponse réussie renvoie les détails de votre connexion source. Prenez not
 
 +++
 
-### Mettre à jour la connexion source avec les conditions de filtrage
+### Mettre à jour votre connexion source avec des conditions de filtrage
 
-Maintenant que vous disposez de votre ID de connexion source et de sa version correspondante, vous pouvez effectuer une demande de PATCH avec les conditions de filtrage qui spécifient vos types d’activité standard.
+Maintenant que vous disposez de votre identifiant de connexion source et de sa version correspondante, vous pouvez effectuer une requête PATCH avec les conditions de filtrage qui spécifient vos types d’activité standard.
 
-Pour mettre à jour votre connexion source, envoyez une requête de PATCH au point de terminaison `/sourceConnections` et fournissez votre ID de connexion source comme paramètre de requête. De plus, vous devez fournir un paramètre d’en-tête `If-Match` avec la version correspondante de votre connexion source.
+Pour mettre à jour votre connexion source, envoyez une requête PATCH au point d’entrée `/sourceConnections` et indiquez votre identifiant de connexion source comme paramètre de requête. En outre, vous devez fournir un paramètre d’en-tête `If-Match`, avec la version correspondante de votre connexion source.
 
 >[!TIP]
 >
->L’en-tête `If-Match` est requis lors de l’exécution d’une requête PATCH. La valeur de cet en-tête est la version/l’etag unique du flux de données que vous souhaitez mettre à jour. La valeur version/etag est mise à jour à chaque mise à jour réussie d’un flux de données.
+>L’en-tête `If-Match` est requis lors de l’exécution d’une requête PATCH. La valeur de cet en-tête est la version/etag unique du flux de données que vous souhaitez mettre à jour. La valeur de version/etag est mise à jour avec chaque mise à jour réussie d’un flux de données.
 
 **Format d’API**
 
@@ -692,7 +692,7 @@ PATCH /sourceConnections/{SOURCE_CONNECTION_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SOURCE_CONNECTION_ID}` | L’identifiant de la connexion source que vous souhaitez mettre à jour |
+| `{SOURCE_CONNECTION_ID}` | Identifiant de la connexion source à mettre à jour |
 
 +++Requête
 
@@ -736,7 +736,7 @@ curl -X PATCH \
 
 +++Réponse
 
-Une réponse réussie renvoie votre identifiant de connexion source et votre balise (version).
+Une réponse réussie renvoie votre identifiant de connexion source et votre etag (version).
 
 ```json
 {
@@ -747,9 +747,9 @@ Une réponse réussie renvoie votre identifiant de connexion source et votre bal
 
 +++
 
-### Publish votre connexion source
+### Publier votre connexion source
 
-Une fois la connexion source mise à jour avec vos conditions de filtrage, vous pouvez désormais vous déplacer à partir de l’état de brouillon et publier votre connexion source. Pour ce faire, envoyez une requête de POST au point de terminaison `/sourceConnections` et fournissez l’identifiant de votre connexion source de brouillon, ainsi qu’une opération d’action pour la publication.
+Maintenant que votre connexion source a été mise à jour avec vos conditions de filtrage, vous pouvez passer de l’état de brouillon à celui de publication de votre connexion source. Pour ce faire, envoyez une requête POST au point d’entrée `/sourceConnections` et indiquez l’identifiant de votre brouillon de connexion source ainsi qu’une opération d’action pour la publication.
 
 **Format d’API**
 
@@ -780,7 +780,7 @@ curl -X POST \
 
 +++Réponse
 
-Une réponse réussie renvoie votre identifiant de connexion source et votre balise (version).
+Une réponse réussie renvoie votre identifiant de connexion source et votre etag (version).
 
 ```json
 {
@@ -791,9 +791,9 @@ Une réponse réussie renvoie votre identifiant de connexion source et votre bal
 
 +++
 
-### Publish votre connexion cible
+### Publier votre connexion cible
 
-Comme à l’étape précédente, vous devez également publier votre connexion cible pour pouvoir continuer et publier votre flux de données de brouillon. Effectuez une requête de POST sur le point de terminaison `/targetConnections` et fournissez l’identifiant de la connexion cible de brouillon que vous souhaitez publier, ainsi qu’une opération d’action pour la publication.
+Comme à l’étape précédente, vous devez également publier votre connexion cible pour pouvoir continuer et publier votre brouillon de flux de données. Envoyez une requête POST au point d’entrée `/targetConnections` et indiquez l’identifiant du brouillon de connexion cible que vous souhaitez publier, ainsi qu’une opération d’action pour la publication.
 
 **Format d’API**
 
@@ -836,9 +836,9 @@ Une réponse réussie renvoie l’identifiant et l’etag correspondant à votre
 +++
 
 
-### Publish de votre flux de données
+### Publier votre flux de données
 
-Une fois vos connexions source et cible publiées, vous pouvez passer à l’étape finale et publier votre flux de données. Pour publier votre flux de données, envoyez une requête de POST au point de terminaison `/flows` et fournissez votre identifiant de flux de données ainsi qu’une opération d’action pour la publication.
+Une fois vos connexions source et cible publiées, vous pouvez passer à l’étape finale et publier votre flux de données. Pour publier votre flux de données, envoyez une requête POST au point d’entrée `/flows` et indiquez votre identifiant de flux de données et une opération d’action pour la publication.
 
 **Format d’API**
 
@@ -880,12 +880,12 @@ Une réponse réussie renvoie l’identifiant et l’`etag` correspondant du flu
 
 +++
 
-Vous pouvez utiliser l’interface utilisateur de l’Experience Platform pour vérifier que votre flux de données de brouillon a été publié. Accédez à la page des flux de données dans le catalogue de sources et référencez l’ **[!UICONTROL état]** de votre flux de données. En cas de réussite, l’état doit maintenant être défini sur **Enabled**.
+Vous pouvez utiliser l’interface utilisateur d’Experience Platform pour vérifier que votre brouillon de flux de données a été publié. Accédez à la page Flux de données dans le catalogue de sources et référencez le **[!UICONTROL Statut]** de votre flux de données. En cas de réussite, le statut doit maintenant être défini sur **Activé**.
 
 >[!TIP]
 >
 >* Un flux de données avec le filtrage activé ne sera renvoyé qu’une seule fois. Toute modification apportée aux critères de filtrage (qu’il s’agisse d’un ajout ou d’une suppression) ne peut prendre effet que pour les données incrémentielles.
->* Si vous devez ingérer des données historiques pour tout nouveau type d’activité, il est recommandé de créer un nouveau flux de données et de définir les critères de filtrage avec les types d’activité appropriés dans la condition de filtrage.
+>* Si vous devez ingérer des données historiques pour un ou plusieurs nouveaux types d’activité, il est recommandé de créer un nouveau flux de données et de définir les critères de filtrage avec les types d’activité appropriés dans la condition de filtrage.
 >* Vous ne pouvez pas filtrer les types d’activité personnalisés.
 >* Vous ne pouvez pas prévisualiser les données filtrées.
 
@@ -893,9 +893,9 @@ Vous pouvez utiliser l’interface utilisateur de l’Experience Platform pour v
 
 Cette section fournit d’autres exemples de payloads différents pour le filtrage.
 
-### Conditions uniques
+### Conditions singulières
 
-Vous pouvez omettre le `fnApply` initial pour les scénarios qui ne nécessitent qu’une seule condition.
+Vous pouvez omettre la `fnApply` initiale pour les scénarios qui ne nécessitent qu’une seule condition.
 
 +++Sélectionner pour afficher l’exemple
 
@@ -924,7 +924,7 @@ Vous pouvez omettre le `fnApply` initial pour les scénarios qui ne nécessitent
 
 ### Utilisation de l’opérateur `in`
 
-Consultez l’exemple de payload ci-dessous pour obtenir un exemple de l’opérateur `in`.
+Consultez l’exemple de payload ci-dessous pour obtenir un exemple du `in` de l’opérateur.
 
 +++Sélectionner pour afficher l’exemple
 
@@ -964,7 +964,7 @@ Consultez l’exemple de payload ci-dessous pour obtenir un exemple de l’opér
 
 +++Sélectionner pour afficher l’exemple
 
-Consultez l’exemple de payload ci-dessous pour obtenir un exemple de l’opérateur `isNull`.
+Consultez l’exemple de payload ci-dessous pour obtenir un exemple du `isNull` de l’opérateur.
 
 ```json
 {
@@ -987,7 +987,7 @@ Consultez l’exemple de payload ci-dessous pour obtenir un exemple de l’opér
 
 ### Utilisation de l’opérateur `NOT`
 
-Consultez l’exemple de payload ci-dessous pour obtenir un exemple de l’opérateur `NOT`.
+Consultez l’exemple de payload ci-dessous pour obtenir un exemple du `NOT` de l’opérateur.
 
 
 +++Sélectionner pour afficher l’exemple
@@ -1017,7 +1017,7 @@ Consultez l’exemple de payload ci-dessous pour obtenir un exemple de l’opér
 
 +++
 
-### Exemple avec conditions imbriquées
+### Exemple avec des conditions imbriquées
 
 Consultez l’exemple de payload ci-dessous pour obtenir un exemple de conditions imbriquées complexes.
 

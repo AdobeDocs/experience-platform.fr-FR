@@ -5,10 +5,10 @@ description: Découvrez comment l’édition B2B d’Adobe Real-Time Customer Da
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
-source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 54%
+source-wordcount: '306'
+ht-degree: 47%
 
 ---
 
@@ -24,7 +24,7 @@ En regroupant les données de comptes provenant de différentes sources, une vue
 
 ## Visionneuse de profils de compte
 
-Avec Real-Time CDP, B2B edition, vous pouvez utiliser l’interface utilisateur d’Experience Platform pour afficher les profils de compte et rechercher des comptes spécifiques à l’aide d’un identifiant de compte provenant d’une source d’entreprise connectée ou en saisissant directement les détails de la source. Pour plus d’informations sur l’affichage des profils de compte dans l’interface utilisateur de Platform, consultez le [guide de l’interface utilisateur des profils de compte](account-profile-ui-guide.md).
+Avec Real-Time CDP, B2B edition, vous pouvez utiliser l’interface utilisateur d’Experience Platform pour afficher les profils de compte et rechercher des comptes spécifiques à l’aide d’un identifiant de compte provenant d’une source d’entreprise connectée ou en saisissant directement les détails de la source. Pour plus d’informations sur l’affichage des profils de compte dans l’interface utilisateur d’Experience Platform, consultez le [guide de l’interface utilisateur des profils de compte](account-profile-ui-guide.md).
 
 ## Créer et activer des audiences de compte
 

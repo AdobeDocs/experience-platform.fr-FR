@@ -1,17 +1,17 @@
 ---
 title: Présentation de Data Distiller
-description: Résumé des limites d’utilisation de Data Distiller pour les données de Query Service par rapport à vos droits de licence.
+description: Résumé des limites d’utilisation de Data Distiller pour les données Query Service par rapport à vos droits de licence.
 exl-id: eb4a184b-f241-4f6f-a250-bbe4605d6b1b
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '105'
 ht-degree: 0%
 
 ---
 
 # Présentation de Data Distiller
 
-Data Distiller est une offre de package qui comprend un sous-ensemble des fonctionnalités de Adobe Experience Platform. Data Distiller vous permet d’effectuer une préparation des données post-ingestion (comme le nettoyage, la mise en forme et la manipulation) pour un profil client en temps réel ou des cas d’utilisation analytiques en exécutant des requêtes par lots dans Query Service. Votre utilisation de Data Distiller dépend de vos droits pour les applications basées sur Platform.
+Data Distiller est une offre groupée qui comprend un sous-ensemble des fonctionnalités de Adobe Experience Platform. Avec Data Distiller, vous pouvez effectuer une préparation des données après ingestion (telle que le nettoyage, la mise en forme et la manipulation) pour le profil client en temps réel ou les cas d’utilisation analytiques en exécutant des requêtes par lots dans Query Service. Votre utilisation de Data Distiller dépend de vos droits pour les applications basées sur Experience Platform.
 
 <!-- Commented out references to licence usage dashboard. It is temporarily hidden:
 ## License usage {#license-usage}
@@ -35,7 +35,7 @@ Scoping parameters are usage limits that relate to the scoping of your required 
 
 ## Mécanismes de sécurisation
 
-Consultez le document [Barrières de sécurité de Query Service](../guardrails.md) concernant les limites d’utilisation par défaut des données de Query Service par rapport à vos droits de licence.
+Consultez le document [Mécanismes de sécurisation de Query Service](../guardrails.md) concernant les limites d’utilisation par défaut des données de Query Service par rapport à vos droits de licence.
 
 <!-- Update these descriptions post 23.3 release
 ## Static limits

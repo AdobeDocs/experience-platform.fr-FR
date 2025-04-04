@@ -1,8 +1,8 @@
 ---
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 98%
+source-wordcount: '470'
+ht-degree: 95%
 
 ---
 # Contribuer au contenu
@@ -19,7 +19,7 @@ Consultez le [Guide du contributeur de documents Adobe](https://experienceleague
 
 Votre contribution dépend de qui vous êtes et du type de modifications auxquelles vous souhaitez contribuer :
 
-### Modifications mineures ou demandes mineures
+### Modifications ou requêtes mineures
 
 Pour envoyer une requête, cliquez sur le lien **Signaler une issue** dans un article, ce qui ouvre un problème dans GitHub. Saisissez un titre et une description, puis cliquez sur **Envoyer une nouvelle issue**.
 
@@ -43,7 +43,7 @@ Si vous êtes rédacteur technique, chef de programme ou développeur de l’éq
 
 ## Contacter lʼéquipe de documentation Experience Platform
 
-Comme nous lʼavons indiqué plus haut, les membres de la communauté Adobe peuvent soumettre une question qui sera confiée au rédacteur approprié. Si vous êtes un employé Adobe, vous pouvez soumettre une question ou contacter directement lʼéquipe de documentation Experience Platform. Pour trouver le rédacteur principal concernant une section spécifique de Platform, consultez le [wiki de documentation dʼAdobe Experience Platform](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
+Comme nous lʼavons indiqué plus haut, les membres de la communauté Adobe peuvent soumettre une question qui sera confiée au rédacteur approprié. Si vous êtes un employé Adobe, vous pouvez soumettre une question ou contacter directement lʼéquipe de documentation Experience Platform. Pour trouver le rédacteur de leads pour une zone spécifique d’Experience Platform, consultez le wiki de documentation de [Adobe Experience Platform](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
 
 ## Outils et configuration
 

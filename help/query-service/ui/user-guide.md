@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de Query Editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ae189e2f6d303043e32e6ca658161bcdf4c28dc6
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2682'
+source-wordcount: '2683'
 ht-degree: 25%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 25%
 
 Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’[!DNL Experience Platform]. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans [!DNL Experience Platform].
 
-Pour plus d’informations sur les concepts et les fonctionnalités de Query Service, consultez la [Présentation de Query Service](../home.md). Pour en savoir plus sur la navigation dans l’interface utilisateur de Query Service sur [!DNL Platform], consultez la [Présentation de l’interface utilisateur de Query Service](./overview.md).
+Pour plus d’informations sur les concepts et les fonctionnalités de Query Service, consultez la [Présentation de Query Service](../home.md). Pour en savoir plus sur la navigation dans l’interface utilisateur de Query Service sur [!DNL Experience Platform], consultez la [Présentation de l’interface utilisateur de Query Service](./overview.md).
 
 ## Prise en main {#getting-started}
 
@@ -97,7 +97,7 @@ Le Query Editor a une sortie de ligne maximale de 50 000. Vous pouvez choisir le
 
 >[!NOTE]
 >
->Comme l’interface utilisateur de Platform peut prendre en charge jusqu’à 1 000 lignes, la transmission d’une valeur LIMIT supérieure à 1 000 est ignorée.
+>Comme l’interface utilisateur d’Experience Platform peut prendre en charge jusqu’à 1 000 lignes, la transmission d’une valeur LIMIT supérieure à 1 000 est ignorée.
 
 ![Query Editor avec le menu déroulant Nombre de résultats mis en surbrillance.](../images/ui/query-editor/result-count.png)
 
@@ -258,4 +258,4 @@ La vidéo suivante montre comment exécuter des requêtes dans l’interface Ado
 
 ## Étapes suivantes
 
-Maintenant que vous connaissez les fonctionnalités disponibles dans Query Editor et que vous savez naviguer dans l’application, vous pouvez commencer à créer vos propres requêtes directement dans [!DNL Platform]. Pour plus d’informations sur l’exécution de requêtes SQL par rapport aux jeux de données dans [!DNL Data Lake], consultez le guide sur ’[exécution de requêtes](../best-practices/writing-queries.md).
+Maintenant que vous connaissez les fonctionnalités disponibles dans Query Editor et que vous savez naviguer dans l’application, vous pouvez commencer à créer vos propres requêtes directement dans [!DNL Experience Platform]. Pour plus d’informations sur l’exécution de requêtes SQL par rapport aux jeux de données dans [!DNL Data Lake], consultez le guide sur ’[exécution de requêtes](../best-practices/writing-queries.md).

@@ -5,10 +5,10 @@ title: Point d’entrée de l’API des politiques de gouvernance des données
 description: Les politiques de gouvernance des données sont des règles adoptées par votre organisation qui décrivent les types d’actions marketing que vous êtes autorisé(e) ou non à effectuer sur les données dans Experience Platform. Le point d’entrée « /policies » est utilisé pour tous les appels d’API liés à lʼaffichage, la création, la mise à jour ou la suppression des politiques de gouvernance des données.
 role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1863'
-ht-degree: 100%
+source-wordcount: '1864'
+ht-degree: 98%
 
 ---
 
@@ -18,7 +18,7 @@ Les politiques de gouvernance des données sont des règles qui décrivent les t
 
 >[!IMPORTANT]
 >
->Les politiques de gouvernance ne doivent pas être confondues avec les politiques de contrôle d’accès, qui déterminent les attributs de données spécifiques accessibles par certains utilisateurs et utilisatrices de Platform dans votre organisation. Reportez-vous au guide du point d’entrée `/policies` de l’[API de contrôle d’accès](../../access-control/abac/api/policies.md) pour plus d’informations sur la gestion par programmation des politiques de contrôle d’accès.
+>Les politiques de gouvernance ne doivent pas être confondues avec les politiques de contrôle d’accès, qui déterminent les attributs de données spécifiques accessibles par certains utilisateurs et utilisatrices d’Experience Platform dans votre organisation. Reportez-vous au guide du point d’entrée `/policies` de l’[API de contrôle d’accès](../../access-control/abac/api/policies.md) pour plus d’informations sur la gestion par programmation des politiques de contrôle d’accès.
 
 ## Prise en main
 

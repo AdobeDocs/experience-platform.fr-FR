@@ -3,9 +3,9 @@ title: Recherche d’attributs de profil Edge en temps réel
 description: Découvrez comment rechercher des attributs de profil Edge en temps réel à l’aide de la destination Personalization personnalisée et de l’API Edge Network
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '1907'
 ht-degree: 7%
 
 ---
@@ -25,7 +25,7 @@ Cette page décrit les étapes à suivre pour rechercher des données de profil 
 
 ## Terminologie et conditions préalables {#prerequisites}
 
-Lors de la configuration du cas d’utilisation décrit sur cette page, vous utiliserez les composants Platform suivants :
+Lors de la configuration du cas d’utilisation décrit sur cette page, vous utiliserez les composants Experience Platform suivants :
 
 * [Flux de données](../../datastreams/overview.md) : un flux de données reçoit des données d’événement entrantes de Web SDK et répond avec des données de profil Edge.
 * [Politiques de fusion](../../segmentation/ui/segment-builder.md#merge-policies) : vous allez créer une politique de fusion [!UICONTROL Active-On-Edge] pour vous assurer que les profils Edge utilisent les données de profil correctes.
@@ -38,8 +38,8 @@ Les cas d’utilisation de la recherche de profil Edge sont soumis aux mécanism
 
 | Service Edge Network | Segmentation Edge | Demandes par seconde |
 |---------|----------|---------|
-| [Destination de personnalisation personnalisée](../catalog/personalization/custom-personalization.md) via l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) | Oui | 1500 |
-| [Destination de personnalisation personnalisée](../catalog/personalization/custom-personalization.md) via l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) | Non | 1500 |
+| [Destination de personnalisation personnalisée](../catalog/personalization/custom-personalization.md) via l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) | Oui | 1 500 |
+| [Destination de personnalisation personnalisée](../catalog/personalization/custom-personalization.md) via l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) | Non | 1 500 |
 
 ## Étape 1 : créer et configurer un flux de données {#create-datastream}
 
@@ -54,7 +54,7 @@ Suivez les étapes de la documentation [configuration du flux de données](../..
     >
     >Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
 
-  ![Image de l’interface utilisateur de Platform affichant l’écran de configuration du flux de données.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
+  ![Image de l’interface utilisateur d’Experience Platform affichant l’écran de configuration du flux de données.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
 
 
 ## Étape 2 : configurer vos audiences pour l’évaluation Edge {#audience-edge-evaluation}
@@ -110,7 +110,7 @@ Après avoir créé une connexion **[!UICONTROL Custom Personalization With Attr
    Vous pouvez effectuer un choix parmi plusieurs types d’audiences, selon leur origine :
 
    * **[!UICONTROL Segmentation Service]** : audiences générées dans Experience Platform par le service de segmentation. Voir la [documentation sur la segmentation](../../segmentation/ui/overview.md) pour plus d’informations.
-   * **[!UICONTROL Chargement personnalisé]** : audiences générées en dehors d’Experience Platform et chargées dans Platform au format CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [importation d’une audience](../../segmentation/ui/overview.md#import-audience).
+   * **[!UICONTROL Chargement personnalisé]** : audiences générées en dehors d’Experience Platform et chargées dans Experience Platform au format CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [importation d’une audience](../../segmentation/ui/overview.md#import-audience).
    * Autres types d’audiences, provenant d’autres solutions Adobe, telles que [!DNL Audience Manager].
 
      ![L’étape Sélectionner les audiences du workflow d’activation avec plusieurs audiences mises en surbrillance.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)

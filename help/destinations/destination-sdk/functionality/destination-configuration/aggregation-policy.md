@@ -2,10 +2,10 @@
 description: Découvrez comment configurer une politique d’agrégation pour déterminer comment les requêtes HTTP vers la destination doivent être associées et regroupées par lot.
 title: Politique d’agrégation
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1006'
-ht-degree: 96%
+source-wordcount: '1007'
+ht-degree: 94%
 
 ---
 
@@ -17,7 +17,7 @@ Utilisez l’agrégation configurable pour vous plonger dans les paramètres de 
 
 Pendant la création d’une destination en temps réel (streaming) avec Destination SDK, vous pouvez configurer la manière dont les profils exportés doivent être combinés dans les exportations résultantes. Ce comportement est déterminé par les paramètres de la politique d’agrégation.
 
-Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la documentation [options de configuration](../configuration-options.md) ou consultez le guide sur la [ utilisation de la Destination SDK pour configurer une destination de diffusion en continu](../../guides/configure-destination-instructions.md#create-destination-configuration).
+Pour comprendre la place de ce composant dans une intégration créée avec Destination SDK, consultez le diagramme de la documentation [options de configuration](../configuration-options.md) ou consultez le guide sur la [utilisation de Destination SDK pour configurer une destination de diffusion en streaming](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
 Vous pouvez configurer les paramètres de la politique d’agrégation via le point d’entrée `/authoring/destinations`. Pour obtenir des exemples d’appels API détaillés dans lesquels vous pouvez configurer les composants affichés sur cette page, consultez les pages de référence de l’API suivantes.
 
@@ -60,7 +60,7 @@ L’exemple de configuration ci-dessous montre une configuration d’agrégation
 | Paramètre | Type | Description |
 |---------|----------|------|
 | `aggregationType` | Chaîne | Indique le type de politique d’agrégation que la destination doit utiliser. Types d’agrégation pris en charge : <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
-| `bestEffortAggregation.maxUsersPerRequest` | Nombre entier | Experience Platform peut agréger plusieurs profils exportés en un seul appel HTTP. <br><br>Cette valeur indique le nombre maximal de profils que le point d’entrée doit recevoir dans un seul appel HTTP. Notez qu’il s’agit d’une agrégation des meilleurs efforts. Par exemple, si vous spécifiez la valeur 100, Platform peut envoyer n’importe quel nombre de profils inférieur à 100 lors d’un appel. <br><br> Si le serveur n’accepte pas plusieurs utilisateurs par requête, définissez cette valeur sur `1`. |
+| `bestEffortAggregation.maxUsersPerRequest` | Nombre entier | Experience Platform peut agréger plusieurs profils exportés en un seul appel HTTP. <br><br>Cette valeur indique le nombre maximal de profils que le point d’entrée doit recevoir dans un seul appel HTTP. Notez qu’il s’agit d’une agrégation des meilleurs efforts. Par exemple, si vous spécifiez la valeur 100, Experience Platform peut envoyer n’importe quel nombre de profils inférieur à 100 lors d’un appel. <br><br> Si le serveur n’accepte pas plusieurs utilisateurs par requête, définissez cette valeur sur `1`. |
 | `bestEffortAggregation.splitUserById` | Booléen | Utilisez cet indicateur si l’appel à la destination doit être partagé par identité. Définissez cet indicateur sur `true` si le serveur n’accepte qu’une seule identité par appel, pour un espace de nom d’identité donné. |
 
 {style="table-layout:auto"}

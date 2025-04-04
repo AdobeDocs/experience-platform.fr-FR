@@ -2,10 +2,10 @@
 title: Présentation de la publication
 description: Découvrez le processus de publication des modifications apportées à vos bibliothèques de code de gestion des balises dans Adobe Experience Platform.
 exl-id: 32eaad87-d7dc-4812-b546-a136511512fe
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 99%
+source-wordcount: '610'
+ht-degree: 95%
 
 ---
 
@@ -33,7 +33,7 @@ Outre le flux de publication, il est important de comprendre le fonctionnement d
 | --- | --- |
 | Bibliothèques | Une bibliothèque est un ensemble d’instructions qui définit la façon dont les extensions, les éléments de données et les règles interagissent les uns avec les autres, ainsi qu’avec votre site web. Lorsqu’une bibliothèque est compilée pour être déployée dans un environnement, elle devient une version.<br><br>Reportez-vous à la présentation des [bibliothèques](./libraries.md) pour plus d’informations sur la création, la gestion et l’activation de bibliothèques dans l’interface utilisateur. |
 | Versions | Une version est une bibliothèque compilée. Lorsqu’elle est déployée dans un environnement, une version fournit l’ensemble réel des fichiers contenant le code qui est distribué au navigateur de chaque utilisateur lorsque ce dernier consulte votre site.<br><br>Reportez-vous à la présentation des [versions](./builds.md) pour plus d’informations sur le contenu et le format des versions. |
-| Environnements | Une balise Environnement est un ensemble d’instructions de déploiement qui indique à Platform le format souhaité de votre version ainsi que l’emplacement où vous souhaitez qu’elle soit livrée.<br><br>Reportez-vous à la présentation des [environnements](./environments.md) pour plus d’informations sur les différents types d’environnements ainsi que sur la manière d’installer et de configurer des environnements existants ou d’en créer de nouveaux. |
+| Environnements | Un environnement de balises est un ensemble d’instructions de déploiement qui indique à Experience Platform le format souhaité de votre version et l’emplacement où vous souhaitez qu’elle soit livrée.<br><br>Reportez-vous à la présentation des [environnements](./environments.md) pour plus d’informations sur les différents types d’environnements ainsi que sur la manière d’installer et de configurer des environnements existants ou d’en créer de nouveaux. |
 | Hôtes | Un hôte représente les détails de la connexion permettant à un environnement de distribuer une version à votre site web. Vous pouvez laisser Adobe gérer l’hébergement de votre version ou bien fournir des informations sur vos propres serveurs hôtes.<br><br>Reportez-vous à la présentation des [hôtes](./hosts/hosts-overview.md) pour plus d’informations sur chaque option d’hébergement. |
 | Code côté client | Le code côté client est l’ensemble des scripts que vous placez dans le code source de votre site ou application et qui indique à chaque appareil client où récupérer la version. Le code est associé à un environnement et peut changer lorsque vous apportez des modifications à la configuration de votre environnement.<br><br>Pour en savoir plus, consultez la section portant sur les [codes incorporés](./environments.md#embed-code) dans la présentation des environnements. |
 

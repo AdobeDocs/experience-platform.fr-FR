@@ -2,10 +2,10 @@
 title: Guide complet sur la gouvernance des données
 description: Suivez la procédure complète permettant d’appliquer des contraintes d’utilisation des données aux champs et jeux de données dans Adobe Experience Platform.
 exl-id: f18ae032-027a-4c97-868b-e04753237c81
-source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1882'
-ht-degree: 100%
+source-wordcount: '1885'
+ht-degree: 96%
 
 ---
 
@@ -19,7 +19,7 @@ Pour déterminer les actions marketing pouvant être effectuées sur certains je
 
 Une fois la configuration des libellés, des politiques de gouvernance et des actions marketing terminée, vous pouvez [tester l’application de votre politique](#test) pour vous assurer qu’elle fonctionne comme prévu.
 
-Ce guide aborde l’ensemble du processus de configuration et d’application d’une politique de gouvernance des données dans l’interface utilisateur de Platform. Pour des informations plus détaillées sur les fonctionnalités présentées dans ce guide, consultez la documentation de présentation pour les rubriques suivantes :
+Ce guide décrit l’ensemble du processus de configuration et d’application d’une politique de gouvernance des données dans l’interface utilisateur d’Experience Platform. Pour des informations plus détaillées sur les fonctionnalités présentées dans ce guide, consultez la documentation de présentation pour les rubriques suivantes :
 
 * [Gouvernance des données d’Adobe Experience Platform](./home.md)
 * [Libellés d’utilisation des données](./labels/overview.md)
@@ -28,13 +28,13 @@ Ce guide aborde l’ensemble du processus de configuration et d’application d�
 
 >[!NOTE]
 >
->Ce guide est consacré à la configuration et à l’application des politiques déterminant la manière dont les données sont utilisées ou activées dans Experience Platform. Si vous souhaitez restreindre l’**accès** aux données proprement dites de certains utilisateurs et utilisatrices de Platform au sein de votre organisation, consultez plutôt le guide complet sur le [contrôle d’accès basé sur les attributs](../access-control/abac/end-to-end-guide.md). Le contrôle d’accès basé sur les attributs utilise également des libellés et des politiques, mais pour un cas d’utilisation différent de celui de la gouvernance des données.
+>Ce guide est consacré à la configuration et à l’application des politiques déterminant la manière dont les données sont utilisées ou activées dans Experience Platform. Si vous souhaitez restreindre **l’accès** aux données proprement dites de certains utilisateurs et utilisatrices d’Experience Platform au sein de votre organisation, consultez plutôt le guide complet sur le [contrôle d’accès basé sur les attributs](../access-control/abac/end-to-end-guide.md). Le contrôle d’accès basé sur les attributs utilise également des libellés et des politiques, mais pour un cas d’utilisation différent de celui de la gouvernance des données.
 
 ## Appliquer des libellés {#labels}
 
 >[!IMPORTANT]
 >
->Les libellés ne peuvent plus être appliqués à des champs individuels au niveau du jeu de données. Ce workflow a été abandonné au profit de l’application des libellés au niveau du schéma. Cependant, vous pouvez toujours libeller un jeu de données entier. Les libellés précédemment appliqués à des champs de jeux de données individuels seront toujours pris en charge par le biais de l’interface utilisateur de Platform jusqu’au 31 mai 2024. Pour garantir la cohérence de vos libellés sur tous les schémas, les libellés précédemment attachés aux champs au niveau du jeu de données doivent être migrés au niveau du schéma par vous-même au cours de l’année à venir. Voir la section sur la [migration des libellés précédemment appliqués](#migrate-labels) pour obtenir des instructions sur la manière de procéder.
+>Les libellés ne peuvent plus être appliqués à des champs individuels au niveau du jeu de données. Ce workflow a été abandonné au profit de l’application des libellés au niveau du schéma. Cependant, vous pouvez toujours libeller un jeu de données entier. Les libellés précédemment appliqués à des champs de jeux de données individuels seront toujours pris en charge via l’interface utilisateur d’Experience Platform jusqu’au 31 mai 2024. Pour garantir la cohérence de vos libellés sur tous les schémas, les libellés précédemment attachés aux champs au niveau du jeu de données doivent être migrés au niveau du schéma par vous-même au cours de l’année à venir. Voir la section sur la [migration des libellés précédemment appliqués](#migrate-labels) pour obtenir des instructions sur la manière de procéder.
 
 Vous pouvez [appliquer des libellés à un schéma](#schema-labels) afin que tous les jeux de données basés sur ce schéma héritent des mêmes libellés. Vous pouvez ainsi gérer les libellés pour la gouvernance des données, le consentement et le contrôle d’accès au même endroit. En appliquant des contraintes d’utilisation des données au niveau du schéma, l’effet se propage en aval à tous les jeux de données basés sur ce schéma. Les libellés appliqués au niveau du champ de schéma prennent en charge les cas d’utilisation de la gouvernance des données et sont détectables dans l’onglet de l’espace de travail Jeux de données [!UICONTROL Gouvernance des données] sous la colonne [!UICONTROL Nom du champ] en tant que libellés en lecture seule.
 

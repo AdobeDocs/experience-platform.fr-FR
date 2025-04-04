@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;flow service;
-title: Création d’une exécution de flux pour l’ingestion à la demande à l’aide de l’API Flow Service
+title: Créer une exécution de flux pour l’ingestion à la demande à l’aide de l’API Flow Service
 description: Découvrez comment créer une exécution de flux pour l’ingestion à la demande à l’aide de l’API Flow Service
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 13%
+source-wordcount: '801'
+ht-degree: 10%
 
 ---
 
-# Créez une exécution de flux pour l’ingestion à la demande à l’aide de l’API [!DNL Flow Service].
+# Créez une exécution de flux pour l’ingestion à la demande à l’aide de l’API [!DNL Flow Service]
 
-Les exécutions de flux représentent une instance d’exécution de flux. Par exemple, si un flux est planifié pour s’exécuter toutes les heures à 9 h, 10 h et 11 h, il y a trois instances d’un flux. Les exécutions de flux sont spécifiques à votre organisation.
+Les exécutions de flux représentent une instance d’exécution de flux. Par exemple, si un flux est planifié pour s’exécuter toutes les heures à 9 h, 10 h et 11 h, vous disposez de trois instances d’exécution de flux. Les exécutions de flux sont spécifiques à votre organisation.
 
-L’ingestion à la demande vous permet de créer un flux exécuté sur un flux donné. Cela permet à vos utilisateurs de créer une exécution de flux, en fonction de paramètres donnés, et de créer un cycle d’ingestion, sans jetons de service. La prise en charge de l’ingestion sur demande est disponible uniquement pour les sources par lots.
+L’ingestion à la demande vous permet de créer une exécution de flux pour un flux de données donné. Cela permet à vos utilisateurs de créer une exécution de flux, en fonction de paramètres donnés, et de créer un cycle d’ingestion, sans jetons de service. La prise en charge de l’ingestion à la demande est disponible uniquement pour les sources par lots.
 
-Ce tutoriel décrit les étapes à suivre pour utiliser l’ingestion à la demande et créer une exécution de flux à l’aide de l’ [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour utiliser l’ingestion à la demande et créer une exécution de flux à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Commencer
 
@@ -26,20 +26,20 @@ Ce tutoriel décrit les étapes à suivre pour utiliser l’ingestion à la dema
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [Sources ](../../home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
-* [Sandbox](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sources ](../../home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
+* [Sandbox](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-### Utiliser les API Platform
+### Utilisation des API Experience Platform
 
-Pour plus d’informations sur la manière d’effectuer des appels vers les API Platform, consultez le guide [Prise en main des API Platform](../../../landing/api-guide.md).
+Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Experience Platform, consultez le guide [Prise en main des API Experience Platform](../../../landing/api-guide.md).
 
-## Création d’une exécution de flux pour une source basée sur un tableau
+## Créer une exécution de flux pour une source basée sur un tableau
 
-Pour créer un flux pour une source basée sur une table, envoyez une requête de POST à l’API [!DNL Flow Service] tout en fournissant l’identifiant du flux sur lequel vous souhaitez créer l’exécution, ainsi que les valeurs des colonnes heure de début, heure de fin et delta.
+Pour créer un flux pour une source basée sur un tableau, envoyez une requête POST à l’API [!DNL Flow Service] et indiquez l’identifiant du flux sur lequel vous souhaitez créer l’exécution, ainsi que les valeurs de l’heure de début, de l’heure de fin et de la colonne delta.
 
 >[!TIP]
 >
->Les sources basées sur un tableau comprennent les catégories de sources suivantes : publicité, analyse, consentement et préférences, CRM, succès client, base de données, automatisation du marketing, paiements et protocoles.
+>Les sources basées sur des tableaux incluent les catégories de sources suivantes : publicité, analyse, consentement et préférences, CRM, succès client, base de données, automatisation du marketing, paiements et protocoles.
 
 **Format d’API**
 
@@ -53,7 +53,7 @@ La requête suivante crée une exécution de flux pour l’ID de flux `3abea21c-
 
 >[!NOTE]
 >
->Il vous suffit de fournir le `deltaColumn` lors de la création de votre première exécution de flux. Après cela, `deltaColumn` sera corrigé dans le cadre de la transformation `copy` du flux et sera traité comme la source de vérité. Toute tentative de modification de la valeur `deltaColumn` via les paramètres d’exécution de flux entraînera une erreur.
+>Il vous suffit de fournir la `deltaColumn` lors de la création de votre première exécution de flux. Ensuite, les `deltaColumn` seront corrigées dans le cadre de `copy` transformation du flux et traitées comme la source de vérité. Toute tentative de modification de la valeur de `deltaColumn` par le biais des paramètres d’exécution de flux entraînera une erreur.
 
 ```shell
 curl -X POST \
@@ -79,15 +79,15 @@ curl -X POST \
 | Paramètre | Description |
 | --- | --- |
 | `flowId` | L’identifiant du flux sur lequel votre exécution de flux sera créée. |
-| `params.startTime` | Heure planifiée du début de l’exécution du flux à la demande. Cette valeur est représentée en heure unique. |
-| `params.windowStartTime` | Date et heure de récupération des données au plus tôt. Cette valeur est représentée en heure unique. |
-| `params.windowEndTime` | Date et heure auxquelles les données seront récupérées. Cette valeur est représentée en heure unique. |
-| `params.deltaColumn` | La colonne delta est nécessaire pour partitionner les données et séparer les données nouvellement ingérées des données historiques. **Remarque** : `deltaColumn` n’est nécessaire que lors de la création de votre première exécution de flux. |
+| `params.startTime` | Heure planifiée à laquelle l’exécution du flux à la demande commencera. Cette valeur est représentée en temps Unix. |
+| `params.windowStartTime` | Date et heure au plus tôt à partir desquelles les données seront récupérées. Cette valeur est représentée en temps Unix. |
+| `params.windowEndTime` | Date et heure de récupération des données. Cette valeur est représentée en temps Unix. |
+| `params.deltaColumn` | La colonne delta est nécessaire pour partitionner les données et séparer les données nouvellement ingérées des données historiques. **Remarque** : la `deltaColumn` n’est nécessaire que lors de la création de votre première exécution de flux. |
 | `params.deltaColumn.name` | Nom de la colonne delta. |
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de l’exécution de flux nouvellement créée, y compris son exécution unique `id`.
+Une réponse réussie renvoie les détails de l’exécution de flux nouvellement créée, y compris son `id` d’exécution unique.
 
 ```json
 {
@@ -102,8 +102,8 @@ Une réponse réussie renvoie les détails de l’exécution de flux nouvellemen
 
 | Propriété | Description |
 | --- | --- |
-| `id` | L’identifiant de l’exécution de flux nouvellement créée. Consultez le guide sur la [récupération des spécifications de flux](../api/collect/database-nosql.md#specs) pour plus d’informations sur les spécifications d’exécution basées sur des tables. |
-| `etag` | Version de ressource de l’exécution de flux. |
+| `id` | Identifiant de l’exécution de flux nouvellement créée. Consultez le guide sur la [récupération des spécifications de flux](../api/collect/database-nosql.md#specs) pour plus d’informations sur les spécifications d’exécution basées sur un tableau. |
+| `etag` | Version des ressources de l’exécution du flux. |
 
 <!-- 
 | `createdAt` | The unix timestamp that designates when the flow run was created. |
@@ -123,13 +123,13 @@ Une réponse réussie renvoie les détails de l’exécution de flux nouvellemen
 | `etag` | The resource version of the flow run. |
 | `metrics` | This property displays a status summary for the flow run. | -->
 
-## Création d’une exécution de flux pour une source basée sur des fichiers
+## Créer une exécution de flux pour une source basée sur des fichiers
 
-Pour créer un flux pour une source basée sur des fichiers, envoyez une requête de POST à l’API [!DNL Flow Service] tout en fournissant l’identifiant du flux sur lequel vous souhaitez créer l’exécution et les valeurs pour l’heure de début et l’heure de fin.
+Pour créer un flux pour une source basée sur des fichiers, envoyez une requête POST à l’API [!DNL Flow Service] et indiquez l’identifiant du flux sur lequel vous souhaitez créer l’exécution ainsi que les valeurs de l’heure de début et de fin.
 
 >[!TIP]
 >
->Les sources basées sur des fichiers comprennent toutes les sources de stockage dans le cloud.
+>Les sources basées sur des fichiers incluent toutes les sources d’espace de stockage dans le cloud.
 
 **Format d’API**
 
@@ -162,13 +162,13 @@ curl -X POST \
 | Paramètre | Description |
 | --- | --- |
 | `flowId` | L’identifiant du flux sur lequel votre exécution de flux sera créée. |
-| `params.startTime` | Heure planifiée du début de l’exécution du flux à la demande. Cette valeur est représentée en heure unique. |
-| `params.windowStartTime` | Date et heure de récupération des données au plus tôt. Cette valeur est représentée en heure unique. |
-| `params.windowEndTime` | Date et heure auxquelles les données seront récupérées. Cette valeur est représentée en heure unique. |
+| `params.startTime` | Heure planifiée à laquelle l’exécution du flux à la demande commencera. Cette valeur est représentée en temps Unix. |
+| `params.windowStartTime` | Date et heure au plus tôt à partir desquelles les données seront récupérées. Cette valeur est représentée en temps Unix. |
+| `params.windowEndTime` | Date et heure de récupération des données. Cette valeur est représentée en temps Unix. |
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de l’exécution de flux nouvellement créée, y compris son exécution unique `id`.
+Une réponse réussie renvoie les détails de l’exécution de flux nouvellement créée, y compris son `id` d’exécution unique.
 
 
 ```json
@@ -184,9 +184,9 @@ Une réponse réussie renvoie les détails de l’exécution de flux nouvellemen
 
 | Propriété | Description |
 | --- | --- |
-| `id` | L’identifiant de l’exécution de flux nouvellement créée. Consultez le guide sur la [récupération des spécifications de flux](../api/collect/database-nosql.md#specs) pour plus d’informations sur les spécifications d’exécution basées sur des tables. |
-| `etag` | Version de ressource de l’exécution de flux. |
+| `id` | Identifiant de l’exécution de flux nouvellement créée. Consultez le guide sur la [récupération des spécifications de flux](../api/collect/database-nosql.md#specs) pour plus d’informations sur les spécifications d’exécution basées sur un tableau. |
+| `etag` | Version des ressources de l’exécution du flux. |
 
-## Surveillance des exécutions de flux
+## Surveiller les exécutions de flux
 
-Une fois l’exécution de flux créée, vous pouvez surveiller les données qui sont ingérées par celle-ci pour afficher des informations sur les exécutions de flux, l’état d’achèvement et les erreurs. Pour surveiller les exécutions de flux à l’aide de l’API, consultez le tutoriel sur la [surveillance des flux de données dans l’API](./monitor.md). Pour surveiller les exécutions de flux à l’aide de l’interface utilisateur de Platform, consultez le guide sur la [surveillance des flux de données de sources à l’aide du tableau de bord de surveillance](../../../dataflows/ui/monitor-sources.md).
+Une fois votre exécution de flux créée, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions de flux, l’état d’achèvement et les erreurs. Pour surveiller vos exécutions de flux à l’aide de l’API , consultez le tutoriel sur la [surveillance des flux de données dans l’API](./monitor.md). Pour surveiller vos exécutions de flux à l’aide de l’interface utilisateur d’Experience Platform, consultez le guide sur la [surveillance des flux de données sources à l’aide du tableau de bord de surveillance](../../../dataflows/ui/monitor-sources.md).

@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;récupérer les lots en échec;lots en échec;ingestion par lots;ingestion par lots;lots en échec;Obtenir les lots en échec;obtenir les lots en échec;Télécharger les lots en échec;télécharger les lots en échec;télécharger les lots en échec;télécharger les lots en échec
+keywords: Experience Platform;accueil;rubriques les plus consultées;récupérer les lots en échec;lots en échec;ingestion par lots;ingestion par lots;Lots en échec;Obtenir les lots en échec;Obtenir les lots en échec;Télécharger les lots en échec;Télécharger les lots en échec;
 solution: Experience Platform
-title: Récupération de lots en échec à l’aide de l’API Data Access
+title: Récupérer les lots en échec à l’aide de l’API Data Access
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des informations sur un lot en échec à l’aide des API Data Ingestion.
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 79%
 
 ---
 
-# Récupération des lots en échec à l’aide de l’API Data Access
+# Récupérer les lots ayant échoué à l’aide de l’API Data Access
 
-Adobe Experience Platform propose deux méthodes de chargement et d’ingestion de données. Vous pouvez utiliser soit l’ingestion par lots, qui vous permet d’insérer leurs données à l’aide de différents types de fichiers (tels que les fichiers CSV), soit l’ingestion par flux, qui vous permet d’insérer leurs données vers [!DNL Platform] à l’aide de points de terminaison en continu en temps réel.
+Adobe Experience Platform propose deux méthodes de chargement et d’ingestion de données. Vous pouvez utiliser l’ingestion par lots, qui vous permet d’insérer ses données à l’aide de divers types de fichiers (tels que des fichiers CSV), ou l’ingestion par flux, qui vous permet d’insérer ses données dans les [!DNL Experience Platform] à l’aide de points d’entrée en continu en temps réel.
 
 Ce tutoriel décrit les étapes à suivre pour récupérer des informations sur un lot en échec à l’aide des API [!DNL Data Ingestion].
 
@@ -31,19 +31,19 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Schema Registry], sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
+Toutes les ressources d’[!DNL Experience Platform], y compris celles appartenant à l’[!DNL Schema Registry], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Experience Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les sandbox dans [!DNL Platform], consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
+>Pour plus d’informations sur les sandbox dans [!DNL Experience Platform], consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
 
 Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
@@ -194,9 +194,9 @@ Cette section contient des informations sur d’autres types d’erreurs d’ing
 
 Comme l’erreur d’horodatage de l’exemple précédent, ces erreurs sont dues à un XDM mal formaté. Ces messages d’erreur varient selon la nature du problème. Par conséquent, aucun exemple d’erreur spécifique ne peut être affiché.
 
-### ID d’organisation absent ou non valide
+### ID d’organisation manquant ou non valide
 
-Cette erreur s’affiche si l’ID d’organisation est absent de la charge utile n’est pas valide.
+Cette erreur s’affiche si l’ID d’organisation est absent de la payload et n’est pas valide.
 
 ```json
 {

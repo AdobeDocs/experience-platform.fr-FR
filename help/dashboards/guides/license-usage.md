@@ -4,9 +4,9 @@ title: Tableau de bord d’utilisation de la licence
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 243a99748d31cddcb8a550d52f9bb390726644be
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3408'
+source-wordcount: '3413'
 ht-degree: 16%
 
 ---
@@ -132,13 +132,13 @@ ht-degree: 16%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=fr" text="Expirations des événements d’expérience"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"
 
-Vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise via le tableau de bord Adobe Experience Platform [!UICONTROL Utilisation des licences]. Les informations affichées ici sont capturées lors d’un instantané quotidien de votre instance Platform.
+Vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise via le tableau de bord Adobe Experience Platform [!UICONTROL Utilisation des licences]. Les informations affichées ici sont capturées lors d’un instantané quotidien de votre instance Experience Platform.
 
 Les rapports d’utilisation des licences offrent un haut degré de granularité. La plupart des mesures sont partagées entre plusieurs produits et reflètent l’utilisation agrégée sur tous les produits qui les utilisent, et non les totaux par produit. Le tableau de bord fournit une utilisation consolidée de ces mesures dans tous les sandbox de production ou de développement, ainsi que la mesure d’utilisation d’un sandbox spécifique. Les applications Experience Platform suivantes peuvent être suivies avec des mesures d’utilisation : Real-Time Customer Data Platform, Adobe Journey Optimizer et Customer Journey Analytics.
 
 Ce guide explique comment accéder au tableau de bord d’utilisation des licences et l’utiliser dans l’interface utilisateur. Il fournit également des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
 
-Pour une présentation générale de l’interface utilisateur de Platform, consultez le [guide de l’interface utilisateur d’Experience Platform](../../landing/ui-guide.md).
+Pour une présentation générale de l’interface utilisateur d’Experience Platform, consultez le [guide de l’interface utilisateur d’Experience Platform](../../landing/ui-guide.md).
 
 ## [!UICONTROL Utilisation des licences] données du tableau de bord
 
@@ -148,11 +148,11 @@ Les données de ce tableau de bord s’affichent exactement telles qu’elles s�
 
 >[!NOTE]
 >
->La plupart des mesures du tableau de bord sont mises à jour quotidiennement, en fonction d’un instantané de votre instance Platform. [!UICONTROL Lignes CJA disponibles] est une exception qui est mise à jour tous les mois. Les mesures étiquetées avec des « packs », telles que [!UICONTROL Packs d’utilisateurs Adhoc Query Service], [!UICONTROL Nombre de packs de richesse de profil] et [!UICONTROL Nombre de packs de segmentation en flux continu], reflètent les droits de licence pour les offres de modules complémentaires et ne font pas le suivi de l’utilisation continue. Les modifications apportées après l’instantané ne sont pas visibles tant que l’instantané suivant n’a pas été pris.
+>La plupart des mesures du tableau de bord sont mises à jour quotidiennement, en fonction d’un instantané de votre instance Experience Platform. [!UICONTROL Lignes CJA disponibles] est une exception qui est mise à jour tous les mois. Les mesures étiquetées avec des « packs », telles que [!UICONTROL Packs d’utilisateurs Adhoc Query Service], [!UICONTROL Nombre de packs de richesse de profil] et [!UICONTROL Nombre de packs de segmentation en flux continu], reflètent les droits de licence pour les offres de modules complémentaires et ne font pas le suivi de l’utilisation continue. Les modifications apportées après l’instantané ne sont pas visibles tant que l’instantané suivant n’a pas été pris.
 
 ## Exploration du tableau de bord d’utilisation des licences {#explore}
 
-Pour accéder au tableau de bord d’utilisation de la licence dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Utilisation de la licence]** dans le rail de gauche. Le tableau de bord contient deux onglets : **[!UICONTROL Mesures]** et **[!UICONTROL Produits]**.
+Pour accéder au tableau de bord d’utilisation de la licence dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Utilisation de la licence]** dans le rail de gauche. Le tableau de bord contient deux onglets : **[!UICONTROL Mesures]** et **[!UICONTROL Produits]**.
 
 >[!NOTE]
 >
@@ -338,4 +338,4 @@ La disponibilité de ces mesures et la définition spécifique de chacune d’el
 
 Après lecture de ce document, vous êtes en mesure de localiser le tableau de bord d’utilisation de la licence et d’afficher les mesures d’utilisation de chaque produit acheté, pour tous les sandbox de production ou de développement, ainsi que pour un sandbox spécifique. Vous trouverez plus d’informations sur les mesures disponibles pour votre organisation, en fonction des licences achetées par celle-ci.
 
-Pour en savoir plus sur les autres fonctionnalités disponibles dans l’interface utilisateur d’Experience Platform, reportez-vous au [guide de l’interface utilisateur de Platform](../../landing/ui-guide.md).
+Pour en savoir plus sur les autres fonctionnalités disponibles dans l’interface utilisateur d’Experience Platform, consultez le [guide de l’interface utilisateur d’Experience Platform](../../landing/ui-guide.md).

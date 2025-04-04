@@ -3,10 +3,10 @@ title: LiveRamp - Connexion pour l’intégration
 description: Découvrez comment utiliser le connecteur LiveRamp pour intégrer des audiences d’Adobe Real-time Customer Data Platform vers LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1941'
-ht-degree: 89%
+source-wordcount: '1948'
+ht-degree: 84%
 
 ---
 
@@ -38,7 +38,7 @@ Cette section décrit les types d’audiences que vous pouvez exporter vers cett
 
 | Origine de l’audience | Pris en charge | Description |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Audiences générées via Experience Platform [Segmentation Service](../../../segmentation/home.md). |
 | Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
@@ -58,7 +58,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin des **** et des **** [ ](/help/access-control/home.md#permissions) autorisations de contrôle d’accès. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -70,9 +70,9 @@ Pour vous authentifier à la destination, renseignez les champs requis et sélec
 
 ![Exemple de capture d’écran montrant comment s’authentifier à la destination à l’aide du SFTP avec un mot de passe](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-password.png)
 
-* **[!UICONTROL Port]** : port utilisé pour votre emplacement de stockage [!DNL LiveRamp - Onboarding].  Utilisez le port correspondant à votre emplacement géographique, comme décrit ci-dessous :
+* **[!UICONTROL Port]** : port utilisé pour votre emplacement de stockage [!DNL LiveRamp - Onboarding].  Utilisez le port correspondant à votre situation géographique, comme décrit ci-dessous :
    * **[!UICONTROL NA]** : utiliser le port `22`
-   * **[!UICONTROL AU]** : utiliser le port `2222`
+   * **[!UICONTROL AU]** : utilisez le port `2222`
 * **[!UICONTROL Nom d’utilisateur]** : nom d’utilisateur de votre emplacement de stockage [!DNL LiveRamp - Onboarding].
 * **[!UICONTROL Mot de passe]** : mot de passe de votre emplacement de stockage [!DNL LiveRamp - Onboarding].
 * **[!UICONTROL Clé de chiffrement PGP/GPG]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
@@ -83,7 +83,7 @@ Pour vous authentifier à la destination, renseignez les champs requis et sélec
 
 ![Exemple de capture d’écran montrant comment s’authentifier à la destination à l’aide de la clé SSH](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-ssh.png)
 
-* **[!UICONTROL Port]** : port utilisé pour votre emplacement de stockage [!DNL LiveRamp - Onboarding].  Utilisez le port correspondant à votre emplacement géographique, comme décrit ci-dessous :
+* **[!UICONTROL Port]** : port utilisé pour votre emplacement de stockage [!DNL LiveRamp - Onboarding].  Utilisez le port correspondant à votre situation géographique, comme décrit ci-dessous :
    * **[!UICONTROL EU]** : utiliser le port `4222`
 * **[!UICONTROL Nom d’utilisateur]** : nom d’utilisateur de votre emplacement de stockage [!DNL LiveRamp - Onboarding].
 * **[!UICONTROL Clé SSH]** : la clé privée [!DNL SSH] utilisée pour se connecter à votre emplacement de stockage [!DNL LiveRamp - Onboarding]. La clé privée doit être formatée sous la forme d’une chaîne codée en [!DNL Base64] et ne doit pas être protégée par un mot de passe.
@@ -104,11 +104,11 @@ Pour vous authentifier à la destination, renseignez les champs requis et sélec
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
-![Capture d’écran de l’interface utilisateur de Platform montrant comment remplir les détails pour votre destination](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform montrant comment remplir les détails pour votre destination](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Région]** : région géographique de votre instance de l’espace de stockage SFTP LiveRamp.
+* **[!UICONTROL Region]** : région géographique pour votre instance du stockage SFTP LiveRamp.
 * **[!UICONTROL Chemin du dossier]** : saisissez le sous-dossier `uploads` de [!DNL LiveRamp] qui hébergera les fichiers exportés. Le préfixe `uploads` est automatiquement ajouté au chemin du dossier. [!DNL LiveRamp] recommande de créer un sous-dossier dédié pour les diffusions d’Adobe Real-Time CDP afin de séparer les fichiers des autres flux existants et de garantir le bon fonctionnement de l’automatisation.
    * Par exemple, si vous souhaitez exporter vos fichiers vers `uploads/my_export_folder`, saisissez `my_export_folder` dans le champ **[!UICONTROL Chemin du dossier]**.
 * **[!UICONTROL Format de compression]** : sélectionnez le type de compression qu’Experience Platform doit utiliser pour les fichiers exportés. Les options disponibles sont **[!UICONTROL GZIP]** ou **[!UICONTROL Aucun]**.
@@ -123,7 +123,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->Pour activer les données, vous avez besoin des ****, **[!UICONTROL Activer les destinations]**, **** et **** [  autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Consultez la section [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
@@ -135,13 +135,13 @@ Consultez la section [Activer des données d’audience vers des destinations d�
 * **[!UICONTROL Fréquence]** : [!UICONTROL quotidiennement]
 * **[!UICONTROL Date]** : sélectionnez les heures de début et de fin de l’exportation comme vous le souhaitez.
 
-![Capture d’écran de l’interface utilisateur de Platform montrant l’étape de planification des audiences.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform montrant l’étape de planification des audiences.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
 
 Le nom de fichier exporté ne peut actuellement pas être configuré par l’utilisateur ou l’utilisatrice. Tous les fichiers exportés vers la destination [!DNL LiveRamp - Onboarding] sont automatiquement nommés en fonction du modèle suivant :
 
 `%ORGANIZATION_NAME%_%DESTINATION%_%DESTINATION_INSTANCE_ID%_%DATETIME%`
 
-![Capture d’écran de l’interface utilisateur de Platform présentant le modèle de nom de fichier exporté.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform montrant le modèle de nom de fichier exporté.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
 
 Par exemple, le nom d’un fichier exporté pour une organisation nommée [!DNL Luma] pourrait ressembler à ceci :
 
@@ -185,9 +185,9 @@ Une fois que vous avez ajouté tous les mappages souhaités, sélectionnez **[!U
 
 Vos données sont exportées vers l’emplacement de stockage [!DNL LiveRamp - Onboarding] que vous avez configuré, sous forme de fichiers CSV.
 
-La taille maximale des fichiers exportés est de 10 millions de lignes. Experience Platform génère plusieurs fichiers par diffusion si les audiences sélectionnées dépassent 10 millions de lignes. Si vous prévoyez de dépasser la limite du fichier unique, contactez votre représentant [!DNL LiveRamp] et demandez-lui de configurer l’ingestion par lots pour vous.
+Les fichiers exportés ont une taille maximale de 10 millions de lignes. Experience Platform génère plusieurs fichiers par diffusion si les audiences sélectionnées dépassent 10 millions de lignes. Si vous prévoyez de dépasser la limite de fichier unique, contactez votre représentant [!DNL LiveRamp] et demandez-lui de configurer l’ingestion par lots pour vous.
 
-Lors de l’exportation de fichiers vers la destination [!DNL LiveRamp - Onboarding], Platform génère un fichier CSV pour chaque [ID de stratégie de fusion](../../../profile/merge-policies/overview.md).
+Lors de l’exportation de fichiers vers la destination [!DNL LiveRamp - Onboarding], Experience Platform génère un fichier CSV pour chaque [ID de politique de fusion](../../../profile/merge-policies/overview.md).
 
 Prenons par exemple les audiences suivantes :
 
@@ -196,7 +196,7 @@ Prenons par exemple les audiences suivantes :
 * Audience C (politique de fusion 1)
 * Audience D (politique de fusion 1)
 
-Platform exportera deux fichiers CSV vers [!DNL LiveRamp - Onboarding] :
+Experience Platform exportera deux fichiers CSV vers [!DNL LiveRamp - Onboarding] :
 
 * un fichier CSV contenant les audiences A, C et D ;
 * un fichier CSV contenant l’audience B.
@@ -223,9 +223,9 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-Dans l’exemple ci-dessus, les sections `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` et `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` décrivent les audiences provenant de Segmentation Service, tandis que `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` décrit une audience importée dans Platform sous la forme d’un [chargement personnalisé](../../../segmentation/ui/audience-portal.md#import-audience).
+Dans l’exemple ci-dessus, les sections `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` et `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` décrivent les audiences provenant de Segmentation Service, tandis que `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` décrit une audience importée dans Experience Platform en tant que [chargement personnalisé](../../../segmentation/ui/audience-portal.md#import-audience).
 
-Comme Platform génère un fichier CSV pour chaque [ID de stratégie de fusion](../../../profile/merge-policies/overview.md), il génère également une exécution de flux de données distincte pour chaque ID de stratégie de fusion.
+Comme Experience Platform génère un fichier CSV pour chaque [ID de politique de fusion](../../../profile/merge-policies/overview.md), il génère également une exécution de flux de données distincte pour chaque ID de politique de fusion.
 
 Cela signifie que les mesures **[!UICONTROL Identités activées]** et **[!UICONTROL Profils reçus]** de la page [exécutions de flux de données](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) sont agrégées pour chaque groupe d’audiences qui utilisent la même politique de fusion, au lieu d’être affichées pour chaque audience.
 
@@ -255,7 +255,7 @@ Cette section répertorie les nouvelles fonctionnalités et les mises à jour im
 
 | Mois de publication | Type de mise à jour | Description |
 |---|---|---|
-| Mars 2024 | Nouvelles fonctionnalités et mise à jour de la documentation | <ul><li>Ajout de la prise en charge des diffusions vers les instances [!DNL LiveRamp] [!DNL SFTP] d’Europe et d’Australie.</li><li>Mise à jour de la documentation afin de décrire les configurations spécifiques pour les régions nouvellement prises en charge.</li><li>Augmentation de la taille de fichier maximale à 10 millions de lignes (contre 5 millions auparavant).</li><li>Mise à jour de la documentation pour prendre en compte l’augmentation de la taille des fichiers.</li></ul> |
+| Mars 2024 | Nouvelles fonctionnalités et mise à jour de la documentation | <ul><li>Ajout de la prise en charge des diffusions vers l’Europe et l’Australie [!DNL LiveRamp] les instances [!DNL SFTP].</li><li>Mise à jour de la documentation afin de décrire les configurations spécifiques pour les régions nouvellement prises en charge.</li><li>Augmentation de la taille maximale du fichier à 10 millions de lignes (contre 5 millions auparavant).</li><li>Mise à jour de la documentation pour prendre en compte l’augmentation de la taille des fichiers.</li></ul> |
 | Juillet 2023 | Version initiale | Publication de la destination initiale et de la documentation. |
 
 {style="table-layout:auto"}

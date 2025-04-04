@@ -5,7 +5,7 @@ title: Mapper un fichier CSV à un schéma XDM existant
 type: Tutorial
 description: Ce tutoriel explique comment mapper un fichier CSV à un schéma XDM existant à l’aide de l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 92%
@@ -18,14 +18,14 @@ ht-degree: 92%
 >
 >Ce document explique comment mapper un fichier CSV à un schéma XDM existant. Pour plus d’informations sur l’utilisation de l’outil de recommandation de schéma généré par l’IA (actuellement en version bêta), consultez le document sur le [mappage d’un fichier CSV à l’aide de recommandations de machine learning](./recommendations.md).
 
-Pour ingérer des données CSV dans [!DNL Adobe Experience Platform], les données doivent être mappées à un schéma (XDM) [!DNL Experience Data Model]. Ce tutoriel explique comment mapper un fichier CSV à un schéma XDM à l’aide de l’interface utilisateur [!DNL Platform].
+Pour ingérer des données CSV dans [!DNL Adobe Experience Platform], les données doivent être mappées à un schéma (XDM) [!DNL Experience Data Model]. Ce tutoriel explique comment mapper un fichier CSV à un schéma XDM à l’aide de l’interface utilisateur [!DNL Experience Platform].
 
 ## Prise en main
 
-Ce tutoriel nécessite une connaissance pratique des composants suivants de [!DNL Platform] :
+Ce tutoriel nécessite une connaissance pratique des composants suivants de [!DNL Experience Platform] :
 
-- [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
-- [Ingestion par lots](../../batch-ingestion/overview.md) : méthode employée par [!DNL Platform] pour ingérer des données à partir de fichiers de données fournis par l’utilisateur.
+- [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
+- [Ingestion par lots](../../batch-ingestion/overview.md) : méthode employée par [!DNL Experience Platform] pour ingérer des données à partir de fichiers de données fournis par l’utilisateur.
 - [Préparation de données Adobe Experience Platform](../../batch-ingestion/overview.md) : une suite de fonctionnalités permettant de mapper et de transformer des données ingérées pour les rendre conformes aux schémas XDM. La documentation relative aux [Fonctions de préparation des données](../../../data-prep/functions.md) est particulièrement pertinente pour le mappage de schéma.
 
 Vous devez également avoir créé un jeu de données dans lequel ingérer vos données CSV pour suivre ce tutoriel. Pour connaître les étapes de création d’un jeu de données dans l’interface utilisateur, consultez le [tutoriel sur l’ingestion de données](../ingest-batch-data.md).
@@ -64,7 +64,7 @@ La section **[!UICONTROL Données d’exemple]** apparaît une fois le fichier c
 
 L’étape **[!UICONTROL Mappage]** apparaît. Les colonnes du fichier CSV sont répertoriées sous **[!UICONTROL Champ source]**, et les champs de schéma XDM correspondants sont répertoriés sous **[!UICONTROL Champ cible]**.
 
-[!DNL Platform] fournit automatiquement des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation.
+[!DNL Experience Platform] fournit automatiquement des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation.
 
 ![](../../images/tutorials/map-a-csv-file/mapping-with-suggestions.png)
 
@@ -120,8 +120,8 @@ Une fois votre fichier CSV mappé et créé, vous pouvez surveiller les données
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez mappé un fichier CSV plat à un schéma XDM et l’avez ingéré dans [!DNL Platform]. Ces données peuvent désormais être utilisées par les services de [!DNL Platform] en aval, comme [!DNL Real-Time Customer Profile]. Pour de plus d’informations, rendez-vous sur la présentation de [[!DNL Real-Time Customer Profile]](../../../profile/home.md).
+En suivant ce tutoriel, vous avez mappé un fichier CSV plat à un schéma XDM et l’avez ingéré dans [!DNL Experience Platform]. Ces données peuvent désormais être utilisées par les services de [!DNL Experience Platform] en aval, comme [!DNL Real-Time Customer Profile]. Pour de plus d’informations, rendez-vous sur la présentation de [[!DNL Real-Time Customer Profile]](../../../profile/home.md).
 
 >[!TIP]
 >
->Vous pouvez également utiliser des algorithmes d’apprentissage automatique pour **générer un schéma à partir de données d’exemple** à partir de l’espace de travail des schémas. Ce workflow crée automatiquement un nouveau schéma en fonction de la structure et du contenu de votre fichier, en veillant à ce que le schéma corresponde au format de vos données. Cela vous permet de gagner du temps et d’accroître la précision lors de la définition de la structure, des champs et des types de données pour les jeux de données complexes volumineux. Pour plus d’informations sur ce processus, consultez le [guide de création de schéma assisté ML](../../../xdm/ui/ml-assisted-schema-creation.md) .
+>Vous pouvez également utiliser des algorithmes de machine learning (ML) pour **générer un schéma à partir de données d’exemple** à partir de l’espace de travail Schéma . Ce workflow crée automatiquement un schéma en fonction de la structure et du contenu de votre fichier , en s’assurant que le schéma correspond au format de vos données. Cela vous permet de gagner du temps et d’améliorer la précision lors de la définition de la structure, des champs et des types de données pour les jeux de données complexes volumineux. Pour plus d’informations sur ce workflow](../../../xdm/ui/ml-assisted-schema-creation.md) consultez le guide de création de schéma assistée par machine learning [.

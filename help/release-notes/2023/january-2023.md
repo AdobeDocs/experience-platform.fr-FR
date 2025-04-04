@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Janvier 2023
 description: Notes de mise à jour de janvier 2023 pour Adobe Experience Platform.
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2224'
-ht-degree: 99%
+source-wordcount: '2227'
+ht-degree: 97%
 
 ---
 
@@ -163,7 +163,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur XDM dans Platform, consultez la [présentation du système XDM](../../xdm/home.md).
+Pour plus d’informations sur XDM dans Experience Platform, consultez la [ Présentation du système XDM ](../../xdm/home.md).
 
 ## Profil client en temps réel {#profile}
 
@@ -179,7 +179,7 @@ Cette modification peut vous impacter si vous utilisez des [destinations d’ent
 
 Pour en savoir plus sur le profil client en temps réel, notamment les bonnes pratiques et les tutoriels relatifs à lʼutilisation des données de profil, consultez la [présentation du profil client en temps réel](../../profile/home.md).
 
-## Segmentation Service {#segmentation}
+## Service de segmentation {#segmentation}
 
 [!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
 
@@ -189,7 +189,7 @@ Pour en savoir plus sur le profil client en temps réel, notamment les bonnes pr
 | ------- | ----------- |
 | Importer des valeurs groupées dans le créateur de segments | Le créateur de segments prend désormais en charge l’importation de plusieurs valeurs, soit en chargeant un fichier CSV ou TSV, soit en insérant manuellement des valeurs séparées par des virgules. Vous trouverez plus d’informations dans le [Guide du créateur de segments](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 | Expiration de l’appartenance à une audience externe | Par défaut, les appartenances aux audiences externes sont conservées pendant 30 jours. Pour les conserver plus longtemps, utilisez le champ `validUntil` lors de l’ingestion des données d’audience. |
-| Expiration de l’appartenance à un segment généré par Platform | Toute appartenance à un segment avec l’état `Exited` pendant plus de 30 jours sera sujette à suppression, en fonction du champ `lastQualificationTime`. |
+| Expiration de l’appartenance à un segment généré par Experience Platform | Toute appartenance à un segment avec l’état `Exited` pendant plus de 30 jours sera sujette à suppression, en fonction du champ `lastQualificationTime`. |
 
 {style="table-layout:auto"}
 
@@ -197,7 +197,7 @@ Pour plus d’informations sur [!DNL Segmentation Service], consultez la [prése
 
 ## Sources {#sources}
 
-Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes et vous permet de structurer, d’étiqueter et d’améliorer ces données à l’aide des services d’Experience Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
 Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 

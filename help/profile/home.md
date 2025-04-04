@@ -2,10 +2,10 @@
 title: Vue d’ensemble du profil client en temps réel
 description: Le profil client en temps réel fusionne des données provenant de diverses sources et permet d’accéder à ces données sous la forme de profils clients individuels et d’événements de séries temporelles associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: fc53d1b32eb3fc0251f307d5b2f076b1153a2931
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1821'
-ht-degree: 97%
+source-wordcount: '1826'
+ht-degree: 90%
 
 ---
 
@@ -21,7 +21,7 @@ La relation entre le profil client en temps réel et les autres services dans Ex
 
 ## Présentation des profils
 
-Le [!DNL Real-Time Customer Profile] fusionne les données de divers systèmes d’entreprise, puis fournit un accès à ces données sous la forme de profils client avec des événements de série temporelle associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux. Les sections suivantes mettent en avant certains concepts de base que vous devez connaître afin de créer et de gérer efficacement des profils au sein de Platform.
+Le [!DNL Real-Time Customer Profile] fusionne les données de divers systèmes d’entreprise, puis fournit un accès à ces données sous la forme de profils client avec des événements de série temporelle associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux. Les sections suivantes mettent en évidence certains concepts de base que vous devez connaître pour créer et gérer efficacement des profils au sein d’Experience Platform.
 
 ### Composition de l’entité de profil
 
@@ -45,7 +45,7 @@ Les entités dimensionnelles et B2B sont liées à l’entité principale par le
 
 Bien que le [!DNL Real-Time Customer Profile] traite les données ingérées et utilise Adobe Experience Platform [!DNL Identity Service] pour fusionner les données associées par le biais du mappage d’identité, il conserve ses propres données dans le magasin de données du [!DNL Profile]. Le magasin du [!DNL Profile] est distinct des données du catalogue qui se trouvent dans le lac de données et des données du [!DNL Identity Service] qui se trouvent dans le graphique d’identités.
 
-Le magasin du profil utilise une infrastructure de base de données Microsoft Azure Cosmos et le lac de données de Platform utilise l’espace de stockage Microsoft Azure Data Lake.
+Le magasin de profils utilise une infrastructure de base de données Microsoft Azure Cosmos et le lac de données Experience Platform utilise le stockage Microsoft Azure Data Lake.
 
 ### Mécanismes de sécurisation de profil
 
@@ -57,15 +57,15 @@ L’interface utilisateur d’Experience Platform fournit un tableau de bord gr
 
 ### Fragments de profil contre profils fusionnés {#profile-fragments-vs-merged-profiles}
 
-Chaque profil client est composé de plusieurs fragments de profil qui ont été fusionnés dans le but de former une vue unique pour ce client. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre organisation dispose de plusieurs fragments de profil associés à ce client unique apparaissant dans plusieurs jeux de données. Lorsque ces fragments sont ingérés dans Platform, ils sont fusionnés afin de créer un profil unique pour ce client.
+Chaque profil client est composé de plusieurs fragments de profil qui ont été fusionnés dans le but de former une vue unique pour ce client. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre organisation dispose de plusieurs fragments de profil associés à ce client unique apparaissant dans plusieurs jeux de données. Lorsque ces fragments sont ingérés dans Experience Platform, ils sont fusionnés afin de créer un profil unique pour ce client.
 
 En d’autres termes, les fragments de profil représentent une identité principale unique et les données [enregistrement](#record-data) ou [événement](#time-series-events) correspondantes pour cet identifiant au sein d’un jeu de données spécifique.
 
-Lorsque les données provenant de plusieurs jeux de données entrent en conflit (par exemple, si un fragment classe le client comme étant « célibataire » tandis qu’un autre le classe comme étant « marié »), la [politique de fusion](#merge-policies) détermine quelles informations doivent être prioritaires et être incluses dans le profil de l’individu. Par conséquent, il est probable que le nombre total de fragments de profil au sein de Platform soit toujours supérieur au nombre total de profils fusionnés, chaque profil étant composé de fragments multiples issus de multiples jeux de données.
+Lorsque les données provenant de plusieurs jeux de données entrent en conflit (par exemple, si un fragment classe le client comme étant « célibataire » tandis qu’un autre le classe comme étant « marié »), la [politique de fusion](#merge-policies) détermine quelles informations doivent être prioritaires et être incluses dans le profil de l’individu. Par conséquent, il est probable que le nombre total de fragments de profil dans Experience Platform soit toujours supérieur au nombre total de profils fusionnés, chaque profil étant composé de fragments multiples issus de plusieurs jeux de données.
 
 ### Données d’enregistrement {#record-data}
 
-Un profil est la représentation d’un sujet, d’une organisation ou d’un individu. Il est composé de nombreux attributs également appelés données d’enregistrement. Par exemple, le profil d’un produit peut inclure un SKU et une description, tandis que le profil d’une personne contient des informations telles que le prénom, le nom et l’adresse e-mail. [!DNL Experience Platform] vous permet de personnaliser les profils afin d’utiliser des données spécifiques pertinentes pour votre entreprise. La classe standard du [!DNL Experience Data Model] (XDM), [!DNL XDM Individual Profile], est la classe privilégiée à partir de laquelle créer un schéma lors de la description des données d’enregistrement des clients. Elle fournit les données intégrées à de nombreuses interactions entre les services Platform. Pour plus d’informations sur l’utilisation des schémas dans [!DNL Experience Platform], consultez tout d’abord la [présentation du système XDM](../xdm/home.md).
+Un profil est la représentation d’un sujet, d’une organisation ou d’un individu. Il est composé de nombreux attributs également appelés données d’enregistrement. Par exemple, le profil d’un produit peut inclure un SKU et une description, tandis que le profil d’une personne contient des informations telles que le prénom, le nom et l’adresse e-mail. [!DNL Experience Platform] vous permet de personnaliser les profils afin d’utiliser des données spécifiques pertinentes pour votre entreprise. La classe [!DNL Experience Data Model] standard (XDM), [!DNL XDM Individual Profile], est la classe privilégiée à partir de laquelle créer un schéma lors de la description des données d’enregistrement des clients. Elle fournit les données intégrées à de nombreuses interactions entre les services Experience Platform. Pour plus d’informations sur l’utilisation des schémas dans [!DNL Experience Platform], consultez tout d’abord la [présentation du système XDM](../xdm/home.md).
 
 ### Événements de série temporelle {#time-series-events}
 
@@ -77,7 +77,7 @@ Toutes les entreprises souhaitent s’adresser à leurs clients de manière pers
 
 ### Politiques de fusion
 
-Lorsque vous rassemblez des fragments de données provenant de plusieurs sources et les combinez pour obtenir une vue complète de chaque client, les politiques de fusion sont les règles utilisées par [!DNL Platform] pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer le profil client.
+Lorsque vous rassemblez des fragments de données provenant de plusieurs sources et les combinez pour obtenir une vue complète de chaque client, les politiques de fusion sont les règles utilisées par [!DNL Experience Platform] pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer le profil client.
 
 En cas de conflit de données provenant de plusieurs jeux de données, la politique de fusion détermine comment ces données doivent être traitées et quelle valeur doit être utilisée. À lʼaide dʼAPI RESTful ou de lʼinterface utilisateur, vous pouvez créer des politiques de fusion, gérer des politiques existantes et définir une politique de fusion par défaut pour votre organisation.
 
@@ -107,7 +107,7 @@ L’entrée en temps réel est possible grâce à un processus appelé ingestion
 
 ## Ingestion de données dans le [!DNL Profile]
 
-Vous pouvez configurer [!DNL Platform] pour envoyer les données d’enregistrement et de série temporelle au [!DNL Profile]. Cela est compatible avec l’ingestion par lots et l’ingestion par flux en temps réel. Pour plus d’informations, consultez le tutoriel décrivant comment [ajouter des données au profil client en temps réel](tutorials/add-profile-data.md).
+Vous pouvez configurer [!DNL Experience Platform] pour envoyer les données d’enregistrement et de série temporelle au [!DNL Profile]. Cela est compatible avec l’ingestion par lots et l’ingestion par flux en temps réel. Pour plus d’informations, consultez le tutoriel décrivant comment [ajouter des données au profil client en temps réel](tutorials/add-profile-data.md).
 
 >[!NOTE]
 >
@@ -115,7 +115,7 @@ Vous pouvez configurer [!DNL Platform] pour envoyer les données d’enregistrem
 
 ### Mesures d’ingestion de profil
 
-Observability Insights vous permet d’afficher les mesures clés dans Adobe Experience Platform. Outre les statistiques d’utilisation relatives à [!DNL Experience Platform] et les indicateurs de performances pour diverses fonctionnalités de [!DNL Platform], des mesures spécifiques liées au profil vous permettent d’obtenir des informations sur les taux de requêtes entrantes, les taux d’ingestion réussie, les tailles d’enregistrements ingérés, etc. Pour en savoir plus, consultez tout d’abord la [présentation de l’API Observability Insights](../observability/api/overview.md) et pour obtenir une liste complète des mesures du profil client en temps réel, consultez la documentation sur les [mesures disponibles](../observability/api/metrics.md#available-metrics).
+Observability Insights vous permet d’afficher les mesures clés dans Adobe Experience Platform. Outre les statistiques d’utilisation relatives à [!DNL Experience Platform] et les indicateurs de performances pour diverses fonctionnalités de [!DNL Experience Platform], des mesures spécifiques liées au profil vous permettent d’obtenir des informations sur les taux de requêtes entrantes, les taux d’ingestion réussie, les tailles d’enregistrements ingérés, etc. Pour en savoir plus, consultez tout d’abord la [présentation de l’API Observability Insights](../observability/api/overview.md) et pour obtenir une liste complète des mesures du profil client en temps réel, consultez la documentation sur les [mesures disponibles](../observability/api/metrics.md#available-metrics).
 
 ## Mettre à jour les données du magasin de profils
 
@@ -131,7 +131,7 @@ En ce qui concerne l’accès aux données, la gouvernance des données joue un 
 - Politiques d’accès aux données
 - Contrôle de l’accès aux données pour les actions marketing
 
-La gouvernance des données est gérée sur plusieurs points. Il s’agit notamment de choisir les données à ingérer dans [!DNL Platform] et celles qui seront accessibles après l’ingestion pour une action marketing donnée. Pour plus d’informations, commencez par lire la [présentation de la gouvernance des données](../data-governance/home.md).
+La gouvernance des données est gérée sur plusieurs points. Il s’agit notamment de choisir les données à ingérer dans [!DNL Experience Platform] et celles qui seront accessibles après l’ingestion pour une action marketing donnée. Pour plus d’informations, commencez par lire la [présentation de la gouvernance des données](../data-governance/home.md).
 
 ### Gestion des demandes d’exclusion et de confidentialité des données
 

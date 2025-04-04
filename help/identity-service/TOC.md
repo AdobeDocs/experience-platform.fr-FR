@@ -1,14 +1,14 @@
 ---
 audience: user
 user-guide-title: Service d’identités d’Adobe Experience Platform
-breadcrumb-title: Guide de Platform Identity Service
+breadcrumb-title: Guide d’Experience Platform Identity Service
 user-guide-description: Associez les identités des clients, quel que soit l’appareil ou le système utilisé, afin d’offrir des expériences digitales personnalisées.
 feature: Identities
 role: Admin,Developer
-source-git-commit: cbdfa76d546be631a8c1fa588896648835d2a159
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 68%
+source-wordcount: '145'
+ht-degree: 67%
 
 ---
 
@@ -24,11 +24,11 @@ ht-degree: 68%
    - [Suppressions dans le service d’identités](./features/deletion.md)
    - Règles de liaison des graphiques d’identités {#identity-graph-linking-rules}
       - [Présentation des fonctionnalités](./identity-graph-linking-rules/overview.md)
-      - [Algorithme d’optimisation des identités](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+      - [Algorithme d’optimisation de l’identité](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [Guide de mise en œuvre des règles de liaison des graphiques d’identités](./identity-graph-linking-rules/implementation-guide.md)
       - [Exemples de configurations de graphique](./identity-graph-linking-rules/example-configurations.md)
       - [Résolution des problèmes liés aux règles de liaison des graphiques d’identités](./identity-graph-linking-rules/troubleshooting.md)
-      - [Priorité des espaces de noms](./identity-graph-linking-rules/namespace-priority.md)
+      - [Priorité d’espace de noms](./identity-graph-linking-rules/namespace-priority.md)
       - [Interface utilisateur de simulation de graphique](./identity-graph-linking-rules/graph-simulation.md)
       - [Interface utilisateur des paramètres d’identité](./identity-graph-linking-rules/identity-settings-ui.md)
    - [Présentation d’ECID](./features/ecid.md)
@@ -47,4 +47,4 @@ ht-degree: 68%
 - [Définir des champs d’identité dans l’interface utilisateur](label-identities.md)
 - [Traitement des demandes d’accès à des informations personnelles](privacy.md)
 - [Guide de dépannage](troubleshooting-guide.md)
-- [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
+- [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

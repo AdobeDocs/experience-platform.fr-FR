@@ -1,14 +1,14 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Février 2021
-description: Les notes de mise à jour de février 2021 pour Adobe Experience Platform.
+description: Notes de mise à jour de février 2021 pour Adobe Experience Platform.
 doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1137'
-ht-degree: 95%
+source-wordcount: '1141'
+ht-degree: 90%
 
 ---
 
@@ -38,7 +38,7 @@ Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Tableaux de bord relatifs aux profils, aux segments, aux destinations et à l’utilisation des licences (Beta) | **Remarque : la fonctionnalité Tableaux de bord est actuellement en version Beta et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.**<br/><br/> Les tableaux de bord fournissent des rapports d’usine sur les données de votre entreprise et sont directement intégrés au workflow du spécialiste du marketing dans Platform. La mise à disposition de ces tableaux de bord ne nécessite pas d’assistance informatique supplémentaire. En outre, ils offrent un gain de temps et d’effort en évitant de recourir à l’exportation et au traitement des données avec une conception et une implémentation d’entreposage de données supplémentaires. |
+| Tableaux de bord relatifs aux profils, aux segments, aux destinations et à l’utilisation des licences (Beta) | **Remarque : la fonctionnalité Tableaux de bord est actuellement en version Beta et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.**<br/><br/> Les tableaux de bord proposent un compte rendu des performances prêt à l’emploi sur les données de votre organisation. Ils sont directement intégrés au workflow du spécialiste marketing dans Experience Platform. La mise à disposition de ces tableaux de bord ne nécessite pas d’assistance informatique supplémentaire. En outre, ils offrent un gain de temps et d’effort en évitant de recourir à l’exportation et au traitement des données avec une conception et une implémentation d’entreposage de données supplémentaires. |
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -54,9 +54,9 @@ Pour plus d’informations sur l’espace de travail de science des données, co
 
 ## [!DNL Dataflows] {#dataflows}
 
-Dans Adobe Experience Platform, les données sont ingérées à partir d’une grande variété de sources, analysées dans Experience Platform et activées vers un grand nombre de destinations. En offrant de la transparence au niveau des flux de données, Platform facilite le processus de suivi de ce flux de données potentiellement non linéaire.
+Dans Adobe Experience Platform, les données sont ingérées à partir d’une grande variété de sources, analysées dans Experience Platform et activées vers un grand nombre de destinations. Experience Platform facilite le processus de suivi de ce flux de données potentiellement non linéaire en offrant de la transparence aux flux de données.
 
-Les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Platform. Ces flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers des jeux de données cibles, où elles sont ensuite utilisées par le [!DNL Identity Service] et le [!DNL Real-Time Customer Profile] avant d’être finalement activées vers les [!DNL Destinations].
+Les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Experience Platform. Ces flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers des jeux de données cibles, où elles sont ensuite utilisées par le [!DNL Identity Service] et le [!DNL Real-Time Customer Profile] avant d’être finalement activées vers les [!DNL Destinations].
 
 **Nouvelles fonctionnalités**
 
@@ -102,7 +102,7 @@ Adobe Experience Platform [!DNL Identity Service] vous permet de mieux connaî
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Visionneuse de graphique d’identités | L’observateur de graphique d’identités vous permet de valider et de visualiser les identités assemblées dans l’interface utilisateur, ce qui permet d’améliorer le débogage et la transparence. Pour plus d’informations, consultez le [document sur l’observateur de graphique d’identités](../../identity-service/features/identity-graph-viewer.md). |
+| Visionneuse de graphiques d’identités | L’observateur de graphique d’identités vous permet de valider et de visualiser les identités assemblées dans l’interface utilisateur, ce qui permet d’améliorer le débogage et la transparence. Pour plus d’informations, consultez le [document sur l’observateur de graphique d’identités](../../identity-service/features/identity-graph-viewer.md). |
 
 Pour des informations plus générales sur le [!DNL Identity Service], reportez-vous à la [présentation du service d’identités](../../identity-service/home.md).
 
@@ -114,13 +114,13 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Attributs calculés (Alpha) | ***Remarque : cette fonctionnalité est actuellement en version Alpha et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.*** <br/><br/>Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Vous pouvez ensuite utiliser les agrégats dans la segmentation, l’activation et la personnalisation. Ces fonctions incluent notamment le nombre, la somme, la moyenne, les valeurs min. et max. ou encore la valeur vrai/faux. Les attributs calculés sont actuellement disponibles via l’API uniquement. |
+| Attributs calculés (Alpha) | ***Remarque : cette fonctionnalité est actuellement en version Alpha et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.*** <br/><br/>Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Vous pouvez ensuite utiliser les agrégats dans la segmentation, l’activation et la personnalisation. Ces fonctions incluent notamment le nombre, la somme, la moyenne, les valeurs min. et max. ou encore la valeur vrai/faux. Les attributs calculés sont actuellement disponibles uniquement via l’API. |
 
-Pour plus d’informations sur Real-time Customer Profile, y compris des tutoriels et des bonnes pratiques pour l’utilisation des données [!DNL Profile], commencez par lire la [présentation de Real-Time Customer Profile](../../profile/home.md).
+Pour plus d’informations sur le profil client en temps réel, notamment les bonnes pratiques et les tutoriels relatifs à l’utilisation des données [!DNL Profile], consultez tout d’abord la [ présentation du profil client en temps réel](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les logiciels tiers et le système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les logiciels tiers et le système de gestion de la relation client.
 
 Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 

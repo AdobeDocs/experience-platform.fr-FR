@@ -2,20 +2,20 @@
 description: Découvrez comment configurer les spécifications de serveur de destination dans Adobe Experience Platform Destination SDK via le point d’entrée `/authoring/destination-servers`.
 title: Spécifications de serveur pour les destinations créées avec Destination SDK
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2739'
-ht-degree: 100%
+source-wordcount: '2753'
+ht-degree: 89%
 
 ---
 
 # Spécifications de serveur pour les destinations créées avec Destination SDK
 
-Les spécifications du serveur de destination définissent le type de plateforme de destination qui recevra les données d’Adobe Experience Platform, ainsi que les paramètres de communication entre Platform et la destination. Par exemple :
+Les spécifications du serveur de destination définissent le type de plateforme de destination qui recevra les données de Adobe Experience Platform, ainsi que les paramètres de communication entre Experience Platform et la destination. Par exemple :
 
-* Une spécification du serveur de destination de [diffusion en streaming](#streaming-example) définit le point d’entrée du serveur HTTP qui recevra les messages HTTP de Platform. Pour savoir comment configurer les appels HTTP au point d’entrée, consultez la page [Spécifications du modèle](templating-specs.md).
-* Une spécification du serveur de destination [Amazon S3](#s3-example) définit le nom du compartiment et chemin [!DNL S3] où Platform exportera les fichiers.
-* Une spécification du serveur de destination [SFTP](#sftp-example) définit le nom d’hôte, le répertoire racine, le port de communication et le type de chiffrement du serveur SFTP sur lequel Platform exportera les fichiers.
+* Une spécification du serveur de destination [streaming](#streaming-example) définit le point d’entrée du serveur HTTP qui recevra les messages HTTP d’Experience Platform. Pour savoir comment configurer les appels HTTP au point d’entrée, consultez la page [Spécifications du modèle](templating-specs.md).
+* Une spécification du serveur de destination [Amazon S3](#s3-example) définit le nom du compartiment [!DNL S3] et le chemin d’accès où Experience Platform exportera les fichiers.
+* Une spécification du serveur de destination [SFTP](#sftp-example) définit le nom d’hôte, le répertoire racine, le port de communication et le type de chiffrement du serveur SFTP sur lequel Experience Platform exportera les fichiers.
 
 Pour comprendre la place de ce composant dans une intégration créée avec Destination SDK, consultez le diagramme de la documentation [Options de configuration](../configuration-options.md) ou consultez les pages de vue d’ensemble de la configuration de destination suivantes :
 
@@ -46,7 +46,7 @@ Pendant la [création](../../authoring-api/destination-server/create-destination
 
 ## Champs codés en dur ou modélisés {#templatized-fields}
 
-Pendant la création d’un serveur de destination avec Destination SDK, vous pouvez définir des valeurs de paramètre de configuration en les codant en dur dans la configuration ou en utilisant des champs modélisés. Les champs modélisés vous permettent de lire les valeurs fournies par l’utilisateur à partir de l’interface utilisateur de Platform.
+Pendant la création d’un serveur de destination avec Destination SDK, vous pouvez définir des valeurs de paramètre de configuration en les codant en dur dans la configuration ou en utilisant des champs modélisés. Les champs modélisés vous permettent de lire les valeurs fournies par l’utilisateur à partir de l’interface utilisateur d’Experience Platform.
 
 Les paramètres du serveur de destination comportent deux champs configurables. Ces options indiquent si vous utilisez des valeurs codées en dur ou modélisées.
 
@@ -63,7 +63,7 @@ Les champs codés en dur et modélisés ont chacun leur propre utilité dans Des
 
 **Connexion à la destination sans entrée utilisateur**
 
-Quand les utilisateurs [se connectent à la destination](../../../ui/connect-destination.md) dans l’interface utilisateur de Platform, vous pouvez gérer le processus de connexion de destination sans qu’ils aient à intervenir.
+Lorsque les utilisateurs [se connectent à la destination](../../../ui/connect-destination.md) dans l’interface utilisateur d’Experience Platform, vous pouvez gérer le processus de connexion de destination sans qu’ils aient à intervenir.
 
 Pour ce faire, vous pouvez coder en dur les paramètres de connexion de la plateforme de destination dans la spécification du serveur. Quand vous utilisez des valeurs de paramètre codées en dur dans la configuration de votre serveur de destination, la connexion entre Adobe Experience Platform et votre plateforme de destination est gérée sans que l’utilisateur ait à intervenir.
 
@@ -83,13 +83,13 @@ Dans l’exemple ci-dessous, un partenaire crée un serveur de destination de zo
 }
 ```
 
-Ainsi, quand les utilisateurs consultent le [tutoriel de connexion à la destination](../../../ui/connect-destination.md), ils ne verront pas l’[étape d’authentification](../../../ui/connect-destination.md#authenticate). Au lieu de cela, l’authentification est gérée par Platform, comme illustré dans l’image ci-dessous.
+Ainsi, quand les utilisateurs consultent le [tutoriel de connexion à la destination](../../../ui/connect-destination.md), ils ne verront pas l’[étape d’authentification](../../../ui/connect-destination.md#authenticate). Au lieu de cela, l’authentification est gérée par Experience Platform, comme illustré dans l’image ci-dessous.
 
-![Image de l’interface utilisateur affichant l’écran d’authentification entre Platform et une destination DLZ.](../../assets/functionality/destination-server/server-spec-hardcoded.png)
+![Image de l’interface utilisateur affichant l’écran d’authentification entre Experience Platform et une destination DLZ.](../../assets/functionality/destination-server/server-spec-hardcoded.png)
 
 **Connexion à la destination avec entrée utilisateur**
 
-Quand la connexion entre Platform et la destination doit être établie à la suite d’une entrée utilisateur spécifique dans l’interface utilisateur de Platform, comme la sélection d’un point d’entrée de l’API ou la spécification d’une valeur de champ, vous pouvez utiliser des champs modélisés dans la spécification du serveur pour lire la saisie utilisateur et vous connecter à votre plateforme de destination.
+Lorsque la connexion entre Experience Platform et la destination doit être établie à la suite d’une entrée utilisateur spécifique dans l’interface utilisateur d’Experience Platform, telle que la sélection d’un point d’entrée de l’API ou la fourniture d’une valeur de champ, vous pouvez utiliser des champs modélisés dans la spécification du serveur pour lire la saisie utilisateur et vous connecter à votre plateforme de destination.
 
 Dans l’exemple ci-dessous, un partenaire crée une intégration en [temps réel (streaming)](#streaming-example) et le champ `url.value` utilise le paramètre modélisé `{{customerData.region}}` pour personnaliser une partie du point d’entrée de l’API en fonction de l’entrée utilisateur.
 
@@ -106,7 +106,7 @@ Dans l’exemple ci-dessous, un partenaire crée une intégration en [temps rée
 }
 ```
 
-Pour permettre aux utilisateurs de sélectionner une valeur dans l’interface utilisateur de Platform, le paramètre `region` doit également être défini dans la [configuration de destination](../../authoring-api/destination-configuration/create-destination-configuration.md) en tant que champ de données client, comme illustré ci-dessous :
+Pour permettre aux utilisateurs de sélectionner une valeur dans l’interface utilisateur d’Experience Platform, le paramètre `region` doit également être défini dans la [configuration de destination](../../authoring-api/destination-configuration/create-destination-configuration.md) en tant que champ de données client, comme illustré ci-dessous :
 
 ```json
 "customerDataFields":[
@@ -153,7 +153,7 @@ L’exemple ci-dessous montre un modèle de configuration de serveur de destinat
 |---|---|---|
 | `name` | Chaîne | *Obligatoire.* Représente le nom convivial de votre serveur, visible uniquement par Adobe. Ce nom n’est pas visible pour les partenaires ou les clients. Exemple : `Moviestar destination server`. |
 | `destinationServerType` | Chaîne | *Obligatoire.* Définissez-le sur `URL_BASED` pour les destinations de diffusion en streaming. |
-| `templatingStrategy` | Chaîne | *Obligatoire.* <ul><li>Utilisez `PEBBLE_V1` si vous utilisez un champ modélisé au lieu d’une valeur codée en dur dans le champ `value`. Utilisez cette option si vous disposez d’un point d’entrée du type `https://api.moviestar.com/data/{{customerData.region}}/items`, où les utilisateurs doivent sélectionner la zone géographique du point d’entrée dans l’interface utilisateur de Platform. </li><li> Utilisez `NONE` si aucune transformation de modèle n’est nécessaire du côté d’Adobe, par exemple si vous avez un point d’entrée, tel que `https://api.moviestar.com/data/items` </li></ul> |
+| `templatingStrategy` | Chaîne | *Obligatoire.* <ul><li>Utilisez `PEBBLE_V1` si vous utilisez un champ modélisé au lieu d’une valeur codée en dur dans le champ `value`. Utilisez cette option si vous disposez d’un point d’entrée du type `https://api.moviestar.com/data/{{customerData.region}}/items`, où les utilisateurs doivent sélectionner la région du point d’entrée dans l’interface utilisateur d’Experience Platform. </li><li> Utilisez `NONE` si aucune transformation de modèle n’est nécessaire du côté d’Adobe, par exemple si vous avez un point d’entrée, tel que `https://api.moviestar.com/data/items` </li></ul> |
 | `value` | Chaîne | *Obligatoire.* Renseignez l’adresse du point d’entrée de l’API auquel Experience Platform doit se connecter. |
 
 {style="table-layout:auto"}
@@ -294,7 +294,7 @@ L’exemple ci-dessous montre un modèle de configuration de serveur de destinat
 
 ## Serveur de destination [!DNL Data Landing Zone] ([!DNL DLZ]) {#dlz-example}
 
-Ce serveur de destination vous permet d’exporter des fichiers contenant des données de Platform vers un espace de stockage [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md).
+Ce serveur de destination vous permet d’exporter des fichiers contenant des données Experience Platform vers un espace de stockage [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md).
 
 L’exemple ci-dessous montre un modèle de configuration de serveur de destination pour une destination [!DNL Data Landing Zone] ([!DNL DLZ]).
 
@@ -323,7 +323,7 @@ L’exemple ci-dessous montre un modèle de configuration de serveur de destinat
 
 ## Serveur de destination [!DNL Google Cloud Storage] {#gcs-example}
 
-Ce serveur de destination vous permet d’exporter des fichiers contenant des données de Platform vers votre compte [!DNL Google Cloud Storage].
+Ce serveur de destination vous permet d’exporter des fichiers contenant des données Experience Platform vers votre compte [!DNL Google Cloud Storage].
 
 L’exemple ci-dessous montre un modèle de configuration de serveur de destination pour une destination [!DNL Google Cloud Storage].
 

@@ -4,32 +4,32 @@ description: Découvrez comment configurer vos propres clés de chiffrement pour
 role: Developer
 feature: Privacy
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: c1a28a4b1ce066a87bb7b34b2524800f9d8f1ca0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1098'
-ht-degree: 9%
+source-wordcount: '1111'
+ht-degree: 6%
 
 ---
 
 # Clés gérées par le client dans Adobe Experience Platform
 
-Les données stockées sur Adobe Experience Platform sont chiffrées au repos à l’aide de clés au niveau du système. Si vous utilisez une application reposant sur Platform, vous pouvez choisir d’utiliser vos propres clés de chiffrement pour mieux contrôler la sécurité de vos données.
+Les données stockées sur Adobe Experience Platform sont chiffrées au repos à l’aide de clés au niveau du système. Si vous utilisez une application reposant sur Experience Platform, vous pouvez choisir d’utiliser vos propres clés de chiffrement pour mieux contrôler la sécurité de vos données.
 
 >[!AVAILABILITY]
 >
->Adobe Experience Platform prend en charge les clés gérées par le client (CMK) pour Microsoft Azure et Amazon Web Services (AWS). Un Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Si votre mise en œuvre s’exécute sur AWS, vous avez la possibilité d’utiliser le service de gestion des clés (KMS) pour le chiffrement des données de Platform. Pour plus d’informations sur l’infrastructure prise en charge, consultez la présentation multi-cloud de [Experience Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Adobe Experience Platform prend en charge les clés gérées par le client (CMK) pour Microsoft Azure et Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Si votre mise en œuvre s’exécute sur AWS, vous avez la possibilité d’utiliser le service de gestion des clés (KMS) pour le chiffrement des données Experience Platform. Pour plus d’informations sur l’infrastructure prise en charge, consultez la [présentation d’Experience Platform multi-cloud](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 >
 >Pour en savoir plus sur la création et la gestion des clés de chiffrement dans AWS KMS, consultez le [guide sur le chiffrement des données AWS KMS](./aws/configure-kms.md). Pour les implémentations Azure, consultez le [Guide de configuration du coffre de clés Azure](./azure/azure-key-vault-config.md).
 
 >[!NOTE]
 >
->Pour [!DNL Azure] instances Platform hébergées, les données de profil client stockées dans le [!DNL Azure Data Lake] de Platform et le magasin de profils [!DNL Azure Cosmos DB] sont chiffrées exclusivement à l’aide de la fonction CMK une fois activée. La révocation des clés dans les entrepôts de données principaux peut prendre de **quelques minutes à 24 heures** et **jusqu’à 7 jours** pour les entrepôts de données transitoires ou secondaires. Pour plus d’informations, consultez la section [implications de la révocation de l’accès à la clé](#revoke-access).
+>Pour [!DNL Azure] instances Experience Platform hébergées, les données de profil client stockées dans Experience Platform [!DNL Azure Data Lake] et le magasin de profils [!DNL Azure Cosmos DB] sont chiffrées exclusivement à l’aide de la fonction CMK une fois activée. La révocation des clés dans les entrepôts de données principaux peut prendre de **quelques minutes à 24 heures** et **jusqu’à 7 jours** pour les entrepôts de données transitoires ou secondaires. Pour plus d’informations, consultez la section [implications de la révocation de l’accès à la clé](#revoke-access).
 
-Ce document présente de manière générale le processus d’activation de la fonctionnalité Clés gérées par le client (CMK) dans Platform sur [!DNL Azure] et AWS, ainsi que les informations préalables requises pour réaliser ces étapes.
+Ce document présente de manière générale le processus d’activation de la fonctionnalité Clés gérées par le client (CMK) dans Experience Platform sur [!DNL Azure] et AWS, ainsi que les informations préalables requises pour réaliser ces étapes.
 
 >[!NOTE]
 >
->Pour les clients Customer Journey Analytics, suivez les instructions de la documentation du Customer Journey Analytics [](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=fr).
+>Pour les clients Customer Journey Analytics, suivez les instructions de la documentation de [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=fr).
 
 ## Conditions préalables
 
@@ -58,7 +58,7 @@ Pour les implémentations hébergées par AWS, configurez votre environnement AW
 
 ## Résumé du processus {#process-summary}
 
-Les clés gérées par le client (CMK) sont disponibles via les offres Healthcare Shield et Privacy and Security Shield d’Adobe. Sur Azure, la fonction CMK est prise en charge pour Healthcare Shield et Privacy and Security Shield. Sur AWS, la fonction CMK est prise en charge uniquement pour Privacy and Security Shield et n’est pas disponible pour Healthcare Shield. Une fois que votre entreprise a acheté une licence pour l’une de ces offres, vous pouvez lancer le processus de configuration unique pour activer le CMK.
+Les clés gérées par le client (CMK) sont disponibles via les offres Adobe Healthcare Shield et Privacy and Security Shield. Sur Azure, la fonction CMK est prise en charge pour Healthcare Shield et Privacy and Security Shield. Sur AWS, la fonction CMK est prise en charge uniquement pour Privacy and Security Shield et n’est pas disponible pour Healthcare Shield. Une fois que votre entreprise a acheté une licence pour l’une de ces offres, vous pouvez lancer le processus de configuration unique pour activer le CMK.
 
 >[!WARNING]
 >
@@ -70,26 +70,26 @@ Le processus se présente comme suit :
 
 1. [Configurez un [!DNL Azure] coffre Key Vault](./azure/azure-key-vault-config.md) en fonction des politiques de votre entreprise, puis [générez une clé de chiffrement](./azure/azure-key-vault-config.md#generate-a-key) à partager avec Adobe.
 1. Configurez l’application CMK avec votre client [!DNL Azure] par le biais des [appels d’API](./azure/api-set-up.md#register-app) ou de l’[interface utilisateur](./azure/ui-set-up.md#register-app).
-1. Envoyez votre ID de clé de chiffrement à l’Adobe et démarrez le processus d’activation de la fonctionnalité, soit [dans l’interface utilisateur](./azure/ui-set-up.md#send-to-adobe) soit avec un [appel API](./azure/api-set-up.md#send-to-adobe).
+1. Envoyez votre identifiant de clé de chiffrement à Adobe et démarrez le processus d’activation de la fonctionnalité, soit [dans l’interface utilisateur](./azure/ui-set-up.md#send-to-adobe) soit avec un [appel API](./azure/api-set-up.md#send-to-adobe).
 1. Vérifiez le statut de la configuration pour vous assurer que la fonction CMK a été activée, soit [dans l’interface utilisateur](./azure/ui-set-up.md#check-status) soit avec un [appel API](./azure/api-set-up.md#check-status).
 
-Une fois le processus de configuration terminé pour les instances de Platform hébergées sur Azure, toutes les données intégrées à Platform dans l’ensemble des sandbox seront chiffrées à l’aide de votre configuration de clé [!DNL Azure]. Pour vous servir de la fonction CMK, vous utiliserez la fonctionnalité [!DNL Microsoft Azure] pouvant faire partie de leur [programme de préversion publique](https://azure.microsoft.com/fr-fr/support/legal/preview-supplemental-terms/).
+Une fois le processus de configuration terminé pour les instances Experience Platform hébergées sur Azure, toutes les données intégrées à Experience Platform dans l’ensemble des sandbox seront chiffrées à l’aide de votre configuration de clé [!DNL Azure]. Pour vous servir de la fonction CMK, vous utiliserez la fonctionnalité [!DNL Microsoft Azure] pouvant faire partie de leur [programme de préversion publique](https://azure.microsoft.com/fr-fr/support/legal/preview-supplemental-terms/).
 
 ### Pour AWS {#aws-process-summary}
 
 1. [Configurez AWS KMS](./aws/configure-kms.md) en configurant une clé de chiffrement à partager avec Adobe.
 2. Suivez les instructions spécifiques à AWS dans le [guide de configuration de l’interface utilisateur](./aws/ui-set-up.md).
-3. Validez la configuration pour confirmer que les données Platform sont chiffrées à l’aide de la clé hébergée sur AWS.
+3. Validez la configuration pour confirmer que les données Experience Platform sont chiffrées à l’aide de la clé hébergée sur AWS.
 
 <!--  Pending: or [API setup guide]() -->
 
-Une fois le processus de configuration terminé pour les instances de Platform hébergées par AWS, toutes les données intégrées à Platform dans l’ensemble des sandbox seront chiffrées à l’aide de votre configuration du service de gestion des clés (KMS) AWS. Pour utiliser la fonction CMK sur AWS, vous utiliserez le service de gestion des clés AWS afin de créer et de gérer vos clés de chiffrement conformément aux exigences de sécurité de votre entreprise.
+Une fois le processus de configuration terminé pour les instances Experience Platform hébergées par AWS, toutes les données intégrées à Experience Platform dans l’ensemble des sandbox seront chiffrées à l’aide de votre configuration du service de gestion des clés (KMS) AWS. Pour utiliser la fonction CMK sur AWS, vous utiliserez le service de gestion des clés AWS afin de créer et de gérer vos clés de chiffrement conformément aux exigences de sécurité de votre entreprise.
 
 ## Implications de la révocation de l’accès aux clés {#revoke-access}
 
-La révocation ou la désactivation de l’accès au coffre de clés, à la clé ou à l’application CMK dans Azure ou à la clé de chiffrement dans AWS peut entraîner des perturbations importantes, notamment des modifications avec rupture des opérations de votre plateforme. Une fois les clés désactivées, les données de Platform peuvent devenir inaccessibles et toutes les opérations en aval qui reposent sur ces données cesseront de fonctionner. Il est essentiel de bien comprendre les impacts en aval avant d’apporter des modifications à vos configurations clés.
+La révocation ou la désactivation de l’accès au coffre de clés, à la clé ou à l’application CMK dans Azure ou à la clé de chiffrement dans AWS peut entraîner des perturbations importantes, notamment des modifications avec rupture de vos opérations Experience Platform. Une fois les clés désactivées, les données d’Experience Platform peuvent devenir inaccessibles et toutes les opérations en aval qui reposent sur ces données cesseront de fonctionner. Il est essentiel de bien comprendre les impacts en aval avant d’apporter des modifications à vos configurations clés.
 
-Pour révoquer l’accès de Platform à vos données dans [!DNL Azure], supprimez le rôle d’utilisateur associé à l’application du coffre de clés. Pour AWS, vous pouvez désactiver la clé ou mettre à jour l’instruction de politique. Pour obtenir des instructions détaillées sur le processus AWS, reportez-vous à la [section révocation des clés](./aws/ui-set-up.md#key-revocation).
+Pour révoquer l’accès d’Experience Platform à vos données dans [!DNL Azure], supprimez le rôle d’utilisateur associé à l’application du coffre de clés. Pour AWS, vous pouvez désactiver la clé ou mettre à jour l’instruction de politique. Pour obtenir des instructions détaillées sur le processus AWS, reportez-vous à la [section révocation des clés](./aws/ui-set-up.md#key-revocation).
 
 
 ### Chronologies de propagation {#propagation-timelines}

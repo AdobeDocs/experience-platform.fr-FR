@@ -2,10 +2,10 @@
 title: Présentation de l’extension AEM Asset Insights
 description: Découvrez lʼextension de balise AEM Asset Insights dans Adobe Experience Platform.
 exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1062'
-ht-degree: 99%
+source-wordcount: '1063'
+ht-degree: 98%
 
 ---
 
@@ -24,7 +24,7 @@ Cette extension est destinée à être utilisée avec [AEM Asset Insights](https
 Les rapports AEM Aseet dans Analytics contiennent trois dimensions AEM :
 
 * ID de ressource
-* Source de ressources
+* Source des ressources
 * Ressource ayant fait l’objet d’un clic
 
 Il existe également deux mesures :
@@ -53,7 +53,7 @@ Cette section décrit comment configurer AEM avec des balises dans Adobe Experi
 
 ### Intégration d’AEM avec des balises
 
-L’intégration recommandée de [Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=fr) avec Adobe Experience Manager s’effectue avec Adobe I/O.
+L’intégration recommandée d’[Experience Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=fr) avec Adobe Experience Manager s’effectue via Adobe I/O.
 
 1. [Connexion d’AEM à Launch à l’aide d’Adobe I/O](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html?lang=fr).
 

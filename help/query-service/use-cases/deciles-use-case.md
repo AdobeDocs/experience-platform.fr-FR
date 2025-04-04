@@ -1,104 +1,104 @@
 ---
-title: Cas d’utilisation des jeux de données dérivés basés sur des déciles
-description: Ce guide décrit les étapes requises pour utiliser Query Service afin de créer des jeux de données dérivés basés sur des déciles à utiliser avec vos données Profile.
+title: Cas d’utilisation de jeux de données dérivés basés sur des déciles
+description: Ce guide décrit les étapes requises pour utiliser Query Service afin de créer des jeux de données dérivés basés sur des déciles à utiliser avec vos données de profil.
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
-source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1511'
+source-wordcount: '1512'
 ht-degree: 2%
 
 ---
 
-# Cas d’utilisation des jeux de données dérivés basés sur le décile
+# Cas d’utilisation de jeux de données dérivés basés sur des déciles
 
-Les jeux de données dérivés facilitent des cas d’utilisation complexes pour l’analyse de données provenant du lac de données qui peuvent être utilisées avec d’autres services Platform en aval ou publiées dans vos données Real-time Customer Profile.
+Les jeux de données dérivés facilitent les cas d’utilisation complexes d’analyse des données du lac de données qui peuvent être utilisés avec d’autres services Experience Platform en aval ou publiés dans vos données du profil client en temps réel.
 
-Cet exemple de cas d’utilisation montre comment créer des jeux de données dérivés basés sur des déciles à utiliser avec vos données Real-time Customer Profile. En prenant l’exemple d’un scénario de fidélité des compagnies aériennes, ce guide vous explique comment créer un jeu de données qui utilise des déciles catégoriques pour segmenter et créer des audiences en fonction d’attributs de classement.
+Cet exemple de cas d’utilisation montre comment créer des jeux de données dérivés basés sur des déciles à utiliser avec vos données du profil client en temps réel. En prenant comme exemple un scénario de fidélité à une compagnie aérienne, ce guide vous informe sur la création d’un jeu de données qui utilise des déciles catégoriels pour segmenter et créer des audiences en fonction d’attributs de classement.
 
 Les concepts clés suivants sont illustrés :
 
-* Création de schémas pour le groupement des déciles.
-* Création catégorielle de décile.
+* Création de schémas pour le regroupement des déciles.
+* Création de déciles catégoriels.
 * Création de jeux de données dérivés complexes.
-* Calcul des déciles sur une période de recherche arrière.
-* Exemple de requête pour démontrer l’agrégation, le classement et l’ajout d’identités uniques afin de permettre la génération d’audiences sur la base de ces compartiments déciles.
+* Calcul des déciles sur une période de recherche en amont.
+* Exemple de requête pour démontrer l’agrégation, le classement et l’ajout d’identités uniques afin de permettre la génération d’audiences en fonction de ces intervalles de déciles.
 
 ## Commencer
 
-Ce guide nécessite une compréhension pratique de l’ [exécution de requête dans Query Service](../best-practices/writing-queries.md) et des composants suivants de Adobe Experience Platform :
+Ce guide nécessite une compréhension pratique de [l’exécution de requêtes dans Query Service](../best-practices/writing-queries.md) et des composants suivants de Adobe Experience Platform :
 
-* [Présentation de Real-Time Customer Profile](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
-* [Principes de base de la composition des schémas](../../xdm/schema/composition.md) : présentation des schémas de modèle de données d’expérience (XDM) et des blocs de création, principes et bonnes pratiques pour la composition de schémas.
-* [Comment activer un schéma pour Real-time Customer Profile](../../profile/tutorials/add-profile-data.md) : ce tutoriel décrit les étapes nécessaires pour ajouter des données à Real-Time Customer Profile.
-* [Comment définir un type de données personnalisé](../../xdm/api/data-types.md) : les types de données sont utilisés comme champs de type référence dans les classes ou les groupes de champs de schéma et permettent l’utilisation cohérente d’une structure à plusieurs champs qui peut être incluse n’importe où dans le schéma.
+* [Présentation du profil client en temps réel](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [Principes de base de la composition des schémas](../../xdm/schema/composition.md) : présentation des schémas XDM ainsi que des blocs de création, principes et bonnes pratiques pour la composition de schémas.
+* [Comment activer un schéma pour le profil client en temps réel ](../../profile/tutorials/add-profile-data.md) : ce tutoriel décrit les étapes nécessaires pour ajouter des données au profil client en temps réel.
+* [Comment définir un type de données personnalisé ](../../xdm/api/data-types.md) : les types de données sont utilisés comme champs de type référence dans les classes ou les groupes de champs de schéma et permettent l’utilisation cohérente d’une structure à plusieurs champs pouvant être incluse n’importe où dans le schéma.
 
 ## Objectifs
 
-L’exemple donné dans ce document utilise des déciles pour créer des jeux de données dérivés afin de classer les données d’un schéma de fidélité des compagnies aériennes. Les jeux de données dérivés vous permettent de maximiser l’utilité de vos données en identifiant une audience en fonction du n % supérieur pour une catégorie choisie.
+L’exemple donné dans ce document utilise des déciles pour créer des jeux de données dérivés afin de classer les données d’un schéma de fidélité de compagnie aérienne. Les jeux de données dérivés vous permettent de maximiser l’utilité de vos données en identifiant une audience en fonction du % supérieur « n » pour une catégorie choisie.
 
-## Création de jeux de données dérivés basés sur des déciles
+## Créer des jeux de données dérivés basés sur des déciles
 
-Pour définir le classement des déciles en fonction d’une dimension spécifique et d’une mesure correspondante, un schéma doit être conçu pour permettre le groupement des déciles.
+Pour définir le classement des déciles en fonction d’une dimension particulière et d’une mesure correspondante, un schéma doit être conçu pour permettre le regroupement des déciles.
 
-Ce guide utilise un jeu de données de fidélité des compagnies aériennes pour démontrer comment utiliser Query Service pour créer des déciles basés sur les kilomètres parcourus au cours de différentes périodes de recherche arrière.
+Ce guide utilise un jeu de données de fidélité des compagnies aériennes pour démontrer comment utiliser Query Service afin de créer des déciles en fonction des miles parcourus au cours de diverses périodes de recherche en amont.
 
-## Utilisation de Query Service pour créer des décimales
+## Utilisation de Query Service pour créer des déciles
 
-Grâce à Query Service, vous pouvez créer un jeu de données contenant des déciles catégoriels, qui peuvent ensuite être segmentés pour créer des audiences en fonction du classement des attributs. Les concepts affichés dans les exemples suivants peuvent être appliqués pour créer d’autres jeux de données de compartiment à décile, à condition qu’une catégorie soit définie et qu’une mesure soit disponible.
+À l’aide de Query Service, vous pouvez créer un jeu de données contenant des déciles catégoriels, qui peuvent ensuite être segmentés pour créer des audiences en fonction du classement des attributs. Les concepts affichés dans les exemples suivants peuvent être appliqués pour créer d’autres jeux de données de compartiments de déciles, à condition qu’une catégorie soit définie et qu’une mesure soit disponible.
 
-L’exemple de données de fidélité de la compagnie aérienne utilise une [classe XDM ExperienceEvents](../../xdm/classes/experienceevent.md). Chaque événement est un enregistrement d’une transaction commerciale pour le kilométrage, qu’il soit crédité ou débité, et l’état de fidélité de l’appartenance à &quot;flyer&quot;, &quot;Fréquent&quot;, &quot;Argent&quot; ou &quot;Or&quot;. Le champ d’identité principal est `membershipNumber`.
+L’exemple de données de fidélité à une compagnie aérienne utilise une classe [XDM ExperienceEvents](../../xdm/classes/experienceevent.md). Chaque événement est un enregistrement d’une transaction commerciale pour le kilométrage, crédité ou débité, et le statut de fidélité de l’abonnement est soit « Flyer », « Fréquent », « Argent » ou « Or ». Le champ Identité principale est `membershipNumber`.
 
 ### Exemples de jeux de données
 
-Le jeu de données initial sur la fidélité des compagnies aériennes pour cet exemple est &quot;Données sur la fidélité des compagnies aériennes&quot; et comporte le schéma suivant. Notez que l’identité principale du schéma est `_profilefoundationreportingstg.membershipNumber`.
+Le jeu de données de fidélité initial de la compagnie aérienne pour cet exemple est « Données de fidélité de la compagnie aérienne » et possède le schéma suivant. Notez que l’identité principale du schéma est `_profilefoundationreportingstg.membershipNumber`.
 
-![Schéma du schéma de données de fidélité des compagnies aériennes.](../images/use-cases/airline-loyalty-data.png)
+![Diagramme du schéma Données de fidélité des compagnies aériennes.](../images/use-cases/airline-loyalty-data.png)
 
-**Exemple de données**
+**Exemples de données**
 
-Le tableau suivant affiche les exemples de données contenus dans l’objet `_profilefoundationreportingstg` utilisé pour cet exemple. Il fournit un contexte pour l’utilisation de compartiments déciles pour créer des jeux de données dérivés complexes.
+Le tableau suivant affiche les exemples de données contenus dans l’objet `_profilefoundationreportingstg` utilisé pour cet exemple. Elle fournit un contexte pour l’utilisation des intervalles de déciles pour créer des jeux de données dérivés complexes.
 
 >[!NOTE]
 >
->Pour plus de concision, l’ID de client `_profilefoundationreportingstg` a été omis depuis le début de l’espace de noms dans les titres de colonne et les mentions suivantes dans tout le document.
+>Par souci de concision, l’ID client `_profilefoundationreportingstg` a été omis au début de l’espace de noms dans les titres des colonnes et les mentions suivantes dans tout le document.
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
-| C435678623 | sfeldmark1vr@studiopress.com | 2022-01-01 | STATUS_MILES | Nouveau membre | 5000 | FLYER |
-| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | AWARD_MILES | JFK-FRA | 7500 | SILVER |
-| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | STATUS_MILES | JFK-FRA | 7500 | SILVER |
-| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5000 | SILVER |
+| C435678623 | sfeldmark1vr@studiopress.com | 2022-01-01 | STATUS_MILES | Nouveau membre | 5 000 | FLYER |
+| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | AWARD_MILES | JFK-FRA | 7500 | ARGENTÉ |
+| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | STATUS_MILES | JFK-FRA | 7500 | ARGENTÉ |
+| B789279247 | pgalton32n@barnesandnoble.com | 10/02/2022 | AWARD_MILES | FRA-JFK | 5 000 | ARGENTÉ |
 | A123487284 | rritson1zn@sciencedaily.com | 2022-01-07 | STATUS_MILES | Nouvelle carte de crédit | 10000 | FLYER |
 
 {style="table-layout:auto"}
 
-## Génération de jeux de données de décile
+## Générer des jeux de données de déciles
 
-Dans les données de fidélité de la compagnie aérienne vues ci-dessus, la valeur `.mileage` contient le nombre de miles parcourus par un membre pour chaque vol individuel effectué. Ces données sont utilisées pour créer des déciles pour le nombre de kilomètres parcourus pendant la durée de vie des recherches en amont et pendant diverses périodes de recherche en amont. À cette fin, un jeu de données est créé qui contient des déciles dans un type de données map pour chaque période de recherche arrière et un décile approprié pour chaque période de recherche arrière affectée sous `membershipNumber`.
+Dans les données de fidélité de la compagnie aérienne présentées ci-dessus, la valeur `.mileage` contient le nombre de miles parcourus par un membre pour chaque vol individuel effectué. Ces données sont utilisées pour créer des déciles pour le nombre de kilomètres parcourus au cours de la durée de vie des recherches en amont et de diverses périodes de recherche en amont. À cet effet, un jeu de données est créé qui contient des déciles dans un type de données de mappage pour chaque période de recherche en amont et un décile approprié pour chaque période de recherche en amont affectée sous `membershipNumber`.
 
-Créez un &quot;schéma de décision de fidélité aérienne&quot; pour créer un jeu de données de décile à l’aide de Query Service.
+Créez un « Schéma de déciles de fidélité de la compagnie aérienne » pour créer un jeu de données de déciles à l’aide de Query Service.
 
-![ Diagramme du schéma &quot;Airline Loyalty Decile Schema&quot;.](../images/use-cases/airline-loyalty-decile-schema.png)
+![Diagramme du « Schéma des déciles de fidélité des compagnies aériennes ».](../images/use-cases/airline-loyalty-decile-schema.png)
 
-### Activation du schéma pour Real-time Customer Profile
+### Activer le schéma pour le profil client en temps réel
 
-Les données ingérées dans Experience Platform pour être utilisées par Real-Time Customer Profile doivent être conformes à [un schéma de modèle de données d’expérience (XDM) activé pour Profile](../../xdm/ui/resources/schemas.md). Pour qu’un schéma soit activé pour Profile, il doit implémenter la classe XDM ExperienceEvent ou XDM Individual Profile.
+Les données en cours d’ingestion dans Experience Platform pour être utilisées par le profil client en temps réel doivent être conformes [à un schéma de modèle de données d’expérience (XDM) activé pour Profile](../../xdm/ui/resources/schemas.md). Pour qu’un schéma soit activé pour Profile, il doit implémenter la classe XDM ExperienceEvent ou XDM Individual Profile.
 
-[Activez votre schéma pour l’utiliser dans Real-Time Customer Profile à l’aide de l’API Schema Registry](../../xdm/tutorials/create-schema-api.md) ou de l’ [ interface utilisateur de l’éditeur de schémas](../../xdm/tutorials/create-schema-ui.md).  Vous trouverez des instructions détaillées sur l’activation d’un schéma pour Profile dans leur documentation respective.
+[Activez votre schéma à utiliser dans le profil client en temps réel à l’aide de l’API Schema Registry](../../xdm/tutorials/create-schema-api.md) ou de l’interface utilisateur [Éditeur de schéma](../../xdm/tutorials/create-schema-ui.md).  Des instructions détaillées sur la manière d’activer un schéma pour Profile sont disponibles dans leur documentation respective.
 
-Créez ensuite un type de données à réutiliser pour tous les groupes de champs liés aux déciles. La création du groupe de champs de décile est une étape unique par environnement de test. Il peut également être réutilisé pour tous les schémas en décile.
+Créez ensuite un type de données à réutiliser pour tous les groupes de champs liés aux déciles. La création du groupe de champs décile est une étape unique par sandbox. Elle peut également être réutilisée pour tous les schémas liés aux déciles.
 
-### Créer un espace de noms d’identité et le marquer comme identifiant principal {#identity-namespace}
+### Créer un espace de noms d&#39;identité et le marquer comme identifiant principal {#identity-namespace}
 
-Une identité principale doit être affectée à tout schéma créé pour utilisation avec des déciles. Vous pouvez [définir un champ d’identité dans l’interface utilisateur des schémas Adobe Experience Platform](../../xdm/ui/fields/identity.md#define-an-identity-field) ou via l’ [ API Schema Registry](../../xdm/api/descriptors.md#create).
+Une identité principale doit être affectée à tout schéma créé pour être utilisé avec des déciles. Vous pouvez [définir un champ d’identité dans l’interface utilisateur des schémas de Adobe Experience Platform](../../xdm/ui/fields/identity.md#define-an-identity-field) ou via l’[API Schema Registry](../../xdm/api/descriptors.md#create).
 
-Query Service vous permet également de définir une identité ou une identité principale pour les champs de jeux de données de schémas ad hoc directement via SQL. Pour plus d’informations, consultez la documentation sur la [définition d’une identité secondaire et d’une identité principale dans les identités de schéma ad hoc](../data-governance/ad-hoc-schema-identities.md) .
+Query Service vous permet également de définir une identité ou une identité principale pour les champs de jeux de données de schéma ad hoc directement via SQL. Pour plus d’informations, consultez la documentation sur la [définition d’une identité secondaire et d’une identité principale dans les identités de schéma ad hoc](../data-governance/ad-hoc-schema-identities.md).
 
-### Créer une requête pour calculer les déciles sur une période de recherche arrière {#create-a-query}
+### Créer une requête pour le calcul des déciles sur une période de recherche en amont {#create-a-query}
 
-L’exemple suivant illustre la requête SQL pour calculer un décile sur une période de recherche arrière.
+L’exemple suivant illustre la requête SQL de calcul d’un décile sur une période de recherche en amont.
 
-Un modèle peut être créé à l’aide de Query Editor dans l’interface utilisateur ou via l’ [API Query Service](../api/query-templates.md#create-a-query-template).
+Un modèle peut être créé à l’aide du Query Editor dans l’interface utilisateur ou par le biais de l’[API Query Service](../api/query-templates.md#create-a-query-template).
 
 ```sql
 CREATE TABLE AS airline_loyality_decile 
@@ -183,21 +183,21 @@ CREATE TABLE AS airline_loyality_decile
     }
 ```
 
-### Examen des requêtes
+### Révision des requêtes
 
-Les sections de l&#39;exemple de requête sont examinées plus en détail ci-dessous.
+Les sections de l’exemple de requête sont examinées plus en détail ci-dessous.
 
 #### Périodes de recherche en amont
 
-Le type de données &quot;décile&quot; contient un compartiment pour les recherches en amont 1, 3, 6, 9, 12 et de durée de vie. La requête utilise des périodes de recherche arrière de 1, 3 et 6 mois, de sorte que chaque section contiendra des requêtes &quot;répétées&quot; afin de créer des tableaux temporaires pour chaque période de recherche arrière.
+Le type de données décile contient un compartiment pour les recherches en amont de 1, 3, 6, 9, 12 et durée de vie. La requête utilise des périodes de recherche en amont de 1, 3 et 6 mois. Par conséquent, chaque section contient des requêtes « répétées » afin de créer des tables temporaires pour chaque période de recherche en amont.
 
 >[!NOTE]
 >
->Si les données source ne comportent pas de colonne pouvant être utilisée pour déterminer une période de recherche arrière, tous les classements de classe de décile seront effectués sous `decileMonthAll`.
+>Si les données sources ne disposent pas d’une colonne pouvant être utilisée pour déterminer une période de recherche en amont, tous les classements de classe de décile sont effectués sous `decileMonthAll`.
 
 #### Agrégation
 
-Utilisez des expressions de tableau courantes (CTE) pour agréger le kilométrage avant de créer des compartiments à déciles. Cela fournit le nombre total de kilomètres pour une période de recherche arrière spécifique. Les CTE existent temporairement et ne sont utilisables que dans le cadre de la requête plus volumineuse.
+Utilisez des expressions de table communes (CTE) pour agréger le kilométrage ensemble avant de créer des intervalles de déciles. Cela fournit le nombre total de miles pour une période de recherche en amont spécifique. Les CTE existent temporairement et ne sont utilisables que dans le cadre de la requête plus volumineuse.
 
 ```sql
 summed_miles_1 AS (
@@ -216,7 +216,7 @@ Il est important de noter les colonnes d’identité, de dimension et de mesure 
 
 #### Classement
 
-Les déciles vous permettent d’effectuer un regroupement catégorique. Pour créer le numéro de classement, la fonction `NTILE` est utilisée avec un paramètre `10` dans une FENÊTRE regroupée par le champ `loyaltyStatus` . Cela donne un classement de 1 à 10. Définissez la clause `ORDER BY` de `WINDOW` sur `DESC` pour vous assurer qu’une valeur de classement de `1` est donnée à la mesure **plus** dans la dimension.
+Les déciles vous permettent d’effectuer un regroupement catégoriel. Pour créer le numéro de classement, la fonction `NTILE` est utilisée avec un paramètre de `10` dans une FENÊTRE regroupée par le champ `loyaltyStatus` . Il en résulte un classement de 1 à 10. Définissez la clause `ORDER BY` de la `WINDOW` sur `DESC` pour vous assurer qu’une valeur de classement de `1` est donnée à la mesure **la plus grande** dans la dimension.
 
 ```sql
 rankings_1 AS (
@@ -230,7 +230,7 @@ rankings_1 AS (
 
 #### Agrégation des cartes
 
-Avec plusieurs périodes de recherche arrière, vous devez créer au préalable les zones de compartiment à décile à l’aide des fonctions `MAP_FROM_ARRAYS` et `COLLECT_LIST`. Dans l’exemple de fragment de code, `MAP_FROM_ARRAYS` crée une carte avec une paire de clés (`loyaltyStatus`) et des tableaux de valeurs (`decileBucket`). `COLLECT_LIST` renvoie un tableau avec toutes les valeurs de la colonne spécifiée.
+Avec plusieurs périodes de recherche en amont, vous devez créer d’avance les mappages de déciles et de compartiments à l’aide des fonctions `MAP_FROM_ARRAYS` et `COLLECT_LIST` . Dans l’exemple de fragment de code, `MAP_FROM_ARRAYS` crée un mappage avec une paire de tableaux de clés (`loyaltyStatus`) et de valeurs (`decileBucket`). `COLLECT_LIST` renvoie un tableau contenant toutes les valeurs de la colonne spécifiée.
 
 ```sql
 map_1 AS (
@@ -243,11 +243,11 @@ map_1 AS (
 
 >[!NOTE]
 >
->L’agrégation des cartes n’est pas nécessaire si le classement des déciles n’est nécessaire que pour une durée de vie.
+>L’agrégation des cartes n’est pas nécessaire si le classement par déciles n’est nécessaire que pour une période de vie.
 
 #### Identités uniques
 
-La liste des identités uniques (`membershipNumber`) est requise pour créer une liste unique de tous les membres.
+La liste des identités uniques (`membershipNumber`) est nécessaire pour créer une liste unique de tous les abonnements.
 
 ```sql
 all_memberships AS (
@@ -257,11 +257,11 @@ all_memberships AS (
 
 >[!NOTE]
 >
->Si le classement des déciles n’est requis que pour une durée de vie, cette étape peut être omise et l’agrégation par `membershipNumber` peut être effectuée à l’étape finale.
+>Si le classement par déciles n’est nécessaire que pour une période de vie, cette étape peut être omise et l’agrégation par `membershipNumber` peut être effectuée à l’étape finale.
 
-#### Assemblage de toutes les données temporaires
+#### Assembler toutes les données temporaires
 
-La dernière étape consiste à regrouper toutes les données temporaires dans un formulaire identique à la structure des déciles du groupe de champs.
+La dernière étape consiste à rassembler toutes les données temporaires sous une forme identique à la structure des déciles dans le groupe de champs .
 
 ```sql
 SELECT STRUCT(
@@ -278,7 +278,7 @@ FROM all_memberships
     LEFT JOIN map_6 ON  (all_memberships.membershipNumber = map_6.membershipNumber)
 ```
 
-Si seules les données de durée de vie sont disponibles, votre requête se présente comme suit :
+Si seules des données de durée de vie sont disponibles, votre requête se présente comme suit :
 
 ```sql
 SELECT STRUCT(
@@ -291,12 +291,12 @@ FROM rankings
 GROUP BY rankings.membershipNumber
 ```
 
-Une corrélation entre le numéro de classement et le centile est garantie dans les résultats de la requête en raison de l’utilisation de déciles. Chaque rang est égal à 10 %. Dès lors, l’identification d’une audience basée sur les 30 % supérieurs doit uniquement cibler les 1, 2 et 3.
+Grâce à l’utilisation de déciles, une corrélation entre le numéro de classement et le centile est garantie dans les résultats de la requête. Chaque rang équivaut à 10 %. Par conséquent, l’identification d’une audience en fonction des 30 % supérieurs ne doit cibler que les rangs 1, 2 et 3.
 
 ### Exécuter le modèle de requête
 
-Exécutez la requête pour renseigner le jeu de données de décile. Vous pouvez également enregistrer la requête en tant que modèle et la planifier pour qu’elle s’exécute à un rythme. Lors de l’enregistrement en tant que modèle, la requête peut également être mise à jour afin d’utiliser le modèle de création et d’insertion qui fait référence à la commande `table_exists`. Vous trouverez plus d’informations sur l’utilisation de la commande `table_exists`dans le [guide de syntaxe SQL](../sql/syntax.md#table-exists).
+Exécutez la requête pour renseigner le jeu de données de décile. Vous pouvez également enregistrer la requête en tant que modèle et planifier son exécution à une cadence donnée. Une fois enregistrée en tant que modèle, la requête peut également être mise à jour afin d’utiliser le modèle de création et d’insertion qui référence la commande `table_exists`. Vous trouverez plus d’informations sur l’utilisation de la commande `table_exists` dans le guide de syntaxe [SQL](../sql/syntax.md#table-exists).
 
 ## Étapes suivantes
 
-L’exemple de cas d’utilisation fourni ci-dessus met en évidence les étapes permettant de rendre des jeux de données dérivés de déciles disponibles dans Real-time Customer Profile. Cela permet à Segmentation Service, soit par le biais d’une interface utilisateur, soit via une API RESTful, de générer des audiences en fonction de ces compartiments déciles. Pour plus d’informations sur la création, l’évaluation et l’accès aux segments, consultez la [présentation de Segmentation Service](../../segmentation/home.md) .
+L’exemple de cas d’utilisation fourni ci-dessus illustre les étapes à suivre pour rendre les jeux de données dérivés basés sur des déciles disponibles dans le profil client en temps réel. Cela permet à Segmentation Service, par le biais d’une interface utilisateur ou d’une API RESTful, de générer des audiences en fonction de ces intervalles de déciles. Consultez la [ présentation de Segmentation Service ](../../segmentation/home.md) pour plus d’informations sur la création, l’évaluation et l’accès aux segments.

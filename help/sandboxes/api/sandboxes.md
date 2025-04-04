@@ -1,28 +1,28 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;guide de développement des environnements de test
+keywords: Experience Platform;accueil;rubriques les plus consultées;guide de développement des sandbox
 solution: Experience Platform
-title: Point de terminaison de l’API de gestion des environnements de test
-description: Le point de terminaison /sandbox dans l’API Sandbox vous permet de gérer par programmation les environnements de test dans Adobe Experience Platform.
+title: Point d’entrée de l’API Sandbox Management
+description: Le point d’entrée /sandbox de l’API Sandbox vous permet de gérer les sandbox par programmation dans Adobe Experience Platform.
 role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: c15b24990835746a51a50a3e7e7b6a85701c0eb9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1474'
-ht-degree: 51%
+source-wordcount: '1477'
+ht-degree: 49%
 
 ---
 
-# Point d’entrée de gestion des environnements de test
+# Point d’entrée de la gestion des sandbox
 
-Les environnements de test de Adobe Experience Platform fournissent des environnements de développement isolés qui vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter votre environnement de production. Le point d’entrée `/sandboxes` de l’API [!DNL Sandbox] vous permet de gérer par programmation les environnements de test dans Platform.
+Les sandbox de Adobe Experience Platform fournissent des environnements de développement isolés qui vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter votre environnement de production. Le point d’entrée `/sandboxes` de l’API [!DNL Sandbox] vous permet de gérer les sandbox par programmation dans Experience Platform.
 
 ## Prise en main
 
 Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
-## Récupération d’une liste d’environnements de test {#list}
+## Récupération d’une liste de sandbox {#list}
 
-Vous pouvez répertorier tous les environnements de test appartenant à votre organisation (actifs ou non) en effectuant une requête GET sur le point de terminaison `/sandboxes`.
+Vous pouvez répertorier tous les sandbox appartenant à votre organisation (actifs ou non) en envoyant une requête GET au point d’entrée `/sandboxes`.
 
 **Format d’API**
 
@@ -32,7 +32,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Paramètres de requête facultatifs pour filtrer les résultats. Pour plus d’informations, consultez la section sur les [paramètres de requête](./appendix.md#query) . |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs pour le filtrage des résultats. Pour plus d’informations, consultez la section sur les [paramètres de requête](./appendix.md#query). |
 
 **Requête**
 
@@ -129,9 +129,9 @@ Une réponse réussie renvoie une liste de sandbox appartenant à votre organisa
 | --- | --- |
 | `name` | Le nom du sandbox. Cette propriété est utilisée à des fins de recherche dans les appels API. |
 | `title` | Le nom d’affichage du sandbox. |
-| `state` | L’état de traitement actuel du sandbox. Un sandbox peut avoir l’un des états suivants : <br/><ul><li>`creating` : l’environnement de test a été créé, mais le système continue de le configurer.</li><li>`active` : l’environnement de test est créé et actif.</li><li>`failed` : en raison d’une erreur, le système n’a pas pu configurer l’environnement de test et est désactivé.</li><li>`deleted` : l’environnement de test a été désactivé manuellement.</li></ul> |
-| `type` | Type d’environnement de test. Les types d’environnements de test actuellement pris en charge sont `development` et `production`. |
-| `isDefault` | Une propriété booléenne indiquant si cet environnement de test est l’environnement de test de production par défaut pour l’organisation. |
+| `state` | L’état de traitement actuel du sandbox. Un sandbox peut avoir l’un des états suivants : <br/><ul><li>`creating` : le sandbox a été créé, mais est toujours en cours d’approvisionnement par le système.</li><li>`active` : le sandbox est créé et actif.</li><li>`failed` : en raison d’une erreur, le sandbox n’a pas pu être configuré par le système et est désactivé.</li><li>`deleted` : le sandbox a été désactivé manuellement.</li></ul> |
+| `type` | Type de sandbox. Les types de sandbox actuellement pris en charge sont les `development` et les `production`. |
+| `isDefault` | Propriété booléenne indiquant si ce sandbox est le sandbox de production par défaut de l’organisation. |
 | `eTag` | L’identifiant d’une version spécifique du sandbox. Utilisée pour le contrôle des versions et une mise en cache efficace, cette valeur est mise à jour chaque fois que le sandbox est modifié. |
 
 ## Recherche d’un sandbox {#lookup}
@@ -185,7 +185,7 @@ Une réponse réussie renvoie les détails du sandbox, y compris son `name`, `ti
 | `name` | Le nom du sandbox. Cette propriété est utilisée à des fins de recherche dans les appels API. |
 | `title` | Le nom d’affichage du sandbox. |
 | `state` | L’état de traitement actuel du sandbox. Un sandbox peut avoir l’un des états suivants : <ul><li>**création** : le sandbox a été créé, mais le système continue de le configurer.</li><li>**actif **: le sandbox est créé et actif.</li><li>**échec** : en raison d’une erreur, le système n’a pas pu configurer le sandbox et ce dernier a été désactivé.</li><li>**supprimé** : le sandbox a été désactivé manuellement.</li></ul> |
-| `type` | Type d’environnement de test. Les types d’environnements de test actuellement pris en charge sont les suivants : `development` et `production`. |
+| `type` | Type de sandbox. Les types de sandbox actuellement pris en charge sont les suivants : `development` et `production`. |
 | `isDefault` | Une propriété booléenne indiquant s’il s’agit du sandbox par défaut de l’organisation. Il s’agit généralement du sandbox de production. |
 | `eTag` | L’identifiant d’une version spécifique du sandbox. Utilisée pour le contrôle des versions et une mise en cache efficace, cette valeur est mise à jour chaque fois que le sandbox est modifié. |
 
@@ -195,11 +195,11 @@ Une réponse réussie renvoie les détails du sandbox, y compris son `name`, `ti
 >
 >Lorsqu’un nouveau sandbox est créé, vous devez d’abord l’ajouter à votre profil de produit dans [Adobe Admin Console](https://adminconsole.adobe.com/) avant de commencer à utiliser le nouveau sandbox. Consultez la documentation relative à la [gestion des autorisations pour un profil de produit](../../access-control/ui/permissions.md) pour plus d’informations sur la configuration d’un sandbox en fonction d’un profil de produit.
 
-Vous pouvez créer un environnement de test de développement ou de production en envoyant une requête de POST au point de terminaison `/sandboxes`.
+Vous pouvez créer un nouveau sandbox de développement ou de production en effectuant une requête POST vers le point d’entrée `/sandboxes`.
 
 ### Créer une sandbox de développement
 
-Pour créer un environnement de test de développement, vous devez fournir un attribut `type` avec une valeur `development` dans le payload de la requête.
+Pour créer un sandbox de développement, vous devez fournir un attribut `type` avec une valeur de `development` dans la payload de requête.
 
 **Format d’API**
 
@@ -209,7 +209,7 @@ POST /sandboxes
 
 **Requête**
 
-La requête suivante crée un nouvel environnement de test de développement nommé &quot;acme-dev&quot;.
+La requête suivante crée un sandbox de développement nommé « acme-dev ».
 
 ```shell
 curl -X POST \
@@ -228,8 +228,8 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `name` | Identifiant qui sera utilisé pour accéder au sandbox lors de futures requêtes. Cette valeur doit être unique, et il est recommandé de la décrire le plus précisément possible. Cette valeur ne peut pas contenir d’espaces ni de caractères spéciaux. |
-| `title` | Nom compréhensible utilisé à des fins d’affichage dans l’interface utilisateur de Platform. |
-| `type` | Type de sandbox à créer. Pour un environnement de test hors production, cette valeur doit être `development`. |
+| `title` | Nom lisible par l’utilisateur utilisé à des fins d’affichage dans l’interface utilisateur d’Experience Platform. |
+| `type` | Type de sandbox à créer. Pour un sandbox hors production, cette valeur doit être `development`. |
 
 **Réponse**
 
@@ -247,11 +247,11 @@ Une réponse réussie renvoie les détails du nouveau sandbox, indiquant que son
 
 >[!NOTE]
 >
->Les environnements de test prennent environ 30 secondes pour être configurés par le système, après quoi leur `state` deviendra &quot;actif&quot; ou &quot;en échec&quot;.
+>Il faut environ 30 secondes pour que les sandbox soient configurés par le système, après quoi leur `state` deviendra « actif » ou « en échec ».
 
-### Création d’un environnement de test de production
+### Création d’un sandbox de production
 
-Pour créer un environnement de test de production, vous devez fournir un attribut `type` avec une valeur `production` dans le payload de la requête.
+Pour créer un sandbox de production, vous devez fournir un attribut `type` avec une valeur de `production` dans la payload de la requête.
 
 **Format d’API**
 
@@ -261,7 +261,7 @@ POST /sandboxes
 
 **Requête**
 
-La requête suivante crée un nouvel environnement de test de production nommé &quot;acme&quot;.
+La requête suivante crée un sandbox de production nommé « acme ».
 
 ```shell
 curl -X POST \
@@ -281,8 +281,8 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `name` | Identifiant qui sera utilisé pour accéder au sandbox lors de futures requêtes. Cette valeur doit être unique, et il est recommandé de la décrire le plus précisément possible. Cette valeur ne peut pas contenir d’espaces ni de caractères spéciaux. |
-| `title` | Nom compréhensible utilisé à des fins d’affichage dans l’interface utilisateur de Platform. |
-| `type` | Type de sandbox à créer. Pour un environnement de test de production, cette valeur doit être `production`. |
+| `title` | Nom lisible par l’utilisateur utilisé à des fins d’affichage dans l’interface utilisateur d’Experience Platform. |
+| `type` | Type de sandbox à créer. Pour un sandbox de production, cette valeur doit être `production`. |
 
 **Réponse**
 
@@ -300,7 +300,7 @@ Une réponse réussie renvoie les détails du nouveau sandbox, indiquant que son
 
 >[!NOTE]
 >
->Les environnements de test prennent environ 30 secondes pour être configurés par le système, après quoi leur `state` deviendra &quot;actif&quot; ou &quot;en échec&quot;.
+>Il faut environ 30 secondes pour que les sandbox soient configurés par le système, après quoi leur `state` deviendra « actif » ou « en échec ».
 
 ## Mise à jour d’un sandbox {#put}
 
@@ -308,7 +308,7 @@ Vous pouvez mettre à jour un ou plusieurs champs d’un sandbox en effectuant u
 
 >[!NOTE]
 >
->Actuellement, seule la propriété `title` d’un environnement de test peut être mise à jour.
+>Actuellement, seule la propriété `title` d’un sandbox peut être mise à jour.
 
 **Format d’API**
 
@@ -322,7 +322,7 @@ PATCH /sandboxes/{SANDBOX_NAME}
 
 **Requête**
 
-La requête suivante met à jour la propriété `title` de l’environnement de test nommé &quot;acme&quot;.
+La requête suivante met à jour la propriété `title` du sandbox nommé « acme ».
 
 ```shell
 curl -X PATCH \
@@ -352,7 +352,7 @@ Une réponse réussie renvoie un état HTTP 200 (OK) avec les détails du sandb
 
 ## Réinitialisation d’un sandbox {#reset}
 
-Les environnements de test disposent d’une fonctionnalité de &quot;réinitialisation d’usine&quot; qui supprime toutes les ressources autres que les ressources par défaut d’un environnement de test. Vous pouvez réinitialiser un sandbox en effectuant une requête PUT comprenant le `name` du sandbox dans le chemin d’accès de la requête.
+Les sandbox disposent d’une fonctionnalité de « réinitialisation d’usine » qui supprime toutes les ressources autres que celles par défaut d’un sandbox. Vous pouvez réinitialiser un sandbox en effectuant une requête PUT comprenant le `name` du sandbox dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -363,11 +363,11 @@ PUT /sandboxes/{SANDBOX_NAME}
 | Paramètre | Description |
 | --- | --- |
 | `{SANDBOX_NAME}` | La propriété `name` du sandbox que vous souhaitez réinitialiser. |
-| `validationOnly` | Paramètre facultatif qui vous permet d’effectuer une vérification avant vol sur l’opération de réinitialisation de l’environnement de test sans effectuer la requête réelle. Définissez ce paramètre sur `validationOnly=true` pour vérifier si l’environnement de test que vous êtes sur le point de réinitialiser contient des données Adobe Analytics, Adobe Audience Manager ou de partage de segment. |
+| `validationOnly` | Paramètre facultatif qui vous permet d’effectuer une vérification avant vol sur l’opération de réinitialisation du sandbox sans effectuer la requête réelle. Définissez ce paramètre sur `validationOnly=true` pour vérifier si le sandbox que vous êtes sur le point de réinitialiser contient des données Adobe Analytics, Adobe Audience Manager ou de partage de segment. |
 
 **Requête**
 
-La requête suivante réinitialise un environnement de test nommé &quot;acme-dev&quot;.
+La requête suivante réinitialise un sandbox nommé « acme-dev ».
 
 ```shell
 curl -X PUT \
@@ -389,7 +389,7 @@ curl -X PUT \
 
 >[!NOTE]
 >
->Une fois qu’un environnement de test est réinitialisé, il faut compter environ 30 secondes pour qu’il soit configuré par le système.
+>Une fois qu’un sandbox est réinitialisé, il faut environ 30 secondes pour que le système l’approvisionne.
 
 Une réponse réussie renvoie les détails du sandbox mis à jour, indiquant que son `state` est « resetting ».
 
@@ -404,9 +404,9 @@ Une réponse réussie renvoie les détails du sandbox mis à jour, indiquant que
 }
 ```
 
-L’environnement de test de production par défaut et les environnements de test de production créés par l’utilisateur ne peuvent pas être réinitialisés si le graphique d’identités hébergé à l’intérieur de celui-ci est également utilisé par Adobe Analytics pour la fonction [Analyse entre appareils (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=fr) ou si le graphique d’identités hébergé à l’intérieur de celui-ci est également utilisé par Adobe Audience Manager pour la fonction [ Destinations basées sur les personnes (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=fr).
+Le sandbox de production par défaut et les sandbox de production créés par l’utilisateur ne peuvent pas être réinitialisés si le graphique d’identités qui y est hébergé est également utilisé par Adobe Analytics pour la fonctionnalité [Analyses entre appareils (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=fr) ou si le graphique d’identités qui y est hébergé est également utilisé par Adobe Audience Manager pour la fonctionnalité [Destinations basées sur les personnes (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=fr).
 
-Voici une liste d’exceptions possibles qui peuvent empêcher la réinitialisation d’un environnement de test :
+Voici une liste des exceptions possibles qui peuvent empêcher la réinitialisation d’un sandbox :
 
 ```json
 {
@@ -431,7 +431,7 @@ Voici une liste d’exceptions possibles qui peuvent empêcher la réinitialisat
 }
 ```
 
-Vous pouvez procéder à la réinitialisation d’un environnement de test de production utilisé pour le partage bidirectionnel de segments avec [!DNL Audience Manager] ou [!DNL Audience Core Service] en ajoutant le paramètre `ignoreWarnings` à votre requête.
+Vous pouvez procéder à la réinitialisation d’un sandbox de production utilisé pour le partage bidirectionnel de segments avec [!DNL Audience Manager] ou [!DNL Audience Core Service] en ajoutant le paramètre `ignoreWarnings` à votre requête.
 
 **Format d’API**
 
@@ -442,11 +442,11 @@ PUT /sandboxes/{SANDBOX_NAME}?ignoreWarnings=true
 | Paramètre | Description |
 | --- | --- |
 | `{SANDBOX_NAME}` | La propriété `name` du sandbox que vous souhaitez réinitialiser. |
-| `ignoreWarnings` | Paramètre facultatif qui vous permet d’ignorer la vérification de validation et de forcer la réinitialisation d’un environnement de test de production utilisé pour le partage de segments bidirectionnel avec [!DNL Audience Manager] ou [!DNL Audience Core Service]. Ce paramètre ne peut pas être appliqué à un environnement de test de production par défaut. |
+| `ignoreWarnings` | Paramètre facultatif qui vous permet d’ignorer la vérification de validation et de forcer la réinitialisation d’un sandbox de production utilisé pour le partage de segments bidirectionnel avec [!DNL Audience Manager] ou [!DNL Audience Core Service]. Ce paramètre ne peut pas être appliqué à un sandbox de production par défaut. |
 
 **Requête**
 
-La requête suivante réinitialise un environnement de test de production nommé &quot;acme&quot;.
+La requête suivante réinitialise un sandbox de production nommé « acme ».
 
 ```shell
 curl -X PUT \
@@ -485,7 +485,7 @@ Vous pouvez supprimer un sandbox en effectuant une requête DELETE qui inclut le
 
 >[!NOTE]
 >
->L’appel de cette API met à jour la propriété `status` de l’environnement de test sur &quot;supprimé&quot; et la désactive. Les requêtes GET peuvent toujours récupérer les détails du sandbox après sa suppression.
+>L’exécution de cet appel API met à jour la propriété `status` du sandbox sur « supprimé » et la désactive. Les requêtes GET peuvent toujours récupérer les détails du sandbox après sa suppression.
 
 **Format d’API**
 
@@ -496,12 +496,12 @@ DELETE /sandboxes/{SANDBOX_NAME}
 | Paramètre | Description |
 | --- | --- |
 | `{SANDBOX_NAME}` | `name` du sandbox que vous souhaitez supprimer. |
-| `validationOnly` | Paramètre facultatif qui vous permet de vérifier en amont l’opération de suppression de l’environnement de test sans effectuer la requête réelle. Définissez ce paramètre sur `validationOnly=true` pour vérifier si l’environnement de test que vous êtes sur le point de réinitialiser contient des données Adobe Analytics, Adobe Audience Manager ou de partage de segment. |
-| `ignoreWarnings` | Paramètre facultatif qui vous permet d’ignorer la vérification de validation et de forcer la suppression d’un environnement de test de production créé par l’utilisateur qui est utilisé pour le partage bidirectionnel de segments avec [!DNL Audience Manager] ou [!DNL Audience Core Service]. Ce paramètre ne peut pas être appliqué à un environnement de test de production par défaut. |
+| `validationOnly` | Paramètre facultatif qui vous permet d’effectuer une vérification en amont sur l’opération de suppression de sandbox sans effectuer la requête réelle. Définissez ce paramètre sur `validationOnly=true` pour vérifier si le sandbox que vous êtes sur le point de réinitialiser contient des données Adobe Analytics, Adobe Audience Manager ou de partage de segment. |
+| `ignoreWarnings` | Paramètre facultatif qui vous permet d’ignorer la vérification de validation et de forcer la suppression d’un sandbox de production créé par l’utilisateur ou l’utilisatrice qui est utilisé pour le partage de segments bidirectionnel avec [!DNL Audience Manager] ou [!DNL Audience Core Service]. Ce paramètre ne peut pas être appliqué à un sandbox de production par défaut. |
 
 **Requête**
 
-La requête suivante supprime un environnement de test de production nommé &quot;acme&quot;.
+La requête suivante supprime un sandbox de production nommé « acme ».
 
 ```shell
 curl -X DELETE \

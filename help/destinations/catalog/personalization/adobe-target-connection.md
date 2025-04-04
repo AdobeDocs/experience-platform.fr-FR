@@ -3,10 +3,10 @@ keywords: personnalisation cible;destination;destination cible Experience Platfo
 title: Connexion Adobe Target
 description: Adobe Target est une application qui permet la personnalisation et l’expérimentation en temps réel, grâce à l’IA, au niveau de toutes les interactions avec les clients entrants sur les sites web, les applications mobiles, etc.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1768'
-ht-degree: 32%
+source-wordcount: '1769'
+ht-degree: 31%
 
 ---
 
@@ -161,7 +161,7 @@ Lisez [Activer des audiences vers des destinations de personnalisation Edge](../
 
 Des étapes supplémentaires sont nécessaires pour supprimer une audience d’une connexion Adobe Target existante lorsque cette audience est déjà utilisée dans une activité Adobe Target [](https://experienceleague.adobe.com/en/docs/target/using/activities/activities). Toute tentative de suppression d’une audience d’une connexion Adobe Target entraîne une erreur si l’audience est utilisée par une activité Adobe Target.
 
-![Image de l’interface utilisateur de Platform montrant une erreur causée par une tentative de suppression d’une audience utilisée par une activité Target.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
+![Image de l’interface utilisateur d’Experience Platform montrant une erreur causée par une tentative de suppression d’une audience utilisée par une activité Target.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
 
 Pour supprimer une audience d’une destination Target lorsque l’audience est utilisée dans une activité , vous devez d’abord supprimer l’audience de l’activité Target qui l’utilise ou supprimer complètement l’activité. Vous pouvez ensuite supprimer l’audience de votre connexion Target.
 

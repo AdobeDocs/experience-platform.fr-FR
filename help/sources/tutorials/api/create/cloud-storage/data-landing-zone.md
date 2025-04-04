@@ -2,10 +2,10 @@
 title: Connecter Data Landing Zone à Adobe Experience Platform à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform à Data Landing Zone à l’aide de l’API Flow Service.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 1d4dd60180ef2a3cbf6dcd565c2f09dd575716b9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1410'
-ht-degree: 16%
+source-wordcount: '1419'
+ht-degree: 13%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 16%
 
 >[!IMPORTANT]
 >
->Cette page est spécifique au connecteur [!DNL Data Landing Zone] *source* dans l’Experience Platform. Pour plus d’informations sur la connexion au connecteur [!DNL Data Landing Zone] *destination*, consultez la page de documentation [[!DNL Data Landing Zone] destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
+>Cette page est spécifique au connecteur [!DNL Data Landing Zone] *source* d’Experience Platform. Pour plus d’informations sur la connexion au connecteur [!DNL Data Landing Zone] *destination*, consultez la page de documentation [[!DNL Data Landing Zone] destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
 [!DNL Data Landing Zone] est une fonctionnalité de stockage de fichiers sécurisée basée sur le cloud permettant d’importer des fichiers dans Adobe Experience Platform. Les données sont automatiquement supprimées du [!DNL Data Landing Zone] au bout de sept jours.
 
@@ -23,10 +23,10 @@ Ce tutoriel vous guide tout au long des étapes nécessaires à la création d�
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Experience Platform :
 
-* [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Ce tutoriel nécessite également que vous lisiez le guide [Prise en main des API Platform](../../../../../landing/api-guide.md) pour apprendre à vous authentifier auprès des API Platform et à interpréter les exemples d’appels fournis dans la documentation.
+Ce tutoriel nécessite également que vous lisiez le guide [Prise en main des API d’Experience Platform](../../../../../landing/api-guide.md) pour apprendre à vous authentifier auprès des API d’Experience Platform et à interpréter les exemples d’appels fournis dans la documentation.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin afin de créer une connexion source [!DNL Data Landing Zone] à l’aide de l’API [!DNL Flow Service].
 
@@ -36,7 +36,7 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 >
 >Vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Gérer les sources]** pour utiliser les API [!DNL Data Landing Zone] et récupérer des `type=user_drop_zone`. Pour plus d’informations, consultez la [présentation du contrôle d’accès](../../../../../access-control/home.md) ou contactez l’administrateur de votre produit pour obtenir les autorisations requises.
 
-La première étape de l’utilisation des API pour accéder aux [!DNL Data Landing Zone] consiste à envoyer une requête de GET au point d’entrée `/landingzone` de l’API [!DNL Connectors] tout en fournissant des `type=user_drop_zone` dans l’en-tête de votre requête.
+La première étape de l’utilisation des API pour accéder aux [!DNL Data Landing Zone] consiste à envoyer une requête GET au point d’entrée `/landingzone` de l’API [!DNL Connectors] tout en fournissant des `type=user_drop_zone` dans l’en-tête de votre requête.
 
 **Format d’API**
 
@@ -150,7 +150,7 @@ Selon votre fournisseur, une requête réussie renvoie les éléments suivants :
 | `SASToken` | Jeton de signature d’accès partagé pour votre [!DNL Data Landing Zone]. Cette chaîne contient toutes les informations nécessaires pour autoriser une requête. |
 | `storageAccountName` | Nom de votre compte de stockage. |
 | `SASUri` | URI de signature d’accès partagé pour votre [!DNL Data Landing Zone]. Cette chaîne est une combinaison de l’URI du [!DNL Data Landing Zone] auquel vous êtes authentifié et de son jeton SAS correspondant. |
-| `expiryDate` | Date d’expiration de votre jeton SAS. Vous devez actualiser votre jeton avant la date d’expiration pour continuer à l’utiliser dans votre application pour charger des données vers le [!DNL Data Landing Zone]. Si vous n’actualisez pas manuellement votre jeton avant la date d’expiration indiquée, il s’actualisera automatiquement et fournira un nouveau jeton lorsque l’appel des informations d’identification du GET sera effectué. |
+| `expiryDate` | Date d’expiration de votre jeton SAS. Vous devez actualiser votre jeton avant la date d’expiration pour continuer à l’utiliser dans votre application pour charger des données vers le [!DNL Data Landing Zone]. Si vous n’actualisez pas manuellement votre jeton avant la date d’expiration indiquée, il s’actualisera automatiquement et fournira un nouveau jeton lorsque l’appel des informations d’identification GET sera effectué. |
 
 >[!TAB Réponse sur AWS]
 
@@ -287,7 +287,7 @@ public class Main {
 
 ## Mettre à jour les informations d’identification [!DNL Data Landing Zone]
 
-Vous pouvez mettre à jour votre `SASToken` en effectuant une requête de POST au point d’entrée `/credentials` de l’API [!DNL Connectors].
+Vous pouvez mettre à jour votre `SASToken` en effectuant une requête POST vers le point d’entrée `/credentials` de l’API [!DNL Connectors].
 
 **Format d’API**
 
@@ -330,7 +330,7 @@ La réponse suivante renvoie des valeurs mises à jour pour vos `SASToken` et `S
 
 ## Explorer la structure et le contenu du fichier de zone d’atterrissage
 
-Vous pouvez explorer la structure de fichiers et le contenu de votre zone d’atterrissage en effectuant une requête GET au point d’entrée `connectionSpecs` de l’API [!DNL Flow Service].
+Vous pouvez explorer la structure de fichiers et le contenu de votre zone d’atterrissage en envoyant une requête GET au point d’entrée `connectionSpecs` de l’API [!DNL Flow Service].
 
 **Format d’API**
 
@@ -385,7 +385,7 @@ Une réponse réussie renvoie un tableau de fichiers et de dossiers trouvés dan
 
 ## Prévisualiser la structure et le contenu du fichier de zone d’atterrissage
 
-Pour inspecter la structure d’un fichier dans votre zone d’atterrissage, envoyez une requête GET tout en indiquant le chemin d’accès au fichier et saisissez comme paramètre de requête.
+Pour inspecter la structure d’un fichier dans votre zone d’atterrissage, effectuez une requête GET tout en fournissant le chemin d’accès au fichier et saisissez comme paramètre de requête.
 
 **Format d’API**
 
@@ -479,7 +479,7 @@ Une réponse réussie renvoie la structure du fichier interrogé, y compris les 
 
 ### Utilisation de `determineProperties` pour détecter automatiquement les informations de propriété de fichier d’un [!DNL Data Landing Zone]
 
-Vous pouvez utiliser le paramètre `determineProperties` pour détecter automatiquement les informations de propriété du contenu du fichier de votre [!DNL Data Landing Zone] lors d’un appel au GET visant à explorer le contenu et la structure de votre source.
+Vous pouvez utiliser le paramètre `determineProperties` pour détecter automatiquement les informations de propriété du contenu du fichier de votre [!DNL Data Landing Zone] lors d’un appel GET visant à explorer le contenu et la structure de votre source.
 
 #### `determineProperties` cas d’utilisation
 
@@ -656,8 +656,8 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `name` | Nom de votre connexion source [!DNL Data Landing Zone]. |
-| `data.format` | Format des données que vous souhaitez importer dans Platform. |
-| `params.path` | Chemin d’accès au fichier que vous souhaitez importer dans Platform. |
+| `data.format` | Format des données à importer dans Experience Platform. |
+| `params.path` | Chemin d’accès au fichier à importer dans Experience Platform. |
 | `connectionSpec.id` | Identifiant de spécification de connexion qui correspond à [!DNL Data Landing Zone]. Cet ID fixe est `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
 
 **Réponse**
@@ -673,4 +673,4 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez récupéré vos informations d’identification [!DNL Data Landing Zone], exploré sa structure de fichiers pour trouver le fichier que vous souhaitez importer dans Platform et créé une connexion source pour commencer à importer vos données dans Platform. Vous pouvez maintenant passer au tutoriel suivant, où vous apprendrez à [créer un flux de données pour importer des données d’espace de stockage dans Platform à l’aide de l’API [!DNL Flow Service] ](../../collect/cloud-storage.md).
+En suivant ce tutoriel, vous avez récupéré vos informations d’identification [!DNL Data Landing Zone], exploré sa structure de fichiers pour trouver le fichier que vous souhaitez importer dans Experience Platform et créé une connexion source pour commencer à importer vos données dans Experience Platform. Vous pouvez maintenant passer au tutoriel suivant, où vous apprendrez à [créer un flux de données pour importer des données d’espace de stockage dans Experience Platform à l’aide de l’API [!DNL Flow Service] ](../../collect/cloud-storage.md).

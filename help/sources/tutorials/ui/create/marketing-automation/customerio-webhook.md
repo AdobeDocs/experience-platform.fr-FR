@@ -1,22 +1,22 @@
 ---
-title: Création d’une connexion Source Customer.io et d’un flux de données dans l’interface utilisateur
+title: Créer une connexion Source et un flux de données Customer.io dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Customer.io à l’aide de l’interface utilisateur de Adobe Experience Platform.
-badge: Version bêta
+badge: Beta
 exl-id: 7655a34c-808a-46e3-94e3-022a433755a4
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1225'
 ht-degree: 20%
 
 ---
 
-# Créer une connexion source et un flux de données [!DNL Customer.io] dans l’interface utilisateur
+# Créer une connexion source [!DNL Customer.io] et un flux de données dans l’interface utilisateur
 
 >[!NOTE]
 >
 >La source [!DNL Customer.io] est en version Beta. Veuillez lire la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Ce tutoriel décrit les étapes à suivre pour créer une connexion source et un flux de données [!DNL Customer.io] à l’aide de l’interface utilisateur de Adobe Experience Platform.
+Ce tutoriel décrit les étapes à suivre pour créer une connexion source [!DNL Customer.io] et un flux de données à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
 ## Prise en main {#getting-started}
 
@@ -31,9 +31,9 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 La section suivante fournit des informations sur les conditions préalables à remplir avant de pouvoir créer une connexion source [!DNL Customer.io].
 
-### Exemple JSON pour définir le schéma source pour [!DNL Customer.io] {#prerequisites-json-schema}
+### Exemple de JSON pour définir le schéma source de [!DNL Customer.io] {#prerequisites-json-schema}
 
-Avant de créer une connexion source [!DNL Customer.io], vous devez fournir un schéma source. Vous pouvez utiliser le fichier JSON ci-dessous.
+Avant de créer une connexion source [!DNL Customer.io], vous devez disposer d’un schéma source. Vous pouvez utiliser le code JSON ci-dessous.
 
 ```
 {
@@ -53,72 +53,72 @@ Avant de créer une connexion source [!DNL Customer.io], vous devez fournir un s
 }
 ```
 
-### Création d’un schéma de plateforme pour [!DNL Customer.io] {#create-platform-schema}
+### Création d’un schéma Experience Platform pour [!DNL Customer.io] {#create-platform-schema}
 
-Vous devez également vous assurer de créer un schéma Platform à utiliser pour votre source. Consultez le tutoriel sur la [création d’un schéma de plateforme](../../../../../xdm/schema/composition.md) pour obtenir des instructions complètes sur la création d’un schéma.
+Vous devez également vous assurer de créer un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la [création d’un schéma Experience Platform).
 
-![Copie d’écran de l’interface utilisateur de Platform présentant un exemple de schéma pour Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/schema.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform montrant un exemple de schéma pour Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/schema.png)
 
 ## Connecter votre compte [!DNL Customer.io] {#connect-account}
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources] et afficher un catalogue de sources disponibles dans Experience Platform.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources] et consulter un catalogue de sources disponibles dans Experience Platform.
 
-Utilisez le menu *[!UICONTROL Catégories]* pour filtrer les sources par catégorie. Vous pouvez également saisir un nom de source dans la barre de recherche pour trouver une source spécifique dans le catalogue.
+Utilisez le menu *[!UICONTROL Catégories]* pour filtrer les sources par catégorie. Vous pouvez également saisir un nom de source dans la barre de recherche pour trouver une source spécifique à partir du catalogue.
 
-Accédez à la catégorie [!UICONTROL Automatisation marketing] pour afficher la carte source [!DNL Customer.io]. Pour commencer, sélectionnez **[!UICONTROL Ajouter des données]**.
+Accédez à la catégorie [!UICONTROL Automatisation du marketing] pour afficher la carte source du [!DNL Customer.io]. Pour commencer, sélectionnez **[!UICONTROL Ajouter des données]**.
 
-![Copie d’écran de l’interface utilisateur de Platform pour le catalogue avec carte Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
+![Capture d’écran de l’interface utilisateur Experience Platform pour le catalogue avec la carte Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
 
 ## Sélectionner les données {#select-data}
 
-L’étape **[!UICONTROL Sélectionner les données]** s’affiche, vous permettant ainsi de sélectionner les données à importer dans Platform.
+L’étape **[!UICONTROL Sélectionner les données]** s’affiche, fournissant une interface vous permettant de sélectionner les données que vous souhaitez importer dans Experience Platform.
 
 * La partie gauche de l’interface est un navigateur qui vous permet d’afficher les flux de données disponibles dans votre compte ;
 * La partie droite de l’interface vous permet de prévisualiser jusqu’à 100 lignes de données à partir d’un fichier JSON.
 
-Sélectionnez **[!UICONTROL Télécharger des fichiers]** pour charger un fichier JSON à partir de votre système local. Vous pouvez également faire glisser et déposer le fichier JSON que vous souhaitez charger dans le panneau [!UICONTROL Glisser-déposer des fichiers].
+Sélectionnez **[!UICONTROL Télécharger des fichiers]** pour télécharger un fichier JSON à partir de votre système local. Vous pouvez également faire glisser et déposer le fichier JSON que vous souhaitez charger dans le panneau [!UICONTROL Glisser-déposer des fichiers].
 
-![L’étape d’ajout de données du workflow des sources.](../../../../images/tutorials/create/marketing-automation/customerio-webhook//add-data.png)
+![Étape d’ajout de données du workflow des sources.](../../../../images/tutorials/create/marketing-automation/customerio-webhook//add-data.png)
 
-Une fois le fichier chargé, l’interface de prévisualisation se met à jour pour afficher un aperçu du schéma que vous avez chargé. L’interface d’aperçu vous permet d’examiner le contenu et la structure d’un fichier. Vous pouvez également utiliser l’utilitaire [!UICONTROL Search field] pour accéder à des éléments spécifiques à partir de votre schéma.
+Une fois votre fichier chargé, l’interface de prévisualisation se met à jour pour afficher un aperçu du schéma que vous avez chargé. L’interface de prévisualisation vous permet d’examiner le contenu et la structure d’un fichier. Vous pouvez également utiliser l’utilitaire [!UICONTROL Champ de recherche] pour accéder à des éléments spécifiques à partir de votre schéma.
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
-![L’étape d’aperçu du workflow des sources.](../../../../images/tutorials/create/marketing-automation/customerio-webhook//preview.png)
+![Étape de prévisualisation du workflow des sources.](../../../../images/tutorials/create/marketing-automation/customerio-webhook//preview.png)
 
 ## Détails du flux de données {#dataflow-detail}
 
-L’étape **Détails du flux de données** s’affiche, vous fournissant des options permettant d’utiliser un jeu de données existant ou d’établir un nouveau jeu de données pour votre flux de données, ainsi qu’une opportunité de fournir un nom et une description pour votre flux de données. Au cours de cette étape, vous pouvez également configurer des paramètres pour l’ingestion de profils, les diagnostics d’erreur, l’ingestion partielle et les alertes.
+L’étape **Détails du flux de données** s’affiche, vous offrant des options pour utiliser un jeu de données existant ou établir un nouveau jeu de données pour votre flux de données, ainsi que la possibilité de fournir un nom et une description pour votre flux de données. Au cours de cette étape, vous pouvez également configurer les paramètres d’ingestion de profil, de diagnostics d’erreur, d’ingestion partielle et d’alertes.
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
-![L’étape de détail du flux de données du flux de sources.](../../../../images/tutorials/create/marketing-automation/customerio-webhook//dataflow-detail.png)
+![Étape du flux de données-détail du workflow des sources.](../../../../images/tutorials/create/marketing-automation/customerio-webhook//dataflow-detail.png)
 
 ## Mappage {#mapping}
 
 L’interface de [!UICONTROL mappage] fournit un outil complet pour mapper les champs sources de votre schéma source aux champs XDM cibles correspondants dans le schéma cible.
 
-Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [guide de l’interface utilisateur de la préparation des données](../../../../../data-prep/ui/mapping.md).
+Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [ Guide de l’interface utilisateur de la préparation des données ](../../../../../data-prep/ui/mapping.md).
 
 Tous les mappages répertoriés ci-dessous sont obligatoires et doivent être configurés avant de passer à l’étape [!UICONTROL Révision].
 
 | Champ cible | Description |
 | --- | --- |
-| `object_type` | Le type d’objet, consultez la documentation [!DNL Customer.io] [events](https://customer.io/docs/webhooks/#events) pour les types pris en charge. |
+| `object_type` | Le type d’objet ; consultez la documentation [!DNL Customer.io] [événements](https://customer.io/docs/webhooks/#events) pour connaître les types pris en charge. |
 | `id` | Identifiant de l’objet. |
-| `email` | Adresse électronique associée à l’objet. |
+| `email` | Adresse e-mail associée à l’objet. |
 | `event_id` | Identifiant unique de l’événement. |
-| `cio_id` | L’identifiant [!DNL Customer.io] de l’événement. |
-| `metric` | Type d’événement. Pour plus d’informations, consultez la documentation [!DNL Customer.io] [events](https://customer.io/docs/webhooks/#events) pour les types pris en charge. |
-| `timestamp` | Horodatage de l’événement. |
+| `cio_id` | Identifiant [!DNL Customer.io] de l’événement. |
+| `metric` | Type d’événement. Pour plus d’informations sur les types pris en charge, consultez la documentation [!DNL Customer.io] [événements](https://customer.io/docs/webhooks/#events) . |
+| `timestamp` | Date et heure auxquelles l’événement s’est produit. |
 
 >[!IMPORTANT]
 >
->Ne mappez pas `cio_id` lors de l&#39;exécution de [!DNL Customer.io] webhook dans `test mode`, car aucun champ associé n&#39;est envoyé depuis [!DNL Customer.io].
+>Ne mappez pas les `cio_id` lors de l’exécution [!DNL Customer.io] webhook dans le `test mode`, car aucun champ associé ne sera envoyé depuis [!DNL Customer.io].
 
-Une fois le mappage de vos données source réussi, sélectionnez **[!UICONTROL Suivant]**.
+Une fois vos données source mappées, sélectionnez **[!UICONTROL Suivant]**.
 
-![L’étape de mappage du workflow des sources.](../../../../images/tutorials/create/marketing-automation/customerio-webhook/mapping.png)
+![Étape de mappage du workflow des sources.](../../../../images/tutorials/create/marketing-automation/customerio-webhook/mapping.png)
 
 ## Révision {#review}
 
@@ -129,38 +129,38 @@ L’écran de **[!UICONTROL Révision]** s’affiche, vous permettant dʼexamine
 
 Une fois que vous avez vérifié votre flux de données, sélectionnez **[!UICONTROL Terminer]** et patientez quelques instants le temps que le flux de données soit créé.
 
-![L’étape de révision du workflow des sources.](../../../../images/tutorials/create/marketing-automation/customerio-webhook/review.png)
+![Étape de révision du workflow des sources.](../../../../images/tutorials/create/marketing-automation/customerio-webhook/review.png)
 
-## Obtention de l’URL de votre point de terminaison de diffusion {#get-streaming-endpoint}
+## Obtention de l’URL du point d’entrée de diffusion en continu {#get-streaming-endpoint}
 
-Une fois votre flux de données de diffusion en continu créé, vous pouvez désormais récupérer l’URL de votre point de terminaison de diffusion en continu. Ce point de terminaison sera utilisé pour s’abonner à votre webhook, ce qui permet à votre source de diffusion en continu de communiquer avec l’Experience Platform.
+Une fois votre flux de données en continu créé, vous pouvez récupérer votre URL de point d’entrée en continu. Ce point d’entrée sera utilisé pour vous abonner à votre webhook, ce qui permettra à votre source de diffusion en continu de communiquer avec Experience Platform.
 
 Pour construire l’URL utilisée pour configurer le webhook sur [!DNL Customer.io], vous devez récupérer les éléments suivants :
 
-* **[!UICONTROL Identifiant de flux de données]**
+* **[!UICONTROL Identifiant du flux de données]**
 * **[!UICONTROL Point d’entrée de diffusion en continu]**
 
-Pour récupérer votre **[!UICONTROL identifiant de flux de données]** et votre **[!UICONTROL point d’entrée de flux]**, accédez à la page [!UICONTROL activité de flux de données] du flux de données que vous venez de créer et copiez les détails depuis le bas du panneau [!UICONTROL Propriétés].
+Pour récupérer vos **[!UICONTROL ID de flux de données]** et **[!UICONTROL Point d’entrée de diffusion en continu]**, accédez à la page [!UICONTROL Activité de flux de données] du flux de données que vous venez de créer et copiez les détails au bas du panneau [!UICONTROL Propriétés].
 
-![Le point d’entrée de diffusion en continu dans l’activité de flux de données.](../../../../images/tutorials/create/marketing-automation/customerio-webhook/endpoint-test.png)
+![Point d’entrée de flux continu dans l’activité de flux de données.](../../../../images/tutorials/create/marketing-automation/customerio-webhook/endpoint-test.png)
 
-Une fois que vous avez récupéré votre point de terminaison de diffusion en continu et votre identifiant de flux de données, créez une URL basée sur le modèle suivant : ```{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}```. Par exemple, une URL webhook construite peut se présenter comme suit : ``https://dcs.adobedc.net/collection/febc116d22ba0ea2868e9c93b199375302afb8a589617700991bb8f3f0341ad7?x-adobe-flow-id=439b3fc4-3042-4a3a-b5e0-a494898d3fb0``
+Une fois que vous avez récupéré votre point d’entrée de diffusion en continu et votre identifiant de flux de données, créez une URL basée sur le modèle suivant : ```{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}```. Par exemple, une URL webhook construite peut ressembler à ceci : ``https://dcs.adobedc.net/collection/febc116d22ba0ea2868e9c93b199375302afb8a589617700991bb8f3f0341ad7?x-adobe-flow-id=439b3fc4-3042-4a3a-b5e0-a494898d3fb0``
 
 ## Configuration du webhook de création de rapports dans [!DNL Customer.io] {#set-up-webhook}
 
-Une fois votre URL webhook créée, vous pouvez configurer votre webhook de création de rapports à l’aide de l’interface utilisateur [!DNL Customer.io]. Pour obtenir des instructions sur la configuration des webhooks de création de rapports, consultez le [[!DNL Customer.io] guide](https://customer.io/docs/webhooks/#setup) sur la configuration des webhooks.
+Une fois votre URL de webhook créée, vous pouvez configurer votre webhook de création de rapports à l’aide de l’interface utilisateur [!DNL Customer.io]. Pour obtenir des instructions sur la configuration des Webhooks de création de rapports, consultez le [[!DNL Customer.io] guide](https://customer.io/docs/webhooks/#setup) sur la configuration des Webhooks.
 
-Dans l’interface utilisateur de [!DNL Customer.io], saisissez votre [URL webhook](#get-streaming-endpoint-url) dans le champ [!DNL WEBHOOK ENDPOINT] .
+Dans l’interface utilisateur [!DNL Customer.io], saisissez votre [URL webhook](#get-streaming-endpoint-url) dans le champ [!DNL WEBHOOK ENDPOINT].
 
-![L’interface utilisateur de Customer.io présentant le champ de point de terminaison webhook](../../../../images/tutorials/create/marketing-automation/customerio-webhook/webhook.png)
+![Interface utilisateur de Customer.io affichant le champ de point d’entrée webhook](../../../../images/tutorials/create/marketing-automation/customerio-webhook/webhook.png)
 
 >[!TIP]
 >
->Vous pouvez vous abonner à divers événements pour votre webhook de reporting. Le message de chaque événement sera ingéré dans Platform lorsqu’un critère de déclenchement d’événement d’action [!DNL Customer.io] est satisfait. Pour plus d&#39;informations sur les différents événements, consultez la [[!DNL Customer.io] documentation sur les événements](https://customer.io/docs/webhooks/#events).
+>Vous pouvez vous abonner à différents événements pour votre webhook de création de rapports. Le message de chaque événement sera ingéré dans Experience Platform lorsqu’un critère de déclenchement d’événement d’action [!DNL Customer.io] sera satisfait. Pour plus d’informations sur les différents événements, reportez-vous à la documentation [[!DNL Customer.io] événements](https://customer.io/docs/webhooks/#events).
 
 ## Étapes suivantes {#next-steps}
 
-En suivant ce tutoriel, vous avez correctement configuré un flux de données en continu pour importer vos données [!DNL Customer.io] dans Experience Platform. Pour surveiller les données ingérées, reportez-vous au guide sur la [surveillance des flux de données en continu à l’aide de l’interface utilisateur de Platform](../../monitor-streaming.md).
+En suivant ce tutoriel, vous avez configuré un flux de données en continu pour importer vos données [!DNL Customer.io] dans Experience Platform. Pour surveiller les données ingérées, reportez-vous au guide sur la [surveillance des flux de données en flux continu à l’aide de l’interface utilisateur d’Experience Platform](../../monitor-streaming.md).
 
 ## Ressources supplémentaires {#additional-resources}
 
@@ -168,16 +168,16 @@ Les sections ci-dessous fournissent des ressources supplémentaires auxquelles v
 
 ### Mécanismes de sécurisation {#guardrails}
 
-Pour plus d’informations sur les barrières de sécurité, reportez-vous à la [[!DNL Customer.io] page des délais et échecs](https://customer.io/docs/webhooks/#timeouts-and-failures).
+Pour plus d’informations sur les mécanismes de sécurisation, reportez-vous à la page [[!DNL Customer.io] Délais d’expiration et échecs](https://customer.io/docs/webhooks/#timeouts-and-failures).
 
 ### Validation {#validation}
 
-Pour vérifier que vous avez correctement configuré la source et que les messages [!DNL Customer.io] sont ingérés, procédez comme suit :
+Pour vérifier que vous avez correctement configuré la source et [!DNL Customer.io] messages sont ingérés, procédez comme suit :
 
-* Vous pouvez consulter la page [!DNL Customer.io] **[!UICONTROL Journaux d’activité]** pour identifier les événements capturés par [!DNL Customer.io].
+* Vous pouvez vérifier la page [!DNL Customer.io] **[!UICONTROL Journaux d’activité]** pour identifier les événements capturés par [!DNL Customer.io].
 
-![Copie d’écran de l’interface utilisateur de Customer.io affichant les journaux d’activité](../../../../images/tutorials/create/marketing-automation/customerio-webhook/activity-logs.png)
+![Capture d’écran de l’interface utilisateur de Customer.io montrant les journaux d’activité](../../../../images/tutorials/create/marketing-automation/customerio-webhook/activity-logs.png)
 
-* Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Afficher les flux de données]** en regard du menu de carte [!DNL Customer.io] du catalogue des sources. Ensuite, sélectionnez **[!UICONTROL Prévisualiser le jeu de données]** pour vérifier les données ingérées pour les événements que vous avez sélectionnés dans [!DNL Customer.io].
+* Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Afficher les flux de données]** à côté du menu de carte [!DNL Customer.io] dans le catalogue de sources. Sélectionnez ensuite **[!UICONTROL Prévisualiser le jeu de données]** pour vérifier les données ingérées pour les événements que vous avez sélectionnés dans [!DNL Customer.io].
 
-![Copie d’écran de l’interface utilisateur de Platform montrant les événements ingérés](../../../../images/tutorials/create/marketing-automation/customerio-webhook/platform-dataset.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform montrant les événements ingérés](../../../../images/tutorials/create/marketing-automation/customerio-webhook/platform-dataset.png)

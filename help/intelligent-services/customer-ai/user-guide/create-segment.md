@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;insights;service client;rubriques les plus consultées;segments d’assistance client
+keywords: Experience Platform;informations;ia dédiée aux clients;rubriques populaires;segments ia dédiée aux clients
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
-title: Création de segments client avec des scores prédéfinis
+title: Créer des segments de clients avec les scores prévus
 description: Lorsqu’une opération de prédiction se termine, les scores de propension prévus sont automatiquement utilisés par les Profils. L’enrichissement des profils avec les scores Customer AI permet de créer des segments client pour trouver des audiences en fonction de leurs scores de propension. Cette section décrit les étapes à suivre pour créer des segments à l’aide du créateur de segments.
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: 68aa226395e8dcbf98a851134332f31303a8c710
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 75%
+source-wordcount: '319'
+ht-degree: 70%
 
 ---
 
@@ -18,9 +18,9 @@ Lorsqu’une opération de prédiction se termine, les scores de propension pré
 
 >[!IMPORTANT]
 >
->Pour utiliser cette méthode, Real-Time Customer Profile doit être activé pour le jeu de données.
+>Pour utiliser cette méthode, le profil client en temps réel doit être activé pour le jeu de données.
 
-Dans l’interface utilisateur de Platform, cliquez sur **[!UICONTROL Segments]** dans le volet de navigation de gauche, puis cliquez sur **[!UICONTROL Créer un segment]**.
+Dans l’interface utilisateur d’Experience Platform, cliquez sur **[!UICONTROL Segments]** dans le volet de navigation de gauche, puis cliquez sur **[!UICONTROL Créer un segment]**.
 
 ![](../images/user-guide/segments_new.png)
 
@@ -34,10 +34,10 @@ Sous la colonne de droite *Propriétés du segment*, indiquez un nom pour le seg
 
 ![](../images/user-guide/properties_new.png)
 
-Au-dessus de la colonne de gauche *Champs*, cliquez sur l’icône **engrenage** et sélectionnez une *stratégie de fusion* dans la liste déroulante. Cliquez sur **[!UICONTROL Enregistrer]** pour créer le segment.
+Au-dessus de la colonne de gauche *Champs*, cliquez sur l’icône **engrenage** et sélectionnez une *Politique de fusion* dans la liste déroulante. Cliquez sur **[!UICONTROL Enregistrer]** pour créer le segment.
 
 ![](../images/user-guide/merge_policy_new.png)
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez réussi à trouver des audiences en fonction de leurs scores de propension à l’aide du créateur de segments. Vous pouvez désormais cibler vos audiences en les activant sur les destinations. Pour plus d’informations, consultez [Présentation des destinations](../../../destinations/home.md).
+Ce tutoriel vous a permis de trouver des audiences en fonction de leurs scores de propension à l’aide du créateur de segments. Vous pouvez désormais cibler vos audiences en les activant sur les destinations. Pour plus d’informations, consultez [Présentation des destinations](../../../destinations/home.md).

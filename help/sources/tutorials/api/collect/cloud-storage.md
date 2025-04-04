@@ -3,18 +3,18 @@ keywords: Experience Platform;accueil;rubriques populaires;données de stockage 
 solution: Experience Platform
 title: Créer un flux de données pour les sources de stockage cloud à l’aide de l’API Flow Service
 type: Tutorial
-description: Ce tutoriel décrit la procédure à suivre pour récupérer des données à partir d’un stockage cloud tiers afin de les importer dans Platform à l’aide des connecteurs source et des API.
+description: Ce tutoriel décrit les étapes à suivre pour récupérer des données à partir d’un stockage cloud tiers et les importer dans Experience Platform à l’aide des connecteurs source et des API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1742'
-ht-degree: 69%
+source-wordcount: '1756'
+ht-degree: 59%
 
 ---
 
 # Créer un flux de données pour les sources de stockage cloud à l’aide de l’API [!DNL Flow Service]
 
-Ce tutoriel décrit la procédure à suivre pour récupérer des données à partir d’une source de stockage cloud afin de les importer dans Platform à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une source d’espace de stockage dans le cloud et les importer dans Experience Platform à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
@@ -29,15 +29,15 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
    - [Guide du développeur de Schema Registry](../../../../xdm/api/getting-started.md) : inclut des informations importantes à connaître avant dʼeffectuer des appels vers l’API Schema Registry. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
 - [[!DNL Catalog Service]](../../../../catalog/home.md) : Catalogue constitue le système d’enregistrement de l’emplacement et de la liaison des données dans Experience Platform.
 - [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md) : l’API Batch Ingestion vous permet d’ingérer des données dans Experience Platform sous forme de fichiers séquentiels.
-- [Sandbox](../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+- [Sandbox](../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-### Utiliser les API Platform
+### Utilisation des API Experience Platform
 
-Pour plus d’informations sur la manière d’effectuer correctement des appels vers les API Platform, consultez le guide de [Prise en main des API Platform](../../../../landing/api-guide.md).
+Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Experience Platform, consultez le guide [Prise en main des API Experience Platform](../../../../landing/api-guide.md).
 
 ## Créer une connexion source {#source}
 
-Vous pouvez créer une connexion source en adressant une requête de POST au point d’entrée `sourceConnections` de [!DNL Flow Service]’API et en fournissant votre identifiant de connexion de base, le chemin d’accès au fichier source à ingérer et l’identifiant de spécification de connexion correspondant à votre source.
+Vous pouvez créer une connexion source en adressant une requête POST au point d’entrée `sourceConnections` de [!DNL Flow Service]’API et en fournissant votre identifiant de connexion de base, le chemin d’accès au fichier source à ingérer et l’identifiant de spécification de connexion correspondant à votre source.
 
 Lors de la création d’une connexion source, vous devez également définir une valeur d’énumération pour l’attribut du format de données.
 
@@ -93,10 +93,10 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `baseConnectionId` | Identifiant de connexion de base de votre source d’espace de stockage dans le cloud. |
-| `data.format` | Format des données que vous souhaitez importer dans Platform. Les valeurs prises en charge sont les suivantes : `delimited`, `JSON` et `parquet`. |
+| `data.format` | Format des données à importer dans Experience Platform. Les valeurs prises en charge sont les suivantes : `delimited`, `JSON` et `parquet`. |
 | `data.properties` | (Facultatif) Ensemble de propriétés que vous pouvez appliquer à vos données lors de la création d’une connexion source. |
 | `data.properties.columnDelimiter` | (Facultatif) Délimiteur de colonne à un seul caractère que vous pouvez spécifier lors de la collecte de fichiers plats. Toute valeur de caractère unique est un délimiteur de colonne autorisé. Si elle n’est pas fournie, une virgule (`,`) est utilisée comme valeur par défaut. **Remarque** : la propriété `columnDelimiter` ne peut être utilisée que lors de l’ingestion de fichiers délimités. |
-| `data.properties.encoding` | (Facultatif) Propriété qui définit le type de codage à utiliser lors de l’ingestion de vos données dans Platform. Les types de codage pris en charge sont les suivants : `UTF-8` et `ISO-8859-1`. **Remarque** : le paramètre `encoding` n’est disponible que lors de l’ingestion de fichiers CSV délimités. D’autres types de fichiers seront ingérés avec le codage par défaut, `UTF-8`. |
+| `data.properties.encoding` | (Facultatif) Propriété qui définit le type de codage à utiliser lors de l’ingestion de vos données dans Experience Platform. Les types de codage pris en charge sont les suivants : `UTF-8` et `ISO-8859-1`. **Remarque** : le paramètre `encoding` n’est disponible que lors de l’ingestion de fichiers CSV délimités. D’autres types de fichiers seront ingérés avec le codage par défaut, `UTF-8`. |
 | `data.properties.compressionType` | (Facultatif) Propriété qui définit le type de fichier compressé à ingérer. Les types de fichiers compressés pris en charge sont les suivants : `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip` et `tar`. **Remarque** : la propriété `compressionType` ne peut être utilisée que lors de l’ingestion de fichiers délimités ou JSON. |
 | `params.path` | Chemin d’accès au fichier source auquel vous accédez. Ce paramètre pointe vers un fichier individuel ou un dossier entier.  **Remarque** : vous pouvez utiliser un astérisque à la place du nom de fichier pour spécifier l’ingestion d’un dossier entier. Par exemple : `/acme/summerCampaign/*.csv` ingérera l’intégralité du dossier `/acme/summerCampaign/`. |
 | `params.type` | Type du fichier de données source que vous ingérez. Utilisez le `file` de type pour ingérer un fichier individuel et le `folder` de type pour ingérer un dossier entier. |
@@ -115,7 +115,7 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
 
 ### Utilisez des expressions régulières pour sélectionner un ensemble spécifique de fichiers à ingérer {#regex}
 
-Vous pouvez utiliser des expressions régulières pour ingérer un ensemble particulier de fichiers de votre source vers Platform lors de la création d’une connexion source.
+Vous pouvez utiliser des expressions régulières pour ingérer un ensemble particulier de fichiers de votre source vers Experience Platform lors de la création d’une connexion source.
 
 **Format d’API**
 
@@ -196,7 +196,7 @@ curl -X POST \
 
 ## Créer un schéma XDM cible {#target-schema}
 
-Pour que les données sources soient utilisées dans Platform, un schéma cible doit être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Platform contenant les données sources.
+Pour que les données sources soient utilisées dans Experience Platform, un schéma cible doit être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Experience Platform contenant les données sources.
 
 Un schéma XDM cible peut être créé en adressant une requête POST à l’[API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -348,7 +348,7 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 
 ## Récupérer des spécifications du flux de données {#specs}
 
-Un flux de données est chargé de collecter des données provenant de sources et de les importer dans Platform. Afin de créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données responsables de la collecte des données de stockage dans le cloud.
+Un flux de données est chargé de collecter des données à partir de sources et de les importer dans Experience Platform. Afin de créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données responsables de la collecte des données de stockage dans le cloud.
 
 **Format d’API**
 
@@ -374,7 +374,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la spécification du flux de données responsable de l’importation des données de votre source dans Platform. La réponse inclut la valeur `id` unique de spécification de flux requise pour créer un flux de données.
+Une réponse réussie renvoie les détails de la spécification du flux de données responsable de l’importation des données de votre source dans Experience Platform. La réponse inclut la valeur `id` unique de spécification de flux requise pour créer un flux de données.
 
 ```json
 {
@@ -624,8 +624,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud Storage flow to Platform",
-        "description": "Cloud Storage flow to Platform",
+        "name": "Cloud Storage flow to Experience Platform",
+        "description": "Cloud Storage flow to Experience Platform",
         "flowSpec": {
             "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
             "version": "1.0"
@@ -680,7 +680,7 @@ Une fois votre flux de données créé, vous pouvez surveiller les données ing�
 
 ## Étapes suivantes
 
-Grâce à ce tutoriel, vous avez créé un connecteur source permettant de collecter les données de votre espace de stockage à intervalles réguliers. Ces données entrantes peuvent désormais être utilisées par les services Platform en aval, comme [!DNL Real-Time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
+Grâce à ce tutoriel, vous avez créé un connecteur source permettant de collecter les données de votre espace de stockage à intervalles réguliers. Ces données entrantes peuvent désormais être utilisées par les services Experience Platform en aval tels que [!DNL Real-Time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
 
 - [Vue d’ensemble du profil client en temps réel](../../../../profile/home.md)
 - [Présentation de l’espace de travail de science des données](../../../../data-science-workspace/home.md)

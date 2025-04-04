@@ -2,10 +2,10 @@
 title: Vues dans les extensions web
 description: Découvrez comment définir des vues pour les modules de bibliothèque dans vos extensions web Adobe Experience Platform.
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: 41efcb14df44524b58be2293d2b943bd890c1621
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2061'
-ht-degree: 100%
+source-wordcount: '2063'
+ht-degree: 97%
 
 ---
 
@@ -148,9 +148,9 @@ Lʼobjet `options` doit contenir une seule propriété booléenne, `tokenize`. C
 
 Vos vues comportent probablement des champs de formulaire dans lesquels les utilisateurs souhaitent utiliser des éléments de données. Par exemple, si votre vue comporte un champ de texte dans lequel lʼutilisateur doit entrer un nom de produit, il serait illogique pour lʼutilisateur de saisir une valeur codée en dur dans le champ. L’utilisateur peut préférer que la valeur du champ soit dynamique (déterminée au moment de l’exécution), ce qui peut être fait en utilisant un élément de données.
 
-Par exemple, supposons que nous créions une extension qui envoie une balise pour suivre une conversion. Supposons également que l’une des données que notre balise envoie est un nom de produit. Notre vue dʼextension qui permet à lʼutilisateur de configurer la balise aurait probablement un champ de texte pour le nom du produit. En règle générale, il ne serait pas très logique que l’utilisateur de Platform saisisse un nom de produit statique tel que « Calzone Oven XL », car le nom du produit dépend probablement de la page à partir de laquelle la balise sera envoyée. C’est un excellent exemple pour un élément de données.
+Par exemple, supposons que nous créions une extension qui envoie une balise pour suivre une conversion. Supposons également que l’une des données que notre balise envoie est un nom de produit. Notre vue dʼextension qui permet à lʼutilisateur de configurer la balise aurait probablement un champ de texte pour le nom du produit. En règle générale, il ne serait pas très logique que l’utilisateur d’Experience Platform saisisse un nom de produit statique tel que « Calzone Oven XL », car le nom du produit dépend probablement de la page à partir de laquelle la balise sera envoyée. C’est un excellent exemple pour un élément de données.
 
-Si un utilisateur souhaite utiliser l’élément de données `productname` comme valeur du nom du produit, il peut saisir le nom de l’élément de données encadré de signes de pourcentage (`%productname%`). Nous appelons le nom de lʼélément de données encadré de signes de pourcentage un « jeton dʼélément de données ». Cette construction est souvent familière aux utilisateurs de Platform. Votre extension, à son tour, enregistrerait le jeton d’élément de données dans l’objet `settings` qu’elle exporte. L’objet settings peut alors ressembler à ceci :
+Si un utilisateur souhaite utiliser l’élément de données `productname` comme valeur du nom du produit, il peut saisir le nom de l’élément de données encadré de signes de pourcentage (`%productname%`). Nous appelons le nom de lʼélément de données encadré de signes de pourcentage un « jeton dʼélément de données ». Cette construction est souvent familière aux utilisateurs d’Experience Platform. Votre extension, à son tour, enregistrerait le jeton d’élément de données dans l’objet `settings` qu’elle exporte. L’objet settings peut alors ressembler à ceci :
 
 ```js
 {

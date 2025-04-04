@@ -1,89 +1,89 @@
 ---
-title: Prise en charge du TCF 2.0 de l’IAB dans le SDK Web de Adobe Experience Platform
-description: Découvrez comment prendre en charge les préférences de consentement du TCF 2.0 de l’IAB à l’aide du SDK Web de Adobe Experience Platform
-keywords: consentement;setConsent;groupe Champ de confidentialité du profil;groupe Champ de confidentialité des événements d’expérience;groupe Champ de confidentialité;IAB TCF 2.0;Real-Time CDP;
+title: Prise en charge d’IAB TCF 2.0 dans Adobe Experience Platform Web SDK
+description: Découvrez comment prendre en charge les préférences de consentement IAB TCF 2.0 à l’aide de Adobe Experience Platform Web SDK
+keywords: consentement;setConsent;Groupe de champs Confidentialité du profil;Groupe de champs Confidentialité des événements d’expérience;Groupe de champs Confidentialité;IAB TCF 2.0;Real-Time CDP;
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '863'
 ht-degree: 0%
 
 ---
 
-# Prise en charge du TCF 2.0 de l’IAB dans le SDK Web de Adobe Experience Platform
+# Prise en charge d’IAB TCF 2.0 dans Adobe Experience Platform Web SDK
 
-Le SDK web Adobe Experience Platform prend en charge le Transparency &amp; Consent Framework interactif d’Advertising Bureau, version 2.0 (IAB TCF 2.0). Ce guide présente les exigences relatives à la prise en charge du TCF 2.0 de l’IAB par le biais du SDK Web Adobe Experience Platform grâce à l’intégration à Adobe Real-Time Customer Data Platform, à l’Audience Manager, aux événements d’expérience, à Adobe Analytics et à l’Edge Network.
+Adobe Experience Platform Web SDK prend en charge Interactive Advertising Bureau Transparency &amp; Consent Framework version 2.0 (IAB TCF 2.0). Ce guide décrit la configuration requise pour la prise en charge d’IAB TCF 2.0 via Adobe Experience Platform Web SDK, qui s’intègre à Adobe Real-Time Customer Data Platform, Audience Manager, Experience Events, Adobe Analytics et Edge Network.
 
-En outre, les guides suivants sont disponibles pour vous aider à apprendre comment intégrer IAB TCF 2.0 avec et sans balises.
+En outre, les guides suivants sont disponibles pour vous aider à apprendre à intégrer IAB TCF 2.0 avec et sans balises.
 
 - [Avec des balises](./with-tags.md)
 - [Sans balises](./without-tags.md)
 
 ## Commencer
 
-Pour mettre en oeuvre le SDK Web avec IAB TCF 2.0, vous devez avoir une compréhension pratique du modèle de données d’expérience (XDM) et des événements d’expérience. Avant de commencer, consultez le document suivant :
+Pour mettre en œuvre le Web SDK avec IAB TCF 2.0, vous devez posséder une bonne compréhension du modèle de données d’expérience (XDM) et des événements d’expérience. Avant de commencer, veuillez consulter le document suivant :
 
-- [Présentation du système de modèle de données d’expérience (XDM)](../../../xdm/home.md) : la normalisation et l’interopérabilité sont des concepts clés de Adobe Experience Platform. [!DNL Experience Data Model (XDM)], piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
+- [Présentation du système de modèle de données d’expérience (XDM)](../../../xdm/home.md) : la normalisation et l’interopérabilité sont les concepts clés de Adobe Experience Platform. [!DNL Experience Data Model (XDM)], piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 
-## Intégration des Experience Platform
+## Intégration d’Experience Platform
 
-Pour envoyer des données de consentement à Adobe Experience Platform à l’aide du SDK, les conditions suivantes sont requises :
+Pour envoyer des données de consentement à Adobe Experience Platform à l’aide de SDK, les éléments suivants sont requis :
 
-- Un jeu de données dont le schéma est basé sur la classe [!DNL XDM Individual Profile] et contient des champs de consentement TCF 2.0, activés pour une utilisation dans [!DNL Real-Time Customer Profile].
-- Un flux de données configuré avec Platform et le jeu de données activé pour Profile mentionné ci-dessus.
+- Jeu de données dont le schéma est basé sur la classe [!DNL XDM Individual Profile] et contient des champs de consentement TCF 2.0, activés pour une utilisation dans [!DNL Real-Time Customer Profile].
+- Un flux de données configuré avec Experience Platform et le jeu de données activé pour Profil mentionné ci-dessus.
 
-Reportez-vous au guide sur la [conformité TCF 2.0](../../../landing/governance-privacy-security/consent/iab/overview.md) pour obtenir des instructions sur la création des jeux de données et des jeux de données requis.
+Reportez-vous au guide sur la conformité [TCF 2.0](../../../landing/governance-privacy-security/consent/iab/overview.md) pour obtenir des instructions sur la création des jeux de données et des trains de données requis.
 
-## Intégration des Audiences Manager
+## Intégration d’Audience Manager
 
-Adobe Audience Manager (AAM) prend en charge IAB TCF 2.0, qui vous permet d’évaluer, d’honorer et de transférer les choix de confidentialité des clients aux partenaires en aval. <!--For more information, read the documentation on [Sending Data to Audience Manager](../audience-manager/audience-manager-overview.md).-->
+Adobe Audience Manager (AAM) comprend la prise en charge de l’IAB TCF 2.0, qui vous permet d’évaluer, d’honorer et de transférer les choix de confidentialité des clients aux partenaires en aval. <!--For more information, read the documentation on [Sending Data to Audience Manager](../audience-manager/audience-manager-overview.md).-->
 
 >[!TIP]
 >
->Pour l’intégrer à Audience Manager via le SDK Web de Adobe Experience Platform, assurez-vous qu’un flux de données est configuré pour être transféré vers Adobe Audience Manager.
+>Pour l’intégration à Audience Manager via Adobe Experience Platform Web SDK, assurez-vous qu’un flux de données est configuré pour être transféré vers Adobe Audience Manager.
 
-## Événements d’expérience et intégration d’Adobe Analytics
+## Événements d’expérience et intégration à Adobe Analytics
 
-Alors que les audiences de Real-Time CDP et de l’Audience Manager suivent les préférences actuelles de consentement d’un client, les événements d’expérience peuvent contenir les préférences de consentement d’un client qui étaient actives lorsque l’événement a été collecté.
+Alors que les audiences Real-Time CDP et Audience Manager effectuent le suivi des préférences de consentement actuelles d’un client, les événements d’expérience peuvent contenir les préférences de consentement d’un client qui étaient actives lors de la collecte de l’événement.
 
-Pour collecter des informations de consentement sur les événements, vous devez :
+Pour collecter des informations de consentement sur les événements, les éléments suivants sont requis :
 
-- Jeu de données basé sur la classe [!DNL XDM Experience Event], avec le groupe de champs de schéma de confidentialité [!DNL Experience Event].
-- Une chaîne de données configurée avec le jeu de données [!DNL XDM Experience Event] ci-dessus.
+- Un jeu de données basé sur la classe [!DNL XDM Experience Event], avec le groupe de champs de schéma de confidentialité [!DNL Experience Event].
+- Un flux de données configuré avec le jeu de données [!DNL XDM Experience Event] ci-dessus.
 
-Pour plus d’informations sur la conversion d’un événement d’expérience XDM en accès Analytics, voir [Envoi de données à Adobe Analytics à l’aide du SDK Web](/help/web-sdk/use-cases/adobe-analytics.md).
+Pour plus d’informations sur la conversion d’un événement d’expérience XDM en accès Analytics, voir [Envoi de données à Adobe Analytics à l’aide de Web SDK](/help/web-sdk/use-cases/adobe-analytics.md).
 
-## Intégration du SDK Web Adobe Experience Platform
+## Intégration de Adobe Experience Platform Web SDK
 
 Les sections ci-dessous décrivent les principaux points d’intégration entre IAB TCF 2.0 et Adobe Experience Platform Web SDK.
 
 >[!NOTE]
 >
->Même sans Real-Time CDP ou Audience Manager configurée, vous pouvez toujours intégrer IAB TCF 2.0 au SDK Web. Les préférences de consentement peuvent être utilisées pour contrôler la collecte des événements d’expérience et la définition d’un cookie d’identité.
+>Même sans configuration de Real-Time CDP ou d’Audience Manager, vous pouvez toujours intégrer IAB TCF 2.0 à Web SDK. Les préférences de consentement peuvent être utilisées pour contrôler la collecte des événements d’expérience et la définition d’un cookie d’identité.
 
 ### Consentement par défaut
 
-Le consentement par défaut est utilisé lorsqu’aucune préférence de consentement n’est déjà enregistrée pour un client. Cela signifie que les options de consentement par défaut peuvent contrôler le comportement du SDK Web de Adobe Experience Platform et changer en fonction de la région du client.
+Le consentement par défaut est utilisé lorsqu’aucune préférence de consentement n’est déjà enregistrée pour un client. Cela signifie que les options de consentement par défaut peuvent contrôler le comportement de Adobe Experience Platform Web SDK et changer en fonction de la région d’un client.
 
-Par exemple, si vous avez un client qui ne figure pas dans la juridiction du Règlement général sur la protection des données (RGPD), le consentement par défaut peut être défini sur `in`, mais dans la juridiction du RGPD, le consentement par défaut peut être défini sur `pending`. Votre plateforme de gestion du consentement (CMP) peut détecter la région du client et fournir l’indicateur `gdprApplies` à IAB TCF 2.0. Cet indicateur peut être utilisé pour définir le consentement par défaut. Voir [`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md) pour plus d’informations.
+Par exemple, si vous avez un client qui ne relève pas de la juridiction du Règlement général sur la protection des données (RGPD), le consentement par défaut peut être défini sur `in`, mais dans la juridiction du RGPD, le consentement par défaut peut être défini sur `pending`. Votre plateforme de gestion du consentement (CMP) peut détecter la région du client et fournir l’indicateur `gdprApplies` à IAB TCF 2.0. Cet indicateur peut être utilisé pour définir le consentement par défaut. Voir [`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md) pour plus d’informations.
 
-### Définition du consentement lors de la modification
+### Définition du consentement lorsqu’il change
 
-Le SDK Web de Adobe Experience Platform comporte une commande `setConsent` qui communique les préférences de consentement de votre client à tous les services Adobe à l’aide du TCF de l’IAB 2.0. Si vous effectuez une intégration avec Real-Time CDP, cela met à jour le profil de votre client. Si vous effectuez une intégration à Audience Manager, les informations de votre client sont mises à jour. L’appel de cette méthode définit également un cookie avec une préférence de consentement &quot;tout ou rien&quot; qui contrôle si les futurs événements d’expérience sont autorisés à être envoyés. Cette action est appelée chaque fois que le consentement est modifié. Lors des chargements ultérieurs de la page, le cookie de consentement de l’Edge Network sera lu pour déterminer si des événements d’expérience peuvent être envoyés et si un cookie d’identité peut être défini.
+Adobe Experience Platform Web SDK comporte une commande `setConsent` qui communique les préférences de consentement de votre client à tous les services Adobe à l’aide de l’IAB TCF 2.0. Si vous effectuez une intégration à Real-Time CDP, le profil de votre client est mis à jour. Si vous effectuez une intégration à Audience Manager, les informations de votre client sont mises à jour. L’appel à cette méthode définit également un cookie avec une préférence de consentement en tout ou rien qui contrôle si l’envoi de futurs événements d’expérience est autorisé. Il est prévu d’appeler cette action chaque fois que le consentement change. Lors des chargements futurs de la page, le cookie de consentement d’Edge Network sera lu pour déterminer si des événements d’expérience peuvent être envoyés et si un cookie d’identité peut être défini.
 
-Tout comme l’intégration du TCF 2.0 de l’IAB à l’Audience Manager, l’Edge Network donne son consentement lorsqu’un client a fourni son consentement explicite aux fins suivantes :
+Tout comme l’intégration IAB TCF 2.0 d’Audience Manager, Edge Network donne son consentement lorsqu’un client a donné son consentement explicite aux fins suivantes :
 
 - **Objectif 1 :** Stocker et/ou accéder à des informations sur un appareil
-- **Objectif 10 :** Développer et améliorer les produits
-- **Objectif spécial 1 :** Assurez la sécurité, évitez la fraude et déboguez. (Conformément aux réglementations du TCF de l’IAB, cela est toujours accepté)
-- **Autorisation du fournisseur d’Adobe :** consentement pour l’Adobe (fournisseur 565)
+- **Objectif 10 :** développer et améliorer des produits
+- **Objectif spécial 1 :** assurer la sécurité, prévenir la fraude et déboguer. (Conformément aux règlements du TCF de l&#39;IAB, ceci est toujours accepté)
+- **Autorisation du fournisseur Adobe :** consentement pour Adobe (fournisseur 565)
 
-Pour plus d’informations sur la commande `setConsent`, consultez la documentation dédiée du SDK Web sur [setConsent](../../../web-sdk/commands/setconsent.md).
+Pour plus d’informations sur la commande `setConsent`, consultez la documentation dédiée de Web SDK sur [setConsent](../../../web-sdk/commands/setconsent.md).
 
 ### Ajout de consentement aux événements d’expérience
 
-Le SDK Web de Adobe Experience Platform comporte une commande [`sendEvent`](/help/web-sdk/commands/sendevent/overview.md) qui collecte un événement d’expérience. Si vous effectuez une intégration avec les événements d’expérience ou Adobe Analytics et souhaitez connaître les préférences de consentement pour chaque événement d’expérience, ajoutez des informations de consentement à chaque commande `sendEvent`.
+Adobe Experience Platform Web SDK comporte une commande [`sendEvent`](/help/web-sdk/commands/sendevent/overview.md) qui collecte un événement d’expérience. Si vous effectuez une intégration aux événements d’expérience ou à Adobe Analytics et que vous souhaitez connaître les préférences de consentement pour chaque événement d’expérience, ajoutez des informations de consentement à chaque commande `sendEvent`.
 
 ## Étapes suivantes
 
-Maintenant que vous avez une compréhension de base de Transparency &amp; Consent Framework 2.0 de l’IAB, reportez-vous à l’un des guides sur l’utilisation du TCF 2.0 [avec des balises](./with-tags.md) ou [sans balises](./without-tags.md).
+Maintenant que vous connaissez les principes de base du Transparency &amp; Consent Framework 2.0 de l’IAB, reportez-vous à l’un des guides sur l’utilisation du IAB TCF 2.0 [avec balises](./with-tags.md) ou [sans balises](./without-tags.md).

@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Avril 2022
 description: Les notes de mise à jour d’avril 2022 pour Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2670'
-ht-degree: 98%
+source-wordcount: '2679'
+ht-degree: 92%
 
 ---
 
@@ -26,9 +26,9 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 ## [!DNL Dashboards] {#dashboards}
 
-Platform fournit de nombreux tableaux de bord grâce auxquels vous pouvez afficher des informations importantes sur les données de votre entreprise, telles quʼelles sont capturées lors dʼinstantanés quotidiens.
+Experience Platform propose plusieurs tableaux de bord grâce auxquels vous pouvez afficher des informations importantes sur les données de votre organisation. Celles-ci sont présentées telles qu’elles sont capturées lors d’instantanés quotidiens.
 
-Les tableaux de bord proposent des options de rapports préconfigurées sur les données de votre organisation. Ils sont directement intégrés au workflow de la personne spécialiste marketing dans Platform. La mise à disposition de ces tableaux de bord ne nécessite pas d’assistance informatique supplémentaire. En outre, ils offrent un gain de temps et d’effort en évitant de recourir à l’exportation et au traitement des données avec une conception et une implémentation d’entreposage de données supplémentaires.
+Les tableaux de bord proposent des options de rapports préconfigurés sur les données de votre entreprise. Ils sont directement intégrés au workflow du spécialiste marketing dans Experience Platform. La mise à disposition de ces tableaux de bord ne nécessite pas d’assistance informatique supplémentaire. En outre, ils offrent un gain de temps et d’effort en évitant de recourir à l’exportation et au traitement des données avec une conception et une implémentation d’entreposage de données supplémentaires.
 
 Les widgets suivants sont disponibles via la bibliothèque de widgets dans leurs tableaux de bord respectifs. Pour plus d’informations, consultez la documentation sur l’[ajout de widgets via la bibliothèque de widgets](../../dashboards/customize/widget-library.md).
 
@@ -36,7 +36,7 @@ Les widgets suivants sont disponibles via la bibliothèque de widgets dans leurs
 
 | Widget | Tableau de bord | Description |
 | ------ | --------- | ----------- |
-| [!UICONTROL Tendance des profils ajoutés] | Profils | Ce widget utilise un graphique linéaire pour illustrer le nombre total de profils fusionnés qui ont été ajoutés quotidiennement à la banque de profils au cours des 30 derniers jours, 90 jours ou 12 mois. |
+| [!UICONTROL Tendance des profils ajoutés] | Profils | Ce widget utilise un graphique linéaire pour illustrer le nombre total de profils fusionnés qui ont été ajoutés quotidiennement à la banque de profils au cours des 30 derniers jours, des 90 derniers jours, ou des 12 derniers mois. |
 | [!UICONTROL Audiences mappées au statut de destination] | Profils | Ce widget affiche le nombre total d’audiences mappées et non mappées dans une seule mesure et utilise un graphique en anneau pour illustrer la différence proportionnelle entre les totaux. |
 | [!UICONTROL Taille des audiences] | Profils | Ce widget fournit un tableau à deux colonnes qui répertorie jusqu’à 20 segments et le nombre total d’audiences contenues dans chaque segment. La liste dépend de la politique de fusion appliquée et le nombre total d’audiences est classé par ordre décroissant. |
 | [!UICONTROL Tendance du nombre de profils] | Profils | Ce widget utilise un graphique linéaire pour illustrer la tendance du nombre total de profils contenus dans le système au fil du temps. Les données peuvent être consultées sur des périodes de 30 jours, 90 jours et 12 mois. |
@@ -61,9 +61,9 @@ Consultez la documentation pour plus d’informations sur les tableaux de bord [
 
 ## Flux de données {#dataflows}
 
-Dans Platform, les données sont ingérées à partir de nombreuses sources différentes, analysées dans le système et activées pour un large éventail de destinations. En offrant de la transparence au niveau des flux de données, Platform facilite le processus de suivi de ce flux de données potentiellement non linéaire.
+Dans Experience Platform, les données sont ingérées à partir de nombreuses sources différentes, analysées dans le système et activées vers un large éventail de destinations. Experience Platform facilite le processus de suivi de ce flux de données potentiellement non linéaire en offrant de la transparence aux flux de données.
 
-Les flux de données sont une représentation des tâches qui déplacent des données dans Platform. Ces flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers les jeux de données cibles, où elles sont ensuite utilisées par le service d’identités et le profil client en temps réel avant d’être finalement activées vers les destinations.
+Les flux de données sont une représentation des tâches qui déplacent des données dans Experience Platform. Ces flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers les jeux de données cibles, où elles sont ensuite utilisées par le service d’identités et le profil client en temps réel avant d’être finalement activées vers les destinations.
 
 **Nouvelles fonctionnalités**
 
@@ -169,7 +169,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur XDM dans Platform, consultez la [vue d’ensemble du système XDM](../../xdm/home.md).
+Pour plus d’informations sur XDM dans Experience Platform, consultez la [ Présentation du système XDM ](../../xdm/home.md).
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
@@ -214,7 +214,7 @@ Pour en savoir plus sur l’édition B2B de Real-time Customer Data Platform, c
 
 ## Sources {#sources}
 
-Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services d’Experience Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
 Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
@@ -222,8 +222,8 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Prise en charge de [!DNL OneTrust Integration] | Vous pouvez désormais utiliser la source [!DNL OneTrust Integration] pour ingérer les données de consentement et de préférences du compte [!DNL OneTrust] vers Platform. Pour plus d’informations, consultez la documentation sur la [création d’une [!DNL OneTrust Integration] connexion source](../../sources/connectors/consent-and-preferences/onetrust.md). |
-| Prise en charge de [!DNL Square] | Vous pouvez désormais utiliser la source [!DNL Square] pour ingérer les données des paiements à partir du compte [!DNL Square] vers Platform. |
+| Prise en charge de [!DNL OneTrust Integration] | Vous pouvez désormais utiliser la source de [!DNL OneTrust Integration] pour ingérer les données de consentement et de préférences du compte [!DNL OneTrust] vers Experience Platform. Pour plus d’informations, consultez la documentation sur la [création d’une [!DNL OneTrust Integration] connexion source](../../sources/connectors/consent-and-preferences/onetrust.md). |
+| Prise en charge de [!DNL Square] | Vous pouvez désormais utiliser la source de [!DNL Square] pour ingérer les données de paiements à partir du compte [!DNL Square] vers Experience Platform. |
 | Prise en charge de la suppression des flux de données d’attributs du client | Vous pouvez désormais supprimer les flux de données créés à l’aide du connecteur source d’attributs du client. |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).

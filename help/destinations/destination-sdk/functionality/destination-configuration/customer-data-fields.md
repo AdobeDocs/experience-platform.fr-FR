@@ -2,10 +2,10 @@
 description: Découvrez comment créer des champs d’entrée dans l’interface utilisateur d’Experience Platform qui permettent à vos utilisateurs de spécifier diverses informations relatives à la connexion et à l’exportation des données vers la destination.
 title: Champs de données client
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1742'
-ht-degree: 80%
+source-wordcount: '1750'
+ht-degree: 71%
 
 ---
 
@@ -53,10 +53,10 @@ Pendant la création de vos propres champs de données client, vous pouvez utili
 
 | Paramètre | Type | Obligatoire / Facultatif | Description |
 |---------|----------|------|---|
-| `name` | Chaîne | Obligatoire | Attribuez un nom au champ personnalisé que vous introduisez. Ce nom n’est pas visible dans l’interface utilisateur de Platform, sauf si le champ `title` est vide ou manquant. |
+| `name` | Chaîne | Obligatoire | Attribuez un nom au champ personnalisé que vous introduisez. Ce nom n’est pas visible dans l’interface utilisateur d’Experience Platform, sauf si le champ `title` est vide ou manquant. |
 | `type` | Chaîne | Obligatoire | Indique le type de champ personnalisé que vous introduisez. Valeurs acceptées : <ul><li>`string`</li><li>`object`</li><li>`integer`</li></ul> |
-| `title` | Chaîne | Facultatif | Indique le nom du champ tel qu’il est vu par la clientèle dans l’interface utilisateur Platform. Si ce champ est vide ou manquant, l’interface utilisateur hérite du nom du champ de la valeur `name`. |
-| `description` | Chaîne | Facultatif | Fournissez une description du champ personnalisé. Cette description n’est pas visible dans l’interface utilisateur de Platform. |
+| `title` | Chaîne | Facultatif | Indique le nom du champ tel qu’il est affiché par la clientèle dans l’interface utilisateur d’Experience Platform. Si ce champ est vide ou manquant, l’interface utilisateur hérite du nom du champ de la valeur `name`. |
+| `description` | Chaîne | Facultatif | Fournissez une description du champ personnalisé. Cette description n’est pas visible dans l’interface utilisateur d’Experience Platform. |
 | `isRequired` | Booléen | Facultatif | Indique si les utilisateurs doivent fournir une valeur pour ce champ dans le workflow de configuration de destination. |
 | `pattern` | Chaîne | Facultatif | Impose un modèle pour le champ personnalisé, le cas échéant. Utilisez des expressions régulières pour appliquer un modèle. Par exemple, si vos identifiants de client n’incluent pas de chiffres ou de traits de soulignement, saisissez `^[A-Za-z]+$` dans ce champ. |
 | `enum` | Chaîne | Facultatif | Rend le champ personnalisé sous forme de menu déroulant et répertorie les options disponibles pour l’utilisateur. |
@@ -67,7 +67,7 @@ Pendant la création de vos propres champs de données client, vous pouvez utili
 
 {style="table-layout:auto"}
 
-Dans l’exemple ci-dessous, la section `customerDataFields` définit deux champs que les utilisateurs doivent compléter dans l’interface utilisateur de Platform au moment de la connexion à la destination :
+Dans l’exemple ci-dessous, la section `customerDataFields` définit deux champs que les utilisateurs doivent renseigner dans l’interface utilisateur d’Experience Platform au moment de la connexion à la destination :
 
 * `Account ID` : identifiant de compte d’utilisateur pour votre plateforme de destination.
 * `Endpoint region` : point d’entrée régional de l’API auquel ils se connectent. La section `enum` crée un menu déroulant avec les valeurs définies afin que les utilisateurs puissent les sélectionner.
@@ -103,7 +103,7 @@ L’expérience de l’interface utilisateur qui en résulte est affichée dans 
 
 ## Noms et descriptions des connexions de destination {#names-description}
 
-Pendant la création d’une destination, Destination SDK ajoute automatiquement les champs **[!UICONTROL Nom]** et **[!UICONTROL Description]** à l’écran de connexion de la destination dans l’interface utilisateur de Platform. Comme vous pouvez le voir dans l’exemple ci-dessus, les champs **[!UICONTROL Nom]** et **[!UICONTROL Description]** sont générés dans l’interface utilisateur sans être inclus dans la configuration des champs de données client.
+Lors de la création d’une destination, Destination SDK ajoute automatiquement les champs **[!UICONTROL Nom]** et **[!UICONTROL Description]** à l’écran de connexion de la destination dans l’interface utilisateur d’Experience Platform. Comme vous pouvez le voir dans l’exemple ci-dessus, les champs **[!UICONTROL Nom]** et **[!UICONTROL Description]** sont générés dans l’interface utilisateur sans être inclus dans la configuration des champs de données client.
 
 >[!IMPORTANT]
 >
@@ -111,7 +111,7 @@ Pendant la création d’une destination, Destination SDK ajoute automatiquement
 
 ## Classement des champs de données client {#ordering}
 
-L’ordre dans lequel vous ajoutez les champs de données client dans la configuration de destination est reflété dans l’interface utilisateur de Platform.
+L’ordre dans lequel vous ajoutez les champs de données client dans la configuration de destination est reflété dans l’interface utilisateur d’Experience Platform.
 
 Par exemple, la configuration ci-dessous est reflétée en conséquence dans l’interface utilisateur : les options s’affichent par **[!UICONTROL nom]**, **[!UICONTROL description]**, **[!UICONTROL nom du compartiment]**, **[!UICONTROL chemin d’accès au dossier]**, **[!UICONTROL type de fichier]**, **[!UICONTROL format de compression]**.
 
@@ -255,13 +255,13 @@ Pour ce faire, utilisez l’objet `namedEnum` comme illustré ci-dessous et conf
 
 ## Création de sélecteurs de liste déroulante dynamiques pour les champs de données client {#dynamic-dropdown-selectors}
 
-Dans les cas où vous souhaitez appeler une API de manière dynamique et utiliser la réponse pour remplir de manière dynamique les options d’un menu déroulant, vous pouvez utiliser un sélecteur de liste déroulante dynamique.
+Dans les cas où vous souhaitez appeler de manière dynamique une API et utiliser la réponse pour renseigner de manière dynamique les options d’un menu déroulant, vous pouvez utiliser un sélecteur de liste déroulante dynamique.
 
-Les sélecteurs de liste déroulante dynamiques sont identiques aux [sélecteurs de liste déroulante standard](#dropdown-selectors) dans l’interface utilisateur. La seule différence réside dans le fait que les valeurs sont récupérées dynamiquement à partir d’une API.
+Les sélecteurs de liste déroulante dynamique sont identiques aux [sélecteurs de liste déroulante standard](#dropdown-selectors) de l’interface utilisateur. La seule différence est que les valeurs sont extraites dynamiquement d’une API.
 
 Pour créer un sélecteur de liste déroulante dynamique, vous devez configurer deux composants :
 
-**Étape 1.** [Créez un serveur de destination](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) avec un modèle `responseFields` pour l’appel API dynamique, comme illustré ci-dessous.
+**Étape 1.** [Créez un serveur de destination](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) avec un modèle de `responseFields` pour l’appel API dynamique, comme illustré ci-dessous.
 
 ```json
 {
@@ -338,19 +338,19 @@ Pour créer un sélecteur de liste déroulante dynamique, vous devez configurer 
 ]
 ```
 
-Définissez le paramètre `destinationServerId` sur l’identifiant du serveur de destination que vous avez créé à l’étape 1. Vous pouvez voir l’identifiant du serveur de destination dans la réponse de l’appel d’API [retrieve a destination server configuration](../../authoring-api/destination-server/retrieve-destination-server.md) .
+Définissez le paramètre `destinationServerId` sur l’identifiant du serveur de destination que vous avez créé à l’étape 1. Vous pouvez voir l’identifiant du serveur de destination dans la réponse de l’appel API [récupération d’une configuration de serveur de destination](../../authoring-api/destination-server/retrieve-destination-server.md).
 
-## Création de champs de données client imbriqués {#nested-fields}
+## Créer des champs de données client imbriqués {#nested-fields}
 
-Vous pouvez créer des champs de données client imbriqués pour des modèles d’intégration complexes. Cela vous permet d’enchaîner une série de sélections pour le client.
+Vous pouvez créer des champs de données client imbriqués pour les modèles d’intégration complexes. Vous pouvez ainsi enchaîner une série de sélections pour le client.
 
-Par exemple, vous pouvez ajouter des champs de données client imbriqués pour exiger des clients qu’ils sélectionnent un type d’intégration avec votre destination, suivi immédiatement d’une autre sélection. La seconde sélection est un champ imbriqué dans le type d’intégration.
+Par exemple, vous pouvez ajouter des champs de données client imbriqués pour obliger les clients à sélectionner un type d’intégration avec votre destination, suivi immédiatement d’une autre sélection. La deuxième sélection est un champ imbriqué dans le type d’intégration.
 
 Pour ajouter un champ imbriqué, utilisez le paramètre `properties` comme illustré ci-dessous. Dans l’exemple de configuration ci-dessous, vous pouvez voir trois champs imbriqués distincts dans le champ de données client **Yourdestination - Paramètres spécifiques à l’intégration** .
 
 >[!TIP]
 >
->À compter de la version d’avril 2024, vous pouvez définir un paramètre `isRequired` sur les champs imbriqués. Par exemple, dans le fragment de code de configuration ci-dessous, les deux premiers champs imbriqués sont marqués comme obligatoires (ligne xxx mise en surbrillance) et les clients ne peuvent pas procéder à moins de sélectionner une valeur pour le champ. Pour en savoir plus sur les champs obligatoires, consultez la section [paramètres pris en charge](#supported-parameters) .
+>À partir de la version d’avril 2024, vous pouvez définir un paramètre `isRequired` sur les champs imbriqués. Par exemple, dans le fragment de code de configuration ci-dessous, les deux premiers champs imbriqués sont marqués comme obligatoires (ligne xxx mise en surbrillance) et les clients ne peuvent pas continuer, à moins de sélectionner une valeur pour le champ. Pour en savoir plus sur les champs obligatoires, consultez la section [paramètres pris en charge](#supported-parameters).
 
 ```json {line-numbers="true" highlight="11,20"}
     {
@@ -408,7 +408,7 @@ Pour définir un champ comme conditionnel, utilisez le paramètre `conditional` 
 }
 ```
 
-Dans un contexte plus large, vous pouvez voir le champ `conditional` utilisé dans la configuration de destination ci-dessous, avec la chaîne `fileType` et l’objet `csvOptions` dans lequel il est défini. Les champs conditionnels sont définis dans le paramètre `properties` .
+Dans un contexte plus large, vous pouvez voir le champ `conditional` utilisé dans la configuration de destination ci-dessous, avec le champ `fileType` et l’objet `csvOptions` dans lequel il est défini. Les champs conditionnels sont définis dans le paramètre `properties` .
 
 ```json {line-numbers="true" highlight="3-15, 21-25"}
 "customerDataFields":[
@@ -559,7 +559,7 @@ Vous trouverez ci-dessous l’écran de l’interface utilisateur qui en résult
 
 ## Accès aux champs de données client modélisés {#accessing-templatized-fields}
 
-Quand la destination demande une entrée utilisateur, vous devez fournir à vos utilisateurs une sélection de champs de données client qu’ils peuvent compléter depuis l’interface utilisateur de Platform. Ensuite, vous devez configurer votre serveur de destination pour lire correctement les données saisies par l’utilisateur dans les champs de données client. Pour ce faire, vous devez utiliser des champs modélisés.
+Lorsque la destination nécessite une entrée utilisateur, vous devez fournir à vos utilisateurs une sélection de champs de données client qu’ils peuvent renseigner via l’interface utilisateur d’Experience Platform. Ensuite, vous devez configurer votre serveur de destination pour lire correctement les données saisies par l’utilisateur dans les champs de données client. Pour ce faire, vous devez utiliser des champs modélisés.
 
 Les champs modélisés utilisent le format `{{customerData.fieldName}}`, où `fieldName` est le nom du champ de données client à partir duquel vous lisez des informations. Tous les champs de données client modélisés sont précédés de `customerData.` et entourés de doubles accolades `{{ }}`.
 
@@ -613,7 +613,7 @@ Pour plus d’informations sur la manière de configurer votre serveur de destin
 
 ## Étapes suivantes {#next-steps}
 
-Vous êtes arrivé au bout de cet article. À présent, vous devriez mieux comprendre comment permettre à vos utilisateurs de saisir des informations dans l’interface utilisateur d’Experience Platform avec les champs de données client. Vous savez également sélectionner le champ de données client approprié pour votre cas d’utilisation, mais aussi configurer, classer et regrouper les champs de données client dans l’interface utilisateur de Platform.
+Vous êtes arrivé au bout de cet article. À présent, vous devriez mieux comprendre comment permettre à vos utilisateurs de saisir des informations dans l’interface utilisateur d’Experience Platform avec les champs de données client. Vous savez également sélectionner le champ de données client approprié à votre cas d’utilisation, ainsi que configurer, classer et regrouper les champs de données client dans l’interface utilisateur d’Experience Platform.
 
 Pour en savoir plus sur les autres composants de destination, consultez les articles suivants :
 

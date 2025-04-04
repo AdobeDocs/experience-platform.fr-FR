@@ -2,9 +2,9 @@
 title: Gestion de la conservation des jeux de données d’événements d’expérience dans le lac de données à l’aide de TTL
 description: Découvrez comment évaluer, définir et gérer la conservation des jeux de données d’événements d’expérience dans le lac de données à l’aide de configurations de durée de vie (TTL) avec des API Adobe Experience Platform. Ce guide explique comment l’expiration au niveau des lignes de TTL prend en charge les politiques de conservation des données, optimise l’efficacité du stockage et garantit une gestion efficace du cycle de vie des données. Elle fournit également des cas d’utilisation et des bonnes pratiques pour vous aider à appliquer efficacement la durée de vie.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 3b5fcc3eec6f2c2e749c86a7baf9995fb88b27d6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2336'
+source-wordcount: '2341'
 ht-degree: 1%
 
 ---
@@ -38,7 +38,7 @@ La durée de vie est utile pour gérer les données sensibles au temps qui perde
 
 ### Exemple de secteur {#industry-example}
 
-Prenons l’exemple d’un service de diffusion en continu de vidéos qui effectue le suivi des interactions utilisateur, telles que les vues vidéo, les recherches et les recommandations. Bien que les données d’engagement récentes soient essentielles pour la personnalisation, les journaux d’activité plus anciens (par exemple, les interactions d’il y a plus d’un an) perdent de leur pertinence. En utilisant l’expiration au niveau des lignes, Platform supprime automatiquement les journaux obsolètes, en s’assurant que seules des données actuelles et significatives sont utilisées pour les analyses et les recommandations.
+Prenons l’exemple d’un service de diffusion en continu de vidéos qui effectue le suivi des interactions utilisateur, telles que les vues vidéo, les recherches et les recommandations. Bien que les données d’engagement récentes soient essentielles pour la personnalisation, les journaux d’activité plus anciens (par exemple, les interactions d’il y a plus d’un an) perdent de leur pertinence. En utilisant l’expiration au niveau des lignes, Experience Platform supprime automatiquement les journaux obsolètes, en s’assurant que seules des données actuelles et significatives sont utilisées pour les analyses et les recommandations.
 
 ## Évaluation de l’adéquation de la TTL
 
@@ -76,7 +76,7 @@ Pour commencer la gestion de votre TTL, vérifiez d’abord les paramètres de T
 
 >[!TIP]
 >
->L’URL de la passerelle Platform et le chemin d’accès de base de l’API Catalog Service sont les suivants : `https://platform.adobe.io/data/foundation/catalog`.
+>L’URL de la passerelle Experience Platform et le chemin d’accès de base de l’API Catalog Service sont les suivants : `https://platform.adobe.io/data/foundation/catalog`.
 
 **Format d’API**
 
@@ -375,13 +375,13 @@ Vous pouvez appliquer des politiques de rétention aux jeux de données créés 
 ### Dans combien de temps la tâche de conservation des jeux de données supprimera-t-elle les données des services de lac de données ?
 
 +++Réponse
-Les TTL des jeux de données sont évaluées et traitées chaque semaine, supprimant tous les enregistrements expirés. Un événement est considéré comme ayant expiré s’il a été ingéré dans Platform il y a plus de 30 jours (date d’ingestion > 30 jours) et si sa date d’événement dépasse la période de conservation définie (TTL).
+Les TTL des jeux de données sont évaluées et traitées chaque semaine, supprimant tous les enregistrements expirés. Un événement est considéré comme ayant expiré s’il a été ingéré dans Experience Platform il y a plus de 30 jours (date d’ingestion > 30 jours) et si sa date d’événement dépasse la période de conservation définie (TTL).
 +++
 
 ### Quand la tâche de conservation des jeux de données supprimera-t-elle les données des services de profil ?
 
 +++Réponse
-Une fois qu’une politique de rétention est définie, les événements existants dans Platform sont immédiatement supprimés si leur horodatage d’événement dépasse la période de rétention (TTL). Les nouveaux événements sont supprimés une fois que leur horodatage dépasse la période de conservation.
+Une fois qu’une politique de conservation est définie, les événements existants dans Experience Platform sont immédiatement supprimés si leur horodatage d’événement dépasse la période de conservation (TTL). Les nouveaux événements sont supprimés une fois que leur horodatage dépasse la période de conservation.
 
 Par exemple, si vous appliquez une politique d’expiration de 30 jours le 15 mai, ce qui suit se produit :
 
@@ -436,6 +436,6 @@ Pour plus d’informations, consultez le guide [Créer des jeux de données dér
 
 Maintenant que vous avez appris à gérer les paramètres de TTL pour l’expiration au niveau des lignes, consultez la documentation suivante pour mieux comprendre la gestion des TTL :
 
-- Tâches de conservation : découvrez comment planifier et automatiser les expirations de jeux de données dans l’interface utilisateur de Platform à l’aide du [guide de l’interface utilisateur du cycle de vie des données](../../hygiene/ui/dataset-expiration.md) ou vérifiez les configurations de conservation des jeux de données et que les enregistrements expirés sont supprimés.
+- Tâches de conservation : découvrez comment planifier et automatiser les expirations de jeux de données dans l’interface utilisateur d’Experience Platform à l’aide du [ guide de l’interface utilisateur du cycle de vie des données ](../../hygiene/ui/dataset-expiration.md) ou vérifiez les configurations de conservation des jeux de données et que les enregistrements expirés sont supprimés.
 - [Guide du point d’entrée de l’API d’expiration de jeu de données](../../hygiene/api/dataset-expiration.md) : découvrez comment supprimer des jeux de données entiers plutôt que seulement des lignes. Découvrez comment planifier, gérer et automatiser l’expiration des jeux de données à l’aide de l’API pour garantir une conservation efficace des données.
 - [Présentation des politiques d’utilisation des données](../../data-governance/policies/overview.md) : découvrez comment aligner votre stratégie de conservation des données sur les exigences de conformité plus larges et les restrictions d’utilisation marketing.

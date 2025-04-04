@@ -2,10 +2,10 @@
 title: Republication de bibliothèque
 description: Découvrez comment republier une ancienne bibliothèque de balises dans Adobe Experience Platform.
 exl-id: 026b01f2-a93d-4e8a-9ed2-47c4f011e70f
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 96%
+source-wordcount: '651'
+ht-degree: 81%
 
 ---
 
@@ -37,7 +37,7 @@ Lorsque vous lancez la nouvelle version d’un environnement de développement o
 
 Ces cinq dernières versions de votre environnement de production sont celles qui peuvent être récupérées.
 
-Lorsque vous republiez une ancienne bibliothèque, Platform met à jour le lien de lʼenvironnement afin quʼil pointe vers lʼune de ces anciennes versions qui nʼa pas encore été nettoyée.  Platform émet également une requête de purge dans le cache des nœuds périphériques CDN pour indiquer que la bibliothèque a été mise à jour et quʼune nouvelle copie doit être récupérée à partir de lʼorigine.
+Lorsque vous republiez une ancienne bibliothèque, Experience Platform met à jour le lien de l’environnement afin qu’il pointe vers l’une de ces anciennes versions qui n’a pas encore été nettoyée.  Experience Platform émet également une requête de purge dans le cache des nœuds périphériques CDN pour indiquer que la bibliothèque a été mise à jour et qu’une nouvelle copie doit être récupérée à partir de l’origine.
 
 Cela signifie que lorsque vous republiez une ancienne bibliothèque :
 
@@ -45,9 +45,9 @@ Cela signifie que lorsque vous republiez une ancienne bibliothèque :
 
 * La manière dont les environnements de développement et d’évaluation calculent ce qui est en amont ne change pas.
 
-Prenons comme exemple le cas où vous effectuez une restauration en raison d’un problème avec une règle spécifique. La révision de la règle qui est actuellement en production peut, par exemple, être vieille de trois versions. Lorsque vous affichez cette règle dans l’interface utilisateur pour la corriger, elle reflète toujours les dernières modifications enregistrées plutôt que celles qui sont actuellement en production.
+Prenons comme exemple le cas où vous effectuez une restauration en raison d’un problème avec une règle spécifique. La révision de la règle qui est actuellement en production peut, par exemple, être vieille de trois versions. Lorsque vous affichez cette règle dans l’interface utilisateur pour la corriger, elle reflète toujours les dernières modifications enregistrées au lieu de celles qui sont actuellement en production.
 
-Cʼest pourquoi Platform vous avertit quʼune propriété est dans un état republié afin de vous rappeler que ce que vous voyez dans lʼinterface utilisateur de collecte de données est un peu plus éloigné de la production que dʼhabitude. Cette notification peut être ignorée et sʼaffiche une seule fois par session du navigateur, lors de la première consultation de la propriété.
+C’est pourquoi Experience Platform vous avertit qu’une propriété est dans un état republié afin de vous rappeler que ce que vous voyez dans l’interface utilisateur de la collecte de données est un peu plus éloigné de la production que d’habitude. Cette notification peut être ignorée et sʼaffiche une seule fois par session du navigateur, lors de la première consultation de la propriété.
 
 ### Republication d’une ancienne bibliothèque
 

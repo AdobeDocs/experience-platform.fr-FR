@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;guide de développement;SDK;création de modèles;Data Science Workspace;rubriques les plus consultées;test
+keywords: Experience Platform;guide de développement;SDK;Création de modèles;Workspace de science des données;rubriques populaires;test
 solution: Experience Platform
 title: SDK de création de modèles
-description: Le SDK de création de modèles vous permet de développer des pipelines de fonctionnalités et des recettes d’apprentissage automatique personnalisés qui peuvent être utilisés dans Adobe Experience Platform Data Science Workspace, ce qui vous permet de fournir des modèles implémentables dans PySpark et Spark (Scala).
+description: La SDK de création de modèles vous permet de développer des pipelines de fonctionnalités et des recettes de machine learning personnalisés que vous pouvez utiliser dans Adobe Experience Platform Data Science Workspace pour fournir des modèles à mettre en œuvre dans PySpark et Spark (Scala).
 exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 67%
+source-wordcount: '1004'
+ht-degree: 62%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 67%
 
 >[!NOTE]
 >
->Data Science Workspace ne peut plus être acheté.
+>Le Workspace de science des données ne peut plus être acheté.
 >
->Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
-Le SDK Model Authoring vous permet de développer des pipelines de fonctionnalités et de recettes d’apprentissage automatique personnalisés qui peuvent être utilisés dans [!DNL Adobe Experience Platform] Data Science Workspace, fournissant des modèles implémentables dans [!DNL PySpark] et [!DNL Spark (Scala)].
+Le SDK de création de modèles vous permet de développer des pipelines de fonctionnalités et des recettes de machine learning personnalisés que vous pouvez utiliser dans [!DNL Adobe Experience Platform] Workspace de science des données pour fournir des modèles à mettre en œuvre dans [!DNL PySpark] et [!DNL Spark (Scala)].
 
-Ce document fournit des informations sur les différentes classes trouvées dans le SDK Model Authoring.
+Ce document fournit des informations sur les différentes classes du SDK de création de modèles.
 
 ## DataLoader {#dataloader}
 
@@ -42,7 +42,7 @@ Le tableau suivant décrit les méthodes abstraites d’une classe Data Loader P
         <tr>
             <td>
                 <p><code>load(self, configProperties, spark)</code></p>
-                <p>Chargement et renvoi des données Platform sous la forme d’un cadre de données pandas</p>
+                <p>Charger et renvoyer des données Experience Platform en tant que DataFrame Pandas</p>
             </td>
             <td>
                 <ul>
@@ -57,7 +57,7 @@ Le tableau suivant décrit les méthodes abstraites d’une classe Data Loader P
 
 **Spark**
 
-Le tableau suivant décrit les méthodes abstraites d’une classe Data Loader [!DNL Spark] :
+Le tableau suivant décrit les méthodes abstraites d’une classe [!DNL Spark] Data Loader :
 
 <table>
     <thead>
@@ -70,7 +70,7 @@ Le tableau suivant décrit les méthodes abstraites d’une classe Data Loader [
         <tr>
             <td>
                 <p><code>load(configProperties, sparkSession)</code></p>
-                <p>Chargement et renvoi des données Platform sous la forme d’un cadre de données</p>
+                <p>Charger et renvoyer des données Experience Platform en tant que DataFrame</p>
             </td>
             <td>
                 <ul>
@@ -82,9 +82,9 @@ Le tableau suivant décrit les méthodes abstraites d’une classe Data Loader [
     </tbody>
 </table>
 
-### Chargement de données à partir d’un jeu de données [!DNL Platform] {#load-data-from-a-platform-dataset}
+### Charger des données à partir d’un jeu de données [!DNL Experience Platform] {#load-data-from-a-platform-dataset}
 
-L’exemple suivant récupère [!DNL Platform] données par identifiant et renvoie un DataFrame, où l’identifiant du jeu de données (`datasetId`) est une propriété définie dans le fichier de configuration.
+L’exemple suivant récupère les données [!DNL Experience Platform] par ID et renvoie un DataFrame, où l’ID du jeu de données (`datasetId`) est une propriété définie dans le fichier de configuration.
 
 **PySpark**
 
@@ -203,7 +203,7 @@ La classe DataSaver englobe tous les éléments en lien avec le stockage des don
 
 **PySpark**
 
-Le tableau suivant décrit les méthodes abstraites d’une classe Data Saver [!DNL PySpark] :
+Le tableau suivant décrit les méthodes abstraites d’une classe d’économiseur de données [!DNL PySpark] :
 
 <table>
     <thead>
@@ -216,7 +216,7 @@ Le tableau suivant décrit les méthodes abstraites d’une classe Data Saver [!
         <tr>
             <td>
                 <p><code>save(self, configProperties, dataframe)</code></p>
-                <p>Réception des données de sortie sous la forme d’un cadre de données et stockage dans un jeu de données Platform</p>
+                <p>Recevoir les données de sortie en tant que DataFrame et les stocker dans un jeu de données Experience Platform</p>
             </td>
             <td>
                 <ul>
@@ -231,7 +231,7 @@ Le tableau suivant décrit les méthodes abstraites d’une classe Data Saver [!
 
 **Spark (Scala)**
 
-Le tableau suivant décrit les méthodes abstraites d’une classe Data Saver [!DNL Spark] :
+Le tableau suivant décrit les méthodes abstraites d’une classe d’économiseur de données [!DNL Spark] :
 
 <table>
     <thead>
@@ -244,7 +244,7 @@ Le tableau suivant décrit les méthodes abstraites d’une classe Data Saver [!
         <tr>
             <td>
                 <p><code>save(configProperties, dataFrame)</code></p>
-                <p>Réception des données de sortie sous la forme d’un cadre de données et stockage dans un jeu de données Platform</p>
+                <p>Recevoir les données de sortie en tant que DataFrame et les stocker dans un jeu de données Experience Platform</p>
             </td>
             <td>
                 <ul>
@@ -256,14 +256,14 @@ Le tableau suivant décrit les méthodes abstraites d’une classe Data Saver [!
     </tbody>
 </table>
 
-### Enregistrer des données dans un jeu de données [!DNL Platform] {#save-data-to-a-platform-dataset}
+### Enregistrer des données dans un jeu de données [!DNL Experience Platform] {#save-data-to-a-platform-dataset}
 
-Pour stocker des données sur un jeu de données [!DNL Platform], les propriétés doivent être fournies ou définies dans le fichier de configuration :
+Pour stocker des données sur un jeu de données [!DNL Experience Platform], les propriétés doivent être fournies ou définies dans le fichier de configuration :
 
-- Identifiant de jeu de données [!DNL Platform] valide auquel les données seront stockées
+- Identifiant de jeu de données [!DNL Experience Platform] valide dans lequel les données seront stockées
 - Identifiant du client appartenant à votre organisation
 
-Les exemples suivants stockent des données (`prediction`) sur un jeu de données [!DNL Platform], où l’identifiant du jeu de données (`datasetId`) et l’identifiant du client (`tenantId`) sont des propriétés définies dans le fichier de configuration.
+Les exemples suivants stockent des données (`prediction`) sur un jeu de données [!DNL Experience Platform], où l’identifiant du jeu de données (`datasetId`) et l’identifiant du client (`tenantId`) sont des propriétés définies dans le fichier de configuration .
 
 
 **PySpark**
@@ -279,7 +279,7 @@ from .helper import *
 
 class MyDataSaver(DataSaver):
     """
-    Implementation of DataSaver which stores a DataFrame to a Platform dataset
+    Implementation of DataSaver which stores a DataFrame to an Experience Platform dataset
     """
 
     def save(self, config_properties, prediction):
@@ -347,7 +347,7 @@ import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types.TimestampType
 
 /**
- * Implementation of DataSaver which stores a DataFrame to a Platform dataset
+ * Implementation of DataSaver which stores a DataFrame to an Experience Platform dataset
  */
 
 class ScoringDataSaver extends DataSaver {
@@ -399,7 +399,7 @@ class ScoringDataSaver extends DataSaver {
 
 ## DatasetTransformer {#datasettransformer}
 
-La classe DatasetTransformer modifie et transforme la structure d’un jeu de données. [!DNL Sensei Machine Learning Runtime] ne nécessite pas la définition de ce composant et est implémenté selon vos besoins.
+La classe DatasetTransformer modifie et transforme la structure d’un jeu de données. Le [!DNL Sensei Machine Learning Runtime] ne nécessite pas la définition de ce composant. Il est implémenté en fonction de vos besoins.
 
 En ce qui concerne les pipelines de fonctionnalités, les transformateurs de jeux de données peuvent être utilisés en association avec une fabrique de pipelines de caractéristiques afin de préparer les données pour la conception des fonctionnalités.
 
@@ -504,7 +504,7 @@ Le tableau suivant décrit les méthodes d’une classe FeaturePipelineFactory P
 
 **Spark (Scala)**
 
-Le tableau suivant décrit les méthodes d’une classe [!DNL Spark] FeaturePipelineFactory :
+Le tableau suivant décrit les méthodes de classe d’un [!DNL Spark] FeaturePipelineFactory :
 
 <table>
     <thead>
@@ -542,7 +542,7 @@ Le tableau suivant décrit les méthodes d’une classe [!DNL Spark] FeaturePipe
 
 ## PipelineFactory {#pipelinefactory}
 
-La classe PipelineFactory encapsule les méthodes et les définitions de formation et de notation des modèles, où la logique de formation et les algorithmes sont définis sous la forme d’un pipeline [!DNL Spark].
+La classe PipelineFactory encapsule des méthodes et des définitions pour l’entraînement et la notation des modèles, où la logique d’entraînement et les algorithmes sont définis sous la forme d’un pipeline [!DNL Spark].
 
 **PySpark**
 
@@ -613,7 +613,7 @@ Le tableau suivant décrit les méthodes d’une classe PipelineFactory PySpark�
 
 **Spark (Scala)**
 
-Le tableau suivant décrit les méthodes d’une classe [!DNL Spark] PipelineFactory :
+Le tableau suivant décrit les méthodes de classe d’un [!DNL Spark] PipelineFactory :
 
 <table>
     <thead>
@@ -697,7 +697,7 @@ Le tableau suivant décrit les méthodes d’une classe MLEvaluator PySpark :
 
 **Spark (Scala)**
 
-Le tableau suivant décrit les méthodes d’une classe MLEvaluator [!DNL Spark] :
+Le tableau suivant décrit les méthodes de classe d&#39;un MLEvaluator [!DNL Spark] :
 
 <table>
     <thead>

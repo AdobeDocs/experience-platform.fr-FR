@@ -2,10 +2,10 @@
 title: Déploiement de balises JavaScript pour la gestion du consentement client
 description: Découvrez comment gérer les signaux d’opt-in et d’opt-out des clients pour diverses solutions d’Adobe dans Adobe Experience Platform.
 exl-id: 7762c42f-71c8-4f29-a96b-c6c04b838a91
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 96%
+source-wordcount: '610'
+ht-degree: 94%
 
 ---
 
@@ -36,7 +36,7 @@ Dans la section Link Tracking (Suivi des liens) des paramètres de configuration
 * Track download links (Suivi des liens de téléchargement)
 * Track outbound links (Suivi des liens sortants)
 
-Lorsque ces paramètres ne sont pas sélectionnés, Platform ne déclenche pas automatiquement [!DNL Adobe Analytics]. [!DNL Analytics] se déclenche uniquement si vous le lui indiquez spécifiquement dans une action de règle. Utilisez les conditions de règle pour déterminer ce qu’il convient de déclencher et quand. Par exemple, pour utiliser des cookies afin de déterminer l’état d’inclusion, définissez un élément de données pour lire ce cookie et utilisez-le comme condition dans la règle pour déterminer quand déclencher l’action Envoyer la balise.
+Lorsque ces paramètres ne sont pas sélectionnés, Experience Platform ne déclenche pas automatiquement le [!DNL Adobe Analytics]. [!DNL Analytics] se déclenche uniquement si vous le lui indiquez spécifiquement dans une action de règle. Utilisez les conditions de règle pour déterminer ce qu’il convient de déclencher et quand. Par exemple, pour utiliser des cookies afin de déterminer l’état d’inclusion, définissez un élément de données pour lire ce cookie et utilisez-le comme condition dans la règle pour déterminer quand déclencher l’action Envoyer la balise.
 
 Par ailleurs, vous pourriez envisager d’utiliser l’[objet d’accord préalable d’Adobe](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=fr) pour contrôler le déclenchement de cette balise, et ce, en même temps que votre plateforme de gestion du consentement.
 

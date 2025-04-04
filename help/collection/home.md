@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation de la collecte de données
 description: Découvrez les différentes technologies impliquées dans la collecte de données relatives aux expériences client dans Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: b8332686043311c4dd3afeff12300fbd2827498c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 100%
+source-wordcount: '479'
+ht-degree: 70%
 
 ---
 
@@ -34,21 +34,21 @@ La collecte de données se concentre sur la capacité de découverte et l’acce
 * [Experience Platform Assurance](../assurance/home.md)
 
 
-Ce guide présente de manière approfondie la collecte de données et son fonctionnement pour envoyer des données aux produits Adobe Experience Cloud et aux applications non Adobe par le biais de Platform Edge Network.
+Ce guide présente de manière générale la collecte de données et son fonctionnement pour envoyer des données aux produits Adobe Experience Cloud et aux applications non Adobe via Experience Platform Edge Network.
 
 ## Balises, SDK Web et SDK Mobile
 
-Le SDK Web de Platform et le SDK Mobile de Platform réduisent et compressent toutes les bibliothèques de produits d’Adobe dans un seul kit de développement pour les plateformes web et mobiles, respectivement. Ils peuvent être implémentés à l’aide de code brut ou en utilisant des [balises](../tags/home.md) via l’interface utilisateur Data Collection ou l’interface utilisateur Adobe Experience Platform.
+Experience Platform Web SDK et Experience Platform Mobile SDK réduisent et compressent toutes les bibliothèques de produits Adobe en un seul kit de développement pour les plateformes web et mobiles, respectivement. Ils peuvent être implémentés à l’aide de code brut ou en utilisant des [balises](../tags/home.md) via l’interface utilisateur Data Collection ou l’interface utilisateur Adobe Experience Platform.
 
-La compression de ces bibliothèques accélère la collecte de données et consolide les opérations dans un flux unique, reliant les appareils côté client à Platform Edge Network.
+La compression de ces bibliothèques accélère la collecte de données et consolide les opérations dans un flux unique, reliant les appareils côté client à Experience Platform Edge Network.
 
 ![Balises, SDK Web, SDK Mobile](./images/home/tags-sdks.png)
 
-## Platform Edge Network et flux de données {#edge}
+## Experience Platform Edge Network et flux de données {#edge}
 
-Platform Edge Network est un réseau de serveurs distribué dans le monde entier. Rapide et fiable, il est capable de recevoir et de traiter des données à très grande échelle. Grâce aux balises, vous pouvez mettre en place des [flux de données](../datastreams/overview.md) pour des produits comme Adobe Target, Adobe Audience Manager et Adobe Analytics. Ces configurations vous permettent d‘activer les produits en question côté serveur sans modifier le code côté client.
+Experience Platform Edge Network est un réseau de serveurs distribué dans le monde entier, rapide et fiable, capable de recevoir et de traiter des données à très grande échelle. Grâce aux balises, vous pouvez mettre en place des [flux de données](../datastreams/overview.md) pour des produits comme Adobe Target, Adobe Audience Manager et Adobe Analytics. Ces configurations vous permettent d‘activer les produits en question côté serveur sans modifier le code côté client.
 
-En outre, les flux de données sont intégrés à plusieurs fonctionnalités Platform qui permettent de s’assurer que toutes les données sensibles que vous envoyez sont traitées de manière appropriée et en respect des politiques organisationnelles et des réglementations juridiques. Consultez la section sur [la gestion des données sensibles](../datastreams/overview.md#sensitive) dans la documentation sur les flux de données pour plus d’informations.
+En outre, les flux de données sont intégrés à plusieurs fonctionnalités Experience Platform qui permettent de s’assurer que toutes les données sensibles que vous envoyez sont traitées de manière appropriée et en respect des politiques organisationnelles et des réglementations légales. Consultez la section sur [la gestion des données sensibles](../datastreams/overview.md#sensitive) dans la documentation sur les flux de données pour plus d’informations.
 
 ![Solutions de flux de données et d’Adobe](./images/home/adobe-solutions.png)
 

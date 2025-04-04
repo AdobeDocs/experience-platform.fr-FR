@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Vue d’ensemble de l’ingestion en flux continu
 description: L’ingestion par flux pour Adobe Experience Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données d’appareils côté client et côté serveur vers Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 9b2d0c8fad1ed328725129664be94cf1800f6631
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 14%
@@ -25,7 +25,7 @@ La vidéo suivante est conçue pour vous aider à comprendre l’ingestion par f
 
 ### Diffusion d’enregistrements de profil et de [!DNL ExperienceEvents]
 
-Grâce à l’ingestion par flux, les utilisateurs et utilisatrices peuvent diffuser des enregistrements de profil et des [!DNL ExperienceEvents] à [!DNL Platform] en quelques secondes pour orienter la personnalisation en temps réel. Toutes les données envoyées aux API d’ingestion en flux continu sont automatiquement conservées dans le [!DNL Data Lake].
+Grâce à l’ingestion par flux, les utilisateurs et utilisatrices peuvent diffuser des enregistrements de profil et des [!DNL ExperienceEvents] à [!DNL Experience Platform] en quelques secondes pour orienter la personnalisation en temps réel. Toutes les données envoyées aux API d’ingestion en flux continu sont automatiquement conservées dans le [!DNL Data Lake].
 
 Pour plus d’informations, consultez le [guide de création d’une connexion en continu](../tutorials/create-streaming-connection.md).
 

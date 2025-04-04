@@ -2,9 +2,9 @@
 title: Plannings de requête
 description: Découvrez comment automatiser les exécutions de requête planifiées, supprimer ou désactiver un planning de requête et utiliser les options de planification disponibles via l’interface utilisateur de Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2027'
+source-wordcount: '2028'
 ht-degree: 14%
 
 ---
@@ -113,7 +113,7 @@ Le tableau ci-dessous décrit les types d’alerte de requête pris en charge :
 
 >[!NOTE]
 >
->Si vous choisissez de définir une alerte [!UICONTROL Délai d’exécution des requêtes], vous devez définir le délai souhaité en minutes dans l’interface utilisateur de Platform. Saisissez la durée en minutes. Le délai maximal est de 24 heures (1 440 minutes).
+>Si vous choisissez de définir une alerte [!UICONTROL Délai d’exécution des requêtes], vous devez définir le délai souhaité en minutes dans l’interface utilisateur d’Experience Platform. Saisissez la durée en minutes. Le délai maximal est de 24 heures (1 440 minutes).
 
 Pour obtenir un aperçu des alertes dans Adobe Experience Platform, y compris la structure de la définition des règles d’alerte, reportez-vous à la [présentation des alertes](../../observability/alerts/overview.md). Pour obtenir des conseils sur la gestion des alertes et des règles d’alerte dans l’interface utilisateur de Adobe Experience Platform, consultez le [ Guide de l’interface utilisateur des alertes](../../observability/alerts/ui.md).
 
@@ -153,7 +153,7 @@ Le tableau suivant fournit des descriptions de chaque colonne disponible dans la
 |---------------------|----------------------------------|
 | [!UICONTROL ID d’exécution de requête] | Affiche un identifiant unique pour chaque exécution de requête, ce qui vous permet de suivre et de référencer les exécutions individuelles de vos requêtes planifiées. |
 | [!UICONTROL Début de l’exécution de la requête] | Indique la date et l’heure de début de l’exécution de la requête afin de vous aider à surveiller le début de chaque exécution. |
-| [!UICONTROL Exécution de la requête terminée] | Affiche la date et l’heure d’achèvement de l’exécution de la requête, afin de fournir des informations sur la durée et le statut d’exécution. |
+| [!UICONTROL Exécution de la requête terminée] | Affiche la date et l’heure d’achèvement de l’exécution de la requête, afin de fournir à insight la durée et le statut d’exécution. |
 | [!UICONTROL Statut] | Affiche le statut actuel de l’exécution de la requête, tel que `Completed,` `Running,` ou `Failed,` pour évaluer le résultat rapidement. |
 | [!UICONTROL Jeux de données] | Répertorie les jeux de données utilisés dans l’exécution de la requête afin d’indiquer les sources de données impliquées dans l’exécution. |
 | [!UICONTROL Heures de calcul] | Affiche le temps de calcul utilisé pour chaque exécution de requête, mesuré en heures. Cela permet de suivre l’utilisation des ressources et d’optimiser les performances des requêtes. |

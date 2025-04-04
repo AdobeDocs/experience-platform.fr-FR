@@ -4,10 +4,10 @@ title: Présentation des tableaux de bord
 type: Documentation
 description: Explorez de nombreux tableaux de bord dans Adobe Experience Platform pour afficher des informations importantes sur les données de votre entreprise, telles quʼelles sont capturées lors des captures instantanées quotidiennes.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 99%
+source-wordcount: '307'
+ht-degree: 93%
 
 ---
 
@@ -18,7 +18,7 @@ Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels
 
 ## Introduction aux tableaux de bord
 
-Les tableaux de bord fournissent un compte rendu des performances prêt à lʼemploi sur les données de votre entreprise et sont directement intégrés au processus du spécialiste du marketing dans Platform. La mise à disposition de ces tableaux de bord ne nécessite pas d’assistance informatique supplémentaire. En outre, ils offrent un gain de temps et d’effort en évitant de recourir à l’exportation et au traitement des données avec une conception et une implémentation d’entreposage de données supplémentaires.
+Les tableaux de bord proposent un compte rendu des performances prêt à l’emploi sur les données de votre organisation. Ils sont directement intégrés au workflow du spécialiste marketing dans Experience Platform. La mise à disposition de ces tableaux de bord ne nécessite pas d’assistance informatique supplémentaire. En outre, ils offrent un gain de temps et d’effort en évitant de recourir à l’exportation et au traitement des données avec une conception et une implémentation d’entreposage de données supplémentaires.
 
 ## Prise en main des tableaux de bord
 

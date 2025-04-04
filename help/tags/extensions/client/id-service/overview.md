@@ -2,10 +2,10 @@
 title: Présentation de lʼextension Service d’identités d’Adobe Experience Cloud
 description: Découvrez lʼextension de balises du service d’identités d’Adobe Experience Cloud dans Adobe Experience Platform.
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 100%
+source-wordcount: '793'
+ht-degree: 95%
 
 ---
 
@@ -49,7 +49,7 @@ Cliquez sur **[!UICONTROL Ajouter]** pour exclure un autre chemin.
 
 Utilisez les options Opt-in (Accord préalable) pour déterminer si les visiteurs doivent accepter les services Adobe sur votre site, ainsi que pour savoir si des cookies peuvent être créés pour suivre l’activité des visiteurs.
 
-L’option Opt-in (Accord préalable) est le point de référence centralisé pour toutes les bibliothèques côté client de la solution Platform afin de déterminer si des cookies peuvent être créés sur l’appareil ou le navigateur d’un utilisateur lors de sa visite sur votre site. L’opt-in ne prend pas en charge la collecte ou le stockage des préférences d’autorisation des utilisateurs.
+L’Opt-in est le point de référence centralisé pour toutes les bibliothèques côté client de la solution Experience Platform afin de déterminer si des cookies peuvent être créés sur l’appareil ou le navigateur d’un utilisateur ou d’une utilisatrice lors de sa visite sur votre site. L’opt-in ne prend pas en charge la collecte ou le stockage des préférences d’autorisation des utilisateurs.
 
 **Activer Opt-in (Accord préalable) ?**
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Définir des champs XDM dans l’interface utilisateur
 description: Découvrez comment définir des champs XDM dans l’interface utilisateur Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 0360d0eb9f4a01e12ce8619e8d2c5bac9301631f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1606'
+source-wordcount: '1607'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ L’[!DNL Schema Editor] de l’interface utilisateur de Adobe Experience Platfo
 
 ## Conditions préalables
 
-Ce guide nécessite une compréhension pratique du système XDM. Reportez-vous à la [présentation de XDM](../../home.md) pour une introduction au rôle de XDM dans l’écosystème Experience Platform et aux [principes de base de la composition des schémas](../../schema/composition.md) pour savoir comment les classes et les groupes de champs contribuent aux champs des schémas XDM.
+Ce guide nécessite une compréhension pratique du système XDM. Reportez-vous à la [présentation de XDM](../../home.md) pour une introduction au rôle de XDM dans l’écosystème Experience Platform et aux [principes de base de la composition des schémas](../../schema/composition.md) afin de découvrir comment les classes et les groupes de champs contribuent aux champs des schémas XDM.
 
 Bien que cela ne soit pas obligatoire pour ce guide, il est recommandé de suivre également le tutoriel sur [la composition d’un schéma dans l’interface utilisateur](../../tutorials/create-schema-ui.md) pour vous familiariser avec les différentes fonctionnalités de l’[!DNL Schema Editor].
 
@@ -72,7 +72,7 @@ Une fois le champ configuré, sélectionnez **[!UICONTROL Appliquer]**.
 
 ![La section [!UICONTROL Propriétés du champ] de l’éditeur de schémas est mise en surbrillance.](../../images/ui/fields/overview/field-details.png)
 
-La zone de travail se met à jour pour afficher le champ nouvellement ajouté, situé dans un objet dont l’espace de noms est associé à votre identifiant de client unique (illustré comme `_tenantId` dans l’exemple ci-dessous). Tous les champs personnalisés ajoutés à un schéma sont automatiquement placés dans cet espace de noms afin d’éviter tout conflit avec d’autres champs provenant de classes et de groupes de champs fournis par l’Adobe. Le rail de droite répertorie désormais le chemin d’accès au champ en plus de ses autres propriétés.
+La zone de travail se met à jour pour afficher le champ nouvellement ajouté, situé dans un objet dont l’espace de noms est associé à votre identifiant de client unique (illustré comme `_tenantId` dans l’exemple ci-dessous). Tous les champs personnalisés ajoutés à un schéma sont automatiquement placés dans cet espace de noms afin d’éviter tout conflit avec d’autres champs des classes et groupes de champs fournis par Adobe. Le rail de droite répertorie désormais le chemin d’accès au champ en plus de ses autres propriétés.
 
 ![Un nouveau champ dans le diagramme de schéma et son chemin d’accès correspondant dans la section [!UICONTROL Propriétés du champ] sont mis en surbrillance.](../../images/ui/fields/overview/field-added.png)
 
@@ -102,7 +102,7 @@ Lors de la définition d’un nouveau champ, des options de configuration suppl�
 
 ## Types de champs spéciaux {#special}
 
-Le rail de droite propose plusieurs cases à cocher pour désigner des rôles spéciaux pour le champ sélectionné. Les cas d’utilisation de certaines de ces options impliquent des considérations importantes concernant votre stratégie de modélisation des données et la manière dont vous avez l’intention d’utiliser les services Platform en aval.
+Le rail de droite propose plusieurs cases à cocher pour désigner des rôles spéciaux pour le champ sélectionné. Les cas d’utilisation de certaines de ces options impliquent des considérations importantes concernant votre stratégie de modélisation des données et la manière dont vous avez l’intention d’utiliser les services Experience Platform en aval.
 
 Pour en savoir plus sur ces types spéciaux, consultez la documentation suivante :
 

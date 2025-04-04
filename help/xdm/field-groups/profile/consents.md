@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Groupe de champs de schéma Consentements et préférences
 description: En savoir plus sur le groupe de champs de schéma Consentements et Préférences .
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: be35c5398cd96cdfe424c5088db288ba4061ac4a
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '934'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Le groupe de champs [!UICONTROL Consentements et préférences] fournit un champ
 
 >[!TIP]
 >
->Consultez le guide sur l’[exploration des ressources XDM](../../ui/explore.md) vers pour savoir comment rechercher n’importe quelle ressource XDM et inspecter sa structure dans l’interface utilisateur de Platform.
+>Consultez le guide sur l’[exploration des ressources XDM](../../ui/explore.md) vers pour savoir comment rechercher n’importe quelle ressource XDM et inspecter sa structure dans l’interface utilisateur d’Experience Platform.
 
 Le fichier JSON suivant illustre un exemple du type de données que le groupe de champs [!UICONTROL Consentements et préférences] peut traiter. Pour plus d’informations sur l’utilisation de la plupart des champs fournis par le groupe de champs, reportez-vous au guide sur le [type de données Consentements et Préférences](../../data-types/consents.md). Les sous-sections ci-dessous portent sur les attributs uniques que le groupe de champs ajoute au type de données.
 

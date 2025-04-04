@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Janvier 2022
 description: Les notes de mise à jour de janvier 2022 pour Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1335'
-ht-degree: 97%
+source-wordcount: '1344'
+ht-degree: 81%
 
 ---
 
@@ -26,7 +26,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 ## Alertes {#alerts}
 
-Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités de Platform. Vous pouvez vous abonner à différentes règles d’alerte à l’aide de l’onglet [!UICONTROL Alertes] dans l’interface utilisateur de Platform. Vous pouvez aussi choisir de recevoir les messages d’alerte dans l’interface utilisateur elle-même ou par le biais de notifications par e-mail.
+Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte par le biais de l’onglet [!UICONTROL Alertes] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par le biais de notifications par e-mail.
 
 **Fonctionnalités mises à jour**
 
@@ -35,7 +35,7 @@ Experience Platform vous permet de vous abonner à des alertes basées sur des 
 | Nouvelles règles d’alerte | Plusieurs nouvelles règles d’alerte sont désormais disponibles pour les workflows liés à l’ingestion de données, aux identités, aux profils, à la segmentation et à l’activation. Consultez la présentation des [règles d’alerte](../../observability/alerts/rules.md) pour obtenir la liste mise à jour des types d’alerte. |
 | Alertes dans le contexte pour les flux de données des sources | Vous pouvez maintenant vous abonner pour recevoir des messages d’alerte concernant le statut de vos flux de données pendant le workflow d’ingestion. Pour plus d’informations, consultez le guide sur l’[abonnement aux alertes de sources dans l’interface utilisateur](../../sources/tutorials/ui/alerts.md). |
 
-Pour plus d’informations sur les alertes dans Platform, consultez l’[aperçu des alertes](../../observability/alerts/overview.md).
+Pour plus d’informations sur les alertes dans Experience Platform, consultez la [présentation des alertes](../../observability/alerts/overview.md).
 
 ## [!DNL Dashboards] {#dashboards}
 
@@ -57,7 +57,7 @@ Pour plus d’informations sur Query Service [!DNL Dashboards], consultez la [[!
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Expérience de mappage consolidée | La nouvelle interface de mappage, disponible dans l’interface utilisateur de Platform, vous offre une expérience de mappage cohérente qui vous permet de tirer parti des recommandations intelligentes sur les mappages, de configurer manuellement les règles de mappage et de déboguer toute erreur survenant dans vos jeux de mappage. Pour plus d’informations, consultez le [[!DNL Data Prep] guide de l’interface utilisateur](../../data-prep/ui/mapping.md). |
+| Expérience de mappage consolidée | La nouvelle interface de mappage de l’interface utilisateur d’Experience Platform vous offre une expérience de mappage cohérente qui vous permet de tirer parti des recommandations intelligentes en matière de mappage, de configurer manuellement les règles de mappage et de déboguer toute erreur survenant dans vos jeux de mappage. Pour plus d’informations, consultez le [[!DNL Data Prep] guide de l’interface utilisateur](../../data-prep/ui/mapping.md). |
 
 Pour plus d’informations sur Query Service [!DNL Data Prep], consultez la [[!DNL Data Prep] présentation](../../data-prep/home.md) de Query Service.
 
@@ -69,7 +69,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonctionnalité | Description |
 | ----------- | ----------- |
-| Personnalisation de la même page et de la page suivante | La [ fonction de personnalisation de la même page et de la page suivante ](../../destinations/ui/activate-edge-personalization-destinations.md) offre une vue partagée et cible des utilisateurs pour les applications de l’Edge Network, ce qui assure la cohérence entre les canaux marketing et client. Cette personnalisation est possible grâce à la [connexion Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) et à la [connexion de personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md). Pour configurer vos campagnes de personnalisation de la même page ou de la page suivante, reportez-vous au [tutoriel dédié](../../destinations/ui/activate-edge-personalization-destinations.md). |
+| Personnalisation de la même page et de la page suivante | La [fonctionnalité de personnalisation de la même page et de la page suivante](../../destinations/ui/activate-edge-personalization-destinations.md) fournit une vue partagée et ciblée des utilisateurs pour les applications sur Edge Network, afin d’assurer la cohérence entre les canaux marketing et client. Cette personnalisation est possible grâce à la [connexion Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) et à la [connexion de personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md). Pour configurer vos campagnes de personnalisation de la même page ou de la page suivante, reportez-vous au [tutoriel dédié](../../destinations/ui/activate-edge-personalization-destinations.md). |
 | Surveillance des destinations par lots et mesures au niveau du segment | La fonctionnalité de surveillance des destinations est désormais étendue à partir des destinations de diffusion en continu pour inclure également les destinations par lots et les mesures au niveau du segment pour vos flux de données d’activation. Pour plus d’informations, lisez les sections [Tableau de bord de surveillance des destinations](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard), [Tableau de bord de surveillance des tâches de segment](/help/dataflows/ui/monitor-destinations.md#monitoring-segment-jobs-dashboard) et [Affichage au niveau du segment](/help/dataflows/ui/monitor-destinations.md#segment-level-view). |
 | Modification du planning dans l’interface utilisateur pour les flux de données d’activation par lots existants | Cette version introduit l’option permettant de modifier le planning de vos flux de données d’activation existants vers des destinations par lots. Pour plus d’informations, lisez [Activation des données de profils vers les destinations de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md). |
 | Améliorations des destinations Marketo | Les clients d’Experience Platform qui utilisent Marketo Engage peuvent optimiser leur base de données Marketo grâce à la nouvelle possibilité d’envoyer des enregistrements de nouvelles personnes dans Marketo Engage depuis Experience Platform via le [connecteur de destination Marketo](/help/destinations/catalog/adobe/marketo-engage.md). <br> Lorsque vous envoyez des segments d’audience d’Experience Platform vers Marketo Engage, les personnes du segment qui n’existent pas encore dans votre base de données Marketo Engage peuvent y être automatiquement ajoutées. Pour plus d’informations, lisez [Envoi d’un segment Adobe Experience Platform vers une liste statique Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html) (l’étape 9 du tutoriel indique comment envoyer les enregistrements de nouvelles personnes dans Marketo). |
@@ -98,13 +98,13 @@ Pour plus d’informations sur Query Service [!DNL Query Service], consultez la 
 
 ## Sandbox {#sandboxes}
 
-Adobe Experience Platform est conçu pour enrichir les applications d’expérience digitale à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience digitale en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle. Pour répondre à ce besoin, Experience Platform fournit des sandbox qui divisent une instance de Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+Adobe Experience Platform est conçu pour enrichir les applications d’expérience digitale à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience digitale en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle. Pour répondre à ce besoin, Experience Platform fournit des sandbox qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 **Fonctionnalités mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Améliorations apportées à l’interface utilisateur des sandbox | L’indicateur sandbox est désormais intégré à l’en-tête de toutes les applications de l’interface utilisateur de Platform. L’indicateur sandbox affiche le nom, la région et le type du sandbox. Il vous offre également un accès à un menu déroulant afin de basculer entre les sandbox. Pour plus d’informations, consultez le [guide de l’interface utilisateur des sandbox](../../sandboxes/ui/user-guide.md). |
+| Améliorations apportées à l’interface utilisateur des sandbox | L’indicateur sandbox est désormais intégré à l’en-tête de toutes les applications de l’interface utilisateur d’Experience Platform. L’indicateur sandbox affiche le nom, la région et le type du sandbox. Il vous offre également un accès à un menu déroulant afin de basculer entre les sandbox. Pour plus d’informations, consultez le [guide de l’interface utilisateur des sandbox](../../sandboxes/ui/user-guide.md). |
 
 Pour plus d’informations sur les sandbox, consultez la [présentation des sandbox](../../sandboxes/home.md).
 
@@ -116,13 +116,13 @@ Pour plus d’informations sur les sandbox, consultez la [présentation des sand
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Segment Match | La Segment Match est un service de collaboration de données qui permet à deux ou plusieurs utilisateurs de Platform d’échanger des données, reposant sur des identifiants communs, d’une manière sécurisée, contrôlée et respectueuse de la vie privée. Segment Match utilise les normes de confidentialité de Platform et les identifiants personnels tels que les e-mails hachés, les numéros de téléphone hachés et les identifiants d’appareils comme les IDFA et les GAID. Pour plus d’informations, consultez la [présentation de la Segment Match](../../segmentation/ui/segment-match/overview.md). |
+| Segment Match | La correspondance de segments est un service de collaboration de données qui permet à deux utilisateurs d’Experience Platform ou plus d’échanger des données, basées sur des identifiants communs, d’une manière sécurisée, contrôlée et respectueuse de la vie privée. La correspondance de segments utilise les normes de confidentialité et les identifiants personnels d’Experience Platform tels que les e-mails hachés, les numéros de téléphone hachés et les identifiants d’appareils comme les IDFA et les GAID. Pour plus d’informations, consultez la [présentation de la Segment Match](../../segmentation/ui/segment-match/overview.md). |
 
 Pour plus d’informations sur [!DNL Segmentation Service], consultez la [présentation de la segmentation](../../segmentation/home.md).
 
 ## Sources {#sources}
 
-Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services d’Experience Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
 Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 

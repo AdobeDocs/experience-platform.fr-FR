@@ -1,9 +1,9 @@
 ---
-title: Création d’une connexion Amazon Kinesis Source dans l’interface utilisateur
+title: Créer une connexion Source Amazon Kinesis dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Amazon Kinesis à l’aide de l’interface utilisateur de Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '468'
 ht-degree: 41%
@@ -16,7 +16,7 @@ ht-degree: 41%
 >
 >La source [!DNL Amazon Kinesis] est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-Time Customer Data Platform Ultimate.
 
-Les connecteurs Source dans Adobe Experience Platform permettent d’ingérer des données provenant de l’extérieur de manière planifiée. Ce tutoriel décrit les étapes d’authentification d’un connecteur source [!DNL Amazon Kinesis] (ci-après appelé [!DNL "Kinesis"]) à l’aide de l’interface utilisateur [!DNL Platform].
+Les connecteurs Source de Adobe Experience Platform permettent d’ingérer des données provenant de l’extérieur selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour authentifier un connecteur source [!DNL Amazon Kinesis] (ci-après dénommé [!DNL "Kinesis"]) à l’aide de l’interface utilisateur [!DNL Experience Platform].
 
 ## Prise en main
 
@@ -35,38 +35,38 @@ Pour authentifier votre connecteur source [!DNL Kinesis], vous devez fournir des
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `accessKeyId` | ID de clé d’accès pour votre compte [!DNL Kinesis]. |
-| `Secret access key` | Clé d’accès secrète pour votre compte [!DNL Kinesis]. |
-| `region` | La région de votre serveur AWS. |
+| `accessKeyId` | Identifiant de clé d’accès de votre compte [!DNL Kinesis]. |
+| `Secret access key` | Clé d’accès secrète de votre compte [!DNL Kinesis]. |
+| `region` | Région de votre serveur AWS. |
 
-Pour plus d&#39;informations sur ces valeurs, consultez [ce [!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html).
+Pour plus d’informations sur ces valeurs, consultez [ce [!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html).
 
 ## Connecter votre compte [!DNL Kinesis]
 
-Une fois les informations d’identification requises collectées, vous pouvez suivre les étapes ci-dessous pour lier votre compte [!DNL Kinesis] à [!DNL Platform].
+Une fois les informations d’identification requises collectées, vous pouvez suivre les étapes ci-dessous pour lier votre compte [!DNL Kinesis] à [!DNL Experience Platform].
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com), puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Sources]**. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
+Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Sources]**. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous la catégorie **[!UICONTROL Cloud Storage]**, sélectionnez **[!UICONTROL Amazon Kinesis]**. Si c&#39;est la première fois que vous utilisez ce connecteur, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter des données]** pour créer un nouveau connecteur [!DNL Kinesis].
+Dans la catégorie **[!UICONTROL Espace de stockage]**, sélectionnez **[!UICONTROL Amazon Kinesis]**. Si vous utilisez ce connecteur pour la première fois, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter des données]** pour créer un connecteur [!DNL Kinesis].
 
 ![](../../../../images/tutorials/create/kinesis/catalog.png)
 
-La boîte de dialogue **[!UICONTROL Se connecter à Amazon Kinesis]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La boîte de dialogue **[!UICONTROL Connexion à Amazon Kinesis]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Nouveau compte
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**. Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification [!DNL Kinesis]. Une fois que vous avez terminé, sélectionnez **[!UICONTROL Se connecter]** et laissez un certain temps à la nouvelle connexion pour établir.
+Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**. Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification [!DNL Kinesis]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion]** puis patientez quelques instants le temps d’établir la nouvelle connexion.
 
 ![](../../../../images/tutorials/create/kinesis/new.png)
 
 ### Compte existant
 
-Pour connecter un compte existant, sélectionnez le compte [!DNL Kinesis] auquel vous souhaitez vous connecter, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
+Pour connecter un compte existant, sélectionnez le compte [!DNL Kinesis] auquel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![](../../../../images/tutorials/create/kinesis/existing.png)
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous êtes connecté à votre compte [!DNL Kinesis] à [!DNL Platform]. Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer les données de votre espace de stockage dans le cloud dans [!DNL Platform]](../../dataflow/streaming/cloud-storage-streaming.md).
+En suivant ce tutoriel, vous vous êtes connecté à votre compte [!DNL Kinesis] à [!DNL Experience Platform]. Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données de votre espace de stockage dans  [!DNL Experience Platform]](../../dataflow/streaming/cloud-storage-streaming.md).

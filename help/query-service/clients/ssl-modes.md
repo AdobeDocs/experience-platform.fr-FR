@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;Query servi
 title: Options SSL de Query Service
 description: Découvrez la prise en charge SSL pour les connexions tierces à Adobe Experience Platform Query Service et comment vous connecter à l’aide du mode SSL complet.
 exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
-source-git-commit: 37c30fc1a040efbce0c221c10b36e105d5b1a962
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1008'
+source-wordcount: '1011'
 ht-degree: 1%
 
 ---
@@ -16,11 +16,11 @@ Pour une sécurité renforcée, Adobe Experience Platform [!DNL Query Service] f
 
 ## Conditions préalables
 
-Ce document suppose que vous avez déjà téléchargé une application cliente de bureau tierce à utiliser avec vos données Platform. Vous trouverez des instructions spécifiques sur la manière d’incorporer la sécurité SSL lors de la connexion à un client tiers dans la documentation de leur guide de connexion respectif. Pour obtenir la liste de tous [!DNL Query Service] clients pris en charge, reportez-vous à la [présentation des connexions client](./overview.md).
+Ce document suppose que vous avez déjà téléchargé une application cliente de bureau tierce à utiliser avec vos données Experience Platform. Vous trouverez des instructions spécifiques sur la manière d’incorporer la sécurité SSL lors de la connexion à un client tiers dans la documentation de leur guide de connexion respectif. Pour obtenir la liste de tous [!DNL Query Service] clients pris en charge, reportez-vous à la [présentation des connexions client](./overview.md).
 
 ## Options SSL disponibles {#available-ssl-options}
 
-Platform prend en charge diverses options SSL pour répondre à vos besoins en matière de sécurité des données et équilibrer la charge de traitement du chiffrement et de l’exchange des clés.
+Experience Platform prend en charge différentes options SSL pour répondre à vos besoins en matière de sécurité des données et équilibrer la charge de traitement du chiffrement et de l’échange de clés.
 
 Les différentes valeurs de paramètre `sslmode` fournissent différents niveaux de protection. En chiffrant vos données en mouvement à l’aide de certificats SSL, il contribue à empêcher les attaques « man-in-the-middle » (MITM), les écoutes et l’emprunt d’identité. Le tableau ci-dessous présente une répartition des différents modes SSL disponibles et le niveau de protection qu’ils offrent.
 
@@ -40,7 +40,7 @@ Les différentes valeurs de paramètre `sslmode` fournissent différents niveaux
 >
 >La différence entre `verify-ca` et `verify-full` dépend de la politique de l’autorité de certification racine (CA). Si vous avez créé votre propre autorité de certification locale pour émettre des certificats privés pour vos applications, l’utilisation de `verify-ca` offre souvent une protection suffisante. Si vous utilisez une autorité de certification publique, `verify-ca` autorise les connexions à un serveur que quelqu’un d’autre a peut-être enregistré auprès de l’autorité de certification. `verify-full` doit toujours être utilisé avec une autorité de certification racine publique.
 
-Lors de l’établissement d’une connexion tierce à une base de données Platform, nous vous recommandons d’utiliser au minimum `sslmode=require` pour garantir une connexion sécurisée pour vos données en mouvement. Le mode SSL `verify-full` est recommandé pour une utilisation dans la plupart des environnements sensibles à la sécurité.
+Lors de l’établissement d’une connexion tierce à une base de données Experience Platform, il est recommandé d’utiliser au minimum `sslmode=require` pour assurer une connexion sécurisée à vos données en mouvement. Le mode SSL `verify-full` est recommandé pour une utilisation dans la plupart des environnements sensibles à la sécurité.
 
 ## Configurer un certificat racine pour la vérification du serveur {#root-certificate}
 

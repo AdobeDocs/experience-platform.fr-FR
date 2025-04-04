@@ -2,9 +2,9 @@
 title: FAQ sur Adobe Experience Platform Web SDK
 description: Obtenez des réponses aux questions fréquentes sur Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: c26abeed890e06dce4e77133502b7031443bb4fa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2080'
+source-wordcount: '2082'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Actuellement, vous devez déployer différentes bibliothèques JavaScript en fon
 * Aucune de ces bibliothèques n’a été conçue pour fonctionner les unes avec les autres.
 * Les cas d’utilisation inter-solutions et Adobe Experience Platform nécessitent que ces bibliothèques disparates soient interdépendantes, ce qui entraîne des problèmes de déploiement.
 
-Bien que les balises dans Platform facilitent autant que possible le déploiement et la gestion de ces bibliothèques, il existe toujours des problèmes avec :
+Bien que les balises dans Experience Platform facilitent autant que possible le déploiement et la gestion de ces bibliothèques, il existe toujours des problèmes avec :
 
 * Taille de la bibliothèque (trop de code Adobe sur une page)
 * Performances (le chargement des sites prend trop de temps)
@@ -124,7 +124,7 @@ En d’autres termes, si vous décidez d’utiliser Adobe Experience Platform We
 
 ## Puis-je migrer les ECID lorsque je commence à utiliser Web SDK afin que les visiteurs de mon site web ne commencent pas à apparaître comme de nouveaux visiteurs ?
 
-Oui, Adobe Experience Platform Web SDK offre une fonctionnalité de migration d’identité. Suivez les instructions relatives à la migration des identifiants dans la [documentation d’identité de Platform Web SDK](/help/web-sdk/identity/overview.md#id-migration) pour plus d’informations.
+Oui, Adobe Experience Platform Web SDK offre une fonctionnalité de migration d’identité. Suivez les instructions relatives à la migration des identifiants dans la documentation sur les identités [Experience Platform Web SDK](/help/web-sdk/identity/overview.md#id-migration) pour plus d’informations.
 
 ## En quoi le SDK Web diffère-t-il des balises ?
 

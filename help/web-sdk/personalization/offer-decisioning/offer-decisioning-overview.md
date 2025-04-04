@@ -1,16 +1,16 @@
 ---
-title: Utilisation d’Offer Decisioning avec Platform Web SDK
+title: Utilisation d’Offer Decisioning avec Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK peut diffuser et générer des offres personnalisées gérées dans Offer Decisioning. Vous pouvez créer vos offres et d’autres objets associés à l’aide de l’interface utilisateur ou de l’API Offer Decisioning.
-keywords: offer decisioning;prise de décisions;Web SDK;Platform Web SDK;offres personnalisées;diffuser des offres;diffusion des offres;personnalisation des offres;
+keywords: offer decisioning;prise de décisions;Web SDK;Experience Platform Web SDK;offres personnalisées;diffuser des offres;diffusion des offres;personnalisation des offres;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: b2c3b1160782a81ea66f42e21e494e0a7d90e037
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 11%
+source-wordcount: '799'
+ht-degree: 8%
 
 ---
 
-# Utilisation d’Offer Decisioning avec Platform Web SDK
+# Utilisation d’Offer Decisioning avec Experience Platform Web SDK
 
 Les [!DNL Web SDK] Adobe Experience Platform peuvent diffuser et générer des offres personnalisées qui sont gérées dans Offer Decisioning. Vous pouvez créer vos offres et d’autres objets associés à l’aide de l’interface utilisateur (IU) ou des API d’Offer Decisioning.
 
@@ -49,7 +49,7 @@ Il est important de comprendre la terminologie suivante lorsque vous utilisez Of
 
 * **Flux de données :** pour plus d’informations, consultez la documentation [flux de données](/help/datastreams/overview.md).
 
-* **Identité** : pour plus d’informations, consultez cette documentation décrivant comment [Platform Web SDK utilise Identity Service](../../identity/overview.md).
+* **Identité** : pour plus d’informations, consultez cette documentation décrivant comment [Experience Platform Web SDK utilise Identity Service](../../identity/overview.md).
 
 ## Activation d’Offer Decisioning
 
@@ -82,13 +82,13 @@ Pour activer Offer Decisioning, procédez comme suit :
 
       1. [Création d’une propriété de balise](/help/tags/ui/administration/companies-and-properties.md)
       1. [Ajouter du code incorporé](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html?lang=fr)
-      1. Installez et configurez l’extension SDK web de Platform avec le flux de données créé lors de la sélection de la configuration dans le menu déroulant « Flux de données ». Consultez la documentation relative aux [extensions](/help/tags/ui/managing-resources/extensions/overview.md).
+      1. Installez et configurez l’extension Experience Platform Web SDK avec le flux de données créé lors de la sélection de la configuration dans le menu déroulant « Flux de données ». Consultez la documentation relative aux [extensions](/help/tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
 
-      1. Créez les [Éléments de données](/help/tags/ui/managing-resources/data-elements.md) nécessaires. Au minimum, vous devez créer un mappage d’identité SDK web Platform et un élément de données objet XDM du SDK web Platform.
+      1. Créez les [Éléments de données](/help/tags/ui/managing-resources/data-elements.md) nécessaires. Au minimum, vous devez créer un mappage d’identité Experience Platform Web SDK et un élément de données Objet XDM Experience Platform Web SDK .
 
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
@@ -96,7 +96,7 @@ Pour activer Offer Decisioning, procédez comme suit :
 
       1. Créez vos [Règles](/help/tags/ui/managing-resources/rules.md).
 
-         * Ajoutez une action d’envoi d’événement Platform Web SDK et ajoutez les `decisionScopes` appropriées à la configuration de cette action
+         * Ajoutez une action d’envoi d’événement Experience Platform Web SDK et ajoutez les `decisionScopes` appropriées à la configuration de cette action
 
          ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
 

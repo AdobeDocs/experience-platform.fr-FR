@@ -2,9 +2,9 @@
 title: Créer des audiences à l’aide de SQL
 description: Découvrez comment utiliser l’extension d’audience SQL dans Adobe Experience Platform Data Distiller pour créer, gérer et publier des audiences à l’aide de commandes SQL. Ce guide couvre tous les aspects du cycle de vie des audiences, notamment la création, la mise à jour et la suppression de profils, ainsi que l’utilisation de définitions d’audience pilotées par les données pour cibler les destinations basées sur des fichiers.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: c66a7cf779c1b6e55ace86916985087dfaa3363b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1485'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ Utilisez l’extension d’audience SQL pour créer des audiences avec des donn�
 
 L’utilisation de cette extension SQL améliore votre capacité à créer des audiences, car vous n’avez pas besoin de données brutes dans vos profils lors de la définition des segments d’audience. Les audiences créées à l’aide de cette méthode sont automatiquement enregistrées dans l’espace de travail Audience , où vous pouvez les cibler davantage vers des destinations basées sur des fichiers.
 
-![Infographie présentant le workflow d’extension d’audience SQL. Les étapes incluent la création d’audiences avec Query Service à l’aide de commandes SQL, leur gestion dans l’interface utilisateur de Platform et leur activation dans des destinations basées sur des fichiers.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
+![Infographie présentant le workflow d’extension d’audience SQL. Les étapes incluent la création d’audiences avec Query Service à l’aide de commandes SQL, leur gestion dans l’interface utilisateur d’Experience Platform et leur activation dans des destinations basées sur des fichiers.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
 
 Ce document explique comment utiliser l’extension d’audience SQL dans Adobe Experience Platform Data Distiller pour créer, gérer et publier des audiences à l’aide de commandes SQL.
 
@@ -203,7 +203,7 @@ DROP AUDIENCE IF EXISTS aud_test;
 
 ### Enregistrement et disponibilité automatiques des audiences {#registration-and-availability}
 
-Les audiences créées à l’aide de l’extension SQL sont automatiquement enregistrées sous la Distiller de données [!UICONTROL Origine] dans l’espace de travail Audience . Une fois enregistrées, ces audiences sont disponibles pour le ciblage dans les destinations basées sur des fichiers, ce qui améliore la segmentation et les stratégies de ciblage. Ce processus ne nécessite aucune configuration supplémentaire, ce qui simplifie la gestion des audiences. Pour plus d’informations sur l’affichage, la gestion et la création d’audiences dans l’interface utilisateur de Platform, consultez la [présentation d’Audience Portal](../../segmentation/ui/audience-portal.md).
+Les audiences créées à l’aide de l’extension SQL sont automatiquement enregistrées sous la Distiller de données [!UICONTROL Origine] dans l’espace de travail Audience . Une fois enregistrées, ces audiences sont disponibles pour le ciblage dans les destinations basées sur des fichiers, ce qui améliore la segmentation et les stratégies de ciblage. Ce processus ne nécessite aucune configuration supplémentaire, ce qui simplifie la gestion des audiences. Pour plus d’informations sur l’affichage, la gestion et la création d’audiences dans l’interface utilisateur d’Experience Platform, consultez la présentation d’[Audience Portal](../../segmentation/ui/audience-portal.md).
 
 <!-- Q) Do you know how long it takes for the audience to register? This info would help manage user expectations. -->
 
@@ -289,9 +289,9 @@ Oui, les audiences du Distiller de données sont supprimées tous les 30 jours, 
 
 Vous êtes arrivé au bout de ce document. À présent, vous savez comment utiliser l’extension d’audience SQL dans Data Distiller pour créer, gérer et publier efficacement des audiences à l’aide de commandes SQL. Vous pouvez désormais personnaliser les définitions d’audience en fonction des besoins uniques de votre entreprise et les activer dans différentes destinations, optimisant ainsi vos stratégies marketing et vos décisions axées sur les données.
 
-Vous pouvez ensuite lire la documentation suivante pour développer et optimiser vos stratégies de gestion des audiences Platform :
+Vous pouvez ensuite lire la documentation suivante pour développer et optimiser davantage vos stratégies de gestion des audiences Experience Platform :
 
-- **Explorer l’évaluation de l’audience** : découvrez les [méthodes d’évaluation de l’audience dans Adobe Experience Platform](../../segmentation/home.md#evaluate-segments) : segmentation par flux pour les mises à jour en temps réel, segmentation par lots pour le traitement planifié ou à la demande et segmentation Edge pour l’évaluation instantanée sur l’Edge Network.
-- **Intégration aux destinations** : lisez le guide sur la manière d’[exporter des fichiers à la demande vers des destinations par lots](../../destinations/ui/export-file-now.md) à l’aide de l’interface utilisateur des destinations de Platform.
+- **Explorer l’évaluation de l’audience** : découvrez les [méthodes d’évaluation de l’audience dans Adobe Experience Platform](../../segmentation/home.md#evaluate-segments) : segmentation par flux pour les mises à jour en temps réel, segmentation par lots pour le traitement planifié ou à la demande et segmentation Edge pour l’évaluation instantanée sur Edge Network.
+- **Intégration aux destinations** : lisez le guide sur la manière d’[exporter des fichiers à la demande vers des destinations par lots](../../destinations/ui/export-file-now.md) à l’aide de l’interface utilisateur des destinations Experience Platform.
 - **Revoir les performances des audiences** : analysez les performances de vos audiences définies par SQL sur différents canaux. Utilisez les informations sur les données pour ajuster et améliorer vos définitions d’audience et vos stratégies de ciblage. Lisez le document sur [les informations sur l’audience](../../dashboards/insights/audiences.md) pour savoir comment accéder aux requêtes SQL pour les informations sur l’audience dans Adobe Real-Time CDP et les adapter. Vous pouvez ensuite créer vos propres informations et transformer les données brutes en informations exploitables en personnalisant le tableau de bord des audiences afin de visualiser et d’utiliser efficacement ces informations pour une meilleure prise de décision.
 

@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;Veeva CRM;veeva
+keywords: Experience Platform;accueil;rubriques populaires;Veeva CRM;veeva
 solution: Experience Platform
-title: Création d’une connexion Source CRM Veeva dans l’interface utilisateur
+title: Créer une connexion Source Veeva CRM dans l’interface utilisateur
 type: Tutorial
-description: Découvrez comment créer une connexion source CRM Veeva à l’aide de l’interface utilisateur de Adobe Experience Platform.
+description: Découvrez comment créer une connexion source Veeva CRM à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 4ef76c28-9bd2-4e54-a3d6-dceb89162337
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 79%
+source-wordcount: '427'
+ht-degree: 71%
 
 ---
 
 # Créer une connexion source [!DNL Veeva CRM] dans l’interface utilisateur
 
-Les connecteurs source d’Adobe Experience Platform permettent d’ingérer des données CRM externes selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour créer un connecteur source [!DNL Veeva CRM] à l’aide de l’interface utilisateur de [!DNL Platform].
+Les connecteurs source d’Adobe Experience Platform permettent d’ingérer des données CRM externes selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour créer un connecteur source [!DNL Veeva CRM] à l’aide de l’interface utilisateur de [!DNL Experience Platform].
 
 ## Prise en main
 
@@ -31,26 +31,26 @@ Si vous disposez déjà d’un compte [!DNL Veeva CRM], vous pouvez ignorer le r
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `environmentUrl` | URL de l’instance source [!DNL Veeva CRM]. |
+| `environmentUrl` | URL de l’instance source de la [!DNL Veeva CRM]. |
 | `username` | Nom d’utilisateur du compte utilisateur [!DNL Veeva CRM]. |
 | `password` | Mot de passe du compte utilisateur [!DNL Veeva CRM]. |
-| `securityToken` | Jeton de sécurité pour le compte utilisateur [!DNL Veeva CRM]. |
+| `securityToken` | Jeton de sécurité du compte utilisateur [!DNL Veeva CRM]. |
 
-Pour plus d&#39;informations sur la prise en main, consultez ce [[!DNL Veeva CRM] document](https://developer.veevacrm.com/doc/Content/rest-api.htm).
+Pour plus d’informations sur la prise en main, reportez-vous à ce [[!DNL Veeva CRM] document](https://developer.veevacrm.com/doc/Content/rest-api.htm).
 
 ## Connecter votre compte [!DNL Veeva CRM]
 
-Une fois les informations d’identification requises collectées, vous pouvez suivre les étapes ci-dessous pour lier votre compte [!DNL Veeva CRM] à [!DNL Platform].
+Une fois les informations d’identification requises collectées, vous pouvez suivre les étapes ci-dessous pour lier votre compte [!DNL Veeva CRM] à [!DNL Experience Platform].
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources pour lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources pour lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous la catégorie [!UICONTROL CRM], sélectionnez **[!UICONTROL Veeva CRM]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
+Dans la catégorie [!UICONTROL CRM], sélectionnez **[!UICONTROL Veeva CRM]**, puis **[!UICONTROL Ajouter des données]**.
 
 ![catalogue](../../../../images/tutorials/create/veeva/catalog.png)
 
-La page **[!UICONTROL Connecter le compte CRM Veeva]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Connecter le compte Veeva CRM]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant
 
@@ -66,4 +66,4 @@ Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fo
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez établi une connexion à votre compte [!DNL Veeva CRM]. Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données dans Platform](../../dataflow/crm.md).
+En suivant ce tutoriel, vous avez établi une connexion à votre compte [!DNL Veeva CRM]. Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données dans Experience Platform](../../dataflow/crm.md).

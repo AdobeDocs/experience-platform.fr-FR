@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Guide de Real-Time Customer Data Platform
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des audiences à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
 role: Admin
-source-git-commit: 4c2431148f584f2ffd5de20b8880a6b4a10ff95e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 66%
+source-wordcount: '302'
+ht-degree: 64%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 66%
    * [IA dédiée aux clients](segmentation/customer-ai.md)
 * Jeux de données {#datasets}
    * [Jeux de données](datasets/dataset.md)
-   * [Qualité des données sur la plateforme](datasets/data-quality.md)
+   * [Qualité des données dans Experience Platform](datasets/data-quality.md)
 * Destinations {#destinations}
    * [Présentation des destinations](destinations/overview.md)
    * [Destinations dans l’édition B2B de Real-Time CDP](destinations/b2b.md)

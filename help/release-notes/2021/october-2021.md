@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’octobre 2021 d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2021 pour Adobe Experience Platform.
 exl-id: 8f8bcb24-6478-4281-9362-9559158384af
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 100%
+source-wordcount: '463'
+ht-degree: 76%
 
 ---
 
@@ -23,11 +23,11 @@ L’interface utilisateur a été mise à jour avec les modifications suivantes�
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Thème sombre | Utilisez le sélecteur de thème sombre pour passer d’un thème clair à un thème sombre dans l’interface de Platform. Le commutateur se trouve dans le profil utilisateur sous le nom d’utilisateur et l’e-mail.  |
+| Thème sombre | Utilisez le sélecteur de thème sombre pour basculer entre les thèmes clairs et sombres dans l’interface d’Experience Platform. Le commutateur se trouve dans le profil utilisateur sous le nom d’utilisateur et l’e-mail.  |
 | Activer/désactiver le volet de navigation de gauche | Utilisez le bouton de navigation amélioré situé en haut de l’en-tête de l’application pour afficher ou masquer le menu affichant les fonctionnalités de votre Experience Platform. Le système mémorise votre dernière sélection et ne vous montre que les fonctionnalités auxquelles vous avez accès.  |
 | Accès à la visibilité | La barre de navigation de gauche affiche uniquement les fonctionnalités auxquelles vous avez accès. Dans les versions précédentes d’Adobe Experience Platform, les éléments indisponibles étaient visibles, même si vous ne pouviez pas y accéder.  |
 
-Consultez le [Guide de l’interface utilisateur de Platform](../../landing/ui-guide.md) pour en savoir plus. 
+Consultez le [Guide de l’interface utilisateur d’Experience Platform](../../landing/ui-guide.md) pour en savoir plus.
 
 ## Mises à jour des fonctionnalités existantes
 
@@ -51,14 +51,14 @@ Voir la [[!DNL Data Prep] présentation](../../data-prep/home.md) pour en savoir
 
 ### Sources {#sources}
 
-Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services d’Experience Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
 Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Améliorations de la source [!DNL Amazon S3] | Vous pouvez désormais utiliser le paramètre `s3SessionToken` pour connecter votre compte [!DNL Amazon S3] vers Platform à l’aide d’informations d’identification de sécurité temporaires. Ce jeton vous permet de fournir un accès temporaire à court terme à vos ressources [!DNL Amazon S3] à des utilisateurs dans des environnements non approuvés. Pour plus d’informations, consultez la [[!DNL Amazon S3] documentation](../../sources/connectors/cloud-storage/s3.md#prerequisites). |
-| [!DNL Generic REST API] (version bêta) | Vous pouvez désormais créer une connexion source [!DNL Generic REST API] à l’aide de l’[[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) pour importer des données d’une application REST générique vers Platform. Pour plus d’informations, consultez la [[!DNL Generic REST API] présentation](../../sources/connectors/protocols/generic-rest.md).  |
-| [!DNL Zoho CRM] (version bêta) | Vous pouvez désormais créer une connexion source [!DNL Zoho CRM] à l’aide de l’[[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) ou de l’[interface utilisateur](../../sources/tutorials/ui/create/crm/zoho.md) pour importer les données de votre compte [!DNL Zoho CRM] vers Platform. Pour plus d’informations, consultez la [[!DNL Zoho CRM] présentation](../../sources/connectors/crm/zoho.md). |
+| Améliorations de la source [!DNL Amazon S3] | Vous pouvez désormais utiliser le paramètre `s3SessionToken` pour connecter votre compte [!DNL Amazon S3] à Experience Platform à l’aide d’informations d’identification de sécurité temporaires. Ce jeton vous permet de fournir un accès temporaire à court terme à vos ressources [!DNL Amazon S3] à des utilisateurs dans des environnements non approuvés. Pour plus d’informations, consultez la [[!DNL Amazon S3] documentation](../../sources/connectors/cloud-storage/s3.md#prerequisites). |
+| [!DNL Generic REST API] (version bêta) | Vous pouvez désormais créer une connexion source [!DNL Generic REST API] à l’aide de l’API [[!DNL Flow Service]  ](../../sources/tutorials/api/create/protocols/generic-rest.md) pour importer des données d’une application REST générique vers Experience Platform. Pour plus d’informations, consultez la [[!DNL Generic REST API] présentation](../../sources/connectors/protocols/generic-rest.md).  |
+| [!DNL Zoho CRM] (version bêta) | Vous pouvez désormais créer une connexion source [!DNL Zoho CRM] à l’aide de l’API [[!DNL Flow Service]  ou de l’interface utilisateur [](../../sources/tutorials/ui/create/crm/zoho.md) ](../../sources/tutorials/api/create/crm/zoho.md) pour importer les données de votre compte [!DNL Zoho CRM] vers Experience Platform. Pour plus d’informations, consultez la [[!DNL Zoho CRM] présentation](../../sources/connectors/crm/zoho.md). |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).

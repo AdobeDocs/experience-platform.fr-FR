@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de dépannage de l’espace de travail de science des données
 description: Ce document fournit des réponses aux questions fréquentes sur l’espace de travail de science des données d’Adobe Experience Platform.
 exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1497'
 ht-degree: 98%
@@ -15,11 +15,11 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Data Science Workspace ne peut plus être acheté.
+>Le Workspace de science des données ne peut plus être acheté.
 >
->Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
-Ce document répond aux questions les plus fréquentes sur [!DNL Data Science Workspace] d’Adobe Experience Platform. Pour toute question ou tout dépannage concernant les API [!DNL Platform] en général, reportez-vous au [guide de dépannage des API Adobe Experience Platform](../landing/troubleshooting.md).
+Ce document répond aux questions les plus fréquentes sur [!DNL Data Science Workspace] d’Adobe Experience Platform. Pour toute question ou tout dépannage concernant les API [!DNL Experience Platform] en général, reportez-vous au [guide de dépannage des API Adobe Experience Platform](../landing/troubleshooting.md).
 
 ## La requête du notebook JupyterLab est bloquée au statut d’exécution.
 

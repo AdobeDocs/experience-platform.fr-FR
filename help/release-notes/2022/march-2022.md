@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Mars 2022
 description: Les notes de mise à jour de mars 2022 pour Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1172'
-ht-degree: 98%
+source-wordcount: '1182'
+ht-degree: 84%
 
 ---
 
@@ -39,7 +39,7 @@ Experience Platform vous permet d’auditer l’activité des utilisateurs pour 
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur les journaux d’audit dans Platform, consultez la [présentation des journaux d’audit](../../landing/governance-privacy-security/audit-logs/overview.md).
+Pour plus d’informations sur les journaux d’audit dans Experience Platform, consultez la [présentation des journaux d’audit](../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Comptes associés dans Real-Time CDP B2B Edition {#related-accounts}
 
@@ -59,7 +59,7 @@ Pour en savoir plus sur Real-Time CDP édition B2B, consultez la [présentation]
 
 ## Alertes {#alerts}
 
-Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités de Platform. Vous pouvez vous abonner à différentes règles d’alerte à l’aide de l’onglet [!UICONTROL Alertes] dans l’interface utilisateur de Platform. Vous pouvez aussi choisir de recevoir les messages d’alerte dans l’interface utilisateur elle-même ou par le biais de notifications par e-mail.
+Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte par le biais de l’onglet [!UICONTROL Alertes] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par le biais de notifications par e-mail.
 
 **Fonctionnalités mises à jour**
 
@@ -69,7 +69,7 @@ Experience Platform vous permet de vous abonner à des alertes basées sur des 
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur les alertes dans Platform, consultez l’[aperçu des alertes](../../observability/alerts/overview.md).
+Pour plus d’informations sur les alertes dans Experience Platform, consultez la [présentation des alertes](../../observability/alerts/overview.md).
 
 ## Tableaux de bord {#dashboards}
 
@@ -77,7 +77,7 @@ Adobe Experience Platform fournit de nombreux [!DNL dashboards] grâce auxquel
 
 ### Tableaux de bord des profils
 
-Le tableau de bord Profils affiche un instantané des données d’attribut (enregistrement) dont votre organisation dispose dans la banque de profils en Experience Platform.
+Le tableau de bord Profils affiche un instantané des données d’attribut (enregistrement) dont dispose votre organisation dans la banque de profils d’Experience Platform.
 
 **Fonctionnalités mises à jour**
 
@@ -104,11 +104,11 @@ Le tableau de bord des destinations affiche un instantané des destinations acti
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur les tableaux de bord des destinations dans Platform, consultez la [présentation des tableaux de bord des destinations](../../dashboards/guides/destinations.md).
+Pour plus d’informations sur les tableaux de bord des destinations dans Experience Platform, consultez la [présentation des tableaux de bord des destinations](../../dashboards/guides/destinations.md).
 
 ## Collecte de données {#data-collection}
 
-Platform fournit un ensemble de technologies qui vous permettent de collecter des données d’expérience client à partir de sources côté client. Vous pouvez ensuite les envoyer au réseau Adobe Experience Platform Edge afin qu’elles soient enrichies, transformées et distribuées vers des destinations Adobe ou autres qu’Adobe.
+Experience Platform fournit un ensemble de technologies qui vous permettent de collecter des données d’expérience client côté client. Vous pouvez ensuite les envoyer à Adobe Experience Platform Edge Network pour les enrichir, les transformer et les distribuer vers des destinations Adobe ou autres qu’Adobe.
 
 **Nouvelles fonctionnalités**
 
@@ -117,7 +117,7 @@ Platform fournit un ensemble de technologies qui vous permettent de collecter de
 | Paramètres globaux de flux de données | Vous pouvez désormais configurer plusieurs nouveaux paramètres globaux lors de la configuration d’un flux de données : géolocalisation, cookie des identifiants internes et synchronisation des identifiants tiers. Pour plus d’informations, consultez la section sur la [configuration d’un flux de données](../../datastreams/overview.md#create) du guide de l’interface utilisateur des flux de données. |
 | [API d’Edge Network Server](../../server-api/overview.md) | Le serveur API permet aux clients d’interagir avec Edge Experience Platform Network à l’aide d’un nouveau point d’entrée authentifié, afin d’alimenter plusieurs cas d’utilisation de la collecte de données, de la personnalisation, de la publicité et du marketing. |
 
-Pour plus d’informations sur la collecte de données dans Platform, consultez la [Présentation de la collecte de données](../../collection/home.md).
+Pour plus d’informations sur la collecte de données dans Experience Platform, consultez la [présentation de la collecte de données](../../collection/home.md).
 
 ## Query Service {#query-service}
 
@@ -135,7 +135,7 @@ Pour plus d’informations sur les fonctionnalités disponibles, consultez la se
 
 ## Sources {#sources}
 
-Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services d’Experience Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
 Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client (CRM) et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer entièrement l’ingestion des données.
 
@@ -143,8 +143,8 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Nouvelles sources désormais disponibles pour l’utilisation B2B | Vous pouvez désormais utiliser toutes les sources disponibles sur Platform pour les cas d’utilisation B2B. Pour obtenir une liste complète des sources disponibles, consultez le [catalogue des sources](../../sources/home.md). |
-| Disponibilité générale de la nouvelle source [!DNL Oracle Eloqua] | Vous pouvez désormais utiliser la source [!DNL Oracle Eloqua] pour ingérer facilement des données à partir de votre instance [!DNL Oracle Eloqua] (compte, campagne, contacts) vers Platform. Pour plus d’informations, consultez la documentation sur la [création d’une connexion source  [!DNL Oracle Eloqua] ](../../sources/connectors/marketing-automation/oracle-eloqua.md). |
+| Nouvelles sources désormais disponibles pour l’utilisation B2B | Vous pouvez désormais utiliser toutes les sources disponibles sur Experience Platform pour les cas d’utilisation B2B. Pour obtenir une liste complète des sources disponibles, consultez le [catalogue des sources](../../sources/home.md). |
+| Disponibilité générale de la nouvelle source [!DNL Oracle Eloqua] | Vous pouvez désormais utiliser la source de [!DNL Oracle Eloqua] pour ingérer facilement des données à partir de votre instance [!DNL Oracle Eloqua] (compte, campagne, contacts) vers Experience Platform. Pour plus d’informations, consultez la documentation sur la [création d’une connexion source  [!DNL Oracle Eloqua] ](../../sources/connectors/marketing-automation/oracle-eloqua.md). |
 | Améliorations de l’API pour [!DNL Data Landing Zone] | La source [!DNL Data Landing Zone] prend désormais en charge la détection automatique des propriétés de fichier lors de l’utilisation de l’API [!DNL Flow Service]. Pour plus d’informations, consultez la documentation sur la [création d’une connexion source [!DNL Data Landing Zone] ](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). |
 
 {style="table-layout:auto"}

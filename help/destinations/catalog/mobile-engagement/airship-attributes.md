@@ -3,10 +3,10 @@ keywords: attributs airship;destination airship
 title: Connexion Attributs Airship
 description: Transmettez facilement les données d’audience Adobe à Airship en tant qu’attributs d’audience pour le ciblage dans Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 453884612e787439ea58f312d8080622ee0441f7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1150'
-ht-degree: 28%
+source-wordcount: '1153'
+ht-degree: 30%
 
 ---
 
@@ -17,12 +17,12 @@ ht-degree: 28%
 >* À compter du 25 mars 2025, vous pourrez voir deux cartes [!DNL Airship Attributes] côte à côte dans le catalogue des destinations. Cela est dû à une mise à niveau interne vers le service de destinations. Le connecteur de destination [!DNL Airship Attributes] existant a été renommé **[!UICONTROL (obsolète) Attributs Airship]** et une nouvelle carte portant le nom **[!UICONTROL Attributs Airship]** est désormais disponible.
 >* Utilisez la connexion **[!UICONTROL Attributs Airship]** dans le catalogue pour les nouveaux flux de données d’activation. Si vous disposez de flux de données actifs vers la destination **[!UICONTROL (Obsolète) Attributs Airship]**, ils seront mis à jour automatiquement. Aucune action n’est donc requise de votre part.
 >* Si vous créez des flux de données par le biais de l’[API Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/), vous devez mettre à jour vos [!DNL flow spec ID] et [!DNL connection spec ID] aux valeurs suivantes :
->   * Identifiant de spécification de flux : `a862e0be-966e-4e5a-80d3-1bb566461986`
->   * Identifiant de spécification de connexion : `594bc002-4a47-49b7-8a98-ac0d21045502`
+>   * ID de spécification de flux : `a862e0be-966e-4e5a-80d3-1bb566461986`
+>   * ID de spécification de connexion : `594bc002-4a47-49b7-8a98-ac0d21045502`
 
 ## Vue d’ensemble {#overview}
 
-[!DNL Airship] est la principale plateforme d’engagement des clients. Elle vous permet de fournir à vos utilisateurs des messages omnicanal pertinents et personnalisés à chaque étape du cycle de vie du client.
+[!DNL Airship] est le principal Experience Platform d’engagement des clients. Il vous permet de fournir à vos utilisateurs des messages omnicanal pertinents et personnalisés à chaque étape du cycle de vie du client.
 
 Cette intégration transmet les données de profil Adobe dans [!DNL Airship] en tant qu’[attributs](https://docs.airship.com/guides/audience/attributes/) pour le ciblage ou le déclenchement.
 
@@ -67,7 +67,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 ## Activer les attributs {#enable-attributes}
 
-Les attributs de profil Adobe Experience Platform sont similaires aux attributs [!DNL Airship] et peuvent être facilement mappés les uns aux autres dans Platform à l’aide de l’outil de mappage illustré plus bas sur cette page.
+les attributs de profil Adobe Experience Platform sont similaires aux attributs [!DNL Airship] et peuvent être facilement mappés les uns aux autres dans Experience Platform à l’aide de l’outil de mappage illustré plus bas sur cette page.
 
 [!DNL Airship] projets ont plusieurs attributs prédéfinis et par défaut. Si vous disposez d’un attribut personnalisé, vous devez d’abord le définir dans [!DNL Airship]. Voir [Configurer et gérer les attributs](https://docs.airship.com/tutorials/audience/attributes/) pour plus d’informations.
 
@@ -91,7 +91,7 @@ Tirez parti des données de profil collectées dans Adobe Experience Platform po
 
 ### Cas d’utilisation #2
 
-Tirez parti des attributs de Adobe Experience Platform pour enrichir davantage les profils de [!DNL Airship] et les combiner avec des données prédictives SDK ou [!DNL Airship]. Par exemple, un détaillant peut créer une audience avec des données de statut de fidélité et d’emplacement (attributs de Platform) et [!DNL Airship] prévu d’annuler les données pour envoyer des messages très ciblés aux utilisateurs avec le statut de fidélité Gold qui vivent à Las Vegas, NV, et qui ont une forte probabilité d’annulation.
+Tirez parti des attributs de Adobe Experience Platform pour enrichir davantage les profils de [!DNL Airship] et les combiner avec des données prédictives SDK ou [!DNL Airship]. Par exemple, un retailer peut créer une audience avec des données de statut de fidélité et d’emplacement (attributs d’Experience Platform) et [!DNL Airship] prédites pour l’attrition des données afin d’envoyer des messages très ciblés aux utilisateurs avec le statut de fidélité Gold qui vivent à Las Vegas, NV et qui ont une forte probabilité d’attrition.
 
 ## Se connecter à la destination {#connect}
 

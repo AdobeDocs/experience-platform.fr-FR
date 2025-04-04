@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur des jeux de données
 description: Découvrez comment effectuer des actions courantes lorsque vous utilisez des jeux de données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 5184f714d6bd8fb6e202a5ca6eea2d52a7169ae6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4105'
+source-wordcount: '4108'
 ht-degree: 12%
 
 ---
@@ -22,7 +22,7 @@ Ce guide d’utilisation nécessite une compréhension professionnelle des compo
 * [Jeux de données](overview.md) : structure de stockage et de gestion pour la persistance des données dans [!DNL Experience Platform].
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
    * [Principes de base de la composition des schémas](../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   * [Éditeur de schéma](../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer vos propres schémas XDM personnalisés à l’aide de l’[!DNL Schema Editor] dans l’interface utilisateur [!DNL Platform].
+   * [Éditeur de schéma](../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer vos propres schémas XDM personnalisés à l’aide de l’[!DNL Schema Editor] dans l’interface utilisateur [!DNL Experience Platform].
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md) : assurez-vous de la conformité aux réglementations, aux restrictions et aux politiques concernant l’utilisation des données client.
 
@@ -57,7 +57,7 @@ Ce guide d’utilisation nécessite une compréhension professionnelle des compo
 
 Dans l’interface utilisateur de [!DNL Experience Platform], sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour ouvrir le tableau de bord **[!UICONTROL Jeux de données]**. Le tableau de bord répertorie tous les jeux de données disponibles pour votre organisation. Des détails s’affichent pour chaque jeu de données répertorié, notamment son nom, le schéma auquel le jeu de données adhère et le statut de l’exécution d’ingestion la plus récente.
 
-![Interface utilisateur de Platform avec l’élément Jeux de données en surbrillance dans la barre de navigation de gauche.](../images/datasets/user-guide/browse-datasets.png)
+![Interface utilisateur d’Experience Platform avec l’élément Jeux de données en surbrillance dans la barre de navigation de gauche.](../images/datasets/user-guide/browse-datasets.png)
 
 Sélectionnez le nom d’un jeu de données dans l’onglet [!UICONTROL Parcourir] pour accéder à l’écran **[!UICONTROL Activité du jeu de données]** et consulter les détails du jeu de données que vous avez sélectionné. L’onglet activité contient un graphique qui permet de visualiser le taux de messages consommé ainsi qu’une liste des lots réussis et en échec.
 
@@ -168,7 +168,7 @@ La boîte de dialogue [!UICONTROL Gérer les balises] peut également supprimer 
 
 Une fois qu’une balise a été ajoutée à un jeu de données, les jeux de données peuvent être filtrés en fonction de la balise correspondante. Pour plus d’informations, consultez la section sur la manière de [filtrer des jeux de données par balises](#enable-profile).
 
-Pour plus d’informations sur la classification d’objets métier pour faciliter la découverte et la catégorisation, consultez le guide sur la [gestion des taxonomies des métadonnées](../../administrative-tags/ui/managing-tags.md). Ce guide explique comment les utilisateurs disposant des autorisations appropriées peuvent créer des balises prédéfinies, les affecter à des catégories et gérer toutes les opérations CRUD associées dans l’interface utilisateur de Platform.
+Pour plus d’informations sur la classification d’objets métier pour faciliter la découverte et la catégorisation, consultez le guide sur la [gestion des taxonomies des métadonnées](../../administrative-tags/ui/managing-tags.md). Ce guide explique comment les utilisateurs disposant des autorisations appropriées peuvent créer des balises prédéfinies, les affecter à des catégories et gérer toutes les opérations CRUD associées dans l’interface utilisateur d’Experience Platform.
 
 ### (Beta) Définir une politique de conservation des données {#data-retention-policy}
 
@@ -176,7 +176,7 @@ Pour plus d’informations sur la classification d’objets métier pour facilit
 > 
 >Les paramètres de conservation des données sont actuellement en version bêta et disponibles uniquement dans une version **limitée** pour certaines organisations. Il se peut que votre interface utilisateur ne reflète pas la fonctionnalité décrite ci-dessous.
 
-Gérez les paramètres d’expiration et de rétention des jeux de données à l’aide du menu d’actions intégrées de l’onglet [!UICONTROL  Parcourir ] de l’espace de travail [!UICONTROL Jeux de données]. Vous pouvez utiliser cette fonctionnalité pour configurer la durée de conservation des données dans le lac de données et le magasin de profils. La date d’expiration dépend du moment où les données ont été ingérées dans Platform et de la période de conservation que vous avez configurée.
+Gérez les paramètres d’expiration et de rétention des jeux de données à l’aide du menu d’actions intégrées de l’onglet [!UICONTROL  Parcourir ] de l’espace de travail [!UICONTROL Jeux de données]. Vous pouvez utiliser cette fonctionnalité pour configurer la durée de conservation des données dans le lac de données et le magasin de profils. La date d’expiration dépend du moment où les données ont été ingérées dans Experience Platform et de la période de conservation que vous avez configurée.
 
 >[!TIP]
 >
@@ -419,7 +419,7 @@ Si vous souhaitez supprimer le lot, sélectionnez **[!UICONTROL Supprimer le lot
 
 ## Étapes suivantes
 
-Ce guide d’utilisation fournit des instructions pour effectuer des actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur [!DNL Experience Platform]. Pour savoir comment exécuter des workflows [!DNL Platform] courants impliquant des jeux de données, reportez-vous aux tutoriels suivants :
+Ce guide d’utilisation fournit des instructions pour effectuer des actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur [!DNL Experience Platform]. Pour savoir comment exécuter des workflows [!DNL Experience Platform] courants impliquant des jeux de données, reportez-vous aux tutoriels suivants :
 
 * [Création d’un jeu de données à l’aide d’API](create.md)
 * [Interroger les données du jeu de données à l’aide de l’API Data Access](../../data-access/home.md)

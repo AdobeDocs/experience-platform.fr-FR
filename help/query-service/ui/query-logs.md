@@ -2,9 +2,9 @@
 title: Journaux de requête
 description: Les journaux de requête sont générés automatiquement chaque fois qu’une requête est exécutée et sont disponibles via l’interface utilisateur pour faciliter la résolution des problèmes. Ce document explique comment utiliser et parcourir la section Journaux de Query Service de l’interface utilisateur.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '949'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ Pour vérifier les journaux de requête, sélectionnez [!UICONTROL Requêtes] po
 >
 >Les requêtes système et les requêtes de tableau de bord sont exclues par défaut. Voir la section [filtres](#filter-logs) pour plus d’informations sur la manière d’affiner les journaux affichés en fonction de vos paramètres.
 
-![Interface utilisateur de Platform avec requêtes et journal mis en surbrillance.](../images/ui/query-log/logs.png)
+![Interface utilisateur d’Experience Platform avec requêtes et journal mis en surbrillance.](../images/ui/query-log/logs.png)
 
 ## Personnalisation et recherche {#customize-and-search}
 

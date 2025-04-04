@@ -2,20 +2,20 @@
 keywords: Experience Platform;accueil;rubriques populaires;ingestion des données;emplacement des données;Emplacement Des Données;Gestion des données;gestion des données;Traçabilité;traçabilité;lot;Lot;données ingérées
 solution: Experience Platform
 title: Présentation de Data Ingestion
-description: Ce document présente les trois principales manières dont les données sont ingérées dans Platform, avec des liens vers leur documentation de présentation respectives pour plus d’informations.
+description: Ce document présente les trois principales manières dont les données sont ingérées dans Experience Platform, avec des liens vers leur documentation de présentation respective pour des informations plus détaillées.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 66%
+source-wordcount: '579'
+ht-degree: 61%
 
 ---
 
 # Présentation de Data Ingestion
 
-Adobe Experience Platform rassemble des données provenant de plusieurs sources afin d’aider les spécialistes marketing à mieux comprendre le comportement de leurs clients. Adobe Experience Platform Data Ingestion représente les multiples méthodes par lesquelles Experience Platform ingère des données à partir de ces sources, ainsi que la manière dont ces données sont conservées dans le lac de données pour être utilisées par les services Experience Platform en aval.
+Adobe Experience Platform rassemble des données provenant de plusieurs sources afin d’aider les spécialistes marketing à mieux comprendre le comportement de leurs clients. L’ingestion des données Adobe Experience Platform représente les différentes méthodes qu’Experience Platform utilise pour ingérer des données à partir de ces sources, ainsi que la manière dont ces données sont conservées dans le lac de données pour être utilisées par les services Experience Platform en aval.
 
-Ce document présente les trois principales manières dont les données sont ingérées dans Experience Platform, avec des liens vers la documentation de présentation correspondante pour plus d’informations.
+Ce document présente les trois principales manières dont les données sont ingérées dans Experience Platform, avec des liens vers leur documentation de présentation respective pour des informations plus détaillées.
 
 ## Ingestion par lots
 
@@ -27,11 +27,11 @@ Pour plus d’informations, consultez la [présentation de l’ingestion par lot
 
 >[!TIP]
 >
->Utilisez le format JSON à une seule ligne au lieu du format JSON à plusieurs lignes comme entrée pour l’ingestion par lots. Le format JSON à une seule ligne permet de meilleures performances, car le système peut diviser un fichier d’entrée en plusieurs blocs et les traiter en parallèle, tandis que le format JSON à plusieurs lignes ne peut pas être divisé. Cela peut réduire considérablement les coûts de traitement des données et améliorer la latence du traitement par lots.
+>Utilisez du code JSON à une seule ligne au lieu du code JSON à plusieurs lignes comme entrée pour l’ingestion par lots. Le format JSON à une seule ligne offre de meilleures performances, car le système peut diviser un fichier d’entrée en plusieurs blocs et les traiter en parallèle, tandis que le format JSON multiligne ne peut pas être divisé. Cela peut réduire considérablement les coûts de traitement des données et améliorer la latence du traitement par lots.
 
 ## Ingestion en flux continu
 
-Lʼingestion par flux vous permet dʼenvoyer en temps réel des données provenant des appareils côté client et serveur vers [!DNL Experience Platform] Experience Platform prend en charge l’utilisation d’entrées de données pour diffuser des données d’expérience entrantes, qui sont conservées dans les jeux de données activés pour la diffusion en continu dans le lac de données. Les entrées de données peuvent être configurées pour authentifier automatiquement les données qu’elles collectent, en veillant à ce que celles-ci proviennent d’une source approuvée.
+Lʼingestion par flux vous permet dʼenvoyer en temps réel des données provenant des appareils côté client et serveur vers [!DNL Experience Platform] Experience Platform prend en charge l’utilisation des entrées de données pour diffuser des données d’expérience entrantes, qui sont conservées dans les jeux de données activés dans le flux au sein du lac de données. Les entrées de données peuvent être configurées pour authentifier automatiquement les données qu’elles collectent, en veillant à ce que celles-ci proviennent d’une source approuvée.
 
 Pour plus d’informations, consultez la [présentation de l’ingestion par flux](./streaming-ingestion/overview.md).
 
@@ -43,11 +43,11 @@ Les connexions source peuvent être configurées pour collecter les données dʼ
 
 Pour plus d’informations, consultez la [présentation des sources](../sources/home.md).
 
-### Création de schéma assisté ML {#ml-assisted-schema-creation}
+### Création de schémas assistée par ML {#ml-assisted-schema-creation}
 
-Pour intégrer rapidement de nouvelles sources de données, vous pouvez désormais utiliser des algorithmes d’apprentissage automatique afin de générer un schéma à partir de données d’exemple. Cette automatisation simplifie la création de schémas précis, réduit les erreurs et accélère le processus, de la collecte de données à l’analyse et aux informations.
+Pour intégrer rapidement de nouvelles sources de données, vous pouvez désormais utiliser des algorithmes de machine learning pour générer un schéma à partir de données d’exemple. Cette automatisation simplifie la création de schémas précis, réduit les erreurs et accélère le processus de la collecte de données à l’analyse et aux informations.
 
-Pour plus d’informations sur ce processus, consultez le [guide de création de schéma assisté par ML](../xdm/ui/ml-assisted-schema-creation.md) .
+Pour plus d’informations sur ce workflow](../xdm/ui/ml-assisted-schema-creation.md) consultez le guide de création de schéma assistée par machine learning [.
 
 ## Étapes suivantes et ressources supplémentaires
 

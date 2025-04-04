@@ -1,44 +1,44 @@
 ---
 keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
-title: Point de terminaison de l’API de stratégies de fusion
+title: Point d’entrée de l’API des politiques de fusion
 type: Documentation
-description: Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Lorsque vous rassemblez ces données, les stratégies de fusion sont les règles utilisées par Platform pour déterminer la priorité des données et les données qui seront combinées pour créer une vue unifiée.
+description: Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Les politiques de fusion sont les règles utilisées par Experience Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer cette vue unifiée.
 role: Developer
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2465'
-ht-degree: 64%
+source-wordcount: '2468'
+ht-degree: 63%
 
 ---
 
-# Point de terminaison des stratégies de fusion
+# Point d’entrée des politiques de fusion
 
-Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Les politiques de fusion sont les règles utilisées par [!DNL Platform] pour déterminer la priorité des données et les données qui seront combinées pour créer cette vue unifiée.
+Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Les politiques de fusion sont les règles utilisées par [!DNL Experience Platform] pour déterminer la priorité des données et les données qui seront combinées pour créer cette vue unifiée.
 
-Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre organisation dispose de plusieurs fragments de profil associés à ce client unique apparaissant dans plusieurs jeux de données. Lorsque ces fragments sont ingérés dans Platform, ils sont fusionnés afin de créer un profil unique pour ce client. Lorsque les données provenant de plusieurs sources entrent en conflit (par exemple, si un fragment classe le client comme étant « célibataire » tandis qu’un autre le classe comme étant « marié »), la politique de fusion détermine les informations qui doivent passer en priorité et être incluses dans le profil de l’individu.
+Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre organisation dispose de plusieurs fragments de profil associés à ce client unique apparaissant dans plusieurs jeux de données. Lorsque ces fragments sont ingérés dans Experience Platform, ils sont fusionnés afin de créer un profil unique pour ce client. Lorsque les données provenant de plusieurs sources entrent en conflit (par exemple, si un fragment classe le client comme étant « célibataire » tandis qu’un autre le classe comme étant « marié »), la politique de fusion détermine les informations qui doivent passer en priorité et être incluses dans le profil de l’individu.
 
-À l’aide d’API RESTful ou de l’interface utilisateur, vous pouvez créer des politiques de fusion, gérer des politiques existantes et définir une politique de fusion par défaut pour votre organisation dans l’interface utilisateur. Ce guide décrit les étapes à suivre pour utiliser les stratégies de fusion à l’aide de l’API.
+À l’aide d’API RESTful ou de l’interface utilisateur, vous pouvez créer des politiques de fusion, gérer des politiques existantes et définir une politique de fusion par défaut pour votre organisation dans l’interface utilisateur. Ce guide décrit les étapes à suivre pour utiliser des politiques de fusion à l’aide de l’API .
 
-Pour utiliser des stratégies de fusion à l’aide de l’interface utilisateur, reportez-vous au [guide de l’interface utilisateur des stratégies de fusion](../merge-policies/ui-guide.md). Pour en savoir plus sur les stratégies de fusion en général et leur rôle dans Experience Platform, commencez par lire la [présentation des stratégies de fusion](../merge-policies/overview.md).
+Pour utiliser les politiques de fusion à l’aide de l’interface utilisateur, reportez-vous au [guide de l’interface utilisateur des politiques de fusion](../merge-policies/ui-guide.md). Pour en savoir plus sur les politiques de fusion en général et sur leur rôle dans Experience Platform, commencez par lire la [ présentation des politiques de fusion ](../merge-policies/overview.md).
 
 ## Prise en main
 
 Le point d’entrée dʼAPI utilisé dans ce guide fait partie de [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
 
-## Composants des stratégies de fusion {#components-of-merge-policies}
+## Composants des politiques de fusion {#components-of-merge-policies}
 
-Les stratégies de fusion sont réservées à votre organisation, ce qui vous permet de créer différentes stratégies pour fusionner les schémas de la manière spécifique dont vous avez besoin. Toute API accédant aux données [!DNL Profile] nécessite une stratégie de fusion, bien qu’une stratégie par défaut soit utilisée si elle n’est pas explicitement fournie. [!DNL Platform] fournit aux organisations une stratégie de fusion par défaut, ou vous pouvez créer une stratégie de fusion pour une classe de schéma de modèle de données d’expérience (XDM) spécifique et la marquer comme stratégie par défaut pour votre organisation.
+Les politiques de fusion sont privées pour votre organisation, ce qui vous permet de créer différentes politiques pour fusionner les schémas de la manière spécifique dont vous en avez besoin. Toute API accédant à [!DNL Profile] données nécessite une politique de fusion, bien qu’une valeur par défaut soit utilisée si elle n’est pas explicitement fournie. [!DNL Experience Platform] fournit aux organisations une politique de fusion par défaut, ou vous pouvez créer une politique de fusion pour une classe de schéma de modèle de données d’expérience (XDM) spécifique et la marquer comme politique par défaut pour votre organisation.
 
-Bien que chaque organisation puisse avoir plusieurs stratégies de fusion par classe de schéma, chaque classe ne peut avoir qu’une seule stratégie de fusion par défaut. Tout jeu de stratégies de fusion comme valeur par défaut sera utilisé lorsque le nom de la classe de schéma est fourni et qu’une stratégie de fusion est requise, mais pas fournie.
+Chaque organisation peut éventuellement avoir plusieurs politiques de fusion par classe de schéma, mais chaque classe ne peut avoir qu’une seule politique de fusion par défaut. Toute politique de fusion définie par défaut sera utilisée dans les cas où le nom de la classe de schéma est fourni et qu’une politique de fusion est requise, mais pas fournie.
 
 >[!NOTE]
 >
->Lorsque vous définissez une nouvelle stratégie de fusion comme stratégie par défaut, toute stratégie de fusion précédemment définie comme stratégie par défaut ne sera plus utilisée comme stratégie par défaut.
+>Lorsque vous définissez une nouvelle politique de fusion comme valeur par défaut, toute politique de fusion existante précédemment définie comme valeur par défaut est automatiquement mise à jour et ne sera plus utilisée comme valeur par défaut.
 
-Pour garantir que tous les consommateurs de profils utilisent la même vue sur les bords, les politiques de fusion peuvent être marquées comme Active-on-Edge (actives sur le bord). Pour qu’une audience soit activée en périphérie (indiquée comme audience en périphérie), elle doit être liée à une stratégie de fusion marquée comme active en périphérie. Si une audience est **et non** liée à une stratégie de fusion marquée comme active sur le serveur Edge, l’audience ne sera pas marquée comme active sur le serveur Edge et sera marquée comme une audience en continu.
+Pour garantir que tous les consommateurs de profils utilisent la même vue sur les bords, les politiques de fusion peuvent être marquées comme Active-on-Edge (actives sur le bord). Pour qu’une audience soit activée sur le serveur Edge (marquée comme audience Edge), elle doit être liée à une politique de fusion marquée comme Active-on-Edge (active sur le serveur Edge). Si une audience n’est **pas** liée à une politique de fusion marquée comme Active-On-Edge (active sur le bord), l’audience ne sera pas marquée comme Active-On-Edge (active sur le bord), et sera marquée comme une audience de diffusion en continu.
 
-De plus, chaque organisation ne peut avoir qu’une stratégie de fusion **une** active sur le serveur Edge. Si une stratégie de fusion est active sur le serveur Edge, elle peut être utilisée pour d’autres systèmes sur le serveur Edge, tels qu’Edge Profile, Edge Segmentation et Destinations sur Edge.
+En outre, chaque organisation ne peut avoir qu’une seule politique de fusion **une** Active-On-Edge (active sur le bord). Si une politique de fusion est active sur le serveur Edge, elle peut être utilisée pour d’autres systèmes sur le serveur Edge, tels que le profil Edge, la segmentation Edge et les destinations sur Edge.
 
 ### Objet de politique de fusion complet
 
@@ -72,11 +72,11 @@ L’objet de politique de fusion complet est un ensemble de préférences contr�
 | `id` | Le système a généré un identifiant unique attribué au moment de la création. |
 | `name` | Nom convivial par lequel la politique de fusion peut être identifiée dans les vues Liste. |
 | `imsOrgId` | Identifiant d’organisation auquel appartient cette politique de fusion. |
-| `schema.name` | Partie de l’objet [`schema`](#schema), le champ `name` contient la classe de schéma XDM à laquelle la stratégie de fusion se rapporte. Pour plus d’informations sur les schémas et les classes, consultez la [documentation XDM](../../xdm/home.md). |
-| `version` | [!DNL Platform] version conservée de la stratégie de fusion. Cette valeur en lecture seule est incrémentée chaque fois qu’une politique de fusion est mise à jour. |
+| `schema.name` | Faisant partie de l’objet [`schema`](#schema) , le champ `name` contient la classe de schéma XDM à laquelle la politique de fusion se rapporte. Pour plus d’informations sur les schémas et les classes, consultez la [documentation XDM](../../xdm/home.md). |
+| `version` | [!DNL Experience Platform] version conservée de la politique de fusion. Cette valeur en lecture seule est incrémentée chaque fois qu’une politique de fusion est mise à jour. |
 | `identityGraph` | Objet de [graphique d’identités](#identity-graph) indiquant le graphique d’identités à partir duquel les identités associées seront obtenues. Les fragments de profil trouvés pour toutes les identités associées seront fusionnés. |
-| `attributeMerge` | Objet [fusion d’attributs](#attribute-merge) indiquant la manière dont la stratégie de fusion établit la priorité des attributs de profil en cas de conflit de données. |
-| `isActiveOnEdge` | Valeur booléenne indiquant si cette stratégie de fusion peut être utilisée sur Edge. Par défaut, cette valeur est `false`. |
+| `attributeMerge` | [Fusion d’attributs](#attribute-merge) objet indiquant la manière dont la politique de fusion donnera la priorité aux attributs de profil en cas de conflits de données. |
+| `isActiveOnEdge` | Valeur booléenne indiquant si cette politique de fusion peut être utilisée sur Edge. Par défaut, cette valeur est `false`. |
 | `default` | Valeur booléenne indiquant si cette politique de fusion est la valeur par défaut du schéma spécifié. |
 | `updateEpoch` | Date de la dernière mise à jour de la politique de fusion. |
 
@@ -105,7 +105,7 @@ L’objet de politique de fusion complet est un ensemble de préférences contr�
 
 ### Graphique d’identités {#identity-graph}
 
-[Adobe Experience Platform Identity Service](../../identity-service/home.md) gère les graphiques d’identités utilisés à l’échelle mondiale et pour chaque organisation sur [!DNL Experience Platform]. L’attribut `identityGraph` de la politique de fusion définit la manière de déterminer les identités associées pour un utilisateur.
+[Adobe Experience Platform Identity Service ](../../identity-service/home.md) gère les graphiques d’identités utilisés au niveau mondial et pour chaque organisation sur [!DNL Experience Platform]. L’attribut `identityGraph` de la politique de fusion définit la manière de déterminer les identités associées pour un utilisateur.
 
 **Objet identityGraph**
 
@@ -130,7 +130,7 @@ Où `{IDENTITY_GRAPH_TYPE}` peut prendre une de ces valeurs :
 
 ### Fusion d’attributs {#attribute-merge}
 
-Un fragment de profil correspond aux informations de profil d’une seule identité de la liste d’identités qui existe pour un utilisateur particulier. Lorsque le type de graphique d’identités utilisé génère plusieurs identités, il existe un risque de conflit d’attributs de profil et une priorité doit être spécifiée. En utilisant `attributeMerge`, vous pouvez spécifier les attributs de profil à prioriser en cas de conflit de fusion entre des jeux de données de type Valeur clé (données d’enregistrement).
+Un fragment de profil correspond aux informations de profil d’une seule identité de la liste d’identités qui existe pour un utilisateur particulier. Lorsque le type de graphique d’identité utilisé génère plusieurs identités, il existe un risque de conflit entre les attributs de profil. Une priorité doit alors être spécifiée. En utilisant `attributeMerge`, vous pouvez spécifier les attributs de profil auxquels donner la priorité en cas de conflit de fusion entre des jeux de données de type Valeur clé (données d’enregistrement) .
 
 **Objet attributeMerge**
 
@@ -142,11 +142,11 @@ Un fragment de profil correspond aux informations de profil d’une seule identi
 
 Où `{ATTRIBUTE_MERGE_TYPE}` peut prendre une de ces valeurs :
 
-* **`timestampOrdered`** : (par défaut) donne la priorité au dernier profil mis à jour. Avec ce type de fusion, l’attribut `data` n’est pas obligatoire.
-* **`dataSetPrecedence`** : donne la priorité aux fragments de profil en fonction du jeu de données à partir duquel ils sont venus. Cela peut être utilisé lorsque les informations présentes dans un jeu de données sont préférées ou approuvées par rapport aux données d’un autre jeu de données. Lors de l’utilisation de ce type de fusion, l’attribut `order` est obligatoire, car il répertorie les jeux de données dans l’ordre de priorité.
-   * **`order`** : lorsque &quot;dataSetPrecedence&quot; est utilisé, un tableau `order` doit être fourni avec une liste de jeux de données. Les jeux de données qui ne font pas partie de la liste ne sont pas fusionnés. En d’autres termes, les jeux de données doivent être explicitement répertoriés pour être fusionnés dans un profil. Le tableau `order` répertorie les identifiants des jeux de données par ordre de priorité.
+* **`timestampOrdered`** : (par défaut) donnez la priorité au profil qui a été mis à jour en dernier. Avec ce type de fusion, l’attribut `data` n’est pas obligatoire.
+* **`dataSetPrecedence`** : donnez la priorité aux fragments de profil en fonction du jeu de données duquel ils sont issus. Cela peut être utilisé lorsque les informations présentes dans un jeu de données sont préférées ou approuvées par rapport aux données d’un autre jeu de données. Lors de l’utilisation de ce type de fusion, l’attribut `order` est obligatoire, car il répertorie les jeux de données dans l’ordre de priorité.
+   * **`order`** : lorsque « dataSetPrecedence » est utilisé, un tableau `order` doit être fourni avec une liste de jeux de données. Les jeux de données qui ne font pas partie de la liste ne sont pas fusionnés. En d’autres termes, les jeux de données doivent être explicitement répertoriés pour être fusionnés dans un profil. Le tableau `order` répertorie les identifiants des jeux de données par ordre de priorité.
 
-#### Exemple d&#39;objet `attributeMerge` avec le type `dataSetPrecedence`
+#### Exemple d’objet `attributeMerge` utilisant le type de `dataSetPrecedence`
 
 ```json
     "attributeMerge": {
@@ -160,7 +160,7 @@ Où `{ATTRIBUTE_MERGE_TYPE}` peut prendre une de ces valeurs :
     }
 ```
 
-#### Exemple d&#39;objet `attributeMerge` avec le type `timestampOrdered`
+#### Exemple d’objet `attributeMerge` utilisant le type de `timestampOrdered`
 
 ```json
     "attributeMerge": {
@@ -170,7 +170,7 @@ Où `{ATTRIBUTE_MERGE_TYPE}` peut prendre une de ces valeurs :
 
 ### Schéma {#schema}
 
-L’objet de schéma spécifie la classe de schéma du modèle de données d’expérience (XDM) pour laquelle cette stratégie de fusion est créée.
+L’objet de schéma spécifie la classe de schéma du modèle de données d’expérience (XDM) pour laquelle cette politique de fusion est créée.
 
 **`schema`Objet**
 
@@ -190,11 +190,11 @@ Où la valeur de `name` est le nom de la classe XDM sur laquelle repose le sché
     }
 ```
 
-Pour en savoir plus sur XDM et l’utilisation des schémas en Experience Platform, commencez par lire la [présentation du système XDM](../../xdm/home.md).
+Pour en savoir plus sur XDM et l’utilisation des schémas dans Experience Platform, commencez par lire la [présentation du système XDM](../../xdm/home.md).
 
-## Accès aux stratégies de fusion {#access-merge-policies}
+## Accéder aux politiques de fusion {#access-merge-policies}
 
-À l’aide de l’API [!DNL Real-Time Customer Profile], le point de terminaison `/config/mergePolicies` vous permet d’effectuer une requête de recherche pour afficher une stratégie de fusion spécifique selon son identifiant ou d’accéder à toutes les stratégies de fusion de votre organisation, filtrées selon des critères spécifiques. Vous pouvez également utiliser le point de terminaison `/config/mergePolicies/bulk-get` pour récupérer plusieurs stratégies de fusion en fonction de leurs identifiants. Les étapes d’exécution de chacun de ces appels sont décrites dans les sections suivantes.
+À l’aide de l’API [!DNL Real-Time Customer Profile], le point d’entrée `/config/mergePolicies` vous permet d’effectuer une requête de recherche pour afficher une politique de fusion spécifique selon son identifiant ou d’accéder à toutes les politiques de fusion de votre organisation, filtrées selon des critères spécifiques. Vous pouvez également utiliser le point d’entrée `/config/mergePolicies/bulk-get` pour récupérer plusieurs politiques de fusion en fonction de leurs identifiants. Les étapes de chacun de ces appels sont décrites dans les sections suivantes.
 
 ### Accès à une politique de fusion unique par identifiant
 
@@ -247,9 +247,9 @@ Une réponse réussie renvoie les détails de la politique de fusion.
 
 Pour en savoir plus sur chacun des éléments qui constituent une politique de fusion, reportez-vous à la section [Composants des politiques de fusion](#components-of-merge-policies) au début de ce document.
 
-### Récupération de plusieurs stratégies de fusion à l’aide de leurs ID
+### Récupérer plusieurs politiques de fusion en fonction de leurs identifiants
 
-Vous pouvez récupérer plusieurs stratégies de fusion en envoyant une requête de POST au point de terminaison `/config/mergePolicies/bulk-get` et en incluant les identifiants des stratégies de fusion que vous souhaitez récupérer dans le corps de la requête.
+Vous pouvez récupérer plusieurs politiques de fusion en adressant une requête POST au point d’entrée `/config/mergePolicies/bulk-get` et en incluant les identifiants des politiques de fusion que vous souhaitez récupérer dans le corps de la requête.
 
 **Format d’API**
 
@@ -259,7 +259,7 @@ POST /config/mergePolicies/bulk-get
 
 **Requête**
 
-Le corps de la requête comprend un tableau &quot;ids&quot; avec des objets individuels contenant &quot;id&quot; pour chaque stratégie de fusion pour laquelle vous souhaitez récupérer des détails.
+Le corps de la requête comprend un tableau « ids » avec des objets individuels contenant l’« id » pour chaque politique de fusion pour laquelle vous souhaitez récupérer des détails.
 
 ```shell
 curl -X POST \
@@ -283,7 +283,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 207 (multi-état) et les détails des stratégies de fusion dont les identifiants ont été fournis dans la requête du POST.
+Une réponse réussie renvoie le statut HTTP 207 (multi-statut) et les détails des politiques de fusion dont les ID ont été fournis dans la requête POST.
 
 ```json
 { 
@@ -348,7 +348,7 @@ Pour en savoir plus sur chacun des éléments qui constituent une politique de f
 
 ### Répertorier plusieurs politiques de fusion par critère
 
-Vous pouvez répertorier plusieurs stratégies de fusion au sein de votre organisation en envoyant une requête de GET au point de terminaison `/config/mergePolicies` et en utilisant des paramètres de requête facultatifs pour filtrer, classer et paginer la réponse. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (&amp;). Un appel à ce point de terminaison sans paramètre permet de récupérer toutes les politiques de fusion disponibles pour votre organisation.
+Vous pouvez répertorier plusieurs politiques de fusion au sein de votre organisation en émettant une requête GET au point d’entrée `/config/mergePolicies` et en utilisant des paramètres de requête facultatifs pour filtrer, classer et paginer la réponse. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (&amp;). Un appel à ce point de terminaison sans paramètre permet de récupérer toutes les politiques de fusion disponibles pour votre organisation.
 
 **Format d’API**
 
@@ -361,7 +361,7 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 | `default` | Valeur booléenne filtrant les résultats selon que les politiques de fusion sont ou non la valeur par défaut d’une classe de schémas. |
 | `limit` | Indique la limite de taille de page pour contrôler le nombre de résultats inclus dans une page. Valeur par défaut : 20 |
 | `orderBy` | Spécifie le champ de référence pour classer les résultats comme dans `orderBy=name` ou `orderBy=+name` pour un tri par nom dans l’ordre croissant ou `orderBy=-name` pour un tri dans l’ordre décroissant. Si vous omettez cette valeur, le tri par défaut de `name` s’effectue dans l’ordre croissant. |
-| `isActiveOnEdge` | Valeurs booléennes qui filtrent les résultats selon que les stratégies de fusion sont actives ou non sur le serveur Edge. |
+| `isActiveOnEdge` | Valeurs booléennes qui filtrent les résultats selon que les politiques de fusion sont actives ou non sur le serveur Edge. |
 | `schema.name` | Nom du schéma pour lequel récupérer les politiques de fusion disponibles. |
 | `identityGraph.type` | Filtre les résultats par type de graphique d’identités. Les valeurs possibles sont &quot;none&quot; et &quot;pdg&quot; (graphique privé). |
 | `attributeMerge.type` | Filtre les résultats par type de fusion d’attributs utilisé. Les valeurs possibles sont &quot;timestampOrdered&quot; et &quot;dataSetPrecedence&quot;. |
@@ -507,7 +507,7 @@ curl -X POST \
 | `identityGraph.type` | Type de graphique d’identités à partir duquel obtenir les identités connexes à fusionner. Valeurs possibles : &quot;none&quot; ou &quot;pdg&quot; (graphique privé). |
 | `attributeMerge` | Méthode de hiérarchisation des valeurs d’attribut de profil en cas de conflit de données. |
 | `schema` | Classe de schéma XDM associée à la politique de fusion. |
-| `isActiveOnEdge` | Indique si cette stratégie de fusion est active sur Edge. |
+| `isActiveOnEdge` | Indique si cette politique de fusion est active sur le serveur Edge. |
 | `default` | Spécifie si cette politique de fusion est la politique par défaut pour le schéma. |
 
 Pour plus d’informations, reportez-vous à la section [Composants des politiques de fusion](#components-of-merge-policies).
@@ -589,7 +589,7 @@ curl -X PATCH \
 | Propriété | Description |
 |---|---|
 | `op` | Spécifie l’opération à effectuer. Vous trouverez des exemples d’autres opérations PATCH dans la documentation [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902). |
-| `path` | Chemin du champ à mettre à jour. Les valeurs acceptées sont : &quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot;, &quot;/isActiveOnEdge&quot;. |
+| `path` | Chemin du champ à mettre à jour. Les valeurs acceptées sont les suivantes : « /name », « /identityGraph.type », « /attributeMerge.type », « /schema.name », « /version », « /default », « /isActiveOnEdge » |
 | `value` | Valeur sur laquelle le champ spécifié doit être défini. |
 
 Pour plus d’informations, reportez-vous à la section [Composants des politiques de fusion](#components-of-merge-policies).
@@ -685,7 +685,7 @@ curl -X PUT \
 | `identityGraph` | Graphique d’identités à partir duquel obtenir les identités connexes à fusionner. |
 | `attributeMerge` | Méthode de hiérarchisation des valeurs d’attribut de profil en cas de conflit de données. |
 | `schema` | Classe de schéma XDM associée à la politique de fusion. |
-| `isActiveOnEdge` | Indique si cette stratégie de fusion est active sur Edge. |
+| `isActiveOnEdge` | Indique si cette politique de fusion est active sur le serveur Edge. |
 | `default` | Spécifie si cette politique de fusion est la politique par défaut pour le schéma. |
 
 Pour plus d’informations, reportez-vous à la section [Composants des politiques de fusion](#components-of-merge-policies).
@@ -731,7 +731,7 @@ Vous pouvez supprimer une politique de fusion en exécutant une requête DELETE 
 
 >[!NOTE]
 >
->Si `isActiveOnEdge` est défini sur true, la stratégie de fusion **ne peut pas** être supprimée. Utilisez les points de terminaison [PATCH](#edit-individual-merge-policy-fields) ou [PUT](#overwrite-a-merge-policy) pour mettre à jour la stratégie de fusion avant de la supprimer.
+>Si la politique de fusion a `isActiveOnEdge` définie sur true, la politique de fusion **ne peut pas** ne peut pas être supprimée. Utilisez les points d’entrée [PATCH](#edit-individual-merge-policy-fields) ou [PUT](#overwrite-a-merge-policy) pour mettre à jour la politique de fusion avant de la supprimer.
 
 **Format d’API**
 
@@ -762,6 +762,6 @@ Une requête de suppression réussie renvoie un état HTTP 200 (OK) et un corps
 
 ## Étapes suivantes
 
-Maintenant que vous savez comment créer et configurer des stratégies de fusion pour votre organisation, vous pouvez les utiliser pour ajuster l’affichage des profils client dans Platform et pour créer des audiences à partir de vos données [!DNL Real-Time Customer Profile].
+Maintenant que vous savez comment créer et configurer des politiques de fusion pour votre organisation, vous pouvez les utiliser pour ajuster la vue des profils clients dans Experience Platform et pour créer des audiences à partir de vos données [!DNL Real-Time Customer Profile].
 
-Pour commencer à définir et à utiliser des audiences, reportez-vous à la [documentation du service de segmentation Adobe Experience Platform](../../segmentation/home.md) .
+Consultez la [documentation du service de segmentation Adobe Experience Platform](../../segmentation/home.md) pour commencer à définir et à utiliser les audiences.

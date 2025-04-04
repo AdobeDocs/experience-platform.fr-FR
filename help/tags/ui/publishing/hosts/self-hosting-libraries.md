@@ -2,10 +2,10 @@
 title: Bibliothèques auto-hébergées
 description: Découvrez comment mettre en œuvre l’auto-hébergement pour vos versions de bibliothèque de balises dans Adobe Experience Platform.
 exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
-source-git-commit: 91b28fc284344b42020b0e49b64ac023e492d572
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 100%
+source-wordcount: '491'
+ht-degree: 90%
 
 ---
 
@@ -19,7 +19,7 @@ La fonctionnalité Balises dans Adobe Experience Platform permet la production
 
 Les versions doivent être hébergées quelque part afin que les appareils clients puissent les récupérer au moment de l’exécution.
 
-Vous pouvez laisser Platform gérer l’hébergement de ces fichiers ou vous en occuper vous-même.
+Experience Platform peut gérer l’hébergement de ces fichiers pour vous ou vous pouvez le faire vous-même.
 
 ## Géré par Adobe {#managed-by-adobe}
 
@@ -33,7 +33,7 @@ La raison principale d’utiliser l’hébergement géré par Adobe est la simpl
 
 ## Auto-hébergement
 
-Si vous ne souhaitez pas qu’Adobe gère vos fichiers hébergés, vous devez les héberger vous-même. Pour héberger vos fichiers, vous devez obtenir les versions finalisées sur Platform et être responsable de l’obtention des fichiers via le cycle de publication de votre entreprise sur les serveurs que vous gérez.
+Si vous ne souhaitez pas qu’Adobe gère vos fichiers hébergés, vous devez les héberger vous-même. Pour héberger vos fichiers, vous devez obtenir les versions finalisées à partir d’Experience Platform et être responsable de l’obtention des fichiers via le cycle de publication de votre entreprise sur les serveurs que vous gérez.
 
 ### Pourquoi utiliser l’auto-hébergement ?
 

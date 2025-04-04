@@ -2,11 +2,11 @@
 keywords: email;E-mail;e-mail;destinations d’email
 title: Présentation des destinations du marketing par e-mail
 type: Tutorial
-description: Les fournisseurs de services de messagerie électronique (ESP) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail. Découvrez quels ESP sont pris en charge en tant que destinations Experience Platform.
+description: Les fournisseurs de service de messagerie (ESP) vous permettent de gérer vos activités de marketing par e-mail, par exemple pour l’envoi de campagnes promotionnelles par e-mail. Découvrez les fournisseurs de service de messagerie pris en charge en tant que destinations Experience Platform.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 4566d5241f287801569e0cfa5b86ea6210fd1638
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '377'
 ht-degree: 60%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 60%
 
 ## Présentation {#overview}
 
-Les fournisseurs de service e-mail (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes par e-mail promotionnelles. Adobe Experience Platform s’intègre aux ESP en vous permettant d’activer les audiences vers les destinations de marketing par e-mail.
+Les fournisseurs de service e-mail (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes par e-mail promotionnelles. Adobe Experience Platform s’intègre aux ESP en vous permettant d’activer des audiences vers des destinations de marketing par e-mail.
 
 ## Destinations de marketing par e-mail prises en charge {#supported-destinations}
 
@@ -35,7 +35,7 @@ Adobe Experience Platform prend en charge les destinations de marketing par e-ma
 
 ## Se connecter à une nouvelle destination de marketing par e-mail {#connect-destination}
 
-Pour envoyer des audiences vers des destinations de marketing par e-mail pour vos campagnes, Platform doit d’abord se connecter à la destination. Voir le [tutoriel sur la création de destinations](../../ui/connect-destination.md) pour des informations détaillées sur la configuration d’une nouvelle destination.
+Pour envoyer des audiences vers des destinations de marketing par e-mail pour vos campagnes, Experience Platform doit d’abord se connecter à la destination. Voir le [tutoriel sur la création de destinations](../../ui/connect-destination.md) pour des informations détaillées sur la configuration d’une nouvelle destination.
 
 ## Bonnes pratiques lors de l’activation d’audiences vers des destinations de marketing par e-mail {#best-practices}
 
@@ -68,13 +68,13 @@ Dans le sélecteur de champ Schéma, choisissez les autres champs à exporter ve
 
 {style="table-layout:auto"}
 
-## Activation des audiences vers les destinations de marketing par e-mail {#activate}
+## Activer les audiences vers des destinations de marketing par e-mail {#activate}
 
-Certaines destinations de marketing par e-mail dans le catalogue exportent les profils en continu, via une intégration d’API à la destination.
+Certaines destinations de marketing par e-mail dans le catalogue exportent les profils en flux continu, via une intégration d’API à la destination.
 
-D’autres destinations exportent les fichiers vers un emplacement de stockage dans le cloud. Une fois l’exportation terminée, vous devez importer les données de l’emplacement de stockage dans le cloud dans votre destination de marketing par e-mail.
+D’autres destinations exportent des fichiers vers un emplacement d’espace de stockage. Une fois l’exportation terminée, vous devez importer les données de l’emplacement d’espace de stockage dans votre destination de marketing par e-mail.
 
-Suivez les liens de la section [Destinations de marketing par e-mail prises en charge](#supported-destinations) pour savoir comment activer les audiences vers chaque destination de marketing par e-mail.
+Suivez les liens de la section [destinations de marketing par e-mail prises en charge](#supported-destinations) pour savoir comment activer des audiences vers chaque destination de marketing par e-mail.
 
 ## Ressources supplémentaires {#additional-resources}
 

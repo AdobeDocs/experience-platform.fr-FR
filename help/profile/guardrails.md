@@ -5,10 +5,10 @@ product: experience platform
 type: Documentation
 description: Découvrez les performances et les mécanismes de sécurisation appliqués par le système pour les données de profil et la segmentation, afin de garantir une utilisation optimale des fonctionnalités de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 31f725fc30b8fd9a045c0aac5ee65832cd995363
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2611'
-ht-degree: 55%
+source-wordcount: '2617'
+ht-degree: 52%
 
 ---
 
@@ -31,9 +31,9 @@ Ce document fournit des limites d’utilisation et de débit par défaut pour vo
 Les services Experience Platform suivants sont impliqués dans la modélisation des données du profil client en temps réel :
 
 * [[!DNL Real-Time Customer Profile]](home.md) : créez des profils clients unifiés à l’aide de données provenant de plusieurs sources.
-* [Identités](../identity-service/home.md) : associez les identités à partir de sources de données disparates lors de leur ingestion dans Platform.
-* [Schémas](../xdm/home.md) : les schémas du modèle de données d’expérience (XDM) sont le cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
-* [Audiences](../segmentation/home.md) : le moteur de segmentation de Platform est utilisé pour créer des audiences à partir de vos profils clients en fonction des comportements et des attributs des clients.
+* [Identités](../identity-service/home.md) : identités Bridge provenant de sources de données disparates lors de leur ingestion dans Experience Platform.
+* [Schémas](../xdm/home.md) : les schémas du modèle de données d’expérience (XDM) sont le cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
+* [Audiences](../segmentation/home.md) : le moteur de segmentation d’Experience Platform est utilisé pour créer des audiences à partir de vos profils clients en fonction des comportements et des attributs des clients.
 
 ## Types de limite
 
@@ -177,9 +177,9 @@ Dans ce document, plusieurs mécanismes de sécurisation font référence à des
 
 ### Politiques de fusion {#merge-policies}
 
-Lorsque des données sont extraites de plusieurs sources, les politiques de fusion sont les règles utilisées par Platform pour déterminer la hiérachisation et le choix des données à combiner pour créer cette vue unifiée. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre organisation dispose de plusieurs fragments de profil associés à ce client unique apparaissant dans plusieurs jeux de données. Lorsque ces fragments sont ingérés dans Platform, ils sont fusionnés afin de créer un profil unique pour ce client. Quand les données provenant de plusieurs sources entrent en conflit, la politique de fusion détermine les informations à inclure dans le profil de la personne. Au maximum cinq (5) politiques de fusion utilisant le schéma `_xdm.context.profile` sont autorisées par sandbox. Pour en savoir plus sur les politiques de fusion, consultez la section [présentation des politiques de fusion](merge-policies/overview.md).
+Lorsque des données sont extraites de plusieurs sources, les politiques de fusion sont les règles utilisées par Experience Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer cette vue unifiée. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre organisation dispose de plusieurs fragments de profil associés à ce client unique apparaissant dans plusieurs jeux de données. Lorsque ces fragments sont ingérés dans Experience Platform, ils sont fusionnés afin de créer un profil unique pour ce client. Quand les données provenant de plusieurs sources entrent en conflit, la politique de fusion détermine les informations à inclure dans le profil de la personne. Au maximum cinq (5) politiques de fusion utilisant le schéma `_xdm.context.profile` sont autorisées par sandbox. Pour en savoir plus sur les politiques de fusion, consultez la section [présentation des politiques de fusion](merge-policies/overview.md).
 
-### Jeux de données de la suite de rapports Adobe Analytics dans Platform {#aa-datasets}
+### Jeux de données de suites de rapports Adobe Analytics dans Experience Platform {#aa-datasets}
 
 Plusieurs suites de rapports peuvent être activées pour Profil si tous les conflits de données sont résolus. Vous pouvez utiliser la fonctionnalité Préparation de données pour résoudre les conflits de données entre les eVar, les listes et les props. Pour en savoir plus sur l’utilisation de la fonctionnalité Préparation des données, consultez le [Guide de l’interface utilisateur du connecteur Adobe Analytics](../sources/tutorials/ui/create/adobe-applications/analytics.md).
 

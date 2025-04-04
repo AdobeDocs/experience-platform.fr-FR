@@ -3,9 +3,9 @@ keywords: destinations publicitaires;destinations;destinations platform
 title: Présentation des destinations publicitaires
 description: Connectez Adobe Experience Platform à une plateforme publicitaire tierce (par exemple, DSP, réseau publicitaire, SSP) et partagez des audiences pseudonymes avec ces plateformes.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: cbc626dbb12f69114c48a0920bf56ec2aabe13de
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '280'
 ht-degree: 46%
 
 ---
@@ -66,4 +66,4 @@ Pour comprendre la différence entre les connexions et les extensions, consultez
 
 ## Se connecter à une nouvelle destination publicitaire {#connect-destination}
 
-Pour envoyer des audiences vers des destinations publicitaires pour vos campagnes, Platform doit d’abord se connecter à la destination . Voir le [tutoriel sur la création de destinations](../../ui/connect-destination.md) pour des informations détaillées sur la configuration d’une nouvelle destination.
+Pour envoyer des audiences vers des destinations publicitaires pour vos campagnes, Experience Platform doit d’abord se connecter à la destination. Voir le [tutoriel sur la création de destinations](../../ui/connect-destination.md) pour des informations détaillées sur la configuration d’une nouvelle destination.

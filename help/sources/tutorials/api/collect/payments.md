@@ -3,23 +3,23 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;collecter d
 solution: Experience Platform
 title: Créez un flux de données pour les sources de paiements à l’aide de l’API Flow Service.
 type: Tutorial
-description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une application de paiements et les ingérer dans Platform à l’aide des connecteurs source et des API.
+description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une application de paiements et les ingérer dans Experience Platform à l’aide des connecteurs source et des API.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1364'
-ht-degree: 89%
+source-wordcount: '1375'
+ht-degree: 75%
 
 ---
 
 # Créez un flux de données pour les sources de paiements à l’aide de lʼAPI [!DNL Flow Service].
 
-Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une source de paiements et les importer dans Platform à l’aide de lʼ[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une source de paiements et les importer dans Experience Platform à l’aide d’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
 >* Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de paiements. Si vous ne disposez pas de cet identifiant, consultez la [présentation des sources](../../../home.md#payments) pour obtenir une liste des sources de paiements avec lesquelles vous pouvez créer une connexion de base.
->* Pour qu’un Experience Platform ingère des données, les fuseaux horaires de toutes les sources de lots basées sur un tableau doivent être configurés au format UTC.
+>* Pour qu’Experience Platform ingère des données, les fuseaux horaires de toutes les sources de lots basées sur un tableau doivent être configurés au format UTC.
 
 ## Prise en main
 
@@ -30,11 +30,11 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
    * [Guide du développeur de Schema Registry](../../../../xdm/api/getting-started.md) : inclut des informations importantes à connaître avant dʼeffectuer des appels vers l’API Schema Registry. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
 * [[!DNL Catalog Service]](../../../../catalog/home.md) : Catalogue constitue le système d’enregistrement de l’emplacement et de la liaison des données dans Experience Platform.
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md) : l’API Batch Ingestion vous permet d’ingérer des données dans Experience Platform sous forme de fichiers séquentiels.
-* [Sandbox](../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sandbox](../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-### Utiliser les API Platform
+### Utilisation des API Experience Platform
 
-Pour plus d’informations sur la manière d’effectuer correctement des appels vers les API Platform, consultez le guide de [Prise en main des API Platform](../../../../landing/api-guide.md).
+Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Experience Platform, consultez le guide [Prise en main des API Experience Platform](../../../../landing/api-guide.md).
 
 ## Créer une connexion source {#source}
 
@@ -137,7 +137,7 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion sour
 
 ## Créer un schéma XDM cible {#target-schema}
 
-Pour que les données sources soient utilisées dans Platform, un schéma cible doit être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Platform contenant les données sources.
+Pour que les données sources soient utilisées dans Experience Platform, un schéma cible doit être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Experience Platform contenant les données sources.
 
 Un schéma XDM cible peut être créé en adressant une requête POST à l’[API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -293,7 +293,7 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 
 ## Rechercher les spécifications dʼun flux de données {#specs}
 
-Un flux de données est chargé de collecter des données à partir de sources et de les importer dans Platform. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données en adressant une requête GET à l’API [!DNL Flow Service]. Les spécifications du flux de données sont chargées de collecter les données d’une base de données externe ou d’un système NoSQL.
+Un flux de données est chargé de collecter des données à partir de sources et de les importer dans Experience Platform. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données en adressant une requête GET à l’API [!DNL Flow Service]. Les spécifications du flux de données sont chargées de collecter les données d’une base de données externe ou d’un système NoSQL.
 
 **Format d’API**
 
@@ -313,7 +313,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la spécification du flux de données responsable de l’importation des données de votre source dans Platform. La réponse inclut la valeur `id` unique de spécification de flux requise pour créer un flux de données.
+Une réponse réussie renvoie les détails de la spécification du flux de données responsable de l’importation des données de votre source dans Experience Platform. La réponse inclut la valeur `id` unique de spécification de flux requise pour créer un flux de données.
 
 >[!NOTE]
 >
@@ -633,8 +633,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Dataflow between payments Platform",
-        "description": "Inbound data to Platform",
+        "name": "Dataflow between payments Experience Platform",
+        "description": "Inbound data to Experience Platform",
         "flowSpec": {
             "id": "14518937-270c-4525-bdec-c2ba7cce3860",
             "version": "1.0"
@@ -701,7 +701,7 @@ Une fois votre flux de données créé, vous pouvez surveiller les données ing�
 
 ## Étapes suivantes
 
-Vous êtes arrivé au bout de ce tutoriel, félicitations ! Grâce à celui-ci, vous avez créé un connecteur source permettant de collecter des données d’une application de paiements à intervalles réguliers. Les données reçues peuvent désormais être utilisées par les services Platform en aval, tels que [!DNL Real-Time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
+Vous êtes arrivé au bout de ce tutoriel, félicitations ! Grâce à celui-ci, vous avez créé un connecteur source permettant de collecter des données d’une application de paiements à intervalles réguliers. Ces données entrantes peuvent désormais être utilisées par les services Experience Platform en aval tels que [!DNL Real-Time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
 
 * [Vue d’ensemble du profil client en temps réel](../../../../profile/home.md)
 * [Présentation de l’espace de travail de science des données](../../../../data-science-workspace/home.md)

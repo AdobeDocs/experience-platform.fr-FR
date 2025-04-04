@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de Catalog service
 description: Le Catalog Service est le système d’enregistrement pour l’emplacement et la parenté des données au sein d’Adobe Experience Platform. Bien que toutes les données ingérées dans Experience Platform soient stockées dans le lac de données sous forme de fichiers et de répertoires, le catalogue renferme les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
-source-git-commit: 0ebe9eadb1bce6252b43a50af009ce1b0f6e5d6e
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '694'
 ht-degree: 100%
@@ -23,7 +23,7 @@ En d’autres termes, le [!DNL Catalog] fait office de banque de métadonnées o
 * Quelle quantité de données a été traitée avec succès ?
 * Quelles erreurs se sont produites pendant le traitement ?
 
-Le [!DNL Catalog] propose une API RESTful qui vous permet de gérer par programmation les métadonnées de [!DNL Platform] à l’aide des opérations CRUD de base. Pour plus d’informations, consultez le [guide de développement du catalogue](api/getting-started.md).
+Le [!DNL Catalog] propose une API RESTful qui vous permet de gérer par programmation les métadonnées de [!DNL Experience Platform] à l’aide des opérations CRUD de base. Pour plus d’informations, consultez le [guide de développement du catalogue](api/getting-started.md).
 
 ## [!DNL Catalog] et les services de [!DNL Experience Platform]
 
@@ -31,9 +31,9 @@ Les ressources suivies par le [!DNL Catalog Service] sont utilisées par plusieu
 
 ### Système d’[!DNL Experience Data Model] (XDM)
 
-Le système d’ [!DNL Experience Data Model] (XDM) constitue le cadre normalisé à partir duquel [!DNL Platform] organise les données d’expérience client. [!DNL Experience Platform] tire parti des schémas XDM pour décrire la structure des données de manière cohérente et réutilisable.
+Le système d’ [!DNL Experience Data Model] (XDM) constitue le cadre normalisé à partir duquel [!DNL Experience Platform] organise les données d’expérience client. [!DNL Experience Platform] tire parti des schémas XDM pour décrire la structure des données de manière cohérente et réutilisable.
 
-Lorsque des données sont ingérées dans [!DNL Platform], leur structure est mappée vers un schéma XDM et stockée dans le [!DNL Data Lake] comme partie intégrante d’un jeu de données. Les métadonnées de chaque jeu de données sont suivies par le [!DNL Catalog Service], qui inclut une référence au schéma XDM auquel le jeu de données est conforme.
+Lorsque des données sont ingérées dans [!DNL Experience Platform], leur structure est mappée vers un schéma XDM et stockée dans le [!DNL Data Lake] comme partie intégrante d’un jeu de données. Les métadonnées de chaque jeu de données sont suivies par le [!DNL Catalog Service], qui inclut une référence au schéma XDM auquel le jeu de données est conforme.
 
 Pour obtenir des informations générales sur le système XDM, consultez la [présentation du système XDM](../xdm/home.md).
 
@@ -47,7 +47,7 @@ Pour plus d’informations, consultez la [Présentation de l’ingestion de donn
 
 ## Objets du [!DNL Catalog]
 
-Comme indiqué dans la section précédente, le [!DNL Catalog] réalise le suivi des métadonnées pour plusieurs types de ressources et d’opérations utilisées par d’autres services [!DNL Platform]. Le [!DNL Catalog] conserve sa propre banque d’« objets » contenant ces métadonnées. Les objets du [!DNL Catalog] sont des représentations interrogeables des [!DNL Platform] données de qui vous permettent de rechercher, surveiller et étiqueter vos données sans avoir à accéder aux données elles-mêmes.
+Comme indiqué dans la section précédente, le [!DNL Catalog] réalise le suivi des métadonnées pour plusieurs types de ressources et d’opérations utilisées par d’autres services [!DNL Experience Platform]. Le [!DNL Catalog] conserve sa propre banque d’« objets » contenant ces métadonnées. Les objets du [!DNL Catalog] sont des représentations interrogeables des [!DNL Experience Platform] données de qui vous permettent de rechercher, surveiller et étiqueter vos données sans avoir à accéder aux données elles-mêmes.
 
 Le tableau suivant décrit les différents types d’objets pris en charge par le [!DNL Catalog] :
 
@@ -55,7 +55,7 @@ Le tableau suivant décrit les différents types d’objets pris en charge par l
 |---|---|---|
 | Lot | `/batches` | Les lots sont des unités de données composées d’un ou de plusieurs fichiers à ingérer en tant qu’unité unique. Un objet de lot dans le [!DNL Catalog] décrit les mesures d’ingestion du lot, telles que le nombre d’enregistrements traités ou la taille sur le disque. Il peut également inclure des liens vers des jeux de données, des vues et d’autres ressources que l’opération par lot a affectées. |
 | Jeu de données | `/dataSets` | Un jeu de données est une structure de stockage et de gestion utilisée pour la collecte de données (généralement sous la forme d’un tableau) qui contient un schéma (des colonnes) et des champs (des lignes). Pour plus d’informations, consultez la [présentation des jeux de données](./datasets/overview.md). |
-| Fichier de jeu de données | `/datasetFiles` | Les fichiers de jeux de données représentent des blocs de données qui ont été enregistrés sur [!DNL Platform]. Étant des enregistrements de fichiers littéraux, vous pouvez y trouver la taille du fichier, le nombre d’enregistrements qu’il contient, ainsi qu’une référence au lot qui a ingéré le fichier. |
+| Fichier de jeu de données | `/datasetFiles` | Les fichiers de jeux de données représentent des blocs de données qui ont été enregistrés sur [!DNL Experience Platform]. Étant des enregistrements de fichiers littéraux, vous pouvez y trouver la taille du fichier, le nombre d’enregistrements qu’il contient, ainsi qu’une référence au lot qui a ingéré le fichier. |
 
 ## Étapes suivantes
 

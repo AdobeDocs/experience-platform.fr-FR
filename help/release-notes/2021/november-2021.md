@@ -1,11 +1,11 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform – Novembre 2021
+title: Notes de mise à jour d’Adobe Experience Platform de novembre 2021
 description: Les notes de mise à jour de novembre 2021 pour Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '776'
-ht-degree: 86%
+source-wordcount: '781'
+ht-degree: 81%
 
 ---
 
@@ -41,13 +41,13 @@ Des améliorations ont été apportées à diverses fonctionnalités d’Adobe 
 
 ### Nouvelles éditions B2B et B2P {#editions}
 
-De nouvelles éditions B2B et B2P qui apportent des données et des fonctionnalités B2B aux produits Real-Time CDP et Platform Activation sont disponibles à l’achat.
+De nouvelles éditions B2B et B2P qui apportent des données et des fonctionnalités B2B à la fois aux produits Real-Time CDP et Experience Platform Activation sont disponibles à l’achat.
 
-Pour en savoir plus sur Real-Time CDP B2B Edition, consultez la [présentation](../../rtcdp/overview.md).
+Pour en savoir plus sur Real-Time CDP B2B edition, consultez la [présentation](../../rtcdp/overview.md).
 
 ### Nouveaux connecteurs de source de données et de destination Marketo {#marketo}
 
-Les nouveaux connecteurs de source de données et de destination Marketo diffusent les données Marketo vers Platform et les audiences de Platform vers Marketo. Disponible pour tous les utilisateurs de Platform.
+Les nouveaux connecteurs de source de données et de destination Marketo diffusent les données Marketo vers Experience Platform et les audiences Experience Platform vers Marketo. Disponible pour tous les utilisateurs d’Experience Platform.
 
 | Fonctionnalité | Description |
 |----------|-------------|
@@ -56,13 +56,13 @@ Les nouveaux connecteurs de source de données et de destination Marketo diffuse
 
 ### XDM B2B standard {#XDM}
 
-Les classes, groupes de champs et types de données XDM B2B standard sont disponibles pour tous les utilisateurs de Platform.
+Les classes, groupes de champs et types de données XDM B2B standard sont disponibles pour tous les utilisateurs d’Experience Platform.
 
 | Fonctionnalité | Description |
 |-----------|--------------|
-| Classes XDM B2B standard | L’édition B2B de Real-Time Customer Data Platform fournit plusieurs XDM standard qui capturent des détails sur les entités de données B2B essentielles, telles que les comptes, les opportunités, les campagnes, etc. |
+| Classes XDM B2B standard | Real-Time Customer Data Platform B2B edition fournit plusieurs XDM standard qui capturent des détails sur les entités de données B2B essentielles, telles que les comptes, les opportunités, les campagnes, etc. |
 
-Pour en savoir plus sur la capture d’entités de données B2B, consultez la documentation [Schémas dans Real-Time Customer Data Platform B2B Edition](../../rtcdp/schemas/b2b.md) .
+Consultez la documentation [Schémas dans Real-Time Customer Data Platform B2B edition](../../rtcdp/schemas/b2b.md) pour en savoir plus sur la capture d’entités de données B2B.
 
 ### (Beta) Activation des segments d’audience vers des destinations par lots via l’API d’activation ad hoc {#ad-hoc-activation}
 
@@ -88,6 +88,6 @@ L’IA dédiée aux clients disponible dans Real-time Customer Data Platform est
 | Fonctionnalité | Description |
 |-----------|-------------|
 | Prise en charge de plusieurs jeux de données | L’IA dédiée aux clients peut désormais ingérer facilement plusieurs jeux de données directement dans l’interface utilisateur sans avoir à mapper et assembler chaque jeu de données. Cette nouvelle fonctionnalité qui permet de gagner du temps fournit des scores plus puissants et plus précis avec des données plus riches issues de plusieurs jeux de données. |
-| Attributs de profil personnalisés | L’IA dédiée aux clients prend désormais en charge la définition de champs de jeu de données de profil personnalisés (avec horodatages) dans vos données en plus des champs d’événement standard. L’utilisation de cette option vous permet d’ajouter des attributs de profil supplémentaires que vous estimez influents, ce qui peut améliorer la qualité de votre modèle et fournir des résultats plus précis. |
+| Attributs de profil personnalisés | L’IA dédiée aux clients prend désormais en charge la définition de champs de jeu de données de profil personnalisés (avec horodatages) dans vos données en plus des champs d’événement standard. L’utilisation de cette option vous permet d’ajouter des attributs de profil supplémentaires que vous jugez influents, ce qui peut améliorer la qualité de votre modèle et fournir des résultats plus précis. |
 
 Pour plus d’informations sur l’IA dédiée aux clients, consultez la [Documentation sur l’IA dédiée aux clients](../../intelligent-services/customer-ai/overview.md).

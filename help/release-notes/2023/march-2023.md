@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Mars 2023
 description: Les notes de mise à jour de mars 2023 pour Adobe Experience Platform.
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2079'
-ht-degree: 83%
+source-wordcount: '2081'
+ht-degree: 81%
 
 ---
 
@@ -119,13 +119,13 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Classe | [[!UICONTROL Article d’offre]](https://github.com/adobe/xdm/pull/1678/files) | Classe qui représente une offre. |
-| Classe | [[!UICONTROL Élément de décision]](https://github.com/adobe/xdm/pull/1678/files) | Un élément qui peut être soumis à la prise de décision. Le résultat d’un processus de prise de décision est un ou plusieurs éléments de décision. |
-| Classe | [[!UICONTROL Délai d’expiration du serveur de session multimédia]](https://github.com/adobe/xdm/pull/1676/files) | Cela indique le temps, en secondes, qui s’est écoulé entre la dernière interaction connue de l’utilisateur et le moment où la session a été fermée. |
-| Groupe de champs | [[!UICONTROL Attributs calculés du profil XDM]](https://github.com/adobe/xdm/pull/1686/files) | Cela permet d’ajouter des attributs calculés à partir des services Adobe internes aux données client entrantes. Les clients ne doivent pas l’utiliser pour ingérer des données. |
-| Type de données | [[!UICONTROL Article de remboursement]](https://github.com/adobe/xdm/pull/1685/files) | Indique si un remboursement est associé à une commande et définit le type de remboursement, le montant et la devise associée. |
+| Classe | [[!UICONTROL Article de l’offre]](https://github.com/adobe/xdm/pull/1678/files) | Classe qui représente une offre. |
+| Classe | [[!UICONTROL Élément de décision]](https://github.com/adobe/xdm/pull/1678/files) | Élément pouvant faire l’objet d’une prise de décision. La sortie d’un processus de prise de décision est composée d’un ou de plusieurs éléments de décision. |
+| Classe | [[!UICONTROL Délai d’expiration du serveur de session multimédia]](https://github.com/adobe/xdm/pull/1676/files) | Cette valeur indique le temps écoulé, en secondes, entre la dernière interaction connue de l’utilisateur et le moment où la session a été fermée. |
+| Groupe de champs | [[!UICONTROL Attributs calculés du profil XDM]](https://github.com/adobe/xdm/pull/1686/files) | Cela permet d’ajouter des attributs calculés des services Adobe internes aux données client entrantes. Elle ne doit pas être utilisée par les clients pour ingérer des données. |
+| Type de données | [[!UICONTROL Objet remboursé]](https://github.com/adobe/xdm/pull/1685/files) | Indique si un remboursement est associé à une commande et définit le type de remboursement, le montant et la devise associée. |
 | Type de données | [[!UICONTROL Données de catégorie]](https://github.com/adobe/xdm/pull/1677/files) | Ce nouveau type de données représente la catégorie d’un produit. |
-| Schéma | [[!UICONTROL Champs de classification Adobe Target]](https://github.com/adobe/xdm/pull/1682/files) | Un nouveau schéma XDM a été créé pour les jeux de données de classification cible. Il contient un ensemble de champs de métadonnées qui classent les activités et les expériences Target. |
+| Schéma | [[!UICONTROL Champs de classification Adobe Target]](https://github.com/adobe/xdm/pull/1682/files) | Un nouveau schéma XDM a été créé pour les jeux de données de classification Target. Il contient un ensemble de champs de métadonnées qui classent les activités et expériences Target. |
 
 {style="table-layout:auto"}
 
@@ -133,21 +133,21 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Groupe de champs | [[!UICONTROL Détails du composant de contenu]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` a été supprimé de [!UICONTROL Content Component Details] |
-| Groupe de champs | [[!UICONTROL Balises d’entité AJO]](https://github.com/adobe/xdm/pull/1672/files) | Ajout de balises d’entité AJO à [!UICONTROL AJO Entity Fields], qui correspondent à un Parcours ou à une campagne |
-| Groupe de champs | (Multiple) | Ajout de plusieurs champs pour [[!UICONTROL Champs communs des événements d’étape de Journey Orchestration]](https://github.com/adobe/xdm/pull/1671/files) |
-| Groupe de champs | (Multiple) | [Ajout de plusieurs types d’événements XDM pour la [!UICONTROL création de rapports multimédia]](https://github.com/adobe/xdm/pull/1670/files). |
-| Groupe de champs | [!UICONTROL Événement de changement Workfront] | Les groupes de champs `Full Record` et `Accessor Employee Ids` ont été ajoutés. |
-| Type de données | [[!UICONTROL Élément de liste de produits]](https://github.com/adobe/xdm/pull/1685/files) | Le [!UICONTROL montant du remboursement] a été ajouté pour indiquer le montant remboursé pour l’article, le cas échéant. |
-| Type de données | [[!UICONTROL Commande ]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Liste des remboursements] a été ajouté à la liste des remboursements pour cette commande. |
-| Type de données | [[!UICONTROL Elément Liste de produits ]](https://github.com/adobe/xdm/pull/1677/files) | Des catégories de produits ont été ajoutées à la liste des données de catégorie de ce produit. |
-| Type de données | [!UICONTROL Informations sur les détails de la session] | Ajout du champ de chaîne `pev3` qui [ indique le type de flux média utilisé pour la création de rapports ](https://github.com/adobe/xdm/pull/1676/files). La propriété `pccr` a également été ajoutée pour indiquer si une redirection a eu lieu. |
-| Type de données | [!UICONTROL Liste des demandes] | Fournit les [propriétés de liste de demandes](https://github.com/adobe/xdm/pull/1675/files). Il s’agit du nom, de l’identifiant et de la description. |
-| Type de données | [!UICONTROL Commerce] | Le [ type de données Commerce a été mis à jour ](https://github.com/adobe/xdm/pull/1675/files) pour inclure `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals` et `requisitionList`. |
+| Groupe de champs | [[!UICONTROL  Détails du composant de contenu ]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` a été supprimé de [!UICONTROL  Détails du composant de contenu ] |
+| Groupe de champs | [[!UICONTROL Balises d’entité AJO]](https://github.com/adobe/xdm/pull/1672/files) | Ajout de balises d’entité AJO aux [!UICONTROL champs d’entité AJO], qui correspondent à un Parcours ou à une campagne |
+| Groupe de champs | (Multiple) | Ajout de plusieurs champs pour les [[!UICONTROL champs communs des événements d’étape Journey Orchestration]](https://github.com/adobe/xdm/pull/1671/files) |
+| Groupe de champs | (Multiple) | [Ajout de plusieurs types d’événements XDM pour [!UICONTROL Rapports multimédia]](https://github.com/adobe/xdm/pull/1670/files). |
+| Groupe de champs | [!UICONTROL Événement de modification Workfront] | Les groupes de champs `Full Record` et `Accessor Employee Ids` ont été ajoutés. |
+| Type de données | [[!UICONTROL Élément de liste de produits]](https://github.com/adobe/xdm/pull/1685/files) | Le [!UICONTROL  Montant du remboursement ] a été ajouté pour indiquer le montant remboursé pour l’article, le cas échéant. |
+| Type de données | [[!UICONTROL Order ]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Liste des remboursements] a été ajouté à la liste des remboursements pour cette commande. |
+| Type de données | [](https://github.com/adobe/xdm/pull/1677/files) d’élément de liste de produits | Les catégories de produits ont été ajoutées à la liste des données de catégorie de ce produit. |
+| Type de données | [!UICONTROL Informations détaillées sur la session] | Ajout du champ de chaîne `pev3` qui [indique le type de flux de médias utilisé pour la création de rapports](https://github.com/adobe/xdm/pull/1676/files). Ajout également de la propriété `pccr` qui indique si une redirection s’est produite. |
+| Type de données | [!UICONTROL Liste des demandes internes] | Fournit les [propriétés de la liste de demandes](https://github.com/adobe/xdm/pull/1675/files). Ils comprennent le nom, l’ID et la description. |
+| Type de données | [!UICONTROL Commerce] | Le type de données [Commerce a été mis à jour](https://github.com/adobe/xdm/pull/1675/files) afin d&#39;inclure `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals` et `requisitionList`. |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur XDM dans Platform, consultez la [présentation du système XDM](../../xdm/home.md).
+Pour plus d’informations sur XDM dans Experience Platform, consultez la [ Présentation du système XDM ](../../xdm/home.md).
 
 ## Query Service {#query-service}
 
@@ -177,7 +177,7 @@ Basée sur Real-time Customer Data Platform (Real-time CDP), l’édition B2B de
 
 Pour en savoir plus sur l’édition B2B de Real-time CDP, consultez la [présentation de l’édition B2B de Real-time CDP](../../rtcdp/overview.md).
 
-## Segmentation Service {#segmentation}
+## Service de segmentation {#segmentation}
 
 [!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
 
@@ -193,7 +193,7 @@ Pour plus d’informations sur [!DNL Segmentation Service], consultez la [prése
 
 ## Sources {#sources}
 
-Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes et vous permet de structurer, d’étiqueter et d’améliorer ces données à l’aide des services d’Experience Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
 Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 

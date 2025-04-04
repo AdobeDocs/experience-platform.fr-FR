@@ -2,10 +2,10 @@
 description: Découvrez comment configurer les paramètres d’exportation de fichiers pour les destinations créées avec Destination SDK.
 title: Configuration par lots
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 96%
+source-wordcount: '1058'
+ht-degree: 86%
 
 ---
 
@@ -13,23 +13,23 @@ ht-degree: 96%
 
 Utilisez les options de configuration par lots de Destination SDK pour permettre aux utilisateurs de personnaliser les noms des fichiers exportés et de configurer le planning d’exportation en fonction de leurs préférences.
 
-Quand vous créez des destinations basées sur des fichiers avec Destination SDK, vous pouvez configurer les noms de fichiers et les plannings d’exportation par défaut, ou permettre aux utilisateurs de configurer ces paramètres à partir de l’interface utilisateur de Platform. Par exemple, vous pouvez configurer des comportements tels que :
+Lorsque vous créez des destinations basées sur des fichiers via Destination SDK, vous pouvez configurer les noms de fichiers et les plannings d’exportation par défaut, ou permettre aux utilisateurs de configurer ces paramètres à partir de l’interface utilisateur d’Experience Platform. Par exemple, vous pouvez configurer des comportements tels que :
 
 * Ajouter des informations spécifiques dans le nom du fichier, telles que des identifiants d’audience, des identifiants de destination ou des informations personnalisées.
-* Permettre aux utilisateurs de personnaliser l’attribution de noms de fichiers à partir de l’interface utilisateur de Platform.
+* Permettre aux utilisateurs de personnaliser le nom des fichiers à partir de l’interface utilisateur d’Experience Platform.
 * Configurer des exportations de fichiers à des intervalles de temps définis.
-* Définir des options de nom de fichier et de planning d’exportation que les utilisateurs peuvent voir dans l’interface utilisateur de Platform.
+* Définir les options de dénomination des fichiers et de planning d’exportation que les utilisateurs peuvent voir dans l’interface utilisateur d’Experience Platform.
 
 Les paramètres de configuration par lots font partie de la configuration de destination pour les destinations basées sur des fichiers.
 
-Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la documentation [options de configuration](../configuration-options.md) ou consultez le guide sur la [manière d’utiliser la Destination SDK pour configurer une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Pour comprendre la place de ce composant dans une intégration créée avec Destination SDK, consultez le diagramme de la documentation [options de configuration](../configuration-options.md) ou consultez le guide sur la [utilisation de Destination SDK pour configurer une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 Vous pouvez configurer les noms de fichiers et les paramètres du planning d’exportation via le point d’entrée `/authoring/destinations`. Pour obtenir des exemples d’appels API détaillés dans lesquels vous pouvez configurer les composants affichés sur cette page, consultez les pages de référence de l’API suivantes.
 
 * [Création d’une configuration de destination](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Mise à jour d’une configuration de destination](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-Cet article décrit toutes les options de configuration par lots prises en charge que vous pouvez utiliser pour la destination et montre ce que la clientèle verra dans l’interface utilisateur de Platform.
+Cet article décrit toutes les options de configuration par lots prises en charge que vous pouvez utiliser pour la destination et montre ce que la clientèle verra dans l’interface utilisateur d’Experience Platform.
 
 >[!IMPORTANT]
 >
@@ -113,9 +113,9 @@ Utilisez les macros de configuration des noms de fichiers pour définir les noms
 | Macro | Libellé de l’interface utilisateur | Description | Exemple |
 |---|---|---|---|
 | `DESTINATION` | [!UICONTROL Destination] | Nom de la destination dans l’interface utilisateur. | Amazon S3 |
-| `SEGMENT_ID` | [!UICONTROL Identifiant de segment] | Identifiant d’audience unique généré par Platform | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_ID` | [!UICONTROL Identifiant de segment] | ID d’audience unique généré par Experience Platform | ce5c5482-2813-4a80-99bc-57113f6acde2 |
 | `SEGMENT_NAME` | [!UICONTROL Nom du segment] | Nom d’audience défini par l’utilisateur ou l’utilisatrice | abonné VIP |
-| `DESTINATION_INSTANCE_ID` | [!UICONTROL Identifiant de destination] | Identifiant unique de l’instance de destination, généré par Platform | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
+| `DESTINATION_INSTANCE_ID` | [!UICONTROL Identifiant de destination] | Identifiant unique de l’instance de destination, généré par Experience Platform | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
 | `DESTINATION_INSTANCE_NAME` | [!UICONTROL Nom de la destination] | Nom défini par l’utilisateur de l’instance de destination. | Ma destination publicitaire 2022 |
 | `ORGANIZATION_NAME` | [!UICONTROL Nom de l’organisation] | Nom de l’organisation du client dans Adobe Experience Platform. | Mon nom d’organisation |
 | `SANDBOX_NAME` | [!UICONTROL Nom du sandbox] | Nom du sandbox utilisé par le client. | prod |

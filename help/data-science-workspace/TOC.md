@@ -6,10 +6,10 @@ user-guide-description: Utilisez le machine learning pour développer, entraîne
 feature: Data Science Workspace
 solution: Experience Platform
 role: User, Developer
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 99%
+source-wordcount: '227'
+ht-degree: 96%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 99%
 * Création de modèles {#authoring}
    * [SDK de création de modèles](authoring/sdk.md)
    * [Création d’un pipeline de fonctionnalités](authoring/feature-pipeline.md)
-   * [Création de modèles à l’aide du SDK Platform (Python)](authoring/platform-sdk.md)
+   * [Création de modèles à l’aide d’Experience Platform SDK (Python)](authoring/platform-sdk.md)
    * [Accès aux données Python](authoring/python.md)
    * [Accès aux données Spark](authoring/spark.md)
 * Tutoriels sur les modèles et les recettes {#models-recipes}
@@ -65,4 +65,4 @@ ht-degree: 99%
    * [Planification de la formation et de la notation automatisées d’un service (interface utilisateur)](models-recipes/schedule-models-ui.md)
 * [Guide de dépannage](troubleshooting-guide.md)
 * [Référence d’API](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)
-* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
+* [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

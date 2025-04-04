@@ -1,74 +1,74 @@
 ---
 solution: Experience Platform
-title: Accédez aux classeurs de cas d’utilisation
-description: Découvrez comment parcourir une galerie de livres de jeu et commencer à utiliser un environnement de test inspirant.
+title: Accéder aux playbooks de cas d’utilisation
+description: Découvrez comment parcourir une galerie de playbooks et commencer à utiliser un sandbox inspirant.
 role: User
 exl-id: 1f5dae75-1136-4be3-9132-01d36a4066ca
-source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '718'
 ht-degree: 2%
 
 ---
 
-# Accédez aux classeurs de cas d’utilisation
+# Accéder aux playbooks de cas d’utilisation
 
-Les classeurs de cas d’utilisation sont disponibles sans frais supplémentaires pour tous les clients Adobe Experience Platform. Pour accéder à une riche galerie de playbooks de cas d’utilisation dans l’interface utilisateur de l’Experience Platform, sélectionnez **[!UICONTROL Playbooks]** dans le volet de navigation de gauche.
+Les playbooks de cas d’utilisation sont disponibles gratuitement pour tous les clients Adobe Experience Platform. Pour accéder à une riche galerie de playbooks de cas d’utilisation dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Playbooks]** dans le volet de navigation de gauche.
 
-![Galerie de playbook de cas d’utilisation.](/help/use-case-playbooks/assets/playbooks/discover/playbooks-gallery.png)
+![Galerie de playbooks de cas d’utilisation.](/help/use-case-playbooks/assets/playbooks/discover/playbooks-gallery.png)
 
-![Accès direct aux classeurs de cas d’utilisation dans la barre de navigation de gauche.](/help/use-case-playbooks/assets/playbooks/discover/left-nav-playbooks.png)
+![Accès direct aux playbooks de cas d’utilisation dans la barre de navigation de gauche.](/help/use-case-playbooks/assets/playbooks/discover/left-nav-playbooks.png)
 
-Sélectionnez un playbook pour accéder à la page des détails, puis sélectionnez **[!UICONTROL Atteindre un sandbox inspirant]**. Un modal de confirmation s’affiche. Sélectionnez **Confirmer** pour accéder à l’environnement de test inspirant où vous pouvez explorer et expérimenter les différents cas d’utilisation.
+Sélectionnez un playbook pour accéder à la page de détails, puis sélectionnez **[!UICONTROL Accéder à un sandbox source d’inspiration]**. Une boîte de dialogue modale de confirmation s’affiche. Sélectionnez **Confirmer** pour accéder au sandbox source d’inspiration où vous pouvez explorer et expérimenter les différents cas d’utilisation.
 
-Si vous ne disposez pas des autorisations nécessaires pour créer des environnements de test, contactez votre administrateur pour obtenir de l’aide sur la création d’un environnement de test inspirant.
+Si vous n’êtes pas autorisé à créer des sandbox, contactez votre administrateur pour obtenir de l’aide sur la création d’un sandbox source d’inspiration.
 
 >[!TIP]
 >
->Un environnement de test inspirant est un environnement de test de développement dans Adobe Experience Platform où vous pouvez créer, tester et expérimenter différents cas d’utilisation avant de les mettre en oeuvre dans un environnement de production actif.
+>Un sandbox source d’inspiration est un sandbox de développement dans Adobe Experience Platform où vous pouvez créer, tester et tester différents cas d’utilisation avant de les implémenter dans un environnement de production en direct.
 
-![Accédez à l’environnement de test d’inspiration.](/help/use-case-playbooks/assets/playbooks/discover/inspirational-sandbox.png)
+![Accédez à la sandbox source d’inspiration.](/help/use-case-playbooks/assets/playbooks/discover/inspirational-sandbox.png)
 
-Si vous n’avez déjà configuré aucun environnement de test inspirant, sélectionnez **[!UICONTROL Créer un environnement de test inspirant]**. Un modal s’affiche. Saisissez les **Nom** et **Titre** dans les zones de champ requises et sélectionnez **Créer**. Une fois que vous avez créé l’environnement de test d’inspiration, assurez-vous de [définir les autorisations](/help/access-control/home.md) avant de revenir à la page des détails des playbooks de cas d’utilisation pour créer une instance.
+Si vous n’avez pas encore configuré de sandbox d’inspiration, sélectionnez **[!UICONTROL Créer un sandbox d’inspiration]**. Une boîte de dialogue modale s’affiche. Saisissez les **Nom** et **Titre** dans les champs obligatoires et sélectionnez **Créer**. Une fois que vous avez créé le sandbox d’inspiration, veillez à [définir des autorisations](/help/access-control/home.md) avant de revenir à la page des détails des playbooks de cas d’utilisation pour créer une instance.
 
-![Créez un environnement de test inspirant.](/help/use-case-playbooks/assets/playbooks/discover/create-inspirational-sandbox.png)
+![Créez un sandbox inspirant.](/help/use-case-playbooks/assets/playbooks/discover/create-inspirational-sandbox.png)
 
-![Saisissez le nom et le titre pour créer un environnement de test inspirant.](/help/use-case-playbooks/assets/playbooks/discover/create-inspirational-sandbox-modal.png)
+![Saisissez un nom et un titre pour créer un sandbox inspirant.](/help/use-case-playbooks/assets/playbooks/discover/create-inspirational-sandbox-modal.png)
 
-Si vous sélectionnez un scénario d’utilisation en dehors d’un environnement de test inspirant, vous ne pourrez pas créer d’instance. Sur la page des détails, sélectionnez **Accéder à un environnement de test inspirant** pour accéder à un environnement de test inspirant existant, puis sélectionnez **[!UICONTROL Créer une instance]**.
+Si vous sélectionnez un playbook de cas d’utilisation en dehors d’un sandbox source d’inspiration, vous ne pourrez pas créer d’instance. Sur la page de détails, sélectionnez **Accéder au sandbox d’inspiration** pour accéder à un sandbox d’inspiration existant, puis sélectionnez **[!UICONTROL Créer une instance]**.
 
-Si vous ne disposez pas des autorisations nécessaires pour créer des environnements de test, contactez votre administrateur pour obtenir de l’aide sur la création d’un environnement de test inspirant.
+Si vous n’êtes pas autorisé à créer des sandbox, contactez votre administrateur pour obtenir de l’aide sur la création d’un sandbox source d’inspiration.
 
-![Aucune autorisation pour créer un environnement de test.](/help/use-case-playbooks/assets/playbooks/discover/no-permissions-to-create-sandbox.png)
+![Aucune autorisation pour créer un sandbox.](/help/use-case-playbooks/assets/playbooks/discover/no-permissions-to-create-sandbox.png)
 
-Si vous avez atteint la limite du nombre d’environnements de test qui vous ont été attribués, un message s’affiche vous demandant de contacter l’administrateur de votre organisation pour augmenter la limite, désactiver ou supprimer certains environnements de test actifs. Une fois votre limite d’environnements de test ajustée ou votre nombre d’environnements de test actifs réduit, vous pouvez créer l’environnement de test inspirant.
+Si vous avez atteint la limite du nombre de sandbox qui vous ont été attribués, un message s’affiche vous demandant de contacter l’administrateur de votre organisation pour augmenter la limite ou désactiver ou supprimer certains sandbox actifs. Une fois votre limite de sandbox ajustée ou votre nombre de sandbox actifs réduit, vous pouvez commencer à créer la sandbox source d’inspiration.
 
-![Limite des environnements de test atteinte.](/help/use-case-playbooks/assets/playbooks/discover/sandbox-limit-reached.png)
+![Limite du sandbox atteinte.](/help/use-case-playbooks/assets/playbooks/discover/sandbox-limit-reached.png)
 
-Notez que lorsque vous créez un environnement de test d’inspiration, les surfaces des canaux pour les e-mails, les notifications push et SMS ne sont pas automatiquement configurées. Contactez votre administrateur informatique pour les configurer manuellement ou la création de l’instance peut échouer.
+Notez que lorsque vous créez un sandbox source d’inspiration, les surfaces de canal pour les notifications par e-mail, push et SMS ne sont pas automatiquement configurées. Contactez votre administrateur informatique pour les configurer manuellement ou la création de l’instance peut échouer.
 
-![ Configurez les paramètres prédéfinis de canal.](/help/use-case-playbooks/assets/playbooks/discover/configure-channel-presets.png)
+![Configuration des préréglages de canal.](/help/use-case-playbooks/assets/playbooks/discover/configure-channel-presets.png)
 
-## Configuration des environnements de test et des surfaces de canal dans Journey Optimizer {#configure-channel-surfaces}
+## Configuration des surfaces de canal et de sandbox dans Journey Optimizer {#configure-channel-surfaces}
 
-Si votre entreprise dispose d’une licence pour [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=fr) et que vous souhaitez utiliser les playbooks conçus pour Journey Optimizer, vous devez configurer les paramètres prédéfinis de canal dans votre environnement de test, qui définissent les paramètres techniques requis pour vos messages. [Découvrez comment configurer les surfaces de canal dans Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=fr).
+Si votre organisation dispose d’une licence pour [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=fr) et que vous souhaitez utiliser les playbooks conçus pour Journey Optimizer, vous devez configurer les préréglages de canal dans votre sandbox, qui définissent les paramètres techniques requis pour vos messages. [Découvrez comment configurer les surfaces de canal dans Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=fr).
 
 Pour créer des instances de playbooks dans Journey Optimizer, vous devez configurer les surfaces des canaux pour les notifications par e-mail, push et SMS.
 
-### Surface du canal email
+### Surface du canal e-mail
 
-Accédez à `Channels` dans l’interface de Journey Optimizer. Configurez des sous-domaines et des pools d’adresses IP distincts pour les emails marketing et les messages transactionnels, s’ils ne sont pas déjà configurés. Il s’agit des bonnes pratiques pour s’assurer que les messages transactionnels, tels que les courriers électroniques de confirmation de commande, parviennent à vos clients. Entrez les noms, les adresses électroniques et les paramètres supplémentaires. Sélectionnez **Submit** en haut à droite de la page pour créer la surface du canal marketing. Lisez la documentation sur [la configuration des surfaces de canal de courrier électronique](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
+Accédez à `Channels` dans l’interface de Journey Optimizer. Configurez des sous-domaines et des pools d&#39;adresses IP distincts pour les e-mails marketing et les messages transactionnels, s&#39;ils ne sont pas déjà configurés. Il s’agit des bonnes pratiques pour s’assurer que les messages transactionnels tels que les e-mails de confirmation de commande, parviennent à vos clients. Saisissez les noms, adresses e-mail et paramètres supplémentaires. Sélectionnez **Envoyer** en haut à droite de la page pour créer la surface du canal marketing. Lisez la documentation sur [comment configurer des surfaces de canal e-mail](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
 
 ### Surface du canal SMS
 
-Pour créer une surface de canal SMS, créez d’abord des informations d’identification d’API SMS, puis sélectionnez le fournisseur de votre choix (par exemple, Sinch). Nommez la surface du canal SMS (par exemple, SMS Marketing), sélectionnez la configuration et saisissez un numéro d&#39;expéditeur. Sélectionnez **Submit** en haut à droite de la page pour enregistrer la surface du canal SMS. Lisez la documentation sur [la configuration des surfaces de canal SMS](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=fr#message-preset-sms).
+Pour créer une surface de canal SMS, commencez par créer des informations d’identification d’API SMS, puis sélectionnez le fournisseur préféré (par exemple, Sinch). Nommez la surface de canal SMS (par exemple, Marketing SMS), sélectionnez la configuration, puis saisissez un numéro d’expéditeur. Sélectionnez **Envoyer** en haut à droite de la page pour enregistrer la surface du canal SMS. Lisez la documentation sur [comment configurer des surfaces de canal SMS](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=fr#message-preset-sms).
 
-Configurez également les canaux des livres de lecture qui contiennent des messages transactionnels, tels que les confirmations de commande.
+Configurez également des canaux pour les playbooks contenant des messages transactionnels tels que les confirmations de commande.
 
 ### Surface du canal push
 
-Vérifiez que les configurations de canal sont configurées à partir de l’Experience Platform ou de l’interface Collections de données. Voici à quoi ressemblent les configurations de canal dans l’environnement Collections de données .
+Vérifiez que les configurations de canal sont configurées à partir de l’interface d’Experience Platform ou de Collections de données. Voici à quoi ressemblent les configurations de canal dans l’environnement Collections de données.
 
 ## Étapes suivantes {#next-steps}
 
-Maintenant que vous avez lu ce document, vous devez savoir comment configurer un environnement de test inspirant et vous familiariser avec différentes façons d’accéder aux playbooks de cas d’utilisation dans Platform. À l’étape suivante, découvrez comment [choisir](/help/use-case-playbooks/playbooks/choose.md) le playbook approprié.
+Maintenant que vous avez lu ce document, vous devriez savoir comment configurer un sandbox inspirant et vous familiariser avec les différentes manières d’accéder aux playbooks de cas d’utilisation dans Experience Platform. L’étape suivante consiste à découvrir comment [choisir](/help/use-case-playbooks/playbooks/choose.md) le bon playbook.

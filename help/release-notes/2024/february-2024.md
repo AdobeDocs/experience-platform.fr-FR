@@ -1,11 +1,11 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Février 2024
-description: Les notes de mise à jour de février 2024 pour Adobe Experience Platform.
+description: Notes de mise à jour de février 2024 pour Adobe Experience Platform.
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
-source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1244'
-ht-degree: 36%
+source-wordcount: '1248'
+ht-degree: 30%
 
 ---
 
@@ -24,7 +24,7 @@ Mises à jour des fonctionnalités existantes dans Experience Platform :
 
 ## Alertes {#alerts}
 
-Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités de Platform. Vous pouvez vous abonner à différentes règles d’alerte à l’aide de l’onglet [!UICONTROL Alertes] dans l’interface utilisateur de Platform. Vous pouvez aussi choisir de recevoir les messages d’alerte dans l’interface utilisateur elle-même ou par le biais de notifications par e-mail.
+Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte par le biais de l’onglet [!UICONTROL Alertes] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par le biais de notifications par e-mail.
 
 **Fonctionnalités nouvelles ou mises à jour**
 
@@ -95,7 +95,7 @@ Pour obtenir des informations plus générales sur les destinations, consultez l
 
 ## Sandbox {#sandboxes}
 
-Adobe Experience Platform est conçu pour enrichir les applications d’expérience digitale à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience digitale en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle. Pour répondre à ce besoin, Experience Platform fournit des sandbox qui divisent une instance de Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+Adobe Experience Platform est conçu pour enrichir les applications d’expérience digitale à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience digitale en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle. Pour répondre à ce besoin, Experience Platform fournit des sandbox qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 **Fonctionnalités nouvelles ou mises à jour**
 
@@ -109,13 +109,13 @@ Pour plus d’informations sur les sandbox, consultez la [vue d’ensemble des s
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] permet de segmenter en audiences les données stockées dans [!DNL Experience Platform] qui se rapportent aux personnes (tels que les clientes et clients, les prospects, les utilisateurs et utilisatrices ou les organisations). Vous pouvez créer des audiences par le biais de définitions de segment ou d’autres sources à partir de vos données [!DNL Real-Time Customer Profile]. Ces audiences sont configurées et conservées de manière centralisée sur [!DNL Platform] et sont facilement accessibles à partir de n’importe quelle solution Adobe.
+[!DNL Segmentation Service] permet de segmenter en audiences les données stockées dans [!DNL Experience Platform] qui se rapportent aux personnes (tels que les clientes et clients, les prospects, les utilisateurs et utilisatrices ou les organisations). Vous pouvez créer des audiences par le biais de définitions de segment ou d’autres sources à partir de vos données [!DNL Real-Time Customer Profile]. Ces audiences sont configurées et conservées de manière centralisée sur [!DNL Experience Platform] et sont facilement accessibles à partir de n’importe quelle solution Adobe.
 
 **Nouvelle fonctionnalité**
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Audiences de compte | Les audiences de compte sont désormais disponibles pour tous. Vous pouvez désormais utiliser la segmentation de compte pour apporter la facilité et la sophistication complètes de l’expérience de segmentation marketing, des audiences basées sur les personnes aux audiences basées sur les comptes dans les éditions B2B et B2P de Real-Time Customer Platform. Cette version vous permet d’utiliser les audiences basées sur les personnes comme prédicat pour les audiences basées sur les comptes, ajoute des fonctionnalités de recherche, prend en charge l’utilisation d’entités personnalisées et est conforme à la gouvernance des données. Pour plus d’informations sur cette fonctionnalité, consultez la [vue d’ensemble des audiences de compte](../../segmentation/types/account-audiences.md). |
+| Audiences de compte | Les audiences de compte sont désormais disponibles pour tous. Vous pouvez désormais utiliser la segmentation de compte pour apporter la facilité et la sophistication complètes de l’expérience de segmentation marketing, des audiences basées sur les personnes aux audiences basées sur les comptes dans les éditions B2B et B2P de Real-time Customer Experience Platform. Cette version vous permet d’utiliser les audiences basées sur les personnes comme prédicat pour les audiences basées sur les comptes, ajoute des fonctionnalités de recherche, prend en charge l’utilisation d’entités personnalisées et est conforme à la gouvernance des données. Pour plus d’informations sur cette fonctionnalité, consultez la [vue d’ensemble des audiences de compte](../../segmentation/types/account-audiences.md). |
 
 {style="table-layout:auto"}
 

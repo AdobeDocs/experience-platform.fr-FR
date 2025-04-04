@@ -1,29 +1,29 @@
 ---
-title: Correspondance floue dans Query Service
-description: Découvrez comment effectuer une correspondance sur vos données Platform qui combine les résultats de plusieurs jeux de données en faisant correspondre approximativement une chaîne de votre choix.
+title: Correspondance approximative dans Query Service
+description: Découvrez comment effectuer une correspondance sur vos données Experience Platform qui combine les résultats de plusieurs jeux de données en faisant correspondre à peu près une chaîne de votre choix.
 exl-id: ec1e2dda-9b80-44a4-9fd5-863c45bc74a7
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '815'
 ht-degree: 0%
 
 ---
 
-# Correspondance floue dans Query Service
+# Correspondance approximative dans Query Service
 
-Utilisez une correspondance approximative sur vos données Adobe Experience Platform pour renvoyer les correspondances les plus probables et les plus approximatives sans avoir à rechercher des chaînes avec des caractères identiques. Cela permet une recherche beaucoup plus flexible de vos données et rend vos données plus accessibles en gagnant du temps et en faisant des efforts.
+Utilisez une correspondance « floue » sur vos données Adobe Experience Platform pour renvoyer les correspondances approximatives les plus probables sans avoir à rechercher des chaînes avec des caractères identiques. Cela permet une recherche beaucoup plus flexible de vos données et rend vos données plus accessibles en économisant du temps et des efforts.
 
-Au lieu d’essayer de reformater les chaînes de recherche afin de les faire correspondre, la correspondance approximative analyse le rapport de similarité entre deux séquences et renvoie le pourcentage de similarité. [[!DNL FuzzyWuzzy]](https://pypi.org/project/fuzzywuzzy/) est recommandé pour ce processus, car ses fonctions sont plus adaptées à la correspondance de chaînes dans des situations plus complexes que [!DNL regex] ou [!DNL difflib].
+Au lieu d’essayer de reformater les chaînes de recherche pour les faire correspondre, la correspondance floue analyse le rapport de similarité entre deux séquences et renvoie le pourcentage de similarité. [[!DNL FuzzyWuzzy]](https://pypi.org/project/fuzzywuzzy/) est recommandé pour ce processus, car ses fonctions sont plus adaptées pour faciliter la correspondance de chaînes dans des situations plus complexes que les [!DNL regex] ou les [!DNL difflib].
 
-L’exemple fourni dans ce cas d’utilisation se concentre sur la mise en correspondance d’attributs similaires à partir d’une recherche de chambre d’hôtel dans deux jeux de données d’agence de voyages différents. Le document indique comment faire correspondre des chaînes en fonction de leur degré de similarité à partir de sources de données distinctes volumineuses. Dans cet exemple, une correspondance approximative compare les résultats de recherche des fonctionnalités d’une pièce des agences de voyage Luma et Acme.
+L’exemple fourni dans ce cas d’utilisation se concentre sur la correspondance d’attributs similaires provenant d’une recherche de chambre d’hôtel dans deux jeux de données d’agence de voyage différents. Le document montre comment faire correspondre des chaînes en fonction de leur degré de similarité à partir de grandes sources de données distinctes. Dans cet exemple, correspondance floue compare les résultats de recherche pour les caractéristiques d’une chambre des agences de voyages Luma et Acme.
 
 ## Commencer {#getting-started}
 
-Dans le cadre de ce processus, vous devez entraîner un modèle d’apprentissage automatique. Ce document suppose une connaissance pratique d’un ou de plusieurs environnements d’apprentissage automatique.
+Dans le cadre de ce processus, qui nécessite l’entraînement d’un modèle de machine learning, ce document suppose une connaissance pratique d’un ou de plusieurs environnements de machine learning.
 
-Cet exemple utilise [!DNL Python] et l’environnement de développement [!DNL Jupyter Notebook]. Bien qu’il existe de nombreuses options disponibles, [!DNL Jupyter Notebook] est recommandé car il s’agit d’une application web open source qui a de faibles exigences en matière de calcul. Il peut être téléchargé à partir du [site officiel de Jupyter](https://jupyter.org/).
+Cet exemple utilise [!DNL Python] et l’environnement de développement [!DNL Jupyter Notebook]. Bien qu’il existe de nombreuses options disponibles, [!DNL Jupyter Notebook] est recommandé, car il s’agit d’une application web open source qui nécessite peu de calculs. Il peut être téléchargé à partir [du site officiel de Jupyter](https://jupyter.org/).
 
-Avant de commencer, vous devez importer les bibliothèques nécessaires. [!DNL FuzzyWuzzy] est une bibliothèque [!DNL Python] Open Source construite sur la bibliothèque [!DNL difflib] et utilisée pour faire correspondre des chaînes. Il utilise [!DNL Levenshtein Distance] pour calculer les différences entre les séquences et les motifs. [!DNL FuzzyWuzzy] a les exigences suivantes :
+Avant de commencer, vous devez importer les bibliothèques nécessaires. [!DNL FuzzyWuzzy] est une bibliothèque [!DNL Python] open source construite sur la bibliothèque [!DNL difflib] et utilisée pour faire correspondre des chaînes. Il utilise [!DNL Levenshtein Distance] pour calculer les différences entre les séquences et les motifs. [!DNL FuzzyWuzzy] a les exigences suivantes :
 
 - [!DNL Python] 2.4 (ou version ultérieure)
 - [!DNL Python-Levenshtein]
@@ -34,17 +34,17 @@ Sur la ligne de commande, utilisez la commande suivante pour installer [!DNL Fuz
 pip install fuzzywuzzy
 ```
 
-Ou utilisez la commande suivante pour installer [!DNL Python-Levenshtein] également :
+Ou utilisez la commande suivante pour installer également [!DNL Python-Levenshtein] :
 
 ```console
 pip install fuzzywuzzy[speedup]
 ```
 
-Vous trouverez plus d&#39;informations techniques sur [!DNL Fuzzywuzzy] dans leur [documentation officielle](https://pypi.org/project/fuzzywuzzy/).
+Vous trouverez plus d’informations techniques sur les [!DNL Fuzzywuzzy] dans leur [documentation officielle](https://pypi.org/project/fuzzywuzzy/).
 
-### Connexion à Query Service
+### Se connecter à Query Service
 
-Vous devez connecter votre modèle d’apprentissage automatique à Query Service en fournissant vos informations de connexion. Les informations d’identification arrivant à expiration et non arrivant à expiration peuvent être fournies. Pour plus d’informations sur la manière d’acquérir les informations d’identification nécessaires, consultez le [guide d’identification](../ui/credentials.md) . Si vous utilisez [!DNL Jupyter Notebook], veuillez lire le guide complet sur [la connexion à Query Service](../clients/jupyter-notebook.md).
+Vous devez connecter votre modèle de machine learning à Query Service en fournissant vos informations d’identification de connexion. Des informations d’identification arrivant à expiration et non arrivant à expiration peuvent être fournies. Pour plus d’informations sur l’acquisition des informations d’identification nécessaires](../ui/credentials.md) consultez le [ guide des informations d’identification . Si vous utilisez [!DNL Jupyter Notebook], veuillez lire le guide complet sur [comment se connecter à Query Service](../clients/jupyter-notebook.md).
 
 Veillez également à importer le package [!DNL numpy] dans votre environnement [!DNL Python] pour activer l’algèbre linéaire.
 
@@ -69,9 +69,9 @@ cur = conn.cursor()
 
 Votre instance [!DNL Jupyter Notebook] est maintenant connectée à Query Service. Si la connexion est établie, aucun message ne s’affiche. Si la connexion a échoué, une erreur s’affiche.
 
-### Données Draw du jeu de données Luma {#luma-dataset}
+### Extraire des données du jeu de données Luma {#luma-dataset}
 
-Les données à analyser sont extraites du premier jeu de données avec les commandes suivantes. Pour plus de concision, les exemples se sont limités aux 10 premiers résultats de la colonne.
+Les données à analyser sont extraites du premier jeu de données avec les commandes suivantes. Par souci de concision, les exemples ont été limités aux 10 premiers résultats de la colonne.
 
 ```python
 cur.execute('''SELECT * FROM luma;
@@ -81,7 +81,7 @@ luma = np.array([r[0] for r in cur])
 luma[:10]
 ```
 
-Sélectionnez **Output** pour afficher le tableau renvoyé.
+Sélectionnez **Sortie** pour afficher le tableau renvoyé.
 
 +++Output
 
@@ -96,9 +96,9 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 +++
 
-### Données Draw du jeu de données Acme {#acme-dataset}
+### Extraire des données du jeu de données Acme {#acme-dataset}
 
-Les données à analyser sont désormais extraites du deuxième jeu de données avec les commandes suivantes. Pour être plus concis, les exemples se sont limités aux 10 premiers résultats de la colonne.
+Les données à analyser sont désormais extraites du deuxième jeu de données avec les commandes suivantes. Encore une fois, par souci de concision, les exemples ont été limités aux 10 premiers résultats de la colonne.
 
 ```python
 cur.execute('''SELECT * FROM acme;
@@ -108,7 +108,7 @@ acme = np.array([r[0] for r in cur])
 acme[:10]
 ```
 
-Sélectionnez **Output** pour afficher le tableau renvoyé.
+Sélectionnez **Sortie** pour afficher le tableau renvoyé.
 
 +++Output
 
@@ -123,9 +123,9 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 +++
 
-### Créer une fonction de notation floue {#fuzzy-scoring}
+### Créer une fonction de score floue {#fuzzy-scoring}
 
-Ensuite, vous devez importer `fuzz` à partir de la bibliothèque FuzzyWuzzy et exécuter une comparaison des proportions partielles des chaînes. La fonction de rapport partiel vous permet d’effectuer une correspondance sous-chaîne. Cette chaîne prend la chaîne la plus courte et correspond à toutes les sous-chaînes de même longueur. La fonction renvoie un pourcentage de similarité allant jusqu’à 100 %. Par exemple, la fonction de rapport partiel compare les chaînes suivantes &quot;chambre de luxe&quot;, &quot;lit de roi&quot; et &quot;chambre de roi de luxe&quot; et renvoie un score de similarité de 69 %.
+Ensuite, vous devez importer les `fuzz` de la bibliothèque FuzzyWuzzy et exécuter une comparaison partielle des proportions des chaînes. La fonction de rapport partiel vous permet d’effectuer une correspondance de sous-chaîne. Cette méthode prend la chaîne la plus courte et la fait correspondre à toutes les sous-chaînes de même longueur. La fonction renvoie un rapport de similarité en pourcentage allant jusqu’à 100 %. Par exemple, la fonction de ratio partiel comparerait les chaînes « Chambre Deluxe », « 1 Lit King » et « Chambre King Deluxe » et renverrait un score de similarité de 69 %.
 
 Dans le cas d’utilisation de la correspondance de chambre d’hôtel, cela se fait à l’aide des commandes suivantes :
 
@@ -135,16 +135,16 @@ def compute_match_score(x,y):
     return fuzz.partial_ratio(x,y)
 ```
 
-Importez ensuite `cdist` depuis la bibliothèque [!DNL SciPy] pour calculer la distance entre chaque paire dans les deux collections d’entrées. Cela calcule les scores parmi toutes les paires de chambres d’hôtel fournies par chacune des agences de voyage.
+Importez ensuite les `cdist` de la bibliothèque [!DNL SciPy] pour calculer la distance entre chaque paire dans les deux collections d’entrées. Il calcule les scores de toutes les paires de chambres d&#39;hôtel fournies par chacune des agences de voyages.
 
 ```python
 from scipy.spatial.distance import cdist
 pairwise_distance =  cdist(luma.reshape((-1,1)),acme.reshape((-1,1)),compute_match_score)
 ```
 
-### Créez des mappages entre les deux colonnes à l’aide du score de jointure flou.
+### Créez des mappages entre les deux colonnes à l’aide du score de jointure approximatif
 
-Maintenant que les colonnes ont été notées en fonction de la distance, vous pouvez indexer les paires et ne conserver que les correspondances ayant obtenu un score supérieur à un certain pourcentage. Cet exemple conserve uniquement les paires qui correspondent avec un score de 70 % ou plus.
+Maintenant que les colonnes ont été notées en fonction de la distance, vous pouvez indexer les paires et ne conserver que les correspondances qui ont obtenu un score supérieur à un certain pourcentage. Cet exemple conserve uniquement les paires qui correspondent à un score de 70 % ou plus.
 
 ```python
 matched_pairs = []
@@ -154,13 +154,13 @@ for i,c1 in enumerate(luma):
         matched_pairs.append((luma[i].replace("'","''"),acme[j].replace("'","''")))
 ```
 
-Les résultats peuvent être affichés avec la commande suivante. Pour plus de concision, les résultats sont limités à dix lignes.
+Les résultats peuvent être affichés avec la commande suivante. Par souci de concision, les résultats sont limités à dix lignes.
 
 ```python
 matched_pairs[:10]
 ```
 
-Sélectionnez **Output** pour afficher les résultats.
+Sélectionnez **Sortie** pour afficher les résultats.
 
 +++Output
 
@@ -179,7 +179,7 @@ Sélectionnez **Output** pour afficher les résultats.
 
 +++
 
-Les résultats sont ensuite associés à l’aide de SQL avec la commande suivante :
+Les résultats sont ensuite mis en correspondance en utilisant SQL avec la commande suivante :
 
 <!-- Q) Why and is this accurate? -->
 
@@ -187,9 +187,9 @@ Les résultats sont ensuite associés à l’aide de SQL avec la commande suivan
 matching_sql = ' OR '.join(["(e.luma = '{}' AND b.acme = '{}')".format(c1,c2) for c1,c2 in matched_pairs])
 ```
 
-## Application des mappages pour effectuer une jointure floue dans Query Service {#mappings-for-query-service}
+## Appliquer les mappages pour effectuer une jointure floue dans Query Service {#mappings-for-query-service}
 
-Ensuite, les paires de correspondance à score élevé sont unies à l’aide de SQL pour créer un nouveau jeu de données.
+Ensuite, les paires correspondantes à score élevé sont jointes à l’aide de SQL pour créer un jeu de données.
 
 ```python
 :
@@ -202,7 +202,7 @@ WHERE
 [r for r in cur]
 ```
 
-Sélectionnez **Output** pour afficher les résultats de cette jointure.
+Sélectionnez **Sortie** pour afficher les résultats de cette jointure.
 
 +++Output
 
@@ -350,9 +350,9 @@ Sélectionnez **Output** pour afficher les résultats de cette jointure.
 
 +++
 
-### Enregistrer les résultats de correspondance approximative dans Platform {#save-to-platform}
+### Enregistrer les résultats des correspondances approximatives dans Experience Platform {#save-to-platform}
 
-Enfin, les résultats de la correspondance approximative peuvent être enregistrés en tant que jeu de données à utiliser dans Adobe Experience Platform à l’aide de SQL.
+Enfin, les résultats de la correspondance approximative peuvent être enregistrés en tant que jeu de données à utiliser dans Adobe Experience Platform avec SQL.
 
 ```python
 cur.execute(''' 

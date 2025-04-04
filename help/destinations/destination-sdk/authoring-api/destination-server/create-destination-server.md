@@ -2,10 +2,10 @@
 description: Cette page illustre comment l’appel API est utilisé pour créer un serveur de destination avec Adobe Experience Platform Destination SDK.
 title: Création d’une configuration de serveur de destination
 exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2036'
-ht-degree: 89%
+source-wordcount: '2040'
+ht-degree: 86%
 
 ---
 
@@ -96,11 +96,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | -------- | ----------- | ----------- |
 | `name` | Chaîne | *Obligatoire.* Représente le nom convivial de votre serveur, visible uniquement par Adobe. Ce nom n’est pas visible pour les partenaires ou les clients. Par exemple, `Moviestar destination server`. |
 | `destinationServerType` | Chaîne | *Obligatoire.* Définissez-le sur `URL_BASED` quand les destinations sont diffusées en temps réel (streaming). |
-| `urlBasedDestination.url.templatingStrategy` | Chaîne | *Obligatoire.* <ul><li>Utilisez `PEBBLE_V1` si Adobe doit transformer l’URL dans le champ `value` ci-dessous. Utilisez cette option si vous disposez d’un point d’entrée tel que `https://api.moviestar.com/data/{{customerData.region}}/items`, où la partie `region` peut différer d’une personne à l’autre. Dans ce cas, vous devez également configurer `region` en tant que [champ de données client](../../functionality/destination-configuration/customer-data-fields.md) dans la [configuration de destination](../destination-configuration/create-destination-configuration.md). </li><li> Utilisez `NONE` si aucune transformation n’est nécessaire du côté d’Adobe, par exemple si vous avez un point d’entrée tel que : `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | Chaîne | *Obligatoire.* <ul><li>Utilisez `PEBBLE_V1` si Adobe doit transformer l’URL dans le champ `value` ci-dessous. Utilisez cette option si vous disposez d’un point d’entrée tel que `https://api.moviestar.com/data/{{customerData.region}}/items`, où la partie `region` peut différer d’une personne à l’autre. Dans ce cas, vous devez également configurer `region` en tant que [champ de données client](../../functionality/destination-configuration/customer-data-fields.md) dans la [configuration de destination]&#x200B;(../destination-configuration/create-destination-configuration.md). </li><li> Utilisez `NONE` si aucune transformation n’est nécessaire du côté d’Adobe, par exemple si vous avez un point d’entrée tel que : `https://api.moviestar.com/data/items`.</li></ul> |
 | `urlBasedDestination.url.value` | Chaîne | *Obligatoire.* Renseignez l’adresse du point d’entrée d’API auquel Experience Platform doit se connecter. |
 | `httpTemplate.httpMethod` | Chaîne | *Obligatoire.* Méthode qu’Adobe utilise dans les appels vers votre serveur. Les options sont les suivantes : `GET`, `PUT`, `POST`, `DELETE` ou `PATCH`. |
 | `httpTemplate.requestBody.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
-| `httpTemplate.requestBody.value` | Chaîne | *Obligatoire.* Cette chaîne est la version avec caractères d’échappement qui transforme les données des clients Platform au format attendu par votre service. <br> <ul><li> Pour plus d’informations sur l’écriture du modèle, lisez la section [Utilisation des modèles](../../functionality/destination-server/message-format.md#using-templating). </li><li> Pour plus d’informations sur l’échappement des caractères, reportez-vous à la section [Norme RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Pour obtenir un exemple de transformation simple, consultez la transformation des [attributs de profil](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
+| `httpTemplate.requestBody.value` | Chaîne | *Obligatoire.* Cette chaîne est la version avec caractères d’échappement qui transforme les données des clients Experience Platform au format attendu par votre service. <br> <ul><li> Pour plus d’informations sur l’écriture du modèle, lisez la section [Utilisation des modèles](../../functionality/destination-server/message-format.md#using-templating). </li><li> Pour plus d’informations sur l’échappement des caractères, reportez-vous à la section [Norme RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Pour obtenir un exemple de transformation simple, consultez la transformation des [attributs de profil](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
 | `httpTemplate.contentType` | Chaîne | *Obligatoire.* Type de contenu que votre serveur accepte. Cette valeur est probablement `application/json`. |
 
 {style="table-layout:auto"}
@@ -832,7 +832,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `urlBasedDestination.url.value` | Chaîne | *Obligatoire.* Renseignez l’adresse du point d’entrée de l’API auquel Experience Platform doit se connecter et récupérez les champs de schéma à remplir en tant que champs cibles dans l’étape de mappage du workflow d’activation. |
 | `httpTemplate.httpMethod` | Chaîne | *Obligatoire.* Méthode qu’Adobe utilise dans les appels vers votre serveur. Quand les serveurs de schéma sont dynamiques, utilisez `GET`. |
 | `responseFields.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
-| `responseFields.value` | Chaîne | *Obligatoire.* Cette chaîne est le modèle de transformation de caractères d’échappement transformant la réponse reçue de l’API du partenaire en schéma du partenaire qui s’affichera dans l’interface utilisateur de Platform. <br> <ul><li> Pour plus d’informations sur l’écriture du modèle, lisez la section [Utilisation des modèles](../../functionality/destination-server/message-format.md#using-templating). </li><li> Pour plus d’informations sur l’échappement des caractères, reportez-vous à la section [Norme RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Pour obtenir un exemple de transformation simple, consultez la transformation des [attributs de profil](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
+| `responseFields.value` | Chaîne | *Obligatoire.* Cette chaîne est le modèle de transformation de caractères d’échappement transformant la réponse reçue de l’API du partenaire en schéma du partenaire qui s’affichera dans l’interface utilisateur d’Experience Platform. <br> <ul><li> Pour plus d’informations sur l’écriture du modèle, lisez la section [Utilisation des modèles](../../functionality/destination-server/message-format.md#using-templating). </li><li> Pour plus d’informations sur l’échappement des caractères, reportez-vous à la section [Norme RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Pour obtenir un exemple de transformation simple, consultez la transformation des [attributs de profil](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -848,23 +848,23 @@ Une réponse réussie renvoie le statut HTTP 200 avec les détails de la config
 >[!ENDTABS]
 
 
-### Création de serveurs de destination de liste déroulante dynamiques {#dynamic-dropdown-servers}
+### Créer des serveurs de destination de liste déroulante dynamique {#dynamic-dropdown-servers}
 
-Utilisez des [listes déroulantes dynamiques](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) pour récupérer et remplir de manière dynamique les champs de données client de liste déroulante, en fonction de votre propre API. Vous pouvez, par exemple, récupérer une liste des comptes d’utilisateurs existants que vous souhaitez utiliser pour une connexion de destination.
+Utilisez les [listes déroulantes dynamiques](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) pour récupérer et remplir dynamiquement des champs de données client de liste déroulante, en fonction de votre propre API. Par exemple, vous pouvez récupérer une liste de comptes d’utilisateurs existants que vous souhaitez utiliser pour une connexion à la destination.
 
-Vous devez configurer un serveur de destination pour les listes déroulantes dynamiques avant de pouvoir configurer le champ de données client de liste déroulante dynamique.
+Vous devez configurer un serveur de destination pour les listes déroulantes dynamiques avant de pouvoir configurer le champ de données client de la liste déroulante dynamique.
 
-Voir dans l’onglet ci-dessous un exemple de serveur de destination utilisé pour récupérer dynamiquement les valeurs à afficher dans un sélecteur de liste déroulante, à partir d’une API.
+Consultez dans l’onglet ci-dessous un exemple de serveur de destination utilisé pour récupérer dynamiquement les valeurs à afficher dans un sélecteur de liste déroulante à partir d’une API.
 
 L’exemple de payload ci-dessous inclut tous les paramètres requis pour un serveur de schéma dynamique.
 
 >[!BEGINTABS]
 
->[!TAB Serveur de liste déroulante dynamique]
+>[!TAB  Serveur de liste déroulante dynamique ]
 
-**Créez un serveur de liste déroulante dynamique**
+**Créer un serveur de liste déroulante dynamique**
 
-Vous devez créer un serveur de liste déroulante dynamique similaire à celui illustré ci-dessous lorsque vous configurez une destination qui récupère les valeurs d’un champ de données client de liste déroulante de votre propre point de terminaison API.
+Vous devez créer un serveur de liste déroulante dynamique similaire à celui illustré ci-dessous au moment de la configuration d’une destination qui récupère les valeurs d’un champ de données client de liste déroulante à partir de votre propre point d’entrée de l’API.
 
 +++Requête
 
@@ -923,14 +923,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Paramètre | Type | Description |
 | -------- | ----------- | ----------- |
-| `name` | Chaîne | *Obligatoire.* Représente un nom convivial de votre serveur de liste déroulante dynamique, visible uniquement par Adobe. |
-| `destinationServerType` | Chaîne | *Obligatoire.* Défini sur `URL_BASED` pour les serveurs de liste déroulante dynamiques. |
+| `name` | Chaîne | *Obligatoire.* représente le nom convivial du serveur de liste déroulante dynamique, visible uniquement par Adobe. |
+| `destinationServerType` | Chaîne | *Obligatoire.* Définissez sur `URL_BASED` pour les serveurs de liste déroulante dynamiques. |
 | `urlBasedDestination.url.templatingStrategy` | Chaîne | *Obligatoire.* <ul><li>Utilisez `PEBBLE_V1` si Adobe doit transformer l’URL dans le champ `value` ci-dessous. Utilisez cette option si vous disposez d’un point d’entrée tel que : `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Utilisez `NONE` si aucune transformation n’est nécessaire du côté d’Adobe, par exemple si vous avez un point d’entrée tel que : `https://api.moviestar.com/data/items`.</li></ul> |
-| `urlBasedDestination.url.value` | Chaîne | *Obligatoire.* Renseignez l’adresse du point de terminaison de l’API auquel l’Experience Platform doit se connecter et récupérez les valeurs de liste déroulante. |
-| `httpTemplate.httpMethod` | Chaîne | *Obligatoire.* Méthode qu’Adobe utilise dans les appels vers votre serveur. Pour les serveurs de liste déroulante dynamiques, utilisez `GET`. |
-| `httpTemplate.headers` | Objet | *Facultatif.l* Incluez tous les en-têtes requis pour se connecter au serveur de liste déroulante dynamique. |
+| `urlBasedDestination.url.value` | Chaîne | *Obligatoire.* Renseignez l’adresse du point d’entrée de l’API auquel Experience Platform doit se connecter et récupérez les valeurs des listes déroulantes. |
+| `httpTemplate.httpMethod` | Chaîne | *Obligatoire.* Méthode qu’Adobe utilise dans les appels vers votre serveur. Pour les serveurs de liste déroulante dynamique, utilisez `GET`. |
+| `httpTemplate.headers` | Objet | *Facultatif.l* Incluez les en-têtes requis pour la connexion au serveur de liste déroulante dynamique. |
 | `responseFields.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
-| `responseFields.value` | Chaîne | *Obligatoire.* Cette chaîne est le modèle de transformation avec échappement par les caractères qui transforme la réponse reçue de votre API en valeurs qui s’afficheront dans l’interface utilisateur de Platform. <br> <ul><li> Pour plus d’informations sur l’écriture du modèle, lisez la section [Utilisation des modèles](../../functionality/destination-server/message-format.md#using-templating). </li><li> Pour plus d’informations sur l’échappement des caractères, reportez-vous à la section [Norme RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). |
+| `responseFields.value` | Chaîne | *Obligatoire.* Cette chaîne est le modèle de transformation de caractères d’échappement transformant la réponse reçue de votre API en valeurs qui s’afficheront dans l’interface utilisateur d’Experience Platform. <br> <ul><li> Pour plus d’informations sur l’écriture du modèle, lisez la section [Utilisation des modèles](../../functionality/destination-server/message-format.md#using-templating). </li><li> Pour plus d’informations sur l’échappement des caractères, reportez-vous à la section [Norme RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). |
 
 {style="table-layout:auto"}
 
@@ -946,7 +946,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec les détails de la config
 
 ## Gestion des erreurs d’API {#error-handling}
 
-Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes dʼétat d’API](../../../../landing/troubleshooting.md#api-status-codes) et [Erreurs dʼen-tête de requête](../../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.
+Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes d’état API](../../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 

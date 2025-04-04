@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de dépannage de Privacy Service
 description: Ce document fournit des réponses aux questions fréquentes sur Privacy Service, ainsi que des informations sur les erreurs courantes rencontrées dans l’API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: c6507a39ba5ae5ca6aa2bf02cf8844a4592152ac
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1028'
 ht-degree: 89%
@@ -63,7 +63,7 @@ Le tableau contient deux objets représentant des utilisateurs individuels ident
 Pour plus d’informations sur la fourniture des informations d’identité des utilisateurs, consultez le guide sur les [données d’identité pour les demandes d’accès à des informations personnelles](identity-data.md).
 
 
-## Puis-je utiliser [!DNL Privacy Service] pour nettoyer les données envoyées accidentellement à [!DNL Platform] ?
+## Puis-je utiliser [!DNL Privacy Service] pour nettoyer les données envoyées accidentellement à [!DNL Experience Platform] ?
 
 Adobe n’est pas compatible avec l’utilisation de [!DNL Privacy Service] comme solution pour effacer les données envoyées accidentellement à un produit. [!DNL Privacy Service] est conçu pour vous aider à remplir vos obligations en matière de requêtes d’accès ou de suppression des titulaires de données (ou consommateurs). Toute autre utilisation de Privacy Service pour le nettoyage ou la maintenance des données n’est ni prise en charge ni autorisée.
 
@@ -111,4 +111,4 @@ Le tableau suivant présente quelques erreurs courantes dans [!DNL Privacy Servi
 | Des accès et des autorisations sont requis. | Des accès et des autorisations sont requis pour utiliser [!DNL Privacy Service]. Contactez votre administrateur pour obtenir un accès. |
 | Un problème est survenu lors du chargement et de l’archivage des données d’accès. | Lorsque cette erreur se produit, rechargez les données d’accès, puis réessayez. |
 | Dépassement de la charge de travail pour la limite de taux de documents actuelle. | Lorsque cette erreur se produit, réduisez le taux d’envoi, puis réessayez. |
-| Trop de requêtes<br> (erreurs HTTP 429) | Si vos modèles d’envoi dépassent la limite surveillée des tâches de sujet de données autorisées, vous recevrez une erreur HTTP 429 en réponse au trafic continu de votre entreprise. Privacy Service est destiné au traitement des demandes d’accès à des informations personnelles des titulaires de données. Il ne doit pas être utilisé pour le nettoyage des données. Si vous recevez des erreurs HTTP 429, des limites de limitation et de requête sont mises en oeuvre pour protéger l’Adobe des abus qui pourraient mettre en danger le travail de conformité légitime.<br>Des méthodes alternatives pour minimiser vos données sont fournies en [définissant les plannings d’expiration de jeu de données](../hygiene/ui/dataset-expiration.md) et en utilisant la [fonction de suppression d’enregistrement](../hygiene/ui/record-delete.md). Pour plus d’informations sur l’application de ces fonctionnalités, consultez leur documentation respective. |
+| Trop de requêtes <br>(erreurs HTTP 429) | Si vos modèles d’envoi dépassent la limite surveillée des tâches des titulaires de données autorisées, vous recevrez une erreur HTTP 429 en réponse au trafic continu provenant de votre organisation. Privacy Service est destiné au traitement des demandes d’accès à des informations personnelles des titulaires de données. Il ne doit pas être utilisé pour le nettoyage des données. Si vous recevez des erreurs HTTP 429, des limites de limitation et de requête sont mises en œuvre pour protéger Adobe contre les abus qui pourraient mettre en péril le travail de conformité légitime.<br>D’autres méthodes permettant de minimiser vos données sont fournies en [définissant des plannings d’expiration des jeux de données](../hygiene/ui/dataset-expiration.md) et en utilisant la fonction [suppression des enregistrements](../hygiene/ui/record-delete.md). Pour plus d’informations sur l’application de ces fonctionnalités, consultez leurs documentations respectives. |

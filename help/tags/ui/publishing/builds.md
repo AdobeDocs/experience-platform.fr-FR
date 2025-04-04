@@ -2,10 +2,10 @@
 title: Versions
 description: Découvrez le concept des builds et leur fonctionnement dans Adobe Experience Platform.
 exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '784'
-ht-degree: 100%
+source-wordcount: '791'
+ht-degree: 86%
 
 ---
 
@@ -56,15 +56,15 @@ Pour terminer une version, sélectionnez une bibliothèque et cliquez sur l’op
 
 La minimisation réduit les coûts liés à la bande passante et améliore la vitesse en supprimant les données inutiles à l’exécution depuis un fichier.
 
-Pour accroître les performances, Platform minimise tout, notamment les éléments suivants :
+Pour améliorer les performances, Experience Platform minimise tout, notamment :
 
 * La bibliothèque Balise principale
 * Le code de module fourni par les développeurs d’extensions dans le cadre d’une extension
-* Le code personnalisé fourni par les utilisateurs de Platform 
+* Code personnalisé fourni par les utilisateurs Experience Platform
 
 >[!NOTE]
 >
->Si votre code de module et le code personnalisé sont déjà minimisés, Platform les minimise à nouveau. Cette seconde minimisation ne procure pas d’avantages supplémentaires, mais elle n’entraîne aucun dommage, tout en rendant Platform moins complexe et plus facile à gérer.
+>Si le code de votre module et le code personnalisé sont déjà minimisés, Experience Platform les minimise à nouveau. Cette seconde minimisation ne procure pas d’avantages supplémentaires, mais elle n’entraîne aucun dommage, tout en rendant Experience Platform moins complexe et plus facile à gérer.
 
 Tout code côté client fourni pointe vers la version miniaturisée du code. Cela est visible dans les noms de fichiers qui sont conformes à la convention de dénomination standard pour les fichiers miniaturisés :
 
@@ -74,7 +74,7 @@ Si vous souhaitez afficher le code non miniaturisé, supprimez .min du nom de fi
 
 `launch-%environment_id%.js`
 
-Si un développeur d’extensions fournit du code miniaturisé avec son extension, Platform ne fournit pas de code non miniaturisé dans la version non miniaturisée. De même, si un utilisateur de Platform place un code miniaturisé dans une zone de code personnalisé, ce code est toujours miniaturisé dans des versions non miniaturisées. Platform n’empêche aucune miniaturisation.
+Si un développeur d’extensions fournit du code miniaturisé avec son extension, Experience Platform ne fournit pas de code non miniaturisé dans la version non miniaturisée. De même, si un utilisateur Experience Platform place un code miniaturisé dans une zone de code personnalisé, ce code est toujours miniaturisé dans des versions non miniaturisées. Experience Platform n’empêche aucune miniaturisation.
 
 Pour plus d’informations sur la miniaturisation, voir [cet article de chemin d’empilement](https://blog.stackpath.com/glossary/minification/).
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur des sandbox
 description: Ce document fournit la procédure à suivre pour réaliser différentes opérations associées aux sandbox dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: b9b00f41f146b34a1326c4c2ac104c022a416dc9
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1115'
-ht-degree: 49%
+source-wordcount: '1116'
+ht-degree: 46%
 
 ---
 
@@ -17,13 +17,13 @@ Ce document fournit la procédure à suivre pour réaliser différentes opérati
 
 ## Affichage des sandbox
 
-Dans l’interface utilisateur de l’Experience Platform, sélectionnez **[!UICONTROL Sandbox]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Parcourir]** pour ouvrir le tableau de bord [!UICONTROL Sandbox]. Le tableau de bord répertorie tous les sandbox disponibles pour votre organisation, y compris leurs types respectifs (production ou développement).
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sandbox]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Parcourir]** pour ouvrir le tableau de bord [!UICONTROL Sandbox]. Le tableau de bord répertorie tous les sandbox disponibles pour votre organisation, y compris leurs types respectifs (production ou développement).
 
 ![Tableau de bord des sandbox avec l’onglet Parcourir sélectionné qui affiche une liste des sandbox disponibles.](../images/ui/view-sandboxes.png)
 
 ## Basculer entre des sandbox
 
-L’indicateur sandbox se trouve dans l’en-tête supérieur de l’interface utilisateur de Platform et affiche le titre du sandbox dans lequel vous vous trouvez actuellement, sa région et son type.
+L’indicateur sandbox se trouve dans l’en-tête supérieur de l’interface utilisateur d’Experience Platform et affiche le titre du sandbox dans lequel vous vous trouvez actuellement, sa région et son type.
 
 ![Tableau de bord des sandbox avec l’indicateur de sandbox en surbrillance.](../images/ui/sandbox-indicator.png)
 

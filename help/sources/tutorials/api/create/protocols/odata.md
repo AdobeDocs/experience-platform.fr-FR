@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;OData générique;odata générique
 solution: Experience Platform
-title: Création d’une connexion de base OData générique à l’aide de l’API Flow Service
+title: Créer une connexion de base OData générique à l’aide de l’API Flow Service
 type: Tutorial
-description: Découvrez comment connecter Generic OData à Adobe Experience Platform à l’aide de l’API Flow Service.
+description: Découvrez comment connecter OData générique à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 45b302cb-1a43-4fab-a8a2-cb4e1ee129f9
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '426'
-ht-degree: 72%
+source-wordcount: '431'
+ht-degree: 59%
 
 ---
 
@@ -22,10 +22,10 @@ Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
-* [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
+* [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL Generic OData] à l’aide de l’API [!DNL Flow Service].
+Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour réussir à vous connecter à [!DNL Generic OData] à l’aide de l’API [!DNL Flow Service].
 
 ### Collecter les informations d’identification requises
 
@@ -36,15 +36,15 @@ Pour connecter [!DNL Flow Service] à [!DNL Generic OData], vous devez fournir d
 | `url` | URL racine du service [!DNL Generic OData]. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Generic Generic OData] est `8e6b41a8-d998-4545-ad7d-c6a9fff406c3`. |
 
-Pour plus d&#39;informations sur la prise en main, reportez-vous à [ce [!DNL Generic OData] document](https://www.odata.org/getting-started/basic-tutorial/).
+Pour plus d’informations sur la prise en main, consultez [ce [!DNL Generic OData] document](https://www.odata.org/getting-started/basic-tutorial/).
 
-### Utiliser les API Platform
+### Utilisation des API Experience Platform
 
-Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Platform, consultez le guide sur la [Prise en main des API Platform](../../../../../landing/api-guide.md).
+Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Experience Platform, consultez le guide [Prise en main des API Experience Platform](../../../../../landing/api-guide.md).
 
 ## Créer une connexion de base
 
-Une connexion de base conserve les informations échangées entre votre source et Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
+Une connexion de base conserve les informations échangées entre votre source et Experience Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
 
 Pour créer un identifiant de connexion de base, envoyez une requête POST au point d’entrée `/connections` et indiquez vos informations d’authentification [!DNL Generic OData] dans les paramètres de la requête.
 
@@ -84,8 +84,8 @@ curl -X POST \
 
 | Propriété | Description |
 | --------- | ----------- |
-| `auth.params.url` | L’hôte du serveur [!DNL Generic OData]. |
-| `connectionSpec.id` | ID de spécification de connexion [!DNL Generic OData] : `8e6b41a8-d998-4545-ad7d-c6a9fff406c3`. |
+| `auth.params.url` | Hôte du serveur [!DNL Generic OData]. |
+| `connectionSpec.id` | Identifiant de spécification de connexion [!DNL Generic OData] : `8e6b41a8-d998-4545-ad7d-c6a9fff406c3`. |
 
 **Réponse**
 
@@ -103,4 +103,4 @@ Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant d
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL Generic REST OData] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer les données de protocoles à Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/protocols.md)
+* [Créez un flux de données pour importer les données de protocoles dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/protocols.md)

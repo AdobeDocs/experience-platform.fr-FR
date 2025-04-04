@@ -2,10 +2,10 @@
 title: Présentation de l’extension de suivi vidéo YouTube
 description: Découvrez lʼextension de balise de suivi vidéo YouTube dans Adobe Experience Platform.
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: 627835011784ffca8487d446c04c6948dfff059d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 83%
+source-wordcount: '897'
+ht-degree: 78%
 
 ---
 
@@ -23,7 +23,7 @@ Chaque propriété de balise dans Adobe Experience Platform requiert que les e
 *  du service d’identification des visiteurs Experience Cloud
 * Extension Core
 
-Utilisez le fragment de code [&quot;Incorporer un lecteur à l’aide d’une balise \&lt;iframe\>&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) de la documentation du développeur Google à l’HTML de chaque page web sur laquelle un lecteur vidéo doit être rendu.
+Utilisez la [ « Incorporer un lecteur à l’aide d’une balise \&lt;iframe\> »](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) extrait de code de la documentation Google destinée aux développeurs dans l’HTML de chaque page web sur laquelle un lecteur vidéo doit être rendu.
 
 Cette extension, la version 2.0.1, prend en charge l’incorporation d’une ou de plusieurs vidéos YouTube sur une seule page web via l’insertion d’un attribut `id` avec une valeur unique dans la balise de script iframe, et l’ajout de `enablejsapi=1` et `rel=0` à la fin de la valeur de l’attribut `src`, si le code ne s’y trouve pas déjà. Par exemple :
 
@@ -75,18 +75,18 @@ Une règle de balise peut être définie pour chaque événement vidéo (les sep
 Les règles comportent trois actions :
 
 * **Définir des variables :** définissez les variables Adobe Analytics (les faire correspondre à tous les éléments de données inclus ou à certains d’entre eux).
-* **Envoyer la balise :** Envoyez la balise Adobe Analytics en tant qu’appel de suivi des liens personnalisé et indiquez une valeur &quot;Nom du lien&quot;.
+* **Envoyer la balise :** envoyez la balise Adobe Analytics en tant qu’appel de suivi des liens personnalisé et indiquez une valeur « Nom du lien ».
 * **Effacer les variables :** effacez les variables Adobe Analytics.
 
 ## Exemple de règle de balise pour « Vidéo lancée »
 
 Les objets dʼextension vidéo suivants doivent être inclus.
 
-* **Événements** : &quot;Vidéo lancée&quot; (cet événement déclenche la règle lorsque le visiteur lance une vidéo YouTube.)
+* **Événements** : « Vidéo lancée » (cet événement déclenche la règle lorsque le visiteur lance une vidéo YouTube).
 
 * **Condition :** aucune
 
-* **Actions** : utilisez l’ **extension Analytics** pour définir l’action &quot;Définir des variables&quot;, pour mapper :
+* **Actions** : utilisez l’action **extension Analytics** pour « Définir les variables », afin de mapper :
 
    * L’événement pour Début vidéo,
    * Une valeur prop/eVar pour l’élément de données Durée de la vidéo
@@ -94,13 +94,13 @@ Les objets dʼextension vidéo suivants doivent être inclus.
    * Une valeur prop/eVar pour l’élément de données Nom de la vidéo
    * Une valeur prop/eVar pour l’élément de données URL de la vidéo
 
-  Insérez ensuite l’action &quot;Envoyer la balise&quot; (`s.tl`) avec le nom de lien &quot;Début vidéo&quot;, suivi d’une action &quot;Effacer les variables&quot;.
+  Insérez ensuite l’action « Envoyer la balise » (`s.tl`) avec le nom de lien « Début vidéo », suivie d’une action « Effacer les variables ».
 
 >[!TIP]
 > 
->Pour les implémentations dans lesquelles il est impossible dʼutiliser plusieurs eVars ou props pour chaque élément vidéo, les valeurs des éléments de données peuvent être concaténées dans Platform, analysées dans les rapports de classification à lʼaide de lʼoutil Créateur de règles de classification, comme expliqué dans [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=fr](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=fr), puis appliquées en tant que segment dans Analysis Workspace.
+>Pour les implémentations dans lesquelles il est impossible d’utiliser plusieurs eVars ou props pour chaque élément vidéo, les valeurs des éléments de données peuvent être concaténées dans Experience Platform, analysées dans les rapports de classification à l’aide de l’outil Créateur de règles de classification, comme expliqué dans [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=fr), puis appliquées en tant que segment dans Analysis Workspace.
 
-Pour concaténer des valeurs d’informations sur la vidéo, créez un élément de données appelé &quot;Métadonnées vidéo&quot;, puis programmez-le à extraire tous les éléments de données vidéo (répertoriés ci-dessus) et à les assembler. Par exemple :
+Pour concaténer des valeurs d’informations vidéo, créez un nouvel élément de données appelé « Métadonnées vidéo », puis programmez-le à extraire tous les éléments de données vidéo (répertoriés ci-dessus) et à les assembler. Par exemple :
 
 ```javascript
 var r = [];
@@ -114,4 +114,4 @@ r.push(_satellite.getVar('Extension Version'));
 return r.join('|');
 ```
 
-Pour plus d’informations sur la manière de créer et d’exploiter efficacement des éléments de données dans Platform, consultez la documentation [ sur les éléments de données](../../../ui/managing-resources/data-elements.md).
+Pour plus d’informations sur la création et l’utilisation efficace des éléments de données dans Experience Platform, consultez la documentation [éléments de données](../../../ui/managing-resources/data-elements.md).

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Glossaire des étiquettes dʼutilisation des données
 description: Ce document décrit toutes les étiquettes dʼutilisation des données actuellement prises en charge par Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 6f3f08203242843ce703de5e4546a537dff82270
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2254'
-ht-degree: 96%
+source-wordcount: '2257'
+ht-degree: 93%
 
 ---
 
@@ -64,7 +64,7 @@ Différents types de données géographiques peuvent être considérés comme se
 | **PSPD** | Les données personnelles sensibles autorisées (PSPD) se rapportent à des données que vous êtes contractuellement autorisé(e) par Adobe à télécharger et qui sont considérées comme « sensibles », « catégorie spéciale de données », ou comme un terme similaire utilisé par les lois en vigueur. Cela exclut spécifiquement les informations protégées sur la santé (IPS) et d’autres données réglementées sur la santé. |
 | **RHD** | Données qui font référence à des informations protégées sur la santé (IPS) ou à des informations sur un patient que vous êtes contractuellement autorisé(e) par Adobe à télécharger. |
 
-## Étiquettes Écosystème partenaires {#partner}
+## Libellés de réseau partenaire {#partner}
 
 Les libellés des réseaux partenaires servent à catégoriser les données collectées depuis des sources externes à votre organisation.
 
@@ -72,9 +72,9 @@ Ce libellé est utilisé pour régir l’utilisation des données de prospect.
 
 | Libellé | Définition |
 | --- | --- |
-| **Tiers/Tierces** | Les données tierces sont des données qui vous sont fournies par un fournisseur de données tiers. Un fournisseur de données tiers est une entité qui a conclu un accord avec votre organisation, vous autorisant à consulter, utiliser, afficher et transmettre les données tierces conjointement avec Platform. |
-| **Enrichissement tiers** | Données collectées par une organisation tierce qui n’est pas directement liée au sujet des données. Le libellé doit être appliqué aux données tierces utilisées pour enrichir les profils propriétaires. |
-| **Prospection tierce** | Données collectées par une organisation tierce qui n’est pas directement liée au sujet des données. Le libellé doit être appliqué aux données tierces utilisées pour la prospection d’entonnoir destinée aux nouveaux clients net. |
+| **Tiers/Tierces** | Les données tierces sont des données qui vous sont fournies par un fournisseur de données tiers. Un fournisseur de données tiers est une entité qui a conclu un accord avec votre organisation vous autorisant à accéder aux données du tiers, à les utiliser, à les afficher et à les transmettre conjointement avec Experience Platform. |
+| **Enrichissement Par Un Tiers** | Données collectées par une organisation tierce qui n’est pas directement liée au titulaire de données. Le libellé doit être appliqué aux données tierces utilisées pour enrichir les profils propriétaires. |
+| **Prospection Par Un Tiers** | Données collectées par une organisation tierce qui n’est pas directement liée au titulaire de données. Le libellé doit être appliqué aux données tierces utilisées pour la prospection au-dessus de l’entonnoir auprès de nouveaux clients. |
 
 ## Annexe
 
@@ -150,8 +150,8 @@ Certaines politiques de gouvernance des données limitent lʼutilisation de donn
 
 #### C11 {#c11}
 
-La correspondance de segments d’Adobe Experience Platform vous permet de faire correspondre des audiences générées par Platform avec des préférences de confidentialité et de consentement, ce qui facilite la création enrichie de profils utilisateurs et les informations en aval. Le libellé C11 indique les données qui ne doivent pas être utilisées dans les processus [!DNL Segment Match]. Une fois que vous avez déterminé les jeux de données et/ou les champs que vous souhaitez exclure de la correspondance de segment et que vous avez ajouté le libellé C11 en conséquence, le libellé est automatiquement appliqué par le workflow Correspondance de segment.
+La correspondance de segments Adobe Experience Platform vous permet de faire correspondre les audiences générées par Experience Platform avec des préférences de confidentialité et de consentement, ce qui facilite la création enrichie de profils utilisateurs et les informations en aval. Le libellé C11 indique les données qui ne doivent pas être utilisées dans les processus [!DNL Segment Match]. Une fois que vous avez déterminé les jeux de données et/ou les champs que vous souhaitez exclure de la correspondance de segment et que vous avez ajouté le libellé C11 en conséquence, le libellé est automatiquement appliqué par le workflow Correspondance de segment.
 
 #### C12 {#c12}
 
-Les données avec ce libellé ne peuvent pas être exportées depuis Platform de quelque manière que ce soit. Les champs libellés C12 sont exclus des téléchargements CSV, de la consommation d’API et des workflows d’activation.
+Les données avec ce libellé ne peuvent en aucun cas être exportées depuis Experience Platform. Les champs libellés C12 sont exclus des téléchargements CSV, de la consommation d’API et des workflows d’activation.

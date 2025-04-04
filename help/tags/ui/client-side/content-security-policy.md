@@ -2,10 +2,10 @@
 title: Prise en charge de la politique de sécurité du contenu (CSP)
 description: Découvrez comment gérer les restrictions de la politique de sécurité du contenu (CSP) lors de lʼintégration de votre site web au moyen de balises dans Adobe Experience Platform.
 exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1074'
-ht-degree: 100%
+source-wordcount: '1076'
+ht-degree: 97%
 
 ---
 
@@ -82,7 +82,7 @@ Par défaut, la CSP désactive les scripts intégrés et doit donc être configu
 
 >[!NOTE]
 >
->La spécification CSP contient des détails sur une troisième option utilisant des hachages, mais cette approche ne peut pas être utilisée avec des systèmes de gestion des balises tels que des balises. Pour plus dʼinformations sur les limites dʼutilisation des hachages avec les balises dans Platform, consultez le guide [Intégrité des sous-ressources (SRI)](./sri.md).
+>La spécification CSP contient des détails sur une troisième option utilisant des hachages, mais cette approche ne peut pas être utilisée avec des systèmes de gestion des balises tels que des balises. Pour plus d’informations sur les limites d’utilisation des hachages avec les balises dans Experience Platform, consultez le guide [Intégrité des sous-ressources (SRI)](./sri.md).
 
 ### Autoriser par valeur à usage unique {#nonce}
 
@@ -158,4 +158,4 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 
 Grâce à ce document, vous devriez comprendre comment configurer votre en-tête CSP pour accepter le fichier de bibliothèque de balises et les scripts intégrés.
 
-À titre de mesure de sécurité supplémentaire, vous pouvez également choisir d’utiliser l’intégrité des sous-ressources (SRI) pour valider les versions de bibliothèque récupérées. Cependant, cette fonctionnalité présente certaines limites majeures lorsquʼelle est utilisée avec des systèmes de gestion des balises tels que des balises. Pour plus dʼinformations, consultez le guide sur la [compatibilité SRI dans Platform](./sri.md).
+À titre de mesure de sécurité supplémentaire, vous pouvez également choisir d’utiliser l’intégrité des sous-ressources (SRI) pour valider les versions de bibliothèque récupérées. Cependant, cette fonctionnalité présente certaines limites majeures lorsquʼelle est utilisée avec des systèmes de gestion des balises tels que des balises. Pour plus d’informations, consultez le guide sur la compatibilité [SRI dans Experience Platform](./sri.md).

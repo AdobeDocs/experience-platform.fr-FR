@@ -1,11 +1,11 @@
 ---
-title: Création d’une connexion source aux comptes et contacts SugarCRM dans l’interface utilisateur
-description: Découvrez comment créer une connexion source aux comptes et contacts SugarCRM à l’aide de l’interface utilisateur de Adobe Experience Platform.
+title: Créer une connexion source Comptes et contacts SugarCRM dans l’interface utilisateur
+description: Découvrez comment créer une connexion source Comptes et contacts SugarCRM à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 45840d7e-4c19-4720-8629-be446347862d
-source-git-commit: 0de4b32ac2ddc90dabefd469b6658388a4532e0d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 37%
+source-wordcount: '779'
+ht-degree: 30%
 
 ---
 
@@ -26,80 +26,80 @@ Si vous disposez déjà d’un compte [!DNL SugarCRM], vous pouvez ignorer le re
 
 ### Collecter les informations d’identification requises
 
-Pour connecter [!DNL SugarCRM Accounts & Contacts] à Platform, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
+Pour connecter [!DNL SugarCRM Accounts & Contacts] à Experience Platform, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
 
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
-| `Host` | Le point d’entrée de l’API SugarCRM auquel la source se connecte. | `developer.salesfusion.com` |
+| `Host` | Point d’entrée de l’API SugarCRM auquel la source se connecte. | `developer.salesfusion.com` |
 | `Username` | Nom d’utilisateur de votre compte de développeur SugarCRM. | `abc.def@example.com@sugarmarketdemo000.com` |
-| `Password` | Votre mot de passe du compte de développeur SugarCRM. | `123456789` |
+| `Password` | Votre mot de passe de compte de développeur SugarCRM. | `123456789` |
 
-### Création d’un schéma Platform
+### Création d’un schéma Experience Platform
 
-Avant de créer une connexion source [!DNL SugarCRM], vous devez également vous assurer de créer au préalable un schéma de plateforme à utiliser pour votre source. Consultez le tutoriel sur la [création d’un schéma de plateforme](../../../../../xdm/schema/composition.md) pour obtenir des instructions complètes sur la création d’un schéma.
+Avant de créer une connexion source [!DNL SugarCRM], vous devez également vous assurer de créer d’abord un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la [création d’un schéma Experience Platform).
 
-[!DNL SugarCRM Accounts & Contacts] prend en charge plusieurs API. Cela signifie que vous devez créer un schéma distinct, en fonction du type d’objet que vous utilisez. Consultez les exemples ci-dessous pour les schémas de comptes et de contacts :
+Le [!DNL SugarCRM Accounts & Contacts] prend en charge plusieurs API. Cela signifie que vous devez créer un schéma distinct, en fonction du type d’objet que vous utilisez. Consultez les exemples ci-dessous pour les schémas de comptes et de contacts :
 
 >[!BEGINTABS]
 
 >[!TAB Comptes]
 
-![ Copie d’écran de l’interface utilisateur de Platform présentant un exemple de schéma pour les comptes](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-accounts.png)
+![Capture d’écran de l’interface utilisateur Experience Platform montrant un exemple de schéma pour les comptes](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-accounts.png)
 
 >[!TAB Contacts]
 
-![ Copie d’écran de l’interface utilisateur de Platform montrant un exemple de schéma pour les contacts](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-contacts.png)
+![Capture d’écran de l’interface utilisateur Experience Platform montrant un exemple de schéma pour les contacts](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-contacts.png)
 
 >[!ENDTABS]
 
 ## Connecter votre compte [!DNL SugarCRM Accounts & Contacts]
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Dans la catégorie *CRM*, sélectionnez **[!UICONTROL SugarCRM Accounts &amp; Contacts]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
+Dans la catégorie *CRM*, sélectionnez **[!UICONTROL Comptes et contacts SugarCRM]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
-![ Copie d’écran de l’interface utilisateur de Platform pour le catalogue avec la carte Comptes et contacts SugarCRM{1](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform pour le catalogue avec la carte Comptes et contacts SugarCRM ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
 
-La page **[!UICONTROL Se connecter au compte Comptes et contacts SugarCRM]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Connecter le compte Contacts et comptes SugarCRM]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant
 
 Pour utiliser un compte existant, sélectionnez le compte [!DNL SugarCRM Accounts & Contacts] avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
-![ Copie d’écran de l’interface utilisateur de Platform pour le compte Connecter des comptes et des contacts SugarCRM avec un compte existant ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/existing.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform pour Connecter le compte Contacts et comptes SugarCRM à un compte existant](../../../../images/tutorials/create/sugarcrm-accounts-contacts/existing.png)
 
 ### Nouveau compte
 
 Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom, une description facultative et vos informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
 
-![ Copie d’écran de l’interface utilisateur de Platform pour le compte Connecter des comptes et des contacts SugarCRM avec un nouveau compte ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/new.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform pour connecter le compte Comptes et contacts SugarCRM à un nouveau compte](../../../../images/tutorials/create/sugarcrm-accounts-contacts/new.png)
 
 ### Sélectionner les données
 
-Enfin, vous devez sélectionner le type d’objet à ingérer dans Platform.
+Enfin, vous devez sélectionner le type d’objet à ingérer dans Experience Platform.
 
-| Type d’objet  | Description |
+| Type d’objet | Description |
 | --- | --- |
-| `Accounts` | Les entreprises avec lesquelles votre organisation entretient des relations. |
-| `Contacts` | Les personnes avec lesquelles votre organisation entretient une relation établie. |
+| `Accounts` | Les sociétés avec lesquelles votre organisation entretient des relations. |
+| `Contacts` | Les personnes avec lesquelles votre organisation a une relation établie. |
 
 >[!BEGINTABS]
 
 >[!TAB Comptes]
 
-![ Copie d’écran de l’interface utilisateur de Platform pour les comptes et contacts SugarCRM affichant la configuration avec l’option Compte sélectionnée](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-accounts.png)
+![Capture d’écran de l’interface utilisateur Experience Platform pour les comptes et contacts SugarCRM montrant la configuration avec l’option Compte sélectionnée](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-accounts.png)
 
 >[!TAB Contacts]
 
-![ Copie d’écran de l’interface utilisateur de Platform pour les comptes et contacts SugarCRM affichant la configuration avec l’option Contacts sélectionnée](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-contacts.png)
+![Capture d’écran de l’interface utilisateur Experience Platform pour les comptes et contacts SugarCRM montrant la configuration avec l’option Contacts sélectionnée](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-contacts.png)
 
 >[!ENDTABS]
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez établi une connexion à votre compte [!DNL SugarCRM Accounts & Contacts]. Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données dans Platform](../../dataflow/crm.md).
+En suivant ce tutoriel, vous avez établi une connexion à votre compte [!DNL SugarCRM Accounts & Contacts]. Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données dans Experience Platform](../../dataflow/crm.md).
 
 ## Ressources supplémentaires
 
@@ -107,28 +107,28 @@ Les sections ci-dessous fournissent des ressources supplémentaires auxquelles v
 
 ### Mécanismes de sécurisation {#guardrails}
 
-Les taux de ralentissement de l’API [!DNL SugarCRM] sont de 90 appels par minute ou de 2 000 appels par jour, selon ce qui se produit en premier. Toutefois, cette restriction a été contournée en ajoutant un paramètre dans la spécification de connexion qui retardera le temps de demande afin que la limite de taux ne soit jamais atteinte.
+Les taux de limitation de l’API [!DNL SugarCRM] sont de 90 appels par minute ou 2 000 appels par jour, selon ce qui se produit en premier. Cependant, cette restriction a été contournée en ajoutant un paramètre dans la spécification de connexion qui retardera le temps de requête afin que la limite de débit ne soit jamais atteinte.
 
 ### Validation {#validation}
 
-Pour vérifier que vous avez correctement configuré la source et que les données [!DNL SugarCRM Accounts & Contacts] sont en cours d’ingestion, procédez comme suit :
+Pour vérifier que vous avez correctement configuré la source et [!DNL SugarCRM Accounts & Contacts] les données sont ingérées, procédez comme suit :
 
-* Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Afficher les flux de données]** en regard du menu de carte [!DNL SugarCRM Accounts & Contacts] du catalogue des sources. Sélectionnez ensuite **[!UICONTROL Prévisualiser le jeu de données]** pour vérifier les données ingérées.
+* Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Afficher les flux de données]** à côté du menu de carte [!DNL SugarCRM Accounts & Contacts] dans le catalogue de sources. Sélectionnez ensuite **[!UICONTROL Prévisualiser le jeu de données]** pour vérifier les données ingérées.
 
-* Selon le type d’objet que vous utilisez, vous pouvez vérifier les données agrégées par rapport aux nombres visibles dans les pages de comptes ou de contacts [!DNL SugarMarket] ci-dessous :
+* Selon le type d’objet que vous utilisez, vous pouvez vérifier les données agrégées par rapport aux nombres visibles sur les pages Comptes ou Contacts [!DNL SugarMarket] ci-dessous :
 
 >[!BEGINTABS]
 
 >[!TAB Comptes]
 
-![Capture d&#39;écran de la page Comptes SugarMarket affichant la liste des comptes](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarmarket-accounts.png)
+![Capture d’écran de la page Comptes SugarMarket affichant la liste des comptes](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarmarket-accounts.png)
 
 >[!TAB Contacts]
 
-![Capture d&#39;écran de la page des contacts de SugarMarket affichant la liste des contacts](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarmarket-contacts.png)
+![Capture d’écran de la page Contacts de SugarMarket affichant la liste des contacts](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarmarket-contacts.png)
 
 >[!ENDTABS]
 
 >[!NOTE]
 >
->Les pages [!DNL SugarMarket] n’incluent pas le nombre d’objets supprimés. Toutefois, les données récupérées via cette source incluent également le nombre supprimé, qui sera marqué d’un indicateur supprimé.
+>Les pages [!DNL SugarMarket] n’incluent pas le nombre d’objets supprimés. Cependant, les données récupérées par le biais de cette source incluront également le nombre supprimé, qui sera marqué d’un indicateur supprimé.

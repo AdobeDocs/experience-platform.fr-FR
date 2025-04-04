@@ -3,7 +3,7 @@ title: Connexion Moengage
 description: Moengage est une plateforme d’engagement client qui alimente en temps réel les interactions axées sur les clients entre les consommateurs et les marques.
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: 1e22ad63414876af45d156ed030b8103908de8a1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1036'
 ht-degree: 36%
@@ -100,7 +100,7 @@ Voir [Activer les données d’audience vers des destinations d’exportation de
 
 Pour envoyer correctement vos données d’audience de [!DNL Adobe Experience Platform] vers la destination [!DNL Moengage], vous devez passer par l’étape de mappage des champs.
 
-Le mappage consiste à créer un lien entre vos champs de schéma [!DNL Experience Data Model] (XDM) dans votre compte [!DNL Platform] et leurs équivalents provenant de la destination cible.
+Le mappage consiste à créer un lien entre vos champs de schéma [!DNL Experience Data Model] (XDM) dans votre compte [!DNL Experience Platform] et leurs équivalents provenant de la destination cible.
 
 Pour mapper correctement vos champs XDM vers les champs de destination [!DNL Moengage], procédez comme suit :
 
@@ -128,7 +128,7 @@ Dans la section [!UICONTROL Champ cible], sélectionnez l’icône de mappage si
 ![Mapping de ciblage de destination Moengage](../../assets/catalog/mobile-engagement/moengage/mapping-target.png)
 
 Dans la fenêtre [!UICONTROL Sélectionner le champ cible], vous pouvez choisir entre deux catégories de champs cibles :
-* [!UICONTROL Sélectionner un espace de noms d’identité ] : utilisez cette option pour mapper les espaces de noms d’identité [!DNL Platform] aux espaces de noms d’identité [!DNL Moengage].
+* [!UICONTROL Sélectionner un espace de noms d’identité ] : utilisez cette option pour mapper les espaces de noms d’identité [!DNL Experience Platform] aux espaces de noms d’identité [!DNL Moengage].
 * [!UICONTROL Sélectionner des attributs personnalisés ] : utilisez cette option pour mapper les attributs XDM aux attributs [!DNL Moengage] personnalisés que vous avez définis dans votre compte [!DNL Moengage]. <br> Vous pouvez également utiliser cette option pour renommer les attributs XDM existants en [!DNL Moengage]. Par exemple, le mappage d’un attribut XDM `lastName` à un attribut `Last_Name` personnalisé dans [!DNL Moengage] crée l’attribut `Last_Name` dans [!DNL Moengage], s’il n’existe pas déjà, et lui associe l’attribut XDM `lastName`.
 
 ![Champs de mappage de destination Moengage](../../assets/catalog/mobile-engagement/moengage/mapping-target-fields.png)

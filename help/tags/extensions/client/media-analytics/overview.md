@@ -2,10 +2,10 @@
 title: Présentation de l’extension Adobe Media Analytics for Audio and Video
 description: Découvrez lʼextension de balise Adobe Media Analytics for Audio and Video dans Adobe Experience Platform.
 exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
-source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '949'
-ht-degree: 99%
+source-wordcount: '950'
+ht-degree: 97%
 
 ---
 
@@ -178,7 +178,7 @@ L’extension MA expose les modules partagés `get-instance` et `media-heartbeat
 
 >[!NOTE]
 >
->**Tests :** pour tester votre extension dans cette version, vous devez télécharger votre extension sur [Platform](../../../extension-dev/submit/upload-and-test.md), où vous avez accès à toutes les extensions dépendantes.
+>**Tests :** pour tester votre extension dans cette version, vous devez télécharger votre extension sur [Experience Platform](../../../extension-dev/submit/upload-and-test.md), où vous avez accès à toutes les extensions dépendantes.
 
 
 <!--

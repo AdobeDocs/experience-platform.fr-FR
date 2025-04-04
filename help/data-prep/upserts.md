@@ -1,74 +1,74 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;prép de données;préparation de données;diffusion en continu;insertion en continu;insertion en continu
-title: Envoyer Des Mises À Jour Partielles De Ligne À Real-Time Customer Profile À L’Aide De La Préparation De Données
-description: Découvrez comment envoyer des mises à jour de lignes partielles à Real-time Customer Profile à l’aide de la préparation de données.
+keywords: Experience Platform;accueil;rubriques les plus consultées;préparation des données;préparation des données;diffusion en continu;upsert;diffusion en continu upsert
+title: Envoyer Des Mises À Jour De Ligne Partielles Au Profil Client En Temps Réel À L’Aide De La Préparation Des Données
+description: Découvrez comment envoyer des mises à jour de lignes partielles au profil client en temps réel à l’aide de la préparation des données.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: d62a61f44b27c0be882b5f29bfad5e423af7a1ca
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1360'
-ht-degree: 5%
+source-wordcount: '1361'
+ht-degree: 3%
 
 ---
 
-# Envoyez des mises à jour de lignes partielles à [!DNL Real-Time Customer Profile] à l’aide de [!DNL Data Prep]
+# Envoyer des mises à jour de lignes partielles aux [!DNL Real-Time Customer Profile] à l’aide de [!DNL Data Prep]
 
 >[!IMPORTANT]
 >
->* L’ingestion des messages de mise à jour d’entité du modèle de données d’expérience (XDM) (avec les opérations du PATCH JSON) pour les mises à jour de profil via l’inlet du DCS a été abandonnée. Suivez les étapes décrites dans ce guide en tant qu’alternative.
+>* L’ingestion de messages de mise à jour d’entité du modèle de données d’expérience (XDM) (avec des opérations JSON PATCH) pour les mises à jour de profil via l’entrée DCS est obsolète. Suivez les étapes décrites dans ce guide comme alternative.
 >
->* Vous pouvez également utiliser la source d’API HTTP pour [ingérer des données brutes dans l’inlet du serveur de collecte de données](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) et spécifier les mappages de données nécessaires pour transformer vos données en messages compatibles XDM pour les mises à jour de Profile.
+>* Vous pouvez également utiliser la source d’API HTTP pour [ingérer des données brutes dans l’inlet DCS](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) et spécifier les mappages de données nécessaires pour transformer vos données en messages conformes à XDM pour les mises à jour de Profile.
 >
->* Lors de l’utilisation de tableaux dans des serveurs de diffusion en continu, vous devez utiliser explicitement `upsert_array_append` ou `upsert_array_replace` pour définir l’intention claire de l’opération. Vous pouvez recevoir des erreurs si ces fonctions sont manquantes.
+>* Lors de l’utilisation de tableaux dans des upserts en flux continu, vous devez utiliser explicitement `upsert_array_append` ou `upsert_array_replace` pour définir l’intention claire de l’opération. Vous pouvez recevoir des erreurs si ces fonctions sont manquantes.
 
-Utilisez des upserts de diffusion en continu dans [!DNL Data Prep] pour envoyer des mises à jour de lignes partielles aux données [!DNL Real-Time Customer Profile] tout en créant et en établissant de nouveaux liens d’identité avec une seule requête API.
+Utilisez des upserts en flux continu dans [!DNL Data Prep] pour envoyer des mises à jour de lignes partielles à [!DNL Real-Time Customer Profile] données tout en créant et en établissant de nouveaux liens d’identité avec une seule requête API.
 
-En diffusant en continu des upserts, vous pouvez conserver le format de vos données tout en convertissant ces données en demandes de PATCH [!DNL Real-Time Customer Profile] pendant l’ingestion. En fonction des entrées que vous fournissez, [!DNL Data Prep] vous permet d’envoyer une seule charge utile API et de traduire les données vers les requêtes [!DNL Real-Time Customer Profile] PATCH et [!DNL Identity Service] CREATE.
+En diffusant des upserts en continu, vous pouvez conserver le format de vos données tout en les traduisant en requêtes PATCH [!DNL Real-Time Customer Profile] lors de l’ingestion. En fonction des entrées que vous fournissez, [!DNL Data Prep] vous permet d’envoyer une seule payload d’API et de traduire les données à la fois vers [!DNL Real-Time Customer Profile] requêtes PATCH et [!DNL Identity Service] CREATE.
 
-[!DNL Data Prep] utilise des paramètres d’en-tête pour faire la distinction entre les insertions et les upserts. Toutes les lignes qui utilisent des upserts doivent comporter un en-tête . Vous pouvez utiliser des upserts avec ou sans descripteurs d’identité. Si vous utilisez des upserts avec des identités, vous devez suivre les étapes de configuration décrites dans la section [configuration du jeu de données d’identité](#configure-the-identity-dataset). Si vous utilisez des upserts sans identités, vous n’avez pas besoin de fournir de configurations d’identité dans votre requête. Pour plus d’informations, consultez la section sur les [upserts de diffusion en continu sans identités](#payload-without-identity-configuration) .
+[!DNL Data Prep] utilise les paramètres d&#39;en-tête pour faire la distinction entre les insertions et les upserts. Toutes les lignes qui utilisent des upserts doivent avoir un en-tête. Vous pouvez utiliser des upserts avec ou sans descripteurs d’identité. Si vous utilisez des upserts avec des identités, vous devez suivre les étapes de configuration décrites dans la section [Configuration du jeu de données d’identité](#configure-the-identity-dataset). Si vous utilisez des upserts sans identités, vous n’avez pas besoin de fournir de configurations d’identité dans votre requête. Lisez la section sur la [diffusion en continu d’upserts sans identités](#payload-without-identity-configuration) pour plus d’informations.
 
 >[!NOTE]
 >
->Pour tirer parti de la fonctionnalité de restauration, il est recommandé de désactiver les configurations compatibles XDM lors de l’ingestion des données et de mapper à nouveau la charge utile entrante à l’aide de [Data Prep Mapper](./ui/mapping.md).
+>Pour tirer parti de la fonctionnalité d’upsert, il est recommandé de désactiver les configurations compatibles avec XDM lors de l’ingestion des données et de remapper la payload entrante à l’aide du [mappeur de préparation des données](./ui/mapping.md).
 
-Ce document fournit des informations sur la diffusion en continu de upserts dans [!DNL Data Prep].
+Ce document fournit des informations sur la diffusion d’upserts dans [!DNL Data Prep].
 
 ## Prise en main
 
 Cette présentation d’ nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [[!DNL Data Prep]](./home.md) : [!DNL Data Prep] permet aux ingénieurs de données de mapper, de transformer et de valider des données vers et depuis le modèle de données d’expérience (XDM).
-* [[!DNL Identity Service]](../identity-service/home.md) : profitez d’une meilleure vue d’ensemble des clients et de leur comportement en rapprochant des identités entre appareils et systèmes.
+* [[!DNL Data Prep]](./home.md) : [!DNL Data Prep] permet aux ingénieurs de données de mapper, transformer et valider des données vers et à partir du modèle de données d’expérience (XDM).
+* [[!DNL Identity Service]](../identity-service/home.md) : obtenez une meilleure compréhension des clients individuels et de leurs comportements en rapprochant des identités entre appareils et systèmes.
 * [Real-Time Customer Profile](../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-* [Sources](../sources/home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform.
+* [Sources](../sources/home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform.
 
-## Utilisation de serveurs de diffusion en continu dans [!DNL Data Prep] {#streaming-upserts-in-data-prep}
+## Utiliser des upserts en flux continu dans [!DNL Data Prep] {#streaming-upserts-in-data-prep}
 
 >[!NOTE]
 >
->Les sources suivantes prennent en charge l’utilisation de serveurs de diffusion en continu :<ul><li>[[!DNL Amazon Kinesis]](../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure Event Hubs]](../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../sources/connectors/streaming/http.md)</li></ul>
+>Les sources suivantes prennent en charge l’utilisation d’upserts en flux continu :<ul><li>[[!DNL Amazon Kinesis]](../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure Event Hubs]](../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../sources/connectors/streaming/http.md)</li></ul>
 
-### Workflow de haut niveau des upserts en flux continu
+### Workflow de haut niveau de diffusion d’upserts
 
-Les upserts de diffusion en continu dans [!DNL Data Prep] fonctionnent comme suit :
+La diffusion en continu d’upserts dans [!DNL Data Prep] fonctionne comme suit :
 
-* Vous devez d’abord créer et activer un jeu de données pour la consommation [!DNL Profile]. Pour plus d’informations, consultez le guide sur l’ [activation d’un jeu de données pour [!DNL Profile]](../catalog/datasets/enable-for-profile.md) .
+* Vous devez d’abord créer et activer un jeu de données pour la consommation [!DNL Profile]. Pour plus d’informations, consultez le guide sur [l’activation d’un jeu de données pour [!DNL Profile]](../catalog/datasets/enable-for-profile.md).
 * Si de nouvelles identités doivent être liées, vous devez également créer un jeu de données supplémentaire **avec le même schéma** que votre jeu de données [!DNL Profile].
-* Une fois vos jeux de données préparés, vous devez créer un flux de données pour mapper votre requête entrante au jeu de données [!DNL Profile].
-* Vous devez ensuite mettre à jour la requête entrante afin d’inclure les en-têtes nécessaires. Ces en-têtes définissent :
-   * L’opération de données à effectuer avec [!DNL Profile] : `create`, `merge` et `delete`.
+* Une fois que votre ou vos jeux de données sont préparés, vous devez créer un flux de données pour mapper votre requête entrante au jeu de données [!DNL Profile] ;
+* Ensuite, vous devez mettre à jour la requête entrante pour inclure les en-têtes nécessaires. Ces en-têtes définissent les éléments suivants :
+   * Opération de données devant être effectuée avec [!DNL Profile] : `create`, `merge` et `delete`.
    * Opération d’identité facultative à effectuer avec [!DNL Identity Service] : `create`.
 
-### Configuration du jeu de données d’identité {#configure-the-identity-dataset}
+### Configurer le jeu de données d’identité {#configure-the-identity-dataset}
 
-Si de nouvelles identités doivent être liées, vous devez créer et transmettre un jeu de données supplémentaire dans la payload entrante. Lors de la création d’un jeu de données d’identité, vous devez vous assurer que les conditions suivantes sont remplies :
+Si de nouvelles identités doivent être liées, vous devez créer et transmettre un jeu de données supplémentaire dans la payload entrante. Lors de la création d’un jeu de données d’identité, vous devez vous assurer que les exigences suivantes sont remplies :
 
-* Le jeu de données d’identité doit avoir son schéma associé comme jeu de données [!DNL Profile]. Une incohérence des schémas peut entraîner un comportement du système incohérent.
-* Cependant, vous devez vous assurer que le jeu de données d’identité est différent du jeu de données [!DNL Profile]. Si les jeux de données sont identiques, les données seront écrasées au lieu d’être mises à jour.
-* Bien que le jeu de données initial doive être activé pour [!DNL Profile], le jeu de données d’identité **ne doit pas être activé** pour [!DNL Profile]. Dans le cas contraire, les données seront également écrasées au lieu d’être mises à jour. Cependant, le jeu de données d’identité **doit être activé** pour [!DNL Identity Service].
+* Le jeu de données d’identité doit avoir son schéma associé comme jeu de données [!DNL Profile]. Une incohérence des schémas peut entraîner un comportement incohérent du système.
+* Cependant, vous devez vous assurer que le jeu de données d’identité est différent du jeu de données d’[!DNL Profile]. Si les jeux de données sont identiques, les données sont remplacées au lieu d’être mises à jour.
+* Alors que le jeu de données initial doit être activé pour [!DNL Profile], le jeu de données d’identité **ne doit pas être activé** par [!DNL Profile]. Sinon, les données seront également remplacées au lieu d’être mises à jour. Cependant, le jeu de données d’identité **doit être activé** par [!DNL Identity Service].
 
 #### Champs obligatoires dans les schémas associés au jeu de données d’identité {#identity-dataset-required-fileds}
 
-Si votre schéma contient des champs obligatoires, la validation du jeu de données doit être supprimée pour permettre à [!DNL Identity Service] de recevoir uniquement les identités. Vous pouvez supprimer la validation en appliquant la valeur `disabled` au paramètre `acp_validationContext` . Voir l’exemple ci-dessous :
+Si votre schéma contient des champs obligatoires, la validation du jeu de données doit être supprimée pour permettre aux [!DNL Identity Service] de ne recevoir que les identités. Vous pouvez supprimer la validation en appliquant la valeur `disabled` au paramètre `acp_validationContext` . Voir l’exemple ci-dessous :
 
 ```shell
 curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257bef7a75461948ebcaaa' \
@@ -96,11 +96,11 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
 >
 >Vous n’avez pas besoin d’effectuer de configuration supplémentaire si le schéma associé au jeu de données d’identité ne comporte aucun champ obligatoire.
 
-## Structure de payload entrante
+## Structure de la payload entrante
 
-L’exemple suivant illustre une structure de payload entrante établissant de nouveaux liens d’identité.
+Vous trouverez ci-dessous un exemple de structure de payload entrante qui établit de nouveaux liens d’identité.
 
-### Payload avec configuration d’identité
+### Payload avec configuration des identités
 
 ```shell
 {
@@ -120,13 +120,13 @@ L’exemple suivant illustre une structure de payload entrante établissant de n
 
 | Paramètre | Description |
 | --- | --- |
-| `flowId` | Identifiant unique pour identifier un flux de données. Cet identifiant de flux de données doit correspondre à la connexion source créée avec [!DNL Amazon Kinesis], [!DNL Azure Event Hubs] ou [!DNL HTTP API]. Ce flux de données doit également comporter un jeu de données activé [!DNL Profile] comme jeu de données cible. **Remarque** : L’identifiant du jeu de données cible [!DNL Profile] activé est également utilisé comme paramètre `datasetId`. |
-| `imsOrgId` | L’identifiant qui correspond à votre organisation. |
-| `datasetId` | L’identifiant du jeu de données cible [!DNL Profile] de votre flux de données. **Remarque** : Il s’agit du même identifiant que l’identifiant du jeu de données cible [!DNL Profile] trouvé dans votre flux de données. |
-| `operations` | Ce paramètre décrit les actions que [!DNL Data Prep] va entreprendre en fonction de la requête entrante. |
+| `flowId` | Identifiant unique permettant d’identifier un flux de données. Cet identifiant de flux de données doit correspondre à la connexion source créée avec [!DNL Amazon Kinesis], [!DNL Azure Event Hubs] ou [!DNL HTTP API]. Ce flux de données doit également avoir un jeu de données activé pour [!DNL Profile] comme jeu de données cible. **Remarque** : l’identifiant du jeu de données cible activé pour [!DNL Profile] est également utilisé comme paramètre de `datasetId`. |
+| `imsOrgId` | Identifiant qui correspond à votre organisation. |
+| `datasetId` | L’identifiant du jeu de données cible activé pour [!DNL Profile] de votre flux de données. **Remarque** : il s’agit du même identifiant que l’identifiant du jeu de données cible activé pour [!DNL Profile] qui se trouve dans votre flux de données. |
+| `operations` | Ce paramètre décrit les actions que [!DNL Data Prep] entreprendrez en fonction de la requête entrante. |
 | `operations.data` | Définit les actions qui doivent être effectuées dans [!DNL Real-Time Customer Profile]. |
 | `operations.identity` | Définit les opérations autorisées sur les données par [!DNL Identity Service]. |
-| `operations.identityDatasetId` | (Facultatif) Identifiant du jeu de données d’identité requis uniquement si de nouvelles identités doivent être liées. |
+| `operations.identityDatasetId` | (Facultatif) Identifiant du jeu de données d’identité obligatoire uniquement si de nouvelles identités doivent être liées. |
 
 #### Opérations prises en charge
 
@@ -136,17 +136,17 @@ Les opérations suivantes sont prises en charge par [!DNL Real-Time Customer Pro
 | --- | --- | 
 | `create` | Opération par défaut. Cela génère une méthode de création d’entité XDM pour [!DNL Real-Time Customer Profile]. |
 | `merge` | Cela génère une méthode de mise à jour d’entité XDM pour [!DNL Real-Time Customer Profile]. |
-| `delete` | Cette opération génère une méthode de suppression d’entité XDM pour [!DNL Real-Time Customer Profile] et supprime définitivement les données de [!DNL Profile store]. |
+| `delete` | Cela génère une méthode de suppression d’entité XDM pour [!DNL Real-Time Customer Profile] et supprime définitivement les données du [!DNL Profile store]. |
 
 Les opérations suivantes sont prises en charge par [!DNL Identity Service] :
 
 | Opérations | Descriptions |
 | --- | --- |
-| `create` | La seule opération autorisée pour ce paramètre. Si `create` est transmis en tant que valeur pour `operations.identity`, alors [!DNL Data Prep] génère une requête de création d’entité XDM pour [!DNL Identity Service]. Si l’identité existe déjà, l’identité est ignorée. **Remarque :** Si `operations.identity` est défini sur `create`, le `identityDatasetId` doit également être spécifié. L’entité XDM crée un message généré en interne par le composant [!DNL Data Prep] sera généré pour cet identifiant de jeu de données. |
+| `create` | Seule opération autorisée pour ce paramètre. Si `create` est transmis en tant que valeur pour `operations.identity`, [!DNL Data Prep] génère une requête de création d’entité XDM pour [!DNL Identity Service]. Si l’identité existe déjà, elle est ignorée. **Remarque :** si `operations.identity` est défini sur `create`, le `identityDatasetId` doit également être spécifié. Le message de création d’entité XDM généré en interne par [!DNL Data Prep] composant sera généré pour cet identifiant de jeu de données. |
 
-### Charge utile sans configuration d’identité {#payload-without-identity-configuration}
+### Payload sans configuration d’identité {#payload-without-identity-configuration}
 
-Si de nouvelles identités ne doivent pas être liées, vous pouvez omettre les paramètres `identity` et `identityDatasetId` dans les opérations. Cela envoie uniquement des données à [!DNL Real-Time Customer Profile] et ignore [!DNL Identity Service]. Voir la payload ci-dessous pour obtenir un exemple :
+S’il n’est pas nécessaire de lier de nouvelles identités, vous pouvez omettre les paramètres `identity` et `identityDatasetId` dans les opérations. Cela envoie les données uniquement à [!DNL Real-Time Customer Profile] et ignore le [!DNL Identity Service]. Pour obtenir un exemple, reportez-vous à la payload ci-dessous :
 
 ```shell
 {
@@ -162,16 +162,16 @@ Si de nouvelles identités ne doivent pas être liées, vous pouvez omettre les 
 }
 ```
 
-## Transmission dynamique des identités primaires
+## Transmission dynamique des identités principales
 
 Pour les mises à jour XDM, le schéma doit être activé pour [!DNL Profile] et contenir une identité principale. Vous pouvez spécifier l’identité principale d’un schéma XDM de deux manières :
 
 * Désigner un champ statique comme identité principale dans le schéma XDM ;
-* Désignez l’un des champs d’identité comme identité principale par le biais du groupe de champs de carte d’identité dans le schéma XDM.
+* Désignez l’un des champs d’identité comme identité principale par le biais du groupe de champs de mappage d’identités dans le schéma XDM.
 
-### Désigner un champ statique comme champ d’identité principal dans le schéma XDM
+### Désigner un champ statique comme champ d’identité principale dans le schéma XDM
 
-Dans l’exemple ci-dessous, `state`, `homePhone.number` et d’autres attributs sont mis à jour avec leurs valeurs respectives données dans le [!DNL Profile] avec l’identité principale de `sampleEmail@gmail.com`. Un message de mise à jour d’entité XDM est ensuite généré par le composant de diffusion en continu [!DNL Data Prep]. [!DNL Real-Time Customer Profile] confirme ensuite le message de mise à jour XDM pour insérer l’enregistrement de profil.
+Dans l’exemple ci-dessous, les attributs `state`, `homePhone.number` et autres sont insérés avec leurs valeurs données respectives dans le [!DNL Profile] avec l’identité principale de `sampleEmail@gmail.com`. Un message de mise à jour d’entité XDM est ensuite généré par le composant [!DNL Data Prep] de diffusion en continu. [!DNL Real-Time Customer Profile] confirme ensuite ce message de mise à jour XDM pour upsert l’enregistrement de profil.
 
 >[!NOTE]
 >
@@ -218,9 +218,9 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 }'
 ```
 
-### Désigner l’un des champs d’identité comme identité principale par le biais du groupe de champs de carte d’identité dans le schéma XDM
+### Désignez l’un des champs d’identité comme identité principale par le biais du groupe de champs de mappage d’identités dans le schéma XDM
 
-Dans cet exemple, l’en-tête contient l’attribut `operations` avec les propriétés `identity` et `identityDatasetId`. Cela permet de fusionner les données avec [!DNL Real-Time Customer Profile] et de transmettre les identités à [!DNL Identity Service].
+Dans cet exemple, l’en-tête contient l’attribut `operations` avec les propriétés `identity` et `identityDatasetId` . Cela permet de fusionner les données avec [!DNL Real-Time Customer Profile] et de transmettre les identités à [!DNL Identity Service].
 
 ```shell
 curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec3583275ffce4880ffc482be5a9d810c4b' \
@@ -267,12 +267,12 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 ## Limites connues et considérations clés
 
-Voici une liste des limites connues à prendre en compte lors de la diffusion en continu de upserts avec [!DNL Data Prep] :
+Vous trouverez ci-dessous une liste des limites connues à prendre en compte lors de la diffusion en flux continu d’upserts avec [!DNL Data Prep] :
 
-* La méthode des upserts de diffusion ne doit être utilisée que lors de l’envoi de mises à jour de lignes partielles à [!DNL Real-Time Customer Profile]. Les mises à jour de lignes partielles sont **et non** consommées par le lac de données.
-* La méthode de diffusion en continu upserts ne prend pas en charge la mise à jour, le remplacement et la suppression des identités. De nouvelles identités sont créées si elles n’existent pas. Par conséquent, l’opération `identity` doit toujours être définie pour créer. Si une identité existe déjà, l’opération est un &quot;no-op&quot;.
-* La méthode des upserts de diffusion en continu ne prend actuellement pas en charge [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) et [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
+* La méthode upserts en flux continu ne doit être utilisée que lors de l’envoi de mises à jour de lignes partielles à [!DNL Real-Time Customer Profile]. Les mises à jour de lignes partielles ne sont **pas** utilisées par le lac de données.
+* La méthode upserts en flux continu ne prend pas en charge la mise à jour, le remplacement et la suppression des identités. De nouvelles identités sont créées si elles n’existent pas. Par conséquent, l’opération `identity` doit toujours être définie sur créer. Si une identité existe déjà, l’opération n’est pas opérationnelle.
+* La méthode upserts en flux continu ne prend actuellement pas en charge [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) et [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 ## Étapes suivantes
 
-En lisant ce document, vous devez maintenant comprendre comment diffuser des upserts dans [!DNL Data Prep] pour envoyer des mises à jour de lignes partielles à vos données [!DNL Real-Time Customer Profile], tout en créant et en liant des identités à une seule requête API. Pour plus d&#39;informations sur les autres fonctionnalités [!DNL Data Prep], consultez la [[!DNL Data Prep] présentation](./home.md). Pour savoir comment utiliser les ensembles de mappages dans l’API [!DNL Data Prep], consultez le [[!DNL Data Prep] guide de développement](./api/overview.md).
+En lisant ce document, vous devriez maintenant comprendre comment diffuser des upserts dans [!DNL Data Prep] pour envoyer des mises à jour de lignes partielles à vos données [!DNL Real-Time Customer Profile], tout en créant et en liant des identités avec une seule requête API. Pour plus d’informations sur les autres fonctionnalités de [!DNL Data Prep], veuillez lire la [[!DNL Data Prep] présentation](./home.md). Pour savoir comment utiliser les jeux de mappages dans l’API [!DNL Data Prep], consultez le [[!DNL Data Prep] guide de développement](./api/overview.md).

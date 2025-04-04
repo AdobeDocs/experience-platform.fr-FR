@@ -2,20 +2,20 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;connecteurs source;connecteurs source;sources;sources de données;source de données;connexion à la source de données
 solution: Experience Platform
 title: Présentation des connecteurs source
-description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
+description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1552'
-ht-degree: 72%
+source-wordcount: '1557'
+ht-degree: 67%
 
 ---
 
 # Présentation des connecteurs source
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, les stockages dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, les stockages dans le cloud, des bases de données, etc.
 
-[!DNL Flow Service] est utilisé pour collecter et centraliser les données client provenant de diverses sources dans Platform. Le service fournit une interface utilisateur et une API RESTful qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent d’authentifier vos systèmes tiers, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+[!DNL Flow Service] est utilisé pour collecter et centraliser les données client provenant de diverses sources dans Experience Platform. Le service fournit une interface utilisateur et une API RESTful qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent d’authentifier vos systèmes tiers, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
 Experience Platform vous permet de centraliser les données que vous collectez de sources disparates et d’utiliser les informations ainsi acquises pour aller plus loin.
 
@@ -84,7 +84,7 @@ Experience Platform prend en charge l’ingestion de données provenant d’un 
 
 ### Stockage dans le cloud {#cloud-storage}
 
-Les sources de stockage dans le cloud peuvent introduire vos propres données dans Platform sans avoir à les télécharger, les formater ou les transférer. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. L’interface utilisateur permet d’intégrer chaque étape du processus dans le workflow des sources. Pour plus d’informations, consultez les documents connexes suivants :
+Les sources de stockage dans le cloud peuvent importer vos propres données dans Experience Platform sans avoir à les télécharger, les formater ou les charger. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. L’interface utilisateur permet d’intégrer chaque étape du processus dans le workflow des sources. Pour plus d’informations, consultez les documents connexes suivants :
 
 - [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE lot]{type=Informative}
 - [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE lot]{type=Informative}
@@ -228,7 +228,7 @@ Grâce au contrôle d’accès basé sur les attributs, vous pouvez appliquer de
 
 >[!TIP]
 >
->Le contrôle d’accès basé sur les attributs fonctionne comme suit : **les rôles** sont créés pour catégoriser les types d’utilisateurs qui interagissent avec votre instance Platform. Les **libellés** sont appliqués aux **rôles** pour désigner l’accès de ce rôle donné. Les **libellés** sont également appliqués aux ressources telles que les champs de schéma et les segments. Pour qu’un utilisateur ait accès à certains segments et champs de schéma, il doit être ajouté à *un rôle avec le même libellé que celui attribué à la ressource interrogée*. Pour plus d’informations, consultez le guide [complet du contrôle d’accès basé sur les attributs](../access-control/abac/end-to-end-guide.md).
+>Le fonctionnement du contrôle d’accès basé sur les attributs est le suivant : les **rôles** sont créés pour catégoriser les types d’utilisateurs qui interagissent avec votre instance Experience Platform. Les **libellés** sont appliqués aux **rôles** pour désigner l’accès de ce rôle donné. Les **libellés** sont également appliqués aux ressources telles que les champs de schéma et les segments. Pour qu’un utilisateur ait accès à certains segments et champs de schéma, il doit être ajouté à *un rôle avec le même libellé que celui attribué à la ressource interrogée*. Pour plus d’informations, consultez le guide [complet du contrôle d’accès basé sur les attributs](../access-control/abac/end-to-end-guide.md).
 
 - Appliquez des libellés aux champs de schéma pour définir l’accès à des champs de schéma spécifiques dans votre organisation. Une fois l’accès à des champs de schéma spécifiques établi, les utilisateurs ne pourront créer des mappages que pour les champs auxquels ils ont accès.
 - Les utilisateurs ne disposant pas des rôles appropriés ne pourront pas créer ni mettre à jour des flux de données avec des mappages impliquant des champs de schéma inaccessibles. En outre, les utilisateurs non autorisés ne peuvent pas mettre à jour, supprimer, activer ou désactiver les flux de données existants avec des champs de schéma inaccessibles.

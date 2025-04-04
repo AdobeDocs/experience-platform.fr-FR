@@ -2,12 +2,12 @@
 keywords: Experience Platform;profil;profil client en temps réel;dépannage;API;activer un jeu de données
 title: Configurer un jeu de données pour le profil et le Service d’identités à l’aide d’API
 type: Tutorial
-description: Ce tutoriel vous explique comment activer un jeu de données à utiliser avec Real-Time Customer Profile et Identity Service à l’aide des API Adobe Experience Platform.
+description: Ce tutoriel vous explique comment activer un jeu de données à utiliser avec le profil client en temps réel et le service d’identités à l’aide des API Adobe Experience Platform.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
-source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1069'
-ht-degree: 94%
+source-wordcount: '1070'
+ht-degree: 92%
 
 ---
 
@@ -19,19 +19,19 @@ Ce tutoriel décrit le processus d’activation d’un jeu de données en vue de
    - [Créer un nouveau jeu de données](#create-a-dataset-enabled-for-profile-and-identity)
    - [Configurer un jeu de données existant](#configure-an-existing-dataset)
 1. [Ingestion de données dans le jeu de données](#ingest-data-into-the-dataset)
-1. [ Confirmation de l’ingestion des données par Real-Time Customer Profile ](#confirm-data-ingest-by-real-time-customer-profile)
+1. [Confirmer l’ingestion des données par le profil client en temps réel](#confirm-data-ingest-by-real-time-customer-profile)
 1. [Confirmation de l’ingestion des données par le service d’identités](#confirm-data-ingest-by-identity-service)
 
 ## Prise en main
 
-Ce tutoriel nécessite une connaissance pratique des différents services Adobe Experience Platform impliqués dans la gestion des jeux de données activés pour Profil. Avant de commencer ce tutoriel, consultez la documentation relative à ces services [!DNL Platform] associés :
+Ce tutoriel nécessite une connaissance pratique des différents services Adobe Experience Platform impliqués dans la gestion des jeux de données activés pour Profil. Avant de commencer ce tutoriel, consultez la documentation relative à ces services [!DNL Experience Platform] associés :
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
-- [[!DNL Identity Service]](../../identity-service/home.md) : permet d’activer [!DNL Real-Time Customer Profile] en établissant un lien entre les identités des sources de données disparates ingérées dans [!DNL Platform].
+- [[!DNL Identity Service]](../../identity-service/home.md) : permet d’activer [!DNL Real-Time Customer Profile] en établissant un lien entre les identités des sources de données disparates ingérées dans [!DNL Experience Platform].
 - [[!DNL Catalog Service]](../../catalog/home.md) : API RESTful qui vous permet de créer des jeux de données et de les configurer pour [!DNL Real-Time Customer Profile] et [!DNL Identity Service].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à des API Platform.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin afin de passer des appels avec succès aux API Experience Platform.
 
 ### Lecture d’exemples d’appels API
 
@@ -39,7 +39,7 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -47,11 +47,11 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 
 Toutes les requêtes contenant une payload (POST, PUT, PATCH) nécessitent un en-tête `Content-Type` supplémentaire : La valeur correcte de cet en-tête s’affiche dans les exemples de requêtes, le cas échéant.
 
-Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête `x-sandbox-name` spécifiant le nom du sandbox dans lequel l’opération sera effectuée. Pour plus d’informations sur les sandbox dans [!DNL Platform], consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
+Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Experience Platform] nécessitent un en-tête `x-sandbox-name` spécifiant le nom du sandbox dans lequel l’opération sera effectuée. Pour plus d’informations sur les sandbox dans [!DNL Experience Platform], consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
 
 ## Créer un jeu de données activé pour Profile et Service d’identités {#create-a-dataset-enabled-for-profile-and-identity}
 
-Vous pouvez activer un jeu de données pour Real-Time Customer Profile et Identity Service dès sa création ou à tout moment après la création du jeu de données. Si vous souhaitez activer un jeu de données déjà créé, suivez les étapes de [configuration d’un jeu de données existant](#configure-an-existing-dataset) qui se trouvent plus bas dans ce document.
+Vous pouvez activer un jeu de données pour Profil client en temps réel et Service d’identités dès sa création ou à tout moment après sa création. Si vous souhaitez activer un jeu de données déjà créé, suivez les étapes de [configuration d’un jeu de données existant](#configure-an-existing-dataset) qui se trouvent plus bas dans ce document.
 
 >[!NOTE]
 >

@@ -6,10 +6,10 @@ description: Utilisez cet exemple de scénario comme exemple lors de la configur
 feature: Get Started, B2B
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: 90323c32833b0d8a2b4feb88b8eb851bc767c2f8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1174'
-ht-degree: 67%
+source-wordcount: '1185'
+ht-degree: 52%
 
 ---
 
@@ -30,7 +30,7 @@ Ce workflow de tutoriel repose sur plusieurs services Adobe Experience Platfor
 
 ## Création de schémas pour vos données
 
-Dans le cadre de la configuration initiale, le service informatique de Bodea doit créer un schéma XDM pour s’assurer que ses données suivent un format standard lors de leur importation dans Platform et qu’elles sont exploitables dans différents services Platform et produits Adobe Experience Cloud (Adobe Analytics et Adobe Target, par exemple). 
+Dans le cadre de la configuration initiale, le service informatique de Bodea doit créer un schéma XDM pour s’assurer que ses données suivent un format standard lors de leur importation dans Experience Platform et qu’elles sont exploitables dans différents services Experience Platform et produits Adobe Experience Cloud (tels qu’Adobe Analytics et Adobe Target).
 
 >[!WARNING]
 >
@@ -58,15 +58,15 @@ Le profil client en temps réel fusionne des données provenant de sources dispa
 
 ## Ingestion de données dans Experience Platform
 
-Ensuite, le spécialiste marketing Bodea utilise le [connecteur Marketo Engage](../sources/connectors/adobe-applications/marketo/marketo.md) pour ingérer des données dans Platform en vue de les utiliser dans des services en aval. Vous pouvez également ingérer des données à l’aide de l’une des sources approuvées pour Real-Time CDP B2B edition.
+Ensuite, le marketeur Bodea utilise le connecteur [Marketo Engage](../sources/connectors/adobe-applications/marketo/marketo.md) pour ingérer des données dans Experience Platform en vue de les utiliser dans des services en aval. Vous pouvez également ingérer des données à l’aide de l’une des sources approuvées pour Real-Time CDP B2B edition.
 
 >[!NOTE]
 > 
->Pour savoir quels connecteurs source sont disponibles pour votre entreprise, vous pouvez afficher le catalogue de sources dans l’interface utilisateur de Platform. Pour accéder au catalogue, sélectionnez **Sources** dans le volet de navigation de gauche, puis sélectionnez **Catalogue**. 
+>Pour savoir quels connecteurs source sont disponibles pour votre organisation, vous pouvez afficher le catalogue de sources dans l’interface utilisateur d’Experience Platform. Pour accéder au catalogue, sélectionnez **Sources** dans le volet de navigation de gauche, puis sélectionnez **Catalogue**. 
 
-Pour créer une connexion entre un compte Marketo et Platform, vous devez acquérir des informations d’authentification. Consultez le [guide sur l’obtention des informations d’authentification du connecteur source Marketo](../sources/connectors/adobe-applications/marketo/marketo-auth.md) pour obtenir des instructions détaillées. 
+Pour créer une connexion entre un compte Marketo et Experience Platform, vous devez acquérir des informations d’authentification. Consultez le [guide sur l’obtention des informations d’authentification du connecteur source Marketo](../sources/connectors/adobe-applications/marketo/marketo-auth.md) pour obtenir des instructions détaillées. 
 
-Après l’acquisition des informations d’authentification, le marketeur Bodea crée une connexion entre le compte Marketo et son organisation Platform. Consultez la documentation pour obtenir des instructions sur [comment connecter un compte Marketo à l’aide de l’interface utilisateur de Platform](../sources/tutorials/ui/create/adobe-applications/marketo.md). 
+Après l’acquisition des informations d’authentification, le marketeur Bodea crée une connexion entre le compte Marketo et son organisation Experience Platform. Consultez la documentation pour obtenir des instructions sur [ comment connecter un compte Marketo à l’aide de l’interface utilisateur d’Experience Platform ](../sources/tutorials/ui/create/adobe-applications/marketo.md).
 
 Le connecteur source du Marketo Engage fournit une fonctionnalité de mappage automatique pour faciliter le processus de mappage de tous vos champs de données à ceux des schémas nouvellement créés. 
 
@@ -74,11 +74,11 @@ Le connecteur source du Marketo Engage fournit une fonctionnalité de mappage a
 > 
 >Si vous avez créé des groupes de champs personnalisés dans vos schémas XDM, il se peut que vous ayez des champs non connectés à ce stade du processus. Veillez à vérifier toutes les valeurs qui renseignent vos groupes de champs personnalisés. 
 
-Le spécialiste marketing Bodea vérifie que tous les groupes de champs sont correctement mappés et poursuit le processus de configuration des sources en initialisant un flux de données. En créant un flux de données pour importer les données Marketo, les données entrantes peuvent être utilisées par les services Platform en aval. Au cours du processus d’ingestion initial, les données sont importées dans Experience Platform sous la forme d’un lot. Ensuite, les données ingérées suivantes sont diffusées en continu dans Profile avec des mises à jour en temps quasi réel. 
+Le spécialiste marketing Bodea vérifie que tous les groupes de champs sont correctement mappés et poursuit le processus de configuration des sources en initialisant un flux de données. En créant un flux de données pour importer les données Marketo, les données entrantes peuvent être utilisées par les services Experience Platform en aval. Au cours du processus d’ingestion initial, les données sont importées dans Experience Platform sous la forme d’un lot. Ensuite, les données ingérées suivantes sont diffusées en continu dans Profile avec des mises à jour en temps quasi réel. 
 
 ## Création d’une audience pour évaluer vos données
 
-La tâche suivante consiste à créer une audience pour la nouvelle campagne de marketing par e-mail de Bodea en fonction d’attributs spécifiques des entités associées dans les données source. Dans l’interface utilisateur de Platform, le spécialiste marketing Bodea commence par sélectionner **[!UICONTROL Segments]** dans le volet de navigation de gauche, puis **[!UICONTROL Créer un segment]**.
+La tâche suivante consiste à créer une audience pour la nouvelle campagne de marketing par e-mail de Bodea en fonction d’attributs spécifiques des entités associées dans les données source. Dans l’interface utilisateur d’Experience Platform, le marketeur Bodea commence par sélectionner **[!UICONTROL Segments]** dans le volet de navigation de gauche, puis **[!UICONTROL Créer un segment]**.
 
 Dans cet exemple, l’audience trouve toutes les personnes qui travaillent dans le service des ventes et qui sont liées à n’importe quel compte ayant au moins une opportunité ouverte. Ces audiences nécessitent un lien entre la classe XDM Individual Profile, la classe XDM Business Account et la classe XDM Business Opportunity.
 
@@ -94,7 +94,7 @@ Le créateur de segments vous permet de créer une audience vendable à partir d
 
 Une fois l’audience créée, un résumé est fourni dans la section [!UICONTROL Détails] de l’espace de travail. Comme aucune destination n’est actuellement activée pour la définition de segment, le marketeur Bodea doit exporter l’audience vers un jeu de données où elle peut être accessible et sur lequel il peut agir.
 
-Dans l’espace de travail [!UICONTROL Segments] de l’interface utilisateur de Platform, le spécialiste marketing Bodea sélectionne **[!UICONTROL Activer vers la destination]**.
+Dans l’espace de travail [!UICONTROL Segments] de l’interface utilisateur d’Experience Platform, le marketeur Bodea sélectionne **[!UICONTROL Activer vers la destination]**.
 
 ![Activer l’audience vers une destination](./assets/b2b-tutorial/activate-to-destination.png)
 
@@ -102,7 +102,7 @@ Dans l’espace de travail [!UICONTROL Segments] de l’interface utilisateur de
 > 
 >Consultez le tutoriel sur [l’activation d’une audience vers une destination](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=fr) pour obtenir des instructions complètes sur la manière d’y parvenir.
 
-Le marketeur Bodea active l’audience vers la destination Marketo, ce qui lui permet de transférer les données de l’audience de Platform vers Marketo Engage sous la forme d’une liste statique. Consultez le guide sur la [Destination Marketo](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html?lang=fr) pour plus d’informations.
+Le marketeur Bodea active l’audience vers la destination Marketo, ce qui lui permet de transférer les données de l’audience d’Experience Platform vers Marketo Engage sous la forme d’une liste statique. Consultez le guide sur la [Destination Marketo](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html?lang=fr) pour plus d’informations.
 
 ## Étapes suivantes
 

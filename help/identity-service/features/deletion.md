@@ -2,10 +2,10 @@
 title: Suppressions dans le service d’identités
 description: Ce document présente les différents mécanismes que vous pouvez utiliser pour supprimer vos données d’identité dans Experience Platform et explique clairement comment les graphiques d’identités peuvent être affectés.
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1198'
-ht-degree: 95%
+source-wordcount: '1201'
+ht-degree: 91%
 
 ---
 
@@ -23,7 +23,7 @@ Le document ci-dessous fait référence aux fonctions suivantes d’Experience P
 
 * [Service d’identités](../home.md) : obtenez une meilleure compréhension des clients individuels et de leurs comportements en reliant les identités entre les appareils et les systèmes.
    *  [Graphique d’identités](./identity-graph-viewer.md) : Un graphique d’identités est une carte des relations entre différentes identités pour un client spécifique. Il permet de visualiser la façon dont un client interagit avec votre marque sur différents canaux.
-   * [Espaces de noms d’identité](./namespaces.md) : Les espaces de noms d’identité sont des composants du service d’identités qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur &quot;name<span>@email.com&quot; comme adresse électronique ou &quot;443522&quot; comme identifiant CRMID numérique.
+   * [Espaces de noms d’identité](./namespaces.md) : Les espaces de noms d’identité sont des composants du service d’identités qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur de « name<span>@email.com » comme adresse e-mail ou « 443522 » comme CRMID numérique.
 * [Service de catalogue](../../catalog/home.md) : découvrez le traçabilité des données, les métadonnées, les descriptions de fichiers, les répertoires et les jeux de données dans le lac de données.
 * [Hygiène des données](../../hygiene/home.md) : gérez vos données client stockées en planifiant des expirations de jeux de données automatisées ou en supprimant des enregistrements individuels d’un jeu de données ou de tous les jeux de données.
 * [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) : gère les demandes de clients souhaitant accéder à leurs données personnelles, en refuser la vente ou les effacer dans différentes applications Adobe Experience Cloud.
@@ -31,13 +31,13 @@ Le document ci-dessous fait référence aux fonctions suivantes d’Experience P
 
 ## Suppressions d’identité unique
 
-Les demandes de suppression d’identité unique vous permettent de supprimer une identité dans un graphique, ce qui entraîne la suppression des liens liés à une seule identité utilisateur associée à un espace de noms d’identité. Vous pouvez utiliser les mécanismes fournis par [Privacy Service](../../privacy-service/home.md) pour les cas d’utilisation tels que les demandes de suppression de données des clients et la conformité aux réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD).
+Les demandes de suppression d’identité unique vous permettent de supprimer une identité dans un graphique, ce qui entraîne la suppression des liens liés à une seule identité utilisateur associée à un espace de noms d’identité. Vous pouvez utiliser les mécanismes fournis par [Privacy Service](../../privacy-service/home.md) pour des cas d’utilisation tels que les demandes de suppression de données de la part des clients et la conformité aux réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD).
 
 Les sections ci-dessous décrivent les mécanismes que vous pouvez utiliser pour les demandes de suppression d’identité uniques dans Experience Platform.
 
 ### Suppression d’une identité unique dans Privacy Service
 
-Privacy Service traite les demandes des clients en matière dʼaccès, d’opt-out de vente ou de suppression de leurs données personnelles conformément aux réglementations de confidentialité telles que le Règlement général sur la protection des données (RGPD) et le California Consumer Privacy Act (CCPA). Avec Privacy Service, vous pouvez envoyer des requêtes de traitement à l’aide de l’API ou de l’interface utilisateur. Lorsqu’Experience Platform reçoit une demande de suppression de la part de Privacy Service, Platform envoie une confirmation à Privacy Service pour confirmer que la demande a été reçue et que les données concernées ont été marquées pour suppression. La suppression de l’identité individuelle est basée sur l’espace de noms et/ou la valeur d’identifiant fournis. En outre, la suppression a lieu pour tous les sandbox associés à une organisation donnée. Pour plus d’informations, consultez le guide sur le [traitement des demandes d’accès à des informations personnelles dans le service d’identités](../privacy.md).
+Privacy Service traite les demandes des clients en matière dʼaccès, d’opt-out de vente ou de suppression de leurs données personnelles conformément aux réglementations de confidentialité telles que le Règlement général sur la protection des données (RGPD) et le California Consumer Privacy Act (CCPA). Avec Privacy Service, vous pouvez envoyer des requêtes de traitement à l’aide de l’API ou de l’interface utilisateur. Lorsqu’Experience Platform reçoit une demande de suppression de Privacy Service, Experience Platform envoie une confirmation à Privacy Service pour confirmer que la demande a été reçue et que les données concernées ont été marquées pour suppression. La suppression de l’identité individuelle est basée sur l’espace de noms et/ou la valeur d’identifiant fournis. En outre, la suppression a lieu pour tous les sandbox associés à une organisation donnée. Pour plus d’informations, consultez le guide sur le [traitement des demandes d’accès à des informations personnelles dans le service d’identités](../privacy.md).
 
 Le tableau ci-dessous fournit une répartition de la suppression d’identité unique dans Privacy Service :
 
@@ -56,7 +56,7 @@ Les sections suivantes décrivent les mécanismes qui peuvent être utilisés po
 
 ### Suppression d’un jeu de données dans Catalog Service
 
-Vous pouvez utiliser Catalog Service pour envoyer des demandes de suppression de jeux de données. Pour plus d’informations sur la suppression de jeux de données avec Catalog Service, consultez le guide sur la [suppression d’objets à l’aide de Catalog Service](../../catalog/api/delete-object.md). Vous pouvez également utiliser l’interface utilisateur de Platform pour envoyer des requêtes de suppression de jeux de données. Pour plus d’informations, consultez le [guide d’utilisation des jeux de données](../../catalog/datasets/user-guide.md#delete-a-dataset).
+Vous pouvez utiliser Catalog Service pour envoyer des demandes de suppression de jeux de données. Pour plus d’informations sur la suppression de jeux de données avec Catalog Service, consultez le guide sur la [suppression d’objets à l’aide de Catalog Service](../../catalog/api/delete-object.md). Vous pouvez également utiliser l’interface utilisateur d’Experience Platform pour envoyer des demandes de suppression de jeux de données. Pour plus d’informations, consultez le [guide d’utilisation des jeux de données](../../catalog/datasets/user-guide.md#delete-a-dataset).
 
 ### Expiration des jeux de données dans l’hygiène des données
 
@@ -66,7 +66,7 @@ Le tableau ci-dessous présente les différences entre la suppression de jeux de
 
 | Suppression d’un jeu de données | Service de catalogue | Hygiène des données |
 | --- | --- | --- |
-| Cas d’utilisation acceptés | Supprimer les jeux de données complets et les informations d’identité associées dans Platform. | Gestion des données stockées dans Experience Platform. |
+| Cas d’utilisation acceptés | Supprimez les jeux de données complets et les informations d’identité associées dans Experience Platform. | Gestion des données stockées dans Experience Platform. |
 | Latence estimée | Jours | Jours |
 | Services concernés | La suppression de jeux de données par le biais de Catalog Service supprime les données du service d’identités, du profil client en temps réel et du lac de données. | La suppression de jeux de données avec l’hygiène des données supprime les données du service d’identités, du profil client en temps réel et du lac de données. |
 | Modèle de suppression | Supprimer les identités liées du service d’identités établies par un jeu de données spécifique. | Supprimer les identités liées du service d’identités établies par un jeu de données spécifique, selon le calendrier d’expiration. |
@@ -97,7 +97,7 @@ You can use [Data hygiene](../hygiene/home.md) for data cleansing, removing anon
 
 ### Single identity deletion in the [!UICONTROL Data Hygiene] workspace
 
-The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Platform UI allows you to delete consumer records that are participating in Identity Service and Real-Time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/record-delete.md).
+The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Experience Platform UI allows you to delete consumer records that are participating in Identity Service and Real-Time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/record-delete.md).
 
 The table below provides a breakdown of differences between single identity deletion in Privacy Service and Data hygiene:
 

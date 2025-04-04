@@ -2,10 +2,10 @@
 description: Découvrez comment configurer un mécanisme d’authentification pour la destination et déterminez ce que les utilisateurs verront dans l’interface utilisateur en fonction de la méthode d’authentification que vous sélectionnez.
 title: Configuration de l’authentification du client
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1101'
-ht-degree: 97%
+source-wordcount: '1103'
+ht-degree: 91%
 
 ---
 
@@ -20,13 +20,13 @@ Pour comprendre la place de ce composant dans une intégration créée avec Dest
 * [Utiliser Destination SDK pour configurer une destination de diffusion en streaming](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [Utilisation de Destination SDK pour configurer une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
-Avant de pouvoir exporter des données de Platform vers la destination, une nouvelle connexion entre Experience Platform et la destination doit être créée, en suivant les étapes décrites dans le tutoriel de [connexion à la destination](../../../ui/connect-destination.md).
+Avant de pouvoir exporter des données d’Experience Platform vers la destination, une nouvelle connexion entre Experience Platform et la destination doit être établie, en suivant les étapes décrites dans le tutoriel [connexion de destination](../../../ui/connect-destination.md).
 
 Pendant la [création d’une destination](../../authoring-api/destination-configuration/create-destination-configuration.md) avec Destination SDK, la section `customerAuthenticationConfigurations` définit ce que voit la clientèle sur l’[écran d’authentification](../../../ui/connect-destination.md#authenticate). Selon le type d’authentification de destination, divers détails d’authentification doivent être fournis, notamment :
 
 * Pour les destinations qui utilisent un moyen d’[authentification de base](#basic), les utilisateurs doivent fournir un nom d’utilisateur et un mot de passe directement dans la page d’authentification de l’interface utilisateur Experience Platform.
 * Pour les destinations qui utilisent l’[authentification du porteur](#bearer), les utilisateurs doivent fournir un jeton porteur.
-* Pour les destinations qui utilisent l’autorisation [OAuth2](#oauth2), les utilisateurs sont redirigés vers la page de connexion de votre destination où ils peuvent se connecter avec leurs informations d’identification.
+* Pour les destinations qui utilisent l’autorisation [OAuth2](#oauth2), les utilisateurs sont redirigés vers la page de connexion de la destination, où ils peuvent se connecter à l’aide de leurs informations d’identification.
 * Pour les destinations [Amazon S3](#s3), les utilisateurs doivent fournir leurs clés d’accès et clé secrète [!DNL Amazon S3].
 * Pour les destinations [Azure Blob](#blob), les utilisateurs doivent fournir leur chaîne de connexion [!DNL Azure Blob].
 
@@ -39,7 +39,7 @@ Cet article décrit toutes les configurations d’authentification du client pri
 
 >[!IMPORTANT]
 >
->La configuration de l’authentification du client ne demande pas que vous configuriez des paramètres. Vous pouvez copier et coller les fragments de code affichés sur cette page dans vos appels API au moment de la [création](../../authoring-api/destination-configuration/create-destination-configuration.md) ou la [mise à jour](../../authoring-api/destination-configuration/update-destination-configuration.md) d’une configuration de destination, et vos utilisateurs verront l’écran d’authentification correspondant apparaître dans l’interface utilisateur de Platform.
+>La configuration de l’authentification du client ne demande pas que vous configuriez des paramètres. Vous pouvez copier et coller les fragments de code affichés sur cette page dans vos appels API au moment de la [création](../../authoring-api/destination-configuration/create-destination-configuration.md) ou [mise à jour](../../authoring-api/destination-configuration/update-destination-configuration.md) d’une configuration de destination, et vos utilisateurs verront l’écran d’authentification correspondant apparaître dans l’interface utilisateur d’Experience Platform.
 
 >[!IMPORTANT]
 >

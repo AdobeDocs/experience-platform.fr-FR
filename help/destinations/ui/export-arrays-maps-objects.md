@@ -3,9 +3,9 @@ title: Exporter des tableaux, des mappages et des objets à partir de Real-Time 
 type: Tutorial
 description: Découvrez comment exporter des tableaux, des mappages et des objets de Real-Time CDP vers des destinations d’espace de stockage.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 2d59a92d7ff1e0be7977a90df460190a3b417809
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1096'
 ht-degree: 13%
 
 ---
@@ -42,7 +42,7 @@ Obtenez les informations les plus importantes sur les fonctionnalités de cette 
 * Vous pouvez exporter des tableaux, des mappages et des objets vers des destinations d’espace de stockage dans des fichiers `JSON` et `Parquet`. Pour les destinations de personnalisation d’entreprise et Edge, le type de données exporté est `JSON`. Les audiences de personnes et de prospects sont prises en charge, contrairement aux audiences de compte.
 * Pour les destinations de stockage dans le cloud basées sur des fichiers, vous *pouvez* exporter des tableaux, des mappages et des objets vers des fichiers CSV, mais uniquement en utilisant la fonctionnalité de champs calculés et en les concaténant dans une chaîne à l’aide de la fonction `array_to_string`.
 
-## Tableaux et autres types d’objets dans Platform {#arrays-strings-other-objects}
+## Tableaux et autres types d’objets dans Experience Platform {#arrays-strings-other-objects}
 
 Dans Experience Platform, vous pouvez utiliser des [schémas XDM](/help/xdm/home.md) pour gérer différents types de champs. Avant l’ajout de la prise en charge des exportations de tableaux, vous pouviez exporter des champs de type paire clé-valeur simples, tels que des chaînes, à partir d’Experience Platform vers les destinations souhaitées. `personalEmail.address`:`johndoe@acme.org` est un exemple de champ de ce type, précédemment pris en charge pour l’exportation.
 

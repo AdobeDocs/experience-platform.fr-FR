@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Janvier 2024
 description: Notes de mise à jour de janvier 2024 pour Adobe Experience Platform.
 exl-id: d4b3c5b2-3adb-41fd-91ad-f4c0f21d2325
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1659'
-ht-degree: 100%
+source-wordcount: '1662'
+ht-degree: 95%
 
 ---
 
@@ -43,9 +43,9 @@ Pour commencer à utiliser les [!UICONTROL Playbooks de cas d’utilisation], co
 
 ## Contrôle d’accès basé sur les attributs {#abac}
 
-Le contrôle d’accès basé sur les attributs est une fonctionnalité d’Adobe Experience Platform qui offre une plus grande flexibilité dans la gestion de l’accès utilisateur. Elle est destinée aux marques veillant à garantir un haut niveau de confidentialité. Les objets individuels tels que les champs de schéma et les segments peuvent être affectés à des rôles d’utilisateur. Cette fonctionnalité vous permet d’accorder ou de révoquer l’accès à des objets individuels pour des utilisateurs Platform spécifiques au sein de votre organisation.
+Le contrôle d’accès basé sur les attributs est une fonctionnalité d’Adobe Experience Platform qui offre une plus grande flexibilité dans la gestion de l’accès utilisateur. Elle est destinée aux marques veillant à garantir un haut niveau de confidentialité. Les objets individuels tels que les champs de schéma et les segments peuvent être affectés à des rôles d’utilisateur. Cette fonctionnalité vous permet d’accorder ou de révoquer l’accès à des objets individuels pour des utilisateurs Experience Platform spécifiques au sein de votre organisation.
 
-Grâce au contrôle d’accès basé sur les attributs, les administrateurs de votre organisation peuvent contrôler l’accès des utilisateurs aux données personnelles sensibles (SPD), aux informations d’identification personnelle (PII) et à d’autres types de données personnalisées sur l’ensemble des workflows et ressources de Platform. Les administrateurs et administratrices peuvent définir des rôles d’utilisateur ou d’utilisatrice qui n’ont accès qu’à des champs spécifiques et aux données correspondant à ces champs.
+Grâce au contrôle d’accès basé sur les attributs, les administrateurs de votre organisation peuvent contrôler l’accès des utilisateurs aux données personnelles sensibles (SPD), aux informations d’identification personnelle (PII) et à d’autres types de données personnalisées sur l’ensemble des workflows et ressources d’Experience Platform. Les administrateurs et administratrices peuvent définir des rôles d’utilisateur ou d’utilisatrice qui n’ont accès qu’à des champs spécifiques et aux données correspondant à ces champs.
 
 **Documentation nouvelle ou mise à jour**
 
@@ -79,7 +79,7 @@ Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Afficher le SQL | Vous pouvez désormais afficher le code SQL de vos profils, audiences, destinations et insights personnalisés à l’aide du bouton (bascule) « Afficher le code SQL », puis exécuter la requête à la demande via le Requêteur. Accéder au langage SQL qui alimente vos insights de Real-Time Customer Data Platform vous aide à comprendre la logique qui sous-tend l’analyse de votre modèle de données. Cette transparence rend les données Adobe Real-time CDP plus accessibles, plus compréhensibles et plus utiles à la prise de décision.<br>Tirez parti du code SQL de plus de 40 insights existants pour créer de nouvelles requêtes qui obtiennent des insights uniques à partir des données de Platform en fonction des besoins de votre entreprise. Le langage SQL est également disponible pour vos insights [Profils](../../dashboards/insights/profiles.md), [Audiences](../../dashboards/insights/audiences.md), et [Destinations](../../dashboards/insights/destinations.md) dans la documentation sur Experience League. Ces documents mettent en évidence les cas d’utilisation professionnels auxquels des insights standards peuvent répondre. Pour plus d’informations, consultez le guide sur l’[affichage des insights SQL](../../dashboards/view-sql.md). |
+| Afficher le SQL | Vous pouvez désormais afficher le code SQL de vos profils, audiences, destinations et insights personnalisés à l’aide du bouton (bascule) « Afficher le code SQL », puis exécuter la requête à la demande via le Requêteur. Accéder au langage SQL qui alimente vos insights de Real-Time Customer Data Platform vous aide à comprendre la logique qui sous-tend l’analyse de votre modèle de données. Cette transparence rend les données Adobe Real-time CDP plus accessibles, plus compréhensibles et plus utiles à la prise de décision.<br>Inspirez-vous du SQL de plus de 40 informations existantes pour créer de nouvelles requêtes qui obtiennent des informations uniques à partir des données Experience Platform en fonction des besoins de votre entreprise. Le langage SQL est également disponible pour vos insights [Profils](../../dashboards/insights/profiles.md), [Audiences](../../dashboards/insights/audiences.md), et [Destinations](../../dashboards/insights/destinations.md) dans la documentation sur Experience League. Ces documents mettent en évidence les cas d’utilisation professionnels auxquels des insights standards peuvent répondre. Pour plus d’informations, consultez le guide sur l’[affichage des insights SQL](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 
@@ -158,7 +158,7 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 
 Pour en savoir plus sur le profil client en temps réel, lisez d’abord la [présentation des profils](../../profile/home.md).
 
-## Segmentation Service {#segmentation}
+## Service de segmentation {#segmentation}
 
 [!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
 

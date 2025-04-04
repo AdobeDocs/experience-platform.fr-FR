@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Guide de dépannage du service d’identités
 description: Ce document fournit des réponses aux questions fréquentes sur le service d’identités d’Adobe Experience Platform, ainsi qu’un guide de dépannage pour les erreurs courantes.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2165'
-ht-degree: 99%
+source-wordcount: '2168'
+ht-degree: 96%
 
 ---
 
 # Guide de dépannage du service d’identités
 
-Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform [!DNL Identity Service] ainsi qu’un guide de dépannage pour les erreurs courantes. Pour toute question ou tout dépannage concernant les API de [!DNL Platform] en général, reportez-vous au [guide de dépannage des API d’Adobe Experience Platform](../landing/troubleshooting.md).
+Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform [!DNL Identity Service] ainsi qu’un guide de dépannage pour les erreurs courantes. Pour toute question ou tout dépannage concernant les API de [!DNL Experience Platform] en général, reportez-vous au [guide de dépannage des API d’Adobe Experience Platform](../landing/troubleshooting.md).
 
 Les données qui identifient un client unique sont souvent fragmentées sur les différents appareils et systèmes qu’il utilise pour interagir avec votre marque. [!DNL Identity Service] rassemble ces identités fragmentées, ce qui permet une compréhension complète du comportement des clients afin que vous puissiez offrir des expériences digitales percutantes en temps réel. Pour plus d’informations, voir la [Présentation du service d’identités](./home.md).
 
@@ -31,7 +31,7 @@ L’étiquetage de certains champs de données comme identités dans vos donnée
 
 ## Que sont les identités connues et anonymes ?
 
-Une identité connue fait référence à une valeur d’identité pouvant être utilisée seule ou avec d’autres informations pour identifier, contacter ou localiser une personne. Les adresses électroniques, les numéros de téléphone et les CRMID sont des exemples d’identités connues.
+Une identité connue fait référence à une valeur d’identité pouvant être utilisée seule ou avec d’autres informations pour identifier, contacter ou localiser une personne. Parmi les exemples d’identités connues, citons les adresses e-mail, les numéros de téléphone et les CRMID.
 
 Une identité anonyme fait référence à une valeur d’identité ne pouvant pas être utilisée seule ou avec d’autres informations pour identifier, contacter ou localiser une personne (un identifiant de cookie, par exemple).
 
@@ -89,7 +89,7 @@ Les identités sont référencées dans les appels API par leur identité compos
 
 ## Comment le service d’identités gère-t-il les données personnelles identifiables (PII) ?
 
-Le service d’identités dispose d’espaces de noms standard pour prendre en charge l’ingestion de valeurs d’identité hachées pour les numéros de téléphone et les e-mails. Cependant, vous êtes vous-même responsable du hachage des valeurs. Pour en savoir plus sur le hachage de données ingérées dans Platform, consultez le [[!DNL Data Prep] guide des fonctions de mappage](../data-prep/functions.md#hashing).
+Le service d’identités dispose d’espaces de noms standard pour prendre en charge l’ingestion de valeurs d’identité hachées pour les numéros de téléphone et les e-mails. Cependant, vous êtes vous-même responsable du hachage des valeurs. Pour en savoir plus sur le hachage de données ingérées dans Experience Platform, consultez le guide [[!DNL Data Prep] des fonctions de mappage](../data-prep/functions.md#hashing).
 
 ## Y a-t-il des considérations à prendre en compte lors du hachage des identités basées sur les données personnelles identifiables ?
 
@@ -115,7 +115,7 @@ Internal solutions|Preferred|Common
 
 ## Pourquoi ne puis-je pas accéder à la page de graphique d’identité ou aux API ?
 
-Votre administrateur Platform doit vous fournir l’autorisation `view-identity-graph` pour que vous puissiez afficher les données du graphique d’identité. Sans cette autorisation, vous recevrez un message de refus d’autorisation sur la page de la visionneuse de graphiques d’identité et lors de l’appel aux API Platform. Pour plus d’informations sur les autorisations, consultez la [présentation du contrôle d’accès](../access-control/home.md).
+Votre administrateur Experience Platform doit vous fournir l’autorisation `view-identity-graph` pour que vous puissiez afficher les données du graphique d’identité. Sans cette autorisation, vous recevrez un message de refus d’autorisation sur la page de la visionneuse de graphiques d’identité et lors de l’appel aux API Experience Platform. Pour plus d’informations sur les autorisations, consultez la [présentation du contrôle d’accès](../access-control/home.md).
 
 ## Dépannage
 
@@ -216,7 +216,7 @@ Ce message d’erreur s’affiche lorsque votre organisation n’a pas reçu les
 }
 ```
 
-Cette erreur indique que votre jeton d’accès n’est pas valide. Les jetons d’accès expirent toutes les 24 heures et doivent être régénérés pour continuer à utiliser les API de [!DNL Platform]. Pour obtenir des instructions sur la génération de jetons d’accès, consultez le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
+Cette erreur indique que votre jeton d’accès n’est pas valide. Les jetons d’accès expirent toutes les 24 heures et doivent être régénérés pour continuer à utiliser les API de [!DNL Experience Platform]. Pour obtenir des instructions sur la génération de jetons d’accès, consultez le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
 
 ### Jeton de service d’autorisation non valide
 
@@ -228,7 +228,7 @@ Cette erreur indique que votre jeton d’accès n’est pas valide. Les jetons d
 }
 ```
 
-Cette erreur indique que votre jeton d’accès n’est pas valide. Les jetons d’accès expirent toutes les 24 heures et doivent être régénérés pour continuer à utiliser les API de [!DNL Platform]. Pour obtenir des instructions sur la génération de jetons d’accès, consultez le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
+Cette erreur indique que votre jeton d’accès n’est pas valide. Les jetons d’accès expirent toutes les 24 heures et doivent être régénérés pour continuer à utiliser les API de [!DNL Experience Platform]. Pour obtenir des instructions sur la génération de jetons d’accès, consultez le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr).
 
 ### Le jeton utilisateur n’a pas de contexte de produit valide
 
@@ -276,11 +276,11 @@ Ce message d’erreur s’affiche lorsque votre organisation n’a pas reçu les
 }
 ```
 
-Cette erreur s’affiche quand une exception inattendue se produit lors de l’exécution d’un appel du service [!DNL Platform]. La bonne pratique consiste à programmer vos appels automatisés afin de relancer leurs requêtes à un intervalle de temps donné lors de la réception de cette erreur. Si le problème persiste, contactez votre administrateur système.
+Cette erreur s’affiche lorsqu’une exception inattendue se produit lors de l’exécution d’un appel du service [!DNL Experience Platform]. La bonne pratique consiste à programmer vos appels automatisés afin de relancer leurs requêtes à un intervalle de temps donné lors de la réception de cette erreur. Si le problème persiste, contactez votre administrateur système.
 
 ## Codes d’erreur d’ingestion par lots
 
-[!DNL Identity Service] ingère des données d’identité à partir des données d’enregistrement et de série temporelle téléchargées dans [!DNL Platform] à l’aide de la fonction d’ingestion par lots. L’ingestion par lots est un processus asynchrone, vous devez afficher les détails d’un lot pour voir les erreurs. Les erreurs s’accumulent au fur et à mesure que le lot avance, jusqu’à ce que le traitement du lot soit terminé.
+[!DNL Identity Service] ingère des données d’identité à partir des données d’enregistrement et de série temporelle téléchargées dans [!DNL Experience Platform] à l’aide de la fonction d’ingestion par lots. L’ingestion par lots est un processus asynchrone, vous devez afficher les détails d’un lot pour voir les erreurs. Les erreurs s’accumulent au fur et à mesure que le lot avance, jusqu’à ce que le traitement du lot soit terminé.
 
 Voici une liste des messages d’erreur dans [!DNL Identity Service], que vous pouvez rencontrer lors de l’utilisation de l’[API d’ingestion par lots](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).
 

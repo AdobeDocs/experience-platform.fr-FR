@@ -3,10 +3,10 @@ keywords: Experience Platform;query service;Query service;structures de données
 title: Aplatir les structures de données imbriquées à utiliser avec les outils BI
 description: Ce document explique comment aplatir les schémas XDM pour toutes les tables et vues au cours d’une session lors de l’utilisation d’outils BI tiers avec Query Service.
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '857'
-ht-degree: 100%
+source-wordcount: '858'
+ht-degree: 97%
 
 ---
 
@@ -26,7 +26,7 @@ L’utilisation du paramètre `FLATTEN` nécessite une compréhension du fonctio
 
    * [Création d’un schéma ad hoc](../../xdm/tutorials/ad-hoc.md) : un schéma XDM avec des champs dont l’espace de noms n’est utilisé que par un seul jeu de données est appelé schéma ad hoc. Les schémas ad hoc sont utilisés dans divers workflows d’ingestion de données pour Experience Platform et pour la création de certains types de connexions source.
 
-* [Sandbox](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une seule instance de Platform en environnements virtuels distincts afin de favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sandbox](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 * [Structures de données imbriquées](./nested-data-structures.md) : ce document fournit des exemples de création, de traitement ou de transformation de jeux de données avec des types de données complexes, y compris des structures de données imbriquées.
 

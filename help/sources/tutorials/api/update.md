@@ -2,10 +2,10 @@
 title: Mettre à jour des comptes à l’aide de l’API Flow Service
 description: Ce tutoriel décrit les étapes à suivre pour mettre à jour les détails et les informations d’identification d’un compte à l’aide de l’API Flow Service.
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
-source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '539'
-ht-degree: 91%
+source-wordcount: '544'
+ht-degree: 77%
 
 ---
 
@@ -17,7 +17,7 @@ Ce tutoriel décrit les étapes à suivre pour mettre à jour les détails et le
 
 >[!TIP]
 >
->Vous n’avez pas besoin de créer une nouvelle connexion de base lorsqu’une mise à jour est requise. Toutes les modifications apportées à votre connexion de base sont répercutées dans le flux de données associé.
+>Vous n’avez pas besoin de créer de connexion de base lorsqu’une mise à jour est requise. Toutes les modifications apportées à votre connexion de base sont répercutées dans le flux de données associé.
 
 ## Prise en main
 
@@ -25,12 +25,12 @@ Ce tutoriel nécessite que vous disposiez d’une connexion existante et d’un 
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sources](../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform.
+* [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-### Utiliser les API Platform
+### Utilisation des API Experience Platform
 
-Pour plus d’informations sur la manière d’effectuer des appels vers les API Platform, consultez le guide [Prise en main des API Platform](../../../landing/api-guide.md).
+Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Experience Platform, consultez le guide [Prise en main des API Experience Platform](../../../landing/api-guide.md).
 
 ## Rechercher les détails de la connexion
 

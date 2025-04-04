@@ -2,9 +2,9 @@
 title: Présentation de l’extension Core
 description: Découvrez lʼextension de balise Core dans Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '5445'
+source-wordcount: '5447'
 ht-degree: 95%
 
 ---
@@ -106,9 +106,9 @@ Si lʼélément est une balise de type ancre (`<a>`) de lien vers un contenu, vo
 >
 >Cette option doit être utilisée avec une extrême prudence en raison des conséquences négatives potentielles quʼelle peut entraîner pour lʼexpérience utilisateur si elle est mal utilisée.
 
-Lorsque vous utilisez un retard de lien, Platform empêche le navigateur de quitter la page. Il effectue ensuite une redirection JavaScript vers la destination d’origine après la temporisation spécifiée. C’est particulièrement risqué lorsque le balisage de votre page comporte des balises `<a>` où la fonctionnalité prévue ne permet pas de rediriger l’utilisateur en dehors de la page. S’il vous est impossible de résoudre ce problème d’une autre manière, soyez extrêmement précis quant à la définition de votre sélecteur afin que cet événement se déclenche exactement là où vous en avez besoin et nulle part ailleurs.
+Lorsque vous utilisez un délai de lien, Experience Platform empêche le navigateur de quitter la page. Il effectue ensuite une redirection JavaScript vers la destination d’origine après la temporisation spécifiée. C’est particulièrement risqué lorsque le balisage de votre page comporte des balises `<a>` où la fonctionnalité prévue ne permet pas de rediriger l’utilisateur en dehors de la page. S’il vous est impossible de résoudre ce problème d’une autre manière, soyez extrêmement précis quant à la définition de votre sélecteur afin que cet événement se déclenche exactement là où vous en avez besoin et nulle part ailleurs.
 
-La valeur par défaut du délai de lien est de 100 millisecondes. Notez que les balises attendront toujours le temps spécifié et n’est en aucun cas connecté à l’exécution des actions de la règle. Il est possible que le délai force l’utilisateur à attendre plus longtemps que nécessaire, et également possible que le délai ne soit pas suffisant pour que toutes les actions de la règle se terminent avec succès. Des retards plus longs donnent plus de temps à l’exécution des règles, mais dégradent également l’expérience client.
+La valeur par défaut du délai de lien est de 100 millisecondes. Notez que les balises attendront toujours l’intervalle de temps spécifié et ne sont en aucun cas liées à l’exécution des actions de la règle. Il est possible que le délai oblige l’utilisateur à attendre plus longtemps que nécessaire et qu’il ne soit pas suffisant pour permettre à toutes les actions de la règle de se terminer correctement. Des retards plus longs donnent plus de temps à l’exécution des règles, mais dégradent également l’expérience client.
 
 Pour appliquer le retard, il est nécessaire de fournir à la fois l’élément sélectionné qui déclenche l’événement et l’intervalle de temps précis à respecter avant que l’événement ne soit déclenché.
 
@@ -246,7 +246,7 @@ Exécutez la règle dans un navigateur et examinez l’objet d’événement con
 
 *Séquençage de conditions*
 
-Lorsque l’option &quot;Run rule components in sequence&quot; des paramètres de propriété est activée, vous pouvez faire attendre les composants de règle suivants pendant que votre condition effectue une tâche asynchrone.
+Lorsque l’option « Exécuter les composants de règle en séquence » dans les paramètres de propriété est activée, vous pouvez faire attendre les composants de règle suivants pendant que votre condition effectue une tâche asynchrone.
 
 Lorsque la condition renvoie une [promesse](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise), la prochaine condition de la règle ne s’exécutera pas tant que la promesse renvoyée n’aura pas été résolue. Si la promesse est refusée, les balises considèrent que la condition a échoué et aucune autre condition ou action de cette règle ne sera exécutée.
 
@@ -588,7 +588,7 @@ Le programme de validation utilisé dans lʼéditeur de code de balises est con�
 
 #### Séquencage d’actions
 
-Lorsque l’option &quot;Run rule components in sequence&quot; des paramètres de propriété est activée, vous pouvez faire attendre les composants de règle suivants pendant que votre action effectue une tâche asynchrone.  Cela fonctionne différemment pour le Custom Code JavaScript et HTML.
+Lorsque l’option « Exécuter les composants de règle en séquence » dans les paramètres de propriété est activée, vous pouvez faire attendre les composants de règle suivants pendant que votre action effectue une tâche asynchrone.  Cela fonctionne différemment pour le Custom Code JavaScript et HTML.
 
 *JavaScript*
 
@@ -719,9 +719,9 @@ Dans l’exemple ci-dessous, l’annotation contient une variable JavaScript nom
 </script>
 ```
 
-Lorsque vous créez l’élément de données, fournissez simplement le chemin d’accès à cette variable.
+Lorsque vous créez l’élément de données, il vous suffit de fournir le chemin d’accès à cette variable.
 
-Si vous utilisez un objet collecteur de données dans votre couche de données, utilisez la notation point dans le chemin pour référencer l’objet et la propriété que vous souhaitez capturer dans l’élément de données, par exemple `_myData.pageName`, `digitalData.pageName`, etc.
+Si vous utilisez un objet collecteur de données dans votre couche de données, utilisez la notation point dans le chemin pour faire référence à l’objet et à la propriété que vous souhaitez capturer dans l’élément de données, par exemple `_myData.pageName`, ou `digitalData.pageName`, etc.
 
 #### Exemple :
 
@@ -815,7 +815,7 @@ Seule la section de nom est nécessaire. Les indicateurs spéciaux tels que « 
 
 ### Nombre aléatoire
 
-Utilisez cet élément de données pour générer un nombre aléatoire. Il est souvent utilisé pour échantillonner des données ou pour créer des identifiants, tels qu’un identifiant d’accès. Le nombre aléatoire peut également être utilisé pour obscurcir ou appliquer un salage aux données sensibles. Voici quelques exemples :
+Utilisez cet élément de données pour générer un nombre aléatoire. Elle est souvent utilisée pour échantillonner des données ou créer des identifiants, tels qu’un identifiant d’accès. Le nombre aléatoire peut également être utilisé pour obscurcir ou appliquer un salage aux données sensibles. Voici quelques exemples :
 
 * Générer un ID d’accès
 * Concaténer le nombre à un jeton utilisateur ou à un horodatage pour garantir l’unicité
@@ -838,7 +838,7 @@ Le stockage de session est similaire au stockage local, sauf que les données so
 
 ### Comportement du visiteur
 
-Semblable aux informations sur la page, cet élément de données utilise des types de comportements courants pour enrichir la logique dans les règles ou d’autres solutions Platform.
+Semblable aux informations sur la page, cet élément de données utilise des types de comportement courants pour enrichir la logique dans les règles et autres solutions Experience Platform.
 
 Sélectionnez l’un des attributs de comportement du visiteur suivants :
 

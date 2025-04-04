@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;accès aux données;api d’accès aux données;accès aux données de requête
+keywords: Experience Platform;accueil;rubriques les plus consultées;accès aux données;api data access;query data access
 solution: Experience Platform
-title: Affichage des données d’un jeu de données à l’aide de l’API Data Access
+title: Afficher des données de jeu de données à l’aide de l’API Data Access
 type: Tutorial
-description: Découvrez comment localiser, accéder et télécharger des données stockées dans un jeu de données à l’aide de l’API Data Access de Adobe Experience Platform. Ce document présente certaines des fonctionnalités uniques de l’API Data Access, telles que la pagination et les téléchargements partiels.
+description: Découvrez comment localiser les données stockées dans un jeu de données, les télécharger et y accéder à l’aide de l’API Data Access de Adobe Experience Platform. Ce document présente certaines des fonctionnalités uniques de l’API Data Access, telles que la pagination et les téléchargements partiels.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: 9144a5f4cce88fc89973a7fea6d69384cc5f4ba1
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1365'
 ht-degree: 56%
 
 ---
 
-# Affichage des données d’un jeu de données à l’aide de l’API [!DNL Data Access]
+# Affichage des données du jeu de données à l’aide de l’API [!DNL Data Access]
 
-Utilisez ce tutoriel détaillé pour apprendre à localiser, accéder et télécharger des données stockées dans un jeu de données à l’aide de l’API [!DNL Data Access] dans Adobe Experience Platform. Ce document présente certaines des fonctionnalités uniques de l’API [!DNL Data Access], telles que la pagination et les téléchargements partiels.
+Suivez ce tutoriel détaillé pour découvrir comment localiser les données stockées dans un jeu de données, y accéder et les télécharger à l’aide de l’API [!DNL Data Access] dans Adobe Experience Platform. Ce document présente certaines des fonctionnalités uniques de l’API [!DNL Data Access], telles que la pagination et les téléchargements partiels.
 
 ## Commencer
 
 Ce tutoriel nécessite une compréhension pratique de la création et du remplissage d’un jeu de données. Pour plus d’informations, consultez le [tutoriel sur la création de jeux de données](../../catalog/datasets/create.md).
 
-Les sections suivantes apportent des informations supplémentaires dont vous avez besoin pour passer avec succès des appels aux API Platform.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels aux API Experience Platform.
 
 ### Lecture d’exemples d’appels API {#reading-sample-api-calls}
 
@@ -28,19 +28,19 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels vers les API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](../../landing/api-authentication.md). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le tutoriel [authentification](../../landing/api-authentication.md). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id : `{ORG_ID}`
 
-Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération a lieu :
+Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Experience Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération a lieu :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les sandbox dans [!DNL Platform], consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
+>Pour plus d’informations sur les sandbox dans [!DNL Experience Platform], consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
 
 Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
@@ -48,20 +48,20 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 ## Graphique de séquences
 
-Ce tutoriel suit les étapes décrites dans le diagramme de séquence ci-dessous, mettant en évidence les fonctionnalités de base de l’API [!DNL Data Access].
+Ce tutoriel suit les étapes décrites dans le diagramme de séquence ci-dessous, mettant en évidence les principales fonctionnalités de l’API [!DNL Data Access].
 
-![Schéma de séquence de la fonctionnalité de base de l’API Data Access.](../images/sequence_diagram.png)
+![Diagramme de séquence de la fonctionnalité principale de l’API Data Access.](../images/sequence_diagram.png)
 
-Pour récupérer des informations sur les lots et les fichiers, utilisez l’API [!DNL Catalog]. Pour accéder à ces fichiers et les télécharger sur HTTP sous la forme de téléchargements complets ou partiels, selon la taille du fichier, utilisez l’API [!DNL Data Access].
+Pour récupérer des informations concernant les lots et les fichiers, utilisez l’API [!DNL Catalog]. Pour accéder à ces fichiers et les télécharger sur HTTP sous la forme de téléchargements complets ou partiels, en fonction de la taille du fichier, utilisez l’API [!DNL Data Access].
 
 ## Localisation des données
 
-Avant de pouvoir commencer à utiliser l’API [!DNL Data Access], vous devez identifier l’emplacement des données auxquelles vous souhaitez accéder. Dans l’API [!DNL Catalog], vous pouvez utiliser deux points de terminaison pour parcourir les métadonnées d’une organisation et récupérer l’identifiant d’un lot ou d’un fichier auquel vous souhaitez accéder :
+Avant de pouvoir commencer à utiliser l’API [!DNL Data Access], vous devez identifier l’emplacement des données auxquelles vous souhaitez accéder. Dans l’API [!DNL Catalog], vous pouvez utiliser deux points d’entrée pour parcourir les métadonnées d’une organisation et récupérer l’identifiant d’un lot ou d’un fichier auquel vous souhaitez accéder :
 
 - `GET /batches` : renvoie une liste de lots sous votre organisation
 - `GET /dataSetFiles` : renvoie une liste de fichiers sous votre organisation
 
-Pour obtenir une liste complète des points de terminaison dans l’API [!DNL Catalog], reportez-vous à la [référence API](https://developer.adobe.com/experience-platform-apis/references/catalog/).
+Pour obtenir la liste complète des points d’entrée de l’API [!DNL Catalog], reportez-vous à la [ Référence d’API ](https://developer.adobe.com/experience-platform-apis/references/catalog/).
 
 ## Récupération d’une liste de lots sous votre organisation
 
@@ -85,7 +85,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches/' \
 
 **Réponse**
 
-La réponse comprend un objet qui répertorie tous les lots associés à l’organisation, chaque valeur de niveau supérieur représentant un lot. Les objets de lot individuels contiennent les détails pour ce lot spécifique. La réponse ci-dessous a été réduite pour gagner de l’espace.
+La réponse inclut un objet qui répertorie tous les lots liés à l’organisation, chaque valeur de niveau supérieur représentant un lot. Les objets de lot individuels contiennent les détails pour ce lot spécifique. La réponse ci-dessous a été réduite pour gagner de l’espace.
 
 ```json
 {
@@ -108,7 +108,7 @@ La réponse comprend un objet qui répertorie tous les lots associés à l’org
 
 ### Filtrage de la liste de lots {#filter-batches-list}
 
-Les filtres sont souvent nécessaires pour trouver un lot particulier afin de récupérer les données pertinentes pour un cas d’utilisation particulier. Des paramètres peuvent être ajoutés à une requête `GET /batches` pour filtrer la réponse renvoyée. La requête ci-dessous renvoie tous les lots créés après une période spécifiée, au sein d’un jeu de données spécifique, triés par date de création.
+Des filtres sont souvent nécessaires pour trouver un lot particulier afin de récupérer les données pertinentes pour un cas d’utilisation particulier. Des paramètres peuvent être ajoutés à une requête `GET /batches` pour filtrer la réponse renvoyée. La requête ci-dessous renvoie tous les lots créés après une heure spécifiée, dans un jeu de données spécifique, triés en fonction de la date de création.
 
 **Format d’API**
 
@@ -253,7 +253,7 @@ La réponse contient un tableau de données qui répertorie tous les fichiers au
 
 ## Accès à un fichier à l’aide d’un identifiant de fichier {#access-file-with-file-id}
 
-Une fois que vous disposez d’un identifiant de fichier unique, vous pouvez utiliser l’API [!DNL Data Access] pour accéder aux détails spécifiques sur le fichier, notamment son nom, sa taille en octets et un lien pour le télécharger.
+Une fois que vous disposez d’un identifiant de fichier unique, vous pouvez utiliser l’API [!DNL Data Access] pour accéder aux détails spécifiques du fichier, y compris son nom, sa taille en octets et un lien pour le télécharger.
 
 **Format d’API**
 
@@ -275,7 +275,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Selon que l’identifiant de fichier pointe vers un fichier individuel ou un répertoire, le tableau de données renvoyé peut contenir une seule entrée ou une liste de fichiers appartenant à ce répertoire. Chaque élément de fichier contient des détails tels que le nom du fichier, sa taille en octets et un lien de téléchargement du fichier.
+Selon que l’identifiant de fichier pointe vers un fichier individuel ou un répertoire, le tableau de données renvoyé peut contenir une seule entrée ou une liste de fichiers appartenant à ce répertoire. Chaque élément de fichier contient des détails tels que le nom du fichier, sa taille en octets et un lien pour télécharger le fichier.
 
 **Cas 1 : l’identifiant de fichier pointe vers un fichier unique**
 
@@ -416,7 +416,7 @@ Une réponse réussie renvoie le contenu du fichier.
 
 ## Téléchargement du contenu partiel d’un fichier {#download-partial-file-contents}
 
-Pour télécharger une plage d’octets spécifique d’un fichier, spécifiez un en-tête de plage lors d’une requête `GET /files/{FILE_ID}` vers l’API [!DNL Data Access]. Si la plage n’est pas spécifiée, l’API télécharge l’intégralité du fichier par défaut.
+Pour télécharger une plage d’octets spécifique à partir d’un fichier , spécifiez un en-tête de plage lors d’une requête `GET /files/{FILE_ID}` à l’API [!DNL Data Access]. Si la plage n’est pas spécifiée, l’API télécharge l’intégralité du fichier par défaut.
 
 L’exemple HEAD de la [section précédente](#retrieve-the-metadata-of-a-file) donne la taille d’un fichier particulier en octets.
 
@@ -444,19 +444,19 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 | Propriété | Description |
 | -------- | ----------- | 
-| `Range: bytes=0-99` | Précise la plage d’octets à télécharger. Si cette valeur n’est pas spécifiée, l’API télécharge l’intégralité du fichier. Dans cet exemple, les 100 premiers octets sont téléchargés. |
+| `Range: bytes=0-99` | Précise la plage d’octets à télécharger. Si cela n’est pas spécifié, l’API télécharge l’intégralité du fichier. Dans cet exemple, les 100 premiers octets sont téléchargés. |
 
 **Réponse**
 
 Le corps de la réponse inclut les 100 premiers octets du fichier (comme indiqué par l’en-tête « Plage » dans la requête) avec un état HTTP 206 (Partial Contents). La réponse inclut également les en-têtes suivants :
 
 - Content-Length : 100 (le nombre d’octets renvoyé)
-- Type de contenu : application/parquet (un fichier Parquet a été demandé, par conséquent le type de contenu de la réponse est `parquet`)
+- Type de contenu : application/parquet (un fichier Parquet a été demandé, par conséquent le type de contenu de réponse est `parquet`).
 - Content-Range : bytes 0-99/249058 (la plage demandée (0-99) sur le nombre total d’octets (249058))
 
 ## Configuration de la pagination des réponses de l’API {#configure-response-pagination}
 
-Les réponses de l’API [!DNL Data Access] sont mises en page. Par défaut, 100 est le nombre maximal d’entrées par page. Vous pouvez modifier le comportement par défaut avec les paramètres de pagination.
+Les réponses de l’API [!DNL Data Access] sont paginées. Par défaut, 100 est le nombre maximal d’entrées par page. Vous pouvez modifier le comportement par défaut avec les paramètres de pagination.
 
 - `limit` : vous pouvez spécifier le nombre d’entrées par page en fonction de vos besoins à l’aide du paramètre « limit ».
 - `start` : le décalage peut être défini par le paramètre de requête « start ».
@@ -474,7 +474,7 @@ GET /batches/{BATCH_ID}/files?start={OFFSET}&limit={LIMIT}
 | -------- | ----------- |
 | `{BATCH_ID}` | Identifiant du lot auquel vous souhaitez accéder. |
 | `{OFFSET}` | L’index spécifié pour démarrer le tableau de résultat (par exemple, start=0) |
-| `{LIMIT}` | Contrôle le nombre de résultats renvoyés dans le tableau de résultats (par exemple, limit=1). |
+| `{LIMIT}` | Contrôle le nombre de résultats renvoyés dans le tableau de résultats (par exemple, limit=1) |
 
 **Requête**
 

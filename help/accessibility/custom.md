@@ -4,10 +4,10 @@ title: Solutions d’accessibilité personnalisées pour Experience Platform
 type: Documentation
 description: En savoir plus sur les solutions d’accessibilité personnalisées dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: 2cf28acb5b0ddb4965b2d5120333659e0ac460bf
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1663'
-ht-degree: 92%
+source-wordcount: '1664'
+ht-degree: 89%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Platform est continuellement amélioré pour répondre aux be
 
 L’interface utilisateur d’Experience Platform applique les rapports de contraste requis pour le texte normal, les graphiques et les composants de l’interface utilisateur. Les couleurs de l’interface utilisateur ont également été choisies pour prendre en charge l’accessibilité de tous les utilisateurs, y compris ceux présentant un handicap visuel.
 
-Dans Platform, les éléments de l’interface utilisateur exploitables ou sur lesquels l’utilisateur peut cliquer peuvent également fonctionner à l’aide d’un clavier. Cela inclut le volet de navigation de gauche, les lecteurs vidéo, les tableaux, etc.
+Dans , les éléments de l’interface utilisateur sur lesquels l’utilisateur peut cliquer ou agir à l’aide d’un pointeur peuvent également utiliser un clavier. Cela inclut le volet de navigation de gauche, les lecteurs vidéo, les tableaux, etc.
 
 Experience Platform s’efforce de respecter les normes internationales en matière d’accessibilité. Cela inclut les règles pour l’accessibilité des contenus web 2.1 aux niveaux A et AA, ainsi que les normes web WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications).
 
@@ -41,13 +41,13 @@ Lorsque le focus se trouve sur le volet de navigation de gauche, les touches fl�
 
 ![Volet de navigation de gauche d’Experience Platform avec l’élément Sources sélectionné.](images/left-navigation-sources.png)
 
-Certaines fonctionnalités de Platform ne sont pas activées pour tous les utilisateurs. Ces éléments apparaissent dans la navigation, mais ne peuvent pas être sélectionnés. Lorsque vous naviguez à l’aide du clavier, ces éléments sont ignorés lors de la navigation par flèche et ne peuvent pas être sélectionnés à l’aide de la touche **Entrée (Retour)**.
+Certaines fonctionnalités d’Experience Platform ne sont pas activées pour tous les utilisateurs. Ces éléments apparaissent dans la navigation, mais ne peuvent pas être sélectionnés. Lorsque vous naviguez à l’aide du clavier, ces éléments sont ignorés lors de la navigation par flèche et ne peuvent pas être sélectionnés à l’aide de la touche **Entrée (Retour)**.
 
 ![Sections du volet de navigation de gauche d’Experience Platform non activées pour l’utilisateur et ne pouvant pas être sélectionnées.](images/left-navigation-sections-disabled.png)
 
 ## Boîte de dialogue de la vidéo intégrée
 
-Vous pouvez visionner des vidéos dans Experience Platform à l’aide de la navigation au clavier, qui permet de mettre en surbrillance et de sélectionner un lien vidéo disponible. Une boîte de dialogue de la vidéo intégrée s’ouvre alors dans l’interface utilisateur de Platform.
+Vous pouvez visionner des vidéos dans Experience Platform à l’aide de la navigation au clavier, qui permet de mettre en surbrillance et de sélectionner un lien vidéo disponible. Une boîte de dialogue de vidéo intégrée s’ouvre alors dans l’interface utilisateur d’Experience Platform.
 
 ![Bordure bleue apparaissant autour d’un élément sélectionné pour indiquer que le focus est appliqué.](images/profile-overview-tab.png)
 
@@ -95,9 +95,9 @@ Tous les tableaux de l’interface utilisateur d’Experience Platform sont acc
 * Lorsqu’une ligne est sélectionnée ou fait l’objet du focus, l’utilisation de la touche **Entrée** permet d’obtenir des détails dans le rail de droite.
 * Lorsqu’une ligne est sélectionnée ou fait l’objet du focus, utilisez les **touches fléchées** pour vous déplacer parmi tous les éléments de la ligne.
 * Appuyez sur **Entrée** pour sélectionner un élément de la ligne. Les utilisateurs disposant de lecteurs d’écran sont avertis si une nouvelle fenêtre doit s’ouvrir.
-* Lorsque vous effectuez un zoom à 200 % ou plus, vous pouvez voir l’icône **inspecteur de rail** alors que le rail de droite se réduit pour libérer de l’espace pour le tableau.
+* Lorsque vous effectuez un zoom sur 200 % ou plus, l’icône **inspecteur de rail** s’affiche lorsque le rail droit se réduit afin d’offrir plus d’espace de visualisation pour le tableau.
 
-![Icône de l’inspecteur de rail active lorsqu’un utilisateur effectue un zoom sur 200 %.](images/rail-inspector.png)
+![Focus sur l’icône de l’inspecteur de rail lorsqu’un utilisateur effectue un zoom sur 200 %.](images/rail-inspector.png)
 
 ### Accessibilité de la navigation dans un tableau à l’aide du clavier
 
@@ -132,9 +132,9 @@ Lors de l’utilisation de l’interface utilisateur du créateur de segments po
 * Les lecteurs d’écran doivent reconnaître le balisage des titres et peuvent annoncer le titre ainsi que son niveau.
 * D’autres technologies d’assistance peuvent modifier l’affichage visuel d’une page à l’aide de titres codés de manière adéquate pour afficher un aperçu ou une autre vue.
 
-Vous pouvez désormais réduire ou développer les rails gauche et droit du canevas du créateur de segments afin de gagner plus d’espace sur l’écran. Cette fonctionnalité est particulièrement utile, car elle offre une fonctionnalité complète avec un zoom de 200 %.
+Vous pouvez maintenant réduire ou développer les rails gauche et droit de la zone de travail du créateur de segments pour gagner de l’espace à l’écran. Cette fonctionnalité est particulièrement utile, car elle offre des fonctionnalités complètes avec un zoom de 200 %.
 
-![Le canevas du créateur de segments avec les widgets de divulgation du rail de gauche et de droite mis en surbrillance.](images/left-right-rail-expandables.png)
+![Zone de travail du créateur de segments avec les widgets de divulgation des rails gauche et droit mis en surbrillance.](images/left-right-rail-expandables.png)
 
 ## Éditeur de Query Service
 
@@ -145,7 +145,7 @@ Les fonctionnalités d’accessibilité suivantes sont disponibles dans l’édi
 
 >[!NOTE]
 >
->L’éditeur de requêtes ne gère pas par défaut la clé **Tab**. Pour appeler la fonctionnalité **Tab** dans l’éditeur, vous devez appuyer sur la touche **Escape**, puis appuyer directement sur la touche **Tab** après celle-ci. Appuyez à nouveau sur **Tab** pour déplacer la cible d&#39;action au-delà de l&#39;éditeur.
+>Par défaut, le requêteur ne gère pas la clé **Tab**. Pour appeler la fonctionnalité **Tab** dans l’éditeur, vous devez appuyer sur la touche **Échap**, puis sur **Tab** directement après. Appuyez à nouveau sur **Tab** pour déplacer le focus au-delà de l’éditeur.
 
 ## Onglet Vue du système dans Sources et Destinations
 

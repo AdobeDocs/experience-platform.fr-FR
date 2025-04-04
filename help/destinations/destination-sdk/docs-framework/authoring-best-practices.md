@@ -2,10 +2,10 @@
 title: Bonnes pratiques de création
 description: Découvrez les règles et conseils à suivre au moment de la création de la page de documentation de destination, afin de vous assurer qu’elle respecte les normes de qualité de la documentation Adobe Experience Platform.
 exl-id: b12059f1-6635-41cd-acc5-6ff471111164
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 98%
+source-wordcount: '502'
+ht-degree: 90%
 
 ---
 
@@ -37,14 +37,14 @@ Suivez le modèle de documentation fourni et ne modifiez pas les liens existant 
 
 ## Directives relatives à l’image de marque {#branding}
 
-* AEP n’est pas un terme approuvé pour le public. Utilisez Adobe Experience Platform au moment de la première utilisation, puis Experience Platform, et enfin Platform.
+* AEP n’est pas un terme approuvé pour le public. Utilisez Adobe Experience Platform lors de la première utilisation, puis Experience Platform et enfin Experience Platform.
    * **Ne pas utiliser** : avant d’exporter des données d’AEP vers YourDestination, veillez à lire et à remplir ces conditions préalables.
    * **Utiliser** : avant d’exporter des données d’Adobe Experience Platform vers YourDestination, veillez à lire et à remplir ces conditions préalables.
 
 ## Images et copies d’écran {#images-and-screenshots}
 
 * Pour plus d’informations sur [comment créer un lien vers des images](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#images), consultez le guide du contributeur.
-* Quand vous utilisez des copies d’écran, veillez à copier l’ensemble de l’écran de l’interface utilisateur de Platform.
+* Lors de l’utilisation de captures d’écran, assurez-vous que la capture d’écran capture l’écran complet de l’interface utilisateur Experience Platform.
 * Quand vous marquez des images pour mettre en évidence une certaine commande ou un certain libellé sur la page, essayez de respecter le style de marquage utilisé par l’équipe de documentation Experience Platform. Observez comment la base de profil est mise en évidence dans [cette copie d’écran](/help/destinations/catalog/cloud-storage/amazon-s3.md#export-type-frequency).
 * Utilisez des images au format `png`.
 * N’utilisez pas de copies d’écran numérotées comme noms de fichier. Les noms des fichiers images doivent être descriptifs.
@@ -52,7 +52,7 @@ Suivez le modèle de documentation fourni et ne modifiez pas les liens existant 
    * **Utiliser** : `yourdestination-authentication-details.png`, `yourdestination-destination-details.png`
 * Utilisez du texte de remplacement pour toutes les images que vous ajoutez à la documentation et veillez à respecter les règles de grammaire dans le texte de remplacement.
    * **Ne pas utiliser** : détails de la connexion de destination
-   * **Utiliser** : image de l’interface utilisateur de Platform affichant les détails de connexion de destination renseignés.
+   * **Utiliser** : image de l’interface utilisateur d’Experience Platform affichant les détails de connexion de destination renseignés.
 
 ## Processus {#process}
 

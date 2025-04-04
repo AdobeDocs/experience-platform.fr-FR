@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;Oracle Serv
 title: Créer une connexion source Oracle Service Cloud dans l’interface utilisateur.
 description: Découvrez comment créer une connexion source Oracle Service Cloud à l’aide de l’interface utilisateur d’Adobe Experience Platform.
 exl-id: e5869c09-b61e-4d23-a594-5a07769da3c4
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 97%
+source-wordcount: '481'
+ht-degree: 90%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 97%
 
 >[!WARNING]
 >
->La source [!DNL Oracle Service Cloud] sera abandonnée fin juin 2025.
+>La source [!DNL Oracle Service Cloud] sera abandonnée à la fin du mois de juin 2025.
 
 Ce tutoriel décrit les étapes à suivre pour créer une connexion source Oracle Service Cloud à l’aide de l’interface utilisateur d’Adobe Experience Platform. 
 
@@ -31,7 +31,7 @@ Si vous disposez déjà d’une connexion à la source Oracle Service Cloud vali
 
 ### Collecter les informations d’identification requises
 
-Pour accéder au compte Oracle Service Cloud sur [!DNL Platform], vous devez fournir les valeurs suivantes :
+Pour accéder au compte Oracle Service Cloud sur [!DNL Experience Platform], vous devez fournir les valeurs suivantes :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
@@ -43,7 +43,7 @@ Pour plus d’informations sur l’authentification de votre compte Oracle Servi
 
 ## Se connecter à votre compte Oracle Service Cloud 
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources pouvant être utilisées pour créer un compte.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources pouvant être utilisées pour créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également sélectionner la source de votre choix à l’aide de la barre de recherche.
 
@@ -67,4 +67,4 @@ Si vous utilisez de nouvelles informations d’identification, sélectionnez **[
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez établi une connexion à votre compte Oracle Service Cloud.  Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données de succès client dans Platform](../../dataflow/crm.md).
+En suivant ce tutoriel, vous avez établi une connexion à votre compte Oracle Service Cloud.  Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données de succès client dans Experience Platform](../../dataflow/crm.md).

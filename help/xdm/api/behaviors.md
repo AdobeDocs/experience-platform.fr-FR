@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;api;API;XDM;système XDM;modèle de données d’expérience;modèle de données d’expérience;modèle de données d’expérience;modèle de données;modèle de données;registre de schémas;registre de schémas;comportement;comportements;comportements;
+keywords: Experience Platform;accueil;rubriques les plus consultées;api;API;XDM;système XDM;modèle de données d’expérience;modèle de données d’expérience;modèle de données d’expérience;modèle de données;modèle de données;registre de schémas;registre de schémas;comportement;comportement;comportements;comportements;
 solution: Experience Platform
 title: Point d’entrée de l’API Behaviors
 description: Le point d’entrée /comportements de l’API Schema Registry vous permet de récupérer tous les comportements disponibles dans le conteneur global.
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '419'
 ht-degree: 23%
 
 ---
 
 # Point d’entrée des comportements
 
-Dans le modèle de données d’expérience (XDM), les comportements définissent la nature des données décrites par un schéma. Chaque classe XDM doit référencer un comportement spécifique, dont tous les schémas qui utilisent cette classe hériteront. Pour presque tous les cas d’utilisation de Platform, deux comportements sont disponibles :
+Dans le modèle de données d’expérience (XDM), les comportements définissent la nature des données décrites par un schéma. Chaque classe XDM doit référencer un comportement spécifique, dont tous les schémas qui utilisent cette classe hériteront. Pour la quasi-totalité des cas d&#39;utilisation dans Experience Platform, deux comportements sont disponibles :
 
 * **[!UICONTROL Enregistrement]** : fournit des informations sur les attributs d’un sujet. Un sujet peut être une organisation ou un individu.
 * **[!UICONTROL Série temporelle]** : fournit un instantané du système au moment où une action a été entreprise directement ou indirectement par un objet d’enregistrement.
 
 >[!NOTE]
 >
->Certains cas d’utilisation dans Platform nécessitent l’utilisation d’un schéma qui n’utilise aucun des comportements ci-dessus. Pour ces cas, un troisième comportement « ad hoc » est disponible. Pour plus d’informations, consultez le tutoriel sur la [création d’un schéma ad hoc](../tutorials/ad-hoc.md).
+>Certains cas d’utilisation dans Experience Platform nécessitent l’utilisation d’un schéma qui n’utilise aucun des comportements ci-dessus. Pour ces cas, un troisième comportement « ad hoc » est disponible. Pour plus d’informations, consultez le tutoriel sur la [création d’un schéma ad hoc](../tutorials/ad-hoc.md).
 >
 >Pour des informations plus générales sur les comportements de données en termes d’impact sur la composition des schémas, reportez-vous au guide sur les [principes de base de la composition des schémas](../schema/composition.md).
 
@@ -32,7 +32,7 @@ Le point d’entrée utilisé dans ce guide fait partie de l’API [[!DNL Schema
 
 ## Récupération d’une liste de comportements {#list}
 
-Vous pouvez récupérer une liste de tous les comportements disponibles en effectuant une requête GET au point d’entrée `/behaviors`.
+Vous pouvez récupérer une liste de tous les comportements disponibles en envoyant une requête GET au point d’entrée `/behaviors`.
 
 **Format d’API**
 
@@ -89,7 +89,7 @@ curl -X GET \
 
 ## Recherche d’un comportement {#lookup}
 
-Vous pouvez rechercher un comportement spécifique en fournissant son identifiant dans le chemin d’accès d’une requête GET au point d’entrée `/behaviors`.
+Vous pouvez rechercher un comportement spécifique en fournissant son identifiant dans le chemin d’accès d’une requête GET vers le point d’entrée `/behaviors`.
 
 **Format d’API**
 

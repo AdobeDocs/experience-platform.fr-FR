@@ -3,23 +3,23 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;collecter l
 solution: Experience Platform
 title: Créez un flux de données pour les sources de succès client à l’aide de l’API Flow Service
 type: Tutorial
-description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’un système de succès client et les ingérer dans Platform à l’aide des connecteurs source et des API.
+description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’un système de succès client et les ingérer dans Experience Platform à l’aide des connecteurs source et des API.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1258'
-ht-degree: 88%
+source-wordcount: '1267'
+ht-degree: 76%
 
 ---
 
 # Créez un flux de données pour les sources de succès client à l’aide de l’API [!DNL Flow Service].
 
-Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une source de succès client et les apporter à Platform à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une source de succès client et les importer dans Experience Platform à l’aide d’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
 >* Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de succès client. Si vous ne disposez pas de cet identifiant, consultez la [présentation des sources](../../../home.md#customer-success) pour obtenir une liste des sources de succès client avec lesquelles vous pouvez créer une connexion de base.
->* Pour qu’un Experience Platform ingère des données, les fuseaux horaires de toutes les sources de lots basées sur un tableau doivent être configurés au format UTC.
+>* Pour qu’Experience Platform ingère des données, les fuseaux horaires de toutes les sources de lots basées sur un tableau doivent être configurés au format UTC.
 
 ## Prise en main
 
@@ -30,11 +30,11 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
    * [Guide du développeur de Schema Registry](../../../../xdm/api/getting-started.md) : inclut des informations importantes à connaître avant dʼeffectuer des appels vers l’API Schema Registry. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
 * [[!DNL Catalog Service]](../../../../catalog/home.md) : le catalogue représente le système d’enregistrement de l’emplacement et de la liaison des données dans [!DNL Experience Platform].
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md) : l’API Batch Ingestion vous permet d’ingérer des données dans [!DNL Experience Platform] sous forme de fichiers par lots.
-* [Sandbox](../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sandbox](../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-### Utiliser les API Platform
+### Utilisation des API Experience Platform
 
-Pour plus d’informations sur la manière d’effectuer correctement des appels vers les API Platform, consultez le guide de [Prise en main des API Platform](../../../../landing/api-guide.md).
+Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Experience Platform, consultez le guide [Prise en main des API Experience Platform](../../../../landing/api-guide.md).
 
 ## Créer une connexion source {#source}
 
@@ -136,7 +136,7 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion sour
 
 ## Créer un schéma XDM cible {#target-schema}
 
-Pour que les données sources soient utilisées dans Platform, un schéma cible doit être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Platform contenant les données sources.
+Pour que les données sources soient utilisées dans Experience Platform, un schéma cible doit être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Experience Platform contenant les données sources.
 
 Un schéma XDM cible peut être créé en adressant une requête POST à l’[API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -283,7 +283,7 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 
 ## Récupérer des spécifications du flux de données {#specs}
 
-Un flux de données est chargé de collecter des données à partir de sources et de les importer dans Platform. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données en adressant une requête GET à l’API Flow Service. Les spécifications de flux de données sont chargées de collecter les données d’un système de réussite client tiers.
+Un flux de données est chargé de collecter des données à partir de sources et de les importer dans Experience Platform. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données en adressant une requête GET à l’API Flow Service. Les spécifications de flux de données sont chargées de collecter les données d’un système de réussite client tiers.
 
 **Format d’API**
 
@@ -303,7 +303,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la spécification du flux de données responsable de l’importation des données de votre source dans Platform. La réponse inclut la valeur `id` unique de spécification de flux requise pour créer un flux de données.
+Une réponse réussie renvoie les détails de la spécification du flux de données responsable de l’importation des données de votre source dans Experience Platform. La réponse inclut la valeur `id` unique de spécification de flux requise pour créer un flux de données.
 
 >[!NOTE]
 >
@@ -623,7 +623,7 @@ Une fois votre flux de données créé, vous pouvez surveiller les données ing�
 
 ## Étapes suivantes
 
-Vous êtes arrivé au bout de ce tutoriel, félicitations ! Grâce à celui-ci, vous avez créé un connecteur source pour collecter des données d’un système de succès client à intervalles réguliers. Les données entrantes peuvent désormais être utilisées par des services [!DNL Platform] en aval tels que [!DNL Real-Time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
+Vous êtes arrivé au bout de ce tutoriel, félicitations ! Grâce à celui-ci, vous avez créé un connecteur source pour collecter des données d’un système de succès client à intervalles réguliers. Les données entrantes peuvent désormais être utilisées par des services [!DNL Experience Platform] en aval tels que [!DNL Real-Time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
 
 * [Vue d’ensemble du profil client en temps réel](../../../../profile/home.md)
 * [Présentation de l’espace de travail de science des données](../../../../data-science-workspace/home.md)

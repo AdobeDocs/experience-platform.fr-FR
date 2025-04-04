@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation du contrôle d’accès
 description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans l’Admin Console, liant les utilisateurs et utilisatrices à des autorisations et des sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 50d768eeb0dc8fa85af113db7790ad3e3258ea64
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '3816'
+source-wordcount: '3818'
 ht-degree: 33%
 
 ---
@@ -202,7 +202,7 @@ Le tableau suivant décrit les autorisations disponibles pour Experience Platfo
 | [!DNL Data Governance] | [!UICONTROL Gérer les libellés d’utilisation] | Accès à la lecture, la création et la suppression des étiquettes dʼutilisation des données. |
 | [!DNL Data Governance] | [!UICONTROL Gestion des politiques dʼutilisation des données] | Accès à la lecture, la création, la modification et la suppression des politiques dʼutilisation des données. |
 | [!DNL Data Governance] | [!UICONTROL Affichage des politiques dʼutilisation des données] | Accès en lecture seule pour les politiques dʼutilisation des données appartenant à votre organisation. |
-| [!DNL Data Governance] | [!UICONTROL Afficher le journal d’activité de l’utilisateur] | Accès en lecture seule pour afficher les [journaux d’audit](../landing/governance-privacy-security/audit-logs/overview.md) enregistrés des activités de Platform. |
+| [!DNL Data Governance] | [!UICONTROL Afficher le journal d’activité de l’utilisateur] | Accès en lecture seule pour afficher les [journaux d’audit](../landing/governance-privacy-security/audit-logs/overview.md) enregistrés des activités Experience Platform. |
 | [!DNL Data Governance] | [!UICONTROL Afficher la console de confidentialité] | Accès en lecture seule aux consoles de confidentialité. |
 | [!DNL Data Ingestion] | [!UICONTROL Gestion des sources] | Accès à la lecture, la création, la modification et la désactivation des sources. |
 | [!DNL Data Ingestion] | [!UICONTROL Affichage des sources] | Accès en lecture seule aux sources disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux sources authentifiées dans l’onglet **[!UICONTROL Parcourir]**. |
@@ -281,7 +281,7 @@ Le tableau suivant décrit les autorisations disponibles pour Experience Platfo
 | [!DNL Profile Management] | [!UICONTROL Gérer les paramètres de profil] | Accès à la lecture et à la modification de tous les paramètres de profil. |
 | [!DNL Prospects] | [!UICONTROL Afficher les prospects] | Accès en lecture seule aux schémas, aux profils, aux audiences et à l’accordéon du prospect. |
 | [!DNL Prospects] | [!UICONTROL Gérer les prospects] | Possibilité de créer et de gérer des schémas, des profils et des audiences de prospects. Accès en lecture seule à l’accordéon du prospect. |
-| [!DNL Query Service] | [!UICONTROL Gestion des requêtes] | Accès à la lecture, la création, la modification et la suppression des requêtes SQL structurées pour les données Platform. |
+| [!DNL Query Service] | [!UICONTROL Gestion des requêtes] | Accès à la lecture, la création, la modification et la suppression des requêtes SQL structurées pour les données Experience Platform. |
 | [!DNL Query Service] | [!UICONTROL Gestion de lʼintégration de Query Service] | Accès à la création, la mise à jour et la suppression des informations dʼidentification sans date dʼexpiration pour lʼaccès à Query Service. |
 | [!DNL Query Service] | [!UICONTROL Gérer les sessions de requête] | Capacité à supprimer des sessions existantes. |
 | [!DNL Query Service] | [!UICONTROL Gérer la Liste autorisée ] | Capacité à gérer les restrictions IP pour votre organisation. |

@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès basé sur les attributs;contrôle d’accès basé sur les attributs
+keywords: Experience Platform;accueil;rubriques les plus consultées;Contrôle d’accès basé sur les attributs;contrôle d’accès basé sur les attributs
 title: Prise en main de l’API de contrôle d’accès basé sur les attributs
-description: L’API Attribute Access Control vous permet de gérer par programmation les rôles et les stratégies d’accès dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
+description: L’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les rôles et les politiques d’accès dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 role: Developer
 exl-id: d1a66afa-dff4-49d7-b57c-527f05977155
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '327'
-ht-degree: 69%
+source-wordcount: '328'
+ht-degree: 63%
 
 ---
 
 # Prise en main de l’API de contrôle d’accès basé sur les attributs
 
-Ce guide de développement décrit les étapes à suivre pour vous aider à utiliser l’API de contrôle d’accès basée sur les attributs pour gérer les rôles, les produits, les catégories d’autorisations et les jeux d’autorisations dans Adobe Experience Platform. Il comprend des exemples d’appels API pour effectuer diverses opérations.
+Ce guide de développement décrit les étapes à suivre pour utiliser l’API de contrôle d’accès basé sur les attributs afin de gérer les rôles, les produits, les catégories d’autorisations et les jeux d’autorisations dans Adobe Experience Platform. Il comprend des exemples d’appels API pour effectuer diverses opérations.
 
 ## Lecture d’exemples d’appels API
 
@@ -21,7 +21,7 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 
 ## Collecte des valeurs des en-têtes requis
 
-Ce guide nécessite que vous ayez suivi le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) afin d’effectuer des appels aux API de Platform avec succès. Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
+Ce guide nécessite que vous ayez suivi le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour passer avec succès des appels aux API Experience Platform. Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -39,7 +39,7 @@ Toutes les requêtes contenant un payload (POST, PUT et PATCH) requièrent un en
 
 Maintenant que vous avez collecté les informations d’identification requises, vous pouvez passer au reste du guide de développement. Chaque section fournit des informations importantes sur les points d’entrée et inclut des exemples d’appels API pour effectuer des opérations CRUD. Chaque appel comprend le format général de l’API, un exemple de requête montrant les en-têtes requis et les payloads correctement formatés, ainsi qu’un exemple de réponse pour un appel réussi.
 
-Consultez les tutoriels d’API suivants pour commencer à lancer des appels vers l’API de contrôle d’accès basé sur les attributs :
+Consultez les tutoriels d’API suivants pour commencer à lancer des appels à l’API de contrôle d’accès basé sur les attributs :
 
-* [Point de terminaison des rôles](./roles.md)
-* [Point d’entrée Produits](./products.md)
+* [Point d’entrée des rôles](./roles.md)
+* [Point d’entrée de produits](./products.md)

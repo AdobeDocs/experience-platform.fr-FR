@@ -2,10 +2,10 @@
 description: Le service de destinations dans Adobe Experience Platform utilise des points d’entrée de configuration pour plusieurs composants qui créent la fonctionnalité de destinations. Découvrez comment ces composants combinés permettent à Experience Platform de se connecter à des partenaires de destination, d’envoyer des messages personnalisés et d’activer des données de profil dans l’écosystème numérique.
 title: Options de configuration dans Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 97%
+source-wordcount: '829'
+ht-degree: 92%
 
 ---
 
@@ -27,7 +27,7 @@ Le diagramme ci-dessous donne une vue d’ensemble sur les composants que vous p
 
 La configuration du serveur de destination associe les informations sur les spécifications de votre serveur et le modèle utilisé par Adobe pour diffuser les payloads vers la destination.
 
-Par exemple, c’est là que vous spécifiez les points d’entrée API de votre côté auxquels Experience Platform doit se connecter, ainsi que les en-têtes et le format des appels API que Platform effectuera.
+Par exemple, c’est là que vous spécifiez les points d’entrée API de votre côté auxquels Experience Platform doit se connecter, ainsi que les en-têtes et le format des appels API qu’Experience Platform effectuera.
 
 Pour les destinations basées sur des fichiers, cette configuration inclut également les formats de formatage et de compression de fichiers pris en charge pour la destination. Vous pouvez configurer les fonctionnalités décrites ci-dessous via le [point d’entrée destination-serveur](../authoring-api/destination-server/create-destination-server.md).
 
@@ -43,7 +43,7 @@ Ce point d’entrée de configuration contient des informations de base et avanc
 Pour en savoir plus sur chacun des composants de configuration de destination, consultez la documentation ci-dessous. Vous pouvez configurer les fonctionnalités décrites ci-dessous via le [point d’entrée des destinations](../authoring-api/destination-configuration/create-destination-configuration.md).
 
 * [Configuration de l’authentification du client](destination-configuration/customer-authentication.md) : sélectionnez le mécanisme d’authentification qu’Experience Platform doit utiliser pour se connecter à la destination. Cette configuration génère la page [Configurer une nouvelle destination](../../ui/connect-destination.md) dans l’interface utilisateur d’Experience Platform, où les utilisateurs connectent Experience Platform aux comptes qu’ils possèdent avec la destination.
-* [Autorisation OAuth2](destination-configuration/oauth2-authorization.md) : découvrez tous les flux d’authentification [!DNL OAuth2] pris en charge par Destination SDK et obtenez des instructions pour configurer l’authentification [!DNL OAuth2] pour votre destination.
+* [Autorisation OAuth2](destination-configuration/oauth2-authorization.md) : découvrez tous les flux d’authentification [!DNL OAuth2] pris en charge par Destination SDK et obtenez des instructions pour configurer l’authentification [!DNL OAuth2] pour la destination.
 * [Champs de données client](destination-configuration/customer-data-fields.md) : découvrez comment créer des champs d’entrée dans l’interface utilisateur d’Experience Platform qui permettent à vos utilisateurs de spécifier diverses informations relatives à la connexion et à l’exportation des données vers la destination.
 * [Attributs de l’interface utilisateur](destination-configuration/ui-attributes.md) : découvrez comment configurer les attributs de l’interface utilisateur, tels que le lien de documentation, la catégorie de carte de destination, ainsi que le type et la fréquence de connexion à la destination, pour les destinations créées avec Destination SDK.
 * [Configuration du schéma](destination-configuration/schema-configuration.md) : découvrez comment définir le schéma cible de la destination vers lequel les utilisateurs peuvent mapper les attributs et les identités de profil.

@@ -4,16 +4,16 @@ feature: Attribution AI
 title: Politiques de gouvernance pour Attribution AI
 description: Adobe Experience Platform fournit plusieurs services et outils qui vous permettent de contrôler en toute confiance les données d’expérience collectées.
 exl-id: 448b10c8-8eac-41cb-9b77-66aa283c0a9d
-source-git-commit: eba23d39ade399f7df058da103fbd54883dc5b65
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 97%
+source-wordcount: '194'
+ht-degree: 87%
 
 ---
 
-# Stratégies de gouvernance dans Attribution AI
+# Politiques de gouvernance dans Attribution AI
 
-Une fois que vous avez parcouru le workflow pour créer un modèle et envoyé la configuration du modèle, l’[application des politiques](../../../data-governance/enforcement/auto-enforcement.md) vérifie s’il existe des violations. Si une violation de politique se produit, une fenêtre contextuelle s’affiche indiquant qu’une ou plusieurs politiques ont été violées. Cela permet de vous assurer que vos opérations de données et vos actions marketing dans Platform sont conformes aux politiques d’utilisation des données.
+Une fois que vous avez parcouru le workflow pour créer un modèle et envoyé la configuration du modèle, l’[application des politiques](../../../data-governance/enforcement/auto-enforcement.md) vérifie s’il existe des violations. Si une violation de politique se produit, une fenêtre contextuelle s’affiche indiquant qu’une ou plusieurs politiques ont été violées. Cela permet de vous assurer que vos opérations de données et vos actions marketing dans Experience Platform sont conformes aux politiques d’utilisation des données.
 
 ## Fenêtre contextuelle de violation de politique
 

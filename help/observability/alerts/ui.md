@@ -4,9 +4,9 @@ title: Guide de lʼinterface utilisateur des alertes
 description: Découvrez comment gérer les alertes dans lʼinterface utilisateur dʼExperience Platform.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 2e0fc17fee9b1586b4c2b44c326e2c305c127fad
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '798'
 ht-degree: 36%
 
 ---
@@ -21,108 +21,108 @@ Lʼinterface utilisateur dʼAdobe Experience Platform vous permet de consulter
 
 Commencez par sélectionner **[!UICONTROL Alertes]** dans le volet de navigation de gauche.
 
-![ La page Alertes surlignant les [!UICONTROL alertes] dans le volet de navigation de gauche.](../images/alerts/ui/workspace.png)
+![Page des alertes mettant en surbrillance [!UICONTROL Alertes] dans le volet de navigation de gauche.](../images/alerts/ui/workspace.png)
 
 ## Gestion des règles dʼalerte {#manage-rules}
 
 Lʼonglet **[!UICONTROL Parcourir]** répertorie les règles disponibles susceptibles de déclencher une alerte.
 
-![ Une liste des alertes disponibles s&#39;affiche dans l&#39;onglet [!UICONTROL Parcourir].](../images/alerts/ui/rules.png)
+![Une liste des alertes disponibles s’affiche dans l’onglet [!UICONTROL Parcourir].](../images/alerts/ui/rules.png)
 
 Sélectionnez une règle dans la liste pour afficher sa description et ses paramètres de configuration dans le rail de droite, y compris le seuil et la gravité.
 
-![Une règle d’alerte mise en surbrillance pour afficher les détails dans le rail de droite.](../images/alerts/ui/rule-details.png)
+![Une règle d’alerte mise en surbrillance, affichant les détails dans le rail de droite.](../images/alerts/ui/rule-details.png)
 
 Sélectionnez les points de suspension (**...**) en regard du nom dʼune règle pour afficher une liste déroulante avec les commandes suivantes : activation ou désactivation de lʼalerte (selon son statut actuel), abonnement ou désabonnement aux notifications par e-mail de lʼalerte.
 
-![Les ellipses sélectionnées affichent le menu déroulant.](../images/alerts/ui/disable-subscribe.png)
+![Les points de suspension sélectionnés affichent le menu déroulant.](../images/alerts/ui/disable-subscribe.png)
 
 ## Gérer les abonnés aux alertes {#manage-subscribers}
 
 >[!NOTE]
 >
-> Pour attribuer une alerte à un identifiant utilisateur Adobe, à une adresse électronique externe ou à une liste de groupes de messagerie, vous devez être un administrateur.
+> Pour attribuer une alerte à un ID utilisateur Adobe, à une adresse e-mail externe ou à une liste de groupes d’e-mails, vous devez être administrateur.
 
 Lʼonglet **[!UICONTROL Parcourir]** répertorie les règles disponibles susceptibles de déclencher une alerte.
 
-![ Liste des règles d&#39;alerte disponibles affichées dans l&#39;onglet [!UICONTROL Parcourir].](../images/alerts/ui/rules.png)
+![Liste des règles d’alerte disponibles affichée dans l’onglet [!UICONTROL Parcourir].](../images/alerts/ui/rules.png)
 
-Sélectionnez les points de suspension (**...**) en regard du nom d’une règle. Une liste déroulante affiche les commandes. Sélectionnez **[!UICONTROL Gérer les abonnés aux alertes]**.
+Sélectionnez les points de suspension (**...**) à côté du nom d’une règle. Une liste déroulante affiche les contrôles. Sélectionnez **[!UICONTROL Gérer les abonnés aux alertes]**.
 
-![Sélectionnez les ellipses pour afficher le menu déroulant. L&#39;option [!UICONTROL Gérer les abonnés aux alertes] est mise en surbrillance.](../images/alerts/ui/manage-alert-subscribers.png)
+![Sélectionnez les points de suspension pour afficher le menu déroulant. L’option [!UICONTROL  Gérer les abonnés aux alertes ] est mise en surbrillance](../images/alerts/ui/manage-alert-subscribers.png).
 
-La page [!UICONTROL Gérer les abonnés aux alertes] s&#39;affiche. Pour attribuer des notifications à des utilisateurs spécifiques, saisissez leur identifiant utilisateur Adobe, leur adresse électronique externe ou une liste de groupes de messagerie, puis appuyez sur Entrée.
+La page [!UICONTROL Gérer les abonnés aux alertes] s’affiche. Pour envoyer des notifications à des utilisateurs spécifiques, saisissez leur ID utilisateur Adobe, leur adresse e-mail externe ou une liste de groupes d’e-mails, puis appuyez sur Entrée.
 
 >[!NOTE]
 >
->Pour envoyer cette notification à plusieurs utilisateurs à la fois, fournissez une liste d’ID utilisateur ou d’adresses électroniques séparés par des virgules.
+>Pour envoyer cet avis à plusieurs utilisateurs à la fois, fournissez une liste d&#39;ID utilisateur ou d&#39;adresses électroniques séparées par des virgules.
 
-![ La page gérer les abonnés aux alertes qui affiche les adresses électroniques saisies.](../images/alerts/ui/manage-alert-add-email.png)
+![Page Gérer les abonnés aux alertes affichant les adresses e-mail saisies.](../images/alerts/ui/manage-alert-add-email.png)
 
-Les adresses électroniques apparaissent dans la liste des abonnés actuels. Sélectionnez **[!UICONTROL Mettre à jour]**.
+Les adresses e-mail s’affichent dans la liste des abonnés actuels. Sélectionnez **[!UICONTROL Mettre à jour]**.
 
-![ La page de gestion des abonnés aux alertes met en surbrillance les abonnés et [!UICONTROL Mettre à jour].](../images/alerts/ui/manage-alert-subscribers-added-email.png)
+![Page Gérer les abonnés aux alertes mettant en surbrillance les abonnés et [!UICONTROL Mettre à jour].](../images/alerts/ui/manage-alert-subscribers-added-email.png)
 
-Vous avez correctement ajouté des utilisateurs à votre liste de notifications d’alertes. Les utilisateurs envoyés recevront désormais des notifications par courrier électronique pour cette alerte, comme illustré dans l’image ci-dessous.
+Les utilisateurs ont été ajoutés à votre liste de notifications d’alerte. Les utilisateurs envoyés recevront désormais des notifications par e-mail pour cette alerte, comme illustré dans l’image ci-dessous.
 
-![Exemple de courrier électronique de notification d’alerte reçue.](../images/alerts/ui/manage-alert-subscribers-email.png)
+![Exemple d’e-mail de la notification d’alerte reçue.](../images/alerts/ui/manage-alert-subscribers-email.png)
 
-## Activation des alertes par email {#enable-email}
+## Activer les alertes par e-mail {#enable-email}
 
-Les notifications d&#39;alerte peuvent être diffusées directement à votre email.
+Les notifications d’alerte peuvent être diffusées directement par e-mail.
 
-Sélectionnez l’icône représentant une cloche (![icône représentant une cloche](/help/images/icons/bell.png)) située dans le ruban supérieur à droite pour afficher les notifications et les annonces. Dans la liste déroulante qui s’affiche, sélectionnez l’icône représentant un engrenage (![icône représentant un engrenage](/help/images/icons/settings.png)) pour accéder à la page des préférences de l’Experience Cloud.
+Sélectionnez l’icône représentant une cloche (![icône représentant une cloche](/help/images/icons/bell.png)) située dans le ruban supérieur droit pour afficher les notifications et les annonces. Dans la liste déroulante qui s’affiche, sélectionnez l’icône représentant un engrenage (![icône représentant un engrenage](/help/images/icons/settings.png)) pour accéder à la page des préférences d’Experience Cloud.
 
-![ Une liste d’alertes affichée qui met en surbrillance l’icône représentant une cloche et l’icône représentant un engrenage.](../images/alerts/ui/edit-preferences.png)
+![Liste des alertes affichées mettant en surbrillance l’icône représentant une cloche et l’icône représentant un engrenage.](../images/alerts/ui/edit-preferences.png)
 
-La page **Profil** s’affiche. Sélectionnez les **[!UICONTROL notifications]** dans le volet de navigation de gauche pour accéder aux préférences d’alertes par e-mail.
+La page **Profil** s’affiche. Sélectionnez **[!UICONTROL Notifications]** dans le volet de navigation de gauche pour accéder aux préférences des alertes par e-mail.
 
-![ La page Profil qui surligne les [!UICONTROL notifications] dans le volet de navigation de gauche.](../images/alerts/ui/profile.png)
+![Page de profil mettant en surbrillance [!UICONTROL Notifications] dans le volet de navigation de gauche.](../images/alerts/ui/profile.png)
 
-Accédez à la section **Emails** au bas de la page et sélectionnez **[!UICONTROL Notifications instantanées]**
+Faites défiler la page jusqu’à la section **E-mails** en bas de la page, puis sélectionnez **[!UICONTROL Notifications instantanées]**
 
-![La section Emails mise en surbrillance dans la page Profil.](../images/alerts/ui/notifications.png)
+![la section E-mails mise en surbrillance dans la page du profil.](../images/alerts/ui/notifications.png)
 
-Toutes les alertes auxquelles vous êtes abonné seront désormais envoyées à l’adresse électronique connectée à votre compte Adobe ID.
+Toutes les alertes auxquelles vous êtes abonné sont désormais envoyées à l’adresse e-mail connectée à votre compte Adobe ID.
 
-## Personnalisation du seuil d’alerte {#alert-threshold}
+## Personnaliser le seuil d’alerte {#alert-threshold}
 
 Les seuils d’alerte peuvent être personnalisés pour les types d’alerte suivants :
 
 | Type d’alerte | Paramètre personnalisé |
 |---|---|
 | Retard de la tâche relative aux segments | Seuil de délai |
-| Délai d’exportation de segments | Seuil de délai |
-| Délai d’exécution du flux de destination | Seuil de délai |
+| Retard d’export du segment | Seuil de délai |
+| Délai d’exécution du flux de destinations | Seuil de délai |
 | Retard d’exécution du flux du service d’identités | Seuil de délai |
 | Retard d’exécution du flux de profils | Seuil de délai |
-| Délai d’exécution du flux des sources | Seuil de délai |
+| Retard dans l’exécution du flux de sources | Seuil de délai |
 | Retard d’exécution de requête | Seuil de délai |
-| Taux de saut d’activation dépassé | Seuil d’erreur |
-| Taux d’erreur d’ingestion des sources dépassé | Seuil d’erreur |
+| Taux d’activations ignorées dépassé | Seuil d’erreur |
+| Taux d’erreurs d’ingestion de sources dépassé | Seuil d’erreur |
 
-Sélectionnez les points de suspension (**...**) en regard du nom d’une règle. Une liste déroulante affiche les commandes. Sélectionnez **[!UICONTROL Modifier]**.
+Sélectionnez les points de suspension (**...**) à côté du nom d’une règle. Une liste déroulante affiche les contrôles. Sélectionnez **[!UICONTROL Modifier]**.
 
 ![L’option [!UICONTROL Modifier] est mise en surbrillance pour la règle sélectionnée.](../images/alerts/ui/threshold-edit.png)
 
-La page **[!UICONTROL Personnaliser l’alerte]** s’affiche. Mettez à jour le seuil à la minute souhaitée, puis sélectionnez **[!UICONTROL Confirmer]**.
+La page **[!UICONTROL Personnaliser l’alerte]** s’affiche. Mettez à jour le seuil sur les minutes souhaitées, puis sélectionnez **[!UICONTROL Confirmer]**.
 
-![ La page Personnaliser l&#39;alerte surlignant les options [!UICONTROL Seuil] et [!UICONTROL Confirmer].](../images/alerts/ui/threshold-update.png)
+![Page Personnaliser l’alerte mettant en surbrillance les options [!UICONTROL Seuil] et [!UICONTROL Confirmer].](../images/alerts/ui/threshold-update.png)
 
-Vous revenez à la page **[!UICONTROL Alertes]** . Pour afficher les paramètres de seuil de l’alerte, sélectionnez la règle dans la liste. Vous pouvez voir les paramètres de seuil de l’alerte dans le rail de droite, y compris des détails tels que l’état et la gravité.
+Vous revenez alors à la page **[!UICONTROL Alertes]**. Pour afficher les paramètres de seuil de l’alerte, sélectionnez la règle dans la liste. Vous pouvez voir les paramètres de seuil de l’alerte dans le rail de droite, y compris des détails tels que le statut et la gravité.
 
-![Une alerte mise en surbrillance pour afficher les détails dans le rail de droite et mettre en surbrillance [!UICONTROL Seuil].](../images/alerts/ui/threshold-view.png)
+![Alerte mise en surbrillance, affichant des détails dans le rail de droite et mettant en surbrillance [!UICONTROL Seuil].](../images/alerts/ui/threshold-view.png)
 
 ## Affichage de lʼhistorique des alertes {#alert-history}
 
 Lʼonglet **[!UICONTROL Historique]** affiche lʼhistorique des alertes reçues pour votre organisation, y compris la règle qui a déclenché lʼalerte, la date de déclenchement et la date de résolution (le cas échéant).
 
-![Une liste des alertes reçues s&#39;affiche dans l&#39;onglet [!UICONTROL Historique].](../images/alerts/ui/history.png)
+![Une liste des alertes reçues s’affiche dans l’onglet [!UICONTROL Historique].](../images/alerts/ui/history.png)
 
 Sélectionnez une alerte répertoriée pour afficher des détails supplémentaires dans le rail de droite, y compris un bref résumé de lʼévénement qui a déclenché lʼalerte.
 
-![Une alerte mise en surbrillance pour afficher les détails dans le rail de droite.](../images/alerts/ui/history-details.png)
+![Une alerte mise en surbrillance, affichant des détails dans le rail de droite.](../images/alerts/ui/history-details.png)
 
 ## Étapes suivantes
 
-Ce document fournit un aperçu de la manière dʼafficher et de gérer les alertes dans lʼinterface utilisateur de Platform. Pour plus dʼinformations sur les fonctionnalités du service, consultez la présentation dʼ[Observability Insights](../home.md).
+Ce document présente un aperçu de l’affichage et de la gestion des alertes dans l’interface utilisateur d’Experience Platform. Pour plus dʼinformations sur les fonctionnalités du service, consultez la présentation dʼ[Observability Insights](../home.md).

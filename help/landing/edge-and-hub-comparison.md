@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
-title: Edge Network et comparaison des concentrateurs
+title: Comparaison entre Edge Network et un hub
 description: Découvrez les différents chemins de traitement disponibles sur Adobe Experience Platform.
-source-git-commit: 08a63fb854fe1c2aa83e7a7f74df4c02580e4d4c
+exl-id: 3e9c63d2-c798-44b4-870d-bf1551f29690
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '711'
-ht-degree: 6%
+source-wordcount: '713'
+ht-degree: 7%
 
 ---
 
+# Comparaison entre Edge Network et un hub
 
-# Edge Network et comparaison des concentrateurs
-
-Adobe Experience Platform est l’un des meilleurs systèmes ouverts, flexibles et performants du marché permettant de créer et de gérer des solutions complètes qui optimisent l’expérience client. Vous pouvez utiliser Experience Platform pour centraliser et normaliser les données et le contenu des clients à partir de n’importe quel système et appliquer la science des données et le machine learning afin d’améliorer considérablement la conception et la diffusion d’expériences riches et personnalisées. Par conséquent, Platform dispose de plusieurs méthodes pour traiter vos données, ce qui vous permet d’évaluer vos données de la meilleure manière possible.
+Adobe Experience Platform est l’un des meilleurs systèmes ouverts, flexibles et performants du marché permettant de créer et de gérer des solutions complètes qui optimisent l’expérience client. Vous pouvez utiliser Experience Platform pour centraliser et normaliser les données et le contenu des clients à partir de n’importe quel système et appliquer la science des données et le machine learning afin d’améliorer considérablement la conception et la diffusion d’expériences riches et personnalisées. Par conséquent, Experience Platform dispose de plusieurs méthodes pour traiter vos données, ce qui vous permet d’évaluer vos données de la meilleure manière possible.
 
 ## Types de serveurs
 
-Sur Platform, les données peuvent être traitées dans deux chemins différents : Adobe Experience Platform hub pour les workflows par lots et en flux continu et Edge Network pour les expériences en temps réel.
+Sur Experience Platform, les données peuvent être traitées dans deux chemins différents : Adobe Experience Platform hub pour les workflows par lots et en flux continu et Edge Network pour les expériences en temps réel.
 
 ### hub Adobe Experience Platform
 

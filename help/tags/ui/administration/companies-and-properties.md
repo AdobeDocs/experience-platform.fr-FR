@@ -2,10 +2,10 @@
 title: Propriétés
 description: Découvrez comment vos extensions, environnements et bibliothèques sont organisés et regroupés pour votre organisation dans Adobe Experience Platform.
 exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1176'
-ht-degree: 97%
+source-wordcount: '1178'
+ht-degree: 94%
 
 ---
 
@@ -25,7 +25,7 @@ Un type de propriété mobile peut contenir plusieurs applications. Par exemple,
 
 ## Bonnes pratiques pour la planification des propriétés {#best-practices-for-planning-properties}
 
-Les implémentations de balises dans Adobe Experience Platform peuvent être très différentes. Elles possèdent un large éventail de besoins de collecte des données, dʼutilisation des variables, dʼextensions, de balises tierces, dʼautres systèmes et technologies, de personnes, dʼéquipes, de régions géographiques, etc. Vous devez structurer vos propriétés de manière à ce qu’elles correspondent au workflow et aux processus de votre entreprise.
+Les implémentations de balises dans Adobe Experience Platform peuvent être très différentes. Elles possèdent un large éventail de besoins de collecte des données, dʼutilisation des variables, dʼextensions, de balises tierces, dʼautres systèmes et technologies, de personnes, dʼéquipes, de régions géographiques, etc. Vous devez structurer vos propriétés de manière à ce qu’elles correspondent au workflow, aux processus et à l’environnement de votre organisation.
 
 Tenez compte des éléments suivants lors de la planification des propriétés :
 
@@ -67,7 +67,7 @@ Par exemple, si vous déployez [!DNL Adobe Analytics], [!DNL Target] et les mêm
 
 Les personnes, équipes et organisations qui travaillent sur Adobe Experience Platform auront-elles besoin d’un accès à tous vos sites web et applications, à certaines de ces ressources ou à seulement l’une d’entre elles ?
 
-Les fonctionnalités de gestion des utilisateurs permettent d’affecter des rôles à différentes personnes pour toutes vos propriétés ou par propriété. Si une personne dispose de droits suffisants, elle peut effectuer des actions administratives sur toutes les propriétés de cette organisation Platform. Tous les autres rôles peuvent être affectés sur une base par propriété. Vous pouvez même masquer une propriété pour certains utilisateurs (non administrateurs) en ne leur accordant aucun rôle dans cette propriété.
+Les fonctionnalités de gestion des utilisateurs permettent d’affecter des rôles à différentes personnes pour toutes vos propriétés ou par propriété. Si une personne dispose des droits suffisants, elle peut effectuer des actions administratives pour toutes les propriétés de cette organisation Experience Platform. Tous les autres rôles peuvent être affectés sur une base par propriété. Vous pouvez même masquer une propriété pour certains utilisateurs (non administrateurs) en ne leur accordant aucun rôle dans cette propriété.
 
 ## Page Propriétés
 
@@ -133,7 +133,7 @@ Suivez les instructions pour créer une propriété mobile.
 
 1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
-Une fois la propriété créée, Platform ajoute automatiquement un hôte par défaut, un ensemble dʼenvironnements (Développement, Évaluation et Production) et les extensions par défaut.
+Une fois votre propriété créée, Experience Platform ajoute automatiquement un hôte par défaut, un ensemble d’environnements (Développement, Évaluation et Production) et les extensions par défaut.
 
 ## Suppression d’une propriété
 

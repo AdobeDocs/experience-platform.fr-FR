@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Contraintes de type de champ XDM
 description: Référence pour les contraintes de type de champ dans le modèle de données d’expérience (XDM), y compris les autres formats de sérialisation auxquels ils peuvent être mappés et comment définir vos propres types de champ dans l’API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: ca8859c7b71d1b0aad30880ff066d2b4b33b0a35
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '684'
 ht-degree: 7%
 
 ---
@@ -27,7 +27,7 @@ XDM repose sur le schéma JSON. Par conséquent, les champs XDM héritent d’un
 
 >[!NOTE]
 >
->Pour plus d’informations sur le schéma JSON et les autres technologies sous-jacentes dans les API Platform](../../landing/api-fundamentals.md#json-schema) consultez le [ guide des principes de base des API .
+>Pour plus d’informations sur le schéma JSON et les autres technologies sous-jacentes dans les API Experience Platform](../../landing/api-fundamentals.md#json-schema) consultez le [ guide des principes de base des API .
 
 Le tableau suivant décrit la manière dont chaque type XDM est représenté dans le schéma JSON, ainsi qu’un exemple de valeur conforme au type :
 

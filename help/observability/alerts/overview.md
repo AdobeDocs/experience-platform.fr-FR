@@ -4,10 +4,10 @@ title: Présentation des alertes
 description: Découvrez les alertes dans Adobe Experience Platform, y compris la structure de la définition des règles d’alerte.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: 829d7da1dc53486eba1cdceddb7888b578e1c137
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '793'
-ht-degree: 89%
+source-wordcount: '804'
+ht-degree: 69%
 
 ---
 
@@ -15,17 +15,17 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->Les alertes étant prises en charge dans les environnements de test de production et de développement, vous pouvez vous y abonner dans n’importe quel environnement de test. Lorsqu’un environnement de test est réinitialisé, toutes les alertes d’abonnement sont également réinitialisées. Lorsqu’un environnement de test est supprimé, toutes les alertes d’abonnement sont supprimées.
+>Étant donné que les alertes sont prises en charge dans les sandbox de production et de développement, vous pouvez vous y abonner dans n’importe quel sandbox. Lorsqu’un sandbox est réinitialisé, toutes les alertes d’abonnement sont également réinitialisées. Lorsqu’un sandbox est supprimé, toutes les alertes d’abonnement sont supprimées.
 
 Adobe Experience Platform vous permet de vous abonner à des alertes basées sur des événements concernant les activités Adobe Experience Platform. Les alertes réduisent ou éliminent la nécessité d’interroger l’[[!DNL Observability Insights] API](../api/overview.md) afin de vérifier si une tâche est terminée, si un certain jalon a été atteint dans un processus ou si des erreurs se sont produites.
 
-Lorsqu’un certain ensemble de conditions de vos opérations Platform est atteint (par exemple, un problème potentiel lorsque le système dépasse un certain seuil), Platform peut envoyer des messages d’alerte à tous les utilisateurs de votre organisation qui se sont abonnés à ces messages. Ces messages peuvent se répéter pendant un intervalle prédéfini jusqu’à ce que l’alerte ait été résolue.
+Lorsqu’un certain ensemble de conditions de vos opérations Experience Platform est atteint (par exemple, un problème potentiel lorsque le système dépasse un certain seuil), Experience Platform peut envoyer des messages d’alerte à tous les utilisateurs de votre organisation qui se sont abonnés à ces messages. Ces messages peuvent se répéter pendant un intervalle prédéfini jusqu’à ce que l’alerte ait été résolue.
 
 Ce document fournit un aperçu des alertes dans Adobe Experience Platform, y compris la structure de la définition des règles d’alerte.
 
 ## Alertes ponctuelles ou alertes répétées
 
-Les alertes de Platform peuvent être envoyées une seule fois ou se répéter à un intervalle prédéfini jusqu’à ce qu’elles soient résolues. Les cas d’utilisation de chacune de ces options sont censés différer comme suit :
+Les alertes Experience Platform peuvent être envoyées une seule fois ou se répéter à un intervalle prédéfini jusqu’à ce qu’elles soient résolues. Les cas d’utilisation de chacune de ces options sont censés différer comme suit :
 
 | Alerte unique | Alerte répétée |
 | --- | --- |
@@ -54,19 +54,19 @@ Une alerte peut être décomposée en plusieurs éléments :
 Les alertes peuvent être reçues et gérées par deux canaux :
 
 * [Événements Adobe I/O](#events)
-* [Interface utilisateur de Platform](#ui)
+* [Interface utilisateur d’Experience Platform](#ui)
 
 ### Événements I/O {#events}
 
-Des alertes peuvent être envoyées vers un webhook configuré afin de faciliter l’automatisation efficace de la surveillance des activités. Pour recevoir des alertes par le biais d’un webhook, vous devez enregistrer les alertes de Platform dans Adobe Developer Console. Pour obtenir des instructions spécifiques, reportez-vous au guide sur [l’abonnement aux notifications d’événement d’Adobe I/O](./subscribe.md).
+Des alertes peuvent être envoyées vers un webhook configuré afin de faciliter l’automatisation efficace de la surveillance des activités. Pour recevoir des alertes par le biais d’un webhook, vous devez enregistrer les alertes Experience Platform dans Adobe Developer Console. Pour obtenir des instructions spécifiques, reportez-vous au guide sur [l’abonnement aux notifications d’événement d’Adobe I/O](./subscribe.md).
 
-### Interface utilisateur de Platform {#ui}
+### Interface utilisateur d’Experience Platform {#ui}
 
-L’interface utilisateur de Platform vous permet d’afficher les alertes reçues et de gérer les règles d’alerte. La vidéo ci-après présente ces capacités.
+L’interface utilisateur d’Experience Platform vous permet d’afficher les alertes reçues et de gérer les règles d’alerte. La vidéo ci-après présente ces capacités.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
-Pour utiliser des alertes dans l’interface utilisateur de Platform, vous devez disposer des autorisations de contrôle d’accès suivantes activées via Adobe Admin Console :
+Pour utiliser des alertes dans l’interface utilisateur d’Experience Platform, vous devez disposer des autorisations de contrôle d’accès suivantes activées via Adobe Admin Console :
 
 | Autorisation | Description |
 | --- | --- |
@@ -81,7 +81,7 @@ Pour utiliser des alertes dans l’interface utilisateur de Platform, vous devez
 
 >[!NOTE]
 >
->Pour plus d’informations sur la gestion des autorisations dans Platform, consultez la [documentation sur le contrôle d’accès](../../access-control/ui/overview.md).
+>Pour plus d’informations sur la gestion des autorisations dans Experience Platform, consultez la [documentation sur le contrôle d’accès](../../access-control/ui/overview.md).
 
 Avec l’autorisation Afficher les alertes, vous pouvez afficher les alertes reçues en sélectionnant l’icône représentant une cloche (![Icône de cloche](/help/images/icons/bell.png)) dans le coin supérieur droit.
 
@@ -89,10 +89,10 @@ Avec l’autorisation Afficher les alertes, vous pouvez afficher les alertes re�
 
 >[!NOTE]
 >
-> Sélectionnez une alerte pour accéder au tableau de bord associé afin d’obtenir des informations plus détaillées sur les raisons de déclenchement de l’alerte.
+> Sélectionnez une alerte pour accéder à un tableau de bord associé et obtenir des informations plus détaillées sur les raisons pour lesquelles l’alerte a été déclenchée.
 
 En outre, l’onglet [!UICONTROL Alertes] de l’interface utilisateur permet à chaque utilisateur de s’abonner à des types d’alerte spécifiques et permet aux administrateurs d’activer ou de désactiver complètement les règles d’alerte. Pour plus d’informations sur la gestion des alertes, consultez le [guide de l’interface utilisateur](./ui.md).
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez découvert les alertes de Platform et leur rôle dans l’écosystème de Platform. Pour découvrir comment recevoir et gérer des alertes, reportez-vous à la documentation de processus associée mentionnée dans cette présentation.
+En lisant ce document, vous avez découvert les alertes Experience Platform et leur rôle dans l’écosystème Experience Platform. Pour découvrir comment recevoir et gérer des alertes, reportez-vous à la documentation de processus associée mentionnée dans cette présentation.

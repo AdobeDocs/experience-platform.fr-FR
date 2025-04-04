@@ -2,10 +2,10 @@
 title: Déploiement asynchrone
 description: Découvrez comment déployer les bibliothèques de balises d’Adobe Experience Platform de manière asynchrone sur votre site web.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 100%
+source-wordcount: '1046'
+ht-degree: 98%
 
 ---
 
@@ -106,4 +106,4 @@ Les balises proposent un bouton d’activation/désactivation permettant d’act
    <script type="text/javascript">_satellite.pageBottom();</script>
    ```
 
-   Ce code indique à Platform que l’analyseur du navigateur a atteint le bas de la page. Étant donné qu’il est probable que les balises n’aient pas été chargées et exécutées avant ce moment, l’invocation de `_satellite.pageBottom()` provoque une erreur, et le type d’événement Page Bottom (Bas de page) se comportera peut-être de façon inattendue.
+   Ce code indique à Experience Platform que l’analyseur du navigateur a atteint le bas de la page. Étant donné qu’il est probable que les balises n’aient pas été chargées et exécutées avant ce moment, l’invocation de `_satellite.pageBottom()` provoque une erreur, et le type d’événement Page Bottom (Bas de page) se comportera peut-être de façon inattendue.

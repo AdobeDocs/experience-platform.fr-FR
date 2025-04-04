@@ -1,12 +1,12 @@
 ---
-keywords: Qualtrics;qualtrics;Website Feedback de Qualtrics;commentaires de site web qualtrics;commentaires de site web Qualtrics
+keywords: Qualtrics;qualtrics;Commentaires sur le site Web Qualtrics;Commentaires sur le site Web qualtrics;Commentaires sur le site Web Qualtricks
 title: Extension Website Feedback de Qualtrics
-description: L’extension Website Feedback de Qualtrics est une destination de sondage de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Commentaires sur le site web Qualtrics est une destination d’enquête dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 70cf315c-2c96-4c3a-bf80-511024964986
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 87%
+source-wordcount: '520'
+ht-degree: 75%
 
 ---
 
@@ -14,19 +14,19 @@ ht-degree: 87%
 
 ## Vue d’ensemble {#overview}
 
-[!DNL Qualtrics Website Feedback] vous permet d’interagir avec les visiteurs de votre site web avec le bon message, au bon moment. Que vous souhaitiez améliorer l&#39;expérience des visiteurs avec les enquêtes de retour sur le site web ou augmenter la conversion, [!DNL Qualtrics Website Feedback] vous a assuré.
+[!DNL Qualtrics Website Feedback] vous permet d’interagir avec les visiteurs et visiteuses de votre site web avec le message approprié, au bon moment. Que vous souhaitiez améliorer l’expérience des visiteurs grâce aux sondages de commentaires sur le site web ou augmenter la conversion, [!DNL Qualtrics Website Feedback] est là pour vous.
 
 Créez et déployez des messages web de marque et fortement ciblés en quelques minutes grâce à une interface pointer-cliquer intuitive. Les données et les informations que vous rassemblez depuis votre site web sont révélés aux côtés des données des commentaires client sur tous les canaux, vous apportent une vue d’ensemble de votre expérience client, le tout sur une seule et même plateforme.
 
-[!DNL Qualtrics Website Feedback] est une extension de sondage dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101569.qualtrics-website-feedback.html).
+[!DNL Qualtrics Website Feedback] est une extension d’enquête dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101569.qualtrics-website-feedback.html).
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension Website Feedback de Qualtrics](../../assets/catalog/survey/qualtrics/catalog.png)
 
 ## Conditions préalables  {#prerequisites}
 
-Cette extension est disponible dans le catalogue [!DNL Destinations] pour tous les clients qui ont acheté Platform.
+Cette extension est disponible dans le catalogue [!DNL Destinations] pour tous les clients qui ont acheté Experience Platform.
 
 Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Experience Platform. Les balises sont proposées aux clients Adobe Experience Cloud en tant que fonctionnalité à valeur ajoutée incluse. Contactez l’administrateur ou l’administratrice de votre organisation pour accéder aux balises et demandez-lui de vous accorder l’autorisation **[!UICONTROL manage_properties]** afin que vous puissiez installer les extensions.
 
@@ -34,7 +34,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 Pour installer l’extension [!DNL Qualtrics Website Feedback], procédez comme suit :
 
-Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
+Dans l’interface [Experience Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 
@@ -60,6 +60,6 @@ Vous pouvez configurer, mettre à niveau et supprimer des extensions dans l’in
 
 >[!TIP]
 >
->Si l’extension est déjà installée sur l’une de vos propriétés, l’interface utilisateur de Platform continue d’afficher **[!UICONTROL Installer]** pour cette extension. Démarrez le workflow d’installation comme décrit dans [Installation de l’extension](#install-extension) pour configurer ou supprimer votre extension.
+>Si l’extension est déjà installée sur l’une de vos propriétés, l’interface utilisateur d’Experience Platform continue d’afficher **[!UICONTROL Installer]** pour l’extension. Démarrez le workflow d’installation comme décrit dans [Installation de l’extension](#install-extension) pour configurer ou supprimer votre extension.
 
 Pour mettre à niveau votre extension, consultez le guide sur le [processus de mise à niveau d’extension](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) dans la documentation sur les balises.

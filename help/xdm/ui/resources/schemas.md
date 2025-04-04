@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création et modification de schémas dans l’interface utilisateur
 description: Découvrez les bases de la création et de la modification de schémas dans l’interface utilisateur d’Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 9691ce1ca560acce7a9512df7eb92e61962bc467
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4072'
+source-wordcount: '4075'
 ht-degree: 3%
 
 ---
@@ -29,7 +29,7 @@ Ce guide nécessite une compréhension pratique du système XDM. Reportez-vous �
 
 >[!NOTE]
 >
->Cette section explique comment créer manuellement un schéma dans l’interface utilisateur. Si vous ingérez des données CSV dans Platform, vous pouvez utiliser des algorithmes de machine learning (ML) pour **générer un schéma à partir d’exemples de données CSV**. Ce workflow correspond à votre format de données et crée automatiquement un schéma basé sur la structure et le contenu de votre fichier CSV. Pour plus d’informations sur ce workflow](../ml-assisted-schema-creation.md) consultez le guide de création de schéma assistée par machine learning [.
+>Cette section explique comment créer manuellement un schéma dans l’interface utilisateur. Si vous ingérez des données CSV dans Experience Platform, vous pouvez utiliser des algorithmes de machine learning (ML) pour **générer un schéma à partir d’exemples de données CSV**. Ce workflow correspond à votre format de données et crée automatiquement un schéma basé sur la structure et le contenu de votre fichier CSV. Pour plus d’informations sur ce workflow](../ml-assisted-schema-creation.md) consultez le guide de création de schéma assistée par machine learning [.
 
 Dans l’espace de travail [!UICONTROL Schémas], sélectionnez **[!UICONTROL Créer un schéma]** dans le coin supérieur droit.
 
@@ -342,7 +342,7 @@ Pour terminer le processus, sélectionnez **[!UICONTROL Enregistrer]** pour enre
 
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
-Le schéma peut désormais être utilisé dans le profil client en temps réel. Lorsque Platform ingère des données dans des jeux de données basés sur ce schéma, ces données sont intégrées à vos données de profil fusionnées.
+Le schéma peut désormais être utilisé dans le profil client en temps réel. Lorsqu’Experience Platform ingère des données dans des jeux de données basés sur ce schéma, ces données sont intégrées aux données de profil fusionnées.
 
 ## Modifier les noms d’affichage des champs de schéma {#display-names}
 
@@ -388,7 +388,7 @@ Après avoir confirmé le changement de classe, la zone de travail sera réiniti
 
 ## Étapes suivantes {#next-steps}
 
-Ce document couvrait les principes de base de la création et de la modification de schémas dans l’interface utilisateur de Platform. Il est vivement recommandé de consulter le [tutoriel sur la création de schéma](../../tutorials/create-schema-ui.md) pour un workflow complet de création d’un schéma complet dans l’interface utilisateur, y compris la création de groupes de champs personnalisés et de types de données for cas d’utilisation uniques.
+Ce document couvrait les principes de base de la création et de la modification de schémas dans l’interface utilisateur d’Experience Platform. Il est vivement recommandé de consulter le [tutoriel sur la création de schéma](../../tutorials/create-schema-ui.md) pour un workflow complet de création d’un schéma complet dans l’interface utilisateur, y compris la création de groupes de champs personnalisés et de types de données for cas d’utilisation uniques.
 
 Pour plus d’informations sur les fonctionnalités de l’espace de travail [!UICONTROL Schémas], consultez la présentation de l’espace de travail [[!UICONTROL Schémas]](../overview.md).
 

@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Février 2023
 description: Les notes de mise à jour de février 2023 pour Adobe Experience Platform.
 exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
-source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1255'
-ht-degree: 96%
+source-wordcount: '1259'
+ht-degree: 91%
 
 ---
 
@@ -92,7 +92,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur XDM dans Platform, consultez la [présentation du système XDM](../../xdm/home.md).
+Pour plus d’informations sur XDM dans Experience Platform, consultez la [présentation du système XDM](../../xdm/home.md). &#x200B;
 
 ## Query Service {#query-service}
 
@@ -102,7 +102,7 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Activer les jeux de données pour les profils avec SQL | [Utilisez des libellés dans les requêtes CTAS afin qu’un jeu de données soit « activé pour le profil »](../../query-service/sql/syntax.md#create-table-as-select), ou utilisez Modifier pour mettre à jour les jeux de données existants à activer pour le profil. Vous pouvez utiliser cette structure SQL étendue pour offrir une prise en charge transparente des jeux de données dérivés pour vos cas d’utilisation professionnels de profil client en temps réel. Pour plus d’informations, voir le document [Flux SQL transparent pour les jeux de données dérivés](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md) . |
+| Activer les jeux de données pour les profils avec SQL | [Utilisez des libellés dans les requêtes CTAS afin qu’un jeu de données soit « activé pour le profil »](../../query-service/sql/syntax.md#create-table-as-select), ou utilisez Modifier pour mettre à jour les jeux de données existants à activer pour le profil. Vous pouvez utiliser cette structure SQL étendue pour fournir une prise en charge transparente des jeux de données dérivés pour vos cas d’utilisation professionnels de profil client en temps réel. Consultez le document [Flux SQL transparent pour les jeux de données dérivés](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md) pour plus d’informations. |
 | Surveiller les requêtes planifiées | Utilisez l’[onglet Requêtes planifiées](../../query-service/ui/monitor-queries.md) pour trouver des informations importantes sur les exécutions de vos requêtes et vous abonner aux alertes. Surveillez les requêtes pour connaître les détails du planning, le statut et les messages ou codes d’erreur en cas d’échec. |
 | Activer la fonction de saisie automatique | Éliminez certaines commandes de métadonnées et améliorez les temps de traitement en [activant la fonction de saisie automatique de Query Editor](../../query-service/ui/user-guide.md#auto-complete). Cette fonctionnalité suggère automatiquement des mots-clés SQL potentiels ainsi que des détails de table pour la requête au fur et à mesure que vous l’écrivez. |
 | Échantillons de jeux de données | Spécifiez un taux d’échantillonnage dans votre requête et [utilisez des échantillons de jeux de données pour créer un exemple aléatoire uniforme](../../query-service/key-concepts/dataset-samples.md), ou créez des échantillons conditionnels en fonction de critères spécifiques. |
@@ -128,7 +128,7 @@ Pour en savoir plus sur Real-time CDP B2B Edition, consultez la [présentatio
 
 ## Sources {#sources}
 
-Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes et vous permet de structurer, d’étiqueter et d’améliorer ces données à l’aide des services d’Experience Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
 Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
@@ -136,8 +136,8 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Désigner l’accès au niveau de l’abonnement avec [!DNL Google PubSub] | Vous pouvez désormais définir l’accès à un abonnement à une rubrique spécifique lors de l’utilisation de la source [!DNL Google PubSub] en fournissant l’ID d’abonnement lors de l’authentification. Pour plus d’informations, reportez-vous au tutoriel sur l’authentification [!DNL Google PubSub] [à l’aide de l’API Flow Service](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) ou de l’[IU de Platform](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
-| Ingérer des données d’activité personnalisées à partir de [!DNL Marketo] | Vous pouvez désormais importer des données d’activité personnalisées depuis votre instance [!DNL Marketo] vers Experience Platform. Pour ingérer des données d’activité personnalisées, vous devez configurer des groupes de champs d’activités personnalisées dans le schéma Activités B2B et créer un flux de données à l’aide du jeu de données des activités. Une fois le flux de données terminé, le jeu de données ingéré contiendra les activités standard et personnalisées de votre instance [!DNL Marketo]. Vous pouvez ensuite utiliser [Query Service](../../query-service/home.md) pour accéder aux enregistrements d’activités personnalisées sur Platform. Pour plus d’informations, consultez le guide sur la [création d’un flux de données pour les données d’activités personnalisées](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
+| Désigner l’accès au niveau de l’abonnement avec [!DNL Google PubSub] | Vous pouvez désormais définir l’accès à un abonnement à une rubrique spécifique lors de l’utilisation de la source [!DNL Google PubSub] en fournissant l’ID d’abonnement lors de l’authentification. Pour plus d’informations, consultez le tutoriel sur l’authentification [!DNL Google PubSub] [à l’aide de l’API Flow Service](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) ou [l’interface utilisateur d’Experience Platform](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
+| Ingérer des données d’activité personnalisées à partir de [!DNL Marketo] | Vous pouvez désormais importer des données d’activité personnalisées depuis votre instance [!DNL Marketo] vers Experience Platform. Pour ingérer des données d’activité personnalisées, vous devez configurer des groupes de champs d’activités personnalisées dans le schéma Activités B2B et créer un flux de données à l’aide du jeu de données des activités. Une fois le flux de données terminé, le jeu de données ingéré contiendra les activités standard et personnalisées de votre instance [!DNL Marketo]. Vous pouvez ensuite utiliser [Query Service](../../query-service/home.md) pour accéder aux enregistrements d’activités personnalisées sur Experience Platform. Pour plus d’informations, consultez le guide sur la [création d’un flux de données pour les données d’activités personnalisées](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
 | Exclure les comptes non réclamés de [!DNL Marketo] | Vous pouvez maintenant configurer si vous souhaitez exclure ou inclure les comptes non réclamés de l’ingestion lors de la création d’un flux de données pour les données d’entreprise. Pour plus d’informations, consultez le guide sur la [création d’une connexion source et d’un flux de données pour [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
 
 {style="table-layout:auto"}

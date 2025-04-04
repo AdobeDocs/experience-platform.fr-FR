@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;Maria DB;maria db
+keywords: Experience Platform;accueil;rubriques populaires;Maria DB;maria db
 solution: Experience Platform
-title: Création d’une connexion MariaDB Source dans l’interface utilisateur
+title: Créer une connexion Source MariaDB dans l’interface utilisateur
 type: Tutorial
-description: Découvrez comment créer une connexion source Maria DB à l’aide de l’interface utilisateur de Adobe Experience Platform.
+description: Découvrez comment créer une connexion source MariaDB à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 259ca112-01f1-414a-bf9f-d94caf4c69df
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 40%
@@ -14,7 +14,7 @@ ht-degree: 40%
 
 # Créer une connexion source [!DNL MariaDB] dans l’interface utilisateur
 
-Les connecteurs Source dans Adobe Experience Platform permettent d’ingérer des données provenant de l’extérieur de manière planifiée. Ce tutoriel décrit les étapes de création d’un connecteur source Maria DB à l’aide de l’interface utilisateur [!DNL Platform].
+Les connecteurs Source de Adobe Experience Platform permettent d’ingérer des données provenant de l’extérieur selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour créer un connecteur source MariaDB à l’aide de l’interface utilisateur [!DNL Experience Platform].
 
 ## Prise en main
 
@@ -29,38 +29,38 @@ Si vous disposez déjà d’une connexion [!DNL MariaDB], vous pouvez ignorer le
 
 ### Collecter les informations d’identification requises
 
-Pour accéder à votre compte [!DNL MariaDB] sur [!DNL Platform], vous devez fournir la valeur suivante :
+Pour accéder à votre compte [!DNL MariaDB] sur [!DNL Experience Platform], vous devez fournir la valeur suivante :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
 | `connectionString` | Chaîne de connexion associée à votre authentification MariaDB. Le modèle de chaîne de connexion [!DNL MariaDB] est : `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 
-Pour plus d&#39;informations sur la prise en main, consultez ce [[!DNL MariaDB] document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
+Pour plus d’informations sur la prise en main, reportez-vous à ce [[!DNL MariaDB] document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
 
 ## Connecter votre compte [!DNL Maria DB]
 
-Une fois les informations d’identification requises collectées, vous pouvez suivre les étapes ci-dessous pour lier votre compte [!DNL Maria DB] à [!DNL Platform].
+Une fois les informations d’identification requises collectées, vous pouvez suivre les étapes ci-dessous pour lier votre compte [!DNL Maria DB] à [!DNL Experience Platform].
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com), puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Sources]**. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
+Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Sources]**. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
 
-Sous la catégorie **[!UICONTROL Bases de données]**, sélectionnez **[!UICONTROL Maria DB]**. Si c&#39;est la première fois que vous utilisez ce connecteur, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter des données]** pour créer un nouveau connecteur [!DNL Maria DB].
+Dans la catégorie **[!UICONTROL Bases de données]**, sélectionnez **[!UICONTROL Maria DB]**. Si vous utilisez ce connecteur pour la première fois, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter des données]** pour créer un connecteur [!DNL Maria DB].
 
 ![](../../../../images/tutorials/create/maria-db/catalog.png)
 
-La page **[!UICONTROL Se connecter à Maria DB]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Connexion à Maria DB]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Nouveau compte
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**.  Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification [!DNL MariaDB]. Une fois que vous avez terminé, sélectionnez **[!UICONTROL Se connecter]** et laissez un certain temps à la nouvelle connexion pour établir.
+Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**.  Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification [!DNL MariaDB]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion]** puis patientez quelques instants le temps d’établir la nouvelle connexion.
 
 ![](../../../../images/tutorials/create/maria-db/new.png)
 
 ### Compte existant
 
-Pour connecter un compte existant, sélectionnez le compte [!DNL MariaDB] auquel vous souhaitez vous connecter, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
+Pour connecter un compte existant, sélectionnez le compte [!DNL MariaDB] auquel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![](../../../../images/tutorials/create/maria-db/existing.png)
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez établi une connexion à votre compte [!DNL MariaDB]. Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données dans [!DNL Platform]](../../dataflow/databases.md).
+En suivant ce tutoriel, vous avez établi une connexion à votre compte [!DNL MariaDB]. Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données dans [!DNL Experience Platform]](../../dataflow/databases.md).

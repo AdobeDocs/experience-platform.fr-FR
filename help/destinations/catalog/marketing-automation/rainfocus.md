@@ -2,19 +2,19 @@
 title: Profils des participants à Rainfocus
 description: Découvrez comment utiliser le connecteur de destination Profils de participants RainFocus pour synchroniser les profils d’audience avec le profil de participant global RainFocus.
 last-substantial-update: 2024-12-17T00:00:00Z
-source-git-commit: a3dcf49d3ed9afacd3ffef10d6f280c71ebdf584
+exl-id: 27c3848c-411a-4305-a5d5-00b145b95287
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1000'
-ht-degree: 44%
+ht-degree: 46%
 
 ---
-
 
 # Profils des participants à Rainfocus {#rainfocus-destination}
 
 ## Vue d’ensemble {#overview}
 
-Utilisez la destination [!DNL RainFocus Attendee Profiles] pour diffuser des profils clients de Adobe Experience Platform vers la plateforme [!DNL RainFocus] afin de créer et de mettre à jour des profils de participants.
+Utilisez la destination [!DNL RainFocus Attendee Profiles] pour diffuser des profils clientèle d’Adobe Experience Platform vers la plateforme [!DNL RainFocus] afin de créer et de mettre à jour des profils de participantes et participants.
 
 >[!IMPORTANT]
 >
@@ -48,7 +48,7 @@ Vous devez également disposer d’un identifiant RainFocus **code d’événeme
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| email_lc_sha256 | Adresses e-mail hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses e-mail hachées avec SHA256. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hache automatiquement les données lors de l’activation. |
+| email_lc_sha256 | Adresses e-mail hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses e-mail hachées avec SHA256. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
 
 {style="table-layout:auto"}
 
@@ -58,7 +58,7 @@ Cette section décrit le type d’audiences que vous pouvez exporter vers cette 
 
 | Origine de l’audience | Pris en charge | Description |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiences générées via l’Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Audiences générées via Experience Platform [Segmentation Service](../../../segmentation/home.md). |
 | Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}

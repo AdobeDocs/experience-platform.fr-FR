@@ -1,37 +1,37 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;système local;téléchargement de fichiers;mapper csv;mapper le fichier csv;mapper le fichier csv à xdm;mapper csv à xdm;guide ui;
+keywords: Experience Platform;accueil;rubriques les plus consultées;système local;chargement de fichier;mapper csv;mapper le fichier csv;mapper le fichier csv à xdm;mapper csv à xdm;guide de l’interface utilisateur;
 solution: Experience Platform
-title: Création d’un connecteur Source de téléchargement de fichier local dans l’interface utilisateur
+title: Création d’un connecteur Source de téléchargement de fichiers locaux dans l’interface utilisateur
 type: Tutorial
-description: Découvrez comment créer une connexion source pour votre système local pour importer des fichiers locaux dans Platform
+description: Découvrez comment créer une connexion source pour votre système local afin d’importer des fichiers locaux dans Experience Platform
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 72%
+source-wordcount: '777'
+ht-degree: 68%
 
 ---
 
-# Création d’un connecteur source de transfert de fichiers local dans l’interface utilisateur
+# Créer un connecteur source de chargement de fichiers local dans l’interface utilisateur
 
-Ce tutoriel décrit les étapes de création d’un connecteur source de chargement de fichier local pour ingérer des fichiers locaux vers Platform à l’aide de l’interface utilisateur.
+Ce tutoriel décrit les étapes à suivre pour créer un connecteur source local de chargement de fichiers afin d’ingérer des fichiers locaux vers Experience Platform à l’aide de l’interface utilisateur.
 
-## Commencer
+## Prise en main
 
-Ce tutoriel nécessite une compréhension pratique des composants suivants de Platform :
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform : 
 
-* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : Le cadre normalisé par lequel Platform organise les données d’expérience client.
+* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client. 
    * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 
-## Chargement de fichiers locaux dans Platform
+## Chargement de fichiers locaux vers Experience Platform
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources pour lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources pour lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous la catégorie [!UICONTROL Système local], sélectionnez **[!UICONTROL Chargement de fichier local]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
+Dans la catégorie [!UICONTROL Système local], sélectionnez **[!UICONTROL Chargement de fichier local]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
 ![catalogue](../../../../images/tutorials/create/local/catalog.png)
 
@@ -81,14 +81,14 @@ L’interface de [!UICONTROL mappage] fournit un outil complet pour mapper les c
 
 Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface de mappage, consultez le [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
 
-Une fois vos jeux de mappages prêts, sélectionnez **[!UICONTROL Terminer]** et attendez quelques instants pour créer le nouveau flux de données.
+Une fois vos jeux de mappages prêts, sélectionnez **[!UICONTROL Terminer]** et patientez quelques instants le temps que le flux de données soit créé.
 
 ![mappage](../../../../images/tutorials/create/local/mapping.png)
 
 ## Surveiller l’ingestion des données
 
-Une fois votre fichier CSV mappé et créé, vous pouvez surveiller les données ingérées à l’aide du tableau de bord de surveillance. Pour plus d’informations, consultez le tutoriel sur la [surveillance des flux de données de sources dans l’interface utilisateur](../../../../../dataflows/ui/monitor-sources.md).
+Une fois votre fichier CSV mappé et créé, vous pouvez surveiller les données ingérées à l’aide du tableau de bord de surveillance. Pour plus d’informations, consultez le tutoriel sur la [surveillance des flux de données des sources dans l’interface utilisateur](../../../../../dataflows/ui/monitor-sources.md).
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez mappé un fichier CSV plat à un schéma XDM et l’avez ingéré dans Platform. Ces données peuvent désormais être utilisées par les services de [!DNL Platform] en aval, comme [!DNL Real-Time Customer Profile]. Pour de plus d’informations, rendez-vous sur la présentation de [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md).
+En suivant attentivement ce tutoriel, vous avez mappé un fichier CSV plat à un schéma XDM et l’avez ingéré dans Experience Platform. Ces données peuvent désormais être utilisées par les services de [!DNL Experience Platform] en aval, comme [!DNL Real-Time Customer Profile]. Pour de plus d’informations, rendez-vous sur la présentation de [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md).

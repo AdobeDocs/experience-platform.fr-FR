@@ -2,10 +2,10 @@
 title: Éléments de données
 description: Les éléments de données sont les blocs de construction de votre dictionnaire de données (ou mappage de données). Utilisez des éléments de données pour recueillir, organiser et diffuser des données dans les technologies marketing et publicitaires.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 0956a28a8ff6eacb3a55f7c333293ed5b6c81cce
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1614'
-ht-degree: 91%
+source-wordcount: '1615'
+ht-degree: 89%
 
 ---
 
@@ -95,7 +95,7 @@ Lors de la création ou de la modification d’éléments, vous pouvez enregistr
 >
 >Les types d’éléments de données sont déterminés par l’extension. Les types qui peuvent être créés ne sont pas limités.
 
-Les sections suivantes décrivent les types d’éléments de données disponibles dans l’ **extension Core**. D’autres extensions utilisent d’autres types d’éléments de données.
+Les sections suivantes décrivent les types d’éléments de données disponibles dans l’extension **Core**. D’autres extensions utilisent d’autres types d’éléments de données.
 
 ### Cookie
 
@@ -139,7 +139,7 @@ Vous pouvez alors les utiliser dans des scripts personnalisés à l’aide de la
 var rule = _satellite.getVar('return event rule', event);
 ```
 
-Lors de l’utilisation de la syntaxe percent (`%`), il vous suffit de spécifier le nom de l’élément de données. Vous n&#39;avez pas besoin de spécifier `event`.
+Lors de l’utilisation de la syntaxe de pourcentage (`%`), il vous suffit de spécifier le nom de l’élément de données. Vous n&#39;avez pas besoin de spécifier `event`.
 
 ```text
 %data element name%
@@ -163,7 +163,7 @@ Obtention de la valeur de :
 
 N’importe quelle variable ou n’importe quel objet JavaScript peut être référencé à l’aide du champ de chemin d’accès.
 
-Si vous souhaitez collecter des variables JavaScript ou des propriétés d’objet dans vos balises et les utiliser avec l’une de vos extensions ou règles, des éléments de données peuvent être utilisés pour capturer ces valeurs. Ainsi, vous pouvez vous reporter à l’élément de données dans vos règles. Si la source des données venait à changer, il vous suffirait de modifier la référence à la source (l’élément de données) à un seul emplacement.
+Si vous souhaitez collecter des variables JavaScript ou des propriétés d’objet dans vos balises et les utiliser avec l’une de vos extensions ou règles, des éléments de données peuvent être utilisés pour capturer ces valeurs. Ainsi, vous pouvez vous référer à l’élément de données dans vos règles, et si la source des données venait à changer, il vous suffirait de modifier la référence à la source (l’élément de données) à un seul endroit.
 
 Par exemple, supposons que vos balises contiennent une variable JavaScript nommée « `Page_Name` » comme illustré ci-dessous :
 
@@ -176,7 +176,7 @@ Par exemple, supposons que vos balises contiennent une variable JavaScript nomm�
 
 Vous devez indiquer le chemin d’accès à cette variable lorsque vous créez l’élément de données.
 
-Si vous utilisez un objet collecteur de données dans votre couche de données, utilisez simplement la notation point dans le chemin pour faire référence à l’objet et la propriété que vous souhaitez capturer dans l’élément de données, par exemple `_myData.pageName`, `digitalData.pageName`, etc.
+Si vous utilisez un objet collecteur de données dans votre couche de données, il vous suffit d’utiliser la notation point dans le chemin pour faire référence à l’objet et à la propriété que vous souhaitez capturer dans l’élément de données, par exemple `_myData.pageName`, ou `digitalData.pageName`, etc.
 
 #### Exemple :
 
@@ -215,7 +215,7 @@ Seule la section de nom est nécessaire. Les indicateurs spéciaux tels que « 
 
 ### Nombre aléatoire
 
-Utilisez cet élément de données pour générer un nombre aléatoire. Il est souvent utilisé pour échantillonner des données ou pour créer des identifiants, tels qu’un identifiant d’accès. Le nombre aléatoire peut également être utilisé pour obscurcir ou appliquer un salage aux données sensibles. Voici quelques exemples :
+Utilisez cet élément de données pour générer un nombre aléatoire. Elle est souvent utilisée pour échantillonner des données ou créer des identifiants, tels qu’un identifiant d’accès. Le nombre aléatoire peut également être utilisé pour obscurcir ou appliquer un salage aux données sensibles. Voici quelques exemples :
 
 * Générer un ID d’accès
 * Concaténer le nombre à un jeton utilisateur ou à un horodatage pour garantir l’unicité
@@ -238,7 +238,7 @@ Le stockage de session est similaire au stockage local, sauf que les données so
 
 ### Comportement du visiteur
 
-Similaire aux informations sur la page, cet élément de données utilise des types de comportements courants pour enrichir la logique dans les règles ou d’autres solutions Platform.
+Semblable aux informations sur la page, cet élément de données utilise des types de comportement courants pour enrichir la logique dans les règles ou d’autres solutions Experience Platform.
 
 Sélectionnez l’un des attributs de comportement du visiteur suivants :
 
@@ -259,7 +259,7 @@ Voici quelques cas d’utilisation courants :
 
 ## Éléments de données intégrés
 
-Vous devez créer des éléments de données personnalisés supplémentaires si vous avez déjà utilisé l’un des éléments de données suivants :
+Vous devez créer d’autres éléments de données personnalisés si vous avez déjà utilisé l’un des éléments de données suivants :
 
 * URI
 * Protocol

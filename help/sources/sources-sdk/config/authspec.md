@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;c
 title: Configurer les spécifications d’authentification pour les sources en libre-service (SDK par lots)
 description: Ce document présente un aperçu des configurations que vous devez préparer pour utiliser des sources en libre-service (SDK par lots).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 8517532f991413a239e0da890bf53b1bf5b621f0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '772'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 Les spécifications d’authentification définissent la manière dont les utilisateurs de Adobe Experience Platform peuvent se connecter à votre source.
 
-Le tableau `authSpec` contient des informations sur les paramètres d’authentification requis pour connecter une source à Platform. Toute source donnée peut prendre en charge plusieurs types d’authentification différents.
+Le tableau `authSpec` contient des informations sur les paramètres d’authentification requis pour connecter une source à Experience Platform. Toute source donnée peut prendre en charge plusieurs types d’authentification différents.
 
 ## Spécifications d’authentification
 
@@ -340,4 +340,4 @@ Voici un exemple de spécification d’authentification terminée à l’aide d�
 
 ## Étapes suivantes
 
-Une fois vos spécifications d’authentification renseignées, vous pouvez procéder à la configuration des spécifications de source pour la source que vous souhaitez intégrer à Platform. Pour plus d’informations, consultez le document sur la [configuration des spécifications de source](./sourcespec.md).
+Une fois vos spécifications d’authentification renseignées, vous pouvez procéder à la configuration des spécifications de la source que vous souhaitez intégrer à Experience Platform. Pour plus d’informations, consultez le document sur la [configuration des spécifications de source](./sourcespec.md).

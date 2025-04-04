@@ -2,10 +2,10 @@
 title: Hôtes SFTP
 description: Découvrez comment configurer les balises dans Adobe Experience Platform pour diffuser des versions de bibliothèque sur un serveur SFTP sécurisé et auto-hébergé.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: 5b362d28eb3be5e2a45464390c694f7ae59f899c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 36%
+source-wordcount: '880'
+ht-degree: 34%
 
 ---
 
@@ -25,7 +25,7 @@ Experience Platform vous permet de diffuser les versions de bibliothèque de bal
 
 ## Configurer une clé d’accès pour votre serveur {#access-key}
 
-Platform se connecte à votre serveur SFTP à l’aide d’une clé chiffrée. Pour configurer cette méthode correctement, quelques manipulations sont nécessaires :
+Experience Platform se connecte à votre site SFTP à l’aide d’une clé chiffrée. Pour configurer cette méthode correctement, quelques manipulations sont nécessaires :
 
 ### Création d’une paire de clés publique/privée
 
@@ -35,7 +35,7 @@ Une paire de clés publique/privée doit être installée sur votre serveur SFTP
 
 La clé privée est utilisée pour chiffrer la clé publique. Vous devrez fournir votre clé privée pendant le processus de création de l’hôte SFTP. Consultez la section sur le [chiffrement des valeurs](../../../api/guides/encrypting-values.md) dans le guide de l’API Reactor pour obtenir des instructions sur le chiffrement des clés publiques. Utilisez la clé GPG de l’environnement de production, sauf si vous savez que vous avez besoin d’une clé spécifique. Enfin, vous pouvez chiffrer votre clé privée depuis n’importe quel ordinateur. Il n’est donc pas nécessaire d’installer GPG sur votre serveur pour réaliser cette manipulation.
 
-### Placer sur la liste autorisée Adresses IP de Platform
+### Placer sur la liste autorisée des adresses IP Experience Platform
 
 >[!IMPORTANT]
 >
@@ -53,7 +53,7 @@ La clé privée est utilisée pour chiffrer la clé publique. Vous devrez fourni
 > * `44.194.43.191`
 > * `3.215.163.18`
 
-Vous devrez peut-être approuver un ensemble d’adresses IP à utiliser dans le pare-feu de votre entreprise pour permettre à Platform d’atteindre votre serveur SFTP et de s’y connecter. Ces adresses IP sont les suivantes :
+Vous devrez peut-être approuver un ensemble d’adresses IP à utiliser dans le pare-feu de votre société pour permettre à Experience Platform d’accéder à votre serveur SFTP et de s’y connecter. Ces adresses IP sont les suivantes :
 
 * `184.72.239.68`
 * `23.20.85.113`
@@ -94,7 +94,7 @@ Sélectionnez **[!UICONTROL Enregistrer]** pour créer l’hôte avec la configu
 
 ![Image montrant l’hôte SFTP en cours d’enregistrement](../../../images/ui/publishing/sftp-hosts/save-host.png)
 
-Cliquer sur **[!UICONTROL Enregistrer]** entraîne le test de la connexion et de la capacité de diffusion des fichiers sur votre serveur SFTP. Platform crée un dossier, écrit un fichier dans ce dossier, vérifie que le fichier est bien là, puis supprime le tout. Si le compte utilisateur de votre serveur SFTP (celui associé au certificat sécurisé que vous avez fourni à Platform) ne dispose pas des autorisations nécessaires pour effectuer cette action, l’hôte passe en état « Failed » (Échec).
+Cliquer sur **[!UICONTROL Enregistrer]** entraîne le test de la connexion et de la capacité de diffusion des fichiers sur votre serveur SFTP. Experience Platform crée un dossier, écrit un fichier dans ce dossier, vérifie que le fichier est bien là, puis supprime le tout. Si le compte utilisateur de votre serveur SFTP (celui associé au certificat sécurisé que vous avez fourni à Experience Platform) ne dispose pas des autorisations nécessaires pour effectuer cette action, l’hôte passe en état « Failed » (Échec).
 
 ## Étapes suivantes
 

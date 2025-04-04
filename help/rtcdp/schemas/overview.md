@@ -3,10 +3,10 @@ title: Schémas dans Real-time Customer Data Platform
 description: Présentation du rôle des schémas de modèle de données d’expérience (XDM) dans Adobe Real-Time Customer Data Platform.
 feature: Get Started, Data Management, Schemas
 exl-id: e56873d2-825d-4c0f-a0fe-1ae6e83438f0
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 100%
+source-wordcount: '144'
+ht-degree: 81%
 
 ---
 
@@ -16,4 +16,4 @@ Toutes les données introduites dans Adobe Real-time Customer Data Platform doiv
 
 Après avoir créé des schémas, vous pouvez mapper la structure des données à XDM afin qu’elles puissent être ingérées dans le système.
 
-Pour plus d’informations sur XDM et la gestion des schémas dans l’interface utilisateur, reportez-vous à la [documentation XDM](../../xdm/home.md). Si vous utilisez l’édition B2B de Real-Time Customer Platform, consultez le document sur les [schémas dans Real-Time CDP édition B2B](./b2b.md) pour plus d’informations sur les applications spécifiques B2B pour XDM.
+Pour plus d’informations sur XDM et la gestion des schémas dans l’interface utilisateur, reportez-vous à la [documentation XDM](../../xdm/home.md). Si vous utilisez Real-time Customer Experience Platform B2B edition, consultez le document sur les [schémas dans Real-Time CDP B2B edition](./b2b.md) pour plus d’informations sur les applications spécifiques B2B pour XDM.

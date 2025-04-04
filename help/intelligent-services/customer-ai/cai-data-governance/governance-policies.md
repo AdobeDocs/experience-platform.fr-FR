@@ -4,16 +4,16 @@ feature: Customer AI
 title: Politiques de gouvernance pour l’IA dédiée aux clients
 description: Adobe Experience Platform fournit plusieurs services et outils qui vous permettent de contrôler en toute confiance les données d’expérience collectées.
 exl-id: be3eca3a-0ea1-4b84-9454-675a4f9ac71e
-source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 97%
+source-wordcount: '190'
+ht-degree: 86%
 
 ---
 
-# Stratégies de gouvernance dans Customer AI
+# Politiques de gouvernance dans l’IA dédiée aux clients
 
-Une fois que vous avez terminé le workflow pour créer un modèle et envoyer la configuration du modèle, l’[application des politiques](/help/data-governance/enforcement/auto-enforcement.md) vérifie s’il existe des violations. Si une violation de politique se produit, une fenêtre contextuelle s’affiche indiquant qu’une ou plusieurs politiques ont été violées. Cela permet de vous assurer que vos opérations de données et vos actions marketing dans Platform sont conformes aux politiques d’utilisation des données.
+Une fois que vous avez terminé le workflow pour créer un modèle et envoyer la configuration du modèle, l’[application des politiques](/help/data-governance/enforcement/auto-enforcement.md) vérifie s’il existe des violations. Si une violation de politique se produit, une fenêtre contextuelle s’affiche indiquant qu’une ou plusieurs politiques ont été violées. Cela permet de vous assurer que vos opérations de données et vos actions marketing dans Experience Platform sont conformes aux politiques d’utilisation des données.
 
 ![Une fenêtre contextuelle affichant des informations sur la violation de la politique](../images/user-guide/policy-violation-popover-cai.png).
 

@@ -1,29 +1,29 @@
 ---
-title: Guide d’informations sur les rapports de magasin accélérés de requête
+title: Guide d’informations sur les rapports de magasin accélérés par les requêtes
 description: Découvrez comment créer un modèle de données d’informations sur les rapports via Query Service afin de l’utiliser avec des données de magasin accélérées et des tableaux de bord définis par l’utilisateur.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1034'
-ht-degree: 82%
+source-wordcount: '1037'
+ht-degree: 77%
 
 ---
 
-# Guide d’informations sur les rapports de magasin accélérés de requête
+# Guide d’informations sur les rapports du magasin d’accélération des requêtes
 
 Le magasin d’accélération des requêtes vous permet de réduire le temps et la puissance de traitement requis pour obtenir des informations critiques à partir de vos données. En règle générale, les données sont traitées à intervalles réguliers (par exemple, toutes les heures ou tous les jours), lorsque des vues agrégées sont créées et font l’objet de rapports. L’analyse de ces rapports générés à partir de données agrégées fournit des informations destinées à améliorer les performances commerciales. Le magasin d’accélération des requêtes offre un service de cache, une simultanéité, une expérience interactive et une API sans état. Toutefois, il suppose que les données sont prétraitées et optimisées pour les requêtes agrégées et non pour les requêtes de données brutes.
 
-Le magasin accéléré de requêtes vous permet de créer un modèle de données personnalisé et/ou d’étendre un modèle de données Adobe Real-Time Customer Data Platform existant. Vous pouvez ensuite utiliser vos informations de rapports ou les incorporer dans un framework de création de rapports/visualisation de votre choix. Consultez la documentation du modèle de données Real-time Customer Data Platform Insights pour savoir comment [personnaliser vos modèles de requête SQL pour créer des rapports Real-Time CDP pour vos cas d’utilisation de marketing et d’indicateurs clés de performance (ICP)](../../../dashboards/data-models/cdp-insights-data-model-b2c.md).
+Le magasin d’accélération des requêtes vous permet de créer un modèle de données personnalisé et/ou d’étendre un modèle de données Adobe Real-Time Customer Data Platform existant. Vous pouvez ensuite utiliser vos informations de rapports ou les incorporer dans un framework de création de rapports/visualisation de votre choix. Consultez la documentation du modèle de données Real-time Customer Data Platform Insights pour savoir comment [personnaliser vos modèles de requête SQL pour créer des rapports Real-Time CDP pour vos cas d’utilisation de marketing et d’indicateurs clés de performance (ICP)](../../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
-Le modèle de données Real-Time CDP de Adobe Experience Platform fournit des informations sur les profils, les audiences et les destinations et active les tableaux de bord des informations Real-Time CDP. Ce document vous guide tout au long du processus de création de votre modèle de données des rapports d’informations et vous explique également comment étendre les modèles de données Real-time CDP selon les besoins.
+Le modèle de données Real-Time CDP de Adobe Experience Platform fournit des informations sur les profils, les audiences et les destinations et active les tableaux de bord Real-Time CDP insight. Ce document vous guide tout au long du processus de création de votre modèle de données des rapports d’informations et vous explique également comment étendre les modèles de données Real-time CDP selon les besoins.
 
 ## Conditions préalables
 
-Ce tutoriel utilise des tableaux de bord définis par l’utilisateur pour visualiser les données de votre modèle de données personnalisé dans l’interface utilisateur de Platform. Veuillez consulter la [documentation des tableaux de bord définis par l’utilisateur](../../../dashboards/standard-dashboards.md) pour en savoir plus sur cette fonctionnalité.
+Ce tutoriel utilise des tableaux de bord définis par l’utilisateur pour visualiser les données de votre modèle de données personnalisé dans l’interface utilisateur d’Experience Platform. Veuillez consulter la [documentation des tableaux de bord définis par l’utilisateur](../../../dashboards/standard-dashboards.md) pour en savoir plus sur cette fonctionnalité.
 
 ## Prise en main
 
-Le SKU Data Distiller est nécessaire pour créer un modèle de données personnalisé pour vos rapports d’informations et pour étendre les modèles de données Real-time CDP qui contiennent des données Platform enrichies. Veuillez consulter la documentation [packaging](../../packaging.md), [guardrails](../../guardrails.md#query-accelerated-store) et [licensing](../../data-distiller/license-usage.md) relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
+Le SKU Data Distiller est nécessaire pour créer un modèle de données personnalisé pour vos rapports d’informations et pour étendre les modèles de données Real-Time CDP qui contiennent des données Experience Platform enrichies. Consultez la documentation [packaging](../../packaging.md), [mécanismes de sécurisation](../../guardrails.md#query-accelerated-store) et [licences](../../data-distiller/license-usage.md) relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
 
 ## Créer un modèle de données de rapport d’informations
 
@@ -33,7 +33,7 @@ Dès le départ, vous disposez d’un modèle de données initial issu de vos so
 
 ![Schéma relationnel d’entité (ERD) du modèle utilisateur d’informations sur l’audience.](../../images/data-distiller/sql-insights/audience-insight-user-model.png)
 
-Dans cet exemple, le `externalaudiencereach` tableau/jeu de données est basé sur un identifiant et suit les limites inférieure et supérieure pour le nombre de correspondances. La table/le jeu de données de dimension `externalaudiencemapping` mappe l’ID externe à une destination et à une audience sur Platform.
+Dans cet exemple, le `externalaudiencereach` tableau/jeu de données est basé sur un identifiant et suit les limites inférieure et supérieure pour le nombre de correspondances. Le tableau/jeu de données de dimension `externalaudiencemapping` mappe l’identifiant externe à une destination et à une audience sur Experience Platform.
 
 ## Créer un modèle de rapport d’informations avec Data Distiller
 
@@ -129,7 +129,7 @@ ext_custom_audience_id | approximate_count_upper_bound
 
 ## Étendez votre modèle de données avec le modèle de données d’informations Real-time CDP.
 
-Vous pouvez étendre votre modèle d’audience avec des détails supplémentaires pour créer un tableau des dimensions plus riche. Vous pouvez, par exemple, associer le nom de l’audience et le nom de la destination à l’identifiant de l’audience externe. Pour ce faire, utilisez Query Service pour créer ou actualiser un nouveau jeu de données et l’ajouter au modèle d’audience qui combine des audiences et des destinations avec une identité externe. Le diagramme ci-dessous illustre le concept de cette extension de modèle de données.
+Vous pouvez étendre votre modèle d’audience avec des détails supplémentaires pour créer un tableau des dimensions plus riche. Par exemple, vous pouvez mapper le nom de l’audience et le nom de destination à l’identifiant de l’audience externe. Pour ce faire, utilisez Query Service pour créer ou actualiser un nouveau jeu de données et l’ajouter au modèle d’audience qui combine des audiences et des destinations avec une identité externe. Le diagramme ci-dessous illustre le concept de cette extension de modèle de données.
 
 ![Diagramme ERD liant le modèle de données d’informations Real-Time CDP au modèle de magasin d’accélération des requêtes.](../../images/data-distiller/sql-insights/updatingAudienceInsightUserModel.png)
 
@@ -207,7 +207,7 @@ ext_custom_audience_id | destination_name |       audience_name        | destina
 
 Maintenant que vous avez créé votre modèle de données personnalisé, vous êtes prêt à visualiser vos données à l’aide de requêtes personnalisées et de tableaux de bord définis par l’utilisateur.
 
-Le code SQL suivant fournit une ventilation du nombre de correspondances par audiences dans une destination et une ventilation de chaque destination d’audiences par audience.
+Le code SQL suivant fournit une répartition du nombre de correspondances par audiences dans une destination et une répartition de chaque destination d’audiences par audience.
 
 ```sql
 SELECT b.destination_name,
@@ -226,6 +226,6 @@ LIMIT  5000
 
 L’image ci-dessous fournit un exemple des visualisations personnalisées possibles à l’aide de votre modèle de données d’informations sur les rapports.
 
-![Un nombre de correspondances par destination et widget d’audience créé à partir du nouveau modèle de données d’informations sur les rapports.](../../images/data-distiller/sql-insights/user-defined-dashboard-widget.png)
+![Un nombre de correspondances par widget de destination et d’audience créé à partir du nouveau modèle de données d’informations sur les rapports.](../../images/data-distiller/sql-insights/user-defined-dashboard-widget.png)
 
 Votre modèle de données personnalisé se trouve dans la liste des modèles de données disponibles dans l’espace de travail du tableau de bord défini par l’utilisateur. Voir le [guide de tableau de bord défini par l’utilisateur](../../../dashboards/standard-dashboards.md) pour obtenir des conseils sur l’utilisation de votre modèle de données personnalisé.

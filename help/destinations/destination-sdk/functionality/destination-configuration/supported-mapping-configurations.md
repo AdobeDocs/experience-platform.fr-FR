@@ -2,10 +2,10 @@
 description: Découvrez comment configurer la destination pour les configurations de mappage d’identité et d’attributs prises en charge.
 title: Configurations de mappage prises en charge
 exl-id: a477a3f2-a229-4b22-8588-ee58bd5436c6
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 99%
+source-wordcount: '670'
+ht-degree: 77%
 
 ---
 
@@ -64,19 +64,19 @@ Les utilisateurs peuvent mapper des attributs de leur profil XDM source aux attr
 
 Les utilisateurs doivent saisir manuellement le nom de l’attribut personnalisé cible au moment de la sélection du mapping de ciblage de champ.
 
-![Copie d’écran de l’interface utilisateur de Platform montrant la sélection d’attributs personnalisés.](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform montrant la sélection d’attributs personnalisés.](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
 
 L’expérience de l’interface utilisateur qui en résulte est affichée dans l’image ci-dessous.
 
-![Copie d’écran de l’interface utilisateur de Platform montrant le mappage des attributs XDM aux attributs personnalisés pour les destinations de diffusion en streaming.](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform montrant le mappage des attributs XDM aux attributs personnalisés pour les destinations de diffusion en streaming.](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
 
 ### Mappage des espaces de noms d’identité aux espaces de noms d’identité de partenaires {#streaming-identity-to-identity}
 
-Les utilisateurs peuvent mapper des espaces de noms d’identité personnalisés ou globaux de Platform aux espaces de noms d’identité que vous avez définis.
+Les utilisateurs peuvent mapper des espaces de noms d’identité personnalisés ou globaux d’Experience Platform aux espaces de noms d’identité que vous avez définis.
 
 L’expérience de l’interface utilisateur qui en résulte est affichée dans l’image ci-dessous.
 
-![Copie d’écran de l’interface utilisateur de Platform montrant le mappage des identités pour les destinations de diffusion en streaming.](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform montrant le mappage d’identité à l’identité pour les destinations de streaming.](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
 
 ## Mappages pris en charge pour les destinations basées sur des fichiers {#batch-mappings}
 
@@ -118,33 +118,33 @@ Pour les destinations basées sur des fichiers, le champ cible est automatiqueme
 
 L’expérience de l’interface utilisateur qui en résulte est affichée dans l’image ci-dessous.
 
-![Copie d’écran de l’interface utilisateur de Platform montrant le mappage XDM aux attributs personnalisés pour les destinations basées sur des fichiers.](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform montrant le mappage XDM aux attributs personnalisés pour les destinations basées sur des fichiers.](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
 
 Les utilisateurs peuvent conserver le nom par défaut ou saisir un nom d’attribut personnalisé dans l’écran de sélection des champs cibles.
 
-![Copie d’écran de l’interface utilisateur de Platform montrant la sélection d’attributs cibles personnalisés pour les destinations basées sur des fichiers.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform montrant la sélection d’attributs cibles personnalisés pour les destinations basées sur des fichiers.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 ### Mappage des espaces de noms d’identité aux attributs personnalisés {#batch-identity-to-custom}
 
-Les utilisateurs peuvent mapper des espaces de noms d’identité personnalisés ou globaux de Platform aux attributs personnalisés du côté de la destination.
+Les utilisateurs peuvent mapper des espaces de noms d’identité personnalisés ou globaux d’Experience Platform aux attributs personnalisés du côté de la destination.
 
 Pendant la sélection d’un espace de noms d’identité comme champ source, le champ cible est automatiquement renseigné avec un espace de noms d’identité équivalent. Pour remplacer le champ cible par un attribut personnalisé, les utilisateurs doivent saisir un nom d’attribut personnalisé dans l’écran de sélection du champ cible.
 
-![Copie d’écran de l’interface utilisateur de Platform montrant la sélection d’attributs cibles personnalisés pour les destinations basées sur des fichiers.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform montrant la sélection d’attributs cibles personnalisés pour les destinations basées sur des fichiers.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 L’expérience de l’interface utilisateur qui en résulte est affichée dans l’image ci-dessous.
 
-![Copie d’écran de l’interface utilisateur de Platform montrant le mappage d’identité aux attributs personnalisés pour les destinations basées sur des fichiers.](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform montrant le mappage d’identité aux attributs personnalisés pour les destinations basées sur des fichiers.](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
 
 ### Mappage des espaces de noms d’identité aux espaces de noms d’identité de partenaires {#batch-identity-to-identity}
 
-Les utilisateurs peuvent mapper des espaces de noms d’identité personnalisés ou globaux de Platform aux espaces de noms d’identité équivalents.
+Les utilisateurs peuvent mapper des espaces de noms d’identité personnalisés ou globaux d’Experience Platform à des espaces de noms d’identité équivalents.
 
 Pendant la sélection d’un espace de noms d’identité comme champ source, le champ cible est automatiquement renseigné avec un espace de noms d’identité équivalent.
 
 L’expérience de l’interface utilisateur qui en résulte est affichée dans l’image ci-dessous.
 
-![Copie d’écran de l’interface utilisateur de Platform montrant le mappage d’identité pour les destinations basées sur des fichiers.](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform montrant le mappage d’identité à l’identité pour les destinations basées sur des fichiers.](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
 
 
 ## Étapes suivantes {#next-steps}

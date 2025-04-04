@@ -2,10 +2,10 @@
 description: Utilisez les modèles de métadonnées d’audience pour créer, mettre à jour ou supprimer des audiences par programmation dans votre destination. Adobe fournit un modèle de métadonnées d’audience extensible que vous pouvez configurer en fonction des spécifications de votre API marketing. Une fois le modèle défini, testé et envoyé, il sera utilisé par Adobe pour structurer les appels API vers votre destination.
 title: Gérer les métadonnées d’audience
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 6c4a2f9f6b338ec03b99ee1d7e91f7d9c0347b08
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1308'
-ht-degree: 75%
+source-wordcount: '1309'
+ht-degree: 73%
 
 ---
 
@@ -23,7 +23,7 @@ Selon la configuration de votre API, vous devrez peut-être utiliser le point d�
 
 ## Cas d’utilisation pris en charge par la gestion des métadonnées d’audience {#use-cases}
 
-Grâce à la prise en charge des métadonnées d’audience dans Destination SDK, lors de la configuration de votre destination Experience Platform, vous pouvez proposer aux utilisateurs et utilisatrices de Platform de choisir entre plusieurs options lorsqu’ils mappent et activent des audiences vers votre destination. Vous pouvez contrôler les options disponibles pour l’utilisateur via les paramètres de la section [Configuration des métadonnées d’audience](../functionality/destination-configuration/audience-metadata-configuration.md) de la configuration de destination.
+Grâce à la prise en charge des métadonnées d’audience dans Destination SDK, lorsque vous configurez votre destination Experience Platform, vous pouvez proposer aux utilisateurs d’Experience Platform de choisir entre plusieurs options lorsqu’ils mappent et activent des audiences vers votre destination. Vous pouvez contrôler les options disponibles pour l’utilisateur via les paramètres de la section [Configuration des métadonnées d’audience](../functionality/destination-configuration/audience-metadata-configuration.md) de la configuration de destination.
 
 ### Cas d’utilisation 1 : vous disposez d’une API tierce et les utilisateurs et utilisatrices n’ont pas besoin de saisir les identifiants de mappage
 
@@ -65,19 +65,19 @@ Le tableau ci-dessous décrit les événements pris en charge par les modèles d
 | `delete` | Inclut tous les composants requis (URL, méthode HTTP, en-têtes, requête et corps de réponse) pour effectuer un appel HTTP vers votre API afin de supprimer par programmation les segments/audiences de votre plateforme. |
 | `validate` | Exécute des validations pour tous les champs de la configuration du modèle avant d’effectuer un appel vers l’API du partenaire. Par exemple, vous pouvez vérifier que l’identifiant de compte de l’utilisateur est saisi correctement. |
 | `notify` | S’applique uniquement aux destinations basées sur des fichiers. Inclut tous les composants requis (URL, méthode HTTP, en-têtes, requête et corps de réponse) pour effectuer un appel HTTP vers votre API afin de vous informer de la réussite des exportations de fichiers. |
-| `createDestination` | Inclut tous les composants requis (URL, méthode HTTP, en-têtes, requête et corps de réponse) pour effectuer un appel HTTP à votre API, pour créer par programmation un flux de données dans votre plateforme et synchroniser les informations avec Adobe Experience Platform. |
-| `updateDestination` | Inclut tous les composants requis (URL, méthode HTTP, en-têtes, requête et corps de réponse) pour effectuer un appel HTTP à votre API, pour mettre à jour par programmation un flux de données dans votre plateforme et synchroniser les informations avec Adobe Experience Platform. |
-| `deleteDestination` | Inclut tous les composants requis (URL, méthode HTTP, en-têtes, requête et corps de réponse) pour effectuer un appel HTTP à votre API afin de supprimer par programmation un flux de données de votre plateforme. |
+| `createDestination` | Inclut tous les composants requis (URL, méthode HTTP, en-têtes, requête et corps de réponse) pour effectuer un appel HTTP vers votre API afin de créer par programmation un flux de données dans votre plateforme et de resynchroniser les informations avec Adobe Experience Platform. |
+| `updateDestination` | Inclut tous les composants requis (URL, méthode HTTP, en-têtes, requête et corps de réponse) pour effectuer un appel HTTP vers votre API, pour mettre à jour par programmation un flux de données dans votre plateforme et resynchroniser les informations avec Adobe Experience Platform. |
+| `deleteDestination` | Inclut tous les composants requis (URL, méthode HTTP, en-têtes, requête et corps de réponse) pour effectuer un appel HTTP vers votre API afin de supprimer par programmation un flux de données de votre plateforme. |
 
 {style="table-layout:auto"}
 
 ## Exemples de configurations {#configuration-examples}
 
-Cette section comprend des exemples de configurations de métadonnées d’audience génériques, à titre de référence.
+Cette section comprend des exemples de configurations génériques de métadonnées d’audience, à titre de référence.
 
 Notez les différences entre l’URL, les en-têtes et les corps de requête entre les trois exemples de configuration. Cela est dû aux différentes spécifications de l’API marketing des trois exemples de plateformes.
 
-Notez que dans certains exemples les champs de macro tels que `{{authData.accessToken}}` ou `{{segment.name}}` sont utilisés dans l’URL et que dans d’autres exemples ils sont utilisés dans les en-têtes ou dans le corps de la requête. Leur utilisation dépend de vos spécifications d’API marketing.
+Notez que dans certains exemples les champs de macro tels que `{{authData.accessToken}}` ou `{{segment.name}}` sont utilisés dans l’URL et que dans d’autres exemples ils sont utilisés dans les en-têtes ou dans le corps de la requête. Leur utilisation dépend des spécifications de votre API marketing.
 
 +++Exemple de diffusion en continu 1
 
@@ -390,7 +390,7 @@ Notez que dans certains exemples les champs de macro tels que `{{authData.access
 
 +++
 
-+++Exemple basé sur un fichier
++++Exemple basé sur des fichiers
 
 ```json
 {
@@ -554,12 +554,12 @@ Afin de transmettre des informations telles que des ID d’audience, des jetons 
 | `{{authData.accessToken}}` | Permet de transmettre le jeton d’accès à votre point d’entrée d’API. Utilisez `{{authData.accessToken}}` si Experience Platform doit utiliser des jetons non expirants pour se connecter à votre destination, sinon utilisez `{{oauth2ServiceAccessToken}}` pour générer un jeton d’accès. |
 | `{{body.segments[0].segment.id}}` | Renvoie l’identifiant unique de l’audience créée, sous la forme de la valeur de la clé `externalAudienceId`. |
 | `{{error.message}}` | Renvoie un message d’erreur qui sera visible pour les utilisateurs dans l’interface utilisateur d’Experience Platform. |
-| `{{{segmentEnrichmentAttributes}}}` | Permet d’accéder à tous les attributs d’enrichissement pour une audience spécifique.  Cette macro est prise en charge par les événements `create`, `update` et `delete`. Les attributs d’enrichissement sont disponibles uniquement pour les [audiences de chargement personnalisées](destination-configuration/schema-configuration.md#external-audiences). Consultez le [guide d’activation de l’audience par lot](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) pour voir comment fonctionne la sélection des attributs d’enrichissement. |
-| `{{destination.name}}` | Renvoie le nom de votre destination. |
-| `{{destination.sandboxName}}` | Renvoie le nom de l’environnement de test Experience Platform dans lequel votre destination est configurée. |
+| `{{{segmentEnrichmentAttributes}}}` | Permet d’accéder à tous les attributs d’enrichissement pour une audience spécifique.  Cette macro est prise en charge par les événements `create`, `update` et `delete`. Les attributs d’enrichissement sont disponibles uniquement pour les [ audiences de chargement personnalisées ](destination-configuration/schema-configuration.md#external-audiences). Consultez le [guide d’activation des audiences par lot](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) pour découvrir comment fonctionne la sélection d’attributs d’enrichissement. |
+| `{{destination.name}}` | Renvoie le nom de la destination. |
+| `{{destination.sandboxName}}` | Renvoie le nom du sandbox Experience Platform dans lequel la destination est configurée. |
 | `{{destination.id}}` | Renvoie l’identifiant de votre configuration de destination. |
-| `{{destination.imsOrgId}}` | Renvoie l’identifiant de l’organisation IMS où votre destination est configurée. |
-| `{{destination.enrichmentAttributes}}` | Permet d’accéder à tous les attributs d’enrichissement pour toutes les audiences mappées à une destination. Cette macro est prise en charge par les événements `createDestination`, `updateDestination` et `deleteDestination`. Les attributs d’enrichissement sont disponibles uniquement pour les [audiences de chargement personnalisées](destination-configuration/schema-configuration.md#external-audiences). Consultez le [guide d’activation de l’audience par lot](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) pour voir comment fonctionne la sélection des attributs d’enrichissement. |
-| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | Permet d’accéder aux attributs d’enrichissement pour des audiences externes spécifiques mappées à une destination. Les attributs d’enrichissement sont disponibles uniquement pour les [audiences de chargement personnalisées](destination-configuration/schema-configuration.md#external-audiences). Consultez le [guide d’activation de l’audience par lot](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) pour voir comment fonctionne la sélection des attributs d’enrichissement. |
+| `{{destination.imsOrgId}}` | Renvoie l’identifiant de l’organisation IMS où la destination est configurée. |
+| `{{destination.enrichmentAttributes}}` | Permet d’accéder à tous les attributs d’enrichissement pour toutes les audiences mappées à une destination. Cette macro est prise en charge par les événements `createDestination`, `updateDestination` et `deleteDestination`. Les attributs d’enrichissement sont disponibles uniquement pour les [ audiences de chargement personnalisées ](destination-configuration/schema-configuration.md#external-audiences). Consultez le [guide d’activation des audiences par lot](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) pour découvrir comment fonctionne la sélection d’attributs d’enrichissement. |
+| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | Permet d’accéder aux attributs d’enrichissement pour des audiences externes spécifiques mappées à une destination. Les attributs d’enrichissement sont disponibles uniquement pour les [ audiences de chargement personnalisées ](destination-configuration/schema-configuration.md#external-audiences). Consultez le [guide d’activation des audiences par lot](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) pour découvrir comment fonctionne la sélection d’attributs d’enrichissement. |
 
 {style="table-layout:auto"}

@@ -4,16 +4,16 @@ description: Découvrez comment configurer votre application CMK avec votre clie
 role: Developer
 feature: API, Privacy
 exl-id: c9a1888e-421f-4bb4-b4c7-968fb1d61746
-source-git-commit: 53598f86e1876bc6d1807e95a26584da4d7db3f2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1029'
-ht-degree: 47%
+source-wordcount: '1035'
+ht-degree: 44%
 
 ---
 
 # Installer et configurer des clés gérées par le client pour Azure à l’aide de l’API
 
-Ce document contient les instructions spécifiques à Azure pour l’activation des clés gérées par le client (CMK) dans Adobe Experience Platform à l’aide de l’API . Pour plus d’informations sur la manière d’effectuer ce processus à l’aide de l’interface utilisateur pour les instances de Platform hébergées sur Azure, reportez-vous au document [Configuration de la CMK de l’interface utilisateur](./ui-set-up.md).
+Ce document contient les instructions spécifiques à Azure pour l’activation des clés gérées par le client (CMK) dans Adobe Experience Platform à l’aide de l’API . Pour plus d’informations sur la manière d’effectuer ce processus à l’aide de l’interface utilisateur pour les instances d’Experience Platform hébergées sur Azure, reportez-vous au document [Configuration de la CMK de l’interface utilisateur](./ui-set-up.md).
 
 Pour obtenir des instructions spécifiques à AWS, consultez le [guide de configuration d’AWS](../aws/ui-set-up.md).
 
@@ -23,7 +23,7 @@ Pour afficher et consulter la section [!UICONTROL Chiffrement] dans Adobe Experi
 
 Pour plus d’informations sur l’attribution de rôles et d’autorisations dans Experience Platform, reportez-vous à la documentation sur la [configuration des autorisations](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
-Pour activer la fonction CMK pour les instances de Platform hébergées sur Azure, votre coffre [[!DNL Azure] Key Vault doit être configuré](./azure-key-vault-config.md) avec les paramètres suivants :
+Pour activer la fonction CMK pour les instances Experience Platform hébergées sur Azure, votre coffre [[!DNL Azure] Key Vault doit être configuré](./azure-key-vault-config.md) avec les paramètres suivants :
 
 * [Activer la protection contre le vidage](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [Activer la suppression réversible](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
@@ -36,7 +36,7 @@ Une fois votre coffre de clés configuré, l’étape suivante consiste à enreg
 
 ### Commencer
 
-L’enregistrement de l’application CMK nécessite que vous exécutiez des appels vers les API Platform. Pour plus d’informations sur la collecte des en-têtes d’authentification requis pour effectuer ces appels, consultez le [guide d’authentification des API Platform](../../../api-authentication.md).
+L’enregistrement de l’application CMK nécessite que vous exécutiez des appels vers les API Experience Platform. Pour plus d’informations sur la collecte des en-têtes d’authentification requis pour effectuer ces appels, consultez le [guide d’authentification des API Experience Platform](../../../api-authentication.md).
 
 Le guide d’authentification fournit des instructions sur la génération de votre propre valeur unique pour l’en-tête de requête `x-api-key`, toutes les opérations API de ce guide utilisent plutôt la valeur statique `acp_provisioning`. Cependant, vous devez toujours fournir vos propres valeurs pour `{ACCESS_TOKEN}` et `{ORG_ID}`.
 
@@ -221,13 +221,13 @@ curl -X GET \
 
 L’attribut `status` peut avoir l’une des quatre valeurs ayant la signification suivante :
 
-1. `RUNNING` : vérifie que Platform peut accéder à la clé et au coffre de clés.
+1. `RUNNING` : vérifie qu’Experience Platform peut accéder à la clé et au coffre de clés.
 1. `UPDATE_EXISTING_RESOURCES` : le système ajoute le coffre de clés et le nom des clés aux magasins de données de tous les sandbox de votre entreprise.
 1. `COMPLETED` : le coffre de clés et le nom des clés ont été ajoutés aux magasins de données.
 1. `FAILED` : un problème s’est produit, principalement lié à la configuration de la clé, du coffre de clés ou de l’application multi-utilisateur.
 
 ## Étapes suivantes
 
-En suivant les étapes ci-dessus, vous avez activé le CMK pour votre entreprise. Pour les instances de Platform hébergées sur Azure, les données ingérées dans les entrepôts de données principaux seront désormais chiffrées et déchiffrées à l’aide des clés de votre coffre de clés [!DNL Azure].
+En suivant les étapes ci-dessus, vous avez activé le CMK pour votre entreprise. Pour les instances Experience Platform hébergées sur Azure, les données ingérées dans les entrepôts de données principaux seront désormais chiffrées et déchiffrées à l’aide des clés de votre coffre de clés [!DNL Azure].
 
 Pour en savoir plus sur le chiffrement des données dans Adobe Experience Platform, consultez la [documentation sur le chiffrement](../../encryption.md).

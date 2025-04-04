@@ -3,12 +3,12 @@ title: Créer une connexion source  [!DNL Oracle NetSuite Entities]  dans l’in
 description: Découvrez comment créer une connexion source Oracle NetSuite Entities à l’aide de l’interface utilisateur de Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-badge: Version bêta
+badge: Beta
 exl-id: ce0ea37f-16e0-4aef-9809-72c0b11e0440
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '698'
-ht-degree: 39%
+source-wordcount: '706'
+ht-degree: 36%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 39%
 
 >[!NOTE]
 >
->La source [!DNL Oracle NetSuite Entities] est en version Beta. Pour plus d’informations sur l’utilisation de sources étiquetées bêta, consultez la [présentation des sources](../../../../home.md#terms-and-conditions) .
+>La source [!DNL Oracle NetSuite Entities] est en version Beta. Voir la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Lisez le tutoriel suivant pour apprendre à importer dans l’interface utilisateur des contacts et des données de clients de votre compte [!DNL Oracle NetSuite Entities] vers Adobe Experience Platform.
+Lisez le tutoriel suivant pour savoir comment importer des données de contacts et de clients de votre compte [!DNL Oracle NetSuite Entities] à Adobe Experience Platform dans l’interface utilisateur.
 
 ## Prise en main {#getting-started}
 
@@ -37,54 +37,54 @@ Si vous disposez déjà d’un compte [!DNL Oracle NetSuite], vous pouvez ignore
 
 ## Connecter votre compte [!DNL Oracle NetSuite Activities] {#connect-account}
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous la catégorie *Automatisation du marketing*, sélectionnez **[!DNL Oracle NetSuite Entities]**, puis **[!UICONTROL Ajouter des données]**.
+Dans la catégorie *Automatisation du marketing*, sélectionnez **[!DNL Oracle NetSuite Entities]**, puis **[!UICONTROL Ajouter des données]**.
 
-![ Copie d’écran de l’interface utilisateur de Platform pour le catalogue avec carte Oracle NetSuite Entities](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/catalog-card.png)
+![Capture d’écran de l’interface utilisateur Experience Platform pour le catalogue avec la carte Oracle NetSuite Entities](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/catalog-card.png)
 
-La page **[!UICONTROL Connecter le compte d’entités NetSuite Oracle]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Connecter le compte Oracle NetSuite Entities]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 >[!IMPORTANT]
 >
->Le jeton d’actualisation expire après sept jours. Une fois votre jeton arrivé à expiration, vous devez créer un compte sur Experience Platform avec votre jeton mis à jour. Si vous ne créez pas de compte avec votre jeton mis à jour, le message d&#39;erreur suivant peut s&#39;afficher : `The request could not be processed. Error from flow provider: The request could not be processed. Rest call failed with client error, status code 401 Unauthorized, please check your activity settings.`
+>Le jeton d’actualisation expire au bout de sept jours. Une fois que votre jeton expire, vous devez créer un compte sur Experience Platform avec votre jeton mis à jour. Si vous ne créez pas de compte avec votre jeton mis à jour, le message d’erreur suivant risque de s’afficher : `The request could not be processed. Error from flow provider: The request could not be processed. Rest call failed with client error, status code 401 Unauthorized, please check your activity settings.`
 
 ### Compte existant {#existing-account}
 
 Pour utiliser un compte existant, sélectionnez le compte [!DNL Oracle NetSuite Entities] avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
-![ Copie d’écran de l’interface utilisateur de Platform pour connecter un compte Oracle NetSuite Entities à un compte existant ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/existing.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform pour connecter le compte Oracle NetSuite Entities à un compte existant](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/existing.png)
 
 ### Nouveau compte {#new-account}
 
 Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom, une description facultative et vos informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
 
-![ Copie d’écran de l’interface utilisateur de Platform pour connecter le compte Oracle NetSuite Entities à un nouveau compte ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/new.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform pour connecter le compte Oracle NetSuite Entities à un nouveau compte](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/new.png)
 
 ### Sélectionner les données
 
-Sélectionnez ensuite le type d’objet à ingérer à Experience Platform.
+Sélectionnez ensuite le type d’objet à ingérer dans Experience Platform.
 
 | Type d’entité | Description |
 | --- | --- |
-| Contact | Récupérez les noms de contact, les e-mails, les numéros de téléphone et tous les champs personnalisés liés aux contacts associés aux clients. |
-| Client | Récupérez des données client spécifiques, notamment des détails tels que les noms de client, les adresses et les identifiants clés. |
+| Contact | Récupérez les noms de contacts, les e-mails, les numéros de téléphone et tout champ personnalisé associé aux contacts associé aux clients. |
+| Client | Récupérez des données client spécifiques, y compris des détails tels que les noms, adresses et identifiants clés du client. |
 
 >[!BEGINTABS]
 
->[!TAB Contact]
+>[!TAB  Contact ]
 
-![ Copie d’écran de l’interface utilisateur de Platform pour les entités Netsuite Oracle montrant la configuration avec l’option Contact sélectionnée](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-contact.png)
+![Capture d’écran de l’interface utilisateur Experience Platform pour les entités Oracle Netsuite affichant la configuration avec l’option Contact sélectionnée](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-contact.png)
 
 >[!TAB Client]
 
-![ Copie d’écran de l’interface utilisateur de Platform pour les entités Netsuite Oracle montrant la configuration avec l’option Client sélectionnée](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-customer.png)
+![Capture d’écran de l’interface utilisateur Experience Platform pour les entités Oracle Netsuite présentant la configuration avec l’option Client sélectionnée](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-customer.png)
 
 >[!ENDTABS]
 
 ## Étapes suivantes {#next-steps}
 
-En suivant ce tutoriel, vous avez établi une connexion à votre compte [!DNL Oracle NetSuite Entities]. Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données d’automatisation du marketing dans Platform](../../dataflow/marketing-automation.md).
+En suivant ce tutoriel, vous avez établi une connexion à votre compte [!DNL Oracle NetSuite Entities]. Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données d’automatisation du marketing dans Experience Platform](../../dataflow/marketing-automation.md).
 
 ## Ressources supplémentaires {#additional-resources}
 
@@ -92,11 +92,11 @@ Les sections ci-dessous fournissent des ressources supplémentaires auxquelles v
 
 ### Mappage {#mapping}
 
-Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [guide de l’interface utilisateur de la préparation des données](../../../../../data-prep/ui/mapping.md).
+Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [ Guide de l’interface utilisateur de la préparation des données ](../../../../../data-prep/ui/mapping.md).
 
 >[!NOTE]
 >
->Les champs affichés dépendent des abonnements auxquels votre compte [!DNL Oracle NetSuite] a accès. Par exemple, si vous n’avez pas accès à la facturation, les champs relatifs à la facturation ne s’affichent pas.
+>Les champs affichés dépendent des abonnements auxquels votre compte [!DNL Oracle NetSuite] a accès. Par exemple, si vous n’avez pas accès à la facturation, les champs liés à la facturation ne s’affichent pas.
 
 ### Planification {#scheduling}
 
@@ -106,8 +106,8 @@ Lors de la planification de votre flux de données [!DNL Oracle NetSuite Entitie
 | --- | --- |
 | `Once` | 1 |
 
-Lors de la récupération des données, le [!DNL Oracle NetSuite] répond avec la date de dernière modification ou créée sous la forme d’un format de date au lieu d’un horodatage. Par conséquent, la planification est limitée à un jour.
+Lors de la récupération des données, le [!DNL Oracle NetSuite] répond avec la date de dernière modification ou création sous la forme d’un format de date au lieu d’un horodatage. Par conséquent, la planification est limitée à un jour.
 
-Une fois que vous avez fourni les valeurs de votre planning, sélectionnez **[!UICONTROL Suivant]**.
+Une fois que vous avez fourni les valeurs de votre planification, sélectionnez **[!UICONTROL Suivant]**.
 
-![L’étape de planification du workflow des sources.](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/scheduling.png)
+![Étape de planification du workflow des sources.](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/scheduling.png)

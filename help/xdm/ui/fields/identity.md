@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Définir des champs d’identité dans l’interface utilisateur
 description: Découvrez comment définir un champ d’identité dans l’interface utilisateur Experience Platform.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 0d16bbbaf81b2057c6b3518a5b8a8698920c36f7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '652'
 ht-degree: 15%
 
 ---
@@ -17,7 +17,7 @@ Dans le modèle de données d’expérience (XDM), un champ d’identité repré
 
 ## Conditions préalables
 
-Les champs d’identité sont un composant essentiel dans la construction des graphiques d’identités client dans Platform, ce qui affecte finalement la manière dont le profil client en temps réel fusionne des fragments de données disparates pour obtenir une vue complète du client. Avant de définir des champs d’identité dans vos schémas, reportez-vous à la documentation suivante pour en savoir plus sur les services et concepts clés liés aux champs d’identité :
+Les champs d’identité sont un composant essentiel dans la construction des graphiques d’identités client dans Experience Platform, ce qui affecte finalement la manière dont le profil client en temps réel fusionne des fragments de données disparates pour obtenir une vue complète du client. Avant de définir des champs d’identité dans vos schémas, reportez-vous à la documentation suivante pour en savoir plus sur les services et concepts clés liés aux champs d’identité :
 
 * [Service d’identités d’Adobe Experience Platform](../../../identity-service/home.md) : associe les identités des appareils et des systèmes, en liant les jeux de données en fonction des champs d’identité définis par les schémas XDM auxquels ils se conforment.
    * [Espaces de noms d’identité](../../../identity-service/features/namespaces.md) : définissent les différents types d’informations d’identité qui peuvent être associés à une seule personne et constituent un composant obligatoire pour chaque champ d’identité.

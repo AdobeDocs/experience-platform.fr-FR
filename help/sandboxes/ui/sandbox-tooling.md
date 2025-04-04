@@ -2,9 +2,9 @@
 title: Outil Sandbox
 description: Exportez et importez facilement des configurations de sandbox entre des sandbox de manière transparente.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 3cedf019cff7ef0aa06da1242798a533196f9b2a
+source-git-commit: 480785dc17ab27df5544524cf08baa9150fe426f
 workflow-type: tm+mt
-source-wordcount: '2485'
+source-wordcount: '2486'
 ht-degree: 8%
 
 ---
@@ -252,7 +252,7 @@ La boîte de dialogue **[!UICONTROL Résumé des imports]** affiche une réparti
 
 ![Boîte de dialogue [!UICONTROL Importer les détails] affichant une répartition détaillée des importations.](../images/ui/sandbox-tooling/import-details.png)
 
-Une fois l’importation terminée, une notification est reçue dans l’interface utilisateur de Platform. Vous pouvez accéder à ces notifications à partir de l’icône des alertes. À partir de là, vous pouvez accéder à la résolution des problèmes si une tâche échoue.
+Une fois l’importation terminée, une notification est reçue dans l’interface utilisateur d’Experience Platform. Vous pouvez accéder à ces notifications à partir de l’icône des alertes. À partir de là, vous pouvez accéder à la résolution des problèmes si une tâche échoue.
 
 ## Tutoriel vidéo
 

@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
 exl-id: 0513b9dc-b16c-43b3-8e17-4be4499308d4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '715'
-ht-degree: 98%
+source-wordcount: '719'
+ht-degree: 87%
 
 ---
 
@@ -49,13 +49,13 @@ Pour des informations plus générales sur les destinations, reportez-vous à la
 
 ## Observability Insights {#observability}
 
-Observability Insights vous permet de surveiller les activités de Platform en utilisant des mesures statistiques et des notifications dʼévénement.
+Observability Insights vous permet de surveiller les activités d’Experience Platform à l’aide de mesures statistiques et de notifications d’événement.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Alertes | Vous pouvez désormais vous abonner à des alertes importantes concernant les workflows exécutés sur Platform. Après vous être abonné à des règles dʼalerte spécifiques, vous recevrez des notifications et des e-mails dans lʼinterface utilisateur dès quʼun événement de cycle de vie important se produit (par exemple, une ingestion de données réussie) ou si des problèmes nécessitent votre attention (par exemple, un échec du flux dʼingestion ou une tâche de segmentation qui prend plus de temps que prévu). Pour plus dʼinformations, voir la [présentation des alertes](../../observability/alerts/overview.md). |
+| Alertes | Vous pouvez désormais vous abonner à des alertes importantes liées aux workflows s’exécutant sur Experience Platform. Après vous être abonné à des règles dʼalerte spécifiques, vous recevrez des notifications et des e-mails dans lʼinterface utilisateur dès quʼun événement de cycle de vie important se produit (par exemple, une ingestion de données réussie) ou si des problèmes nécessitent votre attention (par exemple, un échec du flux dʼingestion ou une tâche de segmentation qui prend plus de temps que prévu). Pour plus dʼinformations, voir la [présentation des alertes](../../observability/alerts/overview.md). |
 
 Pour plus dʼinformations sur ce service, voir la [présentation dʼObservability Insights](../../observability/home.md).
 
@@ -65,18 +65,18 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Parcourir les profils par politique de fusion ou identité | Lors de lʼexploration des profils dans Experience Platform, vous pouvez désormais naviguer par politique de fusion pour prévisualiser 20 profils dʼexemple en fonction de la politique de fusion sélectionnée. Vous pouvez également naviguer par identité afin de rechercher un profil spécifique à lʼaide dʼun espace de noms dʼidentité et dʼune valeur dʼidentité associée. Pour plus d’informations, consultez le [guide de l’interface utilisateur de profil client en temps réel](../../profile/ui/user-guide.md). |
+| Parcourir les profils par politique de fusion ou identité | Lors de lʼexploration des profils dans Experience Platform, vous pouvez désormais naviguer par politique de fusion pour prévisualiser 20 profils dʼexemple en fonction de la politique de fusion sélectionnée. Vous pouvez également naviguer par identité afin de rechercher un profil spécifique à lʼaide dʼun espace de noms dʼidentité et dʼune valeur dʼidentité associée. Pour plus d’informations, consultez le [Guide de l’interface utilisateur du profil client en temps réel](../../profile/ui/user-guide.md). |
 
 Pour en savoir plus sur le profil client en temps réel, notamment les bonnes pratiques et les tutoriels relatifs à lʼutilisation des données de profil, consultez la [vue d’ensemble de Real-Time Customer Profile](../../profile/home.md).
 
 ## Sources {#sources}
 
-Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services d’Experience Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
 Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Connecteur source de téléchargement de fichiers locaux | La catégorie dʼingestion de fichiers a été renommée en système local, ce qui vous permet dʼimporter directement des fichiers locaux dans Platform à lʼaide du connecteur de téléchargement de fichiers locaux. Les données ingérées par ce connecteur peuvent être visualisées dans le tableau de bord de surveillance. Pour plus dʼinformations, consultez la [présentation de la source de téléchargement de fichiers locaux](../../sources/connectors/local-system/local-file-upload.md). |
+| Connecteur source de téléchargement de fichiers locaux | La catégorie d’ingestion de fichiers a été renommée en système local, ce qui vous permet d’importer directement des fichiers locaux dans Experience Platform à l’aide du connecteur local de téléchargement de fichiers. Les données ingérées par ce connecteur peuvent être visualisées dans le tableau de bord de surveillance. Pour plus dʼinformations, consultez la [présentation de la source de téléchargement de fichiers locaux](../../sources/connectors/local-system/local-file-upload.md). |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).

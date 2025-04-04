@@ -1,34 +1,34 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;api;contrôle d’accès basé sur les attributs;contrôle d’accès basé sur les attributs
+keywords: Experience Platform;accueil;rubriques populaires;api;Contrôle d’accès basé sur les attributs;contrôle d’accès basé sur les attributs
 solution: Experience Platform
-title: Point de terminaison de l’API Rôles
-description: Le point de terminaison /rôles de l’API de contrôle d’accès basé sur les attributs vous permet de gérer les rôles par programmation dans Adobe Experience Platform.
+title: Point d’entrée de l’API Roles
+description: Le point d’entrée /roles de l’API de contrôle d’accès basé sur les attributs vous permet de gérer les rôles par programmation dans Adobe Experience Platform.
 role: Developer
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1665'
-ht-degree: 27%
+source-wordcount: '1670'
+ht-degree: 28%
 
 ---
 
-# Point de terminaison des rôles
+# Point d’entrée des rôles
 
 >[!NOTE]
 >
->Si un jeton utilisateur est transmis, l’utilisateur du jeton doit disposer d’un rôle &quot;d’administrateur org&quot; pour l’organisation demandée.
+>Si un jeton d’utilisateur est transmis, l’utilisateur du jeton doit disposer d’un rôle « administrateur d’organisation » pour l’organisation demandée.
 
-Les rôles définissent l’accès dont dispose un administrateur, un spécialiste ou un utilisateur final aux ressources de votre entreprise. Dans un environnement de contrôle d’accès basé sur les rôles, la configuration de l’accès des utilisateurs est regroupée suivant les responsabilités et les besoins communs. Un rôle possède un jeu d’autorisations déterminé et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin.
+Les rôles définissent l’accès d’un administrateur, d’une administratrice, d’un ou d’une spécialiste ou encore d’un utilisateur final ou d’une utilisatrice finale, aux ressources de votre organisation. Dans un environnement de contrôle d’accès basé sur les rôles, la configuration de l’accès des utilisateurs est regroupée suivant les responsabilités et les besoins communs. Un rôle possède un jeu d’autorisations déterminé et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin.
 
-Le point d’entrée `/roles` de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les rôles dans votre organisation.
+Le point d’entrée `/roles` de l’API de contrôle d’accès basé sur les attributs vous permet de gérer les rôles par programmation dans votre organisation.
 
 ## Commencer
 
-Le point de terminaison API utilisé dans ce guide fait partie de l’API de contrôle d’accès basé sur les attributs. Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
+Le point d’entrée de l’API utilisé dans ce guide fait partie de l’API de contrôle d’accès basé sur les attributs. Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
 ## Récupération d’une liste de rôles {#list}
 
-Vous pouvez répertorier tous les rôles existants appartenant à votre organisation en envoyant une requête GET au point de terminaison `/roles`.
+Vous pouvez répertorier tous les rôles existants appartenant à votre organisation en effectuant une requête GET au point d’entrée `/roles`.
 
 **Format d’API**
 
@@ -38,7 +38,7 @@ GET /roles/
 
 **Requête**
 
-La requête suivante récupère une liste de rôles appartenant à votre organisation.
+La requête suivante récupère une liste des rôles appartenant à votre organisation.
 
 ```shell
 curl -X GET \
@@ -50,7 +50,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste de rôles de votre organisation, y compris des informations sur leur type de rôle respectif, leurs jeux d’autorisations et leurs attributs d’objet.
+Une réponse réussie renvoie une liste des rôles de votre organisation, y compris des informations sur leur type de rôle respectif, les jeux d’autorisations et les attributs d’objet.
 
 ```json
 {
@@ -105,15 +105,15 @@ Une réponse réussie renvoie une liste de rôles de votre organisation, y compr
 | `id` | Identifiant qui correspond au rôle. Cet identifiant est généré automatiquement. |
 | `name` | Nom de votre rôle. |
 | `description` | La propriété description fournit des informations supplémentaires sur votre rôle. |
-| `roleType` | Type désigné du rôle. Les valeurs possibles pour le type de rôle sont : `user-defined` et `system-defined`. |
+| `roleType` | Type désigné du rôle. Les valeurs possibles pour le type de rôle sont les suivantes : `user-defined` et `system-defined`. |
 | `permissionSets` | Les jeux d’autorisations représentent un groupe d’autorisations qu’un administrateur peut appliquer à un rôle. Un administrateur peut attribuer des jeux d’autorisations à un rôle au lieu d’affecter des autorisations individuelles. Vous pouvez ainsi créer des rôles personnalisés à partir d’un rôle prédéfini contenant un groupe d’autorisations. |
-| `sandboxes` | Cette propriété affiche les environnements de test de votre organisation configurés pour un rôle particulier. |
-| `subjectAttributes` | Attributs qui indiquent la corrélation entre un objet et les ressources de Platform auxquelles ils ont accès. |
+| `sandboxes` | Cette propriété affiche les sandbox de votre organisation configurés pour un rôle particulier. |
+| `subjectAttributes` | Attributs indiquant la corrélation entre un objet et les ressources Experience Platform auxquelles il a accès. |
 | `subjectAttributes.labels` | Affiche les libellés d’utilisation des données appliqués au rôle interrogé. |
 
 ## Recherche d’un rôle {#lookup}
 
-Vous pouvez rechercher un rôle individuel en effectuant une requête de GET qui inclut le `roleId` correspondant dans le chemin de la requête.
+Vous pouvez rechercher un rôle individuel en effectuant une requête GET qui inclut le `roleId` correspondant dans le chemin de la requête.
 
 **Format d’API**
 
@@ -139,7 +139,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de l’ID de rôle interrogé, y compris des informations sur son type de rôle, ses jeux d’autorisations et ses attributs d’objet.
+Une réponse réussie renvoie des détails pour l’ID de rôle interrogé, y compris des informations sur son type de rôle, ses jeux d’autorisations et ses attributs d’objet.
 
 ```json
 {
@@ -172,15 +172,15 @@ Une réponse réussie renvoie les détails de l’ID de rôle interrogé, y comp
 | `id` | Identifiant qui correspond au rôle. Cet identifiant est généré automatiquement. |
 | `name` | Nom de votre rôle. |
 | `description` | La propriété description fournit des informations supplémentaires sur votre rôle. |
-| `roleType` | Type désigné du rôle. Les valeurs possibles pour le type de rôle sont : `user-defined` et `system-defined`. |
+| `roleType` | Type désigné du rôle. Les valeurs possibles pour le type de rôle sont les suivantes : `user-defined` et `system-defined`. |
 | `permissionSets` | Les jeux d’autorisations représentent un groupe d’autorisations qu’un administrateur peut appliquer à un rôle. Un administrateur peut attribuer des jeux d’autorisations à un rôle au lieu d’affecter des autorisations individuelles. Vous pouvez ainsi créer des rôles personnalisés à partir d’un rôle prédéfini contenant un groupe d’autorisations. |
-| `sandboxes` | Cette propriété affiche les environnements de test de votre organisation configurés pour un rôle particulier. |
-| `subjectAttributes` | Attributs qui indiquent la corrélation entre un objet et les ressources de Platform auxquelles ils ont accès. |
+| `sandboxes` | Cette propriété affiche les sandbox de votre organisation configurés pour un rôle particulier. |
+| `subjectAttributes` | Attributs indiquant la corrélation entre un objet et les ressources Experience Platform auxquelles il a accès. |
 | `subjectAttributes.labels` | Affiche les libellés d’utilisation des données appliqués au rôle interrogé. |
 
-## Recherche de sujets par identifiant de rôle
+## Rechercher des objets par ID de rôle
 
-Vous pouvez également récupérer des sujets en envoyant une requête GET au point de terminaison `/roles` tout en fournissant un {ROLE_ID}.
+Vous pouvez également récupérer des objets en adressant une requête GET au point d’entrée `/roles` tout en fournissant une {ROLE_ID}.
 
 **Format d’API**
 
@@ -190,11 +190,11 @@ GET /roles/{ROLE_ID}/subjects
 
 | Paramètre | Description |
 | --- | --- |
-| {ROLE_ID} | L’identifiant du rôle associé aux sujets que vous souhaitez rechercher. |
+| {ROLE_ID} | Identifiant du rôle associé aux objets que vous souhaitez rechercher. |
 
 **Requête**
 
-La requête suivante récupère les sujets associés à `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
+La requête suivante récupère les objets associés à `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
 
 ```shell
 curl -X GET \
@@ -206,7 +206,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les sujets associés à l’ID de rôle interrogé, y compris l’ID de sujet et le type d’objet correspondants.
+Une réponse réussie renvoie les sujets associés à l’ID de rôle interrogé, y compris l’ID de sujet et le type de sujet correspondants.
 
 ```json
 {
@@ -250,13 +250,13 @@ Une réponse réussie renvoie les sujets associés à l’ID de rôle interrogé
 
 | Propriété | Description |
 | --- | --- |
-| `roleId` | Identifiant du rôle associé à l’objet interrogé. |
+| `roleId` | ID de rôle associé à l’objet interrogé. |
 | `subjectType` | Type de l’objet interrogé. |
 | `subjectId` | Identifiant qui correspond à l’objet interrogé. |
 
-## Création d’un rôle {#create}
+## Créer un rôle {#create}
 
-Pour créer un nouveau rôle, envoyez une requête de POST au point de terminaison `/roles` tout en fournissant des valeurs pour le nom, la description et le type de rôle de votre rôle.
+Pour créer un nouveau rôle, envoyez une requête POST au point d’entrée `/roles` et indiquez les valeurs pour le nom, la description et le type de rôle de votre rôle.
 
 **Format d’API**
 
@@ -281,13 +281,13 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Nom de votre rôle. Assurez-vous que le nom de votre rôle est descriptif, car vous pouvez l’utiliser pour rechercher des informations sur votre rôle. |
-| `description` | (Facultatif) Une valeur descriptive que vous pouvez inclure pour fournir plus d’informations sur votre rôle. |
-| `roleType` | Type désigné du rôle. Les valeurs possibles pour le type de rôle sont : `user-defined` et `system-defined`. |
+| `name` | Nom de votre rôle. Assurez-vous que le nom de votre rôle est explicite, car vous pouvez l’utiliser pour rechercher des informations sur votre rôle. |
+| `description` | (Facultatif) Valeur descriptive que vous pouvez inclure pour fournir plus d’informations sur votre rôle. |
+| `roleType` | Type désigné du rôle. Les valeurs possibles pour le type de rôle sont les suivantes : `user-defined` et `system-defined`. |
 
 **Réponse**
 
-Une réponse réussie renvoie votre nouveau rôle, avec son identifiant de rôle correspondant, ainsi que des informations sur son type de rôle, ses jeux d’autorisations et les attributs de sujet.
+Une réponse réussie renvoie le rôle que vous venez de créer, avec son identifiant de rôle correspondant, ainsi que des informations sur son type de rôle, ses jeux d’autorisations et ses attributs d’objet.
 
 ```json
 {
@@ -320,15 +320,15 @@ Une réponse réussie renvoie votre nouveau rôle, avec son identifiant de rôle
 | `id` | Identifiant qui correspond au rôle. Cet identifiant est généré automatiquement. |
 | `name` | Nom de votre rôle. |
 | `description` | La propriété description fournit des informations supplémentaires sur votre rôle. |
-| `roleType` | Type désigné du rôle. Les valeurs possibles pour le type de rôle sont : `user-defined` et `system-defined`. |
+| `roleType` | Type désigné du rôle. Les valeurs possibles pour le type de rôle sont les suivantes : `user-defined` et `system-defined`. |
 | `permissionSets` | Les jeux d’autorisations représentent un groupe d’autorisations qu’un administrateur peut appliquer à un rôle. Un administrateur peut attribuer des jeux d’autorisations à un rôle au lieu d’affecter des autorisations individuelles. Vous pouvez ainsi créer des rôles personnalisés à partir d’un rôle prédéfini contenant un groupe d’autorisations. |
-| `sandboxes` | Cette propriété affiche les environnements de test de votre organisation configurés pour un rôle particulier. |
-| `subjectAttributes` | Attributs qui indiquent la corrélation entre un objet et les ressources de Platform auxquelles ils ont accès. |
+| `sandboxes` | Cette propriété affiche les sandbox de votre organisation configurés pour un rôle particulier. |
+| `subjectAttributes` | Attributs indiquant la corrélation entre un objet et les ressources Experience Platform auxquelles il a accès. |
 | `subjectAttributes.labels` | Affiche les libellés d’utilisation des données appliqués au rôle interrogé. |
 
 ## Mettre à jour un rôle {#patch}
 
-Vous pouvez mettre à jour les propriétés d’un rôle en envoyant une requête de PATCH au point de terminaison `/roles` tout en fournissant l’identifiant de rôle et les valeurs correspondants pour les opérations que vous souhaitez appliquer.
+Vous pouvez mettre à jour les propriétés d’un rôle en adressant une requête PATCH au point d’entrée `/roles` et en fournissant l’identifiant de rôle et les valeurs correspondants pour les opérations que vous souhaitez appliquer.
 
 **Format d’API**
 
@@ -338,7 +338,7 @@ PATCH /roles/{ROLE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| {ROLE_ID} | L’identifiant du rôle que vous souhaitez mettre à jour. |
+| {ROLE_ID} | Identifiant du rôle à mettre à jour. |
 
 **Requête**
 
@@ -367,7 +367,7 @@ curl -X PATCH \
 
 **Réponse**
 
-Une réponse réussie renvoie le rôle mis à jour, y compris les nouvelles valeurs des propriétés que vous avez choisi de mettre à jour.
+Une réponse réussie renvoie le rôle mis à jour, y compris les nouvelles valeurs pour les propriétés que vous avez choisi de mettre à jour.
 
 ```json
 {
@@ -400,15 +400,15 @@ Une réponse réussie renvoie le rôle mis à jour, y compris les nouvelles vale
 | `id` | Identifiant qui correspond au rôle. Cet identifiant est généré automatiquement. |
 | `name` | Nom de votre rôle. |
 | `description` | La propriété description fournit des informations supplémentaires sur votre rôle. |
-| `roleType` | Type désigné du rôle. Les valeurs possibles pour le type de rôle sont : `user-defined` et `system-defined`. |
+| `roleType` | Type désigné du rôle. Les valeurs possibles pour le type de rôle sont les suivantes : `user-defined` et `system-defined`. |
 | `permissionSets` | Les jeux d’autorisations représentent un groupe d’autorisations qu’un administrateur peut appliquer à un rôle. Un administrateur peut attribuer des jeux d’autorisations à un rôle au lieu d’affecter des autorisations individuelles. Vous pouvez ainsi créer des rôles personnalisés à partir d’un rôle prédéfini contenant un groupe d’autorisations. |
-| `sandboxes` | Cette propriété affiche les environnements de test de votre organisation configurés pour un rôle particulier. |
-| `subjectAttributes` | Attributs qui indiquent la corrélation entre un objet et les ressources de Platform auxquelles ils ont accès. |
+| `sandboxes` | Cette propriété affiche les sandbox de votre organisation configurés pour un rôle particulier. |
+| `subjectAttributes` | Attributs indiquant la corrélation entre un objet et les ressources Experience Platform auxquelles il a accès. |
 | `subjectAttributes.labels` | Affiche les libellés d’utilisation des données appliqués au rôle interrogé. |
 
-## Mise à jour d’un rôle par identifiant de rôle {#put}
+## Mettre à jour un rôle par ID de rôle {#put}
 
-Vous pouvez mettre à jour un rôle en envoyant une requête de PUT au point de terminaison `/roles` et en spécifiant l’ID de rôle correspondant au rôle que vous souhaitez mettre à jour.
+Vous pouvez mettre à jour un rôle en adressant une requête PUT au point d’entrée `/roles` et en spécifiant l’identifiant de rôle correspondant au rôle à mettre à jour.
 
 **Format d’API**
 
@@ -437,7 +437,7 @@ curl -X PUT \
 | --- | --- |
 | `name` | Nom mis à jour d’un rôle. |
 | `description` | Description mise à jour d’un rôle. |
-| `roleType` | Type désigné du rôle. Les valeurs possibles pour le type de rôle sont : `user-defined` et `system-defined`. |
+| `roleType` | Type désigné du rôle. Les valeurs possibles pour le type de rôle sont les suivantes : `user-defined` et `system-defined`. |
 
 **Réponse**
 
@@ -474,15 +474,15 @@ Une réponse réussie renvoie votre rôle mis à jour, y compris les nouvelles v
 | `id` | Identifiant qui correspond au rôle. Cet identifiant est généré automatiquement. |
 | `name` | Nom de votre rôle. |
 | `description` | La propriété description fournit des informations supplémentaires sur votre rôle. |
-| `roleType` | Type désigné du rôle. Les valeurs possibles pour le type de rôle sont : `user-defined` et `system-defined`. |
+| `roleType` | Type désigné du rôle. Les valeurs possibles pour le type de rôle sont les suivantes : `user-defined` et `system-defined`. |
 | `permissionSets` | Les jeux d’autorisations représentent un groupe d’autorisations qu’un administrateur peut appliquer à un rôle. Un administrateur peut attribuer des jeux d’autorisations à un rôle au lieu d’affecter des autorisations individuelles. Vous pouvez ainsi créer des rôles personnalisés à partir d’un rôle prédéfini contenant un groupe d’autorisations. |
-| `sandboxes` | Cette propriété affiche les environnements de test de votre organisation configurés pour un rôle particulier. |
-| `subjectAttributes` | Attributs qui indiquent la corrélation entre un objet et les ressources de Platform auxquelles ils ont accès. |
+| `sandboxes` | Cette propriété affiche les sandbox de votre organisation configurés pour un rôle particulier. |
+| `subjectAttributes` | Attributs indiquant la corrélation entre un objet et les ressources Experience Platform auxquelles il a accès. |
 | `subjectAttributes.labels` | Affiche les libellés d’utilisation des données appliqués au rôle interrogé. |
 
-## Mettre à jour le sujet par ID de rôle
+## Mettre à jour l&#39;objet par ID de rôle
 
-Pour mettre à jour les sujets associés à un rôle, envoyez une requête de PATCH au point de terminaison `/roles` tout en fournissant l’ID de rôle des sujets que vous souhaitez mettre à jour.
+Pour mettre à jour les sujets associés à un rôle, envoyez une requête PATCH au point d’entrée `/roles` et indiquez l’identifiant de rôle des sujets à mettre à jour.
 
 **Format d’API**
 
@@ -492,11 +492,11 @@ PATCH /roles/{ROLE_ID}/subjects
 
 | Paramètre | Description |
 | --- | --- |
-| {ROLE_ID} | Identifiant du rôle associé aux sujets que vous souhaitez mettre à jour. |
+| {ROLE_ID} | Identifiant du rôle associé aux objets que vous souhaitez mettre à jour. |
 
 **Requête**
 
-La requête suivante met à jour les sujets associés à `{ROLE_ID}`.
+La requête suivante met à jour les objets associés à `{ROLE_ID}`.
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
@@ -550,9 +550,9 @@ Une réponse réussie renvoie votre rôle mis à jour, y compris les nouvelles v
 }
 ```
 
-## Suppression d’un rôle {#delete}
+## Supprimer un rôle {#delete}
 
-Pour supprimer un rôle, envoyez une requête de DELETE au point de terminaison `/roles` tout en spécifiant l’identifiant du rôle que vous souhaitez supprimer.
+Pour supprimer un rôle, envoyez une requête DELETE au point d’entrée `/roles` tout en spécifiant l’identifiant du rôle à supprimer.
 
 **Format d’API**
 
@@ -566,7 +566,7 @@ DELETE /roles/{ROLE_ID}
 
 **Requête**
 
-La requête suivante supprime le rôle avec l’ID `{ROLE_ID}`.
+La requête suivante supprime le rôle avec l’ID de `{ROLE_ID}`.
 
 ```shell
 curl -X DELETE \
@@ -580,11 +580,11 @@ curl -X DELETE \
 
 Une réponse réussie renvoie un état HTTP 204 (Pas de contenu) et un corps vide.
 
-Vous pouvez confirmer la suppression en tentant d’adresser une requête de recherche (GET) au rôle . Vous recevrez un état HTTP 404 (Not Found), car le rôle a été supprimé de l’administration.
+Vous pouvez confirmer la suppression en tentant d’adresser une requête de recherche (GET) au rôle . Vous recevrez un statut HTTP 404 (Introuvable), car le rôle a été supprimé de l’administration.
 
 ## Ajout d’informations d’identification d’API {#apicredential}
 
-Pour ajouter des informations d’identification d’API, envoyez une requête de PATCH au point de terminaison `/roles` tout en fournissant l’ID de rôle des sujets.
+Pour ajouter des informations d’identification d’API, envoyez une requête PATCH `/roles` point d’entrée et indiquez l’identifiant de rôle des sujets.
 
 **Format d’API**
 
@@ -606,8 +606,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 | Opérations | Description |
 | --- | --- |
 | `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour le rôle. Les opérations comprennent : `add`, `replace` et `remove`. |
-| `path` | Le chemin du paramètre à ajouter. |
-| `value` | La valeur avec laquelle vous souhaitez ajouter votre paramètre. |
+| `path` | Chemin d’accès au paramètre à ajouter. |
+| `value` | Valeur avec laquelle vous souhaitez ajouter votre paramètre. |
 
 **Réponse**
 

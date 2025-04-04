@@ -5,10 +5,10 @@ breadcrumb-title: Guide du contrôle d’accès
 user-guide-description: Utilisez les profils de produit dans Adobe Admin Console pour gérer les autorisations utilisateurs. Découvrez comment affecter des utilisateurs aux produits et aux sandbox.
 feature: Access Control
 role: Admin
-source-git-commit: e2e16572c9c03b28d99d309b6810090b8778a941
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '131'
-ht-degree: 85%
+source-wordcount: '132'
+ht-degree: 93%
 
 ---
 
@@ -16,10 +16,10 @@ ht-degree: 85%
 # Contrôle d&#39;accès {#access-control}
 
 * [Présentation du contrôle d’accès](home.md)
-* Contrôle d’accès basé sur les attributs {#abac}
+* {#abac} de contrôle d’accès basé sur les attributs
    * [Vue d’ensemble](abac/overview.md)
    * [Guide complet](abac/end-to-end-guide.md)
-   * [Utilisation des étiquettes d’accès pour gérer l’accès des utilisateurs aux flux de données de destination](/help/access-control/abac/apply-access-labels-destinations.md)
+   * [Utiliser des libellés d’accès pour gérer l’accès des utilisateurs et utilisatrices aux flux de données de destination](/help/access-control/abac/apply-access-labels-destinations.md)
    * Autorisations {#permissions-ui}
       * [Parcourir](abac/ui/browse.md)
       * [Libellés](abac/ui/labels.md)
@@ -28,10 +28,10 @@ ht-degree: 85%
       * [Rôles](abac/ui/roles.md)
       * [Sandbox](abac/ui/sandboxes.md)
       * [Utilisateurs](abac/ui/users.md)
-   * Gestionnaire d’autorisations {#permissions-manager}
+   * {#permissions-manager} du gestionnaire d’autorisations
       * [Vue d’ensemble](abac/permission-manager/overview.md)
       * [Autorisations](abac/permission-manager/permissions.md)
-   * API de contrôle d’accès basé sur les attributs {#abac-api}
+   * {#abac-api} de l’API de contrôle d’accès basé sur les attributs
       * [Vue d’ensemble](abac/api/overview.md)
       * [Prise en main](abac/api/getting-started.md)
       * [Rôles](abac/api/roles.md)
@@ -50,4 +50,4 @@ ht-degree: 85%
    * [Affichage des politiques efficaces](api/effective-policies.md)
 * [Guide de dépannage](troubleshooting-guide.md)
 * [Référence d’API](https://www.adobe.io/experience-platform-apis/references/access-control/)
-* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
+* [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

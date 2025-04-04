@@ -1,12 +1,12 @@
 ---
-keywords: Marketo Web Personalization;personnalisation web;extension Marketo Web Personalization;extension de personnalisation web;marketo;marketo;Marketo
+keywords: Marketo Web Personalization;personnalisation web marketo;extension Marketo Web Personalization;extension de personnalisation web marketo;marketo;Marketo
 title: Extension Marketo Web Personalization
 description: L’extension Marketo Web Personalization est une destination de personnalisation dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 2f194a5e-13b7-460a-a968-29131771efca
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 76%
+source-wordcount: '489'
+ht-degree: 64%
 
 ---
 
@@ -14,17 +14,17 @@ ht-degree: 76%
 
 ## Vue d’ensemble {#overview}
 
-Cette extension déploie le script pour les applications Web Personalization et ContentAI [!DNL Marketo's]. [!DNL Marketo] Web Personalization identifie et personnalise de manière unique le contenu des caractéristiques des visiteurs web, telles que les données démographiques des visiteurs anonymes et un large éventail d’attributs comportementaux dans la plateforme d’engagement [!DNL Marketo] pour les visiteurs connus. [!DNL Marketo] ContentAI contient des fonctionnalités de recommandations et de personnalisation optimisées par l’IA pour les campagnes web et par e-mail qui sont uniques aux clients B2B.
+Cette extension déploie le script pour [!DNL Marketo's] applications Web Personalization et ContentAI. [!DNL Marketo] Web Personalization identifie et personnalise de manière unique le contenu en fonction des caractéristiques des visiteurs sur le web, telles que les graphiques de fidélité pour les visiteurs anonymes et un large éventail d’attributs comportementaux dans [!DNL Marketo] Engagement Platform pour les visiteurs connus. [!DNL Marketo] ContentAI contient des fonctionnalités de recommandations et de personnalisation optimisées par l’IA pour les campagnes web et par e-mail qui sont uniques pour les clients B2B.
 
 [!DNL Marketo Web Personalization] est une extension de personnalisation dans Adobe Experience Platform. Pour plus d’informations sur la personnalisation web et ContentAI dans Marketo, consultez [Présentation de Web Personalization](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html).
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension Marketo Web Personalization](../../assets/catalog/personalization/marketo-web-personalization/catalog.png)
 
 ## Conditions préalables  {#prerequisites}
 
-Cette extension est disponible dans le catalogue [!DNL Destinations] pour tous les clients qui ont acheté Platform.
+Cette extension est disponible dans le catalogue [!DNL Destinations] pour tous les clients qui ont acheté Experience Platform.
 
 Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Experience Platform. Les balises sont proposées aux clients Adobe Experience Cloud en tant que fonctionnalité à valeur ajoutée incluse. Contactez l’administrateur ou l’administratrice de votre organisation pour accéder aux balises et demandez-lui de vous accorder l’autorisation **[!UICONTROL manage_properties]** afin que vous puissiez installer les extensions.
 
@@ -32,7 +32,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 Pour installer l’extension [!DNL Marketo Web Personalization], procédez comme suit :
 
-Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
+Dans l’interface [Experience Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 
@@ -56,6 +56,6 @@ Vous pouvez configurer, mettre à niveau et supprimer des extensions dans l’in
 
 >[!TIP]
 >
->Si l’extension est déjà installée sur l’une de vos propriétés, l’interface utilisateur de Platform continue d’afficher **[!UICONTROL Installer]** pour cette extension. Démarrez le workflow d’installation comme décrit dans [Installation de l’extension](#install-extension) pour configurer ou supprimer votre extension.
+>Si l’extension est déjà installée sur l’une de vos propriétés, l’interface utilisateur d’Experience Platform continue d’afficher **[!UICONTROL Installer]** pour l’extension. Démarrez le workflow d’installation comme décrit dans [Installation de l’extension](#install-extension) pour configurer ou supprimer votre extension.
 
 Pour mettre à niveau votre extension, consultez le guide sur le [processus de mise à niveau d’extension](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) dans la documentation sur les balises.

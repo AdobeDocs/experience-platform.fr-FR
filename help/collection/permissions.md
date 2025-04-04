@@ -2,9 +2,9 @@
 title: Gestion des autorisations pour la collecte de données dans Experience Platform
 description: Présentation générale de la gestion des autorisations et du contrôle de l’accès aux fonctionnalités de collecte de données dans Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1358'
 ht-degree: 30%
 
 ---
@@ -97,11 +97,11 @@ Pour accéder aux fonctionnalités de collecte de données, vous devez activer t
 
 ![Image illustrant la carte de produit Collecte de données dans Admin Console](./images/permissions/platform-permission-card.png)
 
-Consultez le [guide de l’interface utilisateur du contrôle d’accès](../access-control/ui/overview.md) pour obtenir des instructions détaillées sur la gestion des autorisations Platform.
+Consultez le [guide de l’interface utilisateur du contrôle d’accès](../access-control/ui/overview.md) pour obtenir des instructions détaillées sur la gestion des autorisations Experience Platform.
 
 >[!NOTE]
 >
->Selon les SKU de produit auxquels votre organisation a accès, vous ne disposez peut-être pas de toutes les autorisations Platform.
+>Selon les SKU de produit auxquels votre organisation a accès, vous ne disposez peut-être pas de toutes les autorisations Experience Platform disponibles.
 
 ### Gestion des autorisations sous Collecte de données Adobe Experience Platform {#manage-collection}
 

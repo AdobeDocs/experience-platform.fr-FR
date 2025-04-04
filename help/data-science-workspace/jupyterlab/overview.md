@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation de l’interface utilisateur de JupyterLab
 description: JupyterLab est une interface utilisateur web pour Project Jupyter et est étroitement intégré à Adobe Experience Platform. Elle fournit un environnement de développement interactif pour que les analystes de données puissent travailler avec les notebooks, le code et les données Jupyter. Ce document présente JupyterLab et ses fonctionnalités ainsi que des instructions pour effectuer des actions courantes.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1835'
-ht-degree: 98%
+source-wordcount: '1838'
+ht-degree: 95%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Data Science Workspace ne peut plus être acheté.
+>Le Workspace de science des données ne peut plus être acheté.
 >
->Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
 [!DNL JupyterLab] est une interface utilisateur web pour [Project Jupyter](https://jupyter.org/) et est étroitement intégré à Adobe Experience Platform. Elle fournit un environnement de développement interactif pour que les analystes de données puissent travailler avec les notebooks, le code et les données Jupyter.
 
@@ -27,24 +27,24 @@ Ce document présente [!DNL JupyterLab] et ses fonctionnalités, et fournit des 
 
 L’intégration JupyterLab d’Experience Platform est accompagnée de modifications architecturales, de considérations de conception, d’extensions de notebooks personnalisées, de bibliothèques préinstallées et d’une interface sur le thème Adobe.
 
-La liste suivante présente quelques-unes des fonctionnalités propres à JupyterLab sur Platform :
+La liste suivante décrit certaines des fonctionnalités propres à JupyterLab sur Experience Platform :
 
 | Fonctionnalité | Description |
 | --- | --- |
 | **Noyaux** | Les noyaux permettent aux notebooks et aux autres front-ends [!DNL JupyterLab] d’exécuter et d’inspecter le code dans différents langages de programmation. [!DNL Experience Platform] fournit des noyaux supplémentaires pour prendre en charge le développement en [!DNL Python], R, PySpark et [!DNL Spark]. Pour plus d’informations, consultez la section sur les [noyaux](#kernels). |
 | **Accès aux données** | Accédez aux jeux de données existants directement depuis [!DNL JupyterLab] avec la prise en charge intégrale des fonctionnalités de lecture et d’écriture. |
-| Intégration du service **[!DNL Platform]** | Les intégrations vous permettent d’utiliser d’autres services [!DNL Platform] directement depuis [!DNL JupyterLab]. Une liste complète des intégrations prises en charge est fournie dans la section sur l’[intégration avec d’autres services Platform](#service-integration). |
-| **Authentification** | Outre <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">le modèle de sécurité intégré de JupyterLab</a>, chaque interaction entre votre application et Experience Platform, y compris la communication service à service de Platform, est chiffrée et authentifiée à l’aide d’<a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
+| Intégration du service **[!DNL Experience Platform]** | Les intégrations vous permettent d’utiliser d’autres services [!DNL Experience Platform] directement depuis [!DNL JupyterLab]. Vous trouverez la liste complète des intégrations prises en charge dans la section [ Intégration à d’autres services Experience Platform ](#service-integration). |
+| **Authentification** | Outre le <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">modèle de sécurité intégré de JupyterLab</a>, chaque interaction entre votre application et Experience Platform, y compris la communication service à service Experience Platform, est chiffrée et authentifiée via <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
 | **Bibliothèques de développement** | Dans [!DNL Experience Platform], [!DNL JupyterLab] fournit des bibliothèques préinstallées pour [!DNL Python], R et PySpark. Consultez l’[annexe](#supported-libraries) pour obtenir une liste complète des bibliothèques prises en charge. |
-| **Contrôleur de bibliothèque** | Lorsque les bibliothèques préinstallées ne répondent pas à vos besoins, vous pouvez installer des bibliothèques supplémentaires pour Python et R. Elles seront temporairement stockées dans des conteneurs isolés afin de préserver l’intégrité de [!DNL Platform] et protéger vos données. Pour plus d’informations, consultez la section sur les [noyaux](#kernels). |
+| **Contrôleur de bibliothèque** | Lorsque les bibliothèques préinstallées ne répondent pas à vos besoins, vous pouvez installer des bibliothèques supplémentaires pour Python et R. Elles seront temporairement stockées dans des conteneurs isolés afin de préserver l’intégrité de [!DNL Experience Platform] et protéger vos données. Pour plus d’informations, consultez la section sur les [noyaux](#kernels). |
 
 >[!NOTE]
 >
 >Les bibliothèques supplémentaires sont uniquement disponibles pour la session dans laquelle elles ont été installées. Vous devez réinstaller les bibliothèques supplémentaires nécessaires lorsque vous démarrez de nouvelles sessions.
 
-## Intégration à d’autres services [!DNL Platform] {#service-integration}
+## Intégration à d’autres services [!DNL Experience Platform] {#service-integration}
 
-La normalisation et l’interopérabilité sont des concepts clés pour [!DNL Experience Platform]. L’intégration de [!DNL JupyterLab] sur [!DNL Platform] en tant qu’IDE intégré lui permet d’interagir avec d’autres services [!DNL Platform], ce qui vous permet d’utiliser tout le potentiel de [!DNL Platform]. Les services [!DNL Platform] suivants sont disponibles dans [!DNL JupyterLab] :
+La normalisation et l’interopérabilité sont des concepts clés pour [!DNL Experience Platform]. L’intégration de [!DNL JupyterLab] sur [!DNL Experience Platform] en tant qu’IDE intégré lui permet d’interagir avec d’autres services [!DNL Experience Platform], ce qui vous permet d’utiliser tout le potentiel de [!DNL Experience Platform]. Les services [!DNL Experience Platform] suivants sont disponibles dans [!DNL JupyterLab] :
 
 * **[!DNL Catalog Service] :** Accédez à des jeux de données et explorez-les avec des fonctionnalités de lecture et d’écriture.
 * **[!DNL Query Service] :** accédez aux jeux de données et explorez-les à l’aide de SQL, ce qui vous permet de réduire les frais généraux d’accès aux données lorsque vous traitez de grandes quantités de données.
@@ -53,7 +53,7 @@ La normalisation et l’interopérabilité sont des concepts clés pour [!DNL Ex
 
 >[!NOTE]
 >
->L’intégration de certains services [!DNL Platform] sur [!DNL JupyterLab] est limitée à des noyaux spécifiques. Pour plus d’informations, consultez la section sur les [noyaux](#kernels).
+>L’intégration de certains services [!DNL Experience Platform] sur [!DNL JupyterLab] est limitée à des noyaux spécifiques. Pour plus d’informations, consultez la section sur les [noyaux](#kernels).
 
 ## Fonctionnalités clés et opérations courantes
 
@@ -150,7 +150,7 @@ Les noyaux des notebooks sont les moteurs informatiques spécifiques au langage 
 
 Certaines fonctionnalités sont limitées à des noyaux particuliers, comme décrit dans le tableau ci-dessous :
 
-| Noyau | Prise en charge de l’installation de la bibliothèque | Intégrations à [!DNL Platform] |
+| Noyau | Prise en charge de l’installation de la bibliothèque | Intégrations à [!DNL Experience Platform] |
 | :----: | :--------------------------: | :-------------------- |
 | **[!DNL Python]** | Oui | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li><li>[!DNL Query Service]</li></ul> |
 | **R** | Oui | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |

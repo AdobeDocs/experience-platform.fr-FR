@@ -2,11 +2,11 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;préparation des données;guide de l’api;schémas;
 solution: Experience Platform
 title: Point d’entrée de l’API Schemas
-description: Vous pouvez utiliser le point d’entrée `/schemas` dans l’API Adobe Experience Platform pour récupérer, créer et mettre à jour par programmation les schémas à utiliser avec le mappeur dans Platform.
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+description: Vous pouvez utiliser le point d’entrée `/schemas` dans l’API Adobe Experience Platform pour récupérer, créer et mettre à jour par programmation les schémas à utiliser avec le mappeur dans Experience Platform.
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 94%
+source-wordcount: '619'
+ht-degree: 84%
 
 ---
 
@@ -14,15 +14,15 @@ ht-degree: 94%
 
 # Point d’entrée des schémas
 
-Les schémas peuvent être utilisés avec le mappeur pour vous assurer que les données que vous avez ingérées dans Adobe Experience Platform correspondent à ce que vous souhaitez ingérer. Vous pouvez utiliser le point d’entrée `/schemas` pour créer, répertorier et obtenir par programmation des schémas personnalisés à utiliser avec le mappeur dans Platform.
+Les schémas peuvent être utilisés avec le mappeur pour vous assurer que les données que vous avez ingérées dans Adobe Experience Platform correspondent à ce que vous souhaitez ingérer. Vous pouvez utiliser le point d’entrée `/schemas` pour créer, répertorier et obtenir par programmation des schémas personnalisés à utiliser avec le mappeur dans Experience Platform.
 
 >[!NOTE]
 >
->Les schémas créés à l’aide de ce point d’entrée sont utilisés exclusivement avec le mappeur et les jeux de mappages. Pour créer des schémas accessibles par d’autres services Platform, consultez le [guide de développement du registre des schémas](../../xdm/api/schemas.md).
+>Les schémas créés à l’aide de ce point d’entrée sont utilisés exclusivement avec le mappeur et les jeux de mappages. Pour créer des schémas accessibles par d’autres services Experience Platform, consultez le guide de développement du [registre des schémas](../../xdm/api/schemas.md).
 
 ## Obtention de tous les schémas
 
-Vous pouvez récupérer une liste de tous les schémas de mappeur disponibles pour votre organisation en envoyant une requête de GET au point de terminaison `/schemas`.
+Vous pouvez récupérer une liste de tous les schémas du mappeur disponibles pour votre organisation en envoyant une requête GET au point d’entrée `/schemas`.
 
 **Format d’API**
 

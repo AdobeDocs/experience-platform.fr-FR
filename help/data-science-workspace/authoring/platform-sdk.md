@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;guide de développement;SDK;SDK Data Access;Data Science Workspace;rubriques les plus consultées
+keywords: Experience Platform;guide de développement;SDK;SDK d’accès aux données;Workspace de science des données;rubriques populaires
 solution: Experience Platform
-title: Création de modèles à l’aide du SDK Adobe Experience Platform Platform
-description: Ce tutoriel vous fournit des informations sur la conversion de data_access_sdk_python en nouveau Python platform_sdk en Python et en R.
+title: Création de modèles à l’aide du SDK Adobe Experience Platform
+description: Ce tutoriel vous fournit des informations sur la conversion de data_access_sdk_python en nouveau platform_sdk Python en Python et en R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '509'
-ht-degree: 57%
+source-wordcount: '506'
+ht-degree: 58%
 
 ---
 
-# Création de modèles à l’aide du SDK Adobe Experience Platform [!DNL Platform]
+# Création de modèles à l’aide d’Adobe [!DNL Experience Platform] SDK
 
 >[!NOTE]
 >
->Data Science Workspace ne peut plus être acheté.
+>Le Workspace de science des données ne peut plus être acheté.
 >
->Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
 Ce tutoriel vous fournit des informations sur la conversion de `data_access_sdk_python` en nouveau `platform_sdk` Python en Python et en R. Ce tutoriel fournit des informations sur les opérations suivantes :
 
@@ -27,7 +27,7 @@ Ce tutoriel vous fournit des informations sur la conversion de `data_access_sdk_
 
 ## Authentification de création {#build-authentication}
 
-L’authentification est requise pour effectuer des appels vers [!DNL Adobe Experience Platform]. Elle comprend la clé API, l’ID d’organisation, un jeton utilisateur et un jeton de service.
+L’authentification est requise pour effectuer des appels vers [!DNL Adobe Experience Platform] et se compose d’une clé API, d’un identifiant d’organisation, d’un jeton d’utilisateur et d’un jeton de service.
 
 ### Python
 
@@ -37,7 +37,7 @@ Si vous utilisez Jupyter Notebook, veuillez utiliser le code ci-dessous pour cr�
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Si vous n’utilisez pas Jupyter Notebook ou si vous devez modifier l’organisation, utilisez l’exemple de code suivant :
+Si vous n’utilisez pas Jupyter Notebook ou si vous devez modifier l’organisation, utilisez l’exemple de code ci-dessous :
 
 ```python
 from platform_sdk.client_context import ClientContext
@@ -60,7 +60,7 @@ py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
 client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Si vous n’utilisez pas Jupyter Notebook ou si vous devez changer d’organisation, utilisez l’exemple de code suivant :
+Si vous n’utilisez pas Jupyter Notebook ou si vous devez changer d’organisation, utilisez l’exemple de code ci-dessous :
 
 ```r
 library(reticulate)
@@ -74,14 +74,14 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Lecture basique des données {#basic-reading-of-data}
 
-Avec le nouveau SDK [!DNL Platform], la taille de lecture maximale est de 32 Go, avec un temps de lecture maximal de 10 minutes.
+Avec le nouveau [!DNL Experience Platform] SDK, la taille maximale de lecture est de 32 Go, avec un temps de lecture maximal de 10 minutes.
 
 Si votre temps de lecture est trop long, vous pouvez essayer d’utiliser l’une des options de filtrage suivantes :
 
-- [Filtrage des données par décalage et limite](#filter-by-offset-and-limit)
+- [Filtrer les données par offset et limite](#filter-by-offset-and-limit)
 - [Filtrer les données par date](#filter-by-date)
-- [Filtrage des données par colonne](#filter-by-selected-columns)
-- [Obtention de résultats triés](#get-sorted-results)
+- [Filtrer les données par colonne](#filter-by-selected-columns)
+- [Obtention des résultats de tri](#get-sorted-results)
 
 >[!NOTE]
 >
@@ -151,7 +151,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-Le nouveau SDK [!DNL Platform] prend en charge les opérations suivantes :
+Le nouveau [!DNL Experience Platform] SDK prend en charge les opérations suivantes :
 
 | Opération | Fonction |
 | --------- | -------- |
@@ -226,4 +226,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Étapes suivantes
 
-Une fois que vous avez configuré l’outil de chargement de données `platform_sdk`, les données sont préparées puis réparties dans les jeux de données `train` et `val`. Pour en savoir plus sur la préparation des données et la conception des fonctionnalités, consultez la section sur la [préparation des données et la conception des fonctionnalités](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) du tutoriel sur la création d’une recette à l’aide de [!DNL JupyterLab] notebooks.
+Une fois que vous avez configuré l’outil de chargement de données `platform_sdk`, les données sont préparées puis réparties dans les jeux de données `train` et `val`. Pour en savoir plus sur la préparation des données et l’ingénierie des fonctionnalités, consultez la section sur [la préparation des données et l’ingénierie des fonctionnalités](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) dans le tutoriel sur la création d’une recette à l’aide de notebooks [!DNL JupyterLab].

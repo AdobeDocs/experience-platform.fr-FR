@@ -5,9 +5,9 @@ breadcrumb-title: Guide d’ingestion de données
 user-guide-description: Insérez vos données dans Experience Platform par ingestion en lot ou en flux continu.
 feature: Data Ingestion
 role: Developer
-source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '143'
 ht-degree: 95%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 95%
    - [Ingestion par lots partielle](batch-ingestion/partial.md)
    - [Dépannage](batch-ingestion/troubleshooting.md)
 - Tutoriels {#tutorials}
-   - Mappage d’un fichier CSV à XDM {#map-csv}
+   - Mapper un fichier CSV à un {#map-csv} XDM
       - [Présentation](./tutorials/map-csv/overview.md)
       - [Mapper un fichier CSV à un schéma existant](./tutorials/map-csv/existing-schema.md)
       - [Mapper un fichier CSV à l’aide de recommandations générées par l’IA](./tutorials/map-csv/recommendations.md)
@@ -48,4 +48,4 @@ ht-degree: 95%
 - [Connecteurs source](source-connectors.md)
 - [Référence de l’API d’ingestion par lots](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [Référence de l’API d’ingestion en flux continu](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
+- [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

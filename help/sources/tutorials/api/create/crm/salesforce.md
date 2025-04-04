@@ -2,10 +2,10 @@
 title: Connecter Salesforce à Experience Platform à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform à un compte Salesforce à l’aide de l’API Flow Service.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 01f655df8679383f57d60796be5274acd9b5df68
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1077'
-ht-degree: 24%
+source-wordcount: '1082'
+ht-degree: 19%
 
 ---
 
@@ -17,14 +17,14 @@ Lisez ce guide pour savoir comment connecter votre compte source [!DNL Salesforc
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
-* [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
+* [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-### Utiliser les API Platform
+### Utilisation des API Experience Platform
 
-Pour plus d’informations sur la manière d’effectuer des appels vers les API Platform, consultez le guide [Prise en main des API Platform](../../../../../landing/api-guide.md).
+Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Experience Platform, consultez le guide [Prise en main des API Experience Platform](../../../../../landing/api-guide.md).
 
-## Connecter [!DNL Salesforce] à l’Experience Platform sur [!DNL Azure] {#azure}
+## Connexion de [!DNL Salesforce] à Experience Platform sur [!DNL Azure] {#azure}
 
 Pour plus d’informations sur la connexion de votre source [!DNL Salesforce] à Experience Platform on [!DNL Azure], lisez les étapes ci-dessous.
 
@@ -44,7 +44,7 @@ Pour connecter votre compte [!DNL Salesforce] à [!DNL Flow Service] à l’aide
 | `username` | Nom d’utilisateur du compte utilisateur [!DNL Salesforce]. |
 | `password` | Mot de passe du compte utilisateur [!DNL Salesforce]. |
 | `securityToken` | Jeton de sécurité du compte utilisateur [!DNL Salesforce]. |
-| `apiVersion` | (Facultatif) Version de l’API REST de l’instance [!DNL Salesforce] que vous utilisez. La valeur de la version de l’API doit être formatée avec une décimale. Par exemple, si vous utilisez la version `52` de l’API, vous devez saisir la valeur comme `52.0`. Si ce champ n’est pas renseigné, l’Experience Platform utilisera automatiquement la dernière version disponible. |
+| `apiVersion` | (Facultatif) Version de l’API REST de l’instance [!DNL Salesforce] que vous utilisez. La valeur de la version de l’API doit être formatée avec une décimale. Par exemple, si vous utilisez la version `52` de l’API, vous devez saisir la valeur comme `52.0`. Si ce champ n’est pas renseigné, Experience Platform utilise automatiquement la dernière version disponible. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Salesforce] est `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 Pour plus d’informations sur la prise en main, consultez [ce document Salesforce](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
@@ -58,7 +58,7 @@ Pour connecter votre compte [!DNL Salesforce] à [!DNL Flow Service] à l’aide
 | `environmentUrl` | URL de l’instance source de la [!DNL Salesforce]. Le format de `environmentUrl` est `https://[domain].my.salesforce.com` |
 | `clientId` | L’identifiant client est utilisé conjointement avec le secret client dans le cadre de l’authentification OAuth2. Ensemble, l’identifiant client et le secret client permettent à votre application d’opérer pour le compte de votre compte en identifiant votre application à [!DNL Salesforce]. |
 | `clientSecret` | Le secret client est utilisé conjointement avec l’identifiant client dans le cadre de l’authentification OAuth2. Ensemble, l’identifiant client et le secret client permettent à votre application d’opérer pour le compte de votre compte en identifiant votre application à [!DNL Salesforce]. |
-| `apiVersion` | Version de l’API REST de l’instance [!DNL Salesforce] que vous utilisez. La valeur de la version de l’API doit être formatée avec une décimale. Par exemple, si vous utilisez la version `52` de l’API, vous devez saisir la valeur comme `52.0`. Si ce champ n’est pas renseigné, l’Experience Platform utilisera automatiquement la dernière version disponible. Cette valeur est obligatoire pour l’authentification des informations d’identification du client OAuth2. |
+| `apiVersion` | Version de l’API REST de l’instance [!DNL Salesforce] que vous utilisez. La valeur de la version de l’API doit être formatée avec une décimale. Par exemple, si vous utilisez la version `52` de l’API, vous devez saisir la valeur comme `52.0`. Si ce champ n’est pas renseigné, Experience Platform utilise automatiquement la dernière version disponible. Cette valeur est obligatoire pour l’authentification des informations d’identification du client OAuth2. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Salesforce] est `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 Pour plus d’informations sur l’utilisation d’OAuth pour [!DNL Salesforce], consultez le guide [[!DNL Salesforce]  sur les flux d’autorisation OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
@@ -67,9 +67,9 @@ Pour plus d’informations sur l’utilisation d’OAuth pour [!DNL Salesforce],
 
 ### Créer une connexion de base pour [!DNL Salesforce] dans Experience Platform sur [!DNL Azure]
 
-Une connexion de base conserve les informations échangées entre votre source et Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
+Une connexion de base conserve les informations échangées entre votre source et Experience Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
 
-Pour établir une connexion de base et connecter votre compte [!DNL Salesforce] à l’Experience Platform le [!DNL Azure], envoyez une requête de POST au point d’entrée `/connections` et indiquez vos informations d’authentification [!DNL Salesforce] dans le corps de la requête.
+Pour créer une connexion de base et connecter votre compte [!DNL Salesforce] à Experience Platform le [!DNL Azure], envoyez une requête POST au point d’entrée `/connections` et indiquez vos informations d’authentification [!DNL Salesforce] dans le corps de la requête.
 
 **Format d’API**
 
@@ -198,17 +198,17 @@ Une réponse réussie renvoie votre nouvelle connexion de base ainsi que son ide
 
 >[!AVAILABILITY]
 >
->Cette section s’applique aux implémentations d’Experience Platform s’exécutant sur Amazon Web Services (AWS). Un Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la présentation multi-cloud de [Experience Platform ](../../../../../landing/multi-cloud.md).
+>Cette section s’applique aux implémentations d’Experience Platform s’exécutant sur Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](../../../../../landing/multi-cloud.md).
 
 Pour plus d’informations sur la connexion de votre source [!DNL Salesforce] à Experience Platform sur AWS, lisez les étapes ci-dessous.
 
 ### Conditions préalables
 
-Pour plus d’informations sur la configuration de votre compte [!DNL Salesforce] pour pouvoir se connecter à Experience Platform sur AWS, consultez la [[!DNL Salesforce] présentation](../../../../connectors/crm/salesforce.md#aws).
+Pour plus d’informations sur la configuration de votre compte [!DNL Salesforce] pour pouvoir vous connecter à Experience Platform sur AWS, consultez la [[!DNL Salesforce] présentation](../../../../connectors/crm/salesforce.md#aws).
 
 ### Créer une connexion de base pour [!DNL Salesforce] sur Experience Platform sur AWS
 
-Pour établir une connexion de base et connecter votre compte [!DNL Salesforce] à Experience Platform sur AWS, envoyez une requête de POST au point d’entrée `/connections` et indiquez les valeurs appropriées pour vos informations d’identification.
+Pour créer une connexion de base et connecter votre compte [!DNL Salesforce] à Experience Platform sur AWS, envoyez une requête POST au point d’entrée `/connections` et indiquez les valeurs appropriées pour vos informations d’identification.
 
 **Format d’API**
 
@@ -220,7 +220,7 @@ POST /connections
 
 +++Sélectionner pour afficher la demande
 
-La requête suivante permet de créer une connexion de base pour la source [!DNL Salesforce] dans Experience Platform sur AWS.
+La requête suivante crée une connexion de base pour la source [!DNL Salesforce] dans Experience Platform sur AWS.
 
 ```shell
 curl -X POST \
@@ -394,4 +394,4 @@ La réponse suivante affiche des informations pour l’identifiant de connexion 
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL Salesforce] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer des données CRM dans Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/crm.md)
+* [Créer un flux de données pour importer des données CRM dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/crm.md)

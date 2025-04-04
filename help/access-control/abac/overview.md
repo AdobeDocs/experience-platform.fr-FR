@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Présentation du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform.
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 37131ce16b70bfaa737ee1cd896d0042e06bab15
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1860'
-ht-degree: 82%
+source-wordcount: '1874'
+ht-degree: 71%
 
 ---
 
@@ -18,9 +18,9 @@ Utilisez cette fonctionnalité pour libeller les champs de schéma du modèle de
 
 >[!IMPORTANT]
 >
->Le contrôle d’accès basé sur les attributs ne doit pas être confondu avec les fonctionnalités de gouvernance des données d’Experience Platform, qui vous permettent d’utiliser des libellés et des politiques pour contrôler l’utilisation des données dans Platform plutôt que de déterminer à qui les utilisateurs et utilisatrices de votre organisation ont accès. Pour plus d’informations, consultez la [présentation de la gouvernance des données](../../data-governance/home.md).
+>Le contrôle d’accès basé sur les attributs ne doit pas être confondu avec les fonctionnalités de gouvernance des données d’Experience Platform, qui vous permettent d’utiliser des libellés et des politiques pour contrôler l’utilisation des données dans Experience Platform plutôt que de savoir quels utilisateurs et utilisatrices de votre organisation y ont accès. Pour plus d’informations, consultez la [présentation de la gouvernance des données](../../data-governance/home.md).
 
-Grâce au contrôle d’accès basé sur les attributs, les administrateurs de votre organisation peuvent contrôler l’accès des utilisateurs aux données personnelles sensibles (SPD), aux informations d’identification personnelle (PII) et à d’autres types de données personnalisées sur l’ensemble des workflows et ressources de Platform. Les administrateurs peuvent définir des rôles d’utilisateur qui n’ont accès qu’à des champs spécifiques et aux données correspondant à ces champs.
+Grâce au contrôle d’accès basé sur les attributs, les administrateurs de votre organisation peuvent contrôler l’accès des utilisateurs aux données personnelles sensibles (SPD), aux informations d’identification personnelle (PII) et à d’autres types de données personnalisées sur l’ensemble des workflows et ressources d’Experience Platform. Les administrateurs et administratrices peuvent définir des rôles d’utilisateur ou d’utilisatrice qui n’ont accès qu’à des champs spécifiques et aux données correspondant à ces champs.
 
 La vidéo suivante est destinée à vous aider à comprendre le contrôle d’accès basé sur les attributs et explique comment configurer des rôles, des ressources et des politiques.
 
@@ -32,13 +32,13 @@ Le contrôle d’accès basé sur les attributs comprend les composants suivants
 
 | Terminologie | Définition |
 | --- | --- |
-| Attributs | Les attributs sont les identifiants indiquant la corrélation entre un utilisateur et les ressources Platform auxquelles il a accès. Les attributs peuvent être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ ou à un segment de schéma. Un administrateur définit des politiques d’accès qui comprennent des attributs afin de gérer les autorisations d’accès des utilisateurs. |
-| Libellés | Les libellés vous permettent de classer les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Les bonnes pratiques recommandent de libeller les données dès qu’elles sont ingérées dans Platform, ou dès que les données sont disponibles pour une utilisation dans Platform. |
-| Autorisations | Les autorisations incluent la possibilité d’afficher ou d’utiliser les fonctionnalités Platform, telles que la création de sandbox, la définition de schémas et la gestion des jeux de données. |
+| Attributs | Les attributs sont les identifiants indiquant la corrélation entre un utilisateur et les ressources Experience Platform auxquelles il a accès. Les attributs peuvent être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ ou à un segment de schéma. Un administrateur définit des politiques d’accès qui comprennent des attributs afin de gérer les autorisations d’accès des utilisateurs. |
+| Libellés | Les libellés vous permettent de classer les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Les bonnes pratiques recommandent de libeller les données dès qu’elles sont ingérées dans Experience Platform, ou dès que les données sont disponibles pour une utilisation dans Experience Platform. |
+| Autorisations | Les autorisations incluent la possibilité d’afficher ou d’utiliser les fonctionnalités Experience Platform, telles que la création de sandbox, la définition de schémas et la gestion des jeux de données. |
 | Jeux d’autorisations | Les jeux d’autorisations représentent un groupe d’autorisations qu’un administrateur peut appliquer à un rôle. Un administrateur peut attribuer des jeux d’autorisations à un rôle au lieu d’affecter des autorisations individuelles. Vous pouvez ainsi créer des rôles personnalisés à partir d’un rôle prédéfini contenant un groupe d’autorisations. |
 | Politiques | Les politiques sont des déclarations qui réunissent des attributs pour établir des actions autorisées et non autorisées. Les politiques peuvent être locales ou globales et peuvent remplacer d’autres politiques. |
 | Ressource | Une ressource est un actif ou un objet auquel un sujet peut ou ne peut pas accéder. Les ressources peuvent être des segments ou des champs de schéma. |
-| Rôles | Les rôles sont des moyens de classer les types d’utilisateurs qui interagissent avec votre instance Platform et constituent des blocs élémentaires des politiques de contrôle d’accès. Dans un environnement de contrôle d’accès basé sur les rôles, la configuration de l’accès des utilisateurs est regroupée suivant les responsabilités et les besoins communs. Un rôle possède un jeu d’autorisations déterminé et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin. |
+| Rôles | Les rôles sont des moyens de classer les types d’utilisateurs et d’utilisatrices qui interagissent avec votre instance Experience Platform et constituent des blocs élémentaires des politiques de contrôle d’accès. Dans un environnement de contrôle d’accès basé sur les rôles, la configuration de l’accès des utilisateurs est regroupée suivant les responsabilités et les besoins communs. Un rôle possède un jeu d’autorisations déterminé et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin. |
 | Objet | Un sujet est un utilisateur qui demande l’accès à une ressource pour effectuer une action. |
 | Groupes d’utilisateurs | Les groupes d’utilisateurs consistent en plusieurs utilisateurs qui ont été regroupés et qui disposent des accès pour exécuter les mêmes fonctions. |
 
@@ -54,15 +54,15 @@ Grâce aux autorisations, vous pouvez créer et gérer des rôles, ainsi qu’at
 
 ## API de contrôle d’accès basé sur les attributs
 
-L’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les rôles, les politiques et les produits dans Platform. Pour plus d’informations, consultez le guide sur l’[utilisation de l’API pour gérer les configurations de contrôle d’accès basé sur des attributs](api/overview.md).
+L’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les rôles, les politiques et les produits dans Experience Platform à l’aide d’API. Pour plus d’informations, consultez le guide sur l’[utilisation de l’API pour gérer les configurations de contrôle d’accès basé sur des attributs](api/overview.md).
 
 ## Contrôle d’accès basé sur les attributs dans Adobe Experience Platform
 
-Les sections suivantes fournissent des informations sur la manière dont le contrôle d’accès basé sur les attributs est intégré à d’autres composants de Platform :
+Les sections suivantes fournissent des informations sur la manière dont le contrôle d’accès basé sur les attributs est intégré à d’autres composants d’Experience Platform :
 
 ### Contrôle d’accès
 
-Platform exploite les rôles [Adobe Admin Console](https://adminconsole.adobe.com) pour lier les utilisateurs à des autorisations et des sandbox. Les autorisations contrôlent l’accès à de nombreuses fonctionnalités de Platform, notamment la modélisation des données, la gestion des profils et l’administration des sandbox. Une fois que votre organisation a activé le contrôle d’accès basé sur les attributs, vous pouvez commencer à utiliser les autorisations sur Adobe Experience Cloud, au lieu des rôles dans Adobe Admin Console, pour gérer les autorisations des utilisateurs, les fonctionnalités, les libellés et autres ressources de votre organisation.
+Experience Platform exploite les rôles [Adobe Admin Console](https://adminconsole.adobe.com) pour lier les utilisateurs à des autorisations et des sandbox. Les autorisations contrôlent l’accès à de nombreuses fonctionnalités d’Experience Platform, notamment la modélisation des données, la gestion des profils et l’administration des sandbox. Une fois que votre organisation a activé le contrôle d’accès basé sur les attributs, vous pouvez commencer à utiliser les autorisations sur Adobe Experience Cloud, au lieu des rôles dans Adobe Admin Console, pour gérer les autorisations des utilisateurs, les fonctionnalités, les libellés et autres ressources de votre organisation.
 
 La disponibilité du contrôle d’accès basé sur les attributs est limitée pour les clients qui achètent des offres Healthcare et/ou Privacy Shield. Cette fonctionnalité inclut les éléments suivants :
 
@@ -80,7 +80,7 @@ Pour plus d’informations sur le contrôle d’accès, consultez la [présentat
 
 ### Destinations {#destinations}
 
-[!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant de Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+[!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 
 En tant qu’administrateur, vous pouvez utiliser des fonctionnalités de contrôle d’accès basé sur les attributs pour :
 
@@ -109,7 +109,7 @@ Pour plus d’informations sur [!DNL Identity Service], consultez la [[!DNL Iden
 
 ### Profil client en temps réel
 
-Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Le profil client en temps réel offre une vue holistique de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le profil vous permet de consolider vos diverses données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
+Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Le profil client en temps réel offre une vue holistique de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le profil vous permet de consolider vos diverses données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
 
 En tant qu’administrateur, vous pouvez utiliser des fonctionnalités de contrôle d’accès basé sur les attributs pour :
 
@@ -133,7 +133,7 @@ Pour plus d’informations sur [!DNL Segmentation Service], consultez la [[!DNL 
 
 ### XDM
 
-Le modèle de données d’expérience (XDM) est une spécification open source conçue pour améliorer la puissance des expériences digitales. Il fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+Le modèle de données d’expérience (XDM) est une spécification open source conçue pour améliorer la puissance des expériences digitales. Il fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
 Avec le contrôle d’accès basé sur les attributs, vous pouvez :
 

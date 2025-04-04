@@ -5,9 +5,9 @@ type: Documentation
 description: Adobe Experience Platform vous permet de supprimer un jeu de données ou un lot de la banque de profils afin de supprimer les données du profil client en temps réel qui ne sont plus nécessaires ou qui ont été ajoutées par erreur. Pour ce faire, vous devez utiliser l’API Profile pour créer une tâche système Profile ou supprimer une requête.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 16778d0edbad4539a4ff5084a2f22ca5f08e83ec
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2020'
+source-wordcount: '2022'
 ht-degree: 35%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 35%
 
 >[!IMPORTANT]
 >
->Les points d’entrée suivants peuvent différer entre les implémentations de Adobe Experience Platform s’exécutant sur Microsoft Azure et Amazon Web Services (AWS). Un Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la présentation multi-cloud de [Experience Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Les points d’entrée suivants peuvent différer entre les implémentations de Adobe Experience Platform s’exécutant sur Microsoft Azure et Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
-Adobe Experience Platform vous permet d’ingérer des données provenant de plusieurs sources et de créer des profils fiables pour les clients individuels. Les données ingérées dans [!DNL Platform] sont stockées dans le [!DNL Data Lake]. Si les jeux de données ont été activés pour Profile, ces données sont également stockées dans le magasin de données [!DNL Real-Time Customer Profile]. Il peut parfois être nécessaire de supprimer les données de profil associées à un jeu de données de la banque de profils afin de supprimer des données qui ne sont plus nécessaires ou qui ont été ajoutées par erreur. Pour ce faire, vous devez utiliser l’API [!DNL Real-Time Customer Profile] pour créer une tâche système [!DNL Profile], ou « requête de suppression ».
+Adobe Experience Platform vous permet d’ingérer des données provenant de plusieurs sources et de créer des profils fiables pour les clients individuels. Les données ingérées dans [!DNL Experience Platform] sont stockées dans le [!DNL Data Lake]. Si les jeux de données ont été activés pour Profile, ces données sont également stockées dans le magasin de données [!DNL Real-Time Customer Profile]. Il peut parfois être nécessaire de supprimer les données de profil associées à un jeu de données de la banque de profils afin de supprimer des données qui ne sont plus nécessaires ou qui ont été ajoutées par erreur. Pour ce faire, vous devez utiliser l’API [!DNL Real-Time Customer Profile] pour créer une tâche système [!DNL Profile], ou « requête de suppression ».
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ Vous pouvez également utiliser des paramètres de requête facultatifs pour fil
 
 >[!AVAILABILITY]
 >
->Les paramètres de requête suivants sont **uniquement** disponibles lors de l’utilisation de Platform sur Microsoft Azure.
+>Les paramètres de requête suivants sont **uniquement** disponibles lors de l’utilisation d’Experience Platform sur Microsoft Azure.
 >
 >Lors de l’utilisation de ce point d’entrée sur AWS, les 100 premières tâches système sont renvoyées dans l’ordre décroissant, en fonction de leur date de création.
 
@@ -212,7 +212,7 @@ L’exécution d’une nouvelle requête de suppression se fait par le biais d�
 
 ### Supprimer un jeu de données et les données de profil associées
 
-Pour supprimer un jeu de données et toutes les données de profil associées au jeu de données de la banque de profils, l’identifiant du jeu de données doit être inclus dans le corps de la requête du POST. Cette action supprimera TOUTES les données d’un jeu de données. [!DNL Experience Platform] vous permet de supprimer des jeux de données en fonction des schémas d’enregistrement et des séries temporelles.
+Pour supprimer un jeu de données et toutes les données de profil associées au jeu de données de la banque de profils, l’identifiant du jeu de données doit être inclus dans le corps de la requête POST. Cette action supprimera TOUTES les données d’un jeu de données. [!DNL Experience Platform] vous permet de supprimer des jeux de données en fonction des schémas d’enregistrement et des séries temporelles.
 
 **Format d’API**
 
@@ -502,7 +502,7 @@ Une réponse réussie renvoie les détails de la requête système nouvellement 
 
 >[!AVAILABILITY]
 >
->La fonctionnalité suivante est **uniquement** disponible lors de l’utilisation de Platform sur Microsoft Azure.
+>La fonctionnalité suivante est **uniquement** disponible lors de l’utilisation d’Experience Platform sur Microsoft Azure.
 
 Si vous tentez d’exécuter une requête de suppression pour un lot de jeux de données d’enregistrement, une erreur de niveau 400 s’affichera, comme suit :
 

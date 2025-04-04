@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires
 solution: Experience Platform
 title: Sélection dʼun profil de produit pour modifier les autorisations de contrôle dʼaccès
-description: Ce document couvre les étapes nécessaires pour parcourir lʼespace de travail du contrôle dʼaccès. Pour configurer le contrôle d’accès d’Experience Platform via Adobe Admin Console, vous devez être administrateur d’une organisation abonnée à Experience Platform.
+description: Ce document couvre les étapes nécessaires pour parcourir lʼespace de travail du contrôle dʼaccès. Pour configurer le contrôle d’accès à Experience Platform via Adobe Admin Console, vous devez être administrateur d’une organisation abonnée à Experience Platform.
 exl-id: 1d3c894e-b412-43ba-ba91-ddfa35303d73
-source-git-commit: ca204a6bdbf867268e774d5db6f8e5941d38f0ae
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 60%
+source-wordcount: '304'
+ht-degree: 50%
 
 ---
 
@@ -17,7 +17,7 @@ Pour configurer le contrôle d’accès de [!DNL Experience Platform] via Adobe 
 
 Si vous ne disposez pas de droits d’administrateur, contactez votre administrateur système pour obtenir l’accès.
 
-Une fois que vous disposez des droits d’administrateur, accédez à [Adobe Admin Console](https://adminconsole.adobe.com) et connectez-vous à l’aide de vos informations d’identification Adobe. Une fois la connexion effectuée, la page **[!UICONTROL Aperçu]** s’affiche pour l’organisation pour laquelle vous disposez de droits d’administrateur. Cette page affiche les produits auxquels votre organisation est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’ensemble de l’organisation. Sélectionnez **[!UICONTROL Adobe Experience Platform]** pour ouvrir l’espace de travail du contrôle d’accès en vue de votre intégration Platform.
+Une fois que vous disposez des droits d’administrateur, accédez à [Adobe Admin Console](https://adminconsole.adobe.com) et connectez-vous à l’aide de vos informations d’identification Adobe. Une fois la connexion effectuée, la page **[!UICONTROL Aperçu]** s’affiche pour l’organisation pour laquelle vous disposez de droits d’administrateur. Cette page affiche les produits auxquels votre organisation est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’ensemble de l’organisation. Sélectionnez **[!UICONTROL Adobe Experience Platform]** pour ouvrir l’espace de travail du contrôle d’accès en vue de votre intégration Experience Platform.
 
 ![select-product](../images/select-product.png)
 
@@ -25,7 +25,7 @@ L’espace de travail du contrôle d’accès d’Adobe Experience Platform ap
 
 ![select-product-profile](../images/select-product-profile.png)
 
-Ce guide d’utilisation détaille la marche à suivre pour utiliser [!DNL Admin Console] afin d’attribuer des autorisations d’accès à Platform. Pour obtenir des informations plus générales sur la façon de parcourir [!DNL Admin Console], consultez le [guide dʼutilisation dʼAdmin Console](https://helpx.adobe.com/fr/enterprise/using/admin-console.html).
+Ce guide d’utilisation détaille la marche à suivre pour utiliser l’[!DNL Admin Console] afin d’attribuer des autorisations d’accès à Experience Platform. Pour obtenir des informations plus générales sur la façon de parcourir [!DNL Admin Console], consultez le [guide dʼutilisation dʼAdmin Console](https://helpx.adobe.com/fr/enterprise/using/admin-console.html).
 
 ## Étapes suivantes
 

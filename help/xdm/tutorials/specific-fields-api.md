@@ -2,10 +2,10 @@
 title: Ajouter des champs spécifiques à un schéma à l’aide de l’API Schema Registry
 description: Découvrez comment ajouter des champs individuels de groupes de champs préexistants à un schéma de modèle de données d’expérience (XDM) à l’aide de l’API Schema Registry.
 exl-id: 696cce2b-bbde-416a-9f52-12ab4da9c2c6
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '625'
-ht-degree: 100%
+source-wordcount: '626'
+ht-degree: 96%
 
 ---
 
@@ -285,6 +285,6 @@ Une réponse réussie renvoie les détails du schéma mis à jour.
 
 ## Étapes suivantes
 
-Ce guide explique comment utiliser les appels API pour ajouter des champs individuels d’un groupe de champs existant à un schéma. Pour plus d’informations sur l’exécution de tâches similaires basées sur des champs dans l’interface utilisateur de Platform, consultez le guide sur les [workflows basés sur les champs](../ui/field-based-workflows.md).
+Ce guide explique comment utiliser les appels API pour ajouter des champs individuels d’un groupe de champs existant à un schéma. Pour plus d’informations sur l’exécution de tâches similaires basées sur des champs dans l’interface utilisateur d’Experience Platform, consultez le guide sur les [workflows basés sur les champs](../ui/field-based-workflows.md).
 
 Pour plus d’informations sur les fonctionnalités de l’API Schema Registry, reportez-vous à la [Présentation des API](../api/overview.md) pour obtenir une liste complète des points d’entrée et processus.

@@ -4,9 +4,9 @@ user-guide-title: Guide du profil client en temps réel
 user-guide-description: Fusionnez les données client pour créer une vue unifiée des interactions client entre les canaux.
 feature: Profiles
 role: User
-source-git-commit: e7af4992b1a2d4c9ada89dea474ce8e5412313f9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '133'
 ht-degree: 91%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 91%
 * [Profils Edge](edge-profiles.md)
 * [Expirations des événements d’expérience](event-expirations.md)
 * [Expirations des profils pseudonymes](pseudonymous-profiles.md)
-* [Ordre des horodatages du client](customer-timestamp-ordering.md)
+* [Ordre de date et heure du client](customer-timestamp-ordering.md)
 * [!DNL Profile] API {#api}
    * [Présentation](api/overview.md)
    * [Prise en main](api/getting-started.md)
@@ -54,4 +54,4 @@ ht-degree: 91%
 * [Traitement des demandes d’accès à des informations personnelles](privacy.md)
 * [Guide de dépannage du [!DNL Profile]](troubleshooting.md)
 * [Référence de l’API Profile](https://www.adobe.com/go/profile-apis-en)
-* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
+* [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

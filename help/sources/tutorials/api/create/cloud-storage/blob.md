@@ -1,32 +1,32 @@
 ---
-title: Création d’une connexion de base Azure Blob à l’aide de l’API Flow Service
+title: Créer une connexion de base Azure Blob à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform à Azure Blob à l’aide de l’API Flow Service.
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '766'
-ht-degree: 41%
+source-wordcount: '772'
+ht-degree: 28%
 
 ---
 
-# Créez une connexion de base [!DNL Azure Blob] à l’aide de l’API [!DNL Flow Service]
+# Créer une connexion de base [!DNL Azure Blob] à l’aide de l’API [!DNL Flow Service]
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Ce tutoriel décrit les étapes à suivre pour créer une connexion de base pour [!DNL Azure Blob] (ci-après appelée &quot;[!DNL Blob]&quot;) à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour créer une connexion de base pour [!DNL Azure Blob] (ci-après dénommée « [!DNL Blob] ») à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour créer une connexion source [!DNL Blob] à l’aide de l’API [!DNL Flow Service].
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin afin de créer une connexion source [!DNL Blob] à l’aide de l’API [!DNL Flow Service].
 
 ### Collecter les informations d’identification requises
 
-Pour que [!DNL Flow Service] se connecte à votre stockage [!DNL Blob], vous devez fournir des valeurs pour la propriété de connexion suivante :
+Pour que [!DNL Flow Service] puissiez vous connecter à votre stockage [!DNL Blob], vous devez fournir des valeurs pour la propriété de connexion suivante :
 
 >[!BEGINTABS]
 
@@ -34,33 +34,33 @@ Pour que [!DNL Flow Service] se connecte à votre stockage [!DNL Blob], vous dev
 
 | Informations d’identification | Description |
 | --- | --- |
-| `connectionString` | Chaîne contenant les informations d’autorisation nécessaires pour authentifier [!DNL Blob] sur Experience Platform. Le modèle de chaîne de connexion [!DNL Blob] est : `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Pour plus d&#39;informations sur les chaînes de connexion, consultez ce document [!DNL Blob] sur la [configuration des chaînes de connexion](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
+| `connectionString` | Chaîne contenant les informations d’autorisation nécessaires pour authentifier les [!DNL Blob] dans Experience Platform. Le modèle de chaîne de connexion [!DNL Blob] est : `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Pour plus d’informations sur les chaînes de connexion, consultez ce document [!DNL Blob] sur la [configuration des chaînes de connexion](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Blob] est `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
->[!TAB Authentification URI SAS]
+>[!TAB authentification URI SAS]
 
 | Informations d’identification | Description |
 | --- | --- |
-| `sasUri` | URI de signature d’accès partagé que vous pouvez utiliser comme autre type d’authentification pour connecter votre compte [!DNL Blob]. Le modèle d’URI SAS [!DNL Blob] est : `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` Pour plus d’informations, consultez ce document [!DNL Blob] sur les [ URI de signature d’accès partagé ](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
-| `container` | Nom du conteneur auquel vous souhaitez attribuer l’accès. Lors de la création d’un compte avec la source [!DNL Blob], vous pouvez fournir un nom de conteneur pour spécifier l’accès de l’utilisateur au sous-dossier de votre choix. |
+| `sasUri` | URI de signature d’accès partagé que vous pouvez utiliser comme autre type d’authentification pour connecter votre compte [!DNL Blob]. Le modèle d’URI SAS [!DNL Blob] est le suivant : `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` Pour plus d’informations, consultez ce document [!DNL Blob] sur les [URI de signature à accès partagé](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
+| `container` | Nom du conteneur auquel vous souhaitez désigner l’accès. Lors de la création d’un compte avec la source de [!DNL Blob], vous pouvez fournir un nom de conteneur pour spécifier l’accès utilisateur au sous-dossier de votre choix. |
 | `folderPath` | Chemin d’accès au dossier auquel vous souhaitez accorder l’accès. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Blob] est `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 >[!ENDTABS]
 
-### Utiliser les API Platform
+### Utilisation des API Experience Platform
 
-Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Platform, consultez le guide sur la [Prise en main des API Platform](../../../../../landing/api-guide.md).
+Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Experience Platform, consultez le guide [Prise en main des API Experience Platform](../../../../../landing/api-guide.md).
 
 ## Créer une connexion de base
 
 >[!TIP]
 >
->Une fois créé, vous ne pouvez pas modifier le type d&#39;authentification d&#39;une connexion de base [!DNL Blob]. Pour modifier le type d&#39;authentification, vous devez créer une nouvelle connexion de base.
+>Une fois créé, vous ne pouvez pas modifier le type d’authentification d’une connexion de base [!DNL Blob]. Pour modifier le type d’authentification, vous devez créer une connexion de base.
 
-Une connexion de base conserve les informations échangées entre votre source et Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
+Une connexion de base conserve les informations échangées entre votre source et Experience Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
 
-La source [!DNL Blob] prend en charge l’authentification de la chaîne de connexion et de la signature d’accès partagée (SAS). Un URI de signature d’accès partagé (SAS) permet une délégation sécurisée de l’autorisation de votre compte [!DNL Blob]. Vous pouvez utiliser SAS pour créer des informations d’identification d’authentification avec des degrés d’accès différents, car une authentification SAS vous permet de définir des autorisations, des dates de début et d’expiration, ainsi que des dispositions sur des ressources spécifiques.
+La source [!DNL Blob] prend en charge l’authentification par chaîne de connexion et par signature d’accès partagé (SAS). Un URI de signature d’accès partagé (SAS) permet une autorisation déléguée sécurisée à votre compte [!DNL Blob]. Vous pouvez utiliser SAS pour créer des informations d’identification d’authentification avec différents degrés d’accès, car une authentification SAS vous permet de définir des autorisations, des dates de début et d’expiration, ainsi que des dispositions pour des ressources spécifiques.
 
 Au cours de cette étape, vous pouvez également désigner les sous-dossiers auxquels votre compte aura accès en définissant le nom du conteneur et le chemin d’accès au sous-dossier.
 
@@ -110,7 +110,7 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `auth.params.connectionString` | Chaîne de connexion requise pour accéder aux données dans votre stockage Blob. Le modèle de chaîne de connexion Blob est : `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `auth.params.connectionString` | Chaîne de connexion requise pour accéder aux données de votre stockage Blob. Le modèle de chaîne de connexion Blob est : `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
 | `connectionSpec.id` | L’identifiant de spécification de connexion de stockage Blob est : `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 +++
@@ -130,7 +130,7 @@ Une réponse réussie renvoie les détails de la connexion de base que vous vene
 
 >[!TAB Authentification URI SAS]
 
-Pour créer une connexion [!DNL Blob] à l’aide de l’URI de signature d’accès partagé, envoyez une demande de POST à l’API [!DNL Flow Service] tout en fournissant des valeurs pour votre [!DNL Blob] `sasUri`.
+Pour créer une connexion [!DNL Blob] à l’aide de l’URI de signature d’accès partagé, envoyez une requête POST à l’API [!DNL Flow Service] tout en fournissant des valeurs pour votre `sasUri` [!DNL Blob].
 
 +++Requête
 
@@ -162,8 +162,8 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `auth.params.connectionString` | URI SAS requis pour accéder aux données de votre stockage [!DNL Blob]. Le modèle URI SAS [!DNL Blob] est : `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>`. |
-| `connectionSpec.id` | L&#39;identifiant de spécification de connexion de stockage [!DNL Blob] est : `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| `auth.params.connectionString` | URI SAS requis pour accéder aux données de votre stockage [!DNL Blob]. Le modèle d’URI SAS [!DNL Blob] est : `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>`. |
+| `connectionSpec.id` | L’identifiant de spécification de connexion de stockage [!DNL Blob] est : `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 +++
 
@@ -184,4 +184,4 @@ Une réponse réussie renvoie les détails de la connexion de base que vous vene
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une connexion [!DNL Blob] à l’aide d’API et un identifiant unique a été obtenu dans le corps de la réponse. Vous pouvez utiliser cet identifiant de connexion pour [ explorer le stockage dans le cloud à l’aide de l’API Flow Service ](../../explore/cloud-storage.md).
+En suivant ce tutoriel, vous avez créé une connexion [!DNL Blob] à l’aide d’API et obtenu un identifiant unique dans le cadre du corps de la réponse. Vous pouvez utiliser cet identifiant de connexion pour [explorer les espaces de stockage dans le cloud à l’aide de l’API Flow Service](../../explore/cloud-storage.md).

@@ -2,10 +2,10 @@
 title: Copie des ressources
 description: Découvrez comment créer une ressource de balise à lʼaide des paramètres dʼune ressource de balise existante dans Adobe Experience Platform.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 96%
+source-wordcount: '781'
+ht-degree: 93%
 
 ---
 
@@ -60,7 +60,7 @@ Lorsque vous copiez une extension vers une autre propriété, vous devez tenir c
 
 ## Copie de règles et d’éléments de données
 
-Toutes les règles et tous les éléments de données sont fournis par une extension. De ce fait, lorsque vous copiez plusieurs propriétés, Platform doit tenir compte de ces extensions sous-jacentes.
+Toutes les règles et tous les éléments de données sont fournis par une extension. Par conséquent, lorsque vous copiez plusieurs propriétés, Experience Platform doit tenir compte de ces extensions sous-jacentes.
 
 ![Copie d’une règle vers ma propriété de démonstration](../../images/copy-rules-dialog1.png)
 

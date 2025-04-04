@@ -1,10 +1,10 @@
 ---
-keywords: supprimer des destinations, comment supprimer des destinations, supprimer des destinations
+keywords: supprimer des destinations, comment supprimer des destinations, supprimer une destination
 title: Supprimer les destinations
 type: Tutorial
-description: Ce tutoriel répertorie les étapes de suppression d’une destination existante dans l’interface utilisateur de Adobe Experience Platform.
+description: Ce tutoriel décrit les étapes à suivre pour supprimer une destination existante dans l’interface utilisateur de Adobe Experience Platform
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 32%
@@ -15,18 +15,18 @@ ht-degree: 32%
 
 ## Vue d’ensemble {#overview}
 
-Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez supprimer les connexions existantes aux destinations.
+Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez supprimer des connexions existantes à des destinations.
 
-La suppression d’une destination supprime tous les flux de données existants vers cette destination. Toutes les audiences activées vers les destinations que vous supprimez sont démappées avant la suppression du flux de données.
+La suppression d’une destination supprime tous les flux de données existants vers cette destination. Toutes les audiences activées pour les destinations que vous supprimez ne sont pas mappées avant la suppression du flux de données.
 
-Il existe deux manières de supprimer des destinations de [!DNL Platform] [!DNL UI]. Vous pouvez :
+Vous pouvez supprimer des destinations de l’[!DNL UI] [!DNL Experience Platform] de deux façons. Vous pouvez effectuer les actions suivantes :
 
-* [Suppression de destinations de l’onglet [!UICONTROL Parcourir]](#delete-browse-tab)
-* [Suppression de destinations de la page de détails des destinations](#delete-destination-details-page)
+* [Supprimer des destinations de l’onglet [!UICONTROL  Parcourir ]](#delete-browse-tab)
+* [Supprimer des destinations de la page des détails de la destination](#delete-destination-details-page)
 
-## Suppression de destinations dans l’onglet Parcourir{#delete-browse-tab}
+## Supprimer des destinations de l’onglet Parcourir{#delete-browse-tab}
 
-Suivez les étapes ci-dessous pour supprimer une destination de l’onglet [!UICONTROL Parcourir] .
+Pour supprimer une destination de l’onglet [!UICONTROL Parcourir], procédez comme suit.
 
 1. Connectez-vous à l’[interface utilisateur Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Pour afficher vos destinations existantes, sélectionnez **[!UICONTROL Parcourir]** dans l’en-tête supérieur.
 
@@ -36,16 +36,16 @@ Suivez les étapes ci-dessous pour supprimer une destination de l’onglet [!UIC
 
    ![Filtrer les destinations](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Sélectionnez le bouton ![Plus](/help/images/icons/more.png) dans la colonne Nom, puis le bouton ![Supprimer](/help/images/icons/delete.png) **[!UICONTROL Supprimer]** pour supprimer une connexion de destination existante.
+3. Sélectionnez le bouton ![Plus](/help/images/icons/more.png) dans la colonne Nom, puis sélectionnez ![Bouton Supprimer](/help/images/icons/delete.png) **[!UICONTROL Supprimer]** pour supprimer une connexion de destination existante.
    ![Supprimer des destinations](../assets/ui/delete-destinations/delete-destinations.png)
 
 4. Sélectionnez **[!UICONTROL Supprimer]** pour confirmer la suppression de la connexion de destination.
 
    ![Confirmer la suppression de la destination](../assets/ui/delete-destinations/delete-destinations-confirm.png)
 
-## Suppression de destinations de la page de détails des destinations{#delete-destination-details-page}
+## Supprimer des destinations de la page des détails de la destination{#delete-destination-details-page}
 
-Suivez les étapes ci-dessous pour supprimer une destination de la page de détails des destinations.
+Suivez les étapes ci-dessous pour supprimer une destination de la page de détails de la destination.
 
 1. Connectez-vous à l’[interface utilisateur Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Pour afficher vos destinations existantes, sélectionnez **[!UICONTROL Parcourir]** dans l’en-tête supérieur.
 
@@ -55,15 +55,15 @@ Suivez les étapes ci-dessous pour supprimer une destination de la page de déta
 
    ![Filtrer les destinations](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Sélectionnez le nom de la destination que vous souhaitez supprimer.
+3. Sélectionnez le nom de la destination à supprimer.
 
    ![Sélectionnez des destinations](../assets/ui/delete-destinations/delete-destination-select.png)
 
-   * Si la destination comporte des flux de données existants, vous accédez à l’onglet [!UICONTROL Exécution du flux de données].
+   * Si la destination comporte des flux de données existants, vous accédez à l’onglet [!UICONTROL Exécutions de flux de données].
 
-     ![Onglet Exécutions de flux de données](../assets/ui/delete-destinations/destination-details-dataflows.png)
+     ![ Onglet Exécutions de flux de données ](../assets/ui/delete-destinations/destination-details-dataflows.png)
 
-   * Si la destination ne comporte pas de flux de données existants, vous accédez à une page vide dans laquelle vous pouvez commencer à activer les audiences.
+   * Si la destination ne comporte pas de flux de données existants, vous accédez à une page vide où vous pouvez commencer à activer les audiences.
 
      ![Détails de la destination](../assets/ui/delete-destinations/destination-details-empty.png)
 
@@ -73,8 +73,8 @@ Suivez les étapes ci-dessous pour supprimer une destination de la page de déta
 
 5. Sélectionnez **[!UICONTROL Supprimer]** dans la boîte de dialogue de confirmation pour supprimer la destination.
 
-   ![Supprimer la confirmation de destination](..//assets/ui/delete-destinations/delete-destinations-delete.png)
+   ![Confirmation de la suppression de la destination](..//assets/ui/delete-destinations/delete-destinations-delete.png)
 
    >[!NOTE]
    >
-   >Selon la charge du serveur, la suppression de la destination peut prendre quelques minutes pour [!DNL Platform].
+   >En fonction de la charge du serveur, la suppression de la destination peut prendre quelques minutes pour [!DNL Experience Platform].

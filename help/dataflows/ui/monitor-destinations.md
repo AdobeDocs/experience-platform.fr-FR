@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Surveillance des flux de données pour les destinations dans l’interface utilisateur
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 7f3560eaccecc8f42bbfa7d27b82ad71397df035
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3620'
+source-wordcount: '3626'
 ht-degree: 11%
 
 ---
 
 # Surveillance des flux de données pour les destinations dans l’interface utilisateur
 
-Utilisez les différentes destinations du catalogue Experience Platform pour activer vos données de Platform vers d’innombrables partenaires externes. Platform facilite le processus de suivi du flux de données vers les destinations en offrant de la transparence aux flux de données.
+Utilisez les différentes destinations du catalogue Experience Platform pour activer vos données d’Experience Platform vers d’innombrables partenaires externes. Experience Platform facilite le processus de suivi du flux de données vers les destinations en offrant de la transparence aux flux de données.
 
 Le tableau de bord de surveillance vous fournit une représentation visuelle du parcours d’un flux de données, y compris la destination vers laquelle les données sont activées, le type de données que vous consultez, les données exportées par exécution de flux de données, etc.
 
@@ -23,14 +23,14 @@ Ce tutoriel vous explique comment surveiller les flux de données directement da
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-- [Flux de données](../home.md) : les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Platform. Les flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers des jeux de données cibles, vers [!DNL Identity] et [!DNL Profile], et vers [!DNL Destinations].
+- [Flux de données](../home.md) : les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Experience Platform. Les flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers des jeux de données cibles, vers [!DNL Identity] et [!DNL Profile], et vers [!DNL Destinations].
    - [Exécutions de flux de données](../../sources/notifications.md) : les exécutions de flux de données sont les tâches planifiées récurrentes en fonction de la configuration de la fréquence des flux de données sélectionnés.
-- [Destinations](../../destinations/home.md) : les destinations sont des intégrations préconfigurées aux applications couramment utilisées. Elles permettent l’activation transparente des données de Platform pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
-- [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+- [Destinations](../../destinations/home.md) : les destinations sont des intégrations préconfigurées aux applications couramment utilisées. Elles permettent l’activation transparente des données d’Experience Platform pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+- [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ## Surveillance des flux de données dans l’espace de travail des destinations {#monitor-dataflows-in-the-destinations-workspace}
 
-Dans l’espace de travail **[!UICONTROL Destinations]** de l’interface utilisateur de Platform, accédez à l’onglet **[!UICONTROL Parcourir]** et sélectionnez le nom d’une destination que vous souhaitez afficher.
+Dans l’espace de travail **[!UICONTROL Destinations]** de l’interface utilisateur d’Experience Platform, accédez à l’onglet **[!UICONTROL Parcourir]** et sélectionnez le nom d’une destination que vous souhaitez afficher.
 
 ![Sélectionner la vue de destination avec une connexion de destination mise en surbrillance](../assets/ui/monitor-destinations/select-destination.png)
 
@@ -97,7 +97,7 @@ Chaque exécution de flux de données affiche les détails suivants :
 
   >[!IMPORTANT]
   >
-  > À partir de mars 2025, Adobe déploie une mise à jour pour accroître la précision des rapports pour les destinations de diffusion en streaming. Cette amélioration assure un meilleur alignement entre les rapports dans Experience Platform et les plateformes de destination.
+  > Depuis mars 2025, Adobe propose une mise à jour améliorant la précision des rapports pour les destinations de streaming. Cette amélioration assure un meilleur alignement entre les rapports dans Experience Platform et les plateformes de destination.
   >
   > Avant cette mise à jour, **[!UICONTROL Identités en échec]** incluait toutes les reprises d’activation. Après cette mise à jour, seule la dernière reprise d’activation est incluse dans le nombre total.
   > 
@@ -349,4 +349,4 @@ Lorsque **[!UICONTROL Audiences]** est sélectionné, la liste des audiences qui
 
 ## Étapes suivantes {#next-steps}
 
-En suivant ce guide, vous savez désormais comment surveiller les flux de données pour les destinations par lots et de diffusion en continu, y compris toutes les informations pertinentes telles que le temps de traitement, le taux d’activation et le statut. Pour en savoir plus sur les flux de données dans Platform, lisez la [présentation des flux de données](../home.md). Pour en savoir plus sur les destinations, lisez la [présentation des destinations](../../destinations/home.md).
+En suivant ce guide, vous savez désormais comment surveiller les flux de données pour les destinations par lots et de diffusion en continu, y compris toutes les informations pertinentes telles que le temps de traitement, le taux d’activation et le statut. Pour en savoir plus sur les flux de données dans Experience Platform, consultez la [présentation des flux de données](../home.md). Pour en savoir plus sur les destinations, lisez la [présentation des destinations](../../destinations/home.md).

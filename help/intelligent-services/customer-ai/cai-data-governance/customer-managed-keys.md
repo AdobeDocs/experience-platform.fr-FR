@@ -3,10 +3,10 @@ keywords: insights;IA dédiée aux clients;insights IA dédiée aux clients;serv
 title: Clés gérées par le client dans l’IA dédiée aux clients.
 description: Découvrez comment configurer les clés gérées par le client pour l’IA dédiée aux clients.
 exl-id: 12746c5c-094a-4d49-8d3a-7641fe0ec02a
-source-git-commit: 1a7babf104b2146bad4a336b9e0abd5a32c88999
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '163'
-ht-degree: 88%
+source-wordcount: '164'
+ht-degree: 75%
 
 ---
 
@@ -18,6 +18,6 @@ Vous pouvez lire la documentation relative aux [Clés gérées par le client dan
 
 >[!NOTE]
 >
->[!DNL Customer Managed Keys] sont actuellement disponibles uniquement pour les organisations qui ont acheté l’offre de module complémentaire [!DNL Healthcare Shield or Privacy & Security Shield].
+>Les [!DNL Customer Managed Keys] sont actuellement disponibles uniquement pour les organisations qui ont acheté l’offre complémentaire [!DNL Healthcare Shield or Privacy & Security Shield].
 
-Toutes les données utilisées par Platform sont chiffrées en transit et au repos pour garantir leur sécurité, avec ou sans CMK. Pour plus d’informations sur le chiffrement d’Adobe Experience Platform, consultez la documentation sur le [chiffrement des données](../../../landing/governance-privacy-security/encryption.md).
+Toutes les données utilisées par Experience Platform sont chiffrées en transit et au repos pour garantir leur sécurité, avec ou sans CMK. Pour plus d’informations sur le chiffrement d’Adobe Experience Platform, consultez la documentation sur le [chiffrement des données](../../../landing/governance-privacy-security/encryption.md).

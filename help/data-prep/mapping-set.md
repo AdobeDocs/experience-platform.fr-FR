@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation des jeux de mappages
 description: Découvrez comment utiliser les jeux de mappages avec la préparation de données Adobe Experience Platform.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: 660948b7a43ed3c18feb74cccf8f9c607470759c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 96%
+source-wordcount: '960'
+ht-degree: 95%
 
 ---
 
@@ -20,7 +20,7 @@ Un jeu de mappages est un ensemble de mappages qui transforme les données d’u
 Cette présentation d’ nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 - [Préparation de données](./home.md) : la préparation des données permet aux ingénieur(e)s de données de mapper, de transformer et de valider les données vers et à partir du modèle de données d’expérience (XDM).
-- [Flux de données](../dataflows/home.md) : les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Platform. Les flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers des jeux de données cibles, vers [!DNL Identity] et [!DNL Profile], et vers [!DNL Destinations].
+- [Flux de données](../dataflows/home.md) : les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Experience Platform. Les flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers des jeux de données cibles, vers [!DNL Identity] et [!DNL Profile], et vers [!DNL Destinations].
 - [[!DNL Adobe Experience Platform Data Ingestion]](../ingestion/home.md) : méthodes par lesquelles les données peuvent être envoyées à [!DNL Experience Platform].
 - [[!DNL Experience Data Model (XDM) System]](../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
 
@@ -75,7 +75,7 @@ Le fichier JSON suivant est un exemple de jeu de mappages type :
 | `mappings` | Tableau de mappages champ à champ du schéma source au schéma de destination. |
 | `sourceType` | Pour chaque mappage répertorié, son attribut `sourceType` indique le type de source à mapper. Peut être l’une des valeurs suivantes : `ATTRIBUTE`, `STATIC` ou `EXPRESSION` : <ul><li> `ATTRIBUTE` est utilisé pour toute valeur trouvée dans le chemin d’accès source. </li><li>`STATIC` est utilisé pour les valeurs injectées dans le chemin d’accès de destination. Cette valeur reste constante et n’est pas affectée par le schéma source.</li><li> `EXPRESSION` est utilisé pour une expression qui sera résolue au moment de l’exécution. Vous trouverez une liste des expressions disponibles dans le [guide des fonctions de mappage](./functions.md).</li> </ul> |
 | `source` | Pour chaque mappage répertorié, l’attribut `source` indique le champ que vous souhaitez mapper. Vous trouverez plus d’informations sur la configuration de votre source dans la [présentation des sources](../sources/home.md). |
-| `destination` | Pour chaque mappage répertorié, l’attribut `destination` indique le champ, ou le chemin d’accès au champ, où sera placée la valeur extraite du champ `source`. Vous trouverez plus d’informations sur la configuration de vos destinations dans la [présentation de destination](../destinations/home.md). |
+| `destination` | Pour chaque mappage répertorié, l’attribut `destination` indique le champ, ou le chemin d’accès au champ, où sera placée la valeur extraite du champ `source`. Vous trouverez plus d’informations sur la configuration de vos destinations dans la [présentation des destinations](../destinations/home.md). |
 | `mappings.name` | (*Facultatif*) Nom du mappage. |
 | `mappings.description` | (*Facultatif*) Description du mappage. |
 

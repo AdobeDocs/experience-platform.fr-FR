@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Connecter Power BI à Query Service
 description: Ce document décrit les étapes à suivre pour connecter Power BI à Adobe Experience Platform Query Service.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 2b76b99d1e22d75faf8d758edd6cf08acdec7c21
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1011'
-ht-degree: 96%
+source-wordcount: '1014'
+ht-degree: 89%
 
 ---
 
@@ -23,7 +23,7 @@ Ce guide nécessite que vous ayez déjà accès à l’application [!DNL Power B
 >
 > L’application [!DNL Power BI] Desktop est **uniquement** disponible sur les appareils Windows.
 
-Pour acquérir les informations d’identification nécessaires à la connexion de [!DNL Power BI] à Experience Platform, vous devez avoir accès à l’espace de travail Requêtes dans l’interface utilisateur de Platform. Contactez l’administrateur ou administratrice de votre organisation si vous n’avez pas actuellement accès à l’espace de travail des requêtes.
+Pour acquérir les informations d’identification nécessaires à la connexion de [!DNL Power BI] à Experience Platform, vous devez avoir accès à l’espace de travail Requêtes dans l’interface utilisateur d’Experience Platform. Contactez l’administrateur ou administratrice de votre organisation si vous n’avez pas actuellement accès à l’espace de travail des requêtes.
 
 ## Connecter [!DNL Power BI] à Query Service {#connect-power-bi}
 
@@ -31,11 +31,11 @@ Pour connecter [!DNL Power BI] à Query Service, ouvrez [!DNL Power BI] et séle
 
 La boîte de dialogue de base de données [!DNL PostgreSQL] s’affiche, vous demandant des valeurs pour votre serveur et votre base de données. Vous pouvez consulter des instructions supplémentaires sur la manière de [se connecter à la base de données PostgreSQL à partir de Power Query Desktop](https://learn.microsoft.com/fr-fr/power-query/connectors/postgresql#connect-to-a-postgresql-database-from-power-query-desktop) dans la documentation de [!DNL PowerBI].
 
-Ces valeurs requises proviennent de vos informations d’identification Adobe Experience Platform. Pour trouver vos informations d’identification, connectez-vous à l’interface utilisateur de Platform et sélectionnez **[!UICONTROL Requêtes]** à partir du volet de navigation de gauche, puis **[!UICONTROL Informations d’identification]**. Pour plus d’informations sur la manière dont trouver le nom, l’hôte et le port de votre base de données ainsi que vos informations d’identification de connexion, consultez le [guide des informations d’identification](../ui/credentials.md).
+Ces valeurs requises proviennent de vos informations d’identification Adobe Experience Platform. Pour trouver vos informations d’identification, connectez-vous à l’interface utilisateur d’Experience Platform et sélectionnez **[!UICONTROL Requêtes]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Informations d’identification]**. Pour plus d’informations sur la manière dont trouver le nom, l’hôte et le port de votre base de données ainsi que vos informations d’identification de connexion, consultez le [guide des informations d’identification](../ui/credentials.md).
 
 >[!IMPORTANT]
 >
->En tant qu’utilisateur Power BI ou Tableau, vous pouvez connecter Customer Journey Analytics à vos outils de BI à partir de l’onglet Informations d’identification de Query Service. Consultez la documentation des informations d’identification pour obtenir des instructions sur la [connexion de vos outils de BI à Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
+>En tant qu’utilisateur de Power BI ou de Tableau, vous pouvez connecter Customer Journey Analytics à vos outils BI à partir de l’onglet des informations d’identification de Query Service. Consultez la documentation des informations d’identification pour obtenir des instructions sur la [connexion de vos outils BI à Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
 
 ![L’espace de travail Requêtes Experience Platform avec l’onglet Informations d’identification et Informations d’identification arrivant à expiration en surbrillance.](../images/clients/power-bi/query-service-credentials-page.png)
 
@@ -75,7 +75,7 @@ L’application [Informations générales sur la connexion aux données dans Pow
 
 ### Importer des tableaux à l’aide du SQL personnalisé
 
-[!DNL Power BI] et d’autres outils tiers tels que [!DNL Tableau] ne permettent pas actuellement aux utilisateurs d’importer des objets imbriqués, tels que des objets XDM dans Platform. Pour en tenir compte, [!DNL Power BI] vous permet d’utiliser du code SQL personnalisé pour accéder à ces champs imbriqués et créer une vue aplatie des données. [!DNL Power BI] charge ensuite cette vue aplatie des données précédemment imbriquées comme un tableau normal.
+[!DNL Power BI] et d’autres outils tiers tels que [!DNL Tableau] ne permettent actuellement pas aux utilisateurs d’importer des objets imbriqués, tels que des objets XDM dans Experience Platform. Pour en tenir compte, [!DNL Power BI] vous permet d’utiliser du code SQL personnalisé pour accéder à ces champs imbriqués et créer une vue aplatie des données. [!DNL Power BI] charge ensuite cette vue aplatie des données précédemment imbriquées comme un tableau normal.
 
 Dans la boîte de dialogue [!DNL PostgreSQL database], sélectionnez **[!DNL Advanced options]** pour saisir une requête SQL personnalisée dans la section **[!DNL SQL statement]**. Cette requête personnalisée doit être utilisée pour aplatir vos paires nom-valeur JSON dans un format de tableau. La documentation officielle fournit également des informations sur la manière de [connecter PowerBI à l’aide d’une instruction SQL dans les options avancées](https://learn.microsoft.com/fr-fr/power-query/connectors/postgresql#connect-using-advanced-options).
 

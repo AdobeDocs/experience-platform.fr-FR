@@ -2,10 +2,10 @@
 title: Guide de lʼAPI Reactor
 description: L’API Reactor permet aux développeurs de gérer toutes les ressources de balises par programme dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1079'
-ht-degree: 99%
+source-wordcount: '1080'
+ht-degree: 97%
 
 ---
 
@@ -99,7 +99,7 @@ Pour savoir comment gérer les événements dʼaudit dans lʼAPI, reportez-vous 
 
 ## Rappels
 
-Un rappel est un message que Platform envoie à un hôte dʼURL chaque fois quʼun nouvel événement dʼaudit est généré. Pour savoir comment gérer les rappels dans lʼAPI, consultez le [guide du point dʼentrée des rappels](./endpoints/callbacks.md).
+Un rappel est un message qu’Experience Platform envoie à un hôte d’URL chaque fois qu’un nouvel événement d’audit est généré. Pour savoir comment gérer les rappels dans lʼAPI, consultez le [guide du point dʼentrée des rappels](./endpoints/callbacks.md).
 
 ## Notes
 

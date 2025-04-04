@@ -2,10 +2,10 @@
 title: Téléchargement et implémentation de tests de bout en bout pour une extension
 description: Découvrez comment valider, télécharger et tester votre extension dans Adobe Experience Platform.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 8e843ce14d726f18b77189b5523b823bfa4473be
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2345'
-ht-degree: 86%
+source-wordcount: '2347'
+ht-degree: 85%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 86%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Pour tester les extensions de balises dans Adobe Experience Platform, utilisez lʼAPI des balises et/ou les outils de ligne de commande pour télécharger vos packages dʼextension. Ensuite, utilisez l’interface utilisateur de Platform ou l’interface utilisateur de collecte de données pour installer votre package d’extension sur une propriété et exercer ses fonctionnalités dans une bibliothèque de balises et créer.
+Pour tester les extensions de balises dans Adobe Experience Platform, utilisez lʼAPI des balises et/ou les outils de ligne de commande pour télécharger vos packages dʼextension. Ensuite, utilisez l’interface utilisateur d’Experience Platform ou l’interface utilisateur de collecte de données pour installer votre package d’extension sur une propriété et exercer ses fonctionnalités dans une bibliothèque de balises et une version.
 
 Ce document explique comment mettre en œuvre des tests de bout en bout pour votre extension.
 
@@ -39,7 +39,7 @@ Le fichier de logo en est un exemple précis : ajoutez une ligne `"iconPath": "
 
 Pour utiliser l’API ou les outils de ligne de commande, vous avez besoin d’un compte technique avec Adobe I/O. Vous devez créer ce compte technique dans la console I/O, puis utiliser l’outil de téléchargement pour télécharger le package d’extension.
 
-Pour plus d’informations sur la création d’un compte technique à utiliser avec des balises dans Adobe Experience Platform, reportez-vous au guide de [prise en main de l’API Reactor](../../api/getting-started.md).
+Pour plus d’informations sur la création d’un compte technique à utiliser avec les balises dans Adobe Experience Platform, reportez-vous au guide [Prise en main de l’API Reactor](../../api/getting-started.md).
 
 >[!IMPORTANT]
 >
@@ -62,31 +62,31 @@ npx @adobe/reactor-uploader
 `npx` vous permet de télécharger et d’exécuter un package npm sans véritablement l’installer sur votre machine. Il s’agit de la manière la plus simple d’exécuter le téléchargeur.
 
 >[!NOTE]
-> Par défaut, le téléchargeur attend des informations d’identification d’Adobe I/O pour un flux Oauth serveur à serveur. Informations d’identification `jwt-auth` héritées
-> peut être utilisé en exécutant `npx @adobe/reactor-uploader@v5.2.0` jusqu’à son abandon le 1er janvier 2025. Paramètres requis
-> pour exécuter la version `jwt-auth`, vous trouverez [ici](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
+> Par défaut, le téléchargeur attend des informations d’identification Adobe I/O pour un flux Oauth serveur à serveur. Informations d’identification de `jwt-auth` héritées
+> peut être utilisé en exécutant `npx @adobe/reactor-uploader@v5.2.0` jusqu’à l’obsolescence le 1er janvier 2025. Paramètres requis
+> pour exécuter la version `jwt-auth`, rendez-vous [ici](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
-Le téléchargeur vous demande de ne saisir que quelques informations. Les `clientId` et `clientSecret` peuvent être récupérés à partir de la console Adobe I/O. Accédez à la [page Intégrations](https://console.adobe.io/integrations) dans la console I/O. Sélectionnez lʼorganisation adéquate dans la liste déroulante puis recherchez lʼintégration appropriée et cliquez sur **[!UICONTROL Afficher]**.
+Le téléchargeur ne vous demande de saisir que quelques informations. Les `clientId` et `clientSecret` peuvent être récupérés à partir de la console Adobe I/O. Accédez à la [page Intégrations](https://console.adobe.io/integrations) dans la console I/O. Sélectionnez lʼorganisation adéquate dans la liste déroulante puis recherchez lʼintégration appropriée et cliquez sur **[!UICONTROL Afficher]**.
 
-- Qu’est-ce que votre `clientId` ? Copiez et collez-le à partir de la console I/O.
-- Qu’est-ce que votre `clientSecret` ? Copiez et collez-le à partir de la console I/O.
+- Quel est votre `clientId` ? Copiez et collez-le à partir de la console I/O.
+- Quel est votre `clientSecret` ? Copiez et collez-le à partir de la console I/O.
 - Si vous appelez le téléchargeur depuis le répertoire contenant votre package .zip, vous pouvez simplement le sélectionner dans la liste au lieu de saisir le chemin d’accès.
 
 Votre package d’extension sera ensuite téléchargé et le téléchargeur vous donnera l’ID du package d’extension.
 
 >[!NOTE]
 >
->Pendant le téléchargement ou l’application de correctifs, les packages d’extension sont placés en attente tandis que le système extrait le module et le déploie de manière asynchrone. Pendant ce processus, vous pouvez interroger l’ID `extension_package` pour connaître son état à l’aide de l’API et dans l’interface utilisateur. Une carte d’extension apparaît dans le catalogue portant la mention En attente.
+>Pendant le téléchargement ou l’application de correctifs, les packages d’extension sont placés en attente tandis que le système extrait le module et le déploie de manière asynchrone. Pendant ce processus, vous pouvez interroger l’ID de `extension_package` pour connaître son statut à l’aide de l’API et dans l’interface utilisateur. Une carte d’extension apparaît dans le catalogue portant la mention En attente.
 
 >[!NOTE]
 >
 >Si vous prévoyez d’exécuter fréquemment le téléchargeur, intégrer toutes ces informations à chaque fois peut s’avérer fastidieux. Vous pouvez également les transmettre sous forme d’arguments à partir de la ligne de commande. Pour plus d’informations, consultez la section [Arguments de ligne de commande](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments) des documents npm.
 
-Si vous souhaitez gérer le téléchargement de votre extension à l’aide de l’API directement, reportez-vous à l’exemple d’appels pour [créer](../../api/endpoints/extension-packages.md/#create) ou [mettre à jour](../../api/endpoints/extension-packages.md#update) un package d’extension dans la documentation de l’API pour plus de détails.
+Si vous souhaitez gérer le chargement direct de votre extension à l’aide de l’API, consultez les exemples d’appels pour [création](../../api/endpoints/extension-packages.md/#create) ou [mise à jour](../../api/endpoints/extension-packages.md#update) d’un package d’extension dans la documentation API pour plus d’informations.
 
 ## Créer une propriété de développement {#property}
 
-Après vous être connecté à l’interface utilisateur et avoir sélectionné **[!UICONTROL Balises]** dans le volet de navigation de gauche, l’écran [!UICONTROL Propriétés] s’affiche. Une propriété est un conteneur pour les balises que vous souhaitez déployer et elle peut être utilisée sur un ou plusieurs sites.
+Une fois que vous êtes connecté à l’interface utilisateur et que vous avez sélectionné **[!UICONTROL Balises]** dans le volet de navigation de gauche, l’écran [!UICONTROL Propriétés] s’affiche. Une propriété est un conteneur pour les balises que vous souhaitez déployer et elle peut être utilisée sur un ou plusieurs sites.
 
 ![](../images/getting-started/properties-screen.png)
 
@@ -114,9 +114,9 @@ Pour ajouter votre extension, sélectionnez l’onglet **Catalogue**.
 
 ![](../images/getting-started/catalog.png)
 
-Celui-ci affiche les icônes de carte pour chaque extension disponible. Si votre extension ne s’affiche pas dans le catalogue, assurez-vous d’avoir complété les étapes ci-dessus dans les sections Configuration de la console d’administration Adobe et Création de votre package d’extension. Votre package d’extension peut également apparaître comme En attente si Platform n’a pas terminé le traitement initial.
+Celui-ci affiche les icônes de carte pour chaque extension disponible. Si votre extension ne s’affiche pas dans le catalogue, assurez-vous d’avoir complété les étapes ci-dessus dans les sections Configuration de la console d’administration Adobe et Création de votre package d’extension. Votre package d’extension peut également apparaître comme En attente si Experience Platform n’a pas terminé le traitement initial.
 
-Si vous avez suivi les étapes précédentes et que vous ne voyez toujours pas de package d’extension En attente ou Échec dans le catalogue, vous devez vérifier le statut de votre package d’extension directement à l’aide de l’API. Pour plus d’informations sur la manière d’effectuer l’appel API approprié, consultez la section [Récupérer un package d’extension](../../api/endpoints/extension-packages.md#lookup) dans la documentation de l’API.
+Si vous avez suivi les étapes précédentes et que vous ne voyez toujours pas de package d’extension En attente ou en Échec dans le catalogue, vous devez vérifier le statut de votre package d’extension directement à l’aide de l’API. Pour plus d’informations sur la manière d’effectuer l’appel API approprié, consultez la section [Récupérer un package d’extension](../../api/endpoints/extension-packages.md#lookup) dans la documentation de l’API.
 
 Une fois le traitement de votre package d’extension terminé, sélectionnez **Installer** au bas de la carte.
 
@@ -146,7 +146,7 @@ Si nécessaire, les extensions peuvent définir des types d’éléments de donn
 
 Lorsqu’un utilisateur sélectionne votre extension dans la liste déroulante **Extension**, la liste déroulante **Type d’élément de données** est renseignée avec tous les types d’élément de données fournis par votre extension. L’utilisateur peut ensuite mapper chaque élément de données à sa valeur source. Les éléments de données peuvent ensuite être utilisés lors de la création de règles dans l’Événement de modification des éléments de données ou l’Événement de code personnalisé pour déclencher l’exécution d’une règle. Un élément de données peut également être utilisé dans la condition de l’élément de données ou dans d’autres conditions, exceptions ou actions d’une règle.
 
-Une fois l’élément de données créé (le mappage est configuré), les utilisateurs peuvent référencer les données sources simplement en référençant l’élément de données. Si la source de la valeur change un jour (modification de la conception du site, etc.) Les utilisateurs n’ont besoin de mettre à jour le mappage qu’une seule fois dans l’interface utilisateur. Tous les éléments de données recevront automatiquement la nouvelle valeur source.
+Une fois l’élément de données créé (le mappage est configuré), les utilisateurs peuvent référencer les données sources simplement en référençant l’élément de données. Si la source de la valeur venait à changer (reconceptions de site, etc.), les utilisateurs n’auraient qu’à mettre à jour le mappage une seule fois dans l’interface utilisateur et tous les éléments de données recevraient automatiquement la nouvelle valeur source.
 
 ### Règles
 
@@ -230,6 +230,6 @@ Lorsque vous découvrez des modifications à apporter à votre package d’exten
    >
    >Les arguments peuvent être transmis sur la ligne de commande afin de gagner du temps et éviter ainsi la saisie répétée des informations d’identification. Pour plus d’informations à ce sujet, consultez la [documentation de reactor-uploader](https://www.npmjs.com/package/@adobe/reactor-uploader).
 1. L’étape d’installation peut être ignorée lors de la mise à jour d’un package existant.
-1. Modifier des ressources : si la configuration de l’un de vos composants d’extension a été modifiée, vous devrez mettre à jour ces ressources dans l’interface utilisateur.
+1. Modifier des ressources - si la configuration de l’un de vos composants d’extension a été modifiée, vous devez mettre à jour ces ressources dans l’interface utilisateur.
 1. Ajoutez vos dernières modifications à votre bibliothèque et effectuez une nouvelle génération.
 1. Effectuez une autre série de tests.

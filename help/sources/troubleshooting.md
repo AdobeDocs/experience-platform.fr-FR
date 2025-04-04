@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Dépannage des sources
 description: Ce document répond aux questions fréquentes sur les sources sur Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-source-git-commit: 583eb70235174825dd542b95463784638bdef235
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '748'
-ht-degree: 100%
+source-wordcount: '749'
+ht-degree: 97%
 
 ---
 
 # Guide de dépannage des sources
 
-Ce document répond aux questions fréquentes sur les sources sur Adobe Experience Platform. Pour toute question ou dépannage concernant d’autres services [!DNL Platform], y compris ceux rencontrés sur toutes les API [!DNL Platform], consultez le [guide de dépannage d’Experience Platform](../landing/troubleshooting.md).
+Ce document répond aux questions fréquentes sur les sources sur Adobe Experience Platform. Pour toute question ou dépannage concernant d’autres services [!DNL Experience Platform], y compris ceux rencontrés sur toutes les API [!DNL Experience Platform], consultez le [guide de dépannage d’Experience Platform](../landing/troubleshooting.md).
 
 ## Questions fréquentes
 
@@ -67,7 +67,7 @@ Toutes les sources d’ingestion par lot prennent en charge l’ingestion partie
 
 ### Quand dois-je utiliser l’ingestion partielle ?
 
-L’ingestion partielle doit être utilisée si vous n’avez **pas** de contraintes, telles que l’ingestion de l’intégralité du fichier dans Platform. Vous pouvez également utiliser l’ingestion partielle si vous n’avez pas d’objection à ingérer des données susceptibles de contenir des erreurs.
+L’ingestion partielle doit être utilisée si vous n’avez **de contraintes** telles que l’ingestion de l’intégralité du fichier dans Experience Platform. Vous pouvez également utiliser l’ingestion partielle si vous n’avez pas d’objection à ingérer des données susceptibles de contenir des erreurs.
 
 ### Quel est le seuil d’erreur d’ingestion partielle type ?
 

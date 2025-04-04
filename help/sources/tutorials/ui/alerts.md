@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques populaires; alertes
 description: Vous pouvez vous abonner à des alertes lors de la création d’un flux de données pour recevoir des messages d’alerte concernant le statut, le succès ou l’échec de l’exécution de votre flux de données.
 title: Abonnement aux alertes contextuelles dans l’interface utilisateur
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 0165aa60ca865c6d1cf269b16068dffa9349214c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '825'
 ht-degree: 18%
 
 ---
@@ -22,9 +22,9 @@ Ce document décrit la procédure à suivre pour s’abonner et recevoir des mes
 
 Ce document nécessite une compréhension du fonctionnement des composants suivants de Adobe Experience Platform :
 
-* [Sources ](../../home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
-* [Observability](../../../observability/home.md) : [!DNL Observability Insights] permet de surveiller les activités de Platform à l’aide de mesures statistiques et de notifications d’événement.
-   * [Alertes](../../../observability/alerts/overview.md) : lorsqu’un certain ensemble de conditions de vos opérations Platform est atteint (par exemple, un problème potentiel lorsque le système dépasse un seuil), Platform peut envoyer des messages d’alerte à tous les utilisateurs de votre organisation qui se sont abonnés à ces messages.
+* [Sources ](../../home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
+* [Observability](../../../observability/home.md) : [!DNL Observability Insights] permet de surveiller les activités d’Experience Platform à l’aide de mesures statistiques et de notifications d’événement.
+   * [Alertes](../../../observability/alerts/overview.md) : lorsqu’un certain ensemble de conditions de vos opérations Experience Platform est atteint (par exemple, un problème potentiel lorsque le système dépasse un certain seuil), Experience Platform peut envoyer des messages d’alerte à tous les utilisateurs de votre organisation qui se sont abonnés à ces messages.
 
 ## S’abonner aux alertes dans l’interface utilisateur {#subscribe-sources-alerts}
 
@@ -36,7 +36,7 @@ Ce document nécessite une compréhension du fonctionnement des composants suiva
 
 >[!IMPORTANT]
 >
->Vous devez activer les notifications instantanées d’e-mails pour votre compte Platform afin de recevoir des notifications d’alerte par e-mail pour vos flux de données.
+>Vous devez activer les notifications instantanées d’e-mails pour votre compte Experience Platform afin de recevoir des notifications d’alerte par e-mail pour vos flux de données.
 
 Vous pouvez activer les alertes pour vos flux de données lors de l’étape [!UICONTROL Détails du flux de données] du workflow des sources dans l’espace de travail des sources.
 
@@ -51,7 +51,7 @@ Les alertes disponibles pour les flux de données sources sont les suivantes :
 | Alertes | Description |
 | --- | --- |
 | Début d’exécution du flux de sources | Cette alerte vous envoie un message lorsque votre flux de données source a démarré. |
-| Succès de l’exécution du flux de sources | Cette alerte vous envoie un message lorsque les données de votre source sont correctement ingérées par Platform. |
+| Succès de l’exécution du flux de sources | Cette alerte vous envoie un message lorsque les données de votre source sont correctement ingérées par Experience Platform. |
 | Échec de l’exécution du flux des sources | Cette alerte vous envoie un message si une erreur se produit dans votre flux de données. |
 
 Sélectionnez les alertes auxquelles vous souhaitez vous abonner, puis cliquez sur **[!UICONTROL Suivant]** pour vérifier et terminer votre flux de données.
@@ -76,7 +76,7 @@ Une fois votre flux de données exécuté, vous pouvez recevoir des alertes par 
 
 ### Dans l’interface utilisateur
 
-Les alertes sont représentées dans l’interface utilisateur par une icône de notification dans l’en-tête supérieur de l’interface utilisateur de Platform. Sélectionnez l’icône de notification pour afficher des messages d’alerte spécifiques concernant vos flux de données.
+Les alertes sont représentées dans l’interface utilisateur par une icône de notification dans l’en-tête supérieur de l’interface utilisateur d’Experience Platform. Sélectionnez l’icône de notification pour afficher des messages d’alerte spécifiques concernant vos flux de données.
 
 ![notification](../../images/tutorials/alerts/notification.png)
 

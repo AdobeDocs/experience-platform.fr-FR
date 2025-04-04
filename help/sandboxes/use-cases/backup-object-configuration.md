@@ -1,15 +1,15 @@
 ---
-title: Sauvegarde des configurations d’objet à l’aide de l’outil Sandbox
+title: Sauvegarder des configurations d’objet à l’aide des outils de sandbox
 description: Pour réinitialiser les sandbox en toute sécurité et ajouter la prise en charge des versions, sauvegardez les configurations d’objet (ou les métadonnées) à l’aide des packages d’outils de sandbox. Les packages de sauvegarde empêchent la perte de configurations critiques telles que les schémas, les jeux de données et les audiences, en particulier pendant les itérations de développement.
 exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
-source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1166'
-ht-degree: 3%
+source-wordcount: '1167'
+ht-degree: 4%
 
 ---
 
-# Sauvegarde des configurations d’objet à l’aide de l’outil Sandbox
+# Sauvegarder des configurations d’objet à l’aide des outils de sandbox
 
 Pour réinitialiser les sandbox en toute sécurité et ajouter la prise en charge des versions, sauvegardez les configurations d’objet (ou les métadonnées) à l’aide des packages d’outils de sandbox. Les packages de sauvegarde empêchent la perte de configurations critiques telles que les schémas, les jeux de données et les audiences, en particulier pendant les itérations de développement.
 
@@ -30,7 +30,7 @@ Lorsque vous envisagez de créer votre propre package de sauvegarde au sein de v
 - Selon la portée des métadonnées que vous souhaitez sauvegarder, assurez-vous de comprendre comment [ajouter manuellement des objets à un package](../ui/sandbox-tooling.md#add-object-to-a-new-package) ou [exporter un sandbox entier](../ui/sandbox-tooling.md#export-an-entire-sandbox).
 - Vérifiez que vous avez accès aux outils Sandbox dans votre organisation avec les autorisations appropriées.
 
-### Fonctionnalités de l’interface utilisateur, composants Platform et produits Experience Cloud que vous allez utiliser {#ui-functionality-and-elements}
+### Fonctionnalités de l’interface utilisateur, composants Experience Platform et produits Experience Cloud que vous utiliserez {#ui-functionality-and-elements}
 
 Pour réussir l’implémentation de ce cas d’utilisation, vous devez utiliser plusieurs zones de Adobe Experience Platform. Vérifiez que vous disposez des autorisations de contrôle d’accès basé sur les attributs [ nécessaires](../../access-control/abac/overview.md) pour toutes ces zones, ou demandez à votre administrateur système de vous accorder les autorisations nécessaires.
 
@@ -125,4 +125,4 @@ Maintenant que vous avez réinitialisé votre sandbox, vous pouvez utiliser le p
 
 Explorez d’autres cas d’utilisation activés par le biais de l’outil sandbox :
 
-- [Activer un centre d’excellence à l’aide de l’outil Sandbox](./center-of-excellence.md)
+- [Activer un centre d’excellence à l’aide des outils de sandbox](./center-of-excellence.md)

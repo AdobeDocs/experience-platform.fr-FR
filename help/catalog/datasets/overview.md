@@ -3,12 +3,12 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;emplacement
 solution: Experience Platform
 title: Présentation des jeux de données
 description: Ce document présente de manière générale les jeux de données dans Experience Platform.
-user-guide-description: Consultez ce guide pour obtenir un aperçu général des jeux de données en Experience Platform. Découvrez ici comment les créer, imposer des contraintes aux données et ingérer des données dans des jeux de données.
+user-guide-description: Obtenez un aperçu général des jeux de données dans Experience Platform avec ce guide. Découvrez comment les créer, appliquer des contraintes aux données et ingérer des données dans des jeux de données ici.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '871'
-ht-degree: 89%
+source-wordcount: '872'
+ht-degree: 86%
 
 ---
 
@@ -26,7 +26,7 @@ Pour plus d’informations, consultez la [présentation du service de catalogue]
 
 ## Application de contraintes aix données des jeux de données
 
-[!DNL Experience Data Model] (XDM) constitue le cadre normalisé à partir duquel [!DNL Platform] organise les données d’expérience client. Toutes les données ingérées par [!DNL Platform] doivent être conformes à un schéma XDM prédéfini avant de pouvoir être conservées sous la forme d’un jeu de données dans le [!DNL Data Lake].
+[!DNL Experience Data Model] (XDM) constitue le cadre normalisé à partir duquel [!DNL Experience Platform] organise les données d’expérience client. Toutes les données ingérées par [!DNL Experience Platform] doivent être conformes à un schéma XDM prédéfini avant de pouvoir être conservées sous la forme d’un jeu de données dans le [!DNL Data Lake].
 
 Tous les jeux de données contiennent une référence au schéma XDM qui limite le format et la structure des données qui peuvent être stockées. Toute tentative de chargement de données vers un jeu de données non conforme à son schéma XDM entraînera l’échec de l’ingestion.
 
@@ -34,26 +34,26 @@ Pour plus d’informations sur XDM, consultez la [présentation du système XDM]
 
 ## Ingestion de données par les jeux de données
 
-Adobe Experience Platform Data Ingestion représente les différentes méthodes par lesquelles [!DNL Platform] ingère les données de diverses sources. Quelle que soit la méthode d’ingestion, toutes les données ingérées sont converties en fichiers de lot. Les lots sont des unités de données composées d’un ou de plusieurs fichiers à ingérer en tant qu’unité unique. Ces fichiers de lot sont ensuite ajoutés aux jeux de données dédiés et conservés dans le [!DNL Data Lake].
+Adobe Experience Platform Data Ingestion représente les différentes méthodes par lesquelles [!DNL Experience Platform] ingère les données de diverses sources. Quelle que soit la méthode d’ingestion, toutes les données ingérées sont converties en fichiers de lot. Les lots sont des unités de données composées d’un ou de plusieurs fichiers à ingérer en tant qu’unité unique. Ces fichiers de lot sont ensuite ajoutés aux jeux de données dédiés et conservés dans le [!DNL Data Lake].
 
 Pour plus d’informations, consultez la [présentation de Data Ingestion](../../ingestion/home.md).
 
-## Étiquettes appliquées aux jeux de données des schémas
+## Libellés appliqués aux jeux de données à partir des schémas
 
-La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Le cadre de gouvernance des données vous permet d’appliquer des libellés d’utilisation pour classer les données en fonction des stratégies d’utilisation qui s’appliquent à ces données. Les libellés peuvent être appliqués à des schémas individuels, à des champs de ces schémas et à des jeux de données individuels entiers. Lorsque des libellés sont appliqués directement à un schéma, ces libellés sont propagés à tous les jeux de données existants et futurs basés sur ce schéma.
+La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Le cadre de gouvernance des données vous permet d’appliquer des libellés d’utilisation pour classer les données en fonction des politiques d’utilisation qui s’appliquent à ces données. Les libellés peuvent être appliqués à des schémas individuels, aux champs de ces schémas et à des jeux de données individuels entiers. Lorsque des libellés sont appliqués directement à un schéma, ils sont propagés à tous les jeux de données existants et futurs basés sur ce schéma.
 
 >[!IMPORTANT]
 >
->Les libellés ne peuvent plus être appliqués aux champs au niveau du jeu de données. Ce workflow a été abandonné au profit de l’application des libellés au niveau du schéma. Les libellés précédemment appliqués au niveau de l’objet du jeu de données seront toujours pris en charge par l’interface utilisateur de Platform jusqu’au 31 mai 2024. Pour garantir la cohérence de vos libellés sur tous les schémas, les libellés précédemment attachés aux champs au niveau du jeu de données doivent être migrés au niveau du schéma par vous-même au cours de l’année à venir. Consultez la section sur la [migration des libellés précédemment appliqués](../../data-governance/e2e.md#migrate-labels) pour connaitre la procédure à suivre.
+>Les libellés ne peuvent plus être appliqués aux champs au niveau du jeu de données. Ce workflow a été abandonné au profit de l’application des libellés au niveau du schéma. Les libellés précédemment appliqués au niveau de l’objet du jeu de données seront toujours pris en charge par l’interface utilisateur d’Experience Platform jusqu’au 31 mai 2024. Pour garantir la cohérence de vos libellés sur tous les schémas, les libellés précédemment attachés aux champs au niveau du jeu de données doivent être migrés au niveau du schéma par vous-même au cours de l’année à venir. Consultez la section sur la [migration des libellés précédemment appliqués](../../data-governance/e2e.md#migrate-labels) pour connaitre la procédure à suivre.
 
-Pour plus d’informations sur ce service, consultez la [présentation de la gouvernance des données](../../data-governance/home.md). Pour savoir comment utiliser les étiquettes d’utilisation dans [!DNL Platform], reportez-vous aux guides suivants :
+Pour plus d’informations sur ce service, consultez la [présentation de la gouvernance des données](../../data-governance/home.md). Pour savoir comment utiliser les étiquettes d’utilisation dans [!DNL Experience Platform], reportez-vous aux guides suivants :
 
 * [Gérer les libellés dans l’interface utilisateur](../../data-governance/labels/user-guide.md)
 * [Gérer les étiquettes de jeux de données dans l’API](../../data-governance/labels/dataset-api.md)
 
-## Jeux de données dans les services [!DNL Platform] en aval
+## Jeux de données dans les services [!DNL Experience Platform] en aval
 
-Une fois que les jeux de données ont été utilisés pour stocker les données ingérées, ils sont utilisés par les services [!DNL Platform] en aval pour mettre à jour les profils clients, obtenir des informations grâce au machine learning, etc.
+Une fois que les jeux de données ont été utilisés pour stocker les données ingérées, ils sont utilisés par les services [!DNL Experience Platform] en aval pour mettre à jour les profils clients, obtenir des informations grâce au machine learning, etc.
 
 Voici une liste des services en aval qui utilisent des jeux de données pour diverses opérations. Veuillez consulter la documentation de chaque service pour en savoir plus.
 
@@ -67,6 +67,6 @@ Voici une liste des services en aval qui utilisent des jeux de données pour div
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez découvert les principales utilisations des jeux de données dans [!DNL Experience Platform], ainsi que les différents services de [!DNL Platform] qui utilisent les jeux de données. Pour plus d’informations sur les nombreuses façons dont les jeux de données sont utilisés dans [!DNL Platform], consultez les liens vers la documentation des services.
+En lisant ce document, vous avez découvert les principales utilisations des jeux de données dans [!DNL Experience Platform], ainsi que les différents services de [!DNL Experience Platform] qui utilisent les jeux de données. Pour plus d’informations sur les nombreuses façons dont les jeux de données sont utilisés dans [!DNL Experience Platform], consultez les liens vers la documentation des services.
 
 Pour savoir comment interagir avec les jeux de données dans l’interface utilisateur de [!DNL Experience Platform], consultez le [guide d’utilisation des jeux de données](user-guide.md).

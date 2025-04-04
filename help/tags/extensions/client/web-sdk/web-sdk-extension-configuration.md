@@ -2,9 +2,9 @@
 title: Configuration de l’extension de balise Web SDK
 description: Découvrez comment configurer l’extension de balise Experience Platform Web SDK dans l’interface utilisateur des balises.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: d267e816f42d1e0a751b188065f5164a5e2b6be9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2874'
+source-wordcount: '2875'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 L’extension de balise [!DNL Web SDK] envoie des données à Adobe Experience Cloud à partir des propriétés web via Experience Platform Edge Network.
 
-L’extension vous permet de diffuser des données dans Platform, de synchroniser les identités, de traiter les signaux de consentement des clients et de collecter automatiquement des données contextuelles.
+L’extension vous permet de diffuser des données dans Experience Platform, de synchroniser les identités, de traiter les signaux de consentement des clients et de collecter automatiquement des données contextuelles.
 
 Ce document explique comment configurer l’extension de balise dans l’interface utilisateur des balises.
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Prise en main du machine learning en temps réel
 description: Le document suivant décrit les étapes requises pour créer un modèle de machine learning en temps réel dans Adobe Experience Platform.
 exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '461'
-ht-degree: 89%
+source-wordcount: '462'
+ht-degree: 83%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->Le Workspace Data Science n’est plus disponible à l’achat.
+>Le Workspace de science des données ne peut plus être acheté.
 >
->Cette documentation est destinée aux clients existants disposant de droits préalables à la Workspace Data Science.
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
 >[!IMPORTANT]
 >
@@ -31,12 +31,12 @@ Les guides sur le machine learning en temps réel nécessitent une compréhensio
 
 - **DSL :** langue spécifique au domaine.
 - **Edge :** le service de notation du machine learning en temps réel peut être exécuté sur des grappes Edge plus proches de vos activations et applications.
-- **Hub :** l’alpha actuel exécute le service de notation de l’apprentissage automatique en temps réel sur le hub Adobe Experience Platform pendant le développement du réseau Edge.
+- **Hub :** la version alpha actuelle exécute le service de notation du machine learning en temps réel sur le hub Adobe Experience Platform pendant que l’Edge Network est en cours de développement.
 - **Nœud :** un nœud est l’unité fondamentale à partir de laquelle des graphiques sont formés. Chaque nœud effectue une tâche spécifique et ces nœuds peuvent être liés ensemble à l’aide de liens afin de former un graphique représentant un pipeline ML. La tâche effectuée par un nœud représente une opération sur les données d’entrée, telle qu’une transformation des données ou un schéma, ou une inférence de machine learning. Le nœud sort la valeur transformée ou déduite pour le ou les nœuds suivants.
 
 ## Jeux de données dans Adobe Experience Platform
 
-Pour commencer à utiliser le machine learning en temps réel, vous devez avoir accès à un jeu de données. Vous avez la possibilité d’utiliser un jeu de données externe et de le charger dans votre environnement [!DNL JupyterLab] ou de créer un jeu de données dans Platform si vous ne l’avez pas déjà fait.
+Pour commencer à utiliser le machine learning en temps réel, vous devez avoir accès à un jeu de données. Vous avez la possibilité d’utiliser un jeu de données externe et de le charger dans votre environnement [!DNL JupyterLab] ou de créer un jeu de données dans Experience Platform si vous ne l’avez pas déjà fait.
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ Pour en savoir plus sur l’utilisation d’un jeu de données externe, tel que 
 
 ### Créer un nouveau jeu de données
 
-Pour créer un jeu de données à utiliser dans le machine learning en temps réel, vous avez besoin d’un schéma de données pour votre jeu de données. Ensuite, vous devez ingérer des données à l’aide du schéma que vous avez créé. Utilisez les tutoriels suivants pour créer et renseigner un jeu de données pour [!DNL Platform] :
+Pour créer un jeu de données à utiliser dans le machine learning en temps réel, vous avez besoin d’un schéma de données pour votre jeu de données. Ensuite, vous devez ingérer des données à l’aide du schéma que vous avez créé. Utilisez les tutoriels suivants pour créer et renseigner un jeu de données pour [!DNL Experience Platform] :
 
 - [Créer et renseigner un jeu de données dans l’API](../../catalog/datasets/create.md)
 - [Créer et renseigner un jeu de données dans l’interface utilisateur](../../ingestion/tutorials/ingest-batch-data.md)

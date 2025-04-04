@@ -1,12 +1,12 @@
 ---
 title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
-keywords: SDK web Adobe Experience Platform;SDK web Platform;SDK web;notes de mise à jour;
+keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2285'
-ht-degree: 72%
+source-wordcount: '2288'
+ht-degree: 70%
 
 ---
 
@@ -294,7 +294,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 - La commande [`getIdentity`](/help/web-sdk/commands/getidentity.md) renvoie désormais l’identifiant de zone géographique Edge ainsi que l’identité.
 - Amélioration et gestion plus efficace des avertissements et des erreurs reçus du serveur.
 - Ajout de la prise en charge de la norme de consentement 2.0 d’Adobe pour la commande [`setConsent`](/help/web-sdk/commands/setconsent.md).
-- Une fois reçues, les préférences de consentement sont hachées et stockées dans un espace de stockage local afin d’optimiser l’intégration entre les CMP, le SDK web de Platform et le Platform Edge Network. Si vous collectez des préférences de consentement, nous vous recommandons d’appeler `setConsent` à chaque chargement de page.
+- Une fois reçues, les préférences de consentement sont hachées et stockées dans un espace de stockage local afin d’optimiser l’intégration entre les CMP, Experience Platform Web SDK et Experience Platform Edge Network. Si vous collectez des préférences de consentement, nous vous recommandons d’appeler `setConsent` à chaque chargement de page.
 - Ajout des deux [hooks de surveillance](https://github.com/adobe/alloy/wiki/Monitoring-Hooks) suivants : `onCommandResolved` et `onCommandRejected`.
 - Correction de bug : les événements de notification d’interaction de personnalisation contenaient des informations en double sur la même activité lorsqu’un utilisateur ou une utilisatrice accédait à une nouvelle vue d’application monopage, revenait à la vue d’origine, puis cliquait sur un élément éligible à la conversion.
 - Correction de bug : si le paramètre `documentUnloading` du premier événement envoyé par le SDK était défini sur `true`, l’utilisation de [`sendBeacon`](https://developer.mozilla.org/fr-FR/docs/Web/API/Navigator/sendBeacon) pour envoyer l’événement entraînait une erreur, car l’identité n’était pas connue.

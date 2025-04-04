@@ -1,10 +1,11 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Septembre 2024
 description: Les notes de mise à jour de septembre 2024 pour Adobe Experience Platform.
-source-git-commit: eac613434f631cab567ab3fa6e30d33acac79d2f
+exl-id: e5b40712-2a54-4c6f-a4a1-2f078305da59
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2199'
-ht-degree: 100%
+source-wordcount: '2202'
+ht-degree: 97%
 
 ---
 
@@ -26,7 +27,7 @@ Mises à jour des fonctionnalités et de la documentation existantes dans Adobe 
 
 ## Alertes {#alerts}
 
-Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités de Platform. Vous pouvez vous abonner à différentes règles d’alerte à l’aide de l’onglet [!UICONTROL Alertes] dans l’interface utilisateur de Platform. Vous pouvez aussi choisir de recevoir les messages d’alerte dans l’interface utilisateur elle-même ou par le biais de notifications par e-mail.
+Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte par le biais de l’onglet [!UICONTROL Alertes] de l’interface utilisateur d’Experience Platform et choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par le biais de notifications par e-mail.
 
 **Fonctionnalités nouvelles ou mises à jour**
 
@@ -49,7 +50,7 @@ Experience Platform propose de nombreux tableaux de bord qui vous permettent d�
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Tableau des modules complémentaires d’utilisation des licences | Obtenez une visibilité granulaire sur l’utilisation des licences et gérez vos ressources Platform avec des tableaux dédiés pour les produits principaux et les modules complémentaires. Effectuez le suivi et l’analyse des mesures clés de chaque produit principal avec des vues d’analyse au niveau du sandbox. Les mesures de module complémentaire s’intègrent parfaitement aux mesures de produits principaux, offrant une vue complète de l’utilisation. Une meilleure visibilité vous permet d’optimiser la gestion des licences et d’aligner les ressources sur les besoins de l’entreprise. Pour plus d’informations, voir le [[!UICONTROL guide du tableau de bord Utilisation des licences].](../../dashboards/guides/license-usage.md#overview-tab) |
+| Tableau des modules complémentaires d’utilisation des licences | Bénéficiez d’une visibilité granulaire sur l’utilisation des licences et gérez vos ressources Experience Platform à l’aide de tableaux dédiés pour les produits principaux et les modules complémentaires. Effectuez le suivi et l’analyse des mesures clés de chaque produit principal avec des vues d’analyse au niveau du sandbox. Les mesures de module complémentaire s’intègrent parfaitement aux mesures de produits principaux, offrant une vue complète de l’utilisation. Une meilleure visibilité vous permet d’optimiser la gestion des licences et d’aligner les ressources sur les besoins de l’entreprise. Pour plus d’informations, voir le [[!UICONTROL guide du tableau de bord Utilisation des licences].](../../dashboards/guides/license-usage.md#overview-tab) |
 | Mode de requête pro - Mises à niveau des filtres globaux | Améliorez les analyses avec le nouveau filtre de date du mode de requête pro. Affinez les informations à l’aide de paramètres de date dynamiques dans vos requêtes SQL et filtrez les données par périodes spécifiques. Choisissez des périodes prédéfinies ou personnalisées dans une interface d’utilisation intuitive, en conservant les tableaux de bord pertinents pour tous les utilisateurs et toutes les utilisatrices. Simplifiez les workflows, conservez la précision et prenez des décisions opportunes. Pour plus d’informations, consultez le [guide sur la création de filtres de date](../../dashboards/sql-insights-query-pro-mode/filters/global-filter.md). |
 | Mode de requête pro - Explorations | Obtenez des informations plus précises avec la fonctionnalité d’exploration du mode de requête pro et naviguez facilement entre les graphiques généraux et les tableaux de bord détaillés. Utilisez cette fonctionnalité pour passer facilement des résumés aux analyses approfondies et explorer les tendances, les comportements de la clientèle et les KPI. Les passages de filtres automatiques et les explorations à plusieurs niveaux garantissent des données homogènes, assurant une exploration fluide. Simplifiez les workflows, conservez le contexte et accélérez les décisions. Pour plus d’informations, lisez le [guide détaillé sur la création d’explorations](../../dashboards/sql-insights-query-pro-mode/drill-through.md). |
 | Mode de requête pro - Attributs de table avancés | Utilisez les attributs de table avancés du mode de requête pro pour rationaliser la visualisation des données, améliorer l’efficacité des workflows et améliorer la clarté des données. Ajoutez un tri, un redimensionnement et une pagination automatiques à vos tableaux de bord directement depuis les tableaux de bord personnalisés. Triez les colonnes afin de hiérarchiser les données clés, redimensionnez-les pour une lisibilité optimale et parcourez facilement les jeux de données volumineux sans modifier les requêtes SQL. Pour découvrir comment intégrer ces fonctionnalités et améliorer vos informations sur les données, lisez le guide « [Afficher plus](../../dashboards/sql-insights-query-pro-mode/view-more.md) ». |
@@ -150,7 +151,7 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 
 Pour en savoir plus sur Query Service, consultez la [vue d’ensemble de Query Service](../../query-service/home.md).
 
-## Segmentation Service {#segmentation-service}
+## Service de segmentation {#segmentation-service}
 
 [!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
 

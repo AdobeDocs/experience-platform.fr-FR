@@ -3,9 +3,9 @@ title: Connexion CRM The Trade Desk
 description: Activez les profils sur votre compte Trade Desk pour le ciblage et la suppression d'audiences en fonction des données CRM.
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: a189a86749996c0ee7b6146bcd030d8495745e12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1122'
 ht-degree: 17%
 
 ---
@@ -95,9 +95,9 @@ Avant de pouvoir envoyer ou activer des données d’audience vers une destinati
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
 * **[!UICONTROL ID publicitaire]** : votre [!DNL Trade Desk Advertiser ID], qui peut être partagé par votre gestionnaire de compte [!DNL Trade Desk] ou qui se trouve sous [!DNL Advertiser Preferences] dans l’interface utilisateur de [!DNL Trade Desk].
 
-![Capture d’écran de l’interface utilisateur de Platform montrant comment remplir les détails de destination.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform montrant comment remplir les détails de destination.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
-Lors de la connexion à la destination , la définition d’une politique de gouvernance des données est complètement facultative. Veuillez consulter la [présentation de la gouvernance des données](/help/data-governance/policies/overview.md) Experience Platform pour plus d’informations.
+Lors de la connexion à la destination , la définition d’une politique de gouvernance des données est complètement facultative. Veuillez consulter la présentation de la gouvernance des données [Experience Platform](/help/data-governance/policies/overview.md) pour plus d’informations.
 
 ## Activer des audiences vers cette destination {#activate}
 
@@ -110,17 +110,17 @@ Lisez [Activer les données d’audience vers des destinations d’exportation d
 
 Sur la page **[!UICONTROL Planification]**, vous pouvez configurer le planning et les noms des fichiers pour chaque audience que vous exportez. La configuration du planning est obligatoire, mais la configuration du nom de fichier est facultative.
 
-![Capture d’écran de l’interface utilisateur de Platform pour planifier l’activation de l’audience.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform pour planifier l’activation de l’audience.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE]
 >
 >Toutes les audiences activées vers [!DNL The Trade Desk] destination CRM sont automatiquement définies sur une fréquence quotidienne et une exportation de fichiers complets.
 
-![Capture d’écran de l’interface utilisateur de Platform pour planifier l’activation de l’audience.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform pour planifier l’activation de l’audience.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
 Sur la page **[!UICONTROL Mappage]**, vous devez sélectionner des attributs ou des espaces de noms d’identité dans la colonne source et les mapper à la colonne cible.
 
-![Capture d’écran de l’interface utilisateur de Platform pour mapper l’activation des audiences.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform pour mapper l’activation des audiences.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
 Vous trouverez ci-dessous un exemple de mappage d’identité correct lors de l’activation d’audiences vers [!DNL The Trade Desk] destination CRM.
 
@@ -131,7 +131,7 @@ Vous trouverez ci-dessous un exemple de mappage d’identité correct lors de l�
 Sélection des champs sources :
 
 * Sélectionnez l’espace de noms ou l’attribut `Email` comme identité source si vous utilisez l’adresse e-mail brute lors de l’ingestion des données.
-* Sélectionnez l’espace de noms ou l’attribut `Email_LC_SHA256` comme identité source si vous avez haché les adresses e-mail des clients lors de l’ingestion des données dans Platform.
+* Sélectionnez l’espace de noms ou l’attribut `Email_LC_SHA256` comme identité source si vous avez haché les adresses e-mail des clients lors de l’ingestion des données dans Experience Platform.
 
 Sélection des champs cibles :
 
@@ -140,12 +140,12 @@ Sélection des champs cibles :
 
 ## Valider l’exportation des données {#validate}
 
-Pour vérifier que les données sont correctement exportées depuis Experience Platform vers [!DNL The Trade Desk], recherchez les audiences sous la mosaïque de données Adobe 1PD dans [!DNL The Trade Desk] Data Management Platform (DMP). Pour trouver l’identifiant correspondant dans l’interface utilisateur de [!DNL Trade Desk], procédez comme suit :
+Pour vérifier que les données sont correctement exportées hors d’Experience Platform et vers [!DNL The Trade Desk], recherchez les audiences sous la mosaïque de données Adobe 1PD dans [!DNL The Trade Desk] Data Management Platform (DMP). Pour trouver l’identifiant correspondant dans l’interface utilisateur de [!DNL Trade Desk], procédez comme suit :
 
 1. Sélectionnez tout d’abord l’onglet **[!UICONTROL Données]**, puis passez en revue la section **[!UICONTROL Propriétaire]**.
-2. Faites défiler la page vers le bas, sous **[!UICONTROL Données importées]**, vous trouverez la mosaïque **[!UICONTROL Adobe 1PD]**.
+2. Faites défiler la page vers le bas, sous **[!UICONTROL Données importées]**, vous trouverez la **[!UICONTROL vignette Adobe 1PD]**.
 3. Cliquez sur la mosaïque **[!UICONTROL Adobe 1PD]** pour répertorier toutes les audiences activées vers la destination [!DNL Trade Desk] pour votre annonceur. Vous pouvez également utiliser la fonction de recherche.
-4. L’identifiant de segment n° de l’Experience Platform s’affiche en tant que nom de segment dans l’interface utilisateur de [!DNL Trade Desk].
+4. L’identifiant de segment n° d’Experience Platform s’affiche en tant que nom de segment dans l’interface utilisateur de [!DNL Trade Desk].
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

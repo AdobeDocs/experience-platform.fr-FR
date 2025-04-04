@@ -1,17 +1,17 @@
 ---
-title: Prise en main de l’API des outils Sandbox
-description: Utilisez l’API de l’outil Sandbox pour examiner les artefacts, exporter et importer un instantané des configurations des environnements de test entre les environnements de test. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
+title: Prise en main de l’API d’outils Sandbox
+description: Utilisez l’API Sandbox tooling pour examiner les artefacts et exporter et importer un instantané des configurations de sandbox entre les sandbox. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 0b34d153-a603-4397-a375-9cc846efe23a
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 70%
+source-wordcount: '312'
+ht-degree: 63%
 
 ---
 
-# Prise en main de l’API des outils Sandbox {#getting-started}
+# Prise en main de l’API d’outils Sandbox {#getting-started}
 
-Ce guide de développement décrit les étapes à suivre pour vous aider à utiliser l’API des outils Sandbox pour gérer les modules et les outils dans Adobe Experience Platform. Il comprend des exemples d’appels API pour effectuer diverses opérations.
+Ce guide de développement décrit les étapes à suivre pour utiliser l’API d’outils Sandbox afin de gérer les packages et les outils dans Adobe Experience Platform. Il comprend des exemples d’appels API pour effectuer diverses opérations.
 
 ## Lecture d’exemples d’appels API {#api-calls}
 
@@ -19,7 +19,7 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 
 ## Collecte des valeurs des en-têtes requis {#headers}
 
-Ce guide nécessite que vous ayez suivi le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) afin d’effectuer des appels aux API de Platform avec succès. Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
+Ce guide nécessite que vous ayez suivi le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour passer avec succès des appels aux API Experience Platform. Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -37,7 +37,7 @@ Toutes les requêtes contenant un payload (POST, PUT et PATCH) requièrent un en
 
 Maintenant que vous avez collecté les informations d’identification requises, vous pouvez passer au reste du guide de développement. Chaque section fournit des informations importantes sur les points d’entrée et inclut des exemples d’appels API pour effectuer des opérations CRUD. Chaque appel comprend le format général de l’API, un exemple de requête montrant les en-têtes requis et les payloads correctement formatés, ainsi qu’un exemple de réponse pour un appel réussi.
 
-Consultez les tutoriels d’API suivants pour commencer à lancer des appels à l’API de l’outil de test :
+Consultez les tutoriels d’API suivants pour commencer à effectuer des appels à l’API d’outils Sandbox :
 
-* [Point de terminaison des packages](./packages.md)
-* [Point de terminaison des outils](./tools.md)
+* [Point d’entrée des packages](./packages.md)
+* [Point d’entrée des outils](./tools.md)

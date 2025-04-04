@@ -1,19 +1,19 @@
 ---
-title: Point de terminaison de l’API d’exportation des événements d’audit
-description: Découvrez comment exporter des événements de contrôle dans Experience Platform à l’aide de l’API de requête d’audit.
+title: Point d’entrée de l’API d’exportation des événements d’audit
+description: Découvrez comment exporter des événements d’audit dans Experience Platform à l’aide de l’API Audit Query.
 role: Developer
 feature: Audits, API
 exl-id: 76c5de76-e391-4258-afd8-ddb2c8a9443f
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '158'
+source-wordcount: '159'
 ht-degree: 4%
 
 ---
 
-# Exportation d’une liste d’événements de contrôle
+# Exporter une liste d’événements d’audit
 
-Vous pouvez récupérer les données d’événements en envoyant une requête de GET au point de terminaison `/audit/export`, en spécifiant les événements que vous souhaitez récupérer dans la payload.
+Vous pouvez récupérer les données d’événement en adressant une requête GET au point d’entrée `/audit/export`, en spécifiant les événements que vous souhaitez récupérer dans la payload.
 
 **Format d’API**
 
@@ -23,11 +23,11 @@ GET /audit/export
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `timestamp` | Lors du filtrage par horodatage, il est recommandé d’utiliser une plage à l’aide des opérateurs > et &lt; plutôt qu’une valeur exacte. <br/>Exemple : `?property=timestamp<2020-02-08T02:46:48.610862Z&property=timestamp>2020-01-01T02:46:48.610862Z`. |
-| `status` | État de l’action. Un état peut être l’un des suivants : </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul><br/>Exemple : `?property=status==Deny`. |
-| `action` | Type d’action enregistrée pour l’événement. Une action peut être l’une des suivantes : <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`Remove` </li><li>`Reset` </li><li>`Segment Activate` </li><li>`Segment remove` </li><li>`Update` </li></ul> Exemple : `?property=action==Create`. |
+| `timestamp` | Lors du filtrage par horodatage, il est recommandé d’utiliser une plage utilisant les opérateurs > et &lt; plutôt qu’une valeur exacte. <br/>Exemple : `?property=timestamp<2020-02-08T02:46:48.610862Z&property=timestamp>2020-01-01T02:46:48.610862Z`. |
+| `status` | Statut de l’action. Un statut peut être l’un des suivants : </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul><br/>Exemple : `?property=status==Deny`. |
+| `action` | Type d’action qui a été enregistré pour l’événement. Une action peut être l’une des suivantes : <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`Remove` </li><li>`Reset` </li><li>`Segment Activate` </li><li>`Segment remove` </li><li>`Update` </li></ul> Exemple : `?property=action==Create`. |
 | `user` | L’utilisateur qui a exécuté l’événement. |
-| `assetType` | Type de ressource Platform sur laquelle l’action a été effectuée. <br/>Exemple : `?property=assetType==<an asset type>`. |
+| `assetType` | Type de ressource Experience Platform sur laquelle l’action a été effectuée. <br/>Exemple : `?property=assetType==<an asset type>`. |
 
 **Requête**
 
@@ -43,4 +43,4 @@ curl -X POST \
 
 **Réponse**
 
-Les résultats sont générés dans un fichier CSV en vue de l’exportation. Une réponse réussie renvoie HTTP 307 sans corps de réponse. Un lien vers le fichier d’exportation est fourni dans l’en-tête de réponse `Location`.
+Les résultats sont générés dans un fichier CSV pour l’exportation. Une réponse réussie renvoie un HTTP 307 sans corps de réponse. Un lien vers le fichier d’exportation est fourni dans l’en-tête de réponse `Location` .

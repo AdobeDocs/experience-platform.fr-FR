@@ -5,10 +5,10 @@ title: Application des politiques d’utilisation des données à l’aide de l�
 type: Tutorial
 description: Une fois que vous avez créé des libellés d’utilisation pour vos données et des politiques d’utilisation pour les actions marketing en fonction de ces libellés, vous pouvez utiliser l’API Policy Service pour évaluer si une action marketing effectuée sur un jeu de données ou sur un groupe arbitraire de libellés constitue une violation de la politique. Vous pouvez ensuite configurer vos propres protocoles internes pour gérer les violations de politique en fonction de la réponse de l’API.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '998'
-ht-degree: 100%
+source-wordcount: '999'
+ht-degree: 98%
 
 ---
 
@@ -26,10 +26,10 @@ Ce document décrit les étapes à suivre pour utiliser l’API [!DNL Policy Ser
 
 Ce tutoriel nécessite une compréhension pratique des concepts clés suivants, qui sont impliqués dans l’application des politiques d’utilisation des données :
 
-* [Gouvernance des données](../home.md) : cadre selon lequel [!DNL Platform] applique la conformité d’utilisation des données.
+* [Gouvernance des données](../home.md) : cadre selon lequel [!DNL Experience Platform] applique la conformité d’utilisation des données.
    * [Libellés d’utilisation des données](../labels/overview.md) : les libellés d’utilisation des données sont appliqués aux jeux de données (et/ou aux champs individuels de ces jeux de données), spécifiant les restrictions d’utilisation de ces données.
    * [politiques d’utilisation des données](../policies/overview.md) : les politiques d’utilisation des données sont des règles décrivant les types d’actions marketing autorisées ou non pour certains ensembles de libellés d’utilisation des données.
-* [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Avant de commencer ce tutoriel, consultez le [guide de développement](../api/getting-started.md) pour obtenir les informations importantes à connaître afin d’effectuer avec succès des appels vers l’API [!DNL Policy Service], y compris les en-têtes requis et la méthode de lecture d’exemples d’appels API.
 
@@ -376,4 +376,4 @@ Une réponse réussie renvoie l’URL de l’action marketing, les libellés col
 
 La lecture de ce document vous a permis de comprendre comment identifier les violations de politique lors de l’exécution d’une action marketing sur un jeu de données ou sur un ensemble de libellés d’utilisation des données. En utilisant les données renvoyées dans les réponses de l’API, vous pouvez configurer des protocoles dans votre application d’expérience de façon à appliquer les violations de politique lorsque celles-ci se produisent.
 
-Pour plus d’informations sur la façon dont Platform fournit automatiquement l’application des politiques pour les segments activés, consultez le guide sur l’[application automatique](./auto-enforcement.md).
+Pour plus d’informations sur la manière dont Experience Platform fournit automatiquement l’application des politiques pour les segments activés, consultez le guide sur l’[application automatique](./auto-enforcement.md).

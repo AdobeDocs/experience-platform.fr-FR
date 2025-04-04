@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’octobre 2023 d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2023 pour Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1054'
-ht-degree: 100%
+source-wordcount: '1057'
+ht-degree: 92%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Mesures d’utilisation des destinations | De nouvelles mesures ont été ajoutées au tableau de bord de l’utilisation des licences. Les mesures **[!UICONTROL Taille de l’Audience Activation]** et **[!UICONTROL Taille de l’export des données]** offrent un moyen pratique de suivre la quantité de données que vous avez exportées hors de Platform par rapport à vos droits d’utilisation de licence. Consultez le document sur les [mesures disponibles](../../dashboards/guides/license-usage.md#available-metrics) pour obtenir des descriptions de ces mesures et d’autres mesures d’utilisation des licences. |
+| Mesures d’utilisation des destinations | De nouvelles mesures ont été ajoutées au tableau de bord de l’utilisation des licences. Les mesures **[!UICONTROL Taille d’Audience Activation]** et **[!UICONTROL Taille d’exportation des données]** permettent de suivre facilement la quantité de données que vous avez exportées hors d’Experience Platform par rapport à vos droits d’utilisation de licence. Consultez le document sur les [mesures disponibles](../../dashboards/guides/license-usage.md#available-metrics) pour obtenir des descriptions de ces mesures et d’autres mesures d’utilisation des licences. |
 
 {style="table-layout:auto"}
 
@@ -47,7 +47,7 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | Extensions | Amélioration de l’API de conversions [!DNL Meta] | Trois améliorations ont été apportées à l&#39;extension [API de conversions de métadonnées](/help/tags/extensions/server/meta/overview.md) : <ul><li>Intégration avec [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe) : crée une expérience de connexion transparente en vous permettant de partager votre pixelID et votre jeton d’accès pour l’intégration de l’API de conversions avec Adobe.</li><li>Intégration avec [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq) : vous permet de diffuser des annonces publicitaires aux personnes qui sont plus susceptibles de terminer une action souhaitée et de relier l’action aux annonces diffusées.</li><li>Intégration avec [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha) : vous permet de transmettre le RampID de LiveRamp dans le champ CIP, éliminant ainsi la nécessité de partager les informations d&#39;identification personnelles directement avec des partenaires ou des métadonnées. </li></ul> |
 | Extensions | API de conversions [!DNL LinkedIn] | L’extension [[!DNL LinkedIn] API de conversions](../../tags/extensions/server/linkedin/overview.md) vous permet d’évaluer l’efficacité de vos campagnes marketing LinkedIn en transférant des données d’événement Experience Platform à LinkedIn. |
 | Secret | Secret OAuth 2 [!DNL LinkedIn] | Le [[!DNL LinkedIn] secret OAuth 2](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) vous permet d’envoyer des interactions serveur à serveur à [!DNL LinkedIn] dans le transfert d’événement. |
-| Transfert dʼévénement | Mise à jour des balises et du transfert d’événement | Pour conserver les performances [Balises](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=fr) et [Transfert d’événement](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=fr) dans Platform, seules les versions de développement et d’évaluation les plus récentes, qu’elles soient réussies ou non, seront conservées. Toutes les versions qui ne sont plus utilisées seront supprimées. En outre, le ralentissement et la limitation de débit ont été implémentés afin de s’assurer que quelques utilisations intensives de l’API ne dégradent pas les performances de l’API pour les autres. |
+| Transfert dʼévénement | Mise à jour des balises et du transfert d’événement | Pour préserver les performances [ Balises ](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=fr) et [ Transfert d’événement ](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=fr) dans Experience Platform, seules les versions de développement et d’évaluation les plus récentes, réussies et non réussies, seront conservées. Toutes les versions qui ne sont plus utilisées seront supprimées. En outre, le ralentissement et la limitation de débit ont été implémentés afin de s’assurer que quelques utilisations intensives de l’API ne dégradent pas les performances de l’API pour les autres. |
 | Extensions | Éléments, règles et extensions | Les [éléments, règles et extensions](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html?lang=fr) sont désormais triés dans la sortie de bibliothèque afin d’assurer une plus grande cohérence entre plusieurs versions et déploiements d’une même bibliothèque. |
 
 Pour plus d’informations sur la collecte de données, consultez la [vue d’ensemble des collectes de données](../../tags/home.md).
@@ -80,7 +80,7 @@ Pour obtenir des informations plus générales sur les destinations, consultez l
 
 ## Sandbox {#sandboxes}
 
-Adobe Experience Platform est conçu pour enrichir les applications d’expérience digitale à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience digitale en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle. Pour répondre à ce besoin, Experience Platform fournit des sandbox qui divisent une instance de Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+Adobe Experience Platform est conçu pour enrichir les applications d’expérience digitale à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience digitale en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle. Pour répondre à ce besoin, Experience Platform fournit des sandbox qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 **Nouvelle fonctionnalité**
 
@@ -92,7 +92,7 @@ Pour plus d’informations sur les sandbox, consultez la [présentation des sand
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] permet de segmenter en audiences les données stockées dans [!DNL Experience Platform] qui se rapportent aux personnes (tels que les clientes et clients, les prospects, les utilisateurs et utilisatrices ou les organisations). Vous pouvez créer des audiences par le biais de définitions de segment ou d’autres sources à partir de vos données [!DNL Real-Time Customer Profile]. Ces audiences sont configurées et conservées de manière centralisée sur [!DNL Platform] et sont facilement accessibles à partir de n’importe quelle solution Adobe.
+[!DNL Segmentation Service] permet de segmenter en audiences les données stockées dans [!DNL Experience Platform] qui se rapportent aux personnes (tels que les clientes et clients, les prospects, les utilisateurs et utilisatrices ou les organisations). Vous pouvez créer des audiences par le biais de définitions de segment ou d’autres sources à partir de vos données [!DNL Real-Time Customer Profile]. Ces audiences sont configurées et conservées de manière centralisée sur [!DNL Experience Platform] et sont facilement accessibles à partir de n’importe quelle solution Adobe.
 
 **Nouvelle fonctionnalité**
 

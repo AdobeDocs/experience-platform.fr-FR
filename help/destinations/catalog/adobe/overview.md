@@ -1,11 +1,11 @@
 ---
 keywords: destinations;solutions experience cloud;target;destination target;ad cloud;advertising cloud; audience manager; destination adobe target; target; destination audience manager;
 title: Présentation des destinations Adobe
-description: Gérez l’expérience de vos clients en connectant vos données dans Platform à d’autres solutions Adobe Experience Cloud pour le ciblage publicitaire, la personnalisation, l’automatisation du marketing, etc
+description: Gérez l’expérience de vos clients en connectant vos données dans Experience Platform à d’autres solutions Adobe Experience Cloud pour le ciblage publicitaire, la personnalisation, l’automatisation du marketing, etc
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '231'
 ht-degree: 29%
 
 ---
@@ -18,13 +18,13 @@ Gérez l’expérience de vos clients en connectant vos données dans Adobe Expe
 
 ## Destinations Adobe prises en charge {#supported-destinations}
 
-Actuellement, Platform prend en charge les destinations d’Adobe répertoriées ci-dessous.
+Actuellement, Experience Platform prend en charge les destinations Adobe répertoriées ci-dessous.
 
 Pour comprendre la différence entre les connexions et les extensions, consultez [Connexions](../../destination-types.md#connections) sur la page Types et catégories de destinations.
 
 ### Connexions
 
-* [Connexion Adobe Advertising Cloud DSP](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
+* [Connexion à Adobe Advertising Cloud DSP](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
 * [Connexion Adobe Campaign](../email-marketing/adobe-campaign.md)
 * [Connexion Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)
 * [(Version bêta) Audiences Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
@@ -45,8 +45,8 @@ Pour comprendre la différence entre les connexions et les extensions, consultez
 * [Extension Marketo Munchkin](../email/marketo-munchkin.md)
 * [Extension Marketo Web Personalization](../personalization/marketo-web-personalization.md)
 
-## Partage d’audiences Experience Platform
+## Partage d&#39;audiences Experience Platform
 
-Utilisez la fonctionnalité de partage d’audiences Experience Platform pour partager vos audiences Experience Platform vers d’autres destinations d’Adobe. Consultez la page ci-dessous pour plus d’informations (s’ouvre dans le portail de documentation de l’Audience Manager) :
+Utilisez la fonctionnalité de partage d’audiences d’Experience Platform pour partager vos audiences Experience Platform vers d’autres destinations Adobe. Consultez la page ci-dessous pour plus d’informations (s’ouvre dans le portail de documentation d’Audience Manager) :
 
 * [Partage d’audiences Experience Platform avec Adobe Audience Manager, Adobe Advertising Cloud et Adobe Target via l’intégration des services principaux](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr)

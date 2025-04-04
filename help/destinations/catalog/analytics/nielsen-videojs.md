@@ -1,12 +1,12 @@
 ---
-keywords: Nielsen VideoJS Player Handler;lecteur vidéo nielsen;lecteur vidéo js nielsen;lecteur vidéo nielsen;Nielsen;nielsen;nielsen;lecteur vidéo Nielsen;SDK Nielsen Digital;sdk numérique nielsen
+keywords: Nielsen VideoJS Player Handler;lecteur js vidéo nielsen;lecteur videojs nielsen;Nielsen;nielsen;lecteur videojs Nielsen;Nielsen Digital SDK;sdk numérique nielsen
 title: Extension Nielsen VideoJS Player Handler
 description: L’extension Nielsen VideoJS Player Handler est une destination d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: d640bf40-c6af-4aff-8303-933fe71f4a7e
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 91%
+source-wordcount: '544'
+ht-degree: 80%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 91%
 
 ## Vue d’ensemble {#overview}
 
-L’extension de balise [!DNL Nielsen Digital SDK] offre la mesure de l’audience via les produits de mesure numérique suivants :
+[!DNL Nielsen Digital SDK] extension de balise offre une mesure d’audience via les produits de mesure numérique suivants :
 
 DCR : une solution de mesure qui permet de mesurer quotidiennement le contenu numérique non linéaire, y compris le contenu comportant des publicités, et d’obtenir une vue exhaustive de la consommation du contenu numérique par l’audience sur les ordinateurs de bureau, les téléphones portables, les tablettes et les appareils connectés.
 
@@ -22,13 +22,13 @@ DTVR : cette solution tient compte du visionnage linéaire de la télévision s
 
 [!DNL Nielsen VideoJS Player Handler] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101361.nielsen-digital-sdk-extension.html).
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension Nielsen VideoJS Player Handler](../../assets/catalog/analytics/nielsen-videojs/catalog.png)
 
 ## Conditions préalables  {#prerequisites}
 
-Cette extension est disponible dans le catalogue [!DNL Destinations] pour tous les clients qui ont acheté Platform.
+Cette extension est disponible dans le catalogue [!DNL Destinations] pour tous les clients qui ont acheté Experience Platform.
 
 Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Experience Platform. Les balises sont proposées aux clients Adobe Experience Cloud en tant que fonctionnalité à valeur ajoutée incluse. Contactez l’administrateur ou l’administratrice de votre organisation pour accéder aux balises et demandez-lui de vous accorder l’autorisation **[!UICONTROL manage_properties]** afin que vous puissiez installer les extensions.
 
@@ -36,7 +36,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 Pour installer l’extension [!DNL Nielsen VideoJS Player Handler], procédez comme suit :
 
-Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
+Dans l’interface [Experience Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 
@@ -62,6 +62,6 @@ Vous pouvez configurer, mettre à niveau et supprimer des extensions dans l’in
 
 >[!TIP]
 >
->Si l’extension est déjà installée sur l’une de vos propriétés, l’interface utilisateur de Platform continue d’afficher **[!UICONTROL Installer]** pour cette extension. Démarrez le workflow d’installation comme décrit dans [Installation de l’extension](#install-extension) pour configurer ou supprimer votre extension.
+>Si l’extension est déjà installée sur l’une de vos propriétés, l’interface utilisateur d’Experience Platform continue d’afficher **[!UICONTROL Installer]** pour l’extension. Démarrez le workflow d’installation comme décrit dans [Installation de l’extension](#install-extension) pour configurer ou supprimer votre extension.
 
 Pour mettre à niveau votre extension, consultez le guide sur le [processus de mise à niveau d’extension](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) dans la documentation sur les balises.

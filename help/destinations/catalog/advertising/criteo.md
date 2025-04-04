@@ -1,12 +1,12 @@
 ---
 keywords: publicité ; critères ;
 title: Connexion Criteo
-description: Criteo alimente une publicité fiable et percutante pour offrir des expériences plus riches à chaque consommateur sur l'Internet ouvert. Grâce au plus grand ensemble de données commerciales au monde et à l’IA la plus performante de sa catégorie, Criteo veille à ce que chaque point de contact du parcours d’achats soit personnalisé afin d’atteindre les clients avec la bonne annonce, au bon moment.
+description: Criteo permet de proposer des publicités fiables et percutantes afin d’offrir des expériences plus riches à chaque personne sur Internet. Grâce au plus grand jeu de données du commerce au monde et à la meilleure IA de sa catégorie, Criteo veille à ce que chaque point de contact du parcours d’achat soit personnalisé afin de toucher les clientes et clients avec la bonne annonce, au bon moment.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: e594e473ac78663203c9254623fe8e324985fa39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 24%
+source-wordcount: '1017'
+ht-degree: 34%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 24%
 >
 >Ce connecteur de destination et cette page de documentation sont créés et gérés par Criteo. Pour toute demande ou information, contactez Criteo directement [ici](mailto:criteoTechnicalPartnerships@criteo.com).
 
-Criteo alimente une publicité fiable et percutante pour offrir des expériences plus riches à chaque consommateur sur l&#39;Internet ouvert. Grâce au plus grand ensemble de données commerciales au monde et à l’IA la plus performante de sa catégorie, Criteo veille à ce que chaque point de contact du parcours d’achats soit personnalisé afin d’atteindre les clients avec la bonne annonce, au bon moment.
+Criteo permet de proposer des publicités fiables et percutantes afin d’offrir des expériences plus riches à chaque personne sur Internet. Grâce au plus grand jeu de données du commerce au monde et à la meilleure IA de sa catégorie, Criteo veille à ce que chaque point de contact du parcours d’achat soit personnalisé afin de toucher les clientes et clients avec la bonne annonce, au bon moment.
 
 ## Conditions préalables {#prerequisites}
 
@@ -39,7 +39,7 @@ Criteo prend en charge l’activation des identités décrites dans le tableau c
 
 | Identité cible | Description | Considérations |
 | --- | --- | --- |
-| `email_sha256` | Adresses e-mail hachées avec l’algorithme SHA-256 | Les adresses e-mail hachées en texte brut et SHA-256 sont prises en charge par Adobe Experience Platform. Lorsque votre champ source contient des attributs non hachés, cochez l’option [!UICONTROL Appliquer la transformation] pour que Platform hache automatiquement les données lors de l’activation. |
+| `email_sha256` | Adresses e-mail hachées avec l’algorithme SHA-256 | Les adresses e-mail hachées en texte brut et SHA-256 sont prises en charge par Adobe Experience Platform. Lorsque votre champ source contient des attributs non hachés, cochez l’option [!UICONTROL Appliquer la transformation] pour qu’Experience Platform hache automatiquement les données lors de l’activation. |
 | `gum_id` | Identifiant du cookie Criteo [!DNL GUM] | [!DNL GUM IDs] permettent aux clients de maintenir une correspondance entre leur système d&#39;identification d&#39;utilisateur et l&#39;identification d&#39;utilisateur de Criteo ([!DNL UID]). Si le type d’identifiant est `gum_id`, un paramètre supplémentaire, le [!DNL GUM Caller ID] , doit également être inclus. Contactez l’équipe de votre compte Criteo pour obtenir les [!DNL GUM Caller ID] appropriées ou pour obtenir plus d’informations sur cette synchronisation [!DNL GUM ID], si nécessaire. |
 
 ## Type et fréquence d’exportation {#export-type-frequency}

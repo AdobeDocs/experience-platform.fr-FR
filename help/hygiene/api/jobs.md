@@ -1,18 +1,18 @@
 ---
-title: Suppression d’enregistrements à l’aide de l’API Data Hygiene
+title: Supprimer des enregistrements à l’aide de l’API Data Hygiene
 description: Découvrez comment corriger ou supprimer par programmation les données personnelles des clients stockées dans Adobe Experience Platform.
 role: Developer
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 96%
+source-wordcount: '481'
+ht-degree: 92%
 
 ---
 
-# Suppression d’enregistrements à l’aide de l’API Data Hygiene
+# Supprimer des enregistrements à l’aide de l’API Data Hygiene
 
 <!-- >[!IMPORTANT]
 >
@@ -108,8 +108,8 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `companyContexts` | Un tableau contenant des informations d’authentification pour votre organisation. Il doit contenir un seul objet avec les propriétés suivantes : <ul><li>`namespace` : Cette propriété doit être définie sur `imsOrgID`.</li><li>`value` : ID d’organisation. Il s’agit de la même valeur que celle fournie dans l’en-tête `x-gw-ims-org-id`.</li></ul> |
-| `users` | Un tableau contenant une collection d’au moins un utilisateur dont vous souhaitez supprimer les informations. Chaque objet d’utilisateur contient les informations suivantes : <ul><li>`key` : un identifiant pour un utilisateur utilisé pour exécuter les identifiants de tâches distincts dans les données de réponse. Nous vous recommandons de choisir une chaîne unique et facilement identifiable pour cette valeur afin de pouvoir la référencer ou la rechercher ultérieurement.</li><li>`action` : un tableau répertoriant les actions souhaitées pouvant être effectuées sur les données de l’utilisateur. Doit contenir une seule valeur de chaîne : `delete`.</li><li>`userIDs` : une collection d’identités pour cet utilisateur. Le nombre d’identités qu’un utilisateur unique peut posséder est limité à neuf. Chaque identité contient les propriétés suivantes : <ul><li>`namespace` : l’[espace de noms d’identité](../../identity-service/features/namespaces.md) associé à l’identifiant. Il peut s’agir d’un [espace de noms standard](../../privacy-service/api/appendix.md#standard-namespaces) reconnu par Platform ou d’un espace de noms personnalisé défini par votre organisation. Le type d’espace de noms utilisé doit être reflété dans la propriété `type`.</li><li>`value` : la valeur de l’identité.</li><li>`type` : doit être défini sur `standard` si vous utilisez un espace de noms reconnu globalement ou sur `custom` si vous utilisez un espace de noms défini par votre organisation.</li></ul></li></ul> |
+| `companyContexts` | Un tableau contenant des informations d’authentification pour votre organisation. Il doit contenir un seul objet avec les propriétés suivantes : <ul><li>`namespace` : Cette propriété doit être définie sur `imsOrgID`.</li><li>`value` : identifiant de votre organisation. Il s’agit de la même valeur que celle fournie dans l’en-tête `x-gw-ims-org-id`.</li></ul> |
+| `users` | Un tableau contenant une collection d’au moins un utilisateur dont vous souhaitez supprimer les informations. Chaque objet d’utilisateur contient les informations suivantes : <ul><li>`key` : un identifiant pour un utilisateur utilisé pour exécuter les identifiants de tâches distincts dans les données de réponse. Nous vous recommandons de choisir une chaîne unique et facilement identifiable pour cette valeur afin de pouvoir la référencer ou la rechercher ultérieurement.</li><li>`action` : un tableau répertoriant les actions souhaitées pouvant être effectuées sur les données de l’utilisateur. Doit contenir une seule valeur de chaîne : `delete`.</li><li>`userIDs` : une collection d’identités pour cet utilisateur. Le nombre d’identités qu’un utilisateur unique peut posséder est limité à neuf. Chaque identité contient les propriétés suivantes : <ul><li>`namespace` : l’[espace de noms d’identité](../../identity-service/features/namespaces.md) associé à l’identifiant. Il peut s’agir d’un [espace de noms standard](../../privacy-service/api/appendix.md#standard-namespaces) reconnu par Experience Platform, ou d’un espace de noms personnalisé défini par votre organisation. Le type d’espace de noms utilisé doit être reflété dans la propriété `type`.</li><li>`value` : la valeur de l’identité.</li><li>`type` : doit être défini sur `standard` si vous utilisez un espace de noms reconnu globalement ou sur `custom` si vous utilisez un espace de noms défini par votre organisation.</li></ul></li></ul> |
 
 {style="table-layout:auto"}
 

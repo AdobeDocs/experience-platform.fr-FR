@@ -3,18 +3,18 @@ keywords: Experience Platform;accueil;rubriques populaires;données d’espace d
 solution: Experience Platform
 title: Créer un flux de données en continu pour les données brutes à l’aide de l’API Flow Service
 type: Tutorial
-description: Ce tutoriel décrit les étapes à suivre pour récupérer des données de diffusion en continu et les importer dans Platform à l’aide des connecteurs source et des API.
+description: Ce tutoriel décrit les étapes à suivre pour récupérer des données de diffusion en continu et les importer dans Experience Platform à l’aide des connecteurs source et des API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1169'
-ht-degree: 44%
+source-wordcount: '1180'
+ht-degree: 36%
 
 ---
 
 # Créer un flux de données en continu pour les données brutes à l’aide de l’API [!DNL Flow Service]
 
-Ce tutoriel décrit les étapes à suivre pour récupérer des données brutes d’un connecteur source de diffusion en continu et les apporter à l’Experience Platform à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour récupérer des données brutes d’un connecteur source de diffusion en continu et les importer dans Experience Platform à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
@@ -24,12 +24,12 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
    - [Principes de base de la composition des schémas](../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    - [Guide du développeur de Schema Registry](../../../../xdm/api/getting-started.md) : inclut des informations importantes à connaître avant dʼeffectuer des appels vers l’API Schema Registry. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
 - [[!DNL Catalog Service]](../../../../catalog/home.md) : Catalogue constitue le système d’enregistrement de l’emplacement et de la liaison des données dans Experience Platform.
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md) : l’ingestion par flux pour Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données d’appareils côté client et côté serveur à l’Experience Platform.
-- [Sandbox](../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md) : l’ingestion par flux pour Experience Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données d’appareils côté client et côté serveur vers Experience Platform.
+- [Sandbox](../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-### Utiliser les API Platform
+### Utilisation des API Experience Platform
 
-Pour plus d’informations sur la manière d’effectuer correctement des appels vers les API Platform, consultez le guide de [Prise en main des API Platform](../../../../landing/api-guide.md).
+Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Experience Platform, consultez le guide [Prise en main des API Experience Platform](../../../../landing/api-guide.md).
 
 ### Créer une connexion source {#source}
 
@@ -41,9 +41,9 @@ Ce tutoriel nécessite également que vous disposiez d’un identifiant de conne
 
 ## Créer un schéma XDM cible {#target-schema}
 
-Pour que les données sources soient utilisées dans Platform, un schéma cible doit être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Platform contenant les données sources. Ce schéma XDM cible étend également la classe XDM [!DNL Individual Profile].
+Pour que les données sources soient utilisées dans Experience Platform, un schéma cible doit être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Experience Platform contenant les données sources. Ce schéma XDM cible étend également la classe XDM [!DNL Individual Profile].
 
-Pour créer un schéma XDM cible, envoyez une requête de POST au point d’entrée `/schemas` de l’[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Pour créer un schéma XDM cible, envoyez une requête POST au point d’entrée `/schemas` de l’[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 **Format d’API**
 
@@ -151,7 +151,7 @@ Une réponse réussie renvoie les détails du schéma nouvellement créé, y com
 
 ## Créer un jeu de données cible
 
-Après avoir créé un schéma XDM cible et son `$id` unique, vous pouvez désormais créer un jeu de données cible pour contenir vos données source. Pour créer un jeu de données cible, envoyez une requête de POST au point d’entrée `dataSets` de l’API [Catalog Service](https://www.adobe.io/experience-platform-apis/references/catalog/) et indiquez l’identifiant du schéma cible dans la payload.
+Après avoir créé un schéma XDM cible et son `$id` unique, vous pouvez désormais créer un jeu de données cible pour contenir vos données source. Pour créer un jeu de données cible, envoyez une requête POST au point d’entrée `dataSets` de l’[API Catalog Service](https://www.adobe.io/experience-platform-apis/references/catalog/) et indiquez l’identifiant du schéma cible dans la payload.
 
 **Format d’API**
 
@@ -204,9 +204,9 @@ Une réponse réussie renvoie un tableau contenant l’identifiant du jeu de don
 
 ## Créer une connexion cible {#target-connection}
 
-Les connexions Target créent et gèrent une connexion de destination vers Platform ou tout autre emplacement d’entrée des données transférées. Les connexions cibles contiennent des informations concernant la destination des données, le format des données et l’identifiant de connexion cible requis pour créer un flux de données. Les instances de connexion cible sont spécifiques à un client et à une organisation.
+Les connexions Target créent et gèrent une connexion de destination vers Experience Platform ou tout autre emplacement d’entrée des données transférées. Les connexions cibles contiennent des informations concernant la destination des données, le format des données et l’identifiant de connexion cible requis pour créer un flux de données. Les instances de connexion cible sont spécifiques à un client et à une organisation.
 
-Pour créer une connexion cible, envoyez une requête de POST au point d’entrée `/targetConnections` de l’API [!DNL Flow Service]. Dans le cadre de la requête, vous devez fournir le format des données, le `dataSetId` récupéré à l’étape précédente et l’identifiant de spécification de connexion fixe lié à [!DNL Data Lake]. Cet identifiant est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Pour créer une connexion cible, envoyez une requête POST au point d’entrée `/targetConnections` de l’API [!DNL Flow Service]. Dans le cadre de la requête, vous devez fournir le format des données, le `dataSetId` récupéré à l’étape précédente et l’identifiant de spécification de connexion fixe lié à [!DNL Data Lake]. Cet identifiant est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **Format d’API**
 
@@ -325,7 +325,7 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 
 ## Récupération d’une liste de spécifications de flux de données {#specs}
 
-Un flux de données est chargé de collecter des données à partir de sources et de les importer dans Platform. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données en adressant une requête de GET à l’API [!DNL Flow Service].
+Un flux de données est chargé de collecter des données à partir de sources et de les importer dans Experience Platform. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données en adressant une requête GET à l’API [!DNL Flow Service].
 
 **Format d’API**
 
@@ -566,7 +566,7 @@ Les exemples suivants s’appliquent à tous les :
 
 ## Étapes suivantes
 
-Ce tutoriel vous a permis de créer un flux de données pour collecter des données de diffusion en continu à partir de votre connecteur de diffusion en continu. Ces données entrantes peuvent désormais être utilisées par les services de Platform en aval, comme [!DNL Real-Time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
+Ce tutoriel vous a permis de créer un flux de données pour collecter des données de diffusion en continu à partir de votre connecteur de diffusion en continu. Ces données entrantes peuvent désormais être utilisées par les services Experience Platform en aval tels que [!DNL Real-Time Customer Profile] et [!DNL Data Science Workspace]. Consultez les documents suivants pour plus d’informations :
 
 - [Vue d’ensemble du profil client en temps réel](../../../../profile/home.md)
 - [Présentation de l’espace de travail de science des données](../../../../data-science-workspace/home.md)

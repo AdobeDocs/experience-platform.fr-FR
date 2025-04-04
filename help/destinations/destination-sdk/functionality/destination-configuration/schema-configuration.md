@@ -2,18 +2,18 @@
 description: Découvrez comment configurer les schémas du partenaire pour les destinations créées avec Destination SDK.
 title: Configuration des schémas de partenaire
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: f502631a3e97f3c90c13f188f3a4bb081f6db112
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1939'
-ht-degree: 95%
+source-wordcount: '1949'
+ht-degree: 85%
 
 ---
 
 # Configuration des schémas de partenaire
 
-Experience Platform utilise des schémas pour décrire la structure des données de manière cohérente et réutilisable. Quand des données sont ingérées dans Platform, elles sont structurées en fonction d’un schéma XDM. Pour plus d’informations sur le modèle de composition de schémas, notamment sur les principes de conception et les bonnes pratiques, consultez les [bases de la composition de schémas](../../../../xdm/schema/composition.md).
+Experience Platform utilise des schémas pour décrire la structure des données de manière cohérente et réutilisable. Lorsque des données sont ingérées dans Experience Platform, elles sont structurées selon un schéma XDM. Pour plus d’informations sur le modèle de composition de schémas, notamment sur les principes de conception et les bonnes pratiques, consultez les [bases de la composition de schémas](../../../../xdm/schema/composition.md).
 
-Pendant la création d’une destination avec Destination SDK, vous pouvez définir votre propre schéma de partenaire à utiliser par votre plateforme de destination. Cela permet aux utilisateurs de mapper les attributs de profil de Platform à des champs spécifiques reconnus par votre plateforme de destination, le tout dans l’interface utilisateur de Platform.
+Pendant la création d’une destination avec Destination SDK, vous pouvez définir votre propre schéma de partenaire à utiliser par votre plateforme de destination. Cela permet aux utilisateurs de mapper les attributs de profil d’Experience Platform à des champs spécifiques reconnus par votre plateforme de destination, le tout dans l’interface utilisateur d’Experience Platform.
 
 Pendant la configuration du schéma de partenaire pour la destination, vous pouvez affiner le mappage des champs pris en charge par votre plateforme de destination, par exemple :
 
@@ -21,14 +21,14 @@ Pendant la configuration du schéma de partenaire pour la destination, vous pouv
 * Créer des schémas de partenaire dynamique qu’Experience Platform peut appeler dynamiquement pour récupérer une liste de tous les attributs pris en charge dans la destination.
 * Définir les mappages de champs obligatoires par votre plateforme de destination.
 
-Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la documentation [options de configuration](../configuration-options.md) ou consultez le guide sur la [manière d’utiliser la Destination SDK pour configurer une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Pour comprendre la place de ce composant dans une intégration créée avec Destination SDK, consultez le diagramme de la documentation [options de configuration](../configuration-options.md) ou consultez le guide sur la [utilisation de Destination SDK pour configurer une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 Vous pouvez configurer vos paramètres de schéma via le point d’entrée `/authoring/destinations`. Pour obtenir des exemples d’appels API détaillés dans lesquels vous pouvez configurer les composants affichés sur cette page, consultez les pages de référence de l’API suivantes.
 
 * [Création d’une configuration de destination](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Mise à jour d’une configuration de destination](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-Cet article décrit toutes les options de configuration de schéma prises en charge que vous pouvez utiliser pour la destination et montre ce que la clientèle verra dans l’interface utilisateur de Platform.
+Cet article décrit toutes les options de configuration de schéma prises en charge que vous pouvez utiliser pour la destination et montre ce que la clientèle verra dans l’interface utilisateur d’Experience Platform.
 
 >[!IMPORTANT]
 >
@@ -49,7 +49,7 @@ Destination SDK prend en charge plusieurs configurations de schéma :
 
 * Les schémas statiques sont définis depuis le tableau `profileFields` de la section `schemaConfig`. Dans un schéma statique, vous définissez chaque attribut cible qui doit s’afficher dans l’interface utilisateur d’Experience Platform dans le tableau `profileFields`. Si vous devez mettre à jour votre schéma, vous devez procéder à une [mise à jour de la configuration de destination](../../authoring-api/destination-configuration/update-destination-configuration.md).
 * Les schémas dynamiques utilisent un type de serveur de destination supplémentaire, appelé [serveur de schéma dynamique](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers), afin de récupérer dynamiquement les attributs cibles pris en charge et générer des schémas en fonction de votre propre API. Les schémas dynamiques n’utilisent pas le tableau `profileFields`. Si vous devez mettre à jour votre schéma, vous n’êtes pas obligé de procéder à une [mise à jour de la configuration de destination](../../authoring-api/destination-configuration/update-destination-configuration.md). Au lieu de cela, le serveur de schéma dynamique récupère le schéma mis à jour de votre API.
-* Dans la configuration du schéma, vous avez la possibilité d’ajouter des mappages obligatoires (ou prédéfinis). Il s’agit de mappages que les utilisateurs peuvent afficher dans l’interface utilisateur de Platform, mais qu’ils ne peuvent pas modifier pendant la configuration d’une connexion à la destination. Vous pouvez, par exemple, appliquer le champ de l’adresse e-mail pour qu’il soit toujours envoyé à la destination.
+* Dans la configuration du schéma, vous avez la possibilité d’ajouter des mappages obligatoires (ou prédéfinis). Il s’agit de mappages que les utilisateurs peuvent afficher dans l’interface utilisateur d’Experience Platform, mais qu’ils ne peuvent pas modifier lors de la configuration d’une connexion à la destination. Vous pouvez, par exemple, appliquer le champ de l’adresse e-mail pour qu’il soit toujours envoyé à la destination.
 
 `schemaConfig` utilise plusieurs paramètres de configuration, en fonction du type de schéma dont vous avez besoin, comme indiqué dans les sections ci-dessous.
 
@@ -105,7 +105,7 @@ Pour créer un schéma statique avec des attributs de profil, définissez les at
 | `profileRequired` | Booléen | Facultatif | Utilisez `true` si les utilisateurs doivent être en mesure de mapper les attributs de profil d’Experience Platform aux attributs personnalisés du côté de votre plateforme de destination. |
 | `segmentRequired` | Booléen | Obligatoire | Ce paramètre est demandé par Destination SDK et doit toujours être défini sur `true`. |
 | `identityRequired` | Booléen | Obligatoire | Définissez-le sur `true` si les utilisateurs doivent être en mesure de mapper les [types d’identité](identity-namespace-configuration.md) d’Experience Platform aux attributs que vous avez définis dans le tableau `profileFields`. |
-| `segmentNamespaceAllowList` | Tableau | Facultatif | Définit des espaces de noms d’audience spécifiques à partir desquels les personnes peuvent mapper des audiences à la destination. Utilisez ce paramètre pour empêcher les personnes utilisant Platform d’exporter des audiences à partir des espaces de noms d’audience que vous définissez dans le tableau. Ce paramètre ne peut pas être utilisé avec `segmentNamespaceDenyList`.<br> <br> Exemple : `"segmentNamespaceAllowList": ["AudienceManager"]` permet de mapper uniquement les audiences depuis l’espace de noms `AudienceManager` sur cette destination. <br> <br> Pour autoriser l’export de n’importe quelle audience vers votre destination, vous pouvez ignorer ce paramètre. <br> <br> Si `segmentNamespaceAllowList` et `segmentNamespaceDenyList` ne sont pas présents dans votre configuration, les personnes pourront uniquement exporter des audiences provenant de [Segmentation Service](../../../../segmentation/home.md). |
+| `segmentNamespaceAllowList` | Tableau | Facultatif | Définit des espaces de noms d’audience spécifiques à partir desquels les personnes peuvent mapper des audiences à la destination. Utilisez ce paramètre pour empêcher les utilisateurs d’Experience Platform d’exporter des audiences uniquement à partir des espaces de noms d’audience que vous définissez dans le tableau . Ce paramètre ne peut pas être utilisé avec `segmentNamespaceDenyList`.<br> <br> Exemple : `"segmentNamespaceAllowList": ["AudienceManager"]` permet de mapper uniquement les audiences depuis l’espace de noms `AudienceManager` sur cette destination. <br> <br> Pour autoriser l’export de n’importe quelle audience vers votre destination, vous pouvez ignorer ce paramètre. <br> <br> Si `segmentNamespaceAllowList` et `segmentNamespaceDenyList` ne sont pas présents dans votre configuration, les personnes pourront uniquement exporter des audiences provenant de [Segmentation Service](../../../../segmentation/home.md). |
 | `segmentNamespaceDenyList` | Tableau | Facultatif | Limite la capacité de mapper des audiences sur la destination, à partir des espaces de noms d’audience définis dans le tableau. Ne peut pas être utilisé avec `segmentNamespaceAllowed`. <br> <br> Exemple : `"segmentNamespaceDenyList": ["AudienceManager"]` empêche de mapper les audiences depuis l’espace de noms `AudienceManager` sur cette destination. <br> <br> Pour autoriser l’export de n’importe quelle audience sur votre destination, vous pouvez ignorer ce paramètre. <br> <br> Si `segmentNamespaceAllowed` et `segmentNamespaceDenyList` ne sont pas présents dans votre configuration, les personnes pourront uniquement exporter des audiences provenant de [Segmentation Service](../../../../segmentation/home.md). <br> <br> Pour autoriser l’export de toutes les audiences, quelle que soit leur origine, définissez `"segmentNamespaceDenyList":[]`. |
 
 {style="table-layout:auto"}
@@ -148,7 +148,7 @@ Dans une configuration de schéma dynamique, le tableau `profileFields` est remp
 
 | Paramètre | Type | Obligatoire / Facultatif | Description |
 |---------|----------|------|---|
-| `dynamicEnum.authenticationRule` | Chaîne | Obligatoire | Indique comment la clientèle [!DNL Platform] se connecte à votre destination. Les valeurs acceptées sont les suivantes : `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Utilisez `CUSTOMER_AUTHENTICATION` si la clientèle Platform se connecte à votre système via l’une des méthodes d’authentification décrites [ici](customer-authentication.md). </li><li> Utilisez `PLATFORM_AUTHENTICATION` s’il existe un système d’authentification global entre Adobe et votre destination et que la clientèle [!DNL Platform] n’a pas besoin de fournir d’informations d’authentification pour se connecter à votre destination. Dans ce cas, vous devez procéder à la [création d’un objet d’informations d’identification](../../credentials-api/create-credential-configuration.md) à l’aide de l’API d’informations d’identification. </li><li>Utilisez `NONE` si aucune authentification n’est requise pour envoyer des données à votre plateforme de destination. </li></ul> |
+| `dynamicEnum.authenticationRule` | Chaîne | Obligatoire | Indique comment la clientèle [!DNL Experience Platform] se connecte à votre destination. Les valeurs acceptées sont les suivantes : `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Utilisez `CUSTOMER_AUTHENTICATION` si la clientèle Experience Platform se connecte à votre système par l’une des méthodes d’authentification décrites [ici](customer-authentication.md). </li><li> Utilisez `PLATFORM_AUTHENTICATION` s’il existe un système d’authentification global entre Adobe et votre destination et que la clientèle [!DNL Experience Platform] n’a pas besoin de fournir d’informations d’authentification pour se connecter à votre destination. Dans ce cas, vous devez procéder à la [création d’un objet d’informations d’identification](../../credentials-api/create-credential-configuration.md) à l’aide de l’API d’informations d’identification. </li><li>Utilisez `NONE` si aucune authentification n’est requise pour envoyer des données à votre plateforme de destination. </li></ul> |
 | `dynamicEnum.destinationServerId` | Chaîne | Obligatoire | `instanceId` de votre serveur de schéma dynamique. Ce serveur de destination inclut le point d’entrée de l’API qu’Experience Platform appellera pour récupérer le schéma dynamique. |
 | `dynamicEnum.value` | Chaîne | Obligatoire | Nom du schéma dynamique, tel que défini dans la configuration du serveur de schéma dynamique. |
 | `dynamicEnum.responseFormat` | Chaîne | Obligatoire | Toujours définie sur `SCHEMA` pendant la définition d’un schéma dynamique. |
@@ -160,7 +160,7 @@ Dans une configuration de schéma dynamique, le tableau `profileFields` est remp
 
 ## Mappages obligatoires {#required-mappings}
 
-Dans la configuration du schéma, en plus de votre schéma statique ou dynamique, vous avez la possibilité d’ajouter des mappages obligatoires (ou prédéfinis). Il s’agit de mappages que les utilisateurs peuvent afficher dans l’interface utilisateur de Platform, mais qu’ils ne peuvent pas modifier pendant la configuration d’une connexion à la destination.
+Dans la configuration du schéma, en plus de votre schéma statique ou dynamique, vous avez la possibilité d’ajouter des mappages obligatoires (ou prédéfinis). Il s’agit de mappages que les utilisateurs peuvent afficher dans l’interface utilisateur d’Experience Platform, mais qu’ils ne peuvent pas modifier lors de la configuration d’une connexion à la destination.
 
 Vous pouvez, par exemple, appliquer le champ de l’adresse e-mail pour qu’il soit toujours envoyé à la destination.
 
@@ -203,7 +203,7 @@ L’exemple ci-dessous montre les mappages source et de destination obligatoires
 
 {style="table-layout:auto"}
 
-Ainsi, les sections **[!UICONTROL Champ source]** et **[!UICONTROL Champ cible]** de l’interface utilisateur de Platform sont grisés.
+]**Par conséquent, les sections Champ**[!UICONTROL  Source et **[!UICONTROL Champ cible]** de l’interface utilisateur d’Experience Platform sont grisées.
 
 ![Image des mappages obligatoires dans le flux d’activation de l’interface utilisateur.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
@@ -233,7 +233,7 @@ L’exemple ci-dessous montre un mappage de destination obligatoire. Si seul le 
 
 {style="table-layout:auto"}
 
-Ainsi, la section **[!UICONTROL Champ cible]** dans l’interface utilisateur de Platform est grisée, tandis que la section **[!UICONTROL Champ source]** est active et les utilisateurs peuvent interagir avec celle-ci. Les options **[!UICONTROL clé obligatoire]** et **[!UICONTROL clé de déduplication]** sont actives et les utilisateurs ne peuvent pas les modifier.
+Ainsi, la section **[!UICONTROL Champ cible]** de l’interface utilisateur d’Experience Platform est grisée, tandis que la section **[!UICONTROL Champ Source]** est active et les utilisateurs peuvent interagir avec celle-ci. Les options **[!UICONTROL clé obligatoire]** et **[!UICONTROL clé de déduplication]** sont actives et les utilisateurs ne peuvent pas les modifier.
 
 ![Image des mappages obligatoires dans le flux d’activation de l’interface utilisateur.](../../assets/functionality/destination-configuration/required-mappings-1.png)
 
@@ -241,7 +241,7 @@ Ainsi, la section **[!UICONTROL Champ cible]** dans l’interface utilisateur de
 
 ## Configuration de la prise en charge des audiences externes {#external-audiences}
 
-Pour configurer votre destination afin de prendre en charge l’activation des [audiences générées de l’extérieur](../../../../segmentation/ui/audience-portal.md#import-audience), insérez le fragment de code ci-dessous dans la section `schemaConfig` .
+Pour configurer la destination afin de prendre en charge l’activation des [audiences générées en externe](../../../../segmentation/ui/audience-portal.md#import-audience), incluez le fragment de code ci-dessous dans la section `schemaConfig`.
 
 ```json
 "schemaConfig": {
@@ -250,7 +250,7 @@ Pour configurer votre destination afin de prendre en charge l’activation des [
 }
 ```
 
-Pour en savoir plus sur la fonctionnalité `segmentNamespaceDenyList`, voir les descriptions des propriétés dans la [table](#attributes-schema) ci-dessus sur cette page.
+Consultez les descriptions des propriétés dans le [tableau](#attributes-schema) plus haut sur cette page pour en savoir plus sur la fonctionnalité de `segmentNamespaceDenyList`.
 
 ## Étapes suivantes {#next-steps}
 

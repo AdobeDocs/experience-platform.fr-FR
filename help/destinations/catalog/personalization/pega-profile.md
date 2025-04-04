@@ -1,11 +1,11 @@
 ---
 title: Connecteur de profil Pega
-description: Utilisez Pega Profile Connector for Amazon S3 dans Adobe Experience Platform pour exporter des données de profil complètes ou incrémentielles, ou les deux, vers l’espace de stockage dans le cloud Amazon S3. Dans Pega Customer Decision Hub, les tâches de données peuvent être planifiées dans Customer Profile Designer pour importer régulièrement des données de profil à partir du stockage Amazon S3.
+description: Utilisez le connecteur de profil Pega pour Amazon S3 dans Adobe Experience Platform pour exporter des données de profil complètes ou incrémentielles, ou les deux, vers l’espace de stockage dans le cloud d’Amazon S3. Dans Pega Customer Decision Hub, les tâches de données peuvent être planifiées dans Customer Profile Designer pour importer régulièrement des données de profil à partir du stockage Amazon S3.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1116'
 ht-degree: 39%
 
 ---
@@ -14,38 +14,38 @@ ht-degree: 39%
 
 ## Vue d’ensemble {#overview}
 
-Utilisez [!DNL Pega Profile Connector] dans Adobe Experience Platform pour créer une connexion sortante active à votre stockage [!DNL Amazon Web Services] (AWS) S3 afin d’exporter périodiquement des données de profil vers des fichiers CSV à partir de Adobe Experience Platform dans vos propres compartiments S3. Dans [!DNL Pega Customer Decision Hub], vous pouvez planifier des tâches de données pour importer ces données de profil à partir du stockage S3 afin de mettre à jour le profil [!DNL Pega Customer Decision Hub].
+Utilisez le [!DNL Pega Profile Connector] dans Adobe Experience Platform pour créer une connexion sortante active vers votre stockage S3 [!DNL Amazon Web Services] (AWS) afin d’exporter périodiquement des données de profil vers des fichiers CSV à partir de Adobe Experience Platform dans vos propres compartiments S3. Dans [!DNL Pega Customer Decision Hub], vous pouvez planifier des tâches de données pour importer ces données de profil à partir du stockage S3 afin de mettre à jour le profil [!DNL Pega Customer Decision Hub].
 
-Ce connecteur permet de configurer l’exportation initiale des données de profil et de synchroniser régulièrement les nouveaux profils dans [!DNL Pega Customer Decision Hub].  Disposer de données à jour dans Customer Decision Hub offre une vue meilleure et mise à jour de votre base de clients pour la prise de décision la plus adaptée.
+Ce connecteur permet de configurer l’exportation initiale des données de profil et de synchroniser régulièrement les nouveaux profils dans [!DNL Pega Customer Decision Hub].  Disposer de données à jour dans Customer Decision Hub offre une vue meilleure et mise à jour de votre base de clients pour la prise de décision la plus appropriée.
 
 >[!IMPORTANT]
 >
->Ce connecteur de destination et cette page de documentation sont créés et conservés par les systèmes Pegasystems. Pour toute demande de mise à jour ou de demande de mise à jour, contactez directement Pega [ici](mailto:support@pega.com).
+>Ce connecteur de destination et cette page de documentation sont créés et gérés par Pegasystems. Pour toute demande ou information, veuillez contacter Pega directement [ici](mailto:support@pega.com).
 
 ## Cas d’utilisation
 
-Pour vous aider à mieux comprendre comment et à quel moment utiliser la destination [!DNL Pega Profile Connector], voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
+Pour mieux comprendre quand et comment utiliser la destination [!DNL Pega Profile Connector], consultez les exemples de cas d’utilisation ci-dessous que la clientèle de Adobe Experience Platform peut résoudre.
 
 ### Cas d’utilisation 1
 
-Un spécialiste du marketing souhaite initialement configurer [!DNL Pega Customer Decision Hub] avec des données de profil chargées à partir de Adobe Experience Platform. Il s’agit d’une charge complète initiale suivie de chargements delta programmés.
+Un spécialiste marketing souhaite configurer initialement des [!DNL Pega Customer Decision Hub] avec des données de profil chargées à partir de Adobe Experience Platform. Il s’agit d’une charge complète initiale suivie de charges delta selon un calendrier précis.
 
 ### Cas d’utilisation 2
 
-Un spécialiste du marketing souhaite que les données de profil à jour de Adobe Experience Platform soient disponibles dans [!DNL Pega Customer Decision Hub] afin d’améliorer continuellement les informations sur les profils clients Pega.
+Un spécialiste marketing souhaite que les données de profil Adobe Experience Platform à jour soient disponibles en [!DNL Pega Customer Decision Hub] afin d’améliorer de manière continue les informations Pega sur les profils clients.
 
 ## Conditions préalables {#prerequisites}
 
-Avant d’utiliser cette destination pour exporter des données de Adobe Experience Platform et importer des profils dans [!DNL Pega Customer Decision Hub], assurez-vous de remplir les conditions préalables suivantes :
+Avant de pouvoir utiliser cette destination pour exporter des données hors de Adobe Experience Platform et importer des profils dans [!DNL Pega Customer Decision Hub], veillez à remplir les conditions préalables suivantes :
 
-* Configurez le compartiment [!DNL Amazon S3] et le chemin du dossier à utiliser pour l’exportation et l’importation des fichiers de données.
-* Configurez la clé d&#39;accès [!DNL Amazon S3] et la clé secrète [!DNL Amazon S3] : dans [!DNL Amazon S3], générez une paire `access key - secret access key` pour accorder l&#39;accès à Platform à votre compte [!DNL Amazon S3].
-* Pour connecter et exporter des données vers votre emplacement de stockage [!DNL Amazon S3], créez un utilisateur de gestion des identités et des accès (IAM) pour [!DNL Platform] dans [!DNL Amazon S3] et attribuez des autorisations telles que `s3:DeleteObject`, `s3:GetBucketLocation`, `s3:GetObject`, `s3:ListBucket`, `s3:PutObject`, `s3:ListMultipartUploadParts`
+* Configurez [!DNL Amazon S3] compartiment et le chemin d’accès au dossier à utiliser pour l’exportation et l’importation de fichiers de données.
+* Configurez la clé d’accès [!DNL Amazon S3] et [!DNL Amazon S3] clé secrète : en [!DNL Amazon S3], générez une paire de `access key - secret access key` pour accorder à Experience Platform l’accès à votre compte [!DNL Amazon S3].
+* Pour établir une connexion et exporter des données vers votre emplacement de stockage [!DNL Amazon S3], créez un utilisateur de gestion des identités et des accès (IAM) pour les [!DNL Experience Platform] dans [!DNL Amazon S3] et attribuez des autorisations telles que `s3:DeleteObject`, `s3:GetBucketLocation`, `s3:GetObject`, `s3:ListBucket`, `s3:PutObject`, `s3:ListMultipartUploadParts`
 * Assurez-vous que votre instance [!DNL Pega Customer Decision Hub] est mise à niveau vers la version 8.8 ou ultérieure.
 
 ## Identités prises en charge {#supported-identities}
 
-[!DNL Pega Customer Decision Hub] prend en charge l’activation des ID utilisateur personnalisés décrits dans le tableau ci-dessous. Pour plus d’informations, voir [identities](/help/identity-service/features/namespaces.md).
+[!DNL Pega Customer Decision Hub] prend en charge l’activation des ID utilisateur personnalisés décrits dans le tableau ci-dessous. Pour plus d’informations, voir [identités](/help/identity-service/features/namespaces.md).
 
 | Identité cible | Description |
 |---|---|
@@ -68,7 +68,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin des **** et des **** [ ](/help/access-control/home.md#permissions) autorisations de contrôle d’accès. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -76,13 +76,13 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 Pour vous authentifier à la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
-* **[!DNL Amazon S3]clé d’accès** et **[!DNL Amazon S3]clé secrète** : dans [!DNL Amazon S3], générez une paire `access key - secret access key` pour accorder à Adobe Experience Platform l’accès à votre compte [!DNL Amazon S3]. En savoir plus dans la [Documentation Amazon Web Services](https://docs.aws.amazon.com/fr_fr/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* Clé d’accès **[!DNL Amazon S3]** et clé secrète **[!DNL Amazon S3]** : dans [!DNL Amazon S3], générez une paire de `access key - secret access key` pour accorder à Adobe Experience Platform l’accès à votre compte [!DNL Amazon S3]. En savoir plus dans la [Documentation Amazon Web Services](https://docs.aws.amazon.com/fr_fr/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 ### Renseigner les détails de la destination {#destination-details}
 
 Après avoir établi la connexion d’authentification à [!DNL Amazon S3], fournissez les informations suivantes pour la destination :
 
-![ Image de l’écran de l’interface utilisateur affichant les champs renseignés pour les détails de destination du connecteur de profil Pega](../../assets/catalog/personalization/pega-profile/pega-profile-connect-destination.png)
+![Image de l’écran de l’interface utilisateur affichant les champs remplis pour les détails de destination du connecteur de profil Pega](../../assets/catalog/personalization/pega-profile/pega-profile-connect-destination.png)
 
 Pour configurer les détails de la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Suivant]**. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
@@ -90,11 +90,11 @@ Pour configurer les détails de la destination, renseignez les champs requis et 
 * **[!UICONTROL Description]** : saisissez une description de cette destination.
 * **[!UICONTROL Nom du compartiment]** : saisissez le nom du compartiment [!DNL Amazon S3] que cette destination doit utiliser.
 * **[!UICONTROL Chemin du dossier]** : saisissez le chemin du dossier de destination qui hébergera les fichiers exportés.
-* **[!UICONTROL Type de compression]** : sélectionnez le type de compression GZIP ou NONE.
+* **[!UICONTROL Type de compression]** : sélectionnez le type de compression GZIP ou AUCUN.
 
 >[!TIP]
 >
->Dans le workflow de connexion à la destination, vous pouvez créer un dossier personnalisé dans le stockage Amazon S3 par fichier d’audience exporté. Lisez [Utiliser les macros pour créer un dossier à l’emplacement de stockage](/help/destinations/catalog/cloud-storage/overview.md#use-macros) pour obtenir des instructions.
+>Dans le workflow de connexion à la destination , vous pouvez créer un dossier personnalisé dans votre stockage Amazon S3 par fichier d’audience exporté. Lisez [Utiliser les macros pour créer un dossier à l’emplacement de stockage](/help/destinations/catalog/cloud-storage/overview.md#use-macros) pour obtenir des instructions.
 
 ### Activer les alertes {#enable-alerts}
 
@@ -106,10 +106,10 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin des ****, **[!UICONTROL Activer les destinations]**, **** et **** [  autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous avez besoin de l&#39;autorisation **[!UICONTROL Afficher le graphique d&#39;identités]** [ ](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
-Voir [Activation des données d’audience vers des destinations d’exportation de profil de lot](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Consultez [ Activer les données d’audience vers des destinations d’exportation de profils par lots ](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Mapper les attributs et les identités {#map}
 
@@ -117,17 +117,17 @@ Dans l’étape **[!UICONTROL Mappage]**, vous pouvez sélectionner les champs d
 
 ## Valider l’exportation des données {#exported-data}
 
-Pour les destinations [!DNL Pega Profile Connector], [!DNL Platform] crée un fichier `.csv` dans l’emplacement de stockage Amazon S3 que vous avez fourni. Pour plus d’informations sur les fichiers, voir [Activation des données d’audience vers les destinations d’exportation de profil de lot](../../ui/activate-batch-profile-destinations.md) dans le tutoriel sur l’activation de l’audience.
+Pour les destinations [!DNL Pega Profile Connector], [!DNL Experience Platform] crée un fichier `.csv` à l’emplacement de stockage Amazon S3 que vous avez fourni. Pour plus d’informations sur les fichiers, voir [Activer les données d’audience vers des destinations d’exportation de profils par lots](../../ui/activate-batch-profile-destinations.md) dans le tutoriel sur l’activation des audiences.
 
-Une importation réussie des données de profil à partir de S3 insère des données dans la banque de données de profil [!DNL Pega Customer]. Les données de profil client importées peuvent être validées dans [!DNL Pega Customer Profile Designer] , comme illustré dans la figure suivante.
-![Image de l’écran de l’interface utilisateur où vous pouvez valider les données de profil d’Adobe dans Customer Profile Designer](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
+Une importation réussie des données de profil à partir de S3 insère des données dans le magasin de données de profil [!DNL Pega Customer]. Les données de profil client importées peuvent être validées dans [!DNL Pega Customer Profile Designer] , comme le montre la figure suivante.
+![Image de l’écran de l’interface utilisateur où vous pouvez valider les données de profil Adobe dans Customer Profile Designer](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
 
-Dans [!DNL Pega Customer Decision Hub], les administrateurs de données peuvent configurer des tâches de données dans [!DNL Customer Profile Designer] pour importer régulièrement des données de profil à partir de S3, comme illustré dans la figure suivante. Pour plus d’informations sur la configuration de tâches de données pour importer des données de profil de [!DNL Amazon S3], voir les [ressources supplémentaires](#additional-resources) .
-![Image de l’écran de l’interface utilisateur pour configurer des tâches de données dans Customer Profile Designer](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)
+Dans [!DNL Pega Customer Decision Hub], les administrateurs de données peuvent configurer les tâches de données dans [!DNL Customer Profile Designer] pour importer régulièrement des données de profil à partir de S3, comme le montre la figure suivante. Consultez la [ressources supplémentaires](#additional-resources) pour plus d’informations sur la configuration des tâches de données afin d’importer des données de profil depuis [!DNL Amazon S3].
+![Image de l’écran de l’interface utilisateur pour configurer les tâches de données dans le Designer du profil client](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)
 
 ## Ressources supplémentaires {#additional-resources}
 
-Voir [Importer des tâches de données](https://academy.pega.com/topic/import-data-jobs/v1) dans [!DNL Pega Customer Decision Hub].
+Voir [Importation de tâches de données](https://academy.pega.com/topic/import-data-jobs/v1) dans [!DNL Pega Customer Decision Hub].
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

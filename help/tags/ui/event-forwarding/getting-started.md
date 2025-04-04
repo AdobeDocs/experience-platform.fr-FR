@@ -3,10 +3,10 @@ title: Prise en main du transfert dʼévénements
 description: Suivez ce tutoriel détaillé pour commencer à utiliser le transfert d’événement dans Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: e9f98e1f94aa6ae2ecf29940912d296813611d4c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '887'
-ht-degree: 84%
+source-wordcount: '893'
+ht-degree: 78%
 
 ---
 
@@ -27,13 +27,13 @@ Pour utiliser le transfert dʼévénements dans Adobe Experience Platform, les
 * [API du serveur réseau Edge](/help/server-api/overview.md)
 
 >[!NOTE]
->Le SDK web Platform et le SDK mobile Platform ne nécessitent pas de déploiement par le biais de balises dans Adobe Experience Platform. Toutefois, il est recommandé dʼutiliser des balises pour déployer ces SDK.
+>Experience Platform Web SDK et Experience Platform Mobile SDK ne nécessitent pas de déploiement par le biais de balises dans Adobe Experience Platform. Toutefois, il est recommandé dʼutiliser des balises pour déployer ces SDK.
 
 Après avoir envoyé les données au réseau Edge, vous pouvez basculer sur des solutions Adobe pour y envoyer des données. Pour envoyer des données à une solution non Adobe, configurez-la dans le transfert dʼévénements.
 
 ## Conditions préalables
 
-* Adobe Real-Time CDP Connections, Prime ou Ultimate (contactez l’équipe de votre compte d’Adobe pour connaître les prix)
+* Adobe Real-Time CDP Connections, Prime ou Ultimate (contactez l’équipe de votre compte Adobe pour connaître les tarifs)
 * Transfert d’événement dans Adobe Experience Platform
 * API Adobe Experience Platform Web SDK, Mobile SDK ou Edge Network Server configurée pour envoyer des données à Edge Network
 * Mettez en correspondance les données avec le modèle de données dʼexpérience (XDM) (cette mise en correspondance peut être effectuée à lʼaide de balises).
@@ -100,17 +100,17 @@ Ensuite, configurez Edge Network pour envoyer des données au transfert dʼévé
 
 Après la configuration, prenez note des identifiants d’environnement pour la nouvelle propriété.
 
-## Configurez l’extension SDK web de Platform pour envoyer des données au flux de données créé précédemment.
+## Configurez l’extension Experience Platform Web SDK pour envoyer des données au flux de données créé précédemment
 
-Créez votre propriété dans l’espace de travail **[!UICONTROL Balises]**, puis accédez à **[!UICONTROL Extensions]** et sélectionnez l’extension SDK Web Experience Platform dans le catalogue pour la configurer et l’installer.
+Créez votre propriété dans l’espace de travail **[!UICONTROL Balises]**, puis accédez à **[!UICONTROL Extensions]** et sélectionnez l’extension Experience Platform Web SDK dans le catalogue pour la configurer et l’installer.
 
 Consultez la [documentation de l’extension Web SDK](../../extensions/client/web-sdk/overview.md) pour plus d’informations sur les options de configuration.
 
-## Création dʼune règle de balise pour envoyer des données au SDK Web Platform
+## Créer une règle de balise pour envoyer des données à Experience Platform Web SDK
 
 Quand les éléments ci-dessus sont en place, créez les définitions des données, règles, etc. qui utilisent le transfert dʼévénements et les balises, mais qui ont uniquement besoin dʼune seule requête provenant de la page.
 
-Créez une règle de chargement de page à l’aide de l’extension Platform Web SDK et du type d’action « Envoyer l’événement » :
+Créez une règle de chargement de page à l’aide de l’extension Experience Platform Web SDK et du type d’action « Envoyer l’événement » :
 
 1. Ouvrez lʼonglet **[!UICONTROL Règles]**, puis sélectionnez **[!UICONTROL Créer une règle]**.
 
@@ -120,7 +120,7 @@ Créez une règle de chargement de page à l’aide de l’extension Platform We
 
 1. Ajoutez un événement en choisissant une extension et l’un des types d’événements disponibles pour cette extension, puis configurez les paramètres de l’événement. Par exemple, sélectionnez **[!UICONTROL Core - Fenêtre chargée]**.
 
-1. Ajoutez une action à l’aide de l’extension du SDK Web Platform. Sélectionnez **[!UICONTROL Envoyer lʼévénement]** dans la liste **[!UICONTROL Type dʼaction]**, sélectionnez lʼinstance de votre choix (instance Alloy configurée précédemment), puis sélectionnez un élément de données à ajouter au bloc de données XDM dans lʼaccès Alloy.
+1. Ajoutez une action à l’aide de l’extension Experience Platform Web SDK. Sélectionnez **[!UICONTROL Envoyer lʼévénement]** dans la liste **[!UICONTROL Type dʼaction]**, sélectionnez lʼinstance de votre choix (instance Alloy configurée précédemment), puis sélectionnez un élément de données à ajouter au bloc de données XDM dans lʼaccès Alloy.
 
 1. Laissez le reste des paramètres par défaut pour cet exemple, puis sélectionnez **[!UICONTROL Enregistrer]**.
 

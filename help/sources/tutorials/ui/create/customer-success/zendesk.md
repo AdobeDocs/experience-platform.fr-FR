@@ -1,11 +1,11 @@
 ---
-title: Création d’une connexion Zendesk Source dans l’interface utilisateur
+title: Créer une connexion Source Zendesk dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Zendesk à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 35%
+source-wordcount: '746'
+ht-degree: 30%
 
 ---
 
@@ -24,7 +24,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 ### Collecter les informations d’identification requises
 
-Pour accéder à votre compte [!DNL Zendesk] sur Platform, vous devez fournir des valeurs pour les informations d’identification suivantes :
+Pour accéder au compte [!DNL Zendesk] sur Experience Platform, vous devez fournir des valeurs pour les informations d’identification suivantes :
 
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
@@ -33,31 +33,31 @@ Pour accéder à votre compte [!DNL Zendesk] sur Platform, vous devez fournir de
 
 Pour plus d’informations sur l’authentification de votre source [!DNL Zendesk], consultez la [[!DNL Zendesk] présentation de la source](../../../../connectors/customer-success/zendesk.md).
 
-![Jeton d’API Zendesk](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
+![ Jeton API Zendesk ](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
-### Création d’un schéma de plateforme pour [!DNL Zendesk]
+### Création d’un schéma Experience Platform pour [!DNL Zendesk]
 
-Avant de créer une connexion source [!DNL Zendesk], vous devez également vous assurer de créer au préalable un schéma de plateforme à utiliser pour votre source. Consultez le tutoriel sur la [création d’un schéma de plateforme](../../../../../xdm/schema/composition.md) pour obtenir des instructions complètes sur la création d’un schéma.
+Avant de créer une connexion source [!DNL Zendesk], vous devez également vous assurer de créer d’abord un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la [création d’un schéma Experience Platform).
 
-Pour plus d&#39;informations sur votre schéma [!DNL Zendesk] requis pour [!DNL Zendesk Search API], reportez-vous à la section [limites](#limits) ci-dessous.
+Pour plus d’informations sur le schéma de [!DNL Zendesk] requis pour le [!DNL Zendesk Search API], reportez-vous à la section [limites](#limits) ci-dessous.
 
 ![Créer un schéma](../../../../images/tutorials/create/zendesk/schema.png)
 
 ## Connecter votre compte [!DNL Zendesk]
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous la catégorie *Succès client*, sélectionnez **[!UICONTROL Zendesk]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
+Dans la catégorie *Succès client*, sélectionnez **[!UICONTROL Zendesk]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
 ![catalogue](../../../../images/tutorials/create/zendesk/catalog.png)
 
-La page **[!UICONTROL Se connecter au compte Zendesk]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Connecter le compte Zendesk]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant
 
-Pour utiliser un compte existant, sélectionnez le compte *Zendesk* avec lequel vous souhaitez créer un nouveau flux de données, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Pour utiliser un compte existant, sélectionnez le compte *Zendesk* avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![existant](../../../../images/tutorials/create/zendesk/existing.png)
 
@@ -69,13 +69,13 @@ Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fo
 
 ### Sélectionner les données
 
-Une fois votre source authentifiée, la page se met à jour dans une arborescence de schémas interactifs qui vous permet d’explorer et d’inspecter la hiérarchie de vos données. Sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Une fois votre source authentifiée, la page se met à jour dans une arborescence de schéma interactif qui vous permet d’explorer et d’inspecter la hiérarchie de vos données. Sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![select-data](../../../../images/tutorials/create/zendesk/select-data.png)
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez authentifié et avez créé une connexion source entre votre compte [!DNL Zendesk] et Platform. Vous pouvez maintenant passer au tutoriel suivant et [créer un flux de données pour importer les données de succès client dans Platform](../../dataflow/customer-success.md).
+En suivant ce tutoriel, vous avez authentifié et avez créé une connexion source entre votre compte [!DNL Zendesk] et Experience Platform. Vous pouvez maintenant passer au tutoriel suivant et [créer un flux de données pour importer des données de succès client dans Experience Platform](../../dataflow/customer-success.md).
 
 ## Ressources supplémentaires
 
@@ -83,13 +83,13 @@ Les sections ci-dessous fournissent des ressources supplémentaires auxquelles v
 
 ### Validation {#validation}
 
-Les étapes suivantes décrivent les étapes que vous pouvez suivre pour vérifier que vous avez correctement connecté votre source [!DNL Zendesk] et que les profils [!DNL Zendesk] sont ingérés dans Platform.
+Vous trouverez ci-dessous un aperçu des étapes que vous pouvez suivre pour vérifier que vous avez correctement connecté votre source [!DNL Zendesk] et que [!DNL Zendesk] profils sont ingérés dans Experience Platform.
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Jeux de données]. L’écran [!UICONTROL Activité du jeu de données] affiche les détails des exécutions.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Jeux de données]. L’écran [!UICONTROL Activité du jeu de données] affiche les détails des exécutions.
 
-![Page d’activité](../../../../images/tutorials/create/zendesk/dataset-activity.png)
+![Page Activité](../../../../images/tutorials/create/zendesk/dataset-activity.png)
 
-Sélectionnez ensuite l’identifiant d’exécution du flux de données que vous souhaitez afficher pour afficher des détails spécifiques sur cette exécution.
+Sélectionnez ensuite l’identifiant d’exécution du flux de données du flux de données que vous souhaitez afficher pour afficher des détails spécifiques sur cette exécution.
 
 ![Page Flux de données](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
 
@@ -97,9 +97,9 @@ Enfin, sélectionnez **[!UICONTROL Prévisualiser le jeu de données]** pour aff
 
 ![Jeu de données Zendesk](../../../../images/tutorials/create/zendesk/preview-dataset.png)
 
-Vous pouvez également comparer vos données Platform aux données de votre page [!DNL Zendesk] > [!DNL Customers].
+Vous pouvez également comparer vos données Experience Platform aux données de votre page [!DNL Zendesk] > [!DNL Customers] .
 
-![zendesk-customers](../../../../images/tutorials/create/zendesk/zendesk-customers.png)
+![clients zendesk](../../../../images/tutorials/create/zendesk/zendesk-customers.png)
 
 ### Schéma Zendesk
 
@@ -107,7 +107,7 @@ Le tableau ci-dessous répertorie les mappages pris en charge qui doivent être 
 
 >[!TIP]
 >
->Pour plus d’informations sur l’API, voir [API de recherche Zendesk > Exporter les résultats de recherche](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) .
+>Consultez [API de recherche Zendesk > Exporter les résultats de la recherche](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) pour plus d’informations sur l’API.
 
 | Source | Type |
 |---|---|
@@ -152,8 +152,8 @@ Le tableau ci-dessous répertorie les mappages pris en charge qui doivent être 
 
 ### Limites {#limits}
 
-* L’ [API de recherche Zendesk > Exporter les résultats de recherche](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) renvoie un maximum de 1 000 enregistrements par page.
-   * La valeur du paramètre ``filter[type]`` est définie sur ``user`` et par conséquent, la connexion Zendesk renvoie uniquement les utilisateurs.
-   * Le nombre de résultats par page est géré par le paramètre ``page[size]`` . La valeur est définie sur ``100``. Cela permet de réduire l&#39;impact des contraintes de réduction de vitesse définies par Zendesk.
+* Le [API de recherche Zendesk > Exporter les résultats de la recherche](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) renvoie un maximum de 1 000 enregistrements par page.
+   * La valeur du paramètre ``filter[type]`` est définie sur ``user`` et, par conséquent, la connexion Zendesk renvoie uniquement des utilisateurs.
+   * Le nombre de résultats par page est géré par le paramètre ``page[size]`` . La valeur est définie sur ``100``. Cela permet de réduire l’impact des contraintes de réduction de vitesse définies par Zendesk.
    * Voir [Limites](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#limits) et [Pagination](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#pagination-1).
-   * Vous pouvez également vous reporter à la section [Pagination des listes à l’aide de la pagination du curseur](https://developer.zendesk.com/documentation/developer-tools/pagination/paginating-through-lists-using-cursor-pagination/).
+   * Vous pouvez également vous reporter à la section [Pagination dans les listes à l’aide de la pagination du curseur](https://developer.zendesk.com/documentation/developer-tools/pagination/paginating-through-lists-using-cursor-pagination/).

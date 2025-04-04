@@ -5,7 +5,7 @@ title: Importer une recette empaquetée à l’aide de l’API Sensei Machine Le
 type: Tutorial
 description: Ce tutoriel utilise l’API Sensei Machine Learning pour créer un moteur, également appelé recette dans l’interface utilisateur.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 50%
@@ -41,7 +41,7 @@ Ce tutoriel nécessite un fichier de recette empaqueté sous la forme d’une UR
 
 - `{DOCKER_URL}` : adresse URL d’une image Docker d’un service intelligent.
 
-Pour suivre ce tutoriel, vous devez avoir terminé le tutoriel [Authentification à Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) afin d’effectuer avec succès des appels vers les API [!DNL Platform]. Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour suivre ce tutoriel, vous devez avoir terminé le tutoriel [Authentification à Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) afin d’effectuer avec succès des appels vers les API [!DNL Experience Platform]. Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.
 - `{ORG_ID}` : informations d’identification de votre organisation, qui se trouvent dans votre intégration Adobe Experience Platform unique.
@@ -176,7 +176,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie une payload contenant les détails du moteur nouvellement créé, y compris son identifiant unique (`id`). L’exemple de réponse suivant concerne un moteur [!DNL Python]. Les clés `executionType` et `type` changent en fonction du POST fourni.
+Une réponse réussie renvoie une payload contenant les détails du moteur nouvellement créé, y compris son identifiant unique (`id`). L’exemple de réponse suivant concerne un moteur [!DNL Python]. Les clés `executionType` et `type` changent en fonction de l’instruction POST fournie.
 
 ```json
 {

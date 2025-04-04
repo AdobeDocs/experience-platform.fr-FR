@@ -1,63 +1,63 @@
 ---
 keywords: insights;IA dédiée à l’attrbution;informations sur l’IA dédiée à l’attribution;service de requête AAI;requêtes d’attribution;scores d’attribution
 feature: Attribution AI
-title: Analyse des scores d’attribution à l’aide de Query Service
-description: Découvrez comment utiliser Adobe Experience Platform Query Service pour analyser les scores Attribution AI.
+title: Analyse Des Scores D’Attribution À L’Aide De Query Service
+description: Découvrez comment utiliser Adobe Experience Platform Query Service pour analyser les scores de l’IA dédiée à l’attribution.
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '590'
 ht-degree: 2%
 
 ---
 
 # Analyse des scores d’attribution à l’aide de Query Service
 
-Chaque ligne des données représente une conversion, dans laquelle les informations des points de contact associés sont stockées sous la forme d’un tableau de structs sous la colonne `touchpointsDetail`.
+Chaque ligne des données représente une conversion, dans laquelle les informations des points de contact associés sont stockées sous la forme d’un tableau de structures sous la colonne `touchpointsDetail`.
 
-| Informations sur les points de contact | Colonne |
+| Informations sur le point de contact | Colonne |
 | ---------------------- | ------ |
 | Nom du point de contact | `touchpointsDetail. touchpointName` |
-| Canal point de contact | `touchpointsDetail.touchPoint.mediaChannel` |
-| Scores algorithmiques Attribution AI point de contact | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
+| Canal de point de contact | `touchpointsDetail.touchPoint.mediaChannel` |
+| Scores algorithmiques de l’IA dédiée à l’attribution des points de contact | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
-## Recherche de vos chemins de données
+## Recherche des chemins d’accès aux données
 
-Dans l’interface utilisateur de Adobe Experience Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche. La page **[!UICONTROL Jeux de données]** s’affiche. Ensuite, sélectionnez l’onglet **[!UICONTROL Parcourir]** et recherchez le jeu de données de sortie pour vos scores Attribution AI.
+Dans l’interface utilisateur de Adobe Experience Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche. La page **[!UICONTROL Jeux de données]** s’affiche. Sélectionnez ensuite l’onglet **[!UICONTROL Parcourir]** et recherchez le jeu de données de sortie pour vos scores IA dédiée à l’attribution.
 
 ![Accès à votre modèle](./images/aai-query/datasets_browse.png)
 
-Sélectionnez votre jeu de données de sortie. La page d’activité du jeu de données s’affiche.
+Sélectionnez le jeu de données de sortie. La page d’activité du jeu de données s’affiche.
 
-![page d’activité du jeu de données](./images/aai-query/select_preview.png)
+![page activité du jeu de données](./images/aai-query/select_preview.png)
 
-Dans la page de l’activité du jeu de données, sélectionnez **[!UICONTROL Prévisualiser le jeu de données]** dans le coin supérieur droit pour prévisualiser vos données et vous assurer qu’elles ont été ingérées comme prévu.
+Dans la page d’activité du jeu de données, sélectionnez **[!UICONTROL Prévisualiser le jeu de données]** dans le coin supérieur droit pour prévisualiser vos données et vous assurer qu’elles ont été ingérées comme prévu.
 
 ![prévisualiser le jeu de données](./images/aai-query/preview_dataset.JPG)
 
-Après avoir prévisualisé vos données, sélectionnez le schéma dans le rail de droite. Une fenêtre contextuelle s’affiche avec le nom et la description du schéma. Sélectionnez l’hyperlien du nom du schéma pour rediriger vers le schéma de notation.
+Après avoir prévisualisé vos données, sélectionnez le schéma dans le rail de droite. Une fenêtre contextuelle s’affiche avec le nom et la description du schéma. Sélectionnez le lien hypertexte du nom du schéma pour rediriger vers le schéma de notation.
 
 ![sélectionnez le schéma](./images/aai-query/select_schema.png)
 
-À l’aide du schéma de notation, vous pouvez sélectionner ou rechercher une valeur. Une fois sélectionné, le rail latéral **[!UICONTROL Propriétés du champ]** s’ouvre et vous permet de copier le chemin d’accès à utiliser dans la création de requêtes.
+À l’aide du schéma de notation, vous pouvez sélectionner ou rechercher une valeur. Une fois sélectionné, le rail latéral **[!UICONTROL Propriétés du champ]** s’ouvre, vous permettant de copier le chemin d’accès à utiliser dans la création de requêtes.
 
-![Copiez le chemin](./images/aai-query/copy_path.png)
+![copier le chemin](./images/aai-query/copy_path.png)
 
-## Accès à Query Service
+## Accéder à Query Service
 
-Pour accéder à Query Service à partir de l’interface utilisateur de Platform, commencez par sélectionner **[!UICONTROL Requêtes]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Parcourir]**. Une liste de vos requêtes précédemment enregistrées est chargée.
+Pour accéder à Query Service à partir de l’interface utilisateur d’Experience Platform, commencez par sélectionner **[!UICONTROL Requêtes]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Parcourir]**. Une liste de vos requêtes précédemment enregistrées est chargée.
 
-![Parcours du service de requête](./images/aai-query/query_tab.png)
+![navigation dans query service](./images/aai-query/query_tab.png)
 
-Sélectionnez ensuite **[!UICONTROL Créer une requête]** dans le coin supérieur droit. L’éditeur de requêtes se charge. À l’aide de l’éditeur de requêtes, vous pouvez commencer à créer des requêtes à l’aide de vos données de notation.
+Sélectionnez ensuite **[!UICONTROL Créer une requête]** dans le coin supérieur droit. Le Query Editor se charge. À l’aide du Query Editor, vous pouvez commencer à créer des requêtes à l’aide de vos données de notation.
 
-![Éditeur de requête](./images/aai-query/query_example.png)
+![éditeur de requêtes](./images/aai-query/query_example.png)
 
-Pour plus d’informations sur Query Editor, consultez le [guide de l’utilisateur de Query Editor](../../query-service/ui/user-guide.md).
+Pour plus d’informations sur Query Editor, consultez le guide d’utilisation [Query Editor](../../query-service/ui/user-guide.md).
 
 ## Modèles de requête pour l’analyse du score d’attribution
 
-Les requêtes ci-dessous peuvent être utilisées comme modèle pour différents scénarios d’analyse des scores. Vous devez remplacer `_tenantId` et `your_score_output_dataset` par les valeurs appropriées trouvées dans votre schéma de sortie de notation.
+Les requêtes ci-dessous peuvent être utilisées comme modèle pour différents scénarios d’analyse de score. Vous devez remplacer les `_tenantId` et `your_score_output_dataset` par les valeurs correctes figurant dans votre schéma de sortie de notation.
 
 >[!NOTE]
 >
@@ -104,7 +104,7 @@ Les requêtes ci-dessous peuvent être utilisées comme modèle pour différents
         conversionName
 ```
 
-### Exemple d’analyse des tendances
+### Exemple d&#39;analyse des tendances
 
 **Nombre de conversions par jour**
 
@@ -127,7 +127,7 @@ Les requêtes ci-dessous peuvent être utilisées comme modèle pour différents
     LIMIT 20
 ```
 
-### Exemple d&#39;analyse de distribution
+### Exemple d&#39;analyse de répartition
 
 **Nombre de points de contact sur les chemins de conversion par type défini (dans une fenêtre de conversion)**
 
@@ -153,9 +153,9 @@ Les requêtes ci-dessous peuvent être utilisées comme modèle pour différents
         conversionName, tp_count DESC
 ```
 
-### Exemples de génération d’informations
+### Exemples de génération Insight
 
-**Ventilation des unités incrémentielles par point de contact et date de conversion (dans une fenêtre de conversion)**
+**Répartition des unités incrémentielles par point de contact et date de conversion (dans une fenêtre de conversion)**
 
 ```sql
     SELECT conversionName,
@@ -180,7 +180,7 @@ Les requêtes ci-dessous peuvent être utilisées comme modèle pour différents
         conversionName, touchpointName, DATE(conversion_timestamp)
 ```
 
-**Ventilation des unités incrémentielles par date de point de contact et de point de contact (dans une fenêtre de conversion)**
+**Répartition des unités incrémentielles par point de contact et date de point de contact (dans une fenêtre de conversion)**
 
 ```sql
     SELECT conversionName,
@@ -237,9 +237,9 @@ Les requêtes ci-dessous peuvent être utilisées comme modèle pour différents
         conversionName, touchpointName
 ```
 
-**Avancé - Analyse de longueur de chemin**
+**Avancé - Analyse de la longueur du chemin**
 
-Obtenez une distribution de longueur de chemin pour chaque type d’événement de conversion :
+Obtenez une distribution de longueur du chemin pour chaque type d’événement de conversion :
 
 ```sql
     WITH agg_path AS (
@@ -268,9 +268,9 @@ Obtenez une distribution de longueur de chemin pour chaque type d’événement 
         conversionName, path_length
 ```
 
-**Avancé - nombre distinct de points de contact sur l’analyse des chemins de conversion**
+**Avancé : nombre distinct de points de contact lors de l’analyse des chemins de conversion**
 
-Obtenez la distribution du nombre de points de contact distincts sur un chemin de conversion pour chaque type d’événement de conversion :
+Obtenez la distribution pour le nombre de points de contact distincts sur un chemin de conversion pour chaque type d’événement de conversion :
 
 ```sql
     WITH agg_path AS (
@@ -299,13 +299,13 @@ Obtenez la distribution du nombre de points de contact distincts sur un chemin d
         conversionName, num_dist_tp
 ```
 
-### Exemple d&#39;aplatissement du schéma et d&#39;explosion
+### Exemple d’aplatissement et d’explosion de schéma
 
-Cette requête aplatit la colonne struct en plusieurs colonnes uniques et éclate les tableaux en plusieurs lignes. Cela permet de transformer les scores d’attribution en un format CSV. La sortie de cette requête comporte une conversion et l’un des points de contact correspondant à cette conversion dans chaque ligne.
+Cette requête aplatit la colonne de structure en plusieurs colonnes singulières et éclate les tableaux en plusieurs lignes. Cela permet de transformer les scores d’attribution au format CSV. La sortie de cette requête comporte une conversion et l’un des points de contact correspondant à cette conversion dans chaque ligne.
 
 >[!TIP]
 >
-> Dans cet exemple, vous devez remplacer `{COLUMN_NAME}` en plus de `_tenantId` et `your_score_output_dataset`. La variable `COLUMN_NAME` peut prendre les valeurs des noms de colonne transmis (colonnes de rapports) facultatifs qui ont été ajoutés lors de la configuration de votre modèle Attribution AI. Consultez votre schéma de sortie de notation pour trouver les valeurs `{COLUMN_NAME}` nécessaires pour terminer cette requête.
+> Dans cet exemple, vous devez remplacer `{COLUMN_NAME}` en plus de `_tenantId` et `your_score_output_dataset`. La variable `COLUMN_NAME` peut prendre les valeurs des noms de colonne facultatifs (colonnes de rapports) qui ont été ajoutés lors de la configuration de votre modèle IA dédiée à l’attribution. Veuillez consulter votre schéma de sortie de notation pour trouver les valeurs `{COLUMN_NAME}` nécessaires à l’exécution de cette requête.
 
 ```sql
 SELECT 

@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;Apache Cassandra;apache cassandra;cassandra;Cassandra
 solution: Experience Platform
-title: Présentation d’Apache Cassandra Source Connector
+title: Présentation Du Connecteur Source Apache Cassandra
 description: Découvrez comment connecter Apache Cassandra à Adobe Experience Platform à l’aide d’API.
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 33%
@@ -13,14 +13,14 @@ ht-degree: 33%
 
 # Connecteur [!DNL Apache Cassandra]
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
-[!DNL Experience Platform] prend en charge l’ingestion de données à partir d’une base de données tierce. [!DNL Platform] peut se connecter à différents types de bases de données comme les entrepôts relationnels, NoSQL ou de données. [!DNL Apache Cassandra] est compatible avec les fournisseurs de base de données.
+[!DNL Experience Platform] prend en charge l’ingestion de données provenant d’une base de données tierce. [!DNL Experience Platform] pouvez vous connecter à différents types de bases de données, telles que Relational, NoSQL ou Data Warehouse. La prise en charge des fournisseurs de base de données inclut [!DNL Apache Cassandra].
 
-La documentation ci-dessous fournit des informations sur la connexion de [!DNL Apache Cassandra] à [!DNL Platform] à l’aide des API :
+La documentation ci-dessous fournit des informations sur la connexion de [!DNL Apache Cassandra] à [!DNL Experience Platform] à l’aide d’API :
 
-## Connecter [!DNL Apache Cassandra] à [!DNL Platform] à lʼaide dʼAPI
+## Connecter [!DNL Apache Cassandra] à [!DNL Experience Platform] à lʼaide dʼAPI
 
-- [Créez une connexion source Apache Cassandra à l’aide de l’API Flow Service](../../tutorials/api/create/databases/cassandra.md)
-- [Exploration d’un système de base de données à l’aide de l’API Flow Service](../../tutorials/api/explore/database-nosql.md)
-- [Collecte de données à partir d’une base de données à l’aide de l’API Flow Service](../../tutorials/api/collect/database-nosql.md)
+- [Créer une connexion source Apache Cassandra à l’aide de l’API Flow Service](../../tutorials/api/create/databases/cassandra.md)
+- [Explorer un système de base de données à l’aide de l’API Flow Service](../../tutorials/api/explore/database-nosql.md)
+- [Collecter des données d’une base de données à l’aide de l’API Flow Service](../../tutorials/api/collect/database-nosql.md)

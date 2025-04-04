@@ -3,10 +3,10 @@ title: Personnaliser des expériences sur site pour les visiteurs inconnus à l�
 description: Découvrez comment utiliser la reconnaissance des visiteurs et visiteuses par les partenaires pour personnaliser les expériences sur site de vos visiteurs et visiteuses.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2673'
-ht-degree: 89%
+source-wordcount: '2676'
+ht-degree: 88%
 
 ---
 
@@ -42,7 +42,7 @@ Lorsque vous envisagez d’utiliser des attributs fournis par les partenaires po
 * Dans quelle mesure seriez-vous à l’aise de fournir une personnalisation dans différents canaux et pour différents cas d’utilisation basés sur des jeux de données dérivés de manière probabiliste, par rapport aux attributs confirmés de manière déterministe ?
 * Comment l’expérience d’une personne visiteuse préauthentifiée mais reconnue doit-elle changer lorsqu’elle s’authentifie ?
 
-### Fonctionnalités de l’interface utilisateur, composants Platform et produits Experience Cloud que vous allez utiliser {#ui-functionality-and-elements}
+### Fonctionnalités de l’interface utilisateur, composants Experience Platform et produits Experience Cloud que vous utiliserez {#ui-functionality-and-elements}
 
 Pour mettre en œuvre ce cas d’utilisation avec succès, vous devez utiliser plusieurs zones de Real-time Customer Data Platform et d’autres solutions Experience Cloud. Assurez-vous que vous disposez des [autorisations de contrôle d’accès basées sur des attributs](/help/access-control/abac/overview.md) pour toutes ces zones ou demandez à votre administrateur ou administratrice système de vous accorder les autorisations nécessaires.
 
@@ -131,7 +131,7 @@ Tout d’abord, utilisez le sélecteur d’applications dans le coin supérieur 
 
 La section **[!UICONTROL Collecte de données]** de l’interface utilisateur ressemble à l’image ci-dessous.
 
-![Section Collecte de données de l’interface utilisateur de Platform.](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
+![Section Collecte de données de l’interface utilisateur d’Experience Platform.](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
 
 #### Créer un train de données
 
@@ -259,7 +259,7 @@ Vous pouvez à présent créer et activer des audiences pour la personnalisation
 
 #### Créer une audience et configurer la segmentation Edge
 
-Dans l’interface utilisateur de Platform, accédez à **[!UICONTROL Client]** > **[!UICONTROL Audiences]** et créez une audience pour capturer les visiteurs de votre site web.
+Dans l’interface utilisateur d’Experience Platform, accédez à **[!UICONTROL Client]** > **[!UICONTROL Audiences]** et créez une audience pour capturer les visiteurs de votre site web.
 
 ![Vue sur la navigation vers les audiences.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 

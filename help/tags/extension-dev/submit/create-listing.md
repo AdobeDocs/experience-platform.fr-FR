@@ -2,9 +2,9 @@
 title: Création dʼune liste Exchange pour une extension
 description: Découvrez comment ajouter votre extension au catalogue public dans Adobe Experience Platform.
 exl-id: 0395fc99-5e2b-46d6-a067-f8f167733e02
-source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1194'
 ht-degree: 71%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platform comporte un catalogue unique et unifié dans lequel 
 
 En dehors des extensions du catalogue de produits, les extensions publiques ont également des listes dans le [Marché des applications Experience Cloud Exchange](https://exchange.adobe.com/apps/browse/ec).
 
-Ces listes permettent aux développeurs d’extensions de publier des descriptions de fonctionnalité, de fournir des liens vers la documentation et de commercialiser des extensions auprès des utilisateurs potentiels qui ne connaissent pas votre société ou les fonctionnalités de votre extension. Dans ce marché, votre extension comportera une liste publique qui pourra être consultée sans que l’utilisateur ne soit authentifié sur Platform. Pour les extensions publiques, la création de cette liste Exchange est une étape obligatoire.
+Ces listes permettent aux développeurs d’extensions de publier des descriptions de fonctionnalité, de fournir des liens vers la documentation et de commercialiser des extensions auprès des utilisateurs potentiels qui ne connaissent pas votre société ou les fonctionnalités de votre extension. Dans ce marché, votre extension comportera une liste publique qui pourra être consultée sans que l’utilisateur ne soit authentifié sur Experience Platform. Pour les extensions publiques, la création de cette liste Exchange est une étape obligatoire.
 
 >[!TIP]
 >

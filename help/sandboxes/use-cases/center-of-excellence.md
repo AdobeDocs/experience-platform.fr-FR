@@ -1,15 +1,15 @@
 ---
-title: Activer un centre d’excellence à l’aide de l’outil Sandbox
+title: Activer un centre d’excellence à l’aide des outils de sandbox
 description: Créez un centre d’excellence à l’aide de l’outil sandbox en créant un package « sandbox doré » pour normaliser les bonnes pratiques sur plusieurs sandbox.
 exl-id: 6f242ad5-bb02-4a6d-b255-d196dd5fe4b8
-source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '881'
-ht-degree: 7%
+source-wordcount: '882'
+ht-degree: 8%
 
 ---
 
-# Activer un centre d’excellence à l’aide de l’outil Sandbox
+# Activer un centre d’excellence à l’aide des outils de sandbox
 
 Créez un centre d’excellence à l’aide de l’outil sandbox en créant un package « sandbox doré » pour normaliser les bonnes pratiques sur plusieurs sandbox.
 
@@ -37,7 +37,7 @@ Lorsque vous prévoyez créer votre propre centre d&#39;excellence au sein de vo
 - Créez un sandbox avec toutes les configurations pertinentes et validées à définir comme sandbox dorée.
 - Si nécessaire, obtenez les commentaires des parties prenantes et un accord sur vos normes de base.
 
-### Fonctionnalités de l’interface utilisateur, composants Platform et produits Experience Cloud que vous allez utiliser {#ui-functionality-and-elements}
+### Fonctionnalités de l’interface utilisateur, composants Experience Platform et produits Experience Cloud que vous utiliserez {#ui-functionality-and-elements}
 
 Pour réussir l’implémentation de ce cas d’utilisation, vous devez utiliser plusieurs zones de Adobe Experience Platform. Vérifiez que vous disposez des autorisations de contrôle d’accès basé sur les attributs [ nécessaires](../../access-control/abac/overview.md) pour toutes ces zones, ou demandez à votre administrateur système de vous accorder les autorisations nécessaires.
 
@@ -73,7 +73,7 @@ Maintenant que votre sandbox contient vos configurations d’objet de base, elle
 
 ### Importer votre package dans les sandbox appropriés
 
-Maintenant que votre package a été créé, vous pouvez l’importer dans vos sandbox appropriés. La bonne pratique consiste à importer un package contenant un sandbox entier dans un sandbox vide. Grâce aux outils Sandbox, vous pouvez facilement [importer un package Sandbox entier](../../sandboxes/ui/sandbox-tooling.md#import-the-entire-sandbox-package) dans un sandbox directement dans Experience Platform.
+Maintenant que votre package a été créé, vous pouvez l’importer dans vos sandbox appropriés. La bonne pratique consiste à importer un package contenant un sandbox entier dans un sandbox vide. Grâce aux outils sandbox, vous pouvez facilement [importer un package sandbox entier](../../sandboxes/ui/sandbox-tooling.md#import-the-entire-sandbox-package) dans un sandbox directement dans Experience Platform.
 
 ### Partager le package entre les organisations
 
@@ -89,7 +89,7 @@ Maintenant que votre package sandbox doré est terminé, vous avez établi un ce
 
 >[!NOTE]
 >
-> Les étapes ci-dessus suivent le processus dans l’interface utilisateur de l’Experience Platform. Il est possible de suivre les mêmes étapes à l’aide de l’API via différents points d’entrée. Pour plus d’informations sur l’exécution de chaque requête via l’API](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/api/sandboxes#create) consultez les guides des points d’entrée `sandboxes` [endpoint guide et `packages` [endpoint guide](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages).
+> Les étapes ci-dessus suivent le processus décrit dans l’interface utilisateur d’Experience Platform. Il est possible de suivre les mêmes étapes à l’aide de l’API via différents points d’entrée. Pour plus d’informations sur l’exécution de chaque requête via l’API](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/api/sandboxes#create) consultez les guides des points d’entrée `sandboxes` [endpoint guide et `packages` [endpoint guide](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages).
 
 ## Autres cas d’utilisation réalisés grâce à la prise en charge des données des partenaires {#other-use-cases}
 

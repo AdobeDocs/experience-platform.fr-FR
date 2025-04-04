@@ -2,10 +2,10 @@
 title: Présentation de lʼextension Adobe Media Analytics (3.x SDK) for Audio and Video
 description: Découvrez lʼextension Adobe Media Analytics (SDK 3.x) for Audio and Video dans Adobe Experience Platform.
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
-source-git-commit: e21ed1e9fd0c2678551cfc664b611076c198a157
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 98%
+source-wordcount: '708'
+ht-degree: 95%
 
 ---
 
@@ -24,7 +24,7 @@ L’extension Media Analytics (MA) ajoute le SDK principal JavaScript Media (SDK
 
 >[!IMPORTANT]
 >
->Cette extension est déployée avec le SDK Media 3.x, qui n’a pas de compatibilité descendante avec le SDK Media 2.x. Depuis que la version 2.x a été abandonnée, mettez à jour vers la version 3.x.
+>Cette extension est déployée avec le SDK Media 3.x, qui n’a pas de compatibilité descendante avec le SDK Media 2.x. Puisque la version 2.x a été abandonnée, veuillez mettre à jour vers la version 3.x.
 
 Après avoir inclus les trois extensions mentionnées ci-dessus dans votre projet acceptant les balises, vous pouvez procéder de deux façons :
 
@@ -110,4 +110,4 @@ L’extension MA expose `media` en tant que module partagé aux autres extension
 
 >[!NOTE]
 >
->**Tests :** pour tester votre extension dans cette version, vous devez télécharger votre extension sur [Platform](../../../extension-dev/submit/upload-and-test.md), où vous avez accès à toutes les extensions dépendantes.
+>**Tests :** pour tester votre extension dans cette version, vous devez télécharger votre extension sur [Experience Platform](../../../extension-dev/submit/upload-and-test.md), où vous avez accès à toutes les extensions dépendantes.

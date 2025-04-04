@@ -2,18 +2,18 @@
 keywords: Experience Platform;accueil;rubriques populaires;ETL;etl;intégrations etl;intégrations ETL
 solution: Experience Platform
 title: Développement d’intégrations ETL pour Adobe Experience Platform
-description: Le guide d’intégration ETL décrit les étapes générales de la création de connecteurs sécurisés et haute performance pour Experience Platform et l’ingestion de données dans Platform.
+description: Le guide d’intégration ETL décrit les étapes générales de la création de connecteurs sécurisés et haute performance pour Experience Platform et de l’ingestion de données dans Experience Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3977'
-ht-degree: 99%
+source-wordcount: '3978'
+ht-degree: 98%
 
 ---
 
 # Développement d’intégrations ETL pour Adobe Experience Platform
 
-Le guide d’intégration ETL décrit les étapes générales de la création de connecteurs sécurisés et haute performance pour [!DNL Experience Platform] et l’ingestion de données dans [!DNL Platform].
+Le guide d’intégration ETL décrit les étapes générales de la création de connecteurs sécurisés et haute performance pour [!DNL Experience Platform] et l’ingestion de données dans [!DNL Experience Platform].
 
 
 - [[!DNL Catalog]](https://www.adobe.io/experience-platform-apis/references/catalog/)
@@ -40,7 +40,7 @@ Plusieurs composants d’Experience Platform sont impliqués dans les intégrat
 - **Adobe IDentity Management System (IMS)** — Fournit une structure d’authentification pour les services Adobe.
 - **Organisation IMS** — Personne morale pouvant posséder ou accorder une licence pour des produits et des services et en permettre l’accès à ses membres.
 - **Utilisateur IMS** — Membres d’une organisation IMS. La relation Organisation-utilisateur est une relation many to many.
-- **[!DNL Sandbox]** - Une partition virtuelle d’une instance de [!DNL Platform] unique, qui aide au développement et à l’évolution des applications d’expérience digitale.
+- **[!DNL Sandbox]** - Une partition virtuelle d’une instance de [!DNL Experience Platform] unique, qui aide au développement et à l’évolution des applications d’expérience digitale.
 - **Découverte de données** — Enregistre les métadonnées des données ingérées et transformées dans [!DNL Experience Platform].
 - **[!DNL Data Access]** - Fournit aux utilisateurs une interface pour accéder à leurs données dans [!DNL Experience Platform].
 - **[!DNL Data Ingestion]** - Envoie les données à [!DNL Experience Platform] avec les API [!DNL Data Ingestion].
@@ -56,19 +56,19 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id : `{ORG_ID}`
 
-Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
+Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Experience Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les sandbox dans [!DNL Platform], consultez la [documentation de présentation des sandbox](../sandboxes/home.md).
+>Pour plus d’informations sur les sandbox dans [!DNL Experience Platform], consultez la [documentation de présentation des sandbox](../sandboxes/home.md).
 
 Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
@@ -78,7 +78,7 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 Pour commencer, un utilisateur ETL se connecte à l’interface utilisateur d’[!DNL Experience Platform] et crée des jeux de données destinés à être ingérés à l’aide d’un connecteur standard ou d’un connecteur de service Push.
 
-Dans l’interface utilisateur, l’utilisateur crée le jeu de données de sortie en sélectionnant un schéma de jeu de données. Le choix du schéma dépend du type de données (enregistrement ou série temporelle) ingérées dans [!DNL Platform]. En cliquant sur l’onglet Schémas de l’interface utilisateur, l’utilisateur pourra visualiser tous les schémas disponibles, ainsi que le type de comportement pris en charge par le schéma.
+Dans l’interface utilisateur, l’utilisateur crée le jeu de données de sortie en sélectionnant un schéma de jeu de données. Le choix du schéma dépend du type de données (enregistrement ou série temporelle) ingérées dans [!DNL Experience Platform]. En cliquant sur l’onglet Schémas de l’interface utilisateur, l’utilisateur pourra visualiser tous les schémas disponibles, ainsi que le type de comportement pris en charge par le schéma.
 
 Dans l’outil ETL, l’utilisateur commencera à concevoir ses transformations de mappage après avoir configuré la connexion adéquate (à l’aide de ses informations d’identification). L’outil ETL est supposé déjà disposer de connecteurs [!DNL Experience Platform] installés (ce processus n’est pas défini dans ce guide d’intégration).
 
@@ -211,7 +211,7 @@ Le format de réponse dépend du type d’en-tête Accept envoyé dans la requê
 
 **Réponse**
 
-Le schéma JSON renvoyé décrit la structure et les informations au niveau du champ (« type », « format », « minimum », « maximum », etc.) des données, sérialisées en tant que JSON. Si vous utilisez un format de sérialisation autre que JSON pour l’ingestion (comme Parquet ou Scala), le [guide du registre des schémas](../xdm/tutorials/create-schema-api.md) comporte un tableau affichant le type JSON souhaité (« meta:xdmType ») et sa représentation correspondante dans d’autres formats.
+Le schéma JSON renvoyé décrit la structure et les informations au niveau du champ (« type », « format », « minimum », « maximum », etc.) des données, sérialisées sous la forme JSON. Si vous utilisez un format de sérialisation autre que JSON pour l’ingestion (comme Parquet ou Scala), le [guide du registre des schémas](../xdm/tutorials/create-schema-api.md) comporte un tableau affichant le type JSON souhaité (« meta:xdmType ») et sa représentation correspondante dans d’autres formats.
 
 Outre ce tableau, le guide de développement du [!DNL Schema Registry] contient des exemples détaillés de tous les appels possibles à l’aide de l’API [!DNL Schema Registry].
 
@@ -759,7 +759,7 @@ Lors de l’utilisation des profils instantanés, l’outil ETL devra sélection
 
 La relecture de lot et le retraitement des données peuvent être requis dans les cas où un client découvre que, au cours des « n » derniers jours, le traitement des données par ETL ne s’est pas déroulé comme prévu ou que les données source elles-mêmes n’étaient peut-être pas exactes.
 
-Pour ce faire, les administrateurs des données des clients utiliseront l’interface utilisateur de [!DNL Platform] pour supprimer les lots contenant des données corrompues. Ensuite, l’ETL devra probablement être réexécuté, ce qui fournira de nouvelles données correctes. Si la source elle-même contenait des données corrompues, l’ingénieur/l’administrateur des données devra corriger les lots source et ingérer de nouveau les données (soit dans Adobe Experience Platform, soit à l’aide de connecteurs ETL).
+Pour ce faire, les administrateurs des données des clients utiliseront l’interface utilisateur de [!DNL Experience Platform] pour supprimer les lots contenant des données corrompues. Ensuite, l’ETL devra probablement être réexécuté, ce qui fournira de nouvelles données correctes. Si la source elle-même contenait des données corrompues, l’ingénieur/l’administrateur des données devra corriger les lots source et ingérer de nouveau les données (soit dans Adobe Experience Platform, soit à l’aide de connecteurs ETL).
 
 Selon le type de données généré, l’ingénieur de données choisira de supprimer un seul lot ou tous les lots de certains jeux de données. Les données seront supprimées/archivées conformément aux directives d’[!DNL Experience Platform].
 
@@ -781,7 +781,7 @@ Pour les lots source, cela dépendra à nouveau des préférences du client et d
 
 Le report est un processus au cours duquel les données d’entrée ne sont pas encore suffisamment complètes pour être envoyées aux processus en aval, mais peuvent être utilisées ultérieurement. Les clients détermineront leur propre tolérance en ce qui concerne le fenêtrage des données pour la future mise en correspondance par rapport au coût du traitement. Cela permettra d’éclairer leur décision de mettre de côté les données et de les retraiter lors de la prochaine exécution de la transformation, dans l’espoir qu’elles pourront être enrichies et réconciliées/assemblées ultérieurement dans la fenêtre de rétention. Ce cycle se poursuit jusqu’à ce que la ligne soit suffisamment traitée ou qu’elle soit considérée comme obsolète et que tout investissement soit jugé inutile. Chaque itération générera des données différées qui constituent un sur-ensemble de toutes les données différées des itérations précédentes.
 
-Actuellement, Adobe Experience Platform n’identifie pas les données différées. Les implémentations client doivent donc se fier aux configurations manuelles ETL et Dataset pour créer un autre jeu de données dans [!DNL Platform] reflétant le jeu de données source qui peut être utilisé pour conserver les données différées. Dans ce cas, les données différées sont similaires aux données instantanées. Dans chaque exécution de la transformation ETL, les données source sont combinées aux données différées et envoyées pour traitement.
+Actuellement, Adobe Experience Platform n’identifie pas les données différées. Les implémentations client doivent donc se fier aux configurations manuelles ETL et Dataset pour créer un autre jeu de données dans [!DNL Experience Platform] reflétant le jeu de données source qui peut être utilisé pour conserver les données différées. Dans ce cas, les données différées sont similaires aux données instantanées. Dans chaque exécution de la transformation ETL, les données source sont combinées aux données différées et envoyées pour traitement.
 
 ## Journal des modifications
 
@@ -789,5 +789,5 @@ Actuellement, Adobe Experience Platform n’identifie pas les données différ
 | ---- | ------ | ----------- |
 | 19/01/2019 | Suppression de la propriété « fields » des jeux de données | Les jeux de données comprenaient auparavant une propriété « fields » qui contenait une copie du schéma. Cette fonctionnalité ne doit plus être utilisée. Si la propriété « fields » est trouvée, elle doit être ignorée et la propriété « observedSchema » ou « schemaRef » utilisée à la place. |
 | 15/03/2019 | Ajout de la propriété « schemaRef » aux jeux de données | La propriété « schemaRef » d’un jeu de données contient un URI référençant le XDM sur lequel le jeu de données est basé et représente tous les champs potentiels pouvant être utilisés par le jeu de données. |
-| 15/03/2019 | Tous les identifiants d’utilisateur final mappent vers la propriété « identityMap ». | &quot;identityMap&quot; contient tous les identifiants uniques d’un sujet, tels que CRMID, ECID ou l’identifiant du programme de fidélité. Cette map est utilisée par le [[!DNL Identity Service]](../identity-service/home.md) pour résoudre toutes les identités connues et anonymes d’un sujet, formant un graphique d’identités unique pour chaque utilisateur final. |
+| 15/03/2019 | Tous les identifiants d’utilisateur final mappent vers la propriété « identityMap ». | Le « identityMap » est une encapsulation de tous les identifiants uniques d’un sujet, tels que CRMID, ECID ou ID de programme de fidélité. Cette map est utilisée par le [[!DNL Identity Service]](../identity-service/home.md) pour résoudre toutes les identités connues et anonymes d’un sujet, formant un graphique d’identités unique pour chaque utilisateur final. |
 | 30/05/2019 | Fin de vie et suppression de la propriété « schema » des jeux de données | La propriété « schema » du jeu de données fournissait un lien de référence vers le schéma à l’aide du point d’entrée `/xdms` obsolète dans l’API [!DNL Catalog] Cette valeur a été remplacée par un « schemaRef » qui fournit les valeurs « id », « version » et « contentType » du schéma, comme indiqué dans la nouvelle API [!DNL Schema Registry]. |

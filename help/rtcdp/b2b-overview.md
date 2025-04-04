@@ -3,12 +3,12 @@ keywords: RTCDP;CDP;Édition B2B;Real-time Customer Data Platform;real time 
 title: Présentation de l’édition B2B de Real-time CDP
 description: Présentation du compte de l’édition B2B de Real-Time Customer Data Platform
 feature: Get Started, B2B
-badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1050'
-ht-degree: 98%
+source-wordcount: '1058'
+ht-degree: 85%
 
 ---
 
@@ -30,7 +30,7 @@ Des détails plus complets sur les améliorations apportées à l’édition B2
 
 L’édition B2B de Real-time CDP fournit plusieurs nouvelles classes de schémas XDM, des groupes de champs et des types de relations pour capturer et structurer vos données spécifiquement à des fins B2B. Consultez la présentation sur [XDM dans l’édition B2B de Real-time CDP](./schemas/b2b.md) pour obtenir une explication de chacune de ces améliorations.
 
-En utilisant des schémas B2B préconfigurés, vous pouvez importer des données dans une structure standardisée et exploitable. Parmi les nouvelles classes de schéma, un grand nombre correspond presque directement à celles que l’on trouve dans des systèmes de gestion de la relation client (CRM) classiques tels que [!DNL Salesforce], [!DNL Microsoft Dynamics], [!DNL Marketo] et d’autres sources de données B2B. Avec l’édition B2B de Real-time CDP, vous pouvez importer des données provenant de sources B2B dans Platform de manière simple et avec des résultats faciles à auditer.
+En utilisant des schémas B2B préconfigurés, vous pouvez importer des données dans une structure standardisée et exploitable. Parmi les nouvelles classes de schéma, un grand nombre correspond presque directement à celles que l’on trouve dans des systèmes de gestion de la relation client (CRM) classiques tels que [!DNL Salesforce], [!DNL Microsoft Dynamics], [!DNL Marketo] et d’autres sources de données B2B. Avec Real-Time CDP B2B edition, vous pouvez importer des données provenant de sources B2B dans Experience Platform de manière simple et avec des résultats faciles à auditer.
 
 Ces améliorations apportées à XDM optimisent l’ingestion et l’activation de données via des sources et des destinations centrées sur le B2B, améliorant ainsi l’unification et la présentation des données pour des cas d’utilisation plus variés et plus flexibles.
 
@@ -47,7 +47,7 @@ Le système de résolution d’identité propose les fonctionnalités suivantes�
 
 Le système de résolution d’identité a été étendu pour prendre en charge une classification des utilisateurs plus diversifiée. Le système permet d’identifier les utilisateurs en tant que prospects dans le cadre d’opportunités commerciales mais également en tant que clients.
 
-Les enregistrements de comptes synchronisés par le système de gestion de la relation client (CRM) source et connectés via plusieurs chemins d’accès au sein du système sont fusionnés par Platform. Le système regroupe les utilisateurs associés aux opportunités commerciales et ceux enregistrés en tant que clients, mais est également capable de préserver la distinction entre eux en tant qu’attribut s’ils sont identifiables.
+Les enregistrements de comptes synchronisés par le système de gestion de la relation client (CRM) source et connectés via plusieurs chemins d’accès au sein du système sont fusionnés par Experience Platform. Le système regroupe les utilisateurs associés aux opportunités commerciales et ceux enregistrés en tant que clients, mais est également capable de préserver la distinction entre eux en tant qu’attribut s’ils sont identifiables.
 
 Les identifiants correspondants sont utilisés pour relier et fusionner les enregistrements de comptes provenant de plusieurs systèmes. Les hiérarchies de comptes sont préservées tout au long de ce processus. Des différenciateurs sont utilisés pour vérifier si un utilisateur est associé à un compte ou non. Ils permettent également de séparer l’utilisateur du compte, si nécessaire.
 
@@ -59,17 +59,17 @@ Lorsqu’il est implémenté correctement, le système permet de suivre les util
 
 ## Sources B2B
 
-Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. La source [!DNL Marketo] vous permet de diffuser des données B2B en continu dans Platform et de maintenir ces données à jour à l’aide d’applications connectées à Platform. Il prend en charge un nombre illimité d’instances [!DNL Marketo] (ce qui est avantageux pour les grandes entreprises ayant de multiples instances) et effectue une extraction vers une seule organisation , où les données sont fusionnées.
+Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. La source [!DNL Marketo] vous permet de diffuser des données B2B en continu dans Experience Platform et de maintenir ces données à jour à l’aide d’applications connectées à Experience Platform. Il prend en charge un nombre illimité d’instances [!DNL Marketo] (ce qui est avantageux pour les grandes entreprises ayant de multiples instances) et effectue une extraction vers une seule organisation , où les données sont fusionnées.
 
 >[!NOTE]
 >
 >La source [!DNL Marketo] n’est **pas** nécessaire à l’utilisation de l’édition B2B de Real-time CDP.
 
-Consultez la documentation sur les [sources dans l’édition B2B de Real-time CDP](./sources/b2b.md) pour en savoir plus sur Marketo et sur l’importation de données B2B dans Platform.
+Consultez la documentation [sources dans Real-Time CDP B2B edition](./sources/b2b.md) pour plus d’informations sur Marketo et sur l’importation de données B2B dans Experience Platform.
 
 ## Destinations B2B
 
-Les destinations d’Experience Platform telles que Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads et Google Ad Manager sont disponibles et entièrement prises en charge par l’édition B2B de Real-time CDP. La destination de Marketo Engage diffuse également les données d’adhésion aux segments en dehors de Platform et les rend disponibles sous forme de listes dans Marketo.
+Les destinations d’Experience Platform telles que Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads et Google Ad Manager sont disponibles et entièrement prises en charge par l’édition B2B de Real-time CDP. La destination Marketo Engage diffuse également les données d’appartenance aux segments en dehors d’Experience Platform et les rend disponibles sous forme de listes dans Marketo.
 
 Consultez la présentation de la [Destination de Marketo Engage](../destinations/catalog/adobe/marketo-engage.md) pour plus d’informations.
 
@@ -87,5 +87,5 @@ Pour comprendre comment l’édition B2B de Real-time CDP peut bénéficier à
 * [Accès aux profils](./profile/profile-overview.md)
 * [Schémas dans l’édition B2B de Real-time Customer Data Platform](./schemas/b2b.md)
 * [Création d’audiences](./segmentation/b2b.md)
-* [Comment activer des audiences vers des destinations](./destinations/b2b.md)
+* [Activation des audiences vers des destinations](./destinations/b2b.md)
 * [Définition et application des politiques de gouvernance des données](./privacy/data-governance-overview.md)

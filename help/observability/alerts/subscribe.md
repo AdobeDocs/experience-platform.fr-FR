@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;période
 title: Abonnement aux notifications dʼévénement Adobe I/O
-description: Ce document décrit la procédure à suivre pour sʼabonner aux notifications dʼévénement Adobe I/O pour les services Adobe Experience Platform. Des informations de référence concernant les types dʼévénement disponibles sont également fournies, ainsi que des liens vers la documentation supplémentaire sur la manière dʼinterpréter les données dʼévénement renvoyées pour chaque service  [!DNL Platform]  applicable.
+description: Ce document décrit la procédure à suivre pour sʼabonner aux notifications dʼévénement Adobe I/O pour les services Adobe Experience Platform. Des informations de référence concernant les types dʼévénement disponibles sont également fournies, ainsi que des liens vers la documentation supplémentaire sur la manière dʼinterpréter les données dʼévénement renvoyées pour chaque service  [!DNL Experience Platform]  applicable.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 8e6301c5f834465acff99b4cd668017581c1dfa9
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '781'
 ht-degree: 88%
@@ -15,7 +15,7 @@ ht-degree: 88%
 
 [!DNL Observability Insights] vous permet de vous abonner à des notifications dʼévénement Adobe I/O concernant les activités dʼAdobe Experience Platform. Ces événements sont envoyés à un Webhook configuré afin de faciliter lʼautomatisation efficace de la surveillance des activités.
 
-Ce document décrit les étapes à suivre pour vous abonner aux notifications d’événement d’Adobe I/O pour les services Adobe Experience Platform. Des informations de référence sur les types d’événements disponibles sont également fournies, ainsi que des liens vers d’autres documents sur la manière dont vous pouvez interpréter les données d’événement renvoyées pour chaque service [!DNL Platform] applicable.
+Ce document décrit la procédure à suivre pour vous abonner aux notifications d’événement Adobe I/O pour les services Adobe Experience Platform. Des informations de référence sur les types d’événements disponibles sont également fournies, ainsi que des liens vers d’autres documents sur la façon dont vous pouvez interpréter les données d’événement renvoyées pour chaque service [!DNL Experience Platform] applicable.
 
 ## Prise en main
 
@@ -41,7 +41,7 @@ Accédez à [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) 
 
 >[!NOTE]
 >
->L’événement de notification d’ingestion de données a été abandonné dans Adobe I/O. À la place, vous devez utiliser l’événement d’E/S **Sources Flow Run Info**.
+>L’événement de notification d’ingestion de données est obsolète dans Adobe I/O. Utilisez plutôt l’événement d’E/S **Informations d’exécution du flux de sources**.
 
 Une fois que vous avez créé un projet, accédez à lʼécran dʼaperçu de ce projet. Sélectionnez ensuite **[!UICONTROL Ajouter un événement]**.
 
@@ -67,7 +67,7 @@ Lʼécran suivant affiche une liste des types dʼévénements auxquels vous pouv
 
 >[!IMPORTANT]
 >
->Les alertes liées à Edge sont actuellement en version bêta et ne sont disponibles que pour certains clients bêta.
+>les alertes liées à Edge sont actuellement en version bêta et disponibles uniquement pour certains clients bêta.
 
 ![](../images/notifications/choose-event-subscriptions.png)
 

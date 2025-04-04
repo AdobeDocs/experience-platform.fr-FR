@@ -3,10 +3,10 @@ title: Présentation de Google PubSub Source
 description: Découvrez comment connecter Google PubSub à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '825'
-ht-degree: 19%
+source-wordcount: '829'
+ht-degree: 10%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 19%
 >
 >La source [!DNL Google PubSub] est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-Time CDP Ultimate.
 
-Adobe Experience Platform fournit une connectivité native aux fournisseurs de cloud tels que [!DNL AWS], [!DNL Google Cloud Platform] et [!DNL Azure], ce qui vous permet d’importer des données de ces systèmes dans Platform pour les utiliser dans des services et des destinations en aval.
+Adobe Experience Platform fournit une connectivité native aux fournisseurs de cloud tels que [!DNL AWS], [!DNL Google Cloud Platform] et [!DNL Azure], ce qui vous permet d’importer des données de ces systèmes dans Experience Platform pour les utiliser dans des services et des destinations en aval.
 
-Les sources de stockage dans le cloud peuvent introduire vos propres données dans Platform sans avoir à les télécharger, les formater ou les transférer. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. Platform vous permet d’importer des données depuis [!DNL Google PubSub] en temps réel.
+Les sources de stockage dans le cloud peuvent importer vos données dans Experience Platform sans avoir à les télécharger, les formater ou les charger. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. Experience Platform vous permet d’importer des données de [!DNL Google PubSub] en temps réel.
 
 ## Conditions préalables {#prerequisites}
 
@@ -81,9 +81,9 @@ Vous devez **définir la durée de rétention de vos messages d’abonnement sur
 >
 >Vous ne pouvez créer qu’un seul flux de données source par abonnement [!DNL Google PubSub]. La réutilisation d’un abonnement, même sur les sandbox, entraîne une perte de données.
 
-## Connecter [!DNL Google PubSub] à l’Experience Platform
+## Connexion de [!DNL Google PubSub] à Experience Platform
 
-La documentation ci-dessous fournit des informations sur la connexion de [!DNL Google PubSub] à Platform à l’aide d’API ou de l’interface utilisateur :
+La documentation ci-dessous fournit des informations sur la connexion de [!DNL Google PubSub] à Experience Platform à l’aide d’API ou de l’interface utilisateur :
 
 ### Utiliser les API
 

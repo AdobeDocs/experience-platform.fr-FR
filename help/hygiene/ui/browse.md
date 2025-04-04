@@ -1,11 +1,11 @@
 ---
-title: Parcourir les commandes de travail du cycle de vie des données
-description: Découvrez comment afficher et gérer les ordres de travail du cycle de vie des données existants dans l’interface utilisateur de Adobe Experience Platform.
+title: Parcourir les ordres de travail relatifs au cycle de vie des données
+description: Découvrez comment afficher et gérer les ordres de travail de cycle de vie des données existants dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 80%
+source-wordcount: '843'
+ht-degree: 79%
 
 ---
 
@@ -17,17 +17,17 @@ ht-degree: 80%
 >abstract="Lorsqu’une demande de cycle de vie des données est envoyée au système, un ordre de travail est créé pour exécuter la tâche demandée. En d’autres termes, un ordre de travail représente un processus spécifique de cycle de vie des données comprenant le statut actuel et d’autres détails connexes. Chaque ordre de travail est automatiquement doté d’un identifiant unique lors de sa création."
 >text="See the data lifecycle UI guide to learn more."
 
-Lorsqu’une demande de cycle de vie des données est envoyée au système, un ordre de travail est créé pour exécuter la tâche demandée. Un ordre de travail représente un processus de cycle de vie des données spécifique, tel qu’une expiration de jeu de données planifiée, qui inclut son état actuel et d’autres détails connexes.
+Lorsqu’une demande de cycle de vie des données est envoyée au système, un ordre de travail est créé pour exécuter la tâche demandée. Un ordre de travail représente un processus spécifique du cycle de vie des données, tel qu’une expiration planifiée du jeu de données, qui comprend son statut actuel et d’autres détails connexes.
 
 Ce guide explique comment afficher et gérer les ordres de travail existants dans l’interface utilisateur d’Adobe Experience Platform.
 
 ## Répertorier et filtrer les ordres de travail existants
 
-Lorsque vous accédez pour la première fois à l’espace de travail **[!UICONTROL Cycle de vie des données]** dans l’interface utilisateur, une liste des ordres de travail existants s’affiche avec leurs détails de base.
+Lorsque vous accédez pour la première fois à l’espace de travail **[!UICONTROL Cycle de vie des données]** dans l’interface utilisateur, une liste des ordres de travail existants et les détails de base s’affichent.
 
-![ Image montrant l’espace de travail [!UICONTROL Data Lifecycle] dans l’interface utilisateur de Platform](../images/ui/browse/work-order-list.png)
+![Image illustrant l’espace de travail [!UICONTROL  Cycle de vie des données ] dans l’interface utilisateur d’Experience Platform](../images/ui/browse/work-order-list.png)
 
-La liste affiche uniquement les ordres de travail d’une catégorie à la fois. Sélectionnez **[!UICONTROL Consumer]** pour afficher une liste de tâches de suppression d’enregistrement et **[!UICONTROL Jeu de données]** pour afficher une liste d’expirations de jeux de données planifiées.
+La liste affiche uniquement les ordres de travail d’une catégorie à la fois. Sélectionnez **[!UICONTROL Consommateur]** pour afficher la liste des tâches de suppression d’enregistrements, et **[!UICONTROL Jeu de données]** pour afficher une liste des expirations de jeux de données planifiées.
 
 ![Image illustrant l’onglet [!UICONTROL Jeu de données]](../images/ui/browse/dataset-tab.png).
 
@@ -37,9 +37,9 @@ Sélectionnez l’icône d’entonnoir (![image de l’icône d’entonnoir](/he
 
 Selon le type d’ordre de travail que vous consultez, différentes options de filtre sont disponibles.
 
-### Filtres pour les suppressions d’enregistrement
+### Filtres pour les suppressions d’enregistrements
 
-Les filtres suivants s’appliquent aux demandes de suppression d’enregistrement :
+Les filtres suivants s’appliquent aux requêtes de suppression d’enregistrements :
 
 | Filtre | Description |
 | --- | --- |
@@ -85,9 +85,9 @@ Différentes informations et commandes sont fournies en fonction du type d’ord
 
 ### Détails de suppression des enregistrements {#record-delete}
 
-Les détails d’une requête de suppression d’enregistrement incluent son état actuel et le temps écoulé depuis que la requête a été effectuée. Chaque requête comprend également une section **[!UICONTROL Statut par service]** qui fournit des détails de statuts individuels sur chaque service en aval impliqué dans la suppression. Sur le rail de droite, vous pouvez utiliser des contrôles pour mettre à jour le nom et la description de l’ordre de travail.
+Les détails d’une demande de suppression d’enregistrement incluent son statut actuel et le temps écoulé depuis que la demande a été effectuée. Chaque requête comprend également une section **[!UICONTROL Statut par service]** qui fournit des détails de statuts individuels sur chaque service en aval impliqué dans la suppression. Sur le rail de droite, vous pouvez utiliser des contrôles pour mettre à jour le nom et la description de l’ordre de travail.
 
-![Image montrant la page de détails d’un ordre de travail de suppression d’enregistrement](../images/ui/browse/record-delete-details.png)
+![Image illustrant la page de détails d’un ordre de travail de suppression d’enregistrement](../images/ui/browse/record-delete-details.png)
 
 ### Détails sur l’expiration du jeu de données {#dataset-expiration}
 
@@ -97,7 +97,7 @@ La page de détails d’une expiration de jeu de données fournit des informatio
 
 ## Étapes suivantes
 
-Ce guide explique comment afficher et gérer les ordres de travail du cycle de vie des données existants dans l’interface utilisateur de Platform. Pour plus d’informations sur la création de vos propres ordres de travail, consultez la documentation suivante :
+Ce guide explique comment afficher et gérer les ordres de travail de cycle de vie des données existants dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur la création de vos propres ordres de travail, consultez la documentation suivante :
 
 * [Gérer des expirations de jeux de données](./dataset-expiration.md)
-* [Gérer les suppressions d’enregistrement](./record-delete.md)
+* [Gérer les suppressions d’enregistrements](./record-delete.md)

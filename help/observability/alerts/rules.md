@@ -4,9 +4,9 @@ title: Règles d’alerte standard
 description: Ce document couvre les règles d’alerte prédéfinies fournies par Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 3a800560376973a85f9f77a481ffead3c28a05aa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4277'
+source-wordcount: '4279'
 ht-degree: 16%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 16%
 
 Adobe Experience Platform fournit plusieurs règles d’alerte prédéfinies que vous pouvez activer pour votre organisation. Ce document couvre les détails de ces règles d’alerte fournies par Adobe. Pour plus d’informations concernant les alertes dans Experience Platform, consultez la [présentation des alertes](./overview.md).
 
-Lors de l’[affichage des règles d’alerte dans l’interface utilisateur de Platform](./ui.md), vous pouvez vous abonner à chaque règle. Toutefois, lorsque vous vous abonnez à des alertes par le biais des [Notifications d’événements I/O](./subscribe.md), les règles d’alerte sont organisées en différents packages d’abonnement. Dans les tableaux ci-dessous, chaque règle est affichée avec son nom d’abonnement aux événements I/O correspondant.
+Lors de l’affichage des règles d’alerte dans [’interface utilisateur d’Experience Platform](./ui.md), vous pouvez vous abonner à chaque règle. Toutefois, lorsque vous vous abonnez à des alertes par le biais des [Notifications d’événements I/O](./subscribe.md), les règles d’alerte sont organisées en différents packages d’abonnement. Dans les tableaux ci-dessous, chaque règle est affichée avec son nom d’abonnement aux événements I/O correspondant.
 
 ## Sources {#sources}
 
@@ -36,7 +36,7 @@ Si vous vous êtes précédemment abonné au type d’alerte suivant, vous ne re
 
 | Abonnement aux événements I/O | Règle d’alerte | Description |
 | --- | --- | --- |
-| Retards, échecs et erreurs de l’exécution du flux de sources | Absence d’ingestion | Cette alerte vous envoie un message si l’ingestion est retardée de plus de sept heures et qu’aucune donnée n’est ingérée vers Platform. |
+| Retards, échecs et erreurs de l’exécution du flux de sources | Absence d’ingestion | Cette alerte vous envoie un message si l’ingestion est retardée de plus de sept heures et qu’aucune donnée n’est ingérée dans Experience Platform. |
 
 {style="table-layout:auto"}
 

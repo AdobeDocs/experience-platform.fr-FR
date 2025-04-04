@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Bonnes pratiques de modélisation des données
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: b144a93374fc627f9001b80695cad3f17e28a6fe
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3214'
+source-wordcount: '3224'
 ht-degree: 57%
 
 ---
@@ -28,24 +28,24 @@ Comme ce guide se concentre exclusivement sur les considérations clés concerna
 L’approche recommandée pour concevoir votre modèle de données à utiliser dans Experience Platform peut être résumée comme suit :
 
 1. Comprendre les cas d’utilisation professionnels pour vos données.
-1. Identifiez les sources de données principales qui doivent être introduites dans Platform pour répondre à ces cas d’utilisation.
-1. Identifier toutes les sources de données secondaires susceptibles d’être intéressantes. Par exemple, si actuellement une seule unité commerciale de votre organisation souhaite transférer ses données vers Platform, une unité commerciale similaire pourrait également souhaiter transférer des données similaires à l’avenir. En prenant en compte ces sources secondaires, vous pouvez normaliser le modèle de données dans l’ensemble de votre organisation.
+1. Identifiez les sources de données principales qui doivent être introduites dans Experience Platform pour répondre à ces cas d’utilisation.
+1. Identifier toutes les sources de données secondaires susceptibles d’être intéressantes. Par exemple, si actuellement une seule unité commerciale de votre organisation souhaite transférer ses données vers Experience Platform, une unité commerciale similaire pourrait également souhaiter transférer des données similaires à l’avenir. En prenant en compte ces sources secondaires, vous pouvez normaliser le modèle de données dans l’ensemble de votre organisation.
 1. Créez un diagramme de relation d’entité détaillé (ERD) pour les sources de données qui ont été identifiées.
-1. Convertissez l’ERD détaillé en un ERD centré sur Platform (y compris les profils, les événements d’expérience et les entités de recherche).
+1. Convertissez l’ERD détaillé en un ERD centré sur Experience Platform (y compris les profils, les événements d’expérience et les entités de recherche).
 
-Les étapes relatives à l’identification des sources de données applicables requises pour exécuter vos cas d’utilisation professionnels varient d’une organisation à l’autre. Bien que le reste des sections de ce document se concentre sur les dernières étapes d’organisation et de construction d’un ERD une fois les sources de données identifiées, les explications des différents composants du diagramme peuvent vous éclairer sur les décisions à prendre concernant les sources de données qui doivent être migrées vers Platform.
+Les étapes relatives à l’identification des sources de données applicables requises pour exécuter vos cas d’utilisation professionnels varient d’une organisation à l’autre. Bien que le reste des sections de ce document se concentre sur les dernières étapes d’organisation et de construction d’un ERD une fois les sources de données identifiées, les explications des différents composants du diagramme peuvent vous éclairer sur les décisions à prendre concernant les sources de données qui doivent être migrées vers Experience Platform.
 
 ## Créer un ERD détaillé {#create-an-erd}
 
-Une fois que vous avez déterminé les sources de données que vous souhaitez importer dans Platform, créez un ERD détaillé pour vous aider à orienter le processus de mappage de vos données vers les schémas XDM.
+Une fois que vous avez déterminé les sources de données que vous souhaitez importer dans Experience Platform, créez un ERD détaillé pour vous aider à orienter le processus de mappage de vos données vers les schémas XDM.
 
-L’exemple ci-dessous représente un ERD simplifié pour une entreprise qui souhaite importer des données dans Platform. Le diagramme présente les entités essentielles qui doivent être triées en classes XDM, notamment les comptes clients, les hôtels et plusieurs événements d’e-commerce courants.
+L’exemple ci-dessous représente un ERD simplifié pour une société qui souhaite importer des données dans Experience Platform. Le diagramme présente les entités essentielles qui doivent être triées en classes XDM, notamment les comptes clients, les hôtels et plusieurs événements d’e-commerce courants.
 
 ![Diagramme relationnel d’entité qui met en évidence les entités essentielles qui doivent être triées en classes XDM pour l’ingestion de données.](../images/best-practices/erd.png)
 
 ## Trier les entités en catégories de profil, de recherche et d’événement {#sort-entities}
 
-Une fois que vous avez créé un ERD pour identifier les entités essentielles que vous souhaitez importer dans Platform, ces entités doivent être triées en catégories de profil, de recherche et d’événement :
+Une fois que vous avez créé un ERD pour identifier les entités essentielles que vous souhaitez importer dans Experience Platform, ces entités doivent être triées en catégories de profil, de recherche et d’événement :
 
 | Catégorie | Description |
 | --- | --- |
@@ -79,7 +79,7 @@ Si une entité contient des attributs liés à un client ou une cliente en parti
 
 #### Suivi des données au fil du temps {#track-data}
 
-Si vous souhaitez analyser la manière dont certains attributs au sein d’une entité changent au fil du temps, il s’agit probablement d’une entité d’événement. Par exemple, l’ajout d’articles à un panier peut être suivi en tant qu’événement ajouter-au-panier dans Platform :
+Si vous souhaitez analyser la manière dont certains attributs au sein d’une entité changent au fil du temps, il s’agit probablement d’une entité d’événement. Par exemple, l’ajout d’articles à un panier peut être suivi en tant qu’événement ajouter-au-panier dans Experience Platform :
 
 | Identifiant client | Type | ID de produit | Quantité | Date et heure |
 | --- | --- | --- | --- | --- |
@@ -113,7 +113,7 @@ Par exemple, une entreprise souhaite créer une audience en fonction du nombre d
 
 >[!CAUTION]
 >
->Experience Platform n’effectue actuellement pas d’agrégation automatique de valeurs, bien que cela soit prévu pour les prochaines versions. Si vous choisissez d’utiliser des valeurs agrégées, vous devez effectuer les calculs en externe avant d’envoyer les données à Platform.
+>Experience Platform n’effectue actuellement pas d’agrégation automatique de valeurs, bien que cela soit prévu pour les prochaines versions. Si vous choisissez d’utiliser des valeurs agrégées, vous devez effectuer les calculs en externe avant d’envoyer les données à Experience Platform.
 
 #### Cardinalité {#cardinality}
 
@@ -231,7 +231,7 @@ Pour Adobe Analytics, ECID est l’identité principale par défaut. Si une vale
 
 ## Champs de validation des données {#data-validation-fields}
 
-Lorsque vous ingérez des données dans le lac de données, la validation des données n’est appliquée que pour les champs limités. Pour valider un champ particulier lors de l’ingestion d’un lot, vous devez marquer le champ comme étant contraint dans le schéma XDM. Pour empêcher l’ingestion de données erronées dans Platform, nous vous recommandons de définir les critères de validation au niveau du champ lors de la création de vos schémas.
+Lorsque vous ingérez des données dans le lac de données, la validation des données n’est appliquée que pour les champs limités. Pour valider un champ particulier lors de l’ingestion d’un lot, vous devez marquer le champ comme étant contraint dans le schéma XDM. Pour empêcher l’ingestion de données erronées dans Experience Platform, il est recommandé de définir les critères de validation au niveau du champ lors de la création des schémas.
 
 >[!IMPORTANT]
 >
@@ -245,11 +245,11 @@ Pour définir des contraintes sur un champ particulier, sélectionnez le champ d
 
 Vous trouverez ci-dessous un ensemble de suggestions pour maintenir l’intégrité des données lors de la création d’un schéma.
 
-* **Tenez compte des identités principales** : pour les produits Adobes tels que SDK web, Mobile SDK, Adobe Analytics et Adobe Journey Optimizer, le champ `identityMap` sert souvent d’identité principale. Évitez de désigner des champs supplémentaires en tant qu’identités principales pour ce schéma.
+* **Tenez compte des identités principales** : pour les produits Adobe tels que SDK web, Mobile SDK, Adobe Analytics et Adobe Journey Optimizer, le champ `identityMap` sert souvent d’identité principale. Évitez de désigner des champs supplémentaires en tant qu’identités principales pour ce schéma.
 * **Assurez-vous que `_id` n’est pas utilisé comme identité** : le champ `_id` dans les schémas Événement d’expérience ne peut pas être utilisé comme identité, car il est destiné à l’unicité des enregistrements.
 * **Définir des contraintes de longueur** : il est recommandé de définir des longueurs minimale et maximale sur les champs marqués comme identités. Un avertissement se déclenche si vous essayez d’attribuer un espace de noms personnalisé à un champ d’identité sans respecter les contraintes de longueur minimale et maximale. Ces limitations permettent de maintenir la cohérence et la qualité des données.
 * **Appliquer des modèles pour des valeurs cohérentes** : si vos valeurs d’identité suivent un modèle spécifique, vous devez utiliser le paramètre **[!UICONTROL Modèle]** pour appliquer cette contrainte. Ce paramètre peut inclure des règles telles que les chiffres uniquement, les majuscules ou les minuscules, ou des combinaisons de caractères spécifiques. Utilisez des expressions régulières pour faire correspondre des modèles dans vos chaînes.
-* **Limiter les eVars dans les schémas Analytics** : en règle générale, un schéma Analytics ne doit comporter qu’un seul eVar désigné comme identité. Si vous envisagez d’utiliser plusieurs eVars en tant qu’identité, vous devez vérifier si la structure des données peut être optimisée.
+* **Limiter les eVars dans les schémas Analytics** : en règle générale, un schéma Analytics ne doit comporter qu’une seule eVar désignée comme identité. Si vous envisagez d’utiliser plusieurs eVar en tant qu’identité, vous devez vérifier si la structure des données peut être optimisée.
 * **Garantir l’unicité d’un champ sélectionné** : le champ sélectionné doit être unique par rapport à l’identité principale dans le schéma. Si ce n’est pas le cas, ne le marquez pas comme identité. Par exemple, si plusieurs clients peuvent fournir la même adresse e-mail, cet espace de noms n’est pas une identité appropriée. Ce principe s’applique également aux autres espaces de noms d’identité tels que les numéros de téléphone. Le marquage d’un champ non unique en tant qu’identité peut entraîner une réduction indésirable du profil.
 * **Vérifier les longueurs de chaîne minimales** : tous les champs de chaîne doivent comporter au moins un caractère, car les valeurs de chaîne ne doivent jamais être vides. Les valeurs nulles pour les champs non obligatoires sont toutefois acceptables.
 

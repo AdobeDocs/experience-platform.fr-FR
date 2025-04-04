@@ -3,10 +3,10 @@ title: Activer les audiences vers des destinations de personnalisation Edge
 description: Découvrez comment activer des audiences de Adobe Experience Platform vers des destinations de personnalisation Edge pour des cas d’utilisation de la personnalisation de la même page et de la page suivante.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1957'
-ht-degree: 15%
+source-wordcount: '1961'
+ht-degree: 14%
 
 ---
 
@@ -85,7 +85,7 @@ Lors de la configuration du flux de données, sous **[!UICONTROL Adobe Experien
 
 ![Configuration des flux de données avec la segmentation Edge et les destinations Personalization mises en surbrillance !](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-Pour plus d’informations sur la configuration d’un flux de données, suivez les instructions décrites dans la section [Documentation du SDK web Platform](../../datastreams/configure.md#aep).
+Pour plus d’informations sur la configuration d’un flux de données, suivez les instructions décrites dans la [documentation d’Experience Platform Web SDK](../../datastreams/configure.md#aep).
 
 ### Création d’une politique de fusion [!DNL Active-On-Edge] {#create-merge-policy}
 
@@ -97,9 +97,9 @@ Une fois la connexion de destination créée, vous devez créer une politique de
 
 Suivez les instructions de la section [création d’une politique de fusion](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) et assurez-vous d’activer le bouton **[!UICONTROL Politique de fusion Active-On-Edge]**.
 
-### Création d’une audience dans Platform {#create-audience}
+### Création d’une audience dans Experience Platform {#create-audience}
 
-Après avoir créé la politique de fusion [!DNL Active-On-Edge], vous devez créer une nouvelle audience dans Platform.
+Après avoir créé la politique de fusion [!DNL Active-On-Edge], vous devez créer une nouvelle audience dans Experience Platform.
 
 Suivez le guide [créateur d’audiences](../../segmentation/ui/segment-builder.md) pour créer votre audience et veillez à [lui attribuer](../../segmentation/ui/segment-builder.md#merge-policies) la politique de fusion [!DNL Active-On-Edge] que vous avez créée à l’étape précédente.
 
@@ -141,7 +141,7 @@ Pour sélectionner les audiences à activer vers la destination, utilisez les ca
 Vous pouvez effectuer un choix parmi plusieurs types d’audiences, selon leur origine :
 
 * **[!UICONTROL Segmentation Service]** : audiences générées dans Experience Platform par le service de segmentation. Voir la [documentation sur la segmentation](../../segmentation/ui/overview.md) pour plus d’informations.
-* **[!UICONTROL Chargement personnalisé]** : audiences générées en dehors d’Experience Platform et chargées dans Platform au format CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [importation d’une audience](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Chargement personnalisé]** : audiences générées en dehors d’Experience Platform et chargées dans Experience Platform au format CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [importation d’une audience](../../segmentation/ui/audience-portal.md#import-audience).
 * Autres types d’audiences, provenant d’autres solutions Adobe, telles que [!DNL Audience Manager].
 
 ![L’étape Sélectionner les audiences du workflow d’activation avec plusieurs audiences mises en surbrillance.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)

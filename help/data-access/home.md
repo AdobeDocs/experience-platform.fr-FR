@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;accès aux données;sdk python;sdk spark;api data access
 solution: Experience Platform
 title: Présentation de Data Access
-description: Data Access prend en charge Adobe Experience Platform en fournissant aux utilisateurs des outils axés sur la découverte et lʼaccessibilité des jeux de données Platform ingérés.
+description: Data Access prend en charge Adobe Experience Platform en fournissant aux utilisateurs des outils axés sur la capacité de découverte et l’accessibilité des jeux de données Experience Platform ingérés.
 exl-id: 76e3585b-44df-412e-9ac3-aeca5f85d403
-source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 93%
+source-wordcount: '181'
+ht-degree: 81%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 93%
 
 ## [!DNL Data Access] API
 
-Retrouvez des informations détaillées sur lʼutilisation de lʼAPI [!DNL Data Access] pour la connexion à [!DNL Platform] dans le [guide de développement de Data Access](api.md).
+Retrouvez des informations détaillées sur lʼutilisation de lʼAPI [!DNL Data Access] pour la connexion à [!DNL Experience Platform] dans le [guide de développement de Data Access](api.md).
 
 ## Accès aux données dans l’espace de travail de science des données
 
@@ -29,4 +29,4 @@ Pour plus dʼinformations sur [!DNL Data Science Workspace], commencez par lire 
 
 ## Abonnement aux événements d’ingestion de données
 
-[!DNL Platform] met à disposition des événements ayant une valeur élevée à lʼabonnement par lʼintermédiaire de la [console des développeurs Adobe](https://www.adobe.com/go/devs_console_ui). Par exemple, vous pouvez vous abonner aux événements d’ingestion de données pour être informé des retards et des échecs potentiels. Pour plus d’informations, consultez le tutoriel sur l’ [abonnement aux notifications d’événement d’Adobe](../observability/alerts/subscribe.md) .
+[!DNL Experience Platform] met à disposition des événements ayant une valeur élevée à lʼabonnement par lʼintermédiaire de la [console des développeurs Adobe](https://www.adobe.com/go/devs_console_ui). Par exemple, vous pouvez vous abonner aux événements d’ingestion de données pour être informé des retards et des échecs potentiels. Pour plus d’informations, consultez le tutoriel sur [l’abonnement aux notifications d’événement d’Adobe](../observability/alerts/subscribe.md).

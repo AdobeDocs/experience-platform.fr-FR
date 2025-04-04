@@ -2,9 +2,9 @@
 title: Analyse et suivi du consentement
 description: Découvrez comment créer un tableau de bord d’analyse du consentement pour suivre les tendances au fil du temps en matière de consentement des utilisateurs.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1909'
+source-wordcount: '1910'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Les cas d’utilisation couverts dans ce guide sont les tendances de consentemen
 
 ## Créer des audiences consentantes {#create-consent-audiences}
 
-Pour créer un tableau de bord de consentement, vous devez d’abord créer une audience de tous les profils qui ont consenti à contacter. Pour accéder au créateur de segments de Real-Time Customer Data Platform, sélectionnez **[!UICONTROL Audiences]** dans le volet de navigation de gauche de l’interface utilisateur de Platform. Dans l’onglet [!UICONTROL Client] du tableau de bord [!UICONTROL Audiences], sélectionnez **[!UICONTROL Créer une audience]** en haut à droite de la vue, puis **[!UICONTROL Créer des règles]**.
+Pour créer un tableau de bord de consentement, vous devez d’abord créer une audience de tous les profils qui ont consenti à contacter. Pour accéder au créateur de segments de Real-Time Customer Data Platform, sélectionnez **[!UICONTROL Audiences]** dans le volet de navigation de gauche de l’interface utilisateur d’Experience Platform. Dans l’onglet [!UICONTROL Client] du tableau de bord [!UICONTROL Audiences], sélectionnez **[!UICONTROL Créer une audience]** en haut à droite de la vue, puis **[!UICONTROL Créer des règles]**.
 
 ![Tableau de bord [!UICONTROL Audiences] avec [!UICONTROL Client], [!UICONTROL Audiences] et [!UICONTROL Créer un segment] en surbrillance.](../images/insights-use-cases/consent-analysis/create-audience.png)
 
@@ -70,9 +70,9 @@ Une fois les audiences nécessaires créées, elles sont répertoriées dans l�
 
 Adobe a créé différentes informations qui sont automatiquement disponibles pour vous dans les tableaux de bord Profils, Audiences et Destinations . Toute audience que vous créez est alors automatiquement utilisable avec ces informations préconfigurées. Consultez la documentation du widget standard pour obtenir la liste des informations disponibles dans les tableaux de bord [Profils](../guides/profiles.md#standard-widgets), [Audiences](../guides/audiences.md#standard-widgets) et [Destinations](../guides/destinations.md).
 
-## Chevauchement des audiences {#audience-overlap}
+## Chevauchement d’audiences {#audience-overlap}
 
-Pour vérifier le chevauchement entre deux audiences de consentement, ajoutez l’[!UICONTROL chevauchement des audiences par politique de fusion] à votre tableau de bord Profils et sélectionnez les audiences souhaitées dans les menus déroulants. Consultez la documentation pour obtenir des instructions sur la manière d’ajouter un widget à votre tableau de bord [*Chevauchement des audiences par politique de fusion*](../guides/profiles.md#audience-overlap-by-merge-policy) pour plus d’informations sur ces informations.
+Pour vérifier le chevauchement entre deux audiences de consentement, ajoutez l’[!UICONTROL chevauchement des audiences par politique de fusion] à votre tableau de bord Profils et sélectionnez les audiences souhaitées dans les menus déroulants. Pour plus d’informations sur insight, consultez la documentation pour savoir comment ajouter un widget à votre tableau de bord [*Chevauchement des audiences par politique de fusion*](../guides/profiles.md#audience-overlap-by-merge-policy).
 
 <!-- Image needs updating to night mode -->
 

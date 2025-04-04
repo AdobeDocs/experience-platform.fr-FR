@@ -2,10 +2,10 @@
 title: Créer et configurer des flux de données
 description: Découvrez comment connecter votre intégration SDK Web côté client à d’autres produits Adobe et destinations tierces.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2817'
-ht-degree: 52%
+source-wordcount: '2822'
+ht-degree: 48%
 
 ---
 
@@ -103,7 +103,7 @@ Pour afficher les options de configuration avancées, sélectionnez **[!UICONTRO
 | [!UICONTROL Type d’accès] | Définit le type d’authentification qu’Edge Network accepte pour le train de données. <ul><li>**[!UICONTROL Authentification mixte]** : lorsque cette option est activée, Edge Network accepte les demandes authentifiées et non authentifiées. Sélectionnez cette option lorsque vous prévoyez d’utiliser le SDK web ou le [SDK mobile](https://developer.adobe.com/client-sdks/home/), ainsi que l’[API Server](../server-api/overview.md). </li><li>**[!UICONTROL Authentifié uniquement]** : lorsque cette option est activée, Edge Network accepte uniquement les demandes authentifiées. électionnez cette option lorsque vous prévoyez d’utiliser uniquement l’API Server et que vous souhaitez empêcher le traitement des demandes non authentifiées par Edge Network.</li></ul> |
 | [!UICONTROL Media Analytics] | Permet le traitement des données de tracking en flux continu pour l’intégration d’Edge Network via les SDK Experience Platform ou l’[API Media Edge](https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/getting-started/). Découvrez Media Analytics dans la [documentation](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=fr). |
 
-Ensuite, si vous configurez le flux de données d’Experience Platform, suivez le tutoriel sur la [Préparation des données pour la collecte de données](./data-prep.md) afin de mapper les données à un schéma d’événement de Platform avant de revenir à ce guide. Sinon, sélectionnez **[!UICONTROL Enregistrer]** et passez à la section suivante.
+Ensuite, si vous configurez le flux de données d’Experience Platform, suivez le tutoriel sur la [Préparation des données pour la collecte de données](./data-prep.md) pour mapper les données à un schéma d’événement d’Experience Platform avant de revenir à ce guide. Sinon, sélectionnez **[!UICONTROL Enregistrer]** et passez à la section suivante.
 
 ## Afficher les détails d’un flux de données {#view-details}
 
@@ -160,7 +160,7 @@ Ce service contrôle si et comment les données sont envoyées à Adobe Audience
 
 >[!IMPORTANT]
 >
->Lors de l’activation d’un flux de données pour Platform, notez le sandbox Platform que vous utilisez actuellement, tel qu’affiché dans le ruban supérieur de l’interface utilisateur.
+>Lors de l’activation d’un flux de données pour Experience Platform, notez le sandbox Experience Platform que vous utilisez actuellement, tel qu’affiché dans le ruban supérieur de l’interface utilisateur.
 >
 >![Sandbox sélectionné](assets/configure/platform-sandbox.png)
 >
@@ -172,8 +172,8 @@ Ce service contrôle si et comment les données sont envoyées à Adobe Experien
 
 | Paramètre | Description |
 |---| --- |
-| [!UICONTROL Jeu de données d’événement] | **(Obligatoire)** Sélectionnez le jeu de données de Platform vers lequel les données d’événement client seront diffusées. Ce schéma doit utiliser la [classe XDM ExperienceEvent](../xdm/classes/experienceevent.md). Pour ajouter d’autres jeux de données, sélectionnez **[!UICONTROL Ajouter un jeu de données d’événement]**. |
-| [!UICONTROL Jeu de données de profil] | Sélectionnez le jeu de données de Platform auquel les données d’attribut du client seront envoyées. Ce schéma doit utiliser la [classe XDM Individual Profile](../xdm/classes/individual-profile.md). |
+| [!UICONTROL Jeu de données d’événement] | **(Obligatoire)** Sélectionnez le jeu de données Experience Platform vers lequel les données d’événement client seront diffusées. Ce schéma doit utiliser la [classe XDM ExperienceEvent](../xdm/classes/experienceevent.md). Pour ajouter d’autres jeux de données, sélectionnez **[!UICONTROL Ajouter un jeu de données d’événement]**. |
+| [!UICONTROL Jeu de données de profil] | Sélectionnez le jeu de données Experience Platform auquel les données d’attributs du client seront envoyées. Ce schéma doit utiliser la [classe XDM Individual Profile](../xdm/classes/individual-profile.md). |
 | [!UICONTROL Offer Decisioning] | Active les implémentations Offer Decisioning pour Web SDK. Pour plus d’informations sur la mise en œuvre, consultez le guide sur [l’utilisation d’Offer Decisioning avec Web SDK](../web-sdk/personalization/offer-decisioning/offer-decisioning-overview.md).<br><br>Pour plus d’informations sur les fonctionnalités d’Offer Decisioning, consultez la [Documentation d’Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/get-started-decision/starting-offer-decisioning.html?lang=fr). |
 | [!UICONTROL Segmentation Edge] | Active la [segmentation Edge](../segmentation/methods/edge-segmentation.md) pour ce flux de données. Lorsque l’API [Web SDK](../web-sdk/home.md) ou [Edge Network Server](../server-api/overview.md) envoie des données par le biais d’un flux de données avec la segmentation Edge activée, toutes les appartenances à une audience mises à jour pour le profil en question sont renvoyées dans la réponse.<br><br>Vous pouvez utiliser cette option en combinaison avec **[!UICONTROL Destinations Personalization]** pour les cas d’utilisation de la personnalisation de la même page et de la page suivante via [destinations Edge](../destinations/ui/activate-edge-personalization-destinations.md) ou [!DNL Offer Decisioning]. |
 | [!UICONTROL Destinations de personnalisation] | Lorsque vous activez cette fonction après avoir activé la case à cocher [!UICONTROL Segmentation Edge], cette option permet au flux de données de se connecter aux destinations de personnalisation, telles que [Personnalisation personnalisée](../destinations/catalog/personalization/custom-personalization.md).<br><br>Consultez la documentation des destinations pour obtenir des instructions spécifiques sur la [configuration des destinations de personnalisation](../destinations/ui/activate-edge-personalization-destinations.md). |

@@ -1,28 +1,28 @@
 ---
-title: Surveillance de l’utilisation de la licence de requête par lots
-description: L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation de la licence Data Distiller de votre entreprise.
+title: Surveiller l’utilisation de la licence de requête par lots
+description: L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences Data Distiller de votre entreprise.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-source-git-commit: d83604b2bf6a8e2f2b5802a5e7f26447fbf7eb2e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
 
-# Surveiller l’utilisation des licences de requête par lots {#monitor-license-usage}
+# Surveiller l’utilisation des licences de requêtes par lots {#monitor-license-usage}
 
-Le tableau de bord de l’utilisation des licences fournit des rapports granulaires sur l’utilisation des licences et les mesures d’utilisation de Query Service pour chaque produit acheté. Pour en savoir plus sur les mesures disponibles affichées dans le tableau de bord, consultez le [guide de tableau de bord d’utilisation de licence](../../dashboards/guides/license-usage.md#available-metrics).
+Le tableau de bord d’utilisation de la licence fournit des rapports granulaires sur l’utilisation de la licence Query Service de votre entreprise et des mesures d’utilisation pour chaque produit acheté. Pour en savoir plus sur les mesures disponibles affichées dans le tableau de bord, consultez le [guide du tableau de bord d’utilisation des licences](../../dashboards/guides/license-usage.md#available-metrics).
 
-Le tableau de bord fournit des mesures d’utilisation pour chaque produit acheté, l’utilisation consolidée des mesures dans tous les environnements de test de production ou de développement et les mesures d’utilisation d’un environnement de test spécifique. Les informations affichées ici sont capturées pendant un instantané quotidien de votre instance Platform.
+Le tableau de bord fournit des mesures d’utilisation pour chaque produit acheté, l’utilisation consolidée des mesures dans tous les sandbox de production ou de développement, ainsi que les mesures d’utilisation d’un sandbox spécifique. Les informations affichées ici sont capturées lors d’un instantané quotidien de votre instance Experience Platform.
 
 >[!NOTE]
 >
->Le tableau de bord de l’utilisation des licences n’est pas activé par défaut. Les utilisateurs doivent disposer de l’autorisation &quot;Afficher le tableau de bord de l’utilisation de la licence&quot; pour pouvoir afficher le tableau de bord. Pour obtenir des instructions sur l’octroi des autorisations d’accès pour l’affichage du tableau de bord d’utilisation des licences, reportez-vous au [guide des autorisations du tableau de bord](../../dashboards/permissions.md).
+>Le tableau de bord d’utilisation de la licence n’est pas activé par défaut. Les utilisateurs doivent disposer de l’autorisation « Afficher le tableau de bord d’utilisation des licences » pour pouvoir consulter le tableau de bord. Pour obtenir des instructions sur l’octroi des autorisations d’accès pour l’affichage du tableau de bord d’utilisation des licences, consultez le guide [autorisations des tableaux de bord](../../dashboards/permissions.md).
 
 ## Heures de calcul {#compute-hours}
 
-La mesure [!UICONTROL Heures de calcul] s’applique uniquement aux clients disposant de la licence Data Distiller pour les requêtes par lots. [!UICONTROL Les heures de calcul] sont la mesure du temps nécessaire aux moteurs Query Service pour lire, traiter et écrire des données dans le lac de données lors de l’exécution d’une requête par lots.
+La mesure [!UICONTROL Heures de calcul] ne s’applique qu’aux clients disposant de la licence Data Distiller pour les requêtes par lots. Les [!UICONTROL heures de calcul] sont la mesure du temps pris par les moteurs de Query Service pour lire, traiter et écrire des données dans le lac de données lorsqu’une requête par lots est exécutée.
 
-![Le tableau de bord de l’utilisation des licences avec la mesure des heures de calcul mise en surbrillance.](../images/data-distiller/compute-hours.png)
+![Tableau de bord d’utilisation de la licence avec la mesure Calculer les heures mise en surbrillance.](../images/data-distiller/compute-hours.png)
 
-Pour plus d’informations sur les mesures disponibles pour votre entreprise en fonction de la licence achetée par celle-ci, consultez le [guide de tableau de bord de l’utilisation des licences](../../dashboards/guides/license-usage.md).
+Pour plus d’informations sur les mesures disponibles pour votre organisation en fonction de la licence achetée par votre organisation, consultez le [guide du tableau de bord d’utilisation des licences](../../dashboards/guides/license-usage.md).

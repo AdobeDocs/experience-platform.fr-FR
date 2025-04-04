@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de l’espace de travail de science des données
 description: Ce guide présente les concepts clés de l’espace de travail de science des données dans Adobe Experience Platform.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '2411'
 ht-degree: 99%
@@ -15,9 +15,9 @@ ht-degree: 99%
 
 >[!NOTE]
 >
->Data Science Workspace ne peut plus être acheté.
+>Le Workspace de science des données ne peut plus être acheté.
 >
->Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
 [!DNL Data Science Workspace] dans Adobe Experience Platform utilise le machine learning et lʼintelligence artificielle pour exploiter les informations contenues dans vos données. Intégré à Adobe Experience Platform, [!DNL Data Science Workspace] vous aide à obtenir des prévisions en utilisant votre contenu et des ressources de données de lʼensemble des solutions Adobe.
 
@@ -94,7 +94,7 @@ Trouver les données adéquates et les préparer représente la partie la plus l
 
 Sur Adobe Experience Platform, vos données des différents canaux sont centralisées et stockées dans le schéma XDM normalisé. Les données sont donc plus faciles à trouver, à comprendre et à nettoyer. Une seule banque de données basée sur un schéma commun peut vous faire économiser d’innombrables heures d’exploration et de préparation de données.
 
-Pendant votre navigation, utilisez R, [!DNL Python], ou Scala avec [!DNL Jupyter Notebook] intégré et hébergé pour parcourir le catalogue de données de [!DNL Platform]. Vous pouvez également profiter de [!DNL Spark] ML et TensorFlow en utilisant lʼun de ces langages. Partez de zéro ou utilisez l’un des modèles de notebook fournis pour des problèmes d’entreprise spécifiques.
+Pendant votre navigation, utilisez R, [!DNL Python], ou Scala avec [!DNL Jupyter Notebook] intégré et hébergé pour parcourir le catalogue de données de [!DNL Experience Platform]. Vous pouvez également profiter de [!DNL Spark] ML et TensorFlow en utilisant lʼun de ces langages. Partez de zéro ou utilisez l’un des modèles de notebook fournis pour des problèmes d’entreprise spécifiques.
 
 Dans le cadre du processus d’exploration des données, vous pouvez également ingérer de nouvelles données ou utiliser des fonctionnalités existantes pour faciliter la préparation des données.
 

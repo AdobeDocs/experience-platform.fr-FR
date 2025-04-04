@@ -1,13 +1,13 @@
 ---
-title: Présentation du connecteur Source de diffusion en continu Snowflake
-description: Découvrez comment créer une connexion source et un flux de données pour ingérer les données de diffusion en continu de votre instance de Snowflake vers Adobe Experience Platform
+title: Présentation Du Connecteur Source De Diffusion En Continu Snowflake
+description: Découvrez comment créer une connexion source et un flux de données pour ingérer les données de diffusion en continu de votre instance Snowflake vers Adobe Experience Platform
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '816'
-ht-degree: 17%
+source-wordcount: '820'
+ht-degree: 12%
 
 ---
 
@@ -17,10 +17,10 @@ ht-degree: 17%
 >
 >* La source de diffusion en continu [!DNL Snowflake] est disponible dans l’API pour les utilisateurs qui ont acheté Real-Time CDP Ultimate.
 >
->* Vous pouvez désormais utiliser la source de diffusion en continu [!DNL Snowflake] lors de l’exécution de Adobe Experience Platform sur Amazon Web Services (AWS). Un Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la présentation multi-cloud de [Experience Platform ](../../../landing/multi-cloud.md).
+>* Vous pouvez désormais utiliser la source de diffusion en continu [!DNL Snowflake] lors de l’exécution de Adobe Experience Platform sur Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](../../../landing/multi-cloud.md).
 
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
 Experience Platform prend en charge la diffusion en continu de données à partir d’une base de données [!DNL Snowflake].
 
@@ -32,13 +32,13 @@ En utilisant [!DNL Kafka Connect], la source de diffusion en continu [!DNL Snowf
 
 ## Conditions préalables
 
-La section suivante décrit les étapes préalables à suivre avant de pouvoir diffuser des données de votre base de données [!DNL Snowflake] vers l’Experience Platform :
+La section suivante décrit les étapes préalables à suivre avant de pouvoir diffuser des données de votre base de données [!DNL Snowflake] vers Experience Platform :
 
 ### Mise à jour de la liste autorisée d’adresses IP
 
 Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page [Liste autorisée d’adresses IP](../../ip-address-allow-list.md#ip-address-allow-list-for-streaming-sources) pour plus d’informations.
 
-La documentation ci-dessous fournit des informations sur la connexion d’[!DNL Amazon Redshift] à Platform à l’aide d’API ou de l’interface utilisateur :
+La documentation ci-dessous fournit des informations sur la connexion de [!DNL Amazon Redshift] à Experience Platform à l’aide d’API ou de l’interface utilisateur :
 
 ### Collecter les informations d’identification requises
 
@@ -47,8 +47,8 @@ Pour que [!DNL Flow Service] puissiez vous connecter à [!DNL Snowflake], vous d
 | Informations d’identification | Description |
 | --- | --- |
 | `account` | L’identifiant complet du compte (nom du compte ou localisateur du compte) de votre compte [!DNL Snowflake] suivi du suffixe `snowflakecomputing.com`. L’identifiant de compte peut avoir différents formats : <ul><li>{ORG_NAME}-{ACCOUNT_NAME}.snowflakecomputing.com (par exemple `acme-abc12345.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.snowflakecomputing.com (par exemple `acme12345.ap-southeast-1.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.{CLOUD}.snowflakecomputing.com (par exemple `acme12345.east-us-2.azure.snowflakecomputing.com`)</li></ul> Pour plus d’informations, consultez le [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>). |
-| `warehouse` | L’entrepôt de [!DNL Snowflake] gère le processus d’exécution de la requête pour l’application. Chaque entrepôt de [!DNL Snowflake] est indépendant l’un de l’autre et doit être accessible individuellement lors de l’importation de données dans Platform. |
-| `database` | La base de données [!DNL Snowflake] contient les données que vous souhaitez importer dans Platform. |
+| `warehouse` | L’entrepôt de [!DNL Snowflake] gère le processus d’exécution de la requête pour l’application. Chaque entrepôt de [!DNL Snowflake] est indépendant les uns des autres et doit être accessible individuellement lors de l’importation de données dans Experience Platform. |
+| `database` | La base de données [!DNL Snowflake] contient les données que vous souhaitez importer dans Experience Platform. |
 | `username` | Nom d’utilisateur du compte [!DNL Snowflake]. |
 | `password` | Mot de passe du compte utilisateur [!DNL Snowflake]. |
 | `role` | (Facultatif) Rôle personnalisé défini qui peut être attribué à un utilisateur, pour une connexion donnée. Si elle n’est pas fournie, cette valeur est `public` par défaut. |
@@ -89,5 +89,5 @@ Pour plus d’informations sur la gestion des rôles et des privilèges, consult
 
 Le tutoriel suivant décrit les étapes à suivre pour connecter votre source de diffusion en continu [!DNL Snowflake] à Experience Platform à l’aide de l’API :
 
-* [Diffuser des données d’une base  [!DNL Snowflake]  données vers l’Experience Platform à l’aide de l’API Flow Service](../../tutorials/api/create/databases/snowflake-streaming.md)
-* [Diffusion des données d’une base  [!DNL Snowflake]  données vers l’Experience Platform à l’aide de l’espace de travail des sources dans l’interface utilisateur de l’Experience Platform](../../tutorials/ui/create/databases/snowflake-streaming.md)
+* [Diffuser des données d’une base  [!DNL Snowflake]  données vers Experience Platform à l’aide de l’API Flow Service](../../tutorials/api/create/databases/snowflake-streaming.md)
+* [Diffusez des données d’une base  [!DNL Snowflake]  données vers Experience Platform à l’aide de l’espace de travail des sources dans l’interface utilisateur d’Experience Platform](../../tutorials/ui/create/databases/snowflake-streaming.md)

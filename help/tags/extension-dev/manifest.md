@@ -2,10 +2,10 @@
 title: Manifeste d’extensions
 description: Découvrez comment configurer un fichier de manifeste JSON informant Adobe Experience Platform quant à la manière correcte de consommer votre extension.
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2591'
-ht-degree: 99%
+source-wordcount: '2606'
+ht-degree: 86%
 
 ---
 
@@ -26,12 +26,12 @@ Un manifeste d’extensions doit être constitué des éléments suivants :
 | `name` | Nom de l’extension. Il doit être différent du nom de toutes les autres extensions et doit respecter les [règles de nommage](#naming-rules). **Il est utilisé par les balises comme identifiant et ne doit pas être modifié après la publication de votre extension.** |
 | `platform` | La plateforme de votre extension. La seule valeur acceptée pour le moment est `web`. |
 | `version` | La version de votre extension. Elle doit respecter le format de version [semver](https://semver.org/lang/fr/). Ce format est cohérent avec le [champ de version npm](https://docs.npmjs.com/files/package.json#version). |
-| `displayName` | Le nom lisible de votre extension. Il sera visible pour les utilisateurs de Platform. Il nʼest pas nécessaire de mentionner « balises » ou « Extension », les utilisateurs savent déjà quʼils utilisent une extension de balise. |
-| `description` | La description de votre extension. Il sera visible pour les utilisateurs de Platform. Si votre extension permet aux utilisateurs de mettre en œuvre votre produit sur leur site web, décrivez ce que fait votre produit. Il nʼest pas nécessaire de mentionner « balises » ou « Extension », les utilisateurs savent déjà quʼils utilisent une extension de balise. |
-| `iconPath` *(Facultatif)* | Chemin dʼaccès relatif à lʼicône qui sʼaffichera pour lʼextension. Il ne doit pas commencer par une barre oblique. Il doit référencer un fichier SVG avec une extension `.svg`. Le SVG doit être carré et peut être mis à l’échelle par Platform. |
+| `displayName` | Le nom lisible de votre extension. Elle sera présentée aux utilisateurs d’Experience Platform. Il nʼest pas nécessaire de mentionner « balises » ou « Extension », les utilisateurs savent déjà quʼils utilisent une extension de balise. |
+| `description` | La description de votre extension. Elle sera présentée aux utilisateurs d’Experience Platform. Si votre extension permet aux utilisateurs de mettre en œuvre votre produit sur leur site web, décrivez ce que fait votre produit. Il nʼest pas nécessaire de mentionner « balises » ou « Extension », les utilisateurs savent déjà quʼils utilisent une extension de balise. |
+| `iconPath` *(Facultatif)* | Chemin dʼaccès relatif à lʼicône qui sʼaffichera pour lʼextension. Il ne doit pas commencer par une barre oblique. Il doit référencer un fichier SVG avec une extension `.svg`. Le SVG doit être carré et peut être mis à l’échelle par Experience Platform. |
 | `author` | L’« auteur » est un objet qui doit être structuré comme suit : <ul><li>`name` : nom de l’auteur de l’extension. Vous pouvez également utiliser le nom de la société ici.</li><li>`url` *(Facultatif)* : URL permettant d’en savoir plus sur l’auteur de l’extension.</li><li>`email` *(Facultatif)* : adresse e-mail de l’auteur de l’extension.</li></ul>Ceci est cohérent avec les règles [champ auteur npm](https://docs.npmjs.com/files/package.json#people-fields-author-contributors). |
 | `exchangeUrl` *(Requis pour les extensions publiques)* | URL de la liste de votre extension sur Adobe Exchange. Elle doit correspondre au modèle `https://www.adobeexchange.com/experiencecloud.details.######.html`. |
-| `viewBasePath` | Chemin d’accès relatif au sous-répertoire contenant toutes vos vues et ressources liées aux vues (HTML, JavaScript, CSS, images). Platform hébergera ce répertoire sur un serveur web et chargera le contenu iframe à partir de celui-ci. Il s’agit d’un champ obligatoire et il ne doit pas commencer par une barre oblique. Par exemple, si toutes vos vues sont contenues dans `src/view/`, la valeur de `viewBasePath` sera `src/view/`. |
+| `viewBasePath` | Chemin d’accès relatif au sous-répertoire contenant toutes vos vues et ressources liées aux vues (HTML, JavaScript, CSS, images). Experience Platform hébergera ce répertoire sur un serveur web et chargera le contenu iframe à partir de celui-ci. Il s’agit d’un champ obligatoire et il ne doit pas commencer par une barre oblique. Par exemple, si toutes vos vues sont contenues dans `src/view/`, la valeur de `viewBasePath` sera `src/view/`. |
 | `hostedLibFiles` *(Facultatif)* | Beaucoup de nos utilisateurs préfèrent héberger tous les fichiers liés aux balises sur leur propre serveur. Ces utilisateurs disposent ainsi d’un niveau de certitude accru quant à la disponibilité des fichiers au moment de l’exécution et peuvent facilement analyser le code à la recherche de failles de sécurité. Si la partie bibliothèque de votre extension doit charger des fichiers JavaScript au moment de l’exécution, il est recommandé d’utiliser cette propriété pour répertorier ces fichiers. Les fichiers répertoriés seront hébergés en même temps que la bibliothèque dʼexécution des balises. Votre extension peut ensuite charger les fichiers via une URL récupérée à l’aide de la méthode [getHostedLibFileUrl](./turbine.md#get-hosted-lib-file).<br><br>Cette option contient un tableau avec les chemins relatifs des fichiers de bibliothèque tiers qui doivent être hébergés. |
 | `main` *(Facultatif)* | Chemin d’accès relatif d’un module de bibliothèque qui doit être exécuté au moment de l’exécution.<br><br>Ce module sera toujours inclus dans la bibliothèque runtime et exécuté. Comme le module est toujours inclus dans la bibliothèque runtime, nous vous recommandons de n’utiliser qu’un module « principal » lorsque cela est absolument nécessaire et de maintenir sa taille de code minimale.<br><br>Il n’est pas garanti que ce module soit exécuté en premier ; d’autres modules peuvent être exécutés avant. |
 | `configuration` *(Facultatif)* | Cette section décrit la partie [configuration de l’extension](./configuration.md). Cela est nécessaire si vous avez besoin que les utilisateurs fournissent des paramètres globaux pour l’extension. Voir l’[annexe](#config-object) pour obtenir plus d’informations sur la structure de ce champ. |
@@ -72,7 +72,7 @@ L’objet de configuration doit être structuré comme suit :
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td>Un objet du <a href="https://json-schema.org/">Schéma JSON</a> décrivant le format d’un objet valide enregistré à partir de la vue de configuration de l’extension. Puisque vous êtes le développeur de la vue de configuration, il est de votre responsabilité de vous assurer que tout objet settings enregistré correspond à ce schéma. Ce schéma sera également utilisé pour la validation lorsque les utilisateurs tentent d’enregistrer des données à l’aide des services de Platform <br><br>Voici un exemple d’objet schéma :
+      <td>Un objet du <a href="https://json-schema.org/">Schéma JSON</a> décrivant le format d’un objet valide enregistré à partir de la vue de configuration de l’extension. Puisque vous êtes le développeur de la vue de configuration, il est de votre responsabilité de vous assurer que tout objet settings enregistré correspond à ce schéma. Ce schéma sera également utilisé à des fins de validation lorsque les utilisateurs tentent d’enregistrer des données à l’aide des services Experience Platform.<br><br>Voici un exemple d’objet schéma :
 <pre class="JSON language-JSON hljs">
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
@@ -120,7 +120,7 @@ Une définition de type est un objet utilisé pour décrire un type d’événem
     </tr>
     <tr>
       <td><code>categoryName</code> <em>(Facultatif)</em></td>
-      <td>Lorsqu’il est fourni, le <code>displayName</code> est répertorié sous le <code>categoryName</code> dans l’interface utilisateur. Tous les types ayant le même <code>categoryName</code> sont répertoriés dans la même catégorie. Par exemple, si votre extension a fourni un type d’événement <code>keyUp</code> et un type d’événement <code>keyDown</code> et qu’ils ont tous deux un <code>categoryName</code> de <code>Keyboard</code>, les deux types d’événement sont répertoriés dans la catégorie Clavier tandis que l’utilisateur effectue une sélection dans la liste des types d’événement disponibles lors de la création d’une règle. La valeur de <code>categoryName</code> doit être lisible à l’œil.</td>
+      <td>Lorsqu’elle est fournie, la <code>displayName</code> est répertoriée sous la <code>categoryName</code> dans l’interface utilisateur. Tous les types ayant le même <code>categoryName</code> sont répertoriés dans la même catégorie. Par exemple, si votre extension a fourni un type d’événement <code>keyUp</code> et un type d’événement <code>keyDown</code> et qu’ils ont tous deux un <code>categoryName</code> de <code>Keyboard</code>, les deux types d’événement sont répertoriés dans la catégorie Clavier tandis que l’utilisateur effectue une sélection dans la liste des types d’événement disponibles lors de la création d’une règle. La valeur de <code>categoryName</code> doit être lisible à l’œil.</td>
     </tr>
     <tr>
       <td><code>libPath</code></td>
@@ -128,11 +128,11 @@ Une définition de type est un objet utilisé pour décrire un type d’événem
     </tr>
     <tr>
       <td><code>viewPath</code> <em>(Facultatif)</em></td>
-      <td>L’URL relative à la vue du type. Elle doit être relative à <code>viewBasePath</code> et ne doit pas commencer par une barre oblique. Elle doit référencer un fichier HTML avec une extension <code>.html</code>. Les chaînes de requête et les identificateurs de fragments (hachages) sont acceptables. Si le module de bibliothèque de votre type n’utilise aucun paramètre d’un utilisateur, vous pouvez exclure cette propriété et Platform affichera à la place un espace réservé indiquant qu’aucune configuration n’est nécessaire.</td>
+      <td>L’URL relative à la vue du type. Elle doit être relative à <code>viewBasePath</code> et ne doit pas commencer par une barre oblique. Elle doit référencer un fichier HTML avec une extension <code>.html</code>. Les chaînes de requête et les identificateurs de fragments (hachages) sont acceptables. Si le module Bibliothèque de votre type n’utilise aucun paramètre d’un utilisateur, vous pouvez exclure cette propriété et Experience Platform affichera à la place un espace réservé indiquant qu’aucune configuration n’est nécessaire.</td>
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td>Objet de <a href="https://json-schema.org/">Schéma JSON</a> décrivant le format d’un objet de paramètres valide qui peut être enregistré par l’utilisateur. Les paramètres sont généralement configurés et enregistrés par un utilisateur à lʼaide de lʼinterface utilisateur de la collecte de données. Dans ce cas, la vue de l’extension peut prendre les mesures nécessaires pour valider les paramètres fournis par l’utilisateur. Dʼun autre côté, certains utilisateurs choisissent dʼutiliser les API de balises directement sans lʼaide dʼaucune interface utilisateur. Ce schéma permet à Platform de valider correctement que les objets settings enregistrés par les utilisateurs, qu’une interface utilisateur soit ou non utilisée, sont dans un format compatible avec le module Bibliothèque qui agira sur l’objet settings lors de l’exécution.<br><br>Voici un exemple d’objet schéma :<br>
+      <td>Objet de <a href="https://json-schema.org/">Schéma JSON</a> décrivant le format d’un objet de paramètres valide qui peut être enregistré par l’utilisateur. Les paramètres sont généralement configurés et enregistrés par un utilisateur à lʼaide de lʼinterface utilisateur de la collecte de données. Dans ce cas, la vue de l’extension peut prendre les mesures nécessaires pour valider les paramètres fournis par l’utilisateur. Dʼun autre côté, certains utilisateurs choisissent dʼutiliser les API de balises directement sans lʼaide dʼaucune interface utilisateur. Ce schéma permet à Experience Platform de vérifier correctement que les objets settings enregistrés par les utilisateurs, qu’une interface utilisateur soit ou non utilisée, sont dans un format compatible avec le module Bibliothèque qui agira sur l’objet settings lors de l’exécution.<br><br>Voici un exemple d’objet schéma :<br>
 <pre class="JSON language-JSON hljs">
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
@@ -160,9 +160,9 @@ Une définition de type est un objet utilisé pour décrire un type d’événem
 
 ### Transformations {#transforms}
 
-Pour certains cas dʼutilisation spécifiques, les extensions ont besoin que les objets settings enregistrés à partir dʼune vue soient transformés par Platform avant dʼêtre émis dans la bibliothèque dʼexécution des balises. Vous pouvez demander qu’une ou plusieurs de ces transformations se produisent en définissant la propriété `transforms` lors de la définition d’une définition de type dans votre `extension.json`. La propriété `transforms` est un tableau d’objets où chaque objet représente une transformation qui doit avoir lieu.
+Pour certains cas d’utilisation spécifiques, les extensions ont besoin que les objets settings enregistrés à partir d’une vue soient transformés par Experience Platform avant d’être émis dans la bibliothèque d’exécution des balises. Vous pouvez demander qu’une ou plusieurs de ces transformations se produisent en définissant la propriété `transforms` lors de la définition d’une définition de type dans votre `extension.json`. La propriété `transforms` est un tableau d’objets où chaque objet représente une transformation qui doit avoir lieu.
 
-Toutes les transformations nécessitent un `type` et un `propertyPath`. `type` doit être l’un des `function`, `remove` et `file` et décrit la transformation que Platform doit appliquer à l’objet settings. Le champ `propertyPath` est une chaîne délimitée par des points qui indique aux balises où trouver la propriété qui doit être modifiée dans lʼobjet settings. Voici un exemple d’objet settings et quelques `propertyPath` :
+Toutes les transformations nécessitent un `type` et un `propertyPath`. Le `type` doit être l’un des `function`, `remove` et `file` et décrit la transformation qu’Experience Platform doit appliquer à l’objet settings. Le champ `propertyPath` est une chaîne délimitée par des points qui indique aux balises où trouver la propriété qui doit être modifiée dans lʼobjet settings. Voici un exemple d’objet settings et quelques `propertyPath` :
 
 ```js
 {
@@ -191,7 +191,7 @@ Les sections ci-dessous décrivent les transformations disponibles et comment le
 
 #### Transformation de fonction
 
-La transformation de fonction permet que le code écrit par les utilisateurs de Platform soit exécuté par un module Bibliothèque dans la bibliothèque dʼexécution des balises émise.
+La transformation de fonction permet à un module Bibliothèque d’exécuter le code écrit par les utilisateurs d’Experience Platform dans la bibliothèque d’exécution de balise émise.
 
 Supposons que nous souhaitions fournir un type d’action « script personnalisé ». La vue d’action « script personnalisé » peut fournir une zone de texte dans laquelle l’utilisateur peut entrer du code. Supposons qu’un utilisateur ait saisi le code suivant dans la zone de texte :
 
@@ -211,7 +211,7 @@ Lorsquʼune règle utilisant notre action se déclenche dans la bibliothèque d�
 
 Au moment où l’objet settings est enregistré à partir de la vue du type d’action, le code de l’utilisateur est simplement une chaîne. Ceci est utile car il peut être correctement sérialisé vers et à partir de JSON. Cependant, cʼest également un inconvénient, car il serait généralement émis dans la bibliothèque dʼexécution des balises sous la forme dʼune chaîne et non dʼune fonction exécutable. Bien que vous puissiez tenter d’exécuter le code dans le module Bibliothèque de votre type d’action à l’aide de [`eval`](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/eval) ou d’une [fonction constructeur](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Objets_globaux/Function), cela est fortement déconseillé en raison de [politiques de sécurité de contenu](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/CSP) susceptibles de bloquer l’exécution.
 
-Pour pallier à ce problème, lʼutilisation de la transformation de fonction indique à Platform dʼencapsuler le code de lʼutilisateur dans une fonction exécutable lorsquʼelle est émise dans la bibliothèque dʼexécution des balises. Pour résoudre le problème de notre exemple, nous définirions la transformation sur la définition de type dans `extension.json` comme suit :
+Pour pallier cette situation, l’utilisation de la transformation de fonction indique à Experience Platform d’encapsuler le code de l’utilisateur dans une fonction exécutable lorsqu’il est émis dans la bibliothèque d’exécution de balise. Pour résoudre le problème de notre exemple, nous définirions la transformation sur la définition de type dans `extension.json` comme suit :
 
 ```json
 {
@@ -226,7 +226,7 @@ Pour pallier à ce problème, lʼutilisation de la transformation de fonction in
 ```
 
 * `type` définit le type de transformation à appliquer à l’objet settings.
-* `propertyPath` est une chaîne délimitée par des points qui indique à Platform où trouver la propriété qui doit être modifiée dans l’objet settings.
+* `propertyPath` est une chaîne délimitée par des points qui indique à Experience Platform où trouver la propriété qui doit être modifiée dans l’objet settings.
 * `parameters` est un tableau de noms de paramètres qui doit être inclus dans la signature de la fonction d’encapsulation.
 
 Lorsque lʼobjet settings est émis dans la bibliothèque dʼexécution des balises, il est transformé comme suit :
@@ -245,7 +245,7 @@ Votre module Bibliothèque peut alors appeler la fonction contenant le code de l
 
 #### Transformation de fichier
 
-La transformation de fichier permet lʼémission de code écrit par les utilisateurs de Platform dans un fichier distinct de la bibliothèque dʼexécution des balises. Le fichier sera hébergé en même temps que la bibliothèque dʼexécution des balises et pourra ensuite être chargé selon les besoins de votre extension au moment de lʼexécution.
+La transformation de fichier permet d’émettre le code écrit par les utilisateurs d’Experience Platform dans un fichier distinct de la bibliothèque d’exécution des balises. Le fichier sera hébergé en même temps que la bibliothèque dʼexécution des balises et pourra ensuite être chargé selon les besoins de votre extension au moment de lʼexécution.
 
 Supposons que nous souhaitions fournir un type d’action « script personnalisé ». La vue du type d’action peut fournir un champ de texte dans lequel l’utilisateur peut saisir du code. Supposons qu’un utilisateur ait saisi le code suivant dans la zone de texte :
 
@@ -275,7 +275,7 @@ Nous souhaitons que le code de lʼutilisateur soit placé dans un fichier distin
 ```
 
 * `type` définit le type de transformation à appliquer à l’objet settings.
-* `propertyPath` est une chaîne délimitée par des points qui indique à Platform où trouver la propriété qui doit être modifiée dans l’objet settings.
+* `propertyPath` est une chaîne délimitée par des points qui indique à Experience Platform où trouver la propriété qui doit être modifiée dans l’objet settings.
 
 Lorsque lʼobjet settings est émis dans la bibliothèque dʼexécution des balises, il est transformé comme suit :
 
@@ -321,7 +321,7 @@ Nous aimerions ne pas inclure la propriété `bar` dans la bibliothèque dʼexé
 ```
 
 * `type` définit le type de transformation à appliquer à l’objet settings.
-* `propertyPath` est une chaîne délimitée par des points qui indique à Platform où trouver la propriété qui doit être modifiée dans l’objet settings.
+* `propertyPath` est une chaîne délimitée par des points qui indique à Experience Platform où trouver la propriété qui doit être modifiée dans l’objet settings.
 
 Lorsque lʼobjet settings est émis dans la bibliothèque dʼexécution des balises, il est transformé comme suit :
 

@@ -3,9 +3,9 @@ title: Profils de prospects
 description: Découvrez comment créer et utiliser des profils de prospects pour rassembler des informations sur des clients inconnus à l’aide d’informations tierces.
 type: Documentation
 exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
-source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '401'
 ht-degree: 4%
 
 ---
@@ -56,7 +56,7 @@ La boîte de dialogue [!UICONTROL Afficher JSON] s’affiche. Les attributs du p
 
 ## Exemples d’utilisation {#use-cases}
 
-Pour découvrir comment utiliser la fonctionnalité de profils de prospects dans Experience Platform en combinaison avec d’autres fonctionnalités de Platform, veuillez lire la documentation de cas d’utilisation suivante :
+Pour découvrir comment utiliser la fonctionnalité de profils de prospect d’Experience Platform en combinaison avec d’autres fonctionnalités d’Experience Platform, veuillez lire la documentation de cas d’utilisation suivante :
 
 - [Atteindre et acquérir une nouvelle clientèle à l’aide de la fonctionnalité de prospection](../../rtcdp/partner-data/prospecting.md)
 

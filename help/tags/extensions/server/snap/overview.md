@@ -3,16 +3,16 @@ title: Présentation de l’extension de l’API de conversions Snapchat
 description: Utilisez la conversion Snapchat pour envoyer des données d’événement côté serveur à Snap.
 last-substantial-update: 2025-01-20T00:00:00Z
 exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
-source-git-commit: 7cece312a2f019d48653dbd208cc8b7593ab0ee3
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '966'
 ht-degree: 4%
 
 ---
 
 # Présentation de l’extension API [!DNL Snapchat] Conversions
 
-L’extension [!DNL Snap] de l’API de conversion est une interface sécurisée du serveur [Edge Network ](/help/server-api/overview.md) qui vous permet de partager des informations avec [!DNL Snapchat] directement sur les actions des utilisateurs sur vos sites web. Vous pouvez tirer parti des règles de transfert d’événement pour envoyer des données du **[!DNL Adobe Experience Platform Edge Network]** à **[!DNL Snapchat]** à l’aide de l’extension d’API de conversion **[!DNL Snap]**.
+L’extension [!DNL Snap] de l’API de conversion est une interface sécurisée du serveur [Edge Network](/help/server-api/overview.md) qui vous permet de partager des informations avec [!DNL Snapchat] directement sur les actions des utilisateurs sur vos sites web. Vous pouvez tirer parti des règles de transfert d’événement pour envoyer des données du **[!DNL Adobe Experience Platform Edge Network]** à **[!DNL Snapchat]** à l’aide de l’extension d’API de conversion **[!DNL Snap]**.
 
 ## Conditions préalables de [!DNL Snapchat] {#prerequisites}
 
@@ -79,7 +79,7 @@ Consultez la [documentation des propriétés de transfert d’événement](/help
 
 ## Créer des règles pour envoyer des événements de conversion à Snap {#create-snap-rules}
 
-Les [règles](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) sont utilisées pour déclencher des extensions dans Platform. Cette section explique comment créer des règles dans votre propriété de transfert d’événement pour envoyer des événements de conversion à Snap à l’aide de l’extension de l’API Conversions.
+Les [règles](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) sont utilisées pour déclencher des extensions dans Experience Platform. Cette section explique comment créer des règles dans votre propriété de transfert d’événement pour envoyer des événements de conversion à Snap à l’aide de l’extension de l’API Conversions.
 
 ### Créer une règle
 
@@ -201,4 +201,4 @@ Si vous rencontrez des problèmes avec votre **score de qualité de l’événem
 
 ## Étapes suivantes {#next-steps}
 
-Ce guide explique comment envoyer des données d’événement côté serveur à **[!DNL Snap]** à l’aide de l’extension **[!DNL Snap Conversions API]**. Pour plus d’informations sur les fonctionnalités de transfert d’événement dans Platform, reportez-vous à la section [Présentation du transfert d’événement](../../../ui/event-forwarding/overview.md).
+Ce guide explique comment envoyer des données d’événement côté serveur à **[!DNL Snap]** à l’aide de l’extension **[!DNL Snap Conversions API]**. Pour plus d’informations sur les fonctionnalités de transfert d’événement dans Experience Platform, reportez-vous à la section [Présentation du transfert d’événement](../../../ui/event-forwarding/overview.md).

@@ -1,12 +1,12 @@
 ---
 title: Utiliser l’enquête d’auto-identification pour créer votre profil personnel Experience Platform
-description: Découvrez comment utiliser l’interface utilisateur de l’enquête d’auto-identification pour recevoir du contenu pertinent en fonction de vos fonctions de travail et des objectifs associés.
-badge: Version bêta
+description: Découvrez comment utiliser l’interface utilisateur de l’enquête d’auto-identification pour recevoir du contenu pertinent en fonction des fonctions de votre poste et des objectifs associés.
+badge: Beta
 exl-id: 80b3f55f-1eab-4a99-be75-49bd091f9739
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 96%
+source-wordcount: '569'
+ht-degree: 66%
 
 ---
 
@@ -18,17 +18,17 @@ ht-degree: 96%
 
 L’enquête d’auto-identification est un court questionnaire présenté sur la page d’accueil de l’interface utilisateur d’Adobe Experience Platform. Vous pouvez remplir le questionnaire pour fournir des informations sur vos fonctions professionnelles et sur vos objectifs généraux. Ces informations sont ensuite utilisées pour mieux aligner les guides intégrés au produit et finalement diffuser du contenu plus pertinent par rapport à vos objectifs.
 
-Ce document fournit des informations sur la manière dont vous pouvez utiliser l’enquête d’auto-identification dans l’interface utilisateur de Platform pour recevoir du contenu pertinent en fonction de vos objectifs et tâches, ainsi que sur la manière de reconfigurer vos attributs de profil personnels à l’aide de l’interface utilisateur.
+Ce document fournit des informations sur la manière dont vous pouvez utiliser l’enquête d’auto-identification dans l’interface utilisateur d’Experience Platform pour recevoir du contenu pertinent en fonction de vos objectifs et tâches, ainsi que sur la manière de reconfigurer vos attributs de profil personnels à l’aide de l’interface utilisateur.
 
 Pour en savoir plus sur Adobe Experience Platform, commencez par lire la [Présentation dʼExperience Platform](home.md).
 
-## Enquête d’auto-identification dans l’interface utilisateur de Platform
+## Enquête d’auto-identification dans l’interface utilisateur d’Experience Platform
 
-L’invite de l’enquête d’auto-identification s’affiche en bas à droite de la page d’accueil de l’interface utilisateur de Platform lorsque vous vous connectez.
+L’invite d’enquête d’auto-identification s’affiche en bas à droite de la page d’accueil de l’interface utilisateur d’Experience Platform lors de la connexion.
 
 Pour lancer l’enquête, sélectionnez **[!UICONTROL Démarrer]**.
 
-![Page d’accueil de l’interface utilisateur de Platform avec un message toast vous invitant à démarrer l’enquête d’auto-identification.](./images/survey/survey-prompt.png)
+![Page d’accueil de l’interface utilisateur d’Experience Platform avec un message toast vous invitant à démarrer l’enquête d’auto-identification.](./images/survey/survey-prompt.png)
 
 Pour la première question de l’enquête, sélectionnez la fonction qui décrit le mieux votre travail.
 
@@ -81,16 +81,16 @@ Une fois votre enquête d’auto-identification terminée, sélectionnez **[!UIC
 
 Mettez à jour vos fonctions et objectifs à l’aide du menu des préférences d’Experience Cloud. Pour accéder au menu des préférences, sélectionnez l’icône de votre profil dans le volet de navigation supérieur, puis sélectionnez **[!UICONTROL Préférences]**.
 
-![Page d’accueil de l’interface utilisateur de Platform avec icône de profil et boutons de préférences sélectionnés.](./images/survey/preferences.png)
+![Page d’accueil de l’interface utilisateur d’Experience Platform avec icône de profil et boutons de préférences sélectionnés.](./images/survey/preferences.png)
 
 Ensuite, dans la section [!UICONTROL Général] du menu des préférences de votre profil, sélectionnez **[!UICONTROL Mettre à jour vos fonctions et objectifs]**.
 
-![Section générale de la page des préférences de profil de l’interface utilisateur de Platform](./images/survey/update.png)
+![Section générale de la page Préférences de profil de l’interface utilisateur d’Experience Platform](./images/survey/update.png)
 
 L’enquête d’auto-identification s’affiche, vous permettant de reconfigurer vos réponses et de mettre à jour votre profil.
 
-![Page des préférences du profil de l’interface utilisateur de Platform affichant l’enquête d’auto-identification et permettant de mettre à jour un profil personnel.](./images/survey/new-survey.png)
+![Page des préférences du profil de l’interface utilisateur d’Experience Platform affichant l’enquête d’auto-identification et permettant de mettre à jour un profil personnel.](./images/survey/new-survey.png)
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez maintenant envoyé et mis à jour des informations concernant vos fonctions et objectifs, afin de recevoir un contenu plus pertinent lors de l’utilisation de l’interface utilisateur de Platform. Pour plus d’informations sur l’interface utilisateur de Platform, lisez la [Présentation d’Experience Platform](home.md).
+En lisant ce document, vous avez maintenant envoyé et mis à jour des informations concernant vos fonctions et objectifs, afin de recevoir un contenu plus pertinent lors de l’utilisation de l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’interface utilisateur d’Experience Platform, consultez la [présentation d’Experience Platform](home.md).

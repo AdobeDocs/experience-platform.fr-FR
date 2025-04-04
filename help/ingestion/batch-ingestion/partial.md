@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;ingestion par lots;ingestion par lots;ingestion partielle;ingestion partielle;récupération d’une erreur;récupérer une erreur;ingestion par lots partielle;ingestion par lots partielle;ingestion partielle;ingestion;ingestion
+keywords: Experience Platform;accueil;rubriques les plus consultées;ingestion par lots;Ingestion par lots;Ingestion partielle;Ingestion partielle;Récupérer l’erreur;récupérer l’erreur;Ingestion par lots partielle;Ingestion par lots partielle;partielle;ingestion;Ingestion;
 solution: Experience Platform
-title: Présentation de l’ingestion par lots partielle
+title: Aperçu de l’ingestion par lots partielle
 description: Ce document fournit un tutoriel pour la gestion de l’ingestion par lots partielle.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '946'
 ht-degree: 45%
@@ -21,10 +21,10 @@ Ce document fournit un tutoriel pour la gestion de l’ingestion par lots partie
 
 Ce tutoriel nécessite une connaissance pratique des différents services Adobe Experience Platform impliqués dans l’ingestion par lots partielle. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
-- [Ingestion par lots](./overview.md) : méthode qui [!DNL Platform] ingère et stocke des données de fichiers de données, tels que CSV et Parquet.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
+- [Ingestion par lots](./overview.md) : méthode utilisée par [!DNL Experience Platform] pour ingérer et stocker des données provenant de fichiers de données, tels que CSV et Parquet.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
 
-Les sections suivantes contiennent des informations supplémentaires nécessaires pour passer des appels à des API [!DNL Platform].
+Les sections suivantes contiennent des informations supplémentaires nécessaires pour passer des appels à des API [!DNL Experience Platform].
 
 ### Lecture d’exemples d’appels API
 
@@ -32,29 +32,29 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id : `{ORG_ID}`
 
-Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
+Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Experience Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les sandbox dans [!DNL Platform], consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
+>Pour plus d’informations sur les sandbox dans [!DNL Experience Platform], consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
 
 ## Activation d’un lot pour l’ingestion par lots partielle dans l’API {#enable-api}
 
 >[!NOTE]
 >
->Cette section décrit l’activation d’un lot pour l’ingestion par lots partielle à l’aide de l’API. Pour plus d’informations sur l’utilisation de l’interface utilisateur, veuillez lire l’étape [Activation d’un lot pour l’ingestion par lots partielle dans l’interface utilisateur](#enable-ui) .
+>Cette section décrit l’activation d’un lot pour l’ingestion par lots partielle à l’aide de l’API . Pour obtenir des instructions sur l’utilisation de l’interface utilisateur, veuillez lire l’étape [activer un lot pour l’ingestion par lots partielle dans l’interface utilisateur](#enable-ui).
 
-Vous pouvez créer un nouveau lot avec l’ingestion partielle activée.
+Vous pouvez créer un lot pour lequel l’ingestion partielle est activée.
 
-Pour créer un nouveau lot, suivez les étapes du [guide de développement de l’ingestion par lots](./api-overview.md). Une fois que vous avez atteint l’étape **[!UICONTROL Créer un lot]**, ajoutez le champ suivant dans le corps de la requête :
+Pour créer un lot, suivez les étapes du guide de développement de l’ingestion par lots [batch ingestion](./api-overview.md). Une fois que vous avez atteint l’étape **[!UICONTROL Créer un lot]**, ajoutez le champ suivant dans le corps de la requête :
 
 ```json
 {
@@ -65,27 +65,27 @@ Pour créer un nouveau lot, suivez les étapes du [guide de développement de l�
 
 | Propriété | Description |
 | -------- | ----------- |
-| `enableErrorDiagnostics` | Indicateur qui permet à [!DNL Platform] de générer des messages d’erreur détaillés sur votre lot. |
-| `partialIngestionPercent` | Le pourcentage d’erreurs acceptables avant l’échec de l’ensemble du lot. Ainsi, dans cet exemple, un maximum de 5 % du lot peut être des erreurs, avant l’échec. |
+| `enableErrorDiagnostics` | Indicateur qui [!DNL Experience Platform] permet de générer des messages d’erreur détaillés sur votre lot. |
+| `partialIngestionPercent` | Pourcentage d’erreurs acceptables avant l’échec du lot entier. Ainsi, dans cet exemple, un maximum de 5 % du lot peut être constitué d’erreurs, avant qu’il n’échoue. |
 
 
-## Activation d’un lot pour l’ingestion par lots partielle dans l’interface utilisateur {#enable-ui}
+## Activer un lot pour l’ingestion de lots partiels dans l’interface utilisateur {#enable-ui}
 
 >[!NOTE]
 >
->Cette section décrit l’activation d’un lot pour l’ingestion par lots partielle à l’aide de l’interface utilisateur. Si vous avez déjà activé un lot pour l’ingestion par lots partielle à l’aide de l’API, vous pouvez passer à la section suivante.
+>Cette section décrit l’activation d’un lot pour l’ingestion par lots partielle à l’aide de l’interface utilisateur. Si vous avez déjà activé un lot pour l’ingestion de lots partiels à l’aide de l’API , vous pouvez passer à la section suivante.
 
-Pour activer un lot pour l’ingestion partielle par le biais de l’interface utilisateur [!DNL Platform], vous pouvez créer un nouveau lot par le biais des connexions source, créer un nouveau lot dans un jeu de données existant ou créer un nouveau lot par le biais de l’option &quot;[!UICONTROL Mapper CSV au flux XDM]&quot;.
+Pour activer un lot pour une ingestion partielle via l’interface utilisateur de [!DNL Experience Platform], vous pouvez créer un lot par le biais des connexions source, créer un nouveau lot dans un jeu de données existant ou créer un lot par le biais du « [!UICONTROL Mapper CSV à XDM flow] ».
 
-### Création d’une connexion source {#new-source}
+### Créer une connexion source {#new-source}
 
-Pour créer une connexion source, suivez les étapes répertoriées dans la [Présentation des sources](../../sources/home.md). Une fois que vous avez atteint l’étape **[!UICONTROL Détails du flux de données]**, prenez note des champs **[!UICONTROL Ingestion partielle]** et **[!UICONTROL Diagnostic d’erreur]**.
+Pour créer une connexion source, procédez comme indiqué dans la section [Présentation des sources](../../sources/home.md). Une fois que vous avez atteint l’étape **[!UICONTROL Détails du flux de données]**, notez la présence des champs **[!UICONTROL Ingestion partielle]** et **[!UICONTROL Diagnostics d’erreur]**.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
 Le bouton **[!UICONTROL Ingestion partielle]** vous permet d’activer ou de désactiver l’utilisation de l’ingestion par lots partielle.
 
-Le bouton **[!UICONTROL Diagnostic d’erreur]** s’affiche uniquement lorsque le bouton **[!UICONTROL Ingestion partielle]** est désactivé. Cette fonctionnalité permet à [!DNL Platform] de générer des messages d’erreur détaillés sur vos lots ingérés. Si le bouton d’activation **[!UICONTROL Ingestion partielle]** est activé, des diagnostics d’erreur améliorés sont automatiquement appliqués.
+Le bouton (bascule) **[!UICONTROL Diagnostics d’erreur]** ne s’affiche que lorsque le bouton (bascule) **[!UICONTROL Ingestion partielle]** est désactivé. Cette fonctionnalité [!DNL Experience Platform] permet de générer des messages d’erreur détaillés sur vos lots ingérés. Si le bouton (bascule) **[!UICONTROL Ingestion partielle]** est activé, les diagnostics d’erreur améliorés sont automatiquement appliqués.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
@@ -99,27 +99,27 @@ Pour utiliser un jeu de données existant, commencez par sélectionner un jeu de
 
 Le bouton **[!UICONTROL Ingestion partielle]** vous permet d’activer ou de désactiver l’utilisation de l’ingestion par lots partielle.
 
-Le bouton **[!UICONTROL Diagnostic d’erreur]** s’affiche uniquement lorsque le bouton **[!UICONTROL Ingestion partielle]** est désactivé. Cette fonctionnalité permet à [!DNL Platform] de générer des messages d’erreur détaillés sur vos lots ingérés. Si le bouton d’activation **[!UICONTROL Ingestion partielle]** est activé, des diagnostics d’erreur améliorés sont automatiquement appliqués.
+Le bouton (bascule) **[!UICONTROL Diagnostics d’erreur]** ne s’affiche que lorsque le bouton (bascule) **[!UICONTROL Ingestion partielle]** est désactivé. Cette fonctionnalité [!DNL Experience Platform] permet de générer des messages d’erreur détaillés sur vos lots ingérés. Si le bouton (bascule) **[!UICONTROL Ingestion partielle]** est activé, les diagnostics d’erreur améliorés sont automatiquement appliqués.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
 Le **[!UICONTROL seuil d’erreur]** vous permet de définir le pourcentage d’erreurs acceptables avant le rejet de l’ensemble du lot. Par défaut, cette valeur est définie sur 5 %.
 
-Vous pouvez désormais charger des données à l’aide du bouton **Ajouter des données** et elles seront ingérées à l’aide de l’ingestion partielle.
+Désormais, vous pouvez charger des données à l’aide du bouton **Ajouter des données**, et elles seront ingérées à l’aide de l’ingestion partielle.
 
-### Utilisation du flux &quot;[!UICONTROL Mapper CSV au schéma XDM]&quot; {#map-flow}
+### Utiliser le flux « [!UICONTROL Mapper CSV à un schéma XDM] » {#map-flow}
 
-Pour utiliser le flux &quot;[!UICONTROL Mapper CSV au schéma XDM]&quot;, suivez les étapes répertoriées dans le [tutoriel Mappage d’un fichier CSV](../tutorials/map-csv/overview.md)&quot;. Une fois que vous avez atteint l’étape **[!UICONTROL Ajouter des données]**, prenez note des champs **[!UICONTROL Ingestion partielle]** et **[!UICONTROL Diagnostic d’erreur]** .
+Pour utiliser le flux « [!UICONTROL Mapper CSV à un schéma XDM] », suivez les étapes répertoriées dans le tutoriel [Mapper un fichier CSV](../tutorials/map-csv/overview.md). Une fois que vous avez atteint l’étape **[!UICONTROL Ajouter des données]**, notez la présence des champs **[!UICONTROL Ingestion partielle]** et **[!UICONTROL Diagnostics d’erreur]**.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
 Le bouton **[!UICONTROL Ingestion partielle]** vous permet d’activer ou de désactiver l’utilisation de l’ingestion par lots partielle.
 
-Le bouton **[!UICONTROL Diagnostic d’erreur]** s’affiche uniquement lorsque le bouton **[!UICONTROL Ingestion partielle]** est désactivé. Cette fonctionnalité permet à [!DNL Platform] de générer des messages d’erreur détaillés sur vos lots ingérés. Si le bouton d’activation **[!UICONTROL Ingestion partielle]** est activé, des diagnostics d’erreur améliorés sont automatiquement appliqués.
+Le bouton (bascule) **[!UICONTROL Diagnostics d’erreur]** ne s’affiche que lorsque le bouton (bascule) **[!UICONTROL Ingestion partielle]** est désactivé. Cette fonctionnalité [!DNL Experience Platform] permet de générer des messages d’erreur détaillés sur vos lots ingérés. Si le bouton (bascule) **[!UICONTROL Ingestion partielle]** est activé, les diagnostics d’erreur améliorés sont automatiquement appliqués.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-**[!UICONTROL Seuil d’erreurs]** vous permet de définir le pourcentage d’erreurs acceptables avant l’échec de l’ensemble du lot. Par défaut, cette valeur est définie sur 5 %.
+**[!UICONTROL Seuil d’erreur]** vous permet de définir le pourcentage d’erreurs acceptables avant l’échec de l’ensemble du lot. Par défaut, cette valeur est définie sur 5 %.
 
 ## Étapes suivantes {#next-steps}
 

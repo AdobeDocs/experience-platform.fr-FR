@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Guide de dépannage du système XDM
 description: Trouvez des réponses aux questions fréquentes sur le modèle de données d’expérience (XDM), y compris les étapes pour résoudre les erreurs d’API courantes.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: b345330595aadcfe2380dd1795802470b249cb4a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2348'
 ht-degree: 82%
 
 ---
 
 # Guide de dépannage du système XDM
 
-Ce document répond aux questions fréquentes sur [!DNL Experience Data Model] (XDM) et le système XDM dans Adobe Experience Platform, y compris un guide de dépannage pour les erreurs courantes. Pour les questions et le dépannage relatifs aux autres services Platform, consultez le [guide de dépannage d’Experience Platform](../landing/troubleshooting.md).
+Ce document répond aux questions fréquentes sur [!DNL Experience Data Model] (XDM) et le système XDM dans Adobe Experience Platform, y compris un guide de dépannage pour les erreurs courantes. Pour toute question ou dépannage concernant d’autres services Experience Platform, consultez le [guide de dépannage d’Experience Platform](../landing/troubleshooting.md).
 
-**[!DNL Experience Data Model] (XDM)** est une spécification open source conçue pour définir des schémas normalisés pour la gestion de l’expérience client. La méthodologie sur laquelle repose [!DNL Experience Platform], **le système XDM**, rend les schémas [!DNL Experience Data Model] opérationnels pour qu’ils soient utilisés par les services de [!DNL Platform]. Le **[!DNL Schema Registry]** fournit une interface utilisateur et une API RESTful pour accéder à **[!DNL Schema Library]** dans [!DNL Experience Platform]. Pour plus d’informations, consultez la [documentation XDM](home.md).
+**[!DNL Experience Data Model] (XDM)** est une spécification open source conçue pour définir des schémas normalisés pour la gestion de l’expérience client. La méthodologie sur laquelle repose [!DNL Experience Platform], **le système XDM**, rend les schémas [!DNL Experience Data Model] opérationnels pour qu’ils soient utilisés par les services de [!DNL Experience Platform]. Le **[!DNL Schema Registry]** fournit une interface utilisateur et une API RESTful pour accéder à **[!DNL Schema Library]** dans [!DNL Experience Platform]. Pour plus d’informations, consultez la [documentation XDM](home.md).
 
 ## FAQ
 

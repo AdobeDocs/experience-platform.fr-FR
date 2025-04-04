@@ -4,10 +4,10 @@ title: Guide de dépannage du profil client en temps réel
 type: Documentation
 description: Ce document fournit des réponses aux questions fréquentes sur le profil client en temps réel, ainsi qu’un guide de dépannage pour les erreurs courantes lors de l’utilisation des données de profil à l’aide d’Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '964'
-ht-degree: 100%
+source-wordcount: '968'
+ht-degree: 91%
 
 ---
 
@@ -25,15 +25,15 @@ Vous trouverez ci-dessous une liste de réponses aux questions les plus fréquem
 
 Profile accepte aussi bien les données d’**enregistrement** que les données de **série temporelle**, tant que les données en question contiennent au moins une valeur d’identité qui les associe à une personne individuelle unique.
 
-Comme tous les services Platform, Profile nécessite que ses données soient structurées sémantiquement sous un schéma de modèle de données d’expérience (XDM). Ce schéma doit, à son tour, comporter une **identité principale** définie et activée pour une utilisation dans Profile.
+Comme tous les services Experience Platform, Profile nécessite que ses données soient structurées sémantiquement sous un schéma de modèle de données d’expérience (XDM). Ce schéma doit, à son tour, comporter une **identité principale** définie et activée pour une utilisation dans Profile.
 
 Si vous ne connaissez pas XDM, commencez par consulter la [Présentation de XDM](../xdm/home.md) pour en savoir plus. Ensuite, consultez le guide d’utilisation XDM pour savoir comment [définir des champs d’identité](../xdm/tutorials/create-schema-ui.md#identity-field) et [activer un schéma pour Profile](../xdm/tutorials/create-schema-ui.md#profile).
 
 ### Où les données Profile sont-elles stockées ?
 
-Le profil client en temps réel conserve sa propre banque de données (appelée « banque de profils ») à l’écart du lac de données qui contient d’autres données ingérées de Platform.
+Le profil client en temps réel conserve sa propre banque de données (appelée « banque de profils ») à l’écart du lac de données qui contient d’autres données Experience Platform ingérées.
 
-### Si j’ai déjà ingéré des données dans Platform, puis-je les rendre disponibles dans la banque de profils ?
+### Si j’ai déjà ingéré des données dans Experience Platform, puis-je les rendre disponibles dans la banque de profils ?
 
 Si des données ont été ingérées dans un jeu de données non lié à Profile, vous devez ingérer à nouveau ces données dans un jeu de données activé pour Profile afin de le rendre disponible dans la banque de données de profils. Il est possible d’activer un jeu de données existant pour Profile, mais toutes les données ingérées avant cette configuration n’apparaîtront toujours pas dans la banque de profils.
 
@@ -57,7 +57,7 @@ Vous pouvez également afficher la liste de vos audiences sous l’onglet **[!UI
 
 ## Codes d’erreur
 
-Voici une liste des messages d’erreur que vous pouvez rencontrer lors de l’utilisation de l’API Real-Time Customer Profile. Si l’erreur que vous rencontrez n’est pas répertoriée ici, vous pouvez la trouver dans le [Guide de dépannage de Platform](../landing/troubleshooting.md).
+Voici une liste des messages d’erreur que vous pouvez rencontrer lors de l’utilisation de l’API Real-Time Customer Profile. Si l&#39;erreur que vous rencontrez n&#39;est pas répertoriée ici, vous pouvez la trouver dans le [guide de dépannage d&#39;Experience Platform](../landing/troubleshooting.md).
 
 ### Impossible de rechercher le schéma de l’attribut calculé pour le chemin d’accès fourni
 

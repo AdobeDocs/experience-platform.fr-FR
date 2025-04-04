@@ -1,21 +1,21 @@
 ---
-title: Configurer des clés gérées par le client pour Azure à l’aide de l’interface utilisateur de Platform
+title: Configurer des clés gérées par le client pour Azure à l’aide de l’interface utilisateur d’Experience Platform
 description: Découvrez comment configurer votre application CMK avec votre client Azure et envoyer votre identifiant de clé de chiffrement à Adobe Experience Platform.
 role: Developer
 feature: Privacy
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
-source-git-commit: 58bc7a650ff58f877550fa8838c6f8e2908f0090
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1146'
 ht-degree: 18%
 
 ---
 
-# Configurer des clés gérées par le client pour Azure à l’aide de l’interface utilisateur de Platform
+# Configurer des clés gérées par le client pour Azure à l’aide de l’interface utilisateur d’Experience Platform
 
-Ce document couvre les instructions spécifiques à Azure pour activer la fonctionnalité Clés gérées par le client (CMK) dans Platform à l’aide de l’interface utilisateur. Pour obtenir des instructions spécifiques à AWS, consultez le [guide de configuration d’AWS](../aws/ui-set-up.md).
+Ce document couvre les instructions spécifiques à Azure pour activer la fonctionnalité Clés gérées par le client (CMK) dans Experience Platform à l’aide de l’interface utilisateur. Pour obtenir des instructions spécifiques à AWS, consultez le [guide de configuration d’AWS](../aws/ui-set-up.md).
 
-Pour plus d’informations sur la manière d’effectuer ce processus pour les instances de Platform hébergées sur Azure à l’aide de l’API, consultez le document [Configuration de la CMK de l’API](./api-set-up.md).
+Pour plus d’informations sur la manière d’effectuer ce processus pour les instances d’Experience Platform hébergées sur Azure à l’aide de l’API, reportez-vous au document [Configuration de la CMK de l’API](./api-set-up.md).
 
 ## Conditions préalables
 
@@ -50,13 +50,13 @@ Sélectionnez l’icône de copie (![ Icône de copie .](../../../../images/icon
 
 ![La vue [!UICONTROL Configuration des clés gérées par le client] avec la section URL d’authentification de l’application mise en surbrillance.](../../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
 
-Copiez et collez l’URL d’authentification [!UICONTROL Application] dans un navigateur pour ouvrir une boîte de dialogue d’authentification. Sélectionnez **[!DNL Accept]** pour ajouter le principal de service de l’application CMK à votre client [!DNL Azure]. La confirmation de l’authentification vous redirige vers la page de destination Experience Cloud.
+Copiez et collez l’URL d’authentification [!UICONTROL Application] dans un navigateur pour ouvrir une boîte de dialogue d’authentification. Sélectionnez **[!DNL Accept]** pour ajouter le principal de service de l’application CMK à votre client [!DNL Azure]. La confirmation de l’authentification vous redirige vers la page de destination d’Experience Cloud.
 
 ![Boîte de dialogue de demande d’autorisation Microsoft avec [!UICONTROL Accepter] en surbrillance.](../../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
 >[!IMPORTANT]
 >
->Si vous disposez de plusieurs abonnements [!DNL Microsoft Azure], vous pouvez éventuellement connecter votre instance Platform au mauvais coffre de clés. Dans ce cas, vous devez remplacer la section `common` du nom de l’URL d’authentification de l’application par l’ID de répertoire CMK.<br>Copiez l’ID de répertoire CMK à partir de la page Paramètres du portail, répertoires et abonnements de l’application [!DNL Microsoft Azure]<br>![la page Paramètres du portail d’applications [!DNL Microsoft Azure], répertoires et abonnements avec l’ID de répertoire en surbrillance.](../../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br>Ensuite, collez-le dans la barre d’adresse de votre navigateur.<br>![Page de navigateur Google avec la section « commun » de l’URL d’authentification de l’application mise en surbrillance.](../../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
+>Si vous disposez de plusieurs abonnements [!DNL Microsoft Azure], vous pouvez éventuellement connecter votre instance Experience Platform au mauvais coffre de clés. Dans ce cas, vous devez remplacer la section `common` du nom de l’URL d’authentification de l’application par l’ID de répertoire CMK.<br>Copiez l’ID de répertoire CMK à partir de la page Paramètres du portail, répertoires et abonnements de l’application [!DNL Microsoft Azure]<br>![la page Paramètres du portail d’applications [!DNL Microsoft Azure], répertoires et abonnements avec l’ID de répertoire en surbrillance.](../../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br>Ensuite, collez-le dans la barre d’adresse de votre navigateur.<br>![Page de navigateur Google avec la section « commun » de l’URL d’authentification de l’application mise en surbrillance.](../../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
 
 ### Attribuer l’application CMK à un rôle {#assign-to-role}
 
@@ -82,7 +82,7 @@ Vous pouvez vérifier l’application en comparant l’[!UICONTROL ID d’applic
 
 ![Vue [!UICONTROL Configuration des clés gérées par le client] avec le [!UICONTROL ID d’application] en surbrillance.](../../../images/governance-privacy-security/customer-managed-keys/application-id.png)
 
-Tous les détails nécessaires à la vérification des outils Azure sont inclus dans l’interface utilisateur de Platform. Ce niveau de granularité est fourni car de nombreux utilisateurs souhaitent utiliser d’autres outils Azure pour améliorer leur capacité à surveiller et à consigner l’accès de ces applications à leur coffre de clés. La compréhension de ces identifiants est essentielle à cet effet et pour aider les services Adobe à accéder à la clé .
+Tous les détails nécessaires à la vérification des outils Azure sont inclus dans l’interface utilisateur d’Experience Platform. Ce niveau de granularité est fourni car de nombreux utilisateurs souhaitent utiliser d’autres outils Azure pour améliorer leur capacité à surveiller et à consigner l’accès de ces applications à leur coffre de clés. La compréhension de ces identifiants est essentielle à cet effet et pour aider les services Adobe à accéder à la clé .
 
 ## Activer la configuration de la clé de chiffrement sur Experience Platform {#send-to-adobe}
 
@@ -110,11 +110,11 @@ Vous revenez au tableau de bord [!UICONTROL Configurations du chiffrement]. Le s
 
 ## Vérifiez le statut de la configuration {#check-status}
 
-Patientez un temps de traitement important. Pour vérifier le statut de la configuration, revenez à la [!UICONTROL configuration des clés gérées par le client] afficher et faites défiler l’écran jusqu’au [!UICONTROL statut de la configuration]. La barre de progression est passée à l’étape 1 de trois et explique que le système valide que Platform a accès à la clé et au coffre de clés.
+Patientez un temps de traitement important. Pour vérifier le statut de la configuration, revenez à la [!UICONTROL configuration des clés gérées par le client] afficher et faites défiler l’écran jusqu’au [!UICONTROL statut de la configuration]. La barre de progression est passée à l’étape 1 de trois et explique que le système valide qu’Experience Platform a accès à la clé et au coffre de clés.
 
 Il existe quatre statuts potentiels pour la configuration du CMK. En voici la liste :
 
-* Étape 1 : vérifie que Platform a la possibilité d’accéder à la clé et au coffre de clés.
+* Étape 1 : vérifie qu’Experience Platform a la possibilité d’accéder à la clé et au coffre de clés.
 * Étape 2 : le coffre de clés et le nom des clés sont en cours d’ajout à tous les magasins de données de votre organisation.
 * Étape 3 : le coffre de clés et le nom des clés ont été ajoutés aux magasins de données.
 * `FAILED` : un problème s’est produit, principalement lié à la configuration de la clé, du coffre de clés ou de l’application multi-utilisateur.

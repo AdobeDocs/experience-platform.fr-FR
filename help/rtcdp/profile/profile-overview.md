@@ -4,10 +4,10 @@ title: Présentation du profil client en temps réel dans Real-Time CDP
 description: Découvrez comment Adobe Real-Time Customer Data Platform vous permet de générer des expériences coordonnées, cohérentes et pertinentes pour vos clients à l’aide du profil client en temps réel.
 feature: Get Started, Profiles
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 100%
+source-wordcount: '457'
+ht-degree: 85%
 
 ---
 
@@ -31,11 +31,11 @@ Une fois réunies, les données client sont fusionnées en un profil unique au m
 
 ## Politiques de fusion
 
-Les politiques de fusion de données client sont les règles utilisées par Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer cette vue unifiée. Pour plus d’informations sur les politiques de fusion, consultez [Présentation des politiques de fusion](merge-policies.md).
+Les politiques de fusion sont les règles utilisées par Experience Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer cette vue unifiée. Pour plus d’informations sur les politiques de fusion, consultez [Présentation des politiques de fusion](merge-policies.md).
 
 ## Visionneuse de profils
 
-Platform vous permet d’afficher facilement les profils client et de rechercher des profils précis à l’aide de différents attributs. Pour plus d’informations sur l’affichage des profils dans Platform, consultez la [vue d’ensemble sur comment parcourir les profils](profile-browse.md).
+Experience Platform vous permet d’afficher facilement les profils client et de rechercher des profils spécifiques à l’aide de divers attributs. Pour plus d’informations sur l’affichage des profils dans Experience Platform, consultez la [présentation de la navigation dans les profils](profile-browse.md).
 
 ## Étapes suivantes
 

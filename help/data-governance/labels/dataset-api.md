@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gestion des étiquettes dʼutilisation des données pour les jeux de données à lʼaide dʼAPI
 description: LʼAPI Dataset Service vous permet dʼappliquer et de modifier des étiquettes dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI Catalog Service qui gère les métadonnées du jeu de données.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 9eda7068eb2a3fd5e59fbeff69c85abfad5ccf39
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1340'
 ht-degree: 91%
@@ -23,7 +23,7 @@ Ce document explique la gestion des étiquettes pour les jeux de données et les
 
 ## Prise en main
 
-Avant de lire ce guide, suivez les étapes décrites dans la [section Prise en main](../../catalog/api/getting-started.md) du guide de développement de Catalogue pour rassembler les informations dʼidentification nécessaires afin de réaliser des appels aux API de [!DNL Platform].
+Avant de lire ce guide, suivez les étapes décrites dans la [section Prise en main](../../catalog/api/getting-started.md) du guide de développement de Catalogue pour rassembler les informations dʼidentification nécessaires afin de réaliser des appels aux API de [!DNL Experience Platform].
 
 Pour réaliser des appels vers les points d’entrée décrits dans ce document, vous devez disposer de la valeur `id` unique pour un jeu de données spécifique. Si vous ne possédez pas cette valeur, consultez le guide qui [répertorie les objets de Catalogue](../../catalog/api/list-objects.md) afin de trouver les identifiants de vos jeux de données existants.
 
@@ -103,7 +103,7 @@ Lors dʼappels API mettant à jour les libellés existants dʼun jeu de données
 
 >[!NOTE]
 >
->Si des libellés existent actuellement pour le jeu de données en question, de nouveaux libellés ne peuvent être ajoutés que par le biais dʼune requête PUT, qui ne nécessite pas d’en-tête `If-Match`. Une fois que des libellés ont été ajoutés à un jeu de données, la valeur `etag` la plus récente est requise pour mettre à jour ou supprimer les libellés ultérieurement<br>Avant d’exécuter la méthode du PUT, vous devez effectuer une requête de GET sur les libellés du jeu de données. Veillez à ne mettre à jour que les champs spécifiques destinés à être modifiés dans la requête, en laissant le reste inchangé. De plus, assurez-vous que l’appel de PUT conserve les mêmes entités parentes que l’appel de GET. Toute incohérence provoquerait une erreur pour le client.
+>Si des libellés existent actuellement pour le jeu de données en question, de nouveaux libellés ne peuvent être ajoutés que par le biais dʼune requête PUT, qui ne nécessite pas d’en-tête `If-Match`. Une fois que des libellés ont été ajoutés à un jeu de données, la valeur de `etag` la plus récente est requise pour mettre à jour ou supprimer les libellés plus tard<br>Avant d’exécuter la méthode PUT, vous devez effectuer une requête GET sur les libellés du jeu de données. Veillez à ne mettre à jour que les champs spécifiques destinés à être modifiés dans la requête, en laissant le reste inchangé. En outre, assurez-vous que l’appel PUT conserve les mêmes entités parentes que l’appel GET. Toute incohérence entraînerait une erreur pour le client.
 
 Pour récupérer la version la plus récente de lʼentité étiquette-jeu de données, envoyez une [requête GET](#look-up) au point d’entrée `/datasets/{DATASET_ID}/labels`. La valeur actuelle est renvoyée dans la réponse sous un en-tête `etag`. Lors de la mise à jour de libellés de jeux de données existants, il est recommandé dʼeffectuer dʼabord une requête de recherche pour le jeu de données afin de récupérer sa valeur `etag` la plus récente avant dʼutiliser cette valeur dans lʼen-tête `If-Match` de votre requête PUT ultérieure. 
 
@@ -169,7 +169,7 @@ Pour supprimer des libellés du champ précédemment appliqués, mettez à jour 
 
 >[!NOTE]
 >
->Vous pouvez entièrement supprimer les étiquettes d’un jeu de données en fournissant une liste vide pour le paramètre `labels`. Il n’est pas obligatoire pour un jeu de données de conserver des libellés.
+>Vous pouvez supprimer entièrement les libellés d’un jeu de données en fournissant une liste vide pour le paramètre `labels` . Il n’est pas obligatoire pour un jeu de données de conserver des libellés.
 
 **Format d’API**
 

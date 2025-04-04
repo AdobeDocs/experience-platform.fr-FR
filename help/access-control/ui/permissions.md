@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;profil de produit;gestion des autorisations
 solution: Experience Platform
 title: Gestion des autorisations dʼun profil de produit
-description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités de Platform à l’aide d’Adobe Admin Console. Ce document sert de guide pour gérer les autorisations dʼun profil de produit pour Platform.
+description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités d’Experience Platform à l’aide de Adobe Admin Console. Ce document sert de guide sur la gestion des autorisations pour un profil de produit pour Experience Platform.
 exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
-source-git-commit: 1812af74e82f3071963177356b3cd4b23ea567f5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '356'
-ht-degree: 86%
+source-wordcount: '358'
+ht-degree: 74%
 
 ---
 
@@ -17,7 +17,7 @@ Immédiatement après la [création d’un nouveau profil de produit](#create-a-
 
 ![autorisations](../images/permissions.png)
 
-Les autorisations sont divisées en catégories et répertoriées sur cette page. La liste affiche le nom de la catégorie, le nombre d’autorisations qu’elle contient (et le nombre d’autorisations actives) et sa description. Reportez-vous au tableau de la section [Autorisations des ressources](/help/access-control/home.md#permissions) pour une ventilation des autorisations disponibles pour chaque rôle.
+Les autorisations sont divisées en catégories et répertoriées sur cette page. La liste affiche le nom de la catégorie, le nombre d’autorisations qu’elle contient (et le nombre d’autorisations actives) et sa description. Reportez-vous au tableau de [Autorisations des ressources](/help/access-control/home.md#permissions) pour obtenir une répartition des autorisations disponibles pour chaque rôle.
 
 Sélectionnez nʼimporte quelle catégorie de la liste pour ouvrir la page **[!UICONTROL Modifier les autorisations]**.
 

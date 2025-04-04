@@ -1,29 +1,29 @@
 ---
-title: Journalisation côté serveur des données A4T dans le SDK Web Platform
-description: Découvrez comment activer la journalisation côté serveur pour Adobe Analytics for Target (A4T) à l’aide du SDK Web Experience Platform.
-seo-title: Server-side logging for A4T data in Platform Web SDK
+title: Journalisation côté serveur des données A4T dans Experience Platform Web SDK
+description: Découvrez comment activer la journalisation côté serveur pour Adobe Analytics for Target (A4T) à l’aide d’Experience Platform Web SDK.
+seo-title: Server-side logging for A4T data in Experience Platform Web SDK
 seo-description: Learn how to enable server-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
-keywords: a4t;target;web;sdk;plateforme;journalisation
+keywords: a4t;target;web;sdk;platform;journalisation;
 exl-id: 26c25f58-e43c-4147-8595-69ea85af561f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '166'
 ht-degree: 1%
 
 ---
 
-# Journalisation côté serveur des données A4T dans le SDK Web Platform
+# Journalisation côté serveur des données A4T dans Experience Platform Web SDK
 
-Le SDK Web de Adobe Experience Platform vous permet de mettre en oeuvre la fonctionnalité Adobe Analytics for Target (A4T) sur Platform Edge Network. Lorsque la journalisation côté serveur est activée, tous les accès Analytics envoyés par l’intermédiaire de l’Edge Network sont augmentés avec les détails de Target côté serveur, sans avoir à passer par le processus d’assemblage d’accès.
+Adobe Experience Platform Web SDK vous permet de mettre en œuvre la fonctionnalité Adobe Analytics for Target (A4T) sur Experience Platform Edge Network. Lorsque la journalisation côté serveur est activée, tous les accès Analytics envoyés par l’intermédiaire d’Edge Network sont complétés avec les détails de Target côté serveur, sans avoir à passer par le processus d’assemblage des accès.
 
-La journalisation côté serveur d’Analytics est activée lorsque Analytics est activé dans la configuration de la chaîne de données :
+La journalisation côté serveur pour Analytics est activée lorsqu’Analytics est activé dans la configuration du flux de données :
 
-![Configuration du flux de données Analytics activée](../assets/enable-analytics-datastream.png)
+![Configuration de train de données Analytics activée](../assets/enable-analytics-datastream.png)
 
-Le diagramme suivant montre comment les données transitent par le système lorsque la journalisation Analytics côté serveur est activée :
+Le diagramme suivant montre le flux de données dans le système lorsque la journalisation Analytics côté serveur est activée :
 
 ![Flux de journalisation côté serveur](../assets/analytics-server-side-logging.png)
 
 ## Étapes suivantes
 
-Ce guide décrit la journalisation côté serveur des données A4T dans le SDK Web. Pour plus d’informations sur la gestion des données A4T côté client, consultez le guide sur la [journalisation côté client](./client-side.md) .
+Ce guide couvrait la journalisation côté serveur pour les données A4T dans le Web SDK. Pour plus d’informations sur la gestion des données A4T côté client](./client-side.md) consultez le guide sur la [ journalisation côté client .

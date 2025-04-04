@@ -2,33 +2,33 @@
 keywords: Experience Platform;profil;profil client en temps réel;dépannage;API;activer un jeu de données
 title: Activer un jeu de données pour les mises à jour de profil à l’aide d’API
 type: Tutorial
-description: Ce tutoriel vous explique comment utiliser les API Adobe Experience Platform pour activer un jeu de données avec des fonctionnalités "d’insertion" afin d’effectuer des mises à jour des données Real-time Customer Profile.
+description: Ce tutoriel vous explique comment utiliser les API Adobe Experience Platform pour activer un jeu de données avec des fonctionnalités « d’upsert » afin d’effectuer des mises à jour sur les données du profil client en temps réel.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1067'
-ht-degree: 90%
+source-wordcount: '1069'
+ht-degree: 86%
 
 ---
 
 # Activer un jeu de données pour les mises à jour de profil à l’aide d’API
 
-Ce tutoriel décrit le processus d’activation d’un jeu de données avec des fonctionnalités &quot;d’insertion&quot; afin d’effectuer des mises à jour des données de Real-time Customer Profile. Ceci inclut les étapes de création d’un nouveau jeu de données et la configuration d’un jeu de données existant.
+Ce tutoriel décrit le processus d’activation d’un jeu de données avec des fonctionnalités « d’upsert » pour faire les mises à jour des données du profil client en temps réel. Ceci inclut les étapes de création d’un nouveau jeu de données et la configuration d’un jeu de données existant.
 
 >[!NOTE]
 >
->Le workflow décrit dans ce tutoriel ne fonctionne que pour l’ingestion par lots. Pour les upserts d’ingestion par flux, reportez-vous au guide sur l’ [envoi de mises à jour de lignes partielles à Real-time Customer Profile à l’aide de Data Prep](../../data-prep/upserts.md).
+>Le workflow décrit dans ce tutoriel ne fonctionne que pour l’ingestion par lots. Pour les upserts d’ingestion en flux continu, reportez-vous au guide sur l’[envoi de mises à jour de lignes partielles au profil client en temps réel à l’aide de la préparation des données](../../data-prep/upserts.md).
 
 ## Prise en main
 
-Ce tutoriel nécessite une connaissance pratique des différents services Adobe Experience Platform impliqués dans la gestion des jeux de données activés pour Profil. Avant de commencer ce tutoriel, consultez la documentation relative à ces services [!DNL Platform] associés :
+Ce tutoriel nécessite une connaissance pratique des différents services Adobe Experience Platform impliqués dans la gestion des jeux de données activés pour Profil. Avant de commencer ce tutoriel, consultez la documentation relative à ces services [!DNL Experience Platform] associés :
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 - [[!DNL Catalog Service]](../../catalog/home.md) : une API RESTful qui vous permet de créer des jeux de données et de les configurer pour [!DNL Real-Time Customer Profile] et [!DNL Identity Service].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
 - [Ingestion par lots](../../ingestion/batch-ingestion/overview.md) : l’API d’ingestion par lots vous permet d’ingérer des données dans Experience Platform sous forme de fichiers par lots.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à des API Platform.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin afin de passer des appels avec succès aux API Experience Platform.
 
 ### Lecture d’exemples d’appels API
 
@@ -36,7 +36,7 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -44,7 +44,7 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 
 Toutes les requêtes contenant une payload (POST, PUT, PATCH) nécessitent un en-tête `Content-Type` supplémentaire : La valeur correcte de cet en-tête s’affiche dans les exemples de requêtes, le cas échéant.
 
-Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête `x-sandbox-name` spécifiant le nom du sandbox dans lequel l’opération sera effectuée. Pour plus d’informations sur les sandbox dans [!DNL Platform], consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
+Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Experience Platform] nécessitent un en-tête `x-sandbox-name` spécifiant le nom du sandbox dans lequel l’opération sera effectuée. Pour plus d’informations sur les sandbox dans [!DNL Experience Platform], consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
 
 ## Créer un jeu de données activé pour les mises à jour de profil
 
@@ -183,7 +183,7 @@ Pour configurer un jeu de données activé pour le profil pour les mises à jour
 
 >[!WARNING]
 >
->Les données ingérées dans le jeu de données alors qu’il est désactivé ne seront pas ingérées dans la banque de données Profile. Vous devez éviter d’ingérer des données dans le jeu de données jusqu’à ce qu’il ait été réactivé pour Profil.
+>Les données ingérées dans le jeu de données alors qu’il est désactivé ne seront pas ingérées dans la banque de profils. Vous devez éviter d’ingérer des données dans le jeu de données jusqu’à ce qu’il ait été réactivé pour Profil.
 
 **Format d’API**
 
@@ -236,7 +236,7 @@ Un jeu de données existant peut être activé pour les mises à jour de Profil 
 
 >[!IMPORTANT]
 >
->Lors de l’activation de votre jeu de données pour Profil, assurez-vous que le schéma auquel le jeu de données est associé est **également** activé pour Profil. Si le schéma n’est pas activé pour Profil, le jeu de données n’apparaîtra **pas** en tant qu’activé pour Profil dans l’interface utilisateur de Platform.
+>Lors de l’activation de votre jeu de données pour Profil, assurez-vous que le schéma auquel le jeu de données est associé est **également** activé pour Profil. Si le schéma n’est pas activé pour Profil, le jeu de données n’apparaîtra **pas** en tant qu’activé pour Profil dans l’interface utilisateur d’Experience Platform.
 
 **Format d’API**
 

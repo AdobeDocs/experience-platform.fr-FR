@@ -2,16 +2,16 @@
 description: Découvrez comment configurer les attributs de l’interface utilisateur, tels que le lien de documentation, la catégorie de carte de destination, ainsi que le type et la fréquence de connexion à la destination, pour les destinations créées avec Destination SDK.
 title: Attributs de l’interface utilisateur
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 995e464ca43e0738c16dd4e0ec928d27e5a8b029
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '800'
-ht-degree: 85%
+source-wordcount: '802'
+ht-degree: 83%
 
 ---
 
 # Attributs de l’interface utilisateur
 
-Les attributs de l’interface utilisateur définissent les éléments visuels que l’Adobe doit afficher pour votre carte de destination dans l’interface utilisateur de Adobe Experience Platform, tels qu’un logo, un lien vers la page de documentation, une description de destination et sa catégorie et son type.
+Les attributs de l’interface utilisateur définissent les éléments visuels qu’Adobe doit afficher pour votre carte de destination dans l’interface utilisateur de Adobe Experience Platform, tels qu’un logo, un lien vers la page de documentation, une description de destination et sa catégorie et son type.
 
 Pour comprendre la place de ce composant dans une intégration créée avec Destination SDK, consultez le diagramme de la documentation [Options de configuration](../configuration-options.md) ou consultez les pages de vue d’ensemble de la configuration de destination suivantes :
 
@@ -21,7 +21,7 @@ Pour comprendre la place de ce composant dans une intégration créée avec Dest
 Pendant la [création d’une destination](../../authoring-api/destination-configuration/create-destination-configuration.md) avec Destination SDK, la section `uiAttributes` définit les propriétés visuelles suivantes de votre carte de destination :
 
 * URL de votre page de documentation de destination dans le [catalogue de destination](../../../catalog/overview.md).
-* La catégorie sous laquelle la destination sera visible dans l’interface utilisateur de Platform.
+* La catégorie sous laquelle la destination sera visible dans l’interface utilisateur d’Experience Platform.
 * Fréquence d’exportation des données pour la destination.
 * Type de connexion de destination, tel qu’Amazon S3, Azure Blob, etc.
 * URL dans laquelle vous avez hébergé l’icône à afficher dans la carte du catalogue des destinations.
@@ -108,15 +108,15 @@ Pour ce faire, vous pouvez utiliser le paramètre `isBeta: "true"` dans la secti
 
 ### `icon` {#icon}
 
-Vous pouvez ajouter une icône de logo à votre destination, comme illustré dans l’image ci-dessous.
+Vous pouvez ajouter une icône de logo à la destination, comme illustré dans l’image ci-dessous.
 
-![Image de l&#39;interface utilisateur montrant l&#39;emplacement de l&#39;icône.](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
+![Image de l’interface utilisateur affichant l’emplacement de l’icône.](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
 
-Pour ajouter un logo à votre carte de destination, vous devez partager l’image de votre choix avec l’équipe d’Adobe lorsque vous [envoyez la destination pour révision](../../guides/submit-destination.md#logo).
+Pour ajouter un logo à votre carte de destination, vous devez partager l’image souhaitée avec l’équipe d’Adobe au moment de l’envoi de la destination [ révision](../../guides/submit-destination.md#logo).
 
 ## Étapes suivantes {#next-steps}
 
-Après avoir lu cet article, vous devriez mieux comprendre quels attributs d’interface utilisateur vous pouvez configurer pour votre destination et où les utilisateurs les verront dans l’interface utilisateur de Platform.
+Vous êtes arrivé au bout de cet article. À présent, vous devriez mieux comprendre quels attributs d’interface utilisateur vous pouvez configurer pour la destination et où les utilisateurs les verront dans l’interface utilisateur d’Experience Platform.
 
 Pour en savoir plus sur les autres composants de destination, consultez les articles suivants :
 

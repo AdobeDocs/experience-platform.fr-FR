@@ -3,10 +3,10 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; mapper csv�
 title: Guide de l’interface utilisateur de la préparation des données
 description: Découvrez comment utiliser les fonctions de préparation de données dans l’interface utilisateur d’Experience Platform pour mapper des fichiers CSV à un schéma XDM.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: 06aa84aaccf3aeb45bfe19f8741b6bca96258d89
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1471'
-ht-degree: 36%
+source-wordcount: '1474'
+ht-degree: 33%
 
 ---
 
@@ -16,14 +16,14 @@ Lisez ce guide pour savoir comment utiliser les fonctions de mappage [préparati
 
 ## Prise en main
 
-Ce tutoriel nécessite une connaissance pratique des composants Platform suivants :
+Ce tutoriel nécessite une connaissance pratique des composants Experience Platform suivants :
 
-* [[!DNL Experience Data Model (XDM)] Système](../../xdm/home.md) : Le cadre normalisé par lequel Platform organise les données d’expérience client.
+* [[!DNL Experience Data Model (XDM)] Système](../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client. 
    * [Principes de base de la composition des schémas](../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Tutoriel sur l’éditeur de schémas](../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
 * [Service d’identités](../../identity-service/home.md) : obtenez une meilleure compréhension des clients individuels et de leurs comportements en reliant les identités entre les appareils et les systèmes.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
-* [Sources](../../sources/home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
+* [Sources](../../sources/home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform.
 
 ## Accès à l’interface de mappage dans l’interface utilisateur
 

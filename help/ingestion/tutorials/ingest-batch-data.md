@@ -1,36 +1,36 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;ingestion;ingérer des données par lots;tutoriel;ingestion par lots;tutoriel;guide ui;
+keywords: Experience Platform;accueil;rubriques les plus consultées;ingestion;ingérer des données par lot;tutoriel;ingestion par lots;tutoriel;guide de l’interface utilisateur;
 solution: Experience Platform
-title: Ingestion de données dans Experience Platform
+title: Ingestion De Données Dans Experience Platform
 type: Tutorial
-description: Adobe Experience Platform vous permet d’importer facilement des données sous forme de fichiers par lots sous la forme de fichiers Parquet ou de données conformes à un schéma de modèle de données d’expérience (XDM) connu.
+description: Adobe Experience Platform vous permet d’importer facilement des données sous la forme de fichiers de lots, sous la forme de fichiers parquet ou de données conformes à un schéma de modèle de données d’expérience (XDM) connu.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: 8351f6907a0dc4a4bba01c7f6e9dec7c376c8575
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1322'
 ht-degree: 49%
 
 ---
 
 # Ingestion de données dans Adobe Experience Platform
 
-Adobe Experience Platform vous permet d’importer facilement des données dans [!DNL Platform] sous forme de fichiers de lot. Parmi les exemples de données à ingérer, citons les données de profil d’un fichier plat dans un système CRM (par exemple un fichier Parquet) ou les données conformes à un schéma [!DNL Experience Data Model] (XDM) connu dans le registre des schémas.
+Adobe Experience Platform vous permet d’importer facilement des données dans [!DNL Experience Platform] sous forme de fichiers de lots. Parmi les exemples de données à ingérer, citons notamment les données de profil d’un fichier plat dans un système CRM (un fichier Parquet, par exemple) ou les données conformes à un schéma [!DNL Experience Data Model] (XDM) connu dans le registre des schémas.
 
 ## Commencer
 
-Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n’avez pas accès à une organisation dans [!DNL Experience Platform], contactez votre administrateur système avant de poursuivre.
+Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n’avez pas accès à une organisation dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
 
 Si vous préférez ingérer des données à l’aide des API Data Ingestion, lisez d’abord le [guide de développement de l’ingestion par lots](../batch-ingestion/api-overview.md).
 
 ## Espace de travail des jeux de données
 
-L’espace de travail des jeux de données dans [!DNL Experience Platform] vous permet d’afficher et de gérer tous les jeux de données créés par votre organisation, ainsi que d’en créer.
+L’espace de travail Jeux de données dans [!DNL Experience Platform] vous permet d’afficher et de gérer tous les jeux de données créés par votre organisation et d’en créer.
 
-Affichez l’espace de travail des jeux de données en cliquant sur **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche. L’espace de travail des jeux de données contient une liste de jeux de données, y compris des colonnes indiquant le nom, la date et l’heure de création, la source, le schéma et l’état du dernier lot, ainsi que la date et l’heure de la dernière mise à jour du jeu de données.
+Affichez l’espace de travail des jeux de données en cliquant sur **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche. L’espace de travail Jeux de données contient une liste de jeux de données, y compris des colonnes indiquant le nom, la date et l’heure de création, la source, le schéma et le statut du dernier lot, ainsi que la date et l’heure de la dernière mise à jour du jeu de données.
 
 >[!NOTE]
 >
->Cliquez sur l’icône de filtre en regard de la barre de recherche pour utiliser les fonctionnalités de filtrage afin de n’afficher que les jeux de données activés pour [!DNL Profile].
+>Cliquez sur l’icône de filtre à côté de la barre de recherche pour utiliser les fonctionnalités de filtrage afin d’afficher uniquement les jeux de données activés pour la [!DNL Profile].
 
 ![Affichage de tous les jeux de données](../images/tutorials/ingest-batch-data/datasets-overview.png)
 
@@ -40,7 +40,7 @@ Pour créer un jeu de données, cliquez sur **[!UICONTROL Créer un jeu de donn�
 
 ![](../images/tutorials/ingest-batch-data/click-create-datasets.png)
 
-Sur l’écran **[!UICONTROL Créer un jeu de données]**, indiquez si vous souhaitez &quot;[!UICONTROL Créer un jeu de données à partir d’un schéma]&quot; ou &quot;[!UICONTROL Créer un jeu de données à partir d’un fichier CSV]&quot;.
+Sur l’écran **[!UICONTROL Créer un jeu de données]** choisissez si vous souhaitez « [!UICONTROL Créer un jeu de données à partir d’un schéma] » ou « [!UICONTROL Créer un jeu de données à partir d’un fichier CSV] ».
 
 Dans ce tutoriel, un schéma sera utilisé pour créer le jeu de données. Cliquez sur **[!UICONTROL Créer un jeu de données à partir d’un schéma]** pour continuer.
 
@@ -56,7 +56,7 @@ Une fois que vous avez sélectionné la case d’option en regard du schéma que
 
 ## Configuration d’un jeu de données
 
-Sur l’écran **[!UICONTROL Configurer le jeu de données]** , vous devrez attribuer un nom à votre jeu de données et pourrez également fournir une description du jeu de données.
+Sur l’écran **[!UICONTROL Configurer le jeu de données]**, vous devrez donner un nom à votre jeu de données et vous devrez peut-être également fournir une description du jeu de données.
 
 **Remarques sur les noms des jeux de données :**
 
@@ -72,25 +72,25 @@ Une fois que le jeu de données possède un nom et une description, cliquez sur 
 
 Un jeu de données vide a désormais été créé et vous avez été renvoyé à l’onglet **[!UICONTROL Activité du jeu de données]** dans l’espace de travail des jeux de données. Vous devriez voir le nom du jeu de données dans le coin supérieur gauche de l’espace de travail, ainsi qu’une notification indiquant « Aucun lot n’a été ajouté ». Cela est normal puisque vous n’avez encore ajouté aucun lot à ce jeu de données.
 
-Sur le côté droit de l’espace de travail des jeux de données, l’onglet **[!UICONTROL Informations]** contient des informations relatives à votre nouveau jeu de données, telles que l’identifiant du jeu de données, le nom, la description, le nom de la table, le schéma, la diffusion en continu et la source. L’onglet Informations contient également des informations sur le moment où le jeu de données a été créé et sa date de dernière modification.
+Sur le côté droit de l’espace de travail Jeux de données se trouve l’onglet **[!UICONTROL Infos]** contenant des informations relatives à votre nouveau jeu de données, telles que l’identifiant du jeu de données, le nom, la description, le nom de la table, le schéma, la diffusion en continu et la source. L’onglet Infos contient également des informations sur la date de création du jeu de données et sa date de dernière modification.
 
-L’onglet Informations contient également un bouton bascule **[!UICONTROL Profile]** utilisé pour activer votre jeu de données à utiliser avec [!DNL Real-Time Customer Profile]. L’utilisation de ce bouton et de [!DNL Real-Time Customer Profile] sera expliquée plus en détail dans la section qui suit.
+Dans l’onglet Infos se trouve également un bouton **[!UICONTROL Profile]** qui est utilisé pour activer votre jeu de données en vue de son utilisation avec [!DNL Real-Time Customer Profile]. L’utilisation de ce bouton (bascule) et de ce [!DNL Real-Time Customer Profile] sera expliquée en détail dans la section qui suit.
 
 ![Activité du jeu de données](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
-## Activation du jeu de données pour [!DNL Real-Time Customer Profile]
+## Activer le jeu de données pour [!DNL Real-Time Customer Profile]
 
-Les jeux de données sont utilisés pour ingérer des données dans [!DNL Experience Platform], et ces données sont finalement utilisées pour identifier des individus et rassembler des informations provenant de sources multiples. Cet ensemble d’informations est appelé [!DNL Real-Time Customer Profile]. Pour que [!DNL Platform] sache quelles informations doivent être incluses dans [!DNL Real-Time Profile], les jeux de données peuvent être marqués pour inclusion à l’aide du bouton d’activation/désactivation **[!UICONTROL Profile]** .
+Les jeux de données sont utilisés pour ingérer des données dans [!DNL Experience Platform], et ces données sont finalement utilisées pour identifier des individus et rassembler des informations provenant de plusieurs sources. Cette information regroupée s&#39;appelle un [!DNL Real-Time Customer Profile]. Pour que [!DNL Experience Platform] sachiez quelles informations doivent être incluses dans le [!DNL Real-Time Profile], les jeux de données peuvent être marqués pour inclusion à l’aide du bouton (bascule) **[!UICONTROL Profil]**.
 
-Par défaut, ce bouton est désactivé. Si vous choisissez d’activer [!DNL Profile], toutes les données ingérées dans le jeu de données seront utilisées pour aider à identifier un individu et à assembler son [!DNL Real-Time Profile].
+Par défaut, ce bouton est désactivé. Si vous choisissez d’activer [!DNL Profile], toutes les données ingérées dans le jeu de données seront utilisées pour aider à identifier un individu et à rassembler ses [!DNL Real-Time Profile].
 
-Pour en savoir plus sur [!DNL Real-Time Customer Profile] et l’utilisation des identités, consultez la documentation [Identity Service](../../identity-service/home.md).
+Pour en savoir plus sur l’[!DNL Real-Time Customer Profile] et l’utilisation des identités, consultez la documentation du [Service d’identités](../../identity-service/home.md).
 
-Pour activer le jeu de données pour [!DNL Real-Time Customer Profile], cliquez sur le bouton d’activation/désactivation **[!UICONTROL Profile]** dans l’onglet **[!UICONTROL Info]** .
+Pour activer le jeu de données à [!DNL Real-Time Customer Profile], cliquez sur le bouton (bascule) **[!UICONTROL Profil]** dans l’onglet **[!UICONTROL Infos]**.
 
 ![Bascule des profils](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
 
-Une boîte de dialogue s’affiche, vous demandant de confirmer que vous souhaitez activer le jeu de données pour [!DNL Real-Time Customer Profile].
+Une boîte de dialogue s’affiche vous demandant de confirmer que vous souhaitez activer le jeu de données pour [!DNL Real-Time Customer Profile].
 
 ![Boîte de dialogue d’activation de Profile](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png)
 
@@ -106,27 +106,27 @@ Pour commencer à ajouter des données au jeu de données, cliquez sur l’ongle
 
 >[!NOTE]
 >
->Platform prend en charge deux types de fichiers pour l’ingestion de données : Parquet ou JSON. Vous pouvez ajouter jusqu’à cinq fichiers à la fois, la taille maximale de chaque fichier étant de 1 Go.
+>Experience Platform prend en charge deux types de fichiers pour l’ingestion de données : Parquet ou JSON. Vous pouvez ajouter jusqu’à cinq fichiers à la fois, la taille maximale de chaque fichier étant de 1 Go.
 
 ![Ajouter un onglet de données](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
 ## Chargement d’un fichier {#upload-file}
 
-Une fois que vous avez fait glisser et déposé (ou parcouru et sélectionné) un fichier Parquet ou JSON que vous souhaitez charger, [!DNL Platform] commence immédiatement à traiter le fichier et une boîte de dialogue **[!UICONTROL Télécharger]** s’affiche sur l’onglet **[!UICONTROL Ajouter des données]** indiquant la progression du téléchargement de votre fichier.
+Une fois que vous avez effectué un glisser-déposer (ou que vous avez recherché et sélectionné) d’un fichier Parquet ou JSON que vous souhaitez charger, [!DNL Experience Platform] commencez immédiatement à traiter le fichier et une boîte de dialogue **[!UICONTROL Chargement]** s’affiche dans l’onglet **[!UICONTROL Ajouter des données]** pour indiquer la progression du chargement de votre fichier.
 
 ![Boîte de dialogue de chargement](../images/tutorials/ingest-batch-data/uploading-file.png)
 
 ## Mesures de jeux de données
 
-Une fois le chargement du fichier terminé, l’onglet **[!UICONTROL Activité du jeu de données]** n’indique plus qu’« aucun lot n’a été ajouté ». À la place, l’onglet **[!UICONTROL Activité du jeu de données]** affiche désormais les mesures des jeux de données. Toutes les mesures indiqueront « 0 » à cette étape, car le lot n’a pas encore été chargé.
+Une fois le chargement du fichier terminé, l’onglet **[!UICONTROL Activité du jeu de données]** n’indique plus qu’« aucun lot n’a été ajouté ». À la place, l’onglet **[!UICONTROL Activité du jeu de données]** affiche désormais les mesures du jeu de données. Toutes les mesures indiqueront « 0 » à cette étape, car le lot n’a pas encore été chargé.
 
-En bas de l’onglet se trouve une liste présentant l’**[!UICONTROL identifiant du lot]** des données qui venaient d’être ingérées via le processus [« Ajouter des données à un jeu de données »](#add-data-to-dataset). Sont également incluses les informations relatives au lot, notamment la date d’ingestion, le nombre d’enregistrements ingérés et l’état actuel du lot.
+En bas de l’onglet se trouve une liste présentant l’**[!UICONTROL identifiant du lot]** des données qui venaient d’être ingérées via le processus [« Ajouter des données à un jeu de données »](#add-data-to-dataset). Vous y trouverez également des informations relatives au lot, notamment la date d’ingestion, le nombre d’enregistrements ingérés et l’état actuel du lot.
 
 ![Mesures de jeux de données](../images/tutorials/ingest-batch-data/batch-id.png)
 
 ## Détails du lot
 
-Cliquez sur l’**[!UICONTROL identifiant du lot]** pour afficher un **[!UICONTROL aperçu du lot]**, indiquant des détails supplémentaires sur le lot. Une fois le chargement du lot terminé, les informations sur le lot sont mises à jour afin d’afficher le nombre d’enregistrements ingérés et la taille du fichier. L’état devient également &quot;Succès&quot; ou &quot;Échec&quot;. Si le lot échoue, la section **[!UICONTROL Code d’erreur]** contiendra des informations détaillées sur les erreurs survenues lors de l’ingestion.
+Cliquez sur l’**[!UICONTROL identifiant du lot]** pour afficher un **[!UICONTROL aperçu du lot]**, indiquant des détails supplémentaires sur le lot. Une fois le chargement du lot terminé, les informations relatives au lot sont mises à jour pour afficher le nombre d’enregistrements ingérés et la taille de fichier. Le statut passe également sur « Succès » ou « Échec ». Si le lot échoue, la section **[!UICONTROL Code d’erreur]** contiendra des informations détaillées sur les erreurs survenues lors de l’ingestion.
 
 Pour plus d’informations et pour obtenir des questions fréquentes sur l’ingestion par lots, consultez le [guide de dépannage de l’ingestion par lots](../batch-ingestion/troubleshooting.md).
 
@@ -144,12 +144,12 @@ Cliquez sur **[!UICONTROL Prévisualisation du jeu de données]** pour ouvrir un
 
 ## Étapes suivantes et ressources supplémentaires
 
-Maintenant que vous avez créé un jeu de données et ingéré des données avec succès dans [!DNL Experience Platform], vous pouvez répéter ces étapes pour créer un nouveau jeu de données ou ingérer davantage de données dans le jeu de données existant.
+Maintenant que vous avez créé un jeu de données et que vous avez ingéré des données avec succès dans [!DNL Experience Platform], vous pouvez répéter ces étapes pour créer un nouveau jeu de données ou ingérer davantage de données dans le jeu de données existant.
 
-Pour en savoir plus sur l’ingestion par lots, consultez la [présentation de l’ingestion par lots](../batch-ingestion/overview.md) et complétez votre apprentissage en regardant la vidéo ci-dessous.
+Pour en savoir plus sur l’ingestion par lots, veuillez lire la [présentation de l’ingestion par lots](../batch-ingestion/overview.md) et compléter votre apprentissage en regardant la vidéo ci-dessous.
 
 >[!WARNING]
 >
->Lʼinterface utilisateur de [!DNL Platform] affichée dans la vidéo suivante est obsolète. Consultez la documentation pour découvrir les dernières captures dʼécran et fonctionnalités de lʼinterface utilisateur.
+>Lʼinterface utilisateur de [!DNL Experience Platform] affichée dans la vidéo suivante est obsolète. Consultez la documentation pour découvrir les dernières captures dʼécran et fonctionnalités de lʼinterface utilisateur.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)

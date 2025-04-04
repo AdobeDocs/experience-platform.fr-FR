@@ -1,27 +1,27 @@
 ---
-title: Point de terminaison de l’API des événements d’audit
-description: Découvrez comment récupérer des événements d’audit dans Experience Platform à l’aide de l’API de requête d’audit.
+title: Point d’entrée de l’API des événements d’audit
+description: Découvrez comment récupérer les événements d’audit dans Experience Platform à l’aide de l’API Audit Query.
 role: Developer
 feature: Audits, API
 exl-id: c365b6d8-0432-41a5-9a07-44a995f69b7d
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '477'
 ht-degree: 20%
 
 ---
 
 # Point d’entrée des événements d’audit
 
-Les journaux d’audit permettent de fournir des détails sur l’activité des utilisateurs pour divers services et fonctionnalités. Chaque action enregistrée dans un journal contient des métadonnées qui indiquent le type d’action, la date et l’heure, l’ID d’e-mail de l’utilisateur ou de l’utilisatrice qui a exécuté l’action et des attributs supplémentaires liés au type d’action. Le point d’entrée `/audit/events` de l’API [!DNL Audit Query] vous permet de récupérer par programmation les données d’événement pour l’activité de votre organisation dans [!DNL Platform].
+Les journaux d’audit sont utilisés pour fournir des détails sur l’activité des utilisateurs pour divers services et fonctionnalités. Chaque action enregistrée dans un journal contient des métadonnées qui indiquent le type d’action, la date et l’heure, l’ID d’e-mail de l’utilisateur ou de l’utilisatrice qui a exécuté l’action et des attributs supplémentaires liés au type d’action. Le point d’entrée `/audit/events` de l’API [!DNL Audit Query] vous permet de récupérer par programmation les données d’événement pour l’activité de votre organisation dans [!DNL Experience Platform].
 
 ## Prise en main
 
 Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL Audit Query] API](https://developer.adobe.com/experience-platform-apis/references/audit-query/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
 
-## Liste des événements de contrôle
+## Liste des événements d’audit
 
-Vous pouvez récupérer les données d’événements en envoyant une requête de GET au point de terminaison `/audit/events`, en spécifiant les événements que vous souhaitez récupérer dans la payload.
+Vous pouvez récupérer les données d’événement en adressant une requête GET au point d’entrée `/audit/events`, en spécifiant les événements que vous souhaitez récupérer dans la payload.
 
 **Format d’API**
 
@@ -29,13 +29,13 @@ Vous pouvez récupérer les données d’événements en envoyant une requête d
 GET /audit/events
 ```
 
-L’API [!DNL Audit Query] prend en charge l’utilisation de paramètres de requête pour la page et le filtrage des résultats lors de la liste d’événements.
+L’API [!DNL Audit Query] prend en charge l’utilisation de paramètres de requête pour paginer et filtrer les résultats lors de l’énumération d’événements.
 
 | Paramètre | Description |
 | --- | --- |
-| `limit` | Nombre maximal d’enregistrements à renvoyer dans la réponse. La valeur par défaut `limit` est 50. |
-| `start` | Pointeur vers le premier élément pour les résultats de recherche renvoyés. Pour accéder à la page de résultats suivante, ce paramètre doit être incrémenté de la même quantité que celle indiquée par la limite. Exemple : pour accéder à la page de résultats suivante pour une requête avec limit=50, utilisez le paramètre start=50, puis start=100 pour la page après cela, etc. |
-| `queryId` | Lors de l’exécution d’une requête sur le point de terminaison /audit/events, la réponse inclut une propriété de chaîne queryId. Pour effectuer la même requête dans un appel distinct, vous pouvez inclure la valeur Id comme paramètre de requête unique au lieu de reconfigurer manuellement les paramètres de recherche. |
+| `limit` | Nombre maximal d’enregistrements à renvoyer dans la réponse. La `limit` par défaut est de 50. |
+| `start` | Pointeur vers le premier élément pour les résultats de recherche renvoyés. Pour accéder à la page de résultats suivante, ce paramètre doit être incrémenté de la même quantité que celle indiquée par « limit ». Exemple : pour accéder à la page de résultats suivante pour une requête avec une limite=50, utilisez le paramètre start=50, puis start=100 pour la page suivante, et ainsi de suite. |
+| `queryId` | Lors de l’exécution d’une requête au point d’entrée /audit/events, la réponse inclut une propriété de chaîne queryId. Pour effectuer la même requête dans un appel distinct, vous pouvez inclure la valeur de l’identifiant en tant que paramètre de requête unique au lieu de configurer à nouveau manuellement les paramètres de recherche. |
 
 **Requête**
 
@@ -51,7 +51,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les points de données résultants pour les mesures et les filtres spécifiés dans la requête.
+Une réponse réussie renvoie les points de données obtenus pour les mesures et les filtres spécifiés dans la requête.
 
 ```json
 {
@@ -148,14 +148,14 @@ Une réponse réussie renvoie les points de données résultants pour les mesure
 | --- | --- |
 | `customerAuditLogList` | Tableau dont les objets représentent chacun des événements spécifiés dans la requête. Chaque objet contient des informations sur la configuration du filtre et les données d’événement renvoyées. |
 | `userEmail` | Adresse électronique de l’utilisateur qui a exécuté l’événement. |
-| `eventType` | Type d’événement. Les types d’événements incluent `Core` et `Enhanced`. |
-| `imsOrgId` | ID de l’organisation sous laquelle l’événement a eu lieu. |
+| `eventType` | Type d’événement. Les types d’événements incluent les `Core` et les `Enhanced`. |
+| `imsOrgId` | L’identifiant de l’organisation sous laquelle l’événement a eu lieu. |
 | `permissionResource` | Le produit ou la fonctionnalité qui a fourni l’autorisation effectue l’action. Une ressource peut être l’une des suivantes : <ul><li>`Activation` </li><li>`ActivationAssociation` </li><li>`AnalyticSource` </li><li>`AudienceManagerSource` </li><li>`BizibleSource` </li><li>`CustomerAttributeSource` </li><li>`Dataset` </li><li>`EnterpriseSource` </li><li>`LaunchSource` </li><li>`MarketoSource` </li><li>`ProductProfile` </li><li>`ProfileConfig` </li><li>`Sandbox` </li><li>`Schema` </li><li>`Segment` </li><li>`StreamingSource` </li></ul> |
-| `permissionType` | Type d’autorisation associé à l’action. |
-| `assetType` | Type de ressource Platform sur laquelle l’action a été effectuée. |
-| `assetId` | Identifiant unique de la ressource Platform sur laquelle l’action a été effectuée. |
-| `assetName` | Nom de la ressource Platform sur laquelle l’action a été effectuée. |
-| `action` | Type d’action enregistrée pour l’événement. Une action peut être l’une des suivantes : <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`remove` </li><li>`reset` </li><li>`segment activate` </li><li>`segment remove` </li><li>`update` </li></ul> |
-| `status` | État de l’action. Un état peut être l’un des suivants : </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul> |
+| `permissionType` | Type d’autorisation impliqué dans l’action. |
+| `assetType` | Type de ressource Experience Platform sur laquelle l’action a été effectuée. |
+| `assetId` | Identifiant unique de la ressource Experience Platform sur laquelle l’action a été effectuée. |
+| `assetName` | Nom de la ressource Experience Platform sur laquelle l’action a été effectuée. |
+| `action` | Type d’action qui a été enregistré pour l’événement. Une action peut être l’une des suivantes : <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`remove` </li><li>`reset` </li><li>`segment activate` </li><li>`segment remove` </li><li>`update` </li></ul> |
+| `status` | Statut de l’action. Un statut peut être l’un des suivants : </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul> |
 
 {style="table-layout:auto"}

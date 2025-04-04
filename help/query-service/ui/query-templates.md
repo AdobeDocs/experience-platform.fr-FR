@@ -2,10 +2,10 @@
 title: Modèles de requête
 description: Les modèles de requête sont des requêtes SQL enregistrées réutilisables qui peuvent être réutilisées par d’autres utilisateurs et utilisatrices pour économiser du temps et des efforts. Ils peuvent être créés à l’aide de Query Editor ou de l’API Query Service et peuvent être utilisés sur tous les jeux de données Experience Platform.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: 1a44be939a4678078b414658199472e07dee153b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 73%
+source-wordcount: '593'
+ht-degree: 63%
 
 ---
 
@@ -17,7 +17,7 @@ Ce document fournit les informations nécessaires à la création de modèles de
 
 ## Conditions préalables
 
-Vous devez avoir l’autorisation [!UICONTROL Gestion des requêtes] activée pour accéder à Query Editor et afficher le tableau de bord des requêtes dans l’interface utilisateur de Platform. L’autorisation est activée via l’[Admin Console](https://adminconsole.adobe.com/) d’Adobe. Contactez l’administrateur ou administratrice de votre organisation si vous ne disposez pas des privilèges d’administrateur pour activer cette autorisation. Consultez la documentation sur le contrôle d’accès pour des [instructions complètes sur l’ajout d’autorisations via Admin Console](../../access-control/home.md).
+Vous devez avoir l’autorisation [!UICONTROL Gérer les requêtes] activée pour accéder à Query Editor et afficher le tableau de bord des requêtes dans l’interface utilisateur d’Experience Platform. L’autorisation est activée via l’[Admin Console](https://adminconsole.adobe.com/) d’Adobe. Contactez l’administrateur ou administratrice de votre organisation si vous ne disposez pas des privilèges d’administrateur pour activer cette autorisation. Consultez la documentation sur le contrôle d’accès pour des [instructions complètes sur l’ajout d’autorisations via Admin Console](../../access-control/home.md).
 
 ## Créer un modèle de requête
 
@@ -29,11 +29,11 @@ Consultez la documentation pour obtenir des instructions sur l’utilisation de 
 
 >[!TIP]
 >
->Lorsque vous enregistrez une requête dans l’éditeur de requêtes, un message de confirmation s’affiche pour vous informer de la réussite de l’action. Ce message contextuel contient un lien qui permet d’accéder facilement à l’espace de travail de planification des requêtes. Consultez la [documentation sur les requêtes de planification](./query-schedules.md) pour savoir comment exécuter des requêtes sur une cadence personnalisée.
+>Lorsque vous enregistrez une requête dans le Query Editor, un message de confirmation s’affiche pour vous informer de la réussite de l’action. Ce message contextuel contient un lien qui permet d&#39;accéder facilement à l&#39;espace de travail de planification des requêtes. Consultez la [documentation sur la planification des requêtes](./query-schedules.md) pour savoir comment exécuter des requêtes à une cadence personnalisée.
 
 ## Parcourir les modèles de requête {#browse}
 
-Dans l’espace de travail Requêtes de l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Modèles]** pour afficher la liste des requêtes enregistrées disponibles.
+Dans l’espace de travail Requêtes de l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Modèles]** pour afficher la liste des requêtes enregistrées disponibles.
 
 ![Espace de travail des requêtes avec l’onglet Modèles mis en surbrillance.](../images/ui/query-templates/query-templates.png)
 
@@ -41,13 +41,13 @@ Pour trouver les informations de modèle pertinentes, sélectionnez un modèle d
 
 ![Panneau de détails de l’espace de travail des requêtes avec l’identifiant de requête en surbrillance.](../images/ui/query-templates/details-panel.png)
 
-Dans le panneau Détails, vous pouvez exécuter les actions suivantes :
+Dans le panneau des détails, vous pouvez exécuter les actions suivantes :
 
-* Sélectionnez **[!UICONTROL Exécuter en tant que CTAS]** pour créer une table en sélectionnant les données d’une ou de plusieurs tables existantes. Cette option n’est disponible que si vous avez une requête SELECT.
-* Sélectionnez **[!UICONTROL Ajouter un planning]** pour commencer à modifier votre planning pour votre modèle de requête.
-* Sélectionnez **[!UICONTROL Afficher la planification]** pour accéder à l’onglet [!UICONTROL Planifications] de l’éditeur de requêtes. Cette vue contient toutes les informations de planification associées à la requête.
+* Sélectionnez **[!UICONTROL Exécuter en tant que CTAS]** pour créer une table en sélectionnant les données d&#39;une ou de plusieurs tables existantes. Cette option n’est disponible que si vous disposez d’une requête SELECT.
+* Sélectionnez **[!UICONTROL Ajouter un planning]** pour commencer à modifier le planning de votre modèle de requête.
+* Sélectionnez **[!UICONTROL Afficher le planning]** pour accéder à l’onglet [!UICONTROL Plannings] du Query Editor. Cette vue contient toutes les informations de planification associées à la requête.
 * Sélectionnez **[!UICONTROL Supprimer la requête]** pour supprimer le modèle.
-* Sélectionnez le nom du modèle pour accéder à l’éditeur de requêtes dans lequel le code SQL est prérenseigné pour modification.
+* Sélectionnez le nom du modèle pour accéder à Query Editor où le code SQL est prérenseigné pour modification.
 
 ### Utiliser l’API Query Service pour créer un modèle
 
@@ -55,7 +55,7 @@ Consultez la documentation pour obtenir des instructions sur [comment créer un 
 
 >[!NOTE]
 >
->Les modèles créés à l’aide de l’API sont également visibles dans l’onglet Modèles de Query Service de l’interface utilisateur de Platform.
+>Les modèles créés à l’aide de l’API sont également visibles dans l’onglet Modèles de Query Service de l’interface utilisateur d’Experience Platform .
 
 ## Étapes suivantes
 

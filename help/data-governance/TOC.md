@@ -5,10 +5,10 @@ breadcrumb-title: Guide de gouvernance des données
 user-guide-description: Faites respecter les restrictions d’utilisation des données au moyen de libellés, d’actions marketing et de politiques de gouvernance.
 feature: Data Governance
 role: User,Developer,Admin
-source-git-commit: 8837d719fbdf2864995c0d73a87a41c4b119cfb7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 93%
+source-wordcount: '100'
+ht-degree: 94%
 
 ---
 
@@ -30,10 +30,10 @@ ht-degree: 93%
    * [Présentation](enforcement/overview.md)
    * [Application automatique](enforcement/auto-enforcement.md)
    * [Application basée sur les API](enforcement/api-enforcement.md)
-* API du service MTLS {#mtls-api}
+* {#mtls-api} API du service MTLS
    * [Vue d’ensemble](mtls-api/overview.md)
    * [Prise en main](mtls-api/getting-started.md)
-   * [Point d’entrée du certificat public](mtls-api/public-certificate-endpoint.md)
+   * [Point d’entrée de certificat public](mtls-api/public-certificate-endpoint.md)
 * API Policy Service {#api}
    * [Présentation](api/overview.md)
    * [Prise en main](api/getting-started.md)
@@ -42,4 +42,4 @@ ht-degree: 93%
    * [Actions marketing](api/marketing-actions.md)
    * [Évaluation](api/evaluation.md)
 * [Référence d’API](https://www.adobe.io/experience-platform-apis/references/policy-service/)
-* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
+* [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

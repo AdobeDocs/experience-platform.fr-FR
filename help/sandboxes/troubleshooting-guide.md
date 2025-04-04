@@ -4,22 +4,22 @@ solution: Experience Platform
 title: Guide de dépannage des sandbox
 description: Ce document apporte des réponses aux questions fréquentes sur les sandbox dans Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: 7ee472294e8f255d9de3c15982a6f5d2d3654755
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 97%
+source-wordcount: '827'
+ht-degree: 78%
 
 ---
 
 # Guide de dépannage des sandbox
 
-Ce document apporte des réponses aux questions fréquentes sur les sandbox dans Adobe Experience Platform. Pour les questions et le dépannage relatifs aux autres services Platform, consultez le [guide de dépannage d’Experience Platform](../landing/troubleshooting.md).
+Ce document apporte des réponses aux questions fréquentes sur les sandbox dans Adobe Experience Platform. Pour toute question ou dépannage concernant d’autres services Experience Platform, consultez le [guide de dépannage d’Experience Platform](../landing/troubleshooting.md).
 
-Les sandbox divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale. Pour plus d’informations, consultez la [Présentation des sandbox](home.md).
+Les sandbox divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale. Pour plus d’informations, consultez la [Présentation des sandbox](home.md).
 
 ## Qu’est-ce qu’un sandbox ?
 
-Les sandbox sont des partitions virtuelles au sein d’une instance unique d’Experience Platform. Chaque sandbox conserve sa propre bibliothèque indépendante de ressources Platform (qui comprend des schémas, des jeux de données, des profils, etc.). Tout le contenu et les actions réalisés dans un sandbox sont limités à celui-ci et n’en affectent aucun autre. Pour plus d’informations, consultez la [Présentation des sandbox](home.md).
+Les sandbox sont des partitions virtuelles au sein d’une instance unique d’Experience Platform. Chaque sandbox conserve sa propre bibliothèque indépendante de ressources Experience Platform (qui comprend des schémas, des jeux de données, des profils, etc.). Tout le contenu et les actions réalisés dans un sandbox sont limités à celui-ci et n’en affectent aucun autre. Pour plus d’informations, consultez la [Présentation des sandbox](home.md).
 
 ## Quels sont les types de sandbox disponibles et quelles sont leurs différences ? {#sandbox-types}
 
@@ -31,7 +31,7 @@ Les sandbox sont des partitions virtuelles au sein d’une instance unique d’E
 
 Deux types de sandbox sont disponibles dans Experience Platform :
 
-* **Sandbox de production** : un sandbox de production est conçu pour être utilisé avec des profils dans votre environnement de production. Platform vous permet de créer plusieurs sandbox de production afin de fournir les fonctionnalités appropriées aux données tout en maintenant l’isolation opérationnelle. Cette fonctionnalité vous permet de dédier des sandbox de production spécifiques à des secteurs d’activité, des marques, des projets ou des régions distincts. Les sandbox de production prennent en charge un volume de profils de production allant jusqu’à votre engagement sous licence de [!DNL Profile] (mesuré de manière cumulée sur tous vos sandbox de production autorisés). Vous êtes autorisé à utiliser l’intégralité de votre volume de données total sous licence (mesuré de manière cumulée sur tous vos environnements de test de production autorisés).
+* **Sandbox de production** : un sandbox de production est conçu pour être utilisé avec des profils dans votre environnement de production. Experience Platform vous permet de créer plusieurs sandbox de production afin de fournir les fonctionnalités appropriées aux données tout en maintenant l’isolation opérationnelle. Cette fonctionnalité vous permet de dédier des sandbox de production spécifiques à des secteurs d’activité, des marques, des projets ou des régions distincts. Les sandbox de production prennent en charge un volume de profils de production allant jusqu’à votre engagement sous licence de [!DNL Profile] (mesuré de manière cumulée sur tous vos sandbox de production autorisés). Vous avez le droit d’utiliser l’intégralité du volume total de données sous licence (mesuré de manière cumulée sur tous vos sandbox de production autorisés).
 
 * **Sandbox de développement** : un sandbox de développement est un sandbox qui peut être utilisé exclusivement à des fins de développement et de test avec des profils hors production. Les sandbox de développement prennent en charge un volume de profils hors production pouvant atteindre 10 % de votre engagement sous licence de [!DNL Profile] (mesuré de manière cumulée sur tous vos sandbox de développement autorisés). Vos droits incluent jusqu’à :
    * une tâche de segmentation par lots par jour, par sandbox de développement ;
@@ -41,15 +41,15 @@ Pour plus d’informations, consultez la [Présentation des sandbox](./home.md).
 
 ## Puis-je accéder à une ressource depuis plusieurs sandbox ?
 
-Les sandbox sont des partitions isolées d’une instance Platform unique pour laquelle chaque sandbox conserve sa propre bibliothèque indépendante de ressources. Il n’est pas possible d’accéder à une ressource qui existe dans un sandbox depuis un autre sandbox, quel que soit le type de sandbox (production ou hors production).
+Les sandbox sont des partitions isolées d’une seule instance Experience Platform, où chaque sandbox conserve sa propre bibliothèque indépendante de ressources. Il n’est pas possible d’accéder à une ressource qui existe dans un sandbox depuis un autre sandbox, quel que soit le type de sandbox (production ou hors production).
 
 ## Quel est le sandbox de production par défaut ?
 
-La sandbox de production par défaut est la première sandbox de production créée lorsqu’une organisation est configurée pour la première fois. Le sandbox de production par défaut vous permet d’ingérer ou d’utiliser des données de Platform, ainsi que d’accepter des requêtes qui n’incluent pas de valeurs pour un nom de sandbox ou un identifiant de sandbox. Le sandbox de production par défaut peut être réinitialisé, mais pas supprimé.
+La sandbox de production par défaut est la première sandbox de production créée lorsqu’une organisation est configurée pour la première fois. Le sandbox de production par défaut vous permet d’ingérer ou d’utiliser des données d’Experience Platform, ainsi que d’accepter des requêtes qui n’incluent pas de valeurs pour un nom de sandbox ou un identifiant de sandbox. Le sandbox de production par défaut peut être réinitialisé, mais pas supprimé.
 
 ## De combien de sandbox de production puis-je disposer ?
 
-Une instance Experience Platform prend en charge plusieurs sandbox de production et de développement. Chaque sandbox conserve sa propre bibliothèque indépendante de ressources Platform (y compris les schémas, les jeux de données et les profils).
+Une instance Experience Platform prend en charge plusieurs sandbox de production et de développement. Chaque sandbox conserve sa propre bibliothèque indépendante de ressources Experience Platform (y compris les schémas, les jeux de données et les profils).
 
 Une licence Experience Platform par défaut vous accorde un total de cinq sandbox que vous pouvez classer en tant que production ou développement. Vous pouvez ajouter des packs de 10 sandbox jusquʼà 75 sandbox maximum au total.
 

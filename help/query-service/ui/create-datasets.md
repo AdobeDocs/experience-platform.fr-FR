@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;query service;Query service;générer des jeux de données;générer un jeu de données;créer un jeu de données;
 solution: Experience Platform
-title: Génération de jeux de données de sortie à partir des résultats de requête
+title: Générer des jeux de données de sortie à partir des résultats de requête
 type: Tutorial
 description: Query Service d’Adobe Experience Platform permet de créer des jeux de données à partir de l’interface utilisateur. Une fois qu’un jeu de données est créé, il est possible d’y accéder comme à tout autre jeu de données du lac de données et de l’utiliser pour divers cas d’utilisation.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 59d2d74b2d77f3bbaca381af908de5295af24e5b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 84%
+source-wordcount: '502'
+ht-degree: 63%
 
 ---
 
@@ -22,19 +22,19 @@ Pour créer des jeux de données à partir de l’interface utilisateur d’Adob
 
 1. Rédigez votre requête à l’aide d’un client connecté et validez la sortie. Pour savoir comment écrire des requêtes à l’aide de [!DNL Query Editor], lisez le guide de l’interface utilisateur [!DNL Query Editor] [sur l’écriture de requêtes](./user-guide.md#writing-queries).
 
-2. Dans l’interface utilisateur de Platform, accédez à **[!UICONTROL Requêtes]** puis à l’onglet **[!UICONTROL Modèles]** et sélectionnez la requête que vous avez créée. Pour plus d’informations sur la manière d’afficher les requêtes qui ont été créées et enregistrées pour votre organisation dans l’interface utilisateur de Platform, lisez la [[!DNL Query Service] présentation](./overview.md#browse).
+2. Dans l’interface utilisateur d’Experience Platform, accédez à **[!UICONTROL Requêtes]** suivi de l’onglet **[!UICONTROL Modèles]** et sélectionnez la requête que vous avez créée. Pour plus d’informations sur l’affichage des requêtes qui ont été créées et enregistrées pour votre organisation dans l’interface utilisateur d’Experience Platform, lisez la [[!DNL Query Service] présentation](./overview.md#browse).
 
 3. Dans le panneau Détails de la requête, sélectionnez **[!UICONTROL Exécuter en tant que CTAS]**.
 
-   ![ L&#39;onglet [!UICONTROL Modèles] de l&#39;espace de travail Requêtes avec l&#39;option [!UICONTROL Exécuter en tant que CTAS] mise en surbrillance.](../images/ui/create-datasets/run-as-ctas.png)
+   ![Onglet Espace de travail Requêtes [!UICONTROL Modèles] avec l’option Sélectionner [!UICONTROL Exécuter en tant que CTAS] mise en surbrillance.](../images/ui/create-datasets/run-as-ctas.png)
 
 4. Dans la boîte de dialogue qui s’affiche, saisissez un nom de jeu de données précédé de votre identifiant LDAP. Le nom du jeu de données ne doit pas nécessairement être unique ou compatible avec SQL. Notez que le nom du tableau de votre jeu de données sera généré en fonction du nom du jeu de données que vous créez ici.
 
 5. Ensuite, saisissez une description pour votre jeu de données dans le champ [!UICONTROL Description] et sélectionnez **[!UICONTROL Exécuter en tant que CTAS]**.
 
-   ![La boîte de dialogue du jeu de données de sortie avec les détails du jeu de données et [!UICONTROL Exécuter en tant que CTAS] mise en surbrillance](../images/ui/create-datasets/run-query.png)
+   ![Boîte de dialogue Jeu de données de sortie avec les détails du jeu de données et [!UICONTROL Exécuter en tant que CTAS] en surbrillance](../images/ui/create-datasets/run-query.png)
 
-6. Une fois l’exécution de la requête terminée, accédez à **[!UICONTROL Jeux de données]** pour afficher le jeu de données que vous avez créé. Pour en savoir plus sur l’exécution d’actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur de Platform, voir le [guide de l’interface utilisateur des jeux de données](../../catalog/datasets/user-guide.md).
+6. Une fois l’exécution de la requête terminée, accédez à **[!UICONTROL Jeux de données]** pour afficher le jeu de données que vous avez créé. Pour en savoir plus sur l’exécution d’actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur d’Experience Platform, consultez le [guide de l’interface utilisateur des jeux de données](../../catalog/datasets/user-guide.md).
 
 Une fois qu’un jeu de données est créé, il est possible d’y accéder comme à tout autre jeu de données du [!DNL Data Lake] et de l’utiliser pour divers cas d’utilisation.
 
@@ -52,4 +52,4 @@ Les jeux de données créés à l’aide de cette fonctionnalité sont généré
 
 ## Étapes suivantes
 
-Après avoir lu ce document, vous devez maintenant comprendre comment utiliser [!DNL Query Service] pour générer des jeux de données à partir de l’interface utilisateur de Platform. Pour plus d’informations sur l’accès, l’écriture et l’exécution de requêtes dans l’interface utilisateur de Platform, voir la [[!DNL Query Service] présentation de l’interface utilisateur](./overview.md).
+Vous êtes arrivé au bout de ce document. À présent, vous devez comprendre comment utiliser [!DNL Query Service] pour générer des jeux de données à partir de l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’accès, l’écriture et l’exécution de requêtes dans l’interface utilisateur d’Experience Platform, consultez la [[!DNL Query Service]  présentation de l’interface utilisateur](./overview.md).

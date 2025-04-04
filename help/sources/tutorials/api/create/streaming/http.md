@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;connexion en continu;créer une connexion en continu;guide de l’api;tutoriel;créer une connexion en continu;ingestion en continu;ingestion;
+keywords: Experience Platform;accueil;rubriques les plus consultées;connexion en flux continu;créer une connexion en flux continu;guide de l’api;tutoriel;créer une connexion en flux continu;ingestion en flux continu;ingestion;
 title: Créer une connexion en continu d’API HTTP à l’aide de l’API Flow Service
 description: Ce tutoriel décrit les étapes à suivre pour créer une connexion en continu à l’aide de la source d’API HTTP pour les données brutes et XDM à l’aide de l’API Flow Service
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1646'
-ht-degree: 35%
+source-wordcount: '1656'
+ht-degree: 30%
 
 ---
 
@@ -21,14 +21,14 @@ Ce tutoriel utilise l’[[!DNL Flow Service] API](https://www.adobe.io/experienc
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données d’expérience.
+* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données d’expérience.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
 En outre, la création d’une connexion en continu nécessite que vous disposiez d’un schéma XDM cible et d’un jeu de données. Pour savoir comment les créer, consultez le tutoriel sur la [diffusion en continu de données d’enregistrement](../../../../../ingestion/tutorials/streaming-record-data.md) ou le tutoriel sur la [diffusion en continu de données de série temporelle](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
-### Utiliser les API Platform
+### Utilisation des API Experience Platform
 
-Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Platform, consultez le guide sur la [Prise en main des API Platform](../../../../../landing/api-guide.md).
+Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Experience Platform, consultez le guide [Prise en main des API Experience Platform](../../../../../landing/api-guide.md).
 
 ## Créer une connexion de base
 
@@ -36,9 +36,9 @@ Une connexion de base spécifie la source et contient les informations requises 
 
 ### Connexion non authentifiée
 
-Les connexions non authentifiées sont la connexion en continu standard que vous pouvez créer lorsque vous souhaitez diffuser des données dans Platform.
+Les connexions non authentifiées sont la connexion en continu standard que vous pouvez créer lorsque vous souhaitez diffuser des données dans Experience Platform.
 
-Pour créer une connexion de base non authentifiée, envoyez une requête de POST au point d’entrée `/connections` et indiquez le nom de la connexion, le type de données et l’identifiant de spécification de connexion API HTTP. Cet identifiant est `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Pour créer une connexion de base non authentifiée, envoyez une requête POST au point d’entrée `/connections` et indiquez le nom de la connexion, le type de données et l’identifiant de spécification de connexion de l’API HTTP. Cet identifiant est `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 **Format d’API**
 
@@ -130,7 +130,7 @@ Une réponse réussie renvoie le statut HTTP 201 avec les détails de la connexi
 
 ### Connexion authentifiée
 
-Les connexions authentifiées doivent être utilisées lorsque vous devez faire la distinction entre les enregistrements provenant de sources approuvées et non approuvées. Les utilisateurs qui souhaitent envoyer des informations avec des informations d’identification personnelle (PII) doivent créer une connexion authentifiée lors de la diffusion d’informations en continu vers Platform.
+Les connexions authentifiées doivent être utilisées lorsque vous devez faire la distinction entre les enregistrements provenant de sources approuvées et non approuvées. Les utilisateurs et utilisatrices qui souhaitent envoyer des informations avec des informations d’identification personnelle doivent créer une connexion authentifiée lors de la diffusion d’informations en continu vers Experience Platform.
 
 Pour créer une connexion de base authentifiée, vous devez inclure le paramètre `authenticationRequired` dans votre requête et spécifier sa valeur comme `true`. Au cours de cette étape, vous pouvez également fournir un identifiant source pour votre connexion de base authentifiée. Ce paramètre est facultatif et utilise la même valeur que l’attribut `name`, s’il n’est pas fourni.
 
@@ -290,7 +290,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 
 ## Créer une connexion source {#source}
 
-Pour créer une connexion source, envoyez une requête de POST au point d’entrée `/sourceConnections` et indiquez votre identifiant de connexion de base.
+Pour créer une connexion source, envoyez une requête POST au point d’entrée `/sourceConnections` et indiquez votre identifiant de connexion de base.
 
 **Format d’API**
 
@@ -332,7 +332,7 @@ Une réponse réussie renvoie le statut HTTP 201 avec les détails de la connexi
 
 ## Créer un schéma XDM cible {#target-schema}
 
-Pour que les données sources soient utilisées dans Platform, un schéma cible doit être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Platform contenant les données sources.
+Pour que les données sources soient utilisées dans Experience Platform, un schéma cible doit être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Experience Platform contenant les données sources.
 
 Un schéma XDM cible peut être créé en adressant une requête POST à l’[API Schema Registry](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -346,7 +346,7 @@ Pour obtenir des instructions détaillées sur la création d’un jeu de donné
 
 ## Créer une connexion cible {#target}
 
-Une connexion cible représente la connexion à la destination où se trouvent les données ingérées. Pour créer une connexion cible, envoyez une requête de POST à `/targetConnections` tout en fournissant les identifiants de votre jeu de données cible et de votre schéma XDM cible. Au cours de cette étape, vous devez également fournir l’identifiant de spécification de connexion au lac de données. Cet identifiant est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Une connexion cible représente la connexion à la destination où se trouvent les données ingérées. Pour créer une connexion cible, envoyez une requête POST à `/targetConnections` tout en fournissant les identifiants de votre jeu de données cible et de votre schéma XDM cible. Au cours de cette étape, vous devez également fournir l’identifiant de spécification de connexion au lac de données. Cet identifiant est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **Format d’API**
 
@@ -458,7 +458,7 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 
 ## Créer un flux de données
 
-Une fois vos connexions source et cible créées, vous pouvez créer un flux de données. Le flux de données est chargé de planifier et de collecter les données d’une source. Vous pouvez créer un flux de données en adressant une requête de POST au point d’entrée `/flows`.
+Une fois vos connexions source et cible créées, vous pouvez créer un flux de données. Le flux de données est chargé de planifier et de collecter les données d’une source. Vous pouvez créer un flux de données en effectuant une requête POST vers le point d’entrée `/flows`.
 
 **Format d’API**
 
@@ -559,7 +559,7 @@ Une réponse réussie renvoie le statut HTTP 201 avec les détails de votre nouv
 }
 ```
 
-## Publier les données à ingérer dans Platform {#ingest-data}
+## Publier les données à ingérer dans Experience Platform {#ingest-data}
 
 >[!NOTE]
 >
@@ -575,7 +575,7 @@ POST /collection/{INLET_URL}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{INLET_URL}` | Votre URL de point d’entrée de diffusion en continu. Vous pouvez récupérer cette URL en adressant une requête de GET au point d’entrée `/connections` et en fournissant votre identifiant de connexion de base. |
+| `{INLET_URL}` | Votre URL de point d’entrée de diffusion en continu. Vous pouvez récupérer cette URL en adressant une requête GET au point d’entrée `/connections` et en fournissant votre identifiant de connexion de base. |
 | `{FLOW_ID}` | Identifiant de votre flux de données de streaming d’API HTTP. Cet identifiant est requis pour les données XDM et RAW. |
 
 **Requête**
@@ -692,9 +692,9 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails des informatio
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une connexion HTTP en continu, ce qui vous permet d’utiliser le point d’entrée en continu pour ingérer des données dans Platform. Pour obtenir des instructions sur la création d’une connexion en continu dans l’interface utilisateur, consultez le [tutoriel sur la création d’une connexion en continu](../../../ui/create/streaming/http.md).
+Ce tutoriel vous a permis de créer une connexion HTTP en continu, qui vous permet d’utiliser le point d’entrée en continu pour ingérer des données dans Experience Platform. Pour obtenir des instructions sur la création d’une connexion en continu dans l’interface utilisateur, consultez le [tutoriel sur la création d’une connexion en continu](../../../ui/create/streaming/http.md).
 
-Pour savoir comment diffuser des données vers Platform, consultez le tutoriel sur la [ diffusion en continu de données de série temporelle ](../../../../../ingestion/tutorials/streaming-time-series-data.md) ou le tutoriel sur la [ diffusion en continu de données d’enregistrement ](../../../../../ingestion/tutorials/streaming-record-data.md).
+Pour savoir comment diffuser des données vers Experience Platform, consultez le tutoriel sur la [ diffusion en continu de données de série temporelle ](../../../../../ingestion/tutorials/streaming-time-series-data.md) ou le tutoriel sur la [ diffusion en continu de données d’enregistrement ](../../../../../ingestion/tutorials/streaming-record-data.md).
 
 ## Annexe
 
