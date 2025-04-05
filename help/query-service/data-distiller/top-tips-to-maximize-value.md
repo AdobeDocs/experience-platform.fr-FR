@@ -2,9 +2,9 @@
 title: Conseils pour optimiser la valeur avec Adobe Experience Platform Data Distiller - OS656
 description: Découvrez comment tirer le meilleur parti de Adobe Experience Platform Data Distiller en enrichissant les données du profil client en temps réel et en utilisant des informations comportementales pour créer des audiences ciblées. Cette ressource comprend un échantillon de jeu de données et une étude de cas montrant comment appliquer le modèle Récence, Fréquence, Monétaire (RFM) pour la segmentation de la clientèle.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: 30db967fc94d8f5b9ded22ce81da3d51001610af
+source-git-commit: 3a8c53a5c5e72231c195ccfab32109ed4971fa8b
 workflow-type: tm+mt
-source-wordcount: '3704'
+source-wordcount: '3743'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,10 @@ Chaque technique de modélisation marketing implique des compromis, offrant à l
 Cependant, la modélisation RFM présente des limites. Il suppose une uniformité au sein des segments en fonction de la récence, de la fréquence et de la valeur monétaire, ce qui peut simplifier à l’excès le comportement des clients. Le modèle attribue également un poids égal à ces facteurs, ce qui peut donner une valeur client erronée. En outre, il ne prend pas en compte le contexte, comme les caractéristiques spécifiques au produit ou les préférences du client, ce qui peut entraîner de fausses interprétations du comportement d’achat.
 
 ## Créer une audience SQL dynamique basée sur les scores RFM {#build-a-dynamic-rfm-audience}
+
+L’infographie suivante présente de manière générale le workflow de création d’audiences RFM SQL décrit dans ce tutoriel.
+
+![Infographie intitulée « Audience SQL basée sur les scores RFM » illustrant quatre étapes : charger un fichier CSV, explorer des données, enrichir avec des scores RFM et activer l’audience.](../images/data-distiller/top-tips-to-maximize-value/rfm-score-based-sql-audience.png)
 
 Avant de commencer l’étude de cas Luma, vous devez ingérer un exemple de jeu de données. Tout d’abord, [sélectionnez le lien pour télécharger le jeu de données `luma_web_data.zip` localement](../resources/luma_web_data.zip). L’exemple de jeu de données est un fichier csv au format .zip compressé pour s’aligner sur le cas d’utilisation. Décompressez ce fichier ZIP à l’aide d’Adobe Acrobat ou d’un outil d’extraction de fichiers approuvé, tel que l’utilitaire intégré de votre système d’exploitation. En pratique, vous pouvez généralement obtenir des données à partir d’Adobe Analytics, d’Adobe Commerce ou d’Adobe Web/Mobile SDK.
 
