@@ -2,9 +2,9 @@
 title: Gestion de la conservation des jeux de données d’événements d’expérience dans le lac de données à l’aide de TTL
 description: Découvrez comment évaluer, définir et gérer la conservation des jeux de données d’événements d’expérience dans le lac de données à l’aide de configurations de durée de vie (TTL) avec des API Adobe Experience Platform. Ce guide explique comment l’expiration au niveau des lignes de TTL prend en charge les politiques de conservation des données, optimise l’efficacité du stockage et garantit une gestion efficace du cycle de vie des données. Elle fournit également des cas d’utilisation et des bonnes pratiques pour vous aider à appliquer efficacement la durée de vie.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 767e9536862799e31d1ab5c77588d485f80c59e9
 workflow-type: tm+mt
-source-wordcount: '2341'
+source-wordcount: '2407'
 ht-degree: 1%
 
 ---
@@ -50,11 +50,13 @@ Avant d’appliquer une politique de rétention, évaluez si votre jeu de donné
 
 Si les enregistrements historiques sont essentiels pour l’analyse à long terme ou les opérations commerciales, la durée de vie peut ne pas être la bonne approche. En examinant ces facteurs, vous vous assurez que la durée de vie correspond à vos besoins de conservation des données sans affecter négativement la disponibilité des données.
 
-## Planifier vos requêtes
+## Planifier vos requêtes {#plan-queries}
 
-Avant d’appliquer une durée de vie, utilisez des requêtes pour analyser la taille et la pertinence des jeux de données. L’exécution de requêtes ciblées permet de déterminer la quantité de données conservée ou supprimée dans différentes configurations de TTL.
+Avant d’appliquer la durée de vie, il est important d’évaluer la taille du jeu de données et la pertinence des données, ainsi que la quantité de données historiques à conserver. Le visuel suivant décrit l’ensemble du processus d’implémentation de la durée de vie, de la planification des requêtes à la surveillance de l’efficacité de la rétention.
 
-Par exemple, la requête SQL suivante comptabilise le nombre d’enregistrements créés au cours des 30 derniers jours :
+![Workflow visuel pour l’implémentation de TTL sur des jeux de données d’événements d’expérience. Les étapes sont les suivantes : évaluation de la durée de vie des données et de l’impact de la suppression, validation des paramètres de TTL avec des requêtes, configuration de TTL par le biais de l’API Catalog Service et surveillance continue de l’impact de TTL et ajustements](../images/datasets/dataset-retention-ttl-guide/manage-experience-event-dataset-retention-in-the-data-lake.png)
+
+L’exécution de requêtes ciblées permet de déterminer la quantité de données conservée ou supprimée dans différentes configurations de TTL. Par exemple, la requête SQL suivante comptabilise le nombre d’enregistrements créés au cours des 30 derniers jours :
 
 ```sql
 SELECT COUNT(1) FROM [datasetName] WHERE timestamp > date_sub(now(), INTERVAL 30 DAY);
