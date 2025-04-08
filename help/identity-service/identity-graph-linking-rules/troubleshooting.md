@@ -2,9 +2,9 @@
 title: Guide de dépannage des règles de liaison de graphiques d’identités
 description: Découvrez comment résoudre les problèmes courants des règles de liaison des graphiques d’identités.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 0e7911e21c546fb40cd51f03a5a6d6a2aa751dec
 workflow-type: tm+mt
-source-wordcount: '3286'
+source-wordcount: '3338'
 ht-degree: 0%
 
 ---
@@ -175,6 +175,10 @@ Cette requête suppose que :
 
 * Une identité est envoyée à partir de l’identityMap et une autre identité est envoyée à partir d’un descripteur d’identité. **REMARQUE** : dans les schémas de modèle de données d’expérience (XDM), le descripteur d’identité est le champ marqué comme une identité.
 * Le CRMID est envoyé via identityMap. Si le CRMID est envoyé en tant que champ, supprimez le `key='Email'` de la clause WHERE.
+
+>[!NOTE]
+>
+>**Concernant l’implémentation de WebSDK et la duplication d’ECID** : si le champ ECID est marqué comme une identité (descripteur d’identité) au lieu de l’identityMap, un second ECID est généré dans l’identityMap. Cette duplication peut empêcher le profil client en temps réel de stocker des événements anonymes en raison de la présence de deux ECID dans un seul événement.
 
 ## Problèmes liés au comportement du graphique {#graph-behavior-related-issues}
 
