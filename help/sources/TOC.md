@@ -5,10 +5,10 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 47f6251a190a12b86ec566e3ba72fa34a0bd028b
 workflow-type: tm+mt
-source-wordcount: '1064'
-ht-degree: 95%
+source-wordcount: '1070'
+ht-degree: 92%
 
 ---
 
@@ -36,14 +36,14 @@ ht-degree: 95%
          - [Guide d’authentification Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [Espaces de noms et schémas B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
          - [Guide de migration du mappage ECID](connectors/adobe-applications/marketo/migration.md)
-   - Publicité {#advertising}
+   - Advertising {#advertising}
       - [Connecteur Google Ads](connectors/advertising/ads.md)
       - [Pinterest Ads](connectors/advertising/pinterest-ads.md)
    - Analytics {#analytics}
       - [Connecteur Mixpanel](connectors/analytics/mixpanel.md)
       - [Pendo](connectors/analytics/pendo-webhook.md)
       - [RainFocus](connectors/analytics/rainfocus.md)
-   - Stockage dans le cloud {#cloud-storage}
+   - Stockage cloud {#cloud-storage}
       - [Connecteur Amazon Kinesis](connectors/cloud-storage/kinesis.md)
       - [Connecteur Amazon S3](connectors/cloud-storage/s3.md)
       - [Connecteur Apache HDFS](connectors/cloud-storage/hdfs.md)
@@ -60,7 +60,7 @@ ht-degree: 95%
       - [Connecteur Amazon S3 et Azure Blob](connectors/cloud-storage/blob-s3.md)
    - Consentement et préférences {#consent}
       - [Intégration OneTrust](connectors/consent-and-preferences/onetrust.md)
-   - CRM {#crm}
+   - Intégration des systèmes de gestion des relations clients {#crm}
       - [Connecteur Microsoft Dynamics](connectors/crm/ms-dynamics.md)
       - [Connecteur Salesforce](connectors/crm/salesforce.md)
       - [Connecteur SugarCRM](connectors/crm/sugarcrm.md)
@@ -92,9 +92,10 @@ ht-degree: 95%
       - [Connecteur de streaming Snowflake](connectors/databases/snowflake-streaming.md)
       - [Connecteur Snowflake](connectors/databases/snowflake.md)
       - [Connecteur Teradata Vantage](connectors/databases/teradata-vantage.md)
-   - {#data-partner} de partenaire de données et d’identité
+   - Partenaire de données et d’identité {#data-partner}
       - [Ingestion de données Acxiom](connectors/data-partners/acxiom-data-ingestion.md)
       - [Import de données de prospection Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
+      - [Profils d’utilisateur ou d’utilisatrice Algolia](connectors/data-partners/algolia-user-profiles.md)
       - [Intention de Bombora](connectors/data-partners/bombora.md)
       - [Demandbase Intent](connectors/data-partners/demandbase.md)
       - [Résolution d’identité d’entreprise Merkury](connectors/data-partners/merkury.md)
@@ -126,13 +127,13 @@ ht-degree: 95%
       - [Connecteur dʼAPI HTTP](connectors/streaming/http.md)
 - Tutoriels sur les API {#api-tutorials}
    - Créer une connexion de base {#create}
-      - Publicité {#advertising}
+      - Advertising {#advertising}
          - [Google Ads](tutorials/api/create/advertising/ads.md)
          - [Pinterest Ads](tutorials/api/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
          - [Pendo](tutorials/api/create/analytics/pendo-webhook.md)
-      - Stockage dans le cloud {#cloud-storage}
+      - Stockage cloud {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
@@ -148,7 +149,7 @@ ht-degree: 95%
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - Consentement et préférences {#consent}
          - [Intégration OneTrust](tutorials/api/create/consent-and-preferences/onetrust.md)
-      - CRM {#crm}
+      - Intégration des systèmes de gestion des relations clients {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [Comptes et contacts SugarCRM](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
@@ -206,7 +207,7 @@ ht-degree: 95%
          - [REST API générique](tutorials/api/create/protocols/generic-rest.md)
       - Diffusion en continu {#streaming}
          - [API HTTP](tutorials/api/create/streaming/http.md)
-   - Explorer des données {#explore}
+   - Exploration des données {#explore}
       - [Explorer des données publicitaires](tutorials/api/explore/advertising.md)
       - [Explorer des données de stockage dans le cloud](tutorials/api/explore/cloud-storage.md)
       - [Explorer des données CRM](tutorials/api/explore/crm.md)
@@ -249,14 +250,14 @@ ht-degree: 95%
          - [Attributs du client](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Activités personnalisées Marketo](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-      - Publicité {#advertising}
+      - Advertising {#advertising}
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
          - [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
          - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
          - [RainFocus](tutorials/ui/create/analytics/rainfocus.md)
-      - Stockage dans le cloud {#cloud-storage}
+      - Stockage cloud {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
@@ -273,7 +274,7 @@ ht-degree: 95%
          - [Amazon S3 et Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - Consentement et préférences {#consent}
          - [Intégration OneTrust](tutorials/ui/create/consent-and-preferences/onetrust.md)
-      - CRM {#crm}
+      - Intégration des systèmes de gestion des relations clients {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
          - [Comptes et contacts SugarCRM](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
@@ -306,9 +307,10 @@ ht-degree: 95%
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Streaming Snowflake](tutorials/ui/create/databases/snowflake-streaming.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
-      - {#data-partner} de partenaire de données et d’identité
+      - Partenaire de données et d’identité {#data-partner}
          - [Ingestion de données Acxiom](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Import de données de prospection Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Profils d’utilisateur ou d’utilisatrice Algolia](tutorials/ui/create/data-partners/algolia-user-profiles.md)
          - [Intention de Bombora](tutorials/ui/create/data-partners/bombora.md)
          - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
          - [Résolution d’identité d’entreprise Merkury](tutorials/ui/create/data-partners/merkury.md)
@@ -365,8 +367,8 @@ ht-degree: 95%
    - [S’abonner aux alertes sur les sources](tutorials/ui/alerts.md)
    - [Enregistrer un flux de données en tant que brouillon](tutorials/ui/draft.md)
    - [Application de libellés d’accès à un flux de données](tutorials/ui/labels.md)
-- Sources en libre-service (SDK par lots) {#sdk}
-   - [Aperçu](sources-sdk/overview.md)
+- Sources En Libre-Service (SDK Par Lots) {#sdk}
+   - [Vue d’ensemble](sources-sdk/overview.md)
    - Configurer votre spécification de connexion {#config}
       - [Options de configuration](sources-sdk/config/config.md)
       - [Configurer la spécification d’authentification](sources-sdk/config/authspec.md)
@@ -385,7 +387,7 @@ ht-degree: 95%
       - [Utiliser un éditeur de texte dans votre environnement local pour créer une page de documentation sur les sources](sources-sdk/documentation/text-editor.md)
       - [Modèle d’API de libre-service de documentation](sources-sdk/documentation/template.md)
       - [Modèle d’interface utilisateur de libre-service de documentation](sources-sdk/documentation/ui-template.md)
-   - SDK de streaming {#streaming-sdk}
+   - SDK en flux continu {#streaming-sdk}
       - [Prise en main des sources en libre-service (SDK de streaming)](sources-sdk/streaming/getting-started.md)
       - [Créer une spécification de connexion pour une source de streaming](sources-sdk/streaming/create.md)
       - [Mettre à jour une spécification de connexion pour une source de streaming](sources-sdk/streaming/update-connection-specs.md)
