@@ -3,10 +3,10 @@ title: Exporter des jeux de données vers des destinations d’espace de stockag
 type: Tutorial
 description: Découvrez comment exporter des jeux de données d’Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 5624dab337bcd27e28b4153459bb4e85fab22d6f
+source-git-commit: 29fb232ecfbd119ef84d62599fc79249513dca43
 workflow-type: tm+mt
-source-wordcount: '2594'
-ht-degree: 36%
+source-wordcount: '2703'
+ht-degree: 35%
 
 ---
 
@@ -14,9 +14,17 @@ ht-degree: 36%
 
 >[!AVAILABILITY]
 >
->* Cette fonctionnalité est disponible pour les clients qui ont acheté le package Real-Time CDP Prime ou Ultimate, Adobe Journey Optimizer ou Customer Journey Analytics. Pour plus d’informations, contactez le représentant de votre Adobe.
+>Cette fonctionnalité est disponible pour les clients qui ont acheté le package Real-Time CDP Prime ou Ultimate, Adobe Journey Optimizer ou Customer Journey Analytics. Pour plus d’informations, contactez votre représentant Adobe.
 
-Cet article explique le processus requis pour exporter des [jeux de données](/help/catalog/datasets/overview.md) de Adobe Experience Platform vers l’emplacement de l’espace de stockage de votre choix, comme des [!DNL Amazon S3], des emplacements SFTP ou des [!DNL Google Cloud Storage] à l’aide de l’interface utilisateur de l’Experience Platform.
+>[!IMPORTANT]
+>
+>**Action item** : la version [septembre 2024 d’Experience Platform](/help/release-notes/latest/latest.md#destinations) a introduit l’option permettant de définir une date `endTime` pour l’exportation des flux de données du jeu de données. Adobe a également introduit une date de fin par défaut du 1er mai 2025 pour tous les flux de données d’exportation de jeux de données créés *avant la version de septembre 2024*.
+>
+>Pour l’un de ces flux de données, vous devez mettre à jour manuellement la date de fin du flux de données avant la date de fin, sinon vos exportations s’arrêteront à cette date. Utilisez l’interface utilisateur d’Experience Platform pour afficher les flux de données qui seront définis pour s’arrêter le 1er mai 2025.
+>
+>Pour plus d’informations sur la modification de la date de fin d’un flux de données d’exportation de jeux de données](#scheduling) consultez la section [planification.
+
+Cet article explique le processus requis pour exporter des [jeux de données](/help/catalog/datasets/overview.md) de Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix, comme des [!DNL Amazon S3], des emplacements SFTP ou des [!DNL Google Cloud Storage] à l’aide de l’interface utilisateur d’Experience Platform.
 
 Vous pouvez également utiliser les API Experience Platform pour exporter des jeux de données. Pour plus d’informations, consultez le tutoriel [API d’exportation de jeux de données](/help/destinations/api/export-datasets.md) .
 
@@ -38,11 +46,11 @@ Utilisez le tableau ci-dessous pour comprendre quels types de jeux de données v
   <tr>
     <td rowspan="2">Real-Time CDP</td>
     <td>Prime</td>
-    <td>Jeux de données de profil et d’événement d’expérience créés dans l’interface utilisateur d’Experience Platform après l’ingestion ou la collecte de données par le biais de Sources, de Web SDK, de Mobile SDK, du connecteur de données Analytics et d’Audience Manager.</td>
+    <td>Jeux de données de profil et d’événement d’expérience créés dans l’interface utilisateur d’Experience Platform après l’ingestion ou la collecte de données par le biais de sources, de Web SDK, de Mobile SDK, du connecteur de données Analytics et d’Audience Manager.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Jeux de données de profil et d’événement d’expérience créés dans l’interface utilisateur d’Experience Platform après l’ingestion ou la collecte de données par le biais de Sources, de Web SDK, de Mobile SDK, du connecteur de données Analytics et d’Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">Jeu de données d’instantanés de profil généré par le système</a>.</li></td>
+    <td><ul><li>Jeux de données de profil et d’événement d’expérience créés dans l’interface utilisateur d’Experience Platform après l’ingestion ou la collecte de données par le biais de sources, de Web SDK, de Mobile SDK, du connecteur de données Analytics et d’Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">Jeu de données d’instantanés de profil généré par le système</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
@@ -56,7 +64,7 @@ Utilisez le tableau ci-dessous pour comprendre quels types de jeux de données v
   <tr>
     <td>Customer Journey Analytics</td>
     <td>Toutes</td>
-    <td> Jeux de données de profil et d’événement d’expérience créés dans l’interface utilisateur d’Experience Platform après l’ingestion ou la collecte de données par le biais de Sources, de Web SDK, de Mobile SDK, du connecteur de données Analytics et d’Audience Manager.</td>
+    <td> Jeux de données de profil et d’événement d’expérience créés dans l’interface utilisateur d’Experience Platform après l’ingestion ou la collecte de données par le biais de sources, de Web SDK, de Mobile SDK, du connecteur de données Analytics et d’Audience Manager.</td>
   </tr>
   <tr>
     <td>Data Distiller</td>
@@ -87,10 +95,10 @@ Actuellement, vous pouvez exporter des jeux de données vers les destinations d�
 
 ## Quand activer des audiences ou exporter des jeux de données {#when-to-activate-audiences-or-activate-datasets}
 
-Certaines destinations basées sur des fichiers du catalogue Experience Platform prennent en charge l’activation de l’audience et l’exportation des jeux de données.
+Certaines destinations basées sur des fichiers du catalogue Experience Platform prennent en charge l’activation des audiences et l’exportation des jeux de données.
 
 * Envisagez l’activation des audiences lorsque vous souhaitez que vos données soient structurées en profils regroupés par intérêt ou qualification d’audience.
-* Vous pouvez également envisager des exportations de jeux de données lorsque vous cherchez à exporter des jeux de données bruts, qui ne sont pas groupés ou structurés par intérêt ou qualification d’audience. Vous pouvez utiliser ces données pour la création de rapports, les workflows de science des données et de nombreux autres cas d’utilisation. Par exemple, en tant qu’administrateur, ingénieur de données ou analyste, vous pouvez exporter des données d’Experience Platform pour les synchroniser avec votre entrepôt de données, les utiliser dans des outils d’analyse de BI, des outils de ML dans le cloud externe ou les stocker dans votre système pour des besoins de stockage à long terme.
+* Vous pouvez également envisager des exportations de jeux de données lorsque vous cherchez à exporter des jeux de données bruts, qui ne sont pas groupés ou structurés par intérêt ou qualification d’audience. Vous pouvez utiliser ces données pour la création de rapports, les workflows de science des données et de nombreux autres cas d’utilisation. Par exemple, en tant qu’administrateur, ingénieur de données ou analyste, vous pouvez exporter des données d’Experience Platform pour les synchroniser avec votre entrepôt de données, les utiliser dans des outils d’analyse BI, des outils de ML dans le cloud externe ou les stocker dans votre système pour des besoins de stockage à long terme.
 
 Ce document contient toutes les informations nécessaires à l’exportation de jeux de données. Si vous souhaitez activer des *audiences* vers des destinations d’espace de stockage ou de marketing par e-mail, lisez [Activer les données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md).
 
@@ -281,7 +289,7 @@ Vous pouvez afficher et suivre les exportations de votre profil par rapport à v
 
 Gardez à l’esprit les limites suivantes pour la mise à disposition générale des exportations de jeux de données :
 
-* L’Experience Platform peut exporter plusieurs fichiers, même pour de petits jeux de données. L’exportation des jeux de données est conçue pour une intégration système à système et optimisée pour les performances. Par conséquent, le nombre de fichiers exportés n’est pas personnalisable.
+* Experience Platform peut exporter plusieurs fichiers, même pour de petits jeux de données. L’exportation des jeux de données est conçue pour une intégration système à système et optimisée pour les performances. Par conséquent, le nombre de fichiers exportés n’est pas personnalisable.
 * Les noms des fichiers exportés ne sont actuellement pas personnalisables.
 * Les jeux de données créés via l’API ne peuvent actuellement pas être exportés.
 * Actuellement, l’interface utilisateur ne vous empêche pas de supprimer un jeu de données en cours d’exportation vers une destination. Ne supprimez aucun jeu de données en cours d’exportation vers des destinations. [Supprimez le jeu de données](#remove-dataset) d’un flux de données de destination avant de le supprimer.
@@ -293,7 +301,7 @@ Gardez à l’esprit les limites suivantes pour la mise à disposition général
 **Pouvons-nous générer un fichier sans dossier si nous enregistrons simplement à `/` comme chemin d’accès au dossier ? En outre, si nous n’avons pas besoin d’un chemin de dossier, comment les fichiers aux noms en double seront-ils générés dans un dossier ou un emplacement ?**
 
 +++Réponse
-À compter de la version de septembre 2024, il est possible de personnaliser le nom du dossier et même d’utiliser `/` pour exporter des fichiers pour tous les jeux de données d’un même dossier. L’Adobe ne le recommande pas pour les destinations qui exportent plusieurs jeux de données, car les noms de fichiers générés par le système et appartenant à différents jeux de données seront mélangés dans le même dossier.
+À compter de la version de septembre 2024, il est possible de personnaliser le nom du dossier et même d’utiliser `/` pour exporter des fichiers pour tous les jeux de données d’un même dossier. Adobe ne le recommande pas pour les destinations qui exportent plusieurs jeux de données, car les noms de fichiers générés par le système et appartenant à différents jeux de données seront mélangés dans le même dossier.
 +++
 
 **Pouvez-vous acheminer le fichier manifeste vers un dossier et les fichiers de données vers un autre dossier ?**

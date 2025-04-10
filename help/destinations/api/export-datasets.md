@@ -4,9 +4,9 @@ title: Exporter des jeux de données à l’aide de l’API Flow Service
 description: Découvrez comment utiliser l’API Flow Service pour exporter des jeux de données vers des destinations sélectionnées.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 29fb232ecfbd119ef84d62599fc79249513dca43
 workflow-type: tm+mt
-source-wordcount: '5149'
+source-wordcount: '5151'
 ht-degree: 11%
 
 ---
@@ -19,7 +19,9 @@ ht-degree: 11%
 
 >[!IMPORTANT]
 >
->**Action item** : la version [septembre 2024 d’Experience Platform](/help/release-notes/latest/latest.md#destinations) introduit l’option de définir une date de `endTime` pour les flux de données d’exportation du jeu de données. Adobe introduit également une date de fin par défaut du 1er mai 2025 pour tous les flux de données d’exportation de jeux de données créés *avant la version de septembre*. Pour l’un de ces flux de données, vous devez mettre à jour manuellement la date de fin du flux de données avant la date de fin, sinon les exportations doivent s’arrêter à cette date. Utilisez l’interface utilisateur d’Experience Platform pour afficher les flux de données qui seront définis pour s’arrêter le 1er mai.
+>**Action item** : la version [septembre 2024 d’Experience Platform](/help/release-notes/latest/latest.md#destinations) a introduit l’option permettant de définir une date `endTime` pour l’exportation des flux de données du jeu de données. Adobe a également introduit une date de fin par défaut du 1er mai 2025 pour tous les flux de données d’exportation de jeux de données créés *avant la version de septembre 2024*.
+>
+>Pour l’un de ces flux de données, vous devez mettre à jour manuellement la date de fin du flux de données avant la date de fin, sinon vos exportations s’arrêteront à cette date. Utilisez l’interface utilisateur d’Experience Platform pour afficher les flux de données qui seront définis pour s’arrêter le 1er mai 2025.
 >
 >De même, pour les flux de données que vous créez sans spécifier de date de `endTime`, ils prennent par défaut une heure de fin six mois à compter de leur création.
 
@@ -438,7 +440,7 @@ Notez que pour récupérer les jeux de données éligibles, l’identifiant de [
 
 >[!ENDSHADEBOX]
 
-Une réponse réussie contient une liste de jeux de données éligibles à l’activation. Ces jeux de données peuvent être utilisés lors de la création de la connexion source à l’étape suivante.
+Une réponse réussie contient une liste de jeux de données éligibles à l’activation. Ces jeux de données peuvent être utilisés lors de la construction de la connexion source à l’étape suivante.
 
 Pour plus d’informations sur les différents paramètres de réponse pour chaque jeu de données renvoyé, consultez la [documentation destinée aux développeurs et développeuses de l’API Datasets](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets).
 
@@ -1618,7 +1620,7 @@ En utilisant la spécification ci-dessus, vous pouvez créer une demande de conn
 
 **Requête**
 
-+++[!DNL Amazon S3] - Demande de connexion cible
++++[!DNL Amazon S3] - Target demande de connexion
 
 >[!TIP]
 >
@@ -1777,11 +1779,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Requête**
 
-+++[!DNL Data Landing Zone] - Demande de connexion cible
++++[!DNL Data Landing Zone] - Target demande de connexion
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des paramètres cibles requis, reportez-vous à la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) de la page de documentation sur la destination [!DNL Data Landing Zone].
+>Pour plus d’informations sur l’obtention des paramètres cibles requis, reportez-vous à la section des détails de remplissage [de la destination de la page de documentation de destination[!DNL Data Landing Zone].](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details)
 >Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
@@ -1814,7 +1816,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Réponse**
 
-+++Connexion cible - Réponse
++++Target connection - Réponse
 
 ```json
 {
@@ -1994,7 +1996,7 @@ Le tableau ci-dessous fournit des descriptions de tous les paramètres de la sec
 | `interval` | Sélectionnez `1` lorsque l’`timeUnit` est jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
 | `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
 | `endTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent se terminer. |
-| `foldernameTemplate` | Spécifiez la structure de nom de dossier attendue à l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMjj_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>Heure planifiée pour l’exportation de données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>NOM_SANDBOX</code> = <span>Nom de l’environnement sandbox.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
+| `foldernameTemplate` | Spécifiez la structure de nom de dossier attendue à l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMjj_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>Heure planifiée pour l’exportation de données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> <span>= identifiant unique pour l’instance de destination.</span></li><li><code>SANDBOX_NAME</code> <span>= nom de l’environnement sandbox.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
 
 {style="table-layout:auto"}
 +++
@@ -2016,7 +2018,7 @@ Le tableau ci-dessous fournit des descriptions de tous les paramètres de la sec
 
 **Requête**
 
-+++Créer un flux de données de jeu de données vers [!DNL Azure Blob Storage] destination - Requête
++++Créer un flux de données de jeu de données vers la [!DNL Azure Blob Storage] destination - Demande
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
@@ -2063,7 +2065,7 @@ Le tableau ci-dessous fournit des descriptions de tous les paramètres de la sec
 | `interval` | Sélectionnez `1` lorsque l’`timeUnit` est jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
 | `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
 | `endTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent se terminer. |
-| `foldernameTemplate` | Spécifiez la structure de nom de dossier attendue à l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMjj_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>Heure planifiée pour l’exportation de données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>NOM_SANDBOX</code> = <span>Nom de l’environnement sandbox.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
+| `foldernameTemplate` | Spécifiez la structure de nom de dossier attendue à l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMjj_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>Heure planifiée pour l’exportation de données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>NOM_SANDBOX</code> = <span>Nom de l’environnement sandbox.</span></li><li><code>ORGANIZATION_NAME</code> <span>= nom de l’organisation.</span></li></ul> |
 
 {style="table-layout:auto"}
 
@@ -2082,13 +2084,13 @@ Le tableau ci-dessous fournit des descriptions de tous les paramètres de la sec
 
 +++
 
->[!TAB Azure Data Lake Gen 2 (ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
 **Requête**
 
 +++Créer un flux de données de jeu de données vers [!DNL Azure Data Lake Gen 2(ADLS Gen2)] destination - Requête
 
-Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
+Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires en ligne dans la requête lorsque vous copiez-collez la demande dans le terminal de votre choix.
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -2124,7 +2126,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, ce qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
+Le tableau ci-dessous fournit des descriptions de tous les paramètres de la `scheduleParams` section, ce qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement et plus encore pour vos exportations de jeux de données.
 
 | Paramètre | Description |
 |---------|----------|
@@ -2132,8 +2134,8 @@ Le tableau ci-dessous fournit des descriptions de tous les paramètres de la sec
 | `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeu de données. |
 | `interval` | Sélectionnez `1` lorsque l’`timeUnit` est jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
 | `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
-| `endTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent se terminer. |
-| `foldernameTemplate` | Spécifiez la structure de nom de dossier attendue à l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMjj_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>Heure planifiée pour l’exportation de données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>NOM_SANDBOX</code> = <span>Nom de l’environnement sandbox.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
+| `endTime` | Date et heure en secondes UNIX auxquelles les exportations de jeux de données doivent se terminer. |
+| `foldernameTemplate` | Spécifiez la structure de noms de dossier attendue dans votre emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> <span>= identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMjj_HHmmss.</span></li><li><code>EXPORT_TIME</code> <span>= Heure planifiée pour l’exportation des données au `exportTime=YYYYMMDDHHMM`format .</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>NOM_SANDBOX</code> = <span>Nom de l’environnement sandbox.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
 
 {style="table-layout:auto"}
 
@@ -2203,7 +2205,7 @@ Le tableau ci-dessous fournit des descriptions de tous les paramètres de la sec
 | `interval` | Sélectionnez `1` lorsque l’`timeUnit` est jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
 | `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
 | `endTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent se terminer. |
-| `foldernameTemplate` | Spécifiez la structure de nom de dossier attendue à l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMjj_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>Heure planifiée pour l’exportation de données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>NOM_SANDBOX</code> = <span>Nom de l’environnement sandbox.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
+| `foldernameTemplate` | Spécifiez la structure de nom de dossier attendue à l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> <span>= Nom de la destination.</span></li><li><code>HEURE DU JOUR</code> <span>= Date et heure au format yyyyMMdd_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>Heure planifiée pour l’exportation de données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> <span>= Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> <span>= identifiant unique pour l’instance de destination.</span></li><li><code>NOM_SANDBOX</code> = <span>Nom de l’environnement sandbox.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
 
 {style="table-layout:auto"}
 +++
@@ -2227,7 +2229,7 @@ Le tableau ci-dessous fournit des descriptions de tous les paramètres de la sec
 
 +++Créer un flux de données de jeu de données vers [!DNL Google Cloud Storage] destination - Requête
 
-Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
+Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires en ligne dans la requête lorsque vous copiez-collez la demande dans le terminal de votre choix.
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -2263,11 +2265,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, ce qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
+Le tableau ci-dessous fournit des descriptions de tous les paramètres de la `scheduleParams` section, ce qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement et plus encore pour vos exportations de jeux de données.
 
 | Paramètre | Description |
 |---------|----------|
-| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. Les trois options d’exportation disponibles sont les suivantes : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` peut uniquement être utilisé en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes de jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle . <br> **Exportations incrémentielles quotidiennes** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` :`1` pour les exportations incrémentielles quotidiennes. <br> **Exportations incrémentielles par heure** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles par heure. |
+| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous au [didacticiel d’activation de l’exportation des fichiers](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) complets et [de l’exportation de fichiers](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) incrémentiels dans le didacticiel d’activation des destinations par lot. Les trois options d’exportation disponibles sont les suivantes : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` peut uniquement être utilisé en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes de jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle . <br> **Exportations incrémentielles quotidiennes** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` :`1` pour les exportations incrémentielles quotidiennes. <br> **Exportations** horaires incrémentielles : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9`, ou `12` pour les exportations incrémentielles horaires. |
 | `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeu de données. |
 | `interval` | Sélectionnez `1` lorsque l’`timeUnit` est jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
 | `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
@@ -2337,12 +2339,12 @@ Le tableau ci-dessous fournit des descriptions de tous les paramètres de la sec
 
 | Paramètre | Description |
 |---------|----------|
-| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. Les trois options d’exportation disponibles sont les suivantes : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` peut uniquement être utilisé en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes de jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle . <br> **Exportations incrémentielles quotidiennes** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` :`1` pour les exportations incrémentielles quotidiennes. <br> **Exportations incrémentielles par heure** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles par heure. |
+| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous au [didacticiel d’activation de l’exportation des fichiers](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) complets et [de l’exportation de fichiers](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) incrémentiels dans le didacticiel d’activation des destinations par lot. Les trois options d’exportation disponibles sont les suivantes : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` ne peut être utilisé qu’en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations quotidiennes complètes des jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle. <br> **Exportations** quotidiennes incrémentielles : Sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` :`1` pour les exportations incrémentielles quotidiennes. <br> **Exportations incrémentielles par heure** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles par heure. |
 | `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeu de données. |
-| `interval` | Sélectionnez `1` lorsque l’`timeUnit` est jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
-| `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
-| `endTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent se terminer. |
-| `foldernameTemplate` | Spécifiez la structure de nom de dossier attendue à l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMjj_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>Heure planifiée pour l’exportation de données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>NOM_SANDBOX</code> = <span>Nom de l’environnement sandbox.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
+| `interval` | Sélectionnez `1` lorsque le `timeUnit` champ est un jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
+| `startTime` | Date et heure en secondes UNIX auxquelles les exportations de jeux de données doivent commencer. |
+| `endTime` | Date et heure en secondes UNIX auxquelles les exportations de jeux de données doivent se terminer. |
+| `foldernameTemplate` | Spécifiez la structure de nom de dossier attendue à l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMjj_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>Heure planifiée pour l’exportation de données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> <span>= Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> <span>= identifiant unique pour l’instance de destination.</span></li><li><code>SANDBOX_NAME</code> <span>= nom de l’environnement sandbox.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
 
 {style="table-layout:auto"}
 
@@ -2363,7 +2365,7 @@ Le tableau ci-dessous fournit des descriptions de tous les paramètres de la sec
 
 >[!ENDTABS]
 
-Notez l’identifiant du flux de données dans la réponse. Cet identifiant est requis à l’étape suivante lors de la récupération des exécutions de flux de données pour valider les exportations réussies du jeu de données.
+Notez l’ID de flux de données dans la réponse. Cet identifiant est requis à l’étape suivante lors de la récupération des exécutions de flux de données pour valider les exportations réussies du jeu de données.
 
 ## Obtenir les exécutions du flux de données {#get-dataflow-runs}
 
