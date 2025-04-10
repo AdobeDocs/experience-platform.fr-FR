@@ -7,7 +7,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 31%
+ht-degree: 37%
 
 ---
 
@@ -16,17 +16,17 @@ ht-degree: 31%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="Principales actions"
->abstract="Ce widget affiche les principaux types d&#39;actions exécutées dans Experience Platform au cours de la période sélectionnée. Pour afficher la liste complète des actions enregistrées dans Experience Platform, sélectionnez **Audits** dans le volet de navigation de gauche."
+>abstract="Ce widget affiche les principaux types d&#39;actions exécutées dans Experience Platform au cours de la période sélectionnée. Pour afficher la liste complète des actions enregistrées dans Experience Platform, sélectionnez **Audits** dans le volet de navigation de gauche."
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
 >title="Utilisateurs principaux"
->abstract="Ce widget affiche les utilisateurs ayant exécuté le plus d&#39;actions dans Experience Platform au cours de la période sélectionnée. Pour afficher la liste complète des actions enregistrées dans Experience Platform, sélectionnez **Audits** dans le volet de navigation de gauche."
+>abstract="Ce widget affiche les utilisateurs ayant exécuté le plus d&#39;actions dans Experience Platform au cours de la période sélectionnée. Pour afficher la liste complète des actions enregistrées dans Experience Platform, sélectionnez **Audits** dans le volet de navigation de gauche."
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
->title="Surveillance des activités des utilisateurs dans Experience Platform"
->abstract="<h2>Description</h2><p>Vous pouvez surveiller l’activité des utilisateurs et utilisatrices pour divers services et fonctionnalités d’Experience Platform sous la forme de journaux d’audit. Ces journaux forment un journal d’audit qui enregistre <b>qui</b> a effectué <b>quelle</b> action et <b>quand</b>. Les journaux d’audit peuvent vous aider à résoudre les problèmes liés à Experience Platform et à vous conformer efficacement aux politiques de gestion des données d’entreprise et aux exigences réglementaires.</p>"
+>title="Surveiller les activités des utilisateurs et utilisatrices dans Experience Platform"
+>abstract="<h2>Description</h2><p>Vous pouvez surveiller l’activité des utilisateurs et utilisatrices pour divers services et fonctionnalités d’Experience Platform sous la forme de journaux d’audit. Ces journaux forment un journal d’audit qui enregistre <b>qui</b> a effectué <b>quelle</b> action et <b>quand</b>. Les journaux d’audit peuvent vous aider à résoudre les problèmes liés à Experience Platform et aider votre entreprise à se conformer efficacement aux politiques de gestion des données d’entreprise et aux exigences réglementaires.</p>"
 
 Afin d’accroître la transparence et la visibilité des activités exécutées dans le système, Adobe Experience Platform vous permet d’auditer l’activité des utilisateurs et utilisatrices pour divers services et fonctionnalités sous la forme de « journaux d’audit ». Ces journaux constituent un journal d’audit qui peut vous aider à résoudre les problèmes liés à Experience Platform et à respecter efficacement les politiques de gestion des données d’entreprise et les exigences réglementaires.
 

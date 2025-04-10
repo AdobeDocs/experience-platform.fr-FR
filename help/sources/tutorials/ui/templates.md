@@ -6,7 +6,7 @@ exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '2250'
-ht-degree: 39%
+ht-degree: 40%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 39%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
->title="Modèles de sources dans l’interface utilisateur d’Experience Platform"
+>title="Modèles de sources dans l’IU d’Experience Platform"
 >abstract="Les modèles comprennent des ressources générées automatiquement telles que des schémas, des jeux de données, des identités, des règles de mappage, des espaces de noms d’identité et des flux de données que vous pouvez utiliser lors de l’importation de données d’une source vers Experience Platform. Vous pouvez mettre à jour des ressources générées automatiquement pour les personnaliser en fonction de vos cas d’utilisation."
 
 >[!IMPORTANT]
@@ -45,7 +45,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 * [[!DNL Experience Data Model (XDM)] Système](../../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
 * [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-## Utiliser des modèles dans l’interface utilisateur d’Experience Platform {#use-templates-in-the-platform-ui}
+## Utiliser des modèles dans l’IU d’Experience Platform {#use-templates-in-the-platform-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_accounttype"

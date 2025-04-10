@@ -7,7 +7,7 @@ exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
 source-wordcount: '1603'
-ht-degree: 10%
+ht-degree: 12%
 
 ---
 
@@ -66,7 +66,7 @@ L’espace de travail Autorisations de l’interface utilisateur d’Experience 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="Que sont les libellés ?"
->abstract="Utilisez les libellés pour classer et consulter les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Adobe Experience Platform fournit plusieurs libellés d’utilisation des données <strong>principaux</strong> définis par Adobe, qui couvrent un large éventail de restrictions courantes applicables à la gouvernance des données. Les libellés <strong>S</strong> (Sensibles) tels que DSR (données réglementées en matière de santé) servent à catégoriser les données qui font référence aux informations de santé protégées (ISP). Vous pouvez également définir vos propres libellés personnalisés en fonction des besoins de votre entreprise."
+>abstract="Utilisez les libellés pour classer et consulter les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Adobe Experience Platform fournit plusieurs libellés d’utilisation des données <strong>de base</strong> définis par Adobe, qui couvrent un large éventail de restrictions courantes applicables à la gouvernance des données. Les libellés <strong>S</strong> (Sensibles) tels que DSR (données réglementées en matière de santé) servent à catégoriser les données qui font référence aux informations de santé protégées (ISP). Vous pouvez également définir vos propres libellés personnalisés en fonction des besoins de votre entreprise."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=fr#understanding-data-usage-labels" text="Présentation des libellés d’utilisation des données"
 
 Les rôles sont des moyens de classer les types d’utilisateurs interagissant avec votre instance Experience Platform et sont des blocs élémentaires des politiques de contrôle d’accès. Un rôle possède un jeu d’autorisations déterminé et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès dont ils ont besoin.

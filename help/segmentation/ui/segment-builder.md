@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
 source-wordcount: '4980'
-ht-degree: 64%
+ht-degree: 65%
 
 ---
 
@@ -349,7 +349,7 @@ Après avoir selectionné **[!UICONTROL Déplier le conteneur]**, le conteneur e
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Politiques de fusion"
->abstract="Une politique de fusion permet de fusionner les différents jeux de données pour former votre profil. Experience Platform a fourni une politique de fusion par défaut, ou vous pouvez créer une politique de fusion par défaut dans Profils. Choisissez une politique de fusion correspondant à votre objectif marketing pour cette audience."
+>abstract="Une politique de fusion permet de fusionner les différents jeux de données pour former votre profil. Experience Platform a fourni une politique de fusion par défaut. Vous pouvez également créer une politique de fusion par défaut dans les profils. Choisissez une politique de fusion correspondant à votre objectif marketing pour cette audience."
 
 [!DNL Experience Platform] vous permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chaque client. Lors du regroupement de ces données, les politiques de fusion sont les règles utilisées par [!DNL Experience Platform] pour déterminer comment les données seront hiérarchisées et quelles données seront combinées pour créer un profil.
 

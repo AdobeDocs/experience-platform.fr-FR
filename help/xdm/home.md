@@ -7,7 +7,7 @@ exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '2135'
-ht-degree: 66%
+ht-degree: 67%
 
 ---
 
@@ -53,7 +53,7 @@ Pour plus d’informations sur la gestion et l’interaction avec les schémas d
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="Comportements des données"
->abstract="Les données destinées à Experience Platform sont regroupées en trois types de comportements : enregistrement, série temporelle et ad hoc. Les schémas d’enregistrement fournissent des informations sur les attributs d’un objet, tandis que les schémas de série temporelle capturent un instantané du système au moment où une action a été effectuée. Les schémas ad hoc capturent les champs qui sont des espaces de noms, à des fins d&#39;utilisation par un jeu de données unique. Pour plus d’informations sur le comportement des données dans Experience Platform, consultez la documentation."
+>abstract="Les données destinées à Experience Platform sont regroupées en trois types de comportements : enregistrement, série temporelle et ad hoc. Les schémas d’enregistrement fournissent des informations sur les attributs d’un objet, tandis que les schémas de série temporelle capturent un instantané du système au moment où une action a été effectuée. Les schémas ad hoc capturent les champs qui sont des espaces de noms, à des fins d&#39;utilisation par un jeu de données unique. Pour plus d’informations sur le comportement des données dans Experience Platform, consultez la documentation."
 
 Les données pouvant être utilisées dans Experience Platform sont regroupées selon trois types de comportements :
 

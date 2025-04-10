@@ -6,7 +6,7 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
 source-wordcount: '1703'
-ht-degree: 40%
+ht-degree: 45%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 40%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
 >title="Que sont les rôles ?"
->abstract="Les rôles définissent l’accès d’un administrateur, d’une administratrice, d’un ou d’une spécialiste ou encore d’un utilisateur final ou d’une utilisatrice finale, aux ressources de votre organisation. Ils catégorisent les utilisateurs interagissant avec votre instance Experience Platform et sont les blocs de construction des politiques de contrôle d’accès. Un rôle possède un jeu d’autorisations déterminé et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin."
+>abstract="Les rôles définissent l’accès d’un administrateur, d’une administratrice, d’un ou d’une spécialiste ou encore d’un utilisateur final ou d’une utilisatrice finale, aux ressources de votre organisation. Ils catégorisent les personnes interagissant avec votre instance Experience Platform et constituent les blocs de construction des politiques de contrôle d’accès. Un rôle possède un jeu d’autorisations déterminé et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=fr" text="Gérer les rôles"
 
 >[!IMPORTANT]
@@ -123,8 +123,8 @@ La vidéo suivante est destinée à vous aider à comprendre la création d’un
 >[!CONTEXTUALHELP]
 >id="platform_permissions_apicredentials_about"
 >title="Que sont les informations d’identification d’API ?"
->abstract="Les informations d’identification d’API sont attribuées aux rôles pour accorder aux utilisateurs et aux développeurs l’accès aux API Experience Platform. Grâce aux API d’Experience Platform, vous pouvez effectuer par programmation des opérations CRUD (Create, Read, Update, Delete) de base sur les données, comme configurer des attributs calculés, accéder à des données/entités, exporter des données, supprimer des données ou des lots inutiles, etc."
->additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/landing/platform-apis/api-guide" text="Guide de l’API Experience Platform"
+>abstract="Les informations d’identification d’API sont attribuées aux rôles pour accorder aux utilisateurs et utilisatrices, et aux développeurs et développeuses, l’accès aux API Experience Platform. Grâce aux API Experience Platform, vous pouvez effectuer par programmation des opérations CRUD (créer, lire, mettre à jour, supprimer) de base sur les données, telles que la configuration des attributs calculés, l’accès aux données/entités, l’export des données, la suppression des données ou lots inutiles, etc."
+>additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/landing/platform-apis/api-guide" text="Guide de l’API Experience Platform"
 
 >[!IMPORTANT]
 >

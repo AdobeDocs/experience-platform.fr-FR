@@ -7,7 +7,7 @@ exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1769'
-ht-degree: 96%
+ht-degree: 97%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 96%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
 >title="Intégrer et appliquer le consentement client dans vos données de profil"
->abstract="<h2>Description</h2><p>Experience Platform vous permet d’intégrer dans leurs profils respectifs les données de consentement que vous avez collectées auprès de vos clients. Vous pouvez ensuite établir des stratégies de consentement pour déterminer si ces données peuvent être incluses dans des segments activés vers certaines destinations.</p>"
+>abstract="<h2>Description</h2><p>Experience Platform permet d’intégrer dans leurs profils respectifs les données de consentement que vous avez collectées auprès de vos clientes et clients. Vous pouvez ensuite établir des stratégies de consentement pour déterminer si ces données peuvent être incluses dans des segments activés vers certaines destinations.</p>"
 
 Ce document explique comment utiliser l’espace de travail **[!UICONTROL Politiques]** dans l’interface utilisateur d’Adobe Experience Platform pour créer et gérer des politiques d’utilisation des données.
 

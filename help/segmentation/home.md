@@ -6,7 +6,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
 source-wordcount: '1679'
-ht-degree: 84%
+ht-degree: 88%
 
 ---
 
@@ -61,7 +61,7 @@ Outre les compositions d’audience et les définitions de segment, vous pouvez 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="Méthodes d’évaluation"
->abstract="Experience Platform prend actuellement en charge trois méthodes d’évaluation des audiences : segmentation par flux, segmentation par lots et segmentation Edge."
+>abstract="Experience Platform prend actuellement en charge trois méthodes d’évaluation des audiences : segmentation en flux continu, segmentation par lots et segmentation Edge."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
@@ -69,7 +69,7 @@ Outre les compositions d’audience et les définitions de segment, vous pouvez 
 >abstract="La segmentation en flux continu est un processus continu de sélection des données qui met à jour vos audiences en réponse à l’activité des utilisateurs et des utilisatrices."
 >additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/segmentation/methods/streaming-segmentation" text="Évaluer les événements en temps quasi réel grâce à la segmentation en flux continu"
 
-Experience Platform prend actuellement en charge trois méthodes d’évaluation des audiences : segmentation par flux, segmentation par lots et segmentation Edge.
+Experience Platform prend actuellement en charge trois méthodes d’évaluation des audiences : segmentation en flux continu, segmentation par lots et segmentation Edge.
 
 ### Segmentation en flux continu {#streaming}
 
@@ -93,7 +93,7 @@ Les audiences par lots sont automatiquement évaluées toutes les 24 heures. Si
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="Évaluation Edge"
->abstract="La segmentation Edge permet d’évaluer les segments dans Experience Platform instantanément sur Edge Network, en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante."
+>abstract="La segmentation Edge permet d’évaluer instantanément les segments dans Experience Platform sur le réseau Edge, en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante."
 >additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/segmentation/methods/edge-segmentation" text="Guide de segmentation Edge"
 
 La segmentation Edge permet d’évaluer les segments dans Experience Platform instantanément [sur Edge Network](../landing/edge-and-hub-comparison.md), en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.

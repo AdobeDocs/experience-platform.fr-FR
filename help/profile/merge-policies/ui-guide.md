@@ -6,7 +6,7 @@ exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '2458'
-ht-degree: 76%
+ht-degree: 77%
 
 ---
 
@@ -32,7 +32,7 @@ Ce guide nécessite une compréhension pratique de plusieurs fonctions [!DNL Exp
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_101221_404"
 >title="Stratégie de fusion introuvable"
->abstract="Cela signifie qu’Experience Platform n’a pas pu trouver la politique de fusion demandée. Pour résoudre cette erreur, essayez l’une des solutions suivantes :<ul><li>Vérifiez que le bon identifiant de stratégie de fusion figure dans l’URL.</li><li>Assurez-vous de disposer de la bonne combinaison d’organisation et de sandbox pour accéder à la stratégie de fusion souhaitée.</li></ul>"
+>abstract="Cela signifie qu’Experience Platform n’a pas pu trouver la politique de fusion demandée. Pour résoudre cette erreur, essayez l’une des solutions suivantes :<ul><li>Vérifiez que le bon identifiant de stratégie de fusion figure dans l’URL.</li><li>Assurez-vous de disposer de la bonne combinaison d’organisation et de sandbox pour accéder à la stratégie de fusion souhaitée.</li></ul>"
 
 Dans l’interface utilisateur de [!DNL Experience Platform], vous pouvez commencer à utiliser des politiques de fusion en sélectionnant **[!UICONTROL Profils]** dans le volet de navigation de gauche, puis en sélectionnant l’onglet **[!UICONTROL Politiques de fusion]**.
 
