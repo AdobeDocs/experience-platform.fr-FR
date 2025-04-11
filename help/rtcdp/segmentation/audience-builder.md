@@ -3,13 +3,13 @@ title: Créateur d’audience dans Real-Time Customer Data Platform
 description: Découvrez comment utiliser le Créateur d’audience dans Real-Time Customer Data Platform pour créer des audiences.
 feature: Get Started, Audiences
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: b9099b123ae83eef6d470076dc2f8d143170a846
+exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
+source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '983'
 ht-degree: 3%
 
 ---
-
 
 # Créateur d’audience dans Real-Time Customer Data Platform
 
@@ -18,6 +18,21 @@ Basé sur Adobe Experience Platform, [!DNL Adobe Real-Time Customer Data Platfor
 ![Créateur d’audience dans la section Comptes.](../assets/segmentation/audience-builder/audience-builder.png){zoomable="yes"}
 
 ## Champs {#fields}
+
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showfullxdmschema"
+>title="Afficher le schéma XDM complet"
+>abstract="Par défaut, seuls les champs contenant des données sont affichés. Activez cette option pour afficher tous les champs du schéma XDM."
+
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showrelationselectors"
+>title="Afficher les sélecteurs de relation"
+>abstract="Par défaut, les relations standard de votre organisation sont utilisées. Activez cette option pour afficher les sélecteurs de relation utilisés."
+
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showconstrainedfields"
+>title="Afficher les champs limités"
+>abstract="Par défaut, seuls les champs qui ne sont soumis à aucune contrainte s’affichent. Activez cette option pour afficher les champs soumis à des contraintes."
 
 Lors de l’utilisation du Créateur d’audience pour les comptes, vous pouvez utiliser des attributs de compte ou des audiences existantes comme champs de votre audience.
 

@@ -3,9 +3,9 @@ title: Guide d’évaluation d’audience flexible
 description: Découvrez comment utiliser l’évaluation d’audience flexible pour exécuter des traitements de segmentation par lots sur demande.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 71818ee273749bb5053286c5b8bbd07a4429c341
+source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1063'
 ht-degree: 6%
 
 ---
@@ -15,6 +15,8 @@ ht-degree: 6%
 >[!AVAILABILITY]
 >
 >L’évaluation flexible des audiences est **uniquement** disponible sur les instances d’Experience Platform s’exécutant sur [!DNL Microsoft Azure]. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](../../landing/multi-cloud.md).
+>
+>En outre, l’évaluation d’audience flexible est **uniquement** disponible avec Real-Time CDP B2C Edition.
 
 L’évaluation d’audience flexible vous permet d’exécuter une tâche de segmentation par lots à la demande. Grâce à une évaluation d’audience flexible, vous pouvez exécuter des lancements de campagne ad hoc, des communications juste à temps ou d’autres activités sensibles au facteur temps.
 
