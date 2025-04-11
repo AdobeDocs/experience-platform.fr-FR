@@ -3,24 +3,31 @@ title: Cartes de modèles pour la transparence des modèles d’IA dans Adobe Ex
 description: En savoir plus sur les cartes modèles dans Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 21a95bd678cf83c72a08213b647ef778cfb49cfc
+exl-id: 74a8ef82-cff9-4a7e-95c8-f915eb664eda
+source-git-commit: 1edecf0cb413b66d66973517421bc0062f475337
 workflow-type: tm+mt
-source-wordcount: '2386'
+source-wordcount: '3171'
 ht-degree: 0%
 
 ---
 
 # Cartes de modèle pour la transparence des modèles d’IA dans Adobe Experience Platform
 
-Les cartes modèles sont les formats standard par lesquels la transparence du modèle d’IA est communiquée. Les cartes de modèle sont publiques et sont destinées à améliorer la compréhension des clients existants et potentiels des modèles d’IA utilisés par Adobe. Les cartes modèles sont généralement statiques. Cependant, plusieurs aspects des modèles d’IA peuvent changer au fil du temps, notamment la parenté, le biais et d’autres attributs de transparence.
+Une carte de modèle d’IA est le format standard selon lequel la transparence du modèle d’IA est communiquée. Les cartes de modèle fournissent des informations complètes sur le modèle sous-jacent sur lequel un outil d’IA donné est basé. Les cartes modèles contiennent des informations telles que l’objectif d’un outil d’IA, les données de formation, les mesures de performance, les limites et les considérations éthiques. Vous pouvez utiliser la transparence fournie par les cartes modèles pour mieux comprendre les capacités et les limites du modèle, ainsi que pour mieux promouvoir une utilisation responsable et équitable de l’IA.
+
+Les cartes de modèle sont publiques et sont destinées à améliorer la compréhension des clients existants et potentiels des modèles d’IA utilisés par Adobe. Les cartes modèles sont généralement statiques. Cependant, plusieurs aspects des modèles d’IA peuvent changer au fil du temps, notamment la parenté, le biais et d’autres attributs de transparence.
 
 Lisez ce document pour en savoir plus sur les cartes modèles dans Adobe Experience Platform.
 
 ## Sections de la carte modèle {#model-card-sections}
 
+Une carte modèle est composée de différentes sections, chacune se concentrant sur un aspect particulier du modèle d’IA.
+
 Lisez ce qui suit pour obtenir un guide sur les différentes sections d&#39;une carte modèle, y compris des informations sur les questions qu&#39;elles abordent.
 
 ### Présentation du modèle {#model-overview}
+
+La présentation du modèle contient des informations générales sur un modèle d’IA. Utilisez cette section pour fournir des informations telles que le nom, l’objectif et le type de votre modèle d’IA. De plus, vous pouvez utiliser cette section pour identifier les utilisateurs prévus et expliquer comment votre modèle s’intègre à Experience Platform.
 
 +++Afficher les questions et les exemples de réponses
 
@@ -38,6 +45,8 @@ Lisez ce qui suit pour obtenir un guide sur les différentes sections d&#39;une 
 
 ### Utilisation prévue {#intended-use}
 
+La section d’utilisation prévue contient des informations sur les principaux cas d’utilisation de votre modèle d’IA. Vous pouvez utiliser cette section pour développer les problèmes que votre modèle vise à résoudre, les secteurs et/ou domaines pour lesquels votre modèle est pertinent, ainsi que les cas d’utilisation abusive à éviter lors de l’utilisation de votre modèle d’IA.
+
 +++Afficher les questions et les exemples de réponses
 
 | Question | Informations nécessaires | Exemple de réponse |
@@ -52,6 +61,8 @@ Lisez ce qui suit pour obtenir un guide sur les différentes sections d&#39;une 
 +++
 
 ### Entrées et sorties du modèle {#model-inputs-and-outputs}
+
+La section entrées et sorties du modèle contient des informations sur les types de données pris en charge que votre modèle prend en entrée et renvoie en sortie. Vous pouvez utiliser cette section pour fournir des exemples d’entrées et de sorties de données pertinentes pour votre modèle d’IA.
 
 +++Afficher les questions et les exemples de réponses
 
@@ -68,6 +79,8 @@ Lisez ce qui suit pour obtenir un guide sur les différentes sections d&#39;une 
 
 ### Données d’apprentissage {#training-data}
 
+La section Données d’entraînement contient des informations sur les jeux de données utilisés pour entraîner un modèle d’IA donné. Vous pouvez utiliser cette section pour en savoir plus sur la taille et la source des données d’identification, les biais identifiés dans le jeu de données et la manière dont les données ont été prétraitées.
+
 +++Afficher les questions et les exemples de réponses
 
 | Question | Informations nécessaires | Exemple de réponse |
@@ -82,6 +95,8 @@ Lisez ce qui suit pour obtenir un guide sur les différentes sections d&#39;une 
 +++
 
 ### Architecture du modèle et formation {#model-architecture-and-training}
+
+La section Architecture du modèle et formation décrit le plan directeur de votre modèle d’IA. Cette section fait référence à la structure et à la conception du modèle d’IA, y compris des détails sur le type d’algorithme et les méthodes d’évaluation utilisées. Vous pouvez également utiliser cette section pour fournir des informations sur les structures d’entraînement utilisées, ainsi que sur les ressources de calcul utilisées dans l’entraînement.
 
 +++Afficher les questions et les exemples de réponses
 
@@ -99,6 +114,8 @@ Lisez ce qui suit pour obtenir un guide sur les différentes sections d&#39;une 
 
 ### Performance et évaluation {#performance-and-evaluation}
 
+La section Performances et évaluation contient des informations sur les mesures et les méthodes utilisées pour évaluer la façon dont le modèle effectue les tâches prévues. Vous pouvez utiliser cette section pour fournir des informations sur les mesures d’évaluation utilisées, ainsi que les faiblesses identifiées ou les cas d’échec.
+
 +++Afficher les questions et les exemples de réponses
 
 | Question | Informations nécessaires | Exemple de réponse |
@@ -114,19 +131,23 @@ Lisez ce qui suit pour obtenir un guide sur les différentes sections d&#39;une 
 
 ### Équité et partialité {#fairness-and-bias}
 
+La section sur l’équité et les préjugés contient des informations sur la performance du modèle d’IA en ce qui concerne les mesures d’équité et de préjugés. L&#39;équité fait référence à la capacité du modèle à fournir des résultats équitables entre différents groupes démographiques et cas d&#39;utilisation, tandis que le biais fait référence aux erreurs systématiques qui entraînent des résultats injustes. Utilisez cette section pour élaborer sur les contrôles d’équité effectués et pour discuter de la manière dont le modèle atténue les biais.
+
 +++Afficher les questions et les exemples de réponses
 
 | Question | Informations nécessaires | Exemple de réponse |
 | --- | --- | --- |
 | Quels contrôles d’équité ont été effectués ? | Les processus d&#39;analyse et d&#39;atténuation des biais qui ont été effectués. | Le modèle a été soumis à des tests de parité démographique et à des évaluations contradictoires de l’équité afin de détecter les disparités de rendement entre les différents segments d’utilisateurs. |
 | Le modèle touche-t-il de façon disproportionnée certains groupes? | Toute disparité dans les performances qui a été identifiée. | L’analyse a révélé une baisse de performances de 5 % pour les utilisateurs disposant de faibles données historiques d’interaction. Pour y remédier, le modèle incorpore des techniques de repondération pendant la formation. |
-| Comment le modèle atténue-t-il les risques ? | Techniques utilisées pour traiter les biais. | L’ensemble de données est stratifié afin d’assurer une représentation proportionnelle des différentes données démographiques des clients, et des contraintes d’équité sont introduites au cours de la formation afin d’empêcher le modèle de favoriser un groupe particulier. Des vérifications régulières des biais sont effectuées à l’aide d’une analyse de parité démographique, permettant des ajustements si des disparités de rendement sont détectées. |
+| Comment le modèle atténue-t-il les biais ? | Techniques utilisées pour traiter les biais. | L’ensemble de données est stratifié afin d’assurer une représentation proportionnelle des différentes données démographiques des clients, et des contraintes d’équité sont introduites au cours de la formation afin d’empêcher le modèle de favoriser un groupe particulier. Des vérifications régulières des biais sont effectuées à l’aide d’une analyse de parité démographique, permettant des ajustements si des disparités de rendement sont détectées. |
 
 {style="table-layout:auto"}
 
 +++
 
 ### Explicabilité et interprétabilité {#explainability-and-interpretability}
+
+La section explicabilité et interprétabilité contient des informations sur la capacité d’un modèle d’IA à fournir des explications claires et compréhensibles et sur la facilité avec laquelle un utilisateur humain peut comprendre comment les fonctionnalités d’entrée affectent les prédictions et les réponses. Utilisez cette section pour expliquer comment les utilisateurs peuvent mieux comprendre pourquoi votre modèle prend certaines décisions et quels outils ou techniques sont disponibles pour une meilleure interprétabilité.
 
 +++Afficher les questions et les exemples de réponses
 
@@ -141,6 +162,12 @@ Lisez ce qui suit pour obtenir un guide sur les différentes sections d&#39;une 
 
 ### Robustesse et généralisation {#robustness-and-generalization}
 
+La section robustesse et généralisation contient des informations sur les performances de votre modèle d’IA sur les données non vues. De plus, vous pouvez utiliser cette section pour expliquer comment votre modèle maintient ses performances et sa précision en cas d’entrées inattendues ou difficiles.
+
+>[!TIP]
+>
+>Dans l’IA, les « données non vues » font référence à des données différentes des données sur lesquelles un modèle donné a été entraîné.
+
 +++Afficher les questions et les exemples de réponses
 
 | Question | Informations nécessaires | Exemple de réponse |
@@ -153,6 +180,8 @@ Lisez ce qui suit pour obtenir un guide sur les différentes sections d&#39;une 
 +++
 
 ### Considérations relatives à la sécurité et à la confidentialité {#security-and-privacy-considerations}
+
+La section Considérations relatives à la sécurité et à la confidentialité contient des informations sur les mesures et pratiques mises en œuvre pour protéger les données sensibles et assurer l’utilisation sécurisée de votre modèle. Vous pouvez utiliser cette section pour répondre aux questions sur la manière dont votre modèle gère les données sensibles.
 
 +++Afficher les questions et les exemples de réponses
 
@@ -167,6 +196,8 @@ Lisez ce qui suit pour obtenir un guide sur les différentes sections d&#39;une 
 
 ### Surveillance et maintenance {#monitoring-and-maintenance}
 
+La section surveillance et maintenance contient des informations sur la manière dont les performances de votre modèle sont surveillées au fil du temps et sur la fréquence de recyclage du modèle. Vous pouvez utiliser cette section pour fournir des informations sur la manière dont les mesures telles que la précision, la précision, le rappel et la latence sont suivies.
+
 +++Afficher les questions et les exemples de réponses
 
 | Question | Informations nécessaires | Exemple de réponse |
@@ -179,6 +210,8 @@ Lisez ce qui suit pour obtenir un guide sur les différentes sections d&#39;une 
 +++
 
 ### Considérations éthiques et IA responsable {#ethical-considerations-and-responsible-ai}
+
+La section Considérations éthiques et IA responsable contient des informations sur les préoccupations éthiques associées à votre modèle d’IA. Cette section décrit également dans quelle mesure votre modèle s’aligne sur les principes de l’IA responsable. Utilisez cette section pour fournir des informations sur les impacts éthiques potentiels de l’utilisation de votre modèle, y compris la reconnaissance des préjugés, l’assurance de l’équité et la prévention des dommages causés aux individus ou aux groupes.
 
 +++Afficher les questions et les exemples de réponses
 
@@ -193,6 +226,8 @@ Lisez ce qui suit pour obtenir un guide sur les différentes sections d&#39;une 
 
 ### Limites connues {#known-limitations}
 
+La section limitations connues contient des informations sur les limitations existantes qui ont été identifiées pour votre modèle d’IA. Utilisez cette section pour souligner les conditions dans lesquelles votre modèle d’IA peut mal fonctionner et pour souligner toutes les limites que les utilisateurs doivent connaître.
+
 +++Afficher les questions et les exemples de réponses
 
 | Question | Informations nécessaires | Exemple de réponse |
@@ -205,6 +240,8 @@ Lisez ce qui suit pour obtenir un guide sur les différentes sections d&#39;une 
 +++
 
 ### Améliorations futures {#future-improvements}
+
+La section améliorations futures contient des informations sur les mises à jour de fonctionnalités prévues pour votre modèle d’IA. Utilisez cette section pour élaborer votre feuille de route d’amélioration.
 
 +++Afficher les questions et les exemples de réponses
 
