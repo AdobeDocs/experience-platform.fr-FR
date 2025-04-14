@@ -17,10 +17,10 @@ Lisez ce guide pour savoir comment connecter votre compte [!DNL MariaDB] à Adob
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Experience Platform :
 
-* [Sources](../../../../home.md) : Experience Platform permet l’ingestion de données à partir de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de services Experience Platform.
-* [Environnements](../../../../../sandboxes/home.md) de test : Experience Platform fournit des environnements de test virtuels qui partitionnent une seule instance de Experience Platform dans des environnements virtuels distincts pour aider à développer et à faire évoluer les applications d’expérience numérique.
+* [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes fournissent des informations supplémentaires que vous devrez connaître pour réussir à vous connecter à [!DNL MariaDB] l’aide de l’API [!DNL Flow Service] .
+Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour réussir à vous connecter à [!DNL MariaDB] à l’aide de l’API [!DNL Flow Service].
 
 ### Collecter les informations d’identification requises
 
@@ -34,9 +34,9 @@ Lisez le guide sur [Prise en main des API Experience Platform](../../../../../la
 
 Pour plus d’informations sur la connexion de votre compte [!DNL MariaDB] à Experience Platform sur Azure, lisez les étapes ci-dessous.
 
-### Créer une connexion de base pour [!DNL MariaDB] Experience Platform sur Azure {#azure-base}
+### Créer une connexion de base pour [!DNL MariaDB] sur Experience Platform sur Azure {#azure-base}
 
-Une connexion de base conserve les informations entre votre source et Experience Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre ID de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
+Une connexion de base conserve les informations échangées entre votre source et Experience Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
 
 **Format d’API**
 
@@ -44,11 +44,11 @@ Une connexion de base conserve les informations entre votre source et Experience
 POST /connections
 ```
 
-Pour créer un ID de connexion de base, faites une demande POST au `/connections` point de terminaison et fournissez les informations d’identification d’authentification appropriées pour votre [!DNL MariaDB] compte.
+Pour créer un identifiant de connexion de base, envoyez une requête POST au point d’entrée `/connections` et indiquez les informations d’authentification appropriées pour votre compte [!DNL MariaDB].
 
 >[!BEGINTABS]
 
->[!TAB Authentification basée sur la chaîne de connexion]
+>[!TAB Authentification basée sur une chaîne de connexion]
 
 **Requête**
 
@@ -82,14 +82,14 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `auth.params.connectionString` | Chaîne de connexion associée à votre [!DNL MariaDB] authentification. Le [!DNL MariaDB] modèle de chaîne de connexion est : `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `auth.params.connectionString` | Chaîne de connexion associée à votre authentification [!DNL MariaDB]. Le modèle de chaîne de connexion [!DNL MariaDB] est : `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 | `connectionSpec.id` | L’identifiant de spécification de connexion [!DNL MariaDB] est : `3000eb99-cd47-43f3-827c-43caf170f015`. |
 
 +++
 
 **Réponse**
 
-Une réponse positive renvoie les détails de la connexion de base nouvellement créée, y compris son identifiant unique (`id`).
+Une réponse réussie renvoie les détails de la nouvelle connexion de base, y compris son identifiant unique (`id`).
 
 +++Afficher l’exemple de réponse
 
@@ -140,11 +140,11 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `auth.params.server` | Le nom ou l’adresse IP de votre [!DNL MariaDB] base de données. |
-| `auth.params.database` | Nom de votre base de données. |
+| `auth.params.server` | Nom ou adresse IP de la base de données [!DNL MariaDB]. |
+| `auth.params.database` | Nom de la base de données. |
 | `auth.params.username` | Nom d’utilisateur correspondant à votre base de données. |
 | `auth.params.password` | Mot de passe correspondant à votre base de données. |
-| `auth.params.sslMode` | Méthode de chiffrement des données durant le transfert des données. |
+| `auth.params.sslMode` | Méthode de chiffrement des données lors du transfert de données. |
 | `connectionSpec.id` | L’identifiant de spécification de connexion [!DNL MariaDB] est : `3000eb99-cd47-43f3-827c-43caf170f015`. |
 
 +++
@@ -170,7 +170,7 @@ Une réponse réussie renvoie les détails de la nouvelle connexion de base, y c
 
 >[!AVAILABILITY]
 >
->Cette section s’applique aux implémentations d’Experience Platform s’exécutant sur Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la vue d’ensemble [](../../../../../landing/multi-cloud.md)Experience Platform multicloud.
+>Cette section s’applique aux implémentations d’Experience Platform s’exécutant sur Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](../../../../../landing/multi-cloud.md).
 
 Pour plus d’informations sur la connexion de votre compte [!DNL MariaDB] à Experience Platform sur AWS, lisez les étapes ci-dessous.
 
@@ -184,9 +184,9 @@ POST /connections
 
 **Requête**
 
-La demande suivante crée une connexion de base pour [!DNL MariaDB] se connecter à Experience Platform sur AWS.
+La requête suivante crée une connexion de base pour [!DNL MariaDB] connecter à Experience Platform sur AWS.
 
-+++Voir l’exemple de demande
++++Afficher l’exemple de requête
 
 ```shell
 curl -X POST \
@@ -218,8 +218,8 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `auth.params.server` | Le nom ou l’adresse IP de votre [!DNL MariaDB] base de données. |
-| `auth.params.database` | Nom de votre base de données. |
+| `auth.params.server` | Nom ou adresse IP de la base de données [!DNL MariaDB]. |
+| `auth.params.database` | Nom de la base de données. |
 | `auth.params.username` | Nom d’utilisateur correspondant à votre base de données. |
 | `auth.params.password` | Mot de passe correspondant à votre base de données. |
 | `auth.params.sslMode` | Méthode de chiffrement des données lors du transfert de données. |
@@ -229,7 +229,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse positive renvoie les détails de la connexion de base nouvellement créée, y compris son identifiant unique (`id`).
+Une réponse réussie renvoie les détails de la nouvelle connexion de base, y compris son identifiant unique (`id`).
 
 +++Afficher l’exemple de réponse
 

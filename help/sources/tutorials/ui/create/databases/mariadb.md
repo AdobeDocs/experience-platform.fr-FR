@@ -30,7 +30,7 @@ Lisez la [[!DNL MariaDB] présentation](../../../../connectors/databases/mariadb
 
 ## Parcourir le catalogue des sources
 
-Dans l’interface utilisateur Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace *[!UICONTROL de travail Sources]* . Sélectionnez la catégorie appropriée dans le *[!UICONTROL panneau Catégories]* Vous pouvez également utiliser la barre de recherche pour accéder à la source spécifique que vous souhaitez utiliser.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Sélectionnez la catégorie appropriée dans le panneau *[!UICONTROL Catégories]*. Vous pouvez également utiliser la barre de recherche pour accéder à la source spécifique que vous souhaitez utiliser.
 
 Pour utiliser [!DNL MariaDB], sélectionnez la carte source **[!UICONTROL MariaDB]** sous *[!UICONTROL Bases de données]*, puis sélectionnez **[!UICONTROL Configurer]**.
 
@@ -50,9 +50,9 @@ Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]**
 
 Si vous ne disposez pas d’un compte existant, vous devez créer un compte en fournissant les informations d’authentification nécessaires qui correspondent à votre source.
 
-Pour créer un nouveau compte, sélectionnez **[!UICONTROL Nouveau compte]** , puis fournissez un nom et éventuellement ajoutez une description pour votre compte.
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** puis indiquez un nom et éventuellement ajoutez une description pour votre compte.
 
-![Nouvelle interface de compte dans le flux de travail Sources avec un nom de compte et une description facultative fournie.](../../../../images/tutorials/create/maria-db/new.png)
+![Nouvelle interface de compte dans le workflow des sources avec un nom de compte et une description facultative fournis.](../../../../images/tutorials/create/maria-db/new.png)
 
 ### Se connecter à Experience Platform sur Azure {#azure}
 
@@ -74,13 +74,13 @@ Pour utiliser l’authentification de base, sélectionnez **[!UICONTROL Authenti
 
 >[!ENDTABS]
 
-### Connexion à Experience Platform sur Amazon services Web (AWS) {#aws}
+### Connexion à Experience Platform sur Amazon Web Services (AWS) {#aws}
 
 >[!AVAILABILITY]
 >
->Cette section s’applique aux implémentations de Experience Platform exécutées sur Amazon services Web (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la vue d’ensemble [](../../../../../landing/multi-cloud.md)Experience Platform multicloud.
+>Cette section s’applique aux implémentations d’Experience Platform s’exécutant sur Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](../../../../../landing/multi-cloud.md).
 
-Pour créer un compte [!DNL MariaDB] et vous connecter à Experience Platform sur AWS, assurez-vous que vous êtes dans un sandbox VA6, puis fournissez les informations d’identification nécessaires [à l’authentification](../../../../connectors/databases/mariadb.md#aws).
+Pour créer un compte [!DNL MariaDB] et vous connecter à Experience Platform sur AWS, vérifiez que vous vous trouvez dans un sandbox VA6, puis fournissez les informations d’identification [nécessaires pour l’authentification](../../../../connectors/databases/mariadb.md#aws).
 
 ![Nouvelle interface de compte dans le workflow des sources pour se connecter à AWS.](../../../../images/tutorials/create/maria-db/basic-auth.png)
 
