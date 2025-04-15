@@ -6,10 +6,10 @@ user-guide-description: Découvrez comment déployer et gérer des balises d’a
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7fe7bbf7f4566a567c08ef73b4b9b503ea140549
 workflow-type: tm+mt
-source-wordcount: '777'
-ht-degree: 95%
+source-wordcount: '778'
+ht-degree: 85%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 95%
 # Balises {#tags}
 
 * [Présentation des balises](./home.md)
-* Prise en main {#get-started}
+* Commencer {#get-started}
    * [Guide de démarrage rapide](./quick-start/quick-start.md)
    * [Guides de mise en œuvre](./quick-start/implementation-guides.md)
 * Guides d’interface utilisateur {#ui}
-   * [Aperçu](./ui/managing-resources/overview.md)
+   * [Vue d’ensemble](./ui/managing-resources/overview.md)
    * Extensions {#extensions}
       * [Aperçu](./ui/managing-resources/extensions/overview.md)
       * [Mises à niveau des extensions](./ui/managing-resources/extensions/extension-upgrade.md)
@@ -41,7 +41,7 @@ ht-degree: 95%
       * [Hôtes SFTP](./ui/publishing/hosts/sftp-host.md)
    * Environnements {#environments}
       * [Aperçu](./ui/publishing/environments.md)
-      * [Test des codes incorporés à l’aide du débogeur Adobe Experience Platform](./ui/publishing/embed-code-testing.md)
+      * [Test des codes intégrés à l’aide du débogeur Adobe Experience Platform](./ui/publishing/embed-code-testing.md)
    * [Versions](./ui/publishing/builds.md)
    * [Bibliothèques](./ui/publishing/libraries.md)
    * [Bibliothèques auto-hébergées](./ui/publishing/hosts/self-hosting-libraries.md)
@@ -56,7 +56,7 @@ ht-degree: 95%
    * [Prise en charge de l’intégrité des sous-ressources (SRI)](./ui/client-side/sri.md)
    * [Transport Layer Security (sécurité de la couche de transport)](./ui/client-side/transport-layer-security.md)
 * Transfert d’événement {#event-forwarding}
-   * [Aperçu](./ui/event-forwarding/overview.md)
+   * [Vue d’ensemble](./ui/event-forwarding/overview.md)
    * [Prise en main](./ui/event-forwarding/getting-started.md)
    * [Configuration des secrets](./ui/event-forwarding/secrets.md)
    * [Surveillance (bêta)](./ui/event-forwarding/monitoring.md)
@@ -65,7 +65,7 @@ ht-degree: 95%
    * [Sociétés et propriétés](./ui/administration/companies-and-properties.md)
    * [Autorisations utilisateur](./ui/administration/user-permissions.md)
 * Extensions {#extensions}
-   * [Aperçu](./extensions/overview.md)
+   * [Vue d’ensemble](./extensions/overview.md)
    * Extensions de balise (côté client) {#client}
       * [Aperçu](./extensions/client/overview.md)
       * [Mesures de vitesse du site accessibles](https://exchange.adobe.com/apps/ec/103053)
@@ -80,28 +80,28 @@ ht-degree: 95%
       * [Adobe Analytics et Adobe Target](https://exchange.adobe.com/apps/ec/105363/6sense-for-analytics-and-target)
       * [Adobe Analytics et Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)
       * [Adobe Analytics et Salesforce](https://exchange.adobe.com/apps/ec/101530)
-      *  Adobe Analytics Product String {#product-string}
+      * Chaîne de produit Adobe Analytics {#product-string}
          * [Aperçu](./extensions/client/product-string/overview.md)
          * [Notes de mise à jour](./extensions/client/product-string/release-notes.md)
       * [Créateur de chaînes de produit Adobe Analytics](https://exchange.adobe.com/apps/ec/101461)
       * [Adobe Analytics via le SDK Web Adobe Experience Platform](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
       * Adobe Audience Manager {#audience-manager}
-         * [Aperçu](./extensions/client/audience-manager/overview.md)
-      * Adobe Client Data Layer (ACDL) {#client-data-layer}
+         * [Vue d’ensemble](./extensions/client/audience-manager/overview.md)
+      * Couche de données client Adobe {#client-data-layer}
          * [Aperçu](./extensions/client/client-data-layer/overview.md)
          * [Notes de mise à jour](./extensions/client/client-data-layer/release-notes.md)
-      * {#content-analytics} Adobe Content Analytics
+      * Adobe Content Analytics {#content-analytics}
          * [Vue d’ensemble](./extensions/client/content-analytics/overview.md)
-      * Adobe ContextHub {#contexthub}
+      * Adobe ContextHub {#contexthub}
          * [Aperçu](./extensions/client/contexthub/overview.md)
       * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
-      * Service Adobe Experience Cloud ID {#id-service}
+      * Service Adobe Experience Cloud ID {#id-service}
          * [Aperçu](./extensions/client/id-service/overview.md)
          * [Notes de mise à jour](./extensions/client/id-service/release-notes.md)
-      * Démo Adobe Experience Platform {#platform-demo}
-         * [Aperçu](./extensions/client/platform-demo/overview.md)
-      * SDK web Adobe Experience Platform {#web-sdk}
-         * [Aperçu](./extensions/client/web-sdk/overview.md)
+      * Démo Adobe Experience Platform {#platform-demo}
+         * [Vue d’ensemble](./extensions/client/platform-demo/overview.md)
+      * SDK Web Adobe Experience Platform {#web-sdk}
+         * [Vue d’ensemble](./extensions/client/web-sdk/overview.md)
          * [Configuration de l’extension de balise du SDK Web](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
          * [Types d’événements](./extensions/client/web-sdk/event-types.md)
          * [Types d’actions](./extensions/client/web-sdk/action-types.md)
@@ -110,23 +110,23 @@ ht-degree: 95%
          * [Plug-ins SDK Web](./extensions/client/web-sdk/web-sdk-plugins.md)
          * [Notes de mise à jour de l’extension SDK Web](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
          * [Notes de mise à jour des plug-ins SDK Web](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
-      * des statistiques sur les ressources Adobe Experience Manager {#asset-insights}
+      * Adobe Experience Manager Asset Insights {#asset-insights}
          * [Aperçu](./extensions/client/asset-insights/overview.md)
          * [Notes de mise à jour](./extensions/client/asset-insights/release-notes.md)
       * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)
-      *  Adobe Media Analytics for Audio and Video {#media-analytics}
+      * Adobe Media Analytics for Audio and Video {#media-analytics}
          * [Aperçu](./extensions/client/media-analytics/overview.md)
          * [Notes de mise à jour](./extensions/client/media-analytics/release-notes.md)
-      * Adobe Media Analytics (3.x SDK) {#media-analytics-3x}
+      * Adobe Media Analytics (3.x SDK) {#media-analytics-3x}
          * [Aperçu](./extensions/client/media-analytics-3x/overview.md)
          * [Notes de mise à jour](./extensions/client/media-analytics-3x/release-notes.md)
-      * Confidentialité Adobe {#privacy}
+      * Confidentialité d’Adobe {#privacy}
          * [Aperçu](./extensions/client/privacy/overview.md)
       * [Sélecteur de suite de rapports Adobe](https://exchange.adobe.com/apps/ec/100640)
       * Adobe Target {#target}
          * [Aperçu](./extensions/client/target/overview.md)
          * [Notes de mise à jour](./extensions/client/target/release-notes.md)
-      * Adobe Target v2 {#target-v2}
+      * Adobe Target v2 {#target-v2}
          * [Aperçu](./extensions/client/target-v2/overview.md)
          * [Notes de mise à jour](./extensions/client/target-v2/release-notes.md)
       * [Adobe Target Toolkit](https://exchange.adobe.com/apps/ec/100640)
@@ -140,14 +140,14 @@ ht-degree: 95%
       * [Beemray Human Context](https://exchange.adobe.com/apps/ec/101063)
       * [Bing Ads Universal Event Tracking](https://exchange.adobe.com/apps/ec/100154)
       * [Branche](https://exchange.adobe.com/apps/ec/101382)
-      * [!DNL BrightCove] suivi vidéo {#brightcove}
+      * [!DNL BrightCove] du suivi vidéo {#brightcove}
          * [Aperçu](./extensions/client/brightcove/overview.md)
          * [Notes de mise à jour](./extensions/client/brightcove/release-notes.md)
       * [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)
       * [Identifiant de source de canal](https://exchange.adobe.com/apps/ec/101412)
       * [Cheetah Experiences](https://exchange.adobe.com/apps/ec/102759)
       * [Clicktale](https://exchange.adobe.com/apps/ec/100082)
-      * Plugins Analytics courants {#plugins}
+      * Plug-ins Analytics courants {#plugins}
          * [Aperçu](./extensions/client/plugins/overview.md)
          * [Notes de mise à jour](./extensions/client/plugins/release-notes.md)
       * [Concat](https://exchange.adobe.com/apps/ec/104690)
@@ -210,24 +210,26 @@ ht-degree: 95%
       * [XDM Composer](https://exchange.adobe.com/apps/ec/106062)
       * [Yext Conversion Tracking](https://exchange.adobe.com/apps/ec/103174)
       * [[!DNL Youtube] Lecture](https://exchange.adobe.com/apps/ec/104160)
-      * [!DNL YouTube] suivi vidéo {#youtube}
+      * [!DNL YouTube] du suivi vidéo {#youtube}
          * [Aperçu](./extensions/client/youtube/overview.md)
          * [Notes de mise à jour](./extensions/client/youtube/release-notes.md)
    * Extensions de transfert d’événement (côté serveur) {#server}
-      * [Aperçu](./extensions/server/overview.md)
-      *  Adobe Experience Platform Cloud Connector {#cloud-connector}
+      * [Vue d’ensemble](./extensions/server/overview.md)
+      * Adobe Experience Platform Cloud Connector {#cloud-connector}
          * [Aperçu](./extensions/server/cloud-connector/overview.md)
          * [Notes de mise à jour](./extensions/server/cloud-connector/release-notes.md)
+      * [!DNL Adform] {#adform}
+         * [Aperçu](./extensions/server/adform/overview.md)
       * [!DNL AWS] {#aws}
          * [Aperçu](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
          * [Aperçu](./extensions/server/braze/overview.md)
       * [Connecteur cloud pour Google Analytics](https://exchange.adobe.com/apps/ec/106542)
       * Base {#core}
-         * [Aperçu](./extensions/server/core/overview.md)
+         * [Vue d’ensemble](./extensions/server/core/overview.md)
       * [API d’événement Epsilon](https://exchange.adobe.com/apps/ec/109127)
-      * Conversions améliorées de Google Ads {#google-ads-enhanced-conversions}
-         * [Aperçu](./extensions/server/google-ads-enhanced-conversions/overview.md)
+      * Conversions améliorées de Google Ads {#google-ads-enhanced-conversions}
+         * [Vue d’ensemble](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * Google Cloud Platform {#google-cloud-platform}
          * [Aperçu](./extensions/server/google-cloud-platform/overview.md)
       * [!DNL LinkedIn Conversions API] {#linkedin}
@@ -251,18 +253,18 @@ ht-degree: 95%
          * [Aperçu](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}
          * [Aperçu](./extensions/server/twitter/overview.md)
-      * {#tiktok} de l’API d’événements web [!DNL Tiktok]
+      * API d’événements web [!DNL Tiktok] {#tiktok}
          * [Aperçu](./extensions/server/tiktok/overview.md)
       * [!DNL The Trade Desk] {#thetradedesk}
          * [Aperçu](./extensions/server/tradedesk/overview.md)
-      * API des événements [!DNL Zendesk] {#zendesk}
-         * [Aperçu](./extensions/server/zendesk/overview.md)
+      * API d’événements [!DNL Zendesk] {#zendesk}
+         * [Vue d’ensemble](./extensions/server/zendesk/overview.md)
 * Développement d’extension {#extension-dev}
-   * [Aperçu](./extension-dev/overview.md)
+   * [Vue d’ensemble](./extension-dev/overview.md)
    * [Prise en main](./extension-dev/getting-started.md)
    * [Navigateurs pris en charge](./extension-dev/browsers.md)
    * Processus de soumission {#submit}
-      * [Aperçu](./extension-dev/submit/overview.md)
+      * [Vue d’ensemble](./extension-dev/submit/overview.md)
       * [Configuration de l’organisation](./extension-dev/submit/setup.md)
       * [Octroyer un accès utilisateur](./extension-dev/submit/access.md)
       * [Développer une extension](./extension-dev/submit/develop.md)
@@ -282,7 +284,7 @@ ht-degree: 95%
       * [Types d’éléments de données](./extension-dev/web/data-element-types.md)
       * [Modules principaux](./extension-dev/web/core.md)
       * [Modules partagés](./extension-dev/web/shared.md)
-   * Extensions Edge {#edge}
+   * Extensions d’Edge {#edge}
       * [Flux d’extension](./extension-dev/edge/flow.md)
       * [Format du module bibliothèque](./extension-dev/edge/format.md)
       * [Types de condition](./extension-dev/edge/condition-types.md)
@@ -293,7 +295,7 @@ ht-degree: 95%
    * [Variable sans Turbine](./extension-dev/turbine.md)
    * [Norme de rétrocompatibilité](./extension-dev/backwards-compatibility.md)
 * API Reactor {#api}
-   * [Aperçu](./api/overview.md)
+   * [Vue d’ensemble](./api/overview.md)
    * [S’authentifier et accéder à l’API Reactor](./api/getting-started.md)
    * Points d’entrée {#endpoints}
       * [Sociétés](./api/endpoints/companies.md)
