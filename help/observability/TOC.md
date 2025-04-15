@@ -7,7 +7,7 @@ role: Developer
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '57'
-ht-degree: 63%
+ht-degree: 57%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 63%
 # Observability Insights {#observability}
 
 * [Présentation d’Observability Insights](./home.md)
-* API Observability Insights {#api}
-   * [Présentation](./api/overview.md)
+* API Observability Insights {#api}
+   * [Vue d’ensemble](./api/overview.md)
    * [Prise en main](./api/getting-started.md)
    * [Mesures](./api/metrics.md)
 * Alertes {#alerts}

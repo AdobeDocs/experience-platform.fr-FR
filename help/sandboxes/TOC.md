@@ -7,7 +7,7 @@ feature: Sandboxes
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '84'
-ht-degree: 53%
+ht-degree: 51%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 53%
    * [Gestion des sandbox](api/sandboxes.md)
    * [Types de sandbox](api/types.md)
    * [Annexe](api/appendix.md)
-* {#sandbox-tooling-api} de l’API d’outil Sandbox
+* API d’outils Sandbox {#sandbox-tooling-api}
    * [Vue d’ensemble](sandbox-tooling-api/overview.md)
    * [Prise en main](sandbox-tooling-api/getting-started.md)
    * [Packages  ](sandbox-tooling-api/packages.md)
