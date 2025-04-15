@@ -5,10 +5,10 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 66ebff274a5fb9255e284a2a38db780d64b45f2e
 workflow-type: tm+mt
-source-wordcount: '1282'
-ht-degree: 82%
+source-wordcount: '1290'
+ht-degree: 76%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 82%
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
    * [Créer une connexion à une destination](./ui/connect-destination.md)
-   * Activez les données vers les destinations{#activate}
+   * Activer des données vers les destinations{#activate}
       * [Présentation de l’activation](./ui/activation-overview.md)
       * [Activer les audiences vers des destinations d’export d’audiences en flux continu](./ui/activate-segment-streaming-destinations.md)
       * [Activer les audiences vers des destinations d’export de profils en flux continu](./ui/activate-streaming-profile-destinations.md)
@@ -51,6 +51,7 @@ ht-degree: 82%
       * [(Version bêta) Utiliser l’attribut XDM de l’heure de la dernière qualification dans les nouvelles destinations de stockage dans le cloud en version bêta](./ui/activate-last-qualification-time.md)
       * [Exporter des tableaux, mappages et objets](/help/destinations/ui/export-arrays-maps-objects.md)
       * [Effectuer des transformations sur les données exportées vers des destinations d’espace de stockage](/help/destinations/ui/data-transformations-calculated-fields.md)
+      * [Mettre à jour la date de fin des flux de données du jeu de données d’exportation](/help/destinations/ui/update-end-date-export-dataflows.md)
    * [Afficher les détails de la destination](./ui/destination-details-page.md)
    * [Mettre à jour les comptes de destination](./ui/update-accounts.md)
    * [Supprimer les comptes de destination](./ui/delete-destination-account.md)
@@ -153,19 +154,19 @@ ht-degree: 82%
       * [Destinations Data Management Platform (DMP)](./catalog/data-management/overview.md)
       * [Extension Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
       * [Plateforme Marketing Zeta](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
-   * {#data-partner} des partenaires de données et d’identité
+   * Partenaire de données et d’identité {#data-partner}
       * [Suppression de prospects Acxiom](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Amélioration des données Acxiom](./catalog/data-partner/acxiom-data-enhancement.md)
       * [Merkury Enterprise Connections](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md)
       * [Identité d’entreprise Merkury](/help/destinations/catalog/data-partners/merkury-enterprise-identity.md)
    * Destinations eCommerce {#ecommerce}
       * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
-   * Destinations dʼe-mail {#email}
+   * Destinations des e-mails {#email}
       * [Extension Bizible](./catalog/email/bizible.md)
       * [Extension Marketo](./catalog/email/marketo.md)
       * [Extension Marketo Munchkin](./catalog/email/marketo-munchkin.md)
       * [Extension PebblePost](./catalog/email/pebblepost.md)
-   * Destinations du marketing par e-mail {#email-marketing}
+   * Destinations de marketing par e-mail  {#email-marketing}
       * [Présentation des destinations du marketing par e-mail](./catalog/email-marketing/overview.md)
       * [Connexion Adobe Campaign](./catalog/email-marketing/adobe-campaign.md)
       * [Connexion à Adobe Campaign Managed Cloud Services](./catalog/email-marketing/adobe-campaign-managed-services.md)
@@ -178,7 +179,7 @@ ht-degree: 82%
       * [(Fichiers) Connexion à Salesforce Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud.md)
       * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
       * [Connexion à SendGrid](./catalog/email-marketing/sendgrid.md)
-   * Extensions de balises {#launch-extensions}
+   * Extensions des balises {#launch-extensions}
       * [Présentation de l’extension de balise](./catalog/launch-extensions/overview.md)
    * Automatisation du marketing {#marketing-automation}
       * [Profils des participants à RainFocus](/help/destinations/catalog/marketing-automation/rainfocus.md)
@@ -287,13 +288,13 @@ ht-degree: 82%
       * [Récupération d’un modèle d’audience](./destination-sdk/metadata-api/retrieve-audience-template.md)
       * [Mise à jour d’un modèle d’audience](./destination-sdk/metadata-api/update-audience-template.md)
       * [Suppression d’un modèle d’audience](./destination-sdk/metadata-api/delete-audience-template.md)
-   * Référence de l’API de configuration d’informations d’identification {#credentials-api}
+   * Référence de l’API de configuration des informations d’identification {#credentials-api}
       * [Création d’une configuration d’informations d’identification](./destination-sdk/credentials-api/create-credential-configuration.md)
       * [Récupération d’une configuration d’informations d’identification](./destination-sdk/credentials-api/retrieve-credential-configuration.md)
       * [Mise à jour d’une configuration d’informations d’identification](./destination-sdk/credentials-api/update-credential-configuration.md)
       * [Suppression d’une configuration d’informations d’identification](./destination-sdk/credentials-api/delete-credential-configuration.md)
    * Référence de l’API de test de destination {#testing-api}
-      * API de test de destination de diffusion en streaming {#streaming-destinations}
+      * API de test de destination de diffusion en continu {#streaming-destinations}
          * [Vue d’ensemble de l’API de test de destination en streaming](./destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md)
          * [Génération de profils types en fonction d’un schéma source](./destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md)
          * [Génération d’un modèle type de transformation des messages](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
@@ -309,7 +310,7 @@ ht-degree: 82%
    * Référence de l’API de publication de destination {#publishing-api}
       * [Création d’une requête de publication de destination](./destination-sdk/publishing-api/create-publishing-request.md)
       * [Récupération d’une requête de publication de destination](./destination-sdk/publishing-api/retrieve-publishing-request.md)
-   * Documenter votre destination {#document-destination}
+   * Documenter la destination {#document-destination}
       * [Documenter votre destination dans Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
       * [Utiliser l’interface web GitHub pour créer une page de documentation de destination](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
       * [Utiliser un éditeur de texte dans votre environnement local pour créer une page de documentation de destination](./destination-sdk/docs-framework/work-in-local-environment.md)
