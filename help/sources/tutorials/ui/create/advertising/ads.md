@@ -2,14 +2,18 @@
 title: Connexion de Google Ads à Experience Platform à l’aide de l’interface utilisateur
 description: Découvrez comment connecter votre compte Google Ads à Adobe Experience Platform dans l’interface utilisateur.
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '877'
 ht-degree: 10%
 
 ---
 
 # Connexion d’[!DNL Google Ads] à Experience Platform à l’aide de l’interface utilisateur
+
+>[!WARNING]
+>
+>La source [!DNL Google Ads] n’est actuellement pas disponible dans l’interface utilisateur. Vous pouvez continuer à ingérer vos données [!DNL Google Ads] dans Experience Platform [à l’aide de l’API](../../../api/create/advertising/ads.md).
 
 >[!NOTE]
 >
