@@ -2,7 +2,7 @@
 title: Diffuser des données de votre base de données Snowflake vers Experience Platform à l’aide de l’interface utilisateur
 description: Découvrez comment diffuser des données de votre base de données Snowflake vers Experience Platform
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 04a1cecbacdaf0b701d3ef18d03497973a8f3263
 workflow-type: tm+mt
 source-wordcount: '1648'
 ht-degree: 16%
@@ -86,7 +86,7 @@ Utilisez le répertoire de la base de données situé à gauche de l&#39;écran 
 
 ![Interface de sélection des données avec une table de base de données sélectionnée.](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
 
-Sélectionnez ensuite le type de colonne date et heure de votre tableau. Vous pouvez choisir entre deux types de colonnes d’horodatage : `TIMESTAMP_NTZ` ou `TIMESTAMP_LTZ`. Si vous sélectionnez un type de colonne de `TIMESTAMP_NTZ`, vous devez également fournir un fuseau horaire. Vos colonnes doivent avoir une contrainte non nulle. Pour plus d’informations, consultez la section sur [les limites et les questions fréquentes]
+Sélectionnez ensuite le type de colonne date et heure de votre tableau. Vous pouvez choisir entre deux types de colonnes d’horodatage : `TIMESTAMP_NTZ` ou `TIMESTAMP_LTZ`. Si vous sélectionnez un type de colonne de `TIMESTAMP_NTZ`, vous devez également fournir un fuseau horaire. Vos colonnes doivent avoir une contrainte non nulle. Pour plus d’informations, consultez la section sur [les limites et les questions fréquentes](../../../../connectors/databases/snowflake-streaming.md#limitations-and-frequently-asked-questions).
 
 Vous pouvez également configurer les paramètres de renvoi au cours de cette étape. Le renvoi détermine les données initialement ingérées. Si le renvoi est activé, tous les fichiers actuels du chemin spécifié seront ingérés lors de la première ingestion planifiée. Dans le cas contraire, seuls les fichiers chargés entre la première exécution de l’ingestion et l’heure de début seront ingérés. Les fichiers chargés avant l’heure de début ne seront pas ingérés.
 
