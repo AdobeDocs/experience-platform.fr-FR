@@ -3,9 +3,9 @@ title: Notes de mise à jour relatives aux balises et au transfert d’événeme
 description: Dernières notes de mise à jour concernant les balises et le transfert d’événement dans Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '773'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -54,13 +54,13 @@ De nouvelles extensions ont été publiées :
 
 ## 26 octobre 2022
 
-* **Gestion des données sensibles pour les flux de données** : les flux de données exploitent désormais plusieurs technologies Experience Platform pour gérer de manière appropriée les données sensibles selon les applications des réglementations telles que le Health Insurance Portability and Accountability Act (HIPAA). Consultez la section relative à la [gestion des données sensibles dans les flux de données](../../datastreams/overview.md#sensitive) pour plus d’informations.
+* **Gestion des données sensibles pour les trains de données** : les trains de données exploitent désormais plusieurs technologies Experience Platform pour gérer de manière appropriée les données sensibles, conformément aux réglementations telles que le Health Insurance Portability and Accountability Act (HIPAA). Consultez la section relative à la [gestion des données sensibles dans les flux de données](../../datastreams/overview.md#sensitive) pour plus d’informations.
 * Extension **[!DNL Splunk] pour le transfert d’événement** : vous pouvez désormais envoyer des données à [!DNL Splunk] à l’aide d’une extension de [transfert d’événement](../ui/event-forwarding/overview.md). Pour plus d’informations, consultez la [[!DNL Splunk] présentation de l’extension](../extensions/server/splunk/overview.md).
 * Extension **[!DNL Zendesk] pour le transfert d’événement** : vous pouvez désormais envoyer des données à [!DNL Zendesk] à l’aide d’une extension de [transfert d’événement](../ui/event-forwarding/overview.md). Pour plus d’informations, consultez la [[!DNL Zendesk] présentation de l’extension](../extensions/server/zendesk/overview.md).
 
 ## 28 septembre 2022
 
-* **Intégration à la navigation de gauche d’Adobe Experience Platform** : toutes les fonctionnalités qui étaient auparavant exclusives à l’interface utilisateur de collecte de données (y compris les balises et le transfert d’événement) sont désormais également disponibles via la navigation de gauche dans l’interface utilisateur d’Experience Platform, sous la catégorie **[!UICONTROL Collecte de données]**. Il n’est donc pas nécessaire de basculer entre les interfaces utilisateur lors de l’utilisation des fonctionnalités de collecte de données dans Experience Platform.
+* **Intégration à la navigation de gauche d’Adobe Experience Platform** : toutes les fonctionnalités qui étaient auparavant exclusives à l’interface utilisateur de collecte de données (y compris les balises et le transfert d’événement) sont désormais également disponibles via la navigation de gauche dans l’interface utilisateur d’Experience Platform, sous la catégorie **[!UICONTROL Collecte de données]**. Il n’est donc pas nécessaire de basculer entre les IU lors de l’utilisation des fonctionnalités de collecte de données dans Experience Platform.
 * **Attribution utilisateur dans les balises et le transfert d’événement** : lors de l’énumération des propriétés disponibles dans les balises et le transfert d’événement, chaque propriété répertoriée indique désormais la date de sa dernière mise à jour et la personne qui l’a effectuée.
 * Extension **[[!DNL Snap Conversions API] ](https://exchange.adobe.com/apps/ec/108550) pour le transfert d’événement** : vous pouvez désormais envoyer des données à l’[!DNL Snapchat Conversions API] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations sur la configuration et l’utilisation de l’API, voir la [[!DNL Snapchat Marketing API] documentation dédiée](https://marketingapi.snapchat.com/docs/conversion.html).
 
