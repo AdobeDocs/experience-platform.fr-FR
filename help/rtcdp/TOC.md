@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Guide de Real-Time Customer Data Platform
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des audiences à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
 role: Admin
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3b2645927e4760114298295e920e07a20df3fcbd
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 64%
+source-wordcount: '307'
+ht-degree: 62%
 
 ---
 
@@ -16,29 +16,29 @@ ht-degree: 64%
 # Aide sur Real-Time Customer Data Platform {#rtcdp}
 
 * [Documentation de Real-Time CDP](home.md)
-* Prise en main {#intro}
+* Commencer {#intro}
    * Real-Time CDP {#rtcdp-intro}
       * [Présentation de Real-Time CDP](overview.md)
       * [Commencer avec Real-Time CDP](get-started.md)
       * [Page d’accueil](home-page-dashboards.md)
-   * Édition B2B de Real-Time CDP {#rtcdpb2b-intro}
+   * Édition B2B de Real-Time CDP {#rtcdpb2b-intro}
       * [Présentation de l’édition B2B de Real-Time CDP](b2b-overview.md)
       * [Exemple de cas d’utilisation](./b2b-use-case.md)
       * [Tutoriel de bout en bout](./b2b-tutorial.md)
       * [Barrières de sécurité de l’édition B2B de Real-Time CDP](b2b-guardrails.md)
-* {#evolution} Audience Manager et Real-Time CDP
+* Audience Manager et Real-Time CDP {#evolution}
    * [Évolution à partir d’Audience Manager](aam-to-rtcdp.md)
 * Profils de compte {#account}
    * [Présentation des profils de compte](accounts/account-profile-overview.md)
    * [Guide de l’interface utilisateur des profils de compte](accounts/account-profile-ui-guide.md)
 * Administration {#admin}
    * [Présentation de l’administration](administration/admin-overview.md)
-* Audiences et {#segmentation} de segmentation
+* Audiences et segmentation {#segmentation}
    * [Présentation de la segmentation](segmentation/segmentation-overview.md)
    * [Guide d’Audience Builder](segmentation/audience-builder.md)
    * [Segmentation dans l’édition B2B de Real-Time CDP](segmentation/b2b.md)
    * [IA dédiée aux clients](segmentation/customer-ai.md)
-* Jeux de données {#datasets}
+* Jeux de données {#datasets}
    * [Jeux de données](datasets/dataset.md)
    * [Qualité des données dans Experience Platform](datasets/data-quality.md)
 * Destinations {#destinations}
@@ -62,7 +62,7 @@ ht-degree: 64%
 * Profils {#profile}
    * [Présentation des profils](profile/profile-overview.md)
    * [Parcourir les profils](profile/profile-browse.md)
-* Services AI/ML dans l’édition B2B de Real-Time CDP {#b2b-cdp-ai-ml}
+* Services d’IA/ML de Real-Time CDP B2B edition {#b2b-cdp-ai-ml}
    * [Comptes associés](b2b-ai-ml-services/related-accounts.md)
    * [Correspondance du prospect et du compte](b2b-ai-ml-services/lead-to-account-matching.md)
    * Notation prédictive des prospects et des comptes {#predictive-lead-and-account-scoring-intro}
@@ -76,13 +76,14 @@ ht-degree: 64%
    * [Sources dans l’édition B2B de Real-Time CDP](sources/b2b.md)
 * Cas d’utilisation {#use-cases}
    * [Présentation d’exemples de cas d’utilisation](/help/rtcdp/use-case-guides/overview.md)
-   * {#customer-acquisition} d’acquisition du client
+   * Acquisition des clients {#customer-acquisition}
       * [Interagir et acquérir de nouveaux clients sans dépendre de cookies tiers](/help/rtcdp/partner-data/prospecting.md)
       * [Personnaliser des expériences sur site pour les visiteurs inconnus à l’aide de la reconnaissance des visiteurs assistée par des partenaires](/help/rtcdp/partner-data/onsite-personalization.md)
       * [Reciblage hors site d’utilisateurs non authentifiés](./partner-data/offsite-retargeting.md)
-   * {#profile-enrichment} d’enrichissement du profil
+      * [Reciblage hors site d’utilisateurs non authentifiés](./partner-data/unauthenticated-retargeting.md)
+   * Enrichissement du profil {#profile-enrichment}
       * [Complémenter les profils propriétaires avec des attributs fournis par le partenaire](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-   * Informations personnalisées et {#personalization-insights-engagement} d’engagement
+   * Informations personnalisées et engagement {#personalization-insights-engagement}
       * [Faire évoluer la valeur client unique vers la valeur de durée de vie](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md)
       * [Réengager intelligemment vos clients](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
       * [Rétablir l’engagement de vos clients de manière intelligente : exemples Luma](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
