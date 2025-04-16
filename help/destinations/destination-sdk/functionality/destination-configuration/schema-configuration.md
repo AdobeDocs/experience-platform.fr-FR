@@ -2,10 +2,10 @@
 description: Découvrez comment configurer les schémas du partenaire pour les destinations créées avec Destination SDK.
 title: Configuration des schémas de partenaire
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 30a237c7acf814722d384792366f95289dc3f34a
 workflow-type: tm+mt
-source-wordcount: '1949'
-ht-degree: 85%
+source-wordcount: '1896'
+ht-degree: 79%
 
 ---
 
@@ -105,8 +105,8 @@ Pour créer un schéma statique avec des attributs de profil, définissez les at
 | `profileRequired` | Booléen | Facultatif | Utilisez `true` si les utilisateurs doivent être en mesure de mapper les attributs de profil d’Experience Platform aux attributs personnalisés du côté de votre plateforme de destination. |
 | `segmentRequired` | Booléen | Obligatoire | Ce paramètre est demandé par Destination SDK et doit toujours être défini sur `true`. |
 | `identityRequired` | Booléen | Obligatoire | Définissez-le sur `true` si les utilisateurs doivent être en mesure de mapper les [types d’identité](identity-namespace-configuration.md) d’Experience Platform aux attributs que vous avez définis dans le tableau `profileFields`. |
-| `segmentNamespaceAllowList` | Tableau | Facultatif | Définit des espaces de noms d’audience spécifiques à partir desquels les personnes peuvent mapper des audiences à la destination. Utilisez ce paramètre pour empêcher les utilisateurs d’Experience Platform d’exporter des audiences uniquement à partir des espaces de noms d’audience que vous définissez dans le tableau . Ce paramètre ne peut pas être utilisé avec `segmentNamespaceDenyList`.<br> <br> Exemple : `"segmentNamespaceAllowList": ["AudienceManager"]` permet de mapper uniquement les audiences depuis l’espace de noms `AudienceManager` sur cette destination. <br> <br> Pour autoriser l’export de n’importe quelle audience vers votre destination, vous pouvez ignorer ce paramètre. <br> <br> Si `segmentNamespaceAllowList` et `segmentNamespaceDenyList` ne sont pas présents dans votre configuration, les personnes pourront uniquement exporter des audiences provenant de [Segmentation Service](../../../../segmentation/home.md). |
-| `segmentNamespaceDenyList` | Tableau | Facultatif | Limite la capacité de mapper des audiences sur la destination, à partir des espaces de noms d’audience définis dans le tableau. Ne peut pas être utilisé avec `segmentNamespaceAllowed`. <br> <br> Exemple : `"segmentNamespaceDenyList": ["AudienceManager"]` empêche de mapper les audiences depuis l’espace de noms `AudienceManager` sur cette destination. <br> <br> Pour autoriser l’export de n’importe quelle audience sur votre destination, vous pouvez ignorer ce paramètre. <br> <br> Si `segmentNamespaceAllowed` et `segmentNamespaceDenyList` ne sont pas présents dans votre configuration, les personnes pourront uniquement exporter des audiences provenant de [Segmentation Service](../../../../segmentation/home.md). <br> <br> Pour autoriser l’export de toutes les audiences, quelle que soit leur origine, définissez `"segmentNamespaceDenyList":[]`. |
+| `segmentNamespaceAllowList` | Tableau | Facultatif | Permet aux utilisateurs de mapper uniquement des audiences des espaces de noms d’audience définis dans le tableau à la destination. <br><br> L&#39;utilisation de ce paramètre est déconseillée dans la plupart des cas. Utilisez plutôt `"segmentNamespaceDenyList":[]` pour autoriser l’exportation de tous les types d’audiences vers votre destination. <br><br> Si les `segmentNamespaceAllowList` et les `segmentNamespaceDenyList` sont absents de votre configuration, les utilisateurs ne pourront exporter que les audiences provenant du [service de segmentation](../../../../segmentation/home.md). <br><br>`segmentNamespaceAllowList` et `segmentNamespaceDenyList` s’excluent mutuellement. |
+| `segmentNamespaceDenyList` | Tableau | Facultatif | Limite les utilisateurs du mappage des audiences des espaces de noms d’audience définis dans le tableau vers la destination. <br><br>Adobe recommande d&#39;autoriser l&#39;exportation de toutes les audiences, quelle que soit leur origine, en définissant `"segmentNamespaceDenyList":[]`. <br><br>Si les `segmentNamespaceAllowed` et les `segmentNamespaceDenyList` sont absents de votre configuration, les utilisateurs ne pourront exporter que les audiences provenant du [service de segmentation](../../../../segmentation/home.md). <br><br>`segmentNamespaceAllowList` et `segmentNamespaceDenyList` s’excluent mutuellement. |
 
 {style="table-layout:auto"}
 
