@@ -3,9 +3,9 @@ title: Assistant AI dans la documentation du produit Adobe Experience Platform
 description: Prise en main de l’assistant AI dans Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: eb62627e81f361d21026cba368802ebace4a8dde
+source-git-commit: 40c5162801b95d73ce70587f3abd87ad44fa0f01
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1159'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,17 @@ Commencez par lire le matériel dans les liens ci-dessous pour vous familiariser
     <td align="center"><a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
+
+### Guide pratique pour accroître votre productivité avec l’assistant d’IA
+
+>[!NOTE]
+>
+>La dernière mise à jour de ce classeur a eu lieu le 31 mars 2025. Depuis, certaines capacités ont peut-être évolué ou se sont élargies. En outre, certaines fonctionnalités référencées dans ce guide peuvent encore être en accès anticipé. Si vous rencontrez un élément qui n’est pas encore disponible dans votre environnement et que vous souhaitez l’explorer, contactez votre équipe de compte Adobe pour demander un accès anticipé.
+
+Lisez ce qui suit pour obtenir un guide pratique sur la façon d’accroître votre productivité avec l’assistant d’IA.
+
+* [Optimisez votre productivité avec l’assistant d’IA](./assets/landing/ai-assistant-lab-workbook.pdf)
+
 
 ## Nouvelles fonctionnalités
 
@@ -439,16 +450,6 @@ Regardez les vidéos suivantes pour découvrir d’autres exemples de cas d’ut
 * [Déverrouiller les informations opérationnelles avec l’assistant IA](https://www.youtube.com/watch?v=fGgFwAOZle8)
 
 >[!ENDTABS]
-
-### Améliorez votre productivité avec l’assistant d’IA
-
->[!NOTE]
->
->La dernière mise à jour de ce classeur a eu lieu le 31 mars 2025. Depuis, certaines capacités ont peut-être évolué ou se sont élargies. En outre, certaines fonctionnalités référencées dans ce guide peuvent encore être en accès anticipé. Si vous rencontrez un élément qui n’est pas encore disponible dans votre environnement et que vous souhaitez l’explorer, contactez votre équipe de compte Adobe pour demander un accès anticipé.
-
-Lisez ce qui suit pour obtenir un guide pratique sur la façon d’accroître votre productivité avec l’assistant d’IA.
-
-* [Optimisez votre productivité avec l’assistant d’IA](./assets/landing/ai-assistant-lab-workbook.pdf)
 
 ## Étapes suivantes
 
