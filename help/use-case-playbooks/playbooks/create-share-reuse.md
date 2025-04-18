@@ -22,7 +22,7 @@ Pour utiliser un playbook, accédez à **[!UICONTROL Playbooks de cas d’utilis
 >title="Créer une instance"
 >abstract="Générez une liste de ressources telles que des parcours, des audiences, des schémas ou des destinations à utiliser dans des scénarios de parcours ou d’activation."
 
-Avant de créer une instance de playbook, explorez les playbooks disponibles pour [choisir le playbook approprié](/help/use-case-playbooks/playbooks/choose.md). Lorsque vous êtes prêt(e) à poursuivre un playbook et à créer une instance, sélectionnez **[!UICONTROL Créer une instance]** pour poursuivre le playbook et générer des ressources techniques.
+Avant de créer une instance de playbook, explorez les playbooks disponibles pour [choisir le bon playbook](/help/use-case-playbooks/playbooks/choose.md). Lorsque vous êtes prêt(e) à poursuivre un playbook et à créer une instance, sélectionnez **[!UICONTROL Créer une instance]** pour poursuivre le playbook et générer des ressources techniques.
 
 ![Créer une instance d’un playbook.](/help/use-case-playbooks/assets/playbooks/ui-guide/create-playbook-instance.png)
 
@@ -44,7 +44,7 @@ Après avoir créé une instance basée sur un playbook, vous pouvez la personna
 
 Il est important de comprendre que les ressources générées varient selon le cas d’utilisation que vous activez :
 
-* Différentes ressources sont générées pour différents types de playbooks. Ces ressources sont créées spécifiquement pour le cas d’utilisation réalisé via le playbook. Par exemple, un playbook génère un schéma, une audience, un parcours et des messages. Un autre playbook génère un schéma, une audience et une destination vers laquelle activer les données.
+* Différentes ressources sont générées pour différents types de playbooks. Ces ressources sont créées spécifiquement pour le cas d’utilisation réalisé via le playbook. Par exemple, un playbook génère un schéma, une audience, un parcours et des messages. Un autre playbook génère un schéma, une audience et une destination vers lesquels activer les données.
 * Les ressources elles-mêmes varient d’un playbook à l’autre. Par exemple, pour le playbook **[!UICONTROL Envoyer un message d’anniversaire aux clients/clientes]**, l’audience créée comporte la règle `birthday=today AND year=any`.
 
 À titre d’exemple, pour le playbook **[!UICONTROL Panier abandonné : contenu]**, vous pouvez constater qu’un parcours spécifique est créé et contient les messages créés pour ce cas d’utilisation.
@@ -63,7 +63,7 @@ Le comportement décrit ci-dessus est valable pour toutes les ressources qui son
 >
 >Effectuez des tests dans le sandbox de développement et passez en production lorsque vous êtes prêt(e).
 >
->Une fois les objets générés, vous pouvez continuer à les tester dans les sandbox de développement en y rajoutant des données. Vous pouvez tester les ressources tant que vous le souhaitez dans l’environnement de test de développement et vous pouvez répliquer la logique des ressources (définitions d’audience, parcours, schémas, etc.) dans l’environnement de test de production lorsque vous êtes prêt. Vous pouvez passer à l’environnement de test de développement, puis à l’environnement de test de production à l’aide de la [fonctionnalité de sensibilisation aux données](/help/use-case-playbooks/playbooks/data-awareness.md).
+>Une fois les objets générés, vous pouvez continuer à les tester dans les sandbox de développement en y rajoutant des données. Vous pouvez tester les ressources tant que vous le souhaitez dans le sandbox de développement et vous pouvez répliquer la logique des ressources (définitions d’audience, parcours, schémas, etc.) dans le sandbox de production lorsque vous êtes prêt(e). Vous pouvez passer au sandbox de développement, puis au sandbox de production à l’aide de la [fonctionnalité de sensibilisation aux données](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Réutiliser des playbooks {#reuse-playbooks}
 
@@ -75,9 +75,9 @@ Vous pouvez partager l’instance et les ressources générées avec d’autres 
 
 ![URL mise en surbrillance dans une vue playbook de cas d’utilisation.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-url.png)
 
-## Présentation vidéo du processus de lecture de bout en bout
+## Présentation vidéo du processus de playbook de bout en bout
 
-Regardez cette vidéo pour découvrir, créer, publier et dépanner des instances d’un manuel de cas d’utilisation de bout en bout, ainsi que pour copier les ressources générées par le manuel dans d’autres environnements de test configurés dans votre entreprise.
+Regardez cette vidéo pour découvrir, créer, publier et résoudre les problèmes d’instances d’un playbook de cas d’utilisation de bout en bout, ainsi que pour copier les ressources générées par le playbook dans d’autres sandbox configurés dans votre organisation.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427058/?learn=on)
 

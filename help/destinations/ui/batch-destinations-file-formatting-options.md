@@ -1,6 +1,6 @@
 ---
 description: Découvrez comment configurer les options de formatage des fichiers lors de l’activation des données vers des destinations basées sur des fichiers.
-title: Configuration des options de formatage de fichier pour les destinations basées sur des fichiers
+title: Configurer des options de formatage de fichier pour les destinations basées sur des fichiers
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
 source-git-commit: 4dd6e8685ff5cc61342b20e971216416918b95da
 workflow-type: tm+mt
@@ -9,7 +9,7 @@ ht-degree: 48%
 
 ---
 
-# Configuration des options de formatage de fichier pour les destinations basées sur des fichiers
+# Configurer des options de formatage de fichier pour les destinations basées sur des fichiers
 
 >[!IMPORTANT]
 > 
@@ -26,13 +26,13 @@ Vous pouvez configurer diverses options de formatage des fichiers exportés à l
 
 ## Configuration du formatage des fichiers pour les fichiers CSV {#file-configuration}
 
-Pour afficher les options de formatage de fichier, démarrez le workflow [se connecter à la destination](/help/destinations/ui/connect-destination.md). Sélectionnez **Type de données : Segments** et **Type de fichier : CSV** pour afficher les paramètres de mise en forme de fichier disponibles pour les fichiers `CSV` exportés.
+Pour afficher les options de formatage du fichier, lancez le workflow [Se connecter à la destination](/help/destinations/ui/connect-destination.md). Sélectionnez **Type de données : segments** et **Type de fichier : CSV** pour afficher les paramètres de formatage de fichier disponibles pour les fichiers `CSV` exportés.
 
 >[!IMPORTANT]
 >
 >Toutes ces options ne sont peut-être pas disponibles pour la destination à laquelle vous vous connectez. Il appartient au développeur de la destination de déterminer les options de formatage des fichiers qu’il souhaite prendre en charge dans sa destination. Le développeur de la destination peut déterminer quelles options sont disponibles lors de la connexion à la destination. Les options obligatoires sont marquées d’un astérisque dans l’interface utilisateur d’Experience Platform.
 > 
->Les destinations de stockage dans le cloud intégrées par l’Adobe - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Stockage dans le cloud Google](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - ne prennent actuellement en charge que les six options CSV mises en évidence ci-dessous.
+>Les destinations de stockage dans le cloud créées par Adobe - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - ne prennent actuellement en charge que les six options CSV mises en évidence ci-dessous.
 
 ![Image montrant certaines des options de formatage de fichier disponibles.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
@@ -45,20 +45,20 @@ Pour afficher les options de formatage de fichier, démarrez le workflow [se con
 
 Utilisez ce contrôle pour définir un séparateur pour chaque champ et valeur dans les fichiers CSV exportés. Les options disponibles sont les suivantes :
 
-* Deux points `(:)`
-* Virgule `(,)`
-* Pipe `(|)`
+* `(:)` deux-points
+* `(,)` virgule
+* `(|)` de tuyau
 * Point-virgule `(;)`
-* Onglet `(\t)`
+* `(\t)` d’onglet
 
 #### Exemples
 
-Affichez les exemples ci-dessous du contenu dans les fichiers CSV exportés avec chacune des sélections dans l’interface utilisateur.
+Consultez les exemples ci-dessous du contenu des fichiers CSV exportés avec chacune des sélections effectuées dans l’interface utilisateur.
 
-* Exemple de sortie avec **[!UICONTROL Colon`(:)`]** sélectionné : `male:John:Doe`
-* Exemple de sortie avec **[!UICONTROL Comma`(,)`]** sélectionné : `male,John,Doe`
+* Exemple de sortie avec **[!UICONTROL Deux-points`(:)`]** sélectionné : `male:John:Doe`
+* Exemple de sortie avec **[!UICONTROL `(,)`]** sélectionné : `male,John,Doe`
 * Exemple de sortie avec **[!UICONTROL Pipe`(|)`]** sélectionné : `male|John|Doe`
-* Exemple de sortie avec **[!UICONTROL Semicolon`(;)`]** sélectionné : `male;John;Doe`
+* Exemple de sortie avec **[!UICONTROL Des points-virgules`(;)`]** sélectionnés : `male;John;Doe`
 * Exemple de sortie avec **[!UICONTROL Tab`(\t)`]** sélectionné : `male \t John \t Doe`
 
 ### Guillemets {#quote-character}
@@ -68,21 +68,21 @@ Affichez les exemples ci-dessous du contenu dans les fichiers CSV exportés avec
 >title="Guillemets"
 >abstract="Utilisez cette option pour supprimer les guillemets doubles des chaînes exportées. Consultez la documentation pour obtenir des exemples pour chaque sélection."
 
-Utilisez cette option pour contrôler si les guillemets doubles doivent être supprimés ou conservés dans les chaînes exportées.
+Utilisez cette option pour déterminer si les guillemets doubles doivent être supprimés ou conservés dans les chaînes exportées.
 
 Les options disponibles sont les suivantes :
 
-* **[!UICONTROL Caractère nul (\0000)]**. Utilisez cette option pour supprimer les guillemets doubles des fichiers CSV exportés.
-* **[!UICONTROL Guillemets doubles (&quot;)]**. Utilisez cette option lorsque les valeurs de chaîne contiennent un délimiteur ou des guillemets doubles. Cette option permet de conserver les délimiteurs ou les guillemets doubles dans les fichiers CSV exportés, afin que vous puissiez identifier correctement la valeur qui correspond au champ.
+* **[!UICONTROL Caractère Null (\0000)]**. Utilisez cette option pour supprimer les guillemets doubles des fichiers CSV exportés.
+* **[!UICONTROL Guillemets doubles ( »)]**. Utilisez cette option lorsque les valeurs de chaîne contiennent un délimiteur ou des guillemets doubles. Cette option vous permet de conserver les délimiteurs ou les guillemets doubles dans vos fichiers CSV exportés, afin que vous puissiez identifier correctement quelle valeur correspond à quel champ.
 
 #### Exemples
 
-Examinez la valeur d’entrée `Anna,"Doe,John"`.
+Tenez compte de l’`Anna,"Doe,John"` de la valeur d’entrée.
 
-Affichez les exemples ci-dessous du contenu des fichiers CSV exportés avec chacune des sélections dans l’interface utilisateur.
+Consultez les exemples ci-dessous du contenu des fichiers CSV exportés avec chacune des sélections effectuées dans l’interface utilisateur.
 
-* Exemple de sortie avec **[!UICONTROL Caractère nul (\0000)]** sélectionné : `Anna,Doe,John`
-* Exemple de sortie avec **[!UICONTROL Guillemets doubles (&quot;)]** sélectionné : `Anna,"Doe,John"`
+* Exemple de sortie avec **[!UICONTROL caractère nul (\0000)]** sélectionné : `Anna,Doe,John`
+* Exemple de sortie avec **[!UICONTROL Guillemets doubles ( »)]** sélectionné : `Anna,"Doe,John"`
 
 ### Caractère d’échappement {#escape-character}
 
@@ -91,14 +91,14 @@ Affichez les exemples ci-dessous du contenu des fichiers CSV exportés avec chac
 >title="Caractère d’échappement"
 >abstract="Définit un caractère unique utilisé pour lʼéchappement des guillemets dans une valeur déjà entre guillemets. Consultez la documentation pour obtenir des exemples pour chaque sélection."
 
-Utilisez cette option pour définir un caractère unique pour échapper les guillemets dans une valeur déjà entre guillemets. Par exemple, cette option est utile lorsque vous avez une chaîne entre guillemets doubles où une partie de la chaîne est déjà entre guillemets doubles. Cette option détermine le caractère à remplacer par les guillemets doubles internes. Les options disponibles sont les suivantes :
+Utilisez cette option pour définir un caractère unique pour placer les guillemets entre guillemets dans une valeur déjà entre guillemets. Par exemple, cette option est utile lorsque vous avez une chaîne entre guillemets doubles où une partie de la chaîne est déjà entre guillemets doubles. Cette option détermine le caractère par lequel remplacer les guillemets doubles internes. Les options disponibles sont les suivantes :
 
-* Barre oblique inverse `(\)`
-* Guillemet simple `(')`
+* Barre oblique `(\)`
+* Guillemet `(')`
 
 #### Exemples
 
-Affichez les exemples ci-dessous du contenu des fichiers CSV exportés avec chacune des sélections dans l’interface utilisateur.
+Consultez les exemples ci-dessous du contenu des fichiers CSV exportés avec chacune des sélections effectuées dans l’interface utilisateur.
 
 * Exemple de sortie avec **[!UICONTROL Barre oblique inverse`(\)`]** sélectionnée : `"Test,\"John\",LastName"`
 * Exemple de sortie avec **[!UICONTROL Guillemet simple`(')`]** sélectionné : `"Test,'"John'",LastName"`
@@ -110,23 +110,23 @@ Affichez les exemples ci-dessous du contenu des fichiers CSV exportés avec chac
 >title="Sortie de valeur vide"
 >abstract="Utilisez cette option pour définir comment les valeurs vides doivent être représentées dans les fichiers CSV exportés. Consultez la documentation pour obtenir des exemples pour chaque sélection."
 
-Utilisez ce contrôle pour définir la représentation sous forme de chaîne d’une valeur vide. Cette option détermine le mode de représentation des valeurs vides dans les fichiers CSV exportés. Les options disponibles sont les suivantes :
+Utilisez ce contrôle pour définir la représentation sous forme de chaîne d&#39;une valeur vide. Cette option détermine la manière dont les valeurs vides sont représentées dans vos fichiers CSV exportés. Les options disponibles sont les suivantes :
 
 * **[!UICONTROL Null (null)]**
-* **Chaîne vide dans les guillemets doubles (&quot;&quot;&quot;)**
+* **Chaîne vide entre guillemets doubles («  »)**
 * **[!UICONTROL Chaîne vide]**
 
 #### Exemples
 
-Affichez les exemples ci-dessous du contenu des fichiers CSV exportés avec chacune des sélections dans l’interface utilisateur.
+Consultez les exemples ci-dessous du contenu des fichiers CSV exportés avec chacune des sélections effectuées dans l’interface utilisateur.
 
 * Exemple de sortie avec **[!UICONTROL null]** sélectionné : `male,NULL,TestLastName`. Dans ce cas, Experience Platform transforme la valeur vide en valeur nulle.
-* Exemple de sortie avec **&quot;** sélectionné : `male,"",TestLastName`. Dans ce cas, Experience Platform transforme la valeur vide en une paire de guillemets doubles.
-* Exemple de sortie avec **[!UICONTROL Chaîne vide]** sélectionnée : `male,,TestLastName`. Dans ce cas, l’Experience Platform conserve la valeur vide et l’exporte telle quelle (sans guillemets doubles).
+* Exemple de sortie avec **» »** sélectionné : `male,"",TestLastName`. Dans ce cas, Experience Platform transforme la valeur vide en une paire de guillemets doubles.
+* Exemple de sortie avec **[!UICONTROL Chaîne vide]** sélectionné : `male,,TestLastName`. Dans ce cas, l&#39;Experience Platform conserve la valeur vide et l&#39;exporte telle quelle (sans guillemets doubles).
 
 >[!TIP]
 >
->La différence entre la sortie valeur vide et la sortie valeur nulle dans la section ci-dessous est qu’une valeur vide a une valeur réelle vide. La valeur NULL n’a aucune valeur. Considérez la valeur vide comme une vitre vide sur la table et la valeur nulle comme ne comportant pas du tout de vitre sur la table.
+>La différence entre la sortie de valeur vide et la sortie de valeur nulle dans la section ci-dessous est qu’une valeur vide a une valeur réelle qui est vide. La valeur NULL n&#39;a aucune valeur. Pensez à la valeur vide comme à une vitre vide sur la table et à la valeur nulle comme si la vitre n’était pas du tout sur la table.
 
 ### Sortie de valeur nulle {#null-value-output}
 
@@ -135,19 +135,19 @@ Affichez les exemples ci-dessous du contenu des fichiers CSV exportés avec chac
 >title="Sortie de valeur nulle"
 >abstract="Utilisez ce contrôle pour définir la représentation sous forme de chaîne d’une valeur null dans les fichiers exportés. Consultez la documentation pour obtenir des exemples pour chaque sélection."
 
-Utilisez ce contrôle pour définir la représentation sous forme de chaîne d’une valeur null dans les fichiers exportés. Cette option détermine le mode de représentation des valeurs nulles dans vos fichiers CSV exportés. Les options disponibles sont les suivantes :
+Utilisez ce contrôle pour définir la représentation sous forme de chaîne d’une valeur null dans les fichiers exportés. Cette option détermine comment les valeurs nulles sont représentées dans vos fichiers CSV exportés. Les options disponibles sont les suivantes :
 
 * **[!UICONTROL Null (null)]**
-* **Chaîne vide dans les guillemets doubles (&quot;&quot;&quot;)**
+* **Chaîne vide entre guillemets doubles («  »)**
 * **[!UICONTROL Chaîne vide]**
 
 #### Exemples
 
-Affichez les exemples ci-dessous du contenu des fichiers CSV exportés avec chacune des sélections dans l’interface utilisateur.
+Consultez les exemples ci-dessous du contenu des fichiers CSV exportés avec chacune des sélections effectuées dans l’interface utilisateur.
 
-* Exemple de sortie avec **[!UICONTROL null]** sélectionné : `male,NULL,TestLastName`. Dans ce cas, aucune transformation n’a lieu et le fichier CSV contient la valeur null.
-* Exemple de sortie avec **&quot;** sélectionné : `male,"",TestLastName`. Dans ce cas, Experience Platform remplace la valeur nulle par des guillemets doubles autour d’une chaîne vide.
-* Exemple de sortie avec **[!UICONTROL Chaîne vide]** sélectionnée : `male,,TestLastName`. Dans ce cas, Experience Platform remplace la valeur nulle par une chaîne vide (sans guillemets doubles).
+* Exemple de sortie avec **[!UICONTROL null]** sélectionné : `male,NULL,TestLastName`. Dans ce cas, aucune transformation ne se produit et le fichier CSV contient la valeur null.
+* Exemple de sortie avec **» »** sélectionné : `male,"",TestLastName`. Dans ce cas, Experience Platform remplace la valeur nulle par des guillemets doubles autour d’une chaîne vide.
+* Exemple de sortie avec **[!UICONTROL Chaîne vide]** sélectionné : `male,,TestLastName`. Dans ce cas, Experience Platform remplace la valeur null par une chaîne vide (sans guillemets doubles).
 
 ### Format de compression {#compression-format}
 

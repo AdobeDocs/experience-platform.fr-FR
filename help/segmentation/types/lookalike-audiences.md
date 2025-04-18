@@ -94,7 +94,7 @@ La page Détails de l’audience s’affiche. Sélectionnez l’onglet **[!UICON
 >title="Similarité et portée"
 >abstract="Le graphique de similarité et de portée trace la portée attendue d’une audience analogue composée de profils au-dessus d’un score de similarité donné. Vous pouvez pointer sur un point spécifique du graphique pour afficher le pourcentage de similarité et le nombre de profils attendu pour le point actuellement surligné."
 
-La section Similarité et portée affiche un graphique qui trace la portée attendue d’une audience semblable composée de profils au-dessus d’un score de similarité donné. Le score de similarité représente la **distance** de similarité entre le profil de l’audience de base et le profil de l’information similaire.
+La section Similarité et portée affiche un graphique qui trace la portée attendue d’une audience semblable composée de profils au-dessus d’un score de similarité donné. Le score de similarité représente la **distance** de similarité entre le profil de l’audience de base et le profil insight similaire.
 
 ![Le graphique de similarité et de portée est mis en surbrillance.](../images/types/lookalike/similarity-and-reach.png)
 

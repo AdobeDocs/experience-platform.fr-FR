@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
-title: Choisissez parmi une sélection de livres de lecture
-description: Découvrez comment choisir un manuel adapté à votre cas d’utilisation pour activer les livres de jeu.
+title: Choisissez parmi une sélection de playbooks
+description: Découvrez comment choisir le bon playbook pour votre cas d’utilisation et activer les playbooks.
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
 source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
@@ -11,13 +11,13 @@ ht-degree: 92%
 
 ---
 
-# Choisissez parmi une sélection de livres de lecture
+# Choisissez parmi une sélection de playbooks
 
 Pour utiliser un playbook, sélectionnez **[!UICONTROL Playbooks]** dans le volet de navigation de gauche. Parcourez et utilisez les différentes options de recherche et de filtrage de la page pour sélectionner et commencer à utiliser un playbook spécifique.
 
 ## Rechercher et filtrer {#search-and-filter}
 
-Utilisez la fenêtre de recherche et les filtres disponibles sur la page pour rechercher et choisir le manuel approprié à votre cas d’utilisation.
+Utilisez la fenêtre de recherche et les filtres disponibles sur la page pour rechercher et choisir le playbook approprié à votre cas d’utilisation.
 
 Vous pouvez, par exemple, filtrer les playbooks que vous utilisez en fonction de l’étape dans l’entonnoir marketing que vous souhaitez cibler : conversion, engagement ou fidélisation. Vous pouvez également filtrer les playbooks affichés selon le secteur dans lequel vous vous trouvez ou le droit au produit auquel vous avez accès : Adobe Journey Optimizer ou Real-Time CDP.
 

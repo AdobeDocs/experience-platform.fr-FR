@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;exportation;Exporter
 solution: Experience Platform
 title: Gestion des tâches de confidentialité dans l’interface utilisateur de Privacy Service
-description: Découvrez comment utiliser l’interface utilisateur du Privacy Service pour coordonner et surveiller les demandes d’accès à des informations personnelles dans différentes applications Experience Cloud.
+description: Découvrez comment utiliser l’interface utilisateur de Privacy Service pour coordonner et surveiller les demandes d’accès à des informations personnelles dans diverses applications Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '1786'
-ht-degree: 44%
+source-wordcount: '1770'
+ht-degree: 45%
 
 ---
 
@@ -75,7 +75,7 @@ Waiting:
 
 Les tâches pour chaque type de réglementation sont suivies séparément. Pour basculer entre les types de régulation, sélectionnez le menu déroulant **[!UICONTROL Type de régulation]** et sélectionnez la régulation souhaitée dans la liste.
 
-![Console du Privacy Service avec le menu déroulant Type de réglementation.](../images/user-guide/regulation.png)
+![Console Privacy Service avec le menu déroulant Type de réglementation.](../images/user-guide/regulation.png)
 
 Lorsque vous modifiez le type de réglementation, le tableau de bord se met à jour pour afficher tous les filtres, widgets, ainsi que toutes les opérations et les boîtes de dialogue de création de tâche qui s’appliquent au règlement sélectionné.
 
@@ -109,7 +109,7 @@ L’espace de travail [!UICONTROL Requêtes de tâche] répertorie les détails 
 >
 >Les données des tâches créées précédemment ne sont accessibles que pendant 30 jours après la date d’achèvement.
 
-Vous pouvez filtrer la liste en saisissant des mots-clés dans la barre de recherche située sous le titre [!UICONTROL Requêtes de tâche]. La liste est automatiquement filtrée au fur et à mesure de votre saisie, et affiche les requêtes qui contiennent des valeurs correspondant aux termes recherchés. Le champ de recherche effectue une recherche « rapide » qui fait correspondre les ID de tâche de confidentialité aux tâches actuellement générées/chargées dans l’interface utilisateur. Il ne s’agit pas d’une recherche complète de toutes les tâches envoyées. Il s’agit plutôt d’un filtre appliqué aux résultats chargés. Utilisez l’API du Privacy Service pour [renvoyer des tâches en fonction d’une réglementation, de périodes ou d’une tâche unique](../api/privacy-jobs.md#list).
+Vous pouvez filtrer la liste en saisissant des mots-clés dans la barre de recherche située sous le titre [!UICONTROL Requêtes de tâche]. La liste est automatiquement filtrée au fur et à mesure de votre saisie, et affiche les requêtes qui contiennent des valeurs correspondant aux termes recherchés. Le champ de recherche effectue une recherche « rapide » qui fait correspondre les ID de tâche de confidentialité aux tâches actuellement générées/chargées dans l’interface utilisateur. Il ne s’agit pas d’une recherche complète de toutes les tâches envoyées. Il s’agit plutôt d’un filtre appliqué aux résultats chargés. Utilisez l’API Privacy Service pour [renvoyer des tâches en fonction d’une réglementation spécifique, de périodes ou d’une seule tâche](../api/privacy-jobs.md#list).
 
 >[!TIP]
 >
@@ -197,7 +197,7 @@ La boîte de dialogue **[!UICONTROL Charger JSON]** s’affiche, vous permettant
 
 ![](../images/user-guide/upload-json.png){width=500}
 
-Si vous ne disposez pas d’un fichier JSON à charger, sélectionnez **[!UICONTROL Télécharger l’Adobe-RGPD-Request.json]** pour télécharger un modèle que vous pouvez remplir en fonction des valeurs que vous avez collectées auprès de vos titulaires de données.
+Si vous ne disposez pas d’un fichier JSON à charger, sélectionnez **[!UICONTROL Télécharger Adobe-GDPR-Request.json]** pour télécharger un modèle que vous pouvez remplir en fonction des valeurs que vous avez collectées auprès de vos titulaires de données.
 
 
 ![](../images/user-guide/privacy-template.png){width=500}

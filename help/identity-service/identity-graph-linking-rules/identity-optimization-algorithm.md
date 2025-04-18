@@ -165,7 +165,7 @@ Consultez le diagramme ci-dessous pour mieux comprendre le fonctionnement de l�
 
 Pour plus d’informations sur les règles de liaison de graphiques d’identités, consultez la documentation suivante :
 
-* [Aperçu des règles de liaison des graphiques d’identités](./overview.md)
+* [Vue d’ensemble des règles de liaison des graphiques d’identités](./overview.md)
 * [Guide de mise en œuvre](./implementation-guide.md)
 * [Exemples de configurations de graphes](./example-configurations.md)
 * [Résolution des problèmes et FAQ](./troubleshooting.md)

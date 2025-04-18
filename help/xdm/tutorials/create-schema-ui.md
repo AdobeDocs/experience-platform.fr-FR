@@ -7,8 +7,8 @@ description: Ce tutoriel décrit les étapes de création d’un schéma à l’
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4915'
-ht-degree: 72%
+source-wordcount: '4924'
+ht-degree: 77%
 
 ---
 
@@ -50,7 +50,7 @@ La boîte de dialogue [!UICONTROL Créer un schéma] s’affiche. Dans cette bo�
 
 ![La boîte de dialogue Créer un schéma avec les options de workflow et sélectionnez en surbrillance.](../images/tutorials/create-schema/create-a-schema-dialog.png)
 
-### [!BADGE Beta]{type=Informative} Création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
+### [!BADGE Beta ]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
 
 Pour découvrir comment utiliser un algorithme ML afin de recommander une structure de schéma basée sur un fichier chargé, consultez le guide de création de schéma assisté par machine learning [machine learning](../ui/ml-assisted-schema-creation.md). Ce guide de l’interface utilisateur se concentre sur le workflow de création manuelle .
 
@@ -84,13 +84,13 @@ L’[!DNL Schema Editor] apparaît. C’est la zone de travail sur laquelle vous
 
 >[!NOTE]
 >
-Vous pouvez mettre à jour le nom d’affichage et la description facultative du schéma à partir de la barre latérale **[!UICONTROL Propriétés du schéma]**. Une fois qu’un nouveau nom est saisi, la zone de travail se met automatiquement à jour pour refléter le nouveau nom du schéma.
+>Vous pouvez mettre à jour le nom d’affichage et la description facultative du schéma à partir de la barre latérale **[!UICONTROL Propriétés du schéma]**. Une fois qu’un nouveau nom est saisi, la zone de travail se met automatiquement à jour pour refléter le nouveau nom du schéma.
 
 ![L’éditeur de schémas avec la classe de base et le diagramme de schéma mis en surbrillance.](../images/tutorials/create-schema/loyalty-members-schema-editor.png)
 
 >[!NOTE]
 >
-Vous pouvez [modifier la classe d’un schéma](#change-class) à tout moment au cours du processus de composition initial avant que le schéma ne soit enregistré, mais cela doit être fait avec la plus grande prudence. Les groupes de champs ne sont compatibles qu’avec certaines classes. Par conséquent, la modification de la classe réinitialisera la zone de travail et tous les champs que vous avez ajoutés.
+>Vous pouvez [modifier la classe d’un schéma](#change-class) à tout moment au cours du processus de composition initial avant que le schéma ne soit enregistré, mais cela doit être fait avec la plus grande prudence. Les groupes de champs ne sont compatibles qu’avec certaines classes. Par conséquent, la modification de la classe réinitialisera la zone de travail et tous les champs que vous avez ajoutés.
 
 ## Ajouter un groupe de champs {#field-group}
 
@@ -126,17 +126,17 @@ La zone de travail du schéma réapparaît. La section **[!UICONTROL Groupes de 
 
 >[!NOTE]
 >
-Dans l’éditeur de schémas, les classes et les groupes de champs standard (générés par Adobe) sont indiqués par l’icône de cadenas (icône de cadenas ![A).](/help/images/icons/lock-closed.png). Le cadenas s’affiche dans le rail de gauche à côté du nom de la classe ou du groupe de champs, ainsi qu’à côté de tout champ du diagramme de schéma qui fait partie d’une ressource générée par le système.
+>Dans l’éditeur de schémas, les classes et les groupes de champs standard (générés par Adobe) sont indiqués par l’icône de cadenas (icône de cadenas ![A).](/help/images/icons/lock-closed.png). Le cadenas s’affiche dans le rail de gauche à côté du nom de la classe ou du groupe de champs, ainsi qu’à côté de tout champ du diagramme de schéma qui fait partie d’une ressource générée par le système.
 >
-![Éditeur de schémas avec l’icône de cadenas mise en surbrillance](../images/ui/explore/padlock-icon-highlight.png)
+>![Éditeur de schémas avec l’icône de cadenas mise en surbrillance](../images/ui/explore/padlock-icon-highlight.png)
 
-Ce groupe de champs fournit plusieurs champs sous le nom de niveau supérieur `person` avec le type de données . "[!UICONTROL Personne] ». Ce groupe de champs décrit les informations sur un individu, notamment son nom, sa date de naissance et son genre.
+Ce groupe de champs fournit plusieurs champs sous le nom de niveau supérieur `person` avec le type de données « [!UICONTROL Personne] ». Ce groupe de champs décrit les informations sur un individu, notamment son nom, sa date de naissance et son genre.
 
 >[!NOTE]
 >
-N’oubliez pas que les champs peuvent utiliser des types scalaires (such sous forme de chaîne, de nombre entier, de tableau ou de date), ainsi que tout type de données (a un groupe de champs (représentant un concept commun) défini dans le [!DNL Schema Registry].
+>N’oubliez pas que les champs peuvent utiliser des types scalaires (chaîne, entier, tableau ou date), ainsi que tout type de données (un groupe de champs représentant un concept commun) défini dans [!DNL Schema Registry].
 
-Notez que le champ `name` comporte un type de données of « [!UICONTROL Nom complet] », ce qui signifie qu’il décrit lui aussi un concept commun et contient des sous-champs liés au nom, tels que le prénom, le nom, le titre de courtoisie et le suffixe.
+Notez que le champ `name` possède un type de données « [!UICONTROL Nom complet] », ce qui signifie qu’il décrit lui aussi un concept commun et contient des sous-champs liés au nom, tels que le prénom, le nom de famille, le titre de courtoisie et le suffixe.
 
 Sélectionnez les différents champs dans la zone de travail pour afficher les champs supplémentaires contribuant à la structure du schéma.
 
@@ -154,7 +154,7 @@ La zone de travail réapparaît avec les groupes de champs ajoutés sous **[!UIC
 
 ## Définir un groupe de champs personnalisé {#define-field-group}
 
-Le schéma [!UICONTROL Membres du programme de fidélité] est destiné à capturer des données relatives aux membres d’un programme de fidélité. Le groupe de champs standard [!UICONTROL Détails de fidélité] que vous avez ajouté au schéma fournit la plupart de ces informations, y compris le type de programme. points, date d’inscription, et plus encore.
+Le schéma [!UICONTROL Membres du programme de fidélité] est destiné à capturer des données relatives aux membres d’un programme de fidélité. Le groupe de champs standard [!UICONTROL Détails de fidélité] que vous avez ajouté au schéma fournit la plupart de ces informations, notamment le type de programme, les points, la date d’inscription, etc.
 
 Cependant, il peut arriver que vous souhaitiez inclure d’autres champs personnalisés non couverts par des groupes de champs standard afin d’atteindre vos cas d’utilisation. Dans le cas de l’ajout de champs de fidélité personnalisés, vous disposez de deux options :
 
@@ -167,7 +167,7 @@ Pour créer un groupe de champs, sélectionnez **[!UICONTROL Ajouter]** dans la 
 
 >[!NOTE]
 >
-Comme pour les noms de classe, le nom du groupe de champs doit être court et simple, décrivant ce que le groupe de champs va apporter au schéma. Ces noms sont également uniques. Vous ne pourrez donc pas réutiliser le nom et devrez donc veiller à ce qu’il soit suffisamment spécifique.
+>Comme pour les noms de classe, le nom du groupe de champs doit être court et simple, décrivant ce que le groupe de champs va apporter au schéma. Ces noms sont également uniques. Vous ne pourrez donc pas réutiliser le nom et devrez donc veiller à ce qu’il soit suffisamment spécifique.
 
 « [!DNL Custom Loyalty Details] » devrait maintenant apparaître sous **[!UICONTROL Groupes de champs]** sur le côté gauche de la zone de travail, mais aucun champ n’y est encore associé et, par conséquent, aucun nouveau champ n’apparaît sous **[!UICONTROL Structure]**.
 
@@ -183,7 +183,7 @@ Un espace reservé « [!UICONTROL Champ sans titre] » apparaît dans la zone 
 
 ![L’éditeur de schémas avec un [!UICONTROL Champ sans titre] et le schéma [!UICONTROL Propriétés du champ] mis en surbrillance.](../images/tutorials/create-schema/untitled-field.png)
 
-Dans ce scénario, le schéma doit avoir un type d’objet field qui décrit en détail le niveau de fidélité actuel de la personne. À l’aide des commandes du rail de droite, commencez à créer un champ de `loyaltyTier` avec le type . "[!UICONTROL Objet] » qui sera utilisé pour contenir vos champs associés.
+Dans ce scénario, le schéma doit comporter un champ de type objet qui décrit en détail le niveau de fidélité actuel de la personne. À l’aide des commandes du rail de droite, commencez à créer un champ `loyaltyTier` de type « [!UICONTROL Objet] » qui sera utilisé pour contenir vos champs associés.
 
 Sous **[!UICONTROL Attribuer à]**, vous devez sélectionner un groupe de champs auquel affecter le champ. N’oubliez pas que tous les champs de schéma appartiennent à une classe ou à un groupe de champs. Comme ce schéma utilise une classe standard, votre seule option est de sélectionner un groupe de champs. Commencez à saisir le nom « [!DNL Custom Loyalty Details] », puis sélectionnez le groupe de champs dans la liste.
 
@@ -197,9 +197,9 @@ Les modifications sont appliquées et le nouvel objet « `loyaltyTier` » s’
 
 >[!NOTE]
 >
-La présence de l’ID du client indique que les champs que vous ajoutez sont contenus dans l’espace de noms de votre organisation.
+>La présence de l’ID du client indique que les champs que vous ajoutez sont contenus dans l’espace de noms de votre organisation.
 >
-En d’autres termes, les champs que vous ajoutez sont propres à votre organisation et vont être enregistrés dans [!DNL Schema Registry] dans une zone spécifique accessible uniquement par votre organisation. Les champs que vous définissez doivent toujours être ajoutés à votre espace de noms client pour empêcher les conflits avec des noms provenant d’autres classes, groupes de champs, types de données standard, and champs.
+>En d’autres termes, les champs que vous ajoutez sont propres à votre organisation et vont être enregistrés dans [!DNL Schema Registry] dans une zone spécifique accessible uniquement par votre organisation. Les champs que vous définissez doivent toujours être ajoutés à votre espace de noms client pour empêcher les conflits avec des noms provenant d’autres classes, groupes de champs, types de données et champs standard.
 
 Sélectionnez l’icône **plus (+)** à côté de l’objet `loyaltyTier` pour commencer à ajouter des sous-champs. Un espace reservé au nouveau champ apparaît et la section **[!UICONTROL Propriétés du champ]** est visible sur le côté droit de la zone de travail.
 
@@ -211,10 +211,10 @@ Chaque champ nécessite les informations suivantes :
    * Exemple : loyaltyLevel
 * **[!UICONTROL Nom d’affichage] :** le nom du champ, écrit avec la première lettre de chaque mot important en majuscule (Title Case). Il s’agit du nom qui s’affiche dans la zone de travail lors de l’affichage ou de la modification du schéma.
    * Exemple : Loyalty Level
-* **[!UICONTROL Type] :** type de données of le champ . Cela inclut les types scalaires de base and tous types de données defined dans le [!DNL Schema Registry]. Exemples : [!UICONTROL chaîne], [!UICONTROL entier], [!UICONTROL booléen], [!UICONTROL personne], [!UICONTROL adresse], [!UICONTROL numéro de téléphone], etc.
+* **[!UICONTROL Type] :** le type de données du champ. Cela inclut les types scalaires de base et tous les types de données définis dans [!DNL Schema Registry]. Exemples : [!UICONTROL chaîne], [!UICONTROL entier], [!UICONTROL booléen], [!UICONTROL personne], [!UICONTROL adresse], [!UICONTROL numéro de téléphone], etc.
 * **[!UICONTROL Description] :** une description facultative du champ doit être incluse avec un maximum de 200 caractères.
 
-Le premier champ de l’objet `loyaltyTier` sera une chaîne de caractères appelée `id`, représentant l’ID du niveau actuel du membre du programme de fidélité. L’ID de niveau sera unique pour chaque membre du programme de fidélité, car cette entreprise définit différents seuils de point de niveau de fidélité pour chaque client en fonction de différents facteurs. Définir le type du nouveau champ to « [!UICONTROL Chaîne] » et la section **[!UICONTROL Propriétés du champ]** se remplit de plusieurs options pour l’application de contraintes, y compris la valeur par défaut, le format et la longueur maximale. Pour en savoir plus, consultez la documentation sur [les bonnes pratiques relatives aux champs de validation des données](../schema/best-practices.md#data-validation-fields).
+Le premier champ de l’objet `loyaltyTier` sera une chaîne de caractères appelée `id`, représentant l’ID du niveau actuel du membre du programme de fidélité. L’ID de niveau sera unique pour chaque membre du programme de fidélité, car cette entreprise définit différents seuils de point de niveau de fidélité pour chaque client en fonction de différents facteurs. Définissez le type du nouveau champ sur « [!UICONTROL Chaîne] » et la section **[!UICONTROL Propriétés du champ]** se remplit de plusieurs options pour l’application de contraintes, y compris la valeur par défaut, le format et la longueur maximale. Pour en savoir plus, consultez la documentation sur [les bonnes pratiques relatives aux champs de validation des données](../schema/best-practices.md#data-validation-fields).
 
 ![L’éditeur de schémas avec les valeurs de propriété du champ du nouveau champ d’identifiant mises en surbrillance.](../images/tutorials/create-schema/string-constraints.png)
 
@@ -238,12 +238,12 @@ Une fois cette étape terminée, l’objet `loyaltyTier` contiendra des champs p
 
 ## Ajouter un champ d’énumération au groupe de champs {#enum}
 
-Lors de la définition de champs dans le [!DNL Schema Editor], vous pouvez appliquer certaines options supplémentaires aux types de champs de base in afin de fournir d’autres contraintes sur les données que le champ peut contenir. Les cas d’utilisation de ces contraintes sont expliqués dans le tableau suivant :
+Lorsque vous définissez des champs dans le [!DNL Schema Editor], vous pouvez appliquer certaines options supplémentaires aux types de champs de base afin de fournir d’autres contraintes aux données que le champ peut contenir. Les cas d’utilisation de ces contraintes sont expliqués dans le tableau suivant :
 
 | Contrainte | Description |
 | --- | --- |
 | [!UICONTROL Obligatoire] | Indique que le champ est obligatoire pour l’ingestion de données. Toute donnée chargée dans un jeu de données basé sur ce schéma qui ne contient pas ce champ sera défaillante lors de l’ingestion. |
-| [!UICONTROL Tableau] | Indique que le champ contient un tableau de valeurs, chacune avec le type de données . specified. Par exemple, en utilisant cette contrainte sur un champ avec un type de données of « [!UICONTROL String] » indique que le champ contiendra un tableau de chaînes. |
+| [!UICONTROL Tableau] | Indique que le champ contient un tableau de valeurs, chacune avec le type de données spécifié. Par exemple, l’utilisation de cette contrainte sur un champ avec un type de données « [!UICONTROL Chaîne] » indique que le champ contiendra un tableau de chaînes. |
 | [!UICONTROL Énumération et valeurs suggérées] | Une énumération indique que ce champ doit contenir une des valeurs d’une liste énumérée de valeurs possibles. Vous pouvez également utiliser cette option pour fournir une liste des valeurs suggérées pour un champ de chaîne sans limiter le champ à ces valeurs. |
 | [!UICONTROL Identité] | Indique que ce champ est un champ d’identité. Vous trouverez plus d’informations sur les champs d’identité [dans la suite de ce tutoriel](#identity-field). |
 | [!UICONTROL Relation] | Bien que les relations de schéma puissent être déduites par l’utilisation du schéma d’union et [!DNL Real-Time Customer Profile], cela s’applique uniquement aux schémas partageant la même classe. La contrainte [!UICONTROL Relation] indique que ce champ fait référence à l’identité principale d’un schéma basée sur une classe différente, ce qui implique une relation entre les deux schémas. Pour plus d’informations, consultez le tutoriel sur [la définition d’une relation](./relationship-ui.md). |
@@ -284,7 +284,7 @@ Dans un prochain schéma, vous pourrez désormais attribuer un champ en tant que
 
 >[!NOTE]
 >
-Vous pouvez également créer et modifier des types de données personnalisés indépendamment de la modification des schémas. Consultez le guide sur la [création et modification des types de données](../ui/resources/data-types.md) pour plus d’informations.
+>Vous pouvez également créer et modifier des types de données personnalisés indépendamment de la modification des schémas. Consultez le guide sur la [création et modification des types de données](../ui/resources/data-types.md) pour plus d’informations.
 
 ## Rechercher et filtrer des champs de schéma
 
@@ -298,7 +298,7 @@ Si vous recherchez un champ spécifique dans votre schéma, vous pouvez égaleme
 
 >[!IMPORTANT]
 >
-La fonction de recherche prend en compte les filtres de groupes de champs sélectionnés lors de l’affichage des champs correspondants. Si une requête de recherche n’affiche pas les résultats attendus, vous devrez peut-être vérifier par deux fois que vous n’êtes pas en train de filtrer un groupe de champs approprié.
+>La fonction de recherche prend en compte les filtres de groupes de champs sélectionnés lors de l’affichage des champs correspondants. Si une requête de recherche n’affiche pas les résultats attendus, vous devrez peut-être vérifier par deux fois que vous n’êtes pas en train de filtrer un groupe de champs approprié.
 
 ## Définition d’un champ de schéma comme champ d’identité {#identity-field}
 
@@ -310,15 +310,15 @@ Par exemple, il peut y avoir des milliers de membres du programme de fidélité 
 
 >[!IMPORTANT]
 >
-Les étapes décrites ci-dessous expliquent comment ajouter un descripteur d’identité à un champ de schéma existant. Au lieu de définir des champs d’identité dans la structure du schéma lui-même, vous pouvez également utiliser un champ `identityMap` pour contenir des informations d’identité.
+>Les étapes décrites ci-dessous expliquent comment ajouter un descripteur d’identité à un champ de schéma existant. Au lieu de définir des champs d’identité dans la structure du schéma lui-même, vous pouvez également utiliser un champ `identityMap` pour contenir des informations d’identité.
 >
-Si vous envisagez d’utiliser `identityMap`, gardez à l’esprit qu’il remplacera toute identité principale que vous ajoutez directement au schéma. Pour plus d’informations, consultez la section sur `identityMap` dans les [principes de base du guide de composition de schémas](../schema/composition.md#identityMap).
+>Si vous envisagez d’utiliser `identityMap`, gardez à l’esprit qu’il remplacera toute identité principale que vous ajoutez directement au schéma. Pour plus d’informations, consultez la section sur `identityMap` dans les [principes de base du guide de composition de schémas](../schema/composition.md#identityMap).
 
 Sélectionnez le champ `personalEmail.address` dans la zone de travail, et la case à cocher **[!UICONTROL Identité]** apparaît sous **[!UICONTROL Propriétés du champ]**. Cochez la case et vous aurez la possibilité de la définir comme **[!UICONTROL Identité principale]**. Cochez également cette case.
 
 >[!NOTE]
 >
-Chaque schéma ne peut contenir qu’un seul champ d’identité principal. Une fois qu’un champ du schéma a été défini comme identité principale, vous recevrez un message d’erreur si vous tentez par la suite de définir un autre champ d’identité du schéma comme identité principale.
+>Chaque schéma ne peut contenir qu’un seul champ d’identité principal. Une fois qu’un champ du schéma a été défini comme identité principale, vous recevrez un message d’erreur si vous tentez par la suite de définir un autre champ d’identité du schéma comme identité principale.
 
 Ensuite, vous devez fournir un **[!UICONTROL Espace de noms d’identité]** à partir des espaces de noms prédéfinis dans la liste déroulante. Puisque ce champ correspond à l’adresse e-mail du client, sélectionnez « [!UICONTROL E-mail] » dans la liste déroulante. Sélectionnez **[!UICONTROL Appliquer]** pour confirmer les mises à jour du champ `personalEmail.address`.
 
@@ -326,7 +326,7 @@ Ensuite, vous devez fournir un **[!UICONTROL Espace de noms d’identité]** à 
 
 >[!NOTE]
 >
-Pour obtenir la liste des espaces de noms standard et leurs définitions, consultez la [[!DNL Identity Service] documentation](../../identity-service/troubleshooting-guide.md#standard-namespaces).
+>Pour obtenir la liste des espaces de noms standard et leurs définitions, consultez la [[!DNL Identity Service] documentation](../../identity-service/troubleshooting-guide.md#standard-namespaces).
 
 Après application de la modification, l’icône `personalEmail.address` affiche un symbole d’empreinte digitale, indiquant qu’il s’agit désormais d’un champ d’identité. Le champ est également répertorié dans le rail de gauche sous **[!UICONTROL Identités]**.
 
@@ -354,7 +354,7 @@ Sélectionnez **[!UICONTROL Profile]** et une fenêtre pop-up s’affiche, vous 
 
 >[!WARNING]
 >
-Une fois qu’un schéma a été activé pour [!DNL Real-Time Customer Profile] et enregistré, il ne peut pas être désactivé.
+>Une fois qu’un schéma a été activé pour [!DNL Real-Time Customer Profile] et enregistré, il ne peut pas être désactivé.
 
 Sélectionnez **[!UICONTROL Activer]** pour confirmer votre choix. Vous pouvez de nouveau sélectionner le bouton **[!UICONTROL Profile]** pour désactiver le schéma si vous le souhaitez, mais une fois que le schéma a été enregistré alors que [!DNL Profile] est activé, il ne peut plus être désactivé.
 
@@ -366,20 +366,20 @@ Dans l’éditeur de schémas, vous pouvez également effectuer des actions rapi
 
 ### Supprimer un schéma {#delete-a-schema}
 
-[!CONTEXTUALHELP]
-id="platform_schemas_delete_profileenabledwithdatasets"
-title="Impossible de supprimer le schéma"
-abstract="Le schéma ne peut pas être supprimé, car il a été activé pour Profile et contient des jeux de données associés."
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_profileenabledwithdatasets"
+>title="Impossible de supprimer le schéma"
+>abstract="Le schéma ne peut pas être supprimé, car il a été activé pour Profile et contient des jeux de données associés."
 
-[!CONTEXTUALHELP]
-id="platform_schemas_delete_profileenablednodatasets"
-title="Impossible de supprimer le schéma"
-abstract="Le schéma ne peut pas être supprimé, car il a été activé pour Profile."
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_profileenablednodatasets"
+>title="Impossible de supprimer le schéma"
+>abstract="Le schéma ne peut pas être supprimé, car il a été activé pour Profile."
 
-[!CONTEXTUALHELP]
-id="platform_schemas_delete_withdatasetsnotprofileenabled"
-title="Impossible de supprimer le schéma"
-abstract="Le schéma ne peut pas être supprimé, car il comporte des jeux de données associés."
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_withdatasetsnotprofileenabled"
+>title="Impossible de supprimer le schéma"
+>abstract="Le schéma ne peut pas être supprimé, car il comporte des jeux de données associés."
 
 Un schéma peut être supprimé de l’interface utilisateur de l’éditeur de schémas à l’aide d’actions [!UICONTROL Plus] et également à partir des détails du schéma dans l’onglet [!UICONTROL Parcourir]. Certaines conditions empêchent la suppression d’un schéma. Un schéma ne peut pas être supprimé si :
 
@@ -405,7 +405,7 @@ Vous pouvez également consulter et gérer le schéma « Membres du programme d
 
 >[!WARNING]
 >
-L’interface utilisateur [!DNL Experience Platform] affichée dans les vidéos suivantes est obsolète. Consultez la documentation pour découvrir les dernières captures dʼécran et fonctionnalités de lʼinterface utilisateur.
+>L’interface utilisateur [!DNL Experience Platform] affichée dans les vidéos suivantes est obsolète. Consultez la documentation pour découvrir les dernières captures dʼécran et fonctionnalités de lʼinterface utilisateur.
 
 La vidéo suivante montre comment créer un schéma simple dans l’interface utilisateur [!DNL Experience Platform].
 
@@ -429,6 +429,6 @@ Vous pouvez modifier la classe d’un schéma à tout moment au cours du process
 
 >[!WARNING]
 >
-La réattribution de la classe d’un schéma doit être effectuée avec une extrême prudence. Les groupes de champs ne sont compatibles qu’avec certaines classes. Par conséquent, la modification de la classe réinitialisera la zone de travail et tous les champs que vous avez ajoutés.
+>La réattribution de la classe d’un schéma doit être effectuée avec une extrême prudence. Les groupes de champs ne sont compatibles qu’avec certaines classes. Par conséquent, la modification de la classe réinitialisera la zone de travail et tous les champs que vous avez ajoutés.
 
 Pour apprendre à modifier la classe d’un schéma, consultez le guide sur la [gestion des schémas dans l’interface utilisateur](../ui/resources/schemas.md#change-class).

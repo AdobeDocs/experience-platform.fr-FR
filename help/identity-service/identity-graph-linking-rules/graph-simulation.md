@@ -182,7 +182,7 @@ Dans l’exemple de graphique ci-dessous, une ligne pointillée existe entre `{E
 
 Grâce à la lecture de ce document, vous savez désormais comment utiliser l’outil [!DNL Graph Simulation] pour mieux comprendre comment vos données d’identité sont traitées selon un ensemble particulier de règles et de configurations. Pour plus d’informations, consultez les documents suivants :
 
-* [Aperçu des règles de liaison des graphiques d’identités](./overview.md)
+* [Vue d’ensemble des règles de liaison des graphiques d’identités](./overview.md)
 * [Algorithme d’optimisation de l’identité](./identity-optimization-algorithm.md)
 * [Guide de mise en œuvre](./implementation-guide.md)
 * [Résolution des problèmes et FAQ](./troubleshooting.md)

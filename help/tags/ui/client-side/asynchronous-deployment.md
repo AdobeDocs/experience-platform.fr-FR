@@ -52,7 +52,7 @@ Cela indique au navigateur que, lorsque cette balise script est analysée, il do
 
 Comme décrit ci-dessus, dans le cas des déploiements synchrones, le navigateur suspend l’analyse et le rendu de la page pendant le chargement et l’exécution de la bibliothèque de balises Adobe Experience Platform. D’autre part, dans le cas des déploiements asynchrones, le navigateur poursuit l’analyse et le rendu de la page pendant le chargement de la bibliothèque. La variabilité du moment où le chargement de la bibliothèque de balises peut prendre fin par rapport à l’analyse et au rendu de la page doit être prise en compte.
 
-Tout d’abord, puisque le chargement de la bibliothèque peut prendre fin avant ou après l’analyse et l’exécution du bas de la page, vous ne devriez plus appeler `_satellite.pageBottom()` depuis votre code de page (`_satellite` ne sera disponible qu’une fois la bibliothèque chargée). Ceci est expliqué dans [Chargement asynchrone du code incorporé aux balises](#loading-the-tags-embed-code-asynchronously).
+Tout d’abord, puisque le chargement de la bibliothèque peut prendre fin avant ou après l’analyse et l’exécution du bas de la page, vous ne devriez plus appeler `_satellite.pageBottom()` depuis votre code de page (`_satellite` ne sera disponible qu’une fois la bibliothèque chargée). Ceci est expliqué dans [Chargement asynchrone du code intégré aux balises](#loading-the-tags-embed-code-asynchronously).
 
 Ensuite, le chargement de la bibliothèque de balises peut se terminer avant ou après que l’événement de navigateur [`DOMContentLoaded`](https://developer.mozilla.org/fr-FR/docs/Web/Events/DOMContentLoaded) (DOM Ready) soit survenu.
 
