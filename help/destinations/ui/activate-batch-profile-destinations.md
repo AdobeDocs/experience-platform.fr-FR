@@ -3,10 +3,10 @@ title: Activer les audiences vers des destinations d’export de profils par lot
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations de profils par lots.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 500cad30178e6371c8d7431b032a67f6ed15a1d6
 workflow-type: tm+mt
-source-wordcount: '4454'
-ht-degree: 52%
+source-wordcount: '4517'
+ht-degree: 51%
 
 ---
 
@@ -83,6 +83,16 @@ Vous pouvez effectuer un choix parmi plusieurs types d’audiences, selon leur o
 >id="platform_destinations_activate_schedule"
 >title="Planning"
 >abstract="Utilisez l’icône en forme de crayon pour définir le type d’exportation de fichier (fichiers complets ou incrémentiels) et la fréquence d’exportation."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_schedule_weekly_messaging"
+>title="Exportations hebdomadaires"
+>abstract="Sélectionnez la date de début et les exportations suivantes auront lieu ce jour de la semaine jusqu’à la date de fin sélectionnée."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_schedule_monthly_messaging"
+>title="Exportations mensuelles"
+>abstract="Sélectionnez la date de début, puis les exportations suivantes auront lieu à cette date du mois jusqu’à la date de fin sélectionnée. Pour les mois de moins de 30 ou 31 jours, l’exportation a lieu le dernier jour du mois."
 
 [!DNL Adobe Experience Platform] exporte des données pour les destinations de marketing par e-mail et d’espace de stockage dans le cloud sous [différents types de fichiers](#supported-file-formats-export). Sur la page **[!UICONTROL Planification]**, vous pouvez configurer le planning et les noms des fichiers pour chaque audience que vous exportez.
 
