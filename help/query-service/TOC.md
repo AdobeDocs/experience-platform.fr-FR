@@ -5,10 +5,10 @@ breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5e8dccf91e8c83b4734b363539cfb911b5c2ae29
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 71%
+source-wordcount: '404'
+ht-degree: 70%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 71%
 - [Présentation de Query Service](home.md)
 - [Package Query Service](packaging.md)
 - [Mécanismes de sécurisation de Query Service](guardrails.md)
-- Prise en main {#get-started}
+- Commencer {#get-started}
    - [Conditions préalables](get-started/prerequisites.md)
 - Data Distiller {#data-distiller}
    - [Aperçu](data-distiller/overview.md)
@@ -27,12 +27,13 @@ ht-degree: 71%
       - [Vue d’ensemble](data-distiller/derived-datasets/overview.md)
       - [Créer des jeux de données dérivés avec SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [Créer des jeux de données dérivés basés sur des déciles](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - Informations SQL pour les {#sql-insights} de reporting d’application étendus
+   - Informations SQL pour la création de rapports d’application étendue {#sql-insights}
       - [Vue d’ensemble](data-distiller/sql-insights/overview.md)
       - [Mode de requête pro](data-distiller/sql-insights/query-pro-mode.md)
+      - [Présentation de la boutique accélérée](data-distiller/sql-insights/accelerated-store-overview.md)
       - [Envoi de requêtes accélérées](data-distiller/sql-insights/send-accelerated-queries.md)
       - [Guide sur le modèle de données d’insights de rapports](data-distiller/sql-insights/reporting-insights-data-model.md)
-   - Pipelines de fonctionnalités AI/ML {#ml-feature-pipelines}
+   - Pipelines de fonctionnalités d’IA/ML {#ml-feature-pipelines}
       - [Vue d’ensemble](data-distiller/ml-feature-pipelines/overview.md)
       - [Se connecter aux notebooks Jupyter](data-distiller/ml-feature-pipelines/establish-connection.md)
       - [Analyse exploratoire des données](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
@@ -40,7 +41,7 @@ ht-degree: 71%
       - [Exporter des données vers des environnements ML](data-distiller/ml-feature-pipelines/export-data.md)
       - [Workflow de bout en bout d’enrichissement du pipeline de données AI/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
    - [Session Du Summit 2025](data-distiller/top-tips-to-maximize-value.md)
-- Statistiques de Distiller de données et {#advanced-statistics} de machine learning
+- Statistiques de Distiller de données et machine learning {#advanced-statistics}
    - [Vue d’ensemble](advanced-statistics/overview.md)
    - [Conception des fonctionnalités](advanced-statistics/feature-engineering.md)
    - [Modèles](advanced-statistics/models.md)
@@ -85,9 +86,9 @@ ht-degree: 71%
    - [Dédoublonnage des données](key-concepts/deduplication.md)
    - [Échantillon de jeux de données](key-concepts/dataset-samples.md)
    - [Calcul des statistiques des jeux de données](key-concepts/dataset-statistics.md)
-- {#hypercubes} d’hypercubes de Distiller de données
+- Hypercubes de Distiller de données {#hypercubes}
    - [Analyse Big Data efficace avec des hypercubes](hypercubes/overview.md)
-- Connexion des clients à Query Service {#clients}
+- Connexion des clients à Query Service {#clients}
    - [Présentation de la connexion des clients](clients/overview.md)
    - [Modes SSL](./clients/ssl-modes.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
@@ -100,7 +101,7 @@ ht-degree: 71%
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
    - [Tableau](clients/tableau.md)
-- UI Query Service {#ui}
+- Interface utilisateur de Query Service {#ui}
    - [Présentation de l’interface utilisateur](ui/overview.md)
    - [Guide d’utilisation de Query Editor](ui/user-guide.md)
    - [Modèles de requête](ui/query-templates.md)
@@ -110,7 +111,7 @@ ht-degree: 71%
    - [Surveiller les requêtes planifiées](ui/monitor-queries.md)
    - [Guide sur les informations d’identification](ui/credentials.md)
    - [Générer des jeux de données de sortie à partir des résultats de requête](ui/create-datasets.md)
-- API Query Service {#api}
+- API Query Service {#api}
    - [Prise en main](api/getting-started.md)
    - [Requêtes](api/queries.md)
    - [Paramètres de connexion](api/connection-parameters.md)
@@ -119,7 +120,7 @@ ht-degree: 71%
    - [Modèles de requête](api/query-templates.md)
    - [Requêtes accélérées](api/accelerated-queries.md)
    - [Abonnements aux alertes](api/alert-subscriptions.md)
-- {#auth-api} de l’API Data Distiller Authorization
+- API Data Distiller Authorization {#auth-api}
    - [Vue d’ensemble](auth-api/overview.md)
    - [Prise en main](auth-api/getting-started.md)
    - [Accès à l’adresse IP](auth-api/ip-access.md)
