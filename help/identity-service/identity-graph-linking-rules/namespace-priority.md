@@ -2,9 +2,9 @@
 title: Priorité d’espace de noms
 description: Découvrez la priorité des espaces de noms dans Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 8157eaf3d79523995fd50d02234e7873cffcea14
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1801'
+source-wordcount: '1866'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,11 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
+>Les règles de liaison du graphique d’identités sont actuellement en disponibilité limitée et sont accessibles à tous les clients dans les sandbox de développement.
+>
+>* **Exigences d’activation** : la fonctionnalité reste inactive jusqu’à ce que vous configuriez et enregistriez votre [!DNL Identity Settings]. Sans cette configuration, le système continuera à fonctionner normalement, sans changement de comportement.
+>* **Remarques importantes** : au cours de cette phase de disponibilité limitée, la segmentation d’Edge peut produire des résultats inattendus en termes d’appartenance à un segment. Cependant, la segmentation par lots et en flux continu fonctionnera comme prévu.
+>* **Étapes suivantes** : pour plus d’informations sur la manière d’activer cette fonctionnalité dans les sandbox de production, contactez l’équipe de votre compte Adobe.
 
 Chaque implémentation client est unique et adaptée pour répondre aux objectifs d’une organisation particulière. Par conséquent, l’importance d’un espace de noms donné varie d’un client à l’autre. Voici quelques exemples concrets :
 

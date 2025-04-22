@@ -2,14 +2,14 @@
 title: Règles de liaison des graphiques d’identités
 description: Découvrez les règles de liaison des graphiques d’identités dans Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 8%
+source-wordcount: '1497'
+ht-degree: 7%
 
 ---
 
-# Vue d’ensemble des règles de liaison des graphiques d’identités {#identity-graph-linking-rules-overview}
+# Vue d’ensemble d’[!DNL Identity Graph Linking Rules] {#identity-graph-linking-rules-overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
@@ -18,17 +18,21 @@ ht-degree: 8%
 
 >[!AVAILABILITY]
 >
->Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
+>Les règles de liaison du graphique d’identités sont actuellement en disponibilité limitée et sont accessibles à tous les clients dans les sandbox de développement.
+>
+>* **Exigences d’activation** : la fonctionnalité reste inactive jusqu’à ce que vous configuriez et enregistriez votre [!DNL Identity Settings]. Sans cette configuration, le système continuera à fonctionner normalement, sans changement de comportement.
+>* **Remarques importantes** : au cours de cette phase de disponibilité limitée, la segmentation d’Edge peut produire des résultats inattendus en termes d’appartenance à un segment. Cependant, la segmentation par lots et en flux continu fonctionnera comme prévu.
+>* **Étapes suivantes** : pour plus d’informations sur la manière d’activer cette fonctionnalité dans les sandbox de production, contactez l’équipe de votre compte Adobe.
 
-Avec le service d’identités Adobe Experience Platform et le profil client en temps réel, il est facile de supposer que vos données sont parfaitement ingérées et que tous les profils fusionnés représentent une seule personne par le biais d’un identifiant de personne, tel qu’un CRMID. Cependant, il existe des scénarios possibles où certaines données pourraient essayer de fusionner plusieurs profils disparates en un seul profil (« réduction du graphique »). Pour éviter ces fusions indésirables, vous pouvez utiliser les configurations fournies par le biais des règles de liaison de graphiques d’identités et permettre une personnalisation précise de vos utilisateurs et utilisatrices.
+Avec le service d’identités Adobe Experience Platform et le profil client en temps réel, il est facile de supposer que vos données sont parfaitement ingérées et que tous les profils fusionnés représentent une seule personne par le biais d’un identifiant de personne, tel qu’un CRMID. Cependant, il existe des scénarios possibles où certaines données pourraient essayer de fusionner plusieurs profils disparates en un seul profil (« réduction du graphique »). Pour éviter ces fusions indésirables, vous pouvez utiliser les configurations fournies par l’intermédiaire de [!DNL Identity Graph Linking Rules] et permettre une personnalisation précise de vos utilisateurs.
 
-Regardez la vidéo suivante pour plus d’informations sur l’utilisation des règles de liaison de graphiques d’identités :
+Regardez la vidéo suivante pour plus d’informations sur l’utilisation de [!DNL Identity Graph Linking Rules] :
 
 >[!VIDEO](https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops)
 
 ## Commencer
 
-Les documents suivants sont essentiels à la compréhension des règles de liaison des graphiques d’identités.
+Les documents suivants sont essentiels à la compréhension des [!DNL Identity Graph Linking Rules].
 
 * [Algorithme d’optimisation de l’identité](./identity-optimization-algorithm.md)
 * [Guide de mise en œuvre](./implementation-guide.md)
@@ -45,7 +49,7 @@ Les documents suivants sont essentiels à la compréhension des règles de liais
 >title="Scénarios de réduction de graphe"
 >abstract="Il existe plusieurs raisons pour lesquelles les graphes peuvent être « réduits » ou représenter plusieurs entités de personne."
 
-Cette section présente des exemples de scénarios que vous pouvez prendre en compte lors de la configuration des règles de liaison de graphiques d’identités.
+Cette section présente des exemples de scénarios que vous pouvez prendre en compte lors de la configuration de [!DNL Identity Graph Linking Rules].
 
 ### Périphérique partagé
 
@@ -61,7 +65,7 @@ Il existe des instances où plusieurs connexions peuvent se produire sur un seul
 
 Dans ces cas, d’un point de vue graphique, si aucune limite n’est activée, un seul ECID est lié à plusieurs CRMID.
 
-Grâce aux règles de liaison des graphiques d’identités, vous pouvez :
+Avec [!DNL Identity Graph Linking Rules], vous pouvez réaliser les actions suivantes :
 
 * Configurez l’identifiant utilisé pour la connexion en tant qu’identifiant unique. Par exemple, vous pouvez limiter un graphique pour stocker une seule identité avec un espace de noms CRMID, et définir ce CRMID comme identifiant unique d’un appareil partagé.
    * Ce faisant, vous pouvez vous assurer que les CRMID ne sont pas fusionnés par l’ECID.
@@ -72,7 +76,7 @@ Il existe également des cas d’utilisateurs qui fournissent de fausses valeurs
 
 ![Diagramme qui représente les scénarios d’e-mail ou de téléphone non valides.](../images/identity-settings/invalid-email-phone.png)
 
-Grâce aux règles de liaison des graphiques d’identités, vous pouvez :
+Avec [!DNL Identity Graph Linking Rules], vous pouvez réaliser les actions suivantes :
 
 * Configurez le CRMID, le numéro de téléphone ou l’adresse e-mail comme identifiant unique et limitez ainsi une personne à un seul CRMID, numéro de téléphone et/ou adresse e-mail associé à son compte.
 
@@ -89,11 +93,11 @@ Ces identités peuvent entraîner les graphiques suivants, dans lesquels plusieu
 
 ![Exemple de graphique de données d’identité avec des valeurs d’identité erronées ou incorrectes.](../images/identity-settings/bad-data.png)
 
-Grâce aux règles de liaison des graphiques d’identités, vous pouvez configurer le CRMID en tant qu’identifiant unique afin d’empêcher la réduction des profils indésirables due à ce type de données.
+Avec [!DNL Identity Graph Linking Rules], vous pouvez configurer le CRMID en tant qu’identifiant unique afin d’éviter la réduction de profils indésirables due à ce type de données.
 
-## Règles de liaison des graphiques d’identités {#identity-graph-linking-rules}
+## [!DNL Identity Graph Linking Rules] {#identity-graph-linking-rules}
 
-Grâce aux règles de liaison des graphiques d’identités, vous pouvez :
+Avec [!DNL Identity Graph Linking Rules], vous pouvez :
 
 * Créez un graphique d’identités/profil fusionné unique pour chaque utilisateur en configurant des espaces de noms uniques, ce qui empêchera la fusion de deux identifiants de personne disparates en un graphique d’identités.
 * Associez des événements en ligne authentifiés à la personne en configurant des priorités
@@ -151,7 +155,7 @@ Pour plus d’informations, consultez le guide sur la [priorité des espaces de 
 
 ## Étapes suivantes
 
-Pour plus d’informations sur les règles de liaison de graphiques d’identités, consultez la documentation suivante :
+Pour plus d’informations sur [!DNL Identity Graph Linking Rules], consultez la documentation suivante :
 
 * [Algorithme d’optimisation de l’identité](./identity-optimization-algorithm.md)
 * [Guide de mise en œuvre](./implementation-guide.md)

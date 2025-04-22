@@ -2,20 +2,24 @@
 title: Guide de dépannage des règles de liaison de graphiques d’identités
 description: Découvrez comment résoudre les problèmes courants des règles de liaison des graphiques d’identités.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 0e7911e21c546fb40cd51f03a5a6d6a2aa751dec
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '3338'
+source-wordcount: '3375'
 ht-degree: 0%
 
 ---
 
-# Guide de dépannage des règles de liaison de graphiques d’identité
+# Guide de dépannage pour [!DNL Identity Graph Linking Rules]
 
 >[!AVAILABILITY]
 >
->Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
+>Les règles de liaison du graphique d’identités sont actuellement en disponibilité limitée et sont accessibles à tous les clients dans les sandbox de développement.
+>
+>* **Exigences d’activation** : la fonctionnalité reste inactive jusqu’à ce que vous configuriez et enregistriez votre [!DNL Identity Settings]. Sans cette configuration, le système continuera à fonctionner normalement, sans changement de comportement.
+>* **Remarques importantes** : au cours de cette phase de disponibilité limitée, la segmentation d’Edge peut produire des résultats inattendus en termes d’appartenance à un segment. Cependant, la segmentation par lots et en flux continu fonctionnera comme prévu.
+>* **Étapes suivantes** : pour plus d’informations sur la manière d’activer cette fonctionnalité dans les sandbox de production, contactez l’équipe de votre compte Adobe.
 
-Lorsque vous testez et validez les règles de liaison de graphiques d’identités, vous pouvez rencontrer certains problèmes liés à l’ingestion des données et au comportement du graphique. Lisez ce document pour savoir comment résoudre certains problèmes courants que vous pouvez rencontrer lors de l’utilisation de règles de liaison de graphiques d’identités.
+Lorsque vous testez et validez des [!DNL Identity Graph Linking Rules], vous pouvez rencontrer des problèmes liés à l’ingestion des données et au comportement du graphique. Lisez ce document pour savoir comment résoudre certains problèmes courants que vous pouvez rencontrer lorsque vous utilisez [!DNL Identity Graph Linking Rules].
 
 ## Présentation du flux d’ingestion de données {#data-ingestion-flow-overview}
 
@@ -55,7 +59,7 @@ Il existe différentes raisons pour lesquelles cela peut se produire, notamment,
 * Par défaut, les [ AAID sont bloqués lors de l’ingestion](../guardrails.md#identity-namespace-ingestion).
 * L’identité est supprimée en raison des [ mécanismes de sécurisation système ](../guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated).
 
-Dans le contexte des règles de liaison de graphiques d’identités, un enregistrement peut être rejeté du service d’identités, car l’événement entrant comporte plusieurs identités avec le même espace de noms unique, mais une valeur d’identité différente. Ce scénario se produit généralement en raison d’erreurs d’implémentation.
+Dans le contexte de [!DNL Identity Graph Linking Rules], un enregistrement peut être rejeté du Service d’identités car l’événement entrant comporte plusieurs identités avec le même espace de noms unique mais une valeur d’identité différente. Ce scénario se produit généralement en raison d’erreurs d’implémentation.
 
 Tenez compte de l’événement suivant avec deux hypothèses :
 
@@ -318,11 +322,11 @@ Vous pouvez utiliser la requête suivante dans le jeu de données d’exportatio
 
 >[!TIP]
 >
->Les deux requêtes répertoriées ci-dessus produiront les résultats attendus si le sandbox n’est pas activé pour l’approche intermédiaire de l’appareil partagé et se comporteront différemment des règles de liaison des graphiques d’identités.
+>Les deux requêtes répertoriées ci-dessus produiront les résultats attendus si le sandbox n’est pas activé pour l’approche intermédiaire de l’appareil partagé et se comportera différemment de [!DNL Identity Graph Linking Rules].
 
 ## Questions fréquentes {#faq}
 
-Cette section présente une liste de réponses aux questions fréquentes sur les règles de liaison des graphiques d’identités.
+Cette section présente une liste de réponses aux questions fréquentes sur [!DNL Identity Graph Linking Rules].
 
 ## Algorithme d’optimisation de l’identité {#identity-optimization-algorithm}
 
@@ -389,7 +393,7 @@ L’algorithme d’optimisation des identités est appliqué en premier pour gar
 
 ## Test
 
-Lisez cette section pour obtenir des réponses aux questions fréquentes sur les fonctionnalités de test et de débogage dans les règles de liaison de graphiques d’identités.
+Lisez cette section pour obtenir des réponses aux questions fréquentes sur les fonctionnalités de test et de débogage dans [!DNL Identity Graph Linking Rules].
 
 ### Quels sont les scénarios que je dois tester dans un environnement de sandbox de développement ?
 

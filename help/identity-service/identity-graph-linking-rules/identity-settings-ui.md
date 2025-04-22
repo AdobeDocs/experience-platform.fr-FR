@@ -2,10 +2,10 @@
 title: Interface utilisateur des paramètres d’identité
 description: Découvrez comment utiliser l’interface utilisateur des paramètres d’identité.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 4c43813e234dd5d06c6b505652fca161b88971c9
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '644'
-ht-degree: 4%
+source-wordcount: '697'
+ht-degree: 3%
 
 ---
 
@@ -13,7 +13,11 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
+>Les règles de liaison du graphique d’identités sont actuellement en disponibilité limitée et sont accessibles à tous les clients dans les sandbox de développement.
+>
+>* **Exigences d’activation** : la fonctionnalité reste inactive jusqu’à ce que vous configuriez et enregistriez votre [!DNL Identity Settings]. Sans cette configuration, le système continuera à fonctionner normalement, sans changement de comportement.
+>* **Remarques importantes** : au cours de cette phase de disponibilité limitée, la segmentation d’Edge peut produire des résultats inattendus en termes d’appartenance à un segment. Cependant, la segmentation par lots et en flux continu fonctionnera comme prévu.
+>* **Étapes suivantes** : pour plus d’informations sur la manière d’activer cette fonctionnalité dans les sandbox de production, contactez l’équipe de votre compte Adobe.
 
 Les paramètres d’identité sont une fonctionnalité de l’interface utilisateur du service d’identités Adobe Experience Platform que vous pouvez utiliser pour désigner des espaces de noms uniques et configurer la priorité des espaces de noms.
 
@@ -23,7 +27,7 @@ Lisez ce guide pour savoir comment configurer vos paramètres d’identité dans
 
 Lisez les documents suivants avant de commencer à utiliser les paramètres d’identité :
 
-* [Règles de liaison des graphiques d’identités](./overview.md)
+* [[!DNL Identity Graph Linking Rules]](./overview.md)
 * [Algorithme d’optimisation de l’identité](./identity-optimization-algorithm.md)
 * [Guide de mise en œuvre](./implementation-guide.md)
 * [Exemples de configurations de graphes](./example-configurations.md)
@@ -83,9 +87,9 @@ Lorsque vous avez terminé vos configurations, sélectionnez **[!UICONTROL Suiva
 
 ## Étapes suivantes
 
-Pour plus d’informations sur les règles de liaison de graphiques d’identités, consultez la documentation suivante :
+Pour plus d’informations sur [!DNL Identity Graph Linking Rules], consultez la documentation suivante :
 
-* [Vue d’ensemble des règles de liaison des graphiques d’identités](./overview.md)
+* [Vue d’ensemble d’[!DNL Identity Graph Linking Rules]](./overview.md)
 * [Algorithme d’optimisation de l’identité](./identity-optimization-algorithm.md)
 * [Guide de mise en œuvre](./implementation-guide.md)
 * [Exemples de configurations de graphes](./example-configurations.md)

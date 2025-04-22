@@ -2,9 +2,9 @@
 title: Exemples de configurations de graphique
 description: Découvrez les scénarios de graphique courants que vous pouvez rencontrer lors de l’utilisation de règles de liaison de graphiques d’identités et de données d’identité.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '2796'
+source-wordcount: '2849'
 ht-degree: 7%
 
 ---
@@ -18,14 +18,18 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
+>Les règles de liaison du graphique d’identités sont actuellement en disponibilité limitée et sont accessibles à tous les clients dans les sandbox de développement.
+>
+>* **Exigences d’activation** : la fonctionnalité reste inactive jusqu’à ce que vous configuriez et enregistriez votre [!DNL Identity Settings]. Sans cette configuration, le système continuera à fonctionner normalement, sans changement de comportement.
+>* **Remarques importantes** : au cours de cette phase de disponibilité limitée, la segmentation d’Edge peut produire des résultats inattendus en termes d’appartenance à un segment. Cependant, la segmentation par lots et en flux continu fonctionnera comme prévu.
+>* **Étapes suivantes** : pour plus d’informations sur la manière d’activer cette fonctionnalité dans les sandbox de production, contactez l’équipe de votre compte Adobe.
 
 >[!NOTE]
 >
 >* « CRMID » et « loginID » sont des espaces de noms personnalisés. Dans ce document, « CRMID » est un identifiant de personne et « loginID » est un identifiant de connexion associé à une personne donnée.
 >* Pour simuler les exemples de scénarios de graphique décrits dans ce document, vous devez d’abord créer deux espaces de noms personnalisés, l’un avec le symbole d’identité « CRMID » et l’autre avec le symbole d’identité « loginID ». Les symboles d’identité respectent la casse.
 
-Ce document présente des exemples de configuration de graphique représentant les scénarios courants que vous pouvez rencontrer lors de l’utilisation de règles de liaison de graphiques d’identités et de données d’identité.
+Ce document présente des exemples de configuration de graphique de scénarios courants que vous pouvez rencontrer lors de l’utilisation de données de [!DNL Identity Graph Linking Rules] et d’identité.
 
 ## CRMID uniquement
 
@@ -764,9 +768,9 @@ CRMID: Tom, ECID: 111
 
 ## Étapes suivantes
 
-Pour plus d’informations sur les règles de liaison de graphiques d’identités, consultez la documentation suivante :
+Pour plus d’informations sur [!DNL Identity Graph Linking Rules], consultez la documentation suivante :
 
-* [Vue d’ensemble des règles de liaison des graphiques d’identités](./overview.md)
+* [Vue d’ensemble d’[!DNL Identity Graph Linking Rules]](./overview.md)
 * [Algorithme d’optimisation de l’identité](./identity-optimization-algorithm.md)
 * [Guide de mise en œuvre](./implementation-guide.md)
 * [Résolution des problèmes et FAQ](./troubleshooting.md)

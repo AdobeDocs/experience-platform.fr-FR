@@ -2,9 +2,9 @@
 title: Guide de mise en œuvre des règles de liaison des graphiques d’identités
 description: Découvrez les étapes recommandées à suivre lors de l’implémentation de vos données avec les configurations de règles de liaison de graphiques d’identités .
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 45fdce7dc50b237edc511047ec150ecdd6adce50
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1835'
+source-wordcount: '1888'
 ht-degree: 6%
 
 ---
@@ -13,7 +13,11 @@ ht-degree: 6%
 
 >[!AVAILABILITY]
 >
->Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
+>Les règles de liaison du graphique d’identités sont actuellement en disponibilité limitée et sont accessibles à tous les clients dans les sandbox de développement.
+>
+>* **Exigences d’activation** : la fonctionnalité reste inactive jusqu’à ce que vous configuriez et enregistriez votre [!DNL Identity Settings]. Sans cette configuration, le système continuera à fonctionner normalement, sans changement de comportement.
+>* **Remarques importantes** : au cours de cette phase de disponibilité limitée, la segmentation d’Edge peut produire des résultats inattendus en termes d’appartenance à un segment. Cependant, la segmentation par lots et en flux continu fonctionnera comme prévu.
+>* **Étapes suivantes** : pour plus d’informations sur la manière d’activer cette fonctionnalité dans les sandbox de production, contactez l’équipe de votre compte Adobe.
 
 >[!IMPORTANT]
 >
@@ -33,7 +37,7 @@ Esquisse détaillée :
 
 ## Conditions préalables à la mise en œuvre {#prerequisites-for-implementation}
 
-Cette section décrit les étapes préalables à suivre avant d’implémenter des règles de liaison de graphiques d’identités à vos données.
+Cette section décrit les étapes préalables à suivre avant d’implémenter des [!DNL Identity Graph Linking Rules] à vos données .
 
 ### Espace de noms unique
 
@@ -291,9 +295,9 @@ Cet exemple montre également que Tom et Summer sont deux entités de personne d
 
 ## Étapes suivantes
 
-Pour plus d’informations sur les règles de liaison de graphiques d’identités, consultez la documentation suivante :
+Pour plus d’informations sur [!DNL Identity Graph Linking Rules], consultez la documentation suivante :
 
-* [Vue d’ensemble des règles de liaison des graphiques d’identités](./overview.md)
+* [Vue d’ensemble d’[!DNL Identity Graph Linking Rules]](./overview.md)
 * [Algorithme d’optimisation de l’identité](./identity-optimization-algorithm.md)
 * [Exemples de configurations de graphes](./example-configurations.md)
 * [Résolution des problèmes et FAQ](./troubleshooting.md)

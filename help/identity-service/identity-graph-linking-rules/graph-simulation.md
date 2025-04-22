@@ -2,9 +2,9 @@
 title: Guide de l’interface utilisateur de la simulation graphique
 description: Découvrez comment utiliser la simulation de graphiques dans l’interface utilisateur d’Identity Service.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1563'
 ht-degree: 3%
 
 ---
@@ -18,8 +18,11 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
+>Les règles de liaison du graphique d’identités sont actuellement en disponibilité limitée et sont accessibles à tous les clients dans les sandbox de développement.
 >
+>* **Exigences d’activation** : la fonctionnalité reste inactive jusqu’à ce que vous configuriez et enregistriez votre [!DNL Identity Settings]. Sans cette configuration, le système continuera à fonctionner normalement, sans changement de comportement.
+>* **Remarques importantes** : au cours de cette phase de disponibilité limitée, la segmentation d’Edge peut produire des résultats inattendus en termes d’appartenance à un segment. Cependant, la segmentation par lots et en flux continu fonctionnera comme prévu.
+>* **Étapes suivantes** : pour plus d’informations sur la manière d’activer cette fonctionnalité dans les sandbox de production, contactez l’équipe de votre compte Adobe.
 >* Votre compte doit disposer de l’autorisation **Afficher le graphique d’identités** pour accéder à l’outil de [!DNL Graph Simulation]. Pour plus d’informations, consultez le guide [ sur les autorisations dans le contrôle d’accès basé sur les attributs](../../access-control/abac/ui/permissions.md).
 
 [!DNL Graph Simulation] est un outil de l’interface utilisateur d’Identity Service que vous pouvez utiliser pour simuler le comportement d’un graphique d’identités selon une combinaison particulière d’identités et la manière dont vous configurez l’algorithme [optimisation des identités](./identity-optimization-algorithm.md).
@@ -182,7 +185,7 @@ Dans l’exemple de graphique ci-dessous, une ligne pointillée existe entre `{E
 
 Grâce à la lecture de ce document, vous savez désormais comment utiliser l’outil [!DNL Graph Simulation] pour mieux comprendre comment vos données d’identité sont traitées selon un ensemble particulier de règles et de configurations. Pour plus d’informations, consultez les documents suivants :
 
-* [Vue d’ensemble des règles de liaison des graphiques d’identités](./overview.md)
+* [Vue d’ensemble d’[!DNL Identity Graph Linking Rules]](./overview.md)
 * [Algorithme d’optimisation de l’identité](./identity-optimization-algorithm.md)
 * [Guide de mise en œuvre](./implementation-guide.md)
 * [Résolution des problèmes et FAQ](./troubleshooting.md)

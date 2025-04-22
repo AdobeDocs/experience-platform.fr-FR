@@ -2,9 +2,9 @@
 title: Algorithme d’optimisation de l’identité
 description: Découvrez l’algorithme d’optimisation des identités dans Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1617'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,11 @@ ht-degree: 5%
 
 >[!AVAILABILITY]
 >
->Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez l’équipe de votre compte Adobe pour plus d’informations sur l’accès à la fonctionnalité dans les sandbox de développement.
+>Les règles de liaison du graphique d’identités sont actuellement en disponibilité limitée et sont accessibles à tous les clients dans les sandbox de développement.
+>
+>* **Exigences d’activation** : la fonctionnalité reste inactive jusqu’à ce que vous configuriez et enregistriez votre [!DNL Identity Settings]. Sans cette configuration, le système continuera à fonctionner normalement, sans changement de comportement.
+>* **Remarques importantes** : au cours de cette phase de disponibilité limitée, la segmentation d’Edge peut produire des résultats inattendus en termes d’appartenance à un segment. Cependant, la segmentation par lots et en flux continu fonctionnera comme prévu.
+>* **Étapes suivantes** : pour plus d’informations sur la manière d’activer cette fonctionnalité dans les sandbox de production, contactez l’équipe de votre compte Adobe.
 
 L’algorithme d’optimisation des identités est un algorithme de graphique sur Identity Service qui permet de s’assurer qu’un graphique d’identités est représentatif d’une seule personne et, par conséquent, empêche la fusion indésirable d’identités sur le profil client en temps réel.
 
@@ -163,9 +167,9 @@ Consultez le diagramme ci-dessous pour mieux comprendre le fonctionnement de l�
 
 ## Étapes suivantes
 
-Pour plus d’informations sur les règles de liaison de graphiques d’identités, consultez la documentation suivante :
+Pour plus d’informations sur [!DNL Identity Graph Linking Rules], consultez la documentation suivante :
 
-* [Vue d’ensemble des règles de liaison des graphiques d’identités](./overview.md)
+* [Vue d’ensemble d’[!DNL Identity Graph Linking Rules]](./overview.md)
 * [Guide de mise en œuvre](./implementation-guide.md)
 * [Exemples de configurations de graphes](./example-configurations.md)
 * [Résolution des problèmes et FAQ](./troubleshooting.md)
