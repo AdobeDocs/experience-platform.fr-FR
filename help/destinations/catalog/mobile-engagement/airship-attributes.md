@@ -3,24 +3,16 @@ keywords: attributs airship;destination airship
 title: Connexion Attributs Airship
 description: Transmettez facilement les données d’audience Adobe à Airship en tant qu’attributs d’audience pour le ciblage dans Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7377b2ffecf59fdb5ca5449daf1387ae1586bd63
 workflow-type: tm+mt
-source-wordcount: '1153'
-ht-degree: 30%
+source-wordcount: '1042'
+ht-degree: 31%
 
 ---
 
 # Connexion [!DNL Airship Attributes] {#airship-attributes-destination}
 
->[!IMPORTANT]
->
->* À compter du 25 mars 2025, vous pourrez voir deux cartes [!DNL Airship Attributes] côte à côte dans le catalogue des destinations. Cela est dû à une mise à niveau interne vers le service de destinations. Le connecteur de destination [!DNL Airship Attributes] existant a été renommé **[!UICONTROL (obsolète) Attributs Airship]** et une nouvelle carte portant le nom **[!UICONTROL Attributs Airship]** est désormais disponible.
->* Utilisez la connexion **[!UICONTROL Attributs Airship]** dans le catalogue pour les nouveaux flux de données d’activation. Si vous disposez de flux de données actifs vers la destination **[!UICONTROL (Obsolète) Attributs Airship]**, ils seront mis à jour automatiquement. Aucune action n’est donc requise de votre part.
->* Si vous créez des flux de données par le biais de l’[API Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/), vous devez mettre à jour vos [!DNL flow spec ID] et [!DNL connection spec ID] aux valeurs suivantes :
->   * ID de spécification de flux : `a862e0be-966e-4e5a-80d3-1bb566461986`
->   * ID de spécification de connexion : `594bc002-4a47-49b7-8a98-ac0d21045502`
-
-## Vue d’ensemble {#overview}
+## Présentation {#overview}
 
 [!DNL Airship] est le principal Experience Platform d’engagement des clients. Il vous permet de fournir à vos utilisateurs des messages omnicanal pertinents et personnalisés à chaque étape du cycle de vie du client.
 
