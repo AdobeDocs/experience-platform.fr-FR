@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: df047593a14ce6683dc04a6ba6518e6d0810c43d
+source-git-commit: b456540a59c4b0455e8e1d52ed98d97454f8f61f
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1286'
 ht-degree: 76%
 
 ---
@@ -243,6 +243,7 @@ ht-degree: 76%
          * [Fonctions de transformation prises en charge](./destination-sdk/functionality/destination-server/supported-functions.md)
          * [Configuration du formatage des fichiers](./destination-sdk/functionality/destination-server/file-formatting.md)
       * Composants de configuration de destination {#destination-configuration}
+         * [Configurer le type de données d’audience](./destination-sdk/functionality/destination-configuration/audience-data-type.md)
          * [Configuration de l’authentification du client](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
          * [Autorisation OAuth2](./destination-sdk/functionality/destination-configuration/oauth2-authorization.md)
          * [Champs de données client](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
