@@ -1,18 +1,18 @@
 ---
-title: Identifiants d’appareils propriétaires dans Web SDK
+title: Utiliser des identifiants d’appareil propriétaires dans Web SDK
 description: Découvrez comment configurer des identifiants d’appareil propriétaires (FPID) dans le SDK Web Adobe Experience Platform.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c7be2fff2cd94677b745e6ed095454bc46f8a37b
 workflow-type: tm+mt
-source-wordcount: '2058'
+source-wordcount: '2181'
 ht-degree: 0%
 
 ---
 
 
-# Identifiants d’appareils propriétaires dans Web SDK
+# Utiliser des identifiants d’appareil propriétaires dans Web SDK
 
-Adobe Experience Platform Web SDK attribue [des identifiants Adobe Experience Cloud (ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=fr) aux visiteurs du site Web à l’aide de cookies afin de suivre le comportement des utilisateurs. Pour tenir compte des restrictions du navigateur sur la durée de vie des cookies, vous pouvez choisir de définir et de gérer vos propres identifiants d’appareil à la place. Il s’agit d’identifiants d’appareil propriétaires (`FPIDs`).
+Adobe Experience Platform Web SDK attribue [des identifiants Adobe Experience Cloud (ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=fr) aux visiteurs du site Web à l’aide de cookies pour suivre le comportement des utilisateurs. Pour gérer les restrictions de navigateur relatives à la durée de vie des cookies, vous pouvez définir et gérer vos propres identifiants d’appareil, appelés identifiants d’appareil propriétaires (FPID).
 
 >[!NOTE]
 >
@@ -20,65 +20,30 @@ Adobe Experience Platform Web SDK attribue [des identifiants Adobe Experience Cl
 
 >[!IMPORTANT]
 >
->Les identifiants d’appareils propriétaires ne sont pas compatibles avec la fonctionnalité [cookies tiers](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) de Web SDK.
->Vous pouvez utiliser des identifiants d’appareil propriétaires ou des cookies tiers, mais vous ne pouvez pas utiliser les deux fonctionnalités simultanément.
+>Les identifiants d’appareils propriétaires ne sont pas compatibles avec la fonctionnalité [cookies tiers](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) de Web SDK. Vous pouvez utiliser des identifiants d’appareil propriétaires ou des cookies tiers, mais pas les deux simultanément.
 
-Ce document explique comment configurer des identifiants d’appareil propriétaires pour votre implémentation de Web SDK.
+## Conditions préalables {#prerequisites}
 
-## Conditions préalables
+Avant de commencer, assurez-vous de connaître le fonctionnement des données d’identité dans le SDK web, y compris les ECID et les `identityMap`. Pour plus d’informations, consultez la présentation des [données d’identité dans le SDK Web](./overview.md).
 
-Ce guide suppose que vous connaissez le fonctionnement des données d’identité pour Experience Platform Web SDK, y compris le rôle des ECID et des `identityMap`. Pour plus d’informations, consultez la présentation des [données d’identité dans le SDK Web](./overview.md).
+## Exigences de formatage des identifiants d’appareils propriétaires {#formatting-requirements}
 
-## Utilisation d’identifiants d’appareil propriétaires (FPID) {#using-fpid}
+Edge Network accepte uniquement les identifiants conformes au format [UUIDv4](https://datatracker.ietf.org/doc/html/rfc4122). Les identifiants d’appareil qui ne sont pas au format UUIDv4 seront rejetés.
 
-Les identifiants d’appareil propriétaires ([!DNL FPIDs]) effectuent le suivi des visiteurs à l’aide de cookies propriétaires. Les cookies propriétaires sont plus efficaces lorsqu’ils sont définis à l’aide d’un serveur qui utilise un enregistrement DNS [A](https://datatracker.ietf.org/doc/html/rfc1035) (pour IPv4) ou [enregistrement AAAA](https://datatracker.ietf.org/doc/html/rfc3596) (pour IPv6), par opposition à un [!DNL CNAME] DNS ou un code [!DNL JavaScript].
+* [!DNL UUIDs] sont uniques et aléatoires, avec une probabilité de collision négligeable.
+* [!DNL UUIDv4] ne peut pas être alimenté à l’aide d’adresses IP ou de toute autre information d’identification personnelle (PII).
+* Des bibliothèques pour générer des [!DNL UUIDs] sont disponibles pour chaque langage de programmation.
 
->[!IMPORTANT]
->
->Les enregistrements [!DNL A] ou [!DNL AAAA] ne sont pris en charge que pour la définition et le suivi des cookies. La principale méthode de collecte de données consiste à utiliser un [!DNL CNAME] [!DNL DNS]. En d’autres termes, les [!DNL FPIDs] sont définis à l’aide d’un enregistrement [!DNL A] ou [!DNL AAAA], puis envoyés à Adobe à l’aide d’un [!DNL CNAME].
->
->Le programme de certificat géré par Adobe [](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) est également toujours pris en charge pour la collecte de données propriétaire.
+## Définition du cookie [!DNL FPID] à l’aide de votre propre serveur {#set-cookie-server}
 
-Une fois qu’un cookie [!DNL FPID] est défini, sa valeur peut être récupérée et envoyée à Adobe au fur et à mesure de la collecte des données d’événement. Les [!DNL FPIDs] collectées sont utilisées comme adresses de contrôle pour générer des [!DNL ECIDs], qui continuent à être les identifiants principaux dans les applications Adobe Experience Cloud.
-
-Pour envoyer à Edge Network un [!DNL FPID] destiné à un visiteur ou une visiteuse du site Web, vous devez inclure le [!DNL FPID] dans le `identityMap` de ce visiteur ou de cette visiteuse. Pour plus d’informations, reportez-vous à la section plus bas dans ce document sur [l’utilisation des FPID dans `identityMap`](#identityMap).
-
-### Exigences de formatage des identifiants d’appareils propriétaires {#formatting-requirements}
-
-Edge Network accepte uniquement les [!DNL IDs] conformes au format [UUIDv4](https://datatracker.ietf.org/doc/html/rfc4122). Les identifiants d’appareil qui ne sont pas au format [!DNL UUIDv4] seront rejetés.
-
-La génération d’un [!DNL UUID] se traduit presque toujours par un identifiant unique et aléatoire, la probabilité d’une collision étant négligeable. [!DNL UUIDv4] ne peut pas être prédéfini à l’aide d’adresses IP ou de toute autre information personnelle identifiable ([!DNL PII]). Les [!DNL UUIDs] sont omniprésents et des bibliothèques sont disponibles pour pratiquement tous les langages de programmation afin de les générer.
-
-## Définition d’un cookie d’ID propriétaire dans l’interface utilisateur des flux de données {#setting-cookie-datastreams}
-
-Vous pouvez spécifier un nom de cookie dans l’interface utilisateur des flux de données, où le [!DNL FPID] peut résider, plutôt que d’avoir à lire la valeur du cookie et à inclure le [!DNL FPID] dans le mappage d’identité.
-
->[!IMPORTANT]
->
->Cette fonctionnalité nécessite que la [collecte de données propriétaire](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en) soit activée.
-
-Consultez la [documentation sur les flux de données](../../datastreams/configure.md) pour plus d’informations sur la configuration d’un flux de données.
-
-Lors de la configuration de votre flux de données, activez l’option **[!UICONTROL Cookie interne d’identifiant]**. Ce paramètre indique à Edge Network de se référer à un cookie spécifié lors de la recherche d’un identifiant d’appareil interne, plutôt que de rechercher cette valeur dans le [mappage d’identités](#identityMap).
-
-Consultez la documentation relative aux [cookies propriétaires](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=fr) pour plus d’informations sur leur fonctionnement avec Adobe Experience Cloud.
-
-![Image de l’interface utilisateur d’Experience Platform montrant la configuration du flux de données mettant en surbrillance le paramètre Cookie interne d’identifiant](../assets/first-party-id-datastreams.png)
-
-Lors de l’activation de ce paramètre, vous devez indiquer le nom du cookie dans lequel l’identifiant doit être stocké.
-
-Lorsque vous utilisez des identifiants propriétaires, vous ne pouvez pas effectuer de synchronisations des identifiants tiers. Les synchronisations des identifiants tiers reposent sur le service [!DNL Visitor ID] et les `UUID` générés par ce service. Lors de l’utilisation de la fonctionnalité d’identifiant propriétaire, l’[!DNL ECID] est générée sans l’utilisation du service [!DNL Visitor ID], ce qui rend les synchronisations d’identifiants tiers impossibles.
-
-Lorsque vous utilisez des identifiants propriétaires, les fonctionnalités [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager) ciblées vers l’activation dans les plateformes partenaires ne sont pas prises en charge, car les synchronisations des identifiants partenaires Audience Manager sont principalement basées sur `UUIDs` ou `DIDs`. Le [!DNL ECID] dérivé d’un identifiant propriétaire n’est pas lié à un `UUID`, ce qui le rend impossible à résoudre.
-
-## Définition d’un cookie à l’aide de votre propre serveur {#set-cookie-server}
-
-Lors de la définition d’un cookie à l’aide d’un serveur que vous possédez, vous pouvez utiliser différentes méthodes pour empêcher que le cookie ne soit restreint en raison de politiques de navigateur :
+Lors de la définition d’un cookie sur votre propre serveur , vous pouvez utiliser différentes méthodes pour empêcher que le cookie ne soit restreint en raison de politiques de navigateur :
 
 * Génération de cookies à l’aide de langages de script côté serveur
 * Définissez des cookies en réponse à une requête d’API envoyée à un sous-domaine ou à un autre point d’entrée du site
 * Générer des cookies à l’aide d’un [!DNL CMS]
 * Générer des cookies à l’aide d’un [!DNL CDN]
+
+En outre, vous devez toujours définir le cookie FPID sous l’enregistrement `A` de votre domaine.
 
 >[!IMPORTANT]
 >
@@ -126,7 +91,101 @@ L’attribut `SameSite` permet aux serveurs de déterminer si les cookies sont e
 
 Si aucun attribut `SameSite` n’est spécifié, le paramètre par défaut de certains navigateurs est désormais `SameSite=Lax`.
 
-## Utilisation de FPID dans `identityMap` {#identityMap}
+## Hiérarchie des identifiants {#id-hierarchy}
+
+En présence d’un [!DNL ECID] et d’un [!DNL FPID], le [!DNL ECID] a la priorité dans l’identification de l’utilisateur. Cela permet de s’assurer que lorsqu’un [!DNL ECID] existant est présent dans la boutique de cookies de navigateur, il reste l’identifiant principal et que le nombre de visiteurs existant ne risque pas d’être affecté. Pour les utilisateurs existants, le [!DNL FPID] ne deviendra pas l’identité principale tant que le [!DNL ECID] n’aura pas expiré ou n’aura pas été supprimé en raison d’une politique de navigateur ou d’un processus manuel.
+
+Les identités sont hiérarchisées dans l’ordre suivant :
+
+1. [!DNL ECID] inclus dans le `identityMap`
+1. [!DNL ECID] stocké dans un cookie
+1. [!DNL FPID] inclus dans le `identityMap`
+1. [!DNL FPID] stocké dans un cookie
+
+
+## Migration vers des identifiants d’appareil propriétaires {#migrating-to-fpid}
+
+Si vous migrez vers des identifiants d’appareil propriétaires à partir d’une mise en œuvre précédente, il peut être difficile de visualiser à quoi pourrait ressembler la transition à un niveau inférieur.
+
+Pour illustrer ce processus, prenons l’exemple d’un client qui a déjà visité votre site et de l’impact d’une migration [!DNL FPID] sur la manière dont ce client est identifié dans les solutions Adobe.
+
+![Diagramme montrant comment les valeurs d’identifiant d’un client sont mises à jour entre les visites après la migration vers les FPID](../assets/identity/tracking/visits.png)
+
+>[!IMPORTANT]
+>
+>Le cookie `ECID` est toujours prioritaire sur le `FPID`.
+
+| Consultez votre | Description |
+| --- | --- |
+| Première visite | Supposons que vous n’ayez pas encore commencé à définir le cookie [!DNL FPID]. Le [!DNL ECID] contenu dans le cookie [AMCV](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) est l’identifiant utilisé pour identifier le visiteur. |
+| Deuxième visite | Le déploiement de la solution [!DNL FPID] a commencé. Le [!DNL ECID] existant est toujours présent et reste l’identifiant principal pour l’identification des visiteurs. |
+| Troisième visite | Entre la deuxième et la troisième visite, un délai suffisant s’est écoulé avant que le [!DNL ECID] ne soit supprimé en raison d’une politique de navigateur. Cependant, comme le [!DNL FPID] a été défini à l’aide d’un enregistrement [!DNL A] [!DNL DNS], le [!DNL FPID] persiste. Le [!DNL FPID] est désormais considéré comme l’ID principal et utilisé pour amorcer le [!DNL ECID], qui est écrit sur l’appareil de l’utilisateur final. L’utilisateur serait désormais considéré comme un nouveau visiteur dans les solutions Adobe Experience Platform et Experience Cloud. |
+| Quatrième visite | Entre la troisième et la quatrième visite, il s’est écoulé suffisamment de temps pour que le [!DNL ECID] ait été supprimé en raison d’une politique de navigateur. Comme lors de la précédente visite, la [!DNL FPID] reste due à la manière dont elle a été conçue. Cette fois, la même [!DNL ECID] est générée que la visite précédente. L’utilisateur est vu dans toutes les solutions Experience Platform et Experience Cloud comme le même utilisateur que la visite précédente. |
+| Cinquième visite | Entre la quatrième et la cinquième visite, l’utilisateur final a effacé tous les cookies dans son navigateur. Une nouvelle [!DNL FPID] est générée et utilisée pour amorcer la création d’une nouvelle [!DNL ECID]. L’utilisateur serait désormais considéré comme un nouveau visiteur dans les solutions Adobe Experience Platform et Experience Cloud. |
+
+{style="table-layout:auto"}
+
+## Utilisation d’identifiants d’appareil propriétaires (FPID) {#using-fpid}
+
+Les identifiants d’appareil propriétaires ([!DNL FPIDs]) effectuent le suivi des visiteurs à l’aide de cookies propriétaires. Les cookies propriétaires sont plus efficaces lorsqu’ils sont définis à l’aide d’un serveur qui utilise un enregistrement DNS [A](https://datatracker.ietf.org/doc/html/rfc1035) (pour IPv4) ou [enregistrement AAAA](https://datatracker.ietf.org/doc/html/rfc3596) (pour IPv6), par opposition à un [!DNL CNAME] DNS ou un code [!DNL JavaScript].
+
+>[!IMPORTANT]
+>
+>Les enregistrements [!DNL A] ou [!DNL AAAA] ne sont pris en charge que pour la définition et le suivi des cookies. La principale méthode de collecte de données consiste à utiliser un [!DNL DNS CNAME]. Les [!DNL FPIDs] sont définis à l’aide d’un enregistrement [!DNL A] ou [!DNL AAAA] et envoyés à Adobe à l’aide d’un [!DNL CNAME].
+>
+>Le programme de certificat géré par Adobe [](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) est également pris en charge pour la collecte de données propriétaires.
+
+Une fois qu’un cookie [!DNL FPID] est défini, sa valeur peut être récupérée et envoyée à Adobe au fur et à mesure de la collecte des données d’événement. Les [!DNL FPIDs] collectées sont utilisées pour générer des [!DNL ECIDs], qui sont les identifiants principaux dans les applications Adobe Experience Cloud.
+
+Vous pouvez utiliser [!DNL FPIDs] de deux manières :
+
+* **[Méthode 1](#setting-cookie-datastreams)** : configurez un [!DNL CNAME] pour vos appels Web SDK et incluez le nom de votre cookie [!DNL FPID] dans la configuration du flux de données.
+* **[Méthode 2](#identityMap)** : inclure le [!DNL FPID] dans le mappage d’identités. Pour plus d’informations, reportez-vous à la section plus bas dans ce document sur [l’utilisation des FPID dans `identityMap`](#identityMap).
+
+### Méthode 1 : configurer un CNAME pour vos appels Web SDK et définir un cookie d’ID propriétaire dans votre flux de données {#setting-cookie-datastreams}
+
+Pour définir un cookie [!DNL FPID] à partir de votre propre domaine, vous devez configurer votre propre [!DNL CNAME] (nom canonique) pour vos appels Web SDK, puis activer la fonctionnalité [!DNL First Party ID Cookie] dans la configuration de votre flux de données.
+
+**Étape 1. Configurez un CNAME pour votre domaine de déploiement Web SDK**
+
+Un enregistrement [!DNL CNAME] dans votre DNS vous permet de créer un alias d’un nom de domaine à un autre. Cela peut aider à faire apparaître les services tiers comme s’ils faisaient partie de votre propre domaine, faisant ainsi ressembler leurs cookies à des cookies propriétaires.
+
+**Exemple**
+
+Prenons l’exemple suivant : vous souhaitez implémenter Web SDK sur les `mywebsite.com` de votre site web. Le SDK Web envoie des données à Edge Network vers le domaine `edge.adobedc.net`.
+
+| Sans [!DNL CNAME] | Avec [!DNL CNAME] |
+|---------|----------|
+| <ul><li>Le `mywebsite.com` de votre site web utilise le `edge.adobedc.net` de domaine Web SDK pour envoyer des données à Edge Network.</li><li>Les cookies définis par `edge.adobedc.net` sont considérés comme des cookies tiers, puisqu’ils ne proviennent pas de votre domaine `mywebsite.com`. Selon les navigateurs de vos utilisateurs, les cookies tiers peuvent être bloqués et vos données n’atteignent pas Edge Network.</li></ul> | <ul><li>Vous créez un sous-domaine dans lequel vous déployez Web SDK, tel que `metrics.mywebsite.com`.</li><li>Vous définissez un enregistrement [!DNL CNAME] dans votre système DNS de sorte que `metrics.mywebsite.com` pointe vers `edge.adobedc.net`.</li><li>Lorsque votre site web définit des cookies par l’intermédiaire de `metrics.mywebsite.com`, ils semblent provenir du navigateur `mywebsite.com` (tiers) au lieu de `edge.adobedc.net` (tiers). Cela rend le blocage du cookie d’ID propriétaire moins probable, ce qui garantit une collecte de données plus précise.</li></ul> |
+
+Lorsque la collecte de données propriétaire est activée à l’aide d’un [!DNL CNAME], tous les cookies de votre domaine sont envoyés sur les requêtes effectuées au point d’entrée de la collecte de données.
+
+Pour utiliser cette fonctionnalité, vous devez définir le cookie [!DNL FPID] au niveau supérieur de votre domaine au lieu d’un sous-domaine spécifique. Si vous le définissez sur un sous-domaine, la valeur du cookie ne sera pas envoyée à Edge Network et la solution [!DNL FPID] ne fonctionnera pas comme prévu.
+
+>[!IMPORTANT]
+>
+>Cette fonctionnalité nécessite que la [collecte de données propriétaire](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en) soit activée.
+
+**Étape 2. Activez la fonctionnalité**[!UICONTROL  Cookie interne d’identifiant ]**pour votre flux de données**
+
+Après avoir configuré votre CNAME, vous devez activer l’option **[!UICONTROL Cookie d’identifiant propriétaire]** pour votre flux de données. Ce paramètre indique à Edge Network de se référer à un cookie spécifié lors de la recherche d’un identifiant d’appareil interne, au lieu de rechercher cette valeur dans le [mappage d’identité](#identityMap).
+
+Consultez la [documentation sur la configuration des trains de données](../../datastreams/configure.md#advanced-options) pour savoir comment configurer votre train de données.
+
+Consultez la documentation relative aux [cookies propriétaires](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=fr) pour plus d’informations sur leur fonctionnement avec Adobe Experience Cloud.
+
+![Image de l’interface utilisateur de Platform montrant la configuration du flux de données mettant en surbrillance le paramètre Cookie d’identifiant propriétaire](../assets/first-party-id-datastreams.png)
+
+Lors de l’activation de ce paramètre, vous devez indiquer le nom du cookie dans lequel le [!DNL FPID] doit être stocké.
+
+>[!NOTE]
+>
+>Lorsque vous utilisez des identifiants propriétaires, vous ne pouvez pas effectuer de synchronisations des identifiants tiers. Les synchronisations des identifiants tiers reposent sur le service [!DNL Visitor ID] et les `UUID` générés par ce service. Lors de l’utilisation de la fonctionnalité d’identifiant propriétaire, l’[!DNL ECID] est générée sans l’utilisation du service [!DNL Visitor ID], ce qui rend les synchronisations d’identifiants tiers impossibles.
+><br> Lorsque vous utilisez des identifiants propriétaires, les fonctionnalités [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager) ciblées vers l’activation dans les plateformes partenaires ne sont pas prises en charge, car les synchronisations des identifiants partenaires Audience Manager sont principalement basées sur `UUIDs` ou `DIDs`. Le [!DNL ECID] dérivé d’un identifiant propriétaire n’est pas lié à un `UUID`, ce qui le rend impossible à résoudre.
+
+## Méthode 2 : utiliser des FPID dans `identityMap` {#identityMap}
+
+Au lieu de stocker le [!DNL FPID] dans votre propre cookie, vous pouvez envoyer le [!DNL FPID] à Edge Network par le biais du mappage d’identité.
 
 Vous trouverez ci-dessous un exemple de la manière de définir un [!DNL FPID] dans le `identityMap` :
 
@@ -220,49 +279,6 @@ Dans ce cas, la réponse d’erreur renvoyée par Edge Network est similaire à 
 }
 ```
 
-## Définir un FPID sur votre propre domaine {#setting-fpid-domain}
-
-Outre la définition du [!DNL FPID] dans le mappage d’identités, vous pouvez définir le cookie [!DNL FPID] sur votre propre domaine, si vous avez configuré un [!DNL CNAME] de collecte de données propriétaire.
-
-Lorsque la collecte de données propriétaire est activée à l’aide d’un [!DNL CNAME], tous les cookies de votre domaine sont envoyés sur les requêtes effectuées au point d’entrée de la collecte de données.
-
-Tous les cookies non pertinents pour la collecte de données d’Adobe sont ignorés. Par [!DNL FPID], vous pouvez spécifier le nom du cookie [!DNL FPID] dans la configuration du flux de données. Dans ce cas, Edge Network lit le contenu du cookie [!DNL FPID] au lieu de rechercher le [!DNL FPID] dans le mappage d’identité.
-
-Pour utiliser cette fonctionnalité, vous devez définir le [!DNL FPID] au niveau supérieur de votre domaine au lieu d’un sous-domaine spécifique. Si vous le définissez sur un sous-domaine, la valeur du cookie ne sera pas envoyée à Edge Network et la solution [!DNL FPID] ne fonctionnera pas comme prévu.
-
-## Hiérarchie des identifiants {#id-hierarchy}
-
-En présence d’un [!DNL ECID] et d’un [!DNL FPID], le [!DNL ECID] a la priorité dans l’identification de l’utilisateur. Cela permet de s’assurer que lorsqu’un [!DNL ECID] existant est présent dans la boutique de cookies de navigateur, il reste l’identifiant principal et que le nombre de visiteurs existant ne risque pas d’être affecté. Pour les utilisateurs existants, le [!DNL FPID] ne deviendra pas l’identité principale tant que le [!DNL ECID] n’aura pas expiré ou n’aura pas été supprimé en raison d’une politique de navigateur ou d’un processus manuel.
-
-Les identités sont hiérarchisées dans l’ordre suivant :
-
-1. [!DNL ECID] inclus dans le `identityMap`
-1. [!DNL ECID] stocké dans un cookie
-1. [!DNL FPID] inclus dans le `identityMap`
-1. [!DNL FPID] stocké dans un cookie
-
-## Migration vers des identifiants d’appareil propriétaires {#migrating-to-fpid}
-
-Si vous migrez vers des identifiants d’appareil propriétaires à partir d’une mise en œuvre précédente, il peut être difficile de visualiser à quoi pourrait ressembler la transition à un niveau inférieur.
-
-Pour illustrer ce processus, prenons l’exemple d’un client qui a déjà visité votre site et de l’impact d’une migration [!DNL FPID] sur la manière dont ce client est identifié dans les solutions Adobe.
-
-![Diagramme montrant comment les valeurs d’identifiant d’un client sont mises à jour entre les visites après la migration vers les FPID](../assets/identity/tracking/visits.png)
-
->[!IMPORTANT]
->
->Le cookie `ECID` est toujours prioritaire sur le `FPID`.
-
-| Consultez votre | Description |
-| --- | --- |
-| Première visite | Supposons que vous n’ayez pas encore commencé à définir le cookie [!DNL FPID]. Le [!DNL ECID] contenu dans le cookie [AMCV](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) est l’identifiant utilisé pour identifier le visiteur. |
-| Deuxième visite | Le déploiement de la solution [!DNL FPID] a commencé. Le [!DNL ECID] existant est toujours présent et reste l’identifiant principal pour l’identification des visiteurs. |
-| Troisième visite | Entre la deuxième et la troisième visite, un délai suffisant s’est écoulé avant que le [!DNL ECID] ne soit supprimé en raison d’une politique de navigateur. Cependant, comme le [!DNL FPID] a été défini à l’aide d’un enregistrement [!DNL A] [!DNL DNS], le [!DNL FPID] persiste. Le [!DNL FPID] est désormais considéré comme l’ID principal et utilisé pour amorcer le [!DNL ECID], qui est écrit sur l’appareil de l’utilisateur final. L’utilisateur serait désormais considéré comme un nouveau visiteur dans les solutions Adobe Experience Platform et Experience Cloud. |
-| Quatrième visite | Entre la troisième et la quatrième visite, il s’est écoulé suffisamment de temps pour que le [!DNL ECID] ait été supprimé en raison d’une politique de navigateur. Comme lors de la précédente visite, la [!DNL FPID] reste due à la manière dont elle a été conçue. Cette fois, la même [!DNL ECID] est générée que la visite précédente. L’utilisateur est vu dans toutes les solutions Experience Platform et Experience Cloud comme le même utilisateur que la visite précédente. |
-| Cinquième visite | Entre la quatrième et la cinquième visite, l’utilisateur final a effacé tous les cookies dans son navigateur. Une nouvelle [!DNL FPID] est générée et utilisée pour amorcer la création d’une nouvelle [!DNL ECID]. L’utilisateur serait désormais considéré comme un nouveau visiteur dans les solutions Adobe Experience Platform et Experience Cloud. |
-
-{style="table-layout:auto"}
-
 ## FAQ {#faq}
 
 Vous trouverez ci-dessous une liste de réponses aux questions les plus fréquemment posées à propos des identifiants d’appareil propriétaires.
@@ -279,6 +295,6 @@ Pour réduire le gonflement potentiel des visiteurs et visiteuses, le [!DNL FPID
 
 Actuellement, seul Web SDK prend en charge les identifiants d’appareil propriétaires.
 
-### Les identifiants d’appareil propriétaires sont-ils stockés dans des solutions Experience Platform ou Experience Cloud ?
+### Les identifiants d’appareils propriétaires sont-ils stockés sur des solutions Platform ou Experience Cloud ?
 
 Une fois que le [!DNL FPID] a été utilisé pour amorcer un [!DNL ECID], il est supprimé du `identityMap` et remplacé par le [!DNL ECID] qui a été généré. Le [!DNL FPID] n’est stocké dans aucune solution Adobe Experience Platform ou Experience Cloud.

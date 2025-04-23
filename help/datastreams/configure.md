@@ -2,7 +2,7 @@
 title: Créer et configurer des flux de données
 description: Découvrez comment connecter votre intégration SDK Web côté client à d’autres produits Adobe et destinations tierces.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 637f7d68c0de93ede5ee808b68a0066f6abe52c9
 workflow-type: tm+mt
 source-wordcount: '2822'
 ht-degree: 48%
@@ -81,7 +81,7 @@ Les informations sur l’appareil et le matériel utilisent le `"device"` de cha
 
 Assurez-vous également que chaque champ XDM souhaité existe dans votre schéma. Dans le cas contraire, vous pouvez ajouter le groupe de champs `Environment Details` fourni par Adobe à votre schéma.
 
-### Configurer les options avancées {#@advanced-options}
+### Configurer les options avancées {#advanced-options}
 
 Pour afficher les options de configuration avancées, sélectionnez **[!UICONTROL Options avancées]**. Ici, vous pouvez configurer des paramètres de train de données supplémentaires, tels que l’obscurcissement des adresses IP, les cookies d’identifiants internes, etc.
 
