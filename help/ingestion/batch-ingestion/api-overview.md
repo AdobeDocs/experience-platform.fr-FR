@@ -1,33 +1,35 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;ingestion par lots;ingestion par lots;ingestion;guide de développement;guide d’api;charger;ingérer le paramètre;ingérer le fichier json ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;ingestion par lots;ingestion par lots;ingestion;guide de développement;guide d’api;chargement;ingérer Parquet;ingérer json;
 solution: Experience Platform
-title: Guide de l’API Batch Ingestion
-description: Ce document fournit un guide complet aux développeurs qui utilisent les API d’ingestion par lots pour Adobe Experience Platform.
+title: Guide de l’API d’ingestion par lots
+description: Ce document fournit un guide complet aux développeurs qui travaillent avec des API d’ingestion par lots pour Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 0e484dffa38d454561f9d67c6bea92f426d3515d
 workflow-type: tm+mt
-source-wordcount: '2383'
-ht-degree: 65%
+source-wordcount: '2435'
+ht-degree: 64%
 
 ---
 
 # Guide de développement de l’ingestion par lots
 
-Ce document fournit un guide complet sur l’utilisation des [points de terminaison de l’API d’ingestion par lots](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) dans Adobe Experience Platform. Pour une présentation des API d’ingestion par lots, y compris les conditions préalables et les bonnes pratiques, commencez par lire la [présentation de l’API d’ingestion par lots](overview.md).
+Ce document fournit un guide complet sur l’utilisation des points d’entrée [API d’ingestion par lots](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) dans Adobe Experience Platform. Pour obtenir un aperçu des API d’ingestion par lots, y compris les conditions préalables et les bonnes pratiques, commencez par lire la [ présentation de l’API d’ingestion par lots ](overview.md).
 
 L’annexe de ce document fournit des informations sur le [formatage des données à utiliser pour l’ingestion](#data-transformation-for-batch-ingestion), y compris des exemples de fichiers de données CSV et JSON.
 
 ## Prise en main
 
-Les points de terminaison d’API utilisés dans ce guide font partie de l’ [API d’ingestion par lots](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). L’ingestion par lots est fournie par le biais d’une API RESTful qui vous permet d’effectuer des opérations CRUD de base sur les types d’objets pris en charge.
+Les points d’entrée d’API utilisés dans ce guide font partie de l’[API Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). L’ingestion par lots est fournie par le biais d’une API RESTful où vous pouvez effectuer des opérations CRUD de base sur les types d’objets pris en charge.
 
-Avant de poursuivre, consultez la [présentation de l’API d’ingestion par lots](overview.md) et le [guide de prise en main](getting-started.md).
+Avant de poursuivre, consultez la présentation de l’API d’ingestion par lots [batch ingestion](overview.md) et le [ guide de prise en main](getting-started.md).
 
 ## Ingestion de fichiers JSON
 
 >[!NOTE]
 >
->Les étapes suivantes s’appliquent aux petits fichiers (256 Mo ou moins). Si vous atteignez un délai d’expiration de passerelle ou que vous obtenez des erreurs de requêtes de taille du corps, vous devez passer au chargement de fichiers volumineux.
+>- Les étapes suivantes s’appliquent aux petits fichiers (256 Mo ou moins). Si vous atteignez un délai d’expiration de passerelle ou que vous obtenez des erreurs de requêtes de taille du corps, vous devez passer au chargement de fichiers volumineux.
+>
+>- Utilisez du code JSON à une seule ligne au lieu du code JSON à plusieurs lignes comme entrée pour l’ingestion par lots. Le format JSON à une seule ligne offre de meilleures performances, car le système peut diviser un fichier d’entrée en plusieurs blocs et les traiter en parallèle, tandis que le format JSON multiligne ne peut pas être divisé. Cela peut réduire considérablement les coûts de traitement des données et améliorer la latence du traitement par lots.
 
 ### Création d’un lot
 
@@ -93,11 +95,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Chargement de fichiers
 
-Maintenant que vous avez créé un lot, vous pouvez utiliser l’identifiant de lot de la réponse de création de lot pour charger les fichiers dans le lot. Vous pouvez charger plusieurs fichiers dans le lot.
+Maintenant que vous avez créé un lot, vous pouvez utiliser l’ID de lot de la réponse de création de lot pour charger des fichiers dans le lot. Vous pouvez charger plusieurs fichiers dans le lot.
 
 >[!NOTE]
 >
->Consultez la section de l’annexe pour obtenir un [exemple de fichier de données JSON correctement formaté](#data-transformation-for-batch-ingestion).
+>Voir la section annexe pour un [exemple de fichier de données JSON correctement formaté](#data-transformation-for-batch-ingestion).
 
 **Format d’API**
 
@@ -109,7 +111,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Nom du fichier que vous souhaitez charger. Veillez à utiliser un nom de fichier unique afin de ne pas créer de conflit avec un autre fichier pour le lot de fichiers en cours d’envoi. |
+| `{FILE_NAME}` | Nom du fichier à charger. Veillez à utiliser un nom de fichier unique afin qu’il n’entre pas en conflit avec un autre fichier pour le lot de fichiers envoyé. |
 
 **Requête**
 
@@ -129,7 +131,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Chemin d’accès complet et nom du fichier que vous essayez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, par exemple `acme/customers/campaigns/summer.json`. |
+| `{FILE_PATH_AND_NAME}` | Chemin d’accès complet et nom du fichier que vous essayez de charger. Ce chemin d’accès au fichier correspond au chemin d’accès au fichier local, par exemple `acme/customers/campaigns/summer.json`. |
 
 **Réponse**
 
@@ -244,7 +246,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Nom du fichier que vous souhaitez charger. Veillez à utiliser un nom de fichier unique afin de ne pas créer de conflit avec un autre fichier pour le lot de fichiers en cours d’envoi. |
+| `{FILE_NAME}` | Nom du fichier à charger. Veillez à utiliser un nom de fichier unique afin qu’il n’entre pas en conflit avec un autre fichier pour le lot de fichiers envoyé. |
 
 **Requête**
 
@@ -264,7 +266,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Chemin d’accès complet et nom du fichier que vous essayez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, par exemple `acme/customers/campaigns/summer.parquet`. |
+| `{FILE_PATH_AND_NAME}` | Chemin d’accès complet et nom du fichier que vous essayez de charger. Ce chemin d’accès au fichier correspond au chemin d’accès au fichier local, par exemple `acme/customers/campaigns/summer.parquet`. |
 
 **Réponse**
 
@@ -306,7 +308,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 >[!NOTE]
 >
->Cette section explique comment télécharger des fichiers de plus de 256 Mo. Les fichiers volumineux sont chargés en blocs, puis assemblés au moyen d’un signal API.
+>Cette section explique comment télécharger des fichiers dont la taille est supérieure à 256 Mo. Les fichiers volumineux sont chargés en blocs, puis assemblés au moyen d’un signal API.
 
 ### Création d’un lot
 
@@ -417,7 +419,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Nom du fichier que vous souhaitez charger. Veillez à utiliser un nom de fichier unique afin de ne pas créer de conflit avec un autre fichier pour le lot de fichiers en cours d’envoi. |
+| `{FILE_NAME}` | Nom du fichier à charger. Veillez à utiliser un nom de fichier unique afin qu’il n’entre pas en conflit avec un autre fichier pour le lot de fichiers envoyé. |
 
 **Requête**
 
@@ -439,7 +441,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | Paramètre | Description |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | En entiers, le début et la fin de la plage demandée. |
-| `{FILE_PATH_AND_NAME}` | Chemin d’accès complet et nom du fichier que vous essayez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, par exemple `acme/customers/campaigns/summer.json`. |
+| `{FILE_PATH_AND_NAME}` | Chemin d’accès complet et nom du fichier que vous essayez de charger. Ce chemin d’accès au fichier correspond au chemin d’accès au fichier local, par exemple `acme/customers/campaigns/summer.json`. |
 
 
 **Réponse**
@@ -549,7 +551,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{TENANT_ID}` | Cet identifiant permet de s’assurer que les espaces de noms des ressources que vous créez sont corrects et contenus dans votre organisation. |
+| `{TENANT_ID}` | Cet identifiant permet de s’assurer que les ressources que vous créez ont un espace de noms correct et sont contenues dans votre organisation. |
 | `{SCHEMA_ID}` | L’identifiant du schéma que vous avez créé. |
 
 ### Création d’un lot
@@ -621,7 +623,7 @@ Maintenant que vous avez créé un lot, vous pouvez utiliser le `batchId` préci
 
 >[!NOTE]
 >
->Consultez la section de l’annexe pour obtenir un [exemple de fichier de données CSV correctement formaté](#data-transformation-for-batch-ingestion).
+>Voir la section annexe pour un [exemple de fichier de données CSV correctement formaté](#data-transformation-for-batch-ingestion).
 
 **Format d’API**
 
@@ -633,7 +635,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Nom du fichier que vous souhaitez charger. Veillez à utiliser un nom de fichier unique afin de ne pas créer de conflit avec un autre fichier pour le lot de fichiers en cours d’envoi. |
+| `{FILE_NAME}` | Nom du fichier à charger. Veillez à utiliser un nom de fichier unique afin qu’il n’entre pas en conflit avec un autre fichier pour le lot de fichiers envoyé. |
 
 **Requête**
 
@@ -653,7 +655,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Chemin d’accès complet et nom du fichier que vous essayez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, par exemple `acme/customers/campaigns/summer.csv`. |
+| `{FILE_PATH_AND_NAME}` | Chemin d’accès complet et nom du fichier que vous essayez de charger. Ce chemin d’accès au fichier correspond au chemin d’accès au fichier local, par exemple `acme/customers/campaigns/summer.csv`. |
 
 
 **Réponse**
@@ -748,20 +750,20 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## Corriger un lot
+## Application d’un correctif à un lot
 
-Il peut parfois être nécessaire de mettre à jour les données dans la banque de profils de votre entreprise. Vous pouvez par exemple avoir besoin de corriger des enregistrements ou de modifier une valeur d’attribut. Adobe Experience Platform prend en charge la mise à jour ou le correctif des données de banque de profils par le biais d’une action d’insertion ou de &quot;correction d’un lot&quot;.
+Il peut parfois être nécessaire de mettre à jour les données du magasin de profils de votre entreprise. Vous pouvez par exemple avoir besoin de corriger des enregistrements ou de modifier une valeur d’attribut. Adobe Experience Platform prend en charge la mise à jour ou l’application de correctifs aux données de la banque de profils par le biais d’une action upsert ou d’un « correctif par lot ».
 
 >[!NOTE]
 >
->Ces mises à jour ne sont autorisées que sur les enregistrements de profil, et non sur les événements d’expérience.
+>Ces mises à jour sont autorisées uniquement sur les enregistrements de profil, et non sur les événements d’expérience.
 
-Les éléments suivants sont requis pour corriger un lot :
+Les éléments suivants sont requis pour appliquer un correctif à un lot :
 
-- **Jeu de données activé pour les mises à jour de profil et d’attribut.** Pour ce faire, vous devez utiliser les balises du jeu de données et ajouter une balise `isUpsert:true` spécifique au tableau `unifiedProfile`. Pour plus d’informations sur les étapes de création d’un jeu de données ou de configuration d’un jeu de données existant à des fins d’insertion, suivez le tutoriel pour [activation d’un jeu de données pour les mises à jour de Profile](../../catalog/datasets/enable-upsert.md).
-- **Fichier parquet contenant les champs à corriger et les champs d’identité pour le profil.** Le format de données pour le correctif d’un lot est similaire au processus normal d’ingestion par lots. L’entrée requise est un fichier Parquet. En plus des champs à mettre à jour, les données chargées doivent contenir les champs d’identité afin de correspondre aux données de la banque de profils.
+- **Jeu de données activé pour les mises à jour de profils et d’attributs.** Cette opération est effectuée par le biais de balises de jeu de données et nécessite l’ajout d’une balise `isUpsert:true` spécifique au tableau de `unifiedProfile`. Pour obtenir des instructions détaillées sur la création d’un jeu de données ou la configuration d’un jeu de données existant à mettre à jour, suivez le tutoriel [Activation d’un jeu de données pour les mises à jour de profil](../../catalog/datasets/enable-upsert.md).
+- **Fichier parquet contenant les champs à corriger et les champs d’identité du profil.** Le format de données pour l’application de correctifs à un lot est similaire au processus normal d’ingestion par lots. L’entrée requise est un fichier Parquet. En plus des champs à mettre à jour, les données chargées doivent contenir les champs d’identité afin de correspondre aux données de la banque de profils.
 
-Une fois qu’un jeu de données est activé pour Profile et upsert, ainsi qu’un fichier Parquet contenant les champs que vous souhaitez corriger, ainsi que les champs d’identité nécessaires, vous pouvez suivre les étapes de [l’ingestion de fichiers Parquet](#ingest-parquet-files) afin de terminer le correctif par ingestion par lots.
+Une fois que vous disposez d’un jeu de données activé pour Profile et upsert, et d’un fichier Parquet contenant les champs que vous souhaitez corriger ainsi que les champs d’identité nécessaires, vous pouvez suivre les étapes de [ingestion de fichiers Parquet](#ingest-parquet-files) afin d’appliquer le correctif par ingestion par lots.
 
 ## Relecture d’un lot
 
@@ -769,7 +771,7 @@ Si vous souhaitez remplacer un lot déjà ingéré, vous pouvez le faire grâce 
 
 ### Création d’un lot
 
-Vous devrez tout d’abord créer un lot au format JSON en tant que format d’entrée. Lors de la création du lot, vous devrez fournir un identifiant de jeu de données. Vous devrez également vous assurer que tous les fichiers chargés en tant que partie intégrante du lot sont conformes au schéma XDM lié au jeu de données fourni. Vous devrez également fournir le ou les anciens lots comme référence dans la section de relecture. Dans l’exemple ci-dessous, vous relayez des lots avec des identifiants `batchIdA` et `batchIdB`.
+Vous devrez tout d’abord créer un lot au format JSON en tant que format d’entrée. Lors de la création du lot, vous devrez fournir un identifiant de jeu de données. Vous devrez également vous assurer que tous les fichiers chargés en tant que partie intégrante du lot sont conformes au schéma XDM lié au jeu de données fourni. Vous devrez également fournir le ou les anciens lots comme référence dans la section de relecture. Dans l’exemple ci-dessous, vous lisez à nouveau des lots avec des identifiants `batchIdA` et `batchIdB`.
 
 **Format d’API**
 
@@ -855,7 +857,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Nom du fichier que vous souhaitez charger. Veillez à utiliser un nom de fichier unique afin de ne pas créer de conflit avec un autre fichier pour le lot de fichiers en cours d’envoi. |
+| `{FILE_NAME}` | Nom du fichier à charger. Veillez à utiliser un nom de fichier unique afin qu’il n’entre pas en conflit avec un autre fichier pour le lot de fichiers envoyé. |
 
 **Requête**
 
@@ -875,7 +877,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Chemin d’accès complet et nom du fichier que vous essayez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, par exemple `acme/customers/campaigns/summer.json`. |
+| `{FILE_PATH_AND_NAME}` | Chemin d’accès complet et nom du fichier que vous essayez de charger. Ce chemin d’accès au fichier correspond au chemin d’accès au fichier local, par exemple `acme/customers/campaigns/summer.json`. |
 
 **Réponse**
 
@@ -919,7 +921,7 @@ La section suivante contient des informations supplémentaires sur l’ingestion
 
 ### Transformation des données pour l’ingestion par lots
 
-Pour ingérer un fichier de données dans [!DNL Experience Platform], la structure hiérarchique du fichier doit être conforme au schéma [Experience Data Model (XDM)](../../xdm/home.md) associé au jeu de données dans lequel il est chargé.
+Pour ingérer un fichier de données dans [!DNL Experience Platform], la structure hiérarchique du fichier doit être conforme au schéma [ Modèle de données d’expérience (XDM)](../../xdm/home.md) associé au jeu de données dans lequel il est chargé.
 
 Vous trouverez des informations sur le mappage d’un fichier CSV pour être conforme à un schéma XDM dans le document traitant des [exemples de transformations](../../etl/transformations.md), ainsi qu’un exemple de fichier de données JSON correctement formaté. Les exemples de fichiers fournis dans ce document se trouvent ici :
 
