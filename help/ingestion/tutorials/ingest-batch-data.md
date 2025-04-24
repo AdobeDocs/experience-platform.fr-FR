@@ -5,7 +5,7 @@ title: Ingestion De Données Dans Experience Platform
 type: Tutorial
 description: Adobe Experience Platform vous permet d’importer facilement des données sous la forme de fichiers de lots, sous la forme de fichiers parquet ou de données conformes à un schéma de modèle de données d’expérience (XDM) connu.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 49%
@@ -78,7 +78,7 @@ Dans l’onglet Infos se trouve également un bouton **[!UICONTROL Profile]** qu
 
 ![Activité du jeu de données](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
-## Activer le jeu de données pour [!DNL Real-Time Customer Profile]
+## Activer le jeu de données pour [!DNL Real-Time Customer Profile] {#enable-for-profile}
 
 Les jeux de données sont utilisés pour ingérer des données dans [!DNL Experience Platform], et ces données sont finalement utilisées pour identifier des individus et rassembler des informations provenant de plusieurs sources. Cette information regroupée s&#39;appelle un [!DNL Real-Time Customer Profile]. Pour que [!DNL Experience Platform] sachiez quelles informations doivent être incluses dans le [!DNL Real-Time Profile], les jeux de données peuvent être marqués pour inclusion à l’aide du bouton (bascule) **[!UICONTROL Profil]**.
 

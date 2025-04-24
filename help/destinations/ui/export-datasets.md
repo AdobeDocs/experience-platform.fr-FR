@@ -3,10 +3,10 @@ title: Exporter des jeux de données vers des destinations d’espace de stockag
 type: Tutorial
 description: Découvrez comment exporter des jeux de données d’Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 29fb232ecfbd119ef84d62599fc79249513dca43
+source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
 workflow-type: tm+mt
-source-wordcount: '2703'
-ht-degree: 35%
+source-wordcount: '2732'
+ht-degree: 34%
 
 ---
 
@@ -102,9 +102,12 @@ Certaines destinations basées sur des fichiers du catalogue Experience Platform
 
 Ce document contient toutes les informations nécessaires à l’exportation de jeux de données. Si vous souhaitez activer des *audiences* vers des destinations d’espace de stockage ou de marketing par e-mail, lisez [Activer les données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md).
 
-## Conditions préalables {#prerequisites}
+## Prérequis {#prerequisites}
 
-Pour exporter des jeux de données vers des destinations d’espace de stockage, vous devez vous être [connecté à une destination](./connect-destination.md). Si vous ne l’avez pas déjà fait, accédez au [catalogue de destinations](../catalog/overview.md), parcourez les destinations prises en charge et configurez la destination que vous souhaitez utiliser.
+Notez les conditions préalables suivantes pour exporter des jeux de données :
+
+* Pour exporter des jeux de données vers des destinations d’espace de stockage, vous devez vous être [connecté à une destination](./connect-destination.md). Si vous ne l’avez pas déjà fait, accédez au [catalogue de destinations](../catalog/overview.md), parcourez les destinations prises en charge et configurez la destination que vous souhaitez utiliser.
+* Les jeux de données de profil doivent être activés pour être utilisés dans le profil client en temps réel. [En savoir plus](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) sur la manière d’activer cette option.
 
 ### Autorisations nécessaires {#permissions}
 
