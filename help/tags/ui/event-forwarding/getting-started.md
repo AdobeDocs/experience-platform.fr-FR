@@ -3,9 +3,9 @@ title: Prise en main du transfert dʼévénements
 description: Suivez ce tutoriel détaillé pour commencer à utiliser le transfert d’événement dans Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '892'
 ht-degree: 78%
 
 ---
@@ -24,18 +24,18 @@ Pour utiliser le transfert dʼévénements dans Adobe Experience Platform, les
 
 * [SDK web Adobe Experience Platform](../../extensions/client/web-sdk/overview.md)
 * [ SDK Mobile Adobe Experience Platform](https://sdkdocs.com)
-* [API du serveur réseau Edge](/help/server-api/overview.md)
+* [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/)
 
 >[!NOTE]
 >Experience Platform Web SDK et Experience Platform Mobile SDK ne nécessitent pas de déploiement par le biais de balises dans Adobe Experience Platform. Toutefois, il est recommandé dʼutiliser des balises pour déployer ces SDK.
 
 Après avoir envoyé les données au réseau Edge, vous pouvez basculer sur des solutions Adobe pour y envoyer des données. Pour envoyer des données à une solution non Adobe, configurez-la dans le transfert dʼévénements.
 
-## Conditions préalables
+## Prérequis
 
 * Adobe Real-Time CDP Connections, Prime ou Ultimate (contactez l’équipe de votre compte Adobe pour connaître les tarifs)
 * Transfert d’événement dans Adobe Experience Platform
-* API Adobe Experience Platform Web SDK, Mobile SDK ou Edge Network Server configurée pour envoyer des données à Edge Network
+* API Adobe Experience Platform Web SDK, Mobile SDK ou Edge Network configurée pour envoyer des données à Edge Network
 * Mettez en correspondance les données avec le modèle de données dʼexpérience (XDM) (cette mise en correspondance peut être effectuée à lʼaide de balises).
 
 ## Créer un schéma XDM

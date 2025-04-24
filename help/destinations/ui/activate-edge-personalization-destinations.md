@@ -3,9 +3,9 @@ title: Activer les audiences vers des destinations de personnalisation Edge
 description: Découvrez comment activer des audiences de Adobe Experience Platform vers des destinations de personnalisation Edge pour des cas d’utilisation de la personnalisation de la même page et de la page suivante.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
 workflow-type: tm+mt
-source-wordcount: '1961'
+source-wordcount: '1964'
 ht-degree: 14%
 
 ---
@@ -71,7 +71,7 @@ Le lendemain, l’utilisateur revient sur le même site web client. Les audience
 
 Une société de location et de vente d’habitations souhaite personnaliser sa page d’accueil avec une bannière, en fonction des qualifications d’audience dans Adobe Experience Platform. L’entreprise peut sélectionner les audiences qui doivent bénéficier d’une expérience personnalisée et les envoyer à Adobe Target en tant que critères de ciblage pour son offre Target.
 
-## Conditions préalables {#prerequisites}
+## Prérequis {#prerequisites}
 
 ### Configurer un flux de données dans l’interface utilisateur de collecte de données {#configure-datastream}
 
@@ -150,9 +150,9 @@ Vous pouvez effectuer un choix parmi plusieurs types d’audiences, selon leur o
 
 >[!IMPORTANT]
 >
->Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, la destination **[!UICONTROL Custom Personalization]** nécessite que vous utilisiez l’API du serveur Edge Network [](../../server-api/overview.md) lors de la configuration de la destination pour la personnalisation basée sur les attributs. Tous les appels de l’API du serveur doivent être effectués dans un [ contexte authentifié ](../../server-api/authentication.md).
+>Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, la destination **[!UICONTROL Custom Personalization]** nécessite que vous utilisiez l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/) lors de la configuration de la destination pour la personnalisation basée sur les attributs. Tous les appels API d’Edge Network doivent être effectués dans un [contexte authentifié](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/).
 >
-><br>Si vous utilisez déjà Web SDK ou Mobile SDK pour votre intégration, vous pouvez récupérer les attributs via l’API du serveur en ajoutant une intégration côté serveur.
+><br>Si vous utilisez déjà Web SDK ou Mobile SDK pour votre intégration, vous pouvez récupérer les attributs via l’API Edge Network en ajoutant une intégration côté serveur.
 >
 ><br>Si vous ne suivez pas les exigences ci-dessus, la personnalisation sera basée sur l’appartenance à l’audience uniquement.
 

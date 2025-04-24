@@ -3,9 +3,9 @@ keywords: destinations ; questions ; questions fréquentes ; faq ; faq sur les d
 title: Questions fréquentes
 description: Réponses aux questions les plus fréquemment posées sur les destinations Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1673'
 ht-degree: 3%
 
 ---
@@ -201,7 +201,7 @@ Non, [Web SDK](../web-sdk/home.md) n’est pas nécessaire pour activer les audi
 
 Cependant, si [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) est utilisé à la place de Web SDK, seule la personnalisation de session suivante est prise en charge.
 
-Pour les cas d’utilisation de [personnalisation de la même page et de la page suivante](ui/activate-edge-personalization-destinations.md) vous devez utiliser [Web SDK](../web-sdk/home.md) ou l’[API du serveur Edge Network](../server-api/overview.md). Pour plus d’informations sur l’implémentation](ui/activate-edge-personalization-destinations.md) consultez la documentation sur l’[activation des audiences vers des destinations Edge.
+Pour les cas d’utilisation de [personnalisation de la même page et de la page suivante](ui/activate-edge-personalization-destinations.md) vous devez utiliser [Web SDK](../web-sdk/home.md) ou l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/). Pour plus d’informations sur l’implémentation](ui/activate-edge-personalization-destinations.md) consultez la documentation sur l’[activation des audiences vers des destinations Edge.
 +++
 
 ### Y a-t-il une limite au nombre d’attributs que je peux envoyer de Real-time Customer Data Platform vers Adobe Target ou une destination Personalization personnalisée ?
@@ -244,10 +244,10 @@ Actuellement, cela n’est pas pris en charge par l’interface utilisateur des 
 Lorsque vous supprimez une destination, toutes les audiences et tous les attributs mappés sous la destination sont supprimés d’Adobe Target et ils sont également supprimés d’Edge Network.
 +++
 
-### L’intégration fonctionne-t-elle à l’aide de l’API du serveur Edge Network ?
+### L’intégration fonctionne-t-elle à l’aide de l’API Edge Network ?
 
 +++Réponse
-Oui, l’API du serveur Edge Network fonctionne avec la destination Personalization personnalisée. Les attributs de profil pouvant contenir des données sensibles, la destination Custom Personalization requiert, pour protéger ces données, que vous utilisiez l’API du serveur Edge Network pour la collecte de données. En outre, tous les appels API doivent être effectués dans un [contexte authentifié](../server-api/authentication.md).
+Oui, l’API Edge Network fonctionne avec la destination Personalization personnalisée. Les attributs de profil pouvant contenir des données sensibles, la destination Custom Personalization requiert, pour protéger ces données, que vous utilisiez l’API Edge Network pour la collecte de données. En outre, tous les appels API doivent être effectués dans un [contexte authentifié](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/).
 +++
 
 ### Je ne peux avoir qu’une seule politique de fusion Active-On-Edge (active sur le bord). Puis-je créer des audiences qui utilisent une autre politique de fusion et les envoyer quand même à Adobe Target en tant qu’audiences de diffusion en continu ?

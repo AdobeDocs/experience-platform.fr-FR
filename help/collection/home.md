@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation de la collecte de données
 description: Découvrez les différentes technologies impliquées dans la collecte de données relatives aux expériences client dans Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '479'
-ht-degree: 70%
+ht-degree: 69%
 
 ---
 
@@ -29,7 +29,7 @@ La collecte de données se concentre sur la capacité de découverte et l’acce
 * [Transfert d’événement](../tags/ui/event-forwarding/overview.md)
 * [SDK web Adobe Experience Platform](../web-sdk/home.md)
 * [ SDK Mobile Adobe Experience Platform](https://developer.adobe.com/client-sdks/documentation/)
-* [API du serveur réseau Edge](../server-api/overview.md)
+* [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/)
 * [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=fr)
 * [Experience Platform Assurance](../assurance/home.md)
 

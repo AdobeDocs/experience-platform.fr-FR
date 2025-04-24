@@ -5,7 +5,7 @@ audience: user
 user-guide-title: Guide de Real-Time Customer Data Platform
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des audiences à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
 role: Admin
-source-git-commit: 3b2645927e4760114298295e920e07a20df3fcbd
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 62%
@@ -47,7 +47,7 @@ ht-degree: 62%
 * Mécanismes de sécurisation {#guardrails}
    * [Présentation des mécanismes de sécurisation de Real-Time CDP](guardrails/overview.md)
    * [Mécanismes de sécurisation pour l’ingestion de données](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
-   * [Mécanismes de sécurisation pour  [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
+   * [Mécanismes de sécurisation pour  [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
    * [Mécanismes de sécurisation pour  [!DNL Real-Time Customer Profile]  données et la segmentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=fr){target="_blank"}
    * [Mécanismes de sécurisation pour  [!DNL Identity Service]  données](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
    * [Mécanismes de sécurisation pour  [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}

@@ -3,9 +3,9 @@ keywords: personnalisation personnalisée;destination;destination personnalisée
 title: Connexion de personnalisation personnalisée
 description: Cette destination fournit une personnalisation externe, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur votre site pour récupérer les informations d’audience à partir de Adobe Experience Platform. Cette destination fournit une personnalisation en temps réel basée sur l’appartenance à l’audience du profil utilisateur.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 0f70e072402bca055b96195ded91816810759fc2
+source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '964'
 ht-degree: 51%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 51%
 
 >[!IMPORTANT]
 >
->Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, vous devez utiliser l’API du serveur Edge Network [](/help/server-api/overview.md) lors de la configuration de la destination **[!UICONTROL Personalization personnalisé]** pour la personnalisation basée sur les attributs. Tous les appels de l’API du serveur doivent être effectués dans un [ contexte authentifié ](../../../server-api/authentication.md).
+>Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, vous devez utiliser l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/) lors de la configuration de la destination **[!UICONTROL Personalization personnalisé]** pour la personnalisation basée sur les attributs. Tous les appels API d’Edge Network doivent être effectués dans un [contexte authentifié](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication).
 >
-><br>Vous pouvez récupérer les attributs de profil via l’[API du serveur Edge Network](/help/server-api/overview.md) en ajoutant une intégration côté serveur qui utilise le même flux de données que celui que vous utilisez déjà pour votre implémentation de Web ou Mobile SDK.
+><br>Vous pouvez récupérer les attributs de profil via l’[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/) en ajoutant une intégration côté serveur qui utilise le même flux de données que celui que vous utilisez déjà pour votre implémentation de Web ou Mobile SDK.
 >
 ><br>Si vous ne suivez pas les exigences ci-dessus, la personnalisation sera basée sur l’appartenance à l’audience uniquement.
 
@@ -33,13 +33,13 @@ ht-degree: 51%
 
 Configurez cette destination pour permettre aux plateformes de personnalisation externes, aux systèmes de gestion de contenu, aux serveurs de publicités et aux autres applications s’exécutant sur les sites web des clients de récupérer les informations d’audience à partir de Adobe Experience Platform.
 
-## Conditions préalables {#prerequisites}
+## Prérequis {#prerequisites}
 
 Cette destination nécessite l’utilisation de l’une des méthodes de collecte de données suivantes, selon votre implémentation :
 
 * Utilisez [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) si vous souhaitez collecter des données sur votre site Web.
 * Utilisez [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) si vous souhaitez collecter des données à partir de votre application mobile.
-* Utilisez l’API du serveur Edge Network [](../../../server-api/overview.md) si vous n’utilisez pas [Web SDK](/help/web-sdk/home.md) ou [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) ou si vous souhaitez personnaliser l’expérience utilisateur en fonction des attributs de profil.
+* Utilisez l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/) si vous n’utilisez ni [Web SDK](/help/web-sdk/home.md) ni [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/), ou si vous souhaitez personnaliser l’expérience utilisateur en fonction des attributs de profil.
 
 >[!IMPORTANT]
 >

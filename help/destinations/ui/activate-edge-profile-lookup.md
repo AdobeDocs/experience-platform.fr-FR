@@ -3,9 +3,9 @@ title: Recherche d’attributs de profil Edge en temps réel
 description: Découvrez comment rechercher des attributs de profil Edge en temps réel à l’aide de la destination Personalization personnalisée et de l’API Edge Network
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1911'
 ht-degree: 7%
 
 ---
@@ -30,7 +30,7 @@ Lors de la configuration du cas d’utilisation décrit sur cette page, vous uti
 * [Flux de données](../../datastreams/overview.md) : un flux de données reçoit des données d’événement entrantes de Web SDK et répond avec des données de profil Edge.
 * [Politiques de fusion](../../segmentation/ui/segment-builder.md#merge-policies) : vous allez créer une politique de fusion [!UICONTROL Active-On-Edge] pour vous assurer que les profils Edge utilisent les données de profil correctes.
 * [Connexion Personalization personnalisée](../catalog/personalization/custom-personalization.md) : vous allez configurer une nouvelle connexion de personnalisation personnalisée qui enverra les attributs de profil à Edge Network.
-* [API Edge Network ](../../server-api/overview.md) : vous utiliserez la fonctionnalité d’API Edge Network [collecte de données interactive](../../server-api/interactive-data-collection.md) pour récupérer rapidement les attributs de profil des profils Edge.
+* [API Edge Network ](https://developer.adobe.com/data-collection-apis/docs/) : vous utiliserez la fonctionnalité d’API Edge Network [collecte de données interactive](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) pour récupérer rapidement les attributs de profil des profils Edge.
 
 ## Mécanismes de sécurisation des performances {#guardrails}
 
@@ -166,7 +166,7 @@ L’étape suivante consiste à configurer votre solution de personnalisation po
 
 >[!IMPORTANT]
 >
->Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, vous devez récupérer les attributs de profil via l’[API Edge Network](../../server-api/overview.md). De plus, vous devez récupérer les attributs de profil via l’API Edge Network [point d’entrée de la collecte de données interactive](../../server-api/interactive-data-collection.md) pour que les appels API soient authentifiés.
+>Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, vous devez récupérer les attributs de profil via l’[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/). De plus, vous devez récupérer les attributs de profil via l’API Edge Network [point d’entrée de la collecte de données interactive](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) pour que les appels API soient authentifiés.
 ><br>Si vous ne suivez pas les exigences ci-dessus, la personnalisation sera basée sur l’appartenance à l’audience uniquement et les attributs de profil ne seront pas disponibles pour vous.
 
 Le flux de données que vous avez configuré à l’[étape 1](#create-datastream) est maintenant prêt à accepter les données d’événement entrantes et à répondre avec des informations de profil Edge.

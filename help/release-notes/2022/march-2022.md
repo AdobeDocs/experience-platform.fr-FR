@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Mars 2022
 description: Les notes de mise à jour de mars 2022 pour Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1182'
-ht-degree: 84%
+source-wordcount: '1183'
+ht-degree: 81%
 
 ---
 
@@ -115,7 +115,7 @@ Experience Platform fournit un ensemble de technologies qui vous permettent de c
 | Fonctionnalité | Description |
 | --- | --- |
 | Paramètres globaux de flux de données | Vous pouvez désormais configurer plusieurs nouveaux paramètres globaux lors de la configuration d’un flux de données : géolocalisation, cookie des identifiants internes et synchronisation des identifiants tiers. Pour plus d’informations, consultez la section sur la [configuration d’un flux de données](../../datastreams/overview.md#create) du guide de l’interface utilisateur des flux de données. |
-| [API d’Edge Network Server](../../server-api/overview.md) | Le serveur API permet aux clients d’interagir avec Edge Experience Platform Network à l’aide d’un nouveau point d’entrée authentifié, afin d’alimenter plusieurs cas d’utilisation de la collecte de données, de la personnalisation, de la publicité et du marketing. |
+| [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/) | L’API Edge Network permet aux clients d’interagir avec Experience Platform Edge Network à l’aide d’un nouveau point d’entrée authentifié, afin d’alimenter divers cas d’utilisation de la collecte de données, de la personnalisation, de la publicité et du marketing. |
 
 Pour plus d’informations sur la collecte de données dans Experience Platform, consultez la [présentation de la collecte de données](../../collection/home.md).
 

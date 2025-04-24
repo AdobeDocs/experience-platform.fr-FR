@@ -1,22 +1,22 @@
 ---
-title: Personnalisation côté serveur à l’aide de l’API Edge Network Server
-description: Cet article explique comment utiliser l’API Edge Network Server pour déployer la personnalisation côté serveur sur vos propriétés web.
+title: Personnalisation côté serveur à l’aide de l’API Edge Network
+description: Cet article explique comment utiliser l’API Edge Network pour déployer la personnalisation côté serveur sur vos propriétés web.
 keywords: personnalisation;api du serveur;edge network;côté serveur;
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '563'
-ht-degree: 100%
+source-wordcount: '559'
+ht-degree: 82%
 
 ---
 
 
-# Personnalisation côté serveur à l’aide de l’API Edge Network Server
+# Personnalisation côté serveur à l’aide de l’API Edge Network
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-La personnalisation côté serveur implique l’utilisation de l’[API Edge Network Server](../../server-api/overview.md) pour personnaliser l’expérience client sur vos propriétés web.
+La personnalisation côté serveur implique l’utilisation de l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/) pour personnaliser l’expérience client sur vos propriétés web.
 
-Dans l’exemple décrit dans cet article, le contenu de personnalisation est récupéré côté serveur, à l’aide de l’API du serveur. Ensuite, le code HTML est rendu côté serveur, en fonction du contenu de personnalisation récupéré.
+Dans l’exemple décrit dans cet article, le contenu de personnalisation est récupéré côté serveur, à l’aide de l’API Edge Network. Ensuite, le code HTML est rendu côté serveur, en fonction du contenu de personnalisation récupéré.
 
 Le tableau ci-dessous présente un exemple de contenu personnalisé et non personnalisé.
 
@@ -37,12 +37,12 @@ Les cookies sont utilisés pour conserver l’identité de l’utilisateur et le
 
 ### Demander l’emplacement {#request-placement}
 
-Les requêtes de personnalisation sont nécessaires pour obtenir des propositions et envoyer une notification d’affichage. Lors de l’utilisation d’une mise en œuvre côté serveur, le serveur d’applications envoie ces requêtes à l’API Edge Network Server.
+Les requêtes de personnalisation sont nécessaires pour obtenir des propositions et envoyer une notification d’affichage. Lors de l’utilisation d’une mise en œuvre côté serveur, le serveur d’applications envoie ces requêtes à l’API Edge Network.
 
 | Requête | Créée par |
 |---|---|
-| Requête d’interaction pour récupérer des propositions | Serveur d’applications appelant l’API Edge Network Server. |
-| Requête d’interaction pour envoyer des notifications d’affichage | Serveur d’applications appelant l’API Edge Network Server. |
+| Requête d’interaction pour récupérer des propositions | Serveur applicatif appelant l’API Edge Network. |
+| Requête d’interaction pour envoyer des notifications d’affichage | Serveur applicatif appelant l’API Edge Network. |
 
 ## Exemple d’application {#sample-app}
 
@@ -68,7 +68,7 @@ Cette section décrit les étapes de récupération du contenu de personnalisati
 
 1. [Express](https://expressjs.com/fr/) est utilisé pour une mise en œuvre côté serveur allégée. Il gère les requêtes de serveur et le routage de base.
 2. Le navigateur demande la page web. Tous les cookies précédemment stockés par le navigateur, précédés du préfixe `kndctr_`, sont inclus.
-3. Lorsque la page est demandée auprès du serveur d’applications, un événement est envoyé au [point d’entrée de la collecte de données interactive](../../../server-api/interactive-data-collection.md) pour récupérer du contenu de personnalisation. L’exemple d’application utilise des méthodes d’assistance pour simplifier la création et l’envoi de requêtes à l’API (voir [aepEdgeClient.js](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js)). La requête `POST` contient un `event` et une `query`. S’ils sont disponibles, les cookies de l’étape précédente sont inclus dans le tableau `meta>state>entries`.
+3. Lorsque la page est demandée auprès du serveur d’applications, un événement est envoyé au [point d’entrée de la collecte de données interactive](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) pour récupérer du contenu de personnalisation. L’exemple d’application utilise des méthodes d’assistance pour simplifier la création et l’envoi de requêtes à l’API (voir [aepEdgeClient.js](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js)). La requête `POST` contient un `event` et une `query`. S’ils sont disponibles, les cookies de l’étape précédente sont inclus dans le tableau `meta>state>entries`.
 
    ```js
    fetch(

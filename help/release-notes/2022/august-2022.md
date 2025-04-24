@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Août 2022
 description: Les notes de mise à jour d’août 2022 pour Adobe Experience Platform.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
 workflow-type: tm+mt
-source-wordcount: '2012'
-ht-degree: 88%
+source-wordcount: '2014'
+ht-degree: 86%
 
 ---
 
@@ -94,7 +94,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonctionnalité | Description |
 | ----------- | ----------- |
-| (Beta) Prise en charge de la personnalisation basée sur les attributs pour les destinations de personnalisation | Avec la version Beta de la personnalisation basée sur les attributs, vous verrez deux nouvelles cartes dans le [catalogue de destinations](../../destinations/catalog/overview.md) : <ul><li>**[!UICONTROL Adobe Target V2]** : ce connecteur est actuellement en version Beta et disponible uniquement pour un nombre restreint de clients. Outre la fonctionnalité de la carte Adobe Target V1, le connecteur Target V2 ajoute une [étape de mappage](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) au workflow d’activation, qui vous permet de mapper les attributs de profil à Adobe Target, en activant la personnalisation basée sur les attributs de la même page et de la page suivante.</li><li>**[!UICONTROL Personnalisation avec les attributs]** : ce connecteur est actuellement en version Beta et disponible uniquement pour un nombre restreint de clients. Outre la fonctionnalité fournie par **[!UICONTROL Personnalisation]**, le connecteur **[!UICONTROL Personnalisation avec les attributs]** ajoute une [étape de mappage](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes) facultative au workflow d’activation, qui vous permet de mapper les attributs de profil à votre destination de personnalisation, en activant la personnalisation basée sur les attributs de la même page et de la page suivante.</li></ul> <br> Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, la destination **[!UICONTROL Personnalisation avec les attributs]** requiert que vous utilisiez l’[API du serveur réseau Edge](../../server-api/overview.md) pour la collecte de données. De plus, tous les appels de l’API du serveur doivent être effectués dans un [contexte authentifié](../../server-api/authentication.md). |
+| (Beta) Prise en charge de la personnalisation basée sur les attributs pour les destinations de personnalisation | Avec la version Beta de la personnalisation basée sur les attributs, vous verrez deux nouvelles cartes dans le [catalogue de destinations](../../destinations/catalog/overview.md) : <ul><li>**[!UICONTROL Adobe Target V2]** : ce connecteur est actuellement en version Beta et disponible uniquement pour un nombre restreint de clients. Outre la fonctionnalité de la carte Adobe Target V1, le connecteur Target V2 ajoute une [étape de mappage](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) au workflow d’activation, qui vous permet de mapper les attributs de profil à Adobe Target, en activant la personnalisation basée sur les attributs de la même page et de la page suivante.</li><li>**[!UICONTROL Personnalisation avec les attributs]** : ce connecteur est actuellement en version Beta et disponible uniquement pour un nombre restreint de clients. Outre la fonctionnalité fournie par **[!UICONTROL Personnalisation]**, le connecteur **[!UICONTROL Personnalisation avec les attributs]** ajoute une [étape de mappage](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes) facultative au workflow d’activation, qui vous permet de mapper les attributs de profil à votre destination de personnalisation, en activant la personnalisation basée sur les attributs de la même page et de la page suivante.</li></ul> <br> Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, la destination **[!UICONTROL Custom Personalization With Attributes]** nécessite que vous utilisiez l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/) pour la collecte de données. De plus, tous les appels API d’Edge Network doivent être effectués dans un [contexte authentifié](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication). |
 
 {style="table-layout:auto"}
 

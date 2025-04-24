@@ -2,9 +2,9 @@
 title: Priorité d’espace de noms
 description: Découvrez la priorité des espaces de noms dans Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1865'
 ht-degree: 3%
 
 ---
@@ -86,7 +86,7 @@ Pour les structures de graphique relativement complexes, la priorité de l’esp
 * Une fois que vous avez configuré des paramètres d’identité pour un sandbox donné, l’identité principale des événements d’expérience est déterminée par la priorité d’espace de noms la plus élevée dans la configuration.
    * En effet, les événements d’expérience sont dynamiques par nature. Un mappage d’identités peut contenir trois identités ou plus. La priorité de l’espace de noms garantit que l’espace de noms le plus important est associé à l’événement d’expérience.
 * Par conséquent, les configurations suivantes **ne seront plus utilisées par le profil client en temps réel** :
-   * Configuration de l’identité principale (`primary=true`) lors de l’envoi d’identités dans identityMap à l’aide de la SDK web, de Mobile SDK ou de l’API du serveur Edge Network (l’espace de noms d’identité et la valeur d’identité continueront à être utilisés dans Profile). **Remarque** : les services situés en dehors du profil client en temps réel, tels que le stockage dans le lac de données ou Adobe Target, continueront à utiliser la configuration d’identité principale (`primary=true`).
+   * La configuration de l’identité principale (`primary=true`) lors de l’envoi d’identités dans identityMap à l’aide de la SDK web, de Mobile SDK ou de l’API Edge Network (l’espace de noms d’identité et la valeur d’identité continueront à être utilisés dans Profile). **Remarque** : les services situés en dehors du profil client en temps réel, tels que le stockage dans le lac de données ou Adobe Target, continueront à utiliser la configuration d’identité principale (`primary=true`).
    * Tous les champs marqués comme identité principale dans un schéma de classe d’événement d’expérience XDM.
    * Paramètres d’identité principale par défaut dans le connecteur source Adobe Analytics (ECID ou AAID).
 * D’un autre côté, la priorité **espace de noms) ne détermine pas l’identité principale des enregistrements de profil**.

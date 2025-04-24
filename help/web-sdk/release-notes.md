@@ -3,7 +3,7 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '2288'
 ht-degree: 70%
@@ -199,7 +199,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 - Ajout de la prise en charge de la [Migration complète page par page](home.md#migrating-to-web-sdk). Le profil Adobe Target est désormais conservé lorsqu’un visiteur ou un visiteuse passe d’une page at.js à une page SDK web.
 - Ajout de la prise en charge configurable des [Indicateurs clients d’agent utilisateur à forte entropie](/help/web-sdk/use-cases/client-hints.md).
-- Ajout de la prise en charge de la commande [`applyResponse`](/help/web-sdk/commands/applyresponse.md) . Cela permet une personnalisation hybride via l’[API Edge Network Server](../server-api/overview.md).
+- Ajout de la prise en charge de la commande [`applyResponse`](/help/web-sdk/commands/applyresponse.md) . Cela permet une personnalisation hybride via l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/).
 - Les liens du mode QA fonctionnent désormais sur plusieurs pages.
 
 **Correctifs et améliorations**

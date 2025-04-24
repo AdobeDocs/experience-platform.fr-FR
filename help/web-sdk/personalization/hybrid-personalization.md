@@ -1,31 +1,31 @@
 ---
-title: Personnalisation hybride à l’aide du SDK Web et de l’API Edge Network Server
-description: Cet article explique comment utiliser le SDK Web conjointement avec l’API du serveur pour déployer la personnalisation hybride sur vos propriétés web.
+title: Personnalisation hybride à l’aide des API Web SDK et Edge Network
+description: Cet article explique comment utiliser Web SDK conjointement avec l’API Edge Network pour déployer une personnalisation hybride sur vos propriétés web.
 keywords: personnalisation;hybride;api du serveur;côté serveur;implémentation hybride;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: 9489b5345c2b13b9d05b26d646aa7f1576840fb8
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '861'
-ht-degree: 84%
+source-wordcount: '872'
+ht-degree: 57%
 
 ---
 
-# Personnalisation hybride à l’aide du SDK Web et de l’API Edge Network Server
+# Personnalisation hybride à l’aide des API Web SDK et Edge Network
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-La personnalisation hybride décrit le processus de récupération du contenu de personnalisation côté serveur, à l’aide de l’[API Edge Network Server](../../server-api/overview.md), et de le rendre côté client, à l’aide du [SDK Web](../home.md).
+La personnalisation hybride décrit le processus de récupération du contenu de personnalisation côté serveur, à l’aide de l’[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/), et de le rendre côté client, à l’aide du [SDK Web](../home.md).
 
-Vous pouvez utiliser la personnalisation hybride avec des solutions de personnalisation comme Adobe Target, Adobe Journey Optimizer ou Offer Decisioning, la différence étant le contenu de la payload [!UICONTROL Server API].
+Vous pouvez utiliser la personnalisation hybride avec des solutions de personnalisation telles qu’Adobe Target, Adobe Journey Optimizer ou Offer Decisioning, la différence étant le contenu de la payload de l’[!UICONTROL API Edge Network].
 
 ## Conditions préalables {#prerequisites}
 
 Avant d’implémenter une personnalisation hybride sur vos propriétés web, assurez-vous de respecter les conditions suivantes :
 
-* Vous avez choisi la solution de personnalisation que vous souhaitez utiliser. Cela aura un impact sur le contenu de la payload de l’[!UICONTROL API du serveur].
-* Vous avez accès à un serveur d’applications que vous pouvez utiliser pour effectuer les appels de l’[!UICONTROL API du serveur].
-* Vous avez accès a l’[API Edge Network Server](../../server-api/authentication.md).
-* Vous avez correctement [configuré](/help/web-sdk/commands/configure/overview.md) et déployé le SDK Web sur les pages que vous souhaitez personnaliser.
+* Vous avez choisi la solution de personnalisation que vous souhaitez utiliser. Cela aura un impact sur le contenu de la payload de l’[!UICONTROL API Edge Network].
+* Vous avez accès à un serveur d’applications que vous pouvez utiliser pour effectuer les appels de l’[!UICONTROL API Edge Network].
+* Vous avez accès à l’[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/).
+* Vous avez correctement [configuré](/help/web-sdk/commands/configure/overview.md) et déployé le Web SDK sur les pages que vous souhaitez personnaliser.
 
 ## Diagramme de flux {#flow-diagram}
 
@@ -35,13 +35,13 @@ Le diagramme de flux ci-dessous décrit l’ordre des étapes effectuées pour f
 
 1. Tout cookie existant précédemment stocké par le navigateur, préfixé par `kndctr_`, est inclus dans la requête du navigateur.
 1. Le navigateur web client demande la page web à votre serveur d’applications.
-1. Lorsque le serveur d’applications reçoit la requête de page, il effectue une requête `POST` au [point d’entrée de la collecte de données interactive de l’API du serveur](../../server-api/interactive-data-collection.md) pour récupérer du contenu de personnalisation. La requête `POST` contient un `event` et une `query`. S’ils sont disponibles, les cookies de l’étape précédente sont inclus dans le tableau `meta>state>entries`.
-1. L’API du serveur renvoie le contenu de personnalisation à votre serveur d’applications.
+1. Lorsque le serveur d’applications reçoit la requête de page, il effectue une requête `POST` au point d’entrée de la collecte de données interactive de l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) afin de récupérer du contenu de personnalisation. La requête `POST` contient un `event` et une `query`. S’ils sont disponibles, les cookies de l’étape précédente sont inclus dans le tableau `meta>state>entries`.
+1. L’API Edge Network renvoie le contenu de personnalisation à votre serveur d’applications.
 1. Le serveur d’applications renvoie une réponse HTML au navigateur client, contenant les [cookies d’identité et de cluster](#cookies).
-1. Sur la page client, la commande [!DNL Web SDK] `applyResponse` est appelée, en transmettant les en-têtes et le corps de la réponse de l’[!UICONTROL API du serveur] de l’étape précédente.
-1. Le [!DNL Web SDK] effectue automatiquement le rendu des offres Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) et des éléments de canal web Journey Optimizer, car l’indicateur `renderDecisions` est défini sur `true`.
-1. Les offres [!DNL HTML]/[!DNL JSON] basées sur des formulaires Target et les expériences basées sur du code Journey Optimizer sont appliquées manuellement par le biais de la méthode `applyProposition`, afin de mettre à jour l’ [!DNL DOM] en fonction du contenu de personnalisation dans la proposition.
-1. Pour les offres [!DNL HTML]/[!DNL JSON] basées sur des formulaires Target et les expériences basées sur du code Journey Optimizer, des événements d’affichage doivent être envoyés manuellement pour indiquer le moment où le contenu renvoyé a été affiché. Cela s’effectue via la commande `sendEvent`.
+1. Sur la page client, la commande [!DNL Web SDK] `applyResponse` est appelée, en transmettant les en-têtes et le corps de la réponse [!UICONTROL API Edge Network] de l’étape précédente.
+1. Le [!DNL Web SDK] effectue automatiquement le rendu des offres Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) et des éléments du canal web Journey Optimizer, car l’indicateur `renderDecisions` est défini sur `true`.
+1. Les offres [!DNL HTML]/[!DNL JSON] basées sur des formulaires de Target et les expériences basées sur du code Journey Optimizer sont appliquées manuellement par l’intermédiaire de la méthode `applyProposition` afin de mettre à jour le [!DNL DOM] en fonction du contenu de personnalisation de la proposition.
+1. Pour les offres [!DNL HTML]/[!DNL JSON] basées sur des formulaires de Target et les expériences basées sur du code de Journey Optimizer, les événements d’affichage doivent être envoyés manuellement pour indiquer le moment où le contenu renvoyé a été affiché. Cela s’effectue via la commande `sendEvent`.
 
 ## Cookies {#cookies}
 
@@ -54,7 +54,7 @@ Les cookies sont utilisés pour conserver l’identité de l’utilisateur et le
 
 ## Demander l’emplacement {#request-placement}
 
-Les requêtes d’API du serveur sont nécessaires pour obtenir des propositions et envoyer une notification d’affichage. Lors de l’utilisation d’une implémentation hybride, le serveur d’applications envoie ces requêtes à l’API du serveur.
+Les requêtes d’API Edge Network sont nécessaires pour obtenir des propositions et envoyer une notification d’affichage. Lors de l’utilisation d’une implémentation hybride, le serveur d’applications envoie ces requêtes à l’API Edge Network.
 
 | Requête | Créée par |
 |---|---|
@@ -70,14 +70,14 @@ Lorsque vous [configurez un flux de données](../../datastreams/overview.md) dan
 L’exemple de cette mise en œuvre utilise deux flux de données différents :
 
 * Un flux de données configuré pour Analytics. Ce flux de données est utilisé pour les interactions du SDK Web.
-* Un second flux de données sans configuration Analytics. Ce flux de données est utilisé pour les demandes d’API de serveur. Vous devez configurer ce flux de données avec la même configuration de destination que celle que vous avez configurée pour Analytics.
+* Un second flux de données sans configuration Analytics. Ce flux de données est utilisé pour les requêtes d’API Edge Network. Vous devez configurer ce flux de données avec la même configuration de destination que celle du flux de données que vous avez configuré pour Analytics.
 
 Ainsi, la requête côté serveur n’enregistre aucun événement Analytics, contrairement aux requêtes côté client. Cela entraîne un comptage précis des requêtes Analytics.
 
 
 ## Requête côté serveur {#server-side-request}
 
-L’exemple de requête ci-dessous illustre une requête d’API du serveur que votre serveur d’applications peut utiliser pour récupérer le contenu de personnalisation.
+L’exemple de requête ci-dessous illustre une requête d’API Edge Network que votre serveur d’applications peut utiliser pour récupérer le contenu de personnalisation.
 
 >[!IMPORTANT]
 >
@@ -167,7 +167,7 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 
 ### Réponse côté serveur {#server-response}
 
-L’exemple de réponse ci-dessous indique à quoi pourrait ressembler la réponse de l’API du serveur.
+L’exemple de réponse ci-dessous montre à quoi pourrait ressembler la réponse de l’API Edge Network.
 
 
 ```json
