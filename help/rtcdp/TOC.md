@@ -5,9 +5,9 @@ audience: user
 user-guide-title: Guide de Real-Time Customer Data Platform
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des audiences à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
 role: Admin
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: ba2154e84f24ddf4ec270121bdcbb6dd5d3dff42
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '305'
 ht-degree: 62%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 62%
       * [Interagir et acquérir de nouveaux clients sans dépendre de cookies tiers](/help/rtcdp/partner-data/prospecting.md)
       * [Personnaliser des expériences sur site pour les visiteurs inconnus à l’aide de la reconnaissance des visiteurs assistée par des partenaires](/help/rtcdp/partner-data/onsite-personalization.md)
       * [Reciblage hors site d’utilisateurs non authentifiés](./partner-data/offsite-retargeting.md)
-      * [Reciblage hors site d’utilisateurs non authentifiés](./partner-data/unauthenticated-retargeting.md)
+      * [Reciblage côté serveur non authentifié](./partner-data/unauthenticated-retargeting.md)
    * Enrichissement du profil {#profile-enrichment}
       * [Complémenter les profils propriétaires avec des attributs fournis par le partenaire](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
    * Informations personnalisées et engagement {#personalization-insights-engagement}

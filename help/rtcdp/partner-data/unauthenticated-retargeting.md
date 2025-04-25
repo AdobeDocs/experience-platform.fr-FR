@@ -1,15 +1,16 @@
 ---
-title: Reciblage hors site des visiteurs non authentifiés
+title: Reciblage côté serveur non authentifié
 description: Découvrez comment recibler des utilisateurs non authentifiés à l’aide d’ECID
 feature: Use Cases, Customer Acquisition
-source-git-commit: 672b15b0c36efbf3b7d62ec616f254fffe3dbb81
+exl-id: 008f4534-29e7-49b9-b0be-9e0c3962ee21
+source-git-commit: ba2154e84f24ddf4ec270121bdcbb6dd5d3dff42
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
-# Reciblage non authentifié {#unauthenticated-retargeting}
+# Reciblage côté serveur non authentifié {#unauthenticated-retargeting}
 
 À mesure que les cookies tiers perdent de leur efficacité, les entreprises passent à des solutions sans cookies pour un engagement personnalisé et un reciblage. Le reciblage hors site permet aux entreprises d’atteindre des utilisateurs et utilisatrices à forte intention en fonction de leurs interactions précédentes, sans dépendre de JavaScript côté client.
 
