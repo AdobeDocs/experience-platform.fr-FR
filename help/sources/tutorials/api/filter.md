@@ -2,9 +2,9 @@
 title: Filtrer les données au niveau des lignes pour un Source à l’aide de l’API Flow Service
 description: Ce tutoriel décrit les étapes à suivre pour filtrer les données au niveau source à l’aide de l’API Flow Service
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 67abd5cda9cff1da8757ef691ebbf27e9a5550c5
 workflow-type: tm+mt
-source-wordcount: '1823'
+source-wordcount: '1825'
 ht-degree: 15%
 
 ---
@@ -15,11 +15,12 @@ ht-degree: 15%
 >
 >Actuellement, la prise en charge du filtrage des données au niveau des lignes n’est disponible que pour les sources suivantes :
 >
+>* [[Amazon Redshift]](../../connectors/databases/redshift.md)
 >* [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md)
+>* [[!DNL Marketo Engage] activités standard](../../connectors/adobe-applications/marketo/marketo.md)
 >* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
 >* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
->* [[!DNL Marketo Engage] activités standard](../../connectors/adobe-applications/marketo/marketo.md)
 
 Lisez ce guide pour savoir comment filtrer les données au niveau des lignes pour une source à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
