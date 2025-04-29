@@ -3,10 +3,10 @@ title: Activer les audiences vers des destinations d’export de profils par lot
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations de profils par lots.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 11961e291188d509609a036f41084f4487cab584
+source-git-commit: 6b91527afe172530597de30b9669b86ff0262e13
 workflow-type: tm+mt
-source-wordcount: '4517'
-ht-degree: 51%
+source-wordcount: '4596'
+ht-degree: 50%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 51%
 
 Cet article explique le processus requis pour activer des audiences dans Adobe Experience Platform vers des destinations basées sur des fichiers de profils par lots, telles que l’espace de stockage dans le cloud et les destinations de marketing par e-mail.
 
-## Conditions préalables {#prerequisites}
+## Prérequis {#prerequisites}
 
 Pour activer des audiences vers des destinations, vous devez avoir réussi à vous [connecter à une destination](./connect-destination.md). Si vous ne l’avez pas déjà fait, accédez au [catalogue de destinations](../catalog/overview.md), parcourez les destinations prises en charge et configurez la destination que vous souhaitez utiliser.
 
@@ -125,7 +125,7 @@ Pour modifier plusieurs plannings en même temps, sélectionnez les audiences à
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
 >title="Activer après l’évaluation des audiences"
->abstract="L’activation s’exécute immédiatement une fois la tâche de segmentation quotidienne terminée. Ainsi, les profils les plus à jour sont exportés."
+>abstract="<p>L’activation s’exécute immédiatement une fois la tâche de segmentation quotidienne terminée. Ainsi, les profils les plus à jour sont exportés.</p><p>L’option permettant d’exporter des profils après l’évaluation de l’audience n’est <i>pas</i> disponible pour la fréquence d’exportation hebdomadaire et mensuelle.</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
@@ -140,6 +140,8 @@ Sélectionnez **[!UICONTROL Exporter des fichiers complets]** pour exporter un f
 
    * **[!UICONTROL Une fois]** : planifiez une exportation de fichiers complets sur demande unique.
    * **[!UICONTROL Tous les jours]** : planifiez des exportations de fichiers complets une fois par jour, tous les jours, au moment choisi.
+   * **[!UICONTROL Hebdomadaire]** : sélectionnez la date de début et les exportations suivantes auront lieu ce jour de la semaine jusqu’à la date de fin sélectionnée.
+   * **[!UICONTROL Mensuel]** : sélectionnez la date de début et les exportations suivantes auront lieu à cette date du mois jusqu’à la date de fin sélectionnée. Pour les mois de moins de 30 ou 31 jours, l’exportation a lieu le dernier jour du mois.
 
 2. Utilisez le bouton (bascule) **[!UICONTROL Heure]** pour sélectionner si l’exportation doit avoir lieu immédiatement après l’évaluation de l’audience ou sur une base planifiée, à une heure spécifiée. Lorsque vous sélectionnez la variable **[!UICONTROL Planifié]**, vous pouvez utiliser le sélecteur pour choisir l’heure du jour à laquelle l’exportation doit avoir lieu, au format [!DNL UTC].
 
@@ -187,6 +189,7 @@ Sélectionnez **[!UICONTROL Exporter des fichiers incrémentiels]** pour une exp
 
    * **[!UICONTROL Tous les jours]** : planification d’exportations de fichiers incrémentiels une fois par jour, tous les jours, au moment choisi.
    * **[!UICONTROL Par heure]** : planification d’exportations de fichiers incrémentiels toutes les 3, 6, 8 ou 12 heures.
+
 
 2. Utilisez le sélecteur **[!UICONTROL Heure]** pour choisir l’heure de la journée, au format [!DNL UTC], à laquelle l’exportation doit avoir lieu.
 
