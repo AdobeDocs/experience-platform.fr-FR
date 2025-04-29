@@ -2,10 +2,10 @@
 title: Créer des audiences à l’aide de SQL
 description: Découvrez comment utiliser l’extension d’audience SQL dans Adobe Experience Platform Data Distiller pour créer, gérer et publier des audiences à l’aide de commandes SQL. Ce guide couvre tous les aspects du cycle de vie des audiences, notamment la création, la mise à jour et la suppression de profils, ainsi que l’utilisation de définitions d’audience pilotées par les données pour cibler les destinations basées sur des fichiers.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9e16282f9f10733fac9f66022c521684f8267167
 workflow-type: tm+mt
-source-wordcount: '1485'
-ht-degree: 1%
+source-wordcount: '1833'
+ht-degree: 3%
 
 ---
 
@@ -100,6 +100,97 @@ L’exemple suivant montre comment ajouter des profils à une audience existante
 INSERT INTO Audience aud_test
 SELECT userId, orders, total_revenue, recency, frequency, monetization FROM customer_ds;
 ```
+
+### Remplacer les données d&#39;audience (INSERT OVERWRITE) {#replace-audience}
+
+Utilisez la commande `INSERT OVERWRITE INTO` pour remplacer tous les profils existants d’une audience par les résultats d’une nouvelle requête SQL. Cette commande est utile pour gérer les segments d’audience dynamiques en vous permettant d’actualiser entièrement le contenu d’une audience en une seule étape.
+
+>[!AVAILABILITY]
+>
+>La commande `INSERT OVERWRITE INTO` n’est disponible que pour les clientes et clients de Data Distiller. Pour en savoir plus sur le module complémentaire Distiller de données, contactez votre représentant Adobe.
+
+Contrairement à [`INSERT INTO`](#add-profiles-to-audience), qui s’ajoute à l’audience actuelle, `INSERT OVERWRITE INTO` supprime tous les membres existants de l’audience et insère uniquement ceux renvoyés par la requête. Vous bénéficiez ainsi d’un meilleur contrôle et d’une plus grande flexibilité lors de la gestion des audiences nécessitant des mises à jour fréquentes ou complètes.
+
+Utilisez le modèle de syntaxe suivant pour remplacer une audience par un nouvel ensemble de profils :
+
+```sql
+INSERT OVERWRITE INTO audience_name
+SELECT select_query
+```
+
+**Paramètres**
+
+Le tableau ci-dessous décrit les paramètres requis pour la commande `INSERT OVERWRITE INTO` :
+
+| Paramètre | Description |
+|-----------|-------------|
+| `audience_name` | Nom de l’audience créée à l’aide de la commande `CREATE AUDIENCE`. |
+| `select_query` | Instruction `SELECT` qui définit les profils à inclure dans l’audience. |
+
+**Exemple :**
+
+Dans cet exemple, l’audience `audience_monthly_refresh` est complètement remplacée par les résultats de la requête. Tous les profils non renvoyés par la requête sont supprimés de l’audience.
+
+>[!NOTE]
+>
+>Un seul chargement par lots doit être associé à l’audience pour que les opérations de remplacement fonctionnent correctement.
+
+```sql
+INSERT OVERWRITE INTO audience_monthly_refresh
+SELECT user_id FROM latest_transaction_summary WHERE total_spend > 100;
+```
+
+#### Comportement de remplacement de l’audience dans le profil client en temps réel
+
+Lorsque vous remplacez une audience, le profil client en temps réel applique la logique suivante pour mettre à jour l’appartenance à un profil :
+
+- Les profils qui apparaissent uniquement dans le nouveau lot sont marqués comme saisis.
+- Les profils qui n’existaient que dans le lot précédent sont marqués comme étant sortis.
+- Les profils présents dans les deux lots restent inchangés (aucune opération n’est effectuée).
+
+Cela permet de s’assurer que les mises à jour des audiences sont reflétées avec précision dans les systèmes et workflows en aval.
+
+**Exemple de scénario**
+
+Si un `A1` d’audience contient à l’origine :
+
+| Identifiant | NOM |
+|----|------|
+| A | Vérin |
+| B | John |
+| C | Martha |
+
+Et la requête de remplacement renvoie :
+
+| Identifiant | NOM |
+|----|------|
+| A | Stewart |
+| C | Martha |
+
+L’audience mise à jour contiendra alors :
+
+| Identifiant | NOM |
+|----|------|
+| A | Stewart |
+| C | Martha |
+
+Le profil B est supprimé, le profil A est mis à jour et le profil C reste inchangé.
+
+Si la requête de remplacement inclut un nouveau profil :
+
+| Identifiant | NOM |
+|----|------|
+| A | Stewart |
+| C | Martha |
+| D | Chris |
+
+L’audience finale sera alors :
+
+| Identifiant | NOM |
+|----|------|
+| A | Stewart |
+| C | Martha |
+| D | Chris |
 
 ### Exemple d’audience de modèle RFM {#rfm-model-audience-example}
 
