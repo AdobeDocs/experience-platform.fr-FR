@@ -2,9 +2,9 @@
 title: Définir des champs XDM dans l’API Schema Registry
 description: Découvrez comment définir différents champs lors de la création de ressources de modèle de données d’expérience (XDM) personnalisées dans l’API Schema Registry.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1197'
 ht-degree: 2%
 
 ---
@@ -36,7 +36,7 @@ Les champs [!UICONTROL Chaîne] sont indiqués par `type: string`.
 Vous pouvez éventuellement contraindre les types de valeurs qui peuvent être saisis pour la chaîne par le biais des propriétés supplémentaires suivantes :
 
 * `pattern` : modèle RegEx à contraindre par.
-* `minLength` : longueur minimale de la chaîne.
+* `minLength` : longueur minimale de la chaîne. Par défaut, les chaînes reçoivent une valeur minimale de `1`.
 * `maxLength` : longueur maximale de la chaîne.
 
 ```json
