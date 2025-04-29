@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Expiration des données de profils pseudonymes
 description: Ce document fournit des conseils généraux sur la configuration de l’expiration des données de profils pseudonymes dans Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 07786ad7f43c66411e9e167c17daa2baf51a2661
+source-git-commit: aeb9d6636f0d843bf13d09bcb4c12754e2890046
 workflow-type: tm+mt
 source-wordcount: '1245'
 ht-degree: 51%
@@ -138,3 +138,4 @@ Dans un cas d’utilisation standard, définissez l’expiration des données d�
 ## Étapes suivantes
 
 Vous êtes arrivé au bout de ce guide. À présent, vous savez comment afficher et créer des expirations de données de profils pseudonymes. Pour plus d’informations sur la gestion des données dans Experience Platform dans son ensemble, consultez le [ Guide des bonnes pratiques relatives aux droits de licence de gestion des données ](../landing/license-usage-and-guardrails/data-management-best-practices.md).
+
