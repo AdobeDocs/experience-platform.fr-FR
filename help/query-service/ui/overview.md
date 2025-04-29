@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’IU de Query Service
 description: Adobe Experience Platform Query Service fournit une interface utilisateur qui peut être utilisée pour écrire et exécuter des requêtes, afficher des requêtes précédemment exécutées et accéder à des requêtes enregistrées par des utilisateurs au sein de votre organisation.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 7e1eee48b45311f9ac358496e46ca8980df0112b
 workflow-type: tm+mt
-source-wordcount: '2276'
-ht-degree: 25%
+source-wordcount: '2767'
+ht-degree: 20%
 
 ---
 
@@ -104,6 +104,50 @@ Au fur et à mesure que vous tapez dans Query Editor, l’éditeur complète aut
 
 ![Espace de travail du Query Editor.](../images/ui/overview/query-editor.png)
 
+### Télécharger les résultats de la requête {#download-query-results}
+
+>[!AVAILABILITY]
+>
+>Les fonctionnalités de téléchargement sont disponibles uniquement pour les clients qui utilisent le module complémentaire Data Distiller. Pour en savoir plus sur Data Distiller, contactez votre représentant ou représentante Adobe.
+
+Vous pouvez désormais télécharger les résultats de la requête directement depuis l’interface utilisateur de Query Editor. Une fois la requête exécutée, vous pouvez télécharger la sortie au format CSV, XLSX ou JSON. Cette fonctionnalité simplifie les workflows pour les équipes de marketing et d’analyse en permettant un accès immédiat aux résultats des requêtes pour les analyses hors ligne, les rapports et les processus Excel.
+
+Pour télécharger les résultats de votre requête, sélectionnez **[!UICONTROL Télécharger]** dans le coin supérieur droit de l’onglet Query Editor **[!UICONTROL Résultat]**. Sélectionnez ensuite **[!UICONTROL CSV]**, **[!UICONTROL XLSX]** ou **[!UICONTROL JSON]** dans le menu déroulant. Le fichier est téléchargé automatiquement sur votre ordinateur local.
+
+>[!NOTE]
+>
+>Le bouton **[!UICONTROL Télécharger]** s’affiche uniquement lorsqu’une requête renvoie des résultats. Si aucun enregistrement n’est renvoyé, l’onglet **[!UICONTROL Résultat]** affiche un message « Aucun résultat » et l’option de téléchargement est désactivée.
+
+![Onglet Résultats de Query Editor avec l’option Télécharger et le menu déroulant mis en surbrillance.](../images/ui/overview/download-results.png)
+
+>[!NOTE]
+>
+>Lors de l’ouverture d’un fichier CSV dans Excel, l’avertissement suivant peut s’afficher : <br>« Perte possible de données. Certaines fonctionnalités risquent d’être perdues si vous enregistrez ce classeur au format .csv (délimité par des virgules). Pour conserver ces fonctionnalités, enregistrez-le au format de fichier Excel. »<br>Notez également que le formatage de la date et de l’heure peut varier en fonction du type de fichier. Les fichiers CSV conservent le format indiqué dans les résultats de la requête, tandis que les fichiers XLSX peuvent appliquer automatiquement une mise en forme localisée dans Excel.
+
+### Affichage des résultats en plein écran {#view-results}
+
+Une fois la requête exécutée, sélectionnez **[!UICONTROL Afficher les résultats]** dans l’onglet **[!UICONTROL Résultat]** pour ouvrir un affichage tabulé en plein écran de vos résultats.
+
+L’affichage plein écran affiche la sortie dans une grille redimensionnable, ce qui facilite la révision des jeux de données volumineux et l’analyse sur plusieurs colonnes. Ce mode d’aperçu est particulièrement utile lors de l’analyse de tableaux larges ou de la révision de détails au niveau des lignes.
+
+>[!NOTE]
+>
+>L’aperçu est en lecture seule et ne modifie pas votre requête ou votre jeu de données.
+
+![Boîte de dialogue de prévisualisation plein écran avec l’option Afficher les résultats sélectionnée.](../images/ui/overview/view-results-fullscreen.png)
+
+### Copier les résultats {#copy-results}
+
+Utilisez la fonctionnalité de copie améliorée de Query Editor pour copier rapidement les résultats de la requête sous forme de valeurs séparées par des virgules (CSV). Collez facilement les données copiées dans des tableurs comme Excel pour une analyse plus approfondie. Cette fonctionnalité améliore la lisibilité, préserve la mise en forme et rationalise les workflows de validation et de création de rapports sans recourir à des outils tiers.
+
+Vous pouvez copier les résultats de la requête à partir de l’onglet [!UICONTROL Résultat] ou de l’aperçu des résultats en plein écran. Dans l’onglet **[!UICONTROL Résultat]**, sélectionnez l’icône de copie (![Icône de copie.](../../images/icons/copy.png)) pour copier tous les résultats de la requête dans le presse-papiers. Dans l’onglet Résultats du requêteur , sélectionnez des lignes individuelles ou utilisez l’en-tête de colonne de case à cocher pour sélectionner toutes les lignes. Sélectionnez une seule ligne pour activer l’icône de copie.
+
+![Onglet Résultats de Query Editor avec l’icône de copie mise en surbrillance.](../images/ui/overview/query-editor-copy-icon.png)
+
+Vous pouvez également sélectionner **[!UICONTROL Afficher les résultats]** pour ouvrir l’aperçu en plein écran. Dans cette boîte de dialogue, sélectionnez des lignes individuelles ou utilisez la case à cocher située dans le coin supérieur gauche pour sélectionner toutes les lignes, puis sélectionnez l’icône de copie (![Icône de copie.](../../images/icons/copy.png)) pour copier les données sélectionnées.
+
+![Boîte de dialogue d’aperçu en plein écran avec les lignes de résultats sélectionnées et l’icône de copie mise en surbrillance.](../images/ui/overview/results-copy.png)
+
 ## Requêtes planifiées {#scheduled-queries}
 
 Les requêtes qui ont déjà été enregistrées en tant que modèle peuvent être planifiées pour s’exécuter à intervalles réguliers. Lors de la planification d’une requête, vous pouvez choisir la fréquence des exécutions, la date de début et de fin, le jour de la semaine où la requête planifiée s’exécute, ainsi que le jeu de données vers lequel exporter la requête. Les plannings de requête sont définis à l’aide de Query Editor.
@@ -113,8 +157,6 @@ Pour savoir comment planifier une requête via l’interface utilisateur, consul
 Une fois qu’une requête a été planifiée, elle apparaît dans la liste des requêtes planifiées sur l’onglet [!UICONTROL Requêtes planifiées]. Vous trouverez des détails complets sur la requête, les exécutions, le créateur et les durées en sélectionnant une requête planifiée dans la liste.
 
 ![Espace de travail Requêtes avec l’onglet Requêtes planifiées mis en surbrillance et affichant des lignes de plannings de requête.](../images/ui/overview/scheduled-queries.png)
-
-<!--  -->
 
 | Colonne | Description |
 | --- | --- |
