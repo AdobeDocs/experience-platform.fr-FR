@@ -1,7 +1,7 @@
 ---
 title: (V2) Connexion à l’audience en temps réel Pega CDH
 description: Utilisez la destination Audience en temps réel de Pega Customer Decision Hub dans Adobe Experience Platform pour envoyer des attributs de profil et des données d'appartenance à l'audience au Pega Customer Decision Hub pour la prise de décision la plus appropriée.
-source-git-commit: cc18f5c9445e5d08565cd5ac4bcbdb11ccbc1a31
+source-git-commit: a51f6bd189bc25018cf25e69fe23bc9f6b3372dd
 workflow-type: tm+mt
 source-wordcount: '1033'
 ht-degree: 16%
@@ -115,17 +115,21 @@ Vous trouverez ci-dessous un exemple de mappage d’identité correct lors de l�
 ## Données exportées / Valider l’exportation des données {#exported-data}
 
 Une mise à jour réussie de l’appartenance à une audience pour un profil insérerait l’identifiant de l’audience, son nom et ses statuts dans le magasin de données d’appartenance à une audience marketing Pega. Les données d’abonnement sont associées à un client à l’aide de Designer du profil client dans [!DNL Pega Customer Decision Hub], comme illustré ci-dessous.
+
 ![Image de l’écran de l’interface utilisateur où vous pouvez associer les données d’appartenance à une audience Adobe au client, à l’aide de Customer Profile Designer](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
 Les données d’appartenance à l’audience sont utilisées dans les politiques d’engagement Designer Pega Next-Best-Action pour la prise de décision next-best-action, comme illustré ci-dessous.
-![Image de l’écran de l’interface utilisateur où vous pouvez ajouter des champs d’appartenance à l’audience en tant que conditions dans les politiques d’engagement du Designer Next-Best-Action de Pega](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
+
+![Image de l’écran de l’interface utilisateur où vous pouvez ajouter des champs d’appartenance à l’audience en tant que conditions dans les politiques d’engagement du Designer Next-Best-Action de Pega](../../assets/catalog/personalization/pega/pega-profile-designer-engagement.png)
 
 Les champs de données Abonnement de l’audience client sont ajoutés comme prédicteurs dans les modèles adaptatifs, comme illustré ci-dessous.
+
 ![Image de l’écran de l’interface utilisateur où vous pouvez ajouter des champs d’appartenance à l’audience en tant que prédicateurs dans les modèles adaptatifs, à l’aide de Prediction Studio](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## Ressources supplémentaires {#additional-resources}
 
 Pour plus d’informations, consultez la documentation [!DNL Pega] suivante :
+
 * [Configuration d’un enregistrement client OAuth 2.0](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)
 * [Création d’une exécution en temps réel pour les flux de données](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)
 * [Gérer les enregistrements de clients dans le Designer du profil client](https://docs.pega.com/bundle/customer-decision-hub/page/customer-decision-hub/implement/profile-designer-data-management.html)

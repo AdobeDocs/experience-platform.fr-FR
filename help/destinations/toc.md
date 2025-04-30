@@ -5,10 +5,10 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: b456540a59c4b0455e8e1d52ed98d97454f8f61f
+source-git-commit: 8a9320ae00fdb611e4fd0fdc9ba80e922273359e
 workflow-type: tm+mt
-source-wordcount: '1286'
-ht-degree: 76%
+source-wordcount: '1292'
+ht-degree: 75%
 
 ---
 
@@ -203,7 +203,8 @@ ht-degree: 76%
       * [Extension Gainsight](./catalog/personalization/gainsight.md)
       * [Extension KickFire](./catalog/personalization/kickfire.md)
       * [Extension Marketo Web Personalization](./catalog/personalization/marketo-web-personalization.md)
-      * [Connexion à Pega Customer Decision Hub](./catalog/personalization/pega.md)
+      * [Connexion à l’audience en temps réel Pega CDH](./catalog/personalization/pega.md)
+      * [(V2) Connexion à l’audience en temps réel Pega CDH](./catalog/personalization/pega-v2.md)
       * [Connexion à Pega Profile](./catalog/personalization/pega-profile.md)
    * Destinations sociales{#social}
       * [Présentation des destinations sociales](./catalog/social/overview.md)
