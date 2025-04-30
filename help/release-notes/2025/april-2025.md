@@ -1,9 +1,10 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Avril 2025
 description: Les notes de mise à jour d’avril 2025 pour Adobe Experience Platform.
-source-git-commit: d2ee1adb031af83569f7b226a8881297423fc257
+exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
+source-git-commit: 7772e0b6f512c3854a03fb01580c80cc0cb41ba3
 workflow-type: tm+mt
-source-wordcount: '1663'
+source-wordcount: '1706'
 ht-degree: 29%
 
 ---
@@ -50,6 +51,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Destination | Description |
 | --- | --- |
 | [Marketo Engage Person Sync](/help/destinations/catalog/adobe/marketo-engage-person-sync.md) | Adobe a mis à jour la destination [!DNL Marketo Engage Person Sync] pour résoudre un problème qui affectait les clients lorsque plusieurs e-mails étaient présents dans le mappage d’identité. |
+| [(V2) Connexion à l’audience en temps réel Pega CDH](/help/destinations/catalog/personalization/pega-v2.md) | Utilisez la destination [!DNL (V2) Pega Customer Decision Hub Realtime Audience] dans Adobe Experience Platform pour envoyer les attributs de profil et les données d’audience à Pega Customer Decision Hub pour la prise de décision la plus appropriée, lorsque plusieurs applications Pega Customer Decision Hub sont configurées dans votre compte Pega. |
 
 **Fonctionnalité nouvelle ou mise à jour** {#destinations-new-updated-functionality}
 
