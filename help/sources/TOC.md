@@ -5,9 +5,9 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: 47f6251a190a12b86ec566e3ba72fa34a0bd028b
+source-git-commit: 7b1dbec504ba11983958c3452878cf410b2a490c
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1075'
 ht-degree: 92%
 
 ---
@@ -75,6 +75,7 @@ ht-degree: 92%
       - [Connecteur Amazon Redshift](connectors/databases/redshift.md)
       - [Apache Hive sur le connecteur Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark sur le connecteur Azure HDInsights](connectors/databases/spark.md)
+      - [Connecteur Azure Databricks](connectors/databases/databricks.md)
       - [Connecteur Azure Data Explorer](connectors/databases/data-explorer.md)
       - [Connecteur Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
       - [Connecteur Azure Table Storage](connectors/databases/ats.md)
@@ -165,6 +166,7 @@ ht-degree: 92%
          - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Apache Hive sur Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark sur Azure HDInsights](tutorials/api/create/databases/spark.md)
+         - [Azure Databricks](tutorials/api/create/databases/databricks.md)
          - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/api/create/databases/ats.md)
