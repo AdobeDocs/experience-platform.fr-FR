@@ -4,26 +4,34 @@ description: Dernières notes de mise à jour pour Adobe Experience Platform 
 keywords: debugger ; extension experience cloud debugger ; chrome ; extension ; notes de mise à jour
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: e82cd0b24504f807f7511aae1f5a0c9d77a40f74
+source-git-commit: f32c4bbf48fce2ada7cf7b75efc82e28d1ec26ff
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 98%
+source-wordcount: '850'
+ht-degree: 94%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform Debugger
 
-## Version 1.6.2 - mercredi 1 octobre 2024
+## Version 1.6.3 - 30 Avril 2025
 
 ### Correctifs et améliorations
 
-* Correction d’un problème en raison duquel le débogueur était trop sensible à toutes les erreurs CSP.
+* Correction d’un problème en raison duquel Debugger empêchait le fonctionnement des fonctions DTM et Launch.
+* Correction d’un problème en raison duquel les accès post-traités Analytics n’apparaissaient pas dans les journaux.
+* Correction d’un problème où les données dans des langues non-ASCII telles que le japonais ne s’affichaient pas correctement dans les journaux.
+
+## Version 1.6.2 - 1er octobre 2024
+
+### Correctifs et améliorations
+
+* Correction d’un problème qui rendait le Debugger trop réactif à toutes les erreurs CSP.
 
 ## Version 1.6.1 - 25 juillet 2024
 
 ### Correctifs et améliorations
 
-* Correction d’un problème qui empêchait les utilisateurs et utilisatrices d’ajouter de nouveaux codes incorporés de balises aux pages sans ces codes.
+* Correction d’un problème qui empêchait les utilisateurs et utilisatrices d’ajouter de nouveaux codes intégrés de balises aux pages sans ces codes.
 
 ## Version 1.6.0 - 11 juillet 2024
 
