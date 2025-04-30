@@ -3,10 +3,10 @@ keywords: personnalisation;Personnalisation
 title: Présentation des destinations de personnalisation
 description: Les plateformes de personnalisation collectent des données et des informations issues de comportements individuels. Ces plateformes peuvent aider les professionnels du marketing à parcourir les données anonymes, à diffuser des offres ou des annonces aux prospects en fonction de l’activité précédente ou dans le cadre d’audiences avec des habitudes similaires.
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cc18f5c9445e5d08565cd5ac4bcbdb11ccbc1a31
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 56%
+source-wordcount: '157'
+ht-degree: 54%
 
 ---
 
@@ -26,6 +26,7 @@ Actuellement, Experience Platform prend en charge les destinations de personnali
 * [Adobe Commerce](adobe-commerce.md)
 * [Connexion de personnalisation personnalisée](custom-personalization.md)
 * [Connexion à Pega Customer Decision Hub](pega.md)
+* [(V2) Connexion à Pega Customer Decision Hub](pega.md)
 * [Connexion à Pega Profile](pega-profile.md)
 
 **Extensions**
