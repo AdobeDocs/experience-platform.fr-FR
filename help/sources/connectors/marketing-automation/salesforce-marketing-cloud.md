@@ -3,11 +3,11 @@ solution: Experience Platform
 title: Présentation de Salesforce Marketing Cloud Source
 description: Découvrez comment connecter Salesforce Marketing Cloud à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
-last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+last-substantial-update: 2025-04-29T00:00:00Z
+source-git-commit: 7ff0709b62590bb80c1ed664368f28cdc4a950ea
 workflow-type: tm+mt
-source-wordcount: '339'
-ht-degree: 30%
+source-wordcount: '376'
+ht-degree: 27%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 30%
 
 >[!WARNING]
 >
->La source [!DNL Salesforce Marketing Cloud] sera abandonnée à la fin du mois de juin 2025.
+>La source [!DNL Salesforce Marketing Cloud] sera abandonnée en janvier 2026. Une nouvelle source sera publiée plus tard cette année comme alternative. Une fois la nouvelle source publiée, vous devez planifier la migration vers la nouvelle source en créant de nouvelles connexions de compte et de nouveaux flux de données avant la fin du mois de janvier 2026.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
 Experience Platform prend en charge l’ingestion de données provenant de systèmes d’automatisation marketing tiers. La prise en charge des fournisseurs d’automatisation marketing inclut [!DNL Salesforce Marketing Cloud].
 
-## Conditions préalables
+## Prérequis
 
 Avant de pouvoir connecter votre source de [!DNL Salesforce Marketing Cloud] à Experience Platform, vous devez vous assurer que les **portées d’autorisation** suivantes sont configurées sur votre combinaison d’identifiant client et de secret client [!DNL Salesforce Marketing Cloud] :
 

@@ -1,9 +1,9 @@
 ---
 title: Présentation du Source des profils utilisateur en Algérie
 description: En savoir plus sur la source Profils utilisateur d’Algolia dans le Adobe Experience Platform
-hide: true
-hidefromtoc: true
-source-git-commit: 1bde4b831f1b79de1a8292ad5f221f522e871d08
+last-substantial-update: 2025-04-29T00:00:00Z
+exl-id: b35d4753-4c33-4074-9ed5-50f94dedd8a4
+source-git-commit: 9bc7d372eba9ffcfe64f90d2d58a532411e5f1ce
 workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 1%
@@ -29,7 +29,7 @@ Les sources en libre-service (SDK par lots) fournissent toutes les fonctionnalit
 
 ![Architecture de l’intégration Algolia et Experience Platform](../../images/tutorials/create/algolia/user-profiles/algolia-aep-user-profiles-arch.png)
 
-## Conditions préalables {#prerequisites}
+## Prérequis {#prerequisites}
 
 Vous devez effectuer les étapes préalables suivantes avant de pouvoir connecter votre compte [!DNL Algolia] à Experience Platform.
 

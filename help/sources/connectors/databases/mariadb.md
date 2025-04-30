@@ -1,8 +1,9 @@
 ---
 title: Présentation du connecteur Source MariaDB
 description: Découvrez comment connecter MariaDB à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
+last-substantial-update: 2025-04-29T00:00:00Z
 exl-id: 37b8f991-dca9-4f85-9bdd-4927a015e4c0
-source-git-commit: 0bf31c76f86b4515688d3aa60deb8744e38b4cd5
+source-git-commit: 04634c6edc13d8b8da01a01077161866235c61b1
 workflow-type: tm+mt
 source-wordcount: '601'
 ht-degree: 21%
@@ -15,7 +16,7 @@ Adobe Experience Platform permet d’ingérer des données à partir de source
 
 Experience Platform prend en charge l’ingestion de données provenant d’une base de données tierce. [!DNL Experience Platform] pouvez vous connecter à différents types de bases de données, telles que Relational, NoSQL ou Data Warehouse. La prise en charge des fournisseurs de base de données inclut [!DNL MariaDB].
 
-## Conditions préalables {#prerequisites}
+## Prérequis {#prerequisites}
 
 Lisez les sections suivantes pour terminer la configuration requise avant de connecter votre compte [!DNL MariaDB] à Experience Platform.
 
