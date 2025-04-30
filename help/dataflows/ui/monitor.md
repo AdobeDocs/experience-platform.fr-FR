@@ -2,9 +2,9 @@
 title: Présentation du tableau de bord de surveillance
 description: Découvrez comment utiliser le tableau de bord de surveillance dans l’interface utilisateur de Adobe Experience Platform
 exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cca405c58551a52a044ac513921298637974e88e
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '988'
 ht-degree: 4%
 
 ---
@@ -63,12 +63,6 @@ Sélectionnez **[!UICONTROL Client et compte]** pour mettre à jour votre tablea
 
 ![Type de données de surveillance défini sur « Client et compte ».](../assets/ui/monitor-overview/customer-account.png)
 
->[!TAB Prospect]
-
-Sélectionnez **[!UICONTROL Prospect]** pour mettre à jour votre tableau de bord et afficher les mesures sur les données de prospection qui ont été ingérées dans Experience Platform au cours d’une période donnée. **Remarque** : vous ne pouvez afficher les activités de type données de prospect que si vous êtes [ autorisé à consulter les données du prospect](../../rtcdp/partner-data/prospecting.md).
-
-![Type de données de surveillance défini sur « Prospect ».](../assets/ui/monitor-overview/prospect.png)
-
 >[!TAB Enrichissement du profil de compte]
 
 Sélectionnez **[!UICONTROL Enrichissement du profil du compte]** pour mettre à jour votre tableau de bord et afficher les mesures sur les données d’enrichissement du profil. **Remarque** : vous ne pouvez afficher les mesures d’enrichissement du profil de compte que si vous êtes autorisé à [ des données B2B](../../rtcdp/b2b-tutorial.md).
@@ -81,11 +75,11 @@ Utilisez l’en-tête supérieur du tableau de bord pour une expérience de surv
 
 >[!BEGINTABS]
 
->[!TAB Sources]
+>[!TAB Lac de données]
 
-Sélectionnez **[!UICONTROL Sources]** pour afficher les mesures sur votre taux d’ingestion des sources. Lisez le guide sur la [surveillance des données des sources](monitor-sources.md) pour plus d’informations.
+Sélectionnez **[!UICONTROL Lac de données]** pour afficher les mesures relatives à votre taux d’ingestion du lac de données. Lisez le guide sur la [surveillance de l’ingestion du lac de données](monitor-sources.md) pour plus d’informations.
 
-![Tableau de bord de surveillance dans l’interface utilisateur avec la carte sources sélectionnée.](../assets/ui/monitor-overview/sources.png)
+![Tableau de bord de surveillance dans l’interface utilisateur avec la carte lac de données sélectionnée.](../assets/ui/monitor-overview/data-lake.png)
 
 >[!TAB  Identités ]
 
@@ -133,8 +127,12 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]**.
 
 En lisant ce document, vous pouvez désormais naviguer dans le tableau de bord de surveillance dans l’interface utilisateur. Pour plus d’informations sur la surveillance des données pour un service Experience Platform spécifique, consultez la documentation ci-dessous :
 
-* [Surveiller les données des sources](monitor-sources.md).
+* [Surveiller l’ingestion du lac de données](monitor-sources.md).
 * [Surveiller les données d’identité](monitor-identities.md).
 * [Surveiller les données de profil](monitor-profiles.md).
 * [Surveiller les données d’audience](monitor-audiences.md).
 * [Surveiller les données des destinations](monitor-destinations.md).
+
+<!-- >[!TAB Prospect]
+
+Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). -->

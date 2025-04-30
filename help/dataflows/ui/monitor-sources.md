@@ -1,21 +1,21 @@
 ---
-description: Découvrez comment utiliser le tableau de bord de surveillance pour surveiller les données ingérées à partir de sources.
-title: Surveillance des flux de données pour les sources dans l’interface utilisateur
+description: Découvrez comment utiliser le tableau de bord de surveillance pour surveiller les données ingérées dans le lac de données.
+title: Surveillance de l’ingestion du lac de données
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f671188fbc694b0d2d808577265f91788cb0d8e9
 workflow-type: tm+mt
-source-wordcount: '1323'
-ht-degree: 17%
+source-wordcount: '1303'
+ht-degree: 16%
 
 ---
 
-# Surveiller les flux de données pour les sources dans l’interface utilisateur
+# Surveillance de l’ingestion du lac de données
 
 >[!IMPORTANT]
 >
 >Les sources en flux continu, telles que la source [API HTTP](../../sources/connectors/streaming/http.md) ne sont actuellement pas prises en charge par le tableau de bord de surveillance. Actuellement, vous ne pouvez utiliser le tableau de bord que pour surveiller les sources de lots.
 
-Lisez ce document pour savoir comment utiliser le tableau de bord de surveillance pour surveiller vos flux de données sources dans l’interface utilisateur d’Experience Platform.
+Lisez ce document pour savoir comment utiliser le tableau de bord de surveillance pour surveiller l’ingestion du lac de données dans l’interface utilisateur d’Experience Platform.
 
 ## Commencer {#get-started}
 
@@ -28,7 +28,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 * [Profil client en temps réel](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [Sandbox](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-## Surveillez les données de vos sources à l’aide du tableau de bord de surveillance.
+## Utiliser le tableau de bord de surveillance pour l’ingestion du lac de données
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
@@ -42,15 +42,11 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 >abstract="Le traitement des sources contient des informations sur l&#39;état de l&#39;activité des données et des mesures dans le service de lac de données, y compris les enregistrements ingérés et les enregistrements ayant échoué. Consultez le guide de définition des mesures pour en savoir plus sur les mesures et les graphiques."
 >text="Learn more in documentation"
 
-<!-- In the [Experience Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
+Sélectionnez **[!UICONTROL Lac de données]** dans l’en-tête principal du tableau de bord de surveillance pour afficher le taux d’ingestion du lac de données.
 
-At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed. -->
+![Tableau de bord de surveillance avec la carte sources sélectionnée.](../assets/ui/monitor-sources/data-lake.png)
 
-Dans le tableau de bord de surveillance, sélectionnez [!UICONTROL Sources] dans l’en-tête principal pour mettre à jour votre tableau de bord avec un affichage de votre taux d’ingestion du flux de données des sources.
-
-![Tableau de bord de surveillance avec la carte sources sélectionnée.](../assets/ui/monitor-sources/sources.png)
-
-Le graphique [!UICONTROL Taux d’ingestion] affiche le taux d’ingestion des données en fonction de la période configurée. Par défaut, le tableau de bord de surveillance affiche le taux d’ingestion des dernières 24 heures. Pour savoir comment configurer votre période, consultez le guide sur la [configuration de la période de surveillance](monitor.md#configure-monitoring-time-frame).
+Le graphique [!UICONTROL Taux d’ingestion] affiche le taux d’ingestion des données en fonction de la période configurée. Par défaut, le tableau de bord de surveillance affiche les taux d’ingestion des dernières 24 heures. Pour savoir comment configurer votre période, consultez le guide sur la [configuration de la période de surveillance](monitor.md#configure-monitoring-time-frame).
 
 Le graphique peut s’afficher par défaut. Pour masquer le graphique, sélectionnez **[!UICONTROL Mesures et graphiques]** pour désactiver le bouton (bascule) et masquer le graphique.
 
@@ -132,11 +128,9 @@ Utilisez la section [!UICONTROL Échec des enregistrements] pour afficher les me
 >
 >Vous ne pouvez utiliser les diagnostics d’erreur que si la fonction a été activée pendant le processus de création de la connexion source.
 
-![Panneau Erreurs d’exécution du flux de données.](../assets/ui/monitor-sources/errors.png)
-
 ## Étapes suivantes {#next-steps}
 
-En suivant ce tutoriel, vous avez surveillé le flux de données d’ingestion au niveau source à l’aide du tableau de bord **[!UICONTROL Surveillance]**. Vous avez également identifié avec succès les erreurs qui ont contribué à l’échec des flux de données pendant le processus d’ingestion. Consultez les documents suivants pour plus d’informations :
+En suivant ce tutoriel, vous avez appris à surveiller le taux d’ingestion du lac de données à l’aide du tableau de bord **[!UICONTROL Surveillance]**. Vous avez également appris à identifier les erreurs qui provoquent des échecs de flux de données lors de l’ingestion. Consultez les documents suivants pour plus d’informations :
 
 * [Surveillance des données d’identité](./monitor-identities.md).
 * [Surveillance des données de profil](./monitor-profiles.md).
