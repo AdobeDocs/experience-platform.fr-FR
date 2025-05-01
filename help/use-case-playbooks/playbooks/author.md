@@ -1,20 +1,20 @@
 ---
 solution: Experience Platform
-title: Découvrez comment créer et partager vos propres playbooks à l’aide de l’assistant d’IA.
-description: Comment créer et partager vos propres playbooks de cas d’utilisation.
+title: Découvrez comment créer et partager vos propres manuels à l’aide de l’assistant IA.
+description: Découvrez comment créer et partager vos propres manuels de cas d’utilisation.
 role: User
 exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
-source-git-commit: 401062fbea8845f16803edb72ccb14b75c3f8409
+source-git-commit: 9583d836d4e295bcb5cc2ce41ba8ba6d2046b114
 workflow-type: tm+mt
-source-wordcount: '1667'
+source-wordcount: '1679'
 ht-degree: 0%
 
 ---
 
 
-# Créer et partager vos propres playbooks (Beta)
+# Créez et partagez vos propres playbooks (bêta)
 
-Le [!DNL Playbook Authoring Framework], optimisé par l’assistant AI dans Adobe Experience Platform, vous permet de créer, gérer et partager des playbooks efficacement dans Adobe Experience Platform.
+Le [!DNL Playbook Authoring Framework], optimisé par AI Assistant en Adobe Experience Platform, vous permet de créer, gérer et partager efficacement des playbooks au sein de Adobe Experience Platform.
 
 Le cadre suit un processus en trois étapes :
 
@@ -34,9 +34,9 @@ Pour créer un playbook avec l’assistant d’IA, procédez comme suit :
 
 Dans le panneau de navigation de gauche, sélectionnez **[!UICONTROL Playbooks]**.
 
-![ « Playbooks » mis en surbrillance dans le volet de navigation de gauche de l’interface utilisateur.](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
+![« Stratégies » mises en surbrillance dans le volet de navigation gauche de l’interface utilisateur.](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
 
-Sélectionnez **[!UICONTROL Nouveau playbook]**, puis sélectionnez **Générer le playbook avec l’assistant d’IA**.
+Sélectionnez **[!UICONTROL Nouveau manuel de jeu]**, puis Générer **le manuel avec AI Assistant**.
 
 ![Interface du playbook avec « Générer le playbook avec l’assistant d’IA » sélectionnée.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
 
@@ -80,15 +80,15 @@ Que vous créiez un playbook manuellement ou avec l’assistant d’IA, vous dev
 
 >[!NOTE]
 >
-> La prise en charge de Real-Time CDP sera ajoutée dans une version ultérieure.
+> La prise en charge de la plateforme CDP en temps réel sera ajoutée dans une version ultérieure.
 
-![L’onglet « Ressources techniques » et le bouton « Ajouter le produit requis » sont mis en surbrillance.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
+![L’onglet « Ressources techniques » et le bouton « Ajouter le produit requis » ont été mis en surbrillance.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
 
-Sélectionnez **[!UICONTROL Sélectionner une ressource]** pour associer ce playbook à un parcours, comme illustré dans l’image ci-dessous. Sélectionnez ensuite **Publier le playbook** pour finaliser le playbook.
+Choisissez l’option **[!UICONTROL Sélectionner une ressource]** pour associer ce manuel à un parcours, comme illustré dans l’image ci-dessous. **Sélectionnez ensuite Publish manuel** pour finaliser le manuel
 
-![ bouton « Sélectionner les ressources » mis en surbrillance dans l’onglet « Ressources techniques »](/help/use-case-playbooks/assets/playbooks/authoring/select-assets.png)
+![Bouton « Sélectionner les actifs » mis en évidence dans l’onglet « Ressources techniques »](/help/use-case-playbooks/assets/playbooks/authoring/select-assets.png)
 
-![Sélectionner un parcours ](/help/use-case-playbooks/assets/playbooks/authoring/journey.png)
+![Sélectionnez un parcours](/help/use-case-playbooks/assets/playbooks/authoring/journey.png)
 
 Une fois publié, le playbook extrait et associe automatiquement le schéma du parcours et les détails de l’audience.
 
@@ -112,9 +112,9 @@ L’assistant AI peut traiter diverses structures d’invite et extraire des dé
 
 **Exemple 1 :**
 
-« Créez une campagne intitulée « Achevez l’apparence » afin d’augmenter les ventes et la valeur vie client. La campagne encourage les clients à acheter des ustensiles de cuisine ou des meubles à effectuer un achat complémentaire au moyen de recommandations et d’offres personnalisées liées à leur achat. Envoyez d’abord des recommandations de produits aux clients. S’ils n’effectuent aucun achat dans les 7 jours, ils reçoivent un second message contenant des recommandations et des offres de produits. Utilisez les notifications push et les e-mails pour contacter les clients. Ciblez les clients qui ont effectué un achat au cours des 7 derniers jours dans la catégorie des ustensiles de cuisine ou des meubles et qui n’ont pas été ciblés au cours des 30 derniers jours. Dans le cadre de la campagne, nous voulons mesurer les KPI tels que les clics (e-mail, application, sms, notification push), le CTR, le CTR du portefeuille électronique, le chiffre d’affaires AOV Conversion.CLV, le total des événements d’achat (en magasin, numérique, centre d’appels). »
+« Créez une campagne intitulée « Achevez l’apparence » afin d’augmenter les ventes et la valeur vie client. La campagne encourage les clients ayant acheté des ustensiles de cuisine ou des meubles à effectuer un achat complémentaire via des recommandations personnalisées et des offres liées à leur achat. Tout d’abord, envoyez un message aux clients avec des recommandations de produits. S’ils ne font aucun achat dans les 7 jours, ils reçoivent un deuxième message avec des recommandations de produits et des offres. Utilisez les notifications push et les e-mails pour contacter les clients. Target les clients qui ont effectué un achat au cours des 7 derniers jours dans la catégorie ustensiles de cuisine ou meubles et qui n’ont pas été ciblés au cours des 30 derniers jours. Dans le cadre de la campagne, nous voulons mesurer les KPI tels que les clics (e-mail, application, sms, push), CTR, CTR E-Wallet, AOV Conversion.CLV Revenue, Total des événements d’achat (en magasin, numérique, centre d’appels).
 
-![Exemple illustrant une invite longue dans la zone de saisie de texte](/help/use-case-playbooks/assets/playbooks/authoring/long-prompt.png)
+![Exemple d’affichage d’une invite longue dans la zone de saisie de texte](/help/use-case-playbooks/assets/playbooks/authoring/long-prompt.png)
 
 **Exemple 2 :**
 
@@ -137,7 +137,7 @@ Interagissez avec les acheteurs lors d’une promotion en cours en envoyant une 
 
 **Exemple 4 :**
 
-« Vendre des chaussures aux lycéens. »
+« Vendez des chaussures aux joueurs du secondaire. »
 
 ![Exemple illustrant une invite en une seule ligne](/help/use-case-playbooks/assets/playbooks/authoring/one-liner-prompt.png)
 
@@ -157,11 +157,13 @@ Lors de la création de playbooks, tenez compte de la langue et du contenu que v
 
 Si un playbook est signalé pour du contenu inapproprié ou offensant, il est automatiquement signalé à Adobe pour révision. Adobe examine ensuite le contenu signalé. S’il est jugé inapproprié, le client en est informé et le playbook est supprimé.
 
-## Partage de playbooks dans les sandbox {#sharing-playbooks-sandboxes}
+## Partage de playbooks dans les sandbox {#share-playbooks-sandboxes}
 
-Si votre organisation contient plusieurs sandbox, vous n’avez pas besoin de partager manuellement les playbooks entre eux. Une fois que vous avez créé et publié un playbook dans un sandbox, il est disponible dans tous les sandbox de cette organisation. Vous pouvez ensuite créer des instances de ce playbook dans l’un des autres sandbox.
+Lorsque vous créez et publiez un playbook dans un sandbox, il est automatiquement disponible dans tous les sandbox de votre organisation. Cela élimine la nécessité d’un partage manuel et vous permet de créer facilement des instances du playbook dans n’importe quel autre sandbox.
 
-Si le playbook référence des champs qui ne sont pas disponibles dans le schéma d’union du sandbox cible ou ne disposent pas des autorisations requises, un message d’erreur peut s’afficher lors de la création de l’instance. Ce message répertorie les champs manquants et/ou les autorisations manquantes.
+>[!TIP]
+>
+>Si le playbook référence des champs qui ne sont pas disponibles dans le schéma d’union du sandbox cible ou ne disposent pas des autorisations requises, un message d’erreur peut s’afficher lors de la création de l’instance. Ce message répertorie les champs manquants et/ou les autorisations manquantes.
 
 Si des champs sont manquants dans votre schéma d’union, une boîte de dialogue les met en surbrillance lors de l’importation.
 
@@ -169,20 +171,20 @@ Si des champs sont manquants dans votre schéma d’union, une boîte de dialogu
 
 ## Partage de vos playbooks dans toutes les organisations {#sharing-playbooks-organizations}
 
-Pour partager un playbook d’une organisation à une autre, procédez comme suit :
+Le partage de playbooks entre les organisations permet d’assurer la cohérence et l’efficacité lorsque plusieurs équipes doivent suivre les mêmes bonnes pratiques. Pour partager un playbook d’une organisation à une autre, procédez comme suit :
 
-* **Connectez-vous à l’organisation source** : accédez à l’organisation qui contient le playbook que vous avez créé et que vous souhaitez partager à partir de l’onglet **[!UICONTROL Vos playbooks]**.
-* **Publier le playbook** : si le playbook n’est pas déjà publié, vous devez le publier avant de le partager.
+1. **Connectez-vous à l’organisation source** : accédez à l’organisation qui contient le playbook que vous avez créé et que vous souhaitez partager à partir de l’onglet **[!UICONTROL Vos playbooks]**.
+2. **Publier le playbook** : si le playbook n’est pas déjà publié, vous devez le publier avant de le partager.
 
->[!NOTE]
->
->Un partenariat doit être établi entre les organisations source et cible pour permettre le partage des playbooks. Découvrez comment [créer une demande de partenariat d’organisation](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sharing-packages-across-orgs).
+   >[!NOTE]
+   >
+   >Un partenariat doit être établi entre les organisations source et cible pour permettre le partage des playbooks. Découvrez comment [créer une demande de partenariat d’organisation](/help/sandboxes/ui/sharing-packages-across-orgs.md#create-an-organization-partnership-request).
 
-* **Lancer le partage** : une fois le playbook publié et le partenariat établi, sélectionnez **[!UICONTROL Partager le playbook]**.
-* **Sélectionnez l’organisation cible** : sélectionnez l’organisation avec laquelle vous souhaitez partager le playbook lorsque vous y êtes invité.
-* **Confirmer et partager** : confirmez votre sélection. Vous recevrez des messages de confirmation indiquant que le partage a réussi.
-* **Vérifier l’organisation cible** : connectez-vous à l’organisation cible pour vérifier que le playbook est disponible.
-* **Importer le playbook** : sélectionnez **[!UICONTROL Importer]** pour importer le playbook dans l’organisation cible. Vous pouvez l’afficher dans l’onglet **Playbooks**.
+3. **Lancer le partage** : une fois le playbook publié et le partenariat établi, sélectionnez **[!UICONTROL Partager le playbook]**.
+4. **Sélectionnez l’organisation cible** : sélectionnez l’organisation avec laquelle vous souhaitez partager le playbook lorsque vous y êtes invité.
+5. **Confirmer et partager** : confirmez votre sélection. Vous recevrez des messages de confirmation indiquant que le partage a réussi.
+6. **Vérifier l’organisation cible** : connectez-vous à l’organisation cible pour vérifier que le playbook est disponible.
+7. **Importer le playbook** : sélectionnez **[!UICONTROL Importer]** pour importer le playbook dans l’organisation cible. Vous pouvez l’afficher dans l’onglet **Playbooks**.
 
 Si le playbook n’apparaît pas, assurez-vous qu’il est publié et que le partenariat d’organisation est actif.
 
@@ -190,13 +192,13 @@ Si le playbook n’apparaît pas, assurez-vous qu’il est publié et que le par
 >
 >Le partage de playbook transitif n’est pas pris en charge. Si vous partagez un playbook d’une organisation à une autre, puis que vous l’importez, il ne peut pas être partagé à nouveau de l’organisation de réception vers une troisième organisation.
 
-## Autorisations nécessaires
+## Autorisations nécessaires {#required-permissions}
 
 Pour accéder au sandbox et utiliser cette fonctionnalité, vous avez besoin des autorisations suivantes :
 
-* **Autorisations des sandbox** :
+### Autorisations des sandbox
 
-Ils sont nécessaires pour accéder à l’environnement Sandbox où la fonctionnalité existe :
+Ces autorisations sont requises pour accéder à l’environnement Sandbox où la fonctionnalité existe :
 
 * **Gérer le sandbox**
 * **Afficher sandbox**
@@ -214,13 +216,13 @@ Ces autorisations vous permettent d’effectuer les opérations suivantes :
 * Accès à la fonctionnalité dans le sandbox
 * Gérer et partager des packages selon les besoins
 
-Ces autorisations se trouvent dans la section **[!UICONTROL Sandbox]** de la liste des autorisations.
+Ces autorisations se trouvent dans la **[!UICONTROL section Sandbox]** de la liste des autorisations.
 
-![Liste des autorisations avec les autorisations appropriées mises en surbrillance.](/help/use-case-playbooks/assets/playbooks/authoring/permissions.png)
+![Liste des autorisations avec les autorisations pertinentes mises en surbrillance.](/help/use-case-playbooks/assets/playbooks/authoring/permissions.png)
 
 ### Parcours et objets associés - autorisations
 
-Lors de la création de Parcours qui utilisent des playbooks, vous référencerez probablement d’autres objets tels que **Canaux**, **Audiences** et d’autres entités. Chacune de ces options possède son propre jeu d’autorisations.
+Lorsque vous créez des parcours qui utilisent des Playbooks, vous référencez probablement d’autres objets tels que **des canaux**, **des Audiences** et d’autres entités. Chacun d’eux possède son propre jeu d’autorisations.
 
 Il s’agit des autorisations essentielles pour les actions liées au Parcours, telles que :
 
