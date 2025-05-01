@@ -2,7 +2,7 @@
 title: Algorithme d’optimisation de l’identité
 description: Découvrez l’algorithme d’optimisation des identités dans Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: df89afb7131c57b9400788ce30c420b9830c022e
 workflow-type: tm+mt
 source-wordcount: '1617'
 ht-degree: 5%
@@ -147,7 +147,7 @@ Avec l’algorithme d’optimisation des identités, les valeurs d’identité i
 
 ![message-incorrect](../images/identity-settings/bad-email.png)
 
-### Association d’événements anonymes
+## Association d’événements anonymes
 
 Les ECID stockent les événements non authentifiés (anonymes), tandis que le CRMID stocke les événements authentifiés. Dans le cas des appareils partagés, l’ECID (porteur d’événements non authentifiés) est associé au **dernier utilisateur authentifié**.
 
