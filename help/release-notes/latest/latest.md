@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Avril 2025
 description: Les notes de mise à jour d’avril 2025 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7772e0b6f512c3854a03fb01580c80cc0cb41ba3
+source-git-commit: 3836b369d609448146a273fc6cf29061fd1ea422
 workflow-type: tm+mt
-source-wordcount: '1706'
-ht-degree: 29%
+source-wordcount: '2040'
+ht-degree: 27%
 
 ---
 
@@ -30,7 +30,9 @@ Mises à jour des fonctionnalités et de la documentation existantes dans Adobe 
 - [Service d’identités](#identity)
 - [Query Service](#query-service)
 - [Profil client en temps réel](#profile)
+- [Sandbox](#sandboxes)
 - [Sources](#sources)
+- [Playbooks de cas d’utilisation](#use-case-playbooks)
 
 ## Experience League {#experience-league}
 
@@ -126,6 +128,20 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 
 Pour en savoir plus sur le profil client en temps réel, lisez d’abord la [présentation des profils](../../profile/home.md).
 
+## Sandbox {#sandboxes}
+
+Adobe Experience Platform est conçu pour enrichir les applications d’expérience digitale à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience digitale en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle. Pour répondre à ce besoin, Experience Platform fournit des sandbox qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Extension de prise en charge du plug-in d’outils Sandbox | Les actions personnalisées peuvent désormais être copiées en tant qu’objet dépendant lors de la duplication d’objets de Parcours dans l’outil Sandbox. De plus, vous pouvez sélectionner des actions existantes à réutiliser dans le sandbox cible. Ils peuvent également être ajoutés indépendamment à un package. Pour plus d’informations sur les objets Adobe Journey Optimizer pris en charge, consultez le guide [sandbox tooling](../../sandboxes/ui/sandbox-tooling.md#adobe-journey-optimizer-objects) . |
+
+{style="table-layout:auto"}
+
+Pour plus d’informations sur les sandbox, consultez la [vue d’ensemble des sandbox](../../sandboxes/home.md).
+
 ## Sources {#sources}
 
 Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
@@ -152,3 +168,21 @@ Utilisez les sources dans Experience Platform pour ingérer des données à par
 {style="table-layout:auto"}
 
 Pour plus d’informations, reportez-vous à la [vue d’ensemble des sources](../../sources/home.md).
+
+## Playbooks de cas d’utilisation {#use-case-playbooks}
+
+Les playbooks de cas d’utilisation ont été conçus à l’origine pour vous aider à surmonter les défis de la prise en main de Real-Time Customer Data Platform ou Adobe Journey Optimizer. Ils continuent d’évoluer et vous permettent désormais de lancer des cas d’utilisation marketing clés et de vous inspirer de ressources préconfigurées pour les tester et passer en production.
+
+Les playbooks de cas d’utilisation sont passés d’un outil de découverte à un cadre collaboratif. Ils vous aident désormais à créer, gérer et partager vos propres playbooks dans différentes organisations.
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| [!BADGE Beta ]{type=Informative} Créez et partagez vos propres playbooks | Un nouveau framework de création de playbooks vous permet de créer, gérer et partager vos propres playbooks de cas d’utilisation. Cela inclut la prise en charge de la capture de métadonnées essentielles, de la modification des cartes de parcours et de l’association des ressources techniques pertinentes. Vous pouvez partager des playbooks entre les organisations pour normaliser les approches marketing et maintenir la cohérence. |
+
+{style="table-layout:auto"}
+
+Pour découvrir comment créer et partager vos propres playbooks, lisez le document [Créer et partager vos propres playbooks](/help/use-case-playbooks/playbooks/author.md).
+
+Pour plus d’informations, lisez la [ Présentation des playbooks de cas d’utilisation ](/help/use-case-playbooks/playbooks/overview.md), qui fournit une présentation des fonctionnalités des playbooks, de leur objectif et d’une démonstration de bout en bout, y compris sur la création d’instances et l’importation de ressources générées dans d’autres environnements de sandbox.
