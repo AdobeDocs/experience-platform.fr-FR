@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation des connecteurs source
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 02fafc830e964bbfa94c125c2006f4998d9d193d
+source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
 workflow-type: tm+mt
 source-wordcount: '1559'
 ht-degree: 67%
@@ -32,6 +32,7 @@ Les sources suivantes sont disponibles uniquement pour les clients [Adobe Real-T
 
 - [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE lot]{type=Informative}
+- [[!DNL Azure Databricks]](connectors/databases/databricks.md) [!BADGE lot]{type=Informative}
 - [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE lot]{type=Informative}
 - [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE lot]{type=Informative}
@@ -66,7 +67,7 @@ Experience Platform permet d’ingérer des données provenant d’autres applic
    - [Créer une connexion source Attributs du client dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [Présentation de la source [!DNL Marketo Engage]](connectors/adobe-applications/marketo/marketo.md)
    - [Créer une connexion source  [!DNL Marketo Engage]  dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/marketo.md)
-   - [Création d’une connexion source et d’un flux de données pour les [!DNL Marketo Engage] données d’activité personnalisées](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
+   - [Créer une connexion source et  [!DNL Marketo Engage]  flux de données pour les données d’activité personnalisées](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
 
 ### Publicité {#advertising}
 
@@ -78,18 +79,18 @@ Experience Platform prend en charge l’ingestion de données provenant d’un s
 
 Experience Platform prend en charge l’ingestion de données provenant d’un système Analytics tiers. Pour plus d’informations, consultez les documents connexes suivants :
 
-- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md)[!BADGE Lot]{type=Informative}
-- [[!DNL Pendo]](connectors/analytics/pendo-webhook.md)[!BADGE Streaming]{type=Positive}
-- [[!DNL RainFocus]](connectors/analytics/rainfocus.md)[!BADGE Streaming]{type=Positive}
+- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) [!BADGE lot]{type=Informative}
+- [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) [!BADGE Streaming]{type=Positive}
+- [[!DNL RainFocus]](connectors/analytics/rainfocus.md) [!BADGE Streaming]{type=Positive}
 
 ### Stockage dans le cloud {#cloud-storage}
 
-Les sources de stockage dans le cloud peuvent mettre vos propres données en Experience Platform sans avoir besoin de télécharger, de formater ou de charger. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. L’interface utilisateur permet d’intégrer chaque étape du processus dans le workflow des sources. Pour plus d’informations, consultez les documents connexes suivants :
+Les sources de stockage dans le cloud peuvent importer vos propres données dans Experience Platform sans avoir à les télécharger, les formater ou les charger. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. L’interface utilisateur permet d’intégrer chaque étape du processus dans le workflow des sources. Pour plus d’informations, consultez les documents connexes suivants :
 
-- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md)[!BADGE Lot]{type=Informative}
-- [[!DNL Azure Blob]](connectors/cloud-storage/blob.md)[!BADGE Lot]{type=Informative}
-- [[!DNL Amazon S3]](connectors/cloud-storage/s3.md)[!BADGE Lot]{type=Informative}
-- [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md)[!BADGE Lot]{type=Informative}
+- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE lot]{type=Informative}
+- [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE lot]{type=Informative}
+- [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) [!BADGE lot]{type=Informative}
+- [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) [!BADGE lot]{type=Informative}
 - [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) [!BADGE lot]{type=Informative}
 - [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) [!BADGE lot]{type=Informative}
 - [[!DNL FTP]](connectors/cloud-storage/ftp.md) [!BADGE lot]{type=Informative}
@@ -120,47 +121,46 @@ Experience Platform prend en charge l’ingestion de données provenant d’une
 - [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md) [!BADGE lot]{type=Informative}
 - [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) [!BADGE lot]{type=Informative}
 - [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) [!BADGE lot]{type=Informative}
-- [[!DNL Zendesk]](connectors/customer-success/zendesk.md)[!BADGE Lot]{type=Informative}
+- [[!DNL Zendesk]](connectors/customer-success/zendesk.md) [!BADGE lot]{type=Informative}
 
 ### Base de données {#database}
 
 Experience Platform prend en charge l’ingestion de données provenant d’une base de données tierce. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
-- [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md)[!BADGE Lot]{type=Informative}
+- [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE lot]{type=Informative}
 - [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE lot]{type=Informative}
-- [[!DNL Azure Databricks]](connectors/databases/databricks.md) [!BADGE lot]{type=Informative}
 - [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE lot]{type=Informative}
 - [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE lot]{type=Informative}
 - [[!DNL Couchbase]](connectors/databases/couchbase.md) [!BADGE lot]{type=Informative}
 - [[!DNL GreenPlum]](connectors/databases/greenplum.md) [!BADGE lot]{type=Informative}
-- [[!DNL HP Vertica]](connectors/databases/hp-vertica.md)[!BADGE Lot]{type=Informative}
-- [[!DNL IBM DB2]](connectors/databases/ibm-db2.md)[!BADGE Lot]{type=Informative}
+- [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) [!BADGE lot]{type=Informative}
+- [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) [!BADGE lot]{type=Informative}
 - [[!DNL MariaDB]](connectors/databases/mariadb.md) [!BADGE lot]{type=Informative}
 - [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) [!BADGE lot]{type=Informative}
 - [[!DNL MySQL]](connectors/databases/mysql.md) [!BADGE lot]{type=Informative}
-- [[!DNL Oracle]](connectors/databases/oracle.md)[!BADGE Lot]{type=Informative}
-- [[!DNL Phoenix]](connectors/databases/phoenix.md)[!BADGE Lot]{type=Informative}
-- [[!DNL PostgreSQL]](connectors/databases/postgres.md)[!BADGE Lot]{type=Informative}
-- [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md)[!BADGE Lot]{type=Informative}
+- [[!DNL Oracle]](connectors/databases/oracle.md) [!BADGE lot]{type=Informative}
+- [[!DNL Phoenix]](connectors/databases/phoenix.md) [!BADGE lot]{type=Informative}
+- [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE lot]{type=Informative}
+- [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE lot]{type=Informative}
 
 ### Partenaires de données et d’identité {#data-partner}
 
-Experience Platform prend en charge l’ingestion de données à partir d’un partenaire de données et d’identité. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+Experience Platform prend en charge l’ingestion de données provenant d’un partenaire de données et d’identité. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
 - [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE lot]{type=Informative}
 - [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE lot]{type=Informative}
 - [[!DNL Algolia User Profiles]](connectors/data-partners/algolia-user-profiles.md) [!BADGE lot]{type=Informative}
 - [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) [!BADGE lot]{type=Informative}
 - [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) [!BADGE lot]{type=Informative}
-- [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md)[!BADGE Lot]{type=Informative}
+- [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE lot]{type=Informative}
 
 ### eCommerce {#ecommerce}
 
 Experience Platform prend en charge l’ingestion de données provenant d’un système tiers d’eCommerce. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
-- [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md)[!BADGE Lot]{type=Informative}
+- [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) [!BADGE lot]{type=Informative}
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md) [!BADGE lot]{type=Informative}
-- [[!DNL Shopify]](connectors/ecommerce/shopify-streaming.md)[!BADGE Streaming]{type=Positive}
+- [[!DNL Shopify]](connectors/ecommerce/shopify-streaming.md) [!BADGE Streaming]{type=Positive}
 
 ### Système local {#local-system}
 
@@ -230,7 +230,7 @@ Grâce au contrôle d’accès basé sur les attributs, vous pouvez appliquer de
 
 >[!TIP]
 >
->Le contrôle d’accès basé sur les attributs fonctionne comme suit : **des rôles** sont créés pour classer les types d’utilisateurs qui interagissent avec votre instance Experience Platform. **Des étiquettes** sont appliquées aux **rôles** pour désigner l’accès à ce rôle donné. Les **libellés** sont également appliqués aux ressources telles que les champs de schéma et les segments. Pour qu’un utilisateur ait accès à certains segments et champs de schéma, il doit être ajouté à *un rôle avec le même libellé que celui attribué à la ressource interrogée*. Pour plus d’informations, consultez le guide [complet du contrôle d’accès basé sur les attributs](../access-control/abac/end-to-end-guide.md).
+>Le fonctionnement du contrôle d’accès basé sur les attributs est le suivant : les **rôles** sont créés pour catégoriser les types d’utilisateurs qui interagissent avec votre instance Experience Platform. Les **libellés** sont appliqués aux **rôles** pour désigner l’accès de ce rôle donné. Les **libellés** sont également appliqués aux ressources telles que les champs de schéma et les segments. Pour qu’un utilisateur ait accès à certains segments et champs de schéma, il doit être ajouté à *un rôle avec le même libellé que celui attribué à la ressource interrogée*. Pour plus d’informations, consultez le guide [complet du contrôle d’accès basé sur les attributs](../access-control/abac/end-to-end-guide.md).
 
 - Appliquez des libellés aux champs de schéma pour définir l’accès à des champs de schéma spécifiques dans votre organisation. Une fois l’accès à des champs de schéma spécifiques établi, les utilisateurs ne pourront créer des mappages que pour les champs auxquels ils ont accès.
 - Les utilisateurs ne disposant pas des rôles appropriés ne pourront pas créer ni mettre à jour des flux de données avec des mappages impliquant des champs de schéma inaccessibles. En outre, les utilisateurs non autorisés ne peuvent pas mettre à jour, supprimer, activer ou désactiver les flux de données existants avec des champs de schéma inaccessibles.
@@ -242,7 +242,7 @@ Pour plus d’informations sur le contrôle d’accès basé sur les attributs, 
 
 En utilisant l’une des sources libellées comme étant en version Beta (« Beta »), vous reconnaissez que la version Beta est fournie ***« telle quelle », sans garantie d’aucune sorte***.
 
-Adobe n’a aucune obligation de tenir à jour, corriger, mettre à jour, modifier, remplacer ou prendre en charge cette version Beta.Il vous est conseillé d’utiliser Informatif et de ne pas compter de quelque manière que ce soit sur le bon fonctionnement ou la performance de cette version bêta et/ou des documents d’accompagnement. La version Beta est considérée comme étant une information confidentielle dʼAdobe.
+Adobe n’a aucune obligation de tenir à jour, corriger, mettre à jour, modifier, remplacer ou prendre en charge cette version Beta. Il est conseillé d’utiliser le Beta et/ou les éléments qui l’accompagnent pour vous informer et de ne pas vous fier, de quelque manière que ce soit, au bon fonctionnement ou aux performances de ce dernier. La version Beta est considérée comme étant une information confidentielle dʼAdobe.
 
 Tout « commentaire » (informations relatives à la version Beta, y compris, mais sans s’y limiter, les problèmes ou défauts rencontrés lors de son utilisation, les suggestions, les améliorations et les recommandations) que vous fournissez à Adobe est par la présente cédé à Adobe. Cela inclut tous les droits, titres et intérêts relatifs à ces commentaires.
 
