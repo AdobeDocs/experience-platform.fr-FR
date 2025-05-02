@@ -4,7 +4,7 @@ description: Dernières notes de mise à jour pour Adobe Experience Platform 
 keywords: debugger ; extension experience cloud debugger ; chrome ; extension ; notes de mise à jour
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: f32c4bbf48fce2ada7cf7b75efc82e28d1ec26ff
+source-git-commit: a5af5c194bc6b3bf9a6e119a2f147efa85f263f0
 workflow-type: tm+mt
 source-wordcount: '850'
 ht-degree: 94%
@@ -17,7 +17,7 @@ ht-degree: 94%
 
 ### Correctifs et améliorations
 
-* Correction d’un problème en raison duquel Debugger empêchait le fonctionnement des fonctions DTM et Launch.
+* Correction d’un problème en raison duquel le débogueur empêchait le fonctionnement des fonctions de gestion dynamique des balises et .
 * Correction d’un problème en raison duquel les accès post-traités Analytics n’apparaissaient pas dans les journaux.
 * Correction d’un problème où les données dans des langues non-ASCII telles que le japonais ne s’affichaient pas correctement dans les journaux.
 
