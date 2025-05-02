@@ -4,9 +4,9 @@ title: Tableau de bord d’utilisation de la licence
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 62f5ecf82df46284365e64d633c8242ac45567bc
 workflow-type: tm+mt
-source-wordcount: '3398'
+source-wordcount: '3442'
 ht-degree: 39%
 
 ---
@@ -307,7 +307,7 @@ Le tableau de bord d’utilisation des licences établit des rapports sur plusie
 | [!UICONTROL Richesse du profil - Nombre de packs] | Augmentation de votre volume total de données autorisé de 25 Ko par profil pour chaque pack de richesse de profil supplémentaire. |
 | [!UICONTROL Heures de calcul de Query Service] | Mesure du temps nécessaire aux moteurs de service de requête pour lire, traiter et écrire des données dans le lac de données lorsqu’une requête par lots est exécutée. |
 | [!UICONTROL Nombre de packs de segmentation en flux continu] | Les packs mettent à jour l’appartenance à un segment pour un profil de personne lorsque de nouvelles données entrent dans le service de segmentation par le biais d’un flux de streaming. L’appartenance au segment est évaluée en fonction des attributs de profil de la personne actuelle et de la valeur de l’événement en cours, sans tenir compte du comportement historique. La segmentation en streaming est une fonctionnalité partagée. |
-| [!UICONTROL Volume total de données] | Quantité totale de données disponibles pour le profil client en temps réel à utiliser dans les workflows d’engagement. Pour en savoir plus, consultez les [questions fréquentes sur le volume total de données](../../landing/license-usage-and-guardrails/total-data-volume.md). |
+| [!UICONTROL Volume total de données] | Quantité totale de données disponibles pour le profil client en temps réel à utiliser dans les workflows d’engagement. Le volume total de données est calculé à l’aide de la formule suivante : **Volume total de données = Audience adressable × Richesse moyenne du profil**. Cette mesure reflète les données stockées uniquement dans le magasin de profils et exclut le stockage du lac de données. Il offre une vue plus ciblée des données relatives à l’engagement basé sur les profils. Pour en savoir plus, consultez les [questions fréquentes sur le volume total de données](../../landing/license-usage-and-guardrails/total-data-volume.md). |
 | [!UICONTROL Volume total de données sortantes] | Volume annuel cumulé de données exportées de Adobe Experience Platform vers des entrepôts de données tiers. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Syntaxe SQL dans Query Service
 description: Ce document détaille et explique la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5adc587a232e77f1136410f52ec207631b6715e3
+source-git-commit: a0b7cd9e406b4a140ef70f8d80cb27ba6817c0cd
 workflow-type: tm+mt
-source-wordcount: '4623'
+source-wordcount: '4649'
 ht-degree: 4%
 
 ---
@@ -110,17 +110,21 @@ SELECT * FROM table_to_be_queried SNAPSHOT AS OF end_snapshot_id;
 
 SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id;
 
-SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN HEAD AND start_snapshot_id;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN 'HEAD' AND start_snapshot_id;
 
-SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND TAIL;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND 'TAIL';
 
-SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND end_snapshot_id) C 
+SELECT * FROM (SELECT id FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id) C;
 
 (SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id) a
   INNER JOIN 
 (SELECT * from table_to_be_joined SNAPSHOT AS OF your_chosen_snapshot_id) b 
   ON a.id = b.id;
 ```
+
+>[!NOTE]
+>
+>Lors de l’utilisation de `HEAD` ou `TAIL` dans une clause de `SNAPSHOT`, vous devez les placer entre guillemets simples (par exemple, « HEAD », « TAIL »). Leur utilisation sans guillemets génère une erreur de syntaxe.
 
 Le tableau ci-dessous explique la signification de chaque option de syntaxe dans la clause SNAPSHOT.
 
@@ -130,7 +134,7 @@ Le tableau ci-dessous explique la signification de chaque option de syntaxe dans
 | `AS OF end_snapshot_id` | Lit les données telles qu’elles étaient à l’ID d’instantané spécifié (inclus). |
 | `BETWEEN start_snapshot_id AND end_snapshot_id` | Lit les données comprises entre les ID d’instantané de début et de fin spécifiés. Il est exclusif de la `start_snapshot_id` et inclusif de la `end_snapshot_id`. |
 | `BETWEEN HEAD AND start_snapshot_id` | Lit les données du début (avant le premier instantané) à l’ID d’instantané de début spécifié (inclus). Notez que cette opération renvoie uniquement des lignes dans `start_snapshot_id`. |
-| `BETWEEN end_snapshot_id AND TAIL` | Lit les données juste après la `end-snapshot_id` spécifiée jusqu’à la fin du jeu de données (à l’exclusion de l’ID d’instantané). Cela signifie que si `end_snapshot_id` est le dernier instantané du jeu de données, la requête ne renvoie aucune ligne, car il n’existe aucun instantané au-delà de ce dernier. |
+| `BETWEEN end_snapshot_id AND TAIL` | Lit les données juste après la `end_snapshot_id` spécifiée jusqu’à la fin du jeu de données (à l’exclusion de l’ID d’instantané). Cela signifie que si `end_snapshot_id` est le dernier instantané du jeu de données, la requête ne renvoie aucune ligne, car il n’existe aucun instantané au-delà de ce dernier. |
 | `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | Lit les données à partir de l’ID d’instantané spécifié à partir de `table_to_be_queried` et le joint avec les données de `table_to_be_joined` telles qu’elles étaient au `your_chosen_snapshot_id`. La jointure est basée sur les identifiants correspondants des colonnes d&#39;identifiants des deux tables jointes. |
 
 Une clause `SNAPSHOT` fonctionne avec une table ou un alias de table, mais pas au-dessus d&#39;une sous-requête ou d&#39;une vue. Une clause `SNAPSHOT` fonctionne partout où une requête `SELECT` sur une table peut être appliquée.
@@ -141,7 +145,7 @@ En outre, vous pouvez utiliser `HEAD` et `TAIL` comme valeurs de décalage spéc
 >
 >Si vous effectuez une requête entre deux identifiants d’instantané, les deux scénarios suivants peuvent se produire si l’instantané de début a expiré et que l’indicateur de comportement de secours facultatif (`resolve_fallback_snapshot_on_failure`) est défini :
 >
->- Si l’indicateur de comportement de secours facultatif est défini, Query Service choisit l’instantané disponible le plus ancien, le définit comme instantané de début et renvoie les données entre l’instantané disponible le plus ancien et l’instantané de fin spécifié. Ces données **inclues** de l’instantané disponible le plus ancien.
+>- Si l’indicateur de comportement de secours facultatif est défini, Query Service choisit l’instantané disponible le plus ancien, le définit comme instantané de début et renvoie les données comprises entre l’instantané disponible le plus ancien et l’instantané de fin spécifié. Ces données **inclues** de l’instantané disponible le plus ancien.
 
 ### Clause WHERE
 
