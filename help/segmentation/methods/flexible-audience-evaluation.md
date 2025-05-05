@@ -3,9 +3,9 @@ title: Guide d’évaluation d’audience flexible
 description: Découvrez comment utiliser l’évaluation d’audience flexible pour exécuter des traitements de segmentation par lots sur demande.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 7084b05d1ae142016cb2158fd22d07a240385190
+source-git-commit: 9aa638903eaf9bf29ce1da3d62f8e69c15ffe50a
 workflow-type: tm+mt
-source-wordcount: '1063'
+source-wordcount: '1084'
 ht-degree: 6%
 
 ---
@@ -326,7 +326,7 @@ Une fois les audiences correctes répertoriées, vous pouvez poursuivre la requ�
 
 La vidéo suivante montre comment accéder à l’évaluation d’audience flexible et l’utiliser dans Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453642?&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Questions fréquentes {#faq}
 
@@ -337,6 +337,14 @@ La section suivante répertorie les questions fréquentes relatives à l’éval
 +++ Réponse
 
 Vous pouvez activer une audience à l’aide de l’évaluation d’audience flexible immédiatement après sa création.
+
++++
+
+### Combien de temps dure l’évaluation d’audience flexible ?
+
++++ Réponse
+
+Un traitement d’évaluation d’audience flexible peut prendre jusqu’à quatre heures.
 
 +++
 
