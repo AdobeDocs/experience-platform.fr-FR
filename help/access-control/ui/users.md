@@ -29,7 +29,7 @@ Une fois que vous avez sélectionné un utilisateur, cliquez sur **[!UICONTROL E
 
 La vidéo suivante est destinée à vous aider à comprendre la gestion des administrateurs pour un profil de produit.
 
->[!VIDEO](https://video.tv.adobe.com/v/333860/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423934/?learn=on&captions=fre_fr)
 
 ## Étapes suivantes
 

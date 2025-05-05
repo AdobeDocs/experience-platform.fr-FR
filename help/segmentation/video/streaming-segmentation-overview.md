@@ -27,4 +27,4 @@ Si vous êtes intéressé par la segmentation en flux continu à l’aide de l�
 >
 >L’interface utilisateur d’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, reportez-vous au [guide de l’interface utilisateur de segmentation en flux continu](../methods/streaming-segmentation.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40062?quality=12&learn=on&captions=fre_fr)

@@ -26,7 +26,7 @@ Pour accéder à une riche galerie de playbooks de cas d’utilisation dans l’
 
 Regardez cette vidéo pour en savoir plus sur les étapes nécessaires à la création de votre environnement de test, à la configuration des autorisations et à la configuration des surfaces des canaux pour les notifications par e-mail, push et SMS dans Journey Optimizer.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426987?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449828?learn=on&captions=fre_fr)
 
 ## Créer une sandbox de développement {#create-development-sandbox}
 

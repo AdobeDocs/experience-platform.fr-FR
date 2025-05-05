@@ -223,4 +223,4 @@ Ce document offre un aperçu de la gestion des politiques d’utilisation des do
 
 La vidéo qui suit montre comment utiliser les politiques d’utilisation dans l’interface utilisateur [!DNL Experience Platform] :
 
->[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37130?quality=12&learn=on&captions=fre_fr)

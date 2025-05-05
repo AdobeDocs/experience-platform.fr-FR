@@ -57,7 +57,7 @@ Consultez les sections sur la [gestion des autorisations pour un rôle](#manage-
 
 La vidéo suivante est destinée à vous aider à comprendre la création d’un rôle et la gestion des utilisateurs et utilisatrices pour ce rôle.
 
->[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423939/?learn=on&captions=fre_fr)
 
 ## Dupliquer un rôle
 

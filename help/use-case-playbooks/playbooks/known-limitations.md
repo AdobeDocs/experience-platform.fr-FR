@@ -35,4 +35,4 @@ Une fois que vous avez inclus ces champs dans le schéma dans l’environnement 
 
 Pour plus d’informations, regardez la vidéo ci-dessous pour créer des groupes de champs de schéma.
 
->[!VIDEO](https://video.tv.adobe.com/v/27013/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413606/?learn=on&captions=fre_fr)

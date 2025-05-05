@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Cette vidéo présente un diagramme d’architecture de haut niveau qui explique les principaux composants d’Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422780?quality=12&learn=on&captions=fre_fr)

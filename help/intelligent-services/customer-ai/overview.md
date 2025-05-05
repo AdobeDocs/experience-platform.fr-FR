@@ -44,7 +44,7 @@ Customer AI n’est pas conçu pour certaines utilisations :
 
 La vidéo suivante est conçue pour vous aider à comprendre Customer AI.
 
->[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36471?learn=on&quality=12&captions=fre_fr)
 
 ## Fonctionnement
 

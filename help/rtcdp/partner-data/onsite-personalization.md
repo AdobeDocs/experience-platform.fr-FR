@@ -64,7 +64,7 @@ Pour mettre en œuvre ce cas d’utilisation avec succès, vous devez utiliser p
 
 Regardez le tutoriel vidéo ci-dessous pour une présentation détaillée de la personnalisation des expériences sur site pour les visiteurs inconnus :
 
->[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449254/?learn=on&captions=fre_fr)
 
 ## Comment réaliser le cas d’utilisation : vue d’ensemble de haut niveau {#achieve-the-use-case-high-level}
 

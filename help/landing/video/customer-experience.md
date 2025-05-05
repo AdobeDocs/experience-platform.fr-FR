@@ -18,4 +18,4 @@ ht-degree: 17%
 
 Découvrez comment Experience Platform crée une expérience riche, pertinente et en temps réel pour les clients et les clientes en regardant cette vidéo qui suit une expérience hypothétique créée avec Experience Platform, vue du point de vue d’un client ou d’une cliente.
 
->[!VIDEO](https://video.tv.adobe.com/v/27361?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34812?quality=12&learn=on&captions=fre_fr)

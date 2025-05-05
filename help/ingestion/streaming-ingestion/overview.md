@@ -21,7 +21,7 @@ Adobe Experience Platform vous permet de générer des expériences coordonnées
 
 La vidéo suivante est conçue pour vous aider à comprendre l’ingestion par flux et décrit les concepts ci-dessus.
 
->[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31636?quality=12&learn=on&captions=fre_fr)
 
 ### Diffusion d’enregistrements de profil et de [!DNL ExperienceEvents]
 

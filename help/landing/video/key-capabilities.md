@@ -24,4 +24,4 @@ Cette vidéo passe en revue les principales fonctionnalités d’Experience Plat
 1. Améliorer la diffusion et la personnalisation des expériences en temps réel
 1. Gagner la confiance en la gouvernance, la sécurité et les contrôles de confidentialité
 
->[!VIDEO](https://video.tv.adobe.com/v/32502?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428506?quality=12&learn=on&captions=fre_fr)

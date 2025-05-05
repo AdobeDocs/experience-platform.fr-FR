@@ -15,4 +15,4 @@ ht-degree: 22%
 
 Cette vidéo présente rapidement [!DNL Experience Platform] et présente quelques-uns des défis commerciaux qu’il résout.
 
->[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428494?quality=12&learn=on&captions=fre_fr)

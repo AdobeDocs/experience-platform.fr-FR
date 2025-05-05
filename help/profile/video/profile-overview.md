@@ -24,4 +24,4 @@ Cette vidéo offre une compréhension de base du profil client en temps réel da
 >
 >L’interface utilisateur d’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, reportez-vous au [Guide de l’interface utilisateur de Profile](../ui/user-guide.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/31639?quality=12&learn=on&captions=fre_fr)

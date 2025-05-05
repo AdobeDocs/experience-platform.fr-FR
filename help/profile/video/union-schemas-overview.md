@@ -25,4 +25,4 @@ Cette vidéo fournit une compréhension de base des schémas d’union dans Adob
 >
 >L’interface utilisateur d’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, reportez-vous au guide [interface utilisateur des schémas d’union](../ui/union-schema.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/329940?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/342822?quality=12&learn=on&captions=fre_fr)

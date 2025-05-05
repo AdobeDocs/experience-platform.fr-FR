@@ -21,7 +21,7 @@ Le document suivant décrit les étapes à suivre pour accéder à la visionneus
 
 La vidéo suivante est destinée à vous aider à comprendre la visionneuse de graphiques d’identités.
 
->[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345654/?quality=12&learn=on&captions=fre_fr)
 
 ## Commencer
 

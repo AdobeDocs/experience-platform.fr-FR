@@ -39,7 +39,7 @@ Comme l’envoi d’événements de conversion implique une implémentation côt
 
 La vidéo suivante présente l’extension [!DNL Enhanced Conversions] et décrit les étapes d’implémentation à un haut niveau :
 
->[!VIDEO](https://video.tv.adobe.com/v/3411365?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3416062?quality=12&learn=on&captions=fre_fr)
 
 ## Envoyer une conversion à l’aide de balises
 

@@ -62,7 +62,7 @@ Après avoir exporté vos audiences, vous pouvez les activer à l’aide de la d
 
 Regardez la vidéo ci-dessous pour une explication de bout en bout du workflow décrit dans cette page.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425367)
+>[!VIDEO](https://video.tv.adobe.com/v/3452657?captions=fre_fr)
 
 ### Étape 1 : envoyer vos audiences d’Experience Platform vers LiveRamp, via la destination [!DNL LiveRamp - Onboarding] {#onboarding}
 

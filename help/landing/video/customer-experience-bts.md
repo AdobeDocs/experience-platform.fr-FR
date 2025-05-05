@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Après avoir visionné la vidéo présentant [une expérience client optimisée par Experience Platform](customer-experience.md), explorez les coulisses pour découvrir comment Adobe Experience Platform a été utilisé pour alimenter cette expérience.
 
->[!VIDEO](https://video.tv.adobe.com/v/28144?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36632?quality=12&learn=on&captions=fre_fr)

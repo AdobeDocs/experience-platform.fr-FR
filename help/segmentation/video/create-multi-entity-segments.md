@@ -25,4 +25,4 @@ La vidéo suivante est destinée à vous aider à comprendre la création de seg
 >
 >L’interface utilisateur d’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, reportez-vous au guide [Créateur de segments](../ui/segment-builder.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/32179?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345107?quality=12&learn=on&captions=fre_fr)

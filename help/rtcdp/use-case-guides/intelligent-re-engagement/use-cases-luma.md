@@ -16,12 +16,12 @@ Découvrez comment Adobe a adapté le cas d’utilisation de réengagement intel
 
 ## Mise en œuvre
 
->[!VIDEO](https://video.tv.adobe.com/v/3425184/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454266/?quality=12&learn=on&captions=fre_fr)
 
 ## Configuration du parcours
 
->[!VIDEO](https://video.tv.adobe.com/v/3427101/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453963/?quality=12&learn=on&captions=fre_fr)
 
 ## Configuration des audiences et des destinations
 
->[!VIDEO](https://video.tv.adobe.com/v/3427451/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452906/?quality=12&learn=on&captions=fre_fr)

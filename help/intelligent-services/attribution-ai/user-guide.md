@@ -273,4 +273,4 @@ En suivant ce tutoriel, vous avez réussi à créer une instance de service dans
 
 La vidéo suivante décrit un workflow de bout en bout pour la création d’une instance dans Attribution AI.
 
->[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36546?learn=on&quality=12&captions=fre_fr)

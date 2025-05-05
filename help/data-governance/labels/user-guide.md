@@ -156,4 +156,4 @@ Désormais, vous pouvez également définir des politiques d’utilisation des d
 
 The following video is intended to support your understanding of Data Governance, and outlines how to apply labels to a dataset and individual fields.
 
->[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on) -->
+>[!VIDEO](https://video.tv.adobe.com/v/3422795?quality=12&enable10seconds=on&speedcontrol=on&captions=fre_fr) -->

@@ -23,4 +23,4 @@ Cette vidéo présente quatre cas pratiques clés d’Experience Platform :
 * Diffusion et expérience cross-canal
 * Développement d’applications d’expérience client
 
->[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430457?quality=12&learn=on&captions=fre_fr)

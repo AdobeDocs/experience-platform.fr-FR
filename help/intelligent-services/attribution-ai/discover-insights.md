@@ -195,4 +195,4 @@ Lorsque vous avez terminé de filtrer les données et que vous pouvez afficher l
 
 La vidéo suivante est conçue pour vous aider à apprendre à utiliser la page d’informations Attribution AI afin de comprendre le retour sur investissement des canaux et campagnes marketing.
 
->[!VIDEO](https://video.tv.adobe.com/v/32669?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/345100?learn=on&quality=12&captions=fre_fr)

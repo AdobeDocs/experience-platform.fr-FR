@@ -48,7 +48,7 @@ Pour commencer à utiliser l’IA dédiée aux clients, vous devez suivre le [tu
 
 Pour en savoir plus sur l’IA dédiée aux clients, commencez par consulter la [présentation de l’IA dédiée aux clients](../../intelligent-services/customer-ai/overview.md). En outre, la vidéo suivante montre comment l’IA dédiée aux clients enrichit les profils clients avec des propensions basées sur l’IA et renforce la segmentation et le ciblage des clients.
 
->[!VIDEO](https://video.tv.adobe.com/v/40374/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328475/?quality=12&learn=on&captions=fre_fr)
 
 
 ## Étapes suivantes

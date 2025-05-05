@@ -24,7 +24,7 @@ Grâce au contrôle d’accès basé sur les attributs, les administrateurs de v
 
 La vidéo suivante est destinée à vous aider à comprendre le contrôle d’accès basé sur les attributs et explique comment configurer des rôles, des ressources et des politiques.
 
->[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3451829?learn=on&captions=fre_fr)
 
 ## Terminologie du contrôle d’accès basé sur les attributs
 

@@ -42,7 +42,7 @@ La transition vers les autorisations Adobe Experience Platform comporte des éta
 
 La vidéo suivante est destinée à vous aider à comprendre les informations d’identification des développeurs et des API.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446400/?learn=on&captions=fre_fr)
 
 ## Étapes suivantes
 

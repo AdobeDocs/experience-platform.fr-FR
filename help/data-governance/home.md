@@ -132,8 +132,8 @@ Le tableau suivant présente les termes clés liés à la gouvernance des donné
 
 La vidéo suivante a pour but de vous aider à comprendre le cadre de gouvernance des données. 
 
->[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33154?quality=12&enable10seconds=on&speedcontrol=on&captions=fre_fr)
 
 La vidéo suivante explique comment appliquer des libellés d’utilisation des données à vos schémas ou à l’intégralité d’un jeu de données dans Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422795/?learn=on&captions=fre_fr)

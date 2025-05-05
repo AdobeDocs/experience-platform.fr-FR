@@ -21,7 +21,7 @@ Postman est une plateforme de collaboration pour le développement d’API qui v
 
 Le guide vidéo suivant décrit la création et la configuration de votre environnement Postman. Un environnement Postman contient tous les en-têtes requis pour effectuer des appels API vers les différentes collections fournies ci-dessous. Une fois configurée, chaque fois qu’une valeur expire (par exemple, une `ACCESS_TOKEN`), vous pouvez mettre à jour la valeur actuelle dans l’environnement, et cette nouvelle valeur est utilisée dans toutes vos collections.
 
->[!VIDEO](https://video.tv.adobe.com/v/28832)
+>[!VIDEO](https://video.tv.adobe.com/v/31635?captions=fre_fr)
 
 ## Collections Postman {#collections}
 
@@ -57,7 +57,7 @@ Pour en savoir plus sur l’interface utilisateur de Postman et ses fonctionnali
 
 La vidéo ci-dessous utilise la collection Postman [d’Identity Management Service (IMS)](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Identity%20Management%20Service.postman_collection.json) qui peut être téléchargée à partir du référentiel GitHub public.
 
->[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33190/?quality=12&learn=on&captions=fre_fr)
 
 ## Étapes suivantes
 

@@ -23,4 +23,4 @@ Cette vidéo présente brièvement l’interface utilisateur de Adobe Experience
 >L’interface utilisateur d’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, consultez le [guide de l’interface utilisateur de Adobe Experience Platform](../ui-guide.md).
 
 
->[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430435?quality=12&learn=on&captions=fre_fr)

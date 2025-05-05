@@ -59,7 +59,7 @@ order by price desc)D;
 
 La présentation vidéo présentée ci-dessous fournit un cas d’utilisation holistique et réel de vos données Experience Platform, axé sur les intégrations [!DNL Query Service] et Adobe Analytics.
 
->[!VIDEO](https://video.tv.adobe.com/v/342533?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454937?quality=12&learn=on&captions=fre_fr)
 
 ## Avantages de la [!DNL Query Service] {#benefits}
 

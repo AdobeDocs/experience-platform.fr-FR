@@ -69,7 +69,7 @@ Le reste de ce tutoriel couvre les fichiers suivants qui sont prédéfinis dans 
 
 Le tutoriel vidéo suivant explique le notebook de modèle de propension Luma :
 
->[!VIDEO](https://video.tv.adobe.com/v/333570)
+>[!VIDEO](https://video.tv.adobe.com/v/3452494?captions=fre_fr)
 
 ### Fichier des exigences {#requirements-file}
 

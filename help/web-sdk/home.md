@@ -47,7 +47,7 @@ Un système de périphérie consolidé vous permet de gérer des campagnes publi
 
 Regardez la vidéo ci-dessous pour un aperçu de la [!DNL Web SDK] Adobe Experience Platform et du [!DNL Edge Network].
 
->[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37259?quality=12&learn=on&captions=fre_fr)
 
 ## Bibliothèques remplacées par le SDK Web {#sdks}
 
@@ -64,7 +64,7 @@ Il introduit également un nouveau point d’entrée qui simplifie les requêtes
 
 Regardez la vidéo ci-dessous pour voir les [!DNL Web SDK] et les [!DNL Edge Network] de Adobe Experience Platform en action, à l’aide d’un seul appel pour envoyer des données à [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager] et [!DNL Target].
 
->[!VIDEO](https://video.tv.adobe.com/v/34148)
+>[!VIDEO](https://video.tv.adobe.com/v/3413665?captions=fre_fr)
 
 ## Migrer des bibliothèques existantes vers le SDK Web {#migrating-to-web-sdk}
 

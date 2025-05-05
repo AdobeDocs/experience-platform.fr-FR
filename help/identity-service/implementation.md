@@ -64,4 +64,4 @@ La vidéo suivante est destinée à vous aider à comprendre le service dʼident
 >
 >L’interface utilisateur Experience Platform affichée dans la vidéo suivante est obsolète. Reportez-vous à la documentation pour obtenir les dernières captures dʼécran et fonctionnalités de lʼinterface utilisateur.
 
->[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31637?quality=12&learn=on&captions=fre_fr)

@@ -71,7 +71,7 @@ En savoir plus sur la façon de [configurer des destinations de personnalisation
 
 La vidéo ci-dessous vous montre les particularités des deux types de destinations :
 
->[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/33171?quality=12&captions=fre_fr)
 
 ## Types d’audiences exportées {#exported-audiences-types}
 

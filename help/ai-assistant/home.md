@@ -90,7 +90,7 @@ Pour les questions relatives aux informations opérationnelles, les réponses pe
 
 Regardez la vidéo suivante pour plus d’informations sur les informations opérationnelles de l’assistant IA :
 
->[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444034?learn=on&enablevpops&captions=fre_fr)
 
 ### Périmètre de la fonctionnalité {#feature-scope}
 

@@ -25,4 +25,4 @@ Cette vidéo offre une compréhension de base des politiques de fusion dans Adob
 >
 >L’interface utilisateur d’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, reportez-vous au [guide de l’interface utilisateur des politiques de fusion](../merge-policies/ui-guide.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/330433?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/345076?quality=12&learn=on&captions=fre_fr)

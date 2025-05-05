@@ -152,4 +152,4 @@ Pour en savoir plus sur l’ingestion par lots, veuillez lire la [présentation 
 >
 >Lʼinterface utilisateur de [!DNL Experience Platform] affichée dans la vidéo suivante est obsolète. Consultez la documentation pour découvrir les dernières captures dʼécran et fonctionnalités de lʼinterface utilisateur.
 
->[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34369?quality=12&learn=on&captions=fre_fr)

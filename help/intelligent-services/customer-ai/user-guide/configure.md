@@ -259,6 +259,6 @@ La vidéo suivante est conçue pour vous aider à comprendre le workflow de conf
 >
 > La vidéo suivante est obsolète. Pour obtenir les informations les plus récentes, reportez-vous à la documentation .
 
->[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36548?learn=on&quality=12&captions=fre_fr)
 
 <!-- comment -->
