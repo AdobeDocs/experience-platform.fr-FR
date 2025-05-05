@@ -31,14 +31,14 @@ Commencez par lire le matériel dans les liens ci-dessous pour vous familiariser
     <div><strong>Améliorer votre apprentissage</strong><br/>Découvrir, résoudre les problèmes et améliorer votre compréhension des connaissances sur les produits sans interrompre vos workflows.</div>
     </td>
     <td>
-    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"></a>
+    <a href="https://experienceleague.adobe.com/fr/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"></a>
     <div><strong>Consultez la liste de lecture des vidéos de l’assistant AI</strong><br/>Découvrez les nombreux défis et cas d’utilisation différents que vous pouvez résoudre avec l’assistant AI.</div>
     </td>
   </tr>
   <tr style="border: 0;">
     <td align="center"><a href="./home.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="./home.md#product-knowledge"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
-    <td align="center"><a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
+    <td align="center"><a href="https://experienceleague.adobe.com/fr/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
@@ -435,11 +435,11 @@ Regardez les vidéos suivantes pour en savoir plus sur les cas d’utilisation d
 
 Lisez les exemples de cas d’utilisation de l’assistant AI suivants :
 
-* [Réduire le temps d’intégration des nouveaux membres de votre équipe](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
-* [Désencombrez vos audiences et optimisez vos opérations marketing](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
-* [Vérifiez les dépendances et minimisez les risques lors des mises à jour des données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
-* [Découvrir et déployer de nouvelles fonctionnalités plus rapidement](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125)
-* [Révolutionner le service clientèle avec l’assistant IA](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416)
+* [Réduire le temps d’intégration des nouveaux membres de votre équipe](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153?profile.language=fr)
+* [Désencombrez vos audiences et optimisez vos opérations marketing](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002?profile.language=fr)
+* [Vérifiez les dépendances et minimisez les risques lors des mises à jour des données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364?profile.language=fr)
+* [Découvrir et déployer de nouvelles fonctionnalités plus rapidement](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125?profile.language=fr)
+* [Révolutionner le service clientèle avec l’assistant IA](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416?profile.language=fr)
 
 >[!TAB Contenu vidéo supplémentaire]
 
@@ -460,9 +460,9 @@ Parcourez les liens ci-dessous pour mieux comprendre les cas d’utilisation, le
 <a href="./home.md" target="_blank">Documentation</a> - <a href="./ui-guide.md" target="_blank">Guide de l’interface utilisateur</a> - <a href="./access.md" target="_blank">Accéder à l’assistant d’IA</a> - <a href="./privacy.md" target="_blank">Confidentialité, sécurité et gouvernance</a> - <a href="./faq.md" target="_blank">FAQ</a>
 </td>
 <td><strong>Adobe Journey Optimizer</strong><br/>
-<a href="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank"> Documentation </a>
+<a href="https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank"> Documentation </a>
 </td>
 <td><strong>Customer Journey Analytics</strong><br/>
-<a href="https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant" target="_blank"> Documentation </a>
+<a href="https://experienceleague.adobe.com/fr/docs/analytics-platform/using/ai-assistant" target="_blank"> Documentation </a>
 </td>
 </tr></table>

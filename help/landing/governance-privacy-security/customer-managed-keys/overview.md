@@ -17,7 +17,7 @@ Les données stockées sur Adobe Experience Platform sont chiffrées au repos 
 
 >[!AVAILABILITY]
 >
->Adobe Experience Platform prend en charge les clés gérées par le client (CMK) pour Microsoft Azure et Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Si votre mise en œuvre s’exécute sur AWS, vous avez la possibilité d’utiliser le service de gestion des clés (KMS) pour le chiffrement des données Experience Platform. Pour plus d’informations sur l’infrastructure prise en charge, consultez la [présentation d’Experience Platform multi-cloud](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Adobe Experience Platform prend en charge les clés gérées par le client (CMK) pour Microsoft Azure et Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Si votre mise en œuvre s’exécute sur AWS, vous avez la possibilité d’utiliser le service de gestion des clés (KMS) pour le chiffrement des données Experience Platform. Pour plus d’informations sur l’infrastructure prise en charge, consultez la [présentation d’Experience Platform multi-cloud](https://experienceleague.adobe.com/fr/docs/experience-platform/landing/multi-cloud).
 >
 >Pour en savoir plus sur la création et la gestion des clés de chiffrement dans AWS KMS, consultez le [guide sur le chiffrement des données AWS KMS](./aws/configure-kms.md). Pour les implémentations Azure, consultez le [Guide de configuration du coffre de clés Azure](./azure/azure-key-vault-config.md).
 
@@ -39,7 +39,7 @@ Pour activer la fonction CMK, l’environnement d’hébergement de votre platef
 
 Pour afficher la section [!UICONTROL Chiffrement] dans Adobe Experience Platform et y accéder, vous devez avoir créé un rôle et attribué l’autorisation [!UICONTROL Gérer les clés gérées par le client] à ce rôle.  Tout utilisateur disposant de l’autorisation [!UICONTROL Gérer les clés gérées par le client] peut activer la fonction CMK pour son organisation.
 
-Pour plus d’informations sur l’attribution de rôles et d’autorisations dans Experience Platform, reportez-vous à la documentation sur la [configuration des autorisations](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
+Pour plus d’informations sur l’attribution de rôles et d’autorisations dans Experience Platform, reportez-vous à la documentation sur la [configuration des autorisations](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=fr).
 
 ### Conditions préalables spécifiques à Azure
 
@@ -109,7 +109,7 @@ Par exemple, le tableau de bord du profil continuera à afficher les données de
 
 >[!TIP]
 >
->Il existe deux exceptions spécifiques aux cas d’utilisation à l’expiration de sept jours du jeu de données sur les données non principales (mises en cache/transitoires). Pour plus d’informations sur ces fonctionnalités, consultez leurs documentations respectives.<ul><li>[Raccourcisseur d’URL Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=fr#message-preset-sms)</li><li>[Projections Edge](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+>Il existe deux exceptions spécifiques aux cas d’utilisation à l’expiration de sept jours du jeu de données sur les données non principales (mises en cache/transitoires). Pour plus d’informations sur ces fonctionnalités, consultez leurs documentations respectives.<ul><li>[Raccourcisseur d’URL Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=fr#message-preset-sms)</li><li>[Projections Edge](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=fr#edge-projections)</li></ul>
 
 ## Étapes suivantes
 

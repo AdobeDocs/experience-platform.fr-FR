@@ -48,4 +48,4 @@ alloy("sendEvent", {
 
 ## Utilisation de l’objet `data` avec Adobe Analytics {#analytics}
 
-Vous pouvez utiliser l’objet `data` avec Adobe Analytics pour envoyer des données à une suite de rapports sans schéma XDM. Les variables sont configurées pour utiliser la même syntaxe que les variables [!DNL AppMeasurement], ce qui simplifie le processus de mise à niveau vers le SDK Web. Pour plus d’informations, voir [Mappage des variables d’objet de données vers Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping) dans le guide de mise en oeuvre d’Adobe Analytics.
+Vous pouvez utiliser l’objet `data` avec Adobe Analytics pour envoyer des données à une suite de rapports sans schéma XDM. Les variables sont configurées pour utiliser la même syntaxe que les variables [!DNL AppMeasurement], ce qui simplifie le processus de mise à niveau vers le SDK Web. Pour plus d’informations, voir [Mappage des variables d’objet de données vers Adobe Analytics](https://experienceleague.adobe.com/fr/docs/analytics/implementation/aep-edge/data-var-mapping) dans le guide de mise en oeuvre d’Adobe Analytics.

@@ -81,7 +81,7 @@ L’étape suivante consiste à créer une définition de segment et à génére
 * activer toutes les définitions de segment pour la segmentation planifiée ;
 * activer des définitions de segment spécifiques pour la segmentation par flux.
 
-Vous pouvez également consulter un [tutoriel vidéo sur le créateur de segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) disponible pour plus d’informations.
+Vous pouvez également consulter un [tutoriel vidéo sur le créateur de segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html?lang=fr) disponible pour plus d’informations.
 
 ## Activer votre audience pour une campagne par e-mail {#activate-audience-for-campaign}
 

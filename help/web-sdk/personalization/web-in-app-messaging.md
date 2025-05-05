@@ -21,7 +21,7 @@ En utilisant les messages in-app, vous pouvez interagir efficacement avec votre 
 >
 >La messagerie Web In-App est une fonctionnalité de [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=fr) qui utilise le SDK Web pour diffuser le contenu personnalisé.
 >
->Pour obtenir des instructions détaillées sur la configuration de votre campagne de messagerie Web In-App, consultez la [documentation de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html).
+>Pour obtenir des instructions détaillées sur la configuration de votre campagne de messagerie Web In-App, consultez la [documentation de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=fr).
 
 
 ## Conditions préalables {#prerequisites}
@@ -184,5 +184,5 @@ Vous pouvez choisir d’afficher des messages in-app aux utilisateurs et utilisa
 
 Dans la configuration [Web SDK](../commands/configure/overview.md) définissez l’option `personalizationStorageEnabled` en fonction de vos besoins :
 
-* `personalizationStorageEnabled: true` déclenche le message in-app avec la fréquence que vous avez définie dans la campagne [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
+* `personalizationStorageEnabled: true` déclenche le message in-app avec la fréquence que vous avez définie dans la campagne [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=fr#configure-inapp).
 * `personalizationStorageEnabled: false` déclenche le message in-app à chaque chargement de page.

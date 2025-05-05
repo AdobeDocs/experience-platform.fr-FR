@@ -22,7 +22,7 @@ Les [!DNL Web SDK] Adobe Experience Platform peuvent diffuser et générer des o
 
 ## Terminologie
 
-Il est important de comprendre la terminologie suivante lorsque vous utilisez Offer Decisioning. Pour plus d’informations et pour afficher des termes supplémentaires, consultez le [glossaire Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
+Il est important de comprendre la terminologie suivante lorsque vous utilisez Offer Decisioning. Pour plus d’informations et pour afficher des termes supplémentaires, consultez le [glossaire Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html?lang=fr).
 
 * **Portées de décision :** pour Offer Decisioning, les portées de décision sont les chaînes de caractères JSON codées en Base64 contenant les identifiants d’activité et d’emplacement que le service Offer Decisioning doit utiliser pour proposer des offres.
 
@@ -328,4 +328,4 @@ Pour activer Offer Decisioning, procédez comme suit :
 
 ## Limites
 
-Certaines contraintes d’offre ne sont actuellement pas prises en charge avec les workflows Edge Network mobiles, par exemple la limitation. La valeur du champ Limitation indique le nombre de fois où une offre peut être présentée à tous les utilisateurs. Pour plus d’informations, voir [Documentation sur les règles d’éligibilité et les contraintes d’offres](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
+Certaines contraintes d’offre ne sont actuellement pas prises en charge avec les workflows Edge Network mobiles, par exemple la limitation. La valeur du champ Limitation indique le nombre de fois où une offre peut être présentée à tous les utilisateurs. Pour plus d’informations, voir [Documentation sur les règles d’éligibilité et les contraintes d’offres](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html?lang=fr#eligibility).

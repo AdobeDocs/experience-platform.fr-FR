@@ -30,7 +30,7 @@ Avant de pouvoir créer une connexion source pour importer votre Campaign v8 dan
 
 >[!IMPORTANT]
 >
->Vous devez avoir accès à la console cliente Adobe Campaign v8 pour afficher vos données de journal dans Campaign. Consultez la [documentation de Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html) pour plus d’informations sur le téléchargement et l’installation de la console cliente.
+>Vous devez avoir accès à la console cliente Adobe Campaign v8 pour afficher vos données de journal dans Campaign. Consultez la [documentation de Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=fr) pour plus d’informations sur le téléchargement et l’installation de la console cliente.
 
 Connectez-vous à votre instance Campaign v8 via la console cliente. Sous l’onglet [!DNL Explorer] , sélectionnez [!DNL Administration] puis [!DNL Configuration]. Sélectionnez ensuite [!DNL Data schemas] puis appliquez le filtre `broadLog` pour le nom ou le libellé. Dans la liste qui s&#39;affiche, sélectionnez le schéma source des logs de diffusion des destinataires intitulé `broadLogRcp`.
 

@@ -24,7 +24,7 @@ Ce guide d’utilisation détaille la procédure d’utilisation des libellés d
 
 Pour appliquer des libellés à vos données, vous devez obtenir l’autorisation de **[!UICONTROL gestion des libellés d’utilisation]** afin de les utiliser sur le sandbox de production par défaut appelé « prod ». Pour créer un libellé personnalisé, vous devez également disposer de droits d’administration sur le profil de produit. Chaque organisation ne dispose que d’une seule liste de libellés applicables. Vous **ne pouvez pas** supprimer les libellés. Vous pouvez plutôt les supprimer des jeux de données ou des champs auxquels ils sont appliqués.
 
-Veuillez consulter le guide sur la façon de [configurer des autorisations](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) ou la [vue d’ensemble du contrôle d’accès](../../access-control/home.md) pour plus d’informations sur l’attribution d’une autorisation. Si vous n’avez pas accès à Admin Console de votre organisation, contactez l’administrateur ou l’administratrice de cette dernière.
+Veuillez consulter le guide sur la façon de [configurer des autorisations](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=fr) ou la [vue d’ensemble du contrôle d’accès](../../access-control/home.md) pour plus d’informations sur l’attribution d’une autorisation. Si vous n’avez pas accès à Admin Console de votre organisation, contactez l’administrateur ou l’administratrice de cette dernière.
 
 ## Gérer les libellés au niveau du schéma
 

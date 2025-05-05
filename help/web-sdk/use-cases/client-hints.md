@@ -119,11 +119,11 @@ Si vous n’activez pas les indicateurs client à forte entropie dans votre envi
 
 ### Rapports Adobe Analytics reposant sur des indices client à forte entropie {#analytics}
 
-La dimension [Système d’exploitation](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) comprend la version du système d’exploitation stockée en tant qu’indice client à forte entropie. Si les indices des clients à forte entropie ne sont pas activés, la version du système d’exploitation peut être inexacte pour les accès collectés à partir des navigateurs Chromium.
+La dimension [Système d’exploitation](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=fr) comprend la version du système d’exploitation stockée en tant qu’indice client à forte entropie. Si les indices des clients à forte entropie ne sont pas activés, la version du système d’exploitation peut être inexacte pour les accès collectés à partir des navigateurs Chromium.
 
 ### Caractéristiques d’Audience Manager reposant sur des indices client à forte entropie {#aam}
 
-[!DNL Google] a mis à jour la fonctionnalité de navigateur [!DNL Chrome] afin de minimiser les informations collectées via l&#39;en-tête `User-Agent`. Par conséquent, les clients d’Audience Manager qui utilisent [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=fr) ne recevront plus d’informations fiables sur les caractéristiques basées sur [ clés au niveau de la plateforme ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
+[!DNL Google] a mis à jour la fonctionnalité de navigateur [!DNL Chrome] afin de minimiser les informations collectées via l&#39;en-tête `User-Agent`. Par conséquent, les clients d’Audience Manager qui utilisent [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=fr) ne recevront plus d’informations fiables sur les caractéristiques basées sur [ clés au niveau de la plateforme ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=fr).
 
 Les clients d’Audience Manager qui utilisent des clés au niveau de la plateforme pour le ciblage doivent passer à [SDK Web Experience Platform](/help/web-sdk/home.md) au lieu de [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=fr) et activer les [conseils client haute entropie](#enabling-high-entropy-client-hints) pour continuer à recevoir des données de caractéristiques fiables.
 

@@ -27,7 +27,7 @@ Adobe Experience Platform Web SDK prend en charge deux types de journalisation A
 | Méthode de consignation | Description |
 | --- | --- |
 | Journalisation d’Analytics côté serveur | Tous les accès Analytics envoyés par l’intermédiaire d’Edge Network sont complétés avec les détails de Target côté serveur, sans avoir à passer par le processus d’assemblage des accès. |
-| Journalisation d’Analytics côté client | Les données de la cible sont renvoyées côté client, ce qui vous permet d’augmenter et d’envoyer manuellement des données à Analytics à l’aide de l’[API Data Insertion](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html). |
+| Journalisation d’Analytics côté client | Les données de la cible sont renvoyées côté client, ce qui vous permet d’augmenter et d’envoyer manuellement des données à Analytics à l’aide de l’[API Data Insertion](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=fr). |
 
 La méthode de journalisation est déterminée par le fait qu’Adobe Analytics soit ou non activé sur le [flux de données](../../../../datastreams/overview.md) que vous avez configuré :
 

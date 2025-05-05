@@ -16,9 +16,9 @@ ht-degree: 0%
 
 ## Vue d’ensemble {#overview}
 
-Adobe Experience Platform Web SDK vous permet de collecter des données [Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) côté client de votre application web.
+Adobe Experience Platform Web SDK vous permet de collecter des données [Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=fr) côté client de votre application web.
 
-La journalisation côté client signifie que les données [!DNL Target] pertinentes sont renvoyées côté client, ce qui vous permet de les collecter et de les partager avec Analytics. Cette option doit être activée si vous envisagez d’envoyer manuellement des données à Analytics à l’aide de l’[API Data Insertion](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html).
+La journalisation côté client signifie que les données [!DNL Target] pertinentes sont renvoyées côté client, ce qui vous permet de les collecter et de les partager avec Analytics. Cette option doit être activée si vous envisagez d’envoyer manuellement des données à Analytics à l’aide de l’[API Data Insertion](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=fr).
 
 >[!NOTE]
 >
@@ -467,7 +467,7 @@ alloy("sendEvent", {
 
 ### Activités du compositeur d’expérience visuelle {#visual-experience-composer-acitivties}
 
-Le SDK Web vous permet de gérer les offres qui ont été créées à l’aide du [Compositeur d’expérience visuelle (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
+Le SDK Web vous permet de gérer les offres qui ont été créées à l’aide du [Compositeur d’expérience visuelle (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=fr).
 
 >[!NOTE]
 >

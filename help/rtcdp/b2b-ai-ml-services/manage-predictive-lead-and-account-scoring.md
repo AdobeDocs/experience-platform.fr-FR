@@ -3,7 +3,7 @@ title: Gestion des scores de piste et de compte prédictifs dans Real-Time CDP B
 type: Documentation
 description: Ce document fournit des informations sur la gestion de la fonctionnalité de notation de compte et de piste prédictive dans la plateforme CDP B2B Experience Platform.
 feature: Profiles, B2B
-badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
 source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt

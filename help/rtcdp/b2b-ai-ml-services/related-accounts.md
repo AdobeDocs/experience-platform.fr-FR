@@ -3,7 +3,7 @@ title: Comptes associés dans Real-Time CDP B2B Edition
 type: Documentation
 description: Présentation et informations supplémentaires sur la fonction des comptes associés dans Real-Time CDP Experience Platform B2B.
 feature: Get Started, Profiles, B2B
-badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
 source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
 workflow-type: tm+mt

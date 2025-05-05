@@ -60,7 +60,7 @@ Une fois que vous êtes affecté en tant que développeur, vous pouvez commencer
 
 Votre administrateur Admin Console doit également vous ajouter en tant qu’utilisateur au même profil de produit. Avec un accès utilisateur, vous pouvez voir dans l’interface utilisateur le résultat des opérations de l’API que vous effectuez.
 
-Pour plus d’informations, consultez le guide sur la [gestion des groupes d’utilisateurs dans Admin Console](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html).
+Pour plus d’informations, consultez le guide sur la [gestion des groupes d’utilisateurs dans Admin Console](https://helpx.adobe.com/fr/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html).
 
 ## Générer une clé API (identifiant client) et un identifiant d’organisation {#generate-credentials}
 

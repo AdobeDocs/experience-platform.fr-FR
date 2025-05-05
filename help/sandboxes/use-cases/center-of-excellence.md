@@ -46,7 +46,7 @@ Pour réussir l’implémentation de ce cas d’utilisation, vous devez utiliser
 - [Jeux de données](../../catalog/datasets/overview.md)
 - [Schémas](../../xdm//home.md)
 - [Audiences](../../segmentation/home.md)
-- [Parcours depuis Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/journey)
+- [Parcours depuis Adobe Journey Optimizer](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/orchestrate-journeys/journey)
 
 ## Comment réaliser le cas d’utilisation : vue d’ensemble de haut niveau {#achieve-the-use-case-high-level}
 
@@ -89,7 +89,7 @@ Maintenant que votre package sandbox doré est terminé, vous avez établi un ce
 
 >[!NOTE]
 >
-> Les étapes ci-dessus suivent le processus décrit dans l’interface utilisateur d’Experience Platform. Il est possible de suivre les mêmes étapes à l’aide de l’API via différents points d’entrée. Pour plus d’informations sur l’exécution de chaque requête via l’API[&#128279;](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/api/sandboxes#create) consultez les guides des points d’entrée `sandboxes` endpoint guide et `packages` [endpoint guide](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages).
+> Les étapes ci-dessus suivent le processus décrit dans l’interface utilisateur d’Experience Platform. Il est possible de suivre les mêmes étapes à l’aide de l’API via différents points d’entrée. Pour plus d’informations sur l’exécution de chaque requête via l’API[&#128279;](https://experienceleague.adobe.com/fr/docs/experience-platform/sandbox/api/sandboxes#create) consultez les guides des points d’entrée `sandboxes` endpoint guide et `packages` [endpoint guide](https://experienceleague.adobe.com/fr/docs/experience-platform/sandbox/sandbox-tooling-api/packages).
 
 ## Autres cas d’utilisation réalisés grâce à la prise en charge des données des partenaires {#other-use-cases}
 

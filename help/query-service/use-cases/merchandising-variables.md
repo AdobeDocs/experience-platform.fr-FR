@@ -26,7 +26,7 @@ Dans Adobe Analytics, les données personnalisées au niveau du produit peuvent 
 
 Ces variables sont appelées variables de marchandisage de syntaxe de produit. Cela permet de collecter des informations, telles qu’un &quot;montant de remise&quot; par produit ou des informations sur l’&quot;emplacement sur la page&quot; du produit dans les résultats de recherche du client.
 
-Pour en savoir plus sur l’utilisation de la syntaxe du produit, consultez la documentation Adobe Analytics sur l’ [ implémentation des eVars à l’aide de la syntaxe du produit](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-product-syntax).
+Pour en savoir plus sur l’utilisation de la syntaxe du produit, consultez la documentation Adobe Analytics sur l’ [ implémentation des eVars à l’aide de la syntaxe du produit](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=fr#implement-using-product-syntax).
 
 Les sections ci-dessous décrivent les champs XDM nécessaires pour accéder aux variables de marchandisage dans votre jeu de données [!DNL Analytics] :
 
@@ -127,7 +127,7 @@ Dans les rapports, les commandes, les recettes, les consultations de produits et
 | recherche interne : T-shirt d’été | 19,99 | 1 | 1 | 1 |
 | recherche interne : bonnet d’hiver | 12,99 | 1 | 1 | 1 |
 
-Pour en savoir plus sur l’utilisation de la syntaxe de variable de conversion, consultez la documentation Adobe Analytics sur l’ [ implémentation d’eVars à l’aide de la syntaxe de variable de conversion](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax).
+Pour en savoir plus sur l’utilisation de la syntaxe de variable de conversion, consultez la documentation Adobe Analytics sur l’ [ implémentation d’eVars à l’aide de la syntaxe de variable de conversion](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=fr#implement-using-conversion-variable-syntax).
 
 Vous trouverez ci-dessous les champs XDM pour produire la syntaxe de variable de conversion dans votre jeu de données [!DNL Analytics] :
 

@@ -134,6 +134,6 @@ Pour plus d’informations sur les différents états et options disponibles pen
 
 Pour en savoir plus sur les balises, consultez les ressources suivantes :
 
-* **[Communauté de la collecte de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)** : posez vos questions et répondez à celles des autres, proposez des idées, prononcez-vous sur les idées des autres. Connectez-vous avec votre Adobe ID.
+* **[Communauté de la collecte de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community?profile.language=fr)** : posez vos questions et répondez à celles des autres, proposez des idées, prononcez-vous sur les idées des autres. Connectez-vous avec votre Adobe ID.
 * **[Developer Docs](../api/overview.md)** : rejoignez la communauté des développeurs de balises pour créer des extensions ou utiliser les API de balises.
 * **[Présentation des tutoriels](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=fr)** : ces documents vous présentent les concepts de balises, y compris le transfert d’événement et le SDK mobile dans les applications Android.

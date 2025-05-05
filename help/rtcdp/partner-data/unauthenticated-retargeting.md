@@ -76,7 +76,7 @@ Configurez un transfert d’événement dans Platform pour envoyer les données 
 
 Assurez-vous que l’extension de reciblage hors site est associée à une règle d’événement valide dans la collecte de données Adobe Experience Platform. En règle générale, une règle globale doit être créée pour se déclencher sur des actions clés, telles que des `page load` ou des interactions utilisateur spécifiques.
 
-Pour en savoir plus sur la configuration de l’extension, consultez la documentation [Transfert d’événement](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started).
+Pour en savoir plus sur la configuration de l’extension, consultez la documentation [Transfert d’événement](https://experienceleague.adobe.com/fr/docs/experience-platform/tags/event-forwarding/getting-started).
 
 ## Autres cas d’utilisation {#other-use-cases}
 

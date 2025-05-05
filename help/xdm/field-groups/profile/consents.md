@@ -175,7 +175,7 @@ Le consentement `adID` représente le consentement du client pour savoir si un I
 
 Pour utiliser le groupe de champs [!UICONTROL Consentements et préférences] afin d’ingérer les données de consentement de vos clients, vous devez créer un jeu de données basé sur un schéma contenant ce groupe de champs.
 
-Consultez le tutoriel sur la [création d’un schéma dans l’interface utilisateur](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) pour savoir comment affecter des groupes de champs à des champs. Une fois que vous avez créé un schéma contenant un champ avec le groupe de champs [!UICONTROL Consentements et préférences], reportez-vous à la section relative à la [création d’un jeu de données](../../../catalog/datasets/user-guide.md#create) dans le guide d’utilisation des jeux de données, en suivant les étapes de création d’un jeu de données avec un schéma existant.
+Consultez le tutoriel sur la [création d’un schéma dans l’interface utilisateur](https://www.adobe.com/go/xdm-schema-editor-tutorial-en_fr) pour savoir comment affecter des groupes de champs à des champs. Une fois que vous avez créé un schéma contenant un champ avec le groupe de champs [!UICONTROL Consentements et préférences], reportez-vous à la section relative à la [création d’un jeu de données](../../../catalog/datasets/user-guide.md#create) dans le guide d’utilisation des jeux de données, en suivant les étapes de création d’un jeu de données avec un schéma existant.
 
 >[!IMPORTANT]
 >

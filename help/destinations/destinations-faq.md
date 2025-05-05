@@ -199,7 +199,7 @@ Pour des explications détaillées sur les exigences de correspondance des ident
 +++Réponse
 Non, [Web SDK](../web-sdk/home.md) n’est pas nécessaire pour activer les audiences dans [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
-Cependant, si [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) est utilisé à la place de Web SDK, seule la personnalisation de session suivante est prise en charge.
+Cependant, si [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=fr) est utilisé à la place de Web SDK, seule la personnalisation de session suivante est prise en charge.
 
 Pour les cas d’utilisation de [personnalisation de la même page et de la page suivante](ui/activate-edge-personalization-destinations.md) vous devez utiliser [Web SDK](../web-sdk/home.md) ou l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/). Pour plus d’informations sur l’implémentation[&#128279;](ui/activate-edge-personalization-destinations.md) consultez la documentation sur l’activation des audiences vers des destinations Edge.
 +++
@@ -229,7 +229,7 @@ Les définitions d’audience sont propagées à [Edge Network](../web-sdk/home.
 ### Où puis-je voir les attributs activés dans Adobe Target ?
 
 +++Réponse
-Les attributs pourront être utilisés dans Target dans les offres [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) et [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html).
+Les attributs pourront être utilisés dans Target dans les offres [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=fr) et [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=fr).
 +++
 
 ### Puis-je créer une destination sans flux de données, puis ajouter un flux de données à la même destination à un moment ultérieur ?

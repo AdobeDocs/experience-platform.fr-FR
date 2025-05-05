@@ -236,7 +236,7 @@ Vous avez également besoin des autorisations d’audience suivantes :
 * **Profil lu**
 * **Jeu de données lu**
 
-Les Parcours étant extrêmement flexibles et pouvant impliquer de nombreux objets interconnectés, leurs [autorisations complètes](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/privacy/high-low-permissions) sont documentées séparément et peuvent varier en fonction de votre cas d’utilisation particulier.
+Les Parcours étant extrêmement flexibles et pouvant impliquer de nombreux objets interconnectés, leurs [autorisations complètes](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/access-control/privacy/high-low-permissions) sont documentées séparément et peuvent varier en fonction de votre cas d’utilisation particulier.
 
 ## Étapes suivantes
 

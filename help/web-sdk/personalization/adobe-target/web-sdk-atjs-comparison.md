@@ -68,7 +68,7 @@ window.adobe.target.init(window, document, {
 });
 ```
 
-[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
+[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=fr)
 
 
 ### Configuration du SDK Web
@@ -83,7 +83,7 @@ Avec at.js 2.x, si vous activez le `pageLoadEnabled` de paramètres, la biblioth
 
 ### Utilisation de Web SDK
 
-Le contenu créé dans Adobe Target [compositeur d’expérience visuelle](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) peut être récupéré et rendu automatiquement par SDK.
+Le contenu créé dans Adobe Target [compositeur d’expérience visuelle](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=fr) peut être récupéré et rendu automatiquement par SDK.
 
 Pour demander et générer automatiquement les offres Target, utilisez la commande `sendEvent` et définissez l’option `renderDecisions` sur `true`. Cela force le SDK à effectuer automatiquement le rendu de tout contenu personnalisé éligible au rendu automatique.
 
@@ -215,7 +215,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
+[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=fr)
 
 ### Utilisation de Web SDK
 
@@ -300,7 +300,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
+[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=fr)
 
 
 ### Utilisation de Web SDK
@@ -438,7 +438,7 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-En savoir plus sur la commande `applyOffers` dans la [documentation dédiée](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html).
+En savoir plus sur la commande `applyOffers` dans la [documentation dédiée](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=fr).
 
 
 ### Utilisation de Web SDK
@@ -490,7 +490,7 @@ adobe.target.sendNotifications({
 });
 ```
 
-[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html)
+[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html?lang=fr)
 
 ### Utilisation de Web SDK
 
@@ -665,7 +665,7 @@ Utilisez la fonction `adobe.target.triggerView`. Cette fonction peut être appel
 adobe.target.triggerView("homeView")
 ```
 
-[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html)
+[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html?lang=fr)
 
 
 ### Utilisation de Web SDK
@@ -691,7 +691,7 @@ alloy("sendEvent", {
 
 ## Utilisation des jetons de réponse
 
-Le contenu Personalization renvoyé par Adobe Target comprend des [jetons de réponse](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), qui sont des détails sur l’activité, l’offre, l’expérience, le profil utilisateur, les informations géographiques, etc. Ces informations peuvent être partagées avec des outils tiers ou utilisées à des fins de débogage. Les jetons de réponse peuvent être configurés dans l’interface utilisateur d’Adobe Target.
+Le contenu Personalization renvoyé par Adobe Target comprend des [jetons de réponse](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=fr), qui sont des détails sur l’activité, l’offre, l’expérience, le profil utilisateur, les informations géographiques, etc. Ces informations peuvent être partagées avec des outils tiers ou utilisées à des fins de débogage. Les jetons de réponse peuvent être configurés dans l’interface utilisateur d’Adobe Target.
 
 ### Utiliser at.js
 
@@ -705,7 +705,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 }); 
 ```
 
-[En savoir plus](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
+[En savoir plus](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=fr)
 
 
 ### Utilisation de Web SDK
@@ -714,7 +714,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 >
 >Assurez-vous d’utiliser la version 2.6.0 ou ultérieure d’Experience Platform Web SDK.
 
-Les jetons de réponse sont renvoyés dans le cadre des `propositions` exposées dans le résultat de la commande `sendEvent`. Chaque proposition contient un tableau de `items` et chaque élément aura un objet `meta` renseigné avec des jetons de réponse s’ils sont activés dans l’interface utilisateur d’administration de Target. [En savoir plus](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
+Les jetons de réponse sont renvoyés dans le cadre des `propositions` exposées dans le résultat de la commande `sendEvent`. Chaque proposition contient un tableau de `items` et chaque élément aura un objet `meta` renseigné avec des jetons de réponse s’ils sont activés dans l’interface utilisateur d’administration de Target. [En savoir plus](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=fr)
 
 **Exemple**
 
@@ -880,7 +880,7 @@ Ensuite, les données circulent comme suit :
 
 ![Diagramme affichant le workflow de journalisation côté serveur d’Analytics](assets/a4t-server-side-atjs.png)
 
-[En savoir plus](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
+[En savoir plus](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=fr)
 
 ### Utilisation de Web SDK
 
@@ -964,7 +964,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
+[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=fr)
 
 ### Utilisation de Web SDK
 
@@ -1064,7 +1064,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html)
+[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html?lang=fr)
 
 
 ### Utilisation de Web SDK
@@ -1144,7 +1144,7 @@ window.targetPageParams = function() {
 };
 ```
 
-[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html)
+[En savoir plus](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html?lang=fr)
 
 ### Utilisation de Web SDK
 

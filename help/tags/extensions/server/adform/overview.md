@@ -47,7 +47,7 @@ Avant d’intégrer Adform à Adobe, assurez-vous que les conditions préalables
 2. **CDP ou SKU de connexion** : vous devez disposer du SKU Prime ou Ultimate de la plateforme de données client (CDP) Adobe, ou du SKU de connexion, pour permettre une communication transparente côté client et côté serveur.
 
 3. **Configuration Adobe Experience Platform Edge Network**:
-   * Assurez-vous qu’Edge Network est configuré pour prendre en charge le transfert d’événement en temps réel pour le reciblage hors site. Pour plus d’informations, consultez le guide de prise en main du transfert d’événement [Adobe](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started).
+   * Assurez-vous qu’Edge Network est configuré pour prendre en charge le transfert d’événement en temps réel pour le reciblage hors site. Pour plus d’informations, consultez le guide de prise en main du transfert d’événement [Adobe](https://experienceleague.adobe.com/fr/docs/experience-platform/tags/event-forwarding/getting-started).
    * Cette étape est essentielle pour transmettre efficacement des données au point d’entrée côté serveur d’Adobe.
 
 Une fois ces conditions préalables réunies, vous pouvez continuer à configurer et déployer l’extension [!DNL Adform] .

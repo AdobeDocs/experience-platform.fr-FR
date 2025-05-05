@@ -39,16 +39,16 @@ Pour ce faire, la technologie requise se compose des deux applications Experienc
 >
 >Assurez-vous que vous disposez des [autorisations de contrôle d’accès basées sur des attributs](/help/access-control/abac/end-to-end-guide.md) pour toutes ces zones ou demandez à votre administrateur ou administratrice système de vous accorder les autorisations nécessaires.
 
-* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) : Intégrez des données entre les sources de données pour alimenter la campagne. Ces données sont ensuite utilisées pour créer les audiences de la campagne et les éléments de données personnalisés de la surface utilisés dans l’e-mail et les vignettes de promotion web (par exemple, les informations relatives au nom ou au compte). Enfin, Real-Time CDP est également utilisé pour activer des audiences vers des destinations de médias achetés.
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html?lang=fr) : Intégrez des données entre les sources de données pour alimenter la campagne. Ces données sont ensuite utilisées pour créer les audiences de la campagne et les éléments de données personnalisés de la surface utilisés dans l’e-mail et les vignettes de promotion web (par exemple, les informations relatives au nom ou au compte). Enfin, Real-Time CDP est également utilisé pour activer des audiences vers des destinations de médias achetés.
    * [Schémas](/help/xdm/home.md)
    * [Profils](/help/profile/home.md)
    * [Jeux de données](/help/catalog/datasets/overview.md)
    * [Audiences](/help/segmentation/home.md)
    * [Destinations](/help/destinations/home.md)
-* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) : concevez des parcours, configurez des déclencheurs et créez les messages adéquats pour répondre aux besoins de vos visiteurs.
-   * [Déclencheur d’événement ou d’audience](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
+* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=fr) : concevez des parcours, configurez des déclencheurs et créez les messages adéquats pour répondre aux besoins de vos visiteurs.
+   * [Déclencheur d’événement ou d’audience](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=fr)
    * [ Audiences et événements ](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=fr)
-   * [Parcours](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+   * [Parcours](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=fr)
 
 ## Architecture de Real-Time CDP et de Journey Optimizer
 
@@ -268,9 +268,9 @@ Pour plus d’informations sur la création d’un [jeu de données](/help/catal
 
 >[!IMPORTANT]
 >
->La possibilité pour les clients de se désabonner de la réception des communications d’une marque, ainsi que le respect de ce choix, sont des exigences légales. Pour en savoir plus sur la législation applicable, consultez la [présentation des réglementations relatives à la confidentialité](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
+>La possibilité pour les clients de se désabonner de la réception des communications d’une marque, ainsi que le respect de ce choix, sont des exigences légales. Pour en savoir plus sur la législation applicable, consultez la [présentation des réglementations relatives à la confidentialité](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html?lang=fr).
 
-Pensez à mettre en œuvre les [politiques de consentement](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) suivantes et à demander le consentement de vos visiteurs avant de communiquer avec eux :
+Pensez à mettre en œuvre les [politiques de consentement](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html?lang=fr) suivantes et à demander le consentement de vos visiteurs avant de communiquer avec eux :
 
 * Si `consents.marketing.email.val = "Y"`, peut envoyer un e-mail à
 * Si `consents.marketing.sms.val = "Y"`, peut envoyer des SMS.
@@ -298,7 +298,7 @@ Aucune [ politique marketing ](/help/data-governance/policies/overview.md) n’e
 
 Ce cas d’utilisation nécessite la création de deux audiences pour définir des attributs ou des comportements spécifiques partagés par un sous-ensemble de profils de votre banque de profils afin de distinguer un groupe de clients potentiels. Les audiences peuvent être créées de plusieurs manières dans Adobe Experience Platform :
 
-* Pour plus d’informations sur la création d’une audience, consultez le [guide de l’interface utilisateur du service d’audience](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
+* Pour plus d’informations sur la création d’une audience, consultez le [guide de l’interface utilisateur du service d’audience](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=fr#create-audience).
 * Pour plus d’informations sur la composition d’audiences [audiences](/help/segmentation/home.md), consultez le [guide de l’interface utilisateur sur la composition d’audiences](/help/segmentation/ui/audience-composition.md).
 * Pour plus d’informations sur la création d’audiences par le biais de définitions de segment dérivées d’Experience Platform, consultez le [guide de l’interface utilisateur du créateur d’audience](/help/segmentation/ui/segment-builder.md).
 
@@ -344,7 +344,7 @@ Cette audience est créée pour inclure les profils qui ont dépensé plus de 25
 >
 >[!DNL Adobe Journey Optimizer] n’englobe pas tout ce qui est indiqué dans les diagrammes. Toutes les [annonces publicitaires médias payantes](/help/destinations/catalog/social/overview.md) sont créées dans l’espace de travail [!UICONTROL destinations] [. ](/help/destinations/ui/destinations-workspace.md)
 
-[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) vous permet de proposer des expériences connectées, contextuelles et personnalisées à vos clients. Le parcours client est l’ensemble du processus d’interaction d’un client avec la marque. Chaque parcours de cas d’utilisation nécessite des informations spécifiques.
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=fr) vous permet de proposer des expériences connectées, contextuelles et personnalisées à vos clients. Le parcours client est l’ensemble du processus d’interaction d’un client avec la marque. Chaque parcours de cas d’utilisation nécessite des informations spécifiques.
 
 Pour accomplir ce cas d’utilisation, vous devez créer deux parcours distincts :
 
@@ -367,15 +367,15 @@ Le parcours de durée de vie s’adresse à l’audience des clients à forte va
 
 Le parcours illustré ci-dessus suit la logique suivante.
 
-1. Lecture d’audience : utilisez une [activité Lecture d’audience](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=en) pour la première audience créée dans la section audiences ci-dessus.
+1. Lecture d’audience : utilisez une [activité Lecture d’audience](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=fr) pour la première audience créée dans la section audiences ci-dessus.
 
-2. Condition - Canal préféré : utilisez une [activité de condition](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html) pour déterminer comment contacter les clients, que ce soit par e-mail, SMS ou notifications push. Utilisez trois activités d’action pour créer les trois branches.
+2. Condition - Canal préféré : utilisez une [activité de condition](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html?lang=fr) pour déterminer comment contacter les clients, que ce soit par e-mail, SMS ou notifications push. Utilisez trois activités d’action pour créer les trois branches.
 
-3. Attente : utilisez une [activité d’attente](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html) pour attendre d’écouter les achats.
+3. Attente : utilisez une [activité d’attente](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=fr) pour attendre d’écouter les achats.
 
 4. Condition - Abonnement acheté au cours des 7 derniers jours ? : utilisez une activité de condition pour écouter les achats de produits au cours des 7 derniers jours.
 
-5. JourneyStepEventTracker - Abonnement non acheté : utilisez une [action personnalisée](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html) pour les visiteurs qui n’ont pas encore acheté votre abonnement, bien qu’ils aient reçu votre message. Dans le cadre de la condition personnalisée en fin de parcours, créez un événement `journey.feedback` et ajoutez-le à un jeu de données basé sur le schéma [!UICONTROL Événement d’étape de Parcours &#x200B;]. Vous utiliserez cet événement pour segmenter l’audience qui n’a pas acheté l’abonnement et que vous pouvez cibler via des annonces médias payantes.
+5. JourneyStepEventTracker - Abonnement non acheté : utilisez une [action personnalisée](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html?lang=fr) pour les visiteurs qui n’ont pas encore acheté votre abonnement, bien qu’ils aient reçu votre message. Dans le cadre de la condition personnalisée en fin de parcours, créez un événement `journey.feedback` et ajoutez-le à un jeu de données basé sur le schéma [!UICONTROL Événement d’étape de Parcours &#x200B;]. Vous utiliserez cet événement pour segmenter l’audience qui n’a pas acheté l’abonnement et que vous pouvez cibler via des annonces médias payantes.
 
 +++
 
@@ -436,7 +436,7 @@ Utilisez les événements, champs et actions suggérés ci-dessous dans votre pa
 
 >[!ENDTABS]
 
-Pour plus d’informations sur la création de parcours dans [!DNL Adobe Journey Optimizer], consultez le guide [Prise en main des parcours ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) .
+Pour plus d’informations sur la création de parcours dans [!DNL Adobe Journey Optimizer], consultez le guide [Prise en main des parcours ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=fr) .
 
 ### Configurer une destination pour l’affichage des publicités multimédia payantes {#paid-media-ads}
 

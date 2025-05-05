@@ -86,7 +86,7 @@ Non. Tout client Adobe Digital Experience peut utiliser Adobe Experience Platfor
 * Les clients qui n’ont *accès* à Experience Platform ou à la plateforme de données clients en temps réel et qui souhaitent utiliser le [!DNL Web SDK] doivent configurer les autorisations appropriées pour créer des schémas et des flux de données dans l’interface utilisateur de collecte de données ou d’Experience Platform.
 * Les clients qui ont accès à Experience Platform ou à Real-Time CDP et souhaitent utiliser le [!DNL Web SDK] devront configurer les autorisations appropriées pour créer des schémas, des jeux de données, des espaces de noms d’identité et des flux de données dans l’interface utilisateur de collecte de données ou dans l’interface utilisateur Experience Platform.
 
-Pour plus d’informations sur la configuration de ces autorisations, consultez notre documentation sur la [gestion des autorisations relatives à la collecte de données](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
+Pour plus d’informations sur la configuration de ces autorisations, consultez notre documentation sur la [gestion des autorisations relatives à la collecte de données](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=fr).
 
 ## Qui doit utiliser le SDK web ?
 

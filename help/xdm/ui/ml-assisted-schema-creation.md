@@ -24,7 +24,7 @@ Avec la génération de schéma ML, vous pouvez rapidement intégrer de nouvelle
 
 Ce tutoriel nécessite une bonne compréhension des exigences relatives à la création de schémas. Avant de poursuivre avec ce guide, vous devez lire le guide [UI guide to create and editing schemas](./resources/schemas.md).
 
-Ce guide explique comment créer des schémas à l’aide d’algorithmes de machine learning (ML) pour générer un schéma à partir de données d’exemple. Consultez le [guide des workflows de création manuelle de schéma](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) pour plus d’informations sur la création de schémas ou le document sur les workflows basés sur des champs [ dans l’éditeur de schémas](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/field-based-workflows) afin de mieux comprendre le processus de création de schémas.
+Ce guide explique comment créer des schémas à l’aide d’algorithmes de machine learning (ML) pour générer un schéma à partir de données d’exemple. Consultez le [guide des workflows de création manuelle de schéma](https://experienceleague.adobe.com/fr/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) pour plus d’informations sur la création de schémas ou le document sur les workflows basés sur des champs [ dans l’éditeur de schémas](https://experienceleague.adobe.com/fr/docs/experience-platform/xdm/ui/field-based-workflows) afin de mieux comprendre le processus de création de schémas.
 
 >[!NOTE]
 >
@@ -125,4 +125,4 @@ L’éditeur de schémas s’affiche avec le schéma que vous venez de créer da
 
 Après avoir créé votre schéma, vous pouvez utiliser l’éditeur de schémas pour apporter d’autres modifications, si nécessaire. Votre nouveau schéma est maintenant prêt à être intégré à vos sources de données et utilisé pour l’analyse des données.
 
-Pour plus d’informations sur l’utilisation de l’éditeur de schémas[&#128279;](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#edit) consultez le guide Modifier un schéma existant ».
+Pour plus d’informations sur l’utilisation de l’éditeur de schémas[&#128279;](https://experienceleague.adobe.com/fr/docs/experience-platform/xdm/ui/resources/schemas#edit) consultez le guide Modifier un schéma existant ».

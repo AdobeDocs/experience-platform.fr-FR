@@ -2,7 +2,7 @@
 title: Cas d’utilisation de la segmentation pour Real-Time Customer Data Platform version B2B
 description: Présentation des différents cas d’utilisation de l’édition B2B d’Adobe Real-Time Customer Data Platform.
 feature: Get Started, Audiences, Segments, B2B
-badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
 source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt

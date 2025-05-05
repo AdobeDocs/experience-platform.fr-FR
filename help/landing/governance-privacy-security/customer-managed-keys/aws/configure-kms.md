@@ -13,13 +13,13 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Ce document s’applique aux implémentations d’Experience Platform s’exécutant sur Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Ce document s’applique aux implémentations d’Experience Platform s’exécutant sur Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/landing/multi-cloud).
 >
 >[Les clés gérées par le client](../overview.md) (CMK) sur AWS sont prises en charge pour Privacy and Security Shield, mais ne sont pas disponibles pour Healthcare Shield. Les CMK sur Azure sont prises en charge pour Privacy and Security Shield ainsi que pour Healthcare Shield.
 
 Utilisez ce guide pour sécuriser vos données avec Amazon Web Services (AWS) Key Management Service (KMS) en créant, gérant et contrôlant des clés de chiffrement pour Adobe Experience Platform. Cette intégration simplifie la conformité, rationalise les opérations grâce à l&#39;automatisation et élimine le besoin de gérer votre propre infrastructure de gestion clé.
 
-Pour obtenir des instructions spécifiques à Customer Journey Analytics, reportez-vous à la documentation du CMK Customer Journey Analytics [&#128279;](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)
+Pour obtenir des instructions spécifiques à Customer Journey Analytics, reportez-vous à la documentation du CMK Customer Journey Analytics [&#128279;](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/cja-privacy/cmk)
 
 >[!IMPORTANT]
 >

@@ -167,7 +167,7 @@ Toutes les actions que vous pouvez effectuer dans l’interface utilisateur peuv
 
 ## Gestion des journaux d’audit pour Adobe Admin Console
 
-Pour savoir comment gérer les journaux d’audit des activités dans Adobe Admin Console, reportez-vous au [document](https://helpx.adobe.com/enterprise/using/audit-logs.html) suivant.
+Pour savoir comment gérer les journaux d’audit des activités dans Adobe Admin Console, reportez-vous au [document](https://helpx.adobe.com/fr/enterprise/using/audit-logs.html) suivant.
 
 ## Étapes suivantes et ressources supplémentaires
 

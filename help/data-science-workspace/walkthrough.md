@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Ce document décrit les résultats d’apprentissage attendus du cours Adobe Experience Platform Data Science Workspace. Pour afficher le cours, vous devez vous connecter à Experience League à l’aide de votre Adobe ID.
 
-Le [cours de prise en main de Data Science Workspace for Data Scientists](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=fr) est conçu pour les spécialistes des données qui souhaitent apprendre à utiliser les notebooks JupyterLab pour obtenir des informations et des données de requête, créer des jeux de données activés pour les profils, publier des modèles d’apprentissage automatique automatisés et activer des insights appris par la machine dans les applications d’Adobe et non-Adobe.
+Le [cours de prise en main de Data Science Workspace for Data Scientists](https://experienceleague.adobe.com/?lang=fr&recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=fr) est conçu pour les spécialistes des données qui souhaitent apprendre à utiliser les notebooks JupyterLab pour obtenir des informations et des données de requête, créer des jeux de données activés pour les profils, publier des modèles d’apprentissage automatique automatisés et activer des insights appris par la machine dans les applications d’Adobe et non-Adobe.
 
 ## Conditions préalables du cours
 

@@ -19,8 +19,8 @@ Ce guide de documentation comprend :
 
 * Tutoriel que vous pouvez suivre pour créer une page de documentation pour votre nouvelle source ;
 * Un modèle de documentation à remplir pour votre nouvelle source ;
-* [Instructions sur la façon d’utiliser Markdown pour rédiger la documentation technique](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html)
-* [Instructions pour comprendre la version Adobe Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
+* [Instructions sur la façon d’utiliser Markdown pour rédiger la documentation technique](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=fr)
+* [Instructions pour comprendre la version Adobe Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=fr#custom-markdown-extensions).
 
 ## Conditions préalables
 

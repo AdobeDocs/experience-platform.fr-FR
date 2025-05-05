@@ -40,7 +40,7 @@ Pour réussir l’implémentation de ce cas d’utilisation, vous devez utiliser
 - [Jeux de données](../../catalog/datasets/overview.md)
 - [Schémas](../../xdm//home.md)
 - [Audiences](../../segmentation/home.md)
-- [Parcours depuis Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/journey)
+- [Parcours depuis Adobe Journey Optimizer](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/orchestrate-journeys/journey)
 
 ## Comment réaliser le cas d’utilisation : vue d’ensemble de haut niveau {#achieve-the-use-case-high-level}
 

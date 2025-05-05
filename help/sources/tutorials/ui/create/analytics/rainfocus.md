@@ -127,4 +127,4 @@ Les documents suivants fournissent des conseils supplémentaires sur les nuances
 * [Création d’un compte de service Adobe (JWT) dans le portail Adobe Developer](https://developer.adobe.com/developer-console/docs/guides/authentication/ServiceAccountIntegration/)
 * [Création d’un schéma dans l’API](../../../../../xdm/tutorials/create-schema-api.md)
 * [Créer un schéma dans l’interface utilisateur](../../../../../xdm/tutorials/create-schema-ui.md)
-* [Définir des champs d’identité dans l’interface utilisateur](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)
+* [Définir des champs d’identité dans l’interface utilisateur](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html?lang=fr)

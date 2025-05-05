@@ -3,7 +3,7 @@ keywords: segments rtcdp;rtcdp du créateur de segments;segment rtcdp
 title: Créateur de segments dans Real-Time Customer Data Platform
 description: Découvrez comment utiliser le créateur de segments dans Real-Time CDP pour définir des audiences.
 feature: Get Started, Audiences, Segments
-badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: a9a14ec4-d8e2-48b2-882f-5afd0cb06b71
 source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt

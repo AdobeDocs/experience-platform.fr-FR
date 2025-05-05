@@ -13,7 +13,7 @@ ht-degree: 13%
 
 # Fonctions SQL définies par Adobe dans Query Service
 
-Les fonctions définies par l’Adobe, ici appelées ADF, sont des fonctions prédéfinies de Adobe Experience Platform Query Service qui permettent d’effectuer des tâches commerciales courantes sur les données [!DNL Experience Event]. Il s’agit notamment de fonctions pour [Session](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) et [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) comme celles trouvées dans Adobe Analytics.
+Les fonctions définies par l’Adobe, ici appelées ADF, sont des fonctions prédéfinies de Adobe Experience Platform Query Service qui permettent d’effectuer des tâches commerciales courantes sur les données [!DNL Experience Event]. Il s’agit notamment de fonctions pour [Session](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=fr) et [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=fr) comme celles trouvées dans Adobe Analytics.
 
 Ce document fournit des informations sur les fonctions définies par l’Adobe disponibles dans [!DNL Query Service].
 
@@ -47,7 +47,7 @@ Lorsque vous utilisez des données [!DNL Experience Event] provenant d’un site
 
 Ce regroupement, ou sessionisation des données, permet d’associer les événements pour découvrir plus de contexte sur l’expérience client.
 
-Pour plus d’informations sur la session dans Adobe Analytics, consultez la documentation sur les [sessions contextuelles](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
+Pour plus d’informations sur la session dans Adobe Analytics, consultez la documentation sur les [sessions contextuelles](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=fr).
 
 **Syntaxe de la requête**
 

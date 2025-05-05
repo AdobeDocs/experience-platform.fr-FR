@@ -78,7 +78,7 @@ Lisez le tutoriel [Exporter des jeux de données](/help/destinations/ui/export-d
 
 ## Valider l’exportation des données {#exported-data}
 
-Pour valider une exportation réussie d’un jeu de données, vous pouvez vérifier que votre jeu de données a réussi à passer à l’ [ entrepôt de données de Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html).
+Pour valider une exportation réussie d’un jeu de données, vous pouvez vérifier que votre jeu de données a réussi à passer à l’ [ entrepôt de données de Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=fr).
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

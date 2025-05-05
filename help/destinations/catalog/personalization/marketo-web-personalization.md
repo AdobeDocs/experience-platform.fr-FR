@@ -16,7 +16,7 @@ ht-degree: 64%
 
 Cette extension déploie le script pour [!DNL Marketo's] applications Web Personalization et ContentAI. [!DNL Marketo] Web Personalization identifie et personnalise de manière unique le contenu en fonction des caractéristiques des visiteurs sur le web, telles que les graphiques de fidélité pour les visiteurs anonymes et un large éventail d’attributs comportementaux dans [!DNL Marketo] Engagement Platform pour les visiteurs connus. [!DNL Marketo] ContentAI contient des fonctionnalités de recommandations et de personnalisation optimisées par l’IA pour les campagnes web et par e-mail qui sont uniques pour les clients B2B.
 
-[!DNL Marketo Web Personalization] est une extension de personnalisation dans Adobe Experience Platform. Pour plus d’informations sur la personnalisation web et ContentAI dans Marketo, consultez [Présentation de Web Personalization](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html).
+[!DNL Marketo Web Personalization] est une extension de personnalisation dans Adobe Experience Platform. Pour plus d’informations sur la personnalisation web et ContentAI dans Marketo, consultez [Présentation de Web Personalization](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html?lang=fr).
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
 

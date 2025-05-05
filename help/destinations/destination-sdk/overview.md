@@ -32,7 +32,7 @@ Consultez la documentation dans les liens ci-dessous pour commencer rapidement �
                 <li><a href="/help/destinations/destination-sdk/functionality/configuration-options.md">Toutes les options de configuration expliquées</a></li>
                 <li> Configuration du serveur de destination - <a href="/help/destinations/destination-sdk/functionality/destination-server/server-specs.md">spécifications du serveur</a> et <a href="/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md">spécifications du modèle</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md">Champs de données client et autres composants de configuration de destination</a></li>
-                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Modèles et macros</a></li>
+                <li><a href="https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Modèles et macros</a></li>
             </ul>
         </td>
         <td>
@@ -68,7 +68,7 @@ Consultez la documentation dans les liens ci-dessous pour commencer rapidement �
                 <li><a href="/help/destinations/destination-sdk/guides/configure-destination-instructions.md">Configuration d’un guide de bout en bout de destination de diffusion en continu</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-server/message-format.md">Comprendre la transformation des données par le biais de modèles de bulle</a> et <a href="/help/destinations/destination-sdk/functionality/destination-server/supported-functions.md">afficher les fonctions de modèle prises en charge</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/aggregation-policy.md">Présentation des stratégies d’agrégation de données</a></li>
-                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Exemple de configuration en direct</a></li>
+                <li><a href="https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Exemple de configuration en direct</a></li>
                 <li><a href="/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md">Test de votre destination de diffusion en continu</a></li>
             </ul>
         </td>

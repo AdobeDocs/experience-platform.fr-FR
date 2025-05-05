@@ -30,7 +30,7 @@ Commencez ici et suivez les liens ci-dessous pour découvrir tous les mécanisme
 
 >[!TIP]
 >
->Consultez également la page [Plans directeurs de l’expérience digitale](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) pour obtenir plus d’informations, telles que [diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.
+>Consultez également la page [Plans directeurs de l’expérience digitale](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=fr) pour obtenir plus d’informations, telles que [diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=fr#end-to-end-latency-diagrams) pour divers services Experience Platform.
 
 ## Types de mécanismes de sécurisation {#guardrail-types}
 
@@ -49,15 +49,15 @@ Consultez également les liens de description du produit ci-dessous pour obtenir
 
 * [Toutes les descriptions des produits Adobe](https://helpx.adobe.com/fr/legal/product-descriptions.html)
 * [Real-Time Customer Data Platform (B2C Edition - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (édition B2P - packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B edition - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (édition B2P - packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B edition - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
 
 ## Mécanismes de sécurisation pour d’autres applications Experience Platform  {#guardrails-other-aep-apps}
 
 Des mécanismes de sécurisation similaires existent pour d’autres applications Experience Platform. Pour plus d’informations, consultez les liens ci-dessous :
 
-* [Mécanismes de sécurisation de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=en)
-* [Mécanismes de sécurisation de Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+* [Mécanismes de sécurisation de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=fr)
+* [Mécanismes de sécurisation de Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=fr)
 
 ## Étapes suivantes
 

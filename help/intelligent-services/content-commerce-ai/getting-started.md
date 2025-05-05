@@ -67,6 +67,6 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 
 Une fois que vous disposez de toutes vos informations d’identification, vous êtes prêt à configurer un programme de travail personnalisé pour [!DNL Content tagging]. Les documents suivants aident à comprendre le framework d’extensibilité et la configuration de l’environnement.
 
-Pour en savoir plus sur Extensibility Framework, commencez par lire le document [introduction à l’extensibilité](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html). Ce document décrit les conditions préalables et les exigences en matière de configuration.
+Pour en savoir plus sur Extensibility Framework, commencez par lire le document [introduction à l’extensibilité](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html?lang=fr). Ce document décrit les conditions préalables et les exigences en matière de configuration.
 
-Pour en savoir plus sur la configuration d’un environnement pour [!DNL Content tagging], commencez par lire le guide de [configuration d’un environnement de développement](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html). Ce document fournit des instructions de configuration qui vous permettent de développer pour Asset Compute Service.
+Pour en savoir plus sur la configuration d’un environnement pour [!DNL Content tagging], commencez par lire le guide de [configuration d’un environnement de développement](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html?lang=fr). Ce document fournit des instructions de configuration qui vous permettent de développer pour Asset Compute Service.
