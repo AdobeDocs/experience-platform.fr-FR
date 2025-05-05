@@ -2,7 +2,7 @@
 title: S’authentifier et accéder à l’API Reactor
 description: Découvrez comment commencer à utiliser l’API Reactor, y compris les étapes de génération des informations d’identification d’accès requises.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 31e52dce23c558aaba822fe27d2e58ed6a7ce18d
 workflow-type: tm+mt
 source-wordcount: '912'
 ht-degree: 54%
@@ -16,6 +16,8 @@ Pour utiliser l’[API Reactor](https://developer.adobe.com/experience-platform-
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
+* `Accept: application/vnd.api+json;revision=1`
+* `Content-Type: application/vnd.api+json`
 
 Ce guide explique comment utiliser Adobe Developer Console pour rassembler les valeurs de chacun de ces en-têtes afin que vous puissiez commencer à lancer des appels vers l’API Reactor.
 
@@ -51,7 +53,7 @@ Sélectionnez ensuite le type d’authentification pour générer les jetons d�
 
 >[!IMPORTANT]
 >
->Sélectionnez la méthode **[!UICONTROL OAuth de serveur à serveur]**, car il s’agira de la seule méthode prise en charge à l’avenir. La méthode **[!UICONTROL Compte de service (JWT)]** est obsolète. Bien que les intégrations utilisant la méthode d’authentification JWT continueront à fonctionner jusqu’au 1er janvier 2025, Adobe vous recommande vivement de migrer les intégrations existantes vers la nouvelle méthode OAuth de serveur à serveur avant cette date. Pour plus d’informations, consultez la section [!BADGE Obsolète]{type=negative}[Générez un jeton web JSON (JWT)](/help/landing/api-authentication.md#jwt) dans le tutoriel sur l’authentification de l’API Experience Platform.
+>Sélectionnez la méthode **[!UICONTROL OAuth de serveur à serveur]**, car il s’agira de la seule méthode prise en charge à l’avenir. La méthode **[!UICONTROL Compte de service (JWT)]** est obsolète. Bien que les intégrations utilisant la méthode d’authentification JWT continueront à fonctionner jusqu’au 1er janvier 2025, Adobe vous recommande vivement de migrer les intégrations existantes vers la nouvelle méthode OAuth de serveur à serveur avant cette date. Pour plus d’informations, reportez-vous à la section [!BADGE Obsolète]{type=negative} [Générer un jeton JSON Web Token (JWT)](/help/landing/api-authentication.md#jwt) dans le tutoriel sur l’authentification des API Experience Platform.
 
 Sélectionnez **Suivant** pour continuer.
 
