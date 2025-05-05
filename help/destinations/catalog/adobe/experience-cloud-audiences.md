@@ -11,7 +11,7 @@ ht-degree: 16%
 ---
 
 
-# [!UICONTROL  Connexion d’audiences Experience Cloud]
+# [!UICONTROL &#x200B; Connexion d’audiences Experience Cloud]
 
 >[!AVAILABILITY]
 >
@@ -144,7 +144,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin des **** et des **** [ ](/help/access-control/home.md#permissions) autorisations de contrôle d’accès. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **&#x200B;**&#x200B;et des **&#x200B;**&#x200B;[&#128279;](/help/access-control/home.md#permissions) autorisations de contrôle d’accès. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -167,7 +167,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 >[!IMPORTANT]
 > 
->Pour activer les données, vous avez besoin des ****, **[!UICONTROL Activer les destinations]**, **** et **** [  autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des **&#x200B;**, **[!UICONTROL Activer les destinations]**, **&#x200B;**&#x200B;et **&#x200B;**&#x200B;[  autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Lisez [Activer les profils et les audiences vers les destinations d’exportation d’audience en continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination. Aucun [mappage d’étape](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) n’est requis et aucune [planification d’étape](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) n’est disponible pour cette destination.
 

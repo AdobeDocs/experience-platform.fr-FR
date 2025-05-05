@@ -104,7 +104,7 @@ Une fois que vous avez obtenu le [!DNL Key vault URI], revenez à la vue [!UICON
 
 ![La vue [!UICONTROL Configuration des clés gérées par le client] avec les sections [!UICONTROL Nom de configuration] et [!UICONTROL Identifiant de clé du coffre Key] mises en surbrillance.](../../../images/governance-privacy-security/customer-managed-keys/configuration-name.png)
 
-Vous revenez au tableau de bord [!UICONTROL Configurations du chiffrement]. Le statut de la configuration [!UICONTROL Clés gérées par le client] s’affiche sous la forme [!UICONTROL  Traitement].
+Vous revenez au tableau de bord [!UICONTROL Configurations du chiffrement]. Le statut de la configuration [!UICONTROL Clés gérées par le client] s’affiche sous la forme [!UICONTROL &#x200B; Traitement].
 
 ![Tableau de bord [!UICONTROL Configurations de chiffrement] avec [!UICONTROL Traitement] mis en surbrillance sur la vignette [!UICONTROL Clés gérées par le client].](../../../images/governance-privacy-security/customer-managed-keys/processing.png)
 

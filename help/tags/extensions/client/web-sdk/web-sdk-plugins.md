@@ -37,7 +37,7 @@ Aucune configuration n’est nécessaire pour initialiser ou ajouter un module e
 * [`getQueryParam`](#getQueryParam)
 * [`getTimeParting`](#getTimeParting)
 * [`getTimeSinceLastVisit`](#getTimeSInceLastVisit)
-* [`getValOnce](#getValOnce)
+* [&grave;getValOnce](#getValOnce)
 * [`getVisitDuration`](#getVisitDuration)
 * [`getVisitNum`](#getVisitNum)
 * [`pFo`](#pFo)

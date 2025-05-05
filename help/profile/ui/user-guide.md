@@ -62,7 +62,7 @@ Le nombre de profils inclut également les profils avec attributs (données d’
 
 Lorsque l’ingestion d’enregistrements dans la boutique [!DNL Profile] augmente ou réduit le nombre de plus de 5 %, une tâche est déclenchée pour mettre à jour le nombre. Pour les workflows de données en flux continu, une vérification est effectuée toutes les heures afin de déterminer si le seuil d’augmentation ou de diminution de 5 % a été atteint. Si c’est le cas, une tâche est automatiquement déclenchée pour mettre à jour le nombre de profils. Pour l’ingestion par lots, dans les 15 minutes suivant l’ingestion réussie d’un lot dans la banque de profils, si le seuil d’augmentation ou de diminution de 5 % est atteint, une tâche est exécutée pour mettre à jour le nombre de profils.
 
-### [!UICONTROL  Profils par espace de noms ] {#profiles-by-namespace}
+### [!UICONTROL &#x200B; Profils par espace de noms &#x200B;] {#profiles-by-namespace}
 
 La mesure **[!UICONTROL Profils par espace de noms]** affiche le nombre total et la répartition des espaces de noms sur tous les profils fusionnés de votre banque de profils. Le nombre total de profils par espace de noms (en d’autres termes, en additionnant les valeurs affichées pour chaque espace de noms) sera toujours supérieur à la mesure du nombre de profils, car plusieurs espaces de noms peuvent être associés à un profil. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de noms seront associés à ce client individuel.
 
@@ -70,7 +70,7 @@ La mesure **[!UICONTROL Profils par espace de noms]** affiche le nombre total et
 
 De la même manière que pour la mesure [nombre de profils](#profile-count), lorsque l’ingestion d’enregistrements dans la banque de [!DNL Profile] augmente ou réduit le nombre de plus de 5 %, une tâche est déclenchée pour mettre à jour les mesures d’espace de noms. Pour les workflows de données en flux continu, une vérification est effectuée toutes les heures afin de déterminer si le seuil d’augmentation ou de diminution de 5 % a été atteint. Si c’est le cas, une tâche est automatiquement déclenchée pour mettre à jour le nombre de profils. Pour l’ingestion par lots, dans les 15 minutes suivant l’ingestion réussie d’un lot dans la boutique [!DNL Profile], si le seuil d’augmentation ou de diminution de 5 % est atteint, une tâche est exécutée pour mettre à jour les mesures.
 
-## Utilisez l’onglet [!UICONTROL  Parcourir ] pour afficher les profils
+## Utilisez l’onglet [!UICONTROL &#x200B; Parcourir &#x200B;] pour afficher les profils
 
 Sur l’onglet **[!UICONTROL Parcourir]** vous pouvez afficher des profils types à l’aide d’une politique de fusion ou rechercher des profils spécifiques à l’aide d’un espace de noms d’identité et d’une valeur.
 

@@ -57,4 +57,4 @@ Il peut parfois être nécessaire de mettre à jour les données du magasin de p
 
 ## Étapes suivantes {#next-steps}
 
-Pour commencer à effectuer des appels à l’aide de l’API [!DNL Real-Time Customer Profile], lisez le guide de prise en main [ ](getting-started.md), puis sélectionnez l’un des guides des points d’entrée pour savoir comment utiliser des points d’entrée spécifiques liés à l’[!DNL Profile]. Pour utiliser les données [!DNL Profile] à l’aide de l’interface utilisateur de [!DNL Experience Platform], reportez-vous au [guide d’utilisation du profil client en temps réel](../ui/user-guide.md).
+Pour commencer à effectuer des appels à l’aide de l’API [!DNL Real-Time Customer Profile], lisez le guide de prise en main [&#128279;](getting-started.md), puis sélectionnez l’un des guides des points d’entrée pour savoir comment utiliser des points d’entrée spécifiques liés à l’[!DNL Profile]. Pour utiliser les données [!DNL Profile] à l’aide de l’interface utilisateur de [!DNL Experience Platform], reportez-vous au [guide d’utilisation du profil client en temps réel](../ui/user-guide.md).

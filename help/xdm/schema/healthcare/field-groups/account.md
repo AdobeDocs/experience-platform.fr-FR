@@ -79,7 +79,7 @@ Pour plus d’informations sur le groupe de champs, reportez-vous au référenti
 | [!UICONTROL Code de module] | `packageCode` | Tableau de [[!UICONTROL Concept codeable]](../data-types/codeable-concept.md) | Le code de package peut être utilisé pour regrouper les diagnostics qui peuvent être facturés ou livrés comme un seul produit (comme les DRG). |
 | [!UICONTROL Type] | `type` | Tableau de [[!UICONTROL Concept codeable]](../data-types/codeable-concept.md) | Type que ce diagnostic a en rapport avec le compte (par exemple admission, facturation, décharge, etc.). |
 | [!UICONTROL Date De Diagnostic] | `dateOfDiagnosis` | DateTime | Date du diagnostic (au moment du diagnostic codé). |
-| [!UICONTROL  On Admission] | `onAdmission` | Booléen | Si le diagnostic était présent à l&#39;admission. |
+| [!UICONTROL &#x200B; On Admission] | `onAdmission` | Booléen | Si le diagnostic était présent à l&#39;admission. |
 | [!UICONTROL Séquence] | `sequence` | Nombre entier | Classement du diagnostic (pour chaque type), avec une valeur minimale de `0`. |
 
 ## `guarantor` {#guarantor}

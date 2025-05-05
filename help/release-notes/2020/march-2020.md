@@ -97,7 +97,7 @@ Adobe Experience Platform [!DNL Identity Service] vous permet de mieux connaî
 
 * Aucune
 
-Pour plus d’informations sur [!DNL Identity Service], consultez la présentation d’Identity Service [](../../identity-service/home.md).
+Pour plus d’informations sur [!DNL Identity Service], consultez la présentation d’Identity Service [&#128279;](../../identity-service/home.md).
 
 ## Sources {#sources}
 

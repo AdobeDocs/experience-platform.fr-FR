@@ -540,4 +540,4 @@ alloy("configure", {
 
 ## Étapes suivantes {#next-steps}
 
-Ce guide couvre la journalisation côté client pour les données A4T dans le SDK Web. Pour plus d’informations sur la gestion des données A4T sur Edge Network](server-side.md) consultez le guide sur la [ journalisation côté serveur .
+Ce guide couvre la journalisation côté client pour les données A4T dans le SDK Web. Pour plus d’informations sur la gestion des données A4T sur Edge Network[&#128279;](server-side.md) consultez le guide sur la  journalisation côté serveur .

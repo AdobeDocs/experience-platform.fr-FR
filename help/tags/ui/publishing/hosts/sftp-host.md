@@ -84,7 +84,7 @@ La boîte de dialogue se développe pour inclure des options de configuration su
 | Champ de configuration | Description |
 | --- | --- |
 | [!UICONTROL Ne pas utiliser de liens symboliques] | Par défaut, tous les hôtes SFTP utilisent des liens symboliques (symlinks) pour référencer la bibliothèque [versions](../builds.md) qui sont enregistrés sur le serveur. Cependant, tous les serveurs ne prennent pas en charge l’utilisation de liens symboliques. Lorsque cette option est sélectionnée, l’hôte utilise une opération de copie pour mettre à jour directement les ressources de build au lieu d’utiliser des liens symboliques. |
-| [!UICONTROL  URL du serveur SFTP ] | Chemin d’accès de base de l’URL de votre serveur . |
+| [!UICONTROL &#x200B; URL du serveur SFTP &#x200B;] | Chemin d’accès de base de l’URL de votre serveur . |
 | [!UICONTROL Chemin] | Chemin d’accès à ajouter à l’URL du serveur de base pour cet hôte. |
 | [!UICONTROL Port] | Le port doit être l’un des ports suivants :<ul><li>`21`</li><li>`22`</li><li>`201`</li><li>`200`</li><li>`2002`</li><li>`2018`</li><li>`2022`</li><li>`2200`</li><li>`2222`</li><li>`2333`</li><li>`2939`</li><li>`443`</li><li>`4343`</li><li>`80`</li><li>`8080`</li><li>`8888`</li></ul>En règle générale, Adobe limite le nombre de ports pouvant être utilisés pour le trafic sortant. Les ports sélectionnés sont généralement autorisés à passer par les pare-feu d’entreprise et incluent certaines plages pour plus de flexibilité. |
 | [!UICONTROL Nom d’utilisateur] | Nom d’utilisateur à utiliser lors de l’accès au serveur. |

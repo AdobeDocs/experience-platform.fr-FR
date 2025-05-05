@@ -68,13 +68,13 @@ ht-degree: 61%
          * [Événements](./governance-privacy-security/audit-logs/api/events.md)
          * [Exporter](./governance-privacy-security/audit-logs/api/export.md)
    * [Chiffrement des données](./governance-privacy-security/encryption.md)
-   * {#customer-managed-keys} des clés gérées par le client
+   * des clés gérées par le client{#customer-managed-keys}
       * [Clés gérées par le client](./governance-privacy-security/customer-managed-keys/overview.md)
       * Azure {#azure}
          * [Configurer un coffre de clés Azure](./governance-privacy-security/customer-managed-keys/azure/azure-key-vault-config.md)
          * [Utilisation de l’API pour configurer la fonction CMK](./governance-privacy-security/customer-managed-keys/azure/api-set-up.md)
          * [Utilisation de l’interface utilisateur pour configurer CMK](./governance-privacy-security/customer-managed-keys/azure/ui-set-up.md)
-      * {#aws} Amazon Web Services
+      * Amazon Web Services{#aws}
          * [Configuration d’AWS KMS pour la fonction CMK](./governance-privacy-security/customer-managed-keys/aws/configure-kms.md)
          * [Utiliser l’interface utilisateur pour configurer CMK sur AWS](./governance-privacy-security/customer-managed-keys/aws/ui-set-up.md)
 * Utilisation de la licence et barrières de sécurité {#license}

@@ -11,7 +11,7 @@ ht-degree: 18%
 
 ---
 
-# [!UICONTROL  Groupe de champs de schéma Détails sur le commerce d’appareil ]
+# [!UICONTROL &#x200B; Groupe de champs de schéma Détails sur le commerce d’appareil &#x200B;]
 
 >[!NOTE]
 >

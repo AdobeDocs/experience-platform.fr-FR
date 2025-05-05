@@ -39,7 +39,7 @@ Pour accéder au compte Oracle Service Cloud sur [!DNL Experience Platform], vou
 | Nom d’utilisateur | Nom d’utilisateur de votre compte d’utilisateur Oracle Service Cloud.  |
 | Mot de passe | Mot de passe de votre compte Oracle Service Cloud.  |
 
-Pour plus d’informations sur l’authentification de votre compte Oracle Service Cloud, reportez-vous au guide [[!DNL Oracle]  sur l’authentification](https://docs.oracle.com/en/cloud/saas/b2c-service/20c/cxska/OKCS_Authenticate_and_Authorize.html ).
+Pour plus d’informations sur l’authentification de votre compte Oracle Service Cloud, reportez-vous au guide [[!DNL Oracle]  sur l’authentification](https://docs.oracle.com/en/cloud/saas/b2c-service/20c/cxska/OKCS_Authenticate_and_Authorize.html).
 
 ## Se connecter à votre compte Oracle Service Cloud 
 

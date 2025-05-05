@@ -71,7 +71,7 @@ Pour plus d’informations sur les balises en Experience Platform, reportez-vous
 
 Si vous souhaitez tester votre mise en oeuvre dans des environnements de développement ou d’évaluation tout en préservant vos analyses de production [!DNL Meta Pixel], vous pouvez utiliser un élément de données pour choisir dynamiquement un ID [!DNL Pixel] approprié en fonction de l’environnement utilisé.
 
-Pour ce faire, vous pouvez utiliser un élément de données [!UICONTROL  Custom Code] (fourni par l’ [[!UICONTROL extension Core]](../core/overview.md)) en combinaison avec la [`turbine` free variable](../../../extension-dev/turbine.md). Dans le code JavaScript de l’élément de données, utilisez l’objet `turbine` pour trouver l’étape d’environnement actuelle, puis renvoyez un ID [!DNL Pixel] approprié en fonction du résultat.
+Pour ce faire, vous pouvez utiliser un élément de données [!UICONTROL &#x200B; Custom Code] (fourni par l’ [[!UICONTROL extension Core]](../core/overview.md)) en combinaison avec la [`turbine` free variable](../../../extension-dev/turbine.md). Dans le code JavaScript de l’élément de données, utilisez l’objet `turbine` pour trouver l’étape d’environnement actuelle, puis renvoyez un ID [!DNL Pixel] approprié en fonction du résultat.
 
 L’exemple suivant renvoie un faux ID de production `exampleProductionKey` lorsqu’il est utilisé dans l’environnement de production et un autre ID `exampleTestKey` lorsqu’un autre environnement est utilisé. Lors de l’implémentation de ce code, remplacez chaque valeur par vos identifiants de production et de test réels [!DNL Pixel].
 

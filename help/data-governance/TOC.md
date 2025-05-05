@@ -30,7 +30,7 @@ ht-degree: 94%
    * [Présentation](enforcement/overview.md)
    * [Application automatique](enforcement/auto-enforcement.md)
    * [Application basée sur les API](enforcement/api-enforcement.md)
-* {#mtls-api} API du service MTLS
+* API du service MTLS{#mtls-api}
    * [Vue d’ensemble](mtls-api/overview.md)
    * [Prise en main](mtls-api/getting-started.md)
    * [Point d’entrée de certificat public](mtls-api/public-certificate-endpoint.md)

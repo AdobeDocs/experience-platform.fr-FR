@@ -31,11 +31,11 @@ Consultez le guide [Prise en main du pixel](https://ads.tiktok.com/help/article/
 
 Vous pouvez générer un jeton d’accès une fois le pixel créé. Pour ce faire, accédez au pixel et sélectionnez l’onglet **[!UICONTROL Paramètres]**. Sous API d’événements, sélectionnez **[!UICONTROL Générer un jeton d’accès]**.
 
-Pour plus d’informations sur la configuration du code de pixel et du jeton d’accès](https://business-api.tiktok.com/portal/docs?id=1739584855420929) consultez le [[!DNL TikTok]  guide de prise en main .
+Pour plus d’informations sur la configuration du code de pixel et du jeton d’accès[&#128279;](https://business-api.tiktok.com/portal/docs?id=1739584855420929) consultez le [!DNL TikTok]  guide de prise en main .
 
 ## Installer et configurer l’extension d’API d’événements web [!DNL TikTok] {#install}
 
-Pour installer l’extension, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche. Dans l’onglet **[!UICONTROL Catalogue]**, sélectionnez l’extension d’API d’événements web TikTok **** puis sélectionnez **[!UICONTROL Installer]**.
+Pour installer l’extension, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche. Dans l’onglet **[!UICONTROL Catalogue]**, sélectionnez l’extension d’API d’événements web TikTok **&#x200B;**&#x200B;puis sélectionnez **[!UICONTROL Installer]**.
 
 ![Catalogue d’extensions affichant la carte d’extension [!DNL TikTok] mettant en surbrillance install.](../../../images/extensions/server/tiktok/install-extension.png)
 

@@ -165,7 +165,7 @@ Chaque objet d’identité du tableau d’identités contient les propriétés s
 | `authenticatedState` | Chaîne | **(Obligatoire)** État d’authentification de l’ID. Les valeurs possibles sont les suivantes : `ambiguous`, `authenticated` et `loggedOut`. |
 | `primary` | Booléen | Détermine si cette identité doit être utilisée comme fragment principal dans le profil. Par défaut, l’ECID est défini comme identifiant principal de l’utilisateur. Cette valeur est définie par défaut sur `false` si vous l’ignorez. |
 
-L’utilisation du champ `identityMap` pour identifier les appareils ou les utilisateurs aboutit au même résultat que l’utilisation de la méthode [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) du [!DNL ID Service API] . Pour plus d’informations](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) consultez la documentation de l’API du service [ID.
+L’utilisation du champ `identityMap` pour identifier les appareils ou les utilisateurs aboutit au même résultat que l’utilisation de la méthode [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) du [!DNL ID Service API] . Pour plus d’informations[&#128279;](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) consultez la documentation de l’API du service ID.
 
 ## Migration de l’API visiteur vers ECID {#migrating-visitor-api-ecid}
 

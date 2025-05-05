@@ -60,7 +60,7 @@ La logique utilisée pour l’insight [!UICONTROL Nouveaux comptes par industrie
 
 L’aperçu SQL qui génère l’[!UICONTROL information sur les nouveaux comptes par industrie] est visible dans la section réductible ci-dessous.
 
-Requête +++SQL
++++Requête SQL
 
 ```sql
 WITH RankedIndustries AS (
@@ -101,7 +101,7 @@ La logique utilisée pour l’insight [!UICONTROL New accounts by type] renvoie 
 
 L’aperçu SQL qui génère l’[!UICONTROL information sur les nouveaux comptes par type] est visible dans la section réductible ci-dessous.
 
-Requête +++SQL
++++Requête SQL
 
 ```sql
 SELECT t.account_type,

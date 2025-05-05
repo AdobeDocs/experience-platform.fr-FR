@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Utilisez ce guide pour sécuriser vos données avec Amazon Web Services (AWS) Key Management Service (KMS) en créant, gérant et contrôlant des clés de chiffrement pour Adobe Experience Platform. Cette intégration simplifie la conformité, rationalise les opérations grâce à l&#39;automatisation et élimine le besoin de gérer votre propre infrastructure de gestion clé.
 
-Pour obtenir des instructions spécifiques à Customer Journey Analytics, reportez-vous à la documentation du CMK Customer Journey Analytics [](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)
+Pour obtenir des instructions spécifiques à Customer Journey Analytics, reportez-vous à la documentation du CMK Customer Journey Analytics [&#128279;](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)
 
 >[!IMPORTANT]
 >
@@ -46,7 +46,7 @@ Ce guide nécessite que vous ayez déjà accès à un compte Amazon Web Services
 
 ### Sélectionner une région prise en charge {#select-supported-region}
 
-AWS KMS est disponible dans des régions spécifiques. Assurez-vous d’opérer dans une région où KMS est pris en charge. Vous pouvez afficher une liste complète des régions prises en charge dans la liste des points d’entrée et quotas AWS KMS [](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/).
+AWS KMS est disponible dans des régions spécifiques. Assurez-vous d’opérer dans une région où KMS est pris en charge. Vous pouvez afficher une liste complète des régions prises en charge dans la liste des points d’entrée et quotas AWS KMS [&#128279;](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/).
 
 Assurez-vous que votre clé de chiffrement AWS KMS se trouve dans la même région que votre instance Adobe Experience Platform afin de maintenir la conformité aux exigences de résidence des données, d’optimiser les performances et d’éviter des coûts supplémentaires inter-régions. Les régions mal alignées peuvent entraîner des problèmes d’accessibilité et d’intégration des données.
 
@@ -152,4 +152,4 @@ Sélectionnez **[!DNL Confirm]** pour terminer le processus. Vous revenez sur l�
 
 ## Étapes suivantes
 
-Une fois AWS KMS configuré, commencez à configurer l’intégration à l’aide de l’interface utilisateur [!UICONTROL  Configuration du chiffrement de plateforme ] ou de l’API Adobe Experience Platform. Pour poursuivre le processus unique de configuration de la fonctionnalité Clés gérées par le client, reportez-vous au guide de configuration de l’interface utilisateur [UI](./ui-set-up.md).
+Une fois AWS KMS configuré, commencez à configurer l’intégration à l’aide de l’interface utilisateur [!UICONTROL &#x200B; Configuration du chiffrement de plateforme &#x200B;] ou de l’API Adobe Experience Platform. Pour poursuivre le processus unique de configuration de la fonctionnalité Clés gérées par le client, reportez-vous au guide de configuration de l’interface utilisateur [UI](./ui-set-up.md).

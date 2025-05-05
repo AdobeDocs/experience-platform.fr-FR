@@ -31,7 +31,7 @@ ht-degree: 6%
 | [!UICONTROL Paiement Par] | `paymentBy` | Tableau d’objets | Lien vers le payeur et éventuellement ce qu&#39;il sera chargé de payer. Pour plus d’informations, consultez la [section ci-dessous](#payment-by) . |
 | [!UICONTROL Dates De Début Et De Fin De La Couverture] | `period` | [[!UICONTROL Période]](../data-types/period.md) | Période pendant laquelle la couverture est active. Une date de début manquante indique que la date de début n’est pas connue, une date de fin manquante signifie que la couverture est en cours. |
 | [!UICONTROL Holder] de stratégie | `policyHolder` | [[!UICONTROL Référence]](../data-types/reference.md) | Personne qui détient la police d’assurance. |
-| [!UICONTROL  {Lien bénéficiaire] | `relationship` | [[!UICONTROL Concept codeable]](../data-types/codeable-concept.md) | La relation du bénéficiaire avec l’abonné. |
+| [!UICONTROL &#x200B; &lbrace;Lien bénéficiaire] | `relationship` | [[!UICONTROL Concept codeable]](../data-types/codeable-concept.md) | La relation du bénéficiaire avec l’abonné. |
 | [!UICONTROL Abonné] | `subscriber` | [[!UICONTROL Référence]](../data-types/reference.md) | Partie qui détient la relation contractuelle avec la politique. |
 | [!UICONTROL Identifiant d’abonné] | `subscriberId` | Tableau de [[!UICONTROL Identifiant]](../data-types/identifier.md) | L’identifiant de l’abonné attribué à l’assureur. |
 | [!UICONTROL Type] | `type` | [[!UICONTROL Concept codeable]](../data-types/codeable-concept.md) | Type de couverture. |

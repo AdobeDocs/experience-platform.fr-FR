@@ -33,7 +33,7 @@ Pour plus d&#39;informations sur les cas d&#39;utilisation spécifiques à [!DNL
 
 Pour utiliser cette extension, vous devez disposer d&#39;un [!DNL Pinterest] [compte d&#39;entreprise](https://help.pinterest.com/en/business/article/get-a-business-account) valide. Accédez à la [[!DNL Pinterest] page d&#39;inscription](https://www.pinterest.com/business/create/) pour vous enregistrer et créer un compte si vous n&#39;en avez pas déjà un.
 
-Vous aurez également besoin d’un compte de développeur [!DNL Pinterest], qui devra être associé à votre compte d’entreprise [!DNL Pinterest]. Pour associer votre compte de développeur à votre compte d&#39;entreprise, reportez-vous au [[!DNL Pinterest ] compte de développeur](https://developers.pinterest.com/account-setup/).
+Vous aurez également besoin d’un compte de développeur [!DNL Pinterest], qui devra être associé à votre compte d’entreprise [!DNL Pinterest]. Pour associer votre compte de développeur à votre compte d&#39;entreprise, reportez-vous au [[!DNL Pinterest &#x200B;] compte de développeur](https://developers.pinterest.com/account-setup/).
 
 ### Collecte des détails de configuration requis {#configuration-details}
 
@@ -64,7 +64,7 @@ Extension ![[!DNL Pinterest] affichée dans l&#39;onglet [!UICONTROL Installer] 
 
 Sur l’écran suivant, saisissez les [!UICONTROL Ads Account Id] et [!UICONTROL Conversion Access Token] que vous avez précédemment rassemblés dans la section [configuration details](#configuration-details) . Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 
-![ L’écran [!DNL Pinterest] [!UICONTROL  de configuration ] surlignant les champs d’entrée [!UICONTROL Ads Account Id] et [!UICONTROL Conversion Access Token].](../../../images/extensions/server/pinterest/input.png)
+![ L’écran [!DNL Pinterest] [!UICONTROL &#x200B; de configuration &#x200B;] surlignant les champs d’entrée [!UICONTROL Ads Account Id] et [!UICONTROL Conversion Access Token].](../../../images/extensions/server/pinterest/input.png)
 
 ## Configurer une règle de transfert d’événement {#config-rule}
 
@@ -76,7 +76,7 @@ Créez une [règle](../../../ui/managing-resources/rules.md) dans votre proprié
 
 Une fois la sélection effectuée, d’autres commandes s’affichent pour configurer davantage l’événement. Vous devez mapper les propriétés d’événement [!DNL Pinterest] aux éléments de données que vous avez précédemment créés.
 
-### [!UICONTROL  Event Data]
+### [!UICONTROL &#x200B; Event Data]
 
 Les données d’événement suivantes seront nécessaires pour créer la règle :
 

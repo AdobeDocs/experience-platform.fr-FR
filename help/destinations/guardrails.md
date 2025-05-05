@@ -105,7 +105,7 @@ Les mécanismes de sécurisation ci-dessous s’appliquent à l’activation par
 
 ### Exportations de jeux de données {#dataset-exports}
 
-Les exportations de jeux de données sont actuellement prises en charge selon un **[!UICONTROL modèle complet, puis incrémentiel]** [](/help/destinations/ui/export-datasets.md#scheduling). Les mécanismes de sécurisation décrits dans cette section *s’appliquent à la première exportation complète* qui se produit une fois qu’un workflow d’exportation de jeu de données est configuré.
+Les exportations de jeux de données sont actuellement prises en charge selon un **[!UICONTROL modèle complet, puis incrémentiel]** [&#128279;](/help/destinations/ui/export-datasets.md#scheduling). Les mécanismes de sécurisation décrits dans cette section *s’appliquent à la première exportation complète* qui se produit une fois qu’un workflow d’exportation de jeu de données est configuré.
 
 <!--
 

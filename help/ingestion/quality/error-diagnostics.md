@@ -284,7 +284,7 @@ Si le lot comporte une ou plusieurs erreurs et que les diagnostics d’erreur so
 >
 >Si les diagnostics d’erreur ne sont pas disponibles, le message d’erreur suivant s’affiche à la place :
 >
-```json
+>```json
 >{
 >       "errors": [{
 >               "code": "INGEST-1211-400",

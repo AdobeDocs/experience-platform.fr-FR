@@ -67,7 +67,7 @@ Pour choisir une autre audience, sélectionnez la liste déroulante à côté du
 
 ![Présentation du tableau de bord des audiences avec le menu déroulant de l’audience globale en surbrillance.](../images/audiences/change-audience.png)
 
-![Boîte de dialogue [!UICONTROL  Sélectionner une audience] qui affiche toutes les audiences disponibles.](../images/audiences/select-audience-dialog.png)
+![Boîte de dialogue [!UICONTROL &#x200B; Sélectionner une audience] qui affiche toutes les audiences disponibles.](../images/audiences/select-audience-dialog.png)
 
 ## Widgets et mesures {#widgets-and-metrics}
 
@@ -105,7 +105,7 @@ Customer AI est utilisé pour générer des scores de propension personnalisés 
 >title="Distribution des scores"
 >abstract="Ce widget visualise la distribution du nombre total de profils en fonction de leurs scores de propension, par incréments de cinq pour cent. La distribution du nombre de profils est déterminée par le modèle d’IA et la politique de fusion sélectionnée. Vous pouvez modifier le modèle d’IA dans le menu déroulant sous le titre du widget."
 
-Le widget [!UICONTROL  Distribution des scores de l’IA dédiée aux clients ] classe le nombre total de profils en fonction de leurs scores de propension. La distribution du nombre de profils est déterminée par le modèle d’IA et la politique de fusion sélectionnée, puis visualisée par incréments de cinq pour cent qui indiquent leur propension. Le nombre de profils est indiqué le long de l’axe Y et les scores de propension le long de l’axe X.
+Le widget [!UICONTROL &#x200B; Distribution des scores de l’IA dédiée aux clients &#x200B;] classe le nombre total de profils en fonction de leurs scores de propension. La distribution du nombre de profils est déterminée par le modèle d’IA et la politique de fusion sélectionnée, puis visualisée par incréments de cinq pour cent qui indiquent leur propension. Le nombre de profils est indiqué le long de l’axe Y et les scores de propension le long de l’axe X.
 
 >[!NOTE]
 >
@@ -213,7 +213,7 @@ Ce widget illustre la tendance de la taille de l’audience pour une audience pa
 
 ### [!UICONTROL Ordre d’activation de l’audience] {#audience-activation-order}
 
-Le widget [!UICONTROL  Ordre d’activation de l’audience ] fournit un tableau à trois colonnes qui répertorie le nom de la destination, la plateforme et la date d’activation de l’audience. La liste est classée en fonction de la date en commençant par la plus récente et peut contenir jusqu’à 10 lignes.
+Le widget [!UICONTROL &#x200B; Ordre d’activation de l’audience &#x200B;] fournit un tableau à trois colonnes qui répertorie le nom de la destination, la plateforme et la date d’activation de l’audience. La liste est classée en fonction de la date en commençant par la plus récente et peut contenir jusqu’à 10 lignes.
 
 ![Le widget Ordre d’activation de l’audience.](../images/audiences/audience-activation-order.png)
 

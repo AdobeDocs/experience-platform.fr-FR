@@ -16,7 +16,7 @@ ht-degree: 49%
 
 Utilisez la destination [!DNL Microsoft Bing] pour envoyer des données de profil à l’ensemble du [!DNL Microsoft Advertising Network], y compris [!DNL Display Advertising], [!DNL Search] et [!DNL Native].
 
-La destination [!DNL Microsoft Bing] crée des *[!DNL Custom Audiences]* dans Microsoft. Ils sont disponibles dans les [!DNL Microsoft Search Network] et [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]), comme indiqué dans la documentation Microsoft Advertising [](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
+La destination [!DNL Microsoft Bing] crée des *[!DNL Custom Audiences]* dans Microsoft. Ils sont disponibles dans les [!DNL Microsoft Search Network] et [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]), comme indiqué dans la documentation Microsoft Advertising [&#128279;](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
 
 Pour envoyer des données de profil à [!DNL Microsoft Bing], vous devez d’abord vous connecter à la destination .
 
@@ -72,7 +72,7 @@ Lors de la configuration de la destination, vous devez fournir les informations 
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
@@ -99,7 +99,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 

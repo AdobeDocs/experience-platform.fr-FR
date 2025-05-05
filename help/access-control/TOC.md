@@ -16,7 +16,7 @@ ht-degree: 93%
 # Contrôle d&#39;accès {#access-control}
 
 * [Présentation du contrôle d’accès](home.md)
-* {#abac} de contrôle d’accès basé sur les attributs
+* de contrôle d’accès basé sur les attributs{#abac}
    * [Vue d’ensemble](abac/overview.md)
    * [Guide complet](abac/end-to-end-guide.md)
    * [Utiliser des libellés d’accès pour gérer l’accès des utilisateurs et utilisatrices aux flux de données de destination](/help/access-control/abac/apply-access-labels-destinations.md)
@@ -28,10 +28,10 @@ ht-degree: 93%
       * [Rôles](abac/ui/roles.md)
       * [Sandbox](abac/ui/sandboxes.md)
       * [Utilisateurs](abac/ui/users.md)
-   * {#permissions-manager} du gestionnaire d’autorisations
+   * du gestionnaire d’autorisations{#permissions-manager}
       * [Vue d’ensemble](abac/permission-manager/overview.md)
       * [Autorisations](abac/permission-manager/permissions.md)
-   * {#abac-api} de l’API de contrôle d’accès basé sur les attributs
+   * de l’API de contrôle d’accès basé sur les attributs{#abac-api}
       * [Vue d’ensemble](abac/api/overview.md)
       * [Prise en main](abac/api/getting-started.md)
       * [Rôles](abac/api/roles.md)

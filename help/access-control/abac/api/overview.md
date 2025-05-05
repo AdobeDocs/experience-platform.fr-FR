@@ -26,15 +26,15 @@ Ces points d’entrée sont décrits ci-dessous. Consultez le guide de chaque po
 
 ## Rôles
 
-Les rôles définissent l’accès d’un administrateur, d’une administratrice, d’un ou d’une spécialiste ou encore d’un utilisateur final ou d’une utilisatrice finale, aux ressources de votre organisation. Dans un environnement de contrôle d’accès basé sur les rôles, la configuration de l’accès des utilisateurs est regroupée suivant les responsabilités et les besoins communs. Un rôle possède un jeu d’autorisations déterminé et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin. Pour plus d’informations sur l’utilisation des rôles dans l’API](./roles.md) consultez le [ guide des points d’entrée des rôles .
+Les rôles définissent l’accès d’un administrateur, d’une administratrice, d’un ou d’une spécialiste ou encore d’un utilisateur final ou d’une utilisatrice finale, aux ressources de votre organisation. Dans un environnement de contrôle d’accès basé sur les rôles, la configuration de l’accès des utilisateurs est regroupée suivant les responsabilités et les besoins communs. Un rôle possède un jeu d’autorisations déterminé et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin. Pour plus d’informations sur l’utilisation des rôles dans l’API[&#128279;](./roles.md) consultez le  guide des points d’entrée des rôles .
 
 ## Politiques
 
-Les politiques sont des déclarations qui réunissent des attributs pour établir des actions autorisées et non autorisées. Les politiques peuvent être locales ou globales et peuvent remplacer d’autres politiques. Le point d’entrée `/policies` vous permet de gérer par programmation les politiques de votre organisation. Pour plus d’informations sur l’utilisation des politiques dans l’API](./policies.md) consultez le [ guide des points d’entrée des politiques .
+Les politiques sont des déclarations qui réunissent des attributs pour établir des actions autorisées et non autorisées. Les politiques peuvent être locales ou globales et peuvent remplacer d’autres politiques. Le point d’entrée `/policies` vous permet de gérer par programmation les politiques de votre organisation. Pour plus d’informations sur l’utilisation des politiques dans l’API[&#128279;](./policies.md) consultez le  guide des points d’entrée des politiques .
 
 ## Produits
 
-Le point d’entrée `/products` de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les produits, ainsi que les catégories d’autorisations et les jeux d’autorisations associés aux produits de votre organisation. Pour plus d’informations sur l’utilisation des produits et des catégories d’autorisations et des jeux d’autorisations correspondants dans l’API](./products.md) consultez le [ guide des points d’entrée de produits .
+Le point d’entrée `/products` de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les produits, ainsi que les catégories d’autorisations et les jeux d’autorisations associés aux produits de votre organisation. Pour plus d’informations sur l’utilisation des produits et des catégories d’autorisations et des jeux d’autorisations correspondants dans l’API[&#128279;](./products.md) consultez le  guide des points d’entrée de produits .
 
 ## Étapes suivantes
 

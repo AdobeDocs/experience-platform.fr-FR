@@ -36,7 +36,7 @@ ht-degree: 14%
 | [!UICONTROL DonorRating] | `donorRating` | Chaîne | Détails de la notation des donateurs. |
 | [!UICONTROL InvestmentRating] | `investmentRating` | Chaîne | Données de notation des investissements. |
 | [!UICONTROL ResponderRating] | `responderRating` | Chaîne | Informations d’évaluation des réponses. |
-| [!UICONTROL }DépensesVelocity] | `spendingVelocity` | Chaîne | Informations détaillées sur la vitesse. |
+| [!UICONTROL &rbrace;DépensesVelocity] | `spendingVelocity` | Chaîne | Informations détaillées sur la vitesse. |
 | [!UICONTROL DépensesVolume] | `spendingVolume` | Chaîne | Informations sur le volume des dépenses. |
 | [!UICONTROL recordId] | `recordId` | Chaîne | Identifiant d’enregistrement unique. |
 | [!UICONTROL RésidenceId] | `residenceId` | Chaîne | Identifiant unique de la résidence. |

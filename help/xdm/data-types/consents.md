@@ -14,7 +14,7 @@ ht-degree: 1%
 
 Le type de données [!UICONTROL Consentement pour les préférences de confidentialité, de Personalization et de marketing] (ci-après dénommé « type de données [!UICONTROL Consentements et préférences] ») est un type de données [!DNL Experience Data Model] (XDM) destiné à prendre en charge la collecte des autorisations et des préférences des clients générées par les plateformes de gestion du consentement (CMP) et d’autres sources à partir de vos opérations de données.
 
-Ce document couvre la structure et l’utilisation prévue des champs fournis par le type de données [!UICONTROL  Consentements et préférences ].
+Ce document couvre la structure et l’utilisation prévue des champs fournis par le type de données [!UICONTROL &#x200B; Consentements et préférences &#x200B;].
 
 ## Conditions préalables {#prerequisites}
 
@@ -27,7 +27,7 @@ Ce document nécessite une compréhension pratique de XDM et de l’utilisation 
 
 >[!IMPORTANT]
 >
->Le type de données [!UICONTROL  Consentements et préférences ] est conçu pour couvrir un large éventail de cas d’utilisation de la gestion des préférences et du consentement. Par conséquent, ce document décrit l’utilisation des champs du type de données en termes généraux et ne fait que des suggestions sur la façon d’interpréter l’utilisation de ces champs. Veuillez consulter votre équipe juridique en charge de la confidentialité pour aligner la structure du type de données sur la manière dont votre organisation interprète et présente ces choix de consentement et de préférence à vos clients.
+>Le type de données [!UICONTROL &#x200B; Consentements et préférences &#x200B;] est conçu pour couvrir un large éventail de cas d’utilisation de la gestion des préférences et du consentement. Par conséquent, ce document décrit l’utilisation des champs du type de données en termes généraux et ne fait que des suggestions sur la façon d’interpréter l’utilisation de ces champs. Veuillez consulter votre équipe juridique en charge de la confidentialité pour aligner la structure du type de données sur la manière dont votre organisation interprète et présente ces choix de consentement et de préférence à vos clients.
 
 Le type de données [!UICONTROL Consentements et préférences] fournit plusieurs champs utilisés pour capturer des informations de **consentement** et **préférence**.
 

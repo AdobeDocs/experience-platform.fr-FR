@@ -108,7 +108,7 @@ Vous trouverez ci-dessous une liste de la documentation relative aux extensions 
 * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)*
 * [SessionCam](https://exchange.adobe.com/apps/ec/100517)*
 <!-- * [SPA View Change Event](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html) -->
-* [}Panoramique de stockage](https://exchange.adobe.com/apps/ec/102990)*
+* [&rbrace;Panoramique de stockage](https://exchange.adobe.com/apps/ec/102990)*
 * [BALISES par Horizon de boucle](https://exchange.adobe.com/apps/ec/106092)*
 * [Collection Tealium](https://exchange.adobe.com/apps/ec/104217)*
 * [Enrichissement de données Tealium](https://exchange.adobe.com/apps/ec/104217)*

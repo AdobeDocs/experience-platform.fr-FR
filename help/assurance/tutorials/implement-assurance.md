@@ -17,7 +17,7 @@ Ce tutoriel explique comment installer et implémenter l’extension Experience 
 
 Pour installer et implémenter l’extension Assurance, vous devez avoir accès aux services suivants :
 
-- Interface utilisateur de la collecte de données de Adobe Experience Platform [](https://experience.adobe.com/#/data-collection/)
+- Interface utilisateur de la collecte de données de Adobe Experience Platform [&#128279;](https://experience.adobe.com/#/data-collection/)
 - [Adobe Experience Platform Assurance](https://experience.adobe.com/assurance)
 
 ## Création d’une propriété mobile

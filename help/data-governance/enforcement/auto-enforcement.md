@@ -114,15 +114,15 @@ Sélectionnez **[!UICONTROL Vue Liste]** pour afficher la parenté des données 
 
 #### Libellés appliqués avec succès {#labels-successfully-applied}
 
-Si vous créez des politiques d’utilisation des données avant d’étiqueter vos champs de schéma, vous pouvez rencontrer une boîte de dialogue de violation de la politique de gouvernance dès que vous appliquez des libellés à votre schéma. Dans ce cas, vous pouvez étiqueter correctement une partie de votre schéma. L’onglet [!UICONTROL  Libellés appliqués avec succès ] indique quels libellés ont été appliqués avec succès, car il n’existe aucune restriction de politique pour ce champ.
+Si vous créez des politiques d’utilisation des données avant d’étiqueter vos champs de schéma, vous pouvez rencontrer une boîte de dialogue de violation de la politique de gouvernance dès que vous appliquez des libellés à votre schéma. Dans ce cas, vous pouvez étiqueter correctement une partie de votre schéma. L’onglet [!UICONTROL &#x200B; Libellés appliqués avec succès &#x200B;] indique quels libellés ont été appliqués avec succès, car il n’existe aucune restriction de politique pour ce champ.
 
 Utilisez le diagramme de parenté des données pour comprendre quelles autres modifications de configuration doivent être apportées avant de pouvoir ajouter le libellé à votre champ de schéma.
 
-![Boîte de dialogue de violation de la politique avec l’onglet [!UICONTROL  Libellés appliqués avec succès] mis en surbrillance.](../images/enforcement/labels-successfully-applied.png)
+![Boîte de dialogue de violation de la politique avec l’onglet [!UICONTROL &#x200B; Libellés appliqués avec succès] mis en surbrillance.](../images/enforcement/labels-successfully-applied.png)
 
 ### Évaluation des politiques de consentement {#consent-policy-evaluation}
 
-Lors de l’activation d’une audience vers une destination, vous pouvez voir comment vos [ politiques de consentement ](../policies/user-guide.md) affectent la portée de votre audience pendant l’étape de révision [ du workflow [!UICONTROL  Activer des destinations ]](#pre-activation-evaluation).
+Lors de l’activation d’une audience vers une destination, vous pouvez voir comment vos [ politiques de consentement ](../policies/user-guide.md) affectent la portée de votre audience pendant l’étape de révision [ du workflow [!UICONTROL &#x200B; Activer des destinations &#x200B;]](#pre-activation-evaluation).
 
 >[!NOTE]
 >

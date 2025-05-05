@@ -124,7 +124,7 @@ Les données du journal d’audit renvoyées contiennent les informations suivan
 | Nom de la colonne | Description |
 |---|---|
 | [!UICONTROL Horodatage] | Date et heure exactes de l’action effectuée au format `month/day/year hour:minute AM/PM`. |
-| [!UICONTROL Nom de la ressource] | La valeur du champ [!UICONTROL  Nom de ressource ] dépend de la catégorie choisie comme filtre. |
+| [!UICONTROL Nom de la ressource] | La valeur du champ [!UICONTROL &#x200B; Nom de ressource &#x200B;] dépend de la catégorie choisie comme filtre. |
 | [!UICONTROL Catégorie] | Ce champ correspond à la catégorie sélectionnée dans la liste déroulante de filtre. |
 | [!UICONTROL Action] | Les actions disponibles dépendent de la catégorie choisie comme filtre. |
 | [!UICONTROL Utilisateur] | Ce champ fournit l’identifiant utilisateur qui a exécuté la requête. |

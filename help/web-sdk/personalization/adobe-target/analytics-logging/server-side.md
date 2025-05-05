@@ -26,4 +26,4 @@ Le diagramme suivant montre le flux de données dans le système lorsque la jour
 
 ## Étapes suivantes
 
-Ce guide couvrait la journalisation côté serveur pour les données A4T dans le Web SDK. Pour plus d’informations sur la gestion des données A4T côté client](./client-side.md) consultez le guide sur la [ journalisation côté client .
+Ce guide couvrait la journalisation côté serveur pour les données A4T dans le Web SDK. Pour plus d’informations sur la gestion des données A4T côté client[&#128279;](./client-side.md) consultez le guide sur la  journalisation côté client .

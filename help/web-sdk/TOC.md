@@ -18,7 +18,7 @@ ht-degree: 50%
 
 * [Présentation du SDK web](home.md)
 * [Notes de mise à jour](release-notes.md)
-* {#install} d’installation de Web SDK
+* d’installation de Web SDK{#install}
    * [Vue d’ensemble](install/overview.md)
    * [Installation de Web SDK à l’aide de l’extension de balise](install/extension.md)
    * [Installation de Web SDK à l’aide de la bibliothèque JavaScript](install/library.md)

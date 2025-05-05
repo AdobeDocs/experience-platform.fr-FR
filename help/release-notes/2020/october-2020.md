@@ -70,7 +70,7 @@ Adobe Experience Platform peut ingérer des données à partir de sources extern
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Prise en charge de l’authentification SSH pour le protocole SFTP | Vous pouvez connecter votre compte SFTP à [!DNL Experience Platform] à l’aide de clés SSH ouvertes RSA/DSA. Pour plus d’informations](../../sources/connectors/cloud-storage/sftp.md) consultez la [ Présentation du protocole SFTP . |
+| Prise en charge de l’authentification SSH pour le protocole SFTP | Vous pouvez connecter votre compte SFTP à [!DNL Experience Platform] à l’aide de clés SSH ouvertes RSA/DSA. Pour plus d’informations[&#128279;](../../sources/connectors/cloud-storage/sftp.md) consultez la  Présentation du protocole SFTP . |
 | Améliorations de l’expérience utilisateur | Vous pouvez activer votre jeu de données pour [!DNL Profile] pendant le processus d’ingestion des données. Pour plus d’informations, consultez le tutoriel [workflow de flux de données de stockage dans le cloud](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) . |
 
 Pour en savoir plus sur les sources, consultez la [vue d’ensemble des sources](../../sources/home.md).

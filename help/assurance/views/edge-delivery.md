@@ -34,7 +34,7 @@ Une fois ajouté, sélectionnez la vue **[!UICONTROL Edge Delivery]** dans la se
 
 ## Liste de requêtes
 
-Dans le volet principal de la vue, la liste des demandes de diffusion Edge s’affiche. Cette liste répertorie toutes les requêtes [!UICONTROL AJO entrantes] envoyées à Experience Edge et traitées par le ****, y compris les requêtes de récupération des décisions de personnalisation, ainsi que le suivi des interactions de proposition de personnalisation (affichage, clic, déclenchement ou abandon, par exemple).
+Dans le volet principal de la vue, la liste des demandes de diffusion Edge s’affiche. Cette liste répertorie toutes les requêtes [!UICONTROL AJO entrantes] envoyées à Experience Edge et traitées par le **&#x200B;**, y compris les requêtes de récupération des décisions de personnalisation, ainsi que le suivi des interactions de proposition de personnalisation (affichage, clic, déclenchement ou abandon, par exemple).
 
 Les requêtes sont triées par horodatage, les requêtes les plus récentes se trouvant en haut. Outre l’horodatage, la liste comprend également une colonne ID de demande, ainsi qu’un Type de demande, qui peut être l’un des suivants :
 

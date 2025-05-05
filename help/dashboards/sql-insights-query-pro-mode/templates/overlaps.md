@@ -10,7 +10,7 @@ ht-degree: 2%
 
 # Chevauchements avancés des audiences
 
-Obtenez des informations précieuses pour optimiser la segmentation et les stratégies de ciblage de votre audience en analysant la manière dont les différents segments d’audience intersectent avec le tableau de bord [!UICONTROL  Recouvrements d’audience avancés]. Examinez les mesures tabulées pour identifier les chevauchements, affiner la segmentation et réduire les messages redondants. En fin de compte, vous pouvez utiliser ces informations pour créer des campagnes plus ciblées et des efforts marketing efficaces. Ce tableau de bord vous permet de passer en revue les intersections d’audience, d’appliquer des filtres et d’effectuer une analyse détaillée des chevauchements afin de prendre des décisions basées sur les données et d’améliorer les résultats de l’engagement.
+Obtenez des informations précieuses pour optimiser la segmentation et les stratégies de ciblage de votre audience en analysant la manière dont les différents segments d’audience intersectent avec le tableau de bord [!UICONTROL &#x200B; Recouvrements d’audience avancés]. Examinez les mesures tabulées pour identifier les chevauchements, affiner la segmentation et réduire les messages redondants. En fin de compte, vous pouvez utiliser ces informations pour créer des campagnes plus ciblées et des efforts marketing efficaces. Ce tableau de bord vous permet de passer en revue les intersections d’audience, d’appliquer des filtres et d’effectuer une analyse détaillée des chevauchements afin de prendre des décisions basées sur les données et d’améliorer les résultats de l’engagement.
 
 ## Filtrage des audiences {#filter-audiences}
 

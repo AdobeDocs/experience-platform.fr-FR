@@ -14,7 +14,7 @@ ht-degree: 98%
 
 >[!IMPORTANT]
 >
->**Point d’entrée de l’API ** : `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
+>**Point d’entrée de l’API &#x200B;** : `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
 
 Cette page répertorie toutes les opérations d’API que vous pouvez effectuer à l’aide du point d’entrée de l’API `/authoring/testing/template/render` et fournit leur description. Effectuez le rendu des profils exportés correspondant au format de destination attendu, en fonction de votre [modèle de transformation de message](../../functionality/destination-server/message-format.md#using-templating). Pour une description des fonctionnalités prises en charge par ce point d’entrée, consultez la section [Créer un modèle](create-template.md).
 

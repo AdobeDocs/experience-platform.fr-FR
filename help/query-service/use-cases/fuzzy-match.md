@@ -44,7 +44,7 @@ Vous trouverez plus d’informations techniques sur les [!DNL Fuzzywuzzy] dans l
 
 ### Se connecter à Query Service
 
-Vous devez connecter votre modèle de machine learning à Query Service en fournissant vos informations d’identification de connexion. Des informations d’identification arrivant à expiration et non arrivant à expiration peuvent être fournies. Pour plus d’informations sur l’acquisition des informations d’identification nécessaires](../ui/credentials.md) consultez le [ guide des informations d’identification . Si vous utilisez [!DNL Jupyter Notebook], veuillez lire le guide complet sur [comment se connecter à Query Service](../clients/jupyter-notebook.md).
+Vous devez connecter votre modèle de machine learning à Query Service en fournissant vos informations d’identification de connexion. Des informations d’identification arrivant à expiration et non arrivant à expiration peuvent être fournies. Pour plus d’informations sur l’acquisition des informations d’identification nécessaires[&#128279;](../ui/credentials.md) consultez le  guide des informations d’identification . Si vous utilisez [!DNL Jupyter Notebook], veuillez lire le guide complet sur [comment se connecter à Query Service](../clients/jupyter-notebook.md).
 
 Veillez également à importer le package [!DNL numpy] dans votre environnement [!DNL Python] pour activer l’algèbre linéaire.
 

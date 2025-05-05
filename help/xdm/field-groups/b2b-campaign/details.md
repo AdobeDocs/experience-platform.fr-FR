@@ -9,7 +9,7 @@ ht-degree: 5%
 
 ---
 
-# [!UICONTROL  {XDM Business Campaign Details] groupe de champs de schéma
+# [!UICONTROL &#x200B; &lbrace;XDM Business Campaign Details] groupe de champs de schéma
 
 [!UICONTROL XDM Business Campaign Details] est un groupe de champs de schéma standard pour la [[!UICONTROL classe XDM Business Campaign]](../../classes/b2b/business-campaign.md), qui capture des informations détaillées sur une campagne commerciale.
 

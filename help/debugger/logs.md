@@ -23,7 +23,7 @@ L’onglet Journaux affiche les informations en quatre colonnes :
 
 **[!UICONTROL Solutions] :** affiche les icônes de la solution Experience Cloud affectée par l’élément journalisé. Placez le pointeur sur l’icône pour obtenir une description textuelle.
 
-**[!UICONTROL S’est produit à ] :** Indique le moment où le problème journalisé s’est produit au cours de la session.
+**[!UICONTROL S’est produit à &#x200B;] :** Indique le moment où le problème journalisé s’est produit au cours de la session.
 
 **[!UICONTROL Niveau de journal] :** affiche la gravité du problème. La gravité est l’un des niveaux suivants :
 

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;préparation des données;guide de l’api;schémas;
 title: Point de terminaison de l’API des fonctions
-description: Vous pouvez utiliser le point d’entrée `/function` dans l’API Data Prep pour valider vos expressions de mappage et répertorier les fonctions d’ensemble de mappages disponibles.
+description: Vous pouvez utiliser le point d’entrée &grave;/function&grave; dans l’API Data Prep pour valider vos expressions de mappage et répertorier les fonctions d’ensemble de mappages disponibles.
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
 source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt

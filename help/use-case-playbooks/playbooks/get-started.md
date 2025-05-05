@@ -77,7 +77,7 @@ Pour créer et gérer des destinations, utilisez les autorisations Destinations 
 
 **Autorisations pour les parcours**
 
-Pour créer et gérer des parcours, utilisez les autorisations Parcours : **[!UICONTROL Gérer les Parcours]**, **[!UICONTROL Afficher les Parcours]**, **[!UICONTROL Afficher le rapport Parcours]**, **[!UICONTROL Gérer les Parcours]**, **[!UICONTROL Événements]**, **[!UICONTROL Sources de données et actions]**, **[!UICONTROL Afficher les Parcours]**, **[!UICONTROL 5},**[!UICONTROL  Sources de données et actions, Publish Parcours ]**.]**
+Pour créer et gérer des parcours, utilisez les autorisations Parcours : **[!UICONTROL Gérer les Parcours]**, **[!UICONTROL Afficher les Parcours]**, **[!UICONTROL Afficher le rapport Parcours]**, **[!UICONTROL Gérer les Parcours]**, **[!UICONTROL Événements]**, **[!UICONTROL Sources de données et actions]**, **[!UICONTROL Afficher les Parcours]**, **[!UICONTROL 5&rbrace;,**&#x200B;[!UICONTROL &#x200B; Sources de données et actions, Publish Parcours &#x200B;]&#x200B;**.]**
 
 L’image ci-dessous présente un instantané des autorisations recommandées pour les utilisateurs afin d’afficher, de créer et de gérer les livres de lecture et les ressources générées par les livres de lecture.
 

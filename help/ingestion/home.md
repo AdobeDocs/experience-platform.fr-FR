@@ -47,7 +47,7 @@ Pour plus d’informations, reportez-vous à la [présentation des sources](../s
 
 Pour intégrer rapidement de nouvelles sources de données, vous pouvez désormais utiliser des algorithmes de machine learning pour générer un schéma à partir de données d’exemple. Cette automatisation simplifie la création de schémas précis, réduit les erreurs et accélère le processus de la collecte de données à l’analyse et aux informations.
 
-Pour plus d’informations sur ce workflow](../xdm/ui/ml-assisted-schema-creation.md) consultez le guide de création de schéma assistée par machine learning [.
+Pour plus d’informations sur ce workflow[&#128279;](../xdm/ui/ml-assisted-schema-creation.md) consultez le guide de création de schéma assistée par machine learning .
 
 ## Préparation des données {#data-prep}
 

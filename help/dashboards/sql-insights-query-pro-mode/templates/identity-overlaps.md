@@ -10,7 +10,7 @@ ht-degree: 1%
 
 # Chevauchements d’identité d’audience
 
-Analysez les chevauchements d’identités pour les audiences sélectionnées à l’aide du tableau de bord [!UICONTROL  Recouvrements d’identités d’audience ]. Vous pouvez utiliser des insights sur la manière dont les différentes identités au sein d’une audience sont liées les unes aux autres afin d’optimiser les stratégies de regroupement, de réduire la redondance et d’améliorer la précision de la segmentation des clients. Développer des stratégies de ciblage efficaces et rationaliser les interactions client avec une meilleure compréhension du chevauchement entre les types d’identité.
+Analysez les chevauchements d’identités pour les audiences sélectionnées à l’aide du tableau de bord [!UICONTROL &#x200B; Recouvrements d’identités d’audience &#x200B;]. Vous pouvez utiliser des insights sur la manière dont les différentes identités au sein d’une audience sont liées les unes aux autres afin d’optimiser les stratégies de regroupement, de réduire la redondance et d’améliorer la précision de la segmentation des clients. Développer des stratégies de ciblage efficaces et rationaliser les interactions client avec une meilleure compréhension du chevauchement entre les types d’identité.
 
 ## Filtrage des audiences {#filter-audiences}
 
@@ -22,7 +22,7 @@ La boîte de dialogue **[!UICONTROL Filtres]** s’affiche. Dans cette vue, sél
 
 1. Sélectionnez une **[!UICONTROL audience]** : sélectionnez le segment d’audience que vous souhaitez analyser (par exemple, **Canada - Alberta**).
 2. Spécifiez une **[!UICONTROL stratégie de fusion]** : définissez la stratégie de fusion qui détermine la manière dont les identités sont combinées dans l’audience sélectionnée (dans l’exemple de capture d’écran, la stratégie **basée sur le temps par défaut** est sélectionnée).
-3. Sélectionnez une **[!UICONTROL identité A]** et une **[!UICONTROL identité B]** à des fins de comparaison** : sélectionnez les deux types d’identité à comparer. Dans l’exemple, **Identity A** est sélectionné en tant que &quot;crmId&quot; et **Identity B** est sélectionné en tant que &quot;email&quot;.
+3. Sélectionnez une **[!UICONTROL identité A]** et une **[!UICONTROL identité B]** à des fins de comparaison **&#x200B; : sélectionnez les deux types d’identité à comparer. Dans l’exemple, &#x200B;** Identity A **&#x200B; est sélectionné en tant que &quot;crmId&quot; et &#x200B;** Identity B** est sélectionné en tant que &quot;email&quot;.
 4. **Définir une plage de dates** : sélectionnez une plage prédéfinie comme &quot;Aujourd’hui&quot; ou définissez manuellement les dates de début et de fin à l’aide des champs du calendrier.
 
 ![Boîte de dialogue Filtres sur le tableau de bord Recouvrements des identités d’audience.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-filters-dialog.png)

@@ -27,7 +27,7 @@ Après avoir défini vos filtres, sélectionnez **[!UICONTROL Appliquer]** pour 
 
 ## Graphiques de tendances d’audience disponibles {#available-charts}
 
-Il existe trois graphiques principaux pour vous aider à comprendre les mesures d’audience au fil du temps. Pour chaque graphique, vous pouvez sélectionner l’ellipse (`...`) en haut à droite, suivie de l’option [!UICONTROL  Afficher plus] pour afficher une forme tabulée des résultats, ou télécharger les données sous forme de fichier CSV à afficher dans une feuille de calcul. Pour plus d&#39;informations, consultez le [guide d&#39;affichage supplémentaire](../view-more.md).
+Il existe trois graphiques principaux pour vous aider à comprendre les mesures d’audience au fil du temps. Pour chaque graphique, vous pouvez sélectionner l’ellipse (`...`) en haut à droite, suivie de l’option [!UICONTROL &#x200B; Afficher plus] pour afficher une forme tabulée des résultats, ou télécharger les données sous forme de fichier CSV à afficher dans une feuille de calcul. Pour plus d&#39;informations, consultez le [guide d&#39;affichage supplémentaire](../view-more.md).
 
 >[!TIP]
 >

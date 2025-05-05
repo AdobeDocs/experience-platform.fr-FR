@@ -29,7 +29,7 @@ Ce guide nécessite une compréhension pratique du système XDM. Reportez-vous �
 
 >[!NOTE]
 >
->Cette section explique comment créer manuellement un schéma dans l’interface utilisateur. Si vous ingérez des données CSV dans Experience Platform, vous pouvez utiliser des algorithmes de machine learning (ML) pour **générer un schéma à partir d’exemples de données CSV**. Ce workflow correspond à votre format de données et crée automatiquement un schéma basé sur la structure et le contenu de votre fichier CSV. Pour plus d’informations sur ce workflow](../ml-assisted-schema-creation.md) consultez le guide de création de schéma assistée par machine learning [.
+>Cette section explique comment créer manuellement un schéma dans l’interface utilisateur. Si vous ingérez des données CSV dans Experience Platform, vous pouvez utiliser des algorithmes de machine learning (ML) pour **générer un schéma à partir d’exemples de données CSV**. Ce workflow correspond à votre format de données et crée automatiquement un schéma basé sur la structure et le contenu de votre fichier CSV. Pour plus d’informations sur ce workflow[&#128279;](../ml-assisted-schema-creation.md) consultez le guide de création de schéma assistée par machine learning .
 
 Dans l’espace de travail [!UICONTROL Schémas], sélectionnez **[!UICONTROL Créer un schéma]** dans le coin supérieur droit.
 
@@ -39,7 +39,7 @@ La boîte de dialogue [!UICONTROL Créer un schéma] s’affiche. Dans cette bo�
 
 ![La boîte de dialogue Créer un schéma avec les options de workflow et sélectionnez en surbrillance.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
-### [!BADGE Beta ]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
+### [!BADGE Beta &#x200B;]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
 
 Pour découvrir comment utiliser un algorithme ML afin de recommander une structure de schéma basée sur un fichier csv, consultez le guide de création de schéma assisté par machine learning [machine learning](../ml-assisted-schema-creation.md). Ce guide de l’interface utilisateur se concentre sur le workflow de création manuelle .
 

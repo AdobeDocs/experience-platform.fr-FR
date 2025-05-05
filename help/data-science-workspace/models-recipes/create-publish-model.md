@@ -69,7 +69,7 @@ L’interface utilisateur et l’API de Data Science Workspace vous permettent d
 
 ### Création d’un modèle
 
-Pour en savoir plus sur la création d’un modèle à l’aide de l’interface utilisateur, consultez le tutoriel sur la formation et l’évaluation d’un modèle dans Data Science Workspace [ ou le [tutoriel sur l’API](./train-evaluate-model-api.md). ](./train-evaluate-model-ui.md) Ce tutoriel fournit un exemple de création, de formation et de mise à jour d’hyperparamètres pour affiner votre modèle.
+Pour en savoir plus sur la création d’un modèle à l’aide de l’interface utilisateur, consultez le tutoriel sur la formation et l’évaluation d’un modèle dans Data Science Workspace [&#128279;](./train-evaluate-model-ui.md) ou le [tutoriel sur l’API](./train-evaluate-model-api.md).  Ce tutoriel fournit un exemple de création, de formation et de mise à jour d’hyperparamètres pour affiner votre modèle.
 
 >[!NOTE]
 >

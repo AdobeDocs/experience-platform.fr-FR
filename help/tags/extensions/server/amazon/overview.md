@@ -107,7 +107,7 @@ La déduplication n’est pas nécessaire si les événements client et serveur 
 
 Une déduplication appropriée évite les nombres de conversions exagérés et garantit que les données d’optimisation restent précises.
 
-Pour plus d’informations](https://advertising.amazon.com/) consultez le [Guide de déduplication des événements d’Amazon .
+Pour plus d’informations[&#128279;](https://advertising.amazon.com/) consultez le Guide de déduplication des événements d’Amazon .
 
 ## Étapes suivantes
 

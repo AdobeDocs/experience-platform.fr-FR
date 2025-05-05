@@ -19,7 +19,7 @@ Ce document décrit les étapes à suivre pour connecter l’outil de base de do
 
 Ce guide nécessite que vous ayez déjà accès à l’application [!DNL DbVisualizer] Desktop et que vous sachiez comment naviguer dans son interface. Pour télécharger l’application de bureau [!DNL DbVisualizer] ou pour plus d’informations, consultez la [documentation [!DNL DbVisualizer] officielle](https://www.dbvis.com/download/).
 
-Pour acquérir les informations d’identification nécessaires à la connexion de [!DNL  DbVisualizer] à Experience Platform, vous devez avoir accès à l’espace de travail Requêtes dans l’interface utilisateur d’Experience Platform. Contactez l’administrateur ou administratrice de votre organisation si vous n’avez pas actuellement accès à l’espace de travail Requêtes.
+Pour acquérir les informations d’identification nécessaires à la connexion de [!DNL &#x200B; DbVisualizer] à Experience Platform, vous devez avoir accès à l’espace de travail Requêtes dans l’interface utilisateur d’Experience Platform. Contactez l’administrateur ou administratrice de votre organisation si vous n’avez pas actuellement accès à l’espace de travail Requêtes.
 
 ## Créer une connexion à la base de données {#connect-database}
 
@@ -54,7 +54,7 @@ La colonne [!DNL Edited] affiche une coche pour indiquer que la valeur du param�
 
 ### Informations d’identification d’Input Query Service {#query-service-credentials}
 
-Pour obtenir les informations d’identification nécessaires à la connexion de BBVisualizer à Query Service, connectez-vous à l’interface utilisateur d’Experience Platform et sélectionnez **[!UICONTROL Requêtes]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Informations d’identification]**. Pour plus d’informations sur la recherche de vos informations d’identification **hôte**, **port**, **base de données**, **nom d’utilisateur** et **mot de passe**, veuillez lire le guide [](../ui/credentials.md) credentials.
+Pour obtenir les informations d’identification nécessaires à la connexion de BBVisualizer à Query Service, connectez-vous à l’interface utilisateur d’Experience Platform et sélectionnez **[!UICONTROL Requêtes]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Informations d’identification]**. Pour plus d’informations sur la recherche de vos informations d’identification **hôte**, **port**, **base de données**, **nom d’utilisateur** et **mot de passe**, veuillez lire le guide [&#128279;](../ui/credentials.md) credentials.
 
 ![Page Informations d’identification de l’espace de travail Requêtes Experience Platform avec les Informations d’identification et les Informations d’identification arrivant à expiration en surbrillance.](../images/clients/dbvisualizer/query-service-credentials-page.png)
 

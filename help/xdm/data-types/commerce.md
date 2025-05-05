@@ -25,7 +25,7 @@ ht-degree: 11%
 | [!UICONTROL Passages en caisse] | `checkouts` | [[!UICONTROL Mesure]](./measure.md) | Action pendant le processus de passage en caisse d’une liste de produits. Il peut y avoir plusieurs événements de passage en caisse s’il existe plusieurs étapes dans un processus de passage en caisse. S’il existe plusieurs étapes, les informations sur l’heure de l’événement et la page ou l’expérience référencée sont utilisées pour identifier l’étape et les événements individuels représentés dans l’ordre. |
 | [!UICONTROL Ajout d’une liste de produits (panier)] | `productListAdds` | [[!UICONTROL Mesure]](./measure.md) | L’ajout d’un produit à la liste de produits, par exemple un produit ajouté à un panier. |
 | [!UICONTROL Ouverture d’une liste de produits (panier)] | `productListOpens` | [[!UICONTROL Mesure]](./measure.md) | Initialisations d’une nouvelle liste de produits, par exemple un panier en cours de création. |
-| [!UICONTROL  Retraits de la liste de produits (panier)] | `productListRemovals` | [[!UICONTROL Mesure]](./measure.md) | Suppression ou suppression d’une entrée de produit d’une liste de produits, telle qu’un produit supprimé d’un panier. |
+| [!UICONTROL &#x200B; Retraits de la liste de produits (panier)] | `productListRemovals` | [[!UICONTROL Mesure]](./measure.md) | Suppression ou suppression d’une entrée de produit d’une liste de produits, telle qu’un produit supprimé d’un panier. |
 | [!UICONTROL Réouverture de la liste de produits (panier)] | `productListReopens` | [[!UICONTROL Mesure]](./measure.md) | Liste de produits précédemment abandonnée et réactivée par l’utilisateur. |
 | [!UICONTROL Consultations de la liste de produits (panier)] | `productListViews` | [[!UICONTROL Mesure]](./measure.md) | Décrit lorsqu’une ou plusieurs vues d’une liste de produits se sont produites. La ou les vues d’une liste de produits se sont produites. |
 | [!UICONTROL Consultations produits] | `productViews` | [[!UICONTROL Mesure]](./measure.md) | Décrit le moment où une ou plusieurs vues d’un produit ont eu lieu. |
@@ -39,7 +39,7 @@ ht-degree: 11%
 | [!UICONTROL Ouverture de la liste de demandes] | `requisitionListOpens` | [[!UICONTROL Mesure]](./measure.md) | Indique l’initialisation d’une nouvelle liste de demandes d’achat. |
 | [!UICONTROL Suppressions de la liste de demandes] | `requisitionListDeletes` | [[!UICONTROL Mesure]](./measure.md) | Indique la suppression de la liste des demandes d’achat. |
 | [!UICONTROL Ajout De Liste De Requêtes] | `requisitionListAdds` | [[!UICONTROL Mesure]](./measure.md) | Indique l’ajout d’un ou de plusieurs produits à une liste de demandes d’achat. |
-| [!UICONTROL  Retraits de la liste de demandes] | `requisitionListRemovals` | [[!UICONTROL Mesure]](./measure.md) | Indique la suppression d’un ou de plusieurs produits d’une liste de produits de demande d’achat. |
+| [!UICONTROL &#x200B; Retraits de la liste de demandes] | `requisitionListRemovals` | [[!UICONTROL Mesure]](./measure.md) | Indique la suppression d’un ou de plusieurs produits d’une liste de produits de demande d’achat. |
 | [!UICONTROL Liste des demandes] | `requisitionList` | [[!UICONTROL requisitionlist]](./requisition-list.md) | Propriétés de la liste de demandes créée par le client. |
 | [!UICONTROL Périmètre] | `commerceScope` | [[!UICONTROL commercescope]](./commerce-scope.md) | Identifiants d’étendue de commerce de l’endroit où un événement s’est produit (affichage en magasin, magasin, site web, etc.). |
 

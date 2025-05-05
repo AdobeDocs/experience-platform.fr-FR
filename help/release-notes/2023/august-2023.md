@@ -42,7 +42,7 @@ Basée sur Experience Platform, Real-Time Customer Data Platform ([!DNL Real-Tim
 
 {style="table-layout:auto"}
 
-Pour plus d&#39;informations, veuillez lire la présentation de Real-Time CDP [](../../rtcdp/overview.md).
+Pour plus d&#39;informations, veuillez lire la présentation de Real-Time CDP [&#128279;](../../rtcdp/overview.md).
 
 ## Contrôle d’accès basé sur les attributs {#abac}
 
@@ -141,7 +141,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description de la mise à jour |
 | --- | --- | --- |
-| Extension ([!UICONTROL Extension complète Adobe Analytics ExperienceEvent]) | [[!UICONTROL  Données contextuelles ]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL Données contextuelles] objet map ajouté à l’[!UICONTROL extension complète Adobe Analytics ExperienceEvent] pour fournir des données contextuelles à Adobe Analytics. |
+| Extension ([!UICONTROL Extension complète Adobe Analytics ExperienceEvent]) | [[!UICONTROL &#x200B; Données contextuelles &#x200B;]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL Données contextuelles] objet map ajouté à l’[!UICONTROL extension complète Adobe Analytics ExperienceEvent] pour fournir des données contextuelles à Adobe Analytics. |
 | Groupe de champs | Multiple | Plusieurs champs ajoutés à [[!UICONTROL Détails de segment d’événement enrichi]](https://github.com/adobe/xdm/pull/1760/files). |
 
 {style="table-layout:auto"}

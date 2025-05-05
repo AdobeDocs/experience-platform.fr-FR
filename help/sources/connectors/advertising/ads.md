@@ -27,7 +27,7 @@ Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’
 
 ### Configuration des autorisations sur Experience Platform
 
-Pour connecter votre compte [!DNL Google Ads] à Experience Platform ]**les autorisations**[!UICONTROL  Afficher les sources et **[!UICONTROL Gérer les sources]** doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/ui/overview.md).
+Pour connecter votre compte [!DNL Google Ads] à Experience Platform **les autorisations** Afficher les sources et **[!UICONTROL Gérer les sources]** doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/ui/overview.md).
 
 ### Collecter les informations d’identification requises
 

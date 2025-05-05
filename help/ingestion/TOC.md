@@ -27,7 +27,7 @@ ht-degree: 95%
    - [Ingestion par lots partielle](batch-ingestion/partial.md)
    - [Dépannage](batch-ingestion/troubleshooting.md)
 - Tutoriels {#tutorials}
-   - Mapper un fichier CSV à un {#map-csv} XDM
+   - Mapper un fichier CSV à un XDM {#map-csv}
       - [Présentation](./tutorials/map-csv/overview.md)
       - [Mapper un fichier CSV à un schéma existant](./tutorials/map-csv/existing-schema.md)
       - [Mapper un fichier CSV à l’aide de recommandations générées par l’IA](./tutorials/map-csv/recommendations.md)

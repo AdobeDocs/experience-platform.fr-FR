@@ -75,7 +75,7 @@ L’étape suivante consiste à mapper les propriétés d’événement Splunk v
 
 | Nom du champ | Description |
 | --- | --- |
-| [!UICONTROL Événement ]<br><br>**(OBLIGATOIRE)** | Indiquez comment vous souhaitez fournir les données d’événement. Les données d’événement peuvent être affectées à la clé `event` de l’objet JSON dans la requête HTTP, ou il peut s’agir de texte brut. La clé `event` se trouve au même niveau du paquet d’événement JSON que les clés de métadonnées. Dans les accolades clé-valeur `event`, les données peuvent se trouver sous n’importe quel formulaire dont vous avez besoin (chaîne, nombre, autre objet JSON, etc.). |
+| [!UICONTROL Événement &#x200B;]<br><br>**(OBLIGATOIRE)** | Indiquez comment vous souhaitez fournir les données d’événement. Les données d’événement peuvent être affectées à la clé `event` de l’objet JSON dans la requête HTTP, ou il peut s’agir de texte brut. La clé `event` se trouve au même niveau du paquet d’événement JSON que les clés de métadonnées. Dans les accolades clé-valeur `event`, les données peuvent se trouver sous n’importe quel formulaire dont vous avez besoin (chaîne, nombre, autre objet JSON, etc.). |
 | [!UICONTROL Hôte] | Le nom d’hôte du client à partir duquel vous envoyez des données. |
 | [!UICONTROL Type de source] | Le type de source à affecter aux données d’événement. |
 | [!UICONTROL Source] | La valeur source à affecter aux données d’événement. Par exemple, si vous envoyez des données à partir d’une application que vous développez, définissez cette clé sur le nom de l’application. |

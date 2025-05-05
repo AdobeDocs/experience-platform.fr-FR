@@ -59,4 +59,4 @@ Le processus détaillé de configuration de votre source dans Experience Platfor
    * Vous pouvez utiliser ce [modèle de documentation de l’API sources](./documentation/template.md) pour structurer votre documentation d’API.
    * Vous pouvez utiliser ce [modèle de documentation de l’interface utilisateur des sources](./documentation/ui-template.md) pour structurer votre documentation de l’interface utilisateur.
    * Consultez le guide sur [à l’aide de l’interface web GitHub](./documentation/github.md) pour savoir comment créer de la documentation à l’aide de GitHub.
-   * Pour savoir comment créer de la documentation à l’aide de votre ordinateur local](./documentation/text-editor.md) consultez le guide sur [à l’aide d’un éditeur de texte.
+   * Pour savoir comment créer de la documentation à l’aide de votre ordinateur local[&#128279;](./documentation/text-editor.md) consultez le guide sur à l’aide d’un éditeur de texte.

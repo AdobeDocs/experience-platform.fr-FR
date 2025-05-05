@@ -17,7 +17,7 @@ Cette page décrit comment utiliser les informations dans la section [Options de
 
 ## Conditions préalables {#prerequisites}
 
-Avant de passer aux étapes illustrées ci-dessous, veuillez lire la page de prise en main de Destination SDK [](../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification Adobe I/O nécessaires et d’autres conditions préalables pour travailler avec les API Destination SDK. Cela suppose que vous ayez rempli les conditions préalables de partenariat et d’autorisation et que vous soyez prêt à commencer à développer votre destination.
+Avant de passer aux étapes illustrées ci-dessous, veuillez lire la page de prise en main de Destination SDK [&#128279;](../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification Adobe I/O nécessaires et d’autres conditions préalables pour travailler avec les API Destination SDK. Cela suppose que vous ayez rempli les conditions préalables de partenariat et d’autorisation et que vous soyez prêt à commencer à développer votre destination.
 
 ## Étapes à suivre pour utiliser les options de configuration de Destination SDK afin de configurer votre destination. {#steps}
 

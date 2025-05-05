@@ -212,7 +212,7 @@ Cette opération copie une payload JSON dans le presse-papiers, générée en fo
 
 +++
 
-La payload peut également être copiée en sélectionnant [!UICONTROL Plus] en haut à droite de l’éditeur de schémas. Un menu déroulant fournit deux options, [!UICONTROL  Copier la structure JSON ] et [!UICONTROL  Supprimer le schéma ].
+La payload peut également être copiée en sélectionnant [!UICONTROL Plus] en haut à droite de l’éditeur de schémas. Un menu déroulant fournit deux options, [!UICONTROL &#x200B; Copier la structure JSON &#x200B;] et [!UICONTROL &#x200B; Supprimer le schéma &#x200B;].
 
 >[!NOTE]
 >
@@ -226,7 +226,7 @@ Notez que chaque instance de l’identifiant du client de votre organisation app
 
 ## Importer la ressource à l’aide de l’API {#import-resource-with-api}
 
-Une fois que vous avez copié le fichier JSON d’exportation pour le schéma, vous pouvez l’utiliser comme payload pour une requête POST vers le point d’entrée `/rpc/import` dans l’API Schema Registry. Pour plus d’informations sur la configuration de l’appel pour envoyer le schéma à l’organisation et au sandbox souhaités](../api/import.md) consultez le [ guide du point d’entrée d’importation .
+Une fois que vous avez copié le fichier JSON d’exportation pour le schéma, vous pouvez l’utiliser comme payload pour une requête POST vers le point d’entrée `/rpc/import` dans l’API Schema Registry. Pour plus d’informations sur la configuration de l’appel pour envoyer le schéma à l’organisation et au sandbox souhaités[&#128279;](../api/import.md) consultez le  guide du point d’entrée d’importation .
 
 ## Étapes suivantes
 

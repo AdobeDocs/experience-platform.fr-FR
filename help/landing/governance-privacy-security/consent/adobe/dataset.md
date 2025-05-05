@@ -21,7 +21,7 @@ Ce document décrit les étapes de configuration d’un jeu de données pour tra
 
 >[!IMPORTANT]
 >
->Les exemples de ce guide utilisent un ensemble normalisé de champs pour représenter les valeurs de consentement du client, telles que définies par le groupe de champs de schéma [[!UICONTROL  Détails du consentement et des préférences ]](../../../../xdm/field-groups/profile/consents.md). La structure de ces champs est destinée à fournir un modèle de données efficace pour couvrir de nombreux cas d’utilisation courants de la collecte de consentement.
+>Les exemples de ce guide utilisent un ensemble normalisé de champs pour représenter les valeurs de consentement du client, telles que définies par le groupe de champs de schéma [[!UICONTROL &#x200B; Détails du consentement et des préférences &#x200B;]](../../../../xdm/field-groups/profile/consents.md). La structure de ces champs est destinée à fournir un modèle de données efficace pour couvrir de nombreux cas d’utilisation courants de la collecte de consentement.
 >
 >Cependant, vous pouvez également définir vos propres groupes de champs pour représenter le consentement en fonction de vos propres modèles de données. Consultez votre équipe juridique pour obtenir l’approbation d’un modèle de données de consentement adapté aux besoins de votre entreprise, en fonction des options suivantes :
 >
@@ -43,7 +43,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 ## Structure du groupe de champs [!UICONTROL Détails du consentement et des préférences] {#structure}
 
-Le groupe de champs [!UICONTROL  Détails du consentement et des préférences ] fournit des champs de consentement normalisés à un schéma. Actuellement, ce groupe de champs n’est compatible qu’avec les schémas basés sur la classe [!DNL XDM Individual Profile].
+Le groupe de champs [!UICONTROL &#x200B; Détails du consentement et des préférences &#x200B;] fournit des champs de consentement normalisés à un schéma. Actuellement, ce groupe de champs n’est compatible qu’avec les schémas basés sur la classe [!DNL XDM Individual Profile].
 
 Le groupe de champs fournit un champ de type objet unique, `consents`, dont les sous-propriétés capturent un ensemble de champs de consentement normalisés. Le fichier JSON suivant est un exemple du type de données attendu par `consents` lors de l’ingestion de données :
 

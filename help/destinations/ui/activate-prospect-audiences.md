@@ -31,7 +31,7 @@ Accédez à **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, puis s
 
 ### Autorisations nécessaires {#permissions}
 
-Pour activer les audiences de prospects, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Activer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+Pour activer les audiences de prospects, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Activer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Pour vous assurer que vous disposez des autorisations nécessaires pour activer les audiences de prospects, parcourez le catalogue des destinations. Si une destination comporte un contrôle **[!UICONTROL Activer]**, vous disposez des autorisations appropriées.
 

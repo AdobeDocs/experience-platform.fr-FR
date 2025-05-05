@@ -104,7 +104,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans la section [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
@@ -153,13 +153,13 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Lisez [Activer des audiences vers des destinations de personnalisation Edge](../../ui/activate-edge-personalization-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ## Supprimer des audiences d’une destination Target {#remove}
 
-Des étapes supplémentaires sont nécessaires pour supprimer une audience d’une connexion Adobe Target existante lorsque cette audience est déjà utilisée dans une activité Adobe Target [](https://experienceleague.adobe.com/en/docs/target/using/activities/activities). Toute tentative de suppression d’une audience d’une connexion Adobe Target entraîne une erreur si l’audience est utilisée par une activité Adobe Target.
+Des étapes supplémentaires sont nécessaires pour supprimer une audience d’une connexion Adobe Target existante lorsque cette audience est déjà utilisée dans une activité Adobe Target [&#128279;](https://experienceleague.adobe.com/en/docs/target/using/activities/activities). Toute tentative de suppression d’une audience d’une connexion Adobe Target entraîne une erreur si l’audience est utilisée par une activité Adobe Target.
 
 ![Image de l’interface utilisateur d’Experience Platform montrant une erreur causée par une tentative de suppression d’une audience utilisée par une activité Target.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
 

@@ -24,7 +24,7 @@ Ce guide utilise l’interface `__tcfapi` pour accéder aux informations de cons
 
 Pour utiliser IAB TCF 2.0 avec les balises et l’extension Adobe Experience Platform Web SDK, vous devez disposer d’un schéma XDM. Si vous n’avez configuré aucune de ces options, commencez par afficher cette page avant de continuer.
 
-En outre, ce guide nécessite une compréhension du fonctionnement de Adobe Experience Platform Web SDK. Pour une rapide mise à jour, veuillez lire la présentation de Adobe Experience Platform Web SDK [](../../home.md) et la documentation [Questions fréquentes](../../faq.md).
+En outre, ce guide nécessite une compréhension du fonctionnement de Adobe Experience Platform Web SDK. Pour une rapide mise à jour, veuillez lire la présentation de Adobe Experience Platform Web SDK [&#128279;](../../home.md) et la documentation [Questions fréquentes](../../faq.md).
 
 ## Activer le consentement par défaut
 

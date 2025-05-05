@@ -27,7 +27,7 @@ Les autorisations recommandées pour la science des données sont les suivantes 
 
 - Sandbox(s) qui seront utilisés pour la science des données (généralement `prod`)
 - Modélisation des données : [!UICONTROL Gérer les schémas]
-- Gestion des données : [!UICONTROL  Gérer les jeux de données ]
+- Gestion des données : [!UICONTROL &#x200B; Gérer les jeux de données &#x200B;]
 - Ingestion des données : [!UICONTROL Afficher les sources]
 - Destinations : [!UICONTROL Gérer et activer des destinations de jeu de données]
 - Query Service : [!UICONTROL Gérer les requêtes]

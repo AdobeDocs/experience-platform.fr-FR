@@ -27,7 +27,7 @@ Les guides sur l’IA dédiée aux clients nécessitent une compréhension prati
 
 >[!NOTE]
 >
->Si vous n’avez pas besoin de télécharger les scores bruts, vous pouvez ignorer cette étape et passer au guide de configuration [](./user-guide/configure.md).
+>Si vous n’avez pas besoin de télécharger les scores bruts, vous pouvez ignorer cette étape et passer au guide de configuration [&#128279;](./user-guide/configure.md).
 
 Une combinaison d’appels API est nécessaire pour télécharger les scores de Customer AI. Pour lancer des appels aux API Experience Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
 

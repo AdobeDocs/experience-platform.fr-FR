@@ -17,7 +17,7 @@ Il est important d’organiser logiquement vos ressources de données dans le [!
 
 ## Commencer
 
-Avant de poursuivre avec ce document, vous devez bien comprendre les fonctionnalités de [Query Service](../home.md) et avoir lu le guide de l’interface utilisateur [](../ui/user-guide.md).
+Avant de poursuivre avec ce document, vous devez bien comprendre les fonctionnalités de [Query Service](../home.md) et avoir lu le guide de l’interface utilisateur [&#128279;](../ui/user-guide.md).
 
 ## Organisation des données dans Query Service
 

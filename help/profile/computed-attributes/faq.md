@@ -99,4 +99,4 @@ Les attributs calculés déduisent automatiquement les libellés d’utilisation
 
 ## Comment utiliser les attributs calculés avec Adobe Journey Optimizer ?
 
-Pour utiliser les attributs calculés dans les parcours, vous devez ajouter le groupe de champs `SystemComputedAttributes` à la source de données Experience Platform. Pour plus d&#39;informations sur la configuration de la source de données Experience Platform, veuillez lire le guide de la source de données de Adobe Experience Platform [](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html).
+Pour utiliser les attributs calculés dans les parcours, vous devez ajouter le groupe de champs `SystemComputedAttributes` à la source de données Experience Platform. Pour plus d&#39;informations sur la configuration de la source de données Experience Platform, veuillez lire le guide de la source de données de Adobe Experience Platform [&#128279;](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html).

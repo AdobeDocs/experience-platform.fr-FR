@@ -207,7 +207,7 @@ Customer AI est utilisé pour générer des scores de propension personnalisés 
 >title="Distribution des scores"
 >abstract="Ce widget visualise la distribution du nombre total de profils en fonction de leurs scores de propension, par incréments de cinq pour cent. La distribution du nombre de profils est déterminée par le modèle d’IA et la politique de fusion sélectionnée. Vous pouvez modifier le modèle d’IA dans le menu déroulant sous le titre du widget."
 
-Le widget [!UICONTROL  Distribution des scores de l’IA dédiée aux clients ] classe le nombre total de profils en fonction de leurs scores de propension. La distribution du nombre de profils est déterminée par le modèle d’IA et la politique de fusion sélectionnée, puis visualisée par incréments de cinq pour cent qui indiquent leur propension. Le nombre de profils est indiqué le long de l’axe Y et les scores de propension le long de l’axe X.
+Le widget [!UICONTROL &#x200B; Distribution des scores de l’IA dédiée aux clients &#x200B;] classe le nombre total de profils en fonction de leurs scores de propension. La distribution du nombre de profils est déterminée par le modèle d’IA et la politique de fusion sélectionnée, puis visualisée par incréments de cinq pour cent qui indiquent leur propension. Le nombre de profils est indiqué le long de l’axe Y et les scores de propension le long de l’axe X.
 
 >[!NOTE]
 >
@@ -312,7 +312,7 @@ Le widget **[!UICONTROL Modification du nombre de profils]** affiche le nombre d
 
 >[!NOTE]
 >
->Le widget [!UICONTROL  Modification du nombre de profils ] reflète le nombre de profils ajoutés **après** la configuration initiale de l’ingestion des profils et de la banque de profils. En d’autres termes, si votre organisation a configuré la banque de profils et ingéré 4 000 000 profils au jour 1, le tableau de bord sera disponible dans les 24 heures, mais le widget [!UICONTROL  Modification du nombre de profils ] sera défini sur 0. Cette méthode de comptage permet d’éviter un pic associé à l’ingestion initiale des profils dans le système. Au cours des 30 prochains jours, votre organisation ingérera 1 000 000 profils supplémentaires dans la banque de profils. Une fois l’instantané suivant pris, le widget [!UICONTROL Modification du nombre de profils] affiche un total de 1 000 000 profils ajoutés, tandis que le widget [!UICONTROL Nombre de profils] affiche un total de 5 000 000 profils.
+>Le widget [!UICONTROL &#x200B; Modification du nombre de profils &#x200B;] reflète le nombre de profils ajoutés **après** la configuration initiale de l’ingestion des profils et de la banque de profils. En d’autres termes, si votre organisation a configuré la banque de profils et ingéré 4 000 000 profils au jour 1, le tableau de bord sera disponible dans les 24 heures, mais le widget [!UICONTROL &#x200B; Modification du nombre de profils &#x200B;] sera défini sur 0. Cette méthode de comptage permet d’éviter un pic associé à l’ingestion initiale des profils dans le système. Au cours des 30 prochains jours, votre organisation ingérera 1 000 000 profils supplémentaires dans la banque de profils. Une fois l’instantané suivant pris, le widget [!UICONTROL Modification du nombre de profils] affiche un total de 1 000 000 profils ajoutés, tandis que le widget [!UICONTROL Nombre de profils] affiche un total de 5 000 000 profils.
 
 ![Le tableau de bord Profils de l’interface utilisateur d’Experience Platform avec le widget Modification du nombre de profils en surbrillance.](../images/profiles/profile-count-change.png)
 
@@ -364,7 +364,7 @@ Pour ouvrir la boîte de dialogue de légendes automatiques, sélectionnez **[!U
 
 Un modèle de machine learning génère automatiquement des informations sur les données en analysant la distribution globale et les dimensions clés des données.
 
-Pour en savoir plus sur les identités, consultez la documentation du service Adobe Experience Platform Identity [](../../identity-service/home.md).
+Pour en savoir plus sur les identités, consultez la documentation du service Adobe Experience Platform Identity [&#128279;](../../identity-service/home.md).
 
 ### [!UICONTROL Chevauchement des identités] {#identity-overlap}
 
@@ -379,7 +379,7 @@ Utilisez les menus déroulants du widget pour sélectionner les identités à co
 
 Pour plus d’informations sur les fragments de profil, reportez-vous à la section [fragments de profil contre profils fusionnés](../../profile/home.md#profile-fragments-vs-merged-profiles) dans la présentation du profil client en temps réel.
 
-Pour en savoir plus sur les identités, consultez la documentation du service Adobe Experience Platform Identity [](../../identity-service/home.md).
+Pour en savoir plus sur les identités, consultez la documentation du service Adobe Experience Platform Identity [&#128279;](../../identity-service/home.md).
 
 ![Présentation du tableau de bord Profils avec le widget Chevauchement des identités en surbrillance.](../images/profiles/identity-overlap.png)
 
@@ -409,7 +409,7 @@ Pour afficher une boîte de dialogue détaillant le nombre total de profils pour
 >title="Profils non segmentés"
 >abstract="Ce widget fournit le nombre total de profils qui ne sont associés à aucune audience et représente l’opportunité d’activation des profils à l’échelle de votre organisation."
 
-Le widget [!UICONTROL  Profils non segmentés ] fournit le nombre total de profils qui ne sont associés à aucune audience. Le nombre, généré à partir du dernier instantané, est précis et souligne l’opportunité d’activation de profils dans votre entreprise. Il indique également la possibilité d’effacer les profils qui ne fournissent pas un retour sur investissement adéquat.
+Le widget [!UICONTROL &#x200B; Profils non segmentés &#x200B;] fournit le nombre total de profils qui ne sont associés à aucune audience. Le nombre, généré à partir du dernier instantané, est précis et souligne l’opportunité d’activation de profils dans votre entreprise. Il indique également la possibilité d’effacer les profils qui ne fournissent pas un retour sur investissement adéquat.
 
 ![Widget Profils non segmentés.](../images/profiles/unsegmented-profiles.png)
 
@@ -420,7 +420,7 @@ Le widget [!UICONTROL  Profils non segmentés ] fournit le nombre total de profi
 >title="Tendance des profils non segmentés"
 >abstract="Ce widget fournit une illustration graphique linéaire du nombre de profils qui ne sont associés à aucune audience sur une période donnée. La tendance des profils non associés à une audience peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois."
 
-Le widget [!UICONTROL  Tendance de modification des profils non segmentés ] utilise un graphique linéaire pour illustrer le nombre de profils ajoutés depuis le dernier instantané quotidien qui ne sont associés à aucune audience. La tendance de changement des profils qui ne sont associés à aucune audience peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget. Le nombre de profils est reflété sur l’axe des ordonnées et la période sur l’axe des abscisses.
+Le widget [!UICONTROL &#x200B; Tendance de modification des profils non segmentés &#x200B;] utilise un graphique linéaire pour illustrer le nombre de profils ajoutés depuis le dernier instantané quotidien qui ne sont associés à aucune audience. La tendance de changement des profils qui ne sont associés à aucune audience peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget. Le nombre de profils est reflété sur l’axe des ordonnées et la période sur l’axe des abscisses.
 
 ![Le widget Tendance de modification des profils non segmentés.](../images/profiles/unsegmented-profiles-change-trend.png)
 
@@ -490,7 +490,7 @@ Sélectionnez **[!UICONTROL Fermer]** pour revenir au tableau de bord des [!UICO
 
 ### [!UICONTROL Audiences mappées au statut de destination] {#audiences-mapped-to-destination-status}
 
-Le widget [!UICONTROL  Audiences mappées au statut de destination ] affiche le nombre total d’audiences mappées et non mappées dans une seule mesure et utilise un graphique en anneau pour illustrer la différence proportionnelle entre les totaux. Les nombres calculés dépendent de la politique de fusion choisie.
+Le widget [!UICONTROL &#x200B; Audiences mappées au statut de destination &#x200B;] affiche le nombre total d’audiences mappées et non mappées dans une seule mesure et utilise un graphique en anneau pour illustrer la différence proportionnelle entre les totaux. Les nombres calculés dépendent de la politique de fusion choisie.
 
 Les nombres individuels des audiences mappées ou non mappées s’affichent dans une boîte de dialogue lorsque le curseur survole la section correspondante du graphique en anneau.
 
@@ -498,7 +498,7 @@ Les nombres individuels des audiences mappées ou non mappées s’affichent dan
 
 ### [!UICONTROL Taille des audiences] {#audiences-size}
 
-Le widget [!UICONTROL  Taille des audiences ] fournit un tableau à deux colonnes qui répertorie les noms de 20 audiences maximum et le nombre total de profils contenus dans chaque audience. La liste est classée de haut en bas en fonction du nombre total de profils contenus dans l’audience. Le nombre total de tailles d’audience dépend de la politique de fusion appliquée.
+Le widget [!UICONTROL &#x200B; Taille des audiences &#x200B;] fournit un tableau à deux colonnes qui répertorie les noms de 20 audiences maximum et le nombre total de profils contenus dans chaque audience. La liste est classée de haut en bas en fonction du nombre total de profils contenus dans l’audience. Le nombre total de tailles d’audience dépend de la politique de fusion appliquée.
 
 ![Le widget Taille des audiences.](../images/profiles/audiences-size.png)
 

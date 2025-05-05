@@ -72,7 +72,7 @@ Pour ingérer des données dans un nouveau jeu de données, sélectionnez **[!UI
 
 ![new-dataset](../../../../images/tutorials/dataflow/cloud-storage/streaming/new-dataset.png)
 
-La fenêtre [!UICONTROL  Sélectionner un schéma ] s’affiche, vous fournissant une liste des schémas disponibles parmi lesquels choisir. Sélectionnez un schéma dans la liste pour mettre à jour le rail de droite afin d’afficher les détails spécifiques au schéma que vous avez sélectionné, y compris des informations indiquant si le schéma est activé pour la [!DNL Profile].
+La fenêtre [!UICONTROL &#x200B; Sélectionner un schéma &#x200B;] s’affiche, vous fournissant une liste des schémas disponibles parmi lesquels choisir. Sélectionnez un schéma dans la liste pour mettre à jour le rail de droite afin d’afficher les détails spécifiques au schéma que vous avez sélectionné, y compris des informations indiquant si le schéma est activé pour la [!DNL Profile].
 
 Une fois que vous avez identifié et sélectionné le schéma à utiliser, cliquez sur **[!UICONTROL Terminé]**.
 

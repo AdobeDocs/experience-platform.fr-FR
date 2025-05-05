@@ -126,4 +126,4 @@ Le schéma JSON est un format utilisé pour décrire et valider la structure des
 
 ## Étapes suivantes
 
-Ce document a présenté certaines des technologies et syntaxes impliquées dans la gestion des ressources basées sur JSON pour [!DNL Experience Platform]. Pour plus d’informations sur l’utilisation des API Experience Platform, y compris les bonnes pratiques](api-guide.md) consultez le [ guide de prise en main . Pour obtenir des réponses aux questions fréquentes, reportez-vous au guide de dépannage d’[Experience Platform](troubleshooting.md).
+Ce document a présenté certaines des technologies et syntaxes impliquées dans la gestion des ressources basées sur JSON pour [!DNL Experience Platform]. Pour plus d’informations sur l’utilisation des API Experience Platform, y compris les bonnes pratiques[&#128279;](api-guide.md) consultez le  guide de prise en main . Pour obtenir des réponses aux questions fréquentes, reportez-vous au guide de dépannage d’[Experience Platform](troubleshooting.md).

@@ -46,7 +46,7 @@ Après avoir créé un flux de données ou sélectionné un flux de données exi
 
 | Champ du flux de données | Valeur |
 | --- | --- |
-| [!UICONTROL  Sandbox ] | Nom de l’Experience Platform [sandbox](../../../sandboxes/home.md) qui contient la connexion en continu requise et les jeux de données pour configurer le flux de données. |
+| [!UICONTROL &#x200B; Sandbox &#x200B;] | Nom de l’Experience Platform [sandbox](../../../sandboxes/home.md) qui contient la connexion en continu requise et les jeux de données pour configurer le flux de données. |
 | [!UICONTROL Jeu de données d’événement] | Jeu de données [!DNL XDM ExperienceEvent] que vous prévoyez d’envoyer à à l’aide de SDK. Bien que vous deviez fournir un jeu de données d’événement pour créer un flux de données Experience Platform, les données de consentement envoyées par le biais d’événements ne sont pas respectées dans les workflows d’application en aval. |
 | [!UICONTROL Jeu de données de profil] | Le jeu de données [!DNL Profile] avec les champs de consentement client que vous avez créé [précédemment](#prerequisites). |
 
@@ -92,7 +92,7 @@ Une fois l’élément de données créé, revenez à la page de configuration d
 
 ### Déployez l’extension sur votre site web
 
-Une fois la configuration de l’extension terminée, elle peut être intégrée à votre site web. Pour obtenir des informations détaillées sur le déploiement de la version de bibliothèque mise à jour](../../../tags/ui/publishing/overview.md) consultez le [ guide de publication dans la documentation sur les balises.
+Une fois la configuration de l’extension terminée, elle peut être intégrée à votre site web. Pour obtenir des informations détaillées sur le déploiement de la version de bibliothèque mise à jour[&#128279;](../../../tags/ui/publishing/overview.md) consultez le  guide de publication dans la documentation sur les balises.
 
 ## Exécution de commandes de modification du consentement {#commands}
 

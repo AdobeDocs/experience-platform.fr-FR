@@ -19,7 +19,7 @@ Si vous ne souhaitez pas utiliser de balises, reportez-vous au guide sur l’[ut
 
 Pour utiliser IAB TCF 2.0 avec les balises et l’extension Experience Platform Web SDK, vous devez disposer d’un schéma XDM et d’un jeu de données.
 
-En outre, ce guide nécessite une compréhension du fonctionnement de Adobe Experience Platform Web SDK. Pour une rapide mise à jour, veuillez lire la présentation de Adobe Experience Platform Web SDK [](../../home.md) et la documentation [Questions fréquentes](../../faq.md).
+En outre, ce guide nécessite une compréhension du fonctionnement de Adobe Experience Platform Web SDK. Pour une rapide mise à jour, veuillez lire la présentation de Adobe Experience Platform Web SDK [&#128279;](../../home.md) et la documentation [Questions fréquentes](../../faq.md).
 
 ## Définition du consentement par défaut
 

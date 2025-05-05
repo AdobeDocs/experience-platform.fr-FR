@@ -37,7 +37,7 @@ Pour plus d’informations sur l’authentification de votre source [!DNL Zendes
 
 ### Création d’un schéma Experience Platform pour [!DNL Zendesk]
 
-Avant de créer une connexion source [!DNL Zendesk], vous devez également vous assurer de créer d’abord un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la [création d’un schéma Experience Platform).
+Avant de créer une connexion source [!DNL Zendesk], vous devez également vous assurer de créer d’abord un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma[&#128279;](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la création d’un schéma Experience Platform).
 
 Pour plus d’informations sur le schéma de [!DNL Zendesk] requis pour le [!DNL Zendesk Search API], reportez-vous à la section [limites](#limits) ci-dessous.
 

@@ -48,7 +48,7 @@ L’écran **[!UICONTROL Ajouter une API]** s’affiche. Sélectionnez **[!UICON
 
 >[!TIP]
 >
->Sélectionnez l’option **[!UICONTROL Afficher les documents]** pour accéder à la documentation de référence de l’API Privacy Service dans une fenêtre de navigateur distincte](https://developer.adobe.com/experience-platform-apis/references/privacy-service/).[
+>Sélectionnez l’option **[!UICONTROL Afficher les documents]** pour accéder à la documentation de référence de l’API Privacy Service dans une fenêtre de navigateur distincte[&#128279;](https://developer.adobe.com/experience-platform-apis/references/privacy-service/).
 
 Sélectionnez ensuite le type d’authentification pour générer des jetons d’accès et accéder à l’API Privacy Service.
 
@@ -64,7 +64,7 @@ La dernière étape de configuration consiste à sélectionner les profils de pr
 
 >[!NOTE]
 >
-Les profils de produit et les autorisations granulaires qu’ils fournissent sont créés et gérés par les administrateurs via Adobe Admin Console. Pour plus d’informations](../permissions.md) consultez le guide sur les autorisations [Privacy Service .
+>Les profils de produit et les autorisations granulaires qu’ils fournissent sont créés et gérés par les administrateurs via Adobe Admin Console. Pour plus d’informations[&#128279;](../permissions.md) consultez le guide sur les autorisations Privacy Service .
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer l’API configurée]**.
 

@@ -66,7 +66,7 @@ De nombreuses opérations PATCH dans les API [!DNL Experience Platform] utilisen
 
 ## Puis-je utiliser Postman pour appeler les API [!DNL Experience Platform] ? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postman](https://www.postman.com/) est un outil utile pour visualiser les appels vers les API RESTful. Le Guide de prise en main de l’API Experience Platform [](api-guide.md) contient une vidéo et des instructions pour l’importation de collections Postman. En outre, une liste des collections Postman pour chaque service est fournie.
+[Postman](https://www.postman.com/) est un outil utile pour visualiser les appels vers les API RESTful. Le Guide de prise en main de l’API Experience Platform [&#128279;](api-guide.md) contient une vidéo et des instructions pour l’importation de collections Postman. En outre, une liste des collections Postman pour chaque service est fournie.
 
 ## Quelle est la configuration requise pour [!DNL Experience Platform] ? {#what-are-the-system-requirements-for-platform}
 

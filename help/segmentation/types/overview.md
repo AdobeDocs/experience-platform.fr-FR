@@ -19,7 +19,7 @@ Une audience de personnes est une audience créée à l’aide des données de p
 
 Pour plus d’informations sur les audiences individuelles, veuillez lire la [présentation des audiences individuelles](./people-audiences.md).
 
-## [!BADGE B2C Edition ] audience semblable
+## [!BADGE B2C Edition &#x200B;] audience semblable
 
 Une audience semblable est une audience créée en analysant une audience à forte valeur ajoutée avec un modèle de machine learning similaire. Le modèle similaire peut créer une audience qui correspond au seuil de similarité de l’audience de grande valeur analysée.
 

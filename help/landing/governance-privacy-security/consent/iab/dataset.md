@@ -48,7 +48,7 @@ Les sections ci-dessous expliquent la structure de chacun de ces groupes de cham
 
 Pour les schémas basés sur [!DNL XDM Individual Profile], le groupe de champs [!UICONTROL Détails du consentement IAB TCF 2.0] fournit un champ unique de type map, `identityPrivacyInfo`, qui mappe les identités des clients à leurs préférences de consentement TCF. Ce groupe de champs doit être inclus dans un schéma basé sur les enregistrements activé pour le profil client en temps réel pour que l’application automatique ait lieu.
 
-Pour en savoir plus sur sa structure et son cas d’utilisation](../../../../xdm/field-groups/profile/iab.md) consultez le [ guide de référence pour ce groupe de champs .
+Pour en savoir plus sur sa structure et son cas d’utilisation[&#128279;](../../../../xdm/field-groups/profile/iab.md) consultez le  guide de référence pour ce groupe de champs .
 
 ### Groupe de champs Événement {#event-field-group}
 
@@ -56,7 +56,7 @@ Si vous souhaitez effectuer le suivi des événements de changement de consentem
 
 Si vous ne prévoyez pas de suivre les événements de changement de consentement au fil du temps, vous n’avez pas besoin d’inclure ce groupe de champs dans votre schéma d’événement. Lors de l’application automatique des valeurs de consentement TCF, Experience Platform utilise uniquement les dernières informations de consentement ingérées dans le [groupe de champs de profil](#profile-field-group). Les valeurs de consentement capturées par les événements ne participent pas aux workflows d’application automatiques.
 
-Pour plus d’informations sur sa structure et son cas d’utilisation](../../../../xdm/field-groups/event/iab.md) consultez le [ guide de référence pour ce groupe de champs .
+Pour plus d’informations sur sa structure et son cas d’utilisation[&#128279;](../../../../xdm/field-groups/event/iab.md) consultez le  guide de référence pour ce groupe de champs .
 
 ## Création de schémas de consentement client {#create-schemas}
 

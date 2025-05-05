@@ -21,7 +21,7 @@ ht-degree: 13%
 |-------------------------|-------------------------|-----------|------------------------------------------------------------------------------------------------------------------|
 | Identifiant d’achat | `purchaseID` | Chaîne | Identifiant unique attribué par le vendeur pour cet achat ou ce contrat. Il n’existe aucune garantie que l’identifiant est unique, car il est défini par le vendeur. |
 | Numéro de commande | `purchaseOrderNumber` | Chaîne | Identifiant unique attribué par l’acheteur pour cet achat ou ce contrat. |
-| Liste de paiements | `payments` | Tableau de [[!UICONTROL  éléments de paiement ]](./payment-item.md) | Liste des paiements pour cette commande. Les paiements sont détaillés dans la spécification [!UICONTROL  Éléments de paiement ]. |
+| Liste de paiements | `payments` | Tableau de [[!UICONTROL &#x200B; éléments de paiement &#x200B;]](./payment-item.md) | Liste des paiements pour cette commande. Les paiements sont détaillés dans la spécification [!UICONTROL &#x200B; Éléments de paiement &#x200B;]. |
 | Liste des remboursements | `refunds` | Tableau de [[!UICONTROL Éléments de remboursement]](./refund-item.md) | La liste des remboursements pour cette commande. Les remboursements sont détaillés dans la spécification [!UICONTROL Refund Items]. |
 | Infos sur le retour | `returns` | [[!UICONTROL Informations sur le retour]](./return.md) | La RMA (Return Merchandise Authorization) a été émise. Les retours sont détaillés dans la spécification [!UICONTROL Return Info]. |
 | Devise | `currencyCode` | Chaîne | Code de devise ISO 4217 utilisé pour les totaux de commande. Par exemple, `USD` et `EUR`. Toutes les instances doivent correspondre au modèle `^[A-Z]{3}$`. |

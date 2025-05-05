@@ -133,14 +133,14 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Groupe de champs | [[!UICONTROL  Détails du composant de contenu ]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` a été supprimé de [!UICONTROL  Détails du composant de contenu ] |
+| Groupe de champs | [[!UICONTROL &#x200B; Détails du composant de contenu &#x200B;]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` a été supprimé de [!UICONTROL &#x200B; Détails du composant de contenu &#x200B;] |
 | Groupe de champs | [[!UICONTROL Balises d’entité AJO]](https://github.com/adobe/xdm/pull/1672/files) | Ajout de balises d’entité AJO aux [!UICONTROL champs d’entité AJO], qui correspondent à un Parcours ou à une campagne |
 | Groupe de champs | (Multiple) | Ajout de plusieurs champs pour les [[!UICONTROL champs communs des événements d’étape Journey Orchestration]](https://github.com/adobe/xdm/pull/1671/files) |
 | Groupe de champs | (Multiple) | [Ajout de plusieurs types d’événements XDM pour [!UICONTROL Rapports multimédia]](https://github.com/adobe/xdm/pull/1670/files). |
 | Groupe de champs | [!UICONTROL Événement de modification Workfront] | Les groupes de champs `Full Record` et `Accessor Employee Ids` ont été ajoutés. |
-| Type de données | [[!UICONTROL Élément de liste de produits]](https://github.com/adobe/xdm/pull/1685/files) | Le [!UICONTROL  Montant du remboursement ] a été ajouté pour indiquer le montant remboursé pour l’article, le cas échéant. |
-| Type de données | [[!UICONTROL Order ]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Liste des remboursements] a été ajouté à la liste des remboursements pour cette commande. |
-| Type de données | [](https://github.com/adobe/xdm/pull/1677/files) d’élément de liste de produits | Les catégories de produits ont été ajoutées à la liste des données de catégorie de ce produit. |
+| Type de données | [[!UICONTROL Élément de liste de produits]](https://github.com/adobe/xdm/pull/1685/files) | Le [!UICONTROL &#x200B; Montant du remboursement &#x200B;] a été ajouté pour indiquer le montant remboursé pour l’article, le cas échéant. |
+| Type de données | [[!UICONTROL Order &#x200B;]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Liste des remboursements] a été ajouté à la liste des remboursements pour cette commande. |
+| Type de données | [&#128279;](https://github.com/adobe/xdm/pull/1677/files) d’élément de liste de produits | Les catégories de produits ont été ajoutées à la liste des données de catégorie de ce produit. |
 | Type de données | [!UICONTROL Informations détaillées sur la session] | Ajout du champ de chaîne `pev3` qui [indique le type de flux de médias utilisé pour la création de rapports](https://github.com/adobe/xdm/pull/1676/files). Ajout également de la propriété `pccr` qui indique si une redirection s’est produite. |
 | Type de données | [!UICONTROL Liste des demandes internes] | Fournit les [propriétés de la liste de demandes](https://github.com/adobe/xdm/pull/1675/files). Ils comprennent le nom, l’ID et la description. |
 | Type de données | [!UICONTROL Commerce] | Le type de données [Commerce a été mis à jour](https://github.com/adobe/xdm/pull/1675/files) afin d&#39;inclure `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals` et `requisitionList`. |

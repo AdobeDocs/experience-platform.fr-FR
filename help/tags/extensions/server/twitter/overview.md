@@ -98,7 +98,7 @@ Une fois la sélection effectuée, d’autres commandes s’affichent pour confi
 | Nom du champ | Description | Exemple | Obligatoire |
 | --- | --- | --- | --- |
 | [!UICONTROL Temps de conversion] | Date-time sous la forme d’une chaîne au format ISO 8601 ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. | 2022-02-18T01:14:00.603Z | Oui |
-| [!UICONTROL  {Event Id] | ID de base 36 d’un événement spécifique. Cet identifiant doit correspondre à un événement préconfiguré contenu dans votre compte publicitaire [!DNL Twitter]. Il s’agit de l’identifiant de l’événement correspondant dans le Gestionnaire d’événements. | o87ne ou tw-o8z6j-o87ne (tw-pixel_id-event-id) | Oui |
+| [!UICONTROL &#x200B; &lbrace;Event Id] | ID de base 36 d’un événement spécifique. Cet identifiant doit correspondre à un événement préconfiguré contenu dans votre compte publicitaire [!DNL Twitter]. Il s’agit de l’identifiant de l’événement correspondant dans le Gestionnaire d’événements. | o87ne ou tw-o8z6j-o87ne (tw-pixel_id-event-id) | Oui |
 | [!UICONTROL Nombre d’éléments] | Nombre d’éléments achetés dans l’événement. Il doit s’agir d’un nombre positif supérieur à 0. | 4 | Non |
 | [!UICONTROL Devise] | Devise des éléments achetés dans l’événement. Elle est exprimée dans la norme ISO-4217 et, si elle n’est pas fournie, la valeur par défaut est USD. | USD | Non |
 | [!UICONTROL Valeur] | Valeur du prix des articles achetés dans l’événement. | 100,00 | Non |

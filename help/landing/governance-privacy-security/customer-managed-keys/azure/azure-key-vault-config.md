@@ -65,7 +65,7 @@ Une fois que vous avez créé un coffre de clés, vous pouvez générer une nouv
 
 ![Onglet [!DNL Keys] de la [!DNL Azure] avec le [!DNL Generate import] mis en surbrillance.](../../../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
-Utilisez le formulaire fourni pour attribuer un nom à la clé, puis sélectionnez **RSA** ou **RSA-HSM** pour le type de clé. Pour les implémentations hébergées sur [!DNL Azure], la **[!DNL RSA key size]** doit être d’au moins 3 072 bits **** comme requis pour [!DNL Azure Cosmos DB]. [!DNL Azure Data Lake Storage] est également compatible avec RSA 3027.
+Utilisez le formulaire fourni pour attribuer un nom à la clé, puis sélectionnez **RSA** ou **RSA-HSM** pour le type de clé. Pour les implémentations hébergées sur [!DNL Azure], la **[!DNL RSA key size]** doit être d’au moins 3 072 bits **&#x200B;**&#x200B;comme requis pour [!DNL Azure Cosmos DB]. [!DNL Azure Data Lake Storage] est également compatible avec RSA 3027.
 
 >[!NOTE]
 >

@@ -133,7 +133,7 @@ Les identifiants d’appareil propriétaires ([!DNL FPIDs]) effectuent le suivi 
 >
 >Les enregistrements [!DNL A] ou [!DNL AAAA] ne sont pris en charge que pour la définition et le suivi des cookies. La principale méthode de collecte de données consiste à utiliser un [!DNL DNS CNAME]. Les [!DNL FPIDs] sont définis à l’aide d’un enregistrement [!DNL A] ou [!DNL AAAA] et envoyés à Adobe à l’aide d’un [!DNL CNAME].
 >
->Le programme de certificat géré par Adobe [](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) est également pris en charge pour la collecte de données propriétaires.
+>Le programme de certificat géré par Adobe [&#128279;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) est également pris en charge pour la collecte de données propriétaires.
 
 Une fois qu’un cookie [!DNL FPID] est défini, sa valeur peut être récupérée et envoyée à Adobe au fur et à mesure de la collecte des données d’événement. Les [!DNL FPIDs] collectées sont utilisées pour générer des [!DNL ECIDs], qui sont les identifiants principaux dans les applications Adobe Experience Cloud.
 
@@ -166,7 +166,7 @@ Pour utiliser cette fonctionnalité, vous devez définir le cookie [!DNL FPID] a
 >
 >Cette fonctionnalité nécessite que la [collecte de données propriétaire](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en) soit activée.
 
-**Étape 2. Activez la fonctionnalité**[!UICONTROL  Cookie interne d’identifiant ]**pour votre flux de données**
+**Étape 2. Activez la fonctionnalité**&#x200B;[!UICONTROL &#x200B; Cookie interne d’identifiant &#x200B;]&#x200B;**pour votre flux de données**
 
 Après avoir configuré votre CNAME, vous devez activer l’option **[!UICONTROL Cookie d’identifiant propriétaire]** pour votre flux de données. Ce paramètre indique à Edge Network de se référer à un cookie spécifié lors de la recherche d’un identifiant d’appareil interne, au lieu de rechercher cette valeur dans le [mappage d’identité](#identityMap).
 

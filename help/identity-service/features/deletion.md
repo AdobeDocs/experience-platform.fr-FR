@@ -22,7 +22,7 @@ Ce document présente les différents mécanismes que vous pouvez utiliser pour 
 Le document ci-dessous fait référence aux fonctions suivantes d’Experience Platform :
 
 * [Service d’identités](../home.md) : obtenez une meilleure compréhension des clients individuels et de leurs comportements en reliant les identités entre les appareils et les systèmes.
-   *  [Graphique d’identités](./identity-graph-viewer.md) : Un graphique d’identités est une carte des relations entre différentes identités pour un client spécifique. Il permet de visualiser la façon dont un client interagit avec votre marque sur différents canaux.
+   * [Graphique d’identités](./identity-graph-viewer.md) : Un graphique d’identités est une carte des relations entre différentes identités pour un client spécifique. Il permet de visualiser la façon dont un client interagit avec votre marque sur différents canaux.
    * [Espaces de noms d’identité](./namespaces.md) : Les espaces de noms d’identité sont des composants du service d’identités qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur de « name<span>@email.com » comme adresse e-mail ou « 443522 » comme CRMID numérique.
 * [Service de catalogue](../../catalog/home.md) : découvrez le traçabilité des données, les métadonnées, les descriptions de fichiers, les répertoires et les jeux de données dans le lac de données.
 * [Hygiène des données](../../hygiene/home.md) : gérez vos données client stockées en planifiant des expirations de jeux de données automatisées ou en supprimant des enregistrements individuels d’un jeu de données ou de tous les jeux de données.

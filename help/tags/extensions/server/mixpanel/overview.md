@@ -78,7 +78,7 @@ Commencez à créer une règle dans votre propriété de transfert d’événeme
 
 | Entrée | Description | Obligatoire |
 | --- | --- | --- |
-| [!UICONTROL  Jeton de projet ] | Ce champ doit être mappé au jeton de projet associé à votre compte [!DNL Mixpanel]. | Oui |
+| [!UICONTROL &#x200B; Jeton de projet &#x200B;] | Ce champ doit être mappé au jeton de projet associé à votre compte [!DNL Mixpanel]. | Oui |
 | [!UICONTROL Event Type] (Type d’événement) | Nom de l’événement. | Oui |
 | [!UICONTROL Heure de l’événement] | Heure de l’événement. | |
 | [!UICONTROL Identifiant Mixpanel distinct] | Identifiant unique de l’utilisateur qui a exécuté l’événement. | |

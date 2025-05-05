@@ -9,7 +9,7 @@ ht-degree: 11%
 
 ---
 
-# [!UICONTROL  {XDM Business Person Details] groupe de champs de schéma
+# [!UICONTROL &#x200B; &lbrace;XDM Business Person Details] groupe de champs de schéma
 
 [!UICONTROL XDM Business Person Details] est un groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) qui capture des informations sur une personne dans le contexte d’une entreprise B2B.
 

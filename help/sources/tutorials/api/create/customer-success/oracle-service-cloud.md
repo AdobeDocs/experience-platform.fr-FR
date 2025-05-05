@@ -40,7 +40,7 @@ Pour connecter [!DNL Flow Service] à Oracle Service Cloud, vous devez fournir d
 | `password` | Mot de passe de votre compte Oracle Service Cloud.  |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source.  L’identifiant de spécification de connexion pour Oracle Service Cloud est : `ba5126ec-c9ac-11eb-b8bc-0242ac130003`.  |
 
-Pour plus d’informations sur l’authentification de votre compte Oracle Service Cloud, reportez-vous au guide [[!DNL Oracle]  sur l’authentification](https://docs.oracle.com/en/cloud/saas/b2c-service/20c/cxska/OKCS_Authenticate_and_Authorize.html ). 
+Pour plus d’informations sur l’authentification de votre compte Oracle Service Cloud, reportez-vous au guide [[!DNL Oracle]  sur l’authentification](https://docs.oracle.com/en/cloud/saas/b2c-service/20c/cxska/OKCS_Authenticate_and_Authorize.html). 
 
 ### Utilisation des API Experience Platform
 

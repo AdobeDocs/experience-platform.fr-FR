@@ -35,7 +35,7 @@ Pour connecter à [!DNL Oracle Object Storage], vous devez fournir des valeurs p
 | `bucketName` | Le nom de compartiment autorisé est obligatoire si l’utilisateur dispose d’un accès restreint. Le nom du compartiment doit comporter entre 3 et 63 caractères, commencer et se terminer par une lettre ou un chiffre, et ne peut contenir que des lettres minuscules, des chiffres ou des tirets (`-`). Le nom du compartiment ne peut pas être formaté comme une adresse IP. |
 | `folderPath` | Chemin d’accès au dossier autorisé requis si l’utilisateur dispose d’un accès restreint. |
 
-Pour plus d’informations sur la manière d’obtenir ces valeurs, consultez le guide d’authentification du stockage d’objets Oracle [](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
+Pour plus d’informations sur la manière d’obtenir ces valeurs, consultez le guide d’authentification du stockage d’objets Oracle [&#128279;](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 
 Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour créer un compte de stockage d’objets Oracle afin de vous connecter à Experience Platform.
 

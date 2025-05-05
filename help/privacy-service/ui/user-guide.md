@@ -48,7 +48,7 @@ Le tableau de bord de l’interface utilisateur de [!DNL Privacy Service] fourni
 | [!UICONTROL RGPD (Union européenne)] | La [!DNL General Data Protection Regulation] de l&#39;Union européenne |
 | [!UICONTROL HIPPA_USA (États-Unis)] | Le [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL ICDPA_USA] (Iowa) | Le [!DNL Iowa Consumer Data Protection Act] |
-| [!UICONTROL LGPD_BRA (Brésil) ] | La [!DNL Lei Geral de Proteção de Dados] « [!DNL General Data Protection Law] » du Brésil |
+| [!UICONTROL LGPD_BRA (Brésil) &#x200B;] | La [!DNL Lei Geral de Proteção de Dados] « [!DNL General Data Protection Law] » du Brésil |
 | [!UICONTROL MHMDA_USA (Washington)] | Le [!DNL Washington My Health My Data Act] |
 | [!UICONTROL MCDPA_USA (Montana)] | Le [!DNL Montana Consumer Data Privacy Act] |
 | [!UICONTROL NDPA_USA (Nebraska)] | Le [!DNL Nebraska Data Protection Act] |

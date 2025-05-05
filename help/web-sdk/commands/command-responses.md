@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Certaines commandes du SDK Web peuvent renvoyer un objet contenant des données potentiellement utiles à votre entreprise. Si vous le souhaitez, vous pouvez choisir ce que vous souhaitez faire avec ces données. Les réponses de commande sont utiles pour les propositions et les destinations, car elles nécessitent des données Edge Network pour fonctionner efficacement.
 
-Les réponses de commande utilisent JavaScript [ {promesses](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise), agissant comme un proxy pour une valeur inconnue lors de la création de la promesse. Une fois la valeur connue, la promesse est &quot;résolue&quot; avec la valeur .
+Les réponses de commande utilisent JavaScript [ &lbrace;promesses](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise), agissant comme un proxy pour une valeur inconnue lors de la création de la promesse. Une fois la valeur connue, la promesse est &quot;résolue&quot; avec la valeur .
 
 ## Gestion des réponses de commande à l’aide de l’extension de balise SDK Web
 

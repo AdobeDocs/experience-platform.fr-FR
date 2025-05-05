@@ -11,7 +11,7 @@ ht-degree: 8%
 
 # [!UICONTROL Détails de la capsule Advertising] Type de données de collection
 
-[!UICONTROL  La collection {Advertising Pod Details] est un type de données XDM (Experience Data Model) standard. Il définit une séquence ou un groupe de publicités généralement lues l’une après l’autre lors des pauses de contenu. Utilisez le type de données Collection [!UICONTROL Détails de la capsule Advertising] pour capturer des détails tels que l’ID de coupure publicitaire, un nom convivial pour la coupure publicitaire, l’index des publicités pendant la coupure et le décalage de la coupure publicitaire dans la chronologie du contenu en secondes.
+[!UICONTROL &#x200B; La collection &lbrace;Advertising Pod Details] est un type de données XDM (Experience Data Model) standard. Il définit une séquence ou un groupe de publicités généralement lues l’une après l’autre lors des pauses de contenu. Utilisez le type de données Collection [!UICONTROL Détails de la capsule Advertising] pour capturer des détails tels que l’ID de coupure publicitaire, un nom convivial pour la coupure publicitaire, l’index des publicités pendant la coupure et le décalage de la coupure publicitaire dans la chronologie du contenu en secondes.
 
 ![Schéma du type de données Collecte d’informations sur la capsule Advertising.](../images/data-types/advertising-pod-details-collection.png)
 

@@ -20,7 +20,7 @@ ht-degree: 97%
 Pour chaque propriété de balise Adobe Experience Platform, les extensions suivantes doivent être installées et configurées dans l’écran Extension :
 
 * Adobe Analytics
-*  du service d’identification des visiteurs Experience Cloud
+* du service d’identification des visiteurs Experience Cloud
 * Extensions Core installées
 
 Utilisez le fragment de code « Code incorporé sur la page (avancé) » dans le code HTML de chaque page web sur laquelle un lecteur vidéo doit apparaître. Le fragment de code HTML « Code incorporé sur la page (avancé) » se trouve dans la [documentation Brightcove](https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html#inpage). Le lien suivant fournit des informations supplémentaires sur [la manière de générer du code incorporé pour les lecteurs vidéo d’aperçu et de vidéos publiées](https://fr.studio.support.brightcove.com/players/generating-player-embed-code.html).

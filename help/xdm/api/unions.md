@@ -180,7 +180,7 @@ Le format de la réponse dépend de l’en-tête Accept envoyé dans la requête
 
 ## Activation d’un segment pour un abonnement à l’union {#enable}
 
-Pour qu’un schéma soit inclus dans l’union pour sa classe, une balise `union` doit être ajoutée à l’attribut `meta:immutableTags` du schéma. Pour ce faire, envoyez une requête PATCH afin d’ajouter un tableau `meta:immutableTags` avec une seule valeur de chaîne de `union` au schéma en question. Pour obtenir un exemple détaillé](./schemas.md#union) consultez le guide [schemas endpoint guide .
+Pour qu’un schéma soit inclus dans l’union pour sa classe, une balise `union` doit être ajoutée à l’attribut `meta:immutableTags` du schéma. Pour ce faire, envoyez une requête PATCH afin d’ajouter un tableau `meta:immutableTags` avec une seule valeur de chaîne de `union` au schéma en question. Pour obtenir un exemple détaillé[&#128279;](./schemas.md#union) consultez le guide schemas endpoint guide .
 
 ## Liste des schémas dans une union {#list-schemas}
 

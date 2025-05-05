@@ -37,7 +37,7 @@ Sélectionner **[!UICONTROL Extensions]** dans le volet de navigation de gauche.
 
 ![Le catalogue d’extensions présentant l’installation de mise en surbrillance de la carte d’extension [!DNL The Trade Desk].](../../../images/extensions/server/tradedesk/install-extension.png)
 
-Sur l’écran suivant, saisissez l’[!UICONTROL  identifiant publicitaire] et éventuellement un [!UICONTROL  identifiant commercial]. Vous pouvez coller les ID directement dans ces entrées ou vous pouvez utiliser un élément de données à la place. Ces valeurs serviront de valeurs par défaut lors d’un appel d’événement à l’API de conversions en temps réel [!DNL The Trade Desk]. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Enregistrer]**.
+Sur l’écran suivant, saisissez l’[!UICONTROL &#x200B; identifiant publicitaire] et éventuellement un [!UICONTROL &#x200B; identifiant commercial]. Vous pouvez coller les ID directement dans ces entrées ou vous pouvez utiliser un élément de données à la place. Ces valeurs serviront de valeurs par défaut lors d’un appel d’événement à l’API de conversions en temps réel [!DNL The Trade Desk]. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Enregistrer]**.
 
 Pour savoir comment créer des éléments de données et les rendre disponibles pour les extensions dans votre propriété de balise, suivez le tutoriel [Créer des éléments de données](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/tags/create-data-elements) .
 
@@ -93,7 +93,7 @@ Objet JSON contenant plus d’informations. Vous avez la possibilité d’utilis
 
 ![La section [!DNL Object Request Parameters] présentant les champs disponibles.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
 
-Pour plus d’informations sur les [!UICONTROL  paramètres de requête d’objet ] et leurs propriétés, reportez-vous à la documentation [Evénement de conversion en temps réel](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties-items) .
+Pour plus d’informations sur les [!UICONTROL &#x200B; paramètres de requête d’objet &#x200B;] et leurs propriétés, reportez-vous à la documentation [Evénement de conversion en temps réel](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties-items) .
 
 **[!UICONTROL Remplacements de configuration]**
 
@@ -116,4 +116,4 @@ Ce guide explique comment envoyer des données d’événement côté serveur à
 
 Consultez la documentation [!DNL The Trade Desk] sur les [bonnes pratiques pour l’ [!DNL The Trade Desk] API de conversion en temps réel](https://www.facebook.com/business/help/308855623839366?id=818859032317965) pour plus d’informations sur la mise en oeuvre efficace de votre intégration.
 
-Pour plus d’informations sur la façon de déboguer votre mise en oeuvre à l’aide de l’outil Experience Platform Debugger et Event Forwarding Monitoring, consultez les [ {présentation des Adobes Experience Platform Debugger](../../../../debugger/home.md) et [Surveillance des activités dans le transfert d’événement](../../../ui/event-forwarding/monitoring.md).
+Pour plus d’informations sur la façon de déboguer votre mise en oeuvre à l’aide de l’outil Experience Platform Debugger et Event Forwarding Monitoring, consultez les [ &lbrace;présentation des Adobes Experience Platform Debugger](../../../../debugger/home.md) et [Surveillance des activités dans le transfert d’événement](../../../ui/event-forwarding/monitoring.md).

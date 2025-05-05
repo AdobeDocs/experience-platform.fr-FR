@@ -58,7 +58,7 @@ Sélectionnez les points de suspension dans le graphique que vous souhaitez supp
 
 Dans le panneau [!UICONTROL Propriétés], sélectionnez le bouton d’activation/désactivation de **[!UICONTROL Activer l’analyse]**, puis sélectionnez **[!UICONTROL Enregistrer et fermer]**.
 
-![Panneau des propriétés de graphique avec bouton d’activation/désactivation désactivé pour [!UICONTROL Activer l’analyse ] mise en surbrillance.](../images/sql-insights-query-pro-mode/drill-through-disable.png)
+![Panneau des propriétés de graphique avec bouton d’activation/désactivation désactivé pour [!UICONTROL Activer l’analyse &#x200B;] mise en surbrillance.](../images/sql-insights-query-pro-mode/drill-through-disable.png)
 
 ## Étapes suivantes
 

@@ -30,4 +30,4 @@ La documentation de l’API exige également que vous ayez suivi le tutoriel [au
 
 ## Étapes suivantes
 
-Pour lancer des appels à l’aide de l’API du service MTLS, sélectionnez les guides des points d’entrée dans le volet de navigation de gauche ou dans la présentation du guide de développement [](./overview.md)
+Pour lancer des appels à l’aide de l’API du service MTLS, sélectionnez les guides des points d’entrée dans le volet de navigation de gauche ou dans la présentation du guide de développement [&#128279;](./overview.md)

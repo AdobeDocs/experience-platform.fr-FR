@@ -69,7 +69,7 @@ En sélectionnant le **[!DNL Import]** [!DNL Data Connectivity mode], le jeu de 
 >
 >Pour afficher les modifications de données qui se sont produites depuis l’importation initiale, vous devez actualiser les données dans [!DNL Power BI] en important à nouveau le jeu de données complet.
 
-Pour importer une table, saisissez les détails du serveur et de la base de données [comme décrit ci-dessus](#connect-power-bi) et sélectionnez le **[!DNL Import]**[!DNL Data Connectivity mode], puis **[!DNL OK]**. La boîte de dialogue [!DNL Navigator] apparaît, affichant une liste de tous les tableaux disponibles. Sélectionnez le tableau à prévisualiser, puis choisissez **[!DNL Load]** pour mettre le jeu de données dans Power BI. Le tableau est maintenant importé dans [!DNL Power BI].
+Pour importer une table, saisissez les détails du serveur et de la base de données [comme décrit ci-dessus](#connect-power-bi) et sélectionnez le **[!DNL Import]**&#x200B;[!DNL Data Connectivity mode], puis **[!DNL OK]**. La boîte de dialogue [!DNL Navigator] apparaît, affichant une liste de tous les tableaux disponibles. Sélectionnez le tableau à prévisualiser, puis choisissez **[!DNL Load]** pour mettre le jeu de données dans Power BI. Le tableau est maintenant importé dans [!DNL Power BI].
 
 L’application [Informations générales sur la connexion aux données dans PowerBi Desktop](https://learn.microsoft.com/fr-fr/power-bi/connect-data/desktop-quickstart-connect-to-data#connect-to-data) est disponible dans la documentation officielle.
 

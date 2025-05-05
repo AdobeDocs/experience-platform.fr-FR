@@ -41,7 +41,7 @@ Vous devez effectuer les étapes préalables suivantes avant de pouvoir connecte
 
 ### Configuration des autorisations sur Experience Platform
 
-Pour connecter votre compte [!DNL Algolia] à Experience Platform ]**les autorisations**[!UICONTROL  Afficher les sources et **[!UICONTROL Gérer les sources]** doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/abac/ui/permissions.md).
+Pour connecter votre compte [!DNL Algolia] à Experience Platform **les autorisations** Afficher les sources et **[!UICONTROL Gérer les sources]** doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/abac/ui/permissions.md).
 
 ### Liste autorisée d’adresses IP
 

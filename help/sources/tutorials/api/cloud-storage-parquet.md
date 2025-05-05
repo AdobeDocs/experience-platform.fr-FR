@@ -63,7 +63,7 @@ Obtenez et stockez l’identifiant unique (`$id`) de la connexion, puis passez �
 
 Pour que les données sources soient utilisées dans [!DNL Experience Platform], un schéma cible doit également être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données [!DNL Experience Platform] contenant les données sources.
 
-Si vous préférez utiliser l’interface utilisateur dans [!DNL Experience Platform], le tutoriel de l’éditeur de schémas [ ](../../../xdm/tutorials/create-schema-ui.md) fournit des instructions détaillées pour exécuter des actions similaires dans l’éditeur de schémas.
+Si vous préférez utiliser l’interface utilisateur dans [!DNL Experience Platform], le tutoriel de l’éditeur de schémas [&#128279;](../../../xdm/tutorials/create-schema-ui.md) fournit des instructions détaillées pour exécuter des actions similaires dans l’éditeur de schémas.
 
 **Format d’API**
 

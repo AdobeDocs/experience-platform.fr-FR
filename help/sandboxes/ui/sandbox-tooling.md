@@ -157,7 +157,7 @@ La page [!UICONTROL Objet et dépendances du package] fournit une liste de toute
 
 Pour utiliser un objet existant, sélectionnez l’icône en forme de crayon en regard de l’objet dépendant.
 
-La page ![Objet et dépendances du package] [!UICONTROL  affiche la liste des ressources incluses dans le package](../images/ui/sandbox-tooling/package-objects-and-dependencies.png).
+La page [Objet et dépendances du package] ![[!UICONTROL &#x200B; affiche la liste des ressources incluses dans le package]](../images/ui/sandbox-tooling/package-objects-and-dependencies.png).
 
 Les options permettant d’en créer de nouvelles ou d’utiliser des existantes s’affichent. Sélectionnez **[!UICONTROL Utiliser existant]**.
 

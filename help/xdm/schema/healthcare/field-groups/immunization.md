@@ -87,7 +87,7 @@ Pour plus d’informations sur le groupe de champs, reportez-vous au référenti
 | --- | --- | --- | --- |
 | [!UICONTROL Autorité] | `authority` | [[!UICONTROL Référence]](../data-types/reference.md) | Qui est chargé de publier les recommandations. |
 | [!UICONTROL Maladie cible] | `targetDisease` | Tableau de [[!UICONTROL Concept codeable]](../data-types/codeable-concept.md) | La maladie évitable que le vaccin cible. |
-| [!UICONTROL  Nombre de points] | `doseNumber` | Chaîne | Numéro de la dose dans la série. |
+| [!UICONTROL &#x200B; Nombre de points] | `doseNumber` | Chaîne | Numéro de la dose dans la série. |
 | [!UICONTROL Series] | `series` | Chaîne | Nom de la série de vaccins. |
 | [!UICONTROL Portes de série] | `seriesDoses` | Chaîne | Nombre recommandé de doses pour l’immunité. |
 

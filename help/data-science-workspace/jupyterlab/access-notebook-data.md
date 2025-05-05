@@ -398,7 +398,7 @@ Commande magique [!DNL Data Science Workspace] personnalisée pour lire ou écri
 > - Client RPC distant dissocié et autres erreurs de mémoire.
 > - Mauvaises performances lors de la lecture et de l’écriture de jeux de données.
 > 
-> Pour plus d’informations](../troubleshooting-guide.md) consultez le [ guide de dépannage .
+> Pour plus d’informations[&#128279;](../troubleshooting-guide.md) consultez le  guide de dépannage .
 
 Vous pouvez générer automatiquement les exemples ci-dessus dans JupyterLab, mais en utilisant la méthode suivante :
 
@@ -498,7 +498,7 @@ Dans Scala, vous pouvez importer des `clientContext` pour obtenir et renvoyer de
 > - Client RPC distant dissocié et autres erreurs de mémoire.
 > - Mauvaises performances lors de la lecture et de l’écriture de jeux de données.
 > 
-> Pour plus d’informations](../troubleshooting-guide.md) consultez le [ guide de dépannage .
+> Pour plus d’informations[&#128279;](../troubleshooting-guide.md) consultez le  guide de dépannage .
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -553,7 +553,7 @@ Dans Scala, vous pouvez importer des `clientContext` pour obtenir et renvoyer de
 > - Client RPC distant dissocié et autres erreurs de mémoire.
 > - Mauvaises performances lors de la lecture et de l’écriture de jeux de données.
 > 
-> Pour plus d’informations](../troubleshooting-guide.md) consultez le [ guide de dépannage .
+> Pour plus d’informations[&#128279;](../troubleshooting-guide.md) consultez le  guide de dépannage .
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}

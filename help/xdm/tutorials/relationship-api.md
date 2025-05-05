@@ -468,4 +468,4 @@ Une réponse réussie renvoie les détails du descripteur de relation que vous v
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez réussi à créer une relation un-à-un entre deux schémas. Pour plus d’informations sur l’utilisation des descripteurs à l’aide de l’API [!DNL Schema Registry], consultez le guide de développement du registre des schémas [](../api/descriptors.md). Pour savoir comment définir des relations de schémas dans l’interface utilisateur, consultez le tutoriel sur la [définition de relations de schémas à l’aide de l’éditeur de schémas](relationship-ui.md).
+En suivant ce tutoriel, vous avez réussi à créer une relation un-à-un entre deux schémas. Pour plus d’informations sur l’utilisation des descripteurs à l’aide de l’API [!DNL Schema Registry], consultez le guide de développement du registre des schémas [&#128279;](../api/descriptors.md). Pour savoir comment définir des relations de schémas dans l’interface utilisateur, consultez le tutoriel sur la [définition de relations de schémas à l’aide de l’éditeur de schémas](relationship-ui.md).

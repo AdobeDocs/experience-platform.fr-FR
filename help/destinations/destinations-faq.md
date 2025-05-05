@@ -201,7 +201,7 @@ Non, [Web SDK](../web-sdk/home.md) n’est pas nécessaire pour activer les audi
 
 Cependant, si [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) est utilisé à la place de Web SDK, seule la personnalisation de session suivante est prise en charge.
 
-Pour les cas d’utilisation de [personnalisation de la même page et de la page suivante](ui/activate-edge-personalization-destinations.md) vous devez utiliser [Web SDK](../web-sdk/home.md) ou l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/). Pour plus d’informations sur l’implémentation](ui/activate-edge-personalization-destinations.md) consultez la documentation sur l’[activation des audiences vers des destinations Edge.
+Pour les cas d’utilisation de [personnalisation de la même page et de la page suivante](ui/activate-edge-personalization-destinations.md) vous devez utiliser [Web SDK](../web-sdk/home.md) ou l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/). Pour plus d’informations sur l’implémentation[&#128279;](ui/activate-edge-personalization-destinations.md) consultez la documentation sur l’activation des audiences vers des destinations Edge.
 +++
 
 ### Y a-t-il une limite au nombre d’attributs que je peux envoyer de Real-time Customer Data Platform vers Adobe Target ou une destination Personalization personnalisée ?

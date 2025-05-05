@@ -21,7 +21,7 @@ La suppression d’une destination supprime tous les flux de données existants 
 
 Vous pouvez supprimer des destinations de l’[!DNL UI] [!DNL Experience Platform] de deux façons. Vous pouvez effectuer les actions suivantes :
 
-* [Supprimer des destinations de l’onglet [!UICONTROL  Parcourir ]](#delete-browse-tab)
+* [Supprimer des destinations de l’onglet [!UICONTROL &#x200B; Parcourir &#x200B;]](#delete-browse-tab)
 * [Supprimer des destinations de la page des détails de la destination](#delete-destination-details-page)
 
 ## Supprimer des destinations de l’onglet Parcourir{#delete-browse-tab}

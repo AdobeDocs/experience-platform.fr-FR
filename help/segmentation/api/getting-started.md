@@ -47,4 +47,4 @@ Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sa
 
 ## Étapes suivantes
 
-Pour lancer des appels à l’aide de l’API [!DNL Segmentation Service], sélectionnez l’un des guides de point d’entrée disponibles à l’aide du volet de navigation de gauche ou dans la présentation du guide de développement [](./overview.md)
+Pour lancer des appels à l’aide de l’API [!DNL Segmentation Service], sélectionnez l’un des guides de point d’entrée disponibles à l’aide du volet de navigation de gauche ou dans la présentation du guide de développement [&#128279;](./overview.md)

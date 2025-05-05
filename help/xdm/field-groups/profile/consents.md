@@ -189,4 +189,4 @@ Lorsqu’un client modifie ses consentements ou ses préférences sur votre site
 
 ## Étapes suivantes
 
-Ce document couvrait la structure et l’utilisation du groupe de champs [!UICONTROL  Consentements et préférences ]. Pour plus d’informations sur les autres champs fournis par le groupe de champs , consultez le document sur le type de données [[!UICONTROL  Consentement pour les préférences de confidentialité, de Personalization et de marketing ]](../../data-types/consents.md).
+Ce document couvrait la structure et l’utilisation du groupe de champs [!UICONTROL &#x200B; Consentements et préférences &#x200B;]. Pour plus d’informations sur les autres champs fournis par le groupe de champs , consultez le document sur le type de données [[!UICONTROL &#x200B; Consentement pour les préférences de confidentialité, de Personalization et de marketing &#x200B;]](../../data-types/consents.md).

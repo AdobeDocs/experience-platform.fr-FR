@@ -13,7 +13,7 @@ ht-degree: 11%
 
 # [!UICONTROL Détails de la page web] type de données
 
-[!UICONTROL  Détails de la page web ] est un type de données standard du modèle de données d’expérience (XDM) qui décrit les détails d’une page web qui vient d’être chargée et consultée, tels qu’enregistrés par un ExperienceEvent.
+[!UICONTROL &#x200B; Détails de la page web &#x200B;] est un type de données standard du modèle de données d’expérience (XDM) qui décrit les détails d’une page web qui vient d’être chargée et consultée, tels qu’enregistrés par un ExperienceEvent.
 
 Le type de données est destiné aux détails complets de la page et aux chargements initiaux de page des applications web monopages (SPA). Pour les interactions qui se produisent sur une page chargée et qui ne déclenchent pas de nouveau chargement de page, reportez-vous à la section Type de données [interaction web](./web-interaction.md).
 

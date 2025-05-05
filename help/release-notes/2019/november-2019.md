@@ -60,7 +60,7 @@ La page d’accueil n’est qu’un des emplacements où les cartes de mesures a
 
 Si le système ne contient aucune donnée lorsque vous vous connectez à Real-Time CDP, le tableau de bord de la page d’accueil n’apparaît pas. Dans ce cas, la page d’accueil propose des ressources pédagogiques pour une première expérience client. À mesure que les données sont collectées, le tableau de bord se met automatiquement à jour pour afficher des informations sur ces données.
 
-Pour en savoir plus, consultez la présentation des mesures Real-Time Customer Data Platform [](../../rtcdp/home-page-dashboards.md)
+Pour en savoir plus, consultez la présentation des mesures Real-Time Customer Data Platform [&#128279;](../../rtcdp/home-page-dashboards.md)
 
 ## [!DNL Destinations] {#destinations}
 

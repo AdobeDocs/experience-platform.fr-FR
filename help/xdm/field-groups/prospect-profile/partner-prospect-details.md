@@ -38,7 +38,7 @@ Ce groupe de champs étend la [classe Individual Prospect Profile](https://exper
 | [!UICONTROL DonorRating] | `donorRating` | Chaîne | Évaluation liée au comportement des donneurs. |
 | [!UICONTROL InvestmentRating] | `investmentRating` | Chaîne | Évaluation liée au comportement d’investissement. |
 | [!UICONTROL ResponderRating] | `responderRating` | Chaîne | Évaluation liée au comportement du participant. |
-| [!UICONTROL }DépensesVelocity] | `spendingVelocity` | Chaîne | La vitesse ou le taux de dépenses. |
+| [!UICONTROL &rbrace;DépensesVelocity] | `spendingVelocity` | Chaîne | La vitesse ou le taux de dépenses. |
 | [!UICONTROL DépensesVolume] | `spendingVolume` | Chaîne | Montant ou volume des dépenses. |
 | [!UICONTROL recordId] | `recordId` | Chaîne | Identifiant unique de l’enregistrement. |
 | [!UICONTROL RésidenceId] | `residenceId` | Chaîne | Identifiant unique de la résidence. |

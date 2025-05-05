@@ -118,7 +118,7 @@ Problèmes connus
 
 * Aucun
 
-Pour plus d’informations sur [!DNL Privacy Service], commencez par lire la présentation de Privacy Service [](../../privacy-service/home.md).
+Pour plus d’informations sur [!DNL Privacy Service], commencez par lire la présentation de Privacy Service [&#128279;](../../privacy-service/home.md).
 
 ## Sources {#sources}
 

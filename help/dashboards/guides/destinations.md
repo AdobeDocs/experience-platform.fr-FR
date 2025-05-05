@@ -33,7 +33,7 @@ La date et l’heure de l’instantané le plus récent s’affichent en haut de
 
 >[!NOTE]
 >
->Si votre organisation débute dans l’utilisation d’Experience Platform et n’a pas encore de destinations actives, le tableau de bord des destinations et l’onglet [!UICONTROL Présentation] ne sont pas visibles. À la place, sélectionnez [!UICONTROL Destinations] dans le volet de navigation de gauche pour afficher l’onglet [!UICONTROL Catalogue]. Pour en savoir plus sur l’onglet [!UICONTROL Catalogue], voir le [[!UICONTROL guide d’espace de travail des ]destinations](../../destinations/ui/destinations-workspace.md).
+>Si votre organisation débute dans l’utilisation d’Experience Platform et n’a pas encore de destinations actives, le tableau de bord des destinations et l’onglet [!UICONTROL Présentation] ne sont pas visibles. À la place, sélectionnez [!UICONTROL Destinations] dans le volet de navigation de gauche pour afficher l’onglet [!UICONTROL Catalogue]. Pour en savoir plus sur l’onglet [!UICONTROL Catalogue], voir le [[!UICONTROL guide d’espace de travail des &#x200B;]destinations](../../destinations/ui/destinations-workspace.md).
 
 ![Présentation des destinations de l’interface utilisateur d’Experience Platform avec l’instantané le plus récent en surbrillance.](../images/destinations/snapshot-timestamp.png)
 
@@ -158,7 +158,7 @@ Pour plus d’informations sur l’utilisation des audiences dans Experience Pla
 >title="Audiences récemment activées par destination"
 >abstract="Ce widget affiche les cinq audiences les plus récemment activées par ordre décroissant en fonction de la destination choisie dans le menu déroulant de la vue d’ensemble."
 
-Le widget **[!UICONTROL Audiences récemment activées par destination]** affiche les cinq audiences activées les plus récemment dans l’ordre décroissant en fonction de la destination choisie dans le menu déroulant de l’aperçu. Elle est similaire au widget [!UICONTROL  Audiences récemment activées ], mais les données affichées **uniquement** s’appliquent à la destination sélectionnée.
+Le widget **[!UICONTROL Audiences récemment activées par destination]** affiche les cinq audiences activées les plus récemment dans l’ordre décroissant en fonction de la destination choisie dans le menu déroulant de l’aperçu. Elle est similaire au widget [!UICONTROL &#x200B; Audiences récemment activées &#x200B;], mais les données affichées **uniquement** s’appliquent à la destination sélectionnée.
 
 Ce widget contient deux mesures : le nom des audiences et la date de la dernière activation des audiences vers la destination. Les données affichées sont correctes selon le dernier instantané quotidien.
 
@@ -234,7 +234,7 @@ La colonne [!UICONTROL TAILLE DE L’AUDIENCE] indique le nombre total de profil
 
 Le widget [!UICONTROL Audiences mappées] affiche le nombre total d’audiences mappées qui peuvent être activées vers la destination sélectionnée en haut de la page.
 
-Sélectionnez **[!UICONTROL Audiences]** pour accéder à l’onglet Parcourir] du tableau de bord [!UICONTROL  Audiences. Cet espace de travail affiche une liste de toutes les définitions de segment pour votre organisation.
+Sélectionnez **[!UICONTROL Audiences]** pour accéder à l’onglet Parcourir du tableau de bord  Audiences. Cet espace de travail affiche une liste de toutes les définitions de segment pour votre organisation.
 
 ![Le widget Audiences mappées.](../images/destinations/mapped-audiences.png)
 

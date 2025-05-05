@@ -52,7 +52,7 @@ Regardez cette vidéo pour découvrir, créer, publier et dépanner des instance
 
 ## Disponibilité {#availability}
 
-Certains [!UICONTROL  livres de cas d’utilisation] sont adaptés aux cas d’utilisation de Real-Time CDP, tandis que d’autres sont mieux adaptés aux clients utilisant Journey Optimizer. Parcourez le catalogue pour trouver les playbooks les mieux adaptés à votre produit et à votre cas d’utilisation. Découvrez-en plus sur Real-Time CDP et Journey Optimizer dans la [description des produits Adobe](https://helpx.adobe.com/fr/legal/product-descriptions.html).
+Certains [!UICONTROL &#x200B; livres de cas d’utilisation] sont adaptés aux cas d’utilisation de Real-Time CDP, tandis que d’autres sont mieux adaptés aux clients utilisant Journey Optimizer. Parcourez le catalogue pour trouver les playbooks les mieux adaptés à votre produit et à votre cas d’utilisation. Découvrez-en plus sur Real-Time CDP et Journey Optimizer dans la [description des produits Adobe](https://helpx.adobe.com/fr/legal/product-descriptions.html).
 
 ## Guides d’interface utilisateur {#ui-guides}
 

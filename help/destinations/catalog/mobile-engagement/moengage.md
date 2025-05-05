@@ -59,7 +59,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -92,7 +92,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Voir [Activer les données d’audience vers des destinations d’exportation de segments de diffusion en continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
@@ -128,8 +128,8 @@ Dans la section [!UICONTROL Champ cible], sélectionnez l’icône de mappage si
 ![Mapping de ciblage de destination Moengage](../../assets/catalog/mobile-engagement/moengage/mapping-target.png)
 
 Dans la fenêtre [!UICONTROL Sélectionner le champ cible], vous pouvez choisir entre deux catégories de champs cibles :
-* [!UICONTROL Sélectionner un espace de noms d’identité ] : utilisez cette option pour mapper les espaces de noms d’identité [!DNL Experience Platform] aux espaces de noms d’identité [!DNL Moengage].
-* [!UICONTROL Sélectionner des attributs personnalisés ] : utilisez cette option pour mapper les attributs XDM aux attributs [!DNL Moengage] personnalisés que vous avez définis dans votre compte [!DNL Moengage]. <br> Vous pouvez également utiliser cette option pour renommer les attributs XDM existants en [!DNL Moengage]. Par exemple, le mappage d’un attribut XDM `lastName` à un attribut `Last_Name` personnalisé dans [!DNL Moengage] crée l’attribut `Last_Name` dans [!DNL Moengage], s’il n’existe pas déjà, et lui associe l’attribut XDM `lastName`.
+* [!UICONTROL Sélectionner un espace de noms d’identité &#x200B;] : utilisez cette option pour mapper les espaces de noms d’identité [!DNL Experience Platform] aux espaces de noms d’identité [!DNL Moengage].
+* [!UICONTROL Sélectionner des attributs personnalisés &#x200B;] : utilisez cette option pour mapper les attributs XDM aux attributs [!DNL Moengage] personnalisés que vous avez définis dans votre compte [!DNL Moengage]. <br> Vous pouvez également utiliser cette option pour renommer les attributs XDM existants en [!DNL Moengage]. Par exemple, le mappage d’un attribut XDM `lastName` à un attribut `Last_Name` personnalisé dans [!DNL Moengage] crée l’attribut `Last_Name` dans [!DNL Moengage], s’il n’existe pas déjà, et lui associe l’attribut XDM `lastName`.
 
 ![Champs de mappage de destination Moengage](../../assets/catalog/mobile-engagement/moengage/mapping-target-fields.png)
 

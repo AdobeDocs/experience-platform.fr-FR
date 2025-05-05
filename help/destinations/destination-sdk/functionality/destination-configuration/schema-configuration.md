@@ -203,7 +203,7 @@ L’exemple ci-dessous montre les mappages source et de destination obligatoires
 
 {style="table-layout:auto"}
 
-]**Par conséquent, les sections Champ**[!UICONTROL  Source et **[!UICONTROL Champ cible]** de l’interface utilisateur d’Experience Platform sont grisées.
+**Par conséquent, les sections Champ** Source et **[!UICONTROL Champ cible]** de l’interface utilisateur d’Experience Platform sont grisées.
 
 ![Image des mappages obligatoires dans le flux d’activation de l’interface utilisateur.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 

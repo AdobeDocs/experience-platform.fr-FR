@@ -77,7 +77,7 @@ Lors de la création ou de la modification d’une politique de fusion, vous pou
 
 ![Le bouton « Afficher le schéma d’union » est mis en surbrillance dans le workflow Nouvelle politique de fusion.](../images/merge-policies/view-union-schema.png)
 
-Cela ouvre la boîte de dialogue [!UICONTROL Afficher le schéma d’union], qui affiche tous les schémas, identités et relations associés au schéma d’union. Vous pouvez utiliser la boîte de dialogue pour explorer le schéma d’union comme vous le feriez en accédant à l’onglet [!UICONTROL  Schéma d’union ] dans la section [!UICONTROL Profils] de l’interface utilisateur d’Experience Platform.
+Cela ouvre la boîte de dialogue [!UICONTROL Afficher le schéma d’union], qui affiche tous les schémas, identités et relations associés au schéma d’union. Vous pouvez utiliser la boîte de dialogue pour explorer le schéma d’union comme vous le feriez en accédant à l’onglet [!UICONTROL &#x200B; Schéma d’union &#x200B;] dans la section [!UICONTROL Profils] de l’interface utilisateur d’Experience Platform.
 
 Pour plus d’informations sur les schémas d’union, y compris sur la manière d’interagir avec eux dans l’onglet [!UICONTROL Schéma d’union] ou la boîte de dialogue [!UICONTROL Afficher le schéma d’union] du workflow des stratégies de fusion, consultez le [guide de l’interface utilisateur du schéma d’union](../ui/union-schema.md).
 

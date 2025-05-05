@@ -16,7 +16,7 @@ ht-degree: 38%
 
 Cette extension met en œuvre le service [!DNL Experience Cloud] ID, qui identifie les visiteurs sur l’ensemble des solutions [!DNL Experience Cloud].
 
-Le service [!DNL Experience Cloud] ID est une extension de personnalisation de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page d’extension du service Experience Cloud ID [](../../../tags/extensions/client/id-service/overview.md) dans la documentation sur les balises.
+Le service [!DNL Experience Cloud] ID est une extension de personnalisation de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page d’extension du service Experience Cloud ID [&#128279;](../../../tags/extensions/client/id-service/overview.md) dans la documentation sur les balises.
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
 
@@ -42,7 +42,7 @@ Sélectionnez la propriété de balise dans laquelle vous souhaitez installer l�
 
 Le workflow vous mène à l’interface utilisateur de la collecte de données pour terminer l’installation.
 
-Pour plus d’informations sur les options de configuration de l’extension et la prise en charge de l’installation, consultez la page d’extension du service Experience Cloud ID [](../../../tags/extensions/client/id-service/overview.md) dans la documentation sur les balises.
+Pour plus d’informations sur les options de configuration de l’extension et la prise en charge de l’installation, consultez la page d’extension du service Experience Cloud ID [&#128279;](../../../tags/extensions/client/id-service/overview.md) dans la documentation sur les balises.
 
 Vous pouvez également installer l’extension directement dans l’[interface utilisateur de la collecte de données](https://experience.adobe.com/#/data-collection/). Pour plus d’informations, consultez le guide sur [l’ajout d’une nouvelle extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension).
 

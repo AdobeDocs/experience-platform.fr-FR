@@ -59,7 +59,7 @@ La page **[!UICONTROL Règles de détection des robots]** s’affiche.
 
 Sur la page Règles de détection des robots , vous pouvez configurer la détection des robots à l’aide des fonctionnalités suivantes :
 
-* Utilisation de l’[!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) .
+* Utilisation de l’[[!DNL [IAB/ABC International Spiders and Bots List]]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) .
 * Création de vos propres règles de détection des robots.
 
 ### Utiliser la liste internationale d&#39;araignées et de robots IAB/ABC {#iab-list}

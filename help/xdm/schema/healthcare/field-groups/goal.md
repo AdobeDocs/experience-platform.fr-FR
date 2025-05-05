@@ -30,7 +30,7 @@ ht-degree: 6%
 | [!UICONTROL Priorité] | `priority` | [[!UICONTROL Concept codeable]](../data-types/codeable-concept.md) | Identifie le niveau d’importance convenu d’un commun accord pour atteindre ou maintenir l’objectif. |
 | [!UICONTROL Source] | `source` | [[!UICONTROL Référence]](../data-types/reference.md) | Indique la source de l’objectif, comme le patient ou le praticien. |
 | [!UICONTROL Commencer un concept codeable] | `startCodeableConcept` | [[!UICONTROL Concept codeable]](../data-types/codeable-concept.md) | L’événement au bout duquel l’objectif doit être persuadé. |
-| [!UICONTROL  Objet |]`subject` | [[!UICONTROL Référence]](../data-types/reference.md) | Identifie le patient, le groupe ou l’organisation pour qui l’objectif est établi. |
+| [!UICONTROL &#x200B; Objet |]`subject` | [[!UICONTROL Référence]](../data-types/reference.md) | Identifie le patient, le groupe ou l’organisation pour qui l’objectif est établi. |
 | [!UICONTROL Target] | `target` | Tableau d’objets | Indique la chronologie d’étapes spécifiques dans l’objectif. Pour plus d’informations, consultez la [section ci-dessous](#target) . |
 | [!UICONTROL Continu] | `continous` | Booléen | Indique si, après avoir atteint l’objectif, l’activité en cours est nécessaire pour maintenir l’objectif. |
 | [!UICONTROL État du cycle de vie] | `lifecycleStatus` | Chaîne | État du cycle de vie de l’objectif. La valeur de cette propriété doit être égale à l’une des valeurs d’énumération connues suivantes. <li> `proposed` </li> <li> `planned` </li> <li> `accepted` </li> <li> `active` </li> <li> `on-hold` </li> <li> `completed` </li> <li> `cancelled` </li> <li> `entered-in-error` </li> <li> `rejected` </li> |

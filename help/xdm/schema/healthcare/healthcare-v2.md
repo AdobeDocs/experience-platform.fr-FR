@@ -40,7 +40,7 @@ Le tableau suivant décrit les types de données créés conformément aux spéc
 | [[!UICONTROL Concept codable]](./data-types/codeable-concept.md) | Référence d’une ressource à une autre. |
 | [[!UICONTROL Référence codable]](./data-types/codeable-reference.md) | Référence à une ressource ou à un concept. |
 | [[!UICONTROL Codage]](./data-types/coding.md) | Référence à un code défini par un système terminologique. |
-| [[!UICONTROL  Point de contact ]](./data-types/contact-point.md) | Coordonnées d’une personne. |
+| [[!UICONTROL &#x200B; Point de contact &#x200B;]](./data-types/contact-point.md) | Coordonnées d’une personne. |
 | [[!UICONTROL Posologie]](./data-types/dosage.md) | Comment le médicament est/a été pris ou doit être pris. |
 | [[!UICONTROL Durée]](./data-types/duration.md) | Une durée. |
 | [[!UICONTROL Détails de contact étendus]](./data-types/extended-contact-detail.md) | Informations sur le contact étendu. |
@@ -48,7 +48,7 @@ Le tableau suivant décrit les types de données créés conformément aux spéc
 | [[!UICONTROL Identifiant]](./data-types/identifier.md) | Identifiant destiné au calcul. |
 | [[!UICONTROL Argent]](./data-types/money.md) | Une quantité d&#39;utilité économique dans une monnaie reconnue. |
 | [[!UICONTROL Période]](./data-types/period.md) | Période définie par une date/heure de début et de fin. |
-| [[!UICONTROL  Personne ]](./data-types/person.md) | Informations sur un enregistrement de personne générique. |
+| [[!UICONTROL &#x200B; Personne &#x200B;]](./data-types/person.md) | Informations sur un enregistrement de personne générique. |
 | [[!UICONTROL Quantité]](./data-types/quantity.md) | Une quantité mesurée ou mesurable. |
 | [[!UICONTROL Plage]](./data-types/range.md) | Ensemble de valeurs liées par des valeurs faibles et élevées. |
 | [[!UICONTROL Rapport]](./data-types/ratio.md) | Rapport de deux valeurs [[!UICONTROL Quantité]](./data-types/quantity.md) via un numérateur et un dénominateur. |

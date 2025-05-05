@@ -66,7 +66,7 @@ Pour appliquer un libellé à un champ existant, sélectionnez un ou plusieurs c
 
 ## Fenêtre contextuelle Modifier les libellés
 
-La fenêtre contextuelle [!UICONTROL  Modifier les libellés ] s’affiche. De ce point de vue, vous pouvez créer ou modifier des libellés de gouvernance existants par le biais de l’interface utilisateur.
+La fenêtre contextuelle [!UICONTROL &#x200B; Modifier les libellés &#x200B;] s’affiche. De ce point de vue, vous pouvez créer ou modifier des libellés de gouvernance existants par le biais de l’interface utilisateur.
 
 ![Fenêtre contextuelle Modifier les libellés.](../images/data-governance/edit-labels-popover.png)
 

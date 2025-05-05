@@ -32,7 +32,7 @@ Après vous être connecté à [!DNL Looker], sélectionnez **[!DNL Admin]**, pu
 - **[!DNL Username and Password]:** informations d’identification de connexion qui seront utilisées. Le nom d’utilisateur se présente sous la forme `ORG_ID@AdobeOrg`.
 - **SSL** : activez SSL pour assurer une connexion sécurisée sur le réseau.
 
-Pour trouver les informations d’identification nécessaires à la connexion de Looker à Query Service, connectez-vous à l’interface utilisateur d’Experience Platform et sélectionnez **[!UICONTROL Requêtes]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Informations d’identification]**. Pour plus d’informations sur la recherche de vos informations d’identification **hôte**, **port**, **base de données**, **nom d’utilisateur** et **mot de passe**, veuillez lire le guide [](../ui/credentials.md) credentials.
+Pour trouver les informations d’identification nécessaires à la connexion de Looker à Query Service, connectez-vous à l’interface utilisateur d’Experience Platform et sélectionnez **[!UICONTROL Requêtes]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Informations d’identification]**. Pour plus d’informations sur la recherche de vos informations d’identification **hôte**, **port**, **base de données**, **nom d’utilisateur** et **mot de passe**, veuillez lire le guide [&#128279;](../ui/credentials.md) credentials.
 
 ![Page Informations d’identification de l’espace de travail Requêtes Experience Platform avec les Informations d’identification et les Informations d’identification arrivant à expiration en surbrillance.](../images/clients/looker/query-service-credentials-page.png)
 

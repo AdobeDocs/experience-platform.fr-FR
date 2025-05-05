@@ -375,7 +375,7 @@ Le parcours illustré ci-dessus suit la logique suivante.
 
 4. Condition - Abonnement acheté au cours des 7 derniers jours ? : utilisez une activité de condition pour écouter les achats de produits au cours des 7 derniers jours.
 
-5. JourneyStepEventTracker - Abonnement non acheté : utilisez une [action personnalisée](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html) pour les visiteurs qui n’ont pas encore acheté votre abonnement, bien qu’ils aient reçu votre message. Dans le cadre de la condition personnalisée en fin de parcours, créez un événement `journey.feedback` et ajoutez-le à un jeu de données basé sur le schéma [!UICONTROL Événement d’étape de Parcours ]. Vous utiliserez cet événement pour segmenter l’audience qui n’a pas acheté l’abonnement et que vous pouvez cibler via des annonces médias payantes.
+5. JourneyStepEventTracker - Abonnement non acheté : utilisez une [action personnalisée](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html) pour les visiteurs qui n’ont pas encore acheté votre abonnement, bien qu’ils aient reçu votre message. Dans le cadre de la condition personnalisée en fin de parcours, créez un événement `journey.feedback` et ajoutez-le à un jeu de données basé sur le schéma [!UICONTROL Événement d’étape de Parcours &#x200B;]. Vous utiliserez cet événement pour segmenter l’audience qui n’a pas acheté l’abonnement et que vous pouvez cibler via des annonces médias payantes.
 
 +++
 

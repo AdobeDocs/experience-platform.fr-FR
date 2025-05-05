@@ -73,7 +73,7 @@ Les valeurs de paramètre sont enregistrées lorsque vous planifiez une requête
 
 >[!TIP]
 >
->Query Service prend en charge les instructions préparées à l’aide de requêtes paramétrées. Pour plus d’informations sur la syntaxe SQL impliquée](../sql/prepared-statements.md) consultez le [ guide de syntaxe des instructions préparées .
+>Query Service prend en charge les instructions préparées à l’aide de requêtes paramétrées. Pour plus d’informations sur la syntaxe SQL impliquée[&#128279;](../sql/prepared-statements.md) consultez le  guide de syntaxe des instructions préparées .
 
 ## Étapes suivantes
 

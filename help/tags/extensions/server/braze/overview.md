@@ -64,7 +64,7 @@ Pour connecter l’Edge Network à [!DNL Braze], les entrées suivantes sont req
 
 ### Créer un secret
 
-Créez un nouveau secret de transfert d&#39;événement [et définissez la valeur sur votre [[!DNL Braze] clé API](#configuration-details). ](../../../ui/event-forwarding/secrets.md) Elle sera utilisée pour authentifier la connexion à votre compte tout en conservant la valeur en sécurité.
+Créez un nouveau secret de transfert d&#39;événement [&#128279;](../../../ui/event-forwarding/secrets.md)et définissez la valeur sur votre [[!DNL Braze] clé API](#configuration-details).  Elle sera utilisée pour authentifier la connexion à votre compte tout en conservant la valeur en sécurité.
 
 ## Installation et configuration de l’extension [!DNL Braze] {#install}
 

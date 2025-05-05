@@ -49,7 +49,7 @@ La logique utilisée pour le widget [!UICONTROL Nombre de profils] renvoie le no
 
 Le code SQL qui génère le widget [!UICONTROL Profile count] est visible dans la section réductible ci-dessous.
 
-Requête +++SQL
++++Requête SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
@@ -65,11 +65,11 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 #### Cas d’utilisation des profils d’identité uniques {#single-identity-profiles}
 
-La logique utilisée pour le widget [!UICONTROL Profils d’identité unique] fournit un décompte des profils de votre organisation qui n’ont qu’un seul type d’ID qui crée leur identité. Pour plus d’informations, consultez la [[!UICONTROL  documentation du widget Profils d’identité unique].](../guides/profiles.md#single-identity-profiles)
+La logique utilisée pour le widget [!UICONTROL Profils d’identité unique] fournit un décompte des profils de votre organisation qui n’ont qu’un seul type d’ID qui crée leur identité. Pour plus d’informations, consultez la [[!UICONTROL &#x200B; documentation du widget Profils d’identité unique].](../guides/profiles.md#single-identity-profiles)
 
 Le code SQL qui génère le widget [!UICONTROL Profils d’identité unique] est visible dans la section réductible ci-dessous.
 
-Requête +++SQL
++++Requête SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
@@ -98,11 +98,11 @@ L’image ci-dessous contient les champs de données appropriés dans chaque jeu
 
 #### Profils par cas d’utilisation d’identité {#profiles-by-identity}
 
-Le widget [!UICONTROL  Profils par identité ] affiche la ventilation des identités sur tous les profils fusionnés de votre banque de profils. Pour plus d’informations, consultez la [[!UICONTROL documentation du widget Profils par identité]](../guides/profiles.md#profiles-by-identity) .
+Le widget [!UICONTROL &#x200B; Profils par identité &#x200B;] affiche la ventilation des identités sur tous les profils fusionnés de votre banque de profils. Pour plus d’informations, consultez la [[!UICONTROL documentation du widget Profils par identité]](../guides/profiles.md#profiles-by-identity) .
 
 Le widget SQL qui génère le widget [!UICONTROL Profils par identité] est visible dans la section réductible ci-dessous.
 
-Requête +++SQL
++++Requête SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -126,7 +126,7 @@ La logique utilisée pour le widget [!UICONTROL Profils d’identité unique par
 
 Le widget SQL qui génère les [!UICONTROL profils d’identité unique par identité] est visible dans la section réductible ci-dessous.
 
-Requête +++SQL
++++Requête SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -165,7 +165,7 @@ La logique utilisée pour le widget [!UICONTROL Taille de l’audience] renvoie 
 
 Le code SQL qui génère le widget [!UICONTROL Taille de l’audience] est visible dans la section réductible ci-dessous.
 
-Requête +++SQL
++++Requête SQL
 
 ```sql
 SELECT
@@ -187,9 +187,9 @@ WHERE
 
 La logique utilisée pour le widget [!UICONTROL tendance de changement de la taille de l’audience] fournit une représentation graphique linéaire de la différence du nombre total de profils qui remplissent les critères d’une audience donnée entre les instantanés quotidiens les plus récents. Pour plus d’informations, consultez la [[!UICONTROL documentation du widget Tendance des changements de taille d’audience]](../guides/audiences.md#audience-size-change-trend) .
 
-Le code SQL qui génère la tendance de changement de la taille de l’audience [!UICONTROL  est visible dans la section réductible ci-dessous.]
+Le code SQL qui génère la tendance de changement de la taille de l’audience [!UICONTROL &#x200B; est visible dans la section réductible ci-dessous.]
 
-Requête +++SQL
++++Requête SQL
 
 ```sql
 SELECT date_key,
@@ -226,7 +226,7 @@ La logique utilisée dans le widget [!UICONTROL Destinations les plus utilisées
 
 Le code SQL qui génère le widget [!UICONTROL Destinations les plus utilisées] est visible dans la section réductible ci-dessous.
 
-Requête +++SQL
++++Requête SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
@@ -251,7 +251,7 @@ La logique du widget [!UICONTROL Audiences récemment activées] fournit une lis
 
 Le code SQL qui génère le widget [!UICONTROL Audiences récemment activées] est visible dans la section réductible ci-dessous.
 
-Requête +++SQL
++++Requête SQL
 
 ```sql
 SELECT
@@ -295,7 +295,7 @@ La logique utilisée dans le widget [!UICONTROL Profils par identité] fournit u
 
 Le widget SQL qui génère le widget [!UICONTROL Profils par identité] est visible dans la section réductible ci-dessous.
 
-Requête +++SQL
++++Requête SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -327,11 +327,11 @@ L’image ci-dessous contient les champs de données appropriés dans chaque jeu
 
 #### Cas d’utilisation de chevauchement d’identités (profils) {#profiles-identity-overlap}
 
-La logique utilisée dans le widget [!UICONTROL chevauchement des identités] affiche le chevauchement des profils dans votre **banque de profils** qui contiennent les deux identités sélectionnées. Pour plus d’informations, reportez-vous à la section du widget [[!UICONTROL chevauchement des identités] de la documentation du tableau de bord [!UICONTROL  Profils] ](../guides/profiles.md#identity-overlap).
+La logique utilisée dans le widget [!UICONTROL chevauchement des identités] affiche le chevauchement des profils dans votre **banque de profils** qui contiennent les deux identités sélectionnées. Pour plus d’informations, reportez-vous à la section du widget [[!UICONTROL chevauchement des identités] de la documentation du tableau de bord [!UICONTROL &#x200B; Profils] ](../guides/profiles.md#identity-overlap).
 
 Le code SQL qui génère le widget [!UICONTROL chevauchement d’identités] est visible dans la section réductible ci-dessous.
 
-Requête +++SQL
++++Requête SQL
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -400,7 +400,7 @@ La logique utilisée dans le widget [!UICONTROL chevauchement d’identités] du
 
 Le code SQL qui génère le widget [!UICONTROL chevauchement d’identités] est visible dans la section réductible ci-dessous.
 
-Requête +++SQL
++++Requête SQL
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,

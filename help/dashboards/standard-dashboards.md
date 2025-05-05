@@ -78,9 +78,9 @@ La liste de prévisualisation fournit des détails sur les tables contenues dans
 |---|---|
 | [!UICONTROL Titre] | Nom de la table. |
 | [!UICONTROL Type de table] | Type de table. Les types potentiels sont les suivants : `fact`, `dimension` et `none`. |
-| [!UICONTROL  Enregistrements ] | Le nombre d&#39;enregistrements associés à la table choisie. |
+| [!UICONTROL &#x200B; Enregistrements &#x200B;] | Le nombre d&#39;enregistrements associés à la table choisie. |
 | [!UICONTROL Recherches] | Nombre de tables jointes à la table choisie. |
-| [!UICONTROL  Attributs ] | Nombre d’attributs pour le tableau sélectionné. |
+| [!UICONTROL &#x200B; Attributs &#x200B;] | Nombre d’attributs pour le tableau sélectionné. |
 
 Sélectionnez **[!UICONTROL Suivant]** pour confirmer votre choix du modèle de données. La vue suivante affiche une liste des tableaux disponibles dans le rail de gauche. Sélectionnez une table pour afficher une répartition complète des données contenues dans la table sélectionnée.
 

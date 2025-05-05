@@ -34,7 +34,7 @@ Sélectionner **[!UICONTROL Extensions]** dans le volet de navigation de gauche.
 
 Dans l’écran suivant, saisissez le secret de l’élément de données que vous avez créé précédemment dans le champ `Access Token` . Le secret de l’élément de données contiendra votre jeton [!DNL LinkedIn] OAuth 2. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Enregistrer]**.
 
-![La page de configuration de l’extension [!DNL LinkedIn] avec le champ [!UICONTROL  Access Token] et [!UICONTROL Save] en surbrillance.](../../../images/extensions/server/linkedin/configure-extension.png)
+![La page de configuration de l’extension [!DNL LinkedIn] avec le champ [!UICONTROL &#x200B; Access Token] et [!UICONTROL Save] en surbrillance.](../../../images/extensions/server/linkedin/configure-extension.png)
 
 ## Création d’une règle [!DNL Send Conversion] {#tracking-rule}
 
@@ -88,4 +88,4 @@ Une fois la sélection effectuée, d’autres commandes s’affichent pour confi
 
 Ce guide explique comment envoyer des données à [!DNL LinkedIn] à l’aide de l’extension de transfert d’événement [!DNL LinkedIn Conversions API]. Pour plus d’informations sur les fonctionnalités de transfert d’événement dans [!DNL Adobe Experience Platform], consultez la [présentation du transfert d’événement](../../../ui/event-forwarding/overview.md).
 
-Pour plus d’informations sur la façon de déboguer votre mise en oeuvre à l’aide de l’outil Experience Platform Debugger et Event Forwarding Monitoring, consultez les [ {présentation des Adobes Experience Platform Debugger](../../../../debugger/home.md) et [Surveillance des activités dans le transfert d’événement](../../../ui/event-forwarding/monitoring.md).
+Pour plus d’informations sur la façon de déboguer votre mise en oeuvre à l’aide de l’outil Experience Platform Debugger et Event Forwarding Monitoring, consultez les [ &lbrace;présentation des Adobes Experience Platform Debugger](../../../../debugger/home.md) et [Surveillance des activités dans le transfert d’événement](../../../ui/event-forwarding/monitoring.md).

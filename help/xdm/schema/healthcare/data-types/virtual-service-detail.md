@@ -21,7 +21,7 @@ ht-degree: 5%
 | Nom d’affichage | Propriété | Type de données | Description |
 | --- | --- | --- | --- |
 | [!UICONTROL Point de contact de l’adresse] | `addressContactPoint` | [[!UICONTROL Point de contact]](../data-types/contact-point.md) | Les détails d’un point de contact assisté par la technologie, tel qu’un téléphone, un fax ou un e-mail. |
-| [!UICONTROL Adresse Extended Contact Detail] | `addressExtendedContactDetail` | [[!UICONTROL  {Extended Contact Detail]](../data-types/extended-contact-detail.md) | Coordonnées étendues. |
+| [!UICONTROL Adresse Extended Contact Detail] | `addressExtendedContactDetail` | [[!UICONTROL &#x200B; &lbrace;Extended Contact Detail]](../data-types/extended-contact-detail.md) | Coordonnées étendues. |
 | [!UICONTROL Type de canal] | `channelType` | [[!UICONTROL Coding]](../data-types/coding.md) | Le type de service virtuel auquel se connecter, par exemple les équipes, le zoom ou WhatsApp. |
 | [!UICONTROL Informations supplémentaires] | `additionalInfo` | Tableau de chaînes | Adresse permettant d’afficher d’autres détails de connexion, représentés sous forme d’URI. |
 | [!UICONTROL Chaîne d’adresse] | `addressString` | Chaîne | Adresse à utiliser pour la connexion au service virtuel. |

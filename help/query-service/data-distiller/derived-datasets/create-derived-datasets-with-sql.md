@@ -199,7 +199,7 @@ CREATE FIELDGROUP field_group_for_test123 (decile1Month map<text, integer>, deci
 
 L’exécution réussie de cette instruction renvoie l’identifiant du groupe de champs créé. Par exemple `c731a1eafdfdecae1683c6dca197c66ed2c2b49ecd3a9525`.
 
-Pour plus d’informations sur les autres méthodes](../../../xdm/ui/resources/field-groups.md#create) consultez la documentation sur la [création d’un groupe de champs dans l’éditeur de schémas ou sur l’utilisation de l’API [schema Registry](../../../xdm/api/field-groups.md#create).
+Pour plus d’informations sur les autres méthodes[&#128279;](../../../xdm/ui/resources/field-groups.md#create) consultez la documentation sur la création d’un groupe de champs dans l’éditeur de schémas ou sur l’utilisation de l’API [schema Registry](../../../xdm/api/field-groups.md#create).
 
 ### Déposer un groupe de champs
 

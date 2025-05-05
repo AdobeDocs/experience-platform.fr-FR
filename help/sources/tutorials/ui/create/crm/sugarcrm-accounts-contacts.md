@@ -36,7 +36,7 @@ Pour connecter [!DNL SugarCRM Accounts & Contacts] à Experience Platform, vous 
 
 ### Création d’un schéma Experience Platform
 
-Avant de créer une connexion source [!DNL SugarCRM], vous devez également vous assurer de créer d’abord un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la [création d’un schéma Experience Platform).
+Avant de créer une connexion source [!DNL SugarCRM], vous devez également vous assurer de créer d’abord un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma[&#128279;](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la création d’un schéma Experience Platform).
 
 Le [!DNL SugarCRM Accounts & Contacts] prend en charge plusieurs API. Cela signifie que vous devez créer un schéma distinct, en fonction du type d’objet que vous utilisez. Consultez les exemples ci-dessous pour les schémas de comptes et de contacts :
 

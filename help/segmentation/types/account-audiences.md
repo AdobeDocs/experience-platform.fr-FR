@@ -110,7 +110,7 @@ Après avoir créé l’audience de votre compte, vous pouvez activer l’audien
 
 Sélectionnez l’audience à activer, puis **[!UICONTROL Activer vers la destination]**.
 
-![Le bouton [!UICONTROL  Activer vers la destination] est mis en surbrillance dans le menu des actions rapides pour l’audience sélectionnée.](../images/types/account/activate.png)
+![Le bouton [!UICONTROL &#x200B; Activer vers la destination] est mis en surbrillance dans le menu des actions rapides pour l’audience sélectionnée.](../images/types/account/activate.png)
 
 La page [!UICONTROL Activer la destination] s’affiche. Pour plus d’informations sur le processus d’activation, y compris les destinations prises en charge et des détails sur les mappages de champs, consultez le tutoriel [activer les audiences de compte](/help/destinations/ui/activate-account-audiences.md).
 

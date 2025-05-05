@@ -24,7 +24,7 @@ Vous pouvez utiliser Query Service pour connecter le parcours client en ligne à
 Pour analyser vos données, créez et exécutez des requêtes SQL avec l’interface utilisateur de Query Service ou l’API RESTful.
 Grâce à l’interface utilisateur de Query Service, vous pouvez écrire, exécuter et planifier des requêtes, afficher des requêtes précédemment exécutées et accéder à des requêtes enregistrées par des utilisateurs de votre organisation. Vous pouvez également tester vos requêtes avant de les exécuter sur votre jeu de données plus large à l’aide de Query Editor. Consultez le [Guide de l’interface utilisateur de Query Service](ui/overview.md) pour une présentation de la fonctionnalité de l’interface utilisateur.
 
-L’API RESTful offre une expérience similaire. Vous pouvez utiliser l’API Query Service pour écrire et exécuter des requêtes par programmation, créer et enregistrer des modèles pour les requêtes que vous souhaitez adapter, ou planifier des requêtes pour une exécution automatisée. Pour plus d’informations sur l’utilisation de l’API Query Service](api/getting-started.md) consultez le [guide de développement de Query Service.
+L’API RESTful offre une expérience similaire. Vous pouvez utiliser l’API Query Service pour écrire et exécuter des requêtes par programmation, créer et enregistrer des modèles pour les requêtes que vous souhaitez adapter, ou planifier des requêtes pour une exécution automatisée. Pour plus d’informations sur l’utilisation de l’API Query Service[&#128279;](api/getting-started.md) consultez le guide de développement de Query Service.
 
 Pour commencer rapidement à utiliser les fonctionnalités de Query Service, nous vous recommandons de lire les documents suivants :
 

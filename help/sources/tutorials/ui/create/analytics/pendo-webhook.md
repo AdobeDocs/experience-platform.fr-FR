@@ -53,7 +53,7 @@ Pour plus d’informations, consultez le [[!DNL Pendo] guide sur les Webhooks](h
 
 ### Création d’un schéma Experience Platform pour [!DNL Pendo] {#create-platform-schema}
 
-Vous devez également vous assurer d’abord de créer un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la [création d’un schéma Experience Platform).
+Vous devez également vous assurer d’abord de créer un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma[&#128279;](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la création d’un schéma Experience Platform).
 
 ![Interface utilisateur d’Experience Platform montrant un exemple de schéma pour Pendo.](../../../../images/tutorials/create/analytics-pendo-webhook/schema.png)
 

@@ -31,7 +31,7 @@ Pour commencer à utiliser [!DNL Adobe Journey Optimizer], procédez comme suit.
 1. Parcourez les [conditions préalables](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) du [!DNL Adobe Journey Optimizer] [Guide des expériences web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), en particulier :
    * Configurez des [!DNL Adobe Experience Cloud Visual Editing Helper].
    * Activez la [!DNL Adobe Journey Optimizer] dans votre [flux de données](../../../datastreams/overview.md).
-   * Activez l’option [!UICONTROL  Politique de fusion Active-On-Edge ].
+   * Activez l’option [!UICONTROL &#x200B; Politique de fusion Active-On-Edge &#x200B;].
 
 2. Ajoutez l’option `renderDecisions` à vos événements. Définissez `renderDecisions` sur `true` pour le rendu automatique des propositions de contenu Journey Optimizer diffusées sur les surfaces de vos pages web.
 

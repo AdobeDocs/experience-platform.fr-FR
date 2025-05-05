@@ -42,7 +42,7 @@ Dans la boîte de dialogue [!UICONTROL Gestion des partenaires de package], sais
 
 ![La boîte de dialogue des organisations partenaires de package avec Entrer l’ID d’organisation, les ID d’organisation sélectionnés et Confirmer mise en surbrillance.](../images/ui/sandbox-tooling/private-enter-org-id.png)
 
-La demande de partage est envoyée avec succès à l’organisation partenaire et vous êtes renvoyé à l’onglet [!UICONTROL Sandbox] **** , qui affiche la **[!UICONTROL requête sortante]**.
+La demande de partage est envoyée avec succès à l’organisation partenaire et vous êtes renvoyé à l’onglet [!UICONTROL Sandbox] **&#x200B;**&#x200B;, qui affiche la **[!UICONTROL requête sortante]**.
 
 ![Onglet Organisations partenaires avec la requête sortante mise en surbrillance.](../images/ui/sandbox-tooling/private-outgoing-request.png)
 

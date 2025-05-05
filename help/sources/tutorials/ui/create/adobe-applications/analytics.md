@@ -224,11 +224,11 @@ La liste des conditions configurables comprend :
 * [!UICONTROL différent de]
 * [!UICONTROL commence par]
 * [!UICONTROL se termine par]
-* [!UICONTROL  ne se termine pas par ]
-* [!UICONTROL contient ]
-* [!UICONTROL ne contient pas ]
+* [!UICONTROL &#x200B; ne se termine pas par &#x200B;]
+* [!UICONTROL contient &#x200B;]
+* [!UICONTROL ne contient pas &#x200B;]
 * [!UICONTROL existe]
-* [!UICONTROL  n’existe pas ]
+* [!UICONTROL &#x200B; n’existe pas &#x200B;]
 
 ![conditions ](../../../../images/tutorials/create/analytics/conditions.png)
 

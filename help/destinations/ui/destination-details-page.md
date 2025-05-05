@@ -54,7 +54,7 @@ Le tableau suivant couvre les commandes et les détails fournis par le rail de d
 
 | Élément du rail de droite | Description |
 | --- | --- |
-| [!UICONTROL Activer les audiences] | Sélectionnez ce contrôle pour modifier les audiences mappées à la destination, mettre à jour les plannings d’exportation ou ajouter et supprimer des attributs et des identités mappés. Pour plus d’informations](./activate-segment-streaming-destinations.md) consultez les guides sur [l’activation des données d’audience vers des destinations de diffusion en continu d’audience, [l’activation des données d’audience vers des destinations basées sur des profils par lots](./activate-batch-profile-destinations.md) et [l’activation des données d’audience vers des destinations basées sur des profils de diffusion en continu](./activate-streaming-profile-destinations.md). |
+| [!UICONTROL Activer les audiences] | Sélectionnez ce contrôle pour modifier les audiences mappées à la destination, mettre à jour les plannings d’exportation ou ajouter et supprimer des attributs et des identités mappés. Pour plus d’informations[&#128279;](./activate-segment-streaming-destinations.md) consultez les guides sur l’activation des données d’audience vers des destinations de diffusion en continu d’audience, [l’activation des données d’audience vers des destinations basées sur des profils par lots](./activate-batch-profile-destinations.md) et [l’activation des données d’audience vers des destinations basées sur des profils de diffusion en continu](./activate-streaming-profile-destinations.md). |
 | [!UICONTROL Supprimer] | Permet de supprimer ce flux de données et de démapper les audiences qui ont été précédemment activées, le cas échéant. |
 | [!UICONTROL Nom de la destination] | Ce champ peut être modifié afin de mettre à jour le nom de la destination. |
 | [!UICONTROL Description] | Ce champ peut être modifié afin de mettre à jour ou d’ajouter une description facultative à la destination. |
@@ -62,7 +62,7 @@ Le tableau suivant couvre les commandes et les détails fournis par le rail de d
 | [!UICONTROL Statut] | Indique si la destination est activée ou désactivée. |
 | [!UICONTROL Actions marketing] | Indique les actions marketing (cas d’utilisation) qui s’appliquent à cette destination à des fins de gouvernance des données. |
 | [!UICONTROL Catégorie] | Indique le type de destination. Voir le [catalogue des destinations](../catalog/overview.md) pour plus d’informations. |
-| [!UICONTROL  Type de connexion ] | Indique le formulaire par lequel vos audiences sont envoyées à la destination. Les valeurs possibles sont les suivantes : [!UICONTROL Cookie] et [!UICONTROL Basé sur un profil]. |
+| [!UICONTROL &#x200B; Type de connexion &#x200B;] | Indique le formulaire par lequel vos audiences sont envoyées à la destination. Les valeurs possibles sont les suivantes : [!UICONTROL Cookie] et [!UICONTROL Basé sur un profil]. |
 | [!UICONTROL Fréquence] | Indique la fréquence d’envoi des audiences vers la destination. Les valeurs possibles sont les suivantes : [!UICONTROL Streaming] et [!UICONTROL Batch]. |
 | [!UICONTROL Identité] | Représente l’espace de noms d’identité accepté par la destination, tel que `GAID`, `IDFA` ou `email`. Pour plus d’informations sur les espaces de noms d’identité acceptés, consultez la [ présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md). |
 | [!UICONTROL Créé par] | Indique l’utilisateur ou l’utilisatrice qui a créé cette destination. |

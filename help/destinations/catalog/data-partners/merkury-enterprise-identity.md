@@ -88,7 +88,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des [ ](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)[autorisations de contrôle d’accès]**Afficher les destinations** et **Gérer et activer les destinations du jeu de données**. Lisez la [[présentation du contrôle d’accès]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des [&#128279;](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions) [autorisations de contrôle d’accès]&#x200B;**Afficher les destinations** et **Gérer et activer les destinations du jeu de données**. Lisez la [[présentation du contrôle d’accès]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [[tutoriel sur la configuration des destinations]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 

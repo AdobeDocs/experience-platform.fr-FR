@@ -29,7 +29,7 @@ Les données de profil de l’instantané affichent les données telles qu’ell
 >
 >Les modifications ou mises à jour apportées aux données depuis la prise dʼun instantané ne seront pas reflétées dans le tableau de bord avant la prise de lʼinstantané suivant.
 
-## Explorez le tableau de bord [!UICONTROL  Profils de compte ] {#explore}
+## Explorez le tableau de bord [!UICONTROL &#x200B; Profils de compte &#x200B;] {#explore}
 
 Pour accéder au tableau de bord [!UICONTROL Profils de compte] dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Profils]** sous [!UICONTROL Comptes] dans le panneau de navigation de gauche.
 
@@ -55,7 +55,7 @@ Sélectionnez **[!UICONTROL Paramètres]** pour configurer le service de corresp
 
 ## Parcourir les profils de compte {#browse-account-profiles}
 
-Dans l’onglet [!UICONTROL  Parcourir ], vous pouvez rechercher et afficher les profils de compte en lecture seule ingérés dans votre organisation. Utilisez un identifiant de compte provenant d’une source d’entreprise connectée ou saisissez directement les détails de la source. Dans cet espace de travail, vous pouvez voir les informations importantes appartenant au profil de compte, notamment son nom, son secteur d’activité, son chiffre d’affaires et son audience.
+Dans l’onglet [!UICONTROL &#x200B; Parcourir &#x200B;], vous pouvez rechercher et afficher les profils de compte en lecture seule ingérés dans votre organisation. Utilisez un identifiant de compte provenant d’une source d’entreprise connectée ou saisissez directement les détails de la source. Dans cet espace de travail, vous pouvez voir les informations importantes appartenant au profil de compte, notamment son nom, son secteur d’activité, son chiffre d’affaires et son audience.
 
 Sélectionnez le [!UICONTROL Identifiant de profil] parmi les résultats affichés dans l’onglet [!UICONTROL Parcourir] pour ouvrir l’onglet [!UICONTROL Détails] pour le profil de compte.
 
@@ -179,7 +179,7 @@ Pour afficher une boîte de dialogue contenant le chiffre d’affaires total sp�
 
 ![Le widget Nouvelles opportunités par chiffre d’affaires.](../images/account-profiles/new-opportunities-by-revenue.png)
 
-### Nouvelles opportunités par statut et {#opportunities-by-status-&-stage} d’étape
+### Nouvelles opportunités par statut et d’étape {#opportunities-by-status-&-stage}
 
 Ce widget utilise un graphique à barres pour illustrer le nombre d’opportunités ouvertes ou fermées à toutes les étapes de l’entonnoir marketing/ventes. Le widget utilise des couleurs pour différencier l’étape des opportunités. Une clé codée par couleur indique les étapes disponibles pour les opportunités.
 
@@ -231,7 +231,7 @@ Le menu déroulant du widget vous permet de sélectionner le modèle de notation
 
 ## Erreur Impossible de charger les données {#errors}
 
-Si un widget s’affiche *[!UICONTROL Chargement impossible. Réessayez.]* cela est dû au fait qu’il n’existe aucune donnée disponible pour l’entité B2B. Par exemple, le widget affiché ci-dessous [!UICONTROL Nouvelles opportunités par rôle de personne], affiche le message « [!UICONTROL  Impossible de charger. Réessayez.] », car ce sandbox ne dispose pas de données d’opportunité disponibles.
+Si un widget s’affiche *[!UICONTROL Chargement impossible. Réessayez.]* cela est dû au fait qu’il n’existe aucune donnée disponible pour l’entité B2B. Par exemple, le widget affiché ci-dessous [!UICONTROL Nouvelles opportunités par rôle de personne], affiche le message « [!UICONTROL &#x200B; Impossible de charger. Réessayez.] », car ce sandbox ne dispose pas de données d’opportunité disponibles.
 
 ![Erreur Impossible de charger insight.](../images/account-profiles/unable-to-load.png)
 

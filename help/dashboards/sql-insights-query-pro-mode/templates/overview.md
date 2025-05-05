@@ -24,7 +24,7 @@ Pour commencer, sélectionnez l’onglet **[!UICONTROL Modèles]** dans l’espa
 
 ## Modèles disponibles {#available-templates}
 
-Les modèles actuellement disponibles dans l’espace de travail [!UICONTROL  Tableaux de bord] sont les suivants :
+Les modèles actuellement disponibles dans l’espace de travail [!UICONTROL &#x200B; Tableaux de bord] sont les suivants :
 
 ### Chevauchements avancés des audiences {#advanced-audience-overlaps}
 

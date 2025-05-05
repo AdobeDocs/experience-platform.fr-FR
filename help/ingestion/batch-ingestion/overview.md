@@ -146,7 +146,7 @@ Vous pouvez charger des fichiers à l’aide de l’API Small File Upload. Cepen
 
 >[!NOTE]
 >
->L’ingestion par lots peut être utilisée pour mettre à jour de manière incrémentielle les données de la banque de profils. Pour plus d’informations, consultez la section sur la [mise à jour d’un lot](#patch-a-batch) dans le guide de développement de l’ingestion par lots [](api-overview.md).
+>L’ingestion par lots peut être utilisée pour mettre à jour de manière incrémentielle les données de la banque de profils. Pour plus d’informations, consultez la section sur la [mise à jour d’un lot](#patch-a-batch) dans le guide de développement de l’ingestion par lots [&#128279;](api-overview.md).
 
 >[!INFO]
 >

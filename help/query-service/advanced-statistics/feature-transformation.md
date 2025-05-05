@@ -183,7 +183,7 @@ transform(string_imputer(name, 'unknown_name') as name_imputed)
 
 #### Indice booléen {#boolean-imputer}
 
-Le transformateur **** de l’attribut booléen complète les valeurs manquantes dans un jeu de données pour une colonne booléenne. Les colonnes d’entrée et de sortie doivent être de type `Boolean`.
+Le transformateur **&#x200B;**&#x200B;de l’attribut booléen complète les valeurs manquantes dans un jeu de données pour une colonne booléenne. Les colonnes d’entrée et de sortie doivent être de type `Boolean`.
 
 >[!NOTE]
 >
@@ -852,6 +852,6 @@ TRANSFORM(tokenizer(review) as tokenized, word2Vec(tokenized, 10, 1) as word2Vec
 
 | review | tokenized | word2Vec |
 |-------------------------------|--------------------------------------|---------------------------------|
-| c&#39;était un film divertissant. | [ceci, était, un, divertissant, film] | [-0.025713888928294182,0.00818799751577899,0.0092235435731709,-0.01515385233797133,0.012175946310162545,3.1129065901041035E-4,0.0025145105042611252,0.005757019785232843,-0.021328244300093502,0.009335877187550069{1] |
+| c&#39;était un film divertissant. | [ceci, était, un, divertissant, film] | [-0.025713888928294182,0.00818799751577899,0.0092235435731709,-0.01515385233797133,0.012175946310162545,3.1129065901041035E-4,0.0025145105042611252,0.005757019785232843,-0.021328244300093502,0.009335877187550069&lbrace;1] |
 
 {style="table-layout:auto"}

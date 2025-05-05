@@ -285,7 +285,7 @@ ORDER BY  d.date_key limit 5000;
 
 >[!NOTE]
 >
->Le graphique [!UICONTROL  Customers per Account Overview] comprend trois insights d’analyse : [!UICONTROL Customers per Account Detail], [!UICONTROL Opportunités par Account Overview] et [!UICONTROL Opportunités par Account Detail]. Ces explorations publicitaires fournissent des informations plus granulaires, ventilant le nombre de clients et d’opportunités par catégories (comme les clients directs et indirects) et plages (comme les plages de nombres de clients et d’opportunités). Ces graphiques ne sont pas affectés par les filtres de date globaux que vous avez peut-être définis.
+>Le graphique [!UICONTROL &#x200B; Customers per Account Overview] comprend trois insights d’analyse : [!UICONTROL Customers per Account Detail], [!UICONTROL Opportunités par Account Overview] et [!UICONTROL Opportunités par Account Detail]. Ces explorations publicitaires fournissent des informations plus granulaires, ventilant le nombre de clients et d’opportunités par catégories (comme les clients directs et indirects) et plages (comme les plages de nombres de clients et d’opportunités). Ces graphiques ne sont pas affectés par les filtres de date globaux que vous avez peut-être définis.
 
 Questions auxquelles répond cet aperçu :
 

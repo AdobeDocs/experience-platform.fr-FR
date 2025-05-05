@@ -44,7 +44,7 @@ Pour plus d’informations, reportez-vous à la [[!DNL SAP Commerce] documentati
 
 ### Création d’un schéma Experience Platform {#create-platform-schema}
 
-Avant de créer une connexion source [!DNL SAP Commerce], vous devez également vous assurer de créer d’abord un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la [création d’un schéma Experience Platform).
+Avant de créer une connexion source [!DNL SAP Commerce], vous devez également vous assurer de créer d’abord un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma[&#128279;](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la création d’un schéma Experience Platform).
 
 Développez la section suivante pour afficher un exemple de schéma.
 

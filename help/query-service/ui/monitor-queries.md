@@ -11,7 +11,7 @@ ht-degree: 26%
 
 # Surveiller les requêtes planifiées
 
-Adobe Experience Platform offre une meilleure visibilité du statut de toutes les tâches de requête via l’interface utilisateur. Depuis l’onglet [!UICONTROL  Requêtes planifiées ], vous pouvez maintenant trouver des informations importantes sur les exécutions de requête qui incluent l’état, les détails de planification et les messages/codes d’erreur en cas d’échec. Vous pouvez également vous abonner à des alertes pour les requêtes en fonction de leur statut par le biais de l’interface utilisateur pour l’une de ces requêtes via l’onglet [!UICONTROL Requêtes planifiées].
+Adobe Experience Platform offre une meilleure visibilité du statut de toutes les tâches de requête via l’interface utilisateur. Depuis l’onglet [!UICONTROL &#x200B; Requêtes planifiées &#x200B;], vous pouvez maintenant trouver des informations importantes sur les exécutions de requête qui incluent l’état, les détails de planification et les messages/codes d’erreur en cas d’échec. Vous pouvez également vous abonner à des alertes pour les requêtes en fonction de leur statut par le biais de l’interface utilisateur pour l’une de ces requêtes via l’onglet [!UICONTROL Requêtes planifiées].
 
 ## [!UICONTROL Requêtes planifiées]
 
@@ -105,7 +105,7 @@ Le tableau ci-dessous décrit les types d’alerte de requête pris en charge :
 | `success` | Cette alerte vous informe lorsqu’une requête planifiée s’exécute correctement, ce qui indique que la requête s’est exécutée sans erreur. |
 | `failed` | Cette alerte se déclenche lorsqu’une exécution de requête planifiée rencontre une erreur ou échoue à s’exécuter correctement. Il vous aide à identifier et à résoudre rapidement les problèmes. |
 | `quarantine` | Cette alerte est activée lorsqu’une exécution de requête planifiée est mise en quarantaine. Lorsque des requêtes sont inscrites dans la [fonction de quarantaine](#quarantined-queries), toute requête planifiée qui échoue dix exécutions consécutives est automatiquement placée dans un état [!UICONTROL Quarantined]. Elles nécessitent alors votre intervention avant toute autre exécution. |
-| `delay` | Cette alerte vous avertit si le résultat d’une exécution de requête ](#query-run-delay) est [retardé au-delà d’un seuil spécifié. Vous pouvez définir une heure personnalisée qui déclenche l’alerte lorsque la requête s’exécute pendant cette durée sans avoir terminé ou échoué. |
+| `delay` | Cette alerte vous avertit si le résultat d’une exécution de requête [&#128279;](#query-run-delay) est retardé au-delà d’un seuil spécifié. Vous pouvez définir une heure personnalisée qui déclenche l’alerte lorsque la requête s’exécute pendant cette durée sans avoir terminé ou échoué. |
 
 >[!NOTE]
 >
@@ -137,7 +137,7 @@ Les requêtes peuvent également être inscrites dans la fonction de quarantaine
 
 Contrôlez les heures de votre ordinateur en définissant des alertes pour les délais des requêtes. Vous pouvez surveiller les performances des requêtes et recevoir des notifications si l’état d’une requête reste inchangé après une période spécifique. Utilisez l’alerte &quot;[!UICONTROL Délai d’exécution de requête]&quot; pour être averti si une requête continue à traiter après une période spécifique sans avoir terminé.
 
-Lorsque vous [ vous abonnez aux alertes](#alert-subscription) pour les exécutions de requête planifiées, l’une des alertes disponibles est le [!UICONTROL  {délai d’exécution de requête]. Cette alerte nécessite de définir un seuil pour la durée de l’exécution, à ce stade, vous serez informé du retard de traitement.
+Lorsque vous [ vous abonnez aux alertes](#alert-subscription) pour les exécutions de requête planifiées, l’une des alertes disponibles est le [!UICONTROL &#x200B; &lbrace;délai d’exécution de requête]. Cette alerte nécessite de définir un seuil pour la durée de l’exécution, à ce stade, vous serez informé du retard de traitement.
 
 Pour choisir une durée de seuil qui déclenche la notification, saisissez un nombre dans le champ de saisie de texte ou utilisez les flèches haut et bas pour augmenter d&#39;une minute. Puisque le seuil est défini en minutes, la durée maximale d’observation d’un délai d’exécution de requête est de 1 440 minutes (24 heures). La période par défaut d’un délai d’exécution est de 150 minutes.
 

@@ -142,7 +142,7 @@ Les champs numériques sont indiqués par `type: number` et n’ont pas d’autr
 
 >[!NOTE]
 >
->Les types `number` sont utilisés pour tout type numérique, entier ou nombre à virgule flottante, tandis que les types [`integer` sont spécifiquement utilisés pour les nombres entiers](#integer) Pour plus d’informations sur les cas d’utilisation de chaque type](https://json-schema.org/understanding-json-schema/reference/numeric.html) reportez-vous à la documentation sur les types numériques du schéma [JSON.
+>Les types `number` sont utilisés pour tout type numérique, entier ou nombre à virgule flottante, tandis que les types [`integer` sont spécifiquement utilisés pour les nombres entiers](#integer) Pour plus d’informations sur les cas d’utilisation de chaque type[&#128279;](https://json-schema.org/understanding-json-schema/reference/numeric.html) reportez-vous à la documentation sur les types numériques du schéma JSON.
 
 ## [!UICONTROL Entier] {#integer}
 
@@ -158,7 +158,7 @@ Les champs [!UICONTROL Entiers] sont indiqués par `type: integer` et n’ont pa
 
 >[!NOTE]
 >
->Alors que les types `integer` font spécifiquement référence aux nombres entiers, les types [`number` sont utilisés pour n&#39;importe quel type numérique](#number) qu&#39;il s&#39;agisse de nombres entiers ou de nombres à virgule flottante. Pour plus d’informations sur les cas d’utilisation de chaque type](https://json-schema.org/understanding-json-schema/reference/numeric.html) reportez-vous à la documentation sur les types numériques du schéma [JSON.
+>Alors que les types `integer` font spécifiquement référence aux nombres entiers, les types [`number` sont utilisés pour n&#39;importe quel type numérique](#number) qu&#39;il s&#39;agisse de nombres entiers ou de nombres à virgule flottante. Pour plus d’informations sur les cas d’utilisation de chaque type[&#128279;](https://json-schema.org/understanding-json-schema/reference/numeric.html) reportez-vous à la documentation sur les types numériques du schéma JSON.
 
 Vous pouvez éventuellement contraindre la plage de l’entier en ajoutant les propriétés `minimum` et `maximum` à la définition. Plusieurs autres types numériques pris en charge par l’interface utilisateur du créateur de schémas sont simplement des types `integer` avec des contraintes de `minimum` et de `maximum` spécifiques, telles que [[!UICONTROL Long]](#long), [[!UICONTROL Court]](#short) et [[!UICONTROL Octet]](#byte).
 

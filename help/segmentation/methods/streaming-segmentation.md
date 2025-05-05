@@ -308,7 +308,7 @@ Vous pouvez récupérer toutes les audiences activées pour la segmentation en f
 
 ![L’icône de filtre est mise en surbrillance dans Audience Portal.](../images/methods/filter-audiences.png)
 
-Dans les filtres disponibles, accédez à **[!UICONTROL Fréquence des mises à jour]** et sélectionnez « [!UICONTROL  Diffusion en continu ]. L’utilisation de ce filtre affiche toutes les audiences de votre organisation qui sont évaluées à l’aide de la segmentation en flux continu.
+Dans les filtres disponibles, accédez à **[!UICONTROL Fréquence des mises à jour]** et sélectionnez « [!UICONTROL &#x200B; Diffusion en continu &#x200B;]. L’utilisation de ce filtre affiche toutes les audiences de votre organisation qui sont évaluées à l’aide de la segmentation en flux continu.
 
 ![La fréquence de mise à jour en flux continu est sélectionnée, affichant toutes les audiences de l’organisation qui sont évaluées à l’aide de la segmentation en flux continu.](../images/methods/streaming/filter-streaming.png)
 

@@ -26,7 +26,7 @@ Les catégories de journaux d’audit fournies par [!DNL Query Service] sont les
 | Catégorie | Description |
 |---|---|
 | [!UICONTROL Requête] | Cette catégorie vous permet d’auditer les exécutions de requêtes. |
-| [!UICONTROL Modèle de requête ] | Cette catégorie vous permet d’auditer les différentes actions (création, mise à jour et suppression) effectuées sur un modèle de requête. |
+| [!UICONTROL Modèle de requête &#x200B;] | Cette catégorie vous permet d’auditer les différentes actions (création, mise à jour et suppression) effectuées sur un modèle de requête. |
 | [!UICONTROL Requête planifiée] | Cette catégorie vous permet de contrôler les plannings qui ont été créés, mis à jour ou supprimés dans [!DNL Query Service]. |
 
 ## Exécution d’un journal d’audit [!DNL Query Service] {#perform-an-audit-log}
@@ -42,7 +42,7 @@ Les données du journal d’audit renvoyées contiennent les informations suivan
 | Nom de la colonne | Description |
 |---|---|
 | [!UICONTROL Horodatage] | Date et heure exactes de l’action effectuée au format `month/day/year hour:minute AM/PM`. |
-| [!UICONTROL Nom de la ressource] | La valeur du champ [!UICONTROL  Nom de ressource ] dépend de la catégorie choisie comme filtre. Lors de l’utilisation de la catégorie [!UICONTROL Requête planifiée] il s’agit du **nom du planning**. Lors de l’utilisation de la catégorie [!UICONTROL Modèle de requête], il s’agit du **nom du modèle**. Lors de l’utilisation de la catégorie [!UICONTROL Requête], il s’agit de l’**ID de session** |
+| [!UICONTROL Nom de la ressource] | La valeur du champ [!UICONTROL &#x200B; Nom de ressource &#x200B;] dépend de la catégorie choisie comme filtre. Lors de l’utilisation de la catégorie [!UICONTROL Requête planifiée] il s’agit du **nom du planning**. Lors de l’utilisation de la catégorie [!UICONTROL Modèle de requête], il s’agit du **nom du modèle**. Lors de l’utilisation de la catégorie [!UICONTROL Requête], il s’agit de l’**ID de session** |
 | [!UICONTROL Catégorie] | Ce champ correspond à la catégorie sélectionnée par vous dans la liste déroulante de filtre. |
 | [!UICONTROL Action] | Il peut s’agir de créer, supprimer, mettre à jour ou exécuter. Les actions disponibles dépendent de la catégorie choisie comme filtre. |
 | [!UICONTROL Utilisateur] | Ce champ fournit l’identifiant utilisateur qui a exécuté la requête. |
@@ -67,7 +67,7 @@ La valeur de l’[!UICONTROL ID de ressource] change en fonction de la catégori
 * Lors de l’utilisation de la catégorie [!UICONTROL Modèle de requête], l’[!UICONTROL ID de ressource] est l’**ID de modèle** et comporte le préfixe `[!UICONTROL templateID:]`.
 * Lors de l’utilisation de la catégorie [!UICONTROL Requête planifiée], l’[!UICONTROL ID de ressource] est l’**ID de planification** et comporte le préfixe `[!UICONTROL scheduleID:]`.
 
-La valeur du [!UICONTROL  Statut de l’événement ] change en fonction de la catégorie utilisée dans l’audit.
+La valeur du [!UICONTROL &#x200B; Statut de l’événement &#x200B;] change en fonction de la catégorie utilisée dans l’audit.
 
 * Lors de l’utilisation de la catégorie [!UICONTROL Requête], le champ [!UICONTROL Statut de l’événement] fournit une liste de tous les **ID de requête** exécutés par l’utilisateur au cours de cette session.
 * Lors de l’utilisation de la catégorie [!UICONTROL Modèle de requête], le champ [!UICONTROL Statut de l’événement] fournit le **nom du modèle** comme préfixe du statut de l’événement.
@@ -89,4 +89,4 @@ Les filtres disponibles varient en fonction de la catégorie sélectionnée dans
 
 Grâce à la lecture de ce document, vous comprenez mieux la fonctionnalité de journal d’audit [!DNL Query Service] et comment elle peut être utilisée pour filtrer vos actions utilisateur [!DNL Query Service].
 
-Si vous utilisez la fonctionnalité de journal d’audit [!DNL Query Service] à des fins de dépannage, nous vous recommandons de lire le guide de dépannage [](../troubleshooting-guide.md).
+Si vous utilisez la fonctionnalité de journal d’audit [!DNL Query Service] à des fins de dépannage, nous vous recommandons de lire le guide de dépannage [&#128279;](../troubleshooting-guide.md).

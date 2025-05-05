@@ -39,9 +39,9 @@ Les profils peuvent aller de signaux comportementaux anonymes (tels que des cook
 
 Adobe fournit plusieurs groupes de champs standard à utiliser avec la classe [!DNL XDM Individual Profile]. Voici une liste de groupes de champs couramment utilisés pour la classe :
 
-* [[!UICONTROL  Consentements et préférences ]](../field-groups/profile/consents.md)
+* [[!UICONTROL &#x200B; Consentements et préférences &#x200B;]](../field-groups/profile/consents.md)
 * [[!UICONTROL Détails démographiques]](../field-groups/profile/demographic-details.md)
-* [[!UICONTROL  IdentityMap ]](../field-groups/profile/identitymap.md)
+* [[!UICONTROL &#x200B; IdentityMap &#x200B;]](../field-groups/profile/identitymap.md)
 * [[!UICONTROL Détails de fidélité]](../field-groups/profile/loyalty-details.md)
 * [[!UICONTROL Coordonnées personnelles]](../field-groups/profile/personal-contact-details.md)
 * [[!UICONTROL Détails de l’appartenance à un segment]](../field-groups/profile/segmentation.md)

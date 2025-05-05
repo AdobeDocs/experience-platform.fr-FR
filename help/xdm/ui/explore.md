@@ -26,7 +26,7 @@ Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONT
 
 L’icône de filtre (![Icône de filtre Image](/help/images/icons/filter.png)) affiche des commandes dans le rail de gauche pour réduire les résultats répertoriés. Les filtres de ressources sont disponibles pour les schémas et les relations dans les onglets **[!UICONTROL Parcourir]** et **[!UICONTROL Relations]** respectivement.
 
-Dans l’onglet [!UICONTROL  Parcourir ] de l’espace de travail [!UICONTROL Schémas], vous pouvez filtrer l’inventaire des schémas. Utilisez le bouton (bascule) **[!UICONTROL Inclus dans le profil]** pour afficher uniquement les schémas qui ont été activés pour une utilisation dans [Profil client en temps réel](../../profile/home.md). Utilisez le bouton (bascule) **[!UICONTROL Afficher les schémas ad hoc]** pour filtrer la liste des schémas créés avec un espace de noms de champs à utiliser uniquement par un seul jeu de données.
+Dans l’onglet [!UICONTROL &#x200B; Parcourir &#x200B;] de l’espace de travail [!UICONTROL Schémas], vous pouvez filtrer l’inventaire des schémas. Utilisez le bouton (bascule) **[!UICONTROL Inclus dans le profil]** pour afficher uniquement les schémas qui ont été activés pour une utilisation dans [Profil client en temps réel](../../profile/home.md). Utilisez le bouton (bascule) **[!UICONTROL Afficher les schémas ad hoc]** pour filtrer la liste des schémas créés avec un espace de noms de champs à utiliser uniquement par un seul jeu de données.
 
 ![Onglet [!UICONTROL Schémas] de l’espace de travail [!UICONTROL Parcourir] avec le panneau Filtres en surbrillance.](../images/ui/explore/filters.png)
 
@@ -107,7 +107,7 @@ Les champs d’identité sont mis en surbrillance dans la zone de travail avec u
 
 >[!NOTE]
 >
->Pour plus d’informations sur les champs d’identité et leur relation avec les services Experience Platform en aval](./fields/identity.md) consultez le guide sur la [ définition des champs d’identité .
+>Pour plus d’informations sur les champs d’identité et leur relation avec les services Experience Platform en aval[&#128279;](./fields/identity.md) consultez le guide sur la  définition des champs d’identité .
 
 ### Champs de relation {#relationship}
 

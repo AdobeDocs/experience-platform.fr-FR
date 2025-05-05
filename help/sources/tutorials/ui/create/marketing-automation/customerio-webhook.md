@@ -55,7 +55,7 @@ Avant de créer une connexion source [!DNL Customer.io], vous devez disposer d�
 
 ### Création d’un schéma Experience Platform pour [!DNL Customer.io] {#create-platform-schema}
 
-Vous devez également vous assurer de créer un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la [création d’un schéma Experience Platform).
+Vous devez également vous assurer de créer un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma[&#128279;](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la création d’un schéma Experience Platform).
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform montrant un exemple de schéma pour Customer.io](../../../../images/tutorials/create/marketing-automation/customerio-webhook/schema.png)
 

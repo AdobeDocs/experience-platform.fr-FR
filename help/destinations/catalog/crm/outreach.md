@@ -49,7 +49,7 @@ Notez les éléments ci-dessous avant de vous authentifier à la destination CRM
 
 #### Configurer des libellés de champ personnalisé {#prerequisites-custom-fields}
 
-[!DNL Outreach] prend en charge les champs personnalisés pour les [prospects](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). Pour plus d’informations](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach) voir [Comment ajouter un champ personnalisé dans la portée . Pour faciliter l’identification, il est recommandé de mettre à jour manuellement les libellés avec leurs noms d’audience correspondants au lieu de conserver les valeurs par défaut. Par exemple, comme ci-dessous :
+[!DNL Outreach] prend en charge les champs personnalisés pour les [prospects](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). Pour plus d’informations[&#128279;](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach) voir Comment ajouter un champ personnalisé dans la portée . Pour faciliter l’identification, il est recommandé de mettre à jour manuellement les libellés avec leurs noms d’audience correspondants au lieu de conserver les valeurs par défaut. Par exemple, comme ci-dessous :
 
 [!DNL Outreach] page des paramètres pour les prospects affichant des champs personnalisés.
 ![Capture d’écran de l’interface utilisateur de diffusion montrant les champs personnalisés sur la page des paramètres.](../../assets/catalog/crm/outreach/outreach-custom-fields.png)
@@ -135,8 +135,8 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -152,6 +152,7 @@ Pour envoyer correctement vos données d’audience d’Adobe Experience Platf
 
 1. Dans la fenêtre [!UICONTROL Sélectionner le champ cible], sélectionnez le type de champ cible vers lequel vous souhaitez mapper votre champ source.
    * **[!UICONTROL Sélectionner un espace de noms d’identité]** : sélectionnez cette option pour mapper votre champ source vers un espace de noms d’identité de la liste.
+
      ![Capture d’écran de l’interface utilisateur d’Experience Platform montrant le mapping de ciblage à l’aide d’OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)
 
    * Ajoutez le mappage suivant entre votre schéma de profil XDM et votre instance [!DNL Outreach] :
@@ -161,6 +162,7 @@ Pour envoyer correctement vos données d’audience d’Adobe Experience Platf
      | `Oid` | `OutreachId` | Oui |
 
    * **[!UICONTROL Sélectionner des attributs personnalisés]** : sélectionnez cette option pour mapper votre champ source vers un attribut personnalisé que vous définissez dans le champ [!UICONTROL Nom de l’attribut]. Consultez la [[!DNL Outreach] documentation du prospect](https://api.outreach.io/api/v2/docs#prospect) pour obtenir une liste complète des attributs pris en charge.
+
      ![Capture d’écran de l’interface utilisateur d’Experience Platform montrant le mapping de ciblage à l’aide de LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * Par exemple, en fonction des valeurs que vous souhaitez mettre à jour, ajoutez le mappage suivant entre votre schéma de profil XDM et votre instance [!DNL Outreach] :
@@ -171,6 +173,7 @@ Pour envoyer correctement vos données d’audience d’Adobe Experience Platf
      | `person.name.lastName` | `lastName` |
 
    * Un exemple d’utilisation de ces mappages est illustré ci-dessous :
+
      ![Exemple de capture d’écran de l’interface utilisateur d’Experience Platform montrant les mappings de ciblage.](../../assets/catalog/crm/outreach/mappings.png)
 
 ### Planifier l’exportation de l’audience et exemple {#schedule-segment-export-example}

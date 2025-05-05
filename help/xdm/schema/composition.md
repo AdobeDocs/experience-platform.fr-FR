@@ -78,7 +78,7 @@ Le principal inconvénient de l’utilisation de `identityMap` est que les ident
 >
 >Un schéma qui utilise `identityMap` peut être utilisé comme schéma source dans une relation, mais ne peut pas être utilisé comme schéma de référence. En effet, tous les schémas de référence doivent avoir une identité visible qui peut être mappée dans un champ de référence au sein du schéma source. Reportez-vous au guide de l’interface utilisateur sur [les relations](../tutorials/relationship-ui.md) pour plus d’informations sur les exigences des schémas source et de référence.
 
-Cependant, les mappages d’identités peuvent s’avérer utiles s’il existe un nombre variable d’identités pour un schéma ou si vous importez des données provenant de sources qui stockent des identités ensemble (telles que [!DNL Airship] ou Adobe Audience Manager). En outre, des mappages d’identité sont requis si vous utilisez le Adobe Experience Platform Mobile SDK [](https://developer.adobe.com/client-sdks/home/).
+Cependant, les mappages d’identités peuvent s’avérer utiles s’il existe un nombre variable d’identités pour un schéma ou si vous importez des données provenant de sources qui stockent des identités ensemble (telles que [!DNL Airship] ou Adobe Audience Manager). En outre, des mappages d’identité sont requis si vous utilisez le Adobe Experience Platform Mobile SDK [&#128279;](https://developer.adobe.com/client-sdks/home/).
 
 Voici un exemple de mappage d’identités simple :
 
@@ -161,9 +161,9 @@ Experience Platform utilise une approche de composition dans laquelle des blocs
 
 Les schémas sont composés à l’aide de la formule suivante :
 
-**Classe + Groupe de champs de schéma&amp;ast; = Schéma XDM**
+**Classe + Groupe de champs de schéma&ast; = Schéma XDM**
 
-&amp;ast;Un schéma est composé d’une classe et de zéro ou de plusieurs groupes de champs de schéma. Cela signifie que vous pouvez composer un schéma de jeu de données sans utiliser de groupes de champs.
+&ast;Un schéma est composé d’une classe et de zéro ou de plusieurs groupes de champs de schéma. Cela signifie que vous pouvez composer un schéma de jeu de données sans utiliser de groupes de champs.
 
 ### Classe {#class}
 
@@ -280,7 +280,7 @@ Les plages valides de ces types scalaires peuvent être limitées davantage à c
 
 Les schémas sont créés à l’aide d’un modèle de composition et représentent le format et la structure des données à ingérer dans [!DNL Experience Platform]. Comme mentionné précédemment, ces schémas sont composés d’une classe et de zéro ou plusieurs groupes de champs compatibles avec cette classe.
 
-Par exemple, un schéma décrivant les achats effectués dans un magasin de vente au détail peut être appelé « [!UICONTROL  Transactions de magasin ] ». Le schéma implémente la classe [!DNL XDM ExperienceEvent] associée au groupe de champs standard [!UICONTROL Commerce] et à un groupe de champs [!UICONTROL Informations sur les produits] défini par l’utilisateur.
+Par exemple, un schéma décrivant les achats effectués dans un magasin de vente au détail peut être appelé « [!UICONTROL &#x200B; Transactions de magasin &#x200B;] ». Le schéma implémente la classe [!DNL XDM ExperienceEvent] associée au groupe de champs standard [!UICONTROL Commerce] et à un groupe de champs [!UICONTROL Informations sur les produits] défini par l’utilisateur.
 
 Un autre schéma qui suit le trafic du site Web peut être appelé « [!UICONTROL Visites Web] ». Il implémente également la classe [!DNL XDM ExperienceEvent], mais cette fois combine le groupe de champs standard [!UICONTROL Web].
 

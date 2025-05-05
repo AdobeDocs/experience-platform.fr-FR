@@ -21,7 +21,7 @@ ht-degree: 29%
 | --- | --- | --- |
 | `device` | [[!UICONTROL Appareil]](./device.md) | Décrit les détails sur l’appareil associé à l’abonnement. |
 | `environment` | [[!UICONTROL Environnement]](./environment.md) | Contient des informations sur la situation dans laquelle l’observation de l’événement s’est produite ; il s’agit notamment d’informations éphémères, telles que les versions logicielles ou réseau. |
-| `subscriber` | [[!UICONTROL  Personne ]](./person.md) | Décrit une personne. Elle peut également représenter une personne jouant différents rôles, tels que client, contact ou propriétaire. |
+| `subscriber` | [[!UICONTROL &#x200B; Personne &#x200B;]](./person.md) | Décrit une personne. Elle peut également représenter une personne jouant différents rôles, tels que client, contact ou propriétaire. |
 | `SKU` | Chaîne | Unité de gestion des stocks (SKU), identifiant unique d’un produit. |
 | `billingPeriod` | Chaîne | Durée entre deux facturations. |
 | `billingStartDate` | Date | Date d&#39;échéance de la première facture. Le format de la date (sans l’heure) doit suivre la norme [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). |

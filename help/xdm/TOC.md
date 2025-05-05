@@ -108,7 +108,7 @@ ht-degree: 77%
       * [Détails du contact professionnel](./field-groups/profile/work-contact-details.md)
       * [Composants de professionnel XDM](./field-groups/profile/business-person-components.md)
       * [Détails de professionnel XDM](./field-groups/profile/business-person-details.md)
-   * {#prospect-profile} XDM Individual Prospect Profile
+   * XDM Individual Prospect Profile{#prospect-profile}
       * [Détails du prospect partenaire (exemple)](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Extension complète Adobe Analytics](./field-groups/event/analytics-full-extension.md)

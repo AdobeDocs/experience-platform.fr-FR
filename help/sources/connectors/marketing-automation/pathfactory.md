@@ -61,7 +61,7 @@ Pour obtenir des instructions détaillées sur la manière d’obtenir votre nom
 
 ### Configuration des autorisations sur Experience Platform
 
-Pour connecter votre compte [!DNL PathFactory] à Experience Platform ]**les autorisations**[!UICONTROL  Afficher les sources et **[!UICONTROL Gérer les sources]** doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/ui/overview.md).
+Pour connecter votre compte [!DNL PathFactory] à Experience Platform **les autorisations** Afficher les sources et **[!UICONTROL Gérer les sources]** doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/ui/overview.md).
 
 ## Connexion de [!DNL PathFactory] à Experience Platform {#pathfactory-connect}
 

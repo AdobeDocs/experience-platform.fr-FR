@@ -89,7 +89,7 @@ Maintenant que votre package sandbox doré est terminé, vous avez établi un ce
 
 >[!NOTE]
 >
-> Les étapes ci-dessus suivent le processus décrit dans l’interface utilisateur d’Experience Platform. Il est possible de suivre les mêmes étapes à l’aide de l’API via différents points d’entrée. Pour plus d’informations sur l’exécution de chaque requête via l’API](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/api/sandboxes#create) consultez les guides des points d’entrée `sandboxes` [endpoint guide et `packages` [endpoint guide](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages).
+> Les étapes ci-dessus suivent le processus décrit dans l’interface utilisateur d’Experience Platform. Il est possible de suivre les mêmes étapes à l’aide de l’API via différents points d’entrée. Pour plus d’informations sur l’exécution de chaque requête via l’API[&#128279;](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/api/sandboxes#create) consultez les guides des points d’entrée `sandboxes` endpoint guide et `packages` [endpoint guide](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages).
 
 ## Autres cas d’utilisation réalisés grâce à la prise en charge des données des partenaires {#other-use-cases}
 

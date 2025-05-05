@@ -104,7 +104,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 | `repo:path` | chaîne | - | - | - | URL présignée du document duquel extraire les expressions clés. |
 | `sensei:repoType` | Chaîne | - | - | HTTPS | Type de référentiel dans lequel le document est stocké. |
 | `sensei:multipart_field_name` | Chaîne | - | - | - | Utilisez-le lorsque vous transmettez le document en tant qu’argument en plusieurs parties au lieu d’utiliser des URL présignées. |
-| `dc:format` | Chaîne | Oui | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-office.document.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;, 8} &quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-office.document.présentation.ml.présentation&quot;<br> | Le codage du document est comparé aux types de codage d’entrée autorisés avant d’être traité. |
+| `dc:format` | Chaîne | Oui | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-office.document.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;, 8&rbrace; &quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-office.document.présentation.ml.présentation&quot;<br> | Le codage du document est comparé aux types de codage d’entrée autorisés avant d’être traité. |
 
 **Réponse**
 

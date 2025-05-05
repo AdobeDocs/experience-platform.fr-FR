@@ -68,7 +68,7 @@ L’étape **[!UICONTROL Révision et modification]** du workflow de création s
 |------------------|---------------------------------------------------------|
 | [!UICONTROL Tableau de données] | Jeu de données ou base de données d’où provient le champ. |
 | [!UICONTROL Champ Source] | Nom du champ d’origine du système source. |
-| [!UICONTROL  Champ cible ] | Nom du champ dans le système cible où les données seront mappées. |
+| [!UICONTROL &#x200B; Champ cible &#x200B;] | Nom du champ dans le système cible où les données seront mappées. |
 | [!UICONTROL Nom d’affichage] | Nom utilisé pour afficher le champ dans l’interface utilisateur. Ce nom doit être plus convivial ou descriptif. |
 | [!UICONTROL Type de données] | Type de données stocké dans le champ (par exemple, `String`, `Date`). |
 | [!UICONTROL Groupe de champs] | Catégorisation du champ en fonction de son utilisation ou de son contexte (par exemple, [!UICONTROL Détails démographiques], [!UICONTROL Détails Commerce]). |
@@ -125,4 +125,4 @@ L’éditeur de schémas s’affiche avec le schéma que vous venez de créer da
 
 Après avoir créé votre schéma, vous pouvez utiliser l’éditeur de schémas pour apporter d’autres modifications, si nécessaire. Votre nouveau schéma est maintenant prêt à être intégré à vos sources de données et utilisé pour l’analyse des données.
 
-Pour plus d’informations sur l’utilisation de l’éditeur de schémas](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#edit) consultez le guide [Modifier un schéma existant ».
+Pour plus d’informations sur l’utilisation de l’éditeur de schémas[&#128279;](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#edit) consultez le guide Modifier un schéma existant ».

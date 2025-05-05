@@ -38,7 +38,7 @@ Les ERD sont fournis pour les secteurs verticaux suivants :
 * [[!UICONTROL Vente au détail]](./retail.md)
 * [[!UICONTROL Services financiers]](./financial.md)
 * [[!UICONTROL Santé]](./healthcare.md)
-* [[!UICONTROL  Télécommunications ]](./telecom.md)
+* [[!UICONTROL &#x200B; Télécommunications &#x200B;]](./telecom.md)
 * [[!UICONTROL Voyage et hébergement]](./travel-hospitality.md)
 
 ## Étapes suivantes

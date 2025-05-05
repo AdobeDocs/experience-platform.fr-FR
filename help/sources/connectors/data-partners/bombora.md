@@ -48,7 +48,7 @@ Une liste d’adresses IP doit être ajoutée à un place sur la liste autorisé
 
 ### Configuration des autorisations sur Experience Platform
 
-Pour connecter votre compte [!DNL Bombora] à Experience Platform ]**les autorisations**[!UICONTROL  Afficher les sources et **[!UICONTROL Gérer les sources]** doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/abac/ui/permissions.md).
+Pour connecter votre compte [!DNL Bombora] à Experience Platform **les autorisations** Afficher les sources et **[!UICONTROL Gérer les sources]** doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/abac/ui/permissions.md).
 
 ### Contraintes de dénomination pour fichiers et répertoires
 

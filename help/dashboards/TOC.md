@@ -20,9 +20,9 @@ ht-degree: 65%
 * [Inventaire des tableaux de bord](inventory.md)
 * [Tableaux de bord standard](standard-dashboards.md)
 * [Téléchargement de tableaux de bord au format PDF](download.md)
-* SQL Insights : {#sql-insights-query-pro-mode} du mode query pro
+* SQL Insights : du mode query pro {#sql-insights-query-pro-mode}
    * [Vue d’ensemble](sql-insights-query-pro-mode/overview.md)
-   * {#templates} de modèles de Distiller de données
+   * de modèles de Distiller de données{#templates}
       * [Vue d’ensemble](sql-insights-query-pro-mode/templates/overview.md)
       * [Chevauchements avancés des audiences](sql-insights-query-pro-mode/templates/overlaps.md)
       * [Comparaison des audiences](sql-insights-query-pro-mode/templates/comparison.md)
@@ -42,7 +42,7 @@ ht-degree: 65%
    * [Audiences](guides/audiences.md)
    * [Destinations](guides/destinations.md)
    * [Utilisation des licences](guides/license-usage.md)
-* {#insights} d’informations disponibles
+* d’informations disponibles{#insights}
    * [Profils](insights/profiles.md)
    * [Audiences](insights/audiences.md)
    * [Destinations](insights/destinations.md)

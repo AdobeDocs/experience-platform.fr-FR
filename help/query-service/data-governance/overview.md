@@ -150,7 +150,7 @@ Toutes les catégories de journal peuvent être demandées par un utilisateur d�
 
 L’interface utilisateur des journaux de requête vous permet de surveiller et de consulter les détails d’exécution de toutes les requêtes qui ont été exécutées via Query Editor ou l’API Query Service. Cela apporte de la transparence aux activités de Query Service, ce qui vous permet de vérifier les métadonnées de **toutes** les requêtes qui ont été exécutées dans Query Service. Il inclut tous les types de requêtes, qu’il s’agisse d’une requête exploratoire, par lots ou planifiée.
 
-Les journaux de requête sont accessibles via l’interface utilisateur d’Experience Platform dans l’onglet [!UICONTROL  Journaux ] de l’espace de travail [!UICONTROL Requêtes].
+Les journaux de requête sont accessibles via l’interface utilisateur d’Experience Platform dans l’onglet [!UICONTROL &#x200B; Journaux &#x200B;] de l’espace de travail [!UICONTROL Requêtes].
 
 ![Onglet Journal des requêtes avec le panneau des détails mis en surbrillance.](../images/data-governance/overview/queries-log.png)
 

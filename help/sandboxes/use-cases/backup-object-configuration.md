@@ -111,7 +111,7 @@ Bien qu’il soit possible d’ajouter de nouveaux objets à votre package de sa
 
 ### Vérifiez vos utilisations actuelles par rapport à vos droits de licence
 
-Maintenant que votre package de sauvegarde est prêt, vous pouvez réinitialiser votre sandbox pour réinitialiser votre utilisation. Vous devez régulièrement surveiller votre utilisation afin de pouvoir ajuster vos droits de licence ou réinitialiser votre sandbox si nécessaire. Pour en savoir plus sur le tableau de bord d’utilisation de la licence](../../dashboards/guides/license-usage.md) reportez-vous au [ guide d’utilisation des licences.
+Maintenant que votre package de sauvegarde est prêt, vous pouvez réinitialiser votre sandbox pour réinitialiser votre utilisation. Vous devez régulièrement surveiller votre utilisation afin de pouvoir ajuster vos droits de licence ou réinitialiser votre sandbox si nécessaire. Pour en savoir plus sur le tableau de bord d’utilisation de la licence[&#128279;](../../dashboards/guides/license-usage.md) reportez-vous au  guide d’utilisation des licences.
 
 ### Réinitialiser votre sandbox
 
