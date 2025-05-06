@@ -131,7 +131,7 @@ Dans un cas d’utilisation standard, définissez l’expiration des données d�
 
 +++ Réponse
 
-- Le système de suppression « premier entré, premier sorti »](../identity-service/guardrails.md) d’Identity Service [ supprimer les ECID du graphique d’identités, qui sont stockés dans Identity Service.
+- Le système de suppression « premier entré, premier sorti »[&#128279;](../identity-service/guardrails.md) d’Identity Service  supprimer les ECID du graphique d’identités, qui sont stockés dans Identity Service.
 - Si ce comportement de suppression entraîne le stockage d’un profil ECID uniquement dans le profil client en temps réel (magasin de profils), l’expiration des données de profils pseudonymes supprime ce profil du magasin de profils.
 
 +++
