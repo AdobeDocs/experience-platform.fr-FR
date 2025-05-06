@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Avril 2025
 description: Les notes de mise à jour d’avril 2025 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: be9e1a995e62fa5a437be82aa15187815bbc5a9d
+source-git-commit: 92b9d4a0529fabb8094e13f4dc6b4bb6d8649b16
 workflow-type: tm+mt
-source-wordcount: '2147'
+source-wordcount: '2197'
 ht-degree: 28%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 28%
 >Reportez-vous à la documentation suivante pour les notes de mise à jour des autres applications Adobe Experience Platform :
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/fr/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/releases/latest)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/fr/docs/real-time-cdp-collaboration/using/latest)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Date de publication : mercredi 29 avril 2025**
 
@@ -41,7 +41,7 @@ Experience League est une plateforme d’apprentissage complète conçue pour vo
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Page d’accueil personnalisée | Accédez à votre page d’accueil personnalisée et personnalisez-la sur [Experience League](https://experienceleague.adobe.com/fr/home#). Connectez-vous avec vos informations d’identification Adobe, puis sélectionnez **[!UICONTROL Experience League]** dans le menu supérieur pour commencer à optimiser votre expérience d’apprentissage : <ul><li>**Signets** : utilisez la fonction [!UICONTROL Signets] pour enregistrer et collecter vos ressources préférées à un seul endroit. Vous pouvez enregistrer divers contenus, notamment des listes de lecture, des articles et des tutoriels.</li><li>**Personnaliser votre apprentissage** : améliorez votre expérience d’apprentissage en mettant à jour votre profil Experience League avec les rôles, secteurs d’activité, produits et niveaux d’expérience qui correspondent le mieux à vos besoins.</li><li>**Recommandations** : affichez le contenu d’apprentissage recommandé en fonction de votre activité récente.</li><li>**Récemment consultés** : utilisez la section [!UICONTROL Récemment consultés] pour revenir rapidement au contenu récemment consulté, tel que la documentation et les vidéos.</li><li>**Ressources d’apprentissage** : utilisez le panneau [!UICONTROL Toutes les ressources d’apprentissage] pour accéder aux tutoriels, à la documentation, à la communauté, aux événements et aux certifications.</li><li>**Nouveautés** : consultez la section [!UICONTROL Nouveautés] pour obtenir un flux de contenu le plus récent sur Experience League.</li><li>**Regarder des événements passés à la demande** : regardez des diffusions en direct enregistrées précédemment sur les projecteurs de produit, des cas d’utilisation et des tutoriels avec la section [!UICONTROL Regarder des événements passés à la demande].</li></ul><br> ![Page d’accueil personnalisée sur Experience League.](../2025/assets/april/personalized-home-page.png "Page d’accueil personnalisée sur Experience League."){width="250" align="center" zoomable="yes"} |
+| Page d’accueil personnalisée | Accédez à votre page d’accueil personnalisée et personnalisez-la sur [Experience League](https://experienceleague.adobe.com/en/home#). Connectez-vous avec vos informations d’identification Adobe, puis sélectionnez **[!UICONTROL Experience League]** dans le menu supérieur pour commencer à optimiser votre expérience d’apprentissage : <ul><li>**Signets** : utilisez la fonction [!UICONTROL Signets] pour enregistrer et collecter vos ressources préférées à un seul endroit. Vous pouvez enregistrer divers contenus, notamment des listes de lecture, des articles et des tutoriels.</li><li>**Personnaliser votre apprentissage** : améliorez votre expérience d’apprentissage en mettant à jour votre profil Experience League avec les rôles, secteurs d’activité, produits et niveaux d’expérience qui correspondent le mieux à vos besoins.</li><li>**Recommandations** : affichez le contenu d’apprentissage recommandé en fonction de votre activité récente.</li><li>**Récemment consultés** : utilisez la section [!UICONTROL Récemment consultés] pour revenir rapidement au contenu récemment consulté, tel que la documentation et les vidéos.</li><li>**Ressources d’apprentissage** : utilisez le panneau [!UICONTROL Toutes les ressources d’apprentissage] pour accéder aux tutoriels, à la documentation, à la communauté, aux événements et aux certifications.</li><li>**Nouveautés** : consultez la section [!UICONTROL Nouveautés] pour obtenir un flux de contenu le plus récent sur Experience League.</li><li>**Regarder des événements passés à la demande** : regardez des diffusions en direct enregistrées précédemment sur les projecteurs de produit, des cas d’utilisation et des tutoriels avec la section [!UICONTROL Regarder des événements passés à la demande].</li></ul><br> ![Page d’accueil personnalisée sur Experience League.](../2025/assets/april/personalized-home-page.png "Page d’accueil personnalisée sur Experience League."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -53,7 +53,8 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Extension de l’API pour les événements web [!DNL Amazon] | L’extension [!DNL Amazon] Conversions API permet aux annonceurs de partager des interactions de site web directement avec [!DNL Amazon], ce qui améliore l’attribution, la fiabilité des données et l’optimisation des campagnes. Cette extension prend en charge le transfert d’événement, ce qui vous permet d’envoyer des événements de conversion tels que des achats, des ajouts au panier, etc., tout en garantissant une déduplication appropriée pour des rapports précis. Pour plus d’informations, consultez la présentation de l’extension Amazon [&#128279;](/help/tags/extensions/server/amazon/overview.md). |
+| Extension [!DNL Adform] | L’extension côté serveur [!DNL Adform] permet aux marques de recibler facilement les audiences hors site à l’aide d’ECID. Cette extension côté serveur ne dépend pas des cookies tiers ou des identifiants secondaires de cookies. En outre, comme cette opération est effectuée entièrement côté serveur, aucun pixel supplémentaire ou autre modification côté client n’est nécessaire. Pour plus d’informations, voir la présentation de l’extension [Adform](/help/tags/extensions/server/adform/overview.md). |
+| Extension de l’API pour les événements web [!DNL Amazon] | L’extension [!DNL Amazon] Conversions API permet aux annonceurs de partager des interactions de site web directement avec [!DNL Amazon], ce qui améliore l’attribution, la fiabilité des données et l’optimisation des campagnes. Cette extension prend en charge le transfert d’événement, ce qui vous permet d’envoyer des événements de conversion tels que des achats, des ajouts au panier, etc., tout en garantissant une déduplication appropriée pour des rapports précis. Pour plus d’informations, consultez la présentation de l’extension Amazon [](/help/tags/extensions/server/amazon/overview.md). |
 
 {style="table-layout:auto"}
 
@@ -192,7 +193,7 @@ Les playbooks de cas d’utilisation sont passés d’un outil de découverte à
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE Beta &#x200B;]{type=Informative} Créez et partagez vos propres playbooks | Un nouveau framework de création de playbooks vous permet de créer, gérer et partager vos propres playbooks de cas d’utilisation. Cela inclut la prise en charge de la capture de métadonnées essentielles, de la modification des cartes de parcours et de l’association des ressources techniques pertinentes. Vous pouvez partager des playbooks entre les organisations pour normaliser les approches marketing et maintenir la cohérence. |
+| [!BADGE Beta ]{type=Informative} Créez et partagez vos propres playbooks | Un nouveau framework de création de playbooks vous permet de créer, gérer et partager vos propres playbooks de cas d’utilisation. Cela inclut la prise en charge de la capture de métadonnées essentielles, de la modification des cartes de parcours et de l’association des ressources techniques pertinentes. Vous pouvez partager des playbooks entre les organisations pour normaliser les approches marketing et maintenir la cohérence. |
 
 {style="table-layout:auto"}
 
