@@ -4,14 +4,20 @@ description: Dernières notes de mise à jour pour Adobe Experience Platform 
 keywords: debugger ; extension experience cloud debugger ; chrome ; extension ; notes de mise à jour
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: a5af5c194bc6b3bf9a6e119a2f147efa85f263f0
+source-git-commit: c4048b83c916f4b3b4b5acb3cccb957b65ee25c8
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 94%
+source-wordcount: '864'
+ht-degree: 93%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform Debugger
+
+## Version 1.6.4 - mercredi 6 mai 2025
+
+### Correctifs et améliorations
+
+* Correction d’un problème en raison duquel la connexion était indisponible.
 
 ## Version 1.6.3 - 30 Avril 2025
 
