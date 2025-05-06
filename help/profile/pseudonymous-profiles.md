@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Expiration des données de profils pseudonymes
 description: Ce document fournit des conseils généraux sur la configuration de l’expiration des données de profils pseudonymes dans Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: aeb9d6636f0d843bf13d09bcb4c12754e2890046
+source-git-commit: 8734b85914d965eebc2f8ccd8c09dd1ffede8cf9
 workflow-type: tm+mt
-source-wordcount: '1245'
-ht-degree: 51%
+source-wordcount: '1264'
+ht-degree: 50%
 
 ---
 
@@ -43,8 +43,9 @@ Un profil est pris en compte pour l’expiration des données pseudonymes s’il
 >
 >- Gérer les paramètres de profil
 >- Affichage des profils
+>- Affichages des espaces de noms d’identité
 >
->L&#39;autorisation **Gérer les paramètres de profil** permet de définir les expirations des données, tandis que l&#39;autorisation **Afficher les profils** permet d&#39;afficher les expirations des données.
+>L&#39;autorisation **Gérer les paramètres de profil** vous permet de définir les expirations de données, l&#39;autorisation **Afficher les profils** vous permet d&#39;afficher les expirations de données et l&#39;autorisation **Afficher les espaces de noms d&#39;identité** vous permet d&#39;afficher les espaces de noms d&#39;identité disponibles que vous pouvez utiliser.
 >
 >Vous trouverez plus d’informations sur les autorisations dans Experience Platform dans la [présentation du contrôle d’accès](../access-control/home.md#permissions).
 
@@ -130,7 +131,7 @@ Dans un cas d’utilisation standard, définissez l’expiration des données d�
 
 +++ Réponse
 
-- Le système de suppression « premier entré, premier sorti »[&#128279;](../identity-service/guardrails.md) d’Identity Service  supprimer les ECID du graphique d’identités, qui sont stockés dans Identity Service.
+- Le système de suppression « premier entré, premier sorti »](../identity-service/guardrails.md) d’Identity Service [ supprimer les ECID du graphique d’identités, qui sont stockés dans Identity Service.
 - Si ce comportement de suppression entraîne le stockage d’un profil ECID uniquement dans le profil client en temps réel (magasin de profils), l’expiration des données de profils pseudonymes supprime ce profil du magasin de profils.
 
 +++
