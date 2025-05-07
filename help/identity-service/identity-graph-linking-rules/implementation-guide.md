@@ -2,9 +2,9 @@
 title: Guide de mise en œuvre des règles de liaison des graphiques d’identités
 description: Découvrez les étapes recommandées à suivre lors de l’implémentation de vos données avec les configurations de règles de liaison de graphiques d’identités .
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: d0380844eb8dd98bd7c349beb035cce4c7ccb44f
 workflow-type: tm+mt
-source-wordcount: '1888'
+source-wordcount: '1886'
 ht-degree: 6%
 
 ---
@@ -113,7 +113,7 @@ Pendant votre processus de pré-implémentation, vous devez vous assurer que les
 
 Si votre système envoie deux identifiants de personne, l’implémentation peut échouer à l’exigence d’espace de noms de personne unique. Par exemple, si identityMap dans votre implémentation webSDK contient un CRMID, un customerID et un espace de noms ECID, rien ne garantit que chaque événement contiendra à la fois CRMID et customerID.
 
-Idéalement, vous devez envoyer une payload similaire à ce qui suit :
+Vous ne devez **pas** envoyer une payload comme ci-dessous :
 
 ```json
 {
