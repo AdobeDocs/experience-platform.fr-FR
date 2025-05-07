@@ -54,7 +54,7 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | Fonctionnalité | Description |
 | --- | --- |
 | Extension [!DNL Adform] | L’extension côté serveur [!DNL Adform] permet aux marques de recibler facilement les audiences hors site à l’aide d’ECID. Cette extension côté serveur ne dépend pas des cookies tiers ou des identifiants secondaires de cookies. En outre, comme cette opération est effectuée entièrement côté serveur, aucun pixel supplémentaire ou autre modification côté client n’est nécessaire. Pour plus d’informations, voir la présentation de l’extension [Adform](/help/tags/extensions/server/adform/overview.md). |
-| Extension de l’API pour les événements web [!DNL Amazon] | L’extension [!DNL Amazon] Conversions API permet aux annonceurs de partager des interactions de site web directement avec [!DNL Amazon], ce qui améliore l’attribution, la fiabilité des données et l’optimisation des campagnes. Cette extension prend en charge le transfert d’événement, ce qui vous permet d’envoyer des événements de conversion tels que des achats, des ajouts au panier, etc., tout en garantissant une déduplication appropriée pour des rapports précis. Pour plus d’informations, consultez la présentation de l’extension Amazon [](/help/tags/extensions/server/amazon/overview.md). |
+| Extension de l’API pour les événements web [!DNL Amazon] | L’extension [!DNL Amazon] Conversions API permet aux annonceurs de partager des interactions de site web directement avec [!DNL Amazon], ce qui améliore l’attribution, la fiabilité des données et l’optimisation des campagnes. Cette extension prend en charge le transfert d’événement, ce qui vous permet d’envoyer des événements de conversion tels que des achats, des ajouts au panier, etc., tout en garantissant une déduplication appropriée pour des rapports précis. Pour plus d’informations, consultez la présentation de l’extension Amazon [&#128279;](/help/tags/extensions/server/amazon/overview.md). |
 
 {style="table-layout:auto"}
 
@@ -193,7 +193,7 @@ Les playbooks de cas d’utilisation sont passés d’un outil de découverte à
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE Beta ]{type=Informative} Créez et partagez vos propres playbooks | Un nouveau framework de création de playbooks vous permet de créer, gérer et partager vos propres playbooks de cas d’utilisation. Cela inclut la prise en charge de la capture de métadonnées essentielles, de la modification des cartes de parcours et de l’association des ressources techniques pertinentes. Vous pouvez partager des playbooks entre les organisations pour normaliser les approches marketing et maintenir la cohérence. |
+| [!BADGE Beta &#x200B;]{type=Informative} Créez et partagez vos propres playbooks | Un nouveau framework de création de playbooks vous permet de créer, gérer et partager vos propres playbooks de cas d’utilisation. Cela inclut la prise en charge de la capture de métadonnées essentielles, de la modification des cartes de parcours et de l’association des ressources techniques pertinentes. Vous pouvez partager des playbooks entre les organisations pour normaliser les approches marketing et maintenir la cohérence. |
 
 {style="table-layout:auto"}
 
