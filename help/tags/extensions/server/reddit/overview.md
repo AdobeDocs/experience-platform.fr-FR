@@ -48,6 +48,7 @@ Pour installer et configurer l’extension d’API [!DNL Reddit] Conversions, pr
 3. Fournissez les détails de configuration suivants :
    - **Pixel ID** : saisissez votre [!DNL Reddit Ads] Pixel ID.
    - **Jeton d’accès de conversion** : saisissez le jeton généré dans votre compte [!DNL Reddit Ads] et sélectionnez **[!UICONTROL Enregistrer]** lorsque vous avez terminé.
+
      ![Détails de configuration de l’extension API Reddit Conversions, y compris les champs pour l’ID de pixel et le jeton d’accès de conversion.](../../../images/extensions/server/reddit/reddit-capi-details.png)
 
 ## Configurer une règle de transfert d’événement {#config-rule}
