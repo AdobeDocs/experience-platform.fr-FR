@@ -6,9 +6,9 @@ user-guide-description: Découvrez comment déployer et gérer des balises d’a
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 3bd3ef14cd0bd2c079c1c881a70865b067f28341
+source-git-commit: 28eb48ec9fb7c9c5a5927c8582960cbd99199613
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '780'
 ht-degree: 85%
 
 ---
@@ -247,6 +247,8 @@ ht-degree: 85%
       * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
       * [!DNL Pinterest] {#pinterest}
          * [Présentation](./extensions/server/pinterest/overview.md)
+      * [!DNL Reddit] {#reddit}
+         * [Aperçu](./extensions/server/reddit/overview.md)
       * [!DNL Snapchat] {#snap}
          * [Aperçu](./extensions/server/snap/overview.md)
       * [!DNL Snowflake] {#snowflake}
