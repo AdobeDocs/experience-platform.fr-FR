@@ -2,10 +2,10 @@
 title: Guide de mise en œuvre des règles de liaison des graphiques d’identités
 description: Découvrez les étapes recommandées à suivre lors de l’implémentation de vos données avec les configurations de règles de liaison de graphiques d’identités .
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: d0380844eb8dd98bd7c349beb035cce4c7ccb44f
+source-git-commit: 1a6ca508f0f5e95ddad9014d6507a7a829592673
 workflow-type: tm+mt
-source-wordcount: '1886'
-ht-degree: 6%
+source-wordcount: '1958'
+ht-degree: 9%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 6%
 >
 >Les règles de liaison du graphique d’identités sont actuellement en disponibilité limitée et sont accessibles à tous les clients dans les sandbox de développement.
 >
->* **Exigences d’activation** : la fonctionnalité reste inactive jusqu’à ce que vous configuriez et enregistriez votre [!DNL Identity Settings]. Sans cette configuration, le système continuera à fonctionner normalement, sans changement de comportement.
->* **Remarques importantes** : au cours de cette phase de disponibilité limitée, la segmentation d’Edge peut produire des résultats inattendus en termes d’appartenance à un segment. Cependant, la segmentation par lots et en flux continu fonctionnera comme prévu.
->* **Étapes suivantes** : pour plus d’informations sur la manière d’activer cette fonctionnalité dans les sandbox de production, contactez l’équipe de votre compte Adobe.
+>* **Exigences d’activation** : la fonctionnalité reste inactive jusqu’à ce que vous configuriez et enregistriez votre [!DNL Identity Settings]. En l’absence de cette configuration, le système continuera à fonctionner normalement, sans changement de comportement.
+>* **Notes importantes** : au cours de cette phase de disponibilité limitée, la segmentation Edge peut produire des résultats inattendus en termes d’appartenance à un segment. Cependant, la segmentation par lots et en flux continu (streaming) fonctionnera comme prévu.
+>* **Étapes suivantes** : pour plus d’informations sur la manière d’activer cette fonctionnalité dans les sandbox de production, contactez l’équipe Adobe en charge des comptes.
 
 >[!IMPORTANT]
 >
@@ -160,6 +160,8 @@ Dans la simulation de graphique, cette ingestion peut se présenter comme suit :
 ![Interface utilisateur de simulation de graphique avec un exemple de graphique rendu.](../images/implementation/example-graph.png)
 
 >[!TAB Événements authentifiés sans identifiant de personne]
+
+Dans cet exemple, vous pouvez supposer que l’événement suivant a été envoyé à Experience Platform pendant que John (l’utilisateur final) parcourait votre site web lors de l’authentification. Cependant, bien qu’authentifié, Experience Platform ne peut pas identifier John en raison de l’absence d’identifiants de personne dans l’événement. Par conséquent, cet événement est interprété comme un utilisateur anonyme naviguant sur le site Web d’Adobe Business, au lieu de le reconnaître comme une activité en ligne associée spécifiquement à John.
 
 ```json
 {
