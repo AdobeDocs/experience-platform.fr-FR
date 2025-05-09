@@ -5,27 +5,27 @@ keywords: debugger ; extension experience cloud debugger ; chrome ; extensi
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 source-git-commit: c4048b83c916f4b3b4b5acb3cccb957b65ee25c8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '864'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform Debugger
 
-## Version 1.6.4 - mercredi 6 mai 2025
+## Version 1.6.4 - 6 mai 2025
 
 ### Correctifs et améliorations
 
-* Correction d’un problème en raison duquel la connexion était indisponible.
+* Correction d’un problème en raison duquel la connexion n’était pas disponible.
 
-## Version 1.6.3 - 30 Avril 2025
+## Version 1.6.3 - 30 avril 2025
 
 ### Correctifs et améliorations
 
-* Correction d’un problème en raison duquel le débogueur empêchait le fonctionnement des fonctions de gestion dynamique des balises et .
+* Correction d’un problème en raison duquel le débogueur empêchait le fonctionnement des fonctions DTM et Tags.
 * Correction d’un problème en raison duquel les accès post-traités Analytics n’apparaissaient pas dans les journaux.
-* Correction d’un problème où les données dans des langues non-ASCII telles que le japonais ne s’affichaient pas correctement dans les journaux.
+* Correction d’un problème en raison duquel les données dans des langues non ASCII telles que le japonais ne s’affichaient pas correctement dans les journaux.
 
 ## Version 1.6.2 - 1er octobre 2024
 
