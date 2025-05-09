@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation des libellés d’utilisation des données
 description: Découvrez comment les libellés d’utilisation des données sont utilisés pour appliquer la conformité en matière de gouvernance des données dans Adobe Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 916eb01ea7878366620b859c1d6a667a88b850c9
 workflow-type: tm+mt
 source-wordcount: '789'
-ht-degree: 94%
+ht-degree: 90%
 
 ---
 
@@ -57,7 +57,7 @@ Vous pouvez gérer les libellés d’utilisation des données à l’aide des AP
 
 ### Utilisation de l’interface utilisateur
 
-L’espace de travail **[!UICONTROL Politiques]** de l’interface utilisateur [!DNL Experience Platform] vous permet d’afficher et de gérer les libellés personnalisés et principaux de votre entreprise. Utilisez l’espace de travail **[!UICONTROL Schémas]** pour [appliquer des libellés à vos schémas de modèle de données d’expérience (XDM)](../../xdm/tutorials/labels.md) ou découvrez comment [créer et gérer des libellés personnalisés dans l’UI **[!UICONTROL Politiques]](./user-guide.md) dans le guide d’utilisation des libellés d’utilisation des données.
+L’espace de travail **[!UICONTROL Politiques]** de l’interface utilisateur [!DNL Experience Platform] vous permet d’afficher et de gérer les libellés personnalisés et principaux de votre entreprise. Utilisez l’espace de travail **[!UICONTROL Schémas]** pour [appliquer des libellés à vos schémas de modèle de données d’expérience (XDM)](../../xdm/tutorials/labels.md) ou découvrez comment [créer et gérer des libellés personnalisés dans l’interface utilisateur **[!UICONTROL Politiques]**](./user-guide.md) dans le guide d’utilisation des libellés d’utilisation des données.
 
 >[!IMPORTANT]
 >

@@ -2,9 +2,9 @@
 title: Gestion de la conservation des jeux de données d’événements d’expérience dans le lac de données à l’aide de TTL
 description: Découvrez comment évaluer, définir et gérer la conservation des jeux de données d’événements d’expérience dans le lac de données à l’aide de configurations de durée de vie (TTL) avec des API Adobe Experience Platform. Ce guide explique comment l’expiration au niveau des lignes de TTL prend en charge les politiques de conservation des données, optimise l’efficacité du stockage et garantit une gestion efficace du cycle de vie des données. Elle fournit également des cas d’utilisation et des bonnes pratiques pour vous aider à appliquer efficacement la durée de vie.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 06b58d714047cb69f237469ecd548bb824e565ab
+source-git-commit: 13db0477c0f42d0808647937d40c25b47a270894
 workflow-type: tm+mt
-source-wordcount: '2456'
+source-wordcount: '2452'
 ht-degree: 1%
 
 ---
@@ -126,7 +126,7 @@ GET /ttl/{DATASET_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{DATASET_ID}` | Chaîne générée par le système qui identifie de manière unique un jeu de données. Pour trouver un identifiant de jeu de données, utilisez le point d’entrée `/datasets`. Pour obtenir des instructions sur le filtrage des réponses pour les jeux de données pertinents[&#128279;](../api/list-objects.md) consultez le guide API list catalog objects). |
+| `{DATASET_ID}` | Chaîne générée par le système qui identifie de manière unique un jeu de données. Pour trouver un identifiant de jeu de données, utilisez le point d’entrée `/datasets`. Pour obtenir des instructions sur le filtrage des réponses pour les jeux de données pertinents](../api/list-objects.md) consultez le guide [API list catalog objects). |
 
 **Requête**
 
@@ -301,12 +301,12 @@ Cette FAQ aborde des questions pratiques sur les tâches de conservation des jeu
 ### À quels types de jeux de données puis-je appliquer des règles de politique de rétention ?
 
 +++Réponse
-Vous pouvez appliquer des politiques de conservation basées sur une durée de vie à n’importe quel jeu de données utilisant un schéma de série temporelle. Cela inclut les jeux de données basés sur la classe XDM ExperienceEvent standard, ainsi que les schémas personnalisés qui étendent la classe XDM Time Series.
+Vous pouvez appliquer des politiques de rétention basées sur la durée de vie à n’importe quel jeu de données qui utilise le comportement de série temporelle. Cela inclut les jeux de données basés sur la classe XDM ExperienceEvent standard, ainsi que les schémas personnalisés conçus pour capturer des données de série temporelle.
 
 L’expiration au niveau des lignes nécessite les conditions techniques suivantes :
 
-- Le schéma doit étendre la classe de base de la série temporelle XDM .
-- Le schéma doit inclure un champ de date et heure, utilisé pour évaluer l’expiration.
+- Le schéma doit être conçu pour capturer des données de série temporelle.
+- Le schéma doit inclure un champ de date et heure utilisé pour évaluer l’expiration.
 - Le jeu de données doit stocker des données au niveau de l’événement, en utilisant ou en étendant généralement la classe XDM ExperienceEvent.
 - Le jeu de données doit être enregistré dans Catalog Service, car les paramètres de TTL sont appliqués via `extensions.adobe_lakeHouse.rowExpiration`.
 - Les valeurs de durée de vie doivent utiliser le format de durée ISO-8601 (par exemple, `P30D`, `P6M`, `P1Y`).
