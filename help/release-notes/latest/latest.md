@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: a79efc5d64862850d17cff0fd0633c73fd08207d
 workflow-type: tm+mt
 source-wordcount: '2197'
-ht-degree: 80%
+ht-degree: 99%
 
 ---
 
@@ -53,8 +53,8 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Extension [!DNL Adform] | L’extension côté serveur [!DNL Adform] permet aux marques de recibler facilement les audiences hors site à l’aide d’ECID. Cette extension côté serveur ne dépend pas des cookies tiers ou des identifiants secondaires de cookies. En outre, comme cette opération est effectuée entièrement côté serveur, aucun pixel supplémentaire ou autre modification côté client n’est nécessaire. Pour plus d’informations, voir la présentation de l’extension [Adform](/help/tags/extensions/server/adform/overview.md). |
-| Extension de l’API pour les événements web [!DNL Amazon] | L’extension [!DNL Amazon] Conversions API permet aux annonceurs de partager des interactions de site web directement avec [!DNL Amazon], ce qui améliore l’attribution, la fiabilité des données et l’optimisation des campagnes. Cette extension prend en charge le transfert d’événement, ce qui vous permet d’envoyer des événements de conversion tels que des achats, des ajouts au panier, etc., tout en garantissant une déduplication appropriée pour des rapports précis. Pour plus d’informations, consultez la présentation de l’extension Amazon [&#128279;](/help/tags/extensions/server/amazon/overview.md). |
+| Extension [!DNL Adform] | L’extension côté serveur [!DNL Adform] permet aux marques de recibler facilement les audiences hors site à l’aide d’ECID. Cette extension côté serveur ne dépend pas des cookies tiers ou des ID secondaires de cookies. En outre, comme cette opération est entièrement effectuée côté serveur, aucun pixel supplémentaire ou autre modification côté client n’est nécessaire. Pour plus d’informations, voir la [présentation de l’extension Adform](/help/tags/extensions/server/adform/overview.md). |
+| Extension de l’API pour les événements web [!DNL Amazon] | L’extension de l’API Conversions [!DNL Amazon] permet aux annonceurs de partager des interactions de site web directement avec [!DNL Amazon], ce qui améliore l’attribution, la fiabilité des données et l’optimisation de campagne. Cette extension prend en charge le transfert d’événement, ce qui vous permet d’envoyer des événements de conversion tels que des achats, des ajouts au panier, etc., tout en garantissant une déduplication adaptée pour des rapports précis. Pour plus d’informations, voir la [présentation de l’extension Amazon](/help/tags/extensions/server/amazon/overview.md). |
 
 {style="table-layout:auto"}
 
@@ -67,7 +67,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Destination | Description |
 | --- | --- |
 | [Marketo Engage Person Sync](/help/destinations/catalog/adobe/marketo-engage-person-sync.md) | Adobe a mis à jour la destination [!DNL Marketo Engage Person Sync] pour résoudre un problème qui affectait les clientes et clients lorsque plusieurs e-mails étaient présents dans le mappage d’identité. |
-| [(V2) Connexion à l’audience en temps réel Pega CDH](/help/destinations/catalog/personalization/pega-v2.md) | Utilisez la destination [!DNL (V2) Pega Customer Decision Hub Realtime Audience] dans Adobe Experience Platform pour envoyer les attributs de profil et les données d’audience à Pega Customer Decision Hub pour la prise de décision la plus appropriée, lorsque plusieurs applications Pega Customer Decision Hub sont configurées dans votre compte Pega. |
+| [(V2) Connexion à l’audience en temps réel Pega CDH](/help/destinations/catalog/personalization/pega-v2.md) | Utilisez la destination [!DNL (V2) Pega Customer Decision Hub Realtime Audience] dans Adobe Experience Platform pour envoyer des attributs de profil et des données d’appartenance à l’audience à Pega Customer Decision Hub pour déterminer la meilleure action à effectuer, lorsque plusieurs applications Pega Customer Decision Hub sont configurées dans votre compte Pega. |
 
 **Fonctionnalité nouvelle ou mise à jour** {#destinations-new-updated-functionality}
 
@@ -144,13 +144,13 @@ Pour en savoir plus sur le profil client en temps réel, lisez d’abord la [pr�
 
 ## Sandbox {#sandboxes}
 
-Adobe Experience Platform est conçu pour enrichir les applications d’expérience digitale à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience digitale en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle. Pour répondre à ce besoin, Experience Platform fournit des sandbox qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+Adobe Experience Platform est conçu pour enrichir les applications d’expérience digitale à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience digitale en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle. Pour répondre à ce besoin, Experience Platform fournit des sandbox qui divisent une instance d’Experience Platform unique en plusieurs environnements virtuels pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 **Fonctionnalités nouvelles ou mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Extension de prise en charge du plug-in d’outils Sandbox | Les actions personnalisées peuvent désormais être copiées en tant qu’objet dépendant lors de la duplication d’objets de Parcours dans l’outil Sandbox. De plus, vous pouvez sélectionner des actions existantes à réutiliser dans le sandbox cible. Ils peuvent également être ajoutés indépendamment à un package. Pour plus d’informations sur les objets Adobe Journey Optimizer pris en charge, consultez le guide [sandbox tooling](../../sandboxes/ui/sandbox-tooling.md#adobe-journey-optimizer-objects) . |
+| Extension de prise en charge du plug-in d’outils relatifs au sandbox | Les actions personnalisées peuvent désormais être copiées en tant qu’objet dépendant lors de la duplication d’objets Journey dans les outils relatifs au sandbox. De plus, vous pouvez sélectionner des actions existantes à réutiliser dans le sandbox cible. Vous pouvez également les ajouter indépendamment à un package. Pour plus d’informations sur les objets Adobe Journey Optimizer pris en charge, consultez le guide [Outils relatifs au sandbox](../../sandboxes/ui/sandbox-tooling.md#adobe-journey-optimizer-objects). |
 
 {style="table-layout:auto"}
 
@@ -185,18 +185,18 @@ Pour plus d’informations, reportez-vous à la [vue d’ensemble des sources](.
 
 ## Playbooks de cas d’utilisation {#use-case-playbooks}
 
-Les playbooks de cas d’utilisation ont été conçus à l’origine pour vous aider à surmonter les défis de la prise en main de Real-Time Customer Data Platform ou Adobe Journey Optimizer. Ils continuent d’évoluer et vous permettent désormais de lancer des cas d’utilisation marketing clés et de vous inspirer de ressources préconfigurées pour les tester et passer en production.
+Les playbooks de cas d’utilisation ont été conçus pour permettre de surmonter les difficultés liées à l’utilisation de Real-Time Customer Data Platform ou Adobe Journey Optimizer. Ils continuent d’évoluer et facilitent le lancement de cas d’utilisation marketing clés, vous proposent des idées et des ressources préconfigurées à tester et à passer en production.
 
-Les playbooks de cas d’utilisation sont passés d’un outil de découverte à un cadre collaboratif. Ils vous aident désormais à créer, gérer et partager vos propres playbooks dans différentes organisations.
+Les playbooks de cas d’utilisation sont passés d’un outil de découverte à un cadre de collaboration. Ils permettent désormais de créer, de gérer et de partager vos propres playbooks dans différentes organisations.
 
 **Fonctionnalités mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE Beta &#x200B;]{type=Informative} Créez et partagez vos propres playbooks | Un nouveau framework de création de playbooks vous permet de créer, gérer et partager vos propres playbooks de cas d’utilisation. Cela inclut la prise en charge de la capture de métadonnées essentielles, de la modification des cartes de parcours et de l’association des ressources techniques pertinentes. Vous pouvez partager des playbooks entre les organisations pour normaliser les approches marketing et maintenir la cohérence. |
+| [!BADGE Beta]{type=Informative} Créer et partager vos propres playbooks | Un nouveau framework de création de playbooks vous permet de créer, de gérer et de partager vos propres playbooks de cas d’utilisation. Cela inclut la prise en charge de la capture de métadonnées essentielles, de la modification des cartes de parcours et de l’association des ressources techniques pertinentes. Vous pouvez partager des playbooks entre organisations pour harmoniser les approches marketing et garantir la cohérence. |
 
 {style="table-layout:auto"}
 
 Pour découvrir comment créer et partager vos propres playbooks, lisez le document [Créer et partager vos propres playbooks](/help/use-case-playbooks/playbooks/author.md).
 
-Pour plus d’informations, lisez la [ Présentation des playbooks de cas d’utilisation ](/help/use-case-playbooks/playbooks/overview.md), qui fournit une présentation des fonctionnalités des playbooks, de leur objectif et d’une démonstration de bout en bout, y compris sur la création d’instances et l’importation de ressources générées dans d’autres environnements de sandbox.
+Pour plus d’informations, lisez la [présentation des playbooks de cas d’utilisation](/help/use-case-playbooks/playbooks/overview.md), qui donne un aperçu des fonctionnalités et des objectifs des playbooks, et comprend une démonstration complète, notamment la création d’instances et l’import de ressources générées dans d’autres environnements de sandbox.
