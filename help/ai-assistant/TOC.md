@@ -4,10 +4,10 @@ user-guide-title: Assistant IA dans le guide Adobe Experience Platform
 user-guide-description: Découvrez comment utiliser l’Assistant IA pour accélérer votre workflow avec Adobe Experience Platform et Real-time Customer Data Platform.
 description: Ce document répertorie la table des matières de l’assistant AI dans Adobe Experience Platform.
 role: Admin,User,Developer,Leader
-source-git-commit: 7c6b73509d2ba3f53c62c53d70c33969b0b4157b
+source-git-commit: 79a6076a509f15b32ce07e5e4a5fb5d7a2eee3ef
 workflow-type: tm+mt
-source-wordcount: '115'
-ht-degree: 29%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -30,6 +30,7 @@ ht-degree: 29%
 * Cartes de modèle {#model-cards}
    * [Présentation des cartes de modèle](./model-cards/overview.md)
    * Cartes de modèle d’IA {#ai-model-cards}
+      * [Langage d’informations opérationnelles naturelles de l’assistant d’IA pour SQL](./model-cards/ai-model-cards/natural-language-to-sql.md)
       * [Score de propension de l’IA dédiée aux clients](./model-cards/ai-model-cards/customer-ai.md)
 * [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
 
