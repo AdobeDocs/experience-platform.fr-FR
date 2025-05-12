@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Avril 2025
 description: Notes de mise à jour d’avril 2025 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a79efc5d64862850d17cff0fd0633c73fd08207d
+source-git-commit: 6558046e9708267cd0ceda36e7c0bdba6b2f758a
 workflow-type: tm+mt
-source-wordcount: '2197'
-ht-degree: 99%
+source-wordcount: '2192'
+ht-degree: 98%
 
 ---
 
@@ -108,7 +108,7 @@ Utilisez le service d’identités d’Adobe Experience Platform pour créer u
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE Disponibilité limitée]{type=Informative} [!DNL Identity Graph Linking Rules] | Les règles de liaison du graphique d’identité sont désormais en disponibilité limitée et sont accessibles aux clientes et clients dans les sandbox de développement. <ul><li>**Exigences d’activation** : la fonctionnalité reste inactive jusqu’à ce que vous configuriez et enregistriez votre [!DNL Identity Settings]. En l’absence de cette configuration, le système continuera à fonctionner normalement, sans changement de comportement.</li><li>**Notes importantes** : au cours de cette phase de disponibilité limitée, la segmentation Edge peut produire des résultats inattendus en termes d’appartenance à un segment. Cependant, la segmentation par lots et en flux continu (streaming) fonctionnera comme prévu.</li><li>**Étapes suivantes** : pour plus d’informations sur la manière d’activer cette fonctionnalité dans les sandbox de production, contactez l’équipe Adobe en charge des comptes.</li></ul> |
+| [!BADGE Disponibilité limitée]{type=Informative} les règles de liaison de graphiques d’identités [!DNL Identity Graph Linking Rules] sont désormais accessibles à tous les clients dans les sandbox de développement. <ul><li>**Exigences d’activation** : la fonctionnalité reste inactive jusqu’à ce que vous configuriez et enregistriez votre [!DNL Identity Settings]. En l’absence de cette configuration, le système continuera à fonctionner normalement, sans changement de comportement.</li><li>**Notes importantes** : au cours de cette phase de disponibilité limitée, la segmentation Edge peut produire des résultats inattendus en termes d’appartenance à un segment. Cependant, la segmentation par lots et en flux continu (streaming) fonctionnera comme prévu.</li><li>**Étapes suivantes** : pour plus d’informations sur la manière d’activer cette fonctionnalité dans les sandbox de production, contactez l’équipe Adobe en charge des comptes.</li></ul> |
 
 {style="table-layout:auto"}
 
