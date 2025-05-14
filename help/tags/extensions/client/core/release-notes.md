@@ -3,9 +3,9 @@ title: Notes de mise à jour de l’extension Core
 description: Notes de mise à jour les plus récentes pour l’extension Core dans Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 source-git-commit: 1342461c95fa096496739fc14c92a7edd5aa6b57
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1693'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 97%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-## 8 Mai 2025
+## 8 mai 2025
 
 v3.4.3
 
-* Correction d’un problème en raison duquel **Data Elements** > **Javascript Tools** > **Simple Replace** affichait une case à cocher **Replace All** mais provoquait une erreur lors de la tentative d’enregistrement de la règle avec la case à cocher activée.
-* Mises à niveau @adobe/react-spectrum vers la version 3.41.0.
-* Mises à niveau @adobe/reactor-sandbox vers la version 13.2.1.
+* Correction d’un problème en raison duquel **Éléments de données** > **Outils Javascript** > **Remplacement simple** affichait une case à cocher **Tout remplacer** mais provoquait une erreur lors de la tentative d’enregistrement de la règle avec la case à cocher activée.
+* Mises à niveau @adobe/react-spectrum vers la version 3.41.0.
+* Mises à niveau @adobe/reactor-sandbox vers la version 13.2.1.
 
 ## 23 octobre 2024
 
@@ -131,7 +131,7 @@ v2.0.4
 
 * Ajout de la prise en charge des éléments de données dans plusieurs champs - La prise en charge des éléments de données a été ajoutée aux événements suivants : « Temps sur la page », « Entrée dans la fenêtre dʼaffichage », « Survol » et « Temps de lecture du média ». En plus des conditions suivantes : « Temps passé sur le site » et « Comparaison de valeur »
 * Ajout de la prise en charge du comportement par défaut pour Ctrl/Cmd + Clic et pour le clic central de la souris lors de lʼutilisation du délai de lien
-* **Le délai sur les liens pour lʼévénement Clic a été indiqué comme « nʼest plus pris en charge ».** - Vous trouverez plus d’informations sur le [blog de collecte de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403?profile.language=fr) pour Adobe Experience Platform.
+* **Le délai sur les liens pour lʼévénement Clic a été indiqué comme « nʼest plus pris en charge ».** - Vous trouverez plus d’informations sur le [blog de collecte de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) pour Adobe Experience Platform.
 
 ## 6 janvier 2021
 
