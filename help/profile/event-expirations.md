@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Expirations des événements d’expérience
 description: Ce document fournit des instructions générales sur la configuration des délais d’expiration pour des événements d’expérience individuels dans un jeu de données Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 71634a1dd0e0cd3f731272a179b4f1fe221eb046
 workflow-type: tm+mt
-source-wordcount: '858'
-ht-degree: 68%
+source-wordcount: '884'
+ht-degree: 66%
 
 ---
 
@@ -47,6 +47,10 @@ Si possible, vous devez essayer de conserver la même valeur d’expiration d’
 ## Questions fréquentes {#faq}
 
 La section suivante répertorie les questions fréquentes sur l’expiration des données d’événement d’expérience :
+
+### Quelle est la durée minimale pour laquelle je peux définir l’expiration d’un événement d’expérience ?
+
+La durée minimale d’expiration des données d’événement d’expérience est **un jour**.
 
 ### En quoi l’expiration des données d’événements d’expérience diffère-t-elle de l’expiration des données de profils pseudonymes ?
 
