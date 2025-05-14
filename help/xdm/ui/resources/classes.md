@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Créer et modifier des classes dans l’interface utilisateur
 description: Découvrez comment créer et modifier des classes dans l’interface utilisateur Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: a05ee385694b028b513e2fa632079e665ba815bb
 workflow-type: tm+mt
-source-wordcount: '1692'
+source-wordcount: '1691'
 ht-degree: 7%
 
 ---
@@ -24,7 +24,7 @@ Adobe fournit plusieurs classes de modèle de données d’expérience (XDM) sta
 
 Ce document présente la création, la modification et la gestion de classes personnalisées dans l’interface utilisateur d’Experience Platform.
 
-## Conditions préalables {#prerequisites}
+## Prérequis {#prerequisites}
 
 Ce guide nécessite une compréhension pratique du système XDM. Reportez-vous à la [présentation de XDM](../../home.md) pour une introduction au rôle de XDM dans l’écosystème Experience Platform et aux [principes de base de la composition de schémas](../../schema/composition.md) afin de découvrir comment les classes contribuent aux schémas XDM.
 
@@ -120,7 +120,7 @@ Consultez le guide sur la [définition de champs dans l’interface utilisateur]
 
 Si vous avez précédemment créé des schémas qui utilisent cette classe, les nouveaux champs ajoutés apparaîtront automatiquement dans ces schémas.
 
-## Modifier une classe (#edit-a-class)
+## Modification d’une classe {#edit-a-class}
 
 >[!NOTE]
 >
