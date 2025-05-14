@@ -4,9 +4,9 @@ title: Connexion API HTTP
 description: Utilisez la destination API HTTP dans Adobe Experience Platform pour envoyer des données de profil vers un point d’entrée HTTP tiers afin d’exécuter vos propres analyses ou toute autre opération dont vous pourriez avoir besoin sur les données de profil exportées hors d’Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 2fa6997c043ef7ff24b1383dd8626cfe1cca4f54
+source-git-commit: d78b7a06318dabff5dac763068ca7c21a5a86633
 workflow-type: tm+mt
-source-wordcount: '2701'
+source-wordcount: '2692'
 ht-degree: 71%
 
 ---
@@ -71,17 +71,15 @@ Vous pouvez utiliser [!DNL Mutual Transport Layer Security] ([!DNL mTLS]) pour g
 
 Si vous souhaitez utiliser [!DNL mTLS] avec des destinations [!DNL HTTP API], l’adresse de serveur que vous placez dans la page [détails de la destination](#destination-details) doit comporter [!DNL TLS] protocoles désactivés et uniquement [!DNL mTLS] activés. Si le protocole [!DNL TLS] 1.2 est toujours activé sur le point d’entrée, aucun certificat n’est envoyé pour l’authentification du client. Cela signifie que pour utiliser [!DNL mTLS] avec votre destination [!DNL HTTP API], le point d’entrée du serveur de « réception » doit être un point d’entrée de connexion activé en [!DNL mTLS] seule.
 
-### Télécharger le certificat {#certificate}
+### Récupération et inspection des détails du certificat {#certificate}
 
-Si vous souhaitez vérifier les [!DNL Common Name] (CN) et [!DNL Subject Alternative Names] (SAN) pour effectuer une validation tierce supplémentaire, vous pouvez télécharger le certificat ci-dessous :
+Si vous souhaitez examiner les détails du certificat tels que le [!DNL Common Name] (CN) et le [!DNL Subject Alternative Names] (SAN) pour une validation tierce supplémentaire, utilisez l’API pour récupérer le certificat et extraire ces champs de la réponse.
 
-* [Certificat public mTLS d’API HTTP](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
-
-Vous pouvez également récupérer des certificats publics en toute sécurité en effectuant une requête GET au point d’entrée MTLS. Pour plus d’informations, consultez la [documentation sur les points d’entrée de certificat public](../../../data-governance/mtls-api/public-certificate-endpoint.md).
+Pour plus d’informations, consultez la [documentation sur les points d’entrée de certificat public](../../../data-governance/mtls-api/public-certificate-endpoint.md).
 
 ## Liste autorisée d’adresses IP {#ip-address-allowlist}
 
-Pour répondre aux exigences de sécurité et de conformité des clients, Experience Platform fournit une liste des adresses IP statiques que vous pouvez inscrire sur la liste autorisée pour la destination de l’API HTTP. Pour obtenir la liste complète des adresses IP à placer sur la liste autorisée placer sur la liste autorisée [&#128279;](/help/destinations/catalog/streaming/ip-address-allow-list.md) consultez la section Adresses IP à configurer pour les destinations de diffusion en continu.
+Pour répondre aux exigences de sécurité et de conformité des clients, Experience Platform fournit une liste des adresses IP statiques que vous pouvez inscrire sur la liste autorisée pour la destination de l’API HTTP. Pour obtenir la liste complète des adresses IP à placer sur la liste autorisée placer sur la liste autorisée ](/help/destinations/catalog/streaming/ip-address-allow-list.md) consultez la section [Adresses IP à configurer pour les destinations de diffusion en continu.
 
 ## Types d’authentification pris en charge {#supported-authentication-types}
 
@@ -114,7 +112,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Lors de la connexion à cette destination, vous devez fournir les informations suivantes :
 
@@ -219,7 +217,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 >* L’[évaluation de la politique de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) n’est actuellement pas prise en charge dans les exportations vers la destination API HTTP. [En savoir plus](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
 Consultez [ Activer les données d’audience vers des destinations d’exportation de profil de diffusion en continu ](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
