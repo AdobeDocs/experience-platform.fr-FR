@@ -2,7 +2,7 @@
 title: Définir des champs XDM dans l’API Schema Registry
 description: Découvrez comment définir différents champs lors de la création de ressources de modèle de données d’expérience (XDM) personnalisées dans l’API Schema Registry.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
+source-git-commit: 6c6104a6aa0a80c886f4f02486a7645eb95da781
 workflow-type: tm+mt
 source-wordcount: '1197'
 ht-degree: 2%
@@ -142,7 +142,7 @@ Les champs numériques sont indiqués par `type: number` et n’ont pas d’autr
 
 >[!NOTE]
 >
->Les types `number` sont utilisés pour tout type numérique, entier ou nombre à virgule flottante, tandis que les types [`integer` sont spécifiquement utilisés pour les nombres entiers](#integer) Pour plus d’informations sur les cas d’utilisation de chaque type[&#128279;](https://json-schema.org/understanding-json-schema/reference/numeric.html) reportez-vous à la documentation sur les types numériques du schéma JSON.
+>Les types `number` sont utilisés pour tout type numérique, entier ou nombre à virgule flottante, tandis que les types [`integer` sont spécifiquement utilisés pour les nombres entiers](#integer) Pour plus d’informations sur les cas d’utilisation de chaque type](https://json-schema.org/understanding-json-schema/reference/numeric.html) reportez-vous à la documentation sur les types numériques du schéma [JSON.
 
 ## [!UICONTROL Entier] {#integer}
 
@@ -158,7 +158,7 @@ Les champs [!UICONTROL Entiers] sont indiqués par `type: integer` et n’ont pa
 
 >[!NOTE]
 >
->Alors que les types `integer` font spécifiquement référence aux nombres entiers, les types [`number` sont utilisés pour n&#39;importe quel type numérique](#number) qu&#39;il s&#39;agisse de nombres entiers ou de nombres à virgule flottante. Pour plus d’informations sur les cas d’utilisation de chaque type[&#128279;](https://json-schema.org/understanding-json-schema/reference/numeric.html) reportez-vous à la documentation sur les types numériques du schéma JSON.
+>Alors que les types `integer` font spécifiquement référence aux nombres entiers, les types [`number` sont utilisés pour n&#39;importe quel type numérique](#number) qu&#39;il s&#39;agisse de nombres entiers ou de nombres à virgule flottante. Pour plus d’informations sur les cas d’utilisation de chaque type](https://json-schema.org/understanding-json-schema/reference/numeric.html) reportez-vous à la documentation sur les types numériques du schéma [JSON.
 
 Vous pouvez éventuellement contraindre la plage de l’entier en ajoutant les propriétés `minimum` et `maximum` à la définition. Plusieurs autres types numériques pris en charge par l’interface utilisateur du créateur de schémas sont simplement des types `integer` avec des contraintes de `minimum` et de `maximum` spécifiques, telles que [[!UICONTROL Long]](#long), [[!UICONTROL Court]](#short) et [[!UICONTROL Octet]](#byte).
 
@@ -188,7 +188,7 @@ L’équivalent d’un champ [!UICONTROL Long] créé via l’interface utilisat
 
 ## [!UICONTROL Court] {#short}
 
-L’équivalent d’un champ [!UICONTROL Court] créé via l’interface utilisateur du créateur de schémas est un champ de type [`integer`](#integer) avec des valeurs `minimum` et `maximum` spécifiques (`-32768` et `32768`, respectivement).
+L’équivalent d’un champ [!UICONTROL Court] créé via l’interface utilisateur du créateur de schémas est un champ de type [`integer`](#integer) avec des valeurs `minimum` et `maximum` spécifiques (`-32768` et `32767`, respectivement).
 
 ```json
 "sampleField": {
@@ -196,13 +196,13 @@ L’équivalent d’un champ [!UICONTROL Court] créé via l’interface utilisa
   "description": "An example short field.",
   "type": "integer",
   "minimum": -32768,
-  "maximum": 32768
+  "maximum": 32767
 }
 ```
 
 ## [!UICONTROL Octet] {#byte}
 
-L’équivalent d’un champ [!UICONTROL Octet] créé via l’interface utilisateur du créateur de schémas est un champ de type [`integer`](#integer) avec des valeurs `minimum` et `maximum` spécifiques (`-128` et `128`, respectivement).
+L’équivalent d’un champ [!UICONTROL Octet] créé via l’interface utilisateur du créateur de schémas est un champ de type [`integer`](#integer) avec des valeurs `minimum` et `maximum` spécifiques (`-128` et `127`, respectivement).
 
 ```json
 "sampleField": {
@@ -210,7 +210,7 @@ L’équivalent d’un champ [!UICONTROL Octet] créé via l’interface utilisa
   "description": "An example byte field.",
   "type": "integer",
   "minimum": -128,
-  "maximum": 128
+  "maximum": 127
 }
 ```
 
