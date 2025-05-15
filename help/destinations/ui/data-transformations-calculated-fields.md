@@ -16,7 +16,7 @@ ht-degree: 8%
 >id="platform_destinations_export_arrays_flat_files"
 >title="Ajouter des champs calculés"
 >abstract="<p>Utilisez la commande **Ajouter un champ calculé** pour effectuer diverses transformations sur les données exportées vers des destinations d’espace de stockage dans le cloud. Par exemple, vous pouvez appliquer un hachage aux données, concaténer des tableaux en chaînes, etc."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html#examples" text="Exemples"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html?lang=fr#examples" text="Exemples"
 
 >[!AVAILABILITY]
 >
