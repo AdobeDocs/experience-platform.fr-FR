@@ -450,7 +450,7 @@ Adobe recommande de sélectionner un espace de noms d’identité, tel qu’un [
 
 ### Comportement de déduplication pour les profils ayant le même horodatage {#deduplication-same-timestamp}
 
-Lors de l’export de profils vers des destinations basées sur des fichiers, la déduplication garantit qu’un seul profil est exporté lorsque plusieurs profils partagent la même clé de déduplication et le même horodatage de référence. Cet horodatage représente le moment où l’appartenance à l’audience ou le graphique d’identité d’un profil a été mis à jour pour la dernière fois. Pour plus d’informations sur la mise à jour et l’exportation des profils, consultez le document [comportement d’exportation des profils](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Lors de l’export de profils vers des destinations basées sur des fichiers, la déduplication garantit qu’un seul profil est exporté lorsque plusieurs profils partagent la même clé de déduplication et le même horodatage de référence. Cet horodatage représente le moment où l’appartenance à l’audience ou le graphique d’identité d’un profil a été mis à jour pour la dernière fois. Pour plus d’informations sur la mise à jour et l’exportation des profils, consultez le document [comportement d’exportation des profils](https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Considérations principales
 
