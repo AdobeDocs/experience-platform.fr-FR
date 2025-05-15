@@ -2,10 +2,10 @@
 title: Interface utilisateur des paramètres d’identité
 description: Découvrez comment utiliser l’interface utilisateur des paramètres d’identité.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 44457b95b354e20808c1218ca3c8e698071f0528
 workflow-type: tm+mt
-source-wordcount: '697'
-ht-degree: 3%
+source-wordcount: '693'
+ht-degree: 13%
 
 ---
 
@@ -15,15 +15,15 @@ ht-degree: 3%
 >
 >Les règles de liaison du graphique d’identités sont actuellement en disponibilité limitée et sont accessibles à tous les clients dans les sandbox de développement.
 >
->* **Exigences d’activation** : la fonctionnalité reste inactive jusqu’à ce que vous configuriez et enregistriez votre [!DNL Identity Settings]. Sans cette configuration, le système continuera à fonctionner normalement, sans changement de comportement.
->* **Remarques importantes** : au cours de cette phase de disponibilité limitée, la segmentation d’Edge peut produire des résultats inattendus en termes d’appartenance à un segment. Cependant, la segmentation par lots et en flux continu fonctionnera comme prévu.
->* **Étapes suivantes** : pour plus d’informations sur la manière d’activer cette fonctionnalité dans les sandbox de production, contactez l’équipe de votre compte Adobe.
+>* **Exigences d’activation** : la fonctionnalité reste inactive jusqu’à ce que vous configuriez et enregistriez votre [!DNL Identity Settings]. En l’absence de cette configuration, le système continuera à fonctionner normalement, sans changement de comportement.
+>* **Notes importantes** : au cours de cette phase de disponibilité limitée, la segmentation Edge peut produire des résultats inattendus en termes d’appartenance à un segment. Cependant, la segmentation par lots et en flux continu (streaming) fonctionnera comme prévu.
+>* **Étapes suivantes** : pour plus d’informations sur la manière d’activer cette fonctionnalité dans les sandbox de production, contactez l’équipe Adobe en charge des comptes.
 
 Les paramètres d’identité sont une fonctionnalité de l’interface utilisateur du service d’identités Adobe Experience Platform que vous pouvez utiliser pour désigner des espaces de noms uniques et configurer la priorité des espaces de noms.
 
 Lisez ce guide pour savoir comment configurer vos paramètres d’identité dans l’interface utilisateur.
 
-## Conditions préalables
+## Prérequis
 
 Lisez les documents suivants avant de commencer à utiliser les paramètres d’identité :
 
@@ -81,7 +81,7 @@ Lorsque vous avez terminé vos configurations, sélectionnez **[!UICONTROL Suiva
 >
 >* La dernière étape consiste en un autre message de confirmation indiquant que les graphiques existants ne seront affectés par l’algorithme de graphique **uniquement si les graphiques sont mis à jour après l’enregistrement de vos paramètres** et que l’identité principale des fragments d’événement sur le profil client en temps réel ne sera pas mise à jour même après les modifications de la priorité de l’espace de noms.
 >
->* En outre, vous êtes averti qu’il faudra jusqu’à **six heures** pour que vos paramètres nouveaux ou mis à jour soient pris en compte. Pour confirmer, saisissez le nom de votre sandbox, puis sélectionnez **[!UICONTROL Confirmer]**.
+>* Cela prendra jusqu’à **24 heures** pour que vos paramètres nouveaux ou mis à jour soient pris en compte. Pour confirmer, saisissez le nom de votre sandbox, puis sélectionnez **[!UICONTROL Confirmer]**.
 
 ![Fenêtre de confirmation qui affiche un avertissement relatif à un délai de six heures avant le traitement des configurations.](../images/rules/complete.png)
 
