@@ -3,9 +3,9 @@ title: Effectuer des transformations sur les données exportées vers des destin
 type: Tutorial
 description: Découvrez comment utiliser la fonctionnalité de champs calculés pour effectuer des transformations sur les données exportées vers des destinations d’espace de stockage
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
-source-git-commit: 14c672ef57e0b0247020075552c782ed18db8484
+source-git-commit: bd9efc1bcf6058827cc5c603b9976c9e42c7ec9e
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1625'
 ht-degree: 8%
 
 ---
@@ -16,15 +16,7 @@ ht-degree: 8%
 >id="platform_destinations_export_arrays_flat_files"
 >title="Ajouter des champs calculés"
 >abstract="<p>Utilisez la commande **Ajouter un champ calculé** pour effectuer diverses transformations sur les données exportées vers des destinations d’espace de stockage dans le cloud. Par exemple, vous pouvez appliquer un hachage aux données, concaténer des tableaux en chaînes, etc."
-
-<!--
-
-disable additional URLs for a while
-
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html?lang=fr#examples" text="Examples"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html?lang=fr#known-limitations" text="Known limitations"
-
--->
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html#examples" text="Exemples"
 
 >[!AVAILABILITY]
 >
@@ -35,7 +27,7 @@ Pour effectuer diverses transformations sur les données exportées vers des des
 * [Guide et présentation de l’interface utilisateur](/help/data-prep/ui/mapping.md#calculated-fields)
 * [Fonctions de la préparation des données](/help/data-prep/functions.md)
 
-## Conditions préalables {#prerequisites}
+## Prérequis {#prerequisites}
 
 Pour utiliser des champs calculés pour les transformations de données :
 
@@ -53,6 +45,10 @@ Pour utiliser des champs calculés pour les transformations de données :
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="« Ajouter des champs calculés » désactivé"
 >abstract="Cette commande est désactivée, car vous avez *activé* le bouton **Exporter des tableaux, des mappages et des objets** lors de la configuration de cette connexion de destination. Pour utiliser les champs calculés et les fonctions disponibles, configurez une nouvelle connexion de destination avec le bouton bascule **Exporter des tableaux, des mappages et des objets** *désactivé*."
+
+>[!IMPORTANT]
+>
+>Lorsque vous utilisez des champs calculés, vous devez non seulement appliquer une fonction de transformation des données, mais également utiliser la fonction `array_to_string` pour concaténer des champs en chaîne.
 
 À l’étape de mappage du workflow d’activation pour les destinations d’espace de stockage, sélectionnez **[!UICONTROL Ajouter un champ calculé]**.
 
