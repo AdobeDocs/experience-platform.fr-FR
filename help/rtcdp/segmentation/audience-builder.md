@@ -2,12 +2,12 @@
 title: Créateur d’audience dans Real-Time Customer Data Platform
 description: Découvrez comment utiliser le Créateur d’audience dans Real-Time Customer Data Platform pour créer des audiences.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
 source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
 source-wordcount: '983'
-ht-degree: 3%
+ht-degree: 10%
 
 ---
 
@@ -31,8 +31,8 @@ Basé sur Adobe Experience Platform, [!DNL Adobe Real-Time Customer Data Platfor
 
 >[!CONTEXTUALHELP]
 >id="platform_b2b_audiencebuilder_showconstrainedfields"
->title="Afficher les champs limités"
->abstract="Par défaut, seuls les champs qui ne sont soumis à aucune contrainte s’affichent. Activez cette option pour afficher les champs soumis à des contraintes."
+>title="Afficher les champs contraints"
+>abstract="Par défaut, seuls les champs qui ne sont soumis à aucune contrainte sont affichés. Activez cette option pour afficher les champs soumis à des contraintes."
 
 Lors de l’utilisation du Créateur d’audience pour les comptes, vous pouvez utiliser des attributs de compte ou des audiences existantes comme champs de votre audience.
 

@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
 source-wordcount: '5024'
-ht-degree: 64%
+ht-degree: 65%
 
 ---
 
@@ -35,7 +35,7 @@ Le [!DNL Segment Builder] offre un vaste espace de travail qui vous permet d’i
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_showdeprecatedfields"
 >title="Afficher les champs obsolètes"
->abstract="Par défaut, les champs XDM obsolètes ne s’affichent pas. Activez cette option pour afficher les champs XDM obsolètes."
+>abstract="Par défaut, les champs XDM obsolètes ne sont pas affichés. Activez cette option pour afficher les champs XDM obsolètes."
 
 Les blocs de création de base des définitions de segment sont les attributs et les événements. En outre, les attributs et les événements contenus dans les audiences existantes peuvent être utilisés comme éléments de nouvelles définitions.
 

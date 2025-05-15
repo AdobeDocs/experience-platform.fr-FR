@@ -1,14 +1,14 @@
 ---
 audience: user
 user-guide-title: Service d’identités d’Adobe Experience Platform
-breadcrumb-title: Guide d’Experience Platform Identity Service
+breadcrumb-title: Guide du service d’identités d’Experience Platform
 user-guide-description: Associez les identités des clients, quel que soit l’appareil ou le système utilisé, afin d’offrir des expériences digitales personnalisées.
 feature: Identities
 role: Admin,Developer
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 70%
+ht-degree: 73%
 
 ---
 

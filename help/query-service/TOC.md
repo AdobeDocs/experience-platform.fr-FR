@@ -19,7 +19,7 @@ ht-degree: 70%
 - [Package Query Service](packaging.md)
 - [Mécanismes de sécurisation de Query Service](guardrails.md)
 - Commencer {#get-started}
-   - [Conditions préalables](get-started/prerequisites.md)
+   - [Prérequis](get-started/prerequisites.md)
 - Data Distiller {#data-distiller}
    - [Aperçu](data-distiller/overview.md)
    - [Utilisation des licences](data-distiller/license-usage.md)

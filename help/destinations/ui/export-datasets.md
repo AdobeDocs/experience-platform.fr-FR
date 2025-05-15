@@ -6,7 +6,7 @@ exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 source-git-commit: 8b2b40be94bb35f0c6117bfc1d51f8ce282f2b29
 workflow-type: tm+mt
 source-wordcount: '2732'
-ht-degree: 33%
+ht-degree: 34%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 33%
 >
 >Pour l’un de ces flux de données, vous devez mettre à jour manuellement la date de fin du flux de données avant la date de fin, sinon vos exportations s’arrêteront à cette date. Utilisez l’interface utilisateur d’Experience Platform pour afficher les flux de données qui seront définis pour s’arrêter le 1er septembre 2025.
 >
->Pour plus d’informations sur la modification de la date de fin d’un flux de données d’exportation de jeux de données[&#128279;](#scheduling) consultez la section planification.
+>Pour plus d’informations sur la modification de la date de fin d’un flux de données d’exportation de jeux de données](#scheduling) consultez la section [planification.
 
 Cet article explique le processus requis pour exporter des [jeux de données](/help/catalog/datasets/overview.md) de Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix, comme des [!DNL Amazon S3], des emplacements SFTP ou des [!DNL Google Cloud Storage] à l’aide de l’interface utilisateur d’Experience Platform.
 
@@ -50,16 +50,16 @@ Utilisez le tableau ci-dessous pour comprendre quels types de jeux de données v
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Jeux de données de profil et d’événement d’expérience créés dans l’interface utilisateur d’Experience Platform après l’ingestion ou la collecte de données par le biais de sources, de Web SDK, de Mobile SDK, du connecteur de données Analytics et d’Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=fr#profile-attribute-datasets">Jeu de données d’instantanés de profil généré par le système</a>.</li></td>
+    <td><ul><li>Jeux de données de profil et d’événement d’expérience créés dans l’interface utilisateur d’Experience Platform après l’ingestion ou la collecte de données par le biais de sources, de Web SDK, de Mobile SDK, du connecteur de données Analytics et d’Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">Jeu de données d’instantanés de profil généré par le système</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>Reportez-vous à la documentation de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=fr#datasets"> Adobe Journey Optimizer</a> .</td>
+    <td>Reportez-vous à la documentation de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> .</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Reportez-vous à la documentation de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=fr#datasets"> Adobe Journey Optimizer</a> .</td>
+    <td>Reportez-vous à la documentation de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> .</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ Utilisez le tableau ci-dessous pour comprendre quels types de jeux de données v
 
 Regardez la vidéo ci-dessous pour une explication de bout en bout du workflow décrit sur cette page, des avantages de l’utilisation de la fonctionnalité d’exportation du jeu de données et de certains cas d’utilisation suggérés.
 
->[!VIDEO](https://video.tv.adobe.com/v/3448820?captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## Destinations prises en charge {#supported-destinations}
 
@@ -111,7 +111,7 @@ Notez les conditions préalables suivantes pour exporter des jeux de données :
 
 ### Autorisations nécessaires {#permissions}
 
-Pour exporter des jeux de données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Afficher les jeux de données]** et **[!UICONTROL Gérer et activer les destinations de jeu de données]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+Pour exporter des jeux de données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Afficher les jeux de données]** et **[!UICONTROL Gérer et activer les destinations de jeu de données]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous assurer que vous disposez des autorisations nécessaires pour exporter des jeux de données et que la destination prend en charge l’exportation de jeux de données, parcourez le catalogue des destinations. Si une destination comporte un contrôle **[!UICONTROL Activer]** ou **[!UICONTROL Exporter des jeux de données]**, vous disposez des autorisations appropriées.
 
@@ -158,7 +158,7 @@ Utilisez les cases à cocher situées à gauche des jeux de données pour sélec
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
 >title="Mettre à jour la date de fin de ce corps de flux de données"
->abstract="En raison des mises à jour récentes apportées à cette destination, le flux de données nécessite désormais une date de fin. Adobe a défini une date de fin par défaut au 1er septembre 2025. Mettez à jour à la date de fin souhaitée, sinon les exportations de données s’arrêteront à la date par défaut."
+>abstract="En raison des mises à jour récentes apportées à cette destination, le flux de données nécessite désormais une date de fin. Adobe a défini une date de fin par défaut au 1er septembre 2025. Mettez à jour à la date de fin souhaitée. Dans le cas contraire, les exports de données s’arrêteront à la date par défaut."
 
 Utilisez l’étape **[!UICONTROL Planification]** pour :
 

@@ -7,7 +7,7 @@ exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 8734b85914d965eebc2f8ccd8c09dd1ffede8cf9
 workflow-type: tm+mt
 source-wordcount: '1264'
-ht-degree: 50%
+ht-degree: 54%
 
 ---
 
@@ -26,7 +26,7 @@ Dans Adobe Experience Platform, vous pouvez configurer les délais d’expiratio
 >[!CONTEXTUALHELP]
 >id="platform_profile_pseudonymousprofile_dataexpiration"
 >title="Expiration des données de profils pseudonymes"
->abstract="L’expiration des données de profils pseudonymes représente le nombre de jours pendant lesquels un profil pseudonyme reste dans Adobe Experience Platform avant d’être supprimé. Cette valeur doit être définie sur au moins 1. Notez que la suppression du profil pseudonyme peut prendre jusqu’à trois jours."
+>abstract="L’expiration des données de profils pseudonymes représente le nombre de jours pendant lesquels un profil pseudonyme reste dans Adobe Experience Platform avant d’être supprimé. Cette valeur doit être définie sur au moins 1. Notez que la suppression du profil pseudonyme peut prendre jusqu’à trois jours."
 
 Un profil est pris en compte pour l’expiration des données pseudonymes s’il répond aux conditions suivantes :
 
@@ -131,7 +131,7 @@ Dans un cas d’utilisation standard, définissez l’expiration des données d�
 
 +++ Réponse
 
-- Le système de suppression « premier entré, premier sorti »[&#128279;](../identity-service/guardrails.md) d’Identity Service  supprimer les ECID du graphique d’identités, qui sont stockés dans Identity Service.
+- Le système de suppression « premier entré, premier sorti »](../identity-service/guardrails.md) d’Identity Service [ supprimer les ECID du graphique d’identités, qui sont stockés dans Identity Service.
 - Si ce comportement de suppression entraîne le stockage d’un profil ECID uniquement dans le profil client en temps réel (magasin de profils), l’expiration des données de profils pseudonymes supprime ce profil du magasin de profils.
 
 +++

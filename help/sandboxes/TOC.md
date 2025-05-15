@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Aide pour les sandbox dans Adobe Experience Platform
 breadcrumb-title: Guide des sandbox
-user-guide-description: Découvrez le fonctionnement des sandbox et partitionnez une instance Experience Platform en environnements virtuels à des fins de développement, de test et de déploiement d’applications.
+user-guide-description: Découvrez le fonctionnement des sandbox et la partition d’une instance Experience Platform en environnements virtuels pour le développement, le test et le déploiement d’applications.
 feature: Sandboxes
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '84'
-ht-degree: 51%
+ht-degree: 75%
 
 ---
 

@@ -1,12 +1,12 @@
 ---
 title: Présentation du transfert dʼévénements
-description: Découvrez le transfert d’événement dans Adobe Experience Platform, qui vous permet d’utiliser Experience Platform Edge Network pour exécuter des tâches sans modifier votre implémentation de balises.
+description: Découvrez le transfert d’événements dans Adobe Experience Platform, qui vous permet d’utiliser Experience Platform Edge Network afin d’exécuter des tâches sans modifier votre mise en œuvre de balises.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1190'
-ht-degree: 51%
+ht-degree: 54%
 
 ---
 

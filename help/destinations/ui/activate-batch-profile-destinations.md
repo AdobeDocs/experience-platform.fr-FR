@@ -6,7 +6,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: 6b91527afe172530597de30b9669b86ff0262e13
 workflow-type: tm+mt
 source-wordcount: '4596'
-ht-degree: 50%
+ht-degree: 52%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 50%
 
 >[!IMPORTANT]
 > 
-> * Pour activer les audiences et activer l’[étape de mappage](#mapping) du workflow, vous devez disposer des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]**&#x200B;[&#128279;](/help/access-control/home.md#permissions).
+> * Pour activer les audiences et activer l’[étape de mappage](#mapping) du workflow, vous devez disposer des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]**[](/help/access-control/home.md#permissions).
 > * Pour activer les audiences sans passer par l’étape [mappage](#mapping) du workflow, vous devez disposer des **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation du segment sans mappage]**, **[!UICONTROL Affichage des profils]** et **[!UICONTROL Affichage des segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 > 
 > Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
@@ -86,13 +86,13 @@ Vous pouvez effectuer un choix parmi plusieurs types d’audiences, selon leur o
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule_weekly_messaging"
->title="Exportations hebdomadaires"
->abstract="<sup>*</sup> Sélectionnez la date de début et les exportations suivantes auront lieu ce jour de la semaine jusqu’à la date de fin sélectionnée."
+>title="Exports hebdomadaires"
+>abstract="<sup>*</sup> Sélectionnez la date de début et les exports suivants auront lieu ce jour de la semaine jusqu’à la date de fin sélectionnée."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule_monthly_messaging"
->title="Exportations mensuelles"
->abstract="<sup>*</sup> Sélectionnez la date de début et les exportations suivantes auront lieu à cette date du mois jusqu’à la date de fin sélectionnée. Pour les mois de moins de 30 ou 31 jours, l’exportation a lieu le dernier jour du mois."
+>title="Exports mensuels"
+>abstract="<sup>*</sup> Sélectionnez la date de début et les exports suivants auront lieu à cette date du mois jusqu’à la date de fin sélectionnée. Pour les mois de moins de 30 ou 31 jours, l’export a lieu le dernier jour du mois."
 
 [!DNL Adobe Experience Platform] exporte des données pour les destinations de marketing par e-mail et d’espace de stockage dans le cloud sous [différents types de fichiers](#supported-file-formats-export). Sur la page **[!UICONTROL Planification]**, vous pouvez configurer le planning et les noms des fichiers pour chaque audience que vous exportez.
 
@@ -125,7 +125,7 @@ Pour modifier plusieurs plannings en même temps, sélectionnez les audiences à
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
 >title="Activer après l’évaluation des audiences"
->abstract="<p>L’activation s’exécute immédiatement une fois la tâche de segmentation quotidienne terminée. Ainsi, les profils les plus à jour sont exportés.</p><p>L’option permettant d’exporter des profils après l’évaluation de l’audience n’est <i>pas</i> disponible pour la fréquence d’exportation hebdomadaire et mensuelle.</p>"
+>abstract="<p>L’activation s’exécute immédiatement une fois la tâche de segmentation quotidienne terminée. Ainsi, les profils les plus à jour sont exportés.</p><p>L’option permettant d’exporter des profils après l’évaluation de l’audience n’est <i>pas</i> disponible pour les fréquences d’export hebdomadaire et mensuelle.</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
@@ -141,7 +141,7 @@ Sélectionnez **[!UICONTROL Exporter des fichiers complets]** pour exporter un f
    * **[!UICONTROL Une fois]** : planifiez une exportation de fichiers complets sur demande unique.
    * **[!UICONTROL Tous les jours]** : planifiez des exportations de fichiers complets une fois par jour, tous les jours, au moment choisi.
    * **[!UICONTROL Hebdomadaire]** : sélectionnez la date de début et les exportations suivantes auront lieu ce jour de la semaine jusqu’à la date de fin sélectionnée.
-   * **[!UICONTROL Mensuel]** : sélectionnez la date de début et les exportations suivantes auront lieu à cette date du mois jusqu’à la date de fin sélectionnée. Pour les mois de moins de 30 ou 31 jours, l’exportation a lieu le dernier jour du mois.
+   * **[!UICONTROL Mensuel]** : sélectionnez la date de début et les exportations suivantes auront lieu à cette date du mois jusqu’à la date de fin sélectionnée. Pour les mois de moins de 30 ou 31 jours, l’export a lieu le dernier jour du mois.
 
 2. Utilisez le bouton (bascule) **[!UICONTROL Heure]** pour sélectionner si l’exportation doit avoir lieu immédiatement après l’évaluation de l’audience ou sur une base planifiée, à une heure spécifiée. Lorsque vous sélectionnez la variable **[!UICONTROL Planifié]**, vous pouvez utiliser le sélecteur pour choisir l’heure du jour à laquelle l’exportation doit avoir lieu, au format [!DNL UTC].
 
@@ -450,7 +450,7 @@ Adobe recommande de sélectionner un espace de noms d’identité, tel qu’un [
 
 ### Comportement de déduplication pour les profils ayant le même horodatage {#deduplication-same-timestamp}
 
-Lors de l’export de profils vers des destinations basées sur des fichiers, la déduplication garantit qu’un seul profil est exporté lorsque plusieurs profils partagent la même clé de déduplication et le même horodatage de référence. Cet horodatage représente le moment où l’appartenance à l’audience ou le graphique d’identité d’un profil a été mis à jour pour la dernière fois. Pour plus d’informations sur la mise à jour et l’exportation des profils, consultez le document [comportement d’exportation des profils](https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Lors de l’export de profils vers des destinations basées sur des fichiers, la déduplication garantit qu’un seul profil est exporté lorsque plusieurs profils partagent la même clé de déduplication et le même horodatage de référence. Cet horodatage représente le moment où l’appartenance à l’audience ou le graphique d’identité d’un profil a été mis à jour pour la dernière fois. Pour plus d’informations sur la mise à jour et l’exportation des profils, consultez le document [comportement d’exportation des profils](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Considérations principales
 
