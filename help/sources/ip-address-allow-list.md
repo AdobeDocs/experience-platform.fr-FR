@@ -2,9 +2,9 @@
 description: Découvrez les adresses IP que vous devez ajouter à votre place sur la liste autorisée pour utiliser correctement les sources Adobe Experience Platform.
 title: PLACER SUR LA LISTE AUTORISÉE Adresse IP associée aux sources
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
+source-git-commit: e2403b235b4cfee37761ebd683a1fb8662061406
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '243'
 ht-degree: 11%
 
 ---
@@ -290,6 +290,10 @@ Vous devez ajouter les adresses IP suivantes à votre place sur la liste autoris
 
 ## Adresses IP à placer sur la liste autorisée pour la connexion des sources à Experience Platform on [!DNL Amazon Web Services] (AWS) {#aws}
 
-Vous devez ajouter l’adresse IP suivante à votre place sur la liste autorisée pour connecter votre source à Experience Platform sur AWS :
+Vous devez ajouter l’adresse IP suivante à votre place sur la liste autorisée pour connecter votre source à Experience Platform sur AWS :.
 
-- `66.117.18.0/24`
+### VA6
+
+- `34.193.63.59`
+- `44.217.93.240`
+- `44.194.79.229`
