@@ -72,7 +72,7 @@ Sélectionnez le nom d’un jeu de données dans l’onglet [!UICONTROL Parcouri
 
 Vous pouvez [!UICONTROL Supprimer] ou [!UICONTROL Activer un jeu de données pour Profil] à partir de la vue des détails [!UICONTROL Jeu de données]. Pour afficher les actions disponibles, sélectionnez **[!UICONTROL ... Plus]** en haut à droite de l’interface utilisateur. Le menu déroulant s’affiche.
 
-![Espace de travail Jeux de données avec le [!UICONTROL ... Plus &#x200B;] menu déroulant mis en surbrillance.](../images/datasets/user-guide/more-actions.png)
+![Espace de travail Jeux de données avec le [!UICONTROL ... Plus ] menu déroulant mis en surbrillance.](../images/datasets/user-guide/more-actions.png)
 
 Si vous sélectionnez **[!UICONTROL Activer un jeu de données pour le profil]**, une boîte de dialogue de confirmation s’affiche. Sélectionnez **[!UICONTROL Activer]** pour confirmer votre choix.
 
@@ -160,7 +160,7 @@ Les jeux de données qui ont été activés pour Profil peuvent également être
 
 ### Gérer les balises du jeu de données {#manage-tags}
 
-Ajoutez des balises personnalisées pour organiser les jeux de données et améliorer les fonctionnalités de recherche, de filtrage et de tri. Dans l’onglet [!UICONTROL &#x200B; Parcourir &#x200B;] de l’espace de travail [!UICONTROL Jeux de données], sélectionnez les points de suspension d’un jeu de données à gérer, puis **[!UICONTROL Gérer les balises]** dans le menu déroulant.
+Ajoutez des balises personnalisées pour organiser les jeux de données et améliorer les fonctionnalités de recherche, de filtrage et de tri. Dans l’onglet [!UICONTROL  Parcourir ] de l’espace de travail [!UICONTROL Jeux de données], sélectionnez les points de suspension d’un jeu de données à gérer, puis **[!UICONTROL Gérer les balises]** dans le menu déroulant.
 
 ![L’onglet Parcourir de l’espace de travail Jeux de données avec les points de suspension et l’option Gérer les balises en surbrillance pour le jeu de données sélectionné.](../images/datasets/user-guide/manage-tags.png)
 
@@ -180,7 +180,7 @@ Pour plus d’informations sur la classification d’objets métier pour facilit
 > 
 >Les paramètres de conservation des données sont actuellement en version bêta et disponibles uniquement dans une version **limitée** pour certaines organisations. Il se peut que votre interface utilisateur ne reflète pas la fonctionnalité décrite ci-dessous.
 
-Gérez les paramètres d’expiration et de rétention des jeux de données à l’aide du menu d’actions intégrées de l’onglet [!UICONTROL &#x200B; Parcourir &#x200B;] de l’espace de travail [!UICONTROL Jeux de données]. Vous pouvez utiliser cette fonctionnalité pour configurer la durée de conservation des données dans le lac de données et le magasin de profils. La date d’expiration dépend du moment où les données ont été ingérées dans Experience Platform et de la période de conservation que vous avez configurée.
+Gérez les paramètres d’expiration et de rétention des jeux de données à l’aide du menu d’actions intégrées de l’onglet [!UICONTROL  Parcourir ] de l’espace de travail [!UICONTROL Jeux de données]. Vous pouvez utiliser cette fonctionnalité pour configurer la durée de conservation des données dans le lac de données et le magasin de profils. La date d’expiration dépend du moment où les données ont été ingérées dans Experience Platform et de la période de conservation que vous avez configurée.
 
 >[!TIP]
 >
