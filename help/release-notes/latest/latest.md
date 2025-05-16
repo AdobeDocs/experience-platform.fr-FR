@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Avril 2025
 description: Notes de mise à jour d’avril 2025 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6558046e9708267cd0ceda36e7c0bdba6b2f758a
+source-git-commit: e0740ca9cd6e1d0b92d5504a2869ac03c28d4980
 workflow-type: ht
-source-wordcount: '2192'
+source-wordcount: '2069'
 ht-degree: 100%
 
 ---
@@ -30,7 +30,6 @@ Mises à jour des fonctionnalités et de la documentation existantes dans Adobe�
 - [Modèle de données d’expérience](#xdm)
 - [Service d’identités](#identity)
 - [Service de requête](#query-service)
-- [Profil client en temps réel](#profile)
 - [Sandbox](#sandboxes)
 - [Sources](#sources)
 - [Playbooks de cas d’utilisation](#use-case-playbooks)
@@ -129,18 +128,6 @@ Interrogez des données dans le lac de données Adobe Experience Platform à l
 | Enregistrer les sorties de prédiction de modèle à l’aide de CRÉER UN TABLEAU et INSÉRER DANS | [Enregistrez les sorties de prédiction sélectionnées dans de nouveaux tableaux à l’aide de CRÉER UN TABLEAU EN FONCTION DE LA SÉLECTION ou insérez-les dans les tableaux existants à l’aide d’INSÉRER DANS LA SÉLECTION](../../query-service/advanced-statistics/models.md#predict). Si la sélection de colonnes améliorée est activée, des résultats intermédiaires tels que des vecteurs de caractéristiques et des probabilités peuvent également être conservés avec les prédictions finales. Pour consulter des exemples d’utilisation, consultez la [documentation sur la syntaxe SQL](../../query-service/sql/syntax.md#create-table-as-select). |
 
 Pour plus d’informations sur [!DNL Query Service], consultez la vue d’ensemble [[!DNL Query Service] ](../../query-service/home.md).
-
-## Profil client en temps réel {#profile}
-
-Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Le profil client en temps réel offre une vue holistique de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le Profil vous permet de consolider vos données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
-
-| Fonctionnalité | Description |
-| ------- | ----------- |
-| Expiration des données de profils pseudonymes | Gérez l’expiration de vos données de profil pseudonyme dans le tableau de bord Profil. Pour en savoir plus sur cette fonctionnalité et les profils pseudonymes, veuillez lire la section [Guide d’expiration des données de profil pseudonyme](../../profile/pseudonymous-profiles.md). |
-
-{style="table-layout:auto"}
-
-Pour en savoir plus sur le profil client en temps réel, lisez d’abord la [présentation des profils](../../profile/home.md).
 
 ## Sandbox {#sandboxes}
 
