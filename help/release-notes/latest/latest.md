@@ -3,7 +3,7 @@ title: Notes de mise à jour d’Adobe Experience Platform - Avril 2025
 description: Notes de mise à jour d’avril 2025 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: e0740ca9cd6e1d0b92d5504a2869ac03c28d4980
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2069'
 ht-degree: 100%
 

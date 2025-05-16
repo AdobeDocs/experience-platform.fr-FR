@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Avril 2025
 description: Notes de mise à jour d’avril 2025 pour Adobe Experience Platform.
 exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
-source-git-commit: 6558046e9708267cd0ceda36e7c0bdba6b2f758a
+source-git-commit: e0740ca9cd6e1d0b92d5504a2869ac03c28d4980
 workflow-type: tm+mt
-source-wordcount: '2192'
-ht-degree: 98%
+source-wordcount: '2069'
+ht-degree: 99%
 
 ---
 
@@ -30,7 +30,6 @@ Mises à jour des fonctionnalités et de la documentation existantes dans Adobe�
 - [Modèle de données d’expérience](#xdm)
 - [Service d’identités](#identity)
 - [Service de requête](#query-service)
-- [Profil client en temps réel](#profile)
 - [Sandbox](#sandboxes)
 - [Sources](#sources)
 - [Playbooks de cas d’utilisation](#use-case-playbooks)
@@ -41,7 +40,7 @@ Experience League est une plateforme d’apprentissage complète conçue pour v
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Page d’accueil personnalisée | Accédez à votre page d’accueil personnalisée et personnalisez-la sur [Experience League](https://experienceleague.adobe.com/fr/home#). Connectez-vous avec vos informations d’identification Adobe, puis sélectionnez **[!UICONTROL Experience League]** dans le menu supérieur pour commencer à optimiser votre expérience d’apprentissage : <ul><li>**Signets** : utilisez la fonction [!UICONTROL Signets] pour enregistrer et collecter vos ressources préférées en un seul endroit. Vous pouvez enregistrer divers contenus, notamment des listes de lecture, des articles et des tutoriels.</li><li>**Personnaliser votre apprentissage** : améliorez votre expérience d’apprentissage en mettant à jour votre profil Experience League avec les rôles, secteurs d’activité, produits et niveaux d’expérience qui correspondent le mieux à vos besoins.</li><li>**Recommandations** : affichez le contenu d’apprentissage recommandé en fonction de votre activité récente.</li><li>**Consultations récentes** : utilisez la section [!UICONTROL Consultations récentes] pour revenir rapidement au contenu récemment consulté, tel que la documentation et les vidéos.</li><li>**Ressources d’apprentissage** : utilisez le panneau [!UICONTROL Toutes les ressources d’apprentissage] pour accéder aux tutoriels, à la documentation, à la communauté, aux événements et aux certifications.</li><li>**Nouveautés** : consultez la section [!UICONTROL Nouveautés] pour obtenir un flux du contenu le plus récent sur Experience League.</li><li>**Regarder des événements passés à la demande** : regardez des diffusions en direct enregistrées précédemment sur les produits phares, des cas d’utilisation et des tutoriels avec la section [!UICONTROL Regarder des événements passés à la demande].</li></ul><br> ![Page d’accueil personnalisée sur Experience League.](../2025/assets/april/personalized-home-page.png "Page d’accueil personnalisée sur Experience League."){width="250" align="center" zoomable="yes"} |
+| Page d’accueil personnalisée | Accédez à votre page d’accueil personnalisée et modifiez-la sur [Experience League](https://experienceleague.adobe.com/fr/home#). Connectez-vous avec vos informations d’identification Adobe, puis sélectionnez **[!UICONTROL Experience League]** dans le menu supérieur pour commencer à optimiser votre expérience d’apprentissage : <ul><li>**Signets** : utilisez la fonction [!UICONTROL Signets] pour enregistrer et collecter vos ressources préférées en un seul endroit. Vous pouvez enregistrer divers contenus, notamment des listes de lecture, des articles et des tutoriels.</li><li>**Personnaliser votre apprentissage** : améliorez votre expérience d’apprentissage en mettant à jour votre profil Experience League avec les rôles, secteurs d’activité, produits et niveaux d’expérience qui correspondent le mieux à vos besoins.</li><li>**Recommandations** : affichez le contenu d’apprentissage recommandé en fonction de votre activité récente.</li><li>**Consultations récentes** : utilisez la section [!UICONTROL Consultations récentes] pour revenir rapidement au contenu récemment consulté, tel que la documentation et les vidéos.</li><li>**Ressources d’apprentissage** : utilisez le panneau [!UICONTROL Toutes les ressources d’apprentissage] pour accéder aux tutoriels, à la documentation, à la communauté, aux événements et aux certifications.</li><li>**Nouveautés** : consultez la section [!UICONTROL Nouveautés] pour obtenir un flux du contenu le plus récent sur Experience League.</li><li>**Regarder des événements passés à la demande** : regardez des diffusions en direct enregistrées précédemment sur les produits phares, des cas d’utilisation et des tutoriels avec la section [!UICONTROL Regarder des événements passés à la demande].</li></ul><br> ![Page d’accueil personnalisée sur Experience League.](../2025/assets/april/personalized-home-page.png "Page d’accueil personnalisée sur Experience League."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -129,18 +128,6 @@ Interrogez des données dans le lac de données Adobe Experience Platform à l
 | Enregistrer les sorties de prédiction de modèle à l’aide de CRÉER UN TABLEAU et INSÉRER DANS | [Enregistrez les sorties de prédiction sélectionnées dans de nouveaux tableaux à l’aide de CRÉER UN TABLEAU EN FONCTION DE LA SÉLECTION ou insérez-les dans les tableaux existants à l’aide d’INSÉRER DANS LA SÉLECTION](../../query-service/advanced-statistics/models.md#predict). Si la sélection de colonnes améliorée est activée, des résultats intermédiaires tels que des vecteurs de caractéristiques et des probabilités peuvent également être conservés avec les prédictions finales. Pour consulter des exemples d’utilisation, consultez la [documentation sur la syntaxe SQL](../../query-service/sql/syntax.md#create-table-as-select). |
 
 Pour plus d’informations sur [!DNL Query Service], consultez la vue d’ensemble [[!DNL Query Service] ](../../query-service/home.md).
-
-## Profil client en temps réel {#profile}
-
-Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Le profil client en temps réel offre une vue holistique de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le Profil vous permet de consolider vos données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
-
-| Fonctionnalité | Description |
-| ------- | ----------- |
-| Expiration des données de profils pseudonymes | Gérez l’expiration de vos données de profil pseudonyme dans le tableau de bord Profil. Pour en savoir plus sur cette fonctionnalité et les profils pseudonymes, veuillez lire la section [Guide d’expiration des données de profil pseudonyme](../../profile/pseudonymous-profiles.md). |
-
-{style="table-layout:auto"}
-
-Pour en savoir plus sur le profil client en temps réel, lisez d’abord la [présentation des profils](../../profile/home.md).
 
 ## Sandbox {#sandboxes}
 
