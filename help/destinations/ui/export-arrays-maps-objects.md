@@ -3,9 +3,9 @@ title: Exporter des tableaux, des mappages et des objets à partir de Real-Time 
 type: Tutorial
 description: Découvrez comment exporter des tableaux, des mappages et des objets de Real-Time CDP vers des destinations d’espace de stockage.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f7ff10dd6489842adb8de49b3f8634c20d77cc71
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1077'
 ht-degree: 13%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 13%
 >
 >La fonctionnalité d’exportation de tableaux et d’autres objets complexes vers des destinations d’espace de stockage est généralement disponible pour les destinations suivantes : [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md).
 >
->De plus, vous pouvez exporter des champs de type mappage vers les destinations suivantes : [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [API HTTP](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md).
+>De plus, vous pouvez exporter des champs de type mappage vers les destinations suivantes : [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [API HTTP](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md).
 
 
 Découvrez comment exporter des tableaux, des mappages et des objets de Real-Time CDP vers des [destinations d’espace de stockage](/help/destinations/catalog/cloud-storage/overview.md). De plus, vous pouvez exporter des champs de type mappage vers des [destinations d’entreprise](/help/destinations/destination-types.md#advanced-enterprise-destinations) et des [destinations de personnalisation Edge limitées](/help/destinations/destination-types.md#edge-personalization-destinations). Lisez ce document pour comprendre le workflow d’exportation, les cas d’utilisation activés par cette fonctionnalité et les limites connues. Consultez le tableau ci-dessous pour comprendre les fonctionnalités disponibles par type de destination.
@@ -28,7 +28,7 @@ Découvrez comment exporter des tableaux, des mappages et des objets de Real-Tim
 | Destinations de stockage dans le cloud existantes personnalisées créées par les partenaires (destinations personnalisées basées sur des fichiers créées via Destination SDK) | Non |
 | Destinations d’entreprise (Amazon Kinesis, Azure Event Hubs, API HTTP) | Partiellement. Vous pouvez sélectionner et exporter des objets de type map à l’étape de mapping du workflow d’activation. |
 | Destinations de streaming (par exemple : Facebook, Braze, le ciblage par liste de clients de Google, etc.) | Non |
-| Destinations de personnalisation Edge (Adobe Target) | Partiellement. Vous pouvez sélectionner et exporter des objets de type map à l’étape de mapping du workflow d’activation. |
+| Destinations de personnalisation Edge | Non |
 
 {style="table-layout:auto"}
 
@@ -69,7 +69,7 @@ organizations = [{
 
 En plus des tableaux, vous pouvez également exporter des mappages et des objets d’Experience Platform vers la destination d’espace de stockage de votre choix. Pour en savoir plus sur les [mappages](/help/xdm/ui/fields/map.md) et [objets](/help/xdm/ui/fields/object.md), consultez Experience Platform.
 
-## Conditions préalables {#prerequisites}
+## Prérequis {#prerequisites}
 
 [Connectez-vous](/help/destinations/ui/connect-destination.md) à une destination d’espace de stockage souhaitée, suivez les [étapes d’activation pour les destinations d’espace de stockage](/help/destinations/ui/activate-batch-profile-destinations.md) et accédez à l’étape [mappage](/help/destinations/ui/activate-batch-profile-destinations.md#mapping). Lors de la connexion à la destination cloud souhaitée, vous devez activer le bouton (bascule) **[!UICONTROL Exporter des tableaux, des mappages]** des objets . Pour plus d’informations, reportez-vous à la section ci-dessous.
 
