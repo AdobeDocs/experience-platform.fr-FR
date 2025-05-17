@@ -1,35 +1,67 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;MySQL;mysql;My sql;My SQL
-solution: Experience Platform
 title: Présentation du connecteur MySQL Source
 description: Découvrez comment connecter MySQL à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
+last-substantial-update: 2025-05-17T00:00:00Z
 exl-id: a18e8e69-880f-4bee-b339-726091d6f858
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 7a5dae76c5b58b302b4f3295efc17f40dbb9b18b
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 45%
+source-wordcount: '485'
+ht-degree: 3%
 
 ---
 
-# Connecteur MySQL
+# [!DNL MySQL]
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
+[!DNL MySQL] est un système de gestion de base de données relationnelle open source utilisé pour stocker et gérer des données structurées. Il organise les données en tables et utilise le langage SQL (Structured Query Language) pour interroger et mettre à jour les informations. [!DNL MySQL] est largement utilisé dans les applications web, prend en charge plusieurs plateformes et est connu pour sa vitesse, sa fiabilité et sa facilité d’utilisation. Il est idéal pour tout, des petits sites web aux systèmes d’entreprise à grande échelle.
 
-[!DNL Experience Platform] prend en charge l’ingestion de données provenant d’une base de données tierce. [!DNL Experience Platform] pouvez vous connecter à différents types de bases de données, telles que Relational, NoSQL ou Data Warehouse. La prise en charge des fournisseurs de base de données inclut MySQL.
+Vous pouvez utiliser la source de [!DNL MySQL] pour connecter votre compte et ingérer les données de votre base de données [!DNL MySQL] vers Adobe Experience Platform.
 
-## Liste autorisée d’adresses IP
+## Prérequis {#prerequisites}
 
-Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page [Liste autorisée d’adresses IP](../../ip-address-allow-list.md) pour plus d’informations.
+Lisez les sections suivantes pour terminer la configuration requise avant de connecter votre compte [!DNL MySQl] à Experience Platform.
 
-La documentation ci-dessous fournit des informations sur la connexion de MySQL à [!DNL Experience Platform] à l’aide d’API ou de l’interface utilisateur :
+### Liste autorisée d’adresses IP
 
-## Connecter MySQL à [!DNL Experience Platform] à l’aide d’API
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform sur Azure ou Amazon Web Services (AWS). Pour plus d’informations, consultez le guide sur la [liste autorisée des adresses IP pour se connecter à Experience Platform sur Azure et AWS](../../ip-address-allow-list.md).
 
-- [Créer une connexion de base MySQL à l’aide de l’API Flow Service](../../tutorials/api/create/databases/mysql.md)
+### S’authentifier auprès d’Experience Platform sur Azure {#azure}
+
+Vous pouvez utiliser l’authentification par clé de compte ou l’authentification de base pour connecter votre base de données [!DNL MySQL] à Experience Platform sur Azure.
+
+>[!BEGINTABS]
+
+>[!TAB Authentification de la clé de compte]
+
+Fournissez des valeurs pour les informations d’identification suivantes afin de connecter votre base de données [!DNL MySQL] à Experience Platform à l’aide de l’authentification par clé de compte.
+
+| Informations d’identification | Description |
+| --- | --- |
+| `connectionString` | Chaîne de connexion [!DNL MySQL] associée à votre compte. Le modèle de chaîne de connexion [!DNL MySQL] est : `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL MySQL] est `26d738e0-8963-47ea-aadf-c60de735468a`. |
+
+Pour plus d’informations, consultez la [[!DNL MySQL] documentation sur les chaînes de connexion](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).
+
+>[!TAB  Authentification de base ]
+
+Fournissez des valeurs pour les informations d’identification suivantes afin de connecter votre base de données [!DNL MySQL] à Experience Platform à l’aide de l’authentification de base.
+
+| Informations d’identification | Description |
+| --- | --- |
+| `server` | Nom ou adresse IP de la base de données [!DNL MySQL]. |
+| `database` | Nom de la base de données [!DNL MySQL] à laquelle vous souhaitez vous connecter. |
+| `username` | Nom d’utilisateur associé à l’authentification de la base de données [!DNL MySQL]. |
+| `password` | Mot de passe associé à l’authentification de la base de données [!DNL MySQL]. |
+| `sslMode` | Méthode [!DNL Secure Sockets Layer] (SSL) à appliquer à la connexion. Les valeurs disponibles sont les suivantes : <ul><li>`DISABLED` : utilisez cette option pour désactiver SSL. Si votre serveur nécessite une configuration SSL, la connexion échoue</li><li>`PREFERRED` : utilisez cette option pour préférer les connexions SSL, étant donné qu’elles sont prises en charge par le serveur. Cette option permet également les connexions non SSL.</li><li>`REQUIRED` : utilisez cette option pour rendre les connexions SSL obligatoires. Si le serveur ne prend pas en charge SSL, les connexions échouent.</li><li>`Verify-Ca` : utilisez cette option pour vérifier les certificats du serveur lors de l’échec des connexions si le serveur ne prend pas en charge SSL.</li><li>`Verify Identity` : utilisez cette option pour vérifier les certificats de serveur portant le nom de l’hôte lors de l’échec des connexions si le serveur ne prend pas en charge SSL.</li></ul> |
+
+>[!ENDTABS]
+
+## Connexion de [!DNL MySQL] à Experience Platform à l’aide d’API
+
+- [Connecter votre base  [!DNL MySQL]  données à l’aide de l’API Flow Service](../../tutorials/api/create/databases/mysql.md)
 - [Explorer des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
 - [Créer un flux de données pour une source de base de données à l’aide de l’API Flow Service](../../tutorials/api/collect/database-nosql.md)
 
-## Connecter MySQL à [!DNL Experience Platform] à l’aide de l’interface utilisateur
+## Connecter MySQL à Experience Platform à l’aide de l’interface utilisateur
 
-- [Créer une connexion source MySQL dans l’interface utilisateur](../../tutorials/ui/create/databases/mysql.md)
+- [Connecter votre base  [!DNL MySQL]  données à Experience Platform à l’aide de l’interface utilisateur](../../tutorials/ui/create/databases/mysql.md)
 - [Créer un flux de données pour une connexion source de base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)

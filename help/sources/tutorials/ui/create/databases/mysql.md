@@ -1,20 +1,17 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;mysql;MySQL
-solution: Experience Platform
-title: Création d’une connexion Source MySQL dans l’interface utilisateur
-type: Tutorial
-description: Découvrez comment créer une connexion source MySQL à l’aide de l’interface utilisateur de Adobe Experience Platform.
+title: Connecter MySQL à Experience Platform à l’aide de l’interface utilisateur
+description: Découvrez comment connecter votre base de données MySQL à Experience Platform à l’aide de l’interface utilisateur.
 exl-id: 75e74bde-6199-4970-93d2-f95ec3a59aa5
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 659af23c6d05f184b745e13ab8545941f3892e7e
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 37%
+source-wordcount: '540'
+ht-degree: 16%
 
 ---
 
 # Créer une connexion source [!DNL MySQL] dans l’interface utilisateur
 
-Les connecteurs Source de Adobe Experience Platform permettent d’ingérer des données provenant de l’extérieur selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour créer une connexion source [!DNL MySQL] à l’aide de l’interface utilisateur de Adobe Experience Platform.
+Lisez ce guide pour savoir comment connecter votre base de données [!DNL MySQL] à Adobe Experience Platform à l’aide de l’espace de travail des sources dans l’interface utilisateur d’Experience Platform.
 
 ## Prise en main
 
@@ -29,36 +26,62 @@ Si vous disposez déjà d’une connexion [!DNL MySQL], vous pouvez ignorer le r
 
 ### Collecter les informations d’identification requises
 
-Pour accéder à votre compte [!DNL MySQL] sur [!DNL Experience Platform], vous devez fournir la valeur suivante :
+Lisez la [[!DNL MySQL] présentation](../../../../connectors/databases/mysql.md#prerequisites) pour plus d’informations sur l’authentification.
 
-| Informations d’identification | Description |
-| ---------- | ----------- |
-| `connectionString` | Chaîne de connexion [!DNL MySQL] associée à votre compte. Le modèle de chaîne de connexion [!DNL MySQL] est : `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. Vous pouvez en savoir plus sur les chaînes de connexion et sur la manière de les obtenir en lisant le [[!DNL MySQL] document](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html). |
+## Parcourir le catalogue des sources
 
-## Connecter votre compte [!DNL MySQL]
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Choisissez une catégorie ou utilisez la barre de recherche pour trouver votre source.
 
-Une fois les informations d’identification requises collectées, vous pouvez suivre les étapes ci-dessous pour lier votre compte [!DNL MySQL] à [!DNL Experience Platform].
+Pour vous connecter à [!DNL MySQL], accédez à la catégorie *[!UICONTROL Bases de données]*, sélectionnez la vignette source **[!UICONTROL MySQL]**, puis sélectionnez **[!UICONTROL Configurer]**.
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Sources]**. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
+>[!TIP]
+>
+>Les sources du catalogue affichent l’option **[!UICONTROL Configurer]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Ajouter des données]**.
 
-Dans la catégorie **[!UICONTROL Bases de données]**, sélectionnez **[!UICONTROL MySQL]**. Si vous utilisez ce connecteur pour la première fois, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter des données]** pour créer un connecteur [!DNL MySQL].
+![Le catalogue des sources avec la carte source MySQL sélectionnée.](../../../../images/tutorials/create/my-sql/catalog.png)
 
-![](../../../../images/tutorials/create/my-sql/catalog.png)
+## Utiliser un compte existant {#existing}
 
-La page **[!UICONTROL Se connecter à MySQL]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]** puis sélectionnez le compte [!DNL MySQL] à utiliser.
 
-### Nouveau compte
+![Interface des comptes existants dans le workflow des sources avec « Compte existant » sélectionné.](../../../../images/tutorials/create/my-sql/existing.png)
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**.  Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification [!DNL MySQL]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion]** puis patientez quelques instants le temps d’établir la nouvelle connexion.
+## Créer un nouveau compte {#new}
 
-![](../../../../images/tutorials/create/my-sql/new.png)
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** puis indiquez un nom et éventuellement ajoutez une description pour votre compte.
 
-### Compte existant
+![Nouvelle interface de compte dans le workflow des sources avec un nom de compte et une description facultative fournis.](../../../../images/tutorials/create/my-sql/new.png)
 
-Pour connecter un compte existant, sélectionnez le compte [!DNL MySQL] auquel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+### Se connecter à Experience Platform sur Azure {#azure}
 
-![](../../../../images/tutorials/create/my-sql/existing.png)
+Vous pouvez connecter votre base de données [!DNL MySQL] à Experience Platform sur Azure à l’aide de la clé de compte ou de l’authentification de base.
 
-## Étapes suivantes
+>[!BEGINTABS]
 
-En suivant ce tutoriel, vous avez établi une connexion à votre compte MySQL. Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données dans [!DNL Experience Platform]](../../dataflow/databases.md).
+>[!TAB Authentification de la clé de compte]
+
+Pour utiliser l’authentification par clé de compte, sélectionnez **[!UICONTROL Authentification par clé de compte]**, fournissez votre [chaîne de connexion](../../../../connectors/databases/mysql.md#azure), puis sélectionnez **[!UICONTROL Se connecter à la source]**.
+
+![Nouvelle interface de compte dans le workflow des sources avec « Authentification par clé de compte » sélectionné.](../../../../images/tutorials/create/my-sql/account-key.png)
+
+>[!TAB  Authentification de base ]
+
+Pour utiliser l’authentification de base, sélectionnez **[!UICONTROL Authentification de base]**, indiquez les valeurs de vos [informations d’authentification](../../../../connectors/databases/mysql.md#azure), puis sélectionnez **[!UICONTROL Se connecter à la source]**.
+
+![Nouvelle interface de compte dans le workflow des sources avec « Authentification de base » sélectionnée.](../../../../images/tutorials/create/my-sql/basic-auth.png)
+
+>[!ENDTABS]
+
+### Connexion à Experience Platform sur Amazon Web Services (AWS) {#aws}
+
+>[!AVAILABILITY]
+>
+>Cette section s’applique aux implémentations d’Experience Platform s’exécutant sur Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](../../../../../landing/multi-cloud.md).
+
+Pour créer un compte [!DNL MySQL] et vous connecter à Experience Platform sur AWS, vérifiez que vous vous trouvez dans un sandbox VA6, puis fournissez les informations d’identification [nécessaires pour l’authentification](../../../../connectors/databases/mysql.md#aws).
+
+![Nouvelle interface de compte dans le workflow des sources pour se connecter à AWS.](../../../../images/tutorials/create/my-sql/aws.png)
+
+## Créer un flux de données pour les données [!DNL MySQL]
+
+Maintenant que vous avez correctement connecté votre base de données [!DNL MySQL], vous pouvez [créer un flux de données et ingérer les données de votre base de données dans Experience Platform](../../dataflow/databases.md).
