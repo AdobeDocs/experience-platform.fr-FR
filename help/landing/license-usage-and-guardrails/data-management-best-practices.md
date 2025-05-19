@@ -2,10 +2,10 @@
 title: Bonnes pratiques relatives aux droits de licence de gestion des données
 description: Découvrez les bonnes pratiques à suivre et les outils que vous pouvez utiliser pour mieux gérer vos droits de licence avec Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a14d94a87eb433dd0bb38e5bf3c9c3a04be9a5c6
 workflow-type: tm+mt
-source-wordcount: '2154'
-ht-degree: 66%
+source-wordcount: '2338'
+ht-degree: 54%
 
 ---
 
@@ -15,13 +15,34 @@ Adobe Experience Platform est un système ouvert qui transforme vos données e
 
 Experience Platform propose des licences qui déterminent le nombre de profils que vous pouvez créer et la quantité de données que vous pouvez importer. Compte tenu de la capacité à importer n’importe quelle source, volume ou historique de données, il est possible que vous dépassiez vos droits de licence à mesure que les volumes de données augmentent.
 
-Ce document décrit les bonnes pratiques à suivre et les outils que vous pouvez utiliser pour mieux gérer vos droits de licence avec Adobe Experience Platform.
+Lisez ce guide pour connaître les bonnes pratiques à suivre et les outils que vous pouvez utiliser pour mieux gérer vos droits de licence avec Experience Platform.
 
-## Présentation du stockage des données dans Adobe Experience Platform
+## Résumé des fonctionnalités {#summary-of-features}
 
-Experience Platform se compose principalement de deux référentiels de données : le [!DNL data lake] et le magasin de profils.
+Utilisez les bonnes pratiques et les outils décrits dans ce document pour mieux gérer les droits d’utilisation de licence dans Experience Platform. Ce document est mis à jour au fur et à mesure que des fonctionnalités supplémentaires sont publiées pour offrir visibilité et contrôle à tous les clients Experience Platform.
 
-Le **[!DNL data lake]** remplit principalement les fonctions suivantes :
+Le tableau suivant présente la liste des fonctionnalités actuellement disponibles afin de mieux gérer les droits d’utilisation de licence.
+
+| Fonctionnalité | Description |
+| --- | --- |
+| [Interface utilisateur du jeu de données - Conservation des données d’événement d’expérience](../../catalog/datasets/user-guide.md#data-retention-policy) | Configurez une période de conservation fixe pour les données dans le lac de données et le magasin de profils. Les enregistrements sont supprimés à la fin de la période de conservation configurée. |
+| [Activation/désactivation de jeux de données pour le profil client en temps réel](../../catalog/datasets/user-guide.md) | Activez ou désactivez l’ingestion du jeu de données dans le profil client en temps réel. |
+| [Expirations d’événements d’expérience dans la banque de profils](../../profile/event-expirations.md) | Appliquez un délai d’expiration pour tous les événements ingérés dans un jeu de données activé pour Profile. Contactez votre équipe de compte Adobe ou l’assistance clientèle pour activer cette fonctionnalité. |
+| [Filtres de préparation de données Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) | Appliquez des filtres [!DNL Kafka] pour exclure les données inutiles de l’ingestion. |
+| [Filtres de connecteur source Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Appliquez des filtres de connexion source Audience Manager pour exclure les données inutiles de l’ingestion. |
+| [Filtres de données de transfert d’événement](../../tags/ui/event-forwarding/overview.md) | Appliquez des filtres [!DNL Kafka] côté serveur pour exclure les données inutiles de l’ingestion.  Pour plus d’informations, consultez la documentation sur les [règles de balise](../../tags/ui/managing-resources/rules.md). |
+| [Interface utilisateur du tableau de bord d’utilisation de la licence](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Surveillez la consommation des produits Experience Platform par votre entreprise par rapport aux droits de licence. Accédez à des instantanés d’utilisation quotidienne, à des tendances prédictives et à des données détaillées au niveau du sandbox pour prendre en charge la gestion proactive des licences. |
+| [API Dataset Overlap Report](../../profile/tutorials/dataset-overlap-report.md) | Génère les jeux de données qui contribuent le plus à l’audience adressable. |
+| [API Identity Overlap Report](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Génère les espaces de noms d’identité qui contribuent le plus à l’audience adressable. |
+| [Expiration des données de profils pseudonymes](../../profile/pseudonymous-profiles.md) | Configurez les délais d’expiration des données pour les profils pseudonymes et supprimez automatiquement les données de la banque de profils. |
+
+{style="table-layout:auto"}
+
+## Présentation du stockage des données dans Experience Platform
+
+Experience Platform se compose principalement de deux référentiels de données : le lac de données et le magasin de profils.
+
+Le lac de données remplit principalement les fonctions suivantes :
 
 * Il sert de zone de test pour l’intégration des données dans Experience Platform.
 * Il sert de stockage de données à long terme pour toutes les données Experience Platform.
@@ -40,9 +61,9 @@ Le **magasin de profils** permet de créer les profils des clients et remplit pr
 
 Lorsque vous acquérez une licence pour Experience Platform, vous recevez des droits d’utilisation de licence qui varient selon le SKU :
 
-**[!DNL Addressable Audience]** : le nombre total de profils clients autorisés par contrat dans Experience Platform, y compris les profils connus et pseudonymes.
+**[!DNL Addressable Audience]** : nombre total de profils client autorisés par contrat dans Experience Platform, y compris les profils connus et pseudonymes.
 
-**[!DNL Total Data Volume]** : quantité totale de données disponibles pour le service de profil Adobe Experience Platform à utiliser dans les workflows d’engagement.
+**[!DNL Total Data Volume]** : quantité totale de données disponibles pour le profil client en temps réel à utiliser dans les workflows d’engagement.
 
 La disponibilité de ces mesures et la définition spécifique de chacune d’elles varient en fonction des licences achetées par l’entreprise.
 
@@ -123,7 +144,7 @@ Le magasin de profils se compose des composants suivants :
 
 {style="table-layout:auto"}
 
-#### Rapports sur la composition du magasin de profils
+### Rapports sur la composition du magasin de profils
 
 Plusieurs rapports sont disponibles pour vous aider à comprendre la composition de la banque de profils. Ces rapports vous aident à prendre des décisions éclairées sur la définition des expirations d’événements d’expérience et sur leur emplacement, afin d’optimiser l’utilisation de votre licence :
 
@@ -132,13 +153,17 @@ Plusieurs rapports sont disponibles pour vous aider à comprendre la composition
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
-#### Expirations des données de profils pseudonymes {#pseudonymous-profile-expirations}
+### Expirations des données de profils pseudonymes {#pseudonymous-profile-expirations}
 
-Cette fonctionnalité vous permet de supprimer automatiquement les profils pseudonymes obsolètes de la banque de profils. Pour plus d’informations sur cette fonctionnalité, veuillez lire la [ Présentation de l’expiration des données de profils pseudonymes ](../../profile/pseudonymous-profiles.md).
+Utilisez la fonctionnalité d’expiration des données de profils pseudonymes pour supprimer automatiquement de la banque de profils les données qui ne sont plus valides ou utiles pour vos cas d’utilisation. L’expiration des données de profils pseudonymes supprime les enregistrements d’événement et de profil. Par conséquent, ce paramètre réduira les volumes d’audiences adressables. Pour plus d’informations sur cette fonctionnalité, veuillez lire la [ Présentation de l’expiration des données de profils pseudonymes ](../../profile/pseudonymous-profiles.md).
 
-#### Expirations des événements d’expérience {#event-expirations}
+### Interface utilisateur du jeu de données - Conservation du jeu de données d’événement d’expérience {#data-retention}
 
-Cette fonctionnalité vous permet de supprimer automatiquement les données comportementales d’un jeu de données activé pour Profile qui n’a plus de valeur pour vos cas d’utilisation. Consultez la présentation sur l’[expiration des événements d’expérience](../../profile/event-expirations.md) pour plus d’informations sur le fonctionnement de ce processus une fois qu’il est activé pour un jeu de données.
+Configurez les paramètres d’expiration et de conservation des jeux de données pour imposer une période de conservation fixe pour vos données dans le lac de données et le magasin de profils. Une fois la période de conservation terminée, les données sont supprimées. L’expiration des données d’événements d’expérience supprime uniquement les événements et non les données de classe de profil, ce qui réduit le [ volume total de données ](total-data-volume.md) dans les mesures d’utilisation de licence. Pour plus d’informations, consultez le guide sur la [définition d’une politique de conservation des données](../../catalog/datasets/user-guide.md#data-retention-policy).
+
+### Expirations des événements d’expérience de profil {#event-expirations}
+
+Configurez les délais d’expiration pour supprimer automatiquement les données comportementales de votre jeu de données activé pour Profile une fois qu’elles ne sont plus utiles pour vos cas d’utilisation. Lisez la présentation sur l’[Expiration des événements d’expérience](../../profile/event-expirations.md) pour plus d’informations.
 
 ## Résumé des bonnes pratiques pour la conformité de l’utilisation des licences {#best-practices}
 
@@ -147,24 +172,6 @@ Vous trouverez ci-dessous une liste des bonnes pratiques recommandées pour gara
 * Utilisez le [tableau de bord d’utilisation de la licence](../../dashboards/guides/license-usage.md) pour suivre et surveiller les tendances d’utilisation des clients. Vous pouvez ainsi anticiper les potentiels dépassements qui peuvent survenir.
 * Configurez les [filtres d’ingestion](#ingestion-filters) en identifiant les événements requis pour les cas d’utilisation de segmentation et de personnalisation. Cela vous permet d’envoyer uniquement les événements importants nécessaires aux cas d’utilisation.
 * Assurez-vous que vous n’avez [activé que les jeux de données pour le profil](#ingestion-filters) qui sont nécessaires aux d’utilisation de segmentation et de personnalisation.
-* Configurez les options [Expiration des événements d’expérience](#event-expirations) et [Expiration des données de profils pseudonymes](#pseudonymous-profile-expirations) pour les données haute fréquence, telles que les données web.
+* Configurez les options [Expiration des événements d’expérience](../../catalog/datasets/user-guide.md#data-retention-policy) et [Expiration des données de profils pseudonymes](../../profile/pseudonymous-profiles.md) pour les données haute fréquence, telles que les données web.
+* Configurez des politiques de conservation [durée de vie (TTL) pour les jeux de données d’événements d’expérience](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) dans le lac de données pour supprimer automatiquement les enregistrements obsolètes et optimiser l’utilisation du stockage en fonction de vos droits de licence.
 * Vérifiez régulièrement les [rapports sur la composition de profils](#profile-store-composition-reports) pour comprendre la composition de votre banque de profils. Cela vous permet de comprendre les sources de données qui contribuent le plus à la consommation de l’utilisation des licences.
-
-## Résumé et disponibilité des fonctionnalités {#feature-summary}
-
-Les bonnes pratiques et outils décrits dans ce document vous aideront à mieux gérer les droits d’utilisation de licence dans Adobe Experience Platform. Ce document sera mis à jour lorsque des fonctionnalités supplémentaires seront disponibles pour offrir visibilité et contrôle à tous les clients Experience Platform.
-
-Le tableau suivant présente la liste des fonctionnalités actuellement disponibles afin de mieux gérer les droits d’utilisation de licence.
-
-| Fonctionnalité | Description |
-| --- | --- |
-| [Activation/désactivation de jeux de données pour le profil](../../catalog/datasets/user-guide.md) | Activez ou désactivez l’ingestion du jeu de données dans le profil client en temps réel. |
-| [Expirations des événements d’expérience](../../profile/event-expirations.md) | Appliquez un délai d’expiration pour tous les événements ingérés dans un jeu de données activé pour Profile. Contactez votre équipe de compte Adobe ou l’assistance clientèle pour activer cette fonctionnalité. |
-| [Filtres de préparation de données Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Appliquez des filtres [!DNL Kafka] pour exclure les données inutiles de l’ingestion |
-| [Filtres de connecteur source Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Appliquez des filtres de connexion source Audience Manager pour exclure les données inutiles de l’ingestion. |
-| [Filtres de données de transfert d’événement](../../tags/ui/event-forwarding/overview.md) | Appliquez des filtres [!DNL Kafka] côté serveur pour exclure les données inutiles de l’ingestion.  Pour plus d’informations, consultez la documentation sur les [règles de balise](../../tags/ui/managing-resources/rules.md). |
-| [Interface utilisateur du tableau de bord d’utilisation de la licence](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Affichez un instantané des données liées aux licences de l’entreprise pour Experience Platform. |
-| [API Dataset Overlap Report](../../profile/tutorials/dataset-overlap-report.md) | Génère les jeux de données qui contribuent le plus à l’audience adressable. |
-| [API Identity Overlap Report](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Génère les espaces de noms d’identité qui contribuent le plus à l’audience adressable. |
-
-{style="table-layout:auto"}
