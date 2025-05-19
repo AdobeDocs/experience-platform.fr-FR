@@ -3,10 +3,10 @@ title: Présentation du connecteur Source de Snowflake
 description: Découvrez comment connecter Snowflake à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 573691db9f71fcbe8b5edd4ea647d718ab3784e4
 workflow-type: tm+mt
-source-wordcount: '694'
-ht-degree: 13%
+source-wordcount: '751'
+ht-degree: 12%
 
 ---
 
@@ -18,11 +18,15 @@ ht-degree: 13%
 >* Par défaut, la source de [!DNL Snowflake] interprète `null` comme une chaîne vide. Contactez votre représentant Adobe pour vous assurer que vos valeurs `null` sont correctement écrites comme `null` dans Adobe Experience Platform.
 >* Pour qu’Experience Platform ingère des données, les fuseaux horaires de toutes les sources de lots basées sur un tableau doivent être configurés au format UTC. Le seul horodatage pris en charge pour la source [!DNL Snowflake] est TIMESTAMP_NTZ avec l’heure UTC.
 
+>[!WARNING]
+>
+>L’authentification de base (ou authentification par clé de compte) de la source [!DNL Snowflake] sera abandonnée en novembre 2025. Vous devez passer à l’authentification par paire de clés pour continuer à utiliser la source et à ingérer des données de votre base de données vers Experience Platform. Pour plus d’informations sur l’obsolescence, consultez le [[!DNL Snowflake] guide des bonnes pratiques sur la réduction des risques liés à la compromission des informations d’identification](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
+
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
 Experience Platform prend en charge l’ingestion de données provenant d’une base de données tierce. Experience Platform peut se connecter à différents types de bases de données tels que des entrepôts relationnels, NoSQL ou de données. La prise en charge des fournisseurs de base de données inclut [!DNL Snowflake].
 
-## Conditions préalables {#prerequisites}
+## Prérequis {#prerequisites}
 
 Cette section décrit les tâches de configuration que vous devez effectuer avant de connecter votre source [!DNL Snowflake] à Experience Platform.
 
