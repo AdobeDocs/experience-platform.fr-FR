@@ -5,9 +5,9 @@ title: Traitement des demandes d’accès à des informations personnelles dans 
 type: Documentation
 description: Adobe Experience Platform Privacy Service traite les demandes des clients en matière dʼaccès, d’opt-out de vente ou de suppression de leurs données personnelles conformément aux nombreuses réglementations en matière de confidentialité. Ce document couvre les concepts essentiels liés au traitement des demandes d’accès à des informations personnelles pour le profil client en temps réel.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 6eaa384feb1b84e6081f03cb4de9687ad26f437d
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1757'
 ht-degree: 24%
 
 ---
@@ -67,7 +67,7 @@ En outre, le tableau `include` de la payload de requête doit inclure les valeur
 
 >[!NOTE]
 >
->Pour plus d’informations sur les effets de l’utilisation de `ProfileService` et de `identity` dans le tableau de `include`[&#128279;](#profile-v-identity) reportez-vous à la section sur les requêtes de profil et requêtes d’identité plus loin dans ce document.
+>Pour plus d’informations sur les effets de l’utilisation de `ProfileService` et de `identity` dans le tableau de `include`](#profile-v-identity) reportez-vous à la section sur les [requêtes de profil et requêtes d’identité plus loin dans ce document.
 
 La requête suivante crée une tâche de confidentialité pour les données d’un seul client dans la banque de [!DNL Profile]. Deux valeurs d’identité sont fournies pour le client dans le tableau `userIDs` ; une utilisant l’espace de noms d’identité `Email` standard et l’autre à l’aide d’un espace de noms d’identité `Customer_ID` personnalisé. Elle inclut également la valeur de produit pour [!DNL Profile] (`ProfileService`) dans le tableau `include` :
 
@@ -200,10 +200,10 @@ Selon que vous ayez également inclus Identity Service (`identity`) et le lac de
 
 | Produits inclus | Effets |
 | --- | --- |
-| `ProfileService` uniquement | Le profil est immédiatement supprimé dès qu’Experience Platform envoie la confirmation de réception de la demande de suppression. Cependant, le graphique d’identités du profil reste et le profil peut potentiellement être reconstruit lorsque de nouvelles données avec les mêmes identités sont ingérées. Les données associées au profil restent également dans le lac de données. |
-| `ProfileService` et `identity` | Le profil et son graphique d’identité associé sont immédiatement supprimés dès qu’Experience Platform envoie la confirmation de réception de la demande de suppression. Les données associées au profil restent dans le lac de données. |
-| `ProfileService` et `aepDataLake` | Le profil est immédiatement supprimé dès qu’Experience Platform envoie la confirmation de réception de la demande de suppression. Cependant, le graphique d’identités du profil reste et le profil peut potentiellement être reconstruit lorsque de nouvelles données avec les mêmes identités sont ingérées.<br><br>Lorsque le produit de lac de données répond que la demande a été reçue et est en cours de traitement, les données associées au profil sont supprimées de manière réversible et ne sont donc accessibles par aucun service de [!DNL Experience Platform]. Une fois la tâche terminée, les données sont complètement supprimées du lac de données. |
-| `ProfileService`, `identity` et `aepDataLake` | Le profil et son graphique d’identité associé sont immédiatement supprimés dès qu’Experience Platform envoie la confirmation de réception de la demande de suppression.<br><br>Lorsque le produit de lac de données répond que la demande a été reçue et est en cours de traitement, les données associées au profil sont supprimées de manière réversible et ne sont donc accessibles par aucun service de [!DNL Experience Platform]. Une fois la tâche terminée, les données sont complètement supprimées du lac de données. |
+| `ProfileService` uniquement | Le profil est immédiatement considéré comme supprimé dès que Privacy Service envoie la confirmation que la demande de suppression a été effectuée. Cependant, le graphique d’identités du profil reste et le profil peut potentiellement être reconstruit lorsque de nouvelles données avec les mêmes identités sont ingérées. Les données non personnellement identifiables associées au profil restent également dans le lac de données. |
+| `ProfileService` et `identity` | Le profil et son graphique d’identité associé sont immédiatement supprimés dès que Privacy Service envoie la confirmation que la demande de suppression a été effectuée. Les données non personnellement identifiables associées au profil restent également dans le lac de données. |
+| `ProfileService` et `aepDataLake` | Le profil est immédiatement supprimé dès que Privacy Service envoie la confirmation que la demande de suppression a été effectuée. Cependant, le graphique d’identités du profil reste et le profil peut potentiellement être reconstruit lorsque de nouvelles données avec les mêmes identités sont ingérées.<br><br>Lorsque le produit de lac de données répond que la demande a été reçue et est en cours de traitement, les données associées au profil sont supprimées de manière réversible et ne sont donc accessibles par aucun service de [!DNL Experience Platform]. Une fois la tâche terminée, les données sont complètement supprimées du lac de données. |
+| `ProfileService`, `identity` et `aepDataLake` | Le profil et son graphique d’identité associé sont immédiatement supprimés dès que Privacy Service envoie la confirmation que la demande de suppression a été effectuée.<br><br>Lorsque le produit de lac de données répond que la demande a été reçue et est en cours de traitement, les données associées au profil sont supprimées de manière réversible et ne sont donc accessibles par aucun service de [!DNL Experience Platform]. Une fois la tâche terminée, les données sont complètement supprimées du lac de données. |
 
 Reportez-vous à la [[!DNL Privacy Service] documentation](../privacy-service/home.md#monitor) pour plus d’informations sur le suivi des statuts des tâches.
 

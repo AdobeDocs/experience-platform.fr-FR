@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Découvrez les performances et les mécanismes de sécurisation appliqués par le système pour les données de profil et la segmentation, afin de garantir une utilisation optimale des fonctionnalités de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cfc221250a9c8f91b16aa1d4572263ecaf4eeccc
 workflow-type: tm+mt
-source-wordcount: '2617'
+source-wordcount: '2622'
 ht-degree: 52%
 
 ---
@@ -98,7 +98,7 @@ Les mécanismes de sécurisation suivants se rapportent à la taille des donnée
 | Taille maximale du fragment de profil | 50 Mo | Mécanisme de sécurisation mis en œuvre par le système | **La taille maximale d’un fragment de profil est de 50 Mo.** La segmentation, les exportations et les recherches peuvent échouer pour tout [fragment de profil](#profile-fragments) qui dépasse 50 Mo. |
 | Taille maximale de stockage du profil | 50 Mo | Mécanisme de sécurisation des performances | **La taille maximale d’un profil stocké est de 50 Mo.** Ajouter de nouveaux [fragments de profil](#profile-fragments) dans un profil de plus de 50 Mo affecte les performances du système. Par exemple, un profil peut contenir un fragment unique de 50 Mo ou plusieurs fragments répartis sur plusieurs jeux de données avec une taille totale de 50 Mo. Toute tentative de stockage d’un profil avec un fragment de plus de 50 Mo ou plusieurs fragments dont la taille totale est supérieure à 50 Mo aura une incidence sur les performances du système. |
 | Nombre de lots Profile ou ExperienceEvent ingérés par jour | 90 | Mécanisme de sécurisation des performances | **Le nombre maximal de lots Profile ou ExperienceEvent ingérés par jour est de 90.** Cela signifie que le total combiné des lots Profile et ExperienceEvent ingérés chaque jour ne peut pas dépasser 90. L’ingestion de lots supplémentaires affectera les performances du système. |
-| Nombre d’événements d’expérience par enregistrement de profil | 5 000 | Mécanisme de sécurisation des performances | **Le nombre maximal d’événements d’expérience par enregistrement de profil est de 5 000.** profils avec plus de 5 000 événements d’expérience ne seront **pas** pris en compte pour la segmentation. |
+| Nombre d’événements d’expérience par enregistrement de profil | 5 000 | Mécanisme de sécurisation des performances | **Le nombre maximal d’événements d’expérience par enregistrement de profil est de 5 000.** profils avec plus de 5 000 ExperienceEvents n’utiliseront que la **dernière** 5 000 ExperienceEvents lorsqu’ils seront utilisés avec la segmentation. |
 
 {style="table-layout:auto"}
 
@@ -188,7 +188,7 @@ Plusieurs suites de rapports peuvent être activées pour Profil si tous les con
 Consultez la documentation suivante pour plus d’informations sur les autres mécanismes de sécurisation des services Experience Platform, sur les informations de latence de bout en bout et les informations de licence dans les documents de description du produit Real-Time CDP :
 
 * [Mécanismes de sécurisation de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=fr#end-to-end-latency-diagrams) pour divers services Experience Platform.
-* [Real-Time Customer Data Platform (édition B2C - packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
