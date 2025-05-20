@@ -3,9 +3,9 @@ keywords: connexion facebook;connexion facebook;destinations facebook;facebook;i
 title: Connexion Facebook
 description: Activez les profils dans vos campagnes Facebook pour cibler votre audience et effectuer des personnalisat ions ou encore des suppressions reposant sur les e-mails hachés.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: a2420f86e650ce1ca8a5dc01d9a29548663d3f7c
 workflow-type: tm+mt
-source-wordcount: '2091'
+source-wordcount: '2137'
 ht-degree: 28%
 
 ---
@@ -136,13 +136,13 @@ Avant de pouvoir utiliser l’espace de noms `Extern_ID` pour envoyer des donné
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
 La vidéo ci-dessous montre également les étapes à suivre pour configurer une destination [!DNL Facebook] et activer des audiences.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411785/?quality=12&learn=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -157,7 +157,15 @@ La vidéo ci-dessous montre également les étapes à suivre pour configurer une
 
 ### Actualiser les informations d’identification d’authentification {#refresh-authentication-credentials}
 
-Les jetons Facebook expirent tous les 60 jours. Une fois le jeton expiré, les exportations de données vers la destination cessent de fonctionner. Pour éviter cette situation, réauthentifiez-vous en procédant comme suit :
+Les jetons d’authentification Facebook expirent tous les 60 jours. Une fois le jeton expiré, les exportations de données vers la destination cessent de fonctionner.
+
+Vous pouvez surveiller les dates d’expiration de votre jeton à partir de la colonne **[!UICONTROL Date d’expiration du compte]** dans les onglets **[!UICONTROL Comptes]** ou **[!UICONTROL Parcourir]**.
+
+![Colonne de date d’expiration du jeton de compte Facebook dans l’onglet Parcourir ](../../assets/catalog/social/facebook/account-expiration-browse.png)
+
+![Colonne de date d’expiration du jeton de compte Facebook dans l’onglet Comptes ](../../assets/catalog/social/facebook/account-expiration-accounts.png)
+
+Pour éviter que l’expiration du jeton ne provoque des interruptions dans vos flux de données d’activation, réauthentifiez-vous en procédant comme suit :
 
 1. Accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Comptes]**
 2. (Facultatif) Utilisez les filtres disponibles sur la page pour afficher uniquement les comptes Facebook.
@@ -214,8 +222,8 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 

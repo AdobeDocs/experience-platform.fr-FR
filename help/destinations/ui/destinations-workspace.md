@@ -3,10 +3,10 @@ keywords: platform;destinations;espace de travail des destinations;espace de tra
 title: Espace de travail des destinations
 description: 'L’espace de travail des destinations se compose de cinq sections : Vue d’ensemble, Catalogue, Parcourir, Comptes et Vue du système. Elles sont décrites dans les sections ci-dessous.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: a2420f86e650ce1ca8a5dc01d9a29548663d3f7c
 workflow-type: tm+mt
-source-wordcount: '1233'
-ht-degree: 79%
+source-wordcount: '1300'
+ht-degree: 75%
 
 ---
 
@@ -69,9 +69,9 @@ L’onglet **[!UICONTROL Comptes]** vous montre les détails des connexions que 
 
 >[!TIP]
 >
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la commande ![Activer](/help/images/icons/data-add.png)**[!UICONTROL Activer &#x200B;]**/**[!UICONTROL &#x200B; Activer les audiences &#x200B;]**/**[!UICONTROL &#x200B; Exporter les jeux de données &#x200B;]**&#x200B;pour exporter des audiences ou des jeux de données vers cette destination.
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la commande ![Modifier les détails](/help/images/icons/edit.png)**[!UICONTROL Modifier les détails &#x200B;]**&#x200B;pour [mettre à jour](update-accounts.md) les détails d’un compte de destination existant.
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la ![commande Supprimer](/help/images/icons/delete.png)**[!UICONTROL Supprimer &#x200B;]**&#x200B;pour [supprimer](delete-destination-account.md) un compte de destination existant.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la commande ![Activer](/help/images/icons/data-add.png)**[!UICONTROL Activer ]**/**[!UICONTROL  Activer les audiences ]**/**[!UICONTROL  Exporter les jeux de données ]**pour exporter des audiences ou des jeux de données vers cette destination.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la commande ![Modifier les détails](/help/images/icons/edit.png)**[!UICONTROL Modifier les détails ]**pour [mettre à jour](update-accounts.md) les détails d’un compte de destination existant.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la ![commande Supprimer](/help/images/icons/delete.png)**[!UICONTROL Supprimer ]**pour [supprimer](delete-destination-account.md) un compte de destination existant.
 
 ![Onglet Comptes](../assets/ui/workspace/destination-account-options.png)
 
@@ -82,6 +82,7 @@ L’onglet **[!UICONTROL Comptes]** vous montre les détails des connexions que 
 | [!UICONTROL Nom d’utilisateur] | Nom d’utilisateur que vous avez sélectionné dans le [workflow de connexion à la destination](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Connexions] | Représente le nombre de flux de données de destination uniques réussis et connectés avec des informations de base créées pour une destination. |
 | [!UICONTROL Date d’autorisation] | La date à laquelle la connexion à cette destination a été autorisée. |
+| [!UICONTROL Date d’expiration] | Date d’expiration de l’autorisation de connexion à cette destination. <br>**Important** : cette colonne est actuellement disponible uniquement pour la connexion [Facebook](../catalog/social/facebook.md). |
 
 {style="table-layout:auto"}
 
@@ -91,22 +92,24 @@ L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles v
 
 >[!TIP]
 >
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Activer les audiences](/help/images/icons/data-add.png)**[!UICONTROL Activer &#x200B;]**&#x200B;pour exporter des audiences ou des jeux de données vers cette destination.
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Supprimer](/help/images/icons/delete.png)**[!UICONTROL Supprimer &#x200B;]**&#x200B;pour [supprimer](delete-destinations.md) une connexion existante à une destination.
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Affichage dans la surveillance](/help/images/icons/monitoring.png)**[!UICONTROL Affichage dans la surveillance &#x200B;]**&#x200B;pour afficher les informations d’activation de cette destination dans le [tableau de bord de la surveillance](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![S’abonner aux alertes ](/help/images/icons/alert-add.png)**[!UICONTROL S’abonner aux alertes &#x200B;]**&#x200B;pour vous abonner aux alertes de flux de données de destination. Vous pouvez vous abonner à des alertes pour recevoir des messages concernant l’état, la réussite ou l’échec de votre exécution de flux. Consultez [S’abonner aux alertes de destination en contexte](alerts.md) pour des informations détaillées sur les alertes de flux de données de destination.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Activer les audiences](/help/images/icons/data-add.png)**[!UICONTROL Activer ]**pour exporter des audiences ou des jeux de données vers cette destination.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Supprimer](/help/images/icons/delete.png)**[!UICONTROL Supprimer ]**pour [supprimer](delete-destinations.md) une connexion existante à une destination.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Affichage dans la surveillance](/help/images/icons/monitoring.png)**[!UICONTROL Affichage dans la surveillance ]**pour afficher les informations d’activation de cette destination dans le [tableau de bord de la surveillance](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![S’abonner aux alertes ](/help/images/icons/alert-add.png)**[!UICONTROL S’abonner aux alertes ]**pour vous abonner aux alertes de flux de données de destination. Vous pouvez vous abonner à des alertes pour recevoir des messages concernant l’état, la réussite ou l’échec de votre exécution de flux. Consultez [S’abonner aux alertes de destination en contexte](alerts.md) pour des informations détaillées sur les alertes de flux de données de destination.
 
 ![Onglet Parcourir](../assets/ui/workspace/browse-tab.png)
 
 | Élément | Description |
 |---------|----------|
 | Nom | Le nom que vous avez fourni pour votre flux d’activation vers cette destination. La même colonne comprend deux commandes : [!UICONTROL Activer] et [!UICONTROL Supprimer la destination]. |
-| [!UICONTROL Statut de la dernière exécution de flux] | Statut de la dernière exécution du flux de données. Consultez [Afficher les détails de la destination](destination-details-page.md) pour plus d’informations sur les exécutions de flux de données. |
-| [!UICONTROL Date d’exécution du dernier flux] | Date et heure de la dernière exécution du flux de données. Consultez [Afficher les détails de destination](destination-details-page.md) pour plus d’informations sur les exécutions de flux de données. |
+| Type de données | Type de données pris en charge par la connexion de destination. Types de données pris en charge : <ul><li>**[!UICONTROL Clients]**</li><li>**[!UICONTROL Prospects]**</li><li>**[!UICONTROL Comptes]**</li><li>**[!UICONTROL Jeux de données]**</li></ul> |
+| [!UICONTROL Statut de la dernière exécution du flux de données] | Statut de la dernière exécution du flux de données. Consultez [Afficher les détails de la destination](destination-details-page.md) pour plus d’informations sur les exécutions de flux de données. |
+| [!UICONTROL Date de la dernière exécution du flux de données] | Date et heure de la dernière exécution du flux de données. Consultez [Afficher les détails de destination](destination-details-page.md) pour plus d’informations sur les exécutions de flux de données. |
 | [!UICONTROL Destination] | La plateforme de destination que vous avez sélectionnée pour votre flux d’activation. |
+| [!UICONTROL Date d’expiration du compte] | Date d’expiration de l’autorisation de connexion à cette destination. <br>**Important** : cette colonne est actuellement disponible uniquement pour la connexion [Facebook](../catalog/social/facebook.md). |
 | [!UICONTROL Type de connexion] | Représente le type de connexion à votre compartiment de stockage ou à votre destination. <ul><li>Pour les destinations de marketing par e-mail : il peut s’agir de S3, FTP ou [!DNL Azure Blob].</li><li>Pour les destinations publicitaires en temps réel : serveur à serveur.</li><li>Pour les destinations en flux continu : il peut s’agir de [!DNL Azure Event Hubs] ou [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL Nom d’utilisateur] | Les informations d’identification de compte que vous avez sélectionnées pour le flux de destination. |
-| [!UICONTROL Données d’activation] | Indique le nombre d’audiences activées vers cette destination. Sélectionnez cette commande pour en savoir plus sur les audiences activées. Pour plus d’informations sur les audiences activées[&#128279;](/help/destinations/ui/destination-details-page.md#activation-data) reportez-vous à la section Données d’activation de la page de détails de la destination. |
+| [!UICONTROL Données d’activation] | Indique le nombre d’audiences activées vers cette destination. Sélectionnez cette commande pour en savoir plus sur les audiences activées. Pour plus d’informations sur les audiences activées](/help/destinations/ui/destination-details-page.md#activation-data) reportez-vous à la section [Données d’activation de la page de détails de la destination. |
 | [!UICONTROL Créé] | La date et l’heure (UTC) de création du flux d’activation vers la destination. Sélectionnez les flèches haut/bas pour trier les flux d’activation en fonction du plus récent ou du plus ancien. |
 | [!UICONTROL État] | `Enabled` ou `Disabled`. Indique si les données sont activées vers cette destination. |
 
