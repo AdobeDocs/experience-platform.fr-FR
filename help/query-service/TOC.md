@@ -5,10 +5,10 @@ breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 5e8dccf91e8c83b4734b363539cfb911b5c2ae29
+source-git-commit: 8b33d9231aeebd454fd614a81b356a9e971b757c
 workflow-type: tm+mt
-source-wordcount: '404'
-ht-degree: 70%
+source-wordcount: '409'
+ht-degree: 69%
 
 ---
 
@@ -110,6 +110,7 @@ ht-degree: 70%
    - [Journaux de requête](ui/query-logs.md)
    - [Surveiller les requêtes planifiées](ui/monitor-queries.md)
    - [Guide sur les informations d’identification](ui/credentials.md)
+   - [Migration des informations d’identification JWT vers OAuth](ui/migrate-jwt-to-oauth.md)
    - [Générer des jeux de données de sortie à partir des résultats de requête](ui/create-datasets.md)
 - API Query Service {#api}
    - [Prise en main](api/getting-started.md)
