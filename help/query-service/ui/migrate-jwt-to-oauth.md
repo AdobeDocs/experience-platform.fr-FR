@@ -95,4 +95,4 @@ Oui, mais seulement si vous êtes un administrateur. Seuls les administrateurs d
 
 ## Étapes suivantes {#next-steps}
 
-Passez en revue chaque information d’identification non expirante dans l’onglet [!UICONTROL  Informations d’identification ] et migrez-la individuellement avant le 30 juin 2025. Pour toute question ou assistance, contactez votre représentant de compte Adobe.
+Passez en revue chaque information d’identification non expirante dans l’onglet [!UICONTROL &#x200B; Informations d’identification &#x200B;] et migrez-la individuellement avant le 30 juin 2025. Pour toute question ou assistance, contactez votre représentant de compte Adobe.
