@@ -67,7 +67,7 @@ En outre, le tableau `include` de la payload de requête doit inclure les valeur
 
 >[!NOTE]
 >
->Pour plus d’informations sur les effets de l’utilisation de `ProfileService` et de `identity` dans le tableau de `include`](#profile-v-identity) reportez-vous à la section sur les [requêtes de profil et requêtes d’identité plus loin dans ce document.
+>Pour plus d’informations sur les effets de l’utilisation de `ProfileService` et de `identity` dans le tableau de `include`[&#128279;](#profile-v-identity) reportez-vous à la section sur les requêtes de profil et requêtes d’identité plus loin dans ce document.
 
 La requête suivante crée une tâche de confidentialité pour les données d’un seul client dans la banque de [!DNL Profile]. Deux valeurs d’identité sont fournies pour le client dans le tableau `userIDs` ; une utilisant l’espace de noms d’identité `Email` standard et l’autre à l’aide d’un espace de noms d’identité `Customer_ID` personnalisé. Elle inclut également la valeur de produit pour [!DNL Profile] (`ProfileService`) dans le tableau `include` :
 
