@@ -7,7 +7,7 @@ exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 source-git-commit: c8c04d79584093c8d13ffa205849e78ab04c0fc1
 workflow-type: tm+mt
 source-wordcount: '1885'
-ht-degree: 3%
+ht-degree: 6%
 
 ---
 
@@ -46,7 +46,7 @@ La section **[!UICONTROL Informations d’identification arrivant à expiration]
 >
 >![Onglet Paramètres d’Admin Console avec Confidentialité et sécurité, Paramètres d’authentification et Durée de vie maximale de la session mis en surbrillance.](../images/ui/credentials/max-session-life.png)
 >
->Consultez la documentation d’aide d’Adobe pour plus d’informations sur les [ Paramètres avancés ](https://helpx.adobe.com/fr/enterprise/using/authentication-settings.html#advanced-settings) proposés par Admin Console.
+>Consultez la documentation d’aide d’Adobe pour plus d’informations sur les [ Paramètres avancés ](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) proposés par Admin Console.
 
 ### Connexion aux données Customer Journey Analytics dans les sessions de requête {#connect-to-customer-journey-analytics}
 
@@ -66,16 +66,16 @@ Pour accéder à vos données Customer Journey Analytics dans Power BI ou Tablea
 >
 >Lorsque vous connectez Power BI ou Tableau à Customer Journey Analytics, le droit « sessions simultanées » de Query Service est utilisé. Si des sessions et des requêtes supplémentaires sont requises, il est possible d’acheter un module complémentaire de pack d’utilisateurs de requêtes ad hoc supplémentaire pour obtenir cinq sessions simultanées supplémentaires et une requête simultanée supplémentaire.
 
-Vous pouvez également accéder à vos données Customer Journey Analytics directement à partir de Query Editor ou de l’interface de ligne de commande Postgres. Pour ce faire, référencez la base de données `cja` lors de l’écriture de votre requête. Pour plus d’informations sur l’écriture, l’exécution et l’enregistrement de requêtes[&#128279;](./user-guide.md#query-authoring) consultez le guide de création de requêtes Query Editor).
+Vous pouvez également accéder à vos données Customer Journey Analytics directement à partir de Query Editor ou de l’interface de ligne de commande Postgres. Pour ce faire, référencez la base de données `cja` lors de l’écriture de votre requête. Pour plus d’informations sur l’écriture, l’exécution et l’enregistrement de requêtes](./user-guide.md#query-authoring) consultez le guide de création de requêtes [Query Editor).
 
-Consultez le guide d’extension [BI](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/cja-dataviews/bi-extension) pour obtenir des instructions complètes sur l’accès à vos vues de données Customer Journey Analytics avec SQL.
+Consultez le guide d’extension [BI](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) pour obtenir des instructions complètes sur l’accès à vos vues de données Customer Journey Analytics avec SQL.
 
-## Informations d’identification sans date d’expiration {#non-expiring-credentials}
+## Informations d’identification n’expirant pas {#non-expiring-credentials}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryservice_credentials_migratenonexpiringcredentials"
->title="Migration vers les informations d’identification de serveur à serveur OAuth"
->abstract="Cette migration est requise, car les informations d’identification JWT cesseront de fonctionner après le 30 juin 2025. Elle prend entre 30 et 40 secondes et ne peut pas être annulée une fois démarrée. Toutes les tâches et intégrations existantes continueront à fonctionner avec OAuth après la migration. Vous pouvez quitter cet écran et revenir à tout moment pour vérifier le statut."
+>title="Migrez vers les informations d’identification OAuth serveur à serveur."
+>abstract="Cette migration est requise, car les informations d’identification JWT cesseront de fonctionner après le 30 juin 2025. Elle prend entre 30 et 40 secondes et ne peut pas être annulée une fois démarrée. Toutes les tâches et intégrations existantes continueront à fonctionner avec OAuth après la migration. Vous pouvez quitter cet écran et revenir à tout moment pour vérifier le statut."
 
 Vous pouvez utiliser des informations d’identification non expirantes pour configurer une connexion plus permanente à un client externe.
 
@@ -159,7 +159,7 @@ Le tableau ci-dessous décrit les paramètres généralement requis pour établi
 
 >[!NOTE]
 >
->Lors de la connexion à un hôte à l’aide d’informations d’identification non expirantes, il est toujours nécessaire d’utiliser tous les paramètres répertoriés dans la section [!UICONTROL &#x200B; INFORMATIONS D’IDENTIFICATION EXPIRANTES &#x200B;], à l’exception du mot de passe et du nom d’utilisateur.
+>Lors de la connexion à un hôte à l’aide d’informations d’identification non expirantes, il est toujours nécessaire d’utiliser tous les paramètres répertoriés dans la section [!UICONTROL  INFORMATIONS D’IDENTIFICATION EXPIRANTES ], à l’exception du mot de passe et du nom d’utilisateur.
 >Le format de saisie de votre nom d’utilisateur et de votre mot de passe utilise des valeurs séparées par deux points, comme illustré dans cet exemple de `username:{your_username}` et de `password:{password_string}`.
 
 | Paramètre | Description | Exemple |
