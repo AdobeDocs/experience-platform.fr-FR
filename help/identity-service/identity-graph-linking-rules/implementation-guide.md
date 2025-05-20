@@ -1,23 +1,15 @@
 ---
-title: Guide de mise en œuvre des règles de liaison des graphiques d’identités
-description: Découvrez les étapes recommandées à suivre lors de l’implémentation de vos données avec les configurations de règles de liaison de graphiques d’identités .
+title: Guide De Mise En Œuvre Des Règles De Liaison Des Graphiques D’Identités
+description: Découvrez les étapes recommandées à suivre lors de l’implémentation de vos données avec les configurations des règles de liaison de graphique d’identités.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 1a6ca508f0f5e95ddad9014d6507a7a829592673
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '1958'
-ht-degree: 9%
+source-wordcount: '1864'
+ht-degree: 6%
 
 ---
 
-# Guide de mise en œuvre des règles de liaison des graphiques d’identités
-
->[!AVAILABILITY]
->
->Les règles de liaison du graphique d’identités sont actuellement en disponibilité limitée et sont accessibles à tous les clients dans les sandbox de développement.
->
->* **Exigences d’activation** : la fonctionnalité reste inactive jusqu’à ce que vous configuriez et enregistriez votre [!DNL Identity Settings]. En l’absence de cette configuration, le système continuera à fonctionner normalement, sans changement de comportement.
->* **Notes importantes** : au cours de cette phase de disponibilité limitée, la segmentation Edge peut produire des résultats inattendus en termes d’appartenance à un segment. Cependant, la segmentation par lots et en flux continu (streaming) fonctionnera comme prévu.
->* **Étapes suivantes** : pour plus d’informations sur la manière d’activer cette fonctionnalité dans les sandbox de production, contactez l’équipe Adobe en charge des comptes.
+# Guide de mise en œuvre pour [!DNL Identity Graph Linking Rules]
 
 >[!IMPORTANT]
 >
@@ -29,7 +21,7 @@ Esquisse détaillée :
 
 1. [Remplir les conditions préalables à l’implémentation](#prerequisites-for-implementation)
 2. [Créer les espaces de noms d’identité nécessaires](#namespace)
-3. [Utiliser l’outil de simulation de graphiques pour vous familiariser avec l’algorithme d’optimisation des identités](#graph-simulation)
+3. [Utilisez l’outil de simulation graphique pour vous familiariser avec l’algorithme d’optimisation des identités](#graph-simulation)
 4. [Utilisez l’interface utilisateur des paramètres d’identité pour désigner vos espaces de noms uniques et configurer le classement des priorités de vos espaces de noms](#identity-settings)
 5. [Créer un schéma de modèle de données d’expérience (XDM)](#schema)
 6. [Créer un jeu de données](#dataset)
@@ -203,7 +195,7 @@ Si vos données le nécessitent, vous devez d’abord créer les espaces de noms
 
 Accédez ensuite à l’[outil de simulation graphique](./graph-simulation.md) dans l’espace de travail de l’interface utilisateur d’Identity Service. Vous pouvez utiliser l’outil de simulation de graphiques pour simuler des graphiques d’identités, créés avec différentes configurations de priorité d’espace de noms et d’espace de noms uniques.
 
-En créant des configurations différentes, vous pouvez utiliser l’outil de simulation de graphique pour découvrir et mieux comprendre comment l’algorithme d’optimisation des identités et certaines configurations peuvent affecter le comportement de votre graphique.
+En créant différentes configurations, vous pouvez utiliser l’outil de simulation de graphique pour découvrir et mieux comprendre comment l’algorithme d’optimisation des identités et certaines configurations peuvent affecter le comportement de votre graphique.
 
 ## Configurer les paramètres d’identité {#identity-settings}
 
@@ -300,7 +292,7 @@ Cet exemple montre également que Tom et Summer sont deux entités de personne d
 Pour plus d’informations sur [!DNL Identity Graph Linking Rules], consultez la documentation suivante :
 
 * [Vue d’ensemble d’[!DNL Identity Graph Linking Rules]](./overview.md)
-* [Algorithme d’optimisation de l’identité](./identity-optimization-algorithm.md)
+* [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
 * [Exemples de configurations de graphes](./example-configurations.md)
 * [Résolution des problèmes et FAQ](./troubleshooting.md)
 * [Priorité d’espace de noms](./namespace-priority.md)

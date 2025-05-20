@@ -1,11 +1,11 @@
 ---
 title: Règles de liaison des graphiques d’identités
-description: Découvrez les règles de liaison des graphiques d’identités dans Identity Service.
+description: Découvrez les règles de liaison du graphique d’identités dans Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 0aefcfbbbed675a08d9e3023b9f667ec59874e46
 workflow-type: tm+mt
-source-wordcount: '1497'
-ht-degree: 12%
+source-wordcount: '1547'
+ht-degree: 5%
 
 ---
 
@@ -14,33 +14,89 @@ ht-degree: 12%
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
 >title="Règles de liaison des graphiques d’identités"
->abstract="Pour éviter ces fusions indésirables, vous pouvez utiliser les configurations fournies par le biais des règles de liaison de graphiques d’identités et permettre une personnalisation précise de vos utilisateurs et utilisatrices."
+>abstract="Pour éviter ces fusions indésirables, vous pouvez utiliser les configurations fournies par le biais des règles de liaison des graphiques d’identités et permettre une personnalisation précise pour vos utilisateurs."
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->Les règles de liaison du graphique d’identités sont actuellement en disponibilité limitée et sont accessibles à tous les clients dans les sandbox de développement.
->
->* **Exigences d’activation** : la fonctionnalité reste inactive jusqu’à ce que vous configuriez et enregistriez votre [!DNL Identity Settings]. En l’absence de cette configuration, le système continuera à fonctionner normalement, sans changement de comportement.
->* **Notes importantes** : au cours de cette phase de disponibilité limitée, la segmentation Edge peut produire des résultats inattendus en termes d’appartenance à un segment. Cependant, la segmentation par lots et en flux continu (streaming) fonctionnera comme prévu.
->* **Étapes suivantes** : pour plus d’informations sur la manière d’activer cette fonctionnalité dans les sandbox de production, contactez l’équipe Adobe en charge des comptes.
+>Contactez l’équipe chargée de votre compte Adobe si vous disposez déjà d’un sandbox qui nécessite que les graphiques réduits soient déréduits (« corrigés ») après l’activation des paramètres d’identité.
 
 Avec le service d’identités Adobe Experience Platform et le profil client en temps réel, il est facile de supposer que vos données sont parfaitement ingérées et que tous les profils fusionnés représentent une seule personne par le biais d’un identifiant de personne, tel qu’un CRMID. Cependant, il existe des scénarios possibles où certaines données pourraient essayer de fusionner plusieurs profils disparates en un seul profil (« réduction du graphique »). Pour éviter ces fusions indésirables, vous pouvez utiliser les configurations fournies par l’intermédiaire de [!DNL Identity Graph Linking Rules] et permettre une personnalisation précise de vos utilisateurs.
-
-Regardez la vidéo suivante pour plus d’informations sur l’utilisation de [!DNL Identity Graph Linking Rules] :
-
->[!VIDEO](https://video.tv.adobe.com/v/3448274/?learn=on&enablevpops&captions=fre_fr)
 
 ## Commencer
 
 Les documents suivants sont essentiels à la compréhension des [!DNL Identity Graph Linking Rules].
 
-* [Algorithme d’optimisation de l’identité](./identity-optimization-algorithm.md)
+* [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
 * [Guide de mise en œuvre](./implementation-guide.md)
 * [Exemples de configurations de graphes](./example-configurations.md)
 * [Résolution des problèmes et FAQ](./troubleshooting.md)
 * [Priorité d’espace de noms](./namespace-priority.md)
 * [Interface utilisateur de simulation de graphique](./graph-simulation.md)
 * [Interface utilisateur des paramètres d’identité](./identity-settings-ui.md)
+
+## Bibliothèque vidéo
+
+Regardez les vidéos suivantes pour en savoir plus sur certains aspects fondamentaux des règles de liaison des graphiques d’identités.
+
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity Graph Linking Rules: Overview">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" title="Règles De Liaison Du Graphique D’Identités : Présentation" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3429845/?format=jpeg&nocache=1732633205780" alt="Règles De Liaison Du Graphique D’Identités : Présentation"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" target="_blank" rel="referrer" title="Règles De Liaison Du Graphique D’Identités : Présentation">Règles de liaison de graphiques d’identités : présentation</a>
+                    </p>
+                    <p class="is-size-6">Regardez cette vidéo pour un aperçu des règles de liaison du graphique d’identités et découvrez comment utiliser cette fonctionnalité pour empêcher la réduction du graphique.</p>
+                </div>
+                <div style="display: flex; flex-direction; row;">
+                  <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
+                  </a>
+                  <a href="./overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Lecture</span>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity Graph Linking Rules: Identity Settings">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" title="Règles De Liaison Du Graphique D’Identités : Paramètres Des Identités" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441066/?format=jpeg&nocache=1732633205785" alt="Règles De Liaison Du Graphique D’Identités : Paramètres Des Identités"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" target="_blank" rel="referrer" title="Règles De Liaison Du Graphique D’Identités : Paramètres Des Identités">Règles De Liaison Du Graphique D’Identités : Paramètres Des Identités</a>
+                    </p>
+                    <p class="is-size-6">Regardez cette vidéo pour découvrir comment configurer vos paramètres d’identité et créer des graphiques d’identités et des profils client de haute qualité pour les applications Adobe Experience Platform telles que Real-Time CDP, Adobe Journey Optimizer et Customer Journey Analytics.</p>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                  <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
+                  </a>
+                  <a href="identity-settings-ui.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Lecture</span>
+                  </a>
+                </div>            
+            </div>
+        </div>
+    </div>
+</div>
 
 ## Scénarios de réduction de graphe {#graph-collapse-scenarios}
 
@@ -107,12 +163,12 @@ Avec [!DNL Identity Graph Linking Rules], vous pouvez :
 | Terminologie | Description |
 | --- | --- |
 | Espace de noms unique | Un espace de noms unique est un espace de noms d’identité configuré pour être distinct dans le contexte d’un graphique d’identités. Vous pouvez configurer un espace de noms pour qu’il soit unique à l’aide de l’interface utilisateur. Une fois qu’un espace de noms est défini comme unique, un graphique ne peut avoir qu’une seule identité contenant cet espace de noms. |
-| Priorité d’espace de noms | La priorité des espaces de noms fait référence à l’importance relative des espaces de noms par rapport aux autres. La priorité de l’espace de noms peut être configurée via l’interface utilisateur. Vous pouvez classer les espaces de noms dans un graphique d’identités donné. Une fois activée, la priorité des noms est utilisée dans divers scénarios, comme la saisie pour l’algorithme d’optimisation des identités et la détermination de l’identité principale pour les fragments d’événement d’expérience. |
-| Algorithme d’optimisation de l’identité | L’algorithme d’optimisation des identités garantit que les instructions créées en configurant un espace de noms unique et des priorités d’espace de noms sont appliquées dans un graphique d’identités donné. |
+| Priorité d’espace de noms | La priorité des espaces de noms fait référence à l’importance relative des espaces de noms par rapport aux autres. La priorité de l’espace de noms peut être configurée via l’interface utilisateur. Vous pouvez classer les espaces de noms dans un graphique d’identités donné. Une fois activée, la priorité des noms est utilisée dans divers scénarios, comme la saisie de l’algorithme d’optimisation des identités et la détermination de l’identité principale des fragments d’événement d’expérience. |
+| Algorithme d’optimisation des identités | L’algorithme d’optimisation des identités garantit que les directives créées en configurant un espace de noms et des priorités d’espace de noms uniques sont appliquées dans un graphique d’identités donné. |
 
 ### Espace de noms unique {#unique-namespace}
 
-Vous pouvez configurer un espace de noms comme étant unique à l’aide de l’espace de travail de l’interface utilisateur des paramètres d’identité. Ce faisant, indique à l’algorithme d’optimisation des identités qu’un graphique donné ne peut avoir qu’une seule identité contenant cet espace de noms unique. Cela empêche la fusion de deux identifiants de personne disparates dans le même graphique.
+Vous pouvez configurer un espace de noms comme étant unique à l’aide de l’espace de travail de l’interface utilisateur des paramètres d’identité. Ce faisant, informe l’algorithme d’optimisation des identités qu’un graphique donné ne peut avoir qu’une seule identité contenant cet espace de noms unique. Cela empêche la fusion de deux identifiants de personne disparates dans le même graphique.
 
 Considérez le scénario suivant :
 
@@ -141,7 +197,7 @@ Les espaces de noms uniques et les priorités des espaces de noms peuvent être 
 
 | | Service d’identités | Profil client en temps réel |
 | --- | --- | --- |
-| Espace de noms unique | Dans Identity Service, l’algorithme d’optimisation des identités fait référence à des espaces de noms uniques pour déterminer les données d’identité ingérées par un graphique d’identités donné. | Les espaces de noms uniques n’affectent pas le profil client en temps réel. |
+| Espace de noms unique | Dans Identity Service, l’algorithme d’optimisation des identités fait référence aux espaces de noms uniques pour déterminer les données d’identité ingérées par un graphique d’identités donné. | Les espaces de noms uniques n’affectent pas le profil client en temps réel. |
 | Priorité d’espace de noms | Dans Identity Service, pour les graphiques comportant plusieurs calques, la priorité de l’espace de noms détermine que les liens appropriés sont supprimés. | Lorsqu’un événement d’expérience est ingéré dans Profile, l’espace de noms avec la priorité la plus élevée devient l’identité principale du fragment de profil. |
 
 * La priorité de l’espace de noms n’affecte pas le comportement du graphique lorsque la limite de 50 identités par graphique est atteinte.
@@ -157,7 +213,7 @@ Pour plus d’informations, consultez le guide sur la [priorité des espaces de 
 
 Pour plus d’informations sur [!DNL Identity Graph Linking Rules], consultez la documentation suivante :
 
-* [Algorithme d’optimisation de l’identité](./identity-optimization-algorithm.md)
+* [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
 * [Guide de mise en œuvre](./implementation-guide.md)
 * [Exemples de configurations de graphes](./example-configurations.md)
 * [Résolution des problèmes et FAQ](./troubleshooting.md)

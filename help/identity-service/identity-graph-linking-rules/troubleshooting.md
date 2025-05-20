@@ -1,23 +1,15 @@
 ---
 title: Guide de dépannage des règles de liaison de graphiques d’identités
-description: Découvrez comment résoudre les problèmes courants des règles de liaison des graphiques d’identités.
+description: Découvrez comment résoudre les problèmes courants dans les règles de liaison des graphiques d’identités.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '3375'
+source-wordcount: '3285'
 ht-degree: 0%
 
 ---
 
 # Guide de dépannage pour [!DNL Identity Graph Linking Rules]
-
->[!AVAILABILITY]
->
->Les règles de liaison du graphique d’identités sont actuellement en disponibilité limitée et sont accessibles à tous les clients dans les sandbox de développement.
->
->* **Exigences d’activation** : la fonctionnalité reste inactive jusqu’à ce que vous configuriez et enregistriez votre [!DNL Identity Settings]. Sans cette configuration, le système continuera à fonctionner normalement, sans changement de comportement.
->* **Remarques importantes** : au cours de cette phase de disponibilité limitée, la segmentation d’Edge peut produire des résultats inattendus en termes d’appartenance à un segment. Cependant, la segmentation par lots et en flux continu fonctionnera comme prévu.
->* **Étapes suivantes** : pour plus d’informations sur la manière d’activer cette fonctionnalité dans les sandbox de production, contactez l’équipe de votre compte Adobe.
 
 Lorsque vous testez et validez des [!DNL Identity Graph Linking Rules], vous pouvez rencontrer des problèmes liés à l’ingestion des données et au comportement du graphique. Lisez ce document pour savoir comment résoudre certains problèmes courants que vous pouvez rencontrer lorsque vous utilisez [!DNL Identity Graph Linking Rules].
 
@@ -266,7 +258,7 @@ ORDER BY timestamp desc
 
 **Étapes de dépannage**
 
-Reportez-vous à la documentation sur l’[algorithme d’optimisation des identités](./identity-optimization-algorithm.md), ainsi que sur les types de structures graphiques pris en charge.
+Reportez-vous à la documentation relative à l’[algorithme d’optimisation des identités](./identity-optimization-algorithm.md), ainsi qu’aux types de structures graphiques pris en charge.
 
 * Lisez le [guide de configuration des graphiques](./example-configurations.md) pour obtenir des exemples de structures de graphique prises en charge.
 * Vous pouvez également lire le [guide d’implémentation](./implementation-guide.md#appendix) pour obtenir des exemples de structures de graphique non prises en charge. Deux scénarios peuvent se produire :
@@ -328,9 +320,9 @@ Vous pouvez utiliser la requête suivante dans le jeu de données d’exportatio
 
 Cette section présente une liste de réponses aux questions fréquentes sur [!DNL Identity Graph Linking Rules].
 
-## Algorithme d’optimisation de l’identité {#identity-optimization-algorithm}
+## Algorithme d’optimisation des identités {#identity-optimization-algorithm}
 
-Lisez cette section pour obtenir des réponses aux questions fréquentes sur l’algorithme d’optimisation des identités [Identity Optimization](./identity-optimization-algorithm.md).
+Lisez cette section pour obtenir des réponses aux questions fréquentes sur l’[algorithme d’optimisation des identités](./identity-optimization-algorithm.md).
 
 ### Je dispose d’un CRMID pour chacune de mes entités commerciales (CRMID B2C, CRMID B2B), mais je n’ai pas d’espace de noms unique pour tous mes profils. Que se passera-t-il si je marque le CRMID B2C et le CRMID B2B comme uniques et active mes paramètres d’identité ?
 
@@ -389,7 +381,7 @@ Non. La priorité de l’espace de noms s’applique uniquement aux jeux de donn
 
 ### Comment cette fonctionnalité fonctionne-t-elle en tandem avec les mécanismes de sécurisation des graphiques d’identités de 50 identités par graphique ? La priorité de l’espace de noms affecte-t-elle ce mécanisme de sécurisation défini par le système ?
 
-L’algorithme d’optimisation des identités est appliqué en premier pour garantir la représentation de l’entité personne. Par la suite, si le graphique tente de dépasser le [ mécanisme de sécurisation des graphiques d’identités ](../guardrails.md) (50 identités par graphique), cette logique est appliquée. La priorité de l’espace de noms n’affecte pas la logique de suppression du mécanisme de sécurisation des 50 identités/graphiques.
+L’algorithme d’optimisation des identités sera appliqué en premier pour garantir la représentation de l’entité personne. Par la suite, si le graphique tente de dépasser le [ mécanisme de sécurisation des graphiques d’identités ](../guardrails.md) (50 identités par graphique), cette logique est appliquée. La priorité de l’espace de noms n’affecte pas la logique de suppression du mécanisme de sécurisation des 50 identités/graphiques.
 
 ## Test
 

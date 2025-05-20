@@ -2,10 +2,10 @@
 title: Guide de l’interface utilisateur de la simulation graphique
 description: Découvrez comment utiliser la simulation de graphiques dans l’interface utilisateur d’Identity Service.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '1563'
-ht-degree: 3%
+source-wordcount: '1446'
+ht-degree: 2%
 
 ---
 
@@ -14,22 +14,13 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphsimulation"
 >title="Simulation de graphes"
->abstract="Simulez des graphiques pour comprendre comment Identity Service lie les identités et comment fonctionne l’algorithme d’optimisation des identités."
+>abstract="Simulez des graphiques pour comprendre comment Identity Service lie les identités et comment fonctionne l’algorithme d’optimisation des identités."
 
->[!AVAILABILITY]
->
->Les règles de liaison du graphique d’identités sont actuellement en disponibilité limitée et sont accessibles à tous les clients dans les sandbox de développement.
->
->* **Exigences d’activation** : la fonctionnalité reste inactive jusqu’à ce que vous configuriez et enregistriez votre [!DNL Identity Settings]. Sans cette configuration, le système continuera à fonctionner normalement, sans changement de comportement.
->* **Remarques importantes** : au cours de cette phase de disponibilité limitée, la segmentation d’Edge peut produire des résultats inattendus en termes d’appartenance à un segment. Cependant, la segmentation par lots et en flux continu fonctionnera comme prévu.
->* **Étapes suivantes** : pour plus d’informations sur la manière d’activer cette fonctionnalité dans les sandbox de production, contactez l’équipe de votre compte Adobe.
->* Votre compte doit disposer de l’autorisation **Afficher le graphique d’identités** pour accéder à l’outil de [!DNL Graph Simulation]. Pour plus d’informations, consultez le guide [ sur les autorisations dans le contrôle d’accès basé sur les attributs](../../access-control/abac/ui/permissions.md).
-
-[!DNL Graph Simulation] est un outil de l’interface utilisateur d’Identity Service que vous pouvez utiliser pour simuler le comportement d’un graphique d’identités selon une combinaison particulière d’identités et la manière dont vous configurez l’algorithme [optimisation des identités](./identity-optimization-algorithm.md).
+[!DNL Graph Simulation] est un outil de l’interface utilisateur d’Identity Service que vous pouvez utiliser pour simuler le comportement d’un graphique d’identités selon une combinaison particulière d’identités et la configuration de l’algorithme [Identity Optimization](./identity-optimization-algorithm.md).
 
 Regardez la vidéo suivante pour plus d’informations sur l’utilisation de l’interface [!DNL Graph Simulation] dans l’espace de travail de l’interface utilisateur d’Identity Service :
 
->[!VIDEO](https://video.tv.adobe.com/v/3444045/?learn=on&enablevpops&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/3444032/?learn=on&enablevpops)
 
 Lisez ce document pour découvrir comment utiliser [!DNL Graph Simulation] pour mieux comprendre le comportement du graphique d’identités et le fonctionnement de l’algorithme du graphique.
 
@@ -186,7 +177,7 @@ Dans l’exemple de graphique ci-dessous, une ligne pointillée existe entre `{E
 Grâce à la lecture de ce document, vous savez désormais comment utiliser l’outil [!DNL Graph Simulation] pour mieux comprendre comment vos données d’identité sont traitées selon un ensemble particulier de règles et de configurations. Pour plus d’informations, consultez les documents suivants :
 
 * [Vue d’ensemble d’[!DNL Identity Graph Linking Rules]](./overview.md)
-* [Algorithme d’optimisation de l’identité](./identity-optimization-algorithm.md)
+* [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
 * [Guide de mise en œuvre](./implementation-guide.md)
 * [Résolution des problèmes et FAQ](./troubleshooting.md)
 * [Exemples de configurations de graphes](./example-configurations.md)

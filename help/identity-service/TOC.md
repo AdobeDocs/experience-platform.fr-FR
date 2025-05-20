@@ -5,10 +5,10 @@ breadcrumb-title: Guide du service d’identités d’Experience Platform
 user-guide-description: Associez les identités des clients, quel que soit l’appareil ou le système utilisé, afin d’offrir des expériences digitales personnalisées.
 feature: Identities
 role: Admin,Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 73%
+ht-degree: 68%
 
 ---
 
@@ -24,8 +24,8 @@ ht-degree: 73%
    - [Suppressions dans le service d’identités](./features/deletion.md)
    - Règles de liaison des graphiques d’identités {#identity-graph-linking-rules}
       - [Présentation des fonctionnalités](./identity-graph-linking-rules/overview.md)
-      - [Algorithme d’optimisation de l’identité](./identity-graph-linking-rules/identity-optimization-algorithm.md)
-      - [Guide de mise en œuvre des règles de liaison des graphiques d’identités](./identity-graph-linking-rules/implementation-guide.md)
+      - [Algorithme d’optimisation des identités](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+      - [Guide de mise en œuvre des règles de liaison de graphiques d’identités](./identity-graph-linking-rules/implementation-guide.md)
       - [Exemples de configurations de graphique](./identity-graph-linking-rules/example-configurations.md)
       - [Résolution des problèmes liés aux règles de liaison des graphiques d’identités](./identity-graph-linking-rules/troubleshooting.md)
       - [Priorité d’espace de noms](./identity-graph-linking-rules/namespace-priority.md)

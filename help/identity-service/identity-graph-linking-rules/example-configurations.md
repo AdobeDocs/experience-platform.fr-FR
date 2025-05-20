@@ -1,10 +1,10 @@
 ---
 title: Exemples de configurations de graphique
-description: Découvrez les scénarios de graphique courants que vous pouvez rencontrer lors de l’utilisation de règles de liaison de graphiques d’identités et de données d’identité.
+description: Découvrez les scénarios de graphique courants que vous pouvez rencontrer lors de l’utilisation de règles de liaison de graphique d’identités et de données d’identité.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '2849'
+source-wordcount: '2759'
 ht-degree: 7%
 
 ---
@@ -15,14 +15,6 @@ ht-degree: 7%
 >id="platform_identities_algorithmconfiguration"
 >title="Configuration de l’algorithme"
 >abstract="Configurez un espace de noms unique et une priorité d’espace de noms adaptée à vos identités ingérées."
-
->[!AVAILABILITY]
->
->Les règles de liaison du graphique d’identités sont actuellement en disponibilité limitée et sont accessibles à tous les clients dans les sandbox de développement.
->
->* **Exigences d’activation** : la fonctionnalité reste inactive jusqu’à ce que vous configuriez et enregistriez votre [!DNL Identity Settings]. Sans cette configuration, le système continuera à fonctionner normalement, sans changement de comportement.
->* **Remarques importantes** : au cours de cette phase de disponibilité limitée, la segmentation d’Edge peut produire des résultats inattendus en termes d’appartenance à un segment. Cependant, la segmentation par lots et en flux continu fonctionnera comme prévu.
->* **Étapes suivantes** : pour plus d’informations sur la manière d’activer cette fonctionnalité dans les sandbox de production, contactez l’équipe de votre compte Adobe.
 
 >[!NOTE]
 >
@@ -771,7 +763,7 @@ CRMID: Tom, ECID: 111
 Pour plus d’informations sur [!DNL Identity Graph Linking Rules], consultez la documentation suivante :
 
 * [Vue d’ensemble d’[!DNL Identity Graph Linking Rules]](./overview.md)
-* [Algorithme d’optimisation de l’identité](./identity-optimization-algorithm.md)
+* [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
 * [Guide de mise en œuvre](./implementation-guide.md)
 * [Résolution des problèmes et FAQ](./troubleshooting.md)
 * [Priorité d’espace de noms](./namespace-priority.md)

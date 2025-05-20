@@ -1,28 +1,20 @@
 ---
-title: Algorithme d’optimisation de l’identité
+title: Algorithme d’optimisation des identités
 description: Découvrez l’algorithme d’optimisation des identités dans Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: df89afb7131c57b9400788ce30c420b9830c022e
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '1617'
-ht-degree: 5%
+source-wordcount: '1527'
+ht-degree: 4%
 
 ---
 
-# Algorithme d’optimisation de l’identité {#identity-optimization-algorithm}
+# Algorithme d’optimisation des identités {#identity-optimization-algorithm}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_uniquenamespace"
 >title="Espace de noms unique"
 >abstract="Un graphe ne peut pas avoir deux identités avec un espace de noms unique. Si un graphe tente de dépasser cette limite, les liens les plus récents sont conservés et les liens les plus anciens sont supprimés."
-
->[!AVAILABILITY]
->
->Les règles de liaison du graphique d’identités sont actuellement en disponibilité limitée et sont accessibles à tous les clients dans les sandbox de développement.
->
->* **Exigences d’activation** : la fonctionnalité reste inactive jusqu’à ce que vous configuriez et enregistriez votre [!DNL Identity Settings]. Sans cette configuration, le système continuera à fonctionner normalement, sans changement de comportement.
->* **Remarques importantes** : au cours de cette phase de disponibilité limitée, la segmentation d’Edge peut produire des résultats inattendus en termes d’appartenance à un segment. Cependant, la segmentation par lots et en flux continu fonctionnera comme prévu.
->* **Étapes suivantes** : pour plus d’informations sur la manière d’activer cette fonctionnalité dans les sandbox de production, contactez l’équipe de votre compte Adobe.
 
 L’algorithme d’optimisation des identités est un algorithme de graphique sur Identity Service qui permet de s’assurer qu’un graphique d’identités est représentatif d’une seule personne et, par conséquent, empêche la fusion indésirable d’identités sur le profil client en temps réel.
 
@@ -117,7 +109,7 @@ Dans cet exemple, l’espace de noms CRMID est désigné comme espace de noms un
 * `timestamp=1` : Jane se connecte à votre site e-commerce à l’aide d’un ordinateur portable. Elle est représentée par son CRMID, et le navigateur web sur l’ordinateur portable est représenté par l’ECID.
 * `timestamp=2` : John se connecte à votre site Web de commerce électronique à l&#39;aide du même ordinateur portable. Il est représenté par son CRMID et le navigateur web qu’il utilise est représenté par le même ECID.
    * Cet événement associe deux CRMID indépendants au même ECID, ce qui dépasse la limite configurée d’un CRMID.
-   * Par conséquent, l’algorithme d’optimisation des identités supprime l’ancien lien, qui est dans ce cas le CRMID de Jane qui était lié au moment de la `timestamp=1`.
+   * Par conséquent, l’algorithme d’optimisation des identités supprime l’ancien lien, qui est dans ce cas le CRMID de Jane lié à `timestamp=1`.
    * Cependant, bien que le CRMID de Jane n’existe plus en tant que graphique sur Identity Service, il persiste toujours en tant que profil sur le profil client en temps réel. En effet, un graphique d’identités doit contenir au moins deux identités liées et, suite à la suppression des liens, le CRMID de Jane ne dispose plus d’une autre identité à lier.
 
 ![shared-device-case-two](../images/identity-settings/shared-device-case-two.png)
@@ -143,7 +135,7 @@ Dans cet exemple, les espaces de noms CRMID et Email sont désignés comme uniqu
    * Cela devient alors une violation de la configuration d’espace de noms unique, car cela crée un graphique unique avec deux espaces de noms CRMID.
    * Par conséquent, l&#39;algorithme d&#39;optimisation des identités supprime l&#39;ancien lien, qui est dans ce cas le lien entre l&#39;identité de Jane avec l&#39;espace de noms CRMID et l&#39;identité avec test<span>@test.
 
-Avec l’algorithme d’optimisation des identités, les valeurs d’identité incorrectes telles que les faux e-mails ou les numéros de téléphone ne se propagent pas dans plusieurs graphiques d’identités différents.
+Avec l’algorithme d’optimisation des identités, les valeurs d’identité incorrectes telles que les faux e-mails ou numéros de téléphone ne se propagent pas dans plusieurs graphiques d’identités différents.
 
 ![message-incorrect](../images/identity-settings/bad-email.png)
 

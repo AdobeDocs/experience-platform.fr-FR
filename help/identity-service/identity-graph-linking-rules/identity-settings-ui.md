@@ -2,22 +2,18 @@
 title: Interface utilisateur des paramètres d’identité
 description: Découvrez comment utiliser l’interface utilisateur des paramètres d’identité.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 44457b95b354e20808c1218ca3c8e698071f0528
+source-git-commit: 0aefcfbbbed675a08d9e3023b9f667ec59874e46
 workflow-type: tm+mt
-source-wordcount: '693'
-ht-degree: 13%
+source-wordcount: '627'
+ht-degree: 2%
 
 ---
 
 # Interface utilisateur des paramètres d’identité
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->Les règles de liaison du graphique d’identités sont actuellement en disponibilité limitée et sont accessibles à tous les clients dans les sandbox de développement.
->
->* **Exigences d’activation** : la fonctionnalité reste inactive jusqu’à ce que vous configuriez et enregistriez votre [!DNL Identity Settings]. En l’absence de cette configuration, le système continuera à fonctionner normalement, sans changement de comportement.
->* **Notes importantes** : au cours de cette phase de disponibilité limitée, la segmentation Edge peut produire des résultats inattendus en termes d’appartenance à un segment. Cependant, la segmentation par lots et en flux continu (streaming) fonctionnera comme prévu.
->* **Étapes suivantes** : pour plus d’informations sur la manière d’activer cette fonctionnalité dans les sandbox de production, contactez l’équipe Adobe en charge des comptes.
+>Contactez l’équipe chargée de votre compte Adobe si vous disposez déjà d’un sandbox qui nécessite que les graphiques réduits soient déréduits (« corrigés ») après l’activation des paramètres d’identité.
 
 Les paramètres d’identité sont une fonctionnalité de l’interface utilisateur du service d’identités Adobe Experience Platform que vous pouvez utiliser pour désigner des espaces de noms uniques et configurer la priorité des espaces de noms.
 
@@ -28,7 +24,7 @@ Lisez ce guide pour savoir comment configurer vos paramètres d’identité dans
 Lisez les documents suivants avant de commencer à utiliser les paramètres d’identité :
 
 * [[!DNL Identity Graph Linking Rules]](./overview.md)
-* [Algorithme d’optimisation de l’identité](./identity-optimization-algorithm.md)
+* [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
 * [Guide de mise en œuvre](./implementation-guide.md)
 * [Exemples de configurations de graphes](./example-configurations.md)
 * [Priorité d’espace de noms](./namespace-priority.md)
@@ -61,7 +57,7 @@ Pour configurer la priorité des espaces de noms, sélectionnez un espace de nom
 
 Pour désigner un espace de noms unique, cochez la case [!UICONTROL Unique par graphique] qui correspond à cet espace de noms. Vous pouvez sélectionner **jusqu’à trois espaces de noms uniques** pour votre configuration de paramètres d’identité.
 
-Une fois vos espaces de noms uniques établis, les graphiques ne pourront plus comporter plusieurs identités contenant un espace de noms unique. Par exemple, si vous avez désigné CRMID comme espace de noms unique, un graphique ne peut avoir qu’une seule identité avec l’espace de noms CRMID. Pour plus d’informations, consultez la présentation de l’algorithme d’optimisation des identités [Identity Optimization](./identity-optimization-algorithm.md#unique-namespace).
+Une fois vos espaces de noms uniques établis, les graphiques ne pourront plus comporter plusieurs identités contenant un espace de noms unique. Par exemple, si vous avez désigné CRMID comme espace de noms unique, un graphique ne peut avoir qu’une seule identité avec l’espace de noms CRMID. Pour plus d’informations, consultez la présentation de l’algorithme [Identity Optimization](./identity-optimization-algorithm.md#unique-namespace).
 
 Lorsque vous avez terminé vos configurations, sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
@@ -90,7 +86,7 @@ Lorsque vous avez terminé vos configurations, sélectionnez **[!UICONTROL Suiva
 Pour plus d’informations sur [!DNL Identity Graph Linking Rules], consultez la documentation suivante :
 
 * [Vue d’ensemble d’[!DNL Identity Graph Linking Rules]](./overview.md)
-* [Algorithme d’optimisation de l’identité](./identity-optimization-algorithm.md)
+* [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
 * [Guide de mise en œuvre](./implementation-guide.md)
 * [Exemples de configurations de graphes](./example-configurations.md)
 * [Résolution des problèmes et FAQ](./troubleshooting.md)
