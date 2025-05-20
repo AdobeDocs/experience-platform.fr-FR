@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’IU de Query Service
 description: Adobe Experience Platform Query Service fournit une interface utilisateur qui peut être utilisée pour écrire et exécuter des requêtes, afficher des requêtes précédemment exécutées et accéder à des requêtes enregistrées par des utilisateurs au sein de votre organisation.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 7e1eee48b45311f9ac358496e46ca8980df0112b
+source-git-commit: 62e481925df33ddfae6f630c900febbb027a2059
 workflow-type: tm+mt
-source-wordcount: '2767'
-ht-degree: 20%
+source-wordcount: '2467'
+ht-degree: 23%
 
 ---
 
@@ -100,53 +100,27 @@ Utilisez le Query Editor pour écrire et exécuter des requêtes sans utiliser d
 
 ![Le tableau de bord Requêtes avec l’option Créer une requête mise en surbrillance.](../images/ui/overview/overview-create-query.png)
 
-Au fur et à mesure que vous tapez dans Query Editor, l’éditeur complète automatiquement les mots réservés SQL, les tables et les noms de champ dans les tables. Une fois la requête rédigée, sélectionnez l’icône de lecture (![ Icône de lecture.](../../images/icons/play.png)) pour exécuter la requête. L’onglet **[!UICONTROL Console]** situé sous l’éditeur indique ce que Query Service fait actuellement et indique quand une requête a été renvoyée. L’onglet **[!UICONTROL Résultat]**, en regard de [!UICONTROL Console], affiche les résultats de la requête. Pour plus d’informations sur l’utilisation de Query Editor[&#128279;](./user-guide.md) consultez le guide de Query Editor.
+Au fur et à mesure que vous tapez dans Query Editor, l’éditeur complète automatiquement les mots réservés SQL, les tables et les noms de champ dans les tables. Une fois la requête rédigée, sélectionnez l’icône de lecture (![ Icône de lecture.](../../images/icons/play.png)) pour exécuter la requête. L’onglet **[!UICONTROL Console]** situé sous l’éditeur indique ce que Query Service fait actuellement et indique quand une requête a été renvoyée. L’onglet **[!UICONTROL Résultat]**, en regard de [!UICONTROL Console], affiche les résultats de la requête. Pour plus d’informations sur l’utilisation de Query Editor](./user-guide.md) consultez le [guide de Query Editor.
 
 ![Espace de travail du Query Editor.](../images/ui/overview/query-editor.png)
 
-### Télécharger les résultats de la requête {#download-query-results}
+### À propos de l’onglet Résultats {#results-tab}
 
->[!AVAILABILITY]
->
->Les fonctionnalités de téléchargement sont disponibles uniquement pour les clients qui utilisent le module complémentaire Data Distiller. Pour en savoir plus sur Data Distiller, contactez votre représentant ou représentante Adobe.
+L’onglet [!UICONTROL Résultat] affiche la sortie tabulaire de votre requête après exécution. Utilisez cet onglet pour examiner les résultats, valider la sortie et prendre des actions de suivi directement dans l’interface. À partir de cette vue, vous pouvez :
 
-Vous pouvez désormais télécharger les résultats de la requête directement depuis l’interface utilisateur de Query Editor. Une fois la requête exécutée, vous pouvez télécharger la sortie au format CSV, XLSX ou JSON. Cette fonctionnalité simplifie les workflows pour les équipes de marketing et d’analyse en permettant un accès immédiat aux résultats des requêtes pour les analyses hors ligne, les rapports et les processus Excel.
+- Téléchargez les résultats au format CSV, XLSX ou JSON pour une analyse hors ligne. Voir [Télécharger les résultats de la requête](./user-guide.md#download-query-results).
+- Affichez les résultats en plein écran pour examiner des tableaux volumineux ou des jeux de données larges dans une disposition de grille redimensionnable. Voir [Affichage des résultats en plein écran](./user-guide.md#view-results).
+- Copiez les résultats dans le presse-papiers au format CSV pour les coller rapidement dans des tableurs. Voir [Copier les résultats](./user-guide.md#copy-results).
 
-Pour télécharger les résultats de votre requête, sélectionnez **[!UICONTROL Télécharger]** dans le coin supérieur droit de l’onglet Query Editor **[!UICONTROL Résultat]**. Sélectionnez ensuite **[!UICONTROL CSV]**, **[!UICONTROL XLSX]** ou **[!UICONTROL JSON]** dans le menu déroulant. Le fichier est téléchargé automatiquement sur votre ordinateur local.
+Ces fonctionnalités sont conçues pour prendre en charge des workflows transparents de validation, de création de rapports et de partage de données, le tout sans quitter Query Editor.
 
->[!NOTE]
->
->Le bouton **[!UICONTROL Télécharger]** s’affiche uniquement lorsqu’une requête renvoie des résultats. Si aucun enregistrement n’est renvoyé, l’onglet **[!UICONTROL Résultat]** affiche un message « Aucun résultat » et l’option de téléchargement est désactivée.
+### Requêtes paramétrées {#parameterized-queries}
 
-![Onglet Résultats de Query Editor avec l’option Télécharger et le menu déroulant mis en surbrillance.](../images/ui/overview/download-results.png)
+Query Editor prend en charge les requêtes paramétrées, qui vous permettent d’insérer des variables dans vos instructions SQL et d’attribuer dynamiquement des valeurs au moment de l’exécution. Cette fonctionnalité simplifie les requêtes réutilisables et améliore la flexibilité des workflows.
 
->[!NOTE]
->
->Lors de l’ouverture d’un fichier CSV dans Excel, l’avertissement suivant peut s’afficher : <br>« Perte possible de données. Certaines fonctionnalités risquent d’être perdues si vous enregistrez ce classeur au format .csv (délimité par des virgules). Pour conserver ces fonctionnalités, enregistrez-le au format de fichier Excel. »<br>Notez également que le formatage de la date et de l’heure peut varier en fonction du type de fichier. Les fichiers CSV conservent le format indiqué dans les résultats de la requête, tandis que les fichiers XLSX peuvent appliquer automatiquement une mise en forme localisée dans Excel.
+Vous pouvez définir des paramètres lors de l’écriture de requêtes, puis attribuer des valeurs via l’onglet [!UICONTROL Paramètres de requête] avant de les exécuter. Les requêtes paramétrées sont particulièrement utiles pour les requêtes planifiées ou les modèles de requête partagés dans l’ensemble de votre organisation.
 
-### Affichage des résultats en plein écran {#view-results}
-
-Une fois la requête exécutée, sélectionnez **[!UICONTROL Afficher les résultats]** dans l’onglet **[!UICONTROL Résultat]** pour ouvrir un affichage tabulé en plein écran de vos résultats.
-
-L’affichage plein écran affiche la sortie dans une grille redimensionnable, ce qui facilite la révision des jeux de données volumineux et l’analyse sur plusieurs colonnes. Ce mode d’aperçu est particulièrement utile lors de l’analyse de tableaux larges ou de la révision de détails au niveau des lignes.
-
->[!NOTE]
->
->L’aperçu est en lecture seule et ne modifie pas votre requête ou votre jeu de données.
-
-![Boîte de dialogue de prévisualisation plein écran avec l’option Afficher les résultats sélectionnée.](../images/ui/overview/view-results-fullscreen.png)
-
-### Copier les résultats {#copy-results}
-
-Utilisez la fonctionnalité de copie améliorée de Query Editor pour copier rapidement les résultats de la requête sous forme de valeurs séparées par des virgules (CSV). Collez facilement les données copiées dans des tableurs comme Excel pour une analyse plus approfondie. Cette fonctionnalité améliore la lisibilité, préserve la mise en forme et rationalise les workflows de validation et de création de rapports sans recourir à des outils tiers.
-
-Vous pouvez copier les résultats de la requête à partir de l’onglet [!UICONTROL Résultat] ou de l’aperçu des résultats en plein écran. Dans l’onglet **[!UICONTROL Résultat]**, sélectionnez l’icône de copie (![Icône de copie.](../../images/icons/copy.png)) pour copier tous les résultats de la requête dans le presse-papiers. Dans l’onglet Résultats du requêteur , sélectionnez des lignes individuelles ou utilisez l’en-tête de colonne de case à cocher pour sélectionner toutes les lignes. Sélectionnez une seule ligne pour activer l’icône de copie.
-
-![Onglet Résultats de Query Editor avec l’icône de copie mise en surbrillance.](../images/ui/overview/query-editor-copy-icon.png)
-
-Vous pouvez également sélectionner **[!UICONTROL Afficher les résultats]** pour ouvrir l’aperçu en plein écran. Dans cette boîte de dialogue, sélectionnez des lignes individuelles ou utilisez la case à cocher située dans le coin supérieur gauche pour sélectionner toutes les lignes, puis sélectionnez l’icône de copie (![Icône de copie.](../../images/icons/copy.png)) pour copier les données sélectionnées.
-
-![Boîte de dialogue d’aperçu en plein écran avec les lignes de résultats sélectionnées et l’icône de copie mise en surbrillance.](../images/ui/overview/results-copy.png)
+Pour savoir comment définir et utiliser des paramètres, voir [Requêtes paramétrées dans Query Editor](./parameterized-queries.md).
 
 ## Requêtes planifiées {#scheduled-queries}
 

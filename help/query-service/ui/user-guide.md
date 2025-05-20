@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de Query Editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: bf9de8c5358f1ab90dd5d70b0607dcfba7d1e2f5
 workflow-type: tm+mt
-source-wordcount: '2683'
-ht-degree: 25%
+source-wordcount: '3360'
+ht-degree: 20%
 
 ---
 
@@ -77,7 +77,7 @@ Utilisez l’éditeur de requêtes amélioré pour écrire plusieurs requêtes e
 ### Exécuter la requête sélectionnée {#execute-selected-query}
 
 Si vous avez écrit plusieurs requêtes, mais ne devez exécuter qu’une seule, vous pouvez mettre en surbrillance la requête choisie et sélectionner la requête
-Icône [!UICONTROL &#x200B; Exécuter la requête sélectionnée &#x200B;]. Cette icône est désactivée par défaut jusqu’à ce que vous sélectionniez la syntaxe de la requête dans l’éditeur.
+Icône [!UICONTROL  Exécuter la requête sélectionnée ]. Cette icône est désactivée par défaut jusqu’à ce que vous sélectionniez la syntaxe de la requête dans l’éditeur.
 
 ![Query Editor avec l’icône [!UICONTROL Exécuter la requête sélectionnée] mise en surbrillance.](../images/ui/query-editor/run-selected-query.png)
 
@@ -103,7 +103,7 @@ Le Query Editor a une sortie de ligne maximale de 50 000. Vous pouvez choisir le
 
 ## Rédaction de requêtes {#writing-queries}
 
-[!UICONTROL Query Editor est organisé de façon à rendre l’écriture de requête aussi facile que possible. &#x200B;] La copie d’écran ci-dessous présente l’affichage de l’éditeur dans l’interface utilisateur. Le champ d’entrée SQL et le bouton **Lire** sont mis en surbrillance.
+[!UICONTROL Query Editor est organisé de façon à rendre l’écriture de requête aussi facile que possible. ] La copie d’écran ci-dessous présente l’affichage de l’éditeur dans l’interface utilisateur. Le champ d’entrée SQL et le bouton **Lire** sont mis en surbrillance.
 
 ![Query Editor avec le champ d’entrée SQL et le bouton Lire en surbrillance.](../images/ui/query-editor/editor.png)
 
@@ -155,7 +155,7 @@ Pour générer un jeu de données de sortie, sélectionnez **[!UICONTROL Exécut
 
 ![Boîte de dialogue [!UICONTROL Saisir les détails du jeu de données de sortie].](../images/ui/query-editor/output-dataset-details.png)
 
-Une fois que vous avez exécuté l’action **[!UICONTROL Exécuter en tant que CTAS]**, un message de confirmation s’affiche pour vous informer de la réussite de l’action. Ce message contextuel contient un lien qui permet d’accéder facilement à l’espace de travail des journaux de requête. Pour plus d’informations sur les journaux de requêtes[&#128279;](./query-logs.md) consultez la  documentation sur les journaux de requêtes .
+Une fois que vous avez exécuté l’action **[!UICONTROL Exécuter en tant que CTAS]**, un message de confirmation s’affiche pour vous informer de la réussite de l’action. Ce message contextuel contient un lien qui permet d’accéder facilement à l’espace de travail des journaux de requête. Pour plus d’informations sur les journaux de requêtes](./query-logs.md) consultez la [ documentation sur les journaux de requêtes .
 
 ### Enregistrement des requêtes {#saving-queries}
 
@@ -175,7 +175,7 @@ Les plannings sont définis dans le Query Editor. Lors de l’utilisation de Que
 
 >[!NOTE]
 >
->Les requêtes planifiées qui échouent dix exécutions consécutives sont automatiquement placées dans un statut [!UICONTROL &#x200B; Quarantaine &#x200B;]. Une requête avec ce statut nécessite votre intervention avant que d’autres exécutions puissent avoir lieu. Consultez la documentation [requêtes en quarantaine](./monitor-queries.md#quarantined-queries) pour plus d’informations.
+>Les requêtes planifiées qui échouent dix exécutions consécutives sont automatiquement placées dans un statut [!UICONTROL  Quarantaine ]. Une requête avec ce statut nécessite votre intervention avant que d’autres exécutions puissent avoir lieu. Consultez la documentation [requêtes en quarantaine](./monitor-queries.md#quarantined-queries) pour plus d’informations.
 
 Consultez la documentation sur les plannings de requête pour savoir comment [ créer des plannings de requête dans l’interface utilisateur ](./query-schedules.md). Vous pouvez également découvrir comment ajouter des plannings à l’aide de l’API dans le guide de point d’entrée [des requêtes planifiées](../api/scheduled-queries.md).
 
@@ -234,11 +234,69 @@ La console fournit des informations sur l’état et le fonctionnement de Query 
 >
 >La console affiche uniquement les erreurs résultant de l’exécution d’une requête. Elle n’affiche pas les erreurs de validation de requête qui se produisent avant l’exécution d’une requête.
 
-### Résultats de requête {#query-results}
+## Résultats de requête {#query-results}
 
 Une fois une requête terminée, les résultats sont affichés dans l’onglet **[!UICONTROL Résultats]**, en regard de l’onglet **[!UICONTROL Console]**. Cette vue affiche la sortie tabulaire de votre requête, affichant entre 50 et 1 000 lignes de résultats en fonction du nombre de [résultats](#result-count) choisi. Il vous permet de vérifier que votre requête produit la sortie attendue. Pour générer un jeu de données avec votre requête, supprimez les limites sur les lignes renvoyées, puis exécutez la requête avec `CREATE TABLE tablename AS SELECT` pour générer un jeu de données avec la sortie. Consultez le [tutoriel sur la génération de jeux de données](./create-datasets.md) pour apprendre à générer un jeu de données à partir des résultats de requête dans Query Editor.
 
 ![L’onglet Résultats de la console du Query Editor affiche les résultats de l’exécution d’une requête.](../images/ui/query-editor/query-results.png)
+
+### Télécharger les résultats de la requête {#download-query-results}
+
+>[!AVAILABILITY]
+>
+>Les fonctionnalités de téléchargement sont disponibles uniquement pour les clients qui utilisent le module complémentaire Data Distiller. Pour en savoir plus sur Data Distiller, contactez votre représentant ou représentante Adobe.
+
+Après avoir exécuté une requête réussie, téléchargez les résultats au format CSV, XLSX ou JSON à utiliser dans les workflows d’analyse, de création de rapports ou de feuilles de calcul hors ligne. Cette fonctionnalité simplifie les workflows pour les équipes de marketing et d’analyse en permettant un accès immédiat aux résultats des requêtes pour les analyses hors ligne, les rapports et les processus Excel.
+
+Pour télécharger les résultats de votre requête, sélectionnez **[!UICONTROL Télécharger]** dans le coin supérieur droit de l’onglet Query Editor **[!UICONTROL Résultat]**. Sélectionnez ensuite **[!UICONTROL CSV]**, **[!UICONTROL XLSX]** ou **[!UICONTROL JSON]** dans le menu déroulant. Le fichier est téléchargé automatiquement sur votre ordinateur local. Choisissez le format qui correspond à votre cas d’utilisation, CSV pour les exportations légères, XLSX pour les feuilles de calcul formatées ou JSON pour la gestion des données structurées.
+
+>[!NOTE]
+>
+>Si le bouton **[!UICONTROL Télécharger]** est manquant, vérifiez les résultats de votre requête. Le bouton s’affiche uniquement lorsque des enregistrements sont renvoyés. Si aucun enregistrement n’est renvoyé, l’onglet **[!UICONTROL Résultat]** affiche un message « Aucun résultat » et l’option de téléchargement est désactivée.
+
+![Onglet Résultats de Query Editor avec l’option Télécharger et le menu déroulant mis en surbrillance.](../images/ui/overview/download-results.png)
+
+>[!NOTE]
+>
+>Lors de l’ouverture d’un fichier CSV dans Excel, l’avertissement suivant peut s’afficher : <br>« Perte possible de données. Certaines fonctionnalités risquent d’être perdues si vous enregistrez ce classeur au format .csv (délimité par des virgules). Pour conserver ces fonctionnalités, enregistrez-le au format de fichier Excel. »<br>Notez également que le formatage de la date et de l’heure peut varier en fonction du type de fichier. Les fichiers CSV conservent le format indiqué dans les résultats de la requête, tandis que les fichiers XLSX peuvent appliquer automatiquement une mise en forme localisée dans Excel. Si cet avertissement s’affiche, vous pouvez continuer en toute sécurité. Pour conserver une mise en forme spécifique à Excel, enregistrez le fichier en tant que XLSX à la place.
+
+### Affichage des résultats en plein écran {#view-results}
+
+Une fois la requête exécutée, sélectionnez **[!UICONTROL Afficher les résultats]** dans l’onglet **[!UICONTROL Résultat]** pour ouvrir un affichage tabulé en plein écran de vos résultats.
+
+Utilisez l’aperçu plein écran pour numériser facilement des tableaux larges et inspecter les détails au niveau des lignes sans défilement horizontal. L’affichage plein écran affiche la sortie dans une grille redimensionnable, ce qui facilite la révision des jeux de données volumineux et l’analyse sur plusieurs colonnes.
+
+>[!NOTE]
+>
+>L’aperçu est en lecture seule et ne modifie pas votre requête ou votre jeu de données.
+
+![Boîte de dialogue de prévisualisation plein écran avec l’option Afficher les résultats sélectionnée.](../images/ui/overview/view-results-fullscreen.png)
+
+### Copier les résultats {#copy-results}
+
+Utilisez la fonctionnalité de copie améliorée de Query Editor pour copier les résultats de la requête sous forme de valeurs séparées par des virgules (CSV) et les coller dans des outils de feuille de calcul tels qu’Excel pour une validation ou un compte rendu des performances immédiats. Cette fonctionnalité améliore la lisibilité, préserve la mise en forme et rationalise les workflows sans recourir à des outils tiers.
+
+Vous pouvez copier les résultats de la requête à partir de l’onglet [!UICONTROL Résultat] ou de l’aperçu des résultats en plein écran. Dans l’onglet **[!UICONTROL Résultat]**, sélectionnez l’icône de copie (![Icône de copie.](../../images/icons/copy.png)) pour copier tous les résultats de la requête dans le presse-papiers. Pour activer l’icône de copie, sélectionnez d’abord une ligne. Vous pouvez sélectionner des lignes individuelles ou utiliser la case à cocher située en haut pour sélectionner toutes les lignes à la fois.
+
+![Onglet Résultats de Query Editor avec l’icône de copie mise en surbrillance.](../images/ui/overview/query-editor-copy-icon.png)
+
+Vous pouvez également sélectionner **[!UICONTROL Afficher les résultats]** pour ouvrir l’aperçu en plein écran. Dans cette boîte de dialogue, sélectionnez des lignes individuelles ou utilisez la case à cocher située dans le coin supérieur gauche pour sélectionner toutes les lignes, puis sélectionnez l’icône de copie (![Icône de copie.](../../images/icons/copy.png)) pour copier les données sélectionnées.
+
+![Boîte de dialogue d’aperçu en plein écran avec les lignes de résultats sélectionnées et l’icône de copie mise en surbrillance.](../images/ui/overview/results-copy.png)
+
+### Ancien tableau de résultats (disponibilité limitée) {#legacy-results-table}
+
+>[!AVAILABILITY]
+>
+>Le tableau des résultats hérité n’est disponible que pour certains utilisateurs et utilisatrices par le biais d’un indicateur de fonctionnalité et peut ne pas s’afficher dans votre expérience Query Editor actuelle. Si votre équipe s&#39;appuie sur des workflows glisser-sélectionner, contactez votre représentant Adobe pour demander l&#39;accès.
+
+La version héritée de Query Editor est destinée aux utilisateurs qui dépendent de workflows de données manuels flexibles tels que l’assurance qualité ou la révision basée sur des feuilles de calcul.
+
+Il prend en charge la sélection native basée sur le navigateur. Vous pouvez ainsi mettre en surbrillance et copier n’importe quelle partie de la sortie (y compris des cellules ou des blocs individuels) à l’aide du comportement de sélection standard. Cela contraste avec le tableau amélioré, qui utilise une sélection de lignes structurée et des actions de copie dédiées.
+
+Les données copiées sont délimitées par des tabulations. Ainsi, lorsque vous les collez dans des outils tels qu’Excel, les colonnes restent alignées et lisibles. Les en-têtes de colonne sont également inclus lorsque vous faites glisser la sélection sur la ligne d’en-tête.
+
+![Affichage des résultats dans l’éditeur hérité avec la simple option de glisser-sélectionner des résultats mise en surbrillance.](../images/ui/query-editor/legacy-results-table.png)
 
 ## Exemples {#examples}
 
@@ -254,7 +312,7 @@ La vidéo suivante montre comment exécuter des requêtes dans l’interface Ado
 >
 >L’interface utilisateur illustrée dans la vidéo est obsolète, mais la logique utilisée dans le workflow reste la même.
 
->[!VIDEO](https://video.tv.adobe.com/v/32943?quality=12&learn=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
 ## Étapes suivantes
 
