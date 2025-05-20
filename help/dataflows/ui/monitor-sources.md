@@ -2,10 +2,10 @@
 description: Découvrez comment utiliser le tableau de bord de surveillance pour surveiller les données ingérées dans le lac de données.
 title: Surveillance de l’ingestion du lac de données
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: f671188fbc694b0d2d808577265f91788cb0d8e9
+source-git-commit: 75970d41a316c97d98ebf6cefd3bfa0e58173030
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 16%
+source-wordcount: '1458'
+ht-degree: 15%
 
 ---
 
@@ -15,7 +15,9 @@ ht-degree: 16%
 >
 >Les sources en flux continu, telles que la source [API HTTP](../../sources/connectors/streaming/http.md) ne sont actuellement pas prises en charge par le tableau de bord de surveillance. Actuellement, vous ne pouvez utiliser le tableau de bord que pour surveiller les sources de lots.
 
-Lisez ce document pour savoir comment utiliser le tableau de bord de surveillance pour surveiller l’ingestion du lac de données dans l’interface utilisateur d’Experience Platform.
+Vous pouvez utiliser le tableau de bord de surveillance dans l’interface utilisateur de Adobe Experience Platform pour récupérer des mesures relatives à vos processus d’ingestion et de conservation des données dans le lac de données. Utilisez les graphiques de l’interface pour surveiller les tendances d’ingestion et de rétention au fil du temps et résumer les performances de tous vos flux de données sources.
+
+Lisez ce document pour savoir comment utiliser le tableau de bord de surveillance pour surveiller tous les traitements de données dans le lac de données, y compris l’ingestion et la rétention.
 
 ## Commencer {#get-started}
 
@@ -60,6 +62,7 @@ La partie inférieure du tableau de bord affiche un tableau qui décrit le rappo
 | --- | --- |
 | Enregistrements reçus | Nombre total d’enregistrements reçus d’une source donnée. |
 | Enregistrements ingérés | Nombre total d’enregistrements ingérés dans le lac de données. |
+| Enregistrements supprimés | Nombre total d’enregistrements supprimés en raison des paramètres de conservation du lac de données ou des opérations de modification de la capture de données. |
 | Enregistrements ignorés | Nombre total d’enregistrements ignorés. Un enregistrement ignoré fait référence à des champs qui ont été ignorés car ils n’étaient pas nécessaires à l’ingestion. Par exemple, si vous créez un flux de données de sources avec l’ingestion partielle activée, vous pouvez configurer un seuil de taux d’erreur acceptable. Pendant le processus d’ingestion, les enregistrements des champs qui ne sont pas obligatoires, tels que les champs d’identité, seront ignorés pendant l’ingestion, tant qu’ils se trouvent dans le seuil d’erreur. |
 | Échec des enregistrements | Nombre total d’enregistrements qui n’ont pas pu être ingérés en raison d’erreurs. |
 | Taux d&#39;ingestion | Pourcentage d&#39;enregistrements ingérés par rapport au nombre total d&#39;enregistrements reçus. |
@@ -79,7 +82,19 @@ Vous pouvez filtrer davantage vos données à l’aide des options fournies au-d
 
 {style="table-layout:auto"}
 
+Pour personnaliser l’affichage des colonnes, sélectionnez l’icône des paramètres de colonne ![icône-colonne](/help/images/icons/column-settings.png).
+
+![Tableau de bord de surveillance avec l’icône des paramètres de colonne sélectionnée.](../assets/ui/monitor-sources/edit-columns.png)
+
+Utilisez ensuite la fenêtre *[!UICONTROL Personnaliser le tableau]* pour sélectionner les colonnes à afficher dans le tableau de bord. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]**.
+
+![Fenêtre pop-up de personnalisation de colonne dans le tableau de bord de surveillance.](../assets/ui/monitor-sources/customize-table.png)
+
 Pour surveiller les données ingérées dans un flux de données spécifique, sélectionnez l’icône de filtre ![filtre](/help/images/icons/filter-add.png) en regard d’une source.
+
+>[!TIP]
+>
+>Vous pouvez utiliser le tableau de bord de surveillance pour surveiller les mesures de suppression des données des enregistrements supprimés à l’aide de politiques de conservation des données. Pour plus d’informations sur la conservation des données, consultez le guide sur la [définition de politiques de conservation des données](../../catalog/datasets/user-guide.md#data-retention-policy).
 
 ![Surveillez un flux de données spécifique en sélectionnant l’icône de filtre en regard d’une source donnée.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
