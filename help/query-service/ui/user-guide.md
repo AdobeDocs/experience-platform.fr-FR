@@ -312,7 +312,7 @@ La vidéo suivante montre comment exécuter des requêtes dans l’interface Ado
 >
 >L’interface utilisateur illustrée dans la vidéo est obsolète, mais la logique utilisée dans le workflow reste la même.
 
->[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32943?quality=12&learn=on&captions=fre_fr)
 
 ## Étapes suivantes
 
