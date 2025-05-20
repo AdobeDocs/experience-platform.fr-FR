@@ -77,7 +77,7 @@ Utilisez l’éditeur de requêtes amélioré pour écrire plusieurs requêtes e
 ### Exécuter la requête sélectionnée {#execute-selected-query}
 
 Si vous avez écrit plusieurs requêtes, mais ne devez exécuter qu’une seule, vous pouvez mettre en surbrillance la requête choisie et sélectionner la requête
-Icône [!UICONTROL  Exécuter la requête sélectionnée ]. Cette icône est désactivée par défaut jusqu’à ce que vous sélectionniez la syntaxe de la requête dans l’éditeur.
+Icône [!UICONTROL &#x200B; Exécuter la requête sélectionnée &#x200B;]. Cette icône est désactivée par défaut jusqu’à ce que vous sélectionniez la syntaxe de la requête dans l’éditeur.
 
 ![Query Editor avec l’icône [!UICONTROL Exécuter la requête sélectionnée] mise en surbrillance.](../images/ui/query-editor/run-selected-query.png)
 
@@ -103,7 +103,7 @@ Le Query Editor a une sortie de ligne maximale de 50 000. Vous pouvez choisir le
 
 ## Rédaction de requêtes {#writing-queries}
 
-[!UICONTROL Query Editor est organisé de façon à rendre l’écriture de requête aussi facile que possible. ] La copie d’écran ci-dessous présente l’affichage de l’éditeur dans l’interface utilisateur. Le champ d’entrée SQL et le bouton **Lire** sont mis en surbrillance.
+[!UICONTROL Query Editor est organisé de façon à rendre l’écriture de requête aussi facile que possible. &#x200B;] La copie d’écran ci-dessous présente l’affichage de l’éditeur dans l’interface utilisateur. Le champ d’entrée SQL et le bouton **Lire** sont mis en surbrillance.
 
 ![Query Editor avec le champ d’entrée SQL et le bouton Lire en surbrillance.](../images/ui/query-editor/editor.png)
 
@@ -155,7 +155,7 @@ Pour générer un jeu de données de sortie, sélectionnez **[!UICONTROL Exécut
 
 ![Boîte de dialogue [!UICONTROL Saisir les détails du jeu de données de sortie].](../images/ui/query-editor/output-dataset-details.png)
 
-Une fois que vous avez exécuté l’action **[!UICONTROL Exécuter en tant que CTAS]**, un message de confirmation s’affiche pour vous informer de la réussite de l’action. Ce message contextuel contient un lien qui permet d’accéder facilement à l’espace de travail des journaux de requête. Pour plus d’informations sur les journaux de requêtes](./query-logs.md) consultez la [ documentation sur les journaux de requêtes .
+Une fois que vous avez exécuté l’action **[!UICONTROL Exécuter en tant que CTAS]**, un message de confirmation s’affiche pour vous informer de la réussite de l’action. Ce message contextuel contient un lien qui permet d’accéder facilement à l’espace de travail des journaux de requête. Pour plus d’informations sur les journaux de requêtes[&#128279;](./query-logs.md) consultez la  documentation sur les journaux de requêtes .
 
 ### Enregistrement des requêtes {#saving-queries}
 
@@ -175,7 +175,7 @@ Les plannings sont définis dans le Query Editor. Lors de l’utilisation de Que
 
 >[!NOTE]
 >
->Les requêtes planifiées qui échouent dix exécutions consécutives sont automatiquement placées dans un statut [!UICONTROL  Quarantaine ]. Une requête avec ce statut nécessite votre intervention avant que d’autres exécutions puissent avoir lieu. Consultez la documentation [requêtes en quarantaine](./monitor-queries.md#quarantined-queries) pour plus d’informations.
+>Les requêtes planifiées qui échouent dix exécutions consécutives sont automatiquement placées dans un statut [!UICONTROL &#x200B; Quarantaine &#x200B;]. Une requête avec ce statut nécessite votre intervention avant que d’autres exécutions puissent avoir lieu. Consultez la documentation [requêtes en quarantaine](./monitor-queries.md#quarantined-queries) pour plus d’informations.
 
 Consultez la documentation sur les plannings de requête pour savoir comment [ créer des plannings de requête dans l’interface utilisateur ](./query-schedules.md). Vous pouvez également découvrir comment ajouter des plannings à l’aide de l’API dans le guide de point d’entrée [des requêtes planifiées](../api/scheduled-queries.md).
 
