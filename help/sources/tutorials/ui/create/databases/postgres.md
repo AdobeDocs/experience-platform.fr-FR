@@ -2,9 +2,9 @@
 title: Connecter PostgreSQL à Experience Platform à l’aide de l’interface utilisateur
 description: Découvrez comment connecter votre base de données PostgreSQL à Experience Platform à l’aide de l’espace de travail des sources dans l’interface utilisateur d’Experience Platform.
 exl-id: e556d867-a1eb-4900-b8a9-189666a4f3f1
-source-git-commit: 8cabf1cb86993fdde37d0b9d957f6c8ec23bb237
+source-git-commit: f4200ca71479126e585ac76dd399af4092fdf683
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '653'
 ht-degree: 18%
 
 ---
@@ -43,19 +43,20 @@ Voici un exemple de chaîne de connexion [!DNL PostgreSQL] ajoutée avec le chif
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Sélectionnez la catégorie appropriée dans le panneau *[!UICONTROL Catégories]*. Vous pouvez également utiliser la barre de recherche pour accéder à la source spécifique que vous souhaitez utiliser.
 
-Pour utiliser [!DNL PostgreSQL], sélectionnez la carte source **[!UICONTROL PostgreSQL]** sous *[!UICONTROL Bases de données]*, puis sélectionnez **[!UICONTROL Configurer]**.
+Pour utiliser [!DNL PostgreSQL], sélectionnez la carte source **[!UICONTROL Base de données PostgreSQL]** sous *[!UICONTROL Bases de données]*, puis sélectionnez **[!UICONTROL Configurer]**.
 
 >[!TIP]
 >
 >Les sources du catalogue affichent l’option **[!UICONTROL Configurer]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Ajouter des données]**.
 
+![Le catalogue des sources avec la carte source PostgreSQL sélectionnée.](../../../../images/tutorials/create/postgresql/catalog.png)
 
 
 ## Utiliser un compte existant {#existing}
 
 Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]** puis sélectionnez le compte [!DNL PostgreSQL] à utiliser.
 
-![Interface de compte existante du workflow des sources.](../../../../images/tutorials/create/postgresql/catalog.png)
+![Interface de compte existante du workflow des sources.](../../../../images/tutorials/create/postgresql/existing.png)
 
 ## Créer un nouveau compte {#create}
 
@@ -63,7 +64,7 @@ Si vous ne disposez pas d’un compte existant, vous devez créer un compte en f
 
 Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** puis indiquez un nom et éventuellement ajoutez une description pour votre compte.
 
-![Nouvelle interface de compte dans le workflow des sources avec un nom de compte et une description facultative fournis.](../../../../images/tutorials/create/postgresql/existing.png)
+![Nouvelle interface de compte dans le workflow des sources avec un nom de compte et une description facultative fournis.](../../../../images/tutorials/create/postgresql/new.png)
 
 ### Se connecter à Experience Platform sur Azure {#azure}
 
@@ -93,7 +94,7 @@ Pour utiliser l’authentification de base, sélectionnez **[!UICONTROL Authenti
 
 Pour créer un compte [!DNL PostgreSQL] et vous connecter à Experience Platform sur AWS, vérifiez que vous vous trouvez dans un sandbox VA6, puis fournissez les informations d’identification [nécessaires pour l’authentification](../../../../connectors/databases/postgres.md#aws).
 
-![Nouvelle interface de compte dans le workflow des sources pour se connecter à AWS.](../../../../images/tutorials/create/postgresql/basic-auth.png)
+![Nouvelle interface de compte dans le workflow des sources pour se connecter à AWS.](../../../../images/tutorials/create/postgresql/aws.png)
 
 ## Créer un flux de données pour vos données [!DNL PostgreSQL]
 

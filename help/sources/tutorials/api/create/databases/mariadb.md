@@ -2,10 +2,10 @@
 title: Connecter MariaDB à Experience Platform à l’aide de l’API Flow Service
 description: Découvrez comment connecter votre compte MariaDB à Experience Platform à l’aide d’API.
 exl-id: 9b7ff394-ca55-4ab4-99ef-85c80b04a6df
-source-git-commit: d5d47f9ca3c01424660fe33f8310586a70a32875
+source-git-commit: bca4f40d452f0a5e70a388872a65640d1fd58533
 workflow-type: tm+mt
-source-wordcount: '644'
-ht-degree: 18%
+source-wordcount: '474'
+ht-degree: 22%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 18%
 
 Lisez ce guide pour savoir comment connecter votre compte [!DNL MariaDB] à Adobe Experience Platform à l’aide de l’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
-## Prise en main
+## Commencer
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Experience Platform :
 
@@ -30,11 +30,11 @@ Lisez la [[!DNL MariaDB] présentation](../../../../connectors/databases/mariadb
 
 Lisez le guide sur [Prise en main des API Experience Platform](../../../../../landing/api-guide.md) pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Experience Platform.
 
-## Connecter [!DNL MariaDB] à Experience Platform sur Azure {#azure}
+## Connexion de [!DNL MariaDB] à Experience Platform
 
-Pour plus d’informations sur la connexion de votre compte [!DNL MariaDB] à Experience Platform sur Azure, lisez les étapes ci-dessous.
+Pour plus d’informations sur la connexion de votre compte [!DNL MariaDB] à Experience Platform, lisez les étapes ci-dessous.
 
-### Créer une connexion de base pour [!DNL MariaDB] sur Experience Platform sur Azure {#azure-base}
+### Créer une connexion de base pour [!DNL MariaDB]
 
 Une connexion de base conserve les informations échangées entre votre source et Experience Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
 
@@ -165,82 +165,6 @@ Une réponse réussie renvoie les détails de la nouvelle connexion de base, y c
 +++
 
 >[!ENDTABS]
-
-## Connexion de [!DNL MariaDB] à Experience Platform sur Amazon Web Services {#aws}
-
->[!AVAILABILITY]
->
->Cette section s’applique aux implémentations d’Experience Platform s’exécutant sur Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](../../../../../landing/multi-cloud.md).
-
-Pour plus d’informations sur la connexion de votre compte [!DNL MariaDB] à Experience Platform sur AWS, lisez les étapes ci-dessous.
-
-### Créer une connexion de base pour [!DNL MariaDB] sur Experience Platform sur AWS {#aws-base}
-
-**Format d’API**
-
-```https
-POST /connections
-```
-
-**Requête**
-
-La requête suivante crée une connexion de base pour [!DNL MariaDB] connecter à Experience Platform sur AWS.
-
-+++Afficher l’exemple de requête
-
-```shell
-curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/connections' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-      "name": "MariaDB on Experience Platform AWS",
-      "description": "MariaDB on Experience Platform AWS",
-      "auth": {
-          "specName": "Basic Authentication",
-          "params": {
-              "server": "{SERVER}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSLMODE}"
-          }
-      },
-      "connectionSpec": {
-          "id": "3000eb99-cd47-43f3-827c-43caf170f015",
-          "version": "1.0"
-      }
-  }'
-```
-
-| Propriété | Description |
-| --- | --- |
-| `auth.params.server` | Nom ou adresse IP de la base de données [!DNL MariaDB]. |
-| `auth.params.database` | Nom de la base de données. |
-| `auth.params.username` | Nom d’utilisateur correspondant à votre base de données. |
-| `auth.params.password` | Mot de passe correspondant à votre base de données. |
-| `auth.params.sslMode` | Méthode de chiffrement des données lors du transfert de données. |
-| `connectionSpec.id` | L’identifiant de spécification de connexion [!DNL MariaDB] est : `3000eb99-cd47-43f3-827c-43caf170f015`. |
-
-+++
-
-**Réponse**
-
-Une réponse réussie renvoie les détails de la nouvelle connexion de base, y compris son identifiant unique (`id`).
-
-+++Afficher l’exemple de réponse
-
-```json
-{
-    "id": "f847950c-1c12-4568-a550-d5312b16fdb8",
-    "etag": "\"0c0099f4-0000-0200-0000-67da91710000\""
-}
-```
-
-+++
 
 
 ## Étapes suivantes
