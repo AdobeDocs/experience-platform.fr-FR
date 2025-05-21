@@ -55,7 +55,7 @@ Regardez les vidéos suivantes pour en savoir plus sur certains aspects fondamen
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/fr/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="Vue d’ensemble des règles de liaison des graphiques d’identités" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="Vue d’ensemble des règles de liaison des graphiques d’identités"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448274/?format=jpeg&nocache=1747851655227&captions=fre_fr" alt="Vue d’ensemble des règles de liaison des graphiques d’identités"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -78,7 +78,7 @@ Regardez les vidéos suivantes pour en savoir plus sur certains aspects fondamen
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/fr/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="Règles de liaison des graphiques d’identités - Simulation de graphique" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="Règles de liaison des graphiques d’identités - Simulation de graphique"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444045/?format=jpeg&nocache=1747851655237&captions=fre_fr" alt="Règles de liaison des graphiques d’identités - Simulation de graphique"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
