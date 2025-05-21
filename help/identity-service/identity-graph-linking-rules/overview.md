@@ -2,10 +2,10 @@
 title: Règles de liaison des graphiques d’identités
 description: Découvrez les règles de liaison du graphique d’identités dans Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 0aefcfbbbed675a08d9e3023b9f667ec59874e46
+source-git-commit: 6efd9c8fd1acce08027905f2e3c005a88a429a12
 workflow-type: tm+mt
-source-wordcount: '1547'
-ht-degree: 5%
+source-wordcount: '1570'
+ht-degree: 8%
 
 ---
 
@@ -38,14 +38,24 @@ Les documents suivants sont essentiels à la compréhension des [!DNL Identity G
 
 Regardez les vidéos suivantes pour en savoir plus sur certains aspects fondamentaux des règles de liaison des graphiques d’identités.
 
+<!-- CARDS
+{target = _blank}
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
+
+    {description = Learn how to use the graph simulator to test out identity graph linking rules.}
+
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
+    {description = Learn how to enable and configure identity graph linking rules to build accurate customer profiles}
+-->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
-    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity Graph Linking Rules: Overview">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity graph linking rules overview">
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3448274/?learn=on&enablevpops&captions=fre_fr" title="Règles De Liaison Du Graphique D’Identités : Présentation" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3429845/?format=jpeg&nocache=1732633205780" alt="Règles De Liaison Du Graphique D’Identités : Présentation"
+                    <a href="https://experienceleague.adobe.com/fr/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="Vue d’ensemble des règles de liaison des graphiques d’identités" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="Vue d’ensemble des règles de liaison des graphiques d’identités"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -53,27 +63,22 @@ Regardez les vidéos suivantes pour en savoir plus sur certains aspects fondamen
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3448274/?learn=on&enablevpops&captions=fre_fr" target="_blank" rel="referrer" title="Règles De Liaison Du Graphique D’Identités : Présentation">Règles de liaison de graphiques d’identités : présentation</a>
+                        <a href="https://experienceleague.adobe.com/fr/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" target="_blank" rel="referrer" title="Vue d’ensemble des règles de liaison des graphiques d’identités">Vue d’ensemble des règles de liaison des graphiques d’identité</a>
                     </p>
-                    <p class="is-size-6">Regardez cette vidéo pour un aperçu des règles de liaison du graphique d’identités et découvrez comment utiliser cette fonctionnalité pour empêcher la réduction du graphique.</p>
+                    <p class="is-size-6">Découvrez comment les règles de liaison des graphiques d’identité aident les architectes de données à maintenir des profils de clientes et clients précis et à éviter la réduction du graphique.</p>
                 </div>
-                <div style="display: flex; flex-direction; row;">
-                  <a href="https://video.tv.adobe.com/v/3448274/?learn=on&enablevpops&captions=fre_fr" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
-                  </a>
-                  <a href="./overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
-                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Lecture</span>
-                  </a>
-                </div>
+                <a href="https://experienceleague.adobe.com/fr/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
+                </a>
             </div>
         </div>
     </div>
-    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity Graph Linking Rules: Identity Settings">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity graph linking rules - Graph Simulation">
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" title="Règles De Liaison Du Graphique D’Identités : Paramètres Des Identités" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441082/?format=jpeg&nocache=1732633205785&captions=fre_fr" alt="Règles De Liaison Du Graphique D’Identités : Paramètres Des Identités"
+                    <a href="https://experienceleague.adobe.com/fr/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="Règles de liaison des graphiques d’identités - Simulation de graphique" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="Règles de liaison des graphiques d’identités - Simulation de graphique"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -81,22 +86,42 @@ Regardez les vidéos suivantes pour en savoir plus sur certains aspects fondamen
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" target="_blank" rel="referrer" title="Règles De Liaison Du Graphique D’Identités : Paramètres Des Identités">Règles De Liaison Du Graphique D’Identités : Paramètres Des Identités</a>
+                        <a href="https://experienceleague.adobe.com/fr/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" target="_blank" rel="referrer" title="Règles de liaison des graphiques d’identités - Simulation de graphique">Règles de liaison des graphiques d’identités : simulation de graphique</a>
                     </p>
-                    <p class="is-size-6">Regardez cette vidéo pour découvrir comment configurer vos paramètres d’identité et créer des graphiques d’identités et des profils client de haute qualité pour les applications Adobe Experience Platform telles que Real-Time CDP, Adobe Journey Optimizer et Customer Journey Analytics.</p>
+                    <p class="is-size-6">Découvrez comment utiliser le simulateur de graphiques pour tester les règles de liaison des graphiques d’identités.</p>
                 </div>
-                <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
-                  </a>
-                  <a href="identity-settings-ui.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
-                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Lecture</span>
-                  </a>
-                </div>            
+                <a href="https://experienceleague.adobe.com/fr/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity graph linking rules - Identity settings">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="Règles de liaison des graphiques d’identités - Paramètres d’identité" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="Règles de liaison des graphiques d’identités - Paramètres d’identité"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="Règles de liaison des graphiques d’identités - Paramètres d’identité">Règles de liaison des graphiques d’identités - Paramètres d’identité</a>
+                    </p>
+                    <p class="is-size-6">Découvrez comment activer et configurer des règles de liaison de graphiques d’identités pour créer des profils client précis</p>
+                </div>
+                <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
+                </a>
             </div>
         </div>
     </div>
 </div>
+<!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
+
 
 ## Scénarios de réduction de graphe {#graph-collapse-scenarios}
 
