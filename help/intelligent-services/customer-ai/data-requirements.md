@@ -6,10 +6,10 @@ title: Exigences des données dans l’IA dédiée aux clientes et clients
 topic-legacy: Getting started
 description: Apprenez-en plus sur les événements, les entrées et les sorties requis utilisés par l’IA dédiée aux clientes et clients.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '2551'
-ht-degree: 92%
+source-wordcount: '2552'
+ht-degree: 91%
 
 ---
 
@@ -213,15 +213,15 @@ Customer AI génère plusieurs attributs pour les profils individuels supposés 
 
 Le jeu de données de sortie se trouve dans l’espace de travail Experience Platform **Jeux de données**. Tous les jeux de données de sortie de l’IA dédiée aux clientes et clients commencent par le nom **Customer AI Scores - NAME_OF_APP**. De même, tous les schémas de sortie de Customer AI commencent par le nom **Customer AI Schema - Name_of_app**.
 
-![Nom des jeux de données de sortie dans Customer AI](./images/user-guide/cai-schema-name-of-app.png)
+![Convention de nommage pour les jeux de données de sortie dans l’IA dédiée aux clientes et clients.](./images/user-guide/cai-schema-name-of-app.png)
 
 Le tableau ci-dessous décrit les différents attributs trouvés dans les sorties de Customer AI :
 
 | Attribut | Description |
 | ----- | ----------- |
 | [!UICONTROL Score] | La probabilité relative qu’un client atteigne l’objectif prévu au cours de la période définie. Cette valeur ne doit pas être considérée comme un pourcentage de probabilité, mais plutôt comme la probabilité d’un individu par rapport à la population totale. Ce score est compris entre 0 et 100. |
-| Probabilité | Cet attribut est la probabilité réelle qu’un profil atteigne l’objectif prévu au cours de la période définie. Si vous comparez les sorties en fonction d’objectifs différents, nous vous recommandons de prendre en compte la probabilité plutôt que le centile ou le score. Vous devez toujours utiliser la probabilité lorsque vous essayez de déterminer la probabilité moyenne sur la population éligible, car la probabilité a tendance à être basse pour les événements qui ne se produisent pas fréquemment. Les valeurs des probabilités sont comprises entre 0 et 1. |
-| Percentile | Cette valeur fournit des informations concernant la performance d’un profil par rapport à d’autres profils aux notes similaires. Par exemple, un profil dont le rang de percentile est de 99 pour l’attrition indique qu’il y a une forte chance d’attrition par rapport à 99 % des autres profils évalués. Les centiles sont compris entre 1 et 100. |
+| Probabilité | Cet attribut est la probabilité réelle qu’un profil atteigne l’objectif prévu au cours de la période définie. Si vous comparez les sorties en fonction d’objectifs différents, nous vous recommandons de prendre en compte la probabilité plutôt que le percentile ou le score. Vous devez toujours utiliser la probabilité lorsque vous essayez de déterminer la probabilité moyenne sur la population éligible, car la probabilité a tendance à être basse pour les événements qui ne se produisent pas fréquemment. Les valeurs des probabilités sont comprises entre 0 et 1. |
+| Percentile | Cette valeur fournit des informations concernant la performance d’un profil par rapport à d’autres profils aux notes similaires. Par exemple, un profil dont le rang de percentile est de 99 pour l’attrition indique qu’il y a une forte chance d’attrition par rapport à 99 % des autres profils évalués. Les percentiles sont compris entre 1 et 100. |
 | Type de propension | Le type de propension sélectionné. |
 | Date de la note | Date à laquelle la notation a eu lieu. |
 | Facteurs d’influence | Il s’agit des raisons prédites pour lesquelles un profil est susceptible de procéder à la conversion ou à l’attrition. Ces facteurs se composent des attributs suivants :<ul><li>Code : le profil ou l’attribut comportemental qui influencent positivement le score prévu d’un profil. </li><li>Valeur : la valeur du profil ou de l’attribut comportemental.</li><li>Importance : indique le poids que le profil ou l’attribut comportemental a sur le score prévu (faible, moyen, élevé)</li></ul> |

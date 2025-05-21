@@ -1,45 +1,45 @@
 ---
-keywords: Experience Platform;télécharger des scores;service clientèle;rubriques les plus consultées;exportation;téléchargement de l’assistance client;scores de l’assistance client
+keywords: Experience Platform;télécharger des scores;ia dédiée aux clients;rubriques populaires;Exporter;exporter;téléchargement ia dédiée aux clients;scores ia dédiée aux clients
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
-title: Scores de téléchargement dans Customer AI
-description: Customer AI vous permet de télécharger des scores au format de fichier Parquet.
+title: Télécharger les scores dans l’IA dédiée aux clients
+description: L’IA dédiée aux clients vous permet de télécharger des scores au format de fichier Parquet.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '962'
-ht-degree: 72%
+source-wordcount: '987'
+ht-degree: 70%
 
 ---
 
-# Téléchargement de scores dans Customer AI
+# Télécharger des scores dans l’IA dédiée aux clients
 
 Ce document sert de guide pour télécharger des scores dans Customer AI.
 
 ## Prise en main
 
-Customer AI vous permet de télécharger des scores au format de fichier Parquet. Pour suivre ce tutoriel, vous devez avoir terminé de lire la section consacrée au téléchargement de scores Customer AI dans le [guide de prise en main](../getting-started.md).
+L’IA dédiée aux clients vous permet de télécharger des scores au format de fichier Parquet. Pour suivre ce tutoriel, vous devez avoir terminé de lire la section consacrée au téléchargement de scores Customer AI dans le [guide de prise en main](../getting-started.md).
 
-De plus, pour accéder aux scores dans Customer AI, vous devez disposer d’une instance de service avec un état d’exécution réussi disponible. Pour créer une instance de service, consultez la page [Configuration d’une instance Customer AI](./configure.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
+De plus, pour accéder aux scores dans Customer AI, vous devez disposer d’une instance de service avec un état d’exécution réussi disponible. Pour créer une instance de service, consultez [Configuration d’une instance IA dédiée aux clients](./configure.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
 
 Actuellement, il existe deux manières de télécharger les scores Customer AI :
 
-1. Si vous souhaitez télécharger les scores au niveau individuel et/ou si Real-Time Customer Profile n’est pas activé, commencez par accéder à [la recherche de l’identifiant de votre jeu de données](#dataset-id).
+1. Si vous souhaitez télécharger les scores au niveau individuel et/ou que le profil client en temps réel n’est pas activé, commencez par accéder à [recherche de votre identifiant de jeu de données](#dataset-id).
 2. Si Profile est activé et que vous souhaitez télécharger les segments que vous avez configurés à l’aide de Customer AI, [téléchargez un segment configuré avec Customer AI](#segment).
 
 ## Recherche de votre identifiant de jeu de données {#dataset-id}
 
 Dans votre instance de service d’informations Customer AI, cliquez sur la liste déroulante *Actions supplémentaires* dans le volet de navigation en haut à droite, puis sélectionnez **[!UICONTROL Accéder aux scores]**.
 
-![actions supplémentaires](../images/insights/more-actions.png)
+![Menu déroulant Autres actions affichant l’option « Accéder aux scores ».](../images/insights/more-actions.png)
 
 Une boîte de dialogue s’affiche. Elle contient un lien vers la documentation des scores de téléchargement et l’identifiant du jeu de données de votre instance actuelle. Copiez l’identifiant du jeu de données dans votre presse-papiers et passez à l’étape suivante.
 
-![Identifiant du jeu de données](../images/download-scores/access-scores.png)
+![Boîte de dialogue Accéder aux scores affichant l’identifiant du jeu de données pour l’instance actuelle.](../images/download-scores/access-scores.png)
 
 ## Récupération de votre identifiant de lot {#retrieve-your-batch-id}
 
-À l’aide de l’identifiant de jeu de données de l’étape précédente, vous devez effectuer un appel à l’API Catalog afin de récupérer un identifiant de lot. Des paramètres de requête supplémentaires sont utilisés pour cet appel API afin de renvoyer le dernier lot réussi au lieu d’une liste de lots appartenant à votre organisation. Pour renvoyer des lots supplémentaires, augmentez le nombre du paramètre de requête limite à la valeur souhaitée que vous souhaitez voir renvoyer. Pour plus d’informations sur les types de paramètres de requête disponibles, consultez le guide sur le [filtrage des données Catalogue à l’aide des paramètres de requête](../../../catalog/api/filter-data.md).
+En utilisant l’identifiant du jeu de données de l’étape précédente, vous devez effectuer un appel à l’API Catalog pour récupérer un identifiant de lot. Des paramètres de requête supplémentaires sont utilisés pour cet appel API afin de renvoyer le dernier lot réussi au lieu d’une liste de lots appartenant à votre organisation. Pour renvoyer des lots supplémentaires, augmentez le nombre du paramètre de requête de limite à la quantité souhaitée que vous souhaitez renvoyer. Pour plus d’informations sur les types de paramètres de requête disponibles, consultez le guide sur le [filtrage des données Catalogue à l’aide des paramètres de requête](../../../catalog/api/filter-data.md).
 
 **Format d’API**
 
@@ -63,7 +63,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 
 **Réponse**
 
-Une réponse réussie renvoie un payload contenant un objet d’identifiant de lot. Dans cet exemple, la valeur clé de l’objet renvoyé est l’identifiant de lot `01E5QSWCAASFQ054FNBKYV6TIQ`. Copiez l’identifiant de lot à utiliser dans l’appel API suivant.
+Une réponse réussie renvoie un payload contenant un objet d’ID de lot. Dans cet exemple, la valeur de clé de l’objet renvoyé est l’ID de lot `01E5QSWCAASFQ054FNBKYV6TIQ`. Copiez l’identifiant de lot à utiliser dans l’appel API suivant.
 
 ```json
 {
@@ -236,7 +236,6 @@ La réponse contient un tableau de données qui peut comporter une entrée uniqu
 | --------- | ----------- |
 | `_links.self.href` | L’URL de la requête GET utilisée pour télécharger un fichier dans votre répertoire. |
 
-
 Copiez la valeur `href` de chaque objet de fichier du tableau `data`, puis passez à l’étape suivante.
 
 ## Télécharger vos données de fichier
@@ -245,7 +244,7 @@ Pour télécharger vos données de fichier, envoyez une requête GET vers la val
 
 >[!NOTE]
 >
->Si vous effectuez cette requête directement dans la ligne de commande, vous serez peut-être invité à ajouter une sortie après les en-têtes de la requête. L’exemple de requête suivant utilise `--output {FILENAME.FILETYPE}`.
+>Si vous effectuez cette requête directement dans la ligne de commande, vous pouvez être invité à ajouter une sortie après vos en-têtes de requête. L’exemple de requête suivant utilise `--output {FILENAME.FILETYPE}`.
 
 **Format d’API**
 
@@ -271,21 +270,21 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 >[!TIP]
 >
->Assurez-vous que vous vous trouvez dans le répertoire ou le dossier dans lequel vous souhaitez enregistrer votre fichier avant d’effectuer la demande de GET.
+>Assurez-vous que vous vous trouvez dans le répertoire ou le dossier dans lequel vous souhaitez enregistrer votre fichier avant d’effectuer la requête GET.
 
 **Réponse**
 
 La réponse télécharge le fichier que vous avez demandé dans votre répertoire actuel. Dans cet exemple, le nom de fichier est « filename.parquet ».
 
-![Terminal](../images/download-scores/response.png)
+![Exemple de réponse de terminal affichant un appel API réussi.](../images/download-scores/response.png)
 
-## Téléchargement d’un segment configuré avec Customer AI {#segment}
+## Télécharger un segment configuré avec l’IA dédiée aux clients {#segment}
 
 Vous pouvez aussi télécharger vos données de score en exportant votre audience vers un jeu de données. Une fois la tâche de segmentation terminée (la valeur de l’attribut `status` est « SUCCEEDED »), vous pouvez exporter votre audience vers un jeu de données permettant son accès et son utilisation. Pour en savoir plus sur la segmentation, consultez la [présentation de la segmentation](../../../segmentation/home.md).
 
 >[!IMPORTANT]
 >
->Afin d’utiliser cette méthode d’exportation, Real-Time Customer Profile doit être activé pour le jeu de données.
+>Pour utiliser cette méthode d’exportation, le profil client en temps réel doit être activé pour le jeu de données.
 
 La section [Exportation d’un segment](../../../segmentation/tutorials/evaluate-a-segment.md) du guide d’évaluation des segments décrit les étapes requises pour exporter un jeu de données d’audience. Le guide décrit les étapes suivantes et fournit des exemples de celles-ci :
 

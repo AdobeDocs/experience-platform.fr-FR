@@ -6,9 +6,9 @@ title: Dépannage des erreurs de l’IA dédiée aux clients
 description: Trouvez des réponses aux erreurs courantes de l’IA dédiée aux clients.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: 32c1affecb4cf58412eb91fd90e1a13f4bc43541
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1780'
 ht-degree: 31%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 31%
 
 L’IA dédiée aux clients affiche des erreurs lorsque l’entraînement, la notation et la configuration des modèles échouent. Dans la section **[!UICONTROL Instances de service]**, une colonne pour le **[!UICONTROL STATUT DE LA DERNIÈRE EXÉCUTION]** affiche l’un des messages suivants : **[!UICONTROL Succès]**, **[!UICONTROL Problème de formation]**, et **[!UICONTROL Échec]**.
 
-![statut de la dernière exécution](./images/errors/last-run-status.png)
+![Statut de la dernière exécution indiquant la réussite, un problème de formation ou un échec.](./images/errors/last-run-status.png)
 
 Dans le cas où **[!UICONTROL Échec]** ou **[!UICONTROL Problème d’entraînement]** s’affiche, vous pouvez sélectionner le statut d’exécution pour ouvrir un panneau latéral. Le panneau latéral contient le **[!UICONTROL statut de votre dernière exécution]** et les **[!UICONTROL détails de la dernière exécution]**. Les **[!UICONTROL détails de la dernière exécution]** contiennent des informations sur les raisons de l’échec de l’exécution. Dans le cas où l’IA dédiée aux clients ne peut pas fournir de détails sur votre erreur, contactez l’assistance avec le code d’erreur fourni.
 
@@ -27,13 +27,13 @@ Dans le cas où **[!UICONTROL Échec]** ou **[!UICONTROL Problème d’entraîne
 
 Les erreurs de chargement en mode navigation privée de Google Chrome sont présentes en raison des mises à jour des paramètres de sécurité du mode navigation privée de Google Chrome. Le problème est en cours de traitement avec Chrome pour faire d’experience.adobe.com un domaine de confiance.
 
-![Image d’erreur](./images/errors/error.PNG){width=500}
+![Image d’erreur montrant un exemple de message d’erreur de l’IA dédiée aux clients.](./images/errors/error.PNG){width=500}
 
 ### Correctif recommandé
 
 Pour contourner ce problème, vous devez ajouter experience.adobe.com en tant que site pouvant toujours utiliser des cookies. Commencez par accéder à **chrome://settings/cookies**. Faites ensuite défiler l’écran jusqu’à la section **Comportements personnalisés**, puis sélectionnez le bouton **Ajouter** en regard de « Sites autorisés à utiliser des cookies ». Dans la fenêtre contextuelle qui s’affiche, effectuez un copier-coller de `[*.]experience.adobe.com` puis cochez la case **Inclure les cookies tiers de ce site**. Une fois l’opération terminée, sélectionnez **Ajouter** et chargez à nouveau l’IA dédiée aux clients en navigation privée.
 
-![correctif recommandé](./images/errors/cookies2.gif)
+![Animation montrant les étapes pour ajouter experience.adobe.com en tant que site pouvant toujours utiliser des cookies dans les paramètres de Chrome.](./images/errors/cookies2.gif)
 
 ## La qualité du modèle est médiocre.
 

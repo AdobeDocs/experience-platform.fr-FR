@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Préparation des données en vue de leur utilisation dans les services intelligents
 description: Pour qu’Intelligent Services puisse découvrir des informations à partir de vos données d’événements marketing, les données doivent être enrichies sémantiquement et conservées dans une structure standard. Pour ce faire, les services intelligents utilisent des schémas de modèle de données d’expérience (XDM).
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '2827'
+source-wordcount: '2951'
 ht-degree: 2%
 
 ---
@@ -92,7 +92,7 @@ Le schéma CEE, comme tous les schémas XDM ExperienceEvent, capture l’état t
 
 [!DNL Intelligent Services] utiliser plusieurs champs clés dans ce schéma pour générer des informations à partir de vos données d’événements marketing, qui se trouvent tous au niveau racine et sont développés pour afficher les sous-champs requis.
 
-![](./images/data-preparation/schema-expansion.gif)
+![Démonstration de l’extension de schéma dans l’interface utilisateur de Adobe Experience Platform, affichant les détails de navigation et de sous-champ.](./images/data-preparation/schema-expansion.gif)
 
 Comme tous les schémas XDM, le groupe de champs de schéma CEE est extensible. En d’autres termes, des champs supplémentaires peuvent être ajoutés au groupe de champs CEE et différentes variations peuvent être incluses dans plusieurs schémas si nécessaire.
 
@@ -134,19 +134,19 @@ Si vous ne savez pas quel champ vous devez utiliser comme identité principale, 
 
 Pour définir une identité principale, accédez à votre schéma à partir de l’onglet **[!UICONTROL Schémas]** et sélectionnez le lien hypertexte du nom du schéma pour ouvrir le **[!DNL Schema Editor]**.
 
-![Accéder au schéma](./images/data-preparation/navigate_schema.png)
+![Navigation vers le schéma dans l’interface utilisateur de Adobe Experience Platform.](./images/data-preparation/navigate_schema.png)
 
 Ensuite, accédez au champ que vous souhaitez utiliser comme identité principale et sélectionnez-le. Le menu **[!UICONTROL Propriétés du champ]** s’ouvre pour ce champ.
 
-![Sélectionnez le champ](./images/data-preparation/find_field.png)
+![Processus de sélection du champ souhaité dans l’interface utilisateur de Adobe Experience Platform.](./images/data-preparation/find_field.png)
 
 Dans le menu **[!UICONTROL Propriétés du champ]**, faites défiler l’écran vers le bas jusqu’à trouver la case à cocher **[!UICONTROL Identité]**. Après avoir coché la case, l’option permettant de définir l’identité sélectionnée comme **[!UICONTROL identité de Principal]** s’affiche. Cochez également cette case.
 
-![Cocher la case](./images/data-preparation/set_primary_identity.png)
+![Case à cocher pour définir l’identité principale dans l’interface utilisateur de Adobe Experience Platform.](./images/data-preparation/set_primary_identity.png)
 
 Ensuite, vous devez fournir un **[!UICONTROL Espace de noms d’identité]** à partir des espaces de noms prédéfinis dans la liste déroulante. Dans cet exemple, l’espace de noms ECID est sélectionné, car un `mcid.id` d’ID Adobe Audience Manager est utilisé. Sélectionnez **[!UICONTROL Appliquer]** pour confirmer les mises à jour, puis sélectionnez **[!UICONTROL Enregistrer]** dans le coin supérieur droit pour enregistrer les modifications apportées à votre schéma.
 
-![Enregistrez les modifications](./images/data-preparation/select_namespace.png)
+![Menu déroulant affichant la sélection de l’espace de noms ECID dans l’interface utilisateur de Adobe Experience Platform.](./images/data-preparation/select_namespace.png)
 
 #### xdm:timestamp {#timestamp}
 
@@ -160,7 +160,7 @@ Ce champ représente la date et l’heure auxquelles l’événement s’est pro
 
 Ce champ représente le canal marketing associé à l’ExperienceEvent. Le champ contient des informations sur le type de canal, le type de média et le type d’emplacement.
 
-![](./images/data-preparation/channel.png)
+![Diagramme affichant la structure du champ xdm:channel, y compris les sous-champs tels que type, mediaType et mediaAction.](./images/data-preparation/channel.png)
 
 **Exemple de schéma**
 
@@ -198,7 +198,7 @@ Le reste des champs clés est décrit dans cette section. Bien que ces champs ne
 
 Ce champ est un tableau d’éléments qui représentent les produits sélectionnés par un client, y compris le SKU, le nom, le prix et la quantité du produit.
 
-![](./images/data-preparation/productListItems.png)
+![Le champ xdm:productListItems, y compris les sous-champs tels que SKU, name, currencyCode, quantity et priceTotal.](./images/data-preparation/productListItems.png)
 
 **Exemple de schéma**
 
@@ -227,7 +227,7 @@ Pour obtenir des informations complètes sur chacun des sous-champs obligatoires
 
 Ce champ contient des informations spécifiques à Commerce sur l’ExperienceEvent, y compris le numéro de commande fournisseur et les informations de paiement.
 
-![](./images/data-preparation/commerce.png)
+![Structure du champ xdm:commerce, y compris les sous-champs tels que la commande, les achats et les paiements.](./images/data-preparation/commerce.png)
 
 **Exemple de schéma**
 
@@ -265,7 +265,7 @@ Pour obtenir des informations complètes sur chacun des sous-champs obligatoires
 
 Ce champ représente les détails web relatifs à l’ExperienceEvent, tels que l’interaction, les détails de la page et le référent.
 
-![](./images/data-preparation/web.png)
+![Le champ xdm:web, y compris les sous-champs tels que webPageDetails et webReferrer.](./images/data-preparation/web.png)
 
 **Exemple de schéma**
 
@@ -295,7 +295,7 @@ Pour obtenir des informations complètes sur chacun des sous-champs obligatoires
 
 Ce champ contient des informations relatives aux activités marketing qui sont actives avec le point de contact.
 
-![](./images/data-preparation/marketing.png)
+![Structure du champ xdm:marketing, y compris les sous-champs tels que trackingCode, campaignGroup et campaignName.](./images/data-preparation/marketing.png)
 
 **Exemple de schéma**
 
