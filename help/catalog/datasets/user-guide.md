@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur des jeux de données
 description: Découvrez comment effectuer des actions courantes lorsque vous utilisez des jeux de données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 52412c5d6231e10fc875d16971dbd8cbfb116d21
+source-git-commit: f66e85ee5fb3fdaf7036b131f9689082d9d96127
 workflow-type: tm+mt
-source-wordcount: '4143'
+source-wordcount: '4237'
 ht-degree: 12%
 
 ---
@@ -56,7 +56,7 @@ Ce guide d’utilisation nécessite une compréhension professionnelle des compo
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_orchestratedCampaigns_toggle"
->title="Campagnes orchestrées"
+>title="Campagnes orchestrées"
 >abstract="Activez ce bouton pour permettre l’utilisation du jeu de données sélectionné dans les campagnes orchestrées par Adobe Journey Optimizer. Le jeu de données doit utiliser un schéma relationnel et un seul jeu de données peut être créé par schéma."
 
 Dans l’interface utilisateur de [!DNL Experience Platform], sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour ouvrir le tableau de bord **[!UICONTROL Jeux de données]**. Le tableau de bord répertorie tous les jeux de données disponibles pour votre organisation. Des détails s’affichent pour chaque jeu de données répertorié, notamment son nom, le schéma auquel le jeu de données adhère et le statut de l’exécution d’ingestion la plus récente.
@@ -72,7 +72,7 @@ Sélectionnez le nom d’un jeu de données dans l’onglet [!UICONTROL Parcouri
 
 Vous pouvez [!UICONTROL Supprimer] ou [!UICONTROL Activer un jeu de données pour Profil] à partir de la vue des détails [!UICONTROL Jeu de données]. Pour afficher les actions disponibles, sélectionnez **[!UICONTROL ... Plus]** en haut à droite de l’interface utilisateur. Le menu déroulant s’affiche.
 
-![Espace de travail Jeux de données avec le [!UICONTROL ... Plus &#x200B;] menu déroulant mis en surbrillance.](../images/datasets/user-guide/more-actions.png)
+![Espace de travail Jeux de données avec le [!UICONTROL ... Plus ] menu déroulant mis en surbrillance.](../images/datasets/user-guide/more-actions.png)
 
 Si vous sélectionnez **[!UICONTROL Activer un jeu de données pour le profil]**, une boîte de dialogue de confirmation s’affiche. Sélectionnez **[!UICONTROL Activer]** pour confirmer votre choix.
 
@@ -100,7 +100,7 @@ L’interface utilisateur des jeux de données propose désormais des collection
 * [[!UICONTROL Gérer les données et les libellés d’accès]](#manage-and-enforce-data-governance)
 * [[!UICONTROL Activer le profil unifié]](#enable-profile)
 * [[!UICONTROL Gérer les balises]](#manage-tags)
-* [(Beta) [!UICONTROL Définir une politique de conservation des données]](#data-retention-policy)
+* [[!UICONTROL Définir une politique de conservation des données]](#data-retention-policy)
 * [[!UICONTROL Déplacer vers des dossiers]](#move-to-folders)
 * [[!UICONTROL Supprimer]](#delete).
 
@@ -160,7 +160,7 @@ Les jeux de données qui ont été activés pour Profil peuvent également être
 
 ### Gérer les balises du jeu de données {#manage-tags}
 
-Ajoutez des balises personnalisées pour organiser les jeux de données et améliorer les fonctionnalités de recherche, de filtrage et de tri. Dans l’onglet [!UICONTROL &#x200B; Parcourir &#x200B;] de l’espace de travail [!UICONTROL Jeux de données], sélectionnez les points de suspension d’un jeu de données à gérer, puis **[!UICONTROL Gérer les balises]** dans le menu déroulant.
+Ajoutez des balises personnalisées pour organiser les jeux de données et améliorer les fonctionnalités de recherche, de filtrage et de tri. Dans l’onglet [!UICONTROL  Parcourir ] de l’espace de travail [!UICONTROL Jeux de données], sélectionnez les points de suspension d’un jeu de données à gérer, puis **[!UICONTROL Gérer les balises]** dans le menu déroulant.
 
 ![L’onglet Parcourir de l’espace de travail Jeux de données avec les points de suspension et l’option Gérer les balises en surbrillance pour le jeu de données sélectionné.](../images/datasets/user-guide/manage-tags.png)
 
@@ -174,13 +174,15 @@ Une fois qu’une balise a été ajoutée à un jeu de données, les jeux de don
 
 Pour plus d’informations sur la classification d’objets métier pour faciliter la découverte et la catégorisation, consultez le guide sur la [gestion des taxonomies des métadonnées](../../administrative-tags/ui/managing-tags.md). Ce guide explique comment les utilisateurs disposant des autorisations appropriées peuvent créer des balises prédéfinies, les affecter à des catégories et gérer toutes les opérations CRUD associées dans l’interface utilisateur d’Experience Platform.
 
-### (Beta) Définir une politique de conservation des données {#data-retention-policy}
+### Définir la politique de conservation des données {#data-retention-policy}
 
->[!AVAILABILITY]
-> 
->Les paramètres de conservation des données sont actuellement en version bêta et disponibles uniquement dans une version **limitée** pour certaines organisations. Il se peut que votre interface utilisateur ne reflète pas la fonctionnalité décrite ci-dessous.
+Gérez les paramètres d’expiration et de rétention des jeux de données à l’aide du menu d’actions intégrées de l’onglet [!UICONTROL  Parcourir ] de l’espace de travail [!UICONTROL Jeux de données]. Vous pouvez utiliser cette fonctionnalité pour configurer la durée de conservation des données dans le lac de données et le magasin de profils. La date d’expiration dépend du moment où les données ont été ingérées dans Experience Platform et de la période de conservation que vous avez configurée.
 
-Gérez les paramètres d’expiration et de rétention des jeux de données à l’aide du menu d’actions intégrées de l’onglet [!UICONTROL &#x200B; Parcourir &#x200B;] de l’espace de travail [!UICONTROL Jeux de données]. Vous pouvez utiliser cette fonctionnalité pour configurer la durée de conservation des données dans le lac de données et le magasin de profils. La date d’expiration dépend du moment où les données ont été ingérées dans Experience Platform et de la période de conservation que vous avez configurée.
+>[!IMPORTANT]
+>
+>Pour appliquer ou mettre à jour des règles de conservation pour un jeu de données ExperienceEvent, votre rôle d’utilisateur doit inclure l’autorisation **Gérer les jeux de données**. Ce contrôle d’accès basé sur les rôles garantit que seuls les utilisateurs autorisés peuvent modifier les paramètres de conservation des jeux de données.
+>
+>Pour plus d’informations sur l’attribution d’autorisations dans Adobe Experience Platform](../../access-control/home.md#platform-permissions) reportez-vous à la [ Présentation du contrôle d’accès .
 
 >[!TIP]
 >
@@ -216,7 +218,7 @@ Vous pouvez utiliser les prévisions visuelles pour évaluer l’impact des diff
 
 >[!NOTE]
 >
->Le graphique de répartition des événements d’expérience est spécifique au jeu de données et reflète uniquement les données du jeu de données sélectionné.
+>Le graphique de répartition des événements d’expérience est spécifique au jeu de données sélectionné et reflète uniquement ses données. Elle s’applique exclusivement aux données stockées dans le lac de données.
 
 ![La boîte de dialogue Définir la conservation des données avec le graphique de répartition des événements d’expérience affiché.](../images/datasets/user-guide/visual-forecast.png)
 
@@ -226,7 +228,9 @@ Lorsque votre configuration vous convient, sélectionnez **[!UICONTROL Enregistr
 >
 >Une fois les règles de conservation des données appliquées, toutes les données antérieures au nombre de jours défini par la valeur d’expiration sont supprimées définitivement et ne peuvent pas être récupérées.
 
-Après avoir configuré vos paramètres de conservation, utilisez l’interface utilisateur de surveillance pour confirmer que vos modifications ont été exécutées par le système. L’interface utilisateur de surveillance fournit une vue centralisée de l’activité de conservation des données dans tous les jeux de données. À partir de là, vous pouvez effectuer le suivi de l’exécution des tâches, vérifier le volume de données supprimées et vous assurer que vos politiques de conservation fonctionnent comme prévu. Cette visibilité soutient la gouvernance, la conformité et une gestion efficace du cycle de vie des données.
+Après avoir configuré vos paramètres de conservation, utilisez l’interface utilisateur de surveillance pour confirmer que vos modifications ont été exécutées par le système. L’interface utilisateur de surveillance fournit une vue centralisée de l’activité de conservation des données dans tous les jeux de données. À partir de là, vous pouvez effectuer le suivi de l’exécution des tâches, vérifier le volume de données supprimées et vous assurer que vos politiques de conservation fonctionnent comme prévu.
+
+Pour découvrir comment les politiques de rétention s’appliquent à différents services, consultez les guides dédiés sur [la rétention du jeu de données d’événement d’expérience dans le profil](../../profile/event-expirations.md) et [la rétention du jeu de données d’événement d’expérience dans le lac de données](./experience-event-dataset-retention-ttl-guide.md). Cette visibilité soutient la gouvernance, la conformité et une gestion efficace du cycle de vie des données.
 
 Pour savoir comment utiliser le tableau de bord de surveillance pour effectuer le suivi des flux de données sources dans l’interface utilisateur d’Experience Platform, consultez la documentation [Surveiller les flux de données pour les sources dans l’interface utilisateur](../../dataflows/ui/monitor-sources.md).
 
@@ -234,15 +238,15 @@ Pour savoir comment utiliser le tableau de bord de surveillance pour effectuer l
 
 Pour plus d’informations sur les règles qui définissent les périodes d’expiration des jeux de données et les bonnes pratiques pour configurer votre politique de conservation des données, consultez la [page forum aux questions](../catalog-faq.md).
 
-#### (Beta) Visibilité améliorée des périodes de conservation et des mesures de stockage {#retention-and-storage-metrics}
+#### Visibilité améliorée des périodes de conservation et des mesures de stockage {#retention-and-storage-metrics}
 
-Quatre nouvelles colonnes sont disponibles pour les utilisateurs de la version Beta afin d’offrir une meilleure visibilité sur votre gestion des données : **[!UICONTROL Data Lake Storage]**, **[!UICONTROL Data Lake Retention]**, **[!UICONTROL Profile Storage]** et **[!UICONTROL Profile Retention]**. Ces mesures indiquent la quantité de stockage consommée par vos données et leur période de conservation dans le lac de données et le service de profil.
+Quatre nouvelles colonnes offrent une meilleure visibilité sur la gestion de vos données : **[!UICONTROL Data Lake Storage]**, **[!UICONTROL Data Lake Retention]**, **[!UICONTROL Profile Storage]** et **[!UICONTROL Profile Retention]**. Ces mesures indiquent la quantité de stockage consommée par vos données et leur période de conservation dans le lac de données et le service de profil.
 
-Cette visibilité accrue vous permet de prendre des décisions éclairées et de gérer plus efficacement les coûts de stockage. Triez les jeux de données par taille de stockage pour identifier les plus volumineux de votre sandbox actuel. Ces informations prennent également en charge une meilleure gouvernance et vous aident à comprendre votre cycle de vie des données et l’utilisation des droits.
+Cette visibilité accrue vous permet de prendre des décisions éclairées et de gérer plus efficacement les coûts de stockage. Triez les jeux de données par taille de stockage pour identifier les plus volumineux de votre sandbox actuel. Ces informations prennent en charge les bonnes pratiques de gestion des données et vous aident à garantir la conformité avec vos droits sous licence.
 
 ![L’onglet Parcourir de l’espace de travail Jeux de données avec les quatre nouvelles colonnes de stockage et de conservation en surbrillance.](../images/datasets/user-guide/storage-and-retention-columns.png)
 
-Le tableau suivant présente un aperçu des nouvelles mesures de conservation et de stockage disponibles dans la version bêta. Il décrit l’objectif de chaque colonne et la manière dont elle prend en charge la gestion de la conservation et du stockage des données.
+Le tableau suivant présente un aperçu des nouvelles mesures de conservation et de stockage. Il décrit l’objectif de chaque colonne et la manière dont elle prend en charge la gestion de la conservation et du stockage des données.
 
 | Titre de colonne | Description |
 |---|---|
@@ -252,6 +256,8 @@ Le tableau suivant présente un aperçu des nouvelles mesures de conservation et
 | [!UICONTROL Conservation des profils] | La période de conservation actuelle des jeux de données de profil. Vous pouvez mettre à jour cette valeur pour contrôler la durée de conservation des données du profil. |
 
 {style="table-layout:auto"}
+
+Pour agir sur les informations des mesures de stockage et de rétention, reportez-vous au [guide des bonnes pratiques relatives aux droits de licence de gestion des données](../../landing/license-usage-and-guardrails/data-management-best-practices.md). Utilisez-le pour gérer les données que vous ingérez et conservez, appliquer des filtres et des règles d’expiration, et contrôler la croissance des données afin de respecter vos limites d’utilisation sous licence.
 
 ### Déplacer vers des dossiers {#move-to-folders}
 
