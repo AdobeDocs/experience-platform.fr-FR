@@ -3,10 +3,10 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
 workflow-type: tm+mt
-source-wordcount: '2288'
-ht-degree: 70%
+source-wordcount: '2355'
+ht-degree: 68%
 
 ---
 
@@ -15,6 +15,15 @@ ht-degree: 70%
 
 Ce document présente les notes de mise à jour du SDK web d’Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Version 2.27.0 - mercredi 20 mai 2025
+
+**Correctifs et améliorations**
+
+- Correction d’un problème lié aux messages in-app en raison duquel le style personnalisé n’était pas correctement appliqué.
+- Modification du format de l’historique des événements. Cela entraîne la réaffichage des messages in-app et des cartes de contenu lorsque les anciennes données d’historique sont supprimées.
+- Correction d’un problème où les propositions étaient réappliquées dans les cas d’utilisation de SPA.
+- Correction d’un problème lié au suivi des clics sur les éléments DOM fantômes.
 
 ## Version 2.26.0 - jeudi 5 mars 2025
 

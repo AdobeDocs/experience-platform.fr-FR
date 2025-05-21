@@ -2,16 +2,34 @@
 title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: ht
-source-wordcount: '2583'
-ht-degree: 100%
+source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
+workflow-type: tm+mt
+source-wordcount: '2652'
+ht-degree: 98%
 
 ---
 
 # Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 
 Ce document contient les notes de mise à jour de l’extension de balises du SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, voir les [notes de mise à jour du SDK web d’Experience Platform](/help/web-sdk/release-notes.md).
+
+## Version 2.30.0 - jeudi 21 mai 2025
+
+**Nouvelles fonctionnalités**
+
+- Vous pouvez désormais spécifier un élément de données lors de l’activation des cookies tiers.
+- Ajout de boutons d’effacement aux champs de code.
+- Contient [version 2.27.0](../../../../web-sdk/release-notes.md#2-27-0) du SDK Web Adobe Experience Platform.
+
+**Correctifs et améliorations**
+
+- Ajout de la validation pour empêcher la définition de `onBeforeLinkClickSend` lorsque le regroupement d’événements est activé.
+
+## Version 2.29.1 - vendredi 8 mai 2025
+
+**Correctifs et améliorations**
+
+- Correction d’un problème où les paramètres n’étaient pas enregistrés lorsque vous cliquiez immédiatement sur « Enregistrer » après modification.
 
 ## Version 2.29.0 - 5 mars 2025
 
