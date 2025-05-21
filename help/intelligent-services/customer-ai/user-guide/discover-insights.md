@@ -231,4 +231,4 @@ Ce document décrit les informations fournies par une instance de service Custom
 
 La vidéo suivante montre comment utiliser l’IA dédiée aux clients pour afficher la sortie des modèles et des facteurs d’influence.
 
->[!VIDEO](https://video.tv.adobe.com/v/32666?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36547?learn=on&quality=12&captions=fre_fr)
