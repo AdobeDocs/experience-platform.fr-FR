@@ -3,10 +3,10 @@ title: Exporter des jeux de données vers des destinations d’espace de stockag
 type: Tutorial
 description: Découvrez comment exporter des jeux de données d’Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 8b2b40be94bb35f0c6117bfc1d51f8ce282f2b29
+source-git-commit: b423e51e3e048a5dd7c2c15f80c8c1fcf5c2657b
 workflow-type: tm+mt
-source-wordcount: '2732'
-ht-degree: 34%
+source-wordcount: '2722'
+ht-degree: 35%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 34%
 >
 >Pour l’un de ces flux de données, vous devez mettre à jour manuellement la date de fin du flux de données avant la date de fin, sinon vos exportations s’arrêteront à cette date. Utilisez l’interface utilisateur d’Experience Platform pour afficher les flux de données qui seront définis pour s’arrêter le 1er septembre 2025.
 >
->Pour plus d’informations sur la modification de la date de fin d’un flux de données d’exportation de jeux de données[&#128279;](#scheduling) consultez la section planification.
+>Pour plus d’informations sur la modification de la date de fin d’un flux de données d’exportation de jeux de données](#scheduling) consultez la section [planification.
 
 Cet article explique le processus requis pour exporter des [jeux de données](/help/catalog/datasets/overview.md) de Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix, comme des [!DNL Amazon S3], des emplacements SFTP ou des [!DNL Google Cloud Storage] à l’aide de l’interface utilisateur d’Experience Platform.
 
@@ -50,16 +50,16 @@ Utilisez le tableau ci-dessous pour comprendre quels types de jeux de données v
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Jeux de données de profil et d’événement d’expérience créés dans l’interface utilisateur d’Experience Platform après l’ingestion ou la collecte de données par le biais de sources, de Web SDK, de Mobile SDK, du connecteur de données Analytics et d’Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=fr#profile-attribute-datasets">Jeu de données d’instantanés de profil généré par le système</a>.</li></td>
+    <td><ul><li>Jeux de données de profil et d’événement d’expérience créés dans l’interface utilisateur d’Experience Platform après l’ingestion ou la collecte de données par le biais de sources, de Web SDK, de Mobile SDK, du connecteur de données Analytics et d’Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">Jeu de données d’instantanés de profil généré par le système</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>Reportez-vous à la documentation de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=fr#datasets"> Adobe Journey Optimizer</a> .</td>
+    <td>Reportez-vous à la documentation de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> .</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Reportez-vous à la documentation de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=fr#datasets"> Adobe Journey Optimizer</a> .</td>
+    <td>Reportez-vous à la documentation de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> .</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ Utilisez le tableau ci-dessous pour comprendre quels types de jeux de données v
 
 Regardez la vidéo ci-dessous pour une explication de bout en bout du workflow décrit sur cette page, des avantages de l’utilisation de la fonctionnalité d’exportation du jeu de données et de certains cas d’utilisation suggérés.
 
->[!VIDEO](https://video.tv.adobe.com/v/3448820?captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## Destinations prises en charge {#supported-destinations}
 
@@ -111,7 +111,7 @@ Notez les conditions préalables suivantes pour exporter des jeux de données :
 
 ### Autorisations nécessaires {#permissions}
 
-Pour exporter des jeux de données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Afficher les jeux de données]** et **[!UICONTROL Gérer et activer les destinations de jeu de données]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+Pour exporter des jeux de données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Afficher les jeux de données]** et **[!UICONTROL Gérer et activer les destinations de jeu de données]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous assurer que vous disposez des autorisations nécessaires pour exporter des jeux de données et que la destination prend en charge l’exportation de jeux de données, parcourez le catalogue des destinations. Si une destination comporte un contrôle **[!UICONTROL Activer]** ou **[!UICONTROL Exporter des jeux de données]**, vous disposez des autorisations appropriées.
 
@@ -294,7 +294,6 @@ Gardez à l’esprit les limites suivantes pour la mise à disposition général
 
 * Experience Platform peut exporter plusieurs fichiers, même pour de petits jeux de données. L’exportation des jeux de données est conçue pour une intégration système à système et optimisée pour les performances. Par conséquent, le nombre de fichiers exportés n’est pas personnalisable.
 * Les noms des fichiers exportés ne sont actuellement pas personnalisables.
-* Les jeux de données créés via l’API ne peuvent actuellement pas être exportés.
 * Actuellement, l’interface utilisateur ne vous empêche pas de supprimer un jeu de données en cours d’exportation vers une destination. Ne supprimez aucun jeu de données en cours d’exportation vers des destinations. [Supprimez le jeu de données](#remove-dataset) d’un flux de données de destination avant de le supprimer.
 * Les mesures de surveillance des exportations de jeux de données sont actuellement combinées avec les chiffres des exportations de profils afin qu’elles ne reflètent pas les vrais chiffres d’exportation.
 * Les données dont la date et l’heure sont antérieures à 365 jours sont exclues des exportations de jeux de données. Pour plus d’informations, consultez les [mécanismes de sécurisation pour les exportations de jeux de données planifiées](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)
