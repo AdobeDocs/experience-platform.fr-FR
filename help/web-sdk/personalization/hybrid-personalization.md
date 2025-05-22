@@ -3,10 +3,10 @@ title: Personnalisation hybride à l’aide des API Web SDK et Edge Network
 description: Cet article explique comment utiliser Web SDK conjointement avec l’API Edge Network pour déployer une personnalisation hybride sur vos propriétés web.
 keywords: personnalisation;hybride;api du serveur;côté serveur;implémentation hybride;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: 7b91f4f486db67d4673877477a6be8287693533a
 workflow-type: tm+mt
-source-wordcount: '872'
-ht-degree: 57%
+source-wordcount: '1200'
+ht-degree: 41%
 
 ---
 
@@ -33,13 +33,13 @@ Le diagramme de flux ci-dessous décrit l’ordre des étapes effectuées pour f
 
 ![Diagramme de flux visuel présentant l’ordre des étapes effectuées pour fournir une personnalisation hybride.](assets/hybrid-personalization-diagram.png)
 
-1. Tout cookie existant précédemment stocké par le navigateur, préfixé par `kndctr_`, est inclus dans la requête du navigateur.
+1. Tout cookie existant précédemment stocké par le navigateur, précédé de `kndctr_`, est inclus dans la demande du navigateur.
 1. Le navigateur web client demande la page web à votre serveur d’applications.
 1. Lorsque le serveur d’applications reçoit la requête de page, il effectue une requête `POST` au point d’entrée de la collecte de données interactive de l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) afin de récupérer du contenu de personnalisation. La requête `POST` contient un `event` et une `query`. S’ils sont disponibles, les cookies de l’étape précédente sont inclus dans le tableau `meta>state>entries`.
 1. L’API Edge Network renvoie le contenu de personnalisation à votre serveur d’applications.
 1. Le serveur d’applications renvoie une réponse HTML au navigateur client, contenant les [cookies d’identité et de cluster](#cookies).
 1. Sur la page client, la commande [!DNL Web SDK] `applyResponse` est appelée, en transmettant les en-têtes et le corps de la réponse [!UICONTROL API Edge Network] de l’étape précédente.
-1. Le [!DNL Web SDK] effectue automatiquement le rendu des offres Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=fr) et des éléments du canal web Journey Optimizer, car l’indicateur `renderDecisions` est défini sur `true`.
+1. Le [!DNL Web SDK] effectue automatiquement le rendu des offres Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) et des éléments du canal web Journey Optimizer, car l’indicateur `renderDecisions` est défini sur `true`.
 1. Les offres [!DNL HTML]/[!DNL JSON] basées sur des formulaires de Target et les expériences basées sur du code Journey Optimizer sont appliquées manuellement par l’intermédiaire de la méthode `applyProposition` afin de mettre à jour le [!DNL DOM] en fonction du contenu de personnalisation de la proposition.
 1. Pour les offres [!DNL HTML]/[!DNL JSON] basées sur des formulaires de Target et les expériences basées sur du code de Journey Optimizer, les événements d’affichage doivent être envoyés manuellement pour indiquer le moment où le contenu renvoyé a été affiché. Cela s’effectue via la commande `sendEvent`.
 
@@ -61,6 +61,39 @@ Les requêtes d’API Edge Network sont nécessaires pour obtenir des propositio
 | Requête d’interaction pour récupérer des propositions | Serveur d’applications |
 | Requête d’interaction pour envoyer des notifications d’affichage | Serveur d’applications |
 
+
+## Définir l’hôte régional Edge Network {#regional-host}
+
+Pour établir l’hôte régional Edge Network, lisez d’abord l’indice d’emplacement du cookie `kndctr_<orgId>_AdobeOrg_cluster`, qui peut avoir les valeurs suivantes :
+
+* `va6`
+* `or2`
+* `irl1`
+* `ind1`
+* `sgp3`
+* `jpn3`
+* `aus3`
+
+Exemple : `kndctr_53A16ACB5CC1D3760A495C99_AdobeOrg_cluster: va6`
+
+L’hôte régional Edge Network utilise le format suivant :`<location_hint>.server.adobedc.net` et peut avoir les valeurs suivantes :
+
+* `va6.server.adobedc.net`
+* `or2.server.adobedc.net`
+* `irl1.server.adobedc.net`
+* `ind1.server.adobedc.net`
+* `sgp3.server.adobedc.net`
+* `jpn3.server.adobedc.net`
+* `aus3.server.adobedc.net`
+
+En utilisant ces hôtes spécifiques, les requêtes seront dirigées vers le même emplacement Edge Network que celui visité précédemment par l’utilisateur. Le système sera en mesure de fournir la meilleure expérience, car les données utilisateur y sont présentes.
+
+Si aucune indication d’emplacement (c’est-à-dire aucun cookie) n’est présente, utilisez l’hôte par défaut : `server.adobedc.net`.
+
+>[!TIP]
+>
+>Il est recommandé d’utiliser une liste d’emplacements autorisés. Cela empêche l’utilisation de l’indicateur d’emplacement, car il est fourni via des cookies côté client.
+
 ## Implications Analytics {#analytics}
 
 Lors de l’implémentation d’une personnalisation hybride, vous devez faire particulièrement attention à ce que les accès aux pages ne soient pas comptabilisés plusieurs fois dans Analytics.
@@ -74,8 +107,7 @@ L’exemple de cette mise en œuvre utilise deux flux de données différents :
 
 Ainsi, la requête côté serveur n’enregistre aucun événement Analytics, contrairement aux requêtes côté client. Cela entraîne un comptage précis des requêtes Analytics.
 
-
-## Requête côté serveur {#server-side-request}
+## Créer la requête côté serveur {#server-side-request}
 
 L’exemple de requête ci-dessous illustre une requête d’API Edge Network que votre serveur d’applications peut utiliser pour récupérer le contenu de personnalisation.
 
@@ -145,16 +177,16 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
       "state":{
          "domain":"localhost",
          "cookiesEnabled":true,
-         "entries":[
-            {
-               "key":"kndctr_XXX_AdobeOrg_identity",
-               "value":"abc123"
-            },
-            {
-               "key":"kndctr_XXX_AdobeOrg_cluster",
-               "value":"or2"
-            }
-         ]
+         "entries": [{
+           "key": "kndctr_53A16ACB5CC1D3760A495C99_AdobeOrg_identity",
+           "value":"CiY0NzE0NzkwMTUyMzYzMzI4NDAxMjc3NDcwNzA2NTcxMjI3OTI1NVIRCJ_S-uCRMRABGAEqBElSTDHwAZ_S-uCRMQ=="
+         }, {
+           "key": "kndctr_53A16ACB5CC1D3760A495C99_AdobeOrg_consent",
+           "value": "general=in"
+         }, {
+            "key": "kndctr_53A16ACB5CC1D3760A495C99_AdobeOrg_cluster",
+            "value": "va6"
+         }]
       }
    }
 }'
@@ -165,10 +197,57 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 | `dataStreamId` | `String` | Oui. | L’identifiant du flux de données que vous utilisez pour transmettre les interactions à Edge Network. Voir la [présentation des flux de données](../../datastreams/overview.md) pour savoir comment configurer un flux de données. |
 | `requestId` | `String` | Non | Un identifiant aléatoire permettant de corréler les requêtes internes du serveur. Si aucun n’est fourni, le Edge Network en génère un et le renvoie dans la réponse. |
 
+### En-têtes de proxy {#proxy-headers}
+
+Les en-têtes suivants sont requis pour traiter correctement la requête.
+
+* `Referer`
+* `X-Forwarded-For`
+* `X-Forwarded-Proto`
+* `X-Forwarded-Host`
+
+Veillez à les définir correctement pour pointer vers les informations réelles du client. Par exemple, l’en-tête `X-Forwarded-For` doit contenir l’adresse IP du client pour qu’une géolocalisation correcte soit effectuée.
+
+### En-têtes User-Agent {#user-agent-headers}
+
+Utilisez les en-têtes user-agent suivants pour traiter correctement la requête.
+
+**Par défaut**
+
+* `User-Agent`
+
+**Faible entropie (obligatoire) :**
+
+* `Sec-CH-UA`
+* `Sec-CH-UA-Mobile`
+* `Sec-CH-UA-Platform`
+
+**entropie élevée (facultatif) :**
+
+* `Sec-CH-UA-Platform-Version`
+* `Sec-CH-UA-Arch`
+* `Sec-CH-UA-Model`
+* `Sec-CH-UA-Bitness`
+* `Sec-CH-UA-WoW64`
+
+La requête doit être envoyée comme indiqué dans la spécification [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/). Consultez la [documentation sur la personnalisation](https://developer.adobe.com/data-collection-apis/docs/getting-started/personalization/) si votre cas d’utilisation le requiert.
+
 ### Réponse côté serveur {#server-response}
 
-L’exemple de réponse ci-dessous montre à quoi pourrait ressembler la réponse de l’API Edge Network.
+La réponse d’Edge Network contiendra des instructions `state:store`, qui doivent être transformées en en-têtes `Set-Cookie`. Ils sont enregistrés dans le navigateur et peuvent être utilisés par l’implémentation de Web SDK.
 
+Les cookies doivent être définis sur le domaine de niveau supérieur, de sorte qu’ils soient envoyés avec les requêtes à l’implémentation du serveur et à celle du client. (Ou au moins un sous-domaine commun utilisé par les deux mises en œuvre)
+
+Exemple :
+
+* Les appels côté serveur utilisent `api.example.com`
+* Les appels côté client utilisent `adobe.example.com`
+
+Les cookies doivent être définis sur `.example.com` afin qu’ils soient partagés dans les deux cas.
+
+La réponse côté serveur est organisée en fragments appelés `Handles`, qui sont générés en fonction de la configuration du train de données. Par exemple, les moteurs de personnalisation en temps réel renvoient des descripteurs `personalization:decisions`, tandis que le moteur d’activation en temps réel génère des descripteurs `activation:pull`.
+
+L’exemple de réponse ci-dessous montre à quoi pourrait ressembler la réponse de l’API Edge Network.
 
 ```json
 {
@@ -200,6 +279,8 @@ L’exemple de réponse ci-dessous montre à quoi pourrait ressembler la répons
    ]
 }
 ```
+
+
 
 ## Requête côté client {#client-request}
 
