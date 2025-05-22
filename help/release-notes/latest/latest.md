@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Mai 2025
 description: Notes de mise à jour de mai 2025 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8f1538efc96c8dc47a505511ec7f064b07f124c8
+source-git-commit: ad9ec9c3177c25e2207b67b4c939c3f6fa97883f
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1171'
 ht-degree: 51%
 
 ---
@@ -84,11 +84,11 @@ Utilisez le service d’identités d’Adobe Experience Platform pour créer u
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Présentation de [!DNL Identity Graph Linking Rules] | [!DNL Identity Graph Linking Rules] est conçu pour vous aider à maintenir des profils clients précis pour un marketing personnalisé en empêchant la réduction des graphiques.<ul><li>Utilisez l’outil [Simulation graphique](../../identity-service/identity-graph-linking-rules/graph-simulation.md) pour tester et valider vos configurations.</li><li>Reportez-vous au [tableau de bord des identités](../../identity-service/identity-graph-linking-rules/implementation-guide.md#validate-your-graphs) pour surveiller toutes les instances de réduction de graphique dans votre organisation.</li><li>Pour commencer, lisez le [[!DNL Identity Graph Linking Rules] guide de mise en œuvre](../../identity-service/identity-graph-linking-rules/implementation-guide.md).</li></ul> **Remarque** : vos données seront modifiées jusqu’à ce que vous configuriez manuellement vos paramètres d’identité. |
+| [!DNL Identity Graph Linking Rules] | [!DNL Identity Graph Linking Rules] est désormais disponible pour tous. [!DNL Identity Graph Linking Rules] éviter la « réduction du graphique », en garantissant des profils clients distincts et précis pour un marketing personnalisé dans Experience Platform et les applications. Les principales fonctionnalités sont les suivantes :<ul><li>[Outil de simulation graphique](../../identity-service/identity-graph-linking-rules/graph-simulation.md) : explorez l’algorithme et testez les configurations du paramètre d’identité.</li><li> [Paramètres d’identité](../../identity-service/identity-graph-linking-rules/identity-settings-ui.md) : configurez des espaces de noms uniques et définissez des priorités.</li><li>[Tableau de bord des identités](../../identity-service/identity-graph-linking-rules/implementation-guide.md#validate-your-graphs) : surveiller les graphiques et valider les paramètres d’identité.</li></ul> **Remarque** : vos données ne seront pas modifiées tant que vous n’aurez pas configuré manuellement vos paramètres d’identité. |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations, reportez-vous à la présentation d’Identity Service [&#128279;](../../identity-service/home.md).
+Pour plus d’informations, reportez-vous à la présentation d’Identity Service [](../../identity-service/home.md).
 
 ## Service de requête {#query-service}
 

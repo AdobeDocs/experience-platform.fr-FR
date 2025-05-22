@@ -2,10 +2,10 @@
 title: Guide De Mise En Œuvre Des Règles De Liaison Des Graphiques D’Identités
 description: Découvrez les étapes recommandées à suivre lors de l’implémentation de vos données avec les configurations des règles de liaison de graphique d’identités.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 0587ddf1012adb13e6d399953839735f73fe151e
 workflow-type: tm+mt
-source-wordcount: '1864'
-ht-degree: 6%
+source-wordcount: '1955'
+ht-degree: 5%
 
 ---
 
@@ -41,7 +41,7 @@ Vous devez vous assurer que l’espace de noms unique avec la priorité la plus 
 
 En l’absence d’espace de noms unique pour représenter vos identifiants de personne, vous pouvez vous retrouver avec un graphique qui lie des identifiants de personne disparates au même ECID. Dans cet exemple, B2BCRM et B2CCRM sont tous deux liés au même ECID en même temps. Ce graphique suggère que Tom, à l’aide de son compte de connexion B2C, a partagé un appareil avec Summer, en utilisant son compte de connexion B2B. Cependant, le système reconnaîtra qu’il s’agit d’un profil (réduction du graphique).
 
-![Scénario graphique dans lequel deux identifiants de personne sont liés au même ECID.](../images/graph-examples/multi_namespaces.png)
+![Scénario graphique dans lequel deux identifiants de personne sont liés au même ECID.](../images/graph-examples/multi_namespaces.png "Scénario graphique dans lequel deux identifiants de personne sont liés au même ECID."){zoomable="yes"}
 
 +++
 
@@ -49,7 +49,7 @@ En l’absence d’espace de noms unique pour représenter vos identifiants de p
 
 Avec un espace de noms unique (dans ce cas, un CRMID au lieu de deux espaces de noms disparates), Identity Service peut identifier le dernier identifiant de personne associé à l’ECID. Dans cet exemple, en raison de l’existence d’un CRMID unique, Identity Service peut reconnaître un scénario « appareil partagé », où deux entités partagent le même appareil.
 
-![Scénario de graphique d’appareil partagé, où deux identifiants de personne sont liés au même ECID, mais l’ancien lien est supprimé.](../images/graph-examples/crmid_only_multi.png)
+![Scénario de graphique d’appareil partagé, où deux identifiants de personne sont liés au même ECID, mais l’ancien lien est supprimé.](../images/graph-examples/crmid_only_multi.png "Scénario de graphique d’appareil partagé, où deux identifiants de personne sont liés au même ECID, mais l’ancien lien est supprimé."){zoomable="yes"}
 
 +++
 
@@ -149,7 +149,7 @@ Par conséquent, il est recommandé d’envoyer un seul identifiant de personne 
 
 Dans la simulation de graphique, cette ingestion peut se présenter comme suit :
 
-![Interface utilisateur de simulation de graphique avec un exemple de graphique rendu.](../images/implementation/example-graph.png)
+![Interface utilisateur de simulation de graphique avec un exemple de graphique rendu.](../images/implementation/example-graph.png "Interface utilisateur de simulation de graphique avec un exemple de graphique rendu."){zoomable="yes"}
 
 >[!TAB Événements authentifiés sans identifiant de personne]
 
@@ -201,7 +201,7 @@ En créant différentes configurations, vous pouvez utiliser l’outil de simula
 
 Une fois que vous avez une meilleure idée du comportement de votre graphique, accédez à l’[interface utilisateur des paramètres d’identité](./identity-settings-ui.md) dans l’espace de travail de l’interface utilisateur d’Identity Service. Pour accéder à l’interface utilisateur des paramètres d’identité, sélectionnez **[!UICONTROL Identités]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Paramètres]**.
 
-![Page de navigation des identités avec le bouton des paramètres en surbrillance.](../images/implementation/settings.png)
+![Page de navigation des identités avec le bouton des paramètres en surbrillance.](../images/implementation/settings.png "Page de navigation des identités avec le bouton des paramètres en surbrillance."){zoomable="yes"}
 
 Utilisez l’interface utilisateur des paramètres d’identité pour désigner vos espaces de noms uniques et configurer vos espaces de noms par ordre de priorité. Une fois l’application de vos paramètres terminée, vous devez attendre au moins six heures avant de pouvoir procéder à l’ingestion des données, car la prise en compte des nouveaux paramètres dans Identity Service prend au moins six heures.
 
@@ -249,11 +249,11 @@ Utilisez le tableau de bord des identités pour obtenir des informations sur l�
 
 Sélectionnez les points de suspension (`...`), puis sélectionnez **[!UICONTROL Afficher plus]** pour obtenir plus d’informations et vérifier qu’il n’existe aucun graphique réduit.
 
-![Tableau de bord des identités dans l’espace de travail de l’interface utilisateur du service d’identités.](../images/implementation/identity_dashboard.png)
+![ Tableau de bord des identités dans l’espace de travail de l’interface utilisateur d’Identity Service.](../images/implementation/identity_dashboard.png "Tableau de bord des identités dans l’espace de travail de l’interface utilisateur du service d’identités."){zoomable="yes"}
 
 Utilisez la fenêtre qui s’affiche pour afficher des informations sur les graphiques réduits. Dans cet exemple, e-mail et téléphone sont marqués comme espace de noms unique. Par conséquent, votre sandbox ne contient aucun graphique réduit.
 
-![Fenêtre pop-up pour les graphiques comportant plusieurs identités.](../images/implementation/graphs.png)
+![Fenêtre pop-up pour les graphiques comportant plusieurs identités.](../images/implementation/graphs.png "Fenêtre pop-up pour les graphiques comportant plusieurs identités."){zoomable="yes"}
 
 ## Annexe {#appendix}
 
@@ -269,13 +269,13 @@ Le graphique suivant simule un scénario d’identifiant de connexion « non ré
 
 Dans cet exemple, `{loginID: ID_C}` est laissé en attente et n’est pas lié à un CRMID. Par conséquent, l’entité de personne à laquelle cet ID de connexion doit être associé reste ambiguë.
 
-![Exemple de graphique avec un scénario loginID « non résolu ».](../images/graph-examples/dangling_example.png)
+![Exemple de graphique avec un scénario loginID « non résolu ».](../images/graph-examples/dangling_example.png "Exemple de graphique avec un scénario loginID en attente."){zoomable="yes"}
 
 >[!TAB loginID est lié à un CRMID]
 
 Dans cet exemple, `{loginID: ID_C}` est lié à `{CRMID: Tom}`. Par conséquent, le système peut identifier que cet ID de connexion est associé à Tom.
 
-![LoginID est lié à un CRMID.](../images/graph-examples/id_c_tom.png)
+![LoginID est lié à un CRMID.](../images/graph-examples/id_c_tom.png "LoginID est lié à un CRMID."){zoomable="yes"}
 
 >[!TAB loginID est lié à un autre CRMID]
 
@@ -283,7 +283,7 @@ Dans cet exemple, `{loginID: ID_C}` est lié à `{CRMID: Summer}`. Par conséque
 
 Cet exemple montre également que Tom et Summer sont deux entités de personne disparates qui partagent un appareil, représenté par `{ECID: 111}`.
 
-![LoginID est lié à un autre CRMID.](../images/graph-examples/id_c_summer.png)
+![LoginID est lié à un autre CRMID.](../images/graph-examples/id_c_summer.png "LoginID est lié à un autre CRMID."){zoomable="yes"}
 
 >[!ENDTABS]
 

@@ -2,9 +2,9 @@
 title: Interface utilisateur des paramètres d’identité
 description: Découvrez comment utiliser l’interface utilisateur des paramètres d’identité.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 6efd9c8fd1acce08027905f2e3c005a88a429a12
+source-git-commit: 808562ac7b3bf91c4d133bc1d2106cfc3b0c9c84
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '646'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Contactez l’équipe chargée de votre compte Adobe si vous disposez déjà d’un sandbox qui nécessite que les graphiques réduits soient déréduits (« corrigés ») après l’activation des paramètres d’identité.
+>[!DNL Identity Graph Linking Rules] est désormais disponible pour tous. Contactez l’assistance Adobe si vous disposez d’un sandbox qui nécessite que les graphiques réduits soient déréduits (« corrigés ») après l’activation des paramètres d’identité.
 
 Les paramètres d’identité sont une fonctionnalité de l’interface utilisateur du service d’identités Adobe Experience Platform que vous pouvez utiliser pour désigner des espaces de noms uniques et configurer la priorité des espaces de noms.
 

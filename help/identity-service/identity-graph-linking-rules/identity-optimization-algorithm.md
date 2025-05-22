@@ -2,9 +2,9 @@
 title: Algorithme d’optimisation des identités
 description: Découvrez l’algorithme d’optimisation des identités dans Identity Service.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 0587ddf1012adb13e6d399953839735f73fe151e
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1580'
 ht-degree: 4%
 
 ---
@@ -49,7 +49,7 @@ Les espaces de noms dans Identity Service présentent un ordre d’importance re
 
 Pour une analyse approfondie de la priorité des espaces de noms ainsi que de l’ensemble de ses fonctionnalités et utilisations, consultez le guide [namespace priority guide](./namespace-priority.md).
 
-![calques de graphe et priorité de l’espace de noms](../images/namespace-priority/graph-layers.png)
+![Les calques du graphique et la priorité de l’espace de noms.](../images/namespace-priority/graph-layers.png "Les calques du graphique et la priorité de l’espace de noms."){zoomable="yes"}
 
 ## Processus {#process}
 
@@ -68,7 +68,7 @@ En cas de violation de la contrainte d’espace de noms unique, l’algorithme d
 * Le graphique est rétabli dans l’ordre ci-dessus. Si l’ajout du lien viole la contrainte de limite (par exemple, le graphique contient plusieurs identités avec un espace de noms unique), les liens sont supprimés.
 * Le graphique qui en résulte sera alors conforme à la contrainte d’espace de noms unique que vous avez configurée.
 
-![Diagramme qui visualise l’algorithme d’optimisation des identités.](../images/ido_algorithm.png)
+![Diagramme qui visualise l’algorithme d’optimisation des identités.](../images/ido_algorithm.png "Diagramme qui visualise l’algorithme d’optimisation des identités."){zoomable="yes"}
 
 ## Exemples de scénarios pour l’algorithme d’optimisation des identités
 
@@ -95,7 +95,7 @@ Dans cet exemple, CRMID et Email sont désignés comme des espaces de noms uniqu
 * Cependant, en raison de la configuration d’espace de noms unique qui définit un espace de noms CRMID et un espace de noms d’e-mail au maximum par graphique, l’algorithme d’optimisation des identités divise le graphique en deux.
    * Enfin, comme John est le dernier utilisateur authentifié, l’ECID qui représente l’ordinateur portable reste lié à son graphique à la place de celui de Jane.
 
-![premier cas d’appareil partagé](../images/identity-settings/shared-device-case-one.png)
+![Cas un de l’appareil partagé.](../images/identity-settings/shared-device-case-one.png "Cas un de l’appareil partagé."){zoomable="yes"}
 
 >[!TAB Exemple 2]
 
@@ -112,7 +112,7 @@ Dans cet exemple, l’espace de noms CRMID est désigné comme espace de noms un
    * Par conséquent, l’algorithme d’optimisation des identités supprime l’ancien lien, qui est dans ce cas le CRMID de Jane lié à `timestamp=1`.
    * Cependant, bien que le CRMID de Jane n’existe plus en tant que graphique sur Identity Service, il persiste toujours en tant que profil sur le profil client en temps réel. En effet, un graphique d’identités doit contenir au moins deux identités liées et, suite à la suppression des liens, le CRMID de Jane ne dispose plus d’une autre identité à lier.
 
-![shared-device-case-two](../images/identity-settings/shared-device-case-two.png)
+![Deuxième cas d’appareil partagé.](../images/identity-settings/shared-device-case-two.png "Deuxième cas d’appareil partagé."){zoomable="yes"}
 
 >[!ENDTABS]
 
@@ -137,7 +137,7 @@ Dans cet exemple, les espaces de noms CRMID et Email sont désignés comme uniqu
 
 Avec l’algorithme d’optimisation des identités, les valeurs d’identité incorrectes telles que les faux e-mails ou numéros de téléphone ne se propagent pas dans plusieurs graphiques d’identités différents.
 
-![message-incorrect](../images/identity-settings/bad-email.png)
+![Diagramme d’une mauvaise ingestion d’e-mail.](../images/identity-settings/bad-email.png "Diagramme d’une mauvaise ingestion d’e-mail."){zoomable="yes"}
 
 ## Association d’événements anonymes
 
@@ -154,7 +154,7 @@ Consultez le diagramme ci-dessous pour mieux comprendre le fonctionnement de l�
       * Avant sa première connexion avant `timestamp=1` ; et
       * Toutes les activités qu&#39;il ou Nora a effectuées en naviguant anonymement entre les première et deuxième connexions de Kevin.
 
-![association-événement-anon](../images/identity-settings/anon-event-association.png)
+![Diagramme d’association d’événements anonymes.](../images/identity-settings/anon-event-association.png "Diagramme d’association d’événements anonymes."){zoomable="yes"}
 
 
 ## Étapes suivantes

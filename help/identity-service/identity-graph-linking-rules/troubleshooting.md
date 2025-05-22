@@ -2,9 +2,9 @@
 title: Guide de dépannage des règles de liaison de graphiques d’identités
 description: Découvrez comment résoudre les problèmes courants dans les règles de liaison des graphiques d’identités.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
 workflow-type: tm+mt
-source-wordcount: '3285'
+source-wordcount: '3295'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Lorsque vous testez et validez des [!DNL Identity Graph Linking Rules], vous pou
 
 Le diagramme suivant est une représentation simplifiée du flux de données dans Adobe Experience Platform et les applications. Utilisez ce diagramme comme référence pour vous aider à mieux comprendre le contenu de cette page.
 
-![Schéma du flux d’ingestion des données dans Identity Service.](../images/troubleshooting/dataflow_in_identity.png)
+![Schéma du flux d’ingestion des données dans Identity Service.](../images/troubleshooting/dataflow_in_identity.png "Schéma du flux d’ingestion des données dans Identity Service."){zoomable="yes"}
 
 Il est important de noter les facteurs suivants :
 

@@ -2,10 +2,10 @@
 title: Exemples de configurations de graphique
 description: Découvrez les scénarios de graphique courants que vous pouvez rencontrer lors de l’utilisation de règles de liaison de graphique d’identités et de données d’identité.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: cd9104e253cda4ce9a004f7931b9c38907874941
 workflow-type: tm+mt
-source-wordcount: '2759'
-ht-degree: 7%
+source-wordcount: '3316'
+ht-degree: 6%
 
 ---
 
@@ -67,13 +67,13 @@ Dans le cadre de cette configuration, l’identité principale sera définie com
 
 Voici un exemple de graphique idéal pour une seule personne, où le CRMID est unique et se voit attribuer la priorité la plus élevée.
 
-![Exemple simulé d’un graphique idéal pour une seule personne, où le CRMID est unique et se voit attribuer la priorité la plus élevée.](../images/graph-examples/crmid_only_single.png)
+![Exemple simulé d’un graphique idéal pour une seule personne, où le CRMID est unique et reçoit la priorité la plus élevée.](../images/graph-examples/crmid_only_single.png "Exemple simulé d’un graphique idéal pour une seule personne, où le CRMID est unique et se voit attribuer la priorité la plus élevée."){zoomable="yes"}
 
 >[!TAB Graphique multipersonne]
 
 Voici un exemple de graphique multi-personnes. Cet exemple illustre un scénario « appareil partagé », où il y a deux CRMID et où l’ancien lien établi est supprimé.
 
-![Exemple simulé d’un graphique multi-personnes. Cet exemple illustre un scénario d’appareil partagé, où il y a deux CRMID et où l’ancien lien établi est supprimé.](../images/graph-examples/crmid_only_multi.png)
+![Exemple simulé d’un graphique multi-personnes. Cet exemple illustre un scénario d’appareil partagé, où il y a deux CRMID et où l’ancien lien établi est supprimé.](../images/graph-examples/crmid_only_multi.png "Exemple simulé d’un graphique multi-personnes. Cet exemple illustre un scénario d’appareil partagé, où il y a deux CRMID et où l’ancien lien établi est supprimé."){zoomable="yes"}
 
 **Entrée des événements de simulation du graphique**
 
@@ -136,13 +136,13 @@ Dans le cadre de cette configuration, l’identité principale sera définie com
 
 Vous trouverez ci-dessous des exemples de paires de graphiques pour une seule personne idéales, où chaque CRMID est associé à leur espace de noms d’e-mail et à leur ECID hachés respectifs.
 
-![Dans cet exemple, deux graphiques distincts sont générés, chacun représentant une entité d’une seule personne.](../images/graph-examples/crmid_hashed_single.png)
+![Dans cet exemple, deux graphiques distincts sont générés, chacun représentant une entité d’une seule personne.](../images/graph-examples/crmid_hashed_single.png "Exemple simulé d’un graphique multi-personnes. Cet exemple illustre un scénario d’appareil partagé, où il y a deux CRMID et où l’ancien lien établi est supprimé."){zoomable="yes"}
 
 >[!TAB Graphique multipersonne : appareil partagé]
 
 Voici un exemple de scénario de graphique multi-personnes dans lequel un appareil est partagé par deux personnes.
 
-![Dans cet exemple, le graphique simulé affiche un scénario « appareil partagé », car Tom et Summer sont tous deux associés au même ECID.](../images/graph-examples/crmid_hashed_shared_device.png)
+![Dans cet exemple, le graphique simulé affiche un scénario « appareil partagé », car Tom et Summer sont tous deux associés au même ECID.](../images/graph-examples/crmid_hashed_shared_device.png "Exemple simulé d’un graphique multi-personnes. Cet exemple illustre un scénario d’appareil partagé, où il y a deux CRMID et où l’ancien lien établi est supprimé."){zoomable="yes"}
 
 **Entrée des événements de simulation du graphique**
 
@@ -158,7 +158,7 @@ CRMID: Summer, ECID: 111
 
 Voici un exemple de scénario graphique multi-personnes dans lequel l’e-mail n’est pas unique et est associé à deux CRMID différents.
 
-![Ce scénario est similaire à un scénario « appareil partagé ». Cependant, au lieu de partager l’ECID, les entités de personne sont associées au même compte de messagerie.](../images/graph-examples/crmid_hashed_nonunique_email.png)
+![Ce scénario est similaire à un scénario « appareil partagé ». Cependant, au lieu de partager l’ECID, les entités de personne sont associées au même compte de messagerie. « Exemple simulé d’un graphique multi-personnes. Cet exemple illustre un scénario d’appareil partagé, où il y a deux CRMID et où l’ancien lien établi est supprimé](../images/graph-examples/crmid_hashed_nonunique_email.png){zoomable="yes"} ».
 
 **Entrée des événements de simulation du graphique**
 
@@ -233,13 +233,13 @@ Dans le cadre de cette configuration, l’identité principale sera définie com
 
 Voici un scénario de graphique d’une seule personne idéal dans lequel les e-mails et les téléphones hachés sont marqués comme des identités à utiliser dans [!DNL Segment Match]. Dans ce scénario, les graphiques sont divisés en deux pour représenter deux entités de personne disparates.
 
-![Un scénario de graphique idéal pour une seule personne.](../images/graph-examples/crmid_hashed_single_seg_match.png)
+![Un scénario de graphique idéal pour une seule personne.](../images/graph-examples/crmid_hashed_single_seg_match.png "Exemple simulé d’un graphique multi-personnes. Cet exemple illustre un scénario d’appareil partagé, où il y a deux CRMID et où l’ancien lien établi est supprimé."){zoomable="yes"}
 
 >[!TAB Graphique multipersonne : appareil partagé, ordinateur partagé]
 
 Voici un scénario de graphique multi-personnes dans lequel un appareil (ordinateur) est partagé par deux personnes. Dans ce scénario, l’ordinateur partagé est représenté par `{ECID: 111}` et est lié à `{CRMID: Summer}`, car ce lien est le lien le plus récemment établi. `{CRMID: Tom}` est supprimé, car le lien entre `{CRMID: Tom}` et `{ECID: 111}` est plus ancien et parce que CRMID est l’espace de noms unique désigné dans cette configuration.
 
-![Scénario graphique multi-personnes dans lequel deux utilisateurs partagent un ordinateur.](../images/graph-examples/shared_device_shared_computer.png)
+![Scénario graphique multi-personnes dans lequel deux utilisateurs partagent un ordinateur.](../images/graph-examples/shared_device_shared_computer.png "Exemple simulé d’un graphique multi-personnes. Cet exemple illustre un scénario d’appareil partagé, où il y a deux CRMID et où l’ancien lien établi est supprimé."){zoomable="yes"}
 
 **Entrée des événements de simulation du graphique**
 
@@ -257,7 +257,7 @@ CRMID: Summer, ECID: 111
 
 Voici un scénario de graphique multi-personnes dans lequel un appareil Android est partagé par deux personnes. Dans ce scénario, CRMID est configuré comme un espace de noms unique et, par conséquent, le lien plus récent de `{CRMID: Tom, GAID: B-B-B, ECID:444}` remplace l’ancien `{CRMID: Summer, GAID: B-B-B, ECID:444}`.
 
-![Scénario graphique multi-personnes où deux utilisateurs partagent un appareil mobile Android.](../images/graph-examples/shared_device_android.png)
+![Scénario graphique multi-personnes où deux utilisateurs partagent un appareil mobile Android.](../images/graph-examples/shared_device_android.png "Exemple simulé d’un graphique multi-personnes. Cet exemple illustre un scénario d’appareil partagé, où il y a deux CRMID et où l’ancien lien établi est supprimé."){zoomable="yes"}
 
 **Entrée des événements de simulation du graphique**
 
@@ -275,7 +275,7 @@ CRMID: Tom, ECID: 444, GAID: B-B-B
 
 Vous trouverez ci-dessous un scénario graphique impliquant plusieurs personnes et dans lequel un appareil Apple est partagé par deux personnes. Dans ce scénario, l’IDFA est partagé, mais l’ECID n’est pas réinitialisé.
 
-![Scénario graphique multi-personnes où deux utilisateurs partagent un appareil mobile Apple.](../images/graph-examples/shared_device_apple_no_reset.png)
+![Scénario graphique multi-personnes où deux utilisateurs partagent un appareil mobile Apple.](../images/graph-examples/shared_device_apple_no_reset.png "Exemple simulé d’un graphique multi-personnes. Cet exemple illustre un scénario d’appareil partagé, où il y a deux CRMID et où l’ancien lien établi est supprimé."){zoomable="yes"}
 
 **Entrée des événements de simulation du graphique**
 
@@ -293,7 +293,7 @@ CRMID: Summer, ECID: 222, IDFA: A-A-A
 
 Vous trouverez ci-dessous un scénario graphique impliquant plusieurs personnes et dans lequel un appareil Apple est partagé par deux personnes. Dans ce scénario, l’ECID se réinitialise, mais l’IDFA reste le même.
 
-![Scénario graphique multi-personnes où deux utilisateurs partagent un appareil mobile Apple, mais où l’ECID est réinitialisé.](../images/graph-examples/shared_device_apple_with_reset.png)
+![Scénario graphique multi-personnes où deux utilisateurs partagent un appareil mobile Apple, mais où l’ECID est réinitialisé.](../images/graph-examples/shared_device_apple_with_reset.png "Exemple simulé d’un graphique multi-personnes. Cet exemple illustre un scénario d’appareil partagé, où il y a deux CRMID et où l’ancien lien établi est supprimé."){zoomable="yes"}
 
 **Entrée des événements de simulation du graphique**
 
@@ -311,7 +311,7 @@ CRMID: Summer, ECID: 555, IDFA: A-A-A
 
 Voici un scénario sous forme de graphique impliquant plusieurs personnes, dans lequel le même numéro de téléphone est partagé par deux personnes.
 
-![Scénario de graphique multi-personnes où l’espace de noms du téléphone n’est pas unique.](../images/graph-examples/non_unique_phone.png)
+![Scénario de graphique multi-personnes où l’espace de noms du téléphone n’est pas unique.](../images/graph-examples/non_unique_phone.png "Exemple simulé d’un graphique multi-personnes. Cet exemple illustre un scénario d’appareil partagé, où il y a deux CRMID et où l’ancien lien établi est supprimé."){zoomable="yes"}
 
 **Entrée des événements de simulation du graphique**
 
@@ -327,13 +327,13 @@ CRMID: Summer, Phone_SHA256: 123-4567
 
 Dans cet exemple, `{Phone_SHA256}` est également marqué comme espace de noms unique. Par conséquent, un graphique ne peut pas avoir plusieurs identités avec l’espace de noms `{Phone_SHA256}`. Dans ce scénario, `{Phone_SHA256: 765-4321}` n’est pas lié à `{CRMID: Summer}` et `{Email_LC_SHA256: ddeeff}`, car il s’agit de l’ancien lien.
 
-![Scénario de graphique multi-personnes dans lequel Phone_SHA256 est unique.](../images/graph-examples/unique_phone.png)
+![Scénario de graphique multi-personnes dans lequel Phone_SHA256 est unique.](../images/graph-examples/unique_phone.png "Exemple simulé d’un graphique multi-personnes. Cet exemple illustre un scénario d’appareil partagé, où il y a deux CRMID et où l’ancien lien établi est supprimé."){zoomable="yes"}
 
 >[!TAB Graphique multipersonne : e-mail non unique]
 
 Voici un scénario sous forme de graphique impliquant plusieurs personnes et dans lequel l’e-mail est partagé par deux personnes.
 
-![Scénario de graphique multi-personnes où l’e-mail n’est pas unique](../images/graph-examples/non_unique_email.png)
+![Scénario de graphique multi-personnes où l’e-mail n’est pas unique](../images/graph-examples/non_unique_email.png "Exemple simulé de graphique multi-personnes. Cet exemple illustre un scénario d’appareil partagé, où il y a deux CRMID et où l’ancien lien établi est supprimé."){zoomable="yes"}
 
 **Entrée des événements de simulation du graphique**
 
@@ -409,13 +409,13 @@ Dans le cadre de cette configuration, l’identité principale sera définie com
 
 Voici un scénario de graphique d’une seule personne avec un seul CRMID et plusieurs identifiants de connexion.
 
-![Scénario graphique qui comprend un CRMID unique et plusieurs identifiants de connexion.](../images/graph-examples/single_crmid.png)
+![Scénario graphique qui comprend un CRMID unique et plusieurs identifiants de connexion.](../images/graph-examples/single_crmid.png "Exemple simulé d’un graphique multi-personnes. Cet exemple illustre un scénario d’appareil partagé, où il y a deux CRMID et où l’ancien lien établi est supprimé."){zoomable="yes"}
 
 >[!TAB Scénario graphique multi-personnes : appareil partagé]
 
 Voici un scénario de graphique multi-personnes dans lequel un appareil est partagé par deux personnes. Dans ce scénario, `{ECID:111}` est lié à la fois à `{loginID:ID_A}` et à `{loginID:ID_C}`, et l’ancien lien établi de `{ECID:111, loginID:ID_A}` est supprimé.
 
-![Scénario d’appareil partagé entre plusieurs personnes.](../images/graph-examples/single_crmid_shared_device.png)
+![Scénario d’appareil partagé entre plusieurs personnes.](../images/graph-examples/single_crmid_shared_device.png "Exemple simulé d’un graphique multi-personnes. Cet exemple illustre un scénario d’appareil partagé, où il y a deux CRMID et où l’ancien lien établi est supprimé."){zoomable="yes"}
 
 **Entrée des événements de simulation du graphique**
 
@@ -433,7 +433,7 @@ loginID: ID_C, ECID: 111
 
 Voici un scénario de graphique multi-personnes qui implique des données incorrectes. Dans ce scénario, `{loginID:ID_D}` est lié à tort à deux utilisateurs disparates et le lien avec l’ancienne date et heure est supprimé, au profit du lien plus récemment établi.
 
-![Scénario de graphique multi-personnes avec des données incorrectes.](../images/graph-examples/single_crmid_bad_data.png)
+![Scénario de graphique multi-personnes avec des données incorrectes.](../images/graph-examples/single_crmid_bad_data.png "Exemple simulé d’un graphique multi-personnes. Cet exemple illustre un scénario d’appareil partagé, où il y a deux CRMID et où l’ancien lien établi est supprimé."){zoomable="yes"}
 
 **Entrée des événements de simulation du graphique**
 
@@ -451,7 +451,7 @@ CRMID: Tom, loginID: ID_D
 
 Le graphique suivant simule un scénario d’identifiant de connexion « non résolu ». Dans cet exemple, deux identifiants de connexion différents sont liés au même ECID. Cependant, `{loginID:ID_C}` n’est pas lié au CRMID. Par conséquent, Identity Service ne peut en aucun cas détecter que ces deux ID de connexion représentent deux entités différentes.
 
-![Scénario loginID non résolu.](../images/graph-examples/dangling_example.png)
+![Un scénario loginID en attente.](../images/graph-examples/dangling_example.png "Scénario loginID non résolu."){zoomable="yes"}
 
 **Entrée des événements de simulation du graphique**
 
@@ -529,13 +529,13 @@ Dans le cadre de cette configuration, l’identité principale sera définie com
 
 Voici un exemple de deux graphiques pour une seule personne qui comportent chacun un CRMID et plusieurs identifiants de connexion.
 
-![Graphique à personne unique qui implique un CRMID et plusieurs identifiants de connexion](../images/graph-examples/complex_single_person.png)
+![Graphique à personne unique qui implique un CRMID et plusieurs identifiants de connexion.](../images/graph-examples/complex_single_person.png "Graphique à personne unique qui implique un CRMID et plusieurs identifiants de connexion."){zoomable="yes"}
 
 >[!TAB Graphique multipersonne : appareil partagé 1]
 
 Voici un scénario d’appareil partagé entre plusieurs personnes où `{ECID:111}` est lié à la fois à `{loginID:ID_A}` et à `{loginID:ID_C}`. Dans ce cas, les liens établis plus anciens sont supprimés en faveur des liens établis plus récemment.
 
-![Scénario de graphique d’appareil partagé entre plusieurs personnes.](../images/graph-examples/complex_shared_device_one.png)
+![Scénario de graphique d’appareil partagé entre plusieurs personnes.](../images/graph-examples/complex_shared_device_one.png "Scénario de graphique d’appareil partagé entre plusieurs personnes."){zoomable="yes"}
 
 **Entrée des événements de simulation du graphique**
 
@@ -555,7 +555,7 @@ loginID: ID_C, ECID: 111
 
 Dans ce scénario, au lieu d’envoyer uniquement l’identifiant de connexion, les identifiants loginID et CRMID sont envoyés en tant qu’événements d’expérience.
 
-![Scénario de graphique d’appareil partagé entre plusieurs personnes où les identifiants de connexion et CRMID sont envoyés en tant qu’événements d’expérience.](../images/graph-examples/complex_shared_device_two.png)
+![Scénario de graphique d’appareil partagé entre plusieurs personnes où les identifiants de connexion et CRMID sont envoyés en tant qu’événements d’expérience.](../images/graph-examples/complex_shared_device_two.png "Scénario de graphique d’appareil partagé entre plusieurs personnes où les identifiants de connexion et CRMID sont envoyés en tant qu’événements d’expérience."){zoomable="yes"}
 
 **Entrée des événements de simulation du graphique**
 
@@ -576,7 +576,7 @@ loginID: ID_A, ECID: 111
 
 Dans ce scénario, `{loginID:ID_C}` est lié à la fois à `{CRMID:Tom}` et à `{CRMID:Summer}`. Il est donc considéré comme une donnée incorrecte, car les scénarios graphiques idéaux ne doivent pas lier les mêmes identifiants de connexion à deux utilisateurs disparates. Dans ce cas, les liens établis plus anciens sont supprimés en faveur des liens établis plus récemment.
 
-![Scénario de graphique multi-personnes qui implique des données de connexion incorrectes.](../images/graph-examples/complex_bad_data.png)
+![Scénario de graphique multi-personnes qui implique des données de connexion incorrectes.](../images/graph-examples/complex_bad_data.png "Scénario de graphique multi-personnes qui implique des données de connexion incorrectes."){zoomable="yes"}
 
 **Entrée des événements de simulation du graphique**
 
@@ -596,7 +596,7 @@ CRMID: Tom, loginID: ID_C
 
 Dans ce scénario, un e-mail non unique est lié à deux CRMID différents. Par conséquent, les liens établis plus anciens sont supprimés au profit des liens établis plus récemment.
 
-![Scénario de graphique multi-personnes qui implique un e-mail non unique.](../images/graph-examples/complex_non_unique_email.png)
+![Scénario de graphique multi-personnes qui implique un e-mail non unique.](../images/graph-examples/complex_non_unique_email.png "Scénario de graphique multi-personnes qui implique un e-mail non unique."){zoomable="yes"}
 
 **Entrée des événements de simulation du graphique**
 
@@ -616,7 +616,7 @@ CRMID: Summer, Email_LC_SHA256: aabbcc
 
 Dans ce scénario, un numéro de téléphone non unique est lié à deux CRMID différents, les liens établis plus anciens sont supprimés au profit des liens établis plus récemment.
 
-![Scénario de graphique comportant plusieurs personnes et impliquant un numéro de téléphone non unique.](../images/graph-examples/complex_non_unique_phone.png)
+![Scénario graphique impliquant plusieurs personnes et impliquant un numéro de téléphone non unique.](../images/graph-examples/complex_non_unique_phone.png "Scénario de graphique comportant plusieurs personnes et impliquant un numéro de téléphone non unique."){zoomable="yes"}
 
 **Entrée des événements de simulation du graphique**
 
@@ -693,13 +693,13 @@ Dans le cadre de cette configuration, l’identité principale sera définie com
 
 Voici un exemple de graphique idéal pour une seule personne.
 
-![Exemple d’un graphique idéal pour une seule personne avec un espace de noms d’e-mail.](../images/graph-examples/single_person_email.png)
+![Exemple d’un graphique idéal pour une seule personne avec un espace de noms d’e-mail.](../images/graph-examples/single_person_email.png "Exemple d’un graphique idéal pour une seule personne avec un espace de noms d’e-mail."){zoomable="yes"}
 
 >[!TAB Graphiques multi-personnes]
 
 Voici un exemple de graphique multi-personnes dans lequel deux utilisateurs enregistrés naviguent à l’aide du même appareil.
 
-![Scénario de graphique multi-personnes où deux utilisateurs enregistrés naviguent à l’aide du même appareil.](../images/graph-examples/two_registered_users.png)
+![Scénario de graphique multi-personnes dans lequel deux utilisateurs enregistrés naviguent à l’aide du même appareil.](../images/graph-examples/two_registered_users.png "Scénario de graphique multi-personnes où deux utilisateurs enregistrés naviguent à l’aide du même appareil."){zoomable="yes"}
 
 **Entrée des événements de simulation du graphique**
 
@@ -712,7 +712,7 @@ CRMID: Summer, ECID: 111
 
 Dans ce scénario, un utilisateur enregistré et un utilisateur invité partagent le même appareil.
 
-![Exemple de graphique multi-personnes dans lequel un utilisateur enregistré et un invité partagent le même appareil.](../images/graph-examples/one_guest.png)
+![Exemple de graphique multi-personnes dans lequel un utilisateur enregistré et un invité partagent le même appareil.](../images/graph-examples/one_guest.png "Exemple de graphique multi-personnes dans lequel un utilisateur enregistré et un invité partagent le même appareil."){zoomable="yes"}
 
 **Entrée des événements de simulation du graphique**
 
@@ -724,7 +724,7 @@ Email: summer@acme.com, ECID: 111
 
 Dans ce scénario, un utilisateur enregistré et un utilisateur invité partagent un appareil. Cependant, une erreur d’implémentation se produit, car le CRMID ne contient pas d’espace de noms d’e-mail correspondant. Dans ce scénario, Tom est l’utilisateur enregistré et Summer l’utilisateur invité. Contrairement au scénario précédent, les deux entités sont fusionnées, car il n’existe pas d’espaces de noms d’e-mail communs aux deux entités personne.
 
-![Exemple de graphique multi-personnes dans lequel un utilisateur enregistré et un invité partagent le même appareil, mais une erreur d’implémentation se produit, car le CRMID ne contient pas d’espace de noms d’e-mail.](../images/graph-examples/no_email_namespace_in_crmid.png)
+![Exemple de graphique multi-personnes dans lequel un utilisateur enregistré et un invité partagent le même appareil, mais une erreur d’implémentation se produit, car le CRMID ne contient pas d’espace de noms d’e-mail.](../images/graph-examples/no_email_namespace_in_crmid.png "Exemple de graphique multi-personnes dans lequel un utilisateur enregistré et un invité partagent le même appareil, mais une erreur d’implémentation se produit, car le CRMID ne contient pas d’espace de noms d’e-mail."){zoomable="yes"}
 
 **Entrée des événements de simulation du graphique**
 
@@ -735,7 +735,7 @@ Email: summer@acme.com, ECID: 111
 
 Dans ce scénario, deux utilisateurs invités partagent le même appareil.
 
-![Scénario graphique multi-personnes dans lequel deux utilisateurs invités partagent le même appareil.](../images/graph-examples/two_guests.png)
+![Scénario graphique multi-personnes dans lequel deux utilisateurs invités partagent le même appareil.](../images/graph-examples/two_guests.png){zoomable="yes"}
 
 **Entrée des événements de simulation du graphique**
 
@@ -746,7 +746,7 @@ Email: summer@acme.com, ECID: 111
 
 Dans ce scénario, un utilisateur invité extrait un élément, puis s’enregistre à l’aide du même appareil.
 
-![Scénario graphique dans lequel un utilisateur invité achète et achète, puis s’enregistre pour un compte.](../images/graph-examples/guest_purchase.png)
+![Scénario graphique dans lequel un utilisateur invité achète et achète, puis s’enregistre pour un compte.](../images/graph-examples/guest_purchase.png "Scénario graphique dans lequel un utilisateur invité achète et achète, puis s’enregistre pour un compte."){zoomable="yes"}
 
 **Entrée des événements de simulation du graphique**
 
