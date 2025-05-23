@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guide de segmentation en flux continu
 description: Découvrez la segmentation en flux continu, notamment en quoi elle consiste, comment créer une audience évaluée à l’aide de la segmentation en flux continu et comment afficher vos audiences créées à l’aide de la segmentation en flux continu.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: cd22213be0dbc2e5a076927e560f1b23b467b306
+source-git-commit: 8523ba35eab80a7496e17cb0ceb3e46a78dd6058
 workflow-type: tm+mt
-source-wordcount: '2013'
+source-wordcount: '2022'
 ht-degree: 19%
 
 ---
@@ -140,6 +140,8 @@ De plus, la disqualification de segment, tout comme la qualification de segment,
 
 Pour combiner des données provenant de sources par lots et en flux continu, vous devez séparer les composants par lots et en flux continu en audiences distinctes.
 
+### Attribut de profil et événement d’expérience {#profile-and-event}
+
 Par exemple, prenons en compte les deux exemples d’audiences suivants :
 
 | Audience | Schéma | Type de source | Query definition | ID de l’audience |
@@ -159,7 +161,9 @@ WHEN(<= 24 hours before now)])
 
 L’audience résultante *sera* évaluée à l’aide de la segmentation en flux continu, car elle exploite l’appartenance de l’audience par lots en se référant au composant d’audience par lots.
 
-Cependant, si vous souhaitez combiner deux audiences avec des données d’événement, vous **ne pouvez pas** vous contenter de combiner les deux événements. Vous devez créer les deux audiences, puis créer une autre audience qui utilise `inSegment` pour faire référence à ces deux audiences.
+### Plusieurs événements d’expérience {#two-events}
+
+Si vous souhaitez combiner plusieurs audiences avec des données d’événement, vous **ne pouvez pas** vous contenter de combiner les événements. Vous devrez créer une audience pour chaque événement, puis créer une autre audience qui utilise `inSegment` pour faire référence à toutes les audiences.
 
 Supposons, par exemple, que vous ayez deux audiences, avec les deux audiences hébergeant des données de schéma d’événement d’expérience :
 
@@ -431,7 +435,7 @@ Vous pouvez récupérer toutes les audiences activées pour la segmentation en f
 
 ![L’icône de filtre est mise en surbrillance dans Audience Portal.](../images/methods/filter-audiences.png)
 
-Dans les filtres disponibles, accédez à **[!UICONTROL Fréquence des mises à jour]** et sélectionnez « [!UICONTROL &#x200B; Diffusion en continu &#x200B;]. L’utilisation de ce filtre affiche toutes les audiences de votre organisation qui sont évaluées à l’aide de la segmentation en flux continu.
+Dans les filtres disponibles, accédez à **[!UICONTROL Fréquence des mises à jour]** et sélectionnez « [!UICONTROL  Diffusion en continu ]. L’utilisation de ce filtre affiche toutes les audiences de votre organisation qui sont évaluées à l’aide de la segmentation en flux continu.
 
 ![La fréquence de mise à jour en flux continu est sélectionnée, affichant toutes les audiences de l’organisation qui sont évaluées à l’aide de la segmentation en flux continu.](../images/methods/streaming/filter-streaming.png)
 
