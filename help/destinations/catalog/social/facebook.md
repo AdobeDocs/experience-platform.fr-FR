@@ -3,16 +3,24 @@ keywords: connexion facebook;connexion facebook;destinations facebook;facebook;i
 title: Connexion Facebook
 description: Activez les profils dans vos campagnes Facebook pour cibler votre audience et effectuer des personnalisat ions ou encore des suppressions reposant sur les e-mails hachés.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: a2420f86e650ce1ca8a5dc01d9a29548663d3f7c
+source-git-commit: 09146fac0719b62c6c2ec1b6c3aa66cb80c1698a
 workflow-type: tm+mt
-source-wordcount: '2137'
-ht-degree: 28%
+source-wordcount: '2843'
+ht-degree: 21%
 
 ---
 
 # Connexion [!DNL Facebook]
 
 ## Présentation {#overview}
+
+>[!IMPORTANT]
+>
+>* À compter du 23 mai 2025 et tout au long du mois de juin 2025, il se peut que vous voyiez temporairement deux cartes de destination **[!DNL Facebook Custom Audience]** dans le catalogue des destinations, pour une durée maximale de quelques heures. Cela est dû à une mise à niveau interne du service de destinations et à la prise en charge de nouveaux champs pour un ciblage amélioré et une correspondance avec les profils sur les propriétés Facebook. Pour plus d’informations sur les nouveaux champs liés à l’adresse, consultez la section [identités prises en charge](#supported-identities).
+>* Si vous voyez une carte intitulée **[!UICONTROL (Nouvelle) Audience personnalisée Facebook]**, utilisez-la pour les nouveaux flux de données d’activation. Vos flux de données existants seront mis à jour automatiquement. Aucune action n’est donc requise de votre part. Toute modification apportée aux flux de données existants au cours de cette période sera conservée après la mise à niveau. Une fois la mise à niveau terminée, la carte de destination **[!UICONTROL (Nouvelle) Audience personnalisée Facebook]** sera renommée **[!DNL Facebook Custom Audience]**.
+>* Si vous créez des flux de données à l’aide de l’[API Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/), vous devez mettre à jour vos [!DNL flow spec ID] et [!DNL connection spec ID] avec les valeurs suivantes :
+>   * ID de spécification de flux : `bb181d00-58d7-41ba-9c15-9689fdc831d3`
+>   * ID de spécification de connexion : `c8b97383-2d65-4b7a-9913-db0fbfc71727`
 
 Activez les profils de vos campagnes [!DNL Facebook] pour le ciblage, la personnalisation et la suppression des audiences en fonction des e-mails hachés.
 
@@ -42,11 +50,20 @@ Ensuite, ils peuvent utiliser leurs données hors ligne, y compris les identifia
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | Sélectionnez l’identité cible GAID lorsque votre identité source est un espace de noms GAID. |
-| IDFA | Identifiant Apple pour les annonceurs | Sélectionnez l’identité cible IDFA lorsque votre identité source est un espace de noms IDFA. |
-| phone_sha256 | Numéros de téléphone hachés avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les numéros de téléphone hachés avec SHA256. Suivez les instructions de la section [Exigences de correspondance des identifiants](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de noms appropriés pour le texte brut et les numéros de téléphone hachés, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
-| email_lc_sha256 | Adresses e-mail hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses e-mail hachées avec SHA256. Suivez les instructions de la section [Exigences de correspondance des identifiants](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de noms appropriés pour les adresses électroniques en texte brut et hachées, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
-| extern_id | ID d’utilisateur personnalisés | Sélectionnez cette identité cible lorsque votre identité source est un espace de noms personnalisé. |
+| `GAID` | GOOGLE ADVERTISING ID | Sélectionnez l’identité cible GAID lorsque votre identité source est un espace de noms GAID. |
+| `IDFA` | Identifiant Apple pour les annonceurs | Sélectionnez l’identité cible IDFA lorsque votre identité source est un espace de noms IDFA. |
+| `phone_sha256` | Numéros de téléphone hachés avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les numéros de téléphone hachés avec SHA256. Suivez les instructions de la section [Exigences de correspondance des identifiants](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de noms appropriés pour le texte brut et les numéros de téléphone hachés, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
+| `email_lc_sha256` | Adresses e-mail hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses e-mail hachées avec SHA256. Suivez les instructions de la section [Exigences de correspondance des identifiants](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de noms appropriés pour les adresses électroniques en texte brut et hachées, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
+| `extern_id` | ID d’utilisateur personnalisés | Sélectionnez cette identité cible lorsque votre identité source est un espace de noms personnalisé. |
+| `gender` | Genre | Valeurs acceptées : <ul><li>`m`pour les hommes</li><li>`f`pour les femmes</li></ul> Experience Platform **hache automatiquement** cette valeur avant de l’envoyer à Facebook. Ce hachage automatique est nécessaire pour respecter les exigences de sécurité et de confidentialité de Facebook. Ne fournissez **de valeurs préhachées pour ce champ** car cela entraînerait l’échec du processus de correspondance. |
+| `date_of_birth` | Date of birth | Format accepté : `yyyy-MM-DD`. <br>Experience Platform **hache automatiquement** cette valeur avant de l&#39;envoyer à Facebook. Ce hachage automatique est nécessaire pour respecter les exigences de sécurité et de confidentialité de Facebook. Ne fournissez **de valeurs préhachées pour ce champ** car cela entraînerait l’échec du processus de correspondance. |
+| `last_name` | Nom | Format accepté : minuscules, `a-z` caractères uniquement, pas de ponctuation. Utilisez le codage UTF-8 pour les caractères spéciaux.  <br>Experience Platform **hache automatiquement** cette valeur avant de l&#39;envoyer à Facebook. Ce hachage automatique est nécessaire pour respecter les exigences de sécurité et de confidentialité de Facebook. Ne fournissez **de valeurs préhachées pour ce champ** car cela entraînerait l’échec du processus de correspondance. |
+| `first_name` | Prénom | Format accepté : minuscules, `a-z` caractères uniquement, pas de ponctuation, pas d’espaces. Utilisez le codage UTF-8 pour les caractères spéciaux.  <br>Experience Platform **hache automatiquement** cette valeur avant de l&#39;envoyer à Facebook. Ce hachage automatique est nécessaire pour respecter les exigences de sécurité et de confidentialité de Facebook. Ne fournissez **de valeurs préhachées pour ce champ** car cela entraînerait l’échec du processus de correspondance. |
+| `first_name_initial` | Initiale du prénom | Format accepté : minuscules, `a-z` caractères uniquement. Utilisez le codage UTF-8 pour les caractères spéciaux.  <br>Experience Platform **hache automatiquement** cette valeur avant de l&#39;envoyer à Facebook. Ce hachage automatique est nécessaire pour respecter les exigences de sécurité et de confidentialité de Facebook. Ne fournissez **de valeurs préhachées pour ce champ** car cela entraînerait l’échec du processus de correspondance. |
+| `state` | État | Utilisez le code d’abréviation ANSI [2 caractères](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standard_state_code) en minuscules. Pour les états non-US, utilisez des caractères minuscules, sans ponctuation, sans caractères spéciaux et sans espaces.  <br>Experience Platform **hache automatiquement** cette valeur avant de l&#39;envoyer à Facebook. Ce hachage automatique est nécessaire pour respecter les exigences de sécurité et de confidentialité de Facebook. Ne fournissez **de valeurs préhachées pour ce champ** car cela entraînerait l’échec du processus de correspondance. |
+| `city` | Ville | Format accepté : minuscules, caractères `a-z` uniquement, pas de ponctuation, pas de caractères spéciaux, pas d’espaces.  <br>Experience Platform **hache automatiquement** cette valeur avant de l&#39;envoyer à Facebook. Ce hachage automatique est nécessaire pour respecter les exigences de sécurité et de confidentialité de Facebook. Ne fournissez **de valeurs préhachées pour ce champ** car cela entraînerait l’échec du processus de correspondance. |
+| `zip` | Code postal | Format accepté : minuscules, pas d’espaces. Pour les codes postaux américains, utilisez uniquement les 5 premiers chiffres. Pour le Royaume-Uni, utilisez le format `Area/District/Sector` .  <br>Experience Platform **hache automatiquement** cette valeur avant de l&#39;envoyer à Facebook. Ce hachage automatique est nécessaire pour respecter les exigences de sécurité et de confidentialité de Facebook. Ne fournissez **de valeurs préhachées pour ce champ** car cela entraînerait l’échec du processus de correspondance. |
+| `country` | Pays | Format accepté : codes de pays à 2 lettres, en minuscules, au format [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).  <br>Experience Platform **hache automatiquement** cette valeur avant de l&#39;envoyer à Facebook. Ce hachage automatique est nécessaire pour respecter les exigences de sécurité et de confidentialité de Facebook. Ne fournissez **de valeurs préhachées pour ce champ** car cela entraînerait l’échec du processus de correspondance. |
 
 ## Audiences prises en charge {#supported-audiences}
 
@@ -94,6 +111,12 @@ Avant d’envoyer vos audiences à [!DNL Facebook], veillez à respecter les exi
 
 Selon le type d’identifiants ingérés dans Adobe Experience Platform, vous devez respecter les exigences correspondantes.
 
+## Maximiser les taux de correspondance d’audience {#match-rates}
+
+Pour obtenir les taux de correspondance d’audience les plus élevés dans [!DNL Facebook], il est vivement recommandé d’utiliser les identités cible `phone_sha256` et `email_lc_sha256`.
+
+Ces identifiants sont les principaux utilisés par les [!DNL Facebook] pour faire correspondre les audiences sur leurs plateformes. Assurez-vous que vos données sources sont correctement mappées à ces identités cibles et respectent les exigences de hachage [!DNL Facebook's].
+
 ## Exigences de hachage des numéros de téléphone {#phone-number-hashing-requirements}
 
 Il existe deux méthodes pour activer les numéros de téléphone dans [!DNL Facebook] :
@@ -136,13 +159,13 @@ Avant de pouvoir utiliser l’espace de noms `Extern_ID` pour envoyer des donné
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
 La vidéo ci-dessous montre également les étapes à suivre pour configurer une destination [!DNL Facebook] et activer des audiences.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411785/?quality=12&learn=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -222,8 +245,8 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
