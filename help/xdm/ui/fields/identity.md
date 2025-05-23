@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Définir des champs d’identité dans l’interface utilisateur
 description: Découvrez comment définir un champ d’identité dans l’interface utilisateur Experience Platform.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3570197ca6cff95368b4facb034386e793033fe2
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '665'
 ht-degree: 15%
 
 ---
@@ -46,7 +46,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]** pour appliq
 
 >[!IMPORTANT]
 >
->Si un champ d’identité principale est déjà défini, vous pouvez modifier le champ d’identité principale de votre schéma en suivant les étapes ci-dessus. Cependant, vous devez désactiver puis réactiver tous les jeux de données associés dans le profil pour que la modification prenne effet.
+>Une fois qu’un schéma peut être utilisé dans le profil client en temps réel et que les données ont été ingérées, **vous ne pouvez pas modifier le champ de l’identité principale**. Toute tentative de ce type entraînera une erreur de validation. Si vous devez utiliser une autre identité principale, vous devez créer un nouveau schéma ainsi qu’un nouveau jeu de données avec la configuration d’identité mise à jour.
 
 ![](../../images/ui/fields/special/identity-config.png)
 
@@ -63,4 +63,3 @@ Si vous avez défini une identité principale pour le schéma, vous pouvez maint
 Ce guide explique comment définir un champ d’identité dans l’interface utilisateur. Comme les données sont ingérées à l’aide de ce schéma, vos graphiques d’identités client sont mis à jour pour refléter les champs d’identité du schéma. Consultez le guide sur la [visionneuse de graphiques d’identité](../../../identity-service/features/identity-graph-viewer.md) pour savoir comment explorer le graphique privé de votre organisation dans l’interface utilisateur.
 
 Consultez la présentation sur la [définition de champs dans l’interface utilisateur](./overview.md#special) pour savoir comment définir d’autres types de champs XDM dans l’[!DNL Schema Editor].
-

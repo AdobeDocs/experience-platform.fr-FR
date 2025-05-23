@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Principes de base de la composition des schémas
 description: Découvrez les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques pour la composition de schémas dans Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: dcb6770d739d0da5cfa339584a769f5311a8c7e1
 workflow-type: tm+mt
-source-wordcount: '4373'
-ht-degree: 26%
+source-wordcount: '4350'
+ht-degree: 25%
 
 ---
 
@@ -55,30 +55,30 @@ Les schémas d’enregistrement et de série temporelle contiennent tous deux un
 >title="Identités dans les schémas"
 >abstract="Les identités sont des champs clés d&#39;un schéma pouvant être utilisés pour identifier un objet, comme une adresse e-mail ou un identifiant marketing. Ces champs sont utilisés pour créer le graphique d&#39;identité de chaque individu ainsi que les profils client. Pour plus d&#39;informations sur les identités dans les schémas, consultez la documentation."
 
-Les schémas sont utilisés pour ingérer des données dans Experience Platform. Ces données sont finalement utilisées par plusieurs services pour créer une vue unique et unifiée d’une entité individuelle. Par conséquent, il est important, lors de la conception de schémas pour les identités des clients, de tenir compte des champs qui peuvent être utilisés pour identifier un objet, quel que soit l’endroit d’où les données peuvent provenir.
+Les schémas définissent la structure des données ingérées dans Experience Platform. Ces données alimentent plusieurs services au sein de Platform et permettent de créer une vue unique et unifiée de chaque individu. Ainsi, lors de la conception de schémas, réfléchissez soigneusement aux champs à marquer comme identités, car ils contrôlent la manière dont les profils sont regroupés dans les jeux de données.
 
 Pour faciliter ce processus, les champs clés de vos schémas peuvent être marqués comme identités. Lors de l’ingestion des données, les données de ces champs sont insérées dans le « [!UICONTROL graphique d’identités] » de cet individu. Les données du graphique peuvent ensuite être consultées par [[!DNL Real-Time Customer Profile]](../../profile/home.md) et d’autres services Experience Platform afin de fournir une vue d’ensemble de chaque client individuel.
 
 Les champs généralement désignés comme champs « [!UICONTROL Identité] » sont les suivants : adresse e-mail, numéro de téléphone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=fr), identifiant CRM ou d’autres champs d’identification uniques. Tenez compte des identifiants uniques spécifiques à votre organisation, car il peut également s’agir de bons champs « [!UICONTROL Identité] ».
 
-Il est important de réfléchir aux identités des clients pendant la phase de planification du schéma pour vous assurer que les données sont rassemblées afin de créer le profil le plus robuste possible. Pour en savoir plus sur la manière dont les informations d’identité peuvent vous aider à proposer des expériences digitales à vos clients, consultez la [ présentation d’Identity Service](../../identity-service/home.md). Consultez le document des bonnes pratiques de modélisation des données pour obtenir des [ sur l’utilisation des identités lors de la création d’un schéma](./best-practices.md#data-validation-fields).
+Pour en savoir plus sur la manière dont les informations d’identité peuvent vous aider à proposer des expériences digitales à vos clients, consultez la [ présentation d’Identity Service](../../identity-service/home.md). Consultez le document des bonnes pratiques de modélisation des données pour obtenir des [ sur l’utilisation des identités lors de la création d’un schéma](./best-practices.md#data-validation-fields).
 
 Il existe deux manières d’envoyer des données d’identité à Experience Platform :
 
 1. Ajouter des descripteurs d’identité à des champs individuels, par le biais de l’interface utilisateur [Éditeur de schémas](../ui/fields/identity.md) ou à l’aide de l’API [Schema Registry](../api/descriptors.md#create)
-1. En utilisant un champ de [`identityMap`](#identityMap)
+2. En utilisant un champ de [`identityMap`](#identityMap)
 
 #### `identityMap` {#identityMap}
 
 `identityMap` est un champ de type map qui décrit les différentes valeurs d’identité d’un individu, ainsi que les espaces de noms qui lui sont associés. Ce champ peut être utilisé pour fournir des informations d’identité à vos schémas, au lieu de définir des valeurs d’identité dans la structure du schéma lui-même.
 
-Le principal inconvénient de l’utilisation de `identityMap` est que les identités sont intégrées dans les données et deviennent par conséquent moins visibles. Si vous ingérez des données brutes, vous devez définir des champs d’identité individuels dans la structure réelle du schéma à la place.
+L’inconvénient principal de l’utilisation de `identityMap` est que les valeurs d’identité sont imbriquées et peuvent être plus difficiles à utiliser dans les outils qui prévoient des champs d’identité de niveau supérieur, tels que le créateur de segments ou certaines intégrations tierces.
 
 >[!NOTE]
 >
 >Un schéma qui utilise `identityMap` peut être utilisé comme schéma source dans une relation, mais ne peut pas être utilisé comme schéma de référence. En effet, tous les schémas de référence doivent avoir une identité visible qui peut être mappée dans un champ de référence au sein du schéma source. Reportez-vous au guide de l’interface utilisateur sur [les relations](../tutorials/relationship-ui.md) pour plus d’informations sur les exigences des schémas source et de référence.
 
-Cependant, les mappages d’identités peuvent s’avérer utiles s’il existe un nombre variable d’identités pour un schéma ou si vous importez des données provenant de sources qui stockent des identités ensemble (telles que [!DNL Airship] ou Adobe Audience Manager). En outre, des mappages d’identité sont requis si vous utilisez le Adobe Experience Platform Mobile SDK [&#128279;](https://developer.adobe.com/client-sdks/home/).
+Cependant, les mappages d’identités peuvent s’avérer utiles s’il existe un nombre variable d’identités pour un schéma ou si vous importez des données provenant de sources qui stockent des identités ensemble (telles que [!DNL Airship] ou Adobe Audience Manager). En outre, des mappages d’identité sont requis si vous utilisez le Adobe Experience Platform Mobile SDK [](https://developer.adobe.com/client-sdks/home/).
 
 Voici un exemple de mappage d’identités simple :
 
@@ -129,7 +129,7 @@ Le tableau suivant détaille les modifications prises en charge lors de la modif
 
 | Modifications prises en charge | Modifications entraînant une rupture (non prises en charge) |
 | --- | --- |
-| <ul><li>Ajouter de nouveaux champs à la ressource</li><li>Rendre un champ obligatoire facultatif</li><li>Introduction de nouveaux champs obligatoires*</li><li>Modification du nom d’affichage et de la description de la ressource</li><li>Activation du schéma pour participer au profil</li></ul> | <ul><li>Supprimer des champs définis précédemment</li><li>Renommer ou redéfinir des champs existants</li><li>Supprimer ou limiter des valeurs de champ précédemment prises en charge</li><li>Déplacement de champs existants vers un autre emplacement de l’arborescence</li><li>Suppression du schéma</li><li>Désactivation du schéma de la participation au profil</li></ul> |
+| <ul><li>Ajouter de nouveaux champs à la ressource</li><li>Rendre un champ obligatoire facultatif</li><li>Introduction de nouveaux champs obligatoires*</li><li>Modification du nom d’affichage et de la description de la ressource</li><li>Activation du schéma pour participer au profil</li></ul> | <ul><li>Supprimer des champs définis précédemment</li><li>Renommer ou redéfinir des champs existants</li><li>Supprimer ou limiter des valeurs de champ précédemment prises en charge</li><li>Déplacement de champs existants vers un autre emplacement de l’arborescence</li><li>Suppression du schéma</li><li>Désactivation du schéma de la participation au profil</li><li>Modification du champ d’identité principale sur un schéma activé pour Profil et contenant des données ingérées</li></ul> |
 
 \**Reportez-vous à la section ci-dessous pour des considérations importantes concernant [la définition de nouveaux champs obligatoires](#post-ingestion-required-fields).*
 
@@ -161,9 +161,9 @@ Experience Platform utilise une approche de composition dans laquelle des blocs
 
 Les schémas sont composés à l’aide de la formule suivante :
 
-**Classe + Groupe de champs de schéma&ast; = Schéma XDM**
+**Classe + Groupe de champs de schéma&amp;ast; = Schéma XDM**
 
-&ast;Un schéma est composé d’une classe et de zéro ou de plusieurs groupes de champs de schéma. Cela signifie que vous pouvez composer un schéma de jeu de données sans utiliser de groupes de champs.
+&amp;ast;Un schéma est composé d’une classe et de zéro ou de plusieurs groupes de champs de schéma. Cela signifie que vous pouvez composer un schéma de jeu de données sans utiliser de groupes de champs.
 
 ### Classe {#class}
 
@@ -280,7 +280,7 @@ Les plages valides de ces types scalaires peuvent être limitées davantage à c
 
 Les schémas sont créés à l’aide d’un modèle de composition et représentent le format et la structure des données à ingérer dans [!DNL Experience Platform]. Comme mentionné précédemment, ces schémas sont composés d’une classe et de zéro ou plusieurs groupes de champs compatibles avec cette classe.
 
-Par exemple, un schéma décrivant les achats effectués dans un magasin de vente au détail peut être appelé « [!UICONTROL &#x200B; Transactions de magasin &#x200B;] ». Le schéma implémente la classe [!DNL XDM ExperienceEvent] associée au groupe de champs standard [!UICONTROL Commerce] et à un groupe de champs [!UICONTROL Informations sur les produits] défini par l’utilisateur.
+Par exemple, un schéma décrivant les achats effectués dans un magasin de vente au détail peut être appelé « [!UICONTROL  Transactions de magasin ] ». Le schéma implémente la classe [!DNL XDM ExperienceEvent] associée au groupe de champs standard [!UICONTROL Commerce] et à un groupe de champs [!UICONTROL Informations sur les produits] défini par l’utilisateur.
 
 Un autre schéma qui suit le trafic du site Web peut être appelé « [!UICONTROL Visites Web] ». Il implémente également la classe [!DNL XDM ExperienceEvent], mais cette fois combine le groupe de champs standard [!UICONTROL Web].
 
