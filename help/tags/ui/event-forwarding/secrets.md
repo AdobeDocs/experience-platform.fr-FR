@@ -133,7 +133,7 @@ Pour créer un secret JWT OAuth 2, sélectionnez **[!UICONTROL OAuth 2 JWT]** da
 >
 >Le seul [!UICONTROL algorithme] actuellement pris en charge pour la signature du jeton JWT est RS256.
 
-Dans les champs qui s’affichent ci-dessous, fournissez vos [!UICONTROL Émetteur], [!UICONTROL Objet], [!UICONTROL Audience], [!UICONTROL Revendications personnalisées], [!UICONTROL TTL], puis sélectionnez [!UICONTROL Algorithme] dans la liste déroulante. Saisissez ensuite l’[!UICONTROL ID de clé privée], ainsi que votre [[!UICONTROL URL de jeton]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) pour votre intégration OAuth. Le champ [!UICONTROL  URL du jeton ] n’est pas un champ obligatoire. Si une valeur est fournie, le jeton JWT est échangé avec un jeton d’accès. Le secret sera actualisé en fonction de l’attribut `expires_in` de la réponse et de la valeur [!UICONTROL Actualiser le décalage]. Si aucune valeur n’est fournie, le secret transmis à Edge est le JWT. Le jeton JWT sera actualisé en fonction des valeurs [!UICONTROL TTL] et [!UICONTROL Refresh Offset].
+Dans les champs qui s’affichent ci-dessous, fournissez vos [!UICONTROL Émetteur], [!UICONTROL Objet], [!UICONTROL Audience], [!UICONTROL Revendications personnalisées], [!UICONTROL TTL], puis sélectionnez [!UICONTROL Algorithme] dans la liste déroulante. Saisissez ensuite l’[!UICONTROL ID de clé privée], ainsi que votre [[!UICONTROL URL de jeton]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) pour votre intégration OAuth. Le champ [!UICONTROL &#x200B; URL du jeton &#x200B;] n’est pas un champ obligatoire. Si une valeur est fournie, le jeton JWT est échangé avec un jeton d’accès. Le secret sera actualisé en fonction de l’attribut `expires_in` de la réponse et de la valeur [!UICONTROL Actualiser le décalage]. Si aucune valeur n’est fournie, le secret transmis à Edge est le JWT. Le jeton JWT sera actualisé en fonction des valeurs [!UICONTROL TTL] et [!UICONTROL Refresh Offset].
 
 ![Onglet [!UICONTROL Créer un secret] avec une sélection de champs de saisie en surbrillance.](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
 
@@ -196,7 +196,7 @@ Une fois le processus d’autorisation terminé, vous revenez à l’onglet **[!
 
 ![Onglet [!UICONTROL Secret] mettant en surbrillance le secret nouvellement créé.](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
 
-#### Réautoriser un secret OAuth 2] [!UICONTROL [!DNL LinkedIn]
+#### Réautoriser un secret OAuth 2 [!DNL LinkedIn]
 
 >IMPORTANT
 >
