@@ -2,10 +2,10 @@
 title: Configuration de secrets dans le transfert d’événements
 description: Découvrez comment configurer des secrets dans lʼinterface utilisateur afin de vous authentifier aux points dʼentrée utilisés dans les propriétés de transfert dʼévénement.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 592acdd45b1db5da95430b4e707cd9a2c18c1645
+source-git-commit: 374c140a5db678adfa2e038b69478ad8c7f8dc95
 workflow-type: tm+mt
-source-wordcount: '2426'
-ht-degree: 75%
+source-wordcount: '2577'
+ht-degree: 70%
 
 ---
 
@@ -17,6 +17,7 @@ Les types de secrets suivants sont actuellement pris en charge :
 
 | Type de secret | Description |
 | --- | --- |
+| [!UICONTROL Amazon OAuth 2] | Permet une authentification sécurisée avec les services [!DNL Amazon]. Le système stocke le jeton en toute sécurité et gère son renouvellement à des intervalles spécifiés. |
 | [!UICONTROL Google OAuth 2] | Contient plusieurs attributs pour prendre en charge la spécification d’authentification [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) pour une utilisation dans l’[API Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview) et l’[API Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
 | [!UICONTROL HTTP] | Contient deux attributs de chaîne pour un nom dʼutilisateur et un mot de passe, respectivement. |
 | [!UICONTROL [!DNL LinkedIn] OAuth 2] | Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
@@ -78,6 +79,7 @@ Pour chaque environnement ajouté, vous devez attribuer un nouveau nom unique po
 * [[!UICONTROL JWT OAuth 2]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
 * [[!UICONTROL [!DNL LinkedIn] OAuth 2]](#linkedin-oauth2)
+* [[!UICONTROL [!DNL Amazon] OAuth 2]](#amazon-oauth2)
 
 ### [!UICONTROL Jeton] {#token}
 
@@ -131,7 +133,7 @@ Pour créer un secret JWT OAuth 2, sélectionnez **[!UICONTROL OAuth 2 JWT]** da
 >
 >Le seul [!UICONTROL algorithme] actuellement pris en charge pour la signature du jeton JWT est RS256.
 
-Dans les champs qui s’affichent ci-dessous, fournissez vos [!UICONTROL Émetteur], [!UICONTROL Objet], [!UICONTROL Audience], [!UICONTROL Revendications personnalisées], [!UICONTROL TTL], puis sélectionnez [!UICONTROL Algorithme] dans la liste déroulante. Saisissez ensuite l’[!UICONTROL ID de clé privée], ainsi que votre [[!UICONTROL URL de jeton]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) pour votre intégration OAuth. Le champ [!UICONTROL &#x200B; URL du jeton &#x200B;] n’est pas un champ obligatoire. Si une valeur est fournie, le jeton JWT est échangé avec un jeton d’accès. Le secret sera actualisé en fonction de l’attribut `expires_in` de la réponse et de la valeur [!UICONTROL Actualiser le décalage]. Si aucune valeur n’est fournie, le secret transmis à Edge est le JWT. Le jeton JWT sera actualisé en fonction des valeurs [!UICONTROL TTL] et [!UICONTROL Refresh Offset].
+Dans les champs qui s’affichent ci-dessous, fournissez vos [!UICONTROL Émetteur], [!UICONTROL Objet], [!UICONTROL Audience], [!UICONTROL Revendications personnalisées], [!UICONTROL TTL], puis sélectionnez [!UICONTROL Algorithme] dans la liste déroulante. Saisissez ensuite l’[!UICONTROL ID de clé privée], ainsi que votre [[!UICONTROL URL de jeton]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) pour votre intégration OAuth. Le champ [!UICONTROL  URL du jeton ] n’est pas un champ obligatoire. Si une valeur est fournie, le jeton JWT est échangé avec un jeton d’accès. Le secret sera actualisé en fonction de l’attribut `expires_in` de la réponse et de la valeur [!UICONTROL Actualiser le décalage]. Si aucune valeur n’est fournie, le secret transmis à Edge est le JWT. Le jeton JWT sera actualisé en fonction des valeurs [!UICONTROL TTL] et [!UICONTROL Refresh Offset].
 
 ![Onglet [!UICONTROL Créer un secret] avec une sélection de champs de saisie en surbrillance.](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
 
@@ -186,7 +188,7 @@ Pour créer un secret OAuth 2 [!DNL LinkedIn], sélectionnez **[!UICONTROL [!DNL
 
 Une fenêtre contextuelle s’affiche pour vous informer que le secret doit être autorisé manuellement via [!DNL LinkedIn]. Sélectionnez **[!UICONTROL Créer et autoriser un secret avec[!DNL LinkedIn]]** pour continuer.
 
-![[!DNL LinkedIn] fenêtre contextuelle d’autorisation mettant en surbrillance [!UICONTROL Créer et autoriser un secret avec [!DNL LinkedIn]].](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+![Fenêtre contextuelle d’autorisation LinkedIn mettant en surbrillance le bouton « Créer et autoriser le secret avec LinkedIn ».](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
 
 Une boîte de dialogue s’affiche vous invitant à saisir vos informations d’identification [!DNL LinkedIn]. Suivez les invites pour accorder l’accès au transfert d’événement à vos données.
 
@@ -194,7 +196,7 @@ Une fois le processus d’autorisation terminé, vous revenez à l’onglet **[!
 
 ![Onglet [!UICONTROL Secret] mettant en surbrillance le secret nouvellement créé.](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
 
-#### Réautoriser un secret OAuth 2 [!DNL LinkedIn]
+#### Réautoriser un secret OAuth 2] [!UICONTROL [!DNL LinkedIn]
 
 >IMPORTANT
 >
@@ -209,6 +211,22 @@ Vous êtes redirigé vers l’onglet [!UICONTROL Secrets]. Les secrets répertor
 ![Onglet [!UICONTROL Secret] mettant en surbrillance [!UICONTROL Authentification nécessaire]pour le secret [!DNL LinkedIn].](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
 
 Une boîte de dialogue s’affiche et vous invite à saisir vos informations d’identification [!DNL LinkedIn]. Suivez les invites pour réautoriser votre secret.
+
+### [!UICONTROL [!DNL Amazon] OAuth 2] {#amazon-oauth2}
+
+Pour créer un secret OAuth 2 [!DNL Amazon], sélectionnez **[!UICONTROL [!DNL Amazon]OAuth 2]** dans la liste déroulante **[!UICONTROL Type]**. Sélectionnez ensuite **[!UICONTROL Créer un secret]**.
+
+![Onglet [!UICONTROL Créer un secret] avec le champ [!UICONTROL Type] en surbrillance.](../../images/ui/event-forwarding/secrets/amazon-oauth.png)
+
+Une fenêtre contextuelle s’affiche pour vous informer que le secret doit être autorisé manuellement via [!DNL Amazon]. Sélectionnez **[!UICONTROL Créer et autoriser un secret avec[!DNL Amazon]]** pour continuer.
+
+Fenêtre contextuelle d’autorisation ![Amazon mettant en surbrillance le bouton « Créer et autoriser le secret avec Amazon ».](../../images/ui/event-forwarding/secrets/amazon-authorization.png)
+
+Une boîte de dialogue s’affiche vous invitant à saisir vos informations d’identification [!DNL Amazon]. Suivez les invites pour accorder l’accès au transfert d’événement à vos données.
+
+Une fois le processus d’autorisation terminé, vous revenez à l’onglet **[!UICONTROL Secrets]**, où vous pouvez voir le secret que vous venez de créer. Vous pouvez voir ici le statut du secret et la date d’expiration.
+
+![Onglet [!UICONTROL Secret] mettant en surbrillance le secret nouvellement créé.](../../images/ui/event-forwarding/secrets/amazon-new-secret.png)
 
 ## Modifier un secret
 
