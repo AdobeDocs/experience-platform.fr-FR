@@ -5,10 +5,10 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: 7b1dbec504ba11983958c3452878cf410b2a490c
+source-git-commit: dbcfd7bfbf2f2d8268d3d8b5748f75ec9f186597
 workflow-type: tm+mt
-source-wordcount: '1075'
-ht-degree: 92%
+source-wordcount: '1078'
+ht-degree: 91%
 
 ---
 
@@ -242,6 +242,7 @@ ht-degree: 92%
    - [Ingérer des données chiffrées](tutorials/api/encrypt-data.md)
    - [Enregistrer un flux de données en tant que brouillon](tutorials/api/draft.md)
    - [Application de libellés d’accès à un flux de données](tutorials/api/labels.md)
+   - [Utiliser des points d’entrée privés](tutorials/api/private-link.md)
 - Tutoriels sur l’interface utilisateur {#ui-tutorials}
    - Créer une connexion source {#create}
       - Applications Adobe {#adobe-applications}
