@@ -6,9 +6,9 @@ user-guide-description: Découvrez comment déployer et gérer des balises d’a
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 28eb48ec9fb7c9c5a5927c8582960cbd99199613
+source-git-commit: a2d93b5c13194707e8a87d633e47d0446b9afabd
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '782'
 ht-degree: 85%
 
 ---
@@ -216,7 +216,8 @@ ht-degree: 85%
    * Extensions de transfert d’événement (côté serveur) {#server}
       * [Vue d’ensemble](./extensions/server/overview.md)
       * Adobe Experience Platform Cloud Connector {#cloud-connector}
-         * [Aperçu](./extensions/server/cloud-connector/overview.md)
+         * [Vue d’ensemble](./extensions/server/cloud-connector/overview.md)
+         * [Certificats mTLS](./extensions/server/cloud-connector/mtls.md)
          * [Notes de mise à jour](./extensions/server/cloud-connector/release-notes.md)
       * [!DNL Adform] {#adform}
          * [Aperçu](./extensions/server/adform/overview.md)

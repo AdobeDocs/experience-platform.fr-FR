@@ -2,10 +2,10 @@
 title: Présentation de l’extension Cloud Connector
 description: Découvrez l’extension de transfert d’événements Cloud Connector dans Adobe Experience Platform.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: 3b9ff1d41c698feadd0215ab562f87747aaa91a1
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 100%
+source-wordcount: '1715'
+ht-degree: 79%
 
 ---
 
@@ -125,3 +125,41 @@ arc.ruleStash.[EXTENSION-NAME-HERE].responses.[RESPONSE-KEY-HERE]
 
 arc.ruleStash.adobe-cloud-connector.reponses.productDetails 
 ```
+
+## Utilisation des [!DNL mTLS] de sécurité de couche de transport mutuelle dans les règles de transfert d’événement {#mtls-rules}
+
+Le certificat [!DNL mTLS] est une information d’identification numérique qui prouve l’identité d’un serveur ou d’un client dans des communications sécurisées. Lorsque vous utilisez l’API [!DNL mTLS] Service, ces certificats vous aident à vérifier et à chiffrer vos interactions avec le transfert d’événement Adobe Experience Platform. Ce processus protège non seulement vos données, mais garantit également que chaque connexion provient d’un partenaire de confiance.
+
+### Installation de l’extension Adobe Cloud Connector {#install}
+
+Pour installer l’extension, [créez une propriété de transfert d’événement](../../../ui/event-forwarding/overview.md#properties) ou sélectionnez une propriété existante à modifier à la place.
+
+Sélectionnez **[!UICONTROL Extensions]** dans le panneau de gauche. Dans l’onglet **[!UICONTROL Catalogue]**, sélectionnez la vignette API de conversions en temps réel **[!UICONTROL Adobe Cloud Connector]**, puis sélectionnez **[!UICONTROL Installer]**.
+
+![Catalogue d’extensions affichant la carte d’extension [!DNL Adobe Cloud Connector] mettant en surbrillance install.](../../../images/extensions/server/cloud-connector/install-extension.png)
+
+### Configurer une règle de transfert d’événement {#rule}
+
+>[!NOTE]
+>
+>Pour configurer une règle afin d’utiliser [!DNL mTLS], vous devez disposer de la version 1.2.4 ou ultérieure d’Adobe Cloud Connector.
+
+Après avoir installé l’extension, vous pouvez créer une règle de transfert d’événement qui utilise [!DNL mTLS] et l’ajouter à votre bibliothèque.
+
+Créez une [règle](../../../ui/managing-resources/rules.md) de transfert d’événement dans votre propriété de transfert d’événement. Attribuez un nom à votre règle, puis sous **[!UICONTROL Actions]**, ajoutez une nouvelle action et définissez l’extension sur **[!UICONTROL Adobe Cloud Connector]**. Sélectionnez ensuite **[!UICONTROL Effectuer un appel de récupération]** pour le **[!UICONTROL Type d’action]**.
+
+![Vue des règles de propriété de transfert d’événement, avec les champs requis pour ajouter une configuration d’action de règle de transfert d’événement en surbrillance.](../../../images/extensions/server/cloud-connector/event-action.png)
+
+Une fois votre sélection effectuée, des commandes supplémentaires s’affichent pour configurer la méthode et la destination de la requête [!DNL mTLS]. Pour activer l’utilisation de certificats actifs dans les environnements, sélectionnez **[!UICONTROL Activer dans[!DNL mTLS]]**, puis sélectionnez **[!UICONTROL Conserver les modifications]** pour enregistrer la règle.
+
+![Vue des règles de propriété Transfert d’événement, avec les champs de contrôle supplémentaires et conserver les modifications en surbrillance.](../../../images/extensions/server/cloud-connector/save-rule.png)
+
+Votre nouvelle règle est maintenant prête. Sélectionnez **[!UICONTROL Enregistrer dans la bibliothèque]**, puis sélectionnez **[!UICONTROL Créer]** pour la déployer. La requête [!DNL mTLS] est maintenant active et disponible dans votre bibliothèque.
+
+![Règle de transfert d’événement avec l’option Enregistrer dans la bibliothèque et créer mise en surbrillance.](../../../images/extensions/server/cloud-connector/save-build.png)
+
+## Étapes suivantes
+
+Ce guide explique comment configurer des règles mTLS dans le transfert d’événement. Pour plus d’informations sur la configuration de mTLS pour un environnement, reportez-vous au guide [Mutual Transport Layer Security [!DNL mTLS] guide](../cloud-connector/mtls.md).
+
+Pour plus d’informations sur les fonctionnalités de transfert d’événement d’Experience Platform, consultez la [présentation du transfert d’événement](../../../ui/event-forwarding/overview.md).
