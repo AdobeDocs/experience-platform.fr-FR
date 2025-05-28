@@ -2,10 +2,10 @@
 title: Interface utilisateur des paramètres d’identité
 description: Découvrez comment utiliser l’interface utilisateur des paramètres d’identité.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 808562ac7b3bf91c4d133bc1d2106cfc3b0c9c84
+source-git-commit: 38d331bd9265f25a3aebdcbd20ae5fc30a93e960
 workflow-type: tm+mt
-source-wordcount: '646'
-ht-degree: 2%
+source-wordcount: '665'
+ht-degree: 3%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL Identity Graph Linking Rules] est désormais disponible pour tous. Contactez l’assistance Adobe si vous disposez d’un sandbox qui nécessite que les graphiques réduits soient déréduits (« corrigés ») après l’activation des paramètres d’identité.
+>[!DNL Identity Graph Linking Rules] est désormais disponible pour toute la clientèle. Contactez l’équipe de votre compte Adobe ou l’assistance Adobe si vous disposez d’un sandbox existant qui nécessite que les graphiques réduits soient déréduits (« corrigés ») après l’activation des paramètres d’identité.
 
 Les paramètres d’identité sont une fonctionnalité de l’interface utilisateur du service d’identités Adobe Experience Platform que vous pouvez utiliser pour désigner des espaces de noms uniques et configurer la priorité des espaces de noms.
 
@@ -23,7 +23,7 @@ Regardez la vidéo suivante pour plus d’informations sur l’utilisation de l�
 
 Lisez ce guide pour savoir comment configurer vos paramètres d’identité dans l’interface utilisateur.
 
-## Prérequis
+## Conditions préalables
 
 Lisez les documents suivants avant de commencer à utiliser les paramètres d’identité :
 
@@ -82,6 +82,8 @@ Lorsque vous avez terminé vos configurations, sélectionnez **[!UICONTROL Suiva
 >* La dernière étape consiste en un autre message de confirmation indiquant que les graphiques existants ne seront affectés par l’algorithme de graphique **uniquement si les graphiques sont mis à jour après l’enregistrement de vos paramètres** et que l’identité principale des fragments d’événement sur le profil client en temps réel ne sera pas mise à jour même après les modifications de la priorité de l’espace de noms.
 >
 >* Cela prendra jusqu’à **24 heures** pour que vos paramètres nouveaux ou mis à jour soient pris en compte. Pour confirmer, saisissez le nom de votre sandbox, puis sélectionnez **[!UICONTROL Confirmer]**.
+>
+>* Vos données ne seront pas modifiées tant que vous n’aurez pas enregistré vos paramètres d’identité.
 
 ![Fenêtre de confirmation qui affiche un avertissement relatif à un délai de six heures avant le traitement des configurations.](../images/rules/complete.png)
 
