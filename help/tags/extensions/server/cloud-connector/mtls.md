@@ -41,7 +41,7 @@ Sur la page **[!UICONTROL Créer un environnement]**, saisissez un **[!UICONTROL
 
 L’environnement est créé avec succès et vous revenez sur l’onglet **[!UICONTROL Environnements]** qui affiche votre nouvel environnement.
 
-![Onglet [!UICONTROL  Environnements] mettant en surbrillance l’environnement de développement.](../../../images/extensions/server/cloud-connector/new-environment-created.png)
+![Onglet [!UICONTROL &#x200B; Environnements] mettant en surbrillance l’environnement de développement.](../../../images/extensions/server/cloud-connector/new-environment-created.png)
 
 ## Affichage des détails du certificat d’environnement {#view-certificate}
 
@@ -62,7 +62,7 @@ Les détails suivants du certificat s’affichent :
 
 Pour utiliser un certificat obsolète, accédez à l’onglet **[!UICONTROL Environnements]** dans le panneau de gauche de vos propriétés de transfert d’événement, puis sélectionnez l’environnement pour afficher ses détails.
 
-![Onglet [!UICONTROL  Environnements] mettant en surbrillance l’environnement de développement.](../../../images/extensions/server/cloud-connector/new-environment-created.png)
+![Onglet [!UICONTROL &#x200B; Environnements] mettant en surbrillance l’environnement de développement.](../../../images/extensions/server/cloud-connector/new-environment-created.png)
 
 Dans le menu déroulant **[!UICONTROL Certificat]**, sélectionnez un certificat obsolète, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
