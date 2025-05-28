@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Mai 2025
 description: Notes de mise à jour de mai 2025 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: cf88ed1082085fac28553dcc7c7be27c517adb22
+source-git-commit: 6ab9302a40547349c8d0390baafd8591ed6859e1
 workflow-type: tm+mt
-source-wordcount: '1368'
-ht-degree: 97%
+source-wordcount: '1530'
+ht-degree: 91%
 
 ---
 
@@ -25,6 +25,7 @@ ht-degree: 97%
 
 Mises à jour des fonctionnalités et de la documentation existantes dans Adobe Experience Platform :
 
+- [Assistant IA](#ai-assistant)
 - [Catalog Service](#catalog-service)
 - [Préparation des données](#data-prep)
 - [Destinations](#destinations)
@@ -34,7 +35,19 @@ Mises à jour des fonctionnalités et de la documentation existantes dans Adobe�
 - [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
-## Catalog Service {#catalog-service}
+## Assistant IA {#ai-assistant}
+
+L’Assistant IA dans Adobe Experience Platform est une expérience conversationnelle que vous pouvez utiliser pour accélérer vos workflows dans les applications Adobe. Vous pouvez utiliser l’Assistant IA pour développer vos connaissances sur le produit, résoudre les problèmes ou rechercher des informations et trouver des informations opérationnelles. L’assistant IA prend en charge Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer et Customer Journey Analytics.
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Disponibilité générale de l’agent du support produit | Vous pouvez désormais utiliser l’agent de support produit dans l’assistant AI pour résoudre en toute simplicité les problèmes sans quitter vos workflows. Les administrateurs de l’assistance de votre entreprise peuvent désormais utiliser l’agent d’assistance produit pour créer des tickets d’assistance clientèle, avec le contexte et les détails de session relatifs à vos interactions avec l’assistant AI. <br><br>L’accès à l’agent du support produit est disponible jusqu’au 30 novembre 2025. Vous devez contacter votre représentant de compte Adobe pour obtenir la licence de l’agent du support produit et continuer à utiliser la fonctionnalité après cette date. Pour plus d’informations, consultez la [documentation de l’agent d’assistance produit](../../ai-assistant/new-features/customer-support.md). |
+
+Pour plus d’informations, consultez la [vue d’ensemble de l’assistant IA](../../ai-assistant/landing.md).
+
+## Catalog Service {#catalog-service}
 
 Catalog Service est le système d’enregistrement pour l’emplacement et la parenté des données au sein d’Adobe Experience Platform. Bien que toutes les données ingérées dans Experience Platform soient stockées dans le lac de données sous forme de fichiers et de répertoires, Catalog conserve les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
 
