@@ -4,7 +4,7 @@ user-guide-title: Assistant IA dans le guide Adobe Experience Platform
 user-guide-description: Découvrez comment utiliser l’Assistant IA pour accélérer votre workflow avec Adobe Experience Platform et Real-time Customer Data Platform.
 description: Ce document répertorie la table des matières de l’assistant AI dans Adobe Experience Platform.
 role: Admin,User,Developer,Leader
-source-git-commit: fd62a30f7227bf8a7a988fdd25b27a098caec016
+source-git-commit: 720534f3dc45a70ed7928f60ffa321bd218a5515
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 28%
@@ -27,10 +27,10 @@ ht-degree: 28%
    * [Estimation en langage naturel](./new-features/natural-language.md)
    * [Agent du support technique du produit](./new-features/customer-support.md)
    * [Découverte des champs XDM pour la création d’audiences](./new-features/xdm-field-discovery.md)
-* Cartes de modèle {#model-cards}
-   * [Présentation des cartes de modèle](./model-cards/overview.md)
-   * Cartes de modèle d’IA {#ai-model-cards}
-      * [Langage d’informations opérationnelles naturelles de l’assistant d’IA pour SQL](./model-cards/ai-model-cards/natural-language-to-sql.md)
-      * [Score de propension de l’IA dédiée aux clients](./model-cards/ai-model-cards/customer-ai.md)
+* Détails du modèle {#model-details}
+   * [Présentation des détails du modèle](./model-details/overview.md)
+   * Détails du modèle d’IA {#ai-model-details}
+      * [Langage d’informations opérationnelles naturelles de l’assistant d’IA pour SQL](./model-details/ai-model-details/natural-language-to-sql.md)
+      * [Score de propension de l’IA dédiée aux clients](./model-details/ai-model-details/customer-ai.md)
 * [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
 
