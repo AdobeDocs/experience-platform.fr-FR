@@ -1,29 +1,29 @@
 ---
-title: Cartes de modèles pour la transparence des modèles d’IA dans Adobe Experience Platform
-description: En savoir plus sur les cartes modèles dans Adobe Experience Platform.
+title: Détails du modèle pour la transparence du modèle d’IA dans Adobe Experience Platform
+description: En savoir plus sur les détails des modèles dans Adobe Experience Platform.
 hide: true
 hidefromtoc: true
 exl-id: 74a8ef82-cff9-4a7e-95c8-f915eb664eda
-source-git-commit: dddd699f231d54ee44b33f86a5c9e59c0aedc30c
+source-git-commit: 6623c7dad0fc4ddb7cb79e8f474b824915f130fc
 workflow-type: tm+mt
 source-wordcount: '3171'
 ht-degree: 0%
 
 ---
 
-# Cartes de modèle pour la transparence des modèles d’IA dans Adobe Experience Platform
+# Détails du modèle pour la transparence du modèle d’IA dans Adobe Experience Platform
 
-Une carte de modèle d’IA est le format standard selon lequel la transparence du modèle d’IA est communiquée. Les cartes de modèle fournissent des informations complètes sur le modèle sous-jacent sur lequel un outil d’IA donné est basé. Les cartes modèles contiennent des informations telles que l’objectif d’un outil d’IA, les données de formation, les mesures de performance, les limites et les considérations éthiques. Vous pouvez utiliser la transparence fournie par les cartes modèles pour mieux comprendre les capacités et les limites du modèle, ainsi que pour mieux promouvoir une utilisation responsable et équitable de l’IA.
+Un détail de modèle d’IA est le format standard selon lequel la transparence du modèle d’IA est communiquée. Les détails du modèle fournissent des informations complètes sur le modèle sous-jacent sur lequel un outil d’IA donné est basé. Les détails du modèle incluent des informations telles que l’objectif d’un outil d’IA, les données de formation, les mesures de performance, les limites et les considérations éthiques. Vous pouvez utiliser la transparence fournie par les détails du modèle pour mieux comprendre les capacités et les limites du modèle, ainsi que pour mieux promouvoir une utilisation responsable et équitable de l’IA.
 
-Les cartes de modèle sont publiques et sont destinées à améliorer la compréhension des clients existants et potentiels des modèles d’IA utilisés par Adobe. Les cartes modèles sont généralement statiques. Cependant, plusieurs aspects des modèles d’IA peuvent changer au fil du temps, notamment la parenté, le biais et d’autres attributs de transparence.
+Les détails des modèles sont publics et sont destinés à améliorer la compréhension des clients existants et potentiels par les clients des modèles d’IA utilisés par Adobe. Les détails du modèle sont généralement statiques. Cependant, plusieurs aspects des modèles d’IA peuvent changer au fil du temps, notamment la parenté, le biais et d’autres attributs de transparence.
 
-Lisez ce document pour en savoir plus sur les cartes modèles dans Adobe Experience Platform.
+Lisez ce document pour en savoir plus sur les détails des modèles dans Adobe Experience Platform.
 
-## Sections de la carte modèle {#model-card-sections}
+## Sections de détail du modèle {#model-detail-sections}
 
-Une carte modèle est composée de différentes sections, chacune se concentrant sur un aspect particulier du modèle d’IA.
+Un détail de modèle est composé de différentes sections, chacune se concentrant sur un aspect particulier du modèle d’IA.
 
-Lisez ce qui suit pour obtenir un guide sur les différentes sections d&#39;une carte modèle, y compris des informations sur les questions qu&#39;elles abordent.
+Lisez ce qui suit pour obtenir un guide sur les différentes sections d’un modèle, y compris des informations sur les questions qu’elles abordent.
 
 ### Présentation du modèle {#model-overview}
 
@@ -37,7 +37,7 @@ La présentation du modèle contient des informations générales sur un modèle
 | Quel est l’objectif du modèle ? | Brève description de l’objectif du modèle. | Le modèle est conçu pour fournir aux professionnels du marketing et aux équipes de l’engagement client des informations exploitables en prédisant la probabilité qu’un client effectue une action donnée, comme effectuer un achat, s’inscrire à un abonnement ou participer à une campagne par e-mail. Les sorties permettent aux entreprises d’optimiser la segmentation de l’audience et de personnaliser les interactions des clients en fonction des comportements prévus. |
 | De quel type de modèle s&#39;agit-il ? | Type du modèle, tel que classification, régression, génératif, etc. | Il s’agit d’un modèle **classification d’apprentissage supervisé** qui prédit la probabilité qu’un événement se produise (par exemple, achat, résiliation, engagement) à partir des données client historiques. Il est entraîné à l’aide d’arbres de décision boostant le gradient (GBDT) avec une régression logistique pour modéliser les scores de propension. |
 | Qui sont les utilisateurs prévus ? | Les groupes d’utilisateurs internes et externes auxquels le modèle est destiné. | Les principaux utilisateurs de ce modèle sont les professionnels du marketing, les analystes de données et les équipes d’engagement des clients qui tirent parti de Adobe Experience Platform pour piloter les stratégies marketing axées sur les données. |
-| Comment ce modèle s’intègre-t-il à Adobe Experience Platform ? | Les détails sur l’intégration et les API utilisées, ainsi que leur compatibilité avec les workflows. | CustomerAI s’intègre directement dans les services d’IA de Adobe Experience Platform **&#x200B;**, ce qui permet aux utilisateurs d’accéder aux sorties du modèle par le biais d’API et de tableaux de bord préconfigurés. Les scores de propension générés par le modèle peuvent être utilisés dans **Adobe Journey Optimizer**, **et Adobe Real-Time CDP** afin d’affiner la segmentation de l’audience et d’adapter les stratégies marketing. |
+| Comment ce modèle s’intègre-t-il à Adobe Experience Platform ? | Les détails sur l’intégration et les API utilisées, ainsi que leur compatibilité avec les workflows. | CustomerAI s’intègre directement dans les services d’IA de Adobe Experience Platform ****, ce qui permet aux utilisateurs d’accéder aux sorties du modèle par le biais d’API et de tableaux de bord préconfigurés. Les scores de propension générés par le modèle peuvent être utilisés dans **Adobe Journey Optimizer**, **et Adobe Real-Time CDP** afin d’affiner la segmentation de l’audience et d’adapter les stratégies marketing. |
 
 {style="table-layout:auto"}
 
