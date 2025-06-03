@@ -2,10 +2,10 @@
 title: Guide de segmentation d’Edge
 description: Découvrez comment utiliser la segmentation Edge pour évaluer les audiences dans Experience Platform instantanément sur le serveur Edge, en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: a741fdb4393863dbc011c03c733e27572da0ae6c
 workflow-type: tm+mt
-source-wordcount: '1154'
-ht-degree: 26%
+source-wordcount: '1116'
+ht-degree: 23%
 
 ---
 
@@ -33,7 +33,6 @@ Une requête peut être évaluée avec une segmentation Edge si elle répond à 
 | Profil uniquement | Toute définition de segment qui ne fait référence qu’à un attribut de profil. | `homeAddress.country.equals("US", false)` | ![Exemple d’attribut de profil affiché.](../images/methods/edge/profile-attribute.png) |
 | Événement unique avec un attribut de profil dans une fenêtre temporelle relative de moins de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant, avec un ou plusieurs attributs de profil, et qui se produit dans une fenêtre temporelle relative de moins de 24 heures. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Un exemple d’événement unique avec un attribut de profil dans une fenêtre temporelle relative s’affiche.](../images/methods/edge/single-event-with-profile-attribute.png) |
 | Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lots ou Edge. **Remarque :** si un segment est utilisé, la disqualification du profil se produit **toutes les 24 heures**. | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![Un exemple d’un segment de segments s’affiche.](../images/methods/edge/segment-of-segments.png) |
-| Plusieurs événements avec un attribut de profil | Toute définition de segment qui fait référence à plusieurs événements **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Un exemple de plusieurs événements avec un attribut de profil s’affiche.](../images/methods/edge/multiple-events-with-profile-attribute.png) |
 
 En outre, la définition de segment **doit** est liée à une politique de fusion Active-On-Edge (active sur le bord). Pour plus d’informations sur les politiques de fusion, consultez le [guide des politiques de fusion](../../profile/api/merge-policies.md).
 
