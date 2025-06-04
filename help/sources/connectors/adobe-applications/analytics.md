@@ -23,7 +23,7 @@ Ce document présente une vue d’ensemble des [!DNL Analytics] et décrit des c
 
 À un niveau élevé, [!DNL Analytics] collecte des données à partir de divers canaux numériques et de plusieurs centres de données dans le monde entier. Une fois les données collectées, les règles VISTA (Visitor Identification, Segmentation and Transformation Architecture) et les règles de traitement sont appliquées pour donner forme aux données entrantes. Une fois que les données brutes ont subi ce traitement léger, elles sont considérées comme prêtes à être utilisées par [!DNL Real-Time Customer Profile]. Parallèlement à ce qui précède, les mêmes données traitées sont microbatchées et ingérées dans des jeux de données Experience Platform pour être utilisées par [!DNL Query Service] et d’autres applications de découverte de données.
 
-Pour plus d’informations sur les règles de traitement](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html?lang=fr) consultez la [ présentation des règles de traitement .
+Pour plus d’informations sur les règles de traitement[&#128279;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html?lang=fr) consultez la  présentation des règles de traitement .
 
 ## Modèle de données d’expérience (XDM)
 
