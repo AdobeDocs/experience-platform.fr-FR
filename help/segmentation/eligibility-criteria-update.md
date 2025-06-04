@@ -4,7 +4,7 @@ description: Découvrez les mises à jour des critères d’éligibilité de seg
 hide: true
 hidefromtoc: true
 exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
-source-git-commit: eafb7337edacc5d2b2aa9c38540aff946c8d39c0
+source-git-commit: 2af73be351cb818862006adc8d0f1a33f95d93cf
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 4%
@@ -68,13 +68,13 @@ Supposons, par exemple, que vous ayez deux audiences, avec les deux audiences h�
 
 | Audience | Schéma | Type de source | Query definition | ID de l’audience |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| Abandons récents | Événement d’expérience | Lot | A au moins un événement d’abandon au cours des dernières 24 heures | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Abandons récents | Événement d’expérience | Lot | A au moins un événement d’abandon au cours des dernières 24 heures | `7deb246a-49b4-4687-95f9-6316df049948` |
 | Passages en caisse récents | Événement d’expérience | Diffusion en continu | A effectué au moins un passage en caisse au cours des dernières 24 heures | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 Dans ce cas, vous devez créer une troisième audience comme suit :
 
 ```
-inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
+inSegment("7deb246a-49b4-4687-95f9-6316df049948") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
 ```
 
 >[!IMPORTANT]
