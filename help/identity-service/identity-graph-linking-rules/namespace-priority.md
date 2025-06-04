@@ -2,7 +2,7 @@
 title: Priorité d’espace de noms
 description: Découvrez la priorité des espaces de noms dans Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
+source-git-commit: 7df0d0c7eb97760190ac8b20d1b74472b87e8b6a
 workflow-type: tm+mt
 source-wordcount: '2120'
 ht-degree: 2%
@@ -49,7 +49,7 @@ Une identité représente un objet du monde réel. Trois objets sont représent�
 
 Les espaces de noms de personne sont relativement immuables par rapport aux appareils (tels qu’IDFA, GAID), qui sont relativement immuables par rapport aux navigateurs web. En gros, vous (personne) serez toujours une seule entité, qui peut avoir plusieurs appareils (téléphone, ordinateur portable, tablette, etc.) et utiliser plusieurs navigateurs (Google Chrome, Safari, FireFox, etc.)
 
-La cardinalité est une autre façon d’aborder ce sujet. Pour une entité de personne donnée, combien d’identités seront créées ? Dans la plupart des cas, une personne dispose d’un CRMID, d’une poignée d’identifiants d’appareil (les réinitialisations IDFA/GAID ne doivent pas se produire souvent) et d’encore plus de cookies (il est concevable qu’une personne puisse naviguer sur plusieurs appareils, utiliser le mode incognito ou réinitialiser les cookies à tout moment). En règle générale, **une cardinalité inférieure indique un espace de noms avec une valeur supérieure**.
+La cardinalité est une autre façon d’aborder ce sujet. Pour une entité de personne donnée, combien d’identités seront créées ? Dans la plupart des cas, une personne dispose d’un CRMID, d’une poignée d’identifiants d’appareil (les réinitialisations IDFA/GAID ne doivent pas se produire souvent) et d’encore plus de cookies (il est concevable qu’une personne puisse naviguer sur plusieurs appareils, utiliser le mode incognito ou réinitialiser les cookies à tout moment). En règle générale, **une cardinalité inférieure indique un espace de noms avec une priorité supérieure**.
 
 ## Valider les paramètres de priorité de votre espace de noms
 
@@ -65,7 +65,7 @@ La priorité des espaces de noms peut être configurée à l’aide de l’inter
 
 ## Utilisation de la priorité de l’espace de noms
 
-Actuellement, la priorité de l’espace de noms influence le comportement du système du profil client en temps réel. Le diagramme ci-dessous illustre ce concept. Pour plus d&#39;informations, consultez le guide sur les diagrammes d&#39;architecture de [Adobe Experience Platform et des applications](https://experienceleague.adobe.com/fr/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+Actuellement, la priorité de l’espace de noms influence le comportement du système du profil client en temps réel. Le diagramme ci-dessous illustre ce concept. Pour plus d&#39;informations, consultez le guide sur les diagrammes d&#39;architecture de [Adobe Experience Platform et des applications](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
 ![Diagramme de la portée de l’application de priorité d’espace de noms.](../images/namespace-priority/application-scope.png "Diagramme de la portée de l’application de priorité d’espace de noms."){zoomable="yes"}
 
@@ -208,13 +208,13 @@ Dans un événement donné, assurez-vous que tous vos espaces de noms qui repré
 
 * **Applicabilité des événements** : ce comportement s’applique uniquement aux événements envoyés directement à Edge Network (tels que WebSDK et Mobile SDK). Les événements ingérés à partir du [hub Experience Platform](../../landing/edge-and-hub-comparison.md) tels que ceux ingérés avec la source d’API HTTP, d’autres sources de diffusion en continu et des sources par lots, ne sont pas soumis à cette limitation.
 * **Spécificité de la segmentation Edge** : ce comportement est spécifique à la segmentation Edge. La segmentation par lots et en flux continu sont des services distincts évalués sur le hub et ne suivent pas le même processus. Lisez le [guide de segmentation Edge](../../segmentation/methods/edge-segmentation.md) pour plus d’informations.
-* Lisez les pages [Diagrammes d’architecture Adobe Experience Platform et applications](https://experienceleague.adobe.com/fr/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) et [Comparaison Edge Network et hub](../../landing/edge-and-hub-comparison.md) pour plus d’informations.
+* Lisez les pages [Diagrammes d’architecture Adobe Experience Platform et applications](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) et [Comparaison Edge Network et hub](../../landing/edge-and-hub-comparison.md) pour plus d’informations.
 
 #### Applications Edge Network
 
 Pour vous assurer que les applications sur l’Edge Network ont accès au profil Edge sans délai, assurez-vous que vos événements incluent des `primary=true` sur le CRMID. Cela garantit une disponibilité immédiate sans attendre les mises à jour des graphiques d’identités du hub.
 
 * Les applications sur Edge Network telles qu’Adobe Target, Offer Decisioning et les destinations Personalization personnalisées continueront à dépendre de l’identité principale dans les événements pour accéder aux profils à partir du profil Edge.
-* Lisez le [diagramme d’architecture d’Experience Platform Web SDK et d’Edge Network](https://experienceleague.adobe.com/fr/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) pour plus d’informations sur le comportement d’Edge Network.
+* Lisez le [diagramme d’architecture d’Experience Platform Web SDK et d’Edge Network](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) pour plus d’informations sur le comportement d’Edge Network.
 * Lisez la documentation sur [Types d’éléments de données](../../tags/extensions/client/web-sdk/data-element-types.md) et [Données d’identité dans Web SDK](../../web-sdk/identity/overview.md) pour plus d’informations sur la configuration de l’identité principale dans Web SDK.
 * Assurez-vous que l’ECID est inclus dans l’événement d’expérience. Si l’ECID est manquant, il est ajouté à la payload de l’événement avec `primary=true`, ce qui peut entraîner des résultats inattendus.
