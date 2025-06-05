@@ -42,7 +42,7 @@ Lorsque vous créez une version de Web SDK personnalisée, elle est utilisée pa
 >[!IMPORTANT]
 >
 >La désactivation des composants Web SDK peut interrompre votre implémentation existante. Chaque fois que vous désactivez un composant, veillez à tester minutieusement votre implémentation pour vous assurer que toutes les fonctionnalités dont vous avez besoin fonctionnent comme prévu.
->>Lorsque vous désactivez un composant, vous ne pouvez plus modifier les paramètres de ce composant.
+>&#x200B;>Lorsque vous désactivez un composant, vous ne pouvez plus modifier les paramètres de ce composant.
 
 Pour créer une version Web SDK personnalisée à l’aide de l’extension de balise Web SDK, procédez comme suit.
 
@@ -117,9 +117,10 @@ Cette section vous permet de définir le comportement du SDK web en ce qui conce
 * **[!UICONTROL Utiliser des cookies tiers]** : lorsque cette option est activée, Web SDK tente de stocker un identifiant utilisateur dans un cookie tiers. En cas de réussite, l’utilisateur est identifié comme un seul utilisateur lorsqu’il navigue sur plusieurs domaines, plutôt que comme un utilisateur distinct sur chaque domaine. Si cette option est activée, il se peut que le SDK ne puisse pas stocker l’identifiant de l’utilisateur dans un cookie tiers si le navigateur ne prend pas en charge les cookies tiers ou s’il a été configuré par l’utilisateur pour ne pas autoriser les cookies tiers. Dans ce cas, le SDK stocke uniquement l’identifiant dans le domaine propriétaire.
 
   >[!IMPORTANT]
-  >>Les cookies tiers ne sont pas compatibles avec la fonctionnalité [Identifiant d’appareil interne](../../../../web-sdk/identity/first-party-device-ids.md) de Web SDK.
-  >>Vous pouvez utiliser des identifiants d’appareil propriétaires ou des cookies tiers, mais vous ne pouvez pas utiliser les deux fonctionnalités simultanément.
+  >&#x200B;>Les cookies tiers ne sont pas compatibles avec la fonctionnalité [Identifiant d’appareil interne](../../../../web-sdk/identity/first-party-device-ids.md) de Web SDK.
+  >&#x200B;>Vous pouvez utiliser des identifiants d’appareil propriétaires ou des cookies tiers, mais vous ne pouvez pas utiliser les deux fonctionnalités simultanément.
   >
+
 ## Configurer les paramètres de personnalisation {#personalization}
 
 Cette section vous permet de configurer la manière dont vous souhaitez masquer certaines parties d’une page lors du chargement du contenu personnalisé. Cela garantit que vos visiteurs ne voient que la page personnalisée.
@@ -140,7 +141,7 @@ Pour utiliser le fragment de code de masquage préalable, copiez-le et collez-le
 
 >[!IMPORTANT]
 >
-Lors de l’utilisation du fragment de code de masquage préalable, Adobe recommande d’utiliser la même règle de [!DNL CSS] que celle utilisée par le [style de masquage préalable](#prehiding-style).
+>Lors de l’utilisation du fragment de code de masquage préalable, Adobe recommande d’utiliser la même règle de [!DNL CSS] que celle utilisée par le [style de masquage préalable](#prehiding-style).
 
 ## Configurer les paramètres de collecte de données {#data-collection}
 
@@ -161,7 +162,7 @@ Gérez les paramètres de configuration de la collecte de données. Des paramèt
 * **[!UICONTROL Collecter les clics sur les liens externes]** : une case à cocher qui permet de collecter les liens externes.
 * **[!UICONTROL Collecter les clics sur les liens de téléchargement]** : une case à cocher qui permet de collecter les liens de téléchargement.
 * **[!UICONTROL Qualificateur de lien de téléchargement]** : expression régulière qui qualifie une URL de lien comme un lien de téléchargement.
-* **[!UICONTROL Propriétés des clics de filtre]** : fonction de rappel permettant d’évaluer et de modifier les propriétés associées aux clics avant la collection. Cette fonction s’exécute avant le rappel d’envoi d’événement [!UICONTROL  On before ].
+* **[!UICONTROL Propriétés des clics de filtre]** : fonction de rappel permettant d’évaluer et de modifier les propriétés associées aux clics avant la collection. Cette fonction s’exécute avant le rappel d’envoi d’événement [!UICONTROL &#x200B; On before &#x200B;].
 * **Paramètres de contexte** : collecte automatiquement les informations sur les visiteurs, qui renseignent des champs XDM spécifiques pour vous. Vous pouvez choisir **[!UICONTROL Toutes les informations contextuelles par défaut]** ou **[!UICONTROL Informations contextuelles spécifiques]**. Il s’agit de la balise équivalente à [`context`](/help/web-sdk/commands/configure/context.md) dans la bibliothèque JavaScript.
    * **[!UICONTROL Web]** : collecte des informations sur la page active.
    * **[!UICONTROL Appareil]** : collecte des informations sur l’appareil de l’utilisateur.
@@ -171,7 +172,7 @@ Gérez les paramètres de configuration de la collecte de données. Des paramèt
 
 >[!TIP]
 >
-Le champ **[!UICONTROL Activé avant l’envoi du clic sur le lien]** est un rappel obsolète qui n’est visible que pour les propriétés qui l’ont déjà configuré. Il s’agit de la balise équivalente à [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) dans la bibliothèque JavaScript. Utilisez le rappel **[!UICONTROL Filtrer les propriétés des clics]** pour filtrer ou ajuster les données de clics, ou utilisez le rappel **[!UICONTROL Activé avant l’envoi de l’événement]** pour filtrer ou ajuster la payload globale envoyée à Adobe. Si les rappels **[!UICONTROL Filtrer les propriétés des clics]** et **[!UICONTROL Activer avant l’envoi du clic sur les liens]** sont définis, seul le rappel **[!UICONTROL Filtrer les propriétés des clics]** s’exécute.
+>Le champ **[!UICONTROL Activé avant l’envoi du clic sur le lien]** est un rappel obsolète qui n’est visible que pour les propriétés qui l’ont déjà configuré. Il s’agit de la balise équivalente à [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) dans la bibliothèque JavaScript. Utilisez le rappel **[!UICONTROL Filtrer les propriétés des clics]** pour filtrer ou ajuster les données de clics, ou utilisez le rappel **[!UICONTROL Activé avant l’envoi de l’événement]** pour filtrer ou ajuster la payload globale envoyée à Adobe. Si les rappels **[!UICONTROL Filtrer les propriétés des clics]** et **[!UICONTROL Activer avant l’envoi du clic sur les liens]** sont définis, seul le rappel **[!UICONTROL Filtrer les propriétés des clics]** s’exécute.
 
 ## Configurer les paramètres de collecte de médias {#media-collection}
 
@@ -205,7 +206,7 @@ Au lieu de transmettre les remplacements par le biais d’une commande Web SDK, 
 
 >[!IMPORTANT]
 >
-Les remplacements de flux de données doivent être configurés pour chaque environnement. Les environnements de développement, d’évaluation et de production ont tous des remplacements distincts. Vous pouvez copier les paramètres entre eux à l’aide des options dédiées affichées dans l’écran ci-dessous.
+>Les remplacements de flux de données doivent être configurés pour chaque environnement. Les environnements de développement, d’évaluation et de production ont tous des remplacements distincts. Vous pouvez copier les paramètres entre eux à l’aide des options dédiées affichées dans l’écran ci-dessous.
 
 ![Image montrant les remplacements de la configuration du train de données à l’aide de la page d’extension de balise Web SDK.](assets/datastream-overrides.png)
 
