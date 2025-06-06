@@ -3,9 +3,9 @@ title: Notes de mise à jour d’Adobe Experience Platform - Mai 2025
 description: Notes de mise à jour de mai 2025 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 6ab9302a40547349c8d0390baafd8591ed6859e1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1530'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -43,7 +43,7 @@ L’Assistant IA dans Adobe Experience Platform est une expérience conversat
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Disponibilité générale de l’agent du support produit | Vous pouvez désormais utiliser l’agent de support produit dans l’assistant AI pour résoudre en toute simplicité les problèmes sans quitter vos workflows. Les administrateurs de l’assistance de votre entreprise peuvent désormais utiliser l’agent d’assistance produit pour créer des tickets d’assistance clientèle, avec le contexte et les détails de session relatifs à vos interactions avec l’assistant AI. <br><br>L’accès à l’agent du support produit est disponible jusqu’au 30 novembre 2025. Vous devez contacter votre représentant de compte Adobe pour obtenir la licence de l’agent du support produit et continuer à utiliser la fonctionnalité après cette date. Pour plus d’informations, consultez la [documentation de l’agent d’assistance produit](../../ai-assistant/new-features/customer-support.md). |
+| Disponibilité générale de l’agent de support produit | Vous pouvez désormais utiliser l’agent de support produit dans l’Assistant IA pour résoudre en toute simplicité les problèmes sans quitter vos workflows. Les administrateurs et administratrices d’assistance de votre entreprise peuvent désormais utiliser l’agent de support produit pour créer des tickets d’assistance clientèle, avec le contexte et les détails de session relatifs à vos interactions avec l’assistant IA. <br><br>L’accès à l’agent de support produit est disponible jusqu’au 30 novembre 2025. Vous devez contacter votre représentant ou représentante de compte Adobe pour obtenir la licence de l’agent de support produit et continuer à utiliser la fonctionnalité après cette date. Pour plus d’informations, consultez la [documentation de l’agent de support produit](../../ai-assistant/new-features/customer-support.md). |
 
 Pour plus d’informations, consultez la [vue d’ensemble de l’assistant IA](../../ai-assistant/landing.md).
 
