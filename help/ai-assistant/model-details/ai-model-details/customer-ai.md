@@ -4,9 +4,9 @@ description: Découvrez le modèle d’IA utilisé pour l’IA dédiée aux clie
 hide: true
 hidefromtoc: true
 exl-id: b2eeb1d2-3c2b-40a0-b5cd-91e99d99a906
-source-git-commit: 6623c7dad0fc4ddb7cb79e8f474b824915f130fc
+source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1016'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,8 @@ ht-degree: 0%
 
 ## Modèle de formation {#model-training}
 
-* **Entraînement des données et prétraitement** : le jeu de données d’entraînement de chaque client est directement issu de ses propres données dans Adobe Experience Platform. Cela inclut l’historique des interactions du client, les enregistrements transactionnels, les journaux d’engagement comportemental, ainsi que les informations démographiques telles que collectées et stockées dans son instance Adobe Experience Platform. Le jeu de données exploite les données spécifiques aux clients sur la période choisie, en capturant leurs tendances saisonnières uniques et leurs modèles d’engagement. Avant utilisation, le jeu de données de chaque client est soumis à un prétraitement adapté à ses caractéristiques de données, qui comprend la gestion des valeurs manquantes, le codage catégoriel, la mise à l’échelle des fonctionnalités, la détection des valeurs aberrantes et l’ingénierie des fonctionnalités, afin de garantir une qualité et une convivialité optimales pour son cas d’utilisation spécifique
+* **Entraînement des données et prétraitement** : le jeu de données d’entraînement de chaque client est directement issu de ses propres données dans Adobe Experience Platform. Cela inclut l’historique des interactions du client, les enregistrements transactionnels, les journaux d’engagement comportemental, ainsi que les informations démographiques telles que collectées et stockées dans son instance Adobe Experience Platform. Le jeu de données exploite les données spécifiques aux clients sur la période choisie, en capturant leurs tendances saisonnières uniques et leurs modèles d’engagement. Avant utilisation, le jeu de données de chaque client ou cliente subit un prétraitement adapté à ses caractéristiques de données, notamment la gestion des valeurs manquantes, le codage catégoriel, la mise à l’échelle des fonctionnalités, la détection des valeurs aberrantes et l’ingénierie des fonctionnalités afin d’assurer une qualité et une convivialité optimales pour son cas d’utilisation spécifique.
+   * Les données client utilisées pour la formation ne sont pas utilisées entre les clients.
 * **Spécifications de formation** : le modèle utilise des [!DNL LightGBM] à l’aide de [!DNL GBM], optimisées pour les données structurées. Il est entraîné sur des séquences d’événements client historiques pour identifier des modèles comportementaux prédictifs.
 * **Framework de formation** : le modèle a été développé à l’aide de [!DNL LightGBM] et [!DNL scikit-learn], et est formé sur l’infrastructure cloud d’IA d’Adobe.
 * **Infrastructures de formation** : clusters [!DNL Databricks].
@@ -64,7 +65,7 @@ ht-degree: 0%
 
 * **Déploiement du modèle** : le modèle est hébergé sur les services d’IA de Adobe Experience Platform et intégré à diverses applications Adobe. Elle est disponible via des points d’entrée d’API, ce qui permet un accès transparent aux prédictions en temps réel et au traitement par lots dans les workflows de marketing et d’engagement des consommateurs.
 * **Surveillance du modèle** : le modèle est surveillé en permanence via la surveillance du modèle pour voir la dérive par rapport à la configuration d’entraînement. Des remises à niveau périodiques (une fois tous les 3 mois) sont automatiquement exécutées.
-* **Mise à jour du modèle** : le modèle est recyclé une fois tous les plusieurs mois (le plus souvent une fois tous les 6 mois) à l’aide de données d’interaction client mises à jour afin d’assurer une pertinence continue. Le recyclage périodique aide à atténuer la dérive des données et les fluctuations saisonnières qui pourraient avoir une incidence sur la précision prédictive.
+* **Mise à jour du modèle** : le modèle est recyclé une fois par mois (le plus souvent une fois par mois) à l’aide de données d’interaction client mises à jour afin de garantir une pertinence continue. Le recyclage périodique aide à atténuer la dérive des données et les fluctuations saisonnières qui pourraient avoir une incidence sur la précision prédictive.
 
 ## Explicabilité {#explainability}
 

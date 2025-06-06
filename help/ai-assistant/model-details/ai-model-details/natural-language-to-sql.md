@@ -4,9 +4,9 @@ description: Découvrez le modèle IA Assistant Langage naturel pour l’IA en S
 hide: true
 hidefromtoc: true
 exl-id: ca157945-5f74-45d0-9d40-c65d09a8e80d
-source-git-commit: a8cc7c6f202cdd2786a69e548810b3957d69fdb3
+source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
@@ -46,13 +46,13 @@ WHERE
 
 ## Évaluation de modèles {#model-evaluation}
 
-* **Mesures et procédures d’évaluation** : le modèle est évalué avec précision. Par exemple, sur toutes les requêtes [!DNL NL2SQL], le nombre de requêtes qui génèrent les résultats SQL corrects. Le processus d’évaluation est une combinaison de correspondance basée sur des règles (normalisation SQL, puis correspondance directe des chaînes SQL), de solveur SQL basé sur LLM et d’évaluation humaine.
+* **Mesures et procédures d’évaluation** : le modèle est évalué en examinant les requêtes [!DNL NL2SQL] et en évaluant le nombre de requêtes qui produisent les résultats SQL corrects. Le processus d’évaluation est une combinaison de correspondance basée sur des règles (normalisation SQL, puis correspondance directe des chaînes SQL), de solveur SQL basé sur LLM et d’évaluation humaine.
 * **Données d’évaluation et prétraitement** : nous utilisons des jeux ouverts pour le test de régression et nous avons également des projets d’annotation hebdomadaires pour surveiller les performances du modèle par le biais du trafic client réel échantillonné.
 
 ## Déploiement de modèles {#model-deployment}
 
 * **Surveillance des modèles** : le modèle de base est hébergé par [!DNL Azure].
-* **Mise à jour du modèle** : le modèle est mis à jour régulièrement, sur une base hebdomadaire, par le biais de l’extension de la banque de questions. Le modèle est également mis à jour par le biais de nouvelles stratégies et instructions d’invite, si nécessaire.
+* **Mise à jour du modèle** : le langage naturel du modèle SQL de l’assistant Adobe Experience Platform AI Operational Insights est mis à jour régulièrement (chaque semaine) par le biais de l’extension de la banque de questions. Le modèle est également mis à jour par le biais de nouvelles stratégies et instructions d’invite, si nécessaire.
 
 ## Équité et partialité {#fairness-and-bias}
 
