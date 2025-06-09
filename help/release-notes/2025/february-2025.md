@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Février 2025
 description: Notes de mise à jour de février 2025 pour Adobe Experience Platform.
 exl-id: 734a9484-516e-4dd7-9503-8fcdc50cbaac
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: c8fe5f05b7dcef7db2ae44d5b6575e123cbd014d
 workflow-type: tm+mt
-source-wordcount: '1645'
-ht-degree: 88%
+source-wordcount: '1677'
+ht-degree: 96%
 
 ---
 
@@ -40,7 +40,7 @@ L’Assistant IA dans Adobe Experience Platform est une expérience conversat
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Disponibilité générale des informations opérationnelles | Les informations opérationnelles sur l’assistant d’IA sont désormais disponibles en disponibilité générale. Les informations opérationnelles se rapportent aux réponses que l’assistant AI génère sur vos objets de métadonnées (attributs, audiences, flux de données, jeux de données, destinations, parcours, schémas et sources), y compris les nombres, les recherches et l’impact de la parenté. Les informations opérationnelles n’examinent aucune donnée dans le sandbox. Pour plus d’informations, consultez le guide de l’interface utilisateur de l’assistant [AI](../../ai-assistant/ui-guide.md). |
+| Disponibilité générale des informations opérationnelles | Les informations opérationnelles sur l’Assistant IA sont désormais en disponibilité générale. Les informations opérationnelles se rapportent aux réponses que l’Assistant IA génère sur vos objets de métadonnées (attributs, audiences, flux de données, jeux de données, destinations, parcours, schémas et sources), y compris les nombres, les recherches et l’impact de la parenté. Les informations opérationnelles n’examinent aucune donnée dans le sandbox. Pour plus d’informations, consultez le [guide de l’interface d’utilisation de l’Assistant IA](../../ai-assistant/ui-guide.md). |
 | Prise en charge de la saisie semi-automatique des questions | Lors de la saisie d’une question dans l’assistant IA, vous pouvez désormais effectuer une sélection dans une liste de questions recommandées fournies par l’assistant IA. Utilisez cette fonctionnalité pour accélérer davantage vos workflows avec l’assistant IA. Pour plus d’informations, consultez le guide sur l’[utilisation de la saisie semi-automatique des questions avec l’assistant IA](../../ai-assistant/ui-guide.md#use-question-autocomplete). |
 | Prise en charge du contrôle des jeux de données | Vous pouvez désormais utiliser l’assistant IA pour répondre aux questions sur des mesures de jeux de données spécifiques, telles que les tailles de stockage et le nombre de lignes. Les questions de contrôle des données prennent en charge les qualificateurs que vous pouvez utiliser pour filtrer vos requêtes selon une certaine période. Pour plus d’informations, consultez le [guide des questions de l’assistant IA](../../ai-assistant/questions.md). |
 
@@ -54,7 +54,7 @@ Catalog Service est le système d’enregistrement pour l’emplacement et la pa
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Nouveau point d’entrée de l’API | Gérez plus efficacement vos métadonnées de jeu de données Adobe Experience Platform avec le nouveau [point d’entrée de l’API Catalog Service /v2/dataSets/{DATASET_ID}](../../catalog/api/update-object.md#patch-v2-notation). Mettez facilement à jour des attributs de jeux de données complexes et profondément imbriqués tandis que le système crée automatiquement les niveaux de chemin manquants pour vous faire gagner du temps, réduire les étapes manuelles et minimiser les erreurs. |
+| Nouveau point d’entrée de l’API | Gérez plus efficacement vos métadonnées de jeu de données Adobe Experience Platform avec le nouveau point d’entrée [API Catalog Service /v2/dataSets/{DATASET_ID}](../../catalog/api/update-object.md#patch-v2-notation). Mettez facilement à jour des attributs de jeux de données complexes et profondément imbriqués tandis que le système crée automatiquement les niveaux de chemin manquants pour vous faire gagner du temps, réduire les étapes manuelles et minimiser les erreurs. |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ Utilisez la préparation des données pour mapper, transformer et valider des do
 
 Pour plus d’informations, consultez la [vue d’ensemble de la préparation de données](../../data-prep/home.md).
 
-## Destinations (mise à jour le 20 février) {#destinations}
+## Destinations (mises à jour le 20 février) {#destinations}
 
 Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 
@@ -90,14 +90,14 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 {style="table-layout:auto"}
 
-**Fonctionnalités nouvelles ou mises à jour** {#destinations-new-updated-functionality}
+**Fonctionnalité nouvelle ou mise à jour** {#destinations-new-updated-functionality}
 
 | Fonctionnalité | Description |
 | --- | --- |
 | Utiliser des libellés d’accès pour gérer l’accès des utilisateurs et utilisatrices aux flux de données de destination | Dans le cadre de la fonctionnalité de [[!UICONTROL contrôle d’accès basé sur les attributs]](/help/access-control/abac/overview.md) de Real-Time CDP, vous pouvez désormais appliquer des libellés d’accès aux [flux de données de destination](/help/dataflows/ui/monitor-destinations.md). Ainsi, vous pouvez vous assurer que seul un sous-ensemble d’utilisateurs et d’utilisatrices de votre organisation a accès à des flux de données de destination spécifiques. <br> **Important** : lors de la recherche de flux de données de destination à l’aide de la zone de recherche située en haut de l’interface d’utilisation d’Experience Platform, les résultats peuvent inclure des flux de données de destination que vos libellés d’accès d’utilisation vous empêchent de voir. Ce comportement sera corrigé dans une mise à jour à venir. |
 | [Rapports au niveau de l’audience](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) pour la [connexion Marketo Engage](/help/destinations/catalog/adobe/marketo-engage.md) | Vous pouvez désormais [afficher des informations](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) sur les identités activées, exclues ou en échec réparties au niveau de l’audience, pour chaque audience qui fait partie des flux de données pour cette destination. |
 | Prise en charge des audiences externes pour les connexions [TikTok](/help/destinations/catalog/social/tiktok.md) et [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md) | Vous pouvez activer des audiences externes vers ces destinations à partir de [chargements personnalisés](../../segmentation/ui/audience-portal.md#import-audience) et de la [composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/start/audiences). |
-| Exporter des tableaux, des mappages et des objets vers des destinations d’espace de stockage | En utilisant le nouveau bouton (bascule) **[!UICONTROL Exporter des tableaux, des mappages]** des objets lors de la connexion à une destination d’espace de stockage , vous pouvez exporter des objets complexes vers des destinations sélectionnées. [En savoir plus](/help/destinations/ui/export-arrays-maps-objects.md) à propos de la fonctionnalité. |
+| Exporter des tableaux, des mappages et des objets vers des destinations d’espace de stockage dans le cloud | En utilisant le nouveau bouton (bascule) **[!UICONTROL Exporter des tableaux, des mappages, des objets]** lors de la connexion à une destination d’espace de stockage dans le cloud, vous pouvez exporter des objets complexes vers des destinations sélectionnées. [En savoir plus](/help/destinations/ui/export-arrays-maps-objects.md) à propos de la fonctionnalité. |
 
 {style="table-layout:auto"}
 
@@ -105,7 +105,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 - Correction d’un problème lié aux outils de test de Destination SDK. Certaines personnes partenaires ou clientes et clients rencontraient des problèmes avec [l’outil de génération de profil d’exemple](/help/destinations/destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md) en raison d’un format non pris en charge lorsque le schéma utilisé pour générer les profils incluait des types de données avec un sélecteur `No format`.
 - Résolution d’un problème lors de la mise à jour de la spécification `targetConnection` des destinations à l’aide de l’API Flow Service. Dans certains cas, l’opération PATCH se comportait de la même manière qu’une opération POST, corrompant les flux de données existants. Ce problème est maintenant corrigé et tous les clientes et clients peuvent utiliser l’API Flow Service pour mettre à jour leur spécification `targetConnection`. [En savoir plus](/help/destinations/api/edit-destination.md#patch-target-connection).
-- Lors de l’exportation de profils vers des destinations basées sur des fichiers, la déduplication garantit qu’un seul profil est exporté lorsque plusieurs profils partagent la même clé de déduplication et le même horodatage de référence. Cette version comprend une mise à jour du processus de déduplication, afin de s’assurer que les exécutions successives avec les mêmes coordonnées produiront toujours les mêmes résultats, ce qui améliore la cohérence. [En savoir plus](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-same-timestamp).
+- Lors de l’export de profils vers des destinations basées sur des fichiers, la déduplication garantit qu’un seul profil est exporté lorsque plusieurs profils partagent la même clé de déduplication et le même horodatage de référence. Cette version comprend une mise à jour du processus de déduplication, afin de s’assurer que les exécutions successives avec les mêmes coordonnées produiront toujours les mêmes résultats, ce qui améliore la cohérence. [En savoir plus](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-same-timestamp).
 
 Pour plus d’informations, reportez-vous à la [vue d’ensemble des destinations](../../destinations/home.md).
 
@@ -117,7 +117,7 @@ Pour plus d’informations, reportez-vous à la [vue d’ensemble des destinatio
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Division persistante | La composition de l’audience prend désormais en charge les divisions persistantes. Le fractionnement des audiences peut rester constant lors du fractionnement par profil en ajoutant un espace de noms d’identité à votre bloc Fractionner . Vous trouverez plus d’informations sur cette fonctionnalité dans la [documentation sur la composition de l’audience](../../segmentation/ui/audience-composition.md). |
+| Division persistante | La composition d’audiences prend désormais en charge les divisions persistantes. Le fractionnement des audiences peut rester constant lors du fractionnement par profil en ajoutant un espace de noms d’identité à votre bloc de fractionnement. Vous trouverez plus d’informations sur cette fonctionnalité dans la [documentation de la composition d’audiences](../../segmentation/ui/audience-composition.md). |
 
 Pour plus d’informations sur [!DNL Segmentation Service], consultez la [présentation de la segmentation](../../segmentation/home.md).
 
@@ -132,6 +132,7 @@ Utilisez les sources dans Experience Platform pour ingérer des données à par
 | Fonctionnalité | Description |
 | --- | --- |
 | Prise en charge des vues dans [!DNL Microsoft Dynamics] | Vous pouvez désormais ingérer `"entityType": "view"` lors de l’utilisation de la source [!DNL Microsoft Dynamics]. Pour plus d’informations, consultez le guide sur la [connexion d’une source  [!DNL Microsoft Dynamics]  à Experience Platform](../../sources/tutorials/api/create/crm/ms-dynamics.md). |
+| Nouvelles adresses IP à placer sur la liste autorisée | Vous devez ajouter les adresses IP suivantes à votre liste autorisée pour utiliser correctement les sources Experience Platform.<br></br>**VA7**<ul><li>`48.211.4.136/29`</li><li>`48.211.4.144/28`</li><li>`48.211.4.160/29`</li><li>`40.84.85.144/28`</li><li>`40.84.85.192/28`</li></ul>**AUS5**<ul><li>`20.213.194.144/29`</li><li>`20.227.120.32/27`</li></ul> placer sur la liste autorisée <br></br>Pour plus d’informations, consultez le guide [sources IP address](../../sources/ip-address-allow-list.md). |
 
 {style="table-layout:auto"}
 
