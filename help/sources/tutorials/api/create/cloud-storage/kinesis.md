@@ -35,7 +35,7 @@ Pour que [!DNL Flow Service] puissiez vous connecter à votre compte [!DNL Amazo
 | ---------- | ----------- |
 | `accessKeyId` | L’ID de clé d’accès correspond à la moitié de la paire de clés d’accès utilisée pour authentifier votre compte [!DNL Kinesis] auprès d’Experience Platform. |
 | `secretKey` | La clé d’accès secrète est l’autre moitié de la paire de clés d’accès utilisée pour authentifier votre compte [!DNL Kinesis] auprès d’Experience Platform. |
-| `region` | Région de votre compte [!DNL Kinesis]. Pour plus d’informations sur les régions](../../../../ip-address-allow-list.md) consultez le guide sur l’[ajout d’adresses IP à une liste autorisée de données . |
+| `region` | Région de votre compte [!DNL Kinesis]. Pour plus d’informations sur les régions[&#128279;](../../../../ip-address-allow-list.md) consultez le guide sur l’ajout d’adresses IP à une liste autorisée de données . |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion [!DNL Kinesis] est : `86043421-563b-46ec-8e6c-e23184711bf6`. |
 
 Pour plus d’informations sur la [!DNL Kinesis] des clés d’accès et leur génération, reportez-vous à ce [[!DNL AWS] guide sur la gestion des clés d’accès pour les utilisateurs IAM](https://docs.aws.amazon.com/fr_fr/IAM/latest/UserGuide/id_credentials_access-keys.html).
