@@ -4,7 +4,7 @@ description: Découvrez le modèle d’IA utilisé pour l’IA dédiée aux clie
 hide: true
 hidefromtoc: true
 exl-id: b2eeb1d2-3c2b-40a0-b5cd-91e99d99a906
-source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
+source-git-commit: 8230c71c9b7896dfb71506632754d48583d0dc21
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 0%
@@ -53,7 +53,7 @@ ht-degree: 0%
 * **Entraînement des données et prétraitement** : le jeu de données d’entraînement de chaque client est directement issu de ses propres données dans Adobe Experience Platform. Cela inclut l’historique des interactions du client, les enregistrements transactionnels, les journaux d’engagement comportemental, ainsi que les informations démographiques telles que collectées et stockées dans son instance Adobe Experience Platform. Le jeu de données exploite les données spécifiques aux clients sur la période choisie, en capturant leurs tendances saisonnières uniques et leurs modèles d’engagement. Avant utilisation, le jeu de données de chaque client ou cliente subit un prétraitement adapté à ses caractéristiques de données, notamment la gestion des valeurs manquantes, le codage catégoriel, la mise à l’échelle des fonctionnalités, la détection des valeurs aberrantes et l’ingénierie des fonctionnalités afin d’assurer une qualité et une convivialité optimales pour son cas d’utilisation spécifique.
    * Les données client utilisées pour la formation ne sont pas utilisées entre les clients.
 * **Spécifications de formation** : le modèle utilise des [!DNL LightGBM] à l’aide de [!DNL GBM], optimisées pour les données structurées. Il est entraîné sur des séquences d’événements client historiques pour identifier des modèles comportementaux prédictifs.
-* **Framework de formation** : le modèle a été développé à l’aide de [!DNL LightGBM] et [!DNL scikit-learn], et est formé sur l’infrastructure cloud d’IA d’Adobe.
+* **Framework de formation** : le modèle a été développé à l’aide de [!DNL LightGBM] et [!DNL scikit-learn], et est hébergé sur l’infrastructure cloud d’IA d’Adobe.
 * **Infrastructures de formation** : clusters [!DNL Databricks].
 
 ## Évaluation de modèles {#model-evaluation}
