@@ -4,10 +4,10 @@ description: Découvrez comment créer une connexion source et un flux de donné
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 12%
+source-wordcount: '841'
+ht-degree: 11%
 
 ---
 
@@ -86,6 +86,10 @@ Pour plus d’informations sur la gestion des rôles et des privilèges, consult
       * `TIMESTAMP_TZ` ne peut pas être utilisé comme colonne d’horodatage ou dans un mappage.
 
 ## Étapes suivantes
+
+>[!NOTE]
+>
+>Après avoir créé ou mis à jour un flux de données en continu, une brève pause de 5 minutes dans l’ingestion des données est nécessaire pour éviter toute instance potentielle de perte de données ou d’abandon de données.
 
 Le tutoriel suivant décrit les étapes à suivre pour connecter votre source de diffusion en continu [!DNL Snowflake] à Experience Platform à l’aide de l’API :
 

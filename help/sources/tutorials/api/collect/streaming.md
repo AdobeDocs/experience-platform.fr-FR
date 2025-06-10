@@ -5,10 +5,10 @@ title: Créer un flux de données en continu pour les données brutes à l’aid
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données de diffusion en continu et les importer dans Experience Platform à l’aide des connecteurs source et des API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1180'
-ht-degree: 36%
+source-wordcount: '1208'
+ht-degree: 35%
 
 ---
 
@@ -414,6 +414,10 @@ Une réponse réussie renvoie une liste de spécifications de flux de données. 
 ```
 
 ## Créer un flux de données
+
+>[!NOTE]
+>
+>Après avoir créé ou mis à jour un flux de données en continu, une brève pause de 5 minutes dans l’ingestion des données est nécessaire pour éviter toute instance potentielle de perte de données ou d’abandon de données.
 
 La dernière étape de la collecte de données en flux continu consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
 

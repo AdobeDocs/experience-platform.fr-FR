@@ -3,10 +3,10 @@ title: Présentation du connecteur Source Amazon Kinesis
 description: Découvrez comment connecter Amazon Kinesis à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 13%
+source-wordcount: '560'
+ht-degree: 12%
 
 ---
 
@@ -90,6 +90,10 @@ Actuellement, une source d’interface utilisateur [!DNL Kinesis] ne prend en ch
 Pour plus d’informations sur les types d’itérateur, consultez le [[!DNL Kinesis] document](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax) suivant.
 
 ## Connexion de [!DNL Amazon Kinesis] à [!DNL Experience Platform]
+
+>[!NOTE]
+>
+>Après avoir créé ou mis à jour un flux de données en continu, une brève pause de 5 minutes dans l’ingestion des données est nécessaire pour éviter toute instance potentielle de perte de données ou d’abandon de données.
 
 La documentation ci-dessous fournit des informations sur la connexion de [!DNL Amazon Kinesis] à [!DNL Experience Platform] à l’aide d’API ou de l’interface utilisateur :
 

@@ -3,9 +3,9 @@ title: Présentation Du Connecteur Source Azure Event Hubs
 description: Découvrez comment connecter Azure Event Hubs à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '606'
 ht-degree: 9%
 
 ---
@@ -122,6 +122,10 @@ Consultez la liste ci-dessous pour connaître les différentes régions des sous
 Consultez le [[!DNL Event Hubs] document](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) suivant pour plus d’informations sur les ensembles de règles réseau.
 
 ## Connexion de [!DNL Event Hubs] à Experience Platform
+
+>[!NOTE]
+>
+>Après avoir créé ou mis à jour un flux de données en continu, une brève pause de 5 minutes dans l’ingestion des données est nécessaire pour éviter toute instance potentielle de perte de données ou d’abandon de données.
 
 La documentation ci-dessous fournit des informations sur la connexion de [!DNL Event Hubs] à Experience Platform à l’aide d’API ou de l’interface utilisateur :
 

@@ -3,10 +3,10 @@ title: Créer une connexion Source Amazon Kinesis à l’aide de l’API Flow Se
 description: Découvrez comment connecter Adobe Experience Platform à une source Amazon Kinesis à l’aide de l’API Flow Service.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '732'
-ht-degree: 52%
+source-wordcount: '760'
+ht-degree: 50%
 
 ---
 
@@ -35,7 +35,7 @@ Pour que [!DNL Flow Service] puissiez vous connecter à votre compte [!DNL Amazo
 | ---------- | ----------- |
 | `accessKeyId` | L’ID de clé d’accès correspond à la moitié de la paire de clés d’accès utilisée pour authentifier votre compte [!DNL Kinesis] auprès d’Experience Platform. |
 | `secretKey` | La clé d’accès secrète est l’autre moitié de la paire de clés d’accès utilisée pour authentifier votre compte [!DNL Kinesis] auprès d’Experience Platform. |
-| `region` | Région de votre compte [!DNL Kinesis]. Pour plus d’informations sur les régions[&#128279;](../../../../ip-address-allow-list.md) consultez le guide sur l’ajout d’adresses IP à une liste autorisée de données . |
+| `region` | Région de votre compte [!DNL Kinesis]. Pour plus d’informations sur les régions](../../../../ip-address-allow-list.md) consultez le guide sur l’[ajout d’adresses IP à une liste autorisée de données . |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion [!DNL Kinesis] est : `86043421-563b-46ec-8e6c-e23184711bf6`. |
 
 Pour plus d’informations sur la [!DNL Kinesis] des clés d’accès et leur génération, reportez-vous à ce [[!DNL AWS] guide sur la gestion des clés d’accès pour les utilisateurs IAM](https://docs.aws.amazon.com/fr_fr/IAM/latest/UserGuide/id_credentials_access-keys.html).
@@ -165,6 +165,10 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
     "etag": "\"66013508-0000-0200-0000-5f6e2ae70000\""
 }
 ```
+
+>[!NOTE]
+>
+>Après avoir créé ou mis à jour un flux de données en continu, une brève pause de 5 minutes dans l’ingestion des données est nécessaire pour éviter toute instance potentielle de perte de données ou d’abandon de données.
 
 ## Étapes suivantes
 
