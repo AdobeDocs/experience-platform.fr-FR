@@ -5,10 +5,10 @@ breadcrumb-title: Guide du service d’identités d’Experience Platform
 user-guide-description: Associez les identités des clients, quel que soit l’appareil ou le système utilisé, afin d’offrir des expériences digitales personnalisées.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 6690854048324567f9a8a1f000bd10f45d7c8340
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 68%
+source-wordcount: '144'
+ht-degree: 71%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 68%
       - [Présentation des fonctionnalités](./identity-graph-linking-rules/overview.md)
       - [Algorithme d’optimisation des identités](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [Guide de mise en œuvre des règles de liaison de graphiques d’identités](./identity-graph-linking-rules/implementation-guide.md)
-      - [Exemples de configurations de graphique](./identity-graph-linking-rules/example-configurations.md)
+      - [Guide de configuration](./identity-graph-linking-rules/example-configurations.md)
       - [Résolution des problèmes liés aux règles de liaison des graphiques d’identités](./identity-graph-linking-rules/troubleshooting.md)
       - [Priorité d’espace de noms](./identity-graph-linking-rules/namespace-priority.md)
       - [Interface utilisateur de simulation de graphique](./identity-graph-linking-rules/graph-simulation.md)
