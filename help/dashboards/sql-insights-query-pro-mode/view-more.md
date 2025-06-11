@@ -27,7 +27,7 @@ Dans la boîte de dialogue **[!UICONTROL Afficher plus]**, exportez les données
 
 >[!IMPORTANT]
 >
->Pour accéder aux options d’exportation, votre administrateur doit vous accorder l’autorisation **[!UICONTROL Exporter les données du tableau de bord]**. Si le bouton [!UICONTROL Exporter] est grisé, contactez votre administrateur. Pour plus d’informations sur les autorisations relatives aux tableaux de bord](../../access-control/home.md) consultez la [ Présentation du contrôle d’accès .
+>Pour accéder aux options d’exportation, votre administrateur doit vous accorder l’autorisation **[!UICONTROL Exporter les données du tableau de bord]**. Si le bouton [!UICONTROL Exporter] est grisé, contactez votre administrateur. Pour plus d’informations sur les autorisations relatives aux tableaux de bord[&#128279;](../../access-control/home.md) consultez la  Présentation du contrôle d’accès .
 
 >[!NOTE]
 >
