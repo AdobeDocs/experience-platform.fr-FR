@@ -5,10 +5,10 @@ breadcrumb-title: Guide des tableaux de bord
 user-guide-description: Découvrez comment visualiser les données dans Experience Platform via des tableaux de bord personnalisables.
 feature: Dashboards
 role: Developer,User
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3582ce4f73887f03bbb9da72f96aab1be9b99614
 workflow-type: tm+mt
 source-wordcount: '143'
-ht-degree: 65%
+ht-degree: 66%
 
 ---
 
@@ -20,9 +20,9 @@ ht-degree: 65%
 * [Inventaire des tableaux de bord](inventory.md)
 * [Tableaux de bord standard](standard-dashboards.md)
 * [Téléchargement de tableaux de bord au format PDF](download.md)
-* SQL Insights : du mode query pro {#sql-insights-query-pro-mode}
+* SQL Insights : mode query pro {#sql-insights-query-pro-mode}
    * [Vue d’ensemble](sql-insights-query-pro-mode/overview.md)
-   * de modèles de Distiller de données{#templates}
+   * Modèles de Data Distiller {#templates}
       * [Vue d’ensemble](sql-insights-query-pro-mode/templates/overview.md)
       * [Chevauchements avancés des audiences](sql-insights-query-pro-mode/templates/overlaps.md)
       * [Comparaison des audiences](sql-insights-query-pro-mode/templates/comparison.md)
@@ -34,7 +34,7 @@ ht-degree: 65%
    * [Analyser en amont](sql-insights-query-pro-mode/drill-through.md)
    * [Afficher plus](sql-insights-query-pro-mode/view-more.md)
    * [Afficher le SQL](sql-insights-query-pro-mode/view-sql.md)
-   * [Télécharger au format CSV](sql-insights-query-pro-mode/download-csv.md)
+   * [Exporter au format CSV](sql-insights-query-pro-mode/download-csv.md)
    * [Exporter en tant que PDF](sql-insights-query-pro-mode/export-pdf.md)
 * Tableaux de bord disponibles {#guides}
    * [Profils](guides/profiles.md)
@@ -42,7 +42,7 @@ ht-degree: 65%
    * [Audiences](guides/audiences.md)
    * [Destinations](guides/destinations.md)
    * [Utilisation des licences](guides/license-usage.md)
-* d’informations disponibles{#insights}
+* Informations disponibles {#insights}
    * [Profils](insights/profiles.md)
    * [Audiences](insights/audiences.md)
    * [Destinations](insights/destinations.md)

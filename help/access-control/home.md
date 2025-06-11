@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation du contrôle d’accès
 description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans l’Admin Console, liant les utilisateurs et utilisatrices à des autorisations et des sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 6a466770495b226f890ab67b21c5cb027fd46e02
 workflow-type: tm+mt
-source-wordcount: '3818'
-ht-degree: 33%
+source-wordcount: '3851'
+ht-degree: 32%
 
 ---
 
@@ -131,7 +131,7 @@ Le tableau suivant décrit les autorisations disponibles pour Experience Platfo
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Afficher les configurations des modèles Adobe Mix Modeler] | Accès en lecture seule aux configurations de modèles. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Gérer les configurations des plans de modèles Adobe Mix Modeler] | La possibilité d’afficher et de modifier les configurations des plans. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Afficher les configurations des plans des modèles Adobe Mix Modeler] | Accès en lecture seule aux configurations des plans. |
-| [!DNL AI Assistant] | [!UICONTROL Activer l’assistant AI] | Possibilité de poser les questions [[!DNL [AI assistant]]](../ai-assistant/access.md). |
+| [!DNL AI Assistant] | [!UICONTROL Activer l’assistant AI] | Possibilité de poser les questions [!DNL [AI assistant]](../ai-assistant/access.md). |
 | [!DNL AI Assistant] | [!UICONTROL Afficher des informations opérationnelles] | Accès à pour obtenir des réponses aux requêtes [informations opérationnelles](../ai-assistant/home.md##operational-insights). |
 | [!DNL AI Assistant] | [!UICONTROL Générer le contenu] | Permet aux utilisateurs de générer du contenu à l’aide de l’[!DNL AI Assistant]. |
 | [!DNL AI Assistant] | [!UICONTROL Gérer le kit de marque] | Permettre aux utilisateurs de créer des directives de marque à l’aide du [!DNL AI Assistant]. |
@@ -193,10 +193,11 @@ Le tableau suivant décrit les autorisations disponibles pour Experience Platfo
 | [!DNL Customer Managed Keys] | [!UICONTROL Gérer les clés gérées par le client] | Accès à l’affichage et à la configuration des clés gérées par le client. |
 | [!DNL Dashboards] | [!UICONTROL Afficher le tableau de bord d’utilisation des licences] | Accès en lecture seule pour afficher le tableau de bord de l’utilisation des licences. |
 | [!DNL Dashboards] | [!UICONTROL Gestion des tableaux de bord standard] | Ajoutez des attributs personnalisés qui ne se trouvent pas encore dans l’entrepôt de données. |
-| [!DNL Dashboards] | [!UICONTROL Afficher les tableaux de bord standard] | Accès en lecture seule pour afficher le tableau de bord de l’utilisation des licences. |
+| [!DNL Dashboards] | [!UICONTROL Afficher les tableaux de bord standard] | Accès en lecture seule aux tableaux de bord Profils, Destinations et Segments. Permet également d’accéder aux tableaux de bord dans le volet de navigation de gauche et l’onglet Inventaire et intégrations des tableaux de bord . |
 | [!DNL Dashboards] | [!UICONTROL Gérer les tableaux de bord personnalisés] | Accès pour créer ou modifier un tableau de bord. |
 | [!DNL Dashboards] | [!UICONTROL Afficher les tableaux de bord personnalisés] | Accès en lecture seule aux tableaux de bord définis par l’utilisateur. |
 | [!DNL Dashboards] | [!UICONTROL Gérer les planifications de rapports] | Possibilité de créer des plannings. |
+| [!DNL Dashboards] | [!UICONTROL Exporter les données du tableau de bord] | Contrôle la capacité d’un utilisateur ou d’une utilisatrice à exporter des données tabulaires des tableaux de bord query pro mode. |
 | [!DNL Data Collection] | [!UICONTROL Gérer les flux de données] | Accès à la lecture, la création et la modification des flux de données. |
 | [!DNL Data Collection] | [!UICONTROL Afficher les flux de données] | Accès en lecture seule aux flux de données. |
 | [!DNL Data Governance] | [!UICONTROL Gérer les libellés d’utilisation] | Accès à la lecture, la création et la suppression des étiquettes dʼutilisation des données. |
@@ -243,16 +244,16 @@ Le tableau suivant décrit les autorisations disponibles pour Experience Platfo
 | [!DNL IP Warmup Configurations] | [!UICONTROL Afficher les plans de préchauffage d’adresses IP] | Accès en lecture seule aux plans de préchauffage des adresses IP. |
 | [!DNL IP Warmup Configurations] | [!UICONTROL Gérer les plans de préchauffage d’adresses IP] | La possibilité de gérer les plans de préchauffage des adresses IP. |
 | [!DNL IP Warmup Configurations] | [!UICONTROL Afficher les rapports de préchauffage d’adresses IP] | Accès en lecture seule aux rapports de préchauffage d’adresses IP. |
-| [!DNL Journeys] | [!UICONTROL Gérer les Parcours &#x200B;] | Accès à la lecture, la création, la modification et la suppression des parcours. |
-| [!DNL Journeys] | [!UICONTROL Afficher les Parcours &#x200B;] | Accès en lecture seule aux parcours. |
-| [!DNL Journeys] | [!UICONTROL Afficher le rapport des Parcours &#x200B;] | Accès en lecture seule au rapport parcours. |
+| [!DNL Journeys] | [!UICONTROL Gérer les Parcours ] | Accès à la lecture, la création, la modification et la suppression des parcours. |
+| [!DNL Journeys] | [!UICONTROL Afficher les Parcours ] | Accès en lecture seule aux parcours. |
+| [!DNL Journeys] | [!UICONTROL Afficher le rapport des Parcours ] | Accès en lecture seule au rapport parcours. |
 | [!DNL Journeys] | [!UICONTROL Gérer les événements Parcours, les sources de données et les actions] | Accès à la lecture, la création, la modification et la suppression des événements, des sources de données ou des actions. |
 | [!DNL Journeys] | [!UICONTROL Afficher les événements de Parcours, les sources de données et les actions] | Accès en lecture seule aux événements, aux sources de données ou aux actions. |
-| [!DNL Journeys] | [!UICONTROL Approuver et publier des Parcours &#x200B;] | Possibilité d’approuver et de publier des parcours lorsqu’une politique est appliquée. |
-| [!DNL Journeys] | [!UICONTROL Publication de Parcours &#x200B;] | Possibilité de publier des parcours. |
+| [!DNL Journeys] | [!UICONTROL Approuver et publier des Parcours ] | Possibilité d’approuver et de publier des parcours lorsqu’une politique est appliquée. |
+| [!DNL Journeys] | [!UICONTROL Publication de Parcours ] | Possibilité de publier des parcours. |
 | [!DNL Journey Optimizer Library] | [!UICONTROL Gérer les éléments de bibliothèque] | La possibilité d’ajouter et de supprimer des expressions enregistrées. |
 | [!DNL Journey Optimizer Library] | [!UICONTROL Publication de fragments] | La possibilité de publier des fragments de contenu. |
-| [!DNL Journey Optimizer Library] | [!UICONTROL &#x200B; Simuler du contenu &#x200B;] | Accédez à l’option Simuler du contenu pour la prévisualisation et la relecture. |
+| [!DNL Journey Optimizer Library] | [!UICONTROL  Simuler du contenu ] | Accédez à l’option Simuler du contenu pour la prévisualisation et la relecture. |
 | [!DNL Journey Optimizer Rules] | [!UICONTROL Afficher les règles de fréquence] | Accès en lecture seule aux règles de fréquence. |
 | [!DNL Journey Optimizer Rules] | [!UICONTROL Gérer les règles de fréquence] | Accès à la lecture, la création, la modification ou la suppression des règles de fréquence. |
 | [!DNL Messages] | [!UICONTROL Gérer les messages] | Accès à la lecture, la création, la modification et la suppression des messages. |
@@ -284,7 +285,7 @@ Le tableau suivant décrit les autorisations disponibles pour Experience Platfo
 | [!DNL Query Service] | [!UICONTROL Gestion des requêtes] | Accès à la lecture, la création, la modification et la suppression des requêtes SQL structurées pour les données Experience Platform. |
 | [!DNL Query Service] | [!UICONTROL Gestion de lʼintégration de Query Service] | Accès à la création, la mise à jour et la suppression des informations dʼidentification sans date dʼexpiration pour lʼaccès à Query Service. |
 | [!DNL Query Service] | [!UICONTROL Gérer les sessions de requête] | Capacité à supprimer des sessions existantes. |
-| [!DNL Query Service] | [!UICONTROL Gérer la Liste autorisée &#x200B;] | Capacité à gérer les restrictions IP pour votre organisation. |
+| [!DNL Query Service] | [!UICONTROL Gérer la Liste autorisée ] | Capacité à gérer les restrictions IP pour votre organisation. |
 | [!DNL Reports] | [!UICONTROL Afficher les rapports de canal] | La possibilité d’afficher et de modifier les rapports de canal. |
 | [!DNL Sandbox Administration] | [!UICONTROL Gestion des sandbox] | Accès à la lecture, la création, la modification et la suppression des sandbox. |
 | [!DNL Sandbox Administration] | [!UICONTROL Affichage des sandbox] | Accès en lecture seule aux sandbox appartenant à votre organisation. |

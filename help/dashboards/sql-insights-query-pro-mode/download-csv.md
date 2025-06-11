@@ -1,14 +1,16 @@
 ---
-title: Téléchargement au format CSV
-description: Découvrez comment télécharger au format CSV les données traitées à partir de vos informations de tableau de bord personnalisées.
+title: Exporter au format CSV
+description: Découvrez comment exporter les données traitées à partir des informations de votre tableau de bord personnalisé au format CSV.
 exl-id: d2a7c7b6-d218-4974-8634-6ce412b98a3b
-source-git-commit: eac613434f631cab567ab3fa6e30d33acac79d2f
+source-git-commit: 0ebcce1a59ff0d01d02cc7d2c9950c2f949a3c49
 workflow-type: tm+mt
-source-wordcount: '57'
+source-wordcount: '82'
 ht-degree: 0%
 
 ---
 
-# Téléchargement au format CSV
+# Exporter au format CSV
 
-Pour simplifier le processus de partage et de manipulation des données, vous pouvez télécharger les données traitées à partir de vos statistiques personnalisées au format CSV. Consultez la documentation d’affichage supplémentaire pour savoir [comment télécharger les données de graphique traitées](./view-more.md#download-csv).
+Pour simplifier le partage et la manipulation des données, vous pouvez exporter les données traitées de vos informations personnalisées au format CSV. Utilisez les options **[!UICONTROL Télécharger CSV]** ou **[!UICONTROL Envoyer par e-mail]** disponibles sous **[!UICONTROL En savoir plus]** dans le workflow d’exportation.
+
+Pour exporter les données de graphique traitées au format CSV ou les envoyer par e-mail sous la forme d&#39;un lien de téléchargement sécurisé, consultez la section [[!UICONTROL En savoir plus] Exporter](./view-more.md#export).
