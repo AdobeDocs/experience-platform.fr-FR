@@ -120,7 +120,7 @@ La composition de l’audience fédérée permet aux entreprises de composer des
 
 | Nouvelle fonctionnalité | Description |
 | ----------- | ----------- |
-| Conformité HIPAA | La composition de l’audience fédérée est désormais conforme à la loi HIPAA. Pour plus d’informations sur les mesures de confidentialité et de sécurité de la composition d’audiences fédérées, consultez la [présentation de la confidentialité et de la sécurité dans la composition d’audiences fédérées](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/privacy-security). Pour plus d’informations sur la conformité HIPAA des produits Experience Platform en général, consultez la [ Présentation des produits et services HIPAA et Adobe ](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
+| Conformité HIPAA | La composition de l’audience fédérée est désormais conforme à la loi HIPAA. Pour plus d’informations sur les mesures de confidentialité et de sécurité de la composition d’audiences fédérées, consultez la [présentation de la confidentialité et de la sécurité dans la composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/start/privacy-security). Pour plus d’informations sur la conformité HIPAA des produits Experience Platform en général, consultez la [ Présentation des produits et services HIPAA et Adobe ](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
 
 Pour plus d’informations, consultez la [documentation sur la composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/home).
 
@@ -132,7 +132,7 @@ Plusieurs réglementations légales et organisationnelles donnent aux utilisateu
 
 | Fonctionnalité | Description |
 |--- | ---|
-| Prise en charge des lois sur la protection de la vie privée du Tennessee et du Minnesota | Privacy Service prend désormais en charge le Tennessee Information Protection Act (`tipa_tn_usa`) et le Minnesota Consumer Data Privacy Act (`mcdpa_mn_usa`). Vous pouvez traiter les demandes d’accès et de suppression conformément à ces nouvelles réglementations au niveau de l’État. Pour plus d’informations, consultez la [présentation de la réglementation](https://experienceleague.adobe.com/en/docs/experience-platform/privacy/regulations/overview). |
+| Prise en charge des lois sur la protection de la vie privée du Tennessee et du Minnesota | Privacy Service prend désormais en charge le Tennessee Information Protection Act (`tipa_tn_usa`) et le Minnesota Consumer Data Privacy Act (`mcdpa_mn_usa`). Vous pouvez traiter les demandes d’accès et de suppression conformément à ces nouvelles réglementations au niveau de l’État. Pour plus d’informations, consultez la [présentation de la réglementation](https://experienceleague.adobe.com/fr/docs/experience-platform/privacy/regulations/overview). |
 
 Voir la présentation de [Privacy Service](../privacy-service/home.md) pour plus d’informations sur le service.
 
