@@ -10,7 +10,7 @@ ht-degree: 14%
 
 ---
 
-# Générer des exemples de données pour un schéma XDM dans l’interface d’utilisation {#generate-sample-data-for-an-xdm-schema}
+# Générer des données d’exemple pour un schéma XDM dans l’interface d’utilisation {#generate-sample-data-for-an-xdm-schema}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_downloadsamplefile"
