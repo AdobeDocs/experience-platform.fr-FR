@@ -2,10 +2,10 @@
 title: Connecter Salesforce à Experience Platform à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform à un compte Salesforce à l’aide de l’API Flow Service.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
 workflow-type: tm+mt
-source-wordcount: '1082'
-ht-degree: 19%
+source-wordcount: '1118'
+ht-degree: 18%
 
 ---
 
@@ -29,6 +29,10 @@ Pour plus d’informations sur la manière d’effectuer avec succès des appels
 Pour plus d’informations sur la connexion de votre source [!DNL Salesforce] à Experience Platform on [!DNL Azure], lisez les étapes ci-dessous.
 
 ### Collecter les informations d’identification requises
+
+>[!WARNING]
+>
+>L’authentification de base de la source [!DNL Salesforce] sera abandonnée en janvier 2026. Vous devez passer à l’authentification des informations d’identification du client OAuth 2 pour continuer à utiliser la source et à ingérer des données à partir de votre compte [!DNL Salesforce] vers Experience Platform.
 
 La source [!DNL Salesforce] prend en charge l’authentification de base et les informations d’identification du client OAuth2.
 
@@ -61,7 +65,7 @@ Pour connecter votre compte [!DNL Salesforce] à [!DNL Flow Service] à l’aide
 | `apiVersion` | Version de l’API REST de l’instance [!DNL Salesforce] que vous utilisez. La valeur de la version de l’API doit être formatée avec une décimale. Par exemple, si vous utilisez la version `52` de l’API, vous devez saisir la valeur comme `52.0`. Si ce champ n’est pas renseigné, Experience Platform utilise automatiquement la dernière version disponible. Cette valeur est obligatoire pour l’authentification des informations d’identification du client OAuth2. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Salesforce] est `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
-Pour plus d’informations sur l’utilisation d’OAuth pour [!DNL Salesforce], consultez le guide [[!DNL Salesforce]  sur les flux d’autorisation OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+Pour plus d’informations sur l’utilisation d’OAuth pour [!DNL Salesforce], consultez le guide [[!DNL Salesforce]  sur les flux d’autorisation OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
 
 >[!ENDTABS]
 

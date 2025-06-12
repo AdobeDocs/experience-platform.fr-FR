@@ -2,9 +2,9 @@
 title: Connexion de votre compte Salesforce à l’aide de l’interface utilisateur d’Experience Platform
 description: Découvrez comment connecter votre compte Salesforce et importer vos données CRM dans Experience Platform à l’aide de l’interface utilisateur.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '972'
 ht-degree: 17%
 
 ---
@@ -25,6 +25,10 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 Si vous disposez déjà d’un compte [!DNL Salesforce] authentifié, vous pouvez ignorer le reste de ce document et passer au tutoriel sur [la configuration d’un flux de données pour les données CRM](../../dataflow/crm.md).
 
 ### Collecter les informations d’identification requises {#gather-required-credentials}
+
+>[!WARNING]
+>
+>L’authentification de base de la source [!DNL Salesforce] sera abandonnée en janvier 2026. Vous devez passer à l’authentification des informations d’identification du client OAuth 2 pour continuer à utiliser la source et à ingérer des données à partir de votre compte [!DNL Salesforce] vers Experience Platform.
 
 La source [!DNL Salesforce] prend en charge l’authentification de base et les informations d’identification du client OAuth2.
 
@@ -55,7 +59,7 @@ Vous devez fournir des valeurs pour les informations d’identification suivante
 | Secret client | Le secret client est utilisé conjointement avec l’identifiant client dans le cadre de l’authentification OAuth2. Ensemble, l’identifiant client et le secret client permettent à votre application d’opérer pour le compte de votre compte en identifiant votre application à [!DNL Salesforce]. |
 | Version de l’API | Version de l’API REST de l’instance [!DNL Salesforce] que vous utilisez. La valeur de la version de l’API doit être formatée avec une décimale. Par exemple, si vous utilisez la version `52` de l’API, vous devez saisir la valeur comme `52.0`. Si ce champ n’est pas renseigné, Experience Platform utilise automatiquement la dernière version disponible. |
 
-Pour plus d’informations sur l’utilisation d’OAuth pour [!DNL Salesforce], consultez le guide [[!DNL Salesforce]  sur les flux d’autorisation OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+Pour plus d’informations sur l’utilisation d’OAuth pour [!DNL Salesforce], consultez le guide [[!DNL Salesforce]  sur les flux d’autorisation OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
 
 >[!ENDTABS]
 

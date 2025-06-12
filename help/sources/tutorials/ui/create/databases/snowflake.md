@@ -4,9 +4,9 @@ type: Tutorial
 description: Découvrez comment créer une connexion source Snowflake à l’aide de l’interface utilisateur de Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1210'
 ht-degree: 7%
 
 ---
@@ -19,7 +19,11 @@ ht-degree: 7%
 
 Lisez ce guide pour savoir comment connecter votre compte [!DNL Snowflake] à Adobe Experience Platform à l’aide de l’interface utilisateur.
 
-## Prise en main
+## Commencer
+
+>[!WARNING]
+>
+>L’authentification de base (ou authentification par clé de compte) de la source [!DNL Snowflake] sera abandonnée en novembre 2025. Vous devez passer à l’authentification par paire de clés pour continuer à utiliser la source et à ingérer des données de votre base de données vers Experience Platform. Pour plus d’informations sur l’obsolescence, consultez le [[!DNL Snowflake] guide des bonnes pratiques sur la réduction des risques liés à la compromission des informations d’identification](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform : 
 
