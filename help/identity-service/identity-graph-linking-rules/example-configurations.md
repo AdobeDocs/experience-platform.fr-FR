@@ -4,10 +4,10 @@ description: Découvrez les différents types d’implémentation que vous pouve
 hide: true
 hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: b65a5e8e9727da47729191e56c1a32838ec2c6c4
+source-git-commit: f793dbda0520366b3ee69b3aa0f912b005957561
 workflow-type: tm+mt
-source-wordcount: '1934'
-ht-degree: 8%
+source-wordcount: '1999'
+ht-degree: 7%
 
 ---
 
@@ -43,6 +43,10 @@ Avant de passer au document suivant, assurez-vous de vous familiariser avec plus
 
 ## Implémentations de base {#basic-implementations}
 
+>[!TIP]
+>
+>Vous devez créer un espace de noms d’appareil personnalisé pour « CRMID » pour effectuer les exercices d’implémentation de base ci-dessous.
+
 Lisez cette section pour obtenir des implémentations de base de [!DNL Identity Graph Linking Rules].
 
 ### Cas d’utilisation : implémentation simple qui utilise un espace de noms sur plusieurs appareils
@@ -72,15 +76,11 @@ Configurez les paramètres suivants dans l’interface de simulation de graphiqu
 
 **Graphique simulé**
 
-+++Sélectionner pour afficher le graphique simulé
-
-Dans ce graphique, John (l’utilisateur final) est représenté par le CRMID. {ECID : 123} représente le navigateur web que John a utilisé sur son ordinateur personnel pour visiter votre plateforme d’e-commerce. {ECID : 999} représente le navigateur qu’il a utilisé sur son [!DNL iPhone] et {IDFA: a-b-c} représente son [!DNL iPhone].
+Dans ce graphique, John (l’utilisateur final) est représenté par le CRMID. `{ECID: 123}` représente le navigateur Web que John a utilisé sur son ordinateur personnel pour visiter votre plateforme de commerce électronique. `{ECID: 999}` représente le navigateur qu’il a utilisé sur son [!DNL iPhone] et `{IDFA: a-b-c}` représente son [!DNL iPhone].
 
 ![Implémentation simple avec un espace de noms sur l’ensemble des appareils..](../images/configs/basic/simple-implementation.png)
 
-+++
-
-### Exercice
+**Exercice**
 
 Simulez la configuration suivante dans la simulation de graphiques. Vous pouvez créer vos propres événements ou effectuer un copier-coller à l’aide du mode texte.
 
@@ -99,18 +99,14 @@ CRMID: Jane, ECID: 111
 
 **Graphique simulé**
 
-+++Sélectionner pour afficher le graphique simulé
-
 Dans ce graphique, John et Jane sont représentés par leurs propres CRMID respectifs :
 
-* {CRMID: John}
-* {CRMID: Jane}
+* `{CRMID: John}`
+* `{CRMID: Jane}`
 
-Le navigateur sur l’ordinateur de bureau qu’ils utilisent tous les deux pour visiter votre plateforme d’e-commerce est représenté par {ECID: 111}. Dans ce scénario graphique, Jeanne est le dernier utilisateur final authentifié. Par conséquent, le lien entre {ECID: 111} et {CRMID: John} est supprimé.
+Le navigateur sur l’ordinateur de bureau qu’ils utilisent tous les deux pour visiter votre plateforme d’e-commerce est représenté par `{ECID: 111}`. Dans ce scénario de graphique, Jeanne est le dernier utilisateur final authentifié. Par conséquent, le lien entre `{ECID: 111}` et `{CRMID: John}` est supprimé.
 
 ![Graphique simulé pour un appareil partagé (PC).](../images/configs/basic/shared-device-pc.png)
-
-+++
 
 >[!TAB Appareil partagé (mobile)]
 
@@ -125,13 +121,9 @@ CRMID: Jane, ECID: 111, IDFA: a-b-c
 
 **Graphique simulé**
 
-+++Sélectionner pour afficher le graphique simulé
-
-Dans ce graphique, John et Jane sont tous deux représentés par leurs propres CRMID respectifs. Le navigateur qu’ils utilisent est représenté par {ECID: 111} et le [!DNL iPad] qu’ils partagent est représenté par {IDFA: a-b-c}. Dans ce scénario graphique, Jeanne est le dernier utilisateur final authentifié. Par conséquent, les liens de {ECID: 111} et {IDFA: a-b-c} à {CRMID: John} sont supprimés.
+Dans ce graphique, John et Jane sont tous deux représentés par leurs propres CRMID respectifs. Le navigateur qu’ils utilisent est représenté par des `{ECID: 111}` et le [!DNL iPad] qu’ils partagent est représenté par des `{IDFA: a-b-c}`. Dans ce scénario de graphique, Jane est le dernier utilisateur final authentifié. Par conséquent, les liens de `{ECID: 111}` et `{IDFA: a-b-c}` à `{CRMID: John}` sont supprimés.
 
 ![Graphique simulé pour un appareil partagé (mobile).](../images/configs/basic/shared-device-mobile.png)
-
-+++
 
 >[!ENDTABS]
 
@@ -145,9 +137,9 @@ Lisez cette section pour connaître les implémentations intermédiaires de [!DN
 >
 >* Une **identité non unique** est une identité associée à un espace de noms non unique.
 >
->* Dans les exemples ci-dessous, `CChash` est un espace de noms personnalisé qui représente un numéro de carte de crédit haché.
+>* Vous devez créer des espaces de noms d’appareils personnalisés pour « CRMID » et « Chash » pour effectuer les exercices d’implémentation intermédiaires ci-dessous. « CCHash » est un espace de noms personnalisé qui représente un numéro de carte de crédit haché.
 
-Vous êtes un architecte de données travaillant pour une banque commerciale qui émet des cartes de crédit. Votre équipe marketing a indiqué qu’elle souhaitait inclure l’historique des transactions passées par carte de crédit dans un profil. Ce graphique d’identité peut se présenter comme suit.
+Imaginez que vous êtes un architecte de données travaillant pour une banque commerciale qui émet des cartes de crédit. Votre équipe marketing a indiqué qu’elle souhaitait inclure l’historique des transactions passées par carte de crédit dans un profil. Ce graphique d’identité peut se présenter comme suit.
 
 **Mode texte:**
 
@@ -171,21 +163,32 @@ Configurez les paramètres suivants dans l’interface de simulation de graphiqu
 
 **Graphique simulé**
 
-+++Sélectionner pour afficher le graphique simulé
-
 ![Image du graphique simulé](../images/configs/basic/simple-implementation-non-unique.png)
-
-+++
 
 Rien ne garantit que ces numéros de carte de crédit ou tout autre espace de noms non unique seront toujours associés à un seul utilisateur final. Deux utilisateurs finaux peuvent s’enregistrer avec la même carte de crédit. Des valeurs d’espace réservé non uniques peuvent également être ingérées par erreur. En d’autres termes, il n’existe aucune garantie que les espaces de noms non uniques ne provoqueront pas la réduction du graphique.
 
 Pour résoudre ce problème, Identity Service supprime les liens les plus anciens et conserve les liens les plus récents. Vous disposez ainsi d’un seul CRMID dans un graphique, ce qui empêche la réduction du graphique.
 
-### Exercice
+**Exercice**
 
 Simulez les configurations suivantes dans la simulation graphique. Vous pouvez créer vos propres événements ou effectuer un copier-coller à l’aide du mode texte.
 
 >[!BEGINTABS]
+
+>[!TAB Appareil partagé]
+
+**Mode texte:**
+
+```json
+CRMID: John, CChash: 1111-2222
+CRMID: Jane, CChash: 3333-4444
+CRMID: John, ECID: 123
+CRMID: Jane, ECID:123
+```
+
+**Graphique simulé**
+
+![Graphique intermédiaire d’appareil partagé avec Chash.](../images/configs/intermediate/intermediate-shared-device.png)
 
 >[!TAB Deux utilisateurs finaux avec la même carte de crédit]
 
@@ -202,11 +205,7 @@ CRMID: Jane, ECID:456
 
 **Graphique simulé**
 
-+++Sélectionner pour afficher le graphique simulé
-
 ![Graphique dans lequel deux utilisateurs finaux s’inscrivent avec la même carte de crédit.](../images/configs/intermediate/graph-with-same-credit-card.png)
-
-+++
 
 >[!TAB Numéro de carte de crédit non valide]
 
@@ -223,17 +222,17 @@ CRMID: Jill, CChash: undefined
 
 **Graphique simulé**
 
-+++Sélectionner pour afficher le graphique simulé
-
 ![Graphique dans lequel un problème de hachage entraîne la non-validité d’une carte de crédit.](../images/configs/intermediate/graph-with-invalid-credit-card.png)
-
-+++
 
 >[!ENDTABS]
 
 ### Cas d’utilisation : vos données incluent des CRMID hachés et non hachés
 
-Vous ingérez à la fois un CRMID non haché (hors ligne) et un CRMID haché (en ligne). Ils s’attendent à une relation directe entre les CRMID non hachés et hachés. Lorsqu’un utilisateur final navigue avec un compte authentifié, le CRMID haché est envoyé avec l’ID d’appareil (représenté sur Identity Service sous la forme d’un ECID).
+>[!TIP]
+>
+>Vous devez créer des espaces de noms d’appareils personnalisés pour « CRMID » et « CRMIDhash » pour effectuer les exercices d’implémentation intermédiaires ci-dessous.
+
+Vous ingérez un CRMID non haché (hors ligne) et un CRMID haché (en ligne). Il est attendu qu’il existe une relation directe entre les CRMID non hachés et hachés. Lorsqu’un utilisateur final navigue avec un compte authentifié, le CRMID haché est envoyé avec l’ID d’appareil (représenté sur Identity Service sous la forme d’un ECID).
 
 **Configuration des algorithmes (paramètres d’identité)**
 
@@ -252,7 +251,7 @@ Simulez les configurations suivantes dans la simulation graphique. Vous pouvez c
 
 >[!BEGINTABS]
 
->[!TAB Scénario 1 : appareil partagé]
+>[!TAB Appareil partagé]
 
 John et Jane partagent un appareil.
 
@@ -265,9 +264,9 @@ CRMIDhash: John, ECID: 111
 CRMIDhash: Jane, ECID: 111
 ```
 
-![espace réservé](../images/configs/intermediate/shared-device-hashed-crmid.png)
+![Graphique d’appareil partagé avec CRMID haché](../images/configs/intermediate/shared-device-hashed-crmid.png)
 
->[!TAB Scénario 2 : données incorrectes]
+>[!TAB Données incorrectes]
 
 En raison d’erreurs dans le processus de hachage, un CRMID haché non unique est généré et envoyé au service d’identités.
 
@@ -360,7 +359,7 @@ Simulez les configurations suivantes dans l’outil de simulation graphique. Vou
 
 >[!BEGINTABS]
 
->[!TAB Deux utilisateurs finaux se connectent]
+>[!TAB Appareil partagé]
 
 Dans ce scénario, John et Jane se connectent tous deux à un site web d’e-commerce.
 
@@ -399,6 +398,10 @@ La priorité des espaces de noms joue un rôle essentiel dans les scénarios gra
 Lisez cette section pour obtenir des implémentations avancées de [!DNL Identity Graph Linking Rules].
 
 ### Cas d’utilisation : vous avez besoin d’une assistance pour plusieurs secteurs d’activité
+
+>[!TIP]
+>
+>Vous devez créer des espaces de noms d’appareils personnalisés pour « CRMID » et « loginID » pour effectuer les exercices d’implémentation avancés ci-dessous.
 
 Vos utilisateurs finaux ont deux comptes différents : un compte personnel et un compte professionnel. Chaque compte est identifié par un identifiant différent. Dans ce scénario, un graphique type ressemblerait à ce qui suit :
 
@@ -469,9 +472,15 @@ loginID: JanePersonal, ECID: 222
 
 ### Cas d’utilisation : vous disposez d’implémentations complexes qui nécessitent plusieurs espaces de noms
 
+>[!TIP]
+>
+>Vous devez créer des espaces de noms personnalisés sur plusieurs appareils pour « CRMID », « loyaltyID », « thirdPartyID » et « orderID » pour effectuer les exercices d’implémentation avancés ci-dessous.
+
 Vous êtes une entreprise de médias et de divertissement et vos utilisateurs finaux disposent des éléments suivants :
+
 * UN CRAMIDE
 * Un identifiant de fidélité
+
 De plus, vos utilisateurs finaux peuvent effectuer un achat sur le site web d’e-commerce et ces données sont liées à leur adresse e-mail. Les données utilisateur sont également enrichies par un fournisseur de base de données tiers et sont envoyées à Experience Platform par lots.
 
 **Mode texte**
