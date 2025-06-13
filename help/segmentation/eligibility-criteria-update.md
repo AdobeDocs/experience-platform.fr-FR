@@ -4,9 +4,9 @@ description: Découvrez les mises à jour des critères d’éligibilité de seg
 hide: true
 hidefromtoc: true
 exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
-source-git-commit: 2af73be351cb818862006adc8d0f1a33f95d93cf
+source-git-commit: 6935cee30adb59d52db6c6fed7036f81b54edd52
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '586'
 ht-degree: 4%
 
 ---
@@ -47,8 +47,8 @@ Supposons, par exemple, que vous ayez deux audiences, avec une audience contenan
 
 | Audience | Schéma | Type de source | Query definition | ID de l’audience |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| Résidents californiens | Profile | Lot | L&#39;adresse personnelle est dans l&#39;état de la Californie | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
-| Passages en caisse récents | Événement d’expérience | Diffusion en continu | A effectué au moins un passage en caisse au cours des dernières 24 heures | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+| Résidents californiens | Profile | Source du lot | L&#39;adresse personnelle est dans l&#39;état de la Californie | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Passages en caisse récents | Événement d’expérience | Source de diffusion en continu | A effectué au moins un passage en caisse au cours des dernières 24 heures | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 Si vous souhaitez utiliser le composant par lot dans votre audience de diffusion en continu, vous devez faire référence à l’audience par lot à l’aide d’un segment de segments.
 
@@ -68,8 +68,8 @@ Supposons, par exemple, que vous ayez deux audiences, avec les deux audiences h�
 
 | Audience | Schéma | Type de source | Query definition | ID de l’audience |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| Abandons récents | Événement d’expérience | Lot | A au moins un événement d’abandon au cours des dernières 24 heures | `7deb246a-49b4-4687-95f9-6316df049948` |
-| Passages en caisse récents | Événement d’expérience | Diffusion en continu | A effectué au moins un passage en caisse au cours des dernières 24 heures | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+| Abandons récents | Événement d’expérience | Source du lot | A au moins un événement d’abandon au cours des dernières 48 heures | `7deb246a-49b4-4687-95f9-6316df049948` |
+| Passages en caisse récents | Événement d’expérience | Source de diffusion en continu | A effectué au moins un passage en caisse au cours des dernières 24 heures | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 Dans ce cas, vous devez créer une troisième audience comme suit :
 

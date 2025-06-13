@@ -2,9 +2,9 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 92b70dc6d6085067f11d43436bc74d64bce72dd0
 workflow-type: tm+mt
-source-wordcount: '4842'
+source-wordcount: '4837'
 ht-degree: 27%
 
 ---
@@ -186,7 +186,7 @@ Les audiences créées en externe sont automatiquement définies sur publiées.
 
 ### Comment mettre une audience à l’état inactif ?
 
-Vous pouvez mettre une audience publiée en statut inactif en ouvrant le menu d’actions rapides dans Audience Portal et en sélectionnant « [!UICONTROL &#x200B; Désactiver &#x200B;].
+Vous pouvez mettre une audience publiée en statut inactif en ouvrant le menu d’actions rapides dans Audience Portal et en sélectionnant « [!UICONTROL  Désactiver ].
 
 ### Comment republier une audience ?
 
@@ -252,7 +252,7 @@ Non, le nombre de balises pouvant être ajoutées à une audience n’est pas li
 
 ### Y a-t-il une limite au nombre de balises que je peux créer ?
 
-Non, le nombre de balises que vous pouvez créer n’est pas limité. Cependant, vous pouvez créer un maximum de 100 catégories **&#x200B;**&#x200B;à appliquer aux balises. Pour plus d’informations sur la gestion des balises, consultez le [guide de gestion des balises](../administrative-tags/ui/managing-tags.md).
+Non, le nombre de balises que vous pouvez créer n’est pas limité. Cependant, vous pouvez créer un maximum de 100 catégories **** à appliquer aux balises. Pour plus d’informations sur la gestion des balises, consultez le [guide de gestion des balises](../administrative-tags/ui/managing-tags.md).
 
 ### Lorsque je recherche une audience par nom ou balise dans un dossier parent, puis-je également effectuer une recherche dans les dossiers enfants associés ?
 
@@ -430,4 +430,4 @@ La disponibilité d’une définition de segment peut prendre jusqu’à une heu
 
 ### Existe-t-il des limitations aux données diffusées en continu dans ?
 
-Pour que les données diffusées soient utilisées dans la segmentation en flux continu, il **doit** y avoir un espacement entre les événements diffusés en flux continu. Si un trop grand nombre d’événements sont diffusés en continu dans la même seconde, Experience Platform traite ces événements comme des données générées par les robots et ils sont ignorés. En règle générale, vous devez disposer d’au **moins** cinq secondes entre les données d’événement pour vous assurer que les données sont correctement utilisées.
+Lors de l’utilisation de la segmentation Edge ou en flux continu, assurez-vous que les événements de chaque profil sont espacés. Si un trop grand nombre d’événements sont diffusés en continu dans la même seconde, Experience Platform traite ces événements comme des données générées par les robots et ils sont ignorés. En règle générale, vous devez disposer d’au **moins** cinq secondes entre les données d’événement pour vous assurer que les données sont correctement utilisées.
