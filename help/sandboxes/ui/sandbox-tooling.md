@@ -345,7 +345,7 @@ Une fois que vous avez identifié les objets cibles à mettre à jour, sélectio
 
 La vidéo suivante est destinée à vous aider à comprendre les outils Sandbox et explique comment créer un package, publier un package et importer un package.
 
->[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446085/?learn=on&captions=fre_fr)
 
 ## Étapes suivantes
 
