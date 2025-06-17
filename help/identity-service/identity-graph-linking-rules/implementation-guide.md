@@ -2,10 +2,10 @@
 title: Guide De Mise En Œuvre Des Règles De Liaison Des Graphiques D’Identités
 description: Découvrez les étapes recommandées à suivre lors de l’implémentation de vos données avec les configurations des règles de liaison de graphique d’identités.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 0587ddf1012adb13e6d399953839735f73fe151e
+source-git-commit: a9c9543783eb85dcaadef64b1c0deb84f850d40e
 workflow-type: tm+mt
-source-wordcount: '1955'
-ht-degree: 5%
+source-wordcount: '1956'
+ht-degree: 6%
 
 ---
 
@@ -35,7 +35,7 @@ Cette section décrit les étapes préalables à suivre avant d’implémenter d
 
 #### Espace de noms requis pour une seule personne {#single-person-namespace-requirement}
 
-Vous devez vous assurer que l’espace de noms unique avec la priorité la plus élevée est toujours présent dans chaque profil. Cela permet au service d’identités de détecter l’identifiant de personne approprié dans un graphique donné.
+Vous devez vous assurer que l’espace de noms unique avec la priorité la plus élevée est toujours présent dans chaque profil connu. Cela permet au service d’identités de détecter l’identifiant de personne approprié dans un graphique donné.
 
 +++Sélectionner pour afficher un exemple de graphique sans espace de noms d’identifiant de personne unique
 

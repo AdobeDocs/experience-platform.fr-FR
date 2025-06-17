@@ -4,10 +4,10 @@ description: Découvrez les différents types d’implémentation que vous pouve
 hide: true
 hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: f793dbda0520366b3ee69b3aa0f912b005957561
+source-git-commit: 2a5c8b3bd58d3659d0fcf519407b180bf5f091b4
 workflow-type: tm+mt
-source-wordcount: '1999'
-ht-degree: 7%
+source-wordcount: '1951'
+ht-degree: 8%
 
 ---
 
@@ -17,11 +17,6 @@ ht-degree: 7%
 >id="platform_identities_algorithmconfiguration"
 >title="Configuration de l’algorithme"
 >abstract="Configurez un espace de noms unique et une priorité d’espace de noms adaptée à vos identités ingérées."
-
->[!NOTE]
->
->* « CRMID » et « loginID » sont des espaces de noms personnalisés. Dans ce document, « CRMID » est un identifiant de personne et « loginID » est un identifiant de connexion associé à une personne donnée.
->* Pour simuler les exemples de scénarios de graphique décrits dans ce document, vous devez d’abord créer deux espaces de noms personnalisés, l’un avec le symbole d’identité « CRMID » et l’autre avec le symbole d’identité « loginID ». Les symboles d’identité respectent la casse.
 
 Lisez ce document pour en savoir plus sur les différents types d’implémentation que vous pouvez configurer à l’aide de [!DNL Identity Graph Linking Rules].
 
@@ -43,9 +38,9 @@ Avant de passer au document suivant, assurez-vous de vous familiariser avec plus
 
 ## Implémentations de base {#basic-implementations}
 
->[!TIP]
+>[!NOTE]
 >
->Vous devez créer un espace de noms d’appareil personnalisé pour « CRMID » pour effectuer les exercices d’implémentation de base ci-dessous.
+>Pour terminer les implémentations ci-dessous, vous devez créer un espace de noms personnalisé avec le symbole d’identité (sensible à la casse) de : `CRMID`.
 
 Lisez cette section pour obtenir des implémentations de base de [!DNL Identity Graph Linking Rules].
 
@@ -90,7 +85,7 @@ Simulez la configuration suivante dans la simulation de graphiques. Vous pouvez 
 
 **Périphérique partagé (PC)**
 
-**Mode texte:**
+**Mode texte**
 
 ```json
 CRMID: John, ECID: 111
@@ -112,7 +107,7 @@ Le navigateur sur l’ordinateur de bureau qu’ils utilisent tous les deux pour
 
 **Appareil partagé (mobile)**
 
-**Mode texte:**
+**Mode texte**
 
 ```json
 CRMID: John, ECID: 111, IDFA: a-b-c
@@ -129,19 +124,23 @@ Dans ce graphique, John et Jane sont tous deux représentés par leurs propres C
 
 ## Implémentations intermédiaires {#intermediate-implementations}
 
+>[!TIP]
+>
+>Une **identité non unique** est une identité associée à un espace de noms non unique.
+
 Lisez cette section pour connaître les implémentations intermédiaires de [!DNL Identity Graph Linking Rules].
 
 ### Cas d’utilisation : vos données incluent des identités non uniques
 
->[!TIP]
+>[!NOTE]
 >
->* Une **identité non unique** est une identité associée à un espace de noms non unique.
->
->* Vous devez créer des espaces de noms d’appareils personnalisés pour « CRMID » et « Chash » pour effectuer les exercices d’implémentation intermédiaires ci-dessous. « CCHash » est un espace de noms personnalisé qui représente un numéro de carte de crédit haché.
+>Pour terminer les implémentations ci-dessous, vous devez créer les espaces de noms personnalisés suivants avec les symboles d’identité (sensibles à la casse) de :
+>* `CRMID`
+>* `CCHash` (il s’agit d’un espace de noms personnalisé qui représente un numéro de carte de crédit haché.)
 
 Imaginez que vous êtes un architecte de données travaillant pour une banque commerciale qui émet des cartes de crédit. Votre équipe marketing a indiqué qu’elle souhaitait inclure l’historique des transactions passées par carte de crédit dans un profil. Ce graphique d’identité peut se présenter comme suit.
 
-**Mode texte:**
+**Mode texte**
 
 ```json
 CRMID: John, CChash: 1111-2222 
@@ -177,7 +176,7 @@ Simulez les configurations suivantes dans la simulation graphique. Vous pouvez c
 
 >[!TAB Appareil partagé]
 
-**Mode texte:**
+**Mode texte**
 
 ```json
 CRMID: John, CChash: 1111-2222
@@ -194,7 +193,7 @@ CRMID: Jane, ECID:123
 
 Deux utilisateurs finaux différents s’inscrivent à votre site web d’e-commerce avec la même carte de crédit. Votre équipe marketing souhaite éviter la réduction du graphique en s’assurant que la carte de crédit est associée à un seul profil.
 
-**Mode texte:**
+**Mode texte**
 
 ```json
 CRMID: John, CChash: 1111-2222
@@ -211,7 +210,7 @@ CRMID: Jane, ECID:456
 
 En raison de données non nettoyées, un numéro de carte de crédit non valide est ingéré dans Experience Platform.
 
-**Mode texte:**
+**Mode texte**
 
 ```json
 CRMID: John, CChash: undefined
@@ -228,9 +227,11 @@ CRMID: Jill, CChash: undefined
 
 ### Cas d’utilisation : vos données incluent des CRMID hachés et non hachés
 
->[!TIP]
+>[!NOTE]
 >
->Vous devez créer des espaces de noms d’appareils personnalisés pour « CRMID » et « CRMIDhash » pour effectuer les exercices d’implémentation intermédiaires ci-dessous.
+>Pour terminer les implémentations ci-dessous, vous devez créer des espaces de noms personnalisés avec les symboles d’identité (sensibles à la casse) de :
+>* `CRMID`
+>* `CRMIDhash`
 
 Vous ingérez un CRMID non haché (hors ligne) et un CRMID haché (en ligne). Il est attendu qu’il existe une relation directe entre les CRMID non hachés et hachés. Lorsqu’un utilisateur final navigue avec un compte authentifié, le CRMID haché est envoyé avec l’ID d’appareil (représenté sur Identity Service sous la forme d’un ECID).
 
@@ -255,7 +256,7 @@ Simulez les configurations suivantes dans la simulation graphique. Vous pouvez c
 
 John et Jane partagent un appareil.
 
-**Mode texte:**
+**Mode texte**
 
 ```json
 CRMID: John, CRMIDhash: John
@@ -270,7 +271,7 @@ CRMIDhash: Jane, ECID: 111
 
 En raison d’erreurs dans le processus de hachage, un CRMID haché non unique est généré et envoyé au service d’identités.
 
-**Mode texte:**
+**Mode texte**
 
 ```json
 CRMID: John, CRMIDhash: aaaa
@@ -342,6 +343,10 @@ Email: jane@g, ECID: 111
 
 ### Cas d’utilisation : vos données incluent trois espaces de noms uniques
 
+>[!NOTE]
+>
+>Pour terminer les implémentations ci-dessous, vous devez créer un espace de noms personnalisé avec le symbole d’identité (sensible à la casse) de : `CRMID`.
+
 Votre client définit une entité pour une seule personne comme suit :
 
 * Utilisateur final disposant d’un CRMID attribué.
@@ -399,13 +404,15 @@ Lisez cette section pour obtenir des implémentations avancées de [!DNL Identit
 
 ### Cas d’utilisation : vous avez besoin d’une assistance pour plusieurs secteurs d’activité
 
->[!TIP]
+>[!NOTE]
 >
->Vous devez créer des espaces de noms d’appareils personnalisés pour « CRMID » et « loginID » pour effectuer les exercices d’implémentation avancés ci-dessous.
+>Pour terminer les implémentations ci-dessous, vous devez créer des espaces de noms personnalisés avec les symboles d’identité (sensibles à la casse) de :
+>* `CRMID`
+>* `loginID`
 
 Vos utilisateurs finaux ont deux comptes différents : un compte personnel et un compte professionnel. Chaque compte est identifié par un identifiant différent. Dans ce scénario, un graphique type ressemblerait à ce qui suit :
 
-**Mode texte***
+**Mode texte**
 
 ```json
 CRMID: John, loginID: JohnPersonal
@@ -427,12 +434,7 @@ Configurez les paramètres suivants dans l’interface de simulation de graphiqu
 
 **Graphique simulé**
 
-+++Sélectionner pour afficher le graphique simulé
-
 ![Graphique d’identité pour un utilisateur final avec une adresse e-mail professionnelle et personnelle.](../images/configs/advanced/advanced.png)
-
-+++
-
 
 **Exercice**
 
@@ -457,6 +459,8 @@ loginID: JanePersonal, ECID: 111
 
 >[!TAB Des données incorrectes sont envoyées à Real-Time CDP]
 
+**Mode texte**
+
 ```json
 CRMID: John, loginID: JohnPersonal
 CRMID: John, loginID: error
@@ -472,9 +476,12 @@ loginID: JanePersonal, ECID: 222
 
 ### Cas d’utilisation : vous disposez d’implémentations complexes qui nécessitent plusieurs espaces de noms
 
->[!TIP]
+>[!NOTE]
 >
->Vous devez créer des espaces de noms personnalisés sur plusieurs appareils pour « CRMID », « loyaltyID », « thirdPartyID » et « orderID » pour effectuer les exercices d’implémentation avancés ci-dessous.
+>Pour terminer les implémentations ci-dessous, vous devez créer des espaces de noms personnalisés avec les symboles d’identité (sensibles à la casse) de :
+>* `CRMID`
+>* `loyaltyID`
+>* `thirdPartyID`
 
 Vous êtes une entreprise de médias et de divertissement et vos utilisateurs finaux disposent des éléments suivants :
 
@@ -499,8 +506,8 @@ Configurez les paramètres suivants dans l’interface de simulation de graphiqu
 | Nom d’affichage | Symbole d’identité | Type d’identité | Unique par graphe | Priorité d’espace de noms |
 | --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
-| loyaltyID | loyaltyID | CROSS_DEVICE | | 2 |
-| E-mail | E-mail | E-mail | | 3 |
+| loyaltyID | loyaltyID | CROSS_DEVICE | ✔️ | 2 |
+| E-mail | E-mail | E-mail | ✔️ | 3 |
 | thirdPartyID | thirdPartyID | CROSS_DEVICE | | 4 |
 | orderID | orderID | CROSS_DEVICE | | 5 |
 | ECID | ECID | COOKIE | | 6 |
