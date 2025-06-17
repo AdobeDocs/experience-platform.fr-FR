@@ -1,14 +1,14 @@
 ---
-title: Azure Databricks
+title: Azure Databricks
 description: Découvrez les étapes préalables requises pour connecter Azure Databricks à Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
-last-substantial-update: 2025-04-29T00:00:00Z
+last-substantial-update: 2025-06-17T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: c466c30bddf4e67117c88072bea00818d755e408
+source-git-commit: 11ec772f2b877ceac820f2b8a06ac27377e9b2e9
 workflow-type: tm+mt
-source-wordcount: '612'
-ht-degree: 3%
+source-wordcount: '616'
+ht-degree: 4%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 3%
 >
 >* La source [!DNL Azure Databricks] est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-Time CDP Ultimate.
 >
->* La source [!DNL Azure Databricks] est en version Beta. Lisez les [ termes et conditions ](../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>* La source [!DNL Azure Databricks] est en version Beta. Lisez les [termes et conditions](../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 [!DNL Azure Databricks] est une plateforme cloud conçue pour l’analyse de données, le machine learning et l’IA. Vous pouvez utiliser [!DNL Databricks] pour intégrer à [!DNL Azure] et fournir un environnement holistique pour créer, déployer et gérer des solutions de données à grande échelle.
 
@@ -161,6 +161,9 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 
 ![Interface utilisateur des briques de données sur Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
 
-## Connexion de [!DNL Databricks] à Experience Platform à l’aide d’API
+## Connexion de [!DNL Databricks] à Experience Platform
 
-Maintenant que vous avez terminé les étapes préalables requises, vous pouvez passer au guide sur la [connexion de votre compte  [!DNL Databricks]  Experience Platform à l’aide de l’API](../../tutorials/api/create/databases/databricks.md).
+Maintenant que vous avez terminé les étapes préalables requises, vous pouvez procéder et connecter votre compte [!DNL Databricks] à Experience Platform :
+
+* [Se connecter via l’API](../../tutorials/api/create/databases/databricks.md)
+* [Connexion via l’espace de travail des sources dans l’interface utilisateur](../../tutorials/ui/create/databases/databricks.md)

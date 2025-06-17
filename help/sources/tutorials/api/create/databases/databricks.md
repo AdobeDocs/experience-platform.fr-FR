@@ -4,10 +4,10 @@ description: Découvrez comment connecter Azure Databricks à Experience Platfor
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 0c8ff1029beee3f58cbf536b11b40551b6f6c2ed
+source-git-commit: 9df2f9cc70876834aa635d50d548a882f45e3190
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 16%
+source-wordcount: '534'
+ht-degree: 17%
 
 ---
 
@@ -47,6 +47,8 @@ Fournissez des valeurs pour les informations d’identification suivantes afin d
 | `accessToken` | Jeton d’accès qui authentifie votre compte [!DNL Databricks]. Vous pouvez générer votre jeton d’accès à l’aide de l’espace de travail [!DNL Databricks]. |
 | `database` | Nom de votre base de données dans le lac delta. |
 | `connectionSpec.Id` | L’identifiant de spécification de connexion renvoie les propriétés de connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Databricks] est `e9d7ec6b-0873-4e57-ad21-b3a7c65e310b`. |
+
+Pour plus d’informations, consultez la [[!DNL Azure Databricks] présentation](../../../../connectors/databases/databricks.md).
 
 ## Créer une connexion de base
 
