@@ -3,18 +3,26 @@ solution: Experience Platform
 title: Audiences Similaires
 description: Découvrez comment cibler de nouvelles audiences à forte valeur ajoutée dans Adobe Experience Platform à l’aide d’audiences semblables.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: d978437479bedd0f943a6d68de78073f318cccb5
 workflow-type: tm+mt
-source-wordcount: '2193'
-ht-degree: 10%
+source-wordcount: '2299'
+ht-degree: 9%
 
 ---
 
 # Guide des audiences semblables
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
 >Les informations semblables et les audiences semblables ne sont disponibles que dans l’édition **B2C**.
+
+>[!IMPORTANT]
+>
+>Les informations semblables et les audiences semblables sont automatiquement désactivées pour les environnements qui affichent une faible utilisation. Une faible utilisation est définie comme le fait de ne pas afficher d’informations semblables au cours des trois derniers mois ou de ne pas créer d’audience semblable au cours des six derniers mois.
+>
+>Si les informations semblables sont désactivées pour votre environnement, vous pouvez demander l’accès en envoyant un e-mail à l’équipe d’assistance clientèle d’Adobe, y compris votre identifiant d’organisation et les détails de l’environnement dans votre message.
+>
+>Après réception de la confirmation de l’assistance clientèle d’Adobe, les informations et audiences semblables seront activées dans tous les sandbox de votre environnement.
 
 Dans Adobe Experience Platform, les audiences semblables fournissent des informations intelligentes sur chacune de vos audiences, en s’appuyant sur des informations basées sur le machine learning pour identifier et cibler les clients à forte valeur ajoutée avec vos campagnes marketing.
 
@@ -75,7 +83,9 @@ Les droits suivants s’appliquent à l’utilisation des audiences semblables :
 
 Les packs de modules complémentaires, qui seront disponibles à une date ultérieure, augmentent les droits pour les sandbox de production de 20 audiences semblables par pack.
 
-Pour confirmer si vous avez accès aux audiences semblables, contactez votre représentant ou représentante Adobe.
+## Accès {#access}
+
+Pour confirmer si vous avez accès à des audiences semblables, sélectionnez une audience dans le portail d’audiences et vérifiez si l’onglet **[!UICONTROL Informations semblables]** est visible.
 
 ## Affichage d’informations semblables {#view}
 
@@ -106,7 +116,7 @@ Notez que le graphique est **cumulatif** de droite à gauche. Cela signifie qu�
 
 Vous pouvez pointer sur un point spécifique du graphique pour afficher le pourcentage de similarité et le nombre de profils attendu pour le point actuellement surligné.
 
-### Audiences semblables {#list}
+### Audiences similaires {#list}
 
 La section Audiences semblables affiche une liste de toutes les audiences semblables qui ont été créées précédemment pour l’audience de base sélectionnée.
 
