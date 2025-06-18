@@ -16,7 +16,7 @@ ht-degree: 44%
 
 >[!IMPORTANT]
 >
->Pour prendre en charge le nombre croissant de lois sur la protection de la vie privée aux États-Unis, Privacy Service modifie ses valeurs `regulation_type`. Utilisez les nouvelles valeurs qui incluent des abréviations d’état (par exemple, `ucpa_ut_usa`) à partir du 12 juin **2025**. Les anciennes valeurs (par exemple, `ucpa_usa`) ne fonctionnent plus après le 28 juillet 2025 ****.
+>Pour prendre en charge le nombre croissant de lois sur la protection de la vie privée aux États-Unis, Privacy Service modifie ses valeurs `regulation_type`. Utilisez les nouvelles valeurs qui incluent des abréviations d’état (par exemple, `ucpa_ut_usa`) à partir du 12 juin **2025**. Les anciennes valeurs (par exemple, `ucpa_usa`) ne fonctionnent plus après le 28 juillet 2025 **&#x200B;**.
 >
 >Mettez à jour vos intégrations avant cette date limite pour éviter les échecs de requête.
 
@@ -90,7 +90,7 @@ Avant de créer une nouvelle demande de tâche, vous devez collecter des informa
 
 >[!NOTE]
 >
->Les applications Adobe Experience Cloud compatibles utilisent des valeurs d’identification des titulaires de données différentes. Pour plus d’informations sur les identifiants requis pour votre ou vos applications](../experience-cloud-apps.md) consultez le guide sur les applications [Privacy Service et Experience Cloud . Pour des instructions plus générales sur la détermination des identifiants à envoyer à [!DNL Privacy Service], consultez le document sur les [données d’identité dans les demandes d’accès à des informations personnelles](../identity-data.md).
+>Les applications Adobe Experience Cloud compatibles utilisent des valeurs d’identification des titulaires de données différentes. Pour plus d’informations sur les identifiants requis pour votre ou vos applications[&#128279;](../experience-cloud-apps.md) consultez le guide sur les applications Privacy Service et Experience Cloud . Pour des instructions plus générales sur la détermination des identifiants à envoyer à [!DNL Privacy Service], consultez le document sur les [données d’identité dans les demandes d’accès à des informations personnelles](../identity-data.md).
 
 L’API [!DNL Privacy Service] prend en charge deux types de requêtes de tâche pour les données personnelles :
 
