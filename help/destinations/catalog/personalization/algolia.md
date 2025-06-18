@@ -119,9 +119,9 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 > 
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des identités, vous devez disposer de l’autorisation de contrôle d’accès Afficher le graphique [d’identités](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).
+>* Pour exporter des identités, vous devez disposer de l’autorisation de contrôle d’accès Afficher le graphique [d’identités](https://experienceleague.adobe.com/fr/docs/experience-platform/access-control/home#permissions).
 
-Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Mapper les attributs et les identités {#mapping-attributes-identities}
 
