@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Questions fréquentes sur Query Service et Data Distiller
 description: Ce document contient les questions les plus fréquentes et les réponses associées relatives à Query Service et à Data Distiller. Les rubriques incluent l’exportation de données, les outils tiers et les erreurs PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
 workflow-type: tm+mt
-source-wordcount: '5029'
+source-wordcount: '5055'
 ht-degree: 81%
 
 ---
@@ -36,7 +36,7 @@ Pour plus d’informations, consultez le document [Package Query Service](./pack
 La liste suivante de réponses aux questions fréquentes est divisée en plusieurs catégories :
 
 - [Général](#general)
-- [Data Distiller](#data-distiller)
+- [Data Distiller](#data-distiller)
 - [Interface utilisateur des requêtes](#queries-ui)
 - [Échantillon de jeux de données](#dataset-samples)
 - [Exportation des données](#exporting-data)
@@ -65,7 +65,7 @@ C’est peut être dû à la fonction de saisie automatique. La fonction traite 
 ### Puis-je utiliser [!DNL Postman] pour l’API Query Service ?
 
 +++Réponse
-Oui, vous pouvez visualiser tous les services API d’Adobe et interagir avec eux à l’aide de [!DNL Postman] (une application tierce gratuite). Regardez le [[!DNL Postman] guide de configuration](https://video.tv.adobe.com/v/31635?captions=fre_fr) pour obtenir des instructions détaillées sur la configuration d’un projet dans l’Adobe Developer Console et l’acquisition de toutes les informations d’identification nécessaires à l’utilisation avec [!DNL Postman]. Consultez la documentation officielle pour obtenir des [conseils sur le démarrage, l’exécution et le partage de collections [!DNL Postman] ](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Oui, vous pouvez visualiser tous les services API d’Adobe et interagir avec eux à l’aide de [!DNL Postman] (une application tierce gratuite). Regardez le [[!DNL Postman] guide de configuration](https://video.tv.adobe.com/v/28832) pour obtenir des instructions détaillées sur la configuration d’un projet dans l’Adobe Developer Console et l’acquisition de toutes les informations d’identification nécessaires à l’utilisation avec [!DNL Postman]. Consultez la documentation officielle pour obtenir des [conseils sur le démarrage, l’exécution et le partage de collections [!DNL Postman] ](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Existe-t-il un nombre maximal de lignes renvoyées par une requête via l’interface utilisateur ?
@@ -615,7 +615,7 @@ Oui, vous pouvez utiliser `CREATE VIEW` commande sans accès à Data Distiller. 
 Oui. Cependant, certains clients tiers, tels que DbVisualizer, peuvent nécessiter un identifiant distinct avant et après un bloc SQL pour indiquer qu’une partie d’un script doit être traitée comme une seule instruction. Vous trouverez plus d’informations dans la [documentation sur les blocs anonymes](./key-concepts/anonymous-block.md) ou dans [la documentation officielle de DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
 +++
 
-## Data Distiller {#data-distiller}
+## Data Distiller {#data-distiller}
 
 ### Comment l’utilisation de la licence de Distiller de données est-elle suivie et où puis-je voir ces informations ?
 
@@ -717,12 +717,18 @@ and timestamp < to_timestamp('2022-07-23');
 La structure MERGE INTO SQL n&#39;est pas prise en charge par Data Distiller ou Query Service.
 +++
 
-## Requêtes ITAS
+## Requêtes ITAS {#itas-queries}
 
 ### Que sont les requêtes ITAS ?
 
 +++Réponse
 Les requêtes INSERT INTO sont appelées requêtes ITAS. Notez que les requêtes CREATE TABLE sont appelées requêtes CTAS.
++++
+
+### Query Service prend-il en charge les opérations de mise à jour et de suppression ?
+
++++Réponse
+Non, Query Service ne prend pas en charge les opérations de mise à jour ou de suppression. Il ne prend en charge que les opérations d’ajout uniquement à l’aide d’ITAS.
 +++
 
 ## Outils tiers {#third-party-tools}

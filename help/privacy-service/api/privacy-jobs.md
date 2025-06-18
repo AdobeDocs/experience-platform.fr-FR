@@ -5,7 +5,7 @@ title: Point d’entrée de l’API des tâches de confidentialité
 description: Découvrez comment gérer les tâches de confidentialité pour les applications Experience Cloud à l’aide de l’API Privacy Service.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: ec99b2a8f772e77d0a3957fc35b8cea112b91cba
+source-git-commit: c2394035dd6bd4fe6dbb443e4db13934a27066a6
 workflow-type: tm+mt
 source-wordcount: '1861'
 ht-degree: 44%
@@ -16,7 +16,7 @@ ht-degree: 44%
 
 >[!IMPORTANT]
 >
->Pour prendre en charge le nombre croissant de lois sur la protection de la vie privée aux États-Unis, Privacy Service modifie ses valeurs `regulation_type`. Utilisez les nouvelles valeurs qui incluent des abréviations d’état (par exemple, `ucpa_ut_usa`) à partir du 12 juin **2025**. Les anciennes valeurs (par exemple, `ucpa_usa`) ne fonctionnent plus après le 28 juillet 2025 **&#x200B;**.
+>Pour prendre en charge le nombre croissant de lois sur la protection de la vie privée aux États-Unis, Privacy Service modifie ses valeurs `regulation_type`. Utilisez les nouvelles valeurs qui incluent des abréviations d’état (par exemple, `ucpa_ut_usa`) à partir du 12 juin **2025**. Les anciennes valeurs (par exemple, `ucpa_usa`) ne fonctionnent plus après le 28 juillet 2025 ****.
 >
 >Mettez à jour vos intégrations avant cette date limite pour éviter les échecs de requête.
 
@@ -48,7 +48,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | Paramètre | Description |
 | --- | --- |
-| `{REGULATION}` | Le type de réglementation pour lequel vous souhaitez effectuer une requête. Les valeurs acceptées sont les suivantes : <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_co_usa`</li><li>`cpra_ca_usa`</li><li>`ctdpa_ct_usa`</li><li>`dpdpa`</li><li>`fdbr_fl_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_ia_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_mn_usa`</li><li>`mcdpa_mt_usa`</li><li>`mhmda_wa_usa`</li><li>`ndpa_ne_usa`</li><li>`nhpa_nh_usa`</li><li>`njdpa_nj_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_or_usa`</li><li>`pdpa_tha`</li><li>`ql25`</li><li>`tdpsa_tx_usa`</li><li>`tipa_tn_usa`</li><li>`ucpa_ut_usa`</li><li>`vcdpa_va_usa`</li></ul><br>Consultez la présentation des [réglementations prises en charge](../regulations/overview.md) pour plus d’informations sur les réglementations de confidentialité que représentent les valeurs ci-dessus. |
+| `{REGULATION}` | Le type de réglementation pour lequel vous souhaitez effectuer une requête. Les valeurs acceptées sont les suivantes : <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_co_usa`</li><li>`cpra_ca_usa`</li><li>`ctdpa_ct_usa`</li><li>`dpdpa_de_usa`</li><li>`fdbr_fl_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_ia_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_mn_usa`</li><li>`mcdpa_mt_usa`</li><li>`mhmda_wa_usa`</li><li>`ndpa_ne_usa`</li><li>`nhpa_nh_usa`</li><li>`njdpa_nj_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_or_usa`</li><li>`pdpa_tha`</li><li>`ql25_qc_can`</li><li>`tdpsa_tx_usa`</li><li>`tipa_tn_usa`</li><li>`ucpa_ut_usa`</li><li>`vcdpa_va_usa`</li></ul><br>Consultez la présentation des [réglementations prises en charge](../regulations/overview.md) pour plus d’informations sur les réglementations de confidentialité que représentent les valeurs ci-dessus. |
 | `{PAGE}` | La page de données à afficher à l’aide d’une numérotation basée sur 0. La valeur par défaut est de `0`. |
 | `{SIZE}` | Le nombre de résultats à afficher sur chaque page. `100` est la valeur par défaut et `1000` est le maximum. Dépasser le maximum entraîne le code d’erreur 400 dans l’API. |
 | `{status}` | Le comportement par défaut consiste à inclure tous les statuts. Si vous spécifiez un type de statut, la requête renvoie uniquement les tâches de confidentialité correspondant à ce type de statut. Les valeurs acceptées sont les suivantes : <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -90,7 +90,7 @@ Avant de créer une nouvelle demande de tâche, vous devez collecter des informa
 
 >[!NOTE]
 >
->Les applications Adobe Experience Cloud compatibles utilisent des valeurs d’identification des titulaires de données différentes. Pour plus d’informations sur les identifiants requis pour votre ou vos applications[&#128279;](../experience-cloud-apps.md) consultez le guide sur les applications Privacy Service et Experience Cloud . Pour des instructions plus générales sur la détermination des identifiants à envoyer à [!DNL Privacy Service], consultez le document sur les [données d’identité dans les demandes d’accès à des informations personnelles](../identity-data.md).
+>Les applications Adobe Experience Cloud compatibles utilisent des valeurs d’identification des titulaires de données différentes. Pour plus d’informations sur les identifiants requis pour votre ou vos applications](../experience-cloud-apps.md) consultez le guide sur les applications [Privacy Service et Experience Cloud . Pour des instructions plus générales sur la détermination des identifiants à envoyer à [!DNL Privacy Service], consultez le document sur les [données d’identité dans les demandes d’accès à des informations personnelles](../identity-data.md).
 
 L’API [!DNL Privacy Service] prend en charge deux types de requêtes de tâche pour les données personnelles :
 

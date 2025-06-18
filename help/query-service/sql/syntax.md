@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Syntaxe SQL dans Query Service
 description: Ce document détaille et explique la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: a0b7cd9e406b4a140ef70f8d80cb27ba6817c0cd
+source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
 workflow-type: tm+mt
-source-wordcount: '4649'
+source-wordcount: '4686'
 ht-degree: 4%
 
 ---
@@ -223,8 +223,8 @@ AS (select_query)
 | `schema` | Titre du schéma XDM. N’utilisez cette clause que si vous souhaitez associer la nouvelle table à un schéma XDM existant. |
 | `rowvalidation` | (Facultatif) Active la validation au niveau des lignes pour chaque lot ingéré dans le jeu de données. La valeur par défaut est « true ». |
 | `label` | (Facultatif) Utilisez la valeur `PROFILE` pour étiqueter le jeu de données comme étant activé pour l’ingestion de profils. |
-| `transform` | (Facultatif) Applique des transformations d’ingénierie des fonctionnalités (telles que l’indexation de chaîne, l’encodage à chaud ou TF-IDF) avant de matérialiser le jeu de données. Cette clause est utilisée pour prévisualiser les fonctions transformées. Pour plus d’informations[&#128279;](#transform) consultez la documentation de la clause `TRANSFORM` . |
-| `select_query` | Instruction `SELECT` standard qui définit le jeu de données. Pour plus d’informations[&#128279;](#select-queries) consultez la section `SELECT` des requêtes . |
+| `transform` | (Facultatif) Applique des transformations d’ingénierie des fonctionnalités (telles que l’indexation de chaîne, l’encodage à chaud ou TF-IDF) avant de matérialiser le jeu de données. Cette clause est utilisée pour prévisualiser les fonctions transformées. Pour plus d’informations](#transform) consultez la documentation de la clause [`TRANSFORM` . |
+| `select_query` | Instruction `SELECT` standard qui définit le jeu de données. Pour plus d’informations](#select-queries) consultez la section [`SELECT` des requêtes . |
 
 >[!NOTE]
 >
@@ -335,6 +335,10 @@ Les restrictions suivantes s’appliquent lorsque vous utilisez `TRANSFORM` avec
 ## INSERT INTO
 
 La commande `INSERT INTO` est définie comme suit :
+
+>[!IMPORTANT]
+>
+>Query Service prend en charge les **opérations d’ajout uniquement** à l’aide du moteur ITAS. `INSERT INTO` est la seule commande de manipulation de données prise en charge. Les opérations **update** et **delete** ne sont pas disponibles. Pour refléter les modifications apportées à vos données, insérez de nouveaux enregistrements qui représentent l’état souhaité.
 
 ```sql
 INSERT INTO table_name select_query
