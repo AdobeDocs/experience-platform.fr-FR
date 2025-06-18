@@ -5,10 +5,10 @@ hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="Informative"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b78f36ed20d5a08036598fa2a1da7dd066c401fa
 workflow-type: tm+mt
-source-wordcount: '676'
-ht-degree: 54%
+source-wordcount: '1054'
+ht-degree: 34%
 
 ---
 
@@ -20,7 +20,27 @@ ht-degree: 54%
 
 ## Vue d’ensemble {#overview}
 
-Exportez des données vers votre compte Snowflake à l’aide de listes privées.
+Utilisez le connecteur de destination Snowflake pour exporter des données vers l’instance Adobe Snowflake, puis partagez-les avec votre instance par le biais de [listes privées](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about).
+
+Lisez les sections suivantes pour comprendre comment fonctionne la destination Snowflake et comment les données sont transférées entre Adobe et Snowflake.
+
+### Fonctionnement du partage des données de Snowflake {#data-sharing}
+
+Cette destination utilise un partage de données [!DNL Snowflake], ce qui signifie qu’aucune donnée n’est physiquement exportée ou transférée vers votre propre instance de Snowflake. Au lieu de cela, Adobe vous accorde un accès en lecture seule à une table dynamique hébergée dans l’environnement Adobe Snowflake. Vous pouvez interroger cette table partagée directement à partir de votre compte Snowflake, mais vous n’êtes pas propriétaire de la table et ne pouvez pas la modifier ni la conserver au-delà de la période de conservation spécifiée. Adobe gère entièrement le cycle de vie et la structure de la table partagée.
+
+La première fois que vous partagez des données de l’instance Adobe Snowflake vers la vôtre, vous êtes invité à accepter la liste privée d’Adobe.
+
+### Conservation des données et durée de vie (TTL) {#ttl}
+
+Toutes les données partagées par le biais de cette intégration ont une durée de vie (TTL) fixe de sept jours. Sept jours après la dernière exportation, la table partagée expire automatiquement et devient inaccessible, que le flux de données soit toujours actif ou non. Si vous devez conserver les données pendant plus de sept jours, vous devez copier le contenu dans une table que vous détenez dans votre propre instance Snowflake avant l’expiration de la TTL.
+
+### Comportement de mise à jour de l’audience {#audience-update-behavior}
+
+Si votre audience est évaluée en [mode batch](../../../segmentation/methods/batch-segmentation.md), les données du tableau partagé sont actualisées toutes les 24 heures. Cela signifie qu’il peut y avoir un retard de jusqu’à 24 heures entre les modifications de l’appartenance à l’audience et le moment où ces modifications sont répercutées dans le tableau partagé.
+
+### Logique d’exportation incrémentielle {#incremental-export}
+
+Lorsqu’un flux de données s’exécute pour une audience pour la première fois, il effectue un renvoi et partage tous les profils actuellement qualifiés. Après ce renvoi initial, seules les mises à jour incrémentielles sont répercutées dans le tableau partagé. Cela signifie les profils qui sont ajoutés ou supprimés de l’audience. Cette approche garantit des mises à jour efficaces et maintient la table partagée à jour.
 
 ## Conditions préalables {#prerequisites}
 
@@ -55,7 +75,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -67,13 +87,20 @@ Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Se
 
 ### Renseigner les détails de la destination {#destination-details}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_snowflake_accountID"
+>title="Saisissez votre identifiant de compte Snowflake"
+>abstract="Si votre compte est lié à une organisation, utilisez le format suivant : `OrganizationName.AccountName`<br><br> Si votre compte n’est pas lié à une organisation, utilisez le format suivant : `AccountName`"
+
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
 ![Exemple de capture d’écran montrant comment remplir les détails pour votre destination](../../assets/catalog/cloud-storage/snowflake/configure-destination-details.png)
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL ID de compte Snowflake]** : ID de votre compte Snowflake. Exemple : `adobe-123456`.
+* **[!UICONTROL ID de compte Snowflake]** : ID de votre compte Snowflake. Utilisez le format d’identifiant de compte suivant selon que votre compte est lié ou non à une organisation :
+   * Si votre compte est lié à une organisation, procédez comme suit `OrganizationName.AccountName`.
+   * Si votre compte n’est pas lié à une organisation, `AccountName`.
 * **[!UICONTROL Accusé de réception de compte]** : activez l’accusé de réception de l’ID de compte Snowflake pour confirmer que votre ID de compte est correct et qu’il vous appartient.
 
 >[!IMPORTANT]
@@ -90,8 +117,8 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
