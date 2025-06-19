@@ -3,7 +3,7 @@ keywords: connexion facebook;connexion facebook;destinations facebook;facebook;i
 title: Connexion Facebook
 description: Activez les profils dans vos campagnes Facebook pour cibler votre audience et effectuer des personnalisat ions ou encore des suppressions reposant sur les e-mails hachés.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: dd725b4d383bbcd93e68c81d4fe5182d6086e9be
+source-git-commit: 6ca3687d067044c3fcb9455ec287863c4ffaafd2
 workflow-type: tm+mt
 source-wordcount: '2690'
 ht-degree: 22%
@@ -47,7 +47,7 @@ Ensuite, ils peuvent utiliser leurs données hors ligne, y compris les identifia
 | `phone_sha256` | Numéros de téléphone hachés avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les numéros de téléphone hachés avec SHA256. Suivez les instructions de la section [Exigences de correspondance des identifiants](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de noms appropriés pour le texte brut et les numéros de téléphone hachés, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
 | `email_lc_sha256` | Adresses e-mail hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses e-mail hachées avec SHA256. Suivez les instructions de la section [Exigences de correspondance des identifiants](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de noms appropriés pour les adresses électroniques en texte brut et hachées, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
 | `extern_id` | ID d’utilisateur personnalisés | Sélectionnez cette identité cible lorsque votre identité source est un espace de noms personnalisé. |
-| `gender` | Genre | Valeurs acceptées : <ul><li>`m`pour les hommes</li><li>`f`pour les femmes</li></ul> Experience Platform **hache automatiquement** cette valeur avant de l’envoyer à Facebook. Ce hachage automatique est nécessaire pour respecter les exigences de sécurité et de confidentialité de Facebook. Ne fournissez **de valeurs préhachées pour ce champ** car cela entraînerait l’échec du processus de correspondance. |
+| `gender` | Genre | Valeurs acceptées : <ul><li>`m` pour homme</li><li>`f` pour femme</li></ul> Experience Platform **hache automatiquement** cette valeur avant de l’envoyer à Facebook. Ce hachage automatique est nécessaire pour respecter les exigences de sécurité et de confidentialité de Facebook. Ne fournissez **de valeurs préhachées pour ce champ** car cela entraînerait l’échec du processus de correspondance. |
 | `date_of_birth` | Date of birth | Format accepté : `yyyy-MM-DD`. <br>Experience Platform **hache automatiquement** cette valeur avant de l&#39;envoyer à Facebook. Ce hachage automatique est nécessaire pour respecter les exigences de sécurité et de confidentialité de Facebook. Ne fournissez **de valeurs préhachées pour ce champ** car cela entraînerait l’échec du processus de correspondance. |
 | `last_name` | Nom | Format accepté : minuscules, `a-z` caractères uniquement, pas de ponctuation. Utilisez le codage UTF-8 pour les caractères spéciaux.  <br>Experience Platform **hache automatiquement** cette valeur avant de l&#39;envoyer à Facebook. Ce hachage automatique est nécessaire pour respecter les exigences de sécurité et de confidentialité de Facebook. Ne fournissez **de valeurs préhachées pour ce champ** car cela entraînerait l’échec du processus de correspondance. |
 | `first_name` | Prénom | Format accepté : minuscules, `a-z` caractères uniquement, pas de ponctuation, pas d’espaces. Utilisez le codage UTF-8 pour les caractères spéciaux.  <br>Experience Platform **hache automatiquement** cette valeur avant de l&#39;envoyer à Facebook. Ce hachage automatique est nécessaire pour respecter les exigences de sécurité et de confidentialité de Facebook. Ne fournissez **de valeurs préhachées pour ce champ** car cela entraînerait l’échec du processus de correspondance. |
@@ -138,8 +138,8 @@ Si vous choisissez de hacher les adresses e-mail vous-même, veillez à respecte
 >[!NOTE]
 >
 >Les données des espaces de noms non hachés sont automatiquement hachées par [!DNL Experience Platform] lors de l’activation.
->&#x200B;> Les données source des attributs ne sont pas automatiquement hachées. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation.
->&#x200B;> L’option **[!UICONTROL Appliquer la transformation]** ne s’affiche que lorsque vous sélectionnez des attributs comme champs source. Elle ne s’affiche pas lorsque vous choisissez des espaces de noms.
+>> Les données source des attributs ne sont pas automatiquement hachées. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation.
+>> L’option **[!UICONTROL Appliquer la transformation]** ne s’affiche que lorsque vous sélectionnez des attributs comme champs source. Elle ne s’affiche pas lorsque vous choisissez des espaces de noms.
 
 ![Appliquez le contrôle de transformation mis en surbrillance dans l’étape de mappage.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -151,13 +151,13 @@ Avant de pouvoir utiliser l’espace de noms `Extern_ID` pour envoyer des donné
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
 La vidéo ci-dessous montre également les étapes à suivre pour configurer une destination [!DNL Facebook] et activer des audiences.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411785/?quality=12&learn=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -237,8 +237,8 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
