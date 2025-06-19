@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Juin 2025
 description: Les notes de mise à jour de juin 2025 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b39de456b40acda77c67d25ebeba2c8a41c5d3f6
+source-git-commit: fb34e033c90c269742a2045025bf0c964b513679
 workflow-type: tm+mt
-source-wordcount: '1632'
-ht-degree: 35%
+source-wordcount: '1665'
+ht-degree: 34%
 
 ---
 
@@ -18,8 +18,8 @@ ht-degree: 35%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/fr/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/e-release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Composition d’audiences fédérées](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
 >- [Collaboration dans Real-Time CDP](https://experienceleague.adobe.com/fr/docs/real-time-cdp-collaboration/using/latest)
 
 **Date de publication : jeudi 18 juin 2025**
@@ -113,13 +113,12 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonctionnalité | Description |
 | --- | --- |
+| [Correspondance client Google + DV360](../../destinations/catalog/advertising/google-customer-match-dv360.md) disponibilité générale | La destination Correspondance client Google + DV360 est désormais disponible pour tous les utilisateurs Experience Platform. La documentation comprend désormais des conseils détaillés sur la [liaison de comptes](../../destinations/catalog/advertising/google-customer-match-dv360.md#linking) entre les comptes publicitaires [!DNL Adobe] et [!DNL Google]. |
 | [Surveillance au niveau de l’audience](../../dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) pour les destinations de diffusion en streaming | La surveillance au niveau de l’audience est désormais disponible pour les destinations suivantes : <ul><li>[[!DNL (API) Oracle Eloqua] Connexion](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)</li><li>[[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)</li><li>[[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)</li><li>[[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)</li><li>[[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)</li><li>[[!DNL Google Customer Match + Display & Video 360]](../../destinations/catalog/advertising/google-customer-match-dv360.md)</li><li>[[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md)</li><li>[[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md)</li><li>[[!DNL Magnite: Real-time]](../../destinations/catalog/advertising/magnite-streaming.md)</li><li>[[!DNL Marketo Engage Person Sync]](../../destinations/catalog/adobe/marketo-engage-person-sync.md)</li><li>[[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md)</li><li>[[!DNL Moengage]](../../destinations/catalog/mobile-engagement/moengage.md)</li><li>[[!DNL Outreach]](../../destinations/catalog/crm/outreach.md)</li><li>[[!DNL PubMatic Connect]](../../destinations/catalog/advertising/pubmatic.md)</li><li>[[!DNL PubMatic Connect (Custom Audience ID Mapping)]](../../destinations/catalog/advertising/pubmatic.md)</li><li>[[!DNL Qualtrics Automations]](../../destinations/catalog/survey/qualtrics-automations.md)</li><li>[[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus.md)</li><li>[[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)</li><li>[[!DNL Snowflake]](../../destinations/catalog/cloud-storage/snowflake.md)</li><li>[[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)</li><li>[[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)</li></ul> |
 | Prise en charge des identifiants supplémentaires pour les destinations [Facebook](../../destinations/catalog/social/facebook.md#supported-identities) | La destination [!DNL Facebook] prend désormais en charge le mappage de nouveaux champs liés aux adresses pour un ciblage amélioré et une correspondance avec les profils sur les propriétés Facebook. Pour plus d’informations sur les nouveaux champs liés à l’adresse, consultez la section [identités prises en charge](../../destinations/catalog/social/facebook.md#supported-identities). <br> ![Image de l’interface utilisateur de Platform montrant les champs supplémentaires pour Facebook.](../2025/assets/june/facebook-destination-fields.png "Image de l’interface utilisateur de Platform montrant les champs supplémentaires pour Facebook."){width="200" align="center" zoomable="yes"} |
 | Mise à niveau de la destination [[!DNL Braze]](../../destinations/catalog/mobile-engagement/braze.md) | À compter du 19 juin 2025, vous pourrez voir deux cartes **[!DNL Braze]** côte à côte dans le catalogue des destinations. Cela est dû à une mise à niveau interne vers le service de destinations. Le connecteur de destination [!DNL Braze] existant a été renommé **[!UICONTROL (obsolète) Braze]** et une nouvelle carte portant le nom **[!UICONTROL Braze]** est désormais disponible. <br> Utiliser la connexion **[!UICONTROL Braze]** dans le catalogue pour les nouveaux flux de données d’activation. Si vous disposez de flux de données actifs vers la destination **[!UICONTROL (obsolète) Braze]** , ils seront mis à jour automatiquement. Aucune action n’est donc requise de votre part. <br> Si vous créez des flux de données par le biais de l’[API Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/), vous devez mettre à jour vos [!DNL flow spec ID] et [!DNL connection spec ID] avec les valeurs suivantes : <ul><li>ID de spécification de flux : `cb7919bd-69aa-462d-bcc0-db7cdc7fdf51`</li><li>ID de spécification de connexion : `ab957205-5a78-4393-b901-b930ed548220`</li></ul> |
 
 {style="table-layout:auto"}
-
-<!-- | [Google Customer Match + DV360](../../destinations/catalog/advertising/google-customer-match-dv360.md) general availability | The Google Customer Match + DV360 destination is now available for all Experience Platform users. The documentation now includes detailed guidance for [account linking](../../destinations/catalog/advertising/google-customer-match-dv360.md#linking) between [!DNL Adobe] and [!DNL Google] advertising accounts. | -->
 
 Pour plus d’informations, reportez-vous à la [vue d’ensemble des destinations](../../destinations/home.md).
 
@@ -129,7 +128,7 @@ La composition de l’audience fédérée permet aux entreprises de composer des
 
 | Nouvelle fonctionnalité | Description |
 | ----------- | ----------- |
-| Disponibilité générale pour les clients Adobe Healthcare Shield | La composition de l’audience fédérée sera disponible pour les clients d’Adobe Healthcare Shield pour la création d’audiences, l’enrichissement et l’enrichissement des profils d’ici la fin juin. Pour plus d’informations sur les mesures de confidentialité et de sécurité de la composition d’audiences fédérées, consultez la [présentation de la confidentialité et de la sécurité dans la composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/start/privacy-security). Pour plus d’informations sur la conformité HIPAA des produits Experience Platform en général, consultez la [ Présentation des produits et services HIPAA et Adobe ](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
+| Disponibilité générale pour les clients Adobe Healthcare Shield | La composition de l’audience fédérée sera disponible pour les clients d’Adobe Healthcare Shield pour la création d’audiences, l’enrichissement et l’enrichissement des profils d’ici la fin juin. Pour plus d’informations sur les mesures de confidentialité et de sécurité de la composition d’audiences fédérées, consultez la [présentation de la confidentialité et de la sécurité dans la composition d’audiences fédérées](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/privacy-security). Pour plus d’informations sur la conformité HIPAA des produits Experience Platform en général, consultez la [ Présentation des produits et services HIPAA et Adobe ](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
 
 Pour plus d’informations, consultez la [documentation sur la composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/home).
 
@@ -141,7 +140,7 @@ Plusieurs réglementations légales et organisationnelles donnent aux utilisateu
 
 | Fonctionnalité | Description |
 | --- | ---|
-| Prise en charge des lois sur la protection de la vie privée du Tennessee et du Minnesota | Privacy Service prend désormais en charge le Tennessee Information Protection Act (`tipa_tn_usa`) et le Minnesota Consumer Data Privacy Act (`mcdpa_mn_usa`). Vous pouvez traiter les demandes d’accès et de suppression conformément à ces nouvelles réglementations au niveau de l’État. Pour plus d’informations, consultez la [présentation de la réglementation](https://experienceleague.adobe.com/fr/docs/experience-platform/privacy/regulations/overview). |
+| Prise en charge des lois sur la protection de la vie privée du Tennessee et du Minnesota | Privacy Service prend désormais en charge le Tennessee Information Protection Act (`tipa_tn_usa`) et le Minnesota Consumer Data Privacy Act (`mcdpa_mn_usa`). Vous pouvez traiter les demandes d’accès et de suppression conformément à ces nouvelles réglementations au niveau de l’État. Pour plus d’informations, consultez la [présentation de la réglementation](https://experienceleague.adobe.com/en/docs/experience-platform/privacy/regulations/overview). |
 
 Voir la présentation de [Privacy Service](../../privacy-service/home.md) pour plus d’informations sur le service.
 
