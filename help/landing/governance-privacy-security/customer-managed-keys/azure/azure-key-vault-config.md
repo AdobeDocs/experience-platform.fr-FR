@@ -4,10 +4,10 @@ description: Découvrez comment créer un compte d’entreprise avec Azure ou ut
 role: Developer
 feature: Privacy
 exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
-source-git-commit: f4100506947da7584de5b9fb42946ac877c8c102
+source-git-commit: c920f78363ee5f040964dbd3a0d0815474094b07
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 22%
+source-wordcount: '675'
+ht-degree: 19%
 
 ---
 
@@ -57,6 +57,14 @@ Si votre coffre de clés est configuré pour restreindre l’accès public à ce
 
 Sélectionnez **[!DNL Networking]** dans le volet de navigation de gauche. Sous **[!DNL Firewalls and virtual networks]**, cochez la case **[!DNL Allow trusted Microsoft services to bypass this firewall]**, puis sélectionnez **[!DNL Apply]**.
 
+>[!NOTE]
+>
+>Si votre coffre de clés utilise un accès réseau restreint, Adobe vous recommande d’ajouter l’adresse IP statique suivante : `20.88.123.53`. L’ajout de cette adresse IP permet aux services Adobe de surveiller plus efficacement la connectivité et de fournir des alertes sur Platform lorsque des problèmes d’accès sont détectés.
+>
+>Pour en savoir plus sur quand et quand placer sur la liste autorisée l’adresse IP d’Adobe, comment les alertes fonctionnent et comment répondre aux notifications d’accès clé en cas d’échec, consultez [Configuration des alertes et de l’accès IP pour Azure CMK](./alerts-and-ip-access.md).
+>
+>Si votre coffre de clés est déjà configuré pour autoriser l’accès au réseau public, aucune autre action n’est requise.
+
 ![Onglet [!DNL Networking] de [!DNL Microsoft Azure] avec [!DNL Networking] et [!DNL Allow trusted Microsoft surfaces to bypass this firewall] exception en surbrillance.](../../../images/governance-privacy-security/customer-managed-keys/networking.png)
 
 ### Générer une clé {#generate-a-key}
@@ -65,11 +73,11 @@ Une fois que vous avez créé un coffre de clés, vous pouvez générer une nouv
 
 ![Onglet [!DNL Keys] de la [!DNL Azure] avec le [!DNL Generate import] mis en surbrillance.](../../../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
-Utilisez le formulaire fourni pour attribuer un nom à la clé, puis sélectionnez **RSA** ou **RSA-HSM** pour le type de clé. Pour les implémentations hébergées sur [!DNL Azure], la **[!DNL RSA key size]** doit être d’au moins 3 072 bits **&#x200B;**&#x200B;comme requis pour [!DNL Azure Cosmos DB]. [!DNL Azure Data Lake Storage] est également compatible avec RSA 3027.
+Utilisez le formulaire fourni pour attribuer un nom à la clé, puis sélectionnez **RSA** ou **RSA-HSM** pour le type de clé. Pour les implémentations hébergées sur [!DNL Azure], la **[!DNL RSA key size]** doit être d’au moins 3 072 bits **** comme requis pour [!DNL Azure Cosmos DB]. [!DNL Azure Data Lake Storage] est également compatible avec RSA 3027.
 
 >[!NOTE]
 >
->Mémorisez le nom que vous indiquez pour la clé, car il est nécessaire pour envoyer la clé à l’Adobe.
+>Mémorisez le nom que vous indiquez pour la clé, car il est nécessaire pour envoyer la clé à Adobe.
 
 Utilisez les commandes restantes pour configurer la clé que vous souhaitez générer ou importer selon vos besoins. Lorsque vous avez terminé, sélectionnez **[!DNL Create]**.
 
