@@ -1,24 +1,20 @@
 ---
-title: Supprimer enregistrements
+title: Demandes de suppression d’enregistrements (workflow de l’interface utilisateur)
 description: Découvrez comment supprimer des enregistrements dans l’interface utilisateur de Adobe Experience Platform.
-badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 07e09cfe2e2c3ff785caf0b310cbe2f2cc381c17
 workflow-type: tm+mt
-source-wordcount: '1574'
-ht-degree: 25%
+source-wordcount: '1797'
+ht-degree: 22%
 
 ---
 
-# Supprimer des enregistrements {#record-delete}
+# Demandes de suppression d’enregistrements (workflow de l’interface utilisateur) {#record-delete}
 
 Utilisez l’espace de travail [[!UICONTROL Cycle de vie des données] ](./overview.md) pour supprimer des enregistrements dans Adobe Experience Platform en fonction de leur identité principale. Ces enregistrements peuvent être liés à des consommateurs individuels ou à toute autre entité incluse dans le graphique d’identité.
 
 >[!IMPORTANT]
-> 
->La fonctionnalité de suppression des enregistrements est actuellement disponible dans Beta et uniquement dans une version **limitée**. Elle n’est pas disponible pour tous les clients. Les demandes de suppression d’enregistrements ne sont disponibles que pour les organisations dans la version limitée.
-> 
-> 
+>
 >Les suppressions d’enregistrements sont destinées au nettoyage des données, à la suppression des données anonymes ou à la minimisation des données. Elles ne sont **pas** destinées aux demandes de droits des titulaires de données (conformité) en ce qui concerne les réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD). Pour tous les cas d’utilisation de conformité, utilisez plutôt [Adobe Experience Platform Privacy Service](../../privacy-service/home.md).
 
 ## Conditions préalables {#prerequisites}
@@ -124,7 +120,7 @@ Une fois le fichier chargé, vous pouvez continuer à [envoyer la requête](#sub
 
 Pour saisir les identités manuellement, sélectionnez **[!UICONTROL Ajouter une identité]**.
 
-![Workflow de création de demandes avec l’option [!UICONTROL &#x200B; Ajouter une identité &#x200B;] mise en surbrillance.](../images/ui/record-delete/add-identity.png)
+![Workflow de création de demandes avec l’option [!UICONTROL  Ajouter une identité ] mise en surbrillance.](../images/ui/record-delete/add-identity.png)
 
 Des commandes s’affichent pour vous permettre de saisir des identités une par une. Sous **[!UICONTROL espace de noms d’identité]**, utilisez le menu déroulant pour sélectionner le type d’identité. Sous **[!UICONTROL Valeur d’identité de Principal]**, indiquez la valeur de l’espace de noms d’identité pour l’enregistrement.
 
@@ -134,13 +130,59 @@ Pour ajouter d’autres identités, sélectionnez l’icône plus (![A icône pl
 
 ![Workflow de création de demande avec l’icône plus et l’icône d’ajout d’identité en surbrillance.](../images/ui/record-delete/more-identities.png)
 
+## Quotas et délais de traitement {#quotas}
+
+Les demandes de suppression d’enregistrements sont soumises à des limites d’envoi d’identifiants quotidiennes et mensuelles, déterminées par les droits de licence de votre entreprise. Ces limites s’appliquent à la fois aux requêtes de suppression basées sur l’interface utilisateur et les API.
+
+>[!NOTE]
+>
+>Vous pouvez envoyer jusqu’à 1 000 000 **d’identifiants par jour** mais uniquement si votre quota mensuel restant le permet. Si votre limite mensuelle est inférieure à 1 million, vos soumissions quotidiennes ne peuvent pas dépasser cette limite.
+
+### Droit d’envoi mensuel par produit {#quota-limits}
+
+Le tableau ci-dessous présente les limites d’envoi des identifiants par produit et niveau de droit. Pour chaque produit, la limite mensuelle est la moins élevée des deux valeurs suivantes : un plafond d’identifiant fixe ou un seuil basé sur un pourcentage lié à votre volume de données sous licence.
+
+| Produit | Description du droit | Plafond mensuel (le moins élevé) |
+|----------|-------------------------|---------------------------------|
+| Real-Time CDP ou Adobe Journey Optimizer | Sans Privacy and Security Shield ni module complémentaire Healthcare Shield | 2 000 000 d’identifiants ou 5 % de l’audience adressable |
+| Real-Time CDP ou Adobe Journey Optimizer | Avec le module complémentaire Privacy and Security Shield ou Healthcare Shield | 15 000 000 d’identifiants ou 10 % de l’audience adressable |
+| Customer Journey Analytics | Sans Privacy and Security Shield ni module complémentaire Healthcare Shield | 2 000 000 d’identifiants ou 100 d’identifiants par million de lignes CJA de droits |
+| Customer Journey Analytics | Avec le module complémentaire Privacy and Security Shield ou Healthcare Shield | 15 000 000 d’identifiants ou 200 d’identifiants par million de lignes CJA de droits |
+
+>[!NOTE]
+>
+> La plupart des entreprises ont des limites mensuelles inférieures en fonction de leur audience adressable réelle ou de leurs droits de ligne CJA.
+
+Les quotas sont réinitialisés le premier jour de chaque mois civil. Le quota inutilisé n **est pas reporté**
+
+>[!NOTE]
+>
+>Les quotas sont basés sur les droits mensuels sous licence de votre entreprise pour les **identifiants envoyés**. Elles ne sont pas appliquées par les mécanismes de sécurisation du système, mais peuvent être surveillées et examinées.
+>
+>La suppression d’enregistrements est un **service partagé**. Votre limite mensuelle reflète les droits les plus élevés pour Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics et tous les modules complémentaires Shield applicables.
+
+### Chronologies de traitement des envois d’identifiants {#sla-processing-timelines}
+
+Après l’envoi, les demandes de suppression d’enregistrements sont mises en file d’attente et traitées en fonction de votre niveau de droits.
+
+| Description du produit et des droits | Durée de la file d’attente | Durée Maximale De Traitement (SLA) |
+|------------------------------------------------------------------------------------|---------------------|-------------------------------|
+| Sans Privacy and Security Shield ni module complémentaire Healthcare Shield | Jusqu’à 15 jours | 30 jours |
+| Avec le module complémentaire Privacy and Security Shield ou Healthcare Shield | Généralement 24 heures | 15 jours |
+
+Si votre organisation requiert des limites plus élevées, contactez votre représentant Adobe pour une révision des droits.
+
+>[!TIP]
+>
+>Pour vérifier votre niveau d’utilisation ou de droit de quota actuel, consultez le [Guide de référence des quotas](../api/quota.md).
+
 ## Envoyer la requête {#submit}
 
 Une fois que vous avez terminé d’ajouter des identités à la requête, sous **[!UICONTROL Paramètres de requête]**, attribuez un nom et une description facultative à la requête avant de sélectionner **[!UICONTROL Envoyer]**.
 
->[!IMPORTANT]
-> 
->Il existe différentes limites pour le nombre total de suppressions d’enregistrements d’identité uniques qui peuvent être soumises chaque mois. Ces limites sont basées sur votre contrat de licence. Les organisations qui ont acheté toutes les éditions d’Adobe Real-Time Customer Data Platform ou de Adobe Journey Optimizer peuvent envoyer jusqu’à 100 000 suppressions d’enregistrements d’identité par mois. Les organisations qui ont acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield** peuvent envoyer jusqu&#39;à 600 000 suppressions d&#39;enregistrements d&#39;identité par mois.<br>Une seule demande de suppression d’enregistrement via l’interface utilisateur vous permet d’envoyer 10 000 identifiants à la fois. La méthode [API pour supprimer des enregistrements](../api/workorder.md#create) permet l’envoi de 100 000 identifiants à la fois.<br>Il est recommandé d’envoyer autant d’ID par demande que possible, jusqu’à votre limite d’ID. Lorsque vous avez l’intention de supprimer un volume élevé d’identifiants, l’envoi d’un volume faible ou d’un seul identifiant par demande de suppression d’enregistrement doit être évité.
+>[!TIP]
+>
+>Vous pouvez envoyer jusqu’à 10 000 identités par requête via l’interface utilisateur. Pour envoyer des volumes plus importants (jusqu’à 100 000 identifiants par requête), utilisez la méthode [API](../api/workorder.md#create).
 
 ![Champs [!UICONTROL Nom] et [!UICONTROL Description] du paramètre de requête avec [!UICONTROL Envoyer] en surbrillance.](../images/ui/record-delete/submit.png)
 
@@ -160,4 +202,4 @@ Une fois la requête soumise, un ordre de travail est créé et s’affiche dans
 
 Ce document explique comment supprimer des enregistrements dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’exécution d’autres tâches de gestion du cycle de vie des données dans l’interface utilisateur, reportez-vous à la section [ Présentation de l’interface utilisateur du cycle de vie des données](./overview.md).
 
-Pour savoir comment supprimer des enregistrements à l’aide de l’API Data Hygiene, reportez-vous au guide de point d’entrée d’ordre de travail [&#128279;](../api/workorder.md).
+Pour savoir comment supprimer des enregistrements à l’aide de l’API Data Hygiene, reportez-vous au guide de point d’entrée d’ordre de travail [](../api/workorder.md).

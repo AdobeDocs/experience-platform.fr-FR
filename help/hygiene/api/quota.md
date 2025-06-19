@@ -3,10 +3,10 @@ title: Point d’entrée de l’API Quota
 description: Le point d’entrée /quota de l’API Data Hygiene vous permet de surveiller l’utilisation de la gestion avancée du cycle de vie des données par rapport aux limites mensuelles de quota de votre entreprise pour chaque type de tâche.
 role: Developer
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
-source-git-commit: 48a83e2b615fc9116a93611a5e6a8e7f78cb4dee
+source-git-commit: 4d34ae1885f8c4b05c7bb4ff9de9c0c0e26154bd
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 29%
+source-wordcount: '492'
+ht-degree: 22%
 
 ---
 
@@ -14,10 +14,7 @@ ht-degree: 29%
 
 Le point d’entrée `/quota` de l’API Data Hygiene vous permet de surveiller l’utilisation de la gestion avancée du cycle de vie des données par rapport aux limites de quota de votre entreprise pour chaque type de tâche.
 
-Les quotas sont appliqués pour chaque type de tâche Data Lifecycle de la manière suivante :
-
-* Les suppressions d’enregistrements et les mises à jour sont limitées à un certain nombre de demandes par mois.
-* Les expirations de jeux de données ont une limite plate pour le nombre de traitements principaux simultanés, quelle que soit la date d’exécution des expirations.
+L’utilisation du quota est suivie pour chaque type de tâche du cycle de vie des données. Vos limites de quota réelles dépendent des droits de votre organisation et peuvent être révisées périodiquement. L’expiration des jeux de données est soumise à une limite stricte du nombre de tâches actives simultanées.
 
 ## Prise en main
 
@@ -25,7 +22,15 @@ Le point d’entrée utilisé dans ce guide fait partie de lʼAPI Data Hygiene. 
 
 * Liens vers la documentation connexe
 * Un guide de lecture des exemples d’appels API dans ce document
-* Informations importantes concernant les en-têtes requis pour effectuer des appels vers une API Experience Platform
+* Informations importantes concernant les en-têtes requis pour effectuer des appels vers n’importe quelle API Experience Platform
+
+## Quotas et délais de traitement {#quotas}
+
+Les demandes de suppression d’enregistrements sont soumises à des quotas et à des attentes de niveau de service en fonction de vos droits de licence. Ces limites s’appliquent à la fois aux requêtes de suppression basées sur l’interface utilisateur et les API.
+
+>[!TIP]
+> 
+>Ce document vous explique comment interroger votre utilisation par rapport aux limites basées sur les droits. Pour une description complète des niveaux de quota, des droits de suppression d’enregistrements et du comportement de SLA, consultez les documents [Suppression d’enregistrements basée sur l’interface utilisateur](../ui/record-delete.md#quotas) ou [Suppression d’enregistrements basée sur l’API](./workorder.md#quotas).
 
 ## Quotas de liste {#list}
 
@@ -40,7 +45,7 @@ GET /quota?quotaType={QUOTA_TYPE}
 
 | Paramètre | Description |
 | --- | --- |
-| `{QUOTA_TYPE}` | Paramètre de requête facultatif qui spécifie le type de quota à récupérer. Si aucun paramètre `quotaType` n’est fourni, toutes les valeurs de quota sont renvoyées dans la réponse de l’API. Les valeurs de type acceptées sont les suivantes :<ul><li>`datasetExpirationQuota` : cet objet indique le nombre d’expirations de jeux de données actives simultanées pour votre organisation, ainsi que votre limite totale d’expirations. </li><li>`dailyConsumerDeleteIdentitiesQuota` : cet objet indique le nombre total de demandes de suppression d’enregistrements effectuées par votre organisation aujourd’hui et votre allocation quotidienne totale.<br>Remarque : Seules les demandes acceptées sont comptabilisées. Si une commande de travail est rejetée parce qu’elle ne parvient pas à être validée, ces suppressions d’identité ne sont pas prises en compte par rapport à votre quota.</li><li>`monthlyConsumerDeleteIdentitiesQuota` : cet objet indique le nombre total de demandes de suppression d’enregistrements effectuées par votre organisation ce mois-ci et votre allocation mensuelle totale.</li><li>`monthlyUpdatedFieldIdentitiesQuota` : cet objet indique le nombre total de demandes de mise à jour des enregistrements effectuées par votre organisation ce mois-ci et votre allocation mensuelle totale.</li></ul> |
+| `{QUOTA_TYPE}` | Paramètre de requête facultatif qui spécifie le type de quota à récupérer. Si aucun paramètre `quotaType` n’est fourni, toutes les valeurs de quota sont renvoyées dans la réponse de l’API. Les valeurs de type acceptées sont les suivantes :<ul><li>`datasetExpirationQuota` : cet objet affiche le nombre d’expirations de jeux de données actifs simultanément pour votre organisation et votre tolérance totale d’expirations. </li><li>`dailyConsumerDeleteIdentitiesQuota` : Cet objet affiche le nombre total de demandes de suppression d&#39;enregistrements effectuées par votre organisation aujourd&#39;hui et votre allocation quotidienne totale.<br>Remarque : seules les demandes acceptées sont comptabilisées. Si un ordre de travail est rejeté car sa validation échoue, ces suppressions d’identité ne sont pas prises en compte dans votre quota.</li><li>`monthlyConsumerDeleteIdentitiesQuota` : cet objet affiche le nombre total de demandes de suppression d&#39;enregistrements effectuées par votre organisation ce mois-ci et votre allocation mensuelle totale.</li><li>`monthlyUpdatedFieldIdentitiesQuota` : Cet objet affiche le nombre total de demandes de mises à jour d&#39;enregistrements effectuées par votre organisation ce mois-ci et votre allocation mensuelle totale.</li></ul> |
 
 **Requête**
 
@@ -55,7 +60,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails des quotas de cycle de vie des données.
+Une réponse réussie renvoie les détails de vos quotas de cycle de vie des données.
 
 ```json
 {
@@ -70,13 +75,13 @@ Une réponse réussie renvoie les détails des quotas de cycle de vie des donné
       "name": "dailyConsumerDeleteIdentitiesQuota",
       "description": "The consumed number of deleted identities in all workorder requests for the organization for today.",
       "consumed": 0,
-      "quota": 600000
+      "quota": 1000000
     },
     {
       "name": "monthlyConsumerDeleteIdentitiesQuota",
       "description": "The consumed number of deleted identities in all workorder requests for the organization for this month.",
       "consumed": 841,
-      "quota": 600000
+      "quota": 2000000
     },
     {
       "name": "monthlyUpdatedFieldIdentitiesQuota",
@@ -89,7 +94,5 @@ Une réponse réussie renvoie les détails des quotas de cycle de vie des donné
 ```
 
 | Propriété | Description |
-| --- | --- |
-| `quotas` | Répertorie les informations de quota pour chaque type de tâche de cycle de vie des données. Chaque objet Quota contient les propriétés suivantes :<ul><li>`name` : type de tâche du cycle de vie des données :<ul><li>`expirationDatasetQuota` : expirations de jeux de données</li><li>`deleteIdentityWorkOrderDatasetQuota` : Suppressions d’enregistrements</li></ul></li><li>`description` : description du type de tâche du cycle de vie des données.</li><li>`consumed` : nombre de tâches de ce type exécutées au cours de la période en cours. Le nom de l’objet indique la période du quota.</li><li>`quota` : allocation de ce type de tâche pour votre organisation. Pour les suppressions et mises à jour d’enregistrements, le quota représente le nombre de tâches pouvant être exécutées pour chaque période mensuelle. Pour les expirations de jeux de données, le quota représente le nombre de tâches pouvant être actives simultanément à un moment donné.</li></ul> |
-
-{style="table-layout:auto"}
+| -------- | ------- |
+| `quotas` | Répertorie les informations sur le quota pour chaque type de traitement du cycle de vie des données. Chaque objet Quota contient les propriétés suivantes :<ul><li>`name` : type de traitement du cycle de vie des données :<ul><li>`expirationDatasetQuota` : expirations de jeux de données</li><li>`deleteIdentityWorkOrderDatasetQuota` : suppressions d’enregistrements</li></ul></li><li>`description` : description du type de traitement du cycle de vie des données.</li><li>`consumed` : nombre de traitements de ce type exécutés au cours de la période en cours. Le nom de l’objet indique la période de quota.</li><li>`quota` : allocation pour ce type de traitement pour votre organisation. Pour les suppressions et mises à jour d&#39;enregistrements, le quota représente le nombre de traitements pouvant être exécutés pour chaque période mensuelle. Pour les expirations de jeux de données, le quota représente le nombre de traitements pouvant être simultanément actifs à un moment donné.</li></ul> |
