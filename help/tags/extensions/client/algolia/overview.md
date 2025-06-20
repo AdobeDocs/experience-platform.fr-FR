@@ -85,8 +85,8 @@ Ajoutez l’action **[!UICONTROL Clic]** à votre règle de balise pour envoyer 
 >[!NOTE]
 >
 >Si `queryID` et `position` sont inclus, l’événement est classé comme **ID d’objet sur lesquels l’utilisateur a cliqué après la recherche**. Sinon, il est classé comme un événement **Clicked object IDs**.
->><br><br>
->>Si l’élément de données ne fournit pas de `indexName`, le **Nom d’index par défaut** est utilisé lors de l’envoi de l’événement.
+>&#x200B;><br><br>
+>&#x200B;>Si l’élément de données ne fournit pas de `indexName`, le **Nom d’index par défaut** est utilisé lors de l’envoi de l’événement.
 
 ![](../../../images/extensions/client/algolia/clicked.png)
 
@@ -105,8 +105,8 @@ Ajoutez l’action **[!UICONTROL Converti]** à votre règle de balise pour envo
 >[!NOTE]
 >
 >Si l’élément de données contient des `queryId`, l’événement est classé comme **Converti après la recherche**. Sinon, il sera classé comme un événement **Converti**.
->><br><br>
->>Si l’élément de données ne fournit pas de `indexName`, le **Nom d’index par défaut** est utilisé lors de l’envoi de l’événement.
+>&#x200B;><br><br>
+>&#x200B;>Si l’élément de données ne fournit pas de `indexName`, le **Nom d’index par défaut** est utilisé lors de l’envoi de l’événement.
 
 ![](../../../images/extensions/client/algolia/converted.png)
 
@@ -125,10 +125,10 @@ Ajoutez l’action **[!UICONTROL Ajouté au panier]** à votre règle de balise 
 >[!NOTE]
 >
 >Si l’élément de données contient des `queryId`, l’événement est classé comme **Ajouté aux ID d’objet de panier après la recherche**. Sinon, il sera classé comme un événement **Ajouté aux ID d’objet de panier**.
->><br><br>
->>Si l’élément de données ne fournit pas de `indexName`, le **Nom d’index par défaut** est utilisé lors de l’envoi de l’événement.
->><br><br>
->>Si les éléments de données par défaut ne répondent pas à vos besoins, un élément de données personnalisé peut être créé pour renvoyer les détails de l’événement souhaité.
+>&#x200B;><br><br>
+>&#x200B;>Si l’élément de données ne fournit pas de `indexName`, le **Nom d’index par défaut** est utilisé lors de l’envoi de l’événement.
+>&#x200B;><br><br>
+>&#x200B;>Si les éléments de données par défaut ne répondent pas à vos besoins, un élément de données personnalisé peut être créé pour renvoyer les détails de l’événement souhaité.
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png)
 
@@ -147,10 +147,10 @@ Ajoutez l’action **[!UICONTROL Acheté]** à votre règle de balise pour envoy
 >[!NOTE]
 >
 >Si l’élément de données contient des `queryId`, l’événement est classé comme **ID d’objet achetés après la recherche**. Sinon, il sera classé comme un événement **ID d’objet achetés**.
->><br><br>
->>Si l’élément de données ne fournit pas de `indexName`, le **Nom d’index par défaut** est utilisé lors de l’envoi de l’événement.
->><br><br>
->>Si les éléments de données par défaut ne répondent pas à vos besoins, un élément de données personnalisé peut être créé pour renvoyer les détails de l’événement souhaité.
+>&#x200B;><br><br>
+>&#x200B;>Si l’élément de données ne fournit pas de `indexName`, le **Nom d’index par défaut** est utilisé lors de l’envoi de l’événement.
+>&#x200B;><br><br>
+>&#x200B;>Si les éléments de données par défaut ne répondent pas à vos besoins, un élément de données personnalisé peut être créé pour renvoyer les détails de l’événement souhaité.
 
 ![](../../../images/extensions/client/algolia/purchased.png)
 
