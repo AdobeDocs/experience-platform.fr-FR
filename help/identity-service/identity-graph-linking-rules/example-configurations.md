@@ -1,10 +1,8 @@
 ---
 title: Guide de configuration des règles de liaison du graphique d’identités
 description: Découvrez les différents types d’implémentation que vous pouvez configurer à l’aide des règles de liaison de graphique d’identités.
-hide: true
-hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 2a5c8b3bd58d3659d0fcf519407b180bf5f091b4
+source-git-commit: 54a50cd3e122df7f653c06232e0598fa878eeac5
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 8%
@@ -136,7 +134,7 @@ Lisez cette section pour connaître les implémentations intermédiaires de [!DN
 >
 >Pour terminer les implémentations ci-dessous, vous devez créer les espaces de noms personnalisés suivants avec les symboles d’identité (sensibles à la casse) de :
 >* `CRMID`
->* `CCHash` (il s’agit d’un espace de noms personnalisé qui représente un numéro de carte de crédit haché.)
+>* `CChash` (il s’agit d’un espace de noms personnalisé qui représente un numéro de carte de crédit haché.)
 
 Imaginez que vous êtes un architecte de données travaillant pour une banque commerciale qui émet des cartes de crédit. Votre équipe marketing a indiqué qu’elle souhaitait inclure l’historique des transactions passées par carte de crédit dans un profil. Ce graphique d’identité peut se présenter comme suit.
 
@@ -482,6 +480,7 @@ loginID: JanePersonal, ECID: 222
 >* `CRMID`
 >* `loyaltyID`
 >* `thirdPartyID`
+>* `orderID`
 
 Vous êtes une entreprise de médias et de divertissement et vos utilisateurs finaux disposent des éléments suivants :
 
