@@ -2,12 +2,12 @@
 title: Demandbase Intent
 description: Découvrez la source Demandbase Intent sur Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions newtab=true"
-badgeB2P: label="Édition B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Édition B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: a1af85c6b76cc7bded07ab4acaec9c3213a94397
+source-git-commit: 5757bc84a9aeec18eb5fe21d6f02160b2ba55166
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1480'
 ht-degree: 11%
 
 ---
@@ -30,7 +30,7 @@ Une liste d’adresses IP doit être ajoutée à un place sur la liste autorisé
 
 ### Configuration des autorisations sur Experience Platform
 
-Pour connecter votre compte [!DNL Demandbase] à Experience Platform **les autorisations** Afficher les sources et **[!UICONTROL Gérer les sources]** doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/abac/ui/permissions.md).
+Pour connecter votre compte [!DNL Demandbase] à Experience Platform ]**les autorisations**[!UICONTROL  Afficher les sources et **[!UICONTROL Gérer les sources]** doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/abac/ui/permissions.md).
 
 ### Contraintes de dénomination pour fichiers et répertoires
 
@@ -71,6 +71,7 @@ Le schéma [!DNL Demandbase] est appelé **Company Intent Weekly**. Il s’agit 
 | `duration_type` | CHAÎNE | VRAI | OUI | Type de durée. En règle générale, cette valeur peut être quotidienne, hebdomadaire ou mensuelle selon la durée de cumul choisie. Pour cet exemple de données, cette valeur est `week`. |
 | `keyword_set_id` | CHAÎNE | VRAI | OUI | ID de jeu de mots-clés. Il est unique par client donné. |
 | `keyword_set` | CHAÎNE | VRAI | OUI | Nom du jeu de mots-clés. |
+| `keyword` | CHAÎNE | VRAI | | Mot-clé d’intention. |
 | `is_trending` | CHAÎNE | VRAI | | État actuel d’une tendance donnée. L’état de tendance est mesuré comme un sursaut d’activité d’intention au cours de la dernière semaine par rapport aux moyennes des sept semaines précédentes. |
 | `intent_strength` | ENUM[STRING] | VRAI | | Mesure quantifiée de la force de l’intention. Les valeurs acceptées sont les suivantes : `HIGH`, `MED` et `LOW`. |
 | `num_people_researching` | NOMBRE ENTIER | VRAI | | Nombre de personnes appartenant au `company_id` qui ont effectué une recherche sur le mot-clé au cours des sept derniers jours. |
