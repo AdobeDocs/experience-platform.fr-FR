@@ -2,9 +2,9 @@
 title: Créer une connexion de base SFTP à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform à un serveur SFTP (Secure File Transfer Protocol) à l’aide de l’API Flow Service.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4816a6b627dc6551e351bfe3cdc4bc8c8ea8b17e
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '751'
 ht-degree: 14%
 
 ---
@@ -50,7 +50,7 @@ Pour créer un identifiant de connexion de base, envoyez une requête POST au po
 
 >[!IMPORTANT]
 >
->Le connecteur [!DNL SFTP] prend en charge une clé OpenSSH de type RSA ou DSA. Assurez-vous que le contenu de votre fichier clé commence par `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` et se termine par `"-----END [RSA/DSA] PRIVATE KEY-----"`. Si le fichier de clé privée est un fichier au format PPK, utilisez l’outil PuTTY pour convertir le fichier PPK au format OpenSSH.
+>Le connecteur [!DNL SFTP] prend en charge les clés OpenSSH de type `ed25519`, `RSA` ou `DSA`. Assurez-vous que le contenu de votre fichier clé commence par `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` et se termine par `"-----END [RSA/DSA] PRIVATE KEY-----"`. Si le fichier de clé privée est un fichier au format PPK, utilisez l’outil PuTTY pour convertir le fichier PPK au format OpenSSH.
 
 **Format d’API**
 
@@ -160,7 +160,7 @@ curl -X POST \
 | `auth.params.host` | Nom d’hôte de votre serveur [!DNL SFTP]. |
 | `auth.params.port` | Port du serveur SFTP. Cette valeur entière est 22 par défaut. |
 | `auth.params.username` | Nom d’utilisateur associé à votre serveur [!DNL SFTP]. |
-| `auth.params.privateKeyContent` | Contenu de clé privée SSH codé en Base64. Le type de clé OpenSSH doit être classé comme RSA ou DSA. |
+| `auth.params.privateKeyContent` | Contenu de clé privée SSH codée en Base64. Les types de clés OpenSSH pris en charge sont `ed25519`, `RSA` et `DSA`. |
 | `auth.params.passPhrase` | Le mot de passe ou le mot de passe pour déchiffrer la clé privée si le fichier de clé ou le contenu de la clé est protégé par un mot de passe. Si PrivateKeyContent est protégé par mot de passe, ce paramètre doit être utilisé avec la phrase secrète de PrivateKeyContent comme valeur. |
 | `auth.params.maxConcurrentConnections` | Nombre maximal de connexions simultanées spécifié lors de la connexion d’Experience Platform au protocole SFTP. Lorsqu’elle est activée, cette valeur doit être définie sur au moins 1. |
 | `auth.params.folderPath` | Chemin d’accès au dossier auquel vous souhaitez accorder l’accès. |

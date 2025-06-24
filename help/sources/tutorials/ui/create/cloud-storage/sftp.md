@@ -2,9 +2,9 @@
 title: Créer une connexion Source SFTP dans l’interface utilisateur
 description: Découvrez comment créer une connexion source SFTP à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4816a6b627dc6551e351bfe3cdc4bc8c8ea8b17e
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '662'
 ht-degree: 25%
 
 ---
@@ -56,7 +56,7 @@ Pour connecter un compte existant, sélectionnez le compte FTP ou SFTP auquel vo
 >
 >* Une fois créé, vous ne pouvez pas modifier le type d’authentification d’une connexion de base [!DNL SFTP]. Pour modifier le type d’authentification, vous devez créer une connexion de base.
 >
->* SFTP prend en charge une clé OpenSSH de type RSA ou DSA. Assurez-vous que le contenu de votre fichier clé commence par `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` et se termine par `"-----END [RSA/DSA] PRIVATE KEY-----"`. Si le fichier de clé privée est un fichier au format PPK, utilisez l’outil PuTTY pour convertir le fichier PPK au format OpenSSH.
+>* SFTP prend en charge la clé OpenSSH de type `ed25519`, `RSA` ou `DSA`. Assurez-vous que le contenu de votre fichier clé commence par `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` et se termine par `"-----END [RSA/DSA] PRIVATE KEY-----"`. Si le fichier de clé privée est un fichier au format PPK, utilisez l’outil PuTTY pour convertir le fichier PPK au format OpenSSH.
 
 Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom et une description facultative pour votre nouveau compte [!DNL SFTP].
 
