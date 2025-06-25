@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: label="Beta" type="Informative"
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: c193a6aa45d179acdf655a70987875bf0da51b2b
+source-git-commit: 8ce5b6718861d01731b9aab9f81645f2aeb2970f
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1160'
 ht-degree: 4%
 
 ---
@@ -38,6 +38,7 @@ Les configurations de flux de données dynamiques comportent des limites et des 
 | Mécanisme de sécurisation | Limite | Type de limite |
 |---------|------------|------|
 | Nombre maximal de configurations de trains de données dynamiques par train de données pour les services Experience Platform | 5 | Mécanisme de sécurisation des performances |
+| Nombre maximal de configurations de trains de données dynamiques par train de données pour le transfert d’événement | 5 | Mécanisme de sécurisation des performances |
 | Nombre maximal de configurations de trains de données dynamiques par train de données pour Adobe Analytics | 5 | Mécanisme de sécurisation des performances |
 | Nombre maximal de configurations de trains de données dynamiques par train de données pour Adobe Target | 5 | Mécanisme de sécurisation des performances |
 | Nombre maximal de configurations de trains de données dynamiques par train de données pour Adobe Audience Manager | 5 | Mécanisme de sécurisation des performances |
