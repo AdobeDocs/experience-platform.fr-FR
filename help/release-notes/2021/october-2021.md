@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’octobre 2021 d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2021 pour Adobe Experience Platform.
 exl-id: 8f8bcb24-6478-4281-9362-9559158384af
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 76%
+source-wordcount: '433'
+ht-degree: 79%
 
 ---
 
@@ -58,7 +58,6 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 | Fonctionnalité | Description |
 | --- | --- |
 | Améliorations de la source [!DNL Amazon S3] | Vous pouvez désormais utiliser le paramètre `s3SessionToken` pour connecter votre compte [!DNL Amazon S3] à Experience Platform à l’aide d’informations d’identification de sécurité temporaires. Ce jeton vous permet de fournir un accès temporaire à court terme à vos ressources [!DNL Amazon S3] à des utilisateurs dans des environnements non approuvés. Pour plus d’informations, consultez la [[!DNL Amazon S3] documentation](../../sources/connectors/cloud-storage/s3.md#prerequisites). |
-| [!DNL Generic REST API] (version bêta) | Vous pouvez désormais créer une connexion source [!DNL Generic REST API] à l’aide de l’API [[!DNL Flow Service]  ](../../sources/tutorials/api/create/protocols/generic-rest.md) pour importer des données d’une application REST générique vers Experience Platform. Pour plus d’informations, consultez la [[!DNL Generic REST API] présentation](../../sources/connectors/protocols/generic-rest.md).  |
-| [!DNL Zoho CRM] (version bêta) | Vous pouvez désormais créer une connexion source [!DNL Zoho CRM] à l’aide de l’API [&#128279;](../../sources/tutorials/api/create/crm/zoho.md) [!DNL Flow Service]  ou de l’interface utilisateur [&#128279;](../../sources/tutorials/ui/create/crm/zoho.md)  pour importer les données de votre compte [!DNL Zoho CRM] vers Experience Platform. Pour plus d’informations, consultez la [[!DNL Zoho CRM] présentation](../../sources/connectors/crm/zoho.md). |
+| [!DNL Generic REST API] (version bêta) | Vous pouvez désormais créer une connexion source [!DNL Generic REST API] à l’aide de l’API [[!DNL Flow Service]  ](../../sources/tutorials/api/create/protocols/generic-rest.md) pour importer des données d’une application REST générique vers Experience Platform. Pour plus d’informations, consultez la [[!DNL Generic REST API] présentation](../../sources/connectors/protocols/generic-rest.md). |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).

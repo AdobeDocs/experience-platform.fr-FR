@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Explorer un système de paiement à l’aide de l’API Flow Service
 description: Ce tutoriel utilise l’API Flow Service pour explorer les applications de paiement.
 exl-id: 7d0231de-46c0-49df-8a10-aeb42a2c8822
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 39%
+source-wordcount: '567'
+ht-degree: 41%
 
 ---
 
@@ -28,7 +28,10 @@ Les sections suivantes contiennent des informations supplémentaires que vous de
 
 ### Collecter les informations d’identification requises
 
-Ce tutoriel nécessite une connexion valide avec l’application de paiements tierce à partir de laquelle vous souhaitez ingérer des données. Une connexion valide implique l’identifiant de spécification de connexion et l’identifiant de connexion de votre application. Vous trouverez plus d’informations sur la création d’une connexion aux paiements et la récupération de ces valeurs dans le tutoriel [connecter une source de paiements à Experience Platform](../../api/create/payments/paypal.md).
+Vous devez disposer d’une connexion active à une application de paiements pour explorer les fichiers et la structure de fichiers de votre source. Pour plus d’informations, consultez les documents suivants :
+
+* [[!DNL Square]](../create/payments/square.md)
+* [[!DNL Stripe]](../create/payments/stripe.md)
 
 ### Lecture d’exemples d’appels API
 
@@ -83,29 +86,29 @@ Une réponse réussie renvoie un tableau de tables de votre système de paiement
 [
     {
         "type": "table",
-        "name": "PayPal.Billing_Plans",
-        "path": "PayPal.Billing_Plans",
+        "name": "Stripe.Billing_Plans",
+        "path": "Stripe.Billing_Plans",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "PayPal.Billing_Plans_Payment_Definition",
-        "path": "PayPal.Billing_Plans_Payment_Definition",
+        "name": "Stripe.Billing_Plans_Payment_Definition",
+        "path": "Stripe.Billing_Plans_Payment_Definition",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "PayPal.Billing_Plans_Payment_Definition_Charge_Models",
-        "path": "PayPal.Billing_Plans_Payment_Definition_Charge_Models",
+        "name": "Stripe.Billing_Plans_Payment_Definition_Charge_Models",
+        "path": "Stripe.Billing_Plans_Payment_Definition_Charge_Models",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "PayPal.Catalog_Products",
-        "path": "PayPal.Catalog_Products",
+        "name": "Stripe.Catalog_Products",
+        "path": "Stripe.Catalog_Products",
         "canPreview": true,
         "canFetchSchema": true
     }

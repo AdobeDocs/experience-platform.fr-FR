@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation des connecteurs source
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
+source-git-commit: 2e4df13bae9f4afa24f761e650790704da44da90
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1554'
 ht-degree: 67%
 
 ---
@@ -112,13 +112,11 @@ Les systèmes de gestion de la relation client (CRM) fournissent des données qu
 - [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE lot]{type=Informative}
 - [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) [!BADGE lot]{type=Informative}
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md) [!BADGE lot]{type=Informative}
-- [[!DNL Zoho CRM]](connectors/crm/zoho.md) [!BADGE lot]{type=Informative}
 
 ### Succès client {#customer-success}
 
 Experience Platform prend en charge l’ingestion de données provenant d’une application de succès client tierce. Pour plus d’informations, consultez les documents connexes suivants :
 
-- [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md) [!BADGE lot]{type=Informative}
 - [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) [!BADGE lot]{type=Informative}
 - [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) [!BADGE lot]{type=Informative}
 - [[!DNL Zendesk]](connectors/customer-success/zendesk.md) [!BADGE lot]{type=Informative}
@@ -131,7 +129,6 @@ Experience Platform prend en charge l’ingestion de données provenant d’une
 - [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE lot]{type=Informative}
 - [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE lot]{type=Informative}
 - [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE lot]{type=Informative}
-- [[!DNL Couchbase]](connectors/databases/couchbase.md) [!BADGE lot]{type=Informative}
 - [[!DNL GreenPlum]](connectors/databases/greenplum.md) [!BADGE lot]{type=Informative}
 - [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) [!BADGE lot]{type=Informative}
 - [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) [!BADGE lot]{type=Informative}
@@ -139,7 +136,6 @@ Experience Platform prend en charge l’ingestion de données provenant d’une
 - [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) [!BADGE lot]{type=Informative}
 - [[!DNL MySQL]](connectors/databases/mysql.md) [!BADGE lot]{type=Informative}
 - [[!DNL Oracle]](connectors/databases/oracle.md) [!BADGE lot]{type=Informative}
-- [[!DNL Phoenix]](connectors/databases/phoenix.md) [!BADGE lot]{type=Informative}
 - [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE lot]{type=Informative}
 - [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE lot]{type=Informative}
 
@@ -181,15 +177,11 @@ Experience Platform prend en charge l’ingestion de données provenant d’un 
 - [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) [!BADGE lot]{type=Informative}
 - [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) [!BADGE lot]{type=Informative}
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE lot]{type=Informative}
-<!-- 
-- [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md)
--->
 
 ### Paiements {#payments}
 
 Experience Platform prend en charge l’ingestion de données provenant d’un système de paiement tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
-- [[!DNL PayPal]](connectors/payments/paypal.md) [!BADGE lot]{type=Informative}
 - [[!DNL Square]](connectors/payments/square.md) [!BADGE lot]{type=Informative}
 - [[!DNL Stripe]](connectors/payments/stripe.md) [!BADGE lot]{type=Informative}
 
