@@ -127,7 +127,7 @@ Une fois le fichier chargé, vous pouvez continuer à [envoyer la requête](#sub
 
 Pour saisir les identités manuellement, sélectionnez **[!UICONTROL Ajouter une identité]**.
 
-![Workflow de création de demandes avec l’option [!UICONTROL  Ajouter une identité ] mise en surbrillance.](../images/ui/record-delete/add-identity.png)
+![Workflow de création de demandes avec l’option [!UICONTROL &#x200B; Ajouter une identité &#x200B;] mise en surbrillance.](../images/ui/record-delete/add-identity.png)
 
 Des commandes s’affichent pour vous permettre de saisir des identités une par une. Sous **[!UICONTROL espace de noms d’identité]**, utilisez le menu déroulant pour sélectionner le type d’identité. Sous **[!UICONTROL Valeur d’identité de Principal]**, indiquez la valeur de l’espace de noms d’identité pour l’enregistrement.
 
@@ -209,4 +209,4 @@ Une fois la requête soumise, un ordre de travail est créé et s’affiche dans
 
 Ce document explique comment supprimer des enregistrements dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’exécution d’autres tâches de gestion du cycle de vie des données dans l’interface utilisateur, reportez-vous à la section [ Présentation de l’interface utilisateur du cycle de vie des données](./overview.md).
 
-Pour savoir comment supprimer des enregistrements à l’aide de l’API Data Hygiene, reportez-vous au guide de point d’entrée d’ordre de travail [](../api/workorder.md).
+Pour savoir comment supprimer des enregistrements à l’aide de l’API Data Hygiene, reportez-vous au guide de point d’entrée d’ordre de travail [&#128279;](../api/workorder.md).
