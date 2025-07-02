@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 7be3e6c143d792113a0d623e2d12d6710a3be70c
 workflow-type: tm+mt
 source-wordcount: '5195'
-ht-degree: 63%
+ht-degree: 66%
 
 ---
 
@@ -324,7 +324,7 @@ La liste des contraintes de temps disponibles pour cette opération diffère de 
 >[!NOTE]
 >
 >Lors de l’utilisation de la contrainte de temps « Après », le dernier événement peut avoir lieu plus longtemps que la durée répertoriée dans la contrainte de temps. >
->&#x200B;>Par exemple, si vous disposez d’un événement Page vue et d’un événement Passage en caisse et que vous appliquez la contrainte de temps « Après 1 heure » entre ces deux événements, une définition de segment avec un événement Passage en caisse 2 heures après l’événement Page vue est éligible.
+>>Par exemple, si vous disposez d’un événement Page vue et d’un événement Passage en caisse et que vous appliquez la contrainte de temps « Après 1 heure » entre ces deux événements, une définition de segment avec un événement Passage en caisse 2 heures après l’événement Page vue est éligible.
 >
 >En outre, ces deux contraintes de temps peuvent être utilisées en coordination l&#39;une avec l&#39;autre.
 >
@@ -385,16 +385,16 @@ Pour sélectionner une politique de fusion pour votre définition de segment, s�
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
 >title="Profils qualifiés"
->abstract="Les profils qualifiés indiquent le nombre réel de profils qui correspondent aux règles de la définition de segment. Ce nombre est mis à jour toutes les 24 heures, après l’exécution de la tâche d’évaluation de segment."
+>abstract="Les profils qualifiés indiquent le nombre réel de profils qui correspondent aux règles de la définition de segment. Ce nombre est mis à jour toutes les 24 heures, après l’exécution du traitement d’évaluation de segment."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
 >title="Profils estimés"
->abstract="Les profils estimés indiquent un nombre approximatif de profils, en fonction de l’exemple de tâche, qui seraient qualifiés pour les règles de la définition de segment. Cela signifie que les données d’exemple sont projetées sur le jeu de profils le plus volumineux, ce qui entraîne une estimation du nombre qui peut différer du nombre réel de profils qualifiés. L’échantillon de profil estimé a un intervalle de confiance de 95 %. <br><br>Ce nombre est mis à jour lorsque l’exemple de tâche est mis à jour, ce qui se produit lorsqu’une modification de plus de 5 % est apportée aux données client ou que la dernière tâche d’exemple date de plus de 7 jours."
+>abstract="Les profils estimés indiquent un nombre approximatif de profils, en fonction de l’exemple de traitement, qui seraient qualifiés pour les règles de la définition de segment. Cela signifie que les données d’exemple sont projetées sur le jeu de profils le plus volumineux, ce qui entraîne une estimation du nombre qui peut différer du nombre réel de profils qualifiés. L’échantillon de profils estimés a un intervalle de confiance de 95 %. <br><br>Ce nombre est mis à jour lorsque l’exemple de traitement est mis à jour, ce qui se produit lorsqu’une modification de plus de 5 % est apportée aux données client ou que le dernier exemple de traitement date de plus de 7 jours."
 
 Lors de la création d’une définition de segment, la section **[!UICONTROL Propriétés de l’audience]** située dans la partie droite de l’espace de travail affiche une estimation de la taille de la définition de segment obtenue, ce qui vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même.
 
-**[!UICONTROL Profils qualifiés]** indique le nombre **réel** de profils qui correspondent aux règles de la définition de segment. Ce nombre est mis à jour toutes les 24 heures, après l’exécution de la tâche d’évaluation de segment.
+**[!UICONTROL Profils qualifiés]** indique le nombre **réel** de profils qui correspondent aux règles de la définition de segment. Ce nombre est mis à jour toutes les 24 heures, après l’exécution du traitement d’évaluation de segment.
 
 La date et l’heure des profils qualifiés indiquent la tâche d’évaluation de segment **par lots** la plus récente et s’affichent **non** pour les définitions de segment évaluées à l’aide de la segmentation Edge ou en flux continu. Si vous modifiez la définition de segment, le nombre de profils qualifiés restera le même jusqu’à l’exécution de la tâche d’évaluation de segment suivante.
 
