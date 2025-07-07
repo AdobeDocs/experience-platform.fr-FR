@@ -2,9 +2,9 @@
 title: Gestion de la conservation des jeux de données d’événements d’expérience dans le lac de données à l’aide de TTL
 description: Découvrez comment évaluer, définir et gérer la conservation des jeux de données d’événements d’expérience dans le lac de données à l’aide de configurations de durée de vie (TTL) avec des API Adobe Experience Platform. Ce guide explique comment l’expiration au niveau des lignes de TTL prend en charge les politiques de conservation des données, optimise l’efficacité du stockage et garantit une gestion efficace du cycle de vie des données. Elle fournit également des cas d’utilisation et des bonnes pratiques pour vous aider à appliquer efficacement la durée de vie.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 13db0477c0f42d0808647937d40c25b47a270894
+source-git-commit: 65a132609bc30233ac9f7efbe1981d4f75f3acb9
 workflow-type: tm+mt
-source-wordcount: '2452'
+source-wordcount: '2458'
 ht-degree: 1%
 
 ---
@@ -112,7 +112,7 @@ Utilisez le point d’entrée `/ttl/{DATASET_ID}` de l’API Data Hygiene pour p
 
 Pour plus d’informations, consultez la documentation d’Adobe Developer [API Data Hygiene](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/#operation/getTtl) .
 
-Pour [vérifier la TTL actuellement appliquée à un jeu de données](#check-applied-ttl-values), envoyez plutôt une requête GET au point d’entrée de `/dataSets/{DATASET_ID}` [API Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog/).
+Pour [vérifier la TTL actuellement appliquée à un jeu de données](#check-applied-ttl-values), envoyez plutôt une requête GET au point d’entrée de [ ](https://developer.adobe.com/experience-platform-apis/references/catalog/)API Catalog Service`/dataSets/{DATASET_ID}`.
 
 >[!TIP]
 >
@@ -126,7 +126,7 @@ GET /ttl/{DATASET_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{DATASET_ID}` | Chaîne générée par le système qui identifie de manière unique un jeu de données. Pour trouver un identifiant de jeu de données, utilisez le point d’entrée `/datasets`. Pour obtenir des instructions sur le filtrage des réponses pour les jeux de données pertinents[&#128279;](../api/list-objects.md) consultez le guide API list catalog objects). |
+| `{DATASET_ID}` | Chaîne générée par le système qui identifie de manière unique un jeu de données. Pour trouver un identifiant de jeu de données, utilisez le point d’entrée `/datasets`. Pour obtenir des instructions sur le filtrage des réponses pour les jeux de données pertinents[ consultez le guide ](../api/list-objects.md)API list catalog objects). |
 
 **Requête**
 
@@ -333,7 +333,7 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 ### Puis-je définir différentes politiques de conservation pour les services de lac de données et de profil ?
 
 +++Réponse
-Oui, vous pouvez définir différentes politiques de conservation pour les services de lac de données et de profil. Cependant, la période de conservation du profil ne doit pas être plus courte que celle définie pour le lac de données.
+Oui, vous pouvez définir différentes politiques de conservation pour les services de lac de données et de profil. La période de conservation de la banque de profils peut être plus courte ou plus longue que la période de conservation du lac de données, selon les besoins de votre entreprise.
 +++
 
 ### Comment puis-je vérifier l’utilisation actuelle de mon jeu de données ?
