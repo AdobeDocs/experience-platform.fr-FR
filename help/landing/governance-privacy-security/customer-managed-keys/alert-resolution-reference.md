@@ -1,9 +1,10 @@
 ---
 title: Référence de résolution des alertes CMK
 description: Identifiez, résolvez les problèmes et résolvez les alertes courantes déclenchées par les configurations incorrectes de Customer Managed Key (CMK) dans Adobe Experience Platform. Utilisez ce guide pour suivre des instructions claires et détaillées et restaurer un accès sécurisé aux clés.
-source-git-commit: 0d9cc046956dd380bb8816f0d8bf497bbad6140b
+exl-id: ffe2eadc-dfb5-418b-a201-2c20dcc9cfe4
+source-git-commit: e8cfed9ebd50cf50f03e232755eddef1cb8c0d3b
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '904'
 ht-degree: 1%
 
 ---
@@ -22,11 +23,7 @@ Les sections suivantes décrivent les types d’alertes qui peuvent être décle
 
 ## Accès à la clé désactivé {#key-access-disabled}
 
-Cette alerte indique que Adobe Experience Platform ne peut pas accéder au CMK configuré en raison de la désactivation de la clé ou de son inaccessibilité en raison de problèmes de configuration des clés associés.
-
->[!IMPORTANT]
->
->Dans ce cas, la fonction CMK d’Adobe traite l’échec d’accès comme une suppression délibérée et purge toutes les données associées à votre organisation, en fonction de votre SLA.
+Cette alerte indique que Adobe Experience Platform ne peut pas accéder au CMK configuré, car la clé est désactivée ou inaccessible en raison de sa configuration. Dans ce cas, le système traite la condition comme une suppression intentionnelle de l’accès aux clés.
 
 ### Quand cela se produit
 
