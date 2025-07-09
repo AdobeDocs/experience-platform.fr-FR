@@ -171,8 +171,8 @@ Le tableau ci-dessous décrit les paramètres généralement requis pour établi
 
 >[!NOTE]
 >
->Lors de la connexion à un hôte à l’aide d’informations d’identification non expirantes, il est toujours nécessaire d’utiliser tous les paramètres répertoriés dans la section [!UICONTROL  INFORMATIONS D’IDENTIFICATION EXPIRANTES ], à l’exception du mot de passe et du nom d’utilisateur.
->>Le format de saisie de votre nom d’utilisateur et de votre mot de passe utilise des valeurs séparées par deux points, comme illustré dans cet exemple de `username:{your_username}` et de `password:{password_string}`.
+>Lors de la connexion à un hôte à l’aide d’informations d’identification non expirantes, il est toujours nécessaire d’utiliser tous les paramètres répertoriés dans la section [!UICONTROL &#x200B; INFORMATIONS D’IDENTIFICATION EXPIRANTES &#x200B;], à l’exception du mot de passe et du nom d’utilisateur.
+>&#x200B;>Le format de saisie de votre nom d’utilisateur et de votre mot de passe utilise des valeurs séparées par deux points, comme illustré dans cet exemple de `username:{your_username}` et de `password:{password_string}`.
 
 | Paramètre | Description | Exemple |
 |---|---|---|

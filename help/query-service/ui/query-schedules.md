@@ -104,7 +104,7 @@ Ensuite, parcourez les jeux de données existants ou utilisez le champ de recher
 
 Lors de la création d’un planning, vous pouvez inscrire votre requête à la fonction de quarantaine afin de protéger les ressources système et d’éviter des perturbations potentielles. La fonction de quarantaine identifie et isole automatiquement les requêtes qui échouent à plusieurs reprises en les plaçant dans un état [!UICONTROL Quarantaine]. En mettant les requêtes en quarantaine après dix échecs consécutifs, vous pouvez intervenir, réviser et corriger les problèmes avant d’autoriser d’autres exécutions. Cela permet de maintenir votre efficacité opérationnelle et l’intégrité des données.
 
-![Espace de travail des plannings de requête avec [!UICONTROL  Query Quarantine ] en surbrillance et Oui sélectionné.](../images/ui/query-schedules/quarantine-enroll.png)
+![Espace de travail des plannings de requête avec [!UICONTROL &#x200B; Query Quarantine &#x200B;] en surbrillance et Oui sélectionné.](../images/ui/query-schedules/quarantine-enroll.png)
 
 Une fois qu’une requête est inscrite à la fonction de quarantaine, vous pouvez vous abonner à des alertes pour ce changement de statut de la requête. Si une requête planifiée n’est pas mise en quarantaine, elle n’apparaît pas comme option dans [la boîte de dialogue Alertes](./monitor-queries.md#alert-subscription).
 
