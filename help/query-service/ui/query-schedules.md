@@ -2,10 +2,10 @@
 title: Plannings de requête
 description: Découvrez comment automatiser les exécutions de requête planifiées, supprimer ou désactiver un planning de requête et utiliser les options de planification disponibles via l’interface utilisateur de Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 04b804b81b605040c74db040bc5118e0392ddd32
 workflow-type: tm+mt
-source-wordcount: '2028'
-ht-degree: 14%
+source-wordcount: '2181'
+ht-degree: 12%
 
 ---
 
@@ -17,9 +17,24 @@ Vous pouvez automatiser les exécutions de requête en créant des plannings de 
 >
 >Vous pouvez uniquement ajouter un planning à une requête qui a déjà été créée et enregistrée.
 
-Toutes les requêtes planifiées sont ajoutées à la liste dans l’onglet [!UICONTROL Requêtes planifiées]. Depuis cet espace de travail, vous pouvez surveiller le statut de toutes les tâches de requête planifiées via l’interface utilisateur. Sur l’onglet [!UICONTROL Requêtes planifiées] vous pouvez trouver des informations importantes sur les exécutions de vos requêtes et vous abonner aux alertes. Les informations disponibles incluent le statut, les détails du planning et les messages/codes d’erreur en cas d’échec de l’exécution. Pour plus d’informations, consultez le document [Surveiller les requêtes planifiées](./monitor-queries.md) .
+## Exigences de compte pour les requêtes planifiées {#technical-account-user-requirements}
 
-Ce workflow couvre le processus de planification dans l’interface utilisateur de Query Service. Pour savoir comment ajouter des plannings à l’aide de l’API, veuillez lire le [guide de point d’entrée des requêtes planifiées](../api/scheduled-queries.md).
+Pour que les requêtes planifiées s’exécutent de manière fiable, Adobe recommande aux administrateurs de configurer un compte technique (à l’aide des informations d’identification de serveur à serveur OAuth) pour créer des requêtes planifiées. Les requêtes planifiées peuvent également être créées avec un compte utilisateur personnel, mais les requêtes créées de cette manière cesseront de s’exécuter si l’accès de cet utilisateur est supprimé ou désactivé.
+
+Pour plus d’informations sur la configuration des comptes techniques et l’attribution des autorisations requises, consultez les [Conditions préalables du guide d’identification](./credentials.md#prerequisites) et [Authentification de l’API](../../landing/api-authentication.md).
+
+Pour plus d’informations sur la création et la configuration d’un compte technique, voir :
+
+- [Configuration de Developer Console ](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) : instructions détaillées pour configurer Adobe Developer Console et obtenir les informations d’identification OAuth.
+- [Configuration de compte technique de bout en bout](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup) : présentation complète de la création et de la configuration d’un compte technique dans Adobe Experience Platform.
+
+Si vous utilisez uniquement l’interface utilisateur de Query Service, assurez-vous de disposer des autorisations nécessaires ou contactez un administrateur qui gère les comptes techniques. Toutes les requêtes planifiées sont ajoutées à la liste dans l’onglet [!UICONTROL Requêtes planifiées], où vous pouvez surveiller le statut, les détails de la planification et les messages d’erreur de tous les traitements de requête planifiés, ainsi que vous abonner aux alertes. Pour plus d’informations sur la surveillance et la gestion de vos requêtes, consultez le document [surveiller les requêtes planifiées](./monitor-queries.md).
+
+Ce workflow couvre le processus de planification dans l’interface utilisateur de Query Service. Pour savoir comment ajouter des plannings à l’aide de l’API, reportez-vous au guide de point d’entrée [des requêtes planifiées](../api/scheduled-queries.md).
+
+>[!NOTE]
+>
+>Utilisez un compte technique pour vous assurer que les requêtes planifiées continuent à s’exécuter même si les utilisateurs et utilisatrices quittent l’organisation ou si leurs rôles changent. Choisissez un compte technique chaque fois que cela est possible pour une automatisation ininterrompue des requêtes.
 
 ## Créer un planning de requête {#create-schedule}
 
@@ -89,7 +104,7 @@ Ensuite, parcourez les jeux de données existants ou utilisez le champ de recher
 
 Lors de la création d’un planning, vous pouvez inscrire votre requête à la fonction de quarantaine afin de protéger les ressources système et d’éviter des perturbations potentielles. La fonction de quarantaine identifie et isole automatiquement les requêtes qui échouent à plusieurs reprises en les plaçant dans un état [!UICONTROL Quarantaine]. En mettant les requêtes en quarantaine après dix échecs consécutifs, vous pouvez intervenir, réviser et corriger les problèmes avant d’autoriser d’autres exécutions. Cela permet de maintenir votre efficacité opérationnelle et l’intégrité des données.
 
-![Espace de travail des plannings de requête avec [!UICONTROL &#x200B; Query Quarantine &#x200B;] en surbrillance et Oui sélectionné.](../images/ui/query-schedules/quarantine-enroll.png)
+![Espace de travail des plannings de requête avec [!UICONTROL  Query Quarantine ] en surbrillance et Oui sélectionné.](../images/ui/query-schedules/quarantine-enroll.png)
 
 Une fois qu’une requête est inscrite à la fonction de quarantaine, vous pouvez vous abonner à des alertes pour ce changement de statut de la requête. Si une requête planifiée n’est pas mise en quarantaine, elle n’apparaît pas comme option dans [la boîte de dialogue Alertes](./monitor-queries.md#alert-subscription).
 
@@ -163,7 +178,6 @@ Le tableau suivant fournit des descriptions de chaque colonne disponible dans la
 >[!NOTE]
 >
 >Les données des heures de calcul sont disponibles à partir du 08/15/2024. Les données antérieures à cette date apparaissent comme « Non disponibles ».
-
 
 Consultez le [guide de surveillance des requêtes planifiées](./monitor-queries.md#inline-actions) pour obtenir des informations complètes sur la manière de surveiller le statut de toutes les tâches de requête via l’interface utilisateur.
 

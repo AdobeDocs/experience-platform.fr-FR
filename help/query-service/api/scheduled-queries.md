@@ -5,18 +5,32 @@ title: Point d’entrée des plannings
 description: Les sections suivantes décrivent les différents appels API que vous pouvez effectuer pour les requêtes planifiées avec l’API Query Service.
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: a39fae1b72533261fb43e0acc95e50e5a6acd8df
+source-git-commit: 10c0c5c639226879b1ca25391fc4a1006cf40003
 workflow-type: tm+mt
-source-wordcount: '1224'
-ht-degree: 55%
+source-wordcount: '1410'
+ht-degree: 46%
 
 ---
 
 # Point d’entrée des plannings
 
+Découvrez comment créer, gérer et surveiller des requêtes planifiées par programmation à l’aide de l’API de plannings Query Service avec des informations détaillées et des exemples.
+
+## Exigences et conditions préalables
+
+Vous pouvez créer des requêtes planifiées à l’aide d’un compte technique (authentifié via les informations d’identification de serveur à serveur OAuth) ou d’un compte utilisateur personnel (jeton d’utilisateur). Cependant, Adobe recommande vivement d’utiliser un compte technique pour assurer l’exécution sécurisée et ininterrompue des requêtes planifiées, en particulier pour les charges de travail de production ou à long terme.
+
+Les requêtes créées avec un compte d’utilisateur personnel échouent si l’accès de cet utilisateur est révoqué ou si son compte est désactivé. Les comptes techniques offrent une plus grande stabilité car ils ne sont pas liés au statut d’emploi ou aux droits d’accès d’un utilisateur individuel.
+
+>[!IMPORTANT]
+>
+>Points importants lors de la gestion des requêtes planifiées :<ul><li>Les requêtes planifiées échouent si le compte (technique ou utilisateur) utilisé pour les créer perd l’accès ou les autorisations.</li><li>Les requêtes planifiées doivent être désactivées avant la suppression via l’API ou l’interface utilisateur.</li><li>La planification indéfinie sans date de fin n’est pas prise en charge ; une date de fin doit toujours être spécifiée.</li></ul>
+
+Pour obtenir des conseils détaillés sur les exigences du compte, la configuration des autorisations et la gestion des requêtes planifiées, consultez la documentation [Plannings de requête](../ui/query-schedules.md#technical-account-user-requirements). Pour obtenir des instructions détaillées sur la création et la configuration d’un compte technique, reportez-vous aux sections [Configuration de Developer Console](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) et [Configuration de compte technique de bout en bout](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup).
+
 ## Exemples d’appels API
 
-Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt(e) à commencer à lancer des appels à l’API [!DNL Query Service]. Les sections suivantes décrivent les différents appels API que vous pouvez effectuer à l’aide de l’API [!DNL Query Service]. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
+Une fois que vous avez configuré les en-têtes d’authentification nécessaires (voir le [guide d’authentification des API](../../landing/api-authentication.md)), vous pouvez commencer à effectuer des appels vers l’API [!DNL Query Service]. Les sections suivantes présentent divers appels API avec des formats généraux, des exemples de requêtes comprenant les en-têtes requis et des exemples de réponses.
 
 ### Récupération d’une liste de requêtes planifiées
 

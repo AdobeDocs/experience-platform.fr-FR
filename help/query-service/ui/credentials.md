@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide des informations d’identification de Query Service
 description: Adobe Experience Platform Query Service fournit une interface utilisateur qui peut être utilisée pour écrire et exécuter des requêtes, afficher des requêtes précédemment exécutées et accéder à des requêtes enregistrées par des utilisateurs au sein de votre organisation.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 264d3b12d8fd3bd100018513af1576b3de1cbb33
+source-git-commit: 60b9fd250ba1a3e2da374681b78f0375f75dc87e
 workflow-type: tm+mt
-source-wordcount: '1955'
+source-wordcount: '1959'
 ht-degree: 6%
 
 ---
@@ -46,7 +46,7 @@ La section **[!UICONTROL Informations d’identification arrivant à expiration]
 >
 >![Onglet Paramètres d’Admin Console avec Confidentialité et sécurité, Paramètres d’authentification et Durée de vie maximale de la session mis en surbrillance.](../images/ui/credentials/max-session-life.png)
 >
->Consultez la documentation d’aide d’Adobe pour plus d’informations sur les [ Paramètres avancés ](https://helpx.adobe.com/fr/enterprise/using/authentication-settings.html#advanced-settings) proposés par Admin Console.
+>Consultez la documentation d’aide d’Adobe pour plus d’informations sur les [ Paramètres avancés ](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) proposés par Admin Console.
 
 ### Connexion aux données Customer Journey Analytics dans les sessions de requête {#connect-to-customer-journey-analytics}
 
@@ -66,9 +66,9 @@ Pour accéder à vos données Customer Journey Analytics dans Power BI ou Tablea
 >
 >Lorsque vous connectez Power BI ou Tableau à Customer Journey Analytics, le droit « sessions simultanées » de Query Service est utilisé. Si des sessions et des requêtes supplémentaires sont requises, il est possible d’acheter un module complémentaire de pack d’utilisateurs de requêtes ad hoc supplémentaire pour obtenir cinq sessions simultanées supplémentaires et une requête simultanée supplémentaire.
 
-Vous pouvez également accéder à vos données Customer Journey Analytics directement à partir de Query Editor ou de l’interface de ligne de commande Postgres. Pour ce faire, référencez la base de données `cja` lors de l’écriture de votre requête. Pour plus d’informations sur l’écriture, l’exécution et l’enregistrement de requêtes[&#128279;](./user-guide.md#query-authoring) consultez le guide de création de requêtes Query Editor).
+Vous pouvez également accéder à vos données Customer Journey Analytics directement à partir de Query Editor ou de l’interface de ligne de commande Postgres. Pour ce faire, référencez la base de données `cja` lors de l’écriture de votre requête. Pour plus d’informations sur l’écriture, l’exécution et l’enregistrement de requêtes[ consultez le guide de création de requêtes ](./user-guide.md#query-authoring)Query Editor).
 
-Consultez le guide d’extension [BI](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/cja-dataviews/bi-extension) pour obtenir des instructions complètes sur l’accès à vos vues de données Customer Journey Analytics avec SQL.
+Consultez le guide d’extension [BI](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) pour obtenir des instructions complètes sur l’accès à vos vues de données Customer Journey Analytics avec SQL.
 
 ## Informations d’identification n’expirant pas {#non-expiring-credentials}
 
@@ -87,7 +87,7 @@ Vous pouvez utiliser des informations d’identification non expirantes pour con
 >- Par défaut, les informations d’identification sans date d’expiration sont autorisées à exécuter uniquement des requêtes `SELECT`. Pour exécuter des requêtes `CTAS` ou `ITAS`, ajoutez manuellement les autorisations « Gérer le jeu de données » et « Gérer les schémas » au rôle associé aux informations d’identification non expirantes. L’autorisation « Gérer les schémas » se trouve sous la section « Modélisation des données » et l’autorisation « Gérer les jeux de données » se trouve sous la section « Gestion des données » de [Adobe Developer Console](<https://developer.adobe.com/console/>).
 >- Les performances des clients tiers peuvent être différentes de celles attendues lors de la mise en liste des objets de requête. Par exemple, certains clients tiers tels que [!DNL DB Visualizer] n’afficheront pas le nom de la vue dans le panneau de gauche. Cependant, le nom de la vue est accessible s’il est appelé dans une requête `SELECT`. De même, [!DNL PowerUI] peut ne pas répertorier les vues temporaires créées via SQL pour la sélection lors de la création du tableau de bord.
 
-### Prérequis
+### Conditions préalables
 
 Avant de pouvoir générer des informations d’identification non expirantes, vous devez effectuer les étapes suivantes dans Adobe Admin Console :
 
@@ -98,9 +98,9 @@ Avant de pouvoir générer des informations d’identification non expirantes, v
 5. [Ajoutez l’utilisateur en tant qu’administrateur de profil de produit](https://helpx.adobe.com/fr/enterprise/using/manage-product-profiles.html) pour autoriser la création d’un compte pour tout profil de produit actif.
 6. [Ajoutez l’utilisateur en tant que développeur de profil de produit](https://helpx.adobe.com/fr/enterprise/using/manage-developers.html) afin de créer une intégration.
 
-Pour en savoir plus sur l’attribution d’autorisations, consultez la documentation sur le [contrôle d’accès](../../access-control/home.md).
+Après ces étapes, les autorisations requises sont configurées dans [Adobe Developer Console](https://developer.adobe.com/console/) pour que vous puissiez générer des informations d’identification OAuth de serveur à serveur et utiliser les fonctions d’informations d’identification expirantes ou non expirantes.
 
-Toutes les autorisations requises sont désormais configurées dans Adobe Developer Console pour que l’utilisateur puisse utiliser la fonctionnalité d’informations d’identification arrivant à expiration.
+Pour plus d’informations sur l’attribution d’autorisations, consultez la [documentation sur le contrôle d’accès](../../access-control/home.md).
 
 ### Générer les informations d’identification {#generate-credentials}
 
@@ -171,8 +171,8 @@ Le tableau ci-dessous décrit les paramètres généralement requis pour établi
 
 >[!NOTE]
 >
->Lors de la connexion à un hôte à l’aide d’informations d’identification non expirantes, il est toujours nécessaire d’utiliser tous les paramètres répertoriés dans la section [!UICONTROL &#x200B; INFORMATIONS D’IDENTIFICATION EXPIRANTES &#x200B;], à l’exception du mot de passe et du nom d’utilisateur.
->Le format de saisie de votre nom d’utilisateur et de votre mot de passe utilise des valeurs séparées par deux points, comme illustré dans cet exemple de `username:{your_username}` et de `password:{password_string}`.
+>Lors de la connexion à un hôte à l’aide d’informations d’identification non expirantes, il est toujours nécessaire d’utiliser tous les paramètres répertoriés dans la section [!UICONTROL  INFORMATIONS D’IDENTIFICATION EXPIRANTES ], à l’exception du mot de passe et du nom d’utilisateur.
+>>Le format de saisie de votre nom d’utilisateur et de votre mot de passe utilise des valeurs séparées par deux points, comme illustré dans cet exemple de `username:{your_username}` et de `password:{password_string}`.
 
 | Paramètre | Description | Exemple |
 |---|---|---|
