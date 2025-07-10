@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 7be3e6c143d792113a0d623e2d12d6710a3be70c
+source-git-commit: 152ec3ca36a69bea79b8ed3c33dd21bd9479171f
 workflow-type: tm+mt
-source-wordcount: '5195'
-ht-degree: 66%
+source-wordcount: '5128'
+ht-degree: 65%
 
 ---
 
@@ -324,7 +324,7 @@ La liste des contraintes de temps disponibles pour cette opération diffère de 
 >[!NOTE]
 >
 >Lors de l’utilisation de la contrainte de temps « Après », le dernier événement peut avoir lieu plus longtemps que la durée répertoriée dans la contrainte de temps. >
->&#x200B;>Par exemple, si vous disposez d’un événement Page vue et d’un événement Passage en caisse et que vous appliquez la contrainte de temps « Après 1 heure » entre ces deux événements, une définition de segment avec un événement Passage en caisse 2 heures après l’événement Page vue est éligible.
+>>Par exemple, si vous disposez d’un événement Page vue et d’un événement Passage en caisse et que vous appliquez la contrainte de temps « Après 1 heure » entre ces deux événements, une définition de segment avec un événement Passage en caisse 2 heures après l’événement Page vue est éligible.
 >
 >En outre, ces deux contraintes de temps peuvent être utilisées en coordination l&#39;une avec l&#39;autre.
 >
@@ -390,7 +390,7 @@ Pour sélectionner une politique de fusion pour votre définition de segment, s�
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
 >title="Profils estimés"
->abstract="Les profils estimés indiquent un nombre approximatif de profils, en fonction de l’exemple de traitement, qui seraient qualifiés pour les règles de la définition de segment. Cela signifie que les données d’exemple sont projetées sur le jeu de profils le plus volumineux, ce qui entraîne une estimation du nombre qui peut différer du nombre réel de profils qualifiés. L’échantillon de profils estimés a un intervalle de confiance de 95 %. <br><br>Ce nombre est mis à jour lorsque l’exemple de traitement est mis à jour, ce qui se produit lorsqu’une modification de plus de 5 % est apportée aux données client ou que le dernier exemple de traitement date de plus de 7 jours."
+>abstract="Les profils estimés indiquent un nombre approximatif de profils, en fonction de l’exemple de tâche, qui seraient qualifiés pour les règles de la définition de segment."
 
 Lors de la création d’une définition de segment, la section **[!UICONTROL Propriétés de l’audience]** située dans la partie droite de l’espace de travail affiche une estimation de la taille de la définition de segment obtenue, ce qui vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même.
 
@@ -400,7 +400,10 @@ La date et l’heure des profils qualifiés indiquent la tâche d’évaluation 
 
 **[!UICONTROL Profils estimés]** indique un nombre **approximatif** de profils, en fonction de l’**exemple de tâche**. Cela signifie que les données d’exemple sont projetées sur le jeu de profils le plus volumineux, ce qui entraîne une estimation du nombre qui peut différer du nombre réel de profils qualifiés. L’échantillon de profil estimé a un intervalle de confiance de 95 %.
 
-Ce nombre est mis à jour lorsque l’exemple de tâche est mis à jour, ce qui se produit lorsqu’une modification de plus de 5 % est apportée aux données client ou que la dernière tâche d’exemple date de plus de 7 jours. »
+Ce nombre est mis à jour dans deux scénarios :
+
+1. La modification des données client est supérieure à 5 % ou le dernier exemple de traitement date de plus de sept jours.
+2. Les règles de l’audience ont été modifiées ou supprimées.
 
 La sélection de la bulle d’informations donne le seuil d’erreur et l’exemple de temps le plus récent.
 
