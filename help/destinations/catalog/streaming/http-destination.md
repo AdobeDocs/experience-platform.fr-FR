@@ -4,10 +4,10 @@ title: Connexion API HTTP
 description: Utilisez la destination API HTTP dans Adobe Experience Platform pour envoyer des données de profil vers un point d’entrée HTTP tiers afin d’exécuter vos propres analyses ou toute autre opération dont vous pourriez avoir besoin sur les données de profil exportées hors d’Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 678f80445212edc1edd3f4799999990ddcc2a039
+source-git-commit: b757f61a46930f08fe05be4c0f701113597567a4
 workflow-type: tm+mt
-source-wordcount: '2690'
-ht-degree: 71%
+source-wordcount: '2746'
+ht-degree: 69%
 
 ---
 
@@ -45,7 +45,7 @@ Cette section décrit les types d’audiences que vous pouvez exporter vers cett
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
----------|----------|---------|
+| ---------|----------|---------|
 | Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma souhaités (par exemple : adresse e-mail, numéro de téléphone, nom), tels qu’ils ont été choisis dans l’écran de mappage du [workflow d’activation de la destination](../../ui/activate-segment-streaming-destinations.md#mapping). |
 | Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
@@ -58,6 +58,7 @@ Pour utiliser la destination d’API HTTP pour exporter des données en dehors d
 * Vous devez disposer d’un point d’entrée HTTP qui prend en charge l’API REST.
 * Votre point d’entrée HTTP doit prendre en charge le schéma de profil Experience Platform. Aucune transformation en schéma de payload tiers n’est prise en charge dans la destination de l’API HTTP. Reportez-vous à la section [données exportées](#exported-data) pour un exemple du schéma de sortie Experience Platform.
 * Votre point d’entée HTTP doit prendre en charge les en-têtes.
+* Votre point d’entrée HTTP doit répondre dans les 2 secondes pour assurer un traitement correct des données et éviter les erreurs de délai d’expiration.
 
 >[!TIP]
 >
@@ -79,7 +80,7 @@ Pour plus d’informations, consultez la [documentation sur les points d’entr�
 
 ## Liste autorisée d’adresses IP {#ip-address-allowlist}
 
-Pour répondre aux exigences de sécurité et de conformité des clients, Experience Platform fournit une liste des adresses IP statiques que vous pouvez inscrire sur la liste autorisée pour la destination de l’API HTTP. Pour obtenir la liste complète des adresses IP à placer sur la liste autorisée placer sur la liste autorisée [&#128279;](/help/destinations/catalog/streaming/ip-address-allow-list.md) consultez la section Adresses IP à configurer pour les destinations de diffusion en continu.
+Pour répondre aux exigences de sécurité et de conformité des clients, Experience Platform fournit une liste des adresses IP statiques que vous pouvez inscrire sur la liste autorisée pour la destination de l’API HTTP. Pour obtenir la liste complète des adresses IP à placer sur la liste autorisée placer sur la liste autorisée [ consultez la section ](/help/destinations/catalog/streaming/ip-address-allow-list.md)Adresses IP à configurer pour les destinations de diffusion en continu.
 
 ## Types d’authentification pris en charge {#supported-authentication-types}
 
@@ -112,7 +113,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Lors de la connexion à cette destination, vous devez fournir les informations suivantes :
 
@@ -217,7 +218,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 >* L’[évaluation de la politique de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) n’est actuellement pas prise en charge dans les exportations vers la destination API HTTP. [En savoir plus](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
 Consultez [ Activer les données d’audience vers des destinations d’exportation de profil de diffusion en continu ](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
@@ -363,3 +364,7 @@ Vous trouverez ci-dessous d’autres exemples de données exportées, en fonctio
 Dans 95 % des cas, Experience Platform tente d’offrir une latence de débit inférieure à 10 minutes pour les messages envoyés avec succès, avec un taux de moins de 10 000 demandes par seconde pour chaque flux de données vers une destination HTTP.
 
 En cas d’échec des requêtes vers la destination API HTTP, Experience Platform stocke les requêtes ayant échoué et tente à deux reprises d’envoyer les requêtes à votre point d’entrée.
+
+## Résolution des problèmes {#troubleshooting}
+
+Pour garantir une diffusion des données fiable et éviter les problèmes de délai d’expiration, assurez-vous que votre point d’entrée HTTP répond dans les 2 secondes aux requêtes Experience Platform, comme spécifié dans la section [conditions préalables](#prerequisites). Les réponses qui prennent plus de temps provoquent des erreurs de temporisation.
