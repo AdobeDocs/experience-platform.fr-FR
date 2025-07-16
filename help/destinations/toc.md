@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 75dec8987827a84cf791ed08f725baed5a8865ae
+source-git-commit: c3f570ad3fcae50f2381e344bb88d8a9cace57be
 workflow-type: tm+mt
-source-wordcount: '1293'
+source-wordcount: '1295'
 ht-degree: 75%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 75%
    * [Supprimer les comptes de destination](./api/delete-destination-account.md)
    * [Supprimer les flux de données de destination](./api/delete-destination-dataflow.md)
    * [Exporter des jeux de données](/help/destinations/api/export-datasets.md)
-   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=fr#use-cases)
+   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
    * [Créer une connexion à une destination](./ui/connect-destination.md)
@@ -91,7 +91,7 @@ ht-degree: 75%
       * [Connexion Google Ad Manager](./catalog/advertising/google-ad-manager.md)
       * [(Version bêta) Connexion à Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Connexion à Google Customer Match](./catalog/advertising/google-customer-match.md)
-      * [Correspondance client Google + connexion DV360](./catalog/advertising/google-customer-match-dv360.md)
+      * [(Disponibilité limitée) Correspondance client Google + connexion DV360](./catalog/advertising/google-customer-match-dv360.md)
       * [Connexion Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
       * [Extension Google gtag](./catalog/advertising/gtag-advertising.md)
       * [Extension LinkedIn Insight Tag](./catalog/advertising/linkedin.md)
