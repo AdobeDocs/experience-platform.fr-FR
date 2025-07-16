@@ -5,10 +5,10 @@ breadcrumb-title: Guide de Segmentation Service
 user-guide-description: Créez des audiences à partir de vos données de profil client en temps réel à l’aide des définitions de segment générées par Adobe Experience Platform ou de sources externes.
 feature: Segments
 role: User
-source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
+source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 78%
+source-wordcount: '208'
+ht-degree: 75%
 
 ---
 
@@ -17,19 +17,21 @@ ht-degree: 78%
 
 - [Présentation de Segmentation Service](home.md)
 - [Types de données de segmentation](data-types.md)
-- [ Mécanismes de sécurisation de la segmentation ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=fr#segmentation-guardrails)
+- [ Mécanismes de sécurisation de la segmentation ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - API Segmentation {#api}
    - [Vue d’ensemble](api/overview.md)
    - [Prise en main](api/getting-started.md)
+   - [Création de métadonnées d’audience](api/create-audience.md)
    - [Audiences](api/audiences.md)
    - [Tâches d’exportation](api/export-jobs.md)
+   - [Audiences externes](api/external-audiences.md)
    - [Aperçus et estimations](api/previews-and-estimates.md)
    - [Plannings](api/schedules.md)
    - [Définitions de segment](api/segment-definitions.md)
    - [Tâches de segmentation](api/segment-jobs.md)
    - [Recherche de segments](api/segment-search.md)
 - Interface utilisateur de segmentation {#ui}
-   - [Présentation](ui/overview.md)
+   - [Vue d’ensemble](ui/overview.md)
    - [Tableau de bord Audience](ui/audience-dashboard.md)
    - [Audience Portal](ui/audience-portal.md)
    - [Composition de l’audience](ui/audience-composition.md)
@@ -37,7 +39,7 @@ ht-degree: 78%
    - [Composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/home)
    - [Mise à jour de la contrainte temporelle Ignorer l’année](ui/ignore-year.md)
    - [Remaniement des contraintes de temps](ui/segment-refactoring.md)
-   - Correspondance de segments {#segment-match}
+   - Segment Match {#segment-match}
       - [Vue d’ensemble de la correspondance de segments](ui/segment-match/overview.md)
       - [Dépannage](ui/segment-match/troubleshooting.md)
 - Méthodes de segmentation {#methods}
@@ -51,7 +53,7 @@ ht-degree: 78%
    - [Audiences de personnes](types/people-audiences.md)
    - [Audiences de prospects](types/prospect-audiences.md)
    - [Audiences de compte](types/account-audiences.md)
-   - [Audiences semblables](types/lookalike-audiences.md)
+   - [Audiences similaires](types/lookalike-audiences.md)
 - Tutoriels {#tutorials}
    - [Création d’une définition de segment](tutorials/create-a-segment.md)
    - [Création d’une définition de segment (vidéo)](video/create-segment.md)
@@ -63,7 +65,7 @@ ht-degree: 78%
    - [Import et utilisation d’audiences externes](tutorials/using-external-audiences.md)
    - [Création d’un jeu de données pour exporter des données](tutorials/create-dataset-export-segment.md)
    - [Application de la conformité d’utilisation des données aux audiences](tutorials/governance.md)
-- Langage de requête de profil {#pql}
+- Profile Query Language {#pql}
    - [Présentation](pql/overview.md)
    - [Fonctions booléennes](pql/boolean-functions.md)
    - [Fonctions de comparaison](pql/comparison-functions.md)
