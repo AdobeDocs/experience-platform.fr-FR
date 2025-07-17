@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation des connecteurs source
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 2e4df13bae9f4afa24f761e650790704da44da90
+source-git-commit: 952fc2fac819c545304aca4505208fe59841097f
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 67%
+source-wordcount: '1640'
+ht-degree: 53%
 
 ---
 
@@ -26,19 +26,7 @@ Experience Platform vous permet de centraliser les données que vous collectez 
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
-## Sources d’entreprise avancées {#advanced-enterprise-sources}
-
-Les sources suivantes sont disponibles uniquement pour les clients [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
-
-- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE lot]{type=Informative}
-- [[!DNL Azure Databricks]](connectors/databases/databricks.md) [!BADGE lot]{type=Informative}
-- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE lot]{type=Informative}
-- [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE lot]{type=Informative}
-- [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE lot]{type=Informative}
+>[!BEGINSHADEBOX]
 
 ## Sources créées par Adobe et par les partenaires {#adobe-and-partner-built-sources}
 
@@ -46,157 +34,239 @@ Certains des connecteurs du catalogue de sources Experience Platform sont créé
 
 Pour les connecteurs créés et gérés par un partenaire, les problèmes liés au connecteur peuvent devoir être résolus par l’équipe du partenaire (la méthode de contact est fournie dans la note de la page de documentation). Pour tout problème concernant les connecteurs créés et gérés par Adobe, contactez votre personne représentante d’Adobe ou l’Assistance clientèle.
 
-## Catégories de sources
+>[!ENDSHADEBOX]
 
-Les sources dans Experience Platform sont regroupées dans les catégories suivantes :
+## Catalogue des sources
+
+Lisez les sections suivantes pour obtenir la liste de toutes les sources disponibles dans le catalogue des sources.
 
 ### Applications Adobe {#adobe-applications}
 
-Experience Platform permet d’ingérer des données provenant d’autres applications Adobe, notamment Adobe Analytics et Adobe Audience Manager. Pour plus d’informations, consultez les documents connexes suivants :
+Experience Platform permet d’ingérer des données provenant d’autres applications Adobe, notamment Adobe Analytics et Adobe Audience Manager. Pour plus d’informations, consultez les documents connexes suivants :
 
-- [Présentation de la source Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
+- [Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
    - [Créer une connexion source Adobe Audience Manager dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Présentation de la source de données de classifications Adobe Analytics](connectors/adobe-applications/classifications.md)
+- [Données de classifications Adobe Analytics](connectors/adobe-applications/classifications.md)
    - [Créer une connexion de source de données de classifications Adobe Analytics dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Présentation de source de données de la suite de rapports Adobe Analytics](connectors/adobe-applications/analytics.md)
+- [Données de suite de rapports Adobe Analytics](connectors/adobe-applications/analytics.md)
    - [Créer une connexion source Adobe Analytics dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Présentation de la source Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
+- [Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
    - [Créer une connexion source Adobe Campaign Managed Cloud Services à l’aide de l’interface utilisateur de Platform](./tutorials/ui/create/adobe-applications/campaign.md)
-- [Présentation de la source Adobe Commerce](connectors/adobe-applications/commerce.md)
-- [Présentation de la source de collecte de données Adobe](connectors/adobe-applications/data-collection.md)
+- [Adobe Commerce](connectors/adobe-applications/commerce.md)
+- [Collection de données Adobe](connectors/adobe-applications/data-collection.md)
    - [Créer une connexion source Attributs du client dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/customer-attributes.md)
-- [Présentation de la source [!DNL Marketo Engage]](connectors/adobe-applications/marketo/marketo.md)
+- [[!DNL Marketo Engage]](connectors/adobe-applications/marketo/marketo.md)
    - [Créer une connexion source  [!DNL Marketo Engage]  dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/marketo.md)
    - [Créer une connexion source et  [!DNL Marketo Engage]  flux de données pour les données d’activité personnalisées](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
 
-### Publicité {#advertising}
+### Sources d’entreprise avancées {#advanced-enterprise-sources}
 
-Experience Platform prend en charge l’ingestion de données provenant d’un système publicitaire tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+Les sources suivantes sont disponibles uniquement pour les clients [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
-- [Google Ads](connectors/advertising/ads.md) [!BADGE Batch]{type=Informative}
+| Source | Catégorie | Type d’ingestion | Cloud |
+| --- | --- | --- | --- |
+| [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) | Stockage cloud | Diffusion en continu | Azure, AWS |
+| [[!DNL Amazon Redshift]](connectors/databases/redshift.md) | Base de données | Lot | Azure, AWS |
+| [[!DNL Azure Databricks]](connectors/databases/databricks.md) | Base de données | Lot | Azure |
+| [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) | Stockage dans le cloud | Diffusion en continu | Azure, AWS |
+| [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) | Base de données | Lot | Azure |
+| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | Base de données | Lot | Azure |
+| [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) | Stockage dans le cloud | Diffusion en continu | Azure |
+| [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) | Base de données | Diffusion en continu | Azure, AWS |
+| [[!DNL Snowflake]](connectors/databases/snowflake.md) | Base de données | Lot | Azure, AWS |
+
+{style="table-layout:auto"}
+
+### Advertising {#advertising}
+
+Vous pouvez utiliser les sources suivantes pour ingérer des données publicitaires dans Experience Platform.
+
+| Source | Type d’ingestion | Cloud |
+| --- | --- | --- |
+| [Google Ads](connectors/advertising/ads.md) | Lot | Azure |
+
+{style="table-layout:auto"}
 
 ### Analytics {#analytics}
 
-Experience Platform prend en charge l’ingestion de données provenant d’un système Analytics tiers. Pour plus d’informations, consultez les documents connexes suivants :
+Vous pouvez utiliser les sources suivantes pour ingérer des données d’analyse dans Experience Platform.
 
-- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) [!BADGE lot]{type=Informative}
-- [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL RainFocus]](connectors/analytics/rainfocus.md) [!BADGE Streaming]{type=Positive}
+| Source | Type d’ingestion | Cloud |
+| --- | --- | --- |
+| [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) | Lot | Azure |
+| [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) | Diffusion en continu | Azure |
+| [[!DNL RainFocus]](connectors/analytics/rainfocus.md) | Diffusion en continu | Azure |
+
+{style="table-layout:auto"}
 
 ### Stockage dans le cloud {#cloud-storage}
 
 Les sources de stockage dans le cloud peuvent importer vos propres données dans Experience Platform sans avoir à les télécharger, les formater ou les charger. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. L’interface utilisateur permet d’intégrer chaque étape du processus dans le workflow des sources. Pour plus d’informations, consultez les documents connexes suivants :
 
-- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE lot]{type=Informative}
-- [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE lot]{type=Informative}
-- [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) [!BADGE lot]{type=Informative}
-- [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) [!BADGE lot]{type=Informative}
-- [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) [!BADGE lot]{type=Informative}
-- [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) [!BADGE lot]{type=Informative}
-- [[!DNL FTP]](connectors/cloud-storage/ftp.md) [!BADGE lot]{type=Informative}
-- [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) [!BADGE lot]{type=Informative}
-- [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) [!BADGE lot]{type=Informative}
-- [[!DNL SFTP]](connectors/cloud-storage/sftp.md) [!BADGE lot]{type=Informative}
+Vous pouvez utiliser les sources suivantes pour ingérer des données d’espace de stockage vers Experience Platform.
+
+| Source | Type d’ingestion | Cloud |
+| --- | --- | --- |
+| [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) | Lot | Azure |
+| [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) | Lot | Azure |
+| [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) | Lot | Azure, AWS |
+| [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) | Lot | Azure |
+| [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) | Lot | Azure |
+| [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) | Lot | Azure, AWS |
+| [[!DNL FTP]](connectors/cloud-storage/ftp.md) | Lot | Azure |
+| [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) | Lot | Azure |
+| [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) | Lot | Azure |
+| [[!DNL SFTP]](connectors/cloud-storage/sftp.md) | Lot | Azure |
+
+{style="table-layout:auto"}
 
 ### Consentement et préférences {#consent}
 
-Experience Platform prend en charge l’ingestion de données à partir d’une plateforme tierce de gestion des préférences et du consentement. Pour plus d’informations, consultez les documents connexes suivants :
+Vous pouvez utiliser les sources suivantes pour ingérer des données de consentement et de préférences vers Experience Platform.
 
-- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) [!BADGE lot]{type=Informative}
+| Source | Type d’ingestion | Cloud |
+| --- | --- | --- |
+| [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) | Lot | Azure |
+
+{style="table-layout:auto"}
 
 ### Gestion de la relation client (CRM) {#customer-relationship-management}
 
 Les systèmes de gestion de la relation client (CRM) fournissent des données qui peuvent aider à établir des relations avec la clientèle, qui à leur tour, favorisent la fidélisation client. Experience Platform prend en charge l’ingestion de données de gestion de la relation client (CRM) provenant de [!DNL Microsoft Dynamics 365] et de [!DNL Salesforce]. Pour plus d’informations, consultez les documents connexes suivants :
 
-- [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) [!BADGE lot]{type=Informative}
-- [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE lot]{type=Informative}
-- [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) [!BADGE lot]{type=Informative}
-- [[!DNL Veeva CRM]](connectors/crm/veeva.md) [!BADGE lot]{type=Informative}
+Vous pouvez utiliser les sources suivantes pour ingérer des données CRM dans Experience Platform.
+
+| Source | Type d’ingestion | Cloud |
+| --- | --- | --- |
+| [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) | Lot | Azure |
+| [[!DNL Salesforce]](connectors/crm/salesforce.md) | Lot | Azure, AWS |
+| [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) | Lot | Azure |
+| [[!DNL Veeva CRM]](connectors/crm/veeva.md) | Lot | Azure |
+
+{style="table-layout:auto"}
 
 ### Succès client {#customer-success}
 
-Experience Platform prend en charge l’ingestion de données provenant d’une application de succès client tierce. Pour plus d’informations, consultez les documents connexes suivants :
+Vous pouvez utiliser les sources suivantes pour ingérer des données de succès client dans Experience Platform.
 
-- [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) [!BADGE lot]{type=Informative}
-- [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) [!BADGE lot]{type=Informative}
-- [[!DNL Zendesk]](connectors/customer-success/zendesk.md) [!BADGE lot]{type=Informative}
+| Source | Type d’ingestion | Cloud |
+| --- | --- | --- |
+| [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) | Lot | Azure |
+| [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) | Lot | Azure |
+| [[!DNL Zendesk]](connectors/customer-success/zendesk.md) | Lot | Azure |
+
+{style="table-layout:auto"}
 
 ### Base de données {#database}
 
 Experience Platform prend en charge l’ingestion de données provenant d’une base de données tierce. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
-- [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE lot]{type=Informative}
-- [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE lot]{type=Informative}
-- [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE lot]{type=Informative}
-- [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE lot]{type=Informative}
-- [[!DNL GreenPlum]](connectors/databases/greenplum.md) [!BADGE lot]{type=Informative}
-- [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) [!BADGE lot]{type=Informative}
-- [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) [!BADGE lot]{type=Informative}
-- [[!DNL MariaDB]](connectors/databases/mariadb.md) [!BADGE lot]{type=Informative}
-- [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) [!BADGE lot]{type=Informative}
-- [[!DNL MySQL]](connectors/databases/mysql.md) [!BADGE lot]{type=Informative}
-- [[!DNL Oracle]](connectors/databases/oracle.md) [!BADGE lot]{type=Informative}
-- [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE lot]{type=Informative}
-- [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE lot]{type=Informative}
+Vous pouvez utiliser les sources suivantes pour ingérer des données de votre base de données vers Experience Platform.
+
+| Source | Type d’ingestion | Cloud |
+| --- | --- | --- |
+| [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) | Lot | Azure |
+| [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) | Lot | Azure |
+| [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) | Lot | Azure |
+| [[!DNL Azure Table Storage]](connectors/databases/ats.md) | Lot | Azure |
+| [[!DNL GreenPlum]](connectors/databases/greenplum.md) | Lot | Azure |
+| [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) | Lot | Azure |
+| [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) | Lot | Azure |
+| [[!DNL MariaDB]](connectors/databases/mariadb.md) | Lot | Azure |
+| [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) | Lot | Azure |
+| [[!DNL MySQL]](connectors/databases/mysql.md) | Lot | Azure, AWS |
+| [[!DNL Oracle]](connectors/databases/oracle.md) | Lot | Azure |
+| [[!DNL PostgreSQL]](connectors/databases/postgres.md) | Lot | Azure, AWS |
+| [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) | Lot | Azure |
+
+{style="table-layout:auto"}
 
 ### Partenaires de données et d’identité {#data-partner}
 
-Experience Platform prend en charge l’ingestion de données provenant d’un partenaire de données et d’identité. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+Vous pouvez utiliser les sources suivantes pour ingérer des données et des données de partenaire d’identité dans Experience Platform.
 
-- [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE lot]{type=Informative}
-- [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE lot]{type=Informative}
-- [[!DNL Algolia User Profiles]](connectors/data-partners/algolia-user-profiles.md) [!BADGE lot]{type=Informative}
-- [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) [!BADGE lot]{type=Informative}
-- [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) [!BADGE lot]{type=Informative}
-- [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE lot]{type=Informative}
+| Source | Type d’ingestion | Cloud |
+| --- | --- | --- |
+| [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) | Lot | Azure |
+| [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) | Lot | Azure |
+| [[!DNL Algolia User Profiles]](connectors/data-partners/algolia-user-profiles.md) | Lot | Azure |
+| [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) | Lot | Azure |
+| [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) | Lot | Azure |
+| [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) | Lot | Azure |
 
-### eCommerce {#ecommerce}
+{style="table-layout:auto"}
 
-Experience Platform prend en charge l’ingestion de données provenant d’un système tiers d’eCommerce. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+### commerce électronique {#ecommerce}
 
-- [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) [!BADGE lot]{type=Informative}
-- [[!DNL Shopify]](connectors/ecommerce/shopify.md) [!BADGE lot]{type=Informative}
-- [[!DNL Shopify]](connectors/ecommerce/shopify-streaming.md) [!BADGE Streaming]{type=Positive}
+Vous pouvez utiliser les sources suivantes pour ingérer des données d’e-commerce vers Experience Platform.
+
+| Source | Type d’ingestion | Cloud |
+| --- | --- | --- |
+| [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) | Lot | Azure |
+| [[!DNL Shopify]](connectors/ecommerce/shopify.md) | Lot | Azure |
+| [[!DNL Shopify]](connectors/ecommerce/shopify-streaming.md) | Diffusion en continu | Azure |
+
+{style="table-layout:auto"}
 
 ### Système local {#local-system}
 
-Experience Platform prend en charge l’ingestion de données à partir de votre système local. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+Vous pouvez utiliser les sources suivantes pour ingérer des données à partir de votre système local vers Experience Platform.
 
-- [Téléchargement de fichier local](connectors/local-system/local-file-upload.md)
+| Source | Type d’ingestion | Cloud |
+| --- | --- | --- |
+| [Téléchargement de fichiers locaux](connectors/local-system/local-file-upload.md) | Lot | Azure |
+
+{style="table-layout:auto"}
 
 ### Automatisation du marketing {#marketing-automation}
 
-Experience Platform prend en charge l’ingestion de données provenant d’un système tiers d’automatisation du marketing. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+Vous pouvez utiliser les sources suivantes pour ingérer des données d’automatisation du marketing dans Experience Platform.
 
-- [[!DNL Braze]](connectors/marketing-automation/braze.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) [!BADGE lot]{type=Informative}
-- [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) [!BADGE lot]{type=Informative}
-- [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) [!BADGE lot]{type=Informative}
-- [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) [!BADGE lot]{type=Informative}
-- [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) [!BADGE lot]{type=Informative}
-- [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE lot]{type=Informative}
+| Source | Type d’ingestion | Cloud |
+| --- | --- | --- |
+| [[!DNL Braze]](connectors/marketing-automation/braze.md) | Diffusion en continu | Azure |
+| [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) | Diffusion en continu | Azure |
+| [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) | Diffusion en continu | Azure |
+| [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) | Lot | Azure |
+| [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) | Lot | Azure |
+| [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) | Lot | Azure |
+| [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | Lot | Azure |
+| [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | Lot | Azure |
+| [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) | Lot | Azure, AWS |
+
+{style="table-layout:auto"}
 
 ### Paiements {#payments}
 
-Experience Platform prend en charge l’ingestion de données provenant d’un système de paiement tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+Vous pouvez utiliser les sources suivantes pour ingérer des données de paiements dans Experience Platform.
 
-- [[!DNL Square]](connectors/payments/square.md) [!BADGE lot]{type=Informative}
-- [[!DNL Stripe]](connectors/payments/stripe.md) [!BADGE lot]{type=Informative}
+| Source | Type d’ingestion | Cloud |
+| --- | --- | --- |
+| [[!DNL Square]](connectors/payments/square.md) | Lot | Azure |
+| [[!DNL Stripe]](connectors/payments/stripe.md) | Lot | Azure |
+
+{style="table-layout:auto"}
 
 ### Diffusion en continu {#streaming}
 
-Experience Platform prend en charge l’ingestion de données à partir de sources de diffusion en continu. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+Vous pouvez utiliser les sources suivantes pour diffuser des données vers Experience Platform.
 
-- [[!DNL HTTP API]](connectors/streaming/http.md) [!BADGE Streaming]{type=Positive}
+| Source | Type d’ingestion | Prise en charge du cloud |
+| --- | --- | --- |
+| [[!DNL HTTP API]](connectors/streaming/http.md) | Diffusion en continu | Azure, AWS |
+
+{style="table-layout:auto"}
 
 ### Protocoles {#protocols}
 
-Experience Platform prend en charge l’ingestion de données provenant d’un système de protocoles tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+Vous pouvez utiliser les sources suivantes pour ingérer des données de protocole vers Experience Platform.
 
-- [[!DNL Generic OData]](connectors/protocols/odata.md) [!BADGE lot]{type=Informative}
-- [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) [!BADGE lot]{type=Informative}
+| Source | Type d’ingestion | Prise en charge du cloud |
+| --- | --- | --- |
+| [[!DNL Generic OData]](connectors/protocols/odata.md) | Lot | Azure |
+| [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) | Lot | Azure |
+
+{style="table-layout:auto"}
 
 ## Contrôle d’accès des sources dans l’ingestion des données
 
