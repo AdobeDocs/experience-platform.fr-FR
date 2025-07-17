@@ -2,9 +2,9 @@
 title: Connexion D’Adobe Analytics À Experience Platform
 description: Découvrez comment importer les données de votre suite de rapports Adobe Analytics dans Experience Platform
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 086777a09eec17c94a7e0a5d2db58e4a1f6b523f
+source-git-commit: d6a290b9891b3507d531a595a5428955c7e9ee90
 workflow-type: tm+mt
-source-wordcount: '2731'
+source-wordcount: '2750'
 ht-degree: 18%
 
 ---
@@ -26,7 +26,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 Il est important de comprendre les termes clés suivants utilisés dans ce document :
 
 * **Attribut standard :** les attributs standard sont tous les attributs prédéfinis par Adobe. Ils renferment la même signification pour tous les clients et sont disponibles dans les groupes de champs des données sources et du schéma Analytics d’Analytics .
-* **Attribut personnalisé** : les attributs personnalisés sont tout attribut de la hiérarchie des variables personnalisées dans Analytics. Les attributs personnalisés sont utilisés dans une implémentation d’Adobe Analytics pour capturer des informations spécifiques dans une suite de rapports. Leur utilisation peut varier d’une suite de rapports à l’autre. Les attributs personnalisés comprennent les eVars, les props et les listes. Pour plus d’informations sur les eVars[&#128279;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=fr) consultez la documentation Analytics sur les variables de conversion .
+* **Attribut personnalisé** : les attributs personnalisés sont tout attribut de la hiérarchie des variables personnalisées dans Analytics. Les attributs personnalisés sont utilisés dans une implémentation d’Adobe Analytics pour capturer des informations spécifiques dans une suite de rapports. Leur utilisation peut varier d’une suite de rapports à l’autre. Les attributs personnalisés comprennent les eVars, les props et les listes. Pour plus d’informations sur les eVars[ consultez la ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)documentation Analytics sur les variables de conversion .
 * **Tout attribut dans les groupes de champs personnalisés :** les attributs qui proviennent de groupes de champs créés par les clients sont tous définis par l’utilisateur et sont considérés comme des attributs ni standard ni personnalisés.
 
 ## Parcourir le catalogue des sources
@@ -98,7 +98,7 @@ Reportez-vous au panneau [!UICONTROL Mappage des champs standard] pour connaîtr
 | Mappage des champs standard | Description |
 | --- | --- |
 | [!UICONTROL Mappages standard appliqués] | Le panneau [!UICONTROL Mappages standard appliqués] affiche le nombre total d’attributs mappés. Les mappages standard font référence aux mappages entre tous les attributs des données Analytics sources et les attributs correspondants du groupe de champs Analytics . Ils sont prémappés et ne peuvent pas être modifiés. |
-| [!UICONTROL Mappages standard avec conflits de noms de descripteur] | Le panneau [!UICONTROL &#x200B; Mappages standard avec conflits de noms de descripteur &#x200B;] fait référence au nombre d’attributs mappés contenant des conflits de noms. Ces conflits apparaissent lorsque vous réutilisez un schéma qui contient déjà un ensemble de descripteurs de champ provenant d’une autre suite de rapports. Vous pouvez continuer à utiliser votre flux de données Analytics malgré la présence de conflits de noms. |
+| [!UICONTROL Mappages standard avec conflits de noms de descripteur] | Le panneau [!UICONTROL  Mappages standard avec conflits de noms de descripteur ] fait référence au nombre d’attributs mappés contenant des conflits de noms. Ces conflits apparaissent lorsque vous réutilisez un schéma qui contient déjà un ensemble de descripteurs de champ provenant d’une autre suite de rapports. Vous pouvez continuer à utiliser votre flux de données Analytics malgré la présence de conflits de noms. |
 | [!UICONTROL Mappages personnalisés] | Le panneau [!UICONTROL Mappages personnalisés] affiche le nombre d’attributs personnalisés mappés, y compris les eVars, les props et les listes. Les mappages personnalisés font référence au mappage entre les attributs personnalisés des données Analytics sources et les attributs des groupes de champs personnalisés inclus dans le schéma sélectionné. |
 
 ### Mappages standard {#standard-mappings}
@@ -212,11 +212,11 @@ La liste des conditions configurables comprend :
 * [!UICONTROL différent de]
 * [!UICONTROL commence par]
 * [!UICONTROL se termine par]
-* [!UICONTROL &#x200B; ne se termine pas par &#x200B;]
-* [!UICONTROL contient &#x200B;]
-* [!UICONTROL ne contient pas &#x200B;]
+* [!UICONTROL  ne se termine pas par ]
+* [!UICONTROL contient ]
+* [!UICONTROL ne contient pas ]
 * [!UICONTROL existe]
-* [!UICONTROL &#x200B; n’existe pas &#x200B;]
+* [!UICONTROL  n’existe pas ]
 
 ![Liste déroulante des conditions avec une liste d’opérateurs de condition.](../../../../images/tutorials/create/analytics/conditions.png)
 
@@ -287,6 +287,10 @@ Pour plus d’informations sur le renvoi, les données actives et leurs latences
 
 ## Supprimer le flux de données {#delete-dataflow}
 
+>[!NOTE]
+>
+>Vous ne pouvez pas désactiver un flux de données Analytics. Pour arrêter le flux de données Analytics, vous devez **supprimer** l’intégralité du flux de données.
+
 Pour supprimer votre flux de données Analytics, sélectionnez **[!UICONTROL Flux de données]** dans l’en-tête supérieur de l’espace de travail des sources. Utilisez la page Flux de données pour localiser le flux de données Analytics à supprimer, puis sélectionnez les points de suspension (`...`) en regard. Utilisez ensuite le menu déroulant et sélectionnez **[!UICONTROL Supprimer]**.
 
 * La suppression du flux de données Analytics actif supprimera également son jeu de données sous-jacent.
@@ -307,5 +311,5 @@ La vidéo suivante est destinée à vous aider à comprendre l’ingestion de do
 >
 > Lʼinterface utilisateur de [!DNL Experience Platform] affichée dans la vidéo suivante est obsolète. Consultez la documentation pour découvrir les dernières captures dʼécran et fonctionnalités de lʼinterface utilisateur.
 
->[!VIDEO](https://video.tv.adobe.com/v/3430255?quality=12&learn=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
 
