@@ -311,5 +311,5 @@ La vidéo suivante est destinée à vous aider à comprendre l’ingestion de do
 >
 > Lʼinterface utilisateur de [!DNL Experience Platform] affichée dans la vidéo suivante est obsolète. Consultez la documentation pour découvrir les dernières captures dʼécran et fonctionnalités de lʼinterface utilisateur.
 
->[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430255?quality=12&learn=on&captions=fre_fr)
 
