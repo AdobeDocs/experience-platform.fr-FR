@@ -98,7 +98,7 @@ Reportez-vous au panneau [!UICONTROL Mappage des champs standard] pour connaîtr
 | Mappage des champs standard | Description |
 | --- | --- |
 | [!UICONTROL Mappages standard appliqués] | Le panneau [!UICONTROL Mappages standard appliqués] affiche le nombre total d’attributs mappés. Les mappages standard font référence aux mappages entre tous les attributs des données Analytics sources et les attributs correspondants du groupe de champs Analytics . Ils sont prémappés et ne peuvent pas être modifiés. |
-| [!UICONTROL Mappages standard avec conflits de noms de descripteur] | Le panneau [!UICONTROL  Mappages standard avec conflits de noms de descripteur ] fait référence au nombre d’attributs mappés contenant des conflits de noms. Ces conflits apparaissent lorsque vous réutilisez un schéma qui contient déjà un ensemble de descripteurs de champ provenant d’une autre suite de rapports. Vous pouvez continuer à utiliser votre flux de données Analytics malgré la présence de conflits de noms. |
+| [!UICONTROL Mappages standard avec conflits de noms de descripteur] | Le panneau [!UICONTROL &#x200B; Mappages standard avec conflits de noms de descripteur &#x200B;] fait référence au nombre d’attributs mappés contenant des conflits de noms. Ces conflits apparaissent lorsque vous réutilisez un schéma qui contient déjà un ensemble de descripteurs de champ provenant d’une autre suite de rapports. Vous pouvez continuer à utiliser votre flux de données Analytics malgré la présence de conflits de noms. |
 | [!UICONTROL Mappages personnalisés] | Le panneau [!UICONTROL Mappages personnalisés] affiche le nombre d’attributs personnalisés mappés, y compris les eVars, les props et les listes. Les mappages personnalisés font référence au mappage entre les attributs personnalisés des données Analytics sources et les attributs des groupes de champs personnalisés inclus dans le schéma sélectionné. |
 
 ### Mappages standard {#standard-mappings}
@@ -212,11 +212,11 @@ La liste des conditions configurables comprend :
 * [!UICONTROL différent de]
 * [!UICONTROL commence par]
 * [!UICONTROL se termine par]
-* [!UICONTROL  ne se termine pas par ]
-* [!UICONTROL contient ]
-* [!UICONTROL ne contient pas ]
+* [!UICONTROL &#x200B; ne se termine pas par &#x200B;]
+* [!UICONTROL contient &#x200B;]
+* [!UICONTROL ne contient pas &#x200B;]
 * [!UICONTROL existe]
-* [!UICONTROL  n’existe pas ]
+* [!UICONTROL &#x200B; n’existe pas &#x200B;]
 
 ![Liste déroulante des conditions avec une liste d’opérateurs de condition.](../../../../images/tutorials/create/analytics/conditions.png)
 
