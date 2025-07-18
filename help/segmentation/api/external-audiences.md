@@ -3,13 +3,13 @@ title: Point d’entrée de l’API Audiences externes
 description: Découvrez comment utiliser l’API des audiences externes pour créer, mettre à jour, activer et supprimer vos audiences externes de Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
+source-git-commit: 3acadf73b5c82d6f5f0f1eaec41387bec897558d
 workflow-type: tm+mt
-source-wordcount: '2312'
+source-wordcount: '2405'
 ht-degree: 9%
 
 ---
-
 
 # Point d’entrée des audiences externes
 
@@ -381,7 +381,7 @@ Vous pouvez démarrer une ingestion d’audience en adressant une requête POST 
 **Format d’API**
 
 ```http
-POST /external-audience/{AUDIENCE_ID}/run
+POST /external-audience/{AUDIENCE_ID}/runs
 ```
 
 **Requête**
@@ -391,7 +391,7 @@ La requête suivante déclenche une exécution d’ingestion pour l’audience e
 +++ Exemple de requête pour démarrer une ingestion d’audience.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/run \
+curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
@@ -442,6 +442,10 @@ Une réponse réussie renvoie un état HTTP 200 avec des détails sur l’exécu
 +++
 
 ## Récupération du statut d’ingestion d’audience spécifique {#retrieve-ingestion-status}
+
+>[!NOTE]
+>
+>Pour utiliser le point d’entrée suivant, vous devez disposer à la fois du `audienceId` de votre audience externe et du `runId` de votre identifiant d’exécution d’ingestion. Vous pouvez obtenir votre `audienceId` à partir d’un appel réussi au point d’entrée `GET /external-audiences/operations/{OPERATION_ID}` et votre `runId` à partir d’un appel réussi précédent du point d’entrée `POST /external-audience/{AUDIENCE_ID}/runs`.
 
 Vous pouvez récupérer le statut d’une ingestion d’audience en adressant une requête GET au point d’entrée suivant tout en fournissant les identifiants d’audience et d’exécution.
 
@@ -514,9 +518,13 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de l’ingesti
 
 +++
 
-## Liste des statuts d’ingestion d’audience {#list-ingestion-statuses}
+## Liste des exécutions d’ingestion d’audience {#list-ingestion-runs}
 
-Vous pouvez récupérer tous les statuts d’ingestion de l’audience externe sélectionnée en adressant une requête GET au point d’entrée suivant tout en fournissant l’identifiant d’audience. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
+>[!NOTE]
+>
+>Pour utiliser le point d’entrée suivant, vous devez disposer de la `audienceId` de votre audience externe. Vous pouvez obtenir votre `audienceId` d’un appel réussi au point d’entrée `GET /external-audiences/operations/{OPERATION_ID}`.
+
+Vous pouvez récupérer toutes les exécutions d’ingestion pour l’audience externe sélectionnée en envoyant une requête GET au point d’entrée suivant tout en fournissant l’identifiant d’audience. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
 
 **Format d’API**
 
@@ -534,16 +542,16 @@ GET /external-audience/{AUDIENCE_ID}/runs?{QUERY_PARAMETERS}
 | Paramètre | Description | Exemple |
 | --------- | ----------- | ------- |
 | `limit` | Nombre maximal d’éléments renvoyés dans la réponse. Cette valeur peut être comprise entre 1 et 40. Par défaut, la limite est définie sur 20. | `limit=30` |
-| `sortBy` | Ordre dans lequel les éléments renvoyés sont triés. Vous pouvez trier par `name` ou par `ingestionTime`. De plus, vous pouvez ajouter un signe `-` pour trier par ordre **décroissant** au lieu de **croissant**. Par défaut, les éléments sont triés par `ingestionTime` dans l’ordre décroissant. | `sortBy=name` |
-| `property` | Un filtre permettant de déterminer les exécutions d’ingestion d’audience qui s’affichent. Vous pouvez filtrer selon les propriétés suivantes : <ul><li>`name` : permet de filtrer par nom d’audience. Si vous utilisez cette propriété, vous pouvez effectuer une comparaison à l’aide de `=`, `!=`, `=contains` ou `!=contains`. </li><li>`ingestionTime` : permet de filtrer par heure d’ingestion. Si vous utilisez cette propriété, vous pouvez effectuer une comparaison à l’aide de `>=` ou `<=`.</li><li>`status` : permet de filtrer selon le statut de l’exécution d’ingestion. Si vous utilisez cette propriété, vous pouvez effectuer une comparaison à l’aide de `=`, `!=`, `=contains` ou `!=contains`. </li></ul> | `property=ingestionTime<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
+| `sortBy` | Ordre dans lequel les éléments renvoyés sont triés. Vous pouvez trier par `name` ou par `createdAt`. De plus, vous pouvez ajouter un signe `-` pour trier par ordre **décroissant** au lieu de **croissant**. Par défaut, les éléments sont triés par `createdAt` dans l’ordre décroissant. | `sortBy=name` |
+| `property` | Un filtre permettant de déterminer les exécutions d’ingestion d’audience qui s’affichent. Vous pouvez filtrer selon les propriétés suivantes : <ul><li>`name` : permet de filtrer par nom d’audience. Si vous utilisez cette propriété, vous pouvez effectuer une comparaison à l’aide de `=`, `!=`, `=contains` ou `!=contains`. </li><li>`createdAt` : permet de filtrer par heure d’ingestion. Si vous utilisez cette propriété, vous pouvez effectuer une comparaison à l’aide de `>=` ou `<=`.</li><li>`status` : permet de filtrer selon le statut de l’exécution d’ingestion. Si vous utilisez cette propriété, vous pouvez effectuer une comparaison à l’aide de `=`, `!=`, `=contains` ou `!=contains`. </li></ul> | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
 
 +++
 
 **Requête**
 
-La requête suivante récupère tous les statuts d’ingestion de l’audience externe.
+La requête suivante récupère toutes les exécutions d’ingestion pour l’audience externe.
 
-+++ Exemple de requête pour obtenir une liste des statuts d’ingestion d’audience.
++++ Un exemple de requête pour obtenir une liste des exécutions d’ingestion d’audience.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
@@ -557,9 +565,9 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
 
 **Réponse**
 
-Une réponse réussie renvoie le statut HTTP 200 avec une liste des statuts d’ingestion pour l’audience externe spécifiée.
+Une réponse réussie renvoie un état HTTP 200 avec une liste d’exécutions d’ingestion pour l’audience externe spécifiée.
 
-+++ Exemple de réponse lorsque vous récupérez une liste des statuts d’ingestion de l’audience.
++++ Un exemple de réponse lorsque vous récupérez une liste des exécutions d’ingestion d’audience.
 
 ```json
 {
@@ -573,19 +581,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec une liste des statuts d’
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
             "createdAt": 1785678909,
-            "createdBy": "{USER_NAME}",
-            "details": [
-                {
-                    "stage": "DATASET_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                },
-                {
-                    "stage": "PROFILE_STORE_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                }
-            ]
+            "createdBy": "{USER_NAME}"
         },
         {
             "audienceName": "Sample external audience 2",
@@ -596,19 +592,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec une liste des statuts d’
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
             "createdAt": 1749324248,
-            "createdBy": "{USER_ID}",
-            "details": [
-                {
-                    "stage": "DATASET_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                },
-                {
-                    "stage": "PROFILE_STORE_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                }
-            ]
+            "createdBy": "{USER_ID}"
         }
     ],
     "_page": {
@@ -627,6 +611,10 @@ Une réponse réussie renvoie le statut HTTP 200 avec une liste des statuts d’
 +++
 
 ## Suppression d’une audience externe {#delete-audience}
+
+>[!NOTE]
+>
+>Pour utiliser le point d’entrée suivant, vous devez disposer de la `audienceId` de votre audience externe. Vous pouvez obtenir votre `audienceId` d’un appel réussi au point d’entrée `GET /external-audiences/operations/{OPERATION_ID}`.
 
 Vous pouvez supprimer une audience externe en effectuant une requête DELETE au point d’entrée suivant tout en fournissant l’identifiant d’audience.
 
