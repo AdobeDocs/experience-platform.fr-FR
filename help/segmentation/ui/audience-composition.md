@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur d’Audiences
 description: La Composition d’audience dans l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail propose des commandes intuitives pour créer et modifier des audiences pour votre organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 65a3b5b904a9dfc6a2fbc09ab869e5642e088363
 workflow-type: tm+mt
-source-wordcount: '2345'
-ht-degree: 79%
+source-wordcount: '2362'
+ht-degree: 78%
 
 ---
 
@@ -310,6 +310,10 @@ En outre, vous pouvez limiter le nombre de profils renvoyés en activant le bout
 >id="platform_segmentation_ao_split_otherprofiles_text"
 >title="Autres profils"
 >abstract="Le bouton (bascule) Autres profils vous permet de créer un chemin d’accès supplémentaire avec les profils restants qui ne correspondent à aucune des conditions spécifiées des autres chemins d’accès."
+
+>[!NOTE]
+>
+>Pour utiliser le bloc **[!UICONTROL Fractionner]**, vous **devez** avoir au moins 10 profils dans votre audience.
 
 Le type de bloc **[!UICONTROL Fractionner]** vous permet de fractionner votre nouvelle audience en différentes sous-audiences. Vous pouvez fractionner cette audience en fonction d’un pourcentage ou d’un attribut.
 

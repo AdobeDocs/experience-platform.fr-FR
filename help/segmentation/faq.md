@@ -2,9 +2,9 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 92b70dc6d6085067f11d43436bc74d64bce72dd0
+source-git-commit: 721024192b54fcbab11b483cc26fa84151bb61a7
 workflow-type: tm+mt
-source-wordcount: '4837'
+source-wordcount: '4841'
 ht-degree: 27%
 
 ---
@@ -186,7 +186,7 @@ Les audiences créées en externe sont automatiquement définies sur publiées.
 
 ### Comment mettre une audience à l’état inactif ?
 
-Vous pouvez mettre une audience publiée en statut inactif en ouvrant le menu d’actions rapides dans Audience Portal et en sélectionnant « [!UICONTROL &#x200B; Désactiver &#x200B;].
+Vous pouvez mettre une audience publiée en statut inactif en ouvrant le menu d’actions rapides dans Audience Portal et en sélectionnant « [!UICONTROL  Désactiver ].
 
 ### Comment republier une audience ?
 
@@ -252,7 +252,7 @@ Non, le nombre de balises pouvant être ajoutées à une audience n’est pas li
 
 ### Y a-t-il une limite au nombre de balises que je peux créer ?
 
-Non, le nombre de balises que vous pouvez créer n’est pas limité. Cependant, vous pouvez créer un maximum de 100 catégories **&#x200B;**&#x200B;à appliquer aux balises. Pour plus d’informations sur la gestion des balises, consultez le [guide de gestion des balises](../administrative-tags/ui/managing-tags.md).
+Non, le nombre de balises que vous pouvez créer n’est pas limité. Cependant, vous pouvez créer un maximum de 100 catégories **** à appliquer aux balises. Pour plus d’informations sur la gestion des balises, consultez le [guide de gestion des balises](../administrative-tags/ui/managing-tags.md).
 
 ### Lorsque je recherche une audience par nom ou balise dans un dossier parent, puis-je également effectuer une recherche dans les dossiers enfants associés ?
 
@@ -306,7 +306,7 @@ Le placement du composant de composition suit une structure rigide comme suit :
 4. Vous pouvez éventuellement ajouter un bloc [!UICONTROL Classer] ou [!UICONTROL Partager]. Vous pouvez **uniquement** avoir l’un de ces blocs par composition.
 5. Vous terminez **toujours** par un bloc [!UICONTROL Enregistrer] pour enregistrer votre audience.
 
-En outre, les restrictions suivantes(?) appliquer lors de l’utilisation de ces blocs :
+En outre, les restrictions suivantes s’appliquent lors de l’utilisation de ces blocs :
 
 - Bloc Partager
    - Ce bloc ne prend en charge que les types de données **String**. Le bloc Fractionner ne prend **pas** en charge le type de données date ou booléen.
@@ -326,7 +326,7 @@ Une fois la composition de l’audience créée, son évaluation et son activati
 
 ### Quand puis-je utiliser l’audience que j’ai créée ?
 
-L’audience créée dans Composition de l’audience s’affichera **immédiatement** dans le portail Audience. Toutefois, pour l’utiliser dans Adobe Journey Optimizer, vous devez attendre au moins 24 heures après l’évaluation.
+L’audience créée dans Composition de l’audience s’affichera **immédiatement** dans le portail Audience. Toutefois, pour l’utiliser dans des services en aval tels que Adobe Journey Optimizer, vous devez attendre au moins 24 heures après l’évaluation.
 
 ### Les traitements d’évaluation sont-ils visibles dans la section de suivi ?
 
