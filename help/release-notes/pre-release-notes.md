@@ -110,7 +110,7 @@ Real-Time CDP B2B edition offre des fonctionnalités complètes de gestion des d
 | Obsolescence de l’API d’entité B2B | La création d’audiences via l’API pour les entités B2B (compte, opportunité, relation compte-personne, relation opportunité-personne, campagne, membre de campagne, liste marketing et membre de liste marketing) est désormais obsolète. En outre, les opérations de recherche et de suppression de l’API d’accès au profil pour ces entités B2B sont également obsolètes. |
 | Mises à jour de l’espace de noms d’identité pour la résolution d’entité | Les entités Compte et Opportunité utilisent désormais la fusion basée sur la priorité temporelle avec des espaces de noms d’identité spécifiques (`b2b_account` pour Compte, `b2b_opportunity` pour Opportunité). Toutes les autres entités sont unifiées avec des chevauchements d’identités principales fusionnés à l’aide d’une fusion basée sur la priorité temporelle. |
 
-Pour plus d’informations, consultez la présentation de Real-Time CDP B2B edition [](../rtcdp/b2b-overview.md).
+Pour plus d’informations, consultez la présentation de Real-Time CDP B2B edition [&#128279;](../rtcdp/b2b-overview.md).
 
 ## Sandbox {#sandboxes}
 
