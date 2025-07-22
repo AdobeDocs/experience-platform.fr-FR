@@ -3,10 +3,10 @@ title: Créer une connexion à une destination
 type: Tutorial
 description: Découvrez comment vous connecter à une destination dans Adobe Experience Platform, activer des alertes et configurer des actions marketing pour votre destination connectée.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 59ff77ff9f4a6fe147b5d8231fd3caa2550ae20e
 workflow-type: tm+mt
-source-wordcount: '1145'
-ht-degree: 70%
+source-wordcount: '1176'
+ht-degree: 69%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 70%
 
 >[!IMPORTANT]
 > 
->* Pour vous connecter à une destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour vous connecter à une destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 >* Pour vous connecter à une destination qui prend en charge les exportations de jeux de données, vous avez besoin des **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer et activer les destinations de jeux de données]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 ## Présentation {#overview}
@@ -50,6 +50,11 @@ Avant d’envoyer des données d’audience vers une destination, vous devez con
    ![Copie d’écran de l’interface utilisateur d’Experience Platform, présentant une liste des destinations disponibles et l’option Configurer une nouvelle destination mise en surbrillance.](../assets/ui/connect-destinations/configure-new-destination.png)
 
 ## S’authentifier auprès de la destination {#authenticate}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_account_name"
+>title="Nom du compte"
+>abstract="Saisissez un nom qui vous aidera à identifier facilement ce compte de destination à l’avenir. Cela s’avère particulièrement utile si vous disposez de plusieurs connexions au même type de destination."
 
 La première étape de la connexion à une destination consiste à s’authentifier sur la plateforme de destination.
 
