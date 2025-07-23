@@ -2,10 +2,10 @@
 title: Hôtes SFTP
 description: Découvrez comment configurer les balises dans Adobe Experience Platform pour diffuser des versions de bibliothèque sur un serveur SFTP sécurisé et auto-hébergé.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a077d3a1b14d9b7786d3181a556c49e940a42c2f
 workflow-type: tm+mt
-source-wordcount: '880'
-ht-degree: 34%
+source-wordcount: '815'
+ht-degree: 37%
 
 ---
 
@@ -37,31 +37,15 @@ La clé privée est utilisée pour chiffrer la clé publique. Vous devrez fourni
 
 ### Placer sur la liste autorisée des adresses IP Experience Platform
 
->[!IMPORTANT]
->
-> Le 23 juin 2025, Adobe Launch mettra à jour les adresses IP externes utilisées pour prendre en charge le type d’hôte SFTP et la fonctionnalité d’API de rappel. Pour continuer à utiliser l’une de ces fonctionnalités, assurez-vous que vos règles de pare-feu autorisent le trafic provenant des nouvelles adresses IP.
->
-> Pour maintenir un accès ininterrompu, nous vous recommandons d’ajouter les nouvelles adresses IP maintenant et de supprimer les anciennes après le 23 juin 2025.
->
->**Anciennes adresses IP :**
-> * `184.72.239.68`
-> * `23.20.85.113`
-> * `54.226.193.184`
->
->**Nouvelles adresses IP :**
-> * `34.227.138.75 `
-> * `44.194.43.191`
-> * `3.215.163.18`
-
 Vous devrez peut-être approuver un ensemble d’adresses IP à utiliser dans le pare-feu de votre société pour permettre à Experience Platform d’accéder à votre serveur SFTP et de s’y connecter. Ces adresses IP sont les suivantes :
 
-* `184.72.239.68`
-* `23.20.85.113`
-* `54.226.193.184`
+* `34.227.138.75`
+* `44.194.43.191`
+* `3.215.163.18`
 
 >[!NOTE]
 >
->La structure des versions de balises a changé au fil du temps. Elles utilisent des liens symboliques (symlinks) en interne pour maintenir la rétrocompatibilité afin que les codes incorporés précédents continuent à fonctionner avec la dernière structure de version. Votre serveur SFTP doit prendre en charge l’utilisation des liens symboliques pour servir de destination valide aux versions de balises.
+>La structure des versions de balises a changé au fil du temps. Elles utilisent des liens symboliques (symlinks) en interne pour maintenir la rétrocompatibilité afin que les codes intégrés précédents continuent à fonctionner avec la dernière structure de version. Votre serveur SFTP doit prendre en charge l’utilisation des liens symboliques pour servir de destination valide aux versions de balises.
 
 Pour plus d’informations détaillées, reportez-vous à l’article Medium suivant sur la [configuration de serveurs SFTP pour la diffusion d’une version](https://medium.com/launch-by-adobe/configuring-an-sftp-server-for-use-with-adobe-launch-bc626027e5a6).
 
@@ -84,7 +68,7 @@ La boîte de dialogue se développe pour inclure des options de configuration su
 | Champ de configuration | Description |
 | --- | --- |
 | [!UICONTROL Ne pas utiliser de liens symboliques] | Par défaut, tous les hôtes SFTP utilisent des liens symboliques (symlinks) pour référencer la bibliothèque [versions](../builds.md) qui sont enregistrés sur le serveur. Cependant, tous les serveurs ne prennent pas en charge l’utilisation de liens symboliques. Lorsque cette option est sélectionnée, l’hôte utilise une opération de copie pour mettre à jour directement les ressources de build au lieu d’utiliser des liens symboliques. |
-| [!UICONTROL &#x200B; URL du serveur SFTP &#x200B;] | Chemin d’accès de base de l’URL de votre serveur . |
+| [!UICONTROL  URL du serveur SFTP ] | Chemin d’accès de base de l’URL de votre serveur . |
 | [!UICONTROL Chemin] | Chemin d’accès à ajouter à l’URL du serveur de base pour cet hôte. |
 | [!UICONTROL Port] | Le port doit être l’un des ports suivants :<ul><li>`21`</li><li>`22`</li><li>`201`</li><li>`200`</li><li>`2002`</li><li>`2018`</li><li>`2022`</li><li>`2200`</li><li>`2222`</li><li>`2333`</li><li>`2939`</li><li>`443`</li><li>`4343`</li><li>`80`</li><li>`8080`</li><li>`8888`</li></ul>En règle générale, Adobe limite le nombre de ports pouvant être utilisés pour le trafic sortant. Les ports sélectionnés sont généralement autorisés à passer par les pare-feu d’entreprise et incluent certaines plages pour plus de flexibilité. |
 | [!UICONTROL Nom d’utilisateur] | Nom d’utilisateur à utiliser lors de l’accès au serveur. |
