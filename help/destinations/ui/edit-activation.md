@@ -4,9 +4,9 @@ title: Modifier des flux de données d’activation
 type: Tutorial
 description: Suivez les étapes de cet article pour modifier un flux de données d’activation existant dans Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: b8f3443c1e574505f7fd0ca8a5ae91801da4cbef
+source-git-commit: 24951f7680f134beb64c7679a94bac9b18042af1
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '857'
 ht-degree: 10%
 
 ---
@@ -19,10 +19,9 @@ Dans Adobe Experience Platform, vous pouvez configurer différents composants de
 * [Ajouter des audiences supplémentaires](#add-audiences) aux flux de données d’activation
 * [Modifier les attributs et les identités mappés](#edit-mapped-attributes)
 * [Modifier le planning d’activation et la fréquence d’exportation](#edit-schedule-frequency)
-* [Ajouter des jeux de données supplémentaires](#add-datasets) aux workflows d’activation
+* [Ajouter des jeux de données supplémentaires](#add-datasets) au workflow d’activation
+* [Appliquer des libellés d’accès](#apply-access-labels) aux données exportées
 * [Modifier les noms et les descriptions](#edit-names-descriptions) pour vos flux de données d’activation
-
-<!-- * [Apply access labels](#apply-access-labels) to exported data; -->
 
 ## Parcourir les flux de données d’activation {#browse-activation-dataflows}
 
@@ -100,8 +99,6 @@ Le workflow d’activation diffère légèrement en fonction du type de destinat
 * [Activer les audiences vers des destinations d’exportation de profils par lots](./activate-batch-profile-destinations.md) (par exemple, Amazon S3 ou Oracle Eloqua) ;
 * [Activez les audiences vers des destinations d’exportation de profil de diffusion en continu](./activate-streaming-profile-destinations.md) (par exemple, API HTTP ou Amazon Kinesis).
 
-
-
 ## Ajouter des jeux de données à un flux de données d’activation {#add-datasets}
 
 Sélectionnez **[!UICONTROL Exporter des jeux de données]** dans le rail de droite pour sélectionner des jeux de données supplémentaires à exporter vers la destination. Cette option vous mène au [workflow d’exportation de jeu de données](export-datasets.md).
@@ -112,13 +109,11 @@ Sélectionnez **[!UICONTROL Exporter des jeux de données]** dans le rail de dro
 
 ![Image de l’interface utilisateur d’Experience Platform montrant l’option d’exécution Exporter le flux de données des jeux de données.](../assets/ui/edit-activation/export-datasets.png)
 
+## Appliquer les libellés d’accès {#apply-access-labels}
 
+Sélectionnez **[!UICONTROL Appliquer les libellés d’accès]** pour modifier les libellés d’utilisation des données pour les données exportées. Pour en savoir plus[ consultez la documentation sur les ](../../data-governance/labels/overview.md) libellés d’utilisation des données .
 
-<!-- ## Apply access labels {#apply-access-labels}
-
-Select **[!UICONTROL Apply access labels]** to edit the data usage labels for the exported data. See the [data usage labels documentation](../../data-governance/labels/overview.md) to learn more.
-
-![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/apply-access-labels.png) -->
+![Image de l’interface utilisateur d’Experience Platform montrant l’option d’exécution Exporter le flux de données des jeux de données.](../assets/ui/edit-activation/apply-access-labels.png)
 
 ## Modifier les noms et descriptions des flux de données d’activation {#edit-names-descriptions}
 
