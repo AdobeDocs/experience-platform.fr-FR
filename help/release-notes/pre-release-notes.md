@@ -4,9 +4,9 @@ description: Aperçu des dernières notes de mise à jour de Adobe Experience Pl
 hide: true
 hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: d30778ef3152b779157206ce0d416c0e61ba98c3
+source-git-commit: fddefb7de85b5dcb8c8721e14d04efc0567ccae4
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1358'
 ht-degree: 23%
 
 ---
@@ -53,10 +53,9 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Prise en charge du chiffrement de destination Data Landing Zone (DLZ) | Ajout de la prise en charge du chiffrement pour la destination Data Landing Zone. Vous pouvez désormais joindre des clés publiques au format RSA pour ajouter un chiffrement à vos fichiers exportés, offrant ainsi une sécurité renforcée pour les exportations de données sensibles. |
-| Informations améliorées sur les flux de données pour les destinations Edge | Les informations du rail droit améliorées pour les destinations Adobe Target et Personalization personnalisé affichent désormais les champs Nom du flux de données et ID du flux de données, ce qui offre une visibilité plus claire sur les configurations de flux de données associées et réduit la confusion lors de la révision des flux de données existants. Le sélecteur **[!UICONTROL Identifiant du flux de données]** dans l’écran de configuration de destination a été mis à jour vers **[!UICONTROL Flux de données]** pour une plus grande clarté dans l’interface utilisateur. |
-| Visibilité des actions marketing dans la sélection de destination | Les actions marketing s’affichent désormais dans le rail de droite de l’étape [!UICONTROL Sélectionner la destination] lors de la configuration d’un flux de données, offrant ainsi une visibilité immédiate des modifications de l’action marketing sans avoir à accéder à la page d’affichage. Cette amélioration améliore l’expérience utilisateur en facilitant la vérification des configurations d’action marketing lors de la configuration de la destination. |
-| Modifier les actions marketing pour les destinations | Vous pouvez désormais modifier les actions marketing pour les destinations existantes. |
+| Informations améliorées sur les flux de données pour les destinations Edge | Les informations du rail droit améliorées pour les destinations Adobe Target et Personalization personnalisé affichent désormais le nom du flux de données, ce qui offre une visibilité plus claire sur les configurations de flux de données associées et réduit la confusion lors de la révision des flux de données existants. Le sélecteur **[!UICONTROL Identifiant du flux de données]** dans l’écran de configuration de destination a été mis à jour vers **[!UICONTROL Flux de données]** pour une plus grande clarté dans l’interface utilisateur. |
+| Visibilité des actions marketing dans la sélection de destination | Les actions marketing sont désormais affichées dans le rail droit de l’onglet de destination **[!UICONTROL Parcourir]** et dans la page **[!UICONTROL Exécutions de flux de données]**, offrant une visibilité immédiate des modifications apportées aux actions marketing sans qu’il faille accéder à la page d’affichage. Cette amélioration améliore l’expérience utilisateur en facilitant la vérification des configurations d’action marketing lors de la configuration de la destination. |
+| (Version bêta limitée) Modifier les actions marketing pour les destinations | Vous pouvez désormais modifier les actions marketing pour les destinations existantes. Cette fonctionnalité est en version bêta limitée. Pour demander l’accès, contactez votre représentant Adobe. |
 | Noms et descriptions des comptes pour les connexions de destination | Vous pouvez désormais ajouter des noms et des descriptions de compte lors de la connexion aux destinations, ce qui permet une meilleure gestion des destinations avec plusieurs comptes. |
 
 **Correctifs**
@@ -110,7 +109,7 @@ Real-Time CDP B2B edition offre des fonctionnalités complètes de gestion des d
 | Obsolescence de l’API d’entité B2B | La création d’audiences via l’API pour les entités B2B (compte, opportunité, relation compte-personne, relation opportunité-personne, campagne, membre de campagne, liste marketing et membre de liste marketing) est désormais obsolète. En outre, les opérations de recherche et de suppression de l’API d’accès au profil pour ces entités B2B sont également obsolètes. |
 | Mises à jour de l’espace de noms d’identité pour la résolution d’entité | Les entités Compte et Opportunité utilisent désormais la fusion basée sur la priorité temporelle avec des espaces de noms d’identité spécifiques (`b2b_account` pour Compte, `b2b_opportunity` pour Opportunité). Toutes les autres entités sont unifiées avec des chevauchements d’identités principales fusionnés à l’aide d’une fusion basée sur la priorité temporelle. |
 
-Pour plus d’informations, consultez la présentation de Real-Time CDP B2B edition [&#128279;](../rtcdp/b2b-overview.md).
+Pour plus d’informations, consultez la présentation de Real-Time CDP B2B edition [](../rtcdp/b2b-overview.md).
 
 ## Sandbox {#sandboxes}
 
