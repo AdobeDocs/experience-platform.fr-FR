@@ -3,9 +3,9 @@ title: Google Customer Match + connexion Display & Video 360
 description: Avec le connecteur de destination Google Customer Match + Display & Video 360, vous pouvez utiliser vos données en ligne et hors ligne d’Experience Platform pour atteindre et réengager vos clients dans les propriétés détenues et exploitées par Google, telles que Search, Shopping, Gmail et YouTube.
 badge: Disponibilité limitée
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: efdec64dee4c5857d0df008c2d1242674f9d0b49
+source-git-commit: 16192df76b618ed1d516b78f9c3191027140b8d3
 workflow-type: tm+mt
-source-wordcount: '2348'
+source-wordcount: '2384'
 ht-degree: 18%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 18%
 
 >[!NOTE]
 >
->**Disponibilité limitée du connecteur DV360 + Correspondance client Google**<br> tandis que nous traversons tout le cycle de vie de la maturité de cette intégration avec Google, nous voyons des données qui pointent vers des faiblesses dans la mise en œuvre qui doivent être corrigées avant qu’une adoption plus large ne puisse se produire. Compte tenu de ces préoccupations, Adobe a réduit la visibilité de cette destination à un nombre limité de clients. Nous avons des conversations en cours avec Google pour améliorer l’expérience du produit. Nous comprenons que cette nouvelle peut être décevante, mais nous croyons qu&#39;il s&#39;agit de l&#39;approche responsable pour assurer une expérience fiable et de haute qualité à nos clients.</br>
+>**Disponibilité limitée du connecteur Google Customer Match + Display &amp; Video 360**<br> Au fur et à mesure que nous traversons le cycle de vie complet de la maturité de cette intégration avec Google, nous voyons des données qui pointent vers des faiblesses dans la mise en œuvre qui doivent être corrigées avant qu’une adoption plus large puisse se produire. Compte tenu de ces préoccupations, Adobe a réduit la visibilité de cette destination à un nombre limité de clients. Nous avons des conversations en cours avec Google pour améliorer l’expérience du produit. Nous comprenons que cette nouvelle peut être décevante, mais nous croyons qu&#39;il s&#39;agit de l&#39;approche responsable pour assurer une expérience fiable et de haute qualité à nos clients.</br>
 
 Utilisez cette destination pour activer vos listes de [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) propriétaires basées sur les informations d’identification personnelles directement dans [!DNL Google Display & Video 360] propriétés telles que [!DNL Search], [!DNL YouTube], [!DNL Gmail] et le [!DNL Google Display Network].
 
@@ -29,12 +29,12 @@ Grâce à la nouvelle fonctionnalité permettant d’utiliser des audiences [!DN
 >[!IMPORTANT]
 >
 > Google publie des modifications de l’API [Google Ads](https://developers.google.com/google-ads/api/docs/start), de l’API [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) et de l’API [Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) afin de prendre en charge les exigences de conformité et de consentement définies dans le [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) de l’Union européenne ([EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/)). L’application de ces modifications aux exigences en matière de consentement est effective à compter du 6 mars 2024.
-> &#x200B;><br/>
-> &#x200B;>Pour se conformer à la politique de consentement des utilisateurs de l’UE et continuer à créer des listes d’audience pour les utilisateurs dans l’Espace économique européen (EEE), les annonceurs et les partenaires doivent s’assurer de transmettre le consentement de l’utilisateur final lors du téléchargement des données d’audience. En tant que partenaire Google, Adobe vous fournit les outils nécessaires pour vous conformer à ces exigences de consentement en vertu de la DMA dans l’Union européenne.
-> &#x200B;><br/>
-> &#x200B;>Les clients qui ont acheté Adobe Privacy &amp; Security Shield et configuré une [politique de consentement](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) pour filtrer les profils non consentis n’ont aucune action à effectuer.
-> &#x200B;><br/>
-> &#x200B;>Les clients qui n’ont pas acheté Adobe Privacy &amp; Security Shield doivent utiliser les fonctionnalités [définition de segment](../../../segmentation/home.md#segment-definitions) du [créateur de segments](../../../segmentation/ui/segment-builder.md) pour filtrer les profils non consentis afin de continuer à utiliser les destinations Real-Time CDP Google existantes sans interruption.
+> ><br/>
+> >Pour se conformer à la politique de consentement des utilisateurs de l’UE et continuer à créer des listes d’audience pour les utilisateurs dans l’Espace économique européen (EEE), les annonceurs et les partenaires doivent s’assurer de transmettre le consentement de l’utilisateur final lors du téléchargement des données d’audience. En tant que partenaire Google, Adobe vous fournit les outils nécessaires pour vous conformer à ces exigences de consentement en vertu de la DMA dans l’Union européenne.
+> ><br/>
+> >Les clients qui ont acheté Adobe Privacy &amp; Security Shield et configuré une [politique de consentement](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) pour filtrer les profils non consentis n’ont aucune action à effectuer.
+> ><br/>
+> >Les clients qui n’ont pas acheté Adobe Privacy &amp; Security Shield doivent utiliser les fonctionnalités [définition de segment](../../../segmentation/home.md#segment-definitions) du [créateur de segments](../../../segmentation/ui/segment-builder.md) pour filtrer les profils non consentis afin de continuer à utiliser les destinations Real-Time CDP Google existantes sans interruption.
 
 ## Quand utiliser cette destination
 
@@ -107,16 +107,16 @@ Les exportations de données échouent si votre compte Google n’est pas correc
 
 >[!NOTE]
 >
->Adobe a mis à jour l’identifiant de compte partenaire Google de `6219889373` à `4641108541`.
+>Pour les clients qui faisaient partie du programme bêta de ce connecteur : Adobe a mis à jour l’identifiant de compte partenaire Google de `6219889373` à `4641108541`.
 >
->**Si votre compte Google est actuellement lié à l’ancien identifiant de compte partenaire Adobe (`6219889373`), procédez comme suit :**
+>**Si vous faisiez partie du programme bêta pour le connecteur Google Customer Match + Display &amp; Video 360 et si votre compte Google est actuellement lié à l’ancien identifiant de compte partenaire Adobe (`6219889373`), procédez comme suit :**
 >
 >1. Annulez le lien de votre compte Google avec l’ancien identifiant de compte partenaire Adobe (`6219889373`)
 >2. Lier votre compte Google au nouvel identifiant de compte partenaire Adobe (`4641108541`)
 >3. Supprimer toutes les audiences de vos flux de données existants
 >4. Créer des flux de données et mapper vos audiences
 >
->Si votre compte Google est déjà lié au nouvel identifiant de compte partenaire Adobe (`4641108541`), aucune action n’est requise de votre part.
+>Si votre compte Google est déjà lié au nouvel identifiant de compte partenaire Adobe (`4641108541`), aucune action n’est requise de votre part pour utiliser ce connecteur.
 
 **Pour les organisations disposant de comptes de responsable :**
 
@@ -176,7 +176,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411785/?quality=12&learn=on&captions=fre_fr) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## Se connecter à la destination {#connect}
 
@@ -187,7 +187,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
@@ -212,8 +212,8 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités* vers les destinations, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](../../assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités* vers les destinations, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](../../assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
@@ -255,7 +255,7 @@ Les informations de surveillance de la connexion [!DNL Google Customer Match + D
 
 ## Vérifiez que l’activation de l’audience a réussi. {#verify-activation}
 
-Une fois le flux d’activation terminé, basculez vers votre compte **[!UICONTROL Google Ads]**. Les audiences activées s’affichent dans votre compte Google sous forme de listes de clients. Selon la taille de votre audience, certaines audiences ne sont pas renseignées, sauf s’il y a plus de 1 000 utilisateurs actifs à servir. Pour plus d’informations, consultez la documentation sur les partenaires Audience de Google [&#128279;](https://developers.google.com/audience-partner/api/docs/customer-match/get-started#verify-list). Notez que vous devez demander à Google l’accès à la documentation dans le lien.
+Une fois le flux d’activation terminé, basculez vers votre compte **[!UICONTROL Google Ads]**. Les audiences activées s’affichent dans votre compte Google sous forme de listes de clients. Selon la taille de votre audience, certaines audiences ne sont pas renseignées, sauf s’il y a plus de 1 000 utilisateurs actifs à servir. Pour plus d’informations, consultez la documentation sur les partenaires Audience de Google [](https://developers.google.com/audience-partner/api/docs/customer-match/get-started#verify-list). Notez que vous devez demander à Google l’accès à la documentation dans le lien.
 
 ## Gouvernance des données
 
