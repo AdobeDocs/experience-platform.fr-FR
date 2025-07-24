@@ -2,17 +2,29 @@
 title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 03cc702eced26453b5923bb63739c0cb739e8c8f
-workflow-type: ht
-source-wordcount: '2677'
-ht-degree: 100%
+source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
+workflow-type: tm+mt
+source-wordcount: '2733'
+ht-degree: 98%
 
 ---
 
-# Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
+
+# Notes de mise à jour de l’extension SDK Web
 
 Ce document contient les notes de mise à jour de l’extension de balises du SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, voir les [notes de mise à jour du SDK web d’Experience Platform](/help/web-sdk/release-notes.md).
 
+## Version 2.31.0 - vendredi 24 juillet 2025
+
+**Nouvelles fonctionnalités**
+
+- Contient [version 2.28.0](../../../../web-sdk/release-notes.md#2-28-0) du SDK Web Adobe Experience Platform.
+
+**Correctifs et améliorations**
+
+- Correction d’un problème où une erreur est déclenchée lorsqu’un remplacement de train de données est activé via un élément de données.
+- Correction d’un problème où les remplacements de `idSyncContainerId` vides généraient une erreur.
+- Lors de la résolution des éléments de données multimédia, l’objet événement est désormais inclus.
 
 ## Version 2.30.1 - 27 mai 2025
 
@@ -326,7 +338,7 @@ Contient la version 2.6.1 de la bibliothèque SDK Web Adobe Experience Platfo
 
 Contient la version 2.6.0 de la bibliothèque SDK Web Adobe Experience Platform.
 
-- Les étiquettes, descriptions et messages d’erreur utilisant le terme Configuration de périphérie ont été modifiés afin d’utiliser le terme Flux de données pour s’aligner sur la terminologie Adobe Experience Platform la plus récente.
+- Les libellés, descriptions et messages d’erreur utilisant le terme Configuration de périphérie ont été modifiés afin d’utiliser le terme Flux de données pour s’aligner sur la terminologie Adobe Experience Platform la plus récente.
 - Dans la vue de configuration de l’extension, la prise en charge a été ajoutée pour la gestion d’un grand nombre de flux de données et d’environnements de flux de données.
 - Dans la vue d’élément de données de l’objet XDM, la prise en charge de la gestion d’un grand nombre de schémas a été ajoutée.
 - Un type d’événement d’envoi d’événement terminé a été ajouté, qui peut être utilisé pour exécuter une règle après l’envoi d’un événement au serveur et la réception d’une réponse. D’autres documents seront bientôt disponibles.

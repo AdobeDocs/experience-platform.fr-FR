@@ -3,18 +3,31 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
+source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
 workflow-type: tm+mt
-source-wordcount: '2355'
-ht-degree: 68%
+source-wordcount: '2438'
+ht-degree: 66%
 
 ---
 
 
-# Notes de mise à jour
+# Notes de mise à jour de Web SDK
 
 Ce document présente les notes de mise à jour du SDK web d’Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Version 2.28.0 - vendredi 24 juillet 2025
+
+**Nouvelles fonctionnalités**
+
+- Ajout de la prise en charge des règles de disqualification de Adobe Journey Optimizer.
+
+**Correctifs et améliorations**
+
+- Correction d’une erreur dans le [dispositif de suivi Media Analytics](commands/getmediaanalyticstracker.md) en raison de laquelle la propriété `length` de l’objet média acceptait incorrectement des types de données non valides.
+- Amélioration de la [gestion des identités](identity/overview.md) de la gestion des erreurs pour traiter correctement les rejets de promesses en cas d’échec de la recherche d’identité.
+- Correction d’un problème où le rendu du [contenu de personnalisation](personalization/rendering-personalization-content.md) avec des éléments de contenu HTML échouait avec une erreur liée à un `renderStatusHandler` manquant.
+- Correction d’une Activity Map [collection d’URL](commands/configure/clickcollectionenabled.md) pour gérer correctement les URL non HTTP.
 
 ## Version 2.27.0 - mercredi 20 mai 2025
 
