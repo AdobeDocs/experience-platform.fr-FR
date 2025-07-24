@@ -47,12 +47,12 @@ ht-degree: 61%
    * [Destinations dans l’édition B2B de Real-Time CDP](destinations/b2b.md)
 * Mécanismes de sécurisation {#guardrails}
    * [Présentation des mécanismes de sécurisation de Real-Time CDP](guardrails/overview.md)
-   * [Mécanismes de sécurisation pour l’ingestion de données](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [Mécanismes de sécurisation pour l’ingestion de données](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html?lang=fr){target="_blank"}
    * [Mécanismes de sécurisation pour  [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
    * [Mécanismes de sécurisation pour  [!DNL Real-Time Customer Profile]  données et la segmentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=fr){target="_blank"}
-   * [Mécanismes de sécurisation pour  [!DNL Identity Service]  données](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
-   * [Mécanismes de sécurisation pour  [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
-   * [Mécanismes de sécurisation pour l’activation des données via les destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
+   * [Mécanismes de sécurisation pour  [!DNL Identity Service]  données](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html?lang=fr){target="_blank"}
+   * [Mécanismes de sécurisation pour  [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html?lang=fr){target="_blank"}
+   * [Mécanismes de sécurisation pour l’activation des données via les destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html?lang=fr){target="_blank"}
 * Identités {#identity}
    * [Identités et espaces de noms d’identité](profile/identities-overview.md)
 * Politiques de fusion {#merge-policies}
