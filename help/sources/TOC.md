@@ -5,9 +5,9 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: 079c1d7ac790fb7df72a6127a980080bdaa49518
+source-git-commit: 44c01678e96f2649dbf731dd4531004c1df28058
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1047'
 ht-degree: 91%
 
 ---
@@ -59,6 +59,7 @@ ht-degree: 91%
       - [Connecteur SFTP](connectors/cloud-storage/sftp.md)
       - [Connecteur Amazon S3 et Azure Blob](connectors/cloud-storage/blob-s3.md)
    - Consentement et préférences {#consent}
+      - [Didomi](connectors/consent-and-preferences/didomi.md)
       - [Intégration OneTrust](connectors/consent-and-preferences/onetrust.md)
    - Intégration des systèmes de gestion des relations clients {#crm}
       - [Connecteur Microsoft Dynamics](connectors/crm/ms-dynamics.md)
@@ -264,6 +265,7 @@ ht-degree: 91%
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 et Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - Consentement et préférences {#consent}
+         - [Didomi](tutorials/ui/create/consent-and-preferences/didomi.md)
          - [Intégration OneTrust](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - Intégration des systèmes de gestion des relations clients {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
