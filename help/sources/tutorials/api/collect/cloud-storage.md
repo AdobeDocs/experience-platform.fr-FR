@@ -5,10 +5,10 @@ title: Créer un flux de données pour les sources de stockage cloud à l’aide
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données à partir d’un stockage cloud tiers et les importer dans Experience Platform à l’aide des connecteurs source et des API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b184319f6c5f5430a5ae1e9de4728b5074bca9b8
 workflow-type: tm+mt
-source-wordcount: '1756'
-ht-degree: 59%
+source-wordcount: '1792'
+ht-degree: 57%
 
 ---
 
@@ -81,7 +81,8 @@ curl -X POST \
       },
       "params": {
           "path": "/acme/summerCampaign/account.csv",
-          "type": "file"
+          "type": "file",
+          "cdcEnabled": true
       },
       "connectionSpec": {
           "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
@@ -100,6 +101,7 @@ curl -X POST \
 | `data.properties.compressionType` | (Facultatif) Propriété qui définit le type de fichier compressé à ingérer. Les types de fichiers compressés pris en charge sont les suivants : `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip` et `tar`. **Remarque** : la propriété `compressionType` ne peut être utilisée que lors de l’ingestion de fichiers délimités ou JSON. |
 | `params.path` | Chemin d’accès au fichier source auquel vous accédez. Ce paramètre pointe vers un fichier individuel ou un dossier entier.  **Remarque** : vous pouvez utiliser un astérisque à la place du nom de fichier pour spécifier l’ingestion d’un dossier entier. Par exemple : `/acme/summerCampaign/*.csv` ingérera l’intégralité du dossier `/acme/summerCampaign/`. |
 | `params.type` | Type du fichier de données source que vous ingérez. Utilisez le `file` de type pour ingérer un fichier individuel et le `folder` de type pour ingérer un dossier entier. |
+| `params.cdcEnabled` | Valeur booléenne qui indique si la capture de l’historique des modifications est activée ou non. Cette propriété est prise en charge par les sources d’espace de stockage suivantes : <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul> Pour plus d’informations, consultez le guide sur l’utilisation de [modifier la capture de données dans les sources](../change-data-capture.md). |
 | `connectionSpec.id` | Identifiant de spécification de connexion associé à votre source d’espace de stockage dans le cloud spécifique. Consultez lʼ[annexe](#appendix) pour obtenir la liste des identifiants de spécification de connexion. |
 
 **Réponse**
