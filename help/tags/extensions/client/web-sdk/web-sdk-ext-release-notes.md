@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
+source-git-commit: 99a2bb12fb0ed8b6bb9001d25f2bddc17201c8cf
 workflow-type: tm+mt
-source-wordcount: '2733'
-ht-degree: 98%
+source-wordcount: '2801'
+ht-degree: 95%
 
 ---
 
@@ -25,6 +25,11 @@ Ce document contient les notes de mise à jour de l’extension de balises du SD
 - Correction d’un problème où une erreur est déclenchée lorsqu’un remplacement de train de données est activé via un élément de données.
 - Correction d’un problème où les remplacements de `idSyncContainerId` vides généraient une erreur.
 - Lors de la résolution des éléments de données multimédia, l’objet événement est désormais inclus.
+
+**Problèmes connus**
+
+- Suite à la publication de la version v2.31.0, un problème a été identifié avec le processus [build des composants personnalisés](/help/web-sdk/install/create-custom-build.md). Bien que les versions personnalisées continuent à fonctionner, tous les composants sont actuellement inclus dans la version, ce qui entraîne un package en taille réelle, quelle que soit la sélection de composants. Une solution à ce problème est en cours de développement. Si vous comptez sur la sélection de composants personnalisés pour réduire la taille de la version, il est recommandé d’attendre une publication ultérieure.
+
 
 ## Version 2.30.1 - 27 mai 2025
 
