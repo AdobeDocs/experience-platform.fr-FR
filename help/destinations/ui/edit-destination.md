@@ -27,7 +27,7 @@ Pour modifier différents composants d’une connexion de destination existante 
 
 1. Accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]**.
 2. Sélectionnez la destination que vous souhaitez modifier.
-3. Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Modifier la destination](/help/images/icons/edit.png)**[!UICONTROL Modifier la destination ]**pour modifier les connexions de destination existantes.
+3. Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Modifier la destination](/help/images/icons/edit.png)**[!UICONTROL Modifier la destination &#x200B;]**&#x200B;pour modifier les connexions de destination existantes.
 4. Dans la fenêtre modale, modifiez tous les paramètres souhaités. Sélectionnez **[!UICONTROL Enregistrer]** lorsque vous avez terminé.
 
 Dans la fenêtre Modifier la destination , vous pouvez mettre à jour les paramètres que vous avez configurés lors de la connexion initiale à la destination. Ces paramètres sont différents en fonction de la plateforme de destination que vous mettez à jour.
