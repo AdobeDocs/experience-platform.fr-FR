@@ -110,7 +110,7 @@ Sélectionnez **[!UICONTROL Exporter des jeux de données]** dans le rail de dro
 
 ![Image de l’interface utilisateur d’Experience Platform montrant l’option d’exécution Exporter le flux de données des jeux de données.](../assets/ui/edit-activation/export-datasets.png)
 
-## [!BADGE Beta ]{type=Informative} Modifier les actions marketing {#edit-marketing-actions}
+## [!BADGE Beta &#x200B;]{type=Informative} Modifier les actions marketing {#edit-marketing-actions}
 
 >[!NOTE]
 >
