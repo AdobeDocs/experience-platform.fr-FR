@@ -2,10 +2,10 @@
 title: Connecter Salesforce à Experience Platform à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform à un compte Salesforce à l’aide de l’API Flow Service.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
+source-git-commit: 56307d8457ba6d0046ad80a7c97405220aa6161c
 workflow-type: tm+mt
-source-wordcount: '1118'
-ht-degree: 18%
+source-wordcount: '1175'
+ht-degree: 17%
 
 ---
 
@@ -63,6 +63,7 @@ Pour connecter votre compte [!DNL Salesforce] à [!DNL Flow Service] à l’aide
 | `clientId` | L’identifiant client est utilisé conjointement avec le secret client dans le cadre de l’authentification OAuth2. Ensemble, l’identifiant client et le secret client permettent à votre application d’opérer pour le compte de votre compte en identifiant votre application à [!DNL Salesforce]. |
 | `clientSecret` | Le secret client est utilisé conjointement avec l’identifiant client dans le cadre de l’authentification OAuth2. Ensemble, l’identifiant client et le secret client permettent à votre application d’opérer pour le compte de votre compte en identifiant votre application à [!DNL Salesforce]. |
 | `apiVersion` | Version de l’API REST de l’instance [!DNL Salesforce] que vous utilisez. La valeur de la version de l’API doit être formatée avec une décimale. Par exemple, si vous utilisez la version `52` de l’API, vous devez saisir la valeur comme `52.0`. Si ce champ n’est pas renseigné, Experience Platform utilise automatiquement la dernière version disponible. Cette valeur est obligatoire pour l’authentification des informations d’identification du client OAuth2. |
+| `includeDeletedObjects` | Valeur booléenne utilisée pour déterminer s’il faut inclure les enregistrements supprimés de manière réversible. Si la valeur est définie sur true, les enregistrements supprimés de manière réversible peuvent être inclus dans votre requête [!DNL Salesforce] et ingérés depuis votre compte dans Experience Platform. Si vous ne spécifiez pas votre configuration, cette valeur est définie par défaut sur `false`. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Salesforce] est `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 Pour plus d’informations sur l’utilisation d’OAuth pour [!DNL Salesforce], consultez le guide [[!DNL Salesforce]  sur les flux d’autorisation OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
@@ -162,7 +163,8 @@ curl -X POST \
             "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
             "clientId": "xxxx",
             "clientSecret": "xxxx",
-            "apiVersion": "60.0"
+            "apiVersion": "60.0",
+            "includeDeletedObjects": true
         }
       },
       "connectionSpec": {
@@ -178,6 +180,7 @@ curl -X POST \
 | `auth.params.clientId` | Identifiant client associé à votre compte [!DNL Salesforce]. |
 | `auth.params.clientSecret` | Secret client associé à votre compte [!DNL Salesforce]. |
 | `auth.params.apiVersion` | Version de l’API REST de l’instance [!DNL Salesforce] que vous utilisez. |
+| `auth.params.includeDeletedObjects` | Valeur booléenne utilisée pour déterminer s’il faut inclure ou non les enregistrements supprimés de manière réversible. |
 | `connectionSpec.id` | Identifiant de spécification de connexion [!DNL Salesforce] : `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 +++
@@ -252,7 +255,7 @@ curl -X POST \
   }'
 ```
 
-Pour plus d’informations sur la manière de récupérer votre `jwtToken` [!DNL Salesforce], consultez le guide sur [comment configurer une source pour  [!DNL Salesforce]  connecter à Experience Platform sur AWS](../../../../connectors/crm/salesforce.md#aws).
+Pour plus d’informations sur la manière de récupérer votre [!DNL Salesforce] `jwtToken`, consultez le guide sur [comment configurer une source pour  [!DNL Salesforce]  connecter à Experience Platform sur AWS](../../../../connectors/crm/salesforce.md#aws).
 
 +++
 
