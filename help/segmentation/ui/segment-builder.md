@@ -131,7 +131,7 @@ Une fois les suites de rapports mappées, vous pouvez utiliser ces nouveaux cham
 >id="platform_segmentation_segmentbuilder_externalaudiences"
 >title="Audiences externes"
 >abstract="Les audiences importées via l’onglet Audiences sont désormais automatiquement surfacées via Audience Portal. Les audiences ingérées à partir d’Audience Manager, de Customer Journey Analytics, de la correspondance de segments et d’autres intégrations personnalisées sont immédiatement disponibles, sans configuration préalable dans le créateur de segments. Depuis le 1er septembre 2025, toutes les audiences sont récupérées exclusivement par le biais de la Recherche unifiée et le workflow précédent n’est plus pris en charge."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#list" text="Audience Portal"
+>additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/segmentation/ui/audience-portal#list" text="Audience Portal"
 
 >[!NOTE]
 >
