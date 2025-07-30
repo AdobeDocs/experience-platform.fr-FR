@@ -4,10 +4,10 @@ title: Modifier des flux de données d’activation
 type: Tutorial
 description: Suivez les étapes de cet article pour modifier un flux de données d’activation existant dans Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: 24951f7680f134beb64c7679a94bac9b18042af1
+source-git-commit: ec87cb1c8755f52233a5725aa3bb0c80a135d60c
 workflow-type: tm+mt
-source-wordcount: '857'
-ht-degree: 10%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -20,6 +20,7 @@ Dans Adobe Experience Platform, vous pouvez configurer différents composants de
 * [Modifier les attributs et les identités mappés](#edit-mapped-attributes)
 * [Modifier le planning d’activation et la fréquence d’exportation](#edit-schedule-frequency)
 * [Ajouter des jeux de données supplémentaires](#add-datasets) au workflow d’activation
+* [Modifier les actions marketing](#edit-marketing-actions) pour vos flux de données d’activation
 * [Appliquer des libellés d’accès](#apply-access-labels) aux données exportées
 * [Modifier les noms et les descriptions](#edit-names-descriptions) pour vos flux de données d’activation
 
@@ -108,6 +109,23 @@ Sélectionnez **[!UICONTROL Exporter des jeux de données]** dans le rail de dro
 >Cette option est uniquement visible pour les [destinations qui prennent en charge l’exportation des jeux de données](export-datasets.md#supported-destinations).
 
 ![Image de l’interface utilisateur d’Experience Platform montrant l’option d’exécution Exporter le flux de données des jeux de données.](../assets/ui/edit-activation/export-datasets.png)
+
+## [!BADGE Beta ]{type=Informative} Modifier les actions marketing {#edit-marketing-actions}
+
+>[!NOTE]
+>
+>Cette fonctionnalité est actuellement en version **bêta**. Pour demander l’accès, contactez votre représentant Adobe.
+
+Vous pouvez ajouter ou supprimer des actions marketing que vous configurez lors de la connexion initiale à la destination.
+
+Sélectionnez **[!UICONTROL Modifier les actions marketing]** dans le rail de droite pour ouvrir l’écran de sélection des actions marketing.
+
+![Image de l’interface utilisateur d’Experience Platform montrant l’option modifier les actions marketing.](../assets/ui/edit-activation/edit-marketing-actions.png)
+
+Sélectionnez les actions marketing applicables, puis sélectionnez **[!UICONTROL Enregistrer]** pour appliquer les modifications.
+
+![Image de l’interface utilisateur d’Experience Platform affichant l’écran de modification des actions marketing.](../assets/ui/edit-activation/edit-marketing-actions-screen.png)
+
 
 ## Appliquer les libellés d’accès {#apply-access-labels}
 
