@@ -1,13 +1,13 @@
 ---
 title: Audiences du compte
 description: Découvrez comment créer et utiliser des audiences de compte pour cibler les profils de compte dans les destinations en aval.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
-source-wordcount: '1495'
-ht-degree: 23%
+source-wordcount: '1528'
+ht-degree: 21%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 23%
 Grâce à la segmentation de compte, Adobe Experience Platform vous permet d’apporter toute la facilité et la sophistication de l’expérience de segmentation marketing, des audiences basées sur les personnes aux audiences basées sur les comptes.
 
 Les audiences de compte peuvent être utilisées comme entrée pour les destinations basées sur les comptes, ce qui vous permet de cibler les personnes au sein de ces comptes dans les services en aval. Par exemple, vous pouvez utiliser les audiences basées sur les comptes pour récupérer les enregistrements de tous les comptes qui ne disposent **pas** des informations de contact des personnes dotées du titre de Directeur de l’exploitation (COO) ou Directeur marketing (CMO).
+
+>[!NOTE]
+>
+>Dans le cadre de la mise à niveau de l’architecture B2B, les estimations de taille d’audience pour les audiences avec des entités B2B sont désormais calculées avec une précision exacte. Ces estimations sont disponibles lors de la prévisualisation et fournissent des informations plus précises et plus fiables pour les audiences qui impliquent des relations B2B complexes. <br>Pour plus d’informations, consultez la présentation des mises à niveau de l’architecture de Real-Time CDP B2B edition [](../../rtcdp/b2b-architecture-upgrade.md).
 
 ## Terminologie {#terminology}
 
@@ -110,7 +114,7 @@ Après avoir créé l’audience de votre compte, vous pouvez activer l’audien
 
 Sélectionnez l’audience à activer, puis **[!UICONTROL Activer vers la destination]**.
 
-![Le bouton [!UICONTROL &#x200B; Activer vers la destination] est mis en surbrillance dans le menu des actions rapides pour l’audience sélectionnée.](../images/types/account/activate.png)
+![Le bouton [!UICONTROL  Activer vers la destination] est mis en surbrillance dans le menu des actions rapides pour l’audience sélectionnée.](../images/types/account/activate.png)
 
 La page [!UICONTROL Activer la destination] s’affiche. Pour plus d’informations sur le processus d’activation, y compris les destinations prises en charge et des détails sur les mappages de champs, consultez le tutoriel [activer les audiences de compte](/help/destinations/ui/activate-account-audiences.md).
 
@@ -126,8 +130,8 @@ La section suivante fournit des informations supplémentaires sur les audiences 
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_eventLookbackWindow"
->title="Erreur de période de recherche rétroactive maximale"
->abstract="La période de recherche rétroactive maximale pour les événements d’expérience est de 30 jours."
+>title="Période de recherche rétroactive"
+>abstract="Utilisez l’intervalle de recherche en amont pour afficher l’historique complet des événements au niveau de la personne."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxDepth"
@@ -196,18 +200,19 @@ La section suivante fournit des informations supplémentaires sur les audiences 
 
 Lors de l’utilisation des audiences de compte, l’audience **doit** doit respecter les contraintes suivantes :
 
-- L’intervalle de recherche en amont maximal pour les événements d’expérience est de **30 jours**.
 - La profondeur maximale des conteneurs imbriqués est de **5**.
    - Cela signifie qu’il est **impossible** d’avoir plus de cinq conteneurs imbriqués lors de la création de votre audience.
 - Le nombre maximal de règles dans un seul conteneur est de **5**.
    - Cela signifie que votre audience **ne peut pas** comporter plus de cinq règles.
 - Le nombre maximal d’entités croisées pouvant être utilisées est de **5**.
    - « Entité croisée » désigne le fait de changer d’entités au sein de votre audience. Vous pouvez notamment passer d’un compte à une personne et d’une personne à une liste marketing.
-- Les entités personnalisées **impossible** ne peuvent pas être utilisées.
 - Le nombre maximal de valeurs pouvant être cochées pour un champ est de **50**.
    - Par exemple, si vous disposez d’un champ « Nom de ville », vous pouvez comparer cette valeur à 50 noms de ville.
-- Les audiences de compte **impossible** utilisent des événements `inSegment`.
 - Les audiences de compte **impossible** utilisent des événements séquentiels.
 - Les audiences de compte **impossible** utilisent des mappages.
 - La profondeur maximale des tableaux imbriqués est de **5**.
 - Le nombre maximal d’objets imbriqués est de **10**.
+
+<!-- - The maximum lookback window for Experience Events is **30 days**. -->
+<!-- - Account audiences **cannot** use `inSegment` events. -->
+<!-- - Custom entities **cannot** be used. -->
