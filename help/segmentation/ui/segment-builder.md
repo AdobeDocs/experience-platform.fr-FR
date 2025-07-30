@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 152ec3ca36a69bea79b8ed3c33dd21bd9479171f
+source-git-commit: d942093bffc680501384f7c8193f4cdddc1cef33
 workflow-type: tm+mt
-source-wordcount: '5128'
-ht-degree: 66%
+source-wordcount: '5188'
+ht-degree: 65%
 
 ---
 
@@ -126,6 +126,12 @@ Une fois les suites de rapports mappées, vous pouvez utiliser ces nouveaux cham
 >id="platform_segmentation_segmentBuilder_b2b_decomposition"
 >title="Évaluation complexe"
 >abstract="L’expression suivante est trop compliquée pour être exprimée en audience unique. Pour utiliser les règles B2B et les événements basés sur les personnes dans la même définition de segment, suivez les étapes ci-dessous.<ol><li>Créez une définition de segment qui ne fait référence qu’aux événements basés sur les personnes et enregistrez-la comme sa propre définition de segment.</li><li>Dans une nouvelle définition de segment, importez la définition de segment créée précédemment en vous référant aux règles B2B.</li></ol>"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_externalaudiences"
+>title="Audiences externes"
+>abstract="Les audiences importées via l’onglet Audiences sont désormais automatiquement surfacées via Audience Portal. Les audiences ingérées à partir d’Audience Manager, de Customer Journey Analytics, de la correspondance de segments et d’autres intégrations personnalisées sont immédiatement disponibles, sans configuration préalable dans le créateur de segments. Depuis le 1er septembre 2025, toutes les audiences sont récupérées exclusivement par le biais de la Recherche unifiée et le workflow précédent n’est plus pris en charge."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#list" text="Audience Portal"
 
 >[!NOTE]
 >
@@ -324,7 +330,7 @@ La liste des contraintes de temps disponibles pour cette opération diffère de 
 >[!NOTE]
 >
 >Lors de l’utilisation de la contrainte de temps « Après », le dernier événement peut avoir lieu plus longtemps que la durée répertoriée dans la contrainte de temps. >
->&#x200B;>Par exemple, si vous disposez d’un événement Page vue et d’un événement Passage en caisse et que vous appliquez la contrainte de temps « Après 1 heure » entre ces deux événements, une définition de segment avec un événement Passage en caisse 2 heures après l’événement Page vue est éligible.
+>>Par exemple, si vous disposez d’un événement Page vue et d’un événement Passage en caisse et que vous appliquez la contrainte de temps « Après 1 heure » entre ces deux événements, une définition de segment avec un événement Passage en caisse 2 heures après l’événement Page vue est éligible.
 >
 >En outre, ces deux contraintes de temps peuvent être utilisées en coordination l&#39;une avec l&#39;autre.
 >
