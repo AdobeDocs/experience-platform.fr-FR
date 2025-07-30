@@ -29,7 +29,7 @@ Nouvelles fonctionnalités et mises à jour des fonctionnalités existantes dans
 - [Capacité](#capacity)
 - [Destinations](#destinations)
 - [Ingestion des données](#data-ingestion)
-- [Query Service](#query-service
+- [Query Service] (#query-service
 - [Édition B2B de Real-Time CDP](#b2b)
 - [Sandbox](#sandboxes)
 - [Segmentation Service](#segmentation-service)
@@ -106,7 +106,7 @@ Real-Time CDP B2B edition offre des fonctionnalités complètes de gestion des d
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Mise à niveau de l’architecture B2B | Experience Platform effectue une mise à niveau vers une nouvelle architecture B2B qui apporte des améliorations significatives aux audiences à entités multiples avec des attributs B2B. Cette mise à niveau consolide la prise en charge des politiques de fusion, améliore la précision du nombre d’audiences et améliore les fonctionnalités de résolution des entités. Lisez la présentation de la mise à niveau de l’architecture de Real-Time CDP B2B edition [](../../rtcdp/b2b-architecture-upgrade.md) pour une répartition complète des modifications. |
+| Mise à niveau de l’architecture B2B | Experience Platform effectue une mise à niveau vers une nouvelle architecture B2B qui apporte des améliorations significatives aux audiences à entités multiples avec des attributs B2B. Cette mise à niveau consolide la prise en charge des politiques de fusion, améliore la précision du nombre d’audiences et améliore les fonctionnalités de résolution des entités. Lisez la présentation de la mise à niveau de l’architecture de Real-Time CDP B2B edition [&#128279;](../../rtcdp/b2b-architecture-upgrade.md) pour une répartition complète des modifications. |
 | Consolidation de la politique de fusion pour les audiences à entités multiples | Les audiences d’entités multiples avec des attributs B2B ne prennent désormais en charge qu’une seule politique de fusion (la politique de fusion par défaut) au lieu de prendre en charge plusieurs politiques de fusion. Cette modification garantit une composition cohérente de l’audience et simplifie la gestion de la logique de fusion. Pour plus d’informations, consultez la [ présentation des politiques de fusion ](../../profile/merge-policies/overview.md). |
 | Nombre d’audiences amélioré pour les entités B2B | Les estimations de taille d’audience pour les audiences avec des entités B2B telles que Comptes et Opportunités sont désormais exactes, en fonction des résultats de segmentation en temps réel. Cette amélioration fournit des estimations plus précises et plus fiables pour les audiences impliquant des relations B2B complexes. |
 | Instantanés de compte pour l’appartenance à une audience | Les détails d’appartenance à l’audience sont désormais inclus pour les entités de compte dans les exportations d’instantanés, ce qui permet d’accéder au statut d’audience au niveau du compte, aux horodatages et aux indicateurs d’appartenance. Cela apporte la parité des fonctionnalités entre les modèles de segmentation Profil (Personne) et Compte . |
@@ -114,7 +114,7 @@ Real-Time CDP B2B edition offre des fonctionnalités complètes de gestion des d
 | Obsolescence de l’API d’entité B2B | Les opérations de recherche d’API [!DNL Profile Access] pour les entités B2B (relation compte-personne, relation opportunité-personne, campagne, membre de campagne, liste marketing et membres de liste marketing) sont désormais obsolètes. En outre, les opérations de suppression de l’API [!DNL Profile Access] pour les entités B2B (compte, relation compte-personne, opportunité, relation opportunité-personne, campagne, membre de campagne, liste marketing et membres de liste marketing) sont également obsolètes. Pour plus d’informations, consultez le guide [API de point d’entrée des entités](../../profile/api/entities.md). |
 | Mises à jour de l’espace de noms d’identité pour la résolution des entités | Les entités Compte et Opportunité utilisent désormais la fusion basée sur la priorité temporelle avec des espaces de noms d’identité spécifiques (`b2b_account` pour Compte, `b2b_opportunity` pour Opportunité). Toutes les autres entités sont unifiées avec des chevauchements d’identités principales fusionnés à l’aide d’une fusion basée sur la priorité temporelle. Pour plus d’informations sur la résolution des entités, consultez le guide [API de point d’entrée des entités](../../profile/api/entities.md). |
 
-Pour plus d’informations, consultez la présentation de Real-Time CDP B2B edition [](../../rtcdp/b2b-overview.md).
+Pour plus d’informations, consultez la présentation de Real-Time CDP B2B edition [&#128279;](../../rtcdp/b2b-overview.md).
 
 ## Sandbox {#sandboxes}
 
