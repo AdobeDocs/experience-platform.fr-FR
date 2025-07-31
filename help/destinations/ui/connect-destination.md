@@ -6,7 +6,7 @@ exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 source-git-commit: 59ff77ff9f4a6fe147b5d8231fd3caa2550ae20e
 workflow-type: tm+mt
 source-wordcount: '1176'
-ht-degree: 69%
+ht-degree: 71%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 69%
 
 >[!IMPORTANT]
 > 
->* Pour vous connecter à une destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour vous connecter à une destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 >* Pour vous connecter à une destination qui prend en charge les exportations de jeux de données, vous avez besoin des **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer et activer les destinations de jeux de données]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 ## Présentation {#overview}
@@ -54,7 +54,7 @@ Avant d’envoyer des données d’audience vers une destination, vous devez con
 >[!CONTEXTUALHELP]
 >id="platform_destinations_account_name"
 >title="Nom du compte"
->abstract="Saisissez un nom qui vous aidera à identifier facilement ce compte de destination à l’avenir. Cela s’avère particulièrement utile si vous disposez de plusieurs connexions au même type de destination."
+>abstract="Saisissez un nom qui vous permettra d’identifier facilement ce compte de destination à l’avenir. Cela se révèle particulièrement utile si vous disposez de plusieurs connexions au même type de destination."
 
 La première étape de la connexion à une destination consiste à s’authentifier sur la plateforme de destination.
 
