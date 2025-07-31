@@ -1,9 +1,9 @@
 ---
 title: Présentation de Didomi Source
 description: Découvrez comment connecter Didomi à Adobe Experience Platform à l’aide de l’interface utilisateur.
-hide: true
-hidefromtoc: true
-source-git-commit: 44c01678e96f2649dbf731dd4531004c1df28058
+last-substantial-update: 2025-07-29T00:00:00Z
+exl-id: c59bcfb8-e831-4a13-8b0e-4c6d538f1059
+source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
 source-wordcount: '889'
 ht-degree: 2%
