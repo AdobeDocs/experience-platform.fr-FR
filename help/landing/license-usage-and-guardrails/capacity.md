@@ -1,15 +1,13 @@
 ---
 title: Utilisation et capacité des licences
 description: Découvrez les limites d’utilisation et de capacité de votre licence dans Adobe Experience Platform.
-hide: true
-hidefromtoc: true
-source-git-commit: b3b0792a1a1dd5270dec697539ed58d895814fc8
+exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
+source-git-commit: 326710e48ea9d6eb16f62b9f288311a1d255b287
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 1%
+source-wordcount: '577'
+ht-degree: 7%
 
 ---
-
 
 # Utilisation des licences et capacités
 
@@ -26,8 +24,8 @@ Pour plus d’informations sur les mécanismes de sécurisation dans Experience 
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
->title="Nombre d’audiences en flux continu"
->abstract="Nombre maximal d’audiences de diffusion en continu par sandbox. Ce nombre inclut le nombre d’audiences Edge que vous avez dans votre sandbox."
+>title="Nombre d’audiences en streaming"
+>abstract="Nombre maximal d’audiences en streaming par sandbox. Ce nombre inclut le nombre d’audiences Edge présentes dans votre sandbox."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_edgeaudiences"
