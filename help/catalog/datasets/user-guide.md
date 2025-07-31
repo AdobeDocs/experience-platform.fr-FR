@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur des jeux de données
 description: Découvrez comment effectuer des actions courantes lorsque vous utilisez des jeux de données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 47cb1e9851a288961ecca01cf609b72342c58631
+source-git-commit: 24b0df7025971a999453cd988813aa32b449ba0f
 workflow-type: tm+mt
-source-wordcount: '4551'
+source-wordcount: '4482'
 ht-degree: 12%
 
 ---
@@ -72,7 +72,7 @@ Sélectionnez le nom d’un jeu de données dans l’onglet [!UICONTROL Parcouri
 
 Vous pouvez [!UICONTROL Supprimer] ou [!UICONTROL Activer un jeu de données pour Profil] à partir de la vue des détails [!UICONTROL Jeu de données]. Pour afficher les actions disponibles, sélectionnez **[!UICONTROL ... Plus]** en haut à droite de l’interface utilisateur. Le menu déroulant s’affiche.
 
-![Espace de travail Jeux de données avec le [!UICONTROL ... Plus &#x200B;] menu déroulant mis en surbrillance.](../images/datasets/user-guide/more-actions.png)
+![Espace de travail Jeux de données avec le [!UICONTROL ... Plus ] menu déroulant mis en surbrillance.](../images/datasets/user-guide/more-actions.png)
 
 Si vous sélectionnez **[!UICONTROL Activer un jeu de données pour le profil]**, une boîte de dialogue de confirmation s’affiche. Sélectionnez **[!UICONTROL Activer]** pour confirmer votre choix.
 
@@ -108,25 +108,26 @@ Vous trouverez plus d’informations sur ces actions disponibles dans leurs sect
 
 ### Prévisualisation d’un jeu de données {#preview}
 
-Vous pouvez prévisualiser les données d’exemple du jeu de données à partir des options intégrées de l’onglet [!UICONTROL Parcourir] et de la vue [!UICONTROL Activité du jeu de données]. Une nouvelle fenêtre de prévisualisation du jeu de données est disponible avec des améliorations supplémentaires de la navigation et du contexte.
+Vous pouvez prévisualiser jusqu’à 100 lignes de données d’exemple pour n’importe quel jeu de données, à partir des options intégrées dans l’onglet [!UICONTROL Parcourir] ou de la vue [!UICONTROL Activité du jeu de données].
 
-Dans l’onglet [!UICONTROL Parcourir], sélectionnez les points de suspension (...) en regard du nom du jeu de données à prévisualiser. Une liste d’options s’affiche. Sélectionnez ensuite [!UICONTROL Prévisualiser le jeu de données] dans les options disponibles. Si le jeu de données est vide, le lien de prévisualisation est désactivé et indique que la prévisualisation n’est pas disponible.
+Dans l’onglet [!UICONTROL Parcourir], sélectionnez les points de suspension (...) à côté du nom du jeu de données et choisissez [!UICONTROL Prévisualiser le jeu de données]. Si le jeu de données est vide, l’option de prévisualisation est désactivée. Dans l’écran **[!UICONTROL Activité du jeu de données]**, vous pouvez également sélectionner **[!UICONTROL Prévisualiser le jeu de données]** dans le coin supérieur droit de l’écran.
 
 ![L’onglet Parcourir de l’espace de travail Jeux de données avec les points de suspension et l’option Prévisualiser le jeu de données en surbrillance pour le jeu de données sélectionné.](../images/datasets/user-guide/preview-dataset-option.png)
 
-Cette action ouvre la fenêtre de prévisualisation, où la vue du schéma hiérarchique du jeu de données s’affiche à gauche.
+Cette action ouvre la fenêtre d’aperçu, où la vue du schéma hiérarchique du jeu de données s’affiche à gauche.
 
 >[!NOTE]
 >
->Le diagramme de schéma sur le côté gauche de la vue affiche uniquement les champs contenant des données. Les champs sans données sont automatiquement masqués afin de rationaliser l’interface utilisateur et de se concentrer sur les informations pertinentes.
+>Le diagramme de schéma de gauche affiche uniquement les champs contenant des données. Les champs sans données sont automatiquement masqués afin de rationaliser l’interface utilisateur et de se concentrer sur les informations pertinentes.
 
 ![La boîte de dialogue de prévisualisation du jeu de données contenant des informations sur la structure du jeu de données, ainsi que des exemples de valeurs, s’affiche.](../images/datasets/user-guide/preview-dataset.png)
 
-Sinon, dans l’écran **[!UICONTROL Activité du jeu de données]**, sélectionnez **[!UICONTROL Prévisualiser le jeu de données]** près du coin supérieur droit de l’écran pour prévisualiser jusqu’à 100 lignes de données.
+Sinon, dans l’écran **[!UICONTROL Activité du jeu de données]**, sélectionnez **[!UICONTROL Prévisualiser le jeu de données]** pour ouvrir la fenêtre de prévisualisation et consulter un exemple de la structure et des valeurs de votre jeu de données.
 
 ![Le bouton Prévisualiser le jeu de données est mis en surbrillance.](../images/datasets/user-guide/select-preview.png)
 
-La fenêtre de prévisualisation du jeu de données fournit une interface rationalisée pour explorer et valider les jeux de données.
+La fenêtre de prévisualisation du jeu de données permet d’explorer et de valider rapidement la structure et les données de votre jeu de données.
+
 
 #### Fenêtre Aperçu du jeu de données {#dataset-preview-window}
 
@@ -137,34 +138,25 @@ L’animation suivante présente la fenêtre de prévisualisation du jeu de donn
 La fenêtre de prévisualisation du jeu de données comprend :
 
 * Barre latérale du navigateur d’objets sur la gauche pour parcourir et filtrer les champs du jeu de données.
-* Indicateurs de type de données affichés en regard de chaque nom de colonne pour un insight rapide dans la structure du jeu de données.
+* Indicateurs de type de données en regard de chaque nom de colonne pour insight dans la structure du jeu de données.
 * Une requête SQL s’affiche en haut de la fenêtre, affichant la requête utilisée pour générer le jeu de données.
-* Un tableau formaté de 100 lignes maximum dans la zone inférieure droite pour une révision efficace des données.
-* Navigation directe vers Query Editor pour les utilisateurs et utilisatrices de Data Distiller, avec la requête SQL préremplie pour une exploration ou une modification plus approfondie.
+* Un tableau formaté de 100 lignes maximum pour une révision efficace des données.
 
-Ces fonctionnalités prennent en charge une navigation rapide, une compréhension des schémas et une validation transparente des jeux de données.
-
-Sélectionnez **[!UICONTROL Prévisualiser le jeu de données]** dans les actions intégrées ou dans l’écran [!UICONTROL Activité du jeu de données] pour ouvrir la fenêtre de prévisualisation.
-
->[!NOTE]
->
->La fenêtre d’aperçu affiche un échantillon de 100 lignes maximum. Les champs sans données sont exclus de la vue.
+Ces fonctionnalités vous permettent de naviguer, de comprendre les détails des schémas et de valider efficacement des données d’exemple.
 
 #### Raccourci du Query Editor avancé {#query-editor-shortcut}
 
-Si votre entreprise dispose d’une licence Data Distiller, vous pouvez accéder directement à l’éditeur de requêtes avancé depuis la fenêtre de prévisualisation du jeu de données.
+Si votre entreprise dispose d’une licence Data Distiller, vous pouvez accéder directement à l’[!UICONTROL Éditeur de requêtes avancé] à partir de la fenêtre de prévisualisation du jeu de données. Utilisez ce raccourci pour passer facilement de la prévisualisation des données d’exemple à l’exécution et à l’affinement des requêtes dans Query Service.
 
 >[!AVAILABILITY]
 >
->Seuls les utilisateurs disposant de la licence Distiller de données requise peuvent accéder à cette fonctionnalité. Si votre organisation ne dispose pas de Data Distiller, l’option [!UICONTROL Éditeur de requêtes avancé] n’est pas visible.
+>L’accès à l’[!UICONTROL Éditeur de requêtes avancé] est limité aux organisations disposant d’une licence de SKU Data Distiller. Si votre organisation ne dispose pas de la licence requise, cette option n’apparaît pas dans la fenêtre de prévisualisation du jeu de données.
 
-Sélectionnez **[!UICONTROL Éditeur de requêtes avancé]** dans le coin supérieur droit de la fenêtre d’aperçu pour ouvrir l’éditeur de requêtes. La requête d’aperçu actuelle est préchargée et prête à être exécutée ou analysée plus en détail.
+Sélectionnez [!UICONTROL Éditeur de requêtes avancé] dans l’angle supérieur droit de la fenêtre d’aperçu pour ouvrir Query Service avec votre requête SQL actuelle préchargée et exécutée. Vous pouvez continuer à analyser ou à modifier le code SQL sans avoir à saisir à nouveau la requête.
 
 ![Fenêtre Aperçu du jeu de données présentant le bouton Éditeur de requêtes avancé en haut à droite.](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
 
-Ce raccourci vous permet de passer facilement de la prévisualisation des données d’exemple à l’exécution et à l’affinement des requêtes dans Query Service sans avoir à saisir à nouveau le langage SQL ou le contexte.
-
-Pour un accès et une analyse des données supplémentaires, utilisez les services en aval tels que [!DNL Query Service] et [!DNL JupyterLab]. Pour plus d’informations, consultez les documents suivants :
+Pour une analyse supplémentaire, utilisez les services en aval tels que [!DNL Query Service] et [!DNL JupyterLab]. Pour plus d’informations, consultez les documents suivants :
 
 * [Présentation de Query Service](../../query-service/home.md)
 * [Guide d’utilisation de JupyterLab](../../data-science-workspace/jupyterlab/overview.md)
@@ -200,7 +192,7 @@ Les jeux de données qui ont été activés pour Profil peuvent également être
 
 ### Gérer les balises du jeu de données {#manage-tags}
 
-Ajoutez des balises personnalisées pour organiser les jeux de données et améliorer les fonctionnalités de recherche, de filtrage et de tri. Dans l’onglet [!UICONTROL &#x200B; Parcourir &#x200B;] de l’espace de travail [!UICONTROL Jeux de données], sélectionnez les points de suspension d’un jeu de données à gérer, puis **[!UICONTROL Gérer les balises]** dans le menu déroulant.
+Ajoutez des balises personnalisées pour organiser les jeux de données et améliorer les fonctionnalités de recherche, de filtrage et de tri. Dans l’onglet [!UICONTROL  Parcourir ] de l’espace de travail [!UICONTROL Jeux de données], sélectionnez les points de suspension d’un jeu de données à gérer, puis **[!UICONTROL Gérer les balises]** dans le menu déroulant.
 
 ![L’onglet Parcourir de l’espace de travail Jeux de données avec les points de suspension et l’option Gérer les balises en surbrillance pour le jeu de données sélectionné.](../images/datasets/user-guide/manage-tags.png)
 
@@ -216,7 +208,7 @@ Pour plus d’informations sur la classification d’objets métier pour facilit
 
 ### Définir la politique de conservation des données {#data-retention-policy}
 
-Gérez les paramètres d’expiration et de rétention des jeux de données à l’aide du menu d’actions intégrées de l’onglet [!UICONTROL &#x200B; Parcourir &#x200B;] de l’espace de travail [!UICONTROL Jeux de données]. Vous pouvez utiliser cette fonctionnalité pour configurer la durée de conservation des données dans le lac de données et le magasin de profils. La date d’expiration dépend du moment où les données ont été ingérées dans Experience Platform et de la période de conservation que vous avez configurée.
+Gérez les paramètres d’expiration et de rétention des jeux de données à l’aide du menu d’actions intégrées de l’onglet [!UICONTROL  Parcourir ] de l’espace de travail [!UICONTROL Jeux de données]. Vous pouvez utiliser cette fonctionnalité pour configurer la durée de conservation des données dans le lac de données et le magasin de profils. La date d’expiration dépend du moment où les données ont été ingérées dans Experience Platform et de la période de conservation que vous avez configurée.
 
 >[!IMPORTANT]
 >

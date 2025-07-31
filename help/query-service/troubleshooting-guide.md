@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Questions fréquentes sur Query Service et Data Distiller
 description: Ce document contient les questions les plus fréquentes et les réponses associées relatives à Query Service et à Data Distiller. Les rubriques incluent l’exportation de données, les outils tiers et les erreurs PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
+source-git-commit: f0656fcde077fc6c983a7a2d8dc21d2548fa7605
 workflow-type: tm+mt
-source-wordcount: '5055'
-ht-degree: 81%
+source-wordcount: '5186'
+ht-degree: 78%
 
 ---
 
@@ -65,7 +65,7 @@ C’est peut être dû à la fonction de saisie automatique. La fonction traite 
 ### Puis-je utiliser [!DNL Postman] pour l’API Query Service ?
 
 +++Réponse
-Oui, vous pouvez visualiser tous les services API d’Adobe et interagir avec eux à l’aide de [!DNL Postman] (une application tierce gratuite). Regardez le [[!DNL Postman] guide de configuration](https://video.tv.adobe.com/v/31635?captions=fre_fr) pour obtenir des instructions détaillées sur la configuration d’un projet dans l’Adobe Developer Console et l’acquisition de toutes les informations d’identification nécessaires à l’utilisation avec [!DNL Postman]. Consultez la documentation officielle pour obtenir des [conseils sur le démarrage, l’exécution et le partage de collections [!DNL Postman] ](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Oui, vous pouvez visualiser tous les services API d’Adobe et interagir avec eux à l’aide de [!DNL Postman] (une application tierce gratuite). Regardez le [[!DNL Postman] guide de configuration](https://video.tv.adobe.com/v/28832) pour obtenir des instructions détaillées sur la configuration d’un projet dans l’Adobe Developer Console et l’acquisition de toutes les informations d’identification nécessaires à l’utilisation avec [!DNL Postman]. Consultez la documentation officielle pour obtenir des [conseils sur le démarrage, l’exécution et le partage de collections [!DNL Postman] ](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Existe-t-il un nombre maximal de lignes renvoyées par une requête via l’interface utilisateur ?
@@ -406,7 +406,7 @@ La sortie de console fournie dans l’interface utilisateur de Query Service es
 
 #### Convertir à partir de la date et heure UTC
 
-La méthode `from_utc_timestamp()` interprète les paramètres donnés **à partir de la date et de l’heure de votre fuseau horaire local**, et fournit la date et l’heure équivalentes de la région souhaitée au format UTC. Dans l’exemple ci-dessous, l’heure est 14h40 dans le fuseau horaire local de l’utilisateur ou utilisatrice. Le fuseau horaire de Séoul passé en tant que variable est neuf heures en avance sur le fuseau horaire local.
+La méthode `from_utc_timestamp()` interprète les paramètres donnés **à partir de la date et de l’heure de votre fuseau horaire local**, et fournit la date et l’heure équivalentes de la région souhaitée au format UTC. Dans l’exemple ci-dessous, l’heure est 2:40PM dans le fuseau horaire local de l’utilisateur. Le fuseau horaire de Séoul passé en tant que variable est neuf heures en avance sur le fuseau horaire local.
 
 ```SQL
 SELECT from_utc_timestamp('2021-08-31 14:40:00.0', 'Asia/Seoul');
@@ -647,6 +647,14 @@ Les heures de calcul d’une requête peuvent fluctuer en raison de plusieurs fa
 L’infrastructure principale est constamment améliorée afin d’optimiser l’utilisation des heures de calcul et le temps de traitement. Par conséquent, vous remarquerez peut-être des changements au fil du temps à mesure que des améliorations de performances sont mises en œuvre.
 +++
 
+### Les performances de Data Distiller diffèrent-elles entre les sandbox de développement et de production ?
+
++++Réponse
+Vous pouvez vous attendre à des performances similaires lorsque vous exécutez des requêtes dans les sandbox de développement et de production. Les deux environnements sont conçus pour fournir le même niveau de capacité de traitement. Cependant, des différences peuvent apparaître au niveau des heures de calcul, en fonction de la quantité de données que vous traitez et de l’activité globale du système au moment de l’exécution de votre requête.
+
+Suivez l’utilisation de vos heures de calcul dans le tableau de bord [ Utilisation des licences ](../dashboards/guides/license-usage.md) de l’interface utilisateur d’Experience Platform.
++++
+
 ## Interface utilisateur des requêtes
 
 ### L’action « Créer une requête » est bloquée sur « Initialisation de la connexion... » lors de la tentative de connexion à Query Service. Comment résoudre le problème ?
@@ -752,6 +760,12 @@ Oui, les clients de bureau tiers peuvent être connectés à Query Service par l
 +++Réponse
 La valeur des informations d’identification non expirantes sont les arguments concaténés des paramètres `technicalAccountID` et `credential` extraits du fichier de configuration JSON. La valeur du mot de passe se présente comme suit : `{{technicalAccountId}:{credential}}`.
 Pour plus d’informations sur la [connexion à des clients externes à l’aide d’informations d’identification](./ui/credentials.md#using-credentials-to-connect-to-external-clients), consultez la documentation.
++++
+
+### Existe-t-il des restrictions sur les caractères spéciaux pour les mots de passe d’informations d’identification non expirants ?
+
++++Réponse
+Oui. Lorsque vous définissez un mot de passe pour les informations d’identification non expirantes, vous devez inclure au moins un chiffre, une lettre minuscule, une lettre majuscule et un caractère spécial. Le signe dollar ($) n’est pas pris en charge. Utilisez plutôt des caractères spéciaux tels que !, @, #, ^ ou &amp;.
 +++
 
 ### Quels types d’éditeurs SQL tiers puis-je connecter à Query Service Editor ?
