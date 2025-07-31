@@ -5,7 +5,7 @@ description: Découvrez comment configurer une CSP pour Experience Platform Web 
 seo-description: Learn how to configure a CSP for the Experience Platform Web SDK
 keywords: configuration;configuration;SDK;edge;Web SDK;configurer;contexte;web;appareil;environnement;paramètres du sdk web;politique de sécurité du contenu;
 exl-id: 661d0001-9e10-479e-84c1-80e58f0e9c0b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 0%

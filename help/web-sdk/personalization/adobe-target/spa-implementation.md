@@ -3,7 +3,7 @@ title: Implémentation d’applications d’une seule page pour Adobe Experience
 description: Découvrez comment créer une implémentation d’application sur une seule page (SPA) de Adobe Experience Platform Web SDK à l’aide d’Adobe Target.
 keywords: target;adobe target;vues xdm;vues;applications monopages;SPA;cycle de vie SPA;côté client;AB testing;AB;Ciblage d’expérience;XT;VEC
 exl-id: cc48c375-36b9-433e-b45f-60e6c6ea4883
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '1818'
 ht-degree: 10%

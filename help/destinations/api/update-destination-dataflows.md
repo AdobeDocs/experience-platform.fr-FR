@@ -5,7 +5,7 @@ title: Mettre à jour des flux de données de destination à l’aide de l’API
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour mettre à jour un flux de données de destination. Découvrez comment activer ou désactiver le flux de données, mettre à jour ses informations de base ou ajouter et supprimer des audiences et des attributs à l’aide de l’API Flow Service.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '2410'
 ht-degree: 31%
@@ -22,7 +22,7 @@ Pour suivre ce tutoriel, vous devez disposer d’un identifiant de flux valide. 
 
 >[!NOTE]
 >
-> Les termes *flux* et *flux de données* sont utilisés de manière interchangeable dans ce tutoriel. Dans le cadre de ce tutoriel, les ont la même signification.
+> Les termes *flux* et *flux de données* sont utilisés de manière interchangeable dans ce tutoriel. Dans le cadre de ce tutoriel, ils ont la même signification.
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
@@ -646,7 +646,7 @@ Consultez les exemples ci-dessous pour obtenir d’autres exemples de composants
 
 +++ Cliquez pour voir un exemple où une exportation d’audience est mise à jour, passant de l’activation tous les jours à une heure spécifiée à l’activation tous les jours après la fin de la tâche de segmentation par lots d’Experience Platform.
 
-L’audience est exportée tous les jours à 16 h 00 UTC.
+L’audience est exportée tous les jours à 16 :00 UTC.
 
 ```json
 {
@@ -855,7 +855,7 @@ Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[&#128279;](/help/landing/troubleshooting.md#api-status-codes) consultez les sections Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[ consultez les sections ](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 

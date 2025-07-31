@@ -2,7 +2,7 @@
 title: Configuration de la prise en charge de la messagerie web in-app dans Web SDK
 description: Découvrez comment configurer l’extension de balise Web SDK pour prendre en charge la messagerie Web in-app.
 exl-id: 90a19ef4-e94c-4f16-a26a-8919ad2dbd6f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '969'
 ht-degree: 0%
@@ -21,7 +21,7 @@ En utilisant les messages in-app, vous pouvez interagir efficacement avec votre 
 >
 >La messagerie Web In-App est une fonctionnalité de [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=fr) qui utilise le SDK Web pour diffuser le contenu personnalisé.
 >
->Pour obtenir des instructions détaillées sur la configuration de votre campagne de messagerie Web In-App, consultez la [documentation de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=fr).
+>Pour obtenir des instructions détaillées sur la configuration de votre campagne de messagerie Web In-App, consultez la [documentation de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html).
 
 
 ## Conditions préalables {#prerequisites}
@@ -184,5 +184,5 @@ Vous pouvez choisir d’afficher des messages in-app aux utilisateurs et utilisa
 
 Dans la configuration [Web SDK](../commands/configure/overview.md) définissez l’option `personalizationStorageEnabled` en fonction de vos besoins :
 
-* `personalizationStorageEnabled: true` déclenche le message in-app avec la fréquence que vous avez définie dans la campagne [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=fr#configure-inapp).
+* `personalizationStorageEnabled: true` déclenche le message in-app avec la fréquence que vous avez définie dans la campagne [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
 * `personalizationStorageEnabled: false` déclenche le message in-app à chaque chargement de page.

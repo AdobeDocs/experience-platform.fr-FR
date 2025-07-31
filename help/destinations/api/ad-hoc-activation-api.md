@@ -5,7 +5,7 @@ title: Activer des audiences vers des destinations par lots via l’API d’acti
 description: Cet article illustre le workflow de bout en bout pour activer des audiences via l’API d’activation ad hoc, y compris les tâches de segmentation qui ont lieu avant l’activation.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '1623'
 ht-degree: 9%
@@ -18,7 +18,7 @@ ht-degree: 9%
 >
 >Une fois la phase Beta terminée, la [!DNL ad-hoc activation API] est désormais disponible pour tous les clients Experience Platform. Dans la version mise à disposition générale, l’API a été mise à niveau vers la version 2. L’étape 4 ([Obtention du dernier identifiant de tâche d’exportation d’audience](#segment-export-id)) n’est plus nécessaire, car l’API ne nécessite plus l’identifiant d’exportation.
 >
->Pour plus d’informations[&#128279;](#activation-job) consultez la section Exécution de la tâche d’activation ad hoc plus bas dans ce tutoriel.
+>Pour plus d’informations[ consultez la section ](#activation-job)Exécution de la tâche d’activation ad hoc plus bas dans ce tutoriel.
 
 ## Vue d’ensemble {#overview}
 

@@ -2,10 +2,10 @@
 title: Connexion Liste des Clients Pinterest
 description: Créez des audiences à partir de vos listes de clients, des personnes qui ont visité votre site ou de celles qui ont déjà interagi avec votre contenu sur Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 37%
+source-wordcount: '808'
+ht-degree: 38%
 
 ---
 
@@ -26,14 +26,14 @@ Créez des audiences à partir de vos listes de clients, des personnes qui ont v
 
 ## Identités prises en charge {#supported-identities}
 
-La destination [!DNL Pinterest Customer List] prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=fr#getting-started).
+La destination [!DNL Pinterest Customer List] prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 Dans l’étape [mappage](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) du workflow d’activation de destination, mappez les identités souhaitées au champ cible *pinterest_audience*. Les identités sont distinguées et résolues lors de l’ingestion des données dans Pinterest.
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| GAID | [!DNL Google Advertising ID] | Mappez l’espace de noms d’identité source *GAID* au champ d’identité cible *pinterest_audience*. Les identités sont distinguées et résolues lors de l’ingestion des données dans Pinterest. |
-| IDFA | [!DNL Apple ID for Advertisers] | Mappez l’espace de noms d’identité source *IDFA* au champ d’identité cible *pinterest_audience*. Les identités sont distinguées et résolues lors de l’ingestion des données dans Pinterest. |
+| GAID | [!DNL Google Advertising ID] | Mappez l’espace de noms d’identité source *GAID* au champ d’identité cible *pinterest_audience*. |
+| IDFA | [!DNL Apple ID for Advertisers] | Mappez l’espace de noms d’identité source *IDFA* au champ d’identité cible *pinterest_audience*. |
 | EMAIL | Adresses e-mail (texte clair ou haché avec l’algorithme SHA256) | Adobe Experience Platform prend en charge le texte brut et les adresses e-mail hachées avec SHA256. <br> Mappez l’espace de noms d’identité source *Email* ou *Email_LC_SHA256* au champ d’identité cible *pinterest_audience*. |
 
 {style="table-layout:auto"}
@@ -61,7 +61,7 @@ Créez des audiences à partir de vos listes de clients, des personnes qui ont v
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
@@ -99,8 +99,8 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
