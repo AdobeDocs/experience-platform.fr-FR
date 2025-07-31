@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: c3f570ad3fcae50f2381e344bb88d8a9cace57be
+source-git-commit: bef5176048bad269c9e32e56d1e331a93eb80e13
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1298'
 ht-degree: 75%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 75%
    * [Supprimer les comptes de destination](./api/delete-destination-account.md)
    * [Supprimer les flux de données de destination](./api/delete-destination-dataflow.md)
    * [Exporter des jeux de données](/help/destinations/api/export-datasets.md)
-   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=fr#use-cases)
+   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
    * [Créer une connexion à une destination](./ui/connect-destination.md)
@@ -52,6 +52,7 @@ ht-degree: 75%
       * [Exporter des tableaux, mappages et objets](/help/destinations/ui/export-arrays-maps-objects.md)
       * [Effectuer des transformations sur les données exportées vers des destinations d’espace de stockage](/help/destinations/ui/data-transformations-calculated-fields.md)
    * [Afficher les détails de la destination](./ui/destination-details-page.md)
+   * [(Beta) Modifier les destinations](./ui/edit-destination.md)
    * [Mettre à jour les comptes de destination](./ui/update-accounts.md)
    * [Supprimer les comptes de destination](./ui/delete-destination-account.md)
    * [Modifier des flux de données d’activation](./ui/edit-activation.md)

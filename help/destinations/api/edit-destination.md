@@ -4,9 +4,9 @@ title: Modifier des connexions de destination à l’aide de l’API Flow Servic
 type: Tutorial
 description: Découvrez comment modifier divers composants d’une connexion de destination à l’aide de l’API Flow Service.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: ea397360e5277bef478b2173bfb5e4be4ac1fab4
 workflow-type: tm+mt
-source-wordcount: '1609'
+source-wordcount: '1622'
 ht-degree: 26%
 
 ---
@@ -17,7 +17,7 @@ Ce tutoriel décrit les étapes à suivre pour modifier divers composants d’un
 
 >[!NOTE]
 >
-> Les opérations de modification décrites dans ce tutoriel ne sont actuellement prises en charge que par le biais de l’API Flow Service.
+> Les opérations de modification décrites dans ce tutoriel sont également prises en charge dans l’interface utilisateur d’Experience Platform. Pour plus d’informations, consultez le tutoriel sur la [modification de destinations dans l’interface utilisateur](/help/destinations/ui/edit-destination.md).
 
 ## Commencer {#get-started}
 
@@ -451,7 +451,7 @@ Une réponse réussie renvoie votre identifiant de connexion de base et une bali
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[&#128279;](/help/landing/troubleshooting.md#api-status-codes) consultez les sections Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[ consultez les sections ](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 
