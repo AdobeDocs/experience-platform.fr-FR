@@ -1,23 +1,23 @@
 ---
-title: Point de terminaison de l’API des modules d’outils Sandbox
-description: Le point de terminaison /packages de l’API Sandbox Tooling vous permet de gérer les packages par programmation dans Adobe Experience Platform.
+title: Point d’entrée de l’API des packages d’outils Sandbox
+description: Le point d’entrée /packages de l’API Sandbox Tooling vous permet de gérer les packages par programmation dans Adobe Experience Platform.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 47e4616e5465ec97512647b9280f461c6971aa42
+source-git-commit: 1d8c29178927c7ee3aceb0b68f97baeaefd9f695
 workflow-type: tm+mt
-source-wordcount: '2547'
-ht-degree: 10%
+source-wordcount: '2933'
+ht-degree: 11%
 
 ---
 
-# Point de terminaison des packages
+# Point d’entrée des packages
 
-L’outil Sandbox vous permet de sélectionner différents artefacts (également appelés objets) et de les exporter dans un package. Un module peut se composer d’un ou de plusieurs artefacts (tels que des jeux de données ou des schémas). Tous les artefacts inclus dans un package doivent provenir du même environnement de test.
+L’outil Sandbox vous permet de sélectionner différents artefacts (également appelés objets) et de les exporter dans un package. Un package peut se composer d’un ou de plusieurs artefacts (tels que des jeux de données ou des schémas). Tous les artefacts inclus dans un package doivent provenir du même sandbox.
 
-Le point d’entrée `/packages` de l’API des outils d’environnement de test vous permet de gérer par programmation les modules de votre organisation, y compris de publier un module et d’importer un module dans un environnement de test.
+Le point d’entrée `/packages` de l’API d’outils sandbox vous permet de gérer par programmation les packages de votre organisation, y compris la publication d’un package et l’importation d’un package dans un sandbox.
 
 ## Création d’un package {#create}
 
-Vous pouvez créer un module à plusieurs artefacts en envoyant une requête de POST au point de terminaison `/packages` tout en fournissant des valeurs pour le nom et le type de module de votre module.
+Vous pouvez créer un package à plusieurs artefacts en adressant une requête POST au point d’entrée `/packages`, tout en fournissant des valeurs pour le nom et le type de package de votre package.
 
 **Format d’API**
 
@@ -55,16 +55,16 @@ curl -X POST \
 
 | Propriété | Description | Type | Obligatoire |
 | --- | --- | --- | --- |
-| `name` | Le nom de votre package. | Chaîne | Oui |
-| `description` | Description pour fournir plus d’informations sur votre module. | Chaîne | Non |
-| `packageType` | Le type de package est **PARTIAL** pour indiquer que vous incluez des artefacts spécifiques dans un package. | Chaîne | OUI |
-| `sourceSandbox` | Environnement de test source du package. | Objet | Non |
-| `expiry` | Horodatage qui définit la date d’expiration du package. La valeur par défaut est de 90 jours à compter de la date de création. Le champ d’expiration de la réponse sera l’heure UTC de l’époque. | Chaîne (format UTC Timestamp) | Non |
-| `artifacts` | Liste des artefacts à exporter dans le package. La valeur `artifacts` doit être **null** ou **empty**, lorsque `packageType` est `FULL`. | Tableau | Non |
+| `name` | Nom de votre package. | Chaîne | Oui |
+| `description` | Une description pour fournir plus d’informations sur votre package. | Chaîne | Non |
+| `packageType` | Le type de package est **PARTIEL** pour indiquer que vous incluez des artefacts spécifiques dans un package. | Chaîne | OUI |
+| `sourceSandbox` | Sandbox source du package. | Objet | Non |
+| `expiry` | La date et l’heure qui définissent la date d’expiration du package. La valeur par défaut est de 90 jours à compter de la date de création. Le champ d’expiration de la réponse est « heure UTC de l’époque ». | Chaîne (format d’horodatage UTC) | Non |
+| `artifacts` | Liste des artefacts à exporter dans le package. La valeur `artifacts` doit être **null** ou **vide**, lorsque la `packageType` est `FULL`. | Tableau | Non |
 
 **Réponse**
 
-Une réponse réussie renvoie le module que vous venez de créer. La réponse comprend l’identifiant de module correspondant, ainsi que des informations sur son état, son expiration et la liste des artefacts.
+Une réponse réussie renvoie le package que vous venez de créer. La réponse inclut l’identifiant de package correspondant, ainsi que des informations sur son statut, son expiration et la liste des artefacts.
 
 ```json
 {
@@ -98,11 +98,11 @@ Une réponse réussie renvoie le module que vous venez de créer. La réponse co
 }
 ```
 
-## Mettre à jour un package {#update}
+## Mise à jour d’un package {#update}
 
-Vous pouvez mettre à jour un package en envoyant une requête de PUT au point de terminaison `/packages`.
+Utilisez le point d’entrée `/packages` dans l’API d’outils Sandbox pour mettre à jour un package.
 
-### Ajout d’artefacts à un module {#add-artifacts}
+### Ajout d’artefacts à un package {#add-artifacts}
 
 Pour ajouter des artefacts à un package, vous devez fournir un `id` et inclure **ADD** pour le `action`.
 
@@ -137,28 +137,28 @@ curl -X PUT \
 | Propriété | Description | Type | Obligatoire |
 | --- | --- | --- | --- |
 | `id` | Identifiant du package à mettre à jour. | Chaîne | Oui |
-| `action` | Pour ajouter des artefacts dans le package, la valeur de l’action doit être **ADD**. Cette action est prise en charge uniquement pour les types de packages **PARTIAL**. | Chaîne | Oui |
-| `artifacts` | Liste des artefacts à ajouter au module. Le package ne sera pas modifié si la liste est **null** ou **empty**. Les artefacts sont dédupliqués avant d’être ajoutés au module. Consultez le tableau ci-dessous pour obtenir la liste complète des artefacts pris en charge. | Tableau | Non |
-| `expiry` | Horodatage qui définit la date d’expiration du package. La valeur par défaut est de 90 jours à compter de l’appel de l’API PUT si l’expiration n’est pas spécifiée dans la payload. Le champ d’expiration de la réponse sera l’heure UTC de l’époque. | Chaîne (format UTC Timestamp) | Non |
+| `action` | Pour ajouter des artefacts dans le package, la valeur de l’action doit être **AJOUTER**. Cette action est prise en charge uniquement pour les types de package **PARTIAL**. | Chaîne | Oui |
+| `artifacts` | Liste des artefacts à ajouter au package. Le package ne sera pas modifié si la liste est **nulle** ou **vide**. Les artefacts sont dédupliqués avant d’être ajoutés au package. Consultez le tableau ci-dessous pour obtenir la liste complète des artefacts pris en charge. | Tableau | Non |
+| `expiry` | La date et l’heure qui définissent la date d’expiration du package. La valeur par défaut est de 90 jours à compter de l’appel de l’API PUT si l’expiration n’est pas spécifiée dans la payload. Le champ d’expiration de la réponse est « heure UTC de l’époque ». | Chaîne (format d’horodatage UTC) | Non |
 
 Les types d’artefacts suivants sont actuellement pris en charge.
 
-| Artefact | Platform | Objet | Flux partiel | Environnement de test complet |
+| Artefact | Platform | Objet | Flux partiel | Sandbox complet |
 | --- | --- | --- | --- | --- |
 | `JOURNEY` | Adobe Journey Optimizer | Parcours | Oui | Non |
-| `ID_NAMESPACE` | Plateforme de données clients | Identités | Oui | Oui |
-| `REGISTRY_DATATYPE` | Plateforme de données clients | Type de données | Oui | Oui |
-| `REGISTRY_CLASS` | Plateforme de données clients | Classe | Oui | Oui |
-| `REGISTRY_MIXIN` | Plateforme de données clients | Groupe de champs | Oui | Oui |
-| `REGISTRY_SCHEMA` | Plateforme de données clients | Schémas | Oui | Oui |
-| `CATALOG_DATASET` | Plateforme de données clients | Jeux de données | Oui | Oui |
-| `DULE_CONSENT_POLICY` | Plateforme de données clients | Stratégies de consentement et de gouvernance | Oui | Oui |
-| `PROFILE_SEGMENT` | Plateforme de données clients | Audiences | Oui | Oui |
-| `FLOW` | Plateforme de données clients | Flux de données de sources | Oui | Oui |
+| `ID_NAMESPACE` | Plateforme de données client | Identités | Oui | Oui |
+| `REGISTRY_DATATYPE` | Plateforme de données client | Type de données | Oui | Oui |
+| `REGISTRY_CLASS` | Plateforme de données client | Classe | Oui | Oui |
+| `REGISTRY_MIXIN` | Plateforme de données client | Groupe de champs | Oui | Oui |
+| `REGISTRY_SCHEMA` | Plateforme de données client | Schémas | Oui | Oui |
+| `CATALOG_DATASET` | Plateforme de données client | Jeux de données | Oui | Oui |
+| `DULE_CONSENT_POLICY` | Plateforme de données client | Politiques de consentement et de gouvernance | Oui | Oui |
+| `PROFILE_SEGMENT` | Plateforme de données client | Audiences | Oui | Oui |
+| `FLOW` | Plateforme de données client | Flux de données des sources | Oui | Oui |
 
 **Réponse**
 
-Une réponse réussie renvoie votre package mis à jour. La réponse comprend l’identifiant de module correspondant, ainsi que des informations sur son état, son expiration et la liste des artefacts.
+Une réponse réussie renvoie le package mis à jour. La réponse inclut l’identifiant de package correspondant, ainsi que des informations sur son statut, son expiration et la liste des artefacts.
 
 ```json
 {
@@ -196,7 +196,7 @@ Une réponse réussie renvoie votre package mis à jour. La réponse comprend l�
 }
 ```
 
-### Suppression d’artefacts d’un module {#delete-artifacts}
+### Suppression d’artefacts d’un package {#delete-artifacts}
 
 Pour supprimer des artefacts d’un package, vous devez fournir un `id` et inclure **DELETE** pour le `action`.
 
@@ -230,12 +230,12 @@ curl -X PUT \
 | Propriété | Description | Type | Obligatoire |
 | --- | --- | --- | --- |
 | `id` | Identifiant du package à mettre à jour. | Chaîne | Oui |
-| `action` | Pour supprimer des artefacts d’un package, la valeur de l’action doit être **DELETE**. Cette action est prise en charge uniquement pour les types de packages **PARTIAL**. | Chaîne | Oui |
-| `artifacts` | Liste des artefacts à supprimer du package. Le package ne sera pas modifié si la liste est **null** ou **empty**. | Tableau | Non |
+| `action` | Pour supprimer des artefacts d&#39;un package, la valeur de l&#39;action doit être **DELETE**. Cette action est prise en charge uniquement pour les types de package **PARTIAL**. | Chaîne | Oui |
+| `artifacts` | Liste des artefacts à supprimer du package. Le package ne sera pas modifié si la liste est **nulle** ou **vide**. | Tableau | Non |
 
 **Réponse**
 
-Une réponse réussie renvoie votre package mis à jour. La réponse comprend l’identifiant de module correspondant, ainsi que des informations sur son état, son expiration et la liste des artefacts.
+Une réponse réussie renvoie le package mis à jour. La réponse inclut l’identifiant de package correspondant, ainsi que des informations sur son statut, son expiration et la liste des artefacts.
 
 ```json
 {
@@ -271,9 +271,9 @@ Une réponse réussie renvoie votre package mis à jour. La réponse comprend l�
 
 >[!NOTE]
 >
->L’action **UPDATE** est utilisée pour mettre à jour les champs de métadonnées du package et **ne peut pas** être utilisée pour ajouter/supprimer des artefacts à un package.
+>L’action **UPDATE** est utilisée pour mettre à jour les champs de métadonnées du package et **ne peut pas** être utilisée pour ajouter ou supprimer des artefacts dans un package.
 
-Pour mettre à jour les champs de métadonnées dans un package, vous devez fournir un `id` et inclure **UPDATE** pour le `action`.
+Pour mettre à jour les champs de métadonnées d’un package, vous devez fournir un `id` et inclure **UPDATE** pour le `action`.
 
 **Format d’API**
 
@@ -305,13 +305,13 @@ curl -X PUT \
 | Propriété | Description | Type | Obligatoire |
 | --- | --- | --- | --- |
 | `id` | Identifiant du package à mettre à jour. | Chaîne | Oui |
-| `action` | Pour mettre à jour les champs de métadonnées dans un package, la valeur de l’action doit être **UPDATE**. Cette action est prise en charge uniquement pour les types de packages **PARTIAL**. | Chaîne | Oui |
-| `name` | Nom mis à jour du module. Les noms de modules en double ne sont pas autorisés. | Tableau | Oui |
-| `sourceSandbox` | L’environnement de test Source doit appartenir à la même organisation que celle spécifiée dans l’en-tête de la requête. | Objet | Oui |
+| `action` | Pour mettre à jour les champs de métadonnées d’un package, la valeur de l’action doit être **UPDATE**. Cette action est prise en charge uniquement pour les types de package **PARTIAL**. | Chaîne | Oui |
+| `name` | Nom mis à jour du package. Les noms de package en double ne sont pas autorisés. | Tableau | Oui |
+| `sourceSandbox` | Le sandbox Source doit appartenir à la même organisation que celle spécifiée dans l’en-tête de la requête. | Objet | Oui |
 
 **Réponse**
 
-Une réponse réussie renvoie votre package mis à jour. La réponse comprend l’identifiant de module correspondant, ainsi que des informations sur sa description, son état, son expiration et la liste des artefacts.
+Une réponse réussie renvoie le package mis à jour. La réponse inclut l’identifiant de package correspondant, ainsi que des informations sur sa description, son statut, son expiration et la liste des artefacts.
 
 ```json
 {
@@ -345,7 +345,7 @@ Une réponse réussie renvoie votre package mis à jour. La réponse comprend l�
 
 ## Suppression d’un package {#delete}
 
-Pour supprimer un package, envoyez une requête de DELETE au point de terminaison `/packages` et spécifiez l’identifiant du package que vous souhaitez supprimer.
+Pour supprimer un package, envoyez une requête DELETE au point d’entrée `/packages` et indiquez l’identifiant du package que vous souhaitez supprimer.
 
 **Format d’API**
 
@@ -355,7 +355,7 @@ DELETE /packages/{PACKAGE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{PACKAGE_ID}` | L’identifiant du module que vous souhaitez supprimer. |
+| `{PACKAGE_ID}` | L’identifiant du package que vous souhaitez supprimer. |
 
 **Requête**
 
@@ -372,7 +372,7 @@ curl -X DELETE \
 
 **Réponse**
 
-Une réponse réussie renvoie une raison qui indique que l’ID de module a été supprimé.
+Une réponse réussie renvoie un motif qui indique que l’ID du package a été supprimé.
 
 ```json
 {
@@ -380,9 +380,9 @@ Une réponse réussie renvoie une raison qui indique que l’ID de module a ét�
 }
 ```
 
-## Publish d’un package {#publish}
+## Publication d’un package {#publish}
 
-Pour permettre l’importation d’un package dans un environnement de test, vous devez le publier. Effectuez une requête de GET au point de terminaison `/packages` tout en spécifiant l’identifiant du module que vous souhaitez publier.
+Pour activer l’importation d’un package dans un sandbox, vous devez le publier. Envoyez une requête GET au point d’entrée `/packages` lors de la spécification de l’identifiant du package que vous souhaitez publier.
 
 **Format d’API**
 
@@ -392,7 +392,7 @@ GET /packages/{PACKAGE_ID}/export
 
 | Paramètre | Description |
 | --- | --- |
-| `{PACKAGE_ID}` | L’identifiant du module que vous souhaitez publier. |
+| `{PACKAGE_ID}` | L’identifiant du package que vous souhaitez publier. |
 
 **Requête**
 
@@ -409,11 +409,11 @@ curl -X GET \
 
 | Propriété | Description | Type | Obligatoire |
 | --- | --- | --- | --- |
-| `expiryPeriod` | Cette période spécifiée par l’utilisateur définit la date d’expiration du module (en jours) à partir du moment où le module a été publié. Cette valeur ne doit pas être négative.<br> Si aucune valeur n’est spécifiée, la valeur par défaut est calculée à 90 (jours) à partir de la date de publication. | Nombre entier | Non |
+| `expiryPeriod` | Cette période spécifiée par l’utilisateur définit la date d’expiration du package (en jours) à partir de l’heure de publication du package. Cette valeur ne doit pas être négative.<br> Si aucune valeur n’est spécifiée, la valeur par défaut est calculée sur 90 (jours) à compter de la date de publication. | Nombre entier | Non |
 
 **Réponse**
 
-Une réponse réussie renvoie le module publié.
+Une réponse réussie renvoie le package publié.
 
 ```json
 {
@@ -431,9 +431,9 @@ Une réponse réussie renvoie le module publié.
 }
 ```
 
-## Recherche d’un module {#look-up-package}
+## Recherche d’un package {#look-up-package}
 
-Vous pouvez rechercher un package individuel en envoyant une requête GET au point de terminaison `/packages` qui inclut l’identifiant correspondant du package dans le chemin d’accès de la requête.
+Vous pouvez rechercher un package individuel en effectuant une requête GET au point d’entrée `/packages` qui inclut l’identifiant correspondant du package dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -443,7 +443,7 @@ GET /packages/{PACKAGE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{PACKAGE_ID}` | L’identifiant du module que vous souhaitez rechercher. |
+| `{PACKAGE_ID}` | L’identifiant du package que vous souhaitez rechercher. |
 
 **Requête**
 
@@ -460,7 +460,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de l’ID de module interrogé. La réponse comprend le nom, la description, la date de publication et la date d’expiration, l’environnement de test source du module, ainsi qu’une liste d’artefacts.
+Une réponse réussie renvoie des détails pour l’ID de package interrogé. La réponse inclut le nom, la description, la date de publication et la date d’expiration, le sandbox source du package, ainsi qu’une liste d’artefacts.
 
 ```json
 {
@@ -499,9 +499,9 @@ Une réponse réussie renvoie les détails de l’ID de module interrogé. La r�
 }
 ```
 
-## Lister des packages {#list-packages}
+## Liste des packages {#list-packages}
 
-Vous pouvez répertorier tous les modules de votre organisation en envoyant une requête GET au point de terminaison `/packages`.
+Vous pouvez répertorier tous les packages de votre organisation en effectuant une requête GET au point d’entrée `/packages`.
 
 **Format d’API**
 
@@ -511,11 +511,11 @@ GET /packages/?{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --- | --- |
-| `{QUERY_PARAMS}` | Paramètres de requête facultatifs pour filtrer les résultats. Pour plus d’informations, consultez la section sur les [paramètres de requête](./appendix.md) . |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs pour le filtrage des résultats. Pour plus d’informations, consultez la section sur les [paramètres de requête](./appendix.md). |
 
 **Requête**
 
-La requête suivante récupère les informations des modules en fonction de {QUERY_PARAMS}.
+La requête suivante récupère les informations des packages en fonction de l’{QUERY_PARAMS} .
 
 ```shell
 curl -X GET \
@@ -528,7 +528,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste des modules appartenant à votre organisation, y compris des détails tels que le nom, l’état, l’expiration et la liste des artefacts.
+Une réponse réussie renvoie une liste des packages appartenant à votre organisation, y compris des détails tels que le nom, le statut, l’expiration et la liste des artefacts.
 
 ```json
 {
@@ -606,7 +606,7 @@ Une réponse réussie renvoie une liste des modules appartenant à votre organis
 
 ## Importer un package {#import}
 
-Ce point de terminaison est utilisé pour récupérer les objets en conflit dans l’environnement de test cible spécifié. Les objets en conflit représentent des objets similaires déjà présents dans l’environnement de test cible.
+Ce point d’entrée est utilisé pour récupérer les objets en conflit dans le sandbox cible spécifié. Les objets en conflit représentent des objets similaires déjà présents dans le sandbox cible.
 
 **Format d’API**
 
@@ -616,11 +616,11 @@ GET /packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName
 
 | Paramètre | Description |
 | --- | --- |
-| `{PACKAGE_ID}` | L’identifiant du module que vous souhaitez rechercher. |
+| `{PACKAGE_ID}` | L’identifiant du package que vous souhaitez rechercher. |
 
 **Requête**
 
-La requête suivante importe le {PACKAGE_ID}.
+La requête suivante importe le {PACKAGE_ID} .
 
 ```shell
 curl -X GET \
@@ -633,9 +633,9 @@ curl -X GET \
 
 **Réponse**
 
-Les conflits sont renvoyés dans la réponse. La réponse affiche le package d’origine plus le fragment `alternatives` sous la forme d’un tableau trié par classement.
+Les conflits sont renvoyés dans la réponse. La réponse affiche le package d’origine et le fragment de `alternatives` sous la forme d’un tableau classé par classement.
 
-+++Affichage de la réponse
++++Afficher la réponse
 
 ```json
 [
@@ -747,15 +747,15 @@ Les conflits sont renvoyés dans la réponse. La réponse affiche le package d�
 
 +++
 
-## Envoyer un import {#submit-import}
+## Soumettre un import {#submit-import}
 
 >[!NOTE]
 >
->La résolution des conflits implique que l’artefact alternatif existe déjà dans l’environnement de test cible.
+>Avec la résolution de conflit, il est inhérent que l’artefact secondaire existe déjà dans le sandbox cible.
 
-Vous pouvez soumettre un import pour un package une fois que vous avez examiné les conflits et fourni des substitutions en effectuant une requête de POST sur le point de terminaison `/packages`. Le résultat est fourni sous la forme d’un payload, qui lance la tâche d’importation pour l’environnement de test de destination, comme indiqué dans le payload.
+Vous pouvez envoyer une importation pour un package une fois que vous avez vérifié les conflits et fourni des substitutions en envoyant une requête POST au point d’entrée `/packages`. Le résultat est fourni sous la forme d’une payload, qui démarre la tâche d’importation pour le sandbox de destination, comme indiqué dans la payload.
 
-La charge utile accepte également le nom et la description de la tâche d’importation spécifiés par l’utilisateur. Si le nom et la description spécifiés par l’utilisateur ne sont pas disponibles, le nom et la description du module sont utilisés pour le nom et la description de la tâche.
+La payload accepte également le nom et la description de tâche spécifiés par l’utilisateur pour la tâche d’importation. Si le nom et la description spécifiés par l’utilisateur ne sont pas disponibles, le nom et la description du package sont utilisés pour le nom et la description de la tâche.
 
 **Format d’API**
 
@@ -765,7 +765,7 @@ POST /packages/import
 
 **Requête**
 
-La requête suivante récupère les packages à importer. La payload est une carte de substitutions où, si une entrée existe, la clé est le `artifactId` fourni par le package et l’alternative est la valeur. Si la carte ou la charge utile est **vide**, aucune substitution n’est effectuée.
+La requête suivante récupère les packages à importer. La payload est une carte de substitutions où, s’il existe une entrée, la clé est la `artifactId` fournie par le package et l’alternative est la valeur. Si la carte ou la payload est **vide**, aucune substitution n’est effectuée.
 
 ```shell
 curl -X POST \
@@ -793,7 +793,7 @@ curl -X POST \
 
 | Propriété | Description | Type | Obligatoire |
 | --- | --- | --- | --- |
-| `alternatives` | `alternatives` représente le mappage des artefacts sandbox source aux artefacts sandbox cible existants. Comme elles sont déjà présentes, la tâche d’importation évite de créer ces artefacts dans l’environnement de test cible. | Chaîne | Non |
+| `alternatives` | `alternatives` représentent le mappage des artefacts de sandbox source aux artefacts de sandbox cible existants. Puisqu’ils sont déjà là, la tâche d’importation évite de créer ces artefacts dans le sandbox cible. | Chaîne | Non |
 
 **Réponse**
 
@@ -818,9 +818,9 @@ curl -X POST \
 }
 ```
 
-## Liste de tous les objets dépendants {#dependent-objects}
+## Répertorier tous les objets dépendants {#dependent-objects}
 
-Répertorier tous les objets dépendants pour les objets exportés dans un package en effectuant une requête de POST sur le point de terminaison `/packages` tout en spécifiant l’identifiant du package.
+Répertoriez tous les objets dépendants pour les objets exportés dans un package en adressant une requête POST au point d’entrée `/packages` lors de la spécification de l’identifiant du package.
 
 **Format d’API**
 
@@ -861,7 +861,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste d’enfants pour les objets.
+Une réponse réussie renvoie une liste d’enfants pour les objets .
 
 ```json
 [
@@ -898,9 +898,9 @@ Une réponse réussie renvoie une liste d’enfants pour les objets.
 ]
 ```
 
-## Vérification des autorisations basées sur les rôles pour importer tous les artefacts de package {#role-based-permissions}
+## Vérifiez les autorisations basées sur les rôles pour importer tous les artefacts de package. {#role-based-permissions}
 
-Vous pouvez vérifier si vous disposez des autorisations nécessaires pour importer des artefacts de package en envoyant une requête GET au point de terminaison `/packages` tout en spécifiant l’identifiant du package et le nom de l’environnement de test cible.
+Vous pouvez vérifier si vous disposez des autorisations pour importer des artefacts de package en effectuant une requête GET au point d’entrée `/packages` tout en spécifiant l’identifiant du package et le nom du sandbox cible.
 
 **Format d’API**
 
@@ -910,11 +910,11 @@ GET /packages/preflight/{packageId}?targetSandbox=<sandbox_name
 
 | Paramètre | Description |
 | --- | --- |
-| `{PACKAGE_ID}` | L’identifiant du package que vous souhaitez importer. |
+| `{PACKAGE_ID}` | Identifiant du package que vous souhaitez importer. |
 
 **Requête**
 
-La requête suivante vérifie vos autorisations pour {PACKAGE_ID} et l’environnement de test.
+La requête suivante vérifie vos autorisations pour le {PACKAGE_ID} et le sandbox.
 
 ```shell
 curl -X GET \
@@ -927,9 +927,9 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie des autorisations de ressources pour l’environnement de test cible, y compris une liste des autorisations requises, des autorisations manquantes, un type d’artefact et une décision sur l’autorisation de la création.
+Une réponse réussie renvoie les autorisations de ressources pour le sandbox cible, y compris une liste des autorisations requises, les autorisations manquantes, le type d’artefact et une décision sur l’autorisation de la création.
 
-+++Affichage de la réponse
++++Afficher la réponse
 
 ```json
 {
@@ -1046,9 +1046,9 @@ Une réponse réussie renvoie des autorisations de ressources pour l’environne
 
 +++
 
-## Liste des traitements d&#39;export/d&#39;import {#list-jobs}
+## Liste des traitements d’export/import {#list-jobs}
 
-Vous pouvez répertorier les tâches d’exportation/d’importation actuelles en effectuant une requête de GET sur le point de terminaison `/packages`.
+Vous pouvez répertorier les tâches d’exportation/importation actuelles en effectuant une requête GET au point d’entrée `/packages`.
 
 **Format d’API**
 
@@ -1058,11 +1058,11 @@ GET /packages/jobs?{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --- | --- |
-| `{QUERY_PARAMS}` | Paramètres de requête facultatifs pour filtrer les résultats. Pour plus d’informations, consultez la section sur les [paramètres de requête](./appendix.md) . |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs pour le filtrage des résultats. Pour plus d’informations, consultez la section sur les [paramètres de requête](./appendix.md). |
 
 **Requête**
 
-La requête suivante répertorie toutes les tâches d’importation réussies.
+La requête suivante répertorie tous les traitements d’importation réussis.
 
 ```shell
 curl -X GET \
@@ -1159,13 +1159,13 @@ Une réponse réussie renvoie toutes les tâches d’importation réussies.
 }
 ```
 
-## Partage de modules dans toutes les organisations {#org-linking}
+## Partage de packages entre plusieurs organisations {#org-linking}
 
-Le point d’entrée `/handshake` de l’API d’outils de test vous permet de collaborer avec d’autres organisations pour partager des modules.
+Le point d’entrée `/handshake` de l’API d’outils Sandbox vous permet de vous associer à d’autres organisations pour partager des packages.
 
-### Envoi d’une demande de partage {#send-request}
+### Envoyer une demande de partage {#send-request}
 
-Envoyez une demande à une organisation partenaire cible pour le partage de l’approbation en envoyant une demande de POST au point de terminaison `/handshake/bulkCreate`. Cela est nécessaire avant de pouvoir partager des modules privés.
+Envoyez une requête à une organisation partenaire cible pour l’approbation du partage en effectuant une requête POST au point d’entrée `/handshake/bulkCreate`. Cela est nécessaire avant de pouvoir partager des packages privés.
 
 **Format d’API**
 
@@ -1175,7 +1175,7 @@ POST /handshake/bulkCreate
 
 **Requête**
 
-La requête suivante déclenche l’approbation du partage entre une organisation partenaire cible et l’organisation source.
+La requête suivante lance la validation du partage entre une organisation partenaire cible et l&#39;organisation source.
 
 ```shell
 curl -X POST \
@@ -1198,11 +1198,11 @@ curl -X POST \
 | Propriété | Description | Type | Obligatoire |
 | --- | --- | --- | --- |
 | `targetIMSOrgIds` | Liste des organisations cibles auxquelles envoyer la demande de partage. | Tableau | Oui |
-| `sourceIMSDetails` | Informations détaillées sur l’organisation source. | Objet | Oui |
+| `sourceIMSDetails` | Détails sur l’organisation source. | Objet | Oui |
 
 **Réponse**
 
-Une réponse réussie renvoie des détails sur votre demande de partage.
+Une réponse réussie renvoie des détails concernant votre demande de partage.
 
 ```json
 {
@@ -1223,7 +1223,7 @@ Une réponse réussie renvoie des détails sur votre demande de partage.
             "modifiedByName": "{MODIFIED_BY}",
             "modifiedByIMSOrgId": "{ORG_ID}",
             "statusHistory": "[{\"actionTakenBy\":\"acme@98ff67fa661fdf6549420b.e\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"{ORG_ID}\",\"action\":\"INITIATED\",\"actionTimeStamp\":1724938816885}]",
-            "linkingId": "{LINKIND_ID}"
+            "linkingId": "{LINKING_ID}"
         }
     },
     "failedRequests": {}
@@ -1232,7 +1232,7 @@ Une réponse réussie renvoie des détails sur votre demande de partage.
 
 ### Valider les demandes de partage reçues {#approve-requests}
 
-Approuvez les demandes de partage provenant d’organisations partenaires cibles en envoyant une demande de POST au point de terminaison `/handshake/action`. Après approbation, les organisations partenaires sources peuvent partager des modules privés.
+Approuvez les requêtes de partage des organisations partenaires cibles en effectuant une requête POST vers le point d’entrée `/handshake/action`. Après approbation, les organisations partenaires sources peuvent partager des packages privés.
 
 **Format d’API**
 
@@ -1242,7 +1242,7 @@ POST /handshake/action
 
 **Demandes**
 
-La requête suivante approuve une demande de partage d’une organisation partenaire cible.
+La requête suivante approuve une demande de partage émanant d’une organisation partenaire cible.
 
 ```shell
 curl -X POST  \
@@ -1267,14 +1267,14 @@ curl -X POST  \
 
 | Propriété | Description | Type | Obligatoire |
 | --- | --- | --- | --- |
-| `linkingID` | ID de la demande de partage à laquelle vous répondez. | Chaîne | Oui |
-| `status` | L’action effectuée sur la demande de partage. Les valeurs possibles sont `APPROVED` ou `REJECTED`. | Chaîne | Oui |
-| `reason` | La raison pour laquelle l’action est entreprise. | Chaîne | Oui |
-| `targetIMSOrgDetails` | Détails sur l’organisation cible où la valeur de l’identifiant doit être l’ **ID** de l’organisation cible, la valeur de nom doit être le **NAME** de l’organisation cible et la valeur de région doit être l’organisation cible **REGION**. | Objet | Oui |
+| `linkingID` | Identifiant de la demande de partage à laquelle vous répondez. | Chaîne | Oui |
+| `status` | Action effectuée sur la demande de partage. Les valeurs possibles sont `APPROVED` ou `REJECTED`. | Chaîne | Oui |
+| `reason` | Raison pour laquelle l’action est entreprise. | Chaîne | Oui |
+| `targetIMSOrgDetails` | Détails sur l’organisation cible où la valeur de l’identifiant doit correspondre à l’**ID** de l’organisation cible, la valeur du nom doit correspondre au **NOM** de l’organisation cible et la valeur de la région doit correspondre aux organisations cible **RÉGION**. | Objet | Oui |
 
 **Réponse**
 
-Une réponse réussie renvoie des détails sur la demande de partage approuvée.
+Une réponse réussie renvoie des détails concernant la demande de partage approuvée.
 
 ```json
 {
@@ -1298,9 +1298,9 @@ Une réponse réussie renvoie des détails sur la demande de partage approuvée.
 }
 ```
 
-### Liste des demandes de partage sortantes/entrantes {#outgoing-and-incoming-requests}
+### Liste des demandes de partage entrantes/sortantes {#outgoing-and-incoming-requests}
 
-Listez les requêtes de partage sortantes et entrantes en effectuant une requête GET sur le point de terminaison `handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING`.
+Répertoriez les demandes de partage entrantes et sortantes en effectuant une requête GET au point d’entrée `handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING`.
 
 **Format d’API**
 
@@ -1310,8 +1310,8 @@ GET handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING
 
 | Paramètre | Valeurs acceptées/par défaut |
 | --- | --- |
-| `property` | Spécifie la propriété à filtrer, par exemple l’état. Les valeurs possibles pour l’état sont : `APPROVED`, `REJECTED` et `IN_PROGRESS`. |
-| `start` | La valeur par défaut de start est `0`. |
+| `property` | Indique la propriété selon laquelle effectuer le filtrage, par exemple le statut. Les valeurs possibles pour l’état sont les suivantes : `APPROVED`, `REJECTED` et `IN_PROGRESS`. |
+| `start` | La valeur par défaut de début est `0`. |
 | `limit` | La valeur par défaut de limit est `20`. |
 | `orderBy` | Trie les enregistrements par ordre croissant ou décroissant. |
 | `requestType` | Accepte `INCOMING` ou `OUTGOING`. |
@@ -1333,7 +1333,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste des demandes de partage sortantes et entrantes, ainsi que leurs détails.
+Une réponse réussie renvoie une liste des requêtes de partage sortantes et entrantes et leurs détails.
 
 ```json
 {
@@ -1370,11 +1370,11 @@ Une réponse réussie renvoie une liste des demandes de partage sortantes et ent
 
 ## Transférer les packages
 
-Utilisez le point d’entrée `/transfer` de l’API de l’outil de test pour récupérer et créer de nouvelles demandes de partage de package.
+Utilisez le point d’entrée `/transfer` dans l’API d’outil Sandbox pour récupérer et créer des requêtes de partage de package.
 
 ### Nouvelle demande de partage {#share-request}
 
-Récupérez le package d’une organisation source publiée et partagez-le avec une organisation cible en envoyant une requête de POST au point de terminaison `/transfer` tout en fournissant l’ID de package et l’ID de l’organisation cible.
+Récupérez le package d’une organisation source publiée et partagez-le avec une organisation cible en adressant une requête POST au point d’entrée `/transfer` et en fournissant l’identifiant du package et l’identifiant de l’organisation cible.
 
 **Format d’API**
 
@@ -1406,12 +1406,12 @@ curl -X POST \
 
 | Propriété | Description | Type | Obligatoire |
 | --- | --- | --- | --- |
-| `packageId` | Identifiant du module que vous souhaitez partager. | Chaîne | Oui |
-| `targets` | Liste des organisations avec lesquelles partager des modules. | Tableau | Oui |
+| `packageId` | L’identifiant du package que vous souhaitez partager. | Chaîne | Oui |
+| `targets` | Liste des organisations avec lesquelles partager le package. | Tableau | Oui |
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du module demandé et son état de partage.
+Une réponse réussie renvoie les détails du package demandé et son statut de partage.
 
 ```json
 [
@@ -1432,9 +1432,9 @@ Une réponse réussie renvoie les détails du module demandé et son état de pa
 ]
 ```
 
-### Récupération d’une demande de partage par identifiant {#fetch-transfer-by-id}
+### Récupérer une demande de partage par identifiant {#fetch-transfer-by-id}
 
-Récupérez les détails d’une requête de partage en effectuant une requête de GET sur le point de terminaison `/transfer/{TRANSFER_ID}` tout en fournissant l’ID de transfert.
+Récupérez les détails d’une demande de partage en adressant une requête GET au point d’entrée `/transfer/{TRANSFER_ID}` tout en fournissant l’identifiant de transfert.
 
 **Format d’API**
 
@@ -1448,7 +1448,7 @@ GET /transfer/{TRANSFER_ID}
 
 **Requête**
 
-La requête suivante récupère un transfert avec l’identifiant {TRANSFER_ID}.
+La requête suivante récupère un transfert avec l’ID de {TRANSFER_ID}.
 
 ```shell
 curl -X GET \
@@ -1461,7 +1461,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse de succès renvoie les détails d’une requête de partage.
+Une réponse de succès renvoie les détails d’une demande de partage.
 
 ```json
 {
@@ -1479,9 +1479,9 @@ Une réponse de succès renvoie les détails d’une requête de partage.
 }
 ```
 
-### Récupérer la liste de partage {#transfers-list}
+### Récupérer la liste partagée {#transfers-list}
 
-Récupérez une liste de requêtes de transfert en effectuant une requête de GET sur le point de terminaison `/transfer/list?{QUERY_PARAMETERS}`, en modifiant les paramètres de requête selon les besoins.
+Récupérez une liste de demandes de transfert en effectuant une requête GET au point d’entrée `/transfer/list?{QUERY_PARAMETERS}`, en modifiant les paramètres de requête si nécessaire.
 
 **Format d’API**
 
@@ -1491,14 +1491,14 @@ GET `/transfer/list?{QUERY_PARAMETERS}`
 
 | Paramètre | Valeurs acceptées/par défaut |
 | --- | --- |
-| `property` | Spécifie la propriété à filtrer, par exemple l’état. Les valeurs possibles pour l’état sont : `COMPLETED`, `PENDING`, `IN_PROGRESS`, `FAILED`. |
-| `start` | La valeur par défaut de start est `0`. |
+| `property` | Indique la propriété selon laquelle effectuer le filtrage, par exemple le statut. Les valeurs possibles pour l’état sont les suivantes : `COMPLETED`, `PENDING`, `IN_PROGRESS`, `FAILED`. |
+| `start` | La valeur par défaut de début est `0`. |
 | `limit` | La valeur par défaut de limit est `20`. |
-| `orderBy` | L’ordre accepte uniquement le champ `createdDate`. |
+| `orderBy` | Le tri accepte uniquement le champ `createdDate`. |
 
 **Requête**
 
-La requête suivante récupère une liste de requêtes de transfert à partir des paramètres de recherche fournis.
+La requête suivante récupère une liste de demandes de transfert à partir des paramètres de recherche fournis.
 
 ```shell
 curl -X GET \
@@ -1511,7 +1511,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste de toutes les requêtes de transfert à partir des paramètres de recherche fournis.
+Une réponse réussie renvoie une liste de toutes les demandes de transfert à partir des paramètres de recherche fournis.
 
 ```json
 {
@@ -1557,7 +1557,7 @@ Une réponse réussie renvoie une liste de toutes les requêtes de transfert à 
 
 ### Mise à jour de la disponibilité des packages du privé au public {#update-availability}
 
-Remplacez un module de privé à public en effectuant une requête de GET sur le point de terminaison `/packages/update`. Par défaut, un package est créé avec une disponibilité privée.
+Remplacez un package privé par un package public en effectuant une requête GET au point d’entrée `/packages/update`. Par défaut, un package est créé avec une disponibilité privée.
 
 **Format d’API**
 
@@ -1567,7 +1567,7 @@ PUT `/packages/update`
 
 **Requête**
 
-La requête suivante modifie la disponibilité des packages du privé au public.
+La requête suivante modifie la disponibilité des packages de privée en publique.
 
 ```shell
 curl -X PUT \
@@ -1587,12 +1587,12 @@ curl -X PUT \
 | Propriété | Description | Type | Obligatoire |
 | --- | --- | --- | --- |
 | `id` | Identifiant du package à mettre à jour. | Chaîne | Oui |
-| `action` | Pour mettre à jour la visibilité sur public, la valeur de l’action doit être **UPDATE**. | Chaîne | Oui |
-| `packageVisbility` | Pour mettre à jour la visibilité, la valeur de packageVisibility doit être **PUBLIC**. | Chaîne | Oui |
+| `action` | Pour mettre à jour la visibilité sur le public, la valeur de l’action doit être **MISE À JOUR**. | Chaîne | Oui |
+| `packageVisbility` | Pour mettre à jour la visibilité, la valeur packageVisibility doit être **PUBLIC**. | Chaîne | Oui |
 
 **Réponse**
 
-Une réponse réussie renvoie les détails d’un package et sa visibilité.
+Une réponse réussie renvoie des détails sur un package et sa visibilité.
 
 ```json
 {
@@ -1626,9 +1626,9 @@ Une réponse réussie renvoie les détails d’un package et sa visibilité.
 }
 ```
 
-### Demande d’importation d’un package public {#pull-public-package}
+### Demande d’import d’un package public {#pull-public-package}
 
-Importez un package d’une organisation source avec disponibilité publique en effectuant une requête de POST sur le point de terminaison `/transfer/pullRequest`.
+Importez un package d’une organisation source avec disponibilité publique en effectuant une requête POST vers le point d’entrée `/transfer/pullRequest`.
 
 **Format d’API**
 
@@ -1638,7 +1638,7 @@ POST /transfer/pullRequest
 
 **Requête**
 
-La requête suivante importera un package et le mettra à disposition du public.
+La requête suivante importe un package et définit sa disponibilité sur publique.
 
 ```shell
 curl -X POST \
@@ -1657,12 +1657,12 @@ curl -X POST \
 
 | Propriété | Description | Type | Obligatoire |
 | --- | --- | --- | --- |
-| `imsOrgId` | ID de l’organisation source du package. | Chaîne | Oui |
+| `imsOrgId` | L’identifiant de l’organisation source du package. | Chaîne | Oui |
 | `packageId` | Identifiant du package à importer. | Chaîne | Oui |
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du package public importé.
+Une réponse réussie renvoie des détails sur le package public importé.
 
 ```json
 {
@@ -1684,7 +1684,7 @@ Une réponse réussie renvoie les détails du package public importé.
 
 ### Liste des packages publics {#list-public-packages}
 
-Récupérez une liste de packages avec visibilité publique en effectuant une requête GET sur le point de terminaison `/transfer/list?{QUERY_PARAMS}`.
+Récupérez une liste de packages visible par le public en envoyant une requête GET au point d’entrée `/transfer/list?{QUERY_PARAMS}`.
 
 **Format d’API**
 
@@ -1694,15 +1694,15 @@ GET /transfer/list?{QUERY_PARAMS}
 
 | Paramètre | Valeurs acceptées/par défaut |
 | --- | --- |
-| `property` | Spécifie la propriété à filtrer, par exemple l’état. Les valeurs possibles pour l’état sont : `COMPLETED` et `FAILED`. |
-| `start` | La valeur par défaut de start est `0`. |
+| `property` | Indique la propriété selon laquelle effectuer le filtrage, par exemple le statut. Les valeurs acceptables pour l’état sont les suivantes : `COMPLETED` et `FAILED`. |
+| `start` | La valeur par défaut de début est `0`. |
 | `limit` | La valeur par défaut de limit est `20`. |
-| `orderBy` | L’ordre accepte uniquement le champ `createdDate`. |
+| `orderBy` | Le tri accepte uniquement le champ `createdDate`. |
 | `requestType` | Accepte `PUBLIC` ou `PRIVATE`. |
 
 **Requête**
 
-La requête suivante récupère une liste de packages avec une disponibilité publique.
+La requête suivante récupère une liste de packages avec disponibilité publique.
 
 ```shell
 curl -X GET \
@@ -1717,9 +1717,9 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste de modules publics et leurs détails.
+Une réponse réussie renvoie une liste des packages publics et leurs détails.
 
-+++Affichage de la réponse
++++Afficher la réponse
 
 ```json
 {
@@ -1933,9 +1933,9 @@ Une réponse réussie renvoie une liste de modules publics et leurs détails.
 
 +++
 
-## Copie de la payload du module (#package-payload)
+## Copier la payload du package (#package-payload)
 
-Vous pouvez copier la charge utile d’un package public en effectuant une requête de GET sur le point de terminaison `/packages/payload` qui inclut l’identifiant correspondant du package dans le chemin d’accès de la requête.
+Vous pouvez copier la payload d’un package public en effectuant une requête GET au point d’entrée `/packages/payload` qui inclut l’identifiant correspondant du package dans le chemin de requête.
 
 **Format d’API**
 
@@ -1945,11 +1945,11 @@ GET /packages/payload/{PACKAGE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{PACKAGE_ID}` | L’identifiant du module que vous souhaitez copier. |
+| `{PACKAGE_ID}` | L’identifiant du package que vous souhaitez copier. |
 
 **Requête**
 
-La requête suivante récupère la charge utile d’un module avec l’identifiant {PACKAGE_ID}.
+La requête suivante récupère la payload d’un package avec l’identifiant de {PACKAGE_ID}.
 
 ```shell
 curl -X GET \
@@ -1964,16 +1964,508 @@ curl -X GET \
 
 | Propriété | Description | Type | Obligatoire |
 | --- | --- | --- | --- |
-| `imsOrdId` | ID de l’organisation à laquelle le module appartient. | Chaîne | Oui |
-| `packageId` | L’identifiant du module qui charge utile que vous demandez. | Chaîne | Oui |
+| `imsOrdId` | Identifiant de l’organisation à laquelle appartient le package. | Chaîne | Oui |
+| `packageId` | L’identifiant du package dont vous demandez la payload. | Chaîne | Oui |
 
 **Réponse**
 
-Une réponse réussie renvoie la charge utile du module.
+Une réponse réussie renvoie la payload du package.
 
 ```json
 {
     "imsOrgId": "{ORG_ID}",
     "packageId": "{PACKAGE_ID}"
+}
+```
+
+## Migrer les mises à jour de configuration d’objet
+
+Utilisez le point d’entrée /packages dans l’API d’outils Sandbox pour migrer les mises à jour de configuration d’objet.
+
+### Opérations de mise à jour (#update-operations)
+
+Comparez une version spécifiée ou la dernière version d’un instantané de package à l’état actuel du sandbox source ou d’un sandbox cible utilisé précédemment dans lequel le package a été importé en adressant une requête POST au point d’entrée `/packages/{packageId}/version/compare`, en fournissant l’identifiant du package.
+
+***Format d’API***
+
+```http
+PATCH /packages/{packageId}/version/compare
+```
+
+| Propriété | Description | Type | Obligatoire |
+| --- | --- | --- | --- |
+| `packageId` | L’identifiant du package. | Chaîne | Oui |
+
+**Requête**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/version/compare/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "triggerNew": true,
+      "targetSandbox": "{SANDBOX_NAME}"
+  }'
+```
+
+| Propriété | Description | Type | Obligatoire |
+| --- | --- | --- | --- |
+| `triggerNew` | Indicateur pour déclencher la nouvelle tâche de calcul diff, même s’il existe déjà une tâche active ou terminée. | Booléen | Non |
+| `targetSandbox` | Représente le nom du sandbox cible avec lequel la comparaison doit être calculée. Si elle n’est pas spécifiée, la sandbox source sera utilisée comme sandbox cible. | Chaîne | Non |
+
+**Réponse**
+
+Une réponse réussie pour une tâche précédemment terminée renvoie l’objet de tâche avec les résultats diff précédemment calculés. Une tâche nouvellement terminée renvoie l’ID de tâche.
+
++++Afficher la réponse (traitement envoyé)
+
+```json
+{
+    "status": "OK",
+    "type": "SUCCESS",
+    "ajo": false,
+    "message": "Job with ID: {JOB_ID}",
+    "object": {
+        "id": "c4b7d07ae4c646279e2070a31c50bd5c",
+        "name": "Compute Job Package: {SNAPSHOT_ID}",
+        "description": null,
+        "visibility": "TENANT",
+        "requestType": "VERSION",
+        "expiry": 0,
+        "snapshotId": "{SNAPSHOT_ID}",
+        "packageVersion": 0,
+        "createdTimestamp": 0,
+        "modifiedTimestamp": 0,
+        "type": "PARTIAL",
+        "jobStatus": "SUCCESS",
+        "jobType": "COMPUTE",
+        "counter": 0,
+        "imsOrgId": "{ORG_ID}",
+        "sourceSandbox": {
+            "name": "prod",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "destinationSandbox": {
+            "name": "amanda-1",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "deltaPackageVersion": {
+            "packageId": "{PACKAGE_ID}",
+            "currentVersion": 0,
+            "validated": false,
+            "rootArtifacts": [
+                {
+                    "id": "https://ns.adobe.com/sandboxtoolingstage/schemas/355f461cbfb662fd0d12d06aeab34e206efcfa5d913604de",
+                    "type": "REGISTRY_SCHEMA",
+                    "found": false,
+                    "count": 0
+                }
+            ],
+            "eximGraphDelta": {
+                "vertices": [],
+                "pluginDeltas": [
+                    {
+                        "sourceArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/9fad8b185640a2db7daf9bb1295543ee8cb5965d80a21e8d",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 2"
+                        },
+                        "targetArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/b7fa3024777ef11b68c5121e937d8543677093f4f0e63a5f",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 2_1738766274074"
+                        },
+                        "changes": [
+                            {
+                                "op": "replace",
+                                "path": "/title",
+                                "oldValue": "Custom FieldGroup 2_1738766274074",
+                                "newValue": "Custom FieldGroup 2"
+                            },
+                            {
+                                "op": "replace",
+                                "path": "/description",
+                                "oldValue": "Description for furnished object",
+                                "newValue": ""
+                            }
+                        ]
+                    },
+                    {
+                        "sourceArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/304ac900943716c8bd99e6aaf6aa840aac91995729f1987f",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 4"
+                        },
+                        "targetArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/34c9add91cce4a40d68a0e715c9f0a16048871734f8c8b74",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 4_1738766274074"
+                        },
+                        "changes": [
+                            {
+                                "op": "replace",
+                                "path": "/title",
+                                "oldValue": "Custom FieldGroup 4_1738766274074",
+                                "newValue": "Custom FieldGroup 4"
+                            },
+                            {
+                                "op": "replace",
+                                "path": "/description",
+                                "oldValue": "Description for furnished object",
+                                "newValue": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "importReplacementMap": {
+            "https://ns.adobe.com/sandboxtoolingstage/mixins/9fad8b185640a2db7daf9bb1295543ee8cb5965d80a21e8d": "https://ns.adobe.com/sandboxtoolingstage/mixins/b7fa3024777ef11b68c5121e937d8543677093f4f0e63a5f",
+            "5a45f8cd309d5ed5797be9a0af65e89152a51d57a6c74b52": "4ae041fa182d6faf2e7c56463399170d913138a7c5712909",
+            "https://ns.adobe.com/sandboxtoolingstage/schemas/b2b7705e770a35341b8bc5ec5e3644d9c7387266777fe4ba": "https://ns.adobe.com/sandboxtoolingstage/schemas/838c4e21ad81543ac14238ac1756012f7f98f0e0bec6b425",
+            "https://ns.adobe.com/sandboxtoolingstage/schemas/355f461cbfb662fd0d12d06aeab34e206efcfa5d913604de": "https://ns.adobe.com/sandboxtoolingstage/schemas/9a55692d527169d0239e126137a694ed9db2406c9bcbd06a",
+            "8f45c79235c91e7f0c09af676a77d170a34b5ee0ad5de72c": "65d755cc3300674c3cfcec620c59876af07f046884afd359",
+            "f04b8e461396ff426f8ba8dc5544f799bf287baa8e0fa5c": "b6fa821ada8cb97cac384f0b0354bbe74209ec97fb6a83a3",
+            "https://ns.adobe.com/sandboxtoolingstage/mixins/304ac900943716c8bd99e6aaf6aa840aac91995729f1987f": "https://ns.adobe.com/sandboxtoolingstage/mixins/34c9add91cce4a40d68a0e715c9f0a16048871734f8c8b74",
+            "c8304f3cb7986e8c9b613cd8d832125bd867fb4a5aedf67a": "4d21e9bf89ce0042b52d7d41ff177a7697d695e2617d1fc1"
+        },
+        "schemaFieldMappings": null
+    }
+}
+```
+
++++
+
++++Afficher la réponse (nouveau traitement envoyé)
+
+```json
+{
+    "status": "OK",
+    "type": "SUCCESS",
+    "ajo": false,
+    "message": "Job with ID: {JOB_ID}",
+    "object": {
+        "id": "aa5cfacf35a8478c8cf44a675fab1c30 ",
+        "name": "Compute Job Package: {SNAPSHOT_ID}",
+        "description": null,
+        "visibility": "TENANT",
+        "requestType": "VERSION",
+        "expiry": 0,
+        "snapshotId": "{SNAPSHOT_ID}",
+        "packageVersion": 0,
+        "createdTimestamp": 0,
+        "modifiedTimestamp": 0,
+        "type": "PARTIAL",
+        "jobStatus": "IN_PROGRESS",
+        "jobType": "COMPUTE",
+        "counter": 0,
+        "imsOrgId": "{ORG_ID}",
+        "sourceSandbox": {
+            "name": "prod",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "destinationSandbox": {
+            "name": "amanda-1",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "schemaFieldMappings": null
+    }
+}
+```
+
++++
+
+### Mettre à jour la version du package (#package-versioning)
+
+Mettez à niveau le package vers une nouvelle version à l’aide du dernier instantané du sandbox source pour chaque objet en envoyant une requête GET au point d’entrée `/packages/{packageId}/version/save` et en fournissant l’identifiant du package.
+
+***Format d’API***
+
+```http
+PATCH /packages/{packageId}/version/save
+```
+
+| Propriété | Description | Type | Obligatoire |
+| --- | --- | --- | --- |
+| `packageId` | L’identifiant du package. | Chaîne | Oui |
+
+**Requête**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/version/save/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**Réponse**
+
+Une réponse réussie renvoie le statut de la tâche pour la mise à niveau de version.
+
+```json
+{
+    "id": "3cec9bae662e43d9b9106fcbf7744a75",
+    "name": "Version Job Package: {JOB_ID}",
+    "description": null,
+    "visibility": "TENANT",
+    "requestType": "VERSION",
+    "expiry": 0,
+    "snapshotId": "{SNAPSHOT_ID}",
+    "packageVersion": 2,
+    "createdTimestamp": 0,
+    "modifiedTimestamp": 0,
+    "type": "PARTIAL",
+    "jobStatus": "PENDING",
+    "jobType": "UPGRADE",
+    "counter": 0,
+    "imsOrgId": "{ORG_ID}",
+    "sourceSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "destinationSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "schemaFieldMappings": null
+}
+```
+
+### Récupérer l’historique des versions de packages (#package-version-history)
+
+Récupérez l’historique du contrôle de version du package, y compris l’horodatage et le modificateur, en envoyant une requête GET au point d’entrée `/packages/{packageId}/history` et en fournissant l’identifiant du package.
+
+***Format d’API***
+
+```http
+PATCH /packages/{packageId}/history
+```
+
+| Propriété | Description | Type | Obligatoire |
+| --- | --- | --- | --- |
+| `packageId` | L’identifiant du package. | Chaîne | Oui |
+
+**Requête**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/history/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**Réponse**
+
+Une réponse réussie renvoie l’historique des versions d’un package.
+
+```json
+[
+    {
+        "id": "cb68591a1ed941e191e7f52e33637a26",
+        "version": 0,
+        "createdDate": 1739516784000,
+        "modifiedDate": 1739516784000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 3
+    },
+    {
+        "id": "e26189e6e4df476bb66c3fc3e66a1499",
+        "version": 0,
+        "createdDate": 1739343268000,
+        "modifiedDate": 1739343268000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 2
+    },
+    {
+        "id": "11af34c0eee449ac84ef28c66d9383e3",
+        "version": 0,
+        "createdDate": 1739343073000,
+        "modifiedDate": 1739343073000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 1
+    }
+]
+```
+
+### Envoyer un traitement de mise à jour (#submit-update)
+
+Envoyez les nouvelles mises à jour aux objets sandbox cibles en adressant une requête PATCH au point d’entrée `/packages/{packageId}/import` et en fournissant l’identifiant du package.
+
+***Format d’API***
+
+```http
+PATCH /packages/{packageId}/import
+```
+
+| Propriété | Description | Type | Obligatoire |
+| --- | --- | --- | --- |
+| `packageId` | L’identifiant du package. | Chaîne | Oui |
+
+**Requête**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "id": "50fd94f8072b4f248737a2b57b41058f",
+      "name": "Test Update",
+      "destinationSandbox": {
+        "name": "test-sandbox-sbt",
+        "imsOrgId": "{ORG_ID}"
+      },
+      "overwriteMappings": {
+        "https://ns.adobe.com/sandboxtoolingstage/schemas/327a48c83a5359f8160420a00d5a07f0ba8631a1fd466f9e" : {
+            "id" : "https://ns.adobe.com/sandboxtoolingstage/schemas/e346bb2cd7b26576cb51920d214aebbd42940a9bf94a75cd",
+            "type" : "REGISTRY_SCHEMA"
+        }
+      }
+  }'
+```
+
+**Réponse**
+
+Une réponse réussie renvoie l’identifiant de tâche pour la mise à jour.
+
+```json
+{
+    "id": "3cec9bae662e43d9b9106fcbf7744a75",
+    "name": "Update Job Name",
+    "description": "Update Job Description",
+    "visibility": "TENANT",
+    "requestType": "IMPORT",
+    "expiry": 0,
+    "snapshotId": "{SNAPSHOT_ID}",
+    "packageVersion": 2,
+    "createdTimestamp": 0,
+    "modifiedTimestamp": 0,
+    "type": "PARTIAL",
+    "jobStatus": "PENDING",
+    "jobType": "UPDATE",
+    "counter": 0,
+    "imsOrgId": "{ORG_ID}",
+    "sourceSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "destinationSandbox": {
+        "name": "amanda-1",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "schemaFieldMappings": null
+}
+```
+
+### Désactiver la mise à jour et le remplacement pour un package (#disable-update)
+
+Désactivez la mise à jour et le remplacement des packages qui ne les prennent pas en charge, en envoyant une requête GET au point d’entrée `/packages/{packageId}/?{QUERY_PARAMS}` et en fournissant l’identifiant du package.
+
+***Format d’API***
+
+```http
+PATCH /packages/{packageId}?{QUERY_PARAMS}
+```
+
+| Propriété | Description | Type | Obligatoire |
+| --- | --- | --- | --- |
+| `packageId` | L’identifiant du package. | Chaîne | Oui |
+| {QUERY_PARAM} | Le paramètre de requête getCapabilites. Cette valeur doit être définie sur `true` ou `false` | Booléen | Oui |
+
+**Requête**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}?getCapabilities=true'/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**Réponse**
+
+Une réponse réussie renvoie une liste des fonctionnalités du package.
+
+```json
+{
+    "id": "80230dde96574a828191144709bb9b51",
+    "version": 3,
+    "createdDate": 1749808582000,
+    "modifiedDate": 1749808648000,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
+    "name": "Ankit_Primary_Descriptor_Test",
+    "description": "RestPackage",
+    "imsOrgId": "{ORG_ID}",
+    "clientId": "usecasebuilder",
+    "packageType": "PARTIAL",
+    "expiry": 1757584598000,
+    "publishDate": 1749808648000,
+    "status": "PUBLISHED",
+    "packageVisibility": "PRIVATE",
+    "latestPackageVersion": 0,
+    "packageAccessType": "TENANT",
+    "artifactsList": [
+        {
+            "id": "https://ns.adobe.com/sandboxtoolingstage/schemas/1c767056056de64d8030380d1b9f570d26bc15501a1e0e95",
+            "altId": null,
+            "type": "REGISTRY_SCHEMA",
+            "found": false,
+            "count": 0
+        }
+    ],
+    "schemaMapping": {},
+    "sourceSandbox": {
+        "name": "atul-sandbox",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "packageCapabilities": {
+        "capabilities": [
+            "VERSIONABLE"
+        ]
+    }
 }
 ```
