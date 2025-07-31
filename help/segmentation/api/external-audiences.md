@@ -2,9 +2,9 @@
 title: Point d’entrée de l’API Audiences externes
 description: Découvrez comment utiliser l’API des audiences externes pour créer, mettre à jour, activer et supprimer vos audiences externes de Adobe Experience Platform.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: 3e1eb697569d75d0ef3af53be1a556bdcd8a293b
+source-git-commit: bc74f86dca62a62dde39ad2e167e66b511d59086
 workflow-type: tm+mt
-source-wordcount: '2219'
+source-wordcount: '2189'
 ht-degree: 9%
 
 ---
@@ -78,10 +78,12 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
         },
         "ttlInDays": "40",
         "labels": ["core/C1"],
@@ -95,8 +97,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `name` | Chaîne | Nom de l’audience externe. |
 | `description` | Chaîne | Description facultative de l’audience externe. |
 | `customAudienceId` | Chaîne | Identifiant facultatif de votre audience externe. |
-| `fields` | Tableau d’objets | La liste des champs et leurs types de données. Lors de la création de la liste des champs, vous pouvez ajouter les éléments suivants : <ul><li>`name` : **Obligatoire** nom du champ qui fait partie de la spécification de l’audience externe.</li><li>`type` : **Obligatoire** type de données qui entre dans le champ. Les valeurs prises en charge sont les suivantes : `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) et `boolean`.</li>`identityNs` : **Obligatoire pour le champ d’identité** Espace de noms utilisé par le champ d’identité. Les valeurs prises en charge incluent tous les espaces de noms valides, tels que `ECID` ou `email`.li><li>`labels` : *facultatif* tableau de libellés de contrôle d’accès pour le champ. Vous trouverez plus d’informations sur les libellés de contrôle d’accès disponibles dans le [glossaire des libellés d’utilisation des données](/help/data-governance/labels/reference.md). </li></ul> |
-| `sourceSpec` | Objet | Objet contenant les informations sur l’emplacement de l’audience externe. Lors de l’utilisation de cet objet, vous **devez** inclure les informations suivantes : <ul><li>`path` : **Obligatoire** : emplacement de l’audience externe ou du dossier contenant l’audience externe dans la source.</li><li>`type`: **Obligatoire** type de l’objet que vous récupérez à partir de la source. Cette valeur peut être `file` ou `folder`.</li><li>`sourceType` : *facultatif* type de source à partir de laquelle vous effectuez une récupération. Actuellement, la seule valeur prise en charge est `Cloud Storage`.</li><li>`cloudType` : *facultatif* type d’espace de stockage dans le cloud, basé sur le type de source . Les valeurs prises en charge sont `S3`, `DLZ`, `GCS` et `SFTP`.</li><li>`baseConnectionId` : identifiant de la connexion de base. Il est fourni par votre fournisseur source. Cette valeur est **obligatoire** si vous utilisez une valeur `cloudType` de `S3`, `GCS` ou `SFTP`. Pour plus d’informations, consultez la [présentation des connecteurs source](../../sources/home.md)li></ul> |
+| `fields` | Tableau d’objets | La liste des champs et leurs types de données. Lors de la création de la liste des champs, vous pouvez ajouter les éléments suivants : <ul><li>`name` : **Obligatoire** nom du champ qui fait partie de la spécification de l’audience externe.</li><li>`type` : **Obligatoire** type de données qui entre dans le champ. Les valeurs prises en charge sont les suivantes : `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) et `boolean`.</li><li>`identityNs` : **Obligatoire pour le champ d’identité** Espace de noms utilisé par le champ d’identité. Les valeurs prises en charge incluent tous les espaces de noms valides, tels que `ECID` ou `email`.</li><li>`labels` : *facultatif* tableau de libellés de contrôle d’accès pour le champ. Vous trouverez plus d’informations sur les libellés de contrôle d’accès disponibles dans le [glossaire des libellés d’utilisation des données](/help/data-governance/labels/reference.md). </li></ul> |
+| `sourceSpec` | Objet | Objet contenant les informations sur l’emplacement de l’audience externe. Lors de l’utilisation de cet objet, vous **devez** inclure les informations suivantes : <ul><li>`path` : **Obligatoire** : emplacement de l’audience externe ou du dossier contenant l’audience externe dans la source.</li><li>`type`: **Obligatoire** type de l’objet que vous récupérez à partir de la source. Cette valeur peut être `file` ou `folder`.</li><li>`sourceType` : *facultatif* type de source à partir de laquelle vous effectuez une récupération. Actuellement, la seule valeur prise en charge est `Cloud Storage`.</li><li>`cloudType` : *facultatif* type d’espace de stockage dans le cloud, basé sur le type de source . Les valeurs prises en charge sont `S3`, `DLZ`, `GCS` et `SFTP`.</li><li>`baseConnectionId` : identifiant de la connexion de base. Il est fourni par votre fournisseur source. Cette valeur est **obligatoire** si vous utilisez une valeur `cloudType` de `S3`, `GCS` ou `SFTP`. Pour plus d’informations, consultez la [présentation des connecteurs source](../../sources/home.md)</li></ul> |
 | `ttlInDays` | Nombre entier | Expiration des données de l’audience externe, en jours. Cette valeur peut être définie de 1 à 90. Par défaut, l’expiration des données est définie sur 30 jours. |
 | `audienceType` | Chaîne | Type d’audience pour l’audience externe. Actuellement, seul `people` est pris en charge. |
 | `originName` | Chaîne | **Obligatoire** Origine de l’audience. Cette information indique d’où vient l’audience. Pour les audiences externes, vous devez utiliser `CUSTOM_UPLOAD`. |
@@ -139,11 +141,13 @@ Une réponse réussie renvoie le statut HTTP 202 avec les détails de votre audi
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
-            },
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
+        },
         "ttlInDays": 40,
         "labels": ["core/C1"],
         "audienceType": "people",
@@ -231,11 +235,13 @@ Une réponse réussie renvoie un statut HTTP 200 avec les détails du statut de 
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
-            },
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
+        },
         "ttlInDays": 40,
         "labels": ["core/C1"],
         "audienceType": "people",
@@ -276,6 +282,7 @@ Lors de l’utilisation de ce point d’entrée, vous pouvez mettre à jour les 
 - Description de l&#39;audience
 - Libellés de contrôle d’accès au niveau du champ
 - Libellés de contrôle d’accès au niveau de l’audience
+- Expiration des données de l’audience
 
 La mise à jour du champ à l’aide de ce point d’entrée **remplace** le contenu du champ que vous avez demandé.
 
@@ -403,7 +410,6 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-
 | -------- | ---- | ----------- |
 | `dataFilterStartTime` | Date et heure de l’époque | **Obligatoire** Plage spécifiant l’heure de début de l’exécution du flux pour sélectionner les fichiers à traiter. |
 | `dataFilterEndTime` | Date et heure de l’époque | La plage spécifiant l’heure de fin à laquelle le flux s’exécutera pour sélectionner les fichiers à traiter. |
-| `differentialIngestion` | Booléen | Champ qui détermine si l’ingestion sera une ingestion partielle en fonction de la différence depuis la dernière ingestion ou une ingestion d’audience complète. Par défaut, cette valeur est `true`. |
 
 +++
 
