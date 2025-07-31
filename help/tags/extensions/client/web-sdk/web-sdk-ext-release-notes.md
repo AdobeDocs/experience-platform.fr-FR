@@ -5,7 +5,7 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 source-git-commit: 99a2bb12fb0ed8b6bb9001d25f2bddc17201c8cf
 workflow-type: tm+mt
 source-wordcount: '2801'
-ht-degree: 95%
+ht-degree: 97%
 
 ---
 
@@ -14,16 +14,16 @@ ht-degree: 95%
 
 Ce document contient les notes de mise à jour de l’extension de balises du SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, voir les [notes de mise à jour du SDK web d’Experience Platform](/help/web-sdk/release-notes.md).
 
-## Version 2.31.0 - vendredi 24 juillet 2025
+## Version 2.31.0 - 24 juillet 2025
 
 **Nouvelles fonctionnalités**
 
-- Contient [version 2.28.0](../../../../web-sdk/release-notes.md#2-28-0) du SDK Web Adobe Experience Platform.
+- Contient la [version 2.28.0](../../../../web-sdk/release-notes.md#2-28-0) du SDK Web d’Adobe Experience Platform.
 
 **Correctifs et améliorations**
 
-- Correction d’un problème où une erreur est déclenchée lorsqu’un remplacement de train de données est activé via un élément de données.
-- Correction d’un problème où les remplacements de `idSyncContainerId` vides généraient une erreur.
+- Correction d’un problème en raison duquel une erreur était déclenchée lorsqu’un remplacement de train de données était activé via un élément de données.
+- Correction d’un problème en raison duquel des remplacements de `idSyncContainerId` vides généraient une erreur.
 - Lors de la résolution des éléments de données multimédia, l’objet événement est désormais inclus.
 
 **Problèmes connus**
