@@ -1,12 +1,10 @@
 ---
 title: Point d’entrée de l’API Audiences externes
 description: Découvrez comment utiliser l’API des audiences externes pour créer, mettre à jour, activer et supprimer vos audiences externes de Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: 3acadf73b5c82d6f5f0f1eaec41387bec897558d
+source-git-commit: 3e1eb697569d75d0ef3af53be1a556bdcd8a293b
 workflow-type: tm+mt
-source-wordcount: '2405'
+source-wordcount: '2219'
 ht-degree: 9%
 
 ---
@@ -528,24 +526,23 @@ Vous pouvez récupérer toutes les exécutions d’ingestion pour l’audience e
 
 **Format d’API**
 
-Le point d’entrée suivant prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est vivement recommandée pour vous aider à cibler vos résultats.
+<!-- The following endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help focus your results. -->
 
 ```http
 GET /external-audience/{AUDIENCE_ID}/runs
-GET /external-audience/{AUDIENCE_ID}/runs?{QUERY_PARAMETERS}
 ```
 
-**Paramètres de requête**
+<!-- **Query parameters**
 
-+++ Liste des paramètres de requête disponibles.
++++ A list of available query parameters. 
 
-| Paramètre | Description | Exemple |
+| Parameter | Description | Example |
 | --------- | ----------- | ------- |
-| `limit` | Nombre maximal d’éléments renvoyés dans la réponse. Cette valeur peut être comprise entre 1 et 40. Par défaut, la limite est définie sur 20. | `limit=30` |
-| `sortBy` | Ordre dans lequel les éléments renvoyés sont triés. Vous pouvez trier par `name` ou par `createdAt`. De plus, vous pouvez ajouter un signe `-` pour trier par ordre **décroissant** au lieu de **croissant**. Par défaut, les éléments sont triés par `createdAt` dans l’ordre décroissant. | `sortBy=name` |
-| `property` | Un filtre permettant de déterminer les exécutions d’ingestion d’audience qui s’affichent. Vous pouvez filtrer selon les propriétés suivantes : <ul><li>`name` : permet de filtrer par nom d’audience. Si vous utilisez cette propriété, vous pouvez effectuer une comparaison à l’aide de `=`, `!=`, `=contains` ou `!=contains`. </li><li>`createdAt` : permet de filtrer par heure d’ingestion. Si vous utilisez cette propriété, vous pouvez effectuer une comparaison à l’aide de `>=` ou `<=`.</li><li>`status` : permet de filtrer selon le statut de l’exécution d’ingestion. Si vous utilisez cette propriété, vous pouvez effectuer une comparaison à l’aide de `=`, `!=`, `=contains` ou `!=contains`. </li></ul> | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
+| `limit` | The maximum number of items returned in the response. This value can range from 1 to 40. By default, the limit is set to 20. | `limit=30` |
+| `sortBy` | The order in which the returned items are sorted. You can sort by either `name` or by `createdAt`. Additionally, you can add a `-` sign to sort by **descending** order instead of **ascending** order. By default, the items are sorted by `createdAt` in descending order. | `sortBy=name` |
+| `property` | A filter to determine which audience ingestion runs are displayed. You can filter on the following properties: <ul><li>`name`: Lets you filter by the audience name. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li><li>`createdAt`: Lets you filter by the ingestion time. If using this property, you can compare by using `>=` or `<=`.</li><li>`status`: Lets you filter by the ingestion run's status. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li></ul>  | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
 
-+++
++++ -->
 
 **Requête**
 
@@ -594,19 +591,23 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste d’exécutions d
             "createdAt": 1749324248,
             "createdBy": "{USER_ID}"
         }
-    ],
+    ]
+}
+```
+
+<!-- ,
     "_page": {
         "limit": 20,
         "count": 2,
         "totalCount": 2
     }
-}
-```
+    
+| `_page` | Object | An object that contains the pagination information about the list of results. |
+     -->
 
 | Propriété | Type | Description |
 | -------- | ---- | ----------- |
 | `runs` | Objet | Objet contenant la liste des exécutions d’ingestion appartenant à l’audience. Vous trouverez plus d’informations sur cet objet dans la section [récupérer le statut de l’ingestion](#retrieve-ingestion-status). |
-| `_page` | Objet | Un objet contenant les informations de pagination sur la liste des résultats. |
 
 +++
 
