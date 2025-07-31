@@ -65,7 +65,7 @@ C’est peut être dû à la fonction de saisie automatique. La fonction traite 
 ### Puis-je utiliser [!DNL Postman] pour l’API Query Service ?
 
 +++Réponse
-Oui, vous pouvez visualiser tous les services API d’Adobe et interagir avec eux à l’aide de [!DNL Postman] (une application tierce gratuite). Regardez le [[!DNL Postman] guide de configuration](https://video.tv.adobe.com/v/28832) pour obtenir des instructions détaillées sur la configuration d’un projet dans l’Adobe Developer Console et l’acquisition de toutes les informations d’identification nécessaires à l’utilisation avec [!DNL Postman]. Consultez la documentation officielle pour obtenir des [conseils sur le démarrage, l’exécution et le partage de collections [!DNL Postman] ](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Oui, vous pouvez visualiser tous les services API d’Adobe et interagir avec eux à l’aide de [!DNL Postman] (une application tierce gratuite). Regardez le [[!DNL Postman] guide de configuration](https://video.tv.adobe.com/v/31635?captions=fre_fr) pour obtenir des instructions détaillées sur la configuration d’un projet dans l’Adobe Developer Console et l’acquisition de toutes les informations d’identification nécessaires à l’utilisation avec [!DNL Postman]. Consultez la documentation officielle pour obtenir des [conseils sur le démarrage, l’exécution et le partage de collections [!DNL Postman] ](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Existe-t-il un nombre maximal de lignes renvoyées par une requête via l’interface utilisateur ?
