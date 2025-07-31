@@ -3,10 +3,10 @@ title: Créer une connexion à une destination
 type: Tutorial
 description: Découvrez comment vous connecter à une destination dans Adobe Experience Platform, activer des alertes et configurer des actions marketing pour votre destination connectée.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 59ff77ff9f4a6fe147b5d8231fd3caa2550ae20e
+source-git-commit: ec6f055de02610e23f30051c4fed4f362e9fbc53
 workflow-type: tm+mt
-source-wordcount: '1176'
-ht-degree: 71%
+source-wordcount: '1280'
+ht-degree: 64%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 71%
 
 >[!IMPORTANT]
 > 
->* Pour vous connecter à une destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour vous connecter à une destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 >* Pour vous connecter à une destination qui prend en charge les exportations de jeux de données, vous avez besoin des **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer et activer les destinations de jeux de données]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 ## Présentation {#overview}
@@ -54,15 +54,24 @@ Avant d’envoyer des données d’audience vers une destination, vous devez con
 >[!CONTEXTUALHELP]
 >id="platform_destinations_account_name"
 >title="Nom du compte"
->abstract="Saisissez un nom qui vous permettra d’identifier facilement ce compte de destination à l’avenir. Cela se révèle particulièrement utile si vous disposez de plusieurs connexions au même type de destination."
+>abstract="Saisissez un nom qui vous permettra d’identifier facilement ce compte de destination à l’avenir. Cela s’avère particulièrement utile si vous disposez de plusieurs connexions à la même destination."
 
 La première étape de la connexion à une destination consiste à s’authentifier sur la plateforme de destination.
 
-Selon la destination à laquelle vous vous connectez, il se peut que vous soyez redirigé(e) vers la page du partenaire de destination pour vous authentifier ou que vous soyez invité(e) à saisir les informations d’authentification directement dans le workflow Experience Platform. Vous trouverez ci-dessous un exemple d’entrée requise pour l’authentification à une destination [!DNL Amazon S3]. Des instructions détaillées sur l’entrée requise sont fournies dans la page de documentation de chaque destination (consultez, par exemple, la section d’authentification pour [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) et [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
+Selon la destination à laquelle vous vous connectez, il se peut que vous soyez redirigé(e) vers la page du partenaire de destination pour vous authentifier ou que vous soyez invité(e) à saisir les informations d’authentification directement dans le workflow Experience Platform.
+
+Lors de la configuration d’une nouvelle connexion de destination, vous devez fournir un **[!UICONTROL Nom du compte]** et, éventuellement, une **[!UICONTROL Description]**. Ces champs sont disponibles pour toutes les destinations.
+
+* **[!UICONTROL Nom du compte]** : saisissez un nom qui vous aidera à identifier facilement ce compte de destination à l’avenir. Cela s’avère particulièrement utile si vous disposez de plusieurs connexions à la même destination.
+* **[!UICONTROL Description]** (facultatif) : ajoutez des détails supplémentaires qui vous aideront, vous ou votre équipe, à faire la distinction entre les comptes, tels que l’objectif de la connexion ou le contexte commercial approprié.
+
+Fournir des informations claires et descriptives dans ces champs facilite la gestion et la sélection du compte de destination approprié lors de l’activation des audiences.
+
+Vous trouverez ci-dessous un exemple d’entrée requise pour l’authentification à une destination [!DNL Amazon S3]. Des instructions détaillées sur l’entrée requise sont fournies dans la page de documentation de chaque destination (consultez, par exemple, la section d’authentification pour [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) et [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
 
 Paramètres d’authentification obligatoires et facultatifs pour **[!DNL Amazon S3]**
 
-![Image montrant les paramètres d’entrée obligatoires et facultatifs lors de l’authentification vers une destination Amazon S3.](../assets/ui/connect-destinations/authenticate-amazon-s3-example.png)
+![Image montrant les paramètres d’entrée obligatoires et facultatifs lors de l’authentification vers une destination Amazon S3.](../assets/ui/connect-destinations/s3-new-acc.png)
 
 ## Définir les paramètres de connexion {#set-up-connection-parameters}
 
