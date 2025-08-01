@@ -312,7 +312,7 @@ Vous trouverez également des informations détaillées sur l’utilisation de P
 
 **Utiliser une collection Postman pour générer des jetons d’accès**
 
-Téléchargez la collection Identity Management Service Postman [](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims) et regardez la vidéo ci-dessous pour savoir comment générer des jetons d’accès.
+Téléchargez la collection Identity Management Service Postman [&#128279;](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims) et regardez la vidéo ci-dessous pour savoir comment générer des jetons d’accès.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?learn=on)
 
