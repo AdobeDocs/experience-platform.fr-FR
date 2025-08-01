@@ -2,9 +2,9 @@
 description: Découvrez comment configurer les schémas du partenaire pour les destinations créées avec Destination SDK.
 title: Configuration des schémas de partenaire
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 30a237c7acf814722d384792366f95289dc3f34a
+source-git-commit: 3c772e99e7f0417672e60d56ace962abda2b7d76
 workflow-type: tm+mt
-source-wordcount: '1896'
+source-wordcount: '1910'
 ht-degree: 79%
 
 ---
@@ -106,7 +106,7 @@ Pour créer un schéma statique avec des attributs de profil, définissez les at
 | `segmentRequired` | Booléen | Obligatoire | Ce paramètre est demandé par Destination SDK et doit toujours être défini sur `true`. |
 | `identityRequired` | Booléen | Obligatoire | Définissez-le sur `true` si les utilisateurs doivent être en mesure de mapper les [types d’identité](identity-namespace-configuration.md) d’Experience Platform aux attributs que vous avez définis dans le tableau `profileFields`. |
 | `segmentNamespaceAllowList` | Tableau | Facultatif | Permet aux utilisateurs de mapper uniquement des audiences des espaces de noms d’audience définis dans le tableau à la destination. <br><br> L&#39;utilisation de ce paramètre est déconseillée dans la plupart des cas. Utilisez plutôt `"segmentNamespaceDenyList":[]` pour autoriser l’exportation de tous les types d’audiences vers votre destination. <br><br> Si les `segmentNamespaceAllowList` et les `segmentNamespaceDenyList` sont absents de votre configuration, les utilisateurs ne pourront exporter que les audiences provenant du [service de segmentation](../../../../segmentation/home.md). <br><br>`segmentNamespaceAllowList` et `segmentNamespaceDenyList` s’excluent mutuellement. |
-| `segmentNamespaceDenyList` | Tableau | Facultatif | Limite les utilisateurs du mappage des audiences des espaces de noms d’audience définis dans le tableau vers la destination. <br><br>Adobe recommande d&#39;autoriser l&#39;exportation de toutes les audiences, quelle que soit leur origine, en définissant `"segmentNamespaceDenyList":[]`. <br><br>Si les `segmentNamespaceAllowed` et les `segmentNamespaceDenyList` sont absents de votre configuration, les utilisateurs ne pourront exporter que les audiences provenant du [service de segmentation](../../../../segmentation/home.md). <br><br>`segmentNamespaceAllowList` et `segmentNamespaceDenyList` s’excluent mutuellement. |
+| `segmentNamespaceDenyList` | Tableau | Facultatif | Limite les utilisateurs du mappage des audiences des espaces de noms d’audience définis dans le tableau vers la destination. <br><br>Adobe recommande d&#39;autoriser l&#39;exportation de toutes les audiences, quelle que soit leur origine, en définissant `"segmentNamespaceDenyList":[]`. <br><br>**Important :** si vous ne spécifiez pas `segmentNamespaceDenyList` dans votre `schemaConfig` et que vous n’utilisez pas `segmentNamespaceAllowList`, le système définit automatiquement `segmentNamespaceDenyList` sur `[]`. Cela permet d’éviter la perte d’audiences personnalisées à l’avenir. Pour des raisons de sécurité, Adobe recommande de définir explicitement `"segmentNamespaceDenyList":[]` dans votre configuration. <br><br>`segmentNamespaceAllowList` et `segmentNamespaceDenyList` s’excluent mutuellement. |
 
 {style="table-layout:auto"}
 
@@ -203,7 +203,7 @@ L’exemple ci-dessous montre les mappages source et de destination obligatoires
 
 {style="table-layout:auto"}
 
-**Par conséquent, les sections Champ** Source et **[!UICONTROL Champ cible]** de l’interface utilisateur d’Experience Platform sont grisées.
+**[!UICONTROL Par conséquent, les sections Champ]** Source et **[!UICONTROL Champ cible]** de l’interface utilisateur d’Experience Platform sont grisées.
 
 ![Image des mappages obligatoires dans le flux d’activation de l’interface utilisateur.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
