@@ -1,33 +1,37 @@
 ---
 solution: Experience Platform
-title: Point de terminaison de l’API de définitions de segment
-description: Le point de terminaison des définitions de segment de l’API Adobe Experience Platform Segmentation Service vous permet de gérer par programmation les définitions de segment pour votre organisation.
+title: Point d’entrée de l’API des définitions de segment
+description: Le point d’entrée des définitions de segment de l’API Segmentation Service de Adobe Experience Platform vous permet de gérer par programmation les définitions de segment pour votre organisation.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: b3c7b97e257f76337bd02d1db9390ab314f7d1cd
+source-git-commit: 424702d7d16eddabefe19d023c3829bd650c88ce
 workflow-type: tm+mt
-source-wordcount: '1519'
-ht-degree: 25%
+source-wordcount: '1558'
+ht-degree: 24%
 
 ---
 
 # Point d’entrée des définitions de segment
 
-Adobe Experience Platform vous permet de créer des définitions de segment qui définissent un groupe d’attributs ou de comportements spécifiques à partir d’un groupe de profils. Une définition de segment est un objet qui encapsule une requête écrite dans [!DNL Profile Query Language] (PQL). Les définitions de segment sont appliquées aux profils pour créer des audiences. Cet objet (définition de segment) est également appelé prédicat PQL. Les prédicats PQL définissent les règles de la définition de segment en fonction des conditions liées à tout enregistrement ou à toute donnée de série temporelle que vous fournissez à [!DNL Real-Time Customer Profile]. Pour plus d’informations sur l’écriture de requêtes PQL, reportez-vous au [guide de PQL](../pql/overview.md).
+>[!WARNING]
+>
+>La création d’audiences à l’aide d’entités B2B avec l’API Segmentation Service est obsolète. Vous ne pouvez plus créer d’audiences à l’aide des entités B2B suivantes : compte, relation compte-personne, campagne, membre de campagne, liste marketing, membre de liste marketing, opportunité et relation opportunité-personne.
 
-Ce guide fournit des informations pour vous aider à mieux comprendre les définitions de segment et inclut des exemples d’appels API pour effectuer des actions de base à l’aide de l’API.
+Adobe Experience Platform vous permet de créer des définitions de segment qui définissent un groupe d’attributs ou de comportements spécifiques à partir d’un groupe de profils. Une définition de segment est un objet qui encapsule une requête écrite en [!DNL Profile Query Language] (PQL). Les définitions de segment sont appliquées aux profils pour créer des audiences. Cet objet (définition de segment) est également appelé prédicat PQL. Les prédicats de PQL définissent les règles de la définition de segment en fonction des conditions liées aux données d’enregistrement ou de série temporelle que vous fournissez à [!DNL Real-Time Customer Profile]. Pour plus d’informations sur l’écriture de requêtes PQL, reportez-vous au [guide de PQL](../pql/overview.md).
+
+Ce guide fournit des informations pour vous aider à mieux comprendre les définitions de segment et comprend des exemples d’appels API pour exécuter des actions de base à l’aide de l’API .
 
 ## Commencer
 
-Les points de terminaison utilisés dans ce guide font partie de l’API [!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, y compris les en-têtes requis et comment lire des exemples d’appels API.
+Les points d’entrée utilisés dans ce guide font partie de l’API [!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, y compris les en-têtes requis et la manière de lire des exemples d’appels API.
 
 ## Obtention d’une liste de définitions de segment {#list}
 
-Vous pouvez récupérer une liste de toutes les définitions de segment pour votre organisation en envoyant une requête de GET au point de terminaison `/segment/definitions`.
+Vous pouvez récupérer une liste de toutes les définitions de segment pour votre organisation en envoyant une requête GET au point d’entrée `/segment/definitions`.
 
 **Format d’API**
 
-Le point d’entrée `/segment/definitions` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est vivement recommandée pour réduire les frais généraux élevés. Un appel à ce point de terminaison sans paramètre permet de récupérer toutes les définitions de segment disponibles pour votre organisation. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
+Le point d’entrée `/segment/definitions` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est vivement recommandée pour réduire les frais généraux élevés. Si vous effectuez un appel à ce point d’entrée sans paramètre, toutes les définitions de segment disponibles pour votre organisation sont récupérées. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
 
 ```http
 GET /segment/definitions
@@ -40,17 +44,17 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 
 | Paramètre | Description | Exemple |
 | --------- | ----------- | ------- |
-| `start` | Indique le décalage de début pour les définitions de segment renvoyées. | `start=4` |
+| `start` | Indique le décalage de départ pour les définitions de segment renvoyées. | `start=4` |
 | `limit` | Indique le nombre de définitions de segment renvoyées par page. | `limit=20` |
 | `page` | Indique à partir de quelle page commencent les résultats des définitions de segment. | `page=5` |
-| `sort` | Indique le champ d’après lequel trier les résultats. Est écrit au format suivant : `[attributeName]:[desc/asc]`. | `sort=updateTime:desc` |
+| `sort` | Indique le champ par lequel trier les résultats. est écrit au format suivant : `[attributeName]:[desc/asc]`. | `sort=updateTime:desc` |
 | `evaluationInfo.continuous.enabled` | Indique si la définition de segment est activée dans le flux. | `evaluationInfo.continuous.enabled=true` |
 
 +++
 
 **Requête**
 
-La requête suivante récupère les deux dernières définitions de segment publiées dans votre organisation.
+La requête suivante récupère les deux dernières définitions de segment publiées au sein de votre organisation.
 
 +++ Exemple de requête pour récupérer une liste de définitions de segment.
 
@@ -66,7 +70,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec une liste de définitions de segment pour l’organisation spécifiée sous JSON.
+Une réponse réussie renvoie un état HTTP 200 avec une liste de définitions de segment pour l’organisation spécifiée au format JSON.
 
 +++ Exemple de réponse lors de la récupération d’une liste de définitions de segment.
 
@@ -166,7 +170,7 @@ Vous pouvez créer une définition de segment en envoyant une requête POST au p
 
 >[!IMPORTANT]
 >
->Les définitions de segment créées via l’API **ne peuvent pas** être modifiées à l’aide du créateur de segments.
+>Les définitions de segment créées à l’aide de l’API **ne peuvent pas** peuvent être modifiées dans le créateur de segments.
 
 **Format d’API**
 
@@ -180,7 +184,7 @@ Lors de la création d’une définition de segment, vous pouvez la créer au fo
 
 >[!BEGINTABS]
 
->[!TAB  Utilisation de pql/text]
+>[!TAB Utilisation de pql/text]
 
 +++ Exemple de requête pour créer une définition de segment.
 
@@ -218,18 +222,18 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 | Propriété | Description |
 | -------- | ----------- |
-| `name` | Un nom unique qui fait référence à la définition de segment. |
-| `description` | (Facultatif) Description de la définition de segment que vous créez. |
-| `expression` | Entité contenant des champs d’informations sur la définition de segment. |
+| `name` | Nom unique par lequel faire référence à la définition de segment. |
+| `description` | (Facultatif) Description de la définition de segment que vous êtes en train de créer. |
+| `expression` | Une entité qui contient des informations de champs sur la définition de segment. |
 | `expression.type` | Indique le type d’expression. Actuellement, seul « PQL » est pris en charge. |
-| `expression.format` | Indique la structure de l’expression en valeur. Les valeurs prises en charge sont `pql/text` et `pql/json`. |
+| `expression.format` | Indique la structure de l’expression en valeur. Les valeurs prises en charge comprennent `pql/text` et `pql/json`. |
 | `expression.value` | Une expression conforme au type indiqué dans `expression.format`. |
-| `evaluationInfo` | (Facultatif) Le type de définition de segment que vous créez. Si vous souhaitez créer un segment par lot, définissez `evaluationInfo.batch.enabled` sur true. Si vous souhaitez créer un segment en continu, définissez `evaluationInfo.continuous.enabled` sur true. Si vous souhaitez créer un segment Edge, définissez `evaluationInfo.synchronous.enabled` sur true. Si ce paramètre n’est pas renseigné, la définition de segment est créée sous la forme d’un segment **batch**. |
+| `evaluationInfo` | (Facultatif) Type de définition de segment que vous êtes en train de créer. Si vous souhaitez créer un segment par lot, définissez `evaluationInfo.batch.enabled` sur true. Si vous souhaitez créer un segment en flux continu, définissez `evaluationInfo.continuous.enabled` sur « true ». Si vous souhaitez créer un segment Edge, définissez `evaluationInfo.synchronous.enabled` sur true. Si rien n’est indiqué, la définition de segment est créée sous la forme d’un segment **par lot**. |
 | `schema` | Schéma associé aux entités du segment. Se compose d’un champ `id` ou `name`. |
 
 +++
 
->[!TAB  Utilisation de pql/json]
+>[!TAB Utilisation de pql/json]
 
 +++ Exemple de requête pour créer une définition de segment.
 
@@ -269,13 +273,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 | Propriété | Description |
 | -------- | ----------- |
-| `name` | Un nom unique qui fait référence à la définition de segment. |
-| `description` | (Facultatif) Description de la définition de segment que vous créez. |
-| `evaluationInfo` | (Facultatif) Le type de définition de segment que vous créez. Si vous souhaitez créer un segment par lot, définissez `evaluationInfo.batch.enabled` sur true. Si vous souhaitez créer un segment en continu, définissez `evaluationInfo.continuous.enabled` sur true. Si vous souhaitez créer un segment Edge, définissez `evaluationInfo.synchronous.enabled` sur true. Si ce paramètre n’est pas renseigné, la définition de segment est créée sous la forme d’un segment **batch**. |
+| `name` | Nom unique par lequel faire référence à la définition de segment. |
+| `description` | (Facultatif) Description de la définition de segment que vous êtes en train de créer. |
+| `evaluationInfo` | (Facultatif) Type de définition de segment que vous êtes en train de créer. Si vous souhaitez créer un segment par lot, définissez `evaluationInfo.batch.enabled` sur true. Si vous souhaitez créer un segment en flux continu, définissez `evaluationInfo.continuous.enabled` sur « true ». Si vous souhaitez créer un segment Edge, définissez `evaluationInfo.synchronous.enabled` sur true. Si rien n’est indiqué, la définition de segment est créée sous la forme d’un segment **par lot**. |
 | `schema` | Schéma associé aux entités du segment. Se compose d’un champ `id` ou `name`. |
-| `expression` | Entité contenant des champs d’informations sur la définition de segment. |
+| `expression` | Une entité qui contient des informations de champs sur la définition de segment. |
 | `expression.type` | Indique le type d’expression. Actuellement, seul « PQL » est pris en charge. |
-| `expression.format` | Indique la structure de l’expression en valeur. |
+| `expression.format` | Indique la structure de l’expression dans la valeur. |
 | `expression.value` | Une expression conforme au type indiqué dans `expression.format`. |
 
 +++
@@ -332,13 +336,13 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la défini
 | Propriété | Description |
 | -------- | ----------- |
 | `id` | Identifiant généré par le système de votre définition de segment nouvellement créée. |
-| `evaluationInfo` | Objet qui indique le type d’évaluation que la définition de segment va subir. Il peut s’agir d’une segmentation par lots, par flux (également appelée continue) ou par périphérie (également appelée synchrone). |
+| `evaluationInfo` | Objet indiquant le type d’évaluation auquel la définition de segment sera soumise. Il peut s’agir d’une segmentation par lots, en flux continu (également appelée continue) ou Edge (également appelée synchrone). |
 
 +++
 
 ## Récupération d’une définition de segment spécifique {#get}
 
-Vous pouvez récupérer des informations détaillées sur une définition de segment spécifique en envoyant une requête GET au point de terminaison `/segment/definitions` et en fournissant l’identifiant de la définition de segment que vous souhaitez récupérer dans le chemin d’accès de la requête.
+Vous pouvez récupérer des informations détaillées sur une définition de segment spécifique en adressant une requête GET au point d’entrée `/segment/definitions` et en fournissant l’identifiant de la définition de segment que vous souhaitez récupérer dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -348,7 +352,7 @@ GET /segment/definitions/{SEGMENT_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | La valeur `id` de la définition de segment que vous souhaitez récupérer. |
+| `{SEGMENT_ID}` | Valeur `id` de la définition de segment que vous souhaitez récupérer. |
 
 **Requête**
 
@@ -414,20 +418,20 @@ Une réponse réussie renvoie un état HTTP 200 avec les informations détaill�
 | Propriété | Description |
 | -------- | ----------- |
 | `id` | Identifiant en lecture seule généré par le système de la définition de segment. |
-| `name` | Un nom unique qui fait référence à la définition de segment. |
+| `name` | Nom unique par lequel faire référence à la définition de segment. |
 | `schema` | Schéma associé aux entités du segment. Se compose d’un champ `id` ou `name`. |
-| `expression` | Entité contenant des champs d’informations sur la définition de segment. |
+| `expression` | Une entité qui contient des informations de champs sur la définition de segment. |
 | `expression.type` | Indique le type d’expression. Actuellement, seul « PQL » est pris en charge. |
 | `expression.format` | Indique la structure de l’expression en valeur. Actuellement, le format suivant est pris en charge : <ul><li>`pql/text` : une représentation textuelle d’une définition de segment, selon la grammaire PQL publiée.  Par exemple : `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Une expression conforme au type indiqué dans `expression.format`. |
 | `description` | Une description lisible par l’utilisateur de la définition. |
-| `evaluationInfo` | Objet qui indique le type d’évaluation, de lot, de diffusion en continu (également appelé continue) ou de périphérie (également appelé synchrone), auquel la définition de segment sera appliquée. |
+| `evaluationInfo` | Objet indiquant le type d’évaluation, de lot, de diffusion en continu (également appelée continue) ou d’edge (également appelée synchrone) auquel la définition de segment sera soumise. |
 
 +++
 
-## Récupération en masse de définitions de segment {#bulk-get}
+## Récupérer en bloc des définitions de segment {#bulk-get}
 
-Vous pouvez récupérer des informations détaillées sur plusieurs définitions de segment spécifiées en envoyant une requête de POST au point de terminaison `/segment/definitions/bulk-get` et en fournissant les valeurs `id` des définitions de segment dans le corps de la requête.
+Vous pouvez récupérer des informations détaillées sur plusieurs définitions de segment spécifiées en adressant une requête POST au point d’entrée `/segment/definitions/bulk-get` et en fournissant les valeurs `id` des définitions de segment dans le corps de la requête.
 
 **Format d’API**
 
@@ -437,7 +441,7 @@ POST /segment/definitions/bulk-get
 
 **Requête**
 
-+++ Exemple de requête lors de l’utilisation du point de terminaison get en masse.
++++ Exemple de requête lors de l’utilisation du point d’entrée d’obtention en bloc.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-get \
@@ -460,15 +464,15 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
 
 | Propriété | Description |
 | -------- | ----------- |
-| `ids` | Tableau contenant des objets indiquant les identifiants des définitions de segment que vous souhaitez récupérer. |
+| `ids` | Un tableau contenant des objets qui indiquent les identifiants des définitions de segment que vous souhaitez récupérer. |
 
 +++
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 207 avec les définitions de segment demandées.
+Une réponse réussie renvoie le statut HTTP 207 avec les définitions de segment demandées.
 
-+++ Exemple de réponse lors de l’utilisation du point de terminaison get en masse.
++++ Exemple de réponse lors de l’utilisation du point d’entrée d’obtention en bloc.
 
 ```json
 {
@@ -557,24 +561,24 @@ Une réponse réussie renvoie un état HTTP 207 avec les définitions de segment
 | Propriété | Description |
 | -------- | ----------- |
 | `id` | Identifiant en lecture seule généré par le système de la définition de segment. |
-| `name` | Un nom unique qui fait référence à la définition de segment. |
+| `name` | Nom unique par lequel faire référence à la définition de segment. |
 | `schema` | Schéma associé aux entités du segment. Se compose d’un champ `id` ou `name`. |
-| `expression` | Entité contenant des champs d’informations sur la définition de segment. |
+| `expression` | Une entité qui contient des informations de champs sur la définition de segment. |
 | `expression.type` | Indique le type d’expression. Actuellement, seul « PQL » est pris en charge. |
 | `expression.format` | Indique la structure de l’expression en valeur. Actuellement, le format suivant est pris en charge : <ul><li>`pql/text` : une représentation textuelle d’une définition de segment, selon la grammaire PQL publiée.  Par exemple : `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Une expression conforme au type indiqué dans `expression.format`. |
 | `description` | Une description lisible par l’utilisateur de la définition. |
-| `evaluationInfo` | Objet qui indique le type d’évaluation, de lot, de diffusion en continu (également appelé continue) ou de périphérie (également appelé synchrone), auquel la définition de segment sera appliquée. |
+| `evaluationInfo` | Objet indiquant le type d’évaluation, de lot, de diffusion en continu (également appelée continue) ou d’edge (également appelée synchrone) auquel la définition de segment sera soumise. |
 
 +++
 
 ## Suppression d’une définition de segment spécifique {#delete}
 
-Vous pouvez demander la suppression d’une définition de segment spécifique en envoyant une requête de DELETE au point de terminaison `/segment/definitions` et en fournissant l’identifiant de la définition de segment que vous souhaitez supprimer dans le chemin d’accès de la requête.
+Vous pouvez demander la suppression d’une définition de segment spécifique en adressant une requête DELETE au point d’entrée `/segment/definitions` et en fournissant l’identifiant de la définition de segment que vous souhaitez supprimer du chemin de requête.
 
 >[!NOTE]
 >
-> Une définition de segment utilisée dans une activation de destination **ne peut pas** être supprimée.
+> Une définition de segment utilisée dans une activation de destination **ne peut pas** peut être supprimée.
 
 **Format d’API**
 
@@ -584,7 +588,7 @@ DELETE /segment/definitions/{SEGMENT_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | La valeur `id` de la définition de segment à supprimer. |
+| `{SEGMENT_ID}` | Valeur `id` de la définition de segment à supprimer. |
 
 **Requête**
 
@@ -606,7 +610,7 @@ Une réponse réussie renvoie un état HTTP 200 sans message.
 
 ## Mise à jour d’une définition de segment spécifique
 
-Vous pouvez mettre à jour une définition de segment spécifique en envoyant une requête de PATCH au point de terminaison `/segment/definitions` et en fournissant l’identifiant de la définition de segment que vous souhaitez mettre à jour dans le chemin d’accès de la requête.
+Vous pouvez mettre à jour une définition de segment spécifique en adressant une requête PATCH au point d’entrée `/segment/definitions` et en fournissant l’identifiant de la définition de segment que vous souhaitez mettre à jour dans le chemin de requête.
 
 **Format d’API**
 
@@ -616,15 +620,15 @@ PATCH /segment/definitions/{SEGMENT_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | La valeur `id` de la définition de segment à mettre à jour. |
+| `{SEGMENT_ID}` | Valeur `id` de la définition de segment à mettre à jour. |
 
 **Requête**
 
-La requête suivante mettra à jour le pays de l&#39;adresse de travail des Etats-Unis vers le Canada.
+La requête suivante met à jour le pays de l&#39;adresse professionnelle des États-Unis vers le Canada.
 
 >[!NOTE]
 >
->Puisque cet appel d’API **remplace** le contenu de la définition de segment, veillez à ce que **tous** les champs que vous souhaitez conserver soient inclus dans le corps de la requête.
+>Puisque cet appel API **remplace** le contenu de la définition de segment, assurez-vous **tous** les champs que vous souhaitez conserver sont inclus dans le corps de la requête.
 
 +++ Exemple de requête pour mettre à jour une définition de segment.
 
@@ -707,9 +711,9 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la défini
 
 +++
 
-## Conversion de la définition de segment
+## Convertir la définition de segment
 
-Vous pouvez convertir une définition de segment entre `pql/text` et `pql/json` ou `pql/json` en `pql/text` en effectuant une requête de POST vers le point de terminaison `/segment/conversion`.
+Vous pouvez convertir une définition de segment entre `pql/text` et `pql/json` ou `pql/json` en `pql/text` en effectuant une requête POST vers le point d’entrée `/segment/conversion`.
 
 **Format d’API**
 
@@ -719,7 +723,7 @@ POST /segment/conversion
 
 **Requête**
 
-La requête suivante changera le format de la définition de segment de `pql/text` à `pql/json`.
+La requête suivante modifie le format de la définition de segment de `pql/text` en `pql/json`.
 
 +++ Exemple de requête pour convertir la définition de segment.
 
@@ -750,7 +754,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails de la définition de segment que vous venez de convertir.
+Une réponse réussie renvoie un état HTTP 200 avec les détails de votre définition de segment nouvellement convertie.
 
 +++ Exemple de réponse lors de la conversion de la définition de segment.
 
@@ -776,4 +780,4 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la définit
 
 ## Étapes suivantes
 
-Après avoir lu ce guide, vous comprenez mieux le fonctionnement des définitions de segment. Pour plus d’informations sur la création d’un segment, consultez le tutoriel [Création d’un segment](../tutorials/create-a-segment.md) .
+Après avoir lu ce guide, vous comprenez mieux comment fonctionnent les définitions de segment. Pour plus d’informations sur la création d’un segment, consultez le tutoriel [création d’un segment](../tutorials/create-a-segment.md).

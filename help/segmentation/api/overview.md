@@ -3,10 +3,10 @@ title: Guide de l’API Segmentation Service
 description: L’API Segmentation Service permet aux développeurs de gérer par programmation les opérations de segmentation dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 role: Developer
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: af79493c831c401c0bf14e391eb36a8175b4a2dd
 workflow-type: tm+mt
-source-wordcount: '557'
-ht-degree: 5%
+source-wordcount: '614'
+ht-degree: 4%
 
 ---
 
@@ -29,6 +29,12 @@ Pour plus d’informations sur l’utilisation de ce point d’entrée, consulte
 Les tâches d’exportation sont des processus asynchrones utilisés pour conserver les membres des segments d’audience dans les jeux de données. Vous pouvez utiliser le point d’entrée `/export/jobs` pour récupérer toutes les tâches d’exportation, créer une tâche d’exportation, récupérer les détails d’une tâche d’exportation spécifique ou annuler une tâche d’exportation spécifique.
 
 Pour plus d’informations sur l’utilisation de ce point d’entrée, consultez le [ guide des points d’entrée des tâches d’exportation](./export-jobs.md).
+
+## Audiences externes
+
+Vous pouvez importer des audiences externes dans Experience Platform, récupérer le statut de création d’une audience, mettre à jour une audience externe, démarrer une exécution d’ingestion d’audience, récupérer un statut d’ingestion d’audience externe, répertorier les exécutions d’ingestion d’audience et supprimer une audience externe à l’aide du point d’entrée `/core/ais/external-audiences`.
+
+Pour plus d’informations sur l’utilisation de ce point d’entrée, consultez le [guide des points d’entrée des audiences externes](./external-audiences.md).
 
 ## Aperçus et estimations
 

@@ -2,7 +2,7 @@
 title: Guide De Mise En Œuvre Des Règles De Liaison Des Graphiques D’Identités
 description: Découvrez les étapes recommandées à suivre lors de l’implémentation de vos données avec les configurations des règles de liaison de graphique d’identités.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: a9c9543783eb85dcaadef64b1c0deb84f850d40e
+source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
 source-wordcount: '1956'
 ht-degree: 6%
@@ -203,7 +203,11 @@ Une fois que vous avez une meilleure idée du comportement de votre graphique, a
 
 ![Page de navigation des identités avec le bouton des paramètres en surbrillance.](../images/implementation/settings.png "Page de navigation des identités avec le bouton des paramètres en surbrillance."){zoomable="yes"}
 
-Utilisez l’interface utilisateur des paramètres d’identité pour désigner vos espaces de noms uniques et configurer vos espaces de noms par ordre de priorité. Une fois l’application de vos paramètres terminée, vous devez attendre au moins six heures avant de pouvoir procéder à l’ingestion des données, car la prise en compte des nouveaux paramètres dans Identity Service prend au moins six heures.
+Utilisez l’interface utilisateur des paramètres d’identité pour désigner vos espaces de noms uniques et configurer vos espaces de noms par ordre de priorité.
+
+>[!IMPORTANT]
+>
+>Une fois l’application de vos paramètres terminée, vous devez attendre au moins 24 heures avant de pouvoir procéder à l’ingestion des données, car la prise en compte des nouveaux paramètres dans Identity Service prend au moins 24 heures.
 
 Pour plus d’informations, consultez le [guide de l’interface utilisateur des paramètres d’identité](./identity-settings-ui.md).
 

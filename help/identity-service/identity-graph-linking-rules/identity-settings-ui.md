@@ -2,10 +2,10 @@
 title: Interface utilisateur des paramètres d’identité
 description: Découvrez comment utiliser l’interface utilisateur des paramètres d’identité.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 38d331bd9265f25a3aebdcbd20ae5fc30a93e960
+source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
 source-wordcount: '665'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -85,7 +85,7 @@ Lorsque vous avez terminé vos configurations, sélectionnez **[!UICONTROL Suiva
 >
 >* Vos données ne seront pas modifiées tant que vous n’aurez pas enregistré vos paramètres d’identité.
 
-![Fenêtre de confirmation qui affiche un avertissement relatif à un délai de six heures avant le traitement des configurations.](../images/rules/complete.png)
+![Fenêtre de confirmation qui affiche un avertissement relatif à un délai de 24 heures avant le traitement des configurations.](../images/rules/complete.png)
 
 ## Étapes suivantes
 

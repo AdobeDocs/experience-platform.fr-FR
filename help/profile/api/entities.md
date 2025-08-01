@@ -5,10 +5,10 @@ type: Documentation
 description: Adobe Experience Platform vous permet d’accéder aux données du profil client en temps réel à l’aide des API RESTful ou de l’interface utilisateur. Ce guide explique comment accéder aux entités, plus communément appelées « profils », à l’aide de l’API Profile.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
-source-wordcount: '1706'
-ht-degree: 37%
+source-wordcount: '1933'
+ht-degree: 33%
 
 ---
 
@@ -23,6 +23,25 @@ Adobe Experience Platform vous permet d’accéder aux données [!DNL Real-Time 
 ## Prise en main
 
 Le point d’entrée dʼAPI utilisé dans ce guide fait partie de [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
+
+>[!BEGINSHADEBOX]
+
+## Résolution de l’entité
+
+Dans le cadre de la mise à niveau de l’architecture, Adobe introduit la résolution d’entités pour les comptes et les opportunités, à l’aide d’une correspondance d’identifiants déterministe basée sur les dernières données. Le traitement de résolution d’entité s’exécute quotidiennement pendant la segmentation par lots, avant d’évaluer les audiences à entités multiples avec des attributs B2B.
+
+Cette amélioration permet à Experience Platform d’identifier et d’unifier plusieurs enregistrements représentant la même entité, ce qui améliore la cohérence des données et permet une segmentation d’audience plus précise.
+
+Auparavant, Comptes et opportunités s’appuyait sur une résolution basée sur un graphique d’identités qui connectait les identités, y compris toutes les ingestions historiques. Dans la nouvelle approche de résolution d’entité, les identités sont liées en fonction des données les plus récentes uniquement
+
+### Comment fonctionne la résolution d’entité ?
+
+- **Auparavant** : si un numéro DUNS (Data Universal Numbering System) était utilisé comme identité supplémentaire et que le numéro DUNS du compte était mis à jour dans un système source tel que CRM, l’identifiant de compte est lié à la fois aux anciens et aux nouveaux numéros DUNS.
+- **Après** : si le numéro DUNS a été utilisé comme identité supplémentaire et que le numéro DUNS du compte a été mis à jour dans un système source tel qu’un CRM, l’identifiant de compte n’est lié qu’au nouveau numéro DUNS, reflétant ainsi plus précisément l’état actuel du compte.
+
+Suite à cette mise à jour, l’API [!DNL Profile Access] reflète désormais la dernière vue de profil de fusion une fois qu’un cycle de tâche de résolution d’entité est terminé. En outre, les données cohérentes fournissent des cas d’utilisation tels que la segmentation, l’activation et l’analyse avec une précision et une cohérence accrues des données.
+
+>[!ENDSHADEBOX]
 
 ## Récupération d’une entité {#retrieve-entity}
 
