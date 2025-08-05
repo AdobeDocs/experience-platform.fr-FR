@@ -77,7 +77,7 @@ La moitié inférieure de la page affiche des informations sur le nombre d’enr
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_failed"
->title="Échec des enregistrements"
+>title="Enregistrements ayant échoué"
 >abstract="La mesure Échec des enregistrements indique le nombre total d&#39;enregistrements qui n&#39;ont pas été ingérés dans le lac de données en raison d&#39;erreurs dans les données."
 >text="Learn more in documentation"
 
@@ -95,7 +95,7 @@ Chaque exécution de flux de données affiche les détails suivants :
 * **[!UICONTROL Enregistrements ingérés]** : nombre total d’enregistrements ingérés dans [!DNL Data Lake].
 * **[!UICONTROL Enregistrements avec avertissements]** : nombre total d’enregistrements avec avertissements qui ont été ingérés. Toutes les erreurs de transformation du mappeur sont signalées comme avertissements et les lignes partiellement ingérées sont étiquetées comme `success` avec un avertissement. **Remarque** : la prise en charge de l’ingestion d’enregistrements avec des avertissements n’est disponible que pour les sources en flux continu.
 * **[!UICONTROL Enregistrements en échec]** : nombre d’enregistrements qui n’ont pas été ingérés dans [!DNL Data Lake] en raison d’erreurs dans les données.
-* **[!UICONTROL Taux d’ingestion]** : taux de succès des enregistrements ingérés dans [!DNL Data Lake]. Cette mesure s’applique lorsque l’option [!UICONTROL &#x200B; Ingestion partielle &#x200B;] est activée.
+* **[!UICONTROL Taux d’ingestion]** : taux de succès des enregistrements ingérés dans [!DNL Data Lake]. Cette mesure s’applique lorsque l’option [!UICONTROL  Ingestion partielle ] est activée.
 * **[!UICONTROL Statut]** : représente le statut du flux de données : [!UICONTROL Terminé] ou [!UICONTROL Traitement]. [!UICONTROL Terminé] signifie que tous les enregistrements pour l’exécution du flux de données correspondant ont été traités dans la période d’une heure. [!UICONTROL Traitement] signifie que l’exécution du flux de données n’est pas encore terminée.
 
 La page [!UICONTROL Présentation de l’exécution du flux de données] contient des informations supplémentaires sur votre flux de données, telles que l’identifiant d’exécution du flux de données correspondant, le jeu de données cible et l’identifiant d’organisation.

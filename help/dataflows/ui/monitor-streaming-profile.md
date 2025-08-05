@@ -1,15 +1,15 @@
 ---
-title: Surveiller l’ingestion des profils en flux continu
+title: Surveiller l’ingestion des profils de streaming
 description: Découvrez comment utiliser le tableau de bord de surveillance pour surveiller l’ingestion des profils de diffusion en continu
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
 source-git-commit: 75e0231aa9a040226584aeb05f10756b6db8bb62
 workflow-type: tm+mt
 source-wordcount: '1820'
-ht-degree: 2%
+ht-degree: 21%
 
 ---
 
-# Surveiller l’ingestion des profils en flux continu
+# Surveiller l’ingestion des profils de streaming
 
 Vous pouvez utiliser le tableau de bord de surveillance dans l’interface utilisateur de Adobe Experience Platform pour effectuer la surveillance en temps réel de l’ingestion de profils par flux au sein de votre organisation. Utilisez cette fonctionnalité pour accéder à une plus grande transparence des mesures de débit, de latence et de qualité des données liées à vos données de diffusion en continu. De plus, utilisez cette fonctionnalité pour obtenir des alertes proactives et récupérer des informations exploitables afin d’identifier les violations de capacité potentielles et les problèmes d’ingestion de données.
 
@@ -26,19 +26,19 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 >[!NOTE]
 >
->La capacité de débit en flux continu prend en charge jusqu’à 1 500 événements entrants par seconde. Vous pouvez acheter une segmentation en flux continu supplémentaire pour prendre en charge jusqu’à 13 500 événements entrants supplémentaires par seconde&#x200B;. Pour plus d’informations, reportez-vous aux descriptions de produits des packages Real-Time CDP B2C Edition - Prime et Ultimate [&#128279;](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>La capacité de débit en flux continu prend en charge jusqu’à 1 500 événements entrants par seconde. Vous pouvez acheter une segmentation en flux continu supplémentaire pour prendre en charge jusqu’à 13 500 événements entrants supplémentaires par seconde&#x200B;. Pour plus d’informations, reportez-vous aux descriptions de produits des packages Real-Time CDP B2C Edition - Prime et Ultimate [](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
-## Surveillance des mesures pour l’ingestion de profils en flux continu {#streaming-profile-metrics}
+## Surveillance des mesures pour l’ingestion de profils de streaming {#streaming-profile-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile"
->title="Surveiller l’ingestion des profils en flux continu"
->abstract="Le tableau de bord de surveillance des profils de diffusion en continu affiche des informations sur le débit, les taux d’ingestion et la latence. Utilisez ce tableau de bord pour afficher, comprendre et analyser les mesures de traitement des données. de vos profils de streaming dans Experience Platform."
+>title="Surveiller l’ingestion des profils de streaming"
+>abstract="Le tableau de bord de surveillance des profils de streaming affiche des informations sur le débit, les taux d’ingestion et la latence. Utilisez ce tableau de bord pour afficher, comprendre et analyser les mesures de traitement des données. de vos profils de streaming dans Experience Platform."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile_request_throughput"
->title="Débit des demandes"
+>title="Débit de demande"
 >abstract="Cette mesure représente le nombre d’événements entrant dans le système d’ingestion par seconde."
 >text="Learn more in documentation"
 
@@ -50,14 +50,14 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile_p95_ingestion_latency"
->title="Latence d’ingestion P95"
->abstract="Cette mesure mesure mesure la latence du 95e centile entre le moment où un événement arrive dans Experience Platform et celui où il est ingéré avec succès dans la banque de profils."
+>title="Latence d’ingestion P95"
+>abstract="Cette mesure mesure la latence du 95e centile entre le moment où un événement arrive dans Experience Platform et celui où il est ingéré avec succès dans la banque de profils."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile_max_throughput"
 >title="Débit maximal"
->abstract="Cette mesure représente le nombre maximal de requêtes entrantes par seconde entrant dans l’ingestion de profil en flux continu."
+>abstract="Cette mesure représente le nombre maximal de demandes entrantes par seconde entrant dans l’ingestion de profil de streaming."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -68,8 +68,8 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile_records_failed"
->title="Échec des enregistrements"
->abstract="Cette mesure représente le nombre total d’enregistrements qui ont échoué lors de l’ingestion dans la banque de profils, dans un intervalle de temps configuré, en raison d’erreurs."
+>title="Enregistrements ayant échoué"
+>abstract="Cette mesure représente le nombre total d’enregistrements qui ont échoué lors de l’ingestion dans la banque de profils au cours d’une période configurée en raison d’erreurs."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -88,12 +88,12 @@ Utilisez le tableau des mesures pour obtenir des informations spécifiques à vo
 
 | Mesure | Description | Dimensions | Fréquence de mesure |
 | --- | --- | --- | --- |
-| Débit des demandes | Cette mesure représente le nombre d’événements entrant dans le système d’ingestion par seconde. | Sandbox/flux de données | Surveillance en temps réel avec une actualisation des données toutes les 60 secondes. |
+| Débit de demande | Cette mesure représente le nombre d’événements entrant dans le système d’ingestion par seconde. | Sandbox/flux de données | Surveillance en temps réel avec une actualisation des données toutes les 60 secondes. |
 | Débit de traitement | Cette mesure représente le nombre d’événements ingérés avec succès par le système chaque seconde. | Sandbox/flux de données | Surveillance en temps réel avec une actualisation des données toutes les 60 secondes. |
-| Latence d’ingestion P95 | Cette mesure mesure mesure la latence du 95e centile entre le moment où un événement arrive dans Experience Platform et celui où il est ingéré avec succès dans la banque de profils. | Sandbox/flux de données | Surveillance en temps réel avec une actualisation des données toutes les 60 secondes. |
+| Latence d’ingestion P95 | Cette mesure mesure la latence du 95e centile entre le moment où un événement arrive dans Experience Platform et celui où il est ingéré avec succès dans la banque de profils. | Sandbox/flux de données | Surveillance en temps réel avec une actualisation des données toutes les 60 secondes. |
 | Débit maximal | Cette mesure représente le nombre maximal de requêtes entrantes par seconde entrant dans l’ingestion de profil en flux continu | <ul><li>Sandbox/flux de données</li><li>Exécution du flux de données</li></ul> |
 | Enregistrements ingérés | Cette mesure représente le nombre total d’enregistrements ingérés dans la banque de profils au cours d’une période configurée. | <ul><li>Sandbox/flux de données</li><li>Exécution du flux de données</li></ul> | <ul><li>Sandbox/flux de données : surveillance en temps réel avec une actualisation des données toutes les 60 secondes.</li><li>Exécution du flux de données : regroupée en 15 minutes.</li></ul> |
-| Échec des enregistrements | Cette mesure représente le nombre total d’enregistrements qui ont échoué lors de l’ingestion dans la banque de profils, dans un intervalle de temps configuré, en raison d’erreurs. | <ul><li>Sandbox/flux de données</li><li>Exécution du flux de données</li></ul> | <ul><li>Sandbox/flux de données : surveillance en temps réel avec une actualisation des données toutes les 60 secondes.</li><li>Exécution du flux de données : regroupée en 15 minutes.</li></ul> |
+| Enregistrements ayant échoué | Cette mesure représente le nombre total d’enregistrements qui ont échoué lors de l’ingestion dans la banque de profils au cours d’une période configurée en raison d’erreurs. | <ul><li>Sandbox/flux de données</li><li>Exécution du flux de données</li></ul> | <ul><li>Sandbox/flux de données : surveillance en temps réel avec une actualisation des données toutes les 60 secondes.</li><li>Exécution du flux de données : regroupée en 15 minutes.</li></ul> |
 | Enregistrements ignorés | Cette mesure représente le nombre total d’enregistrements supprimés pendant une période configurée, en raison de violations de la configuration ou de la capacité. | <ul><li>Sandbox/flux de données</li><li>Exécution du flux de données</li></ul> | <ul><li>Sandbox/flux de données : surveillance en temps réel avec une actualisation des données toutes les 60 secondes.</li><li>Exécution du flux de données : regroupée en 15 minutes.</li></ul> |
 | Détails des erreurs | Cette mesure représente le nombre d’événements ayant échoué en raison d’erreurs. | Exécution du flux de données | Regroupé dans une fenêtre horaire. |
 

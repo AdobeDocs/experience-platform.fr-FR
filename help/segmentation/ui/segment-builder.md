@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: d942093bffc680501384f7c8193f4cdddc1cef33
 workflow-type: tm+mt
 source-wordcount: '5188'
-ht-degree: 65%
+ht-degree: 66%
 
 ---
 
@@ -130,8 +130,8 @@ Une fois les suites de rapports mappées, vous pouvez utiliser ces nouveaux cham
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_externalaudiences"
 >title="Audiences externes"
->abstract="Les audiences importées via l’onglet Audiences sont désormais automatiquement surfacées via Audience Portal. Les audiences ingérées à partir d’Audience Manager, de Customer Journey Analytics, de la correspondance de segments et d’autres intégrations personnalisées sont immédiatement disponibles, sans configuration préalable dans le créateur de segments. Depuis le 1er septembre 2025, toutes les audiences sont récupérées exclusivement par le biais de la Recherche unifiée et le workflow précédent n’est plus pris en charge."
->additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/segmentation/ui/audience-portal#list" text="Audience Portal"
+>abstract="Les audiences importées via l’onglet Audiences sont désormais automatiquement disponibles via Audience Portal. Les audiences ingérées à partir d’Audience Manager, de Customer Journey Analytics, de la correspondance de segments et d’autres intégrations personnalisées sont immédiatement disponibles, sans configuration préalable dans le créateur de segments. À partir du 1er septembre 2025, toutes les audiences sont récupérées exclusivement par le biais de la recherche unifiée et le workflow précédent n’est plus pris en charge."
+>additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/segmentation/ui/audience-portal#list" text="Audience Portal"
 
 >[!NOTE]
 >
@@ -330,7 +330,7 @@ La liste des contraintes de temps disponibles pour cette opération diffère de 
 >[!NOTE]
 >
 >Lors de l’utilisation de la contrainte de temps « Après », le dernier événement peut avoir lieu plus longtemps que la durée répertoriée dans la contrainte de temps. >
->&#x200B;>Par exemple, si vous disposez d’un événement Page vue et d’un événement Passage en caisse et que vous appliquez la contrainte de temps « Après 1 heure » entre ces deux événements, une définition de segment avec un événement Passage en caisse 2 heures après l’événement Page vue est éligible.
+>>Par exemple, si vous disposez d’un événement Page vue et d’un événement Passage en caisse et que vous appliquez la contrainte de temps « Après 1 heure » entre ces deux événements, une définition de segment avec un événement Passage en caisse 2 heures après l’événement Page vue est éligible.
 >
 >En outre, ces deux contraintes de temps peuvent être utilisées en coordination l&#39;une avec l&#39;autre.
 >

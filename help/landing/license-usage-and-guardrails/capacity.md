@@ -5,7 +5,7 @@ exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
 source-git-commit: 326710e48ea9d6eb16f62b9f288311a1d255b287
 workflow-type: tm+mt
 source-wordcount: '577'
-ht-degree: 7%
+ht-degree: 12%
 
 ---
 
@@ -15,17 +15,17 @@ Dans Adobe Experience Platform, les capacités vous permettent de savoir si votr
 
 Pour plus d’informations sur les mécanismes de sécurisation dans Experience Platform, consultez la présentation des mécanismes de sécurisation de [Real-Time CDP](../../rtcdp/guardrails/overview.md).
 
-## Comportement en termes de capacité {#behavior}
+## Comportement de capacité {#behavior}
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingthroughput"
 >title="Débit de streaming"
->abstract="La valeur de débit de diffusion mesure le pic combiné d’événements entrants par seconde pour l’ingestion en flux continu dans le service Profile, sur vos sandbox de production et de développement."
+>abstract="La valeur de débit de streaming mesure le pic combiné d’événements entrants par seconde pour l’ingestion en flux continu dans le service Profil, sur vos sandbox de production et de développement."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
 >title="Nombre d’audiences en streaming"
->abstract="Nombre maximal d’audiences en streaming par sandbox. Ce nombre inclut le nombre d’audiences Edge présentes dans votre sandbox."
+>abstract="Nombre maximal d’audiences en streaming par sandbox. Ce nombre inclut le nombre d’audiences Edge que vous avez dans votre sandbox."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_edgeaudiences"

@@ -1,13 +1,13 @@
 ---
 title: Audiences du compte
 description: Découvrez comment créer et utiliser des audiences de compte pour cibler les profils de compte dans les destinations en aval.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
 source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
 source-wordcount: '1528'
-ht-degree: 21%
+ht-degree: 22%
 
 ---
 
@@ -23,7 +23,7 @@ Les audiences de compte peuvent être utilisées comme entrée pour les destinat
 
 >[!NOTE]
 >
->Dans le cadre de la mise à niveau de l’architecture B2B, les estimations de taille d’audience pour les audiences avec des entités B2B sont désormais calculées avec une précision exacte. Ces estimations sont disponibles lors de la prévisualisation et fournissent des informations plus précises et plus fiables pour les audiences qui impliquent des relations B2B complexes. <br>Pour plus d’informations, consultez la présentation des mises à niveau de l’architecture de Real-Time CDP B2B edition [&#128279;](../../rtcdp/b2b-architecture-upgrade.md).
+>Dans le cadre de la mise à niveau de l’architecture B2B, les estimations de taille d’audience pour les audiences avec des entités B2B sont désormais calculées avec une précision exacte. Ces estimations sont disponibles lors de la prévisualisation et fournissent des informations plus précises et plus fiables pour les audiences qui impliquent des relations B2B complexes. <br>Pour plus d’informations, consultez la présentation des mises à niveau de l’architecture de Real-Time CDP B2B edition [](../../rtcdp/b2b-architecture-upgrade.md).
 
 ## Terminologie {#terminology}
 
@@ -114,7 +114,7 @@ Après avoir créé l’audience de votre compte, vous pouvez activer l’audien
 
 Sélectionnez l’audience à activer, puis **[!UICONTROL Activer vers la destination]**.
 
-![Le bouton [!UICONTROL &#x200B; Activer vers la destination] est mis en surbrillance dans le menu des actions rapides pour l’audience sélectionnée.](../images/types/account/activate.png)
+![Le bouton [!UICONTROL  Activer vers la destination] est mis en surbrillance dans le menu des actions rapides pour l’audience sélectionnée.](../images/types/account/activate.png)
 
 La page [!UICONTROL Activer la destination] s’affiche. Pour plus d’informations sur le processus d’activation, y compris les destinations prises en charge et des détails sur les mappages de champs, consultez le tutoriel [activer les audiences de compte](/help/destinations/ui/activate-account-audiences.md).
 
@@ -131,7 +131,7 @@ La section suivante fournit des informations supplémentaires sur les audiences 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_eventLookbackWindow"
 >title="Période de recherche rétroactive"
->abstract="Utilisez l’intervalle de recherche en amont pour afficher l’historique complet des événements au niveau de la personne."
+>abstract="Utilisez la période de recherche rétroactive pour afficher l’historique complet des événements au niveau de la personne."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxDepth"
