@@ -2,9 +2,9 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 721024192b54fcbab11b483cc26fa84151bb61a7
+source-git-commit: b7bf7a2b7628f61231321205e2a6b9d675afce8b
 workflow-type: tm+mt
-source-wordcount: '4841'
+source-wordcount: '4828'
 ht-degree: 27%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 27%
 
 L’interface utilisateur et l’API RESTful du [!DNL Segmentation Service] d’Adobe Experience Platform vous permettent de créer des audiences par le biais de définitions de segment ou d’autres sources à partir de vos données [!DNL Real-Time Customer Profile]. Ces audiences sont configurées et conservées de manière centralisée sur Experience Platform et sont facilement accessibles depuis n’importe quelle solution Adobe. Vous trouverez ci-dessous les questions fréquentes sur les audiences et la segmentation.
 
-## Audience Portal
+## Audience Portal
 
 La section suivante répertorie les questions relatives à Audience Portal.
 
@@ -186,7 +186,7 @@ Les audiences créées en externe sont automatiquement définies sur publiées.
 
 ### Comment mettre une audience à l’état inactif ?
 
-Vous pouvez mettre une audience publiée en statut inactif en ouvrant le menu d’actions rapides dans Audience Portal et en sélectionnant « [!UICONTROL &#x200B; Désactiver &#x200B;].
+Vous pouvez mettre une audience publiée en statut inactif en ouvrant le menu d’actions rapides dans Audience Portal et en sélectionnant « [!UICONTROL  Désactiver ].
 
 ### Comment republier une audience ?
 
@@ -252,7 +252,7 @@ Non, le nombre de balises pouvant être ajoutées à une audience n’est pas li
 
 ### Y a-t-il une limite au nombre de balises que je peux créer ?
 
-Non, le nombre de balises que vous pouvez créer n’est pas limité. Cependant, vous pouvez créer un maximum de 100 catégories **&#x200B;**&#x200B;à appliquer aux balises. Pour plus d’informations sur la gestion des balises, consultez le [guide de gestion des balises](../administrative-tags/ui/managing-tags.md).
+Non, le nombre de balises que vous pouvez créer n’est pas limité. Cependant, vous pouvez créer un maximum de 100 catégories **** à appliquer aux balises. Pour plus d’informations sur la gestion des balises, consultez le [guide de gestion des balises](../administrative-tags/ui/managing-tags.md).
 
 ### Lorsque je recherche une audience par nom ou balise dans un dossier parent, puis-je également effectuer une recherche dans les dossiers enfants associés ?
 
@@ -290,7 +290,7 @@ Pour en savoir plus sur le créateur de segments, consultez le [guide du créate
 
 ### Puis-je envoyer des audiences de la composition d’audience à toutes les destinations et tous les canaux en aval ?
 
-À ce stade, non. Actuellement, vous pouvez utiliser les audiences de la composition de l’audience dans les campagnes Adobe Journey Optimizer et les destinations Real-Time CDP. Les parcours Adobe Journey Optimizer seront pris en charge dans une version ultérieure.
+Oui! Vous pouvez utiliser des audiences à partir de la composition de l’audience dans des campagnes Adobe Journey Optimizer, des destinations Real-Time CDP et des Parcours Adobe Journey Optimizer.
 
 ### Existe-t-il des barrières de sécurité qui limitent le nombre de compositions ?
 
