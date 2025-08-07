@@ -3,16 +3,33 @@ keywords: publicité ; trade desk ; advertising trade desk
 title: Connexion à The Trade Desk
 description: Trade Desk est une plateforme en libre-service permettant aux acheteurs de publicités d’exécuter des campagnes numériques de reciblage et de ciblage d’audience sur des sources d’affichage, de vidéo et d’inventaire mobile.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 92ba27aeb35685741151a618e64c78b4c8318865
+source-git-commit: 564ee7fbd45677c35057c56de049158f3282d7ad
 workflow-type: tm+mt
-source-wordcount: '910'
-ht-degree: 33%
+source-wordcount: '1017'
+ht-degree: 29%
 
 ---
 
 # Connexion [!DNL The Trade Desk]
 
 ## Présentation {#overview}
+
+
+>[!IMPORTANT]
+>
+> Suite à la [mise à niveau interne](../../../release-notes/2025/july-2025.md#destinations) vers le service de destinations à partir de juillet 2025, il se peut que vous constatiez une **diminution du nombre de profils activés** dans vos flux de données à [!DNL The Trade Desk].
+> > Cette baisse est due à l’introduction de l’exigence de mappage **ECID** pour toutes les activations sur cette plateforme de destination. Pour plus d’informations, consultez la section [mappage obligatoire](#mandatory-mappings) de cette page.
+>
+>**Changements :**
+>
+>* Le mappage ECID (Experience Cloud ID) est désormais **obligatoire** pour toutes les activations de profil.
+>* Les profils sans mappage ECID seront **supprimés** des flux de données d’activation existants.
+>
+>**Ce que vous devez faire**
+>
+>* Vérifiez les données de votre audience pour vous assurer que les profils possèdent des valeurs ECID valides.
+>* Surveillez vos mesures d’activation pour vérifier le nombre de profils attendu.
+
 
 Utilisez ce connecteur de destination pour envoyer des données de profil à [!DNL The Trade Desk]. Ce connecteur envoie des données au point d’entrée propriétaire [!DNL The Trade Desk]. L’intégration entre Adobe Experience Platform et [!DNL The Trade Desk] ne prend pas en charge l’exportation de données vers le point d’entrée tiers [!DNL The Trade Desk].
 
@@ -67,13 +84,13 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Si vous souhaitez créer votre première destination avec [!DNL The Trade Desk] sans jamais avoir activé la fonctionnalité de synchronisation des identifiants [ID](https://experienceleague.adobe.com/fr/docs/id-service/using/id-service-api/methods/idsync) dans le service Experience Cloud ID par le passé (avec Adobe Audience Manager ou d’autres applications), contactez Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants. Si vous avez configuré précédemment des intégrations [!DNL The Trade Desk] dans Audience Manager, les synchronisations d’identifiant que vous aviez configurées sont transférées vers Experience Platform.
+>Si vous souhaitez créer votre première destination avec [!DNL The Trade Desk] sans jamais avoir activé la fonctionnalité de synchronisation des identifiants [ID](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) dans le service Experience Cloud ID par le passé (avec Adobe Audience Manager ou d’autres applications), contactez Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants. Si vous avez configuré précédemment des intégrations [!DNL The Trade Desk] dans Audience Manager, les synchronisations d’identifiant que vous aviez configurées sont transférées vers Experience Platform.
 
 ## Se connecter à la destination {#connect}
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
@@ -103,8 +120,8 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
@@ -121,7 +138,7 @@ Toutes les identités cibles décrites dans la section [identités prises en cha
 * **ECID** (Experience Cloud ID)
 * **ID de Trade Desk**
 
-L’échec du mappage de toutes les identités requises empêchera l’activation réussie de l’audience vers [!DNL The Trade Desk]. Chaque identité remplit un rôle spécifique dans l’intégration et toutes sont nécessaires au bon fonctionnement de la destination.
+L’échec du mappage de toutes les identités requises vous empêche de terminer le workflow d’activation. Chaque identité remplit un rôle spécifique dans l’intégration et toutes sont nécessaires au bon fonctionnement de la destination.
 
 ![Capture d’écran affichant les mappages obligatoires](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
 
