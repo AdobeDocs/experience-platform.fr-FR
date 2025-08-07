@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation des connecteurs source
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
+source-git-commit: 79d614ddddde2ca1b982c66f4916d3255d6cffa4
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1643'
 ht-degree: 56%
 
 ---
@@ -176,7 +176,7 @@ Vous pouvez utiliser les sources suivantes pour ingérer des données de votre b
 | [[!DNL MariaDB]](connectors/databases/mariadb.md) | Lot | Azure |
 | [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) | Lot | Azure |
 | [[!DNL MySQL]](connectors/databases/mysql.md) | Lot | Azure, AWS |
-| [[!DNL Oracle]](connectors/databases/oracle.md) | Lot | Azure |
+| [[!DNL Oracle]](connectors/databases/oracle.md) | Lot | Azure, AWS |
 | [[!DNL PostgreSQL]](connectors/databases/postgres.md) | Lot | Azure, AWS |
 | [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) | Lot | Azure |
 
