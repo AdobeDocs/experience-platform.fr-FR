@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation des connecteurs source
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 79d614ddddde2ca1b982c66f4916d3255d6cffa4
+source-git-commit: cad2cafdf39c718c3ba971eaa4e7f2318bd5f517
 workflow-type: tm+mt
-source-wordcount: '1643'
+source-wordcount: '1644'
 ht-degree: 56%
 
 ---
@@ -70,7 +70,7 @@ Les sources suivantes sont disponibles uniquement pour les clients [Adobe Real-T
 | [[!DNL Azure Databricks]](connectors/databases/databricks.md) | Base de données | Lot | Azure |
 | [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) | Stockage dans le cloud | Diffusion en continu | Azure, AWS |
 | [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) | Base de données | Lot | Azure |
-| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | Base de données | Lot | Azure |
+| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | Base de données | Lot | Azure, AWS |
 | [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) | Stockage dans le cloud | Diffusion en continu | Azure |
 | [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) | Base de données | Diffusion en continu | Azure, AWS |
 | [[!DNL Snowflake]](connectors/databases/snowflake.md) | Base de données | Lot | Azure, AWS |
