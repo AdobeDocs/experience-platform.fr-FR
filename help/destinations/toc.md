@@ -5,10 +5,10 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: b5f28a2df411d3aa99bc2714a4e2bb569c16dda1
+source-git-commit: d410471658d27e84453fabaebba698ef0530afe4
 workflow-type: tm+mt
-source-wordcount: '1300'
-ht-degree: 75%
+source-wordcount: '1311'
+ht-degree: 74%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 75%
    * [Supprimer les comptes de destination](./api/delete-destination-account.md)
    * [Supprimer les flux de données de destination](./api/delete-destination-dataflow.md)
    * [Exporter des jeux de données](/help/destinations/api/export-datasets.md)
-   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=fr#use-cases)
+   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
    * [Créer une connexion à une destination](./ui/connect-destination.md)
@@ -48,6 +48,7 @@ ht-degree: 75%
       * [Activer les audiences de compte vers les destinations](./ui/activate-account-audiences.md)
       * [Exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur d’Experience Platform](./ui/export-file-now.md)
       * [Exporter des jeux de données à l’aide de l’interface utilisateur d’Experience Platform](./ui/export-datasets.md)
+      * [Étendre les plannings d’exportation de jeux de données pour les flux de données créés avant novembre 2024](./ui/dataset-expiration-update.md)
       * [(Version bêta) Utiliser l’attribut XDM de l’heure de la dernière qualification dans les nouvelles destinations de stockage dans le cloud en version bêta](./ui/activate-last-qualification-time.md)
       * [Exporter des tableaux, mappages et objets](/help/destinations/ui/export-arrays-maps-objects.md)
       * [Effectuer des transformations sur les données exportées vers des destinations d’espace de stockage](/help/destinations/ui/data-transformations-calculated-fields.md)
