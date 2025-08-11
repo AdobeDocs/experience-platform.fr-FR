@@ -3,9 +3,9 @@ title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Plat
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 source-git-commit: 54c609ec995ac8e48c1c6441390b205bfb5a01cc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2825'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -14,10 +14,10 @@ ht-degree: 99%
 
 Ce document contient les notes de mise à jour de l’extension de balises du SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, voir les [notes de mise à jour du SDK web d’Experience Platform](/help/web-sdk/release-notes.md).
 
-## Version 2.31.1 - vendredi 31 juillet 2025
+## Version 2.31.1 - 31 juillet 2025
 
 - Correction d’un problème qui empêchait l’exécution des versions personnalisées.
-- Contient [version 2.28.1](../../../../web-sdk/release-notes.md#2-28-1) de Adobe Experience Platform Web SDK.
+- Contient la [version 2.28.1](../../../../web-sdk/release-notes.md#2-28-1) du SDK Web Adobe Experience Platform.
 
 ## Version 2.31.0 - 24 juillet 2025
 

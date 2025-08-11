@@ -3,9 +3,9 @@ title: Notes de mise à jour d’Adobe Experience Platform - Juillet 2025
 description: Les notes de mise à jour de juillet 2025 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: b0c2d5535bb4cdf7d00eaca43d65f744276494f3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1574'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -53,7 +53,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Destination | Description |
 | --- | --- |
 | Disponibilité limitée de la connexion [Ciblage par liste de clients de Google + Display &amp; Video 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) | Après avoir été brièvement disponible pour toute la clientèle en juin, Adobe a rétabli la disponibilité limitée de cette intégration. Actuellement, l’accès à cette destination est limité à la clientèle qui en a déjà l’autorisation, tandis qu’Adobe et Google s’efforcent de résoudre les problèmes d’implémentation. Si vous souhaitez utiliser cette intégration après la reprise du déploiement général, contactez votre représentant ou représentante Adobe pour exprimer votre intention. |
-| [[!DNL The Trade Desk]](../../destinations/catalog/advertising/tradedesk.md) mise à niveau interne | À compter du vendredi 31 juillet 2025, vous pourrez voir deux cartes [!DNL The Trade Desk] côte à côte dans le catalogue des destinations. Cela est dû à une mise à niveau interne vers le service de destinations. <br><br>Le connecteur de destination [!DNL The Trade Desk] existant a été renommé **[!UICONTROL (obsolète) The Trade Desk]** et une nouvelle carte portant le nom **[!UICONTROL The Trade Desk]** est désormais disponible. Utilisez la nouvelle connexion **[!UICONTROL The Trade Desk]** dans le catalogue pour obtenir de nouveaux flux de données d’activation. <br><br>Si vous disposez de flux de données actifs vers la destination **[!UICONTROL (obsolète) The Trade Desk]** , ils seront mis à jour automatiquement. Aucune action n’est donc requise de votre part. <br><br>Si vous créez des flux de données par le biais de l’API [Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/), vous devez mettre à jour vos [!DNL flow spec ID] et [!DNL connection spec ID] avec les valeurs suivantes :<ul><li>ID de spécification de flux : `86134ea1-b014-49e8-8bd3-689f4ce70578`</li><li>ID de spécification de connexion : `1029798b-a97f-4c21-81b2-e0301471166e`</li></ul> |
+| Mise à niveau interne de [[!DNL The Trade Desk]](../../destinations/catalog/advertising/tradedesk.md) | À compter du 31 juillet 2025, vous pourrez voir deux cartes [!DNL The Trade Desk] côte à côte dans le catalogue des destinations. Cela est dû à une mise à niveau interne du service de destinations. <br><br>Le connecteur de destination [!DNL The Trade Desk] existant a été renommé **[!UICONTROL (obsolète) The Trade Desk]** et une nouvelle carte portant le nom **[!UICONTROL The Trade Desk]** est désormais disponible. Utilisez la nouvelle connexion **[!UICONTROL The Trade Desk]** dans le catalogue pour obtenir de nouveaux flux de données d’activation. <br><br>Si des flux de données sont actifs vers la destination **[!UICONTROL (obsolète) The Trade Desk]**, ils seront automatiquement mis à jour. Aucune action n’est donc requise de votre part. <br><br>Si vous créez des flux de données par le biais de l’[API Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/), vous devez mettre à jour vos [!DNL flow spec ID] et [!DNL connection spec ID] avec les valeurs suivantes :<ul><li>ID de spécification de flux : `86134ea1-b014-49e8-8bd3-689f4ce70578`</li><li>ID de spécification de connexion : `1029798b-a97f-4c21-81b2-e0301471166e`</li></ul> |
 
 **Fonctionnalité nouvelle ou mise à jour**
 
@@ -135,7 +135,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 
 | Source | Description |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} Prise en charge de [!DNL Didomi] (Streaming SDK) | Utilisez la source [!DNL Didomi] pour ingérer les données de gestion du consentement et des préférences depuis [!DNL Didomi]. Cela permet de respecter les réglementations de confidentialité et les stratégies marketing basées sur le consentement. Consultez la [[!DNL Didomi] vue d’ensemble de la source](../../sources/connectors/consent-and-preferences/didomi.md) pour plus d’informations sur la configuration. Pour découvrir comment créer une connexion source, consultez le [[!DNL Didomi] guide de connexion source](../../sources/tutorials/ui/create/consent-and-preferences/didomi.md). |
+| Prise en charge de la version [!BADGE Beta]{type=Informative} [!DNL Didomi] (SDK Streaming) | Utilisez la source [!DNL Didomi] pour ingérer les données de gestion du consentement et des préférences depuis [!DNL Didomi]. Cela permet de respecter les réglementations de confidentialité et les stratégies marketing basées sur le consentement. Consultez la [[!DNL Didomi] vue d’ensemble de la source](../../sources/connectors/consent-and-preferences/didomi.md) pour plus d’informations sur la configuration. Pour découvrir comment créer une connexion source, consultez le [[!DNL Didomi] guide de connexion source](../../sources/tutorials/ui/create/consent-and-preferences/didomi.md). |
 
 **Fonctionnalité nouvelle ou mise à jour**
 
