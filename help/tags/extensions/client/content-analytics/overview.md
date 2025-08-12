@@ -2,9 +2,9 @@
 title: Présentation de l’extension Adobe Content Analytics
 description: Découvrez l’extension de balise Adobe Content Analytics dans Adobe Experience Platform.
 exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 45ce2b0ff57155dccef2f7c94390a6ddff5c17cd
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -19,28 +19,26 @@ Ce document explique comment configurer l’extension de balise dans l’interfa
 
 ## Installation de l’extension de balise Adobe Content Analytics {#install}
 
->[!NOTE]
->
->L’extension de balise Adobe Content Analytics est automatiquement installée dans le cadre de la propriété de balise automatiquement créée lors de l’utilisation de l’assistant de configuration guidé [Content Analytics](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/content-analytics/configuration/guided){target="_blank"}.
+L’extension de balise Adobe Content Analytics est automatiquement installée dans le cadre de la propriété de balise automatiquement créée lors de l’utilisation de l’assistant de configuration guidé [Content Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided).
 
+<!--
+### Manual installation
 
-### Installation manuelle
+In case of a manual configuration, the Adobe Content Analytics tag extension needs a property to be installed on. If you have not done so already, see the documentation on [creating a tag property](https://experienceleague.adobe.com/en/docs/platform-learn/implement-in-websites/configure-tags/create-a-property).
 
-En cas de configuration manuelle, l’extension de balise Adobe Content Analytics nécessite l’installation d’une propriété sur . Si vous ne l’avez pas déjà fait, consultez la documentation sur la [création d’une propriété de balise](https://experienceleague.adobe.com/fr/docs/platform-learn/implement-in-websites/configure-tags/create-a-property).
+After you have created a property or when you select the property created using the [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided), open the property and select the **[!UICONTROL Extensions]** tab on the left side bar.
 
-Après avoir créé une propriété ou lorsque vous sélectionnez la propriété créée à l’aide de l’assistant de configuration guidé [Content Analytics](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/content-analytics/configuration/guided), ouvrez la propriété et sélectionnez l’onglet **[!UICONTROL Extensions]** dans la barre latérale gauche.
+Select the **[!UICONTROL Catalog]** tab. From the list of available extensions, find the **[!DNL Adobe Content Analytics]** extension and select **[!UICONTROL Install]**.
 
-Sélectionnez l’onglet **[!UICONTROL Catalogue]**. Dans la liste des extensions disponibles, recherchez l’extension **[!DNL Adobe Content Analytics]** et sélectionnez **[!UICONTROL Installer]**.
+![Image showing the Tags UI with the Web SDK extension selected](assets/aca-tag-install.png)
 
-![Image illustrant l’interface utilisateur Balises avec l’extension Web SDK sélectionnée](assets/aca-tag-install.png)
-
-Après avoir sélectionné **[!UICONTROL Installer]**, vous devez configurer l’extension de balise Adobe Content Analytics et enregistrer la configuration.
-
+After selecting **[!UICONTROL Install]**, you must configure the Adobe Content Analytics tag extension and save the configuration.
+-->
 
 <!--
 ## Configure schema
 
-The [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/content-analytics/configuration/guided) automatically populates the proper value for the **[!UICONTROL Tenant Schema Name]**. 
+The [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) automatically populates the proper value for the **[!UICONTROL Tenant Schema Name]**. 
 
 ![Image that shows the Schema configuration of the Adobe Content Analytics tag extension in the Tags UI](assets/aca-tag-schema.png)
 
@@ -52,7 +50,7 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 
 ## Configurer les flux de données
 
-L’assistant [Configuration guidée par Content Analytics](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/content-analytics/configuration/guided) sélectionne automatiquement la valeur appropriée pour les **[!UICONTROL Sandbox]** et **[!UICONTROL Flux de données de production]**. Vous pouvez éventuellement configurer un **[!UICONTROL Flux de données d’évaluation]** et un **[!UICONTROL Flux de données de développement]** supplémentaires.
+L’assistant de configuration guidée de [Content Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) sélectionne automatiquement la valeur appropriée pour le **[!UICONTROL Sandbox]** et le **[!UICONTROL Flux de données de production]**. Vous pouvez éventuellement configurer un **[!UICONTROL Flux de données d’évaluation]** et un **[!UICONTROL Flux de données de développement]** supplémentaires.
 
 ![Image illustrant la configuration des flux de données de l’extension de balise Adobe Content Analytics dans l’interface utilisateur des balises](assets/aca-tag-datastreams.png)
 
@@ -83,7 +81,7 @@ Utilisez ![Fermer](./assets/CrossSize300.svg) pour supprimer des paramètres ind
 
 ## Configuration du filtrage des événements
 
-Dans la section **[!UICONTROL Filtrage des événements]** , vous pouvez modifier les expressions régulières pour filtrer les **[!UICONTROL URL de page]** et les **[!UICONTROL URL d’Assets]** lors de la collecte de données pour Content Analytics. Les expressions régulières que vous avez définies dans l’assistant [Configuration guidée d’Analytics de contenu](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/content-analytics/configuration/guided) sont automatiquement renseignées.
+Dans la section **[!UICONTROL Filtrage des événements]** , vous pouvez modifier les expressions régulières pour filtrer **[!UICONTROL URL de page]** et **[!UICONTROL URL d’Assets]** lors de la collecte de données pour Content Analytics. Les expressions régulières que vous avez définies dans l&#39;assistant de configuration guidée de [Content Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) sont automatiquement renseignées.
 
 ![Image montrant les paramètres de filtrage d’événement de l’extension de balise Adobe Content Analytics dans l’interface utilisateur des balises](assets/aca-tag-eventfiltering.png)
 
