@@ -2,14 +2,28 @@
 title: Utilisation et capacité des licences
 description: Découvrez les limites d’utilisation et de capacité de votre licence dans Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: 326710e48ea9d6eb16f62b9f288311a1d255b287
+source-git-commit: b65765d8e93b13fbb3c2a3e44f47725b936223eb
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 12%
+source-wordcount: '1537'
+ht-degree: 7%
 
 ---
 
+
 # Utilisation des licences et capacités
+
+>[!AVAILABILITY]
+>
+>Pour utiliser cette fonctionnalité, vous devez disposer des autorisations suivantes :
+>
+>- **Afficher le tableau de bord d’utilisation des licences**
+>   - Cette autorisation vous permet de **afficher** la page de départ Capacité.
+>- **Gestion des sandbox**
+>   - Cette autorisation vous permet de **modifier** vos allocations de capacité.
+>
+>Vous trouverez plus d’informations sur les autorisations dans Experience Platform dans la [ présentation du contrôle d’accès ](/help/access-control/home.md#permissions)
+>
+>De plus, si vous avez acheté Segmentation par flux à haut débit, vous **ne pourrez pas** allouer vos capacités à l’aide de la capacité. Pour mettre à jour vos capacités, contactez l’Assistance clientèle d’Adobe.
 
 Dans Adobe Experience Platform, les capacités vous permettent de savoir si votre organisation a dépassé l’un de vos mécanismes de sécurisation et vous donnent des informations sur la manière de résoudre ces problèmes.
 
@@ -53,7 +67,108 @@ Si votre utilisation atteint 80 % et 90 % de votre capacité sous licence, Exper
 
 Si votre utilisation dépasse 100 % de votre capacité sous licence, vous serez considéré comme en violation de votre capacité. À ce stade, vous ferez l’expérience d’une latence de performances et vos cibles de niveau de service (SLT) ne seront **pas** garanties.
 
-## Questions fréquentes
+## Accès {#access}
+
+Pour accéder à la présentation de la capacité, sélectionnez **[!UICONTROL Utilisation de la licence]** suivie de **[!UICONTROL Capacité]**.
+
+![La méthode d’accès à la section Capacité est mise en surbrillance.](/help/landing/images/capacity/access-capacity.png)
+
+La page Aperçu de la capacité s’affiche, avec des informations, notamment un historique des alertes, ainsi que des détails sur les capacités de votre entreprise.
+
+![La page Aperçu de la capacité s’affiche en entier, présentant l’historique des alertes et les sections de détails de la capacité.](/help/landing/images/capacity/capacity-overview.png) {zoomable="yes" width="80%"}
+
+### Historique des alertes {#alert-history}
+
+La section **[!UICONTROL Historique des alertes]** affiche une liste des violations de capacité les plus récentes au sein de votre organisation.
+
+![La section Historique des alertes s’affiche.](/help/landing/images/capacity/alert-history.png)
+
+| Nom de la colonne | Description |
+| ----------- | ----------- |
+| Sandbox | Nom du sandbox où la violation de capacité s’est produite. |
+| Alerte | Capacité qui a été dépassée dans le sandbox. |
+| Date et heure | Données et heure auxquelles la violation s’est produite. |
+
+Pour afficher l’historique complet des alertes de votre organisation, sélectionnez l’icône ![des trois petits points](/help/images/icons/more.png), puis **[!UICONTROL Afficher tout]**.
+
+![L’historique complet des alertes s’affiche pour une organisation.](/help/landing/images/capacity/full-alert-history.png)
+
+### Détails de capacité {#capacity-details}
+
+La section Détails de la capacité fournit des informations sur les capacités de votre organisation. Dans cette section, vous pouvez filtrer par sandbox et modifier la période de recherche en amont.
+
+![Le sélecteur de sandbox et le sélecteur de date pour la période de recherche en amont sont mis en surbrillance.](/help/landing/images/capacity/filter-sandbox-and-date.png)
+
+Actuellement, il affiche des informations de capacité sur le débit de diffusion en continu, les audiences de diffusion en continu et les audiences Edge.
+
+#### Débit de streaming {#streaming-throughput}
+
+La section Débit de diffusion en continu affiche des informations sur le débit de diffusion en continu dans les sandbox de votre organisation. La valeur de débit de diffusion mesure le pic combiné d’événements entrants par seconde pour l’ingestion en flux continu dans le service Profil.
+
+![La section Débit de diffusion en continu de la page des détails de la capacité s’affiche.](/help/landing/images/capacity/streaming-throughput-section.png)
+
+| Nom de la colonne | Description |
+| ----------- | ----------- |
+| Sandbox | Nom du sandbox. |
+| Services | Service utilisé par le sandbox. Actuellement, la seule valeur prise en charge est Profil. |
+| Utilisation (pic) | Débit de diffusion en continu maximal des données dans le sandbox au cours de la période de recherche en amont sélectionnée. |
+| Capacité | Débit de diffusion en continu maximal pour le sandbox. |
+| Violation | Si une violation s’est produite, type de violation pour le débit de diffusion en continu. |
+| Actions recommandées | Colonne décrivant l’action recommandée pour remédier à la violation. |
+
+Vous pouvez sélectionner le sandbox individuel pour afficher une vue plus détaillée du débit de diffusion en continu du sandbox.
+
+![Un sandbox est mis en surbrillance dans la section relative au débit de diffusion.](/help/landing/images/capacity/select-sandbox.png)
+
+La page Détails du débit de diffusion en continu s’affiche. Vous pouvez voir un graphique qui affiche le débit des requêtes par rapport à la limite de capacité, une liste des sandbox et leurs débits, ainsi qu’un bouton pour allouer les capacités de votre organisation.
+
+![La page Débit de diffusion en continu s’affiche, affichant des informations détaillées sur le débit de diffusion en continu pour le sandbox sélectionné.](/help/landing/images/capacity/streaming-capacity-allocation.png)
+
+Pour mettre à jour les capacités de débit de diffusion en continu de l’organisation, sélectionnez **[!UICONTROL Allouer les capacités]**.
+
+![Le bouton Allouer des capacités est mis en surbrillance dans la page des détails du débit de diffusion en continu.](/help/landing/images/capacity/select-allocate.png)
+
+La page d’attribution s’affiche. Sur cette page, vous pouvez définir vos capacités pour vos différents sandbox. La somme de toutes les capacités **doit** égale au total des capacités de l&#39;organisation.
+
+![La page d’allocation de capacité s’affiche.](/help/landing/images/capacity/allocate-capacity.png)
+
+>[!NOTE]
+>
+>Vous ne pouvez définir la nouvelle capacité que dans des ordres de **100**. Par exemple, vous pouvez définir la valeur de la nouvelle capacité du sandbox sur 300 ou 500, mais vous **pouvez pas** cette valeur sur 450.
+>
+>Si la valeur n’est pas de l’ordre de 100, elle sera arrondie à l’unité supérieure ou inférieure en conséquence.
+
+Après avoir mis à jour les allocations de capacité, sélectionnez **[!UICONTROL Enregistrer]** pour terminer les mises à jour. Notez que la prise en compte des modifications dans votre organisation peut prendre jusqu’à 10 minutes.
+
+#### Taille de l’audience {#audience-count}
+
+Les sections **[!UICONTROL Nombre d’audiences en flux continu]** et **[!UICONTROL Nombre d’audiences Edge]** affichent le nombre d’audiences en flux continu et Edge dans le sandbox ainsi que le nombre maximal d’audiences en flux continu et Edge autorisées dans le sandbox.
+
+![Les sections Nombre d’audiences s’affichent.](/help/landing/images/capacity/audience-count.png)
+
+| Nom de la colonne | Description |
+| ----------- | ----------- |
+| Sandbox | Nom du sandbox. |
+| Services | Service utilisé pour le sandbox. |
+| Utilisation | Nombre d’audiences du type répertorié qui se trouvent dans le sandbox. |
+| Capacité | Nombre maximal d’audiences du type répertorié qui sont autorisées dans le sandbox. |
+
+## Bonnes pratiques relatives au débit en flux continu {#suggestions}
+
+Vous pouvez résoudre vos violations de débit de diffusion en continu en adoptant l’une des recommandations suivantes :
+
+1. Augmentez la capacité allouée pour le sandbox.
+2. Identifiez les flux de données à débit élevé dans le [tableau de bord de surveillance](/help/dataflows/ui/monitor-streaming-profile.md) et appliquez une limitation ou un filtrage sur ces flux de données, si nécessaire.
+3. Optimisez votre ingestion en utilisant l’ingestion par lots pour des cas d’utilisation de latence plus faible.
+
+En outre, vous pouvez consulter vos flux de données et voir si vous pouvez optimiser votre stratégie de données.
+
+| Facteur contributif | Ce que c&#39;est | Impact sur les cas d’utilisation | Bonnes pratiques |
+| --- | --- | --- | --- |
+| Conversion par lots en flux continu | Les charges de travail par lots converties en flux continu peuvent augmenter considérablement le débit et affecter les performances et l’allocation des ressources. Par exemple, l’exécution d’une mise à jour de profil en bloc après un événement sans limites de débit. | Les stratégies de diffusion en continu sont inutiles pour les cas d’utilisation par lots lorsqu’un traitement à faible latence n’est pas nécessaire. | Évaluez les exigences du cas d’utilisation. Pour le marketing sortant par lots, pensez à utiliser l’[ingestion par lots](/help/ingestion/batch-ingestion/overview.md) plutôt que la diffusion en continu pour gérer plus efficacement l’ingestion des données. |
+| Ingestion de données inutile | L’ingestion de données non requises pour la personnalisation augmente le débit sans valeur ajoutée, ce qui entraîne une perte de ressources. Par exemple, l’ingestion de tout le trafic d’analyse dans des profils quelle que soit la pertinence. | L’excès de données non pertinentes crée du bruit, ce qui rend plus difficile l’identification des points de données pertinents. Cela peut également entraîner des frictions lors de la définition et de la gestion des audiences et des profils. | Ingérez uniquement les données requises pour vos cas d’utilisation. Veillez à filtrer les données inutiles.<ul><li>**Adobe Analytics** : utilisez le [filtrage au niveau des lignes](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) pour optimiser la saisie des données.</li><li>**Sources** : utilisez l’API [[!DNL Flow Service] API pour filtrer les données au niveau des lignes](/help/sources/tutorials/api/filter.md) pour les sources prises en charge telles que [!DNL Snowflake] et [!DNL Google BigQuery].</li></li>**Flux de données Edge** : configurez [flux de données dynamiques](/help/datastreams/configure-dynamic-datastream.md) pour effectuer un filtrage au niveau des lignes du trafic provenant du SDK Web.</li></ul> |
+
+## Questions fréquentes {#faq}
 
 La section suivante présente les questions fréquentes sur les fonctionnalités de Capacity.
 
