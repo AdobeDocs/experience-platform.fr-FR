@@ -2,10 +2,10 @@
 title: Surveiller l’ingestion des profils de streaming
 description: Découvrez comment utiliser le tableau de bord de surveillance pour surveiller l’ingestion des profils de diffusion en continu
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
-source-git-commit: 75e0231aa9a040226584aeb05f10756b6db8bb62
+source-git-commit: 75ccdfdff4ded0a13213089d1c7dcc4d8f14e0f8
 workflow-type: tm+mt
-source-wordcount: '1820'
-ht-degree: 21%
+source-wordcount: '1967'
+ht-degree: 20%
 
 ---
 
@@ -26,7 +26,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 >[!NOTE]
 >
->La capacité de débit en flux continu prend en charge jusqu’à 1 500 événements entrants par seconde. Vous pouvez acheter une segmentation en flux continu supplémentaire pour prendre en charge jusqu’à 13 500 événements entrants supplémentaires par seconde&#x200B;. Pour plus d’informations, reportez-vous aux descriptions de produits des packages Real-Time CDP B2C Edition - Prime et Ultimate [&#128279;](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>La capacité de débit en flux continu prend en charge jusqu’à 1 500 événements entrants par seconde. Vous pouvez acheter une segmentation en flux continu supplémentaire pour prendre en charge jusqu’à 13 500 événements entrants supplémentaires par seconde&#x200B;. Pour plus d’informations, reportez-vous aux descriptions de produits des packages Real-Time CDP B2C Edition - Prime et Ultimate [](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 ## Surveillance des mesures pour l’ingestion de profils de streaming {#streaming-profile-metrics}
 
@@ -197,6 +197,28 @@ Si votre limite actuelle de 1 500 événements **par seconde** est insuffisante,
 | Ingestion de données inutile | L’ingestion de données non requises pour la personnalisation augmente le débit sans valeur ajoutée, ce qui entraîne une perte de ressources. Par exemple, l’ingestion de tout le trafic d’analyse dans des profils quelle que soit la pertinence. | L’excès de données non pertinentes crée du bruit, ce qui rend plus difficile l’identification des points de données pertinents. Cela peut également entraîner des frictions lors de la définition et de la gestion des audiences et des profils. | Ingérez uniquement les données requises pour vos cas d’utilisation. Veillez à filtrer les données inutiles.<ul><li>**Adobe Analytics** : utilisez le [filtrage au niveau des lignes](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) pour optimiser la saisie des données.</li><li>**Sources** : utilisez l’API [[!DNL Flow Service] API pour filtrer les données au niveau des lignes](../../sources/tutorials/api/filter.md) pour les sources prises en charge telles que [!DNL Snowflake] et [!DNL Google BigQuery].</li></li>**Flux de données Edge** : configurez [flux de données dynamiques](../../datastreams/configure-dynamic-datastream.md) pour effectuer un filtrage au niveau des lignes du trafic provenant du SDK Web.</li></ul> |
 
 {style="table-layout:auto"}
+
+### Questions fréquentes {#faq}
+
+Lisez cette section pour obtenir des réponses aux questions fréquentes sur la surveillance de l’ingestion de profils en flux continu.
+
+#### Pourquoi mes mesures apparaissent-elles différentes dans les tableaux de bord Capacité et Surveillance pour le débit des requêtes ?
+
++++Réponse
+
+Le tableau de bord [!UICONTROL Surveillance] affiche des mesures en temps réel pour l’ingestion et le traitement. Ces chiffres sont des mesures exactes enregistrées au moment de l’activité. Inversement, le tableau de bord [!UICONTROL Capacité] utilise un mécanisme de lissage pour le calcul de la capacité de débit. Ce mécanisme permet de réduire les pics de courte durée qui peuvent être immédiatement qualifiés de violations. Il garantit également que les alertes de capacité se concentrent sur des tendances durables, plutôt que sur des sursauts momentanés.
+
+En raison du mécanisme de lissage, vous remarquerez peut-être :
+
+* Petits pics dans [!UICONTROL Surveillance] qui n’apparaissent pas dans [!UICONTROL Capacité].
+* Des valeurs légèrement inférieures dans [!UICONTROL Capacité] par rapport à [!UICONTROL Surveillance] au même horodatage.
+
+Les deux tableaux de bord sont précis, mais sont conçus à des fins différentes.
+
+* [!UICONTROL Surveillance] : visibilité opérationnelle détaillée, à chaque instant.
+* [!UICONTROL Capacité] : vue stratégique permettant d’identifier les schémas d’utilisation et de violation.
+
++++
 
 ## Étapes suivantes {#next-steps}
 
