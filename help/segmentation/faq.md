@@ -2,9 +2,9 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: b7bf7a2b7628f61231321205e2a6b9d675afce8b
+source-git-commit: 56bf7ae20c33b013a1710fba8c04d9edc23baf89
 workflow-type: tm+mt
-source-wordcount: '4828'
+source-wordcount: '4849'
 ht-degree: 27%
 
 ---
@@ -17,9 +17,9 @@ L’interface utilisateur et l’API RESTful du [!DNL Segmentation Service] d’
 
 La section suivante répertorie les questions relatives à Audience Portal.
 
-### Puis-je accéder au portail d’audience et à la composition d’audience ?
+### Puis-je accéder au portail d’audience et à la composition d’audiences ?
 
-Le portail d’audience et la composition d’audience sont disponibles pour tous les clientes et clients Real-Time CDP Prime et Ultimate (éditions B2C, B2B et B2P) et Journey Optimizer Select, Prime, Ultimate Starter et Ultimate.
+Le portail d’audience et la composition d’audiences sont disponibles pour l’ensemble des clientes et clients Real-Time CDP Prime et Ultimate (éditions B2C, B2B et B2P) et Journey Optimizer Select, Prime, Ultimate Starter et Ultimate.
 
 Dans la version la plus récente de l’application, seules les audiences basées sur un profil sont prises en charge. La prise en charge des audiences basées sur un compte sera assurée dans une version ultérieure.
 
@@ -103,12 +103,12 @@ Une fois la période d’expiration des données passée, le jeu de données ass
 
 Le nombre d’audiences générées en externe que vous pouvez importer n’est pas limité. Notez toutefois que les audiences importées **ne** sont pas comptabilisées par rapport à la limite d’audience globale.
 
-### Comment le portail d’audience et la composition d’audience interagiront-ils avec les données du partenaire Real-Time CDP ?
+### Comment le portail d’audience et la composition d’audiences interagiront-ils avec les données du partenaire Real-Time CDP ?
 
-Le portail d’audience et la composition d’audience interagissent avec les données du partenaire de deux manières :
+Le portail d’audience et la composition d’audiences interagissent avec les données du partenaire de deux manières :
 
-1. Si vous ingérez une liste de prospects fournie par le partenaire à l’aide de la classe et du workflow Prospect Profile, les prospects seront conservés **séparément** des profils clients de fusion dans le Profile Service. Cela signifie que les listes de prospects ne seront **pas** disponibles dans le portail d’audience ou dans la composition d’audience.
-2. Si vous tirez parti des attributs fournis par le partenaire pour enrichir les profils propriétaires **existants**, ces audiences enrichies en données de partenaire **seront** disponibles dans le portail d’audience et dans la composition d’audience pour être utilisées.
+1. Si vous ingérez une liste de prospects fournie par le partenaire à l’aide de la classe et du workflow Prospect Profile, les prospects seront conservés **séparément** des profils clients de fusion dans le Profile Service. Cela signifie que les listes de prospects ne seront **pas** disponibles dans le portail d’audience ou dans la composition d’audiences.
+2. Si vous tirez parti des attributs fournis par le partenaire pour enrichir les profils propriétaires **existants**, ces audiences enrichies en données de partenaire **seront** disponibles dans le portail d’audience et dans la composition d’audiences pour être utilisées.
 
 ### Comment utiliser des attributs supplémentaires avec mes audiences ?
 
@@ -186,7 +186,7 @@ Les audiences créées en externe sont automatiquement définies sur publiées.
 
 ### Comment mettre une audience à l’état inactif ?
 
-Vous pouvez mettre une audience publiée en statut inactif en ouvrant le menu d’actions rapides dans Audience Portal et en sélectionnant « [!UICONTROL &#x200B; Désactiver &#x200B;].
+Vous pouvez mettre une audience publiée en statut inactif en ouvrant le menu d’actions rapides dans Audience Portal et en sélectionnant « [!UICONTROL  Désactiver ].
 
 ### Comment republier une audience ?
 
@@ -252,7 +252,7 @@ Non, le nombre de balises pouvant être ajoutées à une audience n’est pas li
 
 ### Y a-t-il une limite au nombre de balises que je peux créer ?
 
-Non, le nombre de balises que vous pouvez créer n’est pas limité. Cependant, vous pouvez créer un maximum de 100 catégories **&#x200B;**&#x200B;à appliquer aux balises. Pour plus d’informations sur la gestion des balises, consultez le [guide de gestion des balises](../administrative-tags/ui/managing-tags.md).
+Non, le nombre de balises que vous pouvez créer n’est pas limité. Cependant, vous pouvez créer un maximum de 100 catégories **** à appliquer aux balises. Pour plus d’informations sur la gestion des balises, consultez le [guide de gestion des balises](../administrative-tags/ui/managing-tags.md).
 
 ### Lorsque je recherche une audience par nom ou balise dans un dossier parent, puis-je également effectuer une recherche dans les dossiers enfants associés ?
 
@@ -284,19 +284,23 @@ Le tableau suivant illustre la différence entre les deux services :
 
 Pour en savoir plus sur le créateur de segments, consultez le [guide du créateur de segments](./ui/segment-builder.md). Pour en savoir plus sur la composition de l’audience, veuillez lire le guide [Composition de l’audience](./ui/audience-composition.md).
 
-### Puis-je utiliser des audiences générées en externe dans la composition de l’audience ?
+### Puis-je utiliser des audiences générées en externe dans la composition d’audiences ?
 
 À ce stade, non. Cette fonctionnalité sera disponible dans un avenir proche.
 
-### Puis-je envoyer des audiences de la composition d’audience à toutes les destinations et tous les canaux en aval ?
+### Puis-je envoyer des audiences de la composition d’audiences à toutes les destinations et tous les canaux en aval ?
 
 Oui! Vous pouvez utiliser des audiences à partir de la composition de l’audience dans des campagnes Adobe Journey Optimizer, des destinations Real-Time CDP et des Parcours Adobe Journey Optimizer.
 
 ### Existe-t-il des barrières de sécurité qui limitent le nombre de compositions ?
 
+>[!IMPORTANT]
+>
+>Ce mécanisme de sécurisation s’applique uniquement aux compositions créées avec la composition d’audience et ne s’applique **** aux compositions créées avec la composition d’audience fédérée.
+
 À ce stade, la limite est fixée à **10** compositions publiées par sandbox. Ce nombre devrait augmenter dans une prochaine version.
 
-### Quelles sont les barrières de sécurité du workflow de composition d’audience ?
+### Quelles sont les mécanismes de sécurisation des workflows pour la composition d’audiences ?
 
 Le placement du composant de composition suit une structure rigide comme suit :
 
@@ -316,7 +320,7 @@ En outre, les restrictions suivantes s’appliquent lors de l’utilisation de c
 - Bloc Classement
    - Ce bloc ne prend **pas** en charge les attributs d’enrichissement.
 
-Pour plus d’informations sur l’utilisation de la composition de l’audience, lisez le [Guide de l’interface utilisateur de la composition d’audience](./ui/audience-composition.md).
+Pour plus d’informations sur l’utilisation de la composition d’audiences, lisez le [Guide de l’interface utilisateur de la composition d’audiences](./ui/audience-composition.md).
 
 ### Quand les audiences créées à l’aide de la composition d’audience sont-elles enregistrées et évaluées ?
 
@@ -332,11 +336,11 @@ L’audience créée dans Composition de l’audience s’affichera **immédiate
 
 Actuellement, les traitements d’évaluation ne sont **pas** affichés dans l’interface utilisateur de surveillance.
 
-### Puis-je utiliser une composition d’audience dans une autre composition ?
+### Puis-je utiliser une composition d’audiences dans une autre composition ?
 
-Non, les audiences créées à l’aide de la composition de l’audience **ne peuvent pas** être utilisées comme entrée dans une autre composition d’audience.
+Non, les audiences créées à l’aide de la composition d’audiences **ne peuvent pas** être utilisées comme entrée dans une autre composition d’audiences.
 
-### Comment le partage fonctionne-t-il dans la composition de l’audience ?
+### Comment le partage fonctionne-t-il dans la composition d’audiences ?
 
 Le fractionnement d’audience permet de sous-définir votre audience en groupes plus petits.
 
@@ -344,11 +348,11 @@ Lors du fractionnement par attribut, il existe une exclusivité mutuelle entre l
 
 Lors du fractionnement par pourcentage, les fractionnements sont **aléatoirement** effectués. Cela signifie que les profils seront attribués de manière aléatoire à chaque chemin d’accès.
 
-Pour plus d’informations sur le bloc Partage, lisez le [Guide de l’interface utilisateur de composition d’audience](./ui/audience-composition.md#split).
+Pour plus d’informations sur le bloc Partage, lisez le [Guide de l’interface utilisateur de composition d’audiences](./ui/audience-composition.md#split).
 
-### Puis-je utiliser tous les types de segmentation dans le workflow Composition de l’audience ?
+### Puis-je utiliser tous les types de segmentation dans le workflow Composition d’audiences ?
 
-Oui, tous les types de segmentation ([segmentation par lots, segmentation en flux continu et segmentation Edge](./home.md#evaluate-segments)) sont pris en charge dans le workflow Composition de l’audience. Toutefois, comme les compositions ne sont actuellement exécutées qu’une seule fois par jour, même si des audiences évaluées par Edge ou en flux continu sont incluses, le résultat sera basé sur l’appartenance à l’audience au moment de l’exécution de la composition.
+Oui, tous les types de segmentation ([segmentation par lots, segmentation en flux continu et segmentation Edge](./home.md#evaluate-segments)) sont pris en charge dans le workflow Composition d’audiences. Toutefois, comme les compositions ne sont actuellement exécutées qu’une seule fois par jour, même si des audiences évaluées par Edge ou en flux continu sont incluses, le résultat sera basé sur l’appartenance à l’audience au moment de l’exécution de la composition.
 
 ## Appartenance à une audience
 

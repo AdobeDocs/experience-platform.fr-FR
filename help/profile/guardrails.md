@@ -5,10 +5,10 @@ product: experience platform
 type: Documentation
 description: Découvrez les performances et les mécanismes de sécurisation appliqués par le système pour les données de profil et la segmentation, afin de garantir une utilisation optimale des fonctionnalités de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1536201961211aeb747e418794196c146d86e869
+source-git-commit: 56bf7ae20c33b013a1710fba8c04d9edc23baf89
 workflow-type: tm+mt
-source-wordcount: '2636'
-ht-degree: 52%
+source-wordcount: '2649'
+ht-degree: 51%
 
 ---
 
@@ -125,7 +125,7 @@ Les mécanismes de sécurisation décrits dans cette section font référence au
 | Débit de diffusion en continu sur toutes les sandbox | 1 500 TR/S | Mécanisme de sécurisation des performances | La segmentation en flux continu prend en charge une valeur maximale combinée de 1 500 événements entrants par seconde dans vos sandbox de production et de développement. La segmentation en flux continu peut prendre jusqu’à 5 minutes pour qualifier un profil pour l’appartenance à un segment. En savoir plus sur les [ audiences de diffusion en continu ](/help/segmentation/methods/streaming-segmentation.md). |
 | Audiences par lot par sandbox | 4 000 | Mécanisme de sécurisation des performances | Vous pouvez avoir jusqu’à 4 000 audiences par lots **actives** par sandbox. Vous pouvez avoir plus de 4 000 audiences par lot par organisation, à condition qu’il y en ait moins de 4 000 dans chaque sandbox **individuel**. Toute tentative de création d’audiences par lots supplémentaires peut affecter les performances du système. |
 | Audiences de compte par sandbox | 50 | Mécanisme de sécurisation mis en œuvre par le système | Vous pouvez créer un maximum de 50 audiences de compte dans un sandbox. Une fois que vous avez atteint 50 audiences dans un sandbox, la commande **[!UICONTROL Créer une audience]** est désactivée lors de la tentative de création d’une audience de compte. En savoir plus sur les [ audiences de compte ](/help/segmentation/types/account-audiences.md). |
-| Compositions publiées par sandbox | 10 | Mécanisme de sécurisation des performances | Vous pouvez avoir un maximum de 10 compositions publiées dans un sandbox. Consultez le guide de l’interface utilisateur pour en savoir plus sur la [ composition de l’audience ](/help/segmentation/ui/audience-composition.md). |
+| Compositions publiées par sandbox | 10 | Mécanisme de sécurisation des performances | Vous pouvez avoir un maximum de 10 compositions publiées dans un sandbox. Consultez le guide de l’interface utilisateur pour en savoir plus sur la [ composition de l’audience ](/help/segmentation/ui/audience-composition.md). **Remarque** : les compositions créées avec la composition d’audience fédérée ne sont **pas** comptabilisées avec ce mécanisme de sécurisation. |
 | Taille maximale d’audience | 30 % | Mécanisme de sécurisation des performances | L’adhésion maximale recommandée d’une audience est de 30 % du nombre total de profils dans le système. Il est possible de créer des audiences avec plus de 30 % des profils en tant que membres ou plusieurs audiences volumineuses, mais cela aura un impact sur les performances du système. |
 | Exécutions d’évaluation d’audience flexibles | 50 par an (sandbox de production)<br/>100 par an (sandbox de développement) | Mécanisme de sécurisation mis en œuvre par le système | Vous avez un maximum de 50 exécutions d’évaluation d’audience flexibles par an par sandbox **de production**. Vous disposez d’un maximum de 100 exécutions d’évaluation d’audience flexibles par an par sandbox **de développement**. |
 | Exécutions d’évaluation d’audience flexibles | 2 par jour | Mécanisme de sécurisation mis en œuvre par le système | Vous avez un maximum de 2 exécutions par jour par sandbox. |
@@ -188,7 +188,7 @@ Plusieurs suites de rapports peuvent être activées pour Profil si tous les con
 Consultez la documentation suivante pour plus d’informations sur les autres mécanismes de sécurisation des services Experience Platform, sur les informations de latence de bout en bout et les informations de licence dans les documents de description du produit Real-Time CDP :
 
 * [Mécanismes de sécurisation de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=fr#end-to-end-latency-diagrams) pour divers services Experience Platform.
+* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.
 * [Real-Time Customer Data Platform (B2C Edition - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
