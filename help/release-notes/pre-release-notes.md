@@ -4,10 +4,10 @@ description: Aperçu des dernières notes de mise à jour de Adobe Experience Pl
 hide: true
 hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: a26ad18b1e44b3198db9e8a36ad3749ed8a0afa2
+source-git-commit: bcf3045fbbf4f9673e954a5ebf95d1225d4cdcd7
 workflow-type: tm+mt
-source-wordcount: '1116'
-ht-degree: 30%
+source-wordcount: '1074'
+ht-degree: 31%
 
 ---
 
@@ -53,28 +53,31 @@ Pour plus d’informations sur les alertes, consultez la [[!DNL Observability In
 
 [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 
+>[!IMPORTANT]
+>
+>**Extension du planning d’exportation du jeu de données**
+>
+>Si votre organisation a créé des flux de données d’exportation de jeux de données avant novembre 2024, ces flux de données cesseront de fonctionner le **1er septembre 2025**. Si vous avez besoin des flux de données pour continuer à exporter des données après le 1er septembre 2025, vous devez étendre leurs plannings pour chaque destination vers laquelle vous exportez des jeux de données, en suivant les étapes de [ce guide](../destinations/ui/dataset-expiration-update.md).
+
 **Nouvelles destinations**
 
 | Destination | Description |
 | --- | --- |
 | [!DNL Acxiom Real ID Audience] destination | Utilisez la destination [!DNL Acxiom Real ID Audience Connection] pour améliorer les audiences avec [!DNL Acxiom's] technologie [Real ID™](https://www.acxiom.com/real-id/real-id/) et activer les audiences vers plusieurs plateformes, telles que [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], etc. |
 
-
 **Destinations mises à jour**
 
 | Destination | Description |
 | --- | --- |
-| Détails d’expiration de l’authentification pour les destinations [!DNL LinkedIn] | Ne vous inquiétez plus des informations d’identification expirées. Les informations sur l’expiration du compte sont désormais visibles directement dans l’interface d’Experience Platform. Vous pouvez ainsi savoir quand votre authentification [!DNL LinkedIn] expirera et la renouveler avant qu’elle ne cause des perturbations dans vos flux de données. |
+| Détails d’expiration de l’authentification pour les destinations [!DNL LinkedIn] et [!DNL Pinterest] | Les informations sur l’expiration du compte sont désormais visibles directement dans l’interface d’Experience Platform. Vous pouvez ainsi savoir quand votre [!DNL LinkedIn] et votre authentification [!DNL Pinterest] expireront et les renouveler avant qu’elles ne provoquent des perturbations dans vos flux de données. |
 | Prise en charge du chiffrement pour les destinations [!DNL Data Landing Zone] | Protégez les données exportées avec le chiffrement. Vous pouvez désormais joindre des clés publiques au format RSA pour chiffrer vos fichiers exportés, ce qui vous offre le même niveau de sécurité que les autres destinations de stockage dans le cloud pour vos informations sensibles. |
 | Mise à niveau interne de [[!DNL Microsoft Bing]](../destinations/catalog/advertising/bing.md) | À compter du mardi 11 août 2025, vous pourrez voir deux cartes **[!DNL Microsoft Bing]** côte à côte dans le catalogue des destinations. Cela est dû à une mise à niveau interne du service de destinations. Le connecteur de destination **[!DNL Microsoft Bing]** existant a été renommé **[!UICONTROL (obsolète) Microsoft Bing]** et une nouvelle carte portant le nom **[!UICONTROL Microsoft Bing]** est désormais disponible. Utilisez la nouvelle connexion **[!UICONTROL Microsoft Bing]** dans le catalogue pour les nouveaux flux de données d’activation. Si vous avez des flux de données actifs vers la destination **[!UICONTROL (obsolète) Microsoft Bing]**, ils seront mis à jour automatiquement. Aucune action n’est donc requise de votre part. <br><br>Si vous créez des flux de données par le biais de l’[API Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/), vous devez mettre à jour vos [!DNL flow spec ID] et [!DNL connection spec ID] avec les valeurs suivantes :<ul><li>ID de spécification de flux : `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>ID de spécification de connexion : `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Suite à cette mise à niveau, il se peut que le nombre de profils activés **baisse** soit réduit dans vos flux de données à [!DNL Microsoft Bing]. Cette baisse est due à l’introduction de l’exigence de mappage **ECID** pour toutes les activations sur cette plateforme de destination. |
-| Identifiants supplémentaires pour les destinations [!DNL Amazon Ads] | La destination Amazon Ads prend désormais en charge les nouvelles identités (`firstName`, `lastName`, `street`, `city`, `state`, `zip`, `country`). Ces champs sont destinés à améliorer les taux de correspondance d’audience. Ils sont transmis en texte brut, avec un hachage de SHA256 facultatif. |
 | Consolidation des cartes de destination [!DNL Marketo] | Simplifiez votre configuration de destination [!DNL Marketo] avec notre carte de destination unifiée. Nous avons regroupé [!DNL Marketo] cartes V2 et V3 en une seule option simplifiée, ce qui facilite le choix de la bonne destination et la prise en main rapide. |
 
 **Fonctionnalité nouvelle ou mise à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Étendre les plannings d’exportation de jeux de données pour les flux de données créés avant novembre 2024 | Si votre organisation a créé des flux de données d’exportation de jeux de données avant novembre 2024, ces flux de données cesseront de fonctionner le 1er septembre 2025. Si vous avez besoin des flux de données pour continuer à exporter des données après le 1er septembre 2025, vous devez étendre leurs plannings pour chaque destination vers laquelle vous exportez des jeux de données, en suivant les étapes de [ce guide](../destinations/ui/dataset-expiration-update.md). |
 | Amélioration des fonctionnalités de recherche, de filtrage et de balisage pour les destinations | Améliorez votre workflow de gestion des destinations avec des fonctionnalités améliorées de recherche, de filtrage et de balisage dans les onglets Parcourir et Comptes . Vous pouvez désormais rechercher des flux de données et des comptes spécifiques par nom, filtrer selon divers critères, notamment la plateforme de destination, le statut et les dates, et créer des balises personnalisées pour organiser vos destinations. Le tri des colonnes est également disponible pour les champs clés tels que l’heure d’exécution du dernier flux de données, ce qui facilite l’identification et la gestion de vos connexions de destination. |
 
 Pour plus d’informations, reportez-vous à la [vue d’ensemble des destinations](../destinations/home.md).
