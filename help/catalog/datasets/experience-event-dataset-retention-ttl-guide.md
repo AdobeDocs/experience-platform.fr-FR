@@ -112,7 +112,7 @@ Utilisez le point d’entrée `/ttl/{DATASET_ID}` de l’API Data Hygiene pour p
 
 Pour plus d’informations, consultez la documentation d’Adobe Developer [API Data Hygiene](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/#operation/getTtl) .
 
-Pour [vérifier la TTL actuellement appliquée à un jeu de données](#check-applied-ttl-values), envoyez plutôt une requête GET au point d’entrée de [ ](https://developer.adobe.com/experience-platform-apis/references/catalog/)API Catalog Service`/dataSets/{DATASET_ID}`.
+Pour [vérifier la TTL actuellement appliquée à un jeu de données](#check-applied-ttl-values), envoyez plutôt une requête GET au point d’entrée de [&#128279;](https://developer.adobe.com/experience-platform-apis/references/catalog/)API Catalog Service`/dataSets/{DATASET_ID}`.
 
 >[!TIP]
 >
