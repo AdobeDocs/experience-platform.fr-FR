@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: d942093bffc680501384f7c8193f4cdddc1cef33
+source-git-commit: 52571689c97fdc2ed052b53537e736f03d666ad5
 workflow-type: tm+mt
-source-wordcount: '5188'
-ht-degree: 66%
+source-wordcount: '5174'
+ht-degree: 63%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 66%
 
 >[!NOTE]
 >
->Ce guide décrit la création d’audiences par le biais de **définitions de segment** dans le créateur de segments. Pour savoir comment créer des audiences à l’aide de la composition d’audience, consultez le [Guide de l’interface utilisateur de la composition d’audience](./audience-composition.md).
+>Ce guide décrit la création d’audiences par le biais de **définitions de segment** dans le créateur de segments. Pour savoir comment créer des audiences à l’aide de la composition d’audiences, consultez le [Guide de l’interface utilisateur de la composition d’audiences](./audience-composition.md).
 
 Le [!DNL Segment Builder] offre un vaste espace de travail qui vous permet d’interagir avec les éléments de données de [!DNL Profile]. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 
@@ -330,7 +330,7 @@ La liste des contraintes de temps disponibles pour cette opération diffère de 
 >[!NOTE]
 >
 >Lors de l’utilisation de la contrainte de temps « Après », le dernier événement peut avoir lieu plus longtemps que la durée répertoriée dans la contrainte de temps. >
->&#x200B;>Par exemple, si vous disposez d’un événement Page vue et d’un événement Passage en caisse et que vous appliquez la contrainte de temps « Après 1 heure » entre ces deux événements, une définition de segment avec un événement Passage en caisse 2 heures après l’événement Page vue est éligible.
+>>Par exemple, si vous disposez d’un événement Page vue et d’un événement Passage en caisse et que vous appliquez la contrainte de temps « Après 1 heure » entre ces deux événements, une définition de segment avec un événement Passage en caisse 2 heures après l’événement Page vue est éligible.
 >
 >En outre, ces deux contraintes de temps peuvent être utilisées en coordination l&#39;une avec l&#39;autre.
 >
@@ -375,12 +375,12 @@ Pour sélectionner une politique de fusion pour votre définition de segment, s�
 
 ![Le sélecteur de politique de fusion est mis en surbrillance. Vous pouvez ainsi choisir la politique de fusion à sélectionner pour votre définition de segment.](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Propriétés de définition de segment {#segment-properties}
+## Propriétés de l’audience {#audience-properties}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
->title="Propriétés de définition de segment"
->abstract="La section des propriétés de définition de segment affiche une estimation de la taille de la définition de segment résultante, en affichant le nombre de profils qualifiés par rapport au nombre total de profils. Cela vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même."
+>title="Propriétés de l’audience"
+>abstract="La section des propriétés de l’audience affiche une estimation de la taille de l’audience résultante, en affichant le nombre de profils qualifiés par rapport au nombre total de profils. Vous pouvez ainsi ajuster votre audience selon vos besoins avant de créer l’audience elle-même."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
@@ -391,12 +391,12 @@ Pour sélectionner une politique de fusion pour votre définition de segment, s�
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
 >title="Profils qualifiés"
->abstract="Les profils qualifiés indiquent le nombre réel de profils qui correspondent aux règles de la définition de segment. Ce nombre est mis à jour toutes les 24 heures, après l’exécution du traitement d’évaluation de segment."
+>abstract="Les profils qualifiés indiquent le nombre réel de profils qui correspondent aux règles de l’audience. Ce nombre est mis à jour toutes les 24 heures, après l’exécution du traitement d’évaluation de segment."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
 >title="Profils estimés"
->abstract="Les profils estimés indiquent un nombre approximatif de profils, en fonction de l’exemple de traitement, lesquels seraient qualifiés pour les règles de la définition de segment."
+>abstract="Les profils estimés indiquent un nombre approximatif de profils, en fonction de l’exemple de tâche, qui seraient qualifiés pour les règles de l’audience."
 
 Lors de la création d’une définition de segment, la section **[!UICONTROL Propriétés de l’audience]** située dans la partie droite de l’espace de travail affiche une estimation de la taille de la définition de segment obtenue, ce qui vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même.
 
@@ -404,22 +404,22 @@ Lors de la création d’une définition de segment, la section **[!UICONTROL Pr
 
 La date et l’heure des profils qualifiés indiquent la tâche d’évaluation de segment **par lots** la plus récente et s’affichent **non** pour les définitions de segment évaluées à l’aide de la segmentation Edge ou en flux continu. Si vous modifiez la définition de segment, le nombre de profils qualifiés restera le même jusqu’à l’exécution de la tâche d’évaluation de segment suivante.
 
-**[!UICONTROL Profils estimés]** indique un nombre **approximatif** de profils, en fonction de l’**exemple de tâche**. Cela signifie que les données d’exemple sont projetées sur le jeu de profils le plus volumineux, ce qui entraîne une estimation du nombre qui peut différer du nombre réel de profils qualifiés. L’échantillon de profil estimé a un intervalle de confiance de 95 %.
+**[!UICONTROL Profils estimés]** indique une **plage approximative** de profils, en fonction de l’**exemple de tâche**. Cela signifie que les données d’exemple sont projetées sur le jeu de profils le plus volumineux, ce qui entraîne une estimation du nombre qui peut différer du nombre réel de profils qualifiés. L’échantillon de profil estimé a un intervalle de confiance de 95 %.
 
 Ce nombre est mis à jour dans deux scénarios :
 
-1. La modification des données client est supérieure à 5 % ou le dernier exemple de traitement date de plus de sept jours.
+1. La modification des données client est supérieure à 3 % ou le dernier exemple de traitement date de plus de trois jours.
 2. Les règles de l’audience ont été modifiées ou supprimées.
 
-La sélection de la bulle d’informations donne le seuil d’erreur et l’exemple de temps le plus récent.
+La sélection de la bulle d’informations indique la date et l’heure du dernier exemple de tâche exécutée.
 
 ![Les profils qualifiés et les profils estimés sont mis en surbrillance dans la section Propriétés de l’audience.](../images/ui/segment-builder/audience-estimates.png)
 
-La section **[!UICONTROL Propriétés de l’audience]** vous permet également de spécifier des informations importantes sur votre définition de segment, y compris son nom, sa description et son type d’évaluation. Les noms des définitions de segment sont utilisés pour identifier votre définition de segment parmi celles définies par votre organisation et doivent donc être descriptifs, concis et uniques.
+La section **[!UICONTROL Propriétés de l’audience]** vous permet également de spécifier des informations importantes sur votre audience, y compris son nom, sa description et son type d’évaluation. Les noms sont utilisés pour identifier votre définition de segment parmi ceux définis par votre organisation et doivent donc être descriptifs, concis et uniques.
 
-Au fur et à mesure que vous continuez à créer votre définition de segment, vous pouvez visualiser un aperçu paginé de l’audience en sélectionnant **[!UICONTROL Afficher les profils]**.
+À mesure que vous continuez à créer votre audience, vous pouvez afficher un aperçu paginé de l’audience en sélectionnant **[!UICONTROL Afficher les profils]**.
 
-![La section des propriétés de définition de segment est mise en surbrillance. Les propriétés de la définition de segment comportent, sans s’y limiter, le nom, la description et la méthode d’évaluation de la définition de segment.](../images/ui/segment-builder/segment-properties.png)
+![La section des propriétés de l’audience est mise en surbrillance. Les propriétés de l’audience incluent, sans s’y limiter, le nom, la description et la méthode d’évaluation.](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
@@ -453,4 +453,4 @@ Le créateur de segments fournit un workflow complet qui vous permet d’isoler 
 - activer toutes les définitions de segment pour la segmentation planifiée ;
 - activer des définitions de segment spécifiques pour la segmentation par flux.
 
-Pour en savoir plus sur [!DNL Segmentation Service], veuillez continuer à lire la documentation et compléter votre apprentissage en regardant les vidéos associées. Pour en savoir plus sur les autres parties de l’interface utilisateur de [!DNL Segmentation Service], veuillez lire le [[!DNL Segmentation Service] guide de l’utilisateur](./overview.md).
+Pour en savoir plus sur [!DNL Segmentation Service], veuillez continuer à lire la documentation et compléter votre apprentissage en regardant les vidéos associées. Pour en savoir plus sur les autres parties de l’interface utilisateur de [!DNL Segmentation Service], veuillez lire le [[!DNL Segmentation Service] guide d’utilisation](./overview.md).
