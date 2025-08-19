@@ -4,35 +4,51 @@ title: Liste autorisée d’adresses IP pour les destinations en flux continu
 type: Documentation
 description: Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre liste autorisée de données pour exporter en toute sécurité des données d’Experience Platform vers votre point d’entrée de l’API HTTP REST, Amazon Kinesis ou votre instance Azure Event Hubs.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 5c67466f5321038e75d22e216a8be2e745adac49
+source-git-commit: 851565b4c40452d102eff134533c9d44ea19ca76
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 8%
+source-wordcount: '407'
+ht-degree: 4%
 
 ---
 
-# Liste autorisée d’adresses IP pour les destinations en flux continu {#ip-address-allowlist}
+
+# PLACE SUR LA LISTE AUTORISÉE d’adresse IP pour les destinations basées sur les API de streaming {#ip-address-allowlist}
 
 >[!IMPORTANT]
 >
 > * Adobe vous recommande d’ajouter un signet à cette page et de la consulter tous les trois mois pour rechercher les dernières adresses IP. Adobe ne fournit pas de notification des nouvelles plages d’adresses IP.
-> * La liste des adresses IP documentée ici *ne s’applique pas* aux destinations que vous créez à l’aide de [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
 
 ## Vue d’ensemble {#overview}
 
-Les plages d’adresses IP documentées ici s’appliquent aux destinations suivantes :
+Les plages d’adresses IP documentées sur cette page s’appliquent aux destinations suivantes :
 
-* [Destination de l’API HTTP](./http-destination.md)
-* [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
-* [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [Destinations d’entreprise avancées](../../destination-types.md#advanced-enterprise-destinations) : [destination d’API HTTP](./http-destination.md), [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [Destinations d’exportation d’audiences en flux continu](../../destination-types.md#streaming-destinations) telles que [Audience en temps réel Pega CDH](/help/destinations/catalog/personalization/pega-v2.md), intégrations basées sur les API avec [Salesforce Marketing Cloud](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) et [Oracle Eloqua](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)
+* Destinations publiques ou privées créées via [Destination SDK](../../destination-sdk/getting-started.md)
 
 Le trafic sortant d’Experience Platform vers ces destinations passe toujours par les adresses IP répertoriées sur cette page.
 
-Placer sur la liste autorisée Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre pour exporter en toute sécurité des données d’Experience Platform vers votre point d’entrée HTTP, votre [!DNL Amazon Kinesis] ou votre instance [!DNL Azure Event Hubs]. Cette fonctionnalité est particulièrement utile si votre point d’entrée HTTP se trouve derrière un pare-feu d’entreprise ou si les normes de sécurité et de conformité de votre entreprise exigent qu’une liste de plages d’adresses IP soit placée sur la liste autorisée.
+Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre place sur la liste autorisée pour exporter en toute sécurité des données d’Experience Platform vers les destinations répertoriées ci-dessus. Cette fonctionnalité est particulièrement utile si votre point d’entrée HTTP se trouve derrière un pare-feu d’entreprise ou si les normes de sécurité et de conformité de votre entreprise exigent qu’une liste de plages d’adresses IP soit placée sur la liste autorisée.
 
 Vous pouvez définir des contrôles d’accès réseau via votre pare-feu réseau. En spécifiant la plage d’adresses IP appropriée, vous pouvez autoriser le trafic pour le service de transfert de données.
 
-Adobe vous recommande d’ajouter les plages d’adresses IP suivantes à un place sur la liste autorisée de données avant d’utiliser les destinations mentionnées ci-dessus sur cette page. Si vous n’ajoutez pas votre plage d’adresses IP spécifique à une région à votre place sur la liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de ces destinations de diffusion en streaming.
+## Quand placer sur la liste autorisée les adresses IP sur cette page {#when-to-allowlist}
+
+Si votre politique d’organisation exige que vous ajoutiez des adresses IP pour le trafic entrant, vous devez ajouter les plages d’adresses IP des catégories suivantes à votre placer sur la liste autorisée place sur la liste autorisée avant d’utiliser les destinations mentionnées ci-dessus sur cette page :
+
+1. Toutes les [ adresses IP globales ](#global)
+2. Outre les adresses IP globales, ajoutez les adresses IP correspondant à la région dans laquelle vous avez reçu les privilèges d’accès, à partir de la liste située plus bas sur la page. Si vous n’ajoutez pas votre plage d’adresses IP spécifique à une région à votre place sur la liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de ces destinations de diffusion en streaming.
+
+## Adresses IP globales {#global}
+
+* `3.209.222.108`
+* `3.211.230.204`
+* `35.169.227.49`
+* `66.117.18.133`
+* `66.117.18.134`
+* `66.117.18.135`
+
+Outre ces adresses IP globales, vous devez également placer sur la liste autorisée les adresses IP de la région dans laquelle votre organisation est approvisionnée à partir de la liste ci-dessous.
 
 ## VA7 : clients des États-Unis et des Amériques {#us-americas}
 
@@ -209,3 +225,4 @@ La plage d’adresses IP ci-dessous s’applique aux clients Experience Platform
 * `20.244.79.192/28`
 * `20.244.79.208/28`
 * `20.244.79.224/28`
+
