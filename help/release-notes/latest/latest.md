@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Août 2025
 description: Les notes de mise à jour d’août 2025 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8b67b2b33b37d631f73d9ea13786cae0e0db59ce
+source-git-commit: af669d58ac4031354e477954a8a733cf0bd7a64b
 workflow-type: tm+mt
 source-wordcount: '1436'
 ht-degree: 36%
@@ -41,7 +41,7 @@ Experience Platform vous permet de vous abonner à des alertes basées sur des �
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
-| ------- | ----------- |
+| --- | --- |
 | Alertes de capacité de débit en flux continu | Trois nouvelles alertes permettent aux utilisateurs de s’abonner et de configurer des alertes pour gérer et surveiller de manière proactive les performances de la capacité de débit de diffusion en continu. Les nouvelles alertes s’affichent lorsque le débit de diffusion en continu a atteint 80 % ou 90 % ou dépasse les limites de capacité. Pour plus d’informations, consultez le guide [règles d’alerte de capacité](../../observability/alerts/rules.md#capacity). |
 
 Pour plus d’informations sur les alertes, consultez la [[!DNL Observability Insights] vue d’ensemble](../../observability/home.md).
@@ -167,7 +167,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE Beta &#x200B;]{type=Informative} Prise en charge des [!DNL Azure Private Links] dans l’interface utilisateur | Vous pouvez désormais utiliser [!DNL Azure Private Links] pour un groupe sélectionné de sources dans l’interface utilisateur. Utilisez cette fonctionnalité pour créer un point d’entrée privé auquel votre source peut se connecter. Grâce aux points d’entrée privés, vous pouvez configurer des connexions et des flux de données qui contournent l’Internet public, ce qui vous offre une sécurité et une isolation réseau accrues pour vos données sensibles. La prise en charge de [!DNL Azure Private Links] est disponible pour les sources suivantes : <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> Pour plus d’informations, consultez le guide sur les [[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md). |
+| [!BADGE Beta ]{type=Informative} Prise en charge des [!DNL Azure Private Links] dans l’interface utilisateur | Vous pouvez désormais utiliser [!DNL Azure Private Links] pour un groupe sélectionné de sources dans l’interface utilisateur. Utilisez cette fonctionnalité pour créer un point d’entrée privé auquel votre source peut se connecter. Grâce aux points d’entrée privés, vous pouvez configurer des connexions et des flux de données qui contournent l’Internet public, ce qui vous offre une sécurité et une isolation réseau accrues pour vos données sensibles. La prise en charge de [!DNL Azure Private Links] est disponible pour les sources suivantes : <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> Pour plus d’informations, consultez le guide sur les [[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md). |
 | Authentification améliorée pour [!DNL Azure Blob Storage] | Vous pouvez désormais utiliser l’authentification basée sur le principal de service pour connecter votre source [!DNL Azure Blob Storage] à Experience Platform. Utilisez l’authentification basée sur le principal de service pour une sécurité renforcée, une rotation plus facile des informations d’identification et un contrôle d’accès plus granulaire pour votre compte. Pour plus d’informations, consultez la [[!DNL Azure Blob Storage] présentation](../../sources/connectors/cloud-storage/blob.md). |
 
 Pour plus d’informations, consultez la [vue d’ensemble des sources](../../sources/home.md).
