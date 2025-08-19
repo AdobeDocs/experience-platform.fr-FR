@@ -2,9 +2,9 @@
 title: Gestion de la conservation des jeux de données d’événements d’expérience dans le lac de données à l’aide de TTL
 description: Découvrez comment évaluer, définir et gérer la conservation des jeux de données d’événements d’expérience dans le lac de données à l’aide de configurations de durée de vie (TTL) avec des API Adobe Experience Platform. Ce guide explique comment l’expiration au niveau des lignes de TTL prend en charge les politiques de conservation des données, optimise l’efficacité du stockage et garantit une gestion efficace du cycle de vie des données. Elle fournit également des cas d’utilisation et des bonnes pratiques pour vous aider à appliquer efficacement la durée de vie.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 65a132609bc30233ac9f7efbe1981d4f75f3acb9
+source-git-commit: a4662d1042122fa9c3260c0e53c50bd78935cf31
 workflow-type: tm+mt
-source-wordcount: '2458'
+source-wordcount: '2472'
 ht-degree: 1%
 
 ---
@@ -112,7 +112,7 @@ Utilisez le point d’entrée `/ttl/{DATASET_ID}` de l’API Data Hygiene pour p
 
 Pour plus d’informations, consultez la documentation d’Adobe Developer [API Data Hygiene](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/#operation/getTtl) .
 
-Pour [vérifier la TTL actuellement appliquée à un jeu de données](#check-applied-ttl-values), envoyez plutôt une requête GET au point d’entrée de [&#128279;](https://developer.adobe.com/experience-platform-apis/references/catalog/)API Catalog Service`/dataSets/{DATASET_ID}`.
+Pour [vérifier la TTL actuellement appliquée à un jeu de données](#check-applied-ttl-values), envoyez plutôt une requête GET au point d’entrée de [ ](https://developer.adobe.com/experience-platform-apis/references/catalog/)API Catalog Service`/dataSets/{DATASET_ID}`.
 
 >[!TIP]
 >
@@ -333,7 +333,13 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 ### Puis-je définir différentes politiques de conservation pour les services de lac de données et de profil ?
 
 +++Réponse
+
+>[!NOTE]
+>
+>La période de conservation du service de profil ne peut être mise à jour qu’une fois tous les 30 jours.
+
 Oui, vous pouvez définir différentes politiques de conservation pour les services de lac de données et de profil. La période de conservation de la banque de profils peut être plus courte ou plus longue que la période de conservation du lac de données, selon les besoins de votre entreprise.
+
 +++
 
 ### Comment puis-je vérifier l’utilisation actuelle de mon jeu de données ?
@@ -366,13 +372,13 @@ Non, une fois qu’une politique de conservation est appliquée, toutes les donn
 
 ### Quelle est la durée de vie minimale que je peux configurer sur un jeu de données Événement d’expérience de lac de données ?
 
-+++Réponse
++++Réponse 
 La durée de vie minimale d’un jeu de données Événement d’expérience de lac de données est de 30 jours. Le lac de données fonctionne comme un système de sauvegarde et de récupération de traitement lors de l’ingestion et du traitement initiaux. Par conséquent, les données doivent rester dans le lac de données pendant au moins 30 jours après l’ingestion avant de pouvoir expirer.
 +++
 
 ### Que se passe-t-il si je dois conserver certains champs du lac de données plus longtemps que ne le permet ma politique de TTL ?
 
-+++Réponse
++++Réponse 
 Utilisez la Distiller de données pour conserver des champs spécifiques au-delà de la durée de vie du jeu de données tout en respectant vos limites d’utilisation. Créez une tâche qui n’écrit régulièrement que les champs nécessaires dans un jeu de données dérivé. Ce workflow assure la conformité avec une durée de vie plus courte tout en préservant les données critiques pour une utilisation prolongée.
 
 Pour plus d’informations, consultez le guide [Créer des jeux de données dérivés avec SQL](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md).

@@ -3,9 +3,9 @@ keywords: service de catalogue ; questions ; questions fréquentes ; questions f
 title: Questions fréquentes
 description: Réponses aux questions les plus fréquemment posées sur le service de catalogue Adobe Experience Platform et les jeux de données.
 exl-id: 70d2a352-75bd-4bbc-98e6-aeea16306f63
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 38f63f1fc985601c53925a529e603f47dc7fb58b
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '487'
 ht-degree: 1%
 
 ---
@@ -27,6 +27,10 @@ Vous pouvez configurer des politiques de conservation sur les jeux de données c
 ### Puis-je définir différentes politiques de conservation pour le lac de données et le service de profil ?
 
 +++Réponse
+
+>[!NOTE]
+>
+>La période de conservation du service de profil ne peut être mise à jour qu’une fois tous les 30 jours.
 
 Oui, vous pouvez appliquer différentes politiques de conservation pour le lac de données et le service de profil.
 
