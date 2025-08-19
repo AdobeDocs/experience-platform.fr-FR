@@ -2,14 +2,14 @@
 title: Connecter Oracle DB à Experience Platform à l’aide de l’interface utilisateur
 description: Découvrez comment connecter votre instance Oracle DB à Experience Platform à l’aide de l’interface utilisateur.
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
-source-git-commit: aa5496be968ee6f117649a6fff2c9e83a4ed7681
+source-git-commit: 7acdc090c020de31ee1a010d71a2969ec9e5bbe1
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 17%
 
 ---
 
-# Créer une connexion source [!DNL Oracle DB] dans l’interface utilisateur
+# Connexion d’[!DNL Oracle DB] à Experience Platform à l’aide de l’interface utilisateur
 
 Lisez ce guide pour savoir comment connecter votre instance [!DNL Oracle DB] à Adobe Experience Platform à l’aide de l’espace de travail des sources dans l’interface utilisateur d’Experience Platform.
 

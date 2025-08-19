@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation des connecteurs source
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: cad2cafdf39c718c3ba971eaa4e7f2318bd5f517
+source-git-commit: 785ddd4ed3a5b8ba2c515ee6390e78b601367814
 workflow-type: tm+mt
 source-wordcount: '1644'
 ht-degree: 56%
@@ -108,7 +108,7 @@ Vous pouvez utiliser les sources suivantes pour ingérer des données d’espace
 | Source | Type d’ingestion | Cloud |
 | --- | --- | --- |
 | [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) | Lot | Azure |
-| [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) | Lot | Azure |
+| [[!DNL Azure Blob Storage]](connectors/cloud-storage/blob.md) | Lot | Azure |
 | [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) | Lot | Azure, AWS |
 | [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) | Lot | Azure |
 | [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) | Lot | Azure |
