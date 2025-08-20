@@ -79,14 +79,14 @@ Les destinations dont le bouton (bascule) **[!UICONTROL Activé/Désactivé]** e
 > ![Onglet Parcourir](../assets/ui/workspace/browse-tab.png)
 > 
 > * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Activer les audiences](/help/images/icons/data-add.png) **[!UICONTROL Activer les audiences]** pour exporter des audiences ou des jeux de données vers cette destination.
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Modifier la destination](/help/images/icons/edit.png)**[!UICONTROL Modifier la destination ]**pour modifier les connexions de destination existantes. Pour plus d’informations, consultez le tutoriel sur la [modification des destinations](/help/destinations/ui/edit-destination.md).
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Modifier la destination](/help/images/icons/edit.png)**[!UICONTROL Modifier la destination &#x200B;]**&#x200B;pour modifier les connexions de destination existantes. Pour plus d’informations, consultez le tutoriel sur la [modification des destinations](/help/destinations/ui/edit-destination.md).
 > * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Modifier les actions marketing](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL Modifier les actions marketing]** pour [modifier les actions marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) pour la destination sélectionnée.
 > * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Supprimer](/help/images/icons/delete.png) **[!UICONTROL Supprimer]** pour [supprimer](delete-destinations.md) une connexion existante à une destination.
 > * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Affichage dans la surveillance](/help/images/icons/monitoring.png) **[!UICONTROL Affichage dans la surveillance]** pour afficher les informations d’activation de cette destination dans le [tableau de bord de surveillance](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
 > * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![S’abonner aux alertes](/help/images/icons/alert-add.png) **[!UICONTROL S’abonner aux alertes]** pour vous abonner aux alertes de flux de données de destination. Vous pouvez vous abonner à des alertes pour recevoir des messages concernant l’état, la réussite ou l’échec de votre exécution de flux. Consultez [S’abonner aux alertes de destination contextuelles](alerts.md) pour des informations détaillées sur les alertes de flux de données de destination.
 > * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Gérer les balises](/help/images/icons/manage-tags.png) **[!UICONTROL Gérer les balises]** pour ajouter ou supprimer des balises d’une destination. Consultez la section [ Gérer les balises de destination ](#manage-tags) pour plus d’informations sur l’utilisation des balises.
 
-Consultez le tableau ci-dessous pour toutes les informations fournies pour chaque destination dans l’onglet [!UICONTROL  Parcourir ].
+Consultez le tableau ci-dessous pour toutes les informations fournies pour chaque destination dans l’onglet [!UICONTROL &#x200B; Parcourir &#x200B;].
 
 | Élément | Description |
 |---------|----------|
@@ -183,9 +183,9 @@ L’onglet **[!UICONTROL Comptes]** vous montre les détails des connexions que 
 
 >[!TIP]
 >
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la commande ![Activer](/help/images/icons/data-add.png)**[!UICONTROL Activer ]**/**[!UICONTROL  Activer les audiences ]**/**[!UICONTROL  Exporter les jeux de données ]**pour exporter des audiences ou des jeux de données vers cette destination.
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la commande ![Modifier les détails](/help/images/icons/edit.png)**[!UICONTROL Modifier les détails ]**pour [mettre à jour](update-accounts.md) les détails d’un compte de destination existant.
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la ![commande Supprimer](/help/images/icons/delete.png)**[!UICONTROL Supprimer ]**pour [supprimer](delete-destination-account.md) un compte de destination existant.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la commande ![Activer](/help/images/icons/data-add.png)**[!UICONTROL Activer &#x200B;]**/**[!UICONTROL &#x200B; Activer les audiences &#x200B;]**/**[!UICONTROL &#x200B; Exporter les jeux de données &#x200B;]**&#x200B;pour exporter des audiences ou des jeux de données vers cette destination.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la commande ![Modifier les détails](/help/images/icons/edit.png)**[!UICONTROL Modifier les détails &#x200B;]**&#x200B;pour [mettre à jour](update-accounts.md) les détails d’un compte de destination existant.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la ![commande Supprimer](/help/images/icons/delete.png)**[!UICONTROL Supprimer &#x200B;]**&#x200B;pour [supprimer](delete-destination-account.md) un compte de destination existant.
 
 ![Onglet Comptes](../assets/ui/workspace/accounts-tab.png)
 
