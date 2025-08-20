@@ -49,7 +49,7 @@ La demande de partage a été envoyée avec succès à l’organisation partenai
 
 ### Autoriser une demande de partenariat {#authorize-request}
 
-Pour autoriser une demande de partenariat d’organisation, accédez à l’onglet [!UICONTROL  Sandbox ] **[!UICONTROL Organisations partenaires]**. Sélectionnez ensuite **[!UICONTROL Requête entrante]**.
+Pour autoriser une demande de partenariat d’organisation, accédez à l’onglet [!UICONTROL &#x200B; Sandbox &#x200B;] **[!UICONTROL Organisations partenaires]**. Sélectionnez ensuite **[!UICONTROL Requête entrante]**.
 
 ![Interface utilisateur des sandbox avec l’onglet Organisations partenaires et la requête entrante en surbrillance.](../images/ui/sandbox-tooling/private-authorise-partner-org.png)
 
