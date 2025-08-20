@@ -4,10 +4,10 @@ description: Découvrez comment les journaux d’audit vous permettent de savoir
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 37%
+source-wordcount: '1624'
+ht-degree: 33%
 
 ---
 
@@ -31,6 +31,8 @@ ht-degree: 37%
 Afin d’accroître la transparence et la visibilité des activités exécutées dans le système, Adobe Experience Platform vous permet d’auditer l’activité des utilisateurs et utilisatrices pour divers services et fonctionnalités sous la forme de « journaux d’audit ». Ces journaux constituent un journal d’audit qui peut vous aider à résoudre les problèmes liés à Experience Platform et à respecter efficacement les politiques de gestion des données d’entreprise et les exigences réglementaires.
 
 Pour faire simple, un journal d’audit indique **qui** effectué **quelle** action et **quand**. Chaque action enregistrée dans un journal contient des métadonnées qui indiquent le type d’action, la date et l’heure, l’ID d’e-mail de l’utilisateur ou de l’utilisatrice qui a exécuté l’action et des attributs supplémentaires liés au type d’action.
+
+Lorsqu’un utilisateur effectue une action, deux types d’événements d’audit sont enregistrés. Un événement principal capture le résultat de l’autorisation de l’action, [!UICONTROL autoriser] ou [!UICONTROL refuser], tandis qu’un événement amélioré capture le résultat de l’exécution, [!UICONTROL succès] ou [!UICONTROL échec]. Plusieurs événements améliorés peuvent être liés au même événement principal. Par exemple, lors de l’activation d’une destination, l’événement principal enregistre l’autorisation de l’action [!UICONTROL Mise à jour de destination], tandis que les événements améliorés enregistrent plusieurs actions [!UICONTROL Activation de segment].
 
 >[!NOTE]
 >
@@ -89,7 +91,7 @@ Vous pouvez afficher les journaux d’audit de différentes fonctionnalités d�
 
 Les journaux d’audit sont conservés pendant 365 jours, après quoi ils seront supprimés du système. Si vous avez besoin de données de plus de 365 jours, vous devez exporter régulièrement les journaux pour répondre aux exigences de votre politique interne.
 
-Votre méthode de demande des journaux d’audit modifie la période autorisée et le nombre d’enregistrements auxquels vous aurez accès. L’[ Exportation des journaux ](#export-audit-logs) vous permet de revenir 365 jours en arrière (par intervalles de 90 jours) à un maximum de 10 000 enregistrements, où comme l’[interface utilisateur du journal d’activité](#filter-audit-logs) dans Experience Platform affiche les 90 derniers jours à un maximum de 1 000 enregistrements.
+Votre méthode de demande des journaux d’audit modifie la période autorisée et le nombre d’enregistrements auxquels vous aurez accès. L’option [Exporter des journaux](#export-audit-logs) vous permet de revenir 365 jours en arrière (par intervalles de 90 jours) à un maximum de 10 000 journaux d’audit (principaux ou améliorés), où comme l’[interface utilisateur du journal d’activité](#filter-audit-logs) dans Experience Platform affiche les 90 derniers jours à un maximum de 1 000 événements principaux, chacun d’eux avec les événements améliorés correspondants.
 
 Sélectionnez un événement dans la liste pour afficher ses détails dans le rail de droite.
 
@@ -101,7 +103,7 @@ Sélectionnez l’icône en forme d’entonnoir (![icône filtre](/help/images/i
 
 >[!NOTE]
 >
->L’interface utilisateur d’Experience Platform affiche uniquement les 90 derniers jours sur un maximum de 1 000 enregistrements, quels que soient les filtres appliqués. Si vous avez besoin de journaux au-delà de cette période (jusqu’à 365 jours au maximum), vous devez [exporter vos journaux d’audit](#export-audit-logs).
+>L’interface utilisateur d’Experience Platform affiche uniquement les 90 derniers jours, avec un maximum de 1 000 événements principaux, chacun avec les événements améliorés correspondants, quels que soient les filtres appliqués. Si vous avez besoin de journaux au-delà de cette période (jusqu’à 365 jours au maximum), vous devez [exporter vos journaux d’audit](#export-audit-logs).
 
 ![Tableau de bord Audits avec le journal d’activité filtré en surbrillance.](../../images/audit-logs/filters.png)
 
@@ -112,7 +114,7 @@ Les filtres suivants sont disponibles pour les événements d’audit dans l’i
 | [!UICONTROL Catégorie] | Utilisez le menu déroulant pour filtrer les résultats affichés par [ catégorie ](#category). |
 | [!UICONTROL Action] | Filtrez par action. Les actions disponibles pour chaque service sont visibles dans le tableau des ressources ci-dessus. |
 | [!UICONTROL Utilisateur] | Saisissez l’ID utilisateur complet (par exemple, `johndoe@acme.com`) à filtrer par utilisateur. |
-| [!UICONTROL Statut] | Filtrez par si l’action a été autorisée (terminée) ou refusée en raison d’un manque d’autorisations [contrôle d’accès](../../../access-control/home.md). |
+| [!UICONTROL Statut] | Filtrer les événements d’audit par résultat : réussi, échec, autorisé ou refusé en raison de l’absence d’autorisations [de contrôle d’accès](../../../access-control/home.md). Pour une action exécutée, les événements principaux affichent [!UICONTROL Autoriser] ou [!UICONTROL Refuser]. Lorsque l’événement principal est [!UICONTROL  Autoriser ], il peut avoir associé un ou plusieurs événements améliorés affichant **[!UICONTROL Succès]** ou **[!UICONTROL Échec]**. Par exemple, une action réussie affiche [!UICONTROL Autoriser] sur l’événement principal et [!UICONTROL Succès] sur l’événement amélioré associé. |
 | [!UICONTROL Date] | Sélectionnez une date de début et/ou une date de fin pour définir une période en fonction de laquelle filtrer les résultats. Les données peuvent être exportées avec une période de recherche en amont de 90 jours (par exemple, 2021-12-15 à 2022-03-15). Cela peut varier en fonction du type d’événement. |
 
 Pour supprimer un filtre, sélectionnez « X » sur l’icône de pilule du filtre en question, ou sélectionnez **[!UICONTROL Effacer tout]** pour supprimer tous les filtres.
@@ -124,7 +126,7 @@ Les données du journal d’audit renvoyées contiennent les informations suivan
 | Nom de la colonne | Description |
 |---|---|
 | [!UICONTROL Horodatage] | Date et heure exactes de l’action effectuée au format `month/day/year hour:minute AM/PM`. |
-| [!UICONTROL Nom de la ressource] | La valeur du champ [!UICONTROL &#x200B; Nom de ressource &#x200B;] dépend de la catégorie choisie comme filtre. |
+| [!UICONTROL Nom de la ressource] | La valeur du champ [!UICONTROL  Nom de ressource ] dépend de la catégorie choisie comme filtre. |
 | [!UICONTROL Catégorie] | Ce champ correspond à la catégorie sélectionnée dans la liste déroulante de filtre. |
 | [!UICONTROL Action] | Les actions disponibles dépendent de la catégorie choisie comme filtre. |
 | [!UICONTROL Utilisateur] | Ce champ fournit l’identifiant utilisateur qui a exécuté la requête. |
@@ -137,7 +139,7 @@ Pour exporter la liste actuelle des journaux d’audit, sélectionnez **[!UICONT
 
 >[!NOTE]
 >
->Les journaux peuvent être demandés par intervalles de 90 jours jusqu’à 365 jours dans le passé. Cependant, la quantité maximale de journaux pouvant être renvoyés au cours d’une seule exportation est de 10 000.
+>Les journaux peuvent être demandés par intervalles de 90 jours jusqu’à 365 jours dans le passé. Cependant, la quantité maximale de journaux pouvant être renvoyés au cours d’une seule exportation est de 10 000 événements d’audit (principaux ou améliorés).
 
 ![Tableau de bord des audits avec l’option [!UICONTROL Journal des téléchargements] mise en surbrillance.](../../images/audit-logs/download.png)
 
@@ -167,7 +169,7 @@ Toutes les actions que vous pouvez effectuer dans l’interface utilisateur peuv
 
 ## Gestion des journaux d’audit pour Adobe Admin Console
 
-Pour savoir comment gérer les journaux d’audit des activités dans Adobe Admin Console, reportez-vous au [document](https://helpx.adobe.com/fr/enterprise/using/audit-logs.html) suivant.
+Pour savoir comment gérer les journaux d’audit des activités dans Adobe Admin Console, reportez-vous au [document](https://helpx.adobe.com/enterprise/using/audit-logs.html) suivant.
 
 ## Étapes suivantes et ressources supplémentaires
 
@@ -175,4 +177,4 @@ Ce guide explique comment gérer les journaux d’audit dans Experience Platform
 
 Pour mieux comprendre les journaux d’audit dans Experience Platform, regardez la vidéo suivante :
 
->[!VIDEO](https://video.tv.adobe.com/v/344646?quality=12&learn=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)

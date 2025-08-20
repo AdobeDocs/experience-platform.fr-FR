@@ -4,9 +4,9 @@ description: Découvrez comment exporter des événements d’audit dans Experie
 role: Developer
 feature: Audits, API
 exl-id: 76c5de76-e391-4258-afd8-ddb2c8a9443f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
 workflow-type: tm+mt
-source-wordcount: '159'
+source-wordcount: '168'
 ht-degree: 4%
 
 ---
@@ -43,4 +43,4 @@ curl -X POST \
 
 **Réponse**
 
-Les résultats sont générés dans un fichier CSV pour l’exportation. Une réponse réussie renvoie un HTTP 307 sans corps de réponse. Un lien vers le fichier d’exportation est fourni dans l’en-tête de réponse `Location` .
+Les résultats sont générés dans un fichier CSV pour l’exportation, chaque entrée représentant un événement d’audit principal ou amélioré. Une réponse réussie renvoie un HTTP 307 sans corps de réponse. Un lien vers le fichier d’exportation est fourni dans l’en-tête de réponse `Location` .
