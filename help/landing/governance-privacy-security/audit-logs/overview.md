@@ -114,7 +114,7 @@ Les filtres suivants sont disponibles pour les événements d’audit dans l’i
 | [!UICONTROL Catégorie] | Utilisez le menu déroulant pour filtrer les résultats affichés par [ catégorie ](#category). |
 | [!UICONTROL Action] | Filtrez par action. Les actions disponibles pour chaque service sont visibles dans le tableau des ressources ci-dessus. |
 | [!UICONTROL Utilisateur] | Saisissez l’ID utilisateur complet (par exemple, `johndoe@acme.com`) à filtrer par utilisateur. |
-| [!UICONTROL Statut] | Filtrer les événements d’audit par résultat : réussi, échec, autorisé ou refusé en raison de l’absence d’autorisations [de contrôle d’accès](../../../access-control/home.md). Pour une action exécutée, les événements principaux affichent [!UICONTROL Autoriser] ou [!UICONTROL Refuser]. Lorsque l’événement principal est [!UICONTROL  Autoriser ], il peut avoir associé un ou plusieurs événements améliorés affichant **[!UICONTROL Succès]** ou **[!UICONTROL Échec]**. Par exemple, une action réussie affiche [!UICONTROL Autoriser] sur l’événement principal et [!UICONTROL Succès] sur l’événement amélioré associé. |
+| [!UICONTROL Statut] | Filtrer les événements d’audit par résultat : réussi, échec, autorisé ou refusé en raison de l’absence d’autorisations [de contrôle d’accès](../../../access-control/home.md). Pour une action exécutée, les événements principaux affichent [!UICONTROL Autoriser] ou [!UICONTROL Refuser]. Lorsque l’événement principal est [!UICONTROL &#x200B; Autoriser &#x200B;], il peut avoir associé un ou plusieurs événements améliorés affichant **[!UICONTROL Succès]** ou **[!UICONTROL Échec]**. Par exemple, une action réussie affiche [!UICONTROL Autoriser] sur l’événement principal et [!UICONTROL Succès] sur l’événement amélioré associé. |
 | [!UICONTROL Date] | Sélectionnez une date de début et/ou une date de fin pour définir une période en fonction de laquelle filtrer les résultats. Les données peuvent être exportées avec une période de recherche en amont de 90 jours (par exemple, 2021-12-15 à 2022-03-15). Cela peut varier en fonction du type d’événement. |
 
 Pour supprimer un filtre, sélectionnez « X » sur l’icône de pilule du filtre en question, ou sélectionnez **[!UICONTROL Effacer tout]** pour supprimer tous les filtres.
@@ -126,7 +126,7 @@ Les données du journal d’audit renvoyées contiennent les informations suivan
 | Nom de la colonne | Description |
 |---|---|
 | [!UICONTROL Horodatage] | Date et heure exactes de l’action effectuée au format `month/day/year hour:minute AM/PM`. |
-| [!UICONTROL Nom de la ressource] | La valeur du champ [!UICONTROL  Nom de ressource ] dépend de la catégorie choisie comme filtre. |
+| [!UICONTROL Nom de la ressource] | La valeur du champ [!UICONTROL &#x200B; Nom de ressource &#x200B;] dépend de la catégorie choisie comme filtre. |
 | [!UICONTROL Catégorie] | Ce champ correspond à la catégorie sélectionnée dans la liste déroulante de filtre. |
 | [!UICONTROL Action] | Les actions disponibles dépendent de la catégorie choisie comme filtre. |
 | [!UICONTROL Utilisateur] | Ce champ fournit l’identifiant utilisateur qui a exécuté la requête. |
