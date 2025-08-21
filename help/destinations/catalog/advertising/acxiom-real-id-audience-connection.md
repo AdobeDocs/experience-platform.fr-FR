@@ -35,7 +35,7 @@ Par exemple, le service des opérations marketing d’une marque mondiale de ser
 
 * **Confirmer les conditions d’utilisation :** avant de pouvoir configurer une nouvelle destination [!DNL Acxiom Real ID Audience Connection], vous devez lire et signer [!DNL Acxiom's] contrat de conditions d’utilisation. Vous recevrez le lien vers le contrat une fois que votre commande client exécutée sera terminée. Tant que vous n’avez pas signé le contrat, la carte de destination [!DNL Acxiom Real ID Audience Connection] ne s’affichera pas dans le catalogue de destinations d’Experience Platform. Une fois que vous avez accepté et signé le contrat, [!DNL Adobe] terminez le processus d’intégration et la carte de destination [!DNL Acxiom Real ID Audience Connection] s’affiche.
 * **Connaître votre ID d’organisation Adobe :** votre ID d’organisation [!DNL Adobe] est nécessaire pour remplir vos Conditions d’utilisation. Voir [!DNL Adobe's] rubrique *Organisations dans Experience Cloud* pour plus d’informations sur la manière d’[afficher votre ID d’organisation](https://experienceleague.adobe.com/fr/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
-* **Obtention d’une licence pour [!DNL Acxiom's Real ID] produit :** une fois une licence obtenue, rendez l’ID réel d’Acxiom disponible dans Real-Time CDP. Voir [Acxiom Data Enhancement](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement) pour plus d’informations.
+* **Obtention d’une licence pour [!DNL Acxiom's Real ID] produit :** une fois une licence obtenue, rendez l’ID réel d’Acxiom disponible dans Real-Time CDP. Voir [Acxiom Data Enhancement](https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement) pour plus d’informations.
 
 
 ## Identités prises en charge {#supported-identities}
@@ -95,7 +95,7 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 
 
 
-Consultez la section [Activer des données d’audience vers des destinations d’exportation de profils par lots](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) pour obtenir des instructions sur l’activation des audience vers cette destination.
+Consultez la section [Activer des données d’audience vers des destinations d’exportation de profils par lots](https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
 >[!NOTE]
 >
@@ -132,7 +132,7 @@ Si les résultats vous conviennent, sélectionnez **[!UICONTROL Terminer]** pour
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
-Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux politiques d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, consultez la [Présentation de la gouvernance des données](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
+Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux politiques d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, consultez la [Présentation de la gouvernance des données](https://experienceleague.adobe.com/fr/docs/experience-platform/data-governance/home).
 
 ## Résolution des problèmes {#troubleshooting}
 
