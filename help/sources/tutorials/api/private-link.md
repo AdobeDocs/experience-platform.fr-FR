@@ -3,10 +3,10 @@ title: Utiliser Azure Private Link pour les sources dans l’API
 description: Découvrez comment créer et utiliser des liens privés pour les sources Adobe Experience Platform
 badge: Beta
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
-source-git-commit: 52365851aef0e0e0ad532ca19a8e0ddccacf7af7
+source-git-commit: 65063d3b81d7082fc7780949c6ebd2ce09461b88
 workflow-type: tm+mt
-source-wordcount: '1380'
-ht-degree: 8%
+source-wordcount: '1657'
+ht-degree: 7%
 
 ---
 
@@ -398,9 +398,13 @@ curl -X GET \
 
 +++
 
-## Activation de la création interactive {#enable-interactive-authoring}
+## Activer le [!DNL Interactive Authoring] {#enable-interactive-authoring}
 
-La création interactive est utilisée pour des fonctionnalités telles que l’exploration d’une connexion ou d’un compte et la prévisualisation des données. Pour activer la création interactive, envoyez une requête POST à `/privateEndpoints/interactiveAuthoring` et spécifiez `enable` en tant qu’opérateur dans vos paramètres de requête.
+>[!IMPORTANT]
+>
+>Vous devez activer le [!DNL Interactive Authoring] avant de créer ou de mettre à jour un flux, ainsi qu’avant de créer, mettre à jour ou explorer une connexion.
+
+[!DNL Interactive Authoring] est utilisé pour des fonctionnalités telles que l’exploration d’une connexion ou d’un compte et la prévisualisation de données. Pour [!DNL Interactive Authoring] activer, envoyez une requête POST à `/privateEndpoints/interactiveAuthoring` et spécifiez `enable` en tant qu’opérateur dans vos paramètres de requête.
 
 **Format d’API**
 
@@ -410,11 +414,11 @@ POST /privateEndpoints/interactiveAuthoring?op=enable
 
 | Paramètre de requête | Description |
 | --- | --- |
-| `op` | Opération que vous souhaitez effectuer. Pour activer la création interactive, définissez la valeur `op` sur `enable`. |
+| `op` | Opération que vous souhaitez effectuer. Pour [!DNL Interactive Authoring] activer, définissez la valeur `op` sur `enable`. |
 
 **Requête**
 
-La requête suivante active la création interactive pour votre point d’entrée privé et définit la TTL sur 60 minutes.
+La requête suivante active [!DNL Interactive Authoring] pour votre point d’entrée privé et définit la durée de vie sur 60 minutes.
 
 +++Sélectionner pour afficher l’exemple de requête
 
@@ -433,7 +437,7 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `autoTerminationMinutes` | Durée de vie (TTL) de création interactive en minutes. La création interactive est utilisée pour des fonctionnalités telles que l’exploration d’une connexion ou d’un compte et la prévisualisation des données. Vous pouvez définir une durée de vie maximale de 120 minutes. La durée de vie par défaut est de 60 minutes. |
+| `autoTerminationMinutes` | Durée de vie (TTL) [!DNL Interactive Authoring] en minutes. [!DNL Interactive Authoring] est utilisé pour des fonctionnalités telles que l’exploration d’une connexion ou d’un compte et la prévisualisation de données. Vous pouvez définir une durée de vie maximale de 120 minutes. La durée de vie par défaut est de 60 minutes. |
 
 +++
 
@@ -441,9 +445,9 @@ curl -X POST \
 
 Une réponse réussie renvoie le statut HTTP 202 (Accepté).
 
-## Récupération de l’état de création interactive {#retrieve-interactive-authoring-status}
+## Récupérer le statut du [!DNL Interactive Authoring] {#retrieve-interactive-authoring-status}
 
-Pour afficher le statut actuel de la création interactive pour votre point d’entrée privé, envoyez une requête GET à `/privateEndpoints/interactiveAuthoring`.
+Pour afficher le statut actuel de [!DNL Interactive Authoring] pour votre point d’entrée privé, envoyez une requête GET à `/privateEndpoints/interactiveAuthoring`.
 
 **Format d’API**
 
@@ -453,7 +457,7 @@ GET /privateEndpoints/interactiveAuthoring
 
 **Requête**
 
-La requête suivante récupère le statut de la création interactive :
+La requête suivante récupère le statut de [!DNL Interactive Authoring] :
 
 +++Sélectionner pour afficher l’exemple de requête
 
@@ -481,7 +485,7 @@ curl -X GET \
 
 | Propriété | Description |
 | --- | --- |
-| `status` | Statut de la création interactive. Les valeurs valides sont les suivantes : `disabled`, `enabling`, `enabled`. |
+| `status` | Statut de [!DNL Interactive Authoring]. Les valeurs valides sont les suivantes : `disabled`, `enabling`, `enabled`. |
 
 +++
 
@@ -819,3 +823,124 @@ Une réponse réussie renvoie toutes les connexions liées à des points d’ent
 ```
 
 +++
+
+## Annexe
+
+Lisez cette section pour plus d’informations sur l’utilisation de liens privés [!DNL Azure] dans l’API.
+
+### Configuration de votre compte [!DNL Snowflake] pour vous connecter à des liens privés
+
+Vous devez effectuer les étapes préalables suivantes pour utiliser la source [!DNL Snowflake] avec des liens privés.
+
+Tout d’abord, vous devez créer un ticket d’assistance dans [!DNL Snowflake] et demander l’**identifiant de ressource du service de point d’entrée** de la région [!DNL Azure] de votre compte [!DNL Snowflake]. Suivez les étapes ci-dessous pour créer un ticket [!DNL Snowflake] :
+
+1. Accédez à l’[[!DNL Snowflake] UI](https://app.snowflake.com) et connectez-vous avec votre compte de messagerie. Au cours de cette étape, vous devez vous assurer que votre e-mail est vérifié dans les paramètres du profil.
+2. Sélectionnez votre **menu utilisateur** puis sélectionnez **assistance** pour accéder à l’assistance [!DNL Snowflake].
+3. Pour créer un dossier de support, sélectionnez **[!DNL + Support Case]**. Remplissez ensuite le formulaire avec les détails pertinents et joignez tous les fichiers nécessaires.
+4. Lorsque vous avez terminé, soumettez le dossier.
+
+L’identifiant de ressource de point d’entrée est formaté comme suit :
+
+```shell
+subscriptions/{SUBSCRIPTION_ID}/resourceGroups/az{REGION}-privatelink/providers/microsoft.network/privatelinkservices/sf-pvlinksvc-az{REGION}
+```
+
++++Sélectionner pour afficher l’exemple
+
+```shell
+/subscriptions/4575fb04-6859-4781-8948-7f3a92dc06a3/resourceGroups/azwestus2-privatelink/providers/microsoft.network/privatelinkservices/sf-pvlinksvc-azwestus2
+```
+
++++
+
+| Paramètre | Description | Exemple |
+| --- | --- | --- |
+| `{SUBSCRIPTION_ID}` | Identifiant unique qui identifie votre abonnement [!DNL Azure]. | `a1b2c3d4-5678-90ab-cdef-1234567890ab` |
+| `{REGION}` | Région [!DNL Azure] de votre compte [!DNL Snowflake]. | `azwestus2` |
+
+### Récupérer les détails de la configuration de votre lien privé
+
+Pour récupérer les détails de votre configuration de lien privé, vous devez exécuter la commande suivante dans [!DNL Snowflake] :
+
+```sql
+USE ROLE accountadmin;
+SELECT key, value::varchar
+FROM TABLE(FLATTEN(input => PARSE_JSON(SYSTEM$GET_PRIVATELINK_CONFIG())));
+```
+
+Ensuite, récupérez les valeurs des propriétés suivantes :
+
+* `privatelink-account-url`
+* `regionless-privatelink-account-url`
+* `privatelink_ocsp-url`
+
+Une fois les valeurs récupérées, vous pouvez effectuer l’appel suivant pour créer un lien privé pour [!DNL Snowflake].
+
+**Requête**
+
+La requête suivante crée un point d’entrée privé pour [!DNL Snowflake] :
+
+>[!BEGINTABS]
+
+>[!TAB Modèle]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/privateEndpoints/' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "{ENDPOINT_NAME}",
+    "subscriptionId": "{AZURE_SUBSCRIPTION_ID}",
+    "resourceGroupName": "{RESOURCE_GROUP_NAME}",
+    "resourceName": "{SNOWFLAKE_ENDPOINT_SERVICE_NAME}",
+    "fqdns": [
+      "{PRIVATELINK_ACCOUNT_URL}",
+      "{REGIONLESS_PRIVATELINK_ACCOUNT_URL}",
+      "{PRIVATELINK_OCSP_URL}"
+    ],
+    "connectionSpec": {
+      "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+      "version": "1.0"
+    }
+  }'
+```
+
+>[!TAB Exemple]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/privateEndpoints/' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "TEST_Snowflake_PE",
+    "subscriptionId": "4575fb04-6859-4781-8948-7f3a92dc06a3",
+    "resourceGroupName": "azwestus2-privatelink",
+    "resourceName": "sf-pvlinksvc-azwestus2",
+    "fqdns": [
+      "hf06619.west-us-2.privatelink.snowflakecomputing.com",
+      "adobe-segmentationdbint.privatelink.snowflakecomputing.com",
+      "ocsp.hf06619.west-us-2.privatelink.snowflakecomputing.com"
+    ],
+    "connectionSpec": {
+      "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+      "version": "1.0"
+    }
+  }'
+```
+
+
+>[!ENDTABS]
+
+### Approuver un point d’entrée privé pour [!DNL Azure Blob] et [!DNL Azure Data Lake Gen2]
+
+Pour approuver une demande de point d’entrée privé pour les sources [!DNL Azure Blob] et [!DNL Azure Data Lake Gen2], connectez-vous au [!DNL Azure Portal] . Dans le volet de navigation de gauche, sélectionnez **[!DNL Data storage]**, puis accédez à l’onglet **[!DNL Security + networking]** et choisissez **[!DNL Networking]**. Sélectionnez ensuite **[!DNL Private endpoints]** pour afficher la liste des points d’entrée privés associés à votre compte et leurs états de connexion actuels. Pour approuver une demande en attente, sélectionnez le point d’entrée souhaité, puis cliquez sur **[!DNL Approve]**.
+
+![Portail Azure avec une liste de points d’entrée privés en attente.](../../images/tutorials/private-links/azure.png)
