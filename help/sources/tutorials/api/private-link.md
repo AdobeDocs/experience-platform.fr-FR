@@ -1,17 +1,16 @@
 ---
-title: Prise en charge des liens privés dans les sources
+title: Utiliser Azure Private Link pour les sources dans l’API
 description: Découvrez comment créer et utiliser des liens privés pour les sources Adobe Experience Platform
 badge: Beta
-hide: true
-hidefromtoc: true
-source-git-commit: 4c91ffc60a2537fcc76ce935bf3b163984fdc5e4
+exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
+source-git-commit: 52365851aef0e0e0ad532ca19a8e0ddccacf7af7
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1380'
 ht-degree: 8%
 
 ---
 
-# Prise en charge des liens privés dans les sources
+# Utilisation de [!DNL Azure Private Link] pour les sources dans l’API
 
 >[!AVAILABILITY]
 >
@@ -22,11 +21,13 @@ ht-degree: 8%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-Lisez ce guide pour savoir comment établir une connexion de point d’entrée privé à des sources basées sur Azure par le biais d’un lien privé et permettre un mécanisme de transfert plus sécurisé pour vos données.
+Vous pouvez utiliser la fonction [!DNL Azure Private Link] pour créer des points d’entrée privés auxquels vos sources Adobe Experience Platform peuvent se connecter. Connectez vos sources en toute sécurité à un réseau virtuel à l&#39;aide d&#39;adresses IP privées, éliminez le besoin d&#39;adresses IP publiques et réduisez votre surface d&#39;attaque.Simplifiez votre configuration réseau en supprimant la nécessité de configurations complexes de pare-feu ou de traduction d&#39;adresses réseau, tout en veillant à ce que le trafic de données atteigne uniquement les services approuvés.
 
-## Prise en main
+Lisez ce guide pour savoir comment utiliser des API pour créer et utiliser un point d’entrée privé.
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+## Commencer
+
+Ce guide nécessite une compréhension professionnelle des composants suivants d’Experience Platform :
 
 * [Sources](../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
 * [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
