@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Vue d’ensemble de l’ingestion en flux continu
 description: L’ingestion par flux pour Adobe Experience Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données d’appareils côté client et côté serveur vers Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: f5ae9170b312d9f24c863a14b8cc2310fcaf1cb2
 workflow-type: tm+mt
-source-wordcount: '424'
-ht-degree: 14%
+source-wordcount: '419'
+ht-degree: 15%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Experience Platform vous permet de générer des expériences coordonnées
 
 La vidéo suivante est conçue pour vous aider à comprendre l’ingestion par flux et décrit les concepts ci-dessus.
 
->[!VIDEO](https://video.tv.adobe.com/v/31636?quality=12&learn=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### Diffusion d’enregistrements de profil et de [!DNL ExperienceEvents]
 
@@ -39,7 +39,7 @@ Pour plus d’informations sur l’activation d’un jeu de données pour [!DNL 
 
 >[!IMPORTANT]
 >
->Les mécanismes de sécurisation pour l’ingestion en flux continu sont calculés au niveau de l’organisation et non au niveau du sandbox. Cela signifie que votre utilisation des données par sandbox est liée au droit total d’utilisation de licence qui correspond à l’ensemble de votre organisation. En outre, l’utilisation des données dans les sandbox de développement est limitée à 10 % du total de vos profils. Pour plus d’informations sur les droits d’utilisation de licence, consultez le [guide des bonnes pratiques de gestion des données](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
+>Les mécanismes de sécurisation pour l’ingestion en flux continu sont liés au droit total d’utilisation de licence qui correspond à l’ensemble de votre organisation. En outre, l’utilisation des données dans les sandbox de développement est limitée à 10 % du total de vos profils. Pour plus d’informations sur les droits d’utilisation de licence, consultez le [guide des bonnes pratiques de gestion des données](../../landing/license-usage-and-guardrails/data-management-best-practices.md). Pour savoir comment définir des limites au débit de diffusion en continu, lisez la [présentation de la capacité](../../landing/license-usage-and-guardrails/capacity.md).
 
 | Destination | Latence attendue |
 | --------- | ---------------- |
