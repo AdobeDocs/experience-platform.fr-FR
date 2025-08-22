@@ -1,23 +1,25 @@
 ---
 title: Destination Marketo Engage
 description: Marketo Engage est la seule solution de gestion de l’expérience client (CXM) de bout en bout pour le marketing, la publicité, l’analyse et le commerce. Il vous permet d’automatiser et de gérer les activités, de la gestion des prospects CRM à l’engagement des clients, en passant par le marketing basé sur les comptes et l’attribution des recettes.
-exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: c57a519b5a230dc62699808cf5c020d48cc79083
+source-git-commit: 47d808b4dd1736f3444ddb479c3a460c289d09f8
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '949'
 ht-degree: 25%
 
 ---
 
-# Destination Marketo Engage {#beta-marketo-engage-destination}
+# (Hérité) (V2) Destination Marketo Engage {#beta-marketo-engage-destination}
 
 ## Journal des modifications de destination {#changelog}
 
 >[!IMPORTANT]
 >
->Avec la sortie du connecteur de destination [Marketo V2 amélioré](/help/release-notes/2022/july-2022.md#destinations), vous voyez désormais deux cartes Marketo dans le catalogue des destinations.
->* Si vous activez déjà des données vers la destination **[!UICONTROL Marketo V1]** : veuillez créer de nouveaux flux de données vers la destination **[!UICONTROL Marketo V2]** et supprimer les flux de données existants vers la destination **[!UICONTROL Marketo V1]** d’ici février 2023. À partir de cette date, la carte de destination **[!UICONTROL Marketo V1]** sera supprimée.
->* Si vous n’avez pas encore créé de flux de données vers la destination **[!UICONTROL Marketo V1]**, veuillez utiliser la nouvelle carte **[!UICONTROL Marketo V2]** pour vous connecter à et exporter des données vers Marketo.
+>Le **[!UICONTROL Marketo Engage (hérité) (V2)]** sera abandonné en **mars 2026**.
+>
+>Pour garantir une transition en douceur vers la nouvelle destination **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)**, passez en revue les points clés suivants et les actions requises :
+>
+>* Tous les utilisateurs du Marketo Engage **[!UICONTROL (hérité) (V2)]** existant doivent migrer vers la nouvelle destination **[!UICONTROL Marketo Engage]** d’ici mars 2026.
+>* **Les flux de données existants ne seront pas migrés automatiquement.** Vous devez [configurer une nouvelle connexion](../../ui/connect-destination.md) à la nouvelle destination **[!UICONTROL Marketo Engage]** et y activer vos audiences.
 
 ![Image des deux cartes de destination Marketo dans une vue côte à côte.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
@@ -77,8 +79,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 > 
->* Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions).
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions).
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Pour obtenir des instructions détaillées sur la configuration de la destination et l’activation des audiences, lisez [Envoi d’une audience Adobe Experience Platform vers une liste statique Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=fr) dans la documentation de Marketo.
 
@@ -93,7 +95,7 @@ La vidéo ci-dessous montre également les étapes de configuration d’une dest
 >* Les deux limites mentionnées dans la vidéo ne s’appliquent plus. Vous pouvez désormais mapper de nombreux autres champs d’attribut de profil en plus des informations d’appartenance à l’audience prises en charge au moment de l’enregistrement de la vidéo. Vous pouvez également exporter vers Marketo des membres de l’audience qui n’existent pas encore dans vos listes statiques Marketo, et ils seront ajoutés aux listes.
 >* À l’étape **[!UICONTROL Planifier l’audience]** du workflow d’activation, dans Marketo V1, vous deviez ajouter manuellement un **[!UICONTROL ID de mappage]** pour exporter des données vers Marketo. Cette étape manuelle n’est plus obligatoire dans Marketo V2.
 
->[!VIDEO](https://video.tv.adobe.com/v/3440160?quality=12&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
 ## Surveiller la destination {#monitor-destination}
 
@@ -104,4 +106,3 @@ Les informations de surveillance de la connexion [!DNL Marketo Engage] comprenne
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
 Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux politiques d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, consultez la [présentation de la gouvernance des données](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=fr).
-

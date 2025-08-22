@@ -5,10 +5,10 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 290d6eb20b7d35839b4bb37e71e2c993b112d896
+source-git-commit: cbf00cbe66aa3332f5b5abd41ac5dc9f41170a95
 workflow-type: tm+mt
-source-wordcount: '1316'
-ht-degree: 74%
+source-wordcount: '1321'
+ht-degree: 73%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 74%
    * [Supprimer les comptes de destination](./api/delete-destination-account.md)
    * [Supprimer les flux de données de destination](./api/delete-destination-dataflow.md)
    * [Exporter des jeux de données](/help/destinations/api/export-datasets.md)
-   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=fr#use-cases)
+   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
    * [Créer une connexion à une destination](./ui/connect-destination.md)
@@ -49,7 +49,7 @@ ht-degree: 74%
       * [Exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur d’Experience Platform](./ui/export-file-now.md)
       * [Exporter des jeux de données à l’aide de l’interface utilisateur d’Experience Platform](./ui/export-datasets.md)
       * [Étendre les plannings d’exportation de jeux de données pour les flux de données créés avant novembre 2024](./ui/dataset-expiration-update.md)
-      * [(Version bêta) Utiliser l’attribut XDM de l’heure de la dernière qualification dans les nouvelles destinations de stockage dans le cloud en version bêta](./ui/activate-last-qualification-time.md)
+      * [(Beta) Utiliser l’attribut XDM de l’heure de la dernière qualification dans les nouvelles destinations de stockage dans le cloud en version Beta](./ui/activate-last-qualification-time.md)
       * [Exporter des tableaux, mappages et objets](/help/destinations/ui/export-arrays-maps-objects.md)
       * [Effectuer des transformations sur les données exportées vers des destinations d’espace de stockage](/help/destinations/ui/data-transformations-calculated-fields.md)
    * [Afficher les détails de la destination](./ui/destination-details-page.md)
@@ -66,7 +66,8 @@ ht-degree: 74%
    * Destinations Adobe{#adobe}
       * [Présentation des destinations Adobe](./catalog/adobe/overview.md)
       * [Audiences Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
-      * [Connexion Marketo Engage](./catalog/adobe/marketo-engage.md)
+      * [Connexion Marketo Engage](./catalog/adobe/marketo-engage-connection.md)
+      * [(Hérité) (V2) Connexion Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [(Beta) Connexion de synchronisation des personnes Marketo Engage](./catalog/adobe/marketo-engage-person-sync.md)
       * [Connexion Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
       * [Partage d’audiences Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr)
@@ -92,7 +93,7 @@ ht-degree: 74%
       * [Connexion Google Ads](./catalog/advertising/google-ads-destination.md)
       * [Extension Google Ads](./catalog/advertising/google-ads-extension.md)
       * [Connexion Google Ad Manager](./catalog/advertising/google-ad-manager.md)
-      * [(Version bêta) Connexion à Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
+      * [(Beta) Connexion à Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Connexion à Google Customer Match](./catalog/advertising/google-customer-match.md)
       * [(Disponibilité limitée) Correspondance client Google + connexion DV360](./catalog/advertising/google-customer-match-dv360.md)
       * [Connexion Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
