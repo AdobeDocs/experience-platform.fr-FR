@@ -3,9 +3,9 @@ keywords: platform;destinations;espace de travail des destinations;espace de tra
 title: Espace de travail des destinations
 description: 'L’espace de travail des destinations se compose de cinq sections : Vue d’ensemble, Catalogue, Parcourir, Comptes et Vue du système. Elles sont décrites dans les sections ci-dessous.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 73d84174a9960e180a81c3db938f3f18f68f3beb
+source-git-commit: c8eedc1f020b8605c9565015461cb1dfd47bba1f
 workflow-type: tm+mt
-source-wordcount: '2235'
+source-wordcount: '2240'
 ht-degree: 36%
 
 ---
@@ -79,14 +79,14 @@ Les destinations dont le bouton (bascule) **[!UICONTROL Activé/Désactivé]** e
 > ![Onglet Parcourir](../assets/ui/workspace/browse-tab.png)
 > 
 > * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Activer les audiences](/help/images/icons/data-add.png) **[!UICONTROL Activer les audiences]** pour exporter des audiences ou des jeux de données vers cette destination.
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Modifier la destination](/help/images/icons/edit.png)**[!UICONTROL Modifier la destination &#x200B;]**&#x200B;pour modifier les connexions de destination existantes. Pour plus d’informations, consultez le tutoriel sur la [modification des destinations](/help/destinations/ui/edit-destination.md).
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Modifier la destination](/help/images/icons/edit.png)**[!UICONTROL Modifier la destination ]**pour modifier les connexions de destination existantes. Pour plus d’informations, consultez le tutoriel sur la [modification des destinations](/help/destinations/ui/edit-destination.md).
 > * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Modifier les actions marketing](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL Modifier les actions marketing]** pour [modifier les actions marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) pour la destination sélectionnée.
 > * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Supprimer](/help/images/icons/delete.png) **[!UICONTROL Supprimer]** pour [supprimer](delete-destinations.md) une connexion existante à une destination.
 > * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Affichage dans la surveillance](/help/images/icons/monitoring.png) **[!UICONTROL Affichage dans la surveillance]** pour afficher les informations d’activation de cette destination dans le [tableau de bord de surveillance](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
 > * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![S’abonner aux alertes](/help/images/icons/alert-add.png) **[!UICONTROL S’abonner aux alertes]** pour vous abonner aux alertes de flux de données de destination. Vous pouvez vous abonner à des alertes pour recevoir des messages concernant l’état, la réussite ou l’échec de votre exécution de flux. Consultez [S’abonner aux alertes de destination contextuelles](alerts.md) pour des informations détaillées sur les alertes de flux de données de destination.
 > * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Gérer les balises](/help/images/icons/manage-tags.png) **[!UICONTROL Gérer les balises]** pour ajouter ou supprimer des balises d’une destination. Consultez la section [ Gérer les balises de destination ](#manage-tags) pour plus d’informations sur l’utilisation des balises.
 
-Consultez le tableau ci-dessous pour toutes les informations fournies pour chaque destination dans l’onglet [!UICONTROL &#x200B; Parcourir &#x200B;].
+Consultez le tableau ci-dessous pour toutes les informations fournies pour chaque destination dans l’onglet [!UICONTROL  Parcourir ].
 
 | Élément | Description |
 |---------|----------|
@@ -128,7 +128,6 @@ Utilisez la barre de recherche située en haut du tableau pour rechercher rapide
 Utilisez les filtres de la barre latérale gauche pour affiner votre recherche.
 
 ![Filtres de destination dans l’onglet Parcourir](../assets/ui/workspace/destination-filters.png)
-
 
 * **[!UICONTROL Plateforme de destination]** : filtrez les flux de données selon des plateformes de destination spécifiques (par exemple, [!DNL Amazon S3], [!DNL Facebook Custom Audience], [!DNL LinkedIn Matched Audience], etc.). Vous pouvez sélectionner plusieurs plateformes simultanément.
 * **[!UICONTROL A n’importe quelle balise]** : filtrez les flux de données auxquels des balises spécifiques sont affectées. Cela vous permet d’organiser et de trouver les flux de données en fonction de votre balisage personnalisé.
@@ -183,9 +182,9 @@ L’onglet **[!UICONTROL Comptes]** vous montre les détails des connexions que 
 
 >[!TIP]
 >
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la commande ![Activer](/help/images/icons/data-add.png)**[!UICONTROL Activer &#x200B;]**/**[!UICONTROL &#x200B; Activer les audiences &#x200B;]**/**[!UICONTROL &#x200B; Exporter les jeux de données &#x200B;]**&#x200B;pour exporter des audiences ou des jeux de données vers cette destination.
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la commande ![Modifier les détails](/help/images/icons/edit.png)**[!UICONTROL Modifier les détails &#x200B;]**&#x200B;pour [mettre à jour](update-accounts.md) les détails d’un compte de destination existant.
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la ![commande Supprimer](/help/images/icons/delete.png)**[!UICONTROL Supprimer &#x200B;]**&#x200B;pour [supprimer](delete-destination-account.md) un compte de destination existant.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la commande ![Activer](/help/images/icons/data-add.png)**[!UICONTROL Activer ]**/**[!UICONTROL  Activer les audiences ]**/**[!UICONTROL  Exporter les jeux de données ]**pour exporter des audiences ou des jeux de données vers cette destination.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la commande ![Modifier les détails](/help/images/icons/edit.png)**[!UICONTROL Modifier les détails ]**pour [mettre à jour](update-accounts.md) les détails d’un compte de destination existant.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la ![commande Supprimer](/help/images/icons/delete.png)**[!UICONTROL Supprimer ]**pour [supprimer](delete-destination-account.md) un compte de destination existant.
 
 ![Onglet Comptes](../assets/ui/workspace/accounts-tab.png)
 
@@ -197,7 +196,7 @@ L’onglet **[!UICONTROL Comptes]** vous montre les détails des connexions que 
 | [!UICONTROL Nom d’utilisateur] | Nom d’utilisateur que vous avez sélectionné dans le [workflow de connexion à la destination](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Connexions] | Représente le nombre de flux de données de destination uniques réussis et connectés avec des informations de base créées pour une destination. |
 | [!UICONTROL Date d’autorisation] | La date à laquelle la connexion à cette destination a été autorisée. |
-| [!UICONTROL Date d’expiration] | Date d’expiration de l’autorisation de connexion à cette destination. <br>**Important** : cette colonne est actuellement disponible uniquement pour la connexion [Facebook](../catalog/social/facebook.md). |
+| [!UICONTROL Date d’expiration] | Date d’expiration de l’autorisation de connexion à cette destination. <br>**Important** : cette colonne est actuellement disponible uniquement pour les connexions [Facebook](../catalog/social/facebook.md), [LinkedIn](../catalog/social/linkedin.md) et [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md). |
 
 {style="table-layout:auto"}
 
