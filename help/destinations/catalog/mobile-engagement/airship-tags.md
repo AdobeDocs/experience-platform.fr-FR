@@ -3,16 +3,24 @@ keywords: balises airship;destination airship
 title: Connexion Balises Airship
 description: Transmettez facilement les données d’audience Adobe à Airship sous la forme de balises d’audience pour le ciblage dans Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5619424024eff81fca21408288494402e2a4d4ff
 workflow-type: tm+mt
-source-wordcount: '972'
-ht-degree: 32%
+source-wordcount: '1082'
+ht-degree: 31%
 
 ---
 
 # Connexion [!DNL Airship Tags] {#airship-tags-destination}
 
 ## Présentation
+
+>[!IMPORTANT]
+>
+>* À compter du vendredi 21 août 2025, vous pourrez voir deux cartes **[!DNL Airship Tags]** côte à côte dans le catalogue des destinations. Cela est dû à une mise à niveau interne du service de destinations. Le connecteur de destination **[!DNL Airship Tags]** existant a été renommé **[!UICONTROL (obsolète) Balises Airship]** et une nouvelle carte portant le nom **[!UICONTROL Balises Airship]** est désormais disponible pour vous.
+>* Utilisez la nouvelle connexion **[!UICONTROL Balises Airship]** dans le catalogue pour les nouveaux flux de données d’activation. Si vous disposez de flux de données actifs vers la destination **[!UICONTROL (Obsolète) Balises Airship]**, ils seront mis à jour automatiquement. Aucune action n’est donc requise de votre part.
+>* Si vous créez des flux de données par le biais de l’[API Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/), vous devez mettre à jour vos [!DNL flow spec ID] et [!DNL connection spec ID] aux valeurs suivantes :
+>   * ID de spécification de flux : `0c7e71c8-4d60-4685-a216-77f57e37b04a`
+>   * ID de spécification de connexion : `aec13e22-8226-4b5d-9961-6baa35b251d2`
 
 [!DNL Airship] est la principale plateforme d’engagement des clients. Elle vous permet de fournir à vos utilisateurs des messages omnicanal pertinents et personnalisés à chaque étape du cycle de vie du client.
 
@@ -98,7 +106,7 @@ Par exemple, un retailer configure une audience spécifique à la marque Jeans d
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -126,7 +134,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
