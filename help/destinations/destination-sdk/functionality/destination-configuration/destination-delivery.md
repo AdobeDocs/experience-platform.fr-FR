@@ -2,10 +2,10 @@
 description: Découvrez comment configurer les paramètres de diffusion de destination pour les destinations créées avec Destination SDK afin d’indiquer où vont les données exportées et quelle règle d’authentification est utilisée à l’emplacement où les données seront envoyées.
 title: Diffusion de destination
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '564'
-ht-degree: 96%
+source-wordcount: '641'
+ht-degree: 82%
 
 ---
 
@@ -48,7 +48,8 @@ Pendant la configuration des paramètres de diffusion de destination, vous pouve
 
 | Paramètre | Type | Description |
 |---------|----------|------|
-| `authenticationRule` | Chaîne | Indique comment [!DNL Experience Platform] devrait se connecter à la destination. Valeurs prises en charge :<ul><li>`CUSTOMER_AUTHENTICATION` : utilisez cette option si la clientèle Experience Platform se connecte à votre système via l’une des méthodes d’authentification décrites [ici](customer-authentication.md).</li><li>`PLATFORM_AUTHENTICATION` : utilisez cette option s’il existe un système d’authentification global entre Adobe et la destination et que le client [!DNL Experience Platform] n’a pas besoin de fournir d’informations d’authentification pour se connecter à la destination. Dans ce cas, vous devez créer des informations d’identification à l’aide de la configuration des [informations d’identification API](../../credentials-api/create-credential-configuration.md). </li><li>`NONE` : utilisez cette option si aucune authentification n’est obligatoire pour envoyer des données à votre plateforme de destination. </li></ul> |
+| `authenticationRule` | Chaîne | Indique comment [!DNL Experience Platform] devrait se connecter à la destination. Valeurs prises en charge :<ul><li>`CUSTOMER_AUTHENTICATION` : utilisez cette option si la clientèle Experience Platform se connecte à votre système via l’une des méthodes d’authentification décrites [ici](customer-authentication.md).</li><li>`PLATFORM_AUTHENTICATION` : utilisez cette option s’il existe un système d’authentification global entre Adobe et la destination et que le client [!DNL Experience Platform] n’a pas besoin de fournir d’informations d’authentification pour se connecter à la destination. Dans ce cas, vous devez créer un objet d’identification à l’aide de la configuration [API d’identification](../../credentials-api/create-credential-configuration.md) et définir le paramètre `authenticationId` sur la valeur de l’ID d’objet d’identification.</li><li>`NONE` : utilisez cette option si aucune authentification n’est obligatoire pour envoyer des données à votre plateforme de destination. </li></ul> |
+| `authenticationId` | Chaîne | `instanceId` de l’ID de configuration de l’objet d’identification à utiliser pour l’authentification. Ce paramètre n’est requis que lorsque vous devez spécifier une configuration d’informations d’identification spécifique. |
 | `destinationServerId` | Chaîne | Paramètre `instanceId` du [serveur de destination](../../authoring-api/destination-server/create-destination-server.md) vers lequel vous souhaitez exporter des données. |
 | `deliveryMatchers.type` | Chaîne | <ul><li>Pendant la configuration de la diffusion de destination pour les destinations basées sur des fichiers, définissez toujours ce paramètre sur `SOURCE`.</li><li>Pendant la configuration de la diffusion de destination pour une destination de diffusion en streaming, la section `deliveryMatchers` n’est pas obligatoire.</li></ul> |
 | `deliveryMatchers.value` | Chaîne | <ul><li>Pendant la configuration de la diffusion de destination pour les destinations basées sur des fichiers, définissez toujours ce paramètre sur `batch`.</li><li>Pendant la configuration de la diffusion de destination pour une destination de diffusion en streaming, la section `deliveryMatchers` n’est pas obligatoire.</li></ul> |
@@ -94,6 +95,32 @@ L’exemple ci-dessous montre comment les paramètres de diffusion de destinatio
          ],
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
          "destinationServerId":"{{destinationServerId}}"
+      }
+   ]
+}
+```
+
+>[!ENDSHADEBOX]
+
+## Configuration de l’authentification de Platform {#platform-authentication}
+
+Lors de l’utilisation de `PLATFORM_AUTHENTICATION`, vous devez spécifier le paramètre `authenticationId` pour lier votre configuration de destination à la configuration des informations d’identification.
+
+1. Définissez `destinationDelivery.authenticationRule` sur `"PLATFORM_AUTHENTICATION"` dans votre configuration de destination
+2. [Créez l’objet d’identification](/help/destinations/destination-sdk/credentials-api/create-credential-configuration.md).
+3. Définissez le paramètre `authenticationId` sur la valeur `instanceId` de l’objet d’identification.
+
+**Exemple de configuration avec PLATFORM_AUTHENTICATION:**
+
+>[!BEGINSHADEBOX]
+
+```json
+{
+   "destinationDelivery":[
+      {
+         "authenticationRule":"PLATFORM_AUTHENTICATION",
+         "authenticationId":"<string-here>",
+         "destinationServerId":"<string-here>"
       }
    ]
 }

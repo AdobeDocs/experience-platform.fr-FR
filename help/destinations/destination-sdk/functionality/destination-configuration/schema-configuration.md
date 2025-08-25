@@ -2,10 +2,10 @@
 description: Découvrez comment configurer les schémas du partenaire pour les destinations créées avec Destination SDK.
 title: Configuration des schémas de partenaire
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 3c772e99e7f0417672e60d56ace962abda2b7d76
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '1910'
-ht-degree: 79%
+source-wordcount: '1924'
+ht-degree: 77%
 
 ---
 
@@ -148,7 +148,7 @@ Dans une configuration de schéma dynamique, le tableau `profileFields` est remp
 
 | Paramètre | Type | Obligatoire / Facultatif | Description |
 |---------|----------|------|---|
-| `dynamicEnum.authenticationRule` | Chaîne | Obligatoire | Indique comment la clientèle [!DNL Experience Platform] se connecte à votre destination. Les valeurs acceptées sont les suivantes : `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Utilisez `CUSTOMER_AUTHENTICATION` si la clientèle Experience Platform se connecte à votre système par l’une des méthodes d’authentification décrites [ici](customer-authentication.md). </li><li> Utilisez `PLATFORM_AUTHENTICATION` s’il existe un système d’authentification global entre Adobe et votre destination et que la clientèle [!DNL Experience Platform] n’a pas besoin de fournir d’informations d’authentification pour se connecter à votre destination. Dans ce cas, vous devez procéder à la [création d’un objet d’informations d’identification](../../credentials-api/create-credential-configuration.md) à l’aide de l’API d’informations d’identification. </li><li>Utilisez `NONE` si aucune authentification n’est requise pour envoyer des données à votre plateforme de destination. </li></ul> |
+| `dynamicEnum.authenticationRule` | Chaîne | Obligatoire | Indique comment la clientèle [!DNL Experience Platform] se connecte à votre destination. Les valeurs acceptées sont les suivantes : `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Utilisez `CUSTOMER_AUTHENTICATION` si la clientèle Experience Platform se connecte à votre système par l’une des méthodes d’authentification décrites [ici](customer-authentication.md). </li><li> Utilisez `PLATFORM_AUTHENTICATION` s’il existe un système d’authentification global entre Adobe et votre destination et que la clientèle [!DNL Experience Platform] n’a pas besoin de fournir d’informations d’authentification pour se connecter à votre destination. Dans ce cas, vous devez [créer un objet d’identification](../../credentials-api/create-credential-configuration.md) à l’aide de l’API Credentials et transmettre l’identifiant de l’objet d’identification dans le paramètre `authenticationId` de la configuration [diffusion de destination](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication). </li><li>Utilisez `NONE` si aucune authentification n’est requise pour envoyer des données à votre plateforme de destination. </li></ul> |
 | `dynamicEnum.destinationServerId` | Chaîne | Obligatoire | `instanceId` de votre serveur de schéma dynamique. Ce serveur de destination inclut le point d’entrée de l’API qu’Experience Platform appellera pour récupérer le schéma dynamique. |
 | `dynamicEnum.value` | Chaîne | Obligatoire | Nom du schéma dynamique, tel que défini dans la configuration du serveur de schéma dynamique. |
 | `dynamicEnum.responseFormat` | Chaîne | Obligatoire | Toujours définie sur `SCHEMA` pendant la définition d’un schéma dynamique. |

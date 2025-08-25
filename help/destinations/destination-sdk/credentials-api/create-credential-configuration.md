@@ -2,10 +2,10 @@
 description: Cette page illustre comment l’appel API est utilisé pour créer une configuration d’informations d’identification avec Adobe Experience Platform Destination SDK.
 title: Création d’une configuration d’informations d’identification
 exl-id: 9844c9c5-d2dc-4d4b-ae93-759bf23b87fa
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 97%
+source-wordcount: '586'
+ht-degree: 90%
 
 ---
 
@@ -27,7 +27,7 @@ Cette page illustre la requête d’API et la payload que vous pouvez utiliser p
 
 Utilisez ce point d’entrée de l’API pour créer une configuration d’informations d’identification uniquement s’il existe un système d’authentification global entre Adobe et votre plateforme de destination et si le client [!DNL Experience Platform] n’a pas besoin de fournir d’informations d’authentification pour se connecter à la destination. Dans ce cas, vous devez créer une configuration d’informations d’identification à l’aide du point d’entrée `/credentials` de l’API.
 
-Quand vous utilisez un système d’authentification global, vous devez définir `"authenticationRule":"PLATFORM_AUTHENTICATION"` dans la configuration de [diffusion de destination](../functionality/destination-configuration/destination-delivery.md) au moment de la [création d’une configuration de destination](../authoring-api/destination-configuration/create-destination-configuration.md).
+Lors de l’utilisation d’un système d’authentification global, vous devez définir les `"authenticationRule":"PLATFORM_AUTHENTICATION"` dans la configuration [diffusion de destination](../functionality/destination-configuration/destination-delivery.md) lors de la [création d’une configuration de destination](../authoring-api/destination-configuration/create-destination-configuration.md). Ensuite, vous devez créer une [configuration des informations d’identification](../credentials-api/create-credential-configuration.md) et transmettre l’identifiant de l’objet d’identification dans le paramètre `authenticationId` de la configuration [diffusion de destination](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication).
 
 >[!IMPORTANT]
 >

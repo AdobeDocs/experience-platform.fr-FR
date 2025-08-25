@@ -2,10 +2,10 @@
 description: Cette page répertorie et décrit les étapes de configuration d’une destination basée sur des fichiers à l’aide de Destination SDK.
 title: Utilisation de Destination SDK pour configurer une destination basée sur des fichiers
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 804370a778a4334603f3235df94edaa91b650223
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '732'
-ht-degree: 55%
+source-wordcount: '745'
+ht-degree: 54%
 
 ---
 
@@ -413,8 +413,7 @@ Selon que vous spécifiez `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ou `
    * [Authentification SFTP avec clé SSH](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
    * [Authentification SFTP avec mot de passe](../functionality/destination-configuration/customer-authentication.md#sftp-password)
 
-* Si vous avez sélectionné `"authenticationRule": "PLATFORM_AUTHENTICATION"`, reportez-vous à la documentation [API de configuration des informations d’identification](../credentials-api/create-credential-configuration.md#when-to-use).
-
+* Si vous avez sélectionné `"authenticationRule": "PLATFORM_AUTHENTICATION"`, vous devez créer une configuration [informations d’identification](../credentials-api/create-credential-configuration.md) et transmettre l’identifiant de l’objet d’identification dans le paramètre `authenticationId` de la configuration [diffusion de destination](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication).
 
 ## Étape 5 : tester votre destination {#test-destination}
 
@@ -423,7 +422,7 @@ Une fois votre destination configurée à l’aide des points d’entrée de con
 Dans le cadre du processus de test de la destination, vous devez utiliser l’interface utilisateur d’Experience Platform pour créer des audiences, que vous activerez vers la destination. Reportez-vous aux deux ressources ci-dessous pour obtenir des instructions sur la création d’audiences dans Experience Platform :
 
 * [Créer une audience - page de documentation](/help/segmentation/ui/audience-portal.md#create-audience)
-* [Créer une audience - présentation vidéo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=fr)
+* [Créer une audience - présentation vidéo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Étape 6 : publier votre destination {#publish-destination}
 
