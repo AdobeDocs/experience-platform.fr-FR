@@ -2,10 +2,10 @@
 title: Vues dans les extensions web
 description: Découvrez comment définir des vues pour les modules de bibliothèque dans vos extensions web Adobe Experience Platform.
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1bfa2e27e554dc899efc8a32900a926e787a58ac
 workflow-type: tm+mt
-source-wordcount: '2063'
-ht-degree: 97%
+source-wordcount: '2148'
+ht-degree: 92%
 
 ---
 
@@ -68,15 +68,22 @@ Le contenu de chacune des méthodes devra être modifié en fonction de vos beso
 La méthode `init` sera appelée par les balises dès que la vue aura été chargée dans lʼiframe. Un seul argument sera transmis (`info`) qui doit être un objet contenant les propriétés suivantes :
 
 | Propriété | Description |
-| --- | --- |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `settings` | Objet contenant les paramètres précédemment enregistrés à partir de cette vue. Si `settings` est `null`, cela indique que l’utilisateur crée les paramètres initiaux plutôt que de charger une version enregistrée. Si `settings` est un objet, vous devez l’utiliser pour remplir votre vue, car l’utilisateur choisit de modifier les paramètres précédemment conservés. |
 | `extensionSettings` | Paramètres enregistrés dans la vue de configuration de l’extension. Cela peut s’avérer utile pour accéder aux paramètres d’extension dans les vues qui ne sont pas la vue de configuration de l’extension. Si la vue actuelle est la vue de configuration de l’extension, utilisez `settings`. |
 | `propertySettings` | Objet contenant les paramètres de la propriété. Consultez le [guide d’objet Turbine](../turbine.md#property-settings) pour plus d’informations sur le contenu de cet objet. |
 | `tokens` | Objet contenant des jetons API. Pour accéder aux API d’Adobe depuis la vue, vous devez généralement utiliser un jeton IMS sous `tokens.imsAccess`. Ce jeton ne sera disponible que pour les extensions développées par Adobe. Si vous êtes un employé dʼAdobe représentant une extension créée par Adobe, veuillez [envoyer un e-mail à lʼéquipe dʼingénieurs en charge de la collecte de données](mailto:reactor@adobe.com) et indiquer le nom de lʼextension afin que nous puissions lʼajouter à la liste autorisée. |
-| `company` | Objet contenant une seule propriété, `orgId`, qui représente votre Adobe Experience Cloud ID (chaîne alphanumérique de 24 caractères). |
+| `company` | Objet contenant les `orgId` (votre identifiant Adobe Experience Cloud de 24 caractères), `id` (l’identifiant unique de votre société dans l’API Reactor) et `tenantId` (l’identifiant unique d’une organisation dans le système Identity Management d’Adobe). |
 | `schema` | Objet au format [Schéma JSON](https://json-schema.org/). Cet objet provient du [manifeste d’extension](../manifest.md) et peut s’avérer utile pour valider votre formulaire. |
+| `apiEndpoints` | Un objet contenant `reactor` qui contient une référence à l’adresse Web de l’API Reactor. |
+| `userConsentPermissions` | Objet contenant les indicateurs de consentement d’Adobe [Données d’utilisation du produit](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data). Utilisez l’indicateur stocké dans `globalDataCollectionAndUsage` pour comprendre si votre extension est autorisée à collecter des données client *n’importe lesquelles*. |
+| `preferredLanguages` | Tableau de chaînes de langue. |
 
 Votre vue doit utiliser ces informations pour générer et gérer son formulaire. Il est probable que vous n’aurez affaire qu’à `info.settings`, mais d’autres informations sont fournies en cas de besoin.
+
+>[!IMPORTANT]
+>
+>Pour que votre extension soit conforme au RGPD, veillez à utiliser l’indicateur `userConsentPermissions.globalDataCollectionAndUsage` pour déterminer si votre extension est autorisée à collecter des données sur l’utilisateur.
 
 ### [!DNL validate]
 
@@ -130,7 +137,7 @@ L’appel de cette méthode affiche un mode permettant à un utilisateur de test
 | Propriété | Description |
 | --- | --- |
 | `pattern` | Modèle d’expression régulière qui doit être utilisé comme valeur initiale du champ de modèle à l’intérieur du testeur. Est généralement fourni lorsque l’utilisateur modifie une expression régulière existante. Si ce n’est pas le cas, le champ de motif sera initialement vide. |
-| `flags` | Les indicateurs d’expression régulière qui doivent être utilisés par le testeur. Par exemple, `gi` indique l’indicateur de correspondance globale et l’indicateur de casse ignorée. Ces indicateurs ne sont pas modifiables par l’utilisateur dans le testeur, mais sont utilisés pour illustrer les indicateurs spécifiques que l’extension utilisera lors de l’exécution de l’expression régulière. Dans le cas contraire, aucun indicateur ne sera utilisé dans le testeur. Voir [Documentation sur RegExp de MDN](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/RegExp) pour plus d’informations sur les indicateurs d’expression régulière.<br><br>Un scénario courant est une extension qui permet aux utilisateurs d’inverser la casse pour une expression régulière. Pour ce faire, lʼextension fournit généralement une case à cocher dans sa vue dʼextension qui, lorsquʼelle est cochée, active lʼinsensibilité à la casse (représentée par lʼindicateur `i`). L’objet settings enregistré par la vue doit indiquer si la case à cocher a été cochée pour que le module Bibliothèque exécutant l’expression régulière sache s’il faut utiliser l’indicateur `i`. En outre, lorsque la vue dʼextension souhaite ouvrir le testeur dʼexpression régulière, elle doit transmettre lʼindicateur `i` si la case dʼinsensibilité à la casse est cochée. Permet à lʼutilisateur de tester correctement lʼexpression régulière avec lʼinsensibilité à la casse activée. |
+| `flags` | Les indicateurs d’expression régulière qui doivent être utilisés par le testeur. Par exemple, `gi` indique l’indicateur de correspondance globale et l’indicateur de casse ignorée. Ces indicateurs ne sont pas modifiables par l’utilisateur dans le testeur, mais sont utilisés pour illustrer les indicateurs spécifiques que l’extension utilisera lors de l’exécution de l’expression régulière. Dans le cas contraire, aucun indicateur ne sera utilisé dans le testeur. Voir [Documentation sur RegExp de MDN](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/RegExp) pour plus d’informations sur les indicateurs d’expression régulière.<br><br>Un scénario courant est une extension qui permet d’activer ou de désactiver le respect de la casse pour une expression régulière. Pour ce faire, lʼextension fournit généralement une case à cocher dans sa vue dʼextension qui, lorsquʼelle est cochée, active lʼinsensibilité à la casse (représentée par lʼindicateur `i`). L’objet settings enregistré par la vue doit indiquer si la case à cocher a été cochée pour que le module Bibliothèque exécutant l’expression régulière sache s’il faut utiliser l’indicateur `i`. En outre, lorsque la vue dʼextension souhaite ouvrir le testeur dʼexpression régulière, elle doit transmettre lʼindicateur `i` si la case dʼinsensibilité à la casse est cochée. Permet à lʼutilisateur de tester correctement lʼexpression régulière avec lʼinsensibilité à la casse activée. |
 
 ### [!DNL openDataElementSelector] {#open-data-element}
 
