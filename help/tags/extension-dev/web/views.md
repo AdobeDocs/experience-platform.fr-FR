@@ -76,7 +76,7 @@ La méthode `init` sera appelée par les balises dès que la vue aura été char
 | `company` | Objet contenant les `orgId` (votre identifiant Adobe Experience Cloud de 24 caractères), `id` (l’identifiant unique de votre société dans l’API Reactor) et `tenantId` (l’identifiant unique d’une organisation dans le système Identity Management d’Adobe). |
 | `schema` | Objet au format [Schéma JSON](https://json-schema.org/). Cet objet provient du [manifeste d’extension](../manifest.md) et peut s’avérer utile pour valider votre formulaire. |
 | `apiEndpoints` | Un objet contenant `reactor` qui contient une référence à l’adresse Web de l’API Reactor. |
-| `userConsentPermissions` | Objet contenant les indicateurs de consentement d’Adobe [Données d’utilisation du produit](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data). Utilisez l’indicateur stocké dans `globalDataCollectionAndUsage` pour comprendre si votre extension est autorisée à collecter des données client *n’importe lesquelles*. |
+| `userConsentPermissions` | Objet contenant les indicateurs de consentement d’Adobe [Données d’utilisation du produit](https://experienceleague.adobe.com/fr/docs/core-services/interface/features/account-preferences#product-usage-data). Utilisez l’indicateur stocké dans `globalDataCollectionAndUsage` pour comprendre si votre extension est autorisée à collecter des données client *n’importe lesquelles*. |
 | `preferredLanguages` | Tableau de chaînes de langue. |
 
 Votre vue doit utiliser ces informations pour générer et gérer son formulaire. Il est probable que vous n’aurez affaire qu’à `info.settings`, mais d’autres informations sont fournies en cas de besoin.
