@@ -284,7 +284,7 @@ Une fois votre destination configurée à l’aide des points d’entrée de con
 Dans le cadre du processus de test de votre destination, vous devez utiliser l’interface utilisateur d’Experience Platform pour créer des segments que vous activerez vers votre destination. Reportez-vous aux deux ressources ci-dessous pour obtenir des instructions sur la création d’audiences dans Experience Platform :
 
 * [Création d’une page de documentation sur les audiences](/help/segmentation/ui/audience-portal.md#create-audience)
-* [Présentation vidéo Créer une audience](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [Présentation vidéo Créer une audience](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=fr)
 
 ## Étape 7 : publier votre destination {#publish-destination}
 
