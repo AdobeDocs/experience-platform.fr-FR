@@ -4,9 +4,9 @@ title: Point d’entrée de l’API des définitions de segment
 description: Le point d’entrée des définitions de segment de l’API Segmentation Service de Adobe Experience Platform vous permet de gérer par programmation les définitions de segment pour votre organisation.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 424702d7d16eddabefe19d023c3829bd650c88ce
+source-git-commit: 5f19bd0601770115cae859fd6dc85bd9c9f6e92c
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1571'
 ht-degree: 24%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 24%
 
 >[!WARNING]
 >
->La création d’audiences à l’aide d’entités B2B avec l’API Segmentation Service est obsolète. Vous ne pouvez plus créer d’audiences à l’aide des entités B2B suivantes : compte, relation compte-personne, campagne, membre de campagne, liste marketing, membre de liste marketing, opportunité et relation opportunité-personne.
+>La création d’audiences à l’aide d’entités B2B avec l’API Segmentation Service est obsolète. Vous ne pouvez plus créer d’audiences à l’aide des entités B2B suivantes : compte, relation compte-personne, campagne, membre de campagne, liste marketing, membre de liste marketing, opportunité et relation opportunité-personne. Pour plus d’informations, consultez le guide sur les [mises à niveau de l’architecture de Real-Time CDP B2B edition](../../rtcdp/b2b-architecture-upgrade.md).
 
 Adobe Experience Platform vous permet de créer des définitions de segment qui définissent un groupe d’attributs ou de comportements spécifiques à partir d’un groupe de profils. Une définition de segment est un objet qui encapsule une requête écrite en [!DNL Profile Query Language] (PQL). Les définitions de segment sont appliquées aux profils pour créer des audiences. Cet objet (définition de segment) est également appelé prédicat PQL. Les prédicats de PQL définissent les règles de la définition de segment en fonction des conditions liées aux données d’enregistrement ou de série temporelle que vous fournissez à [!DNL Real-Time Customer Profile]. Pour plus d’informations sur l’écriture de requêtes PQL, reportez-vous au [guide de PQL](../pql/overview.md).
 
