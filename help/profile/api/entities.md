@@ -5,18 +5,14 @@ type: Documentation
 description: Adobe Experience Platform vous permet d’accéder aux données du profil client en temps réel à l’aide des API RESTful ou de l’interface utilisateur. Ce guide explique comment accéder aux entités, plus communément appelées « profils », à l’aide de l’API Profile.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
+source-git-commit: 40400ab8cc87a6c8d6d37f1a20eaf96ab49aabf7
 workflow-type: tm+mt
-source-wordcount: '1933'
+source-wordcount: '1981'
 ht-degree: 33%
 
 ---
 
 # Point d&#39;entrée des entités (accès au profil)
-
->[!IMPORTANT]
->
->La recherche ExperienceEvent à l’aide de l’API d’accès au profil sera obsolète. Utilisez des fonctionnalités telles que les attributs calculés pour les cas d’utilisation qui nécessitent de rechercher des événements d’expérience. Pour plus d’informations sur cette modification, contactez l’Assistance clientèle d’Adobe.
 
 Adobe Experience Platform vous permet d’accéder aux données [!DNL Real-Time Customer Profile] à l’aide des API RESTful ou de l’interface utilisateur. Ce guide explique comment accéder aux entités, plus communément appelées « profils », à l’aide de l’API. Pour plus d’informations sur l’accès aux profils à l’aide de l’interface utilisateur de [!DNL Experience Platform], reportez-vous au guide d’utilisation [Profile](../ui/user-guide.md).
 
@@ -44,6 +40,12 @@ Suite à cette mise à jour, l’API [!DNL Profile Access] reflète désormais l
 >[!ENDSHADEBOX]
 
 ## Récupération d’une entité {#retrieve-entity}
+
+>[!IMPORTANT]
+>
+>Les entités B2B suivantes ne sont plus prises en charge pour les requêtes de recherche via l’API : **Relation compte-personne, relation opportunité-personne, campagne, membre de campagne, liste marketing et membre de liste marketing**.
+>
+>La prise en charge de ces entités est obsolète. Si vous disposez d’intégrations ou de workflows qui dépendent de l’accès à ces entités, mettez-les à jour pour utiliser les types d’entités pris en charge afin d’assurer la continuité des fonctionnalités.
 
 Vous pouvez récupérer une entité de profil en adressant une requête GET au point d’entrée `/access/entities` avec les paramètres de requête requis.
 
@@ -428,7 +430,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
 | `identities.entityIdNS.code` | Chaîne | L’espace de noms d’un identifiant d’entité auquel vous souhaitez accéder. |
 | `timeFilter.startTime` | Nombre entier | Indique l’heure de début du filtrage des entités de profil (en millisecondes). Par défaut, cette valeur est définie comme le début du temps disponible. |
 | `timeFilter.endTime` | Nombre entier | Indique l’heure de fin du filtrage des entités de profil (en millisecondes). Par défaut, cette valeur est définie comme la fin du temps disponible. |
-| `limit` | Nombre entier | Nombre maximal d’enregistrements à renvoyer. Par défaut, cette valeur est définie sur 1 000. |
+| `limit` | Nombre entier | Nombre maximal d’enregistrements à renvoyer. Par défaut, cette valeur est définie sur 1000. |
 | `orderby` | Chaîne | L’ordre de tri des événements d’expérience récupérés par date et heure, indiqué par `(+/-)timestamp`, la valeur par défaut étant `+timestamp`. |
 
 +++
@@ -1203,6 +1205,19 @@ Une réponse réussie renvoie la page de résultats suivante. Cette réponse ne 
 
 ## Suppression d’une entité {#delete-entity}
 
+>[!IMPORTANT]
+>
+>Les requêtes de suppression pour les entités B2B suivantes ont été abandonnées :
+>
+>- Compte
+>- Relation Compte-Personne
+>- Opportunité
+>- Relation Opportunité-Personne
+>- Campagne
+>- Membre de la campagne
+>- Liste marketing
+>- Membres de la liste marketing
+
 Vous pouvez supprimer une entité du magasin de profils en adressant une requête DELETE au point d’entrée `/access/entities` avec les paramètres de requête requis.
 
 **Format d’API**
@@ -1265,5 +1280,5 @@ Les paramètres suivants sont utilisés dans le chemin des requêtes GET vers le
 | `orderBy` | Ordre de tri des entités récupérées par horodatage. Il est écrit comme `(+/-)timestamp`, la valeur par défaut étant `+timestamp`. | `orderby=-timestamp` |
 | `startTime` | Indique l’heure de début pour le filtrage des entités (en millisecondes). | `startTime=1539838505` |
 | `endTime` | Indique l’heure de fin du filtrage des entités (en millisecondes). | `endTime=1539838510` |
-| `limit` | Spécifie le nombre maximal d&#39;entités à renvoyer. Par défaut, cette valeur est définie sur 1 000. | `limit=100` |
+| `limit` | Spécifie le nombre maximal d&#39;entités à renvoyer. Par défaut, cette valeur est définie sur 1000. | `limit=100` |
 | `property` | Filtre en fonction de la valeur de la propriété. Ce paramètre de requête prend en charge les évaluateurs suivants : =, !=, &lt;, &lt;=, >, >=. Elle ne peut être utilisée qu’avec des événements d’expérience, trois propriétés au maximum étant prises en charge. | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
