@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guide de segmentation en flux continu
 description: Découvrez la segmentation en flux continu, notamment en quoi elle consiste, comment créer une audience évaluée à l’aide de la segmentation en flux continu et comment afficher vos audiences créées à l’aide de la segmentation en flux continu.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 6935cee30adb59d52db6c6fed7036f81b54edd52
+source-git-commit: c009eb89331758c512abd8ff7ef185489063b48f
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2051'
 ht-degree: 19%
 
 ---
@@ -38,6 +38,10 @@ Les définitions de segment **nouvelles ou modifiées** qui correspondent aux en
 Pour évaluer une audience avec segmentation en flux continu, elle **doit** être limitée dans une fenêtre temporelle de 24 heures.
 
 ## Inclusion de données par lot dans des audiences en flux continu {#include-batch-data}
+
+>[!NOTE]
+>
+>Pour que la segmentation en flux continu reste précise lors de l’utilisation des données par lot, assurez-vous que les données par lot sont **uniquement** conservées dans l’audience par lot et sont référencées dans l’audience en flux continu.
 
 Avant cette mise à jour, vous pouviez créer une définition d’audience de diffusion en continu qui combinait des sources de données par lots et en flux continu. Cependant, avec la dernière mise à jour, la création d’une audience avec des sources de données par lots et par flux sera évaluée à l’aide de la segmentation par lots.
 
@@ -102,7 +106,7 @@ Avec la segmentation en flux continu, la qualification d’audience se produit d
 
 >[!IMPORTANT]
 >
->Pour utiliser la segmentation en flux continu, vous **devez** utiliser une politique de fusion « Active-on-Edge ». Pour plus d’informations sur les politiques de fusion, consultez la [ présentation des politiques de fusion ](../../profile/merge-policies/overview.md).
+>Pour utiliser la segmentation en flux continu, vous **devez** utiliser une politique de fusion « Active-on-Edge ». Pour plus d’informations sur les politiques de fusion, consultez la [présentation des politiques de fusion](../../profile/merge-policies/overview.md).
 
 Un ensemble de règles peut être segmenté en flux continu s’il répond à l’un des critères décrits dans le tableau suivant.
 
@@ -435,7 +439,7 @@ Vous pouvez récupérer toutes les audiences activées pour la segmentation en f
 
 ![L’icône de filtre est mise en surbrillance dans Audience Portal.](../images/methods/filter-audiences.png)
 
-Dans les filtres disponibles, accédez à **[!UICONTROL Fréquence des mises à jour]** et sélectionnez « [!UICONTROL &#x200B; Diffusion en continu &#x200B;]. L’utilisation de ce filtre affiche toutes les audiences de votre organisation qui sont évaluées à l’aide de la segmentation en flux continu.
+Dans les filtres disponibles, accédez à **[!UICONTROL Fréquence des mises à jour]** et sélectionnez « [!UICONTROL  Diffusion en continu ]. L’utilisation de ce filtre affiche toutes les audiences de votre organisation qui sont évaluées à l’aide de la segmentation en flux continu.
 
 ![La fréquence de mise à jour en flux continu est sélectionnée, affichant toutes les audiences de l’organisation qui sont évaluées à l’aide de la segmentation en flux continu.](../images/methods/streaming/filter-streaming.png)
 

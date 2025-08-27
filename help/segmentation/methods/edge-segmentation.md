@@ -2,10 +2,10 @@
 title: Guide de segmentation d’Edge
 description: Découvrez comment utiliser la segmentation Edge pour évaluer les audiences dans Experience Platform instantanément sur le serveur Edge, en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: a741fdb4393863dbc011c03c733e27572da0ae6c
+source-git-commit: 5de8597dd1d5249297a09976c804d1c1f3d822c5
 workflow-type: tm+mt
-source-wordcount: '1116'
-ht-degree: 23%
+source-wordcount: '1148'
+ht-degree: 22%
 
 ---
 
@@ -26,6 +26,8 @@ Une requête peut être évaluée avec une segmentation Edge si elle répond à 
 >[!NOTE]
 >
 >Si la requête correspond à l’un des types de requête du tableau suivant, elle sera automatiquement évaluée à l’aide de la segmentation Edge. Le système détermine automatiquement cette fonctionnalité en fonction de l’expression de requête.
+>
+>En outre, si l’audience **uniquement** contient des attributs de profil, elle sera évaluée quotidiennement. Si vous souhaitez que votre audience soit évaluée en temps réel, vous devez ajouter des données d’événement à votre audience.
 
 | Type de requête | Détails | Requête | Exemple |
 | ---------- | ------- | ----- | ------- |
