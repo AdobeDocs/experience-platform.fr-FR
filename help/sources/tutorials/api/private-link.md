@@ -1,16 +1,18 @@
 ---
-title: Utiliser Azure Private Link pour les sources dans l’API
+title: Prise en charge des liens privés pour les sources dans l’API
 description: Découvrez comment créer et utiliser des liens privés pour les sources Adobe Experience Platform
 badge: Beta
+hide: true
+hidefromtoc: true
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
-source-git-commit: 65063d3b81d7082fc7780949c6ebd2ce09461b88
+source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1661'
 ht-degree: 7%
 
 ---
 
-# Utilisation de [!DNL Azure Private Link] pour les sources dans l’API
+# Prise en charge des liens privés pour les sources dans l’API
 
 >[!AVAILABILITY]
 >
@@ -21,7 +23,7 @@ ht-degree: 7%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-Vous pouvez utiliser la fonction [!DNL Azure Private Link] pour créer des points d’entrée privés auxquels vos sources Adobe Experience Platform peuvent se connecter. Connectez vos sources en toute sécurité à un réseau virtuel à l&#39;aide d&#39;adresses IP privées, éliminez le besoin d&#39;adresses IP publiques et réduisez votre surface d&#39;attaque.Simplifiez votre configuration réseau en supprimant la nécessité de configurations complexes de pare-feu ou de traduction d&#39;adresses réseau, tout en veillant à ce que le trafic de données atteigne uniquement les services approuvés.
+Vous pouvez utiliser la fonction Lien privé pour créer des points d’entrée privés auxquels vos sources Adobe Experience Platform peuvent se connecter. Connectez vos sources à un réseau virtuel en toute sécurité à l’aide d’adresses IP privées, éliminant ainsi le besoin d’adresses IP publiques et réduisant votre surface d’attaque. Simplifiez la configuration de votre réseau en supprimant la nécessité de configurations complexes de pare-feu ou de traduction d’adresses réseau, tout en veillant à ce que le trafic de données atteigne uniquement les services approuvés.
 
 Lisez ce guide pour savoir comment utiliser des API pour créer et utiliser un point d’entrée privé.
 

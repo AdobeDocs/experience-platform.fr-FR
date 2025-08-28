@@ -1,16 +1,18 @@
 ---
-title: Utiliser Azure Private Link pour les sources dans l’interface utilisateur
+title: Prise en charge des liens privés pour les sources dans l’interface utilisateur
 description: Découvrez comment utiliser les liens privés Azure pour les sources dans l’interface utilisateur d’Experience Platform.
 badge: Beta
+hide: true
+hidefromtoc: true
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
-source-git-commit: b88cf63e907b3f127f83304aa95f82300b47ce0b
+source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '750'
 ht-degree: 1%
 
 ---
 
-# Utilisation de [!DNL Azure Private Link] pour les sources dans l’interface utilisateur
+# Prise en charge des liens privés pour les sources dans l’interface utilisateur
 
 >[!AVAILABILITY]
 >
@@ -21,13 +23,13 @@ ht-degree: 1%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-Vous pouvez utiliser la fonction [!DNL Azure Private Link] pour créer des points d’entrée privés auxquels vos sources Adobe Experience Platform peuvent se connecter. Connectez vos sources en toute sécurité à un réseau virtuel à l&#39;aide d&#39;adresses IP privées, éliminez le besoin d&#39;adresses IP publiques et réduisez votre surface d&#39;attaque.Simplifiez votre configuration réseau en supprimant la nécessité de configurations complexes de pare-feu ou de traduction d&#39;adresses réseau, tout en veillant à ce que le trafic de données atteigne uniquement les services approuvés.
+Vous pouvez utiliser la fonction Liens privés pour créer des points d’entrée privés auxquels vos sources Adobe Experience Platform peuvent se connecter. Connectez vos sources à un réseau virtuel en toute sécurité à l’aide d’adresses IP privées, éliminant ainsi le besoin d’adresses IP publiques et réduisant votre surface d’attaque. Simplifiez la configuration de votre réseau en supprimant la nécessité de configurations complexes de pare-feu ou de traduction d’adresses réseau, tout en veillant à ce que le trafic de données atteigne uniquement les services approuvés.
 
 Lisez ce guide pour savoir comment utiliser l’espace de travail des sources dans l’interface utilisateur d’Experience Platform pour créer et utiliser un point d’entrée privé.
 
 ## Créer un point d’entrée privé
 
-Pour commencer à utiliser [!DNL Azure Private Link], accédez au catalogue *[!UICONTROL Sources]* de l’interface utilisateur d’Experience Platform et sélectionnez **[!UICONTROL Points d’entrée privés]** dans le menu des onglets de l’espace de travail des sources.
+Pour commencer à utiliser les liens privés, accédez au catalogue *[!UICONTROL Sources]* de l’interface utilisateur d’Experience Platform et sélectionnez **[!UICONTROL Points d’entrée privés]** dans le menu des onglets de l’espace de travail des sources.
 
 ![Le catalogue de sources avec des « points d’entrée privés ».](../../images/tutorials/private-links/catalog.png)
 
