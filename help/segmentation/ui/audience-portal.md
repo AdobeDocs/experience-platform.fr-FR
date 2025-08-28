@@ -2,7 +2,7 @@
 title: Présentation d’Audience Portal
 description: Découvrez comment utiliser Audience Portal pour afficher, gérer et créer des audiences dans Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: c8befc7379da491f6de78a89c9f14a0b123b3fb8
+source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
 workflow-type: tm+mt
 source-wordcount: '4494'
 ht-degree: 53%
@@ -55,22 +55,22 @@ Par défaut, Audience Portal affiche une liste de toutes les audiences de votre 
 
 Une icône de points de suspension se trouve à côté de chaque audience. Cette option affiche la liste des actions rapides disponibles pour l’audience. Cette liste d’actions diffère en fonction de l’origine de l’audience.
 
-![La liste des actions rapides s’affiche pour les audiences dont l’origine est [!UICONTROL Composition de l’audience].](../images/ui/audience-portal/browse-audience-composition-details.png)
+![La liste des actions rapides s’affiche pour les audiences dont l’origine est [!UICONTROL Composition d’audiences].](../images/ui/audience-portal/browse-audience-composition-details.png)
 
 | Action | Origines | Description |
 | ------ | ------- | ----------- |
 | [!UICONTROL Modifier] | Service de segmentation | Ouvre le créateur de segments pour modifier votre audience. Notez que si votre audience a été créée via l’API, vous ne pourrez **pas** la modifier à l’aide du créateur de segments. Pour plus d’informations sur l’utilisation du créateur de segments, consultez le [Guide de l’interface utilisateur du créateur de segments](./segment-builder.md). |
-| [!UICONTROL Ouvrir la composition] | Composition de l’audience | Ouvre la composition Audience pour afficher votre audience. Pour plus d’informations sur la composition d’audience, consultez le [Guide de l’interface utilisateur de la composition d’audience](./audience-composition.md). |
+| [!UICONTROL Ouvrir la composition] | Composition d’audiences | Ouvre la composition Audience pour afficher votre audience. Pour plus d’informations sur la composition d’audiences, consultez le [Guide de l’interface utilisateur de la composition d’audiences](./audience-composition.md). |
 | [!UICONTROL Activer vers la destination] | Service de segmentation | Active l’audience vers une destination. Pour plus d’informations sur l’activation d’une audience vers une destination, consultez la [vue d’ensemble de l’activation](../../destinations/ui/activation-overview.md). |
-| [!UICONTROL Partager avec des partenaires] | Composition d’audience, chargement personnalisé, Segmentation Service | Partage votre audience avec d’autres utilisateurs Experience Platform. Pour plus d’informations sur cette fonctionnalité, consultez la [vue d’ensemble de la correspondance de segments](./segment-match/overview.md). |
-| [!UICONTROL Gérer les balises] | Composition d’audience, chargement personnalisé, Segmentation Service | Gère les balises définies par l’utilisateur et appartenant à l’audience. Pour plus d’informations sur cette fonctionnalité, consultez la section sur [le filtrage et le balisage](#manage-audiences). |
-| [!UICONTROL Déplacer vers le dossier] | Composition d’audience, chargement personnalisé, Segmentation Service | Gère le dossier auquel appartient l’audience. Pour plus d’informations sur cette fonctionnalité, consultez la section sur [le filtrage et le balisage](#manage-audiences). |
+| [!UICONTROL Partager avec des partenaires] | Composition d’audiences, chargement personnalisé, Segmentation Service | Partage votre audience avec d’autres utilisateurs Experience Platform. Pour plus d’informations sur cette fonctionnalité, consultez la [vue d’ensemble de la correspondance de segments](./segment-match/overview.md). |
+| [!UICONTROL Gérer les balises] | Composition d’audiences, chargement personnalisé, Segmentation Service | Gère les balises définies par l’utilisateur et appartenant à l’audience. Pour plus d’informations sur cette fonctionnalité, consultez la section sur [le filtrage et le balisage](#manage-audiences). |
+| [!UICONTROL Déplacer vers le dossier] | Composition d’audiences, chargement personnalisé, Segmentation Service | Gère le dossier auquel appartient l’audience. Pour plus d’informations sur cette fonctionnalité, consultez la section sur [le filtrage et le balisage](#manage-audiences). |
 | [!UICONTROL Copier] | Service de segmentation | Duplique l’audience sélectionnée. Vous trouverez plus d’informations sur cette fonction dans la [FAQ sur la segmentation](../faq.md#copy). |
-| [!UICONTROL Appliquer les libellés d’accès] | Composition d’audience, chargement personnalisé, Segmentation Service | Gère les libellés d’accès appartenant à l’audience. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Appliquer les libellés d’accès] | Composition d’audiences, chargement personnalisé, Segmentation Service | Gère les libellés d’accès appartenant à l’audience. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Publier] | Chargement personnalisé, service de segmentation | Publie l’audience sélectionnée. Pour plus d’informations sur la gestion de l’état du cycle de vie, consultez la section [état du cycle de vie) du FAQ sur la segmentation](../faq.md#lifecycle-states). |
 | [!UICONTROL Désactiver] | Chargement personnalisé, service de segmentation | Désactive l’audience sélectionnée. Notez que pour désactiver une audience, celle-ci **ne peut pas** être activée dans **n’importe quelle** destination (y compris les destinations hors Experience Platform) ou faire partie de **n’importe quelle** autre audience. Pour plus d’informations sur la gestion de l’état du cycle de vie, consultez la section [état du cycle de vie) du FAQ sur la segmentation](../faq.md#lifecycle-states). |
-| [!UICONTROL Supprimer] | Composition d’audience, chargement personnalisé, Segmentation Service | Supprime l’audience sélectionnée. Les audiences utilisées dans des destinations en aval ou qui sont des dépendances dans d’autres audiences **ne peuvent pas** peuvent pas être supprimées. Pour plus d’informations sur la suppression d’audience, consultez la [FAQ sur la segmentation](../faq.md#lifecycle-states). |
-| [!UICONTROL Ajouter au package &#x200B;] | Composition d’audience, chargement personnalisé, Segmentation Service | Déplace l’audience entre les sandbox. Pour plus d’informations sur cette fonctionnalité, veuillez lire le [guide d’utilisation des sandbox](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL Supprimer] | Composition d’audiences, chargement personnalisé, Segmentation Service | Supprime l’audience sélectionnée. Les audiences utilisées dans des destinations en aval ou qui sont des dépendances dans d’autres audiences **ne peuvent pas** peuvent pas être supprimées. Pour plus d’informations sur la suppression d’audience, consultez la [FAQ sur la segmentation](../faq.md#lifecycle-states). |
+| [!UICONTROL Ajouter au package ] | Composition d’audiences, chargement personnalisé, Segmentation Service | Déplace l’audience entre les sandbox. Pour plus d’informations sur cette fonctionnalité, veuillez lire le [guide d’utilisation des sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!IMPORTANT]
 >
@@ -102,7 +102,7 @@ Vous pouvez ajouter des champs supplémentaires à Audience Portal en sélection
 | ----- | ----------- |
 | [!UICONTROL Nom] | Nom de l’audience. |
 | [!UICONTROL Nombre de profils] | Nombre total de profils qui remplissent les critères de l’audience. |
-| [!UICONTROL Origine] | Origine de l’audience. Cette information indique d’où vient l’audience. Les valeurs possibles sont les suivantes : [Segmentation Service](#segment-builder), [Chargement personnalisé](#import-audience), [Composition de l’audience](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/fr/docs/audience-manager/user-guide/aam-home), [Audience similaire](../types/lookalike-audiences.md), [Composition de l’audience fédérée](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/fr/docs/journey-optimizer-b2b/user/guide-overview) et [Real-Time CDP Collaboration](https://experienceleague.adobe.com/fr/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
+| [!UICONTROL Origine] | Origine de l’audience. Cette information indique d’où vient l’audience. Les valeurs possibles sont les suivantes : [Segmentation Service](#segment-builder), [Chargement personnalisé](#import-audience), [Composition de l’audience](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Audience similaire](../types/lookalike-audiences.md), [Composition de l’audience fédérée](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/fr/docs/journey-optimizer-b2b/user/guide-overview) et [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
 | [!UICONTROL Statut du cycle de vie] | Statut de l’audience. Les valeurs possibles pour ce champ comprennent `Draft`, `Inactive` et `Published`. Pour plus d’informations sur les statuts de cycle de vie, y compris sur la signification des différents états et sur la manière de déplacer les audiences vers différents états de cycle de vie, consultez la section [statut du cycle de vie) de la FAQ sur la segmentation](../faq.md#lifecycle-status). |
 | [!UICONTROL Fréquence de mise à jour] | Valeur qui indique la fréquence de mise à jour des données de l’audience. Les valeurs possibles pour ce champ comprennent [!UICONTROL Lot], [!UICONTROL Diffusion en continu], [!UICONTROL Edge] et [!UICONTROL Non planifié]. |
 | [!UICONTROL Dernière mise à jour par] | Nom de la personne qui a mis à jour l’audience pour la dernière fois. |
@@ -203,7 +203,7 @@ La liste des filtres disponibles s’affiche.
 
 | Filtre | Description |
 | ------ | ----------- |
-| [!UICONTROL Origine] | Permet de filtrer l’audience en fonction de son origine. Les valeurs possibles sont les suivantes : [Segmentation Service](#segment-builder), [Chargement personnalisé](#import-audience), [Composition de l’audience](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/fr/docs/audience-manager/user-guide/aam-home), [Audience similaire](../types/lookalike-audiences.md), [Composition de l’audience fédérée](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/fr/docs/journey-optimizer-b2b/user/guide-overview) et [Real-Time CDP Collaboration](https://experienceleague.adobe.com/fr/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
+| [!UICONTROL Origine] | Permet de filtrer l’audience en fonction de son origine. Les valeurs possibles sont les suivantes : [Segmentation Service](#segment-builder), [Chargement personnalisé](#import-audience), [Composition de l’audience](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Audience similaire](../types/lookalike-audiences.md), [Composition de l’audience fédérée](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/fr/docs/journey-optimizer-b2b/user/guide-overview) et [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
 | [!UICONTROL A une balise] | Permet de filtrer par balise. Vous pouvez choisir entre **[!UICONTROL A une balise]** et **[!UICONTROL A toutes les balises]**. Lors de la sélection de **[!UICONTROL A une balise]**, les audiences filtrées incluent **toutes** les balises que vous avez ajoutées. Lors de la sélection de **[!UICONTROL A toutes les balises]**, les audiences filtrées doivent inclure **toutes** les balises que vous avez ajoutées. |
 | [!UICONTROL Statut du cycle de vie] | Permet de filtrer les données en fonction du statut de cycle de vie de l’audience. Les options disponibles sont les suivantes : [!UICONTROL Supprimé], [!UICONTROL Brouillon], [!UICONTROL Inactif] et [!UICONTROL Publié]. |
 | [!UICONTROL Fréquence de mise à jour] | Permet de filtrer selon la fréquence de mise à jour de l’audience (méthode d’évaluation). Les options disponibles sont les suivantes : [!UICONTROL lot], [!UICONTROL streaming] et [!UICONTROL Edge] |
@@ -253,11 +253,11 @@ Sélectionner **[!UICONTROL Appliquer les libellés d’accès]** vous permet de
 
 >[!BEGINTABS]
 
->[!TAB Composition de l’audience]
+>[!TAB Composition d’audiences]
 
 ![La page des détails de l’audience s’affiche, avec le bouton [!UICONTROL Ouvrir la composition] en surbrillance.](../images/ui/audience-portal/audience-details-open-composition.png)
 
-Sélectionner **[!UICONTROL Ouvrir la composition]** vous permet d’afficher votre audience dans la Composition de l’audience. Pour plus d’informations sur la Composition d’audience, consultez le [Guide de l’interface utilisateur de la Composition d’audience](./audience-composition.md).
+Sélectionner **[!UICONTROL Ouvrir la composition]** vous permet d’afficher votre audience dans la composition d’audiences. Pour plus d’informations sur la composition d’audiences, consultez le [Guide de l’interface utilisateur de la composition d’audiences](./audience-composition.md).
 
 >[!TAB Chargement personnalisé]
 
@@ -305,7 +305,7 @@ Pour les audiences dont l’origine est **[!UICONTROL Chargement personnalisé]*
 | Lot de profils | Identifiant du lot qui a créé les profils sur Experience Platform. Vous pouvez sélectionner l’identifiant du lot pour plus d’informations sur le lot. Pour en savoir plus sur les lots, consultez le [guide de surveillance de l’ingestion des données](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
 | Schéma | Nom du schéma auquel l’audience appartient. Vous pouvez sélectionner le nom du schéma pour afficher des informations sur la structure du schéma et appliquer des libellés d’utilisation des données. Pour plus d’informations, consultez le guide [Gestion des libellés d’utilisation des données pour un schéma](../../xdm/tutorials/labels.md). |
 | Enregistrements ingérés | Nombre d’enregistrements ingérés dans le jeu de données. |
-| Échec des enregistrements | Nombre d’enregistrements qui n’ont pas pu être ingérés dans le jeu de données. |
+| Enregistrements ayant échoué | Nombre d’enregistrements qui n’ont pas pu être ingérés dans le jeu de données. |
 | Nouveaux fragments de profil | Nombre de nouveaux profils qui ont été créés. |
 | Fragments de profil existants | Nombre de profils existants qui ont été mis à jour. |
 
@@ -327,9 +327,9 @@ Ci-dessous se trouvent des exemples de profils qui remplissent les critères du 
 
 Le déclenchement de l’échantillonnage de données dépend de la méthode d’ingestion.
 
-Pour l’ingestion par lots, la banque de profils est automatiquement analysée toutes les quinze minutes afin de déterminer si un nouveau lot a bien été ingéré depuis la dernière tâche d’échantillonnage exécutée. Si c’est le cas, la banque de profils est ensuite analysée pour voir s’il y a eu une modification d’au moins 5 % dans le nombre d’enregistrements. Si ces conditions sont remplies, une nouvelle tâche d’échantillonnage est déclenchée.
+Pour l’ingestion par lots, la banque de profils est automatiquement analysée toutes les quinze minutes afin de déterminer si un nouveau lot a bien été ingéré depuis la dernière tâche d’échantillonnage exécutée. Si c’est le cas, la banque de profils est ensuite analysée pour voir s’il y a eu une modification d’au moins 3 % dans le nombre d’enregistrements. Si ces conditions sont remplies, une nouvelle tâche d’échantillonnage est déclenchée.
 
-Pour l’ingestion par flux, la banque de profils est automatiquement analysée toutes les heures pour déterminer s’il y a eu au moins 5 % de changement dans le nombre d’enregistrements. Si cette condition est remplie, une nouvelle tâche d’échantillonnage est déclenchée.
+Pour l’ingestion par flux, la banque de profils est automatiquement analysée toutes les heures pour voir s’il y a eu au moins 3 % de changement dans le nombre d’enregistrements. Si cette condition est remplie, une nouvelle tâche d’échantillonnage est déclenchée.
 
 La taille de l’échantillon dépend du nombre total d’entités dans votre banque de profils. Ces tailles d’échantillon sont représentées dans le tableau suivant :
 
@@ -378,9 +378,9 @@ Une fenêtre contextuelle s’affiche, vous permettant de choisir entre composer
 
 ### Composition d’audiences {#audience-composition}
 
-Sélectionner **[!UICONTROL Composer les audiences]** vous conduit à la Composition de l’audience. Cet espace de travail fournit des commandes intuitives pour la création et la modification des audiences, telles que le glisser-déposer de mosaïques utilisées pour représenter les différentes actions. Pour en savoir plus sur la création d’audiences, veuillez lire le [guide de la Composition d’audience](./audience-composition.md).
+Sélectionner **[!UICONTROL Composer les audiences]** vous conduit à la composition d’audiences. Cet espace de travail fournit des commandes intuitives pour la création et la modification des audiences, telles que le glisser-déposer de mosaïques utilisées pour représenter les différentes actions. Pour en savoir plus sur la création d’audiences, veuillez lire le [guide de la composition d’audiences](./audience-composition.md).
 
-![L’espace de travail de Composition d’audience s’affiche.](../images/ui/audience-portal/audience-composition.png)
+![L’espace de travail de composition d’audiences s’affiche.](../images/ui/audience-portal/audience-composition.png)
 
 ### Créateur de segments {#segment-builder}
 

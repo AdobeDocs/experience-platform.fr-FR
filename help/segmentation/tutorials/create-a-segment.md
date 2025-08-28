@@ -4,7 +4,7 @@ title: Créer une définition de segment à l’aide de l’API Segmentation Ser
 type: Tutorial
 description: Suivez ce tutoriel pour apprendre à développer, tester, prévisualiser et enregistrer une définition de segment à l’aide de l’API Segmentation Service de Adobe Experience Platform.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 44%
@@ -76,8 +76,8 @@ Lorsque les données activées pour le profil client en temps réel sont ingér�
 
 Le déclenchement de l’échantillon dépend du type d’ingestion utilisé :
 
-- Pour les workflows de données en flux continu, une vérification est effectuée toutes les heures afin de déterminer si le seuil d’augmentation ou de diminution de 5 % a été atteint. Si ce seuil a été atteint, un exemple de tâche est automatiquement déclenché pour mettre à jour le décompte.
-- Pour l’ingestion par lots, dans les 15 minutes suivant l’ingestion réussie d’un lot dans la banque de profils, si le seuil d’augmentation ou de diminution de 5 % est atteint, une tâche est exécutée pour mettre à jour le nombre. À l’aide de l’API Profile, vous pouvez prévisualiser le dernier exemple de tâche réussie, ainsi que répertorier la distribution des profils par jeu de données et par espace de noms d’identité.
+- Pour les workflows de données en flux continu, une vérification est effectuée toutes les heures afin de déterminer si le seuil d’augmentation ou de diminution de 3 % a été atteint. Si ce seuil a été atteint, un exemple de tâche est automatiquement déclenché pour mettre à jour le décompte.
+- Pour l’ingestion par lots, dans les 15 minutes suivant l’ingestion réussie d’un lot dans la banque de profils, si le seuil d’augmentation ou de diminution de 3 % est atteint, une tâche est exécutée pour mettre à jour le nombre. À l’aide de l’API Profile, vous pouvez prévisualiser le dernier exemple de tâche réussie, ainsi que répertorier la distribution des profils par jeu de données et par espace de noms d’identité.
 
 La taille de l’échantillon dépend du nombre total d’entités dans votre banque de profils. Ces tailles d’échantillon sont représentées dans le tableau suivant :
 
