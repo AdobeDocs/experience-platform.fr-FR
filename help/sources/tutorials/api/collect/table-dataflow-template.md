@@ -1,15 +1,16 @@
 ---
-title: Création d’un flux de données pour ingérer des données d’un CRM dans Experience Platform
+title: Créer Un Flux De Données Pour Ingérer Des Données Source Dans Experience Platform
 description: Découvrez comment utiliser l’API Flow Service pour créer un flux de données et ingérer les données sources dans Experience Platform.
-exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: fe310a326f423a32b278b8179578933295de3a87
+hide: true
+hidefromtoc: true
+source-git-commit: 4e9448170a6c3eb378e003bcd7520cb0e573e408
 workflow-type: tm+mt
-source-wordcount: '2105'
-ht-degree: 12%
+source-wordcount: '2137'
+ht-degree: 13%
 
 ---
 
-# Création d’un flux de données pour ingérer des données d’un CRM dans Experience Platform
+# Créer un flux de données pour ingérer les données d’une source
 
 Lisez ce guide pour savoir comment créer un flux de données et ingérer des données dans Adobe Experience Platform à l’aide de l’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
@@ -29,9 +30,9 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Experience Platform, consultez le guide sur la [Prise en main des API Experience Platform](../../../../landing/api-guide.md).
 
-### Créer une connexion de base {#base}
+### Créer une connexion de base
 
-Pour créer un flux de données pour votre source, vous avez besoin d’un compte source entièrement authentifié et de son identifiant de connexion de base correspondant. Si vous ne disposez pas de cet identifiant, consultez le [catalogue de sources](../../../home.md) pour trouver une liste de sources pour lesquelles vous pouvez créer une connexion de base.
+Vous devez disposer d’un compte source entièrement authentifié et de son identifiant de connexion de base correspondant pour créer un flux de données pour votre source. Si vous ne disposez pas de cet identifiant, consultez le [catalogue de sources](../../../home.md) pour obtenir une liste des sources avec lesquelles vous pouvez créer une connexion de base.
 
 ### Créer un schéma XDM cible {#target-schema}
 
@@ -106,7 +107,7 @@ Une réponse réussie renvoie l’identifiant du jeu de données cible. Cet iden
 
 +++
 
-## Créer une connexion source {#source}
+## Créer une connexion source
 
 Une connexion source définit la manière dont les données sont importées dans Experience Platform à partir d’une source externe. Il spécifie à la fois le système source et le format des données entrantes, et il fait référence à une connexion de base contenant des détails d’authentification. Chaque connexion source est propre à votre organisation.
 
@@ -133,8 +134,8 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "ACME source connection",
-    "description": "A source connection for ACME contact data",
     "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "description": "A source connection for ACME contact data",
     "data": {
       "format": "tabular"
     },
@@ -164,7 +165,8 @@ curl -X POST \
             "format": "date-time"
           }
         }
-      ]
+      ],
+      "cdcEnabled": true
     },
     "connectionSpec": {
       "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
@@ -181,6 +183,7 @@ curl -X POST \
 | `data.format` | Format des données. Définissez cette valeur sur `tabular` pour les sources basées sur des tableaux (telles que les bases de données, les CRM et les fournisseurs d’automatisation marketing). |
 | `params.tableName` | Nom de la table de votre compte source que vous souhaitez ingérer dans Experience Platform. |
 | `params.columns` | Les colonnes de tableau spécifiques des données que vous souhaitez ingérer dans Experience Platform. |
+| `params.cdcEnabled` | Valeur booléenne qui indique si la capture de l’historique des modifications est activée ou non. Cette propriété est prise en charge par les sources de base de données suivantes : <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> Pour plus d’informations, consultez le guide sur l’utilisation de [modifier la capture de données dans les sources](../change-data-capture.md). |
 | `connectionSpec.id` | Identifiant de spécification de connexion de la source que vous utilisez. |
 
 **Réponse**
@@ -194,9 +197,9 @@ Une réponse réussie renvoie l’identifiant de votre connexion source. Cet ide
 }
 ```
 
-## Créer une connexion cible {#target}
+## Créer une connexion cible {#target-connection}
 
-Une connexion cible représente la connexion à la destination où se trouvent les données ingérées. Pour créer une connexion cible, vous devez fournir l’identifiant fixe de spécification de connexion associé au lac de données. Cet identifiant de spécification de connexion est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Une connexion cible représente la connexion à la destination où se trouvent les données ingérées. Pour créer une connexion cible, vous devez indiquer l’identifiant de spécification de connexion fixe associé au lac de données. Cet identifiant de spécification de connexion est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **Format d’API**
 
@@ -314,7 +317,7 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 }
 ```
 
-## Récupérer des spécifications du flux de données {#flow-specs}
+## Récupérer des spécifications du flux de données
 
 Avant de pouvoir créer un flux de données, vous devez d’abord récupérer les spécifications du flux de données qui correspondent à votre source. Pour récupérer ces informations, envoyez une requête GET au point d’entrée `/flowSpecs` de l’API [!DNL Flow Service].
 
@@ -631,16 +634,16 @@ Pour vous assurer que vous utilisez la spécification de flux de données approp
 
 +++
 
-## Créer un flux de données {#dataflow}
+## Créer un flux de données
 
 Un flux de données est un pipeline configuré qui transfère des données entre les services Experience Platform. Il définit la manière dont les données sont ingérées à partir de sources externes (telles que des bases de données, un espace de stockage dans le cloud ou des API), traitées et acheminées vers des jeux de données cibles. Ces jeux de données sont ensuite utilisés par des services tels que le service d’identités, le profil client en temps réel et Destinations pour l’activation et l’analyse.
 
 Pour créer un flux de données, vous devez disposer de valeurs pour les éléments suivants :
 
-* [ID de connexion source](#source)
-* [ID de connexion cible](#target)
-* [Identifiant de mappage](#mapping)
-* [ID de spécification de flux de données](#flow-specs)
+* ID de connexion source
+* ID de connexion cible
+* Identifiant de mappage
+* ID de spécification de flux de données
 
 Au cours de cette étape, vous pouvez utiliser les paramètres suivants dans `scheduleParams` pour configurer un planning d’ingestion pour votre flux de données :
 
@@ -739,7 +742,7 @@ Une réponse réussie renvoie l’identifiant (`id`) du flux de données nouvell
 }
 ```
 
-### Utiliser l’interface utilisateur pour valider le workflow de l’API {#validate-in-ui}
+### Utiliser l’interface utilisateur pour valider le workflow de l’API
 
 Vous pouvez utiliser l’interface utilisateur d’Experience Platform pour valider la création de votre flux de données. Accédez au catalogue *[!UICONTROL Sources]* dans l’interface utilisateur d’Experience Platform, puis sélectionnez **[!UICONTROL Flux de données]** dans les onglets d’en-tête. Ensuite, utilisez la colonne [!UICONTROL Nom du flux de données] et recherchez le flux de données que vous avez créé à l’aide de l’API [!DNL Flow Service].
 

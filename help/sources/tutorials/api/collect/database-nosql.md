@@ -1,22 +1,22 @@
 ---
 title: Créez un flux de données pour les sources de base de données à l’aide de l’API Flow Service.
 type: Tutorial
-description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une base de données et les ingérer dans Experience Platform à l’aide des connecteurs source et des API.
+description: Découvrez comment utiliser l’API Flow Service pour créer un flux de données et ingérer les données de votre base de données dans Experience Platform.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: b184319f6c5f5430a5ae1e9de4728b5074bca9b8
+source-git-commit: a5fa939d522b0bf828f42144657ea15f9c3347ed
 workflow-type: tm+mt
-source-wordcount: '1453'
+source-wordcount: '1455'
 ht-degree: 73%
 
 ---
 
 # Créez un flux de données pour les sources de base de données à l’aide de l’API [!DNL Flow Service].
 
-Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une source de base de données et les importer dans Experience Platform à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lisez ce tutoriel pour savoir comment créer un flux de données et ingérer des données de votre base de données vers Adobe Experience Platform à l’aide de l’API [[!DNL Flow Service] ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->* Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de base de données. Si vous ne disposez pas de cet identifiant, consultez la [présentation des sources](../../../home.md#database) pour obtenir une liste des sources de base de données avec lesquelles vous pouvez créer une connexion de base.
+>* Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de base de données. Si vous ne disposez pas de cet identifiant, consultez le [catalogue de sources](../../../home.md#database) pour obtenir une liste des sources de base de données avec lesquelles vous pouvez créer une connexion de base.
 >* Pour qu’Experience Platform ingère des données, les fuseaux horaires de toutes les sources de lots basées sur un tableau doivent être configurés au format UTC. Le seul horodatage pris en charge pour la [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md) est TIMESTAMP_NTZ avec l’heure UTC.
 
 ## Prise en main
