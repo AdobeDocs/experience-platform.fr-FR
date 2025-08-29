@@ -3,20 +3,20 @@ title: Créez un flux de données pour les sources de base de données à l’ai
 type: Tutorial
 description: Découvrez comment utiliser l’API Flow Service pour créer un flux de données et ingérer les données de votre base de données dans Experience Platform.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: a5fa939d522b0bf828f42144657ea15f9c3347ed
+source-git-commit: b4f8d44c3ce9507ff158cf051b7a4b524b293c64
 workflow-type: tm+mt
-source-wordcount: '1455'
+source-wordcount: '1456'
 ht-degree: 73%
 
 ---
 
 # Créez un flux de données pour les sources de base de données à l’aide de l’API [!DNL Flow Service].
 
-Lisez ce tutoriel pour savoir comment créer un flux de données et ingérer des données de votre base de données vers Adobe Experience Platform à l’aide de l’API [[!DNL Flow Service] ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lisez ce tutoriel pour savoir comment créer un flux de données et ingérer des données de votre base de données dans Adobe Experience Platform à l’aide de l’API [[!DNL Flow Service] ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->* Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de base de données. Si vous ne disposez pas de cet identifiant, consultez le [catalogue de sources](../../../home.md#database) pour obtenir une liste des sources de base de données avec lesquelles vous pouvez créer une connexion de base.
+>* Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de base de données. Si vous ne disposez pas de cet identifiant, consultez le [catalogue de sources](../../../home.md#database) pour afficher une liste des sources de base de données avec lesquelles vous pouvez créer une connexion de base.
 >* Pour qu’Experience Platform ingère des données, les fuseaux horaires de toutes les sources de lots basées sur un tableau doivent être configurés au format UTC. Le seul horodatage pris en charge pour la [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md) est TIMESTAMP_NTZ avec l’heure UTC.
 
 ## Prise en main

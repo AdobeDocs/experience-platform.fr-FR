@@ -2,10 +2,10 @@
 title: Création d’un flux de données pour ingérer des données d’un CRM dans Experience Platform
 description: Découvrez comment utiliser l’API Flow Service pour créer un flux de données et ingérer les données sources dans Experience Platform.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: fe310a326f423a32b278b8179578933295de3a87
+source-git-commit: b4f8d44c3ce9507ff158cf051b7a4b524b293c64
 workflow-type: tm+mt
-source-wordcount: '2105'
-ht-degree: 12%
+source-wordcount: '2112'
+ht-degree: 10%
 
 ---
 
@@ -17,7 +17,7 @@ Lisez ce guide pour savoir comment créer un flux de données et ingérer des do
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Experience Platform :
 
-* [Ingestion par lots](../../../../ingestion/batch-ingestion/overview.md) : découvrez comment télécharger efficacement d’importants volumes de données par lots.
+* [Ingestion par lots](../../../../ingestion/batch-ingestion/overview.md) : découvrez comment charger rapidement et efficacement d’importants volumes de données par lots.
 * [Service de catalogue](../../../../catalog/datasets/overview.md) : organisez et suivez vos jeux de données dans Experience Platform.
 * [Préparation de données](../../../../data-prep/home.md) : transformez et mappez vos données entrantes pour qu’elles correspondent aux exigences de votre schéma.
 * [Flux de données](../../../../dataflows/home.md) : configurez et gérez les pipelines qui déplacent vos données des sources vers les destinations.
@@ -31,13 +31,13 @@ Pour plus d’informations sur la manière d’effectuer avec succès des appels
 
 ### Créer une connexion de base {#base}
 
-Pour créer un flux de données pour votre source, vous avez besoin d’un compte source entièrement authentifié et de son identifiant de connexion de base correspondant. Si vous ne disposez pas de cet identifiant, consultez le [catalogue de sources](../../../home.md) pour trouver une liste de sources pour lesquelles vous pouvez créer une connexion de base.
+Pour créer un flux de données pour votre source, vous aurez besoin d’un compte source entièrement authentifié et de son identifiant de connexion de base correspondant. Si vous ne disposez pas de cet identifiant, consultez le [catalogue de sources](../../../home.md) pour trouver une liste de sources pour lesquelles vous pouvez créer une connexion de base.
 
 ### Créer un schéma XDM cible {#target-schema}
 
 Un schéma de modèle de données d’expérience (XDM) offre un moyen normalisé d’organiser et de décrire les données d’expérience client dans Experience Platform. Pour ingérer les données sources dans Experience Platform, vous devez d’abord créer un schéma XDM cible qui définit la structure et les types de données à ingérer. Ce schéma sert de plan directeur pour le jeu de données Experience Platform où se trouveront vos données ingérées.
 
-Un schéma XDM cible peut être créé en adressant une requête POST à l’[API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Lisez les guides suivants pour obtenir des instructions détaillées sur la création d’un schéma XDM cible :
+Un schéma XDM cible peut être créé en adressant une requête POST à l’[API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, consultez les guides suivants :
 
 * [Créez un schéma à l’aide de l’API](../../../../xdm/api/schemas.md).
 * [Créez un schéma à l’aide de l’interface utilisateur](../../../../xdm/tutorials/create-schema-ui.md).
@@ -46,7 +46,7 @@ Une fois créé, le schéma XDM cible `$id` sera requis ultérieurement pour vot
 
 ### Créer un jeu de données cible {#target-dataset}
 
-Un jeu de données est une structure de stockage et de gestion pour une collection de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les données correctement ingérées par Experience Platform sont stockées dans le lac de données sous forme de jeux de données. Au cours de cette étape, vous pouvez créer un jeu de données ou utiliser un jeu de données existant.
+Un jeu de données est une structure de stockage et de gestion pour une collection de données, généralement structurée comme un tableau avec des colonnes (schéma) et des lignes (champs). Les données correctement ingérées par Experience Platform sont stockées dans le lac de données sous forme de jeux de données. Au cours de cette étape, vous pouvez créer un jeu de données ou en utiliser un existant.
 
 Vous pouvez créer un jeu de données cible en adressant une requête POST à l’[API Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog/), tout en fournissant l’identifiant du schéma cible dans la payload. Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, consultez le guide [création d’un jeu de données à l’aide de l’API](../../../../catalog/api/create-dataset.md).
 
@@ -64,7 +64,7 @@ POST /dataSets
 
 **Requête**
 
-L’exemple suivant montre comment créer un jeu de données cible activé pour l’ingestion du profil client en temps réel. Dans cette requête, la propriété `unifiedProfile` est définie sur `true` (sous l’objet `tags` ), ce qui indique à Experience Platform d’inclure ce jeu de données dans le profil client en temps réel.
+L’exemple suivant montre comment créer un jeu de données cible activé pour l’ingestion du profil client en temps réel. Dans cette requête, la propriété `unifiedProfile` est définie sur `true` (sous l’objet `tags` ), ce qui indique à Experience Platform d’inclure le jeu de données dans le profil client en temps réel.
 
 ```shell
 curl -X POST \
@@ -92,11 +92,11 @@ curl -X POST \
 | --- | --- |
 | `name` | Nom explicite de votre jeu de données cible. Utilisez un nom clair et unique pour faciliter l’identification et la gestion de votre jeu de données dans les opérations futures. |
 | `schemaRef.id` | Identifiant de votre schéma XDM cible. |
-| `tags.unifiedProfile` | Valeur booléenne qui indique à Experience Platform si les données doivent être ingérées par le profil client en temps réel. |
+| `tags.unifiedProfile` | Valeur booléenne qui indique à Experience Platform si les données doivent être ingérées dans le profil client en temps réel. |
 
 **Réponse**
 
-Une réponse réussie renvoie l’identifiant du jeu de données cible. Cet identifiant est requis ultérieurement pour créer une connexion cible.
+Une réponse réussie renvoie l’identifiant de votre jeu de données cible. Cet identifiant est requis ultérieurement pour créer une connexion cible.
 
 ```json
 [
@@ -243,7 +243,7 @@ curl -X POST \
 
 ## Mappage {#mapping}
 
-Ensuite, vous devez mapper vos données source au schéma cible auquel votre jeu de données cible se conforme. Pour créer un mappage, envoyez une requête POST au point d’entrée `mappingSets` de l’[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/), indiquez votre identifiant de schéma XDM cible et les détails des jeux de mappages que vous souhaitez créer.
+Mappez ensuite vos données source au schéma cible auquel votre jeu de données cible se conforme. Pour créer un mappage, envoyez une requête POST au point d’entrée `mappingSets` de l’[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/). Incluez votre identifiant de schéma XDM cible et les détails des jeux de mappages que vous souhaitez créer.
 
 **Format d’API**
 
@@ -635,7 +635,7 @@ Pour vous assurer que vous utilisez la spécification de flux de données approp
 
 Un flux de données est un pipeline configuré qui transfère des données entre les services Experience Platform. Il définit la manière dont les données sont ingérées à partir de sources externes (telles que des bases de données, un espace de stockage dans le cloud ou des API), traitées et acheminées vers des jeux de données cibles. Ces jeux de données sont ensuite utilisés par des services tels que le service d’identités, le profil client en temps réel et Destinations pour l’activation et l’analyse.
 
-Pour créer un flux de données, vous devez disposer de valeurs pour les éléments suivants :
+Pour créer un flux de données, vous devez fournir des valeurs pour les éléments suivants :
 
 * [ID de connexion source](#source)
 * [ID de connexion cible](#target)
@@ -647,8 +647,8 @@ Au cours de cette étape, vous pouvez utiliser les paramètres suivants dans `sc
 | Paramètre de planification | Description |
 | --- | --- |
 | `startTime` | Heure (en secondes) à laquelle le flux de données doit commencer. |
-| `frequency` | Fréquence d’ingestion. Configurez la fréquence pour indiquer la fréquence d’exécution du flux de données. Vous pouvez définir la fréquence sur : <ul><li>`once` : définissez la fréquence sur `once` pour créer une ingestion unique. Les configurations d’intervalle et de renvoi ne sont pas disponibles lors de la création d’un flux de données d’ingestion unique. Par défaut, la fréquence de planification est définie sur une seule fois.</li><li>`minute` : définissez la fréquence sur `minute` pour planifier le flux de données afin d’ingérer les données par minute.</li><li>`hour` : définissez la fréquence sur `hour` pour planifier le flux de données afin d’ingérer les données toutes les heures.</li><li>`day` : définissez la fréquence sur `day` pour planifier le flux de données afin d’ingérer les données par jour.</li><li>`week` : définissez la fréquence sur `week` afin de planifier le flux de données pour l’ingestion de données sur une base hebdomadaire.</li></ul> |
-| `interval` | Intervalle entre des ingestions consécutives (requis pour toutes les fréquences, à l’exception de `once`). Configurez le paramètre d’intervalle pour établir la période entre chaque ingestion. Par exemple, si vous définissez la fréquence sur jour et configurez l’intervalle sur 15, votre flux de données s’exécutera tous les 15 jours. Vous ne pouvez pas définir l’intervalle sur zéro. La valeur d’intervalle minimale acceptée pour chaque fréquence est la suivante :<ul><li>`once` : s.o.</li><li>`minute` : 15</li><li>`hour` : 1</li><li>`day` : 1</li><li>`week` : 1</li></ul> |
+| `frequency` | Fréquence d’ingestion. Configurez la fréquence pour indiquer la fréquence d’exécution du flux de données. Vous pouvez définir la fréquence sur : <ul><li>`once` : définissez la fréquence sur `once` pour créer une ingestion unique. Les paramètres d’intervalle et de renvoi ne sont pas disponibles pour les tâches d’ingestion uniques. Par défaut, la fréquence de planification est définie sur une seule fois.</li><li>`minute` : définissez la fréquence sur `minute` pour planifier le flux de données afin d’ingérer les données par minute.</li><li>`hour` : définissez la fréquence sur `hour` pour planifier le flux de données afin d’ingérer les données toutes les heures.</li><li>`day` : définissez la fréquence sur `day` pour planifier le flux de données afin d’ingérer les données par jour.</li><li>`week` : définissez la fréquence sur `week` afin de planifier le flux de données pour l’ingestion de données sur une base hebdomadaire.</li></ul> |
+| `interval` | Intervalle entre des ingestions consécutives (requis pour toutes les fréquences, à l’exception de `once`). Configurez le paramètre d’intervalle pour établir la période entre chaque ingestion. Par exemple, si votre fréquence est définie sur le jour et que l’intervalle est de 15, le flux de données s’exécute tous les 15 jours. Vous ne pouvez pas définir l’intervalle sur zéro. La valeur d’intervalle minimale acceptée pour chaque fréquence est la suivante :<ul><li>`once` : s.o.</li><li>`minute` : 15</li><li>`hour` : 1</li><li>`day` : 1</li><li>`week` : 1</li></ul> |
 | `backfill` | Indique s’il faut ingérer les données historiques antérieures à la `startTime`. |
 
 {style="table-layout:auto"}
@@ -723,7 +723,7 @@ curl -X POST \
 | `transformations.params.mappingId` | Identifiant de mappage généré lors d’une étape précédente. |
 | `scheduleParams.startTime` | Heure de début du flux de données en temps Unix (secondes depuis Unix epoch). Détermine le moment où le flux de données commencera sa première exécution. |
 | `scheduleParams.frequency` | Fréquence d’exécution du flux de données. Les valeurs possibles sont les suivantes : `once`, `minute`, `hour`, `day` ou `week`. |
-| `scheduleParams.interval` | Intervalle entre des exécutions consécutives de flux de données, en fonction de la fréquence sélectionnée. Doit être un entier non nul. Par exemple, un intervalle de `15` avec des `minute` de fréquence signifie que le flux de données s’exécute toutes les 15 minutes. |
+| `scheduleParams.interval` | Intervalle entre des exécutions consécutives de flux de données, en fonction de la fréquence sélectionnée. Doit être un entier non nul. Par exemple, si votre fréquence est définie sur minute et que l’intervalle est de 15, le flux de données s’exécute toutes les 15 minutes. |
 | `scheduleParams.backfill` | Valeur booléenne (`true` ou `false`) qui détermine s’il faut ingérer des données historiques (renvoi) lors de la première création du flux de données. |
 
 {style="table-layout:auto"}
@@ -755,11 +755,11 @@ Ce tutoriel vous a guidé tout au long du processus de création d’un flux de 
 
 ### Surveiller votre flux de données
 
-Une fois votre flux de données créé, vous pouvez surveiller les données ingérées et afficher les informations relatives au taux d’ingestion, aux succès et aux erreurs. Pour plus d’informations sur la surveillance des flux de données, consultez le tutoriel sur la [surveillance des comptes et des flux de données](../../../../dataflows/ui/monitor-sources.md).
+Une fois votre flux de données créé, vous pouvez surveiller ses performances directement dans l’interface utilisateur d’Experience Platform. Cela inclut le suivi des taux d’ingestion, des mesures de succès et des erreurs qui se produisent. Pour plus d’informations sur la surveillance des flux de données, consultez le tutoriel sur la [surveillance des comptes et des flux de données](../../../../dataflows/ui/monitor-sources.md).
 
 ### Mettre à jour votre flux de données
 
-Pour mettre à jour les configurations pour la planification, le mappage et les informations générales de vos flux de données, consultez le tutoriel sur la [mise à jour des flux de données sources](../../api/update-dataflows.md).
+Pour mettre à jour des configurations pour la planification, le mappage ou des informations générales de vos flux de données, consultez le tutoriel sur la [mise à jour des flux de données sources](../../api/update-dataflows.md).
 
 ## Supprimer le flux de données
 
