@@ -3,7 +3,7 @@ title: Point d’entrée de l’API Audiences
 description: Utilisez le point d’entrée audiences dans l’API Adobe Experience Platform Segmentation Service pour créer, gérer et mettre à jour des audiences par programmation pour votre organisation.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 2ec6bacb44dc9b31fcd5cb4c457ba109a921aa84
+source-git-commit: 63fa87ac9777b3ac66d990dd4bfbd202f07b0eba
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 6%
@@ -166,7 +166,12 @@ Une réponse réussie renvoie le statut HTTP 200 avec une liste d’audiences cr
     ],
     "_page":{
       "totalCount": 111,
-      "pageSize": 2,
+      "totalPages": 21,
+      "sortField": "name",
+      "sort": "asc", 
+      "pageSize": 5,
+      "limit": 5,
+      "start": "0",
       "next": "1"
    },
    "_links":{
@@ -186,7 +191,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec une liste d’audiences cr
 | `sandbox` | Les deux | Informations sur le sandbox auquel appartient l’audience. Vous trouverez plus d’informations sur les sandbox dans la [présentation des sandbox](../../sandboxes/home.md). |
 | `name` | Les deux | Nom de l’audience. |
 | `description` | Les deux | Description de l’audience. |
-| `expression` | Généré par Platform | Expression Profile Query Language (PQL) de l’audience. Vous trouverez plus d’informations sur les expressions PQL dans le guide des expressions de PQL [&#128279;](../pql/overview.md). |
+| `expression` | Généré par Platform | Expression Profile Query Language (PQL) de l’audience. Vous trouverez plus d’informations sur les expressions PQL dans le guide des expressions de PQL [](../pql/overview.md). |
 | `mergePolicyId` | Généré par Platform | L’identifiant de la politique de fusion à laquelle l’audience est associée. Pour plus d’informations sur les politiques de fusion, consultez le [guide des politiques de fusion](../../profile/api/merge-policies.md). |
 | `evaluationInfo` | Généré par Platform | Indique comment l’audience sera évaluée. Les méthodes d’évaluation possibles sont par lots, synchrones (diffusion en continu) ou continues (Edge). Vous trouverez plus d’informations sur les méthodes d’évaluation dans la [ présentation de la segmentation ](../home.md) |
 | `dependents` | Les deux | Tableau d’ID d’audience qui dépendent de l’audience actuelle. Cette option est utile si vous créez une audience qui est un segment d’un segment. |
@@ -245,7 +250,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | `name` | Nom de l’audience. |
 | `description` | Description de l’audience. |
 | `type` | Champ qui indique si l’audience est générée par Platform ou si elle est générée de manière externe. Les valeurs possibles sont `SegmentDefinition` et `ExternalSegment`. Une `SegmentDefinition` fait référence à une audience générée dans Platform, tandis qu’une `ExternalSegment` fait référence à une audience qui n’a pas été générée dans Platform. |
-| `expression` | Expression Profile Query Language (PQL) de l’audience. Vous trouverez plus d’informations sur les expressions PQL dans le guide des expressions de PQL [&#128279;](../pql/overview.md). |
+| `expression` | Expression Profile Query Language (PQL) de l’audience. Vous trouverez plus d’informations sur les expressions PQL dans le guide des expressions de PQL [](../pql/overview.md). |
 | `schema` | Schéma du modèle de données d’expérience (XDM) de l’audience. |
 | `labels` | Utilisation des données au niveau de l’objet et libellés de contrôle d’accès basés sur les attributs pertinents pour l’audience. |
 
