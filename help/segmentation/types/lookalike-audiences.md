@@ -127,7 +127,7 @@ La section Audiences semblables affiche une liste de toutes les audiences sembla
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="Facteurs d’influence"
->abstract="Les facteurs d’influence sont les attributs, les événements et les appartenances à l’audience qui sont importants pour expliquer la similarité d’un profil aux profils membres de l’audience de base.Les libellés et politiques d’utilisation des données peuvent être utilisés pour exclure certaines données en tant que facteurs d’influence dans les modèles analogues."
+>abstract="Les facteurs d’influence sont les attributs, les événements et les appartenances à une audience qui sont importants pour expliquer la similarité d’un profil aux profils membres de l’audience de base.Les libellés et politiques d’utilisation des données peuvent être utilisés pour exclure certaines données en tant que facteurs d’influence dans les modèles analogues."
 >additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/segmentation/types/lookalike-audiences#exclude" text="Exclure des données"
 
 La section Facteurs d’influence affiche les 100 principaux facteurs qui influencent le modèle similaire pour l’audience de base sélectionnée. Ces facteurs d’influence sont les attributs de profil, les événements d’expérience et les appartenances à l’audience qui sont les plus importants pour expliquer les similitudes dans l’audience de base. Comprendre les facteurs d’influence principaux vous permet de mieux personnaliser votre contenu marketing pour cette audience et pour toute audience semblable que vous créez à partir de celle-ci. Notez que tous les facteurs d’influence qui affectent le modèle similaire ne s’affichent pas.

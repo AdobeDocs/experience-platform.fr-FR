@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 52571689c97fdc2ed052b53537e736f03d666ad5
 workflow-type: tm+mt
 source-wordcount: '5174'
-ht-degree: 63%
+ht-degree: 64%
 
 ---
 
@@ -330,7 +330,7 @@ La liste des contraintes de temps disponibles pour cette opération diffère de 
 >[!NOTE]
 >
 >Lors de l’utilisation de la contrainte de temps « Après », le dernier événement peut avoir lieu plus longtemps que la durée répertoriée dans la contrainte de temps. >
->&#x200B;>Par exemple, si vous disposez d’un événement Page vue et d’un événement Passage en caisse et que vous appliquez la contrainte de temps « Après 1 heure » entre ces deux événements, une définition de segment avec un événement Passage en caisse 2 heures après l’événement Page vue est éligible.
+>>Par exemple, si vous disposez d’un événement Page vue et d’un événement Passage en caisse et que vous appliquez la contrainte de temps « Après 1 heure » entre ces deux événements, une définition de segment avec un événement Passage en caisse 2 heures après l’événement Page vue est éligible.
 >
 >En outre, ces deux contraintes de temps peuvent être utilisées en coordination l&#39;une avec l&#39;autre.
 >
@@ -380,7 +380,7 @@ Pour sélectionner une politique de fusion pour votre définition de segment, s�
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
 >title="Propriétés de l’audience"
->abstract="La section des propriétés de l’audience affiche une estimation de la taille de l’audience résultante, en affichant le nombre de profils qualifiés par rapport au nombre total de profils. Vous pouvez ainsi ajuster votre audience selon vos besoins avant de créer l’audience elle-même."
+>abstract="La section des propriétés de l’audience affiche une estimation de la taille de l’audience résultante, en affichant le nombre de profils qualifiés par rapport au nombre total de profils. Cela vous permet d’ajuster votre audience selon vos besoins avant de créer l’audience elle-même."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
@@ -396,7 +396,7 @@ Pour sélectionner une politique de fusion pour votre définition de segment, s�
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
 >title="Profils estimés"
->abstract="Les profils estimés indiquent un nombre approximatif de profils, en fonction de l’exemple de tâche, qui seraient qualifiés pour les règles de l’audience."
+>abstract="Les profils estimés indiquent un nombre approximatif de profils, en fonction de l’exemple de traitement, qui seraient qualifiés pour les règles de l’audience."
 
 Lors de la création d’une définition de segment, la section **[!UICONTROL Propriétés de l’audience]** située dans la partie droite de l’espace de travail affiche une estimation de la taille de la définition de segment obtenue, ce qui vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même.
 
