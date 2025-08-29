@@ -2,13 +2,13 @@
 title: Demandbase Intent
 description: Découvrez la source Demandbase Intent sur Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions newtab=true"
-badgeB2P: label="Édition B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Édition B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: 5757bc84a9aeec18eb5fe21d6f02160b2ba55166
+source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
 workflow-type: tm+mt
-source-wordcount: '1480'
-ht-degree: 11%
+source-wordcount: '1478'
+ht-degree: 12%
 
 ---
 
@@ -30,7 +30,7 @@ Une liste d’adresses IP doit être ajoutée à un place sur la liste autorisé
 
 ### Configuration des autorisations sur Experience Platform
 
-Pour connecter votre compte [!DNL Demandbase] à Experience Platform **les autorisations** Afficher les sources et **[!UICONTROL Gérer les sources]** doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/abac/ui/permissions.md).
+Pour connecter votre compte **[!UICONTROL à Experience Platform]** les autorisations **[!UICONTROL Afficher les sources et]** Gérer les sources[!DNL Demandbase] doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/abac/ui/permissions.md).
 
 ### Contraintes de dénomination pour fichiers et répertoires
 
@@ -60,25 +60,33 @@ Pour plus d’informations sur ces informations d’identification, consultez le
 
 Lisez cette section pour plus d’informations sur le schéma [!DNL Demandbase] et la structure des données.
 
-Le schéma [!DNL Demandbase] est appelé **Company Intent Weekly**. Il s’agit des informations d’intention hebdomadaires (recherche d’acheteur B2B anonyme et consommation de contenu) sur le compte et les mots-clés spécifiés. Les données sont au format parquet.
+Le schéma [!DNL Demandbase] est appelé **B2B Demandbase Account Intent**. Il s’agit des informations d’intention hebdomadaires (recherche d’acheteur B2B anonyme et consommation de contenu) sur le compte et les mots-clés spécifiés. Les données sont au format parquet.
 
-| Nom du champ | Type de données | Obligatoire | Clé métier | Notes |
-| --- | --- | --- | --- | --- |
-| `company_id` | CHAÎNE | VRAI | OUI | Identifiant d’entreprise canonique. |
-| `domain` | CHAÎNE | VRAI | OUI | Domaine identifié du compte indiquant l’intention. |
-| `start_date` | DATE | VRAI | OUI | Date de début à laquelle l’activité d’intention s’est produite au cours de la période de durée. |
-| `end_date` | DATE | VRAI | OUI | Date de fin à laquelle l’activité d’intention s’est produite au cours de la période définie. |
-| `duration_type` | CHAÎNE | VRAI | OUI | Type de durée. En règle générale, cette valeur peut être quotidienne, hebdomadaire ou mensuelle selon la durée de cumul choisie. Pour cet exemple de données, cette valeur est `week`. |
-| `keyword_set_id` | CHAÎNE | VRAI | OUI | ID de jeu de mots-clés. Il est unique par client donné. |
-| `keyword_set` | CHAÎNE | VRAI | OUI | Nom du jeu de mots-clés. |
-| `keyword` | CHAÎNE | VRAI | | Mot-clé d’intention. |
-| `is_trending` | CHAÎNE | VRAI | | État actuel d’une tendance donnée. L’état de tendance est mesuré comme un sursaut d’activité d’intention au cours de la dernière semaine par rapport aux moyennes des sept semaines précédentes. |
-| `intent_strength` | ENUM[STRING] | VRAI | | Mesure quantifiée de la force de l’intention. Les valeurs acceptées sont les suivantes : `HIGH`, `MED` et `LOW`. |
-| `num_people_researching` | NOMBRE ENTIER | VRAI | | Nombre de personnes appartenant au `company_id` qui ont effectué une recherche sur le mot-clé au cours des sept derniers jours. |
-| `num_trending_days` | NOMBRE ENTIER | VRAI | | Nombre de jours pendant lesquels le mot-clé était en tendance sur une durée donnée. |
-| `trending_score` | NOMBRE ENTIER | VRAI | | Score de tendance. |
-| `record_id` | CHAÎNE | VRAI | | ID d’enregistrement principal unique. |
-| `partition_date` | DATE | VRAI | | Date calendaire de l’instantané. Cela se fait une fois par semaine, à la fin de la semaine. |
+* Classe - [!DNL Demandbase Account Intent] XDM
+* Espace de noms - [!DNL Demandbase Account Intent] B2B
+* Identité du Principal - `intentID`
+* Relations - Compte B2B
+
+| Nom du champ | Type de données | Description |
+|--------------------------|-----------|-------------------------------------------------------------------------------------------------------------|
+| `extSourceSystemAudit` | OBJET | Ce champ contient les informations d&#39;audit du système provenant de la source externe. |
+| `_id` | CHAÎNE | Il s’agit de l’identifiant système unique de l’enregistrement. |
+| `accountDomain` | CHAÎNE | Ce champ contient le domaine du compte. |
+| `accountID` | CHAÎNE | Il s’agit de l’identifiant de compte B2B auquel cet enregistrement d’intention est associé. |
+| `demandbaseAccountID` | CHAÎNE | Il s&#39;agit de l&#39;ID de l&#39;entreprise en [!DNL Demandbase]. |
+| `durationType` | CHAÎNE | Ce champ spécifie le type de période de validité de l’intention, par exemple « semaine ». |
+| `endDate` | DATE | Il s’agit de la date de fin de la période de validité du plan. |
+| `intentID` | CHAÎNE | Il s’agit d’une valeur unique générée par le système pour l’enregistrement d’intention. |
+| `intentStrength` | CHAÎNE | Ce champ indique le type de période de validité de l’intention, par exemple « JOUR », « SEMAINE » ou « MOIS ». |
+| `isTrending` | BOOLÉEN | Ce champ indique si le mot-clé est en tendance, les valeurs possibles étant Faible, Medium ou Élevée. |
+| `keyword` | CHAÎNE | Ce champ contient le mot-clé ou l’expression indiquant l’intention du [!DNL Demandbase]. |
+| `keywordSetID` | CHAÎNE | Il s’agit de l’identifiant de l’ensemble de mots-clés. |
+| `keywordSetName` | CHAÎNE | Il s’agit du nom de l’ensemble de mots-clés. |
+| `numTrendingDays` | ENTIER | Ce champ indique le nombre de jours pendant lesquels le mot-clé a affiché une tendance. |
+| `partitionDate` | DATE | Il s’agit de la date de partition de l’enregistrement. |
+| `peopleResearchingCount` | ENTIER | Ce champ indique le nombre de personnes effectuant une recherche sur le mot-clé. |
+| `startDate` | DATE | Il s’agit de la date de début de la période de validité du plan. |
+| `trendingScore` | ENTIER | Ce champ contient le score de tendance du mot-clé. |
 
 {style="table-layout:auto"}
 

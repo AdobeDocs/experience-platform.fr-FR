@@ -2,12 +2,12 @@
 title: Intention de Bombora
 description: Découvrez la source d’intention Bombora sur Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions newtab=true"
-badgeB2P: label="Édition B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Édition B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 9ab2c4725d2188f772bde1f7a89db2bb47c7a46b
+source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1607'
 ht-degree: 10%
 
 ---
@@ -48,7 +48,7 @@ Une liste d’adresses IP doit être ajoutée à un place sur la liste autorisé
 
 ### Configuration des autorisations sur Experience Platform
 
-Pour connecter votre compte [!DNL Bombora] à Experience Platform **les autorisations** Afficher les sources et **[!UICONTROL Gérer les sources]** doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/abac/ui/permissions.md).
+Pour connecter votre compte **[!UICONTROL à Experience Platform]** les autorisations **[!UICONTROL Afficher les sources et]** Gérer les sources[!DNL Bombora] doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/abac/ui/permissions.md).
 
 ### Contraintes de dénomination pour fichiers et répertoires
 
@@ -77,18 +77,27 @@ Pour plus d’informations sur ces informations d’identification, consultez le
 
 Lisez cette section pour plus d’informations sur le schéma [!DNL Bombora] et la structure des données.
 
-Le schéma [!DNL Bombora] est appelé **Account Intent Weekly**. Il s’agit des informations d’intention hebdomadaires (recherche d’acheteur B2B anonyme et consommation de contenu) sur des comptes et des sujets spécifiés. Les données sont au format parquet.
+Le schéma [!DNL Bombora] est appelé **B2B Bombora Account Intent**. Il s’agit des informations d’intention hebdomadaires (recherche d’acheteur B2B anonyme et consommation de contenu) sur des comptes et des sujets spécifiés. Les données sont au format parquet.
 
-| Nom du champ | Type de données | Obligatoire | Clé métier | Notes |
-| --- | --- | --- | --- | --- |
-| `Account_Name` | CHAÎNE | VRAI | OUI | Nom canonique de la société. |
-| `Domain` | CHAÎNE | VRAI | OUI | Domaine du compte identifié indiquant l’intention. |
-| `Topic_Id` | CHAÎNE | VRAI | OUI | ID de rubrique [!DNL Bombora]. |
-| `Topic_Name` | CHAÎNE | VRAI | | Nom de la rubrique [!DNL Bombora]. |
-| `Cluster_Name` | CHAÎNE | VRAI | | Nom du cluster sur [!DNL Bombora] pour une rubrique donnée. |
-| `Cluster_Id` | CHAÎNE | VRAI | | Identifiant de cluster associé à une rubrique donnée. |
-| `Composite_Score` | NOMBRE ENTIER | VRAI | | Le score composite représente le modèle de consommation d’un domaine pour une rubrique donnée sur une période spécifiée. Le score composite est mesuré entre 0 et 100, où 100 représente le score le plus élevé possible et 0 représente le score le plus bas possible. Un score composite de plus de 60 représente une augmentation de l’intérêt pour un sujet particulier par un domaine. C’est ce que l’on appelle une « augmentation ». |
-| `Partition_Date` | DATE | VRAI | | Date calendaire d’un instantané. Cette opération s’effectue toutes les semaines, en fin de semaine, au format `mm/dd/yyyy`. |
+* Classe - [!DNL Bombora Account Intent] XDM
+* Espace de noms - [!DNL Bombora Account Intent] B2B
+* Identité du Principal - `intentID`
+* Relations - Compte B2B
+
+| Nom du champ | Type de données | Description |
+|------------------------|-----------|----------------------------------------------------------------------------------------|
+| `extSourceSystemAudit` | OBJET | Ce champ est utilisé par le système pour le contrôle du système source. |
+| `_id` | CHAÎNE | Ce champ est utilisé par le système comme identifiant unique. |
+| `accountDomain` | CHAÎNE | Ce champ contient le domaine du compte. |
+| `accountID` | CHAÎNE | Ce champ contient l’identifiant de compte B2B auquel cet enregistrement d’intention est associé. |
+| `bomboraAccountName` | CHAÎNE | Ce champ contient l’ID de la société dans Bombora. |
+| `clusterID` | CHAÎNE | Ce champ contient l’ID du cluster. |
+| `clusterName` | CHAÎNE | Ce champ contient le nom du cluster. |
+| `compositeScore` | ENTIER | Ce champ contient le score composite d’intention. |
+| `intentID` | CHAÎNE | Ce champ contient une valeur unique générée par le système. |
+| `partitionDate` | DATE | Ce champ contient la date de partition. Cette opération s’effectue toutes les semaines, en fin de semaine, au format `mm/dd/yyyy`. |
+| `topicID` | CHAÎNE | Ce champ contient l’ID de rubrique d’intention de Bombora. |
+| `topicName` | CHAÎNE | Ce champ contient le nom de la rubrique d’intention de Bombora. |
 
 {style="table-layout:auto"}
 
