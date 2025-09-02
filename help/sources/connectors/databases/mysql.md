@@ -3,9 +3,9 @@ title: Présentation du connecteur MySQL Source
 description: Découvrez comment connecter MySQL à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 last-substantial-update: 2025-05-20T00:00:00Z
 exl-id: a18e8e69-880f-4bee-b339-726091d6f858
-source-git-commit: b73ced639100c95f6c62be92d4796a206a688958
+source-git-commit: 16fe5340582dcea0ff40000fb516c1b72d5f150e
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '622'
 ht-degree: 5%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 5%
 
 Vous pouvez utiliser la source de [!DNL MySQL] pour connecter votre compte et ingérer les données de votre base de données [!DNL MySQL] vers Adobe Experience Platform.
 
-## Prérequis {#prerequisites}
+## Conditions préalables {#prerequisites}
 
 Lisez les sections suivantes pour terminer la configuration requise avant de connecter votre compte [!DNL MySQl] à Experience Platform.
 
 ### Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform sur Azure ou Amazon Web Services (AWS). Pour plus d’informations, consultez le guide sur la [liste autorisée des adresses IP pour se connecter à Experience Platform sur Azure et AWS](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform sur Azure ou Amazon Web Services (AWS). Lisez le guide sur [la liste autorisée des adresses IP pour se connecter à Experience Platform sur Azure et AWS](../../ip-address-allow-list.md) pour plus d’informations.
 
 ### S’authentifier auprès d’Experience Platform sur Azure {#azure}
 

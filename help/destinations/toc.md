@@ -5,7 +5,7 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: cbf00cbe66aa3332f5b5abd41ac5dc9f41170a95
+source-git-commit: 16fe5340582dcea0ff40000fb516c1b72d5f150e
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 73%
@@ -32,7 +32,7 @@ ht-degree: 73%
    * [Supprimer les comptes de destination](./api/delete-destination-account.md)
    * [Supprimer les flux de données de destination](./api/delete-destination-dataflow.md)
    * [Exporter des jeux de données](/help/destinations/api/export-datasets.md)
-   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=fr#use-cases)
+   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
    * [Créer une connexion à une destination](./ui/connect-destination.md)
@@ -73,7 +73,7 @@ ht-degree: 73%
       * [Partage d’audiences Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr)
       * [Connexion à la composition d’audiences fédérées](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinations publicitaires{#advertising}
-      * [(Beta) Distribution d’audiences Acxiom](./catalog/advertising/acxiom-audience-connection.md)
+      * [(Beta) Connexion à l’audience Acxiom](./catalog/advertising/acxiom-audience-connection.md)
       * [(Beta) Connexion à l’audience Acxiom RealID](./catalog/advertising/acxiom-real-id-audience-connection.md)
       * [Présentation des destinations publicitaires](./catalog/advertising/overview.md)
       * [Connexion Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)

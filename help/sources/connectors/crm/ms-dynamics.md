@@ -4,22 +4,22 @@ solution: Experience Platform
 title: Présentation du connecteur Source de Microsoft Dynamics
 description: Découvrez comment connecter Microsoft Dynamics à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16fe5340582dcea0ff40000fb516c1b72d5f150e
 workflow-type: tm+mt
-source-wordcount: '285'
-ht-degree: 50%
+source-wordcount: '284'
+ht-degree: 15%
 
 ---
 
-# Connecteur Microsoft Dynamics
+# Source [!DNL Microsoft Dynamics]
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
+[!DNL Microsoft Dynamics] est une suite d’applications d’entreprise que vous pouvez utiliser pour gérer vos opérations plus efficacement. Que vous supervisiez les relations avec la clientèle, les finances ou les chaînes d&#39;approvisionnement, [!DNL Microsoft Dynamics] vous donne les outils nécessaires pour rationaliser vos workflows et prendre des décisions plus intelligentes. La plateforme est conçue pour prendre en charge à la fois la planification des ressources de l’entreprise et la gestion de la relation client (GRC), ce qui vous permet d’unifier vos processus d’entreprise dans un système intégré.
 
-[!DNL Experience Platform] prend en charge l’ingestion de données provenant d’un système CRM tiers. La prise en charge des fournisseurs de gestion de la relation client inclut [!DNL Microsoft Dynamics].
+Vous pouvez utiliser la source de [!DNL Microsoft Dynamics] pour ingérer des données à partir du compte [!DNL Microsoft Dynamics] vers Adobe Experience Platform.
 
 ## Liste autorisée d’adresses IP
 
-Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page [Liste autorisée d’adresses IP](../../ip-address-allow-list.md) pour plus d’informations.
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
 
 ## Mappage des champs de [!DNL Microsoft Dynamics] à XDM
 
