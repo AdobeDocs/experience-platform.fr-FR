@@ -3,7 +3,7 @@ title: Notes de mise à jour d’Adobe Experience Platform - Août 2025
 description: Les notes de mise à jour d’août 2025 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 35c3933f5debbba04c885f6000b908e292613395
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1339'
 ht-degree: 100%
 
