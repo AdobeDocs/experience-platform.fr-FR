@@ -1,43 +1,43 @@
 ---
-title: Distribution d’audience Acxiom
-description: Utilisez la destination  [!DNL Acxiom Audience Distribution]  pour améliorer les audiences avec la technologie  [!DNL Acxiom's Real ID]  et activer les audiences sur plusieurs plateformes, telles que  [!DNL Altice],  [!DNL Ampersand],  [!DNL Comcast], etc.
+title: Connexion à l’audience Acxiom
+description: Utilisez la destination  [!DNL Acxiom Audience Connection]  pour améliorer les audiences avec la technologie  [!DNL Acxiom's Real ID]  et activer les audiences sur plusieurs plateformes, telles que  [!DNL Altice],  [!DNL Ampersand],  [!DNL Comcast], etc.
 badge: label="Beta" type="Informative"
 exl-id: bac0f337-bfab-4779-acc8-f70239552666
-source-git-commit: 290d6eb20b7d35839b4bb37e71e2c993b112d896
+source-git-commit: 70a1cdcfd99ae006f02289ab5a20ced624b51ccc
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 14%
 
 ---
 
-# [!DNL Acxiom Audience Distribution] destination
+# Destination [!DNL Acxiom Audience Connection]
 
 >[!NOTE]
 >
->La destination [!DNL Acxiom Audience Distribution] est en version bêta. Ce connecteur de destination et cette page de documentation sont créés et gérés par l’équipe [!DNL Acxiom]. Pour toute demande ou information, contactez Acxiom directement [ici](mailto:acxiom-adobe-help@acxiom.com).
+>La destination [!DNL Acxiom Audience Connection] est en version bêta. Ce connecteur de destination et cette page de documentation sont créés et gérés par l’équipe [!DNL Acxiom]. Pour toute demande ou information, contactez Acxiom directement [ici](mailto:acxiom-adobe-help@acxiom.com).
 
-Utilisez la destination [!DNL Acxiom Audience Distribution] pour améliorer les audiences avec [!DNL Acxiom's] technologie [Real ID™](https://www.acxiom.com/real-id/real-id/) et activer les audiences vers plusieurs plateformes, telles que [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], etc.
+Utilisez la destination [!DNL Acxiom Audience Connection] pour améliorer les audiences avec [!DNL Acxiom's] technologie [Real ID™](https://www.acxiom.com/real-id/real-id/) et activer les audiences vers plusieurs plateformes, telles que [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], etc.
 
-Ce tutoriel fournit des instructions pour créer un connecteur de destination [!DNL Acxiom Audience Distribution] à l’aide de l’interface utilisateur [!DNL Adobe Experience Platform]. Ce connecteur est utilisé pour créer et distribuer des audiences vers des destinations sélectionnées.
+Ce tutoriel fournit des instructions pour créer un connecteur de destination [!DNL Acxiom Audience Connection] à l’aide de l’interface utilisateur [!DNL Adobe Experience Platform]. Ce connecteur est utilisé pour créer et distribuer des audiences vers des destinations sélectionnées.
 
 ## Cas d’utilisation {#use-cases}
 
-Pour mieux comprendre quand et comment utiliser la destination [!DNL Acxiom Audience Distribution], consultez l’exemple de cas d’utilisation ci-dessous que [!DNL Adobe Experience Platform] clients peuvent résoudre à l’aide de ce connecteur.
+Pour mieux comprendre quand et comment utiliser la destination [!DNL Acxiom Audience Connection], consultez l’exemple de cas d’utilisation ci-dessous que [!DNL Adobe Experience Platform] clients peuvent résoudre à l’aide de ce connecteur.
 
 ### Envoi d’audiences d’Experience Platform vers votre compte Acxiom {#send-audiences}
 
 Utilisez ce connecteur de destination si vous êtes un professionnel du marketing qui souhaite envoyer des audiences de [!DNL Experience Platform] vers votre compte [!DNL Acxiom], pour une acquisition cross-canal.
 
-Par exemple, le service des opérations marketing d’une marque mondiale de services financiers s’intéresse à l’acquisition de clients cross-canal par le biais de plusieurs plateformes publicitaires. Ils peuvent utiliser le connecteur de destination [!DNL Acxiom Audience Distribution] pour envoyer des audiences de [!DNL Experience Platform] à [!DNL Acxiom], améliorer les audiences avec la technologie [!DNL Acxiom's Real ID] et activer les audiences vers plusieurs plateformes, telles que [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], etc.
+Par exemple, le service des opérations marketing d’une marque mondiale de services financiers s’intéresse à l’acquisition de clients cross-canal par le biais de plusieurs plateformes publicitaires. Ils peuvent utiliser le connecteur de destination [!DNL Acxiom Audience Connection] pour envoyer des audiences de [!DNL Experience Platform] à [!DNL Acxiom], améliorer les audiences avec la technologie [!DNL Acxiom's Real ID] et activer les audiences vers plusieurs plateformes, telles que [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], etc.
 
 ## Conditions préalables {#prerequisites}
 
-* **Confirmer les conditions d’utilisation :** avant de pouvoir configurer une nouvelle destination [!DNL Acxiom Audience Distribution], vous devez lire et signer [!DNL Acxiom's] contrat de conditions d’utilisation. Vous recevrez le lien vers le contrat une fois que votre commande client exécutée sera terminée. Tant que vous n’avez pas signé le contrat, la carte de destination [!DNL Acxiom Audience Distribution] ne s’affichera pas dans le catalogue de destinations d’Experience Platform. Une fois que vous avez accepté et signé le contrat, [!DNL Adobe] terminez le processus d’intégration et la carte de destination [!DNL Acxiom Audience Distribution] s’affiche.
+* **Confirmer les conditions d’utilisation :** avant de pouvoir configurer une nouvelle destination [!DNL Acxiom Audience Connection], vous devez lire et signer [!DNL Acxiom's] contrat de conditions d’utilisation. Vous recevrez le lien vers le contrat une fois que votre commande client exécutée sera terminée. Tant que vous n’avez pas signé le contrat, la carte de destination [!DNL Acxiom Audience Connection] ne s’affichera pas dans le catalogue de destinations d’Experience Platform. Une fois que vous avez accepté et signé le contrat, [!DNL Adobe] terminez le processus d’intégration et la carte de destination [!DNL Acxiom Audience Connection] s’affiche.
 * **Connaître votre ID d’organisation Adobe :** votre ID d’organisation [!DNL Adobe] est nécessaire pour remplir vos Conditions d’utilisation. Voir [!DNL Adobe's] rubrique *Organisations dans Experience Cloud* pour plus d’informations sur la manière d’[afficher votre ID d’organisation](https://experienceleague.adobe.com/fr/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
 
 ## Destinations prises en charge {#supported-destinations}
 
-La destination [!DNL Acxiom Audience Distribution] prend actuellement en charge l’activation des audiences sur les plateformes suivantes <br>
+La destination [!DNL Acxiom Audience Connection] prend actuellement en charge l’activation des audiences sur les plateformes suivantes <br>
 
 * [!DNL Altice]
 * [!DNL Ampersand]
@@ -49,11 +49,11 @@ La destination [!DNL Acxiom Audience Distribution] prend actuellement en charge 
 
 ## Se connecter à la destination {#connect}
 
-L’authentification vers [!DNL Acxiom's Audience Distribution] destination est automatiquement gérée en arrière-plan pour votre commodité.
+L’authentification vers [!DNL Acxiom's Audience Connection] destination est automatiquement gérée en arrière-plan pour votre commodité.
 
 ## Paramètres spécifiques à la destination {#destination-settings}
 
-Certaines destinations [!DNL Acxiom Audience Distribution] nécessitent des informations supplémentaires. Les sections ci-dessous fournissent des instructions détaillées sur la configuration de ces options.
+Certaines destinations [!DNL Acxiom Audience Connection] nécessitent des informations supplémentaires. Les sections ci-dessous fournissent des instructions détaillées sur la configuration de ces options.
 
 ### [!DNL LG Ads] {#lg-ads}
 
@@ -67,20 +67,20 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
 >[!NOTE]
 >
->La destination [!DNL Acxiom Audience Distribution] ne prend en charge que les exportations de fichiers complets.
+>La destination [!DNL Acxiom Audience Connection] ne prend en charge que les exportations de fichiers complets.
 
 ### Mapper les attributs et les identités {#map}
 
-Pour que la destination [!DNL Acxiom Audience Distribution] reçoive correctement les données d’audience, vous devez mapper les champs sources d’Experience Platform aux champs cibles [!DNL Acxiom Audience Distribution] corrects.
+Pour que la destination [!DNL Acxiom Audience Connection] reçoive correctement les données d’audience, vous devez mapper les champs sources d’Experience Platform aux champs cibles [!DNL Acxiom Audience Connection] corrects.
 
-[!DNL Acxiom Audience Distribution] permet uniquement de mapper les champs cibles suivants. Les champs cibles décrits dans le tableau ci-dessous doivent être mappés dans l’ordre indiqué ci-dessous.
+[!DNL Acxiom Audience Connection] permet uniquement de mapper les champs cibles suivants. Les champs cibles décrits dans le tableau ci-dessous doivent être mappés dans l’ordre indiqué ci-dessous.
 
 | Nom du champ | Description | Obligatoire | Ordre des champs | Longueur max. |
 |---|---|---|---|---|          
@@ -105,7 +105,7 @@ Si vous n’utilisez pas [!DNL Adobe's] schéma standard, consultez la documenta
 
 ### Réviser {#review}
 
-Une fois toutes les étapes ci-dessus effectuées, vous avez la possibilité de consulter le statut de la connexion de destination et les détails de l’audience avant de l’activer (la distribuer). Les audiences que vous avez sélectionnées s’affichent en bas d’une liste. Chaque audience sera un appel distinct à l’API [!DNL Acxiom Audience Distribution].
+Une fois toutes les étapes ci-dessus effectuées, vous avez la possibilité de consulter le statut de la connexion de destination et les détails de l’audience avant de l’activer (la distribuer). Les audiences que vous avez sélectionnées s’affichent en bas d’une liste. Chaque audience sera un appel distinct à l’API [!DNL Acxiom Audience Connection].
 
 Si les résultats vous conviennent, sélectionnez **[!UICONTROL Terminer]** pour activer la destination.
 
@@ -128,4 +128,4 @@ En suivant ce tutoriel, vous avez activé une audience sur la plateforme de dest
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
-Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux politiques d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, consultez la [Présentation de la gouvernance des données](https://experienceleague.adobe.com/fr/docs/experience-platform/data-governance/home).
+Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux politiques d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, consultez la [Présentation de la gouvernance des données](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
