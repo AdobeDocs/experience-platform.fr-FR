@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 52571689c97fdc2ed052b53537e736f03d666ad5
+source-git-commit: 8fe725ee41472d49cbc8411a0d2db665ac3c1814
 workflow-type: tm+mt
-source-wordcount: '5174'
+source-wordcount: '5200'
 ht-degree: 64%
 
 ---
@@ -330,7 +330,7 @@ La liste des contraintes de temps disponibles pour cette opération diffère de 
 >[!NOTE]
 >
 >Lors de l’utilisation de la contrainte de temps « Après », le dernier événement peut avoir lieu plus longtemps que la durée répertoriée dans la contrainte de temps. >
->&#x200B;>Par exemple, si vous disposez d’un événement Page vue et d’un événement Passage en caisse et que vous appliquez la contrainte de temps « Après 1 heure » entre ces deux événements, une définition de segment avec un événement Passage en caisse 2 heures après l’événement Page vue est éligible.
+>>Par exemple, si vous disposez d’un événement Page vue et d’un événement Passage en caisse et que vous appliquez la contrainte de temps « Après 1 heure » entre ces deux événements, une définition de segment avec un événement Passage en caisse 2 heures après l’événement Page vue est éligible.
 >
 >En outre, ces deux contraintes de temps peuvent être utilisées en coordination l&#39;une avec l&#39;autre.
 >
@@ -406,10 +406,7 @@ La date et l’heure des profils qualifiés indiquent la tâche d’évaluation 
 
 **[!UICONTROL Profils estimés]** indique une **plage approximative** de profils, en fonction de l’**exemple de tâche**. Cela signifie que les données d’exemple sont projetées sur le jeu de profils le plus volumineux, ce qui entraîne une estimation du nombre qui peut différer du nombre réel de profils qualifiés. L’échantillon de profil estimé a un intervalle de confiance de 95 %.
 
-Ce nombre est mis à jour dans deux scénarios :
-
-1. La modification des données client est supérieure à 3 % ou le dernier exemple de traitement date de plus de trois jours.
-2. Les règles de l’audience ont été modifiées ou supprimées.
+Lorsque vous apportez des modifications aux règles de l’audience, vous pouvez sélectionner le bouton **[!UICONTROL Actualiser l’estimation]** pour afficher un nombre mis à jour de profils estimés. Toutefois, ce nombre est toujours basé sur l’exemple de tâche précédent. L’exemple de tâche est mis à jour lorsque la modification des données client est supérieure à 3 % ou que la dernière tâche d’exemple date de plus de trois jours.
 
 La sélection de la bulle d’informations indique la date et l’heure du dernier exemple de tâche exécutée.
 

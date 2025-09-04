@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Août 2025
 description: Les notes de mise à jour d’août 2025 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 35c3933f5debbba04c885f6000b908e292613395
-workflow-type: ht
-source-wordcount: '1339'
-ht-degree: 100%
+source-git-commit: 76acf488ad06ec7b3fe818cf34c86ea76dc614f4
+workflow-type: tm+mt
+source-wordcount: '1321'
+ht-degree: 97%
 
 ---
 
@@ -160,7 +160,7 @@ Pour plus d’informations sur les sandbox, consultez la [vue d’ensemble des s
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Estimations d’audience | Les estimations d’audience sont désormais générées automatiquement dans le créateur de segments. Cette valeur sera mise à jour chaque fois que vous modifiez l’audience et reflète toujours les dernières règles d’audience. En outre, l’estimation s’affiche désormais sous la forme d’une **plage**, qui est basée sur l’intervalle de confiance des données d’échantillonnage. |
+| Estimations d’audience | Les estimations d’audience s’affichent désormais sous la forme d’une **plage**, qui est basée sur l’intervalle de confiance des données d’échantillonnage. Pour en savoir plus sur les estimations, consultez le [guide du créateur de segments](/help/segmentation/ui/segment-builder.md#audience-properties). |
 
 Pour plus d’informations, consultez la [[!DNL Segmentation Service] vue d’ensemble](../../segmentation/home.md).
 
