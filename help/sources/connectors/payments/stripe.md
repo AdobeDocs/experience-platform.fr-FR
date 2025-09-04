@@ -1,36 +1,31 @@
 ---
 title: Stripe
-description: Découvrez comment ingérer des données de paiement de votre compte de Stripe vers Adobe Experience Platform
-badge: Version bêta
+description: Découvrez comment ingérer des données de paiement de votre compte Stripe vers Adobe Experience Platform
 exl-id: 191d217e-036d-491a-b7dd-abcad74625ba
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '809'
-ht-degree: 9%
+source-wordcount: '791'
+ht-degree: 8%
 
 ---
 
 # [!DNL Stripe]
 
->[!NOTE]
->
->La source [!DNL Stripe] est en version Beta. Veuillez lire la [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+Des milliers d’entreprises de toutes tailles utilisent [!DNL Stripe] à la fois en ligne et en personne pour accepter les paiements, générer de nouvelles sources de revenus et se développer à l’échelle mondiale avec l’aide de Adobe Experience Platform, Adobe Commerce et [!DNL Magento Open Source].
 
-Des milliers d&#39;entreprises de toutes tailles utilisent [!DNL Stripe] en ligne et en personne pour accepter des paiements, générer de nouvelles sources de revenus et se développer à l&#39;échelle mondiale avec l&#39;aide de Adobe Experience Platform, Adobe Commerce et [!DNL Magento Open Source].
-
-Utilisez la source [!DNL Stripe] de l’Experience Platform pour ingérer les données capturées pendant le flux d’achat par vos clients. Une fois ingérées, utilisez ces données pour créer des offres personnalisées et déverrouiller des informations commerciales plus riches.
+Utilisez la source de [!DNL Stripe] dans Experience Platform pour ingérer les données capturées par vos clients lors du flux d’achat. Une fois ingérées, utilisez ces données pour créer des offres personnalisées et déverrouiller des informations commerciales plus riches.
 
 >[!TIP]
 >
->Pour toute question sur la source [!DNL Stripe] sur Experience Platform, contactez [!DNL Stripe] à l’adresse adobe-partenariat<span>@stripe.com.
+>Pour toute question sur la source de [!DNL Stripe] sur Experience Platform, contactez [!DNL Stripe] à l’adresse adobe-partner<span>@stripe.com.
 
 >[!BEGINSHADEBOX]
 
-**Exemple de cas d’utilisation pour la [!DNL Stripe] source**
+**Exemple de cas d’utilisation pour la source de [!DNL Stripe]**
 
-Votre entreprise permet aux clients d&#39;acheter des articles sur votre boutique en ligne avec l&#39;option **acheter maintenant** et **payer plus tard** (en utilisant [!DNL Klarna], [!DNL Afterpay], [!DNL Affirm] ou [!DNL Zip]).
+Votre entreprise permet aux clients d&#39;acheter des articles dans votre boutique en ligne avec la possibilité d&#39;**acheter maintenant** et **payer plus tard** (à l&#39;aide de [!DNL Klarna], [!DNL Afterpay], [!DNL Affirm] ou [!DNL Zip]).
 
-Utilisez la source de données [!DNL Stripe] pour analyser l’utilisation des options **Buy now** et **Pay later** et expérimenter des offres personnalisées à ces clients. Par exemple, pensez à recommander des éléments supplémentaires pour augmenter le nombre d’articles dans leur panier avant le passage en caisse.
+Utilisez la source de données [!DNL Stripe] pour analyser l’utilisation des options **acheter maintenant** et **payer plus tard** et tester des offres personnalisées auprès de ces clients. Par exemple, pensez à recommander des articles de module complémentaire pour augmenter le nombre d’articles dans leur panier avant de passer en caisse.
 
 >[!ENDSHADEBOX]
 
@@ -38,62 +33,62 @@ Lisez le document ci-dessous pour plus d’informations sur la configuration de 
 
 ## Conditions préalables {#prerequisites}
 
-Les sections suivantes fournissent des informations sur la configuration prérequise que vous devez effectuer avant de connecter votre compte [!DNL Stripe] à Experience Platform.
+Les sections suivantes apportent des informations sur la configuration requise avant de connecter votre compte [!DNL Stripe] à Experience Platform.
 
-### Récupération de votre jeton d’accès
+### Récupérer votre jeton d’accès
 
-* Connectez-vous au [[!DNL Stripe] tableau de bord](https://dashboard.stripe.com/login) à l’aide de votre adresse électronique et de votre mot de passe [!DNL Stripe].
-* Dans le tableau de bord [!DNL Developers], sélectionnez **[!DNL API keys for developers]**.
+* Connectez-vous au [[!DNL Stripe] tableau de bord](https://dashboard.stripe.com/login) en utilisant votre adresse e-mail [!DNL Stripe] et votre mot de passe.
+* Dans le tableau de bord de la [!DNL Developers], sélectionnez **[!DNL API keys for developers]**.
 * Sous l’onglet **Clés API**, sélectionnez **[!DNL Reveal test key]** pour afficher votre jeton d’accès.
-* Vous pouvez désormais utiliser ce jeton comme jeton d’accès lors de la connexion de votre compte [!DNL Stripe] à un Experience Platform, à l’aide de l’API [!DNL Flow Service] ou de l’interface utilisateur Experience Platform.
+* Vous pouvez désormais utiliser ce jeton comme jeton d’accès lors de la connexion de votre compte [!DNL Stripe] à Experience Platform, à l’aide de l’API [!DNL Flow Service] ou de l’interface utilisateur d’Experience Platform.
 
 ### Collecter les informations d’identification requises
 
-Pour connecter votre compte [!DNL Stripe] à un Experience Platform, vous devez fournir des valeurs pour les informations d’authentification suivantes :
+Pour connecter votre compte [!DNL Stripe] à Experience Platform, vous devez fournir des valeurs pour les informations d’authentification suivantes :
 
 >[!BEGINTABS]
 
->[!TAB API]
+>[!TAB  API ]
 
 Vous devez fournir les informations d’identification suivantes lors de la connexion de votre compte [!DNL Stripe] à l’aide de l’API [!DNL Flow Service].
 
 | Informations d’identification | Description |
 | --- | --- |
-| `accessToken` | Votre jeton d’authentification de code d’actualisation OAuth 2 [!DNL Stripe]. |
-| `connectionSpec.id` | Identifiant de spécification de connexion de la source [!DNL Stripe]. Cet identifiant a été corrigé comme suit : `cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3`. |
+| `accessToken` | Jeton d’authentification du code d’actualisation OAuth 2 [!DNL Stripe]. |
+| `connectionSpec.id` | Identifiant de spécification de connexion de la source de [!DNL Stripe]. Cet identifiant est corrigé comme suit : `cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3`. |
 
 >[!TAB UI]
 
-Vous devez fournir les informations d’identification suivantes lors de la connexion de votre compte [!DNL Stripe] à l’aide de l’interface utilisateur de l’Experience Platform.
+Vous devez fournir les informations d’identification suivantes lors de la connexion de votre compte [!DNL Stripe] à l’aide de l’interface utilisateur d’Experience Platform.
 
 | Informations d’identification | Description |
 | --- | --- |
-| Jeton d’accès | Votre jeton d’authentification de code d’actualisation OAuth 2 [!DNL Stripe]. |
+| Jeton d’accès | Jeton d’authentification du code d’actualisation OAuth 2 [!DNL Stripe]. |
 
 >[!ENDTABS]
 
-Pour plus d&#39;informations sur l&#39;utilisation des API [!DNL Stripe], consultez la [[!DNL Stripe] documentation sur les clés d&#39;API](https://docs.stripe.com/keys).
+Pour plus d’informations sur l’utilisation des API [!DNL Stripe], consultez la [[!DNL Stripe] documentation sur les clés API](https://docs.stripe.com/keys).
 
-### Création d’un schéma de modèle de données d’expérience (XDM)
+### Créer un schéma de modèle de données d’expérience (XDM)
 
-La source [!DNL Stripe] prend en charge l’ingestion de données à partir des chemins de ressources suivants :
+La source de [!DNL Stripe] prend en charge l’ingestion des données des chemins d’accès aux ressources suivants :
 
 * Frais
 * Abonnements
-* Remboursement
+* Remboursements
 * Transactions de solde
-* Clients
+* Clientes et clients
 * Prix
 
-Vous devez créer un schéma XDM pour décrire un jeu de données, qui peut stocker les champs et les types de données qui seront envoyés de [!DNL Stripe] à l’Experience Platform.
+Vous devez créer un schéma XDM pour décrire un jeu de données, qui peut stocker les champs et les types de données qui seront envoyés de [!DNL Stripe] à Experience Platform.
 
 >[!BEGINTABS]
 
->[!TAB Frais]
+>[!TAB Frais ]
 
-Dans [!DNL Stripe], **charges** représente les tentatives de transfert d&#39;argent dans votre [!DNL Stripe]. Pour plus d’informations sur les attributs de charge spécifiques, consultez le [[!DNL Stripe] guide de l’API sur les frais](https://docs.stripe.com/api/charges) .
+En [!DNL Stripe], les **frais** représentent des tentatives de transfert d’argent dans votre [!DNL Stripe]. Lisez le [[!DNL Stripe]  Guide de l’API sur les frais ](https://docs.stripe.com/api/charges) pour plus d’informations sur les attributs de frais spécifiques.
 
-+++Sélectionnez cette option pour afficher l’objet Charge du Stripe
++++Sélectionnez pour afficher l’objet Stripe Charge  
 
 ```json
 {
@@ -186,9 +181,9 @@ Dans [!DNL Stripe], **charges** représente les tentatives de transfert d&#39;ar
 
 >[!TAB Abonnements]
 
-Dans [!DNL Stripe], vous pouvez utiliser **abonnements** pour facturer un client de manière récurrente. Pour plus d’informations sur les attributs d’abonnement spécifiques, consultez le [[!DNL Stripe] guide de l’API sur les abonnements](https://docs.stripe.com/api/subscriptions) .
+Dans [!DNL Stripe], vous pouvez utiliser **abonnements** pour facturer un client sur une base récurrente. Lisez le guide [[!DNL Stripe] API sur les abonnements](https://docs.stripe.com/api/subscriptions) pour plus d’informations sur les attributs d’abonnement spécifiques.
 
-+++Sélectionner pour afficher l’objet d’abonnement du Stripe
++++Sélectionnez pour afficher l’objet Abonnement Stripe .
 
 ```json
 {
@@ -328,9 +323,9 @@ Dans [!DNL Stripe], vous pouvez utiliser **abonnements** pour facturer un client
 
 >[!TAB Remboursements]
 
-Dans [!DNL Stripe], vous pouvez utiliser les **remboursements** pour rembourser des frais créés précédemment. Pour plus d’informations sur les attributs de remboursement spécifiques, consultez le [[!DNL Stripe] guide de l’API sur les remboursements](https://docs.stripe.com/api/refunds) .
+En [!DNL Stripe], vous pouvez utiliser **remboursements** pour rembourser des frais créés précédemment. Lisez le [[!DNL Stripe]  Guide de l’API sur les remboursements](https://docs.stripe.com/api/refunds) pour plus d’informations sur les attributs de remboursement spécifiques.
 
-+++Sélectionner pour afficher l’objet de remboursement du Stripe
++++Sélectionnez cette option pour afficher l’objet Remboursement Stripe
 
 ```json
 {
@@ -364,9 +359,9 @@ Dans [!DNL Stripe], vous pouvez utiliser les **remboursements** pour rembourser 
 
 >[!TAB Transactions de solde]
 
-Dans [!DNL Stripe], les **transactions de solde** représentent le mouvement des fonds entre vos comptes [!DNL Stripe]. Pour plus d’informations sur les attributs de transaction des soldes spécifiques, consultez le [[!DNL Stripe] guide de l’API sur les transactions de solde](https://docs.stripe.com/api/balance_transactions) .
+En [!DNL Stripe], les **mouvements de solde** représentent le mouvement de fonds entre vos comptes [!DNL Stripe]. Lisez le guide [[!DNL Stripe] API sur les transactions de solde](https://docs.stripe.com/api/balance_transactions) pour plus d&#39;informations sur les attributs spécifiques des transactions de solde.
 
-+++Sélectionnez cette option pour afficher l’objet Transaction du solde du Stripe
++++Sélectionnez cette option pour afficher l&#39;objet Transaction solde Stripe
 
 ```json
 {
@@ -392,9 +387,9 @@ Dans [!DNL Stripe], les **transactions de solde** représentent le mouvement des
 
 >[!TAB Clients]
 
-Dans [!DNL Stripe], **clients** représentent un client donné de votre entreprise. Pour plus d’informations sur des attributs de client spécifiques, consultez le [[!DNL Stripe] guide de l’API sur les clients](https://docs.stripe.com/api/customers) pour plus d’informations sur des attributs de client spécifiques.
+En [!DNL Stripe], les **clients** représentent un client donné de votre entreprise. Pour plus d’informations sur les attributs spécifiques des clients, consultez le guide [[!DNL Stripe] API relatif aux clients](https://docs.stripe.com/api/customers) pour plus d’informations sur les attributs spécifiques des clients.
 
-+++Sélectionner pour afficher l’objet client du Stripe
++++Sélectionner pour afficher l’objet client Stripe
 
 ```json
 {
@@ -432,9 +427,9 @@ Dans [!DNL Stripe], **clients** représentent un client donné de votre entrepri
 
 >[!TAB Prix]
 
-Dans [!DNL Stripe], les **prix** représentent le coût unitaire, la devise et le cycle de facturation facultatif pour les achats récurrents et uniques de produits. Lisez le [[!DNL Stripe] guide de l’API sur les prix](https://docs.stripe.com/api/prices) pour plus d’informations sur les attributs de prix spécifiques.
+En [!DNL Stripe], les **prix** représentent le coût unitaire, la devise et le cycle de facturation facultatif pour les achats récurrents et uniques de produits. Lisez le guide [[!DNL Stripe] API sur les prix](https://docs.stripe.com/api/prices) pour plus d’informations sur les attributs de prix spécifiques.
 
-+++Sélectionner pour afficher l’objet Prix du Stripe
++++Sélectionnez pour afficher l’objet Prix Stripe
 
 ```json
 {
@@ -477,11 +472,11 @@ Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’
 
 ### Configuration des autorisations sur Experience Platform
 
-Les autorisations **[!UICONTROL Afficher les sources]** et **[!UICONTROL Gérer les sources]** doivent être activées pour votre compte pour connecter votre compte [!DNL Stripe] à un Experience Platform. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/ui/overview.md).
+Pour connecter votre compte **[!UICONTROL à Experience Platform]** les autorisations **[!UICONTROL Afficher les sources et]** Gérer les sources[!DNL Stripe] doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/ui/overview.md).
 
 ## Étapes suivantes
 
-Une fois la configuration prérequise terminée, vous pouvez procéder à la connexion et ingérer vos données [!DNL Stripe] vers l’Experience Platform. Lisez les guides suivants pour savoir comment ingérer des données de paiement [!DNL Stripe] vers Experience Platform à l’aide d’API ou de l’interface utilisateur :
+Une fois la configuration requise terminée, vous pouvez procéder à la connexion et à l’ingestion de vos données [!DNL Stripe] vers Experience Platform. Lisez les guides suivants pour savoir comment ingérer des données de paiements [!DNL Stripe] vers Experience Platform à l’aide d’API ou de l’interface utilisateur :
 
-* [ Ingérez des données de paiements de votre compte de Stripe vers Experience Platform à l’aide de l’API Flow Service](../../tutorials/api/create/payments/stripe.md).
-* [ Ingérez des données de paiements de votre compte de Stripe vers Experience Platform à l’aide de l’interface utilisateur ](../../tutorials/ui/create/payments/stripe.md).
+* [Ingérez des données de paiements de votre compte Stripe vers Experience Platform à l’aide de l’API Flow Service](../../tutorials/api/create/payments/stripe.md).
+* [Ingérez des données de paiement de votre compte Stripe vers Experience Platform à l’aide de l’interface utilisateur](../../tutorials/ui/create/payments/stripe.md).

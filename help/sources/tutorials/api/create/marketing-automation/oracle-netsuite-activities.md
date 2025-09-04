@@ -1,22 +1,15 @@
 ---
 title: Créer une connexion source et un flux de données pour les activités Oracle NetSuite à l’aide de l’API Flow Service
 description: Découvrez comment créer une connexion source et un flux de données pour importer les données d’événements Oracle NetSuite dans Experience Platform à l’aide de l’API Flow Service.
-hide: true
-hidefromtoc: true
-badge: Beta
 exl-id: 4f695389-2261-469c-8d40-7bd29a4e7f77
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '1974'
+source-wordcount: '1957'
 ht-degree: 46%
 
 ---
 
 # Créer une connexion source et un flux de données pour [!DNL Oracle NetSuite Activities] à l’aide de l’API Flow Service
-
->[!NOTE]
->
->La source [!DNL Oracle NetSuite Activities] est en version Beta. Voir la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Lisez le tutoriel suivant pour savoir comment importer des données d’événements de votre compte [!DNL Oracle NetSuite Activities] à Adobe Experience Platform à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

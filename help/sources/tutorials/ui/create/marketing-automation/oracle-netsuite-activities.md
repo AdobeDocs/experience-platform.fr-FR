@@ -1,22 +1,15 @@
 ---
 title: Créer une connexion source  [!DNL Oracle NetSuite Activities]  dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Activités Oracle NetSuite à l’aide de l’interface utilisateur de Adobe Experience Platform.
-hide: true
-hidefromtoc: true
-badge: Beta
 exl-id: 99ef0b50-c8d6-48d6-895f-46b7ade47520
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '607'
 ht-degree: 40%
 
 ---
 
 # Créer une connexion source [!DNL Oracle NetSuite Activities] dans l’interface utilisateur
-
->[!NOTE]
->
->La source [!DNL Oracle NetSuite Activities] est en version Beta. Voir la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Lisez le tutoriel suivant pour savoir comment importer des données d’événements de votre compte [!DNL Oracle NetSuite Activities] à Adobe Experience Platform dans l’interface utilisateur.
 

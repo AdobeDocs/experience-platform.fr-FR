@@ -3,18 +3,14 @@ title: Ingérez des données de paiements à partir de votre compte Stripe vers 
 description: Découvrez comment ingérer des données de paiements de votre compte Stripe vers Experience Platform à l’aide de l’interface utilisateur.
 badge: Beta
 exl-id: f20c5935-a7c0-4387-b29e-73e78cab4972
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '1658'
+source-wordcount: '1637'
 ht-degree: 16%
 
 ---
 
 # Ingérez des données de paiements de votre compte [!DNL Stripe] vers Experience Platform à l’aide de l’interface utilisateur
-
->[!NOTE]
->
->La source [!DNL Stripe] est en version Beta. Lisez les [termes et conditions](../../../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Lisez le tutoriel suivant pour savoir comment ingérer des données de paiements à partir de votre compte [!DNL Stripe] vers Adobe Experience Platform à l’aide de l’interface utilisateur.
 
@@ -135,7 +131,7 @@ Une fois votre jeu de données configuré, vous devez fournir des détails sur v
 | --- | --- |
 | Nom du flux de données | Nom du flux de données.  Par défaut, le nom du fichier importé est utilisé. |
 | Description | (Facultatif) Brève description de votre flux de données. |
-| Alertes | Experience Platform peut générer des alertes basées sur des événements auxquelles les utilisateurs peuvent s’abonner. Ces options nécessitent toutes un flux de données en cours d’exécution pour les déclencher.  Pour plus d’informations, reportez-vous à la présentation des alertes [&#128279;](../../alerts.md) <ul><li>**Début d’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification lorsque l’exécution du flux de données commence.</li><li>**Succès de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si votre flux de données se termine sans erreur.</li><li>**Échec de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si l’exécution de votre flux de données se termine par des erreurs.</li></ul> |
+| Alertes | Experience Platform peut générer des alertes basées sur des événements auxquelles les utilisateurs peuvent s’abonner. Ces options nécessitent toutes un flux de données en cours d’exécution pour les déclencher.  Pour plus d’informations, reportez-vous à la présentation des alertes [](../../alerts.md) <ul><li>**Début d’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification lorsque l’exécution du flux de données commence.</li><li>**Succès de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si votre flux de données se termine sans erreur.</li><li>**Échec de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si l’exécution de votre flux de données se termine par des erreurs.</li></ul> |
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]** pour continuer.
 

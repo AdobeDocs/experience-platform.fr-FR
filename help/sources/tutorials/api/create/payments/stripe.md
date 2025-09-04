@@ -3,18 +3,14 @@ title: Ingérer des données de paiement de votre compte  [!DNL Stripe]  Experie
 description: Découvrez comment ingérer des données de paiements de votre compte Stripe vers Experience Platform à l’aide de l’API Flow Service
 badge: Beta
 exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '2028'
+source-wordcount: '2006'
 ht-degree: 40%
 
 ---
 
 # Ingérer des données de paiement de votre compte [!DNL Stripe] vers Experience Platform à l’aide d’API
-
->[!NOTE]
->
->La source [!DNL Stripe] est en version Beta. Lisez les [termes et conditions](../../../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Lisez le tutoriel suivant pour savoir comment ingérer vos données de paiements de [!DNL Stripe] à Adobe Experience Platform à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -880,7 +876,7 @@ curl -X POST \
 | `transformations.params.mappingId` | [Identifiant de mappage](#mapping) généré lors d’une étape précédente. |
 | `transformations.params.mappingVersion` | Version correspondante de l’identifiant de mappage. Ce paramètre est défini par défaut sur `0`. |
 | `scheduleParams.startTime` | Heure à laquelle votre flux de données commencera. Vous devez fournir la valeur de l’heure de début au format d’une date et heure Unix. |
-| `scheduleParams.frequency` | Fréquence de collecte des données par le flux de données. Vous pouvez configurer la fréquence d’ingestion pour :  <ul><li>**Une fois** : définissez votre fréquence sur `once` pour créer une ingestion unique. Les configurations d’intervalle et de renvoi ne sont pas disponibles lors de la création d’un flux de données d’ingestion unique. Par défaut, la fréquence de planification est définie sur une seule fois.</li><li>**Minute** : définissez la fréquence sur `minute` pour planifier le flux de données afin d’ingérer les données par minute.</li><li>**Heure** : définissez la fréquence sur `hour` pour planifier l’ingestion des données par flux et par heure.</li><li>**Jour** : définissez la fréquence sur `day` pour planifier l’ingestion de données par jour dans le flux de données.</li><li>**Semaine** : définissez la fréquence sur `week` pour planifier l’ingestion de données par semaine dans le flux de données.</li></ul> |
+| `scheduleParams.frequency` | Fréquence de collecte des données par le flux de données. Vous pouvez configurer la fréquence d’ingestion pour :  <ul><li>**Une fois** : définissez votre fréquence sur `once` pour créer une ingestion unique. Les configurations d’intervalle et de renvoi ne sont pas disponibles lors de la création d’un flux de données d’ingestion unique. Par défaut, la fréquence de planification est définie sur une seule fois.</li><li>**Minute** : définissez la fréquence sur `minute` pour planifier le flux de données afin d’ingérer les données par minute.</li><li>**Heure**:Set fréquence à `hour` pour planifier le flux de données afin d’ingérer les données sur une base horaire.</li><li>**Jour** : définissez la fréquence sur `day` pour planifier l’ingestion de données par jour dans le flux de données.</li><li>**Semaine** : définissez la fréquence sur `week` pour planifier l’ingestion de données par semaine dans le flux de données.</li></ul> |
 | `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. Par exemple, si vous définissez la fréquence sur jour et configurez l’intervalle sur 15, votre flux de données s’exécutera tous les 15 jours. La valeur de l’intervalle doit être un nombre entier non nul. La valeur d’intervalle minimale acceptée pour chaque fréquence est la suivante :<ul><li>**Une fois** : s.o.</li><li>**Minute** : 15</li><li>**Heure** : 1</li><li>**Jour** : 1</li><li>**Semaine** : 1</li></ul> |
 
 **Réponse**
