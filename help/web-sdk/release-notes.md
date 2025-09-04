@@ -3,10 +3,10 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 21140a6ff4f34db213032dd600d4099a5459e31d
+source-git-commit: 05b9893e17db0caeab1175f35f939cb6a1dd0291
 workflow-type: tm+mt
-source-wordcount: '2502'
-ht-degree: 65%
+source-wordcount: '2573'
+ht-degree: 64%
 
 ---
 
@@ -15,6 +15,19 @@ ht-degree: 65%
 
 Ce document présente les notes de mise à jour du SDK web d’Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Version 2.29.0 - vendredi 4 septembre 2025
+
+**Nouvelles fonctionnalités**
+
+- Ajout de la prise en charge de la collecte de données Adobe Advertisement pour Adobe Parcours Analytics
+- Ajout de la prise en charge de l’enregistrement des détails d’abonnement push dans les profils des utilisateurs.
+
+**Correctifs et améliorations**
+
+- Correction d’un problème où les sections de remplacement de configuration étaient fusionnées au lieu d’être remplacées.
+- Correction d’un cas où la collection de liens envoyait l’intégralité du contenu du document en tant que nom du lien.
+- Correction d’un problème en raison duquel certaines propositions ne pouvaient pas être rendues de nouveau.
 
 ## Version 2.28.1 - vendredi 31 juillet 2025
 
@@ -288,7 +301,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 ## Version 2.7.0 - 26 octobre 2021
 
-- Exposition d’informations supplémentaires d’Edge Network dans la valeur renvoyée de `sendEvent`, y compris `inferences` et `destinations`. Le format de ces propriétés peut changer, car ces fonctionnalités sont actuellement déployées dans le cadre d’une version bêta.
+- Exposition d’informations supplémentaires d’Edge Network dans la valeur renvoyée de `sendEvent`, y compris `inferences` et `destinations`. Le format de ces propriétés peut changer, car ces fonctionnalités sont actuellement déployées dans le cadre d’une version Beta.
 
 ## Version 2.6.4 - 7 septembre 2021
 

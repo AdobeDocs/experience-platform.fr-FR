@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 54c609ec995ac8e48c1c6441390b205bfb5a01cc
-workflow-type: ht
-source-wordcount: '2825'
-ht-degree: 100%
+source-git-commit: 1cc62ee8c87ff2c1c1d55db2e462d485289120ed
+workflow-type: tm+mt
+source-wordcount: '2947'
+ht-degree: 96%
 
 ---
 
@@ -13,6 +13,18 @@ ht-degree: 100%
 # Notes de mise à jour de l’extension SDK Web
 
 Ce document contient les notes de mise à jour de l’extension de balises du SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, voir les [notes de mise à jour du SDK web d’Experience Platform](/help/web-sdk/release-notes.md).
+
+## Version 2.32.0 - vendredi 4 septembre 2025
+
+**Nouvelles fonctionnalités**
+
+- Contient [version 2.29.0](../../../../web-sdk/release-notes.md#2-29-0) du SDK Web Adobe Experience Platform.
+- Ajout de la prise en charge d’Adobe Advertising en tant que nouveau composant de build personnalisé. Configurez dans la configuration de l’extension et dans l’envoi d’appels d’événement.
+- Ajout de la prise en charge de l’enregistrement des détails d’abonnement push dans le profil. Cela s’effectue par le biais d’une nouvelle action, « Détails de l’abonnement push »
+
+**Correctifs et améliorations**
+
+- Amélioration de l’édition des éléments de données XDM lorsque les schémas ou les sandbox ne sont pas disponibles. Vous pouvez désormais modifier les éléments de données Objet XDM et Variable même si leurs schémas référencés sont introuvables ou si les sandbox sont inaccessibles. Cela résout les problèmes qui se produisent généralement lors des migrations d’organisation vers de nouveaux centres de données, où les identifiants de schéma peuvent changer et provoquaient auparavant des erreurs d’affichage des interfaces de modification qui devenaient inutilisables.
 
 ## Version 2.31.1 - 31 juillet 2025
 
@@ -34,7 +46,6 @@ Ce document contient les notes de mise à jour de l’extension de balises du SD
 **Problèmes connus**
 
 - Suite à la publication de la version v2.31.0, un problème a été identifié avec le processus de [création de composants personnalisés](/help/web-sdk/install/create-custom-build.md). Bien que les versions personnalisées continuent à fonctionner, tous les composants sont actuellement inclus dans la version, ce qui entraîne un package de taille intégrale, quelle que soit la sélection de composants. Une solution à ce problème est en cours de développement. Si vous comptez sur la sélection de composants personnalisés pour réduire la taille de la version, il est recommandé d’attendre une publication ultérieure.
-
 
 ## Version 2.30.1 - 27 mai 2025
 
@@ -320,7 +331,7 @@ Contient la version 2.8.0 de la bibliothèque SDK Web Adobe Experience Platfo
 
 Contient la version 2.7.0 de la bibliothèque SDK Web Adobe Experience Platform.
 
-- Des informations supplémentaires provenant d’Edge Network sont disponibles dans l’événement d’envoi d’événement terminé, notamment `inferences` et `destinations`. Le format de ces propriétés peut changer, car ces fonctionnalités sont actuellement déployées dans le cadre d’une version bêta.
+- Des informations supplémentaires provenant d’Edge Network sont disponibles dans l’événement d’envoi d’événement terminé, notamment `inferences` et `destinations`. Le format de ces propriétés peut changer, car ces fonctionnalités sont actuellement déployées dans le cadre d’une version Beta.
 
 ## Version 2.7.3 - 7 septembre 2021
 
