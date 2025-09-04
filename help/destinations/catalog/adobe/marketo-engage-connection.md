@@ -1,13 +1,13 @@
 ---
 title: Connexion Marketo Engage
 description: Marketo Engage est la seule solution de gestion de l’expérience client (CXM) de bout en bout pour le marketing, la publicité, l’analyse et le commerce. Il vous permet d’automatiser et de gérer les activités, de la gestion des prospects CRM à l’engagement des clients, en passant par le marketing basé sur les comptes et l’attribution des recettes.
-source-git-commit: 88864353d4872d62258914d6490b90331692fa96
+exl-id: e02b6c65-b59e-41ff-8d33-f8fecfd87773
+source-git-commit: 1a87ad8259803886b9a1c60f1cdc50942ba49173
 workflow-type: tm+mt
-source-wordcount: '1962'
+source-wordcount: '1999'
 ht-degree: 17%
 
 ---
-
 
 # Connexion Marketo Engage
 
@@ -45,7 +45,9 @@ Ils peuvent activer leurs audiences dans Marketo Engage et utiliser le type de s
 
 ## Conditions préalables {#prerequisites}
 
-L’utilisateur configurant la destination doit disposer de l’autorisation [ Modifier la personne ](https://experienceleague.adobe.com/fr/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) dans son instance et sa partition Marketo.
+* L’utilisateur configurant la destination doit disposer de l’autorisation [ Modifier la personne ](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) dans son instance et sa partition Marketo.
+* Seules les instances Marketo Engage de la même organisation Adobe Real-Time CDP seront disponibles lors de la configuration de cette destination.
+* Seules les instances Marketo Engage dont les utilisateurs sont gérés dans le Adobe Admin Console peuvent utiliser cette destination.
 
 ## Identités prises en charge {#supported-identities}
 
@@ -117,9 +119,9 @@ Marketo utilise le champ de déduplication **[!UICONTROL Marketo]** que vous sé
 
 >[!IMPORTANT]
 > 
->* Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions).
+>* Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions).
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -143,8 +145,8 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
    * **[!UICONTROL Audience et profil]** : sélectionnez cette option lorsque vous souhaitez à la fois ajouter des membres de l’audience aux listes Marketo et tenir à jour leurs informations de profil.
    * **[!UICONTROL Profil uniquement]** : sélectionnez cette option lorsque vous souhaitez tenir les profils de prospect Marketo à jour avec les dernières informations d’Experience Platform.
    * **[!UICONTROL Audience uniquement]** : sélectionnez cette option lorsque vous souhaitez ajouter des membres de l’audience aux listes Marketo sans mettre à jour leurs informations de profil.
-* **[!UICONTROL Partition]** : *la sélection de la partition est disponible uniquement lors du choix des types de synchronisation **[!UICONTROL Profil uniquement]**&#x200B;ou **[!UICONTROL Audience et profil]***. Sélectionnez un ID de partition Marketo associé à l’espace de travail de votre choix. Cela vous permet de spécifier quelle partition de prospect dans Marketo recevra les données exportées. Si vous ne choisissez pas de partition spécifique, vos données sont envoyées vers la partition **[!UICONTROL Par défaut]** dans Marketo.
-* **[!UICONTROL Champ de déduplication Marketo]** : sélectionnez le champ de déduplication Marketo que vous souhaitez utiliser lors de la mise à jour des prospects Marketo existants. Ce sélecteur affiche les champs que vous avez marqués comme champs de déduplication dans Marketo. Si vous souhaitez qu’un champ spécifique de Marketo s’affiche en tant que champ de déduplication, vous devez le marquer comme un [champ consultable](https://experienceleague.adobe.com/fr/docs/marketo-developer/marketo/rest/lead-database/lead-database) dans Marketo.
+* **[!UICONTROL Partition]** : *la sélection de la partition est disponible uniquement lors du choix des types de synchronisation **[!UICONTROL Profil uniquement]**ou **[!UICONTROL Audience et profil]***. Sélectionnez un ID de partition Marketo associé à l’espace de travail de votre choix. Cela vous permet de spécifier quelle partition de prospect dans Marketo recevra les données exportées. Si vous ne choisissez pas de partition spécifique, vos données sont envoyées vers la partition **[!UICONTROL Par défaut]** dans Marketo.
+* **[!UICONTROL Champ de déduplication Marketo]** : sélectionnez le champ de déduplication Marketo que vous souhaitez utiliser lors de la mise à jour des prospects Marketo existants. Ce sélecteur affiche les champs que vous avez marqués comme champs de déduplication dans Marketo. Si vous souhaitez qu’un champ spécifique de Marketo s’affiche en tant que champ de déduplication, vous devez le marquer comme un [champ consultable](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) dans Marketo.
 
   >[!NOTE]
   >
@@ -164,8 +166,8 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
