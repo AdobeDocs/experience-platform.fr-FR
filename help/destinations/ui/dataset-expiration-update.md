@@ -3,9 +3,9 @@ title: Étendre les plannings d’exportation de jeux de données pour les flux 
 description: Découvrez comment étendre le planning d’exportation des flux de données d’exportation de jeux de données créés avant novembre 2024 qui cesseront de fonctionner le 1er septembre 2025.
 type: Tutorial
 exl-id: a756886b-3f4b-4427-bd26-817221ba68aa
-source-git-commit: 6f8b906729ec31cc0c4847ccd0ae0f89f63a1627
+source-git-commit: 0da592dd2846ed0f1eeb31102842c8895cac6952
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '690'
 ht-degree: 0%
 
 ---
@@ -87,8 +87,6 @@ Vous pouvez maintenant modifier le planning d’exportation pour l’étendre au
 
 ## Que se passera-t-il si je ne respecte pas la date limite du 1er septembre 2025 ? {#missed-deadline}
 
-Si vos flux de données d’exportation de jeux de données expirent le 1er septembre 2025 et que vous n’avez pas étendu leurs plannings, il existe une période de grâce de **30 jours** pendant laquelle vous pouvez contacter Adobe pour réactiver vos flux de données sans perte de données. Cela inclut les données qui n’ont pas été exportées entre le 1er septembre et la date à laquelle vous avez contacté Adobe.
+Si vos flux de données d’exportation de jeux de données ont expiré le 1er septembre 2025 et que vous souhaitez toujours les étendre, suivez les étapes des sections ci-dessus pour étendre leur planning.
 
->[!IMPORTANT]
->
->Bien qu’Adobe offre cette période de grâce, nous vous recommandons vivement d’étendre vos plannings avant l’échéance du 1er septembre 2025 afin d’assurer la continuité des exportations de données et d’éviter toute interruption de service potentielle.
+Si vous étendez le planning d’exportation dans les 30 jours (ou moins si la [durée de vie définie sur le jeu de données exporté](/help/catalog/datasets/experience-event-dataset-retention-ttl-guide.md) est inférieure à 30 jours), vous pouvez toujours obtenir un renvoi des données qui n’ont pas été exportées entre le 1er septembre et la date à laquelle vous réactivez l’exportation. Lors de la définition d’une nouvelle heure de fin, il n’y aura *pas* d’abord d’exportation de fichier complet. Au lieu de cela, les exportations se poursuivront progressivement à partir du point où elles se sont interrompues le 1er septembre.
