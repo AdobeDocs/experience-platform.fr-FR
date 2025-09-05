@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 8fe725ee41472d49cbc8411a0d2db665ac3c1814
+source-git-commit: 2c62ab01fe94e71095df33e24615fa7e596e84d3
 workflow-type: tm+mt
-source-wordcount: '5200'
-ht-degree: 64%
+source-wordcount: '5248'
+ht-degree: 63%
 
 ---
 
@@ -130,7 +130,7 @@ Une fois les suites de rapports mappées, vous pouvez utiliser ces nouveaux cham
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_externalaudiences"
 >title="Audiences externes"
->abstract="Les audiences importées via l’onglet Audiences sont désormais automatiquement disponibles via Audience Portal. Les audiences ingérées à partir d’Audience Manager, de Customer Journey Analytics, de la correspondance de segments et d’autres intégrations personnalisées sont immédiatement disponibles, sans configuration préalable dans le créateur de segments. À partir du 1er septembre 2025, toutes les audiences sont récupérées exclusivement par le biais de la recherche unifiée et le workflow précédent n’est plus pris en charge."
+>abstract="Les audiences importées via l’onglet Audiences sont désormais automatiquement disponibles via Audience Portal. Cela inclut les audiences ingérées à partir d’Audience Manager, de Customer Journey Analytics, de la correspondance de segments et d’autres intégrations personnalisées.<br/><br/>D’ici la fin septembre 2025, les audiences seront récupérées exclusivement par le biais de la recherche unifiée, et le workflow précédent ne sera plus pris en charge. La correspondance de segments reste disponible uniquement pour un petit nombre de clients désignés pendant la transition du service. L’accès pour les nouveaux clients de Correspondance de segments peut toujours être activé sur demande avant la suppression complète du service.<br/><br/>Pour les cas d’utilisation de collaboration de données en cours, Adobe recommande de passer à Collaboration, qui est la solution prise en charge à long terme."
 >additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/segmentation/ui/audience-portal#list" text="Audience Portal"
 
 >[!NOTE]
@@ -330,7 +330,7 @@ La liste des contraintes de temps disponibles pour cette opération diffère de 
 >[!NOTE]
 >
 >Lors de l’utilisation de la contrainte de temps « Après », le dernier événement peut avoir lieu plus longtemps que la durée répertoriée dans la contrainte de temps. >
->&#x200B;>Par exemple, si vous disposez d’un événement Page vue et d’un événement Passage en caisse et que vous appliquez la contrainte de temps « Après 1 heure » entre ces deux événements, une définition de segment avec un événement Passage en caisse 2 heures après l’événement Page vue est éligible.
+>>Par exemple, si vous disposez d’un événement Page vue et d’un événement Passage en caisse et que vous appliquez la contrainte de temps « Après 1 heure » entre ces deux événements, une définition de segment avec un événement Passage en caisse 2 heures après l’événement Page vue est éligible.
 >
 >En outre, ces deux contraintes de temps peuvent être utilisées en coordination l&#39;une avec l&#39;autre.
 >
