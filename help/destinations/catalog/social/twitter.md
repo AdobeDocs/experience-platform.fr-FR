@@ -2,16 +2,24 @@
 title: Connexion des audiences personnalisées Twitter
 description: Ciblez vos abonnés et clients existants sur Twitter et créez des campagnes de remarketing pertinentes en activant vos audiences créées dans Adobe Experience Platform
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 5b529a1af62c2745c3226029de1a1ff508bddfc7
 workflow-type: tm+mt
-source-wordcount: '857'
-ht-degree: 44%
+source-wordcount: '971'
+ht-degree: 42%
 
 ---
 
 # Connexion [!DNL Twitter Custom Audiences]
 
 ## Présentation {#overview}
+
+>[!IMPORTANT]
+>
+>* À compter du mercredi 9 septembre 2025, vous pourrez voir deux cartes **[!DNL Twitter Custom Audiences]** côte à côte dans le catalogue des destinations. Cela est dû à une mise à niveau interne du service de destinations. Le connecteur de destination **[!DNL Twitter Custom Audiences]** existant a été renommé **[!UICONTROL (obsolète) Audiences personnalisées Twitter]** et une nouvelle carte portant le nom **[!UICONTROL Audiences personnalisées Twitter]** est désormais disponible.
+>* Utilisez la nouvelle connexion **[!UICONTROL Audiences personnalisées Twitter]** dans le catalogue pour les nouveaux flux de données d’activation. Si vous disposez de flux de données actifs vers la destination **[!UICONTROL (Obsolète) Audiences personnalisées de Twitter]** , ils seront mis à jour automatiquement. Aucune action n’est donc requise de votre part.
+>* Si vous créez des flux de données par le biais de l’[API Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/), vous devez mettre à jour vos [!DNL flow spec ID] et [!DNL connection spec ID] aux valeurs suivantes :
+>   * ID de spécification de flux : `903da9e4-7cf5-442a-9498-a237e4f064f9`
+>   * ID de spécification de connexion : `9eb18875-a095-4b89-854e-39b9e29ccd41`
 
 Ciblez vos abonnés et clients existants sur Twitter et créez des campagnes de remarketing pertinentes en activant vos audiences créées dans Adobe Experience Platform.
 
@@ -20,16 +28,16 @@ Ciblez vos abonnés et clients existants sur Twitter et créez des campagnes de 
 Avant de configurer votre destination [!DNL Twitter Custom Audiences], vérifiez les conditions préalables suivantes relatives à Twitter, qui doivent être remplies.
 
 1. Votre compte [!DNL Twitter Ads] doit être éligible à la publicité. Les nouveaux comptes [!DNL Twitter Ads] ne sont pas éligibles à la publicité au cours des 2 premières semaines suivant leur création.
-2. L’autorisation *[!DNL Partner Audience Manager]* doit être activée pour votre compte utilisateur Twitter auquel vous avez autorisé l’accès dans [!DNL Twitter Audience Manager].
+2. L’autorisation [!DNL Twitter Audience Manager] doit être activée pour votre compte utilisateur Twitter auquel vous avez autorisé l’accès dans *[!DNL Partner Audience Manager]*.
 
 ## Identités prises en charge {#supported-identities}
 
-[!DNL Twitter Custom Audiences] prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=fr#getting-started).
+[!DNL Twitter Custom Audiences] prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Identité cible | Description | Considérations |
 |---|---|---|
 | device_id | IDFA/AdID/Android ID | Les Google Advertising ID (GAID) et Apple ID for Advertisers (IDFA) sont pris en charge dans Adobe Experience Platform. Mappez ces espaces de noms et/ou attributs de votre schéma source en conséquence dans l’[étape de mappage](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) du workflow d’activation de destination. |
-| E-mail | Adresse(s) e-mail de l’utilisateur | Associez vos adresses e-mail en texte brut et vos adresses e-mail hachées au format SHA256 à ce champ. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. Si vous hachez les adresses e-mail de vos clients avant de les charger vers Adobe Experience Platform, notez que ces identités doivent être hachées à l’aide de SHA256, sans sel. |
+| e-mail | Adresse(s) e-mail de l’utilisateur | Associez vos adresses e-mail en texte brut et vos adresses e-mail hachées au format SHA256 à ce champ. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. Si vous hachez les adresses e-mail de vos clients avant de les charger vers Adobe Experience Platform, notez que ces identités doivent être hachées à l’aide de SHA256, sans sel. |
 
 {style="table-layout:auto"}
 
@@ -67,7 +75,7 @@ Ciblez vos abonnés et clients existants sur Twitter et créez des campagnes de 
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -105,8 +113,8 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
