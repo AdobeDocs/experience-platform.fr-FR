@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Surveillance des flux de données pour les destinations dans l’interface utilisateur
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: fa7cfea74c5b76dd5643aaa2e9dd7447e9b9ef42
+source-git-commit: 9d92999df8e35ac6223986ece8a98af72ab6ace8
 workflow-type: tm+mt
-source-wordcount: '3621'
+source-wordcount: '3623'
 ht-degree: 11%
 
 ---
@@ -86,10 +86,10 @@ Une liste d’exécutions individuelles et de leurs mesures spécifiques s’aff
 
 Chaque exécution de flux de données affiche les détails suivants :
 
-- **[!UICONTROL Démarrage de l’exécution du flux de données]** : heure de démarrage de l’exécution du flux de données. Pour les exécutions de flux de données en continu, Experience Platform capture les mesures en fonction du début de l’exécution du flux de données, sous la forme de mesures horaires. Cela signifie que pour les exécutions de flux de données en continu, si une exécution de flux de données a démarré, par exemple à 22 h 30, la mesure affiche l’heure de début à 22 h dans l’interface utilisateur.
+- **[!UICONTROL Démarrage de l’exécution du flux de données]** : heure de démarrage de l’exécution du flux de données. Pour les exécutions de flux de données en continu, Experience Platform capture les mesures en fonction du début de l’exécution du flux de données, sous la forme de mesures horaires. Cela signifie que pour les exécutions de flux de données en continu, si une exécution de flux de données a démarré, par exemple à 10 :30PM, la mesure affiche l’heure de début à 10 :00 dans l’interface utilisateur.
 - **[!UICONTROL Temps de traitement]** : temps nécessaire à l’exécution du flux de données.
    - Pour les exécutions **[!UICONTROL terminées]**, la mesure Temps de traitement affiche toujours une heure.
-   - Pour les exécutions de flux de données qui sont toujours à l’état **[!UICONTROL traitement]**, la fenêtre permettant de capturer toutes les mesures reste ouverte pendant plus d’une heure, afin de traiter toutes les mesures qui correspondent à l’exécution du flux de données. Par exemple, une exécution de flux de données ayant démarré à 9 h 30 peut rester en état de traitement pendant une heure et trente minutes pour capturer et traiter toutes les mesures. Ensuite, une fois la fenêtre de traitement fermée et le statut de l’exécution du flux de données mis à jour sur **terminé**, le temps de traitement affiché est remplacé par une heure.
+   - Pour les exécutions de flux de données qui sont toujours à l’état **[!UICONTROL traitement]**, la fenêtre permettant de capturer toutes les mesures reste ouverte pendant plus d’une heure, afin de traiter toutes les mesures qui correspondent à l’exécution du flux de données. Par exemple, une exécution de flux de données ayant démarré à 9 :30 peut rester en état de traitement pendant une heure et trente minutes pour capturer et traiter toutes les mesures. Ensuite, une fois la fenêtre de traitement fermée et le statut de l’exécution du flux de données mis à jour sur **terminé**, le temps de traitement affiché est remplacé par une heure.
 - **[!UICONTROL Profils reçus]** : nombre total de profils reçus dans le flux de données.
 - **[!UICONTROL Identités activées]** : nombre total d’identités de profil qui ont été activées avec succès vers la destination sélectionnée dans le cadre de l’exécution du flux de données. Cette mesure inclut les identités qui sont créées, mises à jour et supprimées dans les audiences exportées.
 - **[!UICONTROL Identités exclues]** : nombre total d’identités de profil qui sont exclues de l’activation en fonction des attributs manquants et de la violation du consentement.
@@ -119,7 +119,7 @@ La page de détails affiche également une liste des identités ayant échoué e
 
 ![Enregistrements de flux de données pour les destinations de diffusion en continu avec un message d’erreur en surbrillance.](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-#### [!BADGE Beta &#x200B;]{type=Informative} Surveillance de l’exécution du flux de données au niveau de l’audience pour les destinations de diffusion en streaming {#audience-level-dataflow-runs-for-streaming-destinations}
+#### [!BADGE Beta ]{type=Informative} Surveillance de l’exécution du flux de données au niveau de l’audience pour les destinations de diffusion en streaming {#audience-level-dataflow-runs-for-streaming-destinations}
 
 Vous pouvez afficher des informations sur les identités activées, exclues ou en échec réparties au niveau de l’audience, pour chaque audience qui fait partie du flux de données.
 
@@ -191,7 +191,7 @@ Chaque exécution de flux de données affiche les détails suivants :
 - **[!UICONTROL Profils reçus]** : nombre total de profils reçus dans le flux de données. Cette valeur est mise à jour toutes les 60 minutes.
 - **[!UICONTROL Identités activées]** : nombre total d’identités de profil qui ont été activées avec succès vers la destination sélectionnée dans le cadre de l’exécution du flux de données. Cette mesure inclut les identités qui sont créées, mises à jour et supprimées dans les audiences exportées.
 - **[!UICONTROL Identités exclues]** : nombre total d’identités de profil qui sont exclues de l’activation en fonction des attributs manquants et de la violation du consentement.
-- **[!UICONTROL Statut]** : représente le statut du flux de données. Il peut s’agir de l’un des trois états suivants : [!UICONTROL &#x200B; Succès &#x200B;], [!UICONTROL &#x200B; Échec &#x200B;] et [!UICONTROL &#x200B; Traitement &#x200B;]. [!UICONTROL Succès] signifie que le flux de données est actif et exporte les données selon son planning fourni. [!UICONTROL &#x200B; Échec &#x200B;] signifie que l’activation des données a été suspendue en raison d’erreurs. Le [!UICONTROL Traitement] signifie que le flux de données n’est pas encore actif et qu’il est généralement rencontré lors de la création d’un nouveau flux de données.
+- **[!UICONTROL Statut]** : représente le statut du flux de données. Il peut s’agir de l’un des trois états suivants : [!UICONTROL  Succès ], [!UICONTROL  Échec ] et [!UICONTROL  Traitement ]. [!UICONTROL Succès] signifie que le flux de données est actif et exporte les données selon son planning fourni. [!UICONTROL  Échec ] signifie que l’activation des données a été suspendue en raison d’erreurs. Le [!UICONTROL Traitement] signifie que le flux de données n’est pas encore actif et qu’il est généralement rencontré lors de la création d’un nouveau flux de données.
 
 Pour afficher les détails d’une exécution de flux de données spécifique, sélectionnez l’heure de début de l’exécution dans la liste.
 
@@ -327,11 +327,27 @@ Par exemple, vous activez une audience appelée « Membres du programme de fidé
 >
 >- La vue au niveau de l’audience est actuellement disponible pour les destinations répertoriées ci-dessous. Le déploiement est prévu pour d’autres destinations de diffusion en continu.
 >
->   - [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
->   - [[!DNL (V2) Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
->   - [[!DNL HTTP API]](/help/destinations/catalog/streaming/http-destination.md)
->   - [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
->   - [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+>   - [[!DNL (API) Oracle Eloqua] Connexion](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
+>   - [[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
+>   - [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)
+>   - [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)
+>   - [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)
+>   - [[!DNL Google Customer Match + Display & Video 360]](../../destinations/catalog/advertising/google-customer-match-dv360.md)
+>   - [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md)
+>   - [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md)
+>   - [[!DNL Magnite: Real-time]](../../destinations/catalog/advertising/magnite-streaming.md)
+>   - [[!DNL Marketo Engage Person Sync]](../../destinations/catalog/adobe/marketo-engage-person-sync.md)
+>   - [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md)
+>   - [[!DNL Moengage]](../../destinations/catalog/mobile-engagement/moengage.md)
+>   - [[!DNL Outreach]](../../destinations/catalog/crm/outreach.md)
+>   - [[!DNL PubMatic Connect]](../../destinations/catalog/advertising/pubmatic.md)
+>   - [[!DNL PubMatic Connect (Custom Audience ID Mapping)]](../../destinations/catalog/advertising/pubmatic.md)
+>   - [[!DNL Qualtrics Automations]](../../destinations/catalog/survey/qualtrics-automations.md)
+>   - [[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus.md)
+>   - [[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)
+>   - [[!DNL Snowflake]](../../destinations/catalog/cloud-storage/snowflake.md)
+>   - [[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)
+>   - [[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)
 >   - Destinations de lot (basées sur des fichiers)
 > 
 >- Pour les destinations par lots, les mesures au niveau de l’audience sont actuellement enregistrées pour les exécutions de flux de données réussies uniquement. Elles ne sont pas enregistrées pour les exécutions de flux de données ayant échoué et les enregistrements exclus. Pour les exécutions de flux de données vers des destinations de diffusion en continu, les mesures sont capturées et affichées pour les enregistrements activés et exclus.
