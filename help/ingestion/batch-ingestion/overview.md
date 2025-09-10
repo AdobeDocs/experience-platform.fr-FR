@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation de l’API d’ingestion par lots
 description: L’API Batch Ingestion de Adobe Experience Platform vous permet d’ingérer des données dans Experience Platform sous forme de fichiers de lots. Les données ingérées peuvent être les données de profil d’un fichier plat dans un système CRM (tel qu’un fichier Parquet) ou des données conformes à un schéma connu dans le registre du modèle de données d’expérience (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: dace7bc2f7940748422628b62f0f57854036ad3f
 workflow-type: tm+mt
-source-wordcount: '1390'
+source-wordcount: '1389'
 ht-degree: 65%
 
 ---
@@ -56,7 +56,7 @@ Lors de l’ingestion de données, il est important de comprendre le fonctionnem
 
 Il existe une certaine flexibilité lors de l’ingestion de données : si un type ne correspond pas à ce qui se trouve dans le schéma cible, les données seront converties en type cible exprimé. Si cette conversion est impossible, le lot échouera avec `TypeCompatibilityException`.
 
-Par exemple, ni JSON ni CSV n’ont de type `date` ou `date-time`. Par conséquent, ces valeurs sont exprimées à l’aide de [chaînes au format ISO 8601](https://www.iso.org/fr/iso-8601-date-and-time-format.html) (« 2018-07-10T15:05:59.000-08:00 ») ou d’une heure Unix au format millisecondes (1531263959000) et sont converties au moment de l’ingestion en type XDM cible.
+Par exemple, ni JSON ni CSV n’ont de type `date` ou `date-time`. Par conséquent, ces valeurs sont exprimées à l’aide de [chaînes au format ISO 8601](https://www.iso.org/fr/iso-8601-date-and-time-format.html) (« 2018-07-10T15:05:59.000-08:00 ») ou d’Unix Time au format millisecondes (1531263959000) et sont converties au moment de l’ingestion en type XDM cible.
 
 Le tableau ci-dessous illustre les conversions prises en charge lors de l’ingestion de données.
 
@@ -146,7 +146,7 @@ Vous pouvez charger des fichiers à l’aide de l’API Small File Upload. Cepen
 
 >[!NOTE]
 >
->L’ingestion par lots peut être utilisée pour mettre à jour de manière incrémentielle les données de la banque de profils. Pour plus d’informations, consultez la section sur la [mise à jour d’un lot](#patch-a-batch) dans le guide de développement de l’ingestion par lots [&#128279;](api-overview.md).
+>L’ingestion par lots peut être utilisée pour mettre à jour de manière incrémentielle les données de la banque de profils. Pour plus d’informations, consultez la section sur la [mise à jour d’un lot](#patch-a-batch) dans le guide de développement de l’ingestion par lots [](api-overview.md).
 
 >[!INFO]
 >
