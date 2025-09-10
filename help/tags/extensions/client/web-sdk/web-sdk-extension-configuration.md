@@ -42,7 +42,7 @@ Lorsque vous créez une version de Web SDK personnalisée, elle est utilisée pa
 >[!IMPORTANT]
 >
 >La désactivation des composants Web SDK peut interrompre votre implémentation existante. Chaque fois que vous désactivez un composant, veillez à tester minutieusement votre implémentation pour vous assurer que toutes les fonctionnalités dont vous avez besoin fonctionnent comme prévu.
->>Lorsque vous désactivez un composant, vous ne pouvez plus modifier les paramètres de ce composant.
+>&#x200B;>Lorsque vous désactivez un composant, vous ne pouvez plus modifier les paramètres de ce composant.
 
 Pour créer une version Web SDK personnalisée à l’aide de l’extension de balise Web SDK, procédez comme suit.
 
@@ -123,9 +123,10 @@ Cette section vous permet de définir le comportement du SDK web en ce qui conce
 * **[!UICONTROL Utiliser des cookies tiers]** : lorsque cette option est activée, Web SDK tente de stocker un identifiant utilisateur dans un cookie tiers. En cas de réussite, l’utilisateur est identifié comme un seul utilisateur lorsqu’il navigue sur plusieurs domaines, plutôt que comme un utilisateur distinct sur chaque domaine. Si cette option est activée, il se peut que le SDK ne puisse pas stocker l’identifiant de l’utilisateur dans un cookie tiers si le navigateur ne prend pas en charge les cookies tiers ou s’il a été configuré par l’utilisateur pour ne pas autoriser les cookies tiers. Dans ce cas, le SDK stocke uniquement l’identifiant dans le domaine propriétaire.
 
   >[!IMPORTANT]
-  >>Les cookies tiers ne sont pas compatibles avec la fonctionnalité [Identifiant d’appareil interne](../../../../web-sdk/identity/first-party-device-ids.md) de Web SDK.
-  >>Vous pouvez utiliser des identifiants d’appareil propriétaires ou des cookies tiers, mais vous ne pouvez pas utiliser les deux fonctionnalités simultanément.
+  >&#x200B;>Les cookies tiers ne sont pas compatibles avec la fonctionnalité [Identifiant d’appareil interne](../../../../web-sdk/identity/first-party-device-ids.md) de Web SDK.
+  >&#x200B;>Vous pouvez utiliser des identifiants d’appareil propriétaires ou des cookies tiers, mais vous ne pouvez pas utiliser les deux fonctionnalités simultanément.
   >
+
 ## Configurer les paramètres de personnalisation {#personalization}
 
 Cette section vous permet de configurer la manière dont vous souhaitez masquer certaines parties d’une page lors du chargement du contenu personnalisé. Cela garantit que vos visiteurs ne voient que la page personnalisée.
@@ -167,7 +168,7 @@ Gérez les paramètres de configuration de la collecte de données. Des paramèt
 * **[!UICONTROL Collecter les clics sur les liens externes]** : une case à cocher qui permet de collecter les liens externes.
 * **[!UICONTROL Collecter les clics sur les liens de téléchargement]** : une case à cocher qui permet de collecter les liens de téléchargement.
 * **[!UICONTROL Qualificateur de lien de téléchargement]** : expression régulière qui qualifie une URL de lien comme un lien de téléchargement.
-* **[!UICONTROL Propriétés des clics de filtre]** : fonction de rappel permettant d’évaluer et de modifier les propriétés associées aux clics avant la collection. Cette fonction s’exécute avant le rappel d’envoi d’événement [!UICONTROL  On before ].
+* **[!UICONTROL Propriétés des clics de filtre]** : fonction de rappel permettant d’évaluer et de modifier les propriétés associées aux clics avant la collection. Cette fonction s’exécute avant le rappel d’envoi d’événement [!UICONTROL &#x200B; On before &#x200B;].
 * **Paramètres de contexte** : collecte automatiquement les informations sur les visiteurs, qui renseignent des champs XDM spécifiques pour vous. Vous pouvez choisir **[!UICONTROL Toutes les informations contextuelles par défaut]** ou **[!UICONTROL Informations contextuelles spécifiques]**. Il s’agit de la balise équivalente à [`context`](/help/web-sdk/commands/configure/context.md) dans la bibliothèque JavaScript.
    * **[!UICONTROL Web]** : collecte des informations sur la page active.
    * **[!UICONTROL Appareil]** : collecte des informations sur l’appareil de l’utilisateur.
