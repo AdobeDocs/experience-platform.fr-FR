@@ -119,7 +119,7 @@ La page de détails affiche également une liste des identités ayant échoué e
 
 ![Enregistrements de flux de données pour les destinations de diffusion en continu avec un message d’erreur en surbrillance.](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-#### [!BADGE Beta ]{type=Informative} Surveillance de l’exécution du flux de données au niveau de l’audience pour les destinations de diffusion en streaming {#audience-level-dataflow-runs-for-streaming-destinations}
+#### [!BADGE Beta &#x200B;]{type=Informative} Surveillance de l’exécution du flux de données au niveau de l’audience pour les destinations de diffusion en streaming {#audience-level-dataflow-runs-for-streaming-destinations}
 
 Vous pouvez afficher des informations sur les identités activées, exclues ou en échec réparties au niveau de l’audience, pour chaque audience qui fait partie du flux de données.
 
@@ -191,7 +191,7 @@ Chaque exécution de flux de données affiche les détails suivants :
 - **[!UICONTROL Profils reçus]** : nombre total de profils reçus dans le flux de données. Cette valeur est mise à jour toutes les 60 minutes.
 - **[!UICONTROL Identités activées]** : nombre total d’identités de profil qui ont été activées avec succès vers la destination sélectionnée dans le cadre de l’exécution du flux de données. Cette mesure inclut les identités qui sont créées, mises à jour et supprimées dans les audiences exportées.
 - **[!UICONTROL Identités exclues]** : nombre total d’identités de profil qui sont exclues de l’activation en fonction des attributs manquants et de la violation du consentement.
-- **[!UICONTROL Statut]** : représente le statut du flux de données. Il peut s’agir de l’un des trois états suivants : [!UICONTROL  Succès ], [!UICONTROL  Échec ] et [!UICONTROL  Traitement ]. [!UICONTROL Succès] signifie que le flux de données est actif et exporte les données selon son planning fourni. [!UICONTROL  Échec ] signifie que l’activation des données a été suspendue en raison d’erreurs. Le [!UICONTROL Traitement] signifie que le flux de données n’est pas encore actif et qu’il est généralement rencontré lors de la création d’un nouveau flux de données.
+- **[!UICONTROL Statut]** : représente le statut du flux de données. Il peut s’agir de l’un des trois états suivants : [!UICONTROL &#x200B; Succès &#x200B;], [!UICONTROL &#x200B; Échec &#x200B;] et [!UICONTROL &#x200B; Traitement &#x200B;]. [!UICONTROL Succès] signifie que le flux de données est actif et exporte les données selon son planning fourni. [!UICONTROL &#x200B; Échec &#x200B;] signifie que l’activation des données a été suspendue en raison d’erreurs. Le [!UICONTROL Traitement] signifie que le flux de données n’est pas encore actif et qu’il est généralement rencontré lors de la création d’un nouveau flux de données.
 
 Pour afficher les détails d’une exécution de flux de données spécifique, sélectionnez l’heure de début de l’exécution dans la liste.
 
