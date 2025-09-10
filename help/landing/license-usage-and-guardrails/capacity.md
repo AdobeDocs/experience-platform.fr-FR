@@ -2,10 +2,10 @@
 title: Utilisation et capacité des licences
 description: Découvrez les limites d’utilisation et de capacité de votre licence dans Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: d0b54e15f132d85964d6458da0769548d231a9c4
+source-git-commit: 568a0ba7707402496167145ce2673181b240496e
 workflow-type: tm+mt
-source-wordcount: '1537'
-ht-degree: 7%
+source-wordcount: '1593'
+ht-degree: 6%
 
 ---
 
@@ -55,11 +55,13 @@ Dans ces services, les mécanismes de sécurisation suivants sont suivis :
 
 - Le nombre maximal d’audiences de diffusion en continu est de 500
    - Sur ces 500 audiences de diffusion en continu, le nombre maximal d’audiences Edge est de 150
-- Le débit combiné maximal pour la segmentation en flux continu est de 1 500 enregistrements par seconde (rps)
+- Le débit combiné initial pour l’ingestion en flux continu est de 1 500 enregistrements par seconde (rps)
+   - Ce débit de diffusion en continu combiné mesure le pic combiné d’événements entrants par seconde pour l’ingestion en flux continu dans le profil client en temps réel sur vos sandbox de production et de développement.
+   - Vous pouvez acheter une prise en charge supplémentaire de la segmentation en flux continu pour un maximum de 13 500 enregistrements par seconde. Vous trouverez plus d’informations sur l’achat de droits supplémentaires dans la description du produit [Real-Time CDP](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 La capacité de l’audience se situe au niveau **sandbox**. Cela signifie que, pour chaque sandbox de votre organisation, vous pouvez avoir 500 audiences en flux continu, dont 150 peuvent être des audiences Edge.
 
-La capacité de débit se situe au niveau de l’**organisation** et peut être distribuée à vos sandbox individuels. Par exemple, avec le débit de segmentation en flux continu de 1 500 tr/s, vous pouvez définir votre sandbox de production sur 1 350 tr/s et votre sandbox de développement sur 150 tr/s.
+La capacité de débit de diffusion en continu se situe au niveau de l’**organisation** et peut être distribuée à vos sandbox individuels. Par exemple, avec le débit d’ingestion en flux continu de 1 500 i/s, vous pouvez définir votre sandbox de production sur 1 300 i/s et votre sandbox de développement sur 200 i/s.
 
 Experience Platform calcule le débit du sandbox par intervalles de 15 minutes consécutifs. Ce débit est mesuré en temps réel, avec une actualisation des données toutes les 60 secondes.
 
@@ -202,11 +204,11 @@ Vous garantissez des performances cohérentes pendant les pics d’activité, en
 
 +++
 
-### Quelles sont les bonnes pratiques pour gérer le débit de segmentation en flux continu ?
+### Quelles sont les bonnes pratiques pour gérer le débit d’ingestion en flux continu ?
 
 +++ Réponse
 
-Pour gérer au mieux le débit de segmentation de votre diffusion en continu, vous devez évaluer vos jeux de données pour vous assurer qu’ils donnent la priorité aux données nécessaires à la personnalisation.
+Pour gérer au mieux le débit d’ingestion en flux continu, vous devez évaluer vos jeux de données pour vous assurer qu’ils donnent la priorité aux données nécessaires à la personnalisation.
 
 
 Si le traitement en temps réel n’est pas requis, vous devez utiliser l’ingestion par lots au lieu de l’ingestion par flux.

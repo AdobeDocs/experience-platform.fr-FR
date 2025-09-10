@@ -2,7 +2,7 @@
 title: Guide de segmentation d’Edge
 description: Découvrez comment utiliser la segmentation Edge pour évaluer les audiences dans Experience Platform instantanément sur le serveur Edge, en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 5de8597dd1d5249297a09976c804d1c1f3d822c5
+source-git-commit: 1b69fa4ecadb1f6b8575358ca4a81549221430e1
 workflow-type: tm+mt
 source-wordcount: '1148'
 ht-degree: 22%
@@ -31,10 +31,10 @@ Une requête peut être évaluée avec une segmentation Edge si elle répond à 
 
 | Type de requête | Détails | Requête | Exemple |
 | ---------- | ------- | ----- | ------- |
-| Événement unique dans une fenêtre temporelle de moins de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant dans une fenêtre temporelle de moins de 24 heures. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Un exemple d’événement unique dans une fenêtre temporelle relative s’affiche.](../images/methods/edge/single-event.png) |
-| Profil uniquement | Toute définition de segment qui ne fait référence qu’à un attribut de profil. | `homeAddress.country.equals("US", false)` | ![Exemple d’attribut de profil affiché.](../images/methods/edge/profile-attribute.png) |
-| Événement unique avec un attribut de profil dans une fenêtre temporelle relative de moins de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant, avec un ou plusieurs attributs de profil, et qui se produit dans une fenêtre temporelle relative de moins de 24 heures. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Un exemple d’événement unique avec un attribut de profil dans une fenêtre temporelle relative s’affiche.](../images/methods/edge/single-event-with-profile-attribute.png) |
-| Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lots ou Edge. **Remarque :** si un segment est utilisé, la disqualification du profil se produit **toutes les 24 heures**. | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![Un exemple d’un segment de segments s’affiche.](../images/methods/edge/segment-of-segments.png) |
+| Événement unique dans une fenêtre temporelle de moins de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant dans une fenêtre temporelle de moins de 24 heures. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Un exemple d’événement unique dans une fenêtre temporelle relative s’affiche.](../images/methods/edge/single-event.png){zoomable="yes"} |
+| Profil uniquement | Toute définition de segment qui ne fait référence qu’à un attribut de profil. | `homeAddress.country.equals("US", false)` | ![Exemple d’attribut de profil affiché.](../images/methods/edge/profile-attribute.png){zoomable="yes"} |
+| Événement unique avec un attribut de profil dans une fenêtre temporelle relative de moins de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant, avec un ou plusieurs attributs de profil, et qui se produit dans une fenêtre temporelle relative de moins de 24 heures. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Un exemple d’événement unique avec un attribut de profil dans une fenêtre temporelle relative s’affiche.](../images/methods/edge/single-event-with-profile-attribute.png){zoomable="yes"} |
+| Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lots ou Edge. **Remarque :** si un segment est utilisé, la disqualification du profil se produit **toutes les 24 heures**. | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![Un exemple d’un segment de segments s’affiche.](../images/methods/edge/segment-of-segments.png){zoomable="yes"} |
 
 En outre, la définition de segment **doit** est liée à une politique de fusion Active-On-Edge (active sur le bord). Pour plus d’informations sur les politiques de fusion, consultez le [guide des politiques de fusion](../../profile/api/merge-policies.md).
 
@@ -153,15 +153,15 @@ Vous trouverez plus d’informations sur l’utilisation de ce point d’entrée
 
 Dans Audience Portal, sélectionnez **[!UICONTROL Créer une audience]**.
 
-![Le bouton Créer une audience est mis en surbrillance dans le portail d’audiences.](../images/methods/edge/select-create-audience.png)
+![Le bouton Créer une audience est mis en surbrillance dans le portail d’audiences.](../images/methods/edge/select-create-audience.png){zoomable="yes"}
 
 Une fenêtre contextuelle s’affiche. Sélectionnez **[!UICONTROL Créer des règles]** pour accéder au créateur de segments.
 
-![Le bouton Créer des règles est mis en surbrillance dans la fenêtre contextuelle de création d’audience.](../images/methods/edge/select-build-rules.png)
+![Le bouton Créer des règles est mis en surbrillance dans la fenêtre contextuelle de création d’audience.](../images/methods/edge/select-build-rules.png){zoomable="yes"}
 
 Dans le créateur de segments, créez une définition de segment qui correspond à l’un des [types de requête éligibles](#eligible-query-types). Si la définition de segment est admissible pour la segmentation Edge, vous pourrez sélectionner **[!UICONTROL Edge]** comme méthode **[!UICONTROL Évaluation]**.
 
-![La définition de segment s’affiche. Le type d’évaluation est mis en surbrillance, montrant que la définition de segment peut être évaluée à l’aide de la segmentation Edge.](../images/methods/edge/edge-evaluation-method.png)
+![La définition de segment s’affiche. Le type d’évaluation est mis en surbrillance, montrant que la définition de segment peut être évaluée à l’aide de la segmentation Edge.](../images/methods/edge/edge-evaluation-method.png){zoomable="yes"}
 
 Pour en savoir plus sur la création de définitions de segment, consultez le [guide du créateur de segments](../ui/segment-builder.md)
 
@@ -297,11 +297,11 @@ Vous trouverez des informations plus détaillées sur la définition de segment 
 
 Vous pouvez récupérer toutes les audiences activées pour la segmentation Edge au sein de votre organisation en utilisant les filtres d’Audience Portal. Sélectionnez l’icône ![icône de filtre](../../images/icons/filter.png) pour afficher la liste des filtres.
 
-![L’icône de filtre est mise en surbrillance dans Audience Portal.](../images/methods/filter-audiences.png)
+![L’icône de filtre est mise en surbrillance dans Audience Portal.](../images/methods/filter-audiences.png){zoomable="yes"}
 
 Dans la liste des filtres disponibles, accédez à **Fréquence des mises à jour** et sélectionnez « Edge ». L’utilisation de ce filtre affiche toutes les audiences de votre organisation qui sont évaluées à l’aide de la segmentation Edge.
 
-![La fréquence de mise à jour d’Edge est sélectionnée, affichant toutes les audiences de l’organisation qui sont évaluées à l’aide de la segmentation Edge.](../images/methods/edge/filter-edge.png)
+![La fréquence de mise à jour d’Edge est sélectionnée, affichant toutes les audiences de l’organisation qui sont évaluées à l’aide de la segmentation Edge.](../images/methods/edge/filter-edge.png){zoomable="yes"}
 
 Pour en savoir plus sur l’affichage des audiences dans Experience Platform, consultez le guide [Audience Portal](../ui/audience-portal.md).
 
@@ -321,7 +321,7 @@ La mesure **[!UICONTROL Total qualifié]** représente le nombre total d’audie
 
 La mesure **[!UICONTROL Nouvelle audience mise à jour]** est représentée par un graphique linéaire qui indique le changement de taille de l’audience par le biais de la segmentation Edge. Vous pouvez ajuster la liste déroulante pour afficher les dernières 24 heures, la semaine dernière ou les 30 derniers jours.
 
-![La carte Profils au fil du temps est mise en surbrillance.](../images/methods/edge/profiles-over-time.png)
+![La carte Profils au fil du temps est mise en surbrillance.](../images/methods/edge/profiles-over-time.png){zoomable="yes"}
 
 Pour plus d’informations sur les détails de l’audience, veuillez lire la [présentation du portail Audience](../ui/audience-portal.md#audience-details).
 
