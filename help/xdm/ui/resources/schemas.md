@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création et modification de schémas dans l’interface utilisateur
 description: Découvrez les bases de la création et de la modification de schémas dans l’interface utilisateur d’Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 0b03a8873f828faef78e5bf0b66c9773fc693206
 workflow-type: tm+mt
-source-wordcount: '4078'
+source-wordcount: '4178'
 ht-degree: 3%
 
 ---
@@ -29,7 +29,7 @@ Ce guide nécessite une compréhension pratique du système XDM. Reportez-vous �
 
 >[!NOTE]
 >
->Cette section explique comment créer manuellement un schéma dans l’interface utilisateur. Si vous ingérez des données CSV dans Experience Platform, vous pouvez utiliser des algorithmes de machine learning (ML) pour **générer un schéma à partir d’exemples de données CSV**. Ce workflow correspond à votre format de données et crée automatiquement un schéma basé sur la structure et le contenu de votre fichier CSV. Pour plus d’informations sur ce workflow[&#128279;](../ml-assisted-schema-creation.md) consultez le guide de création de schéma assistée par machine learning .
+>Cette section explique comment créer manuellement un schéma dans l’interface utilisateur. Si vous ingérez des données CSV dans Experience Platform, vous pouvez utiliser des algorithmes de machine learning (ML) pour **générer un schéma à partir d’exemples de données CSV**. Ce workflow correspond à votre format de données et crée automatiquement un schéma basé sur la structure et le contenu de votre fichier CSV. Pour plus d’informations sur ce workflow[ consultez le guide de création de schéma assistée par machine learning ](../ml-assisted-schema-creation.md).
 
 Dans l’espace de travail [!UICONTROL Schémas], sélectionnez **[!UICONTROL Créer un schéma]** dans le coin supérieur droit.
 
@@ -39,7 +39,7 @@ La boîte de dialogue [!UICONTROL Créer un schéma] s’affiche. Dans cette bo�
 
 ![La boîte de dialogue Créer un schéma avec les options de workflow et sélectionnez en surbrillance.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
-### [!BADGE Beta &#x200B;]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
+### [!BADGE Beta ]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
 
 Pour découvrir comment utiliser un algorithme ML afin de recommander une structure de schéma basée sur un fichier csv, consultez le guide de création de schéma assisté par machine learning [machine learning](../ml-assisted-schema-creation.md). Ce guide de l’interface utilisateur se concentre sur le workflow de création manuelle .
 
@@ -167,27 +167,43 @@ Après avoir ajouté un groupe de champs à un schéma, vous pouvez éventuellem
 
 ### Supprimer les champs ajoutés des groupes de champs {#remove-fields}
 
-Après avoir ajouté un groupe de champs à un schéma, vous pouvez supprimer les champs dont vous n’avez pas besoin.
+Une fois que vous avez ajouté un groupe de champs à un schéma, vous pouvez supprimer globalement des champs du groupe de champs ou les masquer localement du schéma actuel. Il est essentiel de comprendre la différence entre ces actions pour éviter toute modification involontaire du schéma.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->La suppression de champs d’un groupe de champs affecte uniquement le schéma en cours de traitement et n’affecte pas le groupe de champs lui-même. Si vous supprimez des champs dans un schéma, ces champs sont toujours disponibles dans tous les autres schémas qui utilisent le même groupe de champs.
+>Sélectionner **[!UICONTROL Supprimer]** supprime le champ du groupe de champs lui-même, ce qui affecte *tous* les schémas qui utilisent ce groupe de champs.
+>>N’utilisez pas cette option, sauf si vous souhaitez **supprimer le champ de chaque schéma qui inclut le groupe de champs**.
 
-Dans l’exemple suivant, le groupe de champs standard **[!UICONTROL Détails démographiques]** a été ajouté à un schéma. Pour supprimer un seul champ, tel que `taxId`, sélectionnez le champ dans la zone de travail, puis sélectionnez **[!UICONTROL Supprimer]** dans le rail de droite.
+Pour supprimer un champ du groupe de champs, sélectionnez-le dans la zone de travail et sélectionnez **[!UICONTROL Supprimer]** dans le rail de droite. Cet exemple montre le champ `taxId` du groupe **[!UICONTROL Détails démographiques]**.
 
 ![La [!DNL Schema Editor] avec [!UICONTROL Supprimer] mise en surbrillance. Cette action supprime un seul champ.](../../images/ui/resources/schemas/remove-single-field.png)
 
-Si vous souhaitez supprimer plusieurs champs, vous pouvez gérer le groupe de champs dans son ensemble. Sélectionnez un champ appartenant au groupe dans la zone de travail, puis sélectionnez **[!UICONTROL Gérer les champs associés]** dans le rail de droite.
+Pour masquer plusieurs champs d’un schéma sans les supprimer du groupe de champs lui-même, utilisez l’option **[!UICONTROL Gérer les champs associés]**. Sélectionnez un champ dans le groupe de la zone de travail, puis sélectionnez **[!UICONTROL Gérer les champs associés]** dans le rail de droite.
 
 ![La [!DNL Schema Editor] avec [!UICONTROL Gérer les champs associés] mise en surbrillance.](../../images/ui/resources/schemas/manage-related-fields.png)
 
-Une boîte de dialogue s’affiche, affichant la structure du groupe de champs en question. Vous pouvez utiliser les cases à cocher fournies pour sélectionner ou désélectionner les champs dont vous avez besoin. Lorsque vous êtes satisfait, sélectionnez **[!UICONTROL Confirmer]**.
+Une boîte de dialogue s’affiche, affichant la structure du groupe de champs. Utilisez les cases à cocher pour sélectionner ou désélectionner les champs à inclure.
 
 ![La boîte de dialogue [!UICONTROL Gérer les champs associés] avec les champs sélectionnés et [!UICONTROL Confirmer] mise en surbrillance.](../../images/ui/resources/schemas/select-fields.png)
 
-La zone de travail réapparaît avec uniquement les champs sélectionnés présents dans la structure du schéma.
+Sélectionnez **[!UICONTROL Confirmer]** pour mettre à jour la zone de travail et refléter vos champs sélectionnés.
+
 
 ![Champs ajoutés ](../../images/ui/resources/schemas/fields-added.png)
+
+### Comportement des champs lors de la suppression ou de l’obsolescence de champs {#field-removal-deprecation-behavior}
+
+Utilisez le tableau ci-dessous pour comprendre la portée de chaque action.
+
+| Action | S’applique uniquement au schéma actuel | Modifie le groupe de champs | Affecte les autres schémas | Description |
+|--------------------------|--------------------------------|----------------------|-----------------------|-------------|
+| **Supprimer le champ** | Non | Oui | Oui | Supprime le champ du groupe de champs. Cela le supprime de tous les schémas utilisant ce groupe. |
+| **Gérer les champs associés** | Oui | Non | Non | Masque uniquement les champs du schéma actuel. Le groupe de champs reste inchangé. |
+| **Champ obsolète** | Non | Oui | Oui | Marque le champ comme obsolète dans le groupe de champs. Il n’est plus disponible dans aucun schéma. |
+
+>[!NOTE]
+>
+>Ce comportement est cohérent sur les schémas basés sur des enregistrements et sur des événements.
 
 ### Ajouter des champs personnalisés à des groupes de champs {#add-fields}
 
