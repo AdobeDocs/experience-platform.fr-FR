@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
 source-wordcount: '1432'
-ht-degree: 92%
+ht-degree: 94%
 
 ---
 
@@ -160,7 +160,7 @@ Pour plus d’informations sur les sandbox, consultez la [vue d’ensemble des s
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Estimations d’audience | Les estimations d’audience s’affichent désormais sous la forme d’une **plage**, qui est basée sur l’intervalle de confiance des données d’échantillonnage. Pour en savoir plus sur les estimations, consultez le [guide du créateur de segments](/help/segmentation/ui/segment-builder.md#audience-properties). |
+| Estimations d’audience | Les estimations d’audience s’affichent désormais sous la forme d’une **plage**, qui est basée sur l’intervalle de confiance des données d’échantillonnage. Pour en savoir plus sur les estimations, consultez le [Guide du Créateur de segments](/help/segmentation/ui/segment-builder.md#audience-properties). |
 
 Pour plus d’informations, consultez la [[!DNL Segmentation Service] vue d’ensemble](../../segmentation/home.md).
 
