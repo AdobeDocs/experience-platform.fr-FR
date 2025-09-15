@@ -5,10 +5,10 @@ title: Se connecter aux destinations par lots et activer des données à l’aid
 description: Cette section contient des instructions détaillées sur l’utilisation de l’API Flow Service pour créer un espace de stockage par lots dans le cloud ou une destination de marketing par e-mail dans Experience Platform et activer les données.
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 81641f707dbd9fb2952589506bc42c3dd6cd83b3
+source-git-commit: 833e38559f7150c579840c69fa2658761fc9472c
 workflow-type: tm+mt
-source-wordcount: '3416'
-ht-degree: 72%
+source-wordcount: '3450'
+ht-degree: 71%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 72%
 
 >[!IMPORTANT]
 > 
->* Pour vous connecter à une destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions).
+>* Pour vous connecter à une destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions).
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions).
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions).
 >
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 >
 >Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
@@ -591,18 +591,21 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "AZURE_BLOB",
         "container": "{CONTAINER}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -638,7 +641,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
 }'
 ```
@@ -674,7 +678,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "AZURE_BLOB",
         "container": "{CONTAINER}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
 }'
 ```
@@ -710,12 +715,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -751,12 +758,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -792,12 +801,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -832,6 +843,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
 }'
 ```
@@ -850,6 +862,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `params.bucketName` | Pour les connexions S3, indiquez le nom de l’intervalle où les fichiers seront exportés. |
 | `params.path` | Pour les connexions S3, indiquez le chemin d’accès au fichier dans l’emplacement de stockage où les fichiers seront exportés. |
 | `params.format` | `CSV` est actuellement le seul type d’exportation de fichier pris en charge. |
+| `params.includeFileManifest` | *Facultatif*. Définissez sur `true` pour activer la génération du fichier manifeste pour la destination. Lorsque cette option est activée, un fichier manifeste est créé avec vos fichiers de données exportés, fournissant des métadonnées sur les fichiers exportés. Affichez un [exemple de fichier de manifeste](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). |
 
 {style="table-layout:auto"}
 
@@ -1240,7 +1253,7 @@ La réponse renvoyée doit inclure dans le paramètre `transformations` les audi
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[&#128279;](/help/landing/troubleshooting.md#api-status-codes) consultez les sections Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[ consultez les sections ](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 
