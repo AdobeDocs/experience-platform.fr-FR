@@ -2,10 +2,10 @@
 title: Notes de mise à jour préliminaires d’Experience Platform
 description: Aperçu des dernières notes de mise à jour de Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 491e0881167e3fb383a5a611924bd0d1df07b441
+source-git-commit: c592d007932835f5263d7f78b2e8155790313840
 workflow-type: tm+mt
-source-wordcount: '1271'
-ht-degree: 43%
+source-wordcount: '1217'
+ht-degree: 45%
 
 ---
 
@@ -46,9 +46,8 @@ L’assistant Adobe Experience Platform AI est une expérience de conversation q
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator est votre assistant intelligent pour les applications Experience Cloud. Lorsque vous posez des questions ou demandez de l’aide, Agent Orchestrator fait automatiquement appel à des agents spécialisés pour vous obtenir les bonnes réponses. Agent Orchestrator mémorise l&#39;historique de vos conversations, ce qui vous permet de vous appuyer sur les questions précédentes naturellement sans répéter le contexte, et d&#39;associer les informations provenant de plusieurs agents pour vous présenter des réponses claires et unifiées. Vous pouvez utiliser les fonctionnalités d’Agent Orchestrator par le biais de l’interface conversationnelle de l’assistant d’IA. |
+| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator est la couche intelligente qui alimente AI Assistant. Lorsque vous posez des questions ou demandez de l’aide, Agent Orchestrator fait automatiquement appel à des agents spécialisés pour vous obtenir les bonnes réponses. Agent Orchestrator mémorise l&#39;historique de vos conversations, ce qui vous permet de vous appuyer sur les questions précédentes naturellement sans répéter le contexte, et d&#39;associer les informations provenant de plusieurs agents pour vous présenter des réponses claires et unifiées. |
 | Audience Agent | Audience Agent vous permet d’obtenir des informations sur les audiences, notamment la détection des modifications importantes de la taille de l’audience, la détection des audiences en double, l’exploration de l’inventaire de vos audiences et la récupération de la taille de vos audiences. |
-| Agent de découverte de champ | L’agent de découverte de champ permet aux utilisateurs de découvrir et de comprendre automatiquement les champs de données dans leurs schémas et jeux de données. Cet agent intelligent analyse votre structure de données et fournit des informations sur l’utilisation des champs, les relations et des recommandations pour l’optimisation. |
 
 Pour plus d’informations, consultez la [vue d’ensemble de l’assistant IA](../ai-assistant/home.md).
 
@@ -74,7 +73,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | --- | --- |
-| Connecteur [!BADGE &#x200B; &#x200B;]{type=Informative}Beta[!DNL Snowflake Batch] | Un nouveau connecteur [!DNL Snowflake Batch] est désormais disponible, offrant une alternative au connecteur de diffusion en continu pour des cas d’utilisation spécifiques. |
+| Connecteur [!BADGE  ]{type=Informative}Beta[!DNL Snowflake Batch] | Un nouveau connecteur [!DNL Snowflake Batch] est désormais disponible, offrant une alternative au connecteur de diffusion en continu pour des cas d’utilisation spécifiques. |
 | Destination [!DNL Adform] | [!DNL Adform] est un fournisseur de premier plan de solutions d&#39;achat et de vente de médias programmatiques. En connectant Adform au Adobe Experience Platform, vous pouvez activer vos audiences propriétaires via Adform, en fonction de l’Experience Cloud ID (ECID). |
 | Prise en charge du chiffrement [!DNL Data Landing Zone] | Vous pouvez désormais joindre des clés publiques au format RSA pour chiffrer vos fichiers exportés, ce qui vous offre le même niveau de sécurité que les autres destinations de stockage dans le cloud pour vos informations sensibles. |
 | Détails d’expiration de l’authentification pour les destinations [!DNL Pinterest] | Les informations d’expiration de l’authentification pour les destinations [!DNL Pinterest] sont désormais visibles directement dans l’interface d’Experience Platform. Vous pouvez ainsi voir à quel moment votre authentification arrivera à expiration et la renouveler avant qu’elle ne provoque des interruptions de vos flux de données. Vous pouvez surveiller les dates d’expiration de votre jeton à partir de la colonne **[!UICONTROL Date d’expiration du compte]** dans les onglets **[[!UICONTROL Comptes]](../destinations/ui/destinations-workspace.md#accounts)** ou **[[!UICONTROL Parcourir]](../destinations/ui/destinations-workspace.md#browse)**. |
