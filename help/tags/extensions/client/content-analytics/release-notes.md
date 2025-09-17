@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension Adobe Content Analytics
 description: Dernières notes de mise à jour pour l’extension de balise Content Analytics dans Adobe Experience Platform.
 exl-id: 37b34915-655b-40de-b17b-43028c579e37
-source-git-commit: 77d19ab813f881cd3c48c27ed4a9ac02e268e23f
+source-git-commit: dcd880ed73cc8294e6019c43021cb27ea6dd9995
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 1%
+source-wordcount: '401'
+ht-degree: 0%
 
 ---
 
@@ -15,6 +15,7 @@ Voici une liste de notes de mise à jour pour l’extension de balise Content An
 
 | Version | Date | Correctifs |
 |---|---|---|
+| 1,0,49 | 12 Septembre 2025 | <ul><li>Correction d’un bug mineur en raison duquel l’interface utilisateur de l’extension de balises ne se chargeait pas du tout si l’utilisateur ou l’utilisatrice ne disposait pas des autorisations relatives aux trains de données. L’interface utilisateur affiche désormais un avertissement d’autorisation dans l’option de flux de données **[!UICONTROL Choisir parmi]** et permet toujours à l’utilisateur de saisir manuellement des valeurs.</li><li>Mise à jour d&#39;un problème de chemin pour l10n.</li><li>Correction d’un problème en raison duquel certaines images qui étaient des éléments enfants de parents non-images ne capturaient pas correctement les clics sur les ressources pour ces éléments d’image enfants.</li><li>Si un utilisateur a configuré le SDK Web dans des balises avec un nom d’instance différent de `alloy`, la bibliothèque Content Analytics détectera la première instance de la bibliothèque SDK Web et l’utilisera pour envoyer des événements Content Analytics.</li></ul> |
 | 1,0,48 | 25 Août 2025 | <ul><li>Ajoute la prise en charge du suivi des ressources dans les éléments DOM shadow-root d’un document.</li></ul> |
 | 1,0,47 | 23 Juil 2025 | <ul><li>Correction d’un bug qui se produisait lorsque les expériences n’étaient pas activées, ce qui entraînait l’échec de la vérification des expériences par l’expression régulière. Ce problème empêchait la collecte de données Content Analytics.</li><li>Correction d’un problème lié au paramètre de langue par défaut qui empêchait l’affichage de l’interface utilisateur des balises pour certains utilisateurs dont la langue principale par défaut n’était pas définie dans Experience Cloud.</li></ul> |
 | 1,0,46 | 18 Juin 2025 | <ul><li>Ajout d’une notification toast lors de la tentative d’enregistrement de la configuration de l’extension, si un flux de données de production est absent.</li><li>Correction temporaire du problème de visibilité de la payload de Content Analytics en plaçant le contenu de la payload singulièrement renforcée dans la console.</li><li>Ajout de la localisation à l’interface utilisateur de l’extension.</li><li>Correction partielle d’un problème CSS qui entraînait une marge intérieure supplémentaire autour du contenu de l’interface utilisateur de l’extension.</li></ul> |
