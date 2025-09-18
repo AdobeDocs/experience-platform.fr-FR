@@ -5,10 +5,10 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 6e76b7a594cb8482b3e33edbf6776ba3b03e6fb9
+source-git-commit: 66a1c323eaf930b4b9204d9e898bbe8356a9b1e5
 workflow-type: tm+mt
-source-wordcount: '1321'
-ht-degree: 73%
+source-wordcount: '1317'
+ht-degree: 74%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 73%
    * [Supprimer les comptes de destination](./api/delete-destination-account.md)
    * [Supprimer les flux de données de destination](./api/delete-destination-dataflow.md)
    * [Exporter des jeux de données](/help/destinations/api/export-datasets.md)
-   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=fr#use-cases)
+   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
    * [Créer une connexion à une destination](./ui/connect-destination.md)
@@ -196,7 +196,6 @@ ht-degree: 73%
       * [Connexion Moengage](./catalog/mobile-engagement/moengage.md)
    * Destinations de personnalisation {#personalization}
       * [Présentation des destinations de personnalisation](./catalog/personalization/overview.md)
-      * [(Disponibilité limitée) Analyse de l’audience](./catalog/personalization/audience-analysis.md)
       * [Connexion Adobe Commerce](./catalog/personalization/adobe-commerce.md)
       * [Connexion Adobe Target](./catalog/personalization/adobe-target-connection.md)
       * [Extension Adobe Target](./catalog/personalization/adobe-target.md)
