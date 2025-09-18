@@ -3,10 +3,10 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; mapper csv�
 title: Guide de l’interface utilisateur de la préparation des données
 description: Découvrez comment utiliser les fonctions de préparation de données dans l’interface utilisateur d’Experience Platform pour mapper des fichiers CSV à un schéma XDM.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c9638cdca887f439c57f1dc01f93d63016869b29
 workflow-type: tm+mt
-source-wordcount: '1474'
-ht-degree: 33%
+source-wordcount: '1505'
+ht-degree: 32%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 33%
 
 Lisez ce guide pour savoir comment utiliser les fonctions de mappage [préparation des données](../home.md) dans l’interface utilisateur de Adobe Experience Platform pour mapper des fichiers CSV à un schéma [modèle de données d’expérience (XDM)](../../xdm/home.md).
 
-## Prise en main
+## Commencer
 
 Ce tutoriel nécessite une connaissance pratique des composants Experience Platform suivants :
 
@@ -57,9 +57,9 @@ Vous pouvez ensuite utiliser les options répertoriées dans l’en-tête pour m
 | --- | --- |
 | [!UICONTROL Rechercher les champs sources] | Utilisez la barre de recherche pour accéder à un champ source spécifique. |
 | [!UICONTROL Tous les champs] | Sélectionnez **[!UICONTROL Tous les champs]** pour afficher un menu déroulant des options permettant de filtrer vos mappages. Les options de filtrage disponibles sont les suivantes :<ul><li>**[!UICONTROL Champs obligatoires]** : filtre l’interface pour afficher uniquement les champs requis pour terminer le workflow.</li><li> **[!UICONTROL Champs d’identité]** : filtre l’interface pour afficher uniquement les champs marqués comme identités.</li><li>**[!UICONTROL Champs mappés]** : filtre l’interface pour afficher uniquement les champs déjà mappés.</li><li>**[!UICONTROL Champs non mappés]** : filtre l’interface pour afficher uniquement les champs qui doivent encore être mappés.</li><li>**[!UICONTROL Champs comportant des erreurs]** : filtre l’interface pour n’afficher que les champs comportant des erreurs.</li></ul> |
-| [!UICONTROL Nouveau type de champ &#x200B;] | Sélectionnez **[!UICONTROL Nouveau type de champ]** pour ajouter un nouveau champ ou un champ calculé. Pour plus d’informations, consultez la section sur [l’ajout d’un nouveau type de champ](#add-a-new-field-type). |
+| [!UICONTROL Nouveau type de champ ] | Sélectionnez **[!UICONTROL Nouveau type de champ]** pour ajouter un nouveau champ ou un champ calculé. Pour plus d’informations, consultez la section sur [l’ajout d’un nouveau type de champ](#add-a-new-field-type). |
 | [!UICONTROL Importer des mappages] | Sélectionnez **[!UICONTROL Importer des mappages]** pour importer des mappages à partir d’un fichier ou d’un flux de données existant. Pour plus d’informations, consultez la section sur l’[importation de mappages](#import-mapping). |
-| [!UICONTROL &#x200B; Valider &#x200B;] | Sélectionnez **[!UICONTROL Valider]** pour vérifier les erreurs dans vos mappages. |
+| [!UICONTROL  Valider ] | Sélectionnez **[!UICONTROL Valider]** pour vérifier les erreurs dans vos mappages. |
 | [!UICONTROL Télécharger le modèle] | Sélectionnez **[!UICONTROL Télécharger le modèle]** pour exporter et télécharger un fichier CSV de vos mappages. |
 | [!UICONTROL Prévisualiser les données] | Sélectionnez **[!UICONTROL Prévisualiser les données]** pour utiliser le panneau de prévisualisation et inspecter la structure et le contenu de votre jeu de données source. |
 | [!UICONTROL Tout effacer] | Sélectionnez **[!UICONTROL Effacer tout]** pour supprimer tous les mappages dans l’interface. |
@@ -151,6 +151,10 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Télécharger le fichier
 >[!ENDTABS]
 
 Une fois vos mappages terminés, vous pouvez sélectionner **[!UICONTROL Terminer]** et passer à l’étape suivante pour terminer votre flux de données.
+
+>[!TIP]
+>
+>Une fois la création de vos mappages terminée, patientez jusqu’à 10 minutes avant de commencer l’ingestion des données. Cette période d’attente garantit que vos nouveaux mappages sont entièrement enregistrés et disponibles dans le système.
 
 ![L’interface de mappage avec un ensemble complet de mappages.](../images/ui/mapping/completed_mappings.png)
 
