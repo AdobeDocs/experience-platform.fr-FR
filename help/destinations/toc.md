@@ -5,10 +5,10 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 66a1c323eaf930b4b9204d9e898bbe8356a9b1e5
+source-git-commit: 845074cccf96e0513b8f099a2e932de966551f10
 workflow-type: tm+mt
-source-wordcount: '1317'
-ht-degree: 74%
+source-wordcount: '1322'
+ht-degree: 73%
 
 ---
 
@@ -22,6 +22,7 @@ ht-degree: 74%
    * [Paramètres d’exportation configurables et communs des destinations](./how-destinations-work/destinations-configurations.md)
    * [Comportement d’exportation de profils selon les types de destinations](./how-destinations-work/profile-export-behavior.md)
    * [Gestion des identités dans le workflow d’activation des destinations](./how-destinations-work/identity-handling.md)
+   * [Cycle de vie des audiences dans les destinations de diffusion en streaming](./how-destinations-work/audience-lifecycle-streaming-destinations.md)
 * Tutoriels sur les API {#api}
    * [Activer des données vers des destinations basées sur des fichiers à l’aide de l’API Flow Service](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [Se connecter aux destinations de diffusion en continu et activer les données à l’aide de l’API Flow Service](./api/streaming-destinations.md)
@@ -32,7 +33,7 @@ ht-degree: 74%
    * [Supprimer les comptes de destination](./api/delete-destination-account.md)
    * [Supprimer les flux de données de destination](./api/delete-destination-dataflow.md)
    * [Exporter des jeux de données](/help/destinations/api/export-datasets.md)
-   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=fr#use-cases)
+   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
    * [Créer une connexion à une destination](./ui/connect-destination.md)
