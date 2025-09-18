@@ -4,7 +4,7 @@ title: Prévisualisations et estimations des points d’entrée de l’API
 description: Au fur et à mesure que la définition de segment est développée, vous pouvez utiliser les outils d’estimation et de prévisualisation de Adobe Experience Platform pour afficher des informations de niveau résumé afin de vous assurer que vous isolez l’audience prévue.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
+source-git-commit: a374d261e3b34b30869f1a9e8486d52f5bd658cb
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 18%
@@ -29,7 +29,7 @@ Les points d’entrée utilisés dans ce guide font partie de l’API [!DNL Adob
 
 ## Comment sont générées les estimations
 
-Lorsque l’ingestion d’enregistrements dans la banque de profils augmente ou réduit le nombre total de profils de plus de 5 %, une tâche d’échantillonnage est déclenchée pour mettre à jour le nombre. Le déclenchement de l’échantillonnage de données dépend de la méthode d’ingestion :
+Lorsque l’ingestion d’enregistrements dans la banque de profils augmente ou réduit le nombre total de profils de plus de 3 %, une tâche d’échantillonnage est déclenchée pour mettre à jour le nombre. Le déclenchement de l’échantillonnage de données dépend de la méthode d’ingestion :
 
 * **Ingestion par lots :** pour l’ingestion par lots, dans les 15 minutes suivant l’ingestion réussie d’un lot dans la banque de profils, si le seuil d’augmentation ou de diminution de 3 % est atteint, une tâche est exécutée pour mettre à jour le nombre.
 * **Ingestion par flux :** pour les workflows de données par flux, une vérification est effectuée toutes les heures pour déterminer si le seuil d’augmentation ou de diminution de 3 % a été atteint. Si c’est le cas, une tâche est automatiquement déclenchée pour mettre à jour le décompte.

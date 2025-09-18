@@ -4,7 +4,7 @@ title: Créer une définition de segment à l’aide de l’API Segmentation Ser
 type: Tutorial
 description: Suivez ce tutoriel pour apprendre à développer, tester, prévisualiser et enregistrer une définition de segment à l’aide de l’API Segmentation Service de Adobe Experience Platform.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
+source-git-commit: a374d261e3b34b30869f1a9e8486d52f5bd658cb
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 44%
@@ -72,7 +72,7 @@ Deux étapes sont nécessaires pour prévisualiser ou obtenir une estimation de 
 
 ### Comment sont générées les estimations
 
-Lorsque les données activées pour le profil client en temps réel sont ingérées dans Experience Platform, elles sont stockées dans la banque de données Profile. Lorsque l’ingestion d’enregistrements dans la banque de profils augmente ou réduit le nombre total de profils de plus de 5 %, une tâche d’échantillonnage est déclenchée pour mettre à jour le nombre. Si le nombre de profils ne change pas de plus de 5 %, la tâche d’échantillonnage s’exécute automatiquement toutes les semaines.
+Lorsque les données activées pour le profil client en temps réel sont ingérées dans Experience Platform, elles sont stockées dans la banque de données Profile. Lorsque l’ingestion d’enregistrements dans la banque de profils augmente ou réduit le nombre total de profils de plus de 3 %, une tâche d’échantillonnage est déclenchée pour mettre à jour le nombre. Si le nombre de profils ne change pas de plus de 3 %, la tâche d’échantillonnage s’exécute automatiquement toutes les semaines.
 
 Le déclenchement de l’échantillon dépend du type d’ingestion utilisé :
 
