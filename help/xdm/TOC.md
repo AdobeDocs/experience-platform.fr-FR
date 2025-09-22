@@ -5,10 +5,10 @@ breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Découvrez une vue d’ensemble du système de modèle de données d’expérience (XDM) dans Experience Platform et apprenez à utiliser les classes et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schemas
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1385f91694f9b6dfe96b9d424af0da6f2a1443c2
 workflow-type: tm+mt
-source-wordcount: '698'
-ht-degree: 77%
+source-wordcount: '703'
+ht-degree: 75%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 77%
       * [Soins de santé](./schema/industries/healthcare.md)
       * [Télécommunications](./schema/industries/telecom.md)
       * [Voyage et hébergement](./schema/industries/travel-hospitality.md)
-   * Modèle de données des soins de santé V2 {#healthcare}
+   * Modèle De Données Des Soins De Santé V2 {#healthcare}
       * [Healthcare V2](./schema/healthcare/healthcare-v2.md)
       * Classes {#classes}
          * [Emplacement](./schema/healthcare/classes/location.md)
@@ -108,10 +108,11 @@ ht-degree: 77%
       * [Détails du contact professionnel](./field-groups/profile/work-contact-details.md)
       * [Composants de professionnel XDM](./field-groups/profile/business-person-components.md)
       * [Détails de professionnel XDM](./field-groups/profile/business-person-details.md)
-   * XDM Individual Prospect Profile{#prospect-profile}
+   * XDM Individual Prospect Profile {#prospect-profile}
       * [Détails du prospect partenaire (exemple)](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Extension complète Adobe Analytics](./field-groups/event/analytics-full-extension.md)
+      * [Extension complète Adobe Advertising Cloud](./field-groups/event/advertising-full-extension.md)
       * [Détails de la publicité](./field-groups/event/advertising-details.md)
       * [Détails de l’application](./field-groups/event/application-details.md)
       * [Transferts de solde](./field-groups/event/balance-transfers.md)
@@ -149,7 +150,7 @@ ht-degree: 77%
       * [Catégorie de produits](./field-groups/product/product-category.md)
    * Prestataire {#provider}
       * [Prestataire de soins de santé](./field-groups/provider/healthcare-provider.md)
-   * Shared {#shared}
+   * Partagé {#shared}
       * [Détails d’audit du système source externe](./field-groups/shared/external-source-system-audit-details.md)
    * [Mises à jour des noms de groupes de champs](./field-groups/name-updates.md)
 * Types de données {#data-types}
@@ -230,7 +231,7 @@ ht-degree: 77%
    * [Informations web](./data-types/web-information.md)
    * [Interaction web](./data-types/web-interaction.md)
    * [Détails de la page web](./data-types/webpage-details.md)
-* Interface utilisateur des [!UICONTROL Schémas] {#ui}
+* Interface utilisateur [!UICONTROL Schémas] {#ui}
    * [Aperçu](./ui/overview.md)
    * [Explorer des ressources XDM](./ui/explore.md)
    * Créer et modifier des ressources {#resources}
@@ -238,8 +239,8 @@ ht-degree: 77%
       * [Classes](./ui/resources/classes.md)
       * [Groupes de champs](./ui/resources/field-groups.md)
       * [Types de données](./ui/resources/data-types.md)
-   * Définir des champs {#fields}
-      * [Aperçu](./ui/fields/overview.md)
+   * Définir les champs {#fields}
+      * [Vue d’ensemble](./ui/fields/overview.md)
       * [Champs de tableau](./ui/fields/array.md)
       * [Champs d’énumération](./ui/fields/enum.md)
       * [Champs d’identité](./ui/fields/identity.md)
@@ -252,7 +253,7 @@ ht-degree: 77%
    * [Générer des exemples de données XDM](./ui/sample.md)
    * [Exporter des schémas XDM](./ui/export.md)
 * API Schema Registry {#api}
-   * [Aperçu](api/overview.md)
+   * [Vue d’ensemble](api/overview.md)
    * [Prise en main](api/getting-started.md)
    * [Schémas](api/schemas.md)
    * [Comportements](api/behaviors.md)
