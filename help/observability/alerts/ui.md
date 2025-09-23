@@ -49,7 +49,7 @@ Lʼonglet **[!UICONTROL Parcourir]** répertorie les règles disponibles suscept
 
 Sélectionnez les points de suspension (**...**) à côté du nom d’une règle. Une liste déroulante affiche les contrôles. Sélectionnez **[!UICONTROL Gérer les abonnés aux alertes]**.
 
-![Sélectionnez les points de suspension pour afficher le menu déroulant. L’option [!UICONTROL  Gérer les abonnés aux alertes ] est mise en surbrillance](../images/alerts/ui/manage-alert-subscribers.png).
+![Sélectionnez les points de suspension pour afficher le menu déroulant. L’option [!UICONTROL &#x200B; Gérer les abonnés aux alertes &#x200B;] est mise en surbrillance](../images/alerts/ui/manage-alert-subscribers.png).
 
 La page [!UICONTROL Gérer les abonnés aux alertes] s’affiche. Pour envoyer des notifications à des utilisateurs spécifiques, saisissez leur ID utilisateur Adobe, leur adresse e-mail externe ou une liste de groupes d’e-mails, puis appuyez sur Entrée.
 
