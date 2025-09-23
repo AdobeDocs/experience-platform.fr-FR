@@ -3,9 +3,9 @@ keywords: Experience Platform;profil;profil client en temps réel;interface util
 title: Personnalisation des détails du profil dans l’interface utilisateur
 description: Ce guide fournit des instructions détaillées pour personnaliser l’affichage des données du profil client en temps réel dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e253be0c4e02b82bfc8926ac4531589782b9c8fe
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1368'
 ht-degree: 0%
 
 ---
@@ -27,8 +27,6 @@ Après avoir choisi de modifier le tableau de bord, vous pouvez réorganiser les
 ![Le bouton de redimensionnement est mis en surbrillance dans la carte Attributs de base.](../images/profile-customization/resize.png)
 
 La carte sélectionnée s’ajuste à la taille souhaitée et les cartes environnantes sont repositionnées dynamiquement. Cela peut entraîner le déplacement de certaines cartes vers d’autres lignes. Il vous faut alors faire défiler l’écran vers le bas pour afficher toutes les cartes. Par exemple, lorsque la carte « [!UICONTROL Attributs de base] » est redimensionnée, la carte « [!UICONTROL Identités liées] » n’est plus visible sur la ligne supérieure et apparaît désormais sur une nouvelle deuxième ligne du profil (non affichée). Pour renvoyer la carte « [!UICONTROL Identités liées] » à la ligne supérieure, vous pouvez la faire glisser et la déposer à la position actuelle de la carte « [!UICONTROL Préférences de canal] ».
-
-![Une carte redimensionnée est mise en surbrillance.](../images/profile-customization/resized.png)
 
 ## Modifier et supprimer des cartes
 
@@ -70,8 +68,6 @@ Lorsque vous revenez à l’écran **[!UICONTROL Modifier le widget]**, la liste
 
 Après l’enregistrement, vous revenez à l’onglet **[!UICONTROL Détail]** où la carte et les attributs mis à jour sont visibles.
 
-![Les nouveaux attributs ajoutés s’affichent sur la carte dans le tableau de bord du profil.](../images/profile-customization/added-attributes.png)
-
 ## Ajouter une nouvelle carte {#add-a-new-card}
 
 Pour personnaliser davantage l’aspect des profils dans Experience Platform, vous pouvez choisir d’ajouter de nouvelles cartes au tableau de bord et de sélectionner les attributs à afficher sur ces cartes. Pour commencer, sélectionnez **[!UICONTROL Modifier le tableau de bord]** dans l’onglet **[!UICONTROL Détail]**.
@@ -99,8 +95,6 @@ Pour enregistrer votre nouvelle carte, vous devez d’abord fournir un **[!UICON
 ![Le nouveau widget est prévisualisé dans l’écran Modifier le widget.](../images/profile-customization/new-widget.png)
 
 Après l’enregistrement, vous revenez à l’onglet **[!UICONTROL Détail]** où votre nouvelle carte et vos nouveaux attributs sont visibles.
-
-![Le nouveau widget est ajouté au tableau de bord du profil.](../images/profile-customization/added-widget.png)
 
 ## Restaurer les cartes par défaut
 

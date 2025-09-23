@@ -3,10 +3,10 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Guide de l’interface utilisateur du profil client en temps réel
 description: Le profil client en temps réel offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec le profil client en temps réel dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
+source-git-commit: e4f303f9de2d36717288d2119458c8df95fc01bf
 workflow-type: tm+mt
-source-wordcount: '2219'
-ht-degree: 9%
+source-wordcount: '1990'
+ht-degree: 5%
 
 ---
 
@@ -38,43 +38,15 @@ Pour en savoir plus, consultez le [guide du tableau de bord des profils](../../d
 
 ![Le tableau de bord du profil s’affiche.](../../dashboards/images/profiles/dashboard-overview.png)
 
-## Mesures de l’onglet [!UICONTROL Parcourir]
+## Onglet [!UICONTROL  Parcourir ]
 
-Sélectionnez l’onglet **[!UICONTROL Parcourir]** pour afficher plusieurs mesures liées aux données de profil de votre organisation. Vous pouvez également utiliser cet onglet pour parcourir la banque de profils à l’aide d’une politique de fusion ou d’une identité, comme indiqué dans la section suivante de ce guide.
+Sur l’onglet **[!UICONTROL Parcourir]**, vous pouvez afficher vos profils dans une vue **carte** ou **graphique** en cliquant sur le bouton (bascule).
 
-Sur le côté droit de l’onglet **[!UICONTROL Parcourir]** se trouve le [nombre de profils](#profile-count) ainsi qu’une liste des [profils par espace de noms](#profiles-by-namespace).
+![Le bouton (bascule) d’affichage Carte et Graphique est mis en surbrillance.](../images/user-guide/card-graph-view.png)
 
->[!NOTE]
->
->Ces mesures de profil peuvent différer des mesures affichées dans le [tableau de bord des profils](#profile-dashboard) car elles sont évaluées à l’aide de la politique de fusion par défaut de votre organisation. Pour plus d’informations sur l’utilisation des politiques de fusion, notamment sur la définition d’une politique de fusion par défaut, consultez la [ présentation des politiques de fusion ](../merge-policies/overview.md).
+De plus, vous pouvez parcourir vos profils à l’aide d’une politique de fusion ou rechercher des profils spécifiques à l’aide d’un espace de noms d’identité et d’une valeur.
 
-Outre ces mesures, cette section fournit une date et une heure de la dernière mise à jour, indiquant la date et l’heure de la dernière évaluation des mesures.
-
-![Les mesures de Profil sont affichées et mises en surbrillance.](../images/user-guide/browse-metrics.png)
-
-### Nombre de profils {#profile-count}
-
-Le nombre de profils affiche le nombre total de profils de votre organisation dans Experience Platform, une fois que la politique de fusion par défaut de votre organisation a fusionné des fragments de profil afin de former un seul et même profil pour chaque client. En d’autres termes, votre organisation peut disposer de plusieurs fragments de profil liés à un seul client qui interagit avec votre marque sur différents canaux, mais ces fragments sont fusionnés (selon la politique de fusion par défaut) et renvoient le nombre de profils « 1 », car ils sont tous liés à la même personne.
-
-Le nombre de profils inclut également les profils avec attributs (données d’enregistrement) ainsi que les profils contenant uniquement des données de série temporelle (événement), tels que les profils Adobe Analytics. Le nombre de profils est actualisé régulièrement afin de fournir un nombre total de profils à jour dans Experience Platform.
-
-#### Mise à jour de la mesure du nombre de profils
-
-Lorsque l’ingestion d’enregistrements dans la boutique [!DNL Profile] augmente ou réduit le nombre de plus de 3 %, une tâche est déclenchée pour mettre à jour le nombre. Pour les workflows de données en flux continu, une vérification est effectuée toutes les heures afin de déterminer si le seuil d’augmentation ou de diminution de 3 % a été atteint. Si c’est le cas, une tâche est automatiquement déclenchée pour mettre à jour le nombre de profils. Pour l’ingestion par lots, dans les 15 minutes suivant l’ingestion réussie d’un lot dans la banque de profils, si le seuil d’augmentation ou de diminution de 3 % est atteint, une tâche est exécutée pour mettre à jour le nombre de profils.
-
-### [!UICONTROL &#x200B; Profils par espace de noms &#x200B;] {#profiles-by-namespace}
-
-La mesure **[!UICONTROL Profils par espace de noms]** affiche le nombre total et la répartition des espaces de noms sur tous les profils fusionnés de votre banque de profils. Le nombre total de profils par espace de noms (en d’autres termes, en additionnant les valeurs affichées pour chaque espace de noms) sera toujours supérieur à la mesure du nombre de profils, car plusieurs espaces de noms peuvent être associés à un profil. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de noms seront associés à ce client individuel.
-
-#### Mise à jour de la mesure [!UICONTROL Profils par espace de noms]
-
-De la même manière que pour la mesure [nombre de profils](#profile-count), lorsque l’ingestion d’enregistrements dans la banque de [!DNL Profile] augmente ou réduit le nombre de plus de 5 %, une tâche est déclenchée pour mettre à jour les mesures d’espace de noms. Pour les workflows de données en flux continu, une vérification est effectuée toutes les heures afin de déterminer si le seuil d’augmentation ou de diminution de 5 % a été atteint. Si c’est le cas, une tâche est automatiquement déclenchée pour mettre à jour le nombre de profils. Pour l’ingestion par lots, dans les 15 minutes suivant l’ingestion réussie d’un lot dans la boutique [!DNL Profile], si le seuil d’augmentation ou de diminution de 5 % est atteint, une tâche est exécutée pour mettre à jour les mesures.
-
-## Utilisez l’onglet [!UICONTROL &#x200B; Parcourir &#x200B;] pour afficher les profils
-
-Sur l’onglet **[!UICONTROL Parcourir]** vous pouvez afficher des profils types à l’aide d’une politique de fusion ou rechercher des profils spécifiques à l’aide d’un espace de noms d’identité et d’une valeur.
-
-![Les profils appartenant à l’organisation s’affichent.](../images/user-guide/none-selected.png)
+![Les profils appartenant à l’organisation s’affichent.](../images/user-guide/profile-browse.png)
 
 ### Parcourir par [!UICONTROL politique de fusion]
 
@@ -94,7 +66,7 @@ Les profils affichés représentent un échantillon de 20 profils maximum proven
 
 Pour afficher les détails de l’un des profils types, sélectionnez l’**[!UICONTROL Identifiant de profil]**. Pour plus d’informations, reportez-vous à la section suivante de ce guide sur l’[affichage des détails du profil](#profile-detail).
 
-![Des exemples de profils correspondant à la politique de fusion s’affichent.](../images/user-guide/sample-profiles.png)
+![Des exemples de profils correspondant à la politique de fusion s’affichent.](../images/user-guide/profile-browse-table.png)
 
 Pour en savoir plus sur les politiques de fusion et leur rôle dans Experience Platform, consultez la [ présentation des politiques de fusion ](../merge-policies/overview.md).
 
@@ -120,13 +92,13 @@ Après avoir sélectionné un [!UICONTROL Espace de noms d’identité] et renvo
 >
 >Cette valeur est spécifique à un profil client individuel et doit être une entrée valide pour l’espace de noms fourni. Par exemple, la sélection de l’espace de noms d’identité « E-mail » nécessite une valeur d’identité sous la forme d’une adresse e-mail valide.
 
-![La valeur d’identité sur laquelle vous souhaitez appliquer un filtre est mise en surbrillance.](../images/user-guide/filter-identity-value.png)
+![La valeur d’identité sur laquelle vous souhaitez appliquer un filtre est mise en surbrillance.](../images/user-guide/browse-identity.png)
 
-Une fois qu’une valeur a été saisie, sélectionnez **[!UICONTROL Afficher]** et un seul profil correspondant à la valeur est renvoyé. Sélectionnez l’**[!UICONTROL Identifiant de profil]** pour afficher les détails du profil.
+Une fois qu’une valeur a été saisie, sélectionnez **[!UICONTROL Afficher]** et un seul profil correspondant à la valeur est renvoyé. Sélectionnez l’**[!UICONTROL Identifiant de profil]** pour afficher un profil.
 
 ![Le profil correspondant à la valeur d’identité est mis en surbrillance.](../images/user-guide/filtered-identity-value.png)
 
-## Afficher les détails du profil {#profile-detail}
+## Afficher le profil {#view-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_201001_404"
@@ -135,17 +107,55 @@ Une fois qu’une valeur a été saisie, sélectionnez **[!UICONTROL Afficher]**
 
 Après avoir sélectionné un **[!UICONTROL Identifiant de profil]**, l’onglet **[!UICONTROL Détail]** s’ouvre. Les informations de profil affichées dans l’onglet **[!UICONTROL Détail]** ont été fusionnées à partir de plusieurs fragments de profil afin de former une vue unique du client individuel. Cela inclut les détails du client tels que les attributs de base, les identités liées et les préférences de canal.
 
+En outre, vous pouvez afficher d’autres détails sur les profils, tels que ses [attributs](#attributes), [événements](#events) et [appartenance à l’audience](#audience-membership).
+
+### Onglet Détails {#profile-detail}
+
+L’onglet **[!UICONTROL Détails]** fournit des informations plus détaillées sur le profil sélectionné et est divisé en quatre sections : informations sur le profil client, widgets AI insight, widgets personnalisables et widgets auto-classés.
+
+![La page de détails du profil s’affiche.](../images/user-guide/profile-details.png)
+
+De plus, vous pouvez activer ou désactiver l’affichage des informations générées par l’IA, afficher les détails de hub par rapport à edge et afficher les détails dans la vue graphique.
+
+![Les bascules répertoriées ci-dessus (informations générées par l’IA, données Hub ou Edge, et vue Carte ou Graphique) sont mises en surbrillance.](../images/user-guide/profile-toggles.png)
+
+#### Informations du profil client {#customer-profile-insights}
+
+La section **[!UICONTROL Informations sur le profil client]** présente brièvement les attributs du profil. Cela inclut l’identifiant du profil, l’adresse e-mail, le numéro de téléphone, le sexe, la date de naissance, ainsi que les identités et les appartenances à l’audience du profil.
+
+![La section Informations sur le profil client s’affiche.](../images/user-guide/customer-profile-insights.png)
+
+#### Widgets d’informations d’IA {#ai-insight-widgets}
+
+La section **[!UICONTROL Widgets AI insight]** affiche les widgets générés par l’IA. Ces widgets fournissent des informations rapides sur le profil, en fonction des données du profil, y compris les données démographiques (telles que l’âge, le sexe ou le lieu), les comportements d’utilisateur (tels que l’historique des achats, l’activité du site web ou l’engagement sur les médias sociaux), ainsi que les données psychographiques (tels que les intérêts, les préférences ou les choix de style de vie). Tous les widgets d’IA utilisent des données qui **existent déjà** dans le profil.
+
+![La section Widgets AI insight s’affiche.](../images/user-guide/ai-insight-widgets.png)
+
+#### Widgets personnalisables {#customizable-widgets}
+
+La section **[!UICONTROL Widgets personnalisables]** affiche les widgets que vous pouvez personnaliser en fonction des besoins de votre entreprise. Vous pouvez regrouper les attributs dans des widgets distincts, supprimer les widgets indésirables ou ajuster la disposition des widgets.
+
 Les champs par défaut affichés peuvent également être modifiés au niveau de l’organisation afin d’afficher les attributs de profil préférés. Pour en savoir plus sur la personnalisation de ces champs, y compris les instructions détaillées sur l’ajout et la suppression d’attributs et le redimensionnement des panneaux du tableau de bord, consultez le [guide de personnalisation des détails du profil](profile-customization.md).
 
-![L’onglet Détails est mis en surbrillance. Les détails du profil s’affichent.](../images/user-guide/profile-detail-row-name.png)
+![La section widgets personnalisables s’affiche.](../images/user-guide/customizable-widgets.png)
 
 Vous pouvez également choisir d’afficher ou non les noms des attributs sous forme de noms d’affichage et de chemins d’accès aux champs. Pour basculer entre ces deux affichages, activez le bouton (bascule) **[!UICONTROL Afficher les noms d’affichage]**.
 
-![Le bouton Afficher les noms d’affichage est mis en surbrillance et les noms d’affichage sont affichés sous les attributs.](../images/user-guide/profile-detail.png)
+![Le bouton (bascule) Afficher les noms d’affichage est mis en surbrillance.](../images/user-guide/show-display-names.png)
 
-Pour afficher des informations supplémentaires relatives au profil client individuel, sélectionnez l’un des autres onglets disponibles. Ces onglets comprennent les attributs, les événements et l’onglet appartenance à l’audience qui affiche les audiences pour lesquelles le profil est actuellement qualifié.
+#### Widgets classés automatiquement {#auto-classified-widgets}
 
-### Onglet Attributs
+La section **[!UICONTROL Widgets auto-classés]** affiche les widgets qui exploitent le schéma d’union pour déterminer les groupes de champs sources auxquels appartient un attribut, fournissant ainsi un contexte plus clair sur l’origine des données. Vous pouvez utiliser la barre de recherche pour rechercher plus facilement des mots-clés dans vos widgets.
+
+Ces widgets combinent les données d’événement (avec le widget Événements d’expérience) et les données d’attribut, ce qui vous permet d’avoir une vue unifiée de votre profil. Vous pouvez utiliser ces widgets pour explorer la structure des données de votre profil afin de mieux structurer vos [ widgets personnalisables ](#customizable-widgets).
+
+>[!NOTE]
+>
+>S’il existe plusieurs groupes de champs source, les widgets n’utilisent que **une** des options disponibles.
+
+![La section widgets classés automatiquement s’affiche.](../images/user-guide/auto-classified-widgets.png)
+
+### Onglet Attributs {#attributes}
 
 L’onglet **[!UICONTROL Attributs]** fournit une vue de liste résumant tous les attributs liés à un seul profil, après l’application de la politique de fusion spécifiée.
 
@@ -159,7 +169,7 @@ Pour afficher les attributs disponibles dans Edge, sélectionnez **[!UICONTROL E
 
 Pour plus d’informations sur les profils Edge, veuillez lire la [documentation des profils Edge](../edge-profiles.md).
 
-### Onglet Événements
+### Onglet Événements {#events}
 
 L’onglet **[!UICONTROL Événements]** contient des données provenant des 100 ExperienceEvents les plus récents associés au client ou à la cliente. Ces données peuvent inclure les ouvertures d’e-mail, les activités de panier et les pages vues. La sélection de l’option **[!UICONTROL Afficher tout]** pour un événement individuel fournit des champs supplémentaires et des valeurs capturées dans le cadre de l’événement.
 
@@ -167,7 +177,7 @@ Les événements peuvent également être affichés en tant qu’objet JSON en s
 
 ![L’onglet Événements est mis en surbrillance. Les événements de profil s’affichent.](../images/user-guide/events.png)
 
-### Onglet Appartenance à une audience
+### Onglet Appartenance à une audience {#audience-membership}
 
 L’onglet **[!UICONTROL Appartenance à une audience]** affiche une liste avec le nom et la description des audiences auxquelles le profil client individuel appartient actuellement. Cette liste est automatiquement mise à jour lorsque le profil est admissible pour les audiences ou arrive à expiration. Le nombre total d’audiences pour lesquelles le profil est actuellement qualifié s’affiche sur le côté droit de l’onglet.
 
