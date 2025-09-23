@@ -1,16 +1,20 @@
 ---
 title: Connecter Capillaire à Experience Platform à l’aide de l’API Flow Service
 description: Découvrez comment connecter Capillary à Experience Platform à l’aide d’API.
-hide: true
-hidefromtoc: true
-source-git-commit: 7119ca51e0a4db09c8adb68bcde41ab3837439d1
+badge: Beta
+exl-id: 763792d0-d5dc-40ac-b86a-6a0d26463b71
+source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
 workflow-type: tm+mt
-source-wordcount: '1112'
-ht-degree: 8%
+source-wordcount: '1150'
+ht-degree: 9%
 
 ---
 
 # Connexion de [!DNL Capillary Streaming Events] à Experience Platform à l’aide de l’API [!DNL Flow Service]
+
+>[!AVAILABILITY]
+>
+>La source [!DNL Capillary Streaming Events] est en version Beta. Lisez les [termes et conditions](../../../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Lisez ce guide pour savoir comment utiliser le [!DNL Capillary Streaming Events] et l’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) pour diffuser des données de votre compte [!DNL Capillary] vers Adobe Experience Platform.
 
@@ -39,7 +43,7 @@ Lisez le guide sur [Prise en main des API Experience Platform](../../../../../la
 4. Créez une **connexion cible** pour vous assurer que vos données se trouvent dans le lac de données.
 5. Utilisez la préparation des données pour créer des mappages qui mappent vos champs source [!DNL Capillary] aux champs XDM corrects.
 6. Créer un flux de données à l’aide de vos `sourceConnectionId`, `targetConnectionId` et `mappingID`
-7. Effectuez un test électronique avec un seul exemple de profil/événement de transaction pour vérifier votre flux de données.
+7. Testez avec un seul exemple de profil/d’événements de transaction pour vérifier votre flux de données.
 
 >[!ENDSHADEBOX]
 
@@ -230,9 +234,9 @@ Les transactions capturent les activités commerciales. Affichez la payload suiv
 
 >[!ENDTABS]
 
-### Événements pris en charge
+<!--### Supported Events
 
-La source [!DNL Capillary] prend en charge les événements suivants :
+The [!DNL Capillary] source supports the following events:
 
 * `pointsIssued`
 * `tierDowngraded`
@@ -247,8 +251,7 @@ La source [!DNL Capillary] prend en charge les événements suivants :
 * `pointsRedeemed`
 * `transactionAdded`
 * `tierRenewed`
-* `customerUpdated`
-
+* `customerUpdated`-->
 
 ### Migration des données historiques
 
@@ -319,11 +322,15 @@ Mappez les champs capillaires aux champs de schéma XDM correspondants comme sui
 
 | Schéma source | Schéma cible |
 |------------------------------|-------------------------------|
-| `identityMap.email.id` | `xdm:identityMap.email` |
-| `loyalty.points` | `xdm:loyaltyPoints` |
-| `loyalty.tier` | `xdm:loyaltyTier` |
+| `identityMap.email.id` | `xdm:identityMap.email[0].id` |
+| `loyalty.points` | `xdm:loyalty.points` |
+| `loyalty.tier` | `xdm:loyalty.tier` |
 | `commerce.order.priceTotal` | `xdm:commerce.order.priceTotal` |
 | `productLineItems.SKU` | `xdm:productListItems.SKU` |
+
+>[!TIP]
+>
+>Vous pouvez télécharger le [Mappages d’événements et de profils](../../../../images/tutorials/create/capillary/mappings.zip) par [!DNL Capillary] et [importer les fichiers dans la préparation des données](../../../../../data-prep/ui/mapping.md#import-mapping) lorsque vous êtes prêt à mapper vos données.
 
 ### Créer un flux de données {#flow}
 

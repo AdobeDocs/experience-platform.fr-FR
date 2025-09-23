@@ -1,16 +1,21 @@
 ---
 title: Présentation Des Événements De Diffusion En Continu Capillaires
 description: Découvrez comment diffuser des données de Capillary vers Experience Platform.
-hide: true
-hidefromtoc: true
-source-git-commit: 7b733831932c48240340b0a2136e15f5d2144635
+last-substantial-update: 2025-09-23T00:00:00Z
+badge: Beta
+exl-id: 3b8eb2f6-3b4a-4b91-89d4-b6d9027c6ab4
+source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 6%
+source-wordcount: '295'
+ht-degree: 8%
 
 ---
 
 # [!DNL Capillary Streaming Events]
+
+>[!AVAILABILITY]
+>
+>La source [!DNL Capillary Streaming Events] est en version Beta. Lisez les [termes et conditions](../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 [!DNL Capillary Technologies] est une plateforme de fidélité et d’engagement de premier plan, approuvée par plus de 300 marques à travers le monde. Utilisez la source [!DNL Capillary Streaming Events] pour permettre à votre entreprise de diffuser en toute transparence les profils clients, les données de fidélité et les événements transactionnels de [!DNL Capillary] vers Adobe Experience Platform. Connectez votre source [!DNL Capillary] pour activer la personnalisation en temps réel, la segmentation avancée des audiences et l’orchestration de campagnes omnicanal.
 
