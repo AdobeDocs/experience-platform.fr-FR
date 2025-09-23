@@ -49,7 +49,7 @@ Pour commencer, créez une règle de balise et définissez les conditions selon 
 
 Une fois la configuration de l’action [!UICONTROL Envoyer l’événement d’achat] terminée, sélectionnez **[!UICONTROL Conserver les modifications]** pour l’ajouter à la configuration des règles.
 
-![Type d’action [!UICONTROL  Envoyer l’événement d’achat ] sélectionné pour une règle dans l’interface utilisateur de collecte de données.](./images/action-type.png)
+![Type d’action [!UICONTROL &#x200B; Envoyer l’événement d’achat &#x200B;] sélectionné pour une règle dans l’interface utilisateur de collecte de données.](./images/action-type.png)
 
 Lorsque la configuration globale de la règle vous convient, sélectionnez **[!UICONTROL Enregistrer dans la bibliothèque]**.
 
