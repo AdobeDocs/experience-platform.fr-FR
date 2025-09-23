@@ -4,10 +4,10 @@ title: Guide de lʼinterface utilisateur des alertes
 description: Découvrez comment gérer les alertes dans lʼinterface utilisateur dʼExperience Platform.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 57261ca37bf10e394f47ea4bb3c01856a18b197d
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 36%
+source-wordcount: '814'
+ht-degree: 37%
 
 ---
 
@@ -49,7 +49,7 @@ Lʼonglet **[!UICONTROL Parcourir]** répertorie les règles disponibles suscept
 
 Sélectionnez les points de suspension (**...**) à côté du nom d’une règle. Une liste déroulante affiche les contrôles. Sélectionnez **[!UICONTROL Gérer les abonnés aux alertes]**.
 
-![Sélectionnez les points de suspension pour afficher le menu déroulant. L’option [!UICONTROL &#x200B; Gérer les abonnés aux alertes &#x200B;] est mise en surbrillance](../images/alerts/ui/manage-alert-subscribers.png).
+![Sélectionnez les points de suspension pour afficher le menu déroulant. L’option [!UICONTROL  Gérer les abonnés aux alertes ] est mise en surbrillance](../images/alerts/ui/manage-alert-subscribers.png).
 
 La page [!UICONTROL Gérer les abonnés aux alertes] s’affiche. Pour envoyer des notifications à des utilisateurs spécifiques, saisissez leur ID utilisateur Adobe, leur adresse e-mail externe ou une liste de groupes d’e-mails, puis appuyez sur Entrée.
 
@@ -91,15 +91,17 @@ Les seuils d’alerte peuvent être personnalisés pour les types d’alerte sui
 
 | Type d’alerte | Paramètre personnalisé |
 |---|---|
-| Retard de la tâche relative aux segments | Seuil de délai |
-| Retard d’export du segment | Seuil de délai |
-| Délai d’exécution du flux de destinations | Seuil de délai |
-| Retard d’exécution du flux du service d’identités | Seuil de délai |
-| Retard d’exécution du flux de profils | Seuil de délai |
-| Retard dans l’exécution du flux de sources | Seuil de délai |
-| Retard d’exécution de requête | Seuil de délai |
-| Taux d’activations ignorées dépassé | Seuil d’erreur |
+| Retard de la tâche relative aux segments | Seuil de retard |
+| Retard d’export du segment | Seuil de retard |
+| Délai d’exécution du flux de destinations | Seuil de retard |
+| Retard d’exécution du flux du service d’identités | Seuil de retard |
+| Retard d’exécution du flux de profils | Seuil de retard |
+| Taux d’échec d’ingestion de diffusion de profil dépassé | Seuil d’erreur |
+| Taux d’omission de l’ingestion en flux continu du profil dépassé | Seuil d’erreur |
+| Retard dans l’exécution du flux de sources | Seuil de retard |
 | Taux d’erreurs d’ingestion de sources dépassé | Seuil d’erreur |
+| Retard d’exécution de requête | Seuil de retard |
+| Taux d’activations ignorées dépassé | Seuil d’erreur |
 
 Sélectionnez les points de suspension (**...**) à côté du nom d’une règle. Une liste déroulante affiche les contrôles. Sélectionnez **[!UICONTROL Modifier]**.
 
