@@ -1,20 +1,15 @@
 ---
 title: Créer une connexion source SAP Commerce dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Commerce SAP à l’aide de l’interface utilisateur de Adobe Experience Platform.
-badge: Beta
 exl-id: 6484e51c-77cd-4dbd-9c68-0a4e3372da33
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '959'
 ht-degree: 28%
 
 ---
 
 # Créer une connexion source [!DNL SAP Commerce] dans l’interface utilisateur
-
->[!NOTE]
->
->La source [!DNL SAP Commerce] est en version Beta. Voir la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Le tutoriel suivant vous guide tout au long des étapes de création d’une connexion source [!DNL SAP Commerce] pour importer les contacts [[!DNL SAP] Facturation des abonnements](https://www.sap.com/products/financial-management/subscription-billing.html) et les données client à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
@@ -44,7 +39,7 @@ Pour plus d’informations, reportez-vous à la [[!DNL SAP Commerce] documentati
 
 ### Création d’un schéma Experience Platform {#create-platform-schema}
 
-Avant de créer une connexion source [!DNL SAP Commerce], vous devez également vous assurer de créer d’abord un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma[&#128279;](../../../../../xdm/schema/composition.md) consultez le tutoriel sur la création d’un schéma Experience Platform).
+Avant de créer une connexion source [!DNL SAP Commerce], vous devez également vous assurer de créer d’abord un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma[ consultez le tutoriel sur la ](../../../../../xdm/schema/composition.md)création d’un schéma Experience Platform).
 
 Développez la section suivante pour afficher un exemple de schéma.
 

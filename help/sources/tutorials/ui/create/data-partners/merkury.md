@@ -1,21 +1,15 @@
 ---
 title: Créer une connexion Source et un flux de données de résolution d’identité d’entreprise Merkury dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Merkury Enterprise Identity Resolution à l’aide de l’interface utilisateur de Adobe Experience Platform.
-last-substantial-update: 2023-12=12
-badge: Beta
 exl-id: 2af48c18-76f9-4615-8e76-8f030a312a8f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '2146'
+source-wordcount: '2128'
 ht-degree: 28%
 
 ---
 
 # Créer une connexion source [!DNL Merkury Enterprise Identity Resolution] et un flux de données dans l’interface utilisateur
-
->[!NOTE]
->
->La source [!DNL Merkury Enterprise Identity Resolution] est en version Beta. Veuillez lire la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Ce tutoriel décrit les étapes à suivre pour créer une connexion source [!DNL Merkury Enterprise Identity Resolution] et un flux de données à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
@@ -100,8 +94,8 @@ Le tableau suivant affiche les formats de données appropriés pour les types de
 | Type de fichier | Format des données |
 | --- | --- |
 | CSV | [!UICONTROL Délimité] |
-| JSON | [!UICONTROL &#x200B; JSON &#x200B;] |
-| Parquet | [!UICONTROL Parquet XDM &#x200B;] |
+| JSON | [!UICONTROL  JSON ] |
+| Parquet | [!UICONTROL Parquet XDM ] |
 
 ### Sélectionner un délimiteur de colonne
 
