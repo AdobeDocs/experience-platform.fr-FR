@@ -38,7 +38,7 @@ Pour en savoir plus, consultez le [guide du tableau de bord des profils](../../d
 
 ![Le tableau de bord du profil s’affiche.](../../dashboards/images/profiles/dashboard-overview.png)
 
-## Onglet [!UICONTROL &#x200B; Parcourir &#x200B;]
+## Onglet [!UICONTROL  Parcourir ]
 
 Sur l’onglet **[!UICONTROL Parcourir]**, vous pouvez afficher vos profils dans une vue **carte** ou **graphique** en cliquant sur le bouton (bascule).
 
