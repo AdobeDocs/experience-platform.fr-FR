@@ -94,8 +94,8 @@ Le tableau suivant affiche les formats de données appropriés pour les types de
 | Type de fichier | Format des données |
 | --- | --- |
 | CSV | [!UICONTROL Délimité] |
-| JSON | [!UICONTROL  JSON ] |
-| Parquet | [!UICONTROL Parquet XDM ] |
+| JSON | [!UICONTROL &#x200B; JSON &#x200B;] |
+| Parquet | [!UICONTROL Parquet XDM &#x200B;] |
 
 ### Sélectionner un délimiteur de colonne
 
