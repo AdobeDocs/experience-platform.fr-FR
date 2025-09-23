@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation des connecteurs source
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 785ddd4ed3a5b8ba2c515ee6390e78b601367814
+source-git-commit: a236019dc3478c32ee035bfd337096346780d14b
 workflow-type: tm+mt
-source-wordcount: '1644'
+source-wordcount: '1646'
 ht-degree: 56%
 
 ---
@@ -68,10 +68,10 @@ Les sources suivantes sont disponibles uniquement pour les clients [Adobe Real-T
 | [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) | Stockage cloud | Diffusion en continu | Azure, AWS |
 | [[!DNL Amazon Redshift]](connectors/databases/redshift.md) | Base de données | Lot | Azure, AWS |
 | [[!DNL Azure Databricks]](connectors/databases/databricks.md) | Base de données | Lot | Azure |
-| [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) | Stockage dans le cloud | Diffusion en continu | Azure, AWS |
+| [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) | Espace de stockage dans le cloud | Diffusion en continu | Azure, AWS |
 | [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) | Base de données | Lot | Azure |
 | [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | Base de données | Lot | Azure, AWS |
-| [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) | Stockage dans le cloud | Diffusion en continu | Azure |
+| [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) | Espace de stockage dans le cloud | Diffusion en continu | Azure |
 | [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) | Base de données | Diffusion en continu | Azure, AWS |
 | [[!DNL Snowflake]](connectors/databases/snowflake.md) | Base de données | Lot | Azure, AWS |
 
@@ -99,7 +99,7 @@ Vous pouvez utiliser les sources suivantes pour ingérer des données d’analys
 
 {style="table-layout:auto"}
 
-### Stockage dans le cloud {#cloud-storage}
+### Espace de stockage dans le cloud {#cloud-storage}
 
 Les sources de stockage dans le cloud peuvent importer vos propres données dans Experience Platform sans avoir à les télécharger, les formater ou les charger. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. L’interface utilisateur permet d’intégrer chaque étape du processus dans le workflow des sources. Pour plus d’informations, consultez les documents connexes suivants :
 
@@ -133,7 +133,7 @@ Vous pouvez utiliser les sources suivantes pour ingérer des données de consent
 
 ### Gestion de la relation client (CRM) {#customer-relationship-management}
 
-Les systèmes de gestion de la relation client (CRM) fournissent des données qui peuvent aider à établir des relations avec la clientèle, qui à leur tour, favorisent la fidélisation client. Experience Platform prend en charge l’ingestion de données de gestion de la relation client (CRM) provenant de [!DNL Microsoft Dynamics 365] et de [!DNL Salesforce]. Pour plus d’informations, consultez les documents connexes suivants :
+Les systèmes de gestion de la relation client (CRM) fournissent des données qui peuvent aider à établir des relations avec la clientèle, qui à leur tour, favorisent la fidélisation de la clientèle. Experience Platform prend en charge l’ingestion de données de gestion de la relation client (CRM) provenant de [!DNL Microsoft Dynamics 365] et de [!DNL Salesforce]. Pour plus d’informations, consultez les documents connexes suivants :
 
 Vous pouvez utiliser les sources suivantes pour ingérer des données CRM dans Experience Platform.
 
@@ -233,6 +233,7 @@ Vous pouvez utiliser les sources suivantes pour ingérer des données d’automa
 | [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) | Lot | Azure |
 | [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | Lot | Azure |
 | [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | Lot | Azure |
+| [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | Diffusion en continu | Azure |
 | [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) | Lot | Azure, AWS |
 
 {style="table-layout:auto"}

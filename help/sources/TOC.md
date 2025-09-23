@@ -5,10 +5,10 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: 197cdc89abd292d87276d792201dedb2373f5564
+source-git-commit: a05e20845b6c111139451f593ef24fb8f760b5bd
 workflow-type: tm+mt
-source-wordcount: '1056'
-ht-degree: 91%
+source-wordcount: '1070'
+ht-degree: 90%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 91%
 # Sources {#sources}
 
 - [Présentation des sources](home.md)
-- Connecteurs de sources disponibles {#connectors}
+- Connecteurs source disponibles {#connectors}
    - Applications Adobe {#adobe-applications}
       - [Source Analytics Classifications](connectors/adobe-applications/classifications.md)
       - [Source Analytics](connectors/adobe-applications/analytics.md)
@@ -25,7 +25,7 @@ ht-degree: 91%
       - [Source Adobe Commerce](connectors/adobe-applications/commerce.md)
       - [Source des attributs du client](connectors/adobe-applications/customer-attributes.md)
       - [Source de collecte de données](connectors/adobe-applications/data-collection.md)
-      - Mappings de champs {#mapping}
+      - Mappages de champs {#mapping}
          - [Mappages de champs Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Mappages de champs Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Mappages de champs Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
@@ -74,7 +74,7 @@ ht-degree: 91%
       - [Connecteur Amazon Redshift](connectors/databases/redshift.md)
       - [Apache Hive sur le connecteur Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark sur le connecteur Azure HDInsights](connectors/databases/spark.md)
-      - [Connecteur Azure DatabricksConnector](connectors/databases/databricks.md)
+      - [Connecteur Azure Databricks](connectors/databases/databricks.md)
       - [Connecteur Azure Data Explorer](connectors/databases/data-explorer.md)
       - [Connecteur Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
       - [Connecteur Azure Table Storage](connectors/databases/ats.md)
@@ -95,7 +95,7 @@ ht-degree: 91%
       - [Import de données de prospection Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Profils d’utilisateur ou d’utilisatrice Algolia](connectors/data-partners/algolia-user-profiles.md)
       - [Intention de Bombora](connectors/data-partners/bombora.md)
-      - [Intention Demandbase](connectors/data-partners/demandbase.md)
+      - [Demandbase Intent](connectors/data-partners/demandbase.md)
       - [Résolution d’identité d’entreprise Merkury](connectors/data-partners/merkury.md)
    - eCommerce {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
@@ -103,6 +103,8 @@ ht-degree: 91%
       - [Streaming Shopify](connectors/ecommerce/shopify-streaming.md)
    - Système local {#local-system}
       - [Connecteur de téléchargement de fichiers locaux](connectors/local-system/local-file-upload.md)
+   - Fidélité {#loyalty}
+      - [Événements de streaming capillaire](connectors/loyalty/capillary.md)
    - Automatisation du marketing {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
@@ -179,6 +181,8 @@ ht-degree: 91%
          - [SAP Commerce](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Streaming Shopify](tutorials/api/create/ecommerce/shopify-streaming.md)
+      - Fidélité {#loyalty}
+         - [Événements de streaming capillaire](tutorials/api/create/loyalty/capillary.md)
       - Automatisation du marketing {#marketing-automation}
          - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -230,8 +234,8 @@ ht-degree: 91%
    - [Supprimer des flux de données](tutorials/api/delete-dataflows.md)
    - [Ingérer des données chiffrées](tutorials/api/encrypt-data.md)
    - [Enregistrer un flux de données en tant que brouillon](tutorials/api/draft.md)
-   - [Application d’étiquettes d’accès à un flux de données](tutorials/api/labels.md)
-   - [Utiliser des points de terminaison privés](tutorials/api/private-link.md)
+   - [Application de libellés d’accès à un flux de données](tutorials/api/labels.md)
+   - [Utiliser des points d’entrée privés](tutorials/api/private-link.md)
    - [Activer le changement de capture de données](tutorials/api/change-data-capture.md)
 - Tutoriels sur l’interface utilisateur {#ui-tutorials}
    - Créer une connexion source {#create}
@@ -303,7 +307,7 @@ ht-degree: 91%
          - [Import de données de prospection Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
          - [Profils d’utilisateur ou d’utilisatrice Algolia](tutorials/ui/create/data-partners/algolia-user-profiles.md)
          - [Intention de Bombora](tutorials/ui/create/data-partners/bombora.md)
-         - [Intention Demandbase](tutorials/ui/create/data-partners/demandbase.md)
+         - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
          - [Résolution d’identité d’entreprise Merkury](tutorials/ui/create/data-partners/merkury.md)
       - eCommerce {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
@@ -311,6 +315,8 @@ ht-degree: 91%
          - [Streaming Shopify](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Système local {#local-system}
          - [Téléchargement de fichiers locaux](tutorials/ui/create/local-system/local-file-upload.md)
+      - Fidélité {#loyalty}
+         - [Événements de streaming capillaire](tutorials/ui/create/loyalty/capillary.md)
       - Automatisation du marketing {#marketing-automation}
          - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
@@ -322,6 +328,7 @@ ht-degree: 91%
          - [Activités Oracle NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
          - [Entités Oracle NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
+         - [Connecteur Relais](tutorials/ui/create/marketing-automation/relay-connector.md)
          - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Paiements {#payments}
          - [Square](tutorials/ui/create/payments/square.md)
@@ -330,7 +337,7 @@ ht-degree: 91%
          - [OData générique](tutorials/ui/create/protocols/odata.md)
       - Diffusion en continu {#streaming}
          - [API HTTP](tutorials/ui/create/streaming/http.md)
-   - Configuration d’un flux de données {#dataflow}
+   - Configurer un flux de données {#dataflow}
       - [Flux de données de connexion publicitaire](tutorials/ui/dataflow/advertising.md)
       - [Flux de données de connexion Analytics](tutorials/ui/dataflow/analytics.md)
       - [Flux de données de connexion à lʼespace de stockage par lots](tutorials/ui/dataflow/batch/cloud-storage.md)
@@ -355,16 +362,16 @@ ht-degree: 91%
    - [Supprimer des flux de données](tutorials/ui/delete.md)
    - [S’abonner aux alertes sur les sources](tutorials/ui/alerts.md)
    - [Enregistrer un flux de données en tant que brouillon](tutorials/ui/draft.md)
-   - [Application d’étiquettes d’accès à un flux de données](tutorials/ui/labels.md)
-   - [Créer un point de terminaison privé Azure](tutorials/ui/private-link.md)
-- Sources libre-service (SDK Batch) {#sdk}
+   - [Application de libellés d’accès à un flux de données](tutorials/ui/labels.md)
+   - [Créer un point d’entrée privé Azure](tutorials/ui/private-link.md)
+- Sources En Libre-Service (SDK Par Lots) {#sdk}
    - [Vue d’ensemble](sources-sdk/overview.md)
-   - Configuration de vos spécifications de connexion {#config}
+   - Configurer votre spécification de connexion {#config}
       - [Options de configuration](sources-sdk/config/config.md)
       - [Configurer la spécification d’authentification](sources-sdk/config/authspec.md)
       - [Configurer la spécification source](sources-sdk/config/sourcespec.md)
       - [Configurer la spécification d’exploration](sources-sdk/config/explorespec.md)
-   - Guide de l’API des sources libre-service (SDK Batch) {#self-serve-api}
+   - Guide de l’API des sources en libre-service (SDK par lots) {#self-serve-api}
       - [Présentation de l’API des sources en libre-service (SDK par lots)](sources-sdk/api/api-overview.md)
       - [Prise en main](sources-sdk/api/getting-started.md)
       - [Créer une spécification de connexion](sources-sdk/api/create.md)
@@ -377,7 +384,7 @@ ht-degree: 91%
       - [Utiliser un éditeur de texte dans votre environnement local pour créer une page de documentation sur les sources](sources-sdk/documentation/text-editor.md)
       - [Modèle d’API de libre-service de documentation](sources-sdk/documentation/template.md)
       - [Modèle d’interface utilisateur de libre-service de documentation](sources-sdk/documentation/ui-template.md)
-   - SDK de diffusion en continu {#streaming-sdk}
+   - SDK en flux continu {#streaming-sdk}
       - [Prise en main des sources en libre-service (SDK de streaming)](sources-sdk/streaming/getting-started.md)
       - [Créer une spécification de connexion pour une source de streaming](sources-sdk/streaming/create.md)
       - [Mettre à jour une spécification de connexion pour une source de streaming](sources-sdk/streaming/update-connection-specs.md)
