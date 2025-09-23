@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 845074cccf96e0513b8f099a2e932de966551f10
+source-git-commit: b71c6ff74fd173a4be12a9a8caf06e27c4fb54cc
 workflow-type: tm+mt
-source-wordcount: '1322'
+source-wordcount: '1326'
 ht-degree: 73%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 73%
    * [Supprimer les comptes de destination](./api/delete-destination-account.md)
    * [Supprimer les flux de données de destination](./api/delete-destination-dataflow.md)
    * [Exporter des jeux de données](/help/destinations/api/export-datasets.md)
-   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=fr#use-cases)
+   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
    * [Créer une connexion à une destination](./ui/connect-destination.md)
@@ -147,6 +147,7 @@ ht-degree: 73%
       * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [Connexion SFTP](./catalog/cloud-storage/sftp.md)
       * [(Beta) Connexion en continu Snowflake](./catalog/cloud-storage/snowflake.md)
+      * [(Beta) Connexion par lots Snowflake](./catalog/cloud-storage/snowflake-batch.md)
       * [PLACE SUR LA LISTE AUTORISÉE d’adresse IP pour les destinations de stockage dans le cloud basées sur des fichiers](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinations de la gestion de la relation client (CRM) {#crm}
       * [Connexion Hubspot](./catalog/crm/hubspot.md)
