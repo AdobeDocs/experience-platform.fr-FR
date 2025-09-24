@@ -1,7 +1,6 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform - Août 2025
-description: Les notes de mise à jour d’août 2025 pour Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+title: Notes de mise à jour d’Adobe Experience Platform - Septembre 2025
+description: Les notes de mise à jour de septembre 2025 pour Adobe Experience Platform.
 source-git-commit: e21381f2683070fdbf24c473fa6794b89160864b
 workflow-type: tm+mt
 source-wordcount: '1402'
@@ -92,6 +91,7 @@ XDM est une spécification Open Source qui fournit des structures et des défin
 | Schémas basés sur des modèles | Simplifiez la modélisation des données à l’aide de schémas basés sur des modèles. Vous pouvez désormais créer plus facilement des schémas à l’aide d’exemples et de conseils pratiques complets. Cette fonctionnalité est actuellement disponible pour les titulaires de licence Campaign Orchestration. Elle sera étendue aux clients de Data Distiller lors de la phase de disponibilité générale, ce qui rendra la modélisation des données plus accessible et plus efficace. Cette fonctionnalité prend en charge les données de série temporelle et les fonctionnalités de capture de données de modification. |
 
 Pour plus d’informations, consultez la [vue d’ensemble XDM](../../xdm/home.md).
+
 <!--
 
 | Data Mirror | Ingest row-level changes from cloud data warehouses (e.g., Snowflake, Databricks, BigQuery) into Adobe Experience Platform using model-based schemas. Data Mirror eliminates upstream ETL and preserves relationships, versioning, and deletions by mirroring existing database structures directly into the data lake. Time-series and record event schema behavior with change data capture capabilities are all supported. This feature is currently available for Campaign Orchestration license holders and will expand through this limited release, also including Customer Journey Analytics customers. See the [Data Mirror documentation](../../xdm/data-mirror/overview.md) for more details. Contact your Adobe representative for access. |
