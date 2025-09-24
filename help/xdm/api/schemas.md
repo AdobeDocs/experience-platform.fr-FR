@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Point d’entrée de l’API Schemas
 description: Le point d’entrée /schemas de l’API Schema Registry vous permet de gérer les schémas XDM par programmation dans votre application d’expérience.
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 974faad835b5dc2a4d47249bb672573dfb4d54bd
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
 source-wordcount: '2095'
 ht-degree: 15%
@@ -302,7 +302,7 @@ Créez d’abord le schéma avec `POST /tenant/schemas`. Ajoutez ensuite les des
 
 >[!NOTE]
 >
->Dans l’éditeur de schéma d’interface utilisateur, le descripteur de version et les descripteurs d’horodatage apparaissent respectivement sous la forme « [ !UICOTRNOL Identifiant de version] » et « [ !UICOTRNOL Identifiant d’horodatage] ».
+>Dans l’éditeur de schéma d’interface utilisateur, le descripteur de version et les descripteurs d’horodatage apparaissent respectivement sous la forme « [!UICONTROL Identifiant de version] » et « [!UICONTROL Identifiant d’horodatage] ».
 
 <!-- >[!AVAILABILITY]
 >

@@ -3,10 +3,10 @@ title: Guide de l’API Data Hygiene
 description: Découvrez comment corriger ou supprimer par programmation les données personnelles des clients stockées dans Adobe Experience Platform.
 role: Developer
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 8aa8a1c42e9656716be746ba447a5f77a8155b4c
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 69%
+source-wordcount: '432'
+ht-degree: 71%
 
 ---
 
@@ -44,16 +44,13 @@ Une expiration de jeu de données correspond à une action « supprimer un jeu 
 
 >[!IMPORTANT]
 >
->Les demandes de suppression d’enregistrements ne sont disponibles que pour les organisations qui ont acheté **Adobe Healthcare Shield**.
->
->
 >Les suppressions d’enregistrements sont destinées au nettoyage des données, à la suppression des données anonymes ou à la minimisation des données. Elles ne sont **pas** destinées aux demandes de droits des titulaires de données (conformité) en ce qui concerne les réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD). Pour tous les cas d’utilisation de conformité, utilisez plutôt [Adobe Experience Platform Privacy Service](../../privacy-service/home.md).
 
-L’API Data Hygiene vous permet de supprimer tous les enregistrements associés à une identité dans un ou tous les jeux de données. Toutes les tâches de cycle de vie des données qui suppriment des identités sont représentées par un concept appelé ordre de travail. Pour plus d’informations sur l’utilisation des suppressions d’enregistrements dans l’API[&#128279;](./workorder.md) consultez le  guide de point d’entrée d’ordre de travail .
+L’API Data Hygiene vous permet de supprimer tous les enregistrements associés à une identité dans un ou tous les jeux de données. Toutes les tâches de cycle de vie des données qui suppriment des identités sont représentées par un concept appelé ordre de travail. Pour plus d’informations sur l’utilisation des suppressions d’enregistrements dans l’API[ consultez le ](./workorder.md) guide de point d’entrée d’ordre de travail .
 
 ## Quota
 
-Votre entreprise est limitée à un quota mensuel de tâches prédéterminé pour chaque type d’opération du cycle de vie des données, ce qui peut varier en fonction des licences. Pour plus d’informations sur l’état actuel des quotas de vos processus du cycle de vie des données[&#128279;](./quota.md) consultez le  guide des points d’entrée de quota .
+Votre entreprise est limitée à un quota mensuel de tâches prédéterminé pour chaque type d’opération du cycle de vie des données, ce qui peut varier en fonction des licences. Pour plus d’informations sur l’état actuel des quotas de vos processus du cycle de vie des données[ consultez le ](./quota.md) guide des points d’entrée de quota .
 
 ## Étapes suivantes
 

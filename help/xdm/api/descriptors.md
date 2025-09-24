@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Point d’entrée de l’API Descriptors
 description: Le point d’entrée /descriptors dans l’API Schema Registry vous permet de gérer par programmation les descripteurs XDM dans votre application d’expérience.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
 source-wordcount: '2888'
 ht-degree: 25%
@@ -525,7 +525,7 @@ Le descripteur de clé primaire (`xdm:descriptorPrimaryKey`) applique des contra
 
 >[!NOTE]
 >
->Dans l’éditeur de schéma de l’interface utilisateur, le descripteur de version s’affiche sous la forme « [ !UICOTRNOL Identifiant de version] ».
+>Dans l’éditeur de schéma de l’interface utilisateur, le descripteur de version s’affiche sous la forme « [!UICONTROL Identifiant de version] ».
 
 Le descripteur de version (`xdm:descriptorVersion`) désigne un champ pour détecter et empêcher les conflits d’événements de modification dans le désordre.
 
@@ -547,7 +547,7 @@ Le descripteur de version (`xdm:descriptorVersion`) désigne un champ pour déte
 
 >[!NOTE]
 >
->Dans l’éditeur de schéma d’interface utilisateur, le descripteur d’horodatage s’affiche sous la forme « [ !UICOTRNOL identifiant d’horodatage] ».
+>Dans l’éditeur de schéma d’interface utilisateur, le descripteur d’horodatage s’affiche sous la forme « [!UICONTROL identifiant d’horodatage] ».
 
 Le descripteur d’horodatage (`xdm:descriptorTimestamp`) désigne un champ date et heure comme horodatage pour les schémas avec `"meta:behaviorType": "time-series"`.
 
