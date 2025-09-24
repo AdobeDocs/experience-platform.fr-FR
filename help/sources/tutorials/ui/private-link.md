@@ -1,14 +1,11 @@
 ---
 title: Prise en charge des liens privés pour les sources dans l’interface utilisateur
 description: Découvrez comment utiliser les liens privés Azure pour les sources dans l’interface utilisateur d’Experience Platform.
-badge: Beta
-hide: true
-hidefromtoc: true
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
-source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
+source-git-commit: 4d82b0a7f5ae9e0a7607fe7cb75261e4d3489eff
 workflow-type: tm+mt
-source-wordcount: '750'
-ht-degree: 1%
+source-wordcount: '814'
+ht-degree: 0%
 
 ---
 
@@ -16,16 +13,29 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Cette fonctionnalité est en version bêta et n’est actuellement prise en charge que pour les sources suivantes :
+>Cette fonctionnalité est prise en charge par les sources suivantes :
 >
 >* [[!DNL Azure Blob Storage]](../../connectors/cloud-storage/blob.md)
 >* [[!DNL ADLS Gen2]](../../connectors/cloud-storage/adls-gen2.md)
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
->* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
+>
+>Actuellement, la prise en charge des liens privés n’est disponible que pour les organisations qui ont acheté Adobe Healthcare Shield ou Adobe Privacy &amp; Security Shield.
 
 Vous pouvez utiliser la fonction Liens privés pour créer des points d’entrée privés auxquels vos sources Adobe Experience Platform peuvent se connecter. Connectez vos sources à un réseau virtuel en toute sécurité à l’aide d’adresses IP privées, éliminant ainsi le besoin d’adresses IP publiques et réduisant votre surface d’attaque. Simplifiez la configuration de votre réseau en supprimant la nécessité de configurations complexes de pare-feu ou de traduction d’adresses réseau, tout en veillant à ce que le trafic de données atteigne uniquement les services approuvés.
 
 Lisez ce guide pour savoir comment utiliser l’espace de travail des sources dans l’interface utilisateur d’Experience Platform pour créer et utiliser un point d’entrée privé.
+
+>[!BEGINSHADEBOX]
+
+## Droits d’utilisation de licence pour la prise en charge des liens privés
+
+Les mesures de droits d’utilisation de licence pour la prise en charge des liens privés dans les sources sont les suivantes :
+
+* Les clients ont droit à un transfert de données allant jusqu’à 2 To par an via des sources prises en charge ([!DNL Azure Blob Storage], [!DNL ADLS Gen2] et [!DNL Azure File Storage]), sur l’ensemble des sandbox et des organisations.
+* Chaque organisation peut avoir un maximum de 10 points d’entrée pour tous les sandbox de production.
+* Chaque organisation peut avoir un point d’entrée maximum pour tous les sandbox de développement.
+
+>[!ENDSHADEBOX]
 
 ## Créer un point d’entrée privé
 
@@ -45,7 +55,6 @@ Choisissez ensuite la source de votre choix, puis saisissez des valeurs pour les
 | `subscriptionId` | ID associé à votre abonnement [!DNL Azure]. Pour plus d’informations, consultez le guide de [!DNL Azure] sur la [récupération des ID d’abonnement et de client de l’ [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
 | `resourceGroupName` | Nom de votre groupe de ressources sur [!DNL Azure]. Un groupe de ressources contient les ressources associées à une solution [!DNL Azure]. Pour plus d’informations, consultez le guide [!DNL Azure] sur [la gestion des groupes de ressources](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). |
 | `resourceGroup` | Nom de la ressource. Dans [!DNL Azure], une ressource fait référence à des instances telles que des machines virtuelles, des applications web et des bases de données. Pour plus d’informations, consultez le guide [!DNL Azure] sur [présentation du gestionnaire  [!DNL Azure]  ressources](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview). |
-| `fqdns` | Noms de domaine complets pour votre source. **REMARQUE** : cette propriété est requise uniquement lors de l’utilisation de la source [!DNL Snowflake]. |
 
 {style="table-layout:auto"}
 

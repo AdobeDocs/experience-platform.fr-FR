@@ -1,13 +1,10 @@
 ---
 title: Prise en charge des liens privés pour les sources dans l’API
 description: Découvrez comment créer et utiliser des liens privés pour les sources Adobe Experience Platform
-badge: Beta
-hide: true
-hidefromtoc: true
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
-source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
+source-git-commit: 4d82b0a7f5ae9e0a7607fe7cb75261e4d3489eff
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1515'
 ht-degree: 7%
 
 ---
@@ -16,23 +13,36 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->Cette fonctionnalité est en disponibilité limitée et n’est actuellement prise en charge que par les sources suivantes :
+>Cette fonctionnalité est prise en charge par les sources suivantes :
 >
->* [[!DNL Azure Blob]](../../connectors/cloud-storage/blob.md)
->* [[!DNL Azure Data Lake Gen2]](../../connectors/cloud-storage/adls-gen2.md)
+>* [[!DNL Azure Blob Storage]](../../connectors/cloud-storage/blob.md)
+>* [[!DNL ADLS Gen2]](../../connectors/cloud-storage/adls-gen2.md)
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
->* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
+>
+>Actuellement, la prise en charge des liens privés n’est disponible que pour les organisations qui ont acheté Adobe Healthcare Shield ou Adobe Privacy &amp; Security Shield.
 
 Vous pouvez utiliser la fonction Lien privé pour créer des points d’entrée privés auxquels vos sources Adobe Experience Platform peuvent se connecter. Connectez vos sources à un réseau virtuel en toute sécurité à l’aide d’adresses IP privées, éliminant ainsi le besoin d’adresses IP publiques et réduisant votre surface d’attaque. Simplifiez la configuration de votre réseau en supprimant la nécessité de configurations complexes de pare-feu ou de traduction d’adresses réseau, tout en veillant à ce que le trafic de données atteigne uniquement les services approuvés.
 
 Lisez ce guide pour savoir comment utiliser des API pour créer et utiliser un point d’entrée privé.
 
+>[!BEGINSHADEBOX]
+
+## Droits d’utilisation de licence pour la prise en charge des liens privés
+
+Les mesures de droits d’utilisation de licence pour la prise en charge des liens privés dans les sources sont les suivantes :
+
+* Les clients ont droit à un transfert de données allant jusqu’à 2 To par an via des sources prises en charge ([!DNL Azure Blob Storage], [!DNL ADLS Gen2] et [!DNL Azure File Storage]), sur l’ensemble des sandbox et des organisations.
+* Chaque organisation peut avoir un maximum de 10 points d’entrée pour tous les sandbox de production.
+* Chaque organisation peut avoir un point d’entrée maximum pour tous les sandbox de développement.
+
+>[!ENDSHADEBOX]
+
 ## Commencer
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Experience Platform :
 
-* [Sources](../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
-* [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sources](../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform.
+* [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ### Utiliser les API Platform
 
@@ -67,7 +77,6 @@ curl -X POST \
       "subscriptionId": "4281a16a-696f-4993-a7d3-a3da32b846f3",
       "resourceGroupName": "acme-sources-experience-platform",
       "resourceName": "acmeexperienceplatform",
-      "fqdns": [],
       "connectionSpec": {
           "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
           "version": "1.0"
@@ -81,7 +90,6 @@ curl -X POST \
 | `subscriptionId` | ID associé à votre abonnement [!DNL Azure]. Pour plus d’informations, consultez le guide de [!DNL Azure] sur la [récupération des ID d’abonnement et de client de l’ [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
 | `resourceGroupName` | Nom de votre groupe de ressources sur [!DNL Azure]. Un groupe de ressources contient les ressources associées à une solution [!DNL Azure]. Pour plus d’informations, consultez le guide [!DNL Azure] sur [la gestion des groupes de ressources](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). |
 | `resourceName` | Nom de la ressource. Dans [!DNL Azure], une ressource fait référence à des instances telles que des machines virtuelles, des applications web et des bases de données. Pour plus d’informations, consultez le guide [!DNL Azure] sur [présentation du gestionnaire  [!DNL Azure]  ressources](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview). |
-| `fqdns` | Noms de domaine complets pour votre source. Cette propriété est requise uniquement lors de l’utilisation de la source [!DNL Snowflake]. |
 | `connectionSpec.id` | Identifiant de spécification de connexion de la source que vous utilisez. |
 | `connectionSpec.version` | Version de l’identifiant de spécification de connexion que vous utilisez. |
 
@@ -100,7 +108,6 @@ Une réponse réussie renvoie les éléments suivants :
   "subscriptionId": "4281a16a-696f-4993-a7d3-a3da32b846f3",
   "resourceGroupName": "acme-sources-experience-platform",
   "resourceName": "acmeexperienceplatform",
-  "fqdns": [],
   "connectionSpec": {
       "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
       "version": "1.0"
@@ -116,7 +123,6 @@ Une réponse réussie renvoie les éléments suivants :
 | `subscriptionId` | ID associé à votre abonnement [!DNL Azure]. Pour plus d’informations, consultez le guide de [!DNL Azure] sur la [récupération des ID d’abonnement et de client de l’ [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
 | `resourceGroupName` | Nom de votre groupe de ressources sur [!DNL Azure]. Un groupe de ressources contient les ressources associées à une solution [!DNL Azure]. Pour plus d’informations, consultez le guide [!DNL Azure] sur [la gestion des groupes de ressources](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). |
 | `resourceName` | Nom de la ressource. Dans [!DNL Azure], une ressource fait référence à des instances telles que des machines virtuelles, des applications web et des bases de données. Pour plus d’informations, consultez le guide [!DNL Azure] sur [présentation du gestionnaire  [!DNL Azure]  ressources](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview). |
-| `fqdns` | Noms de domaine complets pour votre source. Cette propriété est requise uniquement lors de l’utilisation de la source [!DNL Snowflake]. |
 | `connectionSpec.id` | Identifiant de spécification de connexion de la source que vous utilisez. |
 | `connectionSpec.version` | Version de l’identifiant de spécification de connexion que vous utilisez. |
 | `state` | État actuel de votre point d’entrée privé. Les états valides sont les suivants : <ul><li>`Pending`</li><li>`Failed`</li><li>`Approved`</li><li>`Rejected`</li></ul> |
@@ -543,7 +549,7 @@ POST /connections/
 
 **Requête**
 
-La requête suivante crée une connexion de base authentifiée pour [!DNL Snowflake], tout en utilisant un point d’entrée privé.
+La requête suivante crée une connexion de base authentifiée pour [!DNL Azure Blob Storage], tout en utilisant un point d’entrée privé.
 
 +++Sélectionner pour afficher l’exemple de requête
 
@@ -556,8 +562,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Snowflake base connection",
-      "description": "A base connection for a Snowflake source that uses a private link.",
+      "name": "Azure Blob Storage base connection",
+      "description": "A base connection for a Azure Blob Storage source that uses a private link.",
       "auth": {
           "specName": "ConnectionString",
           "params": {
@@ -566,7 +572,7 @@ curl -X POST \
           }
       },
       "connectionSpec": {
-          "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
           "version": "1.0"
       }
   }'
@@ -577,10 +583,10 @@ curl -X POST \
 | `name` | Nom de votre connexion de base. |
 | `description` | (Facultatif) Description qui fournit des informations supplémentaires sur votre connexion. |
 | `auth.specName` | Authentification utilisée pour connecter votre source à Experience Platform. |
-| `auth.params.connectionString` | Chaîne de connexion [!DNL Snowflake]. Pour plus d’informations, consultez le [[!DNL Snowflake] guide d’authentification des API](../api/create/databases/snowflake.md). |
+| `auth.params.connectionString` | Chaîne de connexion [!DNL Azure Blob Storage]. Pour plus d’informations, consultez le [[!DNL Azure Blob Storage] guide d’authentification des API](../api/create/cloud-storage/blob.md). |
 | `auth.params.usePrivateLink` | Valeur booléenne qui détermine si vous utilisez ou non un point d’entrée privé. Définissez cette valeur sur `true` si vous utilisez un point d’entrée privé. |
-| `connectionSpec.id` | Identifiant de spécification de connexion de [!DNL Snowflake]. |
-| `connectionSpec.version` | Version de l’identifiant de spécification de connexion [!DNL Snowflake]. |
+| `connectionSpec.id` | Identifiant de spécification de connexion de [!DNL Azure Blob Storage]. |
+| `connectionSpec.version` | Version de l’identifiant de spécification de connexion [!DNL Azure Blob Storage]. |
 
 +++
 
@@ -830,24 +836,32 @@ Une réponse réussie renvoie toutes les connexions liées à des points d’ent
 
 Lisez cette section pour plus d’informations sur l’utilisation de liens privés [!DNL Azure] dans l’API.
 
-### Configuration de votre compte [!DNL Snowflake] pour vous connecter à des liens privés
+### Approuver un point d’entrée privé pour [!DNL Azure Blob] et [!DNL Azure Data Lake Gen2]
 
-Vous devez effectuer les étapes préalables suivantes pour utiliser la source [!DNL Snowflake] avec des liens privés.
+Pour approuver une demande de point d’entrée privé pour les sources [!DNL Azure Blob] et [!DNL Azure Data Lake Gen2], connectez-vous au [!DNL Azure Portal] . Dans le volet de navigation de gauche, sélectionnez **[!DNL Data storage]**, puis accédez à l’onglet **[!DNL Security + networking]** et choisissez **[!DNL Networking]**. Sélectionnez ensuite **[!DNL Private endpoints]** pour afficher la liste des points d’entrée privés associés à votre compte et leurs états de connexion actuels. Pour approuver une demande en attente, sélectionnez le point d’entrée souhaité, puis cliquez sur **[!DNL Approve]**.
 
-Tout d’abord, vous devez créer un ticket d’assistance dans [!DNL Snowflake] et demander l’**identifiant de ressource du service de point d’entrée** de la région [!DNL Azure] de votre compte [!DNL Snowflake]. Suivez les étapes ci-dessous pour créer un ticket [!DNL Snowflake] :
+![Portail Azure avec une liste de points d’entrée privés en attente.](../../images/tutorials/private-links/azure.png)
 
-1. Accédez à l’[[!DNL Snowflake] UI](https://app.snowflake.com) et connectez-vous avec votre compte de messagerie. Au cours de cette étape, vous devez vous assurer que votre e-mail est vérifié dans les paramètres du profil.
-2. Sélectionnez votre **menu utilisateur** puis sélectionnez **assistance** pour accéder à l’assistance [!DNL Snowflake].
-3. Pour créer un dossier de support, sélectionnez **[!DNL + Support Case]**. Remplissez ensuite le formulaire avec les détails pertinents et joignez tous les fichiers nécessaires.
-4. Lorsque vous avez terminé, soumettez le dossier.
+<!--
 
-L’identifiant de ressource de point d’entrée est formaté comme suit :
+### Configure your [!DNL Snowflake] account to connect to private links
+
+You must complete the following prerequisite steps in order to use the [!DNL Snowflake] source with private links.
+
+First, you must raise a support ticket in [!DNL Snowflake] and request for the **endpoint service resource ID** of the [!DNL Azure] region of your [!DNL Snowflake] account. Follow the steps below to raise a [!DNL Snowflake] ticket:
+
+1. Navigate to the [[!DNL Snowflake] UI](https://app.snowflake.com) and sign in with your email account. During this step, you must ensure that your email is verified in profile settings.
+2. Select your **user menu** and then select **support** to access [!DNL Snowflake] support.
+3. To create a support case, select **[!DNL + Support Case]**. Then, fill out the form with relevant details and attach any necessary files.
+4. When finished, submit the case.
+
+The endpoint resource ID is formatted as follows:
 
 ```shell
 subscriptions/{SUBSCRIPTION_ID}/resourceGroups/az{REGION}-privatelink/providers/microsoft.network/privatelinkservices/sf-pvlinksvc-az{REGION}
 ```
 
-+++Sélectionner pour afficher l’exemple
++++Select to view example
 
 ```shell
 /subscriptions/4575fb04-6859-4781-8948-7f3a92dc06a3/resourceGroups/azwestus2-privatelink/providers/microsoft.network/privatelinkservices/sf-pvlinksvc-azwestus2
@@ -855,14 +869,14 @@ subscriptions/{SUBSCRIPTION_ID}/resourceGroups/az{REGION}-privatelink/providers/
 
 +++
 
-| Paramètre | Description | Exemple |
+| Parameter | Description | Example |
 | --- | --- | --- |
-| `{SUBSCRIPTION_ID}` | Identifiant unique qui identifie votre abonnement [!DNL Azure]. | `a1b2c3d4-5678-90ab-cdef-1234567890ab` |
-| `{REGION}` | Région [!DNL Azure] de votre compte [!DNL Snowflake]. | `azwestus2` |
+| `{SUBSCRIPTION_ID}` | The unique ID that identifies your [!DNL Azure] subscription. | `a1b2c3d4-5678-90ab-cdef-1234567890ab` |
+| `{REGION}` | The [!DNL Azure] region of your [!DNL Snowflake] account. | `azwestus2` |
 
-### Récupérer les détails de la configuration de votre lien privé
+### Retrieve your private link configuration details
 
-Pour récupérer les détails de votre configuration de lien privé, vous devez exécuter la commande suivante dans [!DNL Snowflake] :
+To retrieve your private link configuration details, you must run the following command in [!DNL Snowflake]:
 
 ```sql
 USE ROLE accountadmin;
@@ -870,21 +884,21 @@ SELECT key, value::varchar
 FROM TABLE(FLATTEN(input => PARSE_JSON(SYSTEM$GET_PRIVATELINK_CONFIG())));
 ```
 
-Ensuite, récupérez les valeurs des propriétés suivantes :
+Next, retrieve values for the following properties:
 
 * `privatelink-account-url`
 * `regionless-privatelink-account-url`
 * `privatelink_ocsp-url`
 
-Une fois les valeurs récupérées, vous pouvez effectuer l’appel suivant pour créer un lien privé pour [!DNL Snowflake].
+Once you have retrieved the values, you can make the following call to create a private link for [!DNL Snowflake].
 
-**Requête**
+**Request**
 
-La requête suivante crée un point d’entrée privé pour [!DNL Snowflake] :
+The following request creates a private endpoint for [!DNL Snowflake]:
 
 >[!BEGINTABS]
 
->[!TAB Modèle]
+>[!TAB Template]
 
 ```shell
 curl -X POST \
@@ -911,7 +925,7 @@ curl -X POST \
   }'
 ```
 
->[!TAB Exemple]
+>[!TAB Example]
 
 ```shell
 curl -X POST \
@@ -938,11 +952,6 @@ curl -X POST \
   }'
 ```
 
-
 >[!ENDTABS]
 
-### Approuver un point d’entrée privé pour [!DNL Azure Blob] et [!DNL Azure Data Lake Gen2]
-
-Pour approuver une demande de point d’entrée privé pour les sources [!DNL Azure Blob] et [!DNL Azure Data Lake Gen2], connectez-vous au [!DNL Azure Portal] . Dans le volet de navigation de gauche, sélectionnez **[!DNL Data storage]**, puis accédez à l’onglet **[!DNL Security + networking]** et choisissez **[!DNL Networking]**. Sélectionnez ensuite **[!DNL Private endpoints]** pour afficher la liste des points d’entrée privés associés à votre compte et leurs états de connexion actuels. Pour approuver une demande en attente, sélectionnez le point d’entrée souhaité, puis cliquez sur **[!DNL Approve]**.
-
-![Portail Azure avec une liste de points d’entrée privés en attente.](../../images/tutorials/private-links/azure.png)
+-->
