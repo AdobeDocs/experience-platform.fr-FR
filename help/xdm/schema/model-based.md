@@ -37,7 +37,7 @@ Utilisez des schémas basés sur des modèles pour :
 
 ## Différences entre les schémas basés sur des modèles et les schémas XDM standard
 
-Les schémas XDM standard d’Experience Platform adoptent l’un des trois comportements de données suivants : enregistrement, série temporelle ou ad hoc. Pour obtenir des définitions et des détails, voir [Comportements des données XDM](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors).
+Les schémas XDM standard d’Experience Platform adoptent l’un des trois comportements de données suivants : enregistrement, série temporelle ou ad hoc. Pour obtenir des définitions et des détails, voir [Comportements des données XDM](https://experienceleague.adobe.com/fr/docs/experience-platform/xdm/home#data-behaviors).
 
 Dans le modèle traditionnel, les schémas d’enregistrement et de série temporelle participent aux [schémas d’union](../api/unions.md) (consultez également le guide de l’interface utilisateur du schéma d’union [&#128279;](../../profile/ui/union-schema.md)). Ces schémas évoluent automatiquement à mesure que les [groupes de champs](./composition.md#field-group) partagés sont mis à jour et que les champs personnalisés doivent être imbriqués sous un espace de noms client. Bien que puissant, ce modèle peut ralentir l’intégration, produire des schémas trop complexes avec des champs inutilisés et nécessiter un mappage ou une transformation des données supplémentaires. Ces facteurs augmentent la courbe d’apprentissage et l’effort de maintenance continu.
 
