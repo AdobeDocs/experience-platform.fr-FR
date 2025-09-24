@@ -181,4 +181,4 @@ Pour en savoir plus sur les principes de conception et les bonnes pratiques pour
 
 Pour mieux comprendre le [!DNL XDM System] dans Experience Platform, regardez la vidéo suivante :
 
->[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38503?quality=12&learn=on&captions=fre_fr)
