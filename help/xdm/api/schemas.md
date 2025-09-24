@@ -302,7 +302,7 @@ Créez d’abord le schéma avec `POST /tenant/schemas`. Ajoutez ensuite les des
 
 >[!NOTE]
 >
->Dans l’éditeur de schéma d’interface utilisateur, le descripteur de version et les descripteurs d’horodatage apparaissent respectivement sous la forme « [!UICOTRNOL Identifiant de version] » et « [!UICOTRNOL Identifiant d’horodatage] ».
+>Dans l’éditeur de schéma d’interface utilisateur, le descripteur de version et les descripteurs d’horodatage apparaissent respectivement sous la forme « [ !UICOTRNOL Identifiant de version] » et « [ !UICOTRNOL Identifiant d’horodatage] ».
 
 <!-- >[!AVAILABILITY]
 >

@@ -80,7 +80,7 @@ Ensuite, passez à [définir des clés primaires](../fields/identity.md#define-a
 >[!NOTE]
 >
 >Une fois enregistré, le champ [!UICONTROL Type] dans la barre latérale Propriétés du schéma  indique qu’il s’agit d’un schéma [!UICONTROL basé sur un modèle]. Cela est également indiqué dans la barre latérale des détails dans la vue d’inventaire des schémas.
->>![Zone de travail de l’éditeur de schémas présentant une structure de schéma basée sur un modèle vide avec le type basé sur le modèle mis en surbrillance.](../../images/ui/resources/schemas/relational-empty-canvas.png)
+>&#x200B;>![Zone de travail de l’éditeur de schémas présentant une structure de schéma basée sur un modèle vide avec le type basé sur le modèle mis en surbrillance.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### Charger un fichier DDL {#upload-ddl-file}
 
@@ -120,7 +120,7 @@ Si vous sélectionnez « Type de schéma standard » dans le menu déroulant « 
 
 ![La boîte de dialogue Créer un schéma avec les options de workflow et sélectionnez en surbrillance.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
-### [!BADGE Beta ]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
+### [!BADGE Beta &#x200B;]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
 
 Pour découvrir comment utiliser un algorithme ML afin de recommander une structure de schéma basée sur un fichier csv, consultez le guide de création de schéma assisté par machine learning [machine learning](../ml-assisted-schema-creation.md). Ce guide de l’interface utilisateur se concentre sur le workflow de création manuelle .
 
@@ -253,7 +253,7 @@ Une fois que vous avez ajouté un groupe de champs à un schéma, vous pouvez su
 >[!IMPORTANT]
 >
 >Sélectionner **[!UICONTROL Supprimer]** supprime le champ du groupe de champs lui-même, ce qui affecte *tous* les schémas qui utilisent ce groupe de champs.
->>N’utilisez pas cette option, sauf si vous souhaitez **supprimer le champ de chaque schéma qui inclut le groupe de champs**.
+>&#x200B;>N’utilisez pas cette option, sauf si vous souhaitez **supprimer le champ de chaque schéma qui inclut le groupe de champs**.
 
 Pour supprimer un champ du groupe de champs, sélectionnez-le dans la zone de travail et sélectionnez **[!UICONTROL Supprimer]** dans le rail de droite. Cet exemple montre le champ `taxId` du groupe **[!UICONTROL Détails démographiques]**.
 

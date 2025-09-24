@@ -525,7 +525,7 @@ Le descripteur de clé primaire (`xdm:descriptorPrimaryKey`) applique des contra
 
 >[!NOTE]
 >
->Dans l’éditeur de schéma de l’interface utilisateur, le descripteur de version s’affiche sous la forme « [!UICOTRNOL Identifiant de version] ».
+>Dans l’éditeur de schéma de l’interface utilisateur, le descripteur de version s’affiche sous la forme « [ !UICOTRNOL Identifiant de version] ».
 
 Le descripteur de version (`xdm:descriptorVersion`) désigne un champ pour détecter et empêcher les conflits d’événements de modification dans le désordre.
 
@@ -547,7 +547,7 @@ Le descripteur de version (`xdm:descriptorVersion`) désigne un champ pour déte
 
 >[!NOTE]
 >
->Dans l’éditeur de schéma d’interface utilisateur, le descripteur d’horodatage s’affiche sous la forme « [!UICOTRNOL identifiant d’horodatage] ».
+>Dans l’éditeur de schéma d’interface utilisateur, le descripteur d’horodatage s’affiche sous la forme « [ !UICOTRNOL identifiant d’horodatage] ».
 
 Le descripteur d’horodatage (`xdm:descriptorTimestamp`) désigne un champ date et heure comme horodatage pour les schémas avec `"meta:behaviorType": "time-series"`.
 

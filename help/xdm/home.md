@@ -111,7 +111,7 @@ Pour plus d’informations, consultez la [présentation du service de catalogue]
 >
 >Data Mirror et les schémas basés sur des modèles sont disponibles pour les détenteurs de licence Adobe Journey Optimizer **Campagnes orchestrées**. Ils sont également disponibles en tant que **version limitée** pour les utilisateurs de Customer Journey Analytics, selon votre licence et l’activation des fonctionnalités. Contactez votre représentant Adobe pour obtenir l’accès.
 
-Data Mirror est une fonctionnalité de Adobe Experience Platform qui permet une synchronisation avancée des bases de données à l’aide de schémas basés sur des modèles. Pour une présentation complète des fonctionnalités et des cas d’utilisation de Data Mirror, consultez la présentation de Data Mirror [](./data-mirror/overview.md).
+Data Mirror est une fonctionnalité de Adobe Experience Platform qui permet une synchronisation avancée des bases de données à l’aide de schémas basés sur des modèles. Pour une présentation complète des fonctionnalités et des cas d’utilisation de Data Mirror, consultez la présentation de Data Mirror [&#128279;](./data-mirror/overview.md).
 
 Data Mirror fonctionne par le biais de schémas basés sur des modèles, qui sont conçus pour des modèles de données structurés de style relationnel. Ils appliquent des clés primaires, prennent en charge les identifiants de version et définissent des relations schéma à schéma à l’aide de clés primaires et étrangères. Contrairement aux schémas XDM standard, ils ne nécessitent pas de classes ou de groupes de champs et sont optimisés pour les workflows de capture de données de modification.
 
