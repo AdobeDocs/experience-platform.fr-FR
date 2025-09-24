@@ -1,7 +1,10 @@
 ---
 title: Connecter le relais à Experience Platform dans l’interface utilisateur
 description: Découvrez comment créer une connexion source personnalisée du connecteur relais à l’aide de l’interface utilisateur de Adobe Experience Platform.
-source-git-commit: b16600888bd5e70dd97d67ceb265e3a1848d2a66
+hide: true
+hidefromtoc: true
+exl-id: f80855f5-0769-4253-b737-28c46e4dea6e
+source-git-commit: b3b1542f7e297f4ca872a155ac3801266bc1e6a6
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 2%
@@ -80,5 +83,5 @@ Utilisez ces valeurs pour configurer le webhook dans la **console de relais**. P
 
 ## Ressources supplémentaires
 
-* [Créer une spécification de connexion à l’aide de l’API Flow Service](https://experienceleague.adobe.com/fr/docs/experience-platform/sources/sdk/streaming-sdk/create)
-* [Connexion à votre source à l’aide de l’interface utilisateur](https://experienceleague.adobe.com/fr/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)
+* [Créer une spécification de connexion à l’aide de l’API Flow Service](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/create)
+* [Connexion à votre source à l’aide de l’interface utilisateur](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)

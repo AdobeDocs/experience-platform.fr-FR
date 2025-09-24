@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Août 2025
 description: Les notes de mise à jour d’août 2025 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e21381f2683070fdbf24c473fa6794b89160864b
+source-git-commit: ac180f045dd3cc7e8ad9de702a3672630d668ee5
 workflow-type: tm+mt
-source-wordcount: '1402'
-ht-degree: 43%
+source-wordcount: '1480'
+ht-degree: 41%
 
 ---
 
@@ -68,7 +68,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | --- | --- |
-| Connecteur [!BADGE &#x200B; &#x200B;]{type=Informative}Beta[[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md) | Un nouveau connecteur [!DNL Snowflake Batch] est désormais disponible, offrant une alternative au connecteur de diffusion en continu pour des cas d’utilisation spécifiques. |
+| Connecteur [!BADGE  ]{type=Informative}Beta[[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md) | Un nouveau connecteur [!DNL Snowflake Batch] est désormais disponible, offrant une alternative au connecteur de diffusion en continu pour des cas d’utilisation spécifiques. |
 | Prise en charge du chiffrement [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | Vous pouvez désormais joindre des clés publiques au format RSA pour chiffrer vos fichiers exportés, ce qui vous offre le même niveau de sécurité que les autres destinations de stockage dans le cloud pour vos informations sensibles. |
 | Détails d’expiration de l’authentification pour les destinations [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) | Les informations d’expiration de l’authentification pour les destinations [!DNL Pinterest] sont désormais visibles directement dans l’interface d’Experience Platform. Vous pouvez ainsi voir à quel moment votre authentification arrivera à expiration et la renouveler avant qu’elle ne provoque des interruptions de vos flux de données. Vous pouvez surveiller les dates d’expiration de votre jeton à partir de la colonne **[!UICONTROL Date d’expiration du compte]** dans les onglets **[[!UICONTROL Comptes]](../../destinations/ui/destinations-workspace.md#accounts)** ou **[[!UICONTROL Parcourir]](../../destinations/ui/destinations-workspace.md#browse)**. |
 
@@ -77,7 +77,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Fonctionnalité | Description |
 | --- | --- |
 | Amélioration des fonctionnalités de gestion des destinations dans l’interface utilisateur d’Experience Platform | Améliorez votre workflow de gestion des destinations avec de nouvelles fonctionnalités de tri dans les onglets [[!UICONTROL Parcourir]](../../destinations/ui/destinations-workspace.md#browse) et [[!UICONTROL Comptes]](../../destinations/ui/destinations-workspace.md#accounts). Vous pouvez désormais également voir un indicateur visuel lorsque l’authentification de votre compte est sur le point d’expirer. <br> ![](../../destinations/assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
-| Paramètres de largeur de colonne persistants | Les paramètres de largeur de colonne persistent désormais lorsque vous quittez une page et y revenez. Par exemple, si vous ajustez la largeur d’une colonne dans l’onglet [[!UICONTROL &#x200B; Parcourir &#x200B;]](../../destinations/ui/destinations-workspace.md#browse), la largeur de votre colonne personnalisée reste la même lorsque vous quittez la page et revenez à cet onglet. |
+| Paramètres de largeur de colonne persistants | Les paramètres de largeur de colonne persistent désormais lorsque vous quittez une page et y revenez. Par exemple, si vous ajustez la largeur d’une colonne dans l’onglet [[!UICONTROL  Parcourir ]](../../destinations/ui/destinations-workspace.md#browse), la largeur de votre colonne personnalisée reste la même lorsque vous quittez la page et revenez à cet onglet. |
 
 Pour plus d’informations, reportez-vous à la [vue d’ensemble des destinations](../../destinations/home.md).
 
@@ -90,12 +90,9 @@ XDM est une spécification Open Source qui fournit des structures et des défin
 | Fonctionnalité | Description |
 | ------- | ----------- |
 | Schémas basés sur des modèles | Simplifiez la modélisation des données à l’aide de schémas basés sur des modèles. Vous pouvez désormais créer plus facilement des schémas à l’aide d’exemples et de conseils pratiques complets. Cette fonctionnalité est actuellement disponible pour les titulaires de licence Campaign Orchestration. Elle sera étendue aux clients de Data Distiller lors de la phase de disponibilité générale, ce qui rendra la modélisation des données plus accessible et plus efficace. Cette fonctionnalité prend en charge les données de série temporelle et les fonctionnalités de capture de données de modification. |
+| Data Mirror | Ingérez les modifications au niveau des lignes à partir des entrepôts de données cloud (par exemple, Snowflake, Databricks, BigQuery) dans Adobe Experience Platform à l’aide de schémas basés sur des modèles. Data Mirror élimine l’ETL en amont et préserve les relations, le contrôle de version et les suppressions en mettant en miroir les structures de base de données existantes directement dans le lac de données. Les fonctionnalités de capture de données de série temporelle et de schéma d’événement d’enregistrement avec modification sont toutes prises en charge. Cette fonctionnalité est actuellement disponible pour les détenteurs de licence Campaign Orchestration et sera développée dans cette version limitée, y compris pour les clients Customer Journey Analytics. Pour plus d’informations[ consultez la documentation de Data Mirror ](../../xdm/data-mirror/overview.md). Contactez votre représentant Adobe pour obtenir l’accès. |
 
 Pour plus d’informations, consultez la [vue d’ensemble XDM](../../xdm/home.md).
-<!--
-
-| Data Mirror | Ingest row-level changes from cloud data warehouses (e.g., Snowflake, Databricks, BigQuery) into Adobe Experience Platform using model-based schemas. Data Mirror eliminates upstream ETL and preserves relationships, versioning, and deletions by mirroring existing database structures directly into the data lake. Time-series and record event schema behavior with change data capture capabilities are all supported. This feature is currently available for Campaign Orchestration license holders and will expand through this limited release, also including Customer Journey Analytics customers. See the [Data Mirror documentation](../../xdm/data-mirror/overview.md) for more details. Contact your Adobe representative for access. |
--->
 
 ## Profil client en temps réel {#profile}
 
@@ -138,7 +135,10 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 | --- | --- |
 | Nouvelles sources en disponibilité générale | Les sources suivantes sont désormais en disponibilité générale : plusieurs connecteurs source ont été mis à jour de Beta vers GA : <ul><li>[Acxiom Data Ingestion](../../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Acxiom Prospect Data Ingestion](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[Merkury Enterprise](../../sources/connectors/data-partners/merkury.md)</li><li>[SAP COMMERCE](../../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. Ces sources sont désormais entièrement prises en charge et prêtes à être utilisées en production. |
 | Prise en charge de l’authentification par paire de clés [!DNL Snowflake] | Amélioration de la sécurité des connexions Snowflake avec prise en charge de l’authentification par paire de clés. L’authentification de base (nom d’utilisateur/mot de passe) sera abandonnée d’ici novembre 2025. Nous recommandons donc aux clients de migrer vers l’authentification par paire de clés pour une sécurité accrue. Pour plus d’informations, consultez la [[!DNL Snowflake] documentation](../../sources/connectors/databases/snowflake.md). |
-| [!BADGE Version bêta]{type=Informative} [!DNL Capillary Streaming Events] | Utilisez la [[!DNL Capillary Streaming Events] source](../../sources/connectors/loyalty/capillary.md) pour diffuser des données de fidélité depuis votre compte [!DNL Capillary] vers Experience Platform. |
 | Disponibilité générale de la prise en charge des liens privés dans les sources | Vous pouvez désormais utiliser des **liens privés** pour un groupe de sources sélectionné. Utilisez cette fonctionnalité pour créer un point d’entrée privé auquel votre source peut se connecter. Grâce aux points d’entrée privés, vous pouvez configurer des connexions et des flux de données qui contournent l’Internet public, ce qui vous offre une sécurité et un isolement réseau accrus pour vos données sensibles. La prise en charge des liens privés est disponible pour les sources suivantes : <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>. Pour plus d’informations, consultez les guides sur la création de liens privés [dans l’API](../../sources/tutorials/api/private-link.md) et [dans l’interface utilisateur](../../sources/tutorials/ui/private-link.md). |
 
 Pour plus d’informations, consultez la [vue d’ensemble des sources](../../sources/home.md).
+
+<!--
+| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | Use the [[!DNL Capillary Streaming Events] source](../../sources/connectors/loyalty/capillary.md) to stream loyalty data from your [!DNL Capillary] account to Experience Platform. |
+-->

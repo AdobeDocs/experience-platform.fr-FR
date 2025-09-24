@@ -5,9 +5,9 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: a05e20845b6c111139451f593ef24fb8f760b5bd
+source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1069'
 ht-degree: 90%
 
 ---
@@ -363,7 +363,7 @@ ht-degree: 90%
    - [S’abonner aux alertes sur les sources](tutorials/ui/alerts.md)
    - [Enregistrer un flux de données en tant que brouillon](tutorials/ui/draft.md)
    - [Application de libellés d’accès à un flux de données](tutorials/ui/labels.md)
-   - [Créer un point d’entrée privé Azure](tutorials/ui/private-link.md)
+   - [Créer un point d’entrée privé](tutorials/ui/private-link.md)
 - Sources En Libre-Service (SDK Par Lots) {#sdk}
    - [Vue d’ensemble](sources-sdk/overview.md)
    - Configurer votre spécification de connexion {#config}

@@ -1,24 +1,25 @@
 ---
-title: Connecter des briques de données Azure à Experience Platform à l’aide de l’interface utilisateur
-description: Découvrez comment connecter Azure Databricks à Experience Platform à l’aide de l’interface utilisateur.
+title: Connecter des briques de données à Experience Platform à l’aide de l’interface utilisateur
+description: Découvrez comment connecter Databricks à Experience Platform à l’aide de l’interface utilisateur.
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 2bd16d5a55c5bbeedbc6a6012d9f0229eee8433a
+exl-id: 877e22c0-cb77-45bb-88c9-54fdde2d6905
+source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '481'
 ht-degree: 8%
 
 ---
 
-# Connexion d’[!DNL Azure Databricks] à Experience Platform dans l’interface utilisateur
+# Connexion d’[!DNL Databricks] à Experience Platform dans l’interface utilisateur
 
 >[!AVAILABILITY]
 >
->* La source [!DNL Azure Databricks] est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-Time CDP Ultimate.
+>* La source [!DNL Databricks] est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-Time CDP Ultimate.
 >
->* La source [!DNL Azure Databricks] est en version Beta. Lisez les [termes et conditions](../../../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>* La source [!DNL Databricks] est en version Beta. Lisez les [termes et conditions](../../../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Lisez ce guide pour savoir comment connecter votre compte [!DNL Azure Databricks] à Adobe Experience Platform à l’aide de l’espace de travail des sources dans l’interface utilisateur.
+Lisez ce guide pour savoir comment connecter votre compte [!DNL Databricks] à Adobe Experience Platform à l’aide de l’espace de travail des sources dans l’interface utilisateur.
 
 ## Commencer
 
@@ -29,22 +30,22 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 ### Collecter les informations d’identification requises
 
-Fournissez des valeurs pour les informations d’identification suivantes afin de [!DNL Azure Databricks] connecter à Experience Platform.
+Fournissez des valeurs pour les informations d’identification suivantes afin de [!DNL Databricks] connecter à Experience Platform.
 
 | Informations d’identification | Description |
 | --- | --- |
-| Domaine | URL de votre espace de travail [!DNL Azure Databricks]. Par exemple : `https://adb-1234567890123456.7.azuredatabricks.net`. |
-| Identifiant du cluster | L’identifiant de votre cluster dans [!DNL Azure Databricks]. Ce cluster doit déjà être un cluster existant et doit être un cluster interactif. |
-| Jeton d’accès | Jeton d’accès qui authentifie votre compte [!DNL Azure Databricks]. Vous pouvez générer votre jeton d’accès à l’aide de l’espace de travail [!DNL Azure Databricks]. |
+| Domaine | URL de votre espace de travail [!DNL Databricks]. Par exemple : `https://adb-1234567890123456.7.azuredatabricks.net`. |
+| Identifiant du cluster | L’identifiant de votre cluster dans [!DNL Databricks]. Ce cluster doit déjà être un cluster existant et doit être un cluster interactif. |
+| Jeton d’accès | Jeton d’accès qui authentifie votre compte [!DNL Databricks]. Vous pouvez générer votre jeton d’accès à l’aide de l’espace de travail [!DNL Databricks]. |
 | Base de données | Nom de votre base de données dans le lac delta. |
 
-Pour plus d’informations, consultez la [[!DNL Azure Databricks] présentation](../../../../connectors/databases/databricks.md).
+Pour plus d’informations, consultez la [[!DNL Databricks] vue d’ensemble](../../../../connectors/databases/databricks.md).
 
 ## Parcourir le catalogue des sources
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Choisissez une catégorie ou utilisez la barre de recherche pour trouver votre source.
 
-Pour vous connecter à [!DNL Azure Databricks], accédez à la catégorie *[!UICONTROL Bases de données]*, sélectionnez la carte source **[!UICONTROL Azure Databricks]**, puis sélectionnez **[!UICONTROL Configurer]**.
+Pour vous connecter à [!DNL Databricks], accédez à la catégorie *[!UICONTROL Bases de données]*, sélectionnez la carte source **[!UICONTROL Azure Databricks]**, puis sélectionnez **[!UICONTROL Configurer]**.
 
 >[!TIP]
 >

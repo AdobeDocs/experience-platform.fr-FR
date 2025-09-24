@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation des connecteurs source
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f424c5c7e436a7f4c45d37c004096d3924247158
+source-git-commit: b3b1542f7e297f4ca872a155ac3801266bc1e6a6
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '1674'
 ht-degree: 55%
 
 ---
@@ -219,13 +219,18 @@ Vous pouvez utiliser les sources suivantes pour ingérer des données à partir 
 
 {style="table-layout:auto"}
 
-### Fidélité {#loyalty}
+<!--
+### Loyalty {#loyalty}
 
-Vous pouvez utiliser les sources suivantes pour ingérer la fidélité des données à Experience Platform.
+You can use the following sources to ingest data loyalty to Experience Platform.
 
-| Source | Type d’ingestion | Cloud |
+| Source | Ingestion type | Cloud |
 | --- | --- | --- |
-| [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | Diffusion en continu | Azure |
+| [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | Streaming | Azure |
+
+| [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | Streaming | Azure |
+
+-->
 
 ### Automatisation du marketing {#marketing-automation}
 
@@ -241,7 +246,6 @@ Vous pouvez utiliser les sources suivantes pour ingérer des données d’automa
 | [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) | Lot | Azure |
 | [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | Lot | Azure |
 | [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | Lot | Azure |
-| [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | Diffusion en continu | Azure |
 | [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) | Lot | Azure, AWS |
 
 {style="table-layout:auto"}

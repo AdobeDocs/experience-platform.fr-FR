@@ -1,26 +1,26 @@
 ---
-title: Azure Databricks
-description: Découvrez les étapes préalables requises pour connecter Azure Databricks à Experience Platform.
+title: Databricks
+description: Découvrez les étapes préalables requises pour connecter Databricks à Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 last-substantial-update: 2025-06-17T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: e5ece120329a550204174b7bf588f06cdff45846
+source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
 workflow-type: tm+mt
-source-wordcount: '631'
-ht-degree: 4%
+source-wordcount: '628'
+ht-degree: 3%
 
 ---
 
-# [!DNL Azure Databricks]
+# [!DNL Databricks]
 
 >[!AVAILABILITY]
 >
->* La source [!DNL Azure Databricks] est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-Time CDP Ultimate.
+>* La source [!DNL Databricks] est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-Time CDP Ultimate.
 >
->* La source [!DNL Azure Databricks] est en version Beta. Lisez les [termes et conditions](../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>* La source [!DNL Databricks] est en version Beta. Lisez les [termes et conditions](../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-[!DNL Azure Databricks] est une plateforme cloud conçue pour l’analyse de données, le machine learning et l’IA. Vous pouvez utiliser [!DNL Databricks] pour intégrer à [!DNL Azure] et fournir un environnement holistique pour créer, déployer et gérer des solutions de données à grande échelle.
+[!DNL Databricks] est une plateforme cloud conçue pour l’analyse de données, le machine learning et l’IA. Vous pouvez utiliser [!DNL Databricks] pour intégrer et fournir un environnement holistique afin de créer, déployer et gérer des solutions de données à grande échelle.
 
 Utilisez la source de [!DNL Databricks] pour connecter votre compte et ingérer vos données [!DNL Databricks] vers Adobe Experience Platform.
 
