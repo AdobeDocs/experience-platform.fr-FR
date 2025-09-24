@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation des connecteurs source
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
+source-git-commit: f424c5c7e436a7f4c45d37c004096d3924247158
 workflow-type: tm+mt
-source-wordcount: '1666'
-ht-degree: 56%
+source-wordcount: '1696'
+ht-degree: 55%
 
 ---
 
@@ -306,7 +306,11 @@ Grâce au contrôle d’accès basé sur les attributs, vous pouvez appliquer de
 
 - Appliquez des libellés aux champs de schéma pour définir l’accès à des champs de schéma spécifiques dans votre organisation. Une fois l’accès à des champs de schéma spécifiques établi, les utilisateurs ne pourront créer des mappages que pour les champs auxquels ils ont accès.
 - Les utilisateurs ne disposant pas des rôles appropriés ne pourront pas créer ni mettre à jour des flux de données avec des mappages impliquant des champs de schéma inaccessibles. En outre, les utilisateurs non autorisés ne peuvent pas mettre à jour, supprimer, activer ou désactiver les flux de données existants avec des champs de schéma inaccessibles.
-- En outre, un flux de données doit avoir exactement le même identifiant de schéma et la même version dans son mappage, son jeu de données cible et sa connexion cible.
+- En outre, un flux de données doit avoir exactement le même identifiant de schéma et la même version dans son mappage, son jeu de données cible et sa connexion cible. Cela s’applique à la fois aux schémas XDM standard et aux schémas basés sur des modèles.
+
+>[!NOTE]
+>
+>Les schémas basés sur des modèles comportent des exigences supplémentaires, notamment les champs clé primaire et identifiant de version . Pour plus d’informations, consultez la présentation du schéma [basé sur un modèle](../xdm/schema/model-based.md).
 
 Pour plus d’informations sur le contrôle d’accès basé sur les attributs, consultez la [présentation du contrôle d’accès basé sur les attributs](../access-control/abac/overview.md).
 

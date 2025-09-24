@@ -5,10 +5,10 @@ title: Créer un flux de données à l’aide d’un Source de base de données 
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Experience Platform. Ce tutoriel décrit les étapes à suivre pour créer un flux de données pour une source de base de données à l’aide de l’interface utilisateur Experience Platform.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2f8589ec58d9afe69e21f909f905a941e43f710c
 workflow-type: tm+mt
-source-wordcount: '1576'
-ht-degree: 40%
+source-wordcount: '1698'
+ht-degree: 36%
 
 ---
 
@@ -88,6 +88,16 @@ L’interface de [!UICONTROL mappage] fournit un outil complet pour mapper les c
 
 Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [ Guide de l’interface utilisateur de la préparation des données ](../../../../data-prep/ui/mapping.md).
 
+>[!NOTE]
+>
+>Lors du mappage à des schémas basés sur des modèles, assurez-vous que vos données source incluent les champs requis, tels qu’une clé primaire et un identifiant de version, ou un identifiant d’horodatage pour les schémas de série temporelle, .
+
+Les colonnes de contrôle telles que `_change_request_type`, utilisées pour la capture de données de modification, sont lues lors de l’ingestion, mais ne sont pas stockées dans le schéma cible.
+
+Les schémas basés sur des modèles prennent également en charge les relations entre les jeux de données à l’aide de mappages de clés primaires et étrangères.
+
+Pour plus d’informations, consultez la présentation de [Data Mirror](../../../../xdm/data-mirror/overview.md) ainsi que la [référence technique des schémas basés sur des modèles](../../../../xdm/schema/model-based.md).
+
 Une fois vos données source mappées, sélectionnez **[!UICONTROL Suivant]**.
 
 ![mappage](../../../images/tutorials/dataflow/table-based/mapping.png)
@@ -123,7 +133,7 @@ Pour plus d’informations sur les configurations de planification, consultez le
 L’écran de **[!UICONTROL Révision]** s’affiche, vous permettant dʼexaminer votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
 * **[!UICONTROL Connexion]** : affiche le type de source, le chemin d’accès correspondant au fichier source choisi et le nombre de colonnes au sein de ce fichier source.
-* **[!UICONTROL Attribuer des champs de jeu de données et de mappage]** : affiche le jeu de données dans lequel les données sources sont ingérées, y compris le schéma auquel le jeu de données se conforme.
+* **[!UICONTROL Attribuer des champs de jeu de données et de mappage]** : affiche le jeu de données dans lequel les données sources seront ingérées, ainsi que le schéma associé. Si vous utilisez un schéma basé sur un modèle, vérifiez que les champs obligatoires, tels que la clé primaire et l’identifiant de version, sont correctement mappés. Assurez-vous également que toutes les colonnes de contrôle de capture de données de modification sont correctement configurées. Les jeux de données utilisant des schémas basés sur des modèles prennent en charge plusieurs modèles de données et permettent de [modifier les workflows de capture de données](../../api/change-data-capture.md).
 * **[!UICONTROL Planification]** : affiche la période active, la fréquence et l’intervalle du planning d’ingestion.
 
 Une fois que vous avez vérifié votre flux de données, sélectionnez **[!UICONTROL Terminer]** et patientez quelques instants le temps que le flux de données soit créé.

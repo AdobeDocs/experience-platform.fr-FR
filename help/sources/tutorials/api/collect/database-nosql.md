@@ -3,10 +3,10 @@ title: Créez un flux de données pour les sources de base de données à l’ai
 type: Tutorial
 description: Découvrez comment utiliser l’API Flow Service pour créer un flux de données et ingérer les données de votre base de données dans Experience Platform.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: b4f8d44c3ce9507ff158cf051b7a4b524b293c64
+source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
 workflow-type: tm+mt
-source-wordcount: '1456'
-ht-degree: 73%
+source-wordcount: '1489'
+ht-degree: 71%
 
 ---
 
@@ -113,7 +113,7 @@ curl -X POST \
 | -------- | ----------- |
 | `baseConnectionId` | Identifiant de connexion de votre source de base de données. |
 | `params.tableName` | Chemin d’accès au fichier source. |
-| `params.cdcEnabled` | Valeur booléenne qui indique si la capture de l’historique des modifications est activée ou non. Cette propriété est prise en charge par les sources de base de données suivantes : <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> Pour plus d’informations, consultez le guide sur l’utilisation de [modifier la capture de données dans les sources](../change-data-capture.md). |
+| `params.cdcEnabled` | Valeur booléenne qui indique si la capture de l’historique des modifications est activée. Lorsqu’elle est utilisée avec des schémas basés sur des modèles, la capture de données modifiées permet de suivre les insertions, les mises à jour et les suppressions pour que le jeu de données cible reste synchronisé avec la source. Cette propriété est prise en charge par les sources de base de données suivantes : <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> Pour une présentation de cette fonctionnalité, consultez la présentation de Data Mirror [](../../../../xdm/data-mirror/overview.md). Pour plus d’informations sur l’implémentation, consultez les sections [guide de modification de la capture de données dans les sources](../change-data-capture.md) et [guide de référence technique des schémas basés sur des modèles](../../../../xdm/schema/model-based.md). |
 | `connectionSpec.id` | Identifiant de spécification de connexion de la source de votre base de données. Consultez l’ [annexe](#appendix) pour obtenir une liste des identifiants de spécification de base de données. |
 
 **Réponse**

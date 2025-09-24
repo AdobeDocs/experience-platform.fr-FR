@@ -1,56 +1,123 @@
 ---
 title: Activer la capture de données de modification pour les connexions source dans l’API
 description: Découvrez comment activer la capture de données de modification pour les connexions source dans l’API
-source-git-commit: d8b4557424e1f29dfdd8893932aef914226dd60d
+exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
+source-git-commit: 192e97c97ffcb2d695bcfa6269cc6920f5440832
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '1238'
 ht-degree: 0%
 
 ---
 
 # Activer la capture de données de modification pour les connexions source dans l’API
 
-La capture de données modifiées dans les sources Adobe Experience Platform est une fonctionnalité que vous pouvez utiliser pour maintenir la synchronisation des données en temps réel entre vos systèmes source et de destination.
+Utilisez la capture de données de modification dans les sources Adobe Experience Platform pour que vos systèmes source et de destination restent synchronisés en temps quasi réel.
 
-Actuellement, Experience Platform prend en charge la **copie incrémentielle des données**, qui garantit que les enregistrements nouvellement créés ou mis à jour dans le système source sont régulièrement copiés dans les jeux de données ingérés. Ce processus repose sur l’utilisation de la colonne **horodatage**, par exemple `LastModified` pour effectuer le suivi des modifications et capturer **uniquement les données nouvellement insérées ou mises à jour**. Cependant, cette méthode ne tient pas compte des enregistrements supprimés, ce qui peut entraîner des incohérences des données au fil du temps.
+Experience Platform prend actuellement en charge la **copie incrémentielle de données**, qui transfère régulièrement les enregistrements nouvellement créés ou mis à jour du système source vers les jeux de données ingérés. Cette méthode repose sur une **colonne d’horodatage** pour suivre les modifications, mais elle ne détecte pas les suppressions, ce qui peut entraîner des incohérences des données au fil du temps.
 
-Avec la capture de données de modification, un flux donné capture et applique toutes les modifications, y compris les insertions, les mises à jour et les suppressions. De même, les jeux de données Experience Platform restent entièrement synchronisés avec le système source.
+En revanche, la capture de données de modification capture et applique les insertions, les mises à jour et les suppressions en temps quasi réel. Ce suivi complet des modifications garantit que les jeux de données restent entièrement alignés sur le système source et fournit un historique complet des modifications, au-delà de ce que la copie incrémentielle prend en charge. Toutefois, les opérations de suppression nécessitent une attention particulière, car elles affectent toutes les applications utilisant les jeux de données cibles.
 
-Vous pouvez utiliser la capture de données de modification pour les sources suivantes :
+La capture de données modifiées dans Experience Platform nécessite **[Data Mirror](../../../xdm/data-mirror/overview.md)** avec des [schémas basés sur des modèles](../../../xdm/schema/model-based.md) (également appelés schémas relationnels). Vous pouvez fournir des données de modification à Data Mirror de deux manières :
 
-## [!DNL Amazon S3]
+* **[Suivi manuel des modifications](#file-based-sources)** : incluez une colonne `_change_request_type` dans votre jeu de données pour les sources qui ne génèrent pas d’enregistrements de capture de données de modification de manière native
+* **[Exportations natives de capture de données de modification](#database-sources)** : utilisez les enregistrements de capture de données de modification exportés directement depuis votre système source
 
-Assurez-vous que `_change_request_type` est présent dans le fichier [!DNL Amazon S3] que vous avez l’intention d’ingérer dans Experience Platform. En outre, vous devez vous assurer que les valeurs valides suivantes sont incluses dans le fichier :
+Les deux approches nécessitent Data Mirror avec des schémas basés sur des modèles pour préserver les relations et appliquer l’unicité.
 
-* `u` : pour les insertions et les mises à jour
-* `d` : pour les suppressions.
+## Data Mirror avec des schémas basés sur des modèles
 
-Si `_change_request_type` n’est pas présent dans votre fichier , la valeur par défaut de `u` est utilisée.
+>[!AVAILABILITY]
+>
+>Data Mirror et les schémas basés sur des modèles sont disponibles pour les détenteurs de licence Adobe Journey Optimizer **Campagnes orchestrées**. Ils sont également disponibles en tant que **version limitée** pour les utilisateurs de Customer Journey Analytics, selon votre licence et l’activation des fonctionnalités. Contactez votre représentant Adobe pour obtenir l’accès.
 
-Lisez la documentation suivante pour savoir comment activer la capture de données de modification pour votre connexion source [!DNL Amazon S3] :
+>[!NOTE]
+>
+>**Utilisateurs des campagnes orchestrées** : utilisez les fonctionnalités Data Mirror décrites dans ce document pour travailler avec les données client qui conservent l’intégrité du référentiel. Même si votre source n’utilise pas la mise en forme de capture de données de modification, Data Mirror prend en charge des fonctionnalités relationnelles telles que l’application des clés primaires, les upserts au niveau des enregistrements et les relations de schéma. Ces fonctionnalités assurent une modélisation des données cohérente et fiable sur les jeux de données connectés.
 
-* [Créer une connexion  [!DNL Amazon S3]  base](../api/create/cloud-storage/s3.md).
-* [Créer une connexion source pour un espace de stockage dans le cloud](../api/collect/cloud-storage.md#create-a-source-connection).
+Data Mirror utilise des schémas basés sur des modèles pour étendre la capture de données de modification et activer des fonctionnalités avancées de synchronisation de base de données. Pour obtenir un aperçu de Data Mirror, consultez [Présentation de Data Mirror](../../../xdm/data-mirror/overview.md).
 
-## [!DNL Azure Blob]
+Les schémas basés sur des modèles étendent Experience Platform pour appliquer l’unicité des clés primaires, suivre les modifications au niveau des lignes et définir les relations au niveau du schéma. Avec la capture de données de modification, ils appliquent les insertions, les mises à jour et les suppressions directement dans le lac de données, réduisant ainsi le besoin d&#39;extraire, de transformer, de charger (ETL) ou de réconciliation manuelle.
 
-Assurez-vous que `_change_request_type` est présent dans le fichier [!DNL Azure Blob] que vous avez l’intention d’ingérer dans Experience Platform. En outre, vous devez vous assurer que les valeurs valides suivantes sont incluses dans le fichier :
+Consultez [ Présentation des schémas basés sur des modèles ](../../../xdm/schema/model-based.md) pour plus d’informations.
 
-* `u` : pour les insertions et les mises à jour
-* `d` : pour les suppressions.
+### Schéma basé sur des modèles requis pour la capture de données de modification
 
-Si `_change_request_type` n’est pas présent dans votre fichier , la valeur par défaut de `u` est utilisée.
+Avant d’utiliser un schéma basé sur un modèle avec capture de données de modification, configurez les identifiants suivants :
 
-Lisez la documentation suivante pour savoir comment activer la capture de données de modification pour votre connexion source [!DNL Azure Blob] :
+* Identifier de manière unique chaque enregistrement avec une clé primaire.
+* Appliquez les mises à jour en séquence à l’aide d’un identifiant de version.
+* Pour les schémas de série temporelle, ajoutez un identifiant d’horodatage.
 
-* [Créer une connexion  [!DNL Azure Blob]  base](../api/create/cloud-storage/blob.md).
-* [Créer une connexion source pour un espace de stockage dans le cloud](../api/collect/cloud-storage.md#create-a-source-connection).
+### Gestion des colonnes de contrôle {#control-column-handling}
 
-## [!DNL Azure Databricks]
+Utilisez la colonne `_change_request_type` pour spécifier le mode de traitement de chaque ligne :
 
-Vous devez activer l’option **modifier le flux de données** dans votre table de [!DNL Azure Databricks] pour utiliser la capture de données de modification dans votre connexion source.
+* `u` — upsert (par défaut si la colonne est absente)
+* `d` — supprimer
 
-Utilisez les commandes suivantes pour activer explicitement l’option Modifier le flux de données dans [!DNL Azure Databricks]
+Cette colonne est évaluée uniquement lors de l’ingestion et n’est ni stockée ni mappée à des champs XDM.
+
+### Workflow {#workflow}
+
+Pour activer la capture de données de modification avec un schéma basé sur un modèle :
+
+1. Créez un schéma basé sur un modèle.
+2. Ajoutez les descripteurs requis :
+   * [descripteur de clé de Principal](../../../xdm/api/descriptors.md#primary-key-descriptor)
+   * [Descripteur de version](../../../xdm/api/descriptors.md#version-descriptor)
+   * [Descripteur d’horodatage](../../../xdm/api/descriptors.md#timestamp-descriptor) (série temporelle uniquement)
+3. Créez un jeu de données à partir du schéma et activez la capture de données de modification.
+4. Pour l’ingestion basée sur des fichiers uniquement : ajoutez la colonne `_change_request_type` à vos fichiers sources si vous devez spécifier explicitement les opérations de suppression. Les configurations d’exportation CDC le gèrent automatiquement pour les sources de base de données.
+5. Terminez la configuration de la connexion source pour activer l’ingestion.
+
+>[!NOTE]
+>
+>La colonne `_change_request_type` n’est nécessaire que pour les sources basées sur des fichiers (Amazon S3, Azure Blob, Google Cloud Storage, SFTP) lorsque vous souhaitez contrôler explicitement le comportement de changement au niveau des lignes. Pour les sources de base de données disposant de fonctionnalités CDC natives, les opérations de modification sont gérées automatiquement via les configurations d’exportation CDC. L’ingestion basée sur des fichiers suppose des opérations d’upsert par défaut. Il vous suffit d’ajouter cette colonne si vous souhaitez spécifier des opérations de suppression dans vos chargements de fichiers.
+
+>[!IMPORTANT]
+>
+>**La planification de la suppression des données est requise**. Toutes les applications qui utilisent des schémas basés sur des modèles doivent comprendre les implications de suppression avant d’implémenter la capture de données de modification. Planifiez la manière dont les suppressions affecteront les jeux de données associés, les exigences de conformité et les processus en aval. Voir [considérations relatives à l’hygiène des données](../../../hygiene/ui/record-delete.md#model-based-record-delete) pour obtenir des conseils.
+
+## Fournir des données de modification pour les sources basées sur des fichiers {#file-based-sources}
+
+>[!IMPORTANT]
+>
+>La capture de données de modification basée sur des fichiers nécessite Data Mirror avec des schémas basés sur des modèles. Avant de suivre les étapes de formatage des fichiers ci-dessous, assurez-vous d’avoir terminé le workflow de configuration de [Data Mirror](#workflow) décrit précédemment dans ce document. Les étapes ci-dessous décrivent comment formater vos fichiers de données afin d’inclure les informations de suivi des modifications qui seront traitées par Data Mirror.
+
+Pour les sources basées sur des fichiers ([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud Storage] et [!DNL SFTP]), incluez une colonne `_change_request_type` dans vos fichiers.
+
+Utilisez les valeurs `_change_request_type` définies dans la section [Gestion des colonnes de contrôle](#control-column-handling) ci-dessus.
+
+>[!IMPORTANT]
+>
+>Pour les **sources basées sur des fichiers uniquement**, certaines applications peuvent nécessiter une colonne `_change_request_type` avec `u` (upsert) ou `d` (delete) pour valider les fonctionnalités de suivi des modifications. Par exemple, la fonction Adobe Journey Optimizer **Campagnes orchestrées** nécessite cette colonne pour activer le bouton « Campagne orchestrée » et autoriser la sélection du jeu de données pour le ciblage. Les exigences de validation spécifiques à l’application peuvent varier.
+
+Suivez les étapes spécifiques à la source ci-dessous.
+
+### Sources d’espace de stockage {#cloud-storage-sources}
+
+Activez la capture de données de modification pour les sources d’espace de stockage en procédant comme suit :
+
+1. Créez une connexion de base pour votre source :
+
+   | Source | Guide de connexion de base |
+   |---|---|
+   | [!DNL Amazon S3] | [Créer une connexion  [!DNL Amazon S3]  base](../api/create/cloud-storage/s3.md) |
+   | [!DNL Azure Blob] | [Créer une connexion  [!DNL Azure Blob]  base](../api/create/cloud-storage/blob.md) |
+   | [!DNL Google Cloud Storage] | [Créer une connexion  [!DNL Google Cloud Storage]  base](../api/create/cloud-storage/google.md) |
+   | [!DNL SFTP] | [Créer une connexion  [!DNL SFTP]  base](../api/create/cloud-storage/sftp.md) |
+
+2. [Créer une connexion source pour un espace de stockage dans le cloud](../api/collect/cloud-storage.md#create-a-source-connection).
+
+Toutes les sources d’espace de stockage utilisent le même format de colonne `_change_request_type` décrit dans la section [Sources basées sur des fichiers](#file-based-sources) ci-dessus.
+
+## Sources de base de données {#database-sources}
+
+### [!DNL Azure Databricks]
+
+Pour utiliser la capture de données de modification avec [!DNL Azure Databricks], vous devez à la fois activer **modifier le flux de données** dans vos tables source et configurer Data Mirror avec des schémas basés sur des modèles dans Experience Platform.
+
+Utilisez les commandes suivantes pour activer la modification du flux de données sur vos tableaux :
 
 **Nouveau tableau**
 
@@ -83,20 +150,20 @@ Lisez la documentation suivante pour savoir comment activer la capture de donné
 * [Créer une connexion  [!DNL Azure Databricks]  base](../api/create/databases/databricks.md).
 * [Créer une connexion source pour une base de données](../api/collect/database-nosql.md#create-a-source-connection).
 
-## [!DNL Data Landing Zone]
+### [!DNL Data Landing Zone]
 
-Vous devez activer l’option **modifier le flux de données** dans votre table de [!DNL Data Landing Zone] pour utiliser la capture de données de modification dans votre connexion source.
-
-Utilisez les commandes suivantes pour activer explicitement l’option Modifier le flux de données dans [!DNL Data Landing Zone].
+Pour utiliser la capture de données de modification avec [!DNL Data Landing Zone], vous devez à la fois activer **modifier le flux de données** dans vos tables source et configurer Data Mirror avec des schémas basés sur des modèles dans Experience Platform.
 
 Lisez la documentation suivante pour savoir comment activer la capture de données de modification pour votre connexion source [!DNL Data Landing Zone] :
 
 * [Créer une connexion  [!DNL Data Landing Zone]  base](../api/create/cloud-storage/data-landing-zone.md).
 * [Créer une connexion source pour un espace de stockage dans le cloud](../api/collect/cloud-storage.md#create-a-source-connection).
 
-## [!DNL Google BigQuery]
+### [!DNL Google BigQuery]
 
-Pour utiliser la capture de données de modification dans votre connexion source [!DNL Google BigQuery]. Accédez à la page [!DNL Google BigQuery] dans la console [!DNL Google Cloud] et définissez `enable_change_history` sur `TRUE`. Cette propriété active l&#39;historique des modifications de votre tableau de données.
+Pour utiliser la capture de données de modification avec [!DNL Google BigQuery], vous devez activer l’historique des modifications dans vos tables source et configurer Data Mirror avec des schémas basés sur des modèles dans Experience Platform.
+
+Pour activer l’historique des modifications dans votre connexion source [!DNL Google BigQuery], accédez à la page [!DNL Google BigQuery] dans la console [!DNL Google Cloud] et définissez `enable_change_history` sur `TRUE`. Cette propriété active l&#39;historique des modifications de votre tableau de données.
 
 Pour plus d’informations, consultez le guide sur les instructions de langage de définition de données dans [ [!DNL GoogleSQL]](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list).
 
@@ -105,39 +172,9 @@ Lisez la documentation suivante pour savoir comment activer la capture de donné
 * [Créer une connexion  [!DNL Google BigQuery]  base](../api/create/databases/bigquery.md).
 * [Créer une connexion source pour une base de données](../api/collect/database-nosql.md#create-a-source-connection).
 
-## [!DNL Google Cloud Storage]
+### [!DNL Snowflake]
 
-Assurez-vous que `_change_request_type` est présent dans le fichier [!DNL Google Cloud Storage] que vous avez l’intention d’ingérer dans Experience Platform. En outre, vous devez vous assurer que les valeurs valides suivantes sont incluses dans le fichier :
-
-* `u` : pour les insertions et les mises à jour
-* `d` : pour les suppressions.
-
-Si `_change_request_type` n’est pas présent dans votre fichier , la valeur par défaut de `u` est utilisée.
-
-Lisez la documentation suivante pour savoir comment activer la capture de données de modification pour votre connexion source [!DNL Google Cloud Storage] :
-
-* [Créer une connexion  [!DNL Google Cloud Storage]  base](../api/create/cloud-storage/google.md).
-* [Créer une connexion source pour un espace de stockage dans le cloud](../api/collect/cloud-storage.md#create-a-source-connection).
-
-
-## [!DNL SFTP]
-
-Assurez-vous que `_change_request_type` est présent dans le fichier [!DNL SFTP] que vous avez l’intention d’ingérer dans Experience Platform. En outre, vous devez vous assurer que les valeurs valides suivantes sont incluses dans le fichier :
-
-* `u` : pour les insertions et les mises à jour
-* `d` : pour les suppressions.
-
-Si `_change_request_type` n’est pas présent dans votre fichier , la valeur par défaut de `u` est utilisée.
-
-Lisez la documentation suivante pour savoir comment activer la capture de données de modification pour votre connexion source [!DNL SFTP] :
-
-* [Créer une connexion  [!DNL SFTP]  base](../api/create/cloud-storage/sftp.md).
-* [Créer une connexion source pour un espace de stockage dans le cloud](../api/collect/cloud-storage.md#create-a-source-connection).
-
-
-## [!DNL Snowflake]
-
-Vous devez activer le **suivi des modifications** dans vos tables [!DNL Snowflake] pour utiliser la capture de données de modification dans vos connexions source.
+Pour utiliser la capture de données de modification avec [!DNL Snowflake], vous devez activer le **suivi des modifications** dans vos tables source et configurer Data Mirror avec des schémas basés sur des modèles dans Experience Platform.
 
 Dans [!DNL Snowflake], activez le suivi des modifications à l’aide de l’`ALTER TABLE` et définissez `CHANGE_TRACKING` sur `TRUE`.
 
@@ -151,4 +188,3 @@ Lisez la documentation suivante pour savoir comment activer la capture de donné
 
 * [Créer une connexion  [!DNL Snowflake]  base](../api/create/databases/snowflake.md).
 * [Créer une connexion source pour une base de données](../api/collect/database-nosql.md#create-a-source-connection).
-

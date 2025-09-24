@@ -2,10 +2,10 @@
 title: Demandes de suppression d’enregistrements (workflow de l’interface utilisateur)
 description: Découvrez comment supprimer des enregistrements dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 9ee5225c7494c28023c26181dfe626780133bb5d
+source-git-commit: a25187339a930f7feab4a1e0059bc9ac09f1a707
 workflow-type: tm+mt
-source-wordcount: '1848'
-ht-degree: 19%
+source-wordcount: '2420'
+ht-degree: 15%
 
 ---
 
@@ -127,7 +127,7 @@ Une fois le fichier chargé, vous pouvez continuer à [envoyer la requête](#sub
 
 Pour saisir les identités manuellement, sélectionnez **[!UICONTROL Ajouter une identité]**.
 
-![Workflow de création de demandes avec l’option [!UICONTROL &#x200B; Ajouter une identité &#x200B;] mise en surbrillance.](../images/ui/record-delete/add-identity.png)
+![Workflow de création de demandes avec l’option [!UICONTROL  Ajouter une identité ] mise en surbrillance.](../images/ui/record-delete/add-identity.png)
 
 Des commandes s’affichent pour vous permettre de saisir des identités une par une. Sous **[!UICONTROL espace de noms d’identité]**, utilisez le menu déroulant pour sélectionner le type d’identité. Sous **[!UICONTROL Valeur d’identité de Principal]**, indiquez la valeur de l’espace de noms d’identité pour l’enregistrement.
 
@@ -205,8 +205,71 @@ Une fois la requête soumise, un ordre de travail est créé et s’affiche dans
 
 ![L’onglet [!UICONTROL Enregistrement] de l’espace de travail [!UICONTROL Cycle de vie des données] avec la nouvelle demande mise en surbrillance.](../images/ui/record-delete/request-log.png)
 
+## Supprimer des enregistrements des jeux de données basés sur des modèles {#model-based-record-delete}
+
+Si le jeu de données que vous supprimez est un schéma basé sur un modèle, passez en revue les points suivants pour vous assurer que les enregistrements sont supprimés correctement et ne sont pas réingérés en raison d’incohérences entre Experience Platform et votre système source.
+
+### Comportement de suppression d’enregistrement
+
+Le tableau suivant décrit le comportement des suppressions d’enregistrements sur Experience Platform et les systèmes sources, en fonction de la méthode d’ingestion et de la configuration de la capture de données.
+
+| Aspect | Comportement |
+|---------------------|--------------------------------------------------------------------------|
+| Suppression de la plateforme | Les enregistrements sont supprimés du jeu de données et du lac de données Experience Platform. |
+| Rétention du Source | Les enregistrements restent dans le système source, sauf s’ils y sont explicitement supprimés. |
+| Impact de l’actualisation complète | En cas d’utilisation de l’actualisation complète, les enregistrements supprimés peuvent être réingérés, sauf s’ils ont été supprimés ou exclus de la source. |
+| Modifier le comportement de capture de données | Les enregistrements marqués avec `_change_request_type = 'd'` sont supprimés lors de l’ingestion. Les enregistrements non marqués peuvent être réingérés. |
+
+Pour empêcher une nouvelle ingestion, appliquez la même approche de suppression dans votre système source et Experience Platform, soit en supprimant les enregistrements des deux systèmes, soit en incluant des `_change_request_type = 'd'` pour les enregistrements que vous avez l’intention de supprimer.
+
+### Modifier les colonnes de capture et de contrôle des données
+
+Les schémas basés sur des modèles qui utilisent des sources avec capture de données de modification peuvent utiliser la colonne de contrôle `_change_request_type` pour distinguer les suppressions des upserts. Lors de l’ingestion, les enregistrements marqués avec `d` sont supprimés du jeu de données, tandis que ceux marqués avec `u` ou sans la colonne sont traités comme des upserts. La colonne `_change_request_type` est lue lors de l’ingestion uniquement et n’est pas stockée dans le schéma cible ni mappée à des champs XDM.
+
+>[!NOTE]
+>
+>La suppression d’enregistrements via l’interface utilisateur du cycle de vie des données n’affecte pas le système source. Pour supprimer des données des deux emplacements, supprimez-les dans Experience Platform et dans la source .
+
+### Méthodes de suppression supplémentaires pour les schémas basés sur des modèles
+
+Outre le workflow standard de suppression d’enregistrements, les schémas basés sur des modèles prennent en charge des méthodes supplémentaires pour des cas d’utilisation spécifiques :
+
+* **Approche de copie sécurisée du jeu de données** : dupliquez le jeu de données de production et appliquez des suppressions à la copie pour des tests contrôlés ou une réconciliation avant d’appliquer des modifications aux données de production.
+* **Chargement par lots uniquement des suppressions** : chargez un fichier contenant uniquement des opérations de suppression pour l’hygiène ciblée lorsque vous devez supprimer des enregistrements spécifiques sans affecter d’autres données.
+
+### Prise en charge des descripteurs pour les opérations d’hygiène {#descriptor-support}
+
+Les descripteurs de schéma basés sur des modèles fournissent des métadonnées essentielles pour des opérations d’hygiène précises :
+
+* **Descripteur de clé de Principal** : identifie les enregistrements de manière unique pour les mises à jour ou suppressions ciblées, en s’assurant que les enregistrements corrects sont affectés.
+* **Descripteur de version** : s’assure que les suppressions et les mises à jour s’appliquent dans l’ordre chronologique approprié, empêchant les opérations hors séquence.
+* **Descripteur d’horodatage (schémas de série temporelle)** : aligne les opérations de suppression sur les heures d’occurrence d’événement plutôt que sur les heures d’ingestion.
+
+>[!NOTE]
+>
+>Les processus d’hygiène fonctionnent au niveau du jeu de données. Pour les jeux de données activés pour les profils, des workflows de profil supplémentaires peuvent être nécessaires pour maintenir la cohérence entre le profil client en temps réel.
+
+### Rétention planifiée pour les schémas basés sur des modèles
+
+Pour une hygiène automatisée basée sur l’âge des données plutôt que sur des identités spécifiques, consultez [Gérer la rétention du jeu de données d’événement d’expérience (TTL)](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) pour la rétention planifiée au niveau des lignes dans le lac de données.
+
+>[!NOTE]
+>
+>L’expiration au niveau des lignes n’est prise en charge que pour les jeux de données qui utilisent le comportement de série temporelle.
+
+### Bonnes pratiques pour la suppression d’enregistrements basés sur un modèle
+
+Pour éviter toute réingestion involontaire et maintenir la cohérence des données entre les systèmes, suivez ces bonnes pratiques :
+
+* **Coordonner les suppressions** : alignez les suppressions d’enregistrements sur votre configuration de capture de données de modification et votre stratégie de gestion des données sources.
+* **Surveiller les flux de capture de données de modification** : après la suppression des enregistrements dans Platform, surveillez les flux de données et confirmez que le système source supprime les mêmes enregistrements ou les inclut avec `_change_request_type = 'd'`.
+* **Nettoyer la source** : pour les sources qui utilisent l’ingestion d’actualisation complète ou celles qui ne prennent pas en charge les suppressions par capture de données de modification, supprimez les enregistrements directement du système source pour éviter une nouvelle ingestion.
+
+Pour plus d’informations sur les exigences des schémas, voir [exigences relatives aux descripteurs de schéma basés sur des modèles](../../xdm/schema/model-based.md#model-based-schemas).\
+Pour découvrir comment la capture de données de modification fonctionne avec les sources, consultez [Activer la capture de données de modification dans les sources](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-model-based-schemas).
+
 ## Étapes suivantes
 
 Ce document explique comment supprimer des enregistrements dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’exécution d’autres tâches de gestion du cycle de vie des données dans l’interface utilisateur, reportez-vous à la section [ Présentation de l’interface utilisateur du cycle de vie des données](./overview.md).
 
-Pour savoir comment supprimer des enregistrements à l’aide de l’API Data Hygiene, reportez-vous au guide de point d’entrée d’ordre de travail [&#128279;](../api/workorder.md).
+Pour savoir comment supprimer des enregistrements à l’aide de l’API Data Hygiene, reportez-vous au guide de point d’entrée d’ordre de travail [](../api/workorder.md).

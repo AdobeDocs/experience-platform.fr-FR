@@ -3,10 +3,10 @@ description: Découvrez comment utiliser des modèles dans l’interface utilisa
 title: Créer un flux de données de sources à l’aide de modèles dans l’interface utilisateur
 badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
 workflow-type: tm+mt
-source-wordcount: '2250'
-ht-degree: 40%
+source-wordcount: '2314'
+ht-degree: 39%
 
 ---
 
@@ -65,6 +65,12 @@ Une fenêtre pop-up s’affiche, vous permettant de parcourir les modèles ou d�
 
 * **Parcourir les modèles** : Les modèles sources créent automatiquement pour vous des schémas, des identités, des jeux de données et des flux de données avec des règles de mappage. Vous pouvez personnaliser ces ressources selon vos besoins.
 * **Utiliser mes ressources existantes** : Ingérez vos données à l’aide des jeux de données et des schémas que vous avez créés. Vous pouvez également créer de nouveaux jeux de données et de nouveaux schémas selon vos besoins.
+
+>[!NOTE]
+>
+>Les modèles peuvent générer automatiquement des schémas basés sur un modèle lors de l’utilisation de sources qui nécessitent des workflows de capture de données de modification ou qui prennent en charge plusieurs modèles de données. Ces schémas activent les fonctionnalités de Data Mirror pour la synchronisation des données en temps réel.\
+>Lors de l’utilisation de modèles avec des schémas basés sur des modèles, les ressources générées automatiquement incluent les champs clé primaire, identifiant de version et identifiant d’horodatage requis.\
+>Pour plus d’informations, consultez la présentation de Data Mirror [](../../../xdm/data-mirror/overview.md) ainsi que la [ référence technique des schémas basés sur des modèles](../../../xdm/schema/model-based.md).
 
 Pour utiliser des ressources générées automatiquement, sélectionnez **[!UICONTROL Parcourir les modèles]** puis **[!UICONTROL Sélectionner]**.
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur des jeux de données
 description: Découvrez comment effectuer des actions courantes lorsque vous utilisez des jeux de données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 1b278562c815953d2068a5142dbefcf1572baff5
+source-git-commit: 2f8589ec58d9afe69e21f909f905a941e43f710c
 workflow-type: tm+mt
 source-wordcount: '4497'
-ht-degree: 12%
+ht-degree: 11%
 
 ---
 
@@ -57,7 +57,7 @@ Ce guide d’utilisation nécessite une compréhension professionnelle des compo
 >[!CONTEXTUALHELP]
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="Campagnes orchestrées"
->abstract="Activez ce bouton pour permettre l’utilisation du jeu de données sélectionné dans les campagnes orchestrées par Adobe Journey Optimizer. Le jeu de données doit utiliser un schéma relationnel et un seul jeu de données peut être créé par schéma."
+>abstract="Activez ce bouton pour permettre l’utilisation du jeu de données sélectionné dans les campagnes orchestrées par Adobe Journey Optimizer. Le jeu de données doit utiliser un schéma basé sur un modèle et un seul jeu de données peut être créé par schéma."
 
 Dans l’interface utilisateur de [!DNL Experience Platform], sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour ouvrir le tableau de bord **[!UICONTROL Jeux de données]**. Le tableau de bord répertorie tous les jeux de données disponibles pour votre organisation. Des détails s’affichent pour chaque jeu de données répertorié, notamment son nom, le schéma auquel le jeu de données adhère et le statut de l’exécution d’ingestion la plus récente.
 
@@ -72,7 +72,7 @@ Sélectionnez le nom d’un jeu de données dans l’onglet [!UICONTROL Parcouri
 
 Vous pouvez [!UICONTROL Supprimer] ou [!UICONTROL Activer un jeu de données pour Profil] à partir de la vue des détails [!UICONTROL Jeu de données]. Pour afficher les actions disponibles, sélectionnez **[!UICONTROL ... Plus]** en haut à droite de l’interface utilisateur. Le menu déroulant s’affiche.
 
-![Espace de travail Jeux de données avec le [!UICONTROL ... Plus &#x200B;] menu déroulant mis en surbrillance.](../images/datasets/user-guide/more-actions.png)
+![Espace de travail Jeux de données avec le [!UICONTROL ... Plus ] menu déroulant mis en surbrillance.](../images/datasets/user-guide/more-actions.png)
 
 Si vous sélectionnez **[!UICONTROL Activer un jeu de données pour le profil]**, une boîte de dialogue de confirmation s’affiche. Sélectionnez **[!UICONTROL Activer]** pour confirmer votre choix.
 
@@ -192,7 +192,7 @@ Les jeux de données qui ont été activés pour Profil peuvent également être
 
 ### Gérer les balises du jeu de données {#manage-tags}
 
-Ajoutez des balises personnalisées pour organiser les jeux de données et améliorer les fonctionnalités de recherche, de filtrage et de tri. Dans l’onglet [!UICONTROL &#x200B; Parcourir &#x200B;] de l’espace de travail [!UICONTROL Jeux de données], sélectionnez les points de suspension d’un jeu de données à gérer, puis **[!UICONTROL Gérer les balises]** dans le menu déroulant.
+Ajoutez des balises personnalisées pour organiser les jeux de données et améliorer les fonctionnalités de recherche, de filtrage et de tri. Dans l’onglet [!UICONTROL  Parcourir ] de l’espace de travail [!UICONTROL Jeux de données], sélectionnez les points de suspension d’un jeu de données à gérer, puis **[!UICONTROL Gérer les balises]** dans le menu déroulant.
 
 ![L’onglet Parcourir de l’espace de travail Jeux de données avec les points de suspension et l’option Gérer les balises en surbrillance pour le jeu de données sélectionné.](../images/datasets/user-guide/manage-tags.png)
 
@@ -208,7 +208,7 @@ Pour plus d’informations sur la classification d’objets métier pour facilit
 
 ### Définir la politique de conservation des données {#data-retention-policy}
 
-Gérez les paramètres d’expiration et de rétention des jeux de données à l’aide du menu d’actions intégrées de l’onglet [!UICONTROL &#x200B; Parcourir &#x200B;] de l’espace de travail [!UICONTROL Jeux de données]. Vous pouvez utiliser cette fonctionnalité pour configurer la durée de conservation des données dans le lac de données et le magasin de profils. La date d’expiration dépend du moment où les données ont été ingérées dans Experience Platform et de la période de conservation que vous avez configurée.
+Gérez les paramètres d’expiration et de rétention des jeux de données à l’aide du menu d’actions intégrées de l’onglet [!UICONTROL  Parcourir ] de l’espace de travail [!UICONTROL Jeux de données]. Vous pouvez utiliser cette fonctionnalité pour configurer la durée de conservation des données dans le lac de données et le magasin de profils. La date d’expiration dépend du moment où les données ont été ingérées dans Experience Platform et de la période de conservation que vous avez configurée.
 
 >[!IMPORTANT]
 >

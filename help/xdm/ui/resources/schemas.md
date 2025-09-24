@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création et modification de schémas dans l’interface utilisateur
 description: Découvrez les bases de la création et de la modification de schémas dans l’interface utilisateur d’Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 0b03a8873f828faef78e5bf0b66c9773fc693206
+source-git-commit: 974faad835b5dc2a4d47249bb672573dfb4d54bd
 workflow-type: tm+mt
-source-wordcount: '4178'
+source-wordcount: '4873'
 ht-degree: 3%
 
 ---
@@ -27,19 +27,100 @@ Ce guide nécessite une compréhension pratique du système XDM. Reportez-vous �
 
 ## Créer un schéma {#create}
 
+Dans l’espace de travail [!UICONTROL Schémas], sélectionnez **[!UICONTROL Créer un schéma]** dans le coin supérieur droit. Le menu déroulant « Sélectionner le type de schéma » s’affiche avec des options pour les schémas [!UICONTROL standard] ou [!UICONTROL basés sur un modèle].
+
+![L’espace de travail Schémas avec l’option [!UICONTROL Créer un schéma] mise en surbrillance et le menu déroulant « Sélectionner le type de schéma » affiché](../../images/ui/resources/schemas/create-schema.png).
+
+## Créer un schéma basé sur un modèle {#create-model-based-schema}
+
+>[!AVAILABILITY]
+>
+>Data Mirror et les schémas basés sur des modèles sont disponibles pour les détenteurs de licence Adobe Journey Optimizer **Campagnes orchestrées**. Ils sont également disponibles en tant que **version limitée** pour les utilisateurs de Customer Journey Analytics, selon votre licence et l’activation des fonctionnalités. Contactez votre représentant Adobe pour obtenir l’accès.
+
+Sélectionnez **[!UICONTROL Basé sur le modèle]** pour définir des schémas de style structurés basés sur le modèle avec un contrôle précis des enregistrements. Les schémas basés sur des modèles prennent en charge l’application des clés primaires, le contrôle de version au niveau des enregistrements et les relations au niveau des schémas par le biais de clés primaires et étrangères. Ils sont également optimisés pour l’ingestion incrémentielle à l’aide de la capture de données de modification et prennent en charge plusieurs modèles de données utilisés dans les implémentations Campaign Orchestration, Data Distiller et B2B.
+
+Pour en savoir plus, consultez la présentation du schéma basé sur [Data Mirror](../../data-mirror/overview.md) ou [modèle](../../schema/model-based.md).
+
+### Créer manuellement {#create-manually}
+
+>[!AVAILABILITY]
+>
+>Le chargement de fichier DDL est uniquement disponible pour les détenteurs de licence Adobe Journey Optimizer Orchestrated Campaign. L’interface utilisateur peut avoir un aspect différent.
+
+La boîte de dialogue **[!UICONTROL Créer un schéma basé sur un modèle]** s’affiche. Vous pouvez choisir entre **[!UICONTROL Créer manuellement]** ou [**[!UICONTROL Télécharger le fichier DDL]**](#upload-ddl-file) pour définir la structure du schéma.
+
+Dans la boîte de dialogue **[!UICONTROL Créer un schéma basé sur un modèle]**, sélectionnez **[!UICONTROL Créer manuellement]** puis sélectionnez **[!UICONTROL Suivant]**.
+
+![La boîte de dialogue Créer un schéma basé sur un modèle avec l’option Créer manuellement sélectionnée et Suivant mise en surbrillance.](../../images/ui/resources/schemas/relational-dialog.png)
+
+La page **[!UICONTROL Détails du schéma basé sur un modèle]** s’affiche. Saisissez un nom d’affichage de schéma et une description facultative, puis sélectionnez **[!UICONTROL Terminer]** pour créer le schéma.
+
+![Vue des détails du schéma basé sur un modèle avec [!UICONTROL Nom d’affichage du schéma], [!UICONTROL Description] et [!UICONTROL Terminer] en surbrillance.](../../images/ui/resources/schemas/relational-details.png)
+
+L’éditeur de schémas s’ouvre avec une zone de travail vide pour définir la structure du schéma. Vous pouvez ajouter des champs comme vous le faites habituellement.
+
+#### Ajout d’un champ d’identifiant de version {#add-version-identifier}
+
+Pour activer le suivi de version et prendre en charge la capture de données de modification, vous devez désigner un champ d’identifiant de version dans votre schéma. Dans l’éditeur de schémas, sélectionnez l’icône plus (![A plus.](/help/images/icons/plus.png)) à côté du nom du schéma pour ajouter un nouveau champ.
+
+Saisissez un nom de champ tel que `updateSequence` et choisissez un type de données **[!UICONTROL DateHeure]** ou **[!UICONTROL Nombre]**.
+
+Dans le rail de droite, cochez la case **[!UICONTROL Identifiant de version]**, puis sélectionnez **[!UICONTROL Appliquer]** pour confirmer le champ.
+
+![L’éditeur de schémas avec un champ DateTime nommé `updateSequence` ajouté et la case à cocher Identifiant de version sélectionnée.](../../images/ui/resources/schemas/add-version-identifier.png)
+
+>[!IMPORTANT]
+>
+>Un schéma basé sur un modèle doit inclure un champ d’identifiant de version pour prendre en charge les mises à jour au niveau des enregistrements et modifier l’ingestion de la capture de données.
+
+Pour définir des relations, sélectionnez **[!UICONTROL Ajouter une relation]** dans l’éditeur de schémas pour créer des relations clé primaire/étrangère au niveau du schéma. Pour plus d’informations, consultez le tutoriel sur [l’ajout de relations au niveau du schéma](../../tutorials/relationship-ui.md#relationship-field).
+
+Ensuite, passez à [définir des clés primaires](../fields/identity.md#define-a-identity-field) et [ajouter des champs supplémentaires](#add-field-groups) si nécessaire. Pour obtenir des instructions sur la manière d’activer la capture de données de modification dans les sources Experience Platform, consultez le [guide d’ingestion de capture de données de modification](../../../sources/tutorials/api/change-data-capture.md).
+
 >[!NOTE]
 >
->Cette section explique comment créer manuellement un schéma dans l’interface utilisateur. Si vous ingérez des données CSV dans Experience Platform, vous pouvez utiliser des algorithmes de machine learning (ML) pour **générer un schéma à partir d’exemples de données CSV**. Ce workflow correspond à votre format de données et crée automatiquement un schéma basé sur la structure et le contenu de votre fichier CSV. Pour plus d’informations sur ce workflow[ consultez le guide de création de schéma assistée par machine learning ](../ml-assisted-schema-creation.md).
+>Une fois enregistré, le champ [!UICONTROL Type] dans la barre latérale Propriétés du schéma  indique qu’il s’agit d’un schéma [!UICONTROL basé sur un modèle]. Cela est également indiqué dans la barre latérale des détails dans la vue d’inventaire des schémas.
+>>![Zone de travail de l’éditeur de schémas présentant une structure de schéma basée sur un modèle vide avec le type basé sur le modèle mis en surbrillance.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
-Dans l’espace de travail [!UICONTROL Schémas], sélectionnez **[!UICONTROL Créer un schéma]** dans le coin supérieur droit.
+### Charger un fichier DDL {#upload-ddl-file}
 
-![Espace de travail des schémas avec l’option [!UICONTROL Créer un schéma] mise en surbrillance.](../../images/ui/resources/schemas/create-schema.png)
+>[!AVAILABILITY]
+>
+>Le chargement de fichier DDL est uniquement disponible pour les détenteurs de licence Adobe Journey Optimizer Orchestrated Campaign.
 
-La boîte de dialogue [!UICONTROL Créer un schéma] s’affiche. Dans cette boîte de dialogue, vous pouvez choisir de créer manuellement un schéma en ajoutant des champs et des groupes de champs, ou de charger un fichier CSV et d’utiliser des algorithmes ML pour générer un schéma. Sélectionnez un workflow de création de schéma dans la boîte de dialogue.
+Utilisez ce workflow pour définir le schéma en chargeant un fichier DDL. Dans la boîte de dialogue **[!UICONTROL Créer un schéma basé sur un modèle]**, sélectionnez **[!UICONTROL Charger un fichier DDL]**, puis faites glisser un fichier DDL local depuis votre système ou sélectionnez **[!UICONTROL Choisir des fichiers]**. Experience Platform valide le schéma et affiche une coche verte si le chargement du fichier réussit. Sélectionnez **[!UICONTROL Suivant]** pour confirmer le chargement.
+
+![La boîte de dialogue Créer un schéma basé sur un modèle avec [!UICONTROL Télécharger le fichier DDL] sélectionné et [!UICONTROL Suivant] mis en surbrillance.](../../images/ui/resources/schemas/upload-ddl-file.png)
+
+La boîte de dialogue [!UICONTROL Sélectionner les entités et les champs à importer] s’affiche et vous permet de prévisualiser le schéma. Vérifiez la structure du schéma et utilisez les boutons radio et les cases à cocher pour vous assurer que chaque entité dispose d’une clé primaire et d’un identifiant de version spécifiés.
+
+>[!IMPORTANT]
+>
+>La structure de la table doit contenir une **clé primaire** et un **identifiant de version**, tel qu&#39;un champ `updateSequence` de type datetime ou number.
+>
+>Pour l’ingestion de capture de données de modification, une colonne spéciale nommée `_change_request_type` de type Chaîne est également nécessaire pour activer le traitement incrémentiel. Ce champ indique le type de modification des données (par exemple, `u` (upsert) ou `d` (delete)).
+
+Bien que cela soit nécessaire lors de l’ingestion, les colonnes de contrôle telles que `_change_request_type` ne sont pas stockées dans le schéma et n’apparaissent pas dans la structure de schéma finale. Si tout semble correct, sélectionnez **[!UICONTROL Terminé]** pour créer le schéma.
+
+>[!NOTE]
+>
+>La taille de fichier maximale prise en charge pour un chargement DDL est de 10 Mo.
+
+![Vue de révision du schéma basé sur un modèle avec les champs importés affichés et [!UICONTROL Terminer] mis en surbrillance.](../../images/ui/resources/schemas/entities-and-files-to-inport.png)
+
+Le schéma s’ouvre dans l’éditeur de schémas, où vous pouvez ajuster la structure avant d’enregistrer.
+
+Ensuite, passez à [ajouter des champs supplémentaires](#add-field-groups) et [ajouter des relations supplémentaires au niveau du schéma](../../tutorials/relationship-ui.md#relationship-field) si nécessaire.
+
+Pour obtenir des instructions sur la manière d’activer la capture de données de modification dans les sources Experience Platform, consultez le [guide d’ingestion de capture de données de modification](../../../sources/tutorials/api/change-data-capture.md).
+
+## Création de schéma standard {#standard-based-creation}
+
+Si vous sélectionnez « Type de schéma standard » dans le menu déroulant « Sélectionner le type de schéma », la boîte de dialogue [!UICONTROL Créer un schéma] s’affiche. Dans cette boîte de dialogue, vous pouvez choisir de créer manuellement un schéma en ajoutant des champs et des groupes de champs, ou de charger un fichier CSV et d’utiliser des algorithmes ML pour générer un schéma. Sélectionnez un workflow de création de schéma dans la boîte de dialogue.
 
 ![La boîte de dialogue Créer un schéma avec les options de workflow et sélectionnez en surbrillance.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
-### [!BADGE Beta &#x200B;]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
+### [!BADGE Beta ]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
 
 Pour découvrir comment utiliser un algorithme ML afin de recommander une structure de schéma basée sur un fichier csv, consultez le guide de création de schéma assisté par machine learning [machine learning](../ml-assisted-schema-creation.md). Ce guide de l’interface utilisateur se concentre sur le workflow de création manuelle .
 
@@ -172,7 +253,7 @@ Une fois que vous avez ajouté un groupe de champs à un schéma, vous pouvez su
 >[!IMPORTANT]
 >
 >Sélectionner **[!UICONTROL Supprimer]** supprime le champ du groupe de champs lui-même, ce qui affecte *tous* les schémas qui utilisent ce groupe de champs.
->&#x200B;>N’utilisez pas cette option, sauf si vous souhaitez **supprimer le champ de chaque schéma qui inclut le groupe de champs**.
+>>N’utilisez pas cette option, sauf si vous souhaitez **supprimer le champ de chaque schéma qui inclut le groupe de champs**.
 
 Pour supprimer un champ du groupe de champs, sélectionnez-le dans la zone de travail et sélectionnez **[!UICONTROL Supprimer]** dans le rail de droite. Cet exemple montre le champ `taxId` du groupe **[!UICONTROL Détails démographiques]**.
 
