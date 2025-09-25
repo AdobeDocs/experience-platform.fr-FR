@@ -3,9 +3,9 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 05b9893e17db0caeab1175f35f939cb6a1dd0291
+source-git-commit: 466938163cc4f453c40da3709f556a53be334728
 workflow-type: tm+mt
-source-wordcount: '2573'
+source-wordcount: '2585'
 ht-degree: 64%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 64%
 
 Ce document présente les notes de mise à jour du SDK web d’Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Version 2.30.0 - jeudi 24 septembre 2025
+
+**Nouvelles fonctionnalités**
+
+- Ajout de la prise en charge de l’affichage des notifications push.
 
 ## Version 2.29.0 - vendredi 4 septembre 2025
 
