@@ -2,7 +2,7 @@
 title: Guide de configuration des règles de liaison du graphique d’identités
 description: Découvrez les différents types d’implémentation que vous pouvez configurer à l’aide des règles de liaison de graphique d’identités.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 54a50cd3e122df7f653c06232e0598fa878eeac5
+source-git-commit: 6af5f87c9c32212568e84edbed9f043a766870be
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 8%
@@ -133,6 +133,7 @@ Lisez cette section pour connaître les implémentations intermédiaires de [!DN
 >[!NOTE]
 >
 >Pour terminer les implémentations ci-dessous, vous devez créer les espaces de noms personnalisés suivants avec les symboles d’identité (sensibles à la casse) de :
+>
 >* `CRMID`
 >* `CChash` (il s’agit d’un espace de noms personnalisé qui représente un numéro de carte de crédit haché.)
 
@@ -228,6 +229,7 @@ CRMID: Jill, CChash: undefined
 >[!NOTE]
 >
 >Pour terminer les implémentations ci-dessous, vous devez créer des espaces de noms personnalisés avec les symboles d’identité (sensibles à la casse) de :
+>
 >* `CRMID`
 >* `CRMIDhash`
 
@@ -477,6 +479,7 @@ loginID: JanePersonal, ECID: 222
 >[!NOTE]
 >
 >Pour terminer les implémentations ci-dessous, vous devez créer des espaces de noms personnalisés avec les symboles d’identité (sensibles à la casse) de :
+>
 >* `CRMID`
 >* `loyaltyID`
 >* `thirdPartyID`

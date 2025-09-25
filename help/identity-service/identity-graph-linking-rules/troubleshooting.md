@@ -2,9 +2,9 @@
 title: Guide de dépannage des règles de liaison de graphiques d’identités
 description: Découvrez comment résoudre les problèmes courants dans les règles de liaison des graphiques d’identités.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
+source-git-commit: 0381940206d8730f2f7ae2dce849d943316b0451
 workflow-type: tm+mt
-source-wordcount: '3295'
+source-wordcount: '3451'
 ht-degree: 0%
 
 ---
@@ -146,7 +146,27 @@ Plusieurs raisons expliquent pourquoi vos fragments d’événement d’expérie
    * Par exemple, un événement d’expérience doit contenir à la fois un `_id` et un `timestamp`.
    * En outre, la `_id` doit être unique pour chaque événement (enregistrement).
 
-Dans le contexte de la priorité d’espace de noms, Profile rejettera tout événement contenant plusieurs identités avec la priorité d’espace de noms la plus élevée. Par exemple, si GAID n’est pas marqué comme un espace de noms unique et que deux identités avec un espace de noms GAID et des valeurs d’identité différentes sont entrées, Profile ne stocke aucun événement.
+Dans le contexte de la priorité d’espace de noms, Profile rejette tout événement contenant plusieurs identités avec la priorité d’espace de noms la plus élevée dans l’**événement entrant donné**. Supposons, par exemple, que vos paramètres d’identité soient configurés comme suit :
+
+| Espace de noms | Unique par graphe | Priorité |
+| --- | --- | --- |
+| CRMID | ✔️ | 1 |
+| GAID | | 2 |
+| ECID | | 3 |
+
+Pour chaque scénario, supposons que les événements d’expérience contiennent les événements suivants :
+
+**Scénario 1 : 2 GAID, 1 ECID**
+
+* Dans ce scénario, un événement d’expérience entrant contient 2 GAID et 1 ECID. Entre ces espaces de noms, GAID est configuré comme espace de noms ayant la priorité d’espace de noms la plus élevée. Toutefois, comme il existe 2 GAID, le profil **ne stocke pas** cet événement d’expérience.
+
+**Scénario 2 : 2 CRMID, 1 GAID**
+
+* Dans ce scénario, un événement d’expérience entrant contient 2 CRMID et 1 GAID. Entre ces espaces de noms, CRMID est configuré comme espace de noms ayant la priorité d’espace de noms la plus élevée. Toutefois, comme il existe 2 GAID, le profil **ne stocke pas** cet événement d’expérience.
+
+**Scénario 3 : 1 CRMID, 2 GAID**
+
+* Dans ce scénario, un événement d’expérience entrant contient 1 CRMID et 2 GAID. Entre ces espaces de noms, CRMID est configuré comme espace de noms ayant la priorité d’espace de noms la plus élevée. Comme il n’existe qu’un seul CRMID, Profile ingérera les événements d’expérience, car il n’existe qu’une seule instance de l’espace de noms avec la priorité d’espace de noms la plus élevée.
 
 **Étapes de dépannage**
 

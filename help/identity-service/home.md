@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation du service d’identités
 description: Le service d’identités d’Adobe Experience Platform vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences digitales personnelles et percutantes en temps réel.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f791940300036159ceaad11ff725eecfaa8332f4
 workflow-type: tm+mt
-source-wordcount: '1556'
+source-wordcount: '1574'
 ht-degree: 8%
 
 ---
@@ -74,6 +74,10 @@ Identity Service fournit les opérations suivantes pour accomplir sa mission :
 
 ## Liaison des identités par Identity Service
 
+>[!IMPORTANT]
+>
+>Identity Service est sensible à la casse. Par exemple, **abc<span>@gmail.com** et **ABC<span>@GMAIL.COM** sont traitées comme deux identités d’e-mail distinctes.
+
 Un lien entre deux identités est établi lorsque l’espace de noms d’identité et les valeurs d’identité correspondent.
 
 Un événement de connexion type **envoie deux identités** dans Experience Platform :
@@ -89,7 +93,7 @@ Examinez lʼexemple suivant :
    * CRMID : ABC est l’espace de noms et la valeur qui vous représente, en tant qu’utilisateur authentifié.
    * ECID : 123 est l’espace de noms et la valeur qui représentent l’utilisation de votre navigateur web sur votre ordinateur portable.
 * Ensuite, si vous vous connectez avec les mêmes informations d’identification au même site web d’e-commerce, mais que vous utilisez le navigateur web sur votre téléphone au lieu du navigateur web sur votre ordinateur portable, un nouvel ECID est enregistré dans Identity Service.
-* En arrière-plan, Identity Service traite ce nouvel événement en tant que `{CRM_ID:ABC, ECID:456}`, où CRM_ID : ABC représente votre ID client authentifié et ECID : 456 représente le navigateur web sur votre appareil mobile.
+* En arrière-plan, Identity Service traite ce nouvel événement en tant que `{CRM_ID:ABC, ECID:456}`, où CRM_ID : ABC représente votre ID client authentifié et ECID:456 le navigateur web sur votre appareil mobile.
 
 Compte tenu des scénarios ci-dessus, Identity Service établit un lien entre `{CRM_ID:ABC, ECID:123}` et `{CRM_ID:ABC, ECID:456}`. Vous obtenez un graphique d’identités dans lequel vous « possédez » trois identités : une pour l’identifiant de personne (CRMID) et deux pour les identifiants de cookie (ECID).
 
@@ -101,7 +105,7 @@ Un graphique d’identités est une carte des relations entre différents espace
 
 La vidéo suivante est destinée à étayer votre compréhension des identités et des graphiques dʼidentité.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422771?quality=12&learn=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
 ## Comprendre le rôle d’Identity Service dans l’infrastructure Experience Platform
 
