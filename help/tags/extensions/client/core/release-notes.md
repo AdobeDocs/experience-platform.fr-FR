@@ -140,7 +140,7 @@ v2.0.4
 
 * Ajout de la prise en charge des éléments de données dans plusieurs champs - La prise en charge des éléments de données a été ajoutée aux événements suivants : « Temps sur la page », « Entrée dans la fenêtre dʼaffichage », « Survol » et « Temps de lecture du média ». En plus des conditions suivantes : « Temps passé sur le site » et « Comparaison de valeur »
 * Ajout de la prise en charge du comportement par défaut pour Ctrl/Cmd + Clic et pour le clic central de la souris lors de lʼutilisation du délai de lien
-* **Le délai sur les liens pour lʼévénement Clic a été indiqué comme « nʼest plus pris en charge ».** - Vous trouverez plus d’informations sur le [blog de collecte de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) pour Adobe Experience Platform.
+* **Le délai sur les liens pour lʼévénement Clic a été indiqué comme « nʼest plus pris en charge ».** - Vous trouverez plus d’informations sur le [blog de collecte de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403?profile.language=fr) pour Adobe Experience Platform.
 
 ## 6 janvier 2021
 
