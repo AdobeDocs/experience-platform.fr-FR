@@ -4,9 +4,9 @@ title: Guide de l’interface utilisateur du schéma d’union
 type: Documentation
 description: Dans l’interface utilisateur (IU) de Adobe Experience Platform, vous pouvez facilement afficher n’importe quel schéma d’union de votre organisation et prévisualiser les champs, les identités, les relations et les schémas de contribution pour une classe spécifique. Ce guide fournit des informations détaillées sur la manière d’afficher et d’explorer les schémas d’union à l’aide de l’interface utilisateur d’Experience Platform.
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b7f5f08d5b3632a2d80c39559a5fb5116d9567f8
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1206'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 Dans l’interface utilisateur (IU) de Adobe Experience Platform, vous pouvez facilement afficher n’importe quel schéma d’union de votre organisation et prévisualiser les champs, les identités, les relations et les schémas de contribution pour une classe spécifique. Ce guide fournit des informations détaillées sur la manière d’afficher et d’explorer les schémas d’union à l’aide de l’interface utilisateur d’Experience Platform.
 
-## Commencer
+## Commencer {#getting-started}
 
 Ce guide de l’interface utilisateur nécessite une compréhension des différents services [!DNL Experience Platform] impliqués dans la gestion des données du profil client en temps réel. Avant de lire ce guide ou de travailler dans l’interface utilisateur, consultez la documentation relative aux services suivants :
 
@@ -23,7 +23,14 @@ Ce guide de l’interface utilisateur nécessite une compréhension des différe
 * [[!DNL Identity Service]](../../identity-service/home.md) : permet l’[!DNL Real-Time Customer Profile] en établissant un lien entre les identités de sources de données disparates lors de leur ingestion dans [!DNL Experience Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
 
-## Comprendre les schémas d’union
+## Comprendre les schémas d’union {#understanding-union-schemas}
+
+>[!CONTEXTUALHELP]
+>id="rtcdp_collaboration_union_schema"
+>title="Schémas d’union"
+>abstract=""
+
+<!-- The above contextual help is used in the Collaboration UI for a read more link. -->
 
 Le profil client en temps réel vous permet de créer des profils robustes et centralisés contenant des attributs de client et des événements horodatés pour chaque interaction client sur les systèmes intégrés à Adobe Experience Platform. Le format et la structure de ces données sont fournis par les schémas de modèle de données d’expérience (XDM), chaque schéma étant basé sur une classe XDM et contenant des champs compatibles avec cette classe.
 
@@ -31,13 +38,13 @@ Les schémas peuvent être créés pour plusieurs cas d’utilisation, en réfé
 
 L’utilisation des schémas d’union nécessite une compréhension approfondie des schémas XDM. Pour plus d’informations, commencez par lire les [principes de base de la composition des schémas](../../xdm/schema/composition.md).
 
-## Affichage des schémas d’union
+## Affichage des schémas d’union {#view-union-schemas}
 
-Pour accéder aux schémas d’union dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Profils]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Schéma d’union]**. L’onglet [!UICONTROL &#x200B; Schéma d’union &#x200B;] s’ouvre pour afficher le schéma d’union de la classe actuellement sélectionnée.
+Pour accéder aux schémas d’union dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Profils]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Schéma d’union]**. L’onglet [!UICONTROL  Schéma d’union ] s’ouvre pour afficher le schéma d’union de la classe actuellement sélectionnée.
 
 ![La page Schéma d’union s’affiche, avec l’onglet Profil et Schéma d’union en surbrillance.](../images/union-schema/landing.png)
 
-## Sélectionner une classe
+## Sélectionner une classe {#select-a-class}
 
 Pour afficher le schéma d’union pour une classe XDM spécifique, sélectionnez la classe dans le menu déroulant **[!UICONTROL Classe]**. Étant donné que toutes les classes n’ont pas de schémas d’union, seules les classes avec des schémas d’union (c’est-à-dire celles dont les schémas ont été activés pour Profile) sont disponibles dans la liste déroulante.
 
@@ -45,7 +52,7 @@ Une fois une classe sélectionnée, le schéma affiché est mis à jour pour ref
 
 ![Une liste déroulante contenant les classes du schéma d’union est mise en surbrillance.](../images/union-schema/class.png)
 
-## Explorer les schémas d’union
+## Explorer les schémas d’union {#explore-union-schemas}
 
 Vous pouvez explorer le schéma d’union en faisant défiler l’écran vers le haut et vers le bas pour afficher la structure complète du schéma, puis en sélectionnant un crochet droit (`>`) pour développer les champs imbriqués.
 
@@ -61,7 +68,7 @@ Pour plus d’informations sur les jeux de données, notamment sur l’affichage
 
 ![La liste des jeux de données liés au schéma est mise en surbrillance.](../images/union-schema/datasets.png)
 
-## Afficher les schémas de contribution
+## Afficher les schémas de contribution {#view-contributing-schemas}
 
 Vous pouvez également afficher les schémas spécifiques qui contribuent au schéma d’union en sélectionnant **[!UICONTROL Tous les schémas de contribution]** pour développer la liste des schémas. Selon la classe que vous avez sélectionnée et le nombre de schémas créés par votre organisation dans Experience Platform, il peut s’agir d’une liste courte contenant un seul schéma ou d’une liste longue contenant de nombreux schémas.
 
@@ -71,7 +78,7 @@ La sélection du nom d’un schéma spécifique met en surbrillance les champs d
 
 ![Le schéma de contribution sélectionné est mis en surbrillance. Les champs qui font partie du schéma de contribution restent en noir, tandis que les champs qui ne font pas partie du schéma de contribution sont grisés.](../images/union-schema/select-schema.png)
 
-## Affichage des identités
+## Affichage des identités {#view-identities}
 
 Grâce à l’interface utilisateur, vous pouvez afficher une liste des identités incluses dans le schéma d’union en sélectionnant **[!UICONTROL Identités]** pour développer la liste.
 
@@ -83,7 +90,7 @@ Le champ Identité est mis en surbrillance dans le schéma d’union et les dét
 
 ![ L’identité sélectionnée est mise en surbrillance. Des détails sur l’identité sélectionnée s’affichent dans la barre latérale droite.](../images/union-schema/select-identity.png)
 
-## Afficher les relations
+## Afficher les relations {#view-relationships}
 
 L’interface utilisateur du schéma d’union vous permet également de voir les relations qui ont été définies pour les schémas en fonction de la classe de schéma sélectionnée. La définition d’une relation est un moyen de connecter deux schémas appartenant à différentes classes afin d’obtenir des informations plus complexes sur les données client.
 
