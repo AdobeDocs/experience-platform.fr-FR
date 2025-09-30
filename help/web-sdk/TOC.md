@@ -6,10 +6,10 @@ breadcrumb-title: Guide du SDK web
 user-guide-description: Interagissez avec les services Experience Cloud via le réseau Edge.
 feature: Web SDK
 role: Developer
-source-git-commit: bed63cb9be1ffe39a538d1c3f8be9065ffb2ca28
+source-git-commit: c697d0e924545caf430382385797bde340b57d94
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 50%
+source-wordcount: '241'
+ht-degree: 46%
 
 ---
 
@@ -18,14 +18,14 @@ ht-degree: 50%
 
 * [Présentation du SDK web](home.md)
 * [Notes de mise à jour](release-notes.md)
-* d’installation de Web SDK{#install}
+* Installation de Web SDK {#install}
    * [Vue d’ensemble](install/overview.md)
    * [Installation de Web SDK à l’aide de l’extension de balise](install/extension.md)
    * [Installation de Web SDK à l’aide de la bibliothèque JavaScript](install/library.md)
    * [Installer le SDK Web à l’aide du package NPM](install/npm.md)
    * [Créer une version SDK Web personnalisée à l’aide du package NPM](install/create-custom-build.md)
-* Commandes {#commands}
-   * configuration des {#configure}
+* Commands {#commands}
+   * configure {#configure}
       * [Vue d’ensemble](commands/configure/overview.md)
       * [autoCollectPropositionInteractions](commands/configure/autocollectpropositioninteractions.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
@@ -43,6 +43,7 @@ ht-degree: 50%
       * [onBeforeLinkClickSend](commands/configure/onbeforelinkclicksend.md)
       * [orgId](commands/configure/orgid.md)
       * [prehidingStyle](commands/configure/prehidingstyle.md)
+      * [notifications push](commands/configure/pushnotifications.md)
       * [targetMigrationEnabled](commands/configure/targetmigrationenabled.md)
       * [thirdPartyCookiesEnabled](commands/configure/thirdpartycookiesenabled.md)
    * sendEvent {#sendevent}
@@ -63,6 +64,7 @@ ht-degree: 50%
    * [setConsent](commands/setconsent.md)
    * [setDebug](commands/setdebug.md)
    * [sendMediaEvent](commands/sendmediaevent.md)
+   * [sendPushSubscription](commands/sendPushSubscription.md)
    * [subscribeRulesetItems](commands/subscriberulesetitems.md)
    * [Configurer les remplacements de trains de données](commands/datastream-overrides.md)
    * [Réponses aux commandes](commands/command-responses.md)
@@ -83,19 +85,19 @@ ht-degree: 50%
       * [Accès aux jetons de réponse](personalization/adobe-target/accessing-response-tokens.md)
       * [Utiliser un ID mBox tiers](personalization/adobe-target/using-mbox-3rdpartyid.md)
       * [Comparer la bibliothèque at.js au SDK Web](personalization/adobe-target/web-sdk-atjs-comparison.md)
-      * Connexion Analytics for Target (A4T) {#a4t}
+      * Journalisation Analytics for Target (A4T) {#a4t}
          * [Vue d’ensemble](personalization/adobe-target/analytics-logging/overview.md)
          * [Journalisation côté client](personalization/adobe-target/analytics-logging/client-side.md)
          * [Connexion côté serveur](personalization/adobe-target/analytics-logging/server-side.md)
-   * Offer Decisioning {#offer-decisioning}
-      * [Aperçu](personalization/offer-decisioning/offer-decisioning-overview.md)
+   * Offer Decisioning {#offer-decisioning}
+      * [Vue d’ensemble](personalization/offer-decisioning/offer-decisioning-overview.md)
    * Adobe Journey Optimizer {#ajo}
       * [Aperçu](personalization/ajo/overview.md)
       * [Implémentation d’applications d’une seule page](personalization/ajo/web-spa-implementation.md)
       * [Configuration de la prise en charge de la messagerie web in-app dans Web SDK](personalization/web-in-app-messaging.md)
 
 * Consentement {#consent}
-   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
+   * Transparence et cadre de consentement 2.0 de l&#39;IAB {#iab-tcf}
       * [Aperçu](consent/iab-tcf/overview.md)
       * [Intégration avec des balises](consent/iab-tcf/with-tags.md)
       * [Intégration sans balises](consent/iab-tcf/without-tags.md)
