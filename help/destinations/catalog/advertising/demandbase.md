@@ -1,14 +1,14 @@
 ---
 title: Connexion Demandbase
 description: Utilisez cette destination pour activer les audiences de votre compte pour les cas d’utilisation d’Account-Based Marketing (ABM). Faites de la publicité auprès des personas et des rôles pertinents dans vos comptes cibles via Demand Side Platform (DSP) B2B de DemandBase. Les comptes cibles peuvent également être enrichis avec des données tierces DemandBase pour d’autres cas d’utilisation en aval dans le marketing et les ventes.
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions newtab=true"
-badgeB2P: label="Édition B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Édition B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 last-substantial-update: 2024-09-30T00:00:00Z
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
-source-git-commit: 08c2c7f5080f0e6afb7be53aad9f88ba0fccf923
+source-git-commit: 39012e2308af57af7c9193bdc4894f8f2e358606
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 40%
+source-wordcount: '762'
+ht-degree: 37%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 40%
 
 >[!AVAILABILITY]
 >
->&#x200B;>La fonctionnalité d’activation des audiences de compte vers la destination Demandbase est disponible pour les sociétés qui achètent les éditions [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) et [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) de Real-Time Customer Data Platform.
+>La fonctionnalité d’activation des audiences de compte vers la destination Demandbase est disponible pour les sociétés qui achètent les éditions [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) et [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) de Real-Time Customer Data Platform.
 
 Activez les profils de vos campagnes Demandbase pour le ciblage, la personnalisation et la suppression des audiences, en fonction des [audiences de compte](/help/segmentation/types/account-audiences.md) .
 
@@ -24,7 +24,7 @@ Activez les profils de vos campagnes Demandbase pour le ciblage, la personnalisa
 
 Utilisez cette destination pour activer les audiences de votre compte pour les cas d’utilisation d’Account-Based Marketing (ABM). Faites de la publicité auprès des personas et des rôles pertinents dans vos comptes cibles via Demand Side Platform (DSP) B2B de DemandBase. Les comptes cibles peuvent également être enrichis avec des données tierces DemandBase pour d’autres cas d’utilisation en aval dans le marketing et les ventes.
 
-Par exemple, utilisez le DSP ad-tech de Demandbase pour cibler des personnages ou des rôles spécifiques dans des comptes clés pour la génération de pistes au sommet de l’entonnoir, ou créez et développez des groupes d’achats. Utilisez la destination Demandbase pour explorer d&#39;autres cas d&#39;utilisation afin de cibler efficacement vos comptes.
+Par exemple, utilisez le DSP funnel ad-tech de Demandbase pour cibler des personnages ou des rôles spécifiques dans des comptes clés pour la génération de pistes de haut de gamme, ou créez et développez des groupes d’achats. Utilisez la destination Demandbase pour explorer d&#39;autres cas d&#39;utilisation afin de cibler efficacement vos comptes.
 
 Grâce à cette intégration, vous pouvez également personnaliser l’expérience du site web à l’aide de la recherche d’informations de compte en temps réel pour optimiser l’engagement.
 
@@ -61,7 +61,7 @@ Pour exporter les audiences de compte vers Demandbase, vous avez besoin des él�
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -89,10 +89,24 @@ Vous êtes maintenant prêt à activer vos audiences dans Demandbase.
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Lisez [Activer les audiences de compte](/help/destinations/ui/activate-account-audiences.md) pour obtenir des instructions sur l’activation des audiences de compte vers cette destination.
+
+### Mappages obligatoires {#mandatory-mappings}
+
+Lors de l’activation des audiences vers la destination [!DNL Demandbase], vous devez configurer les mappages des champs obligatoires suivants à l’étape de mappage :
+
+| Champ source | Champ cible | Description |
+|--------------|--------------|-------------|
+| `xdm: accountName` | `xdm: accountName` | Nom du compte |
+| `xdm: accountOrganization.domain` | `xdm: accountEmailDomain` | Domaine de messagerie de l’organisation du compte |
+| `xdm: accountKey.sourceKey` | `Identity: primaryId` | Identifiant principal du compte |
+
+![ Mappages Demandbase ](/help/destinations/assets/catalog/advertising/demandbase/demandbase-mapping.png)
+
+Ces mappages sont nécessaires au bon fonctionnement de la destination et doivent être configurés avant de pouvoir poursuivre le workflow d’activation.
 
 ## Notes supplémentaires et légendes importantes {#additional-notes}
 
