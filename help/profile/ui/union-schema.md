@@ -40,7 +40,7 @@ L’utilisation des schémas d’union nécessite une compréhension approfondie
 
 ## Affichage des schémas d’union {#view-union-schemas}
 
-Pour accéder aux schémas d’union dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Profils]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Schéma d’union]**. L’onglet [!UICONTROL  Schéma d’union ] s’ouvre pour afficher le schéma d’union de la classe actuellement sélectionnée.
+Pour accéder aux schémas d’union dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Profils]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Schéma d’union]**. L’onglet [!UICONTROL &#x200B; Schéma d’union &#x200B;] s’ouvre pour afficher le schéma d’union de la classe actuellement sélectionnée.
 
 ![La page Schéma d’union s’affiche, avec l’onglet Profil et Schéma d’union en surbrillance.](../images/union-schema/landing.png)
 
