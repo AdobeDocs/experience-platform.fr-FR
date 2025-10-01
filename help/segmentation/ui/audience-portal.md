@@ -70,7 +70,7 @@ Une icône de points de suspension se trouve à côté de chaque audience. Cette
 | [!UICONTROL Publier] | Chargement personnalisé, service de segmentation | Publie l’audience sélectionnée. Pour plus d’informations sur la gestion de l’état du cycle de vie, consultez la section [état du cycle de vie) du FAQ sur la segmentation](../faq.md#lifecycle-states). |
 | [!UICONTROL Désactiver] | Chargement personnalisé, service de segmentation | Désactive l’audience sélectionnée. Notez que pour désactiver une audience, celle-ci **ne peut pas** être activée dans **n’importe quelle** destination (y compris les destinations hors Experience Platform) ou faire partie de **n’importe quelle** autre audience. Pour plus d’informations sur la gestion de l’état du cycle de vie, consultez la section [état du cycle de vie) du FAQ sur la segmentation](../faq.md#lifecycle-states). |
 | [!UICONTROL Supprimer] | Composition d’audiences, chargement personnalisé, Segmentation Service | Supprime l’audience sélectionnée. Les audiences utilisées dans des destinations en aval ou qui sont des dépendances dans d’autres audiences **ne peuvent pas** peuvent pas être supprimées. Pour plus d’informations sur la suppression d’audience, consultez la [FAQ sur la segmentation](../faq.md#lifecycle-states). |
-| [!UICONTROL Ajouter au package ] | Composition d’audiences, chargement personnalisé, Segmentation Service | Déplace l’audience entre les sandbox. Pour plus d’informations sur cette fonctionnalité, veuillez lire le [guide d’utilisation des sandbox](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL Ajouter au package &#x200B;] | Composition d’audiences, chargement personnalisé, Segmentation Service | Déplace l’audience entre les sandbox. Pour plus d’informations sur cette fonctionnalité, veuillez lire le [guide d’utilisation des sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!IMPORTANT]
 >
@@ -119,7 +119,7 @@ Si la répartition est sélectionnée, l’affichage présente un graphique à b
 | État | Description |
 | ------ | ----------- |
 | [!UICONTROL Réalisé] | Nombre de profils qui **ont rempli les critères** pour l’audience au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
-| [!UICONTROL Existant] | Nombre de profils qui **sont restés** dans l’audience au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. Ce champ est **calculé** et n’apparaît pas dans l’objet [`segmentMembership`. ](../../xdm/field-groups/profile/segmentation.md). |
+| [!UICONTROL Existant] | Nombre de profils qui **sont restés** dans l’audience au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. Ce champ est **calculé** et n’apparaît pas dans l’objet [`segmentMembership`. &#x200B;](../../xdm/field-groups/profile/segmentation.md). |
 | [!UICONTROL Sortant] | Nombre de profils qui **ont quitté** l’audience au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
 
 Après avoir sélectionné les champs à afficher, vous pouvez également redimensionner la largeur des colonnes affichées. Pour ce faire, faites glisser la zone entre les colonnes ou sélectionnez la ![icône de flèche](/help/images/icons/chevron-down.png) de la colonne à redimensionner, suivie de **[!UICONTROL Redimensionner la colonne]**.
@@ -472,7 +472,7 @@ Une fois que les détails sont corrects, sélectionnez **[!UICONTROL Terminer]**
 >
 >En outre, si votre audience générée en externe contient des informations sensibles et/ou liées aux soins de santé, vous **devez** appliquer les libellés d’utilisation des données nécessaires avant de l’activer vers une destination. Étant donné que les variables des audiences générées en externe sont stockées dans le lac de données plutôt que dans le profil client en temps réel, vous ne devez **pas** inclure les données de consentement dans votre fichier CSV.
 >
->Pour plus d’informations sur l’application de libellés d’utilisation des données, consultez la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). Pour en savoir plus sur les libellés d’utilisation des données dans Experience Platform en général, consultez la [ présentation des libellés d’utilisation des données ](../../data-governance/labels/overview.md). Pour en savoir plus sur le fonctionnement du consentement dans les audiences générées en externe, veuillez lire la [FAQ sur les audiences](../faq.md#consent).
+>Pour plus d’informations sur l’application de libellés d’utilisation des données, consultez la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). Pour en savoir plus sur les libellés d’utilisation des données dans Experience Platform en général, consultez la [&#x200B; présentation des libellés d’utilisation des données &#x200B;](../../data-governance/labels/overview.md). Pour en savoir plus sur le fonctionnement du consentement dans les audiences générées en externe, veuillez lire la [FAQ sur les audiences](../faq.md#consent).
 
 ## Étapes suivantes
 
