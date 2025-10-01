@@ -79,7 +79,7 @@ Pour authentifier votre instance [!DNL Snowflake] avec Experience Platform, vous
 
 Pour trouver l’identifiant de votre compte, procédez comme suit :
 
-* Accédez à votre compte dans le tableau de bord de l’interface utilisateur de l’application [[!DNL Snowflake] ](https://app.snowflake.com/).
+* Accédez à votre compte dans le tableau de bord de l’interface utilisateur de l’application [[!DNL Snowflake] &#x200B;](https://app.snowflake.com/).
 * Dans le volet de navigation de gauche, sélectionnez **[!DNL Accounts]**, puis **[!DNL Active Accounts]** dans l’en-tête.
 * Sélectionnez ensuite l’icône d’information, puis sélectionnez et copiez le nom de domaine de l’URL active.
 

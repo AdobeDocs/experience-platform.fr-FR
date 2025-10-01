@@ -17,7 +17,7 @@ ht-degree: 20%
 >
 > La source de diffusion en continu [!DNL Snowflake] est disponible dans l’API pour les utilisateurs qui ont acheté Real-Time Customer Data Platform Ultimate.
 
-Ce tutoriel décrit les étapes à suivre pour connecter et diffuser des données de votre compte [!DNL Snowflake] vers Adobe Experience Platform à l’aide de l’API [[!DNL Flow Service] ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+Ce tutoriel décrit les étapes à suivre pour connecter et diffuser des données de votre compte [!DNL Snowflake] vers Adobe Experience Platform à l’aide de l’API [[!DNL Flow Service] &#x200B;](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Prise en main
 
