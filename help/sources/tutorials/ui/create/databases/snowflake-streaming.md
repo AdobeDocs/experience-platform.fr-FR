@@ -2,16 +2,16 @@
 title: Diffuser des données de votre base de données Snowflake vers Experience Platform à l’aide de l’interface utilisateur
 description: Découvrez comment diffuser des données de votre base de données Snowflake vers Experience Platform
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: 04a1cecbacdaf0b701d3ef18d03497973a8f3263
+source-git-commit: 0d646136da2c508fe7ce99a15787ee15c5921a6c
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1451'
 ht-degree: 16%
 
 ---
 
 # Diffuser des données de la base de données [!DNL Snowflake] vers Experience Platform à l’aide de l’interface utilisateur
 
-Découvrez comment utiliser l’interface utilisateur pour diffuser des données de votre base de données [!DNL Snowflake] vers Adobe Experience Platform en suivant ce guide.
+Lisez ce guide pour savoir comment diffuser des données de votre base de données [!DNL Snowflake] vers Experience Platform à l’aide de l’espace de travail des sources dans l’interface utilisateur.
 
 ## Commencer
 
@@ -30,7 +30,7 @@ Lisez le guide sur la [configuration requise pour les données  [!DNL Snowflake]
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Dans la catégorie *Bases de données*, sélectionnez **[!DNL Snowflake Streaming]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
+Dans la catégorie *Bases de données*, sélectionnez **[!DNL Snowflake Streaming]**, puis **[!UICONTROL Configurer]**.
 
 >[!TIP]
 >
@@ -40,37 +40,33 @@ Dans la catégorie *Bases de données*, sélectionnez **[!DNL Snowflake Streamin
 
 La page **[!UICONTROL Connecter le compte de streaming Snowflake]** s’affiche. Sur cette page, vous pouvez utiliser des informations d’identification nouvelles ou existantes.
 
->[!BEGINTABS]
+### Créer un nouveau compte
 
->[!TAB Créer un compte]
-
-Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** et indiquez un nom, une description facultative et vos informations d’identification.
-
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** et indiquez un nom et une description facultative pour votre compte.
 
 ![Nouvelle interface de création de compte du workflow des sources.](../../../../images/tutorials/create/snowflake-streaming/new.png)
 
-| Informations d’identification | Description |
-| --- | --- |
-| Compte | Nom de votre compte [!DNL Snowflake]. Pour connaître les conventions relatives aux noms de compte, consultez le [[!DNL Snowflake Streaming] guide d’authentification](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials). |
-| Entrepôt de données | Nom de votre entrepôt de [!DNL Snowflake]. Les entrepôts gèrent l’exécution des requêtes dans [!DNL Snowflake]. Chaque entrepôt de [!DNL Snowflake] est indépendant les uns des autres et doit être accessible individuellement pour importer des données dans Experience Platform. |
-| Base de données | Nom de la base de données [!DNL Snowflake]. La base de données contient les données que vous souhaitez importer dans Experience Platform. |
-| Schéma | (Facultatif) Schéma de base de données associé à votre compte [!DNL Snowflake]. |
-| Nom d’utilisateur | Nom d’utilisateur de votre compte [!DNL Snowflake]. |
-| Mot de passe | Mot de passe de votre compte [!DNL Snowflake]. |
-| Rôle | (Facultatif) Rôle défini sur mesure pouvant être attribué à un utilisateur ou une utilisatrice, pour une connexion donnée. Si elle n’est pas fournie, cette valeur est `public` par défaut. |
+>[!BEGINTABS]
 
-Pour plus d’informations sur la création de comptes, consultez la section sur la [configuration des paramètres de rôle](../../../../connectors/databases/snowflake-streaming.md#configure-role-settings) dans la présentation de la [!DNL Snowflake Streaming].
+>[!TAB  Authentification de base ]
 
->[!TAB Utiliser un compte existant]
+Pour utiliser l’[!UICONTROL authentification de base], sélectionnez **[!UICONTROL Authentification de base pour Snowflake]** et indiquez les informations d’identification de votre compte [!DNL Snowflake]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** et patientez quelques instants le temps que la connexion s’établisse.
 
-Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]** puis sélectionnez le compte de votre choix dans le catalogue des comptes existants.
+Lisez la présentation de la [!DNL Snowflake Streaming] pour plus d’informations sur [la collecte des informations d’identification requises](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials).
 
-Cliquez sur **[!UICONTROL Suivant]** pour continuer.
+![Nouvelle interface de compte dans le workflow des sources, avec authentification de base sélectionnée.](../../../../images/tutorials/create/snowflake-streaming/basic-auth.png)
 
-![Page de sélection du compte existant du catalogue de sources.](../../../../images/tutorials/create/snowflake-streaming/existing.png)
+>[!TAB Authentification KeyPair]
+
+Pour utiliser l’[!UICONTROL authentification KeyPair], sélectionnez **[!UICONTROL Authentification KeyPair pour Snowflake]** et indiquez les informations d’identification de votre compte [!DNL Snowflake]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** et patientez quelques instants le temps que la connexion s’établisse.
+
+Lisez la présentation de la [!DNL Snowflake Streaming] pour plus d’informations sur [la collecte des informations d’identification requises](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials).
+
+![Nouvelle interface de compte dans le workflow des sources, authentification par paire de clés sélectionnée](../../../../images/tutorials/create/snowflake-streaming/key-pair.png)
 
 >[!ENDTABS]
+
+Pour utiliser un compte existant, choisissez **[!UICONTROL Compte existant]**, sélectionnez votre compte dans la liste, puis sélectionnez **[!UICONTROL Suivant]**.
 
 ## Sélectionner les données {#select-data}
 
@@ -83,8 +79,6 @@ Cliquez sur **[!UICONTROL Suivant]** pour continuer.
 L’étape [!UICONTROL Sélectionner des données] apparaît. Au cours de cette étape, vous devez sélectionner les données à importer dans Experience Platform, configurer les horodatages et les fuseaux horaires, et fournir un exemple de fichier de données source pour l’ingestion de données brutes.
 
 Utilisez le répertoire de la base de données situé à gauche de l&#39;écran et sélectionnez la table à importer dans Experience Platform.
-
-![Interface de sélection des données avec une table de base de données sélectionnée.](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
 
 Sélectionnez ensuite le type de colonne date et heure de votre tableau. Vous pouvez choisir entre deux types de colonnes d’horodatage : `TIMESTAMP_NTZ` ou `TIMESTAMP_LTZ`. Si vous sélectionnez un type de colonne de `TIMESTAMP_NTZ`, vous devez également fournir un fuseau horaire. Vos colonnes doivent avoir une contrainte non nulle. Pour plus d’informations, consultez la section sur [les limites et les questions fréquentes](../../../../connectors/databases/snowflake-streaming.md#limitations-and-frequently-asked-questions).
 
@@ -106,15 +100,13 @@ Ensuite, vous devez fournir des informations sur votre jeu de données et votre 
 
 ### Détails du jeu de données {#dataset-details}
 
-Un jeu de données est une structure de stockage et de gestion pour une collection de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les données correctement ingérées par Experience Platform sont conservées sous forme de jeux de données dans le lac de données. Au cours de cette étape, vous pouvez créer un jeu de données ou utiliser un jeu de données existant.
+Un jeu de données est une structure de stockage et de gestion pour une collection de données, généralement sous la forme d’une table, qui contient un schéma (des colonnes) et des champs (des lignes). Les données correctement ingérées par Experience Platform sont conservées sous forme de jeux de données dans le lac de données. Au cours de cette étape, vous pouvez créer un jeu de données ou utiliser un jeu de données existant.
 
->[!BEGINTABS]
+Si vous disposez d’un jeu de données existant, sélectionnez **[!UICONTROL Jeu de données existant]** puis utilisez l’option **[!UICONTROL Recherche avancée]** pour afficher une fenêtre de tous les jeux de données de votre organisation, y compris leurs détails respectifs, par exemple s’ils sont activés pour l’ingestion dans le profil client en temps réel.
 
->[!TAB Utiliser un nouveau jeu de données]
+![Interface de sélection de jeu de données existante.](../../../../images/tutorials/create/snowflake-streaming/dataset.png)
 
 Pour utiliser un nouveau jeu de données, sélectionnez **[!UICONTROL Nouveau jeu de données]**, puis fournissez un nom et une description facultative pour votre jeu de données. Vous devez également sélectionner un schéma de modèle de données d’expérience (XDM) auquel votre jeu de données adhère.
-
-![Nouvelle interface de sélection de jeu de données.](../../../../images/tutorials/create/snowflake-streaming/new-dataset.png)
 
 | Détails du nouveau jeu de données | Description |
 | --- | --- |
@@ -122,34 +114,17 @@ Pour utiliser un nouveau jeu de données, sélectionnez **[!UICONTROL Nouveau je
 | Description | (Facultatif) Aperçu du nouveau jeu de données. |
 | Schéma | Liste déroulante des schémas qui existent dans votre organisation. Vous pouvez également créer votre propre schéma avant le processus de configuration de la source. Pour plus d’informations, consultez le guide sur la [création d’un schéma XDM dans l’interface utilisateur](../../../../../xdm/tutorials/create-schema-ui.md). |
 
->[!TAB Utiliser un jeu de données existant]
-
-Si vous disposez déjà d’un jeu de données, sélectionnez **[!UICONTROL Jeu de données existant]** puis utilisez l’option **[!UICONTROL Recherche avancée]** pour afficher une fenêtre de tous les jeux de données de votre organisation, y compris leurs détails respectifs, par exemple s’ils sont activés pour l’ingestion dans le profil client en temps réel.
-
-![Interface de sélection de jeu de données existante.](../../../../images/tutorials/create/snowflake-streaming/existing-dataset.png)
-
->[!ENDTABS]
-
-+++Sélectionnez pour connaître les étapes d’activation de l’ingestion de profil, des diagnostics d’erreur et de l’ingestion partielle.
-
-Si votre jeu de données est activé pour le profil client en temps réel, au cours de cette étape, vous pouvez activer/désactiver le **[!UICONTROL jeu de données de profil]** pour activer vos données pour l’ingestion de profil. Vous pouvez également utiliser cette étape pour activer les **[!UICONTROL diagnostics d’erreur]** et **[!UICONTROL ingestion partielle]**.
-
-* **[!UICONTROL Diagnostics d’erreur]** : sélectionnez **[!UICONTROL Diagnostics d’erreur]** pour demander à la source de générer des diagnostics d’erreur que vous pourrez référencer ultérieurement lors de la surveillance de l’activité du jeu de données et du statut du flux de données.
-* **[!UICONTROL Ingestion partielle]** : l’ingestion par lots partielle est la possibilité d’ingérer des données contenant des erreurs, jusqu’à un certain seuil configurable. Cette fonctionnalité vous permet d’ingérer toutes vos données exactes dans Experience Platform, tandis que toutes vos données incorrectes sont traitées par lots séparément avec des informations sur les raisons de leur non-validité.
-
-+++
-
 ### Détails du flux de données {#dataflow-details}
 
 Une fois votre jeu de données configuré, vous devez fournir des détails sur votre flux de données, y compris un nom, une description facultative et des configurations d’alerte.
 
-![Étape de configuration des détails du flux de données.](../../../../images/tutorials/create/snowflake-streaming/dataflow-details.png)
+![Étape de configuration des détails du flux de données.](../../../../images/tutorials/create/snowflake-streaming/dataflow-detail.png)
 
 | Configurations du flux de données | Description |
 | --- | --- |
 | Nom du flux de données | Nom du flux de données.  Par défaut, le nom du fichier importé est utilisé. |
 | Description | (Facultatif) Brève description de votre flux de données. |
-| Alertes | Experience Platform peut générer des alertes basées sur des événements auxquelles les utilisateurs peuvent s’abonner. Ces options nécessitent un flux de données en cours d’exécution pour les déclencher. Pour plus d’informations, reportez-vous à la présentation des alertes [&#128279;](../../alerts.md) <ul><li>**Début d’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification lorsque l’exécution du flux de données commence.</li><li>**Succès de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si votre flux de données se termine sans erreur.</li><li>**Échec de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si l’exécution de votre flux de données se termine par des erreurs.</li></ul> |
+| Alertes | Experience Platform peut générer des alertes basées sur des événements auxquelles les utilisateurs peuvent s’abonner. Ces options nécessitent un flux de données en cours d’exécution pour les déclencher. Pour plus d’informations, reportez-vous à la présentation des alertes [](../../alerts.md) <ul><li>**Début d’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification lorsque l’exécution du flux de données commence.</li><li>**Succès de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si votre flux de données se termine sans erreur.</li><li>**Échec de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si l’exécution de votre flux de données se termine par des erreurs.</li></ul> |
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]** pour continuer.
 

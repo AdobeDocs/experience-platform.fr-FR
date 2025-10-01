@@ -2,12 +2,11 @@
 title: Présentation Du Connecteur Source De Diffusion En Continu Snowflake
 description: Découvrez comment créer une connexion source et un flux de données pour ingérer les données de diffusion en continu de votre instance Snowflake vers Adobe Experience Platform
 badgeUltimate: label="Ultimate" type="Positive"
-last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: 0d646136da2c508fe7ce99a15787ee15c5921a6c
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 11%
+source-wordcount: '1390'
+ht-degree: 6%
 
 ---
 
@@ -19,8 +18,7 @@ ht-degree: 11%
 >
 >* Vous pouvez désormais utiliser la source de diffusion en continu [!DNL Snowflake] lors de l’exécution de Adobe Experience Platform sur Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](../../../landing/multi-cloud.md).
 
-
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
 Experience Platform prend en charge la diffusion en continu de données à partir d’une base de données [!DNL Snowflake].
 
@@ -34,15 +32,19 @@ En utilisant [!DNL Kafka Connect], la source de diffusion en continu [!DNL Snowf
 
 La section suivante décrit les étapes préalables à suivre avant de pouvoir diffuser des données de votre base de données [!DNL Snowflake] vers Experience Platform :
 
-### Mise à jour de la liste autorisée d’adresses IP
+### Liste autorisée d’adresses IP
 
-Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page [Liste autorisée d’adresses IP](../../ip-address-allow-list.md#ip-address-allow-list-for-streaming-sources) pour plus d’informations.
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
 
 La documentation ci-dessous fournit des informations sur la connexion de [!DNL Amazon Redshift] à Experience Platform à l’aide d’API ou de l’interface utilisateur :
 
 ### Collecter les informations d’identification requises
 
 Pour que [!DNL Flow Service] puissiez vous connecter à [!DNL Snowflake], vous devez fournir les propriétés de connexion suivantes :
+
+>[!BEGINTABS]
+
+>[!TAB Authentification de base]
 
 | Informations d’identification | Description |
 | --- | --- |
@@ -54,7 +56,90 @@ Pour que [!DNL Flow Service] puissiez vous connecter à [!DNL Snowflake], vous d
 | `role` | (Facultatif) Rôle personnalisé défini qui peut être attribué à un utilisateur, pour une connexion donnée. Si elle n’est pas fournie, cette valeur est `public` par défaut. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Snowflake] est `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
 
-{style="table-layout:auto"}
+>[!TAB Authentification par paire de clés]
+
+Pour utiliser l’authentification par paire de clés, vous devez générer une paire de clés RSA 2 048 bits, puis fournir les valeurs suivantes lors de la création d’un compte pour votre source [!DNL Snowflake].
+
+| Informations d’identification | Description |
+| --- | --- |
+| `account` | Un nom de compte identifie de manière unique un compte de votre organisation. Dans ce cas, vous devez identifier de manière unique un compte dans différentes organisations [!DNL Snowflake]. Pour ce faire, vous devez ajouter le nom de votre organisation au nom du compte. Par exemple : `orgname-account_name`. Lisez le guide sur la [récupération de l’identifiant  [!DNL Snowflake]  compte](./snowflake.md#retrieve-your-account-identifier) pour obtenir des conseils supplémentaires. Pour plus d’informations, consultez la [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `username` | Nom d’utilisateur de votre compte [!DNL Snowflake]. |
+| `privateKey` | Clé privée [!DNL Base64-]encodée) de votre compte [!DNL Snowflake]. Vous pouvez générer des clés privées chiffrées ou non chiffrées. Si vous utilisez une clé privée chiffrée, vous devez également fournir une phrase secrète de clé privée lors de l’authentification auprès d’Experience Platform. Pour plus d’informations, consultez le guide sur la [récupération  [!DNL Snowflake]  votre clé privée](./snowflake.md). |
+| `passphrase` | La phrase secrète est une couche de sécurité supplémentaire que vous devez utiliser lors de l’authentification avec une clé privée chiffrée. Vous n’êtes pas tenu de fournir la phrase secrète si vous utilisez une clé privée non chiffrée. |
+| `database` | Base de données [!DNL Snowflake] contenant les données à ingérer dans Experience Platform. |
+| `warehouse` | L’entrepôt de [!DNL Snowflake] gère le processus d’exécution de la requête pour l’application. Chaque entrepôt de [!DNL Snowflake] est indépendant les uns des autres et doit être accessible individuellement lors de l’importation de données dans Experience Platform. |
+
+Pour plus d’informations sur ces valeurs, consultez le [[!DNL Snowflake] guide d’authentification par paire de clés](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!ENDTABS]
+
+### Récupérer l’identifiant de votre compte {#retrieve-your-account-identifier}
+
+Pour authentifier votre instance [!DNL Snowflake] avec Experience Platform, vous devez obtenir votre identifiant de compte depuis le tableau de bord de l’interface utilisateur [!DNL Snowflake].
+
+Pour trouver l’identifiant de votre compte, procédez comme suit :
+
+* Accédez à votre compte dans le tableau de bord de l’interface utilisateur de l’application [[!DNL Snowflake] ](https://app.snowflake.com/).
+* Dans le volet de navigation de gauche, sélectionnez **[!DNL Accounts]**, puis **[!DNL Active Accounts]** dans l’en-tête.
+* Sélectionnez ensuite l’icône d’information, puis sélectionnez et copiez le nom de domaine de l’URL active.
+
+### Récupérer votre clé privée {#retrieve-your-private-key}
+
+Si vous prévoyez d’utiliser l’authentification par paire de clés pour votre connexion [!DNL Snowflake], vous devez générer une clé privée avant de vous connecter à Experience Platform.
+
+>[!BEGINTABS]
+
+>[!TAB Créer une clé privée chiffrée]
+
+Pour générer votre clé privée [!DNL Snowflake] chiffrée, exécutez la commande suivante sur votre terminal :
+
+```shell
+openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 des3 -inform PEM -out rsa_key.p8
+```
+
+En cas de réussite, vous devriez recevoir votre clé privée au format PEM.
+
+```shell
+-----BEGIN ENCRYPTED PRIVATE KEY-----
+MIIE6T...
+-----END ENCRYPTED PRIVATE KEY-----
+```
+
+>[!TAB Créer une clé privée non chiffrée]
+
+Pour générer votre clé privée [!DNL Snowflake] non chiffrée, exécutez la commande suivante sur votre terminal :
+
+```shell
+openssl genrsa 2048 | openssl pkcs8 -topk8 -inform PEM -out rsa_key.p8 -nocrypt
+```
+
+En cas de réussite, vous devriez recevoir votre clé privée au format PEM.
+
+```shell
+-----BEGIN PRIVATE KEY-----
+MIIE6T...
+-----END PRIVATE KEY-----
+```
+
+>[!ENDTABS]
+
+Après avoir généré votre clé privée, codez-la directement en [!DNL Base64] sans apporter de modifications à son format ou à son contenu. Avant l’encodage, assurez-vous qu’il n’y a pas d’espaces ou de lignes vides supplémentaires (y compris les nouvelles lignes de fin) à la fin de la clé privée.
+
+### Vérifier les configurations
+
+Avant de pouvoir créer une connexion source pour vos données [!DNL Snowflake], vous devez également vous assurer que les configurations suivantes sont respectées :
+
+* L’entrepôt par défaut affecté à un utilisateur donné doit être le même que celui que vous saisissez lors de l’authentification auprès d’Experience Platform.
+* Le rôle par défaut attribué à un utilisateur donné doit avoir accès à la même base de données que celle que vous avez saisie lors de l’authentification auprès d’Experience Platform.
+
+Pour vérifier votre rôle et votre entrepôt :
+
+* Sélectionnez **[!DNL Admin]** dans le volet de navigation de gauche, puis sélectionnez **[!DNL Users & Roles]**.
+* Sélectionnez l’utilisateur approprié, puis sélectionnez les points de suspension (`...`) dans le coin supérieur droit.
+* Dans la fenêtre de [!DNL Edit user] qui s’affiche, accédez à [!DNL Default Role] pour afficher le rôle associé à l’utilisateur donné.
+* Dans la même fenêtre, accédez à [!DNL Default Warehouse] pour afficher l&#39;entrepôt associé à l&#39;utilisateur donné.
+
+Une fois le codage réussi, vous pouvez utiliser cette clé privée codée en [!DNL Base64] sur Experience Platform pour authentifier votre compte [!DNL Snowflake].
 
 ### Configurer les paramètres de rôle {#configure-role-settings}
 

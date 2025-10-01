@@ -3,9 +3,9 @@ title: Connexion de votre compte de streaming Snowflake à Adobe Experience Plat
 description: Découvrez comment connecter Adobe Experience Platform à Snowflake Streaming à l’aide de l’API Flow Service.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: a4a464f1f3b61311754a39f2a6e6a4ef21af3ab0
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '874'
 ht-degree: 20%
 
 ---
@@ -26,11 +26,13 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
 * [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Pour la configuration préalable et des informations sur la source de diffusion en continu [!DNL Snowflake]. Veuillez lire la [[!DNL Snowflake] présentation de la source de streaming](../../../../connectors/databases/snowflake-streaming.md).
-
 ### Utilisation des API Experience Platform
 
 Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Experience Platform, consultez le guide [Prise en main des API Experience Platform](../../../../../landing/api-guide.md).
+
+### Collecter les informations d’identification requises
+
+Lisez la [[!DNL Snowflake] présentation](../../../../connectors/databases/snowflake-streaming.md#prerequisites) pour plus d’informations sur l’authentification.
 
 ## Créer une connexion de base {#create-a-base-connection}
 
