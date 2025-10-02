@@ -3,9 +3,9 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Guide de l’interface utilisateur du profil client en temps réel
 description: Le profil client en temps réel offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec le profil client en temps réel dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: e4f303f9de2d36717288d2119458c8df95fc01bf
+source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
 workflow-type: tm+mt
-source-wordcount: '1990'
+source-wordcount: '2004'
 ht-degree: 5%
 
 ---
@@ -38,7 +38,7 @@ Pour en savoir plus, consultez le [guide du tableau de bord des profils](../../d
 
 ![Le tableau de bord du profil s’affiche.](../../dashboards/images/profiles/dashboard-overview.png)
 
-## Onglet [!UICONTROL &#x200B; Parcourir &#x200B;]
+## Onglet [!UICONTROL  Parcourir ]
 
 Sur l’onglet **[!UICONTROL Parcourir]**, vous pouvez afficher vos profils dans une vue **carte** ou **graphique** en cliquant sur le bouton (bascule).
 
@@ -127,6 +127,8 @@ La section **[!UICONTROL Informations sur le profil client]** présente brièvem
 
 #### Widgets d’informations d’IA {#ai-insight-widgets}
 
+[!BADGE Alpha ]{type=Informative} Cette fonctionnalité est actuellement disponible dans Alpha.
+
 La section **[!UICONTROL Widgets AI insight]** affiche les widgets générés par l’IA. Ces widgets fournissent des informations rapides sur le profil, en fonction des données du profil, y compris les données démographiques (telles que l’âge, le sexe ou le lieu), les comportements d’utilisateur (tels que l’historique des achats, l’activité du site web ou l’engagement sur les médias sociaux), ainsi que les données psychographiques (tels que les intérêts, les préférences ou les choix de style de vie). Tous les widgets d’IA utilisent des données qui **existent déjà** dans le profil.
 
 ![La section Widgets AI insight s’affiche.](../images/user-guide/ai-insight-widgets.png)
@@ -144,6 +146,8 @@ Vous pouvez également choisir d’afficher ou non les noms des attributs sous f
 ![Le bouton (bascule) Afficher les noms d’affichage est mis en surbrillance.](../images/user-guide/show-display-names.png)
 
 #### Widgets classés automatiquement {#auto-classified-widgets}
+
+[!BADGE Alpha ]{type=Informative} Cette fonctionnalité est actuellement disponible dans Alpha.
 
 La section **[!UICONTROL Widgets auto-classés]** affiche les widgets qui exploitent le schéma d’union pour déterminer les groupes de champs sources auxquels appartient un attribut, fournissant ainsi un contexte plus clair sur l’origine des données. Vous pouvez utiliser la barre de recherche pour rechercher plus facilement des mots-clés dans vos widgets.
 
