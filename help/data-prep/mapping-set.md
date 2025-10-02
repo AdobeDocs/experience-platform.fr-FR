@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation des jeux de mappages
 description: Découvrez comment utiliser les jeux de mappages avec la préparation de données Adobe Experience Platform.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb0366284f1850bd9742b18d95608f901319f642
 workflow-type: tm+mt
-source-wordcount: '960'
-ht-degree: 95%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -82,6 +82,10 @@ Le fichier JSON suivant est un exemple de jeu de mappages type :
 ## Configuration des sources de mappage
 
 Dans un mappage, la valeur `source` peut être un champ, une expression ou une valeur statique. En fonction du type de source donné, la valeur peut être extraite de différentes manières.
+
+>[!TIP]
+>
+>Patientez jusqu’à 10 minutes après l’enregistrement de vos mappages avant de démarrer l’ingestion des données pour vous assurer qu’ils sont entièrement enregistrés.
 
 ### Champ dans les données en colonnes
 
