@@ -3,10 +3,10 @@ keywords: destinations publicitaires;destinations;destinations platform
 title: Présentation des destinations publicitaires
 description: Connectez Adobe Experience Platform à une plateforme publicitaire tierce (par exemple, DSP, réseau publicitaire, SSP) et partagez des audiences pseudonymes avec ces plateformes.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: a0c1ddc5bcdd8b89e7605491441d56199f301e9e
+source-git-commit: d8a4d292747f8ea29709eb13c3344baadba1b6f5
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 45%
+source-wordcount: '283'
+ht-degree: 44%
 
 ---
 
@@ -37,16 +37,16 @@ Pour comprendre la différence entre les connexions et les extensions, consultez
 * [Connexion Google Display &amp; Video 360](google-dv360.md)
 * [Connexion Google Ads](google-ads-destination.md)
 * [Connexion Google Ad Manager](google-ad-manager.md)
-* [(Version bêta) Connexion à Google Ad Manager 360](google-ad-manager-360-connection.md)
+* [(Beta) Connexion à Google Ad Manager 360](google-ad-manager-360-connection.md)
 * [Connexion à Google Customer Match](google-customer-match.md)
 * [Connexion par lots Magnite](magnite-batch.md)
 * [Connexion en temps réel en flux continu Magnite](magnite-streaming.md)
 * [Connexion Microsoft Bing](bing.md)
 * [Connexion Liste des Clients Pinterest](pinterest.md)
 * [Destination de connexion PubMatic](pubmatic.md)
-* [(Version bêta) Connexion à Snapchat Ads](snap-inc.md)
+* [(Beta) Connexion à Snapchat Ads](snap-inc.md)
 * [Connexion à The Trade Desk](tradedesk.md)
-* [(Version bêta) Connexion CRM à The Trade Desk](tradedesk-emails.md)
+* [(Beta) Connexion CRM à The Trade Desk](tradedesk-emails.md)
 * [Yahoo/Verizon DataX](datax.md)
 
 ### Extensions
@@ -59,7 +59,6 @@ Pour comprendre la différence entre les connexions et les extensions, consultez
 * [Extension DoubleClick Floodlight](doubleclick-floodlight.md)
 * [Extension Pixel Facebook](facebook-pixel.md)
 * [Extension Flashtalking OneTag](flashtalking.md)
-* [Extension Google Ads](google-ads-extension.md)
 * [Extension Google gtag](gtag-advertising.md)
 * [Extension LinkedIn Insight Tag](linkedin.md)
 * [Extension Pinterest Conversion Tracking](pinterest-extension.md)

@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: b71c6ff74fd173a4be12a9a8caf06e27c4fb54cc
+source-git-commit: d8a4d292747f8ea29709eb13c3344baadba1b6f5
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1323'
 ht-degree: 73%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 73%
    * [Supprimer les comptes de destination](./api/delete-destination-account.md)
    * [Supprimer les flux de données de destination](./api/delete-destination-dataflow.md)
    * [Exporter des jeux de données](/help/destinations/api/export-datasets.md)
-   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=fr#use-cases)
+   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
    * [Créer une connexion à une destination](./ui/connect-destination.md)
@@ -92,7 +92,6 @@ ht-degree: 73%
       * [Extension Pixel Facebook](./catalog/advertising/facebook-pixel.md)
       * [Extension Flashtalking OneTag](./catalog/advertising/flashtalking.md)
       * [Connexion Google Ads](./catalog/advertising/google-ads-destination.md)
-      * [Extension Google Ads](./catalog/advertising/google-ads-extension.md)
       * [Connexion Google Ad Manager](./catalog/advertising/google-ad-manager.md)
       * [(Beta) Connexion à Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Connexion à Google Customer Match](./catalog/advertising/google-customer-match.md)
