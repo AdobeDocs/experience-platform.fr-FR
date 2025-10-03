@@ -2,7 +2,7 @@
 title: Présentation d’Audience Portal
 description: Découvrez comment utiliser Audience Portal pour afficher, gérer et créer des audiences dans Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: a374d261e3b34b30869f1a9e8486d52f5bd658cb
+source-git-commit: 06b2bc91524299505bde4e5ee30e03cfc6a3c7ba
 workflow-type: tm+mt
 source-wordcount: '4545'
 ht-degree: 54%
@@ -70,7 +70,7 @@ Une icône de points de suspension se trouve à côté de chaque audience. Cette
 | [!UICONTROL Publier] | Chargement personnalisé, service de segmentation | Publie l’audience sélectionnée. Pour plus d’informations sur la gestion de l’état du cycle de vie, consultez la section [état du cycle de vie) du FAQ sur la segmentation](../faq.md#lifecycle-states). |
 | [!UICONTROL Désactiver] | Chargement personnalisé, service de segmentation | Désactive l’audience sélectionnée. Notez que pour désactiver une audience, celle-ci **ne peut pas** être activée dans **n’importe quelle** destination (y compris les destinations hors Experience Platform) ou faire partie de **n’importe quelle** autre audience. Pour plus d’informations sur la gestion de l’état du cycle de vie, consultez la section [état du cycle de vie) du FAQ sur la segmentation](../faq.md#lifecycle-states). |
 | [!UICONTROL Supprimer] | Composition d’audiences, chargement personnalisé, Segmentation Service | Supprime l’audience sélectionnée. Les audiences utilisées dans des destinations en aval ou qui sont des dépendances dans d’autres audiences **ne peuvent pas** peuvent pas être supprimées. Pour plus d’informations sur la suppression d’audience, consultez la [FAQ sur la segmentation](../faq.md#lifecycle-states). |
-| [!UICONTROL Ajouter au package &#x200B;] | Composition d’audiences, chargement personnalisé, Segmentation Service | Déplace l’audience entre les sandbox. Pour plus d’informations sur cette fonctionnalité, veuillez lire le [guide d’utilisation des sandbox](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL Ajouter au package ] | Composition d’audiences, chargement personnalisé, Segmentation Service | Déplace l’audience entre les sandbox. Pour plus d’informations sur cette fonctionnalité, veuillez lire le [guide d’utilisation des sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!IMPORTANT]
 >
@@ -102,7 +102,7 @@ Vous pouvez ajouter des champs supplémentaires à Audience Portal en sélection
 | ----- | ----------- |
 | [!UICONTROL Nom] | Nom de l’audience. |
 | [!UICONTROL Nombre de profils] | Nombre total de profils qui remplissent les critères de l’audience. |
-| [!UICONTROL Origine] | Origine de l’audience. Cette information indique d’où vient l’audience. Les valeurs possibles sont les suivantes : [Segmentation Service](#segment-builder), [Chargement personnalisé](#import-audience), [Composition de l’audience](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/fr/docs/audience-manager/user-guide/aam-home), [Audience similaire](../types/lookalike-audiences.md), [Composition de l’audience fédérée](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/fr/docs/journey-optimizer-b2b/user/guide-overview) et [Real-Time CDP Collaboration](https://experienceleague.adobe.com/fr/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
+| [!UICONTROL Origine] | Origine de l’audience. Cette information indique d’où vient l’audience. Les valeurs possibles sont les suivantes : [Segmentation Service](#segment-builder), [Chargement personnalisé](#import-audience), [Composition de l’audience](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Audience similaire](../types/lookalike-audiences.md), [Composition de l’audience fédérée](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/fr/docs/journey-optimizer-b2b/user/guide-overview) et [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
 | [!UICONTROL Statut du cycle de vie] | Statut de l’audience. Les valeurs possibles pour ce champ comprennent `Draft`, `Inactive` et `Published`. Pour plus d’informations sur les statuts de cycle de vie, y compris sur la signification des différents états et sur la manière de déplacer les audiences vers différents états de cycle de vie, consultez la section [statut du cycle de vie) de la FAQ sur la segmentation](../faq.md#lifecycle-status). |
 | [!UICONTROL Fréquence de mise à jour] | Valeur qui indique la fréquence de mise à jour des données de l’audience. Les valeurs possibles pour ce champ comprennent [!UICONTROL Lot], [!UICONTROL Diffusion en continu], [!UICONTROL Edge] et [!UICONTROL Non planifié]. |
 | [!UICONTROL Dernière mise à jour par] | Nom de la personne qui a mis à jour l’audience pour la dernière fois. |
@@ -119,7 +119,7 @@ Si la répartition est sélectionnée, l’affichage présente un graphique à b
 | État | Description |
 | ------ | ----------- |
 | [!UICONTROL Réalisé] | Nombre de profils qui **ont rempli les critères** pour l’audience au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
-| [!UICONTROL Existant] | Nombre de profils qui **sont restés** dans l’audience au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. Ce champ est **calculé** et n’apparaît pas dans l’objet [`segmentMembership`. &#x200B;](../../xdm/field-groups/profile/segmentation.md). |
+| [!UICONTROL Existant] | Nombre de profils qui **sont restés** dans l’audience au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. Ce champ est **calculé** et n’apparaît pas dans l’objet [`segmentMembership`. ](../../xdm/field-groups/profile/segmentation.md). |
 | [!UICONTROL Sortant] | Nombre de profils qui **ont quitté** l’audience au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
 
 Après avoir sélectionné les champs à afficher, vous pouvez également redimensionner la largeur des colonnes affichées. Pour ce faire, faites glisser la zone entre les colonnes ou sélectionnez la ![icône de flèche](/help/images/icons/chevron-down.png) de la colonne à redimensionner, suivie de **[!UICONTROL Redimensionner la colonne]**.
@@ -203,7 +203,7 @@ La liste des filtres disponibles s’affiche.
 
 | Filtre | Description |
 | ------ | ----------- |
-| [!UICONTROL Origine] | Permet de filtrer l’audience en fonction de son origine. Les valeurs possibles sont les suivantes : [Segmentation Service](#segment-builder), [Chargement personnalisé](#import-audience), [Composition de l’audience](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/fr/docs/audience-manager/user-guide/aam-home), [Audience similaire](../types/lookalike-audiences.md), [Composition de l’audience fédérée](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/fr/docs/journey-optimizer-b2b/user/guide-overview) et [Real-Time CDP Collaboration](https://experienceleague.adobe.com/fr/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
+| [!UICONTROL Origine] | Permet de filtrer l’audience en fonction de son origine. Les valeurs possibles sont les suivantes : [Segmentation Service](#segment-builder), [Chargement personnalisé](#import-audience), [Composition de l’audience](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Audience similaire](../types/lookalike-audiences.md), [Composition de l’audience fédérée](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/fr/docs/journey-optimizer-b2b/user/guide-overview) et [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
 | [!UICONTROL A une balise] | Permet de filtrer par balise. Vous pouvez choisir entre **[!UICONTROL A une balise]** et **[!UICONTROL A toutes les balises]**. Lors de la sélection de **[!UICONTROL A une balise]**, les audiences filtrées incluent **toutes** les balises que vous avez ajoutées. Lors de la sélection de **[!UICONTROL A toutes les balises]**, les audiences filtrées doivent inclure **toutes** les balises que vous avez ajoutées. |
 | [!UICONTROL Statut du cycle de vie] | Permet de filtrer les données en fonction du statut de cycle de vie de l’audience. Les options disponibles sont les suivantes : [!UICONTROL Supprimé], [!UICONTROL Brouillon], [!UICONTROL Inactif] et [!UICONTROL Publié]. |
 | [!UICONTROL Fréquence de mise à jour] | Permet de filtrer selon la fréquence de mise à jour de l’audience (méthode d’évaluation). Les options disponibles sont les suivantes : [!UICONTROL lot], [!UICONTROL streaming] et [!UICONTROL Edge] |
@@ -407,7 +407,7 @@ Vous trouverez plus d’informations sur Data Distiller dans le guide [création
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_importaudience_dataexpiration"
 >title="Expiration des données"
->abstract="Nombre de jours au terme desquels l’appartenance à l’audience expirera. Cette valeur peut être définie entre 1 et 180 jours. Une fois l’appartenance à l’audience expirée, l’évaluation s’arrête et tous les profils quittent l’appartenance à l’audience. Vous pouvez actualiser la fenêtre d’expiration lorsqu’il reste moins de 7 jours dans l’appartenance à l’audience. Cependant, une fois qu’il reste 0 jour, vous ne pouvez pas actualiser la fenêtre d’expiration."
+>abstract="Nombre de jours au terme desquels l’appartenance à l’audience expirera. Cette valeur peut être définie entre 1 et 90 jours. Une fois l’appartenance à l’audience expirée, l’évaluation s’arrête et tous les profils quittent l’appartenance à l’audience. Vous pouvez actualiser la fenêtre d’expiration lorsqu’il reste moins de 7 jours dans l’appartenance à l’audience. Cependant, une fois qu’il reste 0 jour, vous ne pouvez pas actualiser la fenêtre d’expiration."
 
 >[!IMPORTANT]
 >
@@ -454,7 +454,7 @@ Vous pouvez également ajouter des détails supplémentaires à votre audience g
 
 >[!NOTE]
 >
->L’expiration des données personnalisées définit le nombre de jours pendant lesquels les profils **restent** dans l’audience. Une fois l’expiration des données terminée, les profils quittent l’appartenance à l’audience. Cette valeur peut être définie entre 1 et 180 jours.
+>L’expiration des données personnalisées définit le nombre de jours pendant lesquels les profils **restent** dans l’audience. Une fois l’expiration des données terminée, les profils quittent l’appartenance à l’audience. Cette valeur peut être définie de 1 à 90 jours.
 
 Après avoir renseigné les détails de votre audience, sélectionnez **[!UICONTROL Suivant]**.
 
@@ -472,7 +472,7 @@ Une fois que les détails sont corrects, sélectionnez **[!UICONTROL Terminer]**
 >
 >En outre, si votre audience générée en externe contient des informations sensibles et/ou liées aux soins de santé, vous **devez** appliquer les libellés d’utilisation des données nécessaires avant de l’activer vers une destination. Étant donné que les variables des audiences générées en externe sont stockées dans le lac de données plutôt que dans le profil client en temps réel, vous ne devez **pas** inclure les données de consentement dans votre fichier CSV.
 >
->Pour plus d’informations sur l’application de libellés d’utilisation des données, consultez la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). Pour en savoir plus sur les libellés d’utilisation des données dans Experience Platform en général, consultez la [&#x200B; présentation des libellés d’utilisation des données &#x200B;](../../data-governance/labels/overview.md). Pour en savoir plus sur le fonctionnement du consentement dans les audiences générées en externe, veuillez lire la [FAQ sur les audiences](../faq.md#consent).
+>Pour plus d’informations sur l’application de libellés d’utilisation des données, consultez la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). Pour en savoir plus sur les libellés d’utilisation des données dans Experience Platform en général, consultez la [ présentation des libellés d’utilisation des données ](../../data-governance/labels/overview.md). Pour en savoir plus sur le fonctionnement du consentement dans les audiences générées en externe, veuillez lire la [FAQ sur les audiences](../faq.md#consent).
 
 ## Étapes suivantes
 
