@@ -2,9 +2,9 @@
 title: Définir des champs de mappage dans l’interface utilisateur
 description: Découvrez comment définir un champ de mappage dans l’interface utilisateur d’Experience Platform.
 exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c0421974493884488e4d639278106835ad1d8b1b
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Platform vous permet de personnaliser entièrement la structure de vos classes de modèle de données d’expérience (XDM), groupes de champs de schéma et types de données personnalisés.
 
-Vous pouvez également définir des champs de mappage dans l’éditeur de schémas pour modéliser des structures de données flexibles et dynamiques ou stocker une collection de paires clé-valeur.
+Vous pouvez également définir des champs de mappage dans l’éditeur de schémas pour stocker une collection de paires clé-valeur avec des clés dynamiques flexibles.
 
 Lors de la définition d’un nouveau champ dans l’interface utilisateur (IU) d’Experience Platform, utilisez la liste déroulante **[!UICONTROL Type]** et sélectionnez « **[!UICONTROL Mapper]** » dans la liste.
 
@@ -36,6 +36,8 @@ XDM place les restrictions suivantes sur l’utilisation de ce type de données 
 * Les types de mappage DOIVENT inclure un champ `additionalProperties.type` qui décrit les valeurs qui peuvent être placées dans le mappage, que ce soit `string` ou `integer`.
 * La segmentation d’entités multiples peut uniquement être définie en fonction des clés de mappage et non des valeurs.
 * Les mappages ne sont pas pris en charge pour les audiences de compte.
+* Les mappages définis dans les objets XDM personnalisés sont limités à un seul niveau. Impossible de créer des mappages imbriqués. Cette restriction ne s’applique pas aux mappages définis dans les objets XDM standard.
+* Les tableaux de mappages ne sont pas pris en charge.
 
 Assurez-vous d’utiliser uniquement des champs de type carte lorsqu’ils sont absolument nécessaires, car ils présentent les inconvénients de performance suivants :
 

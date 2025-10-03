@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;rubriques populaires;XDM;système XDM;profil individuel XDM;Événement d’expérience XDM;Événement d’expérience XDM;Événementd’expérience;événement d’expérienceEvénementd’expérience;Événement d’expérience XDM;Événementd’expérience XDM;modèle de données d’expérience;Modèle de données d’expérience;Modèle de Données d’expérience;modèle de données;Modèle de Données;schéma;dépannage;Questions fréquentes;questions fréquentes;schéma d’union;PROFIL D’UNION;profil d’union;http://ns.adobe.com/aep/errors/XDM-1010-404;http://ns.adobe.com/aep/errors/XDM-1011-404;http://ns.adobe.com/aep/errors/XDM-1012-404;http://ns.adobe.com/aep/errors/XDM-1013-404;http://ns.adobe.com/aep/errors/XDM-1014-404;http://ns.adobe.com/aep/errors/XDM-1015-404;http://ns.adobe.com/aep/errors/XDM-1016-404;http://ns.adobe.com/aep/errors/XDM-1017-404;http://ns.adobe.com/aep/errors/XDM-1521-400;http://ns.adobe.com/aep/errors/XDM-1020-400;http://ns.adobe.com/aep/errors/XDM-1021-400;http://ns.adobe.com/aep/errors/XDM-1022-400;http://ns.adobe.com/aep/errors/XDM-1023-400;http://ns.adobe.com/aep/errors/XDM-1024-400;http://ns.adobe.com/aep/errors/XDM-1006-400;http://ns.adobe.com/aep/errors/XDM-1007-400;http://ns.adobe.com/aep/errors/XDM-1008-400;http://ns.adobe.com/aep/errors/XDM-1009-400;http://ns.adobe.com/aep/errors/XDM-1526-400;http://ns.adobe.com/aep/errors/XDM-1527-400;http://ns.adobe.com/aep/errors/XDM-1528-400;XDM-1010-404;XDM-1011-404;XDM-1012-404;XDM-1013-404;XDM-1014-404;XDM-1015-404;XDM-1016-404;XDM-1017-404;XDM-1521-400;XDM-1020-400;XDM-1021-400;XDM-1022-400;XDM-1023-400;XDM-1024-400;XDM-1006-400;XDM-1007-400;XDM-1008-400;XDM-1009-400;XDM-1413-400;XDM-1526-400;XDM-1527-400;XDM-1528-400;
+keywords: Experience Platform;rubriques populaires;XDM;système XDM;profil individuel XDM;ExperienceEvent XDM;Événement d’expérience XDM;ExperienceEvent;événement d’expérienceEvénement d’expérience;Événement d’expérience XDM;XDM ExperienceEvent;modèle de données d’expérience;Modèle de données d’expérience;Modèle de Données d’expérience;modèle de données;Modèle de Données;schéma;dépannage;Questions fréquentes;questions fréquentes;schéma d’union;PROFIL D’UNION;profil d’union;http://ns.adobe.com/aep/errors/XDM-1010-404;http://ns.adobe.com/aep/errors/XDM-1011-404;http://ns.adobe.com/aep/errors/XDM-1012-404;http://ns.adobe.com/aep/errors/XDM-1013-404;http://ns.adobe.com/aep/errors/XDM-1014-404;http://ns.adobe.com/aep/errors/XDM-1015-404;http://ns.adobe.com/aep/errors/XDM-1016-404;http://ns.adobe.com/aep/errors/XDM-1017-404;http://ns.adobe.com/aep/errors/XDM-1521-400;http://ns.adobe.com/aep/errors/XDM-1020-400;http://ns.adobe.com/aep/errors/XDM-1021-400;http://ns.adobe.com/aep/errors/XDM-1022-400;http://ns.adobe.com/aep/errors/XDM-1023-400;http://ns.adobe.com/aep/errors/XDM-1024-400;http://ns.adobe.com/aep/errors/XDM-1006-400;http://ns.adobe.com/aep/errors/XDM-1007-400;http://ns.adobe.com/aep/errors/XDM-1008-400;http://ns.adobe.com/aep/errors/XDM-1009-400;http://ns.adobe.com/aep/errors/XDM-1526-400;http://ns.adobe.com/aep/errors/XDM-1527-400;http://ns.adobe.com/aep/errors/XDM-1528-400;XDM-1010-404;XDM-1011-404;XDM-1012-404;XDM-1013-404;XDM-1014-404;XDM-1015-404;XDM-1016-404;XDM-1017-404;XDM-1521-400;XDM-1020-400;XDM-1021-400;XDM-1022-400;XDM-1023-400;XDM-1024-400;XDM-1006-400;XDM-1007-400;XDM-1008-400;XDM-1009-400;XDM-1413-400;XDM-1526-400;XDM-1527-400;XDM-1528-400;
 solution: Experience Platform
 title: Guide de dépannage du système XDM
 description: Trouvez des réponses aux questions fréquentes sur le modèle de données d’expérience (XDM), y compris les étapes pour résoudre les erreurs d’API courantes.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fa856644a106469f0cafe7f8c0a61219dc7deac7
 workflow-type: tm+mt
-source-wordcount: '2348'
-ht-degree: 82%
+source-wordcount: '2378'
+ht-degree: 81%
 
 ---
 
@@ -49,7 +49,7 @@ Un type de champ long est un entier dont la taille maximale est de 53 (+1) bit
 
 Pour plus d’informations sur les types de champs, consultez le document sur les [Contraintes de type de champ XDM](./schema/field-constraints.md).
 
-### Qu’est-ce que meta:AltId ?
+### Qu’est-ce que meta :AltId ?
 
 `meta:altId` est l’identifiant unique d’un schéma. Le `meta:altId` fournit un identifiant de référence facile à utiliser dans les appels API. Cet identifiant évite d’avoir à être codé/décodé chaque fois qu’il est utilisé comme avec le format URI JSON.
 <!-- (Needs clarification - How do I retrieve it INCOMPLETE) ... -->
@@ -63,11 +63,13 @@ Pour plus d’informations sur les types de champs, consultez le document sur le
 
 XDM place les restrictions suivantes sur l’utilisation de ce type de données :
 
-- Les types de carte DOIVENT être de type objet .
+- Les types de carte DOIVENT être de type `object`.
 - Les propriétés des types de carte NE DOIVENT PAS ÊTRE définies (en d’autres termes, ils définissent des objets « vides »).
-- Les types de mappage DOIVENT inclure un champ additionnelProperties.type qui décrit les valeurs qui peuvent être placées dans le mappage, soit une chaîne, soit un entier.
+- Les types de mappage DOIVENT inclure un champ `additionalProperties.type` qui décrit les valeurs qui peuvent être placées dans le mappage, que ce soit `string` ou `integer`.
 - La segmentation d’entités multiples peut uniquement être définie en fonction des clés de mappage et non des valeurs.
 - Les mappages ne sont pas pris en charge pour les audiences de compte.
+- Les mappages définis dans les objets XDM personnalisés sont limités à un seul niveau. Impossible de créer des mappages imbriqués. Cette restriction ne s’applique pas aux mappages définis dans les objets XDM standard.
+- Les tableaux de mappages ne sont pas pris en charge.
 
 Pour plus d’informations, consultez la [restrictions d’utilisation des objets map](./ui/fields/map.md#restrictions).
 
@@ -140,7 +142,7 @@ Le schéma n’est pas automatiquement activé pour le profil client en temps r�
 
 ### Puis-je supprimer des schémas activés pour Profile ?
 
-Vous ne pouvez pas supprimer un schéma une fois qu’il a été activé pour le profil client en temps réel. Une fois qu’un schéma est activé pour Profil, il ne peut pas être désactivé ni supprimé, et les champs ne peuvent pas être supprimés du schéma. Par conséquent, il est essentiel de planifier et de vérifier soigneusement la configuration du schéma avant de l’activer pour Profile. Vous pouvez toutefois supprimer un jeu de données activé pour Profil. Vous trouverez des informations ici : <https://experienceleague.adobe.com/fr/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+Vous ne pouvez pas supprimer un schéma une fois qu’il a été activé pour le profil client en temps réel. Une fois qu’un schéma est activé pour Profil, il ne peut pas être désactivé ni supprimé, et les champs ne peuvent pas être supprimés du schéma. Par conséquent, il est essentiel de planifier et de vérifier soigneusement la configuration du schéma avant de l’activer pour Profile. Vous pouvez toutefois supprimer un jeu de données activé pour Profil. Vous trouverez des informations ici : <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
 Si vous ne souhaitez plus qu’un schéma activé pour Profile soit utilisé, il est recommandé de renommer le schéma pour inclure **Ne pas utiliser** ou **Inactif**.
 
