@@ -1,13 +1,13 @@
 ---
 title: Connexion Demandbase People
 description: Utilisez cette destination pour activer vos audiences et les enrichir avec des données tierces Demandbase, pour d’autres cas d’utilisation en aval dans le marketing et les ventes.
-source-git-commit: df2cb1edbf998082fca961e6d9bb567a1ad3b7e6
+exl-id: 748f5518-7cc1-4d65-ab70-4a129d9e2066
+source-git-commit: ab29c1113dbbd1811acd3d5add5a247cb2703884
 workflow-type: tm+mt
-source-wordcount: '745'
-ht-degree: 33%
+source-wordcount: '819'
+ht-degree: 31%
 
 ---
-
 
 # Connexion Demandbase People {#demandbase-people}
 
@@ -31,7 +31,7 @@ La connexion [!DNL Demandbase People] prend en charge l’activation des identit
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| E-mail | Adresses e-mail en clair | Seules les adresses e-mail en texte brut sont prises en charge par la connexion [!DNL Demandbase People]. |
+| e-mail | Adresses e-mail en clair | Seules les adresses e-mail en texte brut sont prises en charge par la connexion [!DNL Demandbase People]. |
 
 {style="table-layout:auto"}
 
@@ -68,7 +68,7 @@ Pour exporter des audiences vers Demandbase, vous avez besoin des éléments sui
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -95,10 +95,25 @@ Vous êtes maintenant prêt à activer vos audiences dans Demandbase People.
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+
+### Mappages obligatoires {#mandatory-mappings}
+
+Lors de l’activation des audiences vers la destination [!DNL Demandbase People], vous devez configurer les mappages des champs obligatoires suivants à l’étape de mappage :
+
+| Champ source | Champ cible | Description |
+|--------------|--------------|-------------|
+| `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | Identifiant unique de la personne |
+| `xdm: person.name.lastName` | `xdm: lastName` | Nom de la personne |
+| `xdm: person.name.firstName` | `xdm: firstName` | Prénom de la personne |
+| `xdm: workEmail.address` | `Identity: email` | Adresse électronique professionnelle de la personne |
+
+![Mappages de personnes Demandbase](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
+
+Ces mappages sont nécessaires au bon fonctionnement de la destination et doivent être configurés avant de pouvoir poursuivre le workflow d’activation.
 
 ## Notes supplémentaires et légendes importantes {#additional-notes}
 
