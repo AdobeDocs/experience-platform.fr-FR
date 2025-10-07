@@ -2,7 +2,7 @@
 title: Guide de dépannage des règles de liaison de graphiques d’identités
 description: Découvrez comment résoudre les problèmes courants dans les règles de liaison des graphiques d’identités.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 0381940206d8730f2f7ae2dce849d943316b0451
+source-git-commit: 10cdbef8281ec43a21af9fead80345f1c78b9d2c
 workflow-type: tm+mt
 source-wordcount: '3451'
 ht-degree: 0%
@@ -162,11 +162,11 @@ Pour chaque scénario, supposons que les événements d’expérience contiennen
 
 **Scénario 2 : 2 CRMID, 1 GAID**
 
-* Dans ce scénario, un événement d’expérience entrant contient 2 CRMID et 1 GAID. Entre ces espaces de noms, CRMID est configuré comme espace de noms ayant la priorité d’espace de noms la plus élevée. Toutefois, comme il existe 2 GAID, le profil **ne stocke pas** cet événement d’expérience.
+* Dans ce scénario, un événement d’expérience entrant contient 2 CRMID et 1 GAID. Entre ces espaces de noms, CRMID est configuré comme espace de noms ayant la priorité d’espace de noms la plus élevée. Toutefois, comme il existe 2 CRMID, le profil **ne stocke pas** cet événement d’expérience.
 
 **Scénario 3 : 1 CRMID, 2 GAID**
 
-* Dans ce scénario, un événement d’expérience entrant contient 1 CRMID et 2 GAID. Entre ces espaces de noms, CRMID est configuré comme espace de noms ayant la priorité d’espace de noms la plus élevée. Comme il n’existe qu’un seul CRMID, Profile ingérera les événements d’expérience, car il n’existe qu’une seule instance de l’espace de noms avec la priorité d’espace de noms la plus élevée.
+* Dans ce scénario, un événement d’expérience entrant contient 1 CRMID et 2 GAID. Entre ces espaces de noms, CRMID est configuré comme espace de noms ayant la priorité d’espace de noms la plus élevée. Comme il n’existe qu’un seul CRMID, Profile ingérera les événements d’expérience, car il n’existe qu’une seule identité de l’espace de noms avec la priorité d’espace de noms la plus élevée.
 
 **Étapes de dépannage**
 
