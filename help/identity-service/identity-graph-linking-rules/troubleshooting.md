@@ -48,8 +48,8 @@ Il existe différentes raisons pour lesquelles cela peut se produire, notamment,
 * L’enregistrement est ignoré car il n’y a qu’une seule identité dans l’événement.
 * [Un échec de validation s’est produit dans Identity Service](../guardrails.md#identity-value-validation).
    * Par exemple, un ECID peut avoir dépassé la longueur maximale de 38 caractères.
-* Par défaut, les [ AAID sont bloqués lors de l’ingestion](../guardrails.md#identity-namespace-ingestion).
-* L’identité est supprimée en raison des [ mécanismes de sécurisation système ](../guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated).
+* Par défaut, les [&#x200B; AAID sont bloqués lors de l’ingestion](../guardrails.md#identity-namespace-ingestion).
+* L’identité est supprimée en raison des [&#x200B; mécanismes de sécurisation système &#x200B;](../guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated).
 
 Dans le contexte de [!DNL Identity Graph Linking Rules], un enregistrement peut être rejeté du Service d’identités car l’événement entrant comporte plusieurs identités avec le même espace de noms unique mais une valeur d’identité différente. Ce scénario se produit généralement en raison d’erreurs d’implémentation.
 
@@ -283,11 +283,11 @@ Reportez-vous à la documentation relative à l’[algorithme d’optimisation d
 * Lisez le [guide de configuration des graphiques](./example-configurations.md) pour obtenir des exemples de structures de graphique prises en charge.
 * Vous pouvez également lire le [guide d’implémentation](./implementation-guide.md#appendix) pour obtenir des exemples de structures de graphique non prises en charge. Deux scénarios peuvent se produire :
    * Aucun espace de noms unique sur tous vos profils.
-   * Un scénario [ « ID non résolu »](./implementation-guide.md#dangling-loginid-scenario) se produit. Dans ce scénario, Identity Service ne peut pas déterminer si l’ID suspendu est associé à l’une des entités de personne dans les graphiques.
+   * Un scénario [&#x200B; « ID non résolu »](./implementation-guide.md#dangling-loginid-scenario) se produit. Dans ce scénario, Identity Service ne peut pas déterminer si l’ID suspendu est associé à l’une des entités de personne dans les graphiques.
 
 Vous pouvez également utiliser l’outil de simulation [graphique dans l’interface utilisateur](./graph-simulation.md) pour simuler des événements et configurer vos propres paramètres de priorité d’espace de noms et d’espace de noms uniques. Cela peut vous aider à comprendre les bases du comportement de l’algorithme d’optimisation des identités.
 
-Si les résultats de la simulation correspondent aux attentes en matière de comportement du graphique, vous pouvez vérifier si les [ paramètres d’identité ](./identity-settings-ui.md) correspondent aux paramètres que vous avez configurés dans la simulation.
+Si les résultats de la simulation correspondent aux attentes en matière de comportement du graphique, vous pouvez vérifier si les [&#x200B; paramètres d’identité &#x200B;](./identity-settings-ui.md) correspondent aux paramètres que vous avez configurés dans la simulation.
 
 ### Même après la configuration des paramètres d’identité, je vois toujours des graphiques réduits dans mon sandbox
 
@@ -401,7 +401,7 @@ Non. La priorité de l’espace de noms s’applique uniquement aux jeux de donn
 
 ### Comment cette fonctionnalité fonctionne-t-elle en tandem avec les mécanismes de sécurisation des graphiques d’identités de 50 identités par graphique ? La priorité de l’espace de noms affecte-t-elle ce mécanisme de sécurisation défini par le système ?
 
-L’algorithme d’optimisation des identités sera appliqué en premier pour garantir la représentation de l’entité personne. Par la suite, si le graphique tente de dépasser le [ mécanisme de sécurisation des graphiques d’identités ](../guardrails.md) (50 identités par graphique), cette logique est appliquée. La priorité de l’espace de noms n’affecte pas la logique de suppression du mécanisme de sécurisation des 50 identités/graphiques.
+L’algorithme d’optimisation des identités sera appliqué en premier pour garantir la représentation de l’entité personne. Par la suite, si le graphique tente de dépasser le [&#x200B; mécanisme de sécurisation des graphiques d’identités &#x200B;](../guardrails.md) (50 identités par graphique), cette logique est appliquée. La priorité de l’espace de noms n’affecte pas la logique de suppression du mécanisme de sécurisation des 50 identités/graphiques.
 
 ## Test
 
