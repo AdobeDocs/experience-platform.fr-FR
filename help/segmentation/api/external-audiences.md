@@ -2,9 +2,9 @@
 title: Point d’entrée de l’API Audiences externes
 description: Découvrez comment utiliser l’API des audiences externes pour créer, mettre à jour, activer et supprimer vos audiences externes de Adobe Experience Platform.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: bc74f86dca62a62dde39ad2e167e66b511d59086
+source-git-commit: 0a37ef2f5fc08eb515c7c5056936fd904ea6d360
 workflow-type: tm+mt
-source-wordcount: '2189'
+source-wordcount: '2253'
 ht-degree: 9%
 
 ---
@@ -98,7 +98,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `description` | Chaîne | Description facultative de l’audience externe. |
 | `customAudienceId` | Chaîne | Identifiant facultatif de votre audience externe. |
 | `fields` | Tableau d’objets | La liste des champs et leurs types de données. Lors de la création de la liste des champs, vous pouvez ajouter les éléments suivants : <ul><li>`name` : **Obligatoire** nom du champ qui fait partie de la spécification de l’audience externe.</li><li>`type` : **Obligatoire** type de données qui entre dans le champ. Les valeurs prises en charge sont les suivantes : `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) et `boolean`.</li><li>`identityNs` : **Obligatoire pour le champ d’identité** Espace de noms utilisé par le champ d’identité. Les valeurs prises en charge incluent tous les espaces de noms valides, tels que `ECID` ou `email`.</li><li>`labels` : *facultatif* tableau de libellés de contrôle d’accès pour le champ. Vous trouverez plus d’informations sur les libellés de contrôle d’accès disponibles dans le [glossaire des libellés d’utilisation des données](/help/data-governance/labels/reference.md). </li></ul> |
-| `sourceSpec` | Objet | Objet contenant les informations sur l’emplacement de l’audience externe. Lors de l’utilisation de cet objet, vous **devez** inclure les informations suivantes : <ul><li>`path` : **Obligatoire** : emplacement de l’audience externe ou du dossier contenant l’audience externe dans la source.</li><li>`type`: **Obligatoire** type de l’objet que vous récupérez à partir de la source. Cette valeur peut être `file` ou `folder`.</li><li>`sourceType` : *facultatif* type de source à partir de laquelle vous effectuez une récupération. Actuellement, la seule valeur prise en charge est `Cloud Storage`.</li><li>`cloudType` : *facultatif* type d’espace de stockage dans le cloud, basé sur le type de source . Les valeurs prises en charge sont `S3`, `DLZ`, `GCS` et `SFTP`.</li><li>`baseConnectionId` : identifiant de la connexion de base. Il est fourni par votre fournisseur source. Cette valeur est **obligatoire** si vous utilisez une valeur `cloudType` de `S3`, `GCS` ou `SFTP`. Pour plus d’informations, consultez la [présentation des connecteurs source](../../sources/home.md)</li></ul> |
+| `sourceSpec` | Objet | Objet contenant les informations sur l’emplacement de l’audience externe. Lors de l’utilisation de cet objet, vous **devez** inclure les informations suivantes : <ul><li>`path` : **Obligatoire** : emplacement de l’audience externe ou du dossier contenant l’audience externe dans la source. Le chemin d’accès au fichier **ne peut pas** contenir d’espaces. Par exemple, si votre chemin d’accès est `activation/sample-source/Example CSV File.csv`, définissez-le sur `activation/sample-source/ExampleCSVFile.csv`. Le chemin d’accès à votre source se trouve dans la colonne **Données Source** de la section des flux de données.</li><li>`type`: **Obligatoire** type de l’objet que vous récupérez à partir de la source. Cette valeur peut être `file` ou `folder`.</li><li>`sourceType` : *facultatif* type de source à partir de laquelle vous effectuez une récupération. Actuellement, la seule valeur prise en charge est `Cloud Storage`.</li><li>`cloudType` : **obligatoire** type d’espace de stockage dans le cloud, basé sur le type de source. Les valeurs prises en charge sont `S3`, `DLZ`, `GCS`, `Azure` et `SFTP`.</li><li>`baseConnectionId` : identifiant de la connexion de base. Il est fourni par votre fournisseur source. Cette valeur est **obligatoire** si vous utilisez une valeur `cloudType` de `S3`, `GCS` ou `SFTP`. Dans le cas contraire **vous n’avez** besoin d’inclure ce paramètre. Pour plus d’informations, consultez la [présentation des connecteurs source](../../sources/home.md).</li></ul> |
 | `ttlInDays` | Nombre entier | Expiration des données de l’audience externe, en jours. Cette valeur peut être définie de 1 à 90. Par défaut, l’expiration des données est définie sur 30 jours. |
 | `audienceType` | Chaîne | Type d’audience pour l’audience externe. Actuellement, seul `people` est pris en charge. |
 | `originName` | Chaîne | **Obligatoire** Origine de l’audience. Cette information indique d’où vient l’audience. Pour les audiences externes, vous devez utiliser `CUSTOM_UPLOAD`. |
@@ -408,8 +408,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-
 
 | Propriété | Type | Description |
 | -------- | ---- | ----------- |
-| `dataFilterStartTime` | Date et heure de l’époque | **Obligatoire** Plage spécifiant l’heure de début de l’exécution du flux pour sélectionner les fichiers à traiter. |
-| `dataFilterEndTime` | Date et heure de l’époque | La plage spécifiant l’heure de fin à laquelle le flux s’exécutera pour sélectionner les fichiers à traiter. |
+| `dataFilterStartTime` | Date et heure de l’époque | **Obligatoire** Plage spécifiant l’heure de début pour déterminer les fichiers à traiter. Cela signifie que les fichiers sélectionnés seront des fichiers **après** l’heure spécifiée. |
+| `dataFilterEndTime` | Date et heure de l’époque | La plage spécifiant l’heure de fin à laquelle le flux s’exécutera pour sélectionner les fichiers à traiter. Cela signifie que les fichiers sélectionnés seront des fichiers **avant** l’heure spécifiée. |
 
 +++
 

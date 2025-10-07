@@ -3,17 +3,17 @@ title: Créer un point d’entrée de l’API Audience
 description: Découvrez comment créer des métadonnées pour une audience externe à l’aide de l’API .
 hide: true
 hidefromtoc: true
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+exl-id: e841a5f6-f406-4e1d-9e8a-acb861ba6587
+source-git-commit: bf90b09693c7b9b7d3ad6ccc6940d255bf7bf4cb
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 36%
+source-wordcount: '246'
+ht-degree: 35%
 
 ---
 
-
 # Créer un point d’entrée d’audience
 
-Le point d’entrée de `/audiences` POST peut être utilisé pour créer les métadonnées d’une audience externe. Vous devez utiliser ce point d’entrée si l’ingestion de l’audience sera gérée dans un service distinct, tel que l’ingestion par lots.
+Le point d’entrée de `/audiences` POST peut être utilisé pour créer les métadonnées d’une audience externe, ce qui permet à l’audience d’être visible dans Audience Portal. Vous devez utiliser ce point d’entrée si l’ingestion de l’audience sera gérée dans un service distinct, tel que l’ingestion par lots.
 
 ## Commencer
 

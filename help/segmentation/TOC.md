@@ -5,9 +5,9 @@ breadcrumb-title: Guide de Segmentation Service
 user-guide-description: Créez des audiences à partir de vos données de profil client en temps réel à l’aide des définitions de segment générées par Adobe Experience Platform ou de sources externes.
 feature: Segments
 role: User
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+source-git-commit: 043e0c930b30dc4f04acdcab88a5d63ad044fbfc
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '207'
 ht-degree: 75%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 75%
 
 - [Présentation de Segmentation Service](home.md)
 - [Types de données de segmentation](data-types.md)
-- [ Mécanismes de sécurisation de la segmentation ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=fr#segmentation-guardrails)
+- [ Mécanismes de sécurisation de la segmentation ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - API Segmentation {#api}
    - [Vue d’ensemble](api/overview.md)
    - [Prise en main](api/getting-started.md)
@@ -33,8 +33,8 @@ ht-degree: 75%
 - Interface utilisateur de segmentation {#ui}
    - [Vue d’ensemble](ui/overview.md)
    - [Tableau de bord Audience](ui/audience-dashboard.md)
-   - [Audience Portal](ui/audience-portal.md)
-   - [Composition de l’audience](ui/audience-composition.md)
+   - [Audience Portal](ui/audience-portal.md)
+   - [Composition d’audiences](ui/audience-composition.md)
    - [Créateur de segments](ui/segment-builder.md)
    - [Composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/home)
    - [Mise à jour de la contrainte temporelle Ignorer l’année](ui/ignore-year.md)
@@ -62,7 +62,7 @@ ht-degree: 75%
    - [Segmentation d’entités multiples](tutorials/multi-entity-segmentation.md)
    - [Respect du consentement](tutorials/consents.md)
    - [Évaluation d’une définition de segment](tutorials/evaluate-a-segment.md)
-   - [Import et utilisation d’audiences externes](tutorials/using-external-audiences.md)
+   - [Créer une audience externe](tutorials/create-external-audience.md)
    - [Création d’un jeu de données pour exporter des données](tutorials/create-dataset-export-segment.md)
    - [Application de la conformité d’utilisation des données aux audiences](tutorials/governance.md)
 - Profile Query Language {#pql}
