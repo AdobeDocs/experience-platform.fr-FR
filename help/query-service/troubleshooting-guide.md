@@ -40,8 +40,8 @@ La liste suivante de réponses aux questions fréquentes est divisée en plusieu
 - [Interface utilisateur des requêtes](#queries-ui)
 - [Échantillon de jeux de données](#dataset-samples)
 - [Exportation des données](#exporting-data)
-- [ Syntaxe SQL ](#sql-syntax) 
-- [Requêtes ITAS ](#itas-queries)
+- [&#x200B; Syntaxe SQL &#x200B;](#sql-syntax) 
+- [Requêtes ITAS &#x200B;](#itas-queries)
 - [Outils tiers](#third-party-tools)
 - [Erreurs de l’API PostgreSQL](#postgresql-api-errors)
 - [Erreurs de l’API REST](#rest-api-errors)
@@ -65,7 +65,7 @@ La fonction de saisie automatique peut être l’une des causes. La fonction tra
 ### Puis-je utiliser [!DNL Postman] pour l’API Query Service ?
 
 +++Réponse
-Oui, vous pouvez visualiser tous les services API d’Adobe et interagir avec eux à l’aide de [!DNL Postman] (une application tierce gratuite). Regardez le [[!DNL Postman] guide de configuration](https://video.tv.adobe.com/v/28832) pour obtenir des instructions détaillées sur la configuration d’un projet dans l’Adobe Developer Console et l’acquisition de toutes les informations d’identification nécessaires à l’utilisation avec [!DNL Postman]. Consultez la documentation officielle pour obtenir des [conseils sur le démarrage, l’exécution et le partage de collections [!DNL Postman] ](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Oui, vous pouvez visualiser tous les services API d’Adobe et interagir avec eux à l’aide de [!DNL Postman] (une application tierce gratuite). Regardez le [[!DNL Postman] guide de configuration](https://video.tv.adobe.com/v/28832) pour obtenir des instructions détaillées sur la configuration d’un projet dans l’Adobe Developer Console et l’acquisition de toutes les informations d’identification nécessaires à l’utilisation avec [!DNL Postman]. Consultez la documentation officielle pour obtenir des [conseils sur le démarrage, l’exécution et le partage de collections [!DNL Postman] &#x200B;](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Existe-t-il un nombre maximal de lignes renvoyées par une requête via l’interface utilisateur ?
@@ -646,7 +646,7 @@ Oui. TLS est appliqué sur le port 80 et les connexions non chiffrées ne sont p
 ### Comment l’utilisation de la licence de Distiller de données est-elle suivie et où puis-je voir ces informations ?
 
 +++Réponse  
-La principale mesure utilisée pour suivre l’utilisation des requêtes par lots est l’heure de calcul. Vous avez accès à ces informations et à votre consommation actuelle via le tableau de bord [ Utilisation des licences ](../dashboards/guides/license-usage.md).
+La principale mesure utilisée pour suivre l’utilisation des requêtes par lots est l’heure de calcul. Vous avez accès à ces informations et à votre consommation actuelle via le tableau de bord [&#x200B; Utilisation des licences &#x200B;](../dashboards/guides/license-usage.md).
 +++
 
 ### Qu’est-ce qu’une heure de calcul ?
@@ -678,7 +678,7 @@ L’infrastructure principale est constamment améliorée afin d’optimiser l�
 +++Réponse
 Vous pouvez vous attendre à des performances similaires lorsque vous exécutez des requêtes dans les sandbox de développement et de production. Les deux environnements sont conçus pour fournir le même niveau de capacité de traitement. Cependant, des différences peuvent apparaître au niveau des heures de calcul, en fonction de la quantité de données que vous traitez et de l’activité globale du système au moment de l’exécution de votre requête.
 
-Suivez l’utilisation de vos heures de calcul dans le tableau de bord [ Utilisation des licences ](../dashboards/guides/license-usage.md) de l’interface utilisateur d’Experience Platform.
+Suivez l’utilisation de vos heures de calcul dans le tableau de bord [&#x200B; Utilisation des licences &#x200B;](../dashboards/guides/license-usage.md) de l’interface utilisateur d’Experience Platform.
 +++
 
 ## Interface utilisateur des requêtes
