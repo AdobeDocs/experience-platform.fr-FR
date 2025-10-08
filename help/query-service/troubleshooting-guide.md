@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Questions fréquentes sur Query Service et Data Distiller
 description: Ce document contient les questions les plus fréquentes et les réponses associées relatives à Query Service et à Data Distiller. Les rubriques incluent l’exportation de données, les outils tiers et les erreurs PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: f0656fcde077fc6c983a7a2d8dc21d2548fa7605
+source-git-commit: f072f95823768d5b65169b56bb874ae9c3986c44
 workflow-type: tm+mt
-source-wordcount: '5186'
-ht-degree: 78%
+source-wordcount: '5441'
+ht-degree: 59%
 
 ---
 
@@ -59,19 +59,19 @@ Non. La désactivation de la fonction de saisie semi-automatique n’est actuell
 ### Pourquoi Query Editor ralentit-il parfois lorsque je tape une requête ?
 
 +++Réponse
-C’est peut être dû à la fonction de saisie automatique. La fonction traite certaines commandes de métadonnées qui peuvent parfois ralentir l’éditeur lors de la modification des requêtes.
+La fonction de saisie automatique peut être l’une des causes. La fonction traite certaines commandes de métadonnées qui peuvent parfois ralentir l’éditeur lors de la modification des requêtes.
 +++
 
 ### Puis-je utiliser [!DNL Postman] pour l’API Query Service ?
 
 +++Réponse
-Oui, vous pouvez visualiser tous les services API d’Adobe et interagir avec eux à l’aide de [!DNL Postman] (une application tierce gratuite). Regardez le [[!DNL Postman] guide de configuration](https://video.tv.adobe.com/v/31635?captions=fre_fr) pour obtenir des instructions détaillées sur la configuration d’un projet dans l’Adobe Developer Console et l’acquisition de toutes les informations d’identification nécessaires à l’utilisation avec [!DNL Postman]. Consultez la documentation officielle pour obtenir des [conseils sur le démarrage, l’exécution et le partage de collections [!DNL Postman] ](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Oui, vous pouvez visualiser tous les services API d’Adobe et interagir avec eux à l’aide de [!DNL Postman] (une application tierce gratuite). Regardez le [[!DNL Postman] guide de configuration](https://video.tv.adobe.com/v/28832) pour obtenir des instructions détaillées sur la configuration d’un projet dans l’Adobe Developer Console et l’acquisition de toutes les informations d’identification nécessaires à l’utilisation avec [!DNL Postman]. Consultez la documentation officielle pour obtenir des [conseils sur le démarrage, l’exécution et le partage de collections [!DNL Postman] ](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Existe-t-il un nombre maximal de lignes renvoyées par une requête via l’interface utilisateur ?
 
 +++Réponse
-Oui, Query Service applique en interne une limite de 50 000 lignes, sauf si une limite explicite est spécifiée en externe. Pour plus d’informations, consultez les conseils relatifs à l’[exécution de requêtes interactives](./best-practices/writing-queries.md#interactive-query-execution).
+Oui, Query Service applique en interne une limite de 50 000 lignes, sauf si une limite explicite est spécifiée en externe. Pour plus d’informations, consultez les conseils relatifs à l’[exécution de requêtes interactives](./best-practices/writing-queries.md#interactive-query-execution).
 +++
 
 ### Puis-je utiliser des requêtes pour mettre à jour des lignes ?
@@ -89,7 +89,7 @@ Non. La taille des données n’est pas limitée, mais le délai d’expiration 
 ### Comment empêcher mes requêtes d’expirer au bout de 10 minutes ?
 
 +++Réponse
-Nous recommandons l’une ou plusieurs des solutions suivantes en cas d’expiration des requêtes.
+Une ou plusieurs des solutions suivantes sont recommandées en cas d’expiration des requêtes.
 
 - [Convertissez la requête en requête CTAS](./sql/syntax.md#create-table-as-select) et planifiez l’exécution. Vous pouvez planifier une exécution [via l’interface utilisateur](./ui/user-guide.md#scheduled-queries) ou l’[API](./api/scheduled-queries.md#create).
 - Exécutez la requête sur un bloc de données plus petit en appliquant des [conditions de filtrage](https://spark.apache.org/docs/latest/api/sql/index.html#filter) supplémentaires.
@@ -134,7 +134,7 @@ Consultez la documentation pour obtenir des conseils complets sur [comment trava
 ### Comment accélérer une requête sur un jeu de données contenant des tableaux ?
 
 +++Réponse
-Pour améliorer les performances des requêtes sur les jeux de données contenant des tableaux, vous devez [fractionner le tableau](https://spark.apache.org/docs/latest/api/sql/index.html#explode) grâce à une [requête CTAS](./sql/syntax.md#create-table-as-select) au moment de l’exécution, puis l’explorer pour en savoir plus sur les opportunités d’amélioration de son temps de traitement.
+Pour améliorer les performances des requêtes sur les jeux de données contenant des tableaux, vous devez [éclater le tableau](https://spark.apache.org/docs/latest/api/sql/index.html#explode) sous la forme d’une [requête CTAS](./sql/syntax.md#create-table-as-select) au moment de l’exécution, puis l’explorer pour en savoir plus sur les opportunités d’amélioration de son temps de traitement.
 +++
 
 ### Pourquoi ma requête CTAS est-elle toujours en cours de traitement après de nombreuses heures alors qu’elle concerne peu de lignes ?
@@ -148,7 +148,7 @@ Une requête peut être bloquée pendant le traitement pour plusieurs raisons. P
 ### Comment contacter le service clientèle d’Adobe ? {#customer-support}
 
 +++Réponse
-[Une liste complète des numéros de téléphone du service clientèle d’Adobe](https://helpx.adobe.com/fr/contact/phone.html) est disponible sur la page d’aide d’Adobe. Vous pouvez également trouver de l’aide en ligne en procédant comme suit :
+[une liste complète des numéros de téléphone du service clientèle d’Adobe](https://helpx.adobe.com/fr/contact/phone.html) est disponible sur la page d’aide d’Adobe. Vous pouvez également trouver de l’aide en ligne en procédant comme suit :
 
 - Accédez à [https://www.adobe.com/](https://www.adobe.com/) dans votre navigateur web.
 - Sur le côté droit de la barre de navigation supérieure, sélectionnez **[!UICONTROL Se connecter]**.
@@ -174,7 +174,7 @@ Pour en savoir plus, consultez la [documentation sur les blocs anonymes](./key-c
 ### Comment mettre en œuvre l’attribution personnalisée dans Query Service ?
 
 +++Réponse
-Il existe deux façons de mettre en œuvre l’attribution personnalisée :
+Il existe deux façons d’implémenter l’attribution personnalisée :
 
 1. Utilisez une combinaison de [fonctions existantes définies par Adobe](./sql/adobe-defined-functions.md) pour déterminer si les besoins du cas d’utilisation sont satisfaits.
 1. Si la suggestion précédente ne répond pas à votre cas d’utilisation, vous devez utiliser une combinaison de [fonctions de fenêtre](./sql/adobe-defined-functions.md#window-functions). Les fonctions de fenêtre examinent tous les événements d’une séquence. Elles permettent également de consulter les données historiques et peuvent être utilisées dans n’importe quelle combinaison.
@@ -189,7 +189,7 @@ Oui, vous pouvez modéliser des requêtes à l’aide d’instructions préparé
 ### Comment récupérer les journaux d’erreur d’une requête ? {#error-logs}
 
 +++Réponse
-Pour récupérer les journaux d’erreur d’une requête spécifique, vous devez d’abord utiliser l’API Query Service pour récupérer les détails du journal de la requête. La réponse HTTP contient les identifiants de requête requis pour rechercher une erreur de requête.
+Pour récupérer les journaux d’erreur d’une requête spécifique, vous devez d’abord utiliser l’API Query Service pour récupérer les détails du journal de requête. La réponse HTTP contient les identifiants de requête requis pour rechercher une erreur de requête.
 
 Utilisez la commande GET pour récupérer plusieurs requêtes. Découvrez comment effectuer un appel à l’API dans la [documentation sur les exemples d’appels d’API](./api/queries.md#sample-api-calls).
 
@@ -224,7 +224,7 @@ La [documentation de référence sur l’API Query Service](https://www.adobe.i
 ### Que signifie « Erreur de validation du schéma » ?
 
 +++Réponse
-Le message « Erreur de validation du schéma » signifie que le système ne peut pas localiser un champ dans le schéma. Nous vous recommandons de lire le document des bonnes pratiques relatives à l’[organisation des ressources de données dans Query Service](./best-practices/organize-data-assets.md) ainsi que la [documentation sur la requête Create Table As Select (CTAS)](./sql/syntax.md#create-table-as-select).
+Le message « Erreur de validation du schéma » signifie que le système ne parvient pas à localiser un champ dans le schéma. Nous vous recommandons de lire le document des bonnes pratiques relatives à l’[organisation des ressources de données dans Query Service](./best-practices/organize-data-assets.md) ainsi que la [documentation sur la requête Create Table As Select (CTAS)](./sql/syntax.md#create-table-as-select).
 
 L’exemple suivant illustre l’utilisation d’une syntaxe CTAS et d’un type de données struct :
 
@@ -257,7 +257,7 @@ AS SELECT '1' as _id,
 ### Comment traiter rapidement les nouvelles données qui entrent chaque jour dans le système ?
 
 +++Réponse
-Vous pouvez utiliser la clause [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) pour lire de manière incrémentielle les données d’une table en fonction d’un identifiant d’instantané. Ceci est idéal pour une utilisation avec le modèle de conception de [chargement incrémentiel](./key-concepts/incremental-load.md) qui traite uniquement les informations du jeu de données qui ont été créées ou modifiées depuis la dernière exécution du chargement. Cela permet d’augmenter l’efficacité du traitement et peut être utilisé avec le traitement des données en flux continu et par lots.
+La clause [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) peut être utilisée pour lire de manière incrémentielle les données d’une table en fonction d’un identifiant d’instantané. Ceci est idéal pour une utilisation avec le modèle de conception de [chargement incrémentiel](./key-concepts/incremental-load.md) qui traite uniquement les informations du jeu de données qui ont été créées ou modifiées depuis la dernière exécution du chargement. Cela permet d’augmenter l’efficacité du traitement et peut être utilisé avec le traitement des données en flux continu et par lots.
 +++
 
 ### Pourquoi y a-t-il une différence entre les nombres affichés dans l’interface utilisateur du profil et les nombres calculés à partir du jeu de données d’exportation du profil ?
@@ -274,7 +274,7 @@ Les nombres affichés dans le tableau de bord du profil sont précis à partir d
 ### Pourquoi ma requête a-t-elle renvoyé un sous-ensemble vide et que dois-je faire ?
 
 +++Réponse
-La cause la plus probable est que la portée de votre requête est trop limitée. Vous devez supprimer systématiquement une section de la clause `WHERE` jusqu’à ce que vous commenciez à voir des données.
+La cause la plus probable est que la portée de votre requête est trop étroite. Vous devez supprimer systématiquement une section de la clause `WHERE` jusqu’à ce que vous commenciez à voir des données.
 
 Vous pouvez également confirmer que votre jeu de données contient des données à l’aide d’une requête courte telle que :
 
@@ -287,19 +287,19 @@ SELECT count(1) FROM myTableName
 ### Puis-je échantillonner mes données ?
 
 +++Réponse
-Cette fonctionnalité est actuellement en développement. Des détails seront disponibles dans les [notes de mise à jour](../release-notes/latest/latest.md) et dans les boîtes de dialogue de l’interface utilisateur d’Experience Platform, une fois que la fonctionnalité sera prête à être publiée.
+Cette fonctionnalité est actuellement en cours de traitement. Des détails seront disponibles dans les [notes de mise à jour](../release-notes/latest/latest.md) et dans les boîtes de dialogue de l’interface utilisateur d’Experience Platform, une fois que la fonctionnalité sera prête à être publiée.
 +++
 
 ### Quelles fonctions d’assistant sont prises en charge par Query Service ?
 
 +++Réponse
-Query Service fournit plusieurs fonctions d’assistant SQL intégrées pour étendre les fonctionnalités SQL. Consultez le document pour obtenir la liste complète des [fonctions SQL prises en charge par Query Service](./sql/spark-sql-functions.md).
+Query Service fournit plusieurs fonctions d’assistance SQL intégrées pour étendre les fonctionnalités SQL. Consultez le document pour obtenir la liste complète des [fonctions SQL prises en charge par Query Service](./sql/spark-sql-functions.md).
 +++
 
 ### Toutes les fonctions [!DNL Spark SQL] natives sont-elles prises en charge, ou les utilisateurs et utilisatrices sont-ils limités aux fonctions [!DNL Spark SQL] wrapper fournies par Adobe ?
 
 +++Réponse
-Toutes les fonctions [!DNL Spark SQL] open source n’ont pas encore été testées sur les données du lac de données. Une fois testées et confirmées, elles seront ajoutées à la liste des fonctions prises en charge. Reportez-vous à la [liste des fonctions [!DNL Spark SQL] prises en charge](./sql/spark-sql-functions.md) pour rechercher une fonction spécifique.
+À ce jour, toutes les fonctions de [!DNL Spark SQL] open source n’ont pas été testées sur les données du lac de données. Une fois testées et confirmées, elles seront ajoutées à la liste des fonctions prises en charge. Reportez-vous à la [liste des fonctions [!DNL Spark SQL] prises en charge](./sql/spark-sql-functions.md) pour rechercher une fonction spécifique.
 +++
 
 ### Les utilisateurs et utilisatrices peuvent-ils définir leurs propres fonctions définies par l’utilisateur (UDF) pour les utiliser dans d’autres requêtes ?
@@ -311,7 +311,7 @@ Pour des raisons de sécurité des données, la définition personnalisée des c
 ### Que dois-je faire si ma requête planifiée échoue ?
 
 +++Réponse
-Commencez par consulter les journaux pour connaître les détails de l’erreur. La section Questions fréquentes sur la [recherche d’erreurs dans les journaux](#error-logs) fournit des informations supplémentaires sur la manière de procéder.
+Tout d’abord, vérifiez les journaux pour connaître les détails de l’erreur. La section Questions fréquentes sur la [recherche d’erreurs dans les journaux](#error-logs) fournit des informations supplémentaires sur la manière de procéder.
 
 Vous pouvez également consulter la documentation pour obtenir des conseils sur la manière d’effectuer des [requêtes planifiées dans l’interface utilisateur](./ui/user-guide.md#scheduled-queries) et par le biais de [l’API](./api/scheduled-queries.md).
 
@@ -321,13 +321,13 @@ Gardez à l’esprit que lorsque vous utilisez le [!DNL Query Editor], vous pouv
 ### Que signifie l’erreur « Limite de session atteinte » ?
 
 +++Réponse
-« Limite de session atteinte » signifie que le nombre maximal de sessions Query Service autorisées pour votre organisation a été atteint. Contactez l’administrateur ou l’administratrice Adobe Experience Platform de votre organisation.
+« Limite de session atteinte » signifie que le nombre maximal de sessions Query Service autorisées pour votre organisation a été atteint. Contactez l’administrateur ou l’administratrice Adobe Experience Platform de votre organisation.
 +++
 
 ### Comment le journal de requête gère-t-il les requêtes relatives à un jeu de données supprimé ?
 
 +++Réponse
-Query Service ne supprime jamais l’historique des requêtes. Cela signifie que toute requête référençant un jeu de données supprimé renvoie le résultat « Aucun jeu de données valide ».
+Query Service ne supprime jamais l’historique des requêtes. Cela signifie que toute requête référençant un jeu de données supprimé renvoie le résultat « Aucun jeu de données valide ».
 +++
 
 ### Comment puis-je obtenir uniquement les métadonnées d’une requête ?
@@ -373,7 +373,7 @@ LIMIT 100;
 ### Comment modifier le fuseau horaire en heure et date UTC ?
 
 +++Réponse
-Adobe Experience Platform conserve les données au format d’heure et date UTC (temps universel coordonné). Exemple de format UTC : `2021-12-22T19:52:05Z`.
+Adobe Experience Platform conserve les données au format d’horodatage UTC (Temps universel coordonné). Exemple de format UTC : `2021-12-22T19:52:05Z`.
 
 Query Service prend en charge les fonctions SQL intégrées pour convertir une date et une heure données au format UTC et inversement à partir de ce format. Les deux méthodes `to_utc_timestamp()` et `from_utc_timestamp()` prennent deux paramètres : la date et l’heure, ainsi que le fuseau horaire.
 
@@ -464,13 +464,13 @@ WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
 ### Dois-je utiliser des caractères génériques, tels que * pour obtenir toutes les lignes de mes jeux de données ?
 
 +++Réponse
-Vous ne pouvez pas utiliser de caractères génériques pour obtenir toutes les données de vos lignes, car Query Service doit être traité comme un **entrepôt orienté colonnes** plutôt qu’un système d’entrepôt traditionnel basé sur les lignes.
+Vous ne pouvez pas utiliser de caractères génériques pour obtenir toutes les données de vos lignes, car Query Service doit être traité comme un **entrepôt orienté colonnes** plutôt qu’un système d’entrepôt traditionnel basé sur les lignes.
 +++
 
 ### Dois-je utiliser `NOT IN` dans ma requête SQL ?
 
 +++Réponse
-L’opérateur `NOT IN` est souvent utilisé pour récupérer les lignes qui ne figurent pas dans une autre table ou instruction SQL. Cet opérateur peut ralentir les performances et renvoyer des résultats inattendus si les colonnes comparées acceptent `NOT NULL`, ou si vous avez un grand nombre d’enregistrements.
+L&#39;opérateur `NOT IN` est souvent utilisé pour récupérer des lignes qui ne figurent pas dans une autre table ou instruction SQL. Cet opérateur peut ralentir les performances et renvoyer des résultats inattendus si les colonnes comparées acceptent `NOT NULL`, ou si vous avez un grand nombre d’enregistrements.
 
 Au lieu d’utiliser `NOT IN`, vous pouvez utiliser `NOT EXISTS` ou `LEFT OUTER JOIN`.
 
@@ -507,19 +507,19 @@ WHERE T2.ID IS NULL
 ### Puis-je créer un jeu de données à l’aide d’une requête CTAS avec un nom de soulignement double comme celui affiché dans l’interface utilisateur ? Par exemple : `test_table_001`.
 
 +++Réponse
-Non, il s’agit d’une limitation intentionnelle dans Experience Platform qui s’applique à tous les services Adobe, y compris Query Service. Un nom comportant deux traits de soulignement est acceptable en tant que nom de schéma et de jeu de données, mais le nom de la table du jeu de données ne peut contenir qu’un seul trait de soulignement.
+Non, il s’agit d’une limitation intentionnelle dans Experience Platform qui s’applique à tous les services Adobe, y compris Query Service. Un nom comportant deux traits de soulignement est acceptable en tant que nom de schéma et de jeu de données, mais le nom de la table du jeu de données ne peut contenir qu’un seul trait de soulignement.
 +++
 
 ### Combien de requêtes simultanées est-il possible d’exécuter à la fois ?
 
 +++Réponse
-Il n’existe aucune limite de simultanéité des requêtes, car les requêtes par lots s’exécutent en tant que tâches d’arrière-plan. Cependant, une limite de délai d’expiration de requête est définie sur 24 heures.
+Il n’existe aucune limite de simultanéité des requêtes, car les requêtes par lots s’exécutent en tant que tâches principales. Cependant, une limite de délai d’expiration de requête est définie sur 24 heures.
 +++
 
 ### Y a-t-il un tableau de bord d’activité dans lequel vous pouvez voir les activités et le statut des requêtes ?
 
 +++Réponse
-Il existe des fonctionnalités de surveillance et d’alerte permettant de vérifier les statuts et les activités des requêtes. Voir les documents concernant l’[intégration du journal d’audit de Query Service](./data-governance/audit-log-guide.md) et les [journaux de requête](./ui/overview.md#log) pour plus d’informations.
+Il existe des fonctionnalités de surveillance et d’alerte pour vérifier les activités et les statuts des requêtes. Voir les documents concernant l’[intégration du journal d’audit de Query Service](./data-governance/audit-log-guide.md) et les [journaux de requête](./ui/overview.md#log) pour plus d’informations.
 +++
 
 ### Existe-t-il un moyen de restaurer les mises à jour ? Par exemple, en cas d’erreur ou si certains calculs doivent être reconfigurés lors de l’écriture de données dans Experience Platform, comment ce scénario doit-il être géré ?
@@ -531,7 +531,7 @@ Actuellement, nous ne prenons pas en charge les restaurations ou les mises à jo
 ### Comment optimiser les requêtes dans Adobe Experience Platform ?
 
 +++Réponse
-Le système ne possède pas d’index, car il ne s’agit pas d’une base de données, mais d’autres optimisations sont en place, liées à l’entrepôt de données. Les options suivantes sont disponibles pour régler vos requêtes :
+Le système ne dispose pas d’index, car il ne s’agit pas d’une base de données, mais d’autres optimisations sont en place, liées à l’entrepôt de données. Les options suivantes sont disponibles pour régler vos requêtes :
 
 - Filtre temporel basé sur les données de série temporelle.
 - Optimisation du pushdown pour le type de données struct.
@@ -543,7 +543,7 @@ Le système ne possède pas d’index, car il ne s’agit pas d’une base de do
 ### Les connexions peuvent-elles être limitées à certains aspects de Query Service ou s’agit-il d’une solution « tout ou rien » ?
 
 +++Réponse
-Query Service est une solution « tout ou rien ». Un accès partiel ne peut pas être fourni.
+Query Service est une solution « tout ou rien ». Un accès partiel ne peut pas être fourni.
 +++
 
 ### Puis-je restreindre les données que Query Service peut utiliser ou accède-t-il simplement à l’ensemble du lac de données d’Adobe Experience Platform ?
@@ -573,18 +573,6 @@ Il existe trois approches pour restreindre l’accès. En voici la liste :
 Oui, les modes SSL sont pris en charge. Voir la [documentation sur les modes SSL](./clients/ssl-modes.md) pour une présentation des différents modes SSL disponibles et du niveau de protection qu’ils offrent.
 +++
 
-### Utilisons-nous TLS 1.2 pour toutes les connexions des clients Power BI à Query Service ?
-
-+++Réponse
-Oui. Les données en transit sont toujours conformes au protocole HTTPS. La version actuellement prise en charge est TLS1.2.
-+++
-
-### Une connexion établie sur le port 80 utilise-t-elle toujours https ?
-
-+++Réponse
-Oui, une connexion établie sur le port 80 utilise toujours SSL. Vous pouvez également utiliser le port 5432.
-+++
-
 ### Puis-je contrôler l’accès à des jeux de données et à des colonnes spécifiques pour une connexion particulière ? Comment cela est-il configuré ?
 
 +++Réponse
@@ -594,7 +582,7 @@ Oui, le contrôle d’accès basé sur les attributs est appliqué s’il est co
 ### Query Service prend-il en charge la commande « INSERT OVERWRITE INTO » ?
 
 +++Réponse
-Non, Query Service ne prend pas en charge la commande « INSERT OVERWRITE INTO ».
+Non, Query Service ne prend pas en charge la commande « INSERT OVERWRITE INTO ».
 +++
 
 ### À quelle fréquence les données d’utilisation du tableau de bord d’utilisation de la licence sont-elles mises à jour pour les heures de calcul de Data Distiller ?
@@ -615,35 +603,73 @@ Oui, vous pouvez utiliser `CREATE VIEW` commande sans accès à Data Distiller. 
 Oui. Cependant, certains clients tiers, tels que DbVisualizer, peuvent nécessiter un identifiant distinct avant et après un bloc SQL pour indiquer qu’une partie d’un script doit être traitée comme une seule instruction. Vous trouverez plus d’informations dans la [documentation sur les blocs anonymes](./key-concepts/anonymous-block.md) ou dans [la documentation officielle de DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
 +++
 
+## TLS, accès au port et chiffrement {#tls-port-questions}
+
+### Une connexion établie sur le port 80 utilise-t-elle toujours le chiffrement HTTPS et TLS ?
+
++++Réponse
+Oui. Les connexions sur le port 80 sont protégées à l’aide du chiffrement TLS et l’application TLS est requise par le service. Les connexions HTTP simples ne sont pas acceptées. La prise en charge du port 80 permet de prendre en charge certaines politiques réseau client. Si votre organisation bloque le port 80, utilisez plutôt le port 5432. Les deux ports nécessitent TLS et offrent la même posture de sécurité.
++++
+
+### Adobe Query Service expose-t-il des données via HTTP non chiffré (port 80) ?
+
++++Réponse
+Non. Les connexions sur le port 80 nécessitent un protocole TLS, et toutes les requêtes HTTP en texte brut sont rejetées côté serveur. Le port 5432 est également pris en charge et est chiffré en TLS.
++++
+
+### L’utilisation du port 80 pour Query Service et Data Distiller est-elle une configuration héritée ?
+
++++Réponse
+Non. Le port 80 avec TLS obligatoire est une configuration prise en charge conçue pour les clients ayant des exigences réseau spécifiques. Il ne s’agit pas d’un mode hérité ou non sécurisé. Si votre environnement limite les connexions sortantes sur le port 80, utilisez plutôt le port 5432 ; les deux ports appliquent le protocole TLS.
++++
+
+### Utilisons-nous TLS 1.2 pour toutes les connexions des clients Power BI à Query Service ?
+
++++Réponse
+Oui. Les données en transit sont toujours protégées à l’aide de HTTPS et la version actuellement prise en charge est TLS 1.2. Toutes les connexions de Power BI à Query Service nécessitent un transport chiffré.
++++
+
+### Le port 80 est-il non chiffré lorsqu’il est utilisé avec Data Distiller ?
+
++++Réponse
+Non. Data Distiller applique le protocole TLS sur le port 80 et rejette toute requête HTTP en texte brut. Le port 5432 est également pris en charge et est chiffré en TLS.
++++
+
+### Existe-t-il des risques ou des limitations lors de l’utilisation du port 80 avec Query Service ou Data Distiller ?
+
++++Réponse
+Oui. TLS est appliqué sur le port 80 et les connexions non chiffrées ne sont pas prises en charge. Certaines organisations bloquent le trafic sortant sur le port 80 en raison de restrictions de politique. Si cela s’applique à votre réseau, utilisez plutôt le port 5432. Les deux ports offrent le même niveau de sécurité, car le protocole TLS est requis dans tous les cas.
++++
+
 ## Data Distiller {#data-distiller}
 
 ### Comment l’utilisation de la licence de Distiller de données est-elle suivie et où puis-je voir ces informations ?
 
-+++Réponse\
++++Réponse  
 La principale mesure utilisée pour suivre l’utilisation des requêtes par lots est l’heure de calcul. Vous avez accès à ces informations et à votre consommation actuelle via le tableau de bord [ Utilisation des licences ](../dashboards/guides/license-usage.md).
 +++
 
 ### Qu’est-ce qu’une heure de calcul ?
 
-+++Réponse\
++++Réponse  
 Les heures de calcul sont la mesure du temps pris par les moteurs de Query Service pour lire, traiter et écrire des données dans le lac de données lorsqu’une requête par lots est exécutée.
 +++
 
 ### Comment les heures de calcul sont-elles mesurées ?
 
-+++Réponse\
++++Réponse  
 Les heures de calcul sont mesurées de manière cumulative sur tous vos sandbox autorisés.
 +++
 
 ### Pourquoi est-ce que je remarque parfois une variation de la consommation des heures de calcul même lorsque j’exécute la même requête de manière consécutive ?
 
-+++Réponse\
++++Réponse  
 Les heures de calcul d’une requête peuvent fluctuer en raison de plusieurs facteurs. Il s’agit notamment du volume de données traitées, de la complexité des opérations de transformation dans la requête SQL, etc. Query Service met à l’échelle le cluster en fonction des paramètres ci-dessus pour chaque requête, ce qui peut entraîner des différences dans les heures de calcul.
 +++
 
 ### Est-il normal de constater une réduction des heures de calcul lorsque j’exécute la même requête à l’aide des mêmes données sur une longue période ? Pourquoi cela pourrait-il se produire ?
 
-+++Réponse\
++++Réponse  
 L’infrastructure principale est constamment améliorée afin d’optimiser l’utilisation des heures de calcul et le temps de traitement. Par conséquent, vous remarquerez peut-être des changements au fil du temps à mesure que des améliorations de performances sont mises en œuvre.
 +++
 
@@ -758,7 +784,7 @@ Oui, les clients de bureau tiers peuvent être connectés à Query Service par l
 ### Pourquoi mes informations d’identification non expirantes ne fonctionnent-elles pas ?
 
 +++Réponse
-La valeur des informations d’identification non expirantes sont les arguments concaténés des paramètres `technicalAccountID` et `credential` extraits du fichier de configuration JSON. La valeur du mot de passe se présente comme suit : `{{technicalAccountId}:{credential}}`.
+La valeur des informations d’identification non expirantes sont les arguments concaténés du `technicalAccountID` et les `credential` extraits du fichier JSON de configuration. La valeur du mot de passe se présente comme suit : `{{technicalAccountId}:{credential}}`.
 Pour plus d’informations sur la [connexion à des clients externes à l’aide d’informations d’identification](./ui/credentials.md#using-credentials-to-connect-to-external-clients), consultez la documentation.
 +++
 
@@ -777,13 +803,13 @@ Tout éditeur SQL tiers compatible avec le client PSQL ou [!DNL Postgres] peut �
 ### Puis-je connecter l’outil Power BI à Query Service ?
 
 +++Réponse
-Oui, vous pouvez connecter Power BI à Query Service. Consultez la documentation pour obtenir des [instructions sur la connexion de l’application de bureau Power BI à Query Service](./clients/power-bi.md).
+Oui, vous pouvez connecter Power BI à Query Service. Consultez la documentation pour obtenir des [instructions sur la connexion de l’application de bureau Power BI à Query Service](./clients/power-bi.md).
 +++
 
 ### Pourquoi le chargement des tableaux de bord est-il long lorsque le système est connecté à Query Service ?
 
 +++Réponse
-Lorsque le système est connecté à Query Service, il est connecté à un moteur de traitement interactif ou par lots. Cela peut entraîner des temps de chargement plus longs pour refléter les données traitées.
+Lorsque le système est connecté à Query Service, il est connecté à un moteur de traitement interactif ou par lots. Cela peut entraîner des temps de chargement plus longs pour refléter les données traitées.
 
 Si vous souhaitez améliorer les temps de réponse de vos tableaux de bord, vous devez mettre en oeuvre un serveur Business Intelligence (BI) en tant que couche de mise en cache entre Query Service et les outils de BI. La plupart des outils de BI offrent une option de serveur dans leur assortiment.
 
@@ -821,7 +847,7 @@ Le tableau suivant fournit les codes d’erreur PSQL et leurs causes possibles.
 ### Pourquoi ai-je reçu un code d’erreur 58000 lors de l’utilisation de la méthode history_meta() sur ma table ?
 
 +++Réponse
-La méthode `history_meta()` sert à accéder à un instantané d’un jeu de données. Auparavant, si vous deviez exécuter une requête sur un jeu de données vide dans Azure Data Lake Storage (ADLS), vous receviez un code d’erreur 58000 indiquant que le jeu de données n’existe pas. Consultez ci-dessous un exemple de l’ancienne erreur système.
+La méthode `history_meta()` est utilisée pour accéder à un instantané d’un jeu de données. Auparavant, si vous deviez exécuter une requête sur un jeu de données vide dans Azure Data Lake Storage (ADLS), vous receviez un code d’erreur 58000 indiquant que le jeu de données n’existe pas. Consultez ci-dessous un exemple de l’ancienne erreur système.
 
 ```shell
 ErrorCode: 58000 Internal System Error [Invalid table your_table_name. historyMeta can be used on datalake tables only.]
