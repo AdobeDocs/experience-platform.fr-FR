@@ -2,10 +2,10 @@
 title: Copie des ressources
 description: Découvrez comment créer une ressource de balise à lʼaide des paramètres dʼune ressource de balise existante dans Adobe Experience Platform.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a4e4fe0ae0f52a3b4b5bfa2c42ef4dce7f2a6a59
 workflow-type: tm+mt
-source-wordcount: '781'
-ht-degree: 93%
+source-wordcount: '835'
+ht-degree: 87%
 
 ---
 
@@ -42,6 +42,10 @@ Après avoir configuré le comportement souhaité, cliquez sur **[!UICONTROL Cop
 ## Copie de propriétés
 
 Lorsque vous faites une copie d’une propriété complète, vous devez tenir compte de quelques éléments pour bien comprendre le processus.
+
+>[!IMPORTANT]
+>
+>Les ressources utilisant le type de variable de mise à jour de l’élément de données nécessiteront des étapes supplémentaires après la copie. Modifiez chaque action de mise à jour de variable, apportez une modification à n’importe quelle valeur des données ou de l’objet XDM et enregistrez les modifications. La bibliothèque publiée doit alors fonctionner comme prévu. Si vous avez des questions sur ce processus, veuillez contacter le support technique.
 
 * Les paramètres de propriété seront copiés exactement dans leur état d’origine (domaines, paramètres avancés, etc.)
 * Les règles, les éléments de données et les extensions de la propriété d’origine sont copiés dans la nouvelle propriété cible. Les adaptateurs, les environnements et les bibliothèques ne seront pas copiés.
