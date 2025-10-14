@@ -3,10 +3,10 @@ title: Présentation Du Connecteur Source Azure Event Hubs
 description: Découvrez comment connecter Azure Event Hubs à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: 02c777b5db9734cf45b35f131d83c35c5ce670fb
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 9%
+source-wordcount: '633'
+ht-degree: 8%
 
 ---
 
@@ -38,7 +38,9 @@ Pour augmenter le taux d’ingestion du côté d’Experience Platform, Experien
 
 ## Utiliser un réseau virtuel pour se connecter à [!DNL Event Hubs] à Experience Platform
 
-Vous pouvez configurer un réseau virtuel pour [!DNL Event Hubs] connecter à Experience Platform tout en activant vos mesures de pare-feu. Pour configurer un réseau virtuel, accédez à ce [[!DNL Event Hubs] document sur l’ensemble de règles réseau](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) et procédez comme suit :
+Experience Platform prend en charge la connexion à [!DNL Event Hubs] via un réseau virtuel. Vous pouvez ainsi transférer des données sur une connexion privée sécurisée plutôt que sur l’Internet public. Placer sur la liste autorisée Vous pouvez utiliser Experience Platform VNet pour acheminer le trafic [!DNL Event Hubs] en toute sécurité via la colonne vertébrale privée [!DNL Azure], tout en conservant les protections de pare-feu existantes.
+
+Pour configurer un réseau virtuel, accédez à ce [[!DNL Event Hubs] document sur l’ensemble de règles réseau](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) et procédez comme suit :
 
 * Sélectionnez **Essayer** dans le panneau API REST ;
 * Authentifiez votre compte [!DNL Azure] à l’aide de vos informations d’identification dans le même navigateur ;
