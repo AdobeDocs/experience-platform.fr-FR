@@ -14,7 +14,7 @@ ht-degree: 35%
 
 # Créer un flux de données en continu pour les données brutes à l’aide de l’API [!DNL Flow Service]
 
-Ce tutoriel décrit les étapes à suivre pour récupérer des données brutes d’un connecteur source de diffusion en continu et les importer dans Experience Platform à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour récupérer des données brutes d’un connecteur source de diffusion en continu et les importer dans Experience Platform à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 

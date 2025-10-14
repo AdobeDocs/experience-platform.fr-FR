@@ -16,7 +16,7 @@ ht-degree: 42%
 >
 >La source de diffusion en continu [!DNL Shopify] est en version bêta. Veuillez lire la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Le tutoriel suivant décrit les étapes à suivre pour créer une connexion source et un flux de données en continu afin de diffuser des données de [[!DNL Shopify]](https://www.shopify.com/) vers Adobe Experience Platform à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Le tutoriel suivant décrit les étapes à suivre pour créer une connexion source et un flux de données en continu afin de diffuser des données de [[!DNL Shopify]](https://www.shopify.com/) vers Adobe Experience Platform à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main {#getting-started}
 

@@ -141,7 +141,7 @@ Apportez les modifications souhaitées au champ, en faisant défiler le rail de 
 
 >[!IMPORTANT]
 >
-> Toutes les mises à jour que vous apportez aux champs seront appliquées dans tous les schémas qui utilisent cette classe, conformément aux [ règles d’évolution des schémas ](../../schema/composition.md#evolution).
+> Toutes les mises à jour que vous apportez aux champs seront appliquées dans tous les schémas qui utilisent cette classe, conformément aux [&#x200B; règles d’évolution des schémas &#x200B;](../../schema/composition.md#evolution).
 
 ![Éditeur de schémas avec un champ sélectionné et le rail de droite exposé, avec la mention [!UICONTROL Appliquer].](../../images/ui/resources/classes/save-changes.png)
 

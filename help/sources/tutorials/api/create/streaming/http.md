@@ -698,7 +698,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails des informatio
 
 Ce tutoriel vous a permis de créer une connexion HTTP en continu, qui vous permet d’utiliser le point d’entrée en continu pour ingérer des données dans Experience Platform. Pour obtenir des instructions sur la création d’une connexion en continu dans l’interface utilisateur, consultez le [tutoriel sur la création d’une connexion en continu](../../../ui/create/streaming/http.md).
 
-Pour savoir comment diffuser des données vers Experience Platform, consultez le tutoriel sur la [ diffusion en continu de données de série temporelle ](../../../../../ingestion/tutorials/streaming-time-series-data.md) ou le tutoriel sur la [ diffusion en continu de données d’enregistrement ](../../../../../ingestion/tutorials/streaming-record-data.md).
+Pour savoir comment diffuser des données vers Experience Platform, consultez le tutoriel sur la [&#x200B; diffusion en continu de données de série temporelle &#x200B;](../../../../../ingestion/tutorials/streaming-time-series-data.md) ou le tutoriel sur la [&#x200B; diffusion en continu de données d’enregistrement &#x200B;](../../../../../ingestion/tutorials/streaming-record-data.md).
 
 ## Annexe
 

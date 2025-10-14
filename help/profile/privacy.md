@@ -186,7 +186,7 @@ Supposons, par exemple, que vous stockiez des données d’attributs du client d
 
 L’un des jeux de données utilise `customer_id` comme identifiant principal, tandis que les deux autres utilisent `email_id`. Si vous deviez envoyer une demande d’accès à des informations personnelles (accès ou suppression) en utilisant uniquement `email_id` comme valeur d’ID utilisateur, seuls les attributs `firstName`, `lastName` et `mlScore` seraient traités, tandis que `address` ne seraient pas affectés.
 
-Pour vous assurer que vos demandes d’accès à des informations personnelles traitent tous les attributs clients pertinents, vous devez fournir les valeurs d’identité principale pour tous les jeux de données applicables où ces attributs peuvent être stockés (jusqu’à neuf identifiants par client). Pour plus d’informations sur les champs généralement désignés comme identités, consultez la section sur les champs d’identité dans la [ principes de base de la composition des schémas ](../xdm/schema/composition.md#identity).
+Pour vous assurer que vos demandes d’accès à des informations personnelles traitent tous les attributs clients pertinents, vous devez fournir les valeurs d’identité principale pour tous les jeux de données applicables où ces attributs peuvent être stockés (jusqu’à neuf identifiants par client). Pour plus d’informations sur les champs généralement désignés comme identités, consultez la section sur les champs d’identité dans la [&#x200B; principes de base de la composition des schémas &#x200B;](../xdm/schema/composition.md#identity).
 
 ## Traitement des demandes de suppression {#delete}
 

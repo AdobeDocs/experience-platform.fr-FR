@@ -25,7 +25,7 @@ Le tableau ci-dessous décrit chaque colonne disponible.
 
 >[!NOTE]
 >
->Icône d’abonnement aux alertes (![ icône d’abonnement aux alertes .](/help/images/icons/alert-add.png)) est contenu dans chaque ligne d’une colonne sans titre. Consultez la section [Abonnements aux alertes](#alert-subscription) pour plus d’informations.
+>Icône d’abonnement aux alertes (![&#x200B; icône d’abonnement aux alertes .](/help/images/icons/alert-add.png)) est contenu dans chaque ligne d’une colonne sans titre. Consultez la section [Abonnements aux alertes](#alert-subscription) pour plus d’informations.
 
 | Colonne | Description |
 |---|---|
@@ -85,13 +85,13 @@ Une fois qu’une requête planifiée est supprimée, elle n’est **pas** suppr
 
 ![L’onglet Requêtes planifiées avec une requête planifiée supprimée et l’icône d’abonnement aux alertes grisées mise en surbrillance.](../images/ui/monitor-queries/post-delete.png)
 
-Si vous souhaitez planifier des exécutions pour ce modèle de requête, sélectionnez le nom du modèle dans la ligne appropriée pour accéder à l’éditeur de requêtes, puis suivez les [ instructions pour ajouter un planning à une requête](./query-schedules.md#create-schedule) comme décrit dans la documentation.
+Si vous souhaitez planifier des exécutions pour ce modèle de requête, sélectionnez le nom du modèle dans la ligne appropriée pour accéder à l’éditeur de requêtes, puis suivez les [&#x200B; instructions pour ajouter un planning à une requête](./query-schedules.md#create-schedule) comme décrit dans la documentation.
 
 ### S’abonner aux alertes {#alert-subscription}
 
 Pour vous abonner aux alertes pour les exécutions de requête planifiées, sélectionnez l’icône `...` (points de suspension) ou l’icône d’abonnement aux alertes (![Icône d’abonnement aux alertes).](/help/images/icons/alert-add.png)) pour la requête planifiée que vous souhaitez gérer. Le menu déroulant des actions intégrées s’affiche. Sélectionnez ensuite **[!UICONTROL S’abonner]** parmi les options disponibles.
 
-![ L’espace de travail des requêtes planifiées avec des ellipses, une icône d’abonnement aux alertes et le menu déroulant des actions intégrées est mis en surbrillance.](../images/ui/monitor-queries/subscribe.png)
+![&#x200B; L’espace de travail des requêtes planifiées avec des ellipses, une icône d’abonnement aux alertes et le menu déroulant des actions intégrées est mis en surbrillance.](../images/ui/monitor-queries/subscribe.png)
 
 La boîte de dialogue [!UICONTROL Alertes] s’ouvre. La boîte de dialogue [!UICONTROL Alertes] vous abonne à la fois aux notifications de l’interface utilisateur et aux alertes par e-mail. Plusieurs options d’abonnement aux alertes sont disponibles : `start`, `success`, `failure`, `quarantine` et `delay`. Cochez la ou les cases correspondantes et sélectionnez **[!UICONTROL Enregistrer]** pour vous abonner.
 
@@ -137,7 +137,7 @@ Les requêtes peuvent également être inscrites dans la fonction de quarantaine
 
 Contrôlez les heures de votre ordinateur en définissant des alertes pour les délais des requêtes. Vous pouvez surveiller les performances des requêtes et recevoir des notifications si l’état d’une requête reste inchangé après une période spécifique. Utilisez l’alerte &quot;[!UICONTROL Délai d’exécution de requête]&quot; pour être averti si une requête continue à traiter après une période spécifique sans avoir terminé.
 
-Lorsque vous [ vous abonnez aux alertes](#alert-subscription) pour les exécutions de requête planifiées, l’une des alertes disponibles est le [!UICONTROL &#x200B; &lbrace;délai d’exécution de requête]. Cette alerte nécessite de définir un seuil pour la durée de l’exécution, à ce stade, vous serez informé du retard de traitement.
+Lorsque vous [&#x200B; vous abonnez aux alertes](#alert-subscription) pour les exécutions de requête planifiées, l’une des alertes disponibles est le [!UICONTROL &#x200B; &lbrace;délai d’exécution de requête]. Cette alerte nécessite de définir un seuil pour la durée de l’exécution, à ce stade, vous serez informé du retard de traitement.
 
 Pour choisir une durée de seuil qui déclenche la notification, saisissez un nombre dans le champ de saisie de texte ou utilisez les flèches haut et bas pour augmenter d&#39;une minute. Puisque le seuil est défini en minutes, la durée maximale d’observation d’un délai d’exécution de requête est de 1 440 minutes (24 heures). La période par défaut d’un délai d’exécution est de 150 minutes.
 
@@ -215,7 +215,7 @@ Les blocs anonymes sont identifiés à l&#39;aide d&#39;un préfixe `$$` avant l
 
 Les sous-requêtes de bloc anonymes ont des onglets à gauche de l’état d’exécution. Sélectionnez un onglet pour afficher les détails de l’exécution.
 
-![ La vue d&#39;ensemble de l&#39;exécution de la requête affiche une requête bloquée anonyme. Les multiples onglets de requête sont mis en surbrillance.](../images/ui/monitor-queries/anonymous-block-overview.png)
+![&#x200B; La vue d&#39;ensemble de l&#39;exécution de la requête affiche une requête bloquée anonyme. Les multiples onglets de requête sont mis en surbrillance.](../images/ui/monitor-queries/anonymous-block-overview.png)
 
 En cas d’échec d’une requête bloquée anonyme, vous pouvez trouver le code d’erreur correspondant à ce bloc spécifique via cette interface utilisateur.
 

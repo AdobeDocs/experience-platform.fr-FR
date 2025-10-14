@@ -26,7 +26,7 @@ Pour acquérir les informations d’identification nécessaires à la connexion 
 >Sur l&#39;écran d&#39;accueil du Navigateur Anaconda, sélectionnez **[!DNL Jupyter Notebook]** dans la liste des applications prises en charge pour lancer le programme.
 >Vous trouverez plus d’informations dans la [documentation officielle d’Anaconda](https://docs.anaconda.com/anaconda/navigator/).
 
-La documentation officielle de Jupyter fournit des instructions pour [ exécuter le notebook à partir de l’interface de ligne de commande ](https://docs.jupyter.org/en/latest/running.html#how-do-i-open-a-specific-notebook) (CLI).
+La documentation officielle de Jupyter fournit des instructions pour [&#x200B; exécuter le notebook à partir de l’interface de ligne de commande &#x200B;](https://docs.jupyter.org/en/latest/running.html#how-do-i-open-a-specific-notebook) (CLI).
 
 ## Launch [!DNL Jupyter Notebook]
 

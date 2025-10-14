@@ -37,7 +37,7 @@ Les statistiques générées à partir des requêtes SQL offrent une flexibilit�
 >
 >Une fois la sélection effectuée, vous ne pouvez pas la modifier dans ce tableau de bord. Vous devez créer un tableau de bord avec une méthode de création de tableau de bord différente.
 
-![ La boîte de dialogue [!UICONTROL Créer un tableau de bord] avec le mode pro Requête et l’option Enregistrer en surbrillance.](../images/sql-insights-query-pro-mode/query-pro-mode.png)
+![&#x200B; La boîte de dialogue [!UICONTROL Créer un tableau de bord] avec le mode pro Requête et l’option Enregistrer en surbrillance.](../images/sql-insights-query-pro-mode/query-pro-mode.png)
 
 ## Présentation du mode Query Pro {#query-pro-mode}
 
@@ -69,7 +69,7 @@ Pour exécuter votre requête, sélectionnez l’icône d’exécution (![Icône
 >
 >Si votre requête utilise des paramètres de requête, exécutez la requête une fois pour préremplir toutes les clés de paramètre de requête utilisées. La requête échoue, mais l’interface utilisateur affiche automatiquement l’onglet Paramètres de requête et répertorie toutes les clés incluses. Ajoutez les valeurs appropriées pour vos clés.
 
-![ La boîte de dialogue [!UICONTROL Enter SQL] avec une entrée SQL, l’onglet Results (Résultats) affiché et Sélectionner surligné.](../images/sql-insights-query-pro-mode/enter-sql-select.png)
+![&#x200B; La boîte de dialogue [!UICONTROL Enter SQL] avec une entrée SQL, l’onglet Results (Résultats) affiché et Sélectionner surligné.](../images/sql-insights-query-pro-mode/enter-sql-select.png)
 
 ## Renseigner le widget {#populate-widget}
 

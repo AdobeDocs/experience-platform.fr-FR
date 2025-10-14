@@ -45,13 +45,13 @@ Une fois votre source créée, consultez le [guide de documentation](./documenta
 
 Le processus détaillé de configuration de votre source dans Experience Platform est décrit ci-dessous :
 
-* Lisez le [ Guide de l’API des sources en libre-service (SDK par lots)](./api/api-overview.md).
-   * Lisez le [ guide de prise en main ](./api/getting-started.md).
+* Lisez le [&#x200B; Guide de l’API des sources en libre-service (SDK par lots)](./api/api-overview.md).
+   * Lisez le [&#x200B; guide de prise en main &#x200B;](./api/getting-started.md).
    * Suivez le tutoriel sur la [création d’une spécification de connexion](./api/create.md).
    * Suivez le tutoriel sur la [mise à jour de la spécification de connexion](./api/update-connection-specs.md).
    * Suivez le tutoriel sur [l’ajout de votre nouvel identifiant de spécification de connexion à une spécification de flux](./api/update-flow-specs.md)
    * [Envoyez votre nouvelle source](./api/submit.md).
-* Pour mieux comprendre la structure et les propriétés d’une spécification de connexion, consultez le guide sur [ Options de configuration pour les sources en libre-service (SDK par lots)](./config/config.md).
+* Pour mieux comprendre la structure et les propriétés d’une spécification de connexion, consultez le guide sur [&#x200B; Options de configuration pour les sources en libre-service (SDK par lots)](./config/config.md).
    * Lisez le guide sur [la configuration de vos spécifications d’authentification](./config/authspec.md) pour mieux comprendre les différents types d’authentification que vous pouvez utiliser pour votre source.
    * Lisez le guide sur [la configuration des spécifications de votre source](./config/sourcespec.md) pour plus d’informations sur les différents types de pagination, les formats de planification et les schémas personnalisés qui peuvent être configurés pour votre source.
    * Lisez le guide sur la [configuration des spécifications d’exploration](./config/explorespec.md) pour plus d’informations sur la définition des paramètres requis pour explorer et inspecter les objets contenus dans votre source.

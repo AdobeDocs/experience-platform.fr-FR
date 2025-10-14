@@ -13,9 +13,9 @@ ht-degree: 8%
 
 ## Vue d’ensemble {#overview}
 
-Cette page décrit comment utiliser la Destination SDK pour configurer une destination basée sur un fichier avec des [ options de formatage de fichier ](configure-file-formatting-options.md) personnalisées et une [ configuration de nom de fichier ](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) personnalisée pour exporter des [audiences prospect](/help/destinations/ui/activate-prospect-audiences.md). Les exemples de ce guide décrivent comment exporter des audiences de profils de prospect vers un emplacement Amazon S3.
+Cette page décrit comment utiliser la Destination SDK pour configurer une destination basée sur un fichier avec des [&#x200B; options de formatage de fichier &#x200B;](configure-file-formatting-options.md) personnalisées et une [&#x200B; configuration de nom de fichier &#x200B;](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) personnalisée pour exporter des [audiences prospect](/help/destinations/ui/activate-prospect-audiences.md). Les exemples de ce guide décrivent comment exporter des audiences de profils de prospect vers un emplacement Amazon S3.
 
-Vous pouvez également configurer des emplacements de stockage STFP ou autres pour exporter des audiences de prospects. La partie importante à retenir est d’ajouter le fragment de code ci-dessous à la configuration de destination dans l’ [étape 2](#create-destination-configuration) pour permettre au [ workflow d’exporter les audiences de prospects](/help/destinations/ui/activate-prospect-audiences.md) vers la destination.
+Vous pouvez également configurer des emplacements de stockage STFP ou autres pour exporter des audiences de prospects. La partie importante à retenir est d’ajouter le fragment de code ci-dessous à la configuration de destination dans l’ [étape 2](#create-destination-configuration) pour permettre au [&#x200B; workflow d’exporter les audiences de prospects](/help/destinations/ui/activate-prospect-audiences.md) vers la destination.
 
 ```json
   "sources": [
@@ -417,7 +417,7 @@ Une réponse réussie renvoie la nouvelle configuration de destination, y compri
 
 En fonction des configurations ci-dessus, le catalogue des Experience Platform affiche désormais une nouvelle carte de destination privée que vous pouvez utiliser.
 
-![ Enregistrement d’écran affichant la page du catalogue des destinations avec une carte de destination sélectionnée.](../../assets/guides/batch/destination-card.gif)
+![&#x200B; Enregistrement d’écran affichant la page du catalogue des destinations avec une carte de destination sélectionnée.](../../assets/guides/batch/destination-card.gif)
 
 Dans les images et enregistrements ci-dessous, notez comment les options du [workflow d’activation pour les destinations basées sur des fichiers](../../../ui/activate-batch-profile-destinations.md) correspondent aux options que vous avez sélectionnées dans la configuration de destination.
 
@@ -427,7 +427,7 @@ Lorsque vous renseignez des détails sur la destination, notez comment les champ
 >
 >L’ordre dans lequel vous ajoutez les champs de données personnalisés à la configuration de destination n’est pas reflété dans l’interface utilisateur. Les champs de données personnalisés sont toujours affichés dans l’ordre indiqué dans l’enregistrement à l’écran ci-dessous.
 
-![ Renseignez les détails de destination](../../assets/guides/batch/file-configuration-options.gif)
+![&#x200B; Renseignez les détails de destination](../../assets/guides/batch/file-configuration-options.gif)
 
 Lors de la planification des intervalles d’exportation, notez comment les champs sont apparus comme les champs que vous avez configurés dans la configuration `batchConfig`.
 ![options de planification d’exportation](../../assets/guides/batch/ui-view-scheduling-prospect-destination.png)

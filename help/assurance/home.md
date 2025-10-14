@@ -92,4 +92,4 @@ Assurance a mis en place les mesures de sécurité suivantes :
 
 Pour configurer Assurance, vous devez d’abord installer l’extension Assurance dans votre application. Pour savoir comment procéder, consultez le tutoriel sur [l’implémentation de l’extension Assurance](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app).
 
-Après avoir ajouté Assurance à votre application, vous pouvez créer une session Assurance qui peut être connectée à votre appareil. Pour savoir comment utiliser Assurance, consultez le guide [ sur l’utilisation d’Assurance](./tutorials/using-assurance.md).
+Après avoir ajouté Assurance à votre application, vous pouvez créer une session Assurance qui peut être connectée à votre appareil. Pour savoir comment utiliser Assurance, consultez le guide [&#x200B; sur l’utilisation d’Assurance](./tutorials/using-assurance.md).

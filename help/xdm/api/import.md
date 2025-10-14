@@ -13,8 +13,8 @@ ht-degree: 17%
 
 Le point d’entrée `/rpc/import` de l’API [!DNL Schema Registry] vous permet de créer des ressources de modèle de données d’expérience (XDM) à partir des charges d’exportation générées. Les payloads d’exportation peuvent être créés à partir de deux sources :
 
-* Le point d’entrée [`/rpc/export` ](./export.md) crée des payloads d’exportation à partir de ressources XDM existantes, ce qui vous permet de partager des ressources entre environnements de test.
-* Le point d’entrée [`/rpc/csv2schema` ](./csv-to-schema.md) crée des payloads d’exportation à partir de modèles CSV.
+* Le point d’entrée [`/rpc/export` &#x200B;](./export.md) crée des payloads d’exportation à partir de ressources XDM existantes, ce qui vous permet de partager des ressources entre environnements de test.
+* Le point d’entrée [`/rpc/csv2schema` &#x200B;](./csv-to-schema.md) crée des payloads d’exportation à partir de modèles CSV.
 
 Une fois que vous avez créé une payload d’exportation, vous pouvez utiliser le point de terminaison `/rpc/import` pour générer la ressource (et toutes les ressources dépendantes) dans l’environnement de test de votre choix.
 

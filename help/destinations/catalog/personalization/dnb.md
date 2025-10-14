@@ -18,7 +18,7 @@ Analysez les visiteurs anonymes et convertissez-les en prospects.
 
 [!DNL D&B Visitor Intelligence] est une extension de personnalisation dans Adobe Experience Platform. Pour plus d’informations sur la fonctionnalité d’extension, consultez le [site web de D&amp;B](https://www.dnb.com/).
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension D&amp;B Visitor Intelligence](../../assets/catalog/personalization/dnb/catalog.png)
 

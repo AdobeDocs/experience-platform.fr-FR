@@ -17,7 +17,7 @@ Lorsque l’on se fie uniquement aux identifiants basés sur des chaînes, il pe
 
 Le type de données [!UICONTROL Source B2B] vous permet d’utiliser l’identifiant de chaîne d’origine d’une entité et de le combiner avec des informations contextuelles spécifiques à la source afin de vous assurer qu’il reste entièrement unique dans le système Experience Platform, quelle que soit la source d’où il provient.
 
-![ Structure Source B2B ](../images/data-types/b2b-source.png)
+![&#x200B; Structure Source B2B &#x200B;](../images/data-types/b2b-source.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
@@ -30,5 +30,5 @@ Le type de données [!UICONTROL Source B2B] vous permet d’utiliser l’identif
 
 Pour plus d’informations sur ce type de données, reportez-vous au référentiel XDM public :
 
-* [ Exemple renseigné ](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/b2b-source.example.1.json)
+* [&#x200B; Exemple renseigné &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/b2b-source.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/b2b-source.schema.json)

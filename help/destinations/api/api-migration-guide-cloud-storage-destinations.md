@@ -50,7 +50,7 @@ Bien que ces destinations avec des fonctionnalités améliorées aient été ini
 
 ## À qui cette page s’applique {#who-this-applies-to}
 
-Si vous utilisez déjà l’[ API Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/) pour exporter des profils vers les destinations de stockage dans le cloud Amazon S3, Azure Blob ou SFTP, ce guide de migration de l’API s’applique à vous.
+Si vous utilisez déjà l’[&#x200B; API Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/) pour exporter des profils vers les destinations de stockage dans le cloud Amazon S3, Azure Blob ou SFTP, ce guide de migration de l’API s’applique à vous.
 
 Si des scripts sont exécutés dans vos emplacements de stockage dans le cloud [!DNL Amazon S3], [!DNL Azure Blob] ou SFTP en plus des fichiers exportés depuis l’Experience Platform, sachez que certains paramètres changent en ce qui concerne les spécifications de connexion et de flux des nouvelles cartes, ainsi que l’étape de mappage.
 
@@ -68,7 +68,7 @@ TBD if we keep this link but will likely remove it
 
 -->
 * [Tutoriel sur l’API pour exporter des audiences vers des destinations de stockage dans le cloud](/help/destinations/api/activate-segments-file-based-destinations.md)
-* [ Documentation de référence de l’API du service de flux de destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/)
+* [&#x200B; Documentation de référence de l’API du service de flux de destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/)
 
 ## Résumé des modifications incompatibles avec l’arrière {#summary-backwards-incompatible-changes}
 
@@ -674,7 +674,7 @@ L’étape du sélecteur de profil dans les trois destinations est remplacée pa
 
 Notez comment l’objet `profileSelectors` des exemples hérités est remplacé par le nouvel objet `profileMapping`.
 
-Recherchez des informations complètes sur la configuration de l’objet `profileMapping` dans le tutoriel [ API pour exporter des données vers des destinations de stockage dans le cloud](/help/destinations/api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping).
+Recherchez des informations complètes sur la configuration de l’objet `profileMapping` dans le tutoriel [&#x200B; API pour exporter des données vers des destinations de stockage dans le cloud](/help/destinations/api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping).
 
 >[!BEGINTABS]
 

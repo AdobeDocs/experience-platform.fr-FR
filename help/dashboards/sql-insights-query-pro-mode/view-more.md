@@ -97,4 +97,4 @@ Vous pouvez afficher jusqu’à 500 enregistrements par page. Pour parcourir les
 
 Vous êtes arrivé au bout de ce document. À présent, vous savez comment afficher les résultats tabulés de l&#39;analyse SQL de votre graphique personnalisé et comment exporter ces données en toute sécurité. Consultez le document Afficher le SQL pour savoir comment [afficher le SQL derrière vos informations personnalisées](./view-sql.md).
 
-Vous pouvez également apprendre à générer des graphiques à partir de modèles de données existants dans l’interface utilisateur de Adobe Experience Platform à l’aide du [ guide du mode de conception guidé ](../standard-dashboards.md).
+Vous pouvez également apprendre à générer des graphiques à partir de modèles de données existants dans l’interface utilisateur de Adobe Experience Platform à l’aide du [&#x200B; guide du mode de conception guidé &#x200B;](../standard-dashboards.md).

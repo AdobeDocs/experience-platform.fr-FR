@@ -17,7 +17,7 @@ PSQL est une interface de ligne de commande installée avec PostgreSQL sur votre
 
 >[!IMPORTANT]
 >
->Query Service prend uniquement en charge la connexion avec PSQL version 14.x. Les versions antérieures à 14.x (telles que 10.x à 13.x) et les versions ultérieures (15.x et ultérieures) ne sont pas officiellement prises en charge. Assurez-vous d’avoir installé une version cliente compatible. Pour référence, reportez-vous à la section [ Dates de fin de vie de PostgreSQL ](https://endoflife.date/postgresql).
+>Query Service prend uniquement en charge la connexion avec PSQL version 14.x. Les versions antérieures à 14.x (telles que 10.x à 13.x) et les versions ultérieures (15.x et ultérieures) ne sont pas officiellement prises en charge. Assurez-vous d’avoir installé une version cliente compatible. Pour référence, reportez-vous à la section [&#x200B; Dates de fin de vie de PostgreSQL &#x200B;](https://endoflife.date/postgresql).
 
 Avant de commencer, vérifiez que vous avez accès à PSQL et que vous connaissez les bases de l’utilisation du client. Vous trouverez plus d’informations sur PSQL dans la [documentation officielle de PSQL](https://www.postgresql.org/docs/current/app-psql.html).
 
@@ -46,7 +46,7 @@ Type "help" for help.
 all=>
 ```
 
-Si vous ne voyez pas la version 14.x, téléchargez et installez une version 14.x prise en charge de PSQL depuis la page [ Téléchargements officiels PostgreSQL ](https://www.postgresql.org/download/).
+Si vous ne voyez pas la version 14.x, téléchargez et installez une version 14.x prise en charge de PSQL depuis la page [&#x200B; Téléchargements officiels PostgreSQL &#x200B;](https://www.postgresql.org/download/).
 
 >[!NOTE]
 >

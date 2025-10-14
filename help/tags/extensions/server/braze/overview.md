@@ -51,7 +51,7 @@ L’extension utilise deux des API de [!DNL Braze] et leurs limites sont décrit
 
 ### Points de données facturables
 
-L’envoi d’attributs personnalisés supplémentaires à [!DNL Braze] peut augmenter la consommation de vos points de données [!DNL Braze]. Consultez votre gestionnaire de compte [!DNL Braze] avant d’envoyer des attributs personnalisés supplémentaires. Pour plus d’informations, consultez la documentation [!DNL Braze] sur les [ points de données facturables](https://www.braze.com/docs/user_guide/data_and_analytics/data_points/?tab=billable).
+L’envoi d’attributs personnalisés supplémentaires à [!DNL Braze] peut augmenter la consommation de vos points de données [!DNL Braze]. Consultez votre gestionnaire de compte [!DNL Braze] avant d’envoyer des attributs personnalisés supplémentaires. Pour plus d’informations, consultez la documentation [!DNL Braze] sur les [&#x200B; points de données facturables](https://www.braze.com/docs/user_guide/data_and_analytics/data_points/?tab=billable).
 
 ### Collecte des détails de configuration requis {#configuration-details}
 
@@ -200,7 +200,7 @@ Les attributs utilisateur peuvent être un objet JSON contenant des champs qui c
 
 ## Validation des données dans [!DNL Braze] {#validate}
 
-Si la collecte d’événements et l’intégration de [!DNL Adobe Experience Platform] ont réussi, des événements s’affichent dans la console [!DNL Braze] lors de l’ [ affichage des profils utilisateur](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/). Plus précisément, les nouvelles données d’événement envoyées à [!DNL Braze] sont reflétées dans la section [!DNL Purchases] de l’onglet [aperçu](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/#overview-tab) d’un utilisateur particulier.
+Si la collecte d’événements et l’intégration de [!DNL Adobe Experience Platform] ont réussi, des événements s’affichent dans la console [!DNL Braze] lors de l’ [&#x200B; affichage des profils utilisateur](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/). Plus précisément, les nouvelles données d’événement envoyées à [!DNL Braze] sont reflétées dans la section [!DNL Purchases] de l’onglet [aperçu](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/#overview-tab) d’un utilisateur particulier.
 
 ## Étapes suivantes
 

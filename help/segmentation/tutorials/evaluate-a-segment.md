@@ -26,7 +26,7 @@ Ce tutoriel nécessite une compréhension pratique des différents services [!DN
 
 ### En-têtes requis
 
-Ce tutoriel nécessite également que vous ayez suivi le [ tutoriel sur l’authentification ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour passer avec succès des appels aux API [!DNL Experience Platform]. Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Ce tutoriel nécessite également que vous ayez suivi le [&#x200B; tutoriel sur l’authentification &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour passer avec succès des appels aux API [!DNL Experience Platform]. Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
@@ -88,13 +88,13 @@ Une tâche de segmentation est un processus asynchrone qui crée un segment d’
 
 Vous pouvez créer une tâche de segmentation en effectuant une requête POST vers le point d’entrée `/segment/jobs` dans l’API [!DNL Real-Time Customer Profile].
 
-Vous trouverez des informations plus détaillées sur l’utilisation de ce point d’entrée dans le guide [ point d’entrée des tâches de segment ](../api/segment-jobs.md#create)
+Vous trouverez des informations plus détaillées sur l’utilisation de ce point d’entrée dans le guide [&#x200B; point d’entrée des tâches de segment &#x200B;](../api/segment-jobs.md#create)
 
 ### Recherche de l’état de la tâche de segmentation
 
 Vous pouvez utiliser l’`id` pour une tâche de segmentation spécifique afin d’effectuer une requête de recherche (GET) pour afficher l’état actuel de la tâche.
 
-Vous trouverez des informations plus détaillées sur l’utilisation de ce point d’entrée dans le guide [ point d’entrée des tâches de segment ](../api/segment-jobs.md#get)
+Vous trouverez des informations plus détaillées sur l’utilisation de ce point d’entrée dans le guide [&#x200B; point d’entrée des tâches de segment &#x200B;](../api/segment-jobs.md#get)
 
 ## Interprétation des résultats des tâches de segmentation
 

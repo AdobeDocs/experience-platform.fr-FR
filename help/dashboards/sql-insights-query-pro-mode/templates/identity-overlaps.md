@@ -33,7 +33,7 @@ La boîte de dialogue **[!UICONTROL Filtres]** s’affiche. Dans cette vue, sél
 
 Une fois les filtres sélectionnés, sélectionnez **[!UICONTROL Appliquer]** pour actualiser le tableau de bord.
 
-![ La boîte de dialogue Filtres dans le tableau de bord Recouvrements d’identités d’audience avec l’option Appliquer mise en surbrillance.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-apply-filters.png)
+![&#x200B; La boîte de dialogue Filtres dans le tableau de bord Recouvrements d’identités d’audience avec l’option Appliquer mise en surbrillance.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-apply-filters.png)
 
 ## Aperçu des tableaux de bord disponibles {#available-insights}
 
@@ -76,7 +76,7 @@ Le graphique **[!UICONTROL Tendances d’identités d’audience]** fournit des 
 
 Après avoir analysé les chevauchements d’identités, vous pouvez exporter les données pour une analyse hors ligne ou un compte rendu des performances. Pour exporter vos données, sélectionnez **[!UICONTROL Export]** en haut à droite du tableau. La boîte de dialogue Imprimer le PDF s’affiche, vous permettant d’enregistrer les données visualisées en tant que PDF ou de les imprimer.
 
-![ Le tableau de bord de chevauchement des identités d’audience avec l’exportation mise en surbrillance.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-export.png)
+![&#x200B; Le tableau de bord de chevauchement des identités d’audience avec l’exportation mise en surbrillance.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-export.png)
 
 Le tableau de bord **Recouvrements d’identités d’audience** fournit des informations essentielles sur la manière dont les différentes identités se croisent entre les audiences sélectionnées. En exploitant ces informations, vous pouvez affiner les stratégies de combinaison d’identités, réduire la redondance et vous assurer que la segmentation de votre audience est plus précise et plus efficace.
 

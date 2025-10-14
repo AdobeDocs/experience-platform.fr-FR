@@ -207,4 +207,4 @@ Retrouvez d’autres informations utiles de la documentation [!DNL Mailchimp] ci
 * [Prise en main des audiences](https://mailchimp.com/help/getting-started-audience/)
 * [Créer une audience](https://mailchimp.com/help/create-audience/)
 * [Prise en main des balises](https://mailchimp.com/help/getting-started-tags/)
-* [ API marketing ](https://mailchimp.com/developer/marketing/api/)
+* [&#x200B; API marketing &#x200B;](https://mailchimp.com/developer/marketing/api/)

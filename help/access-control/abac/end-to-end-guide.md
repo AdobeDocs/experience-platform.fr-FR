@@ -77,7 +77,7 @@ Pour commencer, sélectionnez **[!UICONTROL Rôles]** dans le volet de navigatio
 
 Sélectionnez ensuite **[!UICONTROL Libellés]** puis sélectionnez **[!UICONTROL Ajouter des libellés]**.
 
-![Image illustrant la sélection de l’option Ajouter des libellés dans l’onglet Libellés ](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
+![Image illustrant la sélection de l’option Ajouter des libellés dans l’onglet Libellés &#x200B;](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
 
 Une liste de tous les libellés de votre organisation s’affiche. Sélectionnez **[!UICONTROL RHD]** pour ajouter l’étiquette pour **[!UICONTROL ISP/données réglementées en matière de santé]** puis sélectionnez **[!UICONTROL Enregistrer]**.
 
@@ -97,7 +97,7 @@ Dans le volet de navigation supérieur, sélectionnez le **sélecteur d’applic
 
 Sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL ACME Healthcare]** dans la liste des schémas qui s’affichent.
 
-![Image illustrant le schéma ACME Healthcare sélectionné dans l’onglet Schémas ](../images/abac-end-to-end-user-guide/abac-select-schema.png)
+![Image illustrant le schéma ACME Healthcare sélectionné dans l’onglet Schémas &#x200B;](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
 Sélectionnez ensuite **[!UICONTROL Libellés]** pour afficher une liste qui affiche les champs associés à votre schéma. À partir de là, vous pouvez attribuer des libellés à un ou plusieurs champs à la fois. Sélectionnez les champs **[!UICONTROL Glucose sanguin]** et **[!UICONTROL Niveau d’insuline]**, puis sélectionnez **[!UICONTROL Appliquer l’accès et les étiquettes de gouvernance des données]**.
 
@@ -148,7 +148,7 @@ La politique de contrôle d’accès par défaut utilise des libellés pour déf
 
 Pour activer la politique de contrôle d’accès, sélectionnez [!UICONTROL Autorisations] dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Politiques]**.
 
-![ Liste des politiques affichées ](../images/abac-end-to-end-user-guide/abac-policies-page.png)
+![&#x200B; Liste des politiques affichées &#x200B;](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
 Sélectionnez ensuite les points de suspension (`...`) à côté du **[!UICONTROL Default-Field-Level-Access-Control-Policy]**. Une liste déroulante affiche alors les commandes permettant de modifier, activer, supprimer ou dupliquer le rôle. Sélectionnez **[!UICONTROL Activer]** dans la liste déroulante.
 

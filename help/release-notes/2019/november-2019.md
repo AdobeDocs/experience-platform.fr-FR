@@ -187,4 +187,4 @@ Adobe Experience Platform [!DNL Segmentation Service] propose une interface util
 
 * Aucun.
 
-Pour en savoir plus sur [!DNL Segmentation Service], veuillez lire la [ présentation de Segmentation Service](../../segmentation/home.md).
+Pour en savoir plus sur [!DNL Segmentation Service], veuillez lire la [&#x200B; présentation de Segmentation Service](../../segmentation/home.md).

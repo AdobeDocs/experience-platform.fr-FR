@@ -50,7 +50,7 @@ Ensuite, vous devez activer les flux de données vers la nouvelle carte **[!UICO
 1. Accédez à **[!UICONTROL Destinations > Parcourir]** et utilisez le filtre à l’écran pour filtrer uniquement la destination **[!UICONTROL Pinterest]**.
    ![Filtrer les flux de données Pinterest uniquement dans l’onglet Parcourir](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
 2. Sélectionnez le nom de la connexion avec lien hypertexte (Loyalty campaign dans l’exemple de capture d’écran ci-dessus) à la destination **[!UICONTROL Pinterest]** et basculez la bascule **[!UICONTROL Activer]** sur **on**.
-   ![ Activez les nouvelles connexions et désactivez-les pour les anciennes connexions ](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png)
+   ![&#x200B; Activez les nouvelles connexions et désactivez-les pour les anciennes connexions &#x200B;](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png)
 
 <!--
 
@@ -87,7 +87,7 @@ Oui, voir ci-dessous :
 
 -->
 
-**Après le 18 janvier 2024** : <span class="preview">Pinterest a désactivé l’accès à l’API de l’annonceur V4. Tous les clients Real-Time CDP qui n’ont pas effectué la mise à niveau vers la nouvelle destination constateront désormais que leurs flux de données vers la destination Pinterest échouent. [Réauthentifiez-vous à Pinterest](#reauthenticate) et [ activez les flux de données](#disable-old-enable-new-flows) vers la destination mise à niveau pour reprendre vos campagnes vers Pinterest.</span>
+**Après le 18 janvier 2024** : <span class="preview">Pinterest a désactivé l’accès à l’API de l’annonceur V4. Tous les clients Real-Time CDP qui n’ont pas effectué la mise à niveau vers la nouvelle destination constateront désormais que leurs flux de données vers la destination Pinterest échouent. [Réauthentifiez-vous à Pinterest](#reauthenticate) et [&#x200B; activez les flux de données](#disable-old-enable-new-flows) vers la destination mise à niveau pour reprendre vos campagnes vers Pinterest.</span>
 
 <!--
 

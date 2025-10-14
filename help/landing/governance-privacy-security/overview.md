@@ -21,7 +21,7 @@ Experience Platform fournit plusieurs services et outils qui vous permettent de 
 Les services peuvent être classés en trois domaines :
 
 * [Gouvernance des données](#governance)
-* [Confidentialité   ](#privacy)
+* [Confidentialité   &#x200B;](#privacy)
 * [Sécurité](#security)
 
 ## Gouvernance des données {#governance}
@@ -40,7 +40,7 @@ Le service de catalogue constitue le système d’enregistrement de l’emplacem
 
 Le catalogue organise les données ingérées en jeux de données, chaque jeu de données contenant des métadonnées qui peuvent être utilisées pour étiqueter et catégoriser les données qu’il contient.
 
-Pour plus d’informations sur le service, consultez la présentation du service de catalogue [Catalog](../../catalog/home.md). Pour savoir comment gérer les jeux de données dans Experience Platform, consultez la [ présentation des jeux de données ](../../catalog/datasets/overview.md).
+Pour plus d’informations sur le service, consultez la présentation du service de catalogue [Catalog](../../catalog/home.md). Pour savoir comment gérer les jeux de données dans Experience Platform, consultez la [&#x200B; présentation des jeux de données &#x200B;](../../catalog/datasets/overview.md).
 
 ## Confidentialité    {#privacy}
 

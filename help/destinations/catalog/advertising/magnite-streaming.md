@@ -78,7 +78,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin de l’**[!UICONTROL affichage des destinations]** et de l’**[!UICONTROL gestion des destinations]** [ autorisation de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin de l’**[!UICONTROL affichage des destinations]** et de l’**[!UICONTROL gestion des destinations]** [&#x200B; autorisation de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -119,7 +119,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des **&#x200B;**&#x200B;destinations d’affichage, **[!UICONTROL activer les destinations]**, **&#x200B;**&#x200B;profils d’affichage et **&#x200B;**&#x200B;[  autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour activer les données, vous avez besoin des **&#x200B;**&#x200B;destinations d’affichage, **[!UICONTROL activer les destinations]**, **&#x200B;**&#x200B;profils d’affichage et **&#x200B;**&#x200B;[&#x200B;  autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 >* Pour exporter des *identités*, vous avez besoin de l&#39;autorisation **[!UICONTROL Afficher le graphique d&#39;identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez [Activer les profils et les segments vers les destinations d’exportation de segments de diffusion en continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
@@ -134,7 +134,7 @@ L’étape suivante consiste à mapper les identifiants de source à l’identif
 
 Cet exemple utilisant la destination en temps réel affiche une ligne qui contient un identifiant source deviceId générique mappé sur le champ cible Magnite device_id . Lorsque vous utilisez les mappages, sélectionnez [!UICONTROL Suivant].
 
-![ Mappez les champs de données de votre choix avec le champ device_ID](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-field-mapping.png)
+![&#x200B; Mappez les champs de données de votre choix avec le champ device_ID](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-field-mapping.png)
 
 Veillez à définir les identifiants de mappage sur toutes les audiences activées ou à définir AUCUN si aucun identifiant de mappage n’est présent.
 

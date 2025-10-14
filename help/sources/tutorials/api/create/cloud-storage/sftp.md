@@ -13,7 +13,7 @@ ht-degree: 14%
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Ce tutoriel vous guide tout au long des étapes nécessaires à la création d’une connexion de base pour [!DNL SFTP] (Secure File Transfer Protocol) à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel vous guide tout au long des étapes nécessaires à la création d’une connexion de base pour [!DNL SFTP] (Secure File Transfer Protocol) à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 

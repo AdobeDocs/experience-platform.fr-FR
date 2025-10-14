@@ -24,7 +24,7 @@ Selon la configuration de la destination, les utilisateurs verront certaines opt
 
 Les paramètres de formatage de fichiers font partie de la configuration de serveur de destination quand celles-ci sont basées sur des fichiers.
 
-Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la documentation [options de configuration](../configuration-options.md) ou consultez le guide sur la [ utilisation de la Destination SDK pour configurer une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la documentation [options de configuration](../configuration-options.md) ou consultez le guide sur la [&#x200B; utilisation de la Destination SDK pour configurer une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 Vous pouvez configurer les options de formatage de fichier via le point d’entrée `/authoring/destination-servers`. Pour obtenir des exemples d’appels API détaillés dans lesquels vous pouvez configurer les composants affichés sur cette page, consultez les pages de référence de l’API suivantes.
 

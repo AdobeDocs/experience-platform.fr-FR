@@ -84,7 +84,7 @@ Les options de configuration sont divisées en trois sections principales, comme
 
 ![La section [!DNL Basic Request Properties] présentant des exemples de saisie de données dans les champs.](../../../images/extensions/server/tradedesk/configure-extension-basic-request-properties.png)
 
-Pour plus d’informations sur les [ propriétés de demande ](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties) acceptées par l’API de conversions en temps réel [!DNL The Trade Desk], reportez-vous à la documentation destinée aux développeurs [!DNL The Trade Desk].
+Pour plus d’informations sur les [&#x200B; propriétés de demande &#x200B;](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties) acceptées par l’API de conversions en temps réel [!DNL The Trade Desk], reportez-vous à la documentation destinée aux développeurs [!DNL The Trade Desk].
 
 **[!UICONTROL Paramètres de requête d’objet]**
 
@@ -116,4 +116,4 @@ Ce guide explique comment envoyer des données d’événement côté serveur à
 
 Consultez la documentation [!DNL The Trade Desk] sur les [bonnes pratiques pour l’ [!DNL The Trade Desk] API de conversion en temps réel](https://www.facebook.com/business/help/308855623839366?id=818859032317965) pour plus d’informations sur la mise en oeuvre efficace de votre intégration.
 
-Pour plus d’informations sur la façon de déboguer votre mise en oeuvre à l’aide de l’outil Experience Platform Debugger et Event Forwarding Monitoring, consultez les [ &lbrace;présentation des Adobes Experience Platform Debugger](../../../../debugger/home.md) et [Surveillance des activités dans le transfert d’événement](../../../ui/event-forwarding/monitoring.md).
+Pour plus d’informations sur la façon de déboguer votre mise en oeuvre à l’aide de l’outil Experience Platform Debugger et Event Forwarding Monitoring, consultez les [&#x200B; &lbrace;présentation des Adobes Experience Platform Debugger](../../../../debugger/home.md) et [Surveillance des activités dans le transfert d’événement](../../../ui/event-forwarding/monitoring.md).

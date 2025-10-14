@@ -22,7 +22,7 @@ Ce tutoriel décrit les étapes à suivre pour supprimer des flux de données à
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-- [Sources ](../../home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
+- [Sources &#x200B;](../../home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
 - [Sandbox](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ## Supprimer des flux de données
@@ -35,7 +35,7 @@ La page **[!UICONTROL Flux de données]** s’affiche. Sur cette page, vous trou
 
 Sélectionnez l’icône de filtre (![filter-icon](/help/images/icons/filter.png)) en haut à gauche pour lancer le panneau de tri.
 
-![ flux de données ](../../images/tutorials/delete/dataflows.png)
+![&#x200B; flux de données &#x200B;](../../images/tutorials/delete/dataflows.png)
 
 Le panneau de tri fournit une liste de toutes les sources. Vous pouvez sélectionner plusieurs sources dans la liste pour accéder à une sélection filtrée de flux de données associés aux sources spécifiques que vous avez sélectionnées.
 

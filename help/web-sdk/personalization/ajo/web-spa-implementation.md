@@ -17,7 +17,7 @@ Les sites web traditionnels fonctionnaient sur des modèles de navigation « pa
 
 Les applications web modernes, comme les applications monopages, adoptent plutôt un modèle qui projette rapidement le rendu de l’interface utilisateur du navigateur, ce qui est souvent indépendant des rechargements de page. Ces expériences peuvent être déclenchées par des interactions client, comme faire défiler, cliquer et faire bouger le curseur. À mesure de l’évolution des paradigmes du Web moderne, la pertinence des événements génériques traditionnels, comme le chargement des pages, pour déployer la personnalisation et les expériences ne fonctionnent plus.
 
-![ Diagramme de cycle de vie de page.](assets/web-spa-vs-traditional-lifecycle.png)
+![&#x200B; Diagramme de cycle de vie de page.](assets/web-spa-vs-traditional-lifecycle.png)
 
 ## Avantages du SDK Web pour SPA {#web-spa-benefits}
 

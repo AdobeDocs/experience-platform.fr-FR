@@ -11,7 +11,7 @@ ht-degree: 3%
 
 # `getMediaAnalyticsTracker`
 
-Cette commande du SDK Web récupère un outil de suivi Media Analytics. Vous pouvez utiliser cette commande pour créer une instance d’objet, puis, en utilisant les mêmes API que celles fournies par la [ bibliothèque Media JS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html), effectuer le suivi des événements de média.
+Cette commande du SDK Web récupère un outil de suivi Media Analytics. Vous pouvez utiliser cette commande pour créer une instance d’objet, puis, en utilisant les mêmes API que celles fournies par la [&#x200B; bibliothèque Media JS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html), effectuer le suivi des événements de média.
 
 La commande `getMediaAnalyticsTracker` renvoie l’API Media Analytics héritée.
 

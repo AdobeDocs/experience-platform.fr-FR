@@ -16,7 +16,7 @@ ht-degree: 32%
 
 >[!NOTE]
 >
-> Le connecteur HP [!DNL Vertica] est en version bêta. Consultez la [ Présentation des sources ](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+> Le connecteur HP [!DNL Vertica] est en version bêta. Consultez la [&#x200B; Présentation des sources &#x200B;](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Les connecteurs Source de Adobe Experience Platform permettent d’ingérer des données provenant de l’extérieur selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour créer un connecteur source HP [!DNL Vertica] à l’aide de l’interface utilisateur [!DNL Experience Platform].
 
@@ -39,7 +39,7 @@ Les sections suivantes contiennent des informations supplémentaires que vous de
 | ---------- | ----------- |
 | `connectionString` | Chaîne de connexion utilisée pour la connexion à votre instance HP [!DNL Vertica]. Le modèle de chaîne de connexion pour HP [!DNL Vertica] est `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 
-Pour plus d&#39;informations sur la prise en main, reportez-vous à [ce document HP [!DNL Vertica] ](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm).
+Pour plus d&#39;informations sur la prise en main, reportez-vous à [ce document HP [!DNL Vertica] &#x200B;](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm).
 
 ## Connecter votre compte HP [!DNL Vertica]
 

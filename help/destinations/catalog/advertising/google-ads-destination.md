@@ -131,6 +131,6 @@ Lors de la configuration de cette destination, vous risquez de recevoir l’erre
 
 Cette erreur se produit lorsque les comptes clients ne respectent pas les [conditions préalables](#prerequisites) ou lorsque les clientes et clients tentent de configurer la destination sans un compte [!DNL Google Ads] existant.
 
-[!DNL Google] a abandonné les nouvelles intégrations de cookies [!DNL Google Ads] avec des fournisseurs tiers. Pour effectuer les étapes de [place sur la liste autorisée ](#allow-listing), vous devez disposer d&#39;une intégration existante avec [!DNL Google Ads].
+[!DNL Google] a abandonné les nouvelles intégrations de cookies [!DNL Google Ads] avec des fournisseurs tiers. Pour effectuer les étapes de [place sur la liste autorisée &#x200B;](#allow-listing), vous devez disposer d&#39;une intégration existante avec [!DNL Google Ads].
 
 L’approche recommandée pour l’utilisation de [!DNL Google Ads] est de configurer une intégration [[!DNL Google Customer Match]](google-customer-match.md).

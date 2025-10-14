@@ -75,7 +75,7 @@ Les cookies suivants sont définis lorsque la configuration du consentement perm
 
 ## Définition du consentement par défaut à l’aide de l’extension de balise SDK Web
 
-Sélectionnez le bouton radio de votre choix sous **[!UICONTROL Consentement par défaut]** lors de la [ configuration de l’extension de balise](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Sélectionnez le bouton radio de votre choix sous **[!UICONTROL Consentement par défaut]** lors de la [&#x200B; configuration de l’extension de balise](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
 1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.

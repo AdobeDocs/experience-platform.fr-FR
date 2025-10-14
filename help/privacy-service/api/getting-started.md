@@ -54,7 +54,7 @@ Sélectionnez ensuite le type d’authentification pour générer des jetons d�
 
 >[!IMPORTANT]
 >
->Sélectionnez la méthode **[!UICONTROL OAuth de serveur à serveur]**, car il s’agira de la seule méthode prise en charge à l’avenir. La méthode **[!UICONTROL Compte de service (JWT)]** est obsolète. Bien que les intégrations utilisant la méthode d’authentification JWT continueront à fonctionner jusqu’au 1er janvier 2025, Adobe vous recommande vivement de migrer les intégrations existantes vers la nouvelle méthode OAuth de serveur à serveur avant cette date. Pour plus d’informations, consultez la section [!BADGE Obsolète]{type=negative}[ Générer un jeton web JSON (JWT)](/help/landing/api-authentication.md#jwt).
+>Sélectionnez la méthode **[!UICONTROL OAuth de serveur à serveur]**, car il s’agira de la seule méthode prise en charge à l’avenir. La méthode **[!UICONTROL Compte de service (JWT)]** est obsolète. Bien que les intégrations utilisant la méthode d’authentification JWT continueront à fonctionner jusqu’au 1er janvier 2025, Adobe vous recommande vivement de migrer les intégrations existantes vers la nouvelle méthode OAuth de serveur à serveur avant cette date. Pour plus d’informations, consultez la section [!BADGE Obsolète]{type=negative}[&#x200B; Générer un jeton web JSON (JWT)](/help/landing/api-authentication.md#jwt).
 
 ![Sélectionnez la méthode d’authentification Oauth de serveur à serveur](/help/privacy-service/images/api/getting-started/select-oauth-authentication.png).
 

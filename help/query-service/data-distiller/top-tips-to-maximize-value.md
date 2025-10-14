@@ -86,7 +86,7 @@ est ingéré sous la forme d’un lot et identifié par un [!UICONTROL Identifia
 >
 >Lors de l’écriture de requêtes dans Data Distiller, utilisez le nom de la table au lieu du nom du jeu de données. Le nom du jeu de données est uniquement utilisé pour naviguer dans l’interface utilisateur.
 
-![ L’onglet « Activité du jeu de données » pour le jeu de données « luma_web_data » nouvellement créé avec le nom de la table, l’ID de lot et « Prévisualiser le jeu de données » mis en surbrillance.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-dataset-details.png)
+![&#x200B; L’onglet « Activité du jeu de données » pour le jeu de données « luma_web_data » nouvellement créé avec le nom de la table, l’ID de lot et « Prévisualiser le jeu de données » mis en surbrillance.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-dataset-details.png)
 
 <!-- ![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.]() 
 My table name is; luma_web_data_20250312_235611_817 Should we explain the suffix? 

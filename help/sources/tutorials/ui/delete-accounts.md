@@ -63,4 +63,4 @@ Une boîte de dialogue de confirmation finale s’affiche. Sélectionnez **[!UIC
 
 En suivant ce tutoriel, vous avez réussi à utiliser l’espace de travail **[!UICONTROL Sources]** pour supprimer des comptes existants.
 
-Pour savoir comment effectuer ces opérations par programmation à l’aide de l’API [!DNL Flow Service], reportez-vous au tutoriel sur la [ suppression des connexions à l’aide de l’API Flow Service](../../tutorials/api/delete.md).
+Pour savoir comment effectuer ces opérations par programmation à l’aide de l’API [!DNL Flow Service], reportez-vous au tutoriel sur la [&#x200B; suppression des connexions à l’aide de l’API Flow Service](../../tutorials/api/delete.md).

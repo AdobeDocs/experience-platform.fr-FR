@@ -37,7 +37,7 @@ Pour accéder à votre compte [!DNL ServiceNow] sur [!DNL Experience Platform], 
 | `username` | Nom d’utilisateur utilisé pour la connexion au serveur [!DNL ServiceNow] pour l’authentification. |
 | `password` | Mot de passe pour la connexion au serveur [!DNL ServiceNow] pour l’authentification. |
 
-Pour plus d’informations sur la prise en main, consultez [ce [!DNL ServiceNow] document](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET).
+Pour plus d’informations sur la prise en main, consultez [ce [!DNL ServiceNow] document](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&id=r_TableAPI-GET).
 
 ## Connecter votre compte [!DNL ServiceNow]
 

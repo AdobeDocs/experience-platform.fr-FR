@@ -26,11 +26,11 @@ Sélectionnez **[!UICONTROL Modifier le tableau de bord]** dans les tableaux de 
 
 Dans la bibliothèque de widgets dʼExperience Platform, vous pouvez afficher tous les widgets [standard](#standard-widgets) et [personnalisés](#custom-widgets) disponibles pour votre organisation. Dans vos tableaux de bord (par exemple, le tableau de bord des profils), vous pouvez sélectionner **[!UICONTROL Modifier le tableau de bord]** afin dʼafficher le bouton **[!UICONTROL Bibliothèque de widgets]**.
 
-![ Le tableau de bord Profils avec l’option Modifier le tableau de bord en surbrillance.](../images/customization/modify-dashboard.png)
+![&#x200B; Le tableau de bord Profils avec l’option Modifier le tableau de bord en surbrillance.](../images/customization/modify-dashboard.png)
 
 Sélectionnez **[!UICONTROL Bibliothèque de widgets]** pour ouvrir la bibliothèque de widgets et afficher toutes les mesures standard disponibles ou commencer à créer des widgets personnalisés.
 
-![ Le tableau de bord Profils avec la bibliothèque de widgets mise en surbrillance.](../images/customization/widget-library-button.png)
+![&#x200B; Le tableau de bord Profils avec la bibliothèque de widgets mise en surbrillance.](../images/customization/widget-library-button.png)
 
 ### Widgets standard {#standard-widgets}
 

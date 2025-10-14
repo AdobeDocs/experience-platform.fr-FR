@@ -147,7 +147,7 @@ La date [!UICONTROL Mise à jour] affichée indique la dernière fois que l’au
 
 Sélectionner le nom d’une audience dans la liste affichée sur le widget vous permet d’accéder aux détails de l’audience. Vous pouvez également sélectionner **[!UICONTROL Afficher tout]** pour accéder à l’onglet [!UICONTROL Audiences] [!UICONTROL Parcourir], puis sélectionner le nom d’une audience pour afficher ses détails.
 
-Pour plus d’informations sur l’utilisation des audiences dans Experience Platform, reportez-vous à la [ présentation de Segmentation Service ](../../segmentation/home.md).
+Pour plus d’informations sur l’utilisation des audiences dans Experience Platform, reportez-vous à la [&#x200B; présentation de Segmentation Service &#x200B;](../../segmentation/home.md).
 
 ![Onglet Aperçu du tableau de bord Destinations avec le widget Audiences récemment activées en surbrillance.](../images/destinations/recently-activated-audiences.png)
 
@@ -294,7 +294,7 @@ Le widget [!UICONTROL Audiences activées sur toutes les destinations] fournit l
 
 ![Le widget Audiences activées dans toutes les destinations.](../images/destinations/activated-audiences-across-all-destinations.png)
 
-Sélectionnez **[!UICONTROL Audiences]** pour accéder à l’onglet [!UICONTROL Parcourir] des destinations. Cette page fournit une liste de toutes les destinations activées, ainsi que diverses mesures pertinentes. Pour plus d’informations sur l’onglet [[!UICONTROL Parcourir], consultez la documentation ](../../destinations/ui/destinations-workspace.md#browse).
+Sélectionnez **[!UICONTROL Audiences]** pour accéder à l’onglet [!UICONTROL Parcourir] des destinations. Cette page fournit une liste de toutes les destinations activées, ainsi que diverses mesures pertinentes. Pour plus d’informations sur l’onglet [[!UICONTROL Parcourir], consultez la documentation &#x200B;](../../destinations/ui/destinations-workspace.md#browse).
 
 Consultez la section Conditions préalables pour connaître les [définitions des termes utilisés](#prerequisites) dans cette description.
 

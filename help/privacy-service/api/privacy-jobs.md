@@ -20,7 +20,7 @@ ht-degree: 44%
 >
 >Mettez à jour vos intégrations avant cette date limite pour éviter les échecs de requête.
 
-Ce document explique comment utiliser les tâches de confidentialité à l’aide d’appels API. Plus précisément, il couvre l’utilisation du point d’entrée `/job` dans l’API [!DNL Privacy Service]. Avant de lire ce guide, reportez-vous au [ guide de prise en main ](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API , y compris les en-têtes requis et la manière de lire des exemples d’appels API.
+Ce document explique comment utiliser les tâches de confidentialité à l’aide d’appels API. Plus précisément, il couvre l’utilisation du point d’entrée `/job` dans l’API [!DNL Privacy Service]. Avant de lire ce guide, reportez-vous au [&#x200B; guide de prise en main &#x200B;](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API , y compris les en-têtes requis et la manière de lire des exemples d’appels API.
 
 >[!NOTE]
 >

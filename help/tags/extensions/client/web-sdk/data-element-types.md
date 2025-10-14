@@ -34,7 +34,7 @@ Dans l’élément de données [!UICONTROL Identity Map] , vous fournissez les i
 
 Vous ne devez pas fournir un [!DNL ECID] lors de la création d’une carte d’identité. Lors de l’utilisation du SDK, un [!DNL ECID] est automatiquement généré sur le serveur et inclus dans la carte d’identité.
 
-L’élément de données de carte d’identité est souvent utilisé en tandem avec le type d’élément de données [[!UICONTROL objet XDM] ](#xdm-object) et le type d’action [[!UICONTROL Définir le consentement]](action-types.md#set-consent).
+L’élément de données de carte d’identité est souvent utilisé en tandem avec le type d’élément de données [[!UICONTROL objet XDM] &#x200B;](#xdm-object) et le type d’action [[!UICONTROL Définir le consentement]](action-types.md#set-consent).
 
 En savoir plus sur [Adobe Experience Platform Identity Service](../../../../identity-service/home.md).
 

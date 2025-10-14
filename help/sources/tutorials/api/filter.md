@@ -28,7 +28,7 @@ Lisez ce guide pour savoir comment filtrer les données au niveau des lignes pou
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [Sources ](../../home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
+* [Sources &#x200B;](../../home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
 * [Sandbox](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ### Utilisation des API Experience Platform
@@ -407,7 +407,7 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion sour
 
 ## Filtrage des entités d’activité pour les [!DNL Marketo Engage] {#filter-for-marketo}
 
-Vous pouvez utiliser le filtrage au niveau des lignes pour filtrer les entités d’activité lors de l’utilisation du [[!DNL Marketo Engage]  connecteur source ](../../connectors/adobe-applications/marketo/marketo.md). Actuellement, vous ne pouvez filtrer que les entités d’activité et les types d’activité standard. Les activités personnalisées restent régies sous [[!DNL Marketo] mappages de champs](../../connectors/adobe-applications/mapping/marketo.md).
+Vous pouvez utiliser le filtrage au niveau des lignes pour filtrer les entités d’activité lors de l’utilisation du [[!DNL Marketo Engage]  connecteur source &#x200B;](../../connectors/adobe-applications/marketo/marketo.md). Actuellement, vous ne pouvez filtrer que les entités d’activité et les types d’activité standard. Les activités personnalisées restent régies sous [[!DNL Marketo] mappages de champs](../../connectors/adobe-applications/mapping/marketo.md).
 
 ### [!DNL Marketo] types d’activité standard {#marketo-standard-activity-types}
 

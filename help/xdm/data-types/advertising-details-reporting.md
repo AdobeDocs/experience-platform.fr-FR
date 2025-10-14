@@ -14,7 +14,7 @@ ht-degree: 12%
 [!UICONTROL Détails Advertising] La création de rapports est un type de données XDM (Experience Data Model) standard qui capture les attributs clés liés aux publicités. Il contient des informations telles que l’identifiant de la publicité, les identifiants de l’annonceur et de la campagne, la durée, la position dans une séquence, des détails sur le lecteur qui effectue le rendu de la publicité, etc. Vous pouvez utiliser ce type de données pour effectuer le suivi et l’analyse de divers aspects des performances et de l’engagement des publicités, et fournir des informations sur la manière dont les audiences interagissent avec différentes publicités et y répondent.
 
 +++Sélectionnez cette option pour afficher un diagramme du type de données Rapports de détails Advertising.
-![ Diagramme du type de données Rapports de détails Advertising.](../images/data-types/advertising-details-information.png)
+![&#x200B; Diagramme du type de données Rapports de détails Advertising.](../images/data-types/advertising-details-information.png)
 +++
 
 | Nom d’affichage | Propriété | Type de données | Description |

@@ -31,5 +31,5 @@ ht-degree: 0%
 
 Pour plus d’informations sur le type de données d’adresse e-mail, reportez-vous au référentiel XDM public :
 
-* [ Exemple renseigné ](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/emailaddress.example.1.json)
+* [&#x200B; Exemple renseigné &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/emailaddress.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/emailaddress.schema.json)

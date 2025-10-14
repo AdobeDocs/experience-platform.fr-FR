@@ -43,7 +43,7 @@ La dernière étape du workflow de création de filtre global nécessite que vou
 
 Enfin, sélectionnez **[!UICONTROL Sélectionner]** pour revenir à la vue de votre tableau de bord.
 
-![ La boîte de dialogue [!UICONTROL Créer un filtre global] avec Sélectionner et la saisie de texte Libellé du filtre mise en surbrillance.](../../images/sql-insights-query-pro-mode/global-filter-label.png)
+![&#x200B; La boîte de dialogue [!UICONTROL Créer un filtre global] avec Sélectionner et la saisie de texte Libellé du filtre mise en surbrillance.](../../images/sql-insights-query-pro-mode/global-filter-label.png)
 
 ## Activer le filtre global pour chaque insight {#enable-global-filter}
 

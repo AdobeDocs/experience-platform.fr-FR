@@ -25,7 +25,7 @@ Les questions suivantes se rapportent à toutes les réglementations de confiden
 
 ### Sur qui les réglementations de confidentialité prises en charge s’appliquent-elles ?
 
-Les [règlements sur la protection des renseignements personnels pris en charge par l&#39;Experience Cloud ](./overview.md) s&#39;appliquent à toutes les organisations qui stockent et traitent les données personnelles des citoyens dans les juridictions respectives des règlements, quel que soit l&#39;emplacement géographique de l&#39;organisation.
+Les [règlements sur la protection des renseignements personnels pris en charge par l&#39;Experience Cloud &#x200B;](./overview.md) s&#39;appliquent à toutes les organisations qui stockent et traitent les données personnelles des citoyens dans les juridictions respectives des règlements, quel que soit l&#39;emplacement géographique de l&#39;organisation.
 
 ### Que signifie la notion de données personnelles ?
 

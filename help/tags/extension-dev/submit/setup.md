@@ -43,7 +43,7 @@ Ce programme est destiné aux sociétés de conseil qui aident les clients Adobe
 
 Une fois que votre société a rejoint le programme Partenaires en Exchange, vous pouvez demander l’accès aux solutions Adobe en vous connectant au [site Partenaires en Exchange](https://partners.adobe.com/exchangeprogram/experiencecloud) et en suivant les étapes ci-dessous.
 
-Si vous disposez d’un compte Experience Cloud qui nécessite l’accès à l’interface utilisateur de collecte de données et à l’interface utilisateur Experience Platform, consultez le [ guide des autorisations de collecte de données](../../../collection/permissions.md).
+Si vous disposez d’un compte Experience Cloud qui nécessite l’accès à l’interface utilisateur de collecte de données et à l’interface utilisateur Experience Platform, consultez le [&#x200B; guide des autorisations de collecte de données](../../../collection/permissions.md).
 
 ## Pour les développeurs indépendants
 

@@ -103,7 +103,7 @@ Lorsque vous configurez la destination **[!DNL LiveRamp - Distribution]**, vous 
 
 >[!TIP]
 >
->Lorsque vous attribuez un nom à une destination, Adobe recommande de suivre le format suivant : `LiveRamp - Downstream Destination Name`. Ce modèle de dénomination vous permet d’identifier rapidement vos destinations dans l’onglet [ Parcourir ](../ui/destinations-workspace.md#browse) de l’espace de travail des destinations.
+>Lorsque vous attribuez un nom à une destination, Adobe recommande de suivre le format suivant : `LiveRamp - Downstream Destination Name`. Ce modèle de dénomination vous permet d’identifier rapidement vos destinations dans l’onglet [&#x200B; Parcourir &#x200B;](../ui/destinations-workspace.md#browse) de l’espace de travail des destinations.
 ><br>
 >Exemple : `LiveRamp - Roku`.
 

@@ -169,7 +169,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 > 
 >Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
-Lisez [Activer des profils et des audiences vers des destinations d’exportation d’audiences de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination. Aucune [ étape de mappage ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) n’est requise et aucune [ étape de planification ](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) n’est disponible pour cette destination.
+Lisez [Activer des profils et des audiences vers des destinations d’exportation d’audiences de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination. Aucune [&#x200B; étape de mappage &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) n’est requise et aucune [&#x200B; étape de planification &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) n’est disponible pour cette destination.
 
 ## Valider l’exportation des données {#exported-data}
 

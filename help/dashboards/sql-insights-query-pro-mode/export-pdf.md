@@ -21,7 +21,7 @@ Votre tableau de bord personnalisé s’affiche. Sélectionnez ensuite **[!UICON
 
 >[!NOTE]
 >
->Les exportations destinées uniquement à la visualisation ne nécessitent pas l’autorisation [!UICONTROL Exporter les données du tableau de bord]. Pour plus d’informations, consultez la documentation [[!UICONTROL En savoir plus] ](./view-more.md#export) .
+>Les exportations destinées uniquement à la visualisation ne nécessitent pas l’autorisation [!UICONTROL Exporter les données du tableau de bord]. Pour plus d’informations, consultez la documentation [[!UICONTROL En savoir plus] &#x200B;](./view-more.md#export) .
 
 ![Tableau de bord personnalisé avec l’option Exporter mise en surbrillance.](../images/sql-insights-query-pro-mode/export.png)
 

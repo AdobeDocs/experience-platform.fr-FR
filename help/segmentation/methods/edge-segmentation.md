@@ -48,7 +48,7 @@ Une définition de segment **pas** est éligible pour la segmentation Edge dans 
 
 Vous pouvez créer une audience évaluée à l’aide de la segmentation Edge à l’aide de l’API Segmentation Service ou via Audience Portal dans l’interface utilisateur.
 
-Une définition de segment peut être activée pour Edge si elle correspond à l’un des [ types de requête éligibles ](#eligible-query-types).
+Une définition de segment peut être activée pour Edge si elle correspond à l’un des [&#x200B; types de requête éligibles &#x200B;](#eligible-query-types).
 
 >[!BEGINTABS]
 

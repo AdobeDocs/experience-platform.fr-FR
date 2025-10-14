@@ -158,4 +158,4 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ## Ressources supplémentaires {#additional-resources}
 
-* [ Connecteur Source de streaming RainFocus ](https://experienceleague.adobe.com/fr/docs/experience-platform/sources/connectors/analytics/rainfocus)
+* [&#x200B; Connecteur Source de streaming RainFocus &#x200B;](https://experienceleague.adobe.com/fr/docs/experience-platform/sources/connectors/analytics/rainfocus)

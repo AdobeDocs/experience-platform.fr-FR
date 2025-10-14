@@ -15,8 +15,8 @@ ht-degree: 29%
 
 L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos données [!DNL Real-Time Customer Profile], telles qu’elles sont capturées lors d’un instantané quotidien.
 
-Pour obtenir des instructions détaillées sur l’accès et l’interaction avec le tableau de bord [!UICONTROL Profils] dans l’interface utilisateur, ainsi que pour en savoir plus sur les mesures disponibles affichées dans le tableau de bord, consultez le [[!UICONTROL &#x200B; guide de tableau de bord &#x200B;] ](../../dashboards/guides/profiles.md).
+Pour obtenir des instructions détaillées sur l’accès et l’interaction avec le tableau de bord [!UICONTROL Profils] dans l’interface utilisateur, ainsi que pour en savoir plus sur les mesures disponibles affichées dans le tableau de bord, consultez le [[!UICONTROL &#x200B; guide de tableau de bord &#x200B;] &#x200B;](../../dashboards/guides/profiles.md).
 
 Pour découvrir toutes les fonctionnalités des tableaux de bord dans l’interface utilisateur d’Experience Platform, commencez par lire la [présentation des tableaux de bord](../../dashboards/home.md).
 
-![ Le tableau de bord du profil s’affiche.](../images/profile-dashboard/dashboard-overview.png)
+![&#x200B; Le tableau de bord du profil s’affiche.](../images/profile-dashboard/dashboard-overview.png)

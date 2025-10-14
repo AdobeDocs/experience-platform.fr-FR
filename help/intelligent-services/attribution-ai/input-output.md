@@ -236,7 +236,7 @@ Le tableau ci-dessous mappe les scores agrégés aux scores bruts. Si vous souha
 >
 > - L’IA dédiée à l’attribution utilise uniquement des données mises à jour pour la formation et la notation. De même, lorsque vous demandez la suppression de données, l’IA dédiée aux clients s’abstient d’utiliser les données supprimées.
 > - L’IA dédiée à l’attribution utilise les jeux de données Experience Platform. Pour prendre en charge les demandes de droits des consommateurs qu’une marque peut recevoir, les marques doivent utiliser Experience Platform Privacy Service pour envoyer les demandes d’accès et de suppression des clients afin de supprimer leurs données dans le lac de données, le service d’identités et le profil client en temps réel.
-> - Tous les jeux de données que nous utilisons pour l’entrée/la sortie des modèles suivront les directives d’Experience Platform. Le chiffrement des données d’Experience Platform s’applique aux données au repos et en transit. Consultez la documentation pour en savoir plus sur le [ chiffrement des données ](../../../help/landing/governance-privacy-security/encryption.md)
+> - Tous les jeux de données que nous utilisons pour l’entrée/la sortie des modèles suivront les directives d’Experience Platform. Le chiffrement des données d’Experience Platform s’applique aux données au repos et en transit. Consultez la documentation pour en savoir plus sur le [&#x200B; chiffrement des données &#x200B;](../../../help/landing/governance-privacy-security/encryption.md)
 
 ## Étapes suivantes {#next-steps}
 

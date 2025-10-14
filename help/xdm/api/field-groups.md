@@ -384,7 +384,7 @@ Une réponse réussie renvoie un état HTTP 201 (Created) et un payload contenan
 }
 ```
 
-L’exécution d’une requête de GET pour [répertorier tous les groupes de champs](#list) dans le conteneur client inclurait désormais le groupe de champs Détails de la propriété , ou vous pouvez [ effectuer une requête de recherche (GET)](#lookup) à l’aide de l’URI `$id` encodé URL pour afficher directement le nouveau groupe de champs.
+L’exécution d’une requête de GET pour [répertorier tous les groupes de champs](#list) dans le conteneur client inclurait désormais le groupe de champs Détails de la propriété , ou vous pouvez [&#x200B; effectuer une requête de recherche (GET)](#lookup) à l’aide de l’URI `$id` encodé URL pour afficher directement le nouveau groupe de champs.
 
 ## Mettre à jour un groupe de champs {#put}
 

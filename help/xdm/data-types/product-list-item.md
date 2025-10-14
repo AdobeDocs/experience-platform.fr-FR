@@ -32,7 +32,7 @@ Les valeurs capturées dans ce type de données peuvent différer de l’enregis
 | `productAddMethod` | [!UICONTROL Chaîne] | Méthode utilisée par le visiteur pour ajouter un élément de produit à la liste. |
 | `productImageUrl` | [!UICONTROL Chaîne] | URL de l’image principale du produit. |
 | `quantity` | [!UICONTROL Entier] | Nombre d’unités du produit que le client a indiqué. |
-| `unitOfMeasureCode` | [!UICONTROL Chaîne] | Le [code d’unité de mesure ](https://ucum.org/ucum) standard pour le produit en rapport avec la propriété `quantity`. |
+| `unitOfMeasureCode` | [!UICONTROL Chaîne] | Le [code d’unité de mesure &#x200B;](https://ucum.org/ucum) standard pour le produit en rapport avec la propriété `quantity`. |
 
 {style="table-layout:auto"}
 

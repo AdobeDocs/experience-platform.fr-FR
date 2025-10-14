@@ -76,11 +76,11 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | ----------- | ----------- |
-| Connexion GA [[!DNL Adobe Commerce] ](../../destinations/catalog/personalization/adobe-commerce.md) | Le connecteur de destination [!DNL Adobe Commerce] (désormais généralement disponible) vous permet de sélectionner une ou plusieurs audiences Real-Time CDP à activer dans votre compte [!DNL Adobe Commerce], pour offrir une expérience personnalisée dynamique à vos clientes et clients. |
-| Connexion GA [[!DNL Snap Inc] ](../../destinations/catalog/advertising/snap-inc.md) | Le connecteur de destination [!DNL Snap Inc] (à présent généralement disponible) permet aux personnes spécialisées dans le marketing d’importer des segments d’utilisateurs et d’utilisatrices créés dans Experience Platform vers [!DNL Snapchat Ads] et de les utiliser pour cibler leurs annonces. |
+| Connexion GA [[!DNL Adobe Commerce] &#x200B;](../../destinations/catalog/personalization/adobe-commerce.md) | Le connecteur de destination [!DNL Adobe Commerce] (désormais généralement disponible) vous permet de sélectionner une ou plusieurs audiences Real-Time CDP à activer dans votre compte [!DNL Adobe Commerce], pour offrir une expérience personnalisée dynamique à vos clientes et clients. |
+| Connexion GA [[!DNL Snap Inc] &#x200B;](../../destinations/catalog/advertising/snap-inc.md) | Le connecteur de destination [!DNL Snap Inc] (à présent généralement disponible) permet aux personnes spécialisées dans le marketing d’importer des segments d’utilisateurs et d’utilisatrices créés dans Experience Platform vers [!DNL Snapchat Ads] et de les utiliser pour cibler leurs annonces. |
 | [Connexion Oracle Eloqua (API)](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | Utilisez la connexion basée sur l’API vers [!DNL Oracle Eloqua] pour planifier et exécuter des campagnes tout en offrant une expérience personnalisée à vos clientes et clients pour leurs prospects dans [!DNL Oracle Eloqua]. |
 | [Connexion à  [!DNL Amazon Ads]  (Beta)](../../destinations/catalog/advertising/amazon-ads.md) | L’intégration d’[!DNL Amazon Ads] à Adobe Experience Platform permet une intégration clé en main aux produits d’[!DNL Amazon Ads], y compris à [!DNL Amazon DSP (ADSP)]. En utilisant la destination [!DNL Amazon Ads] dans Adobe Experience Platform, les utilisateurs et utilisatrices peuvent définir les audiences de l’annonceur pour le ciblage et l’activation sur l’[!DNL Amazon DSP]. |
-| Connexion [[!DNL Marketo Measure Ultimate] ](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] (anciennement Bizible) donne aux personnes spécialisées dans le marketing un aperçu des actions marketing les plus efficaces pour générer du chiffre d’affaires et optimiser le retour sur investissement de leur entreprise. La destination active les flux de données B2B (business-to-business) d’Adobe Experience Platform vers [!DNL Marketo Measure]. La carte n’est disponible que pour les clientes et clients de [!DNL Marketo Measure Ultimate]. |
+| Connexion [[!DNL Marketo Measure Ultimate] &#x200B;](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] (anciennement Bizible) donne aux personnes spécialisées dans le marketing un aperçu des actions marketing les plus efficaces pour générer du chiffre d’affaires et optimiser le retour sur investissement de leur entreprise. La destination active les flux de données B2B (business-to-business) d’Adobe Experience Platform vers [!DNL Marketo Measure]. La carte n’est disponible que pour les clientes et clients de [!DNL Marketo Measure Ultimate]. |
 | [Connexion à TikTok](../../destinations/catalog/social/tiktok.md) | Créez des audiences personnalisées sur TikTok avec vos données pour le ciblage de vos campagnes publicitaires. |
 | [Connexion à Zendesk](../../destinations/catalog/crm/zendesk.md) | Utilisez cette destination pour créer et mettre à jour des identités dans un segment en tant que contacts dans [!DNL Zendesk]. |
 
@@ -147,7 +147,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur XDM dans Experience Platform, consultez la [ Présentation du système XDM ](../../xdm/home.md).
+Pour plus d’informations sur XDM dans Experience Platform, consultez la [&#x200B; Présentation du système XDM &#x200B;](../../xdm/home.md).
 
 ## Query Service {#query-service}
 

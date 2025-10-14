@@ -18,7 +18,7 @@ Adobe Livefyre vous permet de découvrir, d’organiser et de publier un flux co
 
 Adobe Livefyre est une extension de réseau social dans Adobe Experience Platform. Pour plus d’informations sur Adobe Livefyre, consultez le [guide de mise en œuvre de Livefyre](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=fr).
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension Adobe Livefyre](../../assets/catalog/social/adobe-livefyre/catalog.png)
 

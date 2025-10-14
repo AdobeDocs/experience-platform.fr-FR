@@ -327,7 +327,7 @@ ht-degree: 12%
 
 **Bibliothèque** : dans le contexte des balises, une bibliothèque est un ensemble de logiques commerciales qui contient des instructions sur le comportement de la bibliothèque de balises sur l’appareil client.
 
-**Entités de recherche** : dans le contexte de la modélisation des données, les entités de recherche représentent des concepts qui peuvent être associés à une personne individuelle, mais qui ne peuvent pas être directement utilisés pour identifier la personne. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur des classes de modèle de données d’expérience (XDM) personnalisées et liées à une entité de profil par le biais d’une [ relation de schéma ](../xdm/tutorials/relationship-ui.md).
+**Entités de recherche** : dans le contexte de la modélisation des données, les entités de recherche représentent des concepts qui peuvent être associés à une personne individuelle, mais qui ne peuvent pas être directement utilisés pour identifier la personne. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur des classes de modèle de données d’expérience (XDM) personnalisées et liées à une entité de profil par le biais d’une [&#x200B; relation de schéma &#x200B;](../xdm/tutorials/relationship-ui.md).
 
 ## M
 
@@ -345,7 +345,7 @@ ht-degree: 12%
 
 **Politique de fusion** : les politiques de fusion sont des règles utilisées par Experience Platform pour déterminer comment des fragments de données client provenant de plusieurs sources seront combinés pour créer un profil individuel. Lorsqu’un conflit de données se produit, la politique de fusion détermine quelles données doivent être prioritaires pour être incluses dans le profil.
 
-**MHMDAa** : la [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) renforce les droits à la confidentialité des consommateurs concernant leurs données de santé. Elle impose la divulgation, le consentement des consommateurs et les droits de suppression des données de santé, et interdit la vente de données de santé sans autorisation. En outre, la loi interdit l’utilisation de clôtures géologiques autour des établissements de santé.
+**MHMDAa** : la [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true) renforce les droits à la confidentialité des consommateurs concernant leurs données de santé. Elle impose la divulgation, le consentement des consommateurs et les droits de suppression des données de santé, et interdit la vente de données de santé sans autorisation. En outre, la loi interdit l’utilisation de clôtures géologiques autour des établissements de santé.
 
 **Mixin** : voir « Groupe de champs de schéma ».
 

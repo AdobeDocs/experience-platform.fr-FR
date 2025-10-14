@@ -17,4 +17,4 @@ Adobe Experience Platform permet de rassembler des données issues de plusieur
 
 Grâce à une API RESTful et à l’interface utilisateur d’Experience Platform, vous pouvez créer des politiques de fusion, gérer des politiques existantes et définir une politique de fusion par défaut pour votre organisation. Vous pouvez aussi spécifier des préférences concernant les sources de données et déterminer quelles données ont la priorité en cas de conflit lors de la fusion.
 
-Pour en savoir plus sur les politiques de fusion et le rôle qu’elles jouent dans Experience Platform, commencez par lire la [ présentation des politiques de fusion ](../../profile/merge-policies/overview.md).
+Pour en savoir plus sur les politiques de fusion et le rôle qu’elles jouent dans Experience Platform, commencez par lire la [&#x200B; présentation des politiques de fusion &#x200B;](../../profile/merge-policies/overview.md).

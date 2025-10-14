@@ -24,7 +24,7 @@ Avec [!UICONTROL Gestionnaire d’autorisations], vous pouvez effectuer une rech
 
 Vous pouvez affiner votre recherche en sélectionnant des ressources, des actions et des sandbox spécifiques.
 
-Pour accéder au [!UICONTROL Gestionnaire d’autorisations] par [!DNL Experience Platform], vous devez être administrateur d’une organisation ayant accès à Experience Platform. Bien qu’Adobe permette des hiérarchies d’administrateurs personnalisables au sein de votre organisation, vous devez être un administrateur de produit pour l’[!DNL Adobe Experience Platform]. Pour plus d’informations, reportez-vous à l’article du Centre d’aide Adobe sur les [ rôles d’administration ](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html).
+Pour accéder au [!UICONTROL Gestionnaire d’autorisations] par [!DNL Experience Platform], vous devez être administrateur d’une organisation ayant accès à Experience Platform. Bien qu’Adobe permette des hiérarchies d’administrateurs personnalisables au sein de votre organisation, vous devez être un administrateur de produit pour l’[!DNL Adobe Experience Platform]. Pour plus d’informations, reportez-vous à l’article du Centre d’aide Adobe sur les [&#x200B; rôles d’administration &#x200B;](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html).
 
 Connectez-vous à [Adobe Experience Platform](https://experience.adobe.com/) à l&#39;aide de vos informations d&#39;identification [!DNL Adobe].  Une fois connecté, la page **[!UICONTROL Aperçu]** s’affiche pour votre organisation. Cette page affiche les produits auxquels votre organisation est abonnée. Pour lancer l’espace de travail du contrôle d’accès basé sur les attributs pour l’intégration de Platform, sélectionnez **[!UICONTROL Autorisations]**.
 

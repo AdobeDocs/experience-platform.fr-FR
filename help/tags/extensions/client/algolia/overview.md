@@ -27,7 +27,7 @@ Pour vous connecter [!DNL Algolia] Adobe Experience Platform, vous aurez besoin 
 
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
-| ID de l’application | Votre ID d’application se trouve dans la section [ Clés API ](https://www.algolia.com/account/api-keys/all) de votre tableau de bord [!DNL Algolia]. | 0ABCDEFG12 |
+| ID de l’application | Votre ID d’application se trouve dans la section [&#x200B; Clés API &#x200B;](https://www.algolia.com/account/api-keys/all) de votre tableau de bord [!DNL Algolia]. | 0ABCDEFG12 |
 | Clé API de recherche | Votre clé d’API de recherche se trouve dans la section [Clés d’API](https://www.algolia.com/account/api-keys/all) de votre tableau de bord de [!DNL Algolia]. | 1234a12345678901b1234567890c1ab1 |
 
 ## Installation et configuration de l’extension [!DNL Algolia] Insights {#install-configure}
@@ -284,7 +284,7 @@ Les événements *Cliqué après la recherche* ou *Converti après la recherche*
 * [Envoi  [!DNL Algolia]  événements Insights](https://www.algolia.com/doc/ui-libraries/autocomplete/guides/sending-algolia-insights-events/)
 * [[!DNL Algolia] Référentiel GitHub de l’extension Launch](https://github.com/algolia/algolia-launch-extension)
 * [Documentation InstantSearch.js](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/)
-* [[!DNL Algolia]  Documentation de l’API Insights ](https://www.algolia.com/doc/rest-api/insights/)
+* [[!DNL Algolia]  Documentation de l’API Insights &#x200B;](https://www.algolia.com/doc/rest-api/insights/)
 * [Référentiel de code d’extension Algolia Launch](https://github.com/algolia/algolia-launch-extension)
 
 ## Étapes suivantes {#next-steps}

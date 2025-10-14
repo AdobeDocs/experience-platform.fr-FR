@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->L’extension est destinée à être utilisée avec l’extension SDK Web de Adobe Experience Platform. Pour obtenir des informations sur la version qui doit être utilisée avec AppMeasurement, reportez-vous à la présentation de l’ [ extension de modules externes courants Analytics](../plugins/overview.md).
+>L’extension est destinée à être utilisée avec l’extension SDK Web de Adobe Experience Platform. Pour obtenir des informations sur la version qui doit être utilisée avec AppMeasurement, reportez-vous à la présentation de l’ [&#x200B; extension de modules externes courants Analytics](../plugins/overview.md).
 
 Ce document explique comment configurer l’extension de balise des modules externes du SDK Web et l’utiliser pour augmenter l’ [extension du SDK Web Adobe Experience Platform](../web-sdk/overview.md).
 

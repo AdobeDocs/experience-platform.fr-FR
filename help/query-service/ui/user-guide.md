@@ -141,7 +141,7 @@ Pour afficher une requête dans le Query Editor, sélectionnez n’importe quel 
 
 >[!NOTE]
 >
->Les options [!UICONTROL Afficher le planning], [!UICONTROL Ajouter un planning] et [!UICONTROL Supprimer la requête] ne sont disponibles qu’une fois la requête enregistrée en tant que modèle. L’option [!UICONTROL Ajouter un planning] vous permet d’accéder directement au créateur de plannings à partir du Query Editor. L&#39;option [!UICONTROL Afficher le planning] vous permet d&#39;accéder directement à l&#39;inventaire planifié pour cette requête. Consultez la documentation sur les plannings de requête pour savoir comment [ créer des plannings de requête dans l’interface utilisateur ](./query-schedules.md#create-schedule).
+>Les options [!UICONTROL Afficher le planning], [!UICONTROL Ajouter un planning] et [!UICONTROL Supprimer la requête] ne sont disponibles qu’une fois la requête enregistrée en tant que modèle. L’option [!UICONTROL Ajouter un planning] vous permet d’accéder directement au créateur de plannings à partir du Query Editor. L&#39;option [!UICONTROL Afficher le planning] vous permet d&#39;accéder directement à l&#39;inventaire planifié pour cette requête. Consultez la documentation sur les plannings de requête pour savoir comment [&#x200B; créer des plannings de requête dans l’interface utilisateur &#x200B;](./query-schedules.md#create-schedule).
 
 ![Query Editor avec le panneau des détails de la requête mis en surbrillance.](../images/ui/query-editor/query-details.png)
 
@@ -177,7 +177,7 @@ Les plannings sont définis dans le Query Editor. Lors de l’utilisation de Que
 >
 >Les requêtes planifiées qui échouent dix exécutions consécutives sont automatiquement placées dans un statut [!UICONTROL &#x200B; Quarantaine &#x200B;]. Une requête avec ce statut nécessite votre intervention avant que d’autres exécutions puissent avoir lieu. Consultez la documentation [requêtes en quarantaine](./monitor-queries.md#quarantined-queries) pour plus d’informations.
 
-Consultez la documentation sur les plannings de requête pour savoir comment [ créer des plannings de requête dans l’interface utilisateur ](./query-schedules.md). Vous pouvez également découvrir comment ajouter des plannings à l’aide de l’API dans le guide de point d’entrée [des requêtes planifiées](../api/scheduled-queries.md).
+Consultez la documentation sur les plannings de requête pour savoir comment [&#x200B; créer des plannings de requête dans l’interface utilisateur &#x200B;](./query-schedules.md). Vous pouvez également découvrir comment ajouter des plannings à l’aide de l’API dans le guide de point d’entrée [des requêtes planifiées](../api/scheduled-queries.md).
 
 Toutes les requêtes planifiées sont ajoutées à la liste dans l’onglet [!UICONTROL Requêtes planifiées]. Depuis cet espace de travail, vous pouvez surveiller le statut de toutes les tâches de requête planifiées via l’interface utilisateur. Sur l’onglet [!UICONTROL Requêtes planifiées], vous pouvez trouver des informations importantes sur les exécutions de vos requêtes et vous abonner aux alertes. Les informations disponibles incluent le statut, les détails du planning et les messages/codes d’erreur en cas d’échec de l’exécution. Pour plus d’informations, consultez le document [Surveiller les requêtes planifiées](./monitor-queries.md) .
 

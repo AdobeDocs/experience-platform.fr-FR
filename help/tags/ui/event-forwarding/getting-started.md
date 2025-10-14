@@ -23,7 +23,7 @@ ht-degree: 78%
 Pour utiliser le transfert dʼévénements dans Adobe Experience Platform, les données doivent être envoyées à Adobe Experience Platform Edge Network à lʼaide de lʼune ou de plusieurs des trois options suivantes :
 
 * [SDK web Adobe Experience Platform](../../extensions/client/web-sdk/overview.md)
-* [ SDK Mobile Adobe Experience Platform](https://sdkdocs.com)
+* [&#x200B; SDK Mobile Adobe Experience Platform](https://sdkdocs.com)
 * [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/)
 
 >[!NOTE]

@@ -44,7 +44,7 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 | Ajouts de l’API d’aperçu de profil | L’API d’aperçu de profil (`/previewsamplestatus`) offre désormais la possibilité d’afficher la répartition du total des fragments de profil dans votre organisation, ainsi que la répartition des fragments de profil dans les espaces de noms d’identité. |
 | Mises à jour de la vue de schéma d’union | Dans l’interface utilisateur d’Experience Platform, les utilisateurs peuvent plus facilement trouver des informations concernant tous les schémas et jeux de données qui contribuent au schéma d’union, ainsi que les attributs clés de surface tels que les champs d’identité et de relation. Ces mises à jour améliorent la capacité à résoudre les problèmes et à vérifier que les profils sont correctement configurés, que les identités sont correctement assemblées et que les données ont bien été ingérées. |
 
-Pour plus d’informations sur [!DNL Real-Time Customer Profile], notamment les bonnes pratiques et les tutoriels relatifs à l’utilisation des données [!DNL Profile], consultez la [ présentation du profil client en temps réel ](../../profile/home.md).
+Pour plus d’informations sur [!DNL Real-Time Customer Profile], notamment les bonnes pratiques et les tutoriels relatifs à l’utilisation des données [!DNL Profile], consultez la [&#x200B; présentation du profil client en temps réel &#x200B;](../../profile/home.md).
 
 ## Segmentation Service {#segmentation}
 
@@ -58,7 +58,7 @@ Adobe Experience Platform Segmentation Service propose une interface utilisa
 | ------- | ----------- |
 | Suppression de la limite de segmentation en flux continu | La limite de sept jours pour la période de recherche en amont a été supprimée. |
 
-Pour plus d’informations sur les [!DNL Segmentation Service], consultez la [ présentation de la segmentation ](../../segmentation/home.md)
+Pour plus d’informations sur les [!DNL Segmentation Service], consultez la [&#x200B; présentation de la segmentation &#x200B;](../../segmentation/home.md)
 
 ## Sources {#sources}
 

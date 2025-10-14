@@ -17,7 +17,7 @@ ht-degree: 10%
 
 >[!NOTE]
 >
->La source [!DNL Google Ads] est en version Beta. Consultez la [ Présentation des sources ](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>La source [!DNL Google Ads] est en version Beta. Consultez la [&#x200B; Présentation des sources &#x200B;](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Lisez ce guide pour savoir comment connecter votre compte [!DNL Google Ads] à Adobe Experience Platform à l’aide de l’espace de travail des sources dans l’interface utilisateur d’Experience Platform.
 
@@ -59,7 +59,7 @@ Si vous ne disposez pas d’un compte existant, vous devez créer un compte en f
 Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** puis indiquez un nom de compte et éventuellement une description pour les détails de votre compte. Ensuite, fournissez les valeurs d’authentification appropriées pour authentifier votre source par rapport à Experience Platform :
 
 * **Identifiant client** : l’identifiant client est le numéro de compte qui correspond au compte client [!DNL Google Ads] que vous souhaitez gérer avec l’API [!DNL Google Ads]. Cet identifiant suit le modèle de `123-456-7890`.
-* **ID de client de connexion** : l’ID de client de connexion est le numéro de compte qui correspond à votre compte [!DNL Google Ads] Manager et qui est utilisé pour récupérer les données de rapport d’un client opérationnel spécifique. Pour plus d’informations sur l’ID de client de connexion, consultez la documentation de l’API [[!DNL Google Ads] ](https://developers.google.com/search-ads/reporting/concepts/login-customer-id).
+* **ID de client de connexion** : l’ID de client de connexion est le numéro de compte qui correspond à votre compte [!DNL Google Ads] Manager et qui est utilisé pour récupérer les données de rapport d’un client opérationnel spécifique. Pour plus d’informations sur l’ID de client de connexion, consultez la documentation de l’API [[!DNL Google Ads] &#x200B;](https://developers.google.com/search-ads/reporting/concepts/login-customer-id).
 * **Jeton de développeur** : le jeton de développeur vous permet d’accéder à l’API [!DNL Google Ads]. Vous pouvez utiliser le même jeton de développement pour effectuer des requêtes sur tous vos comptes [!DNL Google Ads]. Récupérez votre jeton de développeur en [vous connectant à votre compte Manager](https://ads.google.com/home/tools/manager-accounts/) puis en accédant à la page du Centre API.
 * **Jeton d’actualisation** : le jeton d’actualisation fait partie de l’authentification [!DNL OAuth2]. Ce jeton vous permet de régénérer vos jetons d’accès après leur expiration.
 * **Identifiant client** : l’identifiant client est utilisé conjointement avec le secret client dans le cadre de l’authentification [!DNL OAuth2]. Ensemble, l’identifiant client et le secret client permettent à votre application d’opérer pour le compte de votre compte en identifiant votre application à [!DNL Google].

@@ -39,7 +39,7 @@ Vous pouvez également éventuellement fournir un ID d’événement à associer
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**
 
-![ ID [!DNL Pixel] fourni en tant qu’élément de données dans la vue de configuration de l’extension.](../../../images/extensions/client/meta/configure.png)
+![&#x200B; ID [!DNL Pixel] fourni en tant qu’élément de données dans la vue de configuration de l’extension.](../../../images/extensions/client/meta/configure.png)
 
 L’extension est installée et vous pouvez désormais utiliser ses différentes actions dans vos règles de balises.
 

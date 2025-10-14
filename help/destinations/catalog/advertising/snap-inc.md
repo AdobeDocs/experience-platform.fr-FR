@@ -140,7 +140,7 @@ Après avoir activé les audiences vers la destination *Snap Inc*, vous pourrez 
 
 ![Audiences](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Notez que lorsqu’une audience Adobe est activée pour la première fois sur Snap Inc, elle s’affiche initialement comme une audience vide. En effet, Adobe Experience Platform n’exporte pas les données des membres vers Snap Inc tant qu’il n’a pas évalué l’audience. Pour plus d’informations sur l’évaluation des audiences dans Experience Platform, reportez-vous à la [ présentation de Segmentation Service ](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=fr#evaluate-segments).
+Notez que lorsqu’une audience Adobe est activée pour la première fois sur Snap Inc, elle s’affiche initialement comme une audience vide. En effet, Adobe Experience Platform n’exporte pas les données des membres vers Snap Inc tant qu’il n’a pas évalué l’audience. Pour plus d’informations sur l’évaluation des audiences dans Experience Platform, reportez-vous à la [&#x200B; présentation de Segmentation Service &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=fr#evaluate-segments).
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

@@ -26,7 +26,7 @@ Sélectionnez les points de suspension dans le graphique que vous souhaitez parc
 
 Dans le panneau [!UICONTROL Propriétés], activez l’option **[!UICONTROL pour activer l’analyse]**, puis utilisez la liste déroulante pour sélectionner le **[!UICONTROL tableau de bord Target]**. Assurez-vous que le bouton bascule de **[!UICONTROL Filtrer le pass-through]** est activé, puis sélectionnez **[!UICONTROL Enregistrer et fermer]**.
 
-![ Panneau des propriétés de graphique avec l’option Autoriser l’analyse, le tableau de bord de la cible et la fonction Filtrer mise en surbrillance.](../images/sql-insights-query-pro-mode/drill-through-chart-properties.png)
+![&#x200B; Panneau des propriétés de graphique avec l’option Autoriser l’analyse, le tableau de bord de la cible et la fonction Filtrer mise en surbrillance.](../images/sql-insights-query-pro-mode/drill-through-chart-properties.png)
 
 >[!INFO]
 >

@@ -93,7 +93,7 @@ Créez une règle en indiquant les actions qui se produisent si une condition es
 
 1. Sélectionnez l’icône **[!UICONTROL Ajouter]** de Conditions, puis sélectionnez un type de logique, une extension, un type de condition et configurez les paramètres de votre condition. Sélectionnez ensuite **[!UICONTROL Conserver les modifications]**.
 
-   ![ Page de configuration des conditions des règles.](../../images/condition-settings.png)
+   ![&#x200B; Page de configuration des conditions des règles.](../../images/condition-settings.png)
 
    Les types de conditions disponibles dépendent de l’extension sélectionnée. Les paramètres de conditions diffèrent en fonction du type de condition.
 

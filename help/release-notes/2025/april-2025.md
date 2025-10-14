@@ -127,7 +127,7 @@ Interrogez des données dans le lac de données Adobe Experience Platform à l
 | Amélioration de la sélection des colonnes dans la prédiction de modèle | Sélectionnez des colonnes spécifiques et appliquez des alias à l’aide de la syntaxe `model_predict` étendue. Récupérez les résultats de prédiction intermédiaires tels que les vecteurs de caractéristiques et les scores de probabilité. La sélection améliorée nécessite l’activation d’un indicateur de fonctionnalité. Consultez la [documentation du cycle de vie du modèle](../../query-service/advanced-statistics/models.md#select-specific-output-fields) pour obtenir des exemples de syntaxe et des informations sur les indicateurs de fonctionnalité. |
 | Enregistrer les sorties de prédiction de modèle à l’aide de CRÉER UN TABLEAU et INSÉRER DANS | [Enregistrez les sorties de prédiction sélectionnées dans de nouveaux tableaux à l’aide de CRÉER UN TABLEAU EN FONCTION DE LA SÉLECTION ou insérez-les dans les tableaux existants à l’aide d’INSÉRER DANS LA SÉLECTION](../../query-service/advanced-statistics/models.md#predict). Si la sélection de colonnes améliorée est activée, des résultats intermédiaires tels que des vecteurs de caractéristiques et des probabilités peuvent également être conservés avec les prédictions finales. Pour consulter des exemples d’utilisation, consultez la [documentation sur la syntaxe SQL](../../query-service/sql/syntax.md#create-table-as-select). |
 
-Pour plus d’informations sur [!DNL Query Service], consultez la vue d’ensemble [[!DNL Query Service] ](../../query-service/home.md).
+Pour plus d’informations sur [!DNL Query Service], consultez la vue d’ensemble [[!DNL Query Service] &#x200B;](../../query-service/home.md).
 
 ## Sandbox {#sandboxes}
 

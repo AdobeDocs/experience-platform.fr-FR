@@ -21,7 +21,7 @@ Voici quelques-uns des principaux avantages de [!DNL Algolia] :
 * Classement personnalisable pour établir la priorité des besoins de l’entreprise.
 * Évolutivité permettant de gérer facilement les charges de trafic élevées.
 
-Pour plus d’informations, consultez la [[!DNL Algolia]  documentation du produit ](https://resources.algolia.com/).
+Pour plus d’informations, consultez la [[!DNL Algolia]  documentation du produit &#x200B;](https://resources.algolia.com/).
 
 ## Architecture
 

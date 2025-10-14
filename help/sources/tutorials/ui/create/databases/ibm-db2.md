@@ -16,7 +16,7 @@ ht-degree: 29%
 
 >[!NOTE]
 >
-> Le connecteur IBM DB2 est en version bêta. Consultez la [ Présentation des sources ](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+> Le connecteur IBM DB2 est en version bêta. Consultez la [&#x200B; Présentation des sources &#x200B;](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Les connecteurs Source de Adobe Experience Platform permettent d’ingérer des données provenant de l’extérieur selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour créer un connecteur source IBM DB2 (ci-après dénommé « DB2 ») à l’aide de l’interface utilisateur [!DNL Experience Platform].
 

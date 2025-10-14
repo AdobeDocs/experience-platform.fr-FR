@@ -325,7 +325,7 @@ Le widget **[!UICONTROL Modification du nombre de profils]** affiche le nombre d
 
 Le widget **[!UICONTROL Tendance de modification du nombre de profils]** affiche le nombre total de profils fusionnés qui ont été ajoutés quotidiennement à la banque de profils au cours des 30 derniers jours, des 90 derniers jours, ou des 12 derniers mois. Ce nombre est mis à jour chaque jour lorsque l’instantané est pris. Par conséquent, si vous deviez ingérer des profils dans Experience Platform, le nombre de profils ne serait pas reflété tant que l’instantané suivant n’aurait pas été pris. Le nombre de profils ajoutés est le résultat de l’application de la politique de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu.
 
-Pour en savoir plus, consultez la section [ sur les politiques de fusion plus haut dans ce document](#merge-policies).
+Pour en savoir plus, consultez la section [&#x200B; sur les politiques de fusion plus haut dans ce document](#merge-policies).
 
 Le widget **[!UICONTROL Tendance de modification du nombre de profils]** affiche un bouton « légendes » en haut à droite du widget. Pour ouvrir la boîte de dialogue de légendes automatiques, sélectionnez **[!UICONTROL Légendes]**.
 
@@ -354,7 +354,7 @@ Ce widget vous permet de gérer vos besoins d’activation de destination en pr�
 
 Le widget **[!UICONTROL Profils par identité]** affiche la répartition des identités pour tous les profils fusionnés de votre banque de profils. Le nombre total de profils par identité (c’est-à-dire en additionnant les valeurs affichées pour chaque espace de noms) peut être supérieur au nombre total de profils fusionnés, car plusieurs espaces de noms peuvent être associés à un profil. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de noms seront associés à ce client individuel.
 
-Pour en savoir plus, consultez la section [ sur les politiques de fusion plus haut dans ce document](#merge-policies).
+Pour en savoir plus, consultez la section [&#x200B; sur les politiques de fusion plus haut dans ce document](#merge-policies).
 
 ![Le tableau de bord d’aperçu des profils avec le widget Profils par identité mis en surbrillance.](../images/profiles/profiles-by-identity.png)
 

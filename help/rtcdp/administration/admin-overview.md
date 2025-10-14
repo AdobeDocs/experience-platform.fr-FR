@@ -23,7 +23,7 @@ Les sections suivantes présentent les composants centraux des fonctionnalités 
 
 Le contrôle d’accès basé sur les attributs est géré via l’interface utilisateur des autorisations. Cette fonctionnalité exploite les rôles de l’interface utilisateur Autorisations, ce qui vous permet de lier les utilisateurs à des autorisations et des sandbox. Grâce à cette fonctionnalité, les administrateurs peuvent accorder ou restreindre l’accès à des fonctionnalités spécifiques de la plateforme CDP en temps réel pour des ensembles d’utilisateurs définis.
 
-Pour en savoir plus sur le contrôle d’accès, consultez la [ présentation du contrôle d’accès basé sur les attributs ](/help/access-control/abac/overview.md) dans la documentation [!DNL Experience Platform].
+Pour en savoir plus sur le contrôle d’accès, consultez la [&#x200B; présentation du contrôle d’accès basé sur les attributs &#x200B;](/help/access-control/abac/overview.md) dans la documentation [!DNL Experience Platform].
 
 >[!IMPORTANT]
 >

@@ -76,7 +76,7 @@ Consultez la documentation pour obtenir des conseils sur la [création ou modifi
 >
 >La création ou la modification d’un libellé existant nécessite des autorisations d’administrateur pour votre organisation. Si vous ne disposez pas des privilèges d’administrateur, contactez votre administrateur système pour organiser l’accès.
 
-Vous pouvez également créer des libellés à l’aide de l’espace de travail Autorisations . Pour obtenir des instructions, consultez le guide [ sur la création de libellés dans l’espace de travail Autorisations ](../../access-control/abac/ui/labels.md) .
+Vous pouvez également créer des libellés à l’aide de l’espace de travail Autorisations . Pour obtenir des instructions, consultez le guide [&#x200B; sur la création de libellés dans l’espace de travail Autorisations &#x200B;](../../access-control/abac/ui/labels.md) .
 
 Une fois le niveau approprié de contrôle d’accès basé sur les attributs appliqué, le comportement système suivant s’applique à toute requête exécutée via Query Service lorsqu’un utilisateur ou une utilisatrice tente d’accéder à des données non accessibles :
 

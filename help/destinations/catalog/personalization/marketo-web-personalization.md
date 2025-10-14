@@ -18,7 +18,7 @@ Cette extension déploie le script pour [!DNL Marketo's] applications Web Person
 
 [!DNL Marketo Web Personalization] est une extension de personnalisation dans Adobe Experience Platform. Pour plus d’informations sur la personnalisation web et ContentAI dans Marketo, consultez [Présentation de Web Personalization](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html?lang=fr).
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension Marketo Web Personalization](../../assets/catalog/personalization/marketo-web-personalization/catalog.png)
 

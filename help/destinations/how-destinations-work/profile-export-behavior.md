@@ -15,7 +15,7 @@ Il existe plusieurs types de destinations dans Experience Platform, comme illust
 
 >[!IMPORTANT]
 >
->* Notez le changement de comportement d’exportation introduit en septembre 2025 pour les [ destinations d’entreprise ](#enterprise-behavior)
+>* Notez le changement de comportement d’exportation introduit en septembre 2025 pour les [&#x200B; destinations d’entreprise &#x200B;](#enterprise-behavior)
 >* Cette page de documentation ne décrit que le comportement d’exportation de profil pour les connexions mises en évidence en bas du diagramme.
 
 ![Diagramme Types de destinations](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)

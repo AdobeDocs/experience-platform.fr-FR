@@ -131,7 +131,7 @@ Contient la version 2.23.0 du SDK web d’Adobe Experience Platform.
 **Correctifs et améliorations**
 
 - Correction d’un problème où des éléments de données variables dupliqués pouvaient se remplacer les uns les autres.
-- En utilisant l’événement guidé [ Demander la personnalisation par défaut](action-types.md#personalization), les choix de personnalisation visuelle sont maintenant activés automatiquement.
+- En utilisant l’événement guidé [&#x200B; Demander la personnalisation par défaut](action-types.md#personalization), les choix de personnalisation visuelle sont maintenant activés automatiquement.
 
 Contient la version 2.22.0 du SDK web d’Adobe Experience Platform.
 

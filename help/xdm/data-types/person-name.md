@@ -32,5 +32,5 @@ En outre, le type de données fournit un certain nombre de propriétés facultat
 
 Pour plus d’informations sur le type de données de nom de personne, reportez-vous au référentiel XDM public :
 
-* [ Exemple renseigné ](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.example.1.json)
+* [&#x200B; Exemple renseigné &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.schema.json)

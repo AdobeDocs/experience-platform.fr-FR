@@ -48,7 +48,7 @@ Le modèle de profil de compte comprend huit jeux de données :
 
 Le diagramme ci-dessous affiche les champs de données pertinents de chaque jeu de données, leur type de données et les clés étrangères qui lient les jeux de données ensemble.
 
-![ Diagramme relationnel de l’entité pour le modèle de profil de compte.](../images/data-models/account-profile-model.png)
+![&#x200B; Diagramme relationnel de l’entité pour le modèle de profil de compte.](../images/data-models/account-profile-model.png)
 
 #### Nouveaux comptes par cas d’utilisation industriel {#accounts-by-industry}
 

@@ -62,7 +62,7 @@ Cette section donne un aperçu général de la requête sélectionnée, y compri
 Cette section fournit des informations sur les données de profil utilisées lors du traitement de la demande, notamment le mappage d’identité, l’appartenance au segment et les paramètres de consentement.\
 La section [!UICONTROL Profil] s’avère très utile pour résoudre des problèmes tels que le dysfonctionnement de la diffusion en raison de paramètres d’adhésion au segment manquants ou retardés ou de consentement pour l’exclusion.
 
-![ La section Profil comprend la carte d’identité, l’adhésion au segment et les paramètres de consentement ](./images/edge-delivery/profile.png)
+![&#x200B; La section Profil comprend la carte d’identité, l’adhésion au segment et les paramètres de consentement &#x200B;](./images/edge-delivery/profile.png)
 
 ### Activités qualifiées
 
@@ -74,13 +74,13 @@ Cette section fournit une liste des activités qui ont été qualifiées pour la
 
 Cette section fournit une liste des activités qui ont été exclues de la qualification. Outre le type d’activité, les identifiants, les espaces de noms d’identité, les surfaces, les plannings et les audiences, cette section comprend également une liste des raisons pour lesquelles l’activité n’a pas été qualifiée.
 
-![ La section sur les activités non qualifiées contient des détails sur les activités non qualifiés et des raisons d&#39;exclusion](./images/edge-delivery/unqualified-activities.png)
+![&#x200B; La section sur les activités non qualifiées contient des détails sur les activités non qualifiés et des raisons d&#39;exclusion](./images/edge-delivery/unqualified-activities.png)
 
 ### Détails du message
 
 Cette section fournit des informations détaillées sur les messages qui ont été remis pour la requête sélectionnée. Il inclut les identifiants de message, les fragments, les stratégies de décision, les paramètres [!UICONTROL Offer decisioning], ainsi que le contexte de sélection des messages.
 
-![ Section contenant des détails sur les messages diffusés tels que les ID de message et le contexte de sélection, les fragments, les stratégies de décision et les paramètres de prise de décision ](./images/edge-delivery/message-details.png)
+![&#x200B; Section contenant des détails sur les messages diffusés tels que les ID de message et le contexte de sélection, les fragments, les stratégies de décision et les paramètres de prise de décision &#x200B;](./images/edge-delivery/message-details.png)
 
 ### Interactions
 
@@ -96,7 +96,7 @@ Cette section fournit les traces brutes de la requête sélectionnée. Elle incl
 
 Le suivi de la requête inclut la demande complète telle qu’elle a été reçue par le **[!UICONTROL service de remise en entrée]** **[!UICONTROL Konductor]** en amont. Il inclut les en-têtes de requête, le corps et d’autres métadonnées. Par exemple, la charge utile XDM de la requête peut être inspectée dans le champ `event.body.xdm` .
 
-![ Des informations détaillées sur les requêtes, y compris les en-têtes et le corps, se trouvent dans la trace de requête](./images/edge-delivery/request.png)
+![&#x200B; Des informations détaillées sur les requêtes, y compris les en-têtes et le corps, se trouvent dans la trace de requête](./images/edge-delivery/request.png)
 
 #### Exécution
 

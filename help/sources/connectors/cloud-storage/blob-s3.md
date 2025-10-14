@@ -17,6 +17,6 @@ Adobe Experience Platform fournit une connectivité native aux fournisseurs de c
 
 Les sources de stockage dans le cloud peuvent introduire vos propres données dans [!DNL Experience Platform] sans avoir à les télécharger, les formater ou les transférer. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. [!DNL Experience Platform] vous permet d’importer des données de [!DNL Azure Blob] et S3 par lots.
 
-Pour plus d’informations sur le connecteur [!DNL Azure Blob], veuillez lire la présentation du connecteur [[!DNL Azure Blob] ](./blob.md).
+Pour plus d’informations sur le connecteur [!DNL Azure Blob], veuillez lire la présentation du connecteur [[!DNL Azure Blob] &#x200B;](./blob.md).
 
-Pour plus d’informations sur le connecteur [!DNL Amazon S3], veuillez lire la présentation du connecteur [[!DNL Amazon S3] ](./s3.md).
+Pour plus d’informations sur le connecteur [!DNL Amazon S3], veuillez lire la présentation du connecteur [[!DNL Amazon S3] &#x200B;](./s3.md).

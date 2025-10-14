@@ -58,7 +58,7 @@ Le dossier [!UICONTROL Abonnements] s’affiche. Dans les options disponibles, s
 >
 >Il existe une limite conditionnelle au nombre d’audiences que vous êtes recommandé de créer. Vous trouverez plus d’informations dans la [documentation sur les mécanismes de sécurisation de la segmentation](../../profile/guardrails.md#segmentation-guardrails).
 
-![ Attribut [!UICONTROL Valeur de choix] avec la valeur [!UICONTROL Oui (opt-in)] mise en surbrillance dans le créateur de segments. Le nom et la description de l’audience sont également mis en surbrillance.](../images/insights-use-cases/consent-analysis/choice-value.png)
+![&#x200B; Attribut [!UICONTROL Valeur de choix] avec la valeur [!UICONTROL Oui (opt-in)] mise en surbrillance dans le créateur de segments. Le nom et la description de l’audience sont également mis en surbrillance.](../images/insights-use-cases/consent-analysis/choice-value.png)
 
 Une fois les audiences nécessaires créées, elles sont répertoriées dans l’onglet [!UICONTROL Audiences] [!UICONTROL Parcourir].
 
@@ -130,7 +130,7 @@ Une fois le compositeur de widget renseigné avec les données du tableau de vot
   ![Le compositeur de widget avec l’icône d’ajout et le menu déroulant mis en surbrillance.](../images/standard-dashboards/attributes-dropdown.png)
 - Recherchez [!UICONTROL Attributs] par `[!UICONTROL count_of_profiles]`, puis utilisez l’icône + pour ajouter l’attribut `[!UICONTROL count_of_profiles]` à l’axe Y à partir du menu déroulant.
 - Sélectionnez l’icône `...` (des points de suspension) dans le champ [!UICONTROL Axe Y], puis sélectionnez la fonction d’agrégat [!UICONTROL SOMME] dans le menu déroulant.
-  ![Le widget Tendances du consentement du compositeur de widget avec le modèle de données, le tableau, le menu déroulant de l’axe Y et la fonction SOMME mis en surbrillance. ](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
+  ![Le widget Tendances du consentement du compositeur de widget avec le modèle de données, le tableau, le menu déroulant de l’axe Y et la fonction SOMME mis en surbrillance. &#x200B;](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
 - Sélectionnez le menu déroulant [!UICONTROL Marques] et remplacez le type de graphique par [!UICONTROL Ligne].
 - Recherchez [!UICONTROL Attributs] pour le `[!UICONTROL segment_name]`, puis utilisez l’icône + pour ajouter le `segment_name` en tant que [!UICONTROL Filtre] dans le menu déroulant. La boîte de dialogue [!UICONTROL Filtre : nom_segment] s’affiche. Sélectionnez les audiences créées précédemment et liées au consentement. Pour cet exemple, sélectionnez **[!UICONTROL Utilisateurs ayant consenti aux appels]**, **[!UICONTROL Utilisateurs ayant consenti aux SMS]** et **[!UICONTROL Utilisateurs ayant consenti aux e-mails]**, suivis de **[!UICONTROL Appliquer]**.
 - Recherchez `[!UICONTROL segment_name]` [!UICONTROL Attributs], puis sélectionnez l’icône + pour ajouter `segment_name` en tant que [!UICONTROL Couleur] dans le menu déroulant.

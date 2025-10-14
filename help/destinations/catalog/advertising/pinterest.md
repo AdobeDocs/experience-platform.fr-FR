@@ -85,7 +85,7 @@ Une fois le jeton expiré, les exportations de données vers la destination cess
 3. Sélectionnez le compte à actualiser, puis les points de suspension et sélectionnez **[!UICONTROL Modifier les détails]**.
    ![Sélectionnez Modifier les détails](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-edit-details.png)
 4. Dans la fenêtre modale, sélectionnez **[!UICONTROL Reconnecter OAuth]** et réauthentifiez-vous à l’aide de vos informations d’identification Pinterest.
-   ![Fenêtre modale avec l’option Reconnecter OAuth ](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
+   ![Fenêtre modale avec l’option Reconnecter OAuth &#x200B;](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
 
 >[!SUCCESS]
 > 

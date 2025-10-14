@@ -40,7 +40,7 @@ Cette fonctionnalité est également compatible avec [!DNL VisitorAPI.js] versio
 
 ## Partage des identifiants de mobile à web {#mobile-to-web}
 
-Utilisez l’API `getUrlVariables` de l’extension [ Identity for Edge Network](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables) pour récupérer les identifiants en tant que paramètres de requête et les joindre à votre URL lors de l’ouverture de [!DNL webViews].
+Utilisez l’API `getUrlVariables` de l’extension [&#x200B; Identity for Edge Network](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables) pour récupérer les identifiants en tant que paramètres de requête et les joindre à votre URL lors de l’ouverture de [!DNL webViews].
 
 Aucune configuration supplémentaire n’est requise pour que le SDK Web accepte les valeurs `ECID` dans la chaîne de requête.
 

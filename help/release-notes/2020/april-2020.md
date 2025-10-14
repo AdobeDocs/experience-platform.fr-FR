@@ -42,7 +42,7 @@ Mises à jour des fonctionnalités existantes :
 
 * Aucun problème connu pour le moment.
 
-Pour plus d’informations sur les [!DNL Intelligent Services] et ce qu’ils ont à offrir, reportez-vous à la [ présentation des services intelligents ](../../intelligent-services/home.md).
+Pour plus d’informations sur les [!DNL Intelligent Services] et ce qu’ils ont à offrir, reportez-vous à la [&#x200B; présentation des services intelligents &#x200B;](../../intelligent-services/home.md).
 
 ## Système d’[!DNL Experience Data Model] (XDM) {#xdm}
 

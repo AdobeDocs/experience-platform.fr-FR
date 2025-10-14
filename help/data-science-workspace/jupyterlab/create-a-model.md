@@ -193,7 +193,7 @@ Une fois les données chargées, elles doivent être nettoyées et subir une pr�
 
 Une fois que vous avez supprimé toutes les données inutiles, vous pouvez commencer l’ingénierie des fonctionnalités. Les données de démonstration utilisées pour cet exemple ne contiennent aucune information de session. En règle générale, vous souhaiteriez disposer de données sur les sessions en cours et antérieures pour un client spécifique. En raison du manque d’informations sur la session, cet exemple imite plutôt les sessions actuelles et passées via la délimitation du parcours.
 
-![Délimitation du Parcours ](../images/jupyterlab/create-recipe/journey_demarcation.png)
+![Délimitation du Parcours &#x200B;](../images/jupyterlab/create-recipe/journey_demarcation.png)
 
 Une fois la délimitation terminée, les données sont étiquetées et un parcours est créé.
 

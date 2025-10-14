@@ -45,7 +45,7 @@ En outre, pour mettre en oeuvre le cas d’utilisation, vous utiliserez les fonc
 
 Pour créer une audience de visiteurs non authentifiés, vous devez d’abord obtenir les données de vos partenaires dans Real-Time CDP.
 
-Pour savoir comment importer au mieux des données dans Real-Time CDP à l’aide du SDK Web, consultez les [ sections sur la gestion des données et la collecte de données d’événement](./onsite-personalization.md#data-management) du cas d’utilisation de la personnalisation sur site.
+Pour savoir comment importer au mieux des données dans Real-Time CDP à l’aide du SDK Web, consultez les [&#x200B; sections sur la gestion des données et la collecte de données d’événement](./onsite-personalization.md#data-management) du cas d’utilisation de la personnalisation sur site.
 
 ## Transfert des identifiants fournis par les partenaires {#bring-partner-ids-forward}
 
@@ -59,7 +59,7 @@ Pour accéder aux attributs calculés, sélectionnez **[!UICONTROL Profils]** su
 
 La page **[!UICONTROL Créer un attribut calculé]** s’affiche. Sur cette page, vous pouvez utiliser les composants pour créer votre attribut calculé.
 
-![ L&#39;espace de travail Créer un attribut calculé s&#39;affiche.](../assets/offsite-retargeting/ca-page.png)
+![&#x200B; L&#39;espace de travail Créer un attribut calculé s&#39;affiche.](../assets/offsite-retargeting/ca-page.png)
 
 >[!NOTE]
 >
@@ -129,7 +129,7 @@ Vous avez maintenant créé avec succès une audience qui recherche les visiteur
 
 Une fois votre audience créée, vous pouvez désormais l’activer vers les destinations en aval. Sélectionnez **[!UICONTROL Audiences]** sur le rail de navigation de gauche, recherchez l’audience que vous venez de créer, sélectionnez l’icône représentant des points de suspension, puis sélectionnez **[!UICONTROL Activer à la destination]**.
 
-![ Le bouton [!UICONTROL Activer à la destination] est mis en surbrillance.](../assets/offsite-retargeting/activate-to-destination.png)
+![&#x200B; Le bouton [!UICONTROL Activer à la destination] est mis en surbrillance.](../assets/offsite-retargeting/activate-to-destination.png)
 
 >[!NOTE]
 >
@@ -143,11 +143,11 @@ La page **[!UICONTROL Activer la destination]** s’affiche. Sur cette page, vou
 
 La page **[!UICONTROL Planification]** s’affiche. Sur cette page, vous pouvez créer un planning qui détermine la fréquence d’activation de l’audience. Sélectionnez **[!UICONTROL Créer une planification]** pour créer une planification pour l’activation de l’audience.
 
-![ Le bouton [!UICONTROL Créer un planning] est mis en surbrillance.](../assets/offsite-retargeting/select-create-schedule.png)
+![&#x200B; Le bouton [!UICONTROL Créer un planning] est mis en surbrillance.](../assets/offsite-retargeting/select-create-schedule.png)
 
 La fenêtre contextuelle [!UICONTROL Planification] s’affiche. Sur cette page, vous pouvez créer le planning de l’activation de votre audience. Après avoir configuré la planification, sélectionnez **[!UICONTROL Créer]** pour continuer.
 
-![ La fenêtre contextuelle de configuration du planning s&#39;affiche.](../assets/offsite-retargeting/configure-schedule.png)
+![&#x200B; La fenêtre contextuelle de configuration du planning s&#39;affiche.](../assets/offsite-retargeting/configure-schedule.png)
 
 Après avoir confirmé les détails de la planification, sélectionnez **[!UICONTROL Suivant]**.
 

@@ -141,7 +141,7 @@ La section **[!UICONTROL Demandes]** vous permet de créer et de gérer des dema
 
 ### [!UICONTROL Science des données]
 
-La section **[!UICONTROL Notebooks]** permet d’accéder à JupyterLab, un environnement de développement interactif qui vous permet d’explorer, d’analyser et de modéliser vos données. Pour en savoir plus sur l’utilisation de la section Notebooks , veuillez lire le guide d’utilisation de [JupyterLab](../data-science-workspace/jupyterlab/overview.md). Vous trouverez plus d’informations sur le Workspace de science des données dans la [ Présentation du Workspace de science des données ](../data-science-workspace/home.md)
+La section **[!UICONTROL Notebooks]** permet d’accéder à JupyterLab, un environnement de développement interactif qui vous permet d’explorer, d’analyser et de modéliser vos données. Pour en savoir plus sur l’utilisation de la section Notebooks , veuillez lire le guide d’utilisation de [JupyterLab](../data-science-workspace/jupyterlab/overview.md). Vous trouverez plus d’informations sur le Workspace de science des données dans la [&#x200B; Présentation du Workspace de science des données &#x200B;](../data-science-workspace/home.md)
 
 La section **[!UICONTROL Modèles]** vous permet d’utiliser le machine learning et l’intelligence artificielle pour créer, développer, entraîner et ajuster des modèles afin de faire des prédictions. Vous trouverez plus d’informations sur la section Modèles dans le tutoriel sur [la formation et l’évaluation d’un modèle](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
 

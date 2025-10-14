@@ -55,7 +55,7 @@ Le graphique **[!UICONTROL Tendances de taille d’audience d’identité unique
 
 Après avoir analysé les mesures et appliqué les filtres appropriés, vous pouvez exporter les données à d’autres fins d’analyse hors ligne ou de création de rapports. Pour ce faire, sélectionnez **[!UICONTROL Export]** en haut à droite du tableau. La boîte de dialogue Imprimer le PDF s’affiche. À partir de cette boîte de dialogue, vous pouvez enregistrer les données visualisées en tant que PDF ou les imprimer.
 
-![ Le tableau de bord Tendances d’audience avec l’exportation mise en surbrillance.](../../images/sql-insights-query-pro-mode/templates/audience-trends-export.png)
+![&#x200B; Le tableau de bord Tendances d’audience avec l’exportation mise en surbrillance.](../../images/sql-insights-query-pro-mode/templates/audience-trends-export.png)
 
 ## Étapes suivantes
 

@@ -20,7 +20,7 @@ Tous les schémas de modèle de données d’expérience (XDM) doivent être bas
 
 >[!NOTE]
 >
->Pour plus d’informations sur les comportements de données en termes d’impact sur la composition des schémas, reportez-vous aux [ principes de base de la composition des schémas](../schema/composition.md).
+>Pour plus d’informations sur les comportements de données en termes d’impact sur la composition des schémas, reportez-vous aux [&#x200B; principes de base de la composition des schémas](../schema/composition.md).
 
 Le point d’entrée `/classes` de l’API [!DNL Schema Registry] vous permet de gérer par programmation les classes dans votre application d’expérience.
 
@@ -388,7 +388,7 @@ Une réponse réussie renvoie un état HTTP 201 (Created) et un payload contena
 }
 ```
 
-L’exécution d’une requête de GET à [répertorier toutes les classes](#list) dans le conteneur `tenant` inclurait désormais la classe Propriété. Vous pouvez également [ effectuer une requête de recherche (GET) ](#lookup) à l’aide de l’URL encodée `$id` pour afficher directement la nouvelle classe.
+L’exécution d’une requête de GET à [répertorier toutes les classes](#list) dans le conteneur `tenant` inclurait désormais la classe Propriété. Vous pouvez également [&#x200B; effectuer une requête de recherche (GET) &#x200B;](#lookup) à l’aide de l’URL encodée `$id` pour afficher directement la nouvelle classe.
 
 ## Mettre à jour une classe {#put}
 

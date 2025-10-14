@@ -56,7 +56,7 @@ Voici une liste des applications [!DNL Experience Cloud] qui ne sont pas intégr
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html?lang=fr) | Présentation de la gestion des requêtes RGPD par l’administrateur de la confidentialité client ou l’administrateur AEM. |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html?lang=fr) | Étapes pour créer des requêtes RGPD d’accès et de suppression à l’aide de Livefyre. |
 | [Adobe Commerce](https://experienceleague.adobe.com/fr/docs/commerce-operations/security-and-compliance/overview) | Assurez-vous que vos installations Adobe Commerce sont conformes aux exigences des législations spécifiques en matière de confidentialité. |
-| [ Balises dans Adobe Experience Platform ](../tags/ui/client-side/consent.md) | Comment les développeurs peuvent-ils utiliser les extensions et le créateur de règles pour définir les solutions d’accords préalables et de droits d’opposition ? |
+| [&#x200B; Balises dans Adobe Experience Platform &#x200B;](../tags/ui/client-side/consent.md) | Comment les développeurs peuvent-ils utiliser les extensions et le créateur de règles pour définir les solutions d’accords préalables et de droits d’opposition ? |
 | [Workfront](https://www.workfront.com/privacy-notice) | Découvrez comment Workfront collecte des données personnelles et comment une personne concernée peut soumettre une demande d’accès à des informations personnelles via un formulaire. |
 
 {style="table-layout:auto"}

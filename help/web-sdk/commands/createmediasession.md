@@ -17,7 +17,7 @@ Les données collectées peuvent inclure des informations sur les lectures multi
 
 Vous pouvez créer des sessions multimédia dans le SDK Web de deux manières :
 
-* [ Les sessions multimédia suivies automatiquement](#automatic) permettent au SDK Web de gérer la distribution des événements ping multimédia sur [Adobe Analytics pour les médias en streaming](https://experienceleague.adobe.com/fr/docs/media-analytics/using/media-overview). La fréquence de ces pings est déterminée par les paramètres de configuration du composant [streamingMedia](configure/streamingmedia.md).
+* [&#x200B; Les sessions multimédia suivies automatiquement](#automatic) permettent au SDK Web de gérer la distribution des événements ping multimédia sur [Adobe Analytics pour les médias en streaming](https://experienceleague.adobe.com/fr/docs/media-analytics/using/media-overview). La fréquence de ces pings est déterminée par les paramètres de configuration du composant [streamingMedia](configure/streamingmedia.md).
 * [Les sessions multimédias suivies manuellement](#manual) vous permettent de mieux contrôler la distribution des événements ping de session sur [Adobe Analytics pour les médias en streaming](https://experienceleague.adobe.com/fr/docs/media-analytics/using/media-overview). De plus, vous avez la possibilité de stocker le `sessionID` pour les sessions multimédia.
 
 ## Créer une session multimédia automatiquement suivie {#automatic}

@@ -54,4 +54,4 @@ Experience Platform vous permet de définir vos propres groupes de champs et typ
 
 Ce document couvrait des considérations clés concernant les données sensibles et personnelles dans XDM. Pour plus d’informations sur la manière de modéliser vos schémas pour répondre au mieux à vos cas d’utilisation métier, reportez-vous au guide sur [les bonnes pratiques pour la modélisation des données](./best-practices.md).
 
-Pour plus d’informations sur les fonctionnalités de gouvernance des données et de confidentialité dans Experience Platform, consultez la présentation de la [ gouvernance, confidentialité et sécurité ](../../landing/governance-privacy-security/overview.md).
+Pour plus d’informations sur les fonctionnalités de gouvernance des données et de confidentialité dans Experience Platform, consultez la présentation de la [&#x200B; gouvernance, confidentialité et sécurité &#x200B;](../../landing/governance-privacy-security/overview.md).

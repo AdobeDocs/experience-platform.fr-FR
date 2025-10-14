@@ -19,7 +19,7 @@ ht-degree: 18%
 
 [!UICONTROL Device Trade-In Details] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Il fournit un champ unique (`deviceTradeInDetails`) qui décrit une transaction d’échange d’appareils, y compris la valeur d’échange, l’identifiant d’appareil d’origine et le nouvel identifiant d’appareil.
 
-![ Structure Détails de l’entrée de l’appareil ](../../images/field-groups/device-trade-in-details.png)
+![&#x200B; Structure Détails de l’entrée de l’appareil &#x200B;](../../images/field-groups/device-trade-in-details.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |

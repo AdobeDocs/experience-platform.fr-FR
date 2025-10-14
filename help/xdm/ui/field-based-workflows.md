@@ -91,7 +91,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]**.
 
 Le nouveau champ est ajouté à la zone de travail et dispose d’un espace de noms sous votre [identifiant client](../api/getting-started.md#know-your-tenant_id) pour éviter les conflits avec les champs XDM standard. Le groupe de champs auquel vous avez associé le nouveau champ s’affiche également sous **[!UICONTROL Groupes de champs]** dans le rail de gauche.
 
-![ L’éditeur de schémas avec le nouveau champ ajouté à la zone de travail et l’espace de noms sous votre identifiant client. Le groupe de champs et le champ sont mis en surbrillance.](../images/ui/field-based-workflows/tenantId.png)
+![&#x200B; L’éditeur de schémas avec le nouveau champ ajouté à la zone de travail et l’espace de noms sous votre identifiant client. Le groupe de champs et le champ sont mis en surbrillance.](../images/ui/field-based-workflows/tenantId.png)
 
 >[!NOTE]
 >
@@ -111,4 +111,4 @@ Voir [Créer et modifier des schémas dans le guide de l’interface utilisateur
 
 ## Étapes suivantes
 
-Ce guide décrit les nouveaux workflows basés sur les champs pour l’éditeur de schémas dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur la gestion des schémas dans l’interface utilisateur, consultez la [ présentation de l’interface utilisateur](./overview.md).
+Ce guide décrit les nouveaux workflows basés sur les champs pour l’éditeur de schémas dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur la gestion des schémas dans l’interface utilisateur, consultez la [&#x200B; présentation de l’interface utilisateur](./overview.md).

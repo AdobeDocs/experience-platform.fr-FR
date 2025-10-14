@@ -93,7 +93,7 @@ Pour modifier une instance, sélectionnez **[!UICONTROL Modifier]** dans le vole
 
 La boîte de dialogue de modification s’affiche, vous permettant de modifier le nom, la description, le statut et la fréquence de notation de l’instance. Pour confirmer vos modifications et fermer la boîte de dialogue, sélectionnez **[!UICONTROL Enregistrer]** dans le coin inférieur droit.
 
-![ Fenêtre contextuelle Modifier l’instance affichant des options pour modifier le nom, la description, le statut et la fréquence de notation d’une instance IA dédiée aux clients ](../images/insights/edit-instance.png)
+![&#x200B; Fenêtre contextuelle Modifier l’instance affichant des options pour modifier le nom, la description, le statut et la fréquence de notation d’une instance IA dédiée aux clients &#x200B;](../images/insights/edit-instance.png)
 
 ### Actions supplémentaires
 
@@ -198,7 +198,7 @@ Outre le suivi des résultats prévus et réels au fil du temps sur l’onglet P
 
 ### Graphique de courbe d’élévation
 
-Graphique de courbe d’élévation ![ montrant l’amélioration du modèle prédictif par rapport au ciblage aléatoire. Les valeurs élevées de la courbe de portance des déciles précoces indiquent un modèle fort.](../images/user-guide/lift-chart.png)
+Graphique de courbe d’élévation ![&#x200B; montrant l’amélioration du modèle prédictif par rapport au ciblage aléatoire. Les valeurs élevées de la courbe de portance des déciles précoces indiquent un modèle fort.](../images/user-guide/lift-chart.png)
 
 Le graphique de courbe d’élévation mesure l’amélioration apportée par l’utilisation d’un modèle prédictif plutôt que d’un ciblage aléatoire.
 

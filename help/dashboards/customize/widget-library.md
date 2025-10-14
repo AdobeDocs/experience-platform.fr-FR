@@ -30,17 +30,17 @@ Dans n’importe quel tableau de bord (par exemple, le tableau de bord Profils )
 
 Sélectionnez **[!UICONTROL Modifier le tableau de bord]** pour déplacer, redimensionner ou supprimer des widgets de votre tableau de bord. À partir de cet affichage, vous pouvez également sélectionner la **[!UICONTROL bibliothèque de widgets]** pour parcourir et [ajouter des widgets](#add-widgets). Pour savoir comment modifier la taille et la mise en page des widgets, consultez la [documentation Modifier les tableaux de bord](./modify.md).
 
-![ Aperçu du tableau de bord Profils avec l’option Modifier le tableau de bord mise en surbrillance.](../images/customization/modify-dashboard.png)
+![&#x200B; Aperçu du tableau de bord Profils avec l’option Modifier le tableau de bord mise en surbrillance.](../images/customization/modify-dashboard.png)
 
 Sélectionnez **[!UICONTROL Bibliothèque de widgets]** pour ouvrir la bibliothèque de widgets et afficher toutes les mesures standard disponibles ou commencer à créer des widgets personnalisés.
 
-![ La vue de modification du tableau de bord avec la bibliothèque de widgets mise en surbrillance.](../images/customization/widget-library-button.png)
+![&#x200B; La vue de modification du tableau de bord avec la bibliothèque de widgets mise en surbrillance.](../images/customization/widget-library-button.png)
 
 ## Ajouter des widgets {#add-widgets}
 
 Dans la [!UICONTROL bibliothèque de widgets], sélectionnez un widget dans la liste des widgets standard ou personnalisés disponibles. Une coche dans le coin du widget indique votre sélection.
 
-![ La bibliothèque de widgets avec un widget sélectionné et une coche mise en surbrillance.](../images/customization/confirm-selected-widget-to-add.png)
+![&#x200B; La bibliothèque de widgets avec un widget sélectionné et une coche mise en surbrillance.](../images/customization/confirm-selected-widget-to-add.png)
 
 ### Libellé en cours d’utilisation {#in-use-label}
 

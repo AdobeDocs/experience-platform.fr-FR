@@ -15,7 +15,7 @@ La vue Version des extensions vous permet de classer et d’afficher rapidement 
 
 ## Prise en main des vues Versions d’extension
 
-Après avoir [ configuré Assurance](../tutorials/implement-assurance.md), dans la vue **Home**, sélectionnez **[!UICONTROL Extension Versions]**
+Après avoir [&#x200B; configuré Assurance](../tutorials/implement-assurance.md), dans la vue **Home**, sélectionnez **[!UICONTROL Extension Versions]**
 
 ![Versions d’extension](./images/versions/versions-extension.png)
 

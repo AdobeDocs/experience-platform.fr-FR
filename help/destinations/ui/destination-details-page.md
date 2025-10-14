@@ -64,7 +64,7 @@ Le tableau suivant couvre les commandes et les détails fournis par le rail de d
 | [!UICONTROL Catégorie] | Indique le type de destination. Voir le [catalogue des destinations](../catalog/overview.md) pour plus d’informations. |
 | [!UICONTROL &#x200B; Type de connexion &#x200B;] | Indique le formulaire par lequel vos audiences sont envoyées à la destination. Les valeurs possibles sont les suivantes : [!UICONTROL Cookie] et [!UICONTROL Basé sur un profil]. |
 | [!UICONTROL Fréquence] | Indique la fréquence d’envoi des audiences vers la destination. Les valeurs possibles sont les suivantes : [!UICONTROL Streaming] et [!UICONTROL Batch]. |
-| [!UICONTROL Identité] | Représente l’espace de noms d’identité accepté par la destination, tel que `GAID`, `IDFA` ou `email`. Pour plus d’informations sur les espaces de noms d’identité acceptés, consultez la [ présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md). |
+| [!UICONTROL Identité] | Représente l’espace de noms d’identité accepté par la destination, tel que `GAID`, `IDFA` ou `email`. Pour plus d’informations sur les espaces de noms d’identité acceptés, consultez la [&#x200B; présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md). |
 | [!UICONTROL Créé par] | Indique l’utilisateur ou l’utilisatrice qui a créé cette destination. |
 | [!UICONTROL Créé] | Indique la date et l’heure UTC auxquelles cette destination a été créée. |
 
@@ -97,7 +97,7 @@ Bien que la **[!UICONTROL durée de traitement]** indiquée pour la plupart des 
 
 ![Image de la page Exécutions de flux de données avec la colonne Heure de traitement mise en surbrillance pour une destination de diffusion en continu.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
 
-Pour plus d’informations, consultez la documentation sur la surveillance [ sur les exécutions de flux de données vers des destinations de diffusion en streaming ](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations).
+Pour plus d’informations, consultez la documentation sur la surveillance [&#x200B; sur les exécutions de flux de données vers des destinations de diffusion en streaming &#x200B;](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations).
 
 ### Destinations basées sur des fichiers {#file-based}
 

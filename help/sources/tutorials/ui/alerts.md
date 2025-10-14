@@ -22,7 +22,7 @@ Ce document décrit la procédure à suivre pour s’abonner et recevoir des mes
 
 Ce document nécessite une compréhension du fonctionnement des composants suivants de Adobe Experience Platform :
 
-* [Sources ](../../home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
+* [Sources &#x200B;](../../home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
 * [Observability](../../../observability/home.md) : [!DNL Observability Insights] permet de surveiller les activités d’Experience Platform à l’aide de mesures statistiques et de notifications d’événement.
    * [Alertes](../../../observability/alerts/overview.md) : lorsqu’un certain ensemble de conditions de vos opérations Experience Platform est atteint (par exemple, un problème potentiel lorsque le système dépasse un certain seuil), Experience Platform peut envoyer des messages d’alerte à tous les utilisateurs de votre organisation qui se sont abonnés à ces messages.
 
@@ -116,7 +116,7 @@ Tout comme l’alerte de l’interface utilisateur, la page [!UICONTROL Aperçu 
 
 Vous pouvez vous abonner à d’autres alertes ou vous désabonner des alertes établies pour un flux de données existant dans la page [!UICONTROL Flux de données]. Recherchez le flux de données que vous créez dans la liste, puis sélectionnez les points de suspension (`...`) pour afficher un menu déroulant d’options. Sélectionnez ensuite **[!UICONTROL S’abonner aux alertes]** pour modifier les paramètres d’alerte de votre flux de données.
 
-![options ](../../images/tutorials/alerts/options.png)
+![options &#x200B;](../../images/tutorials/alerts/options.png)
 
 Une fenêtre pop-up s’affiche, vous fournissant une liste des alertes de sources. Sélectionnez les alertes auxquelles vous souhaitez vous abonner ou désélectionnez les alertes auxquelles vous souhaitez vous désabonner. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 

@@ -176,9 +176,9 @@ Les jetons d’authentification Facebook expirent tous les 60 jours. Une fois le
 
 Vous pouvez surveiller les dates d’expiration de votre jeton à partir de la colonne **[!UICONTROL Date d’expiration du compte]** dans les onglets **[[!UICONTROL Comptes]](../../ui/destinations-workspace.md#accounts)** ou **[[!UICONTROL Parcourir]](../../ui/destinations-workspace.md#browse)**.
 
-![Colonne de date d’expiration du jeton de compte Facebook dans l’onglet Parcourir ](../../assets/catalog/social/facebook/account-expiration-browse.png)
+![Colonne de date d’expiration du jeton de compte Facebook dans l’onglet Parcourir &#x200B;](../../assets/catalog/social/facebook/account-expiration-browse.png)
 
-![Colonne de date d’expiration du jeton de compte Facebook dans l’onglet Comptes ](../../assets/catalog/social/facebook/account-expiration-accounts.png)
+![Colonne de date d’expiration du jeton de compte Facebook dans l’onglet Comptes &#x200B;](../../assets/catalog/social/facebook/account-expiration-accounts.png)
 
 Pour éviter que l’expiration du jeton ne provoque des interruptions dans vos flux de données d’activation, réauthentifiez-vous en procédant comme suit :
 
@@ -188,7 +188,7 @@ Pour éviter que l’expiration du jeton ne provoque des interruptions dans vos 
 3. Sélectionnez le compte à actualiser, puis les points de suspension et sélectionnez **[!UICONTROL Modifier les détails]**.
    ![Sélectionnez Modifier les détails](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
 4. Dans la fenêtre modale, sélectionnez **[!UICONTROL Reconnecter OAuth]** et réauthentifiez-vous à l’aide de vos informations d’identification Facebook.
-   ![Fenêtre modale avec l’option Reconnecter OAuth ](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
+   ![Fenêtre modale avec l’option Reconnecter OAuth &#x200B;](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
 
 >[!SUCCESS]
 > 

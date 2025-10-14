@@ -36,7 +36,7 @@ Mises à jour des fonctionnalités existantes :
 
 Lorsqu’Adobe migre le lac de données de la génération 1 vers la génération 2, les utilisateurs pourront lire depuis le lac de données, mais toutes les fonctionnalités qui écrivent dans le lac de données seront affectées. Adobe contactera les administrateurs système pour discuter en détail de l’impact de la migration et confirmer les dates et heures de migration pour des organisations spécifiques.
 
-Pour plus d’informations, consultez le [ Guide de migration du lac de données ](../../landing/adls2-gen2-migration.md).
+Pour plus d’informations, consultez le [&#x200B; Guide de migration du lac de données &#x200B;](../../landing/adls2-gen2-migration.md).
 
 ## [!DNL Access control] {#access-control}
 
@@ -190,7 +190,7 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 | Workflow des politiques de fusion mises à jour | Experience Platform a mis à niveau la configuration de la politique de fusion vers un nouveau workflow par étapes. Ce workflow permet aux utilisateurs de rassembler des fragments de données provenant de plusieurs jeux de données de profil et de définir la priorité de fusion des données entre ces jeux afin de créer une vue d’ensemble complète de chaque individu. Les utilisateurs peuvent fusionner les jeux de données XDM Individual Profile sélectionnés en sélectionnant la méthode de fusion appropriée (Horodatage ordonné ou Priorité du jeu de données) et en ajoutant les jeux de données ExperienceEvent aux jeux de données de profil. |
 | Vue du schéma d’union | Dans l’interface utilisateur d’Experience Platform, les utilisateurs peuvent plus facilement trouver des informations concernant tous les schémas et jeux de données qui contribuent au schéma d’union, ainsi que les attributs clés de surface tels que les champs d’identité et de relation. Ces mises à jour améliorent la capacité à résoudre les problèmes et à vérifier que les profils sont correctement configurés, que les identités sont correctement assemblées et que les données ont bien été ingérées. |
 
-Pour plus d’informations sur le profil client en temps réel, notamment les bonnes pratiques et les tutoriels relatifs à l’utilisation des données [!DNL Profile], consultez la [ présentation du profil client en temps réel](../../profile/home.md).
+Pour plus d’informations sur le profil client en temps réel, notamment les bonnes pratiques et les tutoriels relatifs à l’utilisation des données [!DNL Profile], consultez la [&#x200B; présentation du profil client en temps réel](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 

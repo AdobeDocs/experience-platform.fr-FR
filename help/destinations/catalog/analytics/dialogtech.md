@@ -16,7 +16,7 @@ ht-degree: 80%
 
 [!DNL DialogTech] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez le [site web de Dialogtech](https://www.dialogtech.com/).
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension DialogTech](../../assets/catalog/analytics/dialogtech/catalog.png)
 

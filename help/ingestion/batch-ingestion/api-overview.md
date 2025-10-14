@@ -13,7 +13,7 @@ ht-degree: 64%
 
 # Guide de développement de l’ingestion par lots
 
-Ce document fournit un guide complet sur l’utilisation des points d’entrée [API d’ingestion par lots](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) dans Adobe Experience Platform. Pour obtenir un aperçu des API d’ingestion par lots, y compris les conditions préalables et les bonnes pratiques, commencez par lire la [ présentation de l’API d’ingestion par lots ](overview.md).
+Ce document fournit un guide complet sur l’utilisation des points d’entrée [API d’ingestion par lots](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) dans Adobe Experience Platform. Pour obtenir un aperçu des API d’ingestion par lots, y compris les conditions préalables et les bonnes pratiques, commencez par lire la [&#x200B; présentation de l’API d’ingestion par lots &#x200B;](overview.md).
 
 L’annexe de ce document fournit des informations sur le [formatage des données à utiliser pour l’ingestion](#data-transformation-for-batch-ingestion), y compris des exemples de fichiers de données CSV et JSON.
 
@@ -21,7 +21,7 @@ L’annexe de ce document fournit des informations sur le [formatage des donnée
 
 Les points d’entrée d’API utilisés dans ce guide font partie de l’[API Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). L’ingestion par lots est fournie par le biais d’une API RESTful où vous pouvez effectuer des opérations CRUD de base sur les types d’objets pris en charge.
 
-Avant de poursuivre, consultez la présentation de l’API d’ingestion par lots [batch ingestion](overview.md) et le [ guide de prise en main](getting-started.md).
+Avant de poursuivre, consultez la présentation de l’API d’ingestion par lots [batch ingestion](overview.md) et le [&#x200B; guide de prise en main](getting-started.md).
 
 ## Ingestion de fichiers JSON
 
@@ -921,7 +921,7 @@ La section suivante contient des informations supplémentaires sur l’ingestion
 
 ### Transformation des données pour l’ingestion par lots
 
-Pour ingérer un fichier de données dans [!DNL Experience Platform], la structure hiérarchique du fichier doit être conforme au schéma [ Modèle de données d’expérience (XDM)](../../xdm/home.md) associé au jeu de données dans lequel il est chargé.
+Pour ingérer un fichier de données dans [!DNL Experience Platform], la structure hiérarchique du fichier doit être conforme au schéma [&#x200B; Modèle de données d’expérience (XDM)](../../xdm/home.md) associé au jeu de données dans lequel il est chargé.
 
 Vous trouverez des informations sur le mappage d’un fichier CSV pour être conforme à un schéma XDM dans le document traitant des [exemples de transformations](../../etl/transformations.md), ainsi qu’un exemple de fichier de données JSON correctement formaté. Les exemples de fichiers fournis dans ce document se trouvent ici :
 

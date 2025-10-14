@@ -193,7 +193,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 
 | Propriété | Description |
 | -------- | ----------- |
-| `results` | Une liste des identifiants d’entité, ainsi que de leurs identités associées. Les liens fournis peuvent être utilisés pour rechercher les entités spécifiées à l’aide du [ point d’entrée de l’API d’accès aux profils](../../profile/api/entities.md). |
+| `results` | Une liste des identifiants d’entité, ainsi que de leurs identités associées. Les liens fournis peuvent être utilisés pour rechercher les entités spécifiées à l’aide du [&#x200B; point d’entrée de l’API d’accès aux profils](../../profile/api/entities.md). |
 
 +++
 

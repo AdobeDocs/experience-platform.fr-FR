@@ -86,7 +86,7 @@ Pour comprendre le schéma complet du jeu de données de destination DIM, vous p
 
 La fonction Modèles de données de statistiques CDP expose le code SQL qui alimente les informations pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQl afin de créer des rapports CDP pour vos cas d’utilisation de marketing et d’ICP.
 
-Les rapports CDP fournissent des informations sur vos données de profil et sur leurs relations avec les audiences et les destinations. Pour plus d’informations sur la manière d’ [appliquer les modèles de données de statistiques de la plateforme CDP à vos cas d’utilisation d’IPC spécifiques, consultez la documentation du modèle de données de statistiques de la plateforme CDP ](./data-models/cdp-insights-data-model-b2c.md).
+Les rapports CDP fournissent des informations sur vos données de profil et sur leurs relations avec les audiences et les destinations. Pour plus d’informations sur la manière d’ [appliquer les modèles de données de statistiques de la plateforme CDP à vos cas d’utilisation d’IPC spécifiques, consultez la documentation du modèle de données de statistiques de la plateforme CDP &#x200B;](./data-models/cdp-insights-data-model-b2c.md).
 
 ## Exemples de requêtes
 

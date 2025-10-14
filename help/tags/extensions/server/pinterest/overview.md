@@ -15,7 +15,7 @@ ht-degree: 6%
 
 [!DNL Pinterest] est un moteur de découverte visuelle qui permet de trouver des idées telles que des recettes, un décor, une inspiration de style, etc. Il existe des milliards de pin&#39;s sur [!DNL Pinterest], qui peuvent également être partagés avec d&#39;autres sur [!DNL Pinterest]. Vous pouvez rassembler les événements d’interaction de l’utilisateur et exploiter [!DNL Pinterest Analytics] pour comprendre le comportement de l’utilisateur et exécuter des publicités ciblées.
 
-L’extension [[!DNL Pinterest] Conversions](https://developers.pinterest.com/docs/conversions/conversion-management/) API [ de transfert d’événement](../../../ui/event-forwarding/overview.md) vous permet d’exploiter les données capturées dans l’Edge Network Adobe Experience Platform et de les envoyer à [!DNL Pinterest]. Ce document couvre les cas d’utilisation de l’extension, comment l’installer et comment intégrer ses fonctionnalités dans le transfert d’événement [rules](../../../ui/managing-resources/rules.md).
+L’extension [[!DNL Pinterest] Conversions](https://developers.pinterest.com/docs/conversions/conversion-management/) API [&#x200B; de transfert d’événement](../../../ui/event-forwarding/overview.md) vous permet d’exploiter les données capturées dans l’Edge Network Adobe Experience Platform et de les envoyer à [!DNL Pinterest]. Ce document couvre les cas d’utilisation de l’extension, comment l’installer et comment intégrer ses fonctionnalités dans le transfert d’événement [rules](../../../ui/managing-resources/rules.md).
 
 Les jetons d’accès aux conversions sont la méthode d’authentification utilisée par [!DNL Pinterest] lors de l’interaction avec l’API [!DNL Pinterest].
 
@@ -41,7 +41,7 @@ Pour connecter l’Experience Platform à [!DNL Pinterest], les entrées suivant
 
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
-| Identifiant de compte Ads | Votre Identifiant De Compte Ads [!DNL Pinterest]. Reportez-vous à la documentation de [[!DNL Pinterest] ](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) pour obtenir des conseils. | 123456789012 |
+| Identifiant de compte Ads | Votre Identifiant De Compte Ads [!DNL Pinterest]. Reportez-vous à la documentation de [[!DNL Pinterest] &#x200B;](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) pour obtenir des conseils. | 123456789012 |
 | Jeton d’accès à la conversion | Votre Jeton d’accès à la conversion [!DNL Pinterest]. Consultez le document [[!DNL Pinterest] API de conversion](https://developers.pinterest.com/docs/conversions/conversions/#Get%20the%20conversion%20token) pour obtenir des conseils. <br> **Vous n’aurez besoin de le faire qu’une seule fois, car ce jeton n’expire pas.** | {YOUR_PINTEREST_BEARER_TOKEN} |
 
 ## Installation et configuration de l’extension [!DNL Pinterest] {#install}
@@ -64,7 +64,7 @@ Extension ![[!DNL Pinterest] affichée dans l&#39;onglet [!UICONTROL Installer] 
 
 Sur l’écran suivant, saisissez les [!UICONTROL Ads Account Id] et [!UICONTROL Conversion Access Token] que vous avez précédemment rassemblés dans la section [configuration details](#configuration-details) . Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 
-![ L’écran [!DNL Pinterest] [!UICONTROL &#x200B; de configuration &#x200B;] surlignant les champs d’entrée [!UICONTROL Ads Account Id] et [!UICONTROL Conversion Access Token].](../../../images/extensions/server/pinterest/input.png)
+![&#x200B; L’écran [!DNL Pinterest] [!UICONTROL &#x200B; de configuration &#x200B;] surlignant les champs d’entrée [!UICONTROL Ads Account Id] et [!UICONTROL Conversion Access Token].](../../../images/extensions/server/pinterest/input.png)
 
 ## Configurer une règle de transfert d’événement {#config-rule}
 
@@ -88,7 +88,7 @@ Les données d’événement suivantes seront nécessaires pour créer la règle
 | [!UICONTROL ID d’événement] | Chaîne d’identifiant unique qui identifie cet événement et peut être utilisée pour dédupliquer les événements ingérés à la fois via l’API de conversion et le suivi Pinterest. Sans cela, les données de l’événement seront probablement comptabilisées deux fois et signaleront le gonflement des mesures. | ba7816bf8f01cfea414140de5dae223b00361a396177a9cb410ff61f20015ad |
 | [!UICONTROL Propriétés de l’événement] | Objet JSON contenant des propriétés personnalisées de l’événement. Choisissez entre fournir un fichier JSON brut ou utiliser un jeu simplifié d’entrées clé-valeur. | { &quot;event_source_url&quot;: &quot;http://site.com&quot; } |
 
-![ [!DNL Pinterest] [!UICONTROL Données de l’événement] surlignées dans l’action de règle.](../../../images/extensions/server/pinterest/event-data.png)
+![&#x200B; [!DNL Pinterest] [!UICONTROL Données de l’événement] surlignées dans l’action de règle.](../../../images/extensions/server/pinterest/event-data.png)
 
 Les propriétés d’événement suivantes peuvent être configurées :
 
@@ -117,7 +117,7 @@ Les données utilisateur suivantes peuvent être saisies à l’aide de ne sont 
 | [!UICONTROL Agent utilisateur client] | Chaîne de l’agent utilisateur du navigateur web de l’utilisateur. | Mozilla/5.0 (plate-forme ; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion |
 | [!UICONTROL Données d’informations sur le client] | Objet JSON contenant d’autres informations sur le client. Choisissez entre fournir un fichier JSON brut ou utiliser un jeu simplifié d’entrées clé-valeur. | { &quot;ph&quot;: &quot;122333445&quot; } |
 
-![ [!DNL Pinterest] [!UICONTROL Données utilisateur] surlignées dans l’action de règle.](../../../images/extensions/server/pinterest/user-data.png)
+![&#x200B; [!DNL Pinterest] [!UICONTROL Données utilisateur] surlignées dans l’action de règle.](../../../images/extensions/server/pinterest/user-data.png)
 
 Les propriétés d’informations sur les clients qui peuvent être configurées sont les suivantes :
 
@@ -153,7 +153,7 @@ Les données personnalisées suivantes peuvent être saisies pour la règle :
 | ID de contenu | Liste (tableau) des ID de produits. |
 | Contenu | Liste (tableau) d’objets contenant des informations sur les produits, telles que le prix et la quantité. |
 
-![ [!DNL Pinterest] [!UICONTROL Données personnalisées] surlignées dans l’action de règle.](../../../images/extensions/server/pinterest/custom-data.png)
+![&#x200B; [!DNL Pinterest] [!UICONTROL Données personnalisées] surlignées dans l’action de règle.](../../../images/extensions/server/pinterest/custom-data.png)
 
 ## Validation des données dans [!DNL Pinterest]
 

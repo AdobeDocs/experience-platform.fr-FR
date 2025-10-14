@@ -16,7 +16,7 @@ ht-degree: 77%
 
 [!DNL Nielsen IMA Handler] est une extension d’analyse de Adobe Experience Platform.
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension Nielsen IMA Handler](../../assets/catalog/analytics/nielsen-ima/catalog.png)
 

@@ -16,11 +16,11 @@ ht-degree: 41%
 
 >[!NOTE]
 >
->Le connecteur FTP est en version bêta. Les fonctionnalités et la documentation sont susceptibles d’être modifiées. Consultez la [ Présentation des sources ](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>Le connecteur FTP est en version bêta. Les fonctionnalités et la documentation sont susceptibles d’être modifiées. Consultez la [&#x200B; Présentation des sources &#x200B;](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Ce tutoriel vous guide tout au long des étapes nécessaires à la création d’une connexion de base pour [!DNL FTP] (protocole de transfert de fichier) à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel vous guide tout au long des étapes nécessaires à la création d’une connexion de base pour [!DNL FTP] (protocole de transfert de fichier) à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 

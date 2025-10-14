@@ -297,4 +297,4 @@ Le widget vous permet de découvrir en un coup d’œil où et quand l’audienc
 
 ## Étapes suivantes
 
-En suivant ce document, vous devriez maintenant pouvoir localiser le tableau de bord [!UICONTROL Audiences] et sélectionner une audience à afficher. Vous devriez également comprendre désormais les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des audiences dans l’interface utilisateur d’Experience Platform, reportez-vous au [ Guide de l’interface utilisateur de Segmentation Service](../../segmentation/ui/overview.md).
+En suivant ce document, vous devriez maintenant pouvoir localiser le tableau de bord [!UICONTROL Audiences] et sélectionner une audience à afficher. Vous devriez également comprendre désormais les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des audiences dans l’interface utilisateur d’Experience Platform, reportez-vous au [&#x200B; Guide de l’interface utilisateur de Segmentation Service](../../segmentation/ui/overview.md).

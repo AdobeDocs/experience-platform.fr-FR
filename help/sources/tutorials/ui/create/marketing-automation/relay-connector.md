@@ -53,7 +53,7 @@ Une fois les données chargées, vous pouvez utiliser la section [!UICONTROL Pr�
 
 Utilisez ensuite l’interface *[!UICONTROL Détails du flux de données]* pour fournir un **nom** et une **description facultative** pour votre flux de données. En outre, sélectionnez le **[!UICONTROL jeu de données cible]** que vous souhaitez utiliser. Vous pouvez créer un jeu de données ou utiliser un jeu de données existant.
 
-![Interface des détails du flux de données. ](../../../../images/tutorials/create/relay-connector/dataflow.jpg)
+![Interface des détails du flux de données. &#x200B;](../../../../images/tutorials/create/relay-connector/dataflow.jpg)
 
 ### Mappage
 
@@ -77,7 +77,7 @@ Une fois que vous avez créé le flux de données, vous trouverez l’*URL du po
 
 ![Propriétés du flux de données](../../../../images/tutorials/create/relay-connector/streaming-endpoint.jpg)
 
-Utilisez ces valeurs pour configurer le webhook dans la **console de relais**. Pour obtenir des instructions détaillées sur la configuration de la notification push, consultez la documentation du relais : [ Configuration de l’API push ](https://docs.relaynetwork.com/docs/configuring-the-push-api).
+Utilisez ces valeurs pour configurer le webhook dans la **console de relais**. Pour obtenir des instructions détaillées sur la configuration de la notification push, consultez la documentation du relais : [&#x200B; Configuration de l’API push &#x200B;](https://docs.relaynetwork.com/docs/configuring-the-push-api).
 
 ## Ressources supplémentaires
 

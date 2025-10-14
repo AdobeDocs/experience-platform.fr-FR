@@ -19,7 +19,7 @@ Ce guide nécessite une compréhension pratique de l’espace de travail du cycl
 
 ## Instructions de création d’ordres de travail {#work-order-creation-guidelines}
 
-Vous pouvez utiliser le point d’entrée `/workorder` dans l’API Data Hygiene pour gérer par programmation les requêtes de suppression d’enregistrements dans Experience Platform. Avec ce point d’entrée, vous pouvez créer une requête de suppression, vérifier son statut ou mettre à jour une requête existante. Consultez le document [ Point d’entrée d’ordre de travail ](./api/workorder.md) pour savoir comment effectuer ces actions à l’aide de l’API.
+Vous pouvez utiliser le point d’entrée `/workorder` dans l’API Data Hygiene pour gérer par programmation les requêtes de suppression d’enregistrements dans Experience Platform. Avec ce point d’entrée, vous pouvez créer une requête de suppression, vérifier son statut ou mettre à jour une requête existante. Consultez le document [&#x200B; Point d’entrée d’ordre de travail &#x200B;](./api/workorder.md) pour savoir comment effectuer ces actions à l’aide de l’API.
 
 >[!TIP]
 >

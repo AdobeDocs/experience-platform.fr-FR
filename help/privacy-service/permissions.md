@@ -69,7 +69,7 @@ Lors de l’édition des autorisations d’un profil, les autorisations disponib
 
 Les autorisations sont organisées en catégories. Pour passer d’une catégorie à l’autre, sélectionnez la catégorie souhaitée dans le volet de navigation de gauche.
 
-![ La section [!UICONTROL Opt-out de la vente] sous autorisations.](./images/permissions/switch-category.png)
+![&#x200B; La section [!UICONTROL Opt-out de la vente] sous autorisations.](./images/permissions/switch-category.png)
 
 Sélectionnez **[!UICONTROL Enregistrer]** une fois que vous avez terminé de configurer les autorisations.
 

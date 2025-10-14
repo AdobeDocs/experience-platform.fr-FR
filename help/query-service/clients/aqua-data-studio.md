@@ -39,7 +39,7 @@ Une fois que la boîte de dialogue **[!DNL Register Server]** s’affiche pour u
 
 ### [!DNL Query Service] des informations d’identification
 
-Pour trouver vos informations d’identification, connectez-vous à l’interface utilisateur de [!DNL Experience Platform] et sélectionnez **[!UICONTROL Requêtes]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Informations d’identification]**. Pour obtenir des instructions complètes afin de trouver vos informations de connexion, hôte, port et nom de base de données, veuillez lire le [ guide des informations d’identification ](../ui/credentials.md).
+Pour trouver vos informations d’identification, connectez-vous à l’interface utilisateur de [!DNL Experience Platform] et sélectionnez **[!UICONTROL Requêtes]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Informations d’identification]**. Pour obtenir des instructions complètes afin de trouver vos informations de connexion, hôte, port et nom de base de données, veuillez lire le [&#x200B; guide des informations d’identification &#x200B;](../ui/credentials.md).
 
 [!DNL Query Service] propose également des informations d’identification non expirantes pour permettre une configuration unique avec des clients tiers. Consultez la documentation pour obtenir des [instructions complètes sur la génération et l’utilisation d’informations d’identification non expirantes](../ui/credentials.md#non-expiring-credentials).
 

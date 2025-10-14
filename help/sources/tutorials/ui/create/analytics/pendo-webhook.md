@@ -96,7 +96,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 L’interface de [!UICONTROL mappage] fournit un outil complet pour mapper les champs sources de votre schéma source aux champs XDM cibles correspondants dans le schéma cible.
 
-Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [ Guide de l’interface utilisateur de la préparation des données ](../../../../../data-prep/ui/mapping.md).
+Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [&#x200B; Guide de l’interface utilisateur de la préparation des données &#x200B;](../../../../../data-prep/ui/mapping.md).
 
 Les mappages répertoriés ci-dessous sont obligatoires et doivent être configurés avant de passer à l’étape [!UICONTROL Révision].
 
@@ -172,6 +172,6 @@ Lors de la vérification d’une exécution de flux de données, vous pouvez ren
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform affichant une erreur.](../../../../images/tutorials/create/analytics-pendo-webhook/error.png)
 
-Pour corriger cette erreur, vous devez vérifier que le mappage *uniqueID* a été configuré. Pour plus d’informations, consultez la section [ Mappage ](#mapping).
+Pour corriger cette erreur, vous devez vérifier que le mappage *uniqueID* a été configuré. Pour plus d’informations, consultez la section [&#x200B; Mappage &#x200B;](#mapping).
 
 Pour plus d&#39;informations, consultez le [[!DNL Pendo] Centre d&#39;aide](https://www.pendo.io/help-center/).

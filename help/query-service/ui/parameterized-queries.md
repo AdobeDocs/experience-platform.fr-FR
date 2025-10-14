@@ -20,7 +20,7 @@ Query Service prend en charge l’utilisation de requêtes paramétrées dans Qu
 
 ## Conditions préalables
 
-Avant de poursuivre avec ce guide, lisez le [ Guide de l’interface utilisateur de Query Editor ](./user-guide.md). Le guide de Query Editor fournit des informations détaillées sur la manière d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform.
+Avant de poursuivre avec ce guide, lisez le [&#x200B; Guide de l’interface utilisateur de Query Editor &#x200B;](./user-guide.md). Le guide de Query Editor fournit des informations détaillées sur la manière d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform.
 
 >[!NOTE]
 >

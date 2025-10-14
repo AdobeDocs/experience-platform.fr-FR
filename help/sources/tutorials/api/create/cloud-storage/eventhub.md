@@ -391,4 +391,4 @@ curl -X POST \
 
 ## Étapes suivantes
 
-Ce tutoriel vous a permis de créer une connexion source [!DNL Event Hubs] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet ID de connexion source dans le tutoriel suivant pour [créer un flux de données en continu à l’aide de l’API  [!DNL Flow Service] ](../../collect/streaming.md).
+Ce tutoriel vous a permis de créer une connexion source [!DNL Event Hubs] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet ID de connexion source dans le tutoriel suivant pour [créer un flux de données en continu à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/streaming.md).

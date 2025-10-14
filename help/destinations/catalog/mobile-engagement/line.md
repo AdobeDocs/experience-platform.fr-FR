@@ -42,7 +42,7 @@ Vous devez vous enregistrer et créer un compte [!DNL LINE], si vous n’en avez
 
 Pour permettre à Experience Platform d’accéder aux ressources [!DNL LINE], vous devez disposer de l’*[!DNL Channel access token (long-lived)]* du canal [!DNL LINE] *API de messagerie* souhaité.
 
-1. Connectez-vous avec votre compte [!DNL LINE] à la [[!DNL LINE]  Developer Console ](https://developers.line.biz/console).
+1. Connectez-vous avec votre compte [!DNL LINE] à la [[!DNL LINE]  Developer Console &#x200B;](https://developers.line.biz/console).
 1. Accédez ensuite à la liste *[!DNL Providers]*, puis sélectionnez le *[!DNL Provider]* ciblé et enfin sélectionnez le canal *API de messagerie* pour accéder à ses paramètres. Si vous accédez à Developer Console pour la première fois, suivez la [[!DNL LINE] documentation](https://developers.line.biz/en/docs/messaging-api/getting-started/) afin de suivre les étapes requises pour créer un fournisseur.
 1. Enfin, accédez à la section ***[!DNL Channel access token]*** et copiez la valeur ***[!DNL Channel access token (long-lived)]*** requise dans l’étape [S’authentifier auprès de la destination](#authenticate).
 

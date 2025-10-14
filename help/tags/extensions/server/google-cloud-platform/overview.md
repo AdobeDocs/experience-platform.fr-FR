@@ -14,7 +14,7 @@ ht-degree: 3%
 
 [[!DNL Google Cloud Platform]](https://cloud.google.com/) est une plateforme de cloud computing qui offre un large éventail de services tels que l’informatique distribuée, le stockage de base de données, la diffusion de contenu et les services d’intégration de logiciels en tant que service (SaaS) pour la gestion de la relation client (CRM) et la planification des ressources de l’entreprise (ERP).
 
-L’extension [!DNL Google Cloud Platform] [ de transfert d’événement](../../../ui/event-forwarding/overview.md) exploite [[!DNL Cloud Pub/Sub]](https://cloud.google.com/pubsub) pour envoyer des événements de l’Edge Network Adobe Experience Platform vers le [!DNL Google Cloud Platform] en vue d’un traitement ultérieur. Ce guide explique comment installer l’extension et utiliser ses fonctionnalités dans une règle de transfert d’événement.
+L’extension [!DNL Google Cloud Platform] [&#x200B; de transfert d’événement](../../../ui/event-forwarding/overview.md) exploite [[!DNL Cloud Pub/Sub]](https://cloud.google.com/pubsub) pour envoyer des événements de l’Edge Network Adobe Experience Platform vers le [!DNL Google Cloud Platform] en vue d’un traitement ultérieur. Ce guide explique comment installer l’extension et utiliser ses fonctionnalités dans une règle de transfert d’événement.
 
 ## Conditions préalables
 

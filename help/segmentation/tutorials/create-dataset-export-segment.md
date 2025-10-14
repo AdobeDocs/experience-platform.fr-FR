@@ -47,7 +47,7 @@ Pour créer un jeu de données, sélectionnez **[!UICONTROL Créer un jeu de don
 
 Sur l’écran suivant, sélectionnez **[!UICONTROL Créer un jeu de données à partir d’un schéma]**.
 
-![ L’option Créer un jeu de données à partir d’un schéma est mise en surbrillance.](../images/tutorials/segment-export-dataset/create-from-schema.png)
+![&#x200B; L’option Créer un jeu de données à partir d’un schéma est mise en surbrillance.](../images/tutorials/segment-export-dataset/create-from-schema.png)
 
 ## Sélection du schéma d’union XDM Individual Profile
 

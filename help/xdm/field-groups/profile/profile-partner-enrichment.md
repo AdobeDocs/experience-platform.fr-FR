@@ -13,7 +13,7 @@ ht-degree: 14%
 
 [!UICONTROL Enrichissement de partenaire de profil (échantillon)] est un groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Utilisez ce groupe de champs pour fournir des données supplémentaires liées aux enrichissements pilotés par les partenaires pour les profils client.
 
-![ Diagramme du groupe de champs [!UICONTROL Enrichissement de partenaire de profil (échantillon)].](../../images/field-groups/profile-partner-enrichment-sample.png)
+![&#x200B; Diagramme du groupe de champs [!UICONTROL Enrichissement de partenaire de profil (échantillon)].](../../images/field-groups/profile-partner-enrichment-sample.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 |-----------------------------|------------------------|-----------|----------------------------------|

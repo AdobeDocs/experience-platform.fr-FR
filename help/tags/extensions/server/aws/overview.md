@@ -32,9 +32,9 @@ Une fois que vous avez sélectionné ou créé la propriété souhaitée, sélec
 
 ![Bouton [!UICONTROL Installer] sélectionné pour l’extension [!UICONTROL AWS] dans l’interface utilisateur de la collecte de données.](../../../images/extensions/server/aws/install.png)
 
-Sur l’écran suivant, vous devez fournir les informations d’identification de connexion pour votre compte [!DNL AWS]. Plus précisément, vous devez fournir votre ID de clé d’accès [!DNL AWS] et votre clé d’accès secrète. Si vous ne connaissez pas ces valeurs, consultez la documentation [!DNL AWS] sur [ comment obtenir votre ID de clé d&#39;accès et votre clé d&#39;accès secrète](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html).
+Sur l’écran suivant, vous devez fournir les informations d’identification de connexion pour votre compte [!DNL AWS]. Plus précisément, vous devez fournir votre ID de clé d’accès [!DNL AWS] et votre clé d’accès secrète. Si vous ne connaissez pas ces valeurs, consultez la documentation [!DNL AWS] sur [&#x200B; comment obtenir votre ID de clé d&#39;accès et votre clé d&#39;accès secrète](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html).
 
-![ L&#39;identifiant de la clé d&#39;accès et la clé d&#39;accès secrète ajoutés dans la vue de configuration de l&#39;extension.](../../../images/extensions/server/aws/credentials.png)
+![&#x200B; L&#39;identifiant de la clé d&#39;accès et la clé d&#39;accès secrète ajoutés dans la vue de configuration de l&#39;extension.](../../../images/extensions/server/aws/credentials.png)
 
 >[!IMPORTANT]
 >
@@ -50,7 +50,7 @@ Après avoir installé l’extension, créez un transfert d’événement [rule]
 
 Le panneau de droite se met à jour afin d’afficher les options de configuration permettant d’envoyer les données. Plus précisément, vous devez affecter des [éléments de données](../../../ui/managing-resources/data-elements.md) aux différentes propriétés qui représentent votre configuration [!DNL Event Hub].
 
-![ Les options de configuration pour le type d’action [!UICONTROL Envoyer des données au flux de données Kinesis] affiché dans l’interface utilisateur.](../../../images/extensions/server/aws/data-stream-details.png)
+![&#x200B; Les options de configuration pour le type d’action [!UICONTROL Envoyer des données au flux de données Kinesis] affiché dans l’interface utilisateur.](../../../images/extensions/server/aws/data-stream-details.png)
 
 **[!UICONTROL Détails du flux de données Kinesis]**
 

@@ -18,7 +18,7 @@ Cette extension permet un déploiement rapide et facile des balises [!DNL Double
 
 [!DNL DoubleClick Floodlight] (Beta) est une extension publicitaire dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la documentation de prise en charge de [!DNL Google] pour [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=fr).
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension Floodlight DoubleClick](../../assets/catalog/advertising/doubleclick-floodlight/catalog.png)
 

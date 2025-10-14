@@ -19,7 +19,7 @@ Les sources de stockage dans le cloud peuvent importer vos données dans Experie
 
 ## Liste autorisée d’adresses IP
 
-Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Consultez le document [ liste autorisée d’adresses IP ](../../ip-address-allow-list.md) pour plus d’informations.
+Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Consultez le document [&#x200B; liste autorisée d’adresses IP &#x200B;](../../ip-address-allow-list.md) pour plus d’informations.
 
 ## Contraintes de dénomination pour fichiers et répertoires
 

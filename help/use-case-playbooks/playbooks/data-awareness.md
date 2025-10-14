@@ -57,13 +57,13 @@ La création d’une instance génère un ensemble de ressources telles que des 
 
 6. À l’étape **[!UICONTROL Afficher les dépendances]** , vous pouvez mapper des schémas et copier d’autres ressources de l’environnement de test d’inspiration dans l’environnement de test cible. Le bouton **[!UICONTROL Terminer]** est désactivé tant que vous n’avez pas mappé chaque schéma.
 
-   ![ Mappez les schémas à l&#39;étape &#39;Afficher les dépendances&#39;, en activant le bouton Terminer.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-view-dependencies.png)
+   ![&#x200B; Mappez les schémas à l&#39;étape &#39;Afficher les dépendances&#39;, en activant le bouton Terminer.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-view-dependencies.png)
 
 ### Mappage des schémas {#map-schemas}
 
-1. Mappez le premier schéma. La boîte de dialogue de mappage de schéma affiche une liste déroulante pour sélectionner le schéma cible. Si le schéma source est un schéma de profil, il n’existe aucune autre option de schéma cible en plus du [ schéma de profil d’union individuel](/help/xdm/classes/individual-profile.md). Vous pouvez voir les recommandations de mappage générées automatiquement entre les données Source et les champs cibles lors du premier affichage de la page. Vous pouvez éditer les mappages en sélectionnant le champ cible, puis en sélectionnant un nouveau champ. Si vous modifiez les mappages suggérés, utilisez le bouton **Valider** pour valider les nouveaux mappages et afficher les erreurs qui peuvent être liées aux nouveaux mappages. Sélectionnez **Enregistrer** une fois le mappage terminé.
+1. Mappez le premier schéma. La boîte de dialogue de mappage de schéma affiche une liste déroulante pour sélectionner le schéma cible. Si le schéma source est un schéma de profil, il n’existe aucune autre option de schéma cible en plus du [&#x200B; schéma de profil d’union individuel](/help/xdm/classes/individual-profile.md). Vous pouvez voir les recommandations de mappage générées automatiquement entre les données Source et les champs cibles lors du premier affichage de la page. Vous pouvez éditer les mappages en sélectionnant le champ cible, puis en sélectionnant un nouveau champ. Si vous modifiez les mappages suggérés, utilisez le bouton **Valider** pour valider les nouveaux mappages et afficher les erreurs qui peuvent être liées aux nouveaux mappages. Sélectionnez **Enregistrer** une fois le mappage terminé.
 
-   ![ Boîte de dialogue de mappage de schéma avec une liste déroulante pour sélectionner un schéma cible.](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-fields.png)
+   ![&#x200B; Boîte de dialogue de mappage de schéma avec une liste déroulante pour sélectionner un schéma cible.](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-fields.png)
 
 2. Poursuivez le mappage de tous les champs des schémas. Si le schéma est un [schéma d’événement](/help/xdm/classes/experienceevent.md), la boîte de dialogue affiche une liste déroulante dans laquelle vous pouvez afficher tous les schémas d’événement dans l’environnement de test cible.
 

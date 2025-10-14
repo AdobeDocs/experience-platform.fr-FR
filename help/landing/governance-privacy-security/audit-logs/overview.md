@@ -63,9 +63,9 @@ Le tableau suivant décrit les actions sur lesquelles les ressources sont enregi
 | [Politique de fusion](../../../profile/merge-policies/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Profil de produit](../../../access-control/home.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Requête](../../../query-service/ui/overview.md) | <ul><li>Exécuter</li></ul> |
-| [Modèle de requête ](../../../query-service/ui/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
+| [Modèle de requête &#x200B;](../../../query-service/ui/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Rôle (contrôle d’accès basé sur les attributs)](../../../access-control/home.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li><li>Ajouter un utilisateur</li><li>Supprimer l’utilisateur</li></ul> |
-| [ Sandbox ](../../../sandboxes/home.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Réinitialiser</li><li>Supprimer</li></ul> |
+| [&#x200B; Sandbox &#x200B;](../../../sandboxes/home.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Réinitialiser</li><li>Supprimer</li></ul> |
 | [Requête planifiée](../../../query-service/ui/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Schéma](../../../xdm/schema/composition.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li><li>Activer pour le profil</li></ul> |
 | [Segment](../../../segmentation/home.md) | <ul><li>Créer</li><li>Supprimer</li><li>Activation de segment</li><li>Suppression de segment</li></ul> |
@@ -111,7 +111,7 @@ Les filtres suivants sont disponibles pour les événements d’audit dans l’i
 
 | Filtre | Description |
 | --- | --- |
-| [!UICONTROL Catégorie] | Utilisez le menu déroulant pour filtrer les résultats affichés par [ catégorie ](#category). |
+| [!UICONTROL Catégorie] | Utilisez le menu déroulant pour filtrer les résultats affichés par [&#x200B; catégorie &#x200B;](#category). |
 | [!UICONTROL Action] | Filtrez par action. Les actions disponibles pour chaque service sont visibles dans le tableau des ressources ci-dessus. |
 | [!UICONTROL Utilisateur] | Saisissez l’ID utilisateur complet (par exemple, `johndoe@acme.com`) à filtrer par utilisateur. |
 | [!UICONTROL Statut] | Filtrer les événements d’audit par résultat : réussi, échec, autorisé ou refusé en raison de l’absence d’autorisations [de contrôle d’accès](../../../access-control/home.md). Pour une action exécutée, les événements principaux affichent [!UICONTROL Autoriser] ou [!UICONTROL Refuser]. Lorsque l’événement principal est [!UICONTROL &#x200B; Autoriser &#x200B;], il peut avoir associé un ou plusieurs événements améliorés affichant **[!UICONTROL Succès]** ou **[!UICONTROL Échec]**. Par exemple, une action réussie affiche [!UICONTROL Autoriser] sur l’événement principal et [!UICONTROL Succès] sur l’événement amélioré associé. |

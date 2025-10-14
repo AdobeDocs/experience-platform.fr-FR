@@ -13,7 +13,7 @@ ht-degree: 8%
 
 [!UICONTROL Détails du chapitre] La création de rapports est un type de données XDM (Experience Data Model) standard qui décrit divers attributs liés aux chapitres ou aux segments dans le contenu multimédia. Utilisez le type de données de rapport [!UICONTROL Détails du chapitre] pour capturer des détails tels que le nom, la durée, la position, l’identifiant, l’état de lecture (démarré/terminé) et la durée passée sur chaque chapitre. Les champs de création de rapports multimédia sont utilisés par les services Adobe pour analyser les champs Media Collection envoyés par les utilisateurs. Ces données, ainsi que d’autres mesures utilisateur spécifiques, sont calculées et font l’objet de rapports.
 
-![ Diagramme du type de données de rapport Détails du chapitre.](../images/data-types/chapter-details-reporting.png)
+![&#x200B; Diagramme du type de données de rapport Détails du chapitre.](../images/data-types/chapter-details-reporting.png)
 
 >[!NOTE]
 >

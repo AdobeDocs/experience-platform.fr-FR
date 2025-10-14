@@ -113,7 +113,7 @@ En tant que partenaire du Destination SDK, l’ajout de votre destination perso
 
 En tant que client Experience Platform, vous pouvez également créer votre propre destination personnalisée privée, qui peut mieux répondre à vos besoins d’activation.
 
-![ Diagramme de présentation montrant comment les développeurs de destinations interagissent avec Destination SDK et comment les clients Real-Time CDP bénéficient de destinations privées et de production.](assets/destination-sdk-visual.png)
+![&#x200B; Diagramme de présentation montrant comment les développeurs de destinations interagissent avec Destination SDK et comment les clients Real-Time CDP bénéficient de destinations privées et de production.](assets/destination-sdk-visual.png)
 
 ## Types d’intégration pris en charge {#supported-integration-types}
 
@@ -134,7 +134,7 @@ Grâce à Destination SDK, vous pouvez également configurer des intégrations p
 * Exportation de fichiers dans plusieurs formats pris en charge (CSV, Parquet, JSON)
 * Options de formatage de fichier configurables, qui vous permettent de structurer le format des fichiers exportés pour répondre à vos besoins en aval.
 
-Lisez les exigences techniques du côté des destinations dans l’article [ sur les conditions préalables à l’intégration ](integration-prerequisites.md) et découvrez toutes les configurations prises en charge dans l’article [options de configuration](functionality/configuration-options.md) .
+Lisez les exigences techniques du côté des destinations dans l’article [&#x200B; sur les conditions préalables à l’intégration &#x200B;](integration-prerequisites.md) et découvrez toutes les configurations prises en charge dans l’article [options de configuration](functionality/configuration-options.md) .
 
 ## Accéder à Destination SDK {#get-access}
 
@@ -154,8 +154,8 @@ Pour configurer votre destination dans Experience Platform, procédez comme sui
 
 1. Si vous êtes un logiciel de distribution d&#39;informations ou un logiciel de distribution d&#39;informations, reportez-vous à la section [Obtention de l&#39;accès](#get-access) de la section ci-dessus. Les clients [Real-Time CDP Ultimate package](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) peuvent ignorer cette étape.
 2. [Faites la demande dʼun sandbox Experience Platform](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) et activez l’autorisation de création de destination.
-3. Créez votre intégration. Suivez les instructions de la documentation du produit pour configurer les [destinations de diffusion en continu](guides/configure-destination-instructions.md) ou les [ destinations basées sur des fichiers](guides/configure-file-based-destination-instructions.md).
-4. Testez votre intégration. Suivez les instructions de la documentation du produit pour tester les [destinations de diffusion en continu](testing-api/streaming-destinations/streaming-destination-testing-overview.md) ou les [ destinations basées sur des fichiers](testing-api/batch-destinations/file-based-destination-testing-overview.md).
+3. Créez votre intégration. Suivez les instructions de la documentation du produit pour configurer les [destinations de diffusion en continu](guides/configure-destination-instructions.md) ou les [&#x200B; destinations basées sur des fichiers](guides/configure-file-based-destination-instructions.md).
+4. Testez votre intégration. Suivez les instructions de la documentation du produit pour tester les [destinations de diffusion en continu](testing-api/streaming-destinations/streaming-destination-testing-overview.md) ou les [&#x200B; destinations basées sur des fichiers](testing-api/batch-destinations/file-based-destination-testing-overview.md).
 5. Si vous êtes un logiciel de développement logiciel ou si vous créez une [intégration productisée](./overview.md#productized-custom-integrations), [envoyez votre intégration](guides/submit-destination.md) pour la révision de l’Adobe (le temps de réponse standard est de cinq jours ouvrés).
 6. Si vous êtes un logiciel de développement logiciel (ISV) ou si vous créez une intégration productisée, utilisez le [processus de documentation en libre-service](docs-framework/documentation-instructions.md) pour créer une page de documentation du produit sur l’Experience League pour votre destination.
 7. Pour les intégrations productives, une fois approuvées par Adobe, votre intégration s’affichera dans le [catalogue Experience Platform](../catalog/overview.md).

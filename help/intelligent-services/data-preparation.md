@@ -37,7 +37,7 @@ Le processus de préparation varie selon que vos données sont stockées dans Ad
 
 ### Préparation des données externes
 
-Si vos données sont stockées en dehors d’Experience Platform, vous devez les mapper aux champs obligatoires et pertinents d’un [schéma Consumer ExperienceEvent](#cee-schema). Ce schéma peut être complété par des groupes de champs personnalisés pour mieux capturer vos données client. Une fois mappé, vous pouvez créer un jeu de données à l’aide de votre schéma ExperienceEvent client et [ ingérer vos données dans Experience Platform](../ingestion/home.md). Le jeu de données CEE peut ensuite être sélectionné lors de la configuration d&#39;un [!DNL Intelligent Service].
+Si vos données sont stockées en dehors d’Experience Platform, vous devez les mapper aux champs obligatoires et pertinents d’un [schéma Consumer ExperienceEvent](#cee-schema). Ce schéma peut être complété par des groupes de champs personnalisés pour mieux capturer vos données client. Une fois mappé, vous pouvez créer un jeu de données à l’aide de votre schéma ExperienceEvent client et [&#x200B; ingérer vos données dans Experience Platform](../ingestion/home.md). Le jeu de données CEE peut ensuite être sélectionné lors de la configuration d&#39;un [!DNL Intelligent Service].
 
 Selon le [!DNL Intelligent Service] que vous souhaitez utiliser, différents champs peuvent être requis. Notez qu’il est recommandé d’ajouter des données à un champ si vous disposez des données. Pour en savoir plus sur les champs obligatoires, consultez le guide [IA dédiée à l’attribution](./attribution-ai/input-output.md) ou [IA dédiée aux clients](./customer-ai/data-requirements.md) sur les exigences en matière de données.
 

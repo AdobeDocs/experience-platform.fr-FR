@@ -30,7 +30,7 @@ Une fois le cookie contenant le [!DNL ECID] défini, chaque requête suivante g�
 Lors de l’utilisation de cookies pour l’identification d’un appareil, vous avez deux façons d’interagir avec l’Edge Network :
 
 1. Créez un CNAME sur votre propre domaine qui pointe vers `adobedc.net`. Cette méthode est appelée [collecte de données propriétaire](#first-party).
-1. Envoyez directement les données au `adobedc.net` de domaine de l’Edge Network. Cette méthode est appelée [ collecte de données tierce ](#third-party).
+1. Envoyez directement les données au `adobedc.net` de domaine de l’Edge Network. Cette méthode est appelée [&#x200B; collecte de données tierce &#x200B;](#third-party).
 
 Comme expliqué dans les sections ci-dessous, la méthode de collecte de données que vous choisissez d’utiliser a un impact direct sur la durée de vie des cookies dans les navigateurs.
 
@@ -56,7 +56,7 @@ En outre, lorsque vous utilisez la collecte de données tierce, certains bloqueu
 
 ### Effets de la durée de vie des cookies sur les applications Adobe Experience Cloud {#lifespans}
 
-Que vous choisissiez la collecte de données propriétaire ou tierce, la durée pendant laquelle un cookie peut persister a un impact direct sur le nombre de visiteurs dans [Adobe Analytics](https://experienceleague.adobe.com/fr/docs/analytics) et [Customer Journey Analytics](https://experienceleague.adobe.com/fr/docs/customer-journey-analytics). En outre, les utilisateurs finaux peuvent rencontrer des expériences de personnalisation incohérentes lorsque [Adobe Target](https://experienceleague.adobe.com/fr/docs/target) ou [Offer decisioning ](https://experienceleague.adobe.com/fr/docs/target/using/integrate/ajo/offer-decision) sont utilisés sur le site.
+Que vous choisissiez la collecte de données propriétaire ou tierce, la durée pendant laquelle un cookie peut persister a un impact direct sur le nombre de visiteurs dans [Adobe Analytics](https://experienceleague.adobe.com/fr/docs/analytics) et [Customer Journey Analytics](https://experienceleague.adobe.com/fr/docs/customer-journey-analytics). En outre, les utilisateurs finaux peuvent rencontrer des expériences de personnalisation incohérentes lorsque [Adobe Target](https://experienceleague.adobe.com/fr/docs/target) ou [Offer decisioning &#x200B;](https://experienceleague.adobe.com/fr/docs/target/using/integrate/ajo/offer-decision) sont utilisés sur le site.
 
 Supposons, par exemple, que vous ayez créé une expérience de personnalisation qui promeut n’importe quel élément sur la page d’accueil si un utilisateur l’a consulté trois fois au cours des sept derniers jours.
 

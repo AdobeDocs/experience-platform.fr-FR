@@ -31,14 +31,14 @@ Le groupe de champs fournit un seul objet `_experience` à un schéma, qui conti
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `adDeliveryDetails` | Objet | Ajoutez les détails de diffusion. Pour plus d’informations sur le contenu de cet objet[ reportez-vous à la `adDeliveryDetails`sous-section ci-dessous de l’objet ](#adDeliveryDetails) . |
-| `advertisement` | Objet | Détails de la publicité numérique. Pour plus d’informations sur le contenu de cet objet[ consultez la ](#advertisement)sous-section ci-dessous sur l’objet de publicité . |
-| `campaign` | Objet | Détails de la hiérarchie de la campagne. Pour plus d’informations sur le contenu de cet objet[ reportez-vous à la ](#campaign-campaign)sous-section ci-dessous sur l’objet Campaign . |
+| `adDeliveryDetails` | Objet | Ajoutez les détails de diffusion. Pour plus d’informations sur le contenu de cet objet[&#x200B; reportez-vous à la `adDeliveryDetails`sous-section ci-dessous de l’objet &#x200B;](#adDeliveryDetails) . |
+| `advertisement` | Objet | Détails de la publicité numérique. Pour plus d’informations sur le contenu de cet objet[&#x200B; consultez la &#x200B;](#advertisement)sous-section ci-dessous sur l’objet de publicité . |
+| `campaign` | Objet | Détails de la hiérarchie de la campagne. Pour plus d’informations sur le contenu de cet objet[&#x200B; reportez-vous à la &#x200B;](#campaign-campaign)sous-section ci-dessous sur l’objet Campaign . |
 | `conversionDetails` | Objet | Détails de conversion d’une publicité. Pour plus d’informations sur le contenu de cet objet, consultez la [sous-section ci-dessous](#conversionDetails). |
 | `eventType` | Chaîne | Type d’événement Adobe Advertising. |
-| `fees` | Objet | Détails des frais Advertising. Pour plus d’informations sur le contenu de cet objet[ consultez la ](#fees)sous-section ci-dessous sur l’objet des frais. |
+| `fees` | Objet | Détails des frais Advertising. Pour plus d’informations sur le contenu de cet objet[&#x200B; consultez la &#x200B;](#fees)sous-section ci-dessous sur l’objet des frais. |
 | `inventory` | Objet | Détails de l’inventaire. Pour plus d’informations sur le contenu de cet objet, consultez la [sous-section ci-dessous](#inventory). |
-| `productDetails` | Objet | Détails de l’annonce du produit. Pour plus d’informations sur le contenu de cet objet[ reportez-vous à la ](#productDetails)sous-section ci-dessous de l’objet productDetails. |
+| `productDetails` | Objet | Détails de l’annonce du produit. Pour plus d’informations sur le contenu de cet objet[&#x200B; reportez-vous à la &#x200B;](#productDetails)sous-section ci-dessous de l’objet productDetails. |
 | `stitchId` | Chaîne | Identifiant des serveurs de publicités d’Adobe Advertising pour effectuer le suivi des conversions par clic sur les navigateurs qui bloquent les cookies tiers. |
 
 ## `adDeliveryDetails` {#adDeliveryDetails}

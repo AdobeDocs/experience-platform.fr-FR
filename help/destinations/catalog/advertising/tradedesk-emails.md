@@ -76,7 +76,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 | Élément | Type | Notes |
 ---------|----------|---------|
 | Type d’exportation | **[!UICONTROL Export d’audience]** | Vous exportez tous les membres d’une audience avec les identifiants (e-mail ou e-mail haché) utilisés dans la destination Trade Desk. |
-| Fréquence des exportations | **[!UICONTROL Lot quotidien]** | Lorsqu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation de l’audience, le profil (les identités) est mis à jour une fois par jour en aval de la plateforme de destination. En savoir plus sur les [ exportations par lots ](/help/destinations/destination-types.md#file-based). |
+| Fréquence des exportations | **[!UICONTROL Lot quotidien]** | Lorsqu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation de l’audience, le profil (les identités) est mis à jour une fois par jour en aval de la plateforme de destination. En savoir plus sur les [&#x200B; exportations par lots &#x200B;](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 

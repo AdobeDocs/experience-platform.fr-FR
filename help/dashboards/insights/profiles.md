@@ -191,7 +191,7 @@ SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
 
 +++
 
-Consultez la documentation du widget [ Audiences mappées au statut de destination ](../guides/profiles.md#audiences-mapped-to-destination-status) pour plus d’informations sur l’aspect et les fonctionnalités de cette insight.
+Consultez la documentation du widget [&#x200B; Audiences mappées au statut de destination &#x200B;](../guides/profiles.md#audiences-mapped-to-destination-status) pour plus d’informations sur l’aspect et les fonctionnalités de cette insight.
 
 ## Taille des audiences {#audiences-size}
 

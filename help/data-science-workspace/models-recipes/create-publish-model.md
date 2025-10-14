@@ -57,9 +57,9 @@ Suivez le tutoriel [Création d’un modèle à l’aide des notebooks JupyterLa
 
 ## Importez et empaquetez une recette à partir de sources externes (*facultatif*)
 
-Si vous souhaitez importer et empaqueter une recette à utiliser dans Data Science Workspace, vous devez regrouper vos fichiers source dans un fichier d’archive. Suivez le tutoriel [ Former une recette à partir de fichiers source de package ](./package-source-files-recipe.md) . Ce tutoriel vous explique comment regrouper des fichiers source dans une recette, étape prérequise pour importer une recette dans Data Science Workspace. Une fois le tutoriel terminé, vous recevez une image Docker dans un Azure Container Registry, ainsi que l’URL d’image correspondante, c’est-à-dire un fichier d’archive.
+Si vous souhaitez importer et empaqueter une recette à utiliser dans Data Science Workspace, vous devez regrouper vos fichiers source dans un fichier d’archive. Suivez le tutoriel [&#x200B; Former une recette à partir de fichiers source de package &#x200B;](./package-source-files-recipe.md) . Ce tutoriel vous explique comment regrouper des fichiers source dans une recette, étape prérequise pour importer une recette dans Data Science Workspace. Une fois le tutoriel terminé, vous recevez une image Docker dans un Azure Container Registry, ainsi que l’URL d’image correspondante, c’est-à-dire un fichier d’archive.
 
-Ce fichier d’archive peut être utilisé pour créer une recette dans Data Science Workspace en suivant le processus d’importation de la recette à l’aide du [workflow de l’interface utilisateur](./import-packaged-recipe-ui.md) ou du [ workflow de l’API](./import-packaged-recipe-api.md).
+Ce fichier d’archive peut être utilisé pour créer une recette dans Data Science Workspace en suivant le processus d’importation de la recette à l’aide du [workflow de l’interface utilisateur](./import-packaged-recipe-ui.md) ou du [&#x200B; workflow de l’API](./import-packaged-recipe-api.md).
 
 ## Former et évaluer un modèle {#train-and-evaluate-your-model}
 

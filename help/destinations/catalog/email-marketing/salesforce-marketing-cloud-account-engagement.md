@@ -44,9 +44,9 @@ Notez les conditions préalables suivantes pour exporter des données d’Experi
 
 Un compte [!DNL Marketing Cloud Account Engagement] avec un abonnement au produit [Engagement du compte Marketing Cloud](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) est obligatoire pour continuer.
 
-Votre compte [!DNL Salesforce] doit avoir le `Account Engagement Administrator role` [!DNL Salesforce]. Cela est nécessaire pour [créer des champs de prospect personnalisés](https://help.salesforce.com/s/articleView?id=sf.pardot_fields_create_custom_field.htm&amp;type=5).
+Votre compte [!DNL Salesforce] doit avoir le `Account Engagement Administrator role` [!DNL Salesforce]. Cela est nécessaire pour [créer des champs de prospect personnalisés](https://help.salesforce.com/s/articleView?id=sf.pardot_fields_create_custom_field.htm&type=5).
 
-Enfin, votre compte doit également pouvoir accéder au [[!DNL Account Engagement Lightning App]](https://help.salesforce.com/s/articleView?id=sf.pardot_lightning_enable.htm&amp;type=5).
+Enfin, votre compte doit également pouvoir accéder au [[!DNL Account Engagement Lightning App]](https://help.salesforce.com/s/articleView?id=sf.pardot_lightning_enable.htm&type=5).
 
 Contactez l’[[!DNL Salesforce] assistance technique](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) ou l’administrateur de votre compte [!DNL Salesforce] si vous n’avez pas de compte ou si le compte ne dispose pas de l’abonnement [!DNL Marketing Cloud Account Engagement] ou de l’[!DNL Account Engagement Administrator role].
 
@@ -68,7 +68,7 @@ Reportez-vous à la section [!DNL Marketing Cloud Account Engagement] [limites d
 
 >[!IMPORTANT]
 >
->Si l’administrateur de votre compte [!DNL Salesforce] a limité l’accès aux plages d’adresses IP de confiance, vous devez le contacter pour obtenir [les adresses IP d’Experience Platformplacer sur la liste autorisée ](/help/destinations/catalog/streaming/ip-address-allow-list.md). Reportez-vous à la documentation [!DNL Salesforce] [Limiter l’accès aux plages d’adresses IP de confiance pour une application connectée](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) si vous avez besoin de conseils supplémentaires.
+>Si l’administrateur de votre compte [!DNL Salesforce] a limité l’accès aux plages d’adresses IP de confiance, vous devez le contacter pour obtenir [les adresses IP d’Experience Platformplacer sur la liste autorisée &#x200B;](/help/destinations/catalog/streaming/ip-address-allow-list.md). Reportez-vous à la documentation [!DNL Salesforce] [Limiter l’accès aux plages d’adresses IP de confiance pour une application connectée](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) si vous avez besoin de conseils supplémentaires.
 
 ## Identités prises en charge {#supported-identities}
 

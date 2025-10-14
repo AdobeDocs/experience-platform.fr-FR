@@ -116,7 +116,7 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 | ------- | ----------- |
 | Attributs calculés (Alpha) | ***Remarque : cette fonctionnalité est actuellement en version Alpha et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.*** <br/><br/>Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Vous pouvez ensuite utiliser les agrégats dans la segmentation, l’activation et la personnalisation. Ces fonctions incluent notamment le nombre, la somme, la moyenne, les valeurs min. et max. ou encore la valeur vrai/faux. Les attributs calculés sont actuellement disponibles uniquement via l’API. |
 
-Pour plus d’informations sur le profil client en temps réel, notamment les bonnes pratiques et les tutoriels relatifs à l’utilisation des données [!DNL Profile], consultez tout d’abord la [ présentation du profil client en temps réel](../../profile/home.md).
+Pour plus d’informations sur le profil client en temps réel, notamment les bonnes pratiques et les tutoriels relatifs à l’utilisation des données [!DNL Profile], consultez tout d’abord la [&#x200B; présentation du profil client en temps réel](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -128,7 +128,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur intera
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!DNL Google PubSub] | Vous pouvez désormais connecter [!DNL Google PubSub] à [!DNL Experience Platform] à l’aide de l’interface utilisateur ou de l’API [!DNL Flow Service]. Pour plus d’informations, consultez la présentation du connecteur [[!DNL Google PubSub] ](../../sources/connectors/cloud-storage/google-pubsub.md). |
-| [!DNL Oracle Object Storage] | Vous pouvez désormais connecter [!DNL Oracle Object Storage] à [!DNL Experience Platform] à l’aide de l’interface utilisateur ou de l’API [!DNL Flow Service]. Pour plus d’informations, consultez la présentation du connecteur [[!DNL Oracle Object Storage] ](../../sources/connectors/cloud-storage/oracle-object-storage.md). |
+| [!DNL Google PubSub] | Vous pouvez désormais connecter [!DNL Google PubSub] à [!DNL Experience Platform] à l’aide de l’interface utilisateur ou de l’API [!DNL Flow Service]. Pour plus d’informations, consultez la présentation du connecteur [[!DNL Google PubSub] &#x200B;](../../sources/connectors/cloud-storage/google-pubsub.md). |
+| [!DNL Oracle Object Storage] | Vous pouvez désormais connecter [!DNL Oracle Object Storage] à [!DNL Experience Platform] à l’aide de l’interface utilisateur ou de l’API [!DNL Flow Service]. Pour plus d’informations, consultez la présentation du connecteur [[!DNL Oracle Object Storage] &#x200B;](../../sources/connectors/cloud-storage/oracle-object-storage.md). |
 
 Pour des informations plus générales sur les sources, reportez-vous à la [présentation des sources](../../sources/home.md).

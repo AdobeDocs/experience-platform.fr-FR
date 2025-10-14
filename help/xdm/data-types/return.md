@@ -13,7 +13,7 @@ ht-degree: 8%
 
 [!UICONTROL Return] est un type de données XDM (Experience Data Model) standard qui capture les informations essentielles liées à une autorisation de marchandisage de retour (RMA).
 
-![ Diagramme du type de données Retour.](../images/data-types/return.png)
+![&#x200B; Diagramme du type de données Retour.](../images/data-types/return.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 |----------------------------------|----------------------|-----------|--------------------------------------------------|

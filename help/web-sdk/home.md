@@ -27,8 +27,8 @@ Ce guide comprend des instructions pour interagir avec les solutions Experience 
 Experience Platform Web SDK fait partie d’Adobe Experience Platform Edge Network, qui comprend :
 
 * **[Experience Platform Web SDK](#overview)** : bibliothèque JavaScript et extension de balise pour simplifier le déploiement de la technologie Adobe.
-* **[Experience Platform Mobile SDK ](https://developer.adobe.com/client-sdks/home/)** : une extension du SDK Mobile v5 pour la nouvelle méthodologie de déploiement.
-* **[API Edge Network ](https://developer.adobe.com/data-collection-apis/docs/api/)** : API côté serveur pour la collecte de données, la personnalisation, la publicité et les cas d’utilisation marketing. Vous pouvez l’utiliser sur des serveurs, des appareils IoT, des décodeurs et d’autres appareils.
+* **[Experience Platform Mobile SDK &#x200B;](https://developer.adobe.com/client-sdks/home/)** : une extension du SDK Mobile v5 pour la nouvelle méthodologie de déploiement.
+* **[API Edge Network &#x200B;](https://developer.adobe.com/data-collection-apis/docs/api/)** : API côté serveur pour la collecte de données, la personnalisation, la publicité et les cas d’utilisation marketing. Vous pouvez l’utiliser sur des serveurs, des appareils IoT, des décodeurs et d’autres appareils.
 
 Edge Network offre une collecte de données à faible latence, une informatique enfichable et une activation de données rapide sur tous les canaux adressables. Il propose un SDK consolidé unique pour les canaux web, mobiles et côté serveur, qui envoie des données à un domaine Adobe commun (`adobedc.net`) et reçoit une seule payload pour la diffusion des données et de l’expérience.
 
@@ -68,7 +68,7 @@ Regardez la vidéo ci-dessous pour voir les [!DNL Web SDK] et les [!DNL Edge Net
 
 ## Migrer des bibliothèques existantes vers le SDK Web {#migrating-to-web-sdk}
 
-Adobe offre un chemin de mise à niveau simplifié pour simplifier votre migration depuis l’une des [ bibliothèques existantes ](#sdks) vers Web SDK. Vous pouvez migrer chaque page de votre site web individuellement, sans avoir à migrer l’ensemble du site en une seule fois. Vous pouvez utiliser le SDK Web sur certaines pages tandis que les bibliothèques existantes restent sur d’autres, ce qui permet une transition progressive.
+Adobe offre un chemin de mise à niveau simplifié pour simplifier votre migration depuis l’une des [&#x200B; bibliothèques existantes &#x200B;](#sdks) vers Web SDK. Vous pouvez migrer chaque page de votre site web individuellement, sans avoir à migrer l’ensemble du site en une seule fois. Vous pouvez utiliser le SDK Web sur certaines pages tandis que les bibliothèques existantes restent sur d’autres, ce qui permet une transition progressive.
 
 ### Considérations relatives à la migration de `AT.js` vers Web SDK {#considerations}
 

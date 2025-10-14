@@ -16,7 +16,7 @@ Ce tutoriel décrit les étapes à suivre pour explorer et prévisualiser la str
 
 >[!NOTE]
 >
-> Pour explorer vos tables de données, vous devez déjà disposer d’un identifiant de connexion de base valide pour une source tabulaire. Si vous ne disposez pas de cet identifiant, consultez les tutoriels suivants pour savoir comment créer un identifiant de connexion de base pour une source tabulaire : <ul><li>[Publicité](../../../home.md#advertising)</li><li>[ CRM ](../../../home.md#customer-relationship-management)</li><li>[Succès client](../../../home.md#customer-success)</li><li>[Base de données](../../../home.md#database)</li><li>[E-commerce](../../../home.md#ecommerce)</li><li>[Automatisation du marketing](../../../home.md#marketing-automation)</li><li>[ Paiements ](../../../home.md#payments)</li><li>[Protocoles](../../../home.md#protocols)</li></ul>
+> Pour explorer vos tables de données, vous devez déjà disposer d’un identifiant de connexion de base valide pour une source tabulaire. Si vous ne disposez pas de cet identifiant, consultez les tutoriels suivants pour savoir comment créer un identifiant de connexion de base pour une source tabulaire : <ul><li>[Publicité](../../../home.md#advertising)</li><li>[&#x200B; CRM &#x200B;](../../../home.md#customer-relationship-management)</li><li>[Succès client](../../../home.md#customer-success)</li><li>[Base de données](../../../home.md#database)</li><li>[E-commerce](../../../home.md#ecommerce)</li><li>[Automatisation du marketing](../../../home.md#marketing-automation)</li><li>[&#x200B; Paiements &#x200B;](../../../home.md#payments)</li><li>[Protocoles](../../../home.md#protocols)</li></ul>
 
 ## Prise en main
 

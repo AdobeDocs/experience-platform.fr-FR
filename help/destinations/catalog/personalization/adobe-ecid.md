@@ -18,7 +18,7 @@ Cette extension met en œuvre le service [!DNL Experience Cloud] ID, qui identif
 
 Le service [!DNL Experience Cloud] ID est une extension de personnalisation de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page d’extension du service Experience Cloud ID [&#128279;](../../../tags/extensions/client/id-service/overview.md) dans la documentation sur les balises.
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension Adobe ECID](../../assets/catalog/personalization/adobe-ecid/catalog.png)
 

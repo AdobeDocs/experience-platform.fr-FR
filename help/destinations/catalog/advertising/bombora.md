@@ -17,7 +17,7 @@ ht-degree: 29%
 >
 >La fonctionnalité d’activation des audiences de compte vers la destination Bombora est disponible pour les sociétés qui achètent les éditions [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) et [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) de Real-Time Customer Data Platform.
 
-Activez les profils de vos campagnes Bombora pour le ciblage, la personnalisation et la suppression des audiences, en fonction des [ audiences de compte ](/help/segmentation/types/account-audiences.md).
+Activez les profils de vos campagnes Bombora pour le ciblage, la personnalisation et la suppression des audiences, en fonction des [&#x200B; audiences de compte &#x200B;](/help/segmentation/types/account-audiences.md).
 
 ## Cas d’utilisation {#use-case}
 

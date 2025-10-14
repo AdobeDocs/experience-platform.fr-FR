@@ -14,7 +14,7 @@ ht-degree: 23%
 
 >[!NOTE]
 >
-> La source [!DNL Generic REST API] est en version Beta. Consultez la [ Présentation des sources ](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+> La source [!DNL Generic REST API] est en version Beta. Consultez la [&#x200B; Présentation des sources &#x200B;](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Ce tutoriel décrit les étapes à suivre pour créer un connecteur source [!DNL Generic REST API] à l’aide de l’interface utilisateur de Adobe Experience Platform.
 

@@ -24,7 +24,7 @@ ht-degree: 15%
 | Propriété | Type de données | Description |
 | --- | --- | --- |
 | `commerce` | [Commerce](../../data-types/commerce.md) | Objet décrivant les retours de produits, l’enregistrement de la garantie et les processus du panier/de la commande. |
-| `productListItems` | Tableau de [ éléments de liste de produits ](../../data-types/product-list-item.md) | Liste d’éléments représentant le ou les produits sélectionnés par un client, avec des options et des tarifs spécifiques à un moment spécifique (qui peuvent différer de l’enregistrement du produit). |
+| `productListItems` | Tableau de [&#x200B; éléments de liste de produits &#x200B;](../../data-types/product-list-item.md) | Liste d’éléments représentant le ou les produits sélectionnés par un client, avec des options et des tarifs spécifiques à un moment spécifique (qui peuvent différer de l’enregistrement du produit). |
 
 {style="table-layout:auto"}
 

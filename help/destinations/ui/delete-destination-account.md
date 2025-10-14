@@ -49,4 +49,4 @@ Suivez les étapes ci-dessous pour supprimer des comptes de destination existant
 
 En suivant ce tutoriel, vous avez correctement utilisé l’espace de travail des destinations pour supprimer des comptes existants.
 
-Pour savoir comment effectuer ces opérations par programmation à l’aide de l’API [!DNL Flow Service], reportez-vous au tutoriel sur la [ suppression des connexions à l’aide de l’API Flow Service](../api/delete-destination-account.md).
+Pour savoir comment effectuer ces opérations par programmation à l’aide de l’API [!DNL Flow Service], reportez-vous au tutoriel sur la [&#x200B; suppression des connexions à l’aide de l’API Flow Service](../api/delete-destination-account.md).

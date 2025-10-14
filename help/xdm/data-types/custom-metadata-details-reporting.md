@@ -13,7 +13,7 @@ ht-degree: 10%
 
 [!UICONTROL Détails des métadonnées personnalisées] La création de rapports est un type de données XDM (Experience Data Model) standard qui définit une structure pour le stockage de métadonnées personnalisées. Le type de données de rapport [!UICONTROL Détails des métadonnées personnalisées] capture des détails tels que le nom et la valeur des métadonnées personnalisées associées au contenu ou aux interactions. Les champs de création de rapports multimédia sont utilisés par les services Adobe pour analyser les champs de collecte multimédia envoyés par les utilisateurs. Ces données, ainsi que d’autres mesures utilisateur spécifiques, sont calculées et font l’objet de rapports.
 
-![ Diagramme du type de données Rapports de détails de métadonnées personnalisés.](../images/data-types/the-custom-metadata-reporting.png)
+![&#x200B; Diagramme du type de données Rapports de détails de métadonnées personnalisés.](../images/data-types/the-custom-metadata-reporting.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 |--------------------------------------------|------------------|-----------|-----------------------------------------|

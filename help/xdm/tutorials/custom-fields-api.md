@@ -372,4 +372,4 @@ L’interface utilisateur d’Experience Platform présente également des limit
 
 ## Étapes suivantes
 
-Ce guide explique comment définir différents types de champs dans l’API. Pour plus d’informations sur le formatage des types de champs XDM, consultez le guide sur les [ Contraintes de type de champ XDM ](../schema/field-constraints.md).
+Ce guide explique comment définir différents types de champs dans l’API. Pour plus d’informations sur le formatage des types de champs XDM, consultez le guide sur les [&#x200B; Contraintes de type de champ XDM &#x200B;](../schema/field-constraints.md).

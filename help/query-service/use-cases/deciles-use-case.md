@@ -29,8 +29,8 @@ Ce guide nécessite une compréhension pratique de [l’exécution de requêtes 
 
 * [Présentation du profil client en temps réel](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [Principes de base de la composition des schémas](../../xdm/schema/composition.md) : présentation des schémas XDM ainsi que des blocs de création, principes et bonnes pratiques pour la composition de schémas.
-* [Comment activer un schéma pour le profil client en temps réel ](../../profile/tutorials/add-profile-data.md) : ce tutoriel décrit les étapes nécessaires pour ajouter des données au profil client en temps réel.
-* [Comment définir un type de données personnalisé ](../../xdm/api/data-types.md) : les types de données sont utilisés comme champs de type référence dans les classes ou les groupes de champs de schéma et permettent l’utilisation cohérente d’une structure à plusieurs champs pouvant être incluse n’importe où dans le schéma.
+* [Comment activer un schéma pour le profil client en temps réel &#x200B;](../../profile/tutorials/add-profile-data.md) : ce tutoriel décrit les étapes nécessaires pour ajouter des données au profil client en temps réel.
+* [Comment définir un type de données personnalisé &#x200B;](../../xdm/api/data-types.md) : les types de données sont utilisés comme champs de type référence dans les classes ou les groupes de champs de schéma et permettent l’utilisation cohérente d’une structure à plusieurs champs pouvant être incluse n’importe où dans le schéma.
 
 ## Objectifs
 
@@ -299,4 +299,4 @@ Exécutez la requête pour renseigner le jeu de données de décile. Vous pouvez
 
 ## Étapes suivantes
 
-L’exemple de cas d’utilisation fourni ci-dessus illustre les étapes à suivre pour rendre les jeux de données dérivés basés sur des déciles disponibles dans le profil client en temps réel. Cela permet à Segmentation Service, par le biais d’une interface utilisateur ou d’une API RESTful, de générer des audiences en fonction de ces intervalles de déciles. Consultez la [ présentation de Segmentation Service ](../../segmentation/home.md) pour plus d’informations sur la création, l’évaluation et l’accès aux segments.
+L’exemple de cas d’utilisation fourni ci-dessus illustre les étapes à suivre pour rendre les jeux de données dérivés basés sur des déciles disponibles dans le profil client en temps réel. Cela permet à Segmentation Service, par le biais d’une interface utilisateur ou d’une API RESTful, de générer des audiences en fonction de ces intervalles de déciles. Consultez la [&#x200B; présentation de Segmentation Service &#x200B;](../../segmentation/home.md) pour plus d’informations sur la création, l’évaluation et l’accès aux segments.

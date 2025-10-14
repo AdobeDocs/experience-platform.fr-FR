@@ -112,7 +112,7 @@ Dans le cas où plusieurs identités sont disponibles dans un espace de noms, ve
 
 >[!NOTE]
 >
-> S’il n’existe aucun type d’identité valide (espace de noms) pour un jeu de données, vous devez définir une identité principale et l’affecter à un espace de noms d’identité à l’aide de l’[éditeur de schéma](../../../xdm/schema/composition.md#identity). Pour en savoir plus sur les espaces de noms et les identités, consultez la documentation [ Espaces de noms du service d’identités ](../../../identity-service/features/namespaces.md).
+> S’il n’existe aucun type d’identité valide (espace de noms) pour un jeu de données, vous devez définir une identité principale et l’affecter à un espace de noms d’identité à l’aide de l’[éditeur de schéma](../../../xdm/schema/composition.md#identity). Pour en savoir plus sur les espaces de noms et les identités, consultez la documentation [&#x200B; Espaces de noms du service d’identités &#x200B;](../../../identity-service/features/namespaces.md).
 
 ## Définition d’un objectif {#define-a-goal}
 
@@ -183,7 +183,7 @@ Une fois l’opération terminée, sélectionnez **[!UICONTROL Suivant]** dans l
 
 ### Attributs de profil personnalisés (*facultatif*)
 
-Vous pouvez définir des champs de jeu de données de profil importants (avec horodatages) dans vos données en plus des [ champs d’événement standard ](../data-requirements.md#standard-events) utilisés par l’IA dédiée aux clientes et clients pour générer des scores de propension. L’utilisation de cette option vous permet d’ajouter des attributs de profil supplémentaires que vous jugez influents, ce qui peut améliorer la qualité de votre modèle et fournir des résultats plus précis. En outre, l’ajout d’attributs de profil personnalisés permet à l’IA dédiée aux clientes et clients de mieux présenter la manière dont des profils particuliers ont fini dans un compartiment de propension.
+Vous pouvez définir des champs de jeu de données de profil importants (avec horodatages) dans vos données en plus des [&#x200B; champs d’événement standard &#x200B;](../data-requirements.md#standard-events) utilisés par l’IA dédiée aux clientes et clients pour générer des scores de propension. L’utilisation de cette option vous permet d’ajouter des attributs de profil supplémentaires que vous jugez influents, ce qui peut améliorer la qualité de votre modèle et fournir des résultats plus précis. En outre, l’ajout d’attributs de profil personnalisés permet à l’IA dédiée aux clientes et clients de mieux présenter la manière dont des profils particuliers ont fini dans un compartiment de propension.
 
 >[!NOTE]
 >

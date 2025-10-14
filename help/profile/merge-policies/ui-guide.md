@@ -217,4 +217,4 @@ Pour en savoir plus sur la manière dont la gouvernance des données est réalis
 
 ## Étapes suivantes
 
-Maintenant que vous avez créé et configuré des politiques de fusion pour votre organisation, vous pouvez les utiliser pour ajuster l’affichage des profils clients dans Experience Platform et pour créer des audiences à partir des données de profil. Consultez la [ présentation de la segmentation ](../../segmentation/home.md) pour plus d’informations sur la création et l’utilisation des audiences à l’aide de l’interface utilisateur et des API [!DNL Experience Platform].
+Maintenant que vous avez créé et configuré des politiques de fusion pour votre organisation, vous pouvez les utiliser pour ajuster l’affichage des profils clients dans Experience Platform et pour créer des audiences à partir des données de profil. Consultez la [&#x200B; présentation de la segmentation &#x200B;](../../segmentation/home.md) pour plus d’informations sur la création et l’utilisation des audiences à l’aide de l’interface utilisateur et des API [!DNL Experience Platform].

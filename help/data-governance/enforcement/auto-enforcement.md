@@ -27,7 +27,7 @@ Ce document se concentre sur l’application des politiques de gouvernance des d
 
 Ce guide nécessite une compréhension pratique des services Experience Platform impliqués dans l’application automatique. Consultez la documentation suivante pour en savoir plus avant de poursuivre avec ce guide :
 
-* [Gouvernance des données de Adobe Experience Platform ](../home.md) : cadre en fonction duquel Experience Platform applique la conformité de l’utilisation des données à l’aide des libellés et des politiques.
+* [Gouvernance des données de Adobe Experience Platform &#x200B;](../home.md) : cadre en fonction duquel Experience Platform applique la conformité de l’utilisation des données à l’aide des libellés et des politiques.
 * [Profil client en temps réel](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [Segmentation Service d’Adobe Experience Platform](../../segmentation/home.md) : moteur de segmentation de [!DNL Experience Platform] utilisé pour créer des audiences à partir de vos profils clients en fonction du comportement et des attributs de la clientèle.
 * [Destinations](../../destinations/home.md) : les destinations sont des intégrations préconfigurées aux applications couramment utilisées. Elles permettent l’activation transparente des données d’Experience Platform pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée, etc.
@@ -122,7 +122,7 @@ Utilisez le diagramme de parenté des données pour comprendre quelles autres mo
 
 ### Évaluation des politiques de consentement {#consent-policy-evaluation}
 
-Lors de l’activation d’une audience vers une destination, vous pouvez voir comment vos [ politiques de consentement ](../policies/user-guide.md) affectent la portée de votre audience pendant l’étape de révision [ du workflow [!UICONTROL &#x200B; Activer des destinations &#x200B;]](#pre-activation-evaluation).
+Lors de l’activation d’une audience vers une destination, vous pouvez voir comment vos [&#x200B; politiques de consentement &#x200B;](../policies/user-guide.md) affectent la portée de votre audience pendant l’étape de révision [&#x200B; du workflow [!UICONTROL &#x200B; Activer des destinations &#x200B;]](#pre-activation-evaluation).
 
 >[!NOTE]
 >

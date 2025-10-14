@@ -64,7 +64,7 @@ Les extensions peuvent appartenir aux catégories suivantes dans Experience Plat
 - [Advertising](../advertising/overview.md)
 - [Analytics](../analytics/overview.md)
 - [Plateforme de gestion des données](../data-management/overview.md)
-- [Destinations de marketing par e-mail ](../email-marketing/overview.md)
+- [Destinations de marketing par e-mail &#x200B;](../email-marketing/overview.md)
 - [Personnalisation](../personalization/overview.md)
 - [Questionnaires](../survey/overview.md)
 - [Voix du client](../voice/overview.md)

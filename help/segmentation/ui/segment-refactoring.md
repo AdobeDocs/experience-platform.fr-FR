@@ -24,7 +24,7 @@ Avant la version de janvier 2024, toutes les contraintes de temps au niveau des 
 
 Auparavant, un événement individuel pouvait être associé à plusieurs règles de contrainte de temps. Avec cette mise à jour récente, toute tentative d’ajout d’une contrainte de temps à une règle entraîne désormais une **erreur**.
 
-![La contrainte de temps au niveau de la règle est mise en surbrillance. L’erreur qui se produit ensuite est également mise en surbrillance. ](../images/ui/segment-refactoring/rule-time-constraint.png)
+![La contrainte de temps au niveau de la règle est mise en surbrillance. L’erreur qui se produit ensuite est également mise en surbrillance. &#x200B;](../images/ui/segment-refactoring/rule-time-constraint.png)
 
 Les contraintes de temps ne peuvent désormais être appliquées qu’au niveau de la zone de travail ou de la carte.
 

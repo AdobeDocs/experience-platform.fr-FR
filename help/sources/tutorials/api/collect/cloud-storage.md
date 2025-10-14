@@ -14,7 +14,7 @@ ht-degree: 56%
 
 # Créer un flux de données pour les sources de stockage cloud à l’aide de l’API [!DNL Flow Service]
 
-Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une source d’espace de stockage dans le cloud et les importer dans Experience Platform à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une source d’espace de stockage dans le cloud et les importer dans Experience Platform à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >

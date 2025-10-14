@@ -112,7 +112,7 @@ Vous pouvez ajouter une icône de logo à la destination, comme illustré dans l
 
 ![Image de l’interface utilisateur affichant l’emplacement de l’icône.](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
 
-Pour ajouter un logo à votre carte de destination, vous devez partager l’image souhaitée avec l’équipe d’Adobe au moment de l’envoi de la destination [ révision](../../guides/submit-destination.md#logo).
+Pour ajouter un logo à votre carte de destination, vous devez partager l’image souhaitée avec l’équipe d’Adobe au moment de l’envoi de la destination [&#x200B; révision](../../guides/submit-destination.md#logo).
 
 ## Étapes suivantes {#next-steps}
 

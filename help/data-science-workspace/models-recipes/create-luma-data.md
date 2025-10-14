@@ -49,7 +49,7 @@ Le tutoriel suivant utilise un modèle personnalisé de propension à l’achat 
 
 ### Créer le schéma de données web Luma et ingérer les données
 
-Pour créer un modèle, vous devez disposer d’un jeu de données dans Experience Platform utilisé pour entraîner et noter votre modèle. Le tutoriel vidéo suivant du [cours Workspace de science des données](https://experienceleague.adobe.com/?lang=fr&recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=fr) vous guide tout au long de la création du schéma Luma et de l’ingestion des données utilisées par le modèle de propension à l’achat.
+Pour créer un modèle, vous devez disposer d’un jeu de données dans Experience Platform utilisé pour entraîner et noter votre modèle. Le tutoriel vidéo suivant du [cours Workspace de science des données](https://experienceleague.adobe.com/?lang=fr&recommended=ExperiencePlatform-U-1-2021.1.dsw&lang=fr) vous guide tout au long de la création du schéma Luma et de l’ingestion des données utilisées par le modèle de propension à l’achat.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3447156?captions=fre_fr)
 

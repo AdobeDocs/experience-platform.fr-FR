@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # Modèle de données Real-Time Customer Data Platform Insights B2C Edition
 
-Le modèle de données Real-Time Customer Data Platform Insights pour l’[ édition B2C](../../rtcdp/overview.md#rtcdp-b2c) expose les modèles de données et SQL qui alimentent les insights pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQL afin de créer des rapports Real-Time CDP pour vos cas d’utilisation d’indicateurs de performance clés (IPC) et marketing. Ces informations peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord définis par l’utilisateur. Consultez la documentation sur les insights de reporting de magasin accéléré pour découvrir [comment créer un modèle de données d’insights de reporting via Query Service pour l’utiliser avec les données de magasin accélérées et les tableaux de bord définis par l’utilisateur](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md).
+Le modèle de données Real-Time Customer Data Platform Insights pour l’[&#x200B; édition B2C](../../rtcdp/overview.md#rtcdp-b2c) expose les modèles de données et SQL qui alimentent les insights pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQL afin de créer des rapports Real-Time CDP pour vos cas d’utilisation d’indicateurs de performance clés (IPC) et marketing. Ces informations peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord définis par l’utilisateur. Consultez la documentation sur les insights de reporting de magasin accéléré pour découvrir [comment créer un modèle de données d’insights de reporting via Query Service pour l’utiliser avec les données de magasin accélérées et les tableaux de bord définis par l’utilisateur](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md).
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ L’image ci-dessous contient les champs de données appropriés dans chaque jeu
 
 #### Cas pratique du nombre de profils {#profile-count}
 
-La logique utilisée pour le widget [!UICONTROL Nombre de profils] renvoie le nombre total de profils fusionnés dans la banque de profils au moment où l’instantané a été pris. Pour plus d’informations, voir la documentation du widget [[!UICONTROL Profile count] ](../guides/profiles.md#profile-count) .
+La logique utilisée pour le widget [!UICONTROL Nombre de profils] renvoie le nombre total de profils fusionnés dans la banque de profils au moment où l’instantané a été pris. Pour plus d’informations, voir la documentation du widget [[!UICONTROL Profile count] &#x200B;](../guides/profiles.md#profile-count) .
 
 Le code SQL qui génère le widget [!UICONTROL Profile count] est visible dans la section réductible ci-dessous.
 
@@ -327,7 +327,7 @@ L’image ci-dessous contient les champs de données appropriés dans chaque jeu
 
 #### Cas d’utilisation de chevauchement d’identités (profils) {#profiles-identity-overlap}
 
-La logique utilisée dans le widget [!UICONTROL chevauchement des identités] affiche le chevauchement des profils dans votre **banque de profils** qui contiennent les deux identités sélectionnées. Pour plus d’informations, reportez-vous à la section du widget [[!UICONTROL chevauchement des identités] de la documentation du tableau de bord [!UICONTROL &#x200B; Profils] ](../guides/profiles.md#identity-overlap).
+La logique utilisée dans le widget [!UICONTROL chevauchement des identités] affiche le chevauchement des profils dans votre **banque de profils** qui contiennent les deux identités sélectionnées. Pour plus d’informations, reportez-vous à la section du widget [[!UICONTROL chevauchement des identités] de la documentation du tableau de bord [!UICONTROL &#x200B; Profils] &#x200B;](../guides/profiles.md#identity-overlap).
 
 Le code SQL qui génère le widget [!UICONTROL chevauchement d’identités] est visible dans la section réductible ci-dessous.
 

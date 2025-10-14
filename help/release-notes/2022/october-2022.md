@@ -34,8 +34,8 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | Fonctionnalité | Description |
 | --- | --- |
 | Gestion des données sensibles pour les flux de données | Les flux de données exploitent désormais plusieurs technologies Experience Platform pour gérer de manière appropriée les données sensibles selon les applications des réglementations telles que le Health Insurance Portability and Accountability Act (HIPAA). Consultez la section relative à la [gestion des données sensibles dans les flux de données](../../datastreams/overview.md#sensitive) pour plus d’informations. |
-| Extension [!DNL Splunk] pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Splunk] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la présentation de l’extension [[!DNL Splunk] ](../../tags/extensions/server/splunk/overview.md). |
-| Extension [!DNL Zendesk] pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Zendesk] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la présentation de l’extension [[!DNL Zendesk] ](../../tags/extensions/server/zendesk/overview.md). |
+| Extension [!DNL Splunk] pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Splunk] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la présentation de l’extension [[!DNL Splunk] &#x200B;](../../tags/extensions/server/splunk/overview.md). |
+| Extension [!DNL Zendesk] pour le transfert d’événement | Vous pouvez désormais envoyer des données à [!DNL Zendesk] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations, consultez la présentation de l’extension [[!DNL Zendesk] &#x200B;](../../tags/extensions/server/zendesk/overview.md). |
 
 {style="table-layout:auto"}
 
@@ -90,7 +90,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur XDM dans Experience Platform, consultez la [ Présentation du système XDM ](../../xdm/home.md).
+Pour plus d’informations sur XDM dans Experience Platform, consultez la [&#x200B; Présentation du système XDM &#x200B;](../../xdm/home.md).
 
 ## Query Service {#query-service}
 

@@ -38,7 +38,7 @@ Pour que [!DNL Flow Service] puisse se connecter à [!DNL ServiceNow], vous deve
 | `password` | Mot de passe pour la connexion au serveur [!DNL ServiceNow] pour l’authentification. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL ServiceNow] est `eb13cb25-47ab-407f-ba89-c0125281c563`. |
 
-Pour plus d’informations sur la prise en main, reportez-vous à [ce document ServiceNow](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET).
+Pour plus d’informations sur la prise en main, reportez-vous à [ce document ServiceNow](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&id=r_TableAPI-GET).
 
 ### Utilisation des API Experience Platform
 
@@ -109,4 +109,4 @@ Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant d
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL ServiceNow] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer des données de succès client dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/customer-success.md)
+* [Créez un flux de données pour importer des données de succès client dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/customer-success.md)

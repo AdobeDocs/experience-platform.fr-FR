@@ -33,7 +33,7 @@ Pour accéder au compte [!DNL Zendesk] sur Experience Platform, vous devez fourn
 
 Pour plus d’informations sur l’authentification de votre source [!DNL Zendesk], consultez la [[!DNL Zendesk] présentation de la source](../../../../connectors/customer-success/zendesk.md).
 
-![ Jeton API Zendesk ](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
+![&#x200B; Jeton API Zendesk &#x200B;](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
 ### Création d’un schéma Experience Platform pour [!DNL Zendesk]
 

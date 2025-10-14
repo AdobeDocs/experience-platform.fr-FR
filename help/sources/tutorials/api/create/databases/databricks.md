@@ -125,4 +125,4 @@ Une réponse réussie renvoie la nouvelle connexion, y compris votre identifiant
 Ce tutoriel vous a permis de créer une connexion entre votre compte [!DNL Databricks] et Experience Platform. Vous pouvez utiliser l’identifiant de connexion de base que vous venez de générer dans les tutoriels suivants :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/database-nosql.md)
+* [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)

@@ -28,7 +28,7 @@ La seconde partie commence par une analyse descriptive sur les données agrégé
 
 ## Prise en main
 
-Avant de lire ce guide, veuillez consulter le [[!DNL JupyterLab] guide de l’utilisateur](./overview.md) pour une présentation détaillée de [!DNL JupyterLab] et de son rôle dans l’espace de travail de science des données. En outre, si vous utilisez vos propres données, veuillez consulter la documentation relative à l’[accès aux données dans les notebooks  [!DNL Jupyterlab] ](./access-notebook-data.md). Ce guide contient des informations importantes sur les limites de données des notebooks.
+Avant de lire ce guide, veuillez consulter le [[!DNL JupyterLab] guide de l’utilisateur](./overview.md) pour une présentation détaillée de [!DNL JupyterLab] et de son rôle dans l’espace de travail de science des données. En outre, si vous utilisez vos propres données, veuillez consulter la documentation relative à l’[accès aux données dans les notebooks  [!DNL Jupyterlab] &#x200B;](./access-notebook-data.md). Ce guide contient des informations importantes sur les limites de données des notebooks.
 
 Ce notebook utilise un jeu de données de valeurs moyennes sous la forme de données d’événements d’expérience Adobe Analytics trouvées dans Analytics Analysis Workspace. Pour utiliser le notebook AED, vous devez définir votre tableau de données avec les valeurs `target_table` et `target_table_id` suivantes. Tout jeu de données de valeurs moyennes peut être utilisé.
 
@@ -72,7 +72,7 @@ pd.set_option('display.max_colwidth', -1)
 
 [!DNL JupyterLab] sur Experience Platform vous permet d’utiliser SQL dans un notebook [!DNL Python] pour accéder aux données via [Query Service](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=fr). L’accès aux données par le biais de [!DNL Query Service] peut s’avérer utile pour la gestion de jeux de données volumineux grâce à ses temps d’exécution plus performants. Notez que l’interrogation de données à l’aide de [!DNL Query Service] est limitée à dix minutes de traitement.
 
-Avant d’utiliser [!DNL Query Service] dans [!DNL JupyterLab], assurez-vous de bien comprendre le fonctionnement de la syntaxe SQL de [[!DNL Query Service] ](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=fr).
+Avant d’utiliser [!DNL Query Service] dans [!DNL JupyterLab], assurez-vous de bien comprendre le fonctionnement de la syntaxe SQL de [[!DNL Query Service] &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=fr).
 
 Pour utiliser Query Service dans JupyterLab, vous devez d’abord créer une connexion entre votre notebook Python de travail et Query Service. Pour ce faire, exécutez la cellule suivante.
 

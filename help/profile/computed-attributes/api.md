@@ -21,7 +21,7 @@ Pour en savoir plus sur les attributs calculés, commencez par lire la [présent
 
 ## Commencer
 
-Le point de terminaison d’API utilisé dans ce guide fait partie de l’ [ API Real-Time Customer Profile](https://www.adobe.com/go/profile-apis-en).
+Le point de terminaison d’API utilisé dans ce guide fait partie de l’ [&#x200B; API Real-Time Customer Profile](https://www.adobe.com/go/profile-apis-en).
 
 Avant de poursuivre, consultez le [guide de prise en main de l’API Profile](../api/getting-started.md) pour obtenir des liens vers la documentation recommandée, un guide de lecture des exemples d’appels API qui apparaissent dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
 
@@ -211,7 +211,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste des 3 derniers at
 | Propriété | Description |
 | -------- | ----------- |
 | `_links` | Objet contenant les informations de pagination nécessaires pour accéder à la dernière page de résultats, à la page de résultats suivante, à la page de résultats précédente ou à la page de résultats active. |
-| `computedAttributes` | Tableau contenant les attributs calculés en fonction de vos paramètres de requête. Vous trouverez plus d’informations sur le tableau d’attributs calculés dans la section [ de récupération d’un attribut calculé spécifique ](#get). |
+| `computedAttributes` | Tableau contenant les attributs calculés en fonction de vos paramètres de requête. Vous trouverez plus d’informations sur le tableau d’attributs calculés dans la section [&#x200B; de récupération d’un attribut calculé spécifique &#x200B;](#get). |
 | `_page` | Objet contenant des métadonnées sur les résultats renvoyés. Cela inclut des informations sur le décalage actuel, le nombre d’attributs calculés renvoyés, le nombre total d’attributs calculés, ainsi que la limite des attributs calculés renvoyés. |
 
 +++

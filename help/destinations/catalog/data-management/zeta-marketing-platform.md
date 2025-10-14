@@ -152,4 +152,4 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ## Ressources supplémentaires {#additional-resources}
 
-* [ Base de connaissances Zeta ](https://knowledgebase.zetaglobal.com/kb/)
+* [&#x200B; Base de connaissances Zeta &#x200B;](https://knowledgebase.zetaglobal.com/kb/)

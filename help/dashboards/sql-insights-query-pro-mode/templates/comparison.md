@@ -30,11 +30,11 @@ La boîte de dialogue indique également le nombre de filtres appliqués (dans l
 
 Après avoir défini les audiences et la période, sélectionnez **[!UICONTROL Appliquer]** pour actualiser le tableau de bord [!UICONTROL Comparaison des audiences].
 
-![ La boîte de dialogue Filtres dans le tableau de bord de comparaison d’audiences avec l’option Appliquer mise en surbrillance.](../../images/sql-insights-query-pro-mode/templates/audience-comparison-filters-apply.png)
+![&#x200B; La boîte de dialogue Filtres dans le tableau de bord de comparaison d’audiences avec l’option Appliquer mise en surbrillance.](../../images/sql-insights-query-pro-mode/templates/audience-comparison-filters-apply.png)
 
 Le tableau de bord affiche désormais les graphiques comparatifs affichés côte à côte pour chaque audience.
 
-![ Le tableau de bord de comparaison des audiences avec plusieurs graphiques comparant les mesures pour chaque audience.](../../images/sql-insights-query-pro-mode/templates/audience-comparison-dashboard.png)
+![&#x200B; Le tableau de bord de comparaison des audiences avec plusieurs graphiques comparant les mesures pour chaque audience.](../../images/sql-insights-query-pro-mode/templates/audience-comparison-dashboard.png)
 
 ## Graphiques de comparaison d’audiences disponibles {#available-charts}
 

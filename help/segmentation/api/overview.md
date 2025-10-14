@@ -28,7 +28,7 @@ Pour plus d’informations sur l’utilisation de ce point d’entrée, consulte
 
 Les tâches d’exportation sont des processus asynchrones utilisés pour conserver les membres des segments d’audience dans les jeux de données. Vous pouvez utiliser le point d’entrée `/export/jobs` pour récupérer toutes les tâches d’exportation, créer une tâche d’exportation, récupérer les détails d’une tâche d’exportation spécifique ou annuler une tâche d’exportation spécifique.
 
-Pour plus d’informations sur l’utilisation de ce point d’entrée, consultez le [ guide des points d’entrée des tâches d’exportation](./export-jobs.md).
+Pour plus d’informations sur l’utilisation de ce point d’entrée, consultez le [&#x200B; guide des points d’entrée des tâches d’exportation](./export-jobs.md).
 
 ## Audiences externes
 
@@ -54,7 +54,7 @@ Pour plus d’informations sur l’utilisation de ce point d’entrée, consulte
 
 Les définitions de segment définissent les profils qui feront partie de chaque audience. Vous pouvez utiliser le point d’entrée `/segment/definitions` pour gérer les définitions de segment.
 
-Pour plus d’informations sur l’utilisation de ce point d’entrée, consultez le [ guide des points d’entrée des définitions de segment](./segment-definitions.md).
+Pour plus d’informations sur l’utilisation de ce point d’entrée, consultez le [&#x200B; guide des points d’entrée des définitions de segment](./segment-definitions.md).
 
 ## Tâches de segmentation
 

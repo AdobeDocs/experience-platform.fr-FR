@@ -39,7 +39,7 @@ Pour plus d’informations, reportez-vous à la [[!DNL SAP Commerce] documentati
 
 ### Création d’un schéma Experience Platform {#create-platform-schema}
 
-Avant de créer une connexion source [!DNL SAP Commerce], vous devez également vous assurer de créer d’abord un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma[ consultez le tutoriel sur la ](../../../../../xdm/schema/composition.md)création d’un schéma Experience Platform).
+Avant de créer une connexion source [!DNL SAP Commerce], vous devez également vous assurer de créer d’abord un schéma Experience Platform à utiliser pour votre source. Pour obtenir des instructions complètes sur la création d’un schéma[&#x200B; consultez le tutoriel sur la &#x200B;](../../../../../xdm/schema/composition.md)création d’un schéma Experience Platform).
 
 Développez la section suivante pour afficher un exemple de schéma.
 
@@ -195,7 +195,7 @@ Les sections ci-dessous fournissent des ressources supplémentaires auxquelles v
 
 ### Mappage {#mapping}
 
-Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [ Guide de l’interface utilisateur de la préparation des données ](../../../../../data-prep/ui/mapping.md).
+Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [&#x200B; Guide de l’interface utilisateur de la préparation des données &#x200B;](../../../../../data-prep/ui/mapping.md).
 
 Les configurations de mappage de votre flux de données varient en fonction de votre schéma et du type d’objet que vous choisissez d’ingérer.
 

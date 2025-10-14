@@ -16,7 +16,7 @@ ht-degree: 33%
 
 Activez les profils de vos campagnes [!DNL LinkedIn] pour le ciblage, la personnalisation et la suppression des audiences, en fonction des e-mails hachés et des identifiants mobiles.
 
-![ Destination LinkedIn dans l’interface utilisateur de Adobe Experience Platform ](../../assets/catalog/social/linkedin/catalog.png)
+![&#x200B; Destination LinkedIn dans l’interface utilisateur de Adobe Experience Platform &#x200B;](../../assets/catalog/social/linkedin/catalog.png)
 
 ## Cas d’utilisation
 
@@ -94,7 +94,7 @@ Si vous choisissez de hacher les adresses e-mail vous-même, veillez à respecte
 >Les données des espaces de noms non hachés sont automatiquement hachées par [!DNL Experience Platform] lors de l’activation.
 >&#x200B;> Les données source des attributs ne sont pas automatiquement hachées.
 > 
-> Lors de l’étape [ Mappage d’identité ](../../ui/activate-segment-streaming-destinations.md#mapping), lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation.
+> Lors de l’étape [&#x200B; Mappage d’identité &#x200B;](../../ui/activate-segment-streaming-destinations.md#mapping), lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation.
 > 
 > L’option **[!UICONTROL Appliquer la transformation]** ne s’affiche que lorsque vous sélectionnez des attributs comme champs source. Elle ne s’affiche pas lorsque vous choisissez des espaces de noms.
 
@@ -135,7 +135,7 @@ Une fois le jeton expiré, les exportations de données vers la destination cess
 3. Sélectionnez le compte à actualiser, puis les points de suspension et sélectionnez **[!UICONTROL Modifier les détails]**.
    ![Sélectionnez Modifier les détails](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
 4. Dans la fenêtre modale, sélectionnez **[!UICONTROL Reconnecter OAuth]** et réauthentifier à l’aide de vos informations d’identification LinkedIn.
-   ![Fenêtre modale avec l’option Reconnecter OAuth ](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
+   ![Fenêtre modale avec l’option Reconnecter OAuth &#x200B;](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
 
 >[!SUCCESS]
 > 

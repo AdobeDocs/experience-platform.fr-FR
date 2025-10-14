@@ -18,9 +18,9 @@ ht-degree: 75%
 
 [!DNL QuestionPro Intercept Surveys] est une extension d’enquête dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.90096.questionpro-surveys.html).
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
 
-![Extension Intercept Surveys de QuestionPro ](../../assets/catalog/survey/web-intercept-surveys/catalog.png)
+![Extension Intercept Surveys de QuestionPro &#x200B;](../../assets/catalog/survey/web-intercept-surveys/catalog.png)
 
 ## Conditions préalables  {#prerequisites}
 

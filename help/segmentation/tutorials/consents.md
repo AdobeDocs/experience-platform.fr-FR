@@ -32,7 +32,7 @@ Le respect des valeurs de consentement du client ou de la cliente nécessite une
 
 Pour respecter les consentements et préférences des clients, l’un des schémas qui fait partie de votre schéma d’union [!UICONTROL Profil individuel XDM] doit contenir le groupe de champs standard **[!UICONTROL Consentements et préférences]**.
 
-Pour plus d’informations sur la structure et le cas d’utilisation prévu de chacun des attributs fournis par le groupe de champs, consultez le [ guide de référence des consentements et des préférences ](../../xdm/field-groups/profile/consents.md). Pour obtenir des instructions détaillées sur l’ajout d’un groupe de champs à un schéma, reportez-vous au guide de l’interface utilisateur [XDM](../../xdm/ui/resources/schemas.md#add-field-groups).
+Pour plus d’informations sur la structure et le cas d’utilisation prévu de chacun des attributs fournis par le groupe de champs, consultez le [&#x200B; guide de référence des consentements et des préférences &#x200B;](../../xdm/field-groups/profile/consents.md). Pour obtenir des instructions détaillées sur l’ajout d’un groupe de champs à un schéma, reportez-vous au guide de l’interface utilisateur [XDM](../../xdm/ui/resources/schemas.md#add-field-groups).
 
 Une fois que le groupe de champs a été ajouté à un [schéma activé pour Profile](../../xdm/ui/resources/schemas.md#profile) et que ses champs ont été utilisés pour ingérer des données de consentement à partir de votre application d’expérience, vous pouvez utiliser les attributs de consentement collectés dans vos règles de segment.
 

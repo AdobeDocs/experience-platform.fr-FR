@@ -31,7 +31,7 @@ Pour effectuer diverses transformations sur les données exportées vers des des
 
 Pour utiliser des champs calculés pour les transformations de données :
 
-1. [Connexion](/help/destinations/ui/connect-destination.md) à une destination d’espace de stockage souhaitée. Lors de la connexion à la destination cloud souhaitée, activez l’option **[!UICONTROL Exporter des tableaux, des mappages]** des objets [ désactivée](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
+1. [Connexion](/help/destinations/ui/connect-destination.md) à une destination d’espace de stockage souhaitée. Lors de la connexion à la destination cloud souhaitée, activez l’option **[!UICONTROL Exporter des tableaux, des mappages]** des objets [&#x200B; désactivée](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
 2. Parcourez les [étapes d’activation pour les destinations de stockage dans le cloud](/help/destinations/ui/activate-batch-profile-destinations.md) et accédez à l’étape [mappage](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 
 ## Utiliser des champs calculés {#how-to-export-calculated-fields}
@@ -101,7 +101,7 @@ Les fonctions ci-dessous, spécifiques à la gestion des exportations de tableau
 
 ## Exemples de fonctions utilisées pour effectuer des transformations de données {#examples}
 
-Consultez des exemples et des informations supplémentaires dans les sections ci-dessous pour certaines des fonctions répertoriées ci-dessus. Pour le reste des fonctions répertoriées, reportez-vous à la documentation sur les fonctions [générales) dans la section Préparation des données ](/help/data-prep/functions.md).
+Consultez des exemples et des informations supplémentaires dans les sections ci-dessous pour certaines des fonctions répertoriées ci-dessus. Pour le reste des fonctions répertoriées, reportez-vous à la documentation sur les fonctions [générales) dans la section Préparation des données &#x200B;](/help/data-prep/functions.md).
 
 ### `array_to_string` fonction pour exporter des tableaux {#array-to-string-function-export-arrays}
 

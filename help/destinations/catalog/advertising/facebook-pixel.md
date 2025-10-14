@@ -18,7 +18,7 @@ Le [!DNL Facebook Pixel] est un outil d&#39;analyse qui vous permet de mesurer l
 
 [!DNL Facebook Pixel] est une extension publicitaire dans Adobe Experience Platform. Pour plus d’informations sur la fonctionnalité de l’extension, voir le [site web Pixel Facebook](https://developers.facebook.com/docs/facebook-pixel/).
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension Pixel Facebook](../../assets/catalog/advertising/facebook-pixel/catalog.png)
 

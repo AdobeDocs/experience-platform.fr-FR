@@ -96,7 +96,7 @@ Une fois votre jeu de données configuré, vous devez fournir des détails sur v
 
 ## Mappage
 
-Utilisez l’interface de mappage pour mapper vos données source aux champs de schéma appropriés avant d’ingérer des données vers Experience Platform.  Pour plus d’informations, consultez le guide de mappage [ dans l’interface utilisateur](../../../../../data-prep/ui/mapping.md)
+Utilisez l’interface de mappage pour mapper vos données source aux champs de schéma appropriés avant d’ingérer des données vers Experience Platform.  Pour plus d’informations, consultez le guide de mappage [&#x200B; dans l’interface utilisateur](../../../../../data-prep/ui/mapping.md)
 
 Le mappage est utilisé spécifiquement pour transférer des données **d’objectif** de [!DNL Didomi] vers le jeu de données Experience Platform. Ces objectifs représentent les choix de consentement de l’utilisateur (par exemple, pour les analyses, la personnalisation, la publicité, etc.) et sont les seuls champs de mappage acceptés dans cette intégration.
 

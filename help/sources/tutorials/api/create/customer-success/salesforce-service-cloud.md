@@ -13,7 +13,7 @@ ht-degree: 24%
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Lisez ce tutoriel pour savoir comment créer une connexion de base pour [!DNL Salesforce Service Cloud] à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lisez ce tutoriel pour savoir comment créer une connexion de base pour [!DNL Salesforce Service Cloud] à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
@@ -181,4 +181,4 @@ Une réponse réussie renvoie votre nouvelle connexion de base ainsi que son ide
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL Salesforce Service Cloud] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer des données de succès client dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/customer-success.md)
+* [Créez un flux de données pour importer des données de succès client dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/customer-success.md)

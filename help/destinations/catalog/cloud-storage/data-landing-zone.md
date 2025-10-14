@@ -30,7 +30,7 @@ Le connecteur de destination [!DNL Data Landing Zone] est disponible pour les cl
 ## Connexion à votre stockage [!UICONTROL Data Landing Zone] via l’API ou l’interface utilisateur {#connect-api-or-ui}
 
 * Pour vous connecter à votre emplacement de stockage [!UICONTROL Data Landing Zone] à l’aide de l’interface utilisateur d’Experience Platform, lisez les sections [Se connecter à la destination](#connect) et [Activer des audiences vers cette destination](#activate) ci-dessous.
-* Pour vous connecter par programmation à votre emplacement de stockage [!UICONTROL Data Landing Zone], consultez le tutoriel [ Activer les audiences vers des destinations basées sur des fichiers à l’aide de l’API Flow Service](../../api/activate-segments-file-based-destinations.md).
+* Pour vous connecter par programmation à votre emplacement de stockage [!UICONTROL Data Landing Zone], consultez le tutoriel [&#x200B; Activer les audiences vers des destinations basées sur des fichiers à l’aide de l’API Flow Service](../../api/activate-segments-file-based-destinations.md).
 
 ## Audiences prises en charge {#supported-audiences}
 
@@ -228,7 +228,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination'
 
 | Paramètres de requête | Description |
 | --- | --- |
-| `dlz_destination` | Ajoutez le paramètre de requête `dlz_destination` pour spécifier que vous souhaitez récupérer le type d’informations d’identification de conteneur [!DNL Data Landing Zone] *destination*. Pour vous connecter et récupérer les informations d’identification d’une Data Landing Zone *source*, consultez la documentation sur les [ sources](/help/sources/connectors/cloud-storage/data-landing-zone.md). |
+| `dlz_destination` | Ajoutez le paramètre de requête `dlz_destination` pour spécifier que vous souhaitez récupérer le type d’informations d’identification de conteneur [!DNL Data Landing Zone] *destination*. Pour vous connecter et récupérer les informations d’identification d’une Data Landing Zone *source*, consultez la documentation sur les [&#x200B; sources](/help/sources/connectors/cloud-storage/data-landing-zone.md). |
 
 {style="table-layout:auto"}
 
@@ -319,7 +319,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 >* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
-Consultez [ Activer les données d’audience vers des destinations d’exportation de profils par lots ](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Consultez [&#x200B; Activer les données d’audience vers des destinations d’exportation de profils par lots &#x200B;](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Planification
 

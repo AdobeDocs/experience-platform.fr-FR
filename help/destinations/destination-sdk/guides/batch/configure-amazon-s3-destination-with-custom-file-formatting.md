@@ -413,7 +413,7 @@ Une réponse réussie renvoie la nouvelle configuration de destination, y compri
 
 En fonction des configurations ci-dessus, le catalogue des Experience Platform affiche désormais une nouvelle carte de destination privée que vous pouvez utiliser.
 
-![ Enregistrement d’écran affichant la page du catalogue des destinations avec une carte de destination sélectionnée.](../../assets/guides/batch/destination-card.gif)
+![&#x200B; Enregistrement d’écran affichant la page du catalogue des destinations avec une carte de destination sélectionnée.](../../assets/guides/batch/destination-card.gif)
 
 Dans les images et enregistrements ci-dessous, notez comment les options du [workflow d’activation pour les destinations basées sur des fichiers](../../../ui/activate-batch-profile-destinations.md) correspondent aux options que vous avez sélectionnées dans la configuration de destination.
 
@@ -423,7 +423,7 @@ Lorsque vous renseignez des détails sur la destination, notez comment les champ
 >
 >L’ordre dans lequel vous ajoutez les champs de données personnalisés à la configuration de destination n’est pas reflété dans l’interface utilisateur. Les champs de données personnalisés sont toujours affichés dans l’ordre indiqué dans l’enregistrement à l’écran ci-dessous.
 
-![ Renseignez les détails de destination](../../assets/guides/batch/file-configuration-options.gif)
+![&#x200B; Renseignez les détails de destination](../../assets/guides/batch/file-configuration-options.gif)
 
 Lors de la planification des intervalles d’exportation, notez comment les champs sont apparus comme les champs que vous avez configurés dans la configuration `batchConfig`.
 ![options de planification d’exportation](../../assets/guides/batch/file-export-scheduling.png)

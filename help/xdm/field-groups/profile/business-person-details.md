@@ -34,7 +34,7 @@ ht-degree: 11%
 | `b2b.personSource` | Chaîne | Source de laquelle les informations de la personne ont été reçues. |
 | `b2b.personStatus` | Chaîne | État actuel du marketing ou des ventes de la personne. |
 | `b2b.personType` | Chaîne | Type de personne B2B. |
-| `extSourceSystemAudit` | [ Attributs d’audit système Source externes](../../data-types/external-source-system-audit-attributes.md) | Si la relation homme-entreprise provient d’un système source externe, cet objet capture les attributs de contrôle de ce système. |
+| `extSourceSystemAudit` | [&#x200B; Attributs d’audit système Source externes](../../data-types/external-source-system-audit-attributes.md) | Si la relation homme-entreprise provient d’un système source externe, cet objet capture les attributs de contrôle de ce système. |
 | `extendedWorkDetails` | Objet | Capture d’autres informations relatives au travail de la personne. |
 | `extendedWorkDetails.assistantDetails` | Objet | Capture les attributs suivants liés à l’assistant de la personne : <ul><li>`name` : ([Nom de la personne](../../data-types/person-name.md)) Nom complet de l’assistant.</li><li>`phone` : ([Numéro de téléphone](../../data-types/phone-number.md)) numéro de téléphone de l’assistant.</li></ul> |
 | `extendedWorkDetails.departments` | Tableau de chaînes | Liste des noms des départements où la personne travaille. |

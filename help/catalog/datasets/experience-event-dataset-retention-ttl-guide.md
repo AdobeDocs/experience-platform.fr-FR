@@ -126,7 +126,7 @@ GET /ttl/{DATASET_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{DATASET_ID}` | Chaîne générée par le système qui identifie de manière unique un jeu de données. Pour trouver un identifiant de jeu de données, utilisez le point d’entrée `/datasets`. Pour obtenir des instructions sur le filtrage des réponses pour les jeux de données pertinents[ consultez le guide ](../api/list-objects.md)API list catalog objects). |
+| `{DATASET_ID}` | Chaîne générée par le système qui identifie de manière unique un jeu de données. Pour trouver un identifiant de jeu de données, utilisez le point d’entrée `/datasets`. Pour obtenir des instructions sur le filtrage des réponses pour les jeux de données pertinents[&#x200B; consultez le guide &#x200B;](../api/list-objects.md)API list catalog objects). |
 
 **Requête**
 
@@ -388,6 +388,6 @@ Pour plus d’informations, consultez le guide [Créer des jeux de données dér
 
 Maintenant que vous avez appris à gérer les paramètres de TTL pour l’expiration au niveau des lignes, consultez la documentation suivante pour mieux comprendre la gestion des TTL :
 
-- Tâches de conservation : découvrez comment planifier et automatiser les expirations de jeux de données dans l’interface utilisateur d’Experience Platform à l’aide du [ guide de l’interface utilisateur du cycle de vie des données ](../../hygiene/ui/dataset-expiration.md) ou vérifiez les configurations de conservation des jeux de données et que les enregistrements expirés sont supprimés.
+- Tâches de conservation : découvrez comment planifier et automatiser les expirations de jeux de données dans l’interface utilisateur d’Experience Platform à l’aide du [&#x200B; guide de l’interface utilisateur du cycle de vie des données &#x200B;](../../hygiene/ui/dataset-expiration.md) ou vérifiez les configurations de conservation des jeux de données et que les enregistrements expirés sont supprimés.
 - [Guide du point d’entrée de l’API d’expiration de jeu de données](../../hygiene/api/dataset-expiration.md) : découvrez comment supprimer des jeux de données entiers plutôt que seulement des lignes. Découvrez comment planifier, gérer et automatiser l’expiration des jeux de données à l’aide de l’API pour garantir une conservation efficace des données.
 - [Présentation des politiques d’utilisation des données](../../data-governance/policies/overview.md) : découvrez comment aligner votre stratégie de conservation des données sur les exigences de conformité plus larges et les restrictions d’utilisation marketing.

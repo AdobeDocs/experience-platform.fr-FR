@@ -32,11 +32,11 @@ L’écran **[!UICONTROL Informations de base]** s’affiche, vous invitant à s
 
 L’écran **[!UICONTROL Définir votre objectif]** s’affiche. Sélectionnez la flèche de liste déroulante, puis un type d’objectif dans la fenêtre déroulante qui s’affiche.
 
-![ plas-select-a-goal](../assets/../b2b-ai-ml-services/assets/plas-define-goal.png)
+![&#x200B; plas-select-a-goal](../assets/../b2b-ai-ml-services/assets/plas-define-goal.png)
 
 La boîte de dialogue **[!UICONTROL Particularités des objectifs]** s’ouvre. Sélectionnez la flèche de liste déroulante, puis le nom du champ d’objectif dans la fenêtre déroulante qui s’affiche.
 
-![ plas-select-a-goal-field-name](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-name.png)
+![&#x200B; plas-select-a-goal-field-name](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-name.png)
 
 La sélection **[!UICONTROL Conditions de l’objectif]** s’affiche. Sélectionnez la flèche de liste déroulante, puis sélectionnez une condition dans la fenêtre déroulante qui s’affiche.
 
@@ -56,7 +56,7 @@ Pour ajouter des champs supplémentaires, sélectionnez **[!UICONTROL Ajouter un
 
 Pour configurer la période de prédiction, sélectionnez la flèche de liste déroulante, puis sélectionnez la période de votre choix.
 
-![ plas-prediction-timeframe](../assets/../b2b-ai-ml-services/assets/plas-prediction-timeframe.png)
+![&#x200B; plas-prediction-timeframe](../assets/../b2b-ai-ml-services/assets/plas-prediction-timeframe.png)
 
 La stratégie de fusion sélectionnée détermine la manière dont les valeurs de champ d’un profil de personne sont sélectionnées. À l’aide de la flèche de liste déroulante, sélectionnez la stratégie de fusion de votre choix, puis sélectionnez **[!UICONTROL Terminer]**.
 
@@ -76,7 +76,7 @@ Sélectionnez le score pour afficher les détails et des informations supplémen
 
 ![plas-score-additional-information](../assets/../b2b-ai-ml-services/assets/plas-score-info.png)
 
-Pour plus d’informations sur les codes d’erreur visibles sous les détails de la dernière exécution, reportez-vous à la section sur les [ codes d’erreur de pipeline d’IA dédiés aux pistes ](#leads-ai-pipeline-error-codes) de ce document.
+Pour plus d’informations sur les codes d’erreur visibles sous les détails de la dernière exécution, reportez-vous à la section sur les [&#x200B; codes d’erreur de pipeline d’IA dédiés aux pistes &#x200B;](#leads-ai-pipeline-error-codes) de ce document.
 
 ## Modifier un score
 

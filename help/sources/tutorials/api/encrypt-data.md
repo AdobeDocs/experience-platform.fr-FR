@@ -624,4 +624,4 @@ Dans ce scénario, l’exécution du flux échoue et renvoie un message d’erre
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une paire de clés de chiffrement pour vos données d’espace de stockage dans le cloud et un flux de données pour ingérer vos données chiffrées à l’aide de [!DNL Flow Service API]. Pour connaître les mises à jour de statut sur l’exhaustivité, les erreurs et les mesures de votre flux de données, consultez le guide sur la [surveillance de votre flux de données à l’aide de l’API [!DNL Flow Service] ](./monitor.md).
+En suivant ce tutoriel, vous avez créé une paire de clés de chiffrement pour vos données d’espace de stockage dans le cloud et un flux de données pour ingérer vos données chiffrées à l’aide de [!DNL Flow Service API]. Pour connaître les mises à jour de statut sur l’exhaustivité, les erreurs et les mesures de votre flux de données, consultez le guide sur la [surveillance de votre flux de données à l’aide de l’API [!DNL Flow Service] &#x200B;](./monitor.md).

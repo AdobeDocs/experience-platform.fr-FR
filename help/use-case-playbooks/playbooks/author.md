@@ -38,7 +38,7 @@ Dans le panneau de navigation de gauche, sélectionnez **[!UICONTROL Playbooks]*
 
 Sélectionnez **[!UICONTROL Nouveau playbook]**, puis sélectionnez **Générer le playbook avec l’assistant d’IA**.
 
-![ L’interface de création du playbook affichant l’option « Générer le playbook avec l’assistant AI » sélectionnée.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
+![&#x200B; L’interface de création du playbook affichant l’option « Générer le playbook avec l’assistant AI » sélectionnée.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
 
 Utilisez le champ d’invite pour décrire le cas d’utilisation. Par exemple :
 
@@ -64,7 +64,7 @@ Pour vous assurer que les ingénieurs de données disposent de tous les détails
 
 Une fois les métadonnées générées, sélectionnez **[!UICONTROL Modifier la carte de parcours]** pour ajuster les étapes de la carte de parcours selon les besoins.
 
-![ Le bouton « Modifier la carte de parcours » pour modifier les étapes de la carte de parcours ](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map-button.png)
+![&#x200B; Le bouton « Modifier la carte de parcours » pour modifier les étapes de la carte de parcours &#x200B;](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map-button.png)
 
 ![Interface de l’éditeur de carte de parcours permettant d’ajuster les étapes après avoir capturé les métadonnées du playbook.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map.png)
 

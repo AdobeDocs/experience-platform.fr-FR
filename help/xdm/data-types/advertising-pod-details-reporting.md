@@ -13,7 +13,7 @@ ht-degree: 6%
 
 [!UICONTROL &#x200B; La création de rapports sur les détails de la capsule Advertising &#x200B;] est un type de données XDM (Experience Data Model) standard. Il définit une séquence ou un groupe de publicités généralement lues l’une après l’autre lors des pauses de contenu. Utilisez le type de données [!UICONTROL Rapport sur les détails de la capsule Advertising] pour capturer des détails tels que l’ID de coupure publicitaire, un nom convivial pour la coupure publicitaire, l’index des publicités pendant la coupure et le décalage de la coupure publicitaire dans la chronologie du contenu en secondes.
 
-![ Diagramme du type de données de rapport Détails de la capsule Advertising.](../images/data-types/advertising-pod-details-information.png)
+![&#x200B; Diagramme du type de données de rapport Détails de la capsule Advertising.](../images/data-types/advertising-pod-details-information.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 |----------------------------|------------------------|-----------|-------------------------------------------------------|

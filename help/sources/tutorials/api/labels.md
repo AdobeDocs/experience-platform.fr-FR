@@ -15,7 +15,7 @@ Vous pouvez utiliser les fonctionnalités fournies par [contrôle d’accès bas
 
 Lorsque vous ajoutez un libellé d’accès à un flux de données spécifique, seuls les utilisateurs et utilisatrices ayant accès à un rôle auquel ce libellé est affecté peuvent afficher et modifier ce flux de données. Si un flux de données de sources n’est marqué d’aucun libellé, il est visible par tous les utilisateurs appartenant à votre organisation. Par exemple, si vous appliquez le libellé C12 à un flux de données, les utilisateurs affectés à un rôle qui ne dispose pas du libellé C12 ne pourront pas afficher et modifier le flux de données avec le libellé C12.
 
-Lisez ce guide pour plus d’informations sur la manière d’appliquer des libellés d’accès à vos flux de données sources à l’aide de l’API [[!DNL Flow Service] ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lisez ce guide pour plus d’informations sur la manière d’appliquer des libellés d’accès à vos flux de données sources à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Commencer
 

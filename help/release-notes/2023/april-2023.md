@@ -81,7 +81,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | ----------- | ----------- |
-| Connexion [[!DNL Salesforce Marketing Cloud Account Engagement] ](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) | Utilisez la destination Engagement du compte de Marketing Cloud Salesforce (anciennement Pardot) pour capturer, suivre, noter et évaluer des pistes. Utilisez cette destination pour les cas d’utilisation B2B impliquant plusieurs services et décideurs/décideuses qui nécessitent des cycles de vente et de décision plus longs. |
+| Connexion [[!DNL Salesforce Marketing Cloud Account Engagement] &#x200B;](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) | Utilisez la destination Engagement du compte de Marketing Cloud Salesforce (anciennement Pardot) pour capturer, suivre, noter et évaluer des pistes. Utilisez cette destination pour les cas d’utilisation B2B impliquant plusieurs services et décideurs/décideuses qui nécessitent des cycles de vente et de décision plus longs. |
 
 {style="table-layout:auto"}
 
@@ -139,7 +139,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur XDM dans Experience Platform, consultez la [ Présentation du système XDM ](../../xdm/home.md).
+Pour plus d’informations sur XDM dans Experience Platform, consultez la [&#x200B; Présentation du système XDM &#x200B;](../../xdm/home.md).
 
 ## Real-Time Customer Data Platform
 
@@ -152,7 +152,7 @@ Basée sur Experience Platform, Real-time Customer Data Platform ([!DNL Real-Ti
 | Page d’accueil Real-Time CDP améliorée | La [page d’accueil Real-Time CDP](https://experience.adobe.com) a été améliorée. Son aspect a été actualisé et ses performances sont accrues. La page d’accueil prend désormais en charge les autorisations et présente des widgets pertinents pour les fonctionnalités auxquelles vous avez accès. Pour plus d’informations, reportez-vous à la section [Présentation du tableau de bord de la page d’accueil Real-Time CDP](../../rtcdp/home-page-dashboards.md). |
 | Enquête d’auto-identification | L’enquête d’auto-identification est un court questionnaire présenté sur la page d’accueil de l’interface utilisateur d’Adobe Experience Platform. Utilisez l’enquête d’auto-identification pour créer votre profil personnel Experience Platform et recevoir des directives personnalisées basées sur vos sélections. Pour plus d’informations, consultez la [présentation de l’enquête d’auto-identification](../../landing/self-identification.md). |
 
-Pour plus d’informations sur [!DNL Real-Time CDP], consultez la présentation [[!DNL Real-Time CDP] ](../../rtcdp/overview.md).
+Pour plus d’informations sur [!DNL Real-Time CDP], consultez la présentation [[!DNL Real-Time CDP] &#x200B;](../../rtcdp/overview.md).
 
 ## Profil client en temps réel {#profile}
 

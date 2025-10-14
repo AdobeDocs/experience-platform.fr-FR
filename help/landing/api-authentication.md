@@ -88,7 +88,7 @@ Une fois que vous avez créé un projet, sélectionnez **[!UICONTROL Ajouter une
 
 L’écran **[!UICONTROL Ajouter une API]** s’affiche. Sélectionnez l’icône de produit pour **[!UICONTROL Adobe Experience Platform]**, puis choisissez **[!UICONTROL API Experience Platform]** avant de sélectionner **[!UICONTROL Suivant]**.
 
-![Sélectionnez API Experience Platform dans l’écran Ajouter une API ](./images/api-authentication/platform-api.png).
+![Sélectionnez API Experience Platform dans l’écran Ajouter une API &#x200B;](./images/api-authentication/platform-api.png).
 
 >[!TIP]
 >

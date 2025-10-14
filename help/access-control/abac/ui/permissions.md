@@ -166,7 +166,7 @@ Les groupes d’utilisateurs consistent en plusieurs utilisateurs qui ont été 
 
 Sélectionnez l’onglet **[!UICONTROL Groupes d’utilisateurs]** pour ouvrir l’espace de travail des groupes d’utilisateurs du rôle, puis sélectionnez **[!UICONTROL Ajouter des groupes]** pour affecter des groupes d’utilisateurs au rôle.
 
-![Espace de travail Groupes d’utilisateurs du rôle avec l’option Ajouter des groupes ](../../images/flac-ui/flac-user-groups.png)
+![Espace de travail Groupes d’utilisateurs du rôle avec l’option Ajouter des groupes &#x200B;](../../images/flac-ui/flac-user-groups.png)
 
 La boîte de dialogue **[!UICONTROL Ajouter des groupes]** s’affiche. Sélectionnez dans la liste les groupes d’utilisateurs que vous souhaitez ajouter au rôle. Vous pouvez également utiliser la barre de recherche pour rechercher le groupe d’utilisateurs en saisissant le nom du groupe, puis sélectionner **[!UICONTROL Enregistrer]**.
 

@@ -11,7 +11,7 @@ ht-degree: 12%
 
 # Exporter le point de fin
 
-Toutes les ressources de [!DNL Schema Library] sont contenues dans un environnement de test spécifique dans Adobe Experience Platform. Dans certains cas, vous souhaiterez peut-être partager des ressources de modèle de données d’expérience (XDM) entre des environnements de test et des organisations. Le point d’entrée `/rpc/export` de l’API [!DNL Schema Registry] vous permet de générer une payload d’exportation pour tout schéma, groupe de champs de schéma ou type de données dans [!DNL Schema Library], puis d’utiliser cette payload pour importer cette ressource (et toutes les ressources dépendantes) dans un environnement de test cible et une organisation via le point d’entrée [`/rpc/import` ](./import.md).
+Toutes les ressources de [!DNL Schema Library] sont contenues dans un environnement de test spécifique dans Adobe Experience Platform. Dans certains cas, vous souhaiterez peut-être partager des ressources de modèle de données d’expérience (XDM) entre des environnements de test et des organisations. Le point d’entrée `/rpc/export` de l’API [!DNL Schema Registry] vous permet de générer une payload d’exportation pour tout schéma, groupe de champs de schéma ou type de données dans [!DNL Schema Library], puis d’utiliser cette payload pour importer cette ressource (et toutes les ressources dépendantes) dans un environnement de test cible et une organisation via le point d’entrée [`/rpc/import` &#x200B;](./import.md).
 
 ## Commencer
 

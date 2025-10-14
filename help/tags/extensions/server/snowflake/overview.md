@@ -36,7 +36,7 @@ Pour plus d’informations sur l’installation de l’extension et la configura
 
 Nos extensions natives de transfert d’événement [[!DNL AWS]](../aws/overview.md), [[!DNL Azure]](../azure/overview.md) et [[!DNL Google Cloud Platform]](../google-cloud-platform/overview.md) permettent aux clients de collecter, d’enrichir et de transférer leurs données d’événement côté serveur en temps réel vers leurs services cloud pour être consommés par [!DNL Snowflake]. Consultez le tableau ci-dessous :
 
-![ Diagramme de rapport [!DNL Snowflake] présentant le lien entre [!DNL AWS] et [!DNL Azure].](../../../images/extensions/server/snowflake/snowflake-workflow.png)
+![&#x200B; Diagramme de rapport [!DNL Snowflake] présentant le lien entre [!DNL AWS] et [!DNL Azure].](../../../images/extensions/server/snowflake/snowflake-workflow.png)
 
 ## Étapes suivantes
 

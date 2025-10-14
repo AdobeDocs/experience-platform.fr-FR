@@ -29,5 +29,5 @@ ht-degree: 4%
 
 Pour plus d’informations sur ce type de données, reportez-vous au référentiel XDM public :
 
-* [ Exemple renseigné ](https://github.com/adobe/xdm/blob/master/components/datatypes/placecontext.example.1.json)
+* [&#x200B; Exemple renseigné &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/placecontext.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/placecontext.schema.json)

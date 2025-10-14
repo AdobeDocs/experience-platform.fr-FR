@@ -16,4 +16,4 @@ ht-degree: 23%
 
 La collecte de données authentifiées permet aux services Adobe Experience Platform, tels que [!DNL Real-Time Customer Profile] et [!DNL Identity], de faire la distinction entre les enregistrements provenant de sources approuvées et non approuvées. Les clients qui souhaitent envoyer des informations d’identification personnelle (PII) peuvent le faire en envoyant des jetons d’accès dans le cadre de la demande POST.
 
-Pour savoir comment créer une connexion en continu authentifiée, consultez le [guide de l’API source HTTP ](../../sources/tutorials/api/create/streaming/http.md).
+Pour savoir comment créer une connexion en continu authentifiée, consultez le [guide de l’API source HTTP &#x200B;](../../sources/tutorials/api/create/streaming/http.md).

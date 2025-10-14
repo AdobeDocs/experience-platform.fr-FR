@@ -60,7 +60,7 @@ Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le cô
 
 Dans la catégorie *CRM*, sélectionnez **[!UICONTROL Comptes et contacts SugarCRM]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
-![Capture d’écran de l’interface utilisateur d’Experience Platform pour le catalogue avec la carte Comptes et contacts SugarCRM ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
+![Capture d’écran de l’interface utilisateur d’Experience Platform pour le catalogue avec la carte Comptes et contacts SugarCRM &#x200B;](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
 
 La page **[!UICONTROL Connecter le compte Contacts et comptes SugarCRM]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 

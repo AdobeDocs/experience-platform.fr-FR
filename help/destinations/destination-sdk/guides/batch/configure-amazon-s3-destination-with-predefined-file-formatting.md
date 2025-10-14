@@ -13,7 +13,7 @@ ht-degree: 8%
 
 ## Vue d’ensemble {#overview}
 
-Cette page décrit comment utiliser la Destination SDK pour configurer une destination Amazon S3 avec des [ options de formatage de fichier ](configure-file-formatting-options.md) prédéfinies et une [ configuration de nom de fichier ](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) personnalisée.
+Cette page décrit comment utiliser la Destination SDK pour configurer une destination Amazon S3 avec des [&#x200B; options de formatage de fichier &#x200B;](configure-file-formatting-options.md) prédéfinies et une [&#x200B; configuration de nom de fichier &#x200B;](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) personnalisée.
 
 Cette page affiche toutes les options de configuration disponibles pour les destinations [!DNL Amazon S3]. Vous pouvez modifier les configurations affichées dans les étapes ci-dessous ou supprimer certaines parties des configurations, si nécessaire.
 
@@ -283,7 +283,7 @@ Une réponse réussie renvoie la nouvelle configuration de destination, y compri
 
 En fonction des configurations ci-dessus, le catalogue des Experience Platform affiche désormais une nouvelle carte de destination privée que vous pouvez utiliser.
 
-![ Enregistrement d’écran affichant la page du catalogue des destinations avec une carte de destination sélectionnée.](../../assets/guides/batch/destination-card.gif)
+![&#x200B; Enregistrement d’écran affichant la page du catalogue des destinations avec une carte de destination sélectionnée.](../../assets/guides/batch/destination-card.gif)
 
 Dans les images et enregistrements ci-dessous, notez comment les options du [workflow d’activation pour les destinations basées sur des fichiers](../../../ui/activate-batch-profile-destinations.md) correspondent aux options que vous avez sélectionnées dans la configuration de destination.
 

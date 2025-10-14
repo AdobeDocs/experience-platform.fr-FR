@@ -104,7 +104,7 @@ Lors de l’activation des audiences vers la destination [!DNL Demandbase], vous
 | `xdm: accountOrganization.domain` | `xdm: accountEmailDomain` | Domaine de messagerie de l’organisation du compte |
 | `xdm: accountKey.sourceKey` | `Identity: primaryId` | Identifiant principal du compte |
 
-![ Mappages Demandbase ](/help/destinations/assets/catalog/advertising/demandbase/demandbase-mapping.png)
+![&#x200B; Mappages Demandbase &#x200B;](/help/destinations/assets/catalog/advertising/demandbase/demandbase-mapping.png)
 
 Ces mappages sont nécessaires au bon fonctionnement de la destination et doivent être configurés avant de pouvoir poursuivre le workflow d’activation.
 

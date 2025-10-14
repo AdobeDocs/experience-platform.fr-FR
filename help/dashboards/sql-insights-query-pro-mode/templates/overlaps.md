@@ -24,7 +24,7 @@ La boîte de dialogue [!UICONTROL Filtres] s’affiche. Pour choisir une audienc
 
 Une fois qu’un filtre est appliqué ([!UICONTROL Segment Amoxicilin] dans l’exemple de capture d’écran), les données d’audience affichées sont réduites. Toutes les audiences supplémentaires que vous choisissez d’ajouter s’affichent en regard de la balise [!UICONTROL Filtrage par] au-dessus du graphique [!UICONTROL Chevauchement d’audience avancé].
 
-![ Le tableau de bord de chevauchement d’audiences avancées avec l’option Filtrage par segment Amoxicilin mise en surbrillance.](../../images/sql-insights-query-pro-mode/templates/audience-overlaps-applied-filters.png)
+![&#x200B; Le tableau de bord de chevauchement d’audiences avancées avec l’option Filtrage par segment Amoxicilin mise en surbrillance.](../../images/sql-insights-query-pro-mode/templates/audience-overlaps-applied-filters.png)
 
 ## Tableau de chevauchement des audiences avancé {#advanced-audience-overlaps-table}
 
@@ -44,7 +44,7 @@ La section principale du tableau de bord affiche la table [!UICONTROL Chevauchem
 
 Une fois les audiences filtrées et analysées, vous pouvez exporter les données à des fins d’analyse hors ligne ou de création de rapports supplémentaires. Pour exporter vos insights, sélectionnez **[!UICONTROL Exporter]** en haut à droite du tableau. La boîte de dialogue Imprimer le PDF s’affiche, vous permettant d’enregistrer les données en tant que PDF ou de les imprimer.
 
-![ La vue de chevauchement d’audiences avancées avec l’option Exporter mise en surbrillance.](../../images/sql-insights-query-pro-mode/templates/audience-overlaps-export.png)
+![&#x200B; La vue de chevauchement d’audiences avancées avec l’option Exporter mise en surbrillance.](../../images/sql-insights-query-pro-mode/templates/audience-overlaps-export.png)
 
 Pour revenir à la présentation [!UICONTROL Template], sélectionnez **[!UICONTROL Templates]**.
 

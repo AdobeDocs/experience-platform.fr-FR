@@ -460,6 +460,6 @@ Les exemples suivants de fonctions d’ordre supérieur sont expliqués dans le 
 
 L’exemple de fonction [`transform`](../use-cases/retrieve-similar-records.md#length-adjustment) couvre la segmentation en unités lexicales d’une liste de produits.
 
-L’exemple de fonction [`filter` ](../use-cases/retrieve-similar-records.md#filter-results) illustre une extraction plus précise et plus affinée d’informations pertinentes à partir de données de texte.
+L’exemple de fonction [`filter` &#x200B;](../use-cases/retrieve-similar-records.md#filter-results) illustre une extraction plus précise et plus affinée d’informations pertinentes à partir de données de texte.
 
-La fonction [`reduce` ](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) permet d’obtenir des valeurs cumulatives ou des agrégats, qui peuvent être essentiels dans divers processus d’analyse et de planification.
+La fonction [`reduce` &#x200B;](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) permet d’obtenir des valeurs cumulatives ou des agrégats, qui peuvent être essentiels dans divers processus d’analyse et de planification.

@@ -205,7 +205,7 @@ Pour vérifier que vous avez correctement configuré la destination, procédez c
 ![Capture d’écran de l’interface utilisateur Mailchimp montrant la page du groupe d’audiences.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 
 * Sélectionnez le groupe et vérifiez si les audiences sélectionnées sont créées sous la forme de catégories avec le nom de l’audience d’Experience Platform, qui peut être suivi d’un suffixe généré automatiquement.
-   * Cette destination utilise les noms des segments sélectionnés pour créer la catégorie d’intérêt à l’aide de l’API [[!DNL Mailchimp]  Ajouter une catégorie d’intérêt ](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). Si vous créez une nouvelle destination et activez à nouveau les mêmes audiences, [!DNL Mailchimp] ajoute un suffixe pour distinguer les segments existants des nouveaux segments.
+   * Cette destination utilise les noms des segments sélectionnés pour créer la catégorie d’intérêt à l’aide de l’API [[!DNL Mailchimp]  Ajouter une catégorie d’intérêt &#x200B;](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). Si vous créez une nouvelle destination et activez à nouveau les mêmes audiences, [!DNL Mailchimp] ajoute un suffixe pour distinguer les segments existants des nouveaux segments.
 * Les contacts dont les e-mails n’existaient pas dans le groupe sont ajoutés à la catégorie nouvellement créée.
 * Pour les contacts qui existent déjà dans le groupe, les données du champ d’attribut sont mises à jour et le contact est ajouté à la catégorie nouvellement créée.
 
@@ -228,7 +228,7 @@ Sections [Rassembler [!DNL Mailchimp] Clé API](#gather-credentials) si vous ave
 
 ### Erreur rencontrée si [!DNL Mailchimp] limite de nom de groupe est dépassée {#group-name-limits-error}
 
-Pendant la création de la destination, vous pouvez recevoir les messages d’erreur suivants : *`Cannot have more than 60 interests per list (Across all categories)`* ou *`400 BAD_REQUEST`*. Cela se produit lorsque vous dépassez les 60 noms de groupe (ou catégories d’intérêt) dans un seul groupe ou dans plusieurs groupes au sein de la même limite d’audience, comme décrit dans la section [ Mécanismes de sécurisation ](#guardrails). Pour corriger cette erreur, veillez à ne pas dépasser la limite de noms de groupe dans [!DNL Mailchimp].
+Pendant la création de la destination, vous pouvez recevoir les messages d’erreur suivants : *`Cannot have more than 60 interests per list (Across all categories)`* ou *`400 BAD_REQUEST`*. Cela se produit lorsque vous dépassez les 60 noms de groupe (ou catégories d’intérêt) dans un seul groupe ou dans plusieurs groupes au sein de la même limite d’audience, comme décrit dans la section [&#x200B; Mécanismes de sécurisation &#x200B;](#guardrails). Pour corriger cette erreur, veillez à ne pas dépasser la limite de noms de groupe dans [!DNL Mailchimp].
 
 ### Statut de [!DNL Mailchimp] et codes d’erreur
 
@@ -243,4 +243,4 @@ Retrouvez d’autres informations utiles de la documentation [!DNL Mailchimp] ci
 * [Prise en main des groupes](https://mailchimp.com/help/getting-started-with-groups/)
 * [Créer un groupe d’audiences](https://mailchimp.com/help/create-new-audience-group/)
 * [Catégories d’intérêt](https://mailchimp.com/developer/marketing/api/interest-categories/)
-* [ API marketing ](https://mailchimp.com/developer/marketing/api/)
+* [&#x200B; API marketing &#x200B;](https://mailchimp.com/developer/marketing/api/)

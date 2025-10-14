@@ -24,7 +24,7 @@ Ce workflow de bout en bout utilise plusieurs services Adobe Experience Platform
 
 - [[!DNL Experience Data Model (XDM)]](../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../xdm/schema/best-practices.md).
 - [[!DNL Identity Service]](../identity-service/home.md) : permet d’obtenir une vue d’ensemble complète de vos clients et de leur comportement en rapprochant des identités entre appareils et systèmes.
-- [Sources ](../sources/home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
+- [Sources &#x200B;](../sources/home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
 - [[!DNL Segmentation Service]](../segmentation/home.md) : [!DNL Segmentation Service] permet de diviser les données stockées dans [!DNL Experience Platform] qui se rapportent aux individus (tels que les client(e)s, les prospects, les utilisateurs et utilisatrices ou les organisations) en groupes plus petits.
 - [[!DNL Real-Time Customer Profile]](../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 - [Jeux de données](../catalog/datasets/overview.md) : structure de stockage et de gestion pour la persistance des données dans [!DNL Experience Platform].
@@ -56,7 +56,7 @@ Lors du premier chargement de données vers un nouveau jeu de données ou de la 
 
 ## Évaluation des données
 
-Une fois que vous avez généré des profils à partir des données ingérées, vous pouvez évaluer les données à l’aide de la segmentation. La segmentation est le processus de définition d’attributs ou de comportements spécifiques partagés par un sous-ensemble d’individus de votre banque de profils, afin de distinguer un groupe de clients potentiels de votre base de clients. Pour en savoir plus sur la segmentation, veuillez lire la [ présentation du service de segmentation ](../segmentation/home.md).
+Une fois que vous avez généré des profils à partir des données ingérées, vous pouvez évaluer les données à l’aide de la segmentation. La segmentation est le processus de définition d’attributs ou de comportements spécifiques partagés par un sous-ensemble d’individus de votre banque de profils, afin de distinguer un groupe de clients potentiels de votre base de clients. Pour en savoir plus sur la segmentation, veuillez lire la [&#x200B; présentation du service de segmentation &#x200B;](../segmentation/home.md).
 
 ### Création d’une définition de segment
 

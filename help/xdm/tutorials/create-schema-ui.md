@@ -106,11 +106,11 @@ Une nouvelle boîte de dialogue apparait. Elle présente la liste des groupes de
 
 Vous pouvez utiliser l’un des filtres dans le rail de gauche pour limiter la liste des groupes de champs standard à des [secteurs](../schema/industries/overview.md) comme la vente au détail, les services financiers et les services de santé.
 
-![ La boîte de dialogue [!UICONTROL Ajouter des groupes de champs] avec les groupes de champs du secteur mis en surbrillance.](../images/tutorials/create-schema/industry-field-groups.png)
+![&#x200B; La boîte de dialogue [!UICONTROL Ajouter des groupes de champs] avec les groupes de champs du secteur mis en surbrillance.](../images/tutorials/create-schema/industry-field-groups.png)
 
 Lorsqu’un groupe de champs est sélectionné dans la liste, il s’affiche dans le rail de droite. Si vous le souhaitez, vous pouvez sélectionner plusieurs groupes de champs en les ajoutant chacun à la liste dans le rail de droite avant de confirmer la sélection. En outre, l’icône qui s’affiche sur le côté droit du groupe de champs sélectionné vous permet de prévisualiser la structure des champs qu’il présente.
 
-![ La boîte de dialogue [!UICONTROL Ajouter des groupes de champs] avec l’icône d’aperçu du groupe de champs sélectionné en surbrillance.](../images/tutorials/create-schema/preview-field-group-button.png)
+![&#x200B; La boîte de dialogue [!UICONTROL Ajouter des groupes de champs] avec l’icône d’aperçu du groupe de champs sélectionné en surbrillance.](../images/tutorials/create-schema/preview-field-group-button.png)
 
 Lors de la prévisualisation d’un groupe de champs, une description détaillée du schéma du groupe de champs est fournie dans le rail droit. Vous pouvez également parcourir les champs du groupe de champs dans la zone de travail. Lorsque vous sélectionnez différents champs, le rail de droite se met à jour pour afficher les détails du champ en question. Sélectionnez **[!UICONTROL Retour]** lorsque vous avez terminé la prévisualisation pour retourner à la boîte de dialogue de sélection du groupe de champs.
 
@@ -146,7 +146,7 @@ Vous pouvez maintenant répéter les mêmes étapes pour ajouter un autre groupe
 
 Pour ce tutoriel, sélectionnez les groupes de champs standard **[!UICONTROL Coordonnées personnelles]** et **[!UICONTROL Détails de fidélité]** dans la liste, puis sélectionnez **[!UICONTROL Ajouter des groupes de champs]** pour les ajouter au schéma.
 
-![ La boîte de dialogue [!UICONTROL Ajouter des groupes de champs] avec deux nouveaux groupes de champs sélectionnés et [!UICONTROL Ajouter des groupes de champs] en surbrillance.](../images/tutorials/create-schema/more-field-groups.png)
+![&#x200B; La boîte de dialogue [!UICONTROL Ajouter des groupes de champs] avec deux nouveaux groupes de champs sélectionnés et [!UICONTROL Ajouter des groupes de champs] en surbrillance.](../images/tutorials/create-schema/more-field-groups.png)
 
 La zone de travail réapparaît avec les groupes de champs ajoutés sous **[!UICONTROL Groupes de champs]** dans la section **[!UICONTROL Composition]** et leurs champs composites ajoutés à la structure du schéma.
 
@@ -163,7 +163,7 @@ Cependant, il peut arriver que vous souhaitiez inclure d’autres champs personn
 
 Pour créer un groupe de champs, sélectionnez **[!UICONTROL Ajouter]** dans la sous-section **[!UICONTROL Groupes de champs]** comme avant, mais cette fois, sélectionnez **[!UICONTROL Créer un nouveau groupe de champs]** dans la partie supérieure de la boîte de dialogue qui s’affiche. Vous êtes alors invité à fournir un nom d’affichage et une description pour le nouveau groupe de champs. Pour ce tutoriel, nommez le nouveau groupe de champs « [!DNL Custom Loyalty Details] », puis sélectionnez **[!UICONTROL Ajouter des groupes de champs]**.
 
-![ La boîte de dialogue [!UICONTROL Ajouter des groupes de champs] avec [!UICONTROL Créer un groupe de champs], [!UICONTROL Nom d’affichage] et [!UICONTROL Description] en surbrillance.](../images/tutorials/create-schema/create-new-field-group.png)
+![&#x200B; La boîte de dialogue [!UICONTROL Ajouter des groupes de champs] avec [!UICONTROL Créer un groupe de champs], [!UICONTROL Nom d’affichage] et [!UICONTROL Description] en surbrillance.](../images/tutorials/create-schema/create-new-field-group.png)
 
 >[!NOTE]
 >

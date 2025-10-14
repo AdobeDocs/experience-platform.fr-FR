@@ -30,7 +30,7 @@ Les entreprises B2B ont souvent leurs informations client stockées dans plusie
 
 Avec les comptes connexes, [!DNL Real-Time CDP B2B] affiche désormais une liste des comptes similaires au compte que vous parcourez.
 
-![ Écran affichant les comptes associés dans l’interface utilisateur de l’Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
+![&#x200B; Écran affichant les comptes associés dans l’interface utilisateur de l’Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
 Utilisez cette fonction pour afficher les profils de compte associés à un profil de compte dans l’interface utilisateur de l’Experience Platform, puis inclure les comptes associés dans vos définitions de segment afin d’élargir votre portée ou d’appliquer des critères plus larges à vos audiences.
 
@@ -38,11 +38,11 @@ Utilisez cette fonction pour afficher les profils de compte associés à un prof
 
 Pour activer le service, sélectionnez **[!UICONTROL Profils]** dans la barre latérale suivie de **[!UICONTROL Paramètres]**.
 
-![ L’interface utilisateur Experience Platform met en surbrillance les profils et les paramètres.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
+![&#x200B; L’interface utilisateur Experience Platform met en surbrillance les profils et les paramètres.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
 
 Sélectionnez la bascule en regard de [!UICONTROL Activer les comptes associés] pour activer le service, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
-![ L’écran des paramètres du compte met en surbrillance le bouton bascule et l’enregistrement.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
+![&#x200B; L’écran des paramètres du compte met en surbrillance le bouton bascule et l’enregistrement.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 
 ## Fonctionnement {#how-it-works}
 

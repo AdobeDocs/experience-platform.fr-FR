@@ -17,7 +17,7 @@ Les clés gérées par le client (CMK) prennent en charge les clés des coffres 
 
 >[!IMPORTANT]
 >
->Seuls les niveaux HSM Standard, Premium et Managed pour [!DNL Azure] Key Vault sont pris en charge. [!DNL Azure Dedicated HSM] et [!DNL Azure Payments HSM] ne sont pas pris en charge. Reportez-vous à la documentation d’[[!DNL Azure] ](https://learn.microsoft.com/fr-fr/azure/security/fundamentals/key-management#azure-key-management-services) pour plus d’informations sur les services de gestion de clés proposés.
+>Seuls les niveaux HSM Standard, Premium et Managed pour [!DNL Azure] Key Vault sont pris en charge. [!DNL Azure Dedicated HSM] et [!DNL Azure Payments HSM] ne sont pas pris en charge. Reportez-vous à la documentation d’[[!DNL Azure] &#x200B;](https://learn.microsoft.com/fr-fr/azure/security/fundamentals/key-management#azure-key-management-services) pour plus d’informations sur les services de gestion de clés proposés.
 
 >[!NOTE]
 >

@@ -16,7 +16,7 @@ ht-degree: 49%
 >
 >La source [!DNL Chatlio] est en version Beta. Veuillez lire la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Le tutoriel suivant vous guide tout au long des étapes de création d’une connexion source et d’un flux de données pour importer des données d’événement [[!DNL Chatlio]](https://chatlio.com/) dans Adobe Experience Platform à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Le tutoriel suivant vous guide tout au long des étapes de création d’une connexion source et d’un flux de données pour importer des données d’événement [[!DNL Chatlio]](https://chatlio.com/) dans Adobe Experience Platform à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main {#getting-started}
 

@@ -301,7 +301,7 @@ Vous pouvez choisir entre deux vues différentes dans **Définir des variables**
 
 Dans cette vue, vous pouvez spécifier différentes variables telles que `eVars`, `Props`, `Events`.
 
-![ Page de vue de formulaire Adobe Analytics, où des attributs supplémentaires sont répertoriés.](../../../images/adobe_analytics_extension_form_view.png)
+![&#x200B; Page de vue de formulaire Adobe Analytics, où des attributs supplémentaires sont répertoriés.](../../../images/adobe_analytics_extension_form_view.png)
 
 #### eVars
 

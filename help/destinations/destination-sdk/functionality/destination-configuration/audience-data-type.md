@@ -19,7 +19,7 @@ Passez en revue les types de données d’audience ci-dessous pour en savoir plu
 |---------|----------|---------|
 | [Audiences de personnes](../../../../segmentation/types/people-audiences.md) | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](../../../../segmentation/types/account-audiences.md) | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects ](../../../../segmentation/types/prospect-audiences.md) | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects &#x200B;](../../../../segmentation/types/prospect-audiences.md) | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](../../../../catalog/datasets/overview.md) | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 Le type de données d’audience pris en charge dépend du type de destination que vous créez.

@@ -126,7 +126,7 @@ Dans la section **[!DNL Key deletion]** , cochez la case pour accorder aux admin
 
 Sélectionnez **[!DNL Next]** pour continuer le workflow.
 
-![ L’étape Définir les autorisations administratives clés du workflow, avec les cases à cocher et l’option suivante en surbrillance.](../../../images/governance-privacy-security/key-management-service/define-key-admins.png)
+![&#x200B; L’étape Définir les autorisations administratives clés du workflow, avec les cases à cocher et l’option suivante en surbrillance.](../../../images/governance-privacy-security/key-management-service/define-key-admins.png)
 
 ## Octroi de l’accès aux utilisateurs clés {#assign-key-users}
 
@@ -136,7 +136,7 @@ De ce point de vue, vous pouvez également [!DNL Add another AWS account] ; tout
 
 Sélectionnez **[!DNL Next]** pour continuer le workflow.
 
-![ L’étape Définir les autorisations d’utilisation des clés du workflow, avec les cases à cocher et l’option suivante en surbrillance.](../../../images/governance-privacy-security/key-management-service/define-key-users.png)
+![&#x200B; L’étape Définir les autorisations d’utilisation des clés du workflow, avec les cases à cocher et l’option suivante en surbrillance.](../../../images/governance-privacy-security/key-management-service/define-key-users.png)
 
 ## Vérifier la configuration des clés {#review}
 

@@ -91,7 +91,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 Pour vous authentifier à la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
-![Comment s’authentifier ](../../assets/catalog/advertising/pubmatic/authenticate-destination.png)
+![Comment s’authentifier &#x200B;](../../assets/catalog/advertising/pubmatic/authenticate-destination.png)
 
 - **[!UICONTROL Jeton porteur]** : renseignez le jeton porteur pour vous authentifier sur la destination.
 

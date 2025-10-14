@@ -13,7 +13,7 @@ ht-degree: 3%
 
 Adobe Experience Platform conserve un journal de tous les événements de requête qui se produisent via l’API et l’interface utilisateur. Ces informations sont disponibles dans l’interface utilisateur de Query Service à partir de l’onglet [!UICONTROL Journaux].
 
-Les fichiers journaux sont générés automatiquement par tout événement de requête et contiennent des informations, notamment le code SQL utilisé, l’état de la requête, sa durée et la dernière exécution. Vous pouvez utiliser les données du journal de requête comme un outil puissant pour résoudre les problèmes liés aux requêtes inefficaces ou problématiques. Des informations plus complètes sur le journal sont conservées dans le cadre de la fonctionnalité de journal d’audit et sont disponibles dans la documentation du [ journal d’audit](../../landing/governance-privacy-security/audit-logs/overview.md).
+Les fichiers journaux sont générés automatiquement par tout événement de requête et contiennent des informations, notamment le code SQL utilisé, l’état de la requête, sa durée et la dernière exécution. Vous pouvez utiliser les données du journal de requête comme un outil puissant pour résoudre les problèmes liés aux requêtes inefficaces ou problématiques. Des informations plus complètes sur le journal sont conservées dans le cadre de la fonctionnalité de journal d’audit et sont disponibles dans la documentation du [&#x200B; journal d’audit](../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Vérifier les logs de requête {#check-query-logs}
 
@@ -65,7 +65,7 @@ Une icône en forme de crayon (![Une icône en forme de crayon) se trouve en reg
 
 ## Filtrer les logs {#filter-logs}
 
-Vous pouvez filtrer la liste des journaux de requête en fonction de différents paramètres. Sélectionnez l’icône de filtre (![ L’icône de filtre .](/help/images/icons/filter.png)) en haut à gauche de l’espace de travail pour ouvrir un ensemble d’options de filtre dans le rail de gauche.
+Vous pouvez filtrer la liste des journaux de requête en fonction de différents paramètres. Sélectionnez l’icône de filtre (![&#x200B; L’icône de filtre .](/help/images/icons/filter.png)) en haut à gauche de l’espace de travail pour ouvrir un ensemble d’options de filtre dans le rail de gauche.
 
 ![Espace de travail Journal des requêtes avec l’icône de filtre mise en surbrillance.](../images/ui/query-log/log-filter.png)
 

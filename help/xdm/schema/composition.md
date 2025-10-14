@@ -61,7 +61,7 @@ Pour faciliter ce processus, les champs clés de vos schémas peuvent être marq
 
 Les champs généralement désignés comme champs « [!UICONTROL Identité] » sont les suivants : adresse e-mail, numéro de téléphone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=fr), identifiant CRM ou d’autres champs d’identification uniques. Tenez compte des identifiants uniques spécifiques à votre organisation, car il peut également s’agir de bons champs « [!UICONTROL Identité] ».
 
-Pour en savoir plus sur la manière dont les informations d’identité peuvent vous aider à proposer des expériences digitales à vos clients, consultez la [ présentation d’Identity Service](../../identity-service/home.md). Consultez le document des bonnes pratiques de modélisation des données pour obtenir des [ sur l’utilisation des identités lors de la création d’un schéma](./best-practices.md#data-validation-fields).
+Pour en savoir plus sur la manière dont les informations d’identité peuvent vous aider à proposer des expériences digitales à vos clients, consultez la [&#x200B; présentation d’Identity Service](../../identity-service/home.md). Consultez le document des bonnes pratiques de modélisation des données pour obtenir des [&#x200B; sur l’utilisation des identités lors de la création d’un schéma](./best-practices.md#data-validation-fields).
 
 Il existe deux manières d’envoyer des données d’identité à Experience Platform :
 
@@ -109,7 +109,7 @@ Voici un exemple de mappage d’identités simple :
 }
 ```
 
-Comme le montre l’exemple ci-dessus, chaque clé de l’objet `identityMap` représente un espace de noms d’identité. La valeur de chaque clé est un tableau d’objets représentant les valeurs d’identité (`id`) de l’espace de noms correspondant. Reportez-vous à la documentation [!DNL Identity Service] pour obtenir une [ liste des espaces de noms d’identité standard](../../identity-service/troubleshooting-guide.md#standard-namespaces) reconnus par les applications Adobe.
+Comme le montre l’exemple ci-dessus, chaque clé de l’objet `identityMap` représente un espace de noms d’identité. La valeur de chaque clé est un tableau d’objets représentant les valeurs d’identité (`id`) de l’espace de noms correspondant. Reportez-vous à la documentation [!DNL Identity Service] pour obtenir une [&#x200B; liste des espaces de noms d’identité standard](../../identity-service/troubleshooting-guide.md#standard-namespaces) reconnus par les applications Adobe.
 
 >[!NOTE]
 >
@@ -307,7 +307,7 @@ Tous les fichiers de données ingérés dans Experience Platform doivent être 
 Si vous importez des audiences de systèmes externes dans Experience Platform, vous devez utiliser les composants suivants pour les capturer dans vos schémas :
 
 * [[!UICONTROL Définition de segment] classe](../classes/segment-definition.md) : utilisez cette classe standard pour capturer les attributs clés d’une définition de segment externe.
-* [[!UICONTROL Détails sur l’appartenance à un segment] groupe de champs ](../field-groups/profile/segmentation.md) : ajoutez ce groupe de champs à votre schéma [!UICONTROL Profil individuel XDM] pour associer des profils client à des audiences spécifiques.
+* [[!UICONTROL Détails sur l’appartenance à un segment] groupe de champs &#x200B;](../field-groups/profile/segmentation.md) : ajoutez ce groupe de champs à votre schéma [!UICONTROL Profil individuel XDM] pour associer des profils client à des audiences spécifiques.
 
 ## Étapes suivantes
 

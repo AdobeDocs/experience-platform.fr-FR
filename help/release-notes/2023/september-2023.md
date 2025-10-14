@@ -103,7 +103,7 @@ Experience Platform offre toute une gamme de fonctionnalités d’hygiène des 
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur les fonctionnalités d’hygiène des données d’Experience Platform, consultez la [ présentation de l’hygiène des données ](../../hygiene/home.md).
+Pour plus d’informations sur les fonctionnalités d’hygiène des données d’Experience Platform, consultez la [&#x200B; présentation de l’hygiène des données &#x200B;](../../hygiene/home.md).
 
 ## Destinations {#destinations}
 
@@ -180,7 +180,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur XDM dans Experience Platform, consultez la [ Présentation du système XDM ](../../xdm/home.md)
+Pour plus d’informations sur XDM dans Experience Platform, consultez la [&#x200B; Présentation du système XDM &#x200B;](../../xdm/home.md)
 
 ## Service d’identités {#identity-service}
 

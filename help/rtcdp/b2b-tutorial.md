@@ -66,7 +66,7 @@ Ensuite, le marketeur Bodea utilise le connecteur [Marketo Engage](../sources/co
 
 Pour créer une connexion entre un compte Marketo et Experience Platform, vous devez acquérir des informations d’authentification. Consultez le [guide sur l’obtention des informations d’authentification du connecteur source Marketo](../sources/connectors/adobe-applications/marketo/marketo-auth.md) pour obtenir des instructions détaillées. 
 
-Après l’acquisition des informations d’authentification, le marketeur Bodea crée une connexion entre le compte Marketo et son organisation Experience Platform. Consultez la documentation pour obtenir des instructions sur [ comment connecter un compte Marketo à l’aide de l’interface utilisateur d’Experience Platform ](../sources/tutorials/ui/create/adobe-applications/marketo.md).
+Après l’acquisition des informations d’authentification, le marketeur Bodea crée une connexion entre le compte Marketo et son organisation Experience Platform. Consultez la documentation pour obtenir des instructions sur [&#x200B; comment connecter un compte Marketo à l’aide de l’interface utilisateur d’Experience Platform &#x200B;](../sources/tutorials/ui/create/adobe-applications/marketo.md).
 
 Le connecteur source du Marketo Engage fournit une fonctionnalité de mappage automatique pour faciliter le processus de mappage de tous vos champs de données à ceux des schémas nouvellement créés. 
 

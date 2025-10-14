@@ -63,7 +63,7 @@ curl -X POST \
 | --- | --- |
 | `optOutOfSale` | Lorsqu’elle est définie sur true, indique que les utilisateurs fournis sous `entities` souhaitent se désinscrire de la vente ou du partage de leurs données personnelles. |
 | `entities` | Tableau d’objets indiquant les utilisateurs auxquels s’applique la demande de consentement. Chaque objet contient un `namespace` et un tableau de `values` pour faire correspondre des utilisateurs individuels à cet espace de noms. |
-| `nameSpace` | Chaque objet du tableau `entities` doit contenir l’un des [ espaces de noms d’identité standard](./appendix.md#standard-namespaces) reconnus par l’API du Privacy Service. |
+| `nameSpace` | Chaque objet du tableau `entities` doit contenir l’un des [&#x200B; espaces de noms d’identité standard](./appendix.md#standard-namespaces) reconnus par l’API du Privacy Service. |
 | `values` | Un tableau de valeurs pour chaque utilisateur, correspondant au `nameSpace` fourni. |
 
 {style="table-layout:auto"}

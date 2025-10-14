@@ -161,7 +161,7 @@ L’authentification [!DNL Azure Data Lake Storage] est prise en charge pour les
 
 Quand vous configurez le type d’authentification[!DNL Azure Data Lake Storage], les utilisateurs doivent saisir les informations d’identification d’Azure Service Principal et leurs informations de client.
 
-![[!DNL Azure Data Lake Storage]Rendu de l’interface utilisateur avec authentification ](../../assets/functionality/destination-configuration/adls-authentication-ui.png)
+![[!DNL Azure Data Lake Storage]Rendu de l’interface utilisateur avec authentification &#x200B;](../../assets/functionality/destination-configuration/adls-authentication-ui.png)
 
 Pour configurer l’authentification [!DNL Azure Data Lake Storage] (ADLS) de la destination, configurez le paramètre `customerAuthenticationConfigurations` du point d’entrée `/destinations` comme illustré ci-dessous :
 

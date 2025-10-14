@@ -26,7 +26,7 @@ Cette section de documentation comprend :
 * Un modèle à remplir pour votre destination ;
 * [Instructions générales sur l’utilisation de Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=fr) ;
 * [Instructions spécifiques pour la saveur Adobe Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=fr#custom-markdown-extensions) (la saveur Adobe Markdown est très similaire à Markdown standard).
-* Une [ page de bonnes pratiques](./authoring-best-practices.md) pour vous aider à créer une page de documentation pour votre page de destination, qui respecte les normes de qualité de la documentation Experience Platform.
+* Une [&#x200B; page de bonnes pratiques](./authoring-best-practices.md) pour vous aider à créer une page de documentation pour votre page de destination, qui respecte les normes de qualité de la documentation Experience Platform.
 
 ## Conditions préalables {#prerequisites}
 

@@ -44,7 +44,7 @@ Une fois que vous avez créé votre compte d’espace de stockage dans le cloud 
 - La partie gauche de l’interface est un navigateur qui vous permet d’afficher les flux de données disponibles dans votre compte ;
 - La partie droite de l’interface vous permet de prévisualiser jusqu’à 100 lignes de données à partir d’un fichier JSON.
 
-![ interface ](../../../../images/tutorials/dataflow/cloud-storage/streaming/interface.png)
+![&#x200B; interface &#x200B;](../../../../images/tutorials/dataflow/cloud-storage/streaming/interface.png)
 
 Sélectionnez le flux de données à utiliser, puis sélectionnez **[!UICONTROL Choisir un fichier]** pour charger un exemple de schéma.
 
@@ -108,7 +108,7 @@ Une fois votre jeu de données et votre schéma établis, l’interface **[!UICO
 >
 >Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation.
 
-Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [ Guide de l’interface utilisateur de la préparation des données ](../../../../../data-prep/ui/mapping.md).
+Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [&#x200B; Guide de l’interface utilisateur de la préparation des données &#x200B;](../../../../../data-prep/ui/mapping.md).
 
 Une fois vos données source mappées, sélectionnez **[!UICONTROL Suivant]**.
 

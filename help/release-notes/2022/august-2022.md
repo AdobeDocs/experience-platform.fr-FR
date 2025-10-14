@@ -84,7 +84,7 @@ Pour plus d’informations sur Query Service [!DNL Dashboards], consultez la [[!
 
 {style="table-layout:auto"}
 
-Pour en savoir plus sur [!DNL Data Prep], consultez la présentation de [[!DNL Data Prep] ](../../data-prep/home.md).
+Pour en savoir plus sur [!DNL Data Prep], consultez la présentation de [[!DNL Data Prep] &#x200B;](../../data-prep/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
@@ -137,7 +137,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur XDM dans Experience Platform, consultez la [ Présentation du système XDM ](../../xdm/home.md).
+Pour plus d’informations sur XDM dans Experience Platform, consultez la [&#x200B; Présentation du système XDM &#x200B;](../../xdm/home.md).
 
 ## Profil client en temps réel {#profile}
 

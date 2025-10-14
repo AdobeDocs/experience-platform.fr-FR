@@ -100,7 +100,7 @@ Le modèle de données et le tableau actuellement sélectionné s’affichent en
 
 #### Ajouter et filtrer des attributs {#add-and-filter-attributes}
 
-Sélectionnez l’icône d’ajout (![ Icône d’ajout .](/help/images/icons/add-circle.png)) à côté d’un nom d’attribut pour ajouter un attribut à votre widget. Le menu déroulant qui s’affiche vous permet d’ajouter un attribut en tant qu’axe X, axe Y, couleur ou filtre pour votre widget. L’attribut [!UICONTROL Color] vous permet de différencier les résultats des marques de l’axe X et Y en fonction de la couleur. Pour ce faire, il divise les résultats en différentes couleurs en fonction de leur composition d’un troisième attribut.
+Sélectionnez l’icône d’ajout (![&#x200B; Icône d’ajout .](/help/images/icons/add-circle.png)) à côté d’un nom d’attribut pour ajouter un attribut à votre widget. Le menu déroulant qui s’affiche vous permet d’ajouter un attribut en tant qu’axe X, axe Y, couleur ou filtre pour votre widget. L’attribut [!UICONTROL Color] vous permet de différencier les résultats des marques de l’axe X et Y en fonction de la couleur. Pour ce faire, il divise les résultats en différentes couleurs en fonction de leur composition d’un troisième attribut.
 
 >[!TIP]
 >
@@ -132,7 +132,7 @@ Vous pouvez également créer une période personnalisée pour filtrer vos donn�
 
 ### Propriétés du widget
 
-Sélectionnez l’icône des propriétés (![ Icône Propriétés .](/help/images/icons/properties.png)) dans le rail de droite pour ouvrir le panneau propriétés . Dans le panneau [!UICONTROL Propriétés], saisissez le nom du widget dans le champ de texte [!UICONTROL Titre du widget].
+Sélectionnez l’icône des propriétés (![&#x200B; Icône Propriétés .](/help/images/icons/properties.png)) dans le rail de droite pour ouvrir le panneau propriétés . Dans le panneau [!UICONTROL Propriétés], saisissez le nom du widget dans le champ de texte [!UICONTROL Titre du widget].
 
 ![Le panneau des propriétés avec l’icône des propriétés et le champ Titre du widget mis en surbrillance.](./images/standard-dashboards/properties-panel.png)
 
@@ -146,7 +146,7 @@ L’enregistrement dans le compositeur de widgets enregistre le widget localemen
 
 >[!TIP]
 >
->Sélectionnez l’icône des propriétés (![ Icône Propriétés .](/help/images/icons/properties.png)) à côté du nom du tableau de bord pour afficher les détails de sa création. Vous pouvez modifier le nom de votre tableau de bord dans la boîte de dialogue qui s’affiche.
+>Sélectionnez l’icône des propriétés (![&#x200B; Icône Propriétés .](/help/images/icons/properties.png)) à côté du nom du tableau de bord pour afficher les détails de sa création. Vous pouvez modifier le nom de votre tableau de bord dans la boîte de dialogue qui s’affiche.
 
 Les widgets peuvent être réorganisés et redimensionnés dans cet espace de travail. Sélectionnez **[!UICONTROL Enregistrer]** pour conserver le nom du tableau de bord et la mise en page configurée.
 

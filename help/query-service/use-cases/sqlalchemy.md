@@ -21,7 +21,7 @@ Pour acquérir les informations d’identification nécessaires à la connexion 
 
 ## [!DNL Query Service] des informations d’identification {#credentials}
 
-Pour trouver vos informations d’identification, connectez-vous à l’interface utilisateur d’Experience Platform et sélectionnez **[!UICONTROL Requêtes]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Informations d’identification]**. Pour obtenir des instructions complètes sur la façon de trouver vos informations d’identification, veuillez lire le [ guide des informations d’identification ](../ui/credentials.md).
+Pour trouver vos informations d’identification, connectez-vous à l’interface utilisateur d’Experience Platform et sélectionnez **[!UICONTROL Requêtes]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Informations d’identification]**. Pour obtenir des instructions complètes sur la façon de trouver vos informations d’identification, veuillez lire le [&#x200B; guide des informations d’identification &#x200B;](../ui/credentials.md).
 
 ![Onglet Informations d’identification avec les informations d’identification arrivant à expiration pour Query Service mis en surbrillance.](../images/use-cases/credentials.png)
 

@@ -14,7 +14,7 @@ ht-degree: 5%
 
 Utilisez le point d’entrée `/content` pour récupérer en toute sécurité *les informations d’accès* (les informations qu’un titulaire de confidentialité peut légitimement demander à accéder) pour vos clients. L’URL de téléchargement fournie dans la réponse à une requête de GET `/jobs/{JOB_ID}` pointe vers un point d’entrée de service Adobe. Vous pouvez ensuite envoyer une requête de GET à `/jobs/:JOB_ID/content` pour renvoyer vos données client au format JSON. Cette méthode d’accès met en œuvre plusieurs couches d’authentification et de contrôle d’accès pour améliorer la sécurité.
 
-Avant d’utiliser ce guide, reportez-vous au [ guide de prise en main ](./getting-started.md) pour plus d’informations sur les en-têtes d’authentification requis présentés dans l’exemple d’appel API ci-dessous.
+Avant d’utiliser ce guide, reportez-vous au [&#x200B; guide de prise en main &#x200B;](./getting-started.md) pour plus d’informations sur les en-têtes d’authentification requis présentés dans l’exemple d’appel API ci-dessous.
 
 >[!TIP]
 >

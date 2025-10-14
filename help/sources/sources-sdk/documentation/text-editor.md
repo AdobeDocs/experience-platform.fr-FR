@@ -59,11 +59,11 @@ Sélectionnez ensuite **Branche de publication**.
 
 ## Créer la page de documentation pour votre source
 
-Avec le référentiel cloné sur votre ordinateur local et une nouvelle branche créée, vous pouvez maintenant commencer à créer la page de documentation de votre nouvelle source via l’éditeur de texte [ de votre choix](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=fr#understand-markdown-editors).
+Avec le référentiel cloné sur votre ordinateur local et une nouvelle branche créée, vous pouvez maintenant commencer à créer la page de documentation de votre nouvelle source via l’éditeur de texte [&#x200B; de votre choix](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=fr#understand-markdown-editors).
 
 Adobe vous recommande d’utiliser [Visual Studio Code](https://code.visualstudio.com/) et d’installer l’extension de création Adobe Markdown. Pour installer l’extension, lancez Visual Studio Code, puis sélectionnez l’onglet **Extensions** dans le volet de navigation de gauche.
 
-![ extension](../assets/extension.png)
+![&#x200B; extension](../assets/extension.png)
 
 Ensuite, saisissez `Adobe Markdown Authoring` dans la barre de recherche, puis sélectionnez **Installer** dans la page qui s’affiche.
 

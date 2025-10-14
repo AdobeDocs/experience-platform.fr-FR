@@ -11,7 +11,7 @@ ht-degree: 93%
 
 # Créer des brouillons de vos entités [!DNL Flow Service] à l’aide de l’API
 
-Utilisez le paramètre de requête `mode=draft` dans l’API [[!DNL Flow Service] ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) pour définir vos entités [!DNL Flow Service] telles que vos connexions de base, connexions source, connexions cible et flux de données au statut brouillon.
+Utilisez le paramètre de requête `mode=draft` dans l’API [[!DNL Flow Service] &#x200B;](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) pour définir vos entités [!DNL Flow Service] telles que vos connexions de base, connexions source, connexions cible et flux de données au statut brouillon.
 
 Les brouillons peuvent être mises à jour plus tard avec de nouvelles informations, puis publiés une fois qu’ils sont prêts, à l’aide du paramètre de requête `op=publish`.
 

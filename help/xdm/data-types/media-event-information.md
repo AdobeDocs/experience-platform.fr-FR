@@ -17,7 +17,7 @@ ht-degree: 5%
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `mediaCollection` | [!UICONTROL mediaDetails] | Informations détaillées sur le média relatives à l’événement d’expérience. Ce type de données est utilisé pour la [collecte de données multimédia](./media-collection-details.md) et la [ création de rapports de données multimédia](./media-reporting-details.md). |
+| `mediaCollection` | [!UICONTROL mediaDetails] | Informations détaillées sur le média relatives à l’événement d’expérience. Ce type de données est utilisé pour la [collecte de données multimédia](./media-collection-details.md) et la [&#x200B; création de rapports de données multimédia](./media-reporting-details.md). |
 | `mediaEventTimestamp` | [!UICONTROL Chaîne] | Heure à laquelle un événement multimédia s’est produit. |
 | `mediaEventType` | [!UICONTROL Chaîne] | Type d’événement multimédia. |
 

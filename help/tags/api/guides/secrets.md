@@ -105,7 +105,7 @@ Les secrets avec une valeur `type_of` de `oauth2-google` requièrent l’attribu
 
 | Attribut Credential | Type de données | Description |
 | --- | --- | --- |
-| `scopes` | Tableau | Répertorie les portées du produit Google pour l’authentification. Les portées suivantes sont prises en charge :<ul><li>[Publicités Google](https://developers.google.com/google-ads/api/docs/oauth/overview) : `https://www.googleapis.com/auth/adwords`</li><li>[ Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview) Google : `https://www.googleapis.com/auth/pubsub`</li></ul> |
+| `scopes` | Tableau | Répertorie les portées du produit Google pour l’authentification. Les portées suivantes sont prises en charge :<ul><li>[Publicités Google](https://developers.google.com/google-ads/api/docs/oauth/overview) : `https://www.googleapis.com/auth/adwords`</li><li>[&#x200B; Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview) Google : `https://www.googleapis.com/auth/pubsub`</li></ul> |
 
 Après avoir créé le secret `oauth2-google`, la réponse inclut une propriété `meta.authorization_url`. Vous devez copier et coller cette URL dans un navigateur pour terminer le flux d’authentification Google.
 

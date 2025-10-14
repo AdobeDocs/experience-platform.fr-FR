@@ -51,7 +51,7 @@ Pour commencer à utiliser les [!UICONTROL classeurs de cas d’utilisation], le
 
 **Autorisations requises**
 
-Pour ajouter les autorisations requises, dans l’interface utilisateur Autorisations, incluez le nouvel environnement de test du scénario d’utilisation dans les rôles [ que vous avez déjà configurés ](/help/access-control/abac/ui/permissions.md#managing-sandboxes-for-role), y compris ceux utilisés pour d’autres environnements de test de développement.
+Pour ajouter les autorisations requises, dans l’interface utilisateur Autorisations, incluez le nouvel environnement de test du scénario d’utilisation dans les rôles [&#x200B; que vous avez déjà configurés &#x200B;](/help/access-control/abac/ui/permissions.md#managing-sandboxes-for-role), y compris ceux utilisés pour d’autres environnements de test de développement.
 
 ![Environnement de test du manuel pour les rôles déjà configurés](/help/use-case-playbooks/assets/playbooks/get-started/permissions-to-existing-roles.png)
 

@@ -38,4 +38,4 @@ Le point d’entrée `/products` de l’API de contrôle d’accès basé sur le
 
 ## Étapes suivantes
 
-Pour commencer à effectuer des appels à l’aide de l’API de contrôle d’accès basé sur les attributs, lisez le [ guide de prise en main ](./getting-started.md) puis sélectionnez l’un des guides des points d’entrée pour savoir comment utiliser des points d’entrée spécifiques.
+Pour commencer à effectuer des appels à l’aide de l’API de contrôle d’accès basé sur les attributs, lisez le [&#x200B; guide de prise en main &#x200B;](./getting-started.md) puis sélectionnez l’un des guides des points d’entrée pour savoir comment utiliser des points d’entrée spécifiques.

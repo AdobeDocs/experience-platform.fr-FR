@@ -46,7 +46,7 @@ Sélectionnez **[!UICONTROL Configurer]** pour ouvrir la vue [!UICONTROL Configu
 
 Pour démarrer le processus d’enregistrement, copiez l’URL d’authentification de l’application pour votre organisation à partir de la vue [!UICONTROL Configuration des clés gérées par le client] et collez-la dans votre **[!DNL Key Vault Crypto Service Encryption User]** d’environnement [!DNL Azure]. Vous trouverez dans la section suivante des informations détaillées sur la [attribution d’un rôle](#assign-to-role).
 
-Sélectionnez l’icône de copie (![ Icône de copie .](../../../../images/icons/copy.png)) par la [!UICONTROL URL d’authentification de l’application].
+Sélectionnez l’icône de copie (![&#x200B; Icône de copie .](../../../../images/icons/copy.png)) par la [!UICONTROL URL d’authentification de l’application].
 
 ![La vue [!UICONTROL Configuration des clés gérées par le client] avec la section URL d’authentification de l’application mise en surbrillance.](../../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
 

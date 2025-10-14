@@ -65,11 +65,11 @@ Pour envoyer des données à l’extension d’API [!DNL Snapchat] Conversions, 
 
 4. Dans le menu déroulant, sélectionnez l’élément approprié, puis renseignez le champ [!UICONTROL Chemin] dans le panneau de droite pour référencer les données de votre choix dans le schéma.
 
-   ![Image illustrant l’écran Créer un élément de données ](../../../images/extensions/server/snap/create_data_element.png)
+   ![Image illustrant l’écran Créer un élément de données &#x200B;](../../../images/extensions/server/snap/create_data_element.png)
 
 Par exemple, si vous créez un élément de données qui fait référence à `snapClickId` dans le schéma illustré ci-dessous :
 
-![Image illustrant le schéma ](../../../images/extensions/server/snap/schema.png)
+![Image illustrant le schéma &#x200B;](../../../images/extensions/server/snap/schema.png)
 
 Vous devez configurer l’élément de données car `snapClickId` se trouve sous `_snap.inc.exchange` dans le schéma XDM.
 

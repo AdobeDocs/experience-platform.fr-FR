@@ -16,7 +16,7 @@ ht-degree: 35%
 
 >[!NOTE]
 >
->Le connecteur HDFS [!DNL Apache] est en version bêta. Consultez la [ Présentation des sources ](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>Le connecteur HDFS [!DNL Apache] est en version bêta. Consultez la [&#x200B; Présentation des sources &#x200B;](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Les connecteurs Source d’[!DNL Adobe Experience Platform] permettent d’ingérer des données provenant de l’extérieur selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour authentifier un connecteur source [!DNL Apache Hadoop Distributed File System] (ci-après dénommé « HDFS ») à l’aide de l’interface utilisateur [!DNL Experience Platform].
 

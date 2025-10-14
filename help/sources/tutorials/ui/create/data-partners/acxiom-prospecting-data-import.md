@@ -127,7 +127,7 @@ Vous pouvez sélectionner **[!UICONTROL Recherche avancée]** pour afficher une 
 Au cours de cette étape, si votre jeu de données est activé pour Profil, vous pouvez sélectionner le bouton (bascule) **[!UICONTROL Jeu de données de profil]** pour activer vos données pour l’ingestion de profil. Vous pouvez également activer les [!UICONTROL diagnostics d’erreur] et [!UICONTROL ingestion partielle].
 
 * **Diagnostics d’erreur** - Sélectionnez **Diagnostics d’erreur** pour demander à la source de générer des diagnostics d’erreur que vous pourrez référencer ultérieurement à l’aide des API. Pour plus d’informations, consultez la présentation des diagnostics d’erreur [Error Diagnostics](../../../../../ingestion/quality/error-diagnostics.md)
-* **Activer l’ingestion partielle** - L’ingestion par lots partielle est la possibilité d’ingérer des données contenant des erreurs, jusqu’à un certain seuil. Grâce à cette fonctionnalité, les utilisateurs peuvent ingérer toutes leurs données correctes dans Adobe Experience Platform, alors que toutes leurs données incorrectes sont traitées par lots séparément, avec des détails sur les raisons de leur non-validité.  Pour plus d’informations, consultez la [ Présentation de l’ingestion partielle ](../../../../../ingestion/batch-ingestion/partial.md)
+* **Activer l’ingestion partielle** - L’ingestion par lots partielle est la possibilité d’ingérer des données contenant des erreurs, jusqu’à un certain seuil. Grâce à cette fonctionnalité, les utilisateurs peuvent ingérer toutes leurs données correctes dans Adobe Experience Platform, alors que toutes leurs données incorrectes sont traitées par lots séparément, avec des détails sur les raisons de leur non-validité.  Pour plus d’informations, consultez la [&#x200B; Présentation de l’ingestion partielle &#x200B;](../../../../../ingestion/batch-ingestion/partial.md)
 
 ![Interface des configurations des détails du flux de données.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-dataset-details.png)
 
@@ -139,7 +139,7 @@ Au cours de cette étape, si votre jeu de données est activé pour Profil, vous
 
 ## Mappage
 
-Utilisez l’interface de mappage pour mapper vos données source aux champs de schéma appropriés avant d’ingérer des données vers Experience Platform.  Pour plus d’informations, consultez le guide de mappage [ dans l’interface utilisateur](../../../../../data-prep/ui/mapping.md)
+Utilisez l’interface de mappage pour mapper vos données source aux champs de schéma appropriés avant d’ingérer des données vers Experience Platform.  Pour plus d’informations, consultez le guide de mappage [&#x200B; dans l’interface utilisateur](../../../../../data-prep/ui/mapping.md)
 
 ![L’interface de mappage.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-mapping.png)
 

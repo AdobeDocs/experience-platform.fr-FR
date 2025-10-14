@@ -68,7 +68,7 @@ Ensuite, chargez le fichier fourni [exemple Braze Currents](https://github.com/A
 ![Écran « Ajouter des données ».](../../../../images/tutorials/create/braze/select-data.png)
 
 Une fois votre fichier chargé, vous devez fournir les détails de votre flux de données, y compris des informations sur votre jeu de données et le schéma auquel vous mappez.  Si c’est la première fois que vous connectez une source Braze Current, créez un jeu de données.  Sinon, vous pouvez utiliser n’importe quel jeu de données existant qui fait référence au schéma Braze.  Si vous créez un jeu de données, utilisez le schéma que nous avons créé dans la section précédente.
-![ Écran « Détails du flux de données » mettant en surbrillance « Détails du jeu de données » ](../../../../images/tutorials/create/braze/dataflow-detail.png)
+![&#x200B; Écran « Détails du flux de données » mettant en surbrillance « Détails du jeu de données » &#x200B;](../../../../images/tutorials/create/braze/dataflow-detail.png)
 
 Configurez ensuite le mappage pour vos données à l’aide de l’interface de mappage.
 
@@ -86,7 +86,7 @@ Une fois le nouveau champ calculé ajouté, sélectionnez **[!UICONTROL Mapper l
 >
 >Les dates et heures de Braze ne sont pas exprimées en millisecondes, mais plutôt en secondes. Pour que les dates et heures dans Experience Platform soient reflétées avec précision, vous devez créer des champs calculés en millisecondes. Un calcul de « temps * 1 000 » sera correctement converti en millisecondes, approprié pour mapper vers un champ d’horodatage dans Experience Platform.
 >
->![Création d’un champ calculé pour les ](../../../../images/tutorials/create/braze/create-calculated-field.png) d’horodatage
+>![Création d’un champ calculé pour les &#x200B;](../../../../images/tutorials/create/braze/create-calculated-field.png) d’horodatage
 
 ![Mappage sans erreur.](../../../../images/tutorials/create/braze/completed_mapping.png)
 

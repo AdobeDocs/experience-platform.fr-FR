@@ -16,7 +16,7 @@ ht-degree: 50%
 >
 >La source [!DNL Amazon Kinesis] est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-Time Customer Data Platform Ultimate.
 
-Ce tutoriel vous guide tout au long des étapes de connexion de [!DNL Amazon Kinesis] (ci-après dénommé « [!DNL Kinesis] ») à Experience Platform à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel vous guide tout au long des étapes de connexion de [!DNL Amazon Kinesis] (ci-après dénommé « [!DNL Kinesis] ») à Experience Platform à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
@@ -172,4 +172,4 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
 
 ## Étapes suivantes
 
-Ce tutoriel vous a permis de créer une connexion source [!DNL Kinesis] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet ID de connexion source dans le tutoriel suivant pour [créer un flux de données en continu à l’aide de l’API  [!DNL Flow Service] ](../../collect/streaming.md).
+Ce tutoriel vous a permis de créer une connexion source [!DNL Kinesis] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet ID de connexion source dans le tutoriel suivant pour [créer un flux de données en continu à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/streaming.md).

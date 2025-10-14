@@ -21,7 +21,7 @@ Tous les champs des schémas de modèle de données d’expérience (XDM) sont a
 
 L’espace de noms vous permet de définir un champ dans un espace de noms comme étant différent du même champ dans un autre espace de noms. En pratique, l’espace de noms d’un champ indique qui a créé le champ (par exemple, XDM standard (Adobe), un fournisseur ou votre organisation).
 
-Prenons l’exemple d’un schéma XDM qui utilise le groupe de champs [[!UICONTROL Coordonnées personnelles] ](../field-groups/profile/demographic-details.md), qui comporte un champ `mobilePhone` standard existant dans l’espace de noms `xdm`. Dans le même schéma, vous êtes également libre de créer un champ de `mobilePhone` distinct sous un autre espace de noms (votre [identifiant client](../api/getting-started.md#know-your-tenant_id)). Ces deux champs peuvent coexister tout en ayant des significations ou des contraintes sous-jacentes différentes.
+Prenons l’exemple d’un schéma XDM qui utilise le groupe de champs [[!UICONTROL Coordonnées personnelles] &#x200B;](../field-groups/profile/demographic-details.md), qui comporte un champ `mobilePhone` standard existant dans l’espace de noms `xdm`. Dans le même schéma, vous êtes également libre de créer un champ de `mobilePhone` distinct sous un autre espace de noms (votre [identifiant client](../api/getting-started.md#know-your-tenant_id)). Ces deux champs peuvent coexister tout en ayant des significations ou des contraintes sous-jacentes différentes.
 
 ## Syntaxe de l’espace de noms
 

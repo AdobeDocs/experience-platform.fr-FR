@@ -540,7 +540,7 @@ En tant que solution temporaire, si vous devez ajouter des espaces de noms d’i
 
 >[!IMPORTANT]
 > 
->Toutes les destinations d’espace de stockage du catalogue peuvent afficher une étape améliorée [[!UICONTROL Mappage] ](#mapping) qui remplace l’étape **[!UICONTROL Sélectionner des attributs]** décrite dans cette section.
+>Toutes les destinations d’espace de stockage du catalogue peuvent afficher une étape améliorée [[!UICONTROL Mappage] &#x200B;](#mapping) qui remplace l’étape **[!UICONTROL Sélectionner des attributs]** décrite dans cette section.
 >
 >Cette étape **[!UICONTROL Sélectionner des attributs]** reste affichée pour les destinations de marketing par e-mail Adobe Campaign, Oracle Responsys, Oracle Eloqua et Salesforce Marketing Cloud.
 
@@ -605,7 +605,7 @@ Pour sélectionner des attributs d’enrichissement pour chaque audience externe
 
 Si vous souhaitez activer des audiences externes vers vos destinations sans exporter d’attribut, activez le bouton (bascule) **[!UICONTROL Exclure les attributs d’enrichissement]**. Cette option exporte les profils des audiences externes, mais aucun de leurs attributs correspondants n’est envoyé à votre destination.
 
-![ Image de l’interface utilisateur affichant le bouton (bascule) Exclure les attributs d’enrichissement ](../assets/ui/activate-batch-profile-destinations/exclude-enrichment-attributes.png).
+![&#x200B; Image de l’interface utilisateur affichant le bouton (bascule) Exclure les attributs d’enrichissement &#x200B;](../assets/ui/activate-batch-profile-destinations/exclude-enrichment-attributes.png).
 
 Sélectionnez **[!UICONTROL Suivant]** pour passer à l’étape [Réviser](#review).
 
@@ -631,7 +631,7 @@ Sur la page **[!UICONTROL Vérifier]**, vous pouvez voir un résumé de votre s�
 >title="Affichage des politiques de consentement applicables"
 >abstract="Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL Afficher les politiques de consentement applicables]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l&#39;activation qui en résulte. Ce contrôle est désactivé si votre entreprise n&#39;a pas accès aux SKU mentionnés ci-dessus."
 
-Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL Afficher les politiques de consentement applicables]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l&#39;activation qui en résulte. Pour plus d’informations, consultez [ Évaluation des politiques de consentement ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
+Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL Afficher les politiques de consentement applicables]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l&#39;activation qui en résulte. Pour plus d’informations, consultez [&#x200B; Évaluation des politiques de consentement &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
 
 ### Vérifications des politiques d’utilisation des données {#data-usage-policy-checks}
 

@@ -24,7 +24,7 @@ Les mêmes principes s&#39;appliquent au contrôle d&#39;accès. L’assistant A
 Actuellement, la portée de l’assistant AI est la suivante :
 
 * [Connaissance des produits](./home.md#product-knowledge) : l’assistant AI peut répondre aux questions sur la connaissance des produits pour Experience Platform, Real-Time Customer Data Platform et Adobe Journey Optimizer. Vous pouvez également approfondir les rubriques de connaissance des produits Customer Journey Analytics, mais uniquement via l’interface utilisateur de Customer Journey Analytics.
-* [Informations opérationnelles ](./home.md#operational-insights) : vous pouvez poser des questions à l’assistant AI sur les informations opérationnelles relatives aux objets de données suivants : attributs, audiences, flux de données, jeux de données, destinations, parcours, schémas et sources.
+* [Informations opérationnelles &#x200B;](./home.md#operational-insights) : vous pouvez poser des questions à l’assistant AI sur les informations opérationnelles relatives aux objets de données suivants : attributs, audiences, flux de données, jeux de données, destinations, parcours, schémas et sources.
 
 ## Quelles sont les fonctionnalités de l’assistant d’IA ?
 

@@ -92,7 +92,7 @@ Le groupe de champs fournit un champ de type objet unique, `consents`, dont les 
 
 >[!NOTE]
 >
->Pour plus d’informations sur la structure et la signification des sous-propriétés dans `consents`, consultez la présentation du groupe de champs [[!UICONTROL Détails du consentement et des préférences] ](../../../../xdm/field-groups/profile/consents.md).
+>Pour plus d’informations sur la structure et la signification des sous-propriétés dans `consents`, consultez la présentation du groupe de champs [[!UICONTROL Détails du consentement et des préférences] &#x200B;](../../../../xdm/field-groups/profile/consents.md).
 
 ## Ajouter les groupes de champs obligatoires à votre schéma de [!DNL Profile] {#add-field-group}
 
@@ -101,7 +101,7 @@ Pour collecter des données de consentement à l’aide de la norme Adobe, vous 
 * [[!UICONTROL Détails relatifs au consentement et aux préférences]](../../../../xdm/field-groups/profile/consents.md)
 * [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) (obligatoire si vous utilisez Experience Platform Web ou Mobile SDK pour envoyer des signaux de consentement)
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Parcourir]** pour afficher la liste des schémas existants. À partir de là, sélectionnez le nom du schéma [!DNL Profile] auquel vous souhaitez ajouter des champs de consentement. Les captures d’écran de cette section utilisent le schéma « Membres du programme de fidélité » créé dans le [ tutoriel sur la création de schémas ](../../../../xdm/tutorials/create-schema-ui.md) à titre d’exemple.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Parcourir]** pour afficher la liste des schémas existants. À partir de là, sélectionnez le nom du schéma [!DNL Profile] auquel vous souhaitez ajouter des champs de consentement. Les captures d’écran de cette section utilisent le schéma « Membres du programme de fidélité » créé dans le [&#x200B; tutoriel sur la création de schémas &#x200B;](../../../../xdm/tutorials/create-schema-ui.md) à titre d’exemple.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/select-schema.png)
 

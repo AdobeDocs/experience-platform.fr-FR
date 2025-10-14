@@ -45,11 +45,11 @@ Accédez à la page [!DNL Salesforce] [version d’évaluation](https://www.sale
 
 #### Configuration d’une application connectée dans [!DNL Salesforce] {#prerequisites-connected-app}
 
-Tout d’abord, vous devez configurer une [[!DNL Salesforce] application connectée](https://help.salesforce.com/s/articleView?id=sf.connected_app_create.htm&amp;language=en_US&amp;r=https%3A%2F%2Fhelp.salesforce.com%2F&amp;type=5) dans votre compte [!DNL Salesforce], si vous n’en avez pas déjà une. [!DNL Salesforce CRM] utilisera l’application connectée pour vous connecter à [!DNL Salesforce].
+Tout d’abord, vous devez configurer une [[!DNL Salesforce] application connectée](https://help.salesforce.com/s/articleView?id=sf.connected_app_create.htm&language=en_US&r=https%3A%2F%2Fhelp.salesforce.com%2F&type=5) dans votre compte [!DNL Salesforce], si vous n’en avez pas déjà une. [!DNL Salesforce CRM] utilisera l’application connectée pour vous connecter à [!DNL Salesforce].
 
-Ensuite, activez [!DNL OAuth Settings for API Integration] pour le [!DNL Salesforce connected app]. Reportez-vous à la documentation [[!DNL Salesforce]](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&amp;type=5&amp;language=en_US) pour obtenir des conseils.
+Ensuite, activez [!DNL OAuth Settings for API Integration] pour le [!DNL Salesforce connected app]. Reportez-vous à la documentation [[!DNL Salesforce]](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) pour obtenir des conseils.
 
-Assurez-vous également que les [portées](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&amp;type=5&amp;language=en_US) mentionnées ci-dessous sont sélectionnées pour le [!DNL Salesforce connected app].
+Assurez-vous également que les [portées](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) mentionnées ci-dessous sont sélectionnées pour le [!DNL Salesforce connected app].
 
 * ``chatter_api``
 * ``lightning``
@@ -62,11 +62,11 @@ Assurez-vous également que les [portées](https://help.salesforce.com/s/article
 * ``refresh_token``
 * ``offline_access``
 
-Enfin, assurez-vous que l’octroi de `password` est activé dans votre compte [!DNL Salesforce]. Reportez-vous à la documentation [!DNL Salesforce] [Flux nom d’utilisateur-mot de passe OAuth 2.0 pour les scénarios spéciaux](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_username_password_flow.htm&amp;type=5) si vous avez besoin de conseils.
+Enfin, assurez-vous que l’octroi de `password` est activé dans votre compte [!DNL Salesforce]. Reportez-vous à la documentation [!DNL Salesforce] [Flux nom d’utilisateur-mot de passe OAuth 2.0 pour les scénarios spéciaux](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_username_password_flow.htm&type=5) si vous avez besoin de conseils.
 
 >[!IMPORTANT]
 >
->Si l’administrateur de votre compte [!DNL Salesforce] a limité l’accès aux plages d’adresses IP de confiance, vous devez le contacter pour obtenir [les adresses IP d’Experience Platformplacer sur la liste autorisée ](/help/destinations/catalog/streaming/ip-address-allow-list.md). Reportez-vous à la documentation [!DNL Salesforce] [Limiter l’accès aux plages d’adresses IP de confiance pour une application connectée](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) si vous avez besoin de conseils supplémentaires.
+>Si l’administrateur de votre compte [!DNL Salesforce] a limité l’accès aux plages d’adresses IP de confiance, vous devez le contacter pour obtenir [les adresses IP d’Experience Platformplacer sur la liste autorisée &#x200B;](/help/destinations/catalog/streaming/ip-address-allow-list.md). Reportez-vous à la documentation [!DNL Salesforce] [Limiter l’accès aux plages d’adresses IP de confiance pour une application connectée](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) si vous avez besoin de conseils supplémentaires.
 
 #### Créer des champs personnalisés dans [!DNL Salesforce] {#prerequisites-custom-field}
 
@@ -74,7 +74,7 @@ Lors de l’activation des audiences vers la destination [!DNL Salesforce CRM], 
 
 [!DNL Salesforce CRM] a besoin de cette valeur pour lire et interpréter correctement les audiences provenant d’Experience Platform et pour mettre à jour leur statut d’audience dans [!DNL Salesforce]. Reportez-vous à la documentation Experience Platform pour le groupe de champs de schéma [Détails sur l’appartenance à une audience](/help/xdm/field-groups/profile/segmentation.md) si vous avez besoin de conseils sur les statuts de l’audience.
 
-Pour chaque audience activée d’Experience Platform vers [!DNL Salesforce CRM], vous devez créer un champ personnalisé de type `Text Area (Long)` dans [!DNL Salesforce]. Vous pouvez définir la longueur des caractères du champ de n’importe quelle taille entre 256 et 131 072 caractères en fonction des besoins de votre entreprise. Consultez la page de documentation [!DNL Salesforce] [Types de champs personnalisés](https://help.salesforce.com/s/articleView?id=sf.custom_field_types.htm&amp;type=5) pour plus d’informations sur les types de champs personnalisés. Reportez-vous également à la documentation [!DNL Salesforce] pour [créer des champs personnalisés](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) si vous avez besoin d’aide pour la création de champs.
+Pour chaque audience activée d’Experience Platform vers [!DNL Salesforce CRM], vous devez créer un champ personnalisé de type `Text Area (Long)` dans [!DNL Salesforce]. Vous pouvez définir la longueur des caractères du champ de n’importe quelle taille entre 256 et 131 072 caractères en fonction des besoins de votre entreprise. Consultez la page de documentation [!DNL Salesforce] [Types de champs personnalisés](https://help.salesforce.com/s/articleView?id=sf.custom_field_types.htm&type=5) pour plus d’informations sur les types de champs personnalisés. Reportez-vous également à la documentation [!DNL Salesforce] pour [créer des champs personnalisés](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&type=5&language=en_US) si vous avez besoin d’aide pour la création de champs.
 
 >[!IMPORTANT]
 >
@@ -94,7 +94,7 @@ Un exemple de création de champ personnalisé dans [!DNL Salesforce], *Étape 2
 
 >[!NOTE]
 >
->* Les objets dans Salesforce sont limités à 25 champs externes. Voir [Attributs de champ personnalisés](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5).
+>* Les objets dans Salesforce sont limités à 25 champs externes. Voir [Attributs de champ personnalisés](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5).
 >* Cette restriction implique que vous ne pouvez avoir qu’un maximum de 25 appartenances à une audience Experience Platform actives à tout moment.
 >* Si vous avez atteint cette limite dans Salesforce, vous devez supprimer les attributs personnalisés de Salesforce utilisés pour stocker le statut de l’audience par rapport aux anciennes audiences dans Experience Platform avant de pouvoir utiliser un nouvel **[!UICONTROL identifiant de mappage]**.
 
@@ -106,16 +106,16 @@ Notez les éléments ci-dessous avant de vous authentifier à la destination [!D
 | --- | --- | --- |
 | `Username` | Nom d’utilisateur de votre compte [!DNL Salesforce]. | |
 | `Password` | Mot de passe de votre compte [!DNL Salesforce]. | |
-| `Security Token` | Votre jeton de sécurité [!DNL Salesforce] que vous ajouterez ultérieurement à la fin de votre mot de passe [!DNL Salesforce] pour créer une chaîne concaténée à utiliser comme **[!UICONTROL mot de passe]** lors de l’[authentification à la destination](#authenticate).<br> Reportez-vous à la documentation [!DNL Salesforce] pour [réinitialiser votre jeton de sécurité](https://help.salesforce.com/s/articleView?id=sf.user_security_token.htm&amp;type=5) afin de savoir comment le régénérer à partir de l’interface [!DNL Salesforce] si vous ne disposez pas du jeton de sécurité. |  |
-| `Custom Domain` | Votre préfixe de domaine [!DNL Salesforce]. <br> Consultez la [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&amp;type=5) pour savoir comment obtenir cette valeur à partir de l’interface [!DNL Salesforce]. | Si votre domaine de [!DNL Salesforce] est <br> *`d5i000000isb4eak-dev-ed`.my.salesforce.com*,<br> vous aurez besoin de `d5i000000isb4eak-dev-ed` comme valeur. |
-| `Client ID` | Votre `Consumer Key` Salesforce. <br> Reportez-vous à la [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5) pour savoir comment obtenir cette valeur à partir de l’interface [!DNL Salesforce]. | |
-| `Client Secret` | Votre `Consumer Secret` Salesforce. <br> Reportez-vous à la [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5) pour savoir comment obtenir cette valeur à partir de l’interface [!DNL Salesforce]. | |
+| `Security Token` | Votre jeton de sécurité [!DNL Salesforce] que vous ajouterez ultérieurement à la fin de votre mot de passe [!DNL Salesforce] pour créer une chaîne concaténée à utiliser comme **[!UICONTROL mot de passe]** lors de l’[authentification à la destination](#authenticate).<br> Reportez-vous à la documentation [!DNL Salesforce] pour [réinitialiser votre jeton de sécurité](https://help.salesforce.com/s/articleView?id=sf.user_security_token.htm&type=5) afin de savoir comment le régénérer à partir de l’interface [!DNL Salesforce] si vous ne disposez pas du jeton de sécurité. |  |
+| `Custom Domain` | Votre préfixe de domaine [!DNL Salesforce]. <br> Consultez la [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5) pour savoir comment obtenir cette valeur à partir de l’interface [!DNL Salesforce]. | Si votre domaine de [!DNL Salesforce] est <br> *`d5i000000isb4eak-dev-ed`.my.salesforce.com*,<br> vous aurez besoin de `d5i000000isb4eak-dev-ed` comme valeur. |
+| `Client ID` | Votre `Consumer Key` Salesforce. <br> Reportez-vous à la [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) pour savoir comment obtenir cette valeur à partir de l’interface [!DNL Salesforce]. | |
+| `Client Secret` | Votre `Consumer Secret` Salesforce. <br> Reportez-vous à la [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) pour savoir comment obtenir cette valeur à partir de l’interface [!DNL Salesforce]. | |
 
 ### Mécanismes de sécurisation {#guardrails}
 
 [!DNL Salesforce] équilibre la charge des transactions en imposant des limites de requête, de taux et de délai d’expiration. Pour plus d’informations, consultez [Limites et allocations de requêtes API](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm).
 
-Si l’administrateur de votre compte [!DNL Salesforce] a appliqué des restrictions IP, vous devez ajouter [les adresses IP Experience Platform](/help/destinations/catalog/streaming/ip-address-allow-list.md) aux plages d’adresses IP de confiance de vos comptes [!DNL Salesforce]. Reportez-vous à la documentation [!DNL Salesforce] [Limiter l’accès aux plages d’adresses IP de confiance pour une application connectée](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) si vous avez besoin de conseils supplémentaires.
+Si l’administrateur de votre compte [!DNL Salesforce] a appliqué des restrictions IP, vous devez ajouter [les adresses IP Experience Platform](/help/destinations/catalog/streaming/ip-address-allow-list.md) aux plages d’adresses IP de confiance de vos comptes [!DNL Salesforce]. Reportez-vous à la documentation [!DNL Salesforce] [Limiter l’accès aux plages d’adresses IP de confiance pour une application connectée](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) si vous avez besoin de conseils supplémentaires.
 
 >[!IMPORTANT]
 >
@@ -198,14 +198,14 @@ Pour envoyer correctement vos données d’audience d’Adobe Experience Platf
 
 Les attributs spécifiés dans le **[!UICONTROL champ cible]** doivent être nommés exactement comme décrit dans le tableau des mappages d’attributs, car ces attributs formeront le corps de la requête.
 
-Les attributs spécifiés dans le champ **[!UICONTROL Source]** ne respectent aucune restriction de ce type. Vous pouvez la mapper en fonction de vos besoins, mais assurez-vous que le format des données d’entrée est valide, conformément à la [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5). Si les données d’entrée ne sont pas valides, l’appel de mise à jour à [!DNL Salesforce] échoue et vos contacts/prospects ne sont pas mis à jour.
+Les attributs spécifiés dans le champ **[!UICONTROL Source]** ne respectent aucune restriction de ce type. Vous pouvez la mapper en fonction de vos besoins, mais assurez-vous que le format des données d’entrée est valide, conformément à la [[!DNL Salesforce] documentation](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5). Si les données d’entrée ne sont pas valides, l’appel de mise à jour à [!DNL Salesforce] échoue et vos contacts/prospects ne sont pas mis à jour.
 
 Pour mapper correctement vos champs XDM vers les champs de destination [!DNL (API) Salesforce CRM], procédez comme suit :
 
 1. À l’étape **[!UICONTROL Mappage]**, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**. Une nouvelle ligne de mappage s’affiche à l’écran.
    ![Exemple de capture d’écran de l’interface utilisateur d’Experience Platform pour Ajouter un nouveau mappage.](../../assets/catalog/crm/salesforce/add-new-mapping.png)
 1. Dans la fenêtre **[!UICONTROL Sélectionner le champ source]**, choisissez la catégorie **[!UICONTROL Sélectionner les attributs]** et sélectionnez l’attribut XDM ou choisissez l’espace de noms d’identité **[!UICONTROL Sélectionner]** et sélectionnez une identité.
-1. Dans la fenêtre **[!UICONTROL Sélectionner le champ cible]**, choisissez la catégorie **[!UICONTROL Sélectionner l’espace de noms d’identité]** et sélectionnez une identité ou choisissez **[!UICONTROL Sélectionner des attributs personnalisés]** et sélectionnez un attribut ou définissez-en un à l’aide du champ **[!UICONTROL Nom de l’attribut]** selon les besoins. Reportez-vous à la [[!DNL Salesforce CRM] documentation](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5) pour obtenir des conseils sur les attributs pris en charge.
+1. Dans la fenêtre **[!UICONTROL Sélectionner le champ cible]**, choisissez la catégorie **[!UICONTROL Sélectionner l’espace de noms d’identité]** et sélectionnez une identité ou choisissez **[!UICONTROL Sélectionner des attributs personnalisés]** et sélectionnez un attribut ou définissez-en un à l’aide du champ **[!UICONTROL Nom de l’attribut]** selon les besoins. Reportez-vous à la [[!DNL Salesforce CRM] documentation](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5) pour obtenir des conseils sur les attributs pris en charge.
    * Répétez ces étapes pour ajouter les mappages suivants entre votre schéma de profil XDM et [!DNL (API) Salesforce CRM] :
 
    **Utilisation des contacts**
@@ -246,7 +246,7 @@ Lorsque vous avez terminé de fournir les mappages pour votre connexion de desti
 
 ### Planifier l’exportation de l’audience et exemple {#schedule-segment-export-example}
 
-Lors de l’exécution de l’étape [ Planifier l’exportation d’audiences ](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling), vous devez mapper manuellement les audiences activées depuis Experience Platform à leur champ personnalisé correspondant dans [!DNL Salesforce].
+Lors de l’exécution de l’étape [&#x200B; Planifier l’exportation d’audiences &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling), vous devez mapper manuellement les audiences activées depuis Experience Platform à leur champ personnalisé correspondant dans [!DNL Salesforce].
 
 Pour ce faire, sélectionnez chaque segment, puis saisissez le nom du champ personnalisé à partir de [!DNL Salesforce] dans le champ [!DNL Salesforce CRM] **[!UICONTROL ID de mappage]**. Reportez-vous à la section [Créer des champs personnalisés dans [!DNL Salesforce]](#prerequisites-custom-field) pour obtenir des conseils et connaître les bonnes pratiques sur la création de champs personnalisés dans [!DNL Salesforce].
 
@@ -321,13 +321,13 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
    * Pour corriger cette erreur, vérifiez que l’**[!UICONTROL identifiant de mappage]** que vous avez fourni dans le workflow d’activation vers la destination [!DNL Salesforce CRM] correspond exactement à la valeur du type de champ personnalisé que vous avez créé dans [!DNL Salesforce]. Reportez-vous à la section [Créer des champs personnalisés dans [!DNL Salesforce]](#prerequisites-custom-field) pour obtenir des conseils.
 
 * Lors de l’activation d’un segment, vous pouvez obtenir un message d’erreur : `The client's IP address is unauthorized for this account. Allowlist the client's IP address...`
-   * Pour corriger cette erreur, contactez l’administrateur de votre compte [!DNL Salesforce] pour ajouter [des adresses IP Experience Platform](/help/destinations/catalog/streaming/ip-address-allow-list.md) aux plages d’adresses IP approuvées de vos comptes [!DNL Salesforce]. Reportez-vous à la documentation [!DNL Salesforce] [Limiter l’accès aux plages d’adresses IP de confiance pour une application connectée](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) si vous avez besoin de conseils supplémentaires.
+   * Pour corriger cette erreur, contactez l’administrateur de votre compte [!DNL Salesforce] pour ajouter [des adresses IP Experience Platform](/help/destinations/catalog/streaming/ip-address-allow-list.md) aux plages d’adresses IP approuvées de vos comptes [!DNL Salesforce]. Reportez-vous à la documentation [!DNL Salesforce] [Limiter l’accès aux plages d’adresses IP de confiance pour une application connectée](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) si vous avez besoin de conseils supplémentaires.
 
 ## Ressources supplémentaires {#additional-resources}
 
 Retrouvez d’autres informations utiles du portail de développement [Salesforce](https://developer.salesforce.com/) ci-dessous :
 * [Démarrage rapide](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart.htm)
 * [Créer un enregistrement](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_sobject_create.htm)
-* [ Audiences de recommandations personnalisées ](https://developer.salesforce.com/docs/atlas.en-us.236.0.chatterapi.meta/chatterapi/connect_resources_recommendation_audiences_list.htm)
+* [&#x200B; Audiences de recommandations personnalisées &#x200B;](https://developer.salesforce.com/docs/atlas.en-us.236.0.chatterapi.meta/chatterapi/connect_resources_recommendation_audiences_list.htm)
 * [Utilisation de ressources composites](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/using_composite_resources.htm?q=composite)
 * Cette destination utilise l’API [Upsert Multiple Records](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_composite_sobjects_collections_update.htm) au lieu de l’appel API [Upsert Single Record](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts).

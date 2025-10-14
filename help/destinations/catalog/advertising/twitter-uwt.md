@@ -18,7 +18,7 @@ ht-degree: 71%
 
 [!DNL Twitter Universal Website Tag] est une extension publicitaire dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, voir [Suivi des conversions](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) dans la documentation Twitter.
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension Twitter Universal Website Tag](../../assets/catalog/advertising/twitter-uwt/catalog.png)
 

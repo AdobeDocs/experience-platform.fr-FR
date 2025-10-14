@@ -27,7 +27,7 @@ Dans cette section, familiarisez-vous avec la vue Event Transaction et découvre
 
 ### Flux de traitement des événements
 
-![ &lbrace;Event transactions view](./images/event-transactions/event-transactions-view.png)
+![&#x200B; &lbrace;Event transactions view](./images/event-transactions/event-transactions-view.png)
 
 La vue Transactions d’événement affiche trois colonnes dans l’ordre du flux de traitement des événements :
 

@@ -61,4 +61,4 @@ Pour plus d’informations sur le groupe de champs, reportez-vous au référenti
 * [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-healthcare-member.schema.json)
 
-Reportez-vous à la documentation du schéma de l’industrie pour plus d’informations sur la façon dont ce groupe de champs peut être utilisé pour répondre aux [ cas d’utilisation courants du secteur de la santé](../../schema/industries/healthcare.md).
+Reportez-vous à la documentation du schéma de l’industrie pour plus d’informations sur la façon dont ce groupe de champs peut être utilisé pour répondre aux [&#x200B; cas d’utilisation courants du secteur de la santé](../../schema/industries/healthcare.md).

@@ -315,7 +315,7 @@ La réponse suivante est un exemple d’exécution de flux ayant échoué, avec 
 
 ## Étapes suivantes
 
-Vous pouvez désormais vous abonner à des événements qui vous permettent de recevoir des notifications en temps réel sur les statuts d’exécution de vos flux. Pour plus d’informations sur les exécutions de flux et les sources, consultez la [ présentation des sources ](./home.md).
+Vous pouvez désormais vous abonner à des événements qui vous permettent de recevoir des notifications en temps réel sur les statuts d’exécution de vos flux. Pour plus d’informations sur les exécutions de flux et les sources, consultez la [&#x200B; présentation des sources &#x200B;](./home.md).
 
 ## Annexe
 

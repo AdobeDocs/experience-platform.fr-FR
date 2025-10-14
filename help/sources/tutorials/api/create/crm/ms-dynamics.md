@@ -693,4 +693,4 @@ Une réponse réussie renvoie l’identifiant de connexion source nouvellement g
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL Microsoft Dynamics] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créer un flux de données pour importer des données CRM dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/crm.md)
+* [Créer un flux de données pour importer des données CRM dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/crm.md)

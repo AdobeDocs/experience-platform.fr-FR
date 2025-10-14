@@ -39,7 +39,7 @@ Le choix de la région cloud appropriée est essentiel pour répondre aux exigen
 
 ![Image montrant la répartition géographique des sites d’hébergement.](assets/multi-cloud/hosting-locations-map.png){align="center" zoomable="yes"}
 
-Experience Platform est disponible dans six emplacements d’hébergement Microsoft Azure, un emplacement d’hébergement Amazon Web Services (AWS) et achemine les données vers les services Adobe via sept [nœuds Edge Network ](../collection/home.md#edge) répartis dans le monde entier.
+Experience Platform est disponible dans six emplacements d’hébergement Microsoft Azure, un emplacement d’hébergement Amazon Web Services (AWS) et achemine les données vers les services Adobe via sept [nœuds Edge Network &#x200B;](../collection/home.md#edge) répartis dans le monde entier.
 
 ### Régions Microsoft Azure {#azure-regions}
 

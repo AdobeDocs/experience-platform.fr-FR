@@ -78,4 +78,4 @@ Pour DbVisualizer en particulier, il existe également une option dans l’inter
 
 En lisant ce document, vous avez aquis une compréhension claire des blocs anonymes et de leur structure. Pour plus d’informations sur l’écriture de requêtes, consultez le [guide d’exécution de requête](../best-practices/writing-queries.md) .
 
-Vous devez également consulter la section [ sur l’utilisation des blocs anonymes avec le modèle de conception de charge incrémentielle ](./incremental-load.md) pour augmenter l’efficacité des requêtes.
+Vous devez également consulter la section [&#x200B; sur l’utilisation des blocs anonymes avec le modèle de conception de charge incrémentielle &#x200B;](./incremental-load.md) pour augmenter l’efficacité des requêtes.

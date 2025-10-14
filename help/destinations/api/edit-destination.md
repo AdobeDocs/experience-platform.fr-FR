@@ -13,7 +13,7 @@ ht-degree: 26%
 
 # Modifier des connexions de destination à l’aide de l’API Flow Service
 
-Ce tutoriel décrit les étapes à suivre pour modifier divers composants d’une connexion à la destination. Découvrez comment mettre à jour les informations d’authentification, l’emplacement d’exportation, etc. à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour modifier divers composants d’une connexion à la destination. Découvrez comment mettre à jour les informations d’authentification, l’emplacement d’exportation, etc. à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
@@ -288,7 +288,7 @@ Une réponse réussie renvoie votre identifiant de connexion cible et une etag m
 
 **Requête**
 
-La requête suivante met à jour le paramètre `advertiserId` d’une [[!DNL Pinterest]  connexion de destination ](/help/destinations/catalog/advertising/pinterest.md#parameters).
+La requête suivante met à jour le paramètre `advertiserId` d’une [[!DNL Pinterest]  connexion de destination &#x200B;](/help/destinations/catalog/advertising/pinterest.md#parameters).
 
 ```shell
 curl -X PATCH \
@@ -451,7 +451,7 @@ Une réponse réussie renvoie votre identifiant de connexion de base et une bali
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[ consultez les sections ](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[&#x200B; consultez les sections &#x200B;](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 

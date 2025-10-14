@@ -20,7 +20,7 @@ Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votr
 
 À l’aide d’API RESTful ou de l’interface utilisateur, vous pouvez créer des politiques de fusion, gérer des politiques existantes et définir une politique de fusion par défaut pour votre organisation dans l’interface utilisateur. Ce guide décrit les étapes à suivre pour utiliser des politiques de fusion à l’aide de l’API .
 
-Pour utiliser les politiques de fusion à l’aide de l’interface utilisateur, reportez-vous au [guide de l’interface utilisateur des politiques de fusion](../merge-policies/ui-guide.md). Pour en savoir plus sur les politiques de fusion en général et sur leur rôle dans Experience Platform, commencez par lire la [ présentation des politiques de fusion ](../merge-policies/overview.md).
+Pour utiliser les politiques de fusion à l’aide de l’interface utilisateur, reportez-vous au [guide de l’interface utilisateur des politiques de fusion](../merge-policies/ui-guide.md). Pour en savoir plus sur les politiques de fusion en général et sur leur rôle dans Experience Platform, commencez par lire la [&#x200B; présentation des politiques de fusion &#x200B;](../merge-policies/overview.md).
 
 ## Prise en main
 
@@ -105,7 +105,7 @@ L’objet de politique de fusion complet est un ensemble de préférences contr�
 
 ### Graphique d’identités {#identity-graph}
 
-[Adobe Experience Platform Identity Service ](../../identity-service/home.md) gère les graphiques d’identités utilisés au niveau mondial et pour chaque organisation sur [!DNL Experience Platform]. L’attribut `identityGraph` de la politique de fusion définit la manière de déterminer les identités associées pour un utilisateur.
+[Adobe Experience Platform Identity Service &#x200B;](../../identity-service/home.md) gère les graphiques d’identités utilisés au niveau mondial et pour chaque organisation sur [!DNL Experience Platform]. L’attribut `identityGraph` de la politique de fusion définit la manière de déterminer les identités associées pour un utilisateur.
 
 **Objet identityGraph**
 

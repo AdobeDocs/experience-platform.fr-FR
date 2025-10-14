@@ -25,7 +25,7 @@ Ce document et la présentation vidéo qui l’accompagne fournissent un workflo
 Cette démonstration de workflow repose sur plusieurs services Adobe Experience Platform. Si vous souhaitez suivre cette procédure, il est recommandé de bien comprendre les fonctionnalités et services suivants :
 
 * Les [principes de base de la composition de schémas du modèle de données d’expérience (XDM)](../../xdm/schema/composition.md)
-* Comment [ créer des jeux de données et ingérer des données ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr)
+* Comment [&#x200B; créer des jeux de données et ingérer des données &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr)
 * Comment [ingérer des données à l’aide du connecteur source Adobe Analytics](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html?lang=fr)
 * [Segmentation](../../segmentation/home.md)
 * [Destinations](../../destinations/home.md)

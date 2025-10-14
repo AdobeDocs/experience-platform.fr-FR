@@ -91,4 +91,4 @@ La boîte de dialogue [!DNL Connect] s’affiche à la première occasion de la 
 
 ## Étapes suivantes
 
-Maintenant que vous avez connecté [!DNL DbVisualizer] à [!DNL Query Service], vous pouvez utiliser [!DNL DbVisualizer] pour écrire des requêtes. Pour plus d’informations sur l’écriture et l’exécution de requêtes, consultez le guide [ sur l’exécution de requêtes](../best-practices/writing-queries.md).
+Maintenant que vous avez connecté [!DNL DbVisualizer] à [!DNL Query Service], vous pouvez utiliser [!DNL DbVisualizer] pour écrire des requêtes. Pour plus d’informations sur l’écriture et l’exécution de requêtes, consultez le guide [&#x200B; sur l’exécution de requêtes](../best-practices/writing-queries.md).

@@ -67,13 +67,13 @@ Vous pouvez connecter votre compte [!DNL Azure Synapse Analytics] à Experience 
 
 Pour utiliser l’authentification par clé de compte, sélectionnez **[!UICONTROL Authentification par clé de compte]**, fournissez votre [chaîne de connexion](../../../../connectors/databases/synapse-analytics.md#prerequisites), puis sélectionnez **[!UICONTROL Se connecter à la source]**.
 
-![ L’étape « Créer un nouveau compte » dans le workflow des sources avec l’« authentification par clé de compte sélectionnée ](../../../../images/tutorials/create/azure-synapse-analytics/account-key-auth.png).
+![&#x200B; L’étape « Créer un nouveau compte » dans le workflow des sources avec l’« authentification par clé de compte sélectionnée &#x200B;](../../../../images/tutorials/create/azure-synapse-analytics/account-key-auth.png).
 
 >[!TAB Authentification principale et clé du service]
 
 Vous pouvez également sélectionner **[!UICONTROL Authentification du principal de service et de la clé]**, fournir des valeurs pour vos [informations d’authentification](../../../../connectors/databases/synapse-analytics.md#prerequisites), puis sélectionner **[!UICONTROL Se connecter à la source]**.
 
-![ L’étape « Créer un nouveau compte » dans le workflow des sources avec « Principal du service et authentification par clé » sélectionné.](../../../../images/tutorials/create/azure-synapse-analytics/service-principal.png)
+![&#x200B; L’étape « Créer un nouveau compte » dans le workflow des sources avec « Principal du service et authentification par clé » sélectionné.](../../../../images/tutorials/create/azure-synapse-analytics/service-principal.png)
 
 >[!ENDTABS]
 

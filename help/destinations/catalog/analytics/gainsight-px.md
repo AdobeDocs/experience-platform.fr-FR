@@ -31,8 +31,8 @@ Une société SaaS souhaite impliquer ses clients via un guide In-App construit 
 ## Conditions préalables {#prerequisites}
 
 * Contactez l’équipe d’assistance [!DNL Gainsight] et demandez l’activation de fonctionnalités de segments externes pour votre abonnement.
-* Générez une valeur secrète OAuth pour votre abonnement PX, à l’aide du bouton **[!UICONTROL Générer un nouveau secret]** au bas de la [ page Détails de la société](https://app.aptrinsic.com/settings/subscription).
-  ![ Écran Détails de la société dans Gainsight PX affichant le bouton Générer un nouveau secret](../../assets/catalog/analytics/gainsight-px/generate_oauth_secret.png)
+* Générez une valeur secrète OAuth pour votre abonnement PX, à l’aide du bouton **[!UICONTROL Générer un nouveau secret]** au bas de la [&#x200B; page Détails de la société](https://app.aptrinsic.com/settings/subscription).
+  ![&#x200B; Écran Détails de la société dans Gainsight PX affichant le bouton Générer un nouveau secret](../../assets/catalog/analytics/gainsight-px/generate_oauth_secret.png)
 
 ## Identités prises en charge {#supported-identities}
 
@@ -81,8 +81,8 @@ Pour vous authentifier à la destination, renseignez les champs requis et sélec
 ![Copie d’écran d’authentification](../../assets/catalog/analytics/gainsight-px/auth-screen.png)
 
 * **[!UICONTROL Mot de passe]** : mot de passe utilisé pour se connecter à [[!DNL Gainsight PX]](https://app.aptrinsic.com)
-* **[!UICONTROL ID client]** : ID d’abonnement PX Gainsight sur la [ page Détails de la société ](https://app.aptrinsic.com/settings/subscription)
-* **[!UICONTROL Client secret]** : secret OAuth généré au bas de la [ page Détails de la société ](https://app.aptrinsic.com/settings/subscription) dans l’interface utilisateur de [!DNL Gainsight PX].
+* **[!UICONTROL ID client]** : ID d’abonnement PX Gainsight sur la [&#x200B; page Détails de la société &#x200B;](https://app.aptrinsic.com/settings/subscription)
+* **[!UICONTROL Client secret]** : secret OAuth généré au bas de la [&#x200B; page Détails de la société &#x200B;](https://app.aptrinsic.com/settings/subscription) dans l’interface utilisateur de [!DNL Gainsight PX].
 * **[!UICONTROL Nom d’utilisateur]** : adresse électronique utilisée pour se connecter à l’interface utilisateur [[!DNL Gainsight PX]](https://app.aptrinsic.com)
 
 ### Renseigner les détails de la destination {#destination-details}

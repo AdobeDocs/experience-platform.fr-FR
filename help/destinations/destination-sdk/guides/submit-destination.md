@@ -47,7 +47,7 @@ Vous trouverez des informations détaillées sur chaque élément dans les secti
 
 Fournissez une description des cas d’utilisation que votre destination résout pour les clients Experience Platform. Vos descriptions peuvent être similaires aux cas d’utilisation des partenaires existants :
 
-* [Pinterest ](/help/destinations/catalog/advertising/pinterest.md) : créez des audiences à partir de vos listes de clients, des personnes qui ont visité votre site ou de celles qui ont déjà interagi avec votre contenu sur Pinterest.
+* [Pinterest &#x200B;](/help/destinations/catalog/advertising/pinterest.md) : créez des audiences à partir de vos listes de clients, des personnes qui ont visité votre site ou de celles qui ont déjà interagi avec votre contenu sur Pinterest.
 * [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases) : les API DataX sont disponibles pour les annonceurs qui souhaitent cibler un groupe d’audiences spécifique dont les adresses e-mail sont désactivées dans Verizon Media (VMG). Ils peuvent rapidement créer une nouvelle audience et envoyer le groupe d’audiences souhaité à l’aide de l’API en temps quasi réel de VMG.
 
 ## Motif de la mise à jour {#reason-for-update}

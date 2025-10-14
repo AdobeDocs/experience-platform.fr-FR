@@ -18,7 +18,7 @@ ht-degree: 1%
 >Les champs Media Collection capturent des données et les envoient à d’autres services Adobe en vue d’un traitement ultérieur. Les champs de création de rapports multimédia sont utilisés par les services Adobe pour analyser les champs Media Collection envoyés par les utilisateurs. Ces données, ainsi que d’autres mesures utilisateur spécifiques, sont calculées et font l’objet de rapports.
 
 +++Sélectionnez cette option pour afficher un diagramme du type de données [!UICONTROL Media Collection details].
-![ Diagramme du type de données [!UICONTROL Media Collection details information].](../images/data-types/media-collection-details.png)
+![&#x200B; Diagramme du type de données [!UICONTROL Media Collection details information].](../images/data-types/media-collection-details.png)
 +++
 
 | Nom d’affichage | Propriété | Événements requis pour | Type de données | Description |

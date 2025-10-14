@@ -20,7 +20,7 @@ ht-degree: 0%
 >
 >Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
-Le document suivant contient des exemples d’accès aux données à l’aide de Spark pour une utilisation dans Data Science Workspace. Pour plus d’informations sur l’accès aux données à l’aide des notebooks JupyterLab, consultez la documentation [ sur l’accès aux données des notebooks JupyterLab](../jupyterlab/access-notebook-data.md).
+Le document suivant contient des exemples d’accès aux données à l’aide de Spark pour une utilisation dans Data Science Workspace. Pour plus d’informations sur l’accès aux données à l’aide des notebooks JupyterLab, consultez la documentation [&#x200B; sur l’accès aux données des notebooks JupyterLab](../jupyterlab/access-notebook-data.md).
 
 ## Prise en main
 

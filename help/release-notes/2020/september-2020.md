@@ -82,7 +82,7 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 | ------- | ----------- |
 | Visionneuse de profils | La visionneuse de profils, dans l’interface utilisateur d’Experience Platform, a été mise à jour pour devenir un tableau de bord avec une personnalisation complète. L’utilisateur a désormais la possibilité d’effectuer les tâches suivantes : <ul><li>Mettez à jour les attributs standard et personnalisés sélectionnés dans le widget informations de base.</li><li>Création, modification et suppression de widgets personnalisés</li><li>Redimensionnement et réorganisation des widgets</li></ul> |
 
-Pour plus d’informations sur [!DNL Real-Time Customer Profile], notamment les bonnes pratiques et les tutoriels relatifs à l’utilisation des données [!DNL Profile], consultez la [ présentation du profil client en temps réel ](../../profile/home.md).
+Pour plus d’informations sur [!DNL Real-Time Customer Profile], notamment les bonnes pratiques et les tutoriels relatifs à l’utilisation des données [!DNL Profile], consultez la [&#x200B; présentation du profil client en temps réel &#x200B;](../../profile/home.md).
 
 ## Segmentation Service {#segmentation}
 
@@ -97,7 +97,7 @@ Adobe Experience Platform Segmentation Service propose une interface utilisa
 | Tâches d’exportation | Un indicateur a été ajouté pour permettre l’évaluation des segments dans le cadre d’une tâche d’exportation. Par conséquent, les utilisateurs et utilisatrices peuvent exécuter à la fois la segmentation et les exportations dans une seule tâche. |
 | Politiques de fusion | Plusieurs politiques de fusion peuvent être incluses dans une seule tâche de segmentation par lots. |
 
-Pour plus d’informations sur les [!DNL Segmentation Service], consultez la [ présentation de la segmentation ](../../segmentation/home.md)
+Pour plus d’informations sur les [!DNL Segmentation Service], consultez la [&#x200B; présentation de la segmentation &#x200B;](../../segmentation/home.md)
 
 ## Sources {#sources}
 

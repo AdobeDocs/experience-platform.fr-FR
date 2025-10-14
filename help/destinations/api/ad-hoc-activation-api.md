@@ -18,7 +18,7 @@ ht-degree: 9%
 >
 >Une fois la phase Beta terminée, la [!DNL ad-hoc activation API] est désormais disponible pour tous les clients Experience Platform. Dans la version mise à disposition générale, l’API a été mise à niveau vers la version 2. L’étape 4 ([Obtention du dernier identifiant de tâche d’exportation d’audience](#segment-export-id)) n’est plus nécessaire, car l’API ne nécessite plus l’identifiant d’exportation.
 >
->Pour plus d’informations[ consultez la section ](#activation-job)Exécution de la tâche d’activation ad hoc plus bas dans ce tutoriel.
+>Pour plus d’informations[&#x200B; consultez la section &#x200B;](#activation-job)Exécution de la tâche d’activation ad hoc plus bas dans ce tutoriel.
 
 ## Vue d’ensemble {#overview}
 
@@ -49,7 +49,7 @@ Les responsables informatiques peuvent utiliser l’API d’activation ad hoc d�
 Gardez à l’esprit les mécanismes de sécurisation suivants lors de l’utilisation de l’API d’activation ad hoc .
 
 * Actuellement, chaque traitement d’activation ad hoc peut activer jusqu’à 80 audiences. Si vous tentez d’activer plus de 80 audiences par traitement, celui-ci échouera. Ce comportement peut faire l’objet de modifications dans les prochaines versions.
-* Les traitements d’activation ad hoc ne peuvent pas s’exécuter en parallèle avec les traitements d’exportation d’audiences [ planifiés](../../segmentation/api/export-jobs.md). Avant d’exécuter une tâche d’activation ad hoc, assurez-vous que la tâche d’exportation de l’audience planifiée est terminée. Consultez [surveillance des flux de données de destination](../../dataflows/ui/monitor-destinations.md) pour plus d’informations sur la surveillance du statut des flux d’activation. Par exemple, si votre flux de données d’activation affiche un statut **[!UICONTROL Traitement]**, attendez qu’il se termine avant d’exécuter la tâche d’activation ad hoc.
+* Les traitements d’activation ad hoc ne peuvent pas s’exécuter en parallèle avec les traitements d’exportation d’audiences [&#x200B; planifiés](../../segmentation/api/export-jobs.md). Avant d’exécuter une tâche d’activation ad hoc, assurez-vous que la tâche d’exportation de l’audience planifiée est terminée. Consultez [surveillance des flux de données de destination](../../dataflows/ui/monitor-destinations.md) pour plus d’informations sur la surveillance du statut des flux d’activation. Par exemple, si votre flux de données d’activation affiche un statut **[!UICONTROL Traitement]**, attendez qu’il se termine avant d’exécuter la tâche d’activation ad hoc.
 * N’exécutez pas plusieurs traitements d’activation ad hoc simultanés par audience.
 
 ## Considérations relatives à la segmentation {#segmentation-considerations}

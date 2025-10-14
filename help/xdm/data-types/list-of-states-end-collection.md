@@ -13,7 +13,7 @@ ht-degree: 6%
 
 Le type de données Liste des états Collection de fin est un type de données XDM (Experience Data Model) conçu pour représenter des informations relatives à l’état final de divers attributs du lecteur. Elle comprend les propriétés [!UICONTROL Player State Name] qui indiquent l’état d’attribut spécifique (par exemple, &quot;fullscreen&quot;, &quot;mute&quot;, &quot;closedCaptioning&quot;). Ce type de données est utilisé pour capturer et décrire les conditions initiales des différents états du lecteur.
 
-![ Diagramme de type de données Liste des états de collecte de fin.](../images/data-types/list-of-states-end-collection.png)
+![&#x200B; Diagramme de type de données Liste des états de collecte de fin.](../images/data-types/list-of-states-end-collection.png)
 
 | Nom d’affichage | Propriété | Type de données | Obligatoire | Description |
 |--------------------------------|--------------|-----------|-----------|-------------------------------------------------|

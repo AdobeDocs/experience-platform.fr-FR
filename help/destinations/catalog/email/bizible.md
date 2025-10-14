@@ -18,7 +18,7 @@ ht-degree: 49%
 
 [!DNL Bizible] est une extension d’e-mail dans Adobe Experience Platform. Pour plus d’informations sur Bizible, lisez [Attribution marketing](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html?lang=fr) dans les ressources de présentation de Bizible.
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension Bizible](../../assets/catalog/email/bizible/catalog.png)
 

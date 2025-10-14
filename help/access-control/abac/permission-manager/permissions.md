@@ -27,7 +27,7 @@ Utilisez des requêtes simples dans le [!UICONTROL Gestionnaire d’autorisation
 
 Dans la liste déroulante, sélectionnez l’attribut **[!UICONTROL Users]**.
 
-![ La liste déroulante d’attributs mettant en surbrillance les utilisateurs.](../../images/permission-manager/users-select.png)
+![&#x200B; La liste déroulante d’attributs mettant en surbrillance les utilisateurs.](../../images/permission-manager/users-select.png)
 
 Sélectionnez ensuite le **[!UICONTROL groupe d’utilisateurs]** que vous souhaitez rechercher à l’aide de la liste déroulante.
 

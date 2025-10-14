@@ -13,7 +13,7 @@ ht-degree: 64%
 
 # Expirations des événements d’expérience
 
-Dans Adobe Experience Platform, vous pouvez configurer des délais d’expiration pour tous les événements d’expérience ingérés dans un jeu de données activé pour [ Profil client en temps réel ](./home.md). Vous pouvez ainsi supprimer automatiquement des données de la banque de profils qui ne sont plus valides ou utiles pour vos cas d’utilisation.
+Dans Adobe Experience Platform, vous pouvez configurer des délais d’expiration pour tous les événements d’expérience ingérés dans un jeu de données activé pour [&#x200B; Profil client en temps réel &#x200B;](./home.md). Vous pouvez ainsi supprimer automatiquement des données de la banque de profils qui ne sont plus valides ou utiles pour vos cas d’utilisation.
 
 Pour savoir comment gérer les expirations d’événements d’expérience dans vos jeux de données, consultez le [guide de l’interface utilisateur des jeux de données](../catalog/datasets/user-guide.md#data-retention-policy).
 

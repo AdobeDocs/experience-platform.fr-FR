@@ -194,7 +194,7 @@ Les données collectées peuvent inclure des informations sur les lectures de m�
 * **[!UICONTROL Nom du lecteur]** : nom du lecteur multimédia.
 * **[!UICONTROL Version de l’application]** : version de l’application du lecteur multimédia.
 * **[!UICONTROL Intervalle de ping principal]** : fréquence des ping pour le contenu principal, en secondes. La valeur par défaut est `10`. Les valeurs peuvent aller de `10` à `50` secondes.  Si aucune valeur n’est spécifiée, la valeur par défaut est utilisée lors de l’utilisation de [sessions suivies automatiquement](../../../../web-sdk/commands/createmediasession.md#automatic).
-* **[!UICONTROL Intervalle des ping des annonces]** : fréquence des ping pour le contenu des annonces, en secondes. La valeur par défaut est `10`. Les valeurs peuvent aller de `1` à `10` secondes. Si aucune valeur n’est spécifiée, la valeur par défaut est utilisée lors de l’utilisation de [ sessions suivies automatiquement ](../../../../web-sdk/commands/createmediasession.md#automatic)
+* **[!UICONTROL Intervalle des ping des annonces]** : fréquence des ping pour le contenu des annonces, en secondes. La valeur par défaut est `10`. Les valeurs peuvent aller de `1` à `10` secondes. Si aucune valeur n’est spécifiée, la valeur par défaut est utilisée lors de l’utilisation de [&#x200B; sessions suivies automatiquement &#x200B;](../../../../web-sdk/commands/createmediasession.md#automatic)
 
 ## Configurer les remplacements de trains de données {#datastream-overrides}
 

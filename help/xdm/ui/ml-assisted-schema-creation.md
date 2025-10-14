@@ -24,7 +24,7 @@ Avec la génération de schéma ML, vous pouvez rapidement intégrer de nouvelle
 
 Ce tutoriel nécessite une bonne compréhension des exigences relatives à la création de schémas. Avant de poursuivre avec ce guide, vous devez lire le guide [UI guide to create and editing schemas](./resources/schemas.md).
 
-Ce guide explique comment créer des schémas à l’aide d’algorithmes de machine learning (ML) pour générer un schéma à partir de données d’exemple. Consultez le [guide des workflows de création manuelle de schéma](https://experienceleague.adobe.com/fr/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) pour plus d’informations sur la création de schémas ou le document sur les workflows basés sur des champs [ dans l’éditeur de schémas](https://experienceleague.adobe.com/fr/docs/experience-platform/xdm/ui/field-based-workflows) afin de mieux comprendre le processus de création de schémas.
+Ce guide explique comment créer des schémas à l’aide d’algorithmes de machine learning (ML) pour générer un schéma à partir de données d’exemple. Consultez le [guide des workflows de création manuelle de schéma](https://experienceleague.adobe.com/fr/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) pour plus d’informations sur la création de schémas ou le document sur les workflows basés sur des champs [&#x200B; dans l’éditeur de schémas](https://experienceleague.adobe.com/fr/docs/experience-platform/xdm/ui/field-based-workflows) afin de mieux comprendre le processus de création de schémas.
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ Dans le volet de navigation de gauche de l’interface utilisateur d’Experienc
 
 La boîte de dialogue [!UICONTROL Créer un schéma] s’affiche. Sélectionnez l’option de création de schéma **[assistée par ML]**, puis **[!UICONTROL Sélectionner]** pour confirmer votre choix.
 
-![ La boîte de dialogue [!UICONTROL Créer un schéma] avec l’[!UICONTROL Assistant ML] mise en surbrillance.](../images/ui/ml-schema-creation/use-sample-csv.png)
+![&#x200B; La boîte de dialogue [!UICONTROL Créer un schéma] avec l’[!UICONTROL Assistant ML] mise en surbrillance.](../images/ui/ml-schema-creation/use-sample-csv.png)
 
 ### Sélectionner une classe de base {#select-base-class}
 

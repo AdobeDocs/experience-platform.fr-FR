@@ -30,7 +30,7 @@ Lors de la configuration du cas d’utilisation décrit sur cette page, vous uti
 * [Flux de données](../../datastreams/overview.md) : un flux de données reçoit des données d’événement entrantes de Web SDK et répond avec des données de profil Edge.
 * [Politiques de fusion](../../segmentation/ui/segment-builder.md#merge-policies) : vous allez créer une politique de fusion [!UICONTROL Active-On-Edge] pour vous assurer que les profils Edge utilisent les données de profil correctes.
 * [Connexion Personalization personnalisée](../catalog/personalization/custom-personalization.md) : vous allez configurer une nouvelle connexion de personnalisation personnalisée qui enverra les attributs de profil à Edge Network.
-* [API Edge Network ](https://developer.adobe.com/data-collection-apis/docs/) : vous utiliserez la fonctionnalité d’API Edge Network [collecte de données interactive](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) pour récupérer rapidement les attributs de profil des profils Edge.
+* [API Edge Network &#x200B;](https://developer.adobe.com/data-collection-apis/docs/) : vous utiliserez la fonctionnalité d’API Edge Network [collecte de données interactive](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) pour récupérer rapidement les attributs de profil des profils Edge.
 
 ## Mécanismes de sécurisation des performances {#guardrails}
 
@@ -137,7 +137,7 @@ Sur la page **[!UICONTROL Vérifier]**, vous pouvez voir un résumé de votre s�
 
 +++Évaluation des politiques de consentement
 
-Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL Afficher les politiques de consentement applicables]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l&#39;activation qui en résulte. Pour plus d’informations, consultez [ Évaluation des politiques de consentement ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
+Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL Afficher les politiques de consentement applicables]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l&#39;activation qui en résulte. Pour plus d’informations, consultez [&#x200B; Évaluation des politiques de consentement &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
 
 **Vérifications des politiques d’utilisation des données**
 

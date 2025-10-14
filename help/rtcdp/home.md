@@ -17,7 +17,7 @@ Utilisez Adobe Real-Time Customer Data Platform (Real-Time CDP) pour rassembler 
 
 ## Nouveautés {#whats-new}
 
-Obtenez un aperçu des dernières améliorations apportées au produit et à la documentation Real-Time CDP. Pour obtenir une liste complète des fonctionnalités, des améliorations et des correctifs, consultez les [Notes de mise à jour](/help/release-notes/latest/latest.md). Tenez-vous informé des dernières modifications apportées à notre documentation en consultant la section [ Mises à jour de la documentation des notes de mise à jour mensuelles](/help/release-notes/latest/latest.md#documentation-updates).
+Obtenez un aperçu des dernières améliorations apportées au produit et à la documentation Real-Time CDP. Pour obtenir une liste complète des fonctionnalités, des améliorations et des correctifs, consultez les [Notes de mise à jour](/help/release-notes/latest/latest.md). Tenez-vous informé des dernières modifications apportées à notre documentation en consultant la section [&#x200B; Mises à jour de la documentation des notes de mise à jour mensuelles](/help/release-notes/latest/latest.md#documentation-updates).
 
 >[!BEGINTABS]
 

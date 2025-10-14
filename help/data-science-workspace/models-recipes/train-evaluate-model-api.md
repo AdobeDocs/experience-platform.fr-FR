@@ -26,7 +26,7 @@ Ce tutoriel vous explique comment créer, former et évaluer un modèle à l’a
 
 Suivez la procédure [Importer une recette empaquetée à l’aide de l’API](./import-packaged-recipe-api.md) pour créer un moteur, ce qui est nécessaire pour former et évaluer un modèle à l’aide de l’API.
 
-Suivez le tutoriel [Authentification de l’API Experience Platform ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour commencer à effectuer des appels API.
+Suivez le tutoriel [Authentification de l’API Experience Platform &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour commencer à effectuer des appels API.
 
 Grâce au tutoriel, vous devez maintenant disposer des valeurs suivantes :
 

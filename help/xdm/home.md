@@ -132,7 +132,7 @@ Pour créer un schéma basé sur un modèle, sélectionnez **[!UICONTROL basé s
 
 Pour obtenir des instructions détaillées et des conseils de cas d’utilisation, voir :
 
-* [Présentation de Data Mirror ](./data-mirror/overview.md) - Fonctionnalités, cas d’utilisation et planification de l’implémentation
+* [Présentation de Data Mirror &#x200B;](./data-mirror/overview.md) - Fonctionnalités, cas d’utilisation et planification de l’implémentation
 * [Référence technique du schéma basé sur des modèles](./schema/model-based.md) - Spécifications et contraintes techniques
 * [Tutoriel sur l’interface utilisateur](./ui/resources/schemas.md#create-model-based-schema)
 * [Tutoriel sur les API](./api/schemas.md#create-model-based-schema)

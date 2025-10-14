@@ -19,7 +19,7 @@ ht-degree: 15%
 
 # Création d’une politique de fusion dans l’interface utilisateur d’Experience Platform
 
-Cette vidéo offre une compréhension de base des politiques de fusion dans Adobe Experience Platform et explique comment définir des politiques de fusion à l’aide de l’interface utilisateur d’Experience Platform. Pour en savoir plus sur les politiques de fusion, commencez par lire la [ présentation des politiques de fusion ](../merge-policies/overview.md).
+Cette vidéo offre une compréhension de base des politiques de fusion dans Adobe Experience Platform et explique comment définir des politiques de fusion à l’aide de l’interface utilisateur d’Experience Platform. Pour en savoir plus sur les politiques de fusion, commencez par lire la [&#x200B; présentation des politiques de fusion &#x200B;](../merge-policies/overview.md).
 
 >[!NOTE]
 >

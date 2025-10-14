@@ -16,11 +16,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Ce groupe de champs n’étant compatible qu’avec [!DNL XDM Individual Profile], il ne peut pas être utilisé pour les schémas [!DNL XDM ExperienceEvent]. Si vous souhaitez inclure les données de consentement et de préférence dans votre schéma d’événement d’expérience, ajoutez le type de données [[!UICONTROL Consentement pour les préférences de confidentialité, de Personalization et de marketing] ](../../data-types/consents.md) au schéma à l’aide d’un [groupe de champs personnalisés](../../ui/resources/field-groups.md#create) à la place.
+>Ce groupe de champs n’étant compatible qu’avec [!DNL XDM Individual Profile], il ne peut pas être utilisé pour les schémas [!DNL XDM ExperienceEvent]. Si vous souhaitez inclure les données de consentement et de préférence dans votre schéma d’événement d’expérience, ajoutez le type de données [[!UICONTROL Consentement pour les préférences de confidentialité, de Personalization et de marketing] &#x200B;](../../data-types/consents.md) au schéma à l’aide d’un [groupe de champs personnalisés](../../ui/resources/field-groups.md#create) à la place.
 
 ## Structure du groupe de champs {#structure}
 
-Le groupe de champs [!UICONTROL Consentements et préférences] fournit un champ de type objet unique, `consents`, pour capturer les informations de consentement et de préférence. Ce champ étend le type de données [[!UICONTROL Consentement pour les préférences de confidentialité, de Personalization et de marketing] ](../../data-types/consents.md), en supprimant le champ `adID` et en ajoutant un champ de mappage `idSpecific`.
+Le groupe de champs [!UICONTROL Consentements et préférences] fournit un champ de type objet unique, `consents`, pour capturer les informations de consentement et de préférence. Ce champ étend le type de données [[!UICONTROL Consentement pour les préférences de confidentialité, de Personalization et de marketing] &#x200B;](../../data-types/consents.md), en supprimant le champ `adID` et en ajoutant un champ de mappage `idSpecific`.
 
 ![](../../images/field-groups/consent.png)
 
@@ -106,7 +106,7 @@ Le fichier JSON suivant illustre un exemple du type de données que le groupe de
 >* Si le client s’est désabonné au niveau du canal, tous les consentements ou préférences équivalents dans `idSpecific` sont ignorés.
 >* Si le consentement ou la préférence au niveau du canal n’est pas défini, ou si le client a choisi, les consentements ou préférences équivalents dans `idSpecific` sont respectés.
 
-Chaque clé de l’objet `idSpecific` représente un espace de noms d’identité spécifique reconnu par le service d’identités Adobe Experience Platform. Bien que vous puissiez définir vos propres espaces de noms personnalisés pour classer différents identifiants, il est recommandé d’utiliser l’un des espaces de noms standard fournis par Identity Service pour réduire les tailles de stockage pour le profil client en temps réel. Pour plus d’informations sur les espaces de noms d’identité, consultez la [ présentation des espaces de noms d’identité ](../../../identity-service/features/namespaces.md) dans la documentation d’Identity Service.
+Chaque clé de l’objet `idSpecific` représente un espace de noms d’identité spécifique reconnu par le service d’identités Adobe Experience Platform. Bien que vous puissiez définir vos propres espaces de noms personnalisés pour classer différents identifiants, il est recommandé d’utiliser l’un des espaces de noms standard fournis par Identity Service pour réduire les tailles de stockage pour le profil client en temps réel. Pour plus d’informations sur les espaces de noms d’identité, consultez la [&#x200B; présentation des espaces de noms d’identité &#x200B;](../../../identity-service/features/namespaces.md) dans la documentation d’Identity Service.
 
 Les clés de chaque objet d’espace de noms représentent les valeurs d’identité uniques pour lesquelles le client a défini des préférences. Chaque valeur d’identité peut contenir un ensemble complet de consentements et de préférences, formatés de la même manière que `consents`.
 

@@ -65,7 +65,7 @@ Sélectionnez **[!UICONTROL Client et compte]** pour mettre à jour votre tablea
 
 >[!TAB Enrichissement du profil de compte]
 
-Sélectionnez **[!UICONTROL Enrichissement du profil du compte]** pour mettre à jour votre tableau de bord et afficher les mesures sur les données d’enrichissement du profil. **Remarque** : vous ne pouvez afficher les mesures d’enrichissement du profil de compte que si vous êtes autorisé à [ des données B2B](../../rtcdp/b2b-tutorial.md).
+Sélectionnez **[!UICONTROL Enrichissement du profil du compte]** pour mettre à jour votre tableau de bord et afficher les mesures sur les données d’enrichissement du profil. **Remarque** : vous ne pouvez afficher les mesures d’enrichissement du profil de compte que si vous êtes autorisé à [&#x200B; des données B2B](../../rtcdp/b2b-tutorial.md).
 
 ![Le type de données de surveillance est défini sur « Enrichissement du profil de compte ».](../assets/ui/monitor-overview/account-profile-enrichment.png)
 

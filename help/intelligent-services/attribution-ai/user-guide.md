@@ -83,7 +83,7 @@ Dans l’aperçu du jeu de données se trouve une valeur de pourcentage d’exha
 >
 >L’exhaustivité des jeux de données est calculée à l’aide de la fenêtre d’entraînement maximale pour Attribution AI (un an). Cela signifie que les données de plus d’un an ne sont pas prises en compte lors de l’affichage de la valeur d’exhaustivité de votre jeu de données.
 
-![ Exhaustivité du jeu de données ](./images/user-guide/dataset-completeness.png)
+![&#x200B; Exhaustivité du jeu de données &#x200B;](./images/user-guide/dataset-completeness.png)
 
 ### Sélectionner une identité {#identity}
 
@@ -103,7 +103,7 @@ Dans le cas où plusieurs identités sont disponibles dans un espace de noms, ve
 
 >[!NOTE]
 >
-> S’il n’existe aucun type d’identité valide (espace de noms) pour un jeu de données, vous devez définir une identité principale et l’affecter à un espace de noms d’identité à l’aide de l’[éditeur de schéma](../../xdm/schema/composition.md#identity). Pour en savoir plus sur les espaces de noms et les identités, consultez la documentation [ Espaces de noms du service d’identités ](../../identity-service/features/namespaces.md).
+> S’il n’existe aucun type d’identité valide (espace de noms) pour un jeu de données, vous devez définir une identité principale et l’affecter à un espace de noms d’identité à l’aide de l’[éditeur de schéma](../../xdm/schema/composition.md#identity). Pour en savoir plus sur les espaces de noms et les identités, consultez la documentation [&#x200B; Espaces de noms du service d’identités &#x200B;](../../identity-service/features/namespaces.md).
 
 ## Mappage des champs de canal média et de campagne {#aai-mapping}
 

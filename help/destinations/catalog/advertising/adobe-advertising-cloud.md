@@ -18,7 +18,7 @@ Il s’agit de l’extension [!DNL Advertising Cloud] pour l’implémentation d
 
 Adobe Advertising Cloud est une extension publicitaire dans Adobe Experience Platform.
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension Adobe Advertising Cloud](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
 

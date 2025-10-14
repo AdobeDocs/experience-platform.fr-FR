@@ -264,4 +264,4 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
 Maintenant que vous avez créé une connexion entre votre base de données [!DNL PostgreSQL] et Experience Platform, vous pouvez passer aux étapes suivantes et importer vos données [!DNL PostgreSQL] dans Experience Platform. Pour plus d’informations, consultez la documentation suivante :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/database-nosql.md)
+* [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)

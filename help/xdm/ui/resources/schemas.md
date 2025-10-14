@@ -208,11 +208,11 @@ Une fois que vous avez ouvert un schéma dans le [!DNL Schema Editor], vous pouv
 
 Une boîte de dialogue s’affiche, affichant une liste de groupes de champs que vous pouvez sélectionner pour le schéma. Comme les groupes de champs ne sont compatibles qu’avec une seule classe, seuls les groupes de champs associés à la classe sélectionnée du schéma seront répertoriés. Par défaut, les groupes de champs répertoriés sont triés en fonction de leur popularité d’utilisation au sein de votre organisation.
 
-![ La boîte de dialogue [!UICONTROL Ajouter des groupes de champs] mise en surbrillance avec la colonne [!UICONTROL Popularité] mise en surbrillance.](../../images/ui/resources/schemas/field-group-popularity.png)
+![&#x200B; La boîte de dialogue [!UICONTROL Ajouter des groupes de champs] mise en surbrillance avec la colonne [!UICONTROL Popularité] mise en surbrillance.](../../images/ui/resources/schemas/field-group-popularity.png)
 
 Si vous connaissez l’activité générale ou le domaine fonctionnel des champs que vous souhaitez ajouter, sélectionnez une ou plusieurs catégories sectorielles verticales dans le rail de gauche pour filtrer la liste affichée des groupes de champs.
 
-![ La boîte de dialogue [!UICONTROL Ajouter des groupes de champs] mise en surbrillance avec les filtres [!UICONTROL Secteur] et la colonne [!UICONTROL Secteur] mise en surbrillance.](../../images/ui/resources/schemas/industry-filter.png)
+![&#x200B; La boîte de dialogue [!UICONTROL Ajouter des groupes de champs] mise en surbrillance avec les filtres [!UICONTROL Secteur] et la colonne [!UICONTROL Secteur] mise en surbrillance.](../../images/ui/resources/schemas/industry-filter.png)
 
 >[!NOTE]
 >
@@ -270,7 +270,7 @@ Une boîte de dialogue s’affiche, affichant la structure du groupe de champs. 
 Sélectionnez **[!UICONTROL Confirmer]** pour mettre à jour la zone de travail et refléter vos champs sélectionnés.
 
 
-![Champs ajoutés ](../../images/ui/resources/schemas/fields-added.png)
+![Champs ajoutés &#x200B;](../../images/ui/resources/schemas/fields-added.png)
 
 ### Comportement des champs lors de la suppression ou de l’obsolescence de champs {#field-removal-deprecation-behavior}
 
@@ -330,7 +330,7 @@ Tout comme pour le workflow des champs standard, vous pouvez également ajouter 
 
 Pour ajouter des champs au niveau racine d’un schéma, sélectionnez l’icône plus (**+**) à côté du nom du schéma dans la zone de travail. Un espace réservé **[!UICONTROL Champ sans titre]** apparaît dans la structure du schéma et le rail de droite se met à jour pour afficher les commandes de configuration du champ.
 
-![ Champ personnalisé racine ](../../images/ui/resources/schemas/root-custom-field.png)
+![&#x200B; Champ personnalisé racine &#x200B;](../../images/ui/resources/schemas/root-custom-field.png)
 
 Commencez à saisir le nom du champ que vous souhaitez ajouter et le système lance automatiquement la recherche des champs standard correspondants. Pour créer un champ personnalisé à la place, sélectionnez l’option supérieure avec **([!UICONTROL Nouveau champ])**.
 

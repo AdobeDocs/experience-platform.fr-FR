@@ -28,7 +28,7 @@ La collecte de données se concentre sur la capacité de découverte et l’acce
 * [Flux de données](../datastreams/overview.md)
 * [Transfert d’événement](../tags/ui/event-forwarding/overview.md)
 * [SDK web Adobe Experience Platform](../web-sdk/home.md)
-* [ SDK Mobile Adobe Experience Platform](https://developer.adobe.com/client-sdks/documentation/)
+* [&#x200B; SDK Mobile Adobe Experience Platform](https://developer.adobe.com/client-sdks/documentation/)
 * [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/)
 * [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=fr)
 * [Experience Platform Assurance](../assurance/home.md)

@@ -61,7 +61,7 @@ Suivez les étapes ci-dessous pour supprimer une destination de la page de déta
 
    * Si la destination comporte des flux de données existants, vous accédez à l’onglet [!UICONTROL Exécutions de flux de données].
 
-     ![ Onglet Exécutions de flux de données ](../assets/ui/delete-destinations/destination-details-dataflows.png)
+     ![&#x200B; Onglet Exécutions de flux de données &#x200B;](../assets/ui/delete-destinations/destination-details-dataflows.png)
 
    * Si la destination ne comporte pas de flux de données existants, vous accédez à une page vide où vous pouvez commencer à activer les audiences.
 

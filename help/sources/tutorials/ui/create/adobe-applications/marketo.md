@@ -13,7 +13,7 @@ ht-degree: 43%
 
 >[!IMPORTANT]
 >
->Avant de créer une connexion source [!DNL Marketo Engage] et un flux de données, vous devez d’abord vous assurer que vous avez [mappé votre ID d’organisation Adobe](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=fr) dans [!DNL Marketo]. En outre, vous devez également vous assurer que vous avez terminé [ [!DNL Marketo]  remplissage automatique de vos espaces de noms et schémas B2B](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) avant de créer une connexion source et un flux de données.
+>Avant de créer une connexion source [!DNL Marketo Engage] et un flux de données, vous devez d’abord vous assurer que vous avez [mappé votre ID d’organisation Adobe](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=fr) dans [!DNL Marketo]. En outre, vous devez également vous assurer que vous avez terminé [&#x200B; [!DNL Marketo]  remplissage automatique de vos espaces de noms et schémas B2B](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) avant de créer une connexion source et un flux de données.
 
 Ce tutoriel décrit les étapes à suivre pour créer un connecteur source [!DNL Marketo Engage] (ci-après dénommé « [!DNL Marketo] ») dans l’interface utilisateur pour importer des données B2B dans Adobe Experience Platform.
 
@@ -21,7 +21,7 @@ Ce tutoriel décrit les étapes à suivre pour créer un connecteur source [!DNL
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [Utilitaire de génération automatique de schémas et d’espaces de noms B2B ](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) : l’utilitaire de génération automatique de schémas et d’espaces de noms B2B vous permet d’utiliser [!DNL Postman] pour générer automatiquement des valeurs pour vos schémas et espaces de noms B2B. Vous devez d’abord terminer vos espaces de noms et schémas B2B, avant de créer une connexion source [!DNL Marketo] et un flux de données.
+* [Utilitaire de génération automatique de schémas et d’espaces de noms B2B &#x200B;](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) : l’utilitaire de génération automatique de schémas et d’espaces de noms B2B vous permet d’utiliser [!DNL Postman] pour générer automatiquement des valeurs pour vos schémas et espaces de noms B2B. Vous devez d’abord terminer vos espaces de noms et schémas B2B, avant de créer une connexion source [!DNL Marketo] et un flux de données.
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform.
 * [Modèle de données d’expérience (XDM)](../../../../../xdm/home.md) : framework normalisé selon lequel Experience Platform organise les données d’expérience client.
    * [Créer et modifier des schémas dans l’interface utilisateur](../../../../../xdm/ui/resources/schemas.md) : découvrez comment créer et modifier des schémas dans l’interface utilisateur.

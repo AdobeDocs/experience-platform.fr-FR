@@ -13,7 +13,7 @@ ht-degree: 7%
 
 Le type de données [!UICONTROL List of States Start] est un type de données XDM (Experience Data Model) conçu pour représenter des informations relatives à l’état de départ de divers attributs de lecteur. Elle comprend les propriétés [!UICONTROL Player State Name] qui indiquent l’état d’attribut spécifique (par exemple, &quot;fullscreen&quot;, &quot;mute&quot;, &quot;closedCaptioning&quot;). Ce type de données est utilisé pour capturer et décrire les conditions initiales des différents états du lecteur.
 
-![ Diagramme de type de données [!UICONTROL List of States Start].](../images/data-types/list-of-states-start-collection.png)
+![&#x200B; Diagramme de type de données [!UICONTROL List of States Start].](../images/data-types/list-of-states-start-collection.png)
 
 | Nom d’affichage | Propriété | Type de données | Obligatoire | Description |
 |--------------------------------|--------------|-----------|-----------|-------------------------------------------------|

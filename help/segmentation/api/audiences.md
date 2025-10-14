@@ -193,7 +193,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec une liste d’audiences cr
 | `description` | Les deux | Description de l’audience. |
 | `expression` | Généré par Platform | Expression Profile Query Language (PQL) de l’audience. Vous trouverez plus d’informations sur les expressions PQL dans le guide des expressions de PQL [&#128279;](../pql/overview.md). |
 | `mergePolicyId` | Généré par Platform | L’identifiant de la politique de fusion à laquelle l’audience est associée. Pour plus d’informations sur les politiques de fusion, consultez le [guide des politiques de fusion](../../profile/api/merge-policies.md). |
-| `evaluationInfo` | Généré par Platform | Indique comment l’audience sera évaluée. Les méthodes d’évaluation possibles sont par lots, synchrones (diffusion en continu) ou continues (Edge). Vous trouverez plus d’informations sur les méthodes d’évaluation dans la [ présentation de la segmentation ](../home.md) |
+| `evaluationInfo` | Généré par Platform | Indique comment l’audience sera évaluée. Les méthodes d’évaluation possibles sont par lots, synchrones (diffusion en continu) ou continues (Edge). Vous trouverez plus d’informations sur les méthodes d’évaluation dans la [&#x200B; présentation de la segmentation &#x200B;](../home.md) |
 | `dependents` | Les deux | Tableau d’ID d’audience qui dépendent de l’audience actuelle. Cette option est utile si vous créez une audience qui est un segment d’un segment. |
 | `dependencies` | Les deux | Tableau d’identifiants d’audience dont dépend l’audience. Cette option est utile si vous créez une audience qui est un segment d’un segment. |
 | `type` | Les deux | Champ généré par le système qui indique si l’audience est générée par Platform ou est une audience générée en externe. Les valeurs possibles sont `SegmentDefinition` et `ExternalSegment`. Une `SegmentDefinition` fait référence à une audience générée dans Platform, tandis qu’une `ExternalSegment` fait référence à une audience qui n’a pas été générée dans Platform. |
@@ -767,4 +767,4 @@ Une réponse réussie renvoie un état HTTP 207 avec des informations sur les au
 
 ## Étapes suivantes
 
-Vous êtes arrivé au bout de ce guide. À présent, vous comprenez mieux comment créer, gérer et supprimer des audiences à l’aide de l’API Adobe Experience Platform. Pour plus d’informations sur la gestion des audiences à l’aide de l’interface utilisateur, consultez le [ guide de l’interface utilisateur de segmentation](../ui/overview.md).
+Vous êtes arrivé au bout de ce guide. À présent, vous comprenez mieux comment créer, gérer et supprimer des audiences à l’aide de l’API Adobe Experience Platform. Pour plus d’informations sur la gestion des audiences à l’aide de l’interface utilisateur, consultez le [&#x200B; guide de l’interface utilisateur de segmentation](../ui/overview.md).

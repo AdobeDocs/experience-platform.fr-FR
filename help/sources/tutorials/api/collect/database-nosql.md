@@ -12,7 +12,7 @@ ht-degree: 71%
 
 # Créez un flux de données pour les sources de base de données à l’aide de l’API [!DNL Flow Service].
 
-Lisez ce tutoriel pour savoir comment créer un flux de données et ingérer des données de votre base de données dans Adobe Experience Platform à l’aide de l’API [[!DNL Flow Service] ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lisez ce tutoriel pour savoir comment créer un flux de données et ingérer des données de votre base de données dans Adobe Experience Platform à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >

@@ -20,7 +20,7 @@ Lorsque cette option est activée, le SDK Web utilise Adobe Audience Manager pou
 
 ## Activation des cookies tiers à l’aide de l’extension de balise SDK Web
 
-Cochez la case **[!UICONTROL Utiliser des cookies tiers]** lors de la [ configuration de l’extension de balise](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Cochez la case **[!UICONTROL Utiliser des cookies tiers]** lors de la [&#x200B; configuration de l’extension de balise](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
 1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.

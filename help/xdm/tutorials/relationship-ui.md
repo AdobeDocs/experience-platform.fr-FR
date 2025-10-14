@@ -119,7 +119,7 @@ La boîte de dialogue [!UICONTROL Ajouter une relation] s’affiche. Dans cette 
 
 >[!NOTE]
 >
->Si vous avez accès à Real-Time CDP B2B edition, vous pouvez utiliser les contrôles du rail de droite de la zone de travail pour définir un champ de relation et créer une relation multiple-à-un à l’aide de la [ boîte de dialogue identique ](./relationship-b2b.md#relationship-field).
+>Si vous avez accès à Real-Time CDP B2B edition, vous pouvez utiliser les contrôles du rail de droite de la zone de travail pour définir un champ de relation et créer une relation multiple-à-un à l’aide de la [&#x200B; boîte de dialogue identique &#x200B;](./relationship-b2b.md#relationship-field).
 
 ![Boîte de dialogue Ajouter une relation.](../images/tutorials/relationship/add-relationship-dialog.png)
 

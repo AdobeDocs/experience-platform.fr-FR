@@ -522,7 +522,7 @@ Vous trouverez des détails sur le filtrage des lots dans le [tutoriel portant s
 
 ### Extraction de fichiers d’un lot
 
-Une fois que vous disposez de l’identifiant du lot que vous recherchez (`{BATCH_ID}`), il est possible de récupérer une liste de fichiers appartenant à un lot en particulier via l’[[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/).  Pour plus d’informations sur ce processus, reportez-vous au tutoriel portant sur l’[[!DNL Data Access] ](../data-access/tutorials/dataset-data.md).
+Une fois que vous disposez de l’identifiant du lot que vous recherchez (`{BATCH_ID}`), il est possible de récupérer une liste de fichiers appartenant à un lot en particulier via l’[[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/).  Pour plus d’informations sur ce processus, reportez-vous au tutoriel portant sur l’[[!DNL Data Access] &#x200B;](../data-access/tutorials/dataset-data.md).
 
 **Requête**
 
@@ -548,7 +548,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}" \
   -H "x-api-key: {API_KEY}"
 ```
 
-La réponse peut pointer vers un seul fichier ou vers un répertoire. Vous trouverez des informations détaillées sur chaque option dans le tutoriel portant sur l’[[!DNL Data Access] ](../data-access/tutorials/dataset-data.md).
+La réponse peut pointer vers un seul fichier ou vers un répertoire. Vous trouverez des informations détaillées sur chaque option dans le tutoriel portant sur l’[[!DNL Data Access] &#x200B;](../data-access/tutorials/dataset-data.md).
 
 ### Accès au contenu du fichier
 

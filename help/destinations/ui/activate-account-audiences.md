@@ -63,7 +63,7 @@ Suivez les instructions pour sélectionner une destination vers laquelle vous po
 
 >[!TIP]
 > 
->Si vous souhaitez configurer une nouvelle destination pour activer les audiences de compte, sélectionnez **[!UICONTROL Configurer une nouvelle destination]** pour déclencher le workflow [ Se connecter à la destination ](/help/destinations/ui/connect-destination.md) et [sélectionner les comptes comme type de données](/help/destinations/ui/connect-destination.md#segment-activation-or-dataset-exports).
+>Si vous souhaitez configurer une nouvelle destination pour activer les audiences de compte, sélectionnez **[!UICONTROL Configurer une nouvelle destination]** pour déclencher le workflow [&#x200B; Se connecter à la destination &#x200B;](/help/destinations/ui/connect-destination.md) et [sélectionner les comptes comme type de données](/help/destinations/ui/connect-destination.md#segment-activation-or-dataset-exports).
 
 ![Workflow d’activation de destination avec le contrôle des comptes mis en surbrillance.](/help/destinations/assets/ui/activate-account-audiences/activate-account-audiences-highlighted.png)
 

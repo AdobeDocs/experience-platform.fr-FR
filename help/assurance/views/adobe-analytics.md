@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Vue Événements Adobe Analytics dans Assurance
 
-Les événements Analytics offrent une vue plus riche des événements SDK aux utilisateurs qui déboguent et valident leur mise en oeuvre Adobe Analytics. La vue affiche les événements envoyés à Adobe Analytics à partir du [ SDK Edge Network Adobe Experience Platform ](https://developer.adobe.com/client-sdks/edge/edge-network/) ainsi que le [ SDK Mobile Adobe Experience Platform ](https://developer.adobe.com/client-sdks/solution/adobe-analytics/). La vue comprend également un panneau de détails, qui fournit un contexte sur la manière dont l’événement a été traité par le SDK client et par les services en amont une fois qu’il a quitté l’appareil.
+Les événements Analytics offrent une vue plus riche des événements SDK aux utilisateurs qui déboguent et valident leur mise en oeuvre Adobe Analytics. La vue affiche les événements envoyés à Adobe Analytics à partir du [&#x200B; SDK Edge Network Adobe Experience Platform &#x200B;](https://developer.adobe.com/client-sdks/edge/edge-network/) ainsi que le [&#x200B; SDK Mobile Adobe Experience Platform &#x200B;](https://developer.adobe.com/client-sdks/solution/adobe-analytics/). La vue comprend également un panneau de détails, qui fournit un contexte sur la manière dont l’événement a été traité par le SDK client et par les services en amont une fois qu’il a quitté l’appareil.
 
 ## Commencer
 

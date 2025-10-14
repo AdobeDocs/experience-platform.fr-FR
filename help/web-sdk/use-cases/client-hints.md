@@ -119,7 +119,7 @@ Si vous n’activez pas les indications du client à entropie élevée dans votr
 
 ### Rapports Adobe Analytics reposant sur des indications du client à entropie élevée {#analytics}
 
-La dimension [ Système d’exploitation ](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=fr) inclut la version du système d’exploitation stockée en tant qu’indicateur client à entropie élevée. Si les indications des clients à entropie élevée ne sont pas activées, la version du système d’exploitation peut être inexacte pour les accès collectés à partir des navigateurs Chromium.
+La dimension [&#x200B; Système d’exploitation &#x200B;](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=fr) inclut la version du système d’exploitation stockée en tant qu’indicateur client à entropie élevée. Si les indications des clients à entropie élevée ne sont pas activées, la version du système d’exploitation peut être inexacte pour les accès collectés à partir des navigateurs Chromium.
 
 ### Caractéristiques d’Audience Manager reposant sur des indications du client à entropie élevée {#aam}
 

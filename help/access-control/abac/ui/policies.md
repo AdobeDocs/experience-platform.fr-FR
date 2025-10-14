@@ -142,7 +142,7 @@ Utilisez le bouton (bascule) **[!UICONTROL Inclusion automatique]** de l’ongle
 
 La boîte de dialogue **[!UICONTROL Activer l’inclusion automatique]** s’affiche et vous invite à confirmer votre sélection. Sélectionnez **[!UICONTROL Activer]** pour terminer le paramètre de configuration.
 
-![ Boîte de dialogue [!UICONTROL Activer l’inclusion automatique] mettant en surbrillance [!UICONTROL Activer].](../../images/flac-ui/abac-policies-auto-include-enable.png)
+![&#x200B; Boîte de dialogue [!UICONTROL Activer l’inclusion automatique] mettant en surbrillance [!UICONTROL Activer].](../../images/flac-ui/abac-policies-auto-include-enable.png)
 
 >[!SUCCESS]
 >

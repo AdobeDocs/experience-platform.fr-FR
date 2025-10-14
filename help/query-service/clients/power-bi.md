@@ -17,7 +17,7 @@ Ce document décrit les étapes à suivre pour connecter [!DNL Power BI] Desktop
 
 ## Prise en main
 
-Ce guide nécessite que vous ayez déjà accès à l’application [!DNL Power BI] Desktop et que vous sachiez comment naviguer dans son interface. Pour télécharger [!DNL Power BI] Desktop ou pour plus d’informations, consultez la [documentation officielle de  [!DNL Power BI] ](https://docs.microsoft.com/fr-FR/power-bi/).
+Ce guide nécessite que vous ayez déjà accès à l’application [!DNL Power BI] Desktop et que vous sachiez comment naviguer dans son interface. Pour télécharger [!DNL Power BI] Desktop ou pour plus d’informations, consultez la [documentation officielle de  [!DNL Power BI] &#x200B;](https://docs.microsoft.com/fr-FR/power-bi/).
 
 >[!IMPORTANT]
 >

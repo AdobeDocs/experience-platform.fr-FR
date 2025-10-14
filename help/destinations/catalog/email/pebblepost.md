@@ -18,7 +18,7 @@ ht-degree: 68%
 
 [!DNL PebblePost] est une extension d’e-mail dans Adobe Experience Platform.
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension PebblePost](../../assets/catalog/email/pebblepost/catalog.png)
 

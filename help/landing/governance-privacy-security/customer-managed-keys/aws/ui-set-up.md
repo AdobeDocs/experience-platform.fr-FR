@@ -15,7 +15,7 @@ Utilisez ce guide pour activer les clés gérées par le client (CMK) pour les i
 
 >[!IMPORTANT]
 >
->Avant de poursuivre avec ce guide, assurez-vous d’avoir terminé la configuration détaillée dans le document [’Configuration d’AWS KMS pour ](./configure-kms.md) CMK’.
+>Avant de poursuivre avec ce guide, assurez-vous d’avoir terminé la configuration détaillée dans le document [’Configuration d’AWS KMS pour &#x200B;](./configure-kms.md) CMK’.
 
 ## Mettez à jour la stratégie de clé AWS pour intégrer la clé à Experience Platform.
 
@@ -175,7 +175,7 @@ Sélectionnez l’icône de copie pour copier votre ARN. Une boîte de dialogue 
 
 Revenez maintenant à l’interface utilisateur d’Experience Platform [!UICONTROL Configuration des clés gérées par le client]. Dans la section **[!UICONTROL Ajouter les détails de la clé de chiffrement AWS]**, ajoutez un **[!UICONTROL Nom de configuration]** et la clé **[!UICONTROL KMS ARN]** que vous avez copiée à partir de l’interface utilisateur d’AWS.
 
-![L’espace de travail Configuration du chiffrement d’Experience Platform avec le nom de la configuration et la clé KMS ARN en surbrillance dans la section Ajouter des détails de la clé de chiffrement AWS ](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png).
+![L’espace de travail Configuration du chiffrement d’Experience Platform avec le nom de la configuration et la clé KMS ARN en surbrillance dans la section Ajouter des détails de la clé de chiffrement AWS &#x200B;](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png).
 
 Sélectionnez ensuite **[!UICONTROL ENREGISTRER]** pour envoyer le nom de la configuration, l’ARN de la clé KMS et commencer la validation de la clé.
 

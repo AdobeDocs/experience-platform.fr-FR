@@ -54,4 +54,4 @@ Pour obtenir une vue plus succincte des appels API, vous pouvez également masqu
 
 Pour afficher les données post-traitées, recherchez l’événement de début de session et validez dans la colonne d’état la fin de la session. Si vous avez terminé, cliquez sur l’événement pour afficher un résumé de la session multimédia dans la vue détaillée de l’événement. Pour plus d’informations, faites défiler la page vers le bas pour trouver les détails post-traités.
 
-![ &lbrace;Post-Processed View](./images/adobe-analytics-streaming-media/post-processed-view.png)
+![&#x200B; &lbrace;Post-Processed View](./images/adobe-analytics-streaming-media/post-processed-view.png)

@@ -353,7 +353,7 @@ Une réponse réussie renvoie un état HTTP 201 (Created) ainsi qu’un payload
 }
 ```
 
-L’exécution d’une requête de GET pour [répertorier tous les types de données](#list) dans le conteneur client inclurait désormais le type de données Détails de la propriété , ou vous pouvez [ effectuer une requête de recherche (GET)](#lookup) à l’aide de l’URI `$id` encodé URL pour afficher directement le nouveau type de données.
+L’exécution d’une requête de GET pour [répertorier tous les types de données](#list) dans le conteneur client inclurait désormais le type de données Détails de la propriété , ou vous pouvez [&#x200B; effectuer une requête de recherche (GET)](#lookup) à l’aide de l’URI `$id` encodé URL pour afficher directement le nouveau type de données.
 
 ## Mise à jour d’un type de données {#put}
 

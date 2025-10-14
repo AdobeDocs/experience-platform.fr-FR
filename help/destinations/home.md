@@ -115,7 +115,7 @@ Pour plus d’informations sur la sélection d’actions marketing dans le workf
 * [Destinations publicitaires - Google Ads](./catalog/advertising/google-ads-destination.md)
 * [Destinations publicitaires - Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
 * [Destinations de stockage dans le cloud](./catalog/cloud-storage/overview.md)
-* [Destinations de marketing par e-mail ](./catalog/email-marketing/overview.md)
+* [Destinations de marketing par e-mail &#x200B;](./catalog/email-marketing/overview.md)
 * [Destinations sociales](./catalog/social/overview.md)
 
 Pour plus d’informations sur les violations de politique de données dans le workflow Audience Activation, voir l’étape **[!UICONTROL Révision]** dans les guides suivants :

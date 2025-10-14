@@ -68,7 +68,7 @@ Pour plus d’informations, voir [Extension d’assistance du compositeur d’ex
 
 ## Rendu du contenu personnalisé
 
-Pour plus d’informations, consultez [ Rendu de contenu de personnalisation ](../rendering-personalization-content.md) .
+Pour plus d’informations, consultez [&#x200B; Rendu de contenu de personnalisation &#x200B;](../rendering-personalization-content.md) .
 
 ## Audiences dans XDM
 

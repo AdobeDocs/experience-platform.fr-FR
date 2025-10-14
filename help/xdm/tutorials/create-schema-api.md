@@ -221,7 +221,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **Requête**
 
-Cette requête met à jour le schéma Membres du programme de fidélité pour inclure les champs du groupe de champs [[!UICONTROL Détails démographiques] ](../field-groups/profile/demographic-details.md) (`profile-person-details`).
+Cette requête met à jour le schéma Membres du programme de fidélité pour inclure les champs du groupe de champs [[!UICONTROL Détails démographiques] &#x200B;](../field-groups/profile/demographic-details.md) (`profile-person-details`).
 
 En ajoutant le groupe de champs `profile-person-details` , le schéma Membres du programme de fidélité capture désormais les informations démographiques des membres du programme de fidélité, telles que leur prénom, leur nom et leur anniversaire.
 

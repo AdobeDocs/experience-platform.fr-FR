@@ -139,7 +139,7 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Un nom pour la configuration. Veillez à mémoriser cette valeur, car il est nécessaire de vérifier le statut de la configuration à une [ étape ultérieure](#check-status). La valeur respecte la casse. |
+| `name` | Un nom pour la configuration. Veillez à mémoriser cette valeur, car il est nécessaire de vérifier le statut de la configuration à une [&#x200B; étape ultérieure](#check-status). La valeur respecte la casse. |
 | `type` | Le type de configuration. Cette propriété doit être définie sur `BYOK_CONFIG`. |
 | `imsOrgId` | Identifiant de votre organisation. Cet identifiant doit être la même valeur que celle fournie sous l’en-tête `x-gw-ims-org-id`. |
 | `configData` | Cette propriété contient les détails suivants sur la configuration :<ul><li>`providerType` : Cette propriété doit être définie sur `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier` : URI de coffre de clés que vous avez copié [précédemment](#send-to-adobe).</li></ul> |

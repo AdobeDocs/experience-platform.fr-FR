@@ -236,7 +236,7 @@ Les sections ci-dessous fournissent des informations supplémentaires que vous p
 
 ### Champs de type Liste de sélection {#picklist-type-fields}
 
-Vous pouvez utiliser [ champs calculés](../../../../data-prep/ui/mapping.md#calculated-fields) pour mapper un champ source de type liste de sélection de [!DNL Microsoft Dynamics] à un champ XDM cible.
+Vous pouvez utiliser [&#x200B; champs calculés](../../../../data-prep/ui/mapping.md#calculated-fields) pour mapper un champ source de type liste de sélection de [!DNL Microsoft Dynamics] à un champ XDM cible.
 
 Par exemple, le champ `genderCode` comprend deux options :
 
@@ -265,4 +265,4 @@ Dans ce scénario, la valeur correspond à la clé, si la clé est trouvée dans
 >
 >Une itération imbriquée de l’opération ci-dessus serait similaire à : `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`.
 
-Pour plus d’informations, consultez le [ document sur les opérateurs logiques dans  [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators).
+Pour plus d’informations, consultez le [&#x200B; document sur les opérateurs logiques dans  [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators).

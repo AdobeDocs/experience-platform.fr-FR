@@ -391,7 +391,7 @@ Une réponse réussie renvoie un état HTTP 201 (Créé) et un payload qui cont
 }
 ```
 
-L’exécution d’une requête de GET à [répertorier tous les mixins](#list) dans le conteneur client inclurait désormais le mixin Détails de la propriété, ou vous pouvez [ effectuer une requête de recherche (GET)](#lookup) à l’aide de l’URI `$id` encodé par l’URL pour afficher directement le nouveau mixin.
+L’exécution d’une requête de GET à [répertorier tous les mixins](#list) dans le conteneur client inclurait désormais le mixin Détails de la propriété, ou vous pouvez [&#x200B; effectuer une requête de recherche (GET)](#lookup) à l’aide de l’URI `$id` encodé par l’URL pour afficher directement le nouveau mixin.
 
 ## Mise à jour d’un mixin {#put}
 

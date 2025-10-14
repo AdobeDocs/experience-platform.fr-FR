@@ -169,7 +169,7 @@ Pour plus d’informations sur le débogage de votre implémentation à l’aide
 
 ## Ressources supplémentaires
 
-- [[!DNL Algolia]  Documentation de l’API Insights ](https://www.algolia.com/doc/rest-api/insights/)
+- [[!DNL Algolia]  Documentation de l’API Insights &#x200B;](https://www.algolia.com/doc/rest-api/insights/)
 - [[!DNL Algolia] Documentation sur les événements](https://www.algolia.com/doc/guides/sending-events/getting-started/)
 - [[!DNL Adobe Experience Platform] Documentation sur le transfert d’événement](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=fr)
 - [[!DNL Algolia] Présentation des fonctionnalités de l’IA](https://www.algolia.com/products/ai-search/)

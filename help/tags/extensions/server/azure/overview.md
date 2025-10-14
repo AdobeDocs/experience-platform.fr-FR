@@ -22,7 +22,7 @@ L’extension [!DNL Microsoft Azure] [de transfert d’événement](../../../ui/
 
 ## Conditions préalables
 
-Pour utiliser cette extension, vous devez disposer d’un compte [!DNL Azure] valide ayant accès à [!DNL Event Hubs]. Vous devez également [ créer un hub d’événements à l’aide du  [!DNL Azure] portal](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create) avant de suivre les étapes ci-dessous.
+Pour utiliser cette extension, vous devez disposer d’un compte [!DNL Azure] valide ayant accès à [!DNL Event Hubs]. Vous devez également [&#x200B; créer un hub d’événements à l’aide du  [!DNL Azure] portal](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create) avant de suivre les étapes ci-dessous.
 
 ## Installation l’extension
 
@@ -42,7 +42,7 @@ Commencez à créer une règle de transfert d’événement et configurez ses co
 
 Le panneau de droite se met à jour afin d’afficher les options de configuration permettant d’envoyer les données. Plus précisément, vous devez affecter des [éléments de données](../../../ui/managing-resources/data-elements.md) aux différentes propriétés qui représentent votre configuration [!DNL Event Hub].
 
-![ Les options de configuration pour le type d’action [!UICONTROL Send Data to Event Hubs] affiché dans l’interface utilisateur.](../../../images/extensions/server/azure/event-hub-details.png)
+![&#x200B; Les options de configuration pour le type d’action [!UICONTROL Send Data to Event Hubs] affiché dans l’interface utilisateur.](../../../images/extensions/server/azure/event-hub-details.png)
 
 **[!UICONTROL Détails du hub d’événements]**
 

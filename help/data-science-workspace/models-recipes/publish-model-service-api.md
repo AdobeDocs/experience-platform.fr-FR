@@ -24,7 +24,7 @@ Ce tutoriel décrit le processus de publication d’un modèle en tant que servi
 
 ## Commencer
 
-Ce tutoriel nécessite une compréhension pratique de Adobe Experience Platform Data Science Workspace. Avant de commencer ce tutoriel, consultez la [ Présentation du Workspace de science des données ](../home.md) pour une présentation détaillée du service.
+Ce tutoriel nécessite une compréhension pratique de Adobe Experience Platform Data Science Workspace. Avant de commencer ce tutoriel, consultez la [&#x200B; Présentation du Workspace de science des données &#x200B;](../home.md) pour une présentation détaillée du service.
 
 Pour suivre ce tutoriel, vous devez disposer d’un moteur ML, d’une instance ML et d’une expérience existants. Pour savoir comment les créer dans l’API, suivez le tutoriel sur [l’importation d’une recette empaquetée](./import-packaged-recipe-api.md).
 

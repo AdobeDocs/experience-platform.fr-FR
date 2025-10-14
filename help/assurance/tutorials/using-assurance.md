@@ -17,7 +17,7 @@ Ce tutoriel explique comment utiliser Adobe Experience Platform Assurance. Pour 
 
 Après vous être connecté à l’ [interface utilisateur d’assurance](https://experience.adobe.com/assurance), vous pouvez sélectionner **[!UICONTROL Créer une session]** pour commencer à créer une session.
 
-![ Le bouton Créer une session est mis en surbrillance, vous indiquant où vous pouvez créer une session.](./images/using-assurance/create-session.png)
+![&#x200B; Le bouton Créer une session est mis en surbrillance, vous indiquant où vous pouvez créer une session.](./images/using-assurance/create-session.png)
 
 La boîte de dialogue **[!UICONTROL Créer une session]** s’affiche. Veuillez consulter les instructions données et poursuivre en sélectionnant **[!UICONTROL Démarrer]**.
 
@@ -29,7 +29,7 @@ Vous pouvez maintenant saisir un nom pour identifier la session, puis fournir un
 >
 >L’URL de base est la définition racine utilisée pour lancer votre application à partir d’une URL. Une URL de session est générée par laquelle vous pouvez lancer la session d’assurance. Exemple de valeur : `myapp://default` Dans le champ **[!UICONTROL URL de base]**, saisissez la définition de lien profond de base de votre application.
 
-![ Le workflow complet de création d&#39;une nouvelle session s&#39;affiche.](./images/using-assurance/create-session.gif)
+![&#x200B; Le workflow complet de création d&#39;une nouvelle session s&#39;affiche.](./images/using-assurance/create-session.gif)
 
 ## Connexion à une session
 
@@ -41,7 +41,7 @@ Si cette boîte de dialogue s’affiche, vous pouvez utiliser l’application d�
 
 Vous pouvez vérifier que votre application est connectée à Assurance lorsque l’icône Adobe Experience Platform (Adobe rouge &quot;A&quot;) s’affiche sur votre application.
 
-![ Le workflow complet de connexion de votre application à une session d&#39;assurance s&#39;affiche.](./images/using-assurance/connect-session.gif)
+![&#x200B; Le workflow complet de connexion de votre application à une session d&#39;assurance s&#39;affiche.](./images/using-assurance/connect-session.gif)
 
 ## Exporter une session
 

@@ -147,7 +147,7 @@ Vous pouvez utiliser une interface de chat plus traditionnelle avec une barre la
 
 ![Barre latérale de conversation [!DNL GitHub Copilot] avec l’icône de conversation mise en surbrillance.](../images/clients/github-copilot/chat-sidebar.png)
 
-Vous pouvez également accéder à l’historique de la conversation en sélectionnant l’icône d’historique (![ L’icône d’historique.](../images/clients/github-copilot/history-icon.png)) en haut du panneau de conversation.
+Vous pouvez également accéder à l’historique de la conversation en sélectionnant l’icône d’historique (![&#x200B; L’icône d’historique.](../images/clients/github-copilot/history-icon.png)) en haut du panneau de conversation.
 
 ## Étapes suivantes
 

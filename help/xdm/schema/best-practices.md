@@ -217,7 +217,7 @@ Experience Platform fournit plusieurs groupes de champs de schéma XDM prêts à
 * Adobe Campaign
 * Adobe Target
 
-Par exemple, vous pouvez utiliser le groupe de champs [[!UICONTROL Modèle Adobe Analytics ExperienceEvent] ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) pour mapper les champs spécifiques à [!DNL Analytics] à vos schémas XDM. Selon les applications d’Adobe que vous utilisez, vous devez utiliser ces groupes de champs fournis par Adobe dans vos schémas.
+Par exemple, vous pouvez utiliser le groupe de champs [[!UICONTROL Modèle Adobe Analytics ExperienceEvent] &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) pour mapper les champs spécifiques à [!DNL Analytics] à vos schémas XDM. Selon les applications d’Adobe que vous utilisez, vous devez utiliser ces groupes de champs fournis par Adobe dans vos schémas.
 
 ![Schéma du [!UICONTROL modèle Adobe Analytics ExperienceEvent].](../images/best-practices/analytics-field-group.png)
 

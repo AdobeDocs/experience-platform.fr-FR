@@ -35,7 +35,7 @@ XDM est une spécification documentée publiquement qui fournit un cadre normali
 
 Le respect des normes XDM permet d’intégrer uniformément les données de l’expérience client, ce qui facilite la diffusion des données et la collecte des informations.
 
-Pour plus d’informations sur l’utilisation de XDM dans Experience Platform, consultez la [ Présentation du système XDM ](../../../xdm/home.md). Pour en savoir plus sur la structure des schémas XDM entre les profils et les événements, lisez les [principes de base de la composition des schémas](../../../xdm/schema/composition.md).
+Pour plus d’informations sur l’utilisation de XDM dans Experience Platform, consultez la [&#x200B; Présentation du système XDM &#x200B;](../../../xdm/home.md). Pour en savoir plus sur la structure des schémas XDM entre les profils et les événements, lisez les [principes de base de la composition des schémas](../../../xdm/schema/composition.md).
 
 ## Exemples de schémas XDM
 

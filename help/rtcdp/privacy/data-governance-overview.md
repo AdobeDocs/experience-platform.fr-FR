@@ -19,8 +19,8 @@ La gouvernance des données d’Adobe Experience Platform vous permet de gére
 
 Real-Time CDP repose sur Adobe Experience Platform. Par conséquent, la plupart des fonctionnalités de gouvernance des données sont abordées dans la documentation [!DNL Experience Platform]. Ce document est destiné à compléter la [présentation de la gouvernance des données](../../data-governance/home.md) pour [!DNL Experience Platform] et décrit les fonctionnalités de gouvernance disponibles dans Real-Time CDP. Les sujets suivants sont abordés :
 
-* [Application des libellés d’utilisation aux données ](#labels)
-* [Gestion des politiques d’utilisation des données ](#policies)
+* [Application des libellés d’utilisation aux données &#x200B;](#labels)
+* [Gestion des politiques d’utilisation des données &#x200B;](#policies)
 * [Appliquer des stratégies d’utilisation des données](#enforce)
 
 ## Application des libellés d’utilisation aux données {#labels}

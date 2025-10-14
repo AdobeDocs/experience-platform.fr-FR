@@ -45,7 +45,7 @@ La première étape pour enrichir les [!DNL Real-Time Customer Profile] avec des
 
 La composition d’un schéma commence par l’attribution d’une classe. Les classes définissent les aspects comportementaux des données que le schéma contiendra (enregistrements ou séries temporelles). Pour commencer à créer vos propres schémas, suivez les étapes du tutoriel sur la [création d’un schéma à l’aide de l’éditeur de schémas](../../xdm/tutorials/create-schema-ui.md). Notez qu’avant de pouvoir activer un jeu de données pour [!DNL Profile], vous devez configurer le schéma du jeu de données pour qu’il comporte un champ d’identité principale, puis activer le schéma pour [!DNL Profile]. Lorsque des données sont ingérées dans un jeu de données activé pour [!DNL Profile], ces mêmes données sont également ingérées en tant qu’enregistrements [!DNL Profile].
 
-Si vous préférez composer un schéma à l’aide de l’API [!DNL Schema Registry], veuillez commencer par lire le guide de développement de [[!DNL Schema Registry] ](../../xdm/api/getting-started.md) avant de vous lancer dans le tutoriel sur la [création d’un schéma à l’aide de l’API](../../xdm/tutorials/create-schema-api.md).
+Si vous préférez composer un schéma à l’aide de l’API [!DNL Schema Registry], veuillez commencer par lire le guide de développement de [[!DNL Schema Registry] &#x200B;](../../xdm/api/getting-started.md) avant de vous lancer dans le tutoriel sur la [création d’un schéma à l’aide de l’API](../../xdm/tutorials/create-schema-api.md).
 
 Une fois votre schéma et votre jeu de données préparés, vous pouvez générer et ingérer des données de notation dans le jeu de données en exécutant des exécutions de notation à l’aide d’un modèle approprié.
 
@@ -63,6 +63,6 @@ Le [!DNL Segment Builder] offre un vaste espace de travail qui vous permet d’i
 
 ## Étapes suivantes {#next-steps}
 
-Pour en savoir plus sur les audiences et la [!DNL Segment Builder], lisez la [ présentation de Segmentation Service ](../../segmentation/home.md).
+Pour en savoir plus sur les audiences et la [!DNL Segment Builder], lisez la [&#x200B; présentation de Segmentation Service &#x200B;](../../segmentation/home.md).
 
-Pour en savoir plus sur [!DNL Real-Time Customer Profile], lisez la [ Présentation du profil client en temps réel ](../../profile/home.md)
+Pour en savoir plus sur [!DNL Real-Time Customer Profile], lisez la [&#x200B; Présentation du profil client en temps réel &#x200B;](../../profile/home.md)

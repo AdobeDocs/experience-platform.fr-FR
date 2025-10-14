@@ -32,7 +32,7 @@ Les équipes d’analyse peuvent ensuite exploiter [!DNL Mixpanel's] fonctionnal
 Pour plus d’informations sur les cas d’utilisation spécifiques à [!DNL Mixpanel], consultez la documentation suivante :
 
 * [Nouveau sur [!DNL Mixpanel]](https://docs.mixpanel.com/docs)
-* [Présentation du service [!DNL Mixpanel] ](https://developer.mixpanel.com/docs)
+* [Présentation du service [!DNL Mixpanel] &#x200B;](https://developer.mixpanel.com/docs)
 * [12 must-try [!DNL Mixpanel] features](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/)
 
 ## Conditions préalables de [!DNL Mixpanel] {#prerequisites-mixpanel}
@@ -54,7 +54,7 @@ En [!DNL Mixpanel], un cluster d’identités contient un ensemble de valeurs `d
 >
 >Reportez-vous au document [!DNL Mixpanel] sur la [gestion des identités](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management#user-identification) pour plus d’informations sur ces méthodes.
 >
->Vérifiez que vous avez activé la [[!DNL Mixpanel]  fonctionnalité de fusion d’identités ](#prerequisites-mixpanel) pour vous assurer que les clusters d’identités sont résolus correctement.
+>Vérifiez que vous avez activé la [[!DNL Mixpanel]  fonctionnalité de fusion d’identités &#x200B;](#prerequisites-mixpanel) pour vous assurer que les clusters d’identités sont résolus correctement.
 
 ### Collecter les détails de configuration requis {#configuration-details}
 

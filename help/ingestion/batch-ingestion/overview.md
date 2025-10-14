@@ -15,7 +15,7 @@ ht-degree: 65%
 
 L’API Batch Ingestion de Adobe Experience Platform vous permet d’ingérer des données dans Experience Platform sous forme de fichiers de lots. Les données ingérées peuvent être des données de profil d’un fichier plat (tel qu’un fichier Parquet) ou des données conformes à un schéma connu dans le registre [!DNL Experience Data Model] (XDM).
 
-La [ Référence de l’API Batch Ingestion ](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) fournit des informations supplémentaires sur ces appels API.
+La [&#x200B; Référence de l’API Batch Ingestion &#x200B;](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) fournit des informations supplémentaires sur ces appels API.
 
 Le diagramme suivant décrit le processus d’ingestion par lots :
 

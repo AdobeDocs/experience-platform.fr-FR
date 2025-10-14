@@ -43,5 +43,5 @@ ht-degree: 32%
 
 Pour plus d’informations sur le type de données d’adresse postale, consultez le référentiel XDM public :
 
-* [ Exemple renseigné ](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.example.1.json)
+* [&#x200B; Exemple renseigné &#x200B;](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.schema.json)

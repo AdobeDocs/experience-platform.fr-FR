@@ -15,7 +15,7 @@ ht-degree: 1%
 
 L’extension de balise [!DNL Snap Pixel] vous permet d’intégrer [!DNL Snap Pixel] fonctionnalité directement dans vos bibliothèques de balises côté client. Cette documentation décrit comment installer l’extension et implémenter ses fonctionnalités dans vos règles de gestion des balises.
 
-L’extension de balise [!DNL Snap Pixel] simplifie l’intégration de [!DNL Snap Pixel] fonctionnalité dans vos bibliothèques de balises côté client existantes. Cette documentation décrit comment installer l’extension et configurer ses fonctionnalités dans vos [ règles de gestion des balises](../../../ui/managing-resources/rules.md).
+L’extension de balise [!DNL Snap Pixel] simplifie l’intégration de [!DNL Snap Pixel] fonctionnalité dans vos bibliothèques de balises côté client existantes. Cette documentation décrit comment installer l’extension et configurer ses fonctionnalités dans vos [&#x200B; règles de gestion des balises](../../../ui/managing-resources/rules.md).
 
 ## Conditions préalables {#prerequisites}
 

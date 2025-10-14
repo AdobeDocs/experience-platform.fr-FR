@@ -28,7 +28,7 @@ Ce guide suppose que vous connaissez les éléments de la composition des schém
 * [Principes de base de la composition des schémas](../schema/composition.md)
 * [Guide du registre des schémas API](../api/overview.md)
 
-Il est également vivement recommandé de consulter les [règles d’évolution pour les énumérations et les valeurs suggérées](../ui/fields/enum.md#evolution) si vous mettez à jour des champs existants. Si vous gérez des valeurs suggérées pour les schémas qui participent à une union, consultez les [ règles de fusion des énumérations et des valeurs suggérées](../ui/fields/enum.md#merging).
+Il est également vivement recommandé de consulter les [règles d’évolution pour les énumérations et les valeurs suggérées](../ui/fields/enum.md#evolution) si vous mettez à jour des champs existants. Si vous gérez des valeurs suggérées pour les schémas qui participent à une union, consultez les [&#x200B; règles de fusion des énumérations et des valeurs suggérées](../ui/fields/enum.md#merging).
 
 ## Composition
 
@@ -222,7 +222,7 @@ Pour gérer l’ `meta:enum` d’un champ personnalisé, vous pouvez mettre à j
 >
 >* [Créer une classe personnalisée](../api/classes.md#create)
 >* [Créer un groupe de champs personnalisé](../api/field-groups.md#create)
->* [ Créez un type de données personnalisé ](../api/data-types.md#create)
+>* [&#x200B; Créez un type de données personnalisé &#x200B;](../api/data-types.md#create)
 
 La requête suivante met à jour le `meta:enum` d’un champ &quot;niveau de fidélité&quot; fourni par un type de données personnalisé :
 

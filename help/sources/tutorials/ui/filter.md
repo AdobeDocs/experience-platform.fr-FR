@@ -66,7 +66,7 @@ Sélectionnez **[!UICONTROL Avec balise]** , puis sélectionnez les balises que 
 
 Sélectionnez **[!UICONTROL Comporte toutes les balises]**, puis sélectionnez les balises que vous souhaitez filtrer à l’aide du menu déroulant. Utilisez ce paramètre pour filtrer les flux de données contenant toutes les balises que vous avez sélectionnées.
 
-![ Requête pour filtrer les flux de données selon toutes les balises.](../../images/tutorials/filter/has-all-tags.png)
+![&#x200B; Requête pour filtrer les flux de données selon toutes les balises.](../../images/tutorials/filter/has-all-tags.png)
 
 ### Filtrage des flux de données par état {#filter-dataflows-by-status}
 
@@ -112,7 +112,7 @@ Vous pouvez combiner différents filtres pour élargir ou affiner votre recherch
 * Flux de données créés à l’aide du jeu de données [!DNL Loyalty Dataset B2C].
 * Flux de données créés entre 4/1/2024 et 4/19/2024.
 
-![ Fenêtre déroulante affichant tous les filtres appliqués.](../../images/tutorials/filter/combine-filters.png)
+![&#x200B; Fenêtre déroulante affichant tous les filtres appliqués.](../../images/tutorials/filter/combine-filters.png)
 
 Pour supprimer tous les filtres, sélectionnez **[!UICONTROL Effacer tout]**.
 

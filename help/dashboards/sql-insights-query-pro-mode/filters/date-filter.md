@@ -15,13 +15,13 @@ Pour filtrer vos informations par date, vous devez ajouter des paramètres à vo
 
 Les paramètres de requête vous permettent d’utiliser des données dynamiques qui agissent comme espaces réservés aux valeurs que vous ajoutez au moment de l’exécution. Ces valeurs d’espace réservé peuvent être mises à jour via l’interface utilisateur et permettent aux utilisateurs moins techniques de mettre à jour les informations en fonction des périodes.
 
-Si vous ne connaissez pas les paramètres de requête, reportez-vous à la documentation de [ conseils sur la mise en oeuvre de requêtes paramétrées](../../../query-service/ui/parameterized-queries.md).
+Si vous ne connaissez pas les paramètres de requête, reportez-vous à la documentation de [&#x200B; conseils sur la mise en oeuvre de requêtes paramétrées](../../../query-service/ui/parameterized-queries.md).
 
 ## Appliquer un filtre de date à votre tableau de bord {#apply-date-filter}
 
 Pour appliquer un filtre de date, sélectionnez **[!UICONTROL Ajouter un filtre]**, puis **[!UICONTROL Filtre de date]** dans le menu déroulant de la vue de votre tableau de bord.
 
-![ Un tableau de bord personnalisé avec l’option Ajouter un filtre et son menu déroulant en surbrillance.](../../images/sql-insights-query-pro-mode/add-filter.png)
+![&#x200B; Un tableau de bord personnalisé avec l’option Ajouter un filtre et son menu déroulant en surbrillance.](../../images/sql-insights-query-pro-mode/add-filter.png)
 
 Les options de filtrage par date suivantes s’affichent.
 

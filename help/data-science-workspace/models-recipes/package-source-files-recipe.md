@@ -36,7 +36,7 @@ Concepts à comprendre :
 
 ## Création de recettes
 
-La création de recettes commence par le regroupement des fichiers afin de créer un fichier d’archives. Les fichiers Source définissent la logique d’apprentissage automatique et les algorithmes utilisés pour résoudre un problème spécifique à résoudre. Ils sont écrits dans [!DNL Python], R, PySpark ou Scala. Les fichiers d’archive créés prennent la forme d’une image Docker. Une fois créé, le fichier d’archive empaqueté est importé dans [!DNL Data Science Workspace] pour créer une recette [dans l’interface utilisateur](./import-packaged-recipe-ui.md) ou [ à l’aide de l’API](./import-packaged-recipe-api.md).
+La création de recettes commence par le regroupement des fichiers afin de créer un fichier d’archives. Les fichiers Source définissent la logique d’apprentissage automatique et les algorithmes utilisés pour résoudre un problème spécifique à résoudre. Ils sont écrits dans [!DNL Python], R, PySpark ou Scala. Les fichiers d’archive créés prennent la forme d’une image Docker. Une fois créé, le fichier d’archive empaqueté est importé dans [!DNL Data Science Workspace] pour créer une recette [dans l’interface utilisateur](./import-packaged-recipe-ui.md) ou [&#x200B; à l’aide de l’API](./import-packaged-recipe-api.md).
 
 ### Création de modèles basés sur Docker {#docker-based-model-authoring}
 

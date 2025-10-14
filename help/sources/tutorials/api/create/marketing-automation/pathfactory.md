@@ -106,4 +106,4 @@ Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant d
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL PathFactory] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créer un flux de données pour importer des données d’automatisation marketing dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/marketing-automation.md)
+* [Créer un flux de données pour importer des données d’automatisation marketing dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/marketing-automation.md)

@@ -16,7 +16,7 @@ ht-degree: 45%
 
 >[!NOTE]
 >
->La source [!DNL Generic REST API] est en version Beta. Consultez la [ Présentation des sources ](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>La source [!DNL Generic REST API] est en version Beta. Consultez la [&#x200B; Présentation des sources &#x200B;](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -190,4 +190,4 @@ Une réponse réussie renvoie la nouvelle connexion de base, y compris son ident
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL Generic REST API] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer les données de protocoles dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/protocols.md)
+* [Créez un flux de données pour importer les données de protocoles dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/protocols.md)

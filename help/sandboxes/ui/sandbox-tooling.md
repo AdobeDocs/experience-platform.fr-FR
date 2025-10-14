@@ -116,7 +116,7 @@ Sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche, p
 
 Dans la boîte de dialogue **[!UICONTROL Ajouter au package]**, sélectionnez l’option **[!UICONTROL Créer un package]**. Indiquez un [!UICONTROL Nom] pour votre package et un [!UICONTROL Description] facultatif, puis sélectionnez **[!UICONTROL Ajouter]**.
 
-![ La boîte de dialogue [!UICONTROL Ajouter au package] avec [!UICONTROL Créer un package] sélectionnée et mise en surbrillance [!UICONTROL Ajouter].](../images/ui/sandbox-tooling/create-new-package.png)
+![&#x200B; La boîte de dialogue [!UICONTROL Ajouter au package] avec [!UICONTROL Créer un package] sélectionnée et mise en surbrillance [!UICONTROL Ajouter].](../images/ui/sandbox-tooling/create-new-package.png)
 
 Vous revenez alors à l’environnement **[!UICONTROL Schémas]**. Vous pouvez maintenant ajouter des objets supplémentaires au package que vous avez créé en suivant les étapes suivantes répertoriées ci-dessous.
 
@@ -180,7 +180,7 @@ Les options permettant d’en créer de nouvelles ou d’utiliser des existantes
 
 La boîte de dialogue **[!UICONTROL Groupe de champs]** affiche une liste des groupes de champs disponibles pour l’objet . Sélectionnez les groupes de champs requis, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
-![Liste de champs affichée dans la boîte de dialogue [!UICONTROL Groupe de champs], mettant en surbrillance la sélection [!UICONTROL Enregistrer]. ](../images/ui/sandbox-tooling/field-group-list.png)
+![Liste de champs affichée dans la boîte de dialogue [!UICONTROL Groupe de champs], mettant en surbrillance la sélection [!UICONTROL Enregistrer]. &#x200B;](../images/ui/sandbox-tooling/field-group-list.png)
 
 Vous revenez à la page [!UICONTROL Objet et dépendances du package]. À partir de là, sélectionnez **[!UICONTROL Terminer]** pour terminer l’importation du package.
 
@@ -205,7 +205,7 @@ Pour exporter un sandbox entier, accédez à l’onglet [!UICONTROL Sandbox] **[
 
 Sélectionnez **[!UICONTROL Sandbox entier]** pour le [!UICONTROL Type de package] dans la boîte de dialogue [!UICONTROL Créer un package]. Indiquez un [!UICONTROL Nom du package] pour votre nouveau package et sélectionnez le **[!UICONTROL Sandbox]** dans la liste déroulante. Enfin, sélectionnez **[!UICONTROL Créer]** pour confirmer vos entrées.
 
-![ Boîte de dialogue [!UICONTROL Créer un package] qui affiche les champs remplis et met en surbrillance [!UICONTROL Créer].](../images/ui/sandbox-tooling/create-package-dialog.png)
+![&#x200B; Boîte de dialogue [!UICONTROL Créer un package] qui affiche les champs remplis et met en surbrillance [!UICONTROL Créer].](../images/ui/sandbox-tooling/create-package-dialog.png)
 
 Le package a été créé avec succès. Sélectionnez **[!UICONTROL Publier]** pour publier le package.
 
