@@ -2,24 +2,20 @@
 title: Connexion de Google Ads à Experience Platform à l’aide d’API
 description: Découvrez comment connecter Adobe Experience Platform à Google Ads à l’aide de l’API Flow Service.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a0977e98219797eda14dd8d7ddb6cf3f1410cef0
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 28%
+source-wordcount: '457'
+ht-degree: 27%
 
 ---
 
 # Connexion de [!DNL Google Ads] à Experience Platform à l’aide de l’API [!DNL Flow Service]
 
->[!NOTE]
->
->La source [!DNL Google Ads] est en version Beta. Consultez la [&#x200B; Présentation des sources &#x200B;](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
-
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
 Lisez ce tutoriel pour savoir comment connecter votre compte [!DNL Google Ads] à Adobe Experience Platform à l’aide de l’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
-## Prise en main
+## Commencer
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Experience Platform :
 
@@ -72,7 +68,7 @@ curl -X POST \
               "refreshToken": "{REFRESH_TOKEN}",
               "clientId": "{CLIENT_ID}",
               "clientSecret": "{CLIENT_SECRET}",
-              "googleAdsApiVersion": "v17"
+              "googleAdsApiVersion": "v19"
 
           }
       },
@@ -91,7 +87,7 @@ curl -X POST \
 | `auth.params.refreshToken` | Jeton d’actualisation de votre compte [!DNL Google Ads]. |
 | `auth.params.clientID` | Identifiant client de votre compte [!DNL Google Ads]. |
 | `auth.params.clientSecret` | Secret client de votre compte [!DNL Google Ads]. |
-| `auth.params.googleAdsApiVersion` | Version de l’API [!DNL Google Ads] que vous utilisez. La dernière version prise en charge sur Experience Platform est `v17`. |
+| `auth.params.googleAdsApiVersion` | Version de l’API [!DNL Google Ads] que vous utilisez. Experience Platform prend actuellement en charge la version `v19` et ultérieure. Assurez-vous d’utiliser l’une de ces versions prises en charge pour garantir la compatibilité. |
 | `connectionSpec.id` | Identifiant de spécification de connexion [!DNL Google Ads] : `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 **Réponse**
@@ -110,4 +106,4 @@ Une réponse réussie renvoie les détails de la connexion de base que vous vene
 Ce tutoriel vous a permis de créer une connexion de base [!DNL Google Ads] à l’aide de l’API [!DNL Flow Service] et de connecter votre compte [!DNL Google Ads] à Experience Platform. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer des données publicitaires dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/advertising.md)
+* [Créez un flux de données pour importer des données publicitaires dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/advertising.md)

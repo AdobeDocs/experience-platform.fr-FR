@@ -1,23 +1,22 @@
 ---
 title: Connexion de Google Ads à Experience Platform à l’aide de l’interface utilisateur
 description: Découvrez comment connecter votre compte Google Ads à Adobe Experience Platform dans l’interface utilisateur.
+badge: Beta
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
+source-git-commit: 906da82a8940233b3eb226d376c454b477514bc5
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '893'
 ht-degree: 10%
 
 ---
 
 # Connexion d’[!DNL Google Ads] à Experience Platform à l’aide de l’interface utilisateur
 
->[!WARNING]
->
->La source [!DNL Google Ads] n’est actuellement pas disponible dans l’interface utilisateur. Vous pouvez continuer à ingérer vos données [!DNL Google Ads] dans Experience Platform [à l’aide de l’API](../../../api/create/advertising/ads.md).
-
 >[!NOTE]
 >
->La source [!DNL Google Ads] est en version Beta. Consultez la [&#x200B; Présentation des sources &#x200B;](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+> La source [!DNL Google Ads] est actuellement en version bêta et ne prend en charge qu’une ingestion unique. Vous pouvez utiliser [la méthode API](../../../api/create/advertising/ads.md) pour effectuer une ingestion incrémentielle des données de vos [!DNL Google Ads] dans Experience Platform.
+>
+>Consultez la [ Présentation des sources ](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Lisez ce guide pour savoir comment connecter votre compte [!DNL Google Ads] à Adobe Experience Platform à l’aide de l’espace de travail des sources dans l’interface utilisateur d’Experience Platform.
 
@@ -59,12 +58,12 @@ Si vous ne disposez pas d’un compte existant, vous devez créer un compte en f
 Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** puis indiquez un nom de compte et éventuellement une description pour les détails de votre compte. Ensuite, fournissez les valeurs d’authentification appropriées pour authentifier votre source par rapport à Experience Platform :
 
 * **Identifiant client** : l’identifiant client est le numéro de compte qui correspond au compte client [!DNL Google Ads] que vous souhaitez gérer avec l’API [!DNL Google Ads]. Cet identifiant suit le modèle de `123-456-7890`.
-* **ID de client de connexion** : l’ID de client de connexion est le numéro de compte qui correspond à votre compte [!DNL Google Ads] Manager et qui est utilisé pour récupérer les données de rapport d’un client opérationnel spécifique. Pour plus d’informations sur l’ID de client de connexion, consultez la documentation de l’API [[!DNL Google Ads] &#x200B;](https://developers.google.com/search-ads/reporting/concepts/login-customer-id).
+* **ID de client de connexion** : l’ID de client de connexion est le numéro de compte qui correspond à votre compte [!DNL Google Ads] Manager et qui est utilisé pour récupérer les données de rapport d’un client opérationnel spécifique. Pour plus d’informations sur l’ID de client de connexion, consultez la documentation de l’API [[!DNL Google Ads] ](https://developers.google.com/search-ads/reporting/concepts/login-customer-id).
 * **Jeton de développeur** : le jeton de développeur vous permet d’accéder à l’API [!DNL Google Ads]. Vous pouvez utiliser le même jeton de développement pour effectuer des requêtes sur tous vos comptes [!DNL Google Ads]. Récupérez votre jeton de développeur en [vous connectant à votre compte Manager](https://ads.google.com/home/tools/manager-accounts/) puis en accédant à la page du Centre API.
 * **Jeton d’actualisation** : le jeton d’actualisation fait partie de l’authentification [!DNL OAuth2]. Ce jeton vous permet de régénérer vos jetons d’accès après leur expiration.
 * **Identifiant client** : l’identifiant client est utilisé conjointement avec le secret client dans le cadre de l’authentification [!DNL OAuth2]. Ensemble, l’identifiant client et le secret client permettent à votre application d’opérer pour le compte de votre compte en identifiant votre application à [!DNL Google].
 * **Secret client** : le secret client est utilisé conjointement avec l’identifiant client dans le cadre de l’authentification [!DNL OAuth2]. Ensemble, l’identifiant client et le secret client permettent à votre application d’opérer pour le compte de votre compte en identifiant votre application à [!DNL Google].
-* Version de l’API **[!DNL Google Ads]** : version actuelle de l’API prise en charge par [!DNL Google Ads]. Bien que la dernière version soit `v18`, la dernière version prise en charge sur Experience Platform est `v17`.
+* Version de l’API **[!DNL Google Ads]** : version actuelle de l’API prise en charge par [!DNL Google Ads]. Bien que la dernière version de l’API [!DNL Google Ads] soit la version v21, Experience Platform prend actuellement en charge la version v19 et ultérieure. Assurez-vous d’utiliser l’une de ces versions prises en charge pour garantir la compatibilité.
 
 Une fois vos informations d’identification saisies, sélectionnez **[!UICONTROL Se connecter à la source]** et patientez quelques instants le temps que la connexion soit traitée. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
@@ -72,7 +71,7 @@ Une fois vos informations d’identification saisies, sélectionnez **[!UICONTRO
 
 ## Sélectionner les données {#select-data}
 
-Avec [!DNL Google Ads], vous devez fournir la liste des attributs à ingérer pendant la phase de sélection des données du workflow. Pour récupérer ces attributs, vous devez utiliser l’[[!DNL Google Ads Query Builder]](https://developers.google.com/google-ads/api/fields/v17/overview_query_builder) .
+Avec [!DNL Google Ads], vous devez fournir la liste des attributs à ingérer pendant la phase de sélection des données du workflow. Pour récupérer ces attributs, vous devez utiliser l’[[!DNL Google Ads Query Builder]](https://developers.google.com/google-ads/api/fields/v19/overview_query_builder) .
 
 Dans la [!DNL Google Ads Query Builder], accédez au type de ressource que vous souhaitez utiliser, puis utilisez le sélecteur d’attributs pour sélectionner vos attributs, segments et mesures.
 
