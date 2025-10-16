@@ -3,10 +3,10 @@ title: Présentation Des Événements De Diffusion En Continu Capillaires
 description: Découvrez comment diffuser des données de Capillary vers Experience Platform.
 badge: Beta
 exl-id: 3b8eb2f6-3b4a-4b91-89d4-b6d9027c6ab4
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: 428aed259343f56a2bf493b40ff2388340fffb7b
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 8%
+source-wordcount: '554'
+ht-degree: 2%
 
 ---
 
@@ -29,48 +29,38 @@ En intégrant [!DNL Capillary] à Experience Platform, vous pouvez :
 Avant de connecter [!DNL Capillary] à Adobe Experience Platform, vérifiez que vous disposez des éléments suivants :
 
 * Un **ID d’organisation Adobe valide** et l’accès à un sandbox Experience Platform activé.
-* **[!DNL Capillary]les informations d’identification de la source** (ID client et secret client).
-* Les autorisations nécessaires dans le Adobe Admin Console pour créer des sources et des flux de données.
+* Pour connecter votre compte **[!UICONTROL à Experience Platform]** les autorisations **[!UICONTROL Afficher les sources et]** Gérer les sources[!DNL Capillary] doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/ui/overview.md).
 
-### Collecter les informations d’identification requises
+### Créer un schéma
 
-Vous devez fournir des valeurs pour les informations d’identification suivantes afin de connecter votre compte [!DNL Capillary] à Experience Platform :
+Vous devez créer un schéma de modèle de données d’expérience (XDM) pour décrire un jeu de données pouvant stocker les champs et types de données possibles qui seront envoyés depuis [!DNL Capillary].
 
-| Informations d’identification | Description | Exemple |
-| --- | --- | --- |
-| Identifiant client | Identifiant client de la source de [!DNL Capillary]. | `321c8a8fee0d4a06838d46f9d3109e8a` |
-| Secret client | Secret client émis avec l’ID client | `xxxxxxxxxxxxxxxxxx` |
-| ID d’organisation | Votre identifiant d’organisation Adobe | `0A7D42FC5DB9D3360A495FD3@AdobeOrg` |
+1. Connectez-vous à Adobe Experience Platform et accédez à Experience Platform via la connexion de votre organisation.
+2. Dans le panneau de navigation de gauche, sélectionnez **[!UICONTROL Schémas]** pour ouvrir l’espace de travail [!UICONTROL Schémas].
+3. Sélectionnez **[!UICONTROL Créer un schéma]** dans le coin supérieur droit.
+4. Dans la boîte de dialogue Créer un schéma , choisissez entre **[!UICONTROL Création manuelle]** (ajouter vous-même des champs et des groupes de champs) ou **[!UICONTROL création assistée par ML]** (chargez un fichier CSV et utilisez le machine learning pour générer un schéma recommandé).
+5. Choisissez une classe de base pour votre schéma (par exemple, XDM Individual Profile, XDM ExperienceEvent ou Autre). Si vous sélectionnez **[!UICONTROL Autre]**, vous pouvez effectuer une sélection parmi les classes personnalisées ou standard disponibles.
+6. Saisissez un nom et une description conviviaux pour votre schéma.
+7. Utilisez l’éditeur de schémas pour : ajouter des groupes de champs (blocs de champs réutilisables), définir des champs individuels (personnaliser les noms, les types de données et les options) et, éventuellement, créer des types de données ou des groupes de champs personnalisés si les types existants ne répondent pas à vos besoins.
+8. Examinez la structure du schéma dans la zone de travail. Sélectionnez **[!UICONTROL Terminer]** pour créer le schéma.
+9. (Facultatif) Modifiez des champs, ajoutez des descriptions et ajustez les groupes de champs selon les besoins dans l’éditeur de schémas.
 
-Pour plus d’informations sur la génération de jetons d’accès, consultez le [guide d’authentification d’Adobe](https://developer.adobe.com/developer-console/docs/guides/authentication/).
+Pour obtenir des instructions détaillées sur la création d’un schéma XDM, consultez le guide sur la [création d’un schéma à l’aide de l’éditeur de schéma](../../../xdm/tutorials/create-schema-ui.md).
 
-### Générer un jeton d’accès
+### Créer un jeu de données
 
-Ensuite, utilisez votre identifiant client et votre secret client pour générer un jeton d’accès à partir d’Adobe.
+Ensuite, vous devez créer un jeu de données qui fait référence au schéma que vous venez de créer.
 
-**Requête**
+1. Dans l’interface utilisateur d’Experience Platform, sélectionnez [!UICONTROL Jeux de données] dans le volet de navigation de gauche pour ouvrir l’espace de travail [!UICONTROL Jeux de données].
+2. Sélectionnez **[!UICONTROL Créer un jeu de données]** en haut à droite.
+3. Dans les options de création, sélectionnez **[!UICONTROL Créer un jeu de données à partir d’un schéma]**.
+4. Dans la liste, recherchez et sélectionnez le schéma XDM que vous avez précédemment créé. Une fois le schéma localisé, sélectionnez **[!UICONTROL Suivant]**.
+5. Saisissez un nom unique et descriptif pour votre jeu de données.
+6. Si vous le souhaitez, ajoutez une description qui aidera les futurs utilisateurs à identifier le jeu de données.
+7. Sélectionnez **[!UICONTROL Terminer]** pour créer le jeu de données.
 
-```shell
-curl -X POST 'https://ims-na1.adobelogin.com/ims/token' \
-  -d 'client_id={CLIENT_ID}' \
-  -d 'client_secret={CLIENT_SECRET}' \
-  -d 'grant_type=client_credentials' \
-  -d 'scope=openid AdobeID read_organizations additional_info.projectedProductContext session'
-```
+Pour obtenir des instructions détaillées sur la création d’un jeu de données, consultez le [guide de l’interface utilisateur des jeux de données](../../../catalog/datasets/user-guide.md).
 
-**Réponse**
+## Connexion de [!DNL Capillary Streaming Events] à Experience Platform
 
-```json
-{
-  "access_token": "eyJhbGciOi...",
-  "token_type": "bearer",
-  "expires_in": 86399994
-}
-```
-
-## Étapes suivantes
-
-Une fois la configuration requise pour [!DNL Capillary] terminée, lisez la documentation suivante pour savoir comment connecter votre compte et commencer à diffuser des données de [!DNL Capillary] vers Experience Platform.
-
-* [Connexion  [!DNL Capillary Streaming Events]  Experience Platform à l’aide de l’API](../../tutorials/api/create/loyalty/capillary.md)
-* [Connexion  [!DNL Capillary Streaming Events]  Experience Platform à l’aide de l’interface utilisateur](../../tutorials/ui/create/loyalty/capillary.md)
+Une fois la configuration requise pour [!DNL Capillary] terminée, consultez le tutoriel [[!DNL Capillary Streaming Events] IU](../../tutorials/ui/create/loyalty/capillary.md) pour découvrir comment connecter votre compte et diffuser des données de [!DNL Capillary] vers Experience Platform.
