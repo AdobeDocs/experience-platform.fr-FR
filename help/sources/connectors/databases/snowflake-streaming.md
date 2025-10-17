@@ -3,9 +3,9 @@ title: Présentation Du Connecteur Source De Diffusion En Continu Snowflake
 description: Découvrez comment créer une connexion source et un flux de données pour ingérer les données de diffusion en continu de votre instance Snowflake vers Adobe Experience Platform
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: 0d646136da2c508fe7ce99a15787ee15c5921a6c
+source-git-commit: 1d0cc448293ab3cad6ccb971bb2edc86c1b01a5c
 workflow-type: tm+mt
-source-wordcount: '1390'
+source-wordcount: '1510'
 ht-degree: 6%
 
 ---
@@ -79,7 +79,7 @@ Pour authentifier votre instance [!DNL Snowflake] avec Experience Platform, vous
 
 Pour trouver l’identifiant de votre compte, procédez comme suit :
 
-* Accédez à votre compte dans le tableau de bord de l’interface utilisateur de l’application [[!DNL Snowflake] &#x200B;](https://app.snowflake.com/).
+* Accédez à votre compte dans le tableau de bord de l’interface utilisateur de l’application [[!DNL Snowflake] ](https://app.snowflake.com/).
 * Dans le volet de navigation de gauche, sélectionnez **[!DNL Accounts]**, puis **[!DNL Active Accounts]** dans l’en-tête.
 * Sélectionnez ensuite l’icône d’information, puis sélectionnez et copiez le nom de domaine de l’URL active.
 
@@ -157,6 +157,25 @@ Vous devez configurer des privilèges sur un rôle, même si le rôle public par
 >La reprise automatique et la suspension automatique doivent être activées dans la configuration des paramètres avancés de votre entrepôt.
 
 Pour plus d’informations sur la gestion des rôles et des privilèges, consultez la [[!DNL Snowflake] référence de l’API](<https://docs.snowflake.com/en/sql-reference/sql/grant-privilege>).
+
+## Convertir les champs d’heure en date au format Unix
+
+Le [!DNL Snowflake Streaming] analyse et écrit ` DATE` champs comme le nombre de jours depuis l’époque Unix (1970-01-01). Par exemple, une valeur `DATE` de 0 signifie le 1er janvier 1970, tandis qu’une valeur de 1 signifie le 2 janvier 1970. Par conséquent, lors de la préparation du fichier pour créer des mappages dans la source de [!DNL Snowflake Streaming], assurez-vous que la colonne `DATE` est représentée sous la forme d’un entier.
+
+Vous pouvez utiliser les [fonctions de données et d’heure de la préparation des données](../../../data-prep/functions.md#date-and-time-functions) pour convertir l’heure Unix en champs de date pouvant être ingérés dans Experience Platform. Par exemple :
+
+```shell
+dformat({DATE_COLUMN} * 86400000, "yyyy-MM-dd")
+```
+
+Dans cette fonction :
+
+* `{DATE_COLUMN}` est la colonne de date contenant l’entier du jour epoch.
+* La multiplication par 86400000 convertit les jours de l’époque en millisecondes.
+* « aaaa-MM-jj » indique le format de date souhaité.
+
+Cette conversion garantit que la date est correctement représentée dans votre jeu de données.
+
 
 ## Restrictions et questions fréquentes {#limitations-and-frequently-asked-questions}
 
