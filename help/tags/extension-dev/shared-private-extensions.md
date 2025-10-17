@@ -61,7 +61,7 @@ Saisissez ensuite l’ID de l’organisation de réception, puis sélectionnez *
 
 ![Page [!UICONTROL Créer une autorisation d’utilisation de package d’extension] affichant une extension sélectionnée et l’ID d’organisation Adobe saisi, en surbrillance [!UICONTROL Enregistrer]](../images/shared-extensions/save-authorization.png)
 
-Vous revenez alors à l’onglet [!UICONTROL  Autorisations d’utilisation ] où vous pouvez voir l’extension dans votre liste **[!UICONTROL Partagée avec d’autres organisations]**. Le statut indique **En attente d&#39;approbation** jusqu&#39;à ce que l&#39;organisation réceptrice approuve l&#39;autorisation, auquel cas elle est mise à jour sur **Approuvée**.
+Vous revenez alors à l’onglet [!UICONTROL &#x200B; Autorisations d’utilisation &#x200B;] où vous pouvez voir l’extension dans votre liste **[!UICONTROL Partagée avec d’autres organisations]**. Le statut indique **En attente d&#39;approbation** jusqu&#39;à ce que l&#39;organisation réceptrice approuve l&#39;autorisation, auquel cas elle est mise à jour sur **Approuvée**.
 
 ![Onglet [!UICONTROL Autorisations d’utilisation] affichant une liste des extensions partagées avec d’autres organisations, en mettant en surbrillance la nouvelle autorisation](../images/shared-extensions/new-authorization.png)
 
@@ -93,9 +93,9 @@ Sélectionnez **[!UICONTROL OK]** dans la boîte de dialogue **[!UICONTROL Utili
 
 ![Boîte de dialogue [!UICONTROL Utilisations d’autorisation], en surbrillance [!UICONTROL OK]](../images/shared-extensions/confirmation.png)
 
-Vous revenez sur l’onglet [!UICONTROL  Autorisations d’utilisation ] où vous pouvez voir que l’extension affiche désormais un statut **Approuvé**.
+Vous revenez sur l’onglet [!UICONTROL &#x200B; Autorisations d’utilisation &#x200B;] où vous pouvez voir que l’extension affiche désormais un statut **Approuvé**.
 
-![Onglet [!UICONTROL  Autorisations d’utilisation] affichant une liste des extensions partagées avec cette organisation, en mettant en surbrillance l’extension avec le statut Approuvé](../images/shared-extensions/approved-authorization.png)
+![Onglet [!UICONTROL &#x200B; Autorisations d’utilisation] affichant une liste des extensions partagées avec cette organisation, en mettant en surbrillance l’extension avec le statut Approuvé](../images/shared-extensions/approved-authorization.png)
 
 Une fois l’autorisation approuvée, l’extension est disponible dans votre catalogue et peut être installée et utilisée comme toute autre extension. L’extension partagée affiche un badge ***Réception*** indiquant qu’il s’agit d’une extension qui vous est partagée par une autre organisation.
 
