@@ -6,9 +6,9 @@ user-guide-description: Découvrez comment déployer et gérer des balises d’a
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 84cc86e4afa74668ba00a7ef5ba824f44db3f8f1
+source-git-commit: cc89bf68011499e69f4ed8c7dc891ec02a34d361
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '791'
 ht-degree: 85%
 
 ---
@@ -306,6 +306,7 @@ ht-degree: 85%
    * [Hébergement de bibliothèques tierces](./extension-dev/third-party-libraries.md)
    * [Variable sans Turbine](./extension-dev/turbine.md)
    * [Norme de rétrocompatibilité](./extension-dev/backwards-compatibility.md)
+   * [Extensions privées communes](./extension-dev/shared-private-extensions.md)
 * API Reactor {#api}
    * [Vue d’ensemble](./api/overview.md)
    * [S’authentifier et accéder à l’API Reactor](./api/getting-started.md)
