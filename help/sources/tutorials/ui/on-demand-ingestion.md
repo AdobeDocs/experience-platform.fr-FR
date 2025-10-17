@@ -2,9 +2,9 @@
 title: Ingestion à la demande des flux de données des sources dans l’interface utilisateur
 description: Découvrez comment créer des flux de données à la demande pour vos connexions source à l’aide de l’interface utilisateur d’Experience Platform.
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fabacf273fb5774ddcee42d0cdcf12281eb0216b
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '574'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Ce document vous fournit des instructions sur la création de flux de données �
 
 **Qu’est-ce qu’une exécution de flux ?**
 
-Les exécutions de flux représentent une instance d’exécution de flux de données. Par exemple, si un flux de données est planifié pour s’exécuter toutes les heures à 9 h, 10 h et 11 h, trois instances d’exécution de flux se produisent. Les exécutions de flux sont spécifiques à votre organisation.
+Les exécutions de flux représentent une instance d’exécution de flux de données. Par exemple, si un flux de données est planifié pour s’exécuter toutes les heures à 9 heures:00, 10 :00 et 11 :00 du matin, vous auriez trois instances d’exécution de flux. Les exécutions de flux sont spécifiques à votre organisation.
 
 >[!ENDSHADEBOX]
 
@@ -58,6 +58,10 @@ Sélectionnez **[!UICONTROL Planifier]** et patientez quelques instants le temps
 ![Fenêtre de configuration de la planification pour l’ingestion à la demande.](../../images/tutorials/on-demand/configure-schedule.png)
 
 Sélectionnez le nom de votre flux de données pour afficher votre activité de flux de données. Vous trouverez ici une liste de vos exécutions de flux de données qui ont été traitées. Vous pouvez réexécuter des itérations individuelles de vos exécutions de flux de données, qu’elles aient échoué ou réussi. Pour les itérations d’exécution ayant échoué, vous pouvez utiliser **[!UICONTROL Réessayer]** pour relancer l’exécution après avoir diagnostiqué et corrigé les erreurs qui ont pu se produire pendant le processus de création.
+
+>[!TIP]
+>
+>Toute nouvelle tentative d’exécution de flux ne traite que les fichiers dont la date et l’heure sont comprises dans la plage de l’exécution d’origine.
 
 ![Liste des exécutions de flux traitées pour un flux de données sélectionné.](../../images/tutorials/on-demand/processed.png)
 
