@@ -19,7 +19,7 @@ Les paramètres d’identité sont une fonctionnalité de l’interface utilisat
 
 Regardez la vidéo suivante pour plus d’informations sur l’utilisation de l’interface [!DNL Graph Simulation] dans l’espace de travail de l’interface utilisateur d’Identity Service :
 
->[!VIDEO](https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475964/?captions=fre_fr&learn=on&enablevpops)
 
 Lisez ce guide pour savoir comment configurer vos paramètres d’identité dans l’interface utilisateur.
 

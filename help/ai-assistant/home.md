@@ -61,7 +61,7 @@ La connaissance des produits fait référence aux concepts et aux sujets reposan
 
 Regardez la vidéo suivante pour plus d’informations sur les connaissances du produit Assistant AI :
 
->[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475932/?captions=fre_fr&learn=on)
 
 ### Informations opérationnelles {#operational-insights}
 
