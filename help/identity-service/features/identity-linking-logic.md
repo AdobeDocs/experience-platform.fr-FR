@@ -2,9 +2,9 @@
 title: Logique de liaison du service d’identités
 description: Découvrez comment Identity Service lie des identités disparates pour créer une vue d’ensemble complète d’un client.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
+source-git-commit: 5c05f2dbcf9088b95eb8d35e455912219e87662f
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '966'
 ht-degree: 3%
 
 ---
@@ -22,6 +22,10 @@ Deux types d’identités sont liés :
 
 * **Enregistrements de profil** : ces identités proviennent généralement de systèmes CRM.
 * **Événements d’expérience** : ces identités proviennent généralement de l’implémentation de WebSDK ou de la source Adobe Analytics.
+
+>[!IMPORTANT]
+>
+>Identity Service est sensible à la casse. Par exemple, **abc<span>@gmail.com** et **ABC<span>@GMAIL.COM** sont traitées comme deux identités d’e-mail distinctes.
 
 ## Signification sémantique de l&#39;établissement de liens
 
@@ -55,7 +59,7 @@ Supposons que vous ayez un graphique d’identités existant avec trois identit�
 
 * TÉLÉPHONE :(555)-555-1234
 * EMAIL:julien<span>@acme.com
-* CRMID:60013ABC
+* CRMID :60013ABC
 
 ![graphique existant](../images/identity-settings/existing-graph.png)
 
@@ -63,8 +67,8 @@ Supposons que vous ayez un graphique d’identités existant avec trois identit�
 
 Une paire d’identités est ingérée dans votre graphique et contient :
 
-* CRMID:60013ABC
-* ECID:100066526
+* CRMID :60013ABC
+* ECID :100066526
 
 ![données entrantes](../images/identity-settings/incoming-data.png)
 
@@ -96,10 +100,10 @@ Vous avez également implémenté WebSDK et ingéré un jeu de données WebSDK (
 
 | Date et heure | Identités de l’événement* | Événement |
 | --- | --- | --- |
-| `t=1` | ECID:38652 | Afficher la page d’accueil |
+| `t=1` | ECID :38652 | Afficher la page d’accueil |
 | `t=2` | ECID:38652, CRMID:31260XYZ | Rechercher des chaussures |
-| `t=3` | ECID:44675 | Afficher la page d’accueil |
-| `t=4` | ECID:44675, CRMID: 31260XYZ | Afficher l&#39;historique des achats |
+| `t=3` | ECID :44675 | Afficher la page d’accueil |
+| `t=4` | ECID:44675, CRMID : 31260XYZ | Afficher l&#39;historique des achats |
 
 L’identité principale de chaque événement sera déterminée en fonction de la [configuration des types d’éléments de données](../../tags/extensions/client/web-sdk/data-element-types.md).
 
@@ -139,7 +143,7 @@ Chez `timestamp=1`, un client utilise un ordinateur portable pour visiter votre 
 
 >[!TAB timestamp=2]
 
-Chez `timestamp=2`, un client utilise le même ordinateur portable pour visiter votre site Web de commerce électronique. Ils se connectent avec leur combinaison de nom d&#39;utilisateur et de mot de passe et recherchent des chaussures. Identity Service identifie le compte du client lors de sa connexion, car il correspond à son CRMID : 31260XYZ. En outre, Identity Service associe ECID:38562 à CRMID:31260XYZ, car ils utilisent tous deux le même navigateur sur le même appareil.
+Chez `timestamp=2`, un client utilise le même ordinateur portable pour visiter votre site Web de commerce électronique. Ils se connectent avec leur combinaison de nom d&#39;utilisateur et de mot de passe et recherchent des chaussures. Identity Service identifie le compte du client lors de sa connexion, car il correspond à son CRMID : 31260XYZ. En outre, le service d’identités associe l’ECID:38562 à CRMID:31260XYZ car ils utilisent tous deux le même navigateur sur le même appareil.
 
 ![timestamp-two](../images/identity-settings/timestamp-two.png)
 
@@ -151,7 +155,7 @@ Chez `timestamp=3`, un client utilise une tablette pour visiter votre site d’e
 
 >[!TAB timestamp=4]
 
-Au `timestamp=4`, un client ou une cliente utilise la même tablette, se connecte à son compte (CRMID:31260XYZ) et consulte son historique d’achats. Cet événement associe leur CRMID:31260XYZ à l’identifiant de cookie affecté à l’activité de navigation anonyme, ECID:44675, et associe ECID:44675 au graphique d’identité du client deux.
+Au `timestamp=4`, un client utilise la même tablette, se connecte à son compte (CRMID:31260XYZ et consulte son historique d’achats. Cet événement associe son CRMID:31260XYZ à l’identifiant de cookie affecté à l’activité de navigation anonyme, ECID:44675, et associe l’ECID:44675 au graphique d’identité du client deux.
 
 ![timestamp-four](../images/identity-settings/timestamp-four.png)
 
