@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: En savoir plus sur l’utilisation par défaut de l’activation des données et les limites de débit.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
+source-git-commit: 0a9782b6018e5c5405c79ce37d969754d7b99fd6
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1712'
 ht-degree: 48%
 
 ---
@@ -105,7 +105,7 @@ Les mécanismes de sécurisation ci-dessous s’appliquent à l’activation par
 
 ### Exportations de jeux de données {#dataset-exports}
 
-Les exportations de jeux de données sont actuellement prises en charge selon un **[!UICONTROL modèle complet, puis incrémentiel]** [&#128279;](/help/destinations/ui/export-datasets.md#scheduling). Les mécanismes de sécurisation décrits dans cette section *s’appliquent à la première exportation complète* qui se produit une fois qu’un workflow d’exportation de jeu de données est configuré.
+Les exportations de jeux de données sont actuellement prises en charge selon un **[!UICONTROL First Full and then Incremental]** [modèle](/help/destinations/ui/export-datasets.md#scheduling). Les mécanismes de sécurisation décrits dans cette section *s’appliquent à la première exportation complète* qui se produit une fois qu’un workflow d’exportation de jeu de données est configuré.
 
 <!--
 
@@ -121,11 +121,9 @@ Les exportations de jeux de données sont actuellement prises en charge selon un
 
 Les mécanismes de sécurisation de l’exportation des jeux de données s’appliquent à deux types de jeux de données exportés depuis Experience Platform, comme décrit ci-dessous :
 
-**Jeux de données basés sur le schéma d’événements d’expérience XDM**
-Dans le cas des jeux de données basés sur le schéma d’événements d’expérience XDM, le schéma du jeu de données inclut une colonne de niveau supérieur *horodatage*. Les données sont ingérées en ajout uniquement.
+**Jeux de données basés sur le schéma d’événements d’expérience XDM et jeux de données basés sur tout autre schéma**
 
-**Jeux de données basés sur le schéma XDM Individual Profile**
-Dans le cas de jeux de données basés sur le schéma XDM Individual Profile, le schéma du jeu de données n’inclut pas de colonne de niveau supérieur *timestamp*. Les données sont ingérées en upsert.
+Dans le cas des jeux de données basés sur le schéma d’événements d’expérience XDM, le schéma du jeu de données inclut une colonne d’horodatage de niveau supérieur. Les données sont ingérées en ajout uniquement. Dans le cas de jeux de données basés sur un autre schéma, le schéma du jeu de données peut inclure une colonne d’horodatage et les données sont ingérées en upsert.
 
 Le mécanisme de sécurisation logiciel ci-dessous s’applique à tous les jeux de données exportés depuis Experience Platform. Examinez également les mécanismes de sécurisation stricts ci-dessous, spécifiques aux différents types de jeux de données et de compression.
 
@@ -146,7 +144,7 @@ Pour les exportations de jeux de données planifiées ou récurrentes, les méca
 | Type de jeu de données | Mécanisme de sécurisation | Type de mécanisme de sécurisation | Description |
 ---------|----------|---------|-------|
 | Jeux de données basés sur le schéma **XDM Experience Events** | 365 derniers jours de données | Mécanisme de sécurisation mis en œuvre par le système | Les données de la dernière année civile sont exportées. |
-| Jeux de données basés sur le schéma **XDM Individual Profile** | Dix milliards d’enregistrements sur tous les fichiers exportés dans un flux de données | Mécanisme de sécurisation mis en œuvre par le système | Le nombre d’enregistrements du jeu de données doit être inférieur à dix milliards pour les fichiers JSON ou parquet compressés et à un million pour les fichiers parquet non compressés. Dans le cas contraire, l’exportation échouera. Réduisez la taille du jeu de données que vous essayez d’exporter s’il est supérieur au seuil autorisé. |
+| Jeux de données basés sur **n’importe quel schéma à l’exception du schéma XDM Experience Events** | Dix milliards d’enregistrements sur tous les fichiers exportés dans un flux de données | Mécanisme de sécurisation mis en œuvre par le système | Le nombre d’enregistrements du jeu de données doit être inférieur à dix milliards pour les fichiers JSON ou parquet compressés et à un million pour les fichiers parquet non compressés. Dans le cas contraire, l’exportation échouera. Réduisez la taille du jeu de données que vous essayez d’exporter s’il est supérieur au seuil autorisé. |
 
 {style="table-layout:auto"}
 
@@ -169,7 +167,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 
 -->
 
-En savoir plus sur l’[exportation de jeux de données](/help/destinations/ui/export-datasets.md).
+En savoir plus sur l’[export de jeux de données](/help/destinations/ui/export-datasets.md).
 
 
 ### Mécanismes de sécurisation de Destination SDK {#destination-sdk-guardrails}
@@ -198,7 +196,7 @@ Détails sur les seuils de limitations ou les limites pour des destinations donn
 Consultez la documentation suivante pour plus d’informations sur les autres mécanismes de sécurisation des services Experience Platform, sur les informations de latence de bout en bout et les informations de licence dans les documents de description du produit Real-Time CDP :
 
 * [Mécanismes de sécurisation de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=fr#end-to-end-latency-diagrams) pour divers services Experience Platform.
-* [Real-Time Customer Data Platform (édition B2C - packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
