@@ -1,7 +1,6 @@
 ---
 title: Notes de mise à jour d’octobre 2025 d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2025 pour Adobe Experience Platform
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 199acd8d3bdbb0e89fc1ab881bff4d94063b7f78
 workflow-type: tm+mt
 source-wordcount: '920'
