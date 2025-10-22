@@ -1224,7 +1224,7 @@ Une réponse réussie renvoie la page de résultats suivante. Cette réponse ne 
 
 >[!IMPORTANT]
 >
->Le point d’entrée de suppression d’entité sera abandonné d’ici la fin octobre 2025. Si vous souhaitez effectuer des opérations de suppression d’enregistrements, vous pouvez utiliser le workflow [ API de suppression des enregistrements du cycle de vie des données ](/help/hygiene/api/workorder.md) ou le workflow de l’interface utilisateur de suppression des enregistrements du cycle de vie des données [](/help/hygiene/ui/record-delete.md) à la place.
+>Le point d’entrée de suppression d’entité sera abandonné d’ici la fin octobre 2025. Si vous souhaitez effectuer des opérations de suppression d’enregistrements, vous pouvez utiliser le workflow [&#x200B; API de suppression des enregistrements du cycle de vie des données &#x200B;](/help/hygiene/api/workorder.md) ou le workflow de l’interface utilisateur de suppression des enregistrements du cycle de vie des données [&#128279;](/help/hygiene/ui/record-delete.md) à la place.
 >
 >En outre, les requêtes de suppression pour les entités B2B suivantes ont déjà été abandonnées :
 >
