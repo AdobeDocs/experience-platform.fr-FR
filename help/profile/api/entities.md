@@ -5,10 +5,10 @@ type: Documentation
 description: Adobe Experience Platform vous permet d’accéder aux données du profil client en temps réel à l’aide des API RESTful ou de l’interface utilisateur. Ce guide explique comment accéder aux entités, plus communément appelées « profils », à l’aide de l’API Profile.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 193045d530d73d8a3e4f7ac3df4e1f43e8ad5b15
+source-git-commit: 2f32cae89d69f6dc2930c3908c87b79e1b724f4b
 workflow-type: tm+mt
-source-wordcount: '2141'
-ht-degree: 30%
+source-wordcount: '2211'
+ht-degree: 29%
 
 ---
 
@@ -20,15 +20,22 @@ Adobe Experience Platform vous permet d’accéder aux données [!DNL Real-Time 
 
 Le point d’entrée dʼAPI utilisé dans ce guide fait partie de [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
 
->[!BEGINSHADEBOX]
-
 ## Résolution de l’entité
 
 Dans le cadre de la mise à niveau de l’architecture, Adobe introduit la résolution d’entités pour les comptes et les opportunités, à l’aide d’une correspondance d’identifiants déterministe basée sur les dernières données. Le traitement de résolution d’entité s’exécute quotidiennement pendant la segmentation par lots, avant d’évaluer les audiences à entités multiples avec des attributs B2B.
 
 Cette amélioration permet à Experience Platform d’identifier et d’unifier plusieurs enregistrements représentant la même entité, ce qui améliore la cohérence des données et permet une segmentation d’audience plus précise.
 
-Auparavant, Comptes et opportunités s’appuyait sur une résolution basée sur un graphique d’identités qui connectait les identités, y compris toutes les ingestions historiques. Dans la nouvelle approche de résolution d’entité, les identités sont liées en fonction des données les plus récentes uniquement
+Auparavant, Comptes et opportunités s’appuyait sur une résolution basée sur un graphique d’identités qui connectait les identités, y compris toutes les ingestions historiques. Dans la nouvelle approche de résolution d’entité, les identités sont liées en fonction des données les plus récentes uniquement.
+
+- Le compte et l’opportunité sont résolus par une fusion basée sur la priorité temporelle :
+   - Compte : identités utilisant l’espace de noms `b2b_account`.
+   - Opportunité : identités utilisant l’espace de noms `b2b_opportunity`.
+- Toutes les autres entités sont simplement unifiées et seuls les chevauchements d’identités principales sont fusionnés avec la fusion basée sur la priorité temporelle.
+
+>[!NOTE]
+>
+>La résolution d&#39;entité ne prend en charge que les `b2b_account` et les `b2b_opportunity`. Les identités d’autres espaces de noms ne sont pas utilisées dans la résolution d’entités. Si vous utilisez des espaces de noms personnalisés, vous ne pourrez pas trouver de comptes ni d’opportunités.
 
 ### Comment fonctionne la résolution d’entité ?
 
@@ -36,8 +43,6 @@ Auparavant, Comptes et opportunités s’appuyait sur une résolution basée sur
 - **Après** : si le numéro DUNS a été utilisé comme identité supplémentaire et que le numéro DUNS du compte a été mis à jour dans un système source tel qu’un CRM, l’identifiant de compte n’est lié qu’au nouveau numéro DUNS, reflétant ainsi plus précisément l’état actuel du compte.
 
 Suite à cette mise à jour, l’API [!DNL Profile Access] reflète désormais la dernière vue de profil de fusion une fois qu’un cycle de tâche de résolution d’entité est terminé. En outre, les données cohérentes fournissent des cas d’utilisation tels que la segmentation, l’activation et l’analyse avec une précision et une cohérence accrues des données.
-
->[!ENDSHADEBOX]
 
 ## Récupération d’une entité {#retrieve-entity}
 
@@ -1219,7 +1224,7 @@ Une réponse réussie renvoie la page de résultats suivante. Cette réponse ne 
 
 >[!IMPORTANT]
 >
->Le point d’entrée de suppression d’entité sera abandonné d’ici la fin octobre 2025. Si vous souhaitez effectuer des opérations de suppression d’enregistrements, vous pouvez utiliser le workflow [&#x200B; API de suppression des enregistrements du cycle de vie des données &#x200B;](/help/hygiene/api/workorder.md) ou le workflow de l’interface utilisateur de suppression des enregistrements du cycle de vie des données [&#128279;](/help/hygiene/ui/record-delete.md) à la place.
+>Le point d’entrée de suppression d’entité sera abandonné d’ici la fin octobre 2025. Si vous souhaitez effectuer des opérations de suppression d’enregistrements, vous pouvez utiliser le workflow [ API de suppression des enregistrements du cycle de vie des données ](/help/hygiene/api/workorder.md) ou le workflow de l’interface utilisateur de suppression des enregistrements du cycle de vie des données [](/help/hygiene/ui/record-delete.md) à la place.
 >
 >En outre, les requêtes de suppression pour les entités B2B suivantes ont déjà été abandonnées :
 >
