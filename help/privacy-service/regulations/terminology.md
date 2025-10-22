@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminologie des règlements relatifs à la confidentialité
 description: Ce document fournit des définitions pour les termes clés liés aux réglementations de confidentialité prises en charge par Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: ccde37961bd98275030db98440800925d3a6703e
+source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
 workflow-type: tm+mt
-source-wordcount: '2630'
+source-wordcount: '2790'
 ht-degree: 1%
 
 ---
@@ -111,6 +111,8 @@ Ce document fournit des définitions pour les termes clés liés aux réglementa
 
 **[!DNL Minnesota Consumer Data Privacy Act]** (MCDPA) : À compter du 31 juillet 2025, le MCDPA donne aux résidents du Minnesota des droits d’accès, de correction, de suppression et d’obtention de leurs données personnelles, ainsi que de refus de vente de données, de publicité ciblée et de certains profils. Elle s’applique aux entreprises opérant dans le Minnesota ou ciblant cet État et traitant des données de plus de 100 000 consommateurs par an (à l’exclusion des données de paiement uniquement), ou de plus de 25 000 consommateurs si plus de 25 % des revenus proviennent des ventes de données. Les entités couvertes doivent mettre en œuvre des mesures raisonnables de sécurité des données et mener des évaluations des risques. Le procureur général du Minnesota applique la loi et peut infliger des amendes allant jusqu’à 7 500 dollars par infraction. Toutefois, les entreprises ont jusqu&#39;au 31 janvier 2026 pour corriger les infractions avant l&#39;application des sanctions.
 
+**MODPA** : le [!DNL Maryland Online Data Privacy Act] accorde aux résidents des droits comprenant l’accès, la correction, la suppression et la portabilité des données. Les résidents peuvent se désinscrire du traitement des données pour la publicité ciblée, les ventes de données personnelles et le profilage. La Loi interdit le géorepérage autour des établissements de santé mentale ou de santé reproductive. La loi s’applique aux entités qui traitent des données provenant de plus de 35 000 consommateurs, ou à celles qui traitent des données provenant de plus de 10 000 consommateurs et tirent plus de 20 % de leurs revenus de la vente de ces données. L&#39;application de la loi est gérée par le Procureur général du Maryland, avec des amendes et des pénalités applicables en cas d&#39;infraction.
+
 **[!DNL Montana Consumer Data Privacy Act]** : Cette loi donne aux résidents du Montana le droit d&#39;accéder, de corriger, de supprimer et de demander des copies de leurs données personnelles. La Loi s&#39;applique aux entreprises qui traitent des données pour plus de 50 000 consommateurs du Montana et met l&#39;accent sur la protection des données personnelles sensibles, comme les renseignements biométriques et génétiques. Elle assure la transparence de la collecte, du partage et des pratiques de vente des données.
 
 ## N
@@ -133,6 +135,8 @@ Ce document fournit des définitions pour les termes clés liés aux réglementa
 **Données personnelles** : toute information relative à une personne physique ou à un « titulaire de données », qui peut être utilisée pour identifier directement ou indirectement la personne.
 
 **Violation des données personnelles** : violation de la sécurité entraînant l’accès accidentel ou illégal à des données personnelles, leur destruction, leur utilisation abusive, etc.
+
+**PIPA** (Corée du Sud) : La [!DNL Personal Information Protection Act] réglemente le traitement et la protection des données personnelles des résidents sud-coréens. PIPA accorde aux résidents des droits, notamment le droit d&#39;être informés, d&#39;accéder, d&#39;obtenir des copies et de demander la correction, la suppression ou la suspension du traitement. Les contrôleurs doivent préciser les objectifs de la collecte, traiter les données légalement dans la mesure minimale nécessaire et assurer l&#39;exactitude des données. La Loi a également établi la Commission de protection des renseignements personnels pour l&#39;application de la loi, qui peut imposer des amendes et des sanctions administratives en cas de non-conformité.
 
 **La protection de la vie privée dès la conception** : un principe qui exige l&#39;inclusion de la protection des données dès le début de la conception des systèmes, plutôt qu&#39;un ajout.
 

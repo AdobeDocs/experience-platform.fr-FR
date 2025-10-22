@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossaire Adobe Experience Platform
 description: Glossaire reprenant la terminologie principale d’Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
 workflow-type: tm+mt
-source-wordcount: '8009'
+source-wordcount: '8170'
 ht-degree: 12%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 12%
 
 **Attributs** : les attributs sont des caractéristiques spécifiées qui représentent un profil.
 
-**Fusion d’attributs** : lors de la définition d’une politique de fusion à l’aide de l’API Real-Time Customer Profile, l’objet `attributeMerge` indique la manière dont la politique de fusion donnera la priorité aux attributs de profil en cas de conflits de données. Cela revient à sélectionner une [!UICONTROL méthode de fusion] lors de la définition d’une politique de fusion dans l’interface utilisateur d’Experience Platform.
+**Fusion d’attributs** : lors de la définition d’une politique de fusion à l’aide de l’API Real-Time Customer Profile, l’objet `attributeMerge` indique la manière dont la politique de fusion donnera la priorité aux attributs de profil en cas de conflits de données. Cela revient à sélectionner un [!UICONTROL Merge method] lors de la définition d’une politique de fusion dans l’interface utilisateur d’Experience Platform.
 
 **IA dédiée à l’attribution** : [!DNL Attribution AI] est un service intelligent optimisé par Adobe Sensei qui offre des fonctionnalités d’attribution algorithmique multicanal tout au long du cycle de vie du client.
 
@@ -213,7 +213,7 @@ ht-degree: 12%
 
 **Action marketing de ciblage par e-mail** : action marketing qui utilise des données dans les campagnes de ciblage par e-mail.
 
-**Code incorporé** : dans le contexte des balises, le code incorporé est une balise de script placée dans l’HTML sur un site ou un environnement. Le code incorporé indique au navigateur où récupérer la version.
+**Code incorporé** : dans le contexte des balises, le code incorporé est une balise de script placée dans l’HTML sur un site ou un environnement. Le code intégré indique au navigateur où récupérer la version.
 
 **Énumération** : une énumération (enum) est un champ XDM limité à un ensemble de valeurs prédéfinies.
 
@@ -281,7 +281,7 @@ ht-degree: 12%
 
 **Libellés d’identité (« I »)** : les libellés d’utilisation des données d’identité (« I ») sont utilisés pour classer les données permettant d’identifier ou de contacter une personne spécifique.
 
-**Graphique d’identités** : un graphique d’identités est une carte des relations entre les identités assemblées et liées qui existent pour un client individuel. Chaque graphique d’identité est mis à jour en temps quasi réel avec l’activité du client. La structure commune des relations d’identité dans vos données est représentée par le [!UICONTROL graphique privé], qui sert de plan directeur structurel pour chaque graphique d’identité individuel.
+**Graphique d’identités** : un graphique d’identités est une carte des relations entre les identités assemblées et liées qui existent pour un client individuel. Chaque graphique d’identité est mis à jour en temps quasi réel avec l’activité du client. La structure commune des relations d’identité dans vos données est représentée par le [!UICONTROL Private Graph], qui sert de plan directeur structurel pour chaque graphique d’identité individuel.
 
 **Espace de noms d’identité** : un espace de noms d’identité définit le contexte d’un identifiant, tel qu’une adresse e-mail ou un identifiant CRM.
 
@@ -327,7 +327,7 @@ ht-degree: 12%
 
 **Bibliothèque** : dans le contexte des balises, une bibliothèque est un ensemble de logiques commerciales qui contient des instructions sur le comportement de la bibliothèque de balises sur l’appareil client.
 
-**Entités de recherche** : dans le contexte de la modélisation des données, les entités de recherche représentent des concepts qui peuvent être associés à une personne individuelle, mais qui ne peuvent pas être directement utilisés pour identifier la personne. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur des classes de modèle de données d’expérience (XDM) personnalisées et liées à une entité de profil par le biais d’une [&#x200B; relation de schéma &#x200B;](../xdm/tutorials/relationship-ui.md).
+**Entités de recherche** : dans le contexte de la modélisation des données, les entités de recherche représentent des concepts qui peuvent être associés à une personne individuelle, mais qui ne peuvent pas être directement utilisés pour identifier la personne. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur des classes de modèle de données d’expérience (XDM) personnalisées et liées à une entité de profil par le biais d’une [ relation de schéma ](../xdm/tutorials/relationship-ui.md).
 
 ## M
 
@@ -350,6 +350,8 @@ ht-degree: 12%
 **Mixin** : voir « Groupe de champs de schéma ».
 
 **Module** : dans le contexte des balises, un module est un extrait de code JavaScript exécutable fourni par une extension, qui effectue des actions dans un environnement client, sans avoir à créer de règle.
+
+**MODPA** : La [!DNL Maryland Online Data Privacy Act] (MODPA) de 2024 accorde aux résidents du Maryland des droits comprenant l’accès, la correction, la suppression et la portabilité des données. Les résidents peuvent se désabonner de la publicité ciblée, des ventes de données personnelles et du profilage. Les contrôleurs doivent fournir les avis de confidentialité et mener des évaluations de la protection des données pour le traitement à haut risque. Le MODPA se démarque en interdisant les clôtures géographiques autour des établissements de santé mentale ou reproductive. La loi s’applique aux entités qui traitent des données provenant de plus de 35 000 consommateurs, ou à celles qui traitent des données provenant de plus de 10 000 consommateurs et tirent plus de 20 % de leurs revenus de la vente de ces données. Elle est appliquée par le procureur général du Maryland.
 
 ## N
 
@@ -377,17 +379,15 @@ ht-degree: 12%
 
 ## P
 
-**Ingestion partielle** : l’ingestion partielle permet d’ingérer des enregistrements valides de données de lots au sein d’un seuil d’erreur spécifié. Les diagnostics d’erreur pour les enregistrements ayant échoué peuvent être téléchargés ou accessibles dans la présentation de l’exécution du flux de données [!UICONTROL Surveillance] ou [!UICONTROL Sources].
+**Ingestion partielle** : l’ingestion partielle permet d’ingérer des enregistrements valides de données de lots au sein d’un seuil d’erreur spécifié. Les diagnostics d’erreur pour les enregistrements ayant échoué peuvent être téléchargés ou accessibles dans la présentation de l’exécution du flux de données [!UICONTROL Monitoring] ou [!UICONTROL Sources].
 
 **Fichiers Parquet** : un fichier Parquet est un format de fichier de stockage en colonnes avec des structures de données imbriquées complexes. Des fichiers parquet sont nécessaires pour ajouter des données à un jeu de données de schéma.
 
 **PDPA** : la [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) a été introduite pour protéger les propriétaires de données thaïlandais contre la collecte, l&#39;utilisation ou la divulgation illégale de leurs données personnelles. Inspiré du RGPD de l&#39;Union européenne, le règlement accorde aux citoyens thaïlandais le droit de demander l&#39;accès à leurs données personnelles stockées ou leur suppression.
 
-<!-- Not yet released
-**PDPD**: The [[!DNL Personal Data Protection Decree] (PDPD) 
--->
-
 **Offres personnalisées** : une offre personnalisée est un message marketing personnalisable, basé sur des règles et des contraintes d&#39;éligibilité.
+
+**PIPA** (Corée du Sud) : La [[!DNL Personal Information Protection Act]  (PIPA)](https://elaw.klri.re.kr/eng_service/lawView.do?hseq=53044&lang=ENG) réglemente le traitement et la protection des données personnelles des résidents sud-coréens. PIPA accorde des droits pour être informé, accéder, obtenir des copies et demander la correction, la suppression ou la suspension du traitement. Les responsables du traitement des informations personnelles doivent préciser les finalités de la collecte, traiter les données légalement dans la mesure minimale nécessaire et assurer l&#39;exactitude des données. La PIPA a également créé la Commission de protection des informations personnelles pour enquêter et faire appliquer les règlements sur la protection des données personnelles.
 
 **Emplacements** : un emplacement est l&#39;endroit ou le contexte dans lequel apparaît une offre pour un utilisateur final.
 
