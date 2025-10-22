@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossaire Adobe Experience Platform
 description: Glossaire reprenant la terminologie principale d’Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
+source-git-commit: 0ff9adc8869528f9e13ee384b866b8dcc3d781bd
 workflow-type: tm+mt
-source-wordcount: '8170'
+source-wordcount: '8169'
 ht-degree: 12%
 
 ---
@@ -327,7 +327,7 @@ ht-degree: 12%
 
 **Bibliothèque** : dans le contexte des balises, une bibliothèque est un ensemble de logiques commerciales qui contient des instructions sur le comportement de la bibliothèque de balises sur l’appareil client.
 
-**Entités de recherche** : dans le contexte de la modélisation des données, les entités de recherche représentent des concepts qui peuvent être associés à une personne individuelle, mais qui ne peuvent pas être directement utilisés pour identifier la personne. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur des classes de modèle de données d’expérience (XDM) personnalisées et liées à une entité de profil par le biais d’une [&#x200B; relation de schéma &#x200B;](../xdm/tutorials/relationship-ui.md).
+**Entités de recherche** : dans le contexte de la modélisation des données, les entités de recherche représentent des concepts qui peuvent être associés à une personne individuelle, mais qui ne peuvent pas être directement utilisés pour identifier la personne. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur des classes de modèle de données d’expérience (XDM) personnalisées et liées à une entité de profil par le biais d’une [ relation de schéma ](../xdm/tutorials/relationship-ui.md).
 
 ## M
 
@@ -351,7 +351,7 @@ ht-degree: 12%
 
 **Module** : dans le contexte des balises, un module est un extrait de code JavaScript exécutable fourni par une extension, qui effectue des actions dans un environnement client, sans avoir à créer de règle.
 
-**MODPA** : La [!DNL Maryland Online Data Privacy Act] (MODPA) de 2024 accorde aux résidents du Maryland des droits comprenant l’accès, la correction, la suppression et la portabilité des données. Les résidents peuvent se désabonner de la publicité ciblée, des ventes de données personnelles et du profilage. Les contrôleurs doivent fournir les avis de confidentialité et mener des évaluations de la protection des données pour le traitement à haut risque. Le MODPA se démarque en interdisant les clôtures géographiques autour des établissements de santé mentale ou reproductive. La loi s’applique aux entités qui traitent des données provenant de plus de 35 000 consommateurs, ou à celles qui traitent des données provenant de plus de 10 000 consommateurs et tirent plus de 20 % de leurs revenus de la vente de ces données. Elle est appliquée par le procureur général du Maryland.
+**MODPA** : La [!DNL Maryland Online Data Privacy Act] (MODPA) de 2024 accorde aux résidents du Maryland des droits comprenant l’accès, la correction, la suppression et la portabilité des données. Les résidents peuvent se désabonner de la publicité ciblée, des ventes de données personnelles et du profilage. Les contrôleurs doivent fournir des avis de confidentialité et mener des évaluations de la protection des données pour le traitement à haut risque. Le MODPA se démarque en interdisant les clôtures géographiques autour des établissements de santé mentale ou reproductive. La loi s’applique aux entités qui traitent des données provenant de plus de 35 000 consommateurs, ou à celles qui traitent des données provenant de plus de 10 000 consommateurs et tirent plus de 20 % de leurs revenus de la vente de ces données. Elle est appliquée par le procureur général du Maryland.
 
 ## N
 
