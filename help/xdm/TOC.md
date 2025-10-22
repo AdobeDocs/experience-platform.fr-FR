@@ -5,10 +5,10 @@ breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Découvrez une vue d’ensemble du système de modèle de données d’expérience (XDM) dans Experience Platform et apprenez à utiliser les classes et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schemas
 role: Developer
-source-git-commit: f6e63f3fe390c1e47347015e873282719508a0ec
+source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
 workflow-type: tm+mt
-source-wordcount: '708'
-ht-degree: 75%
+source-wordcount: '707'
+ht-degree: 73%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 75%
    * [Bonnes pratiques de modélisation des données](schema/best-practices.md)
    * [Données sensibles et personnelles](./schema/sensitive-and-personal-data.md)
    * [Contraintes des types de champs XDM](schema/field-constraints.md)
-   * [Schéma basé sur un modèle](./schema/model-based.md)
+   * [Schéma relationnel](./schema/relational.md)
    * [Espace de noms dans XDM](./schema/namespaces.md)
    * Modèles de données du secteur {#industries}
       * [Aperçu](./schema/industries/overview.md)
@@ -47,7 +47,7 @@ ht-degree: 75%
          * [Demande De Médicaments](./schema/healthcare/field-groups/medication-request.md)
          * [Organisation](./schema/healthcare/field-groups/organization.md)
          * [Patient](./schema/healthcare/field-groups/patient.md)
-         * [Professionnel ou professionnelle](./schema/healthcare/field-groups/practioner.md)
+         * [Praticien](./schema/healthcare/field-groups/practioner.md)
          * [Planning](./schema/healthcare/field-groups/schedule.md)
       * Types de données {#data-types}
          * [Adresse](./schema/healthcare/data-types/address.md)
@@ -154,7 +154,7 @@ ht-degree: 75%
    * Prestataire {#provider}
       * [Prestataire de soins de santé](./field-groups/provider/healthcare-provider.md)
    * Partagé {#shared}
-      * [Détails d’audit du système source externe](./field-groups/shared/external-source-system-audit-details.md)
+      * [Détails de l’audit du système Source externe](./field-groups/shared/external-source-system-audit-details.md)
    * [Mises à jour des noms de groupes de champs](./field-groups/name-updates.md)
 * Types de données {#data-types}
    * [Détails du compte](./data-types/account-details.md)
@@ -198,7 +198,7 @@ ht-degree: 75%
    * [Identité](./data-types/identity.md)
    * [Détails de mise en œuvre](./data-types/implementation-details.md)
    * [Impressions](./data-types/impressions.md)
-   * [Recherche interne sur le site](./data-types/internal-site-search.md)
+   * [Recherche interne au site](./data-types/internal-site-search.md)
    * [Paire clé-valeur](./data-types/key-value-pair.md)
    * [Liste des États de fin de la collecte](./data-types/list-of-states-end-collection.md)
    * [Liste des états commençant la collecte](./data-types/list-of-states-start-collection.md)
@@ -234,7 +234,7 @@ ht-degree: 75%
    * [Informations web](./data-types/web-information.md)
    * [Interaction web](./data-types/web-interaction.md)
    * [Détails de la page web](./data-types/webpage-details.md)
-* Interface utilisateur [!UICONTROL Schémas] {#ui}
+* [!UICONTROL Schemas] Interface utilisateur {#ui}
    * [Aperçu](./ui/overview.md)
    * [Explorer des ressources XDM](./ui/explore.md)
    * Créer et modifier des ressources {#resources}

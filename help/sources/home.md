@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation des connecteurs source
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: fac942a469f61461b5a14d9be5b9a39d921c6b25
 workflow-type: tm+mt
-source-wordcount: '1696'
-ht-degree: 55%
+source-wordcount: '1666'
+ht-degree: 49%
 
 ---
 
@@ -282,15 +282,15 @@ Vous pouvez utiliser les sources suivantes pour ingérer des données de protoco
 
 ## Contrôle d’accès des sources dans l’ingestion des données
 
-Vous pouvez gérer les autorisations relatives aux sources dans l’ingestion des données dans Adobe Admin Console. Vous pouvez accéder aux autorisations via l’onglet **[!UICONTROL Autorisations]** d’un profil de produit particulier. Dans le panneau **[!UICONTROL Modifier les autorisations]**, vous pouvez accéder aux autorisations relatives aux sources à l’aide de l’entrée de menu **[!UICONTROL d’ingestion des données]**. L’autorisation **[!UICONTROL Afficher les sources]** accorde un accès en lecture seule aux sources disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux sources authentifiées dans l’onglet **[!UICONTROL Parcourir]**, tandis que l’autorisation **[!UICONTROL Gérer les sources]** donne un accès complet permettant de lire, créer, modifier et désactiver les sources.
+Vous pouvez gérer les autorisations relatives aux sources dans l’ingestion des données dans Adobe Admin Console. Vous pouvez accéder aux autorisations via l’onglet **[!UICONTROL Permissions]** dans un profil de produit spécifique. Dans le panneau **[!UICONTROL Edit Permissions]**, vous pouvez accéder aux autorisations relatives aux sources via l’entrée du menu **[!UICONTROL data ingestion]**. L’autorisation **[!UICONTROL View Sources]** accorde un accès en lecture seule aux sources disponibles dans l’onglet **[!UICONTROL Catalog]** et aux sources authentifiées dans l’onglet **[!UICONTROL Browse]** , tandis que l’autorisation **[!UICONTROL Manage Sources]** accorde un accès complet à la lecture, la création, la modification et la désactivation de sources.
 
 Le tableau suivant décrit le comportement de l’interface utilisateur en fonction des différentes combinaisons d’autorisations :
 
 | Niveau d’autorisation | Description |
 | ---- | ----|
-| **[!UICONTROL Afficher les sources]** activée | Accordez un accès en lecture seule aux sources dans chaque type de source dans l’onglet Catalogue, ainsi que dans les onglets Parcourir, Comptes et Flux de données. |
-| **[!UICONTROL Gérer les sources]** activée | Outre les fonctions incluses dans **[!UICONTROL Afficher les sources]**, elle accorde un accès à l’option **[!UICONTROL Connecter une source]** dans **[!UICONTROL Catalogue]** et l’option **[!UICONTROL Sélectionner les données]** dans **[!UICONTROL Parcourir]**. **[!UICONTROL Gérer les sources]** vous permet également d’activer ou de désactiver **[!UICONTROL les flux de données]** et de modifier leurs planifications. |
-| **[!UICONTROL Afficher les sources]** désactivée et **[!UICONTROL Gérer les sources]** désactivée | Révoquez tous les accès aux sources. |
+| **[!UICONTROL View Sources]** le | Accordez un accès en lecture seule aux sources dans chaque type de source dans l’onglet Catalogue, ainsi que dans les onglets Parcourir, Comptes et Flux de données. |
+| **[!UICONTROL Manage Sources]** le | En plus des fonctions incluses dans **[!UICONTROL View Sources]**, accorde l’accès à **[!UICONTROL Connect Source]** option dans **[!UICONTROL Catalog]** et à **[!UICONTROL Select Data]** option dans **[!UICONTROL Browse]**. **[!UICONTROL Manage Sources]** vous permet également d’activer ou de désactiver des **[!UICONTROL DataFlows]** et de modifier leurs planifications. |
+| **[!UICONTROL View Sources]** désactivé et **[!UICONTROL Manage Sources]** désactivé | Révoquez tous les accès aux sources. |
 
 Pour plus d’informations sur les autorisations disponibles accordées par le biais des autorisations d’Adobe, consultez la [présentation du contrôle d’accès](../access-control/home.md).
 
@@ -308,11 +308,11 @@ Grâce au contrôle d’accès basé sur les attributs, vous pouvez appliquer de
 
 - Appliquez des libellés aux champs de schéma pour définir l’accès à des champs de schéma spécifiques dans votre organisation. Une fois l’accès à des champs de schéma spécifiques établi, les utilisateurs ne pourront créer des mappages que pour les champs auxquels ils ont accès.
 - Les utilisateurs ne disposant pas des rôles appropriés ne pourront pas créer ni mettre à jour des flux de données avec des mappages impliquant des champs de schéma inaccessibles. En outre, les utilisateurs non autorisés ne peuvent pas mettre à jour, supprimer, activer ou désactiver les flux de données existants avec des champs de schéma inaccessibles.
-- En outre, un flux de données doit avoir exactement le même identifiant de schéma et la même version dans son mappage, son jeu de données cible et sa connexion cible. Cela s’applique à la fois aux schémas XDM standard et aux schémas basés sur des modèles.
+- En outre, un flux de données doit avoir exactement le même identifiant de schéma et la même version dans son mappage, son jeu de données cible et sa connexion cible. Cela s’applique à la fois aux schémas XDM standard et aux schémas relationnels.
 
 >[!NOTE]
 >
->Les schémas basés sur des modèles comportent des exigences supplémentaires, notamment les champs clé primaire et identifiant de version . Pour plus d’informations, consultez la présentation du schéma [basé sur un modèle](../xdm/schema/model-based.md).
+>Les schémas relationnels ont d’autres exigences, notamment les champs clé primaire et identifiant de version. Pour plus d’informations, consultez la [présentation du schéma relationnel](../xdm/schema/relational.md).
 
 Pour plus d’informations sur le contrôle d’accès basé sur les attributs, consultez la [présentation du contrôle d’accès basé sur les attributs](../access-control/abac/overview.md).
 

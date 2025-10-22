@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Point d’entrée de l’API Descriptors
 description: Le point d’entrée /descriptors dans l’API Schema Registry vous permet de gérer par programmation les descripteurs XDM dans votre application d’expérience.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
+source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
 workflow-type: tm+mt
-source-wordcount: '2888'
+source-wordcount: '2916'
 ht-degree: 25%
 
 ---
@@ -23,18 +23,22 @@ Dans Adobe Experience Platform, un descripteur est une métadonnée qui ajoute d
 Il existe plusieurs types de descripteurs, notamment :
 
 - [Descripteur d’identité](#identity-descriptor) - marque un champ comme identité
-- [descripteur de clé de Principal &#x200B;](#primary-key-descriptor) - applique l&#39;unicité
+- [descripteur de clé de Principal ](#primary-key-descriptor) - applique l&#39;unicité
 - [Descripteur de relation](#relationship-descriptor) - Définit une jointure de clé étrangère.
-- [&#x200B; Autre descripteur d’informations d’affichage &#x200B;](#friendly-name) - permet de renommer un champ de l’interface utilisateur
+- [ Autre descripteur d’informations d’affichage ](#friendly-name) - permet de renommer un champ de l’interface utilisateur
 - Descripteurs [Version](#version-descriptor) et [horodatage](#timestamp-descriptor) : suivez l’ordre des événements et la détection des modifications
 
 Le point d’entrée `/descriptors` de l’API [!DNL Schema Registry] vous permet de gérer par programmation les descripteurs dans votre application d’expérience.
 
 ## Commencer
 
-Le point d’entrée utilisé dans ce guide fait partie de l’API [[!DNL Schema Registry] &#x200B;](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
+Le point d’entrée utilisé dans ce guide fait partie de l’API [[!DNL Schema Registry] ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
-Outre les descripteurs standard, le [!DNL Schema Registry] prend en charge les types de descripteurs pour les schémas basés sur des modèles, tels que **clé primaire**, **version** et **horodatage**. Ils assurent l’unicité, contrôlent le contrôle de version et définissent des champs de série temporelle au niveau du schéma. Si vous ne connaissez pas les schémas basés sur des modèles, consultez la [présentation de Data Mirror](../data-mirror/overview.md) ainsi que la [référence technique des schémas basés sur des modèles](../schema/model-based.md) avant de continuer.
+Outre les descripteurs standard, le [!DNL Schema Registry] prend en charge les types de descripteurs pour les schémas relationnels, tels que **clé primaire**, **version** et **horodatage**. Ils assurent l’unicité, contrôlent le contrôle de version et définissent des champs de série temporelle au niveau du schéma. Si vous ne connaissez pas les schémas relationnels, consultez la présentation de Data Mirror [](../data-mirror/overview.md) et la [référence technique des schémas relationnels](../schema/relational.md) avant de continuer.
+
+>[!NOTE]
+>
+>Dans les versions antérieures de la documentation de Adobe Experience Platform, les schémas relationnels étaient auparavant appelés schémas basés sur des modèles. La fonctionnalité de descripteur et les points d’entrée de l’API restent inchangés. Seule la terminologie a été mise à jour pour plus de clarté.
 
 >[!IMPORTANT]
 >
@@ -316,7 +320,7 @@ Les sections suivantes présentent les types de descripteurs disponibles, y comp
 
 #### Descripteur d’identité {#identity-descriptor}
 
-Un descripteur d’identité indique que la « [!UICONTROL sourceProperty] » de « [!UICONTROL sourceSchema] » est un champ de [!DNL Identity], comme décrit par [Experience Platform Identity Service](../../identity-service/home.md).
+Un descripteur d’identité indique que le « [!UICONTROL sourceProperty] » du « [!UICONTROL sourceSchema] » est un champ [!DNL Identity], comme décrit par [Experience Platform Identity Service](../../identity-service/home.md).
 
 ```json
 {
@@ -397,7 +401,7 @@ Utilisez ces propriétés pour déclarer la manière dont un champ source (clé 
 L’API prend en charge deux modèles :
 
 - `xdm:descriptorOneToOne` : relation standard 1:1
-- `xdm:descriptorRelationship` : modèle général pour les nouveaux schémas de travail et basés sur des modèles (prend en charge les cibles de cardinalité, de dénomination et de clés non primaires).
+- `xdm:descriptorRelationship` : modèle général pour les nouveaux schémas de travail et relationnels (prend en charge les cibles de cardinalité, de dénomination et de clés non primaires).
 
 ##### Relation un-à-un (schémas standard)
 
@@ -427,9 +431,9 @@ Le tableau suivant décrit les champs requis pour définir un descripteur de rel
 | `xdm:destinationVersion` | Version majeure du schéma de référence. |
 | `xdm:destinationProperty` | (Facultatif) Chemin d’accès à un champ cible dans le schéma de référence. Si cette propriété est omise, le champ cible est déterminé par les champs qui contiennent un descripteur d’identité de référence correspondant (voir ci-dessous). |
 
-##### Relation générale (schémas basés sur des modèles et recommandés pour les nouveaux projets)
+##### Relation générale (schémas relationnels et recommandé pour les nouveaux projets)
 
-Utilisez ce descripteur pour toutes les nouvelles implémentations et pour les schémas basés sur des modèles. Il vous permet de définir la cardinalité de la relation (par exemple un-à-un ou plusieurs-à-un), de spécifier des noms de relation et de créer un lien vers un champ de destination qui n’est pas la clé primaire (clé non primaire).
+Utilisez ce descripteur pour toutes les nouvelles mises en œuvre et pour les schémas relationnels. Il vous permet de définir la cardinalité de la relation (par exemple un-à-un ou plusieurs-à-un), de spécifier des noms de relation et de créer un lien vers un champ de destination qui n’est pas la clé primaire (clé non primaire).
 
 Les exemples suivants montrent comment définir un descripteur de relation général.
 
@@ -474,7 +478,7 @@ Suivez les instructions suivantes pour choisir le descripteur de relation à app
 
 | Situation | Descripteur à utiliser |
 | --------------------------------------------------------------------- | ----------------------------------------- |
-| Nouveaux schémas de travail ou basés sur des modèles | `xdm:descriptorRelationship` |
+| Nouveaux schémas de travail ou relationnels | `xdm:descriptorRelationship` |
 | Mappage 1:1 existant dans les schémas standard | Continuez à utiliser `xdm:descriptorOneToOne` sauf si vous avez besoin de fonctionnalités prises en charge uniquement par `xdm:descriptorRelationship`. |
 | cardinalité multiple-à-un ou facultative (`1:1`, `1:0`, `M:1`, `M:0`) | `xdm:descriptorRelationship` |
 | Noms ou titres de relation nécessaires pour la lisibilité de l’interface utilisateur/en aval | `xdm:descriptorRelationship` |
@@ -493,13 +497,13 @@ Le tableau suivant compare les fonctionnalités des deux types de descripteur :
 | Cardinalité | 1:1 | 1:1, 1:0, M:1, M:0 (informatif) |
 | Cible de destination | Champ Identité/Explicite | Clé de Principal par défaut, ou clé non primaire via `xdm:destinationProperty` |
 | Nommage de champs | Non pris en charge | `xdm:sourceToDestinationName`, `xdm:destinationToSourceName` et titres |
-| Ajustement relationnel | Limité | Modèle de Principal pour les schémas basés sur des modèles |
+| Ajustement relationnel | Limité | Modèle de Principal pour les schémas relationnels |
 
 ##### Contraintes et validation
 
 Suivez ces exigences et recommandations lors de la définition d’un descripteur de relation général :
 
-- Pour les schémas basés sur un modèle, placez le champ source (clé étrangère) au niveau racine. Il s’agit d’une limitation technique actuelle pour l’ingestion, et pas seulement d’une recommandation de bonne pratique.
+- Pour les schémas relationnels, placez le champ source (clé étrangère) au niveau racine. Il s’agit d’une limitation technique actuelle pour l’ingestion, et pas seulement d’une recommandation de bonne pratique.
 - Assurez-vous que les types de données des champs source et de destination sont compatibles (numérique, date, booléen, chaîne).
 - N&#39;oubliez pas que la cardinalité est informative et que le stockage ne l&#39;applique pas. Spécifiez la cardinalité au format `<source>:<destination>`. Les valeurs acceptées sont : `1:1`, `1:0`, `M:1` ou `M:0`.
 
@@ -525,7 +529,7 @@ Le descripteur de clé primaire (`xdm:descriptorPrimaryKey`) applique des contra
 
 >[!NOTE]
 >
->Dans l’éditeur de schéma de l’interface utilisateur, le descripteur de version s’affiche sous la forme « [!UICONTROL Identifiant de version] ».
+>Dans l’éditeur de schémas de l’interface utilisateur, le descripteur de version s’affiche sous la forme « [!UICONTROL Version identifier] ».
 
 Le descripteur de version (`xdm:descriptorVersion`) désigne un champ pour détecter et empêcher les conflits d’événements de modification dans le désordre.
 
@@ -547,7 +551,7 @@ Le descripteur de version (`xdm:descriptorVersion`) désigne un champ pour déte
 
 >[!NOTE]
 >
->Dans l’éditeur de schéma d’interface utilisateur, le descripteur d’horodatage s’affiche sous la forme « [!UICONTROL identifiant d’horodatage] ».
+>Dans l’éditeur de schéma de l’interface utilisateur, le descripteur d’horodatage s’affiche sous la forme « [!UICONTROL Timestamp identifier] ».
 
 Le descripteur d’horodatage (`xdm:descriptorTimestamp`) désigne un champ date et heure comme horodatage pour les schémas avec `"meta:behaviorType": "time-series"`.
 
@@ -627,7 +631,7 @@ Les descripteurs d’identité de référence fournissent un contexte de référ
 
 #### Descripteur de champ obsolète
 
-Vous pouvez [rendre obsolète un champ dans une ressource XDM personnalisée](../tutorials/field-deprecation-api.md#custom) en ajoutant un attribut `meta:status` défini sur `deprecated` au champ en question. Toutefois, si vous souhaitez rendre obsolètes les champs fournis par les ressources XDM standard dans vos schémas, vous pouvez affecter un descripteur de champ obsolète au schéma en question pour obtenir le même effet. À l’aide de l’en-tête de [&#x200B; `Accept` correct &#x200B;](../tutorials/field-deprecation-api.md#verify-deprecation), vous pouvez ensuite afficher les champs standard obsolètes d’un schéma lors de la recherche dans l’API.
+Vous pouvez [rendre obsolète un champ dans une ressource XDM personnalisée](../tutorials/field-deprecation-api.md#custom) en ajoutant un attribut `meta:status` défini sur `deprecated` au champ en question. Toutefois, si vous souhaitez rendre obsolètes les champs fournis par les ressources XDM standard dans vos schémas, vous pouvez affecter un descripteur de champ obsolète au schéma en question pour obtenir le même effet. À l’aide de l’en-tête de [ `Accept` correct ](../tutorials/field-deprecation-api.md#verify-deprecation), vous pouvez ensuite afficher les champs standard obsolètes d’un schéma lors de la recherche dans l’API.
 
 ```json
 {

@@ -2,16 +2,16 @@
 title: Demandes de suppression d’enregistrements (workflow de l’interface utilisateur)
 description: Découvrez comment supprimer des enregistrements dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: a25187339a930f7feab4a1e0059bc9ac09f1a707
+source-git-commit: 83aed6a79d47ee4043a8303ec8f8c8c20482e12a
 workflow-type: tm+mt
-source-wordcount: '2420'
-ht-degree: 15%
+source-wordcount: '2383'
+ht-degree: 13%
 
 ---
 
 # Demandes de suppression d’enregistrements (workflow de l’interface utilisateur) {#record-delete}
 
-Utilisez l’espace de travail [[!UICONTROL Cycle de vie des données] &#x200B;](./overview.md) pour supprimer des enregistrements dans Adobe Experience Platform en fonction de leur identité principale. Ces enregistrements peuvent être liés à des consommateurs individuels ou à toute autre entité incluse dans le graphique d’identité.
+Utilisez l’espace de travail [[!UICONTROL Data Lifecycle] pour supprimer ](./overview.md) enregistrements dans Adobe Experience Platform en fonction de leur identité principale. Ces enregistrements peuvent être liés à des consommateurs individuels ou à toute autre entité incluse dans le graphique d’identité.
 
 >[!IMPORTANT]
 >
@@ -31,35 +31,35 @@ Pour plus d’informations sur les identités dans Experience Platform, consulte
 
 ## Création d’une requête {#create-request}
 
-Pour lancer le processus, sélectionnez **[!UICONTROL Cycle de vie des données]** dans le volet de navigation de gauche de l’interface utilisateur d’Experience Platform. L’espace de travail [!UICONTROL Demandes relatives au cycle de vie des données] s’affiche. Sélectionnez ensuite **[!UICONTROL Créer une requête]** dans la page principale de l’espace de travail.
+Pour lancer le processus, sélectionnez **[!UICONTROL Data Lifecycle]** dans le volet de navigation de gauche de l’interface utilisateur d’Experience Platform. L’espace de travail [!UICONTROL Data lifecycle requests] s’affiche. Sélectionnez ensuite **[!UICONTROL Create request]** dans la page principale de l’espace de travail.
 
-![Espace de travail [!UICONTROL Demandes relatives au cycle de vie des données] avec l’option [!UICONTROL Créer une demande] sélectionnée.](../images/ui/record-delete/create-request-button.png)
+![L’espace de travail [!UICONTROL Data lifecycle requests] avec [!UICONTROL Create request] sélectionné.](../images/ui/record-delete/create-request-button.png)
 
-Le workflow de création de demande s’affiche. Par défaut, l’option **[!UICONTROL Supprimer l’enregistrement]** est sélectionnée sous la section **[!UICONTROL Action demandée]**. Conservez la sélection de cette option.
+Le workflow de création de demande s’affiche. Par défaut, l’option **[!UICONTROL Delete record]** est sélectionnée sous la section **[!UICONTROL Requested Action]** . Conservez la sélection de cette option.
 
 >[!IMPORTANT]
 > 
 >Pour améliorer l’efficacité et rendre les opérations des jeux de données moins coûteuses, les organisations qui ont été déplacées vers le format Delta peuvent supprimer des données du service d’identités, du profil client en temps réel et du lac de données. Ce type d’utilisateur est appelé « migration delta ». Les utilisateurs des organisations qui ont subi une migration delta peuvent choisir de supprimer des enregistrements d’un seul jeu de données ou de tous les jeux de données. Les utilisateurs des organisations qui n’ont pas subi de migration delta ne peuvent pas supprimer de manière sélective des enregistrements d’un seul jeu de données ou de tous les jeux de données, comme illustré dans l’image ci-dessous. Dans ce cas, reportez-vous à la section [Fournir des identités](#provide-identities) du guide.
 
-![Le workflow de création de demande avec l’option [!UICONTROL Supprimer l’enregistrement] sélectionnée et mise en surbrillance.](../images/ui/record-delete/delete-record.png)
+![Workflow de création de demandes avec l’option [!UICONTROL Delete record] sélectionnée et mise en surbrillance.](../images/ui/record-delete/delete-record.png)
 
 ## Sélectionner des jeux de données {#select-dataset}
 
 L’étape suivante consiste à déterminer si vous souhaitez supprimer des enregistrements d’un seul jeu de données ou de tous les jeux de données. Selon la configuration de votre organisation, l’option de sélection du jeu de données peut ne pas être disponible. Si cette option n’apparaît pas, passez à la section [Fournir des identités](#provide-identities) du guide.
 
-Dans la section **[!UICONTROL Détails de l’enregistrement]**, sélectionnez un bouton radio pour choisir un jeu de données spécifique ou tous les jeux de données.
+Dans la section **[!UICONTROL Record Details]** , sélectionnez un bouton radio pour choisir un jeu de données spécifique ou tous les jeux de données.
 
-Pour effectuer une suppression dans un jeu de données spécifique, sélectionnez **[!UICONTROL Sélectionner le jeu de données]**, puis sélectionnez l’icône de base de données (![Icône de base de données](/help/images/icons/database.png)). Dans la boîte de dialogue qui s’affiche, choisissez un jeu de données et sélectionnez **[!UICONTROL Terminé]** pour confirmer.
+Pour effectuer une suppression dans un jeu de données spécifique, sélectionnez **[!UICONTROL Select dataset]**, puis l’icône de base de données (![Icône de base de données](/help/images/icons/database.png)). Dans la boîte de dialogue qui s’affiche, choisissez un jeu de données et sélectionnez **[!UICONTROL Done]** pour confirmer.
 
-![La boîte de dialogue [!UICONTROL Sélectionner un jeu de données] avec un jeu de données sélectionné et [!UICONTROL Terminé] en surbrillance.](../images/ui/record-delete/select-dataset.png)
+![Boîte de dialogue [!UICONTROL Select dataset] avec un jeu de données sélectionné et [!UICONTROL Done] mis en surbrillance.](../images/ui/record-delete/select-dataset.png)
 
-Pour supprimer de tous les jeux de données, sélectionnez **[!UICONTROL Tous les jeux de données]**. Cette option augmente la portée de l’opération et nécessite que vous fournissiez tous les types d’identité pertinents.
+Pour supprimer de tous les jeux de données, sélectionnez **[!UICONTROL All datasets]**. Cette option augmente la portée de l’opération et nécessite que vous fournissiez tous les types d’identité pertinents.
 
-![La boîte de dialogue [!UICONTROL Sélectionner un jeu de données] avec l’option [!UICONTROL Tous les jeux de données] sélectionnée.](../images/ui/record-delete/all-datasets.png)
+![Boîte de dialogue [!UICONTROL Select dataset] avec l’option [!UICONTROL All datasets] sélectionnée.](../images/ui/record-delete/all-datasets.png)
 
 >[!WARNING]
 >
->La sélection de **[!UICONTROL Tous les jeux de données]** étend l’opération à tous les jeux de données de votre organisation. Chaque jeu de données peut utiliser un type d’identité principale différent. Vous devez fournir **tous les types d’identité requis** pour garantir une correspondance précise.
+>La sélection de **[!UICONTROL All datasets]** étend l’opération à tous les jeux de données de votre organisation. Chaque jeu de données peut utiliser un type d’identité principale différent. Vous devez fournir **tous les types d’identité requis** pour garantir une correspondance précise.
 >
 >Si un type d’identité est manquant, certains enregistrements peuvent être ignorés lors de la suppression. Cela peut ralentir le traitement et conduire à des résultats **partiels**.
 
@@ -86,9 +86,9 @@ Comme tous les champs d’identité d’Experience Platform, un espace de noms d
 
 >[!TIP]
 >
->Si vous ne connaissez pas l’espace de noms d’identité d’un jeu de données spécifique, vous pouvez le trouver dans l’interface utilisateur d’Experience Platform. Dans l’espace de travail **[!UICONTROL Jeux de données]**, sélectionnez le jeu de données en question dans la liste. Sur la page des détails du jeu de données, passez la souris sur le nom du schéma du jeu de données dans le rail de droite. L’espace de noms d’identité s’affiche avec le nom et la description du schéma.
+>Si vous ne connaissez pas l’espace de noms d’identité d’un jeu de données spécifique, vous pouvez le trouver dans l’interface utilisateur d’Experience Platform. Dans l’espace de travail **[!UICONTROL Datasets]** , sélectionnez le jeu de données en question dans la liste. Sur la page des détails du jeu de données, passez la souris sur le nom du schéma du jeu de données dans le rail de droite. L’espace de noms d’identité s’affiche avec le nom et la description du schéma.
 >
->![&#x200B; Tableau de bord Jeux de données avec un jeu de données sélectionné et une boîte de dialogue de schéma ouverte à partir du panneau des détails du jeu de données. L’identifiant principal du jeu de données est mis en surbrillance.](../images/ui/record-delete/dataset-primary-identity.png)
+>![ Tableau de bord Jeux de données avec un jeu de données sélectionné et une boîte de dialogue de schéma ouverte à partir du panneau des détails du jeu de données. L’identifiant principal du jeu de données est mis en surbrillance.](../images/ui/record-delete/dataset-primary-identity.png)
 
 Il existe deux options pour fournir des identités lors de la suppression d’enregistrements :
 
@@ -97,7 +97,7 @@ Il existe deux options pour fournir des identités lors de la suppression d’en
 
 ### Charger un fichier JSON {#upload-json}
 
-Pour charger un fichier JSON, vous pouvez le faire glisser et le déposer dans la zone prévue à cet effet ou sélectionner **[!UICONTROL Choisir les fichiers]** pour parcourir et sélectionner les fichiers dans votre répertoire local.
+Pour charger un fichier JSON, vous pouvez le faire glisser et le déposer dans la zone prévue à cet effet ou sélectionner **[!UICONTROL Choose files]** pour parcourir et sélectionner le fichier dans votre répertoire local.
 
 ![Workflow de création de requête avec l’interface de sélection de fichiers et de glisser-déposer pour charger des fichiers JSON mise en surbrillance.](../images/ui/record-delete/upload-json.png)
 
@@ -125,15 +125,15 @@ Une fois le fichier chargé, vous pouvez continuer à [envoyer la requête](#sub
 
 ### Saisie manuelle d’identités {#manual-identity}
 
-Pour saisir les identités manuellement, sélectionnez **[!UICONTROL Ajouter une identité]**.
+Pour saisir les identités manuellement, sélectionnez **[!UICONTROL Add identity]**.
 
-![Workflow de création de demandes avec l’option [!UICONTROL &#x200B; Ajouter une identité &#x200B;] mise en surbrillance.](../images/ui/record-delete/add-identity.png)
+![Workflow de création de demandes avec l’option [!UICONTROL Add identity] mise en surbrillance.](../images/ui/record-delete/add-identity.png)
 
-Des commandes s’affichent pour vous permettre de saisir des identités une par une. Sous **[!UICONTROL espace de noms d’identité]**, utilisez le menu déroulant pour sélectionner le type d’identité. Sous **[!UICONTROL Valeur d’identité de Principal]**, indiquez la valeur de l’espace de noms d’identité pour l’enregistrement.
+Des commandes s’affichent pour vous permettre de saisir des identités une par une. Sous **[!UICONTROL identity namespace]**, utilisez le menu déroulant pour sélectionner le type d’identité. Sous **[!UICONTROL Primary Identity Value]**, indiquez la valeur de l’espace de noms d’identité pour l’enregistrement.
 
 ![Workflow de création de demande avec ajout manuel d’un champ d’identité.](../images/ui/record-delete/identity-added.png)
 
-Pour ajouter d’autres identités, sélectionnez l’icône plus (![A icône plus.](/help/images/icons/tree-expand-all.png)) en regard de l’une des lignes ou sélectionnez **[!UICONTROL Ajouter une identité]**.
+Pour ajouter d’autres identités, sélectionnez l’icône plus (![A icône plus.](/help/images/icons/tree-expand-all.png)) en regard de l’une des lignes ou sélectionnez **[!UICONTROL Add identity]**.
 
 ![Workflow de création de demande avec l’icône plus et l’icône d’ajout d’identité en surbrillance.](../images/ui/record-delete/more-identities.png)
 
@@ -185,29 +185,33 @@ Si votre organisation requiert des limites plus élevées, contactez votre repr�
 
 ## Envoyer la requête {#submit}
 
-Une fois que vous avez terminé d’ajouter des identités à la requête, sous **[!UICONTROL Paramètres de requête]**, attribuez un nom et une description facultative à la requête avant de sélectionner **[!UICONTROL Envoyer]**.
+Une fois que vous avez terminé d’ajouter des identités à la requête, sous **[!UICONTROL Request settings]**, indiquez un nom et une description facultative pour la requête avant de sélectionner **[!UICONTROL Submit]**.
 
 >[!TIP]
 >
 >Vous pouvez envoyer jusqu’à 10 000 identités par requête via l’interface utilisateur. Pour envoyer des volumes plus importants (jusqu’à 100 000 identifiants par requête), utilisez la méthode [API](../api/workorder.md#create).
 
-![Champs [!UICONTROL Nom] et [!UICONTROL Description] du paramètre de requête avec [!UICONTROL Envoyer] en surbrillance.](../images/ui/record-delete/submit.png)
+![Champs [!UICONTROL Name] et [!UICONTROL Description] du paramètre de requête avec [!UICONTROL Submit] mis en surbrillance.](../images/ui/record-delete/submit.png)
 
-Une boîte de dialogue [!UICONTROL Confirmer la demande] s’affiche pour indiquer que les identités ne peuvent pas être récupérées une fois supprimées. Sélectionnez **[!UICONTROL Envoyer]** pour confirmer la liste des identités dont vous souhaitez supprimer les données.
+Une boîte de dialogue [!UICONTROL Confirm request] s’affiche pour indiquer que les identités ne peuvent pas être récupérées une fois supprimées. Sélectionnez **[!UICONTROL Submit]** pour confirmer la liste des identités dont vous souhaitez supprimer les données.
 
-![Boîte de dialogue [!UICONTROL Confirmer la demande].](../images/ui/record-delete/confirm-request.png)
+![Boîte de dialogue [!UICONTROL Confirm request].](../images/ui/record-delete/confirm-request.png)
 
-Une fois la requête soumise, un ordre de travail est créé et s’affiche dans l’onglet [!UICONTROL Enregistrement] de l’espace de travail [!UICONTROL Cycle de vie des données]. Ensuite, vous pouvez surveiller le statut de l’ordre de travail lors du traitement de la requête.
+Une fois la requête soumise, un ordre de travail est créé et s’affiche dans l’onglet [!UICONTROL Record] de l’espace de travail [!UICONTROL Data Lifecycle]. Ensuite, vous pouvez surveiller le statut de l’ordre de travail lors du traitement de la requête.
 
 >[!NOTE]
 >
 >Consultez la section de présentation sur [la chronologie et la transparence](../home.md#record-delete-transparency) pour plus d’informations sur le traitement des suppressions d’enregistrements une fois qu’elles sont exécutées.
 
-![L’onglet [!UICONTROL Enregistrement] de l’espace de travail [!UICONTROL Cycle de vie des données] avec la nouvelle demande mise en surbrillance.](../images/ui/record-delete/request-log.png)
+![Onglet [!UICONTROL Record] de l’espace de travail [!UICONTROL Data Lifecycle] avec la nouvelle demande mise en surbrillance.](../images/ui/record-delete/request-log.png)
 
-## Supprimer des enregistrements des jeux de données basés sur des modèles {#model-based-record-delete}
+## Supprimer des enregistrements des jeux de données en fonction de schémas relationnels {#relational-record-delete}
 
-Si le jeu de données que vous supprimez est un schéma basé sur un modèle, passez en revue les points suivants pour vous assurer que les enregistrements sont supprimés correctement et ne sont pas réingérés en raison d’incohérences entre Experience Platform et votre système source.
+Si le jeu de données que vous supprimez est basé sur un schéma relationnel, passez en revue les points suivants pour vous assurer que les enregistrements sont supprimés correctement et ne sont pas réingérés en raison d’incohérences entre Experience Platform et votre système source.
+
+>[!NOTE]
+>
+>Les schémas relationnels étaient auparavant appelés schémas basés sur des modèles dans les versions antérieures de la documentation de Adobe Experience Platform. La fonctionnalité et le comportement de suppression restent les mêmes.
 
 ### Comportement de suppression d’enregistrement
 
@@ -224,22 +228,22 @@ Pour empêcher une nouvelle ingestion, appliquez la même approche de suppressio
 
 ### Modifier les colonnes de capture et de contrôle des données
 
-Les schémas basés sur des modèles qui utilisent des sources avec capture de données de modification peuvent utiliser la colonne de contrôle `_change_request_type` pour distinguer les suppressions des upserts. Lors de l’ingestion, les enregistrements marqués avec `d` sont supprimés du jeu de données, tandis que ceux marqués avec `u` ou sans la colonne sont traités comme des upserts. La colonne `_change_request_type` est lue lors de l’ingestion uniquement et n’est pas stockée dans le schéma cible ni mappée à des champs XDM.
+Les schémas relationnels qui utilisent des sources avec capture de données de modification peuvent utiliser la colonne de contrôle `_change_request_type` pour distinguer les suppressions des upserts. Lors de l’ingestion, les enregistrements marqués avec `d` sont supprimés du jeu de données, tandis que ceux marqués avec `u` ou sans la colonne sont traités comme des upserts. La colonne `_change_request_type` est lue lors de l’ingestion uniquement et n’est pas stockée dans le schéma cible ni mappée à des champs XDM.
 
 >[!NOTE]
 >
 >La suppression d’enregistrements via l’interface utilisateur du cycle de vie des données n’affecte pas le système source. Pour supprimer des données des deux emplacements, supprimez-les dans Experience Platform et dans la source .
 
-### Méthodes de suppression supplémentaires pour les schémas basés sur des modèles
+### Méthodes de suppression supplémentaires pour les schémas relationnels
 
-Outre le workflow standard de suppression d’enregistrements, les schémas basés sur des modèles prennent en charge des méthodes supplémentaires pour des cas d’utilisation spécifiques :
+Outre le workflow standard de suppression d’enregistrements, les schémas relationnels prennent en charge des méthodes supplémentaires pour des cas d’utilisation spécifiques :
 
 * **Approche de copie sécurisée du jeu de données** : dupliquez le jeu de données de production et appliquez des suppressions à la copie pour des tests contrôlés ou une réconciliation avant d’appliquer des modifications aux données de production.
 * **Chargement par lots uniquement des suppressions** : chargez un fichier contenant uniquement des opérations de suppression pour l’hygiène ciblée lorsque vous devez supprimer des enregistrements spécifiques sans affecter d’autres données.
 
 ### Prise en charge des descripteurs pour les opérations d’hygiène {#descriptor-support}
 
-Les descripteurs de schéma basés sur des modèles fournissent des métadonnées essentielles pour des opérations d’hygiène précises :
+Les descripteurs de schéma relationnel fournissent des métadonnées essentielles pour des opérations d’hygiène précises :
 
 * **Descripteur de clé de Principal** : identifie les enregistrements de manière unique pour les mises à jour ou suppressions ciblées, en s’assurant que les enregistrements corrects sont affectés.
 * **Descripteur de version** : s’assure que les suppressions et les mises à jour s’appliquent dans l’ordre chronologique approprié, empêchant les opérations hors séquence.
@@ -249,7 +253,7 @@ Les descripteurs de schéma basés sur des modèles fournissent des métadonnée
 >
 >Les processus d’hygiène fonctionnent au niveau du jeu de données. Pour les jeux de données activés pour les profils, des workflows de profil supplémentaires peuvent être nécessaires pour maintenir la cohérence entre le profil client en temps réel.
 
-### Rétention planifiée pour les schémas basés sur des modèles
+### Rétention planifiée pour les schémas relationnels
 
 Pour une hygiène automatisée basée sur l’âge des données plutôt que sur des identités spécifiques, consultez [Gérer la rétention du jeu de données d’événement d’expérience (TTL)](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) pour la rétention planifiée au niveau des lignes dans le lac de données.
 
@@ -257,7 +261,7 @@ Pour une hygiène automatisée basée sur l’âge des données plutôt que sur 
 >
 >L’expiration au niveau des lignes n’est prise en charge que pour les jeux de données qui utilisent le comportement de série temporelle.
 
-### Bonnes pratiques pour la suppression d’enregistrements basés sur un modèle
+### Bonnes pratiques pour la suppression d’enregistrements relationnels
 
 Pour éviter toute réingestion involontaire et maintenir la cohérence des données entre les systèmes, suivez ces bonnes pratiques :
 
@@ -265,11 +269,12 @@ Pour éviter toute réingestion involontaire et maintenir la cohérence des donn
 * **Surveiller les flux de capture de données de modification** : après la suppression des enregistrements dans Platform, surveillez les flux de données et confirmez que le système source supprime les mêmes enregistrements ou les inclut avec `_change_request_type = 'd'`.
 * **Nettoyer la source** : pour les sources qui utilisent l’ingestion d’actualisation complète ou celles qui ne prennent pas en charge les suppressions par capture de données de modification, supprimez les enregistrements directement du système source pour éviter une nouvelle ingestion.
 
-Pour plus d’informations sur les exigences des schémas, voir [exigences relatives aux descripteurs de schéma basés sur des modèles](../../xdm/schema/model-based.md#model-based-schemas).\
-Pour découvrir comment la capture de données de modification fonctionne avec les sources, consultez [Activer la capture de données de modification dans les sources](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-model-based-schemas).
+Pour plus d’informations sur les exigences des schémas, voir [exigences relatives au descripteur de schéma relationnel](../../xdm/schema/relational.md#relational-schemas).
+
+Pour découvrir comment la capture de données de modification fonctionne avec les sources, consultez [Activer la capture de données de modification dans les sources](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-relational-schemas).
 
 ## Étapes suivantes
 
-Ce document explique comment supprimer des enregistrements dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’exécution d’autres tâches de gestion du cycle de vie des données dans l’interface utilisateur, reportez-vous à la section [&#x200B; Présentation de l’interface utilisateur du cycle de vie des données](./overview.md).
+Ce document explique comment supprimer des enregistrements dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’exécution d’autres tâches de gestion du cycle de vie des données dans l’interface utilisateur, reportez-vous à la section [ Présentation de l’interface utilisateur du cycle de vie des données](./overview.md).
 
-Pour savoir comment supprimer des enregistrements à l’aide de l’API Data Hygiene, reportez-vous au guide de point d’entrée d’ordre de travail [&#128279;](../api/workorder.md).
+Pour savoir comment supprimer des enregistrements à l’aide de l’API Data Hygiene, reportez-vous au guide de point d’entrée d’ordre de travail [](../api/workorder.md).

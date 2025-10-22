@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Point d’entrée de l’API Schemas
 description: Le point d’entrée /schemas de l’API Schema Registry vous permet de gérer les schémas XDM par programmation dans votre application d’expérience.
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
+source-git-commit: dc5ac5427e1eeef47434c3974235a1900d29b085
 workflow-type: tm+mt
-source-wordcount: '2095'
+source-wordcount: '2122'
 ht-degree: 15%
 
 ---
@@ -198,7 +198,7 @@ Une réponse réussie renvoie les détails du schéma. Les champs renvoyés dép
 
 Le processus de composition d’un schéma commence par l’affectation d’une classe. La classe définit les principaux aspects comportementaux des données (enregistrement ou série temporelle), ainsi que les champs minimaux requis pour décrire les données qui seront assimilées.
 
-Pour plus d’informations sur la création d’un schéma sans classes ni groupes de champs, connu sous le nom de schéma basé sur un modèle, consultez la section [Créer un schéma basé sur un modèle](#create-model-based-schema).
+Pour plus d’informations sur la création d’un schéma sans classes ni groupes de champs, connu sous le nom de schéma relationnel, consultez la section [Créer un schéma relationnel](#create-relational-schema).
 
 >[!NOTE]
 >
@@ -281,36 +281,36 @@ L’exécution d’une requête GET pour [répertorier tous les schémas](#list)
 
 Pour ajouter des champs supplémentaires à un schéma, vous pouvez effectuer une opération [PATCH](#patch) afin d’ajouter des groupes de champs aux tableaux `allOf` et `meta:extends` du schéma.
 
-## Créer un schéma basé sur un modèle {#create-model-based-schema}
+## Créer un schéma relationnel {#create-relational-schema}
 
 >[!AVAILABILITY]
 >
->Data Mirror et les schémas basés sur des modèles sont disponibles pour les détenteurs de licence Adobe Journey Optimizer **Campagnes orchestrées**. Ils sont également disponibles en tant que **version limitée** pour les utilisateurs de Customer Journey Analytics, selon votre licence et l’activation des fonctionnalités. Contactez votre représentant Adobe pour obtenir l’accès.
+>Les schémas Data Mirror et relationnels sont disponibles pour les détenteurs de licence Adobe Journey Optimizer **Campagnes orchestrées**. Ils sont également disponibles en tant que **version limitée** pour les utilisateurs de Customer Journey Analytics, selon votre licence et l’activation des fonctionnalités. Contactez votre représentant Adobe pour obtenir l’accès.
 
-Créez un schéma basé sur un modèle en adressant une requête POST au point d’entrée `/schemas`. Les schémas basés sur des modèles stockent des données structurées de style relationnel **sans** classes ni groupes de champs. Définissez les champs directement sur le schéma et identifiez le schéma comme basé sur un modèle à l’aide d’une balise de comportement logique.
+>[!NOTE]
+>
+>Les schémas relationnels étaient auparavant appelés schémas basés sur des modèles dans des versions antérieures de la documentation de l’API Adobe Experience Platform. La fonctionnalité reste la même : seule la terminologie a été modifiée pour plus de clarté.
+
+Créez un schéma relationnel en adressant une requête POST au point d’entrée `/schemas`. Les schémas relationnels stockent des données structurées de style relationnel **sans** classes ni groupes de champs. Définissez les champs directement sur le schéma et identifiez le schéma comme relationnel à l’aide d’une balise de comportement logique.
 
 >[!IMPORTANT]
 >
->Pour créer un schéma basé sur un modèle, définissez `meta:extends` sur `"https://ns.adobe.com/xdm/data/adhoc-v2"`. Il s’agit d’un **identifiant de comportement logique** (et non d’un comportement ou d’une classe physique). N’incluez **pas** les classes de référence ou les groupes de champs dans les `allOf` et n’incluez **pas** les classes ou les groupes de champs dans les `meta:extends`.
+>Pour créer un schéma relationnel, définissez `meta:extends` sur `"https://ns.adobe.com/xdm/data/adhoc-v2"`. Il s’agit d’un **identifiant de comportement logique** (et non d’un comportement ou d’une classe physique). N’incluez **pas** les classes de référence ou les groupes de champs dans les `allOf` et n’incluez **pas** les classes ou les groupes de champs dans les `meta:extends`.
 
 Créez d’abord le schéma avec `POST /tenant/schemas`. Ajoutez ensuite les descripteurs requis avec l’[API Descriptors (`POST /tenant/descriptors`)](../api/descriptors.md) :
 
-- [descripteur de clé de Principal &#x200B;](../api/descriptors.md#primary-key-descriptor) : un champ de clé primaire doit être au **niveau racine** et **marqué comme requis**.
+- [descripteur de clé de Principal ](../api/descriptors.md#primary-key-descriptor) : un champ de clé primaire doit être au **niveau racine** et **marqué comme requis**.
 - [Descripteur de version](../api/descriptors.md#version-descriptor) : **obligatoire** lorsqu’il existe une clé primaire.
 - [Descripteur de relation](../api/descriptors.md#relationship-descriptor) : facultatif, définit les jointures ; la cardinalité n’est pas appliquée lors de l’ingestion.
 - [Descripteur d’horodatage](../api/descriptors.md#timestamp-descriptor) : pour les schémas de série temporelle, la clé primaire doit être une clé **composite** qui inclut le champ d’horodatage.
 
 >[!NOTE]
 >
->Dans l’éditeur de schéma d’interface utilisateur, le descripteur de version et les descripteurs d’horodatage apparaissent respectivement sous la forme « [!UICONTROL Identifiant de version] » et « [!UICONTROL Identifiant d’horodatage] ».
-
-<!-- >[!AVAILABILITY]
->
->Although `meta:behaviorType` technically accepts `time-series`, support is not currently available for model-based schemas. Set `meta:behaviorType` to `"record"`. -->
+>Dans l’éditeur de schéma de l’interface utilisateur, le descripteur de version et les descripteurs d’horodatage apparaissent respectivement sous la forme « [!UICONTROL Version identifier] » et « [!UICONTROL Timestamp identifier] ».
 
 >[!CAUTION]
 >
->Les schémas basés sur des modèles ne sont **pas compatibles avec les schémas d’union**. N’appliquez pas la balise `union` à `meta:immutableTags` lorsque vous utilisez des schémas basés sur des modèles. Cette configuration est bloquée dans l’interface utilisateur, mais n’est pas actuellement bloquée par l’API. Pour plus d’informations sur le comportement du schéma d’union[&#x200B; consultez le &#x200B;](./unions.md) guide des points d’entrée des unions .
+>Les schémas relationnels ne sont **pas compatibles avec les schémas d’union**. N’appliquez pas la balise `union` à `meta:immutableTags` lorsque vous utilisez des schémas relationnels. Cette configuration est bloquée dans l’interface utilisateur, mais n’est pas actuellement bloquée par l’API. Pour plus d’informations sur le comportement du schéma d’union[ consultez le ](./unions.md) guide des points d’entrée des unions .
 
 **Format d’API**
 
@@ -377,16 +377,16 @@ curl --request POST \
 | ------------------------------- | ------ | --------------------------------------------------------- |
 | `title` | Chaîne | Nom d’affichage du schéma. |
 | `description` | Chaîne | Brève explication de l’objectif du schéma. |
-| `type` | Chaîne | Doit être `"object"` pour les schémas basés sur des modèles. |
+| `type` | Chaîne | Doit être `"object"` pour les schémas relationnels. |
 | `definitions` | Objet | Contient le ou les objets de niveau racine qui définissent vos champs de schéma. |
 | `definitions.<name>.properties` | Objet | Noms de champs et types de données. |
 | `allOf` | Tableau | Fait référence à la définition d’objet au niveau racine (par exemple, `#/definitions/marketing_customers`). |
-| `meta:extends` | Tableau | Doit inclure des `"https://ns.adobe.com/xdm/data/adhoc-v2"` pour identifier le schéma comme basé sur un modèle. |
+| `meta:extends` | Tableau | Doit inclure des `"https://ns.adobe.com/xdm/data/adhoc-v2"` pour identifier le schéma comme relationnel. |
 | `meta:behaviorType` | Chaîne | Définissez sur `"record"`. Utilisez `"time-series"` uniquement lorsqu’elle est activée et appropriée. |
 
 >[!IMPORTANT]
 >
->L’évolution des schémas pour les schémas basés sur des modèles suit les mêmes règles d’ajout que les schémas standard. Vous pouvez ajouter de nouveaux champs avec une requête PATCH. Les modifications telles que le changement de nom ou la suppression de champs ne sont autorisées que si aucune donnée n’a été ingérée dans le jeu de données.
+>L’évolution des schémas relationnels suit les mêmes règles d’ajout que les schémas standard. Vous pouvez ajouter de nouveaux champs avec une requête PATCH. Les modifications telles que le changement de nom ou la suppression de champs ne sont autorisées que si aucune donnée n’a été ingérée dans le jeu de données.
 
 **Réponse**
 
@@ -394,7 +394,7 @@ Une requête réussie renvoie **HTTP 201 (Created)** et le schéma créé.
 
 >[!NOTE]
 >
->Les schémas basés sur un modèle n’héritent pas des champs prédéfinis (par exemple, id, timestamp ou eventType). Définissez explicitement tous les champs obligatoires dans votre schéma.
+>Les schémas relationnels n’héritent pas des champs prédéfinis (par exemple, id, timestamp ou eventType). Définissez explicitement tous les champs obligatoires dans votre schéma.
 
 **Exemple de réponse**
 
@@ -455,11 +455,11 @@ Une requête réussie renvoie **HTTP 201 (Created)** et le schéma créé.
 | `type` | Chaîne | Type de schéma. |
 | `definitions` | Objet | Définit des objets ou des groupes de champs réutilisables utilisés dans le schéma. Cela inclut généralement la structure de données principale et est référencé dans le tableau `allOf` pour définir la racine du schéma. |
 | `allOf` | Tableau | Indique l’objet racine du schéma en référençant une ou plusieurs définitions (par exemple, `#/definitions/marketing_customers`). |
-| `meta:extends` | Tableau | Identifie le schéma comme étant basé sur des modèles (`adhoc-v2`). |
+| `meta:extends` | Tableau | Identifie le schéma comme relationnel (`adhoc-v2`). |
 | `meta:behaviorType` | Chaîne | Type de comportement (`record` ou `time-series`, lorsqu’il est activé). |
 | `meta:containerId` | Chaîne | Conteneur dans lequel le schéma est stocké (par exemple, `tenant`). |
 
-Pour ajouter des champs à un schéma basé sur un modèle après sa création, envoyez une requête [PATCH](#patch). Les schémas basés sur des modèles n’héritent pas et n’évoluent pas automatiquement. Les modifications structurelles telles que le changement de nom ou la suppression de champs ne sont autorisées que si aucune donnée n’a été ingérée dans le jeu de données. Une fois que les données existent, seules les **modifications supplémentaires** (telles que l’ajout de nouveaux champs) sont prises en charge.
+Pour ajouter des champs à un schéma relationnel après sa création, effectuez une requête [PATCH](#patch). Les schémas relationnels n’héritent pas et n’évoluent pas automatiquement. Les modifications structurelles telles que le changement de nom ou la suppression de champs ne sont autorisées que si aucune donnée n’a été ingérée dans le jeu de données. Une fois que les données existent, seules les **modifications supplémentaires** (telles que l’ajout de nouveaux champs) sont prises en charge.
 
 Vous pouvez ajouter de nouveaux champs au niveau racine (dans la définition ou le `properties` racine), mais vous ne pouvez pas supprimer, renommer ni modifier le type des champs existants.
 
@@ -726,7 +726,7 @@ Une réponse réussie renvoie les détails du schéma mis à jour, indiquant que
 }
 ```
 
-Vous pouvez maintenant afficher l’union pour la classe de ce schéma afin de confirmer que les champs du schéma sont représentés. Pour plus d’informations, consultez le [&#x200B; guide des points d’entrée des unions &#x200B;](./unions.md) .
+Vous pouvez maintenant afficher l’union pour la classe de ce schéma afin de confirmer que les champs du schéma sont représentés. Pour plus d’informations, consultez le [ guide des points d’entrée des unions ](./unions.md) .
 
 ## Supprimer un schéma {#delete}
 

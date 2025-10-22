@@ -5,7 +5,7 @@ title: Créer un flux de données pour les sources de stockage cloud à l’aide
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données à partir d’un stockage cloud tiers et les importer dans Experience Platform à l’aide des connecteurs source et des API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
+source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
 workflow-type: tm+mt
 source-wordcount: '1834'
 ht-degree: 56%
@@ -14,7 +14,7 @@ ht-degree: 56%
 
 # Créer un flux de données pour les sources de stockage cloud à l’aide de l’API [!DNL Flow Service]
 
-Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une source d’espace de stockage dans le cloud et les importer dans Experience Platform à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une source d’espace de stockage dans le cloud et les importer dans Experience Platform à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
@@ -101,7 +101,7 @@ curl -X POST \
 | `data.properties.compressionType` | (Facultatif) Propriété qui définit le type de fichier compressé à ingérer. Les types de fichiers compressés pris en charge sont les suivants : `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip` et `tar`. **Remarque** : la propriété `compressionType` ne peut être utilisée que lors de l’ingestion de fichiers délimités ou JSON. |
 | `params.path` | Chemin d’accès au fichier source auquel vous accédez. Ce paramètre pointe vers un fichier individuel ou un dossier entier.  **Remarque** : vous pouvez utiliser un astérisque à la place du nom de fichier pour spécifier l’ingestion d’un dossier entier. Par exemple : `/acme/summerCampaign/*.csv` ingérera l’intégralité du dossier `/acme/summerCampaign/`. |
 | `params.type` | Type du fichier de données source que vous ingérez. Utilisez le `file` de type pour ingérer un fichier individuel et le `folder` de type pour ingérer un dossier entier. |
-| `params.cdcEnabled` | Valeur booléenne qui indique si la capture de l’historique des modifications est activée. Lorsqu’elle est utilisée avec des schémas basés sur des modèles, la capture de données change repose sur la colonne de contrôle `_change_request_type` (`u` — upsert, `d` — delete), qui est évaluée lors de l’ingestion, mais non stockée dans le schéma cible. Cette propriété est prise en charge par les sources d’espace de stockage suivantes : <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul>Pour une présentation de cette fonctionnalité, consultez la présentation de Data Mirror [&#128279;](../../../../xdm/data-mirror/overview.md). Pour plus d’informations sur l’implémentation, consultez le guide sur l’utilisation de [la capture de données de modification dans les sources](../change-data-capture.md) et la [référence technique des schémas basés sur des modèles](../../../../xdm/schema/model-based.md). |
+| `params.cdcEnabled` | Valeur booléenne qui indique si la capture de l’historique des modifications est activée. Utilisée avec les schémas relationnels, la capture des données de modification repose sur la colonne de contrôle de `_change_request_type` (`u` — upsert, `d` — delete), qui est évaluée lors de l’ingestion, mais non stockée dans le schéma cible. Cette propriété est prise en charge par les sources d’espace de stockage suivantes : <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul>Pour une présentation de cette fonctionnalité, consultez la présentation de Data Mirror [](../../../../xdm/data-mirror/overview.md). Pour plus d’informations sur l’implémentation, consultez le guide sur l’utilisation de [modification de la capture de données dans les sources](../change-data-capture.md) et la [référence technique des schémas relationnels](../../../../xdm/schema/relational.md). |
 | `connectionSpec.id` | Identifiant de spécification de connexion associé à votre source d’espace de stockage dans le cloud spécifique. Consultez lʼ[annexe](#appendix) pour obtenir la liste des identifiants de spécification de connexion. |
 
 **Réponse**

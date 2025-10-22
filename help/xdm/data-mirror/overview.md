@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;miroir de données;schéma basé sur un modèle;schéma relationnel;modifier la capture de données;synchronisation de la base de données;clé primaire;relations
+keywords: Experience Platform;miroir de données;schéma relationnel;modifier la capture de données;synchronisation de la base de données;clé primaire;relations
 solution: Experience Platform
 title: Présentation de Data Mirror
-description: Découvrez comment Data Mirror permet l’ingestion de modifications au niveau des lignes à partir de bases de données externes dans Adobe Experience Platform à l’aide de schémas basés sur des modèles avec une unicité, des relations et un contrôle de version appliqués.
+description: Découvrez comment Data Mirror permet l’ingestion de modifications au niveau des lignes à partir de bases de données externes dans Adobe Experience Platform à l’aide de schémas relationnels avec une unicité, des relations et un contrôle de version appliqués.
 badge: Disponibilité limitée
-source-git-commit: 6ce214073f625a253fcc5bb14dfdb6a4a61e6e7b
+exl-id: bb92c77a-6c7a-47df-885a-794cf55811dd
+source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
 workflow-type: tm+mt
-source-wordcount: '1355'
+source-wordcount: '1356'
 ht-degree: 1%
 
 ---
@@ -15,9 +16,13 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Data Mirror et les schémas basés sur des modèles sont disponibles pour les détenteurs de licence Adobe Journey Optimizer **Campagnes orchestrées**. Ils sont également disponibles en tant que **version limitée** pour les utilisateurs de Customer Journey Analytics, selon votre licence et l’activation des fonctionnalités. Contactez votre représentant Adobe pour obtenir l’accès.
+>Les schémas Data Mirror et relationnels sont disponibles pour les détenteurs de licence Adobe Journey Optimizer **Campagnes orchestrées**. Ils sont également disponibles en tant que **version limitée** pour les utilisateurs de Customer Journey Analytics, selon votre licence et l’activation des fonctionnalités. Contactez votre représentant Adobe pour obtenir l’accès.
 
-Data Mirror est une fonctionnalité de Adobe Experience Platform qui permet l’ingestion de modifications au niveau des lignes à partir de bases de données externes dans le lac de données à l’aide de schémas basés sur des modèles. Il préserve les relations de données, applique l’unicité et prend en charge le contrôle de version sans nécessiter de processus d’extraction, de transformation et de chargement (ETL) en amont.
+>[!NOTE]
+>
+>Les schémas relationnels étaient auparavant appelés schémas basés sur des modèles dans les versions antérieures de la documentation de Adobe Experience Platform. La fonctionnalité reste la même.
+
+Data Mirror est une fonctionnalité de Adobe Experience Platform qui permet l’ingestion de modifications au niveau des lignes à partir de bases de données externes dans le lac de données à l’aide de schémas relationnels. Il préserve les relations de données, applique l’unicité et prend en charge le contrôle de version sans nécessiter de processus d’extraction, de transformation et de chargement (ETL) en amont.
 
 Utilisez Data Mirror pour synchroniser les insertions, les mises à jour et les suppressions (données modifiables) de systèmes externes tels que [!DNL Snowflake], [!DNL Databricks] ou [!DNL BigQuery] directement dans Experience Platform. Cela vous permet de préserver la structure du modèle de base de données existant et l’intégrité des données lorsque vous importez des données dans Platform.
 
@@ -33,7 +38,7 @@ Data Mirror offre les fonctionnalités essentielles suivantes pour la synchronis
 
 Utilisez Data Mirror pour ingérer des modifications directement à partir de vos systèmes sources, appliquer l’intégrité des schémas et rendre les données disponibles pour les workflows d’analyse, d’orchestration des parcours et de conformité. Data Mirror élimine les processus ETL en amont complexes et accélère la mise en œuvre en permettant la mise en miroir directe des modèles de base de données existants.
 
-Planifiez les exigences de suppression et de nettoyage de données lors de l’implémentation de schémas basés sur des modèles avec Data Mirror. Toutes les applications doivent tenir compte de la manière dont les suppressions affectent les jeux de données associés, les workflows de conformité et les processus en aval avant le déploiement.
+Planifiez les exigences de suppression et d’hygiène des données lors de l’implémentation de schémas relationnels avec Data Mirror. Toutes les applications doivent tenir compte de la manière dont les suppressions affectent les jeux de données associés, les workflows de conformité et les processus en aval avant le déploiement.
 
 ## Conditions préalables {#prerequisites}
 
@@ -42,12 +47,12 @@ Avant de commencer, vous devez connaître les composants d’Experience Platform
 * [Création de schémas dans l’interface utilisateur d’Experience Platform](../ui/resources/schemas.md) ou [API](../api/schemas.md)
 * [Configuration des connexions source au cloud](../../sources/home.md#cloud-storage)
 * [Application des concepts de capture de données de modification](../../sources/tutorials/api/change-data-capture.md) (upserts, suppressions)
-* Faites la distinction entre [schémas standard](../schema/composition.md) et [schémas basés sur des modèles](../schema/model-based.md)
+* Distinguer [schémas standard](../schema/composition.md) des [schémas relationnels](../schema/relational.md)
 * [Définir des relations structurelles avec des descripteurs](../api/descriptors.md)
 
 ### Exigences d’implémentation
 
-Votre instance de Platform et les données sources doivent répondre à des exigences spécifiques pour que Data Mirror fonctionne correctement. Data Mirror requiert des **schémas basés sur des modèles**, qui sont des structures de données flexibles avec des contraintes appliquées. Actuellement, Data Mirror fonctionne principalement avec des schémas basés sur des modèles, bien que l’intégration aux schémas XDM standard soit prise en charge par les fonctionnalités d’objets personnalisés B2B à venir (prévues pour octobre 2025).
+Votre instance de Platform et les données sources doivent répondre à des exigences spécifiques pour que Data Mirror fonctionne correctement. Data Mirror requiert des **schémas relationnels**, qui sont des structures de données flexibles avec des contraintes appliquées.
 
 Incluez une **clé primaire et un descripteur de version** dans tous les schémas. Si vous utilisez un schéma de série temporelle, un **descripteur d’horodatage** est également requis.
 
@@ -61,17 +66,17 @@ Contrairement aux approches d’ingestion standard, Data Mirror préserve la str
 
 ### Définition de la structure du schéma
 
-Créez des [schémas basés sur des modèles](../schema/model-based.md) avec les descripteurs requis (métadonnées qui définissent le comportement et les contraintes des schémas). Sélectionnez une méthode adaptée au workflow de votre équipe, soit par le biais de l’interface utilisateur, soit directement par le biais de l’API.
+Créez des [schémas relationnels](../schema/relational.md) avec les descripteurs requis (métadonnées qui définissent le comportement et les contraintes des schémas). Sélectionnez une méthode adaptée au workflow de votre équipe, soit par le biais de l’interface utilisateur, soit directement par le biais de l’API.
 
-* **Approche de l’interface utilisateur** : [création de schémas basés sur un modèle dans l’éditeur de schémas](../ui/resources/schemas.md#create-model-based-schema)
-* **Approche API** : [création de schémas via l’API Schema Registry](../api/schemas.md#create-model-based-schema)
+* **Approche de l’interface utilisateur** : [création de schémas relationnels dans l’éditeur de schémas](../ui/resources/schemas.md#create-relational-schema)
+* **Approche API** : [création de schémas via l’API Schema Registry](../api/schemas.md#create-relational-schema)
 
 ### Mapper les relations et définir la gestion des données
 
 Définissez des connexions entre les jeux de données à l’aide de descripteurs de relation. Gérez les relations et maintenez la qualité des données entre les jeux de données. Ces tâches assurent des jointures cohérentes et prennent en charge la conformité aux exigences d’hygiène des données.
 
 * **Relations de schéma** : [définissez des relations entre les jeux de données à l’aide de descripteurs](../api/descriptors.md)
-* **Hygiène des enregistrements** : [Gérer les suppressions d’enregistrements de précision](../../hygiene/ui/record-delete.md#model-based-record-delete)
+* **Hygiène des enregistrements** : [Gérer les suppressions d’enregistrements de précision pour les jeux de données en fonction de schémas relationnels](../../hygiene/ui/record-delete.md#relational-record-delete)
 
 ### Configurer votre connexion source
 
@@ -93,7 +98,7 @@ Examinez les cas d’utilisation courants répertoriés ci-dessous dans lesquels
 
 ### Modélisation des données relationnelles
 
-Utilisez les [schémas basés sur des modèles](../schema/model-based.md) (également appelés schémas relationnels) dans Data Mirror pour représenter les entités, traiter les insertions, les mises à jour et les suppressions au niveau des lignes, et conserver les relations de clés primaires et étrangères qui existent dans vos sources de données. Cette approche apporte des principes de modélisation des données relationnelles à Experience Platform et assure la cohérence structurelle entre les jeux de données.
+Utilisez les [schémas relationnels](../schema/relational.md) dans Data Mirror pour représenter les entités, traiter les insertions, les mises à jour et les suppressions au niveau des lignes, et conserver les relations de clés primaires et étrangères qui existent dans vos sources de données. Cette approche apporte des principes de modélisation des données relationnelles à Experience Platform et assure la cohérence structurelle entre les jeux de données.
 
 ### Synchronisation entrepôt à lac
 
@@ -121,11 +126,11 @@ Examinez ces considérations clés pour vous assurer que votre implémentation s
 
 ### Suppression des données et exigences en matière d’hygiène
 
-Toutes les applications qui utilisent des schémas basés sur des modèles et Data Mirror doivent comprendre les implications de la suppression de données. Les schémas basés sur des modèles permettent des suppressions précises au niveau des enregistrements qui peuvent avoir un impact sur les données associées entre les jeux de données connectés. Ces fonctionnalités de suppression affectent l’intégrité des données, la conformité et le comportement des applications en aval, quel que soit votre cas d’utilisation spécifique. Examinez les [exigences en matière d’hygiène des données](../../hygiene/ui/record-delete.md#model-based-record-delete) et planifiez les scénarios de suppression avant la mise en œuvre.
+Toutes les applications qui utilisent des schémas relationnels et Data Mirror doivent comprendre les implications de la suppression de données. Les schémas relationnels permettent des suppressions précises au niveau des enregistrements, qui peuvent avoir un impact sur les données associées entre les jeux de données connectés. Ces fonctionnalités de suppression affectent l’intégrité des données, la conformité et le comportement des applications en aval, quel que soit votre cas d’utilisation spécifique. Examinez les [exigences d’hygiène des données pour les jeux de données en fonction des schémas relationnels](../../hygiene/ui/record-delete.md#relational-record-delete) et planifiez les scénarios de suppression avant la mise en œuvre.
 
 ### Sélection du comportement du schéma
 
-Les schémas basés sur des modèles sont définis par défaut sur **comportement d’enregistrement**, qui capture le statut de l’entité (clients, comptes, etc.). Si vous avez besoin d’un **comportement de série temporelle** pour le suivi des événements, vous devez le configurer explicitement.
+Les schémas relationnels sont définis par défaut sur **comportement d’enregistrement**, qui capture le statut de l’entité (clients, comptes, etc.). Si vous avez besoin d’un **comportement de série temporelle** pour le suivi des événements, vous devez le configurer explicitement.
 
 ### Comparaison des méthodes d’ingestion
 
@@ -146,8 +151,8 @@ Data Mirror prend en charge les relations **un-à-un** et **plusieurs-à-un** à
 Après avoir consulté cette présentation, vous devriez être en mesure de déterminer si Data Mirror correspond à votre cas d’utilisation et de comprendre les exigences de mise en œuvre. Pour commencer :
 
 1. Les **architectes des données** doivent évaluer votre modèle de données pour s’assurer qu’il prend en charge les clés primaires, le contrôle de version et les fonctionnalités de suivi des modifications.
-2. **Les parties prenantes de l’entreprise** doivent confirmer que votre licence comprend la prise en charge des schémas basés sur des modèles et les éditions Experience Platform requises.
+2. **Les parties prenantes de l’entreprise** doivent confirmer que votre licence comprend la prise en charge des schémas relationnels et les éditions Experience Platform requises.
 3. Les **concepteurs de schémas** doivent planifier la structure de votre schéma pour identifier les descripteurs requis, les relations entre les champs et les besoins en matière de gouvernance des données.
 4. Les **équipes d’implémentation** doivent choisir une méthode d’ingestion en fonction de vos systèmes sources, des exigences en temps réel et des workflows opérationnels.
 
-Pour plus d’informations sur l’implémentation, consultez la [documentation sur les schémas basés sur des modèles](../schema/model-based.md).
+Pour plus d’informations sur l’implémentation, consultez la [documentation sur les schémas relationnels](../schema/relational.md).

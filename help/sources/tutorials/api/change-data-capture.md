@@ -2,9 +2,9 @@
 title: Activer la capture de données de modification pour les connexions source dans l’API
 description: Découvrez comment activer la capture de données de modification pour les connexions source dans l’API
 exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
-source-git-commit: 192e97c97ffcb2d695bcfa6269cc6920f5440832
+source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
 workflow-type: tm+mt
-source-wordcount: '1238'
+source-wordcount: '1261'
 ht-degree: 0%
 
 ---
@@ -17,32 +17,36 @@ Experience Platform prend actuellement en charge la **copie incrémentielle de d
 
 En revanche, la capture de données de modification capture et applique les insertions, les mises à jour et les suppressions en temps quasi réel. Ce suivi complet des modifications garantit que les jeux de données restent entièrement alignés sur le système source et fournit un historique complet des modifications, au-delà de ce que la copie incrémentielle prend en charge. Toutefois, les opérations de suppression nécessitent une attention particulière, car elles affectent toutes les applications utilisant les jeux de données cibles.
 
-La capture de données modifiées dans Experience Platform nécessite **[Data Mirror](../../../xdm/data-mirror/overview.md)** avec des [schémas basés sur des modèles](../../../xdm/schema/model-based.md) (également appelés schémas relationnels). Vous pouvez fournir des données de modification à Data Mirror de deux manières :
+La capture de données modifiées dans Experience Platform nécessite **[Data Mirror](../../../xdm/data-mirror/overview.md)** avec des [schémas relationnels](../../../xdm/schema/relational.md). Vous pouvez fournir des données de modification à Data Mirror de deux manières :
 
 * **[Suivi manuel des modifications](#file-based-sources)** : incluez une colonne `_change_request_type` dans votre jeu de données pour les sources qui ne génèrent pas d’enregistrements de capture de données de modification de manière native
 * **[Exportations natives de capture de données de modification](#database-sources)** : utilisez les enregistrements de capture de données de modification exportés directement depuis votre système source
 
-Les deux approches nécessitent Data Mirror avec des schémas basés sur des modèles pour préserver les relations et appliquer l’unicité.
+Les deux approches nécessitent Data Mirror avec des schémas relationnels pour préserver les relations et appliquer l’unicité.
 
-## Data Mirror avec des schémas basés sur des modèles
+## Data Mirror avec schémas relationnels
 
 >[!AVAILABILITY]
 >
->Data Mirror et les schémas basés sur des modèles sont disponibles pour les détenteurs de licence Adobe Journey Optimizer **Campagnes orchestrées**. Ils sont également disponibles en tant que **version limitée** pour les utilisateurs de Customer Journey Analytics, selon votre licence et l’activation des fonctionnalités. Contactez votre représentant Adobe pour obtenir l’accès.
+>Les schémas Data Mirror et relationnels sont disponibles pour les détenteurs de licence Adobe Journey Optimizer **Campagnes orchestrées**. Ils sont également disponibles en tant que **version limitée** pour les utilisateurs de Customer Journey Analytics, selon votre licence et l’activation des fonctionnalités. Contactez votre représentant Adobe pour obtenir l’accès.
+
+>[!NOTE]
+>
+>Les schémas relationnels étaient auparavant appelés schémas basés sur des modèles dans les versions antérieures de la documentation de Adobe Experience Platform. Les fonctionnalités et les fonctionnalités de capture de données de modification restent les mêmes.
 
 >[!NOTE]
 >
 >**Utilisateurs des campagnes orchestrées** : utilisez les fonctionnalités Data Mirror décrites dans ce document pour travailler avec les données client qui conservent l’intégrité du référentiel. Même si votre source n’utilise pas la mise en forme de capture de données de modification, Data Mirror prend en charge des fonctionnalités relationnelles telles que l’application des clés primaires, les upserts au niveau des enregistrements et les relations de schéma. Ces fonctionnalités assurent une modélisation des données cohérente et fiable sur les jeux de données connectés.
 
-Data Mirror utilise des schémas basés sur des modèles pour étendre la capture de données de modification et activer des fonctionnalités avancées de synchronisation de base de données. Pour obtenir un aperçu de Data Mirror, consultez [Présentation de Data Mirror](../../../xdm/data-mirror/overview.md).
+Data Mirror utilise des schémas relationnels pour étendre la capture de données de modification et activer des fonctionnalités avancées de synchronisation de base de données. Pour obtenir un aperçu de Data Mirror, consultez [Présentation de Data Mirror](../../../xdm/data-mirror/overview.md).
 
-Les schémas basés sur des modèles étendent Experience Platform pour appliquer l’unicité des clés primaires, suivre les modifications au niveau des lignes et définir les relations au niveau du schéma. Avec la capture de données de modification, ils appliquent les insertions, les mises à jour et les suppressions directement dans le lac de données, réduisant ainsi le besoin d&#39;extraire, de transformer, de charger (ETL) ou de réconciliation manuelle.
+Les schémas relationnels étendent Experience Platform pour appliquer l’unicité des clés primaires, suivre les modifications au niveau des lignes et définir des relations au niveau du schéma. Avec la capture de données de modification, ils appliquent les insertions, les mises à jour et les suppressions directement dans le lac de données, réduisant ainsi le besoin d&#39;extraire, de transformer, de charger (ETL) ou de réconciliation manuelle.
 
-Consultez [&#x200B; Présentation des schémas basés sur des modèles &#x200B;](../../../xdm/schema/model-based.md) pour plus d’informations.
+Consultez [ Présentation des schémas relationnels ](../../../xdm/schema/relational.md) pour plus d’informations.
 
-### Schéma basé sur des modèles requis pour la capture de données de modification
+### Schéma relationnel requis pour la capture de données de modification
 
-Avant d’utiliser un schéma basé sur un modèle avec capture de données de modification, configurez les identifiants suivants :
+Avant d’utiliser un schéma relationnel avec capture de données de modification, configurez les identifiants suivants :
 
 * Identifier de manière unique chaque enregistrement avec une clé primaire.
 * Appliquez les mises à jour en séquence à l’aide d’un identifiant de version.
@@ -59,9 +63,9 @@ Cette colonne est évaluée uniquement lors de l’ingestion et n’est ni stock
 
 ### Workflow {#workflow}
 
-Pour activer la capture de données de modification avec un schéma basé sur un modèle :
+Pour activer la capture de données de modification avec un schéma relationnel :
 
-1. Créez un schéma basé sur un modèle.
+1. Créez un schéma relationnel.
 2. Ajoutez les descripteurs requis :
    * [descripteur de clé de Principal](../../../xdm/api/descriptors.md#primary-key-descriptor)
    * [Descripteur de version](../../../xdm/api/descriptors.md#version-descriptor)
@@ -76,13 +80,13 @@ Pour activer la capture de données de modification avec un schéma basé sur un
 
 >[!IMPORTANT]
 >
->**La planification de la suppression des données est requise**. Toutes les applications qui utilisent des schémas basés sur des modèles doivent comprendre les implications de suppression avant d’implémenter la capture de données de modification. Planifiez la manière dont les suppressions affecteront les jeux de données associés, les exigences de conformité et les processus en aval. Voir [considérations relatives à l’hygiène des données](../../../hygiene/ui/record-delete.md#model-based-record-delete) pour obtenir des conseils.
+>**La planification de la suppression des données est requise**. Toutes les applications qui utilisent des schémas relationnels doivent comprendre les implications de suppression avant d&#39;implémenter la capture de données de modification. Planifiez la manière dont les suppressions affecteront les jeux de données associés, les exigences de conformité et les processus en aval. Voir [considérations relatives à l’hygiène des données](../../../hygiene/ui/record-delete.md#relational-record-delete) pour obtenir des conseils.
 
 ## Fournir des données de modification pour les sources basées sur des fichiers {#file-based-sources}
 
 >[!IMPORTANT]
 >
->La capture de données de modification basée sur des fichiers nécessite Data Mirror avec des schémas basés sur des modèles. Avant de suivre les étapes de formatage des fichiers ci-dessous, assurez-vous d’avoir terminé le workflow de configuration de [Data Mirror](#workflow) décrit précédemment dans ce document. Les étapes ci-dessous décrivent comment formater vos fichiers de données afin d’inclure les informations de suivi des modifications qui seront traitées par Data Mirror.
+>La capture de données de modification basée sur des fichiers nécessite Data Mirror avec des schémas relationnels. Avant de suivre les étapes de formatage des fichiers ci-dessous, assurez-vous d’avoir terminé le workflow de configuration de [Data Mirror](#workflow) décrit précédemment dans ce document. Les étapes ci-dessous décrivent comment formater vos fichiers de données afin d’inclure les informations de suivi des modifications qui seront traitées par Data Mirror.
 
 Pour les sources basées sur des fichiers ([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud Storage] et [!DNL SFTP]), incluez une colonne `_change_request_type` dans vos fichiers.
 
@@ -115,7 +119,7 @@ Toutes les sources d’espace de stockage utilisent le même format de colonne `
 
 ### [!DNL Azure Databricks]
 
-Pour utiliser la capture de données de modification avec [!DNL Azure Databricks], vous devez à la fois activer **modifier le flux de données** dans vos tables source et configurer Data Mirror avec des schémas basés sur des modèles dans Experience Platform.
+Pour utiliser la capture de données de modification avec [!DNL Azure Databricks], vous devez à la fois activer **modifier le flux de données** dans vos tables source et configurer Data Mirror avec des schémas relationnels dans Experience Platform.
 
 Utilisez les commandes suivantes pour activer la modification du flux de données sur vos tableaux :
 
@@ -152,7 +156,7 @@ Lisez la documentation suivante pour savoir comment activer la capture de donné
 
 ### [!DNL Data Landing Zone]
 
-Pour utiliser la capture de données de modification avec [!DNL Data Landing Zone], vous devez à la fois activer **modifier le flux de données** dans vos tables source et configurer Data Mirror avec des schémas basés sur des modèles dans Experience Platform.
+Pour utiliser la capture de données de modification avec [!DNL Data Landing Zone], vous devez à la fois activer **modifier le flux de données** dans vos tables source et configurer Data Mirror avec des schémas relationnels dans Experience Platform.
 
 Lisez la documentation suivante pour savoir comment activer la capture de données de modification pour votre connexion source [!DNL Data Landing Zone] :
 
@@ -161,11 +165,11 @@ Lisez la documentation suivante pour savoir comment activer la capture de donné
 
 ### [!DNL Google BigQuery]
 
-Pour utiliser la capture de données de modification avec [!DNL Google BigQuery], vous devez activer l’historique des modifications dans vos tables source et configurer Data Mirror avec des schémas basés sur des modèles dans Experience Platform.
+Pour utiliser la capture de données de modification avec [!DNL Google BigQuery], vous devez activer l’historique des modifications dans vos tables source et configurer Data Mirror avec des schémas relationnels dans Experience Platform.
 
 Pour activer l’historique des modifications dans votre connexion source [!DNL Google BigQuery], accédez à la page [!DNL Google BigQuery] dans la console [!DNL Google Cloud] et définissez `enable_change_history` sur `TRUE`. Cette propriété active l&#39;historique des modifications de votre tableau de données.
 
-Pour plus d’informations, consultez le guide sur les instructions de langage de définition de données dans [&#x200B; [!DNL GoogleSQL]](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list).
+Pour plus d’informations, consultez le guide sur les instructions de langage de définition de données dans [ [!DNL GoogleSQL]](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list).
 
 Lisez la documentation suivante pour savoir comment activer la capture de données de modification pour votre connexion source [!DNL Google BigQuery] :
 
@@ -174,7 +178,7 @@ Lisez la documentation suivante pour savoir comment activer la capture de donné
 
 ### [!DNL Snowflake]
 
-Pour utiliser la capture de données de modification avec [!DNL Snowflake], vous devez activer le **suivi des modifications** dans vos tables source et configurer Data Mirror avec des schémas basés sur des modèles dans Experience Platform.
+Pour utiliser la capture de données de modification avec [!DNL Snowflake], vous devez activer le **suivi des modifications** dans vos tables source et configurer Data Mirror avec des schémas relationnels dans Experience Platform.
 
 Dans [!DNL Snowflake], activez le suivi des modifications à l’aide de l’`ALTER TABLE` et définissez `CHANGE_TRACKING` sur `TRUE`.
 
@@ -182,7 +186,7 @@ Dans [!DNL Snowflake], activez le suivi des modifications à l’aide de l’`AL
 ALTER TABLE mytable SET CHANGE_TRACKING = TRUE
 ```
 
-Pour plus d’informations, consultez le guide [[!DNL Snowflake]  sur l’utilisation de la clause de modification &#x200B;](https://docs.snowflake.com/en/sql-reference/constructs/changes#usage-notes).
+Pour plus d’informations, consultez le guide [[!DNL Snowflake]  sur l’utilisation de la clause de modification ](https://docs.snowflake.com/en/sql-reference/constructs/changes#usage-notes).
 
 Lisez la documentation suivante pour savoir comment activer la capture de données de modification pour votre connexion source [!DNL Snowflake] :
 
