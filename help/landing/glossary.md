@@ -327,7 +327,7 @@ ht-degree: 12%
 
 **Bibliothèque** : dans le contexte des balises, une bibliothèque est un ensemble de logiques commerciales qui contient des instructions sur le comportement de la bibliothèque de balises sur l’appareil client.
 
-**Entités de recherche** : dans le contexte de la modélisation des données, les entités de recherche représentent des concepts qui peuvent être associés à une personne individuelle, mais qui ne peuvent pas être directement utilisés pour identifier la personne. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur des classes de modèle de données d’expérience (XDM) personnalisées et liées à une entité de profil par le biais d’une [ relation de schéma ](../xdm/tutorials/relationship-ui.md).
+**Entités de recherche** : dans le contexte de la modélisation des données, les entités de recherche représentent des concepts qui peuvent être associés à une personne individuelle, mais qui ne peuvent pas être directement utilisés pour identifier la personne. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur des classes de modèle de données d’expérience (XDM) personnalisées et liées à une entité de profil par le biais d’une [&#x200B; relation de schéma &#x200B;](../xdm/tutorials/relationship-ui.md).
 
 ## M
 
