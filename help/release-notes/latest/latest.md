@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’octobre 2025 d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2025 pour Adobe Experience Platform
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 199acd8d3bdbb0e89fc1ab881bff4d94063b7f78
+source-git-commit: 57cb9f5e57c83576a125ec2de5eb3e4526d5b572
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '1004'
 ht-degree: 25%
 
 ---
@@ -25,9 +25,22 @@ ht-degree: 25%
 
 Nouvelles fonctionnalités et mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
+- [Agent Orchestrator](#agent-orchestrator)
 - [Alertes](#alerts)
 - [Destinations](#destinations)
 - [Sources](#sources)
+
+## Agent Orchestrator {#agent-orchestrator}
+
+Adobe Experience Platform Agent Orchestrator est la nouvelle couche agentique d’Adobe Experience Platform.
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Agent Audience | Audience Agent prend désormais en charge les audiences basées sur un compte pour l’exploration d’audiences conversationnelles et la détection des audiences en double. Pour en savoir plus, consultez la [documentation de l’agent Audience](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). |
+
+Pour plus d’informations sur les agents, consultez la [documentation Agent Orchestrator](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/home).
 
 ## Alertes {#alerts}
 
@@ -37,7 +50,7 @@ Experience Platform vous permet de vous abonner à des alertes basées sur des 
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Alerte relative au taux d’échec de destination | Une nouvelle alerte a été ajoutée pour les destinations : **Le taux d’échec de la destination dépasse le seuil**. Cette alerte vous avertit lorsque le nombre d’enregistrements ayant échoué lors de l’activation des données a dépassé le seuil autorisé, ce qui vous permet de répondre rapidement aux problèmes d’activation. Pour plus d’informations, consultez la documentation sur les [règles d’alertes standard](../../observability/alerts/rules.md). |
+| Alerte relative au taux d’échec d’activation | Une nouvelle alerte a été ajoutée pour les destinations : **Le taux d’échec de l’activation dépasse le seuil**. Cette alerte vous avertit lorsque le nombre d’enregistrements ayant échoué lors de l’activation des données a dépassé le seuil autorisé, ce qui vous permet de répondre rapidement aux problèmes d’activation. Pour plus d’informations, consultez la documentation sur les [règles d’alertes standard](../../observability/alerts/rules.md). |
 
 {style="table-layout:auto"}
 
@@ -53,6 +66,8 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | --- | --- |
 | [!DNL Adform] | Utilisez cette destination pour envoyer des audiences Adobe Real-Time CDP à [!DNL Adform] pour activation en fonction de l’Experience Cloud ID (ECID) et de l’ID Fusion de [!DNL Adform]. ID Fusion de [!DNL Adform] est un service de résolution d’ID qui vous permet d’activer vos audiences propriétaires en fonction de l’Experience Cloud ID (ECID). Lisez la [[!DNL Adform] documentation](../../destinations/catalog/advertising/adform.md) pour plus d’informations |
 | [!DNL Amazon Ads] | Ajout de la prise en charge des identifiants personnels. Cela inclut les champs tels que `firstName`, `lastName`, `street`, `city`, `state`, `zip` et `country`. Le mappage de ces champs en tant qu’identités cibles peut améliorer les taux de correspondance d’audience. Pour plus d’informations, consultez la [[!DNL Amazon Ads] documentation](../../destinations/catalog/advertising/amazon-ads.md) . |
+| [!DNL Snowflake Batch] (Disponibilité limitée) | Créez un partage de données Live [!DNL Snowflake] pour recevoir des mises à jour quotidiennes de l’audience directement sous forme de tables partagées dans votre compte . Cette intégration est actuellement disponible pour les organisations clientes configurées dans la région VA7. Pour plus d’informations, consultez la [[!DNL Snowflake Batch] documentation](../../destinations/catalog/warehouses/snowflake-batch.md) . |
+| [!DNL Snowflake Streaming] (Disponibilité limitée) | Créez un partage de données Live [!DNL Snowflake] pour recevoir des mises à jour d’audience en flux continu directement sous forme de tables partagées dans votre compte . Cette intégration est actuellement disponible pour les organisations clientes configurées dans la région VA7. Pour plus d’informations, consultez la [[!DNL Snowflake Streaming] documentation](../../destinations/catalog/warehouses/snowflake.md) . |
 
 {style="table-layout:auto"}
 
@@ -60,19 +75,13 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Prise en charge du chiffrement côté serveur [!DNL AES256] dans les destinations [!DNL Amazon S3] | Les destinations [!DNL Amazon S3] prennent désormais en charge [!DNL AES256] chiffrement côté serveur, ce qui renforce la sécurité des données exportées. Vous pouvez configurer cette méthode de chiffrement lors de la configuration ou de la mise à jour de vos connexions de destination [!DNL Amazon S3], en veillant à ce que vos données soient chiffrées au repos à l’aide d’algorithmes de chiffrement [!DNL AES256] standard. Pour plus d’informations, consultez la [[!DNL Amazon] documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingEncryption.html). |
 | [Plusieurs nouvelles destinations qui prennent en charge la surveillance au niveau de l’audience](../../dataflows/ui/monitor-destinations.md#audience-level-view) | Les destinations suivantes prennent désormais en charge la surveillance au niveau de l’audience : <ul><li>[!DNL Airship Tags]</li><li>[!DNL Salesforce Marketing Cloud] (API)</li><li>[!DNL Marketo Engage]</li><li>[!DNL Microsoft Bing]</li><li>(V1) [!DNL Pega CDH Realtime Audience]</li><li>(V2) [!DNL Pega CDH Realtime Audience]</li><li>Engagement de compte [!DNL Salesforce Marketing Cloud]</li><li>[!DNL The Trade Desk]</li></ul> |
-| Correctif des mécanismes de sécurisation de l’exportation des jeux de données | Un correctif a été implémenté pour les mécanismes de sécurisation d’exportation des jeux de données. Auparavant, certains jeux de données qui incluaient une colonne d’horodatage mais n’étaient _pas_ basés sur le schéma XDM Experience Events étaient incorrectement traités comme des jeux de données Experience Events, ce qui limitait les exportations à un intervalle de recherche en amont de 365 jours. Le mécanisme de sécurisation de recherche en amont documenté de 365 jours s’applique désormais exclusivement aux jeux de données d’événements d’expérience. Les jeux de données utilisant un schéma autre que le schéma XDM Experience Events sont désormais régis par le mécanisme de sécurisation de 10 milliards d’enregistrements. Certains clients peuvent voir des nombres d’exportation accrus pour les jeux de données qui se trouvaient par erreur sous l’intervalle de recherche en amont de 365 jours. Vous pouvez ainsi exporter des jeux de données pour les workflows prédictifs disposant d’un long intervalle de recherche en amont. Pour plus d’informations, consultez la section [&#x200B; Mécanismes de sécurisation d’exportation de jeux de données &#x200B;](../../destinations/guardrails.md#dataset-exports). |
+| Correctif des mécanismes de sécurisation de l’exportation des jeux de données | Un correctif a été implémenté pour les mécanismes de sécurisation d’exportation des jeux de données. Auparavant, certains jeux de données qui incluaient une colonne d’horodatage mais n’étaient _pas_ basés sur le schéma XDM Experience Events étaient incorrectement traités comme des jeux de données Experience Events, ce qui limitait les exportations à un intervalle de recherche en amont de 365 jours. Le mécanisme de sécurisation de recherche en amont documenté de 365 jours s’applique désormais exclusivement aux jeux de données d’événements d’expérience. Les jeux de données utilisant un schéma autre que le schéma XDM Experience Events sont désormais régis par le mécanisme de sécurisation de 10 milliards d’enregistrements. Certains clients peuvent voir des nombres d’exportation accrus pour les jeux de données qui se trouvaient par erreur sous l’intervalle de recherche en amont de 365 jours. Vous pouvez ainsi exporter des jeux de données pour les workflows prédictifs disposant d’un long intervalle de recherche en amont. Pour plus d’informations, consultez la section [ Mécanismes de sécurisation d’exportation de jeux de données ](../../destinations/guardrails.md#dataset-exports). |
 | Rapports améliorés au niveau de l’audience pour les destinations d’entreprise | Après cette version, les clients verront des chiffres de création de rapports d’audience plus précis qui incluent uniquement les audiences pertinentes pour la destination sélectionnée. Cet ajustement de surveillance garantit que les rapports incluent uniquement les audiences mappées sur le flux de données, ce qui fournit des informations plus claires sur l’activation réelle des données. Cela n’a aucune incidence sur la quantité de données activées. Il s’agit simplement d’une amélioration de la surveillance visant à améliorer la précision des rapports. |
 
 {style="table-layout:auto"}
 
 Pour plus d’informations, consultez la [vue d’ensemble des destinations](../../destinations/home.md).
-
-<!--
-| [!DNL Snowflake Batch] (Limited availability) | Create a live [!DNL Snowflake] data share to receive daily audience updates directly as shared tables into your account. This integration is currently available for customer organizations provisioned in the VA7 region. |
-| [!DNL Snowflake Streaming] (Limited availability) | Create a live [!DNL Snowflake] data share to receive streaming audience updates directly as shared tables into your account. This integration is currently available for customer organizations provisioned in the VA7 region. |
--->
 
 ## Sources {#sources}
 
