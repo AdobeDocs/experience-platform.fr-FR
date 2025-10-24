@@ -2,7 +2,7 @@
 title: Schémas dans l’édition B2B de Real-time Customer Data Platform
 description: Présentation du rôle des schémas de modèle de données d’expérience (XDM) dans Adobe Real-Time Customer Data Platform B2B edition.
 feature: Get Started, Data Management, Schemas
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
 source-git-commit: 0191fc8419c696d8cd114a5eb575b8cc0a815a72
 workflow-type: tm+mt
@@ -17,7 +17,7 @@ Adobe Real-Time Customer Data Platform B2B edition fournit plusieurs classes [mo
 
 >[!IMPORTANT]
 >
->Les schémas B2B peuvent être utilisés dans les applications Experience Platform (par exemple, dans [Customer Journey Analytics B2B edition](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-b2b/cja-b2b-edition)). <br/>Cependant, vous devez avoir accès à Real-Time CDP B2B edition pour que les schémas B2B (de profils dans) participent au [profil client en temps réel](../../profile/home.md).
+>Les schémas B2B peuvent être utilisés dans les applications Experience Platform (par exemple, dans [Customer Journey Analytics B2B edition](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/cja-overview/cja-b2b/cja-b2b-edition)). <br/>Cependant, vous devez avoir accès à Real-Time CDP B2B edition pour que les schémas B2B (de profils dans) participent au [profil client en temps réel](../../profile/home.md).
 
 Les classes standard suivantes sont fournies dans Real-Time CDP B2B edition :
 
