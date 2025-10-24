@@ -56,7 +56,7 @@ Avec le contrôle d’accès au niveau de l’objet pour les destinations, limit
 Pour appliquer des libellés d’accès à un flux de données spécifique :
 
 1. Accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** et localisez le flux de données de destination pour lequel vous souhaitez limiter l’accès des utilisateurs et utilisatrices.
-1. Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande ![ ](/help/images/icons/key.png)Modifier les détails **[!UICONTROL Apply access labels]** pour ajouter de nouveaux libellés et gérer les libellés existants du flux de données.
+1. Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande ![&#x200B; &#x200B;](/help/images/icons/key.png)Modifier les détails **[!UICONTROL Apply access labels]** pour ajouter de nouveaux libellés et gérer les libellés existants du flux de données.
    ![Sélectionnez Appliquer les libellés d’accès dans la vue Parcourir de l’espace de travail des destinations.](/help/access-control/images/olac/apply-access-labels.png)
 1. Sélectionnez les libellés à ajouter au flux de données de destination et sélectionnez **[!UICONTROL Save]**.
    ![Sélectionnez les libellés d’accès dans qui doivent s’appliquer au flux de données de destination.](/help/access-control/images/olac/view-access-labels.png)
