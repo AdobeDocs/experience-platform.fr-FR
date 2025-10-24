@@ -2,7 +2,7 @@
 title: Logique de liaison du service d’identités
 description: Découvrez comment Identity Service lie des identités disparates pour créer une vue d’ensemble complète d’un client.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 5c05f2dbcf9088b95eb8d35e455912219e87662f
+source-git-commit: bbfc1d749fbe0e74489a48e0c962d9f51d19ccde
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 3%
@@ -23,10 +23,6 @@ Deux types d’identités sont liés :
 * **Enregistrements de profil** : ces identités proviennent généralement de systèmes CRM.
 * **Événements d’expérience** : ces identités proviennent généralement de l’implémentation de WebSDK ou de la source Adobe Analytics.
 
->[!IMPORTANT]
->
->Identity Service est sensible à la casse. Par exemple, **abc<span>@gmail.com** et **ABC<span>@GMAIL.COM** sont traitées comme deux identités d’e-mail distinctes.
-
 ## Signification sémantique de l&#39;établissement de liens
 
 Une identité représente une entité du monde réel. S’il existe un lien établi entre deux identités, cela signifie que les deux identités sont associées l’une à l’autre. Voici quelques exemples illustrant ce concept :
@@ -44,6 +40,7 @@ Une identité se compose d’un espace de noms d’identité et d’une valeur d
 
 * Un espace de noms d’identité est le contexte d’une valeur d’identité donnée vers. Les exemples courants d’espaces de noms d’identité incluent CRMID, E-mail et Téléphone.
 * Une valeur d’identité est la chaîne qui représente une entité du monde réel. Par exemple : « julien<span>@acme.com » peut être une valeur d’identité pour un espace de noms E-mail et 555-555-1234 peut être une valeur d’identité correspondante pour un espace de noms Téléphone.
+* Identity Service est sensible à la casse. Par exemple, **julien<span>@gmail.com** et **JULIEN<span>@GMAIL.COM** sont traitées comme deux identités d’e-mail distinctes.
 
 >[!TIP]
 >
