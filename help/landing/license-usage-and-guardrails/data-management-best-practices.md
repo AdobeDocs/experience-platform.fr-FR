@@ -2,10 +2,10 @@
 title: Bonnes pratiques relatives aux droits de licence de gestion des données
 description: Découvrez les bonnes pratiques à suivre et les outils que vous pouvez utiliser pour mieux gérer vos droits de licence avec Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: a14d94a87eb433dd0bb38e5bf3c9c3a04be9a5c6
+source-git-commit: 1f3cf3cc57342a23dae2d69c883b5768ec2bba57
 workflow-type: tm+mt
-source-wordcount: '2338'
-ht-degree: 54%
+source-wordcount: '2957'
+ht-degree: 43%
 
 ---
 
@@ -71,7 +71,7 @@ La disponibilité de ces mesures et la définition spécifique de chacune d’el
 
 L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher un instantané des données liées aux licences de l’entreprise pour Experience Platform. Les données du tableau de bord s’affichent exactement comme elles apparaissent au moment précis où l’instantané a été pris. L’instantané n’est ni une approximation ni un échantillon des données et le tableau de bord n’est pas mis à jour en temps réel.
 
-Pour plus d’informations, consultez le guide sur l’utilisation [&#x200B; du tableau de bord d’utilisation des licences dans l’interface utilisateur d’Experience Platform](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
+Pour plus d’informations, consultez le guide sur l’utilisation [ du tableau de bord d’utilisation des licences dans l’interface utilisateur d’Experience Platform](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
 
 ## Bonnes pratiques relatives à la gestion des données
 
@@ -155,11 +155,11 @@ Plusieurs rapports sont disponibles pour vous aider à comprendre la composition
 
 ### Expirations des données de profils pseudonymes {#pseudonymous-profile-expirations}
 
-Utilisez la fonctionnalité d’expiration des données de profils pseudonymes pour supprimer automatiquement de la banque de profils les données qui ne sont plus valides ou utiles pour vos cas d’utilisation. L’expiration des données de profils pseudonymes supprime les enregistrements d’événement et de profil. Par conséquent, ce paramètre réduira les volumes d’audiences adressables. Pour plus d’informations sur cette fonctionnalité, veuillez lire la [&#x200B; Présentation de l’expiration des données de profils pseudonymes &#x200B;](../../profile/pseudonymous-profiles.md).
+Utilisez la fonctionnalité d’expiration des données de profils pseudonymes pour supprimer automatiquement de la banque de profils les données qui ne sont plus valides ou utiles pour vos cas d’utilisation. L’expiration des données de profils pseudonymes supprime les enregistrements d’événement et de profil. Par conséquent, ce paramètre réduira les volumes d’audiences adressables. Pour plus d’informations sur cette fonctionnalité, veuillez lire la [ Présentation de l’expiration des données de profils pseudonymes ](../../profile/pseudonymous-profiles.md).
 
 ### Interface utilisateur du jeu de données - Conservation du jeu de données d’événement d’expérience {#data-retention}
 
-Configurez les paramètres d’expiration et de conservation des jeux de données pour imposer une période de conservation fixe pour vos données dans le lac de données et le magasin de profils. Une fois la période de conservation terminée, les données sont supprimées. L’expiration des données d’événements d’expérience supprime uniquement les événements et non les données de classe de profil, ce qui réduit le [&#x200B; volume total de données &#x200B;](total-data-volume.md) dans les mesures d’utilisation de licence. Pour plus d’informations, consultez le guide sur la [définition d’une politique de conservation des données](../../catalog/datasets/user-guide.md#data-retention-policy).
+Configurez les paramètres d’expiration et de conservation des jeux de données pour imposer une période de conservation fixe pour vos données dans le lac de données et le magasin de profils. Une fois la période de conservation terminée, les données sont supprimées. L’expiration des données d’événements d’expérience supprime uniquement les événements et non les données de classe de profil, ce qui réduit le [ volume total de données ](total-data-volume.md) dans les mesures d’utilisation de licence. Pour plus d’informations, consultez le guide sur la [définition d’une politique de conservation des données](../../catalog/datasets/user-guide.md#data-retention-policy).
 
 ### Expirations des événements d’expérience de profil {#event-expirations}
 
@@ -175,3 +175,99 @@ Vous trouverez ci-dessous une liste des bonnes pratiques recommandées pour gara
 * Configurez les options [Expiration des événements d’expérience](../../catalog/datasets/user-guide.md#data-retention-policy) et [Expiration des données de profils pseudonymes](../../profile/pseudonymous-profiles.md) pour les données haute fréquence, telles que les données web.
 * Configurez des politiques de conservation [durée de vie (TTL) pour les jeux de données d’événements d’expérience](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) dans le lac de données pour supprimer automatiquement les enregistrements obsolètes et optimiser l’utilisation du stockage en fonction de vos droits de licence.
 * Vérifiez régulièrement les [rapports sur la composition de profils](#profile-store-composition-reports) pour comprendre la composition de votre banque de profils. Cela vous permet de comprendre les sources de données qui contribuent le plus à la consommation de l’utilisation des licences.
+
+## Cas pratique : conformité d’utilisation de licence
+
+### Pourquoi envisager ce cas d’utilisation
+
+En vous assurant de votre conformité aux **dispositions relatives à l’utilisation des licences** pour le stockage des lacs de données et des profils, vous pouvez éviter les dépassements, optimiser les coûts et aligner vos politiques de conservation des données sur les besoins de votre entreprise.
+
+### Prérequis et planification
+
+Tenez compte des conditions préalables suivantes dans votre processus de planification :
+
+* **Accès et autorisations** :
+   * Assurez-vous de disposer de l’autorisation **Gérer les jeux de données** pour utiliser la durée de vie des événements d’expérience.
+   * Assurez-vous de disposer de l’autorisation **Gérer les paramètres de profil** pour utiliser la durée de vie du profil pseudonyme.
+* **Présentation de la politique de conservation des données** :
+   * Politiques d’entreprise concernant la conservation et la conformité des données
+   * Besoins de l’entreprise en matière d’analyse des données et d’intervalles de recherche en amont de segmentation
+
+### Fonctionnalités de l’interface utilisateur, composants Experience Platform et produits Experience Cloud que vous utiliserez
+
+Pour réussir l’implémentation de ce cas d’utilisation, vous devez utiliser plusieurs zones de Adobe Experience Platform. Vérifiez que vous disposez des autorisations de contrôle d’accès basé sur les attributs nécessaires pour toutes ces zones ou demandez à votre administrateur système de les accorder.
+
+* Tableau de bord d’utilisation des licences : affichez l’utilisation actuelle des droits au niveau du sandbox.
+* Gestion des jeux de données - Surveillez et gérez les politiques de conservation au niveau des jeux de données.
+* Audiences (profil client en temps réel) - Assurez-vous que les règles de segmentation regardent en arrière et s’alignent sur les fenêtres de conservation des données.
+* Surveillance et alertes : suivez les mises à jour et obtenez des informations sur les opérations de conservation des jeux de données.
+
+### Comment réaliser le cas d’utilisation : instructions détaillées
+
+Lisez les sections ci-dessous, qui incluent des liens vers d’autres documents, pour effectuer chacune des étapes de la présentation de haut niveau ci-dessus.
+
+**Vérifier l’utilisation actuelle de votre licence**
+
+Tout d’abord, accédez au **tableau de bord d’utilisation des licences** et passez en revue votre utilisation des droits au niveau du sandbox.
+
+>[!BEGINTABS]
+
+>[!TAB  Sandbox de production ]
+
+Utilisez l’interface [!UICONTROL Metrics] pour afficher les mesures d’utilisation des licences. L’interface affiche par défaut des informations sur votre sandbox de production.
+
+![Interface utilisateur du tableau de bord d’utilisation de la licence affichant les mesures d’utilisation de la licence pour un sandbox de production.](../images/data-management/prod-sandbox.png)
+
+>[!TAB Sandbox de développement]
+
+Sélectionnez [!UICONTROL Development] pour afficher les mesures d’utilisation de licence liées à vos sandbox de développement.
+
+![Interface utilisateur du tableau de bord d’utilisation de la licence affichant vos mesures d’utilisation de la licence pour les sandbox de développement.](../images/data-management/dev-sandbox.png)
+
+>[!ENDTABS]
+
+Pour plus d’informations, consultez la documentation relative à l’[utilisation du tableau de bord d’utilisation des licences](../../dashboards/guides/license-usage.md).
+
+**Analyse de l’utilisation du stockage au niveau du jeu de données**
+
+Utilisez la **vue de navigation du jeu de données** pour consulter les mesures d’utilisation de votre jeu de données pour le lac de données et le profil client en temps réel. Sélectionnez les en-têtes de colonne pour **[!UICONTROL Data Lake Storage]** ou **[!UICONTROL Profile Storage]**, puis sélectionnez **[!UICONTROL Sort Descending]** dans le panneau pop-up.
+
+>[!BEGINTABS]
+
+>[!TAB Stockage du lac de données]
+
+Les jeux de données du lac de données sont triés par taille de stockage. Utilisez cette fonctionnalité pour identifier les plus gros consommateurs de stockage dans le lac de données.
+
+![Les jeux de données du lac de données sont triés du plus grand au plus petit.](../images/data-management/data-lake-storage.png)
+
+>[!TAB Stockage des profils]
+
+Les jeux de données dans le profil sont triés par taille de stockage. Utilisez cette fonctionnalité pour identifier les plus gros consommateurs de stockage dans Profile.
+
+![Les jeux de données de Profile sont triés du plus grand au plus petit.](../images/data-management/profile-storage.png)
+
+>[!ENDTABS]
+
+**Évaluation et configuration des règles de rétention**
+
+Ensuite, déterminez si vos jeux de données disposent des politiques de conservation appropriées en fonction des limites de licence et des exigences commerciales pour Analytics et Segmentation. Pour afficher la politique de conservation d’un jeu de données, sélectionnez les points de suspension (`...`) à côté de votre jeu de données, puis sélectionnez **[!UICONTROL Set data retention policy]**.
+
+![Le panneau pop-up avec des options de jeu de données, y compris « Définir une politique de conservation des données »](../images/data-management/set-retention-policy.png)
+
+L’interface *[!UICONTROL Set dataset retention]* s’affiche. Utilisez cette interface pour configurer une politique de rétention pour votre jeu de données. Vous pouvez également l’utiliser pour afficher la quantité d’espace de stockage consommée par votre jeu de données dans le lac de données ou le profil.
+
+![Interface « Définir la conservation des jeux de données ».](../images/data-management/dataset-retention.png)
+
+Vous pouvez analyser plus en détail l’impact de la rétention de votre jeu de données à l’aide du prévisionniste d’impact. Sélectionnez **[!UICONTROL View ExperienceEvent data distribution]** pour afficher un graphique qui affiche votre fenêtre de conservation et le pourcentage total de stockage qui est défini pour expirer.
+
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**
+
+![Le prévisionniste d’impact depuis l’interface de conservation des jeux de données.](../images/data-management/impact-forecaster.png)
+
+**Valider les modifications de conservation**
+
+Une fois vos politiques de conservation appliquées, vous pouvez utiliser les outils suivants pour valider vos modifications :
+
+* [Mesures d’utilisation des jeux de données](../../catalog/datasets/user-guide.md#enhanced-visibility-of-retention-periods-and-storage-metrics) dans la vue de navigation des jeux de données.
+* Le [tableau de bord de surveillance](../../dataflows/ui/monitor.md) pour afficher et analyser l’impact de la rétention.
+* Le [tableau de bord d’utilisation des licences](../../dashboards/guides/license-usage.md) pour afficher des instantanés quotidiens, des tendances prédictives et des informations au niveau du sandbox.
