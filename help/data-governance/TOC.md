@@ -5,10 +5,10 @@ breadcrumb-title: Guide de gouvernance des données
 user-guide-description: Faites respecter les restrictions d’utilisation des données au moyen de libellés, d’actions marketing et de politiques de gouvernance.
 feature: Data Governance
 role: User,Developer,Admin
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 6e9ea451eafd08a72a5f26dabe229fdb7c6c909d
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 94%
+source-wordcount: '105'
+ht-degree: 86%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 94%
 
 * [Présentation de la gouvernance des données](home.md)
 * [Guide complet](./e2e.md)
-* Libellés d’utilisation des données {#labels}
+* Étiquettes d’utilisation des données {#labels}
    * [Présentation](labels/overview.md)
    * [Glossaire des libellés](labels/reference.md)
    * [Gestion des libellés dans l’interface utilisateur](labels/user-guide.md)
@@ -26,16 +26,17 @@ ht-degree: 94%
    * [Présentation](policies/overview.md)
    * [Gestion des politiques dans l’interface utilisateur](policies/user-guide.md)
    * [Création d’une politique dans l’API](policies/create.md)
+   * [Référence de création de règle de politique de consentement](policies/consent-policy-rule-building-reference.md)
 * Application des politiques {#enforcement}
    * [Présentation](enforcement/overview.md)
    * [Application automatique](enforcement/auto-enforcement.md)
    * [Application basée sur les API](enforcement/api-enforcement.md)
-* API du service MTLS{#mtls-api}
+* API du service MTLS {#mtls-api}
    * [Vue d’ensemble](mtls-api/overview.md)
    * [Prise en main](mtls-api/getting-started.md)
    * [Point d’entrée de certificat public](mtls-api/public-certificate-endpoint.md)
-* API Policy Service {#api}
-   * [Présentation](api/overview.md)
+* API Policy Service {#api}
+   * [Vue d’ensemble](api/overview.md)
    * [Prise en main](api/getting-started.md)
    * [Libellés](api/labels.md)
    * [Politiques](api/policies.md)
