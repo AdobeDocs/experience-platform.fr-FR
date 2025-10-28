@@ -4,9 +4,9 @@ title: Prévisualiser l’exemple de point d’entrée de l’API Statut (Aperç
 description: Le point d’entrée d’aperçu de statut d’échantillon de l’API Real-Time Customer Profile vous permet de prévisualiser le dernier exemple réussi de vos données de profil, de répertorier la distribution des profils par jeu de données et par identité et de générer des rapports présentant le chevauchement des jeux de données, le chevauchement des identités et les profils désassemblés.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d1eb9191c74add1ab21cd268327bab9a3255d182
 workflow-type: tm+mt
-source-wordcount: '2909'
+source-wordcount: '2904'
 ht-degree: 5%
 
 ---
@@ -37,12 +37,12 @@ Pour en savoir plus sur les profils et leur rôle dans Experience Platform, comm
 
 ## Déclenchement de l’exemple de traitement
 
-Lorsque les données activées pour le profil client en temps réel sont ingérées dans [!DNL Experience Platform], elles sont stockées dans la banque de données Profile. Lorsque l’ingestion d’enregistrements dans la banque de profils augmente ou réduit le nombre total de profils de plus de 5 %, une tâche d’échantillonnage est déclenchée pour mettre à jour le nombre. Le déclenchement de l’échantillon dépend du type d’ingestion utilisé :
+Lorsque les données activées pour le profil client en temps réel sont ingérées dans [!DNL Experience Platform], elles sont stockées dans la banque de données Profile. Lorsque l’ingestion d’enregistrements dans la banque de profils augmente ou réduit le nombre total de profils de plus de 3 %, une tâche d’échantillonnage est déclenchée pour mettre à jour le nombre. Le déclenchement de l’échantillon dépend du type d’ingestion utilisé :
 
-* Pour les **workflows de données en flux continu**, une vérification est effectuée toutes les heures pour déterminer si le seuil d’augmentation ou de diminution de 5 % a été atteint. Si c’est le cas, un exemple de tâche est automatiquement déclenché pour mettre à jour le décompte.
-* Pour l’**ingestion par lots**, dans les 15 minutes suivant l’ingestion réussie d’un lot dans la banque de profils, si le seuil d’augmentation ou de diminution de 5 % est atteint, une tâche est exécutée pour mettre à jour le nombre. À l’aide de l’API Profile, vous pouvez prévisualiser le dernier exemple de tâche réussie, ainsi que répertorier la distribution des profils par jeu de données et par espace de noms d’identité.
+* Pour les **workflows de données en flux continu**, une vérification est effectuée toutes les heures pour déterminer si le seuil d’augmentation ou de diminution de 3 % a été atteint. Si c’est le cas, un exemple de tâche est automatiquement déclenché pour mettre à jour le décompte.
+* Pour l’**ingestion par lots**, dans les 15 minutes suivant l’ingestion réussie d’un lot dans la banque de profils, si le seuil d’augmentation ou de diminution de 3 % est atteint, une tâche est exécutée pour mettre à jour le nombre. À l’aide de l’API Profile, vous pouvez prévisualiser le dernier exemple de tâche réussie, ainsi que répertorier la distribution des profils par jeu de données et par espace de noms d’identité.
 
-Les mesures Nombre de profils et Profils par espace de noms sont également disponibles dans la section [!UICONTROL Profils] de l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’accès aux données de profil à l’aide de l’interface utilisateur, consultez le [[!DNL Profile] guide de l’interface utilisateur](../ui/user-guide.md).
+Les mesures nombre de profils et profils par espace de noms sont également disponibles dans la section [!UICONTROL Profiles] de l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’accès aux données de profil à l’aide de l’interface utilisateur, consultez le [[!DNL Profile] guide de l’interface utilisateur](../ui/user-guide.md).
 
 ## Afficher le dernier statut d’échantillon {#view-last-sample-status}
 
@@ -299,7 +299,7 @@ La réponse inclut un tableau `data`, avec des objets individuels contenant les 
 | `fullIDsFragmentCount` | Nombre total de fragments de profil dans l’espace de noms. |
 | `fullIDsCount` | Nombre total de profils fusionnés dans l’espace de noms. |
 | `fullIDsPercentage` | Le `fullIDsCount` en pourcentage du total des profils fusionnés (la valeur `totalRows` telle qu’elle est renvoyée dans le [dernier état d’échantillon](#view-last-sample-status)), exprimé au format décimal. |
-| `code` | `code` de l’espace de noms. Vous pouvez le trouver lors de l’utilisation d’espaces de noms à l’aide de l’API Adobe Experience Platform Identity Service [&#128279;](../../identity-service/api/list-namespaces.md). Il est également appelé [!UICONTROL symbole d’identité] dans l’interface utilisateur d’Experience Platform. Pour en savoir plus, consultez la [présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md). |
+| `code` | `code` de l’espace de noms. Vous pouvez le trouver lors de l’utilisation d’espaces de noms à l’aide de l’API Adobe Experience Platform Identity Service [](../../identity-service/api/list-namespaces.md). Il est également appelé [!UICONTROL Identity symbol] dans l’interface utilisateur d’Experience Platform. Pour en savoir plus, consultez la [présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md). |
 | `value` | Valeur `id` pour l’espace de noms . Vous pouvez le trouver lorsque vous utilisez des espaces de noms à l’aide de l’[API Identity Service](../../identity-service/api/list-namespaces.md). |
 
 ## Génération du rapport de chevauchement de jeux de données
@@ -445,7 +445,7 @@ Une requête réussie renvoie le statut HTTP 200 (OK) et le rapport de chevauche
 | Propriété | Description |
 |---|---|
 | `data` | L’objet `data` contient des listes séparées par des virgules avec des combinaisons uniques de codes d’espace de noms d’identité et de leurs nombres de profils respectifs. |
-| Codes d’espace de noms | Le `code` est une forme abrégée pour chaque nom d’espace de noms d’identité. Vous trouverez un mappage de chaque `code` à son `name` à l’aide de l’API [Adobe Experience Platform Identity Service](../../identity-service/api/list-namespaces.md). Le `code` est également appelé [!UICONTROL symbole d’identité] dans l’interface utilisateur d’Experience Platform. Pour en savoir plus, consultez la [présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md). |
+| Codes d’espace de noms | Le `code` est une forme abrégée pour chaque nom d’espace de noms d’identité. Vous trouverez un mappage de chaque `code` à son `name` à l’aide de l’API [Adobe Experience Platform Identity Service](../../identity-service/api/list-namespaces.md). Le `code` est également appelé [!UICONTROL Identity symbol] dans l’interface utilisateur d’Experience Platform. Pour en savoir plus, consultez la [présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md). |
 | `reportTimestamp` | Date et heure du rapport. Si un paramètre de `date` a été fourni pendant la requête, le rapport renvoyé porte sur la date fournie. Si aucun paramètre `date` n’est fourni, le rapport le plus récent est renvoyé. |
 
 ### Interprétation du rapport de chevauchement des espaces de noms d’identité
