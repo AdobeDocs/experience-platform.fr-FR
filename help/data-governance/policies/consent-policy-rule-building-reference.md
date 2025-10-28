@@ -27,7 +27,7 @@ Veillez à respecter les conditions préalables suivantes :
 * **Configuration de la politique terminée** : vous avez créé ou commencé à créer une politique de consentement dans l’interface utilisateur de Adobe Experience Platform. Pour obtenir des instructions détaillées, consultez le guide d’utilisation des [politiques d’utilisation des données](user-guide.md#consent-policy).
 
 * **Connaissance des structures de données** : cette référence nécessite une connaissance pratique des concepts de base suivants :
-   * **XDM et schéma d’union** : comprenez comment les structures du modèle de données d’expérience définissent les relations de données et comment le schéma d’union représente les profils client unifiés. Consultez la [ Présentation du système XDM ](../../xdm/home.md) pour en savoir plus.
+   * **XDM et schéma d’union** : comprenez comment les structures du modèle de données d’expérience définissent les relations de données et comment le schéma d’union représente les profils client unifiés. Consultez la [&#x200B; Présentation du système XDM &#x200B;](../../xdm/home.md) pour en savoir plus.
    * **Cadre de gouvernance des données** : découvrez comment Adobe Experience Platform applique les politiques d’utilisation des données et les règles de gouvernance. Consultez la [présentation de la gouvernance des données](../home.md) pour plus d’informations.
    * **Traitement du consentement du client** : comprenez comment les données de consentement sont collectées, stockées et appliquées dans les workflows d’expérience client. Voir la [présentation du traitement du consentement](../../landing/governance-privacy-security/consent/adobe/overview.md).
 
