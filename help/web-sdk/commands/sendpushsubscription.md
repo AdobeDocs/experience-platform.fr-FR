@@ -125,4 +125,4 @@ La commande envoie les données de notification push au format suivant :
 
 - [Configurer les notifications push](configure/pushnotifications.md)
 - [Spécification de l’API Web Push](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)
-- [ API Service Worker ](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+- [&#x200B; API Service Worker &#x200B;](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
