@@ -38,8 +38,8 @@ npx @adobe/reactor-releaser
 
 >[!NOTE]
 > Par défaut, l’outil de libération attend des informations d’identification Adobe I/O pour un flux Oauth serveur à serveur. Informations d’identification de `jwt-auth` héritées
-> > peut être utilisé en exécutant `npx @adobe/reactor-releaser@v3.1.3` jusqu’à l’obsolescence le 1er janvier 2025. Paramètres requis
-> > pour exécuter la version `jwt-auth`, rendez-vous [ici](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
+> &#x200B;> peut être utilisé en exécutant `npx @adobe/reactor-releaser@v3.1.3` jusqu’à l’obsolescence le 1er janvier 2025. Paramètres requis
+> &#x200B;> pour exécuter la version `jwt-auth`, rendez-vous [ici](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
 
 L&#39;outil de libération nécessite que vous ne saisissiez que quelques informations. Les `clientId` et `clientSecret` peuvent être récupérés à partir de la console Adobe I/O. Accédez à la [page Intégrations](https://console.adobe.io/integrations) dans la console I/O. Sélectionnez l’organisation appropriée dans la liste déroulante, recherchez l’intégration appropriée et sélectionnez **[!UICONTROL View]**.
 

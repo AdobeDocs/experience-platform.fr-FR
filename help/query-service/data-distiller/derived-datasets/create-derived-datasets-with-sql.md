@@ -189,7 +189,7 @@ CREATE FIELDGROUP <field_group_name> [IF NOT EXISTS]  (field_name <data_type> pr
 >[!IMPORTANT]
 >
 >La création d’un groupe de champs via SQL échoue si l’indicateur `label` n’est pas fourni dans l’instruction ou si le groupe de champs existe déjà.
->>Assurez-vous que la requête inclut une clause `IF NOT EXISTS` pour éviter l’échec de la requête, car le groupe de champs existe déjà.
+>&#x200B;>Assurez-vous que la requête inclut une clause `IF NOT EXISTS` pour éviter l’échec de la requête, car le groupe de champs existe déjà.
 
 Un exemple concret peut ressembler à celui illustré ci-dessous.
 
@@ -199,7 +199,7 @@ CREATE FIELDGROUP field_group_for_test123 (decile1Month map<text, integer>, deci
 
 L’exécution réussie de cette instruction renvoie l’identifiant du groupe de champs créé. Par exemple `c731a1eafdfdecae1683c6dca197c66ed2c2b49ecd3a9525`.
 
-Pour plus d’informations sur les autres méthodes[ consultez la documentation sur la ](../../../xdm/ui/resources/field-groups.md#create)création d’un groupe de champs dans l’éditeur de schémas ou sur l’utilisation de l’API [schema Registry](../../../xdm/api/field-groups.md#create).
+Pour plus d’informations sur les autres méthodes[&#x200B; consultez la documentation sur la &#x200B;](../../../xdm/ui/resources/field-groups.md#create)création d’un groupe de champs dans l’éditeur de schémas ou sur l’utilisation de l’API [schema Registry](../../../xdm/api/field-groups.md#create).
 
 ### Déposer un groupe de champs
 

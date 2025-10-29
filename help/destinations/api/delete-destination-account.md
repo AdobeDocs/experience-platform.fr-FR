@@ -147,7 +147,7 @@ A successful response returns the current details of your connection including i
 >[!IMPORTANT]
 >
 >Avant de supprimer le compte de destination, vous devez supprimer tous les flux de données existants vers le compte de destination.
->>Pour supprimer des flux de données existants, reportez-vous aux pages ci-dessous :
+>&#x200B;>Pour supprimer des flux de données existants, reportez-vous aux pages ci-dessous :
 >
 >* [utiliser l’interface utilisateur d’Experience Platform](../ui/delete-destinations.md) pour supprimer des flux de données existants ;
 >* [Utilisez l’API Flow Service](delete-destination-dataflow.md) pour supprimer les flux de données existants.

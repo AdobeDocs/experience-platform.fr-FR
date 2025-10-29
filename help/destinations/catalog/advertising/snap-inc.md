@@ -127,7 +127,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 > 
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -140,7 +140,7 @@ Après avoir activé les audiences vers la destination *Snap Inc*, vous pourrez 
 
 ![Audiences](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Notez que lorsqu’une audience Adobe est activée pour la première fois sur Snap Inc, elle s’affiche initialement comme une audience vide. En effet, Adobe Experience Platform n’exporte pas les données des membres vers Snap Inc tant qu’il n’a pas évalué l’audience. Pour plus d’informations sur l’évaluation des audiences dans Experience Platform, reportez-vous à la [ présentation de Segmentation Service ](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
+Notez que lorsqu’une audience Adobe est activée pour la première fois sur Snap Inc, elle s’affiche initialement comme une audience vide. En effet, Adobe Experience Platform n’exporte pas les données des membres vers Snap Inc tant qu’il n’a pas évalué l’audience. Pour plus d’informations sur l’évaluation des audiences dans Experience Platform, reportez-vous à la [&#x200B; présentation de Segmentation Service &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

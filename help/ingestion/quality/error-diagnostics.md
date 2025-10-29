@@ -132,7 +132,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Réponse**
 
-Une réponse réussie renvoie des objets JSON contenant des objets `path` indiquant l’emplacement d’enregistrement des diagnostics. La réponse renvoie les objets `path` au format [ Lignes JSON ](https://jsonlines.readthedocs.io/en/latest/).
+Une réponse réussie renvoie des objets JSON contenant des objets `path` indiquant l’emplacement d’enregistrement des diagnostics. La réponse renvoie les objets `path` au format [&#x200B; Lignes JSON &#x200B;](https://jsonlines.readthedocs.io/en/latest/).
 
 ```json
 {"path": "F1.json"}

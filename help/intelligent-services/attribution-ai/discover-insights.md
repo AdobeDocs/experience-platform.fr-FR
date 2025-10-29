@@ -100,7 +100,7 @@ Ce filtre vous permet de sélectionner les régions que vous avez configurées a
 
 Vous pouvez ajouter des filtres supplémentaires en sélectionnant l’icône **filtre** pour ouvrir la fenêtre contextuelle de **[!UICONTROL Add filters]**. La fenêtre contextuelle **[!UICONTROL Add filters]** vous permet de filtrer par canal, géographie, type de média et produit. Seuls les filtres applicables pour une instance de service sont renseignés par la fenêtre contextuelle. Par exemple, si vous n’avez pas fourni de données géographiques ou de type de média, ces attributs de filtre ne seront pas disponibles pour votre instance.
 
-![ filtres supplémentaires ](./images/insights/additional-filters.png)
+![&#x200B; filtres supplémentaires &#x200B;](./images/insights/additional-filters.png)
 
 ![fenêtre contextuelle de filtre](./images/insights/filter-popover.png)
 

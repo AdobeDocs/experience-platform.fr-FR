@@ -458,7 +458,7 @@ productListItems     | array_distinct(productListItems)
 
 Les exemples suivants de fonctions d’ordre supérieur sont expliqués dans le cadre du cas d’utilisation de récupération d’enregistrements similaires. Un exemple et une explication de l’utilisation de chaque fonction sont fournis dans la section correspondante de ce document.
 
-L’exemple de fonction [`transform` couvre ](../use-cases/retrieve-similar-records.md#length-adjustment) segmentation en unités lexicales d’une liste de produits.
+L’exemple de fonction [`transform` couvre &#x200B;](../use-cases/retrieve-similar-records.md#length-adjustment) segmentation en unités lexicales d’une liste de produits.
 
 L’exemple de fonction [`filter`](../use-cases/retrieve-similar-records.md#filter-results) illustre une extraction plus affinée et plus précise des informations pertinentes à partir des données de texte.
 

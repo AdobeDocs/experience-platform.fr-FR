@@ -41,7 +41,7 @@ Un annonceur vise à cibler les utilisateurs et utilisatrices avec des audiences
 * Bien que le Adobe Experience Platform permette l’activation de plusieurs audiences vers une instance de destination ZMP spécifique, il est obligatoire que chaque instance de destination ZMP ne reçoive qu’une seule audience Experience Platform. Pour gérer plusieurs audiences à partir d’Experience Platform, créez des instances de destination ZMP supplémentaires pour chaque audience et sélectionnez une liste de clients différente dans la liste déroulante. Cette approche permet de s’assurer que les audiences ZMP cibles ne sont pas remplacées. Voir [Renseigner les détails de la destination](#destination-details) pour plus d’informations.
 * Utilisez les informations d’identification suivantes pour configurer la destination :
    * Nom d’utilisateur : **api**
-   * Mot de passe : votre clé API REST ZMP. Vous pouvez trouver votre clé API REST en vous connectant à votre compte ZMP et en accédant à la section **Paramètres** > **Intégrations** > **Clés et applications**. Pour plus d’informations[ consultez la ](https://knowledgebase.zetaglobal.com/kb/integrations) documentation ZMP .
+   * Mot de passe : votre clé API REST ZMP. Vous pouvez trouver votre clé API REST en vous connectant à votre compte ZMP et en accédant à la section **Paramètres** > **Intégrations** > **Clés et applications**. Pour plus d’informations[&#x200B; consultez la &#x200B;](https://knowledgebase.zetaglobal.com/kb/integrations) documentation ZMP .
 
 ## Identités prises en charge {#supported-identities}
 
@@ -94,7 +94,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 Pour vous authentifier auprès de la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Connect to destination]**.
 
 * **[!UICONTROL Username]** : `api`
-* **[!UICONTROL Password]** : votre clé API REST ZMP. Vous pouvez trouver votre clé API REST en vous connectant à votre compte ZMP et en accédant à la section **Paramètres** > **Intégrations** > **Clés et applications**. Pour plus d’informations[ consultez la ](https://knowledgebase.zetaglobal.com/kb/integrations) documentation ZMP .
+* **[!UICONTROL Password]** : votre clé API REST ZMP. Vous pouvez trouver votre clé API REST en vous connectant à votre compte ZMP et en accédant à la section **Paramètres** > **Intégrations** > **Clés et applications**. Pour plus d’informations[&#x200B; consultez la &#x200B;](https://knowledgebase.zetaglobal.com/kb/integrations) documentation ZMP .
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -118,7 +118,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 > 
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez [Activer les profils et les segments vers les destinations d’exportation de segments de diffusion en continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
@@ -155,4 +155,4 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ## Ressources supplémentaires {#additional-resources}
 
-* [ Base de connaissances Zeta ](https://knowledgebase.zetaglobal.com/kb/)
+* [&#x200B; Base de connaissances Zeta &#x200B;](https://knowledgebase.zetaglobal.com/kb/)

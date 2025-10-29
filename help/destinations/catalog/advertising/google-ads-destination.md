@@ -77,7 +77,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 >[!NOTE]
 >
 >La liste autorisée est obligatoire avant de configurer votre première destination [!DNL Google Ads] dans Experience Platform. Assurez-vous que le processus de liste autorisée décrit ci-dessous a été terminé par [!DNL Google] avant de créer une destination.
->>Une exception à cette règle s’applique aux clients d’[Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=fr). Si vous avez déjà créé une connexion à cette destination Google dans Audience Manager, il n’est pas nécessaire de passer à nouveau par le processus de liste autorisée et vous pouvez passer directement aux étapes suivantes.
+>&#x200B;>Une exception à cette règle s’applique aux clients d’[Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=fr). Si vous avez déjà créé une connexion à cette destination Google dans Audience Manager, il n’est pas nécessaire de passer à nouveau par le processus de liste autorisée et vous pouvez passer directement aux étapes suivantes.
 
 Avant de créer la destination [!DNL Google Ads] dans Experience Platform, vous devez contacter [!DNL Google] pour qu’Adobe soit placé sur la liste des fournisseurs de données autorisés et pour que votre compte soit ajouté à la place sur la liste autorisée. Contactez [!DNL Google] et fournissez les informations suivantes :
 
@@ -131,6 +131,6 @@ Lors de la configuration de cette destination, vous risquez de recevoir l’erre
 
 Cette erreur se produit lorsque les comptes clients ne respectent pas les [conditions préalables](#prerequisites) ou lorsque les clientes et clients tentent de configurer la destination sans un compte [!DNL Google Ads] existant.
 
-[!DNL Google] a abandonné les nouvelles intégrations de cookies [!DNL Google Ads] avec des fournisseurs tiers. Pour effectuer les étapes de [place sur la liste autorisée ](#allow-listing), vous devez disposer d&#39;une intégration existante avec [!DNL Google Ads].
+[!DNL Google] a abandonné les nouvelles intégrations de cookies [!DNL Google Ads] avec des fournisseurs tiers. Pour effectuer les étapes de [place sur la liste autorisée &#x200B;](#allow-listing), vous devez disposer d&#39;une intégration existante avec [!DNL Google Ads].
 
 L’approche recommandée pour l’utilisation de [!DNL Google Ads] est de configurer une intégration [[!DNL Google Customer Match]](google-customer-match.md).
