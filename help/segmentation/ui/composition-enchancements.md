@@ -3,7 +3,7 @@ title: Améliorations de la composition de l’audience
 description: Découvrez les améliorations apportées à la composition de l’audience avec l’enrichissement de l’audience et une activation plus rapide.
 hide: true
 hidefromtoc: true
-source-git-commit: 9c790f0b47161301fa8c02c4afb7edfb925e1499
+source-git-commit: 065990790307124e0992731139abe9641a742a1b
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 0%
@@ -48,12 +48,16 @@ Gardez les détails et mécanismes de sécurisation suivants à l’esprit lors 
 - Le premier bloc utilisé dans la composition **doit** est une audience basée sur des règles.
 - Vous **ne pouvez pas** utiliser d’autres opérations dans la composition.
 - Une fois publiée, vous **pouvez pas** la composition sur l’audience basée sur des règles.
+
    - Vous *pouvez* copier la composition dans un brouillon et modifier le brouillon si vous souhaitez apporter des modifications à la composition de base ou à l’audience basée sur des règles.
+
 - Un seul tableau d’objets **one** peut être utilisé pour générer la payload d’enrichissement dans une seule audience
+
    - Le tableau de payload peut être imbriqué dans un objet (jusqu’à sept calques dans le schéma de profil), mais **ne peut pas** être contenu dans un autre tableau.
    - Le tableau de payload **doit** comporte 50 lignes ou moins.
    - Toutes les colonnes générées dans la payload **doivent** sont d’un type primitif.
    - Seules les **vingt premières colonnes** tableau sont générées.
+
 - Seules **dix** compositions d’audience sont disponibles pour le moment
 
 ## Activation plus rapide {#faster-activation}
