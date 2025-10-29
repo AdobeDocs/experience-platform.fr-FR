@@ -177,7 +177,7 @@ Pour maintenir la qualité et la cohérence des données, l’interface utilisat
 
 Pour définir la condition, cochez les cases correspondant aux valeurs que la politique doit évaluer.
 
-![&#x200B; La boîte de dialogue « Sélectionner le champ de schéma d’union » avec un champ de schéma et les cases à cocher à valeur fixe disponibles en surbrillance.](../images/policies/select-schema-field.png)
+![ La boîte de dialogue « Sélectionner le champ de schéma d’union » avec un champ de schéma et les cases à cocher à valeur fixe disponibles en surbrillance.](../images/policies/select-schema-field.png)
 
 #### Mapper des champs de type données pour une condition de politique {#map-data-type-fields}
 
@@ -285,4 +285,4 @@ Ce document offre un aperçu de la gestion des politiques d’utilisation des do
 
 La vidéo qui suit montre comment utiliser les politiques d’utilisation dans l’interface utilisateur [!DNL Experience Platform] :
 
->[!VIDEO](https://video.tv.adobe.com/v/37130?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
