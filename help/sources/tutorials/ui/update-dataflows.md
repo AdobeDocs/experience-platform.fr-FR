@@ -2,10 +2,10 @@
 description: Découvrez comment mettre à jour un flux de données de sources existant dans l’interface utilisateur d’Experience Platform.
 title: Mettre à jour un flux de données de connexion Source dans l’interface utilisateur
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4c4f221a5060360fa0381c8532227e854ad40a77
 workflow-type: tm+mt
-source-wordcount: '768'
-ht-degree: 10%
+source-wordcount: '885'
+ht-degree: 9%
 
 ---
 
@@ -27,7 +27,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 >title="Expiration du jeu de données"
 >abstract="Cette colonne indique le nombre de jours restants au jeu de données cible avant son expiration automatique.<br>Un flux de données échoue si le jeu de données cible expire. Pour éviter l’échec d’un flux de données, assurez-vous qu’un jeu de données cible est défini pour expirer à la date correcte. Consultez la documentation pour savoir comment mettre à jour les dates d’expiration."
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Flux de données]** dans l’en-tête supérieur.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Dataflows]** dans l’en-tête supérieur.
 
 ![Le catalogue des sources avec l’onglet en-tête des flux de données sélectionné.](../../images/tutorials/update-dataflows/catalog.png)
 
@@ -35,13 +35,13 @@ Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONT
 >
 >Vous pouvez trier et filtrer vos flux de données à l’aide des fonctionnalités de filtrage . Lisez le guide sur le [filtrage des objets sources dans l’interface utilisateur](./filter.md) pour plus d’informations.
 
-La page [!UICONTROL Flux de données] affiche une liste de tous les flux de données existants de votre organisation. Recherchez le flux de données à mettre à jour, puis sélectionnez les points de suspension (`...`) en regard. Un menu déroulant s’affiche, affichant une liste d’options parmi lesquelles vous pouvez choisir, afin d’effectuer des configurations supplémentaires dans votre flux de données existant.
+La page [!UICONTROL Dataflows] affiche une liste de tous les flux de données existants de votre organisation. Recherchez le flux de données à mettre à jour, puis sélectionnez les points de suspension (`...`) en regard. Un menu déroulant s’affiche, affichant une liste d’options parmi lesquelles vous pouvez choisir, afin d’effectuer des configurations supplémentaires dans votre flux de données existant.
 
-Pour mettre à jour votre flux de données, sélectionnez **[!UICONTROL Mettre à jour le flux de données]**.
+Pour mettre à jour votre flux de données, sélectionnez **[!UICONTROL Update dataflow]**.
 
 ![Menu déroulant dans lequel les options de mise à jour des flux de données sont répertoriées.](../../images/tutorials/update-dataflows/dropdown_update.png)
 
-Vous accédez au workflow des sources où vous pouvez procéder à la mise à jour d’aspects de votre flux de données, y compris ses détails dans l’étape [!UICONTROL Fournir des détails du flux de données].
+Vous accédez au workflow des sources où vous pouvez procéder à la mise à jour d’aspects de votre flux de données, y compris ses détails dans l’étape [!UICONTROL Provide dataflow details].
 
 ### Mettre à jour le mappage {#update-mapping}
 
@@ -61,21 +61,30 @@ Une fois que vous avez mis à jour les mappages de votre flux de données, vous 
 
 Vous pouvez également mettre à jour le planning de l’ingestion de votre flux de données à l’aide de l’option de mise à jour en ligne fournie dans la page flux de données .
 
-Sur la page Flux de données , sélectionnez les points de suspension (`...`) à côté du nom du flux de données, puis sélectionnez **[!UICONTROL Modifier le planning]** dans le menu déroulant qui s’affiche.
+Sur la page flux de données , sélectionnez les points de suspension (`...`) à côté du nom du flux de données, puis sélectionnez **[!UICONTROL Edit schedule]** dans le menu déroulant qui s’affiche.
 
 ![Étape de planification du workflow des sources. Utilisez cette étape pour mettre à jour le planning de votre flux de données.](../../images/tutorials/update-dataflows/dropdown_edit.png)
 
-La boîte de dialogue **[!UICONTROL Modifier le planning]** vous propose des options pour mettre à jour la fréquence d’ingestion et le taux d’intervalle de votre flux de données. Une fois que vous avez défini les valeurs de fréquence et d’intervalle mises à jour, sélectionnez **[!UICONTROL Enregistrer]**.
+La boîte de dialogue **[!UICONTROL Edit schedule]** vous propose des options pour mettre à jour la fréquence d’ingestion et le taux d’intervalle de votre flux de données. Une fois que vous avez défini les valeurs de fréquence et d’intervalle mises à jour, sélectionnez **[!UICONTROL Save]**.
 
 ![Fenêtre pop-up que vous pouvez utiliser pour modifier le planning d’ingestion de votre flux de données.](../../images/tutorials/update-dataflows/edit_schedule.png)
 
+Lisez la section suivante pour plus d’informations sur le fonctionnement des plannings d’ingestion hebdomadaires.
+
+#### Comprendre le planning d’ingestion hebdomadaire {#weekly}
+
+Lorsque vous choisissez de définir votre flux de données pour qu’il s’exécute selon un planning hebdomadaire, le flux de données s’exécute en fonction de l’un des scénarios suivants :
+
+* Si votre source de données a été créée mais qu’aucune donnée n’a encore été ingérée, le premier flux de données hebdomadaire s’exécute 7 jours après la date de création de la source. Cet intervalle de 7 jours commence toujours à partir de la création de la source, quelle que soit la date à laquelle vous avez configuré le planning. Après l’exécution initiale, le flux de données continue à s’exécuter toutes les semaines selon le planning configuré.
+* Si les données de votre source ont déjà été ingérées et que vous planifiez une nouvelle ingestion hebdomadaire, le flux de données suivant s’exécutera 7 jours après la dernière ingestion réussie.
+
 ### Désactiver le flux de données
 
-Vous pouvez désactiver votre flux de données à l’aide du même menu déroulant. Pour désactiver votre flux de données, sélectionnez **[!UICONTROL Désactiver le flux de données]**.
+Vous pouvez désactiver votre flux de données à l’aide du même menu déroulant. Pour désactiver votre flux de données, sélectionnez **[!UICONTROL Disable dataflow]**.
 
 ![Le menu déroulant avec l’option permettant de désactiver le flux de données.](../../images/tutorials/update-dataflows/dropdown_disable.png)
 
-Sélectionnez ensuite [!UICONTROL Désactiver] dans la fenêtre pop-up qui s’affiche.
+Sélectionnez ensuite [!UICONTROL Disable] dans la fenêtre pop-up qui s’affiche.
 
 ![Fenêtre pop-up dans laquelle vous devez confirmer que vous souhaitez désactiver votre flux de données.](../../images/tutorials/update-dataflows/disable_dataflow.png)
 

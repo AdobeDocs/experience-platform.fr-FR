@@ -5,10 +5,10 @@ title: Créer un flux de données à l’aide d’un Source de base de données 
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Experience Platform. Ce tutoriel décrit les étapes à suivre pour créer un flux de données pour une source de base de données à l’aide de l’interface utilisateur Experience Platform.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
+source-git-commit: 6de14e210b78b321ed7d2c4c30769c260694f474
 workflow-type: tm+mt
-source-wordcount: '1653'
-ht-degree: 20%
+source-wordcount: '1787'
+ht-degree: 18%
 
 ---
 
@@ -86,7 +86,7 @@ Lorsque vous avez terminé de renseigner votre flux de données, sélectionnez *
 
 L’étape [!UICONTROL Mapping] s’affiche, vous fournissant une interface pour mapper les champs source de votre schéma source à leurs champs XDM cibles appropriés dans le schéma cible.
 
-Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [&#x200B; Guide de l’interface utilisateur de la préparation des données &#x200B;](../../../../data-prep/ui/mapping.md).
+Experience Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [ Guide de l’interface utilisateur de la préparation des données ](../../../../data-prep/ui/mapping.md).
 
 >[!NOTE]
 >
@@ -120,13 +120,20 @@ Pour plus d’informations sur les configurations de planification, consultez le
 
 | Configuration de la planification | Description |
 | --- | --- |
-| Fréquence | Configurez la fréquence pour indiquer la fréquence d’exécution du flux de données. Vous pouvez définir la fréquence sur : <ul><li>**Une fois** : définissez votre fréquence sur `once` pour créer une ingestion unique. Les configurations d’intervalle et de renvoi ne sont pas disponibles lors de la création d’un flux de données d’ingestion unique. Par défaut, la fréquence de planification est définie sur une seule fois.</li><li>**Minute** : définissez la fréquence sur `minute` pour planifier le flux de données afin d’ingérer les données par minute.</li><li>**Heure** : définissez la fréquence sur `hour` pour planifier l’ingestion des données par flux et par heure.</li><li>**Jour** : définissez la fréquence sur `day` pour planifier l’ingestion de données par jour dans le flux de données.</li><li>**Semaine** : définissez la fréquence sur `week` pour planifier l’ingestion de données par semaine dans le flux de données.</li></ul> |
+| Fréquence | Configurez la fréquence pour indiquer la fréquence d’exécution du flux de données. Vous pouvez définir la fréquence sur : <ul><li>**Une fois** : définissez votre fréquence sur `once` pour créer une ingestion unique. Les configurations d’intervalle et de renvoi ne sont pas disponibles lors de la création d’un flux de données d’ingestion unique. Par défaut, la fréquence de planification est définie sur une seule fois.</li><li>**Minute** : définissez la fréquence sur `minute` pour planifier le flux de données afin d’ingérer les données par minute.</li><li>**Heure** : définissez la fréquence sur `hour` pour planifier l’ingestion des données par flux et par heure.</li><li>**Jour** : définissez la fréquence sur `day` pour planifier l’ingestion de données par jour dans le flux de données.</li><li>**Semaine** : définissez la fréquence sur `week` pour planifier l’ingestion de données par semaine dans le flux de données. Pour plus d’informations, consultez la section sur [Présentation du planning d’ingestion hebdomadaire] (#weekly).</li></ul> |
 | Intervalle | Une fois que vous avez sélectionné une fréquence, vous pouvez configurer le paramètre d’intervalle afin d’établir la période entre chaque ingestion. Par exemple, si vous définissez la fréquence sur jour et configurez l’intervalle sur 15, votre flux de données s’exécutera tous les 15 jours. Vous ne pouvez pas définir l’intervalle sur zéro. La valeur d’intervalle minimale acceptée pour chaque fréquence est la suivante :<ul><li>**Une fois** : s.o.</li><li>**Minute** : 15</li><li>**Heure** : 1</li><li>**Jour** : 1</li><li>**Semaine** : 1</li></ul> |
 | Heure de début | Date et heure de l’exécution projetée, présentées dans le fuseau horaire UTC. |
 | Renvoyer | Le renvoi détermine les données initialement ingérées. Si le renvoi est activé, tous les fichiers actuels du chemin spécifié seront ingérés lors de la première ingestion planifiée. Si le renvoi est désactivé, seuls les fichiers chargés entre la première exécution de l’ingestion et l’heure de début sont ingérés. Les fichiers chargés avant l’heure de début ne seront pas ingérés. |
 | Charger les données incrémentielles par | Une option avec un ensemble filtré de champs de schéma source de type, date ou heure. Le champ que vous sélectionnez pour **[!UICONTROL Load incremental data by]** doit avoir ses valeurs de date et d’heure dans le fuseau horaire UTC pour charger correctement les données incrémentielles. Toutes les sources de lots basées sur une table prélèvent des données incrémentielles en comparant une valeur d’horodatage de colonne delta à l’heure UTC de la fenêtre d’exécution de flux correspondante, puis en copiant les données de la source, si de nouvelles données sont trouvées dans la fenêtre temporelle UTC. |
 
 ![renvoi](../../../images/tutorials/dataflow/table-based/backfill.png)
+
+### Comprendre le planning d’ingestion hebdomadaire {#weekly}
+
+Lorsque vous choisissez de définir votre flux de données pour qu’il s’exécute selon un planning hebdomadaire, le flux de données s’exécute en fonction de l’un des scénarios suivants :
+
+* Si votre source de données a été créée mais qu’aucune donnée n’a encore été ingérée, le premier flux de données hebdomadaire s’exécute 7 jours après la date de création de la source. Cet intervalle de 7 jours commence toujours à partir de la création de la source, quelle que soit la date à laquelle vous avez configuré le planning. Après l’exécution initiale, le flux de données continue à s’exécuter toutes les semaines selon le planning configuré.
+* Si les données de votre source ont déjà été ingérées et que vous planifiez une nouvelle ingestion hebdomadaire, le flux de données suivant s’exécutera 7 jours après la dernière ingestion réussie.
 
 ## Vérifier le flux de données
 
