@@ -13,7 +13,7 @@ ht-degree: 22%
 
 ## Vue d’ensemble {#overview}
 
-La destination Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) vous permet de partager des audiences propriétaires authentifiées avec des annonceurs et des utilisateurs approuvés pour l’activation de la campagne avec DSP. Pour en savoir plus sur l’intégration de Real-Time CDP à DSP, voir [À propos de l’activation d’audiences authentifiées à partir de sources d’audience](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
+La destination Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) vous permet de partager des audiences propriétaires authentifiées avec des annonceurs et des utilisateurs approuvés pour l’activation de la campagne avec DSP. Pour en savoir plus sur l’intégration de Real-Time CDP à DSP, voir [À propos de l’activation d’audiences authentifiées à partir de sources d’audience](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html?lang=fr).
 
 >[!IMPORTANT]
 >
@@ -35,8 +35,8 @@ Une agence de médias disposant d’un compte DSP mène une campagne de reciblag
 
 * Paramètres au niveau du compte DSP et au niveau de la campagne pour activer le partage d’audience avec [!DNL LiveRamp RampID], qui traduira les données client en [!DNL RampIDs] afin de créer des segments cibles. Votre équipe de compte DSP effectuera cette configuration. [!DNL RampID] est disponible via un partenariat entre DSP et [!DNL LiveRamp], et vous n’avez pas besoin de votre propre adhésion [!DNL LiveRamp] pour l’utiliser.
 * Identifiant d’organisation Experience Cloud du compte Experience Platform. Votre identifiant figure sur la page de votre profil utilisateur [!DNL Real-Time CDP].
-* Une [[!DNL Real-Time CDP] source dans DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) pour recevoir les audiences pour l’activation de la campagne. Votre équipe de compte DSP créera la source à l’aide de votre ID d’organisation Experience Cloud.
-* La clé source du compte ou de l’annonceur DSP, qui est générée lorsqu’une [[!DNL Real-Time CDP] source est créée dans DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). L’équipe de votre compte DSP partagera cette clé avec vous. Vous l’utiliserez dans Experience Platform pour créer une connexion de destination à la destination Advertising Cloud DSP, comme [expliqué ci-dessous](#authenticate).
+* Une [[!DNL Real-Time CDP] source dans DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=fr) pour recevoir les audiences pour l’activation de la campagne. Votre équipe de compte DSP créera la source à l’aide de votre ID d’organisation Experience Cloud.
+* La clé source du compte ou de l’annonceur DSP, qui est générée lorsqu’une [[!DNL Real-Time CDP] source est créée dans DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=fr). L’équipe de votre compte DSP partagera cette clé avec vous. Vous l’utiliserez dans Experience Platform pour créer une connexion de destination à la destination Advertising Cloud DSP, comme [expliqué ci-dessous](#authenticate).
 * Données client composées d’e-mails ou d’e-mails hachés.
 
 ## Identités prises en charge {#supported-identities}
@@ -72,7 +72,7 @@ Pour vous connecter à la destination, suivez les instructions [création d’un
 
 Pour vous connecter à la destination, indiquez le paramètre suivant dans la section [!UICONTROL Connection type], puis sélectionnez **[!UICONTROL Connect to destination]**. :
 
-* **[!UICONTROL Account or Advertiser Key]** : ce [!UICONTROL Source Key] est généré lorsqu’une [[!DNL Real-Time CDP]  source est créée dans l’interface utilisateur de DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). L’équipe de votre compte DSP partagera cette clé avec vous après la création de la source.
+* **[!UICONTROL Account or Advertiser Key]** : ce [!UICONTROL Source Key] est généré lorsqu’une [[!DNL Real-Time CDP]  source est créée dans l’interface utilisateur de DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=fr). L’équipe de votre compte DSP partagera cette clé avec vous après la création de la source.
 
 ![&#x200B; Champ de type de connexion &#x200B;](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 

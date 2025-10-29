@@ -13,7 +13,7 @@ ht-degree: 13%
 
 # Fonctions SQL définies par Adobe dans Query Service
 
-Les fonctions définies par Adobe, appelées ADF, sont des fonctions préconfigurées dans Adobe Experience Platform Query Service qui permettent d’effectuer des tâches courantes liées à l’activité sur les données [!DNL Experience Event]. Il s’agit notamment de fonctions de [sessionisation](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) et [attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) comme celles d’Adobe Analytics.
+Les fonctions définies par Adobe, appelées ADF, sont des fonctions préconfigurées dans Adobe Experience Platform Query Service qui permettent d’effectuer des tâches courantes liées à l’activité sur les données [!DNL Experience Event]. Il s’agit notamment de fonctions de [sessionisation](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=fr) et [attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=fr) comme celles d’Adobe Analytics.
 
 Ce document fournit des informations sur les fonctions définies par Adobe disponibles dans [!DNL Query Service].
 
@@ -47,7 +47,7 @@ Lorsque vous utilisez des données [!DNL Experience Event] provenant d’un site
 
 Ce regroupement, ou sessionnalisation des données, permet d’associer les événements pour découvrir plus de contexte sur l’expérience client.
 
-Pour plus d’informations sur la sessionnalisation dans Adobe Analytics, consultez la documentation sur les [sessions adaptées au contexte](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
+Pour plus d’informations sur la sessionnalisation dans Adobe Analytics, consultez la documentation sur les [sessions adaptées au contexte](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=fr).
 
 **Syntaxe de la requête**
 
