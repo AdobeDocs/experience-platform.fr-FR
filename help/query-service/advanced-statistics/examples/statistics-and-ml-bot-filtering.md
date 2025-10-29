@@ -1,7 +1,8 @@
 ---
 title: Filtrage des robots à l’aide des statistiques et du machine learning
 description: Découvrez comment utiliser les statistiques Data Distiller et le machine learning pour identifier et filtrer l’activité des robots afin d’assurer des analyses précises et une intégrité des données améliorée.
-source-git-commit: a8abbf61bdc646c0834c296a64b27c71c98ea1d3
+exl-id: 30d98281-7d15-47a6-b365-3baa07356010
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1623'
 ht-degree: 0%
@@ -179,7 +180,7 @@ Pour transformer votre jeu de données et configurer votre modèle de machine le
 1. Pour remplir des valeurs nulles dans des colonnes numériques, de chaîne et booléennes, utilisez respectivement des fonctions `numeric_imputer`, `string_imputer` et `boolean_imputer`. Cette étape permet à l’algorithme de machine learning de traiter les données sans erreurs.
 2. Appliquez des transformations de fonction pour préparer les données pour la modélisation. Appliquez des `binarized`, des `quantile_discretizer` ou des `string_indexer` pour classer ou normaliser les colonnes. Ensuite, alimentez la sortie des imputeurs (`numeric_imputer` et `string_imputer`) dans des transformateurs ultérieurs tels que `string_indexer` ou `quantile_discretizer` pour créer des caractéristiques significatives.
 3. Utilisez la fonction `vector_assembler` pour combiner les colonnes transformées en une seule colonne de fonction. Mettez ensuite à l’échelle les fonctions à l’aide de `min_max_scaler` pour normaliser les valeurs afin d’améliorer les performances du modèle. Remarque : dans l’exemple SQL, la dernière transformation mentionnée dans la clause TRANSFORM devient la colonne de fonction utilisée par le modèle de machine learning.
-4. Spécifiez le type de modèle et tout autre hyperparamètre dans la clause d&#39;OPTIONS. Par exemple, `decision_tree_classifier` a été choisi ici, car il s’agit d’un problème de classification. D’autres paramètres tels que `max_depth` ont été ajustés (`MAX_DEPTH=4`) pour ajuster le modèle afin d’obtenir de meilleures performances.
+4. Spécifiez le type de modèle et tout autre hyperparamètre de la clause OPTIONS. Par exemple, `decision_tree_classifier` a été choisi ici, car il s’agit d’un problème de classification. D’autres paramètres tels que `max_depth` ont été ajustés (`MAX_DEPTH=4`) pour ajuster le modèle afin d’obtenir de meilleures performances.
 5. Combinez les fonctionnalités et libellez les données de sortie. Utilisez la clause SELECT pour spécifier le jeu de données pour l’entraînement. Cette clause doit inclure les colonnes de fonction (`count_per_id`, `web`, `id`) et la colonne de libellé (`isBot`), qui indique si une action est susceptible d’être un robot.
 
 Votre instruction peut ressembler à l’exemple ci-dessous.
@@ -209,7 +210,7 @@ Dans les résultats affichés ci-dessous, le modèle `bot_filtering_model` est c
 
 ```console
            Created Model ID           |       Created Model       | Version
---------------------------------------+---------------------------+---------
+|--------------------------------------+---------------------------+---------
  2fb4b49e-d35c-44cf-af19-cc210e7dc72c | bot_filtering_model       |       1
 ```
 
@@ -244,7 +245,7 @@ La réponse inclut des mesures telles que la précision, la précision, le rappe
 
 ```console
 auc_roc | accuracy | precision | recall
----------+----------+-----------+--------
+|---------+----------+-----------+--------
      1.0 |      1.0 |       1.0 |    1.0
 ```
 
@@ -282,7 +283,7 @@ La réponse inclut des prédictions pour chaque utilisateur (`id`), ainsi que de
 
 ```console
          id          | count.one_minute | count.five_minute | count.thirty_minute |                                                                  web.webpagedetails.name                                                                  | prediction
----------------------+------------------+-------------------+---------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------
+|---------------------+------------------+-------------------+---------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------
                      |              110 |                   |                     |   4UNDilcY5VAgu2pRmX4/gtVnj+YxDDQaJd1G8p8WX46//wYcrHy+APUN0I556E80j1gIzFmilA6DV4s0Zcs4ruiP36gLgC7bj4TH0q6LU0E=                                             |        1.0  
                      |              105 |                   |                     |   lrSaZk04Yq+5P9+6l4BohwXik0s0/XeW9X28ZgWt1yj1QQztiAt9Qgt2WYrWcAeoGZChAJw/l8e4ojZDT5WHCjteSt35S01Vv1JzDGPAg+IyhIzMTsVyLpW8WWpXjJoMCt6Tv7fFdF73EIH+IrK5fA== |        1.0
  2553215812530219515 |               99 |                 1 |                   1 |   KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg==                                                                 |        1.0

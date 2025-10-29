@@ -3,10 +3,10 @@ title: Connexion CRM The Trade Desk
 description: Activez les profils sur votre compte Trade Desk pour le ciblage et la suppression d'audiences en fonction des données CRM.
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1122'
-ht-degree: 17%
+source-wordcount: '1088'
+ht-degree: 15%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 17%
 >[!IMPORTANT]
 >
 >Avec la publication de l’EUID (European Unified ID), deux destinations [!DNL The Trade Desk - CRM] dans le [catalogue de destinations](/help/destinations/catalog/overview.md) sont maintenant affichées.
+>
 >* Si vos données proviennent de l’UE, utilisez la destination **[!DNL The Trade Desk - CRM (EU)]**.
 >* Si vos données proviennent des régions APAC ou NAMER, utilisez la destination **[!DNL The Trade Desk - CRM (NAMER & APAC)]**.
 >
@@ -74,9 +75,9 @@ Si vous choisissez de hacher les adresses e-mail vous-même, veillez à respecte
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
----------|----------|---------|
-| Type d’exportation | **[!UICONTROL Export d’audience]** | Vous exportez tous les membres d’une audience avec les identifiants (e-mail ou e-mail haché) utilisés dans la destination Trade Desk. |
-| Fréquence des exportations | **[!UICONTROL Lot quotidien]** | Lorsqu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation de l’audience, le profil (les identités) est mis à jour une fois par jour en aval de la plateforme de destination. En savoir plus sur les [&#x200B; exportations par lots &#x200B;](/help/destinations/destination-types.md#file-based). |
+|---------|----------|---------|
+| Type d’exportation | **[!UICONTROL Audience export]** | Vous exportez tous les membres d’une audience avec les identifiants (e-mail ou e-mail haché) utilisés dans la destination Trade Desk. |
+| Fréquence des exportations | **[!UICONTROL Daily Batch]** | Lorsqu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation de l’audience, le profil (les identités) est mis à jour une fois par jour en aval de la plateforme de destination. En savoir plus sur les [ exportations par lots ](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -90,10 +91,10 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 Avant de pouvoir envoyer ou activer des données d’audience vers une destination, vous devez configurer une connexion à votre propre plateforme de destination. Pendant la [configuration](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=fr) de cette destination, vous devez fournir les informations suivantes :
 
-* **[!UICONTROL Type de compte]** : veuillez choisir l’option **[!UICONTROL Compte existant]**.
-* **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
-* **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL ID publicitaire]** : votre [!DNL Trade Desk Advertiser ID], qui peut être partagé par votre gestionnaire de compte [!DNL Trade Desk] ou qui se trouve sous [!DNL Advertiser Preferences] dans l’interface utilisateur de [!DNL Trade Desk].
+* **[!UICONTROL Account Type]** : Merci de choisir l&#39;option **[!UICONTROL Existing Account]**.
+* **[!UICONTROL Name]** : nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
+* **[!UICONTROL Advertiser ID]** : votre [!DNL Trade Desk Advertiser ID], qui peut être partagée par votre gestionnaire de compte [!DNL Trade Desk] ou qui se trouve sous [!DNL Advertiser Preferences] dans l’interface utilisateur de [!DNL Trade Desk].
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform montrant comment remplir les détails de destination.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
@@ -103,12 +104,12 @@ Lors de la connexion à la destination , la définition d’une politique de gou
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Lisez [Activer les données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers une destination.
 
-Sur la page **[!UICONTROL Planification]**, vous pouvez configurer le planning et les noms des fichiers pour chaque audience que vous exportez. La configuration du planning est obligatoire, mais la configuration du nom de fichier est facultative.
+Dans la page **[!UICONTROL Scheduling]** , vous pouvez configurer le planning et les noms des fichiers pour chaque audience que vous exportez. La configuration du planning est obligatoire, mais la configuration du nom de fichier est facultative.
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform pour planifier l’activation de l’audience.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
@@ -118,7 +119,7 @@ Sur la page **[!UICONTROL Planification]**, vous pouvez configurer le planning e
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform pour planifier l’activation de l’audience.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
-Sur la page **[!UICONTROL Mappage]**, vous devez sélectionner des attributs ou des espaces de noms d’identité dans la colonne source et les mapper à la colonne cible.
+Dans la page **[!UICONTROL Mapping]**, vous devez sélectionner des attributs ou des espaces de noms d’identité dans la colonne source et les mapper à la colonne cible.
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform pour mapper l’activation des audiences.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
@@ -142,8 +143,8 @@ Sélection des champs cibles :
 
 Pour vérifier que les données sont correctement exportées hors d’Experience Platform et vers [!DNL The Trade Desk], recherchez les audiences sous la mosaïque de données Adobe 1PD dans [!DNL The Trade Desk] Data Management Platform (DMP). Pour trouver l’identifiant correspondant dans l’interface utilisateur de [!DNL Trade Desk], procédez comme suit :
 
-1. Sélectionnez tout d’abord l’onglet **[!UICONTROL Données]**, puis passez en revue la section **[!UICONTROL Propriétaire]**.
-2. Faites défiler la page vers le bas, sous **[!UICONTROL Données importées]**, vous trouverez la **[!UICONTROL vignette Adobe 1PD]**.
+1. Sélectionnez tout d’abord l’onglet **[!UICONTROL Data]** , puis passez en revue la section **[!UICONTROL First-Party]** .
+2. Faites défiler la page vers le bas, sous **[!UICONTROL Imported Data]**, vous trouverez le **[!UICONTROL Adobe 1PD Tile]** .
 3. Cliquez sur la mosaïque **[!UICONTROL Adobe 1PD]** pour répertorier toutes les audiences activées vers la destination [!DNL Trade Desk] pour votre annonceur. Vous pouvez également utiliser la fonction de recherche.
 4. L’identifiant de segment n° d’Experience Platform s’affiche en tant que nom de segment dans l’interface utilisateur de [!DNL Trade Desk].
 

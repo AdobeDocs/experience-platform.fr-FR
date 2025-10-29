@@ -2,7 +2,7 @@
 title: Adform
 description: Adform est un fournisseur de premier plan de solutions d'achat et de vente de médias programmatiques. En connectant Adform au Adobe Experience Platform, vous pouvez activer vos audiences propriétaires via Adform en fonction de l’Experience Cloud ID (ECID).
 last-substantial-update: 2025-10-23T00:00:00Z
-source-git-commit: c429ee227bd93455f541a32266bfbef9ddeaae06
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '972'
 ht-degree: 32%
@@ -28,16 +28,16 @@ Pour mieux comprendre quand et comment utiliser la destination Adform, consultez
 
 Utilisez cette destination pour envoyer des audiences Adobe Real-Time CDP à Adform pour activation en fonction de l’Experience Cloud ID (ECID) et de l’ID Fusion d’Adform. ID Fusion d’Adform est le service de résolution d’ID d’Adform qui vous permet d’activer vos audiences propriétaires en fonction de l’Experience Cloud ID (ECID).
 
-Un cas courant est le reciblage des visiteurs de votre site web ou de votre application en fonction de l’Experience Cloud ID (ECID). Il vous suffit d’envoyer l’Experience Cloud ID (ECID) à Adform via les extensions Adform [Event Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) ou [côté client](https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/catalog/analytics/adform) facilement disponibles. Ensuite, vous pouvez partager des audiences avec Adform via la destination Adform pour l’activation, uniquement en fonction de l’Experience Cloud ID (ECID).
+Un cas courant est le reciblage des visiteurs de votre site web ou de votre application en fonction de l’Experience Cloud ID (ECID). Il vous suffit d’envoyer l’Experience Cloud ID (ECID) à Adform via les extensions Adform [Event Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) ou [côté client](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) facilement disponibles. Ensuite, vous pouvez partager des audiences avec Adform via la destination Adform pour l’activation, uniquement en fonction de l’Experience Cloud ID (ECID).
 
 ## Conditions préalables {#prerequisites}
 
 * Vous devez être un client ou une cliente Adobe existant(e) pour utiliser cette destination.
 * Vous devez disposer des informations d’identification de connexion aux données d’Adobe Audience Base.
    * Si vous ne disposez pas des informations d’identification de connexion aux données d’Adform Audience Base, contactez votre représentant ou représentante Adform.
-* Pour une synchronisation correcte, vous devez disposer d’une connexion [diffusion en continu d’événements](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) ou [côté client](https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/catalog/analytics/adform) de vos entités à Adform Site Tracking.
+* Pour une synchronisation correcte, vous devez disposer d’une connexion [diffusion en continu d’événements](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) ou [côté client](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) de vos entités à Adform Site Tracking.
    * Si vous ne disposez pas d’une connexion en continu d’événements ou côté client de vos entités au suivi de site Adform, contactez votre représentant Adform.
-   * Adform fournit des extensions Adobe Experience Cloud pour [diffusion en continu d’événements](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) et [côté client](https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/catalog/analytics/adform).
+   * Adform fournit des extensions Adobe Experience Cloud pour [diffusion en continu d’événements](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) et [côté client](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform).
 
 
 ## Identités prises en charge {#supported-identities}
@@ -55,7 +55,7 @@ Adform prend en charge l’activation des identités décrites dans le tableau c
 Cette section décrit le type d’audiences que vous pouvez exporter vers cette destination.
 
 | Origine de l’audience | Pris en charge | Description |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences générées via Experience Platform [Segmentation Service](../../../segmentation/home.md). |
 | Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
@@ -66,7 +66,7 @@ Cette section décrit le type d’audiences que vous pouvez exporter vers cette 
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Type d’exportation | **[!UICONTROL Segment export]** | Vous exportez tous les membres d’un segment (audience) ainsi que les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination *YourDestination*. |
 | Fréquence des exportations | **[!UICONTROL Batch]** | Les destinations par lots exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur les [destinations basées sur des fichiers par lots](/help/destinations/destination-types.md#file-based). |
 
@@ -111,7 +111,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 > 
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 

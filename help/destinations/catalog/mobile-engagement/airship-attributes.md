@@ -3,10 +3,10 @@ keywords: attributs airship;destination airship
 title: Connexion Attributs Airship
 description: Transmettez facilement les données d’audience Adobe à Airship en tant qu’attributs d’audience pour le ciblage dans Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 7377b2ffecf59fdb5ca5449daf1387ae1586bd63
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1042'
-ht-degree: 31%
+source-wordcount: '1002'
+ht-degree: 28%
 
 ---
 
@@ -51,9 +51,9 @@ Cette section décrit les types d’audiences que vous pouvez exporter vers cett
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
----------|----------|---------|
-| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma souhaités (par exemple : adresse e-mail, numéro de téléphone, nom) et/ou les identités, en fonction de votre mappage de champs. |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+|---------|----------|---------|
+| Type d’exportation | **[!UICONTROL Profile-based]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma souhaités (par exemple : adresse e-mail, numéro de téléphone, nom) et/ou les identités, en fonction de votre mappage de champs. |
+| Fréquence des exportations | **[!UICONTROL Streaming]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -65,13 +65,13 @@ les attributs de profil Adobe Experience Platform sont similaires aux attributs 
 
 ## Générer un jeton du porteur {#bearer-token}
 
-Accédez à **[!UICONTROL Paramètres]** » **[!UICONTROL API et intégrations]** dans le tableau de bord [Airship](https://go.airship.com) et sélectionnez **[!UICONTROL Jetons]** dans le menu de gauche.
+Accédez à la **[!UICONTROL Settings]** « **[!UICONTROL APIs & Integrations]** » dans le [tableau de bord Airship](https://go.airship.com) et sélectionnez **[!UICONTROL Tokens]** dans le menu de gauche.
 
-Cliquez sur **[!UICONTROL Créer un jeton]**.
+Cliquez sur **[!UICONTROL Create Token]**.
 
 Attribuez un nom convivial à votre jeton, par exemple « Destination des attributs Adobe », puis sélectionnez « Tous les accès » pour le rôle.
 
-Cliquez sur **[!UICONTROL Créer un jeton]** et enregistrez les détails comme confidentiels.
+Cliquez sur **[!UICONTROL Create Token]** et enregistrez les détails comme confidentiels.
 
 ## Cas d’utilisation {#use-cases}
 
@@ -89,42 +89,42 @@ Tirez parti des attributs de Adobe Experience Platform pour enrichir davantage l
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
 ### S’authentifier auprès de la destination {#authenticate}
 
-Pour vous authentifier à la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
+Pour vous authentifier auprès de la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Connect to destination]**.
 
-* **[!UICONTROL Jeton porteur]** : jeton porteur que vous avez généré depuis le tableau de bord de la [!DNL Airship].
+* **[!UICONTROL Bearer token]** : jeton du porteur que vous avez généré à partir du tableau de bord [!DNL Airship].
 
 ### Renseigner les détails de la destination {#destination-details}
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
-* **[!UICONTROL Nom]** : saisissez un nom qui vous aidera à identifier cette destination.
+* **[!UICONTROL Name]** : saisissez un nom qui vous aidera à identifier cette destination.
 * **[!UICONTROL Description]** : saisissez une description pour cette destination.
-* **[!UICONTROL Domaine]** : sélectionnez un centre de données des États-Unis ou de l’UE, selon le centre de données [!DNL Airship] qui s’applique à cette destination.
+* **[!UICONTROL Domain]** : sélectionnez un centre de données des États-Unis ou de l’UE, selon le centre de données [!DNL Airship] qui s’applique à cette destination.
 
 ### Activer les alertes {#enable-alerts}
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
 ## Considérations relatives au mappage {#mapping-considerations}
 
-[!DNL Airship] attributs peuvent être définis sur un canal, qui représente l’instance de l’appareil, par exemple iPhone, ou sur un utilisateur nommé, qui mappe tous les appareils d’un utilisateur à un identifiant commun, tel qu’un identifiant client. Si votre schéma comporte des adresses e-mail en texte brut (non hachées) comme identité principale, sélectionnez le champ e-mail dans vos **[!UICONTROL Attributs Source]** et mappez-les à l’utilisateur [!DNL Airship] nommé dans la colonne de droite sous **[!UICONTROL Identités cibles]**, comme illustré ci-dessous.
+[!DNL Airship] attributs peuvent être définis sur un canal, qui représente l’instance de l’appareil, par exemple iPhone, ou sur un utilisateur nommé, qui mappe tous les appareils d’un utilisateur à un identifiant commun, tel qu’un identifiant client. Si votre schéma comporte des adresses e-mail en texte brut (non hachées) comme identité principale, sélectionnez le champ e-mail dans votre **[!UICONTROL Source Attributes]** et mappez-les à l’utilisateur nommé [!DNL Airship] dans la colonne de droite sous **[!UICONTROL Target Identities]**, comme illustré ci-dessous.
 
 ![Mappage d’utilisateurs nommés](../../assets/catalog/mobile-engagement/airship/mapping.png)
 

@@ -1,7 +1,8 @@
 ---
 title: Prédire l’attrition client avec une régression logistique basée sur SQL
 description: Découvrez comment prédire l’attrition des clients à l’aide d’une régression logistique SQL. Ce guide couvre l’ensemble du processus, de la création du modèle à l’évaluation et la prédiction. Obtenez des informations exploitables sur le comportement d’achat des clients pour mettre en œuvre des stratégies de rétention proactives et optimiser les décisions commerciales.
-source-git-commit: 95c7ad3f8eb86cacd42077008824eea9e25b4db0
+exl-id: 3b18870d-104c-4dce-8549-a6818dc40d24
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1126'
 ht-degree: 1%
@@ -45,7 +46,7 @@ Pour générer des prédictions de résiliation client, le modèle dépend des c
 | `timestamp` | La date et l’heure exactes de chaque événement d’achat. |
 | `commerce.order.purchaseID` | Valeur requise qui confirme un achat terminé. |
 
-Le jeu de données doit contenir des enregistrements de transaction client historiques structurés, chaque ligne représentant un événement d’achat. Chaque événement doit inclure des horodatages dans un format date-heure approprié compatible avec la fonction SQL `DATEDIFF` (par exemple, AAAA-MM-JJ HH:MI:SS). En outre, chaque enregistrement doit contenir un ID d’Experience Cloud valide (`ECID`) dans le champ `identityMap` pour identifier les clients de manière unique.
+Le jeu de données doit contenir des enregistrements de transaction client historiques structurés, chaque ligne représentant un événement d’achat. Chaque événement doit inclure des horodatages dans un format date-heure approprié compatible avec la fonction SQL `DATEDIFF` (par exemple, AAAA-MM-JJ HH:MI:SS). En outre, chaque enregistrement doit contenir un Experience Cloud ID valide (`ECID`) dans le champ `identityMap` pour identifier les clients de manière unique.
 
 >[!TIP]
 >
@@ -128,7 +129,7 @@ Le jeu de données de sortie contient des mesures liées aux clients et leur sta
 
 ```console
  customer_id  | total_purchases | total_revenue | avg_order_value  | customer_lifetime | days_since_last_purchase | purchase_frequency | churned |
---------------+-----------------+---------------+------------------+-------------------+--------------------------+--------------------+----------
+|--------------+-----------------+---------------+------------------+-------------------+--------------------------+--------------------+----------
   100001      | 25              | 1250.00       | 50.00            | 540               | 20                       | 10                 | 0       
   100002      | 3               | 90.00         | 30.00            | 120               | 95                       | 1                  | 1       
   100003      | 60              | 7200.00       | 120.00           | 800               | 5                        | 24                 | 0       
@@ -203,7 +204,7 @@ Le résultat de l’évaluation comprend des mesures de performances clés, tell
 
 ```console
  auc_roc | accuracy | precision | recall 
----------+----------+-----------+--------
+|---------+----------+-----------+--------
 1        | 0.99998  |  1        |  1      
 ```
 
@@ -279,7 +280,7 @@ Le jeu de données de sortie comprend les principales fonctionnalités client et
 
 ```console
  total_purchases | total_revenue | avg_order_value | customer_lifetime | days_since_last_purchase | purchase_frequency | churned | prediction
------------------+---------------+-----------------+-------------------+--------------------------+--------------------+---------+------------
+|-----------------+---------------+-----------------+-------------------+--------------------------+--------------------+---------+------------
  2               | 299           | 149.5           | 0                 | 13                        | 1                  | 0       | 0
  1               | 710           | 710.00          | 0                 | 149                       | 1                  | 1       | 1
  1               | 19.99         | 19.99           | 0                 | 30                        | 1                  | 0       | 0

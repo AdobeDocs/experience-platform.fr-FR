@@ -4,10 +4,10 @@ title: Connexion Amazon Kinesis
 description: Créez une connexion sortante en temps réel à votre stockage Amazon Kinesis pour diffuser des données depuis Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 7502810ff329a31f2fdaf6797bc7672118555e6a
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1978'
-ht-degree: 52%
+source-wordcount: '1944'
+ht-degree: 51%
 
 ---
 
@@ -51,9 +51,9 @@ Cette section décrit les types d’audiences que vous pouvez exporter vers cett
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
----------|----------|---------|
-| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil du [workflow d’activation de destination](../../ui/activate-batch-profile-destinations.md#select-attributes). |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+|---------|----------|---------|
+| Type d’exportation | **[!UICONTROL Profile-based]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil du [workflow d’activation de destination](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Fréquence des exportations | **[!UICONTROL Streaming]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -106,18 +106,18 @@ Pour plus d’informations sur le contrôle de l’accès pour les flux de donn�
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Lors de la connexion à cette destination, vous devez fournir les informations suivantes :
 
 ### Informations d’authentification {#authentication-information}
 
-Saisissez les champs ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]** :
+Saisissez les champs ci-dessous et sélectionnez **[!UICONTROL Connect to destination]** :
 
 ![Image de l’écran de l’interface utilisateur affichant les champs remplis pour les détails d’authentification Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
 * Clé d’accès **[!DNL Amazon Web Services]et clé secrète** : dans [!DNL Amazon Web Services], générez une paire de `access key - secret access key` pour accorder à Experience Platform l’accès à votre compte [!DNL Amazon Kinesis]. En savoir plus dans la [Documentation Amazon Web Services](https://docs.aws.amazon.com/fr_fr/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **[!UICONTROL Région]** : indiquez la région [!DNL Amazon Web Services] vers laquelle diffuser des données.
+* **[!UICONTROL Region]** : indiquez la région [!DNL Amazon Web Services] vers laquelle diffuser des données.
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -135,11 +135,11 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 ![Image de l’écran de l’interface utilisateur affichant les champs remplis pour les détails de destination Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
 
-* **[!UICONTROL Nom]** : attribuez un nom à votre connexion à [!DNL Amazon Kinesis]
-* **[!UICONTROL Description]** : indiquez une description de votre connexion à [!DNL Amazon Kinesis].
-* **[!UICONTROL Flux]** : indiquez le nom d’un flux de données existant dans votre compte [!DNL Amazon Kinesis]. Experience Platform exportera les données vers ce flux.
-* **[!UICONTROL Inclure les noms de segment]** : activez ce bouton si vous souhaitez que l’exportation des données inclue les noms des audiences que vous exportez. Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
-* **[!UICONTROL Inclure la date et l’heure de segment]** : activez ce bouton si vous souhaitez que l’exportation de données inclue la date et l’heure UNIX de la création et des mises à jour des audiences, ainsi que la date et l’heure UNIX du mappage des audiences à la destination pour l’activation. Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
+* **[!UICONTROL Name]** : indiquez un nom pour votre connexion à [!DNL Amazon Kinesis]
+* **[!UICONTROL Description]** : fournissez une description de votre connexion à [!DNL Amazon Kinesis].
+* **[!UICONTROL Stream]** : indiquez le nom d’un flux de données existant dans votre compte [!DNL Amazon Kinesis]. Experience Platform exportera les données vers ce flux.
+* **[!UICONTROL Include Segment Names]** : activez ce bouton si vous souhaitez que l’exportation de données inclue les noms des audiences que vous exportez. Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
+* **[!UICONTROL Include Segment Timestamps]** : activez ce bouton si vous souhaitez que l’exportation de données inclue la date et l’heure UNIX de la création et des mises à jour des audiences, ainsi que la date et l’heure UNIX du mappage des audiences à la destination pour l’activation. Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
 
 <!--
 
@@ -153,16 +153,16 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 >* L’[évaluation de la politique de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) n’est actuellement pas prise en charge dans les exportations vers la destination Amazon Kinesis. [En savoir plus](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
-Consultez [&#x200B; Activer les données d’audience vers des destinations d’exportation de profil de diffusion en continu &#x200B;](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Consultez [ Activer les données d’audience vers des destinations d’exportation de profil de diffusion en continu ](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ## Comportement d’exportation de profils {#profile-export-behavior}
 
@@ -259,7 +259,7 @@ Les données [!DNL Experience Platform] exportées arrivent dans votre destinati
 }
 ```
 
-Vous trouverez ci-dessous d’autres exemples de données exportées, en fonction des paramètres de l’interface utilisateur que vous sélectionnez dans le flux de connexion à la destination pour les options **[!UICONTROL Inclure les noms de segment]** et **[!UICONTROL Inclure la date et l’heure de segment]** :
+Vous trouverez ci-dessous d’autres exemples de données exportées, en fonction des paramètres de l’interface utilisateur que vous sélectionnez dans le flux de connexion à la destination pour les options **[!UICONTROL Include Segment Names]** et **[!UICONTROL Include Segment Timestamps]** :
 
 +++ L’exemple d’exportation de données ci-dessous inclut des noms d’audience dans la section `segmentMembership`
 

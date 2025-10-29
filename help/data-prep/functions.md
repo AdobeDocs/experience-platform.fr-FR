@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Fonctions de mappage de la préparation des données
 description: Ce document présente les fonctions de mappage utilisées avec la préparation des données.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '6028'
+source-wordcount: '6009'
 ht-degree: 8%
 
 ---
@@ -105,7 +105,7 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 | get_url_host | Renvoie l’hôte de l’URL donnée. Si l’entrée n’est pas valide, elle renvoie la valeur null. | <ul><li>URL : **Obligatoire** URL à partir de laquelle l’hôte doit être extrait.</li></ul> | get_url_host&#x200B;(URL) | get_url_host&#x200B;(« https://platform&#x200B;.adobe.com/home ») | platform.adobe.com |
 | get_url_port | Renvoie le port de l’URL donnée. Si l’entrée n’est pas valide, elle renvoie la valeur null. | <ul><li>URL : **Obligatoire** URL à partir de laquelle le port doit être extrait.</li></ul> | get_url_port(URL) | get_url_port&#x200B;(« sftp://example.com//home/&#x200B;joe/employee.csv ») | 22 |
 | get_url_path | Renvoie le chemin d’accès de l’URL donnée. Par défaut, le chemin d’accès complet est renvoyé. | <ul><li>URL : **Obligatoire** URL à partir de laquelle le chemin d’accès doit être extrait.</li><li>FULL_PATH : *facultatif* valeur booléenne qui détermine si le chemin d’accès complet est renvoyé. Si elle est définie sur false, seule la fin du chemin est renvoyée.</li></ul> | get_url_path&#x200B;(URL, FULL_PATH) | get_url_path&#x200B;(« sftp://example.com//&#x200B;home/joe/employee.csv ») | « //home/joe/&#x200B;employee.csv » |
-| get_url_query_str | Renvoie la chaîne de requête d’une URL donnée sous la forme d’un mappage du nom de la chaîne de requête et de la valeur de la chaîne de requête. | <ul><li>URL : **Obligatoire** URL à partir de laquelle vous essayez d’obtenir la chaîne de requête.</li><li>ANCHOR : **obligatoire** détermine ce qui sera fait avec l’ancre dans la chaîne de requête. Il peut s’agir de l’une des trois valeurs suivantes : « conserver », « supprimer » ou « ajouter ».<br><br>Si la valeur est « retain », l&#39;ancre sera attachée à la valeur renvoyée.<br>Si la valeur est « remove », l&#39;ancre sera supprimée de la valeur renvoyée.<br>Si la valeur est « append », l’ancre est renvoyée en tant que valeur distincte.</li></ul> | get_url_query_str&#x200B;(URL, ANCHOR) | get_url_query_str&#x200B;(« foo://example.com:8042&#x200B;/over/There?name=&#x200B;ferret#nose », « retain »)<br>get_url_query_str&#x200B;(« foo://example.com:8042&#x200B;/over/There?name=&#x200B;ferret#nose », « remove »)<br>get_url_query_str&#x200B; &#x200B; &#x200B;(« foo://example.com:8042/over/then?name=ferret#nose », « append ») | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_query_str | Renvoie la chaîne de requête d’une URL donnée sous la forme d’un mappage du nom de la chaîne de requête et de la valeur de la chaîne de requête. | <ul><li>URL : **Obligatoire** URL à partir de laquelle vous essayez d’obtenir la chaîne de requête.</li><li>ANCHOR : **obligatoire** détermine ce qui sera fait avec l’ancre dans la chaîne de requête. Il peut s’agir de l’une des trois valeurs suivantes : « conserver », « supprimer » ou « ajouter ».<br><br>Si la valeur est « retain », l&#39;ancre sera attachée à la valeur renvoyée.<br>Si la valeur est « remove », l&#39;ancre sera supprimée de la valeur renvoyée.<br>Si la valeur est « append », l’ancre est renvoyée en tant que valeur distincte.</li></ul> | get_url_query_str&#x200B;(URL, ANCHOR) | get_url_query_str&#x200B;(« foo://example.com:8042&#x200B;/over/There?name=&#x200B;ferret#nose », « retain »)<br>get_url_query_str&#x200B;(« foo://example.com:8042&#x200B;/over/There?name=&#x200B;ferret#nose », « remove »)<br>get_url_query_str&#x200B; &#x200B; &#x200B;(« foo://example.com:8042/over/they?name=ferret#nose », « append ») | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 | get_url_encoded | Cette fonction prend une URL comme entrée et remplace ou encode les caractères spéciaux avec des caractères ASCII. Pour plus d&#39;informations sur les caractères spéciaux, veuillez lire la [liste des caractères spéciaux](#special-characters) en annexe de ce document. | <ul><li>URL : **Obligatoire** URL d’entrée avec des caractères spéciaux que vous souhaitez remplacer ou coder avec des caractères ASCII.</li></ul> | get_url_encoded(URL) | get_url_encoded(« https</span>://example.com/PARTNERalliance_asia-pacific_2022 ») | https%3A%2F%2Fexample.com%2Fpartners_asia-pacific_2022 |
 | get_url_decoded | Cette fonction prend une URL comme entrée et décode les caractères ASCII en caractères spéciaux.  Pour plus d&#39;informations sur les caractères spéciaux, veuillez lire la [liste des caractères spéciaux](#special-characters) en annexe de ce document. | <ul><li>URL : **Obligatoire** URL d’entrée contenant des caractères ASCII que vous souhaitez décoder en caractères spéciaux.</li></ul> | get_url_decoded(URL) | get_url_decoded(« https%3A%2F%2Fexample.com%2Fpartner_asia-pacific_2022 ») | https</span>://example.com/PARTNERalliance_asia-pacific_2022 |
 
@@ -123,7 +123,7 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 | timestamp | Récupère l’heure Unix actuelle. | | timestamp() | timestamp() | 1571850624571 |
 | format | Formate la date d’entrée selon un format spécifié. | <ul><li>DATE : **Obligatoire** date d’entrée, sous la forme d’un objet ZonedDateTime, que vous souhaitez formater.</li><li>FORMAT : **Obligatoire** format dans lequel vous souhaitez que la date soit modifiée.</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11:24:00+00:00, « `yyyy-MM-dd HH:mm:ss` ») | `2019-10-23 11:24:35` |
 | dformat | Convertit une date et une heure en chaîne de date selon un format spécifié. | <ul><li>TIMESTAMP : **obligatoire** date et heure à formater. Il est écrit en millisecondes.</li><li>FORMAT : **Obligatoire** format dans lequel vous souhaitez que l’horodatage soit défini.</li></ul> | format(TIMESTAMP, FORMAT) | dformat(1571829875000, « `yyyy-MM-dd'T'HH:mm:ss.SSSX` ») | `2019-10-23T11:24:35.000Z` |
-| date | Convertit une chaîne de date en objet ZonedDateTime (format ISO 8601). | <ul><li>DATE : **Obligatoire** chaîne qui représente la date.</li><li>FORMAT : **Obligatoire** chaîne représentant le format de la date source.**Remarque :** il ne s’agit **pas** du format dans lequel vous souhaitez convertir la chaîne de date. </li><li>DEFAULT_DATE : **Obligatoire** date par défaut renvoyée, si la date fournie est nulle.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(« 2019-10-23 11:24 », « aaaa-MM-jj HH:mm », now()) | `2019-10-23T11:24:00Z` |
+| date | Convertit une chaîne de date en objet ZonedDateTime (format ISO 8601). | <ul><li>DATE : **Obligatoire** chaîne qui représente la date.</li><li>FORMAT : **Obligatoire** chaîne représentant le format de la date source.**Remarque :** il ne s’agit **pas** du format dans lequel vous souhaitez convertir la chaîne de date. </li><li>DEFAULT_DATE : **Obligatoire** date par défaut renvoyée, si la date fournie est nulle.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(« 2019-10-23 11:24 », « yyyy-MM-dd HH:mm », now()) | `2019-10-23T11:24:00Z` |
 | date | Convertit une chaîne de date en objet ZonedDateTime (format ISO 8601). | <ul><li>DATE : **Obligatoire** chaîne qui représente la date.</li><li>FORMAT : **Obligatoire** chaîne représentant le format de la date source.**Remarque :** il ne s’agit **pas** du format dans lequel vous souhaitez convertir la chaîne de date. </li></ul> | date(DATE, FORMAT) | date(« 2019-10-23 11:24 », « aaaa-MM-jj HH:mm ») | `2019-10-23T11:24:00Z` |
 | date | Convertit une chaîne de date en objet ZonedDateTime (format ISO 8601). | <ul><li>DATE : **Obligatoire** chaîne qui représente la date.</li></ul> | date(DATE) | date(« 2019-10-23 11:24 ») | « 2019-10-23T11:24:00Z » |
 | date_part | Récupère les parties de la date. Les valeurs de composant suivantes sont prises en charge : <br><br>« year »<br>« yyyy »<br>« yy »<br><br>« quarter »<br>« qq »<br>« q »<br><br>« month »<br>« mm »<br>« m »<br><br>« dayofyear »<br>« y »<br>« day »<br><br> »<br> »<br>« d »<br><br>« week »<br> »<br>« w »<br><br> »<br>« weekday »<br>« dw »<br><br> »<br>« hour »<br>« hh »<br> »<br><br>« hh24 »<br> »<br>« hh12 »<br><br>« minute »<br> »<br> »<br><br>« n »<br>« « second »« ss »« s »« milliseconde | <ul><li>COMPOSANT : **Obligatoire** Chaîne représentant la partie de la date. </li><li>DATE : **Obligatoire** date au format standard.</li></ul> | date_part&#x200B;(COMPONENT, DATE) | date_part(« MM », date(« 2019-10-17 11:55:12 »)) | 10 |
@@ -248,7 +248,7 @@ Pour plus d’informations sur la fonction de copie d’objet, consultez la sect
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| json_to_object | Désérialisez le contenu JSON à partir de la chaîne donnée. | <ul><li>STRING : **obligatoire** la chaîne JSON à désérialiser.</li></ul> | json_to_object&#x200B;(STRING) | json_to_object&#x200B;({« info »:{« firstName »:« John »,« lastName »: « Doe »}}) | Objet représentant le fichier JSON. |
+| json_to_object | Désérialisez le contenu JSON à partir de la chaîne donnée. | <ul><li>STRING : **obligatoire** la chaîne JSON à désérialiser.</li></ul> | json_to_object&#x200B;(STRING) | `json_to_object&#x200B;({"info":{"firstName":"John","lastName": "Doe"}})` | Objet représentant le fichier JSON. |
 
 {style="table-layout:auto"}
 
@@ -387,11 +387,11 @@ Le tableau ci-dessous présente une liste des caractères réservés et les cara
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| &lbrack; | %5B |
+| [ | %5B |
 | | | %5C |
-| &rbrack; | %5J |
+| ] | %5J |
 | ^ | %5E |
-| &grave; | %60 |
+| ` | %60 |
 | ~ | %7E |
 
 {style="table-layout:auto"}

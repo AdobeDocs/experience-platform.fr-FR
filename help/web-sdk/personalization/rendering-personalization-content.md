@@ -3,7 +3,7 @@ title: Rendu de contenu personnalisé à l’aide de Adobe Experience Platform W
 description: Découvrez comment effectuer le rendu du contenu personnalisé avec Adobe Experience Platform Web SDK.
 keywords: personnalisation;renderDecisions;sendEvent;decisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 2%
@@ -14,9 +14,9 @@ ht-degree: 2%
 
 Adobe Experience Platform Web SDK prend en charge la récupération de contenu personnalisé à partir de solutions de personnalisation Adobe, notamment [Adobe Target](https://business.adobe.com/fr/products/target/adobe-target.html), [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=fr) et [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=fr).
 
-En outre, le SDK Web alimente les fonctionnalités de personnalisation de la même page et de la page suivante via les destinations de personnalisation Adobe Experience Platform, telles que [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) et la [connexion de personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md). Pour savoir comment configurer Experience Platform pour la personnalisation de la même page et de la page suivante, consultez le [&#x200B; guide dédié &#x200B;](../../destinations/ui/activate-edge-personalization-destinations.md).
+En outre, le SDK Web alimente les fonctionnalités de personnalisation de la même page et de la page suivante via les destinations de personnalisation Adobe Experience Platform, telles que [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) et la [connexion de personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md). Pour savoir comment configurer Experience Platform pour la personnalisation de la même page et de la page suivante, consultez le [ guide dédié ](../../destinations/ui/activate-edge-personalization-destinations.md).
 
-Le contenu créé dans Adobe Target [compositeur d’expérience visuelle](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=fr) et Adobe Journey Optimizer [interface utilisateur de Web Campaign](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=fr) peut être récupéré et rendu automatiquement par SDK. Le contenu créé dans Adobe Target [Compositeur d’expérience d’après les formulaires](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=fr), Adobe Journey Optimizer [Canal d’expérience d’après le code](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/code-based-experience/get-started-code-based) ou Offer Decisioning ne peut pas être rendu automatiquement par SDK. Vous devez plutôt demander ce contenu à l’aide du SDK, puis effectuer manuellement le rendu du contenu.
+Le contenu créé dans Adobe Target [compositeur d’expérience visuelle](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) et Adobe Journey Optimizer [interface utilisateur de Web Campaign](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) peut être récupéré et rendu automatiquement par SDK. Le contenu créé dans Adobe Target [Compositeur d’expérience d’après les formulaires](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=fr), Adobe Journey Optimizer [Canal d’expérience d’après le code](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/code-based-experience/get-started-code-based) ou Offer Decisioning ne peut pas être rendu automatiquement par SDK. Vous devez plutôt demander ce contenu à l’aide du SDK, puis effectuer manuellement le rendu du contenu.
 
 ## Rendu automatique du contenu {#automatic}
 
@@ -388,9 +388,9 @@ alloy("sendEvent", {
                     "_experience": {
                         "decisioning": {
                             "propositions": [{
-                              	"id": id,
+                                "id": id,
                                 "scope": scope,
-                              	"scopeDetails": scopeDetails
+                                  "scopeDetails": scopeDetails
                             }],
                             "propositionEventType": {
                                 "display": 1

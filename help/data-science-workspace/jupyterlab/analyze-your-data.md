@@ -5,9 +5,9 @@ title: Analyse De Vos Données À L’Aide De Notebooks
 type: Tutorial
 description: Ce tutoriel se concentre sur l’utilisation des notebooks Jupyter, créés dans le Workspace de science des données, pour accéder à vos données, les explorer et les visualiser.
 exl-id: 3b0148d1-9c08-458b-9601-979cb6c7a0fb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1730'
+source-wordcount: '1727'
 ht-degree: 72%
 
 ---
@@ -44,7 +44,7 @@ Par défaut, la recette Tensorflow fonctionne dans un cluster GPU et Python s’
 
 ### Création d’un nouveau filtre
 
-Dans l’interface utilisateur de [!DNL Adobe Experience Platform], sélectionnez [!UICONTROL Science des données] dans le menu supérieur pour accéder au Workspace Science des données. Sur cette page, sélectionnez [!DNL JupyterLab] pour ouvrir le lanceur [!DNL JupyterLab]. Vous devriez voir une page similaire à celle-ci.
+Dans l’interface utilisateur de [!DNL Adobe Experience Platform], sélectionnez [!UICONTROL Data Science] dans le menu supérieur pour accéder au Workspace de science des données. Sur cette page, sélectionnez [!DNL JupyterLab] pour ouvrir le lanceur [!DNL JupyterLab]. Vous devriez voir une page similaire à celle-ci.
 
 ![](../images/jupyterlab/analyze-data/jupyterlab-launcher-new.png)
 
@@ -84,7 +84,7 @@ Nous allons maintenant passer en revue l’accès aux données [!DNL Experience 
 
 Pour cette section, nous utilisons le jeu de données Ventes au détail, le même que celui utilisé dans le notebook d’exemple Ventes au détail.
 
-Dans le notebook Jupyter, vous pouvez accéder à vos données à partir de l’onglet **Données** ![onglet Données](../images/jupyterlab/analyze-data/dataset-tab.png) sur la gauche. Lorsque vous sélectionnez l’onglet , deux dossiers sont fournis. Sélectionnez le dossier **[!UICONTROL Jeux de données]**.
+Dans le notebook Jupyter, vous pouvez accéder à vos données à partir de l’onglet **Données** ![onglet Données](../images/jupyterlab/analyze-data/dataset-tab.png) sur la gauche. Lorsque vous sélectionnez l’onglet , deux dossiers sont fournis. Sélectionnez le dossier **[!UICONTROL Datasets]**.
 
 ![](../images/jupyterlab/analyze-data/dataset_tab.png)
 
@@ -120,6 +120,7 @@ Si vous redémarrez votre noyau et exécutez à nouveau toutes les cellules, vou
 ### Exploration de vos données
 
 Maintenant que vos données sont accessibles, intéressons-nous aux données elles-mêmes en utilisant les statistiques et la visualisation. Le jeu de données que nous utilisons est un jeu de données relatif aux ventes qui fournit des informations diverses sur 45 boutiques différentes pour un jour donné. Voici quelques caractéristiques pour une `date` et un `store` spécifiques :
+
 - `storeType`
 - `weeklySales`
 - `storeSize`
@@ -161,6 +162,7 @@ Ici, nous avons 22 boutiques `storeType` `A`, 17 boutiques `storeType` `B` et 
 #### Visualisation des données
 
 Maintenant que nous connaissons les valeurs de notre DataFrame, nous voulons les compléter par des visualisations, afin de rendre les choses plus claires et d’identifier plus facilement les motifs. Les graphiques servent également à transmettre les résultats à une audience. Voici quelques bibliothèques [!DNL Python] utiles pour la visualisation :
+
 - [Matplotlib](https://matplotlib.org/)
 - [pandas](https://pandas.pydata.org/)
 - [seaborn](https://seaborn.pydata.org/)
@@ -201,6 +203,7 @@ Notez la diagonale de 1 au centre. Elle indique que lorsqu’une variable est co
 ## Étapes suivantes
 
 Ce tutoriel vous a expliqué comment créer un nouveau notebook Jupyter dans le Workspace de science des données et comment accéder aux données en externe ainsi qu’à partir de [!DNL Adobe Experience Platform]. Plus précisément, nous avons réalisé les actions suivantes :
+
 - Créer un notebook Jupyter
 - Accès aux jeux de données et aux schémas
 - Exploration des jeux de données

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation de l’interface utilisateur de JupyterLab
 description: JupyterLab est une interface utilisateur web pour Project Jupyter et est étroitement intégré à Adobe Experience Platform. Elle fournit un environnement de développement interactif pour que les analystes de données puissent travailler avec les notebooks, le code et les données Jupyter. Ce document présente JupyterLab et ses fonctionnalités ainsi que des instructions pour effectuer des actions courantes.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1838'
-ht-degree: 95%
+source-wordcount: '1831'
+ht-degree: 90%
 
 ---
 
@@ -33,7 +33,7 @@ La liste suivante décrit certaines des fonctionnalités propres à JupyterLab s
 | --- | --- |
 | **Noyaux** | Les noyaux permettent aux notebooks et aux autres front-ends [!DNL JupyterLab] d’exécuter et d’inspecter le code dans différents langages de programmation. [!DNL Experience Platform] fournit des noyaux supplémentaires pour prendre en charge le développement en [!DNL Python], R, PySpark et [!DNL Spark]. Pour plus d’informations, consultez la section sur les [noyaux](#kernels). |
 | **Accès aux données** | Accédez aux jeux de données existants directement depuis [!DNL JupyterLab] avec la prise en charge intégrale des fonctionnalités de lecture et d’écriture. |
-| Intégration du service **[!DNL Experience Platform]** | Les intégrations vous permettent d’utiliser d’autres services [!DNL Experience Platform] directement depuis [!DNL JupyterLab]. Vous trouverez la liste complète des intégrations prises en charge dans la section [&#x200B; Intégration à d’autres services Experience Platform &#x200B;](#service-integration). |
+| Intégration du service **[!DNL Experience Platform]** | Les intégrations vous permettent d’utiliser d’autres services [!DNL Experience Platform] directement depuis [!DNL JupyterLab]. Vous trouverez la liste complète des intégrations prises en charge dans la section [ Intégration à d’autres services Experience Platform ](#service-integration). |
 | **Authentification** | Outre le <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">modèle de sécurité intégré de JupyterLab</a>, chaque interaction entre votre application et Experience Platform, y compris la communication service à service Experience Platform, est chiffrée et authentifiée via <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
 | **Bibliothèques de développement** | Dans [!DNL Experience Platform], [!DNL JupyterLab] fournit des bibliothèques préinstallées pour [!DNL Python], R et PySpark. Consultez l’[annexe](#supported-libraries) pour obtenir une liste complète des bibliothèques prises en charge. |
 | **Contrôleur de bibliothèque** | Lorsque les bibliothèques préinstallées ne répondent pas à vos besoins, vous pouvez installer des bibliothèques supplémentaires pour Python et R. Elles seront temporairement stockées dans des conteneurs isolés afin de préserver l’intégrité de [!DNL Experience Platform] et protéger vos données. Pour plus d’informations, consultez la section sur les [noyaux](#kernels). |
@@ -112,7 +112,7 @@ L’espace de travail principal de [!DNL JupyterLab] vous permet d’organiser l
 
 ### Configuration du GPU et du serveur de mémoire en [!DNL Python]/R
 
-Dans [!DNL JupyterLab], sélectionnez l’icône d’engrenage dans le coin supérieur droit pour ouvrir la *configuration du serveur Notebook*. Vous pouvez activer le GPU et allouer la quantité de mémoire dont vous avez besoin à l’aide du curseur. La quantité de mémoire que vous pouvez allouer dépend de la quantité de mémoire configurée par votre organisation. Sélectionnez **[!UICONTROL Mettre à jour les configurations]** pour enregistrer.
+Dans [!DNL JupyterLab], sélectionnez l’icône d’engrenage dans le coin supérieur droit pour ouvrir la *configuration du serveur Notebook*. Vous pouvez activer le GPU et allouer la quantité de mémoire dont vous avez besoin à l’aide du curseur. La quantité de mémoire que vous pouvez allouer dépend de la quantité de mémoire configurée par votre organisation. Sélectionnez **[!UICONTROL Update configs]** à enregistrer.
 
 >[!NOTE]
 >
@@ -122,9 +122,9 @@ Dans [!DNL JupyterLab], sélectionnez l’icône d’engrenage dans le coin sup�
 
 ### Mettre fin à [!DNL JupyterLab] et redémarrer
 
-Dans [!DNL JupyterLab], vous pouvez mettre fin à votre session pour empêcher l’utilisation d’autres ressources. Commencez par sélectionner l’**icône d’alimentation** ![icône d’alimentation](/help/images/icons/power.png), puis sélectionnez **[!UICONTROL Arrêter]** dans la fenêtre contextuelle qui s’affiche pour mettre fin à votre session. Les sessions Notebook se terminent automatiquement après 12 heures d’absence d’activité.
+Dans [!DNL JupyterLab], vous pouvez mettre fin à votre session pour empêcher l’utilisation d’autres ressources. Commencez par sélectionner l’**icône d’alimentation** ![icône d’alimentation](/help/images/icons/power.png), puis sélectionnez **[!UICONTROL Shut Down]** dans la fenêtre contextuelle qui s’affiche pour mettre fin à votre session. Les sessions Notebook se terminent automatiquement après 12 heures d’absence d’activité.
 
-Pour redémarrer [!DNL JupyterLab], sélectionnez l’**icône de redémarrage** ![icône de redémarrage](/help/images/icons/restart.png) située directement à gauche de l’icône d’alimentation, puis sélectionnez **[!UICONTROL Redémarrer]** dans la fenêtre contextuelle qui s’affiche.
+Pour redémarrer [!DNL JupyterLab], sélectionnez l’icône **redémarrage** ![icône de redémarrage](/help/images/icons/restart.png) située directement à gauche de l’icône d’alimentation, puis sélectionnez **[!UICONTROL Restart]** dans la fenêtre contextuelle qui s’affiche.
 
 ![mettre fin à jupyterlab](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 
@@ -140,7 +140,7 @@ Les actions de cellule courantes sont décrites ci-dessous :
 
 * **Déplacer une cellule :** placez votre curseur à droite de la cellule que vous souhaitez déplacer, puis cliquez sur la cellule et faites-la glisser vers un nouvel emplacement. De plus, le déplacement d’une cellule d’un notebook vers un autre réplique la cellule et son contenu.
 
-* **Exécuter une cellule :** cliquez sur le corps de la cellule que vous souhaitez exécuter, puis sur l’icône **lecture** (**▶**) dans le menu du notebook. Un astérisque (**\***) est affiché dans le compteur d’exécution de la cellule lorsque le noyau traite l’exécution, et est remplacé par un nombre entier une fois l’exécution terminée.
+* **Exécuter une cellule :** cliquez sur le corps de la cellule que vous souhaitez exécuter, puis cliquez sur l’icône **lecture** (**▶**) dans le menu du notebook. Un astérisque (**\***) est affiché dans le compteur d’exécution de la cellule lorsque le noyau traite l’exécution, et est remplacé par un nombre entier une fois l’exécution terminée.
 
 * **Supprimer une cellule :** cliquez sur le corps de la cellule que vous souhaitez supprimer, puis sur l’icône **ciseaux**.
 
@@ -264,6 +264,7 @@ Pour obtenir la liste des packages pris en charge en Python, R et PySpark, copie
 ![exemple](../images/jupyterlab/user-guide/libraries.PNG)
 
 En outre, les dépendances suivantes sont utilisées, mais ne sont pas répertoriées :
+
 * CUDA 11.2
 * CUDNN 8.1
 

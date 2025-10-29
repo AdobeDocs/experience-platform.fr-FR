@@ -5,9 +5,9 @@ title: Ingérer des données Parquet à partir d’un système de stockage cloud
 type: Tutorial
 description: Ce tutoriel utilise l’API Flow Service pour vous guider tout au long des étapes d’ingestion des données Apache Parquet à partir d’un système de stockage cloud tiers.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1072'
 ht-degree: 44%
 
 ---
@@ -63,7 +63,7 @@ Obtenez et stockez l’identifiant unique (`$id`) de la connexion, puis passez �
 
 Pour que les données sources soient utilisées dans [!DNL Experience Platform], un schéma cible doit également être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données [!DNL Experience Platform] contenant les données sources.
 
-Si vous préférez utiliser l’interface utilisateur dans [!DNL Experience Platform], le tutoriel de l’éditeur de schémas [&#128279;](../../../xdm/tutorials/create-schema-ui.md) fournit des instructions détaillées pour exécuter des actions similaires dans l’éditeur de schémas.
+Si vous préférez utiliser l’interface utilisateur dans [!DNL Experience Platform], le tutoriel de l’éditeur de schémas [ ](../../../xdm/tutorials/create-schema-ui.md) fournit des instructions détaillées pour exécuter des actions similaires dans l’éditeur de schémas.
 
 **Format d’API**
 
@@ -259,7 +259,10 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion sour
 
 Pour ingérer des données externes dans [!DNL Experience Platform], une connexion de base de jeu de données [!DNL Experience Platform] doit d’abord être acquise.
 
-Pour créer une connexion de base à un jeu de données, suivez les étapes décrites dans le [tutoriel sur la connexion de base à un jeu de données](./create-dataset-base-connection.md).
+<!--
+broken link. this file not in TOC.
+To create a dataset base connection, follow the steps outlined in the [dataset base connection tutorial](./create-dataset-base-connection.md).
+-->
 
 Continuez à suivre les étapes décrites dans le guide du développeur jusqu’à ce que vous ayez créé une connexion de base au jeu de données. Obtenez et stockez l’identifiant unique (`$id`) et continuez à l’utiliser comme identifiant de connexion de base à l’étape suivante pour créer une connexion cible.
 

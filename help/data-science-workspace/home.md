@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de l’espace de travail de science des données
 description: Ce guide présente les concepts clés de l’espace de travail de science des données dans Adobe Experience Platform.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '2411'
 ht-degree: 99%
@@ -33,6 +33,7 @@ Les entreprises d’aujourd’hui accordent une grande priorité à l’explorat
 Aussi importante qu’elle soit, la transformation des données en informations peut se révéler très coûteuse. Cela requiert généralement des spécialistes des données compétents qui effectuent des recherches de données intensives et chronophages pour développer des modèles d’apprentissage automatique ou des recettes, qui optimisent les services intelligents. Le processus est long, la technologie est complexe et les spécialistes des données compétents peuvent être difficiles à trouver.
 
 Avec [!DNL Data Science Workspace], Adobe Experience Platform vous permet de mettre en place une IA axée sur lʼexpérience à lʼéchelle de lʼentreprise, en rationalisant et en accélérant les conversions des données en informations et ensuite en code à lʼaide des solutions suivantes :
+
 - Une structure et une exécution de machine learning
 - Accès intégré à vos données stockées dans Adobe Experience Platform
 - Schéma de données unifié basé sur [!DNL Experience Data Model] (XDM)
@@ -199,4 +200,4 @@ Pour plus d’informations, comme un processus quotidien complet, commencez par 
 
 La vidéo suivante est conçue pour vous aider à comprendre [!DNL Data Science Workspace].
 
->[!VIDEO](https://video.tv.adobe.com/v/3412911?quality=12&enable10seconds=on&speedcontrol=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&amp;enable10seconds=on&amp;speedcontrol=on)

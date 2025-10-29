@@ -2,7 +2,7 @@
 title: Créer des jeux de données dérivés avec SQL
 description: Découvrez comment utiliser SQL pour créer un jeu de données dérivé activé pour le profil et comment utiliser le jeu de données pour le profil client en temps réel et le service de segmentation.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1238'
 ht-degree: 2%
@@ -167,7 +167,7 @@ Vous trouverez ci-dessous un exemple de sortie de cette commande :
 
 ```sql
        name          |        dataSetId         |     dataSet    | description | labels 
----------------------+--------------------------+----------------+-------------+----------
+|---------------------+--------------------------+----------------+-------------+----------
  luma_midvalues      | 5bac030c29bb8d12fa992e58 | Luma midValues |             | false
  luma_postvalues     | 5c86b896b3c162151785b43c | Luma midValues |             | false
  table_with_a_decile | 5c86b896b3c162151785b43c | Luma midValues |             | 'UPSERT', 'PROFILE'
@@ -189,7 +189,7 @@ CREATE FIELDGROUP <field_group_name> [IF NOT EXISTS]  (field_name <data_type> pr
 >[!IMPORTANT]
 >
 >La création d’un groupe de champs via SQL échoue si l’indicateur `label` n’est pas fourni dans l’instruction ou si le groupe de champs existe déjà.
->Assurez-vous que la requête inclut une clause `IF NOT EXISTS` pour éviter l’échec de la requête, car le groupe de champs existe déjà.
+>>Assurez-vous que la requête inclut une clause `IF NOT EXISTS` pour éviter l’échec de la requête, car le groupe de champs existe déjà.
 
 Un exemple concret peut ressembler à celui illustré ci-dessous.
 
@@ -199,7 +199,7 @@ CREATE FIELDGROUP field_group_for_test123 (decile1Month map<text, integer>, deci
 
 L’exécution réussie de cette instruction renvoie l’identifiant du groupe de champs créé. Par exemple `c731a1eafdfdecae1683c6dca197c66ed2c2b49ecd3a9525`.
 
-Pour plus d’informations sur les autres méthodes[&#128279;](../../../xdm/ui/resources/field-groups.md#create) consultez la documentation sur la création d’un groupe de champs dans l’éditeur de schémas ou sur l’utilisation de l’API [schema Registry](../../../xdm/api/field-groups.md#create).
+Pour plus d’informations sur les autres méthodes[ consultez la documentation sur la ](../../../xdm/ui/resources/field-groups.md#create)création d’un groupe de champs dans l’éditeur de schémas ou sur l’utilisation de l’API [schema Registry](../../../xdm/api/field-groups.md#create).
 
 ### Déposer un groupe de champs
 
@@ -227,7 +227,7 @@ Vous trouverez ci-dessous un exemple de sortie de cette commande :
 
 ```sql
        name                      |        fieldgroupId                             |     owner      |
----------------------------------+-------------------------------------------------+-----------------
+|---------------------------------+-------------------------------------------------+-----------------
  AEP Mobile Lifecycle Details    | _experience.aep-mobile-lifecycle-details        | Luma midValues |
  AEP Web SDK ExperienceEvent     | _experience.aep-web-sdk-experienceevent         | Luma midValues |
  AJO Classification Fields       | _experience.journeyOrchestration.classification | Luma midValues |

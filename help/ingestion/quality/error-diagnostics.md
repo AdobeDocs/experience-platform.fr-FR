@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Récupération des diagnostics d’erreur d’ingestion de données
 description: Ce document fournit des informations sur la surveillance de l’ingestion par lots, la gestion des erreurs d’ingestion par lots partiels ainsi qu’une référence pour les types d’ingestion par lots partiels.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 36%
@@ -132,7 +132,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Réponse**
 
-Une réponse réussie renvoie des objets JSON contenant des objets `path` indiquant l’emplacement d’enregistrement des diagnostics. La réponse renvoie les objets `path` au format [&#x200B; Lignes JSON &#x200B;](https://jsonlines.readthedocs.io/en/latest/).
+Une réponse réussie renvoie des objets JSON contenant des objets `path` indiquant l’emplacement d’enregistrement des diagnostics. La réponse renvoie les objets `path` au format [ Lignes JSON ](https://jsonlines.readthedocs.io/en/latest/).
 
 ```json
 {"path": "F1.json"}

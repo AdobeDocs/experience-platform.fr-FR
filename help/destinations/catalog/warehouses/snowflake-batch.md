@@ -4,7 +4,7 @@ description: Créez un partage de données Snowflake en direct pour recevoir des
 last-substantial-update: 2025-10-23T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: c429ee227bd93455f541a32266bfbef9ddeaae06
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1659'
 ht-degree: 18%
@@ -63,7 +63,7 @@ Le tableau ci-dessous vous aidera à choisir le connecteur à utiliser en décri
 | **Gestion des données** | Toujours afficher le dernier instantané complet | Mises à jour incrémentielles en fonction des modifications de l’appartenance à une audience |
 | **Exemples de scénarios** | Création de rapports d’entreprise, analyse de données, formation au modèle ML | Suppression des campagnes marketing, personnalisation en temps réel |
 
-Pour plus d’informations sur le partage de données en flux continu, consultez la documentation Connexion en flux continu Snowflake [&#128279;](snowflake.md).
+Pour plus d’informations sur le partage de données en flux continu, consultez la documentation Connexion en flux continu Snowflake [](snowflake.md).
 
 ## Cas d’utilisation {#use-cases}
 
@@ -103,7 +103,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | ✓ | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -113,7 +113,7 @@ Audiences prises en charge par type de données d’audience :
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Type d’exportation | **[!UICONTROL Audience export]** | Vous exportez tous les profils membres d’une audience ainsi que les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination [!DNL Snowflake]. |
 | Fréquence des exportations | **[!UICONTROL Batch]** | Cette destination fournit des instantanés périodiques de l’adhésion complète à l’audience via le partage de données Snowflake. Chaque instantané remplace les données précédentes, ce qui vous permet de toujours disposer de la dernière vue complète de votre audience. |
 
@@ -166,7 +166,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 > 
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 

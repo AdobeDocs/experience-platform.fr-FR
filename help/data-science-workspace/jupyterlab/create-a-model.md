@@ -5,9 +5,9 @@ title: Créer un modèle à l’aide de notebooks JupyterLab
 type: Tutorial
 description: Ce tutoriel vous guide tout au long des étapes requises pour créer une recette à l’aide du modèle de créateur de recettes des notebooks JupyterLab .
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2079'
 ht-degree: 28%
 
 ---
@@ -37,21 +37,21 @@ Avant de poursuivre ce tutoriel, vous devez créer les schémas et les jeux de d
 
 Vous pouvez créer une recette à partir de zéro dans [!DNL Data Science Workspace]. Pour commencer, accédez à [Adobe Experience Platform](https://platform.adobe.com) et sélectionnez l’onglet **[!UICONTROL Notebooks]** sur la gauche. Pour créer un notebook , sélectionnez le modèle Créateur de recettes dans la [!DNL JupyterLab Launcher].
 
-Le notebook [!UICONTROL Créateur de recettes] vous permet d’exécuter des opérations de formation et de notation dans le notebook . Vous avez ainsi la possibilité d’apporter des modifications à leurs méthodes de `train()` et de `score()` entre deux expériences en cours d’exécution sur les données de formation et de notation. Une fois que vous êtes satisfait des résultats de la formation et de la notation, vous pouvez créer une recette et la publier en tant que modèle à l’aide de la fonctionnalité Recette vers modèle .
+Le notebook [!UICONTROL Recipe Builder] vous permet d’exécuter des exécutions de formation et de notation dans le notebook . Vous avez ainsi la possibilité d’apporter des modifications à leurs méthodes de `train()` et de `score()` entre deux expériences en cours d’exécution sur les données de formation et de notation. Une fois que vous êtes satisfait des résultats de la formation et de la notation, vous pouvez créer une recette et la publier en tant que modèle à l’aide de la fonctionnalité Recette vers modèle .
 
 >[!NOTE]
 >
->Le notebook [!UICONTROL Créateur de recettes] prend en charge l’utilisation de tous les formats de fichier, mais actuellement la fonctionnalité de création de recette ne prend en charge que les [!DNL Python].
+>Le notebook [!UICONTROL Recipe Builder] prend en charge l’utilisation de tous les formats de fichier, mais actuellement la fonctionnalité de création de recette ne prend en charge que les [!DNL Python].
 
 ![](../images/jupyterlab/create-recipe/recipe_builder-new.png)
 
-Lorsque vous sélectionnez le notebook [!UICONTROL Créateur de recettes] à partir du lanceur, le notebook est ouvert dans un nouvel onglet.
+Lorsque vous sélectionnez le notebook [!UICONTROL Recipe Builder] à partir du lanceur, le notebook est ouvert dans un nouvel onglet.
 
-Dans le nouvel onglet du notebook, en haut, une barre d’outils se charge contenant trois actions supplémentaires : **[!UICONTROL Entraîner]**, **[!UICONTROL Score]** et **[!UICONTROL Créer une recette]**. Ces icônes n’apparaissent que dans le notebook [!UICONTROL Créateur de recettes]. Vous trouverez plus d’informations sur ces actions [dans la section Formation et notation](#training-and-scoring) après avoir créé votre recette dans le notebook.
+Dans le nouvel onglet du notebook, en haut, une barre d’outils se charge contenant trois actions supplémentaires : **[!UICONTROL Train]**, **[!UICONTROL Score]** et **[!UICONTROL Create Recipe]**. Ces icônes n’apparaissent que dans le notebook [!UICONTROL Recipe Builder]. Vous trouverez plus d’informations sur ces actions [dans la section Formation et notation](#training-and-scoring) après avoir créé votre recette dans le notebook.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
-## Prise en main du notebook [!UICONTROL Créateur de recettes]
+## Prise en main du notebook [!UICONTROL Recipe Builder]
 
 Le dossier de ressources fourni contient un `propensity_model.ipynb` de modèle de propension Luma . À l’aide de l’option de chargement de notebook dans JupyterLab, chargez le modèle fourni et ouvrez le notebook.
 
@@ -69,7 +69,7 @@ Le reste de ce tutoriel couvre les fichiers suivants qui sont prédéfinis dans 
 
 Le tutoriel vidéo suivant explique le notebook de modèle de propension Luma :
 
->[!VIDEO](https://video.tv.adobe.com/v/3452494?captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/333570)
 
 ### Fichier des exigences {#requirements-file}
 
@@ -139,6 +139,7 @@ Pour un tutoriel détaillé sur l’utilisation du chargeur de données `platfor
 ### Sources externes {#external-sources}
 
 Cette section vous explique comment importer un fichier JSON ou CSV dans un objet pandas. La documentation officielle de la bibliothèque pandas se trouve ici :
+
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
 - [read_json](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_json.html)
 
@@ -178,6 +179,7 @@ def load(config_properties):
 >[!NOTE]
 >
 >Comme indiqué dans la section [Fichier de configuration](#configuration-files), les paramètres de configuration ci-dessous sont définis pour vous lorsque vous accédez aux données d’Experience Platform à l’aide de `client_context = get_client_context(config_properties)` :
+>
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -193,7 +195,7 @@ Une fois les données chargées, elles doivent être nettoyées et subir une pr�
 
 Une fois que vous avez supprimé toutes les données inutiles, vous pouvez commencer l’ingénierie des fonctionnalités. Les données de démonstration utilisées pour cet exemple ne contiennent aucune information de session. En règle générale, vous souhaiteriez disposer de données sur les sessions en cours et antérieures pour un client spécifique. En raison du manque d’informations sur la session, cet exemple imite plutôt les sessions actuelles et passées via la délimitation du parcours.
 
-![Délimitation du Parcours &#x200B;](../images/jupyterlab/create-recipe/journey_demarcation.png)
+![Délimitation du Parcours ](../images/jupyterlab/create-recipe/journey_demarcation.png)
 
 Une fois la délimitation terminée, les données sont étiquetées et un parcours est créé.
 
@@ -221,7 +223,7 @@ L’objectif de l’entraînement est de créer un modèle à l’aide des fonct
 
 ![train def](../images/jupyterlab/create-recipe/def_train.png)
 
-La fonction `score()` doit contenir l’algorithme de notation et renvoyer une mesure pour indiquer le degré de réussite du modèle. La fonction `score()` utilise les étiquettes des jeux de données de notation et le modèle formé pour générer un ensemble de fonctionnalités prédites. Ces valeurs prédites sont ensuite comparées aux fonctionnalités réelles du jeu de données de notation. Dans cet exemple, la fonction `score()` utilise le modèle formé pour prédire les fonctionnalités à l’aide des étiquettes du jeu de données de notation. Les fonctionnalités prédites sont renvoyées.
+La fonction `score()` doit contenir l’algorithme de notation et renvoyer une mesure pour indiquer le degré de réussite du modèle. La fonction `score()` utilise les libellés des jeux de données de notation et le modèle formé pour générer un ensemble de fonctionnalités prédites. Ces valeurs prédites sont ensuite comparées aux fonctionnalités réelles du jeu de données de notation. Dans cet exemple, la fonction `score()` utilise le modèle formé pour prédire les fonctionnalités à l’aide des libellés du jeu de données de notation. Les fonctionnalités prédites sont renvoyées.
 
 ![score def](../images/jupyterlab/create-recipe/def_score.png)
 
@@ -249,7 +251,7 @@ L’ajout de `print(metric)` vous permet d’afficher les résultats de la mesur
 
 ## Fichier Data Saver {#data-saver-file}
 
-Le fichier `datasaver.py` contient la fonction `save()` et est utilisé pour enregistrer votre prédiction lors du test de la notation. La fonction `save()` récupère votre prédiction et écrit les données dans le `scoringResultsDataSetId` spécifié dans votre fichier `scoring.conf` à l’aide des API [!DNL Experience Platform Catalog]. Vous pouvez
+Le fichier `datasaver.py` contient la fonction `save()` et est utilisé pour enregistrer votre prédiction lors du test de la notation. La fonction `save()` récupère votre prédiction et écrit les données dans le [!DNL Experience Platform Catalog] spécifié dans votre fichier `scoringResultsDataSetId` à l’aide des API `scoring.conf`. Vous pouvez
 
 ![Enregistreur de données](../images/jupyterlab/create-recipe/data_saver.png)
 
@@ -257,7 +259,7 @@ Le fichier `datasaver.py` contient la fonction `save()` et est utilisé pour enr
 
 Lorsque vous avez terminé d’apporter des modifications à votre notebook et que vous souhaitez entraîner votre recette, vous pouvez sélectionner les boutons associés dans la partie supérieure de la barre pour créer une exécution d’entraînement dans la cellule. Lorsque vous sélectionnez le bouton, un journal des commandes et des sorties du script d’entraînement s’affiche dans le notebook (sous la cellule `evaluator.py`). Conda installe d’abord toutes les dépendances, puis la formation commence.
 
-Remarque : vous devez exécuter la formation au moins une fois avant de pouvoir exécuter la notation. Cliquer sur le bouton **[!UICONTROL Exécuter le score]** attribuera un score au modèle formé généré pendant l’entraînement. Le script de notation apparaît sous `datasaver.py`.
+Remarque : vous devez exécuter la formation au moins une fois avant de pouvoir exécuter la notation. Le fait de sélectionner le bouton **[!UICONTROL Run Scoring]** donne un score au modèle formé généré lors de l’entraînement. Le script de notation apparaît sous `datasaver.py`.
 
 À des fins de débogage, si vous souhaitez afficher la sortie masquée, ajoutez `debug` à la fin de la cellule de sortie et exécutez-la de nouveau.
 
@@ -265,15 +267,15 @@ Remarque : vous devez exécuter la formation au moins une fois avant de pouvoir
 
 ## Créer une recette {#create-recipe}
 
-Une fois la modification de la recette terminée et le résultat de la formation/du score satisfait, vous pouvez créer une recette à partir du notebook en sélectionnant **[!UICONTROL Créer une recette]** dans le coin supérieur droit.
+Une fois la modification de la recette terminée et le résultat de la formation/du score satisfait, vous pouvez créer une recette à partir du notebook en sélectionnant **[!UICONTROL Create Recipe]** dans le coin supérieur droit.
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-Après avoir sélectionné **[!UICONTROL Créer une recette]**, vous êtes invité à saisir un nom de recette. Ce nom représente la recette réelle créée le [!DNL Experience Platform].
+Après avoir sélectionné **[!UICONTROL Create Recipe]**, vous êtes invité à saisir un nom de recette. Ce nom représente la recette réelle créée le [!DNL Experience Platform].
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Une fois que vous avez sélectionné **[!UICONTROL Ok]**, le processus de création de recette commence. Cela peut prendre un certain temps et une barre de progression s’affiche à la place du bouton Créer une recette . Une fois l’opération terminée, cliquez sur le bouton **[!UICONTROL Afficher les recettes]** pour accéder à l’onglet **[!UICONTROL Recettes]** sous **[!UICONTROL Modèles ML]**
+Une fois que vous avez sélectionné **[!UICONTROL Ok]**, le processus de création de recette commence. Cela peut prendre un certain temps et une barre de progression s’affiche à la place du bouton Créer une recette . Une fois l’opération terminée, vous pouvez sélectionner le bouton **[!UICONTROL View Recipes]** pour accéder à l’onglet **[!UICONTROL Recipes]** sous **[!UICONTROL ML Models]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -285,6 +287,6 @@ Une fois que vous avez sélectionné **[!UICONTROL Ok]**, le processus de créat
 
 ## Étapes suivantes {#next-steps}
 
-En suivant ce tutoriel, vous avez appris à créer un modèle de machine learning dans le notebook [!UICONTROL Créateur de recettes]. Vous avez également appris à faire fonctionner le workflow notebook vers recette.
+En suivant ce tutoriel, vous avez appris à créer un modèle de machine learning dans le notebook [!UICONTROL Recipe Builder]. Vous avez également appris à faire fonctionner le workflow notebook vers recette.
 
 Pour continuer à apprendre à utiliser les ressources dans [!DNL Data Science Workspace], consultez le menu déroulant [!DNL Data Science Workspace] des recettes et des modèles .

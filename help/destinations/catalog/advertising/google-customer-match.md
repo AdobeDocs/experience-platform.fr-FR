@@ -3,10 +3,10 @@ keywords: correspondance client google;correspondance client Google;correspondan
 title: Connexion à Google Customer Match
 description: Le ciblage par correspondance des clients de Google vous permet d’utiliser vos données en ligne et hors ligne pour contacter et réengager vos clients dans les propriétés détenues et exploitées par Google, telles que Search, Shopping et Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 4541e812ac1f44b5374b81685c1e41cb7f00993f
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2451'
-ht-degree: 22%
+source-wordcount: '2413'
+ht-degree: 19%
 
 ---
 
@@ -15,12 +15,12 @@ ht-degree: 22%
 >[!IMPORTANT]
 >
 > Google publie des modifications de l’API [Google Ads](https://developers.google.com/google-ads/api/docs/start), de l’API [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) et de l’API [Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) afin de prendre en charge les exigences de conformité et de consentement définies dans le [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) de l’Union européenne ([EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/)). L’application de ces modifications aux exigences en matière de consentement est effective à compter du 6 mars 2024.
-> &#x200B;><br/>
-> &#x200B;>Pour se conformer à la politique de consentement des utilisateurs de l’UE et continuer à créer des listes d’audience pour les utilisateurs dans l’Espace économique européen (EEE), les annonceurs et les partenaires doivent s’assurer de transmettre le consentement de l’utilisateur final lors du téléchargement des données d’audience. En tant que partenaire Google, Adobe vous fournit les outils nécessaires pour vous conformer à ces exigences de consentement en vertu de la DMA dans l’Union européenne.
-> &#x200B;><br/>
-> &#x200B;>Les clients qui ont acheté Adobe Privacy &amp; Security Shield et configuré une [politique de consentement](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) pour filtrer les profils non consentis n’ont aucune action à effectuer.
-> &#x200B;><br/>
-> &#x200B;>Les clients qui n’ont pas acheté Adobe Privacy &amp; Security Shield doivent utiliser les fonctionnalités [définition de segment](../../../segmentation/home.md#segment-definitions) du [créateur de segments](../../../segmentation/ui/segment-builder.md) pour filtrer les profils non consentis afin de continuer à utiliser les destinations Real-Time CDP Google existantes sans interruption.
+> ><br/>
+> >Pour se conformer à la politique de consentement des utilisateurs de l’UE et continuer à créer des listes d’audience pour les utilisateurs dans l’Espace économique européen (EEE), les annonceurs et les partenaires doivent s’assurer de transmettre le consentement de l’utilisateur final lors du téléchargement des données d’audience. En tant que partenaire Google, Adobe vous fournit les outils nécessaires pour vous conformer à ces exigences de consentement en vertu de la DMA dans l’Union européenne.
+> ><br/>
+> >Les clients qui ont acheté Adobe Privacy &amp; Security Shield et configuré une [politique de consentement](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) pour filtrer les profils non consentis n’ont aucune action à effectuer.
+> ><br/>
+> >Les clients qui n’ont pas acheté Adobe Privacy &amp; Security Shield doivent utiliser les fonctionnalités [définition de segment](../../../segmentation/home.md#segment-definitions) du [créateur de segments](../../../segmentation/ui/segment-builder.md) pour filtrer les profils non consentis afin de continuer à utiliser les destinations Real-Time CDP Google existantes sans interruption.
 
 [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) vous permet d’utiliser vos données en ligne et hors ligne pour contacter et réengager vos clients dans les propriétés détenues et exploitées par Google, telles que : [!DNL Search], [!DNL Shopping] et [!DNL Gmail].
 
@@ -60,8 +60,8 @@ Certaines destinations dans Experience Platform ont certaines règles et obligat
 |---|---|---|
 | `GAID` | GOOGLE ADVERTISING ID | Sélectionnez cette identité cible lorsque votre identité source est un espace de noms GAID. |
 | `IDFA` | Identifiant Apple pour les annonceurs | Sélectionnez cette identité cible lorsque votre identité source est un espace de noms IDFA. |
-| `phone_sha256_e.164` | Numéros de téléphone au format E164, hachés avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les numéros de téléphone hachés avec SHA256. Suivez les instructions de la section [Exigences de correspondance des identifiants](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de noms appropriés pour le texte brut et les numéros de téléphone hachés, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
-| `email_lc_sha256` | Adresses e-mail hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses e-mail hachées avec SHA256. Suivez les instructions de la section [Exigences de correspondance des identifiants](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de noms appropriés pour les adresses électroniques en texte brut et hachées, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
+| `phone_sha256_e.164` | Numéros de téléphone au format E164, hachés avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les numéros de téléphone hachés avec SHA256. Suivez les instructions de la section [Exigences de correspondance des identifiants](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de noms appropriés pour le texte brut et les numéros de téléphone hachés, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Apply transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
+| `email_lc_sha256` | Adresses e-mail hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses e-mail hachées avec SHA256. Suivez les instructions de la section [Exigences de correspondance des identifiants](#id-matching-requirements-id-matching-requirements) et utilisez les espaces de noms appropriés pour les adresses électroniques en texte brut et hachées, respectivement. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Apply transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
 | `user_id` | ID d’utilisateur personnalisés | Sélectionnez cette identité cible lorsque votre identité source est un espace de noms personnalisé. |
 | `address_info_first_name` | Prénom de l’utilisateur | Cette identité cible est destinée à être utilisée avec `address_info_last_name`, `address_info_country_code` et `address_info_postal_code`, lorsque vous souhaitez envoyer des données d’adresse postale à votre destination. <br><br>Pour que Google assure la correspondance de l’adresse, vous devez mapper les quatre champs d’adresse (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` et `address_info_postal_code`) et vous assurer qu’il n’existe pas de données de champs manquantes dans les profils exportés. <br> Si un champ n’est pas mappé ou contient des données manquantes, Google n’assure pas la correspondance de l’adresse. |
 | `address_info_last_name` | Nom de famille de l&#39;utilisateur | Cette identité cible est destinée à être utilisée avec `address_info_first_name`, `address_info_country_code` et `address_info_postal_code`, lorsque vous souhaitez envoyer des données d’adresse postale à votre destination. <br><br>Pour que Google assure la correspondance de l’adresse, vous devez mapper les quatre champs d’adresse (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` et `address_info_postal_code`) et vous assurer qu’il n’existe pas de données de champs manquantes dans les profils exportés. <br> Si un champ n’est pas mappé ou contient des données manquantes, Google n’assure pas la correspondance de l’adresse. |
@@ -86,9 +86,9 @@ Cette section décrit les types d’audiences que vous pouvez exporter vers cett
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
----------|----------|---------|
-| Type d’exportation | **[!UICONTROL Export d’audience]** | Vous exportez tous les membres d’une audience avec les identifiants (nom, numéro de téléphone et autres) utilisés dans la destination [!DNL Google Customer Match]. |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+|---------|----------|---------|
+| Type d’exportation | **[!UICONTROL Audience export]** | Vous exportez tous les membres d’une audience avec les identifiants (nom, numéro de téléphone et autres) utilisés dans la destination [!DNL Google Customer Match]. |
+| Fréquence des exportations | **[!UICONTROL Streaming]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -96,11 +96,11 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 Avant de configurer une destination [!DNL Google Customer Match] dans Experience Platform, assurez-vous de lire et de respecter la politique de Google relative à l’utilisation de [!DNL Customer Match], décrite dans la [documentation d’assistance Google](https://support.google.com/google-ads/answer/6299717).
 
-Ensuite, assurez-vous que votre compte [!DNL Google] est configuré pour un niveau d’autorisation [!DNL Standard] ou supérieur. Pour plus d’informations[&#x200B; consultez la documentation sur les Google Ads &#x200B;](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1).
+Ensuite, assurez-vous que votre compte [!DNL Google] est configuré pour un niveau d’autorisation [!DNL Standard] ou supérieur. Pour plus d’informations[ consultez la documentation sur les Google Ads ](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1).
 
 ### Liste autorisée {#allowlist}
 
-Avant de créer la destination [!DNL Google Customer Match] dans Experience Platform, assurez-vous que votre compte [!DNL Google Ads] est conforme à la [[!DNL Google Customer Match]  politique &#x200B;](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
+Avant de créer la destination [!DNL Google Customer Match] dans Experience Platform, assurez-vous que votre compte [!DNL Google Ads] est conforme à la [[!DNL Google Customer Match]  politique ](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
 Les clients disposant de comptes conformes sont automatiquement placés sur la liste autorisée par Google.
 
@@ -156,19 +156,19 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411785/?quality=12&learn=on&captions=fre_fr) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## Vue d’ensemble des vidéos {#video-overview}
 
 Regardez la vidéo ci-dessous pour une explication des avantages et de la manière d’activer les données dans le ciblage par correspondance client Google.
 
->[!VIDEO](https://video.tv.adobe.com/v/326484?captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
 
 ## Se connecter à la destination {#connect}
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
@@ -176,9 +176,9 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 Pendant la [configuration](../../ui/connect-destination.md) de cette destination, vous devez fournir les informations suivantes :
 
-* **[!UICONTROL Nom]** : attribuez un nom à cette connexion de destination
-* **[!UICONTROL Description]** : fournissez une description de cette connexion de destination
-* **[!UICONTROL ID de compte]** : votre [ID de client Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en). Le format de l’ID est xxx-xxx-xxxx. Si vous utilisez le [!DNL Google Ads Manager Account (My Client Center)], n’utilisez pas l’ID de compte Manager. Utilisez plutôt l’ID de client [Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en).
+* **[!UICONTROL Name]** : attribuez un nom à cette connexion de destination
+* **[!UICONTROL Description]** : fournissez une description pour cette connexion de destination
+* **[!UICONTROL Account ID]** : votre identifiant client [Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en). Le format de l’ID est xxx-xxx-xxxx. Si vous utilisez le [!DNL Google Ads Manager Account (My Client Center)], n’utilisez pas l’ID de compte Manager. Utilisez plutôt l’ID de client [Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en).
 
 >[!NOTE]
 >
@@ -186,24 +186,24 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 
 >[!IMPORTANT]
 >
-> * L’action marketing **[!UICONTROL Combiner avec des PII]** est sélectionnée par défaut pour la destination [!DNL Google Customer Match] et ne peut pas être supprimée.
+> * L’action marketing **[!UICONTROL Combine with PII]** est sélectionnée par défaut pour la destination [!DNL Google Customer Match] et ne peut pas être supprimée.
 
 ### Activer les alertes {#enable-alerts}
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités* vers les destinations, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités* vers des destinations, vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[ access control](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
-Dans l’étape **[!UICONTROL Planning des segments]**, vous devez fournir l’identifiant [!UICONTROL App] lors de l’envoi d’audiences [!DNL IDFA] ou [!DNL GAID] à des [!DNL Google Customer Match].
+À l’étape **[!UICONTROL Segment schedule]**, vous devez fournir l’[!UICONTROL App ID] lors de l’envoi d’audiences [!DNL IDFA] ou [!DNL GAID] à [!DNL Google Customer Match].
 
 ![Le champ ID de l’application de correspondance client Google est mis en surbrillance à l’étape Planification des segments du workflow d’activation.](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
@@ -234,7 +234,7 @@ Sélection des champs cibles :
 
 Les données des espaces de noms non hachés sont automatiquement hachées par [!DNL Experience Platform] lors de l’activation.
 
-Les données source des attributs ne sont pas automatiquement hachées. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation.
+Les données source des attributs ne sont pas automatiquement hachées. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Apply transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation.
 
 ![Appliquez le contrôle de transformation mis en surbrillance dans l’étape Mappage du workflow d’activation.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
@@ -260,4 +260,4 @@ Lors de la configuration de cette destination, vous risquez de recevoir l’erre
 
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
-Cette erreur se produit lorsque les comptes client ne respectent pas les [&#x200B; conditions préalables &#x200B;](#google-account-prerequisites). Pour résoudre ce problème, contactez Google et assurez-vous que votre compte est sur liste autorisée et configuré pour un niveau d’autorisation [!DNL Standard] ou supérieur. Pour plus d’informations[&#x200B; consultez la documentation sur les Google Ads &#x200B;](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1).
+Cette erreur se produit lorsque les comptes client ne respectent pas les [ conditions préalables ](#google-account-prerequisites). Pour résoudre ce problème, contactez Google et assurez-vous que votre compte est sur liste autorisée et configuré pour un niveau d’autorisation [!DNL Standard] ou supérieur. Pour plus d’informations[ consultez la documentation sur les Google Ads ](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1).

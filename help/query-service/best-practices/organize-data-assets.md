@@ -2,7 +2,7 @@
 title: Bonnes pratiques relatives à l’organisation des ressources de données dans Query Service
 description: Ce document décrit un moyen logique d’organiser les données pour faciliter leur utilisation avec Query Service.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '787'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Il est important d’organiser logiquement vos ressources de données dans le [!
 
 ## Commencer
 
-Avant de poursuivre avec ce document, vous devez bien comprendre les fonctionnalités de [Query Service](../home.md) et avoir lu le guide de l’interface utilisateur [&#128279;](../ui/user-guide.md).
+Avant de poursuivre avec ce document, vous devez bien comprendre les fonctionnalités de [Query Service](../home.md) et avoir lu le guide de l’interface utilisateur [](../ui/user-guide.md).
 
 ## Organisation des données dans Query Service
 
@@ -66,7 +66,7 @@ La liste de toutes les bases de données sous `dbname="all"` affiche trois bases
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
 databaseB
 databaseC
@@ -78,7 +78,7 @@ La liste de tous les schémas sous `dbname="all"` affiche les trois schémas ass
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 databaseA      | schema2
 databaseB      | schema3
@@ -90,14 +90,14 @@ Lorsque vous établissez une connexion [!DNL PostgreSQL] à l’aide de `dbname=
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
  
 
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 databaseA      | schema2
 ```
@@ -108,20 +108,20 @@ La notation par points vous permet d’accéder à chaque table associée à un 
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
 
 
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 
 
 SHOW tables;
 name       | type
-----------------------
+|----------------------
 dataset1| table
 dataset2| table
 dataset3| table

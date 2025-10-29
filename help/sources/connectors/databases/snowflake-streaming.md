@@ -3,7 +3,7 @@ title: Présentation Du Connecteur Source De Diffusion En Continu Snowflake
 description: Découvrez comment créer une connexion source et un flux de données pour ingérer les données de diffusion en continu de votre instance Snowflake vers Adobe Experience Platform
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: 1d0cc448293ab3cad6ccb971bb2edc86c1b01a5c
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 6%
@@ -79,7 +79,7 @@ Pour authentifier votre instance [!DNL Snowflake] avec Experience Platform, vous
 
 Pour trouver l’identifiant de votre compte, procédez comme suit :
 
-* Accédez à votre compte dans le tableau de bord de l’interface utilisateur de l’application [[!DNL Snowflake] &#x200B;](https://app.snowflake.com/).
+* Accédez à votre compte dans le tableau de bord de l’interface utilisateur de l’application [[!DNL Snowflake] ](https://app.snowflake.com/).
 * Dans le volet de navigation de gauche, sélectionnez **[!DNL Accounts]**, puis **[!DNL Active Accounts]** dans l’en-tête.
 * Sélectionnez ensuite l’icône d’information, puis sélectionnez et copiez le nom de domaine de l’URL active.
 
@@ -100,9 +100,9 @@ openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 des3 -inform PEM -out rsa_key.p8
 En cas de réussite, vous devriez recevoir votre clé privée au format PEM.
 
 ```shell
------BEGIN ENCRYPTED PRIVATE KEY-----
+|-----BEGIN ENCRYPTED PRIVATE KEY-----
 MIIE6T...
------END ENCRYPTED PRIVATE KEY-----
+|-----END ENCRYPTED PRIVATE KEY-----
 ```
 
 >[!TAB Créer une clé privée non chiffrée]
@@ -116,9 +116,9 @@ openssl genrsa 2048 | openssl pkcs8 -topk8 -inform PEM -out rsa_key.p8 -nocrypt
 En cas de réussite, vous devriez recevoir votre clé privée au format PEM.
 
 ```shell
------BEGIN PRIVATE KEY-----
+|-----BEGIN PRIVATE KEY-----
 MIIE6T...
------END PRIVATE KEY-----
+|-----END PRIVATE KEY-----
 ```
 
 >[!ENDTABS]

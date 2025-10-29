@@ -2,10 +2,10 @@
 title: Connexion Google Ads
 description: Google Ads, appelé auparavant Google AdWords, est un service de publicité en ligne qui permet aux entreprises de faire de la publicité avec paiement par clic sur des recherches textuelles, des affichages graphiques, des vidéos YouTube et des affichages mobiles in-app.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 76%
+source-wordcount: '928'
+ht-degree: 73%
 
 ---
 
@@ -58,9 +58,9 @@ Cette section décrit les types d’audiences que vous pouvez exporter vers cett
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
----------|----------|---------|
-| Type d’exportation | **[!UICONTROL Export d’audience]** | Vous exportez toutes les personnes membres d’une audience vers la destination Google. |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+|---------|----------|---------|
+| Type d’exportation | **[!UICONTROL Audience export]** | Vous exportez toutes les personnes membres d’une audience vers la destination Google. |
+| Fréquence des exportations | **[!UICONTROL Streaming]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -77,7 +77,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 >[!NOTE]
 >
 >La liste autorisée est obligatoire avant de configurer votre première destination [!DNL Google Ads] dans Experience Platform. Assurez-vous que le processus de liste autorisée décrit ci-dessous a été terminé par [!DNL Google] avant de créer une destination.
->Une exception à cette règle s’applique aux clients d’[Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=fr). Si vous avez déjà créé une connexion à cette destination Google dans Audience Manager, il n’est pas nécessaire de passer à nouveau par le processus de liste autorisée et vous pouvez passer directement aux étapes suivantes.
+>>Une exception à cette règle s’applique aux clients d’[Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=fr). Si vous avez déjà créé une connexion à cette destination Google dans Audience Manager, il n’est pas nécessaire de passer à nouveau par le processus de liste autorisée et vous pouvez passer directement aux étapes suivantes.
 
 Avant de créer la destination [!DNL Google Ads] dans Experience Platform, vous devez contacter [!DNL Google] pour qu’Adobe soit placé sur la liste des fournisseurs de données autorisés et pour que votre compte soit ajouté à la place sur la liste autorisée. Contactez [!DNL Google] et fournissez les informations suivantes :
 
@@ -90,7 +90,7 @@ Avant de créer la destination [!DNL Google Ads] dans Experience Platform, vous 
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
@@ -98,22 +98,22 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 Pendant la [configuration](../../ui/connect-destination.md) de cette destination, vous devez fournir les informations suivantes :
 
-* **[!UICONTROL Nom]** : renseignez le nom de votre choix pour cette destination.
+* **[!UICONTROL Name]** : renseignez le nom de votre choix pour cette destination.
 * **[!UICONTROL Description]** : facultatif. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination.
-* **[!UICONTROL Type de compte]** : AdWords est la seule option disponible.
-* **[!UICONTROL Identifiant de compte]** : renseignez votre identifiant de compte avec [!DNL Google Ads]. Le format d’identifiant est généralement 123-456-7890.
+* **[!UICONTROL Account Type]** : AdWords est la seule option disponible.
+* **[!UICONTROL Account ID]** : renseignez votre identifiant de compte avec [!DNL Google Ads]. Le format d’identifiant est généralement 123-456-7890.
 
 ### Activer les alertes {#enable-alerts}
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
->Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
@@ -131,6 +131,6 @@ Lors de la configuration de cette destination, vous risquez de recevoir l’erre
 
 Cette erreur se produit lorsque les comptes clients ne respectent pas les [conditions préalables](#prerequisites) ou lorsque les clientes et clients tentent de configurer la destination sans un compte [!DNL Google Ads] existant.
 
-[!DNL Google] a abandonné les nouvelles intégrations de cookies [!DNL Google Ads] avec des fournisseurs tiers. Pour effectuer les étapes de [place sur la liste autorisée &#x200B;](#allow-listing), vous devez disposer d&#39;une intégration existante avec [!DNL Google Ads].
+[!DNL Google] a abandonné les nouvelles intégrations de cookies [!DNL Google Ads] avec des fournisseurs tiers. Pour effectuer les étapes de [place sur la liste autorisée ](#allow-listing), vous devez disposer d&#39;une intégration existante avec [!DNL Google Ads].
 
 L’approche recommandée pour l’utilisation de [!DNL Google Ads] est de configurer une intégration [[!DNL Google Customer Match]](google-customer-match.md).

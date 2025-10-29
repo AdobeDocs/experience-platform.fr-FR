@@ -1,29 +1,29 @@
 ---
 title: Échantillon de jeux de données
-description: Les échantillons de jeux de données Query Service vous permettent de mener des requêtes exploratoires sur le Big Data avec un temps de traitement considérablement réduit, mais au prix de la précision des requêtes. Ce guide fournit des informations sur la gestion de vos échantillons pour le traitement approximatif des requêtes.
+description: Les exemples de jeux de données Query Service vous permettent de mener des requêtes exploratoires sur le Big Data avec un temps de traitement considérablement réduit, mais au prix de la précision des requêtes. Ce guide fournit des informations sur la gestion de vos échantillons pour le traitement approximatif des requêtes.
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '633'
-ht-degree: 94%
+ht-degree: 97%
 
 ---
 
 # Échantillons de jeux de données
 
-Adobe Experience Platform Query Service fournit des échantillons de jeux de données dans le cadre de ses fonctionnalités approximatives de traitement des requêtes. Des échantillons de jeux de données sont créés avec des échantillons aléatoires uniformes issus de jeux de données [!DNL Azure Data Lake Storage] (ADLS), utilisant uniquement un pourcentage d’enregistrements de l’original. Ce pourcentage est connu sous le nom de taux d’échantillonnage. Le réglage du taux d’échantillonnage pour contrôler l’équilibre précision/temps de traitement permet d’effectuer des requêtes exploratoires sur le Big Data avec un temps de traitement considérablement réduit, au détriment de la précision des requêtes.
+Adobe Experience Platform Query Service fournit des exemples de jeux de données dans le cadre de ses fonctionnalités approximatives de traitement des requêtes. Des exemples de jeux de données sont créés avec des échantillons aléatoires uniformes issus de jeux de données [!DNL Azure Data Lake Storage] (ADLS), utilisant uniquement un pourcentage d’enregistrements de l’original. Ce pourcentage est connu sous le nom de taux d’échantillonnage. Le réglage du taux d’échantillonnage pour contrôler l’équilibre précision/temps de traitement permet d’effectuer des requêtes exploratoires sur le Big Data avec un temps de traitement considérablement réduit, au détriment de la précision des requêtes.
 
-Comme de nombreux utilisateurs et de nombreuses utilisatrices n’ont pas besoin d’une réponse exacte pour une opération d’agrégat sur un jeu de données, l’émission d’une requête approximative pour retourner une réponse approximative est plus efficace pour les requêtes exploratoires sur de grands jeux de données. Comme les échantillons de jeux de données ne contiennent qu’un pourcentage de données du jeu de données d’origine, ils vous permettent d’échanger la précision des requêtes contre un temps de réponse amélioré. Lors de la lecture, Query Service doit analyser moins de lignes, ce qui produit des résultats plus rapidement que si vous deviez interroger l’ensemble du jeu de données.
+Comme de nombreux utilisateurs et de nombreuses utilisatrices n’ont pas besoin d’une réponse exacte pour une opération d’agrégat sur un jeu de données, l’émission d’une requête approximative pour retourner une réponse approximative est plus efficace pour les requêtes exploratoires sur de grands jeux de données. Comme les exemples de jeux de données ne contiennent qu’un pourcentage des données du jeu de données d’origine, ils vous permettent d’échanger la précision des requêtes contre un temps de réponse amélioré. Lors de la lecture, Query Service doit analyser moins de lignes, ce qui produit des résultats plus rapidement que si vous deviez interroger l’ensemble du jeu de données.
 
 Pour vous aider à gérer vos échantillons pour le traitement approximatif des requêtes, Query Service prend en charge les opérations suivantes pour les échantillons de jeux de données :
 
 - [Échantillons de jeux de données](#dataset-samples)
-   - [Prise en main {#get-started}](#getting-started-get-started)
-   - [Créer un exemple de jeu de données aléatoire uniforme {#create-a-sample}](#create-a-uniform-random-dataset-sample-create-a-sample)
-   - [Spécifiez éventuellement un critère de filtre {#optional-filter-criteria}](#optionally-specify-a-filter-criteria-optional-filter-criteria)
-   - [Afficher la liste des exemples {#view-list-of-samples}](#view-the-list-of-samples-view-list-of-samples)
-   - [Interroger l’exemple de jeu de données {#query-sample-datasets}](#query-the-sample-dataset-query-sample-datasets)
-   - [Supprimer des échantillons de jeux de données {#delete-a-sample}](#delete-dataset-samples-delete-a-sample)
+   - [Commencer](#getting-started-get-started)
+   - [Créer un échantillon de jeu de données aléatoire uniforme](#create-a-uniform-random-dataset-sample-create-a-sample)
+   - [Vous pouvez également indiquer un critère de filtre.](#optionally-specify-a-filter-criteria-optional-filter-criteria)
+   - [Afficher la liste des échantillons](#view-the-list-of-samples-view-list-of-samples)
+   - [Interroger l’exemple de jeu de données](#query-the-sample-dataset-query-sample-datasets)
+   - [Supprimer des échantillons de jeux de données](#delete-dataset-samples-delete-a-sample)
 
 ## Commencer {#get-started}
 
@@ -43,7 +43,7 @@ Le taux d’échantillonnage est le pourcentage d’enregistrements extraits du 
 
 >[!IMPORTANT]
 >
->Le système autorise un maximum de cinq échantillons pour chaque jeu de données. Si vous essayez de créer un sixième échantillon de jeu de données, un message d’erreur s’affiche à l’écran pour vous informer que la limite d’échantillons a été atteinte.
+>Le système autorise un maximum de cinq échantillons pour chaque jeu de données. Si vous essayez de créer un sixième exemple de jeu de données, un message d’erreur s’affiche à l’écran pour vous informer que la limite d’exemples a été atteinte.
 
 ```sql
 ANALYZE TABLE example_dataset_name TABLESAMPLE SAMPLERATE 5.0;
@@ -61,7 +61,7 @@ ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> A
 ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> AND (<filter_condition_2> OR <filter_condition_3>)) SAMPLERATE X.Y;
 ```
 
-Voici des exemples concrets de ce type d’échantillon de jeu de données filtré :
+Voici des exemples concrets de ce type d’exemple de jeu de données filtré :
 
 ```sql
 ANALYZE TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9')) SAMPLERATE 10;
@@ -83,12 +83,12 @@ La liste des échantillons de jeux de données s’affiche au format de l’éch
 
 ```shell
                   sample_table_name                  |    sample_dataset_id     |    parent_dataset_id     | sample_type | sampling_rate | sample_num_rows |       created      
------------------------------------------------------+--------------------------+--------------------------+-------------+---------------+-----------------+---------------------
+|-----------------------------------------------------+--------------------------+--------------------------+-------------+---------------+-----------------+---------------------
  x5e5cd8ea0a83c418a8ef0928_uniform_4_0_percent_ughk7 | 62ff19853d338f1c07b18965 | 5e5cd8ea0a83c418a8ef0928 | uniform     |           4.0 |             391 | 19/08/2022 05:03:01
 (1 row)
 ```
 
-## Interroger l’échantillon de jeu de données {#query-sample-datasets}
+## Interroger l’exemple de jeu de données {#query-sample-datasets}
 
 Utilisez `{EXAMPLE_DATASET_NAME}` pour interroger directement les tables d’échantillons. Vous pouvez également ajouter le mot-clé `WITHAPPROXIMATE` à la fin d’une requête pour que Query Service utilise automatiquement l’échantillon le plus récemment créé.
 
@@ -106,4 +106,4 @@ DROP TABLESAMPLE x5e5cd8ea0a83c418a8ef0928_uniform_2_0_percent_bnhmc;
 
 >[!NOTE]
 >
->Si vous disposez de plusieurs échantillons de jeux de données dérivés d’un jeu de données ADLS d’origine, lorsque l’original est supprimé, tous les échantillons associés le sont également.
+>Si vous disposez de plusieurs exemples de jeux de données dérivés d’un jeu de données ADLS d’origine, lorsque l’original est supprimé, tous les exemples associés le sont également.

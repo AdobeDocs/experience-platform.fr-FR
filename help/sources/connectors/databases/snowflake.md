@@ -3,7 +3,7 @@ title: Présentation du connecteur Source de Snowflake
 description: Découvrez comment connecter Snowflake à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 0476c42924bf0163380e650141fad8e50b98d4cf
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1502'
 ht-degree: 6%
@@ -107,7 +107,7 @@ Vous devez récupérer l’identifiant de votre compte à partir du tableau de b
 
 Pour récupérer l’identifiant de votre compte :
 
-* Accédez à votre compte dans le tableau de bord de l’interface utilisateur de l’application [[!DNL Snowflake] &#x200B;](https://app.snowflake.com/).
+* Accédez à votre compte dans le tableau de bord de l’interface utilisateur de l’application [[!DNL Snowflake] ](https://app.snowflake.com/).
 * Dans le volet de navigation de gauche, sélectionnez **[!DNL Accounts]**, puis **[!DNL Active Accounts]** dans l’en-tête.
 * Sélectionnez ensuite l’icône d’information, puis sélectionnez et copiez le nom de domaine de l’URL active.
 
@@ -130,9 +130,9 @@ openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 des3 -inform PEM -out rsa_key.p8
 En cas de réussite, vous devriez recevoir votre clé privée au format PEM.
 
 ```shell
------BEGIN ENCRYPTED PRIVATE KEY-----
+|-----BEGIN ENCRYPTED PRIVATE KEY-----
 MIIE6T...
------END ENCRYPTED PRIVATE KEY-----
+|-----END ENCRYPTED PRIVATE KEY-----
 ```
 
 >[!TAB Créer une clé privée non chiffrée]
@@ -146,9 +146,9 @@ openssl genrsa 2048 | openssl pkcs8 -topk8 -inform PEM -out rsa_key.p8 -nocrypt
 En cas de réussite, vous devriez recevoir votre clé privée au format PEM.
 
 ```shell
------BEGIN PRIVATE KEY-----
+|-----BEGIN PRIVATE KEY-----
 MIIE6T...
------END PRIVATE KEY-----
+|-----END PRIVATE KEY-----
 ```
 
 >[!ENDTABS]

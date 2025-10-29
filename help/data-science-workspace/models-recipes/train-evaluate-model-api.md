@@ -5,7 +5,7 @@ title: Entraînement et évaluation d’un modèle à l’aide de l’API Sensei
 type: Tutorial
 description: Ce tutoriel vous explique comment créer, entraîner et évaluer un modèle à l’aide d’appels API de machine learning Sensei.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1240'
 ht-degree: 79%
@@ -26,7 +26,7 @@ Ce tutoriel vous explique comment créer, former et évaluer un modèle à l’a
 
 Suivez la procédure [Importer une recette empaquetée à l’aide de l’API](./import-packaged-recipe-api.md) pour créer un moteur, ce qui est nécessaire pour former et évaluer un modèle à l’aide de l’API.
 
-Suivez le tutoriel [Authentification de l’API Experience Platform &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour commencer à effectuer des appels API.
+Suivez le tutoriel [Authentification de l’API Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour commencer à effectuer des appels API.
 
 Grâce au tutoriel, vous devez maintenant disposer des valeurs suivantes :
 
@@ -437,6 +437,7 @@ L’appel GET fournit l’état dans le paramètre `state`, comme illustré ci-d
 `{EXPERIMENT_ID}` : identifiant qui représente l’expérience sous laquelle se trouve l’exécution d’expérience.
 
 Outre l’état `DONE`, les autres états incluent :
+
 - `PENDING`
 - `RUNNING`
 - `FAILED`

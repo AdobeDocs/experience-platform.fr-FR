@@ -5,9 +5,9 @@ title: Se connecter aux destinations par lots et activer des données à l’aid
 description: Cette section contient des instructions détaillées sur l’utilisation de l’API Flow Service pour créer un espace de stockage par lots dans le cloud ou une destination de marketing par e-mail dans Experience Platform et activer les données.
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 833e38559f7150c579840c69fa2658761fc9472c
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '3450'
+source-wordcount: '3435'
 ht-degree: 71%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 71%
 
 >[!IMPORTANT]
 > 
->* Pour vous connecter à une destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions).
+>* Pour vous connecter à une destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions).
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions).
 >
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 >
 >Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
@@ -127,7 +127,7 @@ Une réponse réussie contient une liste des destinations disponibles et leurs i
 À titre de référence, le tableau ci-dessous contient les identifiants de spécification de connexion pour les destinations par lots couramment utilisées :
 
 | Destination | Identifiant de spécification de connexion |
----------|----------|
+|---------|----------|
 | [!DNL Adobe Campaign] | `0b23e41a-cb4a-4321-a78f-3b654f5d7d97` |
 | [!DNL Oracle Eloqua] | `c1e44b6b-e7c8-404b-9031-58f0ef760604` |
 | [!DNL Oracle Responsys] | `a5e28ddf-e265-426e-83a1-9d03a3a6822b` |
@@ -942,7 +942,7 @@ curl -X POST \
 À titre de référence, le tableau ci-dessous contient les identifiants de spécification de flux pour les destinations par lots couramment utilisées :
 
 | Destination | Identifiant de spécification de flux |
----------|----------|
+|---------|----------|
 | Toutes les destinations de stockage dans le cloud ([!DNL Amazon S3], SFTP, [!DNL Azure Blob]) et [!DNL Oracle Eloqua] | `71471eba-b620-49e4-90fd-23f1fa0174d8` |
 | [!DNL Oracle Responsys] | `51d675ce-e270-408d-91fc-22717bdf2148` |
 | [!DNL Salesforce Marketing Cloud] | `493b2bd6-26e4-4167-ab3b-5e910bba44f0` |
@@ -1253,7 +1253,7 @@ La réponse renvoyée doit inclure dans le paramètre `transformations` les audi
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[&#x200B; consultez les sections &#x200B;](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[ consultez les sections ](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 

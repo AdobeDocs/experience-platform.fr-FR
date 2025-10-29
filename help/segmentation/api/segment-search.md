@@ -1,32 +1,32 @@
 ---
-title: Point de terminaison de l’API de recherche de segments
-description: Dans l’API Adobe Experience Platform Segmentation Service, la recherche de segments est utilisée pour rechercher les champs contenus dans diverses sources de données et les renvoyer en temps quasi réel. Ce guide fournit des informations pour vous aider à mieux comprendre la recherche de segments et inclut des exemples d’appels API pour effectuer des actions de base à l’aide de l’API.
+title: Point d’entrée de l’API de recherche de segments
+description: Dans l’API Adobe Experience Platform Segmentation Service, la recherche de segments permet de rechercher des champs contenus dans différentes sources de données et de les renvoyer en temps quasi réel. Ce guide fournit des informations pour vous aider à mieux comprendre la recherche de segments et comprend des exemples d’appels API pour exécuter des actions de base à l’aide de l’API .
 role: Developer
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1189'
-ht-degree: 44%
+source-wordcount: '1178'
+ht-degree: 45%
 
 ---
 
-# Point de terminaison de la recherche de segments
+# Point d’entrée de la recherche de segments
 
-La recherche de segments permet de rechercher des champs contenus dans diverses sources de données et de les renvoyer en temps quasi réel.
+La recherche de segments permet de rechercher des champs contenus dans différentes sources de données et de les renvoyer en temps quasi réel.
 
-Ce guide fournit des informations pour vous aider à mieux comprendre la recherche de segments et inclut des exemples d’appels API pour effectuer des actions de base à l’aide de l’API.
+Ce guide fournit des informations pour vous aider à mieux comprendre la recherche de segments et comprend des exemples d’appels API pour exécuter des actions de base à l’aide de l’API .
 
 ## Commencer
 
-Les points de terminaison utilisés dans ce guide font partie de l’API [!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, y compris les en-têtes requis et comment lire des exemples d’appels API.
+Les points d’entrée utilisés dans ce guide font partie de l’API [!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, y compris les en-têtes requis et la manière de lire des exemples d’appels API.
 
-Outre les en-têtes requis décrits dans la section Prise en main , toutes les requêtes envoyées au point de terminaison de recherche de segments nécessitent l’en-tête supplémentaire suivant :
+Outre les en-têtes obligatoires décrits dans la section Prise en main , toutes les requêtes envoyées au point d’entrée de la recherche de segments nécessitent l’en-tête supplémentaire suivant :
 
-- x-ups-search-version: &quot;1.0&quot;
+- x-ups-search-version : « 1.0 »
 
-### Recherche parmi plusieurs espaces de noms
+### Recherche dans plusieurs espaces de noms
 
-Ce point de terminaison de recherche peut être utilisé pour effectuer des recherches dans différents espaces de noms, renvoyant une liste de résultats du nombre de recherches. Plusieurs paramètres peuvent être utilisés, séparés par des esperluettes (&amp;).
+Ce point d’entrée de recherche peut être utilisé pour effectuer une recherche dans divers espaces de noms, renvoyant une liste de résultats de nombre de recherches. Plusieurs paramètres peuvent être utilisés, séparés par des esperluettes (&amp;).
 
 **Format d’API**
 
@@ -37,8 +37,8 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 
 | Paramètres | Description |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Obligatoire)** Où {SCHEMA} représente la valeur de classe de schéma associée aux objets de recherche. Actuellement, seul `_xdm.context.segmentdefinition` est pris en charge. |
-| `s={SEARCH_TERM}` | *(Facultatif)* Où {SEARCH_TERM} représente une requête conforme à l’implémentation Microsoft de la [syntaxe de recherche Lucene](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax). Si aucun terme de recherche n’est spécifié, tous les enregistrements associés à `schema.name` seront renvoyés. Vous trouverez une explication plus détaillée dans l&#39;[annexe](#appendix) de ce document. |
+| `schema.name={SCHEMA}` | **(Obligatoire)** Où {SCHEMA} représente la valeur de la classe de schéma associée aux objets de recherche. Actuellement, seul `_xdm.context.segmentdefinition` est pris en charge. |
+| `s={SEARCH_TERM}` | *(Facultatif)* Où {SEARCH_TERM} représente une requête conforme à l’implémentation de Microsoft de la syntaxe de recherche [Lucene](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax). Si aucun terme de recherche n’est spécifié, tous les enregistrements associés à `schema.name` seront renvoyés. Une explication plus détaillée se trouve dans l&#39;[annexe](#appendix) de ce document. |
 
 **Requête**
 
@@ -83,9 +83,9 @@ Une réponse réussie renvoie un état HTTP 200 avec les informations suivantes
 }
 ```
 
-### Recherche d’entités individuelles
+### Rechercher des entités individuelles
 
-Ce point de terminaison de recherche peut être utilisé pour récupérer une liste de tous les objets indexés en texte intégral dans l’espace de noms spécifié. Plusieurs paramètres peuvent être utilisés, séparés par des esperluettes (&amp;).
+Ce point d’entrée de recherche peut être utilisé pour récupérer une liste de tous les objets indexés en texte intégral dans l’espace de noms spécifié. Plusieurs paramètres peuvent être utilisés, séparés par des esperluettes (&amp;).
 
 **Format d’API**
 
@@ -97,12 +97,12 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Paramètres | Description |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Obligatoire)** Où {SCHEMA} contient la valeur de classe de schéma associée aux objets de recherche. Actuellement, seul `_xdm.context.segmentdefinition` est pris en charge. |
-| `namespace={NAMESPACE}` | **(Obligatoire)** Où {NAMESPACE} contient l’espace de noms dans lequel vous souhaitez effectuer des recherches. |
-| `s={SEARCH_TERM}` | *(Facultatif)* Où {SEARCH_TERM} contient une requête conforme à l’implémentation Microsoft de la [syntaxe de recherche Lucene](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax). Si aucun terme de recherche n’est spécifié, tous les enregistrements associés à `schema.name` seront renvoyés. Vous trouverez une explication plus détaillée dans l&#39;[annexe](#appendix) de ce document. |
-| `entityId={ENTITY_ID}` | *(Facultatif)* Limite votre recherche à dans le dossier désigné, spécifié avec {ENTITY_ID}. |
+| `schema.name={SCHEMA}` | **(Obligatoire)** Où {SCHEMA} contient la valeur de la classe de schéma associée aux objets de recherche. Actuellement, seul `_xdm.context.segmentdefinition` est pris en charge. |
+| `namespace={NAMESPACE}` | **(Obligatoire)** Où {NAMESPACE} contient l’espace de noms dans lequel vous souhaitez effectuer une recherche. |
+| `s={SEARCH_TERM}` | *(Facultatif)* Où {SEARCH_TERM} contient une requête conforme à l’implémentation de Microsoft de la syntaxe de recherche [Lucene](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax). Si aucun terme de recherche n’est spécifié, tous les enregistrements associés à `schema.name` seront renvoyés. Une explication plus détaillée se trouve dans l&#39;[annexe](#appendix) de ce document. |
+| `entityId={ENTITY_ID}` | *(Facultatif)* Limite votre recherche au dossier désigné, spécifié avec {ENTITY_ID}. |
 | `limit={LIMIT}` | *(Facultatif)* Où {LIMIT} représente le nombre de résultats de recherche à renvoyer. La valeur par défaut est 50. |
-| `page={PAGE}` | *(Facultatif)* Où {PAGE} représente le numéro de page utilisé pour paginer les résultats de la requête recherchée. Veuillez noter que le numéro de page commence à **0**. |
+| `page={PAGE}` | *(Facultatif)* Où {PAGE} représente le numéro de page utilisé pour paginer les résultats de la requête recherchée. Le numéro de page commence à **0**. |
 
 
 **Requête**
@@ -156,9 +156,9 @@ Une réponse réussie renvoie un état HTTP 200 avec les résultats correspondan
 }
 ```
 
-### Obtention d’informations structurelles sur un objet de recherche
+### Obtenir des informations structurelles sur un objet de recherche
 
-Ce point de terminaison de recherche peut être utilisé pour obtenir les informations structurelles sur l’objet de recherche demandé.
+Ce point d’entrée de recherche peut être utilisé pour obtenir les informations structurelles sur l’objet de recherche demandé.
 
 **Format d’API**
 
@@ -168,9 +168,9 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Paramètres | Description |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Obligatoire)** Où {SCHEMA} contient la valeur de classe de schéma associée aux objets de recherche. Actuellement, seul `_xdm.context.segmentdefinition` est pris en charge. |
-| `namespace={NAMESPACE}` | **(Obligatoire)** Où {NAMESPACE} contient l’espace de noms dans lequel vous souhaitez effectuer des recherches. |
-| `entityId={ENTITY_ID}` | **(Obligatoire)** ID de l’objet de recherche dont vous souhaitez obtenir les informations structurelles, spécifié avec {ENTITY_ID}. |
+| `schema.name={SCHEMA}` | **(Obligatoire)** Où {SCHEMA} contient la valeur de la classe de schéma associée aux objets de recherche. Actuellement, seul `_xdm.context.segmentdefinition` est pris en charge. |
+| `namespace={NAMESPACE}` | **(Obligatoire)** Où {NAMESPACE} contient l’espace de noms dans lequel vous souhaitez effectuer une recherche. |
+| `entityId={ENTITY_ID}` | **(Obligatoire)** Identifiant de l’objet de recherche à propos duquel vous souhaitez obtenir les informations structurelles, spécifié avec {ENTITY_ID}. |
 
 **Requête**
 
@@ -219,13 +219,15 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations structurel
 
 ## Étapes suivantes
 
-Après avoir lu ce guide, vous comprenez mieux le fonctionnement de la recherche de segments.
+Vous êtes arrivé au bout de ce guide. À présent, vous comprenez mieux comment fonctionne la recherche de segments.
 
 ## Annexe {#appendix}
 
-Les sections suivantes apportent des informations supplémentaires sur le fonctionnement des termes de recherche. Les requêtes de recherche sont écrites de la manière suivante : `s={FieldName}:{SearchExpression}`. Par exemple, pour rechercher une définition de segment nommée AAM ou [!DNL Platform], vous utiliserez la requête de recherche suivante : `s=segmentName:AAM%20OR%20Platform`.
+Les sections suivantes apportent des informations supplémentaires sur le fonctionnement des termes de recherche. Les requêtes de recherche sont écrites de la manière suivante : `s={FieldName}:{SearchExpression}`. Par exemple, pour rechercher une définition de segment nommée AAM ou [!DNL Platform], vous devez utiliser la requête suivante : `s=segmentName:AAM%20OR%20Platform`.
 
->  Pour connaître les bonnes pratiques, l’expression de recherche doit être codée en HTML, comme dans l’exemple ci-dessus.
+>[!NOTE]
+>
+>Pour de bonnes pratiques, l’expression de recherche doit être codée en HTML, comme dans l’exemple illustré ci-dessus.
 
 ### Champs de recherche {#search-fields}
 
@@ -233,18 +235,20 @@ Le tableau suivant répertorie les champs pouvant faire l’objet d’une recher
 
 | Nom du champ | Description |
 | ---------- | ----------- |
-| folderId | Le ou les dossiers portant l’ID de dossier de votre recherche spécifiée. |
-| folderLocation | Emplacement ou emplacements disposant de l’emplacement du dossier de votre recherche spécifiée. |
-| parentFolderId | La définition de segment ou le dossier contenant l’identifiant du dossier parent de votre recherche spécifiée. |
-| segmentId | La définition de segment qui correspond à l’identifiant du segment de votre recherche spécifiée. |
+| folderId | Le ou les dossiers ayant l’ID de dossier de votre recherche spécifiée. |
+| folderLocation | Emplacement(s) comportant l’emplacement du dossier de votre recherche spécifiée. |
+| parentFolderId | La définition de segment ou le dossier dont l’ID de dossier parent correspond à votre recherche spécifiée. |
+| segmentId | La définition de segment qui correspond à l’identifiant de segment de votre recherche spécifiée. |
 | segmentName | La définition de segment qui correspond au nom du segment de votre recherche spécifiée. |
 | segmentDescription | La définition de segment qui correspond à la description du segment de votre recherche spécifiée. |
 
 ### Expression de recherche {#search-expression}
 
-Le tableau suivant répertorie les détails du fonctionnement des requêtes de recherche lors de l’utilisation de l’API de recherche de segments.
+Le tableau suivant répertorie les détails du fonctionnement des requêtes de recherche lors de l’utilisation de l’API de recherche de segments .
 
->  Pour plus de clarté, les exemples suivants sont affichés dans un format codé non HTML. Pour connaître les bonnes pratiques, HTML de coder votre expression de recherche.
+>[!NOTE]
+>
+>Les exemples suivants sont présentés dans un format codé non HTML pour une meilleure clarté. Pour connaître les bonnes pratiques, HTML code votre expression de recherche.
 
 | Exemple d’expression de recherche | Description |
 | ------------------------- | ----------- |

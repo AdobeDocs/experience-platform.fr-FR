@@ -4,9 +4,9 @@ title: Exporter des jeux de données à l’aide de l’API Flow Service
 description: Découvrez comment utiliser l’API Flow Service pour exporter des jeux de données vers des destinations sélectionnées.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 8b2b40be94bb35f0c6117bfc1d51f8ce282f2b29
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '5220'
+source-wordcount: '5208'
 ht-degree: 12%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 12%
 
 >[!AVAILABILITY]
 >
->* Cette fonctionnalité est disponible pour les clients qui ont acheté le package Real-Time CDP Prime et Ultimate, Adobe Journey Optimizer ou Customer Journey Analytics. Pour plus d’informations, contactez votre représentant Adobe.
+>* Cette fonctionnalité est disponible pour les clients qui ont acheté le package Real-Time CDP Prime et Ultimate, Adobe Journey Optimizer ou Customer Journey Analytics. Contactez votre représentant ou représentante Adobe pour plus d’informations.
 
 >[!IMPORTANT]
 >
@@ -57,7 +57,7 @@ Actuellement, vous pouvez exporter des jeux de données vers les destinations d�
 * [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-## Prérequis {#prerequisites}
+## Conditions préalables {#prerequisites}
 
 Notez les conditions préalables suivantes pour exporter des jeux de données :
 
@@ -77,9 +77,9 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 
 ### Autorisations nécessaires {#permissions}
 
-Pour exporter des jeux de données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Afficher les jeux de données]** et **[!UICONTROL Gérer et activer les destinations de jeu de données]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+Pour exporter des jeux de données, vous avez besoin des **[!UICONTROL View Destinations]**, **[!UICONTROL View Datasets]** et **[!UICONTROL Manage and Activate Dataset Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Pour vous assurer que vous disposez des autorisations nécessaires pour exporter des jeux de données et que la destination prend en charge l’exportation de jeux de données, parcourez le catalogue des destinations. Si une destination comporte un contrôle **[!UICONTROL Activer]** ou **[!UICONTROL Exporter des jeux de données]**, vous disposez des autorisations appropriées.
+Pour vous assurer que vous disposez des autorisations nécessaires pour exporter des jeux de données et que la destination prend en charge l’exportation de jeux de données, parcourez le catalogue des destinations. Si une destination comporte un contrôle **[!UICONTROL Activate]** ou **[!UICONTROL Export datasets]**, vous disposez des autorisations appropriées.
 
 ### Lecture d’exemples d’appels API {#reading-sample-api-calls}
 
@@ -119,7 +119,7 @@ Avant de démarrer le workflow pour exporter un jeu de données, identifiez la s
 
 
 | Destination | Spécification de connexion | Spécification de flux |
----------|----------|---------|
+|---------|----------|---------|
 | [!DNL Amazon S3] | `4fce964d-3f37-408f-9778-e597338a21ee` | `269ba276-16fc-47db-92b0-c1049a3c131f` |
 | [!DNL Azure Blob Storage] | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `95bd8965-fc8a-4119-b9c3-944c2c2df6d2` |
 | [!DNL Azure Data Lake Gen 2(ADLS Gen2)] | `be2c3209-53bc-47e7-ab25-145db8b873e1` | `17be2013-2549-41ce-96e7-a70363bec293` |
@@ -137,7 +137,7 @@ Vous avez besoin de ces identifiants pour construire différentes entités [!DNL
 
 **Requête**
 
-+++Récupérer des [!DNL connection spec] pour [!DNL Amazon S3]
++++Récupérer les [!DNL connection spec] pour les [!DNL Amazon S3]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
@@ -171,7 +171,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Requête**
 
-+++Récupérer des [!DNL connection spec] pour [!DNL Azure Blob Storage]
++++Récupérer les [!DNL connection spec] pour les [!DNL Azure Blob Storage]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6d6b59bf-fb58-4107-9064-4d246c0e5bb2' \
@@ -205,7 +205,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Requête**
 
-+++Récupérer des [!DNL connection spec] pour [!DNL Azure Data Lake Gen 2(ADLS Gen2])
++++Récupérer les [!DNL connection spec] pour [!DNL Azure Data Lake Gen 2(ADLS Gen2])
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/be2c3209-53bc-47e7-ab25-145db8b873e1' \
@@ -239,7 +239,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Requête**
 
-+++Récupérer des [!DNL connection spec] pour [!DNL Data Landing Zone(DLZ)]
++++Récupérer les [!DNL connection spec] pour les [!DNL Data Landing Zone(DLZ)]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/10440537-2a7b-4583-ac39-ed38d4b848e8' \
@@ -273,7 +273,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Requête**
 
-+++Récupérer des [!DNL connection spec] pour [!DNL Google Cloud Storage]
++++Récupérer les [!DNL connection spec] pour les [!DNL Google Cloud Storage]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/c5d93acb-ea8b-4b14-8f53-02138444ae99' \
@@ -351,7 +351,7 @@ Pour récupérer une liste de jeux de données éligibles à l’activation, com
 
 **Requête**
 
-+++Récupérer des jeux de données éligibles - Requête
++++Récupération de jeux de données éligibles - Requête
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/23598e46-f560-407b-88d5-ea6207e49db0/configs?outputType=activationDatasets&outputField=datasets&start=0&limit=20&properties=name,state' \
@@ -368,7 +368,7 @@ Notez que pour récupérer les jeux de données éligibles, l’identifiant de [
 
 **Réponse**
 
-+++Récupération de jeux de données - Réponse
++++Récupérer des jeux de données - Réponse
 
 ```json
 {
@@ -1155,7 +1155,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Réponse**
 
-+++SFTP - Réponse de la connexion de base
++++SFTP - Réponse de connexion de base
 
 ```json
 {
@@ -1552,7 +1552,7 @@ Notez les lignes mises en surbrillance avec des commentaires intégrés dans l�
 
 >[!TAB SFTP]
 
-+++SFTP - [!DNL Connection spec] affichant les paramètres de connexion cible
++++SFTP : [!DNL Connection spec] des paramètres de connexion cible
 
 Notez les lignes mises en surbrillance avec des commentaires intégrés dans l’exemple de [!DNL connection spec] ci-dessous, qui fournissent des informations supplémentaires sur l’emplacement des paramètres de [!DNL target spec] dans la spécification de connexion. Vous pouvez également voir dans l’exemple ci-dessous quels paramètres cibles ne s’appliquent *pas* aux destinations d’exportation de jeux de données.
 
@@ -1632,7 +1632,7 @@ En utilisant la spécification ci-dessus, vous pouvez créer une demande de conn
 >[!TIP]
 >
 >Pour plus d’informations sur l’obtention des paramètres cibles requis, reportez-vous à la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) de la page de documentation sur la destination [!DNL Amazon S3].
->Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
+>>Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
@@ -1685,7 +1685,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Pour plus d’informations sur l’obtention des paramètres cibles requis, reportez-vous à la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) de la page de documentation sur la destination [!DNL Azure Blob Storage].
->Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
+>>Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
@@ -1739,7 +1739,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Pour plus d’informations sur l’obtention des paramètres cibles requis, reportez-vous à la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) de la page de documentation sur la destination Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
->Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
+>>Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
@@ -1791,7 +1791,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Pour plus d’informations sur l’obtention des paramètres cibles requis, reportez-vous à la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) de la page de documentation sur la destination [!DNL Data Landing Zone].
->Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
+>>Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
@@ -1843,7 +1843,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Pour plus d’informations sur l’obtention des paramètres cibles requis, reportez-vous à la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) de la page de documentation sur la destination [!DNL Google Cloud Storage].
->Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
+>>Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
@@ -1897,7 +1897,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Pour plus d’informations sur l’obtention des paramètres cibles requis, reportez-vous à la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) de la page de documentation sur la destination SFTP.
->Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
+>>Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
@@ -2463,7 +2463,7 @@ Le nom de fichier par défaut est généré de manière aléatoire pour garantir
 
 ### Exemples de fichiers de jeu de données {#sample-files}
 
-La présence de ces fichiers dans votre emplacement de stockage confirme que l’activation a été réalisée avec succès. Pour comprendre la structure des fichiers exportés, vous pouvez télécharger un exemple de [fichier parquet](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) ou de [fichier JSON](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
+La présence de ces fichiers dans votre emplacement de stockage confirme que l’export a été réalisé avec succès. Pour comprendre la structure des fichiers exportés, vous pouvez télécharger un exemple de [fichier parquet](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) ou de [fichier JSON](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
 
 #### Fichiers de jeu de données compressés {#compressed-dataset-files}
 
@@ -2477,7 +2477,7 @@ Notez la différence de format de fichier entre les deux types de fichiers lorsq
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[&#128279;](/help/landing/troubleshooting.md#api-status-codes) consultez les sections Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[ consultez les sections ](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Limites connues {#known-limitations}
 

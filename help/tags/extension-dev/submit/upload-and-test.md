@@ -2,10 +2,10 @@
 title: Téléchargement et implémentation de tests de bout en bout pour une extension
 description: Découvrez comment valider, télécharger et tester votre extension dans Adobe Experience Platform.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2347'
-ht-degree: 85%
+source-wordcount: '2344'
+ht-degree: 84%
 
 ---
 
@@ -63,10 +63,10 @@ npx @adobe/reactor-uploader
 
 >[!NOTE]
 > Par défaut, le téléchargeur attend des informations d’identification Adobe I/O pour un flux Oauth serveur à serveur. Informations d’identification de `jwt-auth` héritées
-> peut être utilisé en exécutant `npx @adobe/reactor-uploader@v5.2.0` jusqu’à l’obsolescence le 1er janvier 2025. Paramètres requis
-> pour exécuter la version `jwt-auth`, rendez-vous [ici](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
+> > peut être utilisé en exécutant `npx @adobe/reactor-uploader@v5.2.0` jusqu’à l’obsolescence le 1er janvier 2025. Paramètres requis
+> > pour exécuter la version `jwt-auth`, rendez-vous [ici](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
-Le téléchargeur ne vous demande de saisir que quelques informations. Les `clientId` et `clientSecret` peuvent être récupérés à partir de la console Adobe I/O. Accédez à la [page Intégrations](https://console.adobe.io/integrations) dans la console I/O. Sélectionnez lʼorganisation adéquate dans la liste déroulante puis recherchez lʼintégration appropriée et cliquez sur **[!UICONTROL Afficher]**.
+Le téléchargeur ne vous demande de saisir que quelques informations. Les `clientId` et `clientSecret` peuvent être récupérés à partir de la console Adobe I/O. Accédez à la [page Intégrations](https://console.adobe.io/integrations) dans la console I/O. Sélectionnez l’organisation appropriée dans la liste déroulante, recherchez l’intégration appropriée et sélectionnez **[!UICONTROL View]**.
 
 - Quel est votre `clientId` ? Copiez et collez-le à partir de la console I/O.
 - Quel est votre `clientSecret` ? Copiez et collez-le à partir de la console I/O.
@@ -82,11 +82,11 @@ Votre package d’extension sera ensuite téléchargé et le téléchargeur vous
 >
 >Si vous prévoyez d’exécuter fréquemment le téléchargeur, intégrer toutes ces informations à chaque fois peut s’avérer fastidieux. Vous pouvez également les transmettre sous forme d’arguments à partir de la ligne de commande. Pour plus d’informations, consultez la section [Arguments de ligne de commande](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments) des documents npm.
 
-Si vous souhaitez gérer le chargement direct de votre extension à l’aide de l’API, consultez les exemples d’appels pour [création](../../api/endpoints/extension-packages.md/#create) ou [mise à jour](../../api/endpoints/extension-packages.md#update) d’un package d’extension dans la documentation API pour plus d’informations.
+Si vous souhaitez gérer le chargement direct de votre extension à l’aide de l’API, consultez les exemples d’appels pour [création](../../api/endpoints/extension-packages.md#create) ou [mise à jour](../../api/endpoints/extension-packages.md#update) d’un package d’extension dans la documentation API pour plus d’informations.
 
 ## Créer une propriété de développement {#property}
 
-Une fois que vous êtes connecté à l’interface utilisateur et que vous avez sélectionné **[!UICONTROL Balises]** dans le volet de navigation de gauche, l’écran [!UICONTROL Propriétés] s’affiche. Une propriété est un conteneur pour les balises que vous souhaitez déployer et elle peut être utilisée sur un ou plusieurs sites.
+Une fois que vous êtes connecté à l’interface utilisateur et que vous sélectionnez **[!UICONTROL Tags]** dans le volet de navigation de gauche, l’écran de [!UICONTROL Properties] s’affiche. Une propriété est un conteneur pour les balises que vous souhaitez déployer et elle peut être utilisée sur un ou plusieurs sites.
 
 ![](../images/getting-started/properties-screen.png)
 

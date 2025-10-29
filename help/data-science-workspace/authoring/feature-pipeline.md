@@ -4,7 +4,7 @@ title: Création d’un pipeline de fonctionnalités à l’aide du SDK de créa
 type: Tutorial
 description: Adobe Experience Platform vous permet de créer des pipelines de fonctionnalités personnalisés pour concevoir des fonctionnalités à grande échelle via l’exécution du framework de machine learning de Sensei. Ce document décrit les différentes classes d’un pipeline de fonctionnalités et fournit un tutoriel détaillé sur la création d’un pipeline de fonctionnalités personnalisé à l’aide du SDK de création de modèles dans PySpark.
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1438'
 ht-degree: 28%
@@ -40,6 +40,7 @@ Le workflow suivant se produit lorsqu’un pipeline de fonctionnalité est exéc
 ## Commencer
 
 Pour exécuter une recette dans n’importe quelle organisation, les éléments suivants sont requis :
+
 - Un jeu de données d’entrée.
 - Schéma du jeu de données.
 - Un schéma transformé et un jeu de données vide basé sur ce schéma.

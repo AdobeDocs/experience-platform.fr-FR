@@ -2,10 +2,10 @@
 title: Connexion SFTP
 description: Créez une connexion sortante active à votre serveur SFTP afin d’exporter périodiquement des fichiers de données délimités à partir d’Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 45f22addbff9ec81d64e9e756e4c27e8af4b477d
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1182'
+ht-degree: 31%
 
 ---
 
@@ -31,7 +31,7 @@ Créez une connexion sortante active à votre serveur SFTP afin d’exporter pé
 ## Connexion à SFTP via l’API ou l’interface utilisateur {#connect-api-or-ui}
 
 * Pour vous connecter à l’emplacement de stockage de votre SFTP à l’aide de l’interface utilisateur d’Experience Platform, lisez les sections [Se connecter à la destination](#connect) et [Activer des audiences vers cette destination](#activate) ci-dessous.
-* Pour vous connecter à votre emplacement de stockage SFTP par programmation, lisez le tutoriel [&#x200B; Activer des audiences vers des destinations basées sur des fichiers à l’aide de l’API Flow Service](../../api/activate-segments-file-based-destinations.md).
+* Pour vous connecter à votre emplacement de stockage SFTP par programmation, lisez le tutoriel [ Activer des audiences vers des destinations basées sur des fichiers à l’aide de l’API Flow Service](../../api/activate-segments-file-based-destinations.md).
 
 ## Audiences prises en charge {#supported-audiences}
 
@@ -49,9 +49,9 @@ Cette section décrit les types d’audiences que vous pouvez exporter vers cett
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
----------|----------|---------|
-| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil du [workflow d’activation de destination](../../ui/activate-batch-profile-destinations.md#select-attributes). |
-| Fréquence des exportations | **[!UICONTROL Lot]** | Les destinations par lots exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur les [destinations basées sur des fichiers par lots](/help/destinations/destination-types.md#file-based). |
+|---------|----------|---------|
+| Type d’exportation | **[!UICONTROL Profile-based]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil du [workflow d’activation de destination](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Fréquence des exportations | **[!UICONTROL Batch]** | Les destinations par lots exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur les [destinations basées sur des fichiers par lots](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ La configuration correcte des limites de connexion de votre serveur SFTP permet 
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -102,28 +102,28 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 >title="Clé SSH privée"
 >abstract="La clé SSH privée doit être une chaîne codée en Base64 et formatée pour le RSA, et ne doit pas être protégée par un mot de passe."
 
-Si vous sélectionnez le type d’authentification **[!UICONTROL SFTP avec mot de passe]** pour vous connecter à votre emplacement SFTP :
+Si vous sélectionnez le type d’authentification **[!UICONTROL SFTP with password]** pour vous connecter à votre emplacement SFTP :
 
 ![Authentification de base de la destination SFTP avec mot de passe.](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
-* **[!UICONTROL Domaine]** : adresse de l’emplacement de stockage de votre SFTP ;
-* **[!UICONTROL Nom d’utilisateur]** : nom d’utilisateur pour se connecter à l’emplacement de stockage de votre SFTP ;
-* **[!UICONTROL Port]** : le port utilisé par votre emplacement de stockage SFTP ;
-* **[!UICONTROL Mot de passe]** : mot de passe pour se connecter à l’emplacement de stockage de votre SFTP.
-* **[!UICONTROL Clé de chiffrement]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
+* **[!UICONTROL Domain]** : adresse de l’emplacement de stockage de votre SFTP ;
+* **[!UICONTROL Username]** : nom d’utilisateur pour la connexion à l’emplacement de stockage de votre SFTP ;
+* **[!UICONTROL Port]** : port utilisé par votre emplacement de stockage SFTP ;
+* **[!UICONTROL Password]** : mot de passe pour se connecter à l’emplacement de stockage de votre SFTP.
+* **[!UICONTROL Encryption key]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
 
   ![Image montrant un exemple de clé PGP correctement formatée dans l’interface utilisateur.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
-Si vous sélectionnez le type d’authentification **[!UICONTROL SFTP avec clé SSH]** pour vous connecter à votre emplacement SFTP :
+Si vous sélectionnez le type d’authentification **[!UICONTROL SFTP with SSH key]** pour vous connecter à votre emplacement SFTP :
 
 ![Authentification de la clé SSH de la destination SFTP.](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
 
-* **[!UICONTROL Domaine]** : indiquez l’adresse IP ou le nom de domaine de votre compte SFTP ;
-* **[!UICONTROL Port]** : le port utilisé par votre emplacement de stockage SFTP ;
-* **[!UICONTROL Nom d’utilisateur]** : nom d’utilisateur pour se connecter à l’emplacement de stockage de votre SFTP ;
-* **[!UICONTROL Clé SSH]** : clé SSH privée utilisée pour se connecter à l’emplacement de stockage de votre SFTP. La clé privée doit être une chaîne au format RSA et codée en Base64, et ne doit pas être protégée par un mot de passe.
-* **[!UICONTROL Clé de chiffrement]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
+* **[!UICONTROL Domain]** : indiquez l’adresse IP ou le nom de domaine de votre compte SFTP ;
+* **[!UICONTROL Port]** : port utilisé par votre emplacement de stockage SFTP ;
+* **[!UICONTROL Username]** : nom d’utilisateur pour la connexion à l’emplacement de stockage de votre SFTP ;
+* **[!UICONTROL SSH Key]** : clé SSH privée utilisée pour se connecter à l’emplacement de stockage de votre SFTP. La clé privée doit être une chaîne au format RSA et codée en Base64, et ne doit pas être protégée par un mot de passe.
+* **[!UICONTROL Encryption key]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
 
   ![Image montrant un exemple de clé PGP correctement formatée dans l’interface utilisateur.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
@@ -133,12 +133,12 @@ Après avoir établi la connexion d’authentification à l’emplacement SFTP, 
 
 ![Champs de détails de la destination pour la destination SFTP.](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
-* **[!UICONTROL Nom]** : saisissez un nom qui vous aide à identifier cette destination dans l’interface utilisateur d’Experience Platform ;
+* **[!UICONTROL Name]** : saisissez un nom qui vous aide à identifier cette destination dans l’interface utilisateur d’Experience Platform ;
 * **[!UICONTROL Description]** : saisissez une description pour cette destination ;
-* **[!UICONTROL Chemin du dossier]** : saisissez le chemin du dossier de votre emplacement SFTP où les fichiers seront exportés.
-* **[!UICONTROL Type de fichier]** : sélectionnez le format qu’Experience Platform doit utiliser pour les fichiers exportés. Lors de la sélection de l’option [!UICONTROL CSV], vous pouvez également [configurer les options de formatage des fichiers](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Format de compression]** : sélectionnez le type de compression qu’Experience Platform doit utiliser pour les fichiers exportés.
-* **[!UICONTROL Inclure le fichier manifeste]** : activez cette option si vous souhaitez que les exportations incluent un fichier JSON de manifeste contenant des informations sur l’emplacement d’exportation, la taille d’exportation, etc. Le manifeste est nommé à l’aide du format `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Affichez un [exemple de fichier de manifeste](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Le fichier manifeste comprend les champs suivants :
+* **[!UICONTROL Folder path]** : saisissez le chemin d’accès au dossier de votre emplacement SFTP où les fichiers seront exportés.
+* **[!UICONTROL File type]** : sélectionnez le format qu’Experience Platform doit utiliser pour les fichiers exportés. Lors de la sélection de l’option [!UICONTROL CSV] , vous pouvez également [configurer les options de formatage des fichiers](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Compression format]** : sélectionnez le type de compression qu’Experience Platform doit utiliser pour les fichiers exportés.
+* **[!UICONTROL Include manifest file]** : activez cette option si vous souhaitez que les exportations incluent un fichier JSON manifeste contenant des informations sur l’emplacement de l’exportation, la taille de l’exportation, etc. Le manifeste est nommé à l’aide du format `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Affichez un [exemple de fichier de manifeste](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Le fichier manifeste comprend les champs suivants :
    * `flowRunId` : exécution [flux de données](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) qui a généré le fichier exporté.
    * `scheduledTime` : heure en UTC à laquelle le fichier a été exporté.
    * `exportResults.sinkPath` : chemin d’accès à l’emplacement de stockage où le fichier exporté est déposé.
@@ -149,10 +149,10 @@ Après avoir établi la connexion d’authentification à l’emplacement SFTP, 
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
-Consultez [&#x200B; Activer les données d’audience vers des destinations d’exportation de profils par lots &#x200B;](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Consultez [ Activer les données d’audience vers des destinations d’exportation de profils par lots ](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ## Valider l’exportation des données avec succès {#exported-data}
 

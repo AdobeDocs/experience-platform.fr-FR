@@ -3,7 +3,7 @@ keywords: destination de stockage dans le cloud;espace de stockage dans le cloud
 title: Présentation des destinations de stockage dans le cloud
 description: Adobe Experience Platform peut diffuser vos audiences sous forme de fichiers de données vers vos emplacements de stockage dans le cloud Amazon S3, AWS Kinesis, Azure Event Hubs ou SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 39%
@@ -73,6 +73,7 @@ Comme dans les exemples ci-dessus, vous pouvez utiliser d’autres macros pour c
 ## Type d’exportation de données {#export-type}
 
 Les destinations de stockage dans le cloud prennent en charge les types d’exportation suivants :
+
 * **Exportation basée sur les profils**. Cela signifie que vous exportez des détails sur les individus dans l’audience. Ces détails sont nécessaires à la personnalisation et peuvent inclure des attributs, des événements, des appartenances à une audience, etc.
 * **Exportation du jeu de données**. Cette fonctionnalité vous permet d’exporter des jeux de données entiers vers des destinations d’espace de stockage. [En savoir plus](/help/destinations/ui/export-datasets.md) à propos de la fonctionnalité.
 

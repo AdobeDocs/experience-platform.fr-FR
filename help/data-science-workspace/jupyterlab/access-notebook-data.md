@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Accès aux données dans les notebooks Jupyterlab
 description: Ce guide explique comment utiliser les notebooks Jupyter, créés dans le Workspace de science des données pour accéder à vos données.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '3346'
-ht-degree: 22%
+source-wordcount: '3274'
+ht-degree: 21%
 
 ---
 
@@ -29,7 +29,7 @@ Avant de lire ce guide, veuillez consulter le [[!DNL JupyterLab] guide de l’ut
 
 >[!IMPORTANT]
 >
->Pour les notebooks PySpark et Scala si vous recevez une erreur avec la raison « Client RPC distant dissocié ». Cela signifie généralement que la mémoire du pilote ou de l’exécuteur est insuffisante. Essayez de passer [&#x200B; mode « lot »](#mode) pour résoudre cette erreur.
+>Pour les notebooks PySpark et Scala si vous recevez une erreur avec la raison « Client RPC distant dissocié ». Cela signifie généralement que la mémoire du pilote ou de l’exécuteur est insuffisante. Essayez de passer [ mode « lot »](#mode) pour résoudre cette erreur.
 
 Les informations suivantes définissent la quantité maximale de données pouvant être lues, le type de données utilisées et le délai estimé de lecture des données.
 
@@ -154,12 +154,12 @@ df = dataset_reader.limit(100).offset(10).read()
 
 ### Écrire dans un jeu de données en Python {#write-python}
 
-Pour écrire dans un jeu de données dans votre notebook JupyterLab, sélectionnez l’onglet Icône de données (mis en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les **[!UICONTROL jeux de données]** et les répertoires de **[!UICONTROL schémas]** s’affichent. Sélectionnez **[!UICONTROL Jeux de données]** puis cliquez avec le bouton droit de la souris. Sélectionnez ensuite l’option **[!UICONTROL Écrire des données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
+Pour écrire dans un jeu de données dans votre notebook JupyterLab, sélectionnez l’onglet Icône de données (mis en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les répertoires **[!UICONTROL Datasets]** et **[!UICONTROL Schemas]** s’affichent. Sélectionnez **[!UICONTROL Datasets]** puis cliquez avec le bouton droit de la souris. Sélectionnez ensuite l’option **[!UICONTROL Write Data in Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
 
 ![](../images/jupyterlab/data-access/write-dataset.png)
 
 - Utilisez **[!UICONTROL Write Data in Notebook]** pour générer une cellule d’écriture avec le jeu de données sélectionné.
-- Utilisez **[!UICONTROL Explorer des données dans Notebook]** pour générer une cellule de lecture avec le jeu de données sélectionné.
+- Utilisez **[!UICONTROL Explore Data in Notebook]** pour générer une cellule de lecture avec le jeu de données sélectionné.
 - Utilisez **[!UICONTROL Query Data in Notebook]** pour générer une cellule de requête de base avec le jeu de données sélectionné.
 
 Vous pouvez également copier et coller la cellule de code suivante. Remplacez les `{DATASET_ID}` et les `{PANDA_DATAFRAME}`.
@@ -177,9 +177,9 @@ write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 
 [!DNL JupyterLab] sur [!DNL Experience Platform] vous permet d’utiliser SQL dans un notebook [!DNL Python] pour accéder aux données via [Adobe Experience Platform Query Service](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=fr). L’accès aux données par le biais de [!DNL Query Service] peut s’avérer utile pour la gestion de jeux de données volumineux grâce à ses temps d’exécution plus performants. Notez que l’interrogation de données à l’aide de [!DNL Query Service] est limitée à dix minutes de traitement.
 
-Avant d’utiliser [!DNL Query Service] dans [!DNL JupyterLab], assurez-vous de bien comprendre le fonctionnement de la syntaxe SQL de [[!DNL Query Service] &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=fr).
+Avant d’utiliser [!DNL Query Service] dans [!DNL JupyterLab], assurez-vous de bien comprendre le fonctionnement de la syntaxe SQL de [[!DNL Query Service] ](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=fr).
 
-L’interrogation de données à l’aide de [!DNL Query Service] nécessite que vous fournissiez le nom du jeu de données cible. Vous pouvez générer les cellules de code nécessaires en recherchant le jeu de données souhaité à l’aide de l’**[!UICONTROL explorateur de données]**. Cliquez avec le bouton droit sur la liste des jeux de données et cliquez sur **[!UICONTROL Requête de données dans Notebook]** pour générer deux cellules de code dans votre notebook. Ces deux cellules sont décrites plus en détail ci-dessous.
+L’interrogation de données à l’aide de [!DNL Query Service] nécessite que vous fournissiez le nom du jeu de données cible. Vous pouvez générer les cellules de code nécessaires en recherchant le jeu de données souhaité à l’aide de l’**[!UICONTROL Data explorer]** . Cliquez avec le bouton droit sur la liste des jeux de données et cliquez sur **[!UICONTROL Query Data in Notebook]** pour générer deux cellules de code dans votre notebook. Ces deux cellules sont décrites plus en détail ci-dessous.
 
 ![](../images/jupyterlab/data-access/python-query-dataset.png)
 
@@ -290,12 +290,12 @@ df0 <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### Écrire dans un jeu de données dans R {#write-r}
 
-Pour écrire dans un jeu de données dans votre notebook JupyterLab, sélectionnez l’onglet Icône de données (mis en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les **[!UICONTROL jeux de données]** et les répertoires de **[!UICONTROL schémas]** s’affichent. Sélectionnez **[!UICONTROL Jeux de données]** puis cliquez avec le bouton droit de la souris. Sélectionnez ensuite l’option **[!UICONTROL Écrire des données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
+Pour écrire dans un jeu de données dans votre notebook JupyterLab, sélectionnez l’onglet Icône de données (mis en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les répertoires **[!UICONTROL Datasets]** et **[!UICONTROL Schemas]** s’affichent. Sélectionnez **[!UICONTROL Datasets]** puis cliquez avec le bouton droit de la souris. Sélectionnez ensuite l’option **[!UICONTROL Write Data in Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
 
 ![](../images/jupyterlab/data-access/r-write-dataset.png)
 
 - Utilisez **[!UICONTROL Write Data in Notebook]** pour générer une cellule d’écriture avec le jeu de données sélectionné.
-- Utilisez **[!UICONTROL Explorer des données dans Notebook]** pour générer une cellule de lecture avec le jeu de données sélectionné.
+- Utilisez **[!UICONTROL Explore Data in Notebook]** pour générer une cellule de lecture avec le jeu de données sélectionné.
 
 Vous pouvez également copier et coller la cellule de code suivante :
 
@@ -398,13 +398,13 @@ Commande magique [!DNL Data Science Workspace] personnalisée pour lire ou écri
 > - Client RPC distant dissocié et autres erreurs de mémoire.
 > - Mauvaises performances lors de la lecture et de l’écriture de jeux de données.
 > 
-> Pour plus d’informations[&#128279;](../troubleshooting-guide.md) consultez le  guide de dépannage .
+> Pour plus d’informations[ consultez le ](../troubleshooting-guide.md) guide de dépannage .
 
 Vous pouvez générer automatiquement les exemples ci-dessus dans JupyterLab, mais en utilisant la méthode suivante :
 
-Sélectionnez l’onglet Icône de données (mis en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les **[!UICONTROL jeux de données]** et les répertoires de **[!UICONTROL schémas]** s’affichent. Sélectionnez **[!UICONTROL Jeux de données]** puis cliquez avec le bouton droit de la souris. Sélectionnez ensuite l’option **[!UICONTROL Écrire des données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
+Sélectionnez l’onglet Icône de données (mis en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les répertoires **[!UICONTROL Datasets]** et **[!UICONTROL Schemas]** s’affichent. Sélectionnez **[!UICONTROL Datasets]** puis cliquez avec le bouton droit de la souris. Sélectionnez ensuite l’option **[!UICONTROL Write Data in Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
 
-- Utilisez **[!UICONTROL Explorer les données dans Notebook]** pour générer une cellule de lecture.
+- Utilisez **[!UICONTROL Explore Data in Notebook]** pour générer une cellule de lecture.
 - Utilisez **[!UICONTROL Write Data in Notebook]** pour générer une cellule d’écriture.
 
 ![](../images/jupyterlab/data-access/pyspark-write-dataset.png)
@@ -498,7 +498,7 @@ Dans Scala, vous pouvez importer des `clientContext` pour obtenir et renvoyer de
 > - Client RPC distant dissocié et autres erreurs de mémoire.
 > - Mauvaises performances lors de la lecture et de l’écriture de jeux de données.
 > 
-> Pour plus d’informations[&#128279;](../troubleshooting-guide.md) consultez le  guide de dépannage .
+> Pour plus d’informations[ consultez le ](../troubleshooting-guide.md) guide de dépannage .
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -534,9 +534,11 @@ df1.show(10)
 
 Vous pouvez générer automatiquement l’exemple ci-dessus dans JupyterLab à l’aide de la méthode suivante :
 
-Sélectionnez l’onglet Icône de données (mis en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les **[!UICONTROL jeux de données]** et les répertoires de **[!UICONTROL schémas]** s’affichent. Sélectionnez **[!UICONTROL Jeux de données]** puis cliquez avec le bouton droit de la souris. Sélectionnez ensuite l’option **[!UICONTROL Exploration des données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
+Sélectionnez l’onglet Icône de données (mis en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les répertoires **[!UICONTROL Datasets]** et **[!UICONTROL Schemas]** s’affichent. Sélectionnez **[!UICONTROL Datasets]** puis cliquez avec le bouton droit de la souris. Sélectionnez ensuite l’option **[!UICONTROL Explore Data in Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
+
 Et
-- Utilisez **[!UICONTROL Explorer les données dans Notebook]** pour générer une cellule de lecture.
+
+- Utilisez **[!UICONTROL Explore Data in Notebook]** pour générer une cellule de lecture.
 - Utilisez **[!UICONTROL Write Data in Notebook]** pour générer une cellule d’écriture.
 
 ![](../images/jupyterlab/data-access/scala-write-dataset.png)
@@ -553,7 +555,7 @@ Dans Scala, vous pouvez importer des `clientContext` pour obtenir et renvoyer de
 > - Client RPC distant dissocié et autres erreurs de mémoire.
 > - Mauvaises performances lors de la lecture et de l’écriture de jeux de données.
 > 
-> Pour plus d’informations[&#128279;](../troubleshooting-guide.md) consultez le  guide de dépannage .
+> Pour plus d’informations[ consultez le ](../troubleshooting-guide.md) guide de dépannage .
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}

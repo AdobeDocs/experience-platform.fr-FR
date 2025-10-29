@@ -5,9 +5,9 @@ title: Supprimer un compte de destination à l’aide de l’API Flow Service
 type: Tutorial
 description: Découvrez comment supprimer un compte de destination à l’aide de l’API Flow Service.
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '762'
 ht-degree: 38%
 
 ---
@@ -64,7 +64,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 La première étape de la suppression d’un compte de destination consiste à découvrir l’identifiant de connexion correspondant au compte de destination que vous souhaitez supprimer.
 
-Dans l’interface utilisateur d’Experience Platform, accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Comptes]** et sélectionnez le compte à supprimer en sélectionnant le nombre dans la colonne **[!UICONTROL Destinations]**.
+Dans l’interface utilisateur d’Experience Platform, accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]** et sélectionnez le compte à supprimer en sélectionnant le nombre dans la colonne **[!UICONTROL Destinations]** .
 
 ![Sélectionner le compte de destination à supprimer](/help/destinations/assets/api/delete-destination-account/select-destination-account.png)
 
@@ -147,7 +147,8 @@ A successful response returns the current details of your connection including i
 >[!IMPORTANT]
 >
 >Avant de supprimer le compte de destination, vous devez supprimer tous les flux de données existants vers le compte de destination.
->Pour supprimer des flux de données existants, reportez-vous aux pages ci-dessous :
+>>Pour supprimer des flux de données existants, reportez-vous aux pages ci-dessous :
+>
 >* [utiliser l’interface utilisateur d’Experience Platform](../ui/delete-destinations.md) pour supprimer des flux de données existants ;
 >* [Utilisez l’API Flow Service](delete-destination-dataflow.md) pour supprimer les flux de données existants.
 

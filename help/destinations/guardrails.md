@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: En savoir plus sur l’utilisation par défaut de l’activation des données et les limites de débit.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 0a9782b6018e5c5405c79ce37d969754d7b99fd6
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1712'
 ht-degree: 48%
@@ -142,7 +142,7 @@ Pour les exportations de jeux de données planifiées ou récurrentes, les méca
 >Les exportations vers des fichiers JSON sont uniquement prises en charge en mode compressé.
 
 | Type de jeu de données | Mécanisme de sécurisation | Type de mécanisme de sécurisation | Description |
----------|----------|---------|-------|
+|---------|----------|---------|-------|
 | Jeux de données basés sur le schéma **XDM Experience Events** | 365 derniers jours de données | Mécanisme de sécurisation mis en œuvre par le système | Les données de la dernière année civile sont exportées. |
 | Jeux de données basés sur **n’importe quel schéma à l’exception du schéma XDM Experience Events** | Dix milliards d’enregistrements sur tous les fichiers exportés dans un flux de données | Mécanisme de sécurisation mis en œuvre par le système | Le nombre d’enregistrements du jeu de données doit être inférieur à dix milliards pour les fichiers JSON ou parquet compressés et à un million pour les fichiers parquet non compressés. Dans le cas contraire, l’exportation échouera. Réduisez la taille du jeu de données que vous essayez d’exporter s’il est supérieur au seuil autorisé. |
 
@@ -196,7 +196,7 @@ Détails sur les seuils de limitations ou les limites pour des destinations donn
 Consultez la documentation suivante pour plus d’informations sur les autres mécanismes de sécurisation des services Experience Platform, sur les informations de latence de bout en bout et les informations de licence dans les documents de description du produit Real-Time CDP :
 
 * [Mécanismes de sécurisation de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=fr#end-to-end-latency-diagrams) pour divers services Experience Platform.
+* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.
 * [Real-Time Customer Data Platform (B2C Edition - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

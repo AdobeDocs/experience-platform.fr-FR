@@ -5,7 +5,7 @@ title: Directives générales pour l’exécution de requêtes dans Query Servic
 type: Tutorial
 description: Ce document décrit les détails importants à connaître lors de la rédaction de requêtes dans Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1089'
 ht-degree: 40%
@@ -86,7 +86,7 @@ Les deux exemples de requête ci-dessus renvoient un objet aplati, plutôt qu’
 
 ```console
               endUserIds._experience.mcid   
---------------------------------------------------------
+|--------------------------------------------------------
  (48168239533518554367684086979667672499,"(ECID)",true)
 (1 row)
 ```
@@ -109,7 +109,7 @@ LIMIT 1
 
 ```console
      endUserIds._experience.mcid.id 
-----------------------------------------
+|----------------------------------------
  48168239533518554367684086979667672499
 (1 row)
 ```
@@ -210,7 +210,7 @@ La commande `\d` affiche la vue [!DNL PostgreSQL] standard pour répertorier les
 ```sql
              List of relations
  Schema |       Name      | Type  |  Owner   
---------+-----------------+-------+----------
+|--------+-----------------+-------+----------
  public | luma_midvalues  | table | postgres
  public | luma_postvalues | table | postgres
 (2 rows)
@@ -222,7 +222,7 @@ La commande `\d` affiche la vue [!DNL PostgreSQL] standard pour répertorier les
 
 ```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
------------------+--------------------------+----------------+-------------+----------
+|-----------------+--------------------------+----------------+-------------+----------
  luma_midvalues  | 5bac030c29bb8d12fa992e58 | Luma midValues |             | false
  luma_postvalues | 5c86b896b3c162151785b43c | Luma midValues |             | false
 (2 rows)
@@ -237,7 +237,7 @@ L’exemple suivant illustre les informations de schéma de la table `luma_midva
 ```sql
                          Table "public.luma_midvalues"
       Column       |             Type            | Collation | Nullable | Default 
--------------------+-----------------------------+-----------+----------+---------
+|-------------------+-----------------------------+-----------+----------+---------
  timestamp         | timestamp                   |           |          | 
  _id               | text                        |           |          | 
  productlistitems  | anyarray                    |           |          | 
@@ -262,7 +262,7 @@ L’exemple suivant montre des informations supplémentaires pour la colonne `we
 ```sql
                  Composite type "public.luma_midvalues_web"
      Column     |               Type                | Collation | Nullable | Default 
-----------------+-----------------------------------+-----------+----------+---------
+|----------------+-----------------------------------+-----------+----------+---------
  webpagedetails | luma_midvalues_web_webpagedetails |           |          | 
  webreferrer    | web_webreferrer                   |           |          | 
 ```

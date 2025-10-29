@@ -1,22 +1,26 @@
 ---
 keywords: Experience Platform;interface utilisateur;interface utilisateur;personnalisation;tableau de bord d’utilisation de la licence;tableau de bord;utilisation des licences;droits;consommation
 title: Tableau de bord des destinations
-description: L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les destinations actives de votre entreprise.
+description: L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les destinations actives de votre organisation.
 type: Documentation
-source-git-commit: 998332007465c1f8457b5d8cf0e153d513505d39
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 28%
+source-wordcount: '65'
+ht-degree: 23%
 
 ---
 
 
-# Tableau de bord des [!UICONTROL destinations] {#destinations-dashboard}
+# Tableau de bord [!UICONTROL Destinations] {#destinations-dashboard}
 
-L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les destinations actives de votre entreprise, telles qu’elles sont capturées lors d’un instantané quotidien.
+L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les destinations actives de votre organisation. Celles-ci sont présentées telles qu’elles sont capturées lors d’instantanés quotidiens.
 
-Pour obtenir des instructions détaillées sur la façon d’accéder au tableau de bord des destinations et d’interagir avec celui-ci dans l’interface utilisateur, ainsi que pour en savoir plus sur les mesures disponibles affichées dans le tableau de bord, consultez le [guide du tableau de bord des destinations](../dashboards/guides/destinations.md).
+<!--
+Broken links; this article is not in TOC
 
-Pour découvrir toutes les fonctionnalités des tableaux de bord dans Experience Platform, commencez par lire la [présentation des tableaux de bord](../../dashboards/home.md).
+For detailed instructions on how to access and interact with the destinations dashboard in the UI, as well as to learn more about the available metrics displayed in the dashboard, please visit the [destinations dashboard guide](../dashboards/guides/destinations.md).  
+
+For an overview of all of the dashboard features within Experience Platform, please begin by reading the [dashboards overview](../../dashboards/home.md).
 
 ![](images/destinations-dashboard/dashboard-overview.png)
+-->

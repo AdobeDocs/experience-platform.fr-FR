@@ -4,7 +4,7 @@ title: Fonctionnalités d’accessibilité générales dans Experience Platform
 type: Documentation
 description: En savoir plus sur les fonctionnalités d’accessibilité générales prises en charge par Adobe Experience Platform, notamment la navigation au clavier, le contraste et les palettes de couleurs, ainsi que la prise en charge des technologies d’assistance.
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 92%
@@ -24,8 +24,9 @@ Les utilisateurs présentant un handicap dépendent fréquemment du matériel et
 Experience Platform s’efforce de prendre en charge l’accessibilité complète du clavier.
 
 Les éléments de navigation suivants facilitent l’accessibilité :
+
 * La touche de tabulation permet de se déplacer entre les éléments, les sections et les groupes de menus de l’interface utilisateur.
-* Les touches fléchées permettent de se déplacer dans les groupes de menus pour définir le focus sur des éléments principaux individuels.
+* Les touches fléchées permettent de se déplacer dans les groupes de menus pour définir le focus sur des éléments actifs individuels.
 * Maj + tabulation permet de revenir en arrière dans l’ordre de tabulation.
 * Les touches Retour (Entrée) et la barre d’espacement activent les éléments sélectionnés.
 * La touche Échap (ESC) fait office de bouton d’annulation pour fermer une boîte de dialogue, le cas échéant.

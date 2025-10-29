@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;recette d’achat de produit;Data Science Workspace;rubriques populaires;recettes;recette de précréation
+keywords: Experience Platform;recette d’achat de produit;Workspace de science des données;rubriques populaires;recettes;recette préconfigurée
 solution: Experience Platform
-title: Recette de prédiction d’achat de produit
+title: Recette de prévision d’achat de produit
 description: La recette de prédiction d’achat de produit vous permet de prévoir la probabilité d’un certain type d’événement d’achat de client, un achat de produit, par exemple.
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 89%
@@ -15,15 +15,16 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->Data Science Workspace ne peut plus être acheté.
+>Le Workspace de science des données ne peut plus être acheté.
 >
->Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
 La recette de prédiction d’achat de produit vous permet de prévoir la probabilité d’un certain type d’événement d’achat de client, un achat de produit, par exemple.
 
 ![](../images/pre-built-recipes/ppp_bigpicture.png)
 
 Le document suivant apporte des réponses aux questions suivantes :
+
 * Pour qui cette recette a-t-elle été créée ?
 * Comment fonctionne cette recette ?
 

@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de requête;requêtes experienceevent;requête experienceevent;requête Experience Event;
+keywords: Experience Platform;accueil;rubriques les plus consultées;query service;Query service;requêtes experienceevent;requête experienceevent;requête Experience Event;
 title: Affichage d’un rapport de cumul pour un visiteur spécifique
 description: Le document suivant fournit des exemples de requêtes impliquant des événements d’expérience dans Adobe Experience Platform Query Service.
 exl-id: 1348503f-65c1-41f9-b111-1284a49449a1
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 1%
@@ -12,9 +12,9 @@ ht-degree: 1%
 
 # Affichage d’un rapport de cumul pour un visiteur spécifique
 
-Ce document fournit un exemple SQL pour agréger des données provenant de plusieurs propriétés d’analyse pour un utilisateur spécifique et afficher ces données ensemble dans un rapport. Avec Adobe Experience Platform Query Service, vous pouvez écrire des requêtes qui utilisent [!DNL Experience Events] pour capturer divers cas d’utilisation. Les événements d’expérience sont représentés par la classe ExperienceEvent du modèle de données d’expérience (XDM), qui capture un instantané non agrégé et immuable du système lorsqu’un utilisateur interagit avec un site web ou un service. Les événements d’expérience peuvent même être utilisés pour l’analyse du domaine temporel. Pour plus d’informations sur les cas d’utilisation qui impliquent [!DNL Experience Events] pour générer des rapports sur les visiteurs, reportez-vous à la section [étapes suivantes](#next-steps) .
+Ce document fournit un exemple SQL permettant d’agréger des données provenant de plusieurs propriétés Analytics pour un utilisateur spécifique et de les afficher ensemble dans un seul rapport. Avec Adobe Experience Platform Query Service, vous pouvez écrire des requêtes qui utilisent [!DNL Experience Events] pour capturer divers cas d’utilisation. Les événements d’expérience sont représentés par la classe ExperienceEvent du modèle de données d’expérience (XDM), qui capture un instantané non modifiable et non agrégé du système lorsqu’un utilisateur interagit avec un site web ou un service. Les événements d’expérience peuvent même être utilisés pour l’analyse de domaine temporel. Voir la [section étapes suivantes](#next-steps) pour d’autres cas d’utilisation qui impliquent des [!DNL Experience Events] pour générer des rapports de visiteur.
 
-Vous trouverez plus d’informations sur XDM et [!DNL Experience Events] dans la [[!DNL XDM System] présentation](../../xdm/home.md). En combinant Query Service à [!DNL Experience Events], vous pouvez effectuer un suivi efficace des tendances comportementales parmi vos utilisateurs. Le document suivant fournit des exemples de requêtes impliquant [!DNL Experience Events].
+Vous trouverez plus d’informations sur XDM et [!DNL Experience Events] dans la [[!DNL XDM System] présentation](../../xdm/home.md). En combinant Query Service à [!DNL Experience Events], vous pouvez suivre efficacement les tendances comportementales parmi vos utilisateurs. Le document suivant fournit des exemples de requêtes impliquant des [!DNL Experience Events].
 
 ## Objectif
 
@@ -43,16 +43,16 @@ Les résultats de la requête sont affichés dans le tableau ci-dessous.
 
 ```console
                id                 | pageViews |   A   |   B   |   C   | viewedParkas
-----------------------------------+-----------+-------+-------+-------+--------------
+|----------------------------------+-----------+-------+-------+-------+--------------
 457C3510571E5930-69AA721C4CBF9339 |     706.0 | 83.0  |  7.0  | 38.0  |          22
 ```
 
 ## Étapes suivantes {#next-steps}
 
-En lisant ce document, vous comprenez mieux comment utiliser Query Service avec [!DNL Experience Events] pour afficher un rapport agrégé de valeurs d’analyse pour un utilisateur spécifié.
+La lecture de ce document vous permet de mieux comprendre comment utiliser Query Service avec [!DNL Experience Events] pour afficher un rapport agrégé de valeurs d’analyse pour un utilisateur spécifié.
 
 Consultez les cas d’utilisation suivants pour en savoir plus sur d’autres cas d’utilisation basés sur les visiteurs :
 
-- [Récupérez une liste de visiteurs organisée par nombre de pages vues.](./visitors-by-number-of-page-views.md)
-- [Liste des sessions précédentes d’un visiteur.](./list-visitor-sessions.md)
-- [Créez un rapport de tendance d’événements par jour.](./trended-report-of-events.md)
+- [Récupérez une liste des visiteurs organisée par nombre de pages vues.](./visitors-by-number-of-page-views.md)
+- [Répertorier les sessions précédentes d’un visiteur.](./list-visitor-sessions.md)
+- [Créez un rapport de tendances des événements par jour.](./trended-report-of-events.md)

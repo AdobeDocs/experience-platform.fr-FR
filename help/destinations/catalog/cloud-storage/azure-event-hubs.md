@@ -4,9 +4,9 @@ title: Connexion Azure Event Hubs
 description: Créez une connexion sortante en temps réel vers votre stockage pour diffuser  [!DNL Azure Event Hubs]  données à partir d’Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 7502810ff329a31f2fdaf6797bc7672118555e6a
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2077'
+source-wordcount: '2022'
 ht-degree: 49%
 
 ---
@@ -51,9 +51,9 @@ Cette section décrit les types d’audiences que vous pouvez exporter vers cett
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
----------|----------|---------|
-| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil du [workflow d’activation de destination](../../ui/activate-batch-profile-destinations.md#select-attributes). |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+|---------|----------|---------|
+| Type d’exportation | **[!UICONTROL Profile-based]** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil du [workflow d’activation de destination](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Fréquence des exportations | **[!UICONTROL Streaming]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -65,7 +65,7 @@ Pour répondre aux exigences de sécurité et de conformité des clients, Experi
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Lors de la connexion à cette destination, vous devez fournir les informations suivantes :
 
@@ -75,22 +75,22 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 ![Image de l’écran de l’interface utilisateur affichant les champs remplis pour les détails d’authentification standard Azure Event Hubs](../../assets/catalog/cloud-storage/event-hubs/event-hubs-standard-authentication.png)
 
-Si vous sélectionnez le type **[!UICONTROL Authentification standard]** pour vous connecter à votre point d’entrée HTTP, saisissez les champs ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]** :
+Si vous sélectionnez le type de **[!UICONTROL Standard authentication]** pour vous connecter à votre point d’entrée HTTP, saisissez les champs ci-dessous et sélectionnez **[!UICONTROL Connect to destination]** :
 
-* **[!UICONTROL Nom de la clé SAS]** : nom de la règle d’autorisation, également appelée nom de la clé SAS.
-* **[!UICONTROL Clé SAS]** : clé primaire de l’espace de noms Event Hubs. La `sasPolicy` à laquelle correspond la `sasKey` doit disposer des droits **manage** configurés pour que la liste Event Hubs soit renseignée. Découvrez comment vous authentifier à l’[!DNL Azure Event Hubs] avec des clés SAS dans la documentation de [Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-* **[!UICONTROL Espace de noms]** : renseignez votre espace de noms [!DNL Azure Event Hubs]. Découvrez les espaces de noms [!DNL Azure Event Hubs] dans la documentation de [Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+* **[!UICONTROL SAS Key Name]** : nom de la règle d’autorisation, également appelée nom de la clé SAS.
+* **[!UICONTROL SAS Key]** : clé primaire de l’espace de noms Hubs d’événements. La `sasPolicy` à laquelle correspond la `sasKey` doit disposer des droits **manage** configurés pour que la liste Event Hubs soit renseignée. Découvrez comment vous authentifier à l’[!DNL Azure Event Hubs] avec des clés SAS dans la documentation de [Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* **[!UICONTROL Namespace]** : renseignez votre espace de noms [!DNL Azure Event Hubs]. Découvrez les espaces de noms [!DNL Azure Event Hubs] dans la documentation de [Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
 #### Authentification SAS (Shared Access Signature) {#sas-authentication}
 
 ![Image de l’écran de l’interface utilisateur affichant les champs remplis pour les détails d’authentification standard Azure Event Hubs](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png)
 
-Si vous sélectionnez le type **[!UICONTROL Authentification standard]** pour vous connecter à votre point d’entrée HTTP, saisissez les champs ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]** :
+Si vous sélectionnez le type de **[!UICONTROL Standard authentication]** pour vous connecter à votre point d’entrée HTTP, saisissez les champs ci-dessous et sélectionnez **[!UICONTROL Connect to destination]** :
 
-* **[!UICONTROL Nom de la clé SAS]** : nom de la règle d’autorisation, également appelée nom de la clé SAS.
-* **[!UICONTROL Clé SAS]** : clé primaire de l’espace de noms Event Hubs. La `sasPolicy` à laquelle correspond la `sasKey` doit disposer des droits **manage** configurés pour que la liste Event Hubs soit renseignée. Découvrez comment vous authentifier à l’[!DNL Azure Event Hubs] avec des clés SAS dans la documentation de [Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-* **[!UICONTROL Espace de noms]** : renseignez votre espace de noms [!DNL Azure Event Hubs]. Découvrez les espaces de noms [!DNL Azure Event Hubs] dans la documentation de [Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
-* **[!UICONTROL Nom du hub d’événements]** : renseignez votre nom de [!DNL Azure Event Hub] . Découvrez les noms de [!DNL Azure Event Hubs] dans la documentation de [Microsoft](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub).
+* **[!UICONTROL SAS Key Name]** : nom de la règle d’autorisation, également appelée nom de la clé SAS.
+* **[!UICONTROL SAS Key]** : clé primaire de l’espace de noms Hubs d’événements. La `sasPolicy` à laquelle correspond la `sasKey` doit disposer des droits **manage** configurés pour que la liste Event Hubs soit renseignée. Découvrez comment vous authentifier à l’[!DNL Azure Event Hubs] avec des clés SAS dans la documentation de [Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* **[!UICONTROL Namespace]** : renseignez votre espace de noms [!DNL Azure Event Hubs]. Découvrez les espaces de noms [!DNL Azure Event Hubs] dans la documentation de [Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+* **[!UICONTROL Event Hub Name]** : renseignez votre nom de [!DNL Azure Event Hub] . Découvrez les noms de [!DNL Azure Event Hubs] dans la documentation de [Microsoft](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub).
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -108,26 +108,26 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 ![Image de l’écran de l’interface utilisateur affichant les champs remplis pour les détails de destination Azure Event Hubs](../../assets/catalog/cloud-storage/event-hubs/event-hubs-destination-details.png)
 
-* **[!UICONTROL Nom]** : renseignez le nom de la connexion à [!DNL Azure Event Hubs].
+* **[!UICONTROL Name]** : renseignez le nom de la connexion à [!DNL Azure Event Hubs].
 * **[!UICONTROL Description]** : fournissez une description de la connexion.  Exemples : « Clients Premium », « Clients intéressés par le kitesurf ».
 * **[!UICONTROL eventHubName]** : attribuez un nom au flux vers votre destination [!DNL Azure Event Hubs].
-* **[!UICONTROL Inclure les noms de segment]** : activez ce bouton si vous souhaitez que l’exportation des données inclue les noms des audiences que vous exportez. Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
-* **[!UICONTROL Inclure la date et l’heure de segment]** : activez ce bouton si vous souhaitez que l’exportation de données inclue la date et l’heure UNIX de la création et des mises à jour des audiences, ainsi que la date et l’heure UNIX du mappage des audiences à la destination pour l’activation. Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
+* **[!UICONTROL Include Segment Names]** : activez ce bouton si vous souhaitez que l’exportation de données inclue les noms des audiences que vous exportez. Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
+* **[!UICONTROL Include Segment Timestamps]** : activez ce bouton si vous souhaitez que l’exportation de données inclue la date et l’heure UNIX de la création et des mises à jour des audiences, ainsi que la date et l’heure UNIX du mappage des audiences à la destination pour l’activation. Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
 
 ### Activer les alertes {#enable-alerts}
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 >* L’[évaluation de la politique de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) n’est actuellement pas prise en charge dans les exportations vers la destination Azure Event Hubs. [En savoir plus](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
-Consultez [&#x200B; Activer les données d’audience vers des destinations d’exportation de profil de diffusion en continu &#x200B;](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Consultez [ Activer les données d’audience vers des destinations d’exportation de profil de diffusion en continu ](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ## Comportement d’exportation de profils {#profile-export-behavior}
 
@@ -224,7 +224,7 @@ Les données [!DNL Experience Platform] exportées arrivent dans votre destinati
 }
 ```
 
-Vous trouverez ci-dessous d’autres exemples de données exportées, en fonction des paramètres de l’interface utilisateur que vous sélectionnez dans le flux de connexion à la destination pour les options **[!UICONTROL Inclure les noms de segment]** et **[!UICONTROL Inclure la date et l’heure de segment]** :
+Vous trouverez ci-dessous d’autres exemples de données exportées, en fonction des paramètres de l’interface utilisateur que vous sélectionnez dans le flux de connexion à la destination pour les options **[!UICONTROL Include Segment Names]** et **[!UICONTROL Include Segment Timestamps]** :
 
 +++ L’exemple d’exportation de données ci-dessous inclut des noms d’audience dans la section `segmentMembership`
 

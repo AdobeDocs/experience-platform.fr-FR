@@ -2,11 +2,11 @@
 keywords: Experience Platform;guide de développement;Espace de travail de science des données;rubriques les plus consultées;machine learning en temps réel;
 solution: Experience Platform
 title: Vue d’ensemble du machine learning en temps réel
-description: Le machine learning en temps réel peut considérablement améliorer la pertinence de votre contenu d’expérience digitale pour vos utilisateurs finaux. Pour ce faire, vous pouvez tirer parti des référencements en temps réel et de l’apprentissage continu sur l’Edge Network Experience Platform.
+description: Le machine learning en temps réel peut considérablement améliorer la pertinence de votre contenu d’expérience digitale pour vos utilisateurs finaux. Cela est rendu possible par l’utilisation de l’inférence en temps réel et de l’apprentissage continu sur Experience Platform Edge Network.
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '574'
 ht-degree: 89%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->Data Science Workspace ne peut plus être acheté.
+>Le Workspace de science des données ne peut plus être acheté.
 >
->Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs sur Data Science Workspace.
 
 >[!IMPORTANT]
 >
@@ -49,7 +49,7 @@ Créez entièrement un modèle de machine learning en temps réel ou incorporez-
 
 ### Déploiement
 
-Déployez votre modèle sur le [!DNL Edge Network] pour créer un service d’apprentissage automatique en temps réel dans la [!UICONTROL Galerie de services] à l’aide du point de terminaison de l’API de prédiction.
+Déployez votre modèle sur le [!DNL Edge Network] pour créer un service de machine learning en temps réel dans le [!UICONTROL Service Gallery] à l’aide du point d’entrée de l’API Prediction.
 
 ### Inférence   
 
@@ -66,6 +66,7 @@ Le machine learning en temps réel est actuellement en version alpha. Les foncti
 >[!NOTE]
 >
 > Limites de la version alpha :
+>
 > - Actuellement, seuls les modèles basés sur ONNX sont pris en charge.
 > - Les fonctions utilisées dans les nœuds ne peuvent pas être sérialisées. Par exemple, une fonction lambda utilisée dans un nœud Pandas.
 > - Il y a une mise en veille de 20 secondes après le déploiement manuel d’[!DNL Edge].

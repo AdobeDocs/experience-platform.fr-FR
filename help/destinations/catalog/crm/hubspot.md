@@ -3,10 +3,10 @@ title: Connexion HubSpot
 description: La destination HubSpot vous permet de gérer les enregistrements de contact dans votre compte HubSpot.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1557'
-ht-degree: 37%
+source-wordcount: '1499'
+ht-degree: 32%
 
 ---
 
@@ -30,7 +30,7 @@ Reportez-vous aux sections ci-dessous pour connaître les conditions préalables
 
 ### Conditions préalables d’Experience Platform {#prerequisites-in-experience-platform}
 
-Avant d’activer des données dans la destination [!DNL HubSpot], vous devez avoir créé un [schéma](/help/xdm/schema/composition.md), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr) et des [audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=fr) dans [!DNL Experience Platform].
+Avant d’activer des données dans la destination [!DNL HubSpot], vous devez avoir créé un [schéma](/help/xdm/schema/composition.md), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) et des [audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) dans [!DNL Experience Platform].
 
 Reportez-vous à la documentation Experience Platform pour le [groupe de champs de schéma Détails sur l’appartenance à une audience](/help/xdm/field-groups/profile/segmentation.md) si vous avez besoin de conseils sur les statuts de l’audience.
 
@@ -44,15 +44,15 @@ Pour exporter des données d’Experience Platform vers votre compte [!DNL Hubsp
 
 #### Collecter le jeton d’accès à l’application privée [!DNL HubSpot] {#gather-credentials}
 
-Vous avez besoin de votre `Access token` [!DNL HubSpot] pour permettre à la destination [!DNL HubSpot] d’effectuer des appels API via votre application privée [!DNL HubSpot] dans votre compte [!DNL HubSpot]. Le `Access token` sert de `Bearer token` lorsque vous [authentifiez la destination](#authenticate).
+Vous avez besoin de votre [!DNL HubSpot] `Access token` pour permettre à la destination [!DNL HubSpot] d’effectuer des appels API via votre application privée [!DNL HubSpot] dans votre compte [!DNL HubSpot]. Le `Access token` sert de `Bearer token` lorsque vous [authentifiez la destination](#authenticate).
 
-Si vous ne disposez pas d’une application privée, consultez la documentation pour [&#x200B; Créer une application privée dans  [!DNL HubSpot]](https://developers.hubspot.com/docs/api/private-apps).
+Si vous ne disposez pas d’une application privée, consultez la documentation pour [ Créer une application privée dans  [!DNL HubSpot]](https://developers.hubspot.com/docs/api/private-apps).
 
 >[!IMPORTANT]
 >
 > Les portées ci-dessous doivent être attribuées à l’application privée :
-> `crm.objects.contacts.write`, `crm.objects.contacts.read`
-> `crm.schemas.contacts.write`, `crm.schemas.contacts.read`
+> > `crm.objects.contacts.write`, `crm.objects.contacts.read`
+> > `crm.schemas.contacts.write`, `crm.schemas.contacts.read`
 
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
@@ -60,7 +60,7 @@ Si vous ne disposez pas d’une application privée, consultez la documentation 
 
 ## Mécanismes de sécurisation {#guardrails}
 
-[!DNL HubSpot] applications privées sont soumises à des [limites de taux](https://developers.hubspot.com/docs/api/usage-details). Le nombre d’appels que votre application privée peut effectuer est basé sur votre abonnement au compte [!DNL HubSpot] et sur le fait que vous ayez ou non acheté le module complémentaire API. Reportez-vous également à la section [&#x200B; Autres limites &#x200B;](https://developers.hubspot.com/docs/api/usage-details#other-limits).
+[!DNL HubSpot] applications privées sont soumises à des [limites de taux](https://developers.hubspot.com/docs/api/usage-details). Le nombre d’appels que votre application privée peut effectuer est basé sur votre abonnement au compte [!DNL HubSpot] et sur le fait que vous ayez ou non acheté le module complémentaire API. Reportez-vous également à la section [ Autres limites ](https://developers.hubspot.com/docs/api/usage-details#other-limits).
 
 ## Identités prises en charge {#supported-identities}
 
@@ -89,9 +89,9 @@ Cette destination prend également en charge l’activation des audiences décri
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
----------|----------|---------|
-| Type d’exportation | **[!UICONTROL Basé sur les profils]** | <ul><li>Vous exportez tous les membres d’une audience, ainsi que les champs de schéma souhaités *(par exemple : adresse e-mail, numéro de téléphone, nom)*, en fonction de votre mappage de champs.</li><li> En outre, une nouvelle propriété est créée dans [!DNL HubSpot] à l’aide du nom de l’audience et sa valeur est définie avec le statut d’audience correspondant d’Experience Platform, pour chacune des audiences sélectionnées.</li></ul> |
-| Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | <ul><li>Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+|---------|----------|---------|
+| Type d’exportation | **[!UICONTROL Profile-based]** | <ul><li>Vous exportez tous les membres d’une audience, ainsi que les champs de schéma souhaités *(par exemple : adresse e-mail, numéro de téléphone, nom)*, en fonction de votre mappage de champs.</li><li> En outre, une nouvelle propriété est créée dans [!DNL HubSpot] à l’aide du nom de l’audience et sa valeur est définie avec le statut d’audience correspondant d’Experience Platform, pour chacune des audiences sélectionnées.</li></ul> |
+| Fréquence des exportations | **[!UICONTROL Streaming]** | <ul><li>Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -99,41 +99,42 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
-Dans **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**, recherchez [!DNL HubSpot]. Vous pouvez également localiser cet élément dans la catégorie **[!UICONTROL CRM]**.
+Dans **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, recherchez [!DNL HubSpot]. Vous pouvez également localiser cet élément dans la catégorie **[!UICONTROL CRM]** .
 
 ### S’authentifier auprès de la destination {#authenticate}
 
 Renseignez les champs obligatoires ci-dessous. Reportez-vous à la section [Collecter le jeton  [!DNL HubSpot] ’accès d’application privée](#gather-credentials) pour obtenir des conseils.
-* **[!UICONTROL Jeton porteur]** : jeton d’accès pour votre application privée [!DNL HubSpot].
 
-Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Se connecter à la destination]**.
+* **[!UICONTROL Bearer token]** : jeton d’accès pour votre application privée [!DNL HubSpot].
+
+Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Connect to destination]**.
 ![Capture d’écran de l’interface utilisateur d’Experience Platform montrant comment s’authentifier.](../../assets/catalog/crm/hubspot/authenticate-destination.png)
 
-Si les détails fournis sont valides, l’interface utilisateur affiche un statut **[!UICONTROL Connecté]** avec une coche verte. Vous pouvez ensuite passer à l’étape suivante.
+Si les détails fournis sont valides, l’interface utilisateur affiche un statut de **[!UICONTROL Connected]** avec une coche verte. Vous pouvez ensuite passer à l’étape suivante.
 
 ### Renseigner les détails de la destination {#destination-details}
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 ![Capture d’écran de l’interface utilisateur d’Experience Platform affichant les détails de la destination.](../../assets/catalog/crm/hubspot/destination-details.png)
 
-* **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
-* **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
+* **[!UICONTROL Name]** : nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
 
 ### Activer les alertes {#enable-alerts}
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
+Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
 
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
 >
->Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -146,11 +147,12 @@ Pour mapper correctement vos champs XDM vers les champs de destination [!DNL Hub
 #### Mappage de l’identité `Email`
 
 L’identité `Email` est un mappage obligatoire pour cette destination. Suivez les étapes ci-dessous pour le mapper :
-1. Dans l’étape **[!UICONTROL Mappage]**, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**. Une nouvelle ligne de mappage s’affiche désormais à l’écran.
+
+1. À l’étape **[!UICONTROL Mapping]**, sélectionnez **[!UICONTROL Add new mapping]**. Une nouvelle ligne de mappage s’affiche désormais à l’écran.
    ![Capture d’écran de l’interface utilisateur d’Experience Platform avec le bouton Ajouter un nouveau mappage mis en surbrillance.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
-1. Dans la fenêtre **[!UICONTROL Sélectionner le champ source]**, choisissez le **[!UICONTROL Sélectionner l’espace de noms d’identité]** et sélectionnez une identité.
+1. Dans la fenêtre de **[!UICONTROL Select source field]**, choisissez le **[!UICONTROL Select identity namespace]** et sélectionnez une identité.
    ![Capture d’écran de l’interface utilisateur d’Experience Platform sélectionnant l’e-mail comme attribut source à mapper en tant qu’identité.](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
-1. Dans la fenêtre **[!UICONTROL Sélectionner le champ cible]**, choisissez le **[!UICONTROL Sélectionner les attributs]** et sélectionnez `email`.
+1. Dans la fenêtre de **[!UICONTROL Select target field]**, choisissez le **[!UICONTROL Select attributes]** et sélectionnez `email`.
    ![Capture d’écran de l’interface utilisateur d’Experience Platform sélectionnant l’e-mail comme attribut cible à mapper en tant qu’identité.](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
 
 | Champ source | Champ cible | Obligatoire |
@@ -163,11 +165,12 @@ Un exemple avec le mappage d’identité est illustré ci-dessous :
 #### Mappage **facultatif** attributs
 
 Pour ajouter tout autre attribut que vous souhaitez mettre à jour entre votre schéma de profil XDM et votre compte [!DNL HubSpot], répétez les étapes ci-dessous :
-1. Dans l’étape **[!UICONTROL Mappage]**, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**. Une nouvelle ligne de mappage s’affiche désormais à l’écran.
+
+1. À l’étape **[!UICONTROL Mapping]**, sélectionnez **[!UICONTROL Add new mapping]**. Une nouvelle ligne de mappage s’affiche désormais à l’écran.
    ![Capture d’écran de l’interface utilisateur d’Experience Platform avec le bouton Ajouter un nouveau mappage mis en surbrillance.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
-1. Dans la fenêtre **[!UICONTROL Sélectionner le champ source]**, choisissez la catégorie **[!UICONTROL Sélectionner des attributs]** et sélectionnez l’attribut XDM.
+1. Dans la fenêtre **[!UICONTROL Select source field]** , choisissez la catégorie **[!UICONTROL Select attributes]** et sélectionnez l’attribut XDM .
    ![Capture d’écran de l’interface utilisateur d’Experience Platform sélectionnant le prénom en tant qu’attribut source.](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)
-1. Dans la fenêtre **[!UICONTROL Sélectionner le champ cible]**, choisissez la catégorie **[!UICONTROL Sélectionner les attributs]** et sélectionnez dans la liste des attributs qui sont automatiquement renseignés à partir de votre compte [!DNL HubSpot]. La destination utilise l’API [[!DNL HubSpot] Properties](https://developers.hubspot.com/docs/api/crm/properties) pour récupérer ces informations. Les [!DNL HubSpot] [propriétés par défaut](https://knowledge.hubspot.com/contacts/hubspots-default-contact-properties) et les propriétés personnalisées sont récupérées pour être sélectionnées en tant que champs cibles.
+1. Dans la fenêtre de **[!UICONTROL Select target field]**, choisissez **[!UICONTROL Select attributes]** catégorie et sélectionnez dans la liste des attributs automatiquement renseignés à partir de votre compte [!DNL HubSpot]. La destination utilise l’API [[!DNL HubSpot] Properties](https://developers.hubspot.com/docs/api/crm/properties) pour récupérer ces informations. Les [!DNL HubSpot] [propriétés par défaut](https://knowledge.hubspot.com/contacts/hubspots-default-contact-properties) et les propriétés personnalisées sont récupérées pour être sélectionnées en tant que champs cibles.
    ![Capture d’écran de l’interface utilisateur d’Experience Platform sélectionnant le prénom en tant qu’attribut cible.](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png)
 
 Voici quelques mappages disponibles entre votre schéma de profil XDM et [!DNL Hubspot] :
@@ -183,7 +186,7 @@ Voici quelques mappages disponibles entre votre schéma de profil XDM et [!DNL H
 Un exemple d’utilisation de ces mappages d’attributs est illustré ci-dessous :
 ![Exemple de capture d’écran de l’interface utilisateur d’Experience Platform avec mappages d’attributs.](../../assets/catalog/crm/hubspot/mapping-attributes.png)
 
-Lorsque vous avez terminé de fournir les mappages pour votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
+Lorsque vous avez terminé de fournir les mappages pour votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
 
 ## Valider l’exportation des données {#exported-data}
 
@@ -192,7 +195,7 @@ Pour vérifier que vous avez correctement configuré la destination, procédez c
 1. Connectez-vous au site web [!DNL HubSpot], puis accédez à la page **[!UICONTROL Contacts]** pour vérifier les statuts de l’audience. Cette liste peut être configurée pour afficher des colonnes pour les propriétés personnalisées créées avec le nom de l’audience et dont la valeur est le statut de l’audience.
    Capture d’écran de l’interface utilisateur ![HubSpot) montrant la page Contacts avec des en-têtes de colonne indiquant le nom de l’audience et les cellules des statuts d’audience](../../assets/catalog/crm/hubspot/contacts.png)
 
-1. Vous pouvez également explorer une page **[!UICONTROL Personne]** individuelle et accéder aux propriétés affichant le nom de l’audience et les statuts de l’audience.
+1. Vous pouvez également explorer une page de **[!UICONTROL Person]** individuelle et accéder aux propriétés affichant le nom de l’audience et les statuts de l’audience.
    Capture d’écran de l’interface utilisateur ![HubSpot) montrant la page Contact avec des propriétés personnalisées affichant le nom de l’audience et les statuts de l’audience.](../../assets/catalog/crm/hubspot/contact.png)
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
@@ -202,6 +205,7 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 ## Ressources supplémentaires {#additional-resources}
 
 Retrouvez d’autres informations utiles de la documentation [!DNL HubSpot] ci-dessous :
+
 * [Méthodes d’authentification sur HubSpot](https://developers.hubspot.com/docs/api/intro-to-auth)
 * [!DNL HubSpot] des références d’API pour les API [Contacts](https://developers.hubspot.com/docs/api/crm/contacts) et [Propriétés](https://developers.hubspot.com/docs/api/crm/properties).
 
