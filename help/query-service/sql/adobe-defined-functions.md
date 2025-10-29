@@ -487,4 +487,4 @@ Pour l’exemple de requête donné, les résultats sont donnés dans la colonne
 
 La vidéo suivante montre comment exécuter des requêtes dans l’interface Adobe Experience Platform et dans un client PSQL. En outre, la vidéo utilise également des exemples impliquant des propriétés individuelles dans un objet XDM, à l’aide de fonctions définies par Adobe et à l’aide de CREATE TABLE AS SELECT (CTAS).
 
->[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32943?captions=fre_fr&quality=12&learn=on)

@@ -195,4 +195,4 @@ Lorsque vous avez terminé de filtrer les données et que vous pouvez afficher l
 
 La vidéo suivante est conçue pour vous aider à apprendre à utiliser la page d’informations IA dédiée à l’attribution pour comprendre le retour sur investissement des canaux et campagnes marketing.
 
->[!VIDEO](https://video.tv.adobe.com/v/32669?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/345100?captions=fre_fr&learn=on&quality=12)

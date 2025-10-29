@@ -200,4 +200,4 @@ Pour plus d’informations, comme un processus quotidien complet, commencez par 
 
 La vidéo suivante est conçue pour vous aider à comprendre [!DNL Data Science Workspace].
 
->[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3412911?captions=fre_fr&quality=12&enable10seconds=on&speedcontrol=on)

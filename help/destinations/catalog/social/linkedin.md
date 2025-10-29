@@ -110,7 +110,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 La vidéo ci-dessous montre également les étapes à suivre pour configurer une destination [!DNL LinkedIn Matched Audiences] et activer des audiences.
 
->[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/3411785/?quality=12&learn=on&captions=fre_fr)
 
 >[!NOTE]
 >
