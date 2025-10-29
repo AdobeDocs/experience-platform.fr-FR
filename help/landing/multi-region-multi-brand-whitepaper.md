@@ -431,7 +431,7 @@ Experience Platform fournit aux entreprises un cadre robuste pour centraliser, g
 
    - Vous devez évaluer soigneusement s’il convient de déployer **plusieurs ID d’organisation ou plusieurs sandbox** en fonction de la résidence des données, de la conformité et des besoins opérationnels.
 
-   - Les **identifiants d’organisation** offrent une isolation complète** tandis que les configurations multi-sandbox offrent une flexibilité opérationnelle dans un cadre de gouvernance partagé**.
+   - Les **identifiants d’organisation** offrent une isolation complète **&#x200B; tandis que les configurations multi-sandbox offrent une flexibilité opérationnelle dans un cadre de gouvernance partagé**.
 
 ## Réflexions finales
 
