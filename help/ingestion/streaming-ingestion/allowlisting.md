@@ -40,7 +40,7 @@ Placer sur la liste autorisée La fonction de filtrage des adresses IP fonctionn
 
 Suivez les étapes ci-dessous pour activer les adresses IP qui placent sur la liste autorisée pour votre organisation :
 
-1. Placer sur la liste autorisée Téléchargez et remplissez le formulaire [adresse IP en cours de ](../images/assets/ip_allowlisting_aep.xlsx.zip).
+1. Placer sur la liste autorisée Téléchargez et remplissez le formulaire [adresse IP en cours de &#x200B;](../images/assets/ip_allowlisting_aep.xlsx.zip).
 2. Ouvrez un ticket d’assistance et enregistrez l’objet en tant que **AEP DCS et ingestion par flux - Demande de Liste autorisée d’IP**. Joindre le formulaire complété à ce ticket.
 3. Après l’envoi de votre ticket, l’assistance clientèle d’Adobe transmettra votre demande à l’ingénierie.
 4. Placer sur la liste autorisée Les ingénieurs activent et confirment la configuration.
