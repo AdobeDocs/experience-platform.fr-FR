@@ -64,7 +64,7 @@ Basée sur Experience Platform, Real-time Customer Data Platform ([!DNL Real-Ti
 | ------- | ----------- |
 | Prise en charge de l’IAB TCF 2.0 | [!DNL Real-Time CDP] est désormais un fournisseur enregistré pour la version 2.0 du [!DNL Transparency & Consent Framework] (TCF), comme indiqué par l’[!DNL Interactive Advertising Bureau] (IAB). Vous pouvez configurer vos opérations de données et schémas de profil pour accepter les données de consentement des clients générées par une CMP et appliquer les préférences de consentement de vos clients lors de l’activation de segments vers des destinations en aval. |
 
-Pour plus d’informations sur [!DNL Real-Time CDP], consultez la présentation [[!DNL Real-Time CDP] ](../../rtcdp/overview.md).
+Pour plus d’informations sur [!DNL Real-Time CDP], consultez la présentation [[!DNL Real-Time CDP] &#x200B;](../../rtcdp/overview.md).
 
 ## Sources {#sources}
 

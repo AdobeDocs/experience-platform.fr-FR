@@ -161,7 +161,7 @@ Le nouveau [!DNL Experience Platform] SDK prend en charge les opérations suivan
 | Inférieur à (`<`) | `lt()` |
 | Inférieur ou égal à (`<=`) | `le()` |
 | Et (`&`) | `And()` |
-| Ou ( &amp;vert; ) | `Or()` |
+| Ou ( &vert; ) | `Or()` |
 
 ## Filtrage par colonnes sélectionnées {#filter-by-selected-columns}
 

@@ -77,7 +77,7 @@ Une fois que vous avez créé le flux de données, vous trouverez l’*URL du po
 
 ![Propriétés du flux de données](../../../../images/tutorials/create/relay-connector/streaming-endpoint.jpg)
 
-Utilisez ces valeurs pour configurer le webhook dans la **console de relais**. Pour obtenir des instructions détaillées sur la configuration de la notification push, consultez la documentation du relais : [ Configuration de l’API push ](https://docs.relaynetwork.com/docs/configuring-the-push-api).
+Utilisez ces valeurs pour configurer le webhook dans la **console de relais**. Pour obtenir des instructions détaillées sur la configuration de la notification push, consultez la documentation du relais : [&#x200B; Configuration de l’API push &#x200B;](https://docs.relaynetwork.com/docs/configuring-the-push-api).
 
 ## Ressources supplémentaires
 

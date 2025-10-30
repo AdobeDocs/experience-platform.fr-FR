@@ -12,7 +12,7 @@ ht-degree: 71%
 
 # Créez un flux de données pour les sources de base de données à l’aide de l’API [!DNL Flow Service].
 
-Lisez ce tutoriel pour savoir comment créer un flux de données et ingérer des données de votre base de données dans Adobe Experience Platform à l’aide de l’API [[!DNL Flow Service] ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lisez ce tutoriel pour savoir comment créer un flux de données et ingérer des données de votre base de données dans Adobe Experience Platform à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
@@ -113,7 +113,7 @@ curl -X POST \
 | -------- | ----------- |
 | `baseConnectionId` | Identifiant de connexion de votre source de base de données. |
 | `params.tableName` | Chemin d’accès au fichier source. |
-| `params.cdcEnabled` | Valeur booléenne qui indique si la capture de l’historique des modifications est activée. Lorsqu’elle est utilisée avec des schémas relationnels, la capture de données modifiées permet de suivre les insertions, les mises à jour et les suppressions pour que le jeu de données cible reste synchronisé avec la source. Cette propriété est prise en charge par les sources de base de données suivantes : <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> Pour une présentation de cette fonctionnalité, consultez la présentation de Data Mirror [](../../../../xdm/data-mirror/overview.md). Pour plus d’informations sur l’implémentation, consultez les sections [guide de modification de la capture de données dans les sources](../change-data-capture.md) et [référence technique des schémas relationnels](../../../../xdm/schema/relational.md). |
+| `params.cdcEnabled` | Valeur booléenne qui indique si la capture de l’historique des modifications est activée. Lorsqu’elle est utilisée avec des schémas relationnels, la capture de données modifiées permet de suivre les insertions, les mises à jour et les suppressions pour que le jeu de données cible reste synchronisé avec la source. Cette propriété est prise en charge par les sources de base de données suivantes : <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> Pour une présentation de cette fonctionnalité, consultez la présentation de Data Mirror [&#128279;](../../../../xdm/data-mirror/overview.md). Pour plus d’informations sur l’implémentation, consultez les sections [guide de modification de la capture de données dans les sources](../change-data-capture.md) et [référence technique des schémas relationnels](../../../../xdm/schema/relational.md). |
 | `connectionSpec.id` | Identifiant de spécification de connexion de la source de votre base de données. Consultez l’ [annexe](#appendix) pour obtenir une liste des identifiants de spécification de base de données. |
 
 **Réponse**

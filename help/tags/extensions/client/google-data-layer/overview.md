@@ -56,7 +56,7 @@ Les versions d’extension de la couche de données Google antérieures à la ve
 
 Les versions 1.2.1 et ultérieures prennent en charge les événements créés à l’aide de `gtag()`.  Cette option est facultative et peut être activée dans la boîte de dialogue Configuration de l’extension .
 
-Pour plus d’informations sur les événements `push()` et `gtag()`, consultez la documentation de Google [](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  Des informations sont également fournies dans les boîtes de dialogue de configuration et de règle de l’extension.
+Pour plus d’informations sur les événements `push()` et `gtag()`, consultez la documentation de Google [&#128279;](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  Des informations sont également fournies dans les boîtes de dialogue de configuration et de règle de l’extension.
 
 ### Écouter toutes les notifications push vers la couche de données
 

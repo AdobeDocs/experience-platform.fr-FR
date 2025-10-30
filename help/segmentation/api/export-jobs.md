@@ -17,7 +17,7 @@ Les tâches d’exportation sont des processus asynchrones utilisés pour conser
 
 >[!NOTE]
 >
->Ce guide traite de l’utilisation des tâches d’exportation dans le [!DNL Segmentation API]. Pour plus d’informations sur la gestion des tâches d’exportation pour les données [!DNL Real-Time Customer Profile], consultez le guide sur les [ tâches d’exportation dans l’API Profile](../../profile/api/export-jobs.md)
+>Ce guide traite de l’utilisation des tâches d’exportation dans le [!DNL Segmentation API]. Pour plus d’informations sur la gestion des tâches d’exportation pour les données [!DNL Real-Time Customer Profile], consultez le guide sur les [&#x200B; tâches d’exportation dans l’API Profile](../../profile/api/export-jobs.md)
 
 ## Commencer
 

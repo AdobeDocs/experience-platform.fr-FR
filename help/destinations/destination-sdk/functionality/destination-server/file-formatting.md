@@ -1,5 +1,5 @@
 ---
-description: Découvrez comment configurer les options de formatage de fichier pour les destinations basées sur des fichiers créés avec Adobe Experience Platform Destination SDK, via le point d’entrée `/destination-servers`.
+description: Découvrez comment configurer les options de formatage de fichier pour les destinations basées sur des fichiers créés avec Adobe Experience Platform Destination SDK, via le point d’entrée &grave;/destination-servers&grave;.
 title: Configuration du formatage des fichiers
 exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
 source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad

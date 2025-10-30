@@ -61,7 +61,7 @@ Avant de pouvoir commencer à utiliser l’API [!DNL Data Access], vous devez id
 - `GET /batches` : renvoie une liste de lots sous votre organisation
 - `GET /dataSetFiles` : renvoie une liste de fichiers sous votre organisation
 
-Pour obtenir la liste complète des points d’entrée de l’API [!DNL Catalog], reportez-vous à la [ Référence d’API ](https://developer.adobe.com/experience-platform-apis/references/catalog/).
+Pour obtenir la liste complète des points d’entrée de l’API [!DNL Catalog], reportez-vous à la [&#x200B; Référence d’API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/).
 
 ## Récupération d’une liste de lots sous votre organisation
 

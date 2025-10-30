@@ -57,7 +57,7 @@ La fonction de validation doit renvoyer un objet contenant les éléments suivan
 | :--- | :--- | :--- |
 | `message` | Chaîne | Message de validation à afficher dans le résumé des résultats. |
 | `events` | Tableau | Tableau d’UUID d’événement à signaler comme correspondants ou non correspondants. |
-| `links` | Tableau | Tableau d’objets `ValidationResultLink` à référencer dans la documentation et d’autres ressources `{( type: 'doc'`&amp;vert;`'product', url: String )}` |
+| `links` | Tableau | Tableau d’objets `ValidationResultLink` à référencer dans la documentation et d’autres ressources `{( type: 'doc'`&vert;`'product', url: String )}` |
 | `result` | Chaîne | Il s’agit du résultat de la validation qui doit être l’une des chaînes énumérées : « correspondant », « non correspondant », « inconnu » |
 
 ## Afficher les résultats de la validation
