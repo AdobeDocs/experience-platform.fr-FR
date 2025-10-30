@@ -131,7 +131,7 @@ Suivez les étapes ci-dessous pour activer les diagnostics d’ingestion et d’
 
 ### Récupérer les détails du flux
 
-Pour récupérer vos configurations de flux de données, envoyez une requête GET au point d’entrée `/flows/{FLOW_ID}` et indiquez l’identifiant de votre flux de données. Pour plus d’informations sur la récupération des détails du flux de données, reportez-vous au guide [Mettre à jour les flux de données à l’aide de l’API [!DNL Flow Service]  ](../../sources/tutorials/api/update-dataflows.md).
+Pour récupérer vos configurations de flux de données, envoyez une requête GET au point d’entrée `/flows/{FLOW_ID}` et indiquez l’identifiant de votre flux de données. Pour plus d’informations sur la récupération des détails du flux de données, reportez-vous au guide [Mettre à jour les flux de données à l’aide de l’API [!DNL Flow Service]  &#x200B;](../../sources/tutorials/api/update-dataflows.md).
 
 Veillez à enregistrer la valeur du champ `etag` renvoyé dans la réponse. Cela est nécessaire pour que la demande de mise à jour garantisse la cohérence des versions.
 
