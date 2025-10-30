@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform pour les entreprises multi-régions et multi-marques
 description: Découvrez comment doter vos équipes d’implémentation des outils et des informations nécessaires pour naviguer efficacement parmi les subtilités de Adobe Experience Platform.
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 6e96cf7660a9a7fe1b4eaef645bca55ed89b7673
 workflow-type: tm+mt
-source-wordcount: '5325'
+source-wordcount: '5322'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ Lors de l’exploration des options de déploiement, vous devez connaître et pr
 - Focus : Précision et qualité des données.
 - Objectifs : garantir la confidentialité et la confiance des données, concevoir des schémas et des modèles de données, gérer les sources de données.
 
-### &#x200B;1. Une entreprise fonctionnant avec une isolation de données limitée
+### Une entreprise fonctionnant avec une isolation de données limitée
 
 Un principe architectural clé dans Experience Platform est celui où les données client sont limitées à un sandbox de production spécifique en fonction des politiques et des exigences de gouvernance.
 
@@ -86,7 +86,7 @@ Si vous le souhaitez, envisagez d’ajouter des contrôles d’accès granulaire
 
 **Cycle de vie du développement avec les sandbox de développement**
 
-Un sandbox de développement se comporte de la même manière qu’un sandbox de production pour tous les aspects fonctionnels. C&#39;est différent en ce sens qu&#39;il y aura des mécanismes de sécurisation contractuels pour vous maintenir dans les limites de votre licence. Il est conçu exclusivement pour le développement et le test avec des profils hors production, prenant en charge jusqu’à 10 % de votre engagement de profil sous licence (mesuré de manière cumulée sur tous les sandbox de développement autorisés). Pour plus d’informations et pour connaître les mécanismes de sécurisation, consultez la [documentation de présentation des sandbox](https://experienceleague.adobe.com/fr/docs/experience-platform/sandbox/home) et la [page de descriptions des produits](https://helpx.adobe.com/fr/legal/product-descriptions.html) pour obtenir plus d’informations sur les droits.
+Un sandbox de développement se comporte de la même manière qu’un sandbox de production pour tous les aspects fonctionnels. C&#39;est différent en ce sens qu&#39;il y aura des mécanismes de sécurisation contractuels pour vous maintenir dans les limites de votre licence. Il est conçu exclusivement pour le développement et le test avec des profils hors production, prenant en charge jusqu’à 10 % de votre engagement de profil sous licence (mesuré de manière cumulée sur tous les sandbox de développement autorisés). Pour plus d’informations et pour connaître les mécanismes de sécurisation, consultez la [documentation de présentation des sandbox](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home) et la [page de descriptions des produits](https://helpx.adobe.com/fr/legal/product-descriptions.html) pour obtenir plus d’informations sur les droits.
 
 Vous pouvez disposer de plusieurs sandbox de développement (jusqu’à 4 dans cet exemple d’entreprise, car nous utilisons un sandbox de production) pour le cycle de vie du développement et des tests.
 
@@ -102,12 +102,12 @@ Grâce à la fonction d’outil Sandbox, vous pouvez sélectionner différents o
 
 Vous avez la possibilité d’utiliser les API Experience Platform pour automatiser les déploiements de sandbox et les tâches de configuration. Les API permettent un contrôle programmable pour les tâches répétitives telles que l’exportation, l’importation ou la modification des configurations de sandbox, offrant ainsi une certaine flexibilité si vous préférez les workflows automatisés.
 
-Pour plus d’informations sur l’outil sandbox, consultez la [documentation sur l’outil sandbox](https://experienceleague.adobe.com/fr/docs/experience-platform/sandbox/ui/sandbox-tooling).
+Pour plus d’informations sur l’outil sandbox, consultez la [documentation sur l’outil sandbox](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling).
 
 | ![CDP-Créer un package](./images/whitepaper/create-package.png) | ![Packages de liste CDP](./images/whitepaper/list-packages.png) |
 | --- | --- |
 
-### &#x200B;2. Isolation des données spécifiques à la région ou à la marque
+### Isolation des données spécifiques à la région ou à la marque
 
 Si vous avez besoin d’une isolation complète (par exemple, régionale ou basée sur une marque), vous pouvez fonctionner sous des politiques d’accès aux données strictes ou des exigences légales limitant l’accès de vos équipes de marque aux données spécifiques à leurs régions ou marques respectives. Vous définissez des modèles d’accès en fonction des données spécifiques à la région ou à la marque, garantissant ainsi la conformité aux protocoles internes, réglementaires et de gouvernance des données. Cette approche est essentielle si vous travaillez dans des secteurs fortement réglementés (p. ex., le traitement des données personnelles identifiables) ou si vous devez conserver des données distinctes et segmentées pour différentes régions géographiques ou identités de marque.
 
@@ -229,9 +229,9 @@ En outre, vous pouvez utiliser la correspondance de segments Experience Platform
 
 Ce service de partage de segments permet à deux utilisateurs ou plus d’échanger des données de segment de manière sécurisée, contrôlée et respectueuse de la vie privée.
 
-Pour plus d’informations sur la fonction Correspondance de segments, consultez la [documentation sur la correspondance de segments](https://experienceleague.adobe.com/fr/docs/experience-platform/segmentation/ui/segment-match/overview).
+Pour plus d’informations sur la fonction Correspondance de segments, consultez la [documentation sur la correspondance de segments](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview).
 
-### 3. Combinaison d’approches pour les opérations mondiales, régionales et spécifiques à la marque
+### Combinaison d’approches pour les opérations mondiales, régionales et spécifiques à la marque
 
 De nombreuses entreprises multi-marques opèrent à l&#39;échelle mondiale et, à ce titre, recherchent souvent un mélange d&#39;approches de gestion des données à la fois unifiées et isolées. Dans ce scénario, ils cherchent à séparer les données pour plusieurs régions ou pays. Les marques au sein de l’organisation peuvent s’attendre à opérer exclusivement sur les données associées à leur marque spécifique, le tout dans les mêmes limites de données d’une zone géographique ou d’un pays. Cette approche permet une gestion centralisée des données au niveau régional ou national tout en facilitant le marketing et les opérations de données spécifiques à la marque. Il s’agit d’un modèle qui combine les avantages d’une gestion unifiée des données avec la nécessité d’une isolation propre à la marque et à la région.
 
@@ -434,7 +434,7 @@ Experience Platform fournit aux entreprises un cadre robuste pour centraliser, g
 
    - Vous devez évaluer soigneusement s’il convient de déployer **plusieurs ID d’organisation ou plusieurs sandbox** en fonction de la résidence des données, de la conformité et des besoins opérationnels.
 
-   - Les **identifiants d’organisation** offrent une isolation complète **&#x200B; tandis que les configurations multi-sandbox offrent une flexibilité opérationnelle dans un cadre de gouvernance partagé**.
+   - Les **identifiants d’organisation** offrent une isolation complète** tandis que les configurations multi-sandbox offrent une flexibilité opérationnelle dans un cadre de gouvernance partagé**.
 
 ## Réflexions finales
 
