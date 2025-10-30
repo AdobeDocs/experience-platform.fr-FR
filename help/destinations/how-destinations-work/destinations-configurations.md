@@ -2,10 +2,10 @@
 title: Paramètres d’exportation configurables et communs des destinations
 description: Découvrez quels paramètres d’exportation des destinations sont configurables au niveau de la destination et lesquels sont fixes et impossibles à modifier.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '834'
-ht-degree: 92%
+ht-degree: 88%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 92%
 
 Lorsque vous réfléchissez au comportement de l’exportation vers des destinations Experience Platform, vous devez tenir compte de trois niveaux distincts sur lesquels les configurations agissent.
 
-* À un premier niveau, certains des paramètres liés au comportement d’exportation de profils et aux paramètres de configuration sont communs à toutes les destinations appartenant à un type de destination. Ces paramètres se rapportent à ce qui déclenche une exportation de destination et à ce qui est inclus dans une exportation et ne peut pas être modifié par les développeurs de destination ou les utilisateurs de Real-Time CDP.
+* À un premier niveau, certains des paramètres liés au comportement d’exportation de profils et aux paramètres de configuration sont communs à toutes les destinations appartenant à un type de destination. Ces paramètres se rapportent à ce qui déclenche une exportation de destination et à ce qui est inclus dans une exportation et ne peut pas être modifié par les développeurs et développeuses de destinations ou les utilisateurs et utilisatrices de Real-Time CDP.
 * À un deuxième niveau, certains paramètres peuvent être personnalisés à un niveau de destination par le développeur ou la développeuse de destinations lors de la création de destinations à l’aide de Destination SDK.
 * À un troisième niveau, il existe des paramètres de configuration que les utilisateurs de Real-Time CDP peuvent définir dans les workflows d’activation.
 
@@ -23,9 +23,9 @@ Cette page fournit des liens vers tous les paramètres d’exportation communs e
 
 ## Paramètres d’exportation communs pour les types de destination {#common-settings-across-destination-types}
 
-Le comportement d’exportation de destination est cohérent sur toutes les destinations appartenant à un type de destination concernant *ce qui déclenche une exportation de destination* et *ce qui est inclus dans les exportations de destination*. Les exportations de destination sont déclenchées par des notifications que le service de destinations reçoit du [service Real-time Customer Profile en amont](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=fr#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
+Le comportement d’exportation de destination est cohérent sur toutes les destinations appartenant à un type de destination concernant *ce qui déclenche une exportation de destination* et *ce qui est inclus dans les exportations de destination*. Les exportations de destination sont déclenchées par des notifications que le service de destinations reçoit du [service Real-time Customer Profile en amont](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
 
-Ce qui est inclus dans les exportations de destination varie légèrement d’un type de destination à l’autre. En savoir plus sur les [modèles communs de comportement d’exportation par type de destination](/help/destinations/how-destinations-work/profile-export-behavior.md). Ces paramètres ne peuvent pas être modifiés par les développeurs de destination ou les utilisateurs de Real-Time CDP.
+Ce qui est inclus dans les exportations de destination varie légèrement d’un type de destination à l’autre. En savoir plus sur les [modèles communs de comportement d’exportation par type de destination](/help/destinations/how-destinations-work/profile-export-behavior.md). Ces paramètres ne peuvent pas être modifiés par les développeurs et développeuses de destinations ou les utilisateurs et utilisatrices de Real-Time CDP.
 
 ## Paramètres d’exportation personnalisables par les développeurs et développeuses de destinations {#customizable-settings-by-destination-developers}
 
@@ -58,7 +58,7 @@ En savoir plus sur les différentes options et étapes disponibles dans le workf
 * [Activer les données d’audience vers les destinations d’entreprise](/help/destinations/ui/activate-streaming-profile-destinations.md)
 * [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md)
 * [Exporter des fichiers à la demande vers des destinations par lots](/help/destinations/ui/export-file-now.md)
-* [Exportation des jeux de données vers des destinations de stockage dans le cloud](/help/destinations/ui/export-datasets.md)
+* [Exporter des jeux de données vers des destinations d’espace de stockage](/help/destinations/ui/export-datasets.md)
 
 ## Étapes suivantes {#next-steps}
 

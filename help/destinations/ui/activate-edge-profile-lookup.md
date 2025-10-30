@@ -3,9 +3,9 @@ title: Recherche d’attributs de profil Edge en temps réel
 description: Découvrez comment rechercher des attributs de profil Edge en temps réel à l’aide de la destination Personalization personnalisée et de l’API Edge Network
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1843'
+source-wordcount: '1839'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ Lors de la configuration du cas d’utilisation décrit sur cette page, vous uti
 * [Flux de données](../../datastreams/overview.md) : un flux de données reçoit des données d’événement entrantes de Web SDK et répond avec des données de profil Edge.
 * [Politiques de fusion](../../segmentation/ui/segment-builder.md#merge-policies) : vous allez créer une politique de fusion [!UICONTROL Active-On-Edge] pour vous assurer que les profils Edge utilisent les données de profil correctes.
 * [Connexion Personalization personnalisée](../catalog/personalization/custom-personalization.md) : vous allez configurer une nouvelle connexion de personnalisation personnalisée qui enverra les attributs de profil à Edge Network.
-* [API Edge Network &#x200B;](https://developer.adobe.com/data-collection-apis/docs/) : vous utiliserez la fonctionnalité d’API Edge Network [collecte de données interactive](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) pour récupérer rapidement les attributs de profil des profils Edge.
+* [API Edge Network ](https://developer.adobe.com/data-collection-apis/docs/) : vous utiliserez la fonctionnalité d’API Edge Network [collecte de données interactive](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) pour récupérer rapidement les attributs de profil des profils Edge.
 
 ## Mécanismes de sécurisation des performances {#guardrails}
 
@@ -54,7 +54,7 @@ Suivez les étapes de la documentation [configuration du flux de données](../..
 >
 >Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
 
-    ![Image de l’interface utilisateur d’Experience Platform montrant l’écran de configuration du train de données.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
+![Image de l’interface utilisateur d’Experience Platform affichant l’écran de configuration du flux de données.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
 
 
 ## Étape 2 : configurer vos audiences pour l’évaluation Edge {#audience-edge-evaluation}
@@ -89,7 +89,7 @@ Après avoir créé une connexion **[!UICONTROL Custom Personalization With Attr
 
 >[!IMPORTANT]
 > 
-> * Pour activer les données et activer l’[étape de mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
+> * Pour activer les données et activer l’[étape de mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
 > 
 > Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
@@ -125,8 +125,6 @@ Après avoir créé une connexion **[!UICONTROL Custom Personalization With Attr
 
      ![Enregistrement d’écran montrant comment sélectionner un attribut XDM dans l’étape de mappage](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 
-
-
 Lorsque vous avez terminé de mapper les attributs de profil, sélectionnez **[!UICONTROL Next]**.
 
 Sur la page **[!UICONTROL Review]**, vous pouvez voir un résumé de votre sélection. Sélectionnez **[!UICONTROL Cancel]** pour interrompre le flux, **[!UICONTROL Back]** pour modifier vos paramètres ou **[!UICONTROL Finish]** pour confirmer votre sélection et commencer à envoyer des données de profil à Edge Network.
@@ -137,7 +135,7 @@ Sur la page **[!UICONTROL Review]**, vous pouvez voir un résumé de votre séle
 
 +++Évaluation des politiques de consentement
 
-Si votre organisation a acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL View applicable consent policies]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l’activation qui en résulte. Pour plus d’informations, consultez [&#x200B; Évaluation des politiques de consentement &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
+Si votre organisation a acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL View applicable consent policies]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l’activation qui en résulte. Pour plus d’informations, consultez [ Évaluation des politiques de consentement ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
 
 **Vérifications des politiques d’utilisation des données**
 
@@ -167,7 +165,8 @@ L’étape suivante consiste à configurer votre solution de personnalisation po
 >[!IMPORTANT]
 >
 >Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, vous devez récupérer les attributs de profil via l’[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/). De plus, vous devez récupérer les attributs de profil via l’API Edge Network [point d’entrée de la collecte de données interactive](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) pour que les appels API soient authentifiés.
->&#x200B;><br>Si vous ne suivez pas les exigences ci-dessus, la personnalisation sera basée sur l’appartenance à l’audience uniquement et les attributs de profil ne seront pas disponibles pour vous.
+>
+>Si vous ne suivez pas les exigences ci-dessus, la personnalisation sera basée sur l’appartenance à l’audience uniquement et les attributs de profil ne seront pas disponibles pour vous.
 
 Le flux de données que vous avez configuré à l’[étape 1](#create-datastream) est maintenant prêt à accepter les données d’événement entrantes et à répondre avec des informations de profil Edge.
 

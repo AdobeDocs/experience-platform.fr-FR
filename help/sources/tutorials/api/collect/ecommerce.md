@@ -5,7 +5,7 @@ title: Créer un flux de données pour les sources d’e-commerce à l’aide de
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’un système e-commerce tiers et les ingérer dans Experience Platform à l’aide des connecteurs source et des API.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1314'
 ht-degree: 78%

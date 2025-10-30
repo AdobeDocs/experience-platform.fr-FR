@@ -1,31 +1,31 @@
 ---
 solution: Experience Platform
-title: Point de terminaison de l’API Schedules
-description: Les planifications sont un outil qui peut être utilisé pour exécuter automatiquement des tâches de segmentation par lots une fois par jour.
+title: Point d’entrée de l’API Schedules
+description: Les planifications sont un outil qui peut être utilisé pour exécuter automatiquement des traitements de segmentation par lots une fois par jour.
 role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2088'
 ht-degree: 15%
 
 ---
 
-# Point de terminaison des planifications
+# Point d’entrée des plannings
 
-Les planifications sont un outil qui peut être utilisé pour exécuter automatiquement des tâches de segmentation par lots une fois par jour. Vous pouvez utiliser le point de terminaison `/config/schedules` pour récupérer une liste de planifications, créer une planification, récupérer les détails d’une planification spécifique, mettre à jour une planification spécifique ou supprimer une planification spécifique.
+Les planifications sont un outil qui peut être utilisé pour exécuter automatiquement des traitements de segmentation par lots une fois par jour. Vous pouvez utiliser le point d’entrée `/config/schedules` pour récupérer une liste de planifications, créer une nouvelle planification, récupérer les détails d’une planification spécifique, mettre à jour une planification spécifique ou supprimer une planification spécifique.
 
 ## Commencer
 
-Les points de terminaison utilisés dans ce guide font partie de l’API [!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, y compris les en-têtes requis et comment lire des exemples d’appels API.
+Les points d’entrée utilisés dans ce guide font partie de l’API [!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, y compris les en-têtes requis et la manière de lire des exemples d’appels API.
 
 ## Obtention d’une liste de plannings {#retrieve-list}
 
-Vous pouvez récupérer une liste de tous les plannings de votre organisation en envoyant une requête de GET au point de terminaison `/config/schedules`.
+Vous pouvez récupérer une liste de tous les plannings pour votre organisation en envoyant une requête GET au point d’entrée `/config/schedules`.
 
 **Format d’API**
 
-Le point d’entrée `/config/schedules` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est vivement recommandée pour réduire les frais généraux élevés. Un appel à ce point de terminaison sans paramètres permet de récupérer toutes les plannings disponibles pour votre organisation. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
+Le point d’entrée `/config/schedules` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est vivement recommandée pour réduire les frais généraux élevés. Si vous effectuez un appel à ce point d’entrée sans paramètre, toutes les planifications disponibles pour votre organisation sont récupérées. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
 
 ```http
 GET /config/schedules
@@ -45,7 +45,7 @@ GET /config/schedules?{QUERY_PARAMETERS}
 
 **Requête**
 
-La requête suivante récupère les dix derniers plannings publiés au sein de votre organisation.
+La requête suivante récupère les dix dernières planifications publiées au sein de votre organisation.
 
 +++ Exemple de requête pour récupérer une liste de plannings.
 
@@ -61,11 +61,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec une liste de plannings pour l’organisation spécifiée comme JSON.
+Une réponse réussie renvoie le statut HTTP 200 avec une liste de plannings pour l’organisation spécifiée au format JSON.
 
 >[!NOTE]
 >
->La réponse suivante a été tronquée pour l’espace et affiche uniquement la première planification renvoyée.
+>La réponse suivante a été tronquée pour des raisons d’espace et n’affiche que le premier planning renvoyé.
 
 +++ Exemple de réponse lors de la récupération d’une liste de plannings.
 
@@ -107,11 +107,11 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de plannings pour
 | `_page.totalCount` | Nombre total de plannings renvoyés. |
 | `_page.pageSize` | Taille de la page des plannings. |
 | `children.name` | Nom du planning sous forme de chaîne. |
-| `children.type` | Type de tâche sous forme de chaîne. Les deux types pris en charge sont &quot;batch_segmentation&quot; et &quot;export&quot;. |
+| `children.type` | Type de traitement sous forme de chaîne. Les deux types pris en charge sont « batch_segmentation » et « export ». |
 | `children.properties` | Objet contenant des propriétés supplémentaires liées au planning. |
-| `children.properties.segments` | L’utilisation de `["*"]` permet de s’assurer que tous les segments sont inclus. |
-| `children.schedule` | Chaîne contenant le planning de la tâche. L’exécution des tâches ne peut être planifiée qu’une fois par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution de plusieurs tâches sur une période de 24 heures. Pour plus d’informations sur les plannings cron, veuillez lire l’annexe sur le [format d’expression cron](#appendix). Dans cet exemple, &quot;0 0 1 * *&quot; signifie que cette planification s’exécutera à 1h00 tous les jours. |
-| `children.state` | Chaîne contenant l’état du planning. Les deux états pris en charge sont &quot;actif&quot; et &quot;inactif&quot;. Par défaut, l’état est défini sur &quot;inactif&quot;. |
+| `children.properties.segments` | L’utilisation de `["*"]` garantit que tous les segments sont inclus. |
+| `children.schedule` | Chaîne contenant le planning du traitement. Les tâches ne peuvent être planifiées pour s’exécuter qu’une seule fois par jour, ce qui signifie que vous ne pouvez pas planifier une tâche pour qu’elle s’exécute plus d’une fois sur une période de 24 heures. Pour plus d’informations sur les plannings cron, consultez l’annexe sur le [format d’expression cron](#appendix). Dans cet exemple, « `0 0 1 * *` » signifie que cette planification s’exécutera à 1 heure du matin tous les jours. |
+| `children.state` | Chaîne contenant l’état du planning. Les deux états pris en charge sont « actif » et « inactif ». Par défaut, l’état est défini sur « inactif ». |
 
 +++
 
@@ -127,7 +127,7 @@ POST /config/schedules
 
 **Requête**
 
-+++ Exemple de requête pour créer un planning.
++++ Exemple de requête pour créer un planning. 
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
@@ -153,11 +153,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | Propriété | Description |
 | -------- | ------------ |
 | `name` | **Obligatoire.** Nom du planning sous forme de chaîne. |
-| `type` | **Obligatoire.** Type de tâche sous forme de chaîne. Les deux types pris en charge sont &quot;batch_segmentation&quot; et &quot;export&quot;. |
+| `type` | **Obligatoire.** Type de tâche sous forme de chaîne. Les deux types pris en charge sont « batch_segmentation » et « export ». |
 | `properties` | **Obligatoire.** Objet contenant des propriétés supplémentaires liées au planning. |
-| `properties.segments` | **Obligatoire lorsque `type` est égal à &quot;batch_segmentation&quot;.** L’utilisation de `["*"]` permet de s’assurer que tous les segments sont inclus. |
-| `schedule` | *Facultatif.* Chaîne contenant le planning de la tâche. L’exécution des tâches ne peut être planifiée qu’une fois par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution de plusieurs tâches sur une période de 24 heures. Pour plus d’informations sur les plannings cron, veuillez lire l’annexe sur le [format d’expression cron](#appendix). Dans cet exemple, &quot;0 0 1 * *&quot; signifie que cette planification s’exécutera à 1h00 tous les jours. <br><br>Si cette chaîne n’est pas fournie, un planning généré par le système sera automatiquement généré. |
-| `state` | *Facultatif.* Chaîne contenant l’état du planning. Les deux états pris en charge sont &quot;actif&quot; et &quot;inactif&quot;. Par défaut, l’état est défini sur &quot;inactif&quot;. |
+| `properties.segments` | **Obligatoire lorsque la `type` est égale à « batch_segmentation ».** L’utilisation de `["*"]` permet de s’assurer que tous les segments sont inclus. |
+| `schedule` | *Facultatif.* Chaîne contenant le planning de la tâche. Les tâches ne peuvent être planifiées pour s’exécuter qu’une seule fois par jour, ce qui signifie que vous ne pouvez pas planifier une tâche pour qu’elle s’exécute plus d’une fois sur une période de 24 heures. Pour plus d’informations sur les plannings cron, consultez l’annexe sur le [format d’expression cron](#appendix). Dans cet exemple, « `0 0 1 * *` » signifie que cette planification s’exécutera à 1 heure du matin tous les jours. <br><br>Si cette chaîne n’est pas fournie, un planning généré par le système est automatiquement généré. |
+| `state` | *Facultatif.* Chaîne contenant l’état du planning. Les deux états pris en charge sont « actif » et « inactif ». Par défaut, l’état est défini sur « inactif ». |
 
 +++
 
@@ -195,7 +195,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de votre nouv
 
 ## Récupération d’un planning spécifique {#get}
 
-Vous pouvez récupérer des informations détaillées sur un planning spécifique en envoyant une requête GET au point de terminaison `/config/schedules` et en fournissant l’identifiant du planning que vous souhaitez récupérer dans le chemin d’accès de la requête.
+Vous pouvez récupérer des informations détaillées sur un planning spécifique en adressant une requête GET au point d’entrée `/config/schedules` et en fournissant l’identifiant du planning que vous souhaitez récupérer dans le chemin de requête.
 
 **Format d’API**
 
@@ -205,11 +205,11 @@ GET /config/schedules/{SCHEDULE_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | La valeur `id` du planning que vous souhaitez récupérer. |
+| `{SCHEDULE_ID}` | Valeur `id` du planning que vous souhaitez récupérer. |
 
 **Requête**
 
-+++ Exemple de requête pour récupérer un planning.
++++ Exemple de requête pour récupérer un planning. 
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b
@@ -254,19 +254,19 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 | Propriété | Description |
 | -------- | ------------ |
 | `name` | Nom du planning sous forme de chaîne. |
-| `type` | Type de tâche sous forme de chaîne. Les deux types pris en charge sont `batch_segmentation` et `export`. |
+| `type` | Type de traitement sous forme de chaîne. Les deux types pris en charge sont `batch_segmentation` et `export`. |
 | `properties` | Objet contenant des propriétés supplémentaires liées au planning. |
-| `properties.segments` | L’utilisation de `["*"]` permet de s’assurer que tous les segments sont inclus. |
-| `schedule` | Chaîne contenant le planning de la tâche. Vous ne pouvez planifier qu’une seule exécution de tâche par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution d’une tâche plus d’une fois au cours d’une période de 24 heures. Pour plus d’informations sur les plannings cron, veuillez lire l’annexe sur le [format d’expression cron](#appendix). Dans cet exemple, &quot;0 0 1 * *&quot; signifie que cette planification s’exécutera à 1h00 tous les jours. |
+| `properties.segments` | L’utilisation de `["*"]` garantit que tous les segments sont inclus. |
+| `schedule` | Chaîne contenant le planning du traitement. Vous ne pouvez planifier qu’une seule exécution de tâche par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution d’une tâche plus d’une fois au cours d’une période de 24 heures. Pour plus d’informations sur les plannings cron, consultez l’annexe sur le [format d’expression cron](#appendix). Dans cet exemple, « `0 0 1 * *` » signifie que cette planification s’exécutera à 1 heure du matin tous les jours. |
 | `state` | Chaîne contenant l’état du planning. Les deux états pris en charge sont `active` et `inactive`. Par défaut, l’état est défini sur `inactive`. |
 
 +++
 
-## Mise à jour des détails d’un planning spécifique {#update}
+## Mettre à jour les détails d’un planning spécifique {#update}
 
-Vous pouvez mettre à jour un planning spécifique en envoyant une requête de PATCH au point de terminaison `/config/schedules` et en fournissant l’identifiant du planning que vous essayez de mettre à jour dans le chemin d’accès de la requête.
+Vous pouvez mettre à jour un planning spécifique en adressant une requête PATCH au point d’entrée `/config/schedules` et en fournissant l’identifiant du planning que vous tentez de mettre à jour dans le chemin de requête.
 
-La requête du PATCH vous permet de mettre à jour [state](#update-state) ou la [planification cron](#update-schedule) pour une planification individuelle.
+La requête PATCH vous permet de mettre à jour la planification [state](#update-state) ou [cron](#update-schedule) pour une planification individuelle.
 
 **Format d’API**
 
@@ -276,13 +276,13 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | La valeur `id` du planning que vous souhaitez mettre à jour. |
+| `{SCHEDULE_ID}` | Valeur `id` du planning que vous souhaitez mettre à jour. |
 
 >[!BEGINTABS]
 
 >[!TAB Mettre à jour l’état du planning]
 
-Vous pouvez utiliser une opération de correctif JSON pour mettre à jour l’état du planning. Pour mettre à jour l’état, vous déclarez la propriété `path` comme `/state` et définissez `value` sur `active` ou `inactive`. Pour plus d’informations sur le correctif JSON, consultez la documentation [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) .
+Vous pouvez utiliser une opération Correctif JSON pour mettre à jour l’état du planning. Pour mettre à jour l’état, vous déclarez la propriété `path` comme `/state` et définissez l’`value` sur `active` ou `inactive`. Pour plus d’informations sur le correctif JSON, consultez la documentation du [correctif JSON](https://datatracker.ietf.org/doc/html/rfc6902).
 
 **Requête**
 
@@ -308,8 +308,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 | Propriété | Description |
 | -------- | ----------- |
-| `path` | Chemin d’accès de la valeur que vous souhaitez mettre à jour. Dans ce cas, puisque vous mettez à jour l’état du planning, vous devez définir la valeur de `path` sur &quot;/state&quot;. |
-| `value` | Valeur mise à jour de l’état du planning. Cette valeur peut être définie sur &quot;actif&quot; ou &quot;inactif&quot; pour activer ou désactiver le planning. Notez que vous **ne pouvez pas** désactiver un planning si l’organisation a été activée pour la diffusion en continu. |
+| `path` | Chemin d’accès de la valeur que vous souhaitez mettre à jour. Dans ce cas, puisque vous mettez à jour l’état du planning, vous devez définir la valeur de `path` sur « /state ». |
+| `value` | Valeur mise à jour de l’état du planning. Cette valeur peut être définie comme « active » ou « inactive » pour activer ou désactiver le planning. Notez que vous **ne pouvez pas** désactiver un planning si l’organisation a été activée pour la diffusion en continu. |
 
 **Réponse**
 
@@ -317,7 +317,7 @@ Une réponse réussie renvoie un état HTTP 204 (No Content).
 
 >[!TAB Mettre à jour le planning cron]
 
-Vous pouvez utiliser une opération de correctif JSON pour mettre à jour le planning cron. Pour mettre à jour le planning, vous déclarez la propriété `path` comme `/schedule` et définissez `value` sur un planning cron valide. Pour plus d’informations sur le correctif JSON, consultez la documentation [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) . Pour plus d’informations sur les plannings cron, veuillez lire l’annexe sur le [format d’expression cron](#appendix).
+Vous pouvez utiliser une opération Correctif JSON pour mettre à jour la planification cron. Pour mettre à jour le planning, vous déclarez la propriété `path` comme `/schedule` et définissez la `value` sur un planning cron valide. Pour plus d’informations sur le correctif JSON, consultez la documentation du [correctif JSON](https://datatracker.ietf.org/doc/html/rfc6902). Pour plus d’informations sur les plannings cron, consultez l’annexe sur le [format d’expression cron](#appendix).
 
 >[!ENDTABS]
 
@@ -343,8 +343,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 | Propriété | Description |
 | -------- | ----------- |
-| `path` | Chemin d’accès de la valeur que vous souhaitez mettre à jour. Dans ce cas, puisque vous mettez à jour le planning cron, vous devez définir la valeur de `path` sur `/schedule`. |
-| `value` | La valeur mise à jour du planning cron. Cette valeur doit se présenter sous la forme d’un planning cron. Dans cet exemple, le planning se déroulera le deuxième jour de chaque mois. |
+| `path` | Chemin d’accès de la valeur à mettre à jour. Dans ce cas, puisque vous mettez à jour la planification cron, vous devez définir la valeur de `path` sur `/schedule`. |
+| `value` | Valeur mise à jour du planning cron. Cette valeur doit se présenter sous la forme d’un planning cron. Dans cet exemple, le planning se déroulera le deuxième jour de chaque mois. |
 
 +++
 
@@ -354,7 +354,7 @@ Une réponse réussie renvoie un état HTTP 204 (No Content).
 
 ## Suppression d’un planning spécifique
 
-Vous pouvez demander la suppression d’un planning spécifique en envoyant une requête de DELETE au point de terminaison `/config/schedules` et en fournissant l’identifiant du planning que vous souhaitez supprimer dans le chemin d’accès de la requête.
+Vous pouvez demander la suppression d’un planning spécifique en adressant une requête DELETE au point d’entrée `/config/schedules` et en fournissant l’identifiant du planning que vous souhaitez supprimer du chemin de requête.
 
 **Format d’API**
 
@@ -364,11 +364,11 @@ DELETE /config/schedules/{SCHEDULE_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | La valeur `id` du planning que vous souhaitez supprimer. |
+| `{SCHEDULE_ID}` | Valeur `id` du planning que vous souhaitez supprimer. |
 
 **Requête**
 
-+++ Exemple de requête pour supprimer un planning.
++++ Exemple de requête de suppression d’un planning.
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
@@ -394,50 +394,50 @@ L’annexe suivante explique le format des expressions cron utilisées dans les 
 
 ### Format
 
-Une expression cron est une chaîne composée de 6 ou 7 champs. L’expression ressemble à ce qui suit :
+Une expression cron est une chaîne composée de 6 ou 7 champs. L’expression se présente comme suit :
 
 `0 0 12 * * ?`
 
-Dans une chaîne d’expression cron, le premier champ représente les secondes, le second les minutes, le troisième les heures, le quatrième le jour du mois, le cinquième le mois et le sixième le jour de la semaine. Vous pouvez également inclure un septième champ, qui représente l’année.
+Dans une chaîne d’expression cron, le premier champ représente les secondes, le second les minutes, le troisième les heures, le quatrième le jour du mois, le cinquième le mois et le sixième le jour de la semaine. Vous pouvez également inclure éventuellement un septième champ, qui représente l’année.
 
 | Nom du champ | Obligatoire | Valeurs possibles | Caractères spéciaux autorisés |
 | ---------- | -------- | --------------- | -------------------------- |
-| Seconds | Oui | 0 à 59 | `, - * /` |
-| Minutes | Oui | 0 à 59 | `, - * /` |
-| Heures | Oui | 0 à 23 | `, - * /` |
+| Seconds | Oui | 0-59 | `, - * /` |
+| Minutes | Oui | 0-59 | `, - * /` |
+| Heures | Oui | 0-23 | `, - * /` |
 | Jour du mois | Oui | 1-31 | `, - * ? / L W` |
-| Mois | Oui | 1-12, JAN-DEC | `, - * /` |
-| Jour de la semaine | Oui | 1-7, SUN-SAT | `, - * ? / L #` |
-| Année | Non | Vide, 1970-2099 | `, - * /` |
+| Month | Oui | 1ER-12 JANVIER-DÉCEMBRE | `, - * /` |
+| Jour de la semaine | Oui | 1-7, SUN-SAM | `, - * ? / L #` |
+| Year | Non | Vide, 1970-2099 | `, - * /` |
 
 >[!NOTE]
 >
->Les noms des mois et des jours de la semaine sont **non** sensibles à la casse. Par conséquent, `SUN` équivaut à utiliser `sun`.
+>Les noms des mois et des jours de la semaine ne respectent **pas** la casse. Par conséquent, `SUN` équivaut à utiliser `sun`.
 
-Les caractères spéciaux autorisés représentent les significations suivantes :
+Les caractères spéciaux autorisés ont la signification suivante :
 
 | Caractère spécial | Description |
 | ----------------- | ----------- |
-| `*` | Cette valeur est utilisée pour sélectionner les valeurs **all** dans un champ. Par exemple, placer `*` dans le champ des heures signifierait **toutes les** heures. |
-| `?` | Cette valeur signifie qu’aucune valeur spécifique n’est requise. Cette option est généralement utilisée pour spécifier quelque chose dans un champ où le caractère est autorisé, mais pas dans l’autre champ. Par exemple, si vous souhaitez qu’un événement soit déclenché tous les 3 du mois, mais que vous ne vous souciez pas du jour de la semaine, vous devez placer `3` dans le champ du jour du mois et `?` dans le champ du jour de la semaine. |
-| `-` | Cette valeur est utilisée pour spécifier des plages **inclusives** pour le champ. Par exemple, si vous placez `9-15` dans le champ &quot;heures&quot;, cela signifie que les heures comprennent 9, 10, 11, 12, 13, 14 et 15. |
-| `,` | Cette valeur est utilisée pour spécifier des valeurs supplémentaires. Par exemple, si vous placez `MON, FRI, SAT` dans le champ jour de la semaine, cela signifie que les jours de la semaine comprennent le lundi, le vendredi et le samedi. |
-| `/` | Cette valeur est utilisée pour spécifier des incréments. La valeur placée avant le `/` détermine son incrément, tandis que la valeur placée après le `/` détermine son incrémentation. Par exemple, si vous placez `1/7` dans le champ minutes, cela signifie que les minutes comprennent 1, 8, 15, 22, 29, 36, 43, 50 et 57. |
-| `L` | Cette valeur est utilisée pour spécifier `Last` et a une signification différente selon le champ utilisé. S’il est utilisé avec le champ jour du mois, il représente le dernier jour du mois. S’il est utilisé seul avec le champ Jour de la semaine, il représente le dernier jour de la semaine, qui est samedi (`SAT`). S’il est utilisé avec le champ Jour de la semaine, conjointement avec une autre valeur, il représente le dernier jour de ce type pour le mois. Par exemple, si vous placez `5L` dans le champ jour de la semaine, **uniquement** inclut le dernier vendredi du mois. |
-| `W` | Cette valeur est utilisée pour spécifier le jour de la semaine le plus proche du jour donné. Par exemple, si vous placez `18W` dans le champ du jour du mois et que le 18 du mois était un samedi, il se déclenche le vendredi 17, qui est le jour de semaine le plus proche. Si le 18 de ce mois était un dimanche, il se déclencherait le lundi 19, qui est le jour de semaine le plus proche. Notez que si vous placez `1W` dans le champ Jour du mois et que le jour de semaine le plus proche se trouve dans le mois précédent, l’événement se déclenche toujours le jour de semaine le plus proche du mois **actif**.</br></br>De plus, vous pouvez combiner `L` et `W` pour créer `LW`, ce qui spécifie le dernier jour de semaine du mois. |
-| `#` | Cette valeur est utilisée pour spécifier le énième jour de la semaine d’un mois. La valeur placée avant le `#` représente le jour de la semaine, tandis que la valeur placée après le `#` représente l’occurrence du mois qu’elle est. Par exemple, si vous mettez `1#3`, l’événement se déclenche le troisième dimanche du mois. Notez que si vous mettez `X#5` et qu’il n’y a pas de cinquième occurrence de ce jour de la semaine ce mois-ci, l’événement sera **et non** déclenché. Par exemple, si vous mettez `1#5` et qu’il n’y a pas cinq dimanches pendant ce mois, l’événement sera **not** déclenché. |
+| `*` | Cette valeur est utilisée pour sélectionner **toutes** les valeurs d’un champ. Par exemple, l’ajout de `*` dans le champ heures signifierait **toutes les** heures. |
+| `?` | Cette valeur signifie qu’aucune valeur spécifique n’est requise. Ceci est généralement utilisé pour spécifier quelque chose dans un champ où le caractère est autorisé, mais pas dans l’autre. Par exemple, si vous souhaitez qu’un événement soit déclenché tous les trois du mois, mais que vous ne vous souciez pas du jour de la semaine, vous devez `3` dans le champ jour du mois et `?` dans le champ jour de la semaine. |
+| `-` | Cette valeur est utilisée pour spécifier des plages **inclusives** pour le champ. Par exemple, si vous placez `9-15` dans le champ heures, cela signifie que les heures incluent 9, 10, 11, 12, 13, 14 et 15. |
+| `,` | Cette valeur est utilisée pour spécifier des valeurs supplémentaires. Par exemple, si vous placez `MON, FRI, SAT` dans le champ jour de la semaine , cela signifie que les jours de la semaine incluent le lundi, le vendredi et le samedi. |
+| `/` | Cette valeur est utilisée pour spécifier des incréments. La valeur placée avant le `/` détermine l’endroit à partir duquel il incrémente, tandis que la valeur placée après le `/` détermine son incrémentation. Par exemple, si vous mettez `1/7` dans le champ des procès-verbaux, cela signifie que les procès-verbaux comprendraient 1, 8, 15, 22, 29, 36, 43, 50 et 57. |
+| `L` | Cette valeur est utilisée pour spécifier `Last` et a une signification différente selon le champ par lequel elle est utilisée. S’il est utilisé avec le champ Jour du mois, il représente le dernier jour du mois. S’il est utilisé seul avec le champ Jour de la semaine, il représente le dernier jour de la semaine, à savoir samedi (`SAT`). S’il est utilisé avec le champ Jour de la semaine, en conjonction avec une autre valeur, il représente le dernier jour de ce type pour le mois. Par exemple, si vous placez `5L` dans le champ jour de la semaine, cela **uniquement** inclure le dernier vendredi du mois. |
+| `W` | Cette valeur est utilisée pour spécifier le jour de la semaine le plus proche du jour donné. Par exemple, si vous placez `18W` dans le champ jour du mois, et que le 18 de ce mois était un samedi, cela se déclencherait le vendredi 17, qui est le jour de la semaine le plus proche. Si le 18 de ce mois-là était un dimanche, cela se déclencherait le lundi 19, qui est le jour de la semaine le plus proche. Veuillez noter que si vous placez `1W` dans le champ jour du mois et que le jour de la semaine le plus proche se trouve dans le mois précédent, l’événement se déclenchera toujours le jour de la semaine le plus proche du **mois en cours**.</br></br>De plus, vous pouvez combiner des `L` et des `W` pour effectuer des `LW`, ce qui spécifie le dernier jour de la semaine du mois. |
+| `#` | Cette valeur est utilisée pour spécifier le énième jour de la semaine dans un mois. La valeur placée avant le `#` représente le jour de la semaine, tandis que la valeur placée après le `#` représente l’occurrence du mois en question. Par exemple, si vous placez `1#3`, l’événement se déclenche le troisième dimanche du mois. Veuillez noter que si vous mettez `X#5` et qu’il n’y a pas de cinquième occurrence de ce jour de la semaine dans ce mois-là, l’événement **sera pas déclenché** Par exemple, si vous mettez `1#5` et qu’il n’y a pas de cinquième dimanche dans ce mois-là, l’événement **sera pas déclenché** |
 
 ### Exemples
 
-Le tableau suivant présente des exemples de chaînes d’expression cron et explique leur signification.
+Le tableau suivant présente des exemples de chaînes d’expression cron et explique ce qu’elles signifient.
 
 | Expression | Explication |
 | ---------- | ----------- |
-| `0 0 13 * * ?` | L&#39;événement se déclenchera tous les jours à 13h00. |
-| `0 30 9 * * ? 2022` | L&#39;événement se déclenchera tous les jours à 9h30 en 2022. |
-| `0 * 18 * * ?` | L&#39;événement se déclenche toutes les minutes, de 18h à 18h59, tous les jours. |
-| `0 0/10 17 * * ?` | L&#39;événement se déclenche toutes les 10 minutes, de 17h à 18h, chaque jour. |
-| `0 13,38 5 ? 6 WED` | L&#39;événement se déclenchera à 5h13 et 5h38 tous les mercredis du mois de juin. |
-| `0 30 12 ? * 4#3` | L&#39;événement se déclenchera à 12h30 le troisième mercredi tous les mois. |
-| `0 30 12 ? * 6L` | L’événement se déclenchera à 12h30 le dernier vendredi de chaque mois. |
-| `0 45 11 ? * MON-THU` | L’événement se déclenchera à 11h45 tous les lundis, mardis, mercredis et jeudis. |
+| `0 0 13 * * ?` | L&#39;événement se déclenchera à 13h tous les jours. |
+| `0 30 9 * * ? 2022` | L’événement se déclenchera tous les jours à 9 :30AM en 2022. |
+| `0 * 18 * * ?` | L’événement se déclenchera toutes les minutes, à partir de 18h00 et se terminera à 18:59PM, tous les jours. |
+| `0 0/10 17 * * ?` | L&#39;événement se déclenchera toutes les 10 minutes, à partir de 17h et se terminera à 18h, tous les jours. |
+| `0 13,38 5 ? 6 WED` | L&#39;événement se déclenchera à 5 :13AM et 5 :38AM tous les mercredis de juin. |
+| `0 30 12 ? * 4#3` | L&#39;événement se déclenchera à 12 :30PM le troisième mercredi de chaque mois. |
+| `0 30 12 ? * 6L` | L&#39;événement se déclenchera à 12 :30PM le dernier vendredi de chaque mois. |
+| `0 45 11 ? * MON-THU` | L&#39;événement se déclenchera à 11 :45AM tous les lundis, mardis, mercredis et jeudis. |

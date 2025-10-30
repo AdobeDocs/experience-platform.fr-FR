@@ -2,9 +2,9 @@
 description: Découvrez comment configurer les schémas du partenaire pour les destinations créées avec Destination SDK.
 title: Configuration des schémas de partenaire
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1912'
 ht-degree: 77%
 
 ---
@@ -167,6 +167,7 @@ Vous pouvez, par exemple, appliquer le champ de l’adresse e-mail pour qu’il 
 >[!NOTE]
 >
 >Les combinaisons suivantes de mappages obligatoires sont actuellement prises en charge :
+>
 >* Vous pouvez configurer un champ source et un champ de destination obligatoires. Dans ce cas, les utilisateurs ne peuvent pas modifier ni sélectionner l’un des deux champs et peuvent uniquement afficher la sélection.
 >* Vous ne pouvez configurer qu’un champ de destination obligatoire. Dans ce cas, les utilisateurs seront autorisés à sélectionner un champ source à mapper à la destination.
 >
@@ -203,7 +204,7 @@ L’exemple ci-dessous montre les mappages source et de destination obligatoires
 
 {style="table-layout:auto"}
 
-**[!UICONTROL Par conséquent, les sections Champ]** Source et **[!UICONTROL Champ cible]** de l’interface utilisateur d’Experience Platform sont grisées.
+Par conséquent, les sections **[!UICONTROL Source field]** et **[!UICONTROL Target field]** de l’interface utilisateur d’Experience Platform sont grisées.
 
 ![Image des mappages obligatoires dans le flux d’activation de l’interface utilisateur.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
@@ -233,7 +234,7 @@ L’exemple ci-dessous montre un mappage de destination obligatoire. Si seul le 
 
 {style="table-layout:auto"}
 
-Ainsi, la section **[!UICONTROL Champ cible]** de l’interface utilisateur d’Experience Platform est grisée, tandis que la section **[!UICONTROL Champ Source]** est active et les utilisateurs peuvent interagir avec celle-ci. Les options **[!UICONTROL clé obligatoire]** et **[!UICONTROL clé de déduplication]** sont actives et les utilisateurs ne peuvent pas les modifier.
+Ainsi, la section **[!UICONTROL Target field]** de l’interface utilisateur d’Experience Platform est grisée, tandis que la section **[!UICONTROL Source field]** est active et les utilisateurs peuvent interagir avec celle-ci. Les options **[!UICONTROL Mandatory key]** et **[!UICONTROL Deduplication key]** sont actives et les utilisateurs ne peuvent pas les modifier.
 
 ![Image des mappages obligatoires dans le flux d’activation de l’interface utilisateur.](../../assets/functionality/destination-configuration/required-mappings-1.png)
 

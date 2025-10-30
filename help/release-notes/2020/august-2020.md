@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 exl-id: 9347147f-e830-4487-aa12-f56723abb3c8
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 38%
@@ -64,7 +64,7 @@ Basée sur Experience Platform, Real-time Customer Data Platform ([!DNL Real-Ti
 | ------- | ----------- |
 | Prise en charge de l’IAB TCF 2.0 | [!DNL Real-Time CDP] est désormais un fournisseur enregistré pour la version 2.0 du [!DNL Transparency & Consent Framework] (TCF), comme indiqué par l’[!DNL Interactive Advertising Bureau] (IAB). Vous pouvez configurer vos opérations de données et schémas de profil pour accepter les données de consentement des clients générées par une CMP et appliquer les préférences de consentement de vos clients lors de l’activation de segments vers des destinations en aval. |
 
-Pour plus d’informations sur [!DNL Real-Time CDP], consultez la présentation [[!DNL Real-Time CDP] &#x200B;](../../rtcdp/overview.md).
+Pour plus d’informations sur [!DNL Real-Time CDP], consultez la présentation [[!DNL Real-Time CDP] ](../../rtcdp/overview.md).
 
 ## Sources {#sources}
 

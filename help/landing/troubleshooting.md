@@ -9,10 +9,10 @@ type: Documentation
 role: Developer
 feature: API, Audiences, Data Ingestion, Datasets, Destinations, Privacy, Queries, Schemas, Sandboxes, Sources
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1817'
-ht-degree: 93%
+ht-degree: 92%
 
 ---
 
@@ -48,7 +48,7 @@ Les jetons d’accès doivent être renseignés dans l’en-tête d’autorisati
 
 ## Comment utiliser les paramètres de requête ?  {#how-do-i-user-query-parameters}
 
-Certains points d’entrée de l’API [!DNL Experience Platform] acceptent des paramètres de requête visant à localiser des informations spécifiques et filtrer les résultats renvoyés dans la réponse. Les paramètres de requête sont ajoutés aux chemins de requête avec un point d’interrogation (`?`), suivi d’un ou plusieurs paramètres de requête sous le format `paramName=paramValue`. Lorsque vous combinez plusieurs paramètres dans un seul appel, vous devez utiliser une esperluette (`&`) pour les séparer. L’exemple suivant illustre la manière dont une requête qui utilise plusieurs paramètres de requête est représentée dans la documentation.
+Certains points d’entrée de l’API [!DNL Experience Platform] acceptent des paramètres de requête visant à localiser des informations spécifiques et filtrer les résultats renvoyés dans la réponse. Les paramètres de requête sont ajoutés aux chemins de requête avec un point d’interrogation (`?`), suivi d’un ou plusieurs paramètres de requête au format `paramName=paramValue`. Lorsque vous combinez plusieurs paramètres dans un seul appel, vous devez utiliser une esperluette (`&`) pour les séparer. L’exemple suivant illustre la manière dont une requête qui utilise plusieurs paramètres de requête est représentée dans la documentation.
 
 Voici quelques exemples de paramètres de requête fréquemment utilisés :
 
@@ -66,18 +66,22 @@ De nombreuses opérations PATCH dans les API [!DNL Experience Platform] utilisen
 
 ## Puis-je utiliser Postman pour appeler les API [!DNL Experience Platform] ? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postman](https://www.postman.com/) est un outil utile pour visualiser les appels vers les API RESTful. Le Guide de prise en main de l’API Experience Platform [&#128279;](api-guide.md) contient une vidéo et des instructions pour l’importation de collections Postman. En outre, une liste des collections Postman pour chaque service est fournie.
+[Postman](https://www.postman.com/) est un outil utile pour visualiser les appels vers les API RESTful. Le Guide de prise en main de l’API Experience Platform [](api-guide.md) contient une vidéo et des instructions pour l’importation de collections Postman. En outre, une liste des collections Postman pour chaque service est fournie.
 
-## Quelle est la configuration requise pour [!DNL Experience Platform] ? {#what-are-the-system-requirements-for-platform}
+## Quelle est la configuration requise pour [!DNL Experience Platform] ? {#what-are-the-system-requirements-for-platform}
 
 Selon que vous utilisez l’interface utilisateur ou l’API, la configuration requise suivante s’applique :
 
 **Pour les opérations basées sur l’interface utilisateur :**
+
 - Un navigateur web standard et moderne. Bien que la dernière version de [!DNL Chrome] soit recommandée, les versions majeures actuelles et antérieures de [!DNL Firefox], [!DNL Internet Explorer], et Safari sont également prises en charge.
+
    - Dès qu’une nouvelle version majeure est disponible, [!DNL Experience Platform] commence à prendre en charge la version la plus récente, tandis que la prise en charge de la troisième version est abandonnée.
+
 - Les cookies et JavaScript doivent être activés pour tous les navigateurs.
 
 **Pour les interactions entre les développeurs et l’API :**
+
 - Un environnement de développement à faire évoluer pour les intégrations de REST, de flux continu et de webhook.
 
 ## Erreurs et résolution des problèmes {#errors-and-troubleshooting}
@@ -201,6 +205,7 @@ Ce message d’erreur s’affiche lorsqu’une requête POST, PUT ou PATCH compo
 ```
 
 Ce message d’erreur s’affiche dans l’un des deux cas ci-dessous :
+
 - Lorsqu’un en-tête d’organisation incorrect ou malformé (`x-gw-ims-org-id`) est transmis dans une requête API. Assurez-vous que l’identifiant correct de votre organisation est inclus avant de réessayer.
 - Lorsque votre compte (tel que représenté par les informations d’authentification fournies) n’est pas associé à un profil de produit pour Experience Platform. Suivez les étapes de la [génération des informations d’accès](./api-authentication.md#authentication-for-each-session) dans le tutoriel sur l’authentification de l’API Experience Platform pour ajouter Experience Platform à votre compte et mettre à jour vos informations d’authentification en conséquence.
 
@@ -213,13 +218,13 @@ Voici une liste de guides de dépannage et de documentation de référence sur l
 | Contrôle d’accès | [API Access Control](https://www.adobe.io/experience-platform-apis/references/access-control/) | [Guide de dépannage du contrôle d’accès](../access-control/troubleshooting-guide.md) |
 | Adobe Experience Platform Data Ingestion | [[!DNL Batch Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) | [Guide de dépannage de l’ingestion par lots](../ingestion/batch-ingestion/troubleshooting.md) |
 | Adobe Experience Platform Data Ingestion | [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) | [Guide de dépannage de l’ingestion en flux continu](../ingestion/streaming-ingestion/troubleshooting.md) |
-| Espace de travail de science des données d’Adobe Experience Platform | [[!DNL Sensei Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) | Guide de dépannage du [[!DNL Data Science Workspace] &#x200B;](../data-science-workspace/troubleshooting-guide.md) |
+| Espace de travail de science des données d’Adobe Experience Platform | [[!DNL Sensei Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) | Guide de dépannage du [[!DNL Data Science Workspace] ](../data-science-workspace/troubleshooting-guide.md) |
 | Gouvernance des données d’Adobe Experience Platform | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) |  |
-| Service d’identités d’Adobe Experience Platform | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | Guide de dépannage du [[!DNL Identity Service] &#x200B;](../identity-service/troubleshooting-guide.md) |
-| Adobe Experience Platform Query Service | [[!DNL Query Service API]](https://www.adobe.io/experience-platform-apis/references/query-service/) | Guide de dépannage du [[!DNL Query Service] &#x200B;](../query-service/troubleshooting-guide.md) |
+| Service d’identités d’Adobe Experience Platform | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | Guide de dépannage du [[!DNL Identity Service] ](../identity-service/troubleshooting-guide.md) |
+| Adobe Experience Platform Query Service | [[!DNL Query Service API]](https://www.adobe.io/experience-platform-apis/references/query-service/) | Guide de dépannage du [[!DNL Query Service] ](../query-service/troubleshooting-guide.md) |
 | Adobe Experience Platform Segmentation | [[!DNL Segmentation API]](https://www.adobe.io/experience-platform-apis/references/segmentation/) |
 | [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) |  |
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) | [[!DNL XDM System] Questions fréquentes et guide de dépannage](../xdm/troubleshooting-guide.md) |
 | [!DNL Flow Service] ([!DNL Sources] et [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/) |  |
-| [!DNL Real-Time Customer Profile] | [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) | Guide de dépannage du [[!DNL Profile] &#x200B;](../profile/troubleshooting.md) |
+| [!DNL Real-Time Customer Profile] | [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) | Guide de dépannage du [[!DNL Profile] ](../profile/troubleshooting.md) |
 | Sandbox | [API Sandbox](https://www.adobe.io/experience-platform-apis/references/sandbox) | [Guide de dépannage des sandbox](../sandboxes/troubleshooting-guide.md) |

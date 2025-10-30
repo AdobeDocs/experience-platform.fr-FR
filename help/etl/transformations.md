@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Exemple de transformations ETL
 description: Cet article présente les exemples de transformations qu’un développeur ETL (extraction, transformation et chargement) peut rencontrer.
 exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 88%
+source-wordcount: '452'
+ht-degree: 84%
 
 ---
 
@@ -19,7 +19,7 @@ Cet article présente les exemples de transformations qu’un développeur ETL (
 
 ### Exemples de fichiers
 
-Des exemples de fichiers CSV et JSON sont disponibles à partir du référentiel public de référence ETL [!DNL GitHub] géré par Adobe :
+Les exemples de fichiers CSV et JSON sont disponibles à partir du référentiel de [!DNL GitHub] de référence ETL public géré par Adobe :
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
@@ -42,6 +42,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 ### Mappage
 
 Les exigences de mappage des données CRM sont décrites dans le tableau suivant et incluent les transformations suivantes :
+
 - Colonnes d’identité en propriétés `identityMap`
 - Date de naissance (DOB) en année et mois/jour
 - Chaînes en entiers doubles ou courts.
@@ -54,10 +55,10 @@ Les exigences de mappage des données CRM sont décrites dans le tableau suivant
 | GENDER | person.gender | Transforme le genre en valeur d’énumération person.gender correspondante |
 | DOB | person.birthDayAndMonth: &quot;MM-DD&quot;<br/>person.birthDate: &quot;YYYY-MM-DD&quot;<br/>person.birthYear: YYYY | Transforme birthDayAndMonth en chaîne<br/>Transforme birthDate en chaîne<br/>Transforme birthYear en tant que valeur abrégée |
 | EMAIL | personalEmail.address | Copie en tant que chaîne |
-| CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | Copie en tant que chaîne dans le tableau CRMID dans identityMap et définit Primary comme false |
-| ECID | identityMap.ECID[{&quot;id&quot;:x, primary: false}] | Copie en tant que chaîne à la première entrée dans le tableau ECID dans identityMap et définit Primary comme false |
-| LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | Copie en tant que chaîne dans le tableau LOYALTYID dans identityMap et définit Primary comme true |
-| ECID2 | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | Copie en tant que chaîne à la seconde entrée dans le tableau ECID dans identityMap et définit Primary sur false |
+| CRMID | identityMap.CRMID[{« id »:x, primary:false}] | Copie en tant que chaîne dans le tableau CRMID dans identityMap et définit Primary comme false |
+| ECID | identityMap.ECID[{« id »:x, principal : false}] | Copie en tant que chaîne à la première entrée dans le tableau ECID dans identityMap et définit Primary comme false |
+| LOYALTYID | identityMap.LOYALTYID[{« id »:x, principal:true}] | Copie en tant que chaîne dans le tableau LOYALTYID dans identityMap et définit Primary comme true |
+| ECID2 | identityMap.ECID[{« id »:x, principal:false}] | Copie en tant que chaîne à la seconde entrée dans le tableau ECID dans identityMap et définit Primary sur false |
 | PHONE | homePhone.number | Copie en tant que chaîne |
 | STREET | homeAddress.street1 | Copie en tant que chaîne |
 | CITY | homeAddress.city | Copie en tant que chaîne |
@@ -176,7 +177,7 @@ La hiérarchie d’un cadre de données (tel qu’un fichier Parquet) doit corre
 
 ### Exemple de cadre de données
 
-La structure de l’exemple de cadre de données suivant a été mappée à un schéma qui implémente la classe [!DNL XDM Individual Profile] et contient les champs les plus courants associés aux schémas de ce type.
+La structure de l’exemple de Dataframe suivant a été mappée à un schéma qui implémente la classe [!DNL XDM Individual Profile] et contient les champs les plus courants associés aux schémas de ce type.
 
 ```python
 [
@@ -284,9 +285,9 @@ Les exigences de mappage pour le tableau des identités sont décrites dans le t
 
 | Champ d’identité | Champ identityMap | Type de données |
 | -------------- | ----------------- | --------- |
-| identities[0].id | identityMap[Email][{"id"}] | Copie en tant que chaîne |
-| identities[1].id | identityMap[CRMID][{"id"}] | Copie en tant que chaîne |
-| identities[2].id | identityMap[LOYALTYID][{"id"}] | Copie en tant que chaîne |
+| `identities[0].id` | `identityMap[Email][{"id"}]` | Copie en tant que chaîne |
+| `identities[1].id` | `identityMap[CRMID][{"id"}]` | Copie en tant que chaîne |
+| `identities[2].id` | `identityMap[LOYALTYID][{"id"}]` | Copie en tant que chaîne |
 
 ### XDM de sortie
 

@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: notes de mise à jour ;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '972'
 ht-degree: 63%
@@ -18,9 +18,11 @@ ht-degree: 63%
 **Date de publication : jeudi 8 avril 2020**
 
 Nouvelles fonctionnalités d’Adobe Experience Platform :
+
 * [[!DNL Intelligent Services]](#intelligent)
 
 Mises à jour des fonctionnalités existantes :
+
 * [[!DNL Experience Data Model (XDM)]](#xdm)
 * [Gouvernance des données](#governance)
 * [[!DNL Destinations]](#destinations)
@@ -42,13 +44,13 @@ Mises à jour des fonctionnalités existantes :
 
 * Aucun problème connu pour le moment.
 
-Pour plus d’informations sur les [!DNL Intelligent Services] et ce qu’ils ont à offrir, reportez-vous à la [&#x200B; présentation des services intelligents &#x200B;](../../intelligent-services/home.md).
+Pour plus d’informations sur les [!DNL Intelligent Services] et ce qu’ils ont à offrir, reportez-vous à la [ présentation des services intelligents ](../../intelligent-services/home.md).
 
 ## Système d’[!DNL Experience Data Model] (XDM) {#xdm}
 
 La normalisation et l’interopérabilité sont des concepts clés pour [!DNL Experience Platform]. Le modèle de données [!DNL Experience Data Model] d’expérience (XDM), piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 
-XDM est une spécification documentée publiquement conçue pour améliorer la puissance des expériences digitales. Elle fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+XDM est une spécification documentée publiquement conçue pour améliorer la puissance des expériences digitales. Elle fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types d’audiences par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
 **Nouvelles fonctionnalités**
 
@@ -118,7 +120,7 @@ Problèmes connus
 
 * Aucun
 
-Pour plus d’informations sur [!DNL Privacy Service], commencez par lire la présentation de Privacy Service [&#128279;](../../privacy-service/home.md).
+Pour plus d’informations sur [!DNL Privacy Service], commencez par lire la présentation de Privacy Service [](../../privacy-service/home.md).
 
 ## Sources {#sources}
 

@@ -3,18 +3,18 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;streaming;i
 solution: Experience Platform
 title: Validation de l’ingestion en flux continu
 type: Tutorial
-description: 'L’ingestion par flux vous permet de charger vos données dans Adobe Experience Platform à l’aide de points d’entrée en flux continu en temps réel. Les API d’ingestion par flux prennent en charge deux modes de validation : synchrone et asynchrone.'
+description: 'L’ingestion par flux vous permet de charger vos données dans Adobe Experience Platform à l’aide de points d’entrée en flux continu en temps réel. Les API d’ingestion en flux continu prennent en charge deux modes de validation : synchrone et asynchrone.'
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '906'
 ht-degree: 82%
 
 ---
 
-# Validation de l’ingestion par flux
+# Validation de l’ingestion en flux continu
 
-L’ingestion par flux vous permet de charger vos données dans Adobe Experience Platform à l’aide de points d’entrée en flux continu en temps réel. Les API d’ingestion par flux prennent en charge deux modes de validation : synchrone et asynchrone.
+L’ingestion par flux vous permet de charger vos données dans Adobe Experience Platform à l’aide de points d’entrée en flux continu en temps réel. Les API d’ingestion en flux continu prennent en charge deux modes de validation : synchrone et asynchrone.
 
 ## Prise en main
 
@@ -50,6 +50,7 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 ### Couverture de validation
 
 [!DNL Streaming Validation Service] couvre la validation dans les domaines suivants :
+
 - Plage
 - Présence
 - Enum
@@ -148,7 +149,7 @@ La réponse ci-dessus répertorie le nombre de violations de schéma et en quoi 
 
 ## Validation asynchrone
 
-La validation asynchrone est une méthode de validation qui ne fournit aucun commentaire immédiat. Au lieu de cela, les données sont envoyées à un lot en échec [!DNL Data Lake] d’éviter la perte de données. Ces données en échec peuvent être récupérées par la suite pour une analyse et une relecture plus approfondies. Cette méthode est celle qui doit être utilisée en production. Sauf requête contraire, l’ingestion par flux fonctionne avec le mode de validation asynchrone.
+La validation asynchrone est une méthode de validation qui ne fournit aucun feedback immédiat. Au lieu de cela, les données sont envoyées à un lot en échec [!DNL Data Lake] d’éviter la perte de données. Ces données en échec peuvent être récupérées par la suite pour une analyse et une relecture plus approfondies. Cette méthode est celle qui doit être utilisée en production. Sauf demande contraire, l’ingestion en flux continu fonctionne avec le mode de validation asynchrone.
 
 **Format d’API**
 
@@ -205,7 +206,7 @@ Cette section contient des informations relatives à la signification des diffé
 | ----------- | ------------- |
 | 200 | Réussite. Dans le cas d’une validation synchrone, cela signifie que la réponse a passé les contrôles de validation. Dans le cas d’une validation asynchrone, cela signifie que la réponse a simplement bien reçu le message. Les utilisateurs peuvent identifier l’état du message final en observant le jeu de données. |
 | 400 | Erreur. Une erreur s’est produite avec votre demande. Un message d’erreur contenant plus de détails est reçu des services de validation par flux. |
-| 401 | Erreur. Votre requête n’est pas autorisée, il vous faudra effectuer la requête avec un jeton porteur. Pour plus d’informations sur la manière dont demander l’accès, consultez ce [tutoriel](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) ou cet [article de blog](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
+| 401 | Erreur. Votre requête n’est pas autorisée, il vous faudra effectuer la requête avec un jeton porteur. Pour plus d’informations sur la manière de demander l’accès, consultez ce [tutoriel](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) ou cet [article de blog](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
 | 500 | Erreur. Une erreur système interne s’est produite. |
 | 501 | Erreur. Cela signifie que la validation synchrone n’est **pas** prise en charge pour cet emplacement. |
 | 503 | Erreur. Le service est actuellement indisponible. Nous conseillons aux clients de réessayer au moins trois fois en utilisant une stratégie de backoff exponentiel. |

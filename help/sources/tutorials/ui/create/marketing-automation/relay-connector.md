@@ -2,9 +2,9 @@
 title: Connecter le relais à Experience Platform dans l’interface utilisateur
 description: Découvrez comment créer une connexion source personnalisée du connecteur relais à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: f80855f5-0769-4253-b737-28c46e4dea6e
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '544'
 ht-degree: 2%
 
 ---
@@ -25,19 +25,19 @@ Lisez ce guide pour savoir comment utiliser le [!DNL Relay Connector] dans l’e
 
 ## Connecter votre source de [!DNL Relay Connector]
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de l’écran ou utiliser l’option de recherche pour trouver une source spécifique.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalog] affiche diverses sources avec lesquelles vous pouvez créer un compte. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de l’écran ou utiliser l’option de recherche pour trouver une source spécifique.
 
-Sous la catégorie *[!UICONTROL Automatisation marketing]*, sélectionnez la carte source [!DNL Relay Connector] et sélectionnez **[!UICONTROL Ajouter des données]**.
+Sous la catégorie *[!UICONTROL Marketing automation]* , sélectionnez la carte source [!DNL Relay Connector] et sélectionnez **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
->Les sources du catalogue de sources affichent l’option **[!UICONTROL Configurer]** lorsqu’il n’existe aucun compte authentifié. Une fois qu’un compte est authentifié, cette option devient **[!UICONTROL Ajouter des données]**.
+>Les sources du catalogue de sources affichent l’option **[!UICONTROL Set up]** lorsqu’il n’existe aucun compte authentifié. Une fois qu’un compte est authentifié, cette option devient **[!UICONTROL Add data]**.
 
 ![Page de catalogue de l’espace de travail des sources.](../../../../images/tutorials/create/relay-connector/relay-source.jpg)
 
 ### Sélectionner les données
 
-L&#39;interface **[!UICONTROL Connect Relay Connector source]** s&#39;affiche. Utilisez l’interface *[!UICONTROL Sélectionner des données]* pour parcourir ou spécifier le schéma de données source. Vous pouvez également charger un exemple de fichier JSON pour définir le schéma source.
+L’interface **[!UICONTROL Connect Relay Connector source]** s’affiche. Utilisez l’interface *[!UICONTROL Select data]* pour parcourir ou spécifier le schéma de données source. Vous pouvez également charger un exemple de fichier JSON pour définir le schéma source.
 
 >[!NOTE]
 >
@@ -45,15 +45,15 @@ L&#39;interface **[!UICONTROL Connect Relay Connector source]** s&#39;affiche. U
 
 ![Interface de sélection des données](../../../../images/tutorials/create/relay-connector/upload-data.jpg)
 
-Une fois les données chargées, vous pouvez utiliser la section [!UICONTROL Prévisualiser les données d’exemple] pour prévisualiser les données.
+Une fois les données chargées, vous pouvez utiliser la section [!UICONTROL Preview sample data] pour prévisualiser les données.
 
 ![Les données chargées.](../../../../images/tutorials/create/relay-connector/uploaded-data.jpg)
 
 ### Détails du flux de données
 
-Utilisez ensuite l’interface *[!UICONTROL Détails du flux de données]* pour fournir un **nom** et une **description facultative** pour votre flux de données. En outre, sélectionnez le **[!UICONTROL jeu de données cible]** que vous souhaitez utiliser. Vous pouvez créer un jeu de données ou utiliser un jeu de données existant.
+Ensuite, utilisez l’interface *[!UICONTROL Dataflow details]* pour fournir un **nom** et une **description facultative** pour votre flux de données. Sélectionnez également le **[!UICONTROL Target dataset]** que vous souhaitez utiliser. Vous pouvez créer un jeu de données ou utiliser un jeu de données existant.
 
-![Interface des détails du flux de données. &#x200B;](../../../../images/tutorials/create/relay-connector/dataflow.jpg)
+![Interface des détails du flux de données.](../../../../images/tutorials/create/relay-connector/dataflow.jpg)
 
 ### Mappage
 
@@ -77,9 +77,9 @@ Une fois que vous avez créé le flux de données, vous trouverez l’*URL du po
 
 ![Propriétés du flux de données](../../../../images/tutorials/create/relay-connector/streaming-endpoint.jpg)
 
-Utilisez ces valeurs pour configurer le webhook dans la **console de relais**. Pour obtenir des instructions détaillées sur la configuration de la notification push, consultez la documentation du relais : [&#x200B; Configuration de l’API push &#x200B;](https://docs.relaynetwork.com/docs/configuring-the-push-api).
+Utilisez ces valeurs pour configurer le webhook dans la **console de relais**. Pour obtenir des instructions détaillées sur la configuration de la notification push, consultez la documentation du relais : [ Configuration de l’API push ](https://docs.relaynetwork.com/docs/configuring-the-push-api).
 
 ## Ressources supplémentaires
 
-* [Créer une spécification de connexion à l’aide de l’API Flow Service](https://experienceleague.adobe.com/fr/docs/experience-platform/sources/sdk/streaming-sdk/create)
-* [Connexion à votre source à l’aide de l’interface utilisateur](https://experienceleague.adobe.com/fr/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)
+* [Créer une spécification de connexion à l’aide de l’API Flow Service](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/create)
+* [Connexion à votre source à l’aide de l’interface utilisateur](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)

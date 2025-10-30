@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform pour les entreprises multi-régions et multi-marques
 description: Découvrez comment doter vos équipes d’implémentation des outils et des informations nécessaires pour naviguer efficacement parmi les subtilités de Adobe Experience Platform.
-source-git-commit: e930b070f18e220cc1fa97bb0183520d495f33be
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '5325'
 ht-degree: 1%
@@ -28,14 +28,17 @@ Si vous exploitez une entreprise multi-marque et multi-région, vous avez probab
 Lors de l’exploration des options de déploiement, vous devez connaître et prendre en compte les personnes qui interagiront avec Experience Platform et les applications basées sur des plateformes. Concevoir leur expérience en fonction de leurs rôles et intérêts garantit une implémentation réussie. Voici trois personnages clés à prendre en compte lorsque vous explorez les options :
 
 **Marie, la spécialiste marketing :**
+
 - Objectif : acquisition de clients et personnalisation de l’expérience à grande échelle.
 - Objectifs : Création de profils complets, amélioration de l’efficacité des médias.
 
 **Ted, le technologue**
+
 - Objectif : Gestion des données organisationnelles.
 - Objectifs : assurer la conformité, gérer les silos de données, assurer la maintenance de divers secteurs d’activité.
 
 **Dan, l’architecte de données**
+
 - Focus : Précision et qualité des données.
 - Objectifs : garantir la confidentialité et la confiance des données, concevoir des schémas et des modèles de données, gérer les sources de données.
 
@@ -83,7 +86,7 @@ Si vous le souhaitez, envisagez d’ajouter des contrôles d’accès granulaire
 
 **Cycle de vie du développement avec les sandbox de développement**
 
-Un sandbox de développement se comporte de la même manière qu’un sandbox de production pour tous les aspects fonctionnels. Elle est différente en ce sens qu’elle s’accompagne de mécanismes de sécurisation contractuels pour vous maintenir dans les limites de votre licence. Il est conçu exclusivement pour le développement et le test avec des profils hors production, prenant en charge jusqu’à 10 % de votre engagement de profil sous licence (mesuré de manière cumulée sur tous les sandbox de développement autorisés). Pour plus d’informations et pour connaître les mécanismes de sécurisation, consultez la [documentation de présentation des sandbox](https://experienceleague.adobe.com/fr/docs/experience-platform/sandbox/home) et la [page de descriptions des produits](https://helpx.adobe.com/fr/legal/product-descriptions.html) pour obtenir plus d’informations sur les droits.
+Un sandbox de développement se comporte de la même manière qu’un sandbox de production pour tous les aspects fonctionnels. C&#39;est différent en ce sens qu&#39;il y aura des mécanismes de sécurisation contractuels pour vous maintenir dans les limites de votre licence. Il est conçu exclusivement pour le développement et le test avec des profils hors production, prenant en charge jusqu’à 10 % de votre engagement de profil sous licence (mesuré de manière cumulée sur tous les sandbox de développement autorisés). Pour plus d’informations et pour connaître les mécanismes de sécurisation, consultez la [documentation de présentation des sandbox](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home) et la [page de descriptions des produits](https://helpx.adobe.com/fr/legal/product-descriptions.html) pour obtenir plus d’informations sur les droits.
 
 Vous pouvez disposer de plusieurs sandbox de développement (jusqu’à 4 dans cet exemple d’entreprise, car nous utilisons un sandbox de production) pour le cycle de vie du développement et des tests.
 
@@ -99,7 +102,7 @@ Grâce à la fonction d’outil Sandbox, vous pouvez sélectionner différents o
 
 Vous avez la possibilité d’utiliser les API Experience Platform pour automatiser les déploiements de sandbox et les tâches de configuration. Les API permettent un contrôle programmable pour les tâches répétitives telles que l’exportation, l’importation ou la modification des configurations de sandbox, offrant ainsi une certaine flexibilité si vous préférez les workflows automatisés.
 
-Pour plus d’informations sur l’outil sandbox, consultez la [documentation sur l’outil sandbox](https://experienceleague.adobe.com/fr/docs/experience-platform/sandbox/ui/sandbox-tooling).
+Pour plus d’informations sur l’outil sandbox, consultez la [documentation sur l’outil sandbox](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling).
 
 | ![CDP-Créer un package](./images/whitepaper/create-package.png) | ![Packages de liste CDP](./images/whitepaper/list-packages.png) |
 | --- | --- |
@@ -226,11 +229,11 @@ En outre, vous pouvez utiliser la correspondance de segments Experience Platform
 
 Ce service de partage de segments permet à deux utilisateurs ou plus d’échanger des données de segment de manière sécurisée, contrôlée et respectueuse de la vie privée.
 
-Pour plus d’informations sur la fonction Correspondance de segments, consultez la [documentation sur la correspondance de segments](https://experienceleague.adobe.com/fr/docs/experience-platform/segmentation/ui/segment-match/overview).
+Pour plus d’informations sur la fonction Correspondance de segments, consultez la [documentation sur la correspondance de segments](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview).
 
 ### 3. Combinaison d’approches pour les opérations mondiales, régionales et spécifiques à la marque
 
-De nombreuses entreprises multi-marques opèrent à l&#39;échelle mondiale et, à ce titre, recherchent souvent un mélange d&#39;approches de gestion des données à la fois unifiées et isolées. Dans ce scénario, ils cherchent à séparer les données pour plusieurs régions ou pays. Les marques au sein de l’organisation peuvent s’attendre à opérer exclusivement sur les données associées à leur marque spécifique, le tout dans les mêmes limites de données d’une zone géographique ou d’un pays. Cette approche permet une gestion centralisée des données au niveau régional ou national tout en facilitant le marketing et les opérations de données spécifiques à la marque. Il s’agit d’un modèle qui combine les avantages de la gestion unifiée des données avec la nécessité d’une isolation spécifique à la marque et à la région.
+De nombreuses entreprises multi-marques opèrent à l&#39;échelle mondiale et, à ce titre, recherchent souvent un mélange d&#39;approches de gestion des données à la fois unifiées et isolées. Dans ce scénario, ils cherchent à séparer les données pour plusieurs régions ou pays. Les marques au sein de l’organisation peuvent s’attendre à opérer exclusivement sur les données associées à leur marque spécifique, le tout dans les mêmes limites de données d’une zone géographique ou d’un pays. Cette approche permet une gestion centralisée des données au niveau régional ou national tout en facilitant le marketing et les opérations de données spécifiques à la marque. Il s’agit d’un modèle qui combine les avantages d’une gestion unifiée des données avec la nécessité d’une isolation propre à la marque et à la région.
 
 Reconnaissant ces différentes exigences, Experience Platform peut être configuré pour vous fournir une solution de gestion des données hautement adaptable et flexible, afin que les entreprises multi-marques et multi-régions puissent représenter efficacement votre entreprise au sein de la plateforme. Que l’objectif soit d’optimiser les données clients collectives, de maintenir une isolation stricte des données ou d’atteindre un équilibre entre les deux, Experience Platform est équipé pour répondre aux divers besoins de votre entreprise.
 
@@ -285,23 +288,23 @@ Schéma de profil individuel XDM :
 ```
 \- PII
 \- Germany
-	\- name --> Label: "Germany"
-	\- email --> Label: "Germany"
-	\- birthdate --> Label: "Germany"
+    \- name --> Label: "Germany"
+    \- email --> Label: "Germany"
+    \- birthdate --> Label: "Germany"
 
 \- France
-	\- name --> Label: "France"
-	\- email --> Label: "France"
-	\- birthdate --> Label: "France"
+    \- name --> Label: "France"
+    \- email --> Label: "France"
+    \- birthdate --> Label: "France"
 
 \- Netherland
-	\- name --> Label: "Netherland", "Germany"
-	\- email --> Label: "Netherland", "Germany"
-	\- birthdate --> Label: "Netherland", "Germany"
+    \- name --> Label: "Netherland", "Germany"
+    \- email --> Label: "Netherland", "Germany"
+    \- birthdate --> Label: "Netherland", "Germany"
 
 \- Loyalty
-	\- member
-	\- registrationDate
+    \- member
+    \- registrationDate
 ```
 
 ###### Audiences : utilisez le contrôle d’accès basé sur les attributs : contrôle d’accès au niveau de l’objet pour contrôler l’accès aux audiences spécifiques à la marque ou au pays
@@ -358,7 +361,7 @@ Dans certains scénarios, vous pouvez choisir de déployer des applications Expe
 
 ### Qu’est-ce qu’un identifiant d’organisation ?
 
-- Un identifiant d’organisation correspond à l’implémentation de Federated ID et du protocole OAuth 2.0 d’Adobe.
+- Un ID d’organisation correspond à l’implémentation Adobe de Federated ID et du protocole OAuth 2.0.
 
 - Un identifiant d’organisation est un ensemble de toutes les applications, utilisateurs et autorisations auxquels une organisation a droit en vertu des conditions contractuelles d’Adobe.
 
@@ -374,7 +377,7 @@ Dans certains scénarios, vous pouvez choisir de déployer des applications Expe
 
 | Avantages | Considérations |
 | -------- | -------------- |
-| Vous trouverez ci-dessous une liste des avantages liés à l’utilisation de plusieurs ID d’organisation : <ul><li>Flexibilité pour stocker des données dans des régions mondiales particulières.</li><li>&#x200B;Connexions utilisateur distinctes par instance, c’est-à-dire que Wholefoods ne peut pas se connecter à Audible&#x200B;</li><li>Des points d’entrée d’API dédiés qui permettent à chaque marché/unité opérationnelle de créer des connexions personnalisées selon les besoins dans son propre environnement&#x200B;</li><li>Chaque unité opérationnelle possède ses propres clés gérées par le client&#x200B;.</li><li>Les demandes RGPD peuvent être effectuées par unité opérationnelle&#x200B;.</li><li>Stockage et calcul totalement isolés entre les unités commerciales&#x200B;.</li><li>Réduit certaines barrières/limites de performances au niveau de l’organisation&#x200B;.</li><li>Plus de flexibilité avec la configuration et le mélange des SKU entre les unités commerciales. Par exemple, une organisation peut avoir un SKU de Adobe Journey Optimizer différent d’une autre organisation.</li></ul> | Voici quelques éléments à prendre en compte lorsque vous disposez de plusieurs ID d’organisation : <ul><li>Plusieurs ID d’organisation à gérer, au lieu d’un seul&#x200B;</li><li>Plusieurs instances/environnements distincts à gérer (intégrations, chargements de données, etc.).</li><li>&#x200B;Les ECID seront uniques par organisation, ce qui rend difficile la mise en correspondance des données entre les unités commerciales&#x200B;.</li><li>Devrait migrer/réimplémenter Analytics et Target par organisation - perdrait le cumul global (s’il est actuellement utilisé). &#x200B;</li><li>Une orchestration plus importante est nécessaire pour effectuer les demandes RGPD entre les unités commerciales&#x200B;.</li><li>Certaines intégrations d’applications basées sur Experience Platform stockent des métadonnées au niveau de l’organisation. Tout n’est pas « en sandbox » par les sandbox&#x200B;</li><li>L’ID d’organisation est épinglé sur une région. L’emplacement d’hébergement d’Adobe AWS se trouve actuellement aux États-Unis uniquement. Adobe ne prend pas en charge la migration d’une région d’hébergement vers une autre&#x200B;</li><li>Edge ne prend pas en charge le sandbox (pour le transfert d’événement).</li></ul> |
+| Vous trouverez ci-dessous une liste des avantages liés à l’utilisation de plusieurs ID d’organisation : <ul><li>Flexibilité pour stocker des données dans des régions mondiales particulières.</li><li>&#x200B;Connexions utilisateur distinctes par instance : en d’autres termes, Wholefoods ne peut pas se connecter à Audible&#x200B;</li><li>Des points d’entrée d’API dédiés qui permettent à chaque marché/unité opérationnelle de créer des connexions personnalisées selon les besoins dans son propre environnement&#x200B;</li><li>Chaque unité opérationnelle possède ses propres clés gérées par le client&#x200B;.</li><li>Les demandes RGPD peuvent être effectuées par unité opérationnelle&#x200B;.</li><li>Stockage et calcul totalement isolés entre les unités commerciales&#x200B;.</li><li>Réduit certaines barrières/limites de performances au niveau de l’organisation&#x200B;.</li><li>Plus de flexibilité avec la configuration et le mélange des SKU entre les unités commerciales. Par exemple, une organisation peut avoir un SKU de Adobe Journey Optimizer différent d’une autre organisation.</li></ul> | Voici quelques éléments à prendre en compte lorsque vous disposez de plusieurs ID d’organisation : <ul><li>Plusieurs ID d’organisation à gérer, au lieu d’un seul&#x200B;</li><li>Plusieurs instances/environnements distincts à gérer (intégrations, chargements de données, etc.).</li><li>&#x200B;Les ECID seront uniques par organisation, ce qui rend difficile la mise en correspondance des données entre les unités commerciales&#x200B;.</li><li>Devrait migrer/réimplémenter Analytics et Target par organisation - perdrait le cumul global (s’il est actuellement utilisé). &#x200B;</li><li>Une orchestration plus importante est nécessaire pour effectuer les demandes RGPD entre les unités commerciales&#x200B;.</li><li>Certaines intégrations d’applications basées sur Experience Platform stockent des métadonnées au niveau de l’organisation. Tout n’est pas « en sandbox » par les sandbox&#x200B;</li><li>L’ID d’organisation est épinglé sur une région. L’emplacement d’hébergement d’Adobe AWS se trouve actuellement aux États-Unis uniquement. Adobe ne prend pas en charge la migration d’une région d’hébergement vers une autre&#x200B;</li><li>Edge ne prend pas en charge le sandbox (pour le transfert d’événement).</li></ul> |
 
 **ID d’organisation unique : avantages et considérations**
 
@@ -382,7 +385,7 @@ Dans certains scénarios, vous pouvez choisir de déployer des applications Expe
 
 | Avantages | Considérations |
 | -------- | -------------- |
-| Vous trouverez ci-dessous une liste des avantages liés à l’utilisation d’un identifiant d’organisation unique : <ul><li>Fournissez des sandbox individuels pour créer une séparation logique entre les unités opérationnelles au sein d’une région déployée</li><li>ID d’organisation unique à gérer par le service informatique pour les utilisateurs, le provisionnement, etc.</li><li>Aucune migration des balises Adobe, de Target, d’Analytics, etc., si vous conservez le même ID d’organisation.</li><li>Aucune réinitialisation n’est requise pour les ECID existants. Cela empêche l’altération des données Adobe Analytics.</li><li>Connexion unique pour les ressources marketing globales.</li><li>Les droits d’accès des utilisateurs et utilisatrices permettent de contrôler qui a accès à quels sandbox, avec des niveaux appropriés de contrôle d’accès en fonction du rôle.</li><li>Tirez parti des instances Global Analytics et Target et des données des suites de rapports.</li></ul> | Voici quelques éléments à prendre en compte lorsque vous disposez d’un identifiant d’organisation unique : <ul><li>Les données seront stockées dans une seule région.</li><li>Besoin potentiel de consolider les données en un seul identifiant d’organisation.</li><li>Toutes les unités opérationnelles partageraient la même infrastructure entre les applications (Experience Platform de base, Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics).</li><li>Mécanismes de sécurisation : certains sont globaux par organisation, comme la segmentation en flux continu, qui est de 1,5 000 RPS.</li><li>Les requêtes RGPD fonctionnent au niveau de l’organisation et ne peuvent pas être ciblées sur des sandbox spécifiques.</li><li>Les clés gérées par le client sont définies au niveau de l’ID d’organisation. Avec cette approche, toutes les sandbox des unités opérationnelles partageraient la même clé de chiffrement.</li><li>Il faudra clarifier les licences d’entreprise dans DX et CC pour s’assurer que les applications sont configurées avec les ID d’organisation appropriés.</ul></li> |
+| Vous trouverez ci-dessous une liste des avantages liés à l’utilisation d’un identifiant d’organisation unique : <ul><li>Fournissez des sandbox individuels pour créer une séparation logique entre les unités opérationnelles au sein d’une région déployée</li><li>ID d’organisation unique à gérer par le service informatique pour les utilisateurs, le provisionnement, etc.</li><li>Aucune migration des balises Adobe, de Target, d’Analytics, etc., si vous conservez le même ID d’organisation.</li><li>Aucune réinitialisation n’est requise pour les ECID existants. Cela empêche l’« altération » des données Adobe Analytics.</li><li>Connexion unique pour les ressources marketing globales.</li><li>Les droits d’accès des utilisateurs et utilisatrices permettent de contrôler qui a accès à quels sandbox, avec des niveaux appropriés de contrôle d’accès en fonction du rôle.</li><li>Tirez parti des instances Global Analytics et Target et des données des suites de rapports.</li></ul> | Voici quelques éléments à prendre en compte lorsque vous disposez d’un identifiant d’organisation unique : <ul><li>Les données seront stockées dans une seule région.</li><li>Besoin potentiel de consolider les données en un seul identifiant d’organisation.</li><li>Toutes les unités opérationnelles partageraient la même infrastructure entre les applications (Experience Platform de base, Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics).</li><li>Mécanismes de sécurisation : certains sont globaux par organisation, comme la segmentation en flux continu, qui est de 1,5 000 RPS.</li><li>Les requêtes RGPD fonctionnent au niveau de l’organisation et ne peuvent pas être ciblées sur des sandbox spécifiques.</li><li>Les clés gérées par le client sont définies au niveau de l’ID d’organisation. Avec cette approche, toutes les sandbox des unités opérationnelles partageraient la même clé de chiffrement.</li><li>Il faudra clarifier les licences d’entreprise dans DX et CC pour s’assurer que les applications sont configurées avec les ID d’organisation appropriés.</ul></li> |
 
 **Avantages et considérations**
 
@@ -431,7 +434,7 @@ Experience Platform fournit aux entreprises un cadre robuste pour centraliser, g
 
    - Vous devez évaluer soigneusement s’il convient de déployer **plusieurs ID d’organisation ou plusieurs sandbox** en fonction de la résidence des données, de la conformité et des besoins opérationnels.
 
-   - Les **identifiants d’organisation** offrent une isolation complète **&#x200B; tandis que les configurations multi-sandbox offrent une flexibilité opérationnelle dans un cadre de gouvernance partagé**.
+   - Les **identifiants d’organisation** offrent une isolation complète** tandis que les configurations multi-sandbox offrent une flexibilité opérationnelle dans un cadre de gouvernance partagé**.
 
 ## Réflexions finales
 

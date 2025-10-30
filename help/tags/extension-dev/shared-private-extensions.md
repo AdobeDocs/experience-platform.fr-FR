@@ -1,26 +1,26 @@
 ---
 title: Packages d’extension privés partagés
 description: Découvrez comment partager des packages d’extension privés dans Adobe Experience Platform Tags.
-source-git-commit: f45f58b4679b619708204cdb0c18174a4836ce8d
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
 
 # Packages d’extension privés partagés
 
-Adobe Experience Platform Tags prend désormais en charge les **[!UICONTROL autorisations d’utilisation]**, une puissante fonctionnalité qui vous permet de partager en toute sécurité des packages d’extension privés avec des partenaires approuvés sans les rendre disponibles publiquement dans le catalogue d’extensions. Cette fonctionnalité crée un pont sécurisé entre les organisations, ce qui vous permet d’exploiter le code d’extension personnalisé des unes et des autres tout en préservant la confidentialité et le contrôle sur vos solutions propriétaires.
+Adobe Experience Platform Tags prend désormais en charge **[!UICONTROL Usage Authorizations]**, une fonctionnalité puissante qui vous permet de partager en toute sécurité des packages d’extension privés avec des partenaires de confiance sans les rendre publics dans le catalogue d’extensions. Cette fonctionnalité crée un pont sécurisé entre les organisations, ce qui vous permet d’exploiter le code d’extension personnalisé des unes et des autres tout en préservant la confidentialité et le contrôle sur vos solutions propriétaires.
 
 ## Partage de packages d’extension avec d’autres organisations
 
 >[!NOTE]
 >
->Les packages d’extension doivent avoir une version privée ou publique pour être partagés via [!UICONTROL Autorisations d’utilisation]. Les versions marquées comme Disponibilité pour le développement ne sont pas éligibles au partage et n’apparaîtront pas dans la liste déroulante d’autorisation. Cela s’applique même si une version antérieure (par exemple, 1.0.0) a déjà été partagée. Les versions plus récentes (par exemple, 1.0.1) doivent être rendues au moins privées avant de pouvoir être autorisées ou installées par les organisations destinataires.
+>Les packages d’extension doivent avoir une version privée ou publique pour être partagés via [!UICONTROL Usage Authorizations]. Les versions marquées comme Disponibilité pour le développement ne sont pas éligibles au partage et n’apparaîtront pas dans la liste déroulante d’autorisation. Cela s’applique même si une version antérieure (par exemple, 1.0.0) a déjà été partagée. Les versions plus récentes (par exemple, 1.0.1) doivent être rendues au moins privées avant de pouvoir être autorisées ou installées par les organisations destinataires.
 >
 >Toutes les instructions concernant le partage de packages d’extension privés s’appliquent également si vous choisissez par la suite de rendre ces packages publics. Les mêmes considérations concernant la visibilité, le contrôle de version, la sécurité, la compatibilité, la prise en charge et la documentation restent pertinentes, quel que soit le statut de disponibilité du package.
 
-Les packages d’extension publics et privés peuvent être partagés via les [!UICONTROL autorisations d’utilisation], bien que les extensions dans Disponibilité du développement ne puissent pas être associées à des autorisations.
+Les packages d’extension publics et privés peuvent être partagés via [!UICONTROL Usage Authorizations], bien que les extensions dans Disponibilité du développement ne puissent pas être associées à des autorisations.
 
 Les entreprises développent souvent des extensions spécialisées adaptées à leurs besoins professionnels uniques. Ces extensions peuvent contenir une logique propriétaire, des intégrations personnalisées ou des configurations sensibles qui ne doivent pas être rendues publiques. Les autorisations d’utilisation résolvent ce défi en activant :
 
@@ -38,40 +38,40 @@ Lorsqu’une version privée est partagée, l’organisation destinataire a acc�
 
 ## Créer une autorisation d’utilisation de package d’extension
 
-Pour partager une extension, accédez à l’interface utilisateur de la collecte de données et sélectionnez **[!UICONTROL Balises]** dans le volet de navigation de gauche. À partir de là, sélectionnez une propriété existante ou créez une propriété.
+Pour partager une extension, accédez à l’interface utilisateur de la collecte de données et sélectionnez **[!UICONTROL Tags]** dans le volet de navigation de gauche. À partir de là, sélectionnez une propriété existante ou créez une propriété.
 
-Une fois la propriété souhaitée sélectionnée ou créée, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Autorisations d’utilisation]**.
+Une fois la propriété sélectionnée ou créée, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Usage Authorizations]** .
 
 Vous voyez ici une liste des autorisations partagées existantes organisées en deux catégories :
 
 - **Partagé avec cette organisation** : extensions que d’autres organisations ont partagées avec vous.
 - **Partagé avec d’autres organisations** : extensions que vous avez partagées avec d’autres organisations.
 
-Sélectionnez **[!UICONTROL Ajouter une autorisation]**.
+Sélectionnez **[!UICONTROL Add Authorization]**.
 
-![Onglet [!UICONTROL Autorisations d’utilisation] affichant une liste des extensions partagées avec cette organisation, en surbrillance [!UICONTROL Ajouter une autorisation]](../images/shared-extensions/add-authorization.png)
+![Onglet [!UICONTROL Usage Authorizations] présentant une liste des extensions partagées avec cette organisation, en surbrillance [!UICONTROL Add Authorization]](../images/shared-extensions/add-authorization.png)
 
 >[!IMPORTANT]
 >
 >Vous devez obtenir le de l&#39;organisation cible **`Organization ID`** le propriétaire de l&#39;organisation. Les organisations ne peuvent pas être recherchées par nom.
 
-Sélectionnez la **[!UICONTROL Extension]** que vous souhaitez partager parmi les extensions disponibles dans la liste déroulante. La liste affiche les extensions détenues par votre organisation ainsi que leur statut de disponibilité. Les extensions dont la dernière version est en cours de disponibilité **Développement** n’apparaîtront pas dans cette liste.
+Sélectionnez les **[!UICONTROL Extension]** que vous souhaitez partager parmi les extensions disponibles dans la liste déroulante. La liste affiche les extensions détenues par votre organisation ainsi que leur statut de disponibilité. Les extensions dont la dernière version est en cours de disponibilité **Développement** n’apparaîtront pas dans cette liste.
 
-Saisissez ensuite l’ID de l’organisation de réception, puis sélectionnez **[!UICONTROL Enregistrer]**.
+Saisissez ensuite l&#39;ID de l&#39;organisation de réception, puis sélectionnez **[!UICONTROL Save]**.
 
-![Page [!UICONTROL Créer une autorisation d’utilisation de package d’extension] affichant une extension sélectionnée et l’ID d’organisation Adobe saisi, en surbrillance [!UICONTROL Enregistrer]](../images/shared-extensions/save-authorization.png)
+![Page [!UICONTROL Create extension package usage authorization] présentant l’extension sélectionnée et l’ID d’organisation Adobe saisi, en surbrillance [!UICONTROL Save]](../images/shared-extensions/save-authorization.png)
 
-Vous revenez alors à l’onglet [!UICONTROL &#x200B; Autorisations d’utilisation &#x200B;] où vous pouvez voir l’extension dans votre liste **[!UICONTROL Partagée avec d’autres organisations]**. Le statut indique **En attente d&#39;approbation** jusqu&#39;à ce que l&#39;organisation réceptrice approuve l&#39;autorisation, auquel cas elle est mise à jour sur **Approuvée**.
+Vous revenez alors à l’onglet [!UICONTROL Usage Authorizations] où l’extension s’affiche dans votre liste **[!UICONTROL Shared with other orgs]**. Le statut indique **En attente d&#39;approbation** jusqu&#39;à ce que l&#39;organisation réceptrice approuve l&#39;autorisation, auquel cas elle est mise à jour sur **Approuvée**.
 
-![Onglet [!UICONTROL Autorisations d’utilisation] affichant une liste des extensions partagées avec d’autres organisations, en mettant en surbrillance la nouvelle autorisation](../images/shared-extensions/new-authorization.png)
+![Onglet [!UICONTROL Usage Authorizations] affichant une liste des extensions partagées avec d’autres organisations, en mettant en surbrillance la nouvelle autorisation](../images/shared-extensions/new-authorization.png)
 
 >[!TIP]
 >
->Vous pouvez également partager des extensions directement à partir du **[!UICONTROL Catalogue d’extensions]** en sélectionnant le menu (⋯) sur la carte d’extension, puis en sélectionnant l’option de partage dans le menu.
+>Vous pouvez également partager des extensions directement à partir du **[!UICONTROL Extension Catalog]** en sélectionnant le menu (⋯) sur la carte d’extension, puis en sélectionnant l’option de partage dans le menu.
 
 Lorsqu’une autorisation est active, l’extension partagée affiche un badge ***Partage*** dans le catalogue indiquant qu’elle est partagée avec d’autres organisations.
 
-![Onglet [!UICONTROL Catalogue] affichant l’extension partagée avec le badge](../images/shared-extensions/sharing-badge.png)
+![Onglet [!UICONTROL Catalog] affichant l’extension partagée avec le badge](../images/shared-extensions/sharing-badge.png)
 
 ## Autoriser et gérer les extensions partagées
 
@@ -79,37 +79,39 @@ Lorsqu’une autorisation est active, l’extension partagée affiche un badge *
 >
 >En tant qu’organisation de réception, vous pouvez uniquement approuver ou rejeter les extensions partagées. Vous ne pouvez pas gérer ni modifier les détails d’autorisation, car ils sont contrôlés par l’organisation de partage.
 
-Pour autoriser une extension partagée pour votre organisation, accédez à l’interface utilisateur de collecte de données et sélectionnez **[!UICONTROL Balises]** dans le volet de navigation de gauche, puis sélectionnez la propriété. Sélectionnez ensuite **[!UICONTROL Extensions]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Autorisations d’utilisation]**.
+Pour autoriser une extension partagée pour votre organisation, accédez à l’interface utilisateur de collecte de données, sélectionnez **[!UICONTROL Tags]** dans le volet de navigation de gauche, puis sélectionnez la propriété. Sélectionnez ensuite **[!UICONTROL Extensions]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Usage Authorizations]** .
 
-La section **Partagées avec cette organisation** répertorie les extensions partagées, y compris celles **[!UICONTROL En attente d’approbation]**. Sélectionnez l’extension à approuver, puis sélectionnez **[!UICONTROL Approuver]**.
+La section **répertorie les extensions partagées, y compris celles** en attente d’approbation **[!UICONTROL Shared with this org]**. Sélectionnez l’extension à approuver, puis sélectionnez **[!UICONTROL Approve]**.
 
-![Onglet [!UICONTROL Autorisations d’utilisation] affichant une liste des extensions partagées avec cette organisation avec l’extension en attente d’approbation sélectionnée, en surbrillance [!UICONTROL Approuver]](../images/shared-extensions/approve-authorization.png)
+![Onglet [!UICONTROL Usage Authorizations] affichant une liste des extensions partagées avec cette organisation avec l’extension en attente d’approbation sélectionnée, en mettant [!UICONTROL Approve]](../images/shared-extensions/approve-authorization.png) surbrillance
 
 >[!NOTE]
 >
->Vous pouvez également rejeter une demande dans l’onglet **[!UICONTROL Autorisations d’utilisation]** si l’extension partagée n’est plus nécessaire pour votre organisation.
+>Vous pouvez également rejeter une demande dans l’onglet **[!UICONTROL Usage Authorizations]** si l’extension partagée n’est plus nécessaire pour votre organisation.
 
-Sélectionnez **[!UICONTROL OK]** dans la boîte de dialogue **[!UICONTROL Utilisations d’autorisation]**.
+Sélectionnez **[!UICONTROL OK]** dans la boîte de dialogue **[!UICONTROL Authorization Usages]**.
 
-![Boîte de dialogue [!UICONTROL Utilisations d’autorisation], en surbrillance [!UICONTROL OK]](../images/shared-extensions/confirmation.png)
+![Boîte de dialogue [!UICONTROL Authorization Usages], mise en surbrillance [!UICONTROL OK]](../images/shared-extensions/confirmation.png)
 
-Vous revenez sur l’onglet [!UICONTROL &#x200B; Autorisations d’utilisation &#x200B;] où vous pouvez voir que l’extension affiche désormais un statut **Approuvé**.
+Vous revenez alors à l’onglet [!UICONTROL Usage Authorizations] dans lequel vous pouvez voir que l’extension affiche désormais un statut **Approuvé**.
 
-![Onglet [!UICONTROL &#x200B; Autorisations d’utilisation] affichant une liste des extensions partagées avec cette organisation, en mettant en surbrillance l’extension avec le statut Approuvé](../images/shared-extensions/approved-authorization.png)
+![Onglet [!UICONTROL Usage Authorizations] affichant une liste des extensions partagées avec cette organisation, en mettant en surbrillance l’extension avec le statut Approuvé](../images/shared-extensions/approved-authorization.png)
 
 Une fois l’autorisation approuvée, l’extension est disponible dans votre catalogue et peut être installée et utilisée comme toute autre extension. L’extension partagée affiche un badge ***Réception*** indiquant qu’il s’agit d’une extension qui vous est partagée par une autre organisation.
 
-![Onglet [!UICONTROL Catalogue] affichant l’extension partagée avec le badge « Réception »](../images/shared-extensions/receiving-badge.png)
+![Onglet [!UICONTROL Catalog] affichant l’extension partagée avec le badge « Réception »](../images/shared-extensions/receiving-badge.png)
 
 ## Révoquer les autorisations
 
 En tant qu’organisation propriétaire, vous pouvez supprimer une autorisation à tout moment, quel que soit son statut actuel (En attente d’approbation, Refusée ou Approuvée).
 
 **Si votre extension n’a jamais été rendue publique :**
+
 - Toute version privée déjà installée par l’organisation de réception apparaîtra toujours dans la liste des extensions installées.
 - Si l’organisation réceptrice n’a jamais installé votre extension, elle n’apparaîtra plus nulle part dans son interface.
 
 **Si votre extension a été rendue publique :**
+
 - Toute version privée installée par l’organisation de réception reste visible dans la liste des extensions installées.
 - S’il n’a jamais installé votre version privée, il verra toujours la dernière version publique dans son catalogue et pourra l’installer.
 - Il peut également rétrograder de votre version privée vers la dernière version publique disponible, si vous le souhaitez.

@@ -1,8 +1,8 @@
 ---
-description: Découvrez comment configurer les options de formatage de fichier pour les destinations basées sur des fichiers créés avec Adobe Experience Platform Destination SDK, via le point d’entrée &grave;/destination-servers&grave;.
+description: Découvrez comment configurer les options de formatage de fichier pour les destinations basées sur des fichiers créés avec Adobe Experience Platform Destination SDK, via le point d’entrée `/destination-servers`.
 title: Configuration du formatage des fichiers
 exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 88%
@@ -24,7 +24,7 @@ Selon la configuration de la destination, les utilisateurs verront certaines opt
 
 Les paramètres de formatage de fichiers font partie de la configuration de serveur de destination quand celles-ci sont basées sur des fichiers.
 
-Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la documentation [options de configuration](../configuration-options.md) ou consultez le guide sur la [&#x200B; utilisation de la Destination SDK pour configurer une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Pour comprendre la place de ce composant dans une intégration créée avec Destination SDK, consultez le diagramme de la documentation [options de configuration](../configuration-options.md) ou consultez le guide sur la [utilisation de Destination SDK pour configurer une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 Vous pouvez configurer les options de formatage de fichier via le point d’entrée `/authoring/destination-servers`. Pour obtenir des exemples d’appels API détaillés dans lesquels vous pouvez configurer les composants affichés sur cette page, consultez les pages de référence de l’API suivantes.
 
@@ -199,8 +199,8 @@ Vous trouverez ci-dessous une référence complète de toutes les options de for
 | `csvOptions.timestampFormat.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Définit la chaîne qui indique un format d’horodatage. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` | - | - |
 | `csvOptions.charToEscapeQuoteEscaping.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Définit un caractère unique utilisé pour l’échappement du caractère de guillemet. | `\` lorsque les caractères d’échappement et de guillemet sont différents. `\0` lorsque les caractères d’échappement et de guillemet sont identiques. | - | - |
 | `csvOptions.emptyValue.value` | Facultatif | *Uniquement pour`"fileType.value": "csv"`*. Définit la représentation sous forme de chaîne d’une valeur vide. | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
-| `maxFileRowCount` | Facultatif | Indique le nombre maximal de lignes par fichier exporté, entre 1 000 000 et 10 000 000 de lignes. | 5 000 000 |
-| `includeFileManifest` | Facultatif | Permet la prise en charge de l’exportation d’un manifeste de fichier avec les exportations de fichiers. Le fichier JSON manifeste contient des informations sur l’emplacement de l’exportation, la taille de l’exportation, etc. Le manifeste est nommé au format `manifest-<<destinationId>>-<<dataflowRunId>>.json`. | Affichez un [exemple de fichier manifeste](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Le fichier de manifeste comprend les champs suivants : <ul><li>`flowRunId` : [exécution de flux de données](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) qui a généré le fichier exporté.</li><li>`scheduledTime` : heure en UTC à laquelle le fichier a été exporté. </li><li>`exportResults.sinkPath` : chemin d’accès dans l’emplacement de stockage où le fichier exporté est déposé. </li><li>`exportResults.name` : nom du fichier exporté.</li><li>`size` : taille du fichier exporté, en octets.</li></ul> |
+| `maxFileRowCount` | Facultatif | Indique le nombre maximal de lignes par fichier exporté, entre 1 000 000 et 10 000 000 de lignes. | 5 000 000 | - | - |
+| `includeFileManifest` | Facultatif | Active la prise en charge de l’exportation d’un manifeste de fichier avec les exportations de fichiers. Le fichier JSON manifeste contient des informations sur l’emplacement d’exportation, la taille d’exportation, etc. Le manifeste est nommé à l’aide du format `manifest-<<destinationId>>-<<dataflowRunId>>.json`. | Affichez un [exemple de fichier de manifeste](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Le fichier manifeste comprend les champs suivants : <ul><li>`flowRunId` : exécution [flux de données](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) qui a généré le fichier exporté.</li><li>`scheduledTime` : heure en UTC à laquelle le fichier a été exporté. </li><li>`exportResults.sinkPath` : chemin d’accès à l’emplacement de stockage où le fichier exporté est déposé. </li><li>`exportResults.name` : nom du fichier exporté.</li><li>`size` : taille du fichier exporté, en octets.</li></ul> | - | - |
 
 {style="table-layout:auto"}
 

@@ -5,7 +5,7 @@ title: Afficher des données de jeu de données à l’aide de l’API Data Acce
 type: Tutorial
 description: Découvrez comment localiser les données stockées dans un jeu de données, les télécharger et y accéder à l’aide de l’API Data Access de Adobe Experience Platform. Ce document présente certaines des fonctionnalités uniques de l’API Data Access, telles que la pagination et les téléchargements partiels.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1365'
 ht-degree: 56%
@@ -61,7 +61,7 @@ Avant de pouvoir commencer à utiliser l’API [!DNL Data Access], vous devez id
 - `GET /batches` : renvoie une liste de lots sous votre organisation
 - `GET /dataSetFiles` : renvoie une liste de fichiers sous votre organisation
 
-Pour obtenir la liste complète des points d’entrée de l’API [!DNL Catalog], reportez-vous à la [&#x200B; Référence d’API &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/).
+Pour obtenir la liste complète des points d’entrée de l’API [!DNL Catalog], reportez-vous à la [ Référence d’API ](https://developer.adobe.com/experience-platform-apis/references/catalog/).
 
 ## Récupération d’une liste de lots sous votre organisation
 
@@ -428,7 +428,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{FILE_ID} ` | L’identifiant du fichier. |
+| `{FILE_ID}` | L’identifiant du fichier. |
 | `{FILE_NAME}` | Le nom du fichier (par exemple, profiles.parquet). |
 
 **Requête**

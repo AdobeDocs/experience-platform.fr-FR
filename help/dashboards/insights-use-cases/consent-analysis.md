@@ -2,9 +2,9 @@
 title: Analyse et suivi du consentement
 description: Découvrez comment créer un tableau de bord d’analyse du consentement pour suivre les tendances au fil du temps en matière de consentement des utilisateurs.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1910'
+source-wordcount: '1805'
 ht-degree: 0%
 
 ---
@@ -24,15 +24,15 @@ Les cas d’utilisation couverts dans ce guide sont les tendances de consentemen
 
 ## Créer des audiences consentantes {#create-consent-audiences}
 
-Pour créer un tableau de bord de consentement, vous devez d’abord créer une audience de tous les profils qui ont consenti à contacter. Pour accéder au créateur de segments de Real-Time Customer Data Platform, sélectionnez **[!UICONTROL Audiences]** dans le volet de navigation de gauche de l’interface utilisateur d’Experience Platform. Dans l’onglet [!UICONTROL Client] du tableau de bord [!UICONTROL Audiences], sélectionnez **[!UICONTROL Créer une audience]** en haut à droite de la vue, puis **[!UICONTROL Créer des règles]**.
+Pour créer un tableau de bord de consentement, vous devez d’abord créer une audience de tous les profils qui ont consenti à contacter. Pour accéder au créateur de segments de Real-Time Customer Data Platform, sélectionnez **[!UICONTROL Audiences]** dans le volet de navigation de gauche de l’interface utilisateur d’Experience Platform. Dans l’onglet [!UICONTROL Customer] du tableau de bord de la [!UICONTROL Audiences], sélectionnez **[!UICONTROL Create audience]** en haut à droite de la vue, puis **[!UICONTROL Build rules]**.
 
-![Tableau de bord [!UICONTROL Audiences] avec [!UICONTROL Client], [!UICONTROL Audiences] et [!UICONTROL Créer un segment] en surbrillance.](../images/insights-use-cases/consent-analysis/create-audience.png)
+![Tableau de bord [!UICONTROL Audiences] avec [!UICONTROL Customer], [!UICONTROL Audiences] et [!UICONTROL Create segment] mis en surbrillance.](../images/insights-use-cases/consent-analysis/create-audience.png)
 
-Le créateur de segments s’affiche. Sélectionnez ensuite **[!UICONTROL Profil individuel XDM]** dans les options disponibles. Consultez la documentation pour plus d’informations sur la zone de travail du [créateur de règles](../../segmentation/ui/segment-builder.md#rule-builder-canvas).
+Le créateur de segments s’affiche. Sélectionnez ensuite **[!UICONTROL XDM Individual Profile]** dans les options disponibles. Consultez la documentation pour plus d’informations sur la zone de travail du [créateur de règles](../../segmentation/ui/segment-builder.md#rule-builder-canvas).
 
-![Créateur de segments avec le dossier d’attributs [!UICONTROL Profil individuel XDM] en surbrillance.](../images/insights-use-cases/consent-analysis/xdm-individual-profile.png)
+![Créateur de segments avec le dossier d’attributs de [!UICONTROL XDM Individual Profile] en surbrillance.](../images/insights-use-cases/consent-analysis/xdm-individual-profile.png)
 
-Recherchez vos attributs de consentement parmi les options disponibles. Sélectionnez **[!UICONTROL Consentements et préférences]**.
+Recherchez vos attributs de consentement parmi les options disponibles. Sélectionnez **[!UICONTROL Consents and Preferences]**.
 
 >[!NOTE]
 >
@@ -40,27 +40,27 @@ Recherchez vos attributs de consentement parmi les options disponibles. Sélecti
 
 Vous trouverez plus d’informations sur la [gestion du consentement dans la documentation sur la segmentation](../../segmentation/tutorials/consents.md#handling-consent-in-segmentation).
 
-![Créateur de segments avec le dossier d’attributs [!UICONTROL Consentement et préférences] en surbrillance.](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
+![Créateur de segments avec le dossier d’attributs de [!UICONTROL Consent and Preferences] en surbrillance.](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
 
-Les différentes options de consentement et de préférence s’affichent. Comme cette démonstration porte sur le consentement pour contacter via divers canaux marketing, sélectionnez **[!UICONTROL Préférences marketing]**.
+Les différentes options de consentement et de préférence s’affichent. Comme cette démonstration porte sur le consentement pour contacter via divers canaux marketing, sélectionnez **[!UICONTROL Marketing Preferences]**.
 
-![Créateur de segments avec le dossier [!UICONTROL Préférences marketing] en surbrillance.](../images/insights-use-cases/consent-analysis/marketing-preferences.png)
+![Créateur de segments avec le dossier [!UICONTROL Marketing Preferences] en surbrillance.](../images/insights-use-cases/consent-analysis/marketing-preferences.png)
 
 La liste des préférences marketing s’affiche. Bien que cet exemple de cas d’utilisation se concentre sur les e-mails, les SMS et les appels, vous pouvez créer des informations pour toute autre combinaison ou l’intégralité des options. Pour chacun des canaux, effectuez les étapes ci-dessous pour créer une audience.
 
-Pour commencer à configurer une audience, sélectionnez **[!UICONTROL Recevoir un SMS]** / **[!UICONTROL Recevoir un e-mail]** / **[!UICONTROL Recevoir des appels]**.
+Pour commencer à configurer une audience, sélectionnez **[!UICONTROL Receive SMS]** / **[!UICONTROL Receive email]** / **[!UICONTROL Receive calls]**.
 
 ![Les canaux de contact disponibles pour le marketing sont mis en surbrillance dans le créateur d’audiences.](../images/insights-use-cases/consent-analysis/channels.png)
 
-Le dossier [!UICONTROL Abonnements] s’affiche. Dans les options disponibles, sélectionnez l’attribut **[!UICONTROL Valeur de choix]** et faites-le glisser vers le volet central, puis sélectionnez la valeur souhaitée dans la liste déroulante. Dans ce cas, sélectionnez **Oui (opt-in)**. Attribuez ensuite un nom à l’audience en fonction des besoins de votre entreprise et fournissez une description conviviale.
+Le dossier [!UICONTROL Subscriptions] s’affiche. Dans les options disponibles, sélectionnez l’attribut **[!UICONTROL Choice Value]** et faites-le glisser vers le volet central, puis sélectionnez la valeur souhaitée dans la liste déroulante. Dans ce cas, sélectionnez **Oui (opt-in)**. Attribuez ensuite un nom à l’audience en fonction des besoins de votre entreprise et fournissez une description conviviale.
 
 >[!NOTE]
 >
 >Il existe une limite conditionnelle au nombre d’audiences que vous êtes recommandé de créer. Vous trouverez plus d’informations dans la [documentation sur les mécanismes de sécurisation de la segmentation](../../profile/guardrails.md#segmentation-guardrails).
 
-![&#x200B; Attribut [!UICONTROL Valeur de choix] avec la valeur [!UICONTROL Oui (opt-in)] mise en surbrillance dans le créateur de segments. Le nom et la description de l’audience sont également mis en surbrillance.](../images/insights-use-cases/consent-analysis/choice-value.png)
+![Attribut [!UICONTROL Choice Value] avec la valeur [!UICONTROL Yes (opt-in)] mise en surbrillance dans le créateur de segments. Le nom et la description de l’audience sont également mis en surbrillance.](../images/insights-use-cases/consent-analysis/choice-value.png)
 
-Une fois les audiences nécessaires créées, elles sont répertoriées dans l’onglet [!UICONTROL Audiences] [!UICONTROL Parcourir].
+Une fois les audiences nécessaires créées, elles sont répertoriées dans l’onglet [!UICONTROL Audiences] [!UICONTROL Browse] .
 
 >[!NOTE]
 >
@@ -72,13 +72,13 @@ Adobe a créé différentes informations qui sont automatiquement disponibles po
 
 ## Chevauchement d’audiences {#audience-overlap}
 
-Pour vérifier le chevauchement entre deux audiences de consentement, ajoutez l’[!UICONTROL chevauchement des audiences par politique de fusion] à votre tableau de bord Profils et sélectionnez les audiences souhaitées dans les menus déroulants. Pour plus d’informations sur insight, consultez la documentation pour savoir comment ajouter un widget à votre tableau de bord [*Chevauchement des audiences par politique de fusion*](../guides/profiles.md#audience-overlap-by-merge-policy).
+Pour vérifier le chevauchement entre deux audiences de consentement, ajoutez la [!UICONTROL Audience overlap by merge policy] à votre tableau de bord Profils et sélectionnez les audiences souhaitées dans les menus déroulants. Pour plus d’informations sur insight, consultez la documentation pour savoir comment ajouter un widget à votre tableau de bord [*Chevauchement des audiences par politique de fusion*](../guides/profiles.md#audience-overlap-by-merge-policy).
 
 <!-- Image needs updating to night mode -->
 
 ![Tableau de bord Profils avec le widget Chevauchement des audiences par politique de fusion en surbrillance. Le widget visualise les chevauchements entre deux audiences de consentement.](../images/insights-use-cases/consent-analysis/audience-overlap-by-merge-policy.png)
 
-Vous pouvez afficher le chevauchement de toutes les audiences où les utilisateurs ont consenti à recevoir des appels dans toutes les autres audiences, avec le rapport Chevauchement des audiences dans le tableau de bord Audiences . Pour afficher le chevauchement des audiences de consentement, accédez d’abord à l’onglet [!UICONTROL Audiences] [!UICONTROL Aperçu]. De là, vous pouvez ajouter le widget [!UICONTROL &#x200B; Rapport de chevauchement des audiences &#x200B;] au tableau de bord des audiences. Une fois le widget créé, sélectionnez l’audience **[!UICONTROL L’utilisateur a consenti aux appels]** dans le menu déroulant Présentation de l’audience en haut de la page. Sélectionnez ensuite **[!UICONTROL En savoir plus]** dans le widget Rapport de chevauchement des audiences pour afficher jusqu’à 50 des chevauchements les plus importants et jusqu’à 50 des chevauchements les moins importants concernant le segment sélectionné.
+Vous pouvez afficher le chevauchement de toutes les audiences où les utilisateurs ont consenti à recevoir des appels dans toutes les autres audiences, avec le rapport Chevauchement des audiences dans le tableau de bord Audiences . Pour afficher le chevauchement des audiences de consentement, accédez d’abord à l’onglet [!UICONTROL Audiences] de [!UICONTROL Overview] . De là, vous pouvez ajouter le widget [!UICONTROL Audience overlap report] au tableau de bord Audiences . Une fois le widget créé, sélectionnez l’audience **[!UICONTROL User consented to calls]** dans le menu déroulant Présentation de l’audience en haut de la page. Sélectionnez ensuite **[!UICONTROL View more]** dans le widget Rapport de chevauchement des audiences pour afficher jusqu’à 50 des chevauchements les plus importants et jusqu’à 50 des chevauchements les moins importants concernant le segment sélectionné.
 
 <!-- Image needs updating to night mode -->
 
@@ -92,7 +92,7 @@ La boîte de dialogue Rapport de chevauchement des audiences se développe pour 
 
 ## Tendances de la taille d’audience {#audience-size-trends}
 
-Lorsque vous créez une audience basée sur le consentement, sa tendance s’établit automatiquement sur une période allant jusqu’à 12 mois à compter de la date à laquelle vous avez créé l’audience. Pour obtenir une tendance entièrement fonctionnelle de votre consentement client, ajoutez les widgets suivants à la page [!UICONTROL Segments] [!UICONTROL Aperçu]. Ces informations offrent un moyen puissant de suivre l’évolution de votre consentement au fil du temps. Elles sont même corrélées à toutes les campagnes que vous exécutez en parallèle et qui peuvent avoir une incidence positive ou négative sur le consentement. Les descriptions proposées pour ces widgets s’appliquent à un cas d’utilisation de consentement.
+Lorsque vous créez une audience basée sur le consentement, sa tendance s’établit automatiquement sur une période allant jusqu’à 12 mois à compter de la date à laquelle vous avez créé l’audience. Pour obtenir une tendance entièrement fonctionnelle de votre consentement client, ajoutez les widgets suivants à la page [!UICONTROL Segments] [!UICONTROL Overview]. Ces informations offrent un moyen puissant de suivre l’évolution de votre consentement au fil du temps. Elles sont même corrélées à toutes les campagnes que vous exécutez en parallèle et qui peuvent avoir une incidence positive ou négative sur le consentement. Les descriptions proposées pour ces widgets s’appliquent à un cas d’utilisation de consentement.
 
 - [Tendance de la taille d’audience](../guides/audiences.md#audience-size-trend) : ce widget permet de suivre l’évolution de votre consentement respectif au fil du temps.
 - [Tendance de changement de la taille de l’audience](../guides/audiences.md#audience-size-change-trend) : ce widget effectue le suivi quotidien de l’évolution du consentement de votre client. Par exemple, si le nombre de consentements de vos clients a diminué de 100 000, vous pouvez voir comment ce changement s’est produit sur une base quotidienne.
@@ -104,7 +104,7 @@ Lorsque vous créez une audience basée sur le consentement, sa tendance s’ét
 
 ## Tableau de bord de présentation des audiences {#audiences-overview-dashboard}
 
-Après avoir créé une audience liée au consentement telle que « Utilisateurs ayant consenti aux SMS », vous pouvez afficher des informations personnalisées clés sur le consentement de votre audience en ajoutant les widgets appropriés à votre tableau de bord de présentation des audiences. Accédez à la [!UICONTROL Audiences] [!UICONTROL Présentation] et ajoutez les widgets de votre choix dans la bibliothèque de widgets. Tout widget ajouté à l’affichage du tableau de bord peut être redimensionné et déplacé à l’aide de la fonctionnalité [!UICONTROL Modifier le tableau de bord]. Votre vue personnalisée peut contenir des informations telles que la tendance au fil du temps (jusqu’à 12 mois), les chevauchements avec d’autres audiences et la composition de l’identité de l’audience. Un exemple de vue est illustré ci-dessous.
+Après avoir créé une audience liée au consentement telle que « Utilisateurs ayant consenti aux SMS », vous pouvez afficher des informations personnalisées clés sur le consentement de votre audience en ajoutant les widgets appropriés à votre tableau de bord de présentation des audiences. Accédez au [!UICONTROL Audiences] [!UICONTROL Overview] et ajoutez les widgets de votre choix dans la bibliothèque de widgets. Tout widget ajouté à l’affichage du tableau de bord peut être redimensionné et déplacé à l’aide de la fonction [!UICONTROL Modify dashboard]. Votre vue personnalisée peut contenir des informations telles que la tendance au fil du temps (jusqu’à 12 mois), les chevauchements avec d’autres audiences et la composition de l’identité de l’audience. Un exemple de vue est illustré ci-dessous.
 
 ![Tableau de bord des audiences avec l’audience Utilisateurs ayant consenti à l’SMS mise en surbrillance dans le menu déroulant de l’audience globale.](../images/insights-use-cases/consent-analysis/audience-dashboard-user-consent-to-sms.png)
 
@@ -112,11 +112,11 @@ Après avoir créé une audience liée au consentement telle que « Utilisateurs
 
 Vous pouvez également créer vos propres widgets à l’aide de tableaux de bord définis par l’utilisateur. La création de votre propre widget vous permet de contrôler entièrement le type de widget, ainsi que d’ajouter des filtres et bien plus encore, directement dans Adobe Real-Time CDP.
 
-Par exemple, si vous souhaitez suivre la tendance de plusieurs audiences de consentement dans le même graphique afin de voir au fil du temps comment chacune de vos préférences de consentement a changé. Ce type de visualisation est possible avec des tableaux de bord définis par l’utilisateur en quelques étapes seulement et en une seule configuration. Sélectionnez tout d’abord **[!UICONTROL Tableaux de bord]** dans le volet de navigation de gauche. L’espace de travail [!UICONTROL Tableaux de bord] s’affiche. Sélectionnez ensuite **[!UICONTROL Créer un tableau de bord]**. Vous trouverez des instructions complètes sur la [création d’un tableau de bord et d’un widget personnalisé](../standard-dashboards.md) dans le guide des tableaux de bord définis par l’utilisateur.
+Par exemple, si vous souhaitez suivre la tendance de plusieurs audiences de consentement dans le même graphique afin de voir au fil du temps comment chacune de vos préférences de consentement a changé. Ce type de visualisation est possible avec des tableaux de bord définis par l’utilisateur en quelques étapes seulement et en une seule configuration. Tout d’abord, sélectionnez **[!UICONTROL Dashboards]** dans le volet de navigation de gauche. L’espace de travail [!UICONTROL Dashboards] s’affiche. Sélectionnez ensuite **[!UICONTROL Create dashboard]**. Vous trouverez des instructions complètes sur la [création d’un tableau de bord et d’un widget personnalisé](../standard-dashboards.md) dans le guide des tableaux de bord définis par l’utilisateur.
 
 ![L’espace de travail Tableaux de bord avec Tableaux de bord et Créer un tableau de bord mis en surbrillance.](../images/standard-dashboards/create-dashboard.png)
 
-Lorsque vous [sélectionnez votre modèle de données](../standard-dashboards.md#select-data-model) dans le compositeur de widgets, sélectionnez `CDPInsights` suivi de **[!UICONTROL Suivant]**. La boîte de dialogue [!UICONTROL Sélectionner un tableau] s’affiche.
+Lorsque vous [sélectionnez votre modèle de données](../standard-dashboards.md#select-data-model) dans le compositeur de widgets, sélectionnez `CDPInsights`, puis **[!UICONTROL Next]**. La boîte de dialogue [!UICONTROL Select table] s’affiche.
 
 ![La boîte de dialogue Sélectionner un modèle de données avec le modèle CDPInsights mis en surbrillance.](../images/standard-dashboards/select-data-model-dialog.png)
 
@@ -126,17 +126,17 @@ La vue suivante affiche une liste des tableaux disponibles dans le rail de gauch
 
 Une fois le compositeur de widget renseigné avec les données du tableau de votre choix, effectuez les étapes ci-dessous :
 
-- [Rechercher [!UICONTROL Attributs]](../standard-dashboards.md#add-filter-attributes) par `[!UICONTROL date]`, puis utilisez l’icône + pour ajouter l’attribut `[!UICONTROL date]` à l’axe X à partir du menu déroulant.
+- [Recherchez des [!UICONTROL Attributes]](../standard-dashboards.md#add-filter-attributes) dans la `[!UICONTROL date]`, puis utilisez l’icône + pour ajouter l’attribut `[!UICONTROL date]` à l’axe X à partir du menu déroulant.
   ![Le compositeur de widget avec l’icône d’ajout et le menu déroulant mis en surbrillance.](../images/standard-dashboards/attributes-dropdown.png)
-- Recherchez [!UICONTROL Attributs] par `[!UICONTROL count_of_profiles]`, puis utilisez l’icône + pour ajouter l’attribut `[!UICONTROL count_of_profiles]` à l’axe Y à partir du menu déroulant.
-- Sélectionnez l’icône `...` (des points de suspension) dans le champ [!UICONTROL Axe Y], puis sélectionnez la fonction d’agrégat [!UICONTROL SOMME] dans le menu déroulant.
-  ![Le widget Tendances du consentement du compositeur de widget avec le modèle de données, le tableau, le menu déroulant de l’axe Y et la fonction SOMME mis en surbrillance. &#x200B;](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
-- Sélectionnez le menu déroulant [!UICONTROL Marques] et remplacez le type de graphique par [!UICONTROL Ligne].
-- Recherchez [!UICONTROL Attributs] pour le `[!UICONTROL segment_name]`, puis utilisez l’icône + pour ajouter le `segment_name` en tant que [!UICONTROL Filtre] dans le menu déroulant. La boîte de dialogue [!UICONTROL Filtre : nom_segment] s’affiche. Sélectionnez les audiences créées précédemment et liées au consentement. Pour cet exemple, sélectionnez **[!UICONTROL Utilisateurs ayant consenti aux appels]**, **[!UICONTROL Utilisateurs ayant consenti aux SMS]** et **[!UICONTROL Utilisateurs ayant consenti aux e-mails]**, suivis de **[!UICONTROL Appliquer]**.
-- Recherchez `[!UICONTROL segment_name]` [!UICONTROL Attributs], puis sélectionnez l’icône + pour ajouter `segment_name` en tant que [!UICONTROL Couleur] dans le menu déroulant.
-- Ouvrez [le panneau [!UICONTROL Propriétés]](../standard-dashboards.md#widget-properties) et fournissez un [!UICONTROL Titre du widget] et un [!UICONTROL Libellé de l’axe] appropriés.
+- Recherchez des [!UICONTROL Attributes] dans `[!UICONTROL count_of_profiles]`, puis utilisez l’icône + pour ajouter l’attribut `[!UICONTROL count_of_profiles]` à l’axe Y à partir du menu déroulant.
+- Sélectionnez l’icône `...` (des points de suspension) dans le champ [!UICONTROL Y-axis] , puis sélectionnez la fonction d’agrégat [!UICONTROL SUM] dans le menu déroulant.
+  ![Le widget Tendances du consentement du compositeur de widget avec le modèle de données, le tableau, le menu déroulant de l’axe Y et la fonction SOMME mis en surbrillance.](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
+- Sélectionnez le menu déroulant [!UICONTROL Marks] et modifiez le type de graphique en [!UICONTROL Line].
+- Recherchez [!UICONTROL Attributes] le `[!UICONTROL segment_name]`, puis utilisez l’icône + pour ajouter le `segment_name` sous forme de [!UICONTROL Filter] dans le menu déroulant. La boîte de dialogue [!UICONTROL Filter: Segment_name] s’affiche. Sélectionnez les audiences créées précédemment et liées au consentement. Pour cet exemple, sélectionnez **[!UICONTROL Users Consented to Calls]**, **[!UICONTROL Users Consented to SMS]** et **[!UICONTROL Users Consented to Email]**, puis **[!UICONTROL Apply]**.
+- Recherchez des [!UICONTROL Attributes] dans `[!UICONTROL segment_name]`, puis sélectionnez l’icône + pour ajouter des `segment_name` sous forme de [!UICONTROL Color] dans le menu déroulant.
+- Ouvrez [le panneau [!UICONTROL Properties]](../standard-dashboards.md#widget-properties) puis fournissez un [!UICONTROL Widget title] et un [!UICONTROL Axis label] appropriés.
   ![Le compositeur de widget avec l’icône de propriétés et le titre du widget mis en surbrillance.](../images/standard-dashboards/properties-panel.png)
-- Sélectionnez **[!UICONTROL Enregistrer et fermer]** pour confirmer les paramètres.
+- Sélectionnez **[!UICONTROL Save and close]** pour confirmer vos paramètres.
 
 >[!TIP]
 >

@@ -2,7 +2,7 @@
 title: Extension Adobe Client Data Layer
 description: Découvrez l’extension de balise ACDL dans Adobe Experience Platform.
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 95%
@@ -18,7 +18,7 @@ If you would like to have more details on development consideration, [please rea
 
 ## Installation
 
-Pour installer l’extension, accédez au catalogue d’extensions dans l’interface utilisateur de l’Experience Platform ou l’interface utilisateur de collecte de données et sélectionnez Adobe Client Data Layer.
+Pour installer l’extension, accédez au catalogue d’extensions dans l’interface utilisateur d’Experience Platform ou l’interface utilisateur de collecte de données et sélectionnez Couche de données client Adobe.
 
 ![Vue Extension ACDL dans le catalogue](./images/catalog.png)
 
@@ -51,12 +51,12 @@ Si vous sélectionnez cette option, votre écouteur d’événement écoute tout
 
 L’exemple d’événement push suivant est suivi par l’écouteur :
 
-* ` adobeDataLayer.push({"data":"something"})`
-* ` adobeDataLayer.push({"event":"myevent","data":"something"})`
+* `adobeDataLayer.push({"data":"something"})`
+* `adobeDataLayer.push({"event":"myevent","data":"something"})`
 
 L’exemple d’événement push suivant ne serait pas suivi par l’écouteur :
 
-* ` adobeDataLayer.push({"event":"myevent"})`
+* `adobeDataLayer.push({"event":"myevent"})`
 
 ### Écoute de tous les événements
 
@@ -64,8 +64,8 @@ Si vous sélectionnez cette option, votre écouteur d’événement écoute tout
 
 L’exemple d’événement push suivant est suivi par l’écouteur :
 
-* ` adobeDataLayer.push({"event":"myevent"})`
-* ` adobeDataLayer.push({"event":"myevent","data":"something"})`
+* `adobeDataLayer.push({"event":"myevent"})`
+* `adobeDataLayer.push({"event":"myevent","data":"something"})`
 
 L’exemple d’événement push suivant ne serait pas suivi par l’écouteur :
 

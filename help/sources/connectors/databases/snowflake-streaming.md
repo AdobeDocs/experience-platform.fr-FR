@@ -3,7 +3,7 @@ title: Présentation Du Connecteur Source De Diffusion En Continu Snowflake
 description: Découvrez comment créer une connexion source et un flux de données pour ingérer les données de diffusion en continu de votre instance Snowflake vers Adobe Experience Platform
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 6%
@@ -79,7 +79,7 @@ Pour authentifier votre instance [!DNL Snowflake] avec Experience Platform, vous
 
 Pour trouver l’identifiant de votre compte, procédez comme suit :
 
-* Accédez à votre compte dans le tableau de bord de l’interface utilisateur de l’application [[!DNL Snowflake] &#x200B;](https://app.snowflake.com/).
+* Accédez à votre compte dans le tableau de bord de l’interface utilisateur de l’application [[!DNL Snowflake] ](https://app.snowflake.com/).
 * Dans le volet de navigation de gauche, sélectionnez **[!DNL Accounts]**, puis **[!DNL Active Accounts]** dans l’en-tête.
 * Sélectionnez ensuite l’icône d’information, puis sélectionnez et copiez le nom de domaine de l’URL active.
 
@@ -160,7 +160,7 @@ Pour plus d’informations sur la gestion des rôles et des privilèges, consult
 
 ## Convertir les champs d’heure en date au format Unix
 
-Le [!DNL Snowflake Streaming] analyse et écrit ` DATE` champs comme le nombre de jours depuis l’époque Unix (1970-01-01). Par exemple, une valeur `DATE` de 0 signifie le 1er janvier 1970, tandis qu’une valeur de 1 signifie le 2 janvier 1970. Par conséquent, lors de la préparation du fichier pour créer des mappages dans la source de [!DNL Snowflake Streaming], assurez-vous que la colonne `DATE` est représentée sous la forme d’un entier.
+Le [!DNL Snowflake Streaming] analyse et écrit `DATE` champs comme le nombre de jours depuis l’époque Unix (1970-01-01). Par exemple, une valeur `DATE` de 0 signifie le 1er janvier 1970, tandis qu’une valeur de 1 signifie le 2 janvier 1970. Par conséquent, lors de la préparation du fichier pour créer des mappages dans la source de [!DNL Snowflake Streaming], assurez-vous que la colonne `DATE` est représentée sous la forme d’un entier.
 
 Vous pouvez utiliser les [fonctions de données et d’heure de la préparation des données](../../../data-prep/functions.md#date-and-time-functions) pour convertir l’heure Unix en champs de date pouvant être ingérés dans Experience Platform. Par exemple :
 

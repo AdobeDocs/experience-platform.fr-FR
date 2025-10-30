@@ -1,9 +1,10 @@
 ---
 keywords: intégration d’adform ; adform ;
-title: Intégration Adform pour le reciblage non authentifié
+title: Intégration d’Adform pour le reciblage non authentifié
 description: Cette intégration de Adobe Experience Platform vous permet de recibler les utilisateurs en fonction de l’ECID.
 last-substantial-update: 2025-03-26T00:00:00Z
-source-git-commit: 23da6e12b1f5bdc37240d7aa11a44e040b29e3f7
+exl-id: 37eb9453-fc3c-481e-94ea-54d9b1545631
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '726'
 ht-degree: 3%
@@ -16,7 +17,7 @@ L’extension [[!DNL Adform]](https://www.adformhelp.com/hc/en-us/articles/29635
 
 Contrairement au suivi côté client traditionnel, cette extension rend inutiles les cookies tiers en utilisant des identifiants propriétaires, en particulier l’ECID (Experience Cloud ID), qui est synchronisé avec Adform. Cela permet un reciblage transparent des audiences sans avoir à déployer JavaScript côté client.
 
-Ce guide explique comment installer, configurer et déployer l’extension pour transférer des événements des propriétés numériques d’une marque via le réseau Edge d’Adobe vers Adform afin de permettre un reciblage transparent des visiteurs.
+Ce guide explique comment installer, configurer et déployer l’extension pour transférer des événements des propriétés numériques d’une marque via Adobe Edge Network vers Adform afin de permettre un reciblage transparent des visiteurs.
 
 ## Reciblage hors site
 
@@ -27,12 +28,12 @@ Grâce au reciblage hors site, vous pouvez réengager les clients potentiels qui
 
 Adform vous aide à :
 
-* Transformez facilement vos audiences de premier niveau indiquées sur les ECID en identifiants adressables pour les campagnes publicitaires numériques.
-* Liez les ECID à 40+ solutions d’identification enchérissables pour optimiser votre portée, votre fréquence et vos performances par rapport à vos audiences cibles.
+* Transformez facilement vos audiences propriétaires signalées sur les ECID en identifiants adressables pour les campagnes publicitaires numériques.
+* Liez les ECID à plus de 40 solutions d’ID soumissionnaires afin d’optimiser votre portée, votre fréquence et vos performances par rapport à vos audiences ciblées.
 
 ### Activation de l’audience côté serveur avec [!DNL Adform] {#server-side-activation}
 
-Contrairement aux déploiements d’ID côté client traditionnels, cette intégration ne nécessite pas que vous déployiez la solution d’un fournisseur d’ID sur vos propriétés numériques. Au lieu de cela, il active l’activation d’audience côté serveur en utilisant les ECID déjà synchronisés avec Adform. Les principaux avantages sont les suivants :
+Contrairement aux déploiements d’ID côté client traditionnels, cette intégration ne nécessite pas de déployer la solution d’un fournisseur d’ID sur vos propriétés numériques. Au lieu de cela, il active l’activation des audiences côté serveur en utilisant les ECID déjà synchronisés avec Adobe. Il offre les principaux avantages suivants :
 
 * **Aucun déploiement JavaScript côté client** : vous n’avez pas besoin de gérer la logique de reconnaissance des visiteurs côté client ou de déchiffrer les identifiants côté client en versions stables de plus longue durée.
 * **Synchronisation transparente des audiences** : les ECID sont mappés au graphique d’identifiant interne d’Adform, ce qui permet un reciblage efficace sur toutes les plateformes.
@@ -40,17 +41,17 @@ Contrairement aux déploiements d’ID côté client traditionnels, cette intég
 
 ## Conditions préalables {#prerequisites}
 
-Avant d’intégrer Adform à Adobe, assurez-vous que les conditions préalables suivantes sont remplies :
+Avant d’intégrer Adform à Adobe, vérifiez que les conditions préalables suivantes sont remplies :
 
 1. **Configuration d’Adobe Web SDK** : Adobe Web SDK doit être mis en œuvre pour faciliter la collecte de données et le transfert d’événement.
 
 2. **CDP ou SKU de connexion** : vous devez disposer du SKU Prime ou Ultimate de la plateforme de données client (CDP) Adobe, ou du SKU de connexion, pour permettre une communication transparente côté client et côté serveur.
 
 3. **Configuration Adobe Experience Platform Edge Network**:
-   * Assurez-vous qu’Edge Network est configuré pour prendre en charge le transfert d’événement en temps réel pour le reciblage hors site. Pour plus d’informations, consultez le guide de prise en main du transfert d’événement [Adobe](https://experienceleague.adobe.com/fr/docs/experience-platform/tags/event-forwarding/getting-started).
+   * Assurez-vous qu’Edge Network est configuré pour prendre en charge le transfert d’événement en temps réel pour le reciblage hors site. Pour plus d’informations, consultez le guide de prise en main du transfert d’événement [Adobe](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started).
    * Cette étape est essentielle pour transmettre efficacement des données au point d’entrée côté serveur d’Adobe.
 
-Une fois ces conditions préalables réunies, vous pouvez continuer à configurer et déployer l’extension [!DNL Adform] .
+Une fois ces conditions préalables en place, vous pouvez continuer à configurer et à déployer l’extension [!DNL Adform].
 
 ## Configuration de l’extension [!DNL Adform] {#configure-adform-extension}
 
@@ -62,8 +63,8 @@ Accédez à la [!DNL Adform extension] dans l’interface utilisateur de transfe
 
 | Entrée | Description |
 | --- | --- |
-| ID de configuration du suivi | Identifiant unique fourni par Adform pour le suivi des événements. |
-| Domaine global | Utilisez `a1.adform.net` cette option pour optimiser les performances et éviter les problèmes de latence régionale. |
+| ID de configuration du suivi | Identifiant unique fourni par Adobe pour le suivi des événements. |
+| Domaine global | Utilisez `a1.adform.net` pour optimiser les performances et éviter les problèmes de latence régionale. |
 
 Enregistrez la configuration après avoir saisi ces détails.
 
@@ -71,7 +72,7 @@ Enregistrez la configuration après avoir saisi ces détails.
 
 ### Définition des paramètres de tracking
 
-L’action « track » est la règle d’événement principal. Il se déclenche en fonction d’actions prédéfinies, généralement `page load.` inclure les paramètres suivants :
+L’action « track » est la règle d’événement principale. Il se déclenche en fonction d’actions prédéfinies. En règle générale`page load.` incluez les paramètres suivants :
 
 **Paramètres requis :**
 
@@ -86,9 +87,9 @@ L’action « track » est la règle d’événement principal. Il se déclenche
 | Paramètres | Description |
 | --- | --- |
 | `Page URL` | Identifie la page ou l’action de l’utilisateur. |
-| `Referral URL` | Capture des informations pour la correspondance d’audience. |
-| `ECID` | Essentiel pour un ciblage et un reciblage précis. |
-| `Source Domain` | Essentiel pour un ciblage et un reciblage précis. |
+| `Referral URL` | Capture les informations pour la correspondance d’audience. |
+| `ECID` | Crucial pour un ciblage précis et un reciblage. |
+| `Source Domain` | Crucial pour un ciblage précis et un reciblage. |
 
 <!-- ![Tracking parameters for Adform]() -->
 
@@ -105,13 +106,14 @@ L’extension doit être associée à une règle pour fonctionner correctement. 
 ## Validation et déploiement
 
 Assurez-vous que l’extension est installée et configurée correctement et que tous les éléments de données requis sont mappés, notamment :
+
 * [ECID](/help/identity-service/features/ecid.md)
 * Nom de la page
 * URL de référence
 * Agent utilisateur
 * Adresse IP
 
-Une fois que vous avez entré tous les champs obligatoires et terminé les tests, sélectionnez **Build** pour déployer l’extension.
+Une fois que vous avez saisi tous les champs obligatoires et terminé le test, sélectionnez **créer** pour déployer l’extension.
 
 ## Étapes suivantes
 

@@ -5,7 +5,7 @@ title: Créer un modèle à l’aide de notebooks JupyterLab
 type: Tutorial
 description: Ce tutoriel vous guide tout au long des étapes requises pour créer une recette à l’aide du modèle de créateur de recettes des notebooks JupyterLab .
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 28%
@@ -69,7 +69,7 @@ Le reste de ce tutoriel couvre les fichiers suivants qui sont prédéfinis dans 
 
 Le tutoriel vidéo suivant explique le notebook de modèle de propension Luma :
 
->[!VIDEO](https://video.tv.adobe.com/v/3452494?captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/333570)
 
 ### Fichier des exigences {#requirements-file}
 
@@ -93,7 +93,7 @@ Pour le notebook de modèle de propension Luma , les exigences n’ont pas besoi
 
 Les fichiers de configuration, `training.conf` et `scoring.conf`, servent à spécifier les jeux de données que vous souhaitez utiliser pour la formation et la notation, et à ajouter des hyperparamètres. Les configurations pour la formation et la notation sont distinctes.
 
-Pour qu’un modèle exécute une formation, vous devez fournir les `trainingDataSetId`, `ACP_DSW_TRAINING_XDM_SCHEMA` et `tenantId`. En outre, pour la notation, vous devez fournir les `scoringDataSetId`, `tenantId` et `scoringResultsDataSetId `.
+Pour qu’un modèle exécute une formation, vous devez fournir les `trainingDataSetId`, `ACP_DSW_TRAINING_XDM_SCHEMA` et `tenantId`. En outre, pour la notation, vous devez fournir les `scoringDataSetId`, `tenantId` et `scoringResultsDataSetId`.
 
 Pour trouver les identifiants du jeu de données et du schéma, accédez à l’onglet Données ![onglet Données](../images/jupyterlab/create-recipe/dataset-tab.png) dans les notebooks sur la barre de navigation de gauche (sous l’icône de dossier). Trois identifiants de jeu de données différents doivent être fournis. Le `scoringResultsDataSetId` est utilisé pour stocker les résultats de notation du modèle et doit être un jeu de données vide. Ces jeux de données ont été créés précédemment dans l’étape [Ressources requises](#assets).
 
@@ -195,7 +195,7 @@ Une fois les données chargées, elles doivent être nettoyées et subir une pr�
 
 Une fois que vous avez supprimé toutes les données inutiles, vous pouvez commencer l’ingénierie des fonctionnalités. Les données de démonstration utilisées pour cet exemple ne contiennent aucune information de session. En règle générale, vous souhaiteriez disposer de données sur les sessions en cours et antérieures pour un client spécifique. En raison du manque d’informations sur la session, cet exemple imite plutôt les sessions actuelles et passées via la délimitation du parcours.
 
-![Délimitation du Parcours &#x200B;](../images/jupyterlab/create-recipe/journey_demarcation.png)
+![Délimitation du Parcours ](../images/jupyterlab/create-recipe/journey_demarcation.png)
 
 Une fois la délimitation terminée, les données sont étiquetées et un parcours est créé.
 

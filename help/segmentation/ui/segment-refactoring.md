@@ -4,9 +4,9 @@ title: Guide de l’interface utilisateur des contraintes de temps de la segment
 description: Le créateur de segments offre un vaste espace de travail qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 hidefromtoc: true
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: c7d71113ddcef6aca8b2637814b46e589a6b7fdf
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '352'
 ht-degree: 26%
 
 ---
@@ -24,7 +24,7 @@ Avant la version de janvier 2024, toutes les contraintes de temps au niveau des 
 
 Auparavant, un événement individuel pouvait être associé à plusieurs règles de contrainte de temps. Avec cette mise à jour récente, toute tentative d’ajout d’une contrainte de temps à une règle entraîne désormais une **erreur**.
 
-![La contrainte de temps au niveau de la règle est mise en surbrillance. L’erreur qui se produit ensuite est également mise en surbrillance. &#x200B;](../images/ui/segment-refactoring/rule-time-constraint.png)
+![La contrainte de temps au niveau de la règle est mise en surbrillance. L’erreur qui se produit ensuite est également mise en surbrillance.](../images/ui/segment-refactoring/rule-time-constraint.png)
 
 Les contraintes de temps ne peuvent désormais être appliquées qu’au niveau de la zone de travail ou de la carte.
 
@@ -38,6 +38,6 @@ Lors de l’application d’une contrainte de temps au niveau de la zone de trav
 
 ![La contrainte de temps au niveau de la zone de travail est mise en surbrillance.](../images/ui/segment-refactoring/canvas-time-constraint.png)
 
-Pour appliquer une contrainte de temps au niveau de la carte, sélectionnez la carte spécifique à laquelle vous souhaitez appliquer la contrainte de temps. Le conteneur **[!UICONTROL Règles d’événement]** s’affiche. Vous pouvez maintenant sélectionner la contrainte de temps que vous souhaitez appliquer à la carte.
+Pour appliquer une contrainte de temps au niveau de la carte, sélectionnez la carte spécifique à laquelle vous souhaitez appliquer la contrainte de temps. Le conteneur **[!UICONTROL Event Rules]** s’affiche. Vous pouvez maintenant sélectionner la contrainte de temps que vous souhaitez appliquer à la carte.
 
 ![La contrainte de temps au niveau de la carte est mise en surbrillance.](../images/ui/segment-refactoring/card-time-constraint.png)

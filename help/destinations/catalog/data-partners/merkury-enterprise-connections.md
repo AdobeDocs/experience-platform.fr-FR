@@ -3,10 +3,10 @@ title: Destination De Merkury Enterprise Connections
 description: Découvrez comment créer une connexion de destination Merkury Enterprise Connections à l’aide de l’interface utilisateur de Adobe Experience Platform.
 last-substantial-update: 2024-07-20T00:00:00Z
 exl-id: dffc6f4d-b756-4c13-96f3-b1cc57caacdb
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1375'
-ht-degree: 21%
+source-wordcount: '1370'
+ht-degree: 18%
 
 ---
 
@@ -39,8 +39,8 @@ Suivez les étapes de cette page de documentation pour créer une connexion de d
 
 >[!IMPORTANT]
 >
->* Pour vous connecter à la destination, vous avez besoin des **Afficher les destinations** et **Gérer les destinations**, **Activer les destinations**, **Afficher les profils** et **Afficher les segments** [[autorisations de contrôle d’accès]](https://experienceleague.adobe.com/fr/docs/experience-platform/access-control/home#permissions). Lisez la [[présentation du contrôle d’accès]](https://experienceleague.adobe.com/fr/docs/experience-platform/access-control/ui/overview) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous avez besoin de l’[[autorisation de contrôle d’accès]](https://experienceleague.adobe.com/fr/docs/experience-platform/access-control/home#permissions) **Afficher le graphique d’identités**.\![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
+>* Pour vous connecter à la destination, vous avez besoin des **Afficher les destinations** et **Gérer les destinations**, **Activer les destinations**, **Afficher les profils** et **Afficher les segments** [[autorisations de contrôle d’accès]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Lisez la [[présentation du contrôle d’accès]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous avez besoin de l’**[autorisation de contrôle d’accès]** [ Afficher le graphique d’identités](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).\![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
 
 ## Identités prises en charge {#supported-identities}
 
@@ -49,8 +49,8 @@ Suivez les étapes de cette page de documentation pour créer une connexion de d
 | GAID | GOOGLE ADVERTISING ID | Sélectionnez l’identité cible GAID lorsque votre identité source est un espace de noms GAID. |
 | IDFA | Identifiant Apple pour les annonceurs | Sélectionnez l’identité cible IDFA lorsque votre identité source est un espace de noms IDFA. |
 | ECID | Experience Cloud ID | Un espace de noms représentant l’ECID. Cet espace de noms peut également être référencé par les alias suivants : « ID Adobe Marketing Cloud », « ID Adobe Experience Cloud », « ID Adobe Experience Platform ». Pour plus d’informations, consultez le document suivant sur [ECID](/help/identity-service/features/ecid.md) . |
-| phone_sha256 | Numéros de téléphone hachés avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les numéros de téléphone hachés avec SHA256. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
-| email_lc_sha256 | Adresses e-mail hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses e-mail hachées avec SHA256. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
+| phone_sha256 | Numéros de téléphone hachés avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les numéros de téléphone hachés avec SHA256. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Apply transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
+| email_lc_sha256 | Adresses e-mail hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses e-mail hachées avec SHA256. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Apply transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
 | extern_id | ID d’utilisateur personnalisés | Sélectionnez cette identité cible lorsque votre identité source est un espace de noms personnalisé. |
 
 {style="table-layout:auto"}
@@ -62,7 +62,7 @@ Cette section décrit le type d’audiences que vous pouvez exporter vers cette 
 | **Audience** | **Pris en charge** | **Origine de la description** |
 |---|---|---|      
 | Service de segmentation | ✓ | Audiences générées via Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/fr/docs/experience-platform/segmentation/home). |
-| Chargements personnalisés | X | Les audiences [[importées]](https://experienceleague.adobe.com/fr/docs/experience-platform/segmentation/ui/overview#import-audience) dans Experience Platform à partir de fichiers CSV. |
+| Chargements personnalisés | X | Audiences [importées](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -72,8 +72,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | **Poste** | **Type** | **Notes** |
 |---|---|---|  
-| Type d’exportation | **Basé sur les profils** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma souhaités (par exemple : adresse e-mail, numéro de téléphone, nom), tels qu’ils ont été choisis dans l’écran de sélection des attributs de profil du [[workflow d’activation de destination]](https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations#select-attributes). |
-| Fréquence | **Lot** | Les destinations par lots exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur [[destinations de fréquence basées sur des fichiers par lots]](https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/destination-types#file-based). |
+| Type d’exportation | **Basé sur les profils** | Vous exportez tous les membres d’un segment, ainsi que les champs de schéma souhaités (par exemple : adresse e-mail, numéro de téléphone, nom), tels qu’ils ont été choisis dans l’écran de sélection des attributs de profil du [[workflow d’activation de destination]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations#select-attributes). |
+| Fréquence | **Lot** | Les destinations par lots exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur [[destinations de fréquence basées sur des fichiers par lots]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-types#file-based). |
 
 {style="table-layout:auto"}
 
@@ -81,9 +81,9 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin des [&#128279;](https://experienceleague.adobe.com/fr/docs/experience-platform/access-control/home#permissions) [autorisations de contrôle d’accès]&#x200B;**Afficher les destinations** et **Gérer et activer les destinations du jeu de données**. Lisez la [[présentation du contrôle d’accès]](https://experienceleague.adobe.com/fr/docs/experience-platform/access-control/ui/overview) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des ****[autorisations de contrôle d’accès]**Afficher les destinations** et [Gérer et activer les destinations du jeu de données](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Lisez la [[présentation du contrôle d’accès]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-Pour vous connecter à cette destination, procédez comme décrit dans le [[tutoriel sur la configuration des destinations]](https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/ui/connect-destination). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
+Pour vous connecter à cette destination, procédez comme décrit dans le [[tutoriel sur la configuration des destinations]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
 ### S’authentifier auprès de la destination
 
@@ -140,7 +140,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >* Pour exporter des identités, vous avez besoin de l’autorisation de contrôle d’accès **Afficher le graphique d’identités**.
 
 
-Lisez [Activer les données d’audience vers des destinations d’exportation de profils par lots](https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Lisez [Activer les données d’audience vers des destinations d’exportation de profils par lots](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ## Suggestions de mappage
 
@@ -169,7 +169,7 @@ Pour vérifier si l’exportation des données a réussi, vérifiez votre compar
 
 ## Utilisation et gouvernance des données
 
-Toutes les destinations Adobe Experience Platform sont conformes aux politiques d’utilisation des données lors de la gestion de vos données. Pour obtenir des informations détaillées sur la manière dont Adobe Experience Platform applique la gouvernance des données, lisez la [présentation de la gouvernance des données](https://experienceleague.adobe.com/fr/docs/experience-platform/data-governance/home).
+Toutes les destinations Adobe Experience Platform sont conformes aux politiques d’utilisation des données lors de la gestion de vos données. Pour obtenir des informations détaillées sur la manière dont Adobe Experience Platform applique la gouvernance des données, lisez la [présentation de la gouvernance des données](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
 
 ## Étapes suivantes
 

@@ -2,10 +2,10 @@
 title: Notes de mise à jour relatives aux balises et au transfert d’événements
 description: Dernières notes de mise à jour concernant les balises et le transfert d’événement dans Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: ht
-source-wordcount: '773'
-ht-degree: 100%
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+workflow-type: tm+mt
+source-wordcount: '771'
+ht-degree: 95%
 
 ---
 
@@ -28,6 +28,7 @@ La nouvelle extension suivante a été publiée :
 **Workflows de démarrage rapide (Beta)**
 
 Accédez aux nouveaux workflows de démarrage rapide sous « Prise en main » à partir de l’écran d’accueil Collecte de données. Les workflows suivants sont désormais disponibles pour les clientes et clients sous la forme d’une version Beta publique.
+
 * **[API Meta Conversions](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=fr#quick-start)** : les clientes et clients utilisant le transfert d’événement peuvent collecter et transférer rapidement des données d’événement côté serveur vers les métadonnées pour les conversions publicitaires en quelques étapes simples.
 * **[SDK mobile](https://developer.adobe.com/client-sdks/documentation/)** : les clientes et clients peuvent rapidement implémenter le SDK mobile et valider les événements mobiles de base en quelques étapes simples.
 
@@ -60,7 +61,7 @@ De nouvelles extensions ont été publiées :
 
 ## 28 septembre 2022
 
-* **Intégration à la navigation de gauche d’Adobe Experience Platform** : toutes les fonctionnalités qui étaient auparavant exclusives à l’interface utilisateur de collecte de données (y compris les balises et le transfert d’événement) sont désormais également disponibles via la navigation de gauche dans l’interface utilisateur d’Experience Platform, sous la catégorie **[!UICONTROL Collecte de données]**. Il n’est donc pas nécessaire de basculer entre les IU lors de l’utilisation des fonctionnalités de collecte de données dans Experience Platform.
+* **Intégration à la navigation de gauche de Adobe Experience Platform** : toutes les fonctionnalités qui étaient auparavant exclusives à l’interface utilisateur de la collecte de données (y compris les balises et le transfert d’événement) sont désormais également disponibles via la navigation de gauche dans l’interface utilisateur d’Experience Platform, sous la catégorie **[!UICONTROL Data Collection]**. Il n’est donc pas nécessaire de basculer entre les IU lors de l’utilisation des fonctionnalités de collecte de données dans Experience Platform.
 * **Attribution utilisateur dans les balises et le transfert d’événement** : lors de l’énumération des propriétés disponibles dans les balises et le transfert d’événement, chaque propriété répertoriée indique désormais la date de sa dernière mise à jour et la personne qui l’a effectuée.
 * Extension **[[!DNL Snap Conversions API] ](https://exchange.adobe.com/apps/ec/108550) pour le transfert d’événement** : vous pouvez désormais envoyer des données à l’[!DNL Snapchat Conversions API] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations sur la configuration et l’utilisation de l’API, voir la [[!DNL Snapchat Marketing API] documentation dédiée](https://marketingapi.snapchat.com/docs/conversion.html).
 

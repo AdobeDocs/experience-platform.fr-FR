@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;ingestion p
 solution: Experience Platform
 title: Diffusion de données de série temporelle à l’aide des API d’ingestion en flux continu
 type: Tutorial
-description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
+description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion en flux continu, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1214'
 ht-degree: 57%
@@ -402,7 +402,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails du [!DNL Profi
 | -------- | ----------- |
 | `{CONNECTION_ID}` | `inletId` de la connexion en continu créée précédemment. |
 | `xactionId` | Un identifiant unique généré côté serveur pour l’enregistrement que vous venez d’envoyer. Cet identifiant aide Adobe à suivre le cycle de vie de cet enregistrement sur différents systèmes et en cas de débogage. |
-| `receivedTimeMs` : un horodatage (en millisecondes) indiquant l’heure de réception de la requête. |
+| `receivedTimeMs` : un horodatage (en millisecondes) indiquant l’heure de réception de la requête. |  |
 | `syncValidation.status` | Le paramètre de requête `syncValidation=true` ayant été ajouté, cette valeur s’affiche. Si la validation a réussi, l’état est `pass`. |
 
 ## Récupération des données de série temporelle que vous venez d’ingérer
@@ -511,4 +511,4 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails des entités 
 
 En lisant ce document, vous comprenez désormais comment ingérer des données d’enregistrement dans des [!DNL Experience Platform] à l’aide de connexions en continu. Vous pouvez essayer d’effectuer plus d’appels avec des valeurs différentes et de récupérer les valeurs mises à jour. De plus, vous pouvez commencer à surveiller vos données ingérées via [!DNL Experience Platform]’interface utilisateur. Pour plus d’informations, consultez le guide de [surveillance de l’ingestion des données](../quality/monitor-data-ingestion.md).
 
-Pour plus d’informations sur l’ingestion par flux en général, consultez la [présentation de l’ingestion par flux](../streaming-ingestion/overview.md).
+Pour plus d’informations sur l’ingestion en flux continu en général, consultez la [présentation de l’ingestion en flux continu](../streaming-ingestion/overview.md).

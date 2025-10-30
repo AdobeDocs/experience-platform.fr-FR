@@ -2,10 +2,10 @@
 title: Point dʼentrée de recherche
 description: Découvrez comment effectuer des appels vers le point dʼentrée /search dans lʼAPI Reactor.
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '652'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -33,8 +33,9 @@ Toutes les requêtes sont limitées à votre entreprise actuelle et aux proprié
 >[!IMPORTANT]
 >
 >La fonctionnalité de recherche comporte les avertissements et exceptions suivants :
+>
 >* meta ne peut faire lʼobjet de recherches et nʼest pas renvoyé dans les résultats de recherche.
->* Les champs de schéma pour les délégués de packages dʼextension (actions, conditions, etc.) peuvent faire lʼobjet de recherches sous forme de texte, et non en tant que structure de données imbriquées.
+>* Les champs de schéma pour les délégués de packages d’extension (actions, conditions, etc.) peuvent faire l’objet de recherches sous forme de texte, et non de structure de données imbriquées.
 >* Actuellement, les requêtes de plage ne prennent en charge que les nombres entiers.
 
 Pour plus dʼinformations détaillées sur lʼutilisation de cette fonctionnalité, consultez le [guide de recherche](../guides/search.md).

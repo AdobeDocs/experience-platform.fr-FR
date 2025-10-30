@@ -2,10 +2,10 @@
 title: Champs de mappage pour le connecteur Source Adobe Analytics
 description: Mappez les champs Adobe Analytics aux champs XDM à l’aide du connecteur Source Analytics.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 316879afe8c94657156c768cdc14d4710da9fd35
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '3914'
-ht-degree: 25%
+source-wordcount: '3854'
+ht-degree: 22%
 
 ---
 
@@ -25,8 +25,8 @@ Lisez le tableau suivant pour plus d’informations sur les paramètres des méd
 | `videoaudioauthor` | `mediaReporting.sessionDetails.author` | Chaîne | Nom de l’auteur du média. |
 | `videoaudioartist` | `mediaReporting.sessionDetails.artist` | Chaîne | Nom de l’artiste ou du groupe qui effectue l’enregistrement musical ou la vidéo. |
 | `videoaudioalbum` | `mediaReporting.sessionDetails.album` | Chaîne | Nom de l’album auquel appartient la vidéo ou l’enregistrement musical. |
-| `videolength` | `mediaReporting.sessionDetails.length ` | Entier | Durée d’exécution de la vidéo. |
-| `videoshowtype` | `mediaReporting.sessionDetails.showType` | chaîne |
+| `videolength` | `mediaReporting.sessionDetails.length` | Entier | Durée d’exécution de la vidéo. |
+| `videoshowtype` | `mediaReporting.sessionDetails.showType` | chaîne |  |
 | `video` | `mediaReporting.sessionDetails.name` | chaîne | Identifiant de la vidéo. |
 | `videoshow` | `mediaReporting.sessionDetails.show` | Chaîne | Nom du programme ou de la série. Le nom du programme ou de la série n’est requis que si l’émission fait partie d’une série. |
 | `videostreamtype` | mediaReporting.sessionDetails.streamType | Chaîne | Type de média en flux continu tel que « vidéo » ou « audio ». |
@@ -34,12 +34,12 @@ Lisez le tableau suivant pour plus d’informations sur les paramètres des méd
 | `videoepisode` | `mediaReporting.sessionDetails.episode` | Chaîne | Numéro de l’épisode. |
 | `videogenre` | `mediaReporting.sessionDetails.genreList[]` | chaîne[] | Genre de la vidéo. |
 | `videosessionid` | `mediaReporting.sessionDetails.ID` | Chaîne | Identifiant d’une instance d’un flux de contenu spécifique à une lecture. |
-| `videoplayername` | `mediaReporting.sessionDetails.playerName ` | Chaîne | Nom du lecteur vidéo. |
+| `videoplayername` | `mediaReporting.sessionDetails.playerName` | Chaîne | Nom du lecteur vidéo. |
 | `videochannel` | `mediaReporting.sessionDetails.channel` | Chaîne | Canal de distribution à partir duquel le contenu a été lu. |
 | `videocontenttype` | `mediaReporting.sessionDetails.contentType` | Chaîne | Type de diffusion de flux utilisé pour le contenu. Cette valeur est automatiquement définie sur « Vidéo » pour toutes les vues vidéo. Les valeurs recommandées sont les suivantes : VOD, Live, Linear, UGC, DVOD, Radio, Podcast, Audiobook et Song. |
 | `videonetwork` | `mediaReporting.sessionDetails.network` | Chaîne | Nom du réseau ou du canal. |
 | `videofeedtype` | `mediaReporting.sessionDetails.feed` | Chaîne | Type de flux. Cela peut représenter les données réelles liées au flux, telles que « East HD » ou « SD », ou la source du flux, telle qu’une URL. |
-| `videosegment` | `mediaReporting.sessionDetails.segment` | Chaîne |
+| `videosegment` | `mediaReporting.sessionDetails.segment` | Chaîne |  |
 | `videostart` | `mediaReporting.sessionDetails.isViewed` | Booléen | Valeur booléenne qui indique si la vidéo a été démarrée ou non. Cela se produit une fois que l’utilisateur sélectionne le bouton de lecture et sera comptabilisé même s’il existe des publicités preroll, une mise en mémoire tampon, des erreurs, etc. |
 | `videoplay` | `mediaReporting.sessionDetails.isPlayed` | Booléen | Valeur booléenne qui indique si la première image du média a commencé. Si l’utilisateur ou l’utilisatrice abandonne au cours d’une publicité ou d’une période de mise en mémoire tampon, le « début du contenu » ne sera pas admissible. |
 | `videotime` | `mediaReporting.sessionDetails.timePlayed` | Entier | Durée (en secondes) de tous les événements de `type=PLAY` sur le contenu principal. |
@@ -57,7 +57,7 @@ Lisez le tableau suivant pour plus d’informations sur les paramètres des méd
 | `videopausetime` | `mediaReporting.sessionDetails.pauseTime` | Entier | Durée totale (en secondes) pendant laquelle la lecture a été mise en pause par un utilisateur. |
 | `videomvpd` | `mediaReporting.sessionDetails.mvpd` | Chaîne | Identifiant MVPD fourni via l’authentification Adobe. |
 | `videoauthorized` | `mediaReporting.sessionDetails.authorized` | Chaîne | Définit que l&#39;utilisateur a été autorisé via l&#39;authentification Adobe. |
-| `videodaypart` | `mediaReporting.sessionDetails.dayPart` | Définit l’heure de diffusion ou de lecture du contenu. |
+| `videodaypart` | `mediaReporting.sessionDetails.dayPart` | Définit l’heure de diffusion ou de lecture du contenu. |  |
 | `videoresume` | `mediaReporting.sessionDetails.hasResume` | Booléen | Valeur booléenne qui marque chaque lecture qui a été reprise après plus de 30 minutes de mise en mémoire tampon, de pause ou de période de blocage. |
 | `videosegmentviews` | `mediaReporting.sessionDetails.hasSegmentView` | Booléen | Valeur booléenne qui indique qu’au moins une image a été vue. Cette image n’a pas besoin d’être la première. |
 | `videoaudiolabel` | `mediaReporting.sessionDetails.label` | Chaîne | Nom de la maison de disques. |
@@ -133,7 +133,7 @@ Lisez le tableau suivant pour plus d&#39;informations sur les paramètres de qua
 | --- | --- | --- | --- |
 | `videoqoebitrateaverage` | `mediaReporting.qoeDataDetails.bitrateAverage` | nombre | Débit moyen (en Kbits/s, entier). Cette mesure est calculée sous la forme d’une moyenne pondérée de toutes les valeurs de débit liées à la durée de lecture au cours d’une session de lecture. |
 | `videoqoebitratechange` | `mediaReporting.qoeDataDetails.hasBitrateChangeImpactedStreams` | Booléen | Valeur booléenne qui indique le nombre de flux dans lesquels des changements de débit se sont produits. Cette mesure n’est définie sur « true » que si au moins un événement de changement de débit s’est produit au cours d’une session de lecture. |
-| `videoqoebitratechangecountevar` | `mediaReporting.qoeDataDetails.bitrateChangeCount` | Entier |
+| `videoqoebitratechangecountevar` | `mediaReporting.qoeDataDetails.bitrateChangeCount` | Entier |  |
 | `videoqoebitrateaverageevar` | `mediaReporting.qoeDataDetails.bitrateAverageBucket` | Chaîne | Nombre de modifications du débit. Cette valeur est calculée comme la somme de tous les événements de changement de débit qui se sont produits au cours d’une session de lecture. |
 | `videoqoetimetostartevar` | `mediaReporting.qoeDataDetails.timeToStart` | Entier | Durée, exprimée en secondes, écoulée entre le chargement et le démarrage de la vidéo. |
 | `videoqoedroppedframes` | `mediaReporting.qoeDataDetails.hasDroppedFrameImpactedStreams` | Booléen | Valeur booléenne qui indique le nombre de flux dans lesquels des images ont été perdues. Cette mesure n’est définie sur « true » que si au moins une image a été supprimée au cours d’une session de lecture. |
@@ -155,7 +155,7 @@ Lisez cette section pour plus d’informations sur les champs de mappage Analyti
 
 ### Champs de mappage direct
 
-+++Sélectionner pour afficher un tableau des champs de mappage direct obsolètes
++++Sélectionner cette option pour afficher un tableau des champs de mappage direct obsolètes
 
 | Flux de données | Champ XDM | Type XDM | Description |
 | --- | --- | --- | --- |
@@ -182,7 +182,7 @@ Lisez cette section pour plus d’informations sur les champs de mappage Analyti
 | `m_zip` | `_experience.analytics.customDimensions.`<br/>`postalCode` | chaîne | Variable utilisée pour remplir la dimension Code postal. |
 | `accept_language` | `environment.browserDetails.acceptLanguage` | chaîne | Liste de tous les langages acceptés, comme indiqué dans l’en-tête HTTP Accept-Language. |
 | `homepage` | `web.webPageDetails.isHomePage` | booléen | N’est plus utilisé. Indique si l’URL active est la page d’accueil du navigateur. |
-| `ipv6` | `environment.ipV6` | chaîne |
+| `ipv6` | `environment.ipV6` | chaîne |  |
 | `j_jscript` | `environment.browserDetails.javaScriptVersion` | chaîne | Version de JavaScript prise en charge par le navigateur. |
 | `user_agent` | `environment.browserDetails.userAgent` | chaîne | Chaîne de l’agent utilisateur envoyée dans l’en-tête HTTP. |
 | `mobileappid` | `application.name` | chaîne | Identifiant de l’application mobile, stocké au format suivant : `[AppName][BundleVersion]`. |
@@ -196,21 +196,21 @@ Lisez cette section pour plus d’informations sur les champs de mappage Analyti
 | `mobilebeaconmajor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMajor` | nombre | Relais Mobile Services majeur. |
 | `mobilebeaconminor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMinor` | nombre | Relais Mobile Services mineur. |
 | `mobilebeaconuuid` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximityUUID` | chaîne | UUID du relais Mobile Services. |
-| `mobileinstalls` | `application.firstLaunches` | Objet | Il est déclenché lors de la première exécution suivant l’installation ou la réinstallation | {id (string), value (number)} |
-| `mobileupgrades` | `application.upgrades` | objet | Indique le nombre de mises à niveau d’application. Se déclenche lors de la première exécution après mise à niveau ou dès que le numéro de version change. | {id (string), value (number)} |
-| `mobilelaunches` | `application.launches` | objet | Nombre de fois où l’application a été lancée. | {id (string), value (number)} |
-| `mobilecrashes` | `application.crashes` | objet |  | {id (string), value (number)} |
-| `mobilemessageclicks` | `directMarketing.clicks` | objet |  | {id (string), value (number)} |
-| `mobileplaceentry` | `placeContext.POIinteraction.poiEntries` | objet | | {id (string), value (number)} |
-| `mobileplaceexit` | `placeContext.POIinteraction.poiExits` | objet | | {id (string), value (number)} |
-| `videoqoetimetostart` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.timeToStart` | objet | Temps jusqu’au début de la qualité vidéo. | {id (string), value (number)} |
-| `videoqoedropbeforestart` | `media.mediaTimed.dropBeforeStarts` | objet | | {id (string), value (number)} |
-| `videoqoebuffercount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.buffers` | objet | Nombre de mémoires tampons de la qualité vidéo. | {id (string), value (number)} |
-| `videoqoebuffertime` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bufferTime` | objet | Période tampon de la qualité vidéo. | {id (string), value (number)} |
-| `videoqoebitratechangecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateChanges` | objet | Nombre de changements de la qualité vidéo. | {id (string), value (number)} |
-| `videoqoebitrateaverage` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateAverage` | objet | Débit moyen de la qualité vidéo. | {id (string), value (number)} |
-| `videoqoeerrorcount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.errors` | objet | Nombre d’erreurs de la qualité vidéo. | {id (string), value (number)} |
-| `videoqoedroppedframecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.droppedFrames` | objet | | {id (string), value (number)} |
+| `mobileinstalls` | `application.firstLaunches` | Objet | Il est déclenché lors de la première exécution suivant l’installation ou la réinstallation `{id (string), value (number)}` |
+| `mobileupgrades` | `application.upgrades` | objet | Indique le nombre de mises à niveau d’application. Se déclenche lors de la première exécution après mise à niveau ou dès que le numéro de version change. | `{id (string), value (number)}` |
+| `mobilelaunches` | `application.launches` | Objet | Nombre de lancements de l’application.  `{id (string), value (number)}` |
+| `mobilecrashes` | `application.crashes` | Objet | `{id (string), value (number)}` |
+| `mobilemessageclicks` | `directMarketing.clicks` | Objet | `{id (string), value (number)}` |
+| `mobileplaceentry` | `placeContext.POIinteraction.poiEntries` | Objet | `{id (string), value (number)}` |
+| `mobileplaceexit` | `placeContext.POIinteraction.poiExits` | Objet | `{id (string), value (number)}` |
+| `videoqoetimetostart` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.timeToStart` | Objet | Heure de début de la qualité vidéo. `{id (string), value (number)}` |
+| `videoqoedropbeforestart` | `media.mediaTimed.dropBeforeStarts` | Objet | `{id (string), value (number)}` |
+| `videoqoebuffercount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.buffers` | Objet | Nombre de tampons de qualité vidéo `{id (string), value (number)}` |
+| `videoqoebuffertime` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bufferTime` | Objet | `{id (string), value (number)}` de la durée du tampon de qualité vidéo |
+| `videoqoebitratechangecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateChanges` | Objet | Nombre de modifications de la qualité vidéo `{id (string), value (number)}` |
+| `videoqoebitrateaverage` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateAverage` | Objet | `{id (string), value (number)}` de débit moyen de qualité vidéo |
+| `videoqoeerrorcount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.errors` | Objet | Nombre d’erreurs de qualité vidéo `{id (string), value (number)}` |
+| `videoqoedroppedframecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.droppedFrames` | Objet | `{id (string), value (number)}` |
 
 {style="table-layout:auto"}
 
@@ -220,7 +220,7 @@ Lisez cette section pour plus d’informations sur les champs de mappage Analyti
 
 Certains champs provenant d’ADC doivent être transformés, ce qui nécessite la génération d’une logique au-delà d’une copie directe d’Adobe Analytics dans XDM.
 
-+++Sélectionner pour afficher un tableau des champs de mappage générés obsolètes
++++Sélectionnez cette option pour afficher un tableau des champs de mappage générés obsolètes
 
 | Flux de données | Champ XDM | Type XDM | Description |
 | --- | --- | --- | --- |
@@ -276,7 +276,7 @@ Certains champs provenant d’ADC doivent être transformés, ce qui nécessite 
 
 Ces champs ont une source unique, mais ils sont mappés à **plusieurs** emplacements XDM.
 
-+++Sélectionner pour afficher un tableau des champs de mappage de partage obsolètes
++++Sélectionner cette option pour afficher un tableau des champs de mappage de partage obsolètes
 
 | Flux de données | Champ XDM | Type XDM | Description |
 | --- | --- | --- | --- |
@@ -295,7 +295,7 @@ Le connecteur source Analytics envoie des données prétraitées dans un jeu de 
 
 Pour en savoir plus sur l’exécution de ces transformations à l’aide de Query Service, consultez [Fonctions définies par Adobe](/help/query-service/sql/adobe-defined-functions.md) dans le guide d’utilisation de Query Service.
 
-+++Sélectionner pour afficher un tableau des champs de mappage avancés obsolètes
++++Sélectionnez cette option pour afficher un tableau des champs de mappage avancés obsolètes
 
 | Flux de données | Champ XDM | Type XDM | Description |
 | — | — | — | — ||

@@ -2,9 +2,9 @@
 title: Ingestion de données chiffrées dans le Workspace de l’interface utilisateur des sources
 description: Découvrez comment ingérer des données chiffrées dans l’espace de travail de l’interface utilisateur des sources.
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: cad2cafdf39c718c3ba971eaa4e7f2318bd5f517
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1414'
 ht-degree: 9%
 
 ---
@@ -51,19 +51,19 @@ Vous pouvez créer votre paire de clés de chiffrement via l’interface utilisa
 
 >[!ENDSHADEBOX]
 
-Dans l’interface utilisateur d’Experience Platform, accédez à l’espace de travail des sources, puis sélectionnez [!UICONTROL Paires de clés] dans l’en-tête supérieur.
+Dans l’interface utilisateur d’Experience Platform, accédez à l’espace de travail des sources, puis sélectionnez [!UICONTROL Key Pairs] dans l’en-tête supérieur.
 
 ![Le catalogue de sources avec l’en-tête « Paires de clés » sélectionné.](../../images/tutorials/edi/catalog.png)
 
-Vous accédez à une page qui affiche la liste des paires de clés de chiffrement existantes dans votre organisation. Cette page fournit des informations sur le titre, l’identifiant, le type, l’algorithme de chiffrement, l’expiration et le statut d’une clé donnée. Pour créer une paire de clés, sélectionnez **[!UICONTROL Créer une clé]**.
+Vous accédez à une page qui affiche la liste des paires de clés de chiffrement existantes dans votre organisation. Cette page fournit des informations sur le titre, l’identifiant, le type, l’algorithme de chiffrement, l’expiration et le statut d’une clé donnée. Pour créer une paire de clés, sélectionnez **[!UICONTROL Create Key]**.
 
 ![Page Paires de clés, avec « clé de chiffrement » sélectionné comme type de clé et le bouton « créer une clé » sélectionné.](../../images/tutorials/edi/encryption_key_page.png)
 
-Choisissez ensuite le type de clé à créer. Pour créer une clé de chiffrement, sélectionnez **[!UICONTROL Clé de chiffrement]** puis **[!UICONTROL Continuer]**.
+Choisissez ensuite le type de clé à créer. Pour créer une clé de chiffrement, sélectionnez **[!UICONTROL Encryption Key]** puis **[!UICONTROL Continue]**.
 
 ![La fenêtre de création de la clé, avec la clé de chiffrement sélectionnée.](../../images/tutorials/edi/choose_encryption_key_type.png)
 
-Fournissez un titre et une phrase secrète pour votre clé de chiffrement. La phrase secrète est une couche supplémentaire de protection pour vos clés de chiffrement. Lors de sa création, Experience Platform stocke la phrase secrète dans un coffre sécurisé différent de celui de la clé publique. Vous devez fournir une chaîne non vide comme phrase secrète. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Créer]**.
+Fournissez un titre et une phrase secrète pour votre clé de chiffrement. La phrase secrète est une couche supplémentaire de protection pour vos clés de chiffrement. Lors de sa création, Experience Platform stocke la phrase secrète dans un coffre sécurisé différent de celui de la clé publique. Vous devez fournir une chaîne non vide comme phrase secrète. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Create]**.
 
 ![Fenêtre de création de la clé de chiffrement, dans laquelle un titre et une phrase secrète sont fournis.](../../images/tutorials/edi/create_encryption_key.png)
 
@@ -71,7 +71,7 @@ En cas de réussite, une nouvelle fenêtre s’affiche, affichant votre nouvelle
 
 ![Fenêtre qui affiche des informations sur la paire de clés de chiffrement que vous venez de créer.](../../images/tutorials/edi/encryption_key_details.png)
 
-Pour afficher des informations sur une clé de chiffrement existante, sélectionnez les points de suspension (`...`) à côté du titre de la clé. Sélectionnez **[!UICONTROL Détails de la clé]** pour afficher la clé publique et l’ID de clé. Pour supprimer la clé de chiffrement, vous pouvez également sélectionner **[!UICONTROL Supprimer]**.
+Pour afficher des informations sur une clé de chiffrement existante, sélectionnez les points de suspension (`...`) à côté du titre de la clé. Sélectionnez **[!UICONTROL Key details]** pour afficher la clé publique et l’ID de clé. Si vous souhaitez supprimer votre clé de chiffrement, vous pouvez également sélectionner **[!UICONTROL Delete]**.
 
 ![Page des paires de clés, où une liste des clés de chiffrement est affichée. Les points de suspension en regard de « acme-encryption-key » sont sélectionnés et la liste déroulante affiche des options pour afficher les détails de la clé ou supprimer les clés.](../../images/tutorials/edi/configuration_options.png)
 
@@ -90,11 +90,11 @@ Une clé de vérification de signature est un autre mécanisme de chiffrement qu
 
 >[!ENDSHADEBOX]
 
-Pour créer une clé de vérification de signature, sélectionnez **[!UICONTROL Clé de vérification de signature]** dans la fenêtre de sélection du type de clé, puis sélectionnez **[!UICONTROL Continuer]**.
+Pour créer une clé de vérification de signe, sélectionnez **[!UICONTROL Sign Verification Key]** dans la fenêtre de sélection du type de clé, puis sélectionnez **[!UICONTROL Continue]**.
 
 ![Fenêtre de sélection du type de clé dans laquelle la clé de vérification de signature est sélectionnée.](../../images/tutorials/edi/choose_sign_verification_key_type.png)
 
-Ensuite, fournissez un titre et une clé PGP codée en [!DNL Base64] comme clé publique, puis sélectionnez **[!UICONTROL Créer]**.
+Ensuite, fournissez un titre et une clé PGP codée en [!DNL Base64] comme clé publique, puis sélectionnez **[!UICONTROL Create]**.
 
 ![Fenêtre Créer une clé de vérification de signe.](../../images/tutorials/edi/create_sign_verification_key.png)
 
@@ -127,15 +127,15 @@ Vous pouvez ingérer des données chiffrées à l’aide des sources de lots de 
 * [[!DNL Oracle Object Storage]](../ui/create/cloud-storage/oracle-object-storage.md)
 * [[!DNL SFTP]](../ui/create/cloud-storage/sftp.md)
 
-Authentifiez-vous avec la source d’espace de stockage de votre choix. Au cours de l’étape de sélection des données du workflow, sélectionnez le fichier ou le dossier chiffré à ingérer, puis activez le bouton (bascule) **[!UICONTROL Le fichier est-il chiffré]**.
+Authentifiez-vous avec la source d’espace de stockage de votre choix. Au cours de l’étape de sélection des données du workflow, sélectionnez le fichier ou le dossier chiffré à ingérer, puis activez le bouton (bascule) **[!UICONTROL Is the file encrypted]**.
 
 ![Étape de « sélection des données » du workflow des sources, où un fichier de données chiffré est sélectionné pour l’ingestion.](../../images/tutorials/edi/select_data.png)
 
 Sélectionnez ensuite un exemple de fichier à partir de vos données source. Puisque vos données sont chiffrées, Experience Platform a besoin d’un exemple de fichier pour créer un schéma XDM qui peut être mappé à vos données source.
 
-![&#x200B; Le champ « Ce fichier est-il chiffré ? » Activation du bouton bascule et sélection du bouton « Sélectionner un fichier d’exemple ». &#x200B;](../../images/tutorials/edi/select_sample_file.png)
+![ Le champ « Ce fichier est-il chiffré ? » Activez le bouton bascule et cliquez sur le bouton « Sélectionner un fichier d’exemple »](../../images/tutorials/edi/select_sample_file.png).
 
-Une fois que vous avez sélectionné votre fichier d’exemple, configurez les paramètres de vos données, tels que le format de données, le délimiteur et le type de compression correspondants. Patientez quelques instants le temps que l’interface de prévisualisation effectue entièrement le rendu, puis sélectionnez **[!UICONTROL Enregistrer]**.
+Une fois que vous avez sélectionné votre fichier d’exemple, configurez les paramètres de vos données, tels que le format de données, le délimiteur et le type de compression correspondants. Patientez quelques instants le temps que l’interface d’aperçu effectue entièrement le rendu, puis sélectionnez **[!UICONTROL Save]**.
 
 ![Un exemple est sélectionné pour l’ingestion et l’aperçu du fichier est entièrement chargé.](../../images/tutorials/edi/file_preview.png)
 
@@ -147,7 +147,7 @@ Si vous avez également utilisé la paire de clés de vérification des signatur
 
 ![Titre de la clé de vérification de signature de l’ID de clé qui correspond à votre chiffrement de vérification de signature.](../../images/tutorials/edi/custom_key_id.png)
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]**.
 
 Suivez les étapes restantes du workflow des sources pour terminer la création de votre flux de données.
 
@@ -160,4 +160,4 @@ Vous pouvez continuer à [effectuer des mises à jour sur votre flux de données
 
 ## Étapes suivantes
 
-En lisant ce document, vous pouvez désormais ingérer des données chiffrées à partir de votre source de lots d’espace de stockage dans le cloud vers Experience Platform. Pour plus d’informations sur l’ingestion de données chiffrées à l’aide des API, consultez le guide sur l’[ingestion de données chiffrées à l’aide de l’API  [!DNL Flow Service] &#x200B;](../api/encrypt-data.md). Pour obtenir des informations générales sur les sources dans Experience Platform, lisez la [présentation des sources](../../home.md).
+En lisant ce document, vous pouvez désormais ingérer des données chiffrées à partir de votre source de lots d’espace de stockage dans le cloud vers Experience Platform. Pour plus d’informations sur l’ingestion de données chiffrées à l’aide des API, consultez le guide sur l’[ingestion de données chiffrées à l’aide de l’API  [!DNL Flow Service] ](../api/encrypt-data.md). Pour obtenir des informations générales sur les sources dans Experience Platform, lisez la [présentation des sources](../../home.md).

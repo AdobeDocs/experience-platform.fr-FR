@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 2c62ab01fe94e71095df33e24615fa7e596e84d3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '5248'
-ht-degree: 64%
+source-wordcount: '5161'
+ht-degree: 55%
 
 ---
 
@@ -52,21 +52,21 @@ Les blocs de création de base des définitions de segment sont les attributs et
 >
 >Cependant, un attribut n’aura **pas** de données récapitulatives s’il s’agit de données multi-entités liées au profil par le biais d’une relation. Par exemple, si vous disposez d’un schéma personnalisé appelé `Vehicle`, les **propriétés** du schéma `Vehicle` ne contiennent **pas** de données de résumé.
 
-Vous pouvez voir ces blocs de création dans la section **[!UICONTROL Champs]** sur le côté gauche de l’espace de travail [!DNL Segment Builder]. Les **[!UICONTROL champs]** contiennent un onglet pour chacun des blocs de création principaux : « [!UICONTROL attributs] », « [!UICONTROL événements] », et « [!UICONTROL audiences] ».
+Vous pouvez voir ces blocs de création dans la section **[!UICONTROL Fields]** sur le côté gauche de l’espace de travail [!DNL Segment Builder]. **[!UICONTROL Fields]** contient un onglet pour chacun des blocs de création principaux : « [!UICONTROL Attributes] », « [!UICONTROL Events] » et « [!UICONTROL Audiences] ».
 
 ![La section des champs du créateur de segments est mise en surbrillance.](../images/ui/segment-builder/segment-fields.png)
 
 ### Attributs
 
-L’onglet **[!UICONTROL Attributs]** vous permet de parcourir les attributs [!DNL Profile] appartenant à la classe [!DNL XDM Individual Profile]. Chaque dossier peut être développé pour afficher des attributs supplémentaires, où chaque attribut est une mosaïque qui peut être glissée sur la zone de travail du créateur de règles au centre de l’espace de travail. La [zone de travail du créateur de règles](#rule-builder-canvas) est abordée plus en détail dans la suite de ce guide.
+L’onglet **[!UICONTROL Attributes]** vous permet de parcourir [!DNL Profile] attributs appartenant à la classe [!DNL XDM Individual Profile]. Chaque dossier peut être développé pour afficher des attributs supplémentaires, où chaque attribut est une mosaïque qui peut être glissée sur la zone de travail du créateur de règles au centre de l’espace de travail. La [zone de travail du créateur de règles](#rule-builder-canvas) est abordée plus en détail dans la suite de ce guide.
 
 ![La section Attributs des champs du créateur de segments est mise en surbrillance.](../images/ui/segment-builder/attributes.png)
 
 ### Événements
 
-L’onglet **[!UICONTROL Événements]** vous permet de créer une audience basée sur des événements ou des actions qui ont eu lieu en utilisant des éléments de données [!DNL XDM ExperienceEvent] Vous pouvez également trouver les types d’événements dans l’onglet **[!UICONTROL Événements]**, qui sont une collection d’événements couramment utilisés pour vous permettre de créer vos définitions de segments plus rapidement.
+L’onglet **[!UICONTROL Events]** vous permet de créer une audience basée sur des événements ou des actions qui ont eu lieu à l’aide d’éléments de données [!DNL XDM ExperienceEvent]. Vous pouvez également trouver les types d’événements dans l’onglet **[!UICONTROL Events]** , qui sont une collection d’événements couramment utilisés pour vous permettre de créer vos définitions de segment plus rapidement.
 
-Outre la possibilité de rechercher des éléments [!DNL ExperienceEvent], vous pouvez également rechercher des types d’événements. Les types d’événements utilisent la même logique de codage que [!DNL ExperienceEvents] sans qu’il soit nécessaire de faire une recherche dans la classe [!DNL XDM ExperienceEvent] pour trouver l’événement correct. Par exemple, l’utilisation de la barre de recherche pour rechercher « cart » (panier) renvoie les types d’événements « [!UICONTROL AddCart] » et « [!UICONTROL RemoveCart] », qui sont deux actions liées au panier très couramment utilisées lors de la création de définitions de segment.
+Outre la possibilité de rechercher des éléments [!DNL ExperienceEvent], vous pouvez également rechercher des types d’événements. Les types d’événements utilisent la même logique de codage que [!DNL ExperienceEvents] sans qu’il soit nécessaire de faire une recherche dans la classe [!DNL XDM ExperienceEvent] pour trouver l’événement correct. Par exemple, l’utilisation de la barre de recherche pour rechercher « cart » (panier) renvoie les types d’événements « [!UICONTROL AddCart] » et « [!UICONTROL RemoveCart] », qui sont deux actions liées au panier très couramment utilisées lors de la création de définitions de segment.
 
 Vous pouvez rechercher n’importe quel type de composant en tapant son nom dans la barre de recherche, qui utilise la [syntaxe de recherche Lucene](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax). Les résultats de la recherche commencent à s’afficher au fur et à mesure que des mots entiers sont saisis. Par exemple, pour créer une règle basée sur le champ XDM `ExperienceEvent.commerce.productViews`, commencez à saisir « product views » dans le champ de recherche. Une fois le mot « product » saisi, les résultats de la recherche commencent à s’afficher. Chaque résultat inclut la hiérarchie d’objets à laquelle il appartient.
 
@@ -74,11 +74,11 @@ Vous pouvez rechercher n’importe quel type de composant en tapant son nom dans
 >
 >Les champs de schéma personnalisés définis par votre organisation peuvent mettre jusqu’à 24 heures pour s’afficher et être utilisables dans les règles de création.
 
-Vous pouvez ensuite facilement glisser-déposer [!DNL ExperienceEvents] et « [!UICONTROL Types d’évènement] » vers votre définition de segment.
+Vous pouvez ensuite facilement glisser-déposer des [!DNL ExperienceEvents] et des « [!UICONTROL Event Types] » dans votre définition de segment.
 
 ![La section événements de l’interface utilisateur du créateur de segments est mise en surbrillance.](../images/ui/segment-builder/events.png)
 
-Par défaut, seuls les champs de schéma renseignés de votre banque de données s’affichent. Cela inclut les « [!UICONTROL types d’événements] ». Si la liste des « [!UICONTROL types d’événements] » n’est pas visible, ou si vous ne pouvez sélectionner que « [!UICONTROL Any] » comme « [!UICONTROL type d’événement] », sélectionnez l’ **icône en forme d’engrenage** à côté de **[!UICONTROL Champs]**, puis sélectionnez **[!UICONTROL Afficher l’ensemble du schéma XDM]** sous **[!UICONTROL Champs disponibles]**. Sélectionnez à nouveau l’**icône en forme d’engrenage** pour revenir à l’onglet **[!UICONTROL Champs]**. Vous devriez maintenant pouvoir afficher plusieurs « [!UICONTROL types d’événements] » et champs de schéma, qu’ils contiennent des données ou non.
+Par défaut, seuls les champs de schéma renseignés de votre banque de données s’affichent. Cela inclut « [!UICONTROL Event Types] ». Si la liste « [!UICONTROL Event Types] » n’est pas visible, ou si vous ne pouvez sélectionner que « [!UICONTROL Any] » comme « [!UICONTROL Event Type] », sélectionnez l’icône **engrenage** en regard de **[!UICONTROL Fields]**, puis sélectionnez **[!UICONTROL Show full XDM schema]** sous **[!UICONTROL Available Fields]**. Sélectionnez à nouveau l’**icône d’engrenage** pour revenir à l’onglet **[!UICONTROL Fields]** . Vous devriez maintenant pouvoir afficher plusieurs champs de « [!UICONTROL Event Types] » et de schéma, qu’ils contiennent des données ou non.
 
 ![Les boutons radio qui vous permettent de choisir entre afficher uniquement les champs contenant des données ou tous les champs XDM sont mis en surbrillance.](../images/ui/segment-builder/show-populated.png)
 
@@ -139,7 +139,7 @@ Une fois les suites de rapports mappées, vous pouvez utiliser ces nouveaux cham
 
 L’onglet **[!UICONTROL Audiences]** répertorie toutes les audiences importées de sources externes, telles que Adobe Audience Manager ou Customer Journey Analytics, ainsi que les audiences créées dans [!DNL Experience Platform].
 
-Dans l’onglet **[!UICONTROL Audiences]**, vous pouvez voir toutes les sources disponibles sous la forme d’un groupe de dossiers. En sélectionnant ces dossiers, vous pouvez voir les sous-dossiers et les audiences disponibles. De plus, vous pouvez sélectionner l’icône du dossier (comme indiqué dans l’image située à l’extrême droite) afin de visualiser la structure des dossiers (une coche indique le dossier dans lequel vous vous trouvez actuellement) et de parcourir facilement les dossiers en sélectionnant le nom d’un dossier dans l’arborescence.
+Dans l’onglet **[!UICONTROL Audiences]** , vous pouvez voir toutes les sources disponibles sous la forme d’un groupe de dossiers. En sélectionnant ces dossiers, vous pouvez voir les sous-dossiers et les audiences disponibles. De plus, vous pouvez sélectionner l’icône du dossier (comme indiqué dans l’image située à l’extrême droite) afin de visualiser la structure des dossiers (une coche indique le dossier dans lequel vous vous trouvez actuellement) et de parcourir facilement les dossiers en sélectionnant le nom d’un dossier dans l’arborescence.
 
 Vous pouvez passer la souris sur l’option ⓘ située à côté d’une audience pour afficher des informations sur cette dernière, notamment son identifiant, sa description et la hiérarchie des dossiers permettant de la localiser.
 
@@ -157,7 +157,7 @@ Vous pouvez passer la souris sur l’option ⓘ située à côté d’une audien
 
 Une définition de segment est un ensemble de règles utilisées pour décrire les caractéristiques ou les comportements clés d’une audience cible. Ces règles sont créées à l’aide de la zone de travail du créateur de règles, au centre du [!DNL Segment Builder].
 
-Pour ajouter une nouvelle règle à votre définition de segment, faites glisser une mosaïque depuis l’onglet **[!UICONTROL Champs]** et déposez-la sur la zone de travail du créateur de règles. Des options spécifiques au contexte vous seront ensuite présentées en fonction du type de données ajouté. Les types de données disponibles sont les suivants : chaînes, dates, [!DNL ExperienceEvents], [!UICONTROL types d’événement], et audiences.
+Pour ajouter une nouvelle règle à votre définition de segment, faites glisser une mosaïque de l’onglet **[!UICONTROL Fields]** et déposez-la sur la zone de travail du créateur de règles. Des options spécifiques au contexte vous seront ensuite présentées en fonction du type de données ajouté. Les types de données disponibles sont les suivants : chaînes, dates, [!DNL ExperienceEvents], « [!UICONTROL Event Types] » et audiences.
 
 ![Zone de travail du créateur de règles vide.](../images/ui/segment-builder/rule-builder-canvas.png)
 
@@ -173,11 +173,11 @@ Si vous sélectionnez une valeur dans cette liste d’énumérations, elle sera 
 
 ![Avertissement qui s’affiche si vous insérez une valeur qui ne fait pas partie de la liste d’énumérations.](../images/ui/segment-builder/enum-warning.png)
 
-Si vous créez plusieurs valeurs, vous pouvez toutes les ajouter en même temps à l’aide du téléchargement massif. Sélectionnez l’![icône plus](/help/images/icons/add-circle.png) pour afficher la fenêtre contextuelle **[!UICONTROL Ajouter des valeurs en bloc]**.
+Si vous créez plusieurs valeurs, vous pouvez toutes les ajouter en même temps à l’aide du téléchargement massif. Sélectionnez l’icône ![plus](/help/images/icons/add-circle.png) pour afficher la fenêtre contextuelle de **[!UICONTROL Add values in bulk]**.
 
 ![L’icône plus est mise en surbrillance, affichant le bouton que vous pouvez sélectionner pour accéder à la fenêtre contextuelle de téléchargement massif.](../images/ui/segment-builder/add-bulk-values.png)
 
-Sur la fenêtre contextuelle **[!UICONTROL Ajouter des valeurs en bloc]**, vous pouvez télécharger un fichier CSV ou TSV.
+Sur la fenêtre contextuelle **[!UICONTROL Add values in bulk]**, vous pouvez charger un fichier CSV ou TSV.
 
 ![La fenêtre contextuelle Ajouter des valeurs en bloc s’affiche. La boîte de dialogue que vous pouvez sélectionner pour télécharger un fichier CSV ou TSV est mise en surbrillance.](../images/ui/segment-builder/bulk-values-popover.png)
 
@@ -196,7 +196,7 @@ Veuillez noter qu’un maximum de 250 valeurs est autorisé. Si vous dépassez 
 >title="Mises à jour de la recherche"
 >abstract="Le système de recherche existant a été mis à jour pour utiliser la recherche unifiée. La recherche unifiée vous permet de rechercher plus facilement et plus efficacement l’appartenance à un segment pour vos audiences."
 
-Vous pouvez faire glisser une audience depuis l’onglet **[!UICONTROL Audience]** sur la zone de travail du créateur de règles pour référencer l’appartenance à l’audience dans la nouvelle définition de segment. Cela vous permet d’inclure ou d’exclure l’appartenance à une audience en tant qu’attribut dans les nouvelles règles de définition de segment.
+Vous pouvez faire glisser et déposer une audience de l’onglet **[!UICONTROL Audience]** dans la zone de travail du créateur de règles pour référencer l’appartenance à une audience dans la nouvelle définition de segment. Cela vous permet d’inclure ou d’exclure l’appartenance à une audience en tant qu’attribut dans les nouvelles règles de définition de segment.
 
 Pour les [!DNL Experience Platform]audiences créées à l’aide du [!DNL Segment Builder], vous avez la possibilité de convertir l’audience en un ensemble de règles utilisées dans la définition de segment pour cette audience. Cette conversion effectue une copie de la logique de règle, qui peut ensuite être modifiée sans affecter la définition de segment d’origine. Assurez-vous d’avoir enregistré les modifications récentes apportées à votre définition de segment avant de la convertir en logique de règle.
 
@@ -210,23 +210,23 @@ Si des conflits surviennent lors de la conversion d’audiences en règles, le [
 
 ### Affichage du code
 
-Vous pouvez également afficher une version codée d’une règle créée dans le [!DNL Segment Builder]. Une fois que vous avez créé votre règle dans la zone de travail du créateur de règles, vous pouvez sélectionner **[!UICONTROL Affichage du code]** pour afficher votre définition de segment en PQL.
+Vous pouvez également afficher une version codée d’une règle créée dans le [!DNL Segment Builder]. Une fois que vous avez créé votre règle dans la zone de travail du créateur de règles, vous pouvez sélectionner **[!UICONTROL Code view]** pour afficher votre définition de segment sous la forme PQL.
 
 ![Le bouton d’affichage du code est mis en surbrillance, ce qui vous permet d’afficher la définition de segment en PQL.](../images/ui/segment-builder/code-view.png)
 
 L’affichage du code fournit un bouton qui vous permet de copier la valeur de la définition de segment à utiliser dans les appels d’API. Pour obtenir la dernière version de la définition de segment, assurez-vous d’avoir enregistré vos dernières modifications apportées à la définition de segment.
 
-![Le bouton « Copier le code » est mis en surbrillance, ce qui vous permet de &#x200B;](../images/ui/segment-builder/copy-code.png)
+![Le bouton « Copier le code » est mis en surbrillance, ce qui vous permet de ](../images/ui/segment-builder/copy-code.png)
 
 ### Fonctions d’agrégation
 
 Dans le [!DNL Segment Builder], une agrégation est un calcul effectué sur un groupe d’attributs XDM dont le type de données est un nombre (double ou entier). Les quatre fonctions d’agrégation prises en charge dans le créateur de segments sont SOMME, MOYENNE, MIN et MAX.
 
-Pour créer une fonction d’agrégation, sélectionnez un événement dans le rail de gauche, puis insérez-le dans le conteneur [!UICONTROL Événements].
+Pour créer une fonction d’agrégation, sélectionnez un événement dans le rail de gauche, puis insérez-le dans le conteneur [!UICONTROL Events].
 
 ![La section Événements est mise en surbrillance.](../images/ui/segment-builder/events.png)
 
-Après avoir placé l’événement dans le conteneur Événements, sélectionnez l’icône représentant des points de suspension (...), puis sélectionnez **[!UICONTROL Agréger]**.
+Après avoir placé l’événement dans le conteneur Événements, sélectionnez l’icône représentant des points de suspension (...), puis **[!UICONTROL Aggregate]**.
 
 ![Le texte agrégé est mis en surbrillance. En le sélectionnant, vous pouvez sélectionner des fonctions d’agrégation.](../images/ui/segment-builder/add-aggregation.png)
 
@@ -238,11 +238,11 @@ L’agrégation est maintenant ajoutée. Vous pouvez maintenant sélectionner la
 
 Dans le créateur de segments, les fonctions de comptage permettent de rechercher des événements spécifiques et de compter le nombre de fois qu’ils se produisent. Les fonctions de comptage prises en charge dans le créateur de segments sont « Au moins », « Au plus », « Exactement », « Entre » et « Tout ».
 
-Pour créer une fonction de comptage, sélectionnez un événement dans le rail de gauche et insérez-le dans un conteneur [!UICONTROL Événements].
+Pour créer une fonction de comptage, sélectionnez un événement dans le rail de gauche et insérez-le dans le conteneur [!UICONTROL Events].
 
 ![Les champs d’événement sont mis en surbrillance.](../images/ui/segment-builder/events.png)
 
-Après avoir placé l’événement dans le conteneur Événements, sélectionnez le bouton [!UICONTROL Au moins 1].
+Après avoir placé l’événement dans le conteneur Événements, sélectionnez le bouton [!UICONTROL At least 1] .
 
 ![L’option « Au moins » est mise en surbrillance, montrant la zone à sélectionner pour afficher la liste complète des fonctions de comptage.](../images/ui/segment-builder/add-count.png)
 
@@ -270,7 +270,7 @@ La liste des contraintes de temps disponibles est la suivante :
 >
 >Toutes les contraintes de temps sont basées sur le fuseau horaire UTC.
 >
->En outre, si la case [!UICONTROL Ignorer l’année] est activée, l’année n’est **pas** comparée dans le cadre de l’évaluation de la définition de segment.
+>En outre, si la case à cocher [!UICONTROL Ignore year] est activée, l’année n’est **pas** comparée dans le cadre de l’évaluation de la définition de segment.
 
 | Contrainte horaire | Description | Peut activer ignorer l’année | Exemple |
 | --------------- | ----------- | ------------------- | ------- |
@@ -281,7 +281,7 @@ La liste des contraintes de temps disponibles est la suivante :
 | Date personnalisée | L’attribut ou l’événement comparé **doit** se produire à la date donnée. | Oui | ![Exemple de contrainte d’heure « Date personnalisée » utilisée.](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
 | Au cours des | L’attribut ou l’événement comparé **doit** se produire au cours de la dernière période choisie. Cette période est **inclusive** jusqu’à l’heure de l’évaluation. | Non | ![Exemple de la contrainte d’heure « En dernier » utilisée.](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
 | De (vers) | L’attribut ou l’événement comparé **doit** se produire au cours des deux dates de calendrier sélectionnées. Cette période est **incluse** des deux dates. | Oui, si date personnalisée | ![Exemple de l’utilisation de « De à ».](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
-| Pendant | L’attribut ou l’événement comparé **doit** se produire au cours du mois ou de l’année sélectionné(e). Si un mois est sélectionné, vous devez choisir à la fois le mois et l’année au cours desquels l’attribut ou l’événement a eu lieu.  Si une année est sélectionnée, vous devez simplement choisir l’année dans laquelle l’attribut ou l’événement a eu lieu. Si vous sélectionnez un mois, vous pouvez également activer la case à cocher [!UICONTROL Ignorer l’année]. | Oui | ![Exemple de la contrainte de temps « During » utilisée.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
+| Pendant | L’attribut ou l’événement comparé **doit** se produire au cours du mois ou de l’année sélectionné(e). Si un mois est sélectionné, vous devez choisir à la fois le mois et l’année au cours desquels l’attribut ou l’événement a eu lieu.  Si une année est sélectionnée, vous devez simplement choisir l’année dans laquelle l’attribut ou l’événement a eu lieu. Si vous sélectionnez un mois, vous pouvez également activer la case à cocher [!UICONTROL Ignore year]. | Oui | ![Exemple de la contrainte de temps « During » utilisée.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
 | Dans (+/-) | L’attribut ou l’événement comparé **doit** se produire dans les jours, semaines, mois ou années suivant la date sélectionnée. Cette période est **incluse** des deux dates. La date sélectionnée peut être aujourd’hui, hier ou une autre date personnalisée de votre choix. | Oui | ![Exemple de contrainte de temps « Dans » utilisée.](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
 | Avant | L’attribut ou l’événement comparé **doit** se produire avant la date sélectionnée. La date sélectionnée peut être une date personnalisée de votre choix ou une sélection entre des jours, des semaines, des mois ou des années auparavant. | Oui | ![Exemple de contrainte de temps « Avant » utilisée.](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
 | Après | L’attribut ou l’événement comparé **doit** se produire après la date sélectionnée. La date sélectionnée peut être une date personnalisée de votre choix ou une sélection entre des jours, des semaines, des mois ou des années auparavant. | Oui | ![Exemple de contrainte de temps « After » utilisée.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
@@ -304,7 +304,7 @@ Lorsque vous appliquez une contrainte de temps au niveau de la zone de travail, 
 
 #### Contrainte au niveau de la carte
 
-Pour appliquer une contrainte au niveau de la carte, sélectionnez la carte sur laquelle vous souhaitez appliquer la contrainte de temps, puis l’icône représentant des points de suspension et **[!UICONTROL Appliquer la règle de temps]**. Vous pouvez ainsi sélectionner une contrainte de temps dans le conteneur **[!UICONTROL Règles d’événement]**.
+Pour appliquer une contrainte au niveau de la carte, sélectionnez la carte sur laquelle vous souhaitez appliquer la contrainte de temps, puis l’icône représentant des points de suspension et **[!UICONTROL Apply time rule]**. Vous pouvez ainsi sélectionner une contrainte de temps dans le conteneur de **[!UICONTROL Event Rules]**.
 
 ![Le sélecteur de contrainte de temps au niveau de la carte est mis en surbrillance.](../images/ui/segment-builder/time-constraints/card-level.png)
 
@@ -330,7 +330,7 @@ La liste des contraintes de temps disponibles pour cette opération diffère de 
 >[!NOTE]
 >
 >Lors de l’utilisation de la contrainte de temps « Après », le dernier événement peut avoir lieu plus longtemps que la durée répertoriée dans la contrainte de temps. >
->&#x200B;>Par exemple, si vous disposez d’un événement Page vue et d’un événement Passage en caisse et que vous appliquez la contrainte de temps « Après 1 heure » entre ces deux événements, une définition de segment avec un événement Passage en caisse 2 heures après l’événement Page vue est éligible.
+>>Par exemple, si vous disposez d’un événement Page vue et d’un événement Passage en caisse et que vous appliquez la contrainte de temps « Après 1 heure » entre ces deux événements, une définition de segment avec un événement Passage en caisse 2 heures après l’événement Page vue est éligible.
 >
 >En outre, ces deux contraintes de temps peuvent être utilisées en coordination l&#39;une avec l&#39;autre.
 >
@@ -342,17 +342,17 @@ La liste des contraintes de temps disponibles pour cette opération diffère de 
 
 Les règles de segmentation sont évaluées dans l’ordre dans lequel elles sont répertoriées. Les conteneurs permettent de contrôler l’ordre d’exécution grâce à l’utilisation de requêtes imbriquées.
 
-Une fois que vous avez ajouté au moins une mosaïque à la zone de travail du créateur de règles, vous pouvez commencer à ajouter des conteneurs. Pour créer un nouveau conteneur, sélectionnez les points de suspension (...) dans le coin supérieur droit du volet, puis sélectionnez **[!UICONTROL Ajouter un conteneur]**.
+Une fois que vous avez ajouté au moins une mosaïque à la zone de travail du créateur de règles, vous pouvez commencer à ajouter des conteneurs. Pour créer un nouveau conteneur, sélectionnez les points de suspension (...) dans le coin supérieur droit du volet, puis sélectionnez **[!UICONTROL Add container]**.
 
 ![Le bouton « Ajouter un conteneur » est mis en surbrillance, ce qui vous permet d’ajouter un conteneur en tant qu’enfant du premier conteneur.](../images/ui/segment-builder/add-container.png)
 
-Un nouveau conteneur apparaît comme la descendance du premier conteneur, mais vous pouvez réorganiser la hiérarchie en faisant glisser et en déplaçant les conteneurs. Le comportement par défaut d’un conteneur est d’« [!UICONTROL inclure] » l’attribut, l’audience ou l’événement fourni. Vous pouvez définir la règle pour « [!UICONTROL Exclure] » les profils qui correspondent aux critères du conteneur en sélectionnant **[!UICONTROL Inclure]** dans le coin supérieur gauche du volet et en sélectionnant « [!UICONTROL Exclure] ».
+Un nouveau conteneur apparaît comme la descendance du premier conteneur, mais vous pouvez réorganiser la hiérarchie en faisant glisser et en déplaçant les conteneurs. Le comportement par défaut d’un conteneur est de « [!UICONTROL Include] » l’attribut, l’événement ou l’audience fourni. Vous pouvez définir la règle pour les profils « [!UICONTROL Exclude] » qui correspondent aux critères du conteneur en sélectionnant **[!UICONTROL Include]** dans le coin supérieur gauche du volet et en sélectionnant « [!UICONTROL Exclude] ».
 
 Un conteneur enfant peut également être extrait et intégré au conteneur parent en sélectionnant « Déplier le conteneur » dans le conteneur enfant. Sélectionnez les points de suspension (...) dans le coin supérieur droit du conteneur enfant pour accéder à cette option.
 
 ![Les options permettant de déplier ou de supprimer le conteneur sont mises en surbrillance.](../images/ui/segment-builder/include-exclude.png)
 
-Après avoir selectionné **[!UICONTROL Déplier le conteneur]**, le conteneur enfant est supprimé et les critères intégrés apparaissent.
+Une fois que vous avez sélectionné **[!UICONTROL Unwrap container]** le conteneur enfant est supprimé, les critères intégrés apparaissent.
 
 >[!NOTE]
 >
@@ -371,7 +371,7 @@ Après avoir selectionné **[!UICONTROL Déplier le conteneur]**, le conteneur e
 
 Vous pouvez sélectionner une politique de fusion qui correspond à votre objectif marketing pour cette audience ou utiliser la politique de fusion par défaut fournie par [!DNL Experience Platform]. Vous pouvez créer plusieurs politiques de fusion propres à votre organisation, y compris créer votre propre politique de fusion par défaut. Pour obtenir des instructions détaillées sur la création de politiques de fusion pour votre organisation, commencez par lire la [présentation des politiques de fusion](../../profile/merge-policies/overview.md).
 
-Pour sélectionner une politique de fusion pour votre définition de segment, sélectionnez l’icône en forme d’engrenage dans l’onglet **[!UICONTROL Champs]**, puis utilisez le menu déroulant **[!UICONTROL Politique de fusion]** pour sélectionner la politique de fusion à utiliser.
+Pour sélectionner une politique de fusion pour votre définition de segment, sélectionnez l’icône en forme d’engrenage dans l’onglet **[!UICONTROL Fields]** , puis utilisez le menu déroulant **[!UICONTROL Merge Policy]** pour sélectionner la politique de fusion à utiliser.
 
 ![Le sélecteur de politique de fusion est mis en surbrillance. Vous pouvez ainsi choisir la politique de fusion à sélectionner pour votre définition de segment.](../images/ui/segment-builder/merge-policy-selector.png)
 
@@ -398,23 +398,23 @@ Pour sélectionner une politique de fusion pour votre définition de segment, s�
 >title="Profils estimés"
 >abstract="Les profils estimés indiquent un nombre approximatif de profils, en fonction de l’exemple de traitement, qui seraient qualifiés pour les règles de l’audience."
 
-Lors de la création d’une définition de segment, la section **[!UICONTROL Propriétés de l’audience]** située dans la partie droite de l’espace de travail affiche une estimation de la taille de la définition de segment obtenue, ce qui vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même.
+Lors de la création d’une définition de segment, la section **[!UICONTROL Audience properties]** située dans la partie droite de l’espace de travail affiche une estimation de la taille de la définition de segment obtenue, ce qui vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même.
 
-**[!UICONTROL Profils qualifiés]** indique le nombre **réel** de profils qui correspondent aux règles de la définition de segment. Ce nombre est mis à jour toutes les 24 heures, après l’exécution du traitement d’évaluation de segment.
+**[!UICONTROL Qualified Profiles]** indique le nombre **réel** de profils qui correspondent aux règles de la définition de segment. Ce nombre est mis à jour toutes les 24 heures, après l’exécution du traitement d’évaluation de segment.
 
 La date et l’heure des profils qualifiés indiquent la tâche d’évaluation de segment **par lots** la plus récente et s’affichent **non** pour les définitions de segment évaluées à l’aide de la segmentation Edge ou en flux continu. Si vous modifiez la définition de segment, le nombre de profils qualifiés restera le même jusqu’à l’exécution de la tâche d’évaluation de segment suivante.
 
-**[!UICONTROL Profils estimés]** indique une **plage approximative** de profils, en fonction de l’**exemple de tâche**. Cela signifie que les données d’exemple sont projetées sur le jeu de profils le plus volumineux, ce qui entraîne une estimation du nombre qui peut différer du nombre réel de profils qualifiés. L’échantillon de profil estimé a un intervalle de confiance de 95 %.
+**[!UICONTROL Estimated Profiles]** indique une **plage approximative** de profils, basée sur l’**exemple de tâche**. Cela signifie que les données d’exemple sont projetées sur le jeu de profils le plus volumineux, ce qui entraîne une estimation du nombre qui peut différer du nombre réel de profils qualifiés. L’échantillon de profil estimé a un intervalle de confiance de 95 %.
 
-Lorsque vous apportez des modifications aux règles de l’audience, vous pouvez sélectionner le bouton **[!UICONTROL Actualiser l’estimation]** pour afficher un nombre mis à jour de profils estimés. Toutefois, ce nombre est toujours basé sur l’exemple de tâche précédent. L’exemple de tâche est mis à jour lorsque la modification des données client est supérieure à 3 % ou que la dernière tâche d’exemple date de plus de trois jours.
+Lorsque vous apportez des modifications aux règles de l’audience, vous pouvez sélectionner le bouton **[!UICONTROL Refresh estimate]** pour afficher un nombre mis à jour de profils estimés. Toutefois, ce nombre est toujours basé sur l’exemple de tâche précédent. L’exemple de tâche est mis à jour lorsque la modification des données client est supérieure à 3 % ou que la dernière tâche d’exemple date de plus de trois jours.
 
 La sélection de la bulle d’informations indique la date et l’heure du dernier exemple de tâche exécutée.
 
 ![Les profils qualifiés et les profils estimés sont mis en surbrillance dans la section Propriétés de l’audience.](../images/ui/segment-builder/audience-estimates.png)
 
-La section **[!UICONTROL Propriétés de l’audience]** vous permet également de spécifier des informations importantes sur votre audience, y compris son nom, sa description et son type d’évaluation. Les noms sont utilisés pour identifier votre définition de segment parmi ceux définis par votre organisation et doivent donc être descriptifs, concis et uniques.
+La section **[!UICONTROL Audience properties]** vous permet également de spécifier des informations importantes sur votre audience, y compris son nom, sa description et son type d’évaluation. Les noms sont utilisés pour identifier votre définition de segment parmi ceux définis par votre organisation et doivent donc être descriptifs, concis et uniques.
 
-À mesure que vous continuez à créer votre audience, vous pouvez afficher un aperçu paginé de l’audience en sélectionnant **[!UICONTROL Afficher les profils]**.
+À mesure que vous continuez à créer votre audience, vous pouvez afficher un aperçu paginé de l’audience en sélectionnant **[!UICONTROL View Profiles]**.
 
 ![La section des propriétés de l’audience est mise en surbrillance. Les propriétés de l’audience incluent, sans s’y limiter, le nom, la description et la méthode d’évaluation.](../images/ui/segment-builder/segment-properties.png)
 
@@ -428,9 +428,9 @@ La section **[!UICONTROL Propriétés de l’audience]** vous permet également 
 
 Vous pouvez également sélectionner votre méthode d’évaluation. Si vous savez quelle méthode d’évaluation vous voulez utiliser, vous pouvez sélectionner la méthode d’évaluation souhaitée à l’aide de la liste déroulante. Si vous souhaitez savoir pour quels types d’évaluation cette définition de segment est admissible, vous pouvez sélectionner l’icône Parcourir ![icône de dossier avec une loupe](/help/images/icons/folder-search.png) pour voir la liste des méthodes d’évaluation de définition de segment disponibles.
 
-L’[!UICONTROL Éligibilité de la méthode d’évaluation] s’affiche. Cette fenêtre contextuelle affiche les méthodes d’évaluation disponibles, à savoir par lots, en flux continu et Edge. La fenêtre contextuelle affiche les méthodes d’évaluation éligibles et non éligibles. Selon les paramètres que vous avez utilisés dans votre définition de segment, il se peut qu’elle ne soit pas admissible pour certaines méthodes d’évaluation. Pour plus d’informations sur les exigences de chaque méthode d’évaluation, veuillez lire les présentations sur la [segmentation en flux continu](../methods/streaming-segmentation.md#query-types) ou la [segmentation Edge](../methods/edge-segmentation.md#query-types).
+La fenêtre contextuelle [!UICONTROL Evaluation method eligibility] s’affiche. Cette fenêtre contextuelle affiche les méthodes d’évaluation disponibles, à savoir par lots, en flux continu et Edge. La fenêtre contextuelle affiche les méthodes d’évaluation éligibles et non éligibles. Selon les paramètres que vous avez utilisés dans votre définition de segment, il se peut qu’elle ne soit pas admissible pour certaines méthodes d’évaluation. Pour plus d’informations sur les exigences de chaque méthode d’évaluation, veuillez lire les présentations sur la [segmentation en flux continu](../methods/streaming-segmentation.md#query-types) ou la [segmentation Edge](../methods/edge-segmentation.md#query-types).
 
-Vous pouvez également modifier la méthode d’évaluation de la définition de segment une fois que vous avez terminé de la créer. Si vous modifiez la méthode d’évaluation d’Edge ou de Streaming en Batch, vous ne pourrez **pas** la remodifier en Edge ou en Streaming. La modification de la méthode d’évaluation **uniquement** prend effet une fois que vous avez sélectionné **[!UICONTROL Enregistrer]** dans la fenêtre contextuelle. L’annulation de la boîte de dialogue **conserve** la méthode d’évaluation d’origine.
+Vous pouvez également modifier la méthode d’évaluation de la définition de segment une fois que vous avez terminé de la créer. Si vous modifiez la méthode d’évaluation d’Edge ou de Streaming en Batch, vous ne pourrez **pas** la remodifier en Edge ou en Streaming. La modification de la méthode d’évaluation **uniquement** prend effet une fois que vous avez sélectionné **[!UICONTROL Save]** dans la fenêtre contextuelle. L’annulation de la boîte de dialogue **conserve** la méthode d’évaluation d’origine.
 
 ![La fenêtre contextuelle d’éligibilité de la méthode d’évaluation s’affiche. Elle affiche les méthodes d’évaluation éligibles et non éligibles pour la définition de segment.](../images/ui/segment-builder/select-evaluation-method.png)
 

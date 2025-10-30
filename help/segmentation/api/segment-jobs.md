@@ -4,7 +4,7 @@ title: Point d’entrée de l’API des tâches de segmentation
 description: Le point d’entrée des tâches de segment de l’API Segmentation Service de Adobe Experience Platform vous permet de gérer par programmation les tâches de segment pour votre organisation.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1232'
 ht-degree: 18%
@@ -43,7 +43,7 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `start` | Spécifie le décalage de départ pour les tâches de segmentation renvoyées. | `start=1` |
 | `limit` | Spécifie le nombre de tâches de segmentation renvoyées par page. | `limit=20` |
 | `status` | Filtre les résultats selon l’état. Les valeurs prises en charge sont : NEW (nouveau), QUEUED (file d’attente), PROCESSING (traitement en cours), SUCCEEDED (réussite), FAILED (échec), CANCELLING (annulation en cours), CANCELLED (annulé). | `status=NEW` |
-| `sort` | Commande les tâches de segmentation renvoyées. Codé au format `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
+| `sort` | Commande les tâches de segmentation renvoyées. Est écrit au format `[attributeName]:[desc|asc]`. `sort=creationTime:desc` |
 | `property` | Filtre les tâches de segmentation et obtient des correspondances exactes pour le filtre donné. Peut être codé dans l’un des formats suivants : <ul><li>`[jsonObjectPath]==[value]` : filtrage sur la clé d’objet</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` : filtrage dans le tableau</li></ul> | `property=segments~segmentId==workInUS` |
 
 +++
@@ -70,7 +70,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de tâches de seg
 >
 >La réponse suivante a été tronquée pour des raisons d’espace et n’affichera que le premier traitement renvoyé.
 
-+++ Exemple de réponse lors de la récupération d’une liste de tâches de segmentation.
++++ Exemple de réponse lors de la récupération d’une liste de tâches de segmentation. 
 
 ```json
 {

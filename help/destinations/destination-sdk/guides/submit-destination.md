@@ -2,7 +2,7 @@
 description: Cette page fournit toutes les informations dont vous avez besoin pour envoyer une destination personnalisée pour révision lorsqu’elle est créée à l’aide de Destination SDK.
 title: Envoyer une destination personnalisée pour révision
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1045'
 ht-degree: 35%
@@ -47,7 +47,7 @@ Vous trouverez des informations détaillées sur chaque élément dans les secti
 
 Fournissez une description des cas d’utilisation que votre destination résout pour les clients Experience Platform. Vos descriptions peuvent être similaires aux cas d’utilisation des partenaires existants :
 
-* [Pinterest &#x200B;](/help/destinations/catalog/advertising/pinterest.md) : créez des audiences à partir de vos listes de clients, des personnes qui ont visité votre site ou de celles qui ont déjà interagi avec votre contenu sur Pinterest.
+* [Pinterest ](/help/destinations/catalog/advertising/pinterest.md) : créez des audiences à partir de vos listes de clients, des personnes qui ont visité votre site ou de celles qui ont déjà interagi avec votre contenu sur Pinterest.
 * [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases) : les API DataX sont disponibles pour les annonceurs qui souhaitent cibler un groupe d’audiences spécifique dont les adresses e-mail sont désactivées dans Verizon Media (VMG). Ils peuvent rapidement créer une nouvelle audience et envoyer le groupe d’audiences souhaité à l’aide de l’API en temps quasi réel de VMG.
 
 ## Motif de la mise à jour {#reason-for-update}
@@ -263,6 +263,7 @@ Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur 
 Le catalogue des destinations comprend un logo pour chaque carte de destination. Incluez dans votre e-mail une image avec le logo de votre destination.
 
 Les exigences relatives aux images sont les suivantes :
+
 * **Format** : `SVG`
 * **Taille** : moins de 2 Mo
 

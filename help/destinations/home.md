@@ -2,10 +2,10 @@
 title: Présentation des destinations
 description: Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant dʼAdobe Experience Platform. Vous pouvez utiliser les destinations dans Adobe Experience Platform pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1368'
-ht-degree: 48%
+source-wordcount: '1296'
+ht-degree: 49%
 
 ---
 
@@ -61,12 +61,12 @@ Le tableau suivant décrit les autorisations et combinaisons d’autorisations r
 
 | Niveau d’autorisation | Description |
 | ---- | ---- |
-| **[!UICONTROL Affichage des destinations]** | Pour accéder à l’onglet Destinations dans l’interface utilisateur d’Experience Platform, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher les destinations]** [&#128279;](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Affichage Des Destinations]**, **[!UICONTROL Gestion Des Destinations]** | Pour vous connecter aux destinations, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Affichage des profils]** et **[!UICONTROL Affichage des segments]** | Pour activer les audiences vers les destinations et activer l’[étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous devez disposer des **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Affichage des profils]** et **[!UICONTROL Affichage des segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation de segments sans mappage]**, **[!UICONTROL Affichage des profils]** et **[!UICONTROL Affichage des segments]** | Pour ajouter ou supprimer des audiences de flux de données existants sans avoir accès à l’[étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous devez disposer des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer des segments sans mappage]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Gestion et activation des destinations de jeu de données]** | Pour exporter des jeux de données vers des destinations, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer et activer les destinations de jeu de données]** [&#128279;](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Afficher un graphique d’identité]** | Pour exporter des *identités* vers les destinations, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"} |
+| **[!UICONTROL View Destinations]** | Pour accéder à l’onglet Destinations dans l’interface utilisateur d’Experience Platform, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Destinations]** [Access Control](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage Destinations]** | Pour vous connecter aux destinations, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** | Pour activer les audiences vers les destinations et activer l’[étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** | Pour ajouter ou supprimer des audiences de flux de données existants sans avoir accès à l’[étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous devez disposer des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage and Activate Dataset Destinations]** | Pour exporter des jeux de données vers des destinations, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage and Activate Dataset Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Identity Graph]** | Pour exporter des *identités* vers des destinations, vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[ access control](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Pour plus d’informations sur le fonctionnement des destinations avec les contr
 
 ## Suppression de profils des destinations {#profile-removal}
 
-Lorsqu’un profil est supprimé d’une audience activée vers une destination, ce profil est également supprimé de l’audience correspondante dans la plateforme de destination. Par exemple, si un profil est supprimé d’une audience précédemment activée sur LinkedIn, ce profil est supprimé de l’[!UICONTROL audience correspondante LinkedIn] associée.
+Lorsqu’un profil est supprimé d’une audience activée vers une destination, ce profil est également supprimé de l’audience correspondante dans la plateforme de destination. Par exemple, si un profil est supprimé d’une audience précédemment activée sur LinkedIn, ce profil est supprimé de l’[!UICONTROL LinkedIn Matched Audience] associée.
 
 La suppression de profils des destinations, également appelée non segmentation, se produit à la même cadence que la segmentation. Dès qu’un profil est supprimé d’une audience dans Experience Platform, le prochain flux de données planifié vers la destination reflète cette modification et supprime le profil de l’audience de destination.
 
@@ -115,10 +115,10 @@ Pour plus d’informations sur la sélection d’actions marketing dans le workf
 * [Destinations publicitaires - Google Ads](./catalog/advertising/google-ads-destination.md)
 * [Destinations publicitaires - Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
 * [Destinations de stockage dans le cloud](./catalog/cloud-storage/overview.md)
-* [Destinations de marketing par e-mail &#x200B;](./catalog/email-marketing/overview.md)
+* [Destinations de marketing par e-mail ](./catalog/email-marketing/overview.md)
 * [Destinations sociales](./catalog/social/overview.md)
 
-Pour plus d’informations sur les violations de politique de données dans le workflow Audience Activation, voir l’étape **[!UICONTROL Révision]** dans les guides suivants :
+Pour plus d’informations sur les violations de politique de données dans le workflow d’activation d’audience, consultez l’étape **[!UICONTROL Review]** dans les guides suivants :
 
 * [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](./ui/activate-segment-streaming-destinations.md#review)
 * [Activer les données d’audience vers des destinations d’exportation de profils de diffusion en continu](./ui/activate-streaming-profile-destinations.md#review)

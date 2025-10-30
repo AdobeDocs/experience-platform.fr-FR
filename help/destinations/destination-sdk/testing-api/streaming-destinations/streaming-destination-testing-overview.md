@@ -2,7 +2,7 @@
 description: Découvrez comment utiliser l’API de test de destination pour tester votre configuration de destination de diffusion en streaming avant de la publier.
 title: Vue d’ensemble de l’API de test de destination en streaming
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 100%
@@ -25,10 +25,12 @@ L’illustration ci-dessous montre comment le test de la destination s’intègr
 Utilisez l’outil de test de destination pour tester la configuration de la destination en envoyant des messages au point d’entrée de partenaire que vous avez fourni dans la [configuration du serveur](../../authoring-api/destination-server/create-destination-server.md).
 
 Avant d’utiliser l’outil, veillez à :
+
 * configurer la destination en suivant les étapes décrites dans le [workflow de configuration des destinations](../../authoring-api/destination-configuration/create-destination-configuration.md) ; et
 * établir une connexion à la destination, comme indiqué dans la section [Comment obtenir l’identifiant d’instance de destination](../../testing-api/streaming-destinations/destination-testing-api.md#get-destination-instance-id).
 
 Avec cet outil, après avoir configuré la destination, vous pouvez :
+
 * tester si la destination est correctement configurée ;
 * vérifier l’intégrité des flux de données vers la destination configurée.
 
@@ -43,6 +45,7 @@ Vous pouvez appeler le point d’entrée de l’API de test de destination avec 
 Si vous n’ajoutez aucun profil à la requête, Adobe les génère en interne et les ajoute à la requête. Si vous souhaitez générer des profils à utiliser dans cette requête, consultez la [référence d’API de génération de profils types](../../testing-api/streaming-destinations/sample-profile-generation-api.md). Vous devez générer des profils en fonction du schéma XDM source, comme indiqué dans la [référence d’API](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema). Notez que le schéma source est le [schéma d’union](../../../../profile/ui/union-schema.md) du sandbox que vous utilisez.
 
 La réponse contient le résultat du traitement de la requête de destination. La requête comprend trois sections principales :
+
 * La requête générée par Adobe pour la destination.
 * La réponse de la destination reçue.
 * La liste des profils envoyés dans la requête, si les profils ont été [ajoutés par vous dans la requête](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles), ou générés par Adobe si [le corps de la requête de test de destination était vide](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles).

@@ -5,10 +5,10 @@ title: Point d’entrée des plannings
 description: Les sections suivantes décrivent les différents appels API que vous pouvez effectuer pour les requêtes planifiées avec l’API Query Service.
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 10c0c5c639226879b1ca25391fc4a1006cf40003
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1410'
-ht-degree: 46%
+source-wordcount: '1409'
+ht-degree: 44%
 
 ---
 
@@ -26,7 +26,7 @@ Les requêtes créées avec un compte d’utilisateur personnel échouent si l�
 >
 >Points importants lors de la gestion des requêtes planifiées :<ul><li>Les requêtes planifiées échouent si le compte (technique ou utilisateur) utilisé pour les créer perd l’accès ou les autorisations.</li><li>Les requêtes planifiées doivent être désactivées avant la suppression via l’API ou l’interface utilisateur.</li><li>La planification indéfinie sans date de fin n’est pas prise en charge ; une date de fin doit toujours être spécifiée.</li></ul>
 
-Pour obtenir des conseils détaillés sur les exigences du compte, la configuration des autorisations et la gestion des requêtes planifiées, consultez la documentation [Plannings de requête](../ui/query-schedules.md#technical-account-user-requirements). Pour obtenir des instructions détaillées sur la création et la configuration d’un compte technique, reportez-vous aux sections [Configuration de Developer Console](https://experienceleague.adobe.com/fr/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) et [Configuration de compte technique de bout en bout](https://experienceleague.adobe.com/fr/docs/platform-learn/tutorial-comprehensive-technical/setup).
+Pour obtenir des conseils détaillés sur les exigences du compte, la configuration des autorisations et la gestion des requêtes planifiées, consultez la documentation [Plannings de requête](../ui/query-schedules.md#technical-account-user-requirements). Pour obtenir des instructions détaillées sur la création et la configuration d’un compte technique, reportez-vous aux sections [Configuration de Developer Console](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) et [Configuration de compte technique de bout en bout](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup).
 
 ## Exemples d’appels API
 
@@ -176,7 +176,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.sql` | Requête SQL à exécuter selon le planning défini. |
 | `query.name` | Le nom de la requête planifiée. |
 | `query.description` | Description facultative de la requête planifiée. |
-| `schedule.schedule` | Le planning cron de la requête. Reportez-vous à [Crontab.guru](https://crontab.guru/) pour une méthode interactive de création, de validation et de compréhension des expressions cron. Dans cet exemple, « 30 * * * * » signifie que la requête s’exécute toutes les heures à la 30e minute.<br><br>Vous pouvez également utiliser les expressions courtes suivantes :<ul><li>`@once` : la requête s’exécute une seule fois.</li><li>`@hourly` : la requête s’exécute toutes les heures au début de l’heure. Cela équivaut à l’expression cron `0 * * * *`.</li><li>`@daily` : la requête s’exécute une fois par jour à minuit. Cela équivaut à l’expression cron `0 0 * * *`.</li><li>`@weekly` : la requête s’exécute une fois par semaine, le dimanche, à minuit. Cela équivaut à l’expression cron `0 0 * * 0`.</li><li>`@monthly` : la requête s’exécute une fois par mois, le premier jour du mois, à minuit. Cela équivaut à l’expression cron `0 0 1 * *`.</li><li>`@yearly` : la requête s’exécute une fois par an, le 1er janvier à minuit. Cela équivaut à l’expression cron `0 0 1 1 *`. |
+| `schedule.schedule` | Le planning cron de la requête. Reportez-vous à [Crontab.guru](https://crontab.guru/) pour une méthode interactive de création, de validation et de compréhension des expressions cron. Dans cet exemple, « `30 * * * *` » signifie que la requête s’exécutera toutes les heures au bout de 30 minutes.<br><br>Vous pouvez également utiliser les expressions courtes suivantes :<ul><li>`@once` : la requête s’exécute une seule fois.</li><li>`@hourly` : la requête s’exécute toutes les heures au début de l’heure. Cela équivaut à l’expression cron `0 * * * *`.</li><li>`@daily` : la requête s’exécute une fois par jour à minuit. Cela équivaut à l’expression cron `0 0 * * *`.</li><li>`@weekly` : la requête s’exécute une fois par semaine, le dimanche, à minuit. Cela équivaut à l’expression cron `0 0 * * 0`.</li><li>`@monthly` : la requête s’exécute une fois par mois, le premier jour du mois, à minuit. Cela équivaut à l’expression cron `0 0 1 * *`.</li><li>`@yearly` : la requête s’exécute une fois par an, le 1er janvier à minuit. Cela équivaut à l’expression cron `0 0 1 1 *`. |
 | `schedule.startDate` | La date de début de votre requête planifiée, écrite en tant qu’horodatage en UTC. |
 
 **Réponse**

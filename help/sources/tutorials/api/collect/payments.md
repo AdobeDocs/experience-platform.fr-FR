@@ -5,7 +5,7 @@ title: Créez un flux de données pour les sources de paiements à l’aide de l
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une application de paiements et les ingérer dans Experience Platform à l’aide des connecteurs source et des API.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 75%

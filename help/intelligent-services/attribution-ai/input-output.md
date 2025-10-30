@@ -4,9 +4,9 @@ feature: Attribution AI
 title: Entrée et sortie dans Attribution AI
 description: Le document suivant décrit les différentes entrées et sorties utilisées dans l’IA dédiée à l’attribution.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '2474'
+source-wordcount: '2467'
 ht-degree: 13%
 
 ---
@@ -41,7 +41,7 @@ Vous pouvez configurer les points de contact à l’aide des champs recommandés
 
 | Colonnes recommandées | Nécessaire pour |
 | --- | --- |
-| Champ d’identité du Principal | Point de contact/conversion |
+| Champ d’identité principale | Point de contact/conversion |
 | Date et heure | Point de contact/conversion |
 | Canal._type | Point de contact |
 | Channel.mediaAction | Point de contact |
@@ -64,6 +64,7 @@ Les jeux de données d’événement d’expérience (EE) n’ont pas besoin de 
 >[!IMPORTANT]
 >
 > La quantité minimale de données nécessaire au fonctionnement de l’IA dédiée à l’attribution est la suivante :
+>
 > - Vous devez fournir au moins 3 mois (90 jours) de données pour exécuter un modèle correct.
 > - Vous avez besoin d’au moins 1 000 conversions.
 
@@ -102,9 +103,10 @@ L’IA dédiée à l’attribution génère les scores d’attribution au niveau
 
 >[!NOTE]
 >
-> Vous pouvez afficher n’importe quelle colonne de création de rapports souhaitée à partir du jeu de données d’entrée dans le jeu de données de sortie de score uniquement si l’une des conditions suivantes est vraie :
-> - La colonne de création de rapports est incluse dans la page de configuration dans le cadre de la configuration des points de contact ou des définitions de conversion.
-> - La colonne de rapport est incluse dans les colonnes supplémentaires du jeu de données de note.
+>Vous pouvez afficher n’importe quelle colonne de création de rapports souhaitée à partir du jeu de données d’entrée dans le jeu de données de sortie de score uniquement si l’une des conditions suivantes est vraie :
+>
+>- La colonne de création de rapports est incluse dans la page de configuration dans le cadre de la configuration des points de contact ou des définitions de conversion.
+>- La colonne de rapport est incluse dans les colonnes supplémentaires du jeu de données de note.
 
 Le tableau suivant décrit les champs de schéma dans l’exemple de sortie de scores bruts :
 
@@ -137,18 +139,18 @@ Le tableau suivant décrit les champs de schéma dans l’exemple de sortie de s
 | identity (objet) | False | Contient les détails de l’utilisateur ou de l’utilisatrice utilisé(e) pour créer le modèle, tels que `id` et `namespace`. |
 | id (chaîne) | True | ID d’identité de l’utilisateur tel que l’ID de cookie, l’ID Adobe Analytics (AAID) ou l’ID Experience Cloud (ECID, également appelé MCID ou en tant qu’ID de visiteur), etc. <br> **Exemple :** 17348762725408656344688320891369597404 |
 | namespace (String) | True | Espace de noms d’identité utilisé pour créer les chemins d’accès et donc le modèle. <br> **Exemple :** aaid |
-| touchpointsDetail (Tableau d’objets) | True | La liste des détails des points de contact qui ont conduit à la conversion classée par | occurrence ou horodatage du point de contact. |
+| touchpointsDetail (Tableau d’objets) | True | Liste des détails du point de contact menant à la conversion, triés par occurrence ou horodatage du point de contact. |
 | touchpointName (chaîne) | True | Nom du point de contact qui a été configuré lors de la configuration. <br> **Exemple :** PAID_SEARCH_CLICK |
 | scores (objet) | True | Contribution du point de contact à cette conversion sous forme de score. Pour plus d’informations sur les scores générés dans cet objet, consultez la section [scores d’attribution agrégés](#aggregated-attribution-scores). |
 | touchPoint (objet) | True | Métadonnées du point de contact. Pour plus d’informations sur les scores générés dans cet objet, reportez-vous à la section [scores agrégés](#aggregated-scores). |
 
 ### Affichage des chemins de score brut (interface utilisateur) {#raw-score-path}
 
-Vous pouvez afficher le chemin d’accès à vos scores bruts dans l’interface utilisateur. Commencez par sélectionner **[!UICONTROL Schémas]** dans l’interface utilisateur d’Experience Platform, puis recherchez et sélectionnez votre schéma de scores de l’IA dédiée à l’attribution dans l’onglet **[!UICONTROL Parcourir]**.
+Vous pouvez afficher le chemin d’accès à vos scores bruts dans l’interface utilisateur. Commencez par sélectionner **[!UICONTROL Schemas]** dans l’interface utilisateur d’Experience Platform, puis recherchez et sélectionnez votre schéma de scores de l’IA dédiée à l’attribution depuis l’onglet **[!UICONTROL Browse]** .
 
 ![Choisissez votre schéma](./images/input-output/schemas_browse.png)
 
-Sélectionnez ensuite un champ dans la fenêtre **[!UICONTROL Structure]** de l’interface utilisateur. L’onglet **[!UICONTROL Propriétés du champ]** s’ouvre. Dans **[!UICONTROL Propriétés du champ]** se trouve le champ de chemin qui correspond à vos scores bruts.
+Sélectionnez ensuite un champ dans la fenêtre **[!UICONTROL Structure]** de l’interface utilisateur. L’onglet **[!UICONTROL Field properties]** s’ouvre. Dans **[!UICONTROL Field properties]** se trouve le champ de chemin qui correspond à vos scores bruts.
 
 ![Choisir un schéma](./images/input-output/field_properties.png)
 
@@ -236,7 +238,7 @@ Le tableau ci-dessous mappe les scores agrégés aux scores bruts. Si vous souha
 >
 > - L’IA dédiée à l’attribution utilise uniquement des données mises à jour pour la formation et la notation. De même, lorsque vous demandez la suppression de données, l’IA dédiée aux clients s’abstient d’utiliser les données supprimées.
 > - L’IA dédiée à l’attribution utilise les jeux de données Experience Platform. Pour prendre en charge les demandes de droits des consommateurs qu’une marque peut recevoir, les marques doivent utiliser Experience Platform Privacy Service pour envoyer les demandes d’accès et de suppression des clients afin de supprimer leurs données dans le lac de données, le service d’identités et le profil client en temps réel.
-> - Tous les jeux de données que nous utilisons pour l’entrée/la sortie des modèles suivront les directives d’Experience Platform. Le chiffrement des données d’Experience Platform s’applique aux données au repos et en transit. Consultez la documentation pour en savoir plus sur le [&#x200B; chiffrement des données &#x200B;](../../../help/landing/governance-privacy-security/encryption.md)
+> - Tous les jeux de données que nous utilisons pour l’entrée/la sortie des modèles suivront les directives d’Experience Platform. Le chiffrement des données d’Experience Platform s’applique aux données au repos et en transit. Consultez la documentation pour en savoir plus sur le [ chiffrement des données ](../../../help/landing/governance-privacy-security/encryption.md)
 
 ## Étapes suivantes {#next-steps}
 

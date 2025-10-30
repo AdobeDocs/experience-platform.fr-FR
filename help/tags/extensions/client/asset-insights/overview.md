@@ -2,9 +2,9 @@
 title: Présentation de l’extension AEM Asset Insights
 description: Découvrez lʼextension de balise AEM Asset Insights dans Adobe Experience Platform.
 exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1063'
+source-wordcount: '1046'
 ht-degree: 98%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 98%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Cette extension est destinée à être utilisée avec [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=fr). Plus précisément, elle remplace le processus « pageTracker » et le code incorporé. Lorsqu’elle est configurée, cette extension envoie les mesures *Impression* et *Clic* sur les ressources à Adobe Analytics, après quoi elles sont importées dans les rapports AEM Asset Insights. Les mesures sur les ressources peuvent ensuite faire l’objet de rapports à l’aide des espaces de travail AEM Asset Insights et Projet Adobe Analytics.
+Cette extension est destinée à être utilisée avec [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=fr). Plus précisément, elle remplace le processus « pageTracker » et le code intégré. Lorsqu’elle est configurée, cette extension envoie les mesures *Impression* et *Clic* sur les ressources à Adobe Analytics, après quoi elles sont importées dans les rapports AEM Asset Insights. Les mesures sur les ressources peuvent ensuite faire l’objet de rapports à l’aide des espaces de travail AEM Asset Insights et Projet Adobe Analytics.
 
 ## Conditions préalables aux extensions
 
@@ -28,22 +28,23 @@ Les rapports AEM Aseet dans Analytics contiennent trois dimensions AEM :
 * Ressource ayant fait l’objet d’un clic
 
 Il existe également deux mesures :
+
 * Impressions de ressources
 * Clics sur les ressources.
 
-Ces rapports doivent être activés à l’aide de l’administrateur Analytics (cliquez sur **[!UICONTROL Analytics] > [!UICONTROL Admin] > [!UICONTROL Suites de rapports] > `<report suite>` > [!UICONTROL Modifier les paramètres] > [!UICONTROL AEM] > [!UICONTROL Compte rendu des performances d’AEM Assets]**) avant de pouvoir être renseignés à l’aide de cette extension.
+Ces rapports doivent être activés à l’aide de l’Analytics Administrator (cliquez sur **[!UICONTROL Analytics] > [!UICONTROL Admin] > [!UICONTROL Report Suites] > `<report suite>` > [!UICONTROL Edit Settings] > [!UICONTROL AEM] > [!UICONTROL AEM Assets Reporting]**) avant que ces champs puissent être renseignés à l’aide de cette extension.
 
 L&#39;extension de balise « *Adobe Analytics* » pour Adobe Experience Platform doit être installée dans la même propriété Web.
 
 ### Adobe Experience Manager (AEM)
 
-1. Activez [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=fr). Dans AEM, sélectionnez **[!UICONTROL Outils > Ressources]**, puis ouvrez le panneau **[!UICONTROL Configuration d’Insights]**.
+1. Activez [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=fr). Dans AEM, cliquez sur **[!UICONTROL Tools > Assets]**, puis ouvrez le panneau **[!UICONTROL Insights Configuration]**.
 
 1. Désactivez le suivi UUID.
 
    >[!IMPORTANT]
    >
-   >Cette extension ne fonctionne *pas* si le paramètre de configuration des ressources AEM **[!UICONTROL Désactiver le suivi d’UUID]** est coché. Ce paramètre est désélectionné par défaut.
+   >Cette extension *ne fonctionnera pas* si le paramètre de configuration des ressources AEM **[!UICONTROL Disable UUID Tracking]** est coché. Ce paramètre est désélectionné par défaut.
 
    ![Désactiver le suivi UUID](images/disableassets.jpg)
 

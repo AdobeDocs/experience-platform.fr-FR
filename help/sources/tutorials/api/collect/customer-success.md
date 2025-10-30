@@ -5,7 +5,7 @@ title: Créez un flux de données pour les sources de succès client à l’aide
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’un système de succès client et les ingérer dans Experience Platform à l’aide des connecteurs source et des API.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1267'
 ht-degree: 76%

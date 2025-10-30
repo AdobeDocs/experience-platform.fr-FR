@@ -2,7 +2,7 @@
 description: Cette page illustre comment l’appel API est utilisé pour créer un modèle d’audience avec Adobe Experience Platform Destination SDK.
 title: Création d’un modèle d’audience
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 88%

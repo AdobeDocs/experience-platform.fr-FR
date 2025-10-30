@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1889'
 ht-degree: 61%
@@ -17,11 +17,13 @@ ht-degree: 61%
 **Date de publication : mardi 18 novembre 2019**
 
 Nouvelles fonctionnalités d’Adobe Experience Platform :
+
 * [[!DNL Real-Time Customer Data Platform]](#rtcdp)
 * [[!DNL Destinations]](#destinations)
 * [[!DNL Sources]](#sources)
 
 Mises à jour des fonctionnalités existantes :
+
 * [[!DNL Data Science Workspace]](#dsw)
 * [[!DNL Experience Data Model (XDM) System]](#xdm)
 * [[!DNL Real-Time Customer Profile]](#profile)
@@ -48,7 +50,7 @@ Pour plus d’informations, consultez la documentation de [Real-Time Customer Da
 
 | Fonctionnalité | Description |
 |---|---|
-| Destinations  | Intégrations préconfigurées aux plateformes de destination prises en charge par les [!DNL Real-Time Customer Data Platform] d’Adobe qui activent les données vers ces partenaires de manière transparente. Pour plus d’informations, consultez [Destinations](#destinations) ci-dessous. |
+| Destinations  | Intégrations préconfigurées aux plateformes de destination prises en charge par Adobe [!DNL Real-Time Customer Data Platform] qui activent les données vers ces partenaires de manière transparente. Pour plus d’informations, consultez [Destinations](#destinations) ci-dessous. |
 | Tableau de bord de mesures de la page d’accueil | La page d’accueil de Real-Time Customer Data Platform (Real-Time CDP) comprend un tableau de bord des mesures qui affiche des informations sur les profils et les segments. La page d’accueil contient également des liens vers des documents d’apprentissage. Consultez la section sur les [mesures Real-Time Customer Data Platform](#real-time-customer-data-platform-metrics) ci-dessous. |
 | Sources | Vous pouvez envoyer des données à partir de différentes sources, notamment les solutions Adobe, le stockage dans le cloud, des logiciels tiers et la gestion de la relation client. Pour en savoir plus, consultez la section [Sources](#sources) ci-dessous. |
 
@@ -60,11 +62,11 @@ La page d’accueil n’est qu’un des emplacements où les cartes de mesures a
 
 Si le système ne contient aucune donnée lorsque vous vous connectez à Real-Time CDP, le tableau de bord de la page d’accueil n’apparaît pas. Dans ce cas, la page d’accueil propose des ressources pédagogiques pour une première expérience client. À mesure que les données sont collectées, le tableau de bord se met automatiquement à jour pour afficher des informations sur ces données.
 
-Pour en savoir plus, consultez la présentation des mesures Real-Time Customer Data Platform [&#128279;](../../rtcdp/home-page-dashboards.md)
+Pour en savoir plus, consultez la présentation des mesures Real-Time Customer Data Platform [](../../rtcdp/home-page-dashboards.md)
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination prises en charge par Real-Time Customer Data Platform d’Adobe qui activent de manière transparente les données pour ces partenaires. Pour plus d’informations, consultez la [présentation des destinations](../../destinations/home.md).
+[!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination prises en charge par Adobe Real-Time Customer Data Platform qui activent facilement les données pour ces partenaires. Pour plus d’informations, consultez la [présentation des destinations](../../destinations/home.md).
 
 **Destinations disponibles**
 
@@ -111,7 +113,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] permet aux spécialistes
 | Fonctionnalité | Description |
 | -----------| ---------- |
 | Accès aux données à l’aide de [!DNL Experience Platform] SDK | Les notebooks Recettes et lanceurs préconfigurés dans [!DNL Python] utilisent désormais [!DNL Experience Platform] SDK pour accéder aux données. |
-| Prise en charge des sandbox | Prise en charge de la fonctionnalité de sandbox à venir (actuellement en version bêta), notamment la possibilité d’isoler les notebooks et les recettes dans des sandbox de développement ou de production. Pour plus d’informations, consultez la [Présentation des sandbox](../../sandboxes/home.md). |
+| Prise en charge des sandbox | Prise en charge de la fonctionnalité de sandbox à venir (actuellement en version Beta), notamment la possibilité d’isoler les notebooks et les recettes dans des sandbox de développement ou de production. Pour plus d’informations, consultez la [Présentation des sandbox](../../sandboxes/home.md). |
 
 Pour plus d’informations, consultez la [présentation de l’espace de travail de science des données](../../data-science-workspace/home.md).
 
@@ -119,7 +121,7 @@ Pour plus d’informations, consultez la [présentation de l’espace de travail
 
 La normalisation et l’interopérabilité sont des concepts clés pour [!DNL Experience Platform]. Le modèle de données [!DNL Experience Data Model] d’expérience (XDM), piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 
-XDM est une spécification documentée publiquement conçue pour améliorer la puissance des expériences digitales. Elle fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+XDM est une spécification documentée publiquement conçue pour améliorer la puissance des expériences digitales. Elle fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types d’audiences par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
 **Nouvelles fonctionnalités**
 
@@ -164,14 +166,14 @@ Pour plus d’informations sur [!DNL Real-Time Customer Profile], notamment les 
 
 Adobe Experience Platform [!DNL Segmentation Service] propose une interface utilisateur et une API RESTful qui vous permettent de créer des segments et de générer des audiences à partir de vos données [!DNL Real-Time Customer Profile]. Ces segments sont configurés et conservés de manière centralisée sur [!DNL Experience Platform], ce qui les rend facilement accessibles depuis n’importe quelle application Adobe.
 
-[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
+[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions de la clientèle avec votre marque.
 
 | Fonctionnalité | Description |
 | -----------| ---------- |
 | Segmentation planifiée | Les utilisateurs peuvent désormais activer l’évaluation de segmentation planifiée pour tous les segments via l’interface utilisateur et l’API. Une fois activée, tous les segments sont évalués une fois par jour. Cela n’affecte pas les fonctionnalités de segmentation sur demande dont le fonctionnement reste inchangé.<br/><br/>Remarque : la fonction de segmentation planifiée ne peut pas être utilisée dans les sandbox avec plus de cinq politiques de fusion pour [!DNL XDM Individual Profile]. |
-| Segmentation par streaming | La prise en charge de l’évaluation continue des segments (segmentation en flux continu) permet d’évaluer la plupart des règles de segment pendant que les données sont transmises à [!DNL Experience Platform]. Cette fonctionnalité signifie que l’adhésion au segment sera à jour sans devoir exécuter des tâches de segmentation planifiées. Certaines exceptions s’appliquent, comme les segments utilisant des relations à plusieurs entités ou comportant des payloads enrichis. |
-| Segments définis comme des blocs de création | Lors de la création de segments à l’aide de l’interface utilisateur du créateur de segments, les utilisateurs peuvent désormais utiliser des segments précédemment définis comme des blocs de création pour d’autres segments. <ul><li>Référencer l’appartenance à l’audience actuelle : elle est mise à jour lorsque les individus rejoignent et quittent les audiences.</li><li>Copier la logique : prenez la définition de segment sélectionnée et dupliquez-la dans le nouveau segment.</li></ul> |
-| Affichage de l’adhésion au segment par espace de noms d’identifiant | L’adhésion au segment peut désormais être affichée à l’aide de l’espace de noms d’identifiant (courrier électronique, ECID et nombre total). |
+| Segmentation par streaming | La prise en charge de l’évaluation continue des segments (segmentation en flux continu) permet d’évaluer la plupart des règles de segment pendant que les données sont transmises à [!DNL Experience Platform]. Cette fonctionnalité signifie que l’appartenance au segment sera à jour sans devoir exécuter des tâches de segmentation planifiées. Certaines exceptions s’appliquent, comme les segments utilisant des relations à plusieurs entités ou comportant des payloads enrichis. |
+| Segments définis comme des blocs de création | Lors de la création de segments à l’aide de l’interface utilisateur du créateur de segments, les utilisateurs peuvent désormais utiliser des segments précédemment définis comme des blocs de création pour d’autres segments. <ul><li>Référencer l’appartenance à l’audience actuelle : elle est mise à jour lorsque les personnes rejoignent et quittent les audiences.</li><li>Copier la logique : prenez la définition de segment sélectionnée et dupliquez-la dans le nouveau segment.</li></ul> |
+| Affichage de l’appartenance au segment par espace de noms d’identifiant | L’appartenance à un segment peut désormais être affichée à l’aide de l’espace de noms d’identifiant (e-mail, ECID et nombre total). |
 | Prise en charge des RBAC | Le créateur de segments prend désormais en charge les autorisations et les contrôles d’accès en fonction du rôle. |
 | Prise en charge améliorée du partage d’audiences externes entre les solutions [!DNL Experience Platform] et Adobe | Les utilisateurs peuvent désormais introduire des métadonnées d’audience externe (non [!DNL Experience Platform]) dans des scénarios où le nombre d’audiences est à priori important ou inconnu. Cette version comprend l’accès aux métadonnées [!DNL Audience Manager] pour les clients qui ont configuré le connecteur de solution. Ces métadonnées d’audience peuvent être utilisées dans le créateur de segments pour créer des segments [!DNL Experience Platform]. <br/><br/> en outre, les segments créés dans [!DNL Experience Platform] seront désormais disponibles pour une utilisation dans les solutions Adobe intégrées, notamment [!DNL Audience Manager], [!DNL Target] et [!DNL Ad Cloud]. |
 
@@ -187,4 +189,4 @@ Adobe Experience Platform [!DNL Segmentation Service] propose une interface util
 
 * Aucun.
 
-Pour en savoir plus sur [!DNL Segmentation Service], veuillez lire la [&#x200B; présentation de Segmentation Service](../../segmentation/home.md).
+Pour en savoir plus sur [!DNL Segmentation Service], veuillez lire la [ présentation de Segmentation Service](../../segmentation/home.md).

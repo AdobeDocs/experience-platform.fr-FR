@@ -3,9 +3,9 @@ keywords: destinations;destination;types de destinations
 title: Types et catégories de destination
 description: Découvrez les différents types et catégories de destinations dans Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '801'
 ht-degree: 52%
 
 ---
@@ -28,7 +28,7 @@ Diagramme ![Types de destinations).](./assets/destination-types/types-of-destina
 
 ## Connexions {#connections}
 
-**[!UICONTROL Exportation de profils]**, **[!UICONTROL Exportation d’audiences en flux continu]** et **[!DNL Edge Personalization]** destinations dans Adobe Experience Platform capturent des données d’événement, les combinent avec d’autres sources de données pour former le [Profil client en temps réel](../profile/home.md), appliquent une segmentation et exportent des audiences et des profils qualifiés vers des destinations.
+Les destinations **[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Audience Export]** et **[!DNL Edge Personalization]** de Adobe Experience Platform capturent des données d’événement, les combinent à d’autres sources de données pour former le [profil client en temps réel](../profile/home.md), appliquent une segmentation et exportent des audiences et des profils qualifiés vers des destinations.
 
 ## Destinations d’exportation de profils {#profile-export}
 
@@ -71,7 +71,7 @@ En savoir plus sur la façon de [configurer des destinations de personnalisation
 
 La vidéo ci-dessous vous montre les particularités des deux types de destinations :
 
->[!VIDEO](https://video.tv.adobe.com/v/33171?quality=12&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
 ## Types d’audiences exportées {#exported-audiences-types}
 

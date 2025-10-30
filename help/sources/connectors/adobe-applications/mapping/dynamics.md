@@ -2,10 +2,10 @@
 title: Champs de mappage Microsoft Dynamics
 description: Les tableaux ci-dessous contiennent les mappages entre les champs source Microsoft Dynamics et leurs champs XDM correspondants.
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
-source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '499'
-ht-degree: 40%
+ht-degree: 41%
 
 ---
 
@@ -17,50 +17,50 @@ Les tableaux ci-dessous contiennent les mappages entre les champs source [!DNL M
 
 | Champ source | Champ XDM cible | Notes |
 | --- | --- | --- |
-| `address1_addressid` | `workAddress._id` |
-| `address1_city` | `workAddress.city` |
-| `address1_country` | `workAddress.country` |
-| `address1_county` | `workAddress.stateProvince` |
-| `address1_latitude` | `workAddress._schema.latitude` |
-| `address1_line1` | `workAddress.street1` |
-| `address1_line2` | `workAddress.street2` |
-| `address1_line3` | `workAddress.street3` |
-| `address1_longitude` | `workAddress._schema.longitude` |
-| `address1_postalcode` | `workAddress.postalCode` |
-| `address1_postofficebox` | `workAddress.postOfficeBox` |
-| `address1_stateorprovince` | `workAddress.state` |
-| `assistantname` | `extendedWorkDetails.assistantDetails.name.fullName` |
-| `assistantphone` | `extendedWorkDetails.assistantDetails.phone.number` |
-| `birthdate` | `person.birthDate` |
-| `"Dynamics"` | `b2b.personKey.sourceType` |
+| `address1_addressid` | `workAddress._id` |  |
+| `address1_city` | `workAddress.city` |  |
+| `address1_country` | `workAddress.country` |  |
+| `address1_county` | `workAddress.stateProvince` |  |
+| `address1_latitude` | `workAddress._schema.latitude` |  |
+| `address1_line1` | `workAddress.street1` |  |
+| `address1_line2` | `workAddress.street2` |  |
+| `address1_line3` | `workAddress.street3` |  |
+| `address1_longitude` | `workAddress._schema.longitude` |  |
+| `address1_postalcode` | `workAddress.postalCode` |  |
+| `address1_postofficebox` | `workAddress.postOfficeBox` |  |
+| `address1_stateorprovince` | `workAddress.state` |  |
+| `assistantname` | `extendedWorkDetails.assistantDetails.name.fullName` |  |
+| `assistantphone` | `extendedWorkDetails.assistantDetails.phone.number` |  |
+| `birthdate` | `person.birthDate` |  |
+| `"Dynamics"` | `b2b.personKey.sourceType` |  |
 | `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
-| `contactid` | `b2b.personKey.sourceID` |
+| `contactid` | `b2b.personKey.sourceID` |  |
 | `concat(contactid,"@${CRM_ORG_ID}.Dynamics")` | `b2b.personKey.sourceKey` | Identité principale. La valeur de `"${CRM_ORG_ID}"` sera automatiquement remplacée. |
-| `iif(contactid != null && contactid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", contactid, "sourceKey", concat(contactid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourcePersonKey` |
-| `department` | `extendedWorkDetails.departments` |
-| `fullname` | `person.name.fullName` |
-| `suffix` | `person.name.suffix` |
-| `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey", concat(parentcustomerid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourceAccountKey` |
-| `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey",  concat(parentcustomerid, "@${CRM_ORG_ID}.Dynamics")), null)` | `b2b.accountKey` |
-| `createdon` | `extSourceSystemAudit.createdDate` |
+| `iif(contactid != null && contactid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", contactid, "sourceKey", concat(contactid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourcePersonKey` |  |
+| `department` | `extendedWorkDetails.departments` |  |
+| `fullname` | `person.name.fullName` |  |
+| `suffix` | `person.name.suffix` |  |
+| `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey", concat(parentcustomerid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourceAccountKey` |  |
+| `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey",  concat(parentcustomerid, "@${CRM_ORG_ID}.Dynamics")), null)` | `b2b.accountKey` |  |
+| `createdon` | `extSourceSystemAudit.createdDate` |  |
 | `emailaddress1` | `workEmail.address` | Identifiant Secondaire. |
-| `emailaddress2` | `personalEmail.address` |
-| `emailaddress1` | `personComponents.workEmail.address` |
-| `firstname` | `person.name.firstName` |
-| `fullname` | `person.name.fullName` |
-| `lastname` | `person.name.lastName` |
-| `jobtitle` | `extendedWorkDetails.jobTitle` |
-| `middlename` | `person.name.middleName` |
-| `mobilephone` | `mobilePhone.number` |
-| `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
-| `salutation` | `person.name.courtesyTitle` |
-| `telephone1` | `workPhone.number` |
+| `emailaddress2` | `personalEmail.address` |  |
+| `emailaddress1` | `personComponents.workEmail.address` |  |
+| `firstname` | `person.name.firstName` |  |
+| `fullname` | `person.name.fullName` |  |
+| `lastname` | `person.name.lastName` |  |
+| `jobtitle` | `extendedWorkDetails.jobTitle` |  |
+| `middlename` | `person.name.middleName` |  |
+| `mobilephone` | `mobilePhone.number` |  |
+| `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |  |
+| `salutation` | `person.name.courtesyTitle` |  |
+| `telephone1` | `workPhone.number` |  |
 
 {style="table-layout:auto"}
 
 ## Prospects {#leads}
 
-| Champ source | Champ XDM cible | Notes |
+| Champ source | Champ XDM cible | Remarques |
 | --- | --- | --- |
 | `address1_addressid` | `workAddress._id` |
 | `address1_city` | `workAddress.city` |
@@ -77,7 +77,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs source [!DNL M
 | `telephone1` | `workPhone.number` |
 | `mobilephone` | `mobilePhone.number` |
 | `createdon` | `extSourceSystemAudit.createdDate` |
-| `emailaddress1` | `workEmail.address` | Identifiant Secondaire |
+| `emailaddress1` | `workEmail.address` | identifiant Secondaire |
 | `emailaddress2` | `personalEmail.address` |
 | `emailaddress1` | `personComponents.workEmail.address` |
 | `fax` | `faxPhone.number` |
@@ -171,8 +171,8 @@ Les tableaux ci-dessous contiennent les mappages entre les champs source [!DNL M
 | `iif(record1id != null && record1id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record1id, "sourceKey", concat(record1id,"@${CRM_ORG_ID}.Dynamics")), null)` | `opportunityKey` |
 | `iif(record2id != null && record2id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record2id, "sourceKey", concat(record2id,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |
 | `connectionrole1.name` | `personRole` |
-| `record1objecttypecode` | *Un groupe de champs personnalisé doit être défini comme schéma cible.* Pour plus d’informations, reportez-vous à la section de l’annexe pour savoir comment mapper un champ source de type liste de sélection à un schéma XDM cible [&#128279;](#picklist-type-fields). | Pour obtenir la liste des valeurs et des libellés possibles pour le champ source `record1objecttypecode`, consultez ce [[!DNL Microsoft Dynamics] document de référence d’entité de connexion](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
-| `record2objecttypecode` | *Un groupe de champs personnalisé doit être défini comme schéma cible.* Pour plus d’informations, reportez-vous à la section de l’annexe pour savoir comment mapper un champ source de type liste de sélection à un schéma XDM cible [&#128279;](#picklist-type-fields). | Pour obtenir la liste des valeurs et des libellés possibles pour le champ source `record2objecttypecode`, consultez ce [[!DNL Microsoft Dynamics] document de référence d’entité de connexion](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
+| `record1objecttypecode` | *Un groupe de champs personnalisé doit être défini en tant que schéma cible.* Pour plus d’informations, consultez la section annexe pour savoir comment [mapper un champ source de type liste de sélection à un schéma XDM cible](#picklist-type-fields). | Pour obtenir la liste des valeurs et des libellés possibles pour le champ source de `record1objecttypecode`, consultez ce [[!DNL Microsoft Dynamics] document de référence des entités de connexion](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
+| `record2objecttypecode` | *Un groupe de champs personnalisé doit être défini en tant que schéma cible.* Pour plus d’informations, consultez la section annexe pour savoir comment [mapper un champ source de type liste de sélection à un schéma XDM cible](#picklist-type-fields). | Pour obtenir la liste des valeurs et des libellés possibles pour le champ source de `record2objecttypecode`, consultez ce [[!DNL Microsoft Dynamics] document de référence des entités de connexion](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
 
 {style="table-layout:auto"}
 
@@ -232,11 +232,11 @@ Les tableaux ci-dessous contiennent les mappages entre les champs source [!DNL M
 
 ## Annexe
 
-Les sections ci-dessous fournissent des informations supplémentaires que vous pouvez utiliser lors de la configuration des mappages B2B pour votre source Dynamics [!DNL Microsoft].
+Les sections ci-dessous fournissent des informations supplémentaires que vous pouvez utiliser lors de la configuration des mappages B2B pour votre source [!DNL Microsoft] Dynamics.
 
-### Champs de type Liste de sélection {#picklist-type-fields}
+### Champs de type Liste à sélection {#picklist-type-fields}
 
-Vous pouvez utiliser [&#x200B; champs calculés](../../../../data-prep/ui/mapping.md#calculated-fields) pour mapper un champ source de type liste de sélection de [!DNL Microsoft Dynamics] à un champ XDM cible.
+Vous pouvez utiliser des [champs calculés](../../../../data-prep/ui/mapping.md#calculated-fields) pour mapper un champ source de type liste de sélection de [!DNL Microsoft Dynamics] à un champ XDM cible.
 
 Par exemple, le champ `genderCode` comprend deux options :
 
@@ -245,15 +245,15 @@ Par exemple, le champ `genderCode` comprend deux options :
 | 1 | `male` |
 | 2 | `female` |
 
-Vous pouvez utiliser les options suivantes pour mapper le champ source `genderCode` au champ cible `person.gender` :
+Vous pouvez utiliser les options suivantes pour mapper le champ source `genderCode` à `person.gender` champ cible :
 
-#### Utilisation d’un opérateur logique
+#### Utiliser un opérateur logique
 
 | Champ source | Champ XDM cible |
 | --- | --- |
 | `decode(genderCode, "1", "male", "2", "female", "default")` | `person.gender` |
 
-Dans ce scénario, la valeur correspond à la clé, si la clé est trouvée dans les options, ou `default`, si `default` est présent et que la clé est introuvable. La valeur correspond à `null` si les options sont `null` ou s’il n’y a pas `default` et que la clé est introuvable.
+Dans ce scénario, la valeur correspond à la clé, si celle-ci se trouve dans les options, ou `default`, si `default` est présente et que la clé est introuvable. La valeur correspond à `null` si les options sont `null` ou s’il n’existe aucune `default` et que la clé est introuvable.
 
 #### Utiliser un champ calculé
 
@@ -265,4 +265,4 @@ Dans ce scénario, la valeur correspond à la clé, si la clé est trouvée dans
 >
 >Une itération imbriquée de l’opération ci-dessus serait similaire à : `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`.
 
-Pour plus d’informations, consultez le [&#x200B; document sur les opérateurs logiques dans  [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators).
+Pour plus d’informations, consultez le document [ sur les opérateurs logiques dans  [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)

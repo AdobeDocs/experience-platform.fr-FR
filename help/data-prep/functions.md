@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Fonctions de mappage de la préparation des données
 description: Ce document présente les fonctions de mappage utilisées avec la préparation des données.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '6009'
 ht-degree: 8%
@@ -154,8 +154,8 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 | map_has_keys | Si une ou plusieurs clés d’entrée sont fournies, la fonction renvoie true. Si un tableau de chaînes est fourni comme entrée, la fonction renvoie true sur la première clé trouvée. | <ul><li>MAP : **obligatoire** données de mappage d’entrée</li><li>KEY : **obligatoire** la clé peut être une chaîne unique ou un tableau de chaînes. Si un autre type primitif (données/nombre) est fourni, il est traité comme une chaîne.</li></ul> | map_has_keys(MAP, KEY) | Consultez l’[annexe](#map_has_keys) pour obtenir un exemple de code. | |
 | add_to_map | Accepte au moins deux entrées. Un nombre illimité de mappages peut être fourni en tant qu’entrées. La préparation de données renvoie un mappage unique qui contient toutes les paires clé-valeur de toutes les entrées. Si une ou plusieurs clés sont répétées (dans le même mappage ou sur plusieurs mappages), la préparation de données déduplique les clés afin que la première paire clé-valeur persiste dans l’ordre dans lequel elles ont été transmises dans l’entrée. | MAP : **obligatoire** données de mappage d’entrée. | add_to_map(MAP 1, MAP 2, MAP 3, ...) | Consultez l’[annexe](#add_to_map) pour obtenir un exemple de code. | |
 | object_to_map (Syntaxe 1) | Utilisez cette fonction pour créer des types de données de mappage. | <ul><li>KEY : **Obligatoire** les clés doivent être une chaîne. Si d’autres valeurs primitives, telles que des entiers ou des dates, sont fournies, elles sont automatiquement converties en chaînes et traitées comme des chaînes.</li><li>ANY_TYPE : **obligatoire** fait référence à tout type de données XDM pris en charge, à l’exception des mappages.</li></ul> | object_to_map(KEY, ANY_TYPE, KEY, ANY_TYPE, ... ) | Consultez l’[annexe](#object_to_map) pour obtenir un exemple de code. | |
-| object_to_map (Syntaxe 2) | Utilisez cette fonction pour créer des types de données de mappage. | <ul><li>OBJET : **obligatoire** vous pouvez fournir un objet ou un tableau d’objets entrant et pointer vers un attribut à l’intérieur de l’objet comme clé.</li></ul> | object_to_map(OBJECT) | Consultez l’[annexe](#object_to_map) pour obtenir un exemple de code. |
-| object_to_map (Syntaxe 3) | Utilisez cette fonction pour créer des types de données de mappage. | <ul><li>OBJET : **obligatoire** vous pouvez fournir un objet ou un tableau d’objets entrant et pointer vers un attribut à l’intérieur de l’objet comme clé.</li></ul> | object_to_map(OBJECT_ARRAY, ATTRIBUTE_IN_OBJECT_TO_BE_USED_AS_A_KEY) | Consultez l’[annexe](#object_to_map) pour obtenir un exemple de code. |
+| object_to_map (Syntaxe 2) | Utilisez cette fonction pour créer des types de données de mappage. | <ul><li>OBJET : **obligatoire** vous pouvez fournir un objet ou un tableau d’objets entrant et pointer vers un attribut à l’intérieur de l’objet comme clé.</li></ul> | object_to_map(OBJECT) | Consultez l’[annexe](#object_to_map) pour obtenir un exemple de code. |  |
+| object_to_map (Syntaxe 3) | Utilisez cette fonction pour créer des types de données de mappage. | <ul><li>OBJET : **obligatoire** vous pouvez fournir un objet ou un tableau d’objets entrant et pointer vers un attribut à l’intérieur de l’objet comme clé.</li></ul> | object_to_map(OBJECT_ARRAY, ATTRIBUTE_IN_OBJECT_TO_BE_USED_AS_A_KEY) | Consultez l’[annexe](#object_to_map) pour obtenir un exemple de code. |  |
 
 {style="table-layout:auto"}
 
@@ -180,7 +180,7 @@ Pour plus d’informations sur la fonction de copie d’objet, consultez la sect
 | upsert_array_replace | Cette fonction est utilisée pour remplacer des éléments dans un tableau. Cette fonction est **uniquement** applicable lors des mises à jour. Si elle est utilisée dans le contexte des insertions, cette fonction renvoie l&#39;entrée telle quelle. | <ul><li>TABLEAU : **obligatoire** tableau servant à remplacer le tableau dans le profil.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | 123 456 [] |
 | [!BADGE Destinations uniquement]{type=Informative} array_to_string | Rejoint les représentations sous forme de chaînes des éléments d’un tableau à l’aide du séparateur spécifié. Si le tableau est multidimensionnel, il est aplati avant d’être joint. **Remarque** : cette fonction est utilisée dans les destinations. Pour plus d’informations, consultez la [documentation](../destinations/ui/export-arrays-maps-objects.md) . | <ul><li>SEPARATOR : **obligatoire** séparateur utilisé pour joindre les éléments du tableau.</li><li>TABLEAU : **obligatoire** tableau à joindre (après aplatissement).</li></ul> | array_to_string(SEPARATOR, ARRAY) | `array_to_string(";", ["Hello", "world"])` | « Bonjour, le monde » |
 | [!BADGE Destinations uniquement]{type=Informative} filterArray* | Filtre le tableau donné en fonction d’un prédicat. **Remarque** : cette fonction est utilisée dans les destinations. Pour plus d’informations, consultez la [documentation](../destinations/ui/export-arrays-maps-objects.md) . | <ul><li>TABLEAU : **obligatoire** tableau à filtrer</li><li>PREDICATE : **Obligatoire** prédicat à appliquer à chaque élément du tableau donné. | filterArray(ARRAY, PREDICATE) | `filterArray([5, -6, 0, 7], x -> x > 0)` | 5 [ 7] |
-| [!BADGE Destinations uniquement]{type=Informative} transformArray* | Transforme le tableau donné en fonction d’un prédicat. **Remarque** : cette fonction est utilisée dans les destinations. Pour plus d’informations, consultez la [documentation](../destinations/ui/export-arrays-maps-objects.md) . | <ul><li>TABLEAU : **obligatoire** tableau à transformer.</li><li>PREDICATE : **Obligatoire** prédicat à appliquer à chaque élément du tableau donné. | transformArray(ARRAY, PREDICATE) | ` transformArray([5, 6, 7], x -> x + 1)` | [6, 7, 8] |
+| [!BADGE Destinations uniquement]{type=Informative} transformArray* | Transforme le tableau donné en fonction d’un prédicat. **Remarque** : cette fonction est utilisée dans les destinations. Pour plus d’informations, consultez la [documentation](../destinations/ui/export-arrays-maps-objects.md) . | <ul><li>TABLEAU : **obligatoire** tableau à transformer.</li><li>PREDICATE : **Obligatoire** prédicat à appliquer à chaque élément du tableau donné. | transformArray(ARRAY, PREDICATE) | `transformArray([5, 6, 7], x -> x + 1)` | [6, 7, 8] |
 | [!BADGE Destinations uniquement]{type=Informative} flattenArray* | Aplatit le tableau donné (multidimensionnel) en un tableau unidimensionnel. **Remarque** : cette fonction est utilisée dans les destinations. Pour plus d’informations, consultez la [documentation](../destinations/ui/export-arrays-maps-objects.md) . | <ul><li>TABLEAU : **obligatoire** tableau à aplatir.</li></ul> | flattenArray(ARRAY) | flattenArray([[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
 
 {style="table-layout:auto"}
@@ -193,7 +193,7 @@ Pour plus d’informations sur la fonction de copie d’objet, consultez la sect
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| array_to_map | Cette fonction prend un tableau d’objets et une clé comme entrée et renvoie un mappage du champ de la clé avec la valeur comme clé et l’élément du tableau comme valeur. | <ul><li>INPUT : **Obligatoire** tableau d’objets dont vous souhaitez rechercher le premier objet non nul.</li><li>KEY : **obligatoire** la clé doit être un nom de champ dans le tableau d’objets et l’objet doit être une valeur.</li></ul> | array_to_map(OBJECT[] INPUTS, KEY) | Lisez la [annexe](#object_to_map) pour obtenir un exemple de code. |
+| array_to_map | Cette fonction prend un tableau d’objets et une clé comme entrée et renvoie un mappage du champ de la clé avec la valeur comme clé et l’élément du tableau comme valeur. | <ul><li>INPUT : **Obligatoire** tableau d’objets dont vous souhaitez rechercher le premier objet non nul.</li><li>KEY : **obligatoire** la clé doit être un nom de champ dans le tableau d’objets et l’objet doit être une valeur.</li></ul> | array_to_map(OBJECT[] INPUTS, KEY) | Lisez la [annexe](#object_to_map) pour obtenir un exemple de code. |  |
 | object_to_map | Cette fonction prend un objet en tant qu’argument et renvoie un mappage de paires clé-valeur. | <ul><li>INPUT : **Obligatoire** tableau d’objets dont vous souhaitez rechercher le premier objet non nul.</li></ul> | object_to_map(OBJECT_INPUT) | « object_to_map(address) où l’entrée est «  + « adresse : {line1 : \« 345 park ave\ »,ligne2 : \« bldg 2\ »,Ville : \« san jose\ »,État : \« CA\ »,type : \« office\« } » | Renvoie un mappage avec des paires nom-valeur de champ données ou null si l’entrée est null. Par exemple : `"{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"` |
 | to_map | Cette fonction prend une liste de paires clé-valeur et renvoie un mappage de paires clé-valeur. | | to_map(OBJECT_INPUT) | « to_map(\« prénom\ », \« Jean\ », \« nom\ », \« Doe\ ») » | Renvoie un mappage avec des paires nom-valeur de champ données ou null si l’entrée est null. Par exemple : `"{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"` |
 
@@ -261,7 +261,7 @@ Pour plus d’informations sur la fonction de copie d’objet, consultez la sect
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | Génère un identifiant pseudo-aléatoire. | | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
-| `fpid_to_ecid ` | Cette fonction prend une chaîne FPID et la convertit en un ECID à utiliser dans les applications Adobe Experience Platform et Adobe Experience Cloud. | <ul><li>STRING : **obligatoire** chaîne FPID à convertir en ECID.</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
+| `fpid_to_ecid` | Cette fonction prend une chaîne FPID et la convertit en un ECID à utiliser dans les applications Adobe Experience Platform et Adobe Experience Cloud. | <ul><li>STRING : **obligatoire** chaîne FPID à convertir en ECID.</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
 
 {style="table-layout:auto"}
 
@@ -387,11 +387,11 @@ Le tableau ci-dessous présente une liste des caractères réservés et les cara
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| &lbrack; | %5B |
+| [ | %5B |
 | | | %5C |
-| &rbrack; | %5J |
+| ] | %5J |
 | ^ | %5E |
-| &grave; | %60 |
+| ` | %60 |
 | ~ | %7E |
 
 {style="table-layout:auto"}

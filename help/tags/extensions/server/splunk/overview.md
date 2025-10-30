@@ -2,10 +2,10 @@
 title: Présentation de l’extension Splunk
 description: Découvrez l’extension Splunk pour le transfert d’événement dans Adobe Experience Platform.
 exl-id: 653b5897-493b-44f2-aeea-be492da2b108
-source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '976'
-ht-degree: 98%
+source-wordcount: '958'
+ht-degree: 95%
 
 ---
 
@@ -61,13 +61,13 @@ Sélectionner **Extensions** dans le volet de navigation de gauche. Sous **Insta
 
 ![Bouton Configurer pour l’extension Splunk sélectionnée dans l’interface utilisateur](../../../images/extensions/server/splunk/configure.png)
 
-Pour l’**[!UICONTROL URL du collecteur d’événements HTTP]**, saisissez l’adresse et le port de votre instance de plateforme Splunk. Sous **[!UICONTROL Jeton d’accès]**, saisissez votre valeur [!DNL Event Collector Token]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
+Par **[!UICONTROL HTTP Event Collector URL]**, saisissez l’adresse et le port de votre instance de plateforme Splunk. Sous **[!UICONTROL Access Token]**, saisissez votre valeur [!DNL Event Collector Token]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**.
 
 ![Options de configuration renseignées dans l’interface utilisateur](../../../images/extensions/server/splunk/input.png)
 
 ## Configurer une règle de transfert d’événement {#config_rule}
 
-Commencez à créer une [règle](../../../ui/managing-resources/rules.md) de transfert d’événement et configurez ses conditions selon vos besoins. Lors de la sélection des actions de la règle, cliquez sur l’extension [!UICONTROL Splunk], puis sélectionnez le type d’action [!UICONTROL Créer un événement]. D’autres commandes s’affichent pour configurer davantage l’événement Splunk.
+Commencez à créer une [règle](../../../ui/managing-resources/rules.md) de transfert d’événement et configurez ses conditions selon vos besoins. Lors de la sélection des actions de la règle, cliquez sur l’extension de [!UICONTROL Splunk], puis sélectionnez le type d’action de [!UICONTROL Create Event]. D’autres commandes s’affichent pour configurer davantage l’événement Splunk.
 
 ![Définir la configuration d’une action](../../../images/extensions/server/splunk/action-configurations.png)
 
@@ -75,13 +75,13 @@ L’étape suivante consiste à mapper les propriétés d’événement Splunk v
 
 | Nom du champ | Description |
 | --- | --- |
-| [!UICONTROL Événement &#x200B;]<br><br>**(OBLIGATOIRE)** | Indiquez comment vous souhaitez fournir les données d’événement. Les données d’événement peuvent être affectées à la clé `event` de l’objet JSON dans la requête HTTP, ou il peut s’agir de texte brut. La clé `event` se trouve au même niveau du paquet d’événement JSON que les clés de métadonnées. Dans les accolades clé-valeur `event`, les données peuvent se trouver sous n’importe quel formulaire dont vous avez besoin (chaîne, nombre, autre objet JSON, etc.). |
-| [!UICONTROL Hôte] | Le nom d’hôte du client à partir duquel vous envoyez des données. |
-| [!UICONTROL Type de source] | Le type de source à affecter aux données d’événement. |
+| [!UICONTROL Event]<br><br>**(OBLIGATOIRE)** | Indiquez comment vous souhaitez fournir les données d’événement. Les données d’événement peuvent être affectées à la clé `event` de l’objet JSON dans la requête HTTP, ou il peut s’agir de texte brut. La clé `event` se trouve au même niveau du paquet d’événement JSON que les clés de métadonnées. Dans les accolades clé-valeur `event`, les données peuvent se trouver sous n’importe quel formulaire dont vous avez besoin (chaîne, nombre, autre objet JSON, etc.). |
+| [!UICONTROL Host] | Le nom d’hôte du client à partir duquel vous envoyez des données. |
+| [!UICONTROL Source Type] | Le type de source à affecter aux données d’événement. |
 | [!UICONTROL Source] | La valeur source à affecter aux données d’événement. Par exemple, si vous envoyez des données à partir d’une application que vous développez, définissez cette clé sur le nom de l’application. |
 | [!UICONTROL Index] | Le nom de l’index des données d’événement. L’index que vous spécifiez ici doit figurer dans la liste des index autorisés si le paramètre d’index est défini pour le jeton. |
-| [!UICONTROL Heure] | L’heure de l’événement. Le format d’heure par défaut est en temps UNIX (au format `<sec>.<ms>`) et dépend du fuseau horaire local. Par exemple, `1433188255.500` indique 1433188255 secondes et 500 millisecondes après l’époque Unix, ou lundi 1er juin 2015 à 19:50:55 GMT. |
-| [!UICONTROL Champs] | Spécifiez un objet JSON brut ou un ensemble de paires clé-valeur contenant des champs personnalisés explicites à définir au moment de l’index.  La clé `fields` ne s’applique pas aux données brutes.<br><br>Les requêtes contenant les propriétés `fields` doivent être envoyées au point d’entrée `/collector/event`, ou ils ne seront pas indexés. Pour plus d’informations, voir la documentation Splunk sur [extraction de champs indexés](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
+| [!UICONTROL Time] | L’heure de l’événement. Le format d’heure par défaut est en temps UNIX (au format `<sec>.<ms>`) et dépend du fuseau horaire local. Par exemple, `1433188255.500` indique 1433188255 secondes et 500 millisecondes après l’époque Unix, ou lundi 1er juin 2015 à 19:50:55 GMT. |
+| [!UICONTROL Fields] | Spécifiez un objet JSON brut ou un ensemble de paires clé-valeur contenant des champs personnalisés explicites à définir au moment de l’index.  La clé `fields` ne s’applique pas aux données brutes.<br><br>Les requêtes contenant les propriétés `fields` doivent être envoyées au point d’entrée `/collector/event`, ou ils ne seront pas indexés. Pour plus d’informations, voir la documentation Splunk sur [extraction de champs indexés](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
 
 ### Valider des données dans Splunk {#validate}
 

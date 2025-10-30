@@ -2,9 +2,9 @@
 title: Surveiller l’ingestion des profils de streaming
 description: Découvrez comment utiliser le tableau de bord de surveillance pour surveiller l’ingestion des profils de diffusion en continu
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
-source-git-commit: 75ccdfdff4ded0a13213089d1c7dcc4d8f14e0f8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1967'
+source-wordcount: '1932'
 ht-degree: 20%
 
 ---
@@ -26,7 +26,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 >[!NOTE]
 >
->La capacité de débit en flux continu prend en charge jusqu’à 1 500 événements entrants par seconde. Vous pouvez acheter une segmentation en flux continu supplémentaire pour prendre en charge jusqu’à 13 500 événements entrants supplémentaires par seconde&#x200B;. Pour plus d’informations, reportez-vous aux descriptions de produits des packages Real-Time CDP B2C Edition - Prime et Ultimate [&#128279;](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>La capacité de débit en flux continu prend en charge jusqu’à 1 500 événements entrants par seconde. Vous pouvez acheter une segmentation en flux continu supplémentaire pour prendre en charge jusqu’à 13 500 événements entrants supplémentaires par seconde&#x200B;. Pour plus d’informations, reportez-vous aux descriptions de produits des packages Real-Time CDP B2C Edition - Prime et Ultimate [](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 ## Surveillance des mesures pour l’ingestion de profils de streaming {#streaming-profile-metrics}
 
@@ -91,7 +91,7 @@ Utilisez le tableau des mesures pour obtenir des informations spécifiques à vo
 | Débit de demande | Cette mesure représente le nombre d’événements entrant dans le système d’ingestion par seconde. | Sandbox/flux de données | Surveillance en temps réel avec une actualisation des données toutes les 60 secondes. |
 | Débit de traitement | Cette mesure représente le nombre d’événements ingérés avec succès par le système chaque seconde. | Sandbox/flux de données | Surveillance en temps réel avec une actualisation des données toutes les 60 secondes. |
 | Latence d’ingestion P95 | Cette mesure mesure la latence du 95e centile entre le moment où un événement arrive dans Experience Platform et celui où il est ingéré avec succès dans la banque de profils. | Sandbox/flux de données | Surveillance en temps réel avec une actualisation des données toutes les 60 secondes. |
-| Débit maximal | Cette mesure représente le nombre maximal de requêtes entrantes par seconde entrant dans l’ingestion de profil en flux continu | <ul><li>Sandbox/flux de données</li><li>Exécution du flux de données</li></ul> |
+| Débit maximal | Cette mesure représente le nombre maximal de requêtes entrantes par seconde entrant dans l’ingestion de profil en flux continu | <ul><li>Sandbox/flux de données</li><li>Exécution du flux de données</li></ul> |  |
 | Enregistrements ingérés | Cette mesure représente le nombre total d’enregistrements ingérés dans la banque de profils au cours d’une période configurée. | <ul><li>Sandbox/flux de données</li><li>Exécution du flux de données</li></ul> | <ul><li>Sandbox/flux de données : surveillance en temps réel avec une actualisation des données toutes les 60 secondes.</li><li>Exécution du flux de données : regroupée en 15 minutes.</li></ul> |
 | Enregistrements ayant échoué | Cette mesure représente le nombre total d’enregistrements qui ont échoué lors de l’ingestion dans la banque de profils au cours d’une période configurée en raison d’erreurs. | <ul><li>Sandbox/flux de données</li><li>Exécution du flux de données</li></ul> | <ul><li>Sandbox/flux de données : surveillance en temps réel avec une actualisation des données toutes les 60 secondes.</li><li>Exécution du flux de données : regroupée en 15 minutes.</li></ul> |
 | Enregistrements ignorés | Cette mesure représente le nombre total d’enregistrements supprimés pendant une période configurée, en raison de violations de la configuration ou de la capacité. | <ul><li>Sandbox/flux de données</li><li>Exécution du flux de données</li></ul> | <ul><li>Sandbox/flux de données : surveillance en temps réel avec une actualisation des données toutes les 60 secondes.</li><li>Exécution du flux de données : regroupée en 15 minutes.</li></ul> |
@@ -101,31 +101,31 @@ Utilisez le tableau des mesures pour obtenir des informations spécifiques à vo
 
 ## Utiliser le tableau de bord de surveillance pour l’ingestion de profils en flux continu
 
-Pour accéder au tableau de bord de surveillance de l’ingestion de profils en flux continu, accédez à l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Surveillance]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Diffusion en flux continu de bout en bout]**.
+Pour accéder au tableau de bord de surveillance de l’ingestion de profils en flux continu, accédez à l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Monitoring]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Streaming end-to-end]**.
 
 ![Tableau de bord de surveillance de l’ingestion des profils en flux continu.](../assets/ui/streaming-profiles/monitoring-dashboard.png)
 
-Reportez-vous à l’en-tête supérieur du tableau de bord pour la carte de mesures *[!UICONTROL Profil]*. Utilisez cet affichage pour afficher des informations sur les enregistrements ingérés, ayant échoué et ignorés, ainsi que sur le statut actuel du débit et de la latence des demandes.
+Reportez-vous à l’en-tête supérieur du tableau de bord pour la carte Mesures *[!UICONTROL Profile]* . Utilisez cet affichage pour afficher des informations sur les enregistrements ingérés, ayant échoué et ignorés, ainsi que sur le statut actuel du débit et de la latence des demandes.
 
 ![Carte de profil.](../assets/ui/streaming-profiles/profile-card.png)
 
 Ensuite, utilisez l’interface pour afficher des informations détaillées sur les mesures d’ingestion de votre profil de diffusion en continu. Utilisez la fonction de calendrier pour basculer entre différentes périodes. Vous pouvez effectuer un choix parmi les fenêtres temporelles préconfigurées suivantes :
 
-* [!UICONTROL 6 dernières heures]
-* [!UICONTROL 12 dernières heures]
-* [!UICONTROL Dernières 24 heures]
-* [!UICONTROL 7 derniers jours]
-* [!UICONTROL 30 derniers jours]
+* [!UICONTROL Last 6 hours]
+* [!UICONTROL Last 12 hours]
+* [!UICONTROL Last 24 hours]
+* [!UICONTROL Last 7 days]
+* [!UICONTROL Last 30 days]
 
 Vous pouvez également configurer manuellement votre propre période à l’aide du calendrier.
 
-Vous pouvez utiliser trois catégories de mesures différentes dans le tableau de bord de surveillance pour l’ingestion de profils en flux continu : [!UICONTROL Débit], [!UICONTROL Ingestion] et [!UICONTROL Latence].
+Vous pouvez utiliser trois catégories de mesures différentes dans le tableau de bord de surveillance pour l’ingestion de profils en flux continu : [!UICONTROL Throughput], [!UICONTROL Ingestion] et [!UICONTROL Latency].
 
 >[!BEGINTABS]
 
 >[!TAB Débit]
 
-Sélectionnez **[!UICONTROL Débit]** pour afficher des informations sur la quantité de données qu’Experience Platform traite selon une période configurée. Consultez cette mesure pour évaluer l’efficacité et la capacité de votre système.
+Sélectionnez **[!UICONTROL Throughput]** pour afficher des informations sur la quantité de données qu’Experience Platform traite selon une période configurée. Consultez cette mesure pour évaluer l’efficacité et la capacité de votre système.
 
 ![Tableau de bord avec l’affichage défini sur « débit ».](../assets/ui/streaming-profiles/throughput.png)
 
@@ -145,7 +145,7 @@ Sélectionnez **[!UICONTROL Débit]** pour afficher des informations sur la quan
 
 >[!TAB  Latence ]
 
-Sélectionnez **[!UICONTROL Latence]** pour afficher des informations sur le temps nécessaire à Experience Platform pour répondre à une demande ou effectuer une opération au cours d’une période donnée.
+Sélectionnez **[!UICONTROL Latency]** pour afficher des informations sur le temps nécessaire à Experience Platform pour répondre à une demande ou effectuer une opération au cours d’une période donnée.
 
 ![Tableau de bord avec l’affichage défini sur « latence ».](../assets/ui/streaming-profiles/latency.png)
 
@@ -155,7 +155,7 @@ Sélectionnez **[!UICONTROL Latence]** pour afficher des informations sur le tem
 
 Le tableau des flux de données répertorie toutes les activités d’ingestion en flux continu avec l’ensemble de mesures correspondant pour le profil client en temps réel. Chaque flux de données est répertorié avec son jeu de données correspondant.
 
-Si vous approchez des limites de votre capacité au niveau du sandbox, vous pouvez vous reporter à la colonne [!UICONTROL Débit maximal] pour identifier tous les flux de données existants qui contribuent à vos taux de consommation. Lisez la [section des bonnes pratiques](#best-practices) pour plus d’informations sur les bonnes pratiques de gestion des flux de données.
+Si vous approchez des limites de votre capacité au niveau du sandbox, vous pouvez vous reporter à la colonne [!UICONTROL Max throughput] pour identifier tous les flux de données existants qui contribuent à vos taux de consommation. Lisez la [section des bonnes pratiques](#best-practices) pour plus d’informations sur les bonnes pratiques de gestion des flux de données.
 
 Pour surveiller les données ingérées dans un flux de données spécifique, sélectionnez l’icône de filtre ![filtre](/help/images/icons/filter-add.png) à côté du nom du flux de données.
 
@@ -206,17 +206,17 @@ Lisez cette section pour obtenir des réponses aux questions fréquentes sur la 
 
 +++Réponse
 
-Le tableau de bord [!UICONTROL Surveillance] affiche des mesures en temps réel pour l’ingestion et le traitement. Ces chiffres sont des mesures exactes enregistrées au moment de l’activité. Inversement, le tableau de bord [!UICONTROL Capacité] utilise un mécanisme de lissage pour le calcul de la capacité de débit. Ce mécanisme permet de réduire les pics de courte durée qui peuvent être immédiatement qualifiés de violations. Il garantit également que les alertes de capacité se concentrent sur des tendances durables, plutôt que sur des sursauts momentanés.
+Le tableau de bord [!UICONTROL Monitoring] affiche des mesures en temps réel pour l’ingestion et le traitement. Ces chiffres sont des mesures exactes enregistrées au moment de l’activité. Inversement, le tableau de bord [!UICONTROL Capacity] utilise un mécanisme de lissage pour le calcul de la capacité de débit. Ce mécanisme permet de réduire les pics de courte durée qui peuvent être immédiatement qualifiés de violations. Il garantit également que les alertes de capacité se concentrent sur des tendances durables, plutôt que sur des sursauts momentanés.
 
 En raison du mécanisme de lissage, vous remarquerez peut-être :
 
-* Petits pics dans [!UICONTROL Surveillance] qui n’apparaissent pas dans [!UICONTROL Capacité].
-* Des valeurs légèrement inférieures dans [!UICONTROL Capacité] par rapport à [!UICONTROL Surveillance] au même horodatage.
+* Petits pics de [!UICONTROL Monitoring] qui n’apparaissent pas dans les [!UICONTROL Capacity].
+* Valeurs légèrement inférieures dans [!UICONTROL Capacity] par rapport à [!UICONTROL Monitoring] au même horodatage.
 
 Les deux tableaux de bord sont précis, mais sont conçus à des fins différentes.
 
-* [!UICONTROL Surveillance] : visibilité opérationnelle détaillée, à chaque instant.
-* [!UICONTROL Capacité] : vue stratégique permettant d’identifier les schémas d’utilisation et de violation.
+* [!UICONTROL Monitoring] : visibilité opérationnelle détaillée, à chaque instant.
+* [!UICONTROL Capacity] : affichage stratégique pour l’identification des schémas d’utilisation et de violation.
 
 +++
 

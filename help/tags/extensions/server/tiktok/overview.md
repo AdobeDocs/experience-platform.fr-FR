@@ -3,10 +3,10 @@ title: Intégration de l’extension d’API d’événements web Adobe TikTok
 description: Cette API d’événements web Adobe Experience Platform vous permet de partager des interactions de site web directement avec TikTok.
 last-substantial-update: 2023-09-26T00:00:00Z
 exl-id: 14b8e498-8ed5-4330-b1fa-43fd1687c201
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1105'
-ht-degree: 4%
+source-wordcount: '1044'
+ht-degree: 5%
 
 ---
 
@@ -22,29 +22,29 @@ Vous devez disposer d’un [!DNL TikTok] valide pour le compte professionnel afi
 
 Vous devez être connecté à votre compte professionnel pour configurer [!DNL TikTok] Pixel à l’aide de la configuration du partenaire. Pour ce faire, procédez comme suit :
 
-1. Accédez à l’onglet **[!UICONTROL Assets]** et sélectionnez **[!UICONTROL Événement]**.
-2. Sous Événements web, sélectionnez **[!UICONTROL Gérer]**.
-3. Sélectionnez **[!UICONTROL Configurer Des Événements Web]**.
-4. Sélectionnez **[!UICONTROL Configuration du partenaire]** comme méthode de connexion.
+1. Accédez à l’onglet **[!UICONTROL Assets]** et sélectionnez **[!UICONTROL Event]**.
+2. Sous Événements web, sélectionnez **[!UICONTROL Manage]**.
+3. Sélectionnez **[!UICONTROL Set Up Web Events]**.
+4. Sélectionnez **[!UICONTROL Partner Setup]** comme méthode de connexion.
 
 Consultez le guide [Prise en main du pixel](https://ads.tiktok.com/help/article/get-started-pixel) pour plus d’informations sur la configuration du pixel [!DNL TikTok].
 
-Vous pouvez générer un jeton d’accès une fois le pixel créé. Pour ce faire, accédez au pixel et sélectionnez l’onglet **[!UICONTROL Paramètres]**. Sous API d’événements, sélectionnez **[!UICONTROL Générer un jeton d’accès]**.
+Vous pouvez générer un jeton d’accès une fois le pixel créé. Pour ce faire, accédez au Pixel et sélectionnez l’onglet **[!UICONTROL Settings]** . Sous API d’événements, sélectionnez **[!UICONTROL Generate Access Token]**.
 
-Pour plus d’informations sur la configuration du code de pixel et du jeton d’accès[&#128279;](https://business-api.tiktok.com/portal/docs?id=1739584855420929) consultez le [!DNL TikTok]  guide de prise en main .
+Pour plus d’informations sur la configuration du code de pixel et du jeton d’accès[[!DNL TikTok]  consultez le ](https://business-api.tiktok.com/portal/docs?id=1739584855420929) guide de prise en main .
 
 ## Installer et configurer l’extension d’API d’événements web [!DNL TikTok] {#install}
 
-Pour installer l’extension, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche. Dans l’onglet **[!UICONTROL Catalogue]**, sélectionnez l’extension d’API d’événements web TikTok **&#x200B;**&#x200B;puis sélectionnez **[!UICONTROL Installer]**.
+Pour installer l’extension, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche. Dans l’onglet **[!UICONTROL Catalog]** , sélectionnez le **[!UICONTROL TikTok Web Events API Extension]**, puis sélectionnez **[!UICONTROL Install]**.
 
 ![Catalogue d’extensions affichant la carte d’extension [!DNL TikTok] mettant en surbrillance install.](../../../images/extensions/server/tiktok/install-extension.png)
 
 Dans l’écran suivant, saisissez les valeurs de configuration suivantes que vous avez précédemment générées à partir d’[!DNL TikTok] Ads Manager :
 
-* **[!UICONTROL Code pixel]**
-* **[!UICONTROL Jeton d’accès]**
+* **[!UICONTROL Pixel Code]**
+* **[!UICONTROL Access Token]**
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**.
 
 ![[!DNL TikTok] de configuration de l’extension d’API d’événements web [!DNL TikTok].](../../../images/extensions/server/tiktok/configure.png)
 
@@ -52,13 +52,13 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 
 Une fois tous vos éléments de données configurés, vous pouvez commencer à créer des règles de transfert d’événement qui déterminent quand et comment vos événements seront envoyés à [!DNL TikTok].
 
-Créez une [règle](../../../ui/managing-resources/rules.md) dans votre propriété de transfert d’événement. Sous **[!UICONTROL Actions]**, ajoutez une nouvelle action et définissez l’extension sur **[!UICONTROL Extension de l’API d’événements web TikTok]**. Pour envoyer des événements Edge Network à [!DNL TikTok], définissez le **[!UICONTROL Type d’action]** sur **[!UICONTROL Envoyer un événement d’API d’événements web TikTok].**
+Créez une [règle](../../../ui/managing-resources/rules.md) dans votre propriété de transfert d’événement. Sous **[!UICONTROL Actions]**, ajoutez une nouvelle action et définissez l’extension sur **[!UICONTROL TikTok Web Events API Extension]**. Pour envoyer des événements Edge Network à [!DNL TikTok], définissez la **[!UICONTROL Action Type]** sur **[!UICONTROL Send TikTok Web Events API Event].**
 
-![Type d’action [!UICONTROL Envoyer un événement d’API d’événements web TikTok] sélectionné pour une règle de [!DNL TikTok] dans l’interface utilisateur de la collecte de données.](../../../images/extensions/server/tiktok/select-action.png)
+![Type d’action [!UICONTROL Send TikTok Web Events API Event] sélectionné pour une règle de [!DNL TikTok] dans l’interface utilisateur de collecte de données.](../../../images/extensions/server/tiktok/select-action.png)
 
-Après la sélection, des commandes supplémentaires apparaissent pour configurer plus en détail l’événement, comme indiqué ci-dessous. Une fois l’opération terminée, sélectionnez **[!UICONTROL Conserver les modifications]** pour enregistrer la règle.
+Après la sélection, des commandes supplémentaires apparaissent pour configurer plus en détail l’événement, comme indiqué ci-dessous. Une fois l’opération terminée, sélectionnez **[!UICONTROL Keep Changes]** pour enregistrer la règle.
 
-**[!UICONTROL Événements et paramètres Web]**
+**[!UICONTROL Web Events and Parameters]**
 
 Les événements et paramètres Web contiennent des informations générales sur l&#39;événement. Les événements standard sont pris en charge dans [!DNL TikTok] outils d’intégration et peuvent être utilisés pour créer des rapports , optimiser les conversions et créer des audiences.
 
@@ -72,7 +72,7 @@ Les événements et paramètres Web contiennent des informations générales sur
 
 ![Section [!DNL Web Events and Parameters] présentant un exemple de saisie de données dans les champs.](../../../images/extensions/server/tiktok/configure-web-events-parameters.png)
 
-**[!UICONTROL Paramètres de contexte utilisateur]**
+**[!UICONTROL User Context Parameters]**
 
 Les paramètres de contexte utilisateur contiennent des informations sur le client qui sont utilisées pour faire correspondre les événements du visiteur web aux utilisateurs [!DNL TikTok]. L’inclusion de plusieurs types de données correspondantes vous permet d’accroître la précision des modèles de ciblage et d’optimisation.
 
@@ -81,7 +81,7 @@ Les paramètres de contexte utilisateur contiennent des informations sur le clie
 | Adresse IP | Adresse IP publique non hachée du navigateur. La prise en charge est fournie pour les adresses IPv4 et IPv6. Les formes complètes et compressées des adresses IPv6 sont reconnues. |
 | Agent utilisateur | Agent utilisateur non haché à partir de l’appareil de l’utilisateur. |
 | E-mail | Adresse e-mail du contact associé à l’événement de conversion. |
-| Téléphone | Le numéro de téléphone doit être au format E164 [+][indicatif du pays][indicatif régional][local phone number] avant d’être haché. |
+| Téléphone | Le numéro de téléphone doit être au format E164 `[+][country code][area code][local phone number]` avant hachage. |
 | ID de cookie | Si vous utilisez Pixel SDK, un identifiant unique est automatiquement enregistré dans le cookie `_ttp`, si les cookies sont activés. La valeur `_ttp` peut être extraite et utilisée pour ce champ. |
 | Identifiant externe | Tout identifiant unique tel que les identifiants d’utilisateur, les identifiants de cookie externe, etc. doit être haché avec SHA256. |
 | ID de clic TikTok | `ttclid` qui est ajoutée à l’URL de la page de destination chaque fois qu’une publicité est sélectionnée sur [!DNL TikTok]. |
@@ -92,7 +92,7 @@ Les paramètres de contexte utilisateur contiennent des informations sur le clie
 
 ![Section [!DNL User Context Parameters] présentant un exemple de saisie de données dans les champs.](../../../images/extensions/server/tiktok/configure-user-context-parameters.png)
 
-**[!UICONTROL Paramètres des propriétés]**
+**[!UICONTROL Properties Parameters]**
 
 Utilisez les paramètres de propriétés pour configurer d’autres propriétés prises en charge.
 

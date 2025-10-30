@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Mapper des champs pour la source Marketo Engage
 description: Les tableaux ci-dessous contiennent les mappages entre les champs des jeux de données Marketo et les champs XDM correspondants.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 3b21d952da603b519c9919b08467cd5c6091f235
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1451'
 ht-degree: 41%
 
 ---
@@ -27,7 +27,7 @@ Lisez la documentation relative à la [classe d’événement d’expérience XD
 
 >[!NOTE]
 >
->Le champ source `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` est un champ calculé qui doit être ajouté à l’aide de l’option **[!UICONTROL Ajouter un champ calculé]** dans l’interface utilisateur d’Experience Platform. Pour plus d’informations, consultez le tutoriel sur [l’ajout de champs calculés](../../../../data-prep/ui/mapping.md#calculated-fields) .
+>Le champ source `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` est un champ calculé qui doit être ajouté à l’aide de l’option **[!UICONTROL Add calculated field]** dans l’interface utilisateur d’Experience Platform. Pour plus d’informations, consultez le tutoriel sur [l’ajout de champs calculés](../../../../data-prep/ui/mapping.md#calculated-fields) .
 
 | Champ source Marketo | Identifiant du type d’activité | Jeu de données source | Champ cible XDM | Notes |
 | -------------------- | ---------------- | -------------- | ---------------- | ----- |
@@ -66,7 +66,7 @@ Lisez la documentation relative à la [classe d’événement d’expérience XD
 | primaryAttributeValueId lorsque activityTypeId dans (7, 8, 9, 10, 11, 27) | 7, 8, 9, 10, 11, 27 | `directMarketing.mailingName` | `directMarketing.mailingName` |  |
 |  |  | `directMarketing.testVariantName` | `directMarketing.testVariantName` |  |
 | `attributes.Test Variant` |  | `directMarketing.testVariantID` | `directMarketing.testVariantID` |  |
-| `attributes.Subcategory` <ul><li><strong>activityTypeId = 8</strong><ul><li>1099 → BLOQUÉ</li><li>1 003 → DE SPAM BLOQUÉS SUR SOURCE</li><li>1004 → DE SPAM BLOQUÉ SUR LE MESSAGE</li><li>ADRESSE E-MAIL → 2003 NON VALIDE</li><li>ERREUR D&#39;ADRESSE E-MAIL → 2001</li><li>* → RAISON INCONNUE DU REBOND</li></ul></li><li><strong>activityTypeId = 27</strong><ul><li>3999 → MESSAGE NON ACCEPTÉ</li><li>BOÎTE PLEINE 3001 →</li><li>DÉLAI D’EXPIRATION DE → 3004</li><li>4003 → ÉCHEC DU DNS</li><li>4002 → MESSAGE TROP GRAND</li><li>4006 → VIOLATION DE POLITIQUE</li><li>4999 → DÉFAILLANCE TRANSITOIRE</li><li>9999 → MAUVAISE RÉPONSE REÇUE</li><li>* → RAISON INCONNUE DU SOFT BOUNCE</li></ul></li></ul> | 8, 27 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |  |
+| `attributes.Subcategory` <ul><li><strong>activityTypeId = 8</strong><ul><li>1099 → BLOQUÉ</li><li>1 003 → DE SPAM BLOQUÉS SUR SOURCE</li><li>1004 → DE SPAM BLOQUÉ SUR LE MESSAGE</li><li>ADRESSE E-MAIL → 2003 NON VALIDE</li><li>ERREUR D&#39;ADRESSE E-MAIL → 2001</li><li>*` &rarr;`RAISON INCONNUE DU REBOND</li></ul></li><li><strong>activityTypeId = 27</strong><ul><li>3999 → MESSAGE NON ACCEPTÉ</li><li>BOÎTE PLEINE 3001 →</li><li>DÉLAI D’EXPIRATION DE → 3004</li><li>4003 → ÉCHEC DU DNS</li><li>4002 → MESSAGE TROP GRAND</li><li>4006 → VIOLATION DE POLITIQUE</li><li>4999 → DÉFAILLANCE TRANSITOIRE</li><li>9999 → MAUVAISE RÉPONSE REÇUE</li><li>*→ RAISON INCONNUE DU SOFT BOUNCE</li></ul></li></ul> | 8, 27 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |  |
 | `attributes.Details` |  | `directMarketing.emailBouncedDetails` | `directMarketing.emailBouncedDetails` |  |
 | `attributes.Email` |  | `directMarketing.email` | `directMarketing.email` |  |
 | `attributes.Is Mobile Device` |  | `device.isMobileDevice` | `device.isMobileDevice` |  |
@@ -363,7 +363,7 @@ Lisez la [Présentation de la relation Personne-opportunité commerciale XDM](..
 
 Lisez la [Présentation du Profil individuel XDM](../../../../xdm/classes/individual-profile.md) pour plus d’informations sur la classe XDM. Pour plus d’informations sur les groupes de champs XDM, consultez les guides [Groupe de champs de schéma Détails professionnels XDM](../../../../xdm/field-groups/profile/business-person-details.md) et [Groupe de champs de schéma Composants professionnels XDM](../../../../xdm/field-groups/profile/business-person-components.md).
 
-| Champ source | Champ XDM cible | Notes |
+| Champ source | Champ XDM cible | Remarques |
 |---|---|---|
 | `"${MUNCHKIN_ID}"` | `b2b.personKey.sourceInstanceID` | MUNCHKIN_ID sera remplacé dans le cadre de l’API Explorer |
 | `"Marketo"` | `b2b.personKey.sourceType` | |

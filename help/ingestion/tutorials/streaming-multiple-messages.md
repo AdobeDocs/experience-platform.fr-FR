@@ -5,7 +5,7 @@ title: Envoyer plusieurs messages dans une seule requête HTTP
 type: Tutorial
 description: Ce document fournit un tutoriel permettant d’envoyer plusieurs messages vers Adobe Experience Platform dans une seule requête HTTP à l’aide de l’ingestion par flux.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: 31c00e69dd92f7c3232e09f02da36c60cd8cf486
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1483'
 ht-degree: 58%
@@ -219,6 +219,7 @@ Avant de poursuivre ce tutoriel, nous vous recommandons de consulter dans un pre
 L’exemple suivant montre ce qui se produit lorsque le lot contient des messages valides et invalides.
 
 Le payload de la requête est un tableau d’objets JSON représentant l’événement dans le schéma XDM. Notez que vous devez remplir les conditions suivantes pour valider le message avec succès :
+
 - Le champ `imsOrgId` de l’en-tête du message doit correspondre à la définition de l’inlet. Si la payload de la requête n’inclut pas de champ `imsOrgId`, le [!DNL Data Collection Core Service] (DCCS) ajoute automatiquement le champ.
 - L’en-tête du message doit référencer un schéma XDM existant créé dans l’interface utilisateur de [!DNL Experience Platform].
 - Le champ `datasetId` doit référencer un jeu de données existant dans [!DNL Experience Platform] et son schéma doit correspondre au schéma fourni dans l’objet `header` dans chaque message inclus dans le corps de la requête.
