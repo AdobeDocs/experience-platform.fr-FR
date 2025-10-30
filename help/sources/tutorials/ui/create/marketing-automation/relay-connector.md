@@ -81,5 +81,5 @@ Utilisez ces valeurs pour configurer le webhook dans la **console de relais**. P
 
 ## Ressources supplémentaires
 
-* [Créer une spécification de connexion à l’aide de l’API Flow Service](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/create)
-* [Connexion à votre source à l’aide de l’interface utilisateur](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)
+* [Créer une spécification de connexion à l’aide de l’API Flow Service](https://experienceleague.adobe.com/fr/docs/experience-platform/sources/sdk/streaming-sdk/create)
+* [Connexion à votre source à l’aide de l’interface utilisateur](https://experienceleague.adobe.com/fr/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)

@@ -53,7 +53,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**.
 
 ## Création d’éléments de données {#create-data-elements}
 
-Pour envoyer des données à l’extension d’API [!DNL Snapchat] Conversions, créez [éléments de données](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) pour chaque paramètre de données. Procédez comme suit :
+Pour envoyer des données à l’extension d’API [!DNL Snapchat] Conversions, créez [éléments de données](https://experienceleague.adobe.com/fr/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) pour chaque paramètre de données. Procédez comme suit :
 
 1. Accédez à **[!UICONTROL Authoring]**>**[!UICONTROL Data Elements]** dans l’écran **[!UICONTROL Property Info]** de votre propriété, puis sélectionnez **[!UICONTROL Add Data Element]**.
 
@@ -79,7 +79,7 @@ Consultez la [documentation des propriétés de transfert d’événement](/help
 
 ## Créer des règles pour envoyer des événements de conversion à Snap {#create-snap-rules}
 
-Les [règles](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) sont utilisées pour déclencher des extensions dans Experience Platform. Cette section explique comment créer des règles dans votre propriété de transfert d’événement pour envoyer des événements de conversion à Snap à l’aide de l’extension de l’API Conversions.
+Les [règles](https://experienceleague.adobe.com/fr/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) sont utilisées pour déclencher des extensions dans Experience Platform. Cette section explique comment créer des règles dans votre propriété de transfert d’événement pour envoyer des événements de conversion à Snap à l’aide de l’extension de l’API Conversions.
 
 ### Créer une règle
 

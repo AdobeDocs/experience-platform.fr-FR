@@ -17,14 +17,14 @@ Les instructions ci-dessous vous montrent comment utiliser l’interface web Git
 >
 >Reportez-vous également à la documentation d’aide du guide du contributeur d’Adobe :
 >
->* [Installation des outils de création Git et Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
->* [Configurer le référentiel Git localement pour la documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
->* [Workflow de contribution GitHub pour les modifications majeures](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
+>* [Installation des outils de création Git et Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=fr)
+>* [Configurer le référentiel Git localement pour la documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=fr)
+>* [Workflow de contribution GitHub pour les modifications majeures](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=fr).
 
 ## Configuration de votre environnement de création GitHub {#set-up-environment}
 
 1. Dans votre navigateur, accédez à `https://github.com/AdobeDocs/experience-platform.en`.
-1. Pour [brancher](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) le référentiel, cliquez sur **Branchement** comme illustré ci-dessous. Une copie du référentiel Experience Platform est ainsi créée dans votre propre compte GitHub.
+1. Pour [brancher](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=fr#fork-the-repository) le référentiel, cliquez sur **Branchement** comme illustré ci-dessous. Une copie du référentiel Experience Platform est ainsi créée dans votre propre compte GitHub.
 
    ![Référentiel de documentation d’Adobe en branchement](../assets/docs-framework/ssd-fork-repository.gif)
 
@@ -47,7 +47,7 @@ Les instructions ci-dessous vous montrent comment utiliser l’interface web Git
    >
    >Vous pouvez fermer la fenêtre de votre navigateur à tout moment et la rouvrir ultérieurement. Votre travail est enregistré automatiquement et vous attendra lorsque vous rouvrirez le navigateur.
 1. Copiez le contenu de l’éditeur Markdown dans votre nouveau fichier dans GitHub.
-1. Pour toutes les captures d’écran ou images que vous prévoyez d’utiliser, utilisez l’interface GitHub pour charger les fichiers sur `experience-platform.en/help/destinations/assets/catalog/[...]`, où `[...]` est la catégorie souhaitée pour la destination. Par exemple, si vous ajoutez une destination de personnalisation à Experience Platform, sélectionnez la catégorie `personalization` . Vous devez créer un lien vers les images de la page que vous créez. Voir [instructions pour créer un lien vers des images](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images).
+1. Pour toutes les captures d’écran ou images que vous prévoyez d’utiliser, utilisez l’interface GitHub pour charger les fichiers sur `experience-platform.en/help/destinations/assets/catalog/[...]`, où `[...]` est la catégorie souhaitée pour la destination. Par exemple, si vous ajoutez une destination de personnalisation à Experience Platform, sélectionnez la catégorie `personalization` . Vous devez créer un lien vers les images de la page que vous créez. Voir [instructions pour créer un lien vers des images](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=fr#link-to-images).
 
    ![Charger l’image sur GitHub](../assets/docs-framework/upload-image.gif)
 
@@ -83,4 +83,4 @@ Les instructions ci-dessous vous montrent comment utiliser l’interface web Git
 
 >[!TIP]
 >
->Pour ajouter des images et des liens à votre documentation, ainsi que pour toute autre question sur Markdown, lisez [Utilisation de Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html) dans le guide d’écriture collaborative d’Adobe.
+>Pour ajouter des images et des liens à votre documentation, ainsi que pour toute autre question sur Markdown, lisez [Utilisation de Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=fr) dans le guide d’écriture collaborative d’Adobe.

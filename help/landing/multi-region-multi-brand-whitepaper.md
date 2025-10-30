@@ -86,7 +86,7 @@ Si vous le souhaitez, envisagez d’ajouter des contrôles d’accès granulaire
 
 **Cycle de vie du développement avec les sandbox de développement**
 
-Un sandbox de développement se comporte de la même manière qu’un sandbox de production pour tous les aspects fonctionnels. C&#39;est différent en ce sens qu&#39;il y aura des mécanismes de sécurisation contractuels pour vous maintenir dans les limites de votre licence. Il est conçu exclusivement pour le développement et le test avec des profils hors production, prenant en charge jusqu’à 10 % de votre engagement de profil sous licence (mesuré de manière cumulée sur tous les sandbox de développement autorisés). Pour plus d’informations et pour connaître les mécanismes de sécurisation, consultez la [documentation de présentation des sandbox](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home) et la [page de descriptions des produits](https://helpx.adobe.com/fr/legal/product-descriptions.html) pour obtenir plus d’informations sur les droits.
+Un sandbox de développement se comporte de la même manière qu’un sandbox de production pour tous les aspects fonctionnels. C&#39;est différent en ce sens qu&#39;il y aura des mécanismes de sécurisation contractuels pour vous maintenir dans les limites de votre licence. Il est conçu exclusivement pour le développement et le test avec des profils hors production, prenant en charge jusqu’à 10 % de votre engagement de profil sous licence (mesuré de manière cumulée sur tous les sandbox de développement autorisés). Pour plus d’informations et pour connaître les mécanismes de sécurisation, consultez la [documentation de présentation des sandbox](https://experienceleague.adobe.com/fr/docs/experience-platform/sandbox/home) et la [page de descriptions des produits](https://helpx.adobe.com/fr/legal/product-descriptions.html) pour obtenir plus d’informations sur les droits.
 
 Vous pouvez disposer de plusieurs sandbox de développement (jusqu’à 4 dans cet exemple d’entreprise, car nous utilisons un sandbox de production) pour le cycle de vie du développement et des tests.
 
@@ -102,7 +102,7 @@ Grâce à la fonction d’outil Sandbox, vous pouvez sélectionner différents o
 
 Vous avez la possibilité d’utiliser les API Experience Platform pour automatiser les déploiements de sandbox et les tâches de configuration. Les API permettent un contrôle programmable pour les tâches répétitives telles que l’exportation, l’importation ou la modification des configurations de sandbox, offrant ainsi une certaine flexibilité si vous préférez les workflows automatisés.
 
-Pour plus d’informations sur l’outil sandbox, consultez la [documentation sur l’outil sandbox](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling).
+Pour plus d’informations sur l’outil sandbox, consultez la [documentation sur l’outil sandbox](https://experienceleague.adobe.com/fr/docs/experience-platform/sandbox/ui/sandbox-tooling).
 
 | ![CDP-Créer un package](./images/whitepaper/create-package.png) | ![Packages de liste CDP](./images/whitepaper/list-packages.png) |
 | --- | --- |
@@ -229,7 +229,7 @@ En outre, vous pouvez utiliser la correspondance de segments Experience Platform
 
 Ce service de partage de segments permet à deux utilisateurs ou plus d’échanger des données de segment de manière sécurisée, contrôlée et respectueuse de la vie privée.
 
-Pour plus d’informations sur la fonction Correspondance de segments, consultez la [documentation sur la correspondance de segments](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview).
+Pour plus d’informations sur la fonction Correspondance de segments, consultez la [documentation sur la correspondance de segments](https://experienceleague.adobe.com/fr/docs/experience-platform/segmentation/ui/segment-match/overview).
 
 ### 3. Combinaison d’approches pour les opérations mondiales, régionales et spécifiques à la marque
 
