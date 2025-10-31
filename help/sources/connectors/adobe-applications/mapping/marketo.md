@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Mapper des champs pour la source Marketo Engage
 description: Les tableaux ci-dessous contiennent les mappages entre les champs des jeux de données Marketo et les champs XDM correspondants.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
 workflow-type: tm+mt
 source-wordcount: '1451'
 ht-degree: 41%
@@ -66,7 +66,7 @@ Lisez la documentation relative à la [classe d’événement d’expérience XD
 | primaryAttributeValueId lorsque activityTypeId dans (7, 8, 9, 10, 11, 27) | 7, 8, 9, 10, 11, 27 | `directMarketing.mailingName` | `directMarketing.mailingName` |  |
 |  |  | `directMarketing.testVariantName` | `directMarketing.testVariantName` |  |
 | `attributes.Test Variant` |  | `directMarketing.testVariantID` | `directMarketing.testVariantID` |  |
-| `attributes.Subcategory` <ul><li><strong>activityTypeId = 8</strong><ul><li>1099 → BLOQUÉ</li><li>1 003 → DE SPAM BLOQUÉS SUR SOURCE</li><li>1004 → DE SPAM BLOQUÉ SUR LE MESSAGE</li><li>ADRESSE E-MAIL → 2003 NON VALIDE</li><li>ERREUR D&#39;ADRESSE E-MAIL → 2001</li><li>*` &rarr;`RAISON INCONNUE DU REBOND</li></ul></li><li><strong>activityTypeId = 27</strong><ul><li>3999 → MESSAGE NON ACCEPTÉ</li><li>BOÎTE PLEINE 3001 →</li><li>DÉLAI D’EXPIRATION DE → 3004</li><li>4003 → ÉCHEC DU DNS</li><li>4002 → MESSAGE TROP GRAND</li><li>4006 → VIOLATION DE POLITIQUE</li><li>4999 → DÉFAILLANCE TRANSITOIRE</li><li>9999 → MAUVAISE RÉPONSE REÇUE</li><li>*→ RAISON INCONNUE DU SOFT BOUNCE</li></ul></li></ul> | 8, 27 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |  |
+| `attributes.Subcategory` <ul><li><strong>activityTypeId = 8</strong><ul><li>1099 → BLOQUÉ</li><li>1 003 → DE SPAM BLOQUÉS SUR SOURCE</li><li>1004 → DE SPAM BLOQUÉ SUR LE MESSAGE</li><li>ADRESSE E-MAIL → 2003 NON VALIDE</li><li>ERREUR D&#39;ADRESSE E-MAIL → 2001</li><li> `&rarr;` RAISON INCONNUE DU REBOND</li></ul></li><li><strong>activityTypeId = 27</strong><ul><li>3999 → MESSAGE NON ACCEPTÉ</li><li>BOÎTE PLEINE 3001 →</li><li>DÉLAI D’EXPIRATION DE → 3004</li><li>4003 → ÉCHEC DU DNS</li><li>4002 → MESSAGE TROP GRAND</li><li>4006 → VIOLATION DE POLITIQUE</li><li>4999 → DÉFAILLANCE TRANSITOIRE</li><li>9999 → MAUVAISE RÉPONSE REÇUE</li><li> → RAISON INCONNUE DU SOFT BOUNCE</li></ul></li></ul> | 8, 27 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |  |
 | `attributes.Details` |  | `directMarketing.emailBouncedDetails` | `directMarketing.emailBouncedDetails` |  |
 | `attributes.Email` |  | `directMarketing.email` | `directMarketing.email` |  |
 | `attributes.Is Mobile Device` |  | `device.isMobileDevice` | `device.isMobileDevice` |  |
