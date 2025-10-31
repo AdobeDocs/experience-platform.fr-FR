@@ -265,4 +265,4 @@ Dans ce scénario, la valeur correspond à la clé, si celle-ci se trouve dans l
 >
 >Une itération imbriquée de l’opération ci-dessus serait similaire à : `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`.
 
-Pour plus d’informations, consultez le document [ sur les opérateurs logiques dans  [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)
+Pour plus d’informations, consultez le document [&#x200B; sur les opérateurs logiques dans  [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)
