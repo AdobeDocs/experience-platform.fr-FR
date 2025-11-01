@@ -4,10 +4,10 @@ description: Découvrez comment connecter Didomi à Adobe Experience Platform à
 last-substantial-update: 2025-07-29T00:00:00Z
 badge: Beta
 exl-id: c59bcfb8-e831-4a13-8b0e-4c6d538f1059
-source-git-commit: b0c2d5535bb4cdf7d00eaca43d65f744276494f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '911'
-ht-degree: 2%
+source-wordcount: '893'
+ht-degree: 3%
 
 ---
 
@@ -35,7 +35,7 @@ Vous devez ajouter à votre place sur la liste autorisée des adresses IP spéci
 
 ### Configuration des autorisations sur Experience Platform
 
-Pour connecter votre compte **[!UICONTROL à Experience Platform]** les autorisations **[!UICONTROL Afficher les sources et]** Gérer les sources[!DNL Didomi] doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/ui/overview.md).
+Les autorisations **[!UICONTROL View Sources]** et **[!UICONTROL Manage Sources]** doivent être activées pour votre compte afin de connecter votre compte [!DNL Didomi] à Experience Platform. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/ui/overview.md).
 
 ### Collecter des informations d’identification d’API Adobe
 
@@ -51,9 +51,9 @@ Lisez le guide sur [Prise en main des API Experience Platform](../../../landing/
 
 Un schéma **Modèle de données d’expérience (XDM)** définit la structure des données que vous enverrez à partir de [!DNL Didomi] (par exemple, les identifiants d’utilisateur, à des fins de consentement) vers Experience Platform.
 
-Pour créer un schéma, sélectionnez [!UICONTROL Schémas] dans le volet de navigation de gauche de l’interface utilisateur d’Experience Platform, puis sélectionnez **[!UICONTROL Créer un schéma]**. Ensuite, sélectionnez **[!UICONTROL Standard]** comme type de schéma, puis sélectionnez **[!UICONTROL Manuel]** pour créer manuellement les champs. Sélectionnez une classe de base pour votre schéma et indiquez un nom pour votre schéma.
+Pour créer un schéma, sélectionnez [!UICONTROL Schemas] dans le volet de navigation de gauche de l’interface utilisateur d’Experience Platform, puis sélectionnez **[!UICONTROL Create schema]**. Ensuite, sélectionnez **[!UICONTROL Standard]** comme type de schéma, puis sélectionnez **[!UICONTROL Manual]** pour créer manuellement vos champs. Sélectionnez une classe de base pour votre schéma et indiquez un nom pour votre schéma.
 
-Une fois créé, mettez à jour le schéma en ajoutant l’un des champs requis. Assurez-vous qu’au moins un champ est un champ [!UICONTROL Identité] pour informer Experience Platform de vos valeurs d’identité principales. Enfin, assurez-vous d’activer le bouton (bascule) [!UICONTROL Profil] pour stocker vos données avec succès.
+Une fois créé, mettez à jour le schéma en ajoutant l’un des champs requis. Assurez-vous qu’au moins un champ est un champ [!UICONTROL Identity] pour informer Experience Platform sur vos valeurs d’identité principales. Enfin, assurez-vous d’activer le bouton (bascule) [!UICONTROL Profile] pour stocker vos données.
 
 ![create-schema](../../images/tutorials/create/didomi/create-schema.png)
 
@@ -67,7 +67,7 @@ Pour plus d’informations, consultez le guide sur la [création de schémas dan
 
 Un **jeu de données** dans Experience Platform est utilisé pour stocker les données entrantes en fonction du schéma que vous définissez.
 
-Pour créer un jeu de données, sélectionnez [!UICONTROL Jeux de données] dans le volet de navigation de gauche de l’interface utilisateur d’Experience Platform, puis sélectionnez **[!UICONTROL Créer un jeu de données]**. Sélectionnez ensuite **[!UICONTROL Créer un jeu de données à partir d’un schéma]** puis sélectionnez le schéma à associer à votre nouveau jeu de données.
+Pour créer un jeu de données, sélectionnez [!UICONTROL Datasets] dans le volet de navigation de gauche de l’interface utilisateur d’Experience Platform, puis sélectionnez **[!UICONTROL Create dataset]**. Sélectionnez ensuite **[!UICONTROL Create dataset from schema]**, puis sélectionnez le schéma à associer à votre nouveau jeu de données.
 
 ![create-dataset](../../images/tutorials/create/didomi/create-dataset.png)
 
@@ -82,7 +82,7 @@ Pour garantir la compatibilité avec Experience Platform, votre webhook doit ré
 | Champ | Description | Exemple |
 | --- | --- | --- | 
 | Secret client | Clé secrète associée à vos informations d’identification API Adobe. | `d8f3b2e1-4c9a-4a7f-9b2e-8f1c3d2a1b6e` |
-| Clé API | Clé API publique utilisée pour authentifier les requêtes envoyées aux services Adobe. |
+| Clé API | Clé API publique utilisée pour authentifier les requêtes envoyées aux services Adobe. |  |
 | Type d&#39;octroi | Méthode par laquelle une application obtient un jeton d’accès du serveur d’autorisation. Définissez cette valeur sur `client_credentials`. | `client_credentials` |
 | Portée | Les portées d’autorisation définissent les autorisations ou niveaux d’accès spécifiques qu’une application demande au fournisseur d’API. | `openid,AdobeID,read_organizations,additional_info.projectedProductContext,session` |
 | En-tête d’authentification | En-têtes supplémentaires requis pour la demande de jeton Adobe. | `{"Content-type": "application/x-www-form-urlencoded"}` |

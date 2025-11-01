@@ -2,7 +2,7 @@
 title: Messages d’erreur liés aux sources
 description: Prenez connaissance des messages d’erreur que vous pouvez rencontrer lors de l’utilisation du service de flux pour les sources.
 exl-id: cfba9780-4ab9-447b-8c60-c9f813107d11
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '3057'
 ht-degree: 70%
@@ -24,8 +24,8 @@ Ce document fournit une liste des messages d’erreur liés aux sources, avec le
 | `1004-415` | Type de média non pris en charge | Le format de payload fourni n’est pas pris en charge. Vérifiez la requête fournie et réessayez. |
 | `1005-500` | Erreur interne | Une erreur interne sʼest produite. Réessayez. Si le problème persiste, contactez l’assistance clientèle. |
 | `1006-408` | Délai d’expiration de la requête | Une erreur s’est produite lors du traitement de la requête. La requête a expiré. Réessayez. Si le problème persiste, contactez l’assistance clientèle. |
-| `1007-400` | Paramètre d’en-tête non valide | Paramètre d’en-tête non valide : {headerName} a été reçu. Vérifiez les paramètres d’en-tête et réessayez. |
-| `1008-401` | | Jeton d’autorisation non valide | Le jeton d’autorisation n’a pas accès à cette organisation ou l’organisation n’existe pas. Assurez-vous que l’organisation existe ou contactez votre administration pour y accéder. |
+| `1007-400` | Paramètre d’en-tête non valide | Paramètre d’en-tête non valide : `{headerName}` a été reçu. Vérifiez les paramètres d’en-tête et réessayez. |
+| `1008-401` | Jeton d’autorisation non valide | Le jeton d’autorisation n’a pas accès à cette organisation ou l’organisation n’existe pas. Assurez-vous que l’organisation existe ou contactez votre administration pour y accéder. |
 | `1009-403` | ID d’organisation IMS manquant ou vide | L’en-tête de la requête d’ID d’organisation est manquant ou vide. Mettez à jour la valeur de l’en-tête et réessayez. |
 | `1010-500` | Message détaillé non valide | Le paramètre du message détaillé n’a pas été correctement fourni. Vérifiez le paramètre dans le message détaillé et réessayez. |
 | `1011-503` | Service indisponible | Le service est temporairement indisponible. Réessayez. Si le problème persiste, contactez l’assistance clientèle. |
@@ -44,7 +44,7 @@ Ce document fournit une liste des messages d’erreur liés aux sources, avec le
 | `1104-504` | Délai d’expiration de la passerelle | Un délai d’expiration de passerelle s’est produit. Réessayez. Si le problème persiste, contactez l’assistance clientèle. |
 | `1105-401` | Non autorisé | L’utilisateur n’est pas autorisé. {detailedMessage} |
 | `1106-403` | Interdit | L’opération demandée est interdite. {detailedMessage} |
-| `1107-412` | Échec de la précondition | La condition définie par les en-têtes If-Unmodified-Since ou If-None-Match n’est pas remplie. {detailedMessage} |
+| `1107-412` | Échec de la précondition | La condition définie par les en-têtes If-Unmodified-Since ou If-None-Match n’est pas remplie. `{detailedMessage}` |
 
 ## Erreurs de chiffrement
 

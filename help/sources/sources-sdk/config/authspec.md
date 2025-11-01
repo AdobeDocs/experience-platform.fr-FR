@@ -3,7 +3,7 @@ keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;c
 title: Configurer les spécifications d’authentification pour les sources en libre-service (SDK par lots)
 description: Ce document présente un aperçu des configurations que vous devez préparer pour utiliser des sources en libre-service (SDK par lots).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 4%
@@ -116,20 +116,20 @@ Un code d’actualisation OAuth 2 permet un accès sécurisé à une application
 | --- | --- | --- |
 | `authSpec.name` | Affiche le nom du type d’authentification pris en charge. | `oAuth2-refresh-code` |
 | `authSpec.type` | Définit le type d’authentification pris en charge par la source. | `oAuth2-refresh-code` |
-| `authSpec.spec` | Contient des informations sur le schéma, le type de données et les propriétés de l’authentification. |
+| `authSpec.spec` | Contient des informations sur le schéma, le type de données et les propriétés de l’authentification. |  |
 | `authSpec.spec.$schema` | Définit le schéma utilisé pour l’authentification. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | Définit le type de données du schéma. | `object` |
-| `authSpec.spec.properties` | Contient des informations sur les informations d’identification utilisées pour l’authentification. |
-| `authSpec.spec.properties.description` | Affiche une brève description des informations d’identification. |
+| `authSpec.spec.properties` | Contient des informations sur les informations d’identification utilisées pour l’authentification. |  |
+| `authSpec.spec.properties.description` | Affiche une brève description des informations d’identification. |  |
 | `authSpec.spec.properties.type` | Définit le type de données des informations d’identification. | `string` |
-| `authSpec.spec.properties.clientId` | Identifiant client associé à votre application. L’identifiant client est utilisé conjointement avec votre secret client pour récupérer votre jeton d’accès. |
-| `authSpec.spec.properties.clientSecret` | Secret client associé à votre application . Le secret client est utilisé conjointement avec votre identifiant client pour récupérer votre jeton d’accès. |
-| `authSpec.spec.properties.accessToken` | Le jeton d’accès autorise l’accès sécurisé à votre application . |
-| `authSpec.spec.properties.refreshToken` | Le jeton d’actualisation est utilisé pour générer un nouveau jeton d’accès, lorsque le jeton d’accès expire. |
-| `authSpec.spec.properties.expirationDate` | Définit la date d’expiration du jeton d’accès. |
-| `authSpec.spec.properties.refreshTokenUrl` | URL utilisée pour récupérer votre jeton d’actualisation. |
-| `authSpec.spec.properties.accessTokenUrl` | URL utilisée pour récupérer votre jeton d’actualisation. |
-| `authSpec.spec.properties.requestParameterOverride` | Permet de spécifier les paramètres d’identification à remplacer lors de l’authentification. |
+| `authSpec.spec.properties.clientId` | Identifiant client associé à votre application. L’identifiant client est utilisé conjointement avec votre secret client pour récupérer votre jeton d’accès. |  |
+| `authSpec.spec.properties.clientSecret` | Secret client associé à votre application . Le secret client est utilisé conjointement avec votre identifiant client pour récupérer votre jeton d’accès. |  |
+| `authSpec.spec.properties.accessToken` | Le jeton d’accès autorise l’accès sécurisé à votre application . |  |
+| `authSpec.spec.properties.refreshToken` | Le jeton d’actualisation est utilisé pour générer un nouveau jeton d’accès, lorsque le jeton d’accès expire. |  |
+| `authSpec.spec.properties.expirationDate` | Définit la date d’expiration du jeton d’accès. |  |
+| `authSpec.spec.properties.refreshTokenUrl` | URL utilisée pour récupérer votre jeton d’actualisation. |  |
+| `authSpec.spec.properties.accessTokenUrl` | URL utilisée pour récupérer votre jeton d’actualisation. |  |
+| `authSpec.spec.properties.requestParameterOverride` | Permet de spécifier les paramètres d’identification à remplacer lors de l’authentification. |  |
 | `authSpec.spec.required` | Affiche les informations d’identification requises pour l’authentification. | `accessToken` |
 
 {style="table-layout:auto"}
@@ -173,13 +173,13 @@ L’authentification de base est un type d’authentification qui vous permet d�
 | --- | --- | --- |
 | `authSpec.name` | Affiche le nom du type d’authentification pris en charge. | `Basic Authentication` |
 | `authSpec.type` | Définit le type d’authentification pris en charge par la source. | `BasicAuthentication` |
-| `authSpec.spec` | Contient des informations sur le schéma, le type de données et les propriétés de l’authentification. |
+| `authSpec.spec` | Contient des informations sur le schéma, le type de données et les propriétés de l’authentification. |  |
 | `authSpec.spec.$schema` | Définit le schéma utilisé pour l’authentification. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | Définit le type de données du schéma. | `object` |
-| `authSpec.spec.description` | Affiche des informations supplémentaires spécifiques à votre type d’authentification. |
-| `authSpec.spec.properties` | Contient des informations sur les informations d’identification utilisées pour l’authentification. |
-| `authSpec.spec.properties.username` | Nom d’utilisateur du compte associé à votre application. |
-| `authSpec.spec.properties.password` | Mot de passe du compte associé à votre application. |
+| `authSpec.spec.description` | Affiche des informations supplémentaires spécifiques à votre type d’authentification. |  |
+| `authSpec.spec.properties` | Contient des informations sur les informations d’identification utilisées pour l’authentification. |  |
+| `authSpec.spec.properties.username` | Nom d’utilisateur du compte associé à votre application. |  |
+| `authSpec.spec.properties.password` | Mot de passe du compte associé à votre application. |  |
 | `authSpec.spec.required` | Spécifie les champs requis en tant que valeurs obligatoires à saisir dans Experience Platform. | `username` |
 
 {style="table-layout:auto"}
@@ -201,7 +201,7 @@ Les paramètres suivants sont généralement requis lors de l’utilisation de l
 
 {style="table-layout:auto"}
 
-+++Afficher l’authentification de la clé API
++++Afficher l’authentification par clé API
 
 ```json
 {

@@ -3,7 +3,7 @@ keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;c
 title: Configurer les spécifications de source pour les sources en libre-service (SDK par lots)
 description: Ce document présente un aperçu des configurations que vous devez préparer pour utiliser des sources en libre-service (SDK par lots).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '2090'
 ht-degree: 38%
@@ -12,7 +12,7 @@ ht-degree: 38%
 
 # Configurer la spécification de source pour les sources en libre-service (SDK par lots)
 
-Les spécifications de source contiennent des informations spécifiques à une source, notamment des attributs relatifs à la catégorie d’une source, au statut bêta et à l’icône de catalogue. Elles contiennent également des informations utiles telles que les paramètres d’URL, le contenu, l’en-tête et le planning. Les spécifications de source décrivent également le schéma des paramètres requis pour créer une connexion source à partir d’une connexion de base. Le schéma est nécessaire pour créer une connexion source.
+Les spécifications de source contiennent des informations spécifiques à une source, notamment des attributs relatifs à la catégorie d’une source, au statut Beta et à l’icône de catalogue. Elles contiennent également des informations utiles telles que les paramètres d’URL, le contenu, l’en-tête et le planning. Les spécifications de source décrivent également le schéma des paramètres requis pour créer une connexion source à partir d’une connexion de base. Le schéma est nécessaire pour créer une connexion source.
 
 Voir [annexe](#source-spec) pour un exemple de spécification de source entièrement rempli.
 
@@ -229,36 +229,36 @@ Voir [annexe](#source-spec) pour un exemple de spécification de source entière
 
 | Propriété | Description | Exemple |
 | --- | --- | --- |
-| `sourceSpec.attributes` | Contient des informations sur la source spécifique à l’interface utilisateur ou à l’API. |
-| `sourceSpec.attributes.uiAttributes` | Affiche des informations sur la source spécifique à l’interface utilisateur. |
+| `sourceSpec.attributes` | Contient des informations sur la source spécifique à l’interface utilisateur ou à l’API. |  |
+| `sourceSpec.attributes.uiAttributes` | Affiche des informations sur la source spécifique à l’interface utilisateur. |  |
 | `sourceSpec.attributes.uiAttributes.isBeta` | Attribut booléen qui indique si la source nécessite davantage de commentaires de la part des clients à ajouter à sa fonctionnalité. | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | Définit la catégorie de la source. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.icon` | Définit l’icône utilisée pour le rendu de la source dans l’interface utilisateur d’Experience Platform. | `mailchimp-icon.svg` |
-| `sourceSpec.attributes.uiAttributes.description` | Affiche une brève description de la source. |
-| `sourceSpec.attributes.uiAttributes.label` | Affiche le libellé à utiliser pour le rendu de la source dans l’interface utilisateur d’Experience Platform. |
-| `sourceSpec.attributes.spec.properties.urlParams` | Contient des informations sur le chemin d’accès à la ressource URL, la méthode et les paramètres de requête pris en charge. |
+| `sourceSpec.attributes.uiAttributes.description` | Affiche une brève description de la source. |  |
+| `sourceSpec.attributes.uiAttributes.label` | Affiche le libellé à utiliser pour le rendu de la source dans l’interface utilisateur d’Experience Platform. |  |
+| `sourceSpec.attributes.spec.properties.urlParams` | Contient des informations sur le chemin d’accès à la ressource URL, la méthode et les paramètres de requête pris en charge. |  |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.path` | Définit le chemin d’accès à la ressource à partir duquel récupérer les données. | `/3.0/reports/${campaignId}/email-activity` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.method` | Définit la méthode HTTP à utiliser pour que la requête à la ressource récupère les données. | `GET`, `POST` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | Définit les paramètres de requête pris en charge qui peuvent être utilisés pour ajouter l’URL source lors d’une requête de récupération de données. **Remarque** : toute valeur de paramètre fournie par l’utilisateur doit être formatée en tant qu’espace réservé. Par exemple : `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}` sera ajouté à l’URL source en tant que : `/?key=value&key1=value1`. |
 | `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | Définit les en-têtes qui doivent être fournis dans la requête HTTP à l’URL source lors de la récupération des données. | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
-| `sourceSpec.attributes.spec.properties.bodyParams` | Cet attribut peut être configuré pour envoyer le corps HTTP par le biais d’une requête POST. |
+| `sourceSpec.attributes.spec.properties.bodyParams` | Cet attribut peut être configuré pour envoyer le corps HTTP par le biais d’une requête POST. |  |
 | `sourceSpec.attributes.spec.properties.contentPath` | Définit le nœud qui contient la liste des éléments requis à ingérer dans Experience Platform. Cet attribut doit respecter une syntaxe de chemin d’accès JSON valide et doit pointer vers un tableau particulier. | Consultez la [section ressources supplémentaires](#content-path) pour obtenir un exemple de la ressource contenue dans un chemin d’accès au contenu. |
 | `sourceSpec.attributes.spec.properties.contentPath.path` | Chemin d’accès qui pointe vers les enregistrements de collection à ingérer dans Experience Platform. | `$.emails` |
 | `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | Cette propriété vous permet d’identifier des éléments spécifiques de la ressource identifiée dans le chemin d’accès du contenu qui doivent être exclus de l’ingestion. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | Cette propriété vous permet de spécifier explicitement les attributs individuels que vous souhaitez conserver. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.overrideWrapperAttribute` | Cette propriété vous permet de remplacer la valeur du nom d’attribut que vous avez spécifiée dans `contentPath`. | `email` |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath` | Cette propriété vous permet d’aplatir deux tableaux et de transformer les données de ressource en ressource Experience Platform. |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath` | Cette propriété vous permet d’aplatir deux tableaux et de transformer les données de ressource en ressource Experience Platform. |  |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.path` | Le chemin d’accès qui pointe vers les enregistrements de collection que vous souhaitez aplatir. | `$.email.activity` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.skipAttributes` | Cette propriété vous permet d’identifier des éléments spécifiques de la ressource identifiée dans le chemin d’accès de l’entité qui doivent être exclus de l’ingestion. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | Cette propriété vous permet de spécifier explicitement les attributs individuels que vous souhaitez conserver. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.overrideWrapperAttribute` | Cette propriété vous permet de remplacer la valeur du nom d’attribut que vous avez spécifiée dans `explodeEntityPath`. | `activity` |
-| `sourceSpec.attributes.spec.properties.paginationParams` | Définit les paramètres ou les champs qui doivent être fournis pour obtenir un lien vers la page suivante à partir de la réponse de page active de l’utilisateur ou lors de la création d’une URL de page suivante. |
+| `sourceSpec.attributes.spec.properties.paginationParams` | Définit les paramètres ou les champs qui doivent être fournis pour obtenir un lien vers la page suivante à partir de la réponse de page active de l’utilisateur ou lors de la création d’une URL de page suivante. |  |
 | `sourceSpec.attributes.spec.properties.paginationParams.type` | Affiche le type de pagination pris en charge pour votre source. | <ul><li>`OFFSET` : ce type de pagination vous permet d’analyser les résultats en spécifiant un index à partir duquel démarrer le tableau associé, ainsi qu’une limite du nombre de résultats renvoyés.</li><li>`POINTER` : ce type de pagination permet d’utiliser une variable `pointer` pour pointer vers un élément particulier qui doit être envoyé avec une requête. La pagination de type pointeur nécessite un chemin d’accès dans la payload qui pointe vers la page suivante.</li><li>`CONTINUATION_TOKEN` : ce type de pagination vous permet d’ajouter vos paramètres de requête ou d’en-tête avec un jeton de continuation pour récupérer les données de retour restantes de votre source, qui n’ont pas été initialement renvoyées en raison d’un maximum prédéterminé.</li><li>`PAGE` : ce type de pagination vous permet d’ajouter votre paramètre de requête avec un paramètre de pagination pour parcourir les données de retour par pages, à partir de la page zéro.</li><li>`NONE` : ce type de pagination peut être utilisé pour les sources qui ne prennent en charge aucun des types de pagination disponibles. Le type de pagination `NONE` renvoie l’ensemble des données de réponse après une requête.</li></ul> |
 | `sourceSpec.attributes.spec.properties.paginationParams.limitName` | Nom de la limite avec laquelle l’API peut spécifier le nombre d’enregistrements à récupérer dans une page. | `limit` ou `count`. |
 | `sourceSpec.attributes.spec.properties.paginationParams.limitValue` | Nombre d’enregistrements à récupérer dans une page. | `limit=10` ou `count=10`. |
 | `sourceSpec.attributes.spec.properties.paginationParams.offSetName` | Nom de l’attribut offset. Obligatoire si le type de pagination est défini sur `offset`. | `offset` |
 | `sourceSpec.attributes.spec.properties.paginationParams.pointerPath` | Nom de l’attribut du pointeur. Exige un chemin d’accès json vers l’attribut qui pointe vers la page suivante. Obligatoire si le type de pagination est défini sur `pointer`. | `pointer` |
-| `sourceSpec.attributes.spec.properties.scheduleParams` | Contient des paramètres qui définissent les formats de planification pris en charge pour votre source. Les paramètres de planification incluent `startTime` et `endTime`, qui vous permettent de définir des intervalles de temps spécifiques pour des exécutions par lots, ce qui garantit que les enregistrements récupérés lors d’une exécution par lots précédente ne soient pas récupérés à nouveau. |
+| `sourceSpec.attributes.spec.properties.scheduleParams` | Contient des paramètres qui définissent les formats de planification pris en charge pour votre source. Les paramètres de planification incluent `startTime` et `endTime`, qui vous permettent de définir des intervalles de temps spécifiques pour des exécutions par lots, ce qui garantit que les enregistrements récupérés lors d’une exécution par lots précédente ne soient pas récupérés à nouveau. |  |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamName` | Définit le nom du paramètre d’heure de début. | `since_last_changed` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamName` | Définit le nom du paramètre d’heure de fin. | `before_last_changed` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamFormat` | Définit le format pris en charge pour la variable `scheduleStartParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |

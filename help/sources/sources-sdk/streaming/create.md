@@ -1,24 +1,24 @@
 ---
-title: Création d’une spécification de connexion pour le SDK de diffusion en continu à l’aide de l’API Flow Service
-description: Le document suivant décrit les étapes à suivre pour créer une spécification de connexion à l’aide de l’API Flow Service et intégrer une nouvelle source par le biais de sources en libre-service.
+title: Créer une spécification de connexion pour Streaming SDK à l’aide de l’API Flow Service
+description: Le document suivant décrit la procédure à suivre pour créer une spécification de connexion à l’aide de l’API Flow Service et intégrer une nouvelle source via des sources en libre-service.
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
-badge: Version bêta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+badge: Beta
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '756'
-ht-degree: 36%
+source-wordcount: '744'
+ht-degree: 37%
 
 ---
 
-# Créez une nouvelle spécification de connexion à l’aide de l’API [!DNL Flow Service]
+# Créer une spécification de connexion à l’aide de l’API [!DNL Flow Service]
 
 >[!NOTE]
 >
->Le SDK de diffusion en continu des sources en libre-service est en version bêta. Veuillez lire la [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>La diffusion en continu de SDK par les sources en libre-service est en version bêta. Veuillez lire la [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Une spécification de connexion représente la structure d’une source. Elle contient des informations sur les exigences d’authentification d’une source, définit la manière dont les données sources peuvent être explorées et inspectées et fournit des informations sur les attributs d’une source donnée. Le point dʼentrée `/connectionSpecs` de l’API [!DNL Flow Service] vous permet de gérer par programmation les spécifications de connexion au sein de votre organisation.
 
-Le document suivant décrit les étapes à suivre pour créer une spécification de connexion à l’aide de l’API [!DNL Flow Service] et intégrer une nouvelle source par le biais de sources en libre-service (SDK de diffusion en continu).
+Le document suivant décrit la procédure à suivre pour créer une spécification de connexion à l’aide de l’API [!DNL Flow Service] et intégrer une nouvelle source via des sources en libre-service (streaming SDK).
 
 ## Prise en main
 
@@ -26,9 +26,9 @@ Avant de continuer, consultez le [guide de prise en main](./getting-started.md) 
 
 ## Collecter des artefacts
 
-Pour créer une source de diffusion en continu à l’aide de la fonctionnalité Sources en libre-service, vous devez d’abord vous coordonner avec Adobe, demander un référentiel Git privé et vous aligner sur l’Adobe en ce qui concerne le libellé, la description, la catégorie et l’icône de votre source.
+Pour créer une source de diffusion en continu à l’aide de sources en libre-service, vous devez d’abord vous coordonner avec Adobe, demander un référentiel Git privé et vous aligner avec Adobe sur les détails concernant le libellé, la description, la catégorie et l’icône de votre source.
 
-Une fois fourni, vous devez structurer votre référentiel Git privé comme suit :
+Une fois le référentiel Git privé fourni, vous devez le structurer comme suit :
 
 * Sources
    * {your_source}
@@ -39,24 +39,24 @@ Une fois fourni, vous devez structurer votre référentiel Git privé comme suit
          * {your_source}-label.txt
          * {your_source}-connectionSpec.json
 
-| Artefacts (noms de fichier) | Description | Exemple |
+| Artefacts (noms de fichiers) | Description | Exemple |
 | --- | --- | --- |
-| {your_source} | Nom de la source. Ce dossier doit contenir tous les artefacts liés à votre source, dans votre référentiel Git privé. | `medallia` |
-| {your_source}-category.txt | Catégorie à laquelle appartient votre source, formatée en tant que fichier texte. **Remarque** : Si vous pensez que votre source ne rentre dans aucune des catégories ci-dessus, contactez votre représentant Adobe pour discuter. | `medallia-category.txt` Dans le fichier, spécifiez la catégorie de votre source, par exemple : `streaming`. |
+| {your_source} | Nom de votre source. Ce dossier doit contenir tous les artefacts associés à votre source, dans votre référentiel Git privé. | `medallia` |
+| {your_source}-category.txt | La catégorie à laquelle votre source appartient, au format texte. **Remarque** : si vous pensez que votre source ne correspond à aucune des catégories ci-dessus, contactez votre représentant Adobe pour en discuter. | `medallia-category.txt` Dans le fichier , indiquez la catégorie de votre source, par exemple : `streaming`. |
 | {your_source}-description.txt | Brève description de votre source. | [!DNL Medallia] est une source d’automatisation du marketing que vous pouvez utiliser pour importer des données [!DNL Medallia] dans Experience Platform. |
-| {your_source}-icon.svg | L’image à utiliser pour représenter votre source dans le catalogue de sources Experience Platform. Cette icône doit être un fichier de SVG. |
+| {your_source}-icon.svg | Image à utiliser pour représenter votre source dans le catalogue des sources Experience Platform. Cette icône doit être un fichier SVG. |  |
 | {your_source}-label.txt | Le nom de votre source tel qu’il doit apparaître dans le catalogue des sources Experience Platform. | Medallia |
-| {your_source}-connectionSpec.json | Un fichier JSON contenant la spécification de connexion de votre source. Ce fichier n’est pas initialement requis, car vous renseignez votre spécification de connexion à mesure que vous suivez ce guide. | `medallia-connectionSpec.json` |
+| {your_source}-connectionSpec.json | Un fichier JSON contenant la spécification de connexion de votre source. Ce fichier n’est pas requis au départ, car vous allez renseigner votre spécification de connexion au fur et à mesure que vous terminez ce guide. | `medallia-connectionSpec.json` |
 
 {style="table-layout:auto"}
 
 >[!TIP]
 >
->Pendant la période de test de votre spécification de connexion, au lieu des valeurs clés, vous pouvez utiliser `text` dans la spécification de connexion.
+>Pendant la période de test de votre spécification de connexion, à la place des valeurs clés, vous pouvez utiliser `text` dans la spécification de connexion.
 
-Une fois que vous avez ajouté les fichiers nécessaires à votre référentiel Git privé, vous devez créer une requête de tirage (PR) que l’Adobe doit examiner. Une fois votre requête de tirage approuvée et fusionnée, vous recevez un identifiant qui peut être utilisé pour votre spécification de connexion pour faire référence au libellé, à la description et à l’icône de votre source.
+Une fois que vous avez ajouté les fichiers nécessaires à votre référentiel Git privé, vous devez créer une requête de tirage (PR) à Adobe pour révision. Une fois votre requête de tirage approuvée et fusionnée, un identifiant vous sera fourni. Il pourra être utilisé pour votre spécification de connexion afin de faire référence au libellé, à la description et à l’icône de votre source.
 
-Suivez ensuite les étapes décrites ci-dessous pour configurer votre spécification de connexion. Pour plus d’informations sur les différentes fonctionnalités que vous pouvez ajouter à votre source, telles que la planification avancée, le schéma personnalisé ou différents types de pagination, consultez le guide sur la [configuration des spécifications de la source](../config/sourcespec.md).
+Suivez ensuite les étapes décrites ci-dessous pour configurer votre spécification de connexion. Pour plus d’informations sur les différentes fonctionnalités que vous pouvez ajouter à votre source, telles que la planification avancée, le schéma personnalisé ou différents types de pagination, consultez le guide sur [la configuration des spécifications de la source](../config/sourcespec.md).
 
 ## Copier le modèle de spécification de connexion
 
@@ -72,7 +72,7 @@ Une fois que vous avez rassemblé les artefacts requis, copiez et collez le mod�
   "attributes": {
     "category": "Streaming",
     "isSource": true,
-    "documentationLink": "https://docs.adobe.com/content/help/fr-FR/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+    "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
     "uiAttributes": {
       "apiFeatures": {
         "updateSupported": false
@@ -137,7 +137,7 @@ Une fois que vous avez rassemblé les artefacts requis, copiez et collez le mod�
 
 Une fois que vous avez acquis le modèle de spécification de connexion, vous pouvez commencer à créer une spécification de connexion en renseignant les valeurs appropriées qui correspondent à votre source.
 
-Une spécification de connexion peut être divisée en deux parties distinctes : les spécifications source et les spécifications d’exploration.
+Une spécification de connexion peut être divisée en deux parties distinctes : les spécifications de la source et les spécifications d’exploration.
 
 Consultez les documents suivants pour plus d’informations sur les sections d’une spécification de connexion :
 
@@ -172,7 +172,7 @@ curl -X POST \
       "attributes": {
           "category": "Streaming",
           "isSource": true,
-          "documentationLink": "https://docs.adobe.com/content/help/fr-FR/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+          "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
           "uiAttributes": {
             "apiFeatures": {
               "updateSupported": false
@@ -287,7 +287,7 @@ Une réponse réussie renvoie la spécification de connexion nouvellement créé
       "attributes": {
         "category": "Streaming",
         "isSource": true,
-        "documentationLink": "https://docs.adobe.com/content/help/fr-FR/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+        "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
         "uiAttributes": {
           "apiFeatures": {
             "updateSupported": false

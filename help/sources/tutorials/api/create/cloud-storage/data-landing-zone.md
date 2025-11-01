@@ -2,9 +2,9 @@
 title: Connecter Data Landing Zone à Adobe Experience Platform à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform à Data Landing Zone à l’aide de l’API Flow Service.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '1419'
+source-wordcount: '1417'
 ht-degree: 13%
 
 ---
@@ -34,7 +34,7 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 
 >[!IMPORTANT]
 >
->Vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Gérer les sources]** pour utiliser les API [!DNL Data Landing Zone] et récupérer des `type=user_drop_zone`. Pour plus d’informations, consultez la [présentation du contrôle d’accès](../../../../../access-control/home.md) ou contactez l’administrateur de votre produit pour obtenir les autorisations requises.
+>Vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Manage Sources]** pour utiliser les API [!DNL Data Landing Zone] et récupérer des `type=user_drop_zone`. Pour plus d’informations, consultez la [présentation du contrôle d’accès](../../../../../access-control/home.md) ou contactez l’administrateur de votre produit pour obtenir les autorisations requises.
 
 La première étape de l’utilisation des API pour accéder aux [!DNL Data Landing Zone] consiste à envoyer une requête GET au point d’entrée `/landingzone` de l’API [!DNL Connectors] tout en fournissant des `type=user_drop_zone` dans l’en-tête de votre requête.
 
@@ -395,7 +395,7 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT
 
 | Paramètre | Description | Exemple |
 | --- | --- | --- |
-| `{CONNECTION_SPEC_ID}` | Identifiant de spécification de connexion qui correspond à [!DNL Data Landing Zone]. Cet ID fixe est `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
+| `{CONNECTION_SPEC_ID}` | Identifiant de spécification de connexion qui correspond à [!DNL Data Landing Zone]. Cet ID fixe est `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |  |
 | `{OBJECT_TYPE}` | Type de l’objet auquel vous souhaitez accéder. | `file` |
 | `{OBJECT}` | Chemin d’accès et nom de l’objet auquel vous souhaitez accéder. | `dlz-user-container/data8.csv` |
 | `{FILE_TYPE}` | Type du fichier. | <ul><li>`delimited`</li><li>`json`</li><li>`parquet`</li></ul> |
@@ -673,4 +673,4 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez récupéré vos informations d’identification [!DNL Data Landing Zone], exploré sa structure de fichiers pour trouver le fichier que vous souhaitez importer dans Experience Platform et créé une connexion source pour commencer à importer vos données dans Experience Platform. Vous pouvez maintenant passer au tutoriel suivant, où vous apprendrez à [créer un flux de données pour importer des données d’espace de stockage dans Experience Platform à l’aide de l’API [!DNL Flow Service] &#x200B;](../../collect/cloud-storage.md).
+En suivant ce tutoriel, vous avez récupéré vos informations d’identification [!DNL Data Landing Zone], exploré sa structure de fichiers pour trouver le fichier que vous souhaitez importer dans Experience Platform et créé une connexion source pour commencer à importer vos données dans Experience Platform. Vous pouvez maintenant passer au tutoriel suivant, où vous apprendrez à [créer un flux de données pour importer des données d’espace de stockage dans Experience Platform à l’aide de l’API [!DNL Flow Service] ](../../collect/cloud-storage.md).

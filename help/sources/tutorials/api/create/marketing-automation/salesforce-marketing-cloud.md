@@ -2,7 +2,7 @@
 title: Connecter Salesforce Marketing Cloud à Experience Platform à l’aide de l’API Flow Service
 description: Découvrez comment connecter votre compte Salesforce Marketing Cloud à Experience Platform à l’aide d’API.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 0c0a58df4beae499008e52c118b40bed86ff0596
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '587'
 ht-degree: 6%
@@ -101,14 +101,14 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `auth.params.host` |
+| `auth.params.host` |  |
 | `auth.params.clientId` | Identifiant client associé à votre application [!DNL Salesforce Marketing Cloud]. |
 | `auth.params.clientSecret` | Secret client associé à votre application [!DNL Salesforce Marketing Cloud]. |
 | `connectionSpec.id` | Identifiant de spécification de connexion [!DNL Salesforce Marketing Cloud] : `ea1c2a08-b722-11eb-8529-0242ac130003`. |
 
 +++
 
-+++Afficher l’exemple de réponse
++++Afficher un exemple de réponse
 
 **Réponse**
 

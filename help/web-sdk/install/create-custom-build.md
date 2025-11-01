@@ -1,13 +1,13 @@
 ---
 title: Créer une version SDK Web personnalisée à l’aide du package NPM
 description: Créez une version de Web SDK personnalisée qui ne contient que les modules dont vous avez besoin.
-source-git-commit: 0f77023b07102ac2bc812034afacb1522ef209e5
+exl-id: 0ba5ae55-9ec0-41b6-9675-e76ade8ca4cd
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 7%
 
 ---
-
 
 # Création d’une version de Web SDK personnalisée
 
@@ -40,7 +40,7 @@ Le tableau ci-dessous montre la relation entre les modules Web SDK et les comman
 | Collecteur d’activités | [`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md) | S/O | Méthode |
 | Audiences | S.O. | S.O. | Petit |
 | Contexte | [`context`](../commands/configure/context.md) | S/O | Petit |
-| Moteur de règles | `personalizationStorageEnabled` | | <ul><li>`evaluateRulesets`</li><li>[`subscribeRulesetItems`](../commands/subscriberulesetitems.md)</li></ul> | Méthode |
+| Moteur de règles | `personalizationStorageEnabled` | <ul><li>`evaluateRulesets`</li><li>[`subscribeRulesetItems`](../commands/subscriberulesetitems.md)</li></ul> | Méthode |
 | Fusion des événements | S/O | `createEventMergeId` | Petit |
 | Bridge Media Analytics | S/O | [`getMediaAnalyticsTracker`](../commands/getmediaanalyticstracker.md) | Grand |
 | Personnalisation | <ul><li>[`prehidingStyle`](../commands/configure/prehidingstyle.md)</li><li>[`targetMigrationEnabled`](../commands/configure/targetmigrationenabled.md)</li><li>[`autoCollectPropositionInteractions`](../commands/configure/autocollectpropositioninteractions.md)</li></ul> | S/O | Grand |
@@ -71,4 +71,3 @@ Le tableau ci-dessous montre la relation entre les modules Web SDK et les comman
 1. Une fois l’emplacement confirmé, votre version personnalisée est générée et enregistrée.
 
    ![Image d’un terminal affichant l’emplacement enregistré de la version personnalisée.](../assets/custom-build/saved.png)
-

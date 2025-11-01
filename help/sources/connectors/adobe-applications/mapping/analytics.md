@@ -2,10 +2,10 @@
 title: Champs de mappage pour le connecteur Source Adobe Analytics
 description: Mappez les champs Adobe Analytics aux champs XDM à l’aide du connecteur Source Analytics.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '3838'
-ht-degree: 21%
+source-wordcount: '3832'
+ht-degree: 20%
 
 ---
 
@@ -242,7 +242,7 @@ Certains champs provenant d’ADC doivent être transformés, ce qui nécessite 
 | `m_page_type` | `web.webPageDetails.isErrorPage` | booléen | Variable utilisée pour remplir la dimension Pages introuvables. Cette variable doit être vide ou contenir « ErrorPage ». |
 | `m_pagename_no_url` | `web.webPageDetails.name` | nombre | Nom de la page (s’il est défini). Si aucune page n’est spécifiée, cette valeur reste vide. |
 | `m_paid_search` | `search.isPaid` | booléen | Indicateur défini si l’accès correspond à la détection des référencements payants. |
-| `m_product_list` | `productListItems[].items` | tableau | Liste de produits, telle qu’elle est transmise par l’intermédiaire de la variable des produits. | {SKU (string), quantity (integer), priceTotal (number)} |
+| `m_product_list` | `productListItems[].items` | tableau | La liste des produits, transmise par le biais de la variable products. `{SKU (string), quantity (integer), priceTotal (number)}` |
 | `m_ref_type` | `web.webReferrer.type` | chaîne | Identifiant numérique représentant le type de référence pour l’accès.<br/>`1` : À l&#39;intérieur de votre site <br/>`2` : Autres sites Web <br/>`3` : Moteurs de recherche <br/>`4` : Disque dur <br/>`5` : USENET <br/>`6` : Typed/Bookmarked (pas de référent)<br/>`7` : e-mail <br/>`8` : Pas de JavaScript <br/>`9` : Réseaux sociaux |
 | `m_search_engine` | `search.searchEngine` | chaîne | Identifiant numérique représentant le moteur de recherche qui a renvoyé le visiteur sur votre site. |
 | `post_currency` | `commerce.order.currencyCode` | chaîne | Code de devise utilisé pendant la transaction. |
