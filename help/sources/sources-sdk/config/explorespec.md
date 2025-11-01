@@ -84,4 +84,4 @@ Les spécifications Explorer définissent les paramètres requis pour explorer e
 
 ## Étapes suivantes
 
-Une fois vos spécifications d’exploration renseignées, vous pouvez procéder à la création d’une spécification de connexion complète à l’aide de l’API [!DNL Flow Service]. Pour plus d’informations[ consultez le guide de l’API ](../api/api-overview.md) Sources en libre-service (SDK par lots) .
+Une fois vos spécifications d’exploration renseignées, vous pouvez procéder à la création d’une spécification de connexion complète à l’aide de l’API [!DNL Flow Service]. Pour plus d’informations[&#x200B; consultez le guide de l’API &#x200B;](../api/api-overview.md) Sources en libre-service (SDK par lots) .
