@@ -4,14 +4,21 @@ solution: Experience Platform
 title: Présentation de la correspondance des segments
 description: La correspondance des segments est un service de partage de segments dans Adobe Experience Platform qui permet à deux utilisateurs d’Experience Platform ou plus d’échanger des données de segment de manière sécurisée, régulée et respectueuse de la confidentialité.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
+source-git-commit: aa56c6bec3544c922521cc611036fd2989feb8b3
 workflow-type: tm+mt
-source-wordcount: '1978'
-ht-degree: 88%
+source-wordcount: '1999'
+ht-degree: 67%
 
 ---
 
 # Vue d’ensemble d’[!DNL Segment Match]
+
+>[!IMPORTANT]
+>
+>Adobe a introduit [!DNL Segment Match] en 2021 pour permettre aux clients de collaborer et d’échanger des audiences. Début 2025, Adobe a introduit [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), qui est l’approche à plus long terme permettant de répondre à ce cas d’utilisation.
+>
+>* Pour les clients situés aux États-Unis, au Canada, en Australie et en Nouvelle-Zélande : Adobe recommande aux clients Real-Time CDP Prime et Ultimate de faire passer les cas d’utilisation de collaboration en matière de données de [!DNL Segment Match] à Real-Time CDP Collaboration. Consultez la [documentation](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home) et le [guide de démarrage rapide](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/quick-start-guide) pour Real-Time CDP Collaboration et contactez l’équipe de votre compte Adobe pour en savoir plus.
+>* Pour les clients de toutes les autres zones géographiques : [!DNL Segment Match] est l’option recommandée jusqu’à la sortie de Real-Time CDP Collaboration dans ces zones géographiques en 2026.
 
 La correspondance de segments Adobe Experience Platform est un service de partage de segments qui permet à deux utilisateurs d’Experience Platform ou plus d’échanger des données de segment de manière sécurisée, régulée et respectueuse de la confidentialité. [!DNL Segment Match] utilise les normes de confidentialité et les identifiants personnels Experience Platform tels que les e-mails hachés, les numéros de téléphone hachés et les identifiants d’appareils comme les IDFA et les GAID.
 
@@ -44,7 +51,7 @@ La liste des espaces de noms pris en charge est la suivante :
 
 | Espace de noms | Description |
 | --------- | ----------- |
-| E-mails (SHA256, en minuscules) | Un espace de noms pour adresse électronique préhachée. Les valeurs fournies dans cet espace de noms sont converties en minuscules avant le hachage en SHA-256. Les espaces de début et de fin doivent être supprimés avant qu’une adresse e-mail ne soit normalisée. Ce paramètre ne peut pas être modifié rétroactivement. Experience Platform propose deux méthodes de prise en charge du hachage lors de la collecte de données, par le biais de [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=fr#hashing-support) et par le biais de [préparation des données](../../../data-prep/functions.md#hashing). |
+| E-mails (SHA256, en minuscules) | Un espace de noms pour adresse électronique préhachée. Les valeurs fournies dans cet espace de noms sont converties en minuscules avant le hachage en SHA-256. Les espaces de début et de fin doivent être supprimés avant qu’une adresse e-mail ne soit normalisée. Ce paramètre ne peut pas être modifié rétroactivement. Experience Platform propose deux méthodes de prise en charge du hachage lors de la collecte de données, par le biais de [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) et par le biais de [préparation des données](../../../data-prep/functions.md#hashing). |
 | Téléphone (SHA256_E.164) | Un espace de noms représentant des numéros de téléphone bruts qui doivent être hachés au format SHA256 et E.164. |
 | ECID | Un espace de noms représentant une valeur d’ID Experience Cloud (ECID). Cet espace de noms peut également être référencé par les alias suivants : « ID Adobe Marketing Cloud », « ID Adobe Experience Cloud », « ID Adobe Experience Platform ». Pour plus d’informations, consultez la [présentation ECID](../../../identity-service/features/ecid.md). |
 | IDFA Apple (ID pour les annonceurs) | Un espace de noms représentant l’ID Apple pour les annonceurs. Pour plus d’informations, consultez le document sur les [annonces basées sur les intérêts](https://support.apple.com/fr-fr/HT202074). |
@@ -66,7 +73,7 @@ Le dernier prérequis à mettre en place est de configurer un nouveau libellé d
 
 Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Les bonnes pratiques recommandent de libeller les données dès qu’elles sont ingérées dans Experience Platform, ou dès que les données sont disponibles pour une utilisation dans Experience Platform.
 
-[!DNL Segment Match] utilise le libellé C11, un libellé de contrat spécifique à [!DNL Segment Match] que vous pouvez ajouter manuellement à n’importe quels jeux de données ou attributs pour vous assurer qu’ils sont exclus du processus de partage des partenaires de [!DNL Segment Match]. Le libellé C11 indique les données qui ne doivent pas être utilisées dans les processus [!DNL Segment Match]. Une fois que vous avez déterminé les jeux de données et/ou les champs que vous souhaitez exclure de [!DNL Segment Match] et que vous avez ajouté le libellé C11 en conséquence, le libellé est automatiquement appliqué par le workflow [!DNL Segment Match]. [!DNL Segment Match] active automatiquement la politique principale [!UICONTROL Limitation du partage de données]. Pour obtenir des instructions spécifiques sur la manière d’appliquer des libellés d’utilisation des données aux jeux de données, consultez le tutoriel sur la [gestion des libellés d’utilisation des données dans l’interface utilisateur](../../../data-governance/labels/user-guide.md).
+[!DNL Segment Match] utilise le libellé C11, un libellé de contrat spécifique à [!DNL Segment Match] que vous pouvez ajouter manuellement à n’importe quels jeux de données ou attributs pour vous assurer qu’ils sont exclus du processus de partage des partenaires de [!DNL Segment Match]. Le libellé C11 indique les données qui ne doivent pas être utilisées dans les processus [!DNL Segment Match]. Une fois que vous avez déterminé les jeux de données et/ou les champs que vous souhaitez exclure de [!DNL Segment Match] et que vous avez ajouté le libellé C11 en conséquence, le libellé est automatiquement appliqué par le workflow [!DNL Segment Match]. [!DNL Segment Match] active automatiquement la politique de base [!UICONTROL Restrict data sharing]. Pour obtenir des instructions spécifiques sur la manière d’appliquer des libellés d’utilisation des données aux jeux de données, consultez le tutoriel sur la [gestion des libellés d’utilisation des données dans l’interface utilisateur](../../../data-governance/labels/user-guide.md).
 
 Pour obtenir une liste des libellés d’utilisation des données et leurs définitions, reportez-vous au [glossaire des libellés d’utilisation des données](../../../data-governance/labels/reference.md). Pour plus d’informations sur les politiques d’utilisation des données, voir la [présentation des politiques d’utilisation des données](../../../data-governance/policies/overview.md).
 
@@ -77,7 +84,7 @@ Deux autorisations sont associées à [!DNL Segment Match] :
 | Autorisation | Description |
 | --- | --- |
 | Gérer les connexions de partage d’audience | Cette autorisation vous permet d’effectuer le processus de partenariat à l’amiable, qui connecte deux organisations pour activer les flux [!DNL Segment Match]. |
-| Gérer les partages d’audience | Cette autorisation vous permet de créer, de modifier et de publier des flux (le package de données utilisé pour [!DNL Segment Match]) avec des partenaires actifs (des partenaires qui ont été connectés par l’utilisateur administrateur avec un accès aux **[!UICONTROL connexions avec partage d’audience]**). |
+| Gérer les partages d’audience | Cette autorisation vous permet de créer, de modifier et de publier des flux (le package de données utilisé pour [!DNL Segment Match]) avec des partenaires actifs (des partenaires qui ont été connectés par l’utilisateur administrateur avec un accès **[!UICONTROL Audience Share Connections]**). |
 
 Pour plus d’informations sur le contrôle d’accès et les autorisations, consultez la [Présentation du contrôle d’accès](../../../access-control/home.md).
 
@@ -87,11 +94,11 @@ Une fois que vous avez configuré les données d’identité, les espaces de nom
 
 ### Gérer les partenaires
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Segments]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Flux]** dans l’en-tête supérieur.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Segments]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Feeds]** dans l’en-tête supérieur.
 
 ![segments-feed.png](./images/segments-feed.png)
 
-La page des [!UICONTROL Flux] contient une liste de flux reçus des partenaires ainsi que des flux que vous avez partagés. Pour afficher la liste des partenaires existants ou mettre en place une connexion avec un nouveau partenaire, sélectionnez **[!UICONTROL Gérer les partenaires]**.
+La page [!UICONTROL Feeds] contient une liste de flux reçus des partenaires ainsi que des flux que vous avez partagés. Pour afficher la liste des partenaires existants ou établir une connexion avec un nouveau partenaire, sélectionnez **[!UICONTROL Manage partners]**.
 
 ![manage-Partners.png](./images/manage-partners.png)
 
@@ -101,15 +108,15 @@ Une connexion entre deux partenaires est une « liaison bidirectionnelle » qui 
 >
 >L’« accord à l’amiable bidirectionnel » entre vous et votre partenaire est strictement une connexion. Aucune donnée n’est échangée au cours de ce processus.
 
-Vous pouvez afficher une liste des connexions avec les partenaires existants dans l’interface principale de l’écran de [!UICONTROL Gérer les partenaires]. Sur le rail droit se trouve le panneau de [!UICONTROL Configuration des partages] qui vous offre la possibilité de générer un nouvel [!UICONTROL identifiant de connexion] ainsi qu’une zone de saisie dans laquelle vous pouvez saisir l’[!UICONTROL identifiant de connexion] d’un partenaire.
+Vous pouvez afficher une liste des connexions avec les partenaires existants dans l’interface principale de l’écran de [!UICONTROL Manage partners]. Sur le rail droit se trouve le panneau [!UICONTROL Share setting], qui vous offre la possibilité de générer un nouveau [!UICONTROL connect ID] ainsi qu’une zone de saisie dans laquelle vous pouvez saisir le [!UICONTROL connect ID] d’un partenaire.
 
 ![establish-connection.png](./images/establish-connection.png)
 
-Pour créer un nouvel [!UICONTROL identifiant de connexion], sélectionnez **[!UICONTROL Régénérer]** sous [!UICONTROL Configuration des partages] puis sélectionnez l’icône de copie à côté de l’identifiant qui vient d’être généré.
+Pour créer un [!UICONTROL connect ID], sélectionnez **[!UICONTROL Regenerate]** sous [!UICONTROL Share setting], puis sélectionnez l’icône de copie à côté de l’identifiant qui vient d’être généré.
 
 ![share-setting.png](./images/share-setting.png)
 
-Pour connecter un partenaire à l’aide de son [!UICONTROL identifiant de connexion], saisissez sa valeur d’identifiant unique dans la zone de saisie sous [!UICONTROL Connecter un partenaire] puis sélectionnez **[!UICONTROL Requête]**.
+Pour connecter un partenaire à l’aide de son [!UICONTROL connect ID], saisissez sa valeur d’identifiant unique dans la zone de saisie sous [!UICONTROL Connect partner], puis sélectionnez **[!UICONTROL Request]**.
 
 ![connect-partner.png](./images/connect-partner.png)
 
@@ -123,34 +130,34 @@ Pour connecter un partenaire à l’aide de son [!UICONTROL identifiant de conne
 
 Un **flux** est un regroupement des données (segments), les règles concernant la manière dont les données peuvent être exposées ou utilisées, ainsi que les configurations qui déterminent la manière dont vos données sont comparées aux données de vos partenaires. Un flux peut être géré indépendamment et échangé avec d’autres utilisateurs d’Experience Platform par le biais de [!DNL Segment Match].
 
-Pour créer un flux, sélectionnez **[!UICONTROL Créer un flux]** depuis le tableau de bord des [!UICONTROL flux].
+Pour créer un flux, sélectionnez **[!UICONTROL Create feed]** dans le tableau de bord [!UICONTROL Feeds].
 
 ![create-feed.png](./images/create-feed.png)
 
 La configuration de base d’un flux comprend un nom, une description et des configurations concernant les cas d’utilisation marketing et les paramètres d’identité. Attribuez un nom et une description à votre flux, puis appliquez les cas d’utilisation marketing dont vous souhaitez que vos données soient exclues. Vous pouvez sélectionner plusieurs cas d’utilisation dans une liste qui comprend :
 
 * [!UICONTROL Analytics]
-* [!UICONTROL Combinaison avec les PII]
-* [!UICONTROL Le ciblage intersite]
-* [!UICONTROL Science des données]
-* [!UICONTROL Le ciblage e-mail]
-* [!UICONTROL L’exportation vers un tiers]
-* [!UICONTROL Les annonces sur site]
-* [!UICONTROL La personnalisation sur site]
-* [!UICONTROL Correspondance de segments]
-* [!UICONTROL Personnalisation d’identité unique]
+* [!UICONTROL Combine with PII]
+* [!UICONTROL Cross-site targeting]
+* [!UICONTROL Data Science]
+* [!UICONTROL Email targeting]
+* [!UICONTROL Export to third party]
+* [!UICONTROL Onsite advertising]
+* [!UICONTROL Onsite personalization]
+* [!UICONTROL Segment Match]
+* [!UICONTROL Single identity personalization]
 
-Enfin, sélectionnez les espaces de noms d’identité appropriés pour votre flux. Pour plus d’informations sur les espaces de noms spécifiques pris en charge par [!DNL Segment Match], consultez le [tableau des données d’identité et des espaces de noms](#namespaces). Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
+Enfin, sélectionnez les espaces de noms d’identité appropriés pour votre flux. Pour plus d’informations sur les espaces de noms spécifiques pris en charge par [!DNL Segment Match], consultez le [tableau des données d’identité et des espaces de noms](#namespaces). Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]**.
 
 ![audience-sharing.png](./images/audience-sharing.png)
 
-Une fois les paramètres de votre flux définis, sélectionnez les segments que vous souhaitez partager dans la liste des segments propriétaires. Vous pouvez sélectionner plusieurs segments dans la liste et utiliser le rail droit pour gérer votre liste de segments sélectionnés. Une fois que vous avez terminé, cliquez sur **[!UICONTROL Suivant]**.
+Une fois les paramètres de votre flux définis, sélectionnez les segments que vous souhaitez partager dans la liste des segments propriétaires. Vous pouvez sélectionner plusieurs segments dans la liste et utiliser le rail droit pour gérer votre liste de segments sélectionnés. Une fois que vous avez terminé, sélectionnez **[!UICONTROL Next]**.
 
 ![select-segments.png](./images/select-segments.png)
 
-La page [!UICONTROL Partager] s’affiche, vous fournissant une interface pour sélectionner les partenaires avec lesquels vous souhaitez partager votre flux. Au cours de cette étape, vous pouvez également afficher le rapport des estimations de chevauchement de pré-partage et voir le nombre d’identités qui se chevauchent par espace de noms entre vous et votre partenaire, et le nombre d’identités qui se chevauchent et qui disposent du consentement de partage des données.
+La page [!UICONTROL Share] s’affiche, vous fournissant une interface pour sélectionner les partenaires avec lesquels vous souhaitez partager votre flux. Au cours de cette étape, vous pouvez également afficher le rapport des estimations de chevauchement de pré-partage et voir le nombre d’identités qui se chevauchent par espace de noms entre vous et votre partenaire, et le nombre d’identités qui se chevauchent et qui disposent du consentement de partage des données.
 
-Sélectionnez **[!UICONTROL Analyser par segment]** pour consulter le rapport d’estimations.
+Sélectionnez **[!UICONTROL Analyze by segment]** pour afficher le rapport d’estimations.
 
 ![analyze.png](./images/analyze.png)
 
@@ -161,27 +168,27 @@ Le rapport des estimations de chevauchement vous permet de gérer les contrôles
 | Identités avec consentement estimées | Le nombre total d’identités qui se chevauchent et qui répondent aux exigences de consentement configurées pour votre organisation. |
 | Identités chevauchées estimées | Le nombre d’identités qui remplissent les critères pour le segment sélectionné et qui correspondent également au partenaire sélectionné. Ces identités sont affichées par espace de noms et ne représentent pas les identités Profile individuelles. Les estimations de chevauchement sont basées sur des schémas Profile. |
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Fermer]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Close]**.
 
 ![overlap-report.png](./images/overlap-report.png)
 
-Une fois que vous avez sélectionné vos partenaires et consulté votre rapport d’estimations de chevauchement, sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Une fois que vous avez sélectionné vos partenaires et consulté votre rapport d’estimations de chevauchement, sélectionnez **[!UICONTROL Next]** pour continuer.
 
 ![share.png](./images/share.png)
 
-L’étape [!UICONTROL Révision] s’affiche, vous permettant dʼexaminer votre nouveau flux de données avant qu’il ne soit partagé et publié. Cette étape comprend des détails sur le paramètre d’identité appliqué, ainsi que des informations sur les cas d’utilisation marketing, les segments et les partenaires que vous avez sélectionnés.
+L’étape [!UICONTROL Review] s’affiche, vous permettant de vérifier votre nouveau flux avant qu’il ne soit partagé et publié. Cette étape comprend des détails sur le paramètre d’identité appliqué, ainsi que des informations sur les cas d’utilisation marketing, les segments et les partenaires que vous avez sélectionnés.
 
-Sélectionnez **[!UICONTROL Terminer]** pour continuer.
+Sélectionnez **[!UICONTROL Finish]** pour continuer.
 
 ![review.png](./images/review.png)
 
 ### Mettre à jour le flux
 
-Pour ajouter ou supprimer des segments, sélectionnez **[!UICONTROL Créer un flux]** depuis la page [!UICONTROL Flux], puis sélectionnez **[!UICONTROL Flux existant]**. Dans la liste des flux existants qui s’affichent, sélectionnez le flux que vous souhaitez mettre à jour, puis sélectionnez **[!UICONTROL Suivant]**.
+Pour ajouter ou supprimer des segments, sélectionnez **[!UICONTROL Create feed]** dans la page [!UICONTROL Feeds], puis sélectionnez **[!UICONTROL Existing feed]**. Dans la liste des flux existants qui s’affichent, sélectionnez le flux que vous souhaitez mettre à jour, puis sélectionnez **[!UICONTROL Next]**.
 
 ![feed-list](./images/feed-list.png)
 
-La liste des segments s’affiche. À partir de là, vous pouvez ajouter de nouveaux segments à votre flux et utiliser le rail droit pour supprimer les segments dont vous n’avez plus besoin. Une fois que vous avez terminé de gérer les segments dans votre flux, sélectionnez **[!UICONTROL Suivant]**, puis suivez les étapes décrites ci-dessus pour terminer la mise à jour du flux.
+La liste des segments s’affiche. À partir de là, vous pouvez ajouter de nouveaux segments à votre flux et utiliser le rail droit pour supprimer les segments dont vous n’avez plus besoin. Une fois que vous avez terminé de gérer les segments dans votre flux, sélectionnez **[!UICONTROL Next]** puis suivez les étapes décrites ci-dessus pour terminer la mise à jour du flux.
 
 ![mettre à jour](./images/update.png)
 
@@ -191,7 +198,7 @@ La liste des segments s’affiche. À partir de là, vous pouvez ajouter de nouv
 
 ### Accepter un flux entrant
 
-Pour afficher un flux entrant, sélectionnez **[!UICONTROL Reçu]** dans l’en-tête de la page [!UICONTROL Flux], puis sélectionnez le flux à afficher dans la liste. Pour accepter le flux, sélectionnez **[!UICONTROL Activer pour le profil]** et attendez quelques instants pour que le statut passe de [!UICONTROL En attente] à [!UICONTROL Activé].
+Pour afficher un flux entrant, sélectionnez **[!UICONTROL Received]** dans l’en-tête de la page de [!UICONTROL Feeds], puis sélectionnez le flux à afficher dans la liste. Pour accepter le flux, sélectionnez **[!UICONTROL Enable for profile]** et patientez quelques instants le temps que le statut passe de [!UICONTROL Pending] à [!UICONTROL Enabled].
 
 ![received.png](./images/received.png)
 
