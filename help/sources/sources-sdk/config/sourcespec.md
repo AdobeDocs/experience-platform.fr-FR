@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;c
 title: Configurer les spécifications de source pour les sources en libre-service (SDK par lots)
 description: Ce document présente un aperçu des configurations que vous devez préparer pour utiliser des sources en libre-service (SDK par lots).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 2ff70ee6e4aa7fd723293e66000ccb161d61ab6a
 workflow-type: tm+mt
-source-wordcount: '2090'
+source-wordcount: '2107'
 ht-degree: 38%
 
 ---
@@ -231,6 +231,7 @@ Voir [annexe](#source-spec) pour un exemple de spécification de source entière
 | --- | --- | --- |
 | `sourceSpec.attributes` | Contient des informations sur la source spécifique à l’interface utilisateur ou à l’API. |  |
 | `sourceSpec.attributes.uiAttributes` | Affiche des informations sur la source spécifique à l’interface utilisateur. |  |
+| `sourceSpec.attributes.uiAttributes.isPreview` | Attribut booléen qui indique si la source s’affiche en tant qu’aperçu (et non pour la production/la disponibilité générale). | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.isBeta` | Attribut booléen qui indique si la source nécessite davantage de commentaires de la part des clients à ajouter à sa fonctionnalité. | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | Définit la catégorie de la source. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.icon` | Définit l’icône utilisée pour le rendu de la source dans l’interface utilisateur d’Experience Platform. | `mailchimp-icon.svg` |
