@@ -2,16 +2,16 @@
 title: Surveiller l’ingestion des profils de streaming
 description: Découvrez comment utiliser le tableau de bord de surveillance pour surveiller l’ingestion des profils de diffusion en continu
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 450a59b406684b456a67df43fbf954edbae49ff7
 workflow-type: tm+mt
-source-wordcount: '1932'
-ht-degree: 20%
+source-wordcount: '1835'
+ht-degree: 19%
 
 ---
 
 # Surveiller l’ingestion des profils de streaming
 
-Vous pouvez utiliser le tableau de bord de surveillance dans l’interface utilisateur de Adobe Experience Platform pour effectuer la surveillance en temps réel de l’ingestion de profils par flux au sein de votre organisation. Utilisez cette fonctionnalité pour accéder à une plus grande transparence des mesures de débit, de latence et de qualité des données liées à vos données de diffusion en continu. De plus, utilisez cette fonctionnalité pour obtenir des alertes proactives et récupérer des informations exploitables afin d’identifier les violations de capacité potentielles et les problèmes d’ingestion de données.
+Vous pouvez utiliser le tableau de bord de surveillance dans l’interface utilisateur de Adobe Experience Platform pour effectuer la surveillance en temps réel de l’ingestion de profils par flux au sein de votre organisation. Utilisez cette fonctionnalité pour accéder à une plus grande transparence des mesures de débit et de qualité des données liées à vos données de diffusion en continu. De plus, utilisez cette fonctionnalité pour obtenir des alertes proactives et récupérer des informations exploitables afin d’identifier les violations de capacité potentielles et les problèmes d’ingestion de données.
 
 Lisez le guide suivant pour savoir comment utiliser le tableau de bord de surveillance afin de suivre les taux et les mesures des tâches d’ingestion de profil en flux continu dans votre organisation.
 
@@ -21,19 +21,19 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 * [Flux de données](../home.md) : les flux de données représentent des tâches de données qui transfèrent des informations dans Experience Platform. Ils sont configurés sur différents services pour faciliter le déplacement des données des connecteurs sources vers les jeux de données cibles, ainsi que vers le service d’identités, le profil client en temps réel et les destinations.
 * [Real-Time Customer Profile](../../profile/home.md) : le profil client en temps réel combine des données provenant de plusieurs sources (en ligne, hors ligne, CRM et tierces) en une vue unique et exploitable de chaque client, offrant des expériences cohérentes et personnalisées sur tous les points de contact.
-* [Ingestion par flux](../../ingestion/streaming-ingestion/overview.md) : l’ingestion par flux pour Experience Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données d’appareils côté client et côté serveur à Experience Platform. Experience Platform vous permet de générer des expériences coordonnées, cohérentes et pertinentes en générant un profil client en temps réel pour chacun de vos clients. &#x200B;L’ingestion par flux joue un rôle essentiel dans la création de ces profils avec le moins de latence possible.
+* [Ingestion par flux](../../ingestion/streaming-ingestion/overview.md) : l’ingestion par flux pour Experience Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données d’appareils côté client et côté serveur à Experience Platform. Experience Platform vous permet de générer des expériences coordonnées, cohérentes et pertinentes en générant un profil client en temps réel pour chacun de vos clients. .
 * [Capacités](../../landing/license-usage-and-guardrails/capacity.md) : dans Experience Platform, les capacités vous permettent de savoir si votre organisation a dépassé l’un de vos mécanismes de sécurisation et vous donnent des informations sur la manière de résoudre ces problèmes.
 
 >[!NOTE]
 >
->La capacité de débit en flux continu prend en charge jusqu’à 1 500 événements entrants par seconde. Vous pouvez acheter une segmentation en flux continu supplémentaire pour prendre en charge jusqu’à 13 500 événements entrants supplémentaires par seconde&#x200B;. Pour plus d’informations, reportez-vous aux descriptions de produits des packages Real-Time CDP B2C Edition - Prime et Ultimate [&#128279;](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>La capacité de débit en flux continu prend en charge jusqu’à 1 500 événements entrants par seconde. Vous pouvez acheter une segmentation en flux continu supplémentaire pour prendre en charge jusqu’à 13 500 événements entrants supplémentaires par seconde&#x200B;. Pour plus d’informations, reportez-vous aux descriptions de produits des packages Real-Time CDP B2C Edition - Prime et Ultimate [](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 ## Surveillance des mesures pour l’ingestion de profils de streaming {#streaming-profile-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile"
 >title="Surveiller l’ingestion des profils de streaming"
->abstract="Le tableau de bord de surveillance des profils de streaming affiche des informations sur le débit, les taux d’ingestion et la latence. Utilisez ce tableau de bord pour afficher, comprendre et analyser les mesures de traitement des données. de vos profils de streaming dans Experience Platform."
+>abstract="Le tableau de bord de surveillance des profils de diffusion en continu affiche des informations sur le débit et les taux d’ingestion. Utilisez ce tableau de bord pour afficher, comprendre et analyser les mesures de traitement des données. de vos profils de streaming dans Experience Platform."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -90,7 +90,6 @@ Utilisez le tableau des mesures pour obtenir des informations spécifiques à vo
 | --- | --- | --- | --- |
 | Débit de demande | Cette mesure représente le nombre d’événements entrant dans le système d’ingestion par seconde. | Sandbox/flux de données | Surveillance en temps réel avec une actualisation des données toutes les 60 secondes. |
 | Débit de traitement | Cette mesure représente le nombre d’événements ingérés avec succès par le système chaque seconde. | Sandbox/flux de données | Surveillance en temps réel avec une actualisation des données toutes les 60 secondes. |
-| Latence d’ingestion P95 | Cette mesure mesure la latence du 95e centile entre le moment où un événement arrive dans Experience Platform et celui où il est ingéré avec succès dans la banque de profils. | Sandbox/flux de données | Surveillance en temps réel avec une actualisation des données toutes les 60 secondes. |
 | Débit maximal | Cette mesure représente le nombre maximal de requêtes entrantes par seconde entrant dans l’ingestion de profil en flux continu | <ul><li>Sandbox/flux de données</li><li>Exécution du flux de données</li></ul> |  |
 | Enregistrements ingérés | Cette mesure représente le nombre total d’enregistrements ingérés dans la banque de profils au cours d’une période configurée. | <ul><li>Sandbox/flux de données</li><li>Exécution du flux de données</li></ul> | <ul><li>Sandbox/flux de données : surveillance en temps réel avec une actualisation des données toutes les 60 secondes.</li><li>Exécution du flux de données : regroupée en 15 minutes.</li></ul> |
 | Enregistrements ayant échoué | Cette mesure représente le nombre total d’enregistrements qui ont échoué lors de l’ingestion dans la banque de profils au cours d’une période configurée en raison d’erreurs. | <ul><li>Sandbox/flux de données</li><li>Exécution du flux de données</li></ul> | <ul><li>Sandbox/flux de données : surveillance en temps réel avec une actualisation des données toutes les 60 secondes.</li><li>Exécution du flux de données : regroupée en 15 minutes.</li></ul> |
@@ -105,7 +104,7 @@ Pour accéder au tableau de bord de surveillance de l’ingestion de profils en 
 
 ![Tableau de bord de surveillance de l’ingestion des profils en flux continu.](../assets/ui/streaming-profiles/monitoring-dashboard.png)
 
-Reportez-vous à l’en-tête supérieur du tableau de bord pour la carte Mesures *[!UICONTROL Profile]* . Utilisez cet affichage pour afficher des informations sur les enregistrements ingérés, ayant échoué et ignorés, ainsi que sur le statut actuel du débit et de la latence des demandes.
+Reportez-vous à l’en-tête supérieur du tableau de bord pour la carte Mesures *[!UICONTROL Profile]* . Utilisez cet affichage pour afficher des informations sur les enregistrements ingérés, en échec et ignorés, ainsi que sur le statut actuel du débit des demandes.
 
 ![Carte de profil.](../assets/ui/streaming-profiles/profile-card.png)
 
@@ -119,7 +118,7 @@ Ensuite, utilisez l’interface pour afficher des informations détaillées sur 
 
 Vous pouvez également configurer manuellement votre propre période à l’aide du calendrier.
 
-Vous pouvez utiliser trois catégories de mesures différentes dans le tableau de bord de surveillance pour l’ingestion de profils en flux continu : [!UICONTROL Throughput], [!UICONTROL Ingestion] et [!UICONTROL Latency].
+Vous pouvez utiliser deux catégories de mesures différentes dans le tableau de bord de surveillance pour l’ingestion de profils en flux continu : [!UICONTROL Throughput] et [!UICONTROL Ingestion].
 
 >[!BEGINTABS]
 
@@ -142,12 +141,6 @@ Sélectionnez **[!UICONTROL Throughput]** pour afficher des informations sur la 
 * **Enregistrements ingérés** : quantité totale d&#39;enregistrements créés au cours d&#39;une période donnée. Cette mesure représente les processus d’ingestion de données réussis dans votre sandbox.
 * **Enregistrements ignorés** : nombre total d’enregistrements qui n’ont pas été ingérés en raison d’erreurs.
 * **Enregistrements ignorés** : nombre total d’enregistrements qui ont été ignorés en raison d’un dépassement des limites de capacité.
-
->[!TAB  Latence ]
-
-Sélectionnez **[!UICONTROL Latency]** pour afficher des informations sur le temps nécessaire à Experience Platform pour répondre à une demande ou effectuer une opération au cours d’une période donnée.
-
-![Tableau de bord avec l’affichage défini sur « latence ».](../assets/ui/streaming-profiles/latency.png)
 
 >[!ENDTABS]
 
