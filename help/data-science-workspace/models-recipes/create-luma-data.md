@@ -5,9 +5,9 @@ title: Créer des schémas web et des jeux de données Luma
 type: Tutorial
 description: Ce tutoriel vous présente les prérequis et les ressources nécessaires au modèle de propension de démonstration de Luma.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 219305a71c70a5bbec2fad591c166761e3aaa9ee
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Ce tutoriel vous présente les prérequis et les ressources nécessaires à tous
 
 ## Téléchargement des ressources {#assets}
 
-Le tutoriel suivant utilise un modèle personnalisé de propension à l’achat de Luma . Avant de poursuivre, [téléchargez les ressources requises](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip) le dossier zip. Ce dossier contient les éléments suivants :
+Le tutoriel suivant utilise un modèle personnalisé de propension à l’achat de Luma . Avant de poursuivre, [téléchargez les ressources requises](../assets/DSW-course-sample-assets.7z) le dossier zip. Ce dossier contient les éléments suivants :
 
 - Le notebook de modèle de propension à l’achat
 - Un notebook utilisé pour ingérer des données dans un jeu de données d’entraînement et de notation (un sous-ensemble des données web de Luma)
@@ -49,15 +49,15 @@ Le tutoriel suivant utilise un modèle personnalisé de propension à l’achat 
 
 ### Créer le schéma de données web Luma et ingérer les données
 
-Pour créer un modèle, vous devez disposer d’un jeu de données dans Experience Platform utilisé pour entraîner et noter votre modèle. Le tutoriel vidéo suivant du [cours Workspace de science des données](https://experienceleague.adobe.com/?lang=fr&recommended=ExperiencePlatform-U-1-2021.1.dsw&lang=fr) vous guide tout au long de la création du schéma Luma et de l’ingestion des données utilisées par le modèle de propension à l’achat.
+Pour créer un modèle, vous devez disposer d’un jeu de données dans Experience Platform utilisé pour entraîner et noter votre modèle. Le tutoriel vidéo suivant du [cours Workspace de science des données](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&lang=fr) vous guide tout au long de la création du schéma Luma et de l’ingestion des données utilisées par le modèle de propension à l’achat.
 
->[!VIDEO](https://video.tv.adobe.com/v/3447156?captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/333312)
 
 ### Créez les jeux de données de résultats d’entraînement, de notation et de notation
 
 Pour exécuter le notebook du créateur de recettes ou utiliser l’API pour entraîner et noter un modèle, vous devez spécifier le ou les jeux de données et le ou les schémas utilisés pour l’entraînement/la notation. Le tutoriel vidéo suivant vous guide tout au long de la configuration des jeux de données de résultats d’entraînement, de notation et de notation, ainsi que du schéma de résultats de notation utilisé dans le modèle de propension aux achats de Luma.
 
->[!VIDEO](https://video.tv.adobe.com/v/3447423?captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/333426)
 
 ## Étapes suivantes
 
