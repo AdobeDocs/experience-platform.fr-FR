@@ -3,18 +3,14 @@ solution: Experience Platform
 title: Audiences Similaires
 description: Découvrez comment cibler de nouvelles audiences à forte valeur ajoutée dans Adobe Experience Platform à l’aide d’audiences semblables.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: d978437479bedd0f943a6d68de78073f318cccb5
+source-git-commit: 03f8124f0fc750efa9b7bca0ff80de4c9263915d
 workflow-type: tm+mt
-source-wordcount: '2299'
-ht-degree: 9%
+source-wordcount: '2250'
+ht-degree: 10%
 
 ---
 
 # Guide des audiences semblables
-
->[!AVAILABILITY]
->
->Les informations semblables et les audiences semblables ne sont disponibles que dans l’édition **B2C**.
 
 >[!IMPORTANT]
 >
@@ -85,15 +81,15 @@ Les packs de modules complémentaires, qui seront disponibles à une date ultér
 
 ## Accès {#access}
 
-Pour confirmer si vous avez accès à des audiences semblables, sélectionnez une audience dans le portail d’audiences et vérifiez si l’onglet **[!UICONTROL Informations semblables]** est visible.
+Pour confirmer si vous avez accès à des audiences semblables, sélectionnez une audience dans le portail d’audiences et vérifiez si l’onglet **[!UICONTROL Look-alike insights]** est visible.
 
 ## Affichage d’informations semblables {#view}
 
-Les informations semblables sont intégrées à la page des détails de l’audience. Pour afficher les informations similaires pour une audience, sélectionnez **[!UICONTROL Audiences]** dans la barre de navigation de gauche, suivi de **[!UICONTROL Parcourir]** et de l’audience pour laquelle vous souhaitez afficher les informations.
+Les informations semblables sont intégrées à la page des détails de l’audience. Pour afficher les informations semblables pour une audience, sélectionnez **[!UICONTROL Audiences]** dans la barre de navigation de gauche, suivi de **[!UICONTROL Browse]**, et de l’audience pour laquelle vous souhaitez afficher les informations.
 
 ![Le bouton Audiences est mis en surbrillance, ainsi que l’audience de base utilisée pour la modélisation similaire.](../images/types/lookalike/browse.png)
 
-La page Détails de l’audience s’affiche. Sélectionnez l’onglet **[!UICONTROL Informations semblables]** pour afficher les informations semblables de l’audience. La page **[!UICONTROL Informations semblables]** s’affiche. Cette page comporte trois éléments principaux : le graphique de similarité et de portée, les audiences semblables et les facteurs d’influence.
+La page Détails de l’audience s’affiche. Sélectionnez **[!UICONTROL Look-alike insights]** onglet pour afficher les informations semblables de l’audience. La page **[!UICONTROL Look-alike insights]** s’affiche. Cette page comporte trois éléments principaux : le graphique de similarité et de portée, les audiences semblables et les facteurs d’influence.
 
 ![L’onglet Informations semblables est mis en surbrillance, affichant les informations semblables pour l’audience de base.](../images/types/lookalike/look-alike-insights.png)
 
@@ -155,17 +151,17 @@ Ces intervalles sont régulièrement recalculés pour s’assurer que les donné
 >
 >Vous **ne pouvez pas** utiliser une audience semblable comme audience de base pour une autre audience semblable. En d’autres termes, vous **pouvez pas** créer des audiences semblables chaînées.
 
-Pour créer une audience semblable, vous devez sélectionner l’audience sur laquelle vous souhaitez baser l’audience semblable. Pour accéder à la liste des audiences disponibles, sélectionnez **[!UICONTROL Audiences]** dans la barre de navigation de gauche, puis **[!UICONTROL Parcourir]**. La liste des audiences s’affiche. Sur cette page, vous pouvez sélectionner l’audience que vous souhaitez utiliser comme audience de base.
+Pour créer une audience semblable, vous devez sélectionner l’audience sur laquelle vous souhaitez baser l’audience semblable. Pour accéder à la liste des audiences disponibles, sélectionnez **[!UICONTROL Audiences]** dans la barre de navigation de gauche, puis **[!UICONTROL Browse]**. La liste des audiences s’affiche. Sur cette page, vous pouvez sélectionner l’audience que vous souhaitez utiliser comme audience de base.
 
 ![Le bouton Audiences est mis en surbrillance, ainsi que l’audience de base utilisée pour la modélisation similaire.](../images/types/lookalike/browse.png)
 
-Sur la page des détails de l’audience, sélectionnez **[!UICONTROL Créer une audience semblable]** pour lancer le processus de création d’une audience semblable.
+Sur la page des détails de l’audience, sélectionnez **[!UICONTROL Create look-alike audience]** pour lancer le processus de création d’une audience semblable.
 
-![Le bouton [!UICONTROL Créer une audience semblable] est mis en surbrillance.](../images/types/lookalike/create-look-alike-audience.png)
+![Le bouton [!UICONTROL Create look-alike audience] est mis en surbrillance.](../images/types/lookalike/create-look-alike-audience.png)
 
-La fenêtre contextuelle **[!UICONTROL Créer une audience semblable]** s’affiche. Sur cette page, vous pouvez définir le pourcentage de similarité de l’audience semblable.
+La fenêtre contextuelle **[!UICONTROL Create a look-alike audience]** s’affiche. Sur cette page, vous pouvez définir le pourcentage de similarité de l’audience semblable.
 
-![La fenêtre contextuelle [!UICONTROL Créer une audience semblable] s’affiche.](../images/types/lookalike/create-audience.png)
+![La fenêtre contextuelle [!UICONTROL Create a look-alike audience] s’affiche.](../images/types/lookalike/create-audience.png)
 
 Vous pouvez définir ce pourcentage de similarité de trois manières différentes :
 
@@ -175,17 +171,17 @@ Vous pouvez définir ce pourcentage de similarité de trois manières différent
 
 Vous pouvez également mettre à jour les détails de l’audience semblable, y compris son nom et sa description. Par défaut, le nom de l’audience semblable est généré en fonction du nom de l’audience de base et du pourcentage de similarité précédemment spécifiés.
 
-![Les informations de base sont mises en surbrillance dans la fenêtre contextuelle [!UICONTROL Créer une audience semblable].](../images/types/lookalike/basic-info.png)
+![Les informations de base sont mises en surbrillance dans la fenêtre contextuelle du [!UICONTROL Create a look-alike audience].](../images/types/lookalike/basic-info.png)
 
-Sélectionnez **[!UICONTROL Créer]** pour terminer la création de votre audience semblable.
+Sélectionnez **[!UICONTROL Create]** pour terminer la création de votre audience semblable.
 
-![Le bouton Créer est mis en surbrillance dans la fenêtre contextuelle [!UICONTROL Créer une audience semblable].](../images/types/lookalike/create-audience.png)
+![Le bouton Créer est mis en surbrillance dans la fenêtre contextuelle de [!UICONTROL Create a look-alike audience].](../images/types/lookalike/create-audience.png)
 
-L’audience semblable nouvellement créée est accessible dans la section **[!UICONTROL Audiences semblables]** de la page des détails de l’audience. Elle est également disponible dans le portail d’audience et pour d’autres utilisations en aval. Notez que la notation de l’audience semblable prendra un certain temps. Jusqu’à ce qu’il soit noté, le nombre de profils semblera être égal à 0.
+L’audience semblable nouvellement créée est accessible dans la section **[!UICONTROL Look-alike audiences]** de la page des détails de l’audience. Elle est également disponible dans le portail d’audiences et pour d’autres utilisations en aval. Notez que la notation de l’audience semblable prendra un certain temps. Jusqu’à ce qu’il soit noté, le nombre de profils semblera être égal à 0.
 
 ## Afficher les détails de l’audience semblable {#view-details}
 
-Pour afficher les détails d’une audience semblable, sélectionnez-la dans la section **[!UICONTROL Audiences semblables]** de l’audience de base.
+Pour afficher les détails d’une audience semblable, sélectionnez-la dans la section **[!UICONTROL Look-alike audiences]** de l’audience de base.
 
 ![La section Audiences semblables est mise en surbrillance.](../images/types/lookalike/select-laa.png)
 
@@ -211,4 +207,4 @@ Par défaut, si une audience de base n’a pas de libellés de contrat, le proce
 
 ## Étapes suivantes
 
-Après lecture de ce guide, vous avez appris à afficher des informations semblables et à créer des audiences semblables en fonction de ces informations. Pour plus d’informations sur les audiences dans l’interface utilisateur de Adobe Experience Platform, veuillez lire le [&#x200B; Guide de l’interface utilisateur de Segmentation Service](./overview.md).
+Après lecture de ce guide, vous avez appris à afficher des informations semblables et à créer des audiences semblables en fonction de ces informations. Pour plus d’informations sur les audiences dans l’interface utilisateur de Adobe Experience Platform, veuillez lire le [ Guide de l’interface utilisateur de Segmentation Service](./overview.md).
