@@ -96,7 +96,7 @@ Le schéma CEE, comme tous les schémas XDM ExperienceEvent, capture l’état t
 
 Comme tous les schémas XDM, le groupe de champs de schéma CEE est extensible. En d’autres termes, des champs supplémentaires peuvent être ajoutés au groupe de champs CEE et différentes variations peuvent être incluses dans plusieurs schémas si nécessaire.
 
-Vous trouverez un exemple complet du groupe de champs dans le [référentiel XDM public](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). En outre, vous pouvez afficher et copier le fichier [JSON](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) suivant pour un exemple de la manière dont les données peuvent être structurées pour se conformer au schéma CEE. Reportez-vous à ces deux exemples au fur et à mesure que vous en apprendrez plus sur les champs clés décrits dans la section ci-dessous, afin de déterminer comment vous pouvez mapper vos propres données au schéma.
+Vous trouverez un exemple complet du groupe de champs dans le [référentiel XDM public](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). En outre, vous pouvez afficher et copier le fichier [JSON](https://github.com/AdobeDocs/experience-platform.fr-FR/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) suivant pour un exemple de la manière dont les données peuvent être structurées pour se conformer au schéma CEE. Reportez-vous à ces deux exemples au fur et à mesure que vous en apprendrez plus sur les champs clés décrits dans la section ci-dessous, afin de déterminer comment vous pouvez mapper vos propres données au schéma.
 
 ## Champs clés
 
@@ -355,7 +355,7 @@ Si vous ingérez des données à partir d’un fichier CSV local, vous pouvez pa
 
 #### Mapper et ingérer des données {#ingest}
 
-Après avoir créé un schéma et un jeu de données CEE, vous pouvez commencer à mapper vos tableaux de données au schéma et ingérer ces données dans Experience Platform. Consultez le tutoriel sur [le mappage d’un fichier CSV à un schéma XDM](../ingestion/tutorials/map-csv/overview.md) pour savoir comment effectuer cette opération dans l’interface utilisateur. Vous pouvez utiliser l’[exemple de fichier JSON](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) suivant pour tester le processus d’ingestion avant d’utiliser vos propres données.
+Après avoir créé un schéma et un jeu de données CEE, vous pouvez commencer à mapper vos tableaux de données au schéma et ingérer ces données dans Experience Platform. Consultez le tutoriel sur [le mappage d’un fichier CSV à un schéma XDM](../ingestion/tutorials/map-csv/overview.md) pour savoir comment effectuer cette opération dans l’interface utilisateur. Vous pouvez utiliser l’[exemple de fichier JSON](https://github.com/AdobeDocs/experience-platform.fr-FR/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) suivant pour tester le processus d’ingestion avant d’utiliser vos propres données.
 
 Une fois qu’un jeu de données a été renseigné, le même jeu de données peut être utilisé pour ingérer des fichiers de données supplémentaires.
 

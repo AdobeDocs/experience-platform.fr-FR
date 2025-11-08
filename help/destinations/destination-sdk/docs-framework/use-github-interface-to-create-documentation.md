@@ -23,7 +23,7 @@ Les instructions ci-dessous vous montrent comment utiliser l’interface web Git
 
 ## Configuration de votre environnement de création GitHub {#set-up-environment}
 
-1. Dans votre navigateur, accédez à `https://github.com/AdobeDocs/experience-platform.en`.
+1. Dans votre navigateur, accédez à `https://github.com/AdobeDocs/experience-platform.fr-FR`.
 1. Pour [brancher](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=fr#fork-the-repository) le référentiel, cliquez sur **Branchement** comme illustré ci-dessous. Une copie du référentiel Experience Platform est ainsi créée dans votre propre compte GitHub.
 
    ![Référentiel de documentation d’Adobe en branchement](../assets/docs-framework/ssd-fork-repository.gif)
@@ -75,7 +75,7 @@ Les instructions ci-dessous vous montrent comment utiliser l’interface web Git
 
 1. À ce stade, une notification s’affiche vous invitant à signer le contrat de licence du contributeur (CLA) d’Adobe. Il s’agit d’une étape obligatoire. Après avoir signé le contrat de licence du contributeur, actualisez la page de requête de tirage et envoyez la demande d’extraction.
 
-1. Vous pouvez confirmer que la demande d’extraction a été envoyée en consultant l’onglet **Demandes d’extraction** dans `https://github.com/AdobeDocs/experience-platform.en`.
+1. Vous pouvez confirmer que la demande d’extraction a été envoyée en consultant l’onglet **Demandes d’extraction** dans `https://github.com/AdobeDocs/experience-platform.fr-FR`.
 
    ![PR réussie](../assets/docs-framework/ssd-pr-successful.png)
 

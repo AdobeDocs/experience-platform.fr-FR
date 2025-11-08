@@ -25,7 +25,7 @@ Le tutoriel suivant nécessite l’installation préalable de GitHub Desktop sur
 
 ## Connexion à GitHub et configuration de votre environnement de création local
 
-La première étape de la configuration de votre environnement de création local consiste à accéder au référentiel GitHub de [Adobe Experience Platform](https://github.com/AdobeDocs/experience-platform.en).
+La première étape de la configuration de votre environnement de création local consiste à accéder au référentiel GitHub de [Adobe Experience Platform](https://github.com/AdobeDocs/experience-platform.fr-FR).
 
 ![platform-repo](../assets/platform-repo.png)
 
@@ -97,6 +97,6 @@ Vérifiez que les branches de base et de comparaison sont correctes. Ajoutez une
 
 ![create-pr](../assets/create-pr.png)
 
-Vous pouvez confirmer que la demande d’extraction a été envoyée en examinant l’onglet Demandes d’extraction dans https://github.com/AdobeDocs/experience-platform.en.
+Vous pouvez confirmer que la demande d’extraction a été envoyée en examinant l’onglet Demandes d’extraction dans https://github.com/AdobeDocs/experience-platform.fr-FR.
 
 ![confirm-pr](../assets/confirm-pr.png)
