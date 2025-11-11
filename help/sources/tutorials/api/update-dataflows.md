@@ -2,10 +2,10 @@
 title: Mettre à jour des flux de données à l’aide de l’API Flow Service
 description: Découvrez comment créer un flux de données, y compris son nom, sa description et son planning à l’aide de l’API Flow Service.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 292fb89d457a86ee9f63cebd461abf1f2ecb9662
 workflow-type: tm+mt
-source-wordcount: '661'
-ht-degree: 75%
+source-wordcount: '684'
+ht-degree: 73%
 
 ---
 
@@ -177,7 +177,9 @@ Pour mettre à jour le planning d’exécution, le nom et la description de votr
 
 >[!IMPORTANT]
 >
->L’en-tête `If-Match` est requis lors de l’exécution d’une requête PATCH. La valeur de cet en-tête est la version unique de la connexion que vous souhaitez mettre à jour. La valeur de la balise dʼentité est mise à jour à chaque mise à jour réussie d’un flux de données.
+>* L’en-tête `If-Match` est requis lors de l’exécution d’une requête PATCH. La valeur de cet en-tête est la version unique de la connexion que vous souhaitez mettre à jour. La valeur de la balise dʼentité est mise à jour à chaque mise à jour réussie d’un flux de données.
+>
+>* Vous ne pouvez pas mettre à jour la `startTime` d’un flux de données si l’`startTime` initialement planifiée s’est déjà produite. Cette limitation s’applique aux flux de données activés et désactivés.
 
 **Format d’API**
 
@@ -191,29 +193,29 @@ La requête suivante met à jour votre planning d’exécution de flux, ainsi qu
 
 ```shell
 curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
-    -d '[
-            {
-                "op": "replace",
-                "path": "/scheduleParams/frequency",
-                "value": "day"
-            },
-            {
-                "op": "replace",
-                "path": "/name",
-                "value": "Database Dataflow Feb2021"
-            },
-            {
-                "op": "replace",
-                "path": "/description",
-                "value": "Database dataflow for testing update API"
-            }
-        ]'
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
+  -d '[
+          {
+              "op": "replace",
+              "path": "/scheduleParams/frequency",
+              "value": "day"
+          },
+          {
+              "op": "replace",
+              "path": "/name",
+              "value": "Database Dataflow Feb2021"
+          },
+          {
+              "op": "replace",
+              "path": "/description",
+              "value": "Database dataflow for testing update API"
+          }
+      ]'
 ```
 
 | Propriété | Description |
@@ -249,25 +251,25 @@ La requête suivante met à jour le jeu de mappages de votre flux de données.
 
 ```shell
 curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: "50014cc8-0000-0200-0000-6036eb720000"' \
-    -d '[
-        {
-            "op": "replace",
-            "path": "/transformations/0",
-            "value": {
-                "name": "Mapping",
-                "params": {
-                    "mappingId": "c5f22f04e09f44498e528901546a83b1",
-                    "mappingVersion": 2
-                }
-            }
-        }
-    ]'
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'If-Match: "50014cc8-0000-0200-0000-6036eb720000"' \
+  -d '[
+      {
+          "op": "replace",
+          "path": "/transformations/0",
+          "value": {
+              "name": "Mapping",
+              "params": {
+                  "mappingId": "c5f22f04e09f44498e528901546a83b1",
+                  "mappingVersion": 2
+              }
+          }
+      }
+  ]'
 ```
 
 | Propriété | Description |
