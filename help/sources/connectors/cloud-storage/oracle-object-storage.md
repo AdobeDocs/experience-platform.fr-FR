@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation du connecteur Source de stockage d’objets Oracle
 description: Découvrez comment connecter Oracle Object Storage à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 5e8b85c8-9f01-49a6-9556-7b9c7518fb4b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 54%
+source-wordcount: '411'
+ht-degree: 46%
 
 ---
 
@@ -19,7 +19,7 @@ Les sources de stockage dans le cloud peuvent importer vos données dans Experie
 
 ## Liste autorisée d’adresses IP
 
-Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Consultez le document [&#x200B; liste autorisée d’adresses IP &#x200B;](../../ip-address-allow-list.md) pour plus d’informations.
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
 
 ## Contraintes de dénomination pour fichiers et répertoires
 

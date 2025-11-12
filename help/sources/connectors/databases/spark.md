@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation d’Apache Spark sur le connecteur Source Azure HDInsights
 description: Découvrez comment connecter Apache Spark sur Azure HDInsights à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: c4a2a14e-5e16-44b7-b3f1-a98b7229f69e
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '271'
-ht-degree: 38%
+source-wordcount: '257'
+ht-degree: 21%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 38%
 
 >[!NOTE]
 >
->Le connecteur [!DNL Apache Spark] sur [!DNL Azure HDInsights] est en version bêta. Consultez la [&#x200B; Présentation des sources &#x200B;](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>Le connecteur [!DNL Apache Spark] sur [!DNL Azure HDInsights] est en version bêta. Consultez la [ Présentation des sources ](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
@@ -23,7 +23,7 @@ Adobe Experience Platform permet d’ingérer des données à partir de source
 
 ## Liste autorisée d’adresses IP
 
-Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page [Liste autorisée d’adresses IP](../../ip-address-allow-list.md) pour plus d’informations.
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
 
 La documentation ci-dessous fournit des informations sur la connexion de [!DNL Apache Spark] sur [!DNL Azure HDInsights] à [!DNL Experience Platform] à l’aide d’API ou de l’interface utilisateur :
 

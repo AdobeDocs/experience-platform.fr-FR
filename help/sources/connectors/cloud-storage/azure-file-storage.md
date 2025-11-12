@@ -4,22 +4,22 @@ solution: Experience Platform
 title: Présentation du connecteur Source de stockage de fichiers Azure
 description: Découvrez comment connecter Azure File Storage à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 79%
+source-wordcount: '391'
+ht-degree: 69%
 
 ---
 
 # Connecteur Azure File Storage
 
-Adobe Experience Platform fournit une connectivité native pour les fournisseurs cloud tels qu’AWS, [!DNL Google Cloud Platform] et [!DNL Azure], ce qui vous permet d’importer vos données à partir de ces systèmes.
+Adobe Experience Platform fournit une connectivité native pour les fournisseurs de services cloud comme AWS, [!DNL Google Cloud Platform] et [!DNL Azure], ce qui vous permet d’importer vos données à partir de ces systèmes.
 
 Les sources de stockage dans le cloud peuvent introduire vos propres données dans [!DNL Experience Platform] sans avoir à les télécharger, les formater ou les transférer. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. [!DNL Experience Platform] vous permet d’importer des données de [!DNL Azure File Storage] par lots.
 
 ## Liste autorisée d’adresses IP
 
-Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page [liste autorisée d’adresses IP](../../ip-address-allow-list.md) pour plus d’informations.
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
 
 ## Contraintes de dénomination pour fichiers et répertoires
 

@@ -3,16 +3,16 @@ title: Présentation Du Connecteur Source Mixpanel
 description: Découvrez comment connecter Mixpanel à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 17%
+source-wordcount: '431'
+ht-degree: 13%
 
 ---
 
 # [!DNL Mixpanel]
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
 Experience Platform prend en charge l’ingestion de données provenant d’une application d’analyse tierce. La prise en charge des fournisseurs d’analyses inclut [!DNL Mixpanel].
 
@@ -22,7 +22,7 @@ Sources tire parti de l’[API d’exportation d’événement Mixpanel > Télé
 
 ## Liste autorisée d’adresses IP
 
-Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page [Liste autorisée d’adresses IP](../../ip-address-allow-list.md) pour plus d’informations.
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
 
 ## Authentification de votre compte [!DNL Mixpanel]
 

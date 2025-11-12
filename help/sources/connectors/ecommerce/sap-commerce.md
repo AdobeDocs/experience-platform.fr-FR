@@ -4,10 +4,10 @@ description: Découvrez comment connecter SAP Commerce à Adobe Experience Platf
 last-substantial-update: 2023-07-26T00:00:00Z
 badge: Beta
 exl-id: d2ddfec3-a421-48a7-b765-86ce9162f26f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '351'
-ht-degree: 14%
+source-wordcount: '335'
+ht-degree: 5%
 
 ---
 
@@ -24,11 +24,11 @@ La source [!DNL SAP Commerce] vous permet d’ingérer des informations sur les 
 * [Clients](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers)
 * [Contacts](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts)
 
-En outre, si [!DNL SAP Commerce] est exécuté pour récupérer les données client, l’API [&#x200B; Relations client-contact &#x200B;](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) est également appelée pour récupérer les informations de contact du client.
+En outre, si [!DNL SAP Commerce] est exécuté pour récupérer les données client, l’API [ Relations client-contact ](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) est également appelée pour récupérer les informations de contact du client.
 
 ## Liste autorisée d’adresses IP {#ip-allow-list}
 
-Il peut être nécessaire d’ajouter une liste d’adresses IP à une liste autorisée de données avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page [Liste autorisée d’adresses IP](../../ip-address-allow-list.md) pour plus d’informations.
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
 
 ## Conditions préalables {#prerequisites}
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation du connecteur Source de Google Cloud Storage
 description: Découvrez comment connecter Google Cloud Storage à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 63%
+source-wordcount: '589'
+ht-degree: 45%
 
 ---
 
@@ -17,25 +17,25 @@ ht-degree: 63%
 >
 >Vous pouvez désormais utiliser la source [!DNL Google Cloud Storage] lors de l’exécution de Adobe Experience Platform sur Amazon Web Services (AWS). Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](../../../landing/multi-cloud.md).
 
-Adobe Experience Platform fournit une connectivité native pour les fournisseurs cloud tels qu’AWS, [!DNL Google Cloud Platform] et [!DNL Azure], ce qui vous permet d’importer vos données à partir de ces systèmes.
+Adobe Experience Platform fournit une connectivité native pour les fournisseurs de services cloud comme AWS, [!DNL Google Cloud Platform] et [!DNL Azure], ce qui vous permet d’importer vos données à partir de ces systèmes.
 
 Les sources de stockage dans le cloud peuvent importer vos propres données dans Experience Platform sans avoir à les télécharger, les formater ou les charger. Les données ingérées peuvent être formatées au format JSON ou Parquet conforme au modèle de données d’expérience (XDM), ou dans un format délimité. Chaque étape du processus est intégrée dans le processus Sources. Experience Platform vous permet d’importer des données de [!DNL Google Cloud Storage] par lots.
 
 ## Liste autorisée d’adresses IP
 
-Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page [Liste autorisée d’adresses IP](../../ip-address-allow-list.md) pour plus d’informations.
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
 
 ## Configuration requise pour connecter votre compte [!DNL Google Cloud Storage]
 
-Pour vous connecter à Experience Platform, vous devez d’abord activer l’interopérabilité pour votre compte [!DNL Google Cloud Storage]. Pour accéder au paramètre d’interopérabilité, ouvrez [!DNL Google Cloud Platform] et sélectionnez **[!UICONTROL Paramètres]** depuis les options de l’**[!UICONTROL espace de stockage]** dans le panneau de navigation.
+Pour vous connecter à Experience Platform, vous devez d’abord activer l’interopérabilité pour votre compte [!DNL Google Cloud Storage]. Pour accéder au paramètre d’interopérabilité, ouvrez [!DNL Google Cloud Platform] et sélectionnez **[!UICONTROL Settings]** dans l’option **[!UICONTROL Cloud Storage]** du panneau de navigation.
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/nav.png) -->
 
-La page des **[!UICONTROL paramètres]** s’affiche. À partir de là, vous pouvez voir des informations relatives à votre ID de projet [!DNL Google] et les détails de votre compte [!DNL Google Cloud Storage]. Pour accéder aux paramètres d’interopérabilité, sélectionnez **[!UICONTROL Interopérabilité]** dans l’en-tête supérieur.
+La page **[!UICONTROL Settings]** s’affiche. À partir de là, vous pouvez voir des informations relatives à votre ID de projet [!DNL Google] et les détails de votre compte [!DNL Google Cloud Storage]. Pour accéder aux paramètres d’interopérabilité, sélectionnez **[!UICONTROL Interoperability]** dans l’en-tête supérieur.
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/project-access.png) -->
 
-Le page **[!UICONTROL Interopérabilité]** contient des informations sur l’authentification, les clés d’accès et le projet par défaut associé à votre compte de service. Pour générer un nouvel identifiant de clé d’accès et une clé d’accès secrète pour votre compte de service, sélectionnez **[!UICONTROL Créer une clé de compte de service]**.
+La page **[!UICONTROL Interoperability]** contient des informations sur l’authentification, les clés d’accès et le projet par défaut associé à votre compte de service. Pour générer un nouvel identifiant de clé d’accès et une clé d’accès secrète pour votre compte de service, sélectionnez **[!UICONTROL Create a Key for a Service Account]**.
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/interoperability.png) -->
 

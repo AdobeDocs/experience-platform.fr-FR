@@ -2,10 +2,10 @@
 title: Stripe
 description: Découvrez comment ingérer des données de paiement de votre compte Stripe vers Adobe Experience Platform
 exl-id: 191d217e-036d-491a-b7dd-abcad74625ba
-source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 8%
+source-wordcount: '773'
+ht-degree: 2%
 
 ---
 
@@ -86,7 +86,7 @@ Vous devez créer un schéma XDM pour décrire un jeu de données, qui peut stoc
 
 >[!TAB Frais ]
 
-En [!DNL Stripe], les **frais** représentent des tentatives de transfert d’argent dans votre [!DNL Stripe]. Lisez le [[!DNL Stripe]  Guide de l’API sur les frais &#x200B;](https://docs.stripe.com/api/charges) pour plus d’informations sur les attributs de frais spécifiques.
+En [!DNL Stripe], les **frais** représentent des tentatives de transfert d’argent dans votre [!DNL Stripe]. Lisez le [[!DNL Stripe]  Guide de l’API sur les frais ](https://docs.stripe.com/api/charges) pour plus d’informations sur les attributs de frais spécifiques.
 
 +++Sélectionnez pour afficher l’objet Stripe Charge  
 
@@ -468,11 +468,11 @@ En [!DNL Stripe], les **prix** représentent le coût unitaire, la devise et le 
 
 ### Liste autorisée d’adresses IP
 
-Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page [Liste autorisée d’adresses IP](../../ip-address-allow-list.md) pour plus d’informations.
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
 
 ### Configuration des autorisations sur Experience Platform
 
-Pour connecter votre compte **[!UICONTROL à Experience Platform]** les autorisations **[!UICONTROL Afficher les sources et]** Gérer les sources[!DNL Stripe] doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/ui/overview.md).
+Les autorisations **[!UICONTROL View Sources]** et **[!UICONTROL Manage Sources]** doivent être activées pour votre compte afin de connecter votre compte [!DNL Stripe] à Experience Platform. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/ui/overview.md).
 
 ## Étapes suivantes
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation du connecteur Source IBM DB2
 description: Découvrez comment connecter IBM DB2 à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 939e0151-fc07-4963-8ea2-0432dee713eb
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 26%
+source-wordcount: '215'
+ht-degree: 5%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 26%
 
 >[!NOTE]
 >
->Le connecteur IBM DB2 est en version bêta. Consultez la [&#x200B; Présentation des sources &#x200B;](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>Le connecteur IBM DB2 est en version bêta. Consultez la [ Présentation des sources ](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Adobe Experience Platform fournit une connectivité native aux fournisseurs de base de données tels que [!DNL Microsoft], MySQL et [!DNL Azure]. Vous pouvez importer vos données de ces systèmes dans [!DNL Experience Platform].
 
@@ -23,7 +23,7 @@ Différents types de bases de données tierces sont pris en charge, notamment le
 
 ## Liste autorisée d’adresses IP
 
-Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Voir la page [Liste autorisée d’adresses IP](../../ip-address-allow-list.md) pour plus d’informations.
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
 
 La documentation ci-dessous fournit des informations sur la connexion d’IBM DB2 à [!DNL Experience Platform] à l’aide d’API ou de l’interface utilisateur :
 
