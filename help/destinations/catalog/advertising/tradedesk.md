@@ -3,10 +3,10 @@ keywords: publicité ; trade desk ; advertising trade desk
 title: Connexion à The Trade Desk
 description: Trade Desk est une plateforme en libre-service permettant aux acheteurs de publicités d’exécuter des campagnes numériques de reciblage et de ciblage d’audience sur des sources d’affichage, de vidéo et d’inventaire mobile.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 940128bf73f856d8459bee23905213651b44916e
 workflow-type: tm+mt
-source-wordcount: '1028'
-ht-degree: 25%
+source-wordcount: '1093'
+ht-degree: 24%
 
 ---
 
@@ -17,19 +17,18 @@ ht-degree: 25%
 
 >[!IMPORTANT]
 >
-> Suite à la [mise à niveau interne](../../../release-notes/2025/july-2025.md#destinations) vers le service de destinations à partir de juillet 2025, il se peut que vous constatiez une **diminution du nombre de profils activés** dans vos flux de données à [!DNL The Trade Desk].
-> &#x200B;> Cette baisse est due à l’introduction de l’exigence de mappage **ECID** pour toutes les activations sur cette plateforme de destination. Pour plus d’informations, consultez la section [mappage obligatoire](#mandatory-mappings) de cette page.
+> Suite à la [mise à niveau interne](../../../release-notes/2025/july-2025.md#destinations) du service de destinations de juillet 2025, vous remarquerez peut-être une **diminution du nombre de profils activés** dans vos flux de données à [!DNL The Trade Desk].
+> Cette baisse est due à l’amélioration de la visibilité de la surveillance. Les profils sans ECID sont désormais correctement comptabilisés comme déposés dans les mesures d’activation. Pour plus d’informations, consultez la section [mappage obligatoire](#mandatory-mappings) de cette page.
 >
 >**Changements :**
 >
->* Le mappage ECID (Experience Cloud ID) est désormais **obligatoire** pour toutes les activations de profil.
->* Les profils sans mappage ECID seront **supprimés** des flux de données d’activation existants.
+>* Le service de destinations signale désormais correctement lorsque des profils sans ECID sont supprimés de l’activation.
+>* **Important :** profils sans ECID n’ont jamais été [!DNL The Trade Desk] avant même cette mise à niveau. L’intégration a toujours nécessité un ECID. Cette mise à niveau corrige un bug qui empêchait auparavant la visibilité de ces abandons dans vos mesures.
 >
 >**Ce que vous devez faire**
 >
 >* Vérifiez les données de votre audience pour vous assurer que les profils possèdent des valeurs ECID valides.
->* Surveillez vos mesures d’activation pour vérifier le nombre de profils attendu.
-
+>* Surveillez vos mesures d’activation pour vérifier le nombre de profils attendu. Des nombres plus faibles reflètent des rapports précis, pas un changement de comportement de destination.
 
 Utilisez ce connecteur de destination pour envoyer des données de profil à [!DNL The Trade Desk]. Ce connecteur envoie des données au point d’entrée propriétaire [!DNL The Trade Desk]. L’intégration entre Adobe Experience Platform et [!DNL The Trade Desk] ne prend pas en charge l’exportation de données vers le point d’entrée tiers [!DNL The Trade Desk].
 
@@ -84,7 +83,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Si vous souhaitez créer votre première destination avec [!DNL The Trade Desk] sans jamais avoir activé la fonctionnalité de synchronisation des identifiants [ID](https://experienceleague.adobe.com/fr/docs/id-service/using/id-service-api/methods/idsync) dans le service Experience Cloud ID par le passé (avec Adobe Audience Manager ou d’autres applications), contactez Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants. Si vous avez configuré précédemment des intégrations [!DNL The Trade Desk] dans Audience Manager, les synchronisations d’identifiant que vous aviez configurées sont transférées vers Experience Platform.
+>Si vous souhaitez créer votre première destination avec [!DNL The Trade Desk] sans jamais avoir activé la fonctionnalité de synchronisation des identifiants [ID](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) dans le service Experience Cloud ID par le passé (avec Adobe Audience Manager ou d’autres applications), contactez Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants. Si vous avez configuré précédemment des intégrations [!DNL The Trade Desk] dans Audience Manager, les synchronisations d’identifiant que vous aviez configurées sont transférées vers Experience Platform.
 
 ## Se connecter à la destination {#connect}
 
@@ -121,7 +120,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 > 
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
@@ -157,7 +156,7 @@ Exemples :
 
 >[!NOTE]
 > 
->Suite à la mise à niveau de [juillet 2025](/help/release-notes/2025/july-2025.md#destinations) vers le service de destinations, [!DNL ECID] mappage est appliqué. Les profils avec des [!DNL ECID] manquantes sont désormais déposés comme prévu, ce qui peut entraîner un nombre d’activations inférieur par rapport au comportement hérité.
+>Suite à la mise à niveau de [juillet 2025](/help/release-notes/2025/july-2025.md#destinations) vers le service de destinations, les profils manquants [!DNL ECID] désormais correctement signalés comme abandonnés dans les mesures d’activation. Cela a toujours été le comportement de l’intégration (les profils sans [!DNL ECID] n’ont jamais atteint [!DNL The Trade Desk]), mais les abandons sont désormais correctement visibles dans la surveillance de votre flux de données. Un nombre d’activations plus faible reflète des rapports précis, et non un changement de fonctionnalité de destination.
 
 ## Données exportées {#exported-data}
 
