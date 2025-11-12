@@ -3,10 +3,10 @@ keywords: destinations;destination;types de destinations
 title: Types et catégories de destination
 description: Découvrez les différents types et catégories de destinations dans Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: d57af88cc9507e0164b044a7203c66fe9fd9240e
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 52%
+source-wordcount: '831'
+ht-degree: 51%
 
 ---
 
@@ -52,6 +52,12 @@ Les destinations d’entreprise avancées sont les suivantes :
 * [Destination de l’API HTTP](catalog/streaming/http-destination.md)
 * [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
 * [Azure Event Hubs](catalog/cloud-storage/azure-event-hubs.md)
+* [Streaming Snowflake](catalog/warehouses/snowflake.md)
+* [Lot Snowflake](catalog/warehouses/snowflake-batch.md)
+
+>[!NOTE]
+>
+>Les destinations Snowflake sont actuellement disponibles uniquement pour les clients américains. Si vous avez besoin d’un accès en dehors des États-Unis, contactez votre équipe de compte Adobe.
 
 ### Destinations de lot (basées sur des fichiers) {#file-based}
 
@@ -71,7 +77,7 @@ En savoir plus sur la façon de [configurer des destinations de personnalisation
 
 La vidéo ci-dessous vous montre les particularités des deux types de destinations :
 
->[!VIDEO](https://video.tv.adobe.com/v/33171?captions=fre_fr&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
 ## Types d’audiences exportées {#exported-audiences-types}
 
