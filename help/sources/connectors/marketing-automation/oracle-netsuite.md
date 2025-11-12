@@ -49,7 +49,7 @@ Avant de pouvoir importer vos données [!DNL Oracle NetSuite] dans Experience Pl
       * Activation de la fonctionnalité OAuth 2.0 et configuration des rôles OAuth 2.0 appropriés.
       * Affectation des utilisateurs aux rôles OAuth 2.0 et création des enregistrements d’intégration nécessaires.
 * Un **jeton d’accès** et un **jeton d’actualisation**.
-   * Pour plus d’informations sur la génération de vos jetons d’accès et d’actualisation[!DNL Oracle] reportez-vous au guide de [ sur le ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow)flux d’octroi de code d’autorisation OAuth 2.0.
+   * Pour plus d’informations sur la génération de vos jetons d’accès et d’actualisation[!DNL Oracle] reportez-vous au guide de [&#x200B; sur le &#x200B;](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow)flux d’octroi de code d’autorisation OAuth 2.0.
 
 ### Collecter les informations d’identification requises {#gather-credentials}
 

@@ -86,7 +86,7 @@ Vous devez créer un schéma XDM pour décrire un jeu de données, qui peut stoc
 
 >[!TAB Frais ]
 
-En [!DNL Stripe], les **frais** représentent des tentatives de transfert d’argent dans votre [!DNL Stripe]. Lisez le [[!DNL Stripe]  Guide de l’API sur les frais ](https://docs.stripe.com/api/charges) pour plus d’informations sur les attributs de frais spécifiques.
+En [!DNL Stripe], les **frais** représentent des tentatives de transfert d’argent dans votre [!DNL Stripe]. Lisez le [[!DNL Stripe]  Guide de l’API sur les frais &#x200B;](https://docs.stripe.com/api/charges) pour plus d’informations sur les attributs de frais spécifiques.
 
 +++Sélectionnez pour afficher l’objet Stripe Charge  
 

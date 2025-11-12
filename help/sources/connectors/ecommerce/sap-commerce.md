@@ -24,7 +24,7 @@ La source [!DNL SAP Commerce] vous permet d’ingérer des informations sur les 
 * [Clients](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers)
 * [Contacts](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts)
 
-En outre, si [!DNL SAP Commerce] est exécuté pour récupérer les données client, l’API [ Relations client-contact ](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) est également appelée pour récupérer les informations de contact du client.
+En outre, si [!DNL SAP Commerce] est exécuté pour récupérer les données client, l’API [&#x200B; Relations client-contact &#x200B;](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) est également appelée pour récupérer les informations de contact du client.
 
 ## Liste autorisée d’adresses IP {#ip-allow-list}
 

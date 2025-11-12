@@ -33,7 +33,7 @@ Cette section décrit les étapes préalables à suivre pour authentifier votre 
 * Sélectionnez ensuite **[!DNL Settings]** > **[!DNL Apps and Integrations]** > **[!DNL Zendesk API]**.
 * Enfin, récupérez votre jeton API dans la section **[!DNL API token]** .
 
-![ Jeton API Zendesk ](../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
+![&#x200B; Jeton API Zendesk &#x200B;](../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
 Voir la [[!DNL Zendesk documentation on subdomains]](<https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain->) pour plus d’informations sur la récupération de votre sous-domaine. Pour plus d’informations sur la génération de votre jeton API, consultez le guide [[!DNL Zendesk]  sur la génération d’un nouveau jeton API](<https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token>).
 
@@ -45,5 +45,5 @@ La documentation ci-dessous fournit des informations sur la connexion de [!DNL Z
 
 ## Connexion d’[!DNL Zendesk] à Experience Platform à l’aide de l’interface utilisateur
 
-* [Créer une connexion source  [!DNL Zendesk ] dans l’interface utilisateur](../../tutorials/ui/create/customer-success/zendesk.md)
+* [Créer une connexion source  [!DNL Zendesk &#x200B;] dans l’interface utilisateur](../../tutorials/ui/create/customer-success/zendesk.md)
 * [Créer un flux de données pour une connexion source de succès client dans l’interface utilisateur](../../tutorials/ui/dataflow/customer-success.md)
