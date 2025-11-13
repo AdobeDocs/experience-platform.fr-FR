@@ -1,5 +1,5 @@
 ---
-description: Découvrez comment configurer les spécifications de serveur de destination dans Adobe Experience Platform Destination SDK via le point d’entrée `/authoring/destination-servers`.
+description: Découvrez comment configurer les spécifications de serveur de destination dans Adobe Experience Platform Destination SDK via le point d’entrée &grave;/authoring/destination-servers&grave;.
 title: Spécifications de serveur pour les destinations créées avec Destination SDK
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
 source-git-commit: 455886806d46a227eddb5ba060c15e1a00e13edf
