@@ -3,10 +3,10 @@ keywords: correspondance client google;correspondance client Google;correspondan
 title: Connexion à Google Customer Match
 description: Le ciblage par correspondance des clients de Google vous permet d’utiliser vos données en ligne et hors ligne pour contacter et réengager vos clients dans les propriétés détenues et exploitées par Google, telles que Search, Shopping et Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: a119418e8da7594a99116b4de65f60fdaa95ba8e
 workflow-type: tm+mt
-source-wordcount: '2413'
-ht-degree: 19%
+source-wordcount: '2719'
+ht-degree: 17%
 
 ---
 
@@ -15,12 +15,12 @@ ht-degree: 19%
 >[!IMPORTANT]
 >
 > Google publie des modifications de l’API [Google Ads](https://developers.google.com/google-ads/api/docs/start), de l’API [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) et de l’API [Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) afin de prendre en charge les exigences de conformité et de consentement définies dans le [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) de l’Union européenne ([EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/)). L’application de ces modifications aux exigences en matière de consentement est effective à compter du 6 mars 2024.
-> &#x200B;><br/>
-> &#x200B;>Pour se conformer à la politique de consentement des utilisateurs de l’UE et continuer à créer des listes d’audience pour les utilisateurs dans l’Espace économique européen (EEE), les annonceurs et les partenaires doivent s’assurer de transmettre le consentement de l’utilisateur final lors du téléchargement des données d’audience. En tant que partenaire Google, Adobe vous fournit les outils nécessaires pour vous conformer à ces exigences de consentement en vertu de la DMA dans l’Union européenne.
-> &#x200B;><br/>
-> &#x200B;>Les clients qui ont acheté Adobe Privacy &amp; Security Shield et configuré une [politique de consentement](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) pour filtrer les profils non consentis n’ont aucune action à effectuer.
-> &#x200B;><br/>
-> &#x200B;>Les clients qui n’ont pas acheté Adobe Privacy &amp; Security Shield doivent utiliser les fonctionnalités [définition de segment](../../../segmentation/home.md#segment-definitions) du [créateur de segments](../../../segmentation/ui/segment-builder.md) pour filtrer les profils non consentis afin de continuer à utiliser les destinations Real-Time CDP Google existantes sans interruption.
+><br/>
+>Pour se conformer à la politique de consentement des utilisateurs de l’UE et continuer à créer des listes d’audience pour les utilisateurs dans l’Espace économique européen (EEE), les annonceurs et les partenaires doivent s’assurer de transmettre le consentement de l’utilisateur final lors du téléchargement des données d’audience. En tant que partenaire Google, Adobe vous fournit les outils nécessaires pour vous conformer à ces exigences de consentement en vertu de la DMA dans l’Union européenne.
+><br/>
+>Les clients qui ont acheté Adobe Privacy &amp; Security Shield et configuré une [politique de consentement](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) pour filtrer les profils non consentis n’ont aucune action à effectuer.
+><br/>
+>Les clients qui n’ont pas acheté Adobe Privacy &amp; Security Shield doivent utiliser les fonctionnalités [définition de segment](../../../segmentation/home.md#segment-definitions) du [créateur de segments](../../../segmentation/ui/segment-builder.md) pour filtrer les profils non consentis afin de continuer à utiliser les destinations Real-Time CDP Google existantes sans interruption.
 
 [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) vous permet d’utiliser vos données en ligne et hors ligne pour contacter et réengager vos clients dans les propriétés détenues et exploitées par Google, telles que : [!DNL Search], [!DNL Shopping] et [!DNL Gmail].
 
@@ -96,11 +96,11 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 Avant de configurer une destination [!DNL Google Customer Match] dans Experience Platform, assurez-vous de lire et de respecter la politique de Google relative à l’utilisation de [!DNL Customer Match], décrite dans la [documentation d’assistance Google](https://support.google.com/google-ads/answer/6299717).
 
-Ensuite, assurez-vous que votre compte [!DNL Google] est configuré pour un niveau d’autorisation [!DNL Standard] ou supérieur. Pour plus d’informations[&#x200B; consultez la documentation sur les Google Ads &#x200B;](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1).
+Ensuite, assurez-vous que votre compte [!DNL Google] est configuré pour un niveau d’autorisation [!DNL Standard] ou supérieur. Pour plus d’informations[ consultez la documentation sur les Google Ads ](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1).
 
 ### Liste autorisée {#allowlist}
 
-Avant de créer la destination [!DNL Google Customer Match] dans Experience Platform, assurez-vous que votre compte [!DNL Google Ads] est conforme à la [[!DNL Google Customer Match]  politique &#x200B;](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
+Avant de créer la destination [!DNL Google Customer Match] dans Experience Platform, assurez-vous que votre compte [!DNL Google Ads] est conforme à la [[!DNL Google Customer Match]  politique ](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
 Les clients disposant de comptes conformes sont automatiquement placés sur la liste autorisée par Google.
 
@@ -156,13 +156,13 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411785/?quality=12&learn=on&captions=fre_fr) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## Vue d’ensemble des vidéos {#video-overview}
 
 Regardez la vidéo ci-dessous pour une explication des avantages et de la manière d’activer les données dans le ciblage par correspondance client Google.
 
->[!VIDEO](https://video.tv.adobe.com/v/326484?captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
 
 ## Se connecter à la destination {#connect}
 
@@ -188,6 +188,12 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 >
 > * L’action marketing **[!UICONTROL Combine with PII]** est sélectionnée par défaut pour la destination [!DNL Google Customer Match] et ne peut pas être supprimée.
 
+### Authentification et autorisations {#authentication-permissions}
+
+Lorsque vous connectez votre compte Google Ads, Google vous invite à accorder l’accès à l’application Adobe. Vous devez approuver l’autorisation de l’API Google Ads afin qu’Adobe puisse créer et gérer vos listes de clients. Utilisez un utilisateur Google Ads disposant d’un accès Standard ou supérieur au compte client vers lequel vous avez l’intention d’activer. Si vous utilisez un compte Manager (MCC), connectez-vous avec un utilisateur sur le compte client et indiquez l’ID de compte client (et non l’ID MCC).
+
+Si l’autorisation Google Ads n’est pas accordée pendant le flux OAuth, les activations peuvent échouer ultérieurement avec des erreurs de l’API Google Ads. Consultez la [section de dépannage](#troubleshooting) pour plus d’informations sur la façon de résoudre les erreurs liées aux autorisations.
+
 ### Activer les alertes {#enable-alerts}
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
@@ -199,7 +205,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 > 
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités* vers des destinations, vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#x200B; access control](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités* vers des destinations, vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[ access control](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
@@ -218,7 +224,7 @@ Sélection des champs sources :
 * Sélectionnez l’espace de noms `Email` comme identité source si les adresses e-mail que vous utilisez ne sont pas hachées.
 * Sélectionnez l’espace de noms `Email_LC_SHA256` comme identité source si vous avez haché les adresses e-mail des clients lors de l’ingestion des données dans [!DNL Experience Platform], conformément [!DNL Google Customer Match] [exigences de hachage des e-mails](#hashing-requirements).
 * Sélectionnez l’espace de noms `PHONE_E.164` comme identité source si vos données sont composées de numéros de téléphone non hachés. [!DNL Experience Platform] hachera les numéros de téléphone pour se conformer aux exigences [!DNL Google Customer Match].
-* Sélectionnez l’espace de noms `Phone_SHA256_E.164` comme identité source si vous hachez des numéros de téléphone lors de l’ingestion de données dans [!DNL Experience Platform], conformément [!DNL Facebook] [exigences de hachage des numéros de téléphone](#phone-number-hashing-requirements).
+* Sélectionnez l’espace de noms `Phone_SHA256_E.164` comme identité source si vous hachez des numéros de téléphone lors de l’ingestion de données dans [!DNL Experience Platform], conformément [!DNL Google Customer Match] [exigences de hachage des numéros de téléphone](#phone-number-hashing-requirements).
 * Sélectionnez l’espace de noms `IDFA` comme identité source si vos données sont composées d’identifiants d’appareil [!DNL Apple].
 * Sélectionnez l’espace de noms `GAID` comme identité source si vos données sont composées d’identifiants d’appareil [!DNL Android].
 * Sélectionnez l’espace de noms `Custom` comme identité source si vos données sont composées d’autres types d’identifiants.
@@ -260,4 +266,27 @@ Lors de la configuration de cette destination, vous risquez de recevoir l’erre
 
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
-Cette erreur se produit lorsque les comptes client ne respectent pas les [&#x200B; conditions préalables &#x200B;](#google-account-prerequisites). Pour résoudre ce problème, contactez Google et assurez-vous que votre compte est sur liste autorisée et configuré pour un niveau d’autorisation [!DNL Standard] ou supérieur. Pour plus d’informations[&#x200B; consultez la documentation sur les Google Ads &#x200B;](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1).
+Cette erreur se produit lorsque les comptes client ne respectent pas les [ conditions préalables ](#google-account-prerequisites). Pour résoudre ce problème, contactez Google et assurez-vous que votre compte est sur liste autorisée et configuré pour un niveau d’autorisation [!DNL Standard] ou supérieur. Pour plus d’informations[ consultez la documentation sur les Google Ads ](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1).
+
+### Erreur interne du serveur 500 - Portées d’authentification insuffisantes {#insufficient-scopes}
+
+Lors de l’activation des audiences vers cette destination, vous pouvez recevoir l’erreur suivante :
+
+`{"message":"com.google.api.gax.rpc.PermissionDeniedException: io.grpc.StatusRuntimeException: PERMISSION_DENIED: Request had insufficient authentication scopes.","code":"500 INTERNAL_SERVER_ERROR"}`
+
+Cette erreur se produit lorsque le jeton OAuth Google utilisé pour cette connexion de destination a été créé sans la portée requise de l’API Google Ads ou lorsque l’utilisateur connecté ne dispose pas des autorisations suffisantes sur le compte client cible.
+
+Pour résoudre ce problème, procédez comme suit :
+
+1. **Régénérez l’authentification Google** pour ce compte de destination et assurez-vous d’accepter les autorisations Google Ads demandées :
+   * Dans Experience Platform, accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**
+   * Localisation de votre compte de correspondance client Google
+   * Sélectionnez **[!UICONTROL More actions]** (⋯) > **[!UICONTROL Edit]** > **[!UICONTROL Renew]**
+   * Terminez la connexion à Google et le flux de consentement, en approuvant toutes les autorisations demandées
+2. Si vous gérez les publicités via un compte Manager (MCC), confirmez que vous vous authentifiez auprès d’un utilisateur disposant d’un accès [!DNL Standard] ou supérieur au compte client cible et que le **[!UICONTROL Account ID]** configuré dans la destination est l’identifiant du compte client (et non l’identifiant MCC).
+3. Réexécutez l’activation.
+
+Si le problème persiste :
+
+* Vérifiez que votre compte Google Ads est placé sur la liste autorisée pour la correspondance client et répond aux [exigences de la politique](#google-account-prerequisites).
+* Assurez-vous que le niveau d’accès de l’utilisateur est [!DNL Standard] ou supérieur dans le compte client Google Ads. Pour plus d’informations[ consultez la documentation sur les Google Ads ](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1).
