@@ -1,11 +1,11 @@
 ---
-description: Découvrez comment configurer les spécifications de serveur de destination dans Adobe Experience Platform Destination SDK via le point d’entrée &grave;/authoring/destination-servers&grave;.
+description: Découvrez comment configurer les spécifications de serveur de destination dans Adobe Experience Platform Destination SDK via le point d’entrée `/authoring/destination-servers`.
 title: Spécifications de serveur pour les destinations créées avec Destination SDK
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 455886806d46a227eddb5ba060c15e1a00e13edf
 workflow-type: tm+mt
-source-wordcount: '2753'
-ht-degree: 89%
+source-wordcount: '2775'
+ht-degree: 88%
 
 ---
 
@@ -78,7 +78,7 @@ Dans l’exemple ci-dessous, un partenaire crée un serveur de destination de zo
          "templatingStrategy":"NONE",
          "value":"Your/hardcoded/path/here"
       },
-      "useCase": "Your use case"
+      "useCase": "dlz_destination"
    }
 }
 ```
@@ -307,7 +307,7 @@ L’exemple ci-dessous montre un modèle de configuration de serveur de destinat
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.path}}"
       },
-      "useCase": "Your use case"
+      "useCase": "dlz_destination"
    }
 }
 ```
@@ -318,6 +318,7 @@ L’exemple ci-dessous montre un modèle de configuration de serveur de destinat
 | `destinationServerType` | Chaîne | Définissez cette valeur en fonction de votre plateforme de destination. Pour les destinations [!DNL Data Landing Zone], définissez ce paramètre sur `FILE_BASED_DLZ`. |
 | `fileBasedDlzDestination.path.templatingStrategy` | Chaîne | *Obligatoire*. Définissez cette valeur en fonction du type de valeur utilisé dans le champ `path.value`.<ul><li>Si vous souhaitez que vos utilisateurs saisissent leur propre compte [!DNL Data Landing Zone] dans l’interface utilisateur d’Experience Platform, définissez cette valeur sur `PEBBLE_V1`. Dans ce cas, vous devez modéliser le champ `path.value` pour lire une valeur des [champs de données client](../destination-configuration/customer-data-fields.md) renseignés par l’utilisateur. Ce cas d’utilisation est illustré dans l’exemple ci-dessus.</li><li>Si vous utilisez un chemin d’accès codé en dur pour votre intégration, tel que `"path.value": "https://myaccount.blob.core.windows.net/"`, définissez cette valeur sur `NONE`. |
 | `fileBasedDlzDestination.path.value` | Chaîne | Chemin d’accès au dossier de destination qui hébergera les fichiers exportés. |
+| `fileBasedDlzDestination.useCase` | Chaîne | *Obligatoire*. Définissez ce paramètre sur `"dlz_destination"`. Cette propriété identifie la destination en tant que destination [!DNL Data Landing Zone]. Cette propriété n’est utilisée que lors de la création d’une destination [!DNL Data Landing Zone]. |
 
 {style="table-layout:auto"}
 
