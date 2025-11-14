@@ -4,10 +4,10 @@ title: Prévisualiser l’exemple de point d’entrée de l’API Statut (Aperç
 description: Le point d’entrée d’aperçu de statut d’échantillon de l’API Real-Time Customer Profile vous permet de prévisualiser le dernier exemple réussi de vos données de profil, de répertorier la distribution des profils par jeu de données et par identité et de générer des rapports présentant le chevauchement des jeux de données, le chevauchement des identités et les profils désassemblés.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: d1eb9191c74add1ab21cd268327bab9a3255d182
+source-git-commit: bb2cfb479031f9e204006ba489281b389e6c6c04
 workflow-type: tm+mt
-source-wordcount: '2904'
-ht-degree: 5%
+source-wordcount: '2306'
+ht-degree: 6%
 
 ---
 
@@ -46,7 +46,7 @@ Les mesures nombre de profils et profils par espace de noms sont également disp
 
 ## Afficher le dernier statut d’échantillon {#view-last-sample-status}
 
-Vous pouvez envoyer une requête GET au point d’entrée `/previewsamplestatus` pour afficher les détails du dernier exemple de tâche réussie exécuté pour votre organisation. Cela inclut le nombre total de profils dans l’exemple, ainsi que la mesure de nombre de profils, ou le nombre total de profils de votre organisation dans Experience Platform.
+Vous pouvez afficher les détails du dernier exemple de tâche réussie exécuté pour votre organisation en envoyant une requête GET au point d’entrée `/previewsamplestatus`. Ce rapport inclut le nombre total de profils dans l’exemple, ainsi que la mesure du nombre de profils ou le nombre total de profils de votre organisation dans Experience Platform.
 
 Le nombre de profils est généré après la fusion de fragments de profil afin de former un seul profil pour chaque client individuel. En d’autres termes, lorsque des fragments de profil sont fusionnés, ils renvoient un nombre de « 1 » profil, car ils sont tous liés à la même personne.
 
@@ -60,6 +60,8 @@ GET /previewsamplestatus
 
 **Requête**
 
++++ Exemple de requête pour afficher le dernier statut d’échantillon.
+
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/core/ups/previewsamplestatus \
@@ -69,9 +71,13 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
++++
+
 **Réponse**
 
-La réponse inclut les détails du dernier exemple de traitement réussi exécuté pour l’organisation.
+Une réponse réussie renvoie le statut HTTP 200 et inclut les détails du dernier exemple de traitement réussi exécuté pour l’organisation.
+
++++ Exemple de réponse contenant le dernier statut d’échantillon.
 
 >[!NOTE]
 >
@@ -98,23 +104,25 @@ La réponse inclut les détails du dernier exemple de traitement réussi exécut
 ```
 
 | Propriété | Description |
-|---|---|
+| -------- | ----------- |
 | `numRowsToRead` | Nombre total de profils fusionnés dans l’échantillon. |
 | `sampleJobRunning` | Valeur booléenne qui renvoie un `true` lorsqu’un exemple de tâche est en cours. Fournit une transparence sur la latence qui se produit lorsqu’un fichier de commandes est chargé vers lorsqu’il est réellement ajouté à la banque de profils. |
 | `docCount` | Nombre total de documents dans la base de données. |
 | `totalFragmentCount` | Nombre total de fragments de profil dans la banque de profils. |
 | `lastSuccessfulBatchTimestamp` | Date et heure de la dernière ingestion par lots réussie. |
 | `streamingDriven` | *Ce champ est obsolète et n’a aucune importance pour la réponse.* |
-| `totalRows` | Nombre total de profils fusionnés dans Experience Platform, également appelé « nombre de profils ». |
+| `totalRows` | Nombre total de profils fusionnés dans Experience Platform, également appelé nombre de profils. |
 | `lastBatchId` | ID de la dernière ingestion par lots. |
 | `status` | Statut du dernier échantillon. |
 | `samplingRatio` | Rapport entre les profils fusionnés échantillonnés (`numRowsToRead`) et le total des profils fusionnés (`totalRows`), exprimé en pourcentage au format décimal. |
 | `mergeStrategy` | Stratégie de fusion utilisée dans l’exemple. |
 | `lastSampledTimestamp` | Dernier exemple d’horodatage réussi. |
 
++++
+
 ## Répertorier la distribution des profils par jeu de données
 
-Pour afficher la distribution des profils par jeu de données, vous pouvez envoyer une requête GET au point d’entrée `/previewsamplestatus/report/dataset`.
+Vous pouvez voir la répartition des profils par jeu de données en adressant une requête GET au point d’entrée `/previewsamplestatus/report/dataset`.
 
 **Format d’API**
 
@@ -123,30 +131,39 @@ GET /previewsamplestatus/report/dataset
 GET /previewsamplestatus/report/dataset?{QUERY_PARAMETERS}
 ```
 
-| Paramètre | Description |
-|---|---|
-| `date` | Indiquez la date du rapport à renvoyer. Si plusieurs rapports ont été exécutés à cette date, le rapport le plus récent pour cette date est renvoyé. Si aucun rapport n’existe pour la date spécifiée, une erreur 404 (Introuvable) est renvoyée. Si aucune date n’est spécifiée, le rapport le plus récent est renvoyé. Format : AAAA-MM-JJ. Exemple : `date=2024-12-31` |
+| Paramètre de requête | Description | Exemple |
+| --------------- | ----------- | ------- |
+| `date` | Indiquez la date du rapport à renvoyer. Si plusieurs rapports ont été exécutés à cette date, le rapport le plus récent pour cette date est renvoyé. Si aucun rapport n’existe pour la date spécifiée, une erreur 404 (Introuvable) est renvoyée. Si aucune date n’est spécifiée, le rapport le plus récent est renvoyé. Format : AAAA-MM-JJ. | `date=2024-12-31` |
 
 **Requête**
 
 La requête suivante utilise le paramètre `date` pour renvoyer le rapport le plus récent pour la date spécifiée.
 
++++ Exemple de requête pour récupérer la distribution des profils par jeu de données.
+
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset?date=2020-08-01 \
+curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset?date=2020-08-01 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-**Réponse**
++++
 
-La réponse inclut un tableau `data`, contenant une liste d’objets de jeu de données. La réponse affichée a été tronquée pour afficher trois jeux de données.
+**Réponse**
 
 >[!NOTE]
 >
 >S’il existe plusieurs rapports pour la date, seul le dernier rapport est renvoyé. Si aucun rapport de jeu de données n’existe pour la date fournie, le statut HTTP 404 (Not Found) est renvoyé.
+
+Une réponse réussie renvoie un état HTTP 200 et inclut un tableau `data`, contenant une liste d’objets de jeu de données.
+
++++ Exemple de réponse contenant les derniers objets de jeu de données.
+
+>[!NOTE]
+>
+>La réponse suivante affichée a été tronquée pour afficher trois jeux de données.
 
 ```json
 {
@@ -193,7 +210,7 @@ La réponse inclut un tableau `data`, contenant une liste d’objets de jeu de d
 ```
 
 | Propriété | Description |
-|---|---|
+| -------- | ----------- |
 | `sampleCount` | Nombre total de profils fusionnés échantillonnés avec cet identifiant de jeu de données. |
 | `samplePercentage` | Le `sampleCount` en tant que pourcentage du nombre total de profils fusionnés échantillonnés (la valeur de `numRowsToRead` telle qu’elle est renvoyée dans le [dernier statut d’échantillon](#view-last-sample-status)), exprimé au format décimal. |
 | `fullIDsCount` | Nombre total de profils fusionnés avec cet identifiant de jeu de données. |
@@ -204,6 +221,8 @@ La réponse inclut un tableau `data`, contenant une liste d’objets de jeu de d
 | `streamingIngestionEnabled` | Indique si le jeu de données est activé pour l’ingestion en flux continu. |
 | `createdUser` | ID de l’utilisateur qui a créé le jeu de données. |
 | `reportTimestamp` | Date et heure du rapport. Si un paramètre de `date` a été fourni pendant la requête, le rapport renvoyé porte sur la date fournie. Si aucun paramètre `date` n’est fourni, le rapport le plus récent est renvoyé. |
+
++++
 
 ## Répartition des profils de liste par espace de noms d’identité
 
@@ -222,26 +241,31 @@ GET /previewsamplestatus/report/namespace
 GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 ```
 
-| Paramètre | Description |
-|---|---|
-| `date` | Indiquez la date du rapport à renvoyer. Si plusieurs rapports ont été exécutés à cette date, le rapport le plus récent pour cette date est renvoyé. Si aucun rapport n’existe pour la date spécifiée, une erreur 404 (Introuvable) est renvoyée. Si aucune date n’est spécifiée, le rapport le plus récent est renvoyé. Format : AAAA-MM-JJ. Exemple : `date=2024-12-31` |
+| Paramètre de requête | Description | Exemple |
+| --------------- | ----------- | ------- |
+| `date` | Spécifie la date du rapport à renvoyer. Si plusieurs rapports ont été exécutés à cette date, le rapport le plus récent pour cette date est renvoyé. Si aucun rapport n’existe pour la date spécifiée, une erreur 404 (Introuvable) est renvoyée. Si aucune date n’est spécifiée, le rapport le plus récent est renvoyé. Format : `YYYY-MM-DD`. | `date=2025-6-20` |
 
 **Requête**
 
-La requête suivante ne spécifie aucun paramètre `date` et renvoie donc le rapport le plus récent.
+La requête suivante ne spécifie aucun paramètre `date` et renvoie le rapport le plus récent.
+
++++ Exemple de requête pour renvoyer le rapport le plus récent pour la distribution de profils par espace de noms. 
 
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace \
+curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
++++
+
 **Réponse**
 
-La réponse inclut un tableau `data`, avec des objets individuels contenant les détails de chaque espace de noms. La réponse affichée a été tronquée afin d’afficher quatre espaces de noms.
+Une réponse réussie renvoie le statut HTTP 200 et inclut un tableau `data`, avec des objets individuels contenant les détails de chaque espace de noms. La réponse affichée a été tronquée afin d’afficher quatre espaces de noms.
+
++++ Un exemple de réponse contient des informations sur la distribution des profils par espace de noms.
 
 ```json
 {
@@ -292,304 +316,230 @@ La réponse inclut un tableau `data`, avec des objets individuels contenant les 
 ```
 
 | Propriété | Description |
-|---|---|
+| -------- | ----------- |
 | `sampleCount` | Nombre total de profils fusionnés échantillonnés dans l’espace de noms. |
 | `samplePercentage` | Le `sampleCount` sous la forme d’un pourcentage de profils fusionnés échantillonnés (la valeur de `numRowsToRead` telle qu’elle est renvoyée dans le [dernier état d’échantillon](#view-last-sample-status)), exprimé au format décimal. |
 | `reportTimestamp` | Date et heure du rapport. Si un paramètre de `date` a été fourni pendant la requête, le rapport renvoyé porte sur la date fournie. Si aucun paramètre `date` n’est fourni, le rapport le plus récent est renvoyé. |
 | `fullIDsFragmentCount` | Nombre total de fragments de profil dans l’espace de noms. |
 | `fullIDsCount` | Nombre total de profils fusionnés dans l’espace de noms. |
 | `fullIDsPercentage` | Le `fullIDsCount` en pourcentage du total des profils fusionnés (la valeur `totalRows` telle qu’elle est renvoyée dans le [dernier état d’échantillon](#view-last-sample-status)), exprimé au format décimal. |
-| `code` | `code` de l’espace de noms. Vous pouvez le trouver lors de l’utilisation d’espaces de noms à l’aide de l’API Adobe Experience Platform Identity Service [&#128279;](../../identity-service/api/list-namespaces.md). Il est également appelé [!UICONTROL Identity symbol] dans l’interface utilisateur d’Experience Platform. Pour en savoir plus, consultez la [présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md). |
+| `code` | `code` de l’espace de noms. Vous pouvez le trouver lors de l’utilisation d’espaces de noms à l’aide de l’API Adobe Experience Platform Identity Service [](../../identity-service/api/list-namespaces.md). Il est également appelé [!UICONTROL Identity symbol] dans l’interface utilisateur d’Experience Platform. Pour en savoir plus, consultez la [présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md). |
 | `value` | Valeur `id` pour l’espace de noms . Vous pouvez le trouver lorsque vous utilisez des espaces de noms à l’aide de l’[API Identity Service](../../identity-service/api/list-namespaces.md). |
 
-## Génération du rapport de chevauchement de jeux de données
++++
 
-Le rapport de chevauchement des jeux de données offre une visibilité sur la composition de la banque de profils de votre organisation en exposant les jeux de données qui contribuent le plus à votre audience adressable (profils fusionnés). En plus de fournir des informations sur vos données, ce rapport peut vous aider à prendre des mesures pour optimiser l’utilisation des licences, comme définir des expirations pour certains jeux de données.
+## Liste des statistiques des jeux de données {#dataset-stats}
 
-Vous pouvez générer le rapport de chevauchement de jeux de données en adressant une requête GET au point d’entrée `/previewsamplestatus/report/dataset/overlap`.
-
-Pour obtenir des instructions détaillées sur la génération du rapport de chevauchement de jeux de données à l’aide de la ligne de commande ou de l’interface utilisateur de Postman, reportez-vous au tutoriel [génération du rapport de chevauchement de jeux de données](../tutorials/dataset-overlap-report.md).
+Vous pouvez générer un rapport qui fournit des statistiques sur le jeu de données en envoyant une requête GET au point d’entrée `/previewsamplestatus/report/dataset_stats`.
 
 **Format d’API**
 
 ```http
-GET /previewsamplestatus/report/dataset/overlap
-GET /previewsamplestatus/report/dataset/overlap?{QUERY_PARAMETERS}
-```
-
-| Paramètre | Description |
-|---|---|
-| `date` | Indiquez la date du rapport à renvoyer. Si plusieurs rapports ont été exécutés à la même date, le rapport le plus récent correspondant à cette date est renvoyé. Si aucun rapport n’existe pour la date spécifiée, une erreur 404 (Introuvable) est renvoyée. Si aucune date n’est spécifiée, le rapport le plus récent est renvoyé. Format : AAAA-MM-JJ. Exemple : `date=2024-12-31` |
-
-**Requête**
-
-La requête suivante utilise le paramètre `date` pour renvoyer le rapport le plus récent pour la date spécifiée.
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap?date=2021-12-29 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-```
-
-**Réponse**
-
-Une requête réussie renvoie un état HTTP 200 (OK) et le rapport de chevauchement de jeux de données.
-
-```json
-{
-    "data": {
-        "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
-        "5d92921872831c163452edc8,5eb2cdc6fa3f9a18a7592a98": 454412,
-        "5eeda0032af7bb19162172a7": 107
-    },
-    "reportTimestamp": "2021-12-29T19:55:31.147"
-}
-```
-
-| Propriété | Description |
-|---|---|
-| `data` | L’objet `data` contient des listes de jeux de données séparés par des virgules et leurs nombres de profils respectifs. |
-| `reportTimestamp` | Date et heure du rapport. Si un paramètre de `date` a été fourni pendant la requête, le rapport renvoyé porte sur la date fournie. Si aucun paramètre `date` n’est fourni, le rapport le plus récent est renvoyé. |
-
-### Interprétation du rapport de chevauchement de jeux de données
-
-Les résultats du rapport peuvent être interprétés à partir des jeux de données et des nombres de profils dans la réponse. Examinons l’exemple d’objet de `data` de rapport suivant :
-
-```json
-  "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
-  "5d92921872831c163452edc8,5eb2cdc6fa3f9a18a7592a98": 454412,
-  "5eeda0032af7bb19162172a7": 107
-```
-
-Ce rapport fournit les informations suivantes :
-
-* Il existe 123 profils composés de données provenant des jeux de données suivants : `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
-* Il existe 454 412 profils composés de données provenant de ces deux jeux de données : `5d92921872831c163452edc8` et `5eb2cdc6fa3f9a18a7592a98`.
-* Il existe 107 profils composés uniquement de données issues de jeux de données `5eeda0032af7bb19162172a7`.
-* L’organisation compte au total 454 642 profils.
-
-## Générer un rapport de chevauchement des espaces de noms d’identité {#identity-overlap-report}
-
-Le rapport de chevauchement des espaces de noms d’identité offre une visibilité sur la composition du magasin de profils de votre organisation en exposant les espaces de noms d’identité qui contribuent le plus à votre audience adressable (profils fusionnés). Cela inclut les espaces de noms d’identité standard fournis par Adobe, ainsi que les espaces de noms d’identité personnalisés définis par votre organisation.
-
-Vous pouvez générer le rapport de chevauchement des espaces de noms d’identité en adressant une requête GET au point d’entrée `/previewsamplestatus/report/namespace/overlap`.
-
-**Format d’API**
-
-```http
-GET /previewsamplestatus/report/namespace/overlap
-GET /previewsamplestatus/report/namespace/overlap?{QUERY_PARAMETERS}
-```
-
-| Paramètre | Description |
-|---|---|
-| `date` | Indiquez la date du rapport à renvoyer. Si plusieurs rapports ont été exécutés à la même date, le rapport le plus récent correspondant à cette date est renvoyé. Si aucun rapport n’existe pour la date spécifiée, une erreur 404 (Introuvable) est renvoyée. Si aucune date n’est spécifiée, le rapport le plus récent est renvoyé. Format : AAAA-MM-JJ. Exemple : `date=2024-12-31` |
-
-**Requête**
-
-La requête suivante utilise le paramètre `date` pour renvoyer le rapport le plus récent pour la date spécifiée.
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace/overlap?date=2021-12-29 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-```
-
-**Réponse**
-
-Une requête réussie renvoie le statut HTTP 200 (OK) et le rapport de chevauchement des espaces de noms d’identité.
-
-```json
-{
-    "data": {
-        "Email,crmid,loyal": 2,
-        "ECID,Email,crmid": 7,
-        "ECID,Email,mobilenr": 12,
-        "AAID,ECID,loyal": 1,
-        "mobilenr": 25,
-        "AAID,ECID": 1508,
-        "ECID,crmid": 1,
-        "AAID,ECID,crmid": 2,
-        "Email,crmid": 328,
-        "CORE": 49,
-        "AAID": 446,
-        "crmid,loyal": 20988,
-        "Email": 10904,
-        "crmid": 249,
-        "ECID,Email": 74,
-        "Phone": 40,
-        "Email,Phone,loyal": 48,
-        "AAID,AVID,ECID": 85,
-        "Email,loyal": 1002,
-        "AAID,ECID,Email,Phone,crmid": 5,
-        "AAID,ECID,Email,crmid,loyal": 23,
-        "AAID,AVID,ECID,Email,crmid": 2,
-        "AVID": 3,
-        "AAID,ECID,Phone": 1,
-        "loyal": 43,
-        "ECID,Email,crmid,loyal": 6,
-        "AAID,ECID,Email,Phone,crmid,loyal": 1,
-        "AAID,ECID,Email": 2,
-        "AAID,ECID,Email,crmid": 142,
-        "AVID,ECID": 24,
-        "ECID": 6565
-    },
-    "reportTimestamp": "2021-12-29T16:55:03.624"
-}
-```
-
-| Propriété | Description |
-|---|---|
-| `data` | L’objet `data` contient des listes séparées par des virgules avec des combinaisons uniques de codes d’espace de noms d’identité et de leurs nombres de profils respectifs. |
-| Codes d’espace de noms | Le `code` est une forme abrégée pour chaque nom d’espace de noms d’identité. Vous trouverez un mappage de chaque `code` à son `name` à l’aide de l’API [Adobe Experience Platform Identity Service](../../identity-service/api/list-namespaces.md). Le `code` est également appelé [!UICONTROL Identity symbol] dans l’interface utilisateur d’Experience Platform. Pour en savoir plus, consultez la [présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md). |
-| `reportTimestamp` | Date et heure du rapport. Si un paramètre de `date` a été fourni pendant la requête, le rapport renvoyé porte sur la date fournie. Si aucun paramètre `date` n’est fourni, le rapport le plus récent est renvoyé. |
-
-### Interprétation du rapport de chevauchement des espaces de noms d’identité
-
-Les résultats du rapport peuvent être interprétés à partir des identités et des nombres de profils dans la réponse. La valeur numérique de chaque ligne vous indique le nombre de profils composés de cette combinaison exacte d’espaces de noms d’identité standard et personnalisés.
-
-Considérez l’extrait suivant de l’objet `data` :
-
-```json
-  "AAID,ECID,Email,crmid": 142,
-  "AVID,ECID": 24,
-  "ECID": 6565
-```
-
-Ce rapport fournit les informations suivantes :
-
-* Il existe 142 profils composés d’identités standard `AAID`, `ECID` et `Email`, ainsi que d’un espace de noms d’identité `crmid` personnalisé.
-* 24 profils sont composés d’espaces de noms d’identité `AAID` et `ECID`.
-* Il existe 6 565 profils qui n’incluent qu’une identité `ECID`.
-
-## Générer le rapport des profils désassemblés
-
-Vous pouvez obtenir une visibilité supplémentaire sur la composition du magasin de profils de votre organisation grâce au rapport Profils désassemblés . Un profil « désassemblé » est un profil qui contient un seul fragment de profil. Un profil « inconnu » est un profil associé à des espaces de noms d’identité pseudonymes tels que `ECID` et `AAID`. Les profils inconnus sont inactifs, ce qui signifie qu’ils n’ont pas ajouté de nouveaux événements pour la période spécifiée. Le rapport Profils désassemblés fournit une répartition des profils pour une période de 7, 30, 60, 90 et 120 jours.
-
-Vous pouvez générer le rapport de profils désassemblés en adressant une requête GET au point d’entrée `/previewsamplestatus/report/unstitchedProfiles`.
-
-**Format d’API**
-
-```http
-GET /previewsamplestatus/report/unstitchedProfiles
+GET /previewsamplestatus/report/dataset_stats
 ```
 
 **Requête**
 
-La requête suivante renvoie le rapport des profils désassemblés.
++++ Exemple de requête pour générer le rapport de statistiques de jeux de données.
 
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unstitchedProfiles \
+curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset_stats \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
+
++++
 
 **Réponse**
 
-Une requête réussie renvoie un état HTTP 200 (OK) et le rapport des profils désassemblés.
+Une réponse réussie renvoie un état HTTP 200 avec des informations sur les statistiques du jeu de données.
+
++++ Exemple de réponse contenant des informations sur les statistiques du jeu de données.
 
 >[!NOTE]
 >
->Pour les besoins du présent guide, le rapport a été tronqué afin de n&#39;inclure que les périodes `"120days"` et « `7days` ». Le rapport Profils désassemblés complets fournit une répartition des profils pour une période de 7, 30, 60, 90 et 120 jours.
+>La réponse suivante a été tronquée pour afficher trois jeux de données.
 
 ```json
 {
-  "data": {
-      "totalNumberOfProfiles": 63606,
-      "totalNumberOfEvents": 130977,
-      "unstitchedProfiles": {
-          "120days": {
-              "countOfProfiles": 1644,
-              "eventsAssociated": 26824,
-              "nsDistribution": {
-                  "Email": {
-                      "countOfProfiles": 18,
-                      "eventsAssociated": 95
-                  },
-                  "loyal": {
-                      "countOfProfiles": 26,
-                      "eventsAssociated": 71
-                  },
-                  "ECID": {
-                      "countOfProfiles": 1600,
-                      "eventsAssociated": 26658
-                  }
-              }
-          },
-          "7days": {
-              "countOfProfiles": 1782,
-              "eventsAssociated": 29151,
-              "nsDistribution": {
-                  "Email": {
-                      "countOfProfiles": 19,
-                      "eventsAssociated": 97
-                  },
-                  "ECID": {
-                      "countOfProfiles": 1734,
-                      "eventsAssociated": 28591
-                  },
-                  "loyal": {
-                      "countOfProfiles": 29,
-                      "eventsAssociated": 463
-                  }
-              }
-          }
-      }
-  },
-  "reportTimestamp": "2025-08-25T22:14:55.186"
+    "data": [
+        {
+            "120days": 4,
+            "14days": 4,
+            "30days": 4,
+            "365days": 4,
+            "60days": 4,
+            "7days": 4,
+            "90days": 4,
+            "datasetId": "{DATASET_ID}",
+            "datasetType": "ExperienceEvents",
+            "percentEvents": 0.0,
+            "percentProfiles": 0.0,
+            "profileFragments": 1,
+            "records": 4,
+            "totalProfiles": 1
+        },
+        {
+            "120days": 155435837,
+            "14days": 32888631,
+            "30days": 66496282,
+            "365days": 155435837,
+            "60days": 116433804,
+            "7days": 18202004,
+            "90days": 155435837,
+            "datasetId": "{DATASET_ID}",
+            "datasetType": "ExperienceEvents",
+            "percentEvents": 16.0,
+            "percentProfiles": 0.0,
+            "profileFragments": 5410745,
+            "records": 155435837,
+            "totalProfiles": 4524723
+        },
+        {
+            "120days": 0,
+            "14days": 0,
+            "30days": 0,
+            "365days": 0,
+            "60days": 0,
+            "7days": 0,
+            "90days": 0,
+            "datasetId": "{DATASET_ID}",
+            "datasetType": "Profiles",
+            "percentEvents": 0.0,
+            "percentProfiles": 0.0,
+            "profileFragments": 3589,
+            "records": 3589,
+            "totalProfiles": 3589
+        }
+    ],
+    "reportTimestamp": "2025-10-29T16:20:18.956"
 }
 ```
 
 | Propriété | Description |
-|---|---|
-| `data` | L’objet `data` contient les informations renvoyées pour le rapport des profils désassemblés. |
-| `totalNumberOfProfiles` | Nombre total de profils uniques dans la banque de profils. Cela équivaut au nombre d’audiences adressables. Il comprend des profils connus et désassemblés. |
-| `totalNumberOfEvents` | Nombre total d’événements d’expérience dans le magasin de profils. |
-| `unstitchedProfiles` | Objet contenant une répartition des profils désassemblés par période. Le rapport Profils désassemblés fournit une répartition des profils pour des périodes de 7, 30, 60, 90 et 120 jours. |
-| `countOfProfiles` | Nombre de profils désassemblés pour la période ou nombre de profils désassemblés pour l’espace de noms. |
-| `eventsAssociated` | Nombre d’événements d’expérience pour la période ou nombre d’événements pour l’espace de noms. |
-| `nsDistribution` | Objet contenant des espaces de noms d’identité individuels avec la distribution de profils et d’événements désassemblés pour chaque espace de noms. Remarque : en additionnant le `countOfProfiles` total de chaque espace de noms d’identité de l’objet `nsDistribution`, vous obtenez la `countOfProfiles` de la période. Il en va de même pour les `eventsAssociated` par espace de noms et le `eventsAssociated` total par période. |
-| `reportTimestamp` | Date et heure du rapport. |
+| -------- | ----------- |
+| `120days` | Le nombre d’enregistrements qui resteront dans le jeu de données après une expiration de données de 120 jours. |
+| `14days` | Le nombre d’enregistrements qui resteront dans le jeu de données après une expiration de données de 14 jours. |
+| `30days` | Le nombre d’enregistrements qui resteront dans le jeu de données après une expiration de données de 30 jours. |
+| `365days` | Le nombre d’enregistrements qui resteront dans le jeu de données après une expiration de données de 365 jours. |
+| `60days` | Le nombre d’enregistrements qui resteront dans le jeu de données après une expiration de données de 60 jours. |
+| `7days` | Le nombre d’enregistrements qui resteront dans le jeu de données après une expiration de données de 7 jours. |
+| `90days` | Le nombre d’enregistrements qui resteront dans le jeu de données après une expiration de données de 90 jours. |
+| `datasetId` | Identifiant du jeu de données. |
+| `datasetType` | Type de jeu de données. Cette valeur peut être `Profiles` ou `ExperienceEvents`. |
+| `percentEvents` | Pourcentage d’enregistrements d’événements d’expérience qui se trouvent dans le jeu de données. |
+| `percentProfiles` | Pourcentage d’enregistrements de profil qui se trouvent dans le jeu de données. |
+| `profileFragments` | Nombre total de fragments de profil qui existent dans le jeu de données. |
+| `records` | Nombre total d’enregistrements de profil ingérés dans le jeu de données. |
+| `totalProfiles` | Nombre total de profils ingérés dans le jeu de données. |
 
-### Interprétation du rapport des profils désassemblés
++++
 
-Les résultats du rapport peuvent fournir à insight le nombre de profils désassemblés et inactifs de votre organisation dans sa banque de profils.
+## Obtenir la taille du jeu de données {#character-count}
 
-Considérez l’extrait suivant de l’objet `data` :
+Vous pouvez utiliser ce point d’entrée pour obtenir la taille du jeu de données en octets semaine par semaine.
 
-```json
-  "7days": {
-    "countOfProfiles": 1782,
-    "eventsAssociated": 29151,
-    "nsDistribution": {
-      "Email": {
-        "countOfProfiles": 19,
-        "eventsAssociated": 97
-      },
-      "ECID": {
-        "countOfProfiles": 1734,
-        "eventsAssociated": 28591
-      },
-      "loyal": {
-        "countOfProfiles": 29,
-        "eventsAssociated": 463
-      }
-    }
-  }
+**Format d’API**
+
+```http
+GET /previewsamplestatus/report/character_count
 ```
 
-Ce rapport fournit les informations suivantes :
+**Requête**
 
-* Il existe 1 782 profils qui ne contiennent qu’un fragment de profil et qui n’ont aucun nouvel événement au cours des sept derniers jours.
-* Il y a 29 151 événements d’expérience associés aux 1 782 profils désassemblés.
-* Il existe 1 734 profils désassemblés contenant un seul fragment de profil de l’espace de noms d’identité d’ECID.
-* 28 591 événements sont associés aux 1 734 profils désassemblés qui contiennent un seul fragment de profil provenant de l’espace de noms d’identité d’ECID.
++++Exemple de requête pour générer le rapport de nombre de caractères.
+
+```shell
+curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/character_count \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
++++
+
+**Réponse**
+
+Une réponse réussie renvoie un état HTTP 200 avec des informations sur la taille du jeu de données tout au long des semaines.
+
++++ Exemple de réponse contenant des informations sur la taille du jeu de données après l’expiration des données.
+
+>[!NOTE]
+>
+>La réponse suivante a été tronquée pour afficher trois jeux de données.
+
+```json
+{
+    "data": [
+        {
+            "datasetIds": [
+                {
+                    "datasetId": "67aba91a453f7d298cd2a643",
+                    "recordType": "keyvalue",
+                    "weeks": [
+                        {
+                            "size": 107773533894,
+                            "week": "2025-10-26"
+                        }
+                    ]
+                },
+                {
+                    "datasetId": "67aa6c867c3110298b017f0e",
+                    "recordType": "timeseries",
+                    "weeks": [
+                        {
+                            "size": 242902062440,
+                            "week": "2025-10-26"
+                        },
+                        {
+                            "size": 837539413062,
+                            "week": "2025-10-19"
+                        },
+                        {
+                            "size": 479253986484,
+                            "week": "2025-10-12"
+                        },
+                        {
+                            "size": 358911988990,
+                            "week": "2025-10-05"
+                        },
+                        {
+                            "size": 349701073042,
+                            "week": "2025-09-28"
+                        }
+                    ]
+                },
+                {
+                    "datasetId": "680c043667c0d7298c9ea275",
+                    "recordType": "keyvalue",
+                    "weeks": [
+                        {
+                            "size": 18392459832,
+                            "week": "2025-10-26"
+                        }
+                    ]
+                }
+            ],
+            "modelName": "_xdm.context.profile",
+            "reportTimestamp": "2025-10-30T00:28:30.069Z"
+        }
+    ],
+    "reportTimestamp": "2025-10-30T00:28:30.069Z"
+}
+```
+
+| Propriété | Description |
+| -------- | ----------- |
+| `datasetId` | Identifiant du jeu de données. |
+| `recordType` | Type de données dans le jeu de données. Le type d’enregistrement affecte la valeur de la variable `weeks`. Les valeurs prises en charge comprennent `keyvalue` et `timeseries`. |
+| `weeks` | Un tableau contenant les informations de taille sur le jeu de données. Pour les jeux de données de type enregistrement `keyvalue`, il contient la semaine la plus récente ainsi que la taille totale du jeu de données en octets. Pour les jeux de données de type enregistrement `timeseries`, il contient chaque semaine depuis l’ingestion du jeu de données jusqu’à la semaine la plus récente et la taille totale du jeu de données en octets pour chacune de ces semaines. |
+| `modelName` | Nom du modèle du jeu de données. Les valeurs possibles sont `_xdm.context.profile` et `_xdm.context.experienceevent`. |
+| `reportTimestamp` | Date et heure auxquelles le rapport a été généré. |
+
++++
 
 ## Étapes suivantes
 
