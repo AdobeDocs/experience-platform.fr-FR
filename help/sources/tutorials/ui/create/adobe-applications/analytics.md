@@ -2,9 +2,9 @@
 title: Connexion D’Adobe Analytics À Experience Platform
 description: Découvrez comment importer les données de votre suite de rapports Adobe Analytics dans Experience Platform
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: d9dad6b5da413740559e6c8de7392bc2e169d5d9
+source-git-commit: 789d00912edd0ce8e2871b7e22445a043868ccf5
 workflow-type: tm+mt
-source-wordcount: '2731'
+source-wordcount: '2745'
 ht-degree: 14%
 
 ---
@@ -26,7 +26,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 Il est important de comprendre les termes clés suivants utilisés dans ce document :
 
 * **Attribut standard :** les attributs standard sont tous les attributs prédéfinis par Adobe. Ils renferment la même signification pour tous les clients et sont disponibles dans les groupes de champs des données sources et du schéma Analytics d’Analytics .
-* **Attribut personnalisé** : les attributs personnalisés sont tout attribut de la hiérarchie des variables personnalisées dans Analytics. Les attributs personnalisés sont utilisés dans une implémentation d’Adobe Analytics pour capturer des informations spécifiques dans une suite de rapports. Leur utilisation peut varier d’une suite de rapports à l’autre. Les attributs personnalisés comprennent les eVars, les props et les listes. Pour plus d’informations sur les eVars[&#x200B; consultez la &#x200B;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=fr)documentation Analytics sur les variables de conversion .
+* **Attribut personnalisé** : les attributs personnalisés sont tout attribut de la hiérarchie des variables personnalisées dans Analytics. Les attributs personnalisés sont utilisés dans une implémentation d’Adobe Analytics pour capturer des informations spécifiques dans une suite de rapports. Leur utilisation peut varier d’une suite de rapports à l’autre. Les attributs personnalisés comprennent les eVars, les props et les listes. Pour plus d’informations sur les eVars[ consultez la ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)documentation Analytics sur les variables de conversion .
 * **Tout attribut dans les groupes de champs personnalisés :** les attributs qui proviennent de groupes de champs créés par les clients sont tous définis par l’utilisateur et sont considérés comme des attributs ni standard ni personnalisés.
 
 ## Parcourir le catalogue des sources
@@ -112,6 +112,12 @@ Experience Platform détecte automatiquement tout conflit de nom dans votre mapp
 >En cas de conflits de noms entre votre suite de rapports source et votre schéma sélectionné, vous pouvez tout de même continuer à utiliser votre flux de données Analytics, mais les descripteurs de champ ne seront pas modifiés. Vous pouvez également choisir de créer un autre schéma avec un jeu de descripteurs vierge.
 
 ## Mappings personnalisés {#custom-mappings}
+
+>[!CONTEXTUALHELP]
+>id="platform_analytics_import_mapping"
+>title="Télécharger le modèle"
+>abstract="Téléchargez le modèle csv pour effectuer le mappage hors ligne."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/ui/mapping#import-mapping" text="Importer le mapping"
 
 Vous pouvez utiliser les fonctions de préparation de données pour ajouter de nouveaux mappages personnalisés ou des champs calculés pour les attributs personnalisés. Pour ajouter des mappages personnalisés, sélectionnez **[!UICONTROL Custom]**.
 
@@ -319,5 +325,5 @@ La vidéo suivante est destinée à vous aider à comprendre l’ingestion de do
 >
 > Lʼinterface utilisateur de [!DNL Experience Platform] affichée dans la vidéo suivante est obsolète. Consultez la documentation pour découvrir les dernières captures dʼécran et fonctionnalités de lʼinterface utilisateur.
 
->[!VIDEO](https://video.tv.adobe.com/v/3430255?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
 
