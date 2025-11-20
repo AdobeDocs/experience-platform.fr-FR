@@ -70,7 +70,7 @@ Une fenêtre pop-up s’affiche, vous permettant de parcourir les modèles ou d�
 >
 >Les modèles peuvent générer automatiquement des schémas relationnels lors de l’utilisation de sources qui nécessitent des workflows de capture de données de modification ou qui prennent en charge plusieurs modèles de données. Ces schémas activent les fonctionnalités de Data Mirror pour la synchronisation des données en temps réel.\
 >Lors de l’utilisation de modèles avec des schémas relationnels, les ressources générées automatiquement incluent les champs clé primaire, identifiant de version et identifiant d’horodatage obligatoires.\
->Pour plus d’informations, consultez la présentation de Data Mirror [](../../../xdm/data-mirror/overview.md) ainsi que la [référence technique des schémas relationnels](../../../xdm/schema/relational.md).
+>Pour plus d’informations, consultez la présentation de Data Mirror [&#128279;](../../../xdm/data-mirror/overview.md) ainsi que la [référence technique des schémas relationnels](../../../xdm/schema/relational.md).
 
 Pour utiliser des ressources générées automatiquement, sélectionnez **[!UICONTROL Browse templates]** puis **[!UICONTROL Select]**.
 

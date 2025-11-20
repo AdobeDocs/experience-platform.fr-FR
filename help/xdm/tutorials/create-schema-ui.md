@@ -50,7 +50,7 @@ La boîte de dialogue [!UICONTROL Create a schema] s’affiche. Dans cette boît
 
 ![La boîte de dialogue Créer un schéma avec les options de workflow et sélectionnez en surbrillance.](../images/tutorials/create-schema/create-a-schema-dialog.png)
 
-### [!BADGE Beta ]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
+### [!BADGE Beta &#x200B;]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
 
 Pour découvrir comment utiliser un algorithme ML afin de recommander une structure de schéma basée sur un fichier chargé, consultez le guide de création de schéma assisté par machine learning [machine learning](../ui/ml-assisted-schema-creation.md). Ce guide de l’interface utilisateur se concentre sur le workflow de création manuelle .
 
@@ -159,7 +159,7 @@ Le schéma [!UICONTROL Loyalty Members] est destiné à capturer des données re
 Cependant, il peut arriver que vous souhaitiez inclure d’autres champs personnalisés non couverts par des groupes de champs standard afin d’atteindre vos cas d’utilisation. Dans le cas de l’ajout de champs de fidélité personnalisés, vous disposez de deux options :
 
 1. Créer un groupe de champs personnalisé pour capturer ces champs. Il s’agit de la méthode qui sera abordée dans ce tutoriel.
-1. Étendez le groupe de champs standard [!UICONTROL Loyalty Details] avec des champs personnalisés. Cela entraîne la conversion de [!UICONTROL Loyalty Details] en un groupe de champs personnalisés et le groupe de champs standard d’origine ne sera plus disponible. Pour plus d’informations sur [!UICONTROL Schemas]l’ajout de champs personnalisés à la structure des groupes de champs standard[, consultez le guide de l’interface utilisateur ](../ui/resources/schemas.md#custom-fields-for-standard-groups) .
+1. Étendez le groupe de champs standard [!UICONTROL Loyalty Details] avec des champs personnalisés. Cela entraîne la conversion de [!UICONTROL Loyalty Details] en un groupe de champs personnalisés et le groupe de champs standard d’origine ne sera plus disponible. Pour plus d’informations sur [!UICONTROL Schemas]l’ajout de champs personnalisés à la structure des groupes de champs standard[, consultez le guide de l’interface utilisateur &#x200B;](../ui/resources/schemas.md#custom-fields-for-standard-groups) .
 
 Pour créer un groupe de champs, sélectionnez **[!UICONTROL Add]** dans la sous-section **[!UICONTROL Field groups]** comme avant, mais cette fois, sélectionnez **[!UICONTROL Create New Field group]** dans la partie supérieure de la boîte de dialogue qui s’affiche. Vous êtes alors invité à fournir un nom d’affichage et une description pour le nouveau groupe de champs. Pour ce tutoriel, nommez le nouveau groupe de champs « [!DNL Custom Loyalty Details] », puis sélectionnez **[!UICONTROL Add field groups]**.
 

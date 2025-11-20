@@ -52,7 +52,7 @@ Vous pouvez également sélectionner l’onglet **[!UICONTROL Labels]** , choisi
 
 Pour modifier les libellés de l’ensemble du schéma, dans l’onglet **[!UICONTROL Labels]** , cochez la case située sous l’icône de filtre. Cela sélectionne tous les champs disponibles dans le schéma. Sélectionnez ensuite **[!UICONTROL Apply Access and Data Governance Labels]** dans le rail de droite.
 
-![Sélectionnez le nom du schéma dans l’onglet [!UICONTROL Labels] ](../images/tutorials/labels/select-schema-on-labels-tab.png)
+![Sélectionnez le nom du schéma dans l’onglet [!UICONTROL Labels] &#x200B;](../images/tutorials/labels/select-schema-on-labels-tab.png)
 
 >[!NOTE]
 >

@@ -177,7 +177,7 @@ Pour maintenir la qualité et la cohérence des données, l’interface utilisat
 
 Pour définir la condition, cochez les cases correspondant aux valeurs que la politique doit évaluer.
 
-![ La boîte de dialogue « Sélectionner le champ de schéma d’union » avec un champ de schéma et les cases à cocher à valeur fixe disponibles en surbrillance.](../images/policies/select-schema-field.png)
+![&#x200B; La boîte de dialogue « Sélectionner le champ de schéma d’union » avec un champ de schéma et les cases à cocher à valeur fixe disponibles en surbrillance.](../images/policies/select-schema-field.png)
 
 #### Mapper des champs de type données pour une condition de politique {#map-data-type-fields}
 

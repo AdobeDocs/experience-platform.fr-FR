@@ -20,7 +20,7 @@ Query Service prend en charge l’utilisation de requêtes paramétrées dans Qu
 
 ## Conditions préalables
 
-Avant de poursuivre avec ce guide, lisez le [ Guide de l’interface utilisateur de Query Editor ](./user-guide.md). Le guide de Query Editor fournit des informations détaillées sur la manière d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform.
+Avant de poursuivre avec ce guide, lisez le [&#x200B; Guide de l’interface utilisateur de Query Editor &#x200B;](./user-guide.md). Le guide de Query Editor fournit des informations détaillées sur la manière d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform.
 
 >[!NOTE]
 >
@@ -73,7 +73,7 @@ Les valeurs de paramètre sont enregistrées lorsque vous planifiez une requête
 
 >[!TIP]
 >
->Query Service prend en charge les instructions préparées à l’aide de requêtes paramétrées. Pour plus d’informations sur la syntaxe SQL impliquée[ consultez le ](../sql/prepared-statements.md) guide de syntaxe des instructions préparées .
+>Query Service prend en charge les instructions préparées à l’aide de requêtes paramétrées. Pour plus d’informations sur la syntaxe SQL impliquée[&#x200B; consultez le &#x200B;](../sql/prepared-statements.md) guide de syntaxe des instructions préparées .
 
 ## Étapes suivantes
 

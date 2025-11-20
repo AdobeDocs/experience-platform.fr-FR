@@ -57,7 +57,7 @@ Pour établir une relation, le schéma de référence doit avoir une identité p
 
 Pour en tenir compte, toutes les classes B2B standard contiennent des champs « clé » conformes au type de données [[!UICONTROL B2B Source]](../data-types/b2b-source.md). Ce type de données fournit des champs pour un identifiant de chaîne pour l’entité B2B ainsi que d’autres informations contextuelles sur la source de l’identifiant. L’un de ces champs, `sourceKey`, concatène les valeurs des autres champs du type de données afin de produire un identifiant totalement unique pour l’entité. Ce champ doit toujours être utilisé comme identité principale pour les schémas d’entité B2B.
 
-![ champ sourceKey ](../images/tutorials/relationship-b2b/sourcekey.png)
+![&#x200B; champ sourceKey &#x200B;](../images/tutorials/relationship-b2b/sourcekey.png)
 
 >[!NOTE]
 >

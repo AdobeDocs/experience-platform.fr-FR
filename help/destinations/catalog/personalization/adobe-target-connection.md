@@ -71,7 +71,7 @@ Cette section décrit les types d’audiences que vous pouvez exporter vers cett
 
 >[!IMPORTANT]
 >
->Lors de l’activation des *audiences Edge pour les cas d’utilisation de la personnalisation de la même page et de la page suivante*, les audiences *doivent* utilisent une politique de fusion [ active-on-edge](../../../segmentation/ui/segment-builder.md#merge-policies). La politique de fusion [!DNL active-on-edge] garantit que les audiences sont constamment évaluées [à la périphérie](../../../segmentation/methods/edge-segmentation.md) et sont disponibles pour les cas d’utilisation de la personnalisation en temps réel et de la page suivante.  Découvrez [tous les cas d’utilisation disponibles](#parameter) en fonction du type d’implémentation.
+>Lors de l’activation des *audiences Edge pour les cas d’utilisation de la personnalisation de la même page et de la page suivante*, les audiences *doivent* utilisent une politique de fusion [&#x200B; active-on-edge](../../../segmentation/ui/segment-builder.md#merge-policies). La politique de fusion [!DNL active-on-edge] garantit que les audiences sont constamment évaluées [à la périphérie](../../../segmentation/methods/edge-segmentation.md) et sont disponibles pour les cas d’utilisation de la personnalisation en temps réel et de la page suivante.  Découvrez [tous les cas d’utilisation disponibles](#parameter) en fonction du type d’implémentation.
 >Si vous mappez des audiences Edge qui utilisent une politique de fusion différente avec des destinations Adobe Target, ces audiences ne seront pas évaluées pour les cas d’utilisation en temps réel et de la page suivante.
 >Suivez les instructions de la section [création d’une politique de fusion](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy) et assurez-vous d’activer le bouton **[!UICONTROL Active-On-Edge Merge Policy]**.
 
@@ -142,7 +142,7 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 
 >[!NOTE]
 >
->Lors de l’utilisation d’un espace de travail Target personnalisé pour la [personnalisation de la même page et de la page suivante avec des attributs](../../ui/activate-edge-personalization-destinations.md), seules les [ audiences sélectionnées](../../ui/activate-edge-personalization-destinations.md#select-audiences) sont envoyées à l’espace de travail Target sélectionné. Les [attributs mappés](../../ui/activate-edge-personalization-destinations.md#mapping) sont envoyés à l’espace de travail Target par défaut.
+>Lors de l’utilisation d’un espace de travail Target personnalisé pour la [personnalisation de la même page et de la page suivante avec des attributs](../../ui/activate-edge-personalization-destinations.md), seules les [&#x200B; audiences sélectionnées](../../ui/activate-edge-personalization-destinations.md#select-audiences) sont envoyées à l’espace de travail Target sélectionné. Les [attributs mappés](../../ui/activate-edge-personalization-destinations.md#mapping) sont envoyés à l’espace de travail Target par défaut.
 ><br>
 >Ce comportement sera modifié lors d’une prochaine mise à jour.
 
@@ -162,7 +162,7 @@ Lisez [Activer des audiences vers des destinations de personnalisation Edge](../
 
 ## Supprimer des audiences d’une destination Target {#remove}
 
-Des étapes supplémentaires sont nécessaires pour supprimer une audience d’une connexion Adobe Target existante lorsque cette audience est déjà utilisée dans une activité Adobe Target [](https://experienceleague.adobe.com/en/docs/target/using/activities/activities). Toute tentative de suppression d’une audience d’une connexion Adobe Target entraîne une erreur si l’audience est utilisée par une activité Adobe Target.
+Des étapes supplémentaires sont nécessaires pour supprimer une audience d’une connexion Adobe Target existante lorsque cette audience est déjà utilisée dans une activité Adobe Target [&#128279;](https://experienceleague.adobe.com/en/docs/target/using/activities/activities). Toute tentative de suppression d’une audience d’une connexion Adobe Target entraîne une erreur si l’audience est utilisée par une activité Adobe Target.
 
 ![Image de l’interface utilisateur d’Experience Platform montrant une erreur causée par une tentative de suppression d’une audience utilisée par une activité Target.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
 

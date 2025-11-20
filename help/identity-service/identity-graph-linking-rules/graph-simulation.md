@@ -122,13 +122,13 @@ Vous pouvez saisir manuellement vos identités en mode texte. Utilisez le signe 
 
 Pour modifier un événement, sélectionnez les points de suspension (`...`) en regard d’un événement donné, puis sélectionnez **[!UICONTROL Edit]**.
 
-![ Icône Modifier l’événement sélectionnée.](../images/graph-simulation/edit.png)
+![&#x200B; Icône Modifier l’événement sélectionnée.](../images/graph-simulation/edit.png)
 
 ### Supprimer l’événement {#delete-event}
 
 Pour supprimer un événement, sélectionnez les points de suspension (`...`) en regard d’un événement donné, puis sélectionnez **[!UICONTROL Delete]**.
 
-![ Icône Supprimer l’événement sélectionnée.](../images/graph-simulation/delete.png)
+![&#x200B; Icône Supprimer l’événement sélectionnée.](../images/graph-simulation/delete.png)
 
 ## Configurer l’algorithme {#configure-algorithm}
 

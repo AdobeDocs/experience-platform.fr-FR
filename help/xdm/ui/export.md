@@ -226,8 +226,8 @@ Notez que chaque instance de l’identifiant du client de votre organisation app
 
 ## Importer la ressource à l’aide de l’API {#import-resource-with-api}
 
-Une fois que vous avez copié le fichier JSON d’exportation pour le schéma, vous pouvez l’utiliser comme payload pour une requête POST vers le point d’entrée `/rpc/import` dans l’API Schema Registry. Pour plus d’informations sur la configuration de l’appel pour envoyer le schéma à l’organisation et au sandbox souhaités[ consultez le ](../api/import.md) guide du point d’entrée d’importation .
+Une fois que vous avez copié le fichier JSON d’exportation pour le schéma, vous pouvez l’utiliser comme payload pour une requête POST vers le point d’entrée `/rpc/import` dans l’API Schema Registry. Pour plus d’informations sur la configuration de l’appel pour envoyer le schéma à l’organisation et au sandbox souhaités[&#x200B; consultez le &#x200B;](../api/import.md) guide du point d’entrée d’importation .
 
 ## Étapes suivantes
 
-En suivant ce guide, vous avez réussi à exporter un schéma XDM vers une autre organisation ou un autre sandbox. Pour plus d’informations sur les fonctionnalités de l’interface utilisateur de [!UICONTROL Schemas], reportez-vous à la présentation de l’interface utilisateur de [[!UICONTROL Schemas] ](./overview.md).
+En suivant ce guide, vous avez réussi à exporter un schéma XDM vers une autre organisation ou un autre sandbox. Pour plus d’informations sur les fonctionnalités de l’interface utilisateur de [!UICONTROL Schemas], reportez-vous à la présentation de l’interface utilisateur de [[!UICONTROL Schemas] &#x200B;](./overview.md).

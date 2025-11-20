@@ -59,7 +59,7 @@ Sous la section **[!UICONTROL Requested Action]** , sélectionnez une date à la
 
 ![Boîte de dialogue de calendrier avec une date d’expiration sélectionnée et mise en surbrillance pour le jeu de données.](../images/ui/ttl/select-date.png)
 
-Ensuite, sous **[!UICONTROL Dataset Details]**, sélectionnez l’icône de base de données (![ Icône de base de données.](/help/images/icons/database.png)) pour ouvrir une boîte de dialogue de sélection de jeu de données. Dans la liste, sélectionnez un jeu de données auquel appliquer l’expiration, puis sélectionnez **[!UICONTROL Done]**.
+Ensuite, sous **[!UICONTROL Dataset Details]**, sélectionnez l’icône de base de données (![&#x200B; Icône de base de données.](/help/images/icons/database.png)) pour ouvrir une boîte de dialogue de sélection de jeu de données. Dans la liste, sélectionnez un jeu de données auquel appliquer l’expiration, puis sélectionnez **[!UICONTROL Done]**.
 
 ![Boîte de dialogue [!UICONTROL Select dataset] avec un jeu de données sélectionné et [!UICONTROL Done] mis en surbrillance.](../images/ui/ttl/select-dataset.png)
 
@@ -89,6 +89,6 @@ Dans la page des détails de l’expiration du jeu de données, le rail de droit
 
 ## Étapes suivantes
 
-Ce document explique comment planifier des expirations de jeux de données dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’exécution d’autres tâches de minimisation des données dans l’interface utilisateur, reportez-vous à la section [ Présentation de l’interface utilisateur du cycle de vie des données ](./overview.md).
+Ce document explique comment planifier des expirations de jeux de données dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’exécution d’autres tâches de minimisation des données dans l’interface utilisateur, reportez-vous à la section [&#x200B; Présentation de l’interface utilisateur du cycle de vie des données &#x200B;](./overview.md).
 
 Pour savoir comment planifier l’expiration des jeux de données à l’aide de l’API Data Hygiene, consultez le guide [point d’entrée d’expiration du jeu de données](../api/dataset-expiration.md).

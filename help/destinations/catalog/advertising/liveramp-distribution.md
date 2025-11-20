@@ -48,7 +48,7 @@ Pour mieux comprendre quand et comment utiliser la destination [!DNL LiveRamp - 
 
 L’équipe marketing d’un retailer de vêtements de sport a utilisé la connexion [LiveRamp - Intégration](liveramp-onboarding.md) pour envoyer des audiences d’Experience Platform à leur compte LiveRamp.
 
-Grâce à la connexion [!DNL LiveRamp - Distribution], ils peuvent désormais déclencher l’activation des audiences intégrées vers les [ destinations prises en charge ](#supported-destinations). Ensuite, ils peuvent cibler les utilisateurs sur les plateformes mobiles, web, sociales et [!DNL CTV] ouvertes.
+Grâce à la connexion [!DNL LiveRamp - Distribution], ils peuvent désormais déclencher l’activation des audiences intégrées vers les [&#x200B; destinations prises en charge &#x200B;](#supported-destinations). Ensuite, ils peuvent cibler les utilisateurs sur les plateformes mobiles, web, sociales et [!DNL CTV] ouvertes.
 
 ## Intégration d’audiences à LiveRamp {#onboarding}
 
@@ -90,7 +90,7 @@ Une fois la connexion à votre compte LiveRamp établie, saisissez les informati
 
 >[!NOTE]
 >
->Lorsque vous attribuez un nom à une destination, Adobe recommande de suivre le format suivant : `LiveRamp - Downstream Destination Name`. Ce modèle de dénomination vous permet d’identifier rapidement vos destinations dans l’onglet [ Parcourir ](../../ui/destinations-workspace.md#browse) de l’espace de travail des destinations.
+>Lorsque vous attribuez un nom à une destination, Adobe recommande de suivre le format suivant : `LiveRamp - Downstream Destination Name`. Ce modèle de dénomination vous permet d’identifier rapidement vos destinations dans l’onglet [&#x200B; Parcourir &#x200B;](../../ui/destinations-workspace.md#browse) de l’espace de travail des destinations.
 ><br>
 >Exemple : `LiveRamp - Roku`.
 

@@ -61,7 +61,7 @@ De plus, vous pouvez sélectionner un attribut calculé pour afficher des inform
 
 Pour créer un attribut calculé, sélectionnez **[!UICONTROL Create computed attribute]** pour lancer le processus de création d’un attribut calculé.
 
-![Le bouton [!UICONTROL Create computed attributes] est mis en surbrillance et indique aux utilisateurs comment accéder à la page Créer un attribut calculé ](./images/ui/create.png).
+![Le bouton [!UICONTROL Create computed attributes] est mis en surbrillance et indique aux utilisateurs comment accéder à la page Créer un attribut calculé &#x200B;](./images/ui/create.png).
 
 La page **[!UICONTROL Create computed attribute]** s’affiche. Sur cette page, vous pouvez ajouter les informations de base de l’attribut calculé que vous souhaitez créer.
 

@@ -116,7 +116,7 @@ Tout comme l’alerte de l’interface utilisateur, la page [!UICONTROL Dataflow
 
 Vous pouvez vous abonner à d’autres alertes ou vous désabonner des alertes établies pour un flux de données existant dans la page de [!UICONTROL Dataflows]. Recherchez le flux de données que vous créez dans la liste, puis sélectionnez les points de suspension (`...`) pour afficher un menu déroulant d’options. Sélectionnez ensuite **[!UICONTROL Subscribe alerts]** pour modifier les paramètres d’alerte de votre flux de données.
 
-![options ](../../images/tutorials/alerts/options.png)
+![options &#x200B;](../../images/tutorials/alerts/options.png)
 
 Une fenêtre pop-up s’affiche, vous fournissant une liste des alertes de sources. Sélectionnez les alertes auxquelles vous souhaitez vous abonner ou désélectionnez les alertes auxquelles vous souhaitez vous désabonner. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**.
 
