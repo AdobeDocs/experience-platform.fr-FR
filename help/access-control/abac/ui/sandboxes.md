@@ -16,7 +16,7 @@ ht-degree: 40%
 >id="platform_permissions_sandboxes_about"
 >title="Que sont les sandbox ?"
 >abstract="Les sandbox sont des partitions virtuelles au sein d’une instance unique d’Experience Platform. Tout le contenu et les actions réalisés dans un sandbox sont limités à celui-ci et n’en affectent aucun autre. L’accès aux sandbox est géré par l’intermédiaire des rôles."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home" text="Présentation des sandbox"
+>additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/sandbox/home" text="Présentation des sandbox"
 
 Les sandbox constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience digitale. Tout le contenu et les actions réalisés dans un sandbox sont limités à celui-ci et n’en affectent aucun autre. Pour plus d’informations sur les sandbox, consultez la [présentation des sandbox](../../../sandboxes/home.md).
 
