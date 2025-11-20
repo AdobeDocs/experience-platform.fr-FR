@@ -409,11 +409,11 @@ Vous pouvez également consulter et gérer le schéma « Membres du programme d
 
 La vidéo suivante montre comment créer un schéma simple dans l’interface utilisateur [!DNL Experience Platform].
 
->[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430220?captions=fre_fr&quality=12&learn=on)
 
 La vidéo suivante est destinée à vous aider à mieux comprendre l’utilisation des groupes et classes de champ.
 
->[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413606?captions=fre_fr&quality=12&learn=on)
 
 ## Annexe
 

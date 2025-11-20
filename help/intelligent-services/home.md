@@ -22,7 +22,7 @@ Intelligent Services permet aux analystes et spécialistes du marketing d’exp
 
 La vidéo suivante est conçue pour vous aider à comprendre les services intelligents. À lʼaide dʼexemples de cas dʼutilisation opérationnelle, cette vidéo explique un processus de haut niveau et décrit les fonctionnalités de lʼIA dédiée à lʼattribution (Attribution AI) et de lʼIA dédiée aux clients (Customer AI).
 
->[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36549?captions=fre_fr&learn=on&quality=12)
 
 ## Avantages des services intelligents
 

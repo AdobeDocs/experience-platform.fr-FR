@@ -116,7 +116,7 @@ Pour supprimer un utilisateur d’un rôle, sélectionnez l’icône **X** en re
 
 La vidéo suivante est destinée à vous aider à comprendre la création d’un rôle et la gestion des utilisateurs et utilisatrices pour ce rôle.
 
->[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475975/?captions=fre_fr&learn=on)
 
 ## Gérer les informations d’identification d’API pour un rôle {#manage-api-credentials-for-role}
 

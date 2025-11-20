@@ -182,4 +182,4 @@ Pour découvrir les mesures et visualisations préconfigurées disponibles pour 
 
 Pour mieux comprendre les tableaux de bord dans Experience Platform, regardez la vidéo suivante :
 
->[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413781?captions=fre_fr&quality=12&learn=on)
