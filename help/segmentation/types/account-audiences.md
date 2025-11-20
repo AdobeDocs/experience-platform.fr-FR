@@ -1,13 +1,13 @@
 ---
 title: Audiences du compte
 description: Découvrez comment créer et utiliser des audiences de compte pour cibler les profils de compte dans les destinations en aval.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
 source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
-source-wordcount: '1528'
-ht-degree: 22%
+source-wordcount: '1498'
+ht-degree: 23%
 
 ---
 
@@ -23,7 +23,7 @@ Les audiences de compte peuvent être utilisées comme entrée pour les destinat
 
 >[!NOTE]
 >
->Dans le cadre de la mise à niveau de l’architecture B2B, les estimations de taille d’audience pour les audiences avec des entités B2B sont désormais calculées avec une précision exacte. Ces estimations sont disponibles lors de la prévisualisation et fournissent des informations plus précises et plus fiables pour les audiences qui impliquent des relations B2B complexes. <br>Pour plus d’informations, consultez la présentation des mises à niveau de l’architecture de Real-Time CDP B2B edition [&#128279;](../../rtcdp/b2b-architecture-upgrade.md).
+>Dans le cadre de la mise à niveau de l’architecture B2B, les estimations de taille d’audience pour les audiences avec des entités B2B sont désormais calculées avec une précision exacte. Ces estimations sont disponibles lors de la prévisualisation et fournissent des informations plus précises et plus fiables pour les audiences qui impliquent des relations B2B complexes. <br>Pour plus d’informations, consultez la présentation des mises à niveau de l’architecture de Real-Time CDP B2B edition [](../../rtcdp/b2b-architecture-upgrade.md).
 
 ## Terminologie {#terminology}
 
@@ -35,11 +35,11 @@ Avant de commencer à utiliser les audiences de compte, passez en revue les diff
 
 ## Accès {#access}
 
-Pour accéder aux audiences de compte, sélectionnez **[!UICONTROL Audiences]** dans la section **[!UICONTROL Comptes]**.
+Pour accéder aux audiences du compte, sélectionnez **[!UICONTROL Audiences]** dans la section **[!UICONTROL Accounts]** .
 
 ![Le bouton Audiences est mis en surbrillance dans la section Comptes.](../images/types/account/select.png)
 
-La page [!UICONTROL Parcourir] s’affiche, affichant une liste de toutes les audiences de compte pour l’organisation.
+La page [!UICONTROL Browse] s’affiche, affichant une liste de toutes les audiences de compte pour l’organisation.
 
 ![Les audiences de compte appartenant à l’organisation s’affichent.](../images/types/account/browse.png)
 
@@ -53,19 +53,19 @@ Vous pouvez également utiliser la fonctionnalité de recherche et de filtrage p
 >
 >Les audiences de compte sont évaluées à l’aide de la segmentation **par lots** et seront évaluées toutes les 24 heures.
 
-Pour créer une audience de compte, sélectionnez **[!UICONTROL Créer une audience]** sur la page [!UICONTROL Parcourir].
+Pour créer une audience de compte, sélectionnez **[!UICONTROL Create audience]** sur la page de [!UICONTROL Browse].
 
-![Le bouton [!UICONTROL Créer une audience] est mis en surbrillance sur la page de navigation de l’audience du compte.](../images/types/account/select-create-audience.png)
+![Le bouton [!UICONTROL Create audience] est mis en surbrillance sur la page de navigation de l’audience du compte.](../images/types/account/select-create-audience.png)
 
-Le créateur de segments s’affiche. Les attributs de compte et les audiences s’affichent dans la barre de navigation de gauche. Sous l’onglet [!UICONTROL Attributs], vous pouvez ajouter des attributs créés par Experience Platform et des attributs personnalisés.
+Le créateur de segments s’affiche. Les attributs de compte et les audiences s’affichent dans la barre de navigation de gauche. Sous l’onglet [!UICONTROL Attributes] , vous pouvez ajouter des attributs créés par Experience Platform et des attributs personnalisés.
 
 ![Le créateur de segments s’affiche. Notez que seuls les attributs et les audiences s’affichent.](../images/types/account/segment-builder.png)
 
-Lors de la création d’audiences de compte, notez que les événements sont répertoriés sous **[!UICONTROL Personnes]**, plutôt que d’être leur propre onglet, car ces attributs sont associés aux personnes.
+Lors de la création d’audiences de compte, notez que les événements sont répertoriés sous **[!UICONTROL People]**, plutôt que d’être leur propre onglet, car ces attributs sont associés aux personnes.
 
-![L’emplacement pour rechercher des événements, qui se trouve dans le dossier [!UICONTROL Personnes], est mis en surbrillance.](../images/types/account/attributes.png)
+![L’emplacement pour rechercher des événements, qui se trouve dans le dossier [!UICONTROL People], est mis en surbrillance.](../images/types/account/attributes.png)
 
-Sous l’onglet [!UICONTROL Audiences], vous pouvez ajouter des audiences basées sur les personnes créées précédemment à partir de lors de la création de votre propre audience de compte.
+Sous l’onglet [!UICONTROL Audiences] , vous pouvez ajouter des audiences basées sur les personnes créées précédemment à partir desquelles vous pouvez créer votre propre audience de compte.
 
 ![L’onglet Audiences du créateur de segments est mis en surbrillance.](../images/types/account/audiences.png)
 
@@ -79,11 +79,11 @@ Pour utiliser les autres types de relation, sélectionnez ![icône des paramètr
 
 ![L’icône des paramètres est mise en surbrillance dans la section Champs.](../images/types/account/select-settings.png)
 
-Sur l’onglet [!UICONTROL Paramètres], sélectionnez **[!UICONTROL Afficher les sélecteurs de relation]** dans la section **[!UICONTROL Relation des champs]**.
+Dans l’onglet [!UICONTROL Settings] , sélectionnez **[!UICONTROL Show relationship selectors]** dans la section **[!UICONTROL Relationship of fields]** .
 
 ![Le bouton (bascule) Afficher les sélecteurs de relation est sélectionné dans la section Relation des champs de l’onglet Paramètres.](../images/types/account/show-relation-selectors.png)
 
-Sélectionnez à nouveau ![l’icône des paramètres](../../images/icons/settings.png) pour revenir à l’onglet [!UICONTROL Champs]. Vous pouvez maintenant voir la section **[!UICONTROL Établir des relations]**, qui vous permet d’établir comment le compte est connecté à la personne et comment la personne est connectée à l’opportunité.
+Sélectionnez à nouveau ![l’icône des paramètres](../../images/icons/settings.png) pour revenir à l’onglet [!UICONTROL Fields] . Vous pouvez maintenant voir la section **[!UICONTROL Establish relationships]** , qui vous permet d’établir comment le compte est connecté à la personne et comment la personne est connectée à l’opportunité.
 
 ![La section Établir des relations est mise en surbrillance, affichant les options permettant de connecter un compte à une personne et de connecter une personne à une opportunité.](../images/types/account/establish-relationships.png)
 
@@ -112,11 +112,11 @@ Après avoir établi la relation souhaitée, vous pouvez ajouter les personnes-a
 
 Après avoir créé l’audience de votre compte, vous pouvez activer l’audience pour d’autres services en aval.
 
-Sélectionnez l’audience à activer, puis **[!UICONTROL Activer vers la destination]**.
+Sélectionnez l’audience à activer, puis **[!UICONTROL Activate to destination]**.
 
-![Le bouton [!UICONTROL &#x200B; Activer vers la destination] est mis en surbrillance dans le menu des actions rapides pour l’audience sélectionnée.](../images/types/account/activate.png)
+![Le bouton [!UICONTROL Activate to destination] est mis en surbrillance dans le menu des actions rapides pour l’audience sélectionnée.](../images/types/account/activate.png)
 
-La page [!UICONTROL Activer la destination] s’affiche. Pour plus d’informations sur le processus d’activation, y compris les destinations prises en charge et des détails sur les mappages de champs, consultez le tutoriel [activer les audiences de compte](/help/destinations/ui/activate-account-audiences.md).
+La page [!UICONTROL Activate destination] s’affiche. Pour plus d’informations sur le processus d’activation, y compris les destinations prises en charge et des détails sur les mappages de champs, consultez le tutoriel [activer les audiences de compte](/help/destinations/ui/activate-account-audiences.md).
 
 ## Étapes suivantes {#next-steps}
 

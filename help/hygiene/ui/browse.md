@@ -4,8 +4,8 @@ description: Découvrez comment afficher et gérer les ordres de travail de cycl
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 79%
+source-wordcount: '812'
+ht-degree: 65%
 
 ---
 
@@ -23,13 +23,13 @@ Ce guide explique comment afficher et gérer les ordres de travail existants dan
 
 ## Répertorier et filtrer les ordres de travail existants
 
-Lorsque vous accédez pour la première fois à l’espace de travail **[!UICONTROL Cycle de vie des données]** dans l’interface utilisateur, une liste des ordres de travail existants et les détails de base s’affichent.
+Lorsque vous accédez pour la première fois à l’espace de travail **[!UICONTROL Data Lifecycle]** dans l’interface utilisateur, une liste des ordres de travail existants et les détails de base s’affichent.
 
-![Image illustrant l’espace de travail [!UICONTROL &#x200B; Cycle de vie des données &#x200B;] dans l’interface utilisateur d’Experience Platform](../images/ui/browse/work-order-list.png)
+![Image illustrant l’espace de travail [!UICONTROL Data Lifecycle] dans l’interface utilisateur d’Experience Platform](../images/ui/browse/work-order-list.png)
 
-La liste affiche uniquement les ordres de travail d’une catégorie à la fois. Sélectionnez **[!UICONTROL Consommateur]** pour afficher la liste des tâches de suppression d’enregistrements, et **[!UICONTROL Jeu de données]** pour afficher une liste des expirations de jeux de données planifiées.
+La liste affiche uniquement les ordres de travail d’une catégorie à la fois. Sélectionnez **[!UICONTROL Consumer]** pour afficher la liste des tâches de suppression d’enregistrements et **[!UICONTROL Dataset]** pour afficher une liste des expirations de jeux de données planifiées.
 
-![Image illustrant l’onglet [!UICONTROL Jeu de données]](../images/ui/browse/dataset-tab.png).
+![Image illustrant l’onglet [!UICONTROL Dataset]](../images/ui/browse/dataset-tab.png)
 
 Sélectionnez l’icône d’entonnoir (![image de l’icône d’entonnoir](/help/images/icons/filter.png)) pour consulter une liste de filtres pour les ordres de travail affichés.
 
@@ -43,9 +43,9 @@ Les filtres suivants s’appliquent aux requêtes de suppression d’enregistrem
 
 | Filtre | Description |
 | --- | --- |
-| [!UICONTROL Statut] | Filtre basé sur le statut actuel de l’ordre de travail :<ul><li>**[!UICONTROL Terminé]** : le traitement est terminé.</li><li>**[!UICONTROL Échec]** : le traitement a rencontré une erreur et n’a pas pu être terminé.</li><li>**[!UICONTROL Traitement]** : la requête a commencé et est en cours de traitement.</li></ul> |
-| [!UICONTROL Date de création] | Filtre basé sur le moment où l’ordre de travail a été effectué. |
-| [!UICONTROL Date de mise à jour] | Filtrez en fonction de la date de la dernière mise à jour de l’ordre de travail. Les créations sont comptabilisées comme des mises à jour. |
+| [!UICONTROL Status] | Filtre basé sur le statut actuel de l’ordre de travail :<ul><li>**[!UICONTROL Completed]** : le traitement est terminé.</li><li>**[!UICONTROL Failed]** : le traitement a rencontré une erreur et n&#39;a pas pu être terminé.</li><li>**[!UICONTROL Processing]** : la demande a commencé et est en cours de traitement.</li></ul> |
+| [!UICONTROL Date created] | Filtre basé sur le moment où l’ordre de travail a été effectué. |
+| [!UICONTROL Date updated] | Filtrez en fonction de la date de la dernière mise à jour de l’ordre de travail. Les créations sont comptabilisées comme des mises à jour. |
 
 ### Filtres pour l’expiration des jeux de données
 
@@ -53,10 +53,10 @@ Les filtres suivants s’appliquent aux requêtes d’expiration de jeu de donn�
 
 | Filtre | Description |
 | --- | --- |
-| [!UICONTROL Statut] | Filtre basé sur le statut actuel de l’ordre de travail :<ul><li>**[!UICONTROL Terminé]** : le traitement est terminé.</li><li>**[!UICONTROL En attente]** : le traitement a été créé mais n’a pas encore été exécuté. Une [demande relative à l’expiration du jeu de données](./dataset-expiration.md) suppose que ce statut est antérieur à la date de suppression planifiée. Une fois la date de suppression atteinte, le statut est mis à jour vers [!UICONTROL Exécution], sauf si le traitement est annulé au préalable.</li><li>**[!UICONTROL Exécution]** : la demande relative à l’expiration du jeu de données a commencé et est en cours de traitement.</li><li>**[!UICONTROL Annulé]** : le traitement a été annulé dans le cadre d’une demande d’utilisateur manuelle.</li></ul> |
-| [!UICONTROL Date de création] | Filtre basé sur le moment où l’ordre de travail a été effectué. |
-| [!UICONTROL Date d’expiration] | Filtrez les demandes relatives à l’expiration du jeu de données en fonction de la date de suppression planifiée pour le jeu de données en question. |
-| [!UICONTROL Date de mise à jour] | Filtrez en fonction de la date de la dernière mise à jour de l’ordre de travail. Les créations et les expirations sont comptées comme des mises à jour. |
+| [!UICONTROL Status] | Filtre basé sur le statut actuel de l’ordre de travail :<ul><li>**[!UICONTROL Completed]** : le traitement est terminé.</li><li>**[!UICONTROL Pending]** : le traitement a été créé mais n’a pas encore été exécuté. Une [demande relative à l’expiration du jeu de données](./dataset-expiration.md) suppose que ce statut est antérieur à la date de suppression planifiée. Une fois la date de suppression atteinte, le statut est mis à jour vers [!UICONTROL Executing], sauf si le traitement est annulé au préalable.</li><li>**[!UICONTROL Executing]** : la demande d’expiration du jeu de données a commencé et est en cours de traitement.</li><li>**[!UICONTROL Cancelled]** : le traitement a été annulé dans le cadre d’une demande d’utilisateur manuelle.</li></ul> |
+| [!UICONTROL Date created] | Filtre basé sur le moment où l’ordre de travail a été effectué. |
+| [!UICONTROL Expiration date] | Filtrez les demandes relatives à l’expiration du jeu de données en fonction de la date de suppression planifiée pour le jeu de données en question. |
+| [!UICONTROL Date updated] | Filtrez en fonction de la date de la dernière mise à jour de l’ordre de travail. Les créations et les expirations sont comptées comme des mises à jour. |
 
 {style="table-layout:auto"}
 
@@ -75,7 +75,7 @@ Les filtres suivants s’appliquent aux requêtes d’expiration de jeu de donn�
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="Réponse de suppression d&#39;enregistrement"
->abstract="Lorsqu&#39;un processus de suppression d&#39;enregistrement reçoit une réponse du système, ces messages s&#39;affichent sous la section **[!UICONTROL Résultat]**. Si un problème se produit alors qu’un ordre de travail est en cours de traitement, tous les messages d’erreur pertinents s’affichent dans cette section pour vous aider à résoudre le problème. Pour en savoir plus, consultez le guide de l’interface d’utilisation du cycle de vie des données."
+>abstract="Lorsqu&#39;un processus de suppression d&#39;enregistrement reçoit une réponse du système, ces messages s&#39;affichent sous la section **[!UICONTROL Result]** . Si un problème se produit alors qu’un ordre de travail est en cours de traitement, tous les messages d’erreur pertinents s’affichent dans cette section pour vous aider à résoudre le problème. Pour en savoir plus, consultez le guide de l’interface d’utilisation du cycle de vie des données."
 
 Sélectionnez l’identifiant d’un ordre de travail répertorié pour en afficher les détails.
 
@@ -85,7 +85,7 @@ Différentes informations et commandes sont fournies en fonction du type d’ord
 
 ### Détails de suppression des enregistrements {#record-delete}
 
-Les détails d’une demande de suppression d’enregistrement incluent son statut actuel et le temps écoulé depuis que la demande a été effectuée. Chaque requête comprend également une section **[!UICONTROL Statut par service]** qui fournit des détails de statuts individuels sur chaque service en aval impliqué dans la suppression. Sur le rail de droite, vous pouvez utiliser des contrôles pour mettre à jour le nom et la description de l’ordre de travail.
+Les détails d’une demande de suppression d’enregistrement incluent son statut actuel et le temps écoulé depuis que la demande a été effectuée. Chaque requête comprend également une section **[!UICONTROL Status by service]** qui fournit des détails d’état individuels sur chaque service en aval impliqué dans la suppression. Sur le rail de droite, vous pouvez utiliser des contrôles pour mettre à jour le nom et la description de l’ordre de travail.
 
 ![Image illustrant la page de détails d’un ordre de travail de suppression d’enregistrement](../images/ui/browse/record-delete-details.png)
 

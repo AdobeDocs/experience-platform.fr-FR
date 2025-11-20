@@ -6,8 +6,8 @@ description: La gouvernance des données d’Adobe Experience Platform vous pe
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1624'
-ht-degree: 64%
+source-wordcount: '1619'
+ht-degree: 63%
 
 ---
 
@@ -53,7 +53,7 @@ Les spécialistes marketing sont le point de terminaison de la gouvernance des d
 
 ## Cadre de gouvernance des données {#data-governance-framework}
 
-Le cadre de gouvernance des données simplifie et rationalise le processus de catégorisation des données et de création des politiques d’utilisation des données. Une fois les étiquettes de données appliquées et les politiques d’utilisation des données en place, vous pouvez évaluer les actions marketing permettant d’assurer la bonne utilisation des données. 
+Le cadre de gouvernance des données simplifie et rationalise le processus de catégorisation des données et de création des politiques d’utilisation des données. Une fois les libellés de données appliqués et les politiques d’utilisation des données en place, vous pouvez évaluer les actions marketing permettant d’assurer la bonne utilisation des données. 
 
 Le cadre de gouvernance des données comporte trois éléments clés : les libellés, les politiques et l’application. 
 
@@ -70,8 +70,8 @@ Le cadre de gouvernance des données inclut des libellés d’utilisation des do
 ![Les trois catégories de libellés d’utilisation des données.](./images/overview/label-categories.png)
 
 * **Étiquettes de données Contrat « C » :** étiquetez et catégorisez les données soumises à des obligations contractuelles ou associées à des politiques de gouvernance des données clients.
-* **Étiquettes de données Identité « I » :** étiquetez et catégorisez des données pouvant identifier ou contacter une personne en particulier.
-* **Étiquettes de données Sensibles « S » :** étiquetez et catégorisez les données associées aux données sensibles, telles que les données géographiques.
+* **Libellés de données Identité « I » :** étiquetez et catégorisez des données pouvant identifier ou contacter une personne en particulier.
+* **Libellés de données Sensibles « S » :** étiquetez et catégorisez les données associées aux données sensibles, telles que les données géographiques.
 
 >[!NOTE]
 >
@@ -90,8 +90,8 @@ Un exemple d’action marketing peut être le souhait d’exporter un jeu de don
 
 Deux types de politiques sont disponibles :
 
-* **[!UICONTROL Politique de gouvernance des données]** : permet de restreindre l’activation des données en fonction de l’action marketing en cours et des étiquettes d’utilisation des données associées aux données en question.
-* **[!UICONTROL Politique de consentement]** : filtrez les profils pouvant être activés sur [destinations](../destinations/home.md) en fonction du consentement ou des préférences de vos clients.
+* **[!UICONTROL Data governance policy]** : permet de restreindre l’activation des données en fonction de l’action marketing en cours et des libellés d’utilisation des données associés aux données en question.
+* **[!UICONTROL Consent policy]** : filtrez les profils pouvant être activés sur [destinations](../destinations/home.md) en fonction du consentement ou des préférences de vos clients.
 
 Une fois les libellés d’utilisation des données appliqués, les gestionnaires de données peuvent créer des politiques à l’aide de l’API Policy Service ou de l’interface utilisateur d’Experience Platform. Pour plus d’informations sur les politiques d’utilisation des données et les actions marketing, consultez la [présentation des politiques](./policies/overview.md).
 
@@ -121,7 +121,7 @@ Le tableau suivant présente les termes clés liés à la gouvernance des donné
 | **Libellés de jeux de données** | Les libellés peuvent être ajoutés à un schéma. Tous les champs d’un jeu de données héritent des libellés du schéma. |
 | **Libellés de champ** | Les libellés de champ sont des étiquettes de gouvernance des données qui sont héritées d’un schéma ou appliquées directement à un champ. Les étiquettes de gouvernance des données appliquées à un champ ne sont pas héritées jusqu’au niveau du schéma. |
 | **Géobarrière** | Une géobarrière est une limite géographique virtuelle, définie par les technologies GPS ou RFID qui permet à un logiciel de déclencher une réponse lorsqu’un appareil mobile entre ou quitte une zone particulière. |
-| **Étiquettes Identité** | Les étiquettes Identité « I » sont utilisées pour catégoriser des données pouvant identifier ou contacter une personne en particulier. |
+| **Libellés Identité** | Les libellés Identité « I » sont utilisés pour catégoriser des données pouvant identifier ou contacter une personne en particulier. |
 | **Ciblage en fonction des intérêts** | Le ciblage en fonction des intérêts, également appelé personnalisation, se produit si les trois conditions suivantes sont remplies : <br>Les données collectées sur site sont <br><ul><li>Utilisé pour établir des inférences sur les intérêts d’un utilisateur ou d’une utilisatrice,</li><li>Utilisé dans un autre contexte, par exemple sur un autre site ou sur une autre application (hors site)</li><li>Permet de sélectionner le contenu ou les annonces à diffuser en fonction de ces inférences.</li></ul> |
 | **Action marketing** | Dans le cadre de la gouvernance des données, une action marketing est une action entreprise par un utilisateur de données Experience Platform pour laquelle il est nécessaire de vérifier les violations des politiques d’utilisation des données |
 | **Politique** | Dans le cadre de la gouvernance des données, une politique est une règle qui décrit les types d’actions marketing autorisées ou non sur des données spécifiques. |
@@ -132,8 +132,8 @@ Le tableau suivant présente les termes clés liés à la gouvernance des donné
 
 La vidéo suivante a pour but de vous aider à comprendre le cadre de gouvernance des données. 
 
->[!VIDEO](https://video.tv.adobe.com/v/33154?quality=12&enable10seconds=on&speedcontrol=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
 La vidéo suivante explique comment appliquer des libellés d’utilisation des données à vos schémas ou à l’intégralité d’un jeu de données dans Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422795/?learn=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)

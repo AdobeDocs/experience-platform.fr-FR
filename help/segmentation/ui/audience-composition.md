@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: Guide de l’interface utilisateur d’Audiences
-description: La Composition d’audience dans l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail propose des commandes intuitives pour créer et modifier des audiences pour votre organisation.
+description: La composition d’audiences dans l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail propose des commandes intuitives pour créer et modifier des audiences pour votre organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 source-git-commit: 65a3b5b904a9dfc6a2fbc09ab869e5642e088363
 workflow-type: tm+mt
-source-wordcount: '2362'
-ht-degree: 78%
+source-wordcount: '2258'
+ht-degree: 56%
 
 ---
 
-# Guide de l’interface utilisateur de la Composition d’audience
+# Guide de l’interface utilisateur de la composition d’audiences
 
 >[!AVAILABILITY]
 >
@@ -24,15 +24,15 @@ ht-degree: 78%
 
 >[!NOTE]
 >
->Ce guide explique comment créer des audiences à l’aide de la Composition d’audience. Pour savoir comment créer des audiences par le biais de définitions de segment à l’aide du Créateur de segments, veuillez lire le [Guide de l’interface utilisateur du Créateur de segments](./segment-builder.md).
+>Ce guide explique comment créer des audiences à l’aide de la composition d’audiences. Pour savoir comment créer des audiences par le biais de définitions de segment à l’aide du Créateur de segments, veuillez lire le [Guide de l’interface utilisateur du Créateur de segments](./segment-builder.md).
 
-La Composition d’audience offre un espace de travail permettant de créer et de modifier des audiences à l’aide de blocs utilisés pour représenter différentes actions.
+La composition d’audiences offre un espace de travail permettant de créer et de modifier des audiences à l’aide de blocs utilisés pour représenter différentes actions.
 
-![Interface utilisateur de la Composition d’audience.](../images/ui/audience-composition/audience-composition.png)
+![Interface utilisateur de la composition d’audiences.](../images/ui/audience-composition/audience-composition.png)
 
 Pour modifier les détails de la composition, y compris le titre et la description, sélectionnez le bouton ![curseur](/help/images/icons/properties.png).
 
-La fenêtre contextuelle **[!UICONTROL Propriétés de la composition]** s’affiche. Vous pouvez insérer ici des détails sur votre composition, y compris le titre et la description.
+La fenêtre contextuelle **[!UICONTROL Composition properties]** s’affiche. Vous pouvez insérer ici des détails sur votre composition, y compris le titre et la description.
 
 ![La fenêtre contextuelle Propriétés de la composition s’affiche.](../images/ui/audience-composition/composition-properties.png)
 
@@ -40,9 +40,9 @@ La fenêtre contextuelle **[!UICONTROL Propriétés de la composition]** s’aff
 >
 >Si vous ne donnez **pas** à votre composition un titre, elle aura un titre de « Composition » suivi par la date et l’heure de création par défaut. En outre, chaque composition **doit** possède son propre nom unique.
 
-Après avoir mis à jour les détails de votre composition, sélectionnez **[!UICONTROL Enregistrer]** pour confirmer ces mises à jour. La zone de travail de composition de l’audience réapparaît.
+Après avoir mis à jour les détails de votre composition, sélectionnez **[!UICONTROL Save]** pour confirmer ces mises à jour. La zone de travail de composition d’audiences réapparaît.
 
-La zone de travail de composition de l’audience se compose de quatre types de blocs différents : **[[!UICONTROL Audience]](#audience-block)**, **[[!UICONTROL Exclure]](#exclude-block)**, **[[!UICONTROL Classement]](#rank-block)** et **[[!UICONTROL Partage]](#split-block)**.
+Le canevas de composition d’audience se compose de quatre types de blocs différents : **[[!UICONTROL Audience]](#audience-block)**, **[[!UICONTROL Exclude]](#exclude-block)**, **[[!UICONTROL Rank]](#rank-block)** et **[[!UICONTROL Split]](#split-block)**.
 
 ## [!UICONTROL Audience] {#audience-block}
 
@@ -56,9 +56,9 @@ La zone de travail de composition de l’audience se compose de quatre types de
 >title="Types de fusion"
 >abstract="Les types de fusion déterminent le mode de combinaison des sous-audiences sélectionnées. Les valeurs prises en charge sont Union, Intersection et Exclure le chevauchement."
 
-Le type de bloc **[!UICONTROL Audience]** permet d’ajouter les sous-audiences que vous souhaitez utiliser pour composer votre nouvelle audience plus grande. Par défaut, un bloc **[!UICONTROL Audience]** est inclus dans la partie supérieure de la zone de travail de composition.
+Le type de bloc **[!UICONTROL Audience]** permet d’ajouter les sous-audiences que vous souhaitez utiliser pour composer votre nouvelle audience plus grande. Par défaut, un bloc de **[!UICONTROL Audience]** est inclus dans la partie supérieure de la zone de travail de composition.
 
-Lorsque vous sélectionnez le bloc **[!UICONTROL Audience]**, le rail de droite affiche des commandes d’étiquetage de l’audience, d’ajout d’audiences au bloc et de création de règles personnalisées pour le bloc d’audience.
+Lorsque vous sélectionnez le bloc de **[!UICONTROL Audience]**, le rail de droite affiche des commandes pour libeller l’audience, ajouter des audiences au bloc et créer des règles personnalisées pour le bloc d’audience.
 
 >[!NOTE]
 >
@@ -66,9 +66,9 @@ Lorsque vous sélectionnez le bloc **[!UICONTROL Audience]**, le rail de droite 
 
 ![Les détails du bloc Audience s’affichent.](../images/ui/audience-composition/audience-block.png)
 
-### [!UICONTROL Ajouter une audience] {#add-audience}
+### [!UICONTROL Add audience] {#add-audience}
 
-Pour ajouter des audiences au bloc Audience : Sélectionnez **[!UICONTROL Ajouter une audience]**.
+Pour ajouter des audiences au bloc Audience : sélectionnez **[!UICONTROL Add Audience]**.
 
 ![Le bouton Ajouter une audience est mis en surbrillance.](../images/ui/audience-composition/select-add-audience.png)
 
@@ -78,11 +78,11 @@ Pour ajouter des audiences au bloc Audience : Sélectionnez **[!UICONTROL Ajout
 >
 >En outre, seules les audiences **publiées** créées à l’aide du créateur de segments peuvent être utilisées. Les audiences créées à l’aide de la composition de l’audience et les audiences générées en externe ne sont **pas** disponibles.
 
-Une liste d’audiences s’affiche. Sélectionnez les audiences que vous souhaitez inclure, puis **[!UICONTROL Ajouter]** pour les ajouter à votre bloc d’audience.
+Une liste d’audiences s’affiche. Sélectionnez les audiences que vous souhaitez inclure, puis **[!UICONTROL Add]** pour les ajouter à votre bloc d’audience.
 
-![Une liste d’audiences s’affiche. Dans cette boîte de dialogue, vous pouvez sélectionner l’audience à ajouter.](../images/ui/audience-composition/select-audience.png)
+![Une liste d’audiences s’affiche. Vous pouvez sélectionner l’audience à ajouter à partir de cette boîte de dialogue.](../images/ui/audience-composition/select-audience.png)
 
-Les audiences sélectionnées s’affichent maintenant dans le rail de droite lorsque le bloc **[!UICONTROL Audience]** est sélectionné. À partir de là, vous pouvez modifier le type de fusion des audiences combinées.
+Les audiences sélectionnées s’affichent maintenant dans le rail de droite lorsque le bloc de **[!UICONTROL Audience]** est sélectionné. À partir de là, vous pouvez modifier le type de fusion des audiences combinées.
 
 ![Les types de fusion possibles pour les audiences sont mis en surbrillance.](../images/ui/audience-composition/merge-types.png)
 
@@ -90,16 +90,16 @@ Les audiences sélectionnées s’affichent maintenant dans le rail de droite lo
 | ---------- | ----------- |
 | [!UICONTROL Union] | Les audiences sont combinées en une seule audience. Il s’agit de l’équivalent d’une opération OR. |
 | [!UICONTROL Intersection] | Les audiences sont combinées, avec seulement les audiences partagées dans **toutes** celles ajoutées. Il s’agit de l’équivalent d’une opération AND. |
-| [!UICONTROL Exclure le chevauchement] | Les audiences sont combinées, avec seulement les audiences partagées dans **une, mais pas toutes** celles ajoutées. Il s’agit de l’équivalent d’une opération XOR. |
+| [!UICONTROL Exclude overlap] | Les audiences sont combinées, avec seulement les audiences partagées dans **une, mais pas toutes** celles ajoutées. Il s’agit de l’équivalent d’une opération XOR. |
 
-### [!UICONTROL Créer une règle] {#build-rule}
+### [!UICONTROL Build rule] {#build-rule}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_rule_builder"
 >title="Créateur de segments"
 >abstract="Vous pouvez utiliser le créateur de segments pour ajouter une règle personnalisée à votre composition."
 
-Pour ajouter une règle personnalisée au bloc Audience, sélectionnez **[!UICONTROL Créer une règle]**.
+Pour ajouter une règle personnalisée au bloc Audience , sélectionnez **[!UICONTROL Build rule]**.
 
 ![Le bouton Créer une règle est mis en surbrillance.](../images/ui/audience-composition/select-build-rule.png)
 
@@ -107,11 +107,11 @@ Le créateur de segments s’affiche. Vous pouvez utiliser le créateur de segme
 
 ![L’interface utilisateur du créateur de segments s’affiche.](../images/ui/audience-composition/segment-builder.png)
 
-Une fois que vous avez ajouté une règle personnalisée, sélectionnez **[!UICONTROL Enregistrer]** pour ajouter la règle à votre audience.
+Après avoir ajouté une règle personnalisée, sélectionnez **[!UICONTROL Save]** pour ajouter la règle à votre audience.
 
 ![](../images/ui/audience-composition/custom-rule.png)
 
-## [!UICONTROL Exclure] {#exclude-block}
+## [!UICONTROL Exclude] {#exclude-block}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_exclude"
@@ -123,27 +123,27 @@ Une fois que vous avez ajouté une règle personnalisée, sélectionnez **[!UICO
 >title="Type d’exclusion"
 >abstract="Vous pouvez exclure les profils appartenant à une audience spécifique (Exclure par audience) ou exclure les profils en fonction d’un attribut spécifique (Exclure par attribut)."
 
-Le type de bloc **[!UICONTROL Exclure]** permet d’exclure une sous-audience ou des attributs spécifiés de votre nouvelle audience plus grande.
+Le type de bloc **[!UICONTROL Exclude]** vous permet d’exclure une sous-audience ou des attributs spécifiés de votre nouvelle audience plus grande.
 
-Pour ajouter un bloc **[!UICONTROL Exclure]**, sélectionnez l’icône **+**, puis **[!UICONTROL Exclure]**.
+Pour ajouter un bloc de **[!UICONTROL Exclude]**, sélectionnez l’icône **+**, puis **[!UICONTROL Exclude]**.
 
 ![L’option Exclure est sélectionnée.](../images/ui/audience-composition/add-exclude-block.png)
 
-Le bloc **[!UICONTROL Exclure]** est ajouté. Lorsque ce bloc est sélectionné, les détails de l’exclusion apparaissent dans le rail de droite. Le libellé du bloc et le type d’exclusion sont inclus. Vous pouvez exclure [par audience](#exclude-audience) ou [par attribut](#exclude-attribute).
+Le bloc **[!UICONTROL Exclude]** est ajouté. Lorsque ce bloc est sélectionné, les détails de l’exclusion apparaissent dans le rail de droite. Le libellé du bloc et le type d’exclusion sont inclus. Vous pouvez exclure [par audience](#exclude-audience) ou [par attribut](#exclude-attribute).
 
 ![Le bloc Exclure, mettant en surbrillance les deux types d’exclusion disponibles.](../images/ui/audience-composition/exclude.png)
 
 ### Exclure par audience {#exclude-audience}
 
-Si vous excluez par audience, vous pouvez sélectionner l’audience à exclure en sélectionnant **[!UICONTROL Ajouter une audience]**.
+Si vous excluez par audience, vous pouvez sélectionner l’audience à exclure en sélectionnant **[!UICONTROL Add Audience]**.
 
-![Le bouton [!UICONTROL Ajouter une audience] est sélectionné, ce qui vous permet de choisir l’audience que vous souhaitez exclure.](../images/ui/audience-composition/add-excluded-audience.png)
+![Le bouton [!UICONTROL Add audience] est sélectionné, ce qui vous permet de choisir l’audience à exclure.](../images/ui/audience-composition/add-excluded-audience.png)
 
 >[!IMPORTANT]
 >
 >Seules les audiences **publiées** créées à l’aide du créateur de segments peuvent être utilisées. Les audiences créées à l’aide de la composition de l’audience et les audiences générées en externe ne sont **pas** disponibles.
 
-Une liste d’audiences s’affiche. Sélectionnez **[!UICONTROL Ajouter]** pour ajouter l’audience à exclure à votre bloc d’exclusion.
+Une liste d’audiences s’affiche. Sélectionnez **[!UICONTROL Add]** pour ajouter l’audience à exclure à votre bloc d’exclusion.
 
 ![Une liste d’audiences s’affiche. Dans cette boîte de dialogue, vous pouvez sélectionner l’audience à ajouter.](../images/ui/audience-composition/select-audience.png)
 
@@ -154,11 +154,11 @@ Une liste d’audiences s’affiche. Sélectionnez **[!UICONTROL Ajouter]** pour
 >title="Exclure par attribut"
 >abstract="Lorsque vous excluez par attribut, vous pouvez exclure des profils spécifiques de l’affichage dans votre composition en fonction des attributs sélectionnés."
 
-Si vous excluez par attribut, vous pouvez sélectionner les attributs à exclure en sélectionnant l’icône ![filtre](/help/images/icons/project-edit.png) dans la section **[!UICONTROL Règle d’exclusion]**. L’exclusion de l’attribut vous permet d’exclure tout profil contenant cet attribut de l’audience obtenue.
+Si vous excluez par attribut, vous pouvez sélectionner les attributs à exclure en sélectionnant l’icône ![filtre](/help/images/icons/project-edit.png) dans la section **[!UICONTROL Exclusion rule]**. L’exclusion de l’attribut vous permet d’exclure tout profil contenant cet attribut de l’audience obtenue.
 
 ![La section d’attribut est mise en surbrillance, vous indiquant où sélectionner l’attribut à exclure.](../images/ui/audience-composition/exclude-attribute.png)
 
-Une liste d’attributs de profil s’affiche. Sélectionnez le type d’attribut à exclure, puis **[!UICONTROL Sélectionner]** pour l’ajouter à votre bloc d’exclusion.
+Une liste d’attributs de profil s’affiche. Sélectionnez le type d’attribut à exclure, puis **[!UICONTROL Select]** pour l’ajouter à votre bloc d’exclusion.
 
 ![Une liste d’attributs s’affiche.](../images/ui/audience-composition/select-attribute-exclude.png)
 
@@ -166,7 +166,7 @@ Une liste d’attributs de profil s’affiche. Sélectionnez le type d’attribu
 >
 >Lors de l’exclusion par attribut, vous ne pouvez spécifier qu’**une seule valeur** exclure. L’utilisation d’un type de séparateur, tel qu’une virgule ou un point-virgule, entraîne uniquement l’exclusion de cette valeur exacte. Par exemple, la définition de la valeur sur `red, blue` entraîne l’exclusion du terme `red, blue` de l’attribut, mais **pas** l’exclusion du terme `red` ou `blue`.
 
-## [!UICONTROL Enrichir] {#enrich-block}
+## [!UICONTROL Enrich] {#enrich-block}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_enrich"
@@ -192,19 +192,19 @@ Une liste d’attributs de profil s’affiche. Sélectionnez le type d’attribu
 >
 >Pour l’instant, les attributs d’enrichissement peuvent **uniquement** être utilisés dans des scénarios Adobe Journey Optimizer en aval.
 
-Le type de bloc **[!UICONTROL Enrichir]** vous permet d’enrichir votre audience avec des attributs supplémentaires provenant d’un jeu de données. Vous pouvez utiliser ces attributs dans des cas d’utilisation de personnalisation.
+Le type de bloc **[!UICONTROL Enrich]** permet d’enrichir votre audience avec des attributs supplémentaires à partir d’un jeu de données. Vous pouvez utiliser ces attributs dans des cas d’utilisation de personnalisation.
 
-Pour ajouter un bloc **[!UICONTROL Enrichir]**, sélectionnez l’icône **+**, puis **[!UICONTROL Enrichir]**.
+Pour ajouter un bloc de **[!UICONTROL Enrich]**, sélectionnez l’icône **+**, puis **[!UICONTROL Enrich]**.
 
-![Sélection de l’option [!UICONTROL Enrichir].](../images/ui/audience-composition/add-enrich-block.png)
+![L’option [!UICONTROL Enrich] est sélectionnée.](../images/ui/audience-composition/add-enrich-block.png)
 
-Le bloc **[!UICONTROL Enrichir]** est ajouté. Lors de la sélection du bloc, les détails de l’enrichissement apparaissent dans le rail de droite. Le libellé du bloc et le jeu de données d’enrichissement sont indiqués.
+Le bloc **[!UICONTROL Enrich]** est ajouté. Lors de la sélection du bloc, les détails de l’enrichissement apparaissent dans le rail de droite. Le libellé du bloc et le jeu de données d’enrichissement sont indiqués.
 
 Pour sélectionner le jeu de données avec lequel enrichir l’audience, sélectionnez l’icône ![Filtrer](/help/images/icons/project-edit.png).
 
-![Le bouton de filtre est mis en surbrillance. Sélectionnez l’icône pour afficher la fenêtre contextuelle [!UICONTROL Sélectionner un jeu de données].](../images/ui/audience-composition/enrich-select-dataset.png)
+![Le bouton de filtre est mis en surbrillance. En le sélectionnant, vous accédez à la fenêtre contextuelle [!UICONTROL Select dataset] . ](../images/ui/audience-composition/enrich-select-dataset.png)
 
-La fenêtre contextuelle **[!UICONTROL Sélectionner un jeu de données]** s’affiche. Choisissez le jeu de données à enrichir, puis cliquez sur **[!UICONTROL Sélectionner]** pour enrichir le jeu de données.
+La fenêtre contextuelle **[!UICONTROL Select dataset]** s’affiche. Sélectionnez le jeu de données à ajouter pour l’enrichissement, puis **[!UICONTROL Select]** pour ajouter le jeu de données pour l’enrichissement.
 
 ![Sélection du jeu de données souhaité.](../images/ui/audience-composition/select-dataset.png)
 
@@ -216,25 +216,25 @@ La fenêtre contextuelle **[!UICONTROL Sélectionner un jeu de données]** s’a
 >   - Le jeu de données **ne peut pas** être de type d’événement, être généré par le système ou être marqué pour le profil.
 >- La taille du jeu de données **doit** être inférieure ou égale à 1 Go.
 
-La section **[!UICONTROL Critères d’enrichissement]** s’affiche maintenant sur le rail de droite. Dans cette section, vous pouvez sélectionner la **[!UICONTROL clé de jointure source]** et la **[!UICONTROL clé de jointure du jeu de données d’enrichissement]**, qui vous permettent de lier le jeu de données d’enrichissement à l’audience que vous être en train de créer.
+La section **[!UICONTROL Enrichment criteria]** s’affiche désormais sur le rail de droite. Dans cette section, vous pouvez sélectionner les **[!UICONTROL Source join key]** et les **[!UICONTROL Enrichment dataset join key]**, ce qui vous permet de lier le jeu de données d’enrichissement à l’audience que vous essayez de créer.
 
-![La zone [!UICONTROL Critères d’enrichissement] est mise en surbrillance.](../images/ui/audience-composition/enrichment-criteria.png)
+![La zone de [!UICONTROL Enrichment criteria] est mise en surbrillance.](../images/ui/audience-composition/enrichment-criteria.png)
 
-Pour sélectionner la **[!UICONTROL clé de jointure source]**, cliquez sur l’icône ![Filtrer](/help/images/icons/project-edit.png).
+Pour sélectionner le **[!UICONTROL Source join key]**, sélectionnez l’icône ![filtre](/help/images/icons/project-edit.png).
 
-La fenêtre contextuelle de **[!UICONTROL Sélection d’un attribut de profil]** s’affiche. Choisissez l’attribut de profil à utiliser comme clé de jointure source, puis cliquez sur **[!UICONTROL Sélectionner]** pour choisir cet attribut comme clé de jointure source.
+La fenêtre contextuelle **[!UICONTROL Select a profile attribute]** s’affiche. Sélectionnez l’attribut de profil à utiliser comme clé de jointure source, puis **[!UICONTROL Select]** pour choisir cet attribut comme clé de jointure source.
 
 ![L’attribut à utiliser comme clé de jointure source est mis en surbrillance.](../images/ui/audience-composition/select-source-join-key.png)
 
-Pour sélectionner la **[!UICONTROL clé de jointure du jeu de données d’enrichissement]**, cliquez sur l’icône ![Filtrer](/help/images/icons/project-edit.png).
+Pour sélectionner le **[!UICONTROL Enrichment dataset join key]**, sélectionnez l’icône ![filtre](/help/images/icons/project-edit.png).
 
-La fenêtre contextuelle **[!UICONTROL Attributs d’enrichissement]** s’affiche. Choisissez l’attribut à utiliser comme clé de jointure du jeu de données d’enrichissement, puis cliquez sur **[!UICONTROL Sélectionner]** pour choisir cet attribut comme clé de jointure de votre jeu de données d’enrichissement.
+La fenêtre contextuelle **[!UICONTROL Enrichment attributes]** s’affiche. Sélectionnez l’attribut que vous souhaitez utiliser comme clé de jointure du jeu de données d’enrichissement, puis **[!UICONTROL Select]** pour choisir cet attribut comme clé de jointure du jeu de données d’enrichissement.
 
 ![L’attribut à utiliser comme clé de jointure du jeu de données d’enrichissement est mis en surbrillance.](../images/ui/audience-composition/select-enrichment-dataset-join-key.png)
 
-Maintenant que vous avez ajouté vos deux clés de jointure, la section **[!UICONTROL Attributs d’enrichissement]** s’affiche. Vous pouvez maintenant ajouter l’attribut avec lequel vous souhaitez optimiser votre audience. Pour ajouter ces attributs, sélectionnez **[!UICONTROL Ajouter un attribut]**.
+Maintenant que vous avez ajouté vos deux clés de jointure, la section **[!UICONTROL Enrichment attributes]** s&#39;affiche. Vous pouvez maintenant ajouter l’attribut avec lequel vous souhaitez optimiser votre audience. Pour ajouter ces attributs, sélectionnez **[!UICONTROL Add attribute]**.
 
-La fenêtre contextuelle **[!UICONTROL Attributs d’enrichissement]** s’affiche. Vous pouvez sélectionner les attributs du jeu de données pour enrichir votre audience, puis cliquez sur **[!UICONTROL Sélectionner]** pour ajouter les attributs à votre audience.
+La fenêtre contextuelle **[!UICONTROL Enrichment attributes]** s’affiche. Vous pouvez sélectionner les attributs du jeu de données avec lesquels enrichir votre audience, puis **[!UICONTROL Select]** ajouter les attributs à votre audience.
 
 ![Les attributs d’enrichissement à ajouter sont mis en surbrillance.](../images/ui/audience-composition/select-enrichment-attribute.png)
 
@@ -258,7 +258,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ![The audiences that were added as part of the Join are shown.](../images/ui/audience-composition/selected-audiences.png) -->
 
-## [!UICONTROL Classement] {#rank-block}
+## [!UICONTROL Rank] {#rank-block}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_ranking"
@@ -270,9 +270,9 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 >title="Ajouter une limite de profil"
 >abstract="Le bouton (bascule) Ajouter une limite de profil permet de spécifier un nombre maximal de profils à inclure dans le cadre du processus de classement."
 
-Le type de bloc **[!UICONTROL Classement]** permet de classer et de trier les profils en fonction d’un attribut spécifié et d’inclure ces profils classés dans votre composition.
+Le type de bloc **[!UICONTROL Rank]** vous permet de classer et de trier les profils en fonction d’un attribut spécifié et d’inclure ces profils classés dans votre composition.
 
-Pour ajouter un bloc **[!UICONTROL Classement]**, sélectionnez l’icône **+**, puis **[!UICONTROL Classement]**.
+Pour ajouter un bloc de **[!UICONTROL Rank]**, sélectionnez l’icône **+**, puis **[!UICONTROL Rank]**.
 
 ![L’option « Classement » est sélectionnée.](../images/ui/audience-composition/add-rank-block.png)
 
@@ -284,17 +284,17 @@ Pour sélectionner l’attribut par lequel classer les audiences, sélectionnez 
 
 ![L’icône de filtre est mise en surbrillance et indique les éléments à sélectionner pour accéder à l’écran de sélection des attributs de profil.](../images/ui/audience-composition/select-rank-attribute.png)
 
-Une liste d’attributs de profil s’affiche. Dans cette fenêtre contextuelle, vous pouvez sélectionner le type d’attribut selon lequel vous souhaitez classer votre audience. Cliquez sur **[!UICONTROL Sélectionner]** pour l’ajouter à votre bloc de classement. Notez que l’attribut sélectionné peut **uniquement** être composé de chiffres.
+Une liste d’attributs de profil s’affiche. Dans cette fenêtre contextuelle, vous pouvez sélectionner le type d’attribut selon lequel vous souhaitez classer votre audience. Sélectionnez **[!UICONTROL Select]** pour l’ajouter à votre bloc de classement. Notez que l’attribut sélectionné peut **uniquement** être composé de chiffres.
 
 ![Une liste d’attributs s’affiche.](../images/ui/audience-composition/rank-attribute.png)
 
 Après avoir sélectionné l’attribut, vous pouvez sélectionner l’ordre de classement. Il s’agit d’un ordre croissant (du plus bas au plus élevé) ou décroissant (du plus élevé au plus bas).
 
-En outre, vous pouvez limiter le nombre de profils renvoyés en activant le bouton **[!UICONTROL Ajouter une limite de profil]**. Lorsque ce bouton est activé, vous pouvez définir le nombre maximal de profils renvoyés dans le champ **[!UICONTROL Profils inclus]**.
+De plus, vous pouvez limiter le nombre de profils renvoyés en activant le bouton **[!UICONTROL Add profile limit]** . Lorsque ce bouton est activé, vous pouvez définir le nombre maximal de profils renvoyés dans le champ **[!UICONTROL Included profiles]**.
 
 ![Le bouton (bascule) Ajouter une limite de profil est mis en surbrillance, ce qui vous permet de limiter le nombre de profils renvoyés.](../images/ui/audience-composition/add-profile-limit-rank.png)
 
-## [!UICONTROL Fractionner] {#split-block}
+## [!UICONTROL Split] {#split-block}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split"
@@ -313,11 +313,11 @@ En outre, vous pouvez limiter le nombre de profils renvoyés en activant le bout
 
 >[!NOTE]
 >
->Pour utiliser le bloc **[!UICONTROL Fractionner]**, vous **devez** avoir au moins 10 profils dans votre audience.
+>Pour utiliser le bloc de **[!UICONTROL Split]**, vous **devez** avoir au moins 10 profils dans votre audience.
 
-Le type de bloc **[!UICONTROL Fractionner]** vous permet de fractionner votre nouvelle audience en différentes sous-audiences. Vous pouvez fractionner cette audience en fonction d’un pourcentage ou d’un attribut.
+Le type de bloc **[!UICONTROL Split]** permet de diviser votre nouvelle audience en différentes sous-audiences. Vous pouvez fractionner cette audience en fonction d’un pourcentage ou d’un attribut.
 
-Pour ajouter un bloc **[!UICONTROL Fractionner]**, sélectionnez l’icône **+**, puis **[!UICONTROL Fractionner]**.
+Pour ajouter un bloc de **[!UICONTROL Split]**, sélectionnez l’icône **+**, puis **[!UICONTROL Split]**.
 
 ![L’option « Fractionner » est sélectionnée.](../images/ui/audience-composition/add-split-block.png)
 
@@ -345,19 +345,19 @@ Vous pouvez également fournir une identité, ce qui rendrait le partage en fonc
 
 ### Fractionner par attribut {#split-attribute}
 
-Lors du fractionnement par attribut, les audiences sont fractionnées en fonction des attributs fournis. Pour sélectionner l’attribut du fractionnement, sélectionnez le bloc **[!UICONTROL Fractionner]**, puis l’icône de ![filtrage](/help/images/icons/project-edit.png).
+Lors du fractionnement par attribut, les audiences sont fractionnées en fonction des attributs fournis. Pour sélectionner l’attribut du fractionnement, sélectionnez le bloc de **[!UICONTROL Split]**, puis l’icône ![filtre](/help/images/icons/project-edit.png).
 
 ![Le bouton de filtrage est sélectionné et indique comment filtrer par attribut.](../images/ui/audience-composition/split-by-attribute.png)
 
-Une liste d’attributs de profil s’affiche. Sélectionnez le type d’attribut, puis **[!UICONTROL Sélectionner]** pour l’ajouter à votre bloc de fractionnement.
+Une liste d’attributs de profil s’affiche. Sélectionnez le type d’attribut, puis **[!UICONTROL Select]** pour l’ajouter à votre bloc de fractionnement.
 
 ![Une liste d’attributs s’affiche.](../images/ui/audience-composition/select-attribute.png)
 
-Après avoir sélectionné l’attribut, vous pouvez choisir les profils qui appartiendront à une sous-audience en ajoutant les valeurs dans le champ **[!UICONTROL Valeurs]**.
+Après avoir sélectionné l’attribut, vous pouvez choisir les profils qui appartiendront à une sous-audience en ajoutant les valeurs dans le champ **[!UICONTROL Values]** .
 
 ![Les valeurs par lesquelles vous souhaitez fractionner les attributs sont ajoutées.](../images/ui/audience-composition/attribute-split-values.png)
 
-En outre, vous pouvez activer le bouton **[!UICONTROL Autres profils]** pour créer une sous-audience composée de tous les profils non sélectionnés.
+En outre, vous pouvez activer le bouton **[!UICONTROL Other profiles]** pour créer une sous-audience composée de tous les profils non sélectionnés.
 
 ![Le bouton « Autres profils » est mis en surbrillance.](../images/ui/audience-composition/split-other-profiles.png)
 
@@ -372,7 +372,7 @@ En outre, vous pouvez activer le bouton **[!UICONTROL Autres profils]** pour cr�
 >
 >Lors de la publication de la composition de votre audience, notez qu’il peut s’écouler jusqu’à 48 heures avant qu’elle soit évaluée et activée pour une utilisation dans des services en aval tels qu’une destination Real-Time CDP ou un canal Adobe Journey Optimizer.
 
-Après avoir créé votre composition, vous pouvez l’enregistrer et la publier en sélectionnant **[!UICONTROL Publier]**.
+Après avoir créé votre composition, vous pouvez l’enregistrer et la publier en sélectionnant **[!UICONTROL Publish]**.
 
 ![Le bouton Publier est mis en surbrillance et vous montre comment enregistrer et publier votre composition.](../images/ui/audience-composition/publish.png)
 

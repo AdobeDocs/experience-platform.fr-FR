@@ -6,12 +6,12 @@ description: Dans l’interface utilisateur (IU) de Adobe Experience Platform, v
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
 source-git-commit: b7f5f08d5b3632a2d80c39559a5fb5116d9567f8
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1190'
 ht-degree: 2%
 
 ---
 
-# Guide de l’interface utilisateur [!UICONTROL Schéma d’union]
+# Guide de l’interface utilisateur de [!UICONTROL Union schema]
 
 Dans l’interface utilisateur (IU) de Adobe Experience Platform, vous pouvez facilement afficher n’importe quel schéma d’union de votre organisation et prévisualiser les champs, les identités, les relations et les schémas de contribution pour une classe spécifique. Ce guide fournit des informations détaillées sur la manière d’afficher et d’explorer les schémas d’union à l’aide de l’interface utilisateur d’Experience Platform.
 
@@ -40,15 +40,15 @@ L’utilisation des schémas d’union nécessite une compréhension approfondie
 
 ## Affichage des schémas d’union {#view-union-schemas}
 
-Pour accéder aux schémas d’union dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Profils]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Schéma d’union]**. L’onglet [!UICONTROL &#x200B; Schéma d’union &#x200B;] s’ouvre pour afficher le schéma d’union de la classe actuellement sélectionnée.
+Pour accéder aux schémas d’union dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Profiles]** dans le volet de navigation de gauche, puis sélectionnez l’onglet **[!UICONTROL Union Schema]** . L’onglet [!UICONTROL Union Schema] s’ouvre pour afficher le schéma d’union de la classe actuellement sélectionnée.
 
 ![La page Schéma d’union s’affiche, avec l’onglet Profil et Schéma d’union en surbrillance.](../images/union-schema/landing.png)
 
 ## Sélectionner une classe {#select-a-class}
 
-Pour afficher le schéma d’union pour une classe XDM spécifique, sélectionnez la classe dans le menu déroulant **[!UICONTROL Classe]**. Étant donné que toutes les classes n’ont pas de schémas d’union, seules les classes avec des schémas d’union (c’est-à-dire celles dont les schémas ont été activés pour Profile) sont disponibles dans la liste déroulante.
+Pour afficher le schéma d’union pour une classe XDM spécifique, sélectionnez la classe dans la liste déroulante **[!UICONTROL Class]** . Étant donné que toutes les classes n’ont pas de schémas d’union, seules les classes avec des schémas d’union (c’est-à-dire celles dont les schémas ont été activés pour Profile) sont disponibles dans la liste déroulante.
 
-Une fois une classe sélectionnée, le schéma affiché est mis à jour pour refléter le schéma d’union de la classe sélectionnée. Par exemple, vous pouvez sélectionner **[!UICONTROL Profil individuel XDM]** pour afficher le schéma d’union de cette classe.
+Une fois une classe sélectionnée, le schéma affiché est mis à jour pour refléter le schéma d’union de la classe sélectionnée. Par exemple, vous pouvez sélectionner **[!UICONTROL XDM Individual Profile]** pour afficher le schéma d’union de cette classe.
 
 ![Une liste déroulante contenant les classes du schéma d’union est mise en surbrillance.](../images/union-schema/class.png)
 
@@ -70,7 +70,7 @@ Pour plus d’informations sur les jeux de données, notamment sur l’affichage
 
 ## Afficher les schémas de contribution {#view-contributing-schemas}
 
-Vous pouvez également afficher les schémas spécifiques qui contribuent au schéma d’union en sélectionnant **[!UICONTROL Tous les schémas de contribution]** pour développer la liste des schémas. Selon la classe que vous avez sélectionnée et le nombre de schémas créés par votre organisation dans Experience Platform, il peut s’agir d’une liste courte contenant un seul schéma ou d’une liste longue contenant de nombreux schémas.
+Vous pouvez également afficher les schémas spécifiques qui contribuent au schéma d’union en sélectionnant **[!UICONTROL All contributing schemas]** pour développer la liste des schémas. Selon la classe que vous avez sélectionnée et le nombre de schémas créés par votre organisation dans Experience Platform, il peut s’agir d’une liste courte contenant un seul schéma ou d’une liste longue contenant de nombreux schémas.
 
 ![La liste des schémas qui contribuent au schéma d’union est mise en surbrillance.](../images/union-schema/contributing-schemas.png)
 
@@ -80,7 +80,7 @@ La sélection du nom d’un schéma spécifique met en surbrillance les champs d
 
 ## Affichage des identités {#view-identities}
 
-Grâce à l’interface utilisateur, vous pouvez afficher une liste des identités incluses dans le schéma d’union en sélectionnant **[!UICONTROL Identités]** pour développer la liste.
+Grâce à l’interface utilisateur, vous pouvez afficher une liste des identités incluses dans le schéma d’union en sélectionnant **[!UICONTROL Identities]** pour développer la liste.
 
 ![Les identités appartenant au schéma d’union sont mises en surbrillance.](../images/union-schema/identities.png)
 
@@ -88,13 +88,13 @@ Si vous sélectionnez une identité individuelle dans la liste, le schéma affic
 
 Le champ Identité est mis en surbrillance dans le schéma d’union et les détails de l’identité sont affichés dans la partie droite de l’écran. Les détails incluent une liste des schémas contributeurs contenant le champ d’identité et vous pouvez effectuer une analyse en profondeur pour trouver des liens vers les jeux de données liés à ce schéma qui ingèrent des données dans le champ d’identité sélectionné.
 
-![&#x200B; L’identité sélectionnée est mise en surbrillance. Des détails sur l’identité sélectionnée s’affichent dans la barre latérale droite.](../images/union-schema/select-identity.png)
+![ L’identité sélectionnée est mise en surbrillance. Des détails sur l’identité sélectionnée s’affichent dans la barre latérale droite.](../images/union-schema/select-identity.png)
 
 ## Afficher les relations {#view-relationships}
 
 L’interface utilisateur du schéma d’union vous permet également de voir les relations qui ont été définies pour les schémas en fonction de la classe de schéma sélectionnée. La définition d’une relation est un moyen de connecter deux schémas appartenant à différentes classes afin d’obtenir des informations plus complexes sur les données client.
 
-Si des relations ont été établies pour la classe sélectionnée, si vous sélectionnez **[!UICONTROL Relations]**, une liste de champs utilisés pour créer des relations s’affiche. Tous les schémas n’utilisent pas ou n’ont pas besoin que des relations soient définies. Il est donc courant que la section Relations ne contienne aucun champ.
+Si des relations ont été établies pour la classe sélectionnée, la sélection de **[!UICONTROL Relationships]** affiche une liste de champs utilisés pour créer des relations. Tous les schémas n’utilisent pas ou n’ont pas besoin que des relations soient définies. Il est donc courant que la section Relations ne contienne aucun champ.
 
 Pour en savoir plus sur les relations de schéma, y compris sur la manière de les définir à l’aide de l’interface utilisateur, consultez [ce document sur les relations de schéma](../../xdm/tutorials/relationship-ui.md).
 

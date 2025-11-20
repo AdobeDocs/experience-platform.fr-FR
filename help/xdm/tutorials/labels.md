@@ -4,8 +4,8 @@ description: Découvrez comment ajouter des libellés d’utilisation des donné
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 10%
+source-wordcount: '745'
+ht-degree: 11%
 
 ---
 
@@ -38,7 +38,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 Pour commencer à ajouter des libellés, vous devez d’abord [sélectionner un schéma existant à modifier](../ui/resources/schemas.md#edit) ou [créer un schéma](../ui/resources/schemas.md#create) pour afficher sa structure dans l’éditeur de schémas.
 
-Pour modifier les libellés d’un champ individuel, vous pouvez sélectionner le champ dans la zone de travail, puis sélectionner **[!UICONTROL Gérer l’accès]** dans le rail de droite.
+Pour modifier les libellés d’un champ individuel, vous pouvez sélectionner le champ dans la zone de travail, puis sélectionner **[!UICONTROL Manage access]** dans le rail de droite.
 
 >[!IMPORTANT]
 >
@@ -46,17 +46,17 @@ Pour modifier les libellés d’un champ individuel, vous pouvez sélectionner l
 
 ![Sélectionnez un champ dans la zone de travail de l’éditeur de schémas](../images/tutorials/labels/manage-access.png)
 
-Vous pouvez également sélectionner l’onglet **[!UICONTROL Libellés]**, choisir le champ de votre choix dans la liste, puis sélectionner **[!UICONTROL Appliquer l’accès et les libellés de gouvernance des données]** dans le rail de droite.
+Vous pouvez également sélectionner l’onglet **[!UICONTROL Labels]** , choisir le champ de votre choix dans la liste, puis sélectionner **[!UICONTROL Apply Access and Data Governance Labels]** dans le rail de droite.
 
-![Sélectionnez un champ dans l’onglet [!UICONTROL Libellés] &#x200B;](../images/tutorials/labels/select-field-on-labels-tab.png)
+![Sélectionnez un champ dans l’onglet [!UICONTROL Labels]](../images/tutorials/labels/select-field-on-labels-tab.png)
 
-Pour modifier les libellés de l’ensemble du schéma, dans l’onglet **[!UICONTROL Libellés]**, cochez la case située sous l’icône de filtre. Cela sélectionne tous les champs disponibles dans le schéma. Sélectionnez ensuite **[!UICONTROL Appliquer l’accès et les libellés de gouvernance des données]** dans le rail de droite.
+Pour modifier les libellés de l’ensemble du schéma, dans l’onglet **[!UICONTROL Labels]** , cochez la case située sous l’icône de filtre. Cela sélectionne tous les champs disponibles dans le schéma. Sélectionnez ensuite **[!UICONTROL Apply Access and Data Governance Labels]** dans le rail de droite.
 
-![Sélectionnez le nom du schéma dans l’onglet [!UICONTROL &#x200B; Libellés &#x200B;]](../images/tutorials/labels/select-schema-on-labels-tab.png)
+![Sélectionnez le nom du schéma dans l’onglet [!UICONTROL Labels] ](../images/tutorials/labels/select-schema-on-labels-tab.png)
 
 >[!NOTE]
 >
->Un message d’exclusion de responsabilité s’affiche lorsque vous tentez de modifier les libellés d’un schéma ou d’un champ pour la première fois, expliquant comment l’utilisation des libellés affecte les opérations en aval en fonction des politiques de votre entreprise. Sélectionnez **[!UICONTROL Continuer]** pour continuer la modification.
+>Un message d’exclusion de responsabilité s’affiche lorsque vous tentez de modifier les libellés d’un schéma ou d’un champ pour la première fois, expliquant comment l’utilisation des libellés affecte les opérations en aval en fonction des politiques de votre entreprise. Sélectionnez **[!UICONTROL Proceed]** pour continuer la modification.
 >
 >![Clause de non-responsabilité d’utilisation des libellés](../images/tutorials/labels/disclaimer.png)
 
@@ -70,19 +70,19 @@ Une boîte de dialogue s’affiche, vous permettant de modifier les libellés du
 >
 >Si vous modifiez les champs de l’ensemble du schéma, le rail de droite ne répertorie pas les champs applicables et affiche le nom du schéma à la place.
 
-Utilisez la liste affichée pour sélectionner les libellés que vous souhaitez ajouter au schéma ou au champ. À mesure que des libellés sont sélectionnés, la section **[!UICONTROL Libellés appliqués]** se met à jour pour afficher les libellés qui ont été sélectionnés jusqu’à présent.
+Utilisez la liste affichée pour sélectionner les libellés que vous souhaitez ajouter au schéma ou au champ. Lorsque des libellés sont sélectionnés, la section **[!UICONTROL Applied labels]** se met à jour pour afficher les libellés qui ont été sélectionnés jusqu’à présent.
 
 ![La boîte de dialogue Appliquer l’accès et Libellés de gouvernance des données affiche en surbrillance les libellés appliqués.](../images/tutorials/labels/applied-labels.png)
 
-Pour filtrer les libellés affichés par type, sélectionnez la catégorie de votre choix dans le rail de gauche. Pour créer un libellé personnalisé, sélectionnez **[!UICONTROL Créer un libellé]**.
+Pour filtrer les libellés affichés par type, sélectionnez la catégorie de votre choix dans le rail de gauche. Pour créer un libellé personnalisé, sélectionnez **[!UICONTROL Create label]**.
 
 ![La boîte de dialogue Appliquer l’accès et Libellés de gouvernance des données applique un filtre de type libellé et met en surbrillance Créer un libellé.](../images/tutorials/labels/filter-and-create-custom.png)
 
-Une fois que les libellés de votre choix vous conviennent, sélectionnez **[!UICONTROL Enregistrer]** pour les appliquer au champ ou au schéma.
+Une fois que les libellés de votre choix vous conviennent, sélectionnez **[!UICONTROL Save]** pour les appliquer au champ ou au schéma.
 
 ![La boîte de dialogue Appliquer l’accès et Libellés de gouvernance des données avec Enregistrer en surbrillance.](../images/tutorials/labels/save-labels.png)
 
-L’onglet **[!UICONTROL Libellés]** réapparaît, affichant les libellés appliqués pour le schéma.
+L’onglet **[!UICONTROL Labels]** réapparaît, affichant les libellés appliqués pour le schéma.
 
 ![Onglet Libellés de l’espace de travail des schémas avec les libellés du champ appliqué mis en surbrillance.](../images/tutorials/labels/field-labels-added.png)
 

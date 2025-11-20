@@ -5,8 +5,8 @@ type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1864'
-ht-degree: 7%
+source-wordcount: '1710'
+ht-degree: 6%
 
 ---
 
@@ -24,8 +24,8 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
    - [Exécutions de flux de données](../../sources/notifications.md) : les exécutions de flux de données sont les tâches planifiées récurrentes en fonction de la configuration de la fréquence des flux de données sélectionnés.
 - [Segmentation](../../segmentation/home.md) : la segmentation vous permet de créer des audiences à partir de vos données du profil client en temps réel.
    - [Tâches d’activation](../../destinations/ui/activation-overview.md) : une tâche d’activation est utilisée pour activer votre audience vers une destination spécifiée.
-   - [Tâches d’évaluation &#x200B;](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment) : une tâche d’évaluation est un processus asynchrone qui évalue l’audience.
-   - [&#x200B; Tâches d’exportation &#x200B;](../../segmentation/api/export-jobs.md) : une tâche d’exportation est un processus asynchrone utilisé pour conserver les membres de l’audience dans des jeux de données.
+   - [Tâches d’évaluation ](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment) : une tâche d’évaluation est un processus asynchrone qui évalue l’audience.
+   - [ Tâches d’exportation ](../../segmentation/api/export-jobs.md) : une tâche d’exportation est un processus asynchrone utilisé pour conserver les membres de l’audience dans des jeux de données.
 - [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ## Tableau de bord de surveillance des audiences {#monitoring-audiences-dashboard}
@@ -35,11 +35,11 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 >title="Audiences"
 >abstract="La vue des audiences contient des informations sur toutes les audiences de votre organisation, ainsi que des informations supplémentaires sur leurs traitements d’activation et d’évaluation."
 
-Pour accéder au tableau de bord **[!UICONTROL Audiences]**, sélectionnez **[!UICONTROL Surveillance]** dans le volet de navigation de gauche. Une fois sur la page **[!UICONTROL Surveillance]**, sélectionnez la vignette **[!UICONTROL Audiences]**.
+Pour accéder au tableau de bord **[!UICONTROL Audiences]**, sélectionnez **[!UICONTROL Monitoring]** dans le volet de navigation de gauche. Une fois sur la page **[!UICONTROL Monitoring]**, sélectionnez la carte **[!UICONTROL Audiences]** .
 
 ![Carte Audiences. Des informations sur la dernière tâche d’évaluation et la dernière tâche d’exportation s’affichent.](../assets/ui/monitor-audiences/audience-card.png)
 
-Dans le tableau de bord principal **[!UICONTROL Audiences]**, la carte **[!UICONTROL Audiences]** affiche le statut et la date du dernier traitement d’évaluation et du dernier traitement d’exportation.
+Dans le tableau de bord de **[!UICONTROL Audiences]** principal, la carte **[!UICONTROL Audiences]** affiche le statut et la date de la dernière tâche d’évaluation et de la dernière tâche d’exportation.
 
 Le tableau de bord lui-même contient des mesures pour les audiences et les tâches de segmentation. Par défaut, le tableau de bord affiche les mesures d’audience des dernières 24 heures. Pour en savoir plus sur la vue des tâches de segmentation, consultez la section [surveillance des tâches de segmentation](#monitoring-segmentation-jobs-dashboard).
 
@@ -53,18 +53,18 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 
 | Mesure | Description |
 | ------ | ----------- |
-| **[!UICONTROL Nom de l’audience]** | Nom de l’audience. |
-| **[!UICONTROL Type de données]** | Type de données de l’audience. Les valeurs possibles sont les suivantes : **[!UICONTROL Client]**, **[!UICONTROL Compte]** et **[!UICONTROL Prospect]**. Vous pouvez afficher les audiences d’un type de données spécifié à l’aide du filtre [!UICONTROL Type de données] situé au-dessus du ruban de cartes. |
-| **[!UICONTROL Date et heure de la dernière évaluation]** | Date et heure de la dernière exécution de la tâche d’évaluation de l’audience. |
-| **[!UICONTROL Statut de la dernière évaluation]** | Statut de la dernière tâche d’évaluation de l’audience. Les valeurs possibles sont les suivantes : **[!UICONTROL Succès]**, **[!UICONTROL Aucune exécution]** et **[!UICONTROL Échec]**. |
-| **[!UICONTROL Méthode de la dernière évaluation]** | Méthode d’évaluation de l’audience. Étant donné que seule la segmentation par lots est prise en charge, la seule valeur possible est **[!UICONTROL Lot]**. |
-| **[!UICONTROL Profils de la dernière évaluation]** | Nombre de profils évalués dans la dernière tâche d’évaluation de l’audience. |
-| **[!UICONTROL Date et heure de la dernière activation]** | Date et heure de la dernière exécution de la tâche d’activation de l’audience. |
-| **[!UICONTROL Statut de la dernière activation]** | Statut de la dernière tâche d’activation de l’audience. Les valeurs possibles sont les suivantes : **[!UICONTROL Succès]**, **[!UICONTROL Aucune exécution]** et **[!UICONTROL Échec]**. |
-| **[!UICONTROL Identités de la dernière activation]** | Nombre d’identités activées dans la dernière tâche d’activation de l’audience. |
-| **[!UICONTROL Destination de la dernière activation]** | Nom de la destination vers laquelle la dernière tâche d’activation de l’audience a été activée. |
+| **[!UICONTROL Audience name]** | Nom de l’audience. |
+| **[!UICONTROL Data type]** | Type de données de l’audience. Les valeurs possibles sont **[!UICONTROL Customer]**, **[!UICONTROL Account]** et **[!UICONTROL Prospect]**. Vous pouvez afficher les audiences d’un type de données spécifié à l’aide du filtre [!UICONTROL Data type] au-dessus du ruban de cartes. |
+| **[!UICONTROL Last evaluation timestamp]** | Date et heure de la dernière exécution de la tâche d’évaluation de l’audience. |
+| **[!UICONTROL Last evaluation status]** | Statut de la dernière tâche d’évaluation de l’audience. Les valeurs possibles sont **[!UICONTROL Success]**, **[!UICONTROL No runs]** et **[!UICONTROL Failed]**. |
+| **[!UICONTROL Last evaluation method]** | Méthode d’évaluation de l’audience. Étant donné que seule la segmentation par lots est prise en charge, la seule valeur possible est **[!UICONTROL Batch]**. |
+| **[!UICONTROL Last evaluation profiles]** | Nombre de profils évalués dans la dernière tâche d’évaluation de l’audience. |
+| **[!UICONTROL Last activation timestamp]** | Date et heure de la dernière exécution de la tâche d’activation de l’audience. |
+| **[!UICONTROL Last activation status]** | Statut de la dernière tâche d’activation de l’audience. Les valeurs possibles sont **[!UICONTROL Success]**, **[!UICONTROL No runs]** et **[!UICONTROL Failed]**. |
+| **[!UICONTROL Last activation identities]** | Nombre d’identités activées dans la dernière tâche d’activation de l’audience. |
+| **[!UICONTROL Last activation destination]** | Nom de la destination vers laquelle la dernière tâche d’activation de l’audience a été activée. |
 
-Vous pouvez filtrer les résultats pour une audience spécifique et afficher ses tâches de segmentation en sélectionnant l’icône de filtre (![&#x200B; L’icône de filtre .](/help/images/icons/filter-add.png)). Les tâches de segmentation sont triées par ordre chronologique, les tâches de segmentation les plus récentes apparaissant en premier.
+Vous pouvez filtrer les résultats pour une audience spécifique et afficher ses tâches de segmentation en sélectionnant l’icône de filtre (![ L’icône de filtre .](/help/images/icons/filter-add.png)). Les tâches de segmentation sont triées par ordre chronologique, les tâches de segmentation les plus récentes apparaissant en premier.
 
 ![L’icône de filtre est mise en surbrillance. En le sélectionnant, vous pouvez afficher les tâches de segmentation pour l’audience spécifiée.](../assets/ui/monitor-audiences/filter-audience.png)
 
@@ -80,16 +80,16 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 
 | Mesure | Description |
 | ------ | ----------- |
-| **[!UICONTROL Début du traitement]** | Date et heure de début de la tâche de segmentation. |
+| **[!UICONTROL Job start]** | Date et heure de début de la tâche de segmentation. |
 | **[!UICONTROL Type]** | Indique le type de la tâche de segmentation. Les deux types de traitement pris en charge sont les traitements **activation** et **évaluation**. |
-| **[!UICONTROL Traitement terminé]** | Date et heure auxquelles la tâche de segmentation s’est terminée. |
-| **[!UICONTROL Temps de traitement]** | Temps nécessaire à la fin de la tâche de segmentation. |
-| **[!UICONTROL Statut de la tâche]** | Statut de la tâche de segmentation. Les valeurs prises en charge sont **[!UICONTROL Succès]**, **[!UICONTROL En cours]** et **[!UICONTROL Échec]**. |
-| **[!UICONTROL Nombre de profils]** | Nombre de profils que la tâche de segmentation évalue. Chaque utilisateur doit avoir un profil unique. |
-| **[!UICONTROL Identité activée]** | Nombre d’identités activées par la tâche de segmentation. Chaque profil peut avoir plusieurs identités. Par exemple, un profil peut avoir comme identités une adresse e-mail, un numéro de téléphone et un numéro de fidélité. |
-| **[!UICONTROL Nom de la destination]** | Nom de la destination vers laquelle la tâche de segmentation est activée. |
+| **[!UICONTROL Job complete]** | Date et heure auxquelles la tâche de segmentation s’est terminée. |
+| **[!UICONTROL Processing time]** | Temps nécessaire à la fin de la tâche de segmentation. |
+| **[!UICONTROL Job status]** | Statut de la tâche de segmentation. Les valeurs prises en charge sont **[!UICONTROL Success]**, **[!UICONTROL In Progress]** et **[!UICONTROL Failed]**. |
+| **[!UICONTROL Profile count]** | Nombre de profils que la tâche de segmentation évalue. Chaque utilisateur doit avoir un profil unique. |
+| **[!UICONTROL Identity activated]** | Nombre d’identités activées par la tâche de segmentation. Chaque profil peut avoir plusieurs identités. Par exemple, un profil peut avoir comme identités une adresse e-mail, un numéro de téléphone et un numéro de fidélité. |
+| **[!UICONTROL Destination name]** | Nom de la destination vers laquelle la tâche de segmentation est activée. |
 
-Vous pouvez filtrer de manière plus détaillée une tâche de segmentation spécifique et consulter ses détails en sélectionnant l’icône de filtre (![&#x200B; L’icône de filtre .](/help/images/icons/filter.png)). Il existe deux types différents de tâches de segmentation qui peuvent être filtrées : les tâches d’activation et les tâches d’évaluation.
+Vous pouvez filtrer de manière plus détaillée une tâche de segmentation spécifique et consulter ses détails en sélectionnant l’icône de filtre (![ L’icône de filtre .](/help/images/icons/filter.png)). Il existe deux types différents de tâches de segmentation qui peuvent être filtrées : les tâches d’activation et les tâches d’évaluation.
 
 ### Détails du traitement d’activation {#activation-job-details}
 
@@ -101,17 +101,17 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 
 | Mesure | Description |
 | ------ | ----------- |
-| **[!UICONTROL Profils reçus]** | Nombre total de profils reçus dans le flux d’activation. |
-| **[!UICONTROL Identités activées]** | Nombre total d’identités activées avec succès vers la destination, en fonction des profils reçus. |
-| **[!UICONTROL Identités exclues]** | Nombre total d’identités qui ont été exclues de l’activation vers la destination, en fonction des profils reçus. Ces identités peuvent être exclues en raison d’attributs manquants ou de violations du consentement. |
-| **[!UICONTROL Taille des données]** | Taille du flux de données en cours d’activation. |
-| **[!UICONTROL Nombre total de fichiers]** | Nombre total de fichiers activés dans le flux de données. |
-| **[!UICONTROL Statut]** | Statut actuel de la tâche d’activation. |
-| **[!UICONTROL Démarrage de l’exécution du flux de données]** | Date et heure de début de la tâche d’activation. |
-| **[!UICONTROL Fin de l’exécution du flux de données]** | Date et heure auxquelles la tâche d’activation s’est terminée. |
-| **[!UICONTROL ID d’exécution du flux de données]** | Identifiant de la tâche d’activation actuelle. |
-| **[!UICONTROL ID d’organisation IMS]** | Identifiant de l’organisation à laquelle appartient la tâche d’activation. |
-| **[!UICONTROL Nom de la destination]** | Nom de la destination vers laquelle les données sont activées. |
+| **[!UICONTROL Profiles received]** | Nombre total de profils reçus dans le flux d’activation. |
+| **[!UICONTROL Identities activated]** | Nombre total d’identités activées avec succès vers la destination, en fonction des profils reçus. |
+| **[!UICONTROL Identities excluded]** | Nombre total d’identités qui ont été exclues de l’activation vers la destination, en fonction des profils reçus. Ces identités peuvent être exclues en raison d’attributs manquants ou de violations du consentement. |
+| **[!UICONTROL Size of data]** | Taille du flux de données en cours d’activation. |
+| **[!UICONTROL Total files]** | Nombre total de fichiers activés dans le flux de données. |
+| **[!UICONTROL Status]** | Statut actuel de la tâche d’activation. |
+| **[!UICONTROL Dataflow run start]** | Date et heure de début de la tâche d’activation. |
+| **[!UICONTROL Dataflow run end]** | Date et heure auxquelles la tâche d’activation s’est terminée. |
+| **[!UICONTROL Dataflow run ID]** | Identifiant de la tâche d’activation actuelle. |
+| **[!UICONTROL IMS org ID]** | Identifiant de l’organisation à laquelle appartient la tâche d’activation. |
+| **[!UICONTROL Destination name]** | Nom de la destination vers laquelle les données sont activées. |
 
 Sous la section Audiences , vous pouvez voir une liste des audiences qui ont été activées dans le cadre de la tâche d’activation.
 
@@ -121,11 +121,11 @@ Pour la section Audiences , les mesures suivantes sont disponibles :
 
 | Mesure | Description |
 | ------ | ----------- |
-| **[!UICONTROL Nom]** | Nom de l’audience qui a été activée. |
-| **[!UICONTROL Identités activées]** | Nombre total d’identités activées avec succès vers la destination, en fonction des profils reçus. |
-| **[!UICONTROL Identités exclues]** | Nombre total d’identités qui ont été exclues de l’activation vers la destination, en fonction des profils reçus. Ces identités peuvent être exclues en raison d’attributs manquants ou d’une violation du consentement. |
-| **[!UICONTROL Statut de la dernière exécution du flux de données]** | Statut de la dernière tâche d’activation exécutée pour cette audience. |
-| **[!UICONTROL Date de la dernière exécution du flux de données]** | Date et heure de la dernière tâche d’activation exécutée pour cette audience. |
+| **[!UICONTROL Name]** | Nom de l’audience qui a été activée. |
+| **[!UICONTROL Identities activated]** | Nombre total d’identités activées avec succès vers la destination, en fonction des profils reçus. |
+| **[!UICONTROL Identities excluded]** | Nombre total d’identités qui ont été exclues de l’activation vers la destination, en fonction des profils reçus. Ces identités peuvent être exclues en raison d’attributs manquants ou d’une violation du consentement. |
+| **[!UICONTROL Last dataflow run status]** | Statut de la dernière tâche d’activation exécutée pour cette audience. |
+| **[!UICONTROL Last dataflow run date]** | Date et heure de la dernière tâche d’activation exécutée pour cette audience. |
 
 Vous pouvez également afficher des détails sur les erreurs d’exécution du flux de données. Sous la section Erreurs d’exécution du flux de données , vous pouvez afficher à la fois les identités ayant échoué et celles qui ont été exclues. La section Erreurs comprend des détails sur le code d’erreur et le nombre d’identités ayant échoué ou exclues.
 
@@ -141,29 +141,29 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 
 | Mesure | Description |
 | ------ | ----------- |
-| **[!UICONTROL Nombre total de profils]** | Nombre total de profils en cours d’évaluation. |
-| **[!UICONTROL Statut]** | Statut de la tâche d’évaluation. Les statuts possibles de la tâche d’évaluation sont **[!UICONTROL Succès]** et **[!UICONTROL Échec]**. |
-| **[!UICONTROL Début du traitement]** | Date et heure de début de la tâche d’évaluation. |
-| **[!UICONTROL Fin de la tâche]** | Date et heure de fin de la tâche d’évaluation. |
-| **[!UICONTROL Type de traitement]** | Type de tâche de segmentation. Dans ce cas, il s’agira toujours d’une tâche d’**[!UICONTROL évaluation de segment]**. |
-| **[!UICONTROL Type d’évaluation]** | Le type d&#39;évaluation qui est en cours. Il peut s’agir de **[!UICONTROL Lot]** ou **[!UICONTROL Diffusion en continu]**. |
-| **[!UICONTROL Identifiant de tâche]** | Identifiant de la tâche d’évaluation. |
-| **[!UICONTROL ID d’organisation IMS]** | Identifiant de l’organisation à laquelle appartient la tâche d’évaluation. |
-| **[!UICONTROL Nom de l’audience]** | Nom de l’audience en cours d’évaluation. |
-| **[!UICONTROL ID de l’audience]** | Identifiant de l’audience en cours d’évaluation. |
+| **[!UICONTROL Total profiles]** | Nombre total de profils en cours d’évaluation. |
+| **[!UICONTROL Status]** | Statut de la tâche d’évaluation. Les statuts possibles de la tâche d’évaluation sont **[!UICONTROL Success]** et **[!UICONTROL Failed]**. |
+| **[!UICONTROL Job start]** | Date et heure de début de la tâche d’évaluation. |
+| **[!UICONTROL Job end]** | Date et heure de fin de la tâche d’évaluation. |
+| **[!UICONTROL Job type]** | Type de tâche de segmentation. Dans ce cas, il s&#39;agira toujours d&#39;un travail **[!UICONTROL Segment evaluation]**. |
+| **[!UICONTROL Evaluation type]** | Le type d&#39;évaluation qui est en cours. Il peut s’agir de **[!UICONTROL Batch]** ou de **[!UICONTROL Streaming]**. |
+| **[!UICONTROL Job ID]** | Identifiant de la tâche d’évaluation. |
+| **[!UICONTROL IMS org ID]** | Identifiant de l’organisation à laquelle appartient la tâche d’évaluation. |
+| **[!UICONTROL Audience name]** | Nom de l’audience en cours d’évaluation. |
+| **[!UICONTROL Audience ID]** | Identifiant de l’audience en cours d’évaluation. |
 
-Sous la section [!UICONTROL Audiences], vous pouvez voir une liste des audiences qui sont évaluées dans le cadre de la tâche d’évaluation. Vous pouvez filtrer la liste des audiences par nom à l’aide de la barre de recherche.
+Sous la section [!UICONTROL Audiences] , vous pouvez voir une liste des audiences qui sont évaluées dans le cadre de la tâche d’évaluation. Vous pouvez filtrer la liste des audiences par nom à l’aide de la barre de recherche.
 
 >[!IMPORTANT]
 >
 >Cette vue de tableau de bord prend actuellement en charge jusqu’à 800 mesures d’audience.
 
-Pour la section [!UICONTROL Audiences], les mesures suivantes sont disponibles :
+Pour la section [!UICONTROL Audiences] , les mesures suivantes sont disponibles :
 
 | Mesure | Description |
 | ------ | ----------- |
-| **[!UICONTROL Nom]** | Nom de l’audience en cours d’évaluation. |
-| **[!UICONTROL Nombre de profils]** | Nombre de profils en cours d’évaluation. |
+| **[!UICONTROL Name]** | Nom de l’audience en cours d’évaluation. |
+| **[!UICONTROL Profile count]** | Nombre de profils en cours d’évaluation. |
 
 ## Tableau de bord de surveillance des traitements de segmentation {#monitoring-segmentation-jobs-dashboard}
 
@@ -172,7 +172,7 @@ Pour la section [!UICONTROL Audiences], les mesures suivantes sont disponibles :
 >title="Traitements de segmentation"
 >abstract="La vue des traitements de segmentation contient des informations sur les traitements d’évaluation et d’export pour toutes vos audiences."
 
-Pour accéder au tableau de bord **[!UICONTROL Tâches de segmentation]**, sélectionnez **[!UICONTROL Tâches de segmentation]** dans le tableau de bord [!UICONTROL Audiences]. Le tableau de bord [!UICONTROL Surveillance] contient des mesures et des informations sur les tâches d’évaluation et d’exportation.
+Pour accéder au tableau de bord des **[!UICONTROL Segmentation Jobs]**, sélectionnez **[!UICONTROL Segmentation jobs]** dans le tableau de bord des [!UICONTROL Audiences]. Le tableau de bord [!UICONTROL Monitoring] contient des mesures et des informations sur les tâches d’évaluation et d’exportation.
 
 >[!NOTE]
 >
@@ -180,14 +180,14 @@ Pour accéder au tableau de bord **[!UICONTROL Tâches de segmentation]**, séle
 
 ![Le tableau de bord de surveillance des tâches de segmentation s’affiche. Le bouton (bascule) permettant de basculer entre les tâches Audiences et Segmentation est mis en surbrillance.](../assets/ui/monitor-audiences/segmentation-jobs-dashboard.png)
 
-Utilisez le tableau de bord [!UICONTROL Tâches de segmentation] pour comprendre si l’évaluation et l’exportation des profils se produisent à temps et sans exception, de sorte que les services en aval pour l’activation de destination puissent disposer des données de profil évaluées les plus récentes.
+Utilisez le tableau de bord [!UICONTROL Segmentation Jobs] pour comprendre si l’évaluation et l’exportation des profils se produisent à temps et sans exception, de sorte que les services en aval pour l’activation de destination puissent disposer des dernières données de profil évaluées.
 
 Les mesures suivantes sont disponibles pour les tâches de segmentation :
 
 | Mesure | Description |
 | ------ | ----------- |
-| **[!UICONTROL Traitement de segmentation]** | Indique le nom de la tâche de segmentation. |
+| **[!UICONTROL Segmentation job]** | Indique le nom de la tâche de segmentation. |
 | **[!UICONTROL Type]** | Indique le type de tâche de segmentation : exportation ou évaluation. Notez que dans les deux cas, la tâche de segmentation évalue ou exporte **toutes** les audiences appartenant à une organisation. Pour en savoir plus sur les tâches d’exportation, consultez le guide sur le point d’entrée [tâches d’exportation](../../segmentation/api/export-jobs.md). Pour en savoir plus sur les tâches d’évaluation, consultez le tutoriel sur [l’évaluation d’une définition de segment](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment). |
-| **[!UICONTROL Début du traitement]** | Date et heure de début de la tâche de segmentation. |
-| **[!UICONTROL Fin de la tâche]** | Date et heure auxquelles la tâche de segmentation s’est terminée. |
-| **[!UICONTROL Statut]** | Statut de la tâche terminée. Les statuts possibles de la tâche de segmentation sont Succès ou Échec. |
+| **[!UICONTROL Job start]** | Date et heure de début de la tâche de segmentation. |
+| **[!UICONTROL Job end]** | Date et heure auxquelles la tâche de segmentation s’est terminée. |
+| **[!UICONTROL Status]** | Statut de la tâche terminée. Les statuts possibles de la tâche de segmentation sont Succès ou Échec. |

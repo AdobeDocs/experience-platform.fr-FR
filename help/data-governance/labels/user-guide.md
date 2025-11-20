@@ -6,8 +6,8 @@ description: Ce guide détaille la procédure d’utilisation des libellés d’
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1552'
-ht-degree: 90%
+source-wordcount: '1495'
+ht-degree: 71%
 
 ---
 
@@ -22,9 +22,9 @@ Ce guide d’utilisation détaille la procédure d’utilisation des libellés d
 
 ## Gérer les libellés {#manage-labels}
 
-Pour appliquer des libellés à vos données, vous devez obtenir l’autorisation de **[!UICONTROL gestion des libellés d’utilisation]** afin de les utiliser sur le sandbox de production par défaut appelé « prod ». Pour créer un libellé personnalisé, vous devez également disposer de droits d’administration sur le profil de produit. Chaque organisation ne dispose que d’une seule liste de libellés applicables. Vous **ne pouvez pas** supprimer les libellés. Vous pouvez plutôt les supprimer des jeux de données ou des champs auxquels ils sont appliqués.
+Pour appliquer des libellés à vos données, vous avez besoin de l’autorisation **[!UICONTROL Manage Usage Labels]** pour les utiliser sur le sandbox de production par défaut appelé « prod ». Pour créer un libellé personnalisé, vous devez également disposer de droits d’administration sur le profil de produit. Chaque organisation ne dispose que d’une seule liste de libellés applicables. Vous **ne pouvez pas** supprimer les libellés. Vous pouvez plutôt les supprimer des jeux de données ou des champs auxquels ils sont appliqués.
 
-Veuillez consulter le guide sur la façon de [configurer des autorisations](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=fr) ou la [vue d’ensemble du contrôle d’accès](../../access-control/home.md) pour plus d’informations sur l’attribution d’une autorisation. Si vous n’avez pas accès à Admin Console de votre organisation, contactez l’administrateur ou l’administratrice de cette dernière.
+Veuillez consulter le guide sur la façon de [configurer des autorisations](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) ou la [vue d’ensemble du contrôle d’accès](../../access-control/home.md) pour plus d’informations sur l’attribution d’une autorisation. Si vous n’avez pas accès à Admin Console de votre organisation, contactez l’administrateur ou l’administratrice de cette dernière.
 
 ## Gérer les libellés au niveau du schéma
 
@@ -36,9 +36,9 @@ Vous pouvez ajouter des libellés directement à un schéma ou à des champs de 
 >
 >![Boîte de dialogue Non-respect des règles de gouvernance des données détecté avec le résumé des violations et le diagramme de traçabilité des données en surbrillance.](../images/labels/policy-violation-dialog.png)
 >
->Pour plus d’informations sur les violations de politique[&#128279;](../enforcement/auto-enforcement.md#data-usage-violation) consultez la  documentation sur les violations de politique d’utilisation des données .
+>Pour plus d’informations sur les violations de politique[ consultez la ](../enforcement/auto-enforcement.md#data-usage-violation) documentation sur les violations de politique d’utilisation des données .
 
-Pour gérer les libellés d’utilisation des données au niveau du schéma, vous devez sélectionner un schéma existant ou en créer un nouveau. Après votre connexion à Adobe Experience Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche pour ouvrir l’espace de travail **[!UICONTROL Schémas]**. Cette page répertorie tous les schémas créés appartenant à votre organisation, ainsi que des détails utiles relatifs à chaque schéma.
+Pour gérer les libellés d’utilisation des données au niveau du schéma, vous devez sélectionner un schéma existant ou en créer un nouveau. Après vous être connecté à Adobe Experience Platform, sélectionnez **[!UICONTROL Schemas]** dans le volet de navigation de gauche pour ouvrir l’espace de travail **[!UICONTROL Schemas]**. Cette page répertorie tous les schémas créés appartenant à votre organisation, ainsi que des détails utiles relatifs à chaque schéma.
 
 ![Interface utilisateur d’Adobe Experience Platform avec l’onglet Schéma en surbrillance.](../images/labels/schema-tab.png)
 
@@ -46,13 +46,13 @@ La section suivante décrit les étapes à suivre pour créer un schéma auquel 
 
 ### Créer un schéma
 
-Pour créer un nouveau schéma, sélectionnez **[!UICONTROL Créer un schéma]** dans le coin supérieur droit de l’espace de travail **[!UICONTROL Schémas]**. Veuillez consulter le guide sur [comment créer un schéma à l’aide de l’éditeur de schémas](../../xdm/tutorials/create-schema-ui.md#create) pour obtenir des instructions complètes. Vous pouvez également [créer un schéma à l’aide de l’API Schema Registry](../../xdm/tutorials/create-schema-api.md) si nécessaire.
+Pour créer un schéma, sélectionnez **[!UICONTROL Create schema]** dans le coin supérieur droit de l’espace de travail **[!UICONTROL Schemas]**. Veuillez consulter le guide sur [comment créer un schéma à l’aide de l’éditeur de schémas](../../xdm/tutorials/create-schema-ui.md#create) pour obtenir des instructions complètes. Vous pouvez également [créer un schéma à l’aide de l’API Schema Registry](../../xdm/tutorials/create-schema-api.md) si nécessaire.
 
 ### Ajouter des libellés d’utilisation des données à un schéma {#add-labels-to-schema}
 
-Après avoir créé un nouveau schéma ou sélectionné un schéma existant dans la liste de l’onglet [!UICONTROL Parcourir] de l’espace de travail [!UICONTROL Schémas], sélectionnez un champ de votre schéma dans l’éditeur de schémas. Dans la barre latérale [!UICONTROL Propriétés du champ], sélectionnez **[!UICONTROL Appliquer l’accès et les libellés de gouvernance des données]**.
+Après avoir créé un nouveau schéma ou sélectionné un schéma existant dans la liste de l’onglet [!UICONTROL Browse] de l’espace de travail [!UICONTROL Schemas] , sélectionnez un champ de votre schéma dans l’éditeur de schémas. Dans la barre latérale [!UICONTROL Field properties], sélectionnez **[!UICONTROL Apply Access and Data Governance Labels]**.
 
-![L’onglet Structure de l’espace de travail Schémas affiche la visualisation de votre schéma avec Appliquer l’accès et les libellés de gouvernance des données en surbrillance.](../images/labels/schema-label-governance.png)
+![L’onglet Structure de l’espace de travail Schémas affiche la visualisation de votre schéma avec Appliquer l’accès et les étiquettes de gouvernance des données en surbrillance.](../images/labels/schema-label-governance.png)
 
 Une boîte de dialogue s’affiche, vous permettant d’appliquer et de gérer des libellés d’utilisation des données au niveau du schéma et du champ. Veuillez consulter le tutoriel XDM pour obtenir des instructions complètes sur [comment ajouter ou modifier des libellés d’utilisation des données pour les schémas XDM](../../xdm/tutorials/labels.md#select-schema-field).
 
@@ -67,21 +67,21 @@ Une boîte de dialogue s’affiche, vous permettant d’appliquer et de gérer d
 >
 >Les libellés ne peuvent plus être appliqués aux champs au niveau du jeu de données. Ce workflow a été abandonné au profit de l’application des libellés au niveau du schéma. Les libellés précédemment appliqués au niveau de l’objet du jeu de données seront toujours pris en charge par l’interface utilisateur d’Experience Platform jusqu’au 31 mai 2024. Pour garantir la cohérence de vos libellés sur tous les schémas, les libellés précédemment attachés aux champs au niveau du jeu de données doivent être migrés au niveau du schéma par vous-même au cours de l’année à venir. Consultez la documentation pour obtenir des instructions sur la [Migration des libellés précédemment appliqués du jeu de données au niveau du schéma](../e2e.md#migrate-labels).
 
-Pour appliquer des libellés à l’ensemble du jeu de données, accédez à l’onglet **[!UICONTROL Gouvernance des données]** de l’espace de travail **[!UICONTROL Jeux de données]**. L’espace de travail vous permet de gérer les libellés d’utilisation des données au niveau du jeu de données.
+Les libellés peuvent être appliqués à l’ensemble du jeu de données à partir de l’onglet **[!UICONTROL Data Governance]** de l’espace de travail **[!UICONTROL Datasets]** . L’espace de travail vous permet de gérer les libellés d’utilisation des données au niveau du jeu de données.
 
-![L’onglet [!UICONTROL Gouvernance des données] de l’espace de travail [!UICONTROL Jeux de données] avec la gouvernance des données en surbrillance.](../images/labels/dataset-governance.png)
+![Onglet [!UICONTROL Data Governance] de l’espace de travail [!UICONTROL Datasets] avec Gouvernance des données en surbrillance.](../images/labels/dataset-governance.png)
 
 Pour modifier les libellés d’utilisation des données au niveau du jeu de données, commencez par sélectionner l’icône en forme de crayon (![une icône en forme de crayon.](/help/images/icons/edit.png)) dans la ligne du nom du jeu de données.
 
-![L’onglet [!UICONTROL Gouvernance des données] de l’espace de travail [!UICONTROL Jeux de données] affiche l’icône de modification en forme de crayon en surbrillance.](../images/labels/dataset-level-edit.png)
+![Onglet [!UICONTROL Data Governance] de l’espace de travail [!UICONTROL Datasets] avec l’icône de modification en forme de crayon en surbrillance.](../images/labels/dataset-level-edit.png)
 
-La boîte de dialogue **[!UICONTROL Modifier les libellés de gouvernance]** s’ouvre. Dans la boîte de dialogue, cochez les cases en regard des libellés que vous souhaitez appliquer au jeu de données. Souvenez-vous que ces libellés seront hérités par tous les champs du jeu de données. L’en-tête **[!UICONTROL Libellés appliqués]** est mis à jour lorsque vous cochez chaque case, affichant les libellés que vous avez choisis. Une fois que vous avez sélectionné les libellés de votre choix, cliquez sur **[!UICONTROL Enregistrer les modifications]**.
+La boîte de dialogue **[!UICONTROL Edit Governance Labels]** s’ouvre. Dans la boîte de dialogue, cochez les cases en regard des libellés que vous souhaitez appliquer au jeu de données. Souvenez-vous que ces libellés seront hérités par tous les champs du jeu de données. L’en-tête **[!UICONTROL Applied Labels]** est mis à jour au fur et à mesure que vous cochez chaque case, affichant les libellés que vous avez choisis. Une fois que vous avez sélectionné les libellés de votre choix, sélectionnez **[!UICONTROL Save Changes]**.
 
 ![La boîte de dialogue Modifier les libellés de gouvernance affiche les cases à cocher des libellés et Enregistrer les modifications en surbrillance.](../images/labels/apply-labels-dataset.png)
 
-L’espace de travail **[!UICONTROL Gouvernance des données]** s’affiche à nouveau et montre les libellés que vous avez appliqués au niveau du jeu de données dans la ligne initiale du tableau. Vous pouvez également voir les libellés, indiqués par des cartes individuelles, hérités de chacun des champs du jeu de données.
+L’espace de travail **[!UICONTROL Data Governance]** réapparaît, affichant les libellés que vous avez appliqués au niveau du jeu de données dans la ligne initiale du tableau. Vous pouvez également voir les libellés, indiqués par des cartes individuelles, hérités de chacun des champs du jeu de données.
 
-![L’onglet [!UICONTROL Gouvernance des données] de l’espace de travail [!UICONTROL Jeux de données] affiche en surbrillance les libellés appliqués au niveau du jeu de données et les libellés des champs de jeu de données hérités.](../images/labels/applied-dataset-labels.png)
+![Onglet [!UICONTROL Data Governance] de l’espace de travail [!UICONTROL Datasets] avec les libellés appliqués au niveau du jeu de données et les libellés hérités des champs du jeu de données mis en surbrillance.](../images/labels/applied-dataset-labels.png)
 
 ### Suppression des libellés dʼun jeu de données {#remove-labels-from-a-dataset}
 
@@ -101,7 +101,7 @@ The inherited labels beside each field do not have an "x" next to them and appea
 
 <!--Beleive can cut above here  -->
 
-Le bouton (bascule) **[!UICONTROL Afficher les libellés hérités]** est activé par défaut, ce qui vous permet de voir les libellés hérités du shéma aux champs. Si vous désactivez cette option, les libellés hérités du jeu de données sont masqués.
+Le bouton (bascule) **[!UICONTROL Show Inherited Labels]** est activé par défaut, ce qui vous permet de voir les libellés hérités du schéma à ses champs. Si vous désactivez cette option, les libellés hérités du jeu de données sont masqués.
 
 ![L’onglet Gouvernance des données de l’espace de travail des jeux de données affiche en surbrillance le bouton (bascule) Afficher les libellés hérités.](../images/labels/inherited-labels.png)
 
@@ -122,27 +122,27 @@ Le bouton (bascule) **[!UICONTROL Afficher les libellés hérités]** est activ�
 >title="Créer des libellés"
 >abstract="Les libellés vous permettent de classer les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Experience Platform fournit un ensemble standard de libellés que vous pouvez utiliser, mais vous pouvez également créer des libellés personnalisés spécifiques à votre organisation."
 
-Vous pouvez créer vos propres libellés d’utilisation personnalisés dans l’espace de travail **[!UICONTROL Politiques]** de l’interface utilisateur [!DNL Experience Platform]. Sélectionnez **[!UICONTROL Politiques]** dans le volet de navigation de gauche, puis cliquez sur **[!UICONTROL Libellés]** pour afficher une liste des libellés existants. À partir de là, cliquez sur **[!UICONTROL Créer un libellé]**.
+Vous pouvez créer vos propres libellés d’utilisation personnalisés dans l’espace de travail **[!UICONTROL Policies]** de l’interface utilisateur de [!DNL Experience Platform]. Sélectionnez **[!UICONTROL Policies]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Labels]** pour afficher une liste des libellés existants. À partir de là, sélectionnez **[!UICONTROL Create label]**.
 
 ![L’espace de travail Politiques affiche en surbrillance l’option de création d’une politique.](../images/labels/create-label-btn.png)
 
-La boîte de dialogue **[!UICONTROL Créer un libellé]** apparaît. À partir de là, renseignez les informations suivantes pour le nouveau libellé :
+La boîte de dialogue **[!UICONTROL Create label]** s’affiche. À partir de là, renseignez les informations suivantes pour le nouveau libellé :
 
-* **[!UICONTROL Identifiant]** : un identifiant unique pour ce libellé. Cette valeur est utilisée à des fins de recherche et doit donc être courte et concise.
-* **[!UICONTROL Nom convivial]** : un nom d’affichage convivial pour ce libellé.
-* **[!UICONTROL Description]** : une description permettant de fournir davantage de contexte pour ce libellé (facultative).
+* **[!UICONTROL Name]** : identifiant unique du libellé. Cette valeur est utilisée à des fins de recherche et doit donc être courte et concise.
+* **[!UICONTROL Friendly name]** : un nom d’affichage convivial pour ce libellé.
+* **[!UICONTROL Description]** : (facultatif) description du libellé pour fournir un contexte supplémentaire.
 
-Lorsque vous avez terminé, cliquez sur **[!UICONTROL Créer]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Create]**.
 
 ![La boîte de dialogue Créer un libellé de l’espace de travail Politiques est mise en surbrillance.](../images/labels/create-label-dialog.png)
 
-La boîte de dialogue se ferme et le nouveau libellé personnalisé apparaît dans la liste, sous l’onglet **[!UICONTROL Libellés]**.
+La boîte de dialogue se ferme et le nouveau libellé personnalisé apparaît dans la liste, sous l’onglet **[!UICONTROL Labels]** .
 
 ![L’onglet Libellés de l’espace de travail Politiques affiche en surbrillance le nouveau libellé personnalisé.](../images/labels/label-created.png)
 
-Le libellé peut désormais être sélectionné sous **[!UICONTROL Libellés personnalisés]** lors de la modification des libellés d’utilisation des jeux de données et des champs ou lors de la création de politiques d’utilisation des données.
+Le libellé peut désormais être sélectionné sous **[!UICONTROL Custom Labels]** lors de la modification des libellés d’utilisation des jeux de données et des champs ou lors de la création de politiques d’utilisation des données.
 
-![La boîte de dialogue Appliquer l’accès et Libellés de gouvernance des données affiche en surbrillance les libellés personnalisés.](../images/labels/add-custom-label.png)
+![La boîte de dialogue Appliquer l’accès et les étiquettes de gouvernance des données affiche en surbrillance les étiquettes personnalisées.](../images/labels/add-custom-label.png)
 
 ## Étapes suivantes
 
@@ -156,4 +156,4 @@ Désormais, vous pouvez également définir des politiques d’utilisation des d
 
 The following video is intended to support your understanding of Data Governance, and outlines how to apply labels to a dataset and individual fields.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422795?quality=12&enable10seconds=on&speedcontrol=on&captions=fre_fr) -->
+>[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on) -->

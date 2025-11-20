@@ -7,8 +7,8 @@ description: Découvrez comment créer et modifier des types de données dans l�
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1387'
-ht-degree: 6%
+source-wordcount: '1333'
+ht-degree: 7%
 
 ---
 
@@ -37,9 +37,9 @@ Bien que cela ne soit pas obligatoire pour ce guide, il est recommandé de suivr
 
 ## Ouvrir le [!DNL Schema Editor] pour un type de données {#data-type}
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche pour ouvrir l’espace de travail [!UICONTROL Schémas], puis sélectionnez l’onglet **[!UICONTROL Types de données]**. Une liste des types de données disponibles s’affiche. La liste des types de données est automatiquement filtrée en fonction de leur création. Le paramètre par défaut affiche les types de données définis par Adobe. Vous pouvez également filtrer la liste pour afficher celles créées par votre organisation.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Schemas]** dans le volet de navigation de gauche pour ouvrir l’espace de travail [!UICONTROL Schemas], puis sélectionnez l’onglet **[!UICONTROL Data types]** . Une liste des types de données disponibles s’affiche. La liste des types de données est automatiquement filtrée en fonction de leur création. Le paramètre par défaut affiche les types de données définis par Adobe. Vous pouvez également filtrer la liste pour afficher celles créées par votre organisation.
 
-![L’espace de travail [!UICONTROL Schémas] avec [!UICONTROL Schémas] en surbrillance dans le volet de navigation de gauche et [!UICONTROL Types de données].](../../images/ui/resources/data-types/data-types-tab.png)
+![Espace de travail [!UICONTROL Schemas] avec [!UICONTROL Schemas] dans le volet de navigation de gauche et [!UICONTROL Data types] mis en surbrillance.](../../images/ui/resources/data-types/data-types-tab.png)
 
 À partir de là, vous disposez des options suivantes :
 
@@ -49,9 +49,9 @@ Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONT
 
 ### Créer un nouveau type de données {#create}
 
-Dans l’onglet **[!UICONTROL Types de données]**, sélectionnez **[!UICONTROL Créer un type de données]**.
+Dans l’onglet **[!UICONTROL Data types]** , sélectionnez **[!UICONTROL Create data type]**.
 
-![Onglet [!UICONTROL Schémas] espace de travail [!UICONTROL Types de données] avec [!UICONTROL Créer un type de données] en surbrillance.](../../images/ui/resources/data-types/create.png)
+![Onglet [!UICONTROL Schemas] de l’espace de travail [!UICONTROL Data types] avec le [!UICONTROL Create data type] en surbrillance.](../../images/ui/resources/data-types/create.png)
 
 La [!DNL Schema Editor] s’affiche, affichant la structure actuelle du nouveau type de données dans la zone de travail. Dans la partie droite de l’éditeur, vous pouvez fournir un nom d’affichage et une description facultative du type de données. Veillez à fournir un nom unique et concis pour votre type de données, car c’est ainsi qu’il sera identifié lors de son ajout à un schéma.
 
@@ -63,9 +63,9 @@ Ce tutoriel crée un type de données qui décrit une propriété de restaurant.
 
 ### Filtrer les types de données {#filter}
 
-La liste des types de données disponibles est préfiltrée en fonction de la manière dont ils ont été créés. Sélectionnez le bouton radio pour choisir entre les options [!UICONTROL Standard] et [!UICONTROL Personnalisé]. L’option [!UICONTROL Standard] affiche les entités créées par Adobe et l’option [!UICONTROL Personnalisé] affiche les entités créées au sein de votre organisation.
+La liste des types de données disponibles est préfiltrée en fonction de la manière dont ils ont été créés. Sélectionnez le bouton radio pour choisir entre les options [!UICONTROL Standard] et [!UICONTROL Custom]. L’option [!UICONTROL Standard] affiche les entités créées par Adobe et l’option [!UICONTROL Custom] affiche les entités créées au sein de votre organisation.
 
-![Onglet [!UICONTROL Types de données] de l’espace de travail [!UICONTROL Schémas] avec [!UICONTROL Standard] et [!UICONTROL Personnalisé] en surbrillance.](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
+![Onglet [!UICONTROL Data types] de l’espace de travail [!UICONTROL Schemas] avec [!UICONTROL Standard] et [!UICONTROL Custom] en surbrillance.](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
 
 ### Modifier un type de données existant {#edit}
 
@@ -73,13 +73,13 @@ La liste des types de données disponibles est préfiltrée en fonction de la ma
 >
 >Une fois qu’un type de données existant est utilisé dans un schéma qui a été activé pour une utilisation dans le profil client en temps réel, seules des modifications non destructives peuvent être apportées à ce type de données par la suite. Pour plus d’informations, consultez la section [règles d’évolution des schémas](../../schema/composition.md#evolution) .
 
-Seuls les types de données personnalisés définis par votre organisation peuvent être modifiés. Sélectionnez **[!UICONTROL Personnalisé]** pour afficher uniquement les types de données personnalisés détenus par votre organisation.
+Seuls les types de données personnalisés définis par votre organisation peuvent être modifiés. Sélectionnez **[!UICONTROL Custom]** pour afficher uniquement les types de données personnalisés détenus par votre organisation.
 
 Sélectionnez le type de données à modifier dans la liste pour ouvrir le rail de droite, qui affiche les détails du type de données. Dans le panneau des détails, vous pouvez également télécharger un exemple de fichier, copier la structure JSON ou ajouter le type de données à un package.
 
 Sélectionnez le nom du type de données dans le rail de droite pour ouvrir sa structure dans le [!DNL Schema Editor].
 
-![Onglet [!UICONTROL Types de données] de l’espace de travail [!UICONTROL Schémas], avec un type de données [!UICONTROL Personnalisé] et le type de données [!UICONTROL Nom] en surbrillance.](../../images/ui/resources/data-types/edit.png)
+![Onglet [!UICONTROL Data types] de l’espace de travail [!UICONTROL Schemas], avec un type de données, [!UICONTROL Custom] et le type de données [!UICONTROL Name] mis en surbrillance.](../../images/ui/resources/data-types/edit.png)
 
 ## Ajouter des champs au type de données {#add-fields}
 
@@ -89,7 +89,7 @@ Pour commencer à ajouter des champs au type de données, sélectionnez l’icô
 
 Utilisez les commandes du rail de droite pour configurer les détails du nouveau champ. Consultez le guide sur la [définition de champs dans l’interface utilisateur](../fields/overview.md#define) pour obtenir des instructions spécifiques sur la configuration et l’ajout du champ au type de données.
 
-Le type de données Restaurant nécessite un champ de chaîne pour représenter le nom du restaurant. Ainsi, le [!UICONTROL Nom du champ] est défini comme « nom » et le [!UICONTROL Type] est défini comme « [!UICONTROL Chaîne] ». Sélectionnez **[!UICONTROL Appliquer]** pour appliquer les modifications au champ.
+Le type de données Restaurant nécessite un champ de chaîne pour représenter le nom du restaurant. Par conséquent, le [!UICONTROL Field name] est défini sur « nom » et le [!UICONTROL Type] est défini sur « [!UICONTROL String] ». Sélectionnez **[!UICONTROL Apply]** pour appliquer les modifications au champ.
 
 ![](../../images/ui/resources/data-types/name-field.png)
 
@@ -97,34 +97,34 @@ Continuez à ajouter d’autres champs au type de données selon vos besoins. L�
 
 ![](../../images/ui/resources/data-types/more-fields.png)
 
-Outre les champs de base, vous pouvez également imbriquer des types de données supplémentaires dans votre type de données personnalisé. Par exemple, le type de données Restaurant nécessite un champ qui représente l’adresse physique de la propriété. Dans ce scénario, vous pouvez ajouter un nouveau champ « adresse » auquel est affecté le type de données standard « [!UICONTROL Adresse postale] ».
+Outre les champs de base, vous pouvez également imbriquer des types de données supplémentaires dans votre type de données personnalisé. Par exemple, le type de données Restaurant nécessite un champ qui représente l’adresse physique de la propriété. Dans ce scénario, vous pouvez ajouter un nouveau champ « adresse » auquel est affecté le type de données standard « [!UICONTROL Postal address] ».
 
 ![](../../images/ui/resources/data-types/address-field.png)
 
 Cela montre à quel point les types de données peuvent être flexibles pour décrire vos données : les types de données peuvent utiliser des champs qui sont également des types de données, qui peuvent eux-mêmes contenir d’autres types de données, etc. Vous pouvez ainsi abstraire et réutiliser des modèles de données courants dans vos schémas XDM, ce qui facilite la représentation de structures de données complexes.
 
-Une fois que vous avez terminé d’ajouter des champs au type de données, sélectionnez **[!UICONTROL Enregistrer]** pour enregistrer vos modifications et ajouter le type de données au [!DNL Schema Library].
+Une fois que vous avez terminé d’ajouter des champs au type de données, sélectionnez **[!UICONTROL Save]** pour enregistrer vos modifications et ajouter le type de données au [!DNL Schema Library].
 
 ## Ajouter le type de données à un schéma {#add-data-type}
 
 Une fois que vous avez créé un type de données, vous pouvez commencer à l’utiliser dans vos schémas. Étant donné que les schémas XDM sont composés d’une classe et de zéro ou plusieurs groupes de champs, les champs fournis par un type de données ne peuvent pas être ajoutés directement à un schéma. Au lieu de cela, ils doivent être inclus dans une classe ou un groupe de champs.
 
-Commencez par suivre les étapes liées à [l’ajout d’un champ à une classe](./classes.md#add-fields) ou [l’ajout d’un champ à un groupe de champs](./field-groups.md#add-fields). Vous pouvez également commencer [à ajouter directement un champ à un schéma](./schemas.md#add-individual-fields) et choisir la classe ou le groupe de champs parent à partir de là. Lorsque vous choisissez le **[!UICONTROL Type]** pour le nouveau champ, sélectionnez le nom de votre type de données dans le menu déroulant.
+Commencez par suivre les étapes liées à [l’ajout d’un champ à une classe](./classes.md#add-fields) ou [l’ajout d’un champ à un groupe de champs](./field-groups.md#add-fields). Vous pouvez également commencer [à ajouter directement un champ à un schéma](./schemas.md#add-individual-fields) et choisir la classe ou le groupe de champs parent à partir de là. Lorsque vous choisissez la **[!UICONTROL Type]** du nouveau champ, sélectionnez le nom de votre type de données dans le menu déroulant.
 
 ## Conversion d’un objet à plusieurs champs en un type de données {#convert}
 
 Lorsque vous créez un champ de type objet avec plusieurs sous-champs dans le [!DNL Schema Editor], vous pouvez convertir ce champ en un type de données afin d’utiliser la même structure de champ dans une classe ou un groupe de champs différent.
 
-Pour convertir un champ de type objet en un type de données, sélectionnez le champ dans la zone de travail. Avant de convertir le champ, assurez-vous que le **[!UICONTROL Nom d’affichage]** décrit les données que l’objet contiendra, car il s’agira du nom du type de données. Lorsque vous êtes prêt à convertir le champ, sélectionnez **[!UICONTROL Convertir en nouveau type de données]** dans le rail de droite.
+Pour convertir un champ de type objet en un type de données, sélectionnez le champ dans la zone de travail. Avant de convertir le champ, assurez-vous que le **[!UICONTROL Display name]** est descriptif des données que l’objet contiendra, car il deviendra le nom du type de données. Lorsque vous êtes prêt à convertir le champ, sélectionnez **[!UICONTROL Convert to new data type]** dans le rail de droite.
 
 ![](../../images/ui/resources/data-types/convert-object.png)
 
-La zone de travail met à jour le type de données du champ de « [!UICONTROL Objet] » vers le nouveau type de données. Cette structure peut désormais être réutilisée dans d’autres classes et groupes de champs en sélectionnant ce type de données dans la liste déroulante **[!UICONTROL Type]** lors de la définition d’un nouveau champ.
+La zone de travail met à jour le type de données du champ de « [!UICONTROL Object] » vers le nouveau type de données. Cette structure peut désormais être réutilisée dans d’autres classes et groupes de champs en sélectionnant ce type de données dans la liste déroulante **[!UICONTROL Type]** lors de la définition d’un nouveau champ.
 
 ![](../../images/ui/resources/data-types/converted.png)
 
 ## Étapes suivantes {#next-steps}
 
-Ce guide explique comment créer et modifier des types de données à l’aide de l’interface utilisateur d’Experience Platform. Pour plus d’informations sur les fonctionnalités de l’espace de travail [!UICONTROL Schémas], consultez la présentation de l’espace de travail [[!UICONTROL Schémas]](../overview.md).
+Ce guide explique comment créer et modifier des types de données à l’aide de l’interface utilisateur d’Experience Platform. Pour plus d’informations sur les fonctionnalités de l’espace de travail [!UICONTROL Schemas], consultez la présentation de l’espace de travail [[!UICONTROL Schemas]](../overview.md).
 
 Pour savoir comment gérer les types de données à l’aide de l’API [!DNL Schema Registry], consultez le guide de point d’entrée [types de données](../../api/data-types.md).

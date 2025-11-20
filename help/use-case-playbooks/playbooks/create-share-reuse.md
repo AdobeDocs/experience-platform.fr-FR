@@ -6,14 +6,14 @@ role: User, Developer
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
 source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 81%
+source-wordcount: '769'
+ht-degree: 71%
 
 ---
 
 # Créer, partager et réutiliser des instances de playbook
 
-Pour utiliser un playbook, accédez à **[!UICONTROL Playbooks de cas d’utilisation] > [!UICONTROL Playbooks]**. Parcourez et utilisez les différentes options de recherche et de filtrage de la page pour sélectionner et commencer à utiliser un playbook spécifique.
+Pour utiliser un playbook, accédez à **[!UICONTROL Use Case Playbooks]>[!UICONTROL Playbooks]**. Parcourez et utilisez les différentes options de recherche et de filtrage de la page pour sélectionner et commencer à utiliser un playbook spécifique.
 
 ## Créer une instance de playbook {#create-playbook-instance}
 
@@ -22,7 +22,7 @@ Pour utiliser un playbook, accédez à **[!UICONTROL Playbooks de cas d’utilis
 >title="Créer une instance"
 >abstract="Générez une liste de ressources telles que des parcours, des audiences, des schémas ou des destinations à utiliser dans des scénarios de parcours ou d’activation."
 
-Avant de créer une instance de playbook, explorez les playbooks disponibles pour [choisir le bon playbook](/help/use-case-playbooks/playbooks/choose.md). Lorsque vous êtes prêt(e) à poursuivre un playbook et à créer une instance, sélectionnez **[!UICONTROL Créer une instance]** pour poursuivre le playbook et générer des ressources techniques.
+Avant de créer une instance de playbook, explorez les playbooks disponibles pour [choisir le bon playbook](/help/use-case-playbooks/playbooks/choose.md). Lorsque vous êtes prêt(e) à poursuivre un playbook et à créer une instance, sélectionnez **[!UICONTROL Create Instance]** pour poursuivre le playbook et générer des ressources techniques.
 
 ![Créer une instance d’un playbook.](/help/use-case-playbooks/assets/playbooks/ui-guide/create-playbook-instance.png)
 
@@ -32,7 +32,7 @@ Cette action génère plusieurs ressources que vous pouvez utiliser pour réalis
 
 ### Utilisez les commandes de configuration pour modifier les noms et les descriptions des instances. {#edit-instance-metadata}
 
-Après avoir créé une instance basée sur un playbook, vous pouvez la personnaliser pour la différencier des autres instances créées à partir du même playbook. Sélectionnez la commande de configuration tel qu’indiqué ci-dessous. Modifiez le nom, la description et les notes, puis sélectionnez **[!UICONTROL Enregistrer]** lorsque vous avez terminé.
+Après avoir créé une instance basée sur un playbook, vous pouvez la personnaliser pour la différencier des autres instances créées à partir du même playbook. Sélectionnez la commande de configuration tel qu’indiqué ci-dessous. Modifiez le nom, la description et les notes, puis sélectionnez **[!UICONTROL Save]** lorsque vous avez terminé.
 
 ![Modifier le nom et la description d’une instance.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-settings.gif)
 
@@ -45,9 +45,9 @@ Après avoir créé une instance basée sur un playbook, vous pouvez la personna
 Il est important de comprendre que les ressources générées varient selon le cas d’utilisation que vous activez :
 
 * Différentes ressources sont générées pour différents types de playbooks. Ces ressources sont créées spécifiquement pour le cas d’utilisation réalisé via le playbook. Par exemple, un playbook génère un schéma, une audience, un parcours et des messages. Un autre playbook génère un schéma, une audience et une destination vers lesquels activer les données.
-* Les ressources elles-mêmes varient d’un playbook à l’autre. Par exemple, pour le playbook **[!UICONTROL Envoyer un message d’anniversaire aux clients/clientes]**, l’audience créée comporte la règle `birthday=today AND year=any`.
+* Les ressources elles-mêmes varient d’un playbook à l’autre. Par exemple, pour le playbook **[!UICONTROL Send A Birthday Message To Guests]**, l’audience créée comporte la règle `birthday=today AND year=any`.
 
-À titre d’exemple, pour le playbook **[!UICONTROL Panier abandonné : contenu]**, vous pouvez constater qu’un parcours spécifique est créé et contient les messages créés pour ce cas d’utilisation.
+À titre d’exemple, pour le playbook **[!UICONTROL Abandoned Cart: Merchandise]**, vous pouvez constater qu’un parcours spécifique est créé et contient les messages créés pour ce cas d’utilisation.
 
 ![Parcours créé à partir du playbook de cas d’utilisation.](/help/use-case-playbooks/assets/playbooks/ui-guide/journey-preview.png)
 

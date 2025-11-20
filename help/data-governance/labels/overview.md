@@ -6,8 +6,8 @@ description: Découvrez comment les libellés d’utilisation des données sont 
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 source-git-commit: 916eb01ea7878366620b859c1d6a667a88b850c9
 workflow-type: tm+mt
-source-wordcount: '789'
-ht-degree: 90%
+source-wordcount: '786'
+ht-degree: 88%
 
 ---
 
@@ -38,7 +38,7 @@ Tous les segments d’audience créés par le [service de segmentation d’Adobe
 
 Outre l’héritage de libellés au niveau des jeux de données, les segments héritent par défaut de tous les libellés au niveau des champs de leurs jeux de données associés. Par conséquent, vous pouvez identifier plus facilement les attributs à exclure de vos segments et les empêcher d’hériter des libellés de champs exclus.
 
-Pour plus d’informations sur le fonctionnement de l’application automatique dans Experience Platform, consultez la présentation de l’[&#x200B; application automatique des politiques &#x200B;](../enforcement/auto-enforcement.md).
+Pour plus d’informations sur le fonctionnement de l’application automatique dans Experience Platform, consultez la présentation de l’[ application automatique des politiques ](../enforcement/auto-enforcement.md).
 
 ### Héritage des contrôles d’exportation de données d’Adobe Audience Manager
 
@@ -57,7 +57,7 @@ Vous pouvez gérer les libellés d’utilisation des données à l’aide des AP
 
 ### Utilisation de l’interface utilisateur
 
-L’espace de travail **[!UICONTROL Politiques]** de l’interface utilisateur [!DNL Experience Platform] vous permet d’afficher et de gérer les libellés personnalisés et principaux de votre entreprise. Utilisez l’espace de travail **[!UICONTROL Schémas]** pour [appliquer des libellés à vos schémas de modèle de données d’expérience (XDM)](../../xdm/tutorials/labels.md) ou découvrez comment [créer et gérer des libellés personnalisés dans l’interface utilisateur **[!UICONTROL Politiques]**](./user-guide.md) dans le guide d’utilisation des libellés d’utilisation des données.
+L’espace de travail **[!UICONTROL Policies]** de l’interface utilisateur de [!DNL Experience Platform] vous permet d’afficher et de gérer les libellés personnalisés et principaux de votre entreprise. Utilisez l’espace de travail **[!UICONTROL Schemas]** pour [appliquer des libellés à vos schémas de modèle de données d’expérience (XDM)](../../xdm/tutorials/labels.md) ou découvrez comment [créer et gérer des libellés personnalisés dans l’interface utilisateur de **[!UICONTROL Policies]**](./user-guide.md) dans le guide d’utilisation des libellés d’utilisation des données .
 
 >[!IMPORTANT]
 >

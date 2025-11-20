@@ -4,8 +4,8 @@ description: Découvrez comment utiliser la simulation de graphiques dans l’in
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '1446'
-ht-degree: 3%
+source-wordcount: '1409'
+ht-degree: 4%
 
 ---
 
@@ -20,13 +20,13 @@ ht-degree: 3%
 
 Regardez la vidéo suivante pour plus d’informations sur l’utilisation de l’interface [!DNL Graph Simulation] dans l’espace de travail de l’interface utilisateur d’Identity Service :
 
->[!VIDEO](https://video.tv.adobe.com/v/3444045/?learn=on&enablevpops&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/3444032/?learn=on&enablevpops)
 
 Lisez ce document pour découvrir comment utiliser [!DNL Graph Simulation] pour mieux comprendre le comportement du graphique d’identités et le fonctionnement de l’algorithme du graphique.
 
 ## Découvrir l’interface [!DNL Graph Simulation] {#interface}
 
-Vous pouvez accéder à [!DNL Graph Simulation] dans l’interface utilisateur de Adobe Experience Platform. Sélectionnez **[!UICONTROL Identités]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Simulation de graphique]** dans l’en-tête supérieur.
+Vous pouvez accéder à [!DNL Graph Simulation] dans l’interface utilisateur de Adobe Experience Platform. Sélectionnez **[!UICONTROL Identities]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Graph Simulation]** dans l’en-tête supérieur.
 
 ![Interface de simulation graphique dans l’interface utilisateur de Adobe Experience Platform.](../images/graph-simulation/graph-simulation.png)
 
@@ -36,13 +36,13 @@ L’interface [!DNL Graph Simulation] se divise en trois sections :
 
 >[!TAB Événements]
 
-Événements : utilisez le panneau **[!UICONTROL Événements]** pour ajouter des identités afin de simuler un graphique. Une identité complète doit avoir un espace de noms d’identité et sa valeur d’identité correspondante. Vous devez ajouter au moins deux identités pour simuler un graphique. Vous pouvez également sélectionner **[!UICONTROL Exemple de chargement]** pour saisir un événement préconfiguré et la configuration de l’algorithme.
+Événements : utilisez le panneau **[!UICONTROL Events]** pour ajouter des identités afin de simuler un graphique. Une identité complète doit avoir un espace de noms d’identité et sa valeur d’identité correspondante. Vous devez ajouter au moins deux identités pour simuler un graphique. Vous pouvez également sélectionner **[!UICONTROL Load Example]** pour saisir un événement préconfiguré et la configuration de l’algorithme.
 
 ![Panneau Événements de l’outil Simulation de graphique.](../images/graph-simulation/events.png)
 
 >[!TAB Configuration des algorithmes]
 
-Configuration des algorithmes : utilisez le panneau **[!UICONTROL Configuration des algorithmes]** pour ajouter et configurer l’algorithme d’optimisation de vos espaces de noms. Vous pouvez faire glisser et déposer un espace de noms pour modifier leur rang de priorité respectif. Vous pouvez également sélectionner **[!UICONTROL Unique par graphique]** pour déterminer si un espace de noms est unique.
+Configuration des algorithmes : utilisez le panneau **[!UICONTROL Algorithm configuration]** pour ajouter et configurer l’algorithme d’optimisation de vos espaces de noms. Vous pouvez faire glisser et déposer un espace de noms pour modifier leur rang de priorité respectif. Vous pouvez également sélectionner **[!UICONTROL Unique Per Graph]** pour déterminer si un espace de noms est unique.
 
 ![Configuration de l’algorithme de l’outil Simulation de graphique.](../images/graph-simulation/algorithm-configuration.png)
 
@@ -56,11 +56,11 @@ Visionneuse de graphiques simulés : la visionneuse de graphiques simulés affic
 
 ## Ajouter des événements {#add-events}
 
-Pour commencer, sélectionnez **[!UICONTROL Ajouter des événements]**.
+Pour commencer, sélectionnez **[!UICONTROL Add events]**.
 
 ![Le bouton Ajouter des événements est sélectionné.](../images/graph-simulation/add-events.png)
 
-Une fenêtre pop-up s’affiche pour [!UICONTROL Event #1]. À partir de là, saisissez votre combinaison espace de noms d’identité et valeur d’identité . Vous pouvez utiliser le menu déroulant pour sélectionner un espace de noms d’identité. Vous pouvez également saisir les premières lettres d’un espace de noms, puis sélectionner les options fournies dans le menu déroulant. Une fois que vous avez sélectionné votre espace de noms, indiquez une valeur d’identité correspondant à votre espace de noms.
+Une fenêtre pop-up s’affiche par [!UICONTROL Event #1]. À partir de là, saisissez votre combinaison espace de noms d’identité et valeur d’identité . Vous pouvez utiliser le menu déroulant pour sélectionner un espace de noms d’identité. Vous pouvez également saisir les premières lettres d’un espace de noms, puis sélectionner les options fournies dans le menu déroulant. Une fois que vous avez sélectionné votre espace de noms, indiquez une valeur d’identité correspondant à votre espace de noms.
 
 ![La fenêtre #1 d’événement avec une interface vide.](../images/graph-simulation/event-one.png)
 
@@ -72,7 +72,7 @@ Une fois votre première identité terminée, sélectionnez l’icône d’ajout
 
 ![La première identité complète de {Email: tom@acme.com} est saisie dans le panneau Événements de la simulation graphique.](../images/graph-simulation/event-one-added.png)
 
-Répétez ensuite les mêmes étapes et ajoutez une deuxième identité. Deux identités entièrement qualifiées sont requises pour générer un graphique d’identités. Dans l’exemple ci-dessous, un ECID est ajouté en tant qu’espace de noms et est fourni avec une valeur de `111`. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
+Répétez ensuite les mêmes étapes et ajoutez une deuxième identité. Deux identités entièrement qualifiées sont requises pour générer un graphique d’identités. Dans l’exemple ci-dessous, un ECID est ajouté en tant qu’espace de noms et est fourni avec une valeur de `111`. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**.
 
 ![Une deuxième identité de {ECID: 111} est ajoutée à l’événement #1.](../images/graph-simulation/first-event.png)
 
@@ -86,7 +86,7 @@ Répétez ensuite les mêmes étapes pour ajouter un deuxième événement. Pour
 
 ### Charger l’exemple {#load-example}
 
-Sélectionnez **[!UICONTROL Charger l’exemple]** pour configurer un exemple de graphique avec un algorithme prédéfini et une configuration d’événement.
+Sélectionnez **[!UICONTROL Load example]** pour configurer un exemple de graphique avec un algorithme prédéfini et une configuration d’événement.
 
 ![L’option Charger l’exemple est sélectionnée.](../images/graph-simulation/load-example.png)
 
@@ -104,13 +104,13 @@ Sélectionnez l’une des options pour charger des [!DNL Graph Simulation] avec 
 
 ![Événements et algorithme configurés pour un téléphone non valide.](../images/graph-simulation/example-loaded.png)
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Simuler]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Simulate]**.
 
 ![Exemple de graphique simulé pour un téléphone non valide.](../images/graph-simulation/example-simulated.png)
 
 ### Utiliser la version texte {#use-text-version}
 
-Vous pouvez également utiliser le mode texte pour configurer des événements. Pour utiliser le mode texte, sélectionnez l’icône des paramètres, puis sélectionnez **[!UICONTROL Texte (utilisateurs avancés)]**.
+Vous pouvez également utiliser le mode texte pour configurer des événements. Pour utiliser le mode texte, sélectionnez l’icône des paramètres, puis sélectionnez **[!UICONTROL Text (Advanced users)]**.
 
 ![Icône de paramètres sélectionnée.](../images/graph-simulation/settings.png)
 
@@ -120,15 +120,15 @@ Vous pouvez saisir manuellement vos identités en mode texte. Utilisez le signe 
 
 ### Modifier l’événement {#edit-event}
 
-Pour modifier un événement, sélectionnez les points de suspension (`...`) en regard d’un événement donné, puis sélectionnez **[!UICONTROL Modifier]**.
+Pour modifier un événement, sélectionnez les points de suspension (`...`) en regard d’un événement donné, puis sélectionnez **[!UICONTROL Edit]**.
 
-![&#x200B; Icône Modifier l’événement sélectionnée.](../images/graph-simulation/edit.png)
+![ Icône Modifier l’événement sélectionnée.](../images/graph-simulation/edit.png)
 
 ### Supprimer l’événement {#delete-event}
 
-Pour supprimer un événement, sélectionnez les points de suspension (`...`) en regard d’un événement donné, puis sélectionnez **[!UICONTROL Supprimer]**.
+Pour supprimer un événement, sélectionnez les points de suspension (`...`) en regard d’un événement donné, puis sélectionnez **[!UICONTROL Delete]**.
 
-![&#x200B; Icône Supprimer l’événement sélectionnée.](../images/graph-simulation/delete.png)
+![ Icône Supprimer l’événement sélectionnée.](../images/graph-simulation/delete.png)
 
 ## Configurer l’algorithme {#configure-algorithm}
 
@@ -136,11 +136,11 @@ Pour supprimer un événement, sélectionnez les points de suspension (`...`) en
 >
 >L’algorithme que vous configurez détermine la manière dont Identity Service traite les espaces de noms que vous avez saisis dans vos événements. Toute configuration que vous rassemblez dans le [!DNL Graph Simulation UI] n’est pas enregistrée dans les paramètres d’identité.
 
-Une fois que vous avez ajouté vos événements, vous pouvez configurer l’algorithme qui sera utilisé pour simuler votre graphique. Pour commencer, sélectionnez **[!UICONTROL Ajouter une configuration]**.
+Une fois que vous avez ajouté vos événements, vous pouvez configurer l’algorithme qui sera utilisé pour simuler votre graphique. Pour commencer, sélectionnez **[!UICONTROL Add config]**.
 
 ![Panneau de configuration de l’algorithme.](../images/graph-simulation/add-config.png)
 
-Une ligne de configuration vide s’affiche. Tout d’abord, saisissez le même espace de noms que celui utilisé pour vos événements. Dans ce cas, commencez par saisir un e-mail. Une fois que vous avez saisi votre espace de noms, les colonnes [!UICONTROL Symbole d’identité] et [!UICONTROL Type d’identité] sont automatiquement renseignées.
+Une ligne de configuration vide s’affiche. Tout d’abord, saisissez le même espace de noms que celui utilisé pour vos événements. Dans ce cas, commencez par saisir un e-mail. Une fois que vous avez saisi votre espace de noms, les colonnes pour [!UICONTROL Identity Symbol] et [!UICONTROL Identity Type] sont automatiquement renseignées.
 
 ![Première entrée de configuration.](../images/graph-simulation/add-namespace.png)
 
@@ -149,15 +149,15 @@ Répétez ensuite les mêmes étapes et ajoutez votre deuxième espace de noms, 
 * **Priorité des espaces de noms** : la priorité d’un espace de noms détermine son importance relative par rapport aux autres espaces de noms d’un graphique d’identités donné. Par exemple, si votre graphique d’identité comporte quatre espaces de noms différents : CRMID, ECID, E-mail et Apple IDFA, vous pouvez configurer des priorités afin de déterminer un ordre d’importance pour les quatre espaces de noms.
 * **Espace de noms unique** : si un espace de noms est désigné comme unique, Identity Service génère des graphiques avec la mise en garde qu’une seule identité avec un espace de noms unique donné peut exister. Par exemple, si l’espace de noms E-mail est désigné comme espace de noms unique, un graphique ne peut avoir qu’une seule identité avec E-mail. S’il existe plusieurs identités avec l’espace de noms E-mail , le lien le plus ancien est supprimé.
 
-Pour configurer la priorité des espaces de noms, sélectionnez les lignes d’espace de noms et faites-les glisser dans l’ordre de priorité de votre choix, la ligne supérieure représentant la priorité la plus élevée et la ligne inférieure représentant la priorité la plus faible. Pour désigner un espace de noms comme unique, cochez la case **[!UICONTROL Unique par graphique]**.
+Pour configurer la priorité des espaces de noms, sélectionnez les lignes d’espace de noms et faites-les glisser dans l’ordre de priorité de votre choix, la ligne supérieure représentant la priorité la plus élevée et la ligne inférieure représentant la priorité la plus faible. Pour désigner un espace de noms comme unique, cochez la case **[!UICONTROL Unique Per Graph]** .
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Simuler]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Simulate]**.
 
 ![Tous les espaces de noms configurés.](../images/graph-simulation/all-namespaces.png)
 
 ## Afficher le graphique simulé
 
-La section [!UICONTROL Graphique simulé] affiche le ou les graphiques d’identités générés en fonction des événements que vous avez ajoutés et de l’algorithme que vous avez configuré.
+La section [!UICONTROL Simulated Graph] affiche le ou les graphiques d’identités générés en fonction des événements que vous avez ajoutés et de l’algorithme que vous avez configuré.
 
 | Icônes du graphique | Description |
 | --- | --- |

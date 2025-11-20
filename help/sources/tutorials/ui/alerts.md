@@ -5,7 +5,7 @@ title: Abonnement aux alertes contextuelles dans l’interface utilisateur
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '809'
 ht-degree: 18%
 
 ---
@@ -22,7 +22,7 @@ Ce document décrit la procédure à suivre pour s’abonner et recevoir des mes
 
 Ce document nécessite une compréhension du fonctionnement des composants suivants de Adobe Experience Platform :
 
-* [Sources &#x200B;](../../home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
+* [Sources](../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Experience Platform].
 * [Observability](../../../observability/home.md) : [!DNL Observability Insights] permet de surveiller les activités d’Experience Platform à l’aide de mesures statistiques et de notifications d’événement.
    * [Alertes](../../../observability/alerts/overview.md) : lorsqu’un certain ensemble de conditions de vos opérations Experience Platform est atteint (par exemple, un problème potentiel lorsque le système dépasse un certain seuil), Experience Platform peut envoyer des messages d’alerte à tous les utilisateurs de votre organisation qui se sont abonnés à ces messages.
 
@@ -38,7 +38,7 @@ Ce document nécessite une compréhension du fonctionnement des composants suiva
 >
 >Vous devez activer les notifications instantanées d’e-mails pour votre compte Experience Platform afin de recevoir des notifications d’alerte par e-mail pour vos flux de données.
 
-Vous pouvez activer les alertes pour vos flux de données lors de l’étape [!UICONTROL Détails du flux de données] du workflow des sources dans l’espace de travail des sources.
+Vous pouvez activer les alertes pour vos flux de données pendant l’étape de [!UICONTROL Dataflow detail] du workflow des sources dans l’espace de travail des sources.
 
 ![dataflow-detail](../../images/tutorials/alerts/dataflow-detail.png)
 
@@ -54,7 +54,7 @@ Les alertes disponibles pour les flux de données sources sont les suivantes :
 | Succès de l’exécution du flux de sources | Cette alerte vous envoie un message lorsque les données de votre source sont correctement ingérées par Experience Platform. |
 | Échec de l’exécution du flux des sources | Cette alerte vous envoie un message si une erreur se produit dans votre flux de données. |
 
-Sélectionnez les alertes auxquelles vous souhaitez vous abonner, puis cliquez sur **[!UICONTROL Suivant]** pour vérifier et terminer votre flux de données.
+Sélectionnez les alertes auxquelles vous souhaitez vous abonner, puis sélectionnez **[!UICONTROL Next]** pour vérifier et terminer votre flux de données.
 
 ![select-alerts](../../images/tutorials/alerts/select-alerts.png)
 
@@ -92,11 +92,11 @@ Sélectionnez le message d’alerte pour afficher des informations spécifiques 
 
 ![select-alert-message](../../images/tutorials/alerts/select-alert-message.png)
 
-La page [!UICONTROL Aperçu de l’exécution du flux de données] s’affiche. La moitié supérieure de l’écran affiche un aperçu de votre flux de données, y compris des informations sur ses attributs, l’identifiant d’exécution de flux de données correspondant et le résumé des erreurs de haut niveau.
+La page [!UICONTROL Dataflow run overview] s’affiche. La moitié supérieure de l’écran affiche un aperçu de votre flux de données, y compris des informations sur ses attributs, l’identifiant d’exécution de flux de données correspondant et le résumé des erreurs de haut niveau.
 
 ![dataflow-overview](../../images/tutorials/alerts/dataflow-overview.png)
 
-La moitié inférieure de la page affiche toutes les [!UICONTROL erreurs d’exécution du flux de données] qui se sont produites lors de l’étape d’exécution du flux de données. À partir de là, vous pouvez prévisualiser les diagnostics d’erreur ou utiliser l’[[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) pour télécharger les diagnostics d’erreur ou le manifeste de fichier qui correspond à votre flux de données.
+La moitié inférieure de la page affiche les [!UICONTROL Dataflow run errors] qui se sont produites pendant l’étape d’exécution du flux de données. À partir de là, vous pouvez prévisualiser les diagnostics d’erreur ou utiliser l’[[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) pour télécharger les diagnostics d’erreur ou le manifeste de fichier qui correspond à votre flux de données.
 
 ![dataflow-run-errors](../../images/tutorials/alerts/dataflow-run-error.png)
 
@@ -108,17 +108,17 @@ Des alertes pour vos flux de données vous sont également diffusées par e-mail
 
 ![email](../../images/tutorials/alerts/email.png)
 
-Tout comme l’alerte de l’interface utilisateur, la page [!UICONTROL Aperçu de l’exécution du flux de données] s’affiche, vous fournissant une interface pour enquêter sur les erreurs associées à votre flux de données.
+Tout comme l’alerte de l’interface utilisateur, la page [!UICONTROL Dataflow run overview] s’affiche, vous fournissant une interface pour enquêter sur les erreurs associées à votre flux de données.
 
 ![dataflow-overview](../../images/tutorials/alerts/dataflow-overview.png)
 
 ## Abonnement et désabonnement aux alertes
 
-Vous pouvez vous abonner à d’autres alertes ou vous désabonner des alertes établies pour un flux de données existant dans la page [!UICONTROL Flux de données]. Recherchez le flux de données que vous créez dans la liste, puis sélectionnez les points de suspension (`...`) pour afficher un menu déroulant d’options. Sélectionnez ensuite **[!UICONTROL S’abonner aux alertes]** pour modifier les paramètres d’alerte de votre flux de données.
+Vous pouvez vous abonner à d’autres alertes ou vous désabonner des alertes établies pour un flux de données existant dans la page de [!UICONTROL Dataflows]. Recherchez le flux de données que vous créez dans la liste, puis sélectionnez les points de suspension (`...`) pour afficher un menu déroulant d’options. Sélectionnez ensuite **[!UICONTROL Subscribe alerts]** pour modifier les paramètres d’alerte de votre flux de données.
 
-![options &#x200B;](../../images/tutorials/alerts/options.png)
+![options ](../../images/tutorials/alerts/options.png)
 
-Une fenêtre pop-up s’affiche, vous fournissant une liste des alertes de sources. Sélectionnez les alertes auxquelles vous souhaitez vous abonner ou désélectionnez les alertes auxquelles vous souhaitez vous désabonner. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
+Une fenêtre pop-up s’affiche, vous fournissant une liste des alertes de sources. Sélectionnez les alertes auxquelles vous souhaitez vous abonner ou désélectionnez les alertes auxquelles vous souhaitez vous désabonner. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**.
 
 ![enregistrer](../../images/tutorials/alerts/save.png)
 

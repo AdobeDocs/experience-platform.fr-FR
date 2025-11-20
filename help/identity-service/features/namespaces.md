@@ -4,7 +4,7 @@ description: Découvrez les espaces de noms d’identité dans Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1860'
+source-wordcount: '1848'
 ht-degree: 26%
 
 ---
@@ -99,17 +99,17 @@ Les espaces de noms standard fournis sont les suivants. Ils peuvent être utilis
 | Nom d’affichage | Description |
 | ------------ | ----------- |
 | AdCloud | Un espace de noms représentant Adobe AdCloud. |
-| Adobe Analytics (ancien ID) | Un espace de noms représentant Adobe Analytics. Consultez le document suivant sur les [espaces de noms Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=fr#namespaces) pour plus d’informations. |
+| Adobe Analytics (ancien ID) | Un espace de noms représentant Adobe Analytics. Consultez le document suivant sur les [espaces de noms Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces) pour plus d’informations. |
 | IDFA Apple (ID pour les annonceurs) | Un espace de noms représentant l’ID Apple pour les annonceurs. Pour plus d’informations, consultez le document sur les [annonces basées sur les intérêts](https://support.apple.com/fr-fr/HT202074). |
 | Service de notification push Apple | Un espace de noms représentant les identités collectées à l’aide du service Apple Push Notification. Pour plus d’informations, consultez le document suivant sur le service [Notification push Apple](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) . |
 | ECID | Un espace de noms représentant l’ECID. Cet espace de noms peut également être référencé par les alias suivants : « ID Adobe Marketing Cloud », « ID Adobe Experience Cloud », « ID Adobe Experience Platform ». Pour plus d’informations, consultez le document suivant sur [ECID](./ecid.md) . |
 | E-mail | Un espace de noms représentant une adresse e-mail. Ce type d’espace de noms est souvent associé à une seule personne et peut donc être utilisé pour identifier cette personne sur différents canaux. |
-| E-mails (SHA256, en minuscules) | Un espace de noms pour adresse électronique préhachée. Les valeurs fournies dans cet espace de noms sont converties en minuscules avant le hachage en SHA-256. Les espaces de début et de fin doivent être supprimés avant qu’une adresse e-mail ne soit normalisée. Ce paramètre ne peut pas être modifié rétroactivement. Pour plus d’informations[&#128279;](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=fr#hashing-support) consultez le document suivant sur la prise en charge du hachage SHA256 . |
+| E-mails (SHA256, en minuscules) | Un espace de noms pour adresse électronique préhachée. Les valeurs fournies dans cet espace de noms sont converties en minuscules avant le hachage en SHA-256. Les espaces de début et de fin doivent être supprimés avant qu’une adresse e-mail ne soit normalisée. Ce paramètre ne peut pas être modifié rétroactivement. Pour plus d’informations[ consultez le document suivant sur la prise en charge du hachage ](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support)SHA256 . |
 | Firebase Cloud Messaging | Un espace de noms représentant les identités collectées à l’aide de Google Firebase Cloud Messaging pour les notifications push. Pour plus d’informations, consultez le document suivant sur [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging). |
 | ID d’annonce Google (GAID) | Un espace de noms représentant un ID Google Advertising. Pour plus d’informations, consultez le document suivant sur l’[ID Google Advertising](https://support.google.com/googleplay/android-developer/answer/6048248?hl=fr). |
 | Téléphone | Un espace de noms représentant un numéro de téléphone. Ce type d’espace de noms est souvent associé à une seule personne et peut donc être utilisé pour identifier cette personne sur différents canaux. |
 | Téléphone (E.164) | Un espace de noms représentant les numéros de téléphone bruts qui doivent être hachés au format E.164. Le format E.164 comprend un signe plus (`+`), un indicatif national international, un indicatif régional et un numéro de téléphone. Par exemple : `(+)(country code)(area code)(phone number)`. |
-| Téléphone (SHA256) | Un espace de noms représentant les numéros de téléphone qui doivent être hachés à l’aide de SHA256. Vous devez supprimer les symboles, les lettres et les zéros de début. Vous devez également ajouter le code d’appel du pays comme préfixe. |
+| Téléphone (SHA256) | Un espace de noms représentant les numéros de téléphone qui doivent être hachés à l’aide de SHA256. Vous devez supprimer les symboles, les lettres et les zéros de début. Vous devez également ajouter le code d’appel du pays comme préfixe. |
 | Téléphone (SHA256_E.164) | Un espace de noms représentant des numéros de téléphone bruts qui doivent être hachés au format SHA256 et E.164. |
 | TNTID | Un espace de noms représentant Adobe Target. Pour plus d’informations, consultez le document suivant sur [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=fr). |
 | Windows AID | Un espace de noms représentant un identifiant Windows Advertising. Pour plus d’informations, consultez le document suivant sur [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041). |
@@ -121,7 +121,7 @@ Les espaces de noms standard fournis sont les suivants. Ils peuvent être utilis
 >title="Affichage des identités d&#39;intégration"
 >abstract="Les identités d&#39;intégration sont des espaces de noms utilisés pour établir une connexion avec d&#39;autres systèmes et ne sont pas utilisés dans la résolution d&#39;identité ou pour assembler des identités. <br> Ces identités sont masquées par défaut. Utilisez le bouton pour afficher les espaces de noms d&#39;intégration."
 
-Pour afficher les espaces de noms d’identité dans l’interface utilisateur, sélectionnez **[!UICONTROL Identités]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Parcourir]**.
+Pour afficher les espaces de noms d’identité dans l’interface utilisateur, sélectionnez **[!UICONTROL Identities]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Browse]**.
 
 Un répertoire des espaces de noms de votre organisation s’affiche, affichant des informations sur leurs noms, symboles d’identité, dates de dernière mise à jour, types d’identité correspondants et description.
 
@@ -131,19 +131,19 @@ Un répertoire des espaces de noms de votre organisation s’affiche, affichant 
 
 Selon les données de votre organisation et les cas d’utilisation, vous pouvez avoir besoin d’espaces de noms personnalisés. Les espaces de noms personnalisés peuvent être créés à l’aide de l’API [[!DNL Identity Service]](../api/create-custom-namespace.md) ou de l’interface utilisateur.
 
-Pour créer un espace de noms personnalisé, sélectionnez **[!UICONTROL Créer un espace de noms d’identité]**.
+Pour créer un espace de noms personnalisé, sélectionnez **[!UICONTROL Create identity namespace]**.
 
 >[!TIP]
 >
->Les identités d’intégration sont des espaces de noms utilisés pour établir une connexion avec d’autres systèmes. Ils ne sont pas utilisés dans la résolution d’identité et ne sont pas non plus utilisés pour assembler des identités. Sélectionnez **[!UICONTROL Afficher les identités d’intégration]** pour mettre à jour la liste et inclure les identités d’intégration. Toutefois, les identités d’intégration sont masquées par défaut, car elles sont en lecture seule et que vous n’êtes pas tenu de les configurer.
+>Les identités d’intégration sont des espaces de noms utilisés pour établir une connexion avec d’autres systèmes. Ils ne sont pas utilisés dans la résolution d’identité et ne sont pas non plus utilisés pour assembler des identités. Sélectionnez **[!UICONTROL View integration identities]** pour mettre à jour la liste et inclure les identités d’intégration. Toutefois, les identités d’intégration sont masquées par défaut, car elles sont en lecture seule et que vous n’êtes pas tenu de les configurer.
 
 ![Bouton Créer un espace de noms d’identité dans l’espace de travail des identités.](../images/namespace/create-identity-namespace.png)
 
-La fenêtre [!UICONTROL Créer un espace de noms d’identité] s’affiche. Tout d’abord, vous devez fournir un nom d’affichage et un symbole d’identité pour l’espace de noms personnalisé que vous souhaitez créer. Vous pouvez également fournir une description pour ajouter plus de contexte à l’espace de noms personnalisé que vous êtes en train de créer.
+La fenêtre [!UICONTROL Create identity namespace] s’affiche. Tout d’abord, vous devez fournir un nom d’affichage et un symbole d’identité pour l’espace de noms personnalisé que vous souhaitez créer. Vous pouvez également fournir une description pour ajouter plus de contexte à l’espace de noms personnalisé que vous êtes en train de créer.
 
 ![Fenêtre pop-up dans laquelle vous pouvez saisir des informations concernant votre espace de noms d’identité personnalisé.](../images/namespace/name-and-symbol.png)
 
-Sélectionnez ensuite le type d’identité à affecter à l’espace de noms personnalisé. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Créer]**.
+Sélectionnez ensuite le type d’identité à affecter à l’espace de noms personnalisé. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Create]**.
 
 ![Sélection de types d’identité que vous pouvez choisir et affecter à votre espace de noms d’identité personnalisé.](../images/namespace/select-identity-type.png)
 

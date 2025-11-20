@@ -6,8 +6,8 @@ description: Ce guide d’utilisation fournit des étapes détaillées sur la ma
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
-source-wordcount: '649'
-ht-degree: 37%
+source-wordcount: '641'
+ht-degree: 34%
 
 ---
 
@@ -30,9 +30,9 @@ Ce guide d’utilisation décrit les étapes à suivre pour surveiller vos donn�
 >
 >Pour calculer le nombre total d’événements à une date particulière, utilisez l’expression : `total events / day = ingestion rate * 60 * 60 * 24`.
 
-Dans l’[interface utilisateur d’Experience Platform](https://platform.adobe.com), sélectionnez **[!UICONTROL Surveillance]** dans le menu de navigation de gauche, suivi de **[!UICONTROL Diffusion en continu de bout en bout]**.
+Dans l’[interface utilisateur d’Experience Platform](https://platform.adobe.com), sélectionnez **[!UICONTROL Monitoring]** dans le menu de navigation de gauche, puis **[!UICONTROL Streaming end-to-end]**.
 
-La page de surveillance **[!UICONTROL Diffusion en continu de bout en bout]** apparaît. Cet espace de travail fournit un graphique qui affiche le taux d’événements diffusés en continu reçus par [!DNL Experience Platform], un graphique qui affiche le taux d’événements diffusés qui ont été traités avec succès par [[!DNL Real-Time Customer Profile]](../../profile/home.md), ainsi qu’une liste détaillée des données entrantes.
+La page de surveillance des **[!UICONTROL Streaming end-to-end]** s’affiche. Cet espace de travail fournit un graphique qui affiche le taux d’événements diffusés en continu reçus par [!DNL Experience Platform], un graphique qui affiche le taux d’événements diffusés qui ont été traités avec succès par [[!DNL Real-Time Customer Profile]](../../profile/home.md), ainsi qu’une liste détaillée des données entrantes.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -72,9 +72,9 @@ En outre, les enregistrements en échec fournissent des détails sur les erreurs
 
 ## Surveillance de l’ingestion des données du lot de bout en bout
 
-Dans le [[!DNL Experience Platform UI]](https://platform.adobe.com), sélectionnez **[!UICONTROL Surveillance]** dans le menu de navigation de gauche.
+Dans le [[!DNL Experience Platform UI]](https://platform.adobe.com), sélectionnez **[!UICONTROL Monitoring]** dans le menu de navigation de gauche.
 
-La page de surveillance de **[!UICONTROL lot de bout en bout]** apparaît et affiche une liste des lots ingérés précédemment. Vous pouvez sélectionner n’importe quel lot pour obtenir des informations plus détaillées sur cet enregistrement.
+La page de surveillance des **[!UICONTROL Batch end-to-end]** s’affiche, affichant une liste des lots précédemment ingérés. Vous pouvez sélectionner n’importe quel lot pour obtenir des informations plus détaillées sur cet enregistrement.
 
 ![](../images/quality/monitor-data-flows/batch-monitoring.png)
 

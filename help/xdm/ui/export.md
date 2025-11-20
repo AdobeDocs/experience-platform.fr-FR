@@ -6,7 +6,7 @@ type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '636'
 ht-degree: 11%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 11%
 
 Toutes les ressources de la bibliothèque de schémas se trouvent dans un sandbox spécifique au sein d’une organisation. Dans certains cas, vous pouvez partager des ressources de modèle de données d’expérience (XDM) entre des sandbox et des organisations.
 
-Pour répondre à ce besoin, l’espace de travail [!UICONTROL Schémas] de l’interface utilisateur de Adobe Experience Platform vous permet de générer une payload d’exportation pour tout schéma de la bibliothèque des schémas. Cette payload peut ensuite être utilisée dans un appel à l’API Schema Registry pour importer le schéma (et toutes les ressources dépendantes) dans un sandbox et une organisation cibles.
+Pour répondre à ce besoin, l’espace de travail [!UICONTROL Schemas] de l’interface utilisateur de Adobe Experience Platform vous permet de générer une payload d’exportation pour n’importe quel schéma de la bibliothèque des schémas. Cette payload peut ensuite être utilisée dans un appel à l’API Schema Registry pour importer le schéma (et toutes les ressources dépendantes) dans un sandbox et une organisation cibles.
 
 >[!NOTE]
 >
@@ -32,21 +32,21 @@ Bien que l’interface utilisateur d’Experience Platform vous permette d’exp
 
 ## Générer une payload d&#39;export {#generate-export-payload}
 
-Les payloads d’exportation peuvent être générées dans l’interface utilisateur d’Experience Platform à partir du panneau de détails de l’onglet [!UICONTROL Parcourir] ou directement à partir de la zone de travail du schéma dans l’éditeur de schémas.
+Les payloads d’exportation peuvent être générées dans l’interface utilisateur d’Experience Platform à partir du panneau des détails de l’onglet [!UICONTROL Browse] ou directement à partir de la zone de travail du schéma dans l’éditeur de schémas.
 
-Pour générer une payload d’exportation, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche. Dans l’espace de travail [!UICONTROL Schémas], sélectionnez la ligne du schéma à exporter pour afficher les détails du schéma dans la barre latérale droite.
+Pour générer une payload d’exportation, sélectionnez **[!UICONTROL Schemas]** dans le volet de navigation de gauche. Dans l’espace de travail [!UICONTROL Schemas] , sélectionnez la ligne du schéma à exporter pour afficher les détails du schéma dans la barre latérale droite.
 
 >[!TIP]
 >
 >Consultez le guide sur l’[exploration des ressources XDM](./explore.md) pour plus d’informations sur la manière de trouver la ressource XDM que vous recherchez.
 
-Sélectionnez ensuite l’icône **[!UICONTROL Copier JSON]** (![Icône Copier](/help/images/icons/copy.png)) dans les options disponibles.
+Sélectionnez ensuite l’icône **[!UICONTROL Copy JSON]** (![Icône Copier](/help/images/icons/copy.png)) dans les options disponibles.
 
-![L’espace de travail Schémas avec une ligne de schéma et [!UICONTROL Copier dans JSON] en surbrillance.](../images/ui/export/copy-json.png)
+![Espace de travail Schémas avec une ligne de schéma et un [!UICONTROL Copy to JSON] mis en surbrillance.](../images/ui/export/copy-json.png)
 
 Cette opération copie une payload JSON dans le presse-papiers, générée en fonction de la structure du schéma. Pour le schéma « [!DNL Loyalty Members] » illustré ci-dessus, le fichier JSON suivant est généré :
 
-+++Sélectionner pour développer un exemple de payload JSON
++++Sélectionner cette option pour développer un exemple de payload JSON
 
 ```json
 [
@@ -212,13 +212,13 @@ Cette opération copie une payload JSON dans le presse-papiers, générée en fo
 
 +++
 
-La payload peut également être copiée en sélectionnant [!UICONTROL Plus] en haut à droite de l’éditeur de schémas. Un menu déroulant fournit deux options, [!UICONTROL &#x200B; Copier la structure JSON &#x200B;] et [!UICONTROL &#x200B; Supprimer le schéma &#x200B;].
+La payload peut également être copiée en sélectionnant [!UICONTROL More] dans le coin supérieur droit de l’éditeur de schémas. Un menu déroulant fournit deux options, [!UICONTROL Copy JSON structure] et [!UICONTROL Delete schema].
 
 >[!NOTE]
 >
 >Un schéma ne peut pas être supprimé s’il est activé pour le profil ou s’il est associé à des jeux de données.
 
-![L’éditeur de schémas avec [!UICONTROL Plus] et [!UICONTROL Copier dans JSON] mis en surbrillance.](../images/ui/export/schema-editor-copy-json.png)
+![Éditeur de schémas avec [!UICONTROL More] et [!UICONTROL Copy to JSON] mis en surbrillance.](../images/ui/export/schema-editor-copy-json.png)
 
 La payload se présente sous la forme d’un tableau, chaque élément du tableau étant un objet qui représente une ressource XDM personnalisée à exporter. Dans l’exemple ci-dessus, le groupe de champs personnalisés « [!DNL Loyalty details] » et le schéma « [!DNL Loyalty Members] » sont inclus. Toutes les ressources de base utilisées par le schéma ne sont pas incluses dans l’exportation, car ces ressources sont disponibles dans tous les sandbox et toutes les organisations.
 
@@ -226,8 +226,8 @@ Notez que chaque instance de l’identifiant du client de votre organisation app
 
 ## Importer la ressource à l’aide de l’API {#import-resource-with-api}
 
-Une fois que vous avez copié le fichier JSON d’exportation pour le schéma, vous pouvez l’utiliser comme payload pour une requête POST vers le point d’entrée `/rpc/import` dans l’API Schema Registry. Pour plus d’informations sur la configuration de l’appel pour envoyer le schéma à l’organisation et au sandbox souhaités[&#128279;](../api/import.md) consultez le  guide du point d’entrée d’importation .
+Une fois que vous avez copié le fichier JSON d’exportation pour le schéma, vous pouvez l’utiliser comme payload pour une requête POST vers le point d’entrée `/rpc/import` dans l’API Schema Registry. Pour plus d’informations sur la configuration de l’appel pour envoyer le schéma à l’organisation et au sandbox souhaités[ consultez le ](../api/import.md) guide du point d’entrée d’importation .
 
 ## Étapes suivantes
 
-En suivant ce guide, vous avez réussi à exporter un schéma XDM vers une autre organisation ou un autre sandbox. Pour plus d’informations sur les fonctionnalités de l’interface utilisateur [!UICONTROL Schémas], consultez la présentation de l’interface utilisateur [[!UICONTROL Schémas]](./overview.md).
+En suivant ce guide, vous avez réussi à exporter un schéma XDM vers une autre organisation ou un autre sandbox. Pour plus d’informations sur les fonctionnalités de l’interface utilisateur de [!UICONTROL Schemas], reportez-vous à la présentation de l’interface utilisateur de [[!UICONTROL Schemas] ](./overview.md).

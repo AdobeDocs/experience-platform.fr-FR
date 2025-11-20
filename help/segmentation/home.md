@@ -28,15 +28,15 @@ Vous devez comprendre les termes clés suivants utilisés dans ce document :
 
 La segmentation est le processus de définition d’attributs ou de comportements spécifiques partagés par un sous-ensemble de profils de votre banque de profils afin de distinguer un groupe de clients potentiels de votre base de clients. Par exemple, dans une campagne par e-mail intitulée « Avez-vous oublié d’acheter vos baskets ? », vous souhaitez peut-être connaître l’audience de tous les utilisateurs ayant recherché des baskets au cours des 30 derniers jours sans effectuer d’achat.
 
-Une fois qu’une audience a été définie sur le plan conceptuel, elle est créée dans [!DNL Experience Platform]. En règle générale, les audiences sont créées par la personne spécialiste du marketing ou des audiences, bien que certaines organisations préfèrent qu’elles soient créées par leur propre service marketing, en collaboration avec leur propre personnel chargé de l’analyse des données. Lors de la révision des données envoyées à [!DNL Experience Platform], la personne qui analyse les données peut créer l’audience de deux manières. Elle peut créer une définition de segment en sélectionnant les champs et les valeurs qui seront utilisés pour créer les règles ou les conditions de l’audience, ou composer une audience à l’aide de la composition de l’audience.
+Une fois qu’une audience a été définie sur le plan conceptuel, elle est créée dans [!DNL Experience Platform]. En règle générale, les audiences sont créées par la personne spécialiste du marketing ou des audiences, bien que certaines organisations préfèrent qu’elles soient créées par leur propre service marketing, en collaboration avec leur propre personnel chargé de l’analyse des données. Lors de la révision des données envoyées à [!DNL Experience Platform], la personne qui analyse les données peut créer l’audience de deux manières. Elle peut créer une définition de segment en sélectionnant les champs et les valeurs qui seront utilisés pour créer les règles ou les conditions de l’audience, ou composer une audience à l’aide de la composition d’audiences.
 
 ## Créer des audiences
 
 Vous pouvez créer des audiences de plusieurs manières sur Adobe Experience Platform, notamment par le biais de compositions, de définitions de segment, de données fédérées et de Data Distiller.
 
-### Composition de l’audience
+### Composition d’audiences
 
-Lors de la composition directe d’une audience sur Experience Platform, vous pouvez utiliser la composition de l’audience. Pour savoir comment utiliser la fonctionnalité de composition d’audience pour créer une audience, consultez le [Guide de la composition d’audience](./ui/audience-composition.md).
+Lors de la composition directe d’une audience sur Experience Platform, vous pouvez utiliser la composition de l’audience. Pour savoir comment utiliser la fonctionnalité de composition d’audiences pour créer une audience, consultez le [Guide de la composition d’audiences](./ui/audience-composition.md).
 
 ### Définitions de segment
 
@@ -178,4 +178,4 @@ Grâce à la fonction de segmentation d’entités multiples avancée, vous pouv
 
 Pour plus d’informations sur l’utilisation de l’IU de Segmentation Service, consultez la [Vue d’ensemble de l’IU de Segmentation Service](./ui/overview.md).
 
-Pour savoir comment composer des audiences dans l’IU, consultez le [guide de la composition des audiences](./ui/audience-composition.md). Pour savoir comment définir des définitions de segments dans l’IU, consultez le [guide du créateur de segments](./ui/overview.md). Pour plus d’informations sur la création de définitions de segment à l’aide de l’API, suivez le tutoriel sur la [création de définitions de segments à l’aide de l’API](./tutorials/create-a-segment.md).
+Pour savoir comment composer des audiences dans l’UI, consultez le [guide de la composition d’audiences](./ui/audience-composition.md). Pour savoir comment définir des définitions de segments dans l’IU, consultez le [guide du créateur de segments](./ui/overview.md). Pour plus d’informations sur la création de définitions de segment à l’aide de l’API, suivez le tutoriel sur la [création de définitions de segments à l’aide de l’API](./tutorials/create-a-segment.md).

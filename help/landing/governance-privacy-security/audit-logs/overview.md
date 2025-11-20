@@ -6,8 +6,8 @@ feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
 workflow-type: tm+mt
-source-wordcount: '1624'
-ht-degree: 33%
+source-wordcount: '1579'
+ht-degree: 32%
 
 ---
 
@@ -32,7 +32,7 @@ Afin d’accroître la transparence et la visibilité des activités exécutées
 
 Pour faire simple, un journal d’audit indique **qui** effectué **quelle** action et **quand**. Chaque action enregistrée dans un journal contient des métadonnées qui indiquent le type d’action, la date et l’heure, l’ID d’e-mail de l’utilisateur ou de l’utilisatrice qui a exécuté l’action et des attributs supplémentaires liés au type d’action.
 
-Lorsqu’un utilisateur effectue une action, deux types d’événements d’audit sont enregistrés. Un événement principal capture le résultat de l’autorisation de l’action, [!UICONTROL autoriser] ou [!UICONTROL refuser], tandis qu’un événement amélioré capture le résultat de l’exécution, [!UICONTROL succès] ou [!UICONTROL échec]. Plusieurs événements améliorés peuvent être liés au même événement principal. Par exemple, lors de l’activation d’une destination, l’événement principal enregistre l’autorisation de l’action [!UICONTROL Mise à jour de destination], tandis que les événements améliorés enregistrent plusieurs actions [!UICONTROL Activation de segment].
+Lorsqu’un utilisateur effectue une action, deux types d’événements d’audit sont enregistrés. Un événement principal capture le résultat de l’autorisation de l’action, [!UICONTROL allow] ou [!UICONTROL deny], tandis qu’un événement amélioré capture le résultat de l’exécution, [!UICONTROL success] ou [!UICONTROL failure]. Plusieurs événements améliorés peuvent être liés au même événement principal. Par exemple, lors de l’activation d’une destination, l’événement principal enregistre l’autorisation de l’action [!UICONTROL Destination Update], tandis que les événements améliorés enregistrent plusieurs actions [!UICONTROL Segment Activate].
 
 >[!NOTE]
 >
@@ -63,9 +63,9 @@ Le tableau suivant décrit les actions sur lesquelles les ressources sont enregi
 | [Politique de fusion](../../../profile/merge-policies/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Profil de produit](../../../access-control/home.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Requête](../../../query-service/ui/overview.md) | <ul><li>Exécuter</li></ul> |
-| [Modèle de requête &#x200B;](../../../query-service/ui/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
+| [Modèle de requête ](../../../query-service/ui/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Rôle (contrôle d’accès basé sur les attributs)](../../../access-control/home.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li><li>Ajouter un utilisateur</li><li>Supprimer l’utilisateur</li></ul> |
-| [&#x200B; Sandbox &#x200B;](../../../sandboxes/home.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Réinitialiser</li><li>Supprimer</li></ul> |
+| [Sandbox](../../../sandboxes/home.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Réinitialiser</li><li>Supprimer</li></ul> |
 | [Requête planifiée](../../../query-service/ui/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Schéma](../../../xdm/schema/composition.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li><li>Activer pour le profil</li></ul> |
 | [Segment](../../../segmentation/home.md) | <ul><li>Créer</li><li>Supprimer</li><li>Activation de segment</li><li>Suppression de segment</li></ul> |
@@ -76,7 +76,7 @@ Le tableau suivant décrit les actions sur lesquelles les ressources sont enregi
 
 Lorsque la fonctionnalité est activée pour votre organisation, les journaux d’audit sont automatiquement collectés au fur et à mesure de l’activité. Vous n’avez pas besoin d’activer manuellement la collecte des journaux.
 
-Pour afficher et exporter les journaux d’audit, l’autorisation de contrôle d’accès **[!UICONTROL Afficher le journal d’activité de l’utilisateur]** doit être accordée (pour la catégorie [!UICONTROL Gouvernance des données]). Pour savoir comment gérer les autorisations individuelles pour les fonctionnalités Experience Platform, reportez-vous à la [documentation sur le contrôle d’accès](../../../access-control/home.md).
+Pour afficher et exporter les journaux d’audit, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View User Activity Log]** accordée (disponible dans la catégorie [!UICONTROL Data Governance] ). Pour savoir comment gérer les autorisations individuelles pour les fonctionnalités Experience Platform, reportez-vous à la [documentation sur le contrôle d’accès](../../../access-control/home.md).
 
 ## Gérer les journaux d’audit dans l’interface utilisateur {#managing-audit-logs-in-the-ui}
 
@@ -111,13 +111,13 @@ Les filtres suivants sont disponibles pour les événements d’audit dans l’i
 
 | Filtre | Description |
 | --- | --- |
-| [!UICONTROL Catégorie] | Utilisez le menu déroulant pour filtrer les résultats affichés par [&#x200B; catégorie &#x200B;](#category). |
+| [!UICONTROL Category] | Utilisez le menu déroulant pour filtrer les résultats affichés par [ catégorie ](#category). |
 | [!UICONTROL Action] | Filtrez par action. Les actions disponibles pour chaque service sont visibles dans le tableau des ressources ci-dessus. |
-| [!UICONTROL Utilisateur] | Saisissez l’ID utilisateur complet (par exemple, `johndoe@acme.com`) à filtrer par utilisateur. |
-| [!UICONTROL Statut] | Filtrer les événements d’audit par résultat : réussi, échec, autorisé ou refusé en raison de l’absence d’autorisations [de contrôle d’accès](../../../access-control/home.md). Pour une action exécutée, les événements principaux affichent [!UICONTROL Autoriser] ou [!UICONTROL Refuser]. Lorsque l’événement principal est [!UICONTROL &#x200B; Autoriser &#x200B;], il peut avoir associé un ou plusieurs événements améliorés affichant **[!UICONTROL Succès]** ou **[!UICONTROL Échec]**. Par exemple, une action réussie affiche [!UICONTROL Autoriser] sur l’événement principal et [!UICONTROL Succès] sur l’événement amélioré associé. |
+| [!UICONTROL User] | Saisissez l’ID utilisateur complet (par exemple, `johndoe@acme.com`) à filtrer par utilisateur. |
+| [!UICONTROL Status] | Filtrer les événements d’audit par résultat : réussi, échec, autorisé ou refusé en raison de l’absence d’autorisations [de contrôle d’accès](../../../access-control/home.md). Pour une action exécutée, les événements principaux affichent [!UICONTROL Allow] ou [!UICONTROL Deny]. Lorsque l’événement principal est [!UICONTROL Allow], il peut avoir associé un ou plusieurs événements améliorés affichant des **[!UICONTROL Success]** ou des **[!UICONTROL Failure]**. Par exemple, une action réussie affiche [!UICONTROL Allow] sur l’événement principal et [!UICONTROL Success] sur l’événement amélioré associé. |
 | [!UICONTROL Date] | Sélectionnez une date de début et/ou une date de fin pour définir une période en fonction de laquelle filtrer les résultats. Les données peuvent être exportées avec une période de recherche en amont de 90 jours (par exemple, 2021-12-15 à 2022-03-15). Cela peut varier en fonction du type d’événement. |
 
-Pour supprimer un filtre, sélectionnez « X » sur l’icône de pilule du filtre en question, ou sélectionnez **[!UICONTROL Effacer tout]** pour supprimer tous les filtres.
+Pour supprimer un filtre, sélectionnez « X » sur l’icône de pilule du filtre en question, ou sélectionnez **[!UICONTROL Clear all]** pour supprimer tous les filtres.
 
 ![Tableau de bord des audits avec le filtre clair mis en surbrillance.](../../images/audit-logs/clear-filters.png)
 
@@ -125,27 +125,27 @@ Les données du journal d’audit renvoyées contiennent les informations suivan
 
 | Nom de la colonne | Description |
 |---|---|
-| [!UICONTROL Horodatage] | Date et heure exactes de l’action effectuée au format `month/day/year hour:minute AM/PM`. |
-| [!UICONTROL Nom de la ressource] | La valeur du champ [!UICONTROL &#x200B; Nom de ressource &#x200B;] dépend de la catégorie choisie comme filtre. |
-| [!UICONTROL Catégorie] | Ce champ correspond à la catégorie sélectionnée dans la liste déroulante de filtre. |
+| [!UICONTROL Timestamp] | Date et heure exactes de l’action effectuée au format `month/day/year hour:minute AM/PM`. |
+| [!UICONTROL Asset Name] | La valeur du champ [!UICONTROL Asset Name] dépend de la catégorie choisie comme filtre. |
+| [!UICONTROL Category] | Ce champ correspond à la catégorie sélectionnée dans la liste déroulante de filtre. |
 | [!UICONTROL Action] | Les actions disponibles dépendent de la catégorie choisie comme filtre. |
-| [!UICONTROL Utilisateur] | Ce champ fournit l’identifiant utilisateur qui a exécuté la requête. |
+| [!UICONTROL User] | Ce champ fournit l’identifiant utilisateur qui a exécuté la requête. |
 
 ![Tableau de bord Audits avec le journal d’activité filtré en surbrillance.](../../images/audit-logs/filtered.png)
 
 ### Exportation des journaux d’audit {#export-audit-logs}
 
-Pour exporter la liste actuelle des journaux d’audit, sélectionnez **[!UICONTROL Journal de téléchargement]**.
+Pour exporter la liste actuelle des journaux d’audit, sélectionnez **[!UICONTROL Download log]**.
 
 >[!NOTE]
 >
 >Les journaux peuvent être demandés par intervalles de 90 jours jusqu’à 365 jours dans le passé. Cependant, la quantité maximale de journaux pouvant être renvoyés au cours d’une seule exportation est de 10 000 événements d’audit (principaux ou améliorés).
 
-![Tableau de bord des audits avec l’option [!UICONTROL Journal des téléchargements] mise en surbrillance.](../../images/audit-logs/download.png)
+![Tableau de bord des audits avec l’[!UICONTROL Download log] en surbrillance.](../../images/audit-logs/download.png)
 
-Dans la boîte de dialogue qui s’affiche, sélectionnez le format de votre choix (**[!UICONTROL CSV]** ou **[!UICONTROL JSON]**), puis sélectionnez **[!UICONTROL Télécharger]**. Le navigateur télécharge le fichier généré et l’enregistre sur votre ordinateur.
+Dans la boîte de dialogue qui s’affiche, sélectionnez le format de votre choix (**[!UICONTROL CSV]** ou **[!UICONTROL JSON]**), puis sélectionnez **[!UICONTROL Download]**. Le navigateur télécharge le fichier généré et l’enregistre sur votre ordinateur.
 
-![Boîte de dialogue de sélection du format de fichier avec [!UICONTROL Télécharger] en surbrillance.](../../images/audit-logs/select-download-format.png)
+![Boîte de dialogue de sélection du format de fichier avec [!UICONTROL Download] mise en surbrillance.](../../images/audit-logs/select-download-format.png)
 
 ## Activer les alertes {#enable-alerts}
 
@@ -169,7 +169,7 @@ Toutes les actions que vous pouvez effectuer dans l’interface utilisateur peuv
 
 ## Gestion des journaux d’audit pour Adobe Admin Console
 
-Pour savoir comment gérer les journaux d’audit des activités dans Adobe Admin Console, reportez-vous au [document](https://helpx.adobe.com/fr/enterprise/using/audit-logs.html) suivant.
+Pour savoir comment gérer les journaux d’audit des activités dans Adobe Admin Console, reportez-vous au [document](https://helpx.adobe.com/enterprise/using/audit-logs.html) suivant.
 
 ## Étapes suivantes et ressources supplémentaires
 
@@ -177,4 +177,4 @@ Ce guide explique comment gérer les journaux d’audit dans Experience Platform
 
 Pour mieux comprendre les journaux d’audit dans Experience Platform, regardez la vidéo suivante :
 
->[!VIDEO](https://video.tv.adobe.com/v/344646?quality=12&learn=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)

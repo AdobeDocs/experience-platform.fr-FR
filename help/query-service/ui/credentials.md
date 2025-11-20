@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; accueil;rubriques populaires;query service;Query Service;requête;éditeur de requêtes;éditeur de requêtes;éditeur de requêtes;
+keywords: Experience Platform;accueil;rubriques populaires;query service;Query Service;requête;requêteur;Requêteur;
 solution: Experience Platform
 title: Guide des informations d’identification de Query Service
 description: Adobe Experience Platform Query Service fournit une interface utilisateur qui peut être utilisée pour écrire et exécuter des requêtes, afficher des requêtes précédemment exécutées et accéder à des requêtes enregistrées par des utilisateurs au sein de votre organisation.
@@ -36,7 +36,7 @@ La section **[!UICONTROL Expiring credentials]** fournit les informations suivan
 - **[!UICONTROL Port]** : numéro de port de l’hôte auquel se connecter.
 - **[!UICONTROL Database]** : nom de la base de données à laquelle connecter un client.
 - **[!UICONTROL Username]** : nom d’utilisateur utilisé pour la connexion à Query Service.
-- **[!UICONTROL Password]** : mot de passe utilisé pour se connecter à Query Service. Les mots de passe de l’interface utilisateur ont été hachés pour des raisons de sécurité. Sélectionnez l’icône de copie (![&#x200B; Icône de copie .](/help/images/icons/copy.png)) pour copier vos informations d’identification complètes et non hachées dans le presse-papiers.
+- **[!UICONTROL Password]** : mot de passe utilisé pour se connecter à Query Service. Les mots de passe de l’interface utilisateur ont été hachés pour des raisons de sécurité. Sélectionnez l’icône de copie (![ Icône de copie .](/help/images/icons/copy.png)) pour copier vos informations d’identification complètes et non hachées dans le presse-papiers.
 - **[!UICONTROL PSQL command]** : commande qui a inséré automatiquement toutes les informations pertinentes pour vous connecter à Query Service à l’aide de PSQL sur la ligne de commande.
 - **[!UICONTROL Expires]** : date et heure d’expiration des informations d’identification arrivant à expiration. La durée de validité par défaut du jeton est de 24 heures, mais elle peut être modifiée dans les paramètres avancés d’Admin Console.
 
@@ -46,7 +46,7 @@ La section **[!UICONTROL Expiring credentials]** fournit les informations suivan
 >
 >![Onglet Paramètres d’Admin Console avec Confidentialité et sécurité, Paramètres d’authentification et Durée de vie maximale de la session mis en surbrillance.](../images/ui/credentials/max-session-life.png)
 >
->Consultez la documentation d’aide d’Adobe pour plus d’informations sur les [&#x200B; Paramètres avancés &#x200B;](https://helpx.adobe.com/fr/enterprise/using/authentication-settings.html#advanced-settings) proposés par Admin Console.
+>Consultez la documentation d’aide d’Adobe pour plus d’informations sur les [ Paramètres avancés ](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) proposés par Admin Console.
 
 ### Connexion aux données Customer Journey Analytics dans les sessions de requête {#connect-to-customer-journey-analytics}
 
@@ -66,9 +66,9 @@ Pour accéder à vos données Customer Journey Analytics dans Power BI ou Tablea
 >
 >Lorsque vous connectez Power BI ou Tableau à Customer Journey Analytics, le droit « sessions simultanées » de Query Service est utilisé. Si des sessions et des requêtes supplémentaires sont requises, il est possible d’acheter un module complémentaire de pack d’utilisateurs de requêtes ad hoc supplémentaire pour obtenir cinq sessions simultanées supplémentaires et une requête simultanée supplémentaire.
 
-Vous pouvez également accéder à vos données Customer Journey Analytics directement à partir de Query Editor ou de l’interface de ligne de commande Postgres. Pour ce faire, référencez la base de données `cja` lors de l’écriture de votre requête. Pour plus d’informations sur l’écriture, l’exécution et l’enregistrement de requêtes[&#x200B; consultez le guide de création de requêtes &#x200B;](./user-guide.md#query-authoring)Query Editor).
+Vous pouvez également accéder à vos données Customer Journey Analytics directement à partir de Query Editor ou de l’interface de ligne de commande Postgres. Pour ce faire, référencez la base de données `cja` lors de l’écriture de votre requête. Pour plus d’informations sur l’écriture, l’exécution et l’enregistrement de requêtes[ consultez le guide de création de requêtes ](./user-guide.md#query-authoring)Query Editor).
 
-Consultez le guide d’extension [BI](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/cja-dataviews/bi-extension) pour obtenir des instructions complètes sur l’accès à vos vues de données Customer Journey Analytics avec SQL.
+Consultez le guide d’extension [BI](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) pour obtenir des instructions complètes sur l’accès à vos vues de données Customer Journey Analytics avec SQL.
 
 ## Informations d’identification n’expirant pas {#non-expiring-credentials}
 
@@ -176,7 +176,7 @@ Le tableau ci-dessous décrit les paramètres généralement requis pour établi
 >[!NOTE]
 >
 >Lors de la connexion à un hôte à l’aide d’informations d’identification non expirantes, il est toujours nécessaire d’utiliser tous les paramètres répertoriés dans la section [!UICONTROL EXPIRING CREDENTIALS] , à l’exception du mot de passe et du nom d’utilisateur.
->&#x200B;>Le format de saisie de votre nom d’utilisateur et de votre mot de passe utilise des valeurs séparées par deux points, comme illustré dans cet exemple de `username:{your_username}` et de `password:{password_string}`.
+>Le format de saisie de votre nom d’utilisateur et de votre mot de passe utilise des valeurs séparées par deux points, comme illustré dans cet exemple de `username:{your_username}` et de `password:{password_string}`.
 
 | Paramètre | Description | Exemple |
 |---|---|---|

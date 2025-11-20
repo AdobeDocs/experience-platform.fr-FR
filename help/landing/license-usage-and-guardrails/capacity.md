@@ -4,8 +4,8 @@ description: Découvrez les limites d’utilisation et de capacité de votre lic
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
 source-git-commit: ae0c626eaad66f663c9d97137087b2cca24d747e
 workflow-type: tm+mt
-source-wordcount: '1621'
-ht-degree: 6%
+source-wordcount: '1605'
+ht-degree: 7%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 6%
 >   - Cette autorisation vous permet de **modifier** vos allocations de capacité.
 >   - En outre, vous **devez** avoir accès à tous les sandbox pour lesquels vous souhaitez modifier les allocations de capacité.
 >
->Vous trouverez plus d’informations sur les autorisations dans Experience Platform dans la [&#x200B; présentation du contrôle d’accès &#x200B;](/help/access-control/home.md#permissions)
+>Vous trouverez plus d’informations sur les autorisations dans Experience Platform dans la [ présentation du contrôle d’accès ](/help/access-control/home.md#permissions)
 >
 >De plus, si vous avez acheté Segmentation par flux à haut débit, vous **ne pourrez pas** allouer vos capacités à l’aide de la capacité. Pour mettre à jour vos capacités, contactez l’Assistance clientèle d’Adobe.
 
@@ -72,7 +72,7 @@ Si votre utilisation dépasse 100 % de votre capacité sous licence, vous serez 
 
 ## Accès {#access}
 
-Pour accéder à la présentation de la capacité, sélectionnez **[!UICONTROL Utilisation de la licence]** suivie de **[!UICONTROL Capacité]**.
+Pour accéder à la présentation de la capacité, sélectionnez **[!UICONTROL License usage]** suivi de **[!UICONTROL Capacity]**.
 
 ![La méthode d’accès à la section Capacité est mise en surbrillance.](/help/landing/images/capacity/access-capacity.png)
 
@@ -82,7 +82,7 @@ La page Aperçu de la capacité s’affiche, avec des informations, notamment un
 
 ### Historique des alertes {#alert-history}
 
-La section **[!UICONTROL Historique des alertes]** affiche une liste des violations de capacité les plus récentes au sein de votre organisation.
+La section **[!UICONTROL Alert history]** affiche une liste des violations de capacité les plus récentes au sein de votre organisation.
 
 ![La section Historique des alertes s’affiche.](/help/landing/images/capacity/alert-history.png)
 
@@ -92,7 +92,7 @@ La section **[!UICONTROL Historique des alertes]** affiche une liste des violati
 | Alerte | Capacité qui a été dépassée dans le sandbox. |
 | Date et heure | Données et heure auxquelles la violation s’est produite. |
 
-Pour afficher l’historique complet des alertes de votre organisation, sélectionnez l’icône ![des trois petits points](/help/images/icons/more.png), puis **[!UICONTROL Afficher tout]**.
+Pour afficher un historique complet des alertes de votre organisation, sélectionnez l’icône ![des trois petits points](/help/images/icons/more.png), puis **[!UICONTROL View all]**.
 
 ![L’historique complet des alertes s’affiche pour une organisation.](/help/landing/images/capacity/full-alert-history.png)
 
@@ -127,7 +127,7 @@ La page Détails du débit de diffusion en continu s’affiche. Vous pouvez voir
 
 ![La page Débit de diffusion en continu s’affiche, affichant des informations détaillées sur le débit de diffusion en continu pour le sandbox sélectionné.](/help/landing/images/capacity/streaming-capacity-allocation.png)
 
-Pour mettre à jour les capacités de débit de diffusion en continu de l’organisation, sélectionnez **[!UICONTROL Allouer les capacités]**.
+Pour mettre à jour les capacités de débit de diffusion en continu de l’organisation, sélectionnez **[!UICONTROL Allocate capacities]**.
 
 ![Le bouton Allouer des capacités est mis en surbrillance dans la page des détails du débit de diffusion en continu.](/help/landing/images/capacity/select-allocate.png)
 
@@ -141,11 +141,11 @@ La page d’attribution s’affiche. Sur cette page, vous pouvez définir vos ca
 >
 >Si la valeur n’est pas de l’ordre de 100, elle sera arrondie à l’unité supérieure ou inférieure en conséquence.
 
-Après avoir mis à jour les allocations de capacité, sélectionnez **[!UICONTROL Enregistrer]** pour terminer les mises à jour. Notez que la prise en compte des modifications dans votre organisation peut prendre jusqu’à 10 minutes.
+Après avoir mis à jour les allocations de capacité, sélectionnez **[!UICONTROL Save]** pour terminer les mises à jour. Notez que la prise en compte des modifications dans votre organisation peut prendre jusqu’à 10 minutes.
 
 #### Taille de l’audience {#audience-count}
 
-Les sections **[!UICONTROL Nombre d’audiences en flux continu]** et **[!UICONTROL Nombre d’audiences Edge]** affichent le nombre d’audiences en flux continu et Edge dans le sandbox ainsi que le nombre maximal d’audiences en flux continu et Edge autorisées dans le sandbox.
+Les sections **[!UICONTROL Streaming audience count]** et **[!UICONTROL Edge audience count]** indiquent le nombre d’audiences de diffusion en continu et Edge dans le sandbox, ainsi que le nombre maximal d’audiences de diffusion en continu et Edge autorisées dans le sandbox.
 
 ![Les sections Nombre d’audiences s’affichent.](/help/landing/images/capacity/audience-count.png)
 
@@ -175,7 +175,7 @@ En outre, vous pouvez consulter vos flux de données et voir si vous pouvez opti
 
 La vidéo suivante présente un aperçu de la capacité.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475275/?learn=on&enablevpops&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## Questions fréquentes {#faq}
 

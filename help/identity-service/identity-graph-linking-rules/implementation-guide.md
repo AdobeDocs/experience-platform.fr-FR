@@ -4,7 +4,7 @@ description: Découvrez les étapes recommandées à suivre lors de l’impléme
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
-source-wordcount: '1956'
+source-wordcount: '1944'
 ht-degree: 6%
 
 ---
@@ -94,7 +94,7 @@ Pendant votre processus de pré-implémentation, vous devez vous assurer que les
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/fr/",
+          "URL": "https://business.adobe.com/",
           "name": "Adobe Business"
       }
   }
@@ -133,7 +133,7 @@ Vous ne devez **pas** envoyer une payload comme ci-dessous :
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/fr/",
+          "URL": "https://business.adobe.com/",
           "name": "Adobe Business"
       }
   }
@@ -169,7 +169,7 @@ Dans cet exemple, vous pouvez supposer que l’événement suivant a été envoy
     "timestamp": "2024-09-24T15:02:32+00:00",
     "web": {
         "webPageDetails": {
-            "URL": "https://business.adobe.com/fr/",
+            "URL": "https://business.adobe.com/",
             "name": "Adobe Business"
         }
     }
@@ -182,8 +182,8 @@ Dans cet exemple, vous pouvez supposer que l’événement suivant a été envoy
 
 La première étape du processus de mise en œuvre d’Identity Service consiste à ajouter votre compte Experience Platform à un rôle doté des autorisations nécessaires. Votre administrateur peut configurer les autorisations de votre compte en accédant à l’interface utilisateur Autorisations dans Adobe Experience Cloud. À partir de là, votre compte doit être ajouté à un rôle avec les autorisations suivantes :
 
-* [!UICONTROL Afficher les paramètres d’identité] : appliquez cette autorisation pour pouvoir afficher les espaces de noms uniques et la priorité des espaces de noms sur la page de navigation des espaces de noms d’identité.
-* [!UICONTROL Modifier les paramètres d’identité] : appliquez cette autorisation pour pouvoir modifier et enregistrer vos paramètres d’identité.
+* [!UICONTROL View Identity Settings] : appliquez cette autorisation pour pouvoir afficher les espaces de noms uniques et la priorité des espaces de noms sur la page de navigation des espaces de noms d’identité.
+* [!UICONTROL Edit Identity Settings] : appliquez cette autorisation pour pouvoir modifier et enregistrer vos paramètres d’identité.
 
 Pour plus d’informations sur les autorisations, consultez le [guide des autorisations](../../access-control/abac/ui/permissions.md).
 
@@ -199,7 +199,7 @@ En créant différentes configurations, vous pouvez utiliser l’outil de simula
 
 ## Configurer les paramètres d’identité {#identity-settings}
 
-Une fois que vous avez une meilleure idée du comportement de votre graphique, accédez à l’[interface utilisateur des paramètres d’identité](./identity-settings-ui.md) dans l’espace de travail de l’interface utilisateur d’Identity Service. Pour accéder à l’interface utilisateur des paramètres d’identité, sélectionnez **[!UICONTROL Identités]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Paramètres]**.
+Une fois que vous avez une meilleure idée du comportement de votre graphique, accédez à l’[interface utilisateur des paramètres d’identité](./identity-settings-ui.md) dans l’espace de travail de l’interface utilisateur d’Identity Service. Pour accéder à l’interface utilisateur des paramètres d’identité, sélectionnez **[!UICONTROL Identities]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Settings]**.
 
 ![Page de navigation des identités avec le bouton des paramètres en surbrillance.](../images/implementation/settings.png "Page de navigation des identités avec le bouton des paramètres en surbrillance."){zoomable="yes"}
 
@@ -221,7 +221,7 @@ Pour obtenir des instructions sur la création d’un schéma, consultez le guid
 
 ## Créer un jeu de données {#dataset}
 
-Créez ensuite un jeu de données afin de fournir une structure pour les données que vous allez ingérer. Un jeu de données est une structure de stockage et de gestion pour une collection de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les jeux de données fonctionnent en tandem avec les schémas. Pour ingérer des données dans le profil client en temps réel, votre jeu de données doit être activé pour l’ingestion de profil. Pour que votre jeu de données soit activé pour Profil, il doit référencer un schéma activé pour Ingestion de profil.
+Créez ensuite un jeu de données afin de fournir une structure pour les données que vous allez ingérer. Un jeu de données est une structure de stockage et de gestion pour une collection de données, généralement sous la forme d’une table, qui contient un schéma (des colonnes) et des champs (des lignes). Les jeux de données fonctionnent en tandem avec les schémas. Pour ingérer des données dans le profil client en temps réel, votre jeu de données doit être activé pour l’ingestion de profil. Pour que votre jeu de données soit activé pour Profil, il doit référencer un schéma activé pour Ingestion de profil.
 
 Pour plus d’informations sur la création d’un jeu de données, consultez le [guide de l’interface utilisateur des jeux de données](../../catalog/datasets/user-guide.md).
 
@@ -245,15 +245,15 @@ Une fois que vous disposez de tous les éléments répertoriés ci-dessus, vous 
 >
 >Une fois vos données ingérées, la payload de données brutes XDM ne change pas. Il se peut que vos configurations d’identité principale s’affichent toujours dans l’interface utilisateur. Toutefois, ces configurations seront remplacées par les paramètres d’identité.
 
-Pour tout commentaire, utilisez l’option **[!UICONTROL Commentaires Beta]** dans l’espace de travail de l’interface utilisateur d’Identity Service.
+Pour tout commentaire, utilisez l’option **[!UICONTROL Beta feedback]** dans l’espace de travail de l’interface utilisateur d’Identity Service.
 
 ## Validation des graphiques {#validate}
 
 Utilisez le tableau de bord des identités pour obtenir des informations sur l’état de vos graphiques d’identités, tels que le nombre d’identités global et les tendances de nombre de graphiques, le nombre d’identités par espace de noms et le nombre de graphiques par taille de graphique. Vous pouvez également utiliser le tableau de bord des identités pour afficher les tendances sur les graphiques comportant plusieurs identités, organisées par espace de noms.
 
-Sélectionnez les points de suspension (`...`), puis sélectionnez **[!UICONTROL Afficher plus]** pour obtenir plus d’informations et vérifier qu’il n’existe aucun graphique réduit.
+Sélectionnez les points de suspension (`...`), puis sélectionnez **[!UICONTROL View more]** pour obtenir des informations supplémentaires et vérifier qu’il n’existe aucun graphique réduit.
 
-![&#x200B; Tableau de bord des identités dans l’espace de travail de l’interface utilisateur d’Identity Service.](../images/implementation/identity_dashboard.png "Tableau de bord des identités dans l’espace de travail de l’interface utilisateur du service d’identités."){zoomable="yes"}
+![ Tableau de bord des identités dans l’espace de travail de l’interface utilisateur d’Identity Service.](../images/implementation/identity_dashboard.png "Tableau de bord des identités dans l’espace de travail de l’interface utilisateur du service d’identités."){zoomable="yes"}
 
 Utilisez la fenêtre qui s’affiche pour afficher des informations sur les graphiques réduits. Dans cet exemple, e-mail et téléphone sont marqués comme espace de noms unique. Par conséquent, votre sandbox ne contient aucun graphique réduit.
 

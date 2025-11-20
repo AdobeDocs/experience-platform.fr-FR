@@ -5,8 +5,8 @@ description: Ce document fournit des informations sur la gestion des libellés v
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 37%
+source-wordcount: '238'
+ht-degree: 38%
 
 ---
 
@@ -33,14 +33,14 @@ Les libellés vous permettent de classer les jeux de données et les champs en f
 
 >[!NOTE]
 >
->Il n’existe qu’une seule liste de libellés pour l’ensemble de l’organisation. Pour créer un libellé personnalisé, vous devez disposer d’autorisations **[!UICONTROL Gérer les libellés d’utilisation]** sur le sandbox de production. La suppression d’étiquettes n’est actuellement pas prise en charge.
+>Il n’existe qu’une seule liste de libellés pour l’ensemble de l’organisation. Pour créer un libellé personnalisé, vous aurez besoin d’autorisations **[!UICONTROL Manage Usage Labels]** sur le sandbox de production. La suppression d’étiquettes n’est actuellement pas prise en charge.
 
-Pour créer un nouveau libellé, sélectionnez l’onglet **[!UICONTROL Libellés]** dans la barre latérale et sélectionnez **[!UICONTROL Créer un libellé]**.
+Pour créer un nouveau libellé, sélectionnez l’onglet **[!UICONTROL Labels]** dans la barre latérale et sélectionnez **[!UICONTROL Create Label]**.
 
 ![flac-new-label](../../images/flac-ui/create-label.png)
 
-La boîte de dialogue **[!UICONTROL Créer un libellé]** s’affiche et vous invite à saisir un nom, un nom convivial facultatif et une description facultative.
+La boîte de dialogue **[!UICONTROL Create a new label]** s’affiche, vous invitant à saisir un nom, un nom convivial facultatif et une description facultative.
 
 ![new-label-info](../../images/flac-ui/new-label-info.png)
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Confirmer]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Confirm]**.

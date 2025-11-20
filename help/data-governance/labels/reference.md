@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;gouvernance des données;api étiquette dʼutilisation des données;api service de politique;étiquettes dʼutilisation des données prises en charge;étiquettes contrat;étiquettes identité;étiquettes sensibles
 solution: Experience Platform
-title: Glossaire des étiquettes dʼutilisation des données
-description: Ce document décrit toutes les étiquettes dʼutilisation des données actuellement prises en charge par Adobe Experience Platform.
+title: Glossaire des libellés dʼutilisation des données
+description: Ce document décrit tous les libellés dʼutilisation des données actuellement pris en charge par Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 93%
 
 ---
 
-# Glossaire des étiquettes dʼutilisation des données {#data-usage-labels-glossary}
+# Glossaire des libellés dʼutilisation des données {#data-usage-labels-glossary}
 
 >[!CONTEXTUALHELP]
 >id="platform_policies_labeltype"
@@ -42,16 +42,16 @@ Les étiquettes Contrat « C » sont utilisées pour catégoriser des données
 | [C11](#c11) | Les données ne peuvent pas être partagées avec les partenaires de correspondance de segment. |
 | [C12](#c12) | Les données ne peuvent pas être exportées de quelque manière que ce soit. |
 
-## Étiquettes Identité {#identity}
+## Libellés Identité {#identity}
 
-Les étiquettes Identité « I » sont utilisées pour catégoriser des données pouvant identifier ou contacter une personne en particulier.
+Les libellés Identité « I » sont utilisés pour catégoriser des données pouvant identifier ou contacter une personne en particulier.
 
 | Libellé | Définition |
 | --- | --- |
 | **I1** | Données directement identifiables qui permettent d’identifier ou de contacter une personne spécifique, plutôt qu’un appareil. |
 | **I2** | Données indirectement identifiables pouvant être utilisées en combinaison avec toute autre donnée pour identifier ou contacter une personne spécifique. |
 
-## Étiquettes Sensibles {#sensitive}
+## Libellés Sensibles {#sensitive}
 
 Les libellés sensibles « S » sont utilisés pour classer les données que vous et votre entreprise considérez comme sensibles.
 
@@ -74,11 +74,11 @@ Ce libellé est utilisé pour régir l’utilisation des données de prospect.
 | --- | --- |
 | **Tiers/Tierces** | Les données tierces sont des données qui vous sont fournies par un fournisseur de données tiers. Un fournisseur de données tiers est une entité qui a conclu un accord avec votre organisation vous autorisant à accéder aux données du tiers, à les utiliser, à les afficher et à les transmettre conjointement avec Experience Platform. |
 | **Enrichissement Par Un Tiers** | Données collectées par une organisation tierce qui n’est pas directement liée au titulaire de données. Le libellé doit être appliqué aux données tierces utilisées pour enrichir les profils propriétaires. |
-| **Prospection Par Un Tiers** | Données collectées par une organisation tierce qui n’est pas directement liée au titulaire de données. Le libellé doit être appliqué aux données tierces utilisées pour la prospection au-dessus de l’entonnoir auprès de nouveaux clients. |
+| **Prospection Par Un Tiers** | Données collectées par une organisation tierce qui n’est pas directement liée au titulaire de données. Le libellé doit être appliqué aux données tierces utilisées en plus de la prospection funnel auprès de nouveaux clients. |
 
 ## Annexe
 
-Les sections ci-dessous fournissent des informations supplémentaires sur les étiquettes dʼutilisation des données disponibles.
+Les sections ci-dessous fournissent des informations supplémentaires sur les libellés dʼutilisation des données disponibles.
 
 ### Détails des étiquettes Contrat
 
