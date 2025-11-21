@@ -30,7 +30,7 @@ ht-degree: 75%
 * API d’outils Sandbox {#sandbox-tooling-api}
    * [Vue d’ensemble](sandbox-tooling-api/overview.md)
    * [Prise en main](sandbox-tooling-api/getting-started.md)
-   * [Packages  &#x200B;](sandbox-tooling-api/packages.md)
+   * [Packages  ](sandbox-tooling-api/packages.md)
    * [Outils](sandbox-tooling-api/tools.md)
    * [Annexe](sandbox-tooling-api/appendix.md)
 * Cas d’utilisation {#use-cases}

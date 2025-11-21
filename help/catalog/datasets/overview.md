@@ -46,10 +46,10 @@ La gouvernance des données d’Adobe Experience Platform vous permet de gére
 >
 >Les libellés ne peuvent plus être appliqués aux champs au niveau du jeu de données. Ce workflow a été abandonné au profit de l’application des libellés au niveau du schéma. Les libellés précédemment appliqués au niveau de l’objet du jeu de données seront toujours pris en charge par l’interface utilisateur d’Experience Platform jusqu’au 31 mai 2024. Pour garantir la cohérence de vos libellés sur tous les schémas, les libellés précédemment attachés aux champs au niveau du jeu de données doivent être migrés au niveau du schéma par vous-même au cours de l’année à venir. Consultez la section sur la [migration des libellés précédemment appliqués](../../data-governance/e2e.md#migrate-labels) pour connaitre la procédure à suivre.
 
-Pour plus d’informations sur ce service, consultez la [présentation de la gouvernance des données](../../data-governance/home.md). Pour savoir comment utiliser les étiquettes d’utilisation dans [!DNL Experience Platform], reportez-vous aux guides suivants :
+Pour plus d’informations sur ce service, consultez la [présentation de la gouvernance des données](../../data-governance/home.md). Pour savoir comment utiliser les libellés d’utilisation dans [!DNL Experience Platform], reportez-vous aux guides suivants :
 
 * [Gérer les libellés dans l’interface utilisateur](../../data-governance/labels/user-guide.md)
-* [Gérer les étiquettes de jeux de données dans l’API](../../data-governance/labels/dataset-api.md)
+* [Gérer les libellés de jeux de données dans l’API](../../data-governance/labels/dataset-api.md)
 
 ## Jeux de données dans les services [!DNL Experience Platform] en aval
 

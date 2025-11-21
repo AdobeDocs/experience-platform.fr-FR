@@ -5,8 +5,8 @@ feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
 source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
-source-wordcount: '2074'
-ht-degree: 85%
+source-wordcount: '2027'
+ht-degree: 74%
 
 ---
 
@@ -22,7 +22,7 @@ Utilisez la prise en charge de données tierces dans Real-Time CDP pour dévelo
 
 ## Pourquoi envisager ce cas d’utilisation {#why-this-use-case}
 
-Les marques sont simultanément confrontées à d’énormes défis liés à l’exécution responsable de cas d’utilisation d’acquisition client au sommet de l’entonnoir, sans dépendre de cookies tiers, de budgets limités et d’une demande accrue de transparence et de retour sur dépenses publicitaires.
+Funnel Les marques sont simultanément confrontées à d’énormes défis liés à l’exécution responsable de cas d’utilisation d’acquisition de clients haut de gamme sans dépendre de cookies tiers, de budgets limités et d’une demande accrue de transparence et de retour sur dépenses publicitaires.
 
 Adobe Real-Time Customer Data Platform peut aider les marques à faire passer en toute sécurité leurs cas d’utilisation pris en charge par Data Management Platform (DMP) à des alternatives sans cookies et ce, d’une manière qui apporte toute la sophistication et la puissance de la segmentation en libre-service, du traitement des audiences et de l’activation dans un seul système. Tout cela sans compromettre l’accent indéfectible d’Adobe sur l’utilisation responsable des données au moyen d’un cadre breveté de gouvernance des données et de consentement.
 
@@ -84,29 +84,29 @@ Pour vous préparer à recevoir des profils de prospects de votre partenaire de 
 
 Les composants d’identité, de gestion des données et de gouvernance que vous utiliserez sont les suivants :
 
-* Un nouveau type d’identité **[!UICONTROL Identifiant de partenaire]** pour les profils fournis par le partenaire
-* Une nouvelle classe **[!UICONTROL XDM Individual Prospect Profile]**
+* Un nouveau type d’identité **[!UICONTROL Partner ID]** pour les profils fournis par le partenaire
+* Une nouvelle classe XDM **[!UICONTROL XDM Individual Prospect Profile]**
 * **(Documentation à venir)** Des groupes de champs personnalisés pour la prise en charge des données des partenaires
 * **(Documentation à venir)** Des libellés tiers que vous ajouterez aux attributs provenant des partenaires
 
 #### Créer un espace de noms d’identité de l’ID du partenaire {#create-partner-id-namespace}
 
-Commencez par créer un type d’identité pour les profils que vous recevrez du partenaire. Pour ce faire, dans la section Identité, créez un espace de noms d’identité du type **[!UICONTROL Identifiant de partenaire]**.
+Commencez par créer un type d’identité pour les profils que vous recevrez du partenaire. Pour ce faire, dans la section Identité , vous devez créer un espace de noms d’identité de type **[!UICONTROL Partner ID]**.
 
 ![Création d’un espace de noms d’identité Identifiant de partenaire.](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
 
 * En savoir plus sur l’identifiant de partenaire dans la [section Types d’identité](/help/identity-service/features/namespaces.md).
 * Découvrez [comment définir des champs d’identité](/help/xdm/ui/fields/identity.md) dans l’interface utilisateur d’Experience Platform.
 
-#### Créer un schéma avec la classe **[!UICONTROL XDM Individual Prospect Profile]**
+#### Création d’un schéma avec la classe **[!UICONTROL XDM Individual Prospect Profile]**
 
-Ensuite, dans **[!UICONTROL Gestion des données]** > **[!UICONTROL Schémas]**, créez un schéma et attribuez-lui la classe **[!UICONTROL XDM Individual Prospect Profile]**.
+Ensuite, dans **[!UICONTROL Data Management]** > **[!UICONTROL Schemas]**, créez un schéma et affectez-lui la classe **[!UICONTROL XDM Individual Prospect Profile]**.
 
 ![Recherchez la classe XDM Individual Prospect Profile dans le créateur de schémas XDM.](/help/rtcdp/assets/partner-data/prospecting/xdm-individual-prospect-class.png)
 
 Voici comment [créer et modifier des schémas dans l’interface utilisateur](/help/xdm/ui/resources/schemas.md) et obtenir des informations complètes sur la classe XDM Individual Prospect Profile (lien à venir).
 
-La classe **[!UICONTROL XDM Individual Prospect Profile]** est préconfigurée avec les champs illustrés ci-dessous. Pour enrichir votre schéma avec des attributs fournis par le partenaire quant aux profils de prospects, vous pouvez soit créer un nouveau groupe de champs avec les attributs attendus et l’ajouter au schéma, soit utiliser l’un des groupes de champs préconfigurés fournis par Adobe.
+La classe **[!UICONTROL XDM Individual Prospect Profile]** est préconfigurée avec les champs affichés ci-dessous. Pour enrichir votre schéma avec des attributs fournis par le partenaire quant aux profils de prospects, vous pouvez soit créer un nouveau groupe de champs avec les attributs attendus et l’ajouter au schéma, soit utiliser l’un des groupes de champs préconfigurés fournis par Adobe.
 
 ![Champs préconfigurés pour la classe XDM Individual Prospect Profile.](/help/rtcdp/assets/partner-data/prospecting/preconfigured-fields-individual-prospect-class.png)
 
@@ -122,16 +122,16 @@ Notez que le schéma n’est pas encore activé pour le profil. Activez le bouto
 
 ![Activation d’un schéma pour le profil.](/help/rtcdp/assets/partner-data/prospecting/enable-schema-for-profile.png)
 
-#### Ajouter le libellé de gouvernance des données tierces à tous les champs du schéma
+#### Ajouter l’étiquette de gouvernance des données tierce à tous les champs du schéma
 
-Envisagez d’ajouter des libellés de gouvernance des données tierces à tous les champs qui constituent le schéma. Vous garantissez ainsi une utilisation responsable de données tierces et minimisez le risque de fuite de données. Obtenez plus d’informations sur [les étiquettes de gouvernance des données tierces](../../data-governance/labels/reference.md#partner-ecosystem-labels).
+Envisagez d’ajouter des étiquettes de gouvernance des données tierces à tous les champs qui constituent le schéma. Vous garantissez ainsi une utilisation responsable de données tierces et minimisez le risque de fuite de données. Obtenez plus d’informations sur [les étiquettes de gouvernance des données tierces](../../data-governance/labels/reference.md#partner-ecosystem-labels).
 
 Pour ce faire, procédez comme suit :
 
-1. Accédez au schéma que vous avez créé et sélectionnez l’onglet **[!UICONTROL Libellés]**.
-2. Sélectionnez tous les champs de ce schéma à l’aide de la case à cocher située tout en haut, puis cliquez sur l’icône en forme de crayon à droite pour appliquer des libellés de gouvernance des données à ce schéma.
-3. Sélectionnez le libellé **[!UICONTROL Réseau partenaire]** dans les catégories sur la gauche.
-4. Choisissez le libellé **[!UICONTROL Tiers]** et sélectionnez **[!UICONTROL Enregistrer]**.
+1. Accédez au schéma que vous avez créé et sélectionnez l’onglet **[!UICONTROL Labels]** .
+2. Sélectionnez tous les champs de ce schéma à l’aide de la case à cocher située tout en haut, puis cliquez sur l’icône en forme de crayon à droite pour appliquer des étiquettes de gouvernance des données à ce schéma.
+3. Sélectionnez le libellé **[!UICONTROL Partner Ecosystem]** dans les catégories à gauche.
+4. Choisissez le libellé appelé **[!UICONTROL Third Party]** et sélectionnez **[!UICONTROL Save]**.
 5. Notez que tous les champs du schéma portent désormais le libellé que vous avez sélectionné à l’étape précédente.
 
 >[!SUCCESS]
@@ -152,11 +152,11 @@ Après avoir préparé votre modèle de données pour la gestion des profils de 
 
 Pour charger des données d’exemple et remplir des profils de prospects, créez un jeu de données et chargez un fichier reçu du partenaire de données. Suivez les étapes ci-dessous :
 
-1. Accédez à **[!UICONTROL Gestion des données]** > **[!UICONTROL Jeux de données]** et sélectionnez **[!UICONTROL Créer un jeu de données]**.
+1. Accédez à **[!UICONTROL Data Management]** > **[!UICONTROL Datasets]** et sélectionnez **[!UICONTROL Create dataset]**.
 2. Sélectionnez Créer un jeu de données à partir d’un schéma
 3. Sélectionner le schéma créé lors d’une étape précédente
 4. Attribuez un nom à votre jeu de données et éventuellement une description.
-5. Sélectionnez **[!UICONTROL Terminer]**.
+5. Sélectionnez **[!UICONTROL Finish]**.
 
 ![Enregistrement des étapes de création d’un jeu de données pour les profils de prospects.](/help/rtcdp/assets/partner-data/prospecting/create-dataset-for-prospect-profiles.gif)
 
@@ -164,7 +164,7 @@ Notez que, comme à l’étape de création d’un schéma, vous devez activer l
 
 ![Activation d’un jeu de données pour le profil.](/help/rtcdp/assets/partner-data/prospecting/enable-dataset-for-profile.png)
 
-Pour charger un fichier que vous avez reçu du partenaire dans le jeu de données, sélectionnez le jeu de données, faites défiler la page vers le bas dans le rail de droite, puis sélectionnez **[!UICONTROL Ajouter des données]**. Vous pouvez faire glisser votre fichier ou sélectionner **[!UICONTROL Choisir des fichiers]** pour accéder à l’emplacement du fichier et le sélectionner.
+Pour charger un fichier que vous avez reçu du partenaire dans le jeu de données, sélectionnez le jeu de données, faites défiler l’écran vers le bas dans le rail de droite, puis sélectionnez **[!UICONTROL Add data]**. Vous pouvez faire glisser et déposer votre fichier ou sélectionner **[!UICONTROL Choose files]** pour accéder à l’emplacement du fichier et le sélectionner.
 
 ![Ajout d’un fichier au jeu de données.](/help/rtcdp/assets/partner-data/prospecting/add-file-to-dataset.png)
 
@@ -183,13 +183,13 @@ Après avoir chargé la liste des profils du partenaire de données dans Real-Ti
 
 #### Inspecter les profils de prospects chargés {#inspect-profiles}
 
-Pour afficher la liste des profils de prospects, accédez à **[!UICONTROL Prospects]** > **[!UICONTROL Profils]** dans le rail de gauche.
+Pour afficher la liste des profils de prospects, accédez à **[!UICONTROL Prospects]** > **[!UICONTROL Profiles]** dans le rail de gauche.
 
-Notez que les profils de prospects que vous venez de charger dans Real-Time CDP peuvent prendre jusqu’à deux heures pour s’afficher dans la vue **[!UICONTROL Parcourir]** de l’écran Profil de prospects. Si la page affiche le message « Il n’y a pas de profil de prospect à parcourir pour le moment. », veuillez réessayer après un certain temps. Après un certain temps d’attente, les profils de prospects doivent commencer à s’afficher dans la vue **[!UICONTROL Parcourir]**.
+Notez que l’affichage des profils de prospects que vous venez de charger dans Real-Time CDP dans la vue **[!UICONTROL Browse]** de l’écran Profil de prospects peut prendre jusqu’à deux heures. Si la page affiche le message « Il n’y a pas de profil de prospect à parcourir pour le moment. », veuillez réessayer après un certain temps. Après une période d’attente, les profils des prospects doivent commencer à s’afficher dans la vue **[!UICONTROL Browse]**.
 
 >[!TIP]
 >
->Notez la présence de la colonne **[!UICONTROL Espace de noms d’identité]**. Si vous travaillez avec plusieurs fournisseurs de données, utilisez cette colonne pour déduire l’origine des profils de prospects.
+>Notez la présence de la colonne **[!UICONTROL Identity Namespace]** . Si vous travaillez avec plusieurs fournisseurs de données, utilisez cette colonne pour déduire l’origine des profils de prospects.
 
 ![Vue des profils de prospects chargés dans Real-Time CDP.](/help/rtcdp/assets/partner-data/prospecting/prospect-profiles-view.png)
 
@@ -203,7 +203,7 @@ En savoir plus sur les [profils de prospects](/help/profile/ui/prospect-profile.
 
 Utilisez la fonctionnalité de segmentation de Real-Time CDP pour créer des audiences à partir de vos profils de prospects. Utilisez les règles de segmentation souhaitées pour créer des audiences personnalisées.
 
-Pour commencer et créer des audiences composées de profils de prospects, accédez à **[!UICONTROL Prospects]** > **[!UICONTROL Audiences]**.
+Pour commencer et créer des audiences composées de profils de prospects, accédez à **[!UICONTROL Prospects]** > **[!UICONTROL Audiences]**.
 
 ![Vue des audiences de prospects.](/help/rtcdp/assets/partner-data/prospecting/prospect-audiences.png)
 

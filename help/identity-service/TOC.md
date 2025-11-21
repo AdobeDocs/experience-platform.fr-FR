@@ -33,7 +33,7 @@ ht-degree: 71%
       - [Interface utilisateur des paramètres d’identité](./identity-graph-linking-rules/identity-settings-ui.md)
    - [Présentation d’ECID](./features/ecid.md)
 - [Guide de mise en œuvre](implementation.md)
-- [Barrières de sécurité pour les données Identity &#x200B;](guardrails.md)
+- [Barrières de sécurité pour les données Identity ](guardrails.md)
 - API Service d’identités {#api}
    - [Prise en main](api/getting-started.md)
    - [Étiquetage d’un champ comme identité](api/label-identities.md)

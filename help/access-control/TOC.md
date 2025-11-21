@@ -16,7 +16,7 @@ ht-degree: 93%
 # Contrôle d&#39;accès {#access-control}
 
 * [Présentation du contrôle d’accès](home.md)
-* de contrôle d’accès basé sur les attributs{#abac}
+* Contrôle d’accès basé sur les attributs {#abac}
    * [Vue d’ensemble](abac/overview.md)
    * [Guide complet](abac/end-to-end-guide.md)
    * [Utiliser des libellés d’accès pour gérer l’accès des utilisateurs et utilisatrices aux flux de données de destination](/help/access-control/abac/apply-access-labels-destinations.md)
@@ -28,10 +28,10 @@ ht-degree: 93%
       * [Rôles](abac/ui/roles.md)
       * [Sandbox](abac/ui/sandboxes.md)
       * [Utilisateurs](abac/ui/users.md)
-   * du gestionnaire d’autorisations{#permissions-manager}
+   * Gestionnaire d’autorisations {#permissions-manager}
       * [Vue d’ensemble](abac/permission-manager/overview.md)
       * [Autorisations](abac/permission-manager/permissions.md)
-   * de l’API de contrôle d’accès basé sur les attributs{#abac-api}
+   * API de contrôle d’accès basé sur les attributs {#abac-api}
       * [Vue d’ensemble](abac/api/overview.md)
       * [Prise en main](abac/api/getting-started.md)
       * [Rôles](abac/api/roles.md)
@@ -44,7 +44,7 @@ ht-degree: 93%
    * [Gestion des détails et des services supplémentaires pour un profil de produit](ui/details-and-services.md)
    * [Création d’un profil de produits](ui/create-profile.md)
    * [Gestion des utilisateurs pour un profil de produit](ui/users.md)
-* API Access Control {#api}
+* API Access Control {#api}
    * [Prise en main](api/getting-started.md)
    * [Liste des noms des autorisations et des types de ressources](api/permissions-and-resource-types.md)
    * [Affichage des politiques efficaces](api/effective-policies.md)

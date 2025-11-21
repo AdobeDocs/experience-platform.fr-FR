@@ -66,7 +66,7 @@ De nombreuses opérations PATCH dans les API [!DNL Experience Platform] utilisen
 
 ## Puis-je utiliser Postman pour appeler les API [!DNL Experience Platform] ? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postman](https://www.postman.com/) est un outil utile pour visualiser les appels vers les API RESTful. Le Guide de prise en main de l’API Experience Platform [&#128279;](api-guide.md) contient une vidéo et des instructions pour l’importation de collections Postman. En outre, une liste des collections Postman pour chaque service est fournie.
+[Postman](https://www.postman.com/) est un outil utile pour visualiser les appels vers les API RESTful. Le Guide de prise en main de l’API Experience Platform [](api-guide.md) contient une vidéo et des instructions pour l’importation de collections Postman. En outre, une liste des collections Postman pour chaque service est fournie.
 
 ## Quelle est la configuration requise pour [!DNL Experience Platform] ? {#what-are-the-system-requirements-for-platform}
 
@@ -218,13 +218,13 @@ Voici une liste de guides de dépannage et de documentation de référence sur l
 | Contrôle d’accès | [API Access Control](https://www.adobe.io/experience-platform-apis/references/access-control/) | [Guide de dépannage du contrôle d’accès](../access-control/troubleshooting-guide.md) |
 | Adobe Experience Platform Data Ingestion | [[!DNL Batch Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) | [Guide de dépannage de l’ingestion par lots](../ingestion/batch-ingestion/troubleshooting.md) |
 | Adobe Experience Platform Data Ingestion | [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) | [Guide de dépannage de l’ingestion en flux continu](../ingestion/streaming-ingestion/troubleshooting.md) |
-| Espace de travail de science des données d’Adobe Experience Platform | [[!DNL Sensei Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) | Guide de dépannage du [[!DNL Data Science Workspace] &#x200B;](../data-science-workspace/troubleshooting-guide.md) |
+| Espace de travail de science des données d’Adobe Experience Platform | [[!DNL Sensei Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) | Guide de dépannage du [[!DNL Data Science Workspace] ](../data-science-workspace/troubleshooting-guide.md) |
 | Gouvernance des données d’Adobe Experience Platform | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) |  |
-| Service d’identités d’Adobe Experience Platform | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | Guide de dépannage du [[!DNL Identity Service] &#x200B;](../identity-service/troubleshooting-guide.md) |
-| Adobe Experience Platform Query Service | [[!DNL Query Service API]](https://www.adobe.io/experience-platform-apis/references/query-service/) | Guide de dépannage du [[!DNL Query Service] &#x200B;](../query-service/troubleshooting-guide.md) |
+| Service d’identités d’Adobe Experience Platform | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | Guide de dépannage du [[!DNL Identity Service] ](../identity-service/troubleshooting-guide.md) |
+| Adobe Experience Platform Query Service | [[!DNL Query Service API]](https://www.adobe.io/experience-platform-apis/references/query-service/) | Guide de dépannage du [[!DNL Query Service] ](../query-service/troubleshooting-guide.md) |
 | Adobe Experience Platform Segmentation | [[!DNL Segmentation API]](https://www.adobe.io/experience-platform-apis/references/segmentation/) |  |
 | [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) |  |
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) | [[!DNL XDM System] Questions fréquentes et guide de dépannage](../xdm/troubleshooting-guide.md) |
 | [!DNL Flow Service] ([!DNL Sources] et [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/) |  |
-| [!DNL Real-Time Customer Profile] | [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) | Guide de dépannage du [[!DNL Profile] &#x200B;](../profile/troubleshooting.md) |
+| [!DNL Real-Time Customer Profile] | [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) | Guide de dépannage du [[!DNL Profile] ](../profile/troubleshooting.md) |
 | Sandbox | [API Sandbox](https://www.adobe.io/experience-platform-apis/references/sandbox) | [Guide de dépannage des sandbox](../sandboxes/troubleshooting-guide.md) |

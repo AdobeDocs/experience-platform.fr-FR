@@ -19,8 +19,8 @@ ht-degree: 69%
 - [Package Query Service](packaging.md)
 - [Mécanismes de sécurisation de Query Service](guardrails.md)
 - Commencer {#get-started}
-   - [Prérequis](get-started/prerequisites.md)
-- Data Distiller {#data-distiller}
+   - [Conditions préalables](get-started/prerequisites.md)
+- Data Distiller {#data-distiller}
    - [Aperçu](data-distiller/overview.md)
    - [Utilisation des licences](data-distiller/license-usage.md)
    - Jeux de données dérivés {#derived-datasets}
@@ -103,7 +103,7 @@ ht-degree: 69%
    - [Tableau](clients/tableau.md)
 - Interface utilisateur de Query Service {#ui}
    - [Présentation de l’interface utilisateur](ui/overview.md)
-   - [Guide d’utilisation de Query Editor](ui/user-guide.md)
+   - [Guide d’utilisation du requêteur](ui/user-guide.md)
    - [Modèles de requête](ui/query-templates.md)
    - [Requêtes paramétrées](ui/parameterized-queries.md)
    - [Plannings de requête](ui/query-schedules.md)

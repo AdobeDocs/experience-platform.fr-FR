@@ -5,8 +5,8 @@ feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1190'
-ht-degree: 54%
+source-wordcount: '1181'
+ht-degree: 48%
 
 ---
 
@@ -53,7 +53,7 @@ Tandis que les balises collectent les données d’événement directement sur v
 
 ### Propriétés {#properties}
 
-Le transfert d’événement conserve sa propre banque de propriétés séparées des balises, que vous pouvez afficher dans l’interface utilisateur d’Experience Platform ou dans l’interface utilisateur de la collecte de données en sélectionnant **[!UICONTROL Transfert d’événement]** dans le volet de navigation de gauche.
+Le transfert d’événement conserve sa propre banque de propriétés séparées des balises, que vous pouvez afficher dans l’interface utilisateur d’Experience Platform ou dans l’interface utilisateur de la collecte de données en sélectionnant **[!UICONTROL Event Forwarding]** dans le volet de navigation de gauche.
 
 >[!TIP]
 >
@@ -61,11 +61,11 @@ Le transfert d’événement conserve sa propre banque de propriétés séparée
 
 ![Propriétés de transfert d’événement dans l’interface utilisateur de la collecte de données.](../../images/ui/event-forwarding/overview/properties.png)
 
-Toutes les propriétés de transfert d’événement répertorient **[!UICONTROL Edge]** comme leur plateforme. Elles ne font pas la distinction entre web et mobile, car elles traitent uniquement les données reçues d’Experience Platform Edge Network, qui peut lui-même recevoir des données d’événement des plateformes web et mobiles.
+Toutes les propriétés de transfert d’événement répertorient les **[!UICONTROL Edge]** comme leur plateforme. Elles ne font pas la distinction entre web et mobile, car elles traitent uniquement les données reçues d’Experience Platform Edge Network, qui peut lui-même recevoir des données d’événement des plateformes web et mobiles.
 
 ### Extensions {#extensions}
 
-Le transfert d’événement possède son propre catalogue d’extensions compatibles, telles que l’extension [Core](../../extensions/server/core/overview.md) et l’extension [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md). Vous pouvez afficher les extensions disponibles pour les propriétés de transfert d’événement dans l’interface utilisateur en sélectionnant **[!UICONTROL Extensions]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Catalogue]**.
+Le transfert d’événement possède son propre catalogue d’extensions compatibles, telles que l’extension [Core](../../extensions/server/core/overview.md) et l’extension [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md). Vous pouvez afficher les extensions disponibles pour les propriétés de transfert d’événement dans l’interface utilisateur en sélectionnant **[!UICONTROL Extensions]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Catalog]**.
 
 Vous pouvez afficher les ressources supplémentaires disponibles pour en savoir plus sur cette fonctionnalité en sélectionnant ![à propos](../../images/ui/event-forwarding/overview/about.png) dans le panneau de droite.
 
@@ -79,9 +79,9 @@ Bien que les éléments de données eux-mêmes soient créés et configurés de 
 
 #### Référencer des données d’Experience Platform Edge Network {#data-element-path}
 
-Pour référencer des données à partir d’Experience Platform Edge Network, vous devez créer un élément de données qui fournit un chemin d’accès valide à ces données. Lors de la création de l’élément de données dans l’interface utilisateur, sélectionnez **[!UICONTROL Core]** comme extension et **[!UICONTROL Chemin]** comme type.
+Pour référencer des données à partir d’Experience Platform Edge Network, vous devez créer un élément de données qui fournit un chemin d’accès valide à ces données. Lors de la création de l’élément de données dans l’interface utilisateur, sélectionnez **[!UICONTROL Core]** pour l’extension et **[!UICONTROL Path]** pour le type.
 
-La valeur de **[!UICONTROL Chemin]** pour l’élément de données doit suivre le modèle `arc.event.{ELEMENT}` (par exemple : `arc.event.xdm.web.webPageDetails.URL`). Ce chemin d’accès doit être spécifié correctement pour que les données soient envoyées.
+La valeur **[!UICONTROL Path]** de l’élément de données doit suivre le modèle `arc.event.{ELEMENT}` (par exemple : `arc.event.xdm.web.webPageDetails.URL`). Ce chemin d’accès doit être spécifié correctement pour que les données soient envoyées.
 
 Vous pouvez afficher les ressources supplémentaires disponibles pour en savoir plus sur cette fonctionnalité en sélectionnant ![à propos](../../images/ui/event-forwarding/overview/about.png) dans le panneau de droite.
 
@@ -107,7 +107,7 @@ Vous pouvez afficher les ressources supplémentaires disponibles pour en savoir 
 
 #### Séquence des actions de règle {#action-sequencing}
 
-La section [!UICONTROL Actions] d’une règle de transfert d’événements est toujours exécutée de manière séquentielle. Par exemple, si une règle comporte deux actions, la seconde action ne commencera pas l’exécution tant que l’action précédente n’aura pas été terminée (et dans les cas où une réponse est attendue à partir d’un point d’entrée, ce point d’entrée aura répondu). Assurez-vous que l’ordre des actions est correct lorsque vous enregistrez une règle. Cette séquence d’exécution ne peut pas être exécutée de manière asynchrone, à la différence des règles de balise.
+La section [!UICONTROL Actions] d’une règle de transfert d’événement est toujours exécutée de manière séquentielle. Par exemple, si une règle comporte deux actions, la seconde action ne commencera pas l’exécution tant que l’action précédente n’aura pas été terminée (et dans les cas où une réponse est attendue à partir d’un point d’entrée, ce point d’entrée aura répondu). Assurez-vous que l’ordre des actions est correct lorsque vous enregistrez une règle. Cette séquence d’exécution ne peut pas être exécutée de manière asynchrone, à la différence des règles de balise.
 
 ## Secrets {#secrets}
 

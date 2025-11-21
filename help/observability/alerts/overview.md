@@ -6,8 +6,8 @@ feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '804'
-ht-degree: 69%
+source-wordcount: '799'
+ht-degree: 59%
 
 ---
 
@@ -64,20 +64,20 @@ Des alertes peuvent être envoyées vers un webhook configuré afin de faciliter
 
 L’interface utilisateur d’Experience Platform vous permet d’afficher les alertes reçues et de gérer les règles d’alerte. La vidéo ci-après présente ces capacités.
 
->[!VIDEO](https://video.tv.adobe.com/v/3423919?quality=12&learn=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
 Pour utiliser des alertes dans l’interface utilisateur d’Experience Platform, vous devez disposer des autorisations de contrôle d’accès suivantes activées via Adobe Admin Console :
 
 | Autorisation | Description |
 | --- | --- |
 | Affichage des alertes | Permet d’afficher les messages d’alerte reçus. |
-| Afficher l’historique des alertes* | Permet de visualiser l&#39;historique des alertes reçues à partir de l&#39;onglet [!UICONTROL Alertes]. |
-| Gérer les alertes* | Permet d’activer et de désactiver les règles d’alerte à partir de l’onglet [!UICONTROL Alertes]. |
-| Résoudre les alertes* | Permet de résoudre les alertes déclenchées à partir de l’onglet [!UICONTROL Alertes]. |
+| Afficher l’historique des alertes* | Permet de visualiser l&#39;historique des alertes reçues à partir de l&#39;onglet [!UICONTROL Alerts] . |
+| Gérer les alertes* | Permet d’activer et de désactiver les règles d’alerte à partir de l’onglet [!UICONTROL Alerts] . |
+| Résoudre les alertes* | Permet de résoudre les alertes déclenchées à partir de l’onglet [!UICONTROL Alerts] . |
 
 {style="table-layout:auto"}
 
-**Pour accéder à l’onglet [!UICONTROL Alertes], vous devez également disposer de l’autorisation Afficher les alertes, associée à l’une des autres autorisations.*
+**Pour accéder à l’onglet [!UICONTROL Alerts], vous devez également disposer de l’autorisation Afficher les alertes, associée à l’une des autres autorisations.*
 
 >[!NOTE]
 >
@@ -91,7 +91,7 @@ Avec l’autorisation Afficher les alertes, vous pouvez afficher les alertes re�
 >
 > Sélectionnez une alerte pour accéder à un tableau de bord associé et obtenir des informations plus détaillées sur les raisons pour lesquelles l’alerte a été déclenchée.
 
-En outre, l’onglet [!UICONTROL Alertes] de l’interface utilisateur permet à chaque utilisateur de s’abonner à des types d’alerte spécifiques et permet aux administrateurs d’activer ou de désactiver complètement les règles d’alerte. Pour plus d’informations sur la gestion des alertes, consultez le [guide de l’interface utilisateur](./ui.md).
+En outre, l’onglet [!UICONTROL Alerts] de l’interface utilisateur permet à chaque utilisateur de s’abonner à des types d’alerte spécifiques et permet aux administrateurs d’activer ou de désactiver complètement les règles d’alerte. Pour plus d’informations sur la gestion des alertes, consultez le [guide de l’interface utilisateur](./ui.md).
 
 ## Étapes suivantes
 

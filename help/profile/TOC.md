@@ -23,7 +23,7 @@ ht-degree: 91%
 * [Expirations des profils pseudonymes](pseudonymous-profiles.md)
 * [Ordre de date et heure du client](customer-timestamp-ordering.md)
 * [!DNL Profile] API {#api}
-   * [Présentation](api/overview.md)
+   * [Vue d’ensemble](api/overview.md)
    * [Prise en main](api/getting-started.md)
    * [Entités (accès au [!DNL Profile])](api/entities.md)
    * [Tâches d’exportation (exportation de [!DNL Profile])](api/export-jobs.md)

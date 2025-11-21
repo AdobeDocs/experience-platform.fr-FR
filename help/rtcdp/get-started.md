@@ -6,7 +6,7 @@ feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2321'
 ht-degree: 62%
 
 ---
@@ -101,7 +101,7 @@ Le comportement de navigation du visiteur anonyme dans la section Hommes du site
 
 ## Personnalisation de l’expérience utilisateur
 
-Sarah reçoit un message qui la remercie de son statut de membre Bronze et lui offre des informations supplémentaires sur les avantages de son statut et la façon de l’améliorer en augmentant son nombre de points.
+Sarah reçoit un message qui la remercie pour sa fidélité et son adhésion en tant que membre Bronze, et lui offre des informations supplémentaires sur les avantages de son statut et la façon de l’améliorer en augmentant son nombre de points.
 
 Elle accède à la page d’accueil pour en parcourir d’autres.
 
@@ -229,13 +229,13 @@ Loyalty member
 
 <!-- ![image](assets/luma-abandon.png)-->
 
-Comme Sarah a ajouté un article qui semble être un cadeau dans le panier et l’a abandonné, Luma peut lui proposer un emballage cadeau gratuit.
+Comme Sarah a ajouté un article qui semble être un cadeau dans le panier et l’a abandonné, Luma peut la cibler avec un emballage cadeau gratuit.
 
 ## Destinations
 
 Lorsque vous avez ajouté l’audience « Abandonnés d’un panier de cadeaux », vous pouvez voir à peu près combien de personnes font partie de cette audience. Vous pouvez prendre des mesures et proposer une personnalisation par le biais de différents canaux.
 
-Sélectionnez **[!UICONTROL Envoyer aux destinations]**.
+Sélectionnez **[!UICONTROL Send to destinations]**.
 
 Dans Real-Time CDP, Luma peut agir de manière transparente sur ses audiences pour la personnalisation.\
 Nous voyons ici toutes les destinations disponibles auxquelles Luma peut envoyer cette destination, qu’il s’agisse de solutions Adobe ou de solutions autres qu’Adobe.
@@ -260,7 +260,7 @@ Vous pouvez également planifier l’exportation de l’audience pour qu’elle 
 >
 >Si vous sélectionnez le champ de date, la planification est automatique pour les 90 jours suivants.
 
-Sélectionnez **[!UICONTROL Enregistrer]** pour accéder à la page suivante.
+Sélectionnez **[!UICONTROL Save]** pour accéder à la page suivante.
 
 Lorsqu’un client ou une cliente de cette audience effectue un achat, son adhésion à cette audience est supprimée en temps réel. Ils ne sont plus admissibles parce que leur statut a changé.
 
@@ -295,7 +295,7 @@ Ce lien la dirige sur la page d’accueil mobile de Luma, où elle bénéficie d
 * Elle est accueillie en tant que membre Bronze.
 * Elle voit le message « Cadeau ».
 * Elle voit également le message « Emballage cadeau gratuit », qui fait partie de ses avantages d&#39;adhésion au bronze.
-* Elle est toujours ciblée sur l’image à forte identification en raison de son intérêt pour la course à pied.
+* Elle est toujours ciblée dans l’image principale en raison de son intérêt pour la course à pied.
 
 Elle achète le sweat, ajoute un emballage cadeau et rédige un message pour accompagner le cadeau. Elle peut aussi choisir de recevoir un rappel l’année prochaine pour se souvenir d’acheter un cadeau à l’occasion de cet événement. Elle choisit d’activer cette option et une campagne par e-mail est prévue l’année suivante pour lui rappeler d’acheter un autre cadeau.
 

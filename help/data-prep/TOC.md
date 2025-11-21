@@ -7,7 +7,7 @@ role: Developer
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '62'
-ht-degree: 96%
+ht-degree: 91%
 
 ---
 
@@ -16,12 +16,12 @@ ht-degree: 96%
 
 - [Présentation de la préparation des données](home.md)
 - [Fonctions de la préparation des données](functions.md)
-- API Mapping Service {#api}
-   - [Présentation](./api/overview.md)
+- API Mapping Service {#api}
+   - [Vue d’ensemble](./api/overview.md)
    - [Prise en main](./api/getting-started.md)
    - [Fonctions](./api/functions.md)
    - [Jeu de mappages](./api/mapping-set.md)
-- Interface utilisateur {#ui}
+- IU {#ui}
    - [Guide de l’interface utilisateur de la préparation des données](./ui/mapping.md)
 - [Gestion des formats de données](./data-handling.md)
 - [Jeux de mappages](mapping-set.md)

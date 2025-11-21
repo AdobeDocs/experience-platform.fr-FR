@@ -71,7 +71,7 @@ La disponibilité de ces mesures et la définition spécifique de chacune d’el
 
 L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher un instantané des données liées aux licences de l’entreprise pour Experience Platform. Les données du tableau de bord s’affichent exactement comme elles apparaissent au moment précis où l’instantané a été pris. L’instantané n’est ni une approximation ni un échantillon des données et le tableau de bord n’est pas mis à jour en temps réel.
 
-Pour plus d’informations, consultez le guide sur l’utilisation [&#x200B; du tableau de bord d’utilisation des licences dans l’interface utilisateur d’Experience Platform](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
+Pour plus d’informations, consultez le guide sur l’utilisation [ du tableau de bord d’utilisation des licences dans l’interface utilisateur d’Experience Platform](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
 
 ## Bonnes pratiques relatives à la gestion des données
 
@@ -155,11 +155,11 @@ Plusieurs rapports sont disponibles pour vous aider à comprendre la composition
 
 ### Expirations des données de profils pseudonymes {#pseudonymous-profile-expirations}
 
-Utilisez la fonctionnalité d’expiration des données de profils pseudonymes pour supprimer automatiquement de la banque de profils les données qui ne sont plus valides ou utiles pour vos cas d’utilisation. L’expiration des données de profils pseudonymes supprime les enregistrements d’événement et de profil. Par conséquent, ce paramètre réduira les volumes d’audiences adressables. Pour plus d’informations sur cette fonctionnalité, veuillez lire la [&#x200B; Présentation de l’expiration des données de profils pseudonymes &#x200B;](../../profile/pseudonymous-profiles.md).
+Utilisez la fonctionnalité d’expiration des données de profils pseudonymes pour supprimer automatiquement de la banque de profils les données qui ne sont plus valides ou utiles pour vos cas d’utilisation. L’expiration des données de profils pseudonymes supprime les enregistrements d’événement et de profil. Par conséquent, ce paramètre réduira les volumes d’audiences adressables. Pour plus d’informations sur cette fonctionnalité, veuillez lire la [ Présentation de l’expiration des données de profils pseudonymes ](../../profile/pseudonymous-profiles.md).
 
 ### Interface utilisateur du jeu de données - Conservation du jeu de données d’événement d’expérience {#data-retention}
 
-Configurez les paramètres d’expiration et de conservation des jeux de données pour imposer une période de conservation fixe pour vos données dans le lac de données et le magasin de profils. Une fois la période de conservation terminée, les données sont supprimées. L’expiration des données d’événements d’expérience supprime uniquement les événements et non les données de classe de profil, ce qui réduit le [&#x200B; volume total de données &#x200B;](total-data-volume.md) dans les mesures d’utilisation de licence. Pour plus d’informations, consultez le guide sur la [définition d’une politique de conservation des données](../../catalog/datasets/user-guide.md#data-retention-policy).
+Configurez les paramètres d’expiration et de conservation des jeux de données pour imposer une période de conservation fixe pour vos données dans le lac de données et le magasin de profils. Une fois la période de conservation terminée, les données sont supprimées. L’expiration des données d’événements d’expérience supprime uniquement les événements et non les données de classe de profil, ce qui réduit le [ volume total de données ](total-data-volume.md) dans les mesures d’utilisation de licence. Pour plus d’informations, consultez le guide sur la [définition d’une politique de conservation des données](../../catalog/datasets/user-guide.md#data-retention-policy).
 
 ### Expirations des événements d’expérience de profil {#event-expirations}
 

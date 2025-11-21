@@ -3,7 +3,7 @@ keywords: RTCDP;CDP;Édition B2B;Real-time Customer Data Platform;real time 
 title: Présentation de l’édition B2B de Real-time CDP
 description: Présentation du compte de l’édition B2B de Real-Time Customer Data Platform
 feature: Get Started, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
@@ -28,7 +28,7 @@ Des détails plus complets sur les améliorations apportées à l’édition B2
 
 ## XDM
 
-L’édition B2B de Real-time CDP fournit plusieurs nouvelles classes de schémas XDM, des groupes de champs et des types de relations pour capturer et structurer vos données spécifiquement à des fins B2B. Consultez la présentation sur [XDM dans l’édition B2B de Real-time CDP](./schemas/b2b.md) pour obtenir une explication de chacune de ces améliorations.
+L’édition B2B de Real-time CDP fournit plusieurs nouvelles classes de schémas XDM, des groupes de champs et des types de relations pour capturer et structurer vos données spécifiquement à des fins B2B. Consultez la présentation sur [XDM dans l’édition B2B de Real-time CDP](./schemas/b2b.md) pour obtenir une explication détaillée de chacune de ces améliorations.
 
 En utilisant des schémas B2B préconfigurés, vous pouvez importer des données dans une structure standardisée et exploitable. Parmi les nouvelles classes de schéma, un grand nombre correspond presque directement à celles que l’on trouve dans des systèmes de gestion de la relation client (CRM) classiques tels que [!DNL Salesforce], [!DNL Microsoft Dynamics], [!DNL Marketo] et d’autres sources de données B2B. Avec Real-Time CDP B2B edition, vous pouvez importer des données provenant de sources B2B dans Experience Platform de manière simple et avec des résultats faciles à auditer.
 

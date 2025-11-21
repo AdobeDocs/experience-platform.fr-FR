@@ -7,7 +7,7 @@ role: Admin,User,Developer,Leader
 source-git-commit: 40f7ea3e6477590dc2eed5af8aa9848901a8c204
 workflow-type: tm+mt
 source-wordcount: '118'
-ht-degree: 30%
+ht-degree: 33%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 30%
 # Assistant AI dans Adobe Experience Platform {#ai-assistant}
 
 * [Documentation du produit Assistant AI](landing.md)
-* [Présentation de l’assistant AI](home.md)
+* [Vue d’ensemble de l’Assistant IA](home.md)
 * [Accès aux fonctionnalités](access.md)
 * [Guide de questions pour l’assistant IA](questions.md)
 * [Guide de l’interface utilisateur de l’assistant AI](ui-guide.md)

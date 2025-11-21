@@ -28,7 +28,7 @@ ht-degree: 100%
    * [Création d’un lot](api/create-batch.md)
    * [Libellés d’utilisation des données](api/labels.md)
    * [Annexe](api/appendix.md)
-* Jeux de données {#datasets}
+* Jeux de données {#datasets}
    * [Présentation des jeux de données](datasets/overview.md)
    * [Guide d’utilisation des jeux de données](datasets/user-guide.md)
    * [Création et remplissage d’un jeu de données à l’aide d’API](datasets/create.md)
