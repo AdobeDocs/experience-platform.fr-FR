@@ -3,10 +3,10 @@ keywords: personnalisation personnalisée;destination;destination personnalisée
 title: Connexion de personnalisation personnalisée
 description: Cette destination fournit une personnalisation externe, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur votre site pour récupérer les informations d’audience à partir de Adobe Experience Platform. Cette destination fournit une personnalisation en temps réel basée sur l’appartenance à l’audience du profil utilisateur.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 44a4d5c592e13cdd1d4d75787dee5e1763fae9a4
 workflow-type: tm+mt
-source-wordcount: '923'
-ht-degree: 49%
+source-wordcount: '992'
+ht-degree: 45%
 
 ---
 
@@ -40,6 +40,12 @@ Cette destination nécessite l’utilisation de l’une des méthodes de collect
 * Utilisez [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) si vous souhaitez collecter des données sur votre site Web.
 * Utilisez [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) si vous souhaitez collecter des données à partir de votre application mobile.
 * Utilisez l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/) si vous n’utilisez ni [Web SDK](/help/web-sdk/home.md) ni [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/), ou si vous souhaitez personnaliser l’expérience utilisateur en fonction des attributs de profil.
+
+>[!IMPORTANT]
+>
+>**Exigences de personnalisation basées sur les attributs :** si vous souhaitez effectuer une personnalisation en fonction des attributs de profil (et pas seulement de l’appartenance à l’audience), vous **devez** utiliser l’[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/) avec une intégration côté serveur authentifiée, que vous utilisiez également Web SDK ou Mobile SDK pour la collecte de données.
+>
+>Web SDK et Mobile SDK prennent en charge la personnalisation uniquement en fonction de l’appartenance à l’audience. L’API Edge Network est **obligatoire** pour récupérer en toute sécurité les attributs de profil pour la personnalisation.
 
 >[!IMPORTANT]
 >
