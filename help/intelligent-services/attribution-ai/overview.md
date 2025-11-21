@@ -29,7 +29,7 @@ Attribution AI prend en charge deux catégories de scores : les scores algorith
 
 La vidéo suivante est conçue pour vous aider à comprendre l’IA dédiée à l’attribution.
 
->[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36540?captions=fre_fr&learn=on&quality=12)
 
 ## Exemples de cas d’utilisation commerciale
 

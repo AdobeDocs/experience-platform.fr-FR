@@ -47,7 +47,7 @@ Lorsque vous envisagez de compléter vos propres profils propriétaires avec des
 
 Regardez le tutoriel vidéo ci-dessous pour une présentation détaillée de la manière de compléter les audiences propriétaires par des attributs fournis par les partenaires :
 
->[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452451/?captions=fre_fr&learn=on)
 
 ## Comment réaliser le cas d’utilisation : aperçu de haut niveau {#achieve-the-use-case-high-level}
 
