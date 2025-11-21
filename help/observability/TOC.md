@@ -22,7 +22,7 @@ ht-degree: 94%
 * Alertes {#alerts}
    * [Présentation](./alerts/overview.md)
    * [Règles d’alerte standard](./alerts/rules.md)
-   * [Guide de l’interface utilisateur du ](./alerts/ui.md)
+   * [Guide de l’interface utilisateur du &#x200B;](./alerts/ui.md)
    * [Abonnement aux notifications d’événement I/O](./alerts/subscribe.md)
 * [Référence d’API](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
 * [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
