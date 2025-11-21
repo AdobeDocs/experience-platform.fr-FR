@@ -2,10 +2,10 @@
 title: Guide de segmentation d’Edge
 description: Découvrez comment utiliser la segmentation Edge pour évaluer les audiences dans Experience Platform instantanément sur le serveur Edge, en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 1b69fa4ecadb1f6b8575358ca4a81549221430e1
+source-git-commit: d93bf7a3b7447a71fa3ead96e5c35ec9cd2dd99a
 workflow-type: tm+mt
-source-wordcount: '1148'
-ht-degree: 22%
+source-wordcount: '1191'
+ht-degree: 19%
 
 ---
 
@@ -17,7 +17,9 @@ La segmentation Edge permet d’évaluer les définitions de segment dans Adobe 
 >
 > Les données Edge seront stockées dans l’emplacement de serveur Edge le plus proche de l’emplacement où elles ont été collectées. Ces données peuvent également être stockées dans un emplacement autre que celui désigné comme centre de données Adobe Experience Platform principal (ou hub).
 >
-> En outre, le moteur de segmentation Edge ne traitera que les requêtes sur le serveur Edge lorsqu’il existe **une** identité marquée principale, qui est cohérente avec les identités principales non basées sur le serveur Edge.
+> Le moteur de segmentation Edge ne traitera que les requêtes sur le serveur Edge lorsqu’il existe **une** identité marquée principale, qui est cohérente avec les identités principales non basées sur le serveur Edge.
+>
+> En outre, la segmentation Edge étant conçue pour traiter les requêtes à grande échelle, les serveurs Edge chargent dynamiquement les métadonnées requises. Par conséquent, les tout premiers appels peuvent connaître une latence de « démarrage à froid », quel que soit le type de sandbox. Pendant cette période, les premiers appels d’évaluation peuvent entraîner une temporisation. Un bref sursaut de préchauffage ou une charge réaliste permet d&#39;éliminer les échecs de test faussement positifs.
 
 ## Types de requête de segmentation Edge {#query-types}
 
@@ -48,7 +50,7 @@ Une définition de segment **pas** est éligible pour la segmentation Edge dans 
 
 Vous pouvez créer une audience évaluée à l’aide de la segmentation Edge à l’aide de l’API Segmentation Service ou via Audience Portal dans l’interface utilisateur.
 
-Une définition de segment peut être activée pour Edge si elle correspond à l’un des [&#x200B; types de requête éligibles &#x200B;](#eligible-query-types).
+Une définition de segment peut être activée pour Edge si elle correspond à l’un des [ types de requête éligibles ](#eligible-query-types).
 
 >[!BEGINTABS]
 
@@ -151,15 +153,15 @@ Vous trouverez plus d’informations sur l’utilisation de ce point d’entrée
 
 >[!TAB Audience Portal]
 
-Dans Audience Portal, sélectionnez **[!UICONTROL Créer une audience]**.
+Dans Audience Portal, sélectionnez **[!UICONTROL Create audience]**.
 
 ![Le bouton Créer une audience est mis en surbrillance dans le portail d’audiences.](../images/methods/edge/select-create-audience.png){zoomable="yes"}
 
-Une fenêtre contextuelle s’affiche. Sélectionnez **[!UICONTROL Créer des règles]** pour accéder au créateur de segments.
+Une fenêtre contextuelle s’affiche. Sélectionnez **[!UICONTROL Build rules]** pour accéder au créateur de segments.
 
 ![Le bouton Créer des règles est mis en surbrillance dans la fenêtre contextuelle de création d’audience.](../images/methods/edge/select-build-rules.png){zoomable="yes"}
 
-Dans le créateur de segments, créez une définition de segment qui correspond à l’un des [types de requête éligibles](#eligible-query-types). Si la définition de segment est admissible pour la segmentation Edge, vous pourrez sélectionner **[!UICONTROL Edge]** comme méthode **[!UICONTROL Évaluation]**.
+Dans le créateur de segments, créez une définition de segment qui correspond à l’un des [types de requête éligibles](#eligible-query-types). Si la définition de segment est admissible pour la segmentation Edge, vous pourrez sélectionner **[!UICONTROL Edge]** comme **[!UICONTROL Evaluation method]**.
 
 ![La définition de segment s’affiche. Le type d’évaluation est mis en surbrillance, montrant que la définition de segment peut être évaluée à l’aide de la segmentation Edge.](../images/methods/edge/edge-evaluation-method.png){zoomable="yes"}
 
@@ -315,11 +317,11 @@ Après avoir sélectionné une audience sur Audience Portal, la page des détail
 
 ![La page Détails de l’audience s’affiche pour une audience évaluée à l’aide de la segmentation Edge.](../images/methods/edge/audience-details.png)
 
-Pour les audiences activées pour Edge, la carte **[!UICONTROL Profils au fil du temps]** s’affiche, qui indique le nombre total de mesures qualifiées et la nouvelle audience mise à jour.
+Pour les audiences activées pour Edge, la carte **[!UICONTROL Profiles over time]** s’affiche, qui indique le total des mesures qualifiées et la nouvelle audience mise à jour.
 
-La mesure **[!UICONTROL Total qualifié]** représente le nombre total d’audiences qualifiées, en fonction des évaluations Edge de cette audience.
+La mesure **[!UICONTROL Total qualified]** représente le nombre total d’audiences qualifiées, en fonction des évaluations Edge de cette audience.
 
-La mesure **[!UICONTROL Nouvelle audience mise à jour]** est représentée par un graphique linéaire qui indique le changement de taille de l’audience par le biais de la segmentation Edge. Vous pouvez ajuster la liste déroulante pour afficher les dernières 24 heures, la semaine dernière ou les 30 derniers jours.
+La mesure **[!UICONTROL New audience updated]** est représentée par un graphique linéaire qui indique le changement de taille d’audience par le biais de la segmentation Edge. Vous pouvez ajuster la liste déroulante pour afficher les dernières 24 heures, la semaine dernière ou les 30 derniers jours.
 
 ![La carte Profils au fil du temps est mise en surbrillance.](../images/methods/edge/profiles-over-time.png){zoomable="yes"}
 
