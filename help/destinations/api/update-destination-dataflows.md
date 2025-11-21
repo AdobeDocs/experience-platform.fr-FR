@@ -5,16 +5,16 @@ title: Mettre à jour des flux de données de destination à l’aide de l’API
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour mettre à jour un flux de données de destination. Découvrez comment activer ou désactiver le flux de données, mettre à jour ses informations de base ou ajouter et supprimer des audiences et des attributs à l’aide de l’API Flow Service.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 7f8fbbec8927dffb3c8456b2a1d908d27d4b03c2
 workflow-type: tm+mt
-source-wordcount: '2410'
-ht-degree: 31%
+source-wordcount: '2471'
+ht-degree: 30%
 
 ---
 
 # Mettre à jour des flux de données de destination à l’aide de l’API Flow Service
 
-Ce tutoriel décrit les étapes à suivre pour mettre à jour un flux de données de destination. Découvrez comment activer ou désactiver le flux de données, mettre à jour ses informations de base ou ajouter et supprimer des audiences et des attributs à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/). Pour plus d’informations sur la modification des flux de données de destination à l’aide de l’interface utilisateur d’Experience Platform, consultez [&#x200B; Modifier les flux d’activation &#x200B;](/help/destinations/ui/edit-activation.md).
+Ce tutoriel décrit les étapes à suivre pour mettre à jour un flux de données de destination. Découvrez comment activer ou désactiver le flux de données, mettre à jour ses informations de base ou ajouter et supprimer des audiences et des attributs à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/). Pour plus d’informations sur la modification des flux de données de destination à l’aide de l’interface utilisateur d’Experience Platform, consultez [ Modifier les flux d’activation ](/help/destinations/ui/edit-activation.md).
 
 ## Prise en main {#get-started}
 
@@ -750,6 +750,14 @@ Les fichiers exportés contiennent le nom de destination, l’identifiant d’au
 
 Pour ajouter un attribut de profil au flux de données de destination, envoyez une requête PATCH à l’API [!DNL Flow Service] et fournissez vos identifiants de flux et de version ainsi que l’attribut de profil à ajouter.
 
+>[!IMPORTANT]
+>
+>**Exigences de mappage spécifiques à une destination**
+>
+>La méthode `profileSelectors` décrite dans cette section fonctionne pour la plupart des destinations de diffusion en streaming. Cependant, certaines destinations de diffusion en continu, dont **Adobe Target**, nécessitent plutôt le workflow Jeu de mappages de la préparation des données .
+>
+>**Si vos attributs de profil n’apparaissent pas dans l’interface utilisateur d’Experience Platform après une réponse réussie de l’API (202)**, vous devez utiliser la méthode du jeu de mappages décrite dans [Activer des audiences vers des destinations par lots](../api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping).
+
 **Format d’API**
 
 ```http
@@ -855,7 +863,7 @@ Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[&#x200B; consultez les sections &#x200B;](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[ consultez les sections ](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 
