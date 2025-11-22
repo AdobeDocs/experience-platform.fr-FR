@@ -99,7 +99,7 @@ Pour plus d’informations, consultez la [documentation sur les points d’entr�
 
 ## Liste autorisée d’adresses IP {#ip-address-allowlist}
 
-Pour répondre aux exigences de sécurité et de conformité des clients, Experience Platform fournit une liste des adresses IP statiques que vous pouvez inscrire sur la liste autorisée pour la destination de l’API HTTP. Pour obtenir la liste complète des adresses IP à placer sur la liste autorisée placer sur la liste autorisée [&#x200B; consultez la section &#x200B;](/help/destinations/catalog/streaming/ip-address-allow-list.md)Adresses IP à configurer pour les destinations de diffusion en continu.
+Pour répondre aux exigences de sécurité et de conformité des clients, Experience Platform fournit une liste des adresses IP statiques que vous pouvez inscrire sur la liste autorisée pour la destination de l’API HTTP. Pour obtenir la liste complète des adresses IP à placer sur la liste autorisée placer sur la liste autorisée [ consultez la section ](/help/destinations/catalog/streaming/ip-address-allow-list.md)Adresses IP à configurer pour les destinations de diffusion en continu.
 
 ## Types d’authentification pris en charge {#supported-authentication-types}
 
@@ -248,7 +248,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 >* L’[évaluation de la politique de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) n’est actuellement pas prise en charge dans les exportations vers la destination API HTTP. [En savoir plus](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
-Consultez [&#x200B; Activer les données d’audience vers des destinations d’exportation de profil de diffusion en continu &#x200B;](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Consultez [ Activer les données d’audience vers des destinations d’exportation de profil de diffusion en continu ](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Attributs de destination {#attributes}
 

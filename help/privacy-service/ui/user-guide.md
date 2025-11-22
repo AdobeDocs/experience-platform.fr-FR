@@ -11,7 +11,7 @@ ht-degree: 44%
 
 ---
 
-# Gérer les tâches de confidentialité dans l’interface utilisateur de Privacy Service {#user-guide}
+# Gérer les tâches de confidentialité dans l’interface d’utilisation de Privacy Service {#user-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_description"

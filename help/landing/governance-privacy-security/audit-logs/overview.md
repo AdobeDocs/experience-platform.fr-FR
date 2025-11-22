@@ -63,7 +63,7 @@ Le tableau suivant décrit les actions sur lesquelles les ressources sont enregi
 | [Politique de fusion](../../../profile/merge-policies/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Profil de produit](../../../access-control/home.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Requête](../../../query-service/ui/overview.md) | <ul><li>Exécuter</li></ul> |
-| [Modèle de requête &#x200B;](../../../query-service/ui/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
+| [Modèle de requête ](../../../query-service/ui/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Rôle (contrôle d’accès basé sur les attributs)](../../../access-control/home.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li><li>Ajouter un utilisateur</li><li>Supprimer l’utilisateur</li></ul> |
 | [Sandbox](../../../sandboxes/home.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Réinitialiser</li><li>Supprimer</li></ul> |
 | [Requête planifiée](../../../query-service/ui/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
@@ -78,12 +78,12 @@ Lorsque la fonctionnalité est activée pour votre organisation, les journaux d�
 
 Pour afficher et exporter les journaux d’audit, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View User Activity Log]** accordée (disponible dans la catégorie [!UICONTROL Data Governance] ). Pour savoir comment gérer les autorisations individuelles pour les fonctionnalités Experience Platform, reportez-vous à la [documentation sur le contrôle d’accès](../../../access-control/home.md).
 
-## Gérer les journaux d’audit dans l’interface utilisateur {#managing-audit-logs-in-the-ui}
+## Gérer les journaux d’audit dans l’interface d’utilisation {#managing-audit-logs-in-the-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_instructions"
 >title="Instructions"
->abstract="<ul><li>Sélectionnez <b>Audits</b> dans le volet de navigation de gauche. L’espace de travail Audits affiche une liste des journaux enregistrés, triés par défaut du plus récent au moins récent.</li>   <li> REMARQUE : les journaux d’audit sont conservés pendant 365 jours, après quoi ils seront supprimés du système. Par conséquent, vous ne pouvez revenir en arrière que pendant une période maximale de 365 jours. Si vous devez revenir sur des données datant de plus de 365 jours, vous devez exporter régulièrement les journaux afin de répondre aux exigences de votre politique interne. </li><li>Sélectionnez un événement dans la liste pour afficher ses détails dans le rail de droite. </li><li>Sélectionnez l’icône en forme d’entonnoir pour afficher une liste de contrôles de filtre permettant de limiter les résultats. Seuls les 1 000 derniers enregistrements sont affichés, quels que soient les différents filtres sélectionnés. </li><li>Pour exporter la liste actuelle des journaux d’audit, sélectionnez **Journal de téléchargement**.</li><li>Pour plus d’informations sur cette fonctionnalité, voir l’<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=fr">aperçu des journaux d’audit</a> sur Experience League.</li></ul>"
+>abstract="<ul><li>Sélectionnez <b>Audits</b> dans le volet de navigation de gauche. L’espace de travail Audits affiche une liste des journaux enregistrés, triés par défaut du plus récent au moins récent.</li>   <li> REMARQUE : les journaux d’audit sont conservés pendant 365 jours, après quoi ils seront supprimés du système. Par conséquent, vous ne pouvez revenir en arrière que pendant une période maximale de 365 jours. Si vous devez revenir sur des données datant de plus de 365 jours, vous devez exporter régulièrement les journaux afin de répondre aux exigences de votre politique interne. </li><li>Sélectionnez un événement dans la liste pour afficher ses détails dans le rail de droite. </li><li>Sélectionnez l’icône en forme d’entonnoir pour afficher une liste de contrôles de filtre permettant de limiter les résultats. Seuls les 1 000 derniers enregistrements sont affichés, quels que soient les différents filtres sélectionnés. </li><li>Pour exporter la liste actuelle des journaux d’audit, sélectionnez **Télécharger le journal**.</li><li>Pour plus d’informations sur cette fonctionnalité, voir l’<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=fr">aperçu des journaux d’audit</a> sur Experience League.</li></ul>"
 
 Vous pouvez afficher les journaux d’audit de différentes fonctionnalités d’Experience Platform dans l’espace de travail **[!UICONTROL Audits]** de l’interface utilisateur d’Experience Platform. L’espace de travail affiche une liste des journaux enregistrés, triés par défaut du plus récent au moins récent.
 
@@ -111,7 +111,7 @@ Les filtres suivants sont disponibles pour les événements d’audit dans l’i
 
 | Filtre | Description |
 | --- | --- |
-| [!UICONTROL Category] | Utilisez le menu déroulant pour filtrer les résultats affichés par [&#x200B; catégorie &#x200B;](#category). |
+| [!UICONTROL Category] | Utilisez le menu déroulant pour filtrer les résultats affichés par [ catégorie ](#category). |
 | [!UICONTROL Action] | Filtrez par action. Les actions disponibles pour chaque service sont visibles dans le tableau des ressources ci-dessus. |
 | [!UICONTROL User] | Saisissez l’ID utilisateur complet (par exemple, `johndoe@acme.com`) à filtrer par utilisateur. |
 | [!UICONTROL Status] | Filtrer les événements d’audit par résultat : réussi, échec, autorisé ou refusé en raison de l’absence d’autorisations [de contrôle d’accès](../../../access-control/home.md). Pour une action exécutée, les événements principaux affichent [!UICONTROL Allow] ou [!UICONTROL Deny]. Lorsque l’événement principal est [!UICONTROL Allow], il peut avoir associé un ou plusieurs événements améliorés affichant des **[!UICONTROL Success]** ou des **[!UICONTROL Failure]**. Par exemple, une action réussie affiche [!UICONTROL Allow] sur l’événement principal et [!UICONTROL Success] sur l’événement amélioré associé. |
@@ -169,7 +169,7 @@ Toutes les actions que vous pouvez effectuer dans l’interface utilisateur peuv
 
 ## Gestion des journaux d’audit pour Adobe Admin Console
 
-Pour savoir comment gérer les journaux d’audit des activités dans Adobe Admin Console, reportez-vous au [document](https://helpx.adobe.com/fr/enterprise/using/audit-logs.html) suivant.
+Pour savoir comment gérer les journaux d’audit des activités dans Adobe Admin Console, reportez-vous au [document](https://helpx.adobe.com/enterprise/using/audit-logs.html) suivant.
 
 ## Étapes suivantes et ressources supplémentaires
 
@@ -177,4 +177,4 @@ Ce guide explique comment gérer les journaux d’audit dans Experience Platform
 
 Pour mieux comprendre les journaux d’audit dans Experience Platform, regardez la vidéo suivante :
 
->[!VIDEO](https://video.tv.adobe.com/v/344646?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
