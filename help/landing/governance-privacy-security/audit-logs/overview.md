@@ -63,7 +63,7 @@ Le tableau suivant décrit les actions sur lesquelles les ressources sont enregi
 | [Politique de fusion](../../../profile/merge-policies/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Profil de produit](../../../access-control/home.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Requête](../../../query-service/ui/overview.md) | <ul><li>Exécuter</li></ul> |
-| [Modèle de requête ](../../../query-service/ui/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
+| [Modèle de requête &#x200B;](../../../query-service/ui/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
 | [Rôle (contrôle d’accès basé sur les attributs)](../../../access-control/home.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li><li>Ajouter un utilisateur</li><li>Supprimer l’utilisateur</li></ul> |
 | [Sandbox](../../../sandboxes/home.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Réinitialiser</li><li>Supprimer</li></ul> |
 | [Requête planifiée](../../../query-service/ui/overview.md) | <ul><li>Créer</li><li>Mise à jour </li><li>Supprimer</li></ul> |
@@ -111,7 +111,7 @@ Les filtres suivants sont disponibles pour les événements d’audit dans l’i
 
 | Filtre | Description |
 | --- | --- |
-| [!UICONTROL Category] | Utilisez le menu déroulant pour filtrer les résultats affichés par [ catégorie ](#category). |
+| [!UICONTROL Category] | Utilisez le menu déroulant pour filtrer les résultats affichés par [&#x200B; catégorie &#x200B;](#category). |
 | [!UICONTROL Action] | Filtrez par action. Les actions disponibles pour chaque service sont visibles dans le tableau des ressources ci-dessus. |
 | [!UICONTROL User] | Saisissez l’ID utilisateur complet (par exemple, `johndoe@acme.com`) à filtrer par utilisateur. |
 | [!UICONTROL Status] | Filtrer les événements d’audit par résultat : réussi, échec, autorisé ou refusé en raison de l’absence d’autorisations [de contrôle d’accès](../../../access-control/home.md). Pour une action exécutée, les événements principaux affichent [!UICONTROL Allow] ou [!UICONTROL Deny]. Lorsque l’événement principal est [!UICONTROL Allow], il peut avoir associé un ou plusieurs événements améliorés affichant des **[!UICONTROL Success]** ou des **[!UICONTROL Failure]**. Par exemple, une action réussie affiche [!UICONTROL Allow] sur l’événement principal et [!UICONTROL Success] sur l’événement amélioré associé. |
