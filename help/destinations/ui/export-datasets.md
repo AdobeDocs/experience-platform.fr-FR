@@ -3,10 +3,10 @@ title: Exporter des jeux de données vers des destinations d’espace de stockag
 type: Tutorial
 description: Découvrez comment exporter des jeux de données d’Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 69a1ae08fefebb7fed54564ed06f42af523d2903
+source-git-commit: de161bcb29a0d4fc9b0c419506537b18255c79a4
 workflow-type: tm+mt
-source-wordcount: '2656'
-ht-degree: 25%
+source-wordcount: '3005'
+ht-degree: 22%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 25%
 >
 >Pour l’un de ces flux de données, vous devez mettre à jour manuellement la date de fin du flux de données avant la date de fin, sinon vos exportations s’arrêteront à cette date. Utilisez l’interface utilisateur d’Experience Platform pour afficher les flux de données qui seront définis pour s’arrêter le 1er septembre 2025.
 >
->Pour plus d’informations sur la modification de la date de fin d’un flux de données d’exportation de jeux de données[&#x200B; consultez la section &#x200B;](#scheduling)planification.
+>Pour plus d’informations sur la modification de la date de fin d’un flux de données d’exportation de jeux de données[ consultez la section ](#scheduling)planification.
 
 Cet article explique le processus requis pour exporter des [jeux de données](/help/catalog/datasets/overview.md) de Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix, comme des [!DNL Amazon S3], des emplacements SFTP ou des [!DNL Google Cloud Storage] à l’aide de l’interface utilisateur d’Experience Platform.
 
@@ -50,16 +50,16 @@ Utilisez le tableau ci-dessous pour comprendre quels types de jeux de données v
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Jeux de données de profil et d’événement d’expérience créés dans l’interface utilisateur d’Experience Platform après l’ingestion ou la collecte de données par le biais de sources, de Web SDK, de Mobile SDK, du connecteur de données Analytics et d’Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=fr#profile-attribute-datasets">Jeu de données d’instantanés de profil généré par le système</a>.</li></td>
+    <td><ul><li>Jeux de données de profil et d’événement d’expérience créés dans l’interface utilisateur d’Experience Platform après l’ingestion ou la collecte de données par le biais de sources, de Web SDK, de Mobile SDK, du connecteur de données Analytics et d’Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">Jeu de données d’instantanés de profil généré par le système</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>Reportez-vous à la documentation de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=fr#datasets"> Adobe Journey Optimizer</a> .</td>
+    <td>Reportez-vous à la documentation de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> .</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Reportez-vous à la documentation de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=fr#datasets"> Adobe Journey Optimizer</a> .</td>
+    <td>Reportez-vous à la documentation de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> .</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ Utilisez le tableau ci-dessous pour comprendre quels types de jeux de données v
 
 Regardez la vidéo ci-dessous pour une explication de bout en bout du workflow décrit sur cette page, des avantages de l’utilisation de la fonctionnalité d’exportation du jeu de données et de certains cas d’utilisation suggérés.
 
->[!VIDEO](https://video.tv.adobe.com/v/3448820?captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## Destinations prises en charge {#supported-destinations}
 
@@ -143,6 +143,10 @@ Utilisez les cases à cocher situées à gauche des noms de jeux de données pou
 
 ![Workflow d’exportation des jeux de données présentant l’étape de sélection des jeux de données permettant de sélectionner les jeux de données à exporter.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
+>[!NOTE]
+>
+>Tous les jeux de données sélectionnés ici partageront le même planning d’exportation. Si vous avez besoin de différents plannings d’exportation (par exemple, des exportations incrémentielles pour certains jeux de données et des exportations complètes uniques pour d’autres), créez des flux de données distincts pour chaque type de planning.
+
 ## Planifier l’exportation des jeux de données {#scheduling}
 
 >[!CONTEXTUALHELP]
@@ -160,6 +164,16 @@ Utilisez les cases à cocher situées à gauche des noms de jeux de données pou
 >title="Mettre à jour la date de fin de ce corps de flux de données"
 >abstract="En raison des mises à jour récentes apportées à cette destination, le flux de données nécessite désormais une date de fin. Adobe a défini une date de fin par défaut au 1er septembre 2025. Mettez à jour à la date de fin souhaitée. Dans le cas contraire, les exports de données s’arrêteront à la date par défaut."
 
+>[!IMPORTANT]
+>
+>**La planification s’applique à tous les jeux de données du flux de données**
+>
+>Lorsque vous configurez ou modifiez le planning d’exportation, il s’applique à **tous les jeux de données** actuellement exportés par le biais du flux de données que vous configurez. Vous ne pouvez pas définir différents plannings pour des jeux de données individuels dans le même flux de données.
+>
+>Si vous avez besoin de plannings d’exportation différents pour différents jeux de données, vous devez créer des flux de données distincts (connexions de destination distinctes) pour chaque type de planning.
+>
+>**Exemple :** si le jeu de données A est exporté de manière incrémentielle et que vous ajoutez le jeu de données B avec un planning d’exportation complet unique, le jeu de données A sera également mis à jour vers le planning d’exportation complet unique.
+
 Utilisez l’étape **[!UICONTROL Scheduling]** pour :
 
 * Définissez une date de début et une date de fin, ainsi qu’une cadence d’exportation pour vos exportations de jeux de données.
@@ -167,6 +181,10 @@ Utilisez l’étape **[!UICONTROL Scheduling]** pour :
 * Personnalisez le chemin du dossier à l’emplacement de stockage où les jeux de données doivent être exportés. En savoir plus sur la [modification du chemin du dossier d’exportation](#edit-folder-path).
 
 Utilisez le contrôle **[!UICONTROL Edit schedule]** de la page pour modifier le rythme d’exportation des exportations et pour choisir d’exporter des fichiers complets ou incrémentiels.
+
+>[!WARNING]
+>
+>La modification du planning ici met à jour le comportement d’exportation pour tous les jeux de données de ce flux de données. Si ce flux de données contient plusieurs jeux de données, ils seront tous affectés par cette modification.
 
 ![Modifier le contrôle de planification mis en surbrillance à l’étape Planification.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png)
 
@@ -213,9 +231,18 @@ Vous pouvez utiliser plusieurs macros disponibles pour personnaliser le nom de d
 
 ![Sélection des macros mise en surbrillance dans la fenêtre modale du dossier personnalisé.](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
 
-Après avoir sélectionné les macros souhaitées, vous pouvez voir un aperçu de la structure de dossiers qui sera créée à votre emplacement de stockage. Le premier niveau de la structure de dossiers représente le **[!UICONTROL Folder path]** que vous avez indiqué lorsque vous [êtes connecté à la destination](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) pour exporter des jeux de données.
+Après avoir sélectionné les macros souhaitées, vous pouvez voir un aperçu de la structure de dossiers qui sera créée à votre emplacement de stockage. Le premier niveau de la structure de dossiers représente le **[!UICONTROL Folder path]** que vous avez indiqué lorsque vous [êtes connecté à la destination](/help/destinations/ui/connect-destination.md#set-up-connection-parameters) pour exporter des jeux de données.
 
 ![Aperçu du chemin du dossier mis en surbrillance dans la fenêtre modale du dossier personnalisé.](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
+
+### Bonnes pratiques de gestion de plusieurs jeux de données {#best-practices-multiple-datasets}
+
+Lors de l’exportation de plusieurs jeux de données, tenez compte des bonnes pratiques suivantes :
+
+* **Mêmes exigences de planification** : regroupez les jeux de données ayant besoin du même planning d’exportation (fréquence, type) dans un seul flux de données pour une gestion plus facile.
+* **Exigences de planification différentes** : créez des flux de données distincts pour les jeux de données qui nécessitent des planifications d’exportation ou des types d’exportation différents (incrémentiel ou complet). Chaque jeu de données est ainsi exporté en fonction de ses besoins spécifiques.
+* **Vérifier avant de modifier** : avant de modifier le planning sur un flux de données existant, vérifiez les jeux de données qui sont déjà exportés par ce flux de données pour éviter toute modification involontaire de leur comportement d’exportation.
+* **Documentez votre configuration** : suivez les jeux de données dans les flux de données, en particulier lors de la gestion de plusieurs plannings d’exportation sur différentes destinations.
 
 ## Réviser {#review}
 
@@ -227,7 +254,7 @@ Sur la page **[!UICONTROL Review]**, vous pouvez voir un résumé de votre séle
 
 Lors de l’exportation de jeux de données, Experience Platform crée un ou plusieurs fichiers `.json` ou `.parquet` dans l’emplacement de stockage que vous avez fourni. Attendez-vous à ce que de nouveaux fichiers soient déposés dans votre emplacement de stockage en fonction du planning d’exportation que vous avez fourni.
 
-Experience Platform crée une structure de dossiers dans l’emplacement de stockage que vous avez spécifié, où il dépose les fichiers de jeu de données exportés. Le modèle d’exportation de dossier par défaut est illustré ci-dessous, mais vous pouvez [&#x200B; personnaliser la structure de dossiers à l’aide de vos macros préférées](#edit-folder-path).
+Experience Platform crée une structure de dossiers dans l’emplacement de stockage que vous avez spécifié, où il dépose les fichiers de jeu de données exportés. Le modèle d’exportation de dossier par défaut est illustré ci-dessous, mais vous pouvez [ personnaliser la structure de dossiers à l’aide de vos macros préférées](#edit-folder-path).
 
 >[!TIP]
 > 
@@ -352,4 +379,10 @@ Non, c&#39;est impossible.
 
 +++Réponse
 Des reprises sont automatiquement en place pour la plupart des types d’erreurs système.
++++
+
+**Puis-je définir différents plannings d’exportation pour différents jeux de données dans le même flux de données ?**
+
++++Réponse
+Non, tous les jeux de données d’un seul flux de données partagent le même planning d’exportation. Si vous avez besoin de plannings d’exportation différents pour différents jeux de données, vous devez créer des flux de données distincts (connexions de destination) pour chaque type de planning. Par exemple, si vous souhaitez que le jeu de données A soit exporté de manière incrémentielle tous les jours et que le jeu de données B soit exporté en tant qu’exportation complète unique, vous devez créer deux flux de données distincts.
 +++
