@@ -2,10 +2,10 @@
 title: Connexion Demandbase People
 description: Utilisez cette destination pour activer vos audiences et les enrichir avec des données tierces Demandbase, pour d’autres cas d’utilisation en aval dans le marketing et les ventes.
 exl-id: 748f5518-7cc1-4d65-ab70-4a129d9e2066
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: cc05ca282cdfd012366e3deccddcae92a29fef1c
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 26%
+source-wordcount: '891'
+ht-degree: 24%
 
 ---
 
@@ -96,20 +96,35 @@ Vous êtes maintenant prêt à activer vos audiences dans Demandbase People.
 >[!IMPORTANT]
 > 
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Mappages obligatoires {#mandatory-mappings}
 
-Lors de l’activation des audiences vers la destination [!DNL Demandbase People], vous devez configurer les mappages des champs obligatoires suivants à l’étape de mappage :
+Lors de l’activation des audiences vers la destination [!DNL Demandbase People], vous devez configurer le mappage obligatoire des champs suivant à l’étape de mappage :
+
+| Champ source | Champ cible | Description |
+|--------------|--------------|-------------|
+| `xdm: workEmail.address` | `Identity: email` | Adresse électronique professionnelle de la personne |
+
+### Mappages recommandés {#recommended-mappings}
+
+Pour une précision de correspondance optimale, incluez les mappages facultatifs suivants dans votre flux d’activation, en plus du [mappage obligatoire](#mandatory-mappings) ci-dessus.
 
 | Champ source | Champ cible | Description |
 |--------------|--------------|-------------|
 | `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | Identifiant unique de la personne |
 | `xdm: person.name.lastName` | `xdm: lastName` | Nom de la personne |
 | `xdm: person.name.firstName` | `xdm: firstName` | Prénom de la personne |
-| `xdm: workEmail.address` | `Identity: email` | Adresse électronique professionnelle de la personne |
+
+### Bonnes pratiques de mappage {#mapping-best-practices}
+
+Lors du mappage de champs à des [!DNL Demandbase People], tenez compte du comportement correspondant suivant :
+
+* **Correspondance de Principal** : si `externalPersonId` est présent, Demandbase l&#39;utilise comme identifiant principal pour la correspondance de personnes.
+* **Correspondance de secours** : si `externalPersonId` n&#39;est pas disponible, Demandbase utilise le champ `email` pour l&#39;identification.
+* **Obligatoire ou recommandé** : bien que Demandbase n’exige que du `email`, Adobe recommande de mapper tous les champs disponibles à partir du tableau de mappages recommandé ci-dessus, afin d’améliorer la précision des correspondances et les performances de la campagne.
 
 ![Mappages de personnes Demandbase](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
 
@@ -120,4 +135,4 @@ Ces mappages sont nécessaires au bon fonctionnement de la destination et doiven
 * **Mécanismes de sécurisation de l’API Demandbase** : si vous avez exporté des audiences vers Demandbase et que les exportations ont réussi dans Experience Platform, mais que toutes les données n’atteignent pas Demandbase, vous avez peut-être rencontré un ralentissement de l’API du côté Demandbase. Contactez-les pour obtenir des éclaircissements.
 * **Suppression de liste** : les listes de personnes sont uniques. Vous ne pouvez donc pas recréer une nouvelle liste portant un nom déjà utilisé. Lorsque vous supprimez des personnes d’une liste, elles ne sont plus disponibles, mais elles ne sont pas supprimées.
 * **Durée d&#39;activation** : le chargement des données dans Demandbase est soumis à un traitement durant la nuit.
-* **Dénomination de l’audience** : si une audience de compte portant le même nom a été activée précédemment sur Demandbase, vous ne pouvez pas la réactiver via un autre flux de données vers la destination Demandbase.
+* **Dénomination de l&#39;audience** : si une audience de personnes portant le même nom a été activée précédemment dans Demandbase, vous ne pouvez pas la réactiver via un autre flux de données vers la destination Demandbase.
