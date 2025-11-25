@@ -3,9 +3,9 @@ title: Supprimer les ordres de travail d'enregistrement
 description: Découvrez comment utiliser le point d’entrée /workorder dans l’API Data Hygiene pour gérer les ordres de travail de suppression d’enregistrements dans Adobe Experience Platform. Ce guide couvre les quotas, la chronologie de traitement et l’utilisation des API.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 4f4b668c2b29228499dc28b2c6c54656e98aaeab
+source-git-commit: f1f37439bd4d77faf1015741e604eee7188c58d7
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2440'
 ht-degree: 3%
 
 ---
@@ -300,6 +300,110 @@ Le tableau suivant décrit les propriétés de la réponse.
 >[!NOTE]
 >
 >La propriété action des ordres de travail de suppression d’enregistrements est actuellement `identity-delete` dans les réponses de l’API. Si l’API est modifiée pour utiliser une autre valeur (telle que `delete_identity`), cette documentation sera mise à jour en conséquence.
+
+## Convertir les listes d’ID en JSON pour les requêtes de suppression d’enregistrements
+
+Pour créer un ordre de travail de suppression d’enregistrement à partir de fichiers CSV, TSV ou TXT contenant des identifiants, vous pouvez utiliser des scripts de conversion afin de produire les payloads JSON requises pour le point d’entrée `/workorder`. Cette approche est particulièrement utile lorsque vous travaillez avec des fichiers de données existants. Pour obtenir des scripts prêts à l’emploi et des instructions complètes, consultez le référentiel GitHub [csv-to-data-hygiene](https://github.com/perlmonger42/csv-to-data-hygiene).
+
+### Générer des payloads JSON
+
+Les exemples de script bash suivants montrent comment exécuter les scripts de conversion en Python ou Ruby :
+
+>[!BEGINTABS]
+
+>[!TAB Exemple d&#39;exécution de script Python]
+
+```bash
+#!/usr/bin/env bash
+
+rm -rf ./output && mkdir output
+for NAME in UTF8 CSV TSV TXT XYZ big; do
+  ./csv-to-DI-payload.py sample/sample-$NAME.* \
+      --verbose \
+      --column 2 \
+      --namespace email \
+      --dataset-id 66f4161cc19b0f2aef3edf10 \
+      --description 'a simple sample' \
+      --output-dir output
+  echo Checking output/sample-$NAME-*.json against expect/sample-$NAME-*.json
+  diff <(cat output/sample-$NAME-*.json) <(cat expect/sample-$NAME-*.json) || echo Unexpected output in sample-$NAME-*.*
+done
+```
+
+>[!TAB Exemple d&#39;exécution du script Ruby]
+
+```bash
+#!/usr/bin/env bash
+
+rm -rf ./output && mkdir output
+for NAME in UTF8 CSV TSV TXT XYZ big; do
+  ./csv-to-DI-payload.rb sample/sample-$NAME.* \
+      --verbose \
+      --column 2 \
+      --namespace email \
+      --dataset-id 66f4161cc19b0f2aef3edf10 \
+      --description 'a simple sample' \
+      --output-dir output
+  echo Checking output/sample-$NAME-*.json against expect/sample-$NAME-*.json
+  diff <(cat output/sample-$NAME-*.json) <(cat expect/sample-$NAME-*.json) || echo Unexpected output in sample-$NAME-*.*
+done
+```
+
+>[!ENDTABS]
+
+Le tableau ci-dessous décrit les paramètres des scripts bash.
+
+| Paramètre | Description |
+| ---           | ---     |
+| `verbose` | Activez la sortie détaillée. |
+| `column` | Index (basé sur 1) ou nom de l’en-tête de la colonne contenant les valeurs d’identité à supprimer. La valeur par défaut est la première colonne si elle n’est pas spécifiée. |
+| `namespace` | Objet avec une propriété `code` spécifiant l’espace de noms d’identité (par exemple, « email »). |
+| `dataset-id` | Identifiant unique du jeu de données associé à l’ordre de travail. Si la requête s’applique à tous les jeux de données, ce champ est défini sur `ALL`. |
+| `description` | Description de l&#39;ordre de travail de suppression des enregistrements. |
+| `output-dir` | Répertoire d’écriture de la payload JSON en sortie. |
+
+{style="table-layout:auto"}
+
+L’exemple ci-dessous montre une payload JSON réussie convertie à partir d’un fichier CSV, TSV ou TXT. Contient des enregistrements associés à l&#39;espace de noms spécifié et sert à supprimer les enregistrements identifiés par les adresses e-mail.
+
+```json
+{
+  "action": "delete_identity",
+  "datasetId": "66f4161cc19b0f2aef3edf10",
+  "displayName": "output/sample-big-001.json",
+  "description": "a simple sample",
+  "identities": [
+    {
+      "namespace": {
+        "code": "email"
+      },
+      "id": "1"
+    },
+    {
+      "namespace": {
+        "code": "email"
+      },
+      "id": "2"
+    }
+  ]
+}
+```
+
+Le tableau suivant décrit les propriétés de la payload JSON.
+
+| Propriété | Description |
+| ---          | ---     |
+| `action` | Action demandée pour l&#39;ordre de travail de suppression d&#39;enregistrement. Défini automatiquement sur `delete_identity` par le script de conversion. |
+| `datasetId` | Identifiant unique du jeu de données. |
+| `displayName` | Libellé lisible par l&#39;utilisateur pour cet ordre de travail de suppression d&#39;enregistrement. |
+| `description` | Description de l&#39;ordre de travail de suppression des enregistrements. |
+| `identities` | Tableau d’objets contenant chacun :<br><ul><li> `namespace` : objet avec une propriété `code` spécifiant l’espace de noms d’identité (par exemple, « email »).</li><li> `id` : valeur d’identité à supprimer pour cet espace de noms.</li></ul> |
+
+{style="table-layout:auto"}
+
+### Envoyer les données JSON générées au point d’entrée `/workorder`
+
+Pour soumettre une demande, suivez les instructions de la section [Création d’un ordre de travail de suppression d’enregistrement](#create). Veillez à utiliser la payload JSON convertie comme corps de requête (`-d`) lors de l’envoi de votre requête POST `curl` au point d’entrée de l’API `/workorder`.
 
 ## Récupérer les détails d’un ordre de travail de suppression d’enregistrement spécifique {#lookup}
 
