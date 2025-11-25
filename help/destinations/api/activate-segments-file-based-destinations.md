@@ -4,9 +4,9 @@ title: Activez les audiences vers des destinations basées sur des fichiers à l
 description: Découvrez comment utiliser l’API Flow Service pour exporter des fichiers avec des profils qualifiés vers des destinations d’espace de stockage.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 290c20d3deb70372fb2fc691c6e6d04d34a72853
 workflow-type: tm+mt
-source-wordcount: '4975'
+source-wordcount: '4976'
 ht-degree: 9%
 
 ---
@@ -17,7 +17,7 @@ Utilisez les fonctionnalités améliorées d’exportation de fichiers pour acc�
 
 * [Options de dénomination de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) supplémentaires.
 * Possibilité de définir des en-têtes de fichier personnalisés dans vos fichiers exportés via l’[étape de mappage améliorée](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
-* Possibilité de sélectionner le [&#x200B; type de fichier &#x200B;](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) fichier exporté.
+* Possibilité de sélectionner le [ type de fichier ](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) fichier exporté.
 * [Possibilité de personnaliser le formatage des fichiers de données CSV exportés](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 Cette fonctionnalité est prise en charge par les six cartes de stockage dans le cloud répertoriées ci-dessous :
@@ -59,7 +59,7 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 
 Pour exporter des profils, vous avez besoin des **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
-Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 ### Lecture d’exemples d’appels API {#reading-sample-api-calls}
 
@@ -1096,7 +1096,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ### Ajouter un chiffrement aux fichiers exportés
 
-Vous pouvez éventuellement ajouter un chiffrement à vos fichiers exportés. Pour ce faire, vous devez ajouter des éléments à partir du `encryptionSpecs` . Consultez l’exemple de requête ci-dessous avec les paramètres obligatoires mis en surbrillance :
+Vous pouvez éventuellement ajouter un chiffrement à vos fichiers exportés. Pour ce faire, vous devez ajouter des éléments à partir de l’objet `encryption`. Consultez l’exemple de requête ci-dessous avec les paramètres obligatoires mis en surbrillance :
 
 
 >[!BEGINSHADEBOX]
@@ -1104,7 +1104,7 @@ Vous pouvez éventuellement ajouter un chiffrement à vos fichiers exportés. Po
 +++ Afficher les spécifications de chiffrement pour les destinations d’espace de stockage
 
 ```json {line-numbers="true" start-line="1" highlight="26-27"}
-           "encryptionSpecs": [
+           "encryption": [
                 {
                     "name": "File PGP/GPG Encryption",
                     "type": "FileAsymmetric",
@@ -1163,12 +1163,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "sshKey": "<Add SSH key>"
       }
     },
-  "encryptionSpecs":{
-     "specName": "Encryption spec",
-     "params": {
-         "encryptionAlgo":"PGPGPG",
-         "publicKey":"<Add public key>"
-      }            
+  "encryption": {
+    "specName": "File Encryption",
+        "params": {
+            "encryptionAlgo": "PGP/GPG",
+            "publicKey": "<Add public key>"
+        }
     },
   "connectionSpec": {
     "id": "36965a81-b1c6-401b-99f8-22508f1e6a26", // SFTP connection spec
@@ -1221,7 +1221,7 @@ Notez les lignes mises en surbrillance avec des commentaires intégrés dans l�
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { //describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -1432,7 +1432,7 @@ Notez les lignes mises en surbrillance avec des commentaires intégrés dans l�
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { // describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -1632,7 +1632,7 @@ Notez les lignes mises en surbrillance avec des commentaires intégrés dans l�
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { // describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -1822,11 +1822,11 @@ Notez les lignes mises en surbrillance avec des commentaires intégrés dans l�
         "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
         "version": "1.0",
         "authSpec": [],
-        "encryptionSpecs": [],
-            "targetSpec": { // describes the target connection parameters
-                "name": "User based target",
-                "type": "UserNamespace",
-                "spec": {
+        "encryption": [],
+        "targetSpec": { // describes the target connection parameters
+            "name": "User based target",
+            "type": "UserNamespace",
+            "spec": {
                     "$schema": "http://json-schema.org/draft-07/schema#",
                     "type": "object",
                     "properties": {
@@ -2013,7 +2013,7 @@ Notez les lignes mises en surbrillance avec des commentaires intégrés dans l�
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { // describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -2212,7 +2212,7 @@ Notez les lignes mises en surbrillance avec des commentaires intégrés dans l�
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { // describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -3275,7 +3275,7 @@ Notez l’identifiant du flux de données dans la réponse. Cet identifiant sera
 
 ### Ajouter des audiences à l’exportation
 
-Au cours de cette étape, vous pouvez également sélectionner les audiences que vous souhaitez exporter vers la destination. Pour obtenir des informations détaillées sur cette étape et le format de requête permettant d’ajouter une audience au flux de données, consultez les exemples dans la section [&#x200B; Mettre à jour un flux de données de destination &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) de la documentation de référence de l’API.
+Au cours de cette étape, vous pouvez également sélectionner les audiences que vous souhaitez exporter vers la destination. Pour obtenir des informations détaillées sur cette étape et le format de requête permettant d’ajouter une audience au flux de données, consultez les exemples dans la section [ Mettre à jour un flux de données de destination ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) de la documentation de référence de l’API.
 
 
 ## Configurer le mappage des attributs et des identités {#attribute-and-identity-mapping}
@@ -4536,7 +4536,7 @@ Pour ajouter une [action marketing](/help/data-governance/api/marketing-actions.
 
 >[!TIP]
 >
->Avant d’ajouter une action marketing à un flux de données, vous pouvez rechercher vos actions marketing de base et personnalisées existantes. Affichez [&#x200B; comment récupérer une liste d’actions marketing existantes &#x200B;](/help/data-governance/api/marketing-actions.md#list).
+>Avant d’ajouter une action marketing à un flux de données, vous pouvez rechercher vos actions marketing de base et personnalisées existantes. Affichez [ comment récupérer une liste d’actions marketing existantes ](/help/data-governance/api/marketing-actions.md#list).
 
 +++Ajouter une action marketing à un flux de données de destination - Requête
 
@@ -4875,7 +4875,7 @@ Vous trouverez des informations sur les [différents paramètres renvoyés par l
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[&#x200B; consultez les sections &#x200B;](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[ consultez les sections ](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 
