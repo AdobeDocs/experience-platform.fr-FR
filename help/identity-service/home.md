@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation du service d’identités
 description: Le service d’identités d’Adobe Experience Platform vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences digitales personnelles et percutantes en temps réel.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: f791940300036159ceaad11ff725eecfaa8332f4
+source-git-commit: 8dc4393232f5e256f375d2104d4fe0eaffc1d716
 workflow-type: tm+mt
 source-wordcount: '1574'
 ht-degree: 8%
@@ -105,7 +105,7 @@ Un graphique d’identités est une carte des relations entre différents espace
 
 La vidéo suivante est destinée à étayer votre compréhension des identités et des graphiques dʼidentité.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422771?quality=12&learn=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
 ## Comprendre le rôle d’Identity Service dans l’infrastructure Experience Platform
 
