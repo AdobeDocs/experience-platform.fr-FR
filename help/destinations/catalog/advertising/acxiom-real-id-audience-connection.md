@@ -91,7 +91,7 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 >[!IMPORTANT]
 > 
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 
 
@@ -114,7 +114,7 @@ Pour que la destination [!DNL Acxiom Real ID Audience Connection] reçoive corre
 
 
 
-Dans la colonne **[!UICONTROL Source Field]** , saisissez le nom de l’attribut source que vous souhaitez mapper au champ cible correspondant, ou sélectionnez l’icône de flèche pour ouvrir l’écran de **[!UICONTROL  Select source field]**. Sélectionnez ensuite **[!UICONTROL Next]**.
+Dans la colonne **[!UICONTROL Source Field]** , saisissez le nom de l’attribut source que vous souhaitez mapper au champ cible correspondant, ou sélectionnez l’icône de flèche pour ouvrir l’écran de **[!UICONTROL &#x200B; Select source field]**. Sélectionnez ensuite **[!UICONTROL Next]**.
 ![Écran Mappage](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png)
 
 
