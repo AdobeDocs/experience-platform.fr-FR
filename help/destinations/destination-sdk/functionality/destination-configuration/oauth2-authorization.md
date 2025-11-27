@@ -2,10 +2,10 @@
 description: Cette page décrit les différents flux d’autorisation OAuth 2 pris en charge par Destination SDK et fournit des instructions pour configurer l’autorisation OAuth 2 pour la destination.
 title: Autorisation OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 0cde918c693d06d735397aad721fd3cd5c4e760e
 workflow-type: tm+mt
-source-wordcount: '2181'
-ht-degree: 78%
+source-wordcount: '2182'
+ht-degree: 77%
 
 ---
 
@@ -82,7 +82,7 @@ Dans tous les cas, la sortie comprend un jeton d’accès, qui est utilisé par 
 Le système qu’Adobe a conçu pour l’autorisation OAuth 2 :
 
 * prend en charge les trois autorisations OAuth 2 tout en tenant compte des variations qu’elles comportent, telles que les champs de données supplémentaires, les appels API non standard, etc. ;
-* prend en charge les jetons d’accès avec des valeurs de durée de vie variables, qu’il s’agisse de 90 jours, 30 minutes ou de toute autre valeur de durée de vie que vous spécifiez ;
+* Prend en charge les jetons d’accès avec des valeurs de durée de vie variables. Adobe vous recommande de définir la valeur de durée de vie du jeton sur un minimum de 24 heures.
 * prend en charge les flux d’autorisation OAuth 2 avec ou sans jetons d’actualisation.
 
 ## OAuth 2 avec code d’autorisation {#authorization-code}
