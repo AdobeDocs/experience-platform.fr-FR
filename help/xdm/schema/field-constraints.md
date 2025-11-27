@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Contraintes de type de champ XDM
 description: Référence pour les contraintes de type de champ dans le modèle de données d’expérience (XDM), y compris les autres formats de sérialisation auxquels ils peuvent être mappés et comment définir vos propres types de champ dans l’API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 8ddedb5ff8c12b05cdf39fa8dc2b59258389e522
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 7%
+source-wordcount: '635'
+ht-degree: 6%
 
 ---
 
@@ -27,7 +27,7 @@ XDM repose sur le schéma JSON. Par conséquent, les champs XDM héritent d’un
 
 >[!NOTE]
 >
->Pour plus d’informations sur le schéma JSON et les autres technologies sous-jacentes dans les API Experience Platform[&#128279;](../../landing/api-fundamentals.md#json-schema) consultez le  guide des principes de base des API .
+>Pour plus d’informations sur le schéma JSON et les autres technologies sous-jacentes dans les API Experience Platform[ consultez le ](../../landing/api-fundamentals.md#json-schema) guide des principes de base des API .
 
 Le tableau suivant décrit la manière dont chaque type XDM est représenté dans le schéma JSON, ainsi qu’un exemple de valeur conforme au type :
 
@@ -60,11 +60,11 @@ Le tableau suivant décrit la manière dont chaque type XDM est représenté dan
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   « type » : « integer »,
   « maximum » : 9007199254740991,
   « minimum » : -9007199254740991
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
@@ -72,11 +72,11 @@ Le tableau suivant décrit la manière dont chaque type XDM est représenté dan
       <td>[!UICONTROL Integer]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   « type » : « integer »,
   « maximum » : 2147483648,
   « minimum » : -2147483648
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
@@ -84,11 +84,11 @@ Le tableau suivant décrit la manière dont chaque type XDM est représenté dan
       <td>[!UICONTROL Short]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   « type » : « integer »,
-  « maximum » : 32768,
+  « maximum » : 32767,
   « minimum » : -32768
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
@@ -96,11 +96,11 @@ Le tableau suivant décrit la manière dont chaque type XDM est représenté dan
       <td>[!UICONTROL Byte]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   « type » : « integer »,
   « maximum » : 128
   « minimum » : -128
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>90</code></td>
     </tr>
@@ -108,10 +108,10 @@ Le tableau suivant décrit la manière dont chaque type XDM est représenté dan
       <td>[!UICONTROL Date]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   « type »: « string »,
   « format »: « date »
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>"2019-05-15"</code></td>
     </tr>
@@ -119,10 +119,10 @@ Le tableau suivant décrit la manière dont chaque type XDM est représenté dan
       <td>[!UICONTROL DateTime]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   « type »: « string »,
   « format » : « date-heure »
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>
@@ -157,16 +157,16 @@ Les sections ci-dessous décrivent comment chaque type XDM correspond à d’aut
 
 | Type XDM | Parquet | Spark SQL | Java |
 | --- | --- | --- | --- |
-| [!UICONTROL Chaîne] | Type : `BYTE_ARRAY`<br>Annotation : `UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL Nombre] | Type : `DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL String] | Type : `BYTE_ARRAY`<br>Annotation : `UTF8` | `StringType` | `java.lang.String` |
+| [!UICONTROL Number] | Type : `DOUBLE` | `LongType` | `java.lang.Double` |
 | [!UICONTROL Long] | Type : `INT64` | `LongType` | `java.lang.Long` |
-| [!UICONTROL Entier] | Type : `INT32`<br>Annotation : `INT_32` | `IntegerType` | `java.lang.Integer` |
-| [!UICONTROL Court] | Type : `INT32`<br>Annotation : `INT_16` | `ShortType` | `java.lang.Short` |
-| [!UICONTROL Octet] | Type : `INT32`<br>Annotation : `INT_8` | `ByteType` | `java.lang.Short` |
+| [!UICONTROL Integer] | Type : `INT32`<br>Annotation : `INT_32` | `IntegerType` | `java.lang.Integer` |
+| [!UICONTROL Short] | Type : `INT32`<br>Annotation : `INT_16` | `ShortType` | `java.lang.Short` |
+| [!UICONTROL Byte] | Type : `INT32`<br>Annotation : `INT_8` | `ByteType` | `java.lang.Short` |
 | [!UICONTROL Date] | Type : `INT32`<br>Annotation : `DATE` | `DateType` | `java.util.Date` |
-| [!UICONTROL DateHeure] | Type : `INT64`<br>Annotation : `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
-| [!UICONTROL booléen] | Type : `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
-| [!UICONTROL Carte] | Groupe `MAP`-annoté <br><br>(`<key-type>` doit être `STRING`) | `MapType`<br><br>(`keyType` doit être `StringType`) | `java.util.Map` |
+| [!UICONTROL DateTime] | Type : `INT64`<br>Annotation : `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
+| [!UICONTROL Boolean] | Type : `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
+| [!UICONTROL Map] | Groupe `MAP`-annoté <br><br>(`<key-type>` doit être `STRING`) | `MapType`<br><br>(`keyType` doit être `StringType`) | `java.util.Map` |
 
 {style="table-layout:auto"}
 
@@ -174,16 +174,16 @@ Les sections ci-dessous décrivent comment chaque type XDM correspond à d’aut
 
 | Type XDM | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
-| [!UICONTROL Chaîne] | `String` | `System.String` | `String` |
-| [!UICONTROL Nombre] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL String] | `String` | `System.String` | `String` |
+| [!UICONTROL Number] | `Double` | `System.Double` | `Number` |
 | [!UICONTROL Long] | `Long` | `System.Int64` | `Number` |
-| [!UICONTROL Entier] | `Int` | `System.Int32` | `Number` |
-| [!UICONTROL Court] | `Short` | `System.Int16` | `Number` |
-| [!UICONTROL Octet] | `Byte` | `System.SByte` | `Number` |
+| [!UICONTROL Integer] | `Int` | `System.Int32` | `Number` |
+| [!UICONTROL Short] | `Short` | `System.Int16` | `Number` |
+| [!UICONTROL Byte] | `Byte` | `System.SByte` | `Number` |
 | [!UICONTROL Date] | `java.util.Date` | `System.DateTime` | `String` |
-| [!UICONTROL DateHeure] | `java.util.Date` | `System.DateTime` | `String` |
-| [!UICONTROL booléen] | `Boolean` | `System.Boolean` | `Boolean` |
-| [!UICONTROL Carte] | `Map` | (S/O) | `object` |
+| [!UICONTROL DateTime] | `java.util.Date` | `System.DateTime` | `String` |
+| [!UICONTROL Boolean] | `Boolean` | `System.Boolean` | `Boolean` |
+| [!UICONTROL Map] | `Map` | (S/O) | `object` |
 
 {style="table-layout:auto"}
 
@@ -191,16 +191,16 @@ Les sections ci-dessous décrivent comment chaque type XDM correspond à d’aut
 
 | Type XDM | MongoDB | Aerospike | Protobuf 2 |
 | --- | --- | --- | --- |
-| [!UICONTROL Chaîne] | `string` | `String` | `string` |
-| [!UICONTROL Nombre] | `double` | `Double` | `double` |
+| [!UICONTROL String] | `string` | `String` | `string` |
+| [!UICONTROL Number] | `double` | `Double` | `double` |
 | [!UICONTROL Long] | `long` | `Integer` | `int64` |
-| [!UICONTROL Entier] | `int` | `Integer` | `int32` |
-| [!UICONTROL Court] | `int` | `Integer` | `int32` |
-| [!UICONTROL Octet] | `int` | `Integer` | `int32` |
+| [!UICONTROL Integer] | `int` | `Integer` | `int32` |
+| [!UICONTROL Short] | `int` | `Integer` | `int32` |
+| [!UICONTROL Byte] | `int` | `Integer` | `int32` |
 | [!UICONTROL Date] | `date` | `Integer`<br> (Unix millisecondes) | `int64`<br> (Unix millisecondes) |
-| [!UICONTROL DateHeure] | `timestamp` | `Integer`<br> (Unix millisecondes) | `int64`<br> (Unix millisecondes) |
-| [!UICONTROL booléen] | `bool` | `Integer`<br>(0/1 binaire) | `bool` |
-| [!UICONTROL Carte] | `object` | `map` | `map<key_type, value_type>` |
+| [!UICONTROL DateTime] | `timestamp` | `Integer`<br> (Unix millisecondes) | `int64`<br> (Unix millisecondes) |
+| [!UICONTROL Boolean] | `bool` | `Integer`<br>(0/1 binaire) | `bool` |
+| [!UICONTROL Map] | `object` | `map` | `map<key_type, value_type>` |
 
 {style="table-layout:auto"}
 

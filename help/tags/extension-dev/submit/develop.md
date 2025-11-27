@@ -2,10 +2,10 @@
 title: Développement d’une extension
 description: Ce document offre un aperçu général du processus de développement dʼune extension de balise et contient des liens vers dʼautres documents présentant des processus plus détaillés.
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: 36870fa5359b5382cb9f1e9a5220ce8311f0c45c
+source-git-commit: 3f5e432ef381c10d8197724783135637d01a120e
 workflow-type: tm+mt
-source-wordcount: '443'
-ht-degree: 97%
+source-wordcount: '436'
+ht-degree: 92%
 
 ---
 
@@ -42,11 +42,7 @@ Il existe également un certain nombre d’outils npm pour vous aider à dévelo
 
 ## Exemples d’extensions
 
-Il existe des exemples dʼextensions sur GitHub que vous pouvez consulter ou utiliser comme projets de démarrage :
-
-* [Exemple d’extension Hello World](https://github.com/adobe/reactor-helloworld-extension)
-* [Exemple d’extension Typekit](https://github.com/jeffchasin/extension-typekit)
-* [Exemple d’extension Pinterest](https://github.com/jeffchasin/extension-pinterest)
+Vous pouvez consulter ou utiliser des exemples d’extensions provenant de GitHub, tels que l’exemple d’extension [Hello World](https://github.com/adobe/reactor-helloworld-extension), comme projets de démarrage.
 
 ## Espace de travail Slack
 
