@@ -27,7 +27,7 @@ XDM repose sur le schéma JSON. Par conséquent, les champs XDM héritent d’un
 
 >[!NOTE]
 >
->Pour plus d’informations sur le schéma JSON et les autres technologies sous-jacentes dans les API Experience Platform[ consultez le ](../../landing/api-fundamentals.md#json-schema) guide des principes de base des API .
+>Pour plus d’informations sur le schéma JSON et les autres technologies sous-jacentes dans les API Experience Platform[&#x200B; consultez le &#x200B;](../../landing/api-fundamentals.md#json-schema) guide des principes de base des API .
 
 Le tableau suivant décrit la manière dont chaque type XDM est représenté dans le schéma JSON, ainsi qu’un exemple de valeur conforme au type :
 
@@ -60,11 +60,11 @@ Le tableau suivant décrit la manière dont chaque type XDM est représenté dan
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   « type » : « integer »,
   « maximum » : 9007199254740991,
   « minimum » : -9007199254740991
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
@@ -72,11 +72,11 @@ Le tableau suivant décrit la manière dont chaque type XDM est représenté dan
       <td>[!UICONTROL Integer]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   « type » : « integer »,
   « maximum » : 2147483648,
   « minimum » : -2147483648
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
@@ -84,11 +84,11 @@ Le tableau suivant décrit la manière dont chaque type XDM est représenté dan
       <td>[!UICONTROL Short]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   « type » : « integer »,
   « maximum » : 32767,
   « minimum » : -32768
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
@@ -96,11 +96,11 @@ Le tableau suivant décrit la manière dont chaque type XDM est représenté dan
       <td>[!UICONTROL Byte]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   « type » : « integer »,
   « maximum » : 128
   « minimum » : -128
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>90</code></td>
     </tr>
@@ -108,10 +108,10 @@ Le tableau suivant décrit la manière dont chaque type XDM est représenté dan
       <td>[!UICONTROL Date]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   « type »: « string »,
   « format »: « date »
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>"2019-05-15"</code></td>
     </tr>
@@ -119,10 +119,10 @@ Le tableau suivant décrit la manière dont chaque type XDM est représenté dan
       <td>[!UICONTROL DateTime]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   « type »: « string »,
   « format » : « date-heure »
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>

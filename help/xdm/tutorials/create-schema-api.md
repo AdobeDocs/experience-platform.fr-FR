@@ -16,7 +16,7 @@ ht-degree: 31%
 
 Le [!DNL Schema Registry] permet d’accéder au [!DNL Schema Library] dans Adobe Experience Platform. Le [!DNL Schema Library] contient les ressources mises à votre disposition par Adobe, les partenaires [!DNL Experience Platform] et les fournisseurs dont vous utilisez les applications. Le registre fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les ressources disponibles de la bibliothèque sont accessibles.
 
-Ce tutoriel utilise l’API [!DNL Schema Registry] pour vous guider tout au long des étapes de composition d’un schéma à l’aide d’une classe standard. Si vous préférez utiliser l’interface utilisateur dans [!DNL Experience Platform], le tutoriel de l’éditeur de schémas [ ](create-schema-ui.md) fournit des instructions détaillées pour exécuter des actions similaires dans l’éditeur de schémas.
+Ce tutoriel utilise l’API [!DNL Schema Registry] pour vous guider tout au long des étapes de composition d’un schéma à l’aide d’une classe standard. Si vous préférez utiliser l’interface utilisateur dans [!DNL Experience Platform], le tutoriel de l’éditeur de schémas [&#x200B; &#x200B;](create-schema-ui.md) fournit des instructions détaillées pour exécuter des actions similaires dans l’éditeur de schémas.
 
 >[!NOTE]
 >
@@ -1385,7 +1385,7 @@ La zone de travail des schémas affiche la structure complète de votre schéma.
 * Tous les groupes de champs standard que vous avez ajoutés apparaissent dans la zone de travail.
 * Votre groupe de champs personnalisés apparaît dans la structure et est développé pour afficher ses champs.
 
-![ Zone de travail des schémas affichant la structure complète du schéma avec les groupes de champs standard et personnalisés développés.](../images/tutorials/create-schema/schema-canvas.png)
+![&#x200B; Zone de travail des schémas affichant la structure complète du schéma avec les groupes de champs standard et personnalisés développés.](../images/tutorials/create-schema/schema-canvas.png)
 
 ### Vérifier les propriétés du schéma
 
