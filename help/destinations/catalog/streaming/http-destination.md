@@ -4,10 +4,10 @@ title: Connexion API HTTP
 description: Utilisez la destination API HTTP dans Adobe Experience Platform pour envoyer des données de profil vers un point d’entrée HTTP tiers afin d’exécuter vos propres analyses ou toute autre opération dont vous pourriez avoir besoin sur les données de profil exportées hors d’Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 6d1b73c1557124f283558e1daeb3ddeaaec8e8a4
+source-git-commit: aacc3cbbc2bc8c02e50f375f78733a851138e1c7
 workflow-type: tm+mt
-source-wordcount: '3079'
-ht-degree: 47%
+source-wordcount: '2908'
+ht-degree: 50%
 
 ---
 
@@ -59,7 +59,7 @@ Pour utiliser la destination d’API HTTP pour exporter des données en dehors d
 * Votre point d’entrée HTTP doit prendre en charge le schéma de profil Experience Platform. Aucune transformation en schéma de payload tiers n’est prise en charge dans la destination de l’API HTTP. Reportez-vous à la section [données exportées](#exported-data) pour un exemple du schéma de sortie Experience Platform.
 * Votre point d’entée HTTP doit prendre en charge les en-têtes.
 * Votre point d’entrée HTTP doit répondre dans les 2 secondes pour assurer un traitement correct des données et éviter les erreurs de délai d’expiration.
-* Si vous prévoyez d’utiliser le protocole mTLS : le protocole TLS doit être désactivé et seul le protocole mTLS doit être activé pour votre point d’entrée de réception de données. Si vous utilisez également l’authentification OAuth 2, vous devez conserver un point d’entrée HTTPS standard distinct pour la récupération des jetons. Voir la section [considérations relatives à mTLS](#mtls-considerations) pour plus d’informations.
+* Si vous prévoyez d’utiliser le protocole mTLS : le protocole TLS doit être désactivé et seul le protocole mTLS doit être activé pour votre point d’entrée de réception de données. mTLS n’est pas pris en charge si votre point d’entrée nécessite une authentification par mot de passe OAuth 2 ou informations d’identification client.
 
 >[!TIP]
 >
@@ -75,17 +75,7 @@ Vous pouvez utiliser [!DNL Mutual Transport Layer Security] ([!DNL mTLS]) pour g
 
 La prise en charge mTLS des destinations d’API HTTP s’applique **uniquement au point d’entrée de réception des données** où les exportations de profil sont envoyées (champ **[!UICONTROL HTTP Endpoint]** dans [détails de la destination](#destination-details)).
 
-**mTLS n’est pas pris en charge pour les points d’entrée d’authentification OAuth 2 :**
-
-* Le **[!UICONTROL Access Token URL]** utilisé dans les informations d’identification du client OAuth 2 ou l’authentification Mot de passe OAuth 2 ne prend pas en charge mTLS
-* Les requêtes de récupération et d’actualisation des jetons sont envoyées via HTTPS standard sans authentification du certificat client
-
-**Architecture requise :** si vous avez besoin de mTLS pour votre point d’entrée de réception de données et que vous utilisez l’authentification OAuth 2, vous devez gérer deux points d’entrée distincts :
-
-* **Point d’entrée d’authentification** HTTPS standard (sans mTLS) pour la gestion des jetons
-* **Point d’entrée de réception de données :** HTTPS avec mTLS uniquement activé pour les exportations de profils
-
-Cette architecture est une limitation actuelle de la plateforme . La prise en charge de mTLS sur les points d’entrée d’authentification est en cours d’évaluation pour les prochaines versions.
+mTLS n’est **pas pris en charge** si votre point d’entrée nécessite une authentification par mot de passe OAuth 2 ou informations d’identification du client.
 
 ### Configuration de mTLS pour l’exportation de données {#configuring-mtls}
 
@@ -99,7 +89,7 @@ Pour plus d’informations, consultez la [documentation sur les points d’entr�
 
 ## Liste autorisée d’adresses IP {#ip-address-allowlist}
 
-Pour répondre aux exigences de sécurité et de conformité des clients, Experience Platform fournit une liste des adresses IP statiques que vous pouvez inscrire sur la liste autorisée pour la destination de l’API HTTP. Pour obtenir la liste complète des adresses IP à placer sur la liste autorisée placer sur la liste autorisée [&#x200B; consultez la section &#x200B;](/help/destinations/catalog/streaming/ip-address-allow-list.md)Adresses IP à configurer pour les destinations de diffusion en continu.
+Pour répondre aux exigences de sécurité et de conformité des clients, Experience Platform fournit une liste des adresses IP statiques que vous pouvez inscrire sur la liste autorisée pour la destination de l’API HTTP. Pour obtenir la liste complète des adresses IP à placer sur la liste autorisée placer sur la liste autorisée [ consultez la section ](/help/destinations/catalog/streaming/ip-address-allow-list.md)Adresses IP à configurer pour les destinations de diffusion en continu.
 
 ## Types d’authentification pris en charge {#supported-authentication-types}
 
@@ -167,9 +157,9 @@ Si vous sélectionnez le type d’authentification **[!UICONTROL OAuth 2 Passwor
 
 >[!NOTE]
 >
->Limitation **mTLS :** le [!UICONTROL Access Token URL] ne prend pas en charge mTLS. Si vous prévoyez d’utiliser mTLS pour votre point d’entrée de réception de données, votre point d’entrée d’authentification doit utiliser le protocole HTTPS standard. Voir la section [Considérations relatives à mTLS](#mtls-considerations) pour plus d’informations sur l’architecture requise.
+>Limitation **mTLS :** mTLS n’est pas pris en charge avec l’authentification par mot de passe OAuth 2. Voir la section [considérations relatives à mTLS](#mtls-considerations) pour plus d’informations.
 
-* **[!UICONTROL Access Token URL]** : URL de votre côté qui émet des jetons d’accès et, éventuellement, actualise les jetons. Ce point d’entrée doit utiliser le protocole HTTPS standard et ne prend pas en charge le protocole mTLS.
+* **[!UICONTROL Access Token URL]** : URL de votre côté qui émet des jetons d’accès et, éventuellement, actualise les jetons.
 * **[!UICONTROL Client ID]** : [!DNL client ID] que votre système attribue à Adobe Experience Platform.
 * **[!UICONTROL Client Secret]** : [!DNL client secret] que votre système attribue à Adobe Experience Platform.
 * **[!UICONTROL Username]** : nom d’utilisateur pour accéder à votre point d’entrée HTTP.
@@ -187,9 +177,9 @@ Si vous sélectionnez le type d’authentification **[!UICONTROL OAuth 2 Client 
 
 >[!NOTE]
 >
->Limitation **mTLS :** le [!UICONTROL Access Token URL] ne prend pas en charge mTLS. Si vous prévoyez d’utiliser mTLS pour votre point d’entrée de réception de données, votre point d’entrée d’authentification doit utiliser le protocole HTTPS standard. Voir la section [Considérations relatives à mTLS](#mtls-considerations) pour plus d’informations sur l’architecture requise.
+>Limitation de **mTLS :** mTLS n’est pas pris en charge avec l’authentification des informations d’identification du client OAuth 2. Voir la section [considérations relatives à mTLS](#mtls-considerations) pour plus d’informations.
 
-* **[!UICONTROL Access Token URL]** : URL de votre côté qui émet des jetons d’accès et, éventuellement, actualise les jetons. Ce point d’entrée doit utiliser le protocole HTTPS standard et ne prend pas en charge le protocole mTLS.
+* **[!UICONTROL Access Token URL]** : URL de votre côté qui émet des jetons d’accès et, éventuellement, actualise les jetons.
 * **[!UICONTROL Client ID]** : [!DNL client ID] que votre système attribue à Adobe Experience Platform.
 * **[!UICONTROL Client Secret]** : [!DNL client secret] que votre système attribue à Adobe Experience Platform.
 * **[!UICONTROL Client Credentials Type]** : sélectionnez le type d’octroi des informations d’identification du client OAuth2 pris en charge par votre point d’entrée :
@@ -206,7 +196,7 @@ Si vous sélectionnez le type d’authentification **[!UICONTROL OAuth 2 Client 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_endpoint"
 >title="Point d’entrée HTTP"
->abstract="URL du point d’entrée HTTP vers lequel vous souhaitez envoyer les données de profil. Il s’agit de votre point d’entrée de réception de données et prend en charge le protocole mTLS s’il est configuré. Ceci est distinct de l’URL du jeton d’accès OAuth 2, qui ne prend pas en charge mTLS."
+>abstract="URL du point d’entrée HTTP vers lequel vous souhaitez envoyer les données de profil. Il s’agit de votre point d’entrée de réception des données et prend en charge le protocole mTLS s’il est configuré (non disponible avec l’authentification Mot de passe OAuth 2 ou Informations d’identification du client)."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
@@ -230,7 +220,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 * **[!UICONTROL Name]** : saisissez un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : saisissez une description qui vous aidera à identifier cette destination à l’avenir.
 * **[!UICONTROL Headers]** : saisissez tous les en-têtes personnalisés que vous souhaitez inclure dans les appels de destination, en suivant ce format : `header1:value1,header2:value2,...headerN:valueN`.
-* **[!UICONTROL HTTP Endpoint]** : URL du point d’entrée HTTP vers lequel vous souhaitez envoyer les données de profil. Il s’agit de votre point d’entrée de réception de données. Si vous utilisez mTLS, le protocole TLS doit être désactivé pour ce point d’entrée et seul le protocole mTLS doit être activé. Notez qu’il est différent de l’URL du jeton d’accès OAuth 2 configurée lors de l’authentification.
+* **[!UICONTROL HTTP Endpoint]** : URL du point d’entrée HTTP vers lequel vous souhaitez envoyer les données de profil. Il s’agit de votre point d’entrée de réception de données. Si vous utilisez mTLS, le protocole TLS doit être désactivé pour ce point d’entrée et seul le protocole mTLS doit être activé.
 * **[!UICONTROL Query parameters]** : vous pouvez éventuellement ajouter des paramètres de requête à l’URL du point d’entrée HTTP. Mettez en forme les paramètres de requête que vous utilisez comme suit : `parameter1=value&parameter2=value`.
 * **[!UICONTROL Include Segment Names]** : activez ce bouton si vous souhaitez que l’exportation de données inclue les noms des audiences que vous exportez. **Remarque** : les noms de segment ne sont inclus que pour les segments mappés à la destination. Les segments non mappés qui apparaissent dans l’exportation n’incluent pas le champ `name` . Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
 * **[!UICONTROL Include Segment Timestamps]** : activez ce bouton si vous souhaitez que l’exportation de données inclue la date et l’heure UNIX de la création et des mises à jour des audiences, ainsi que la date et l’heure UNIX du mappage des audiences à la destination pour l’activation. Pour un exemple d’exportation de données avec cette option sélectionnée, reportez-vous à la section [Données exportées](#exported-data) plus bas.
@@ -248,7 +238,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 >* L’[évaluation de la politique de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) n’est actuellement pas prise en charge dans les exportations vers la destination API HTTP. [En savoir plus](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
-Consultez [&#x200B; Activer les données d’audience vers des destinations d’exportation de profil de diffusion en continu &#x200B;](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Consultez [ Activer les données d’audience vers des destinations d’exportation de profil de diffusion en continu ](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Attributs de destination {#attributes}
 
