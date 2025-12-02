@@ -47,7 +47,7 @@ Au fur et à mesure que vous exécuterez les étapes de mise en œuvre du cas d�
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/introduction-to-journey-optimizer/introduction.html?lang=fr) - Vous permet de proposer des expériences connectées, contextuelles et personnalisées à vos clients.
    * [Déclencheur d’événement ou d’audience](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [Audiences/Événements](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=fr)
-   * [Actions de Parcours ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+   * [Actions de Parcours &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ## Comment réaliser le cas d’utilisation {#achieve-use-case-instruction}
 
@@ -141,7 +141,7 @@ Le groupe de champs [Consentements et préférences](/help/xdm/field-groups//pro
 
 +++Détails du test de profil (groupe de champs)
 
-Ce groupe de champs vous permet de tester votre parcours avant sa publication à l’aide de profils de test. Pour plus d’informations sur la création de profils de test, consultez les tutoriels [créer des profils de test](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html) et [tester le parcours ](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html?lang=fr).
+Ce groupe de champs vous permet de tester votre parcours avant sa publication à l’aide de profils de test. Pour plus d’informations sur la création de profils de test, consultez les tutoriels [créer des profils de test](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html) et [tester le parcours &#x200B;](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html?lang=fr).
 
 +++
 
@@ -350,7 +350,7 @@ Pour plus d’informations sur la création d’une audience, consultez le [guid
 
 Pour plus d’informations sur la composition directe d’[audiences](/help/segmentation/home.md), consultez le [guide de l’interface utilisateur sur la composition d’audiences](/help/segmentation/ui/audience-composition.md).
 
-Pour plus d’informations sur la création d’audiences par le biais de définitions d’audience dérivées d’Experience Platform, consultez le [ guide de l’interface utilisateur du créateur d’audience](/help/segmentation/ui/segment-builder.md).
+Pour plus d’informations sur la création d’audiences par le biais de définitions d’audience dérivées d’Experience Platform, consultez le [&#x200B; guide de l’interface utilisateur du créateur d’audience](/help/segmentation/ui/segment-builder.md).
 
 >[!BEGINTABS]
 
@@ -755,7 +755,7 @@ La logique de clé de la zone de travail de parcours nécessite que vous identif
 
 >[!ENDTABS]
 
-Pour plus d’informations sur la création de parcours dans [!DNL Adobe Journey Optimizer], consultez le guide [Prise en main des parcours ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
+Pour plus d’informations sur la création de parcours dans [!DNL Adobe Journey Optimizer], consultez le guide [Prise en main des parcours &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
 
 ### Configuration de publicités multimédias payantes dans les destinations {#paid-media-ads}
 
@@ -781,4 +781,4 @@ Vous pouvez activer les audiences de navigation de produit abandonnées et aband
 
 En réengageant vos clients qui ont abandonné une conversion de manière intelligente et responsable, vous avez, espérons-le, augmenté les conversions et la valeur de la durée de vie du client.
 
-[ Ensuite, vous pouvez explorer d’autres cas d’utilisation pris en charge par Real-Time CDP, tels que l’affichage de contenu personnalisé pour les utilisateurs non authentifiés](/help/rtcdp/partner-data/onsite-personalization.md) sur vos propriétés web.
+[&#x200B; Ensuite, vous pouvez explorer d’autres cas d’utilisation pris en charge par Real-Time CDP, tels que l’affichage de contenu personnalisé pour les utilisateurs non authentifiés](/help/rtcdp/partner-data/onsite-personalization.md) sur vos propriétés web.

@@ -37,7 +37,7 @@ Ce type d’action prend en charge les options de configuration suivantes :
 * **[!UICONTROL Consent information]** : détermine si vous souhaitez remplir un formulaire ou fournir un élément de données contenant des informations de consentement.
 * **[!UICONTROL Standard]** : norme de consentement que vous souhaitez utiliser. Les options disponibles sont « [!UICONTROL Adobe] » et « [!UICONTROL IAB TCF] ».
 * **[!UICONTROL Version]** : version de la norme de consentement à utiliser.
-* **[!UICONTROL Datastream configuration overrides]** : cette commande prend en charge les remplacements de configuration des trains de données, ce qui vous permet de contrôler les applications et services qui reçoivent ces données. Lorsque vous définissez un remplacement de configuration de train de données à la fois dans une commande individuelle et dans les paramètres de configuration de l’extension de balise, la commande individuelle est prioritaire. Consultez [ Remplacements de configuration de train de données ](../configure/configuration-overrides.md) pour plus d’informations.
+* **[!UICONTROL Datastream configuration overrides]** : cette commande prend en charge les remplacements de configuration des trains de données, ce qui vous permet de contrôler les applications et services qui reçoivent ces données. Lorsque vous définissez un remplacement de configuration de train de données à la fois dans une commande individuelle et dans les paramètres de configuration de l’extension de balise, la commande individuelle est prioritaire. Consultez [&#x200B; Remplacements de configuration de train de données &#x200B;](../configure/configuration-overrides.md) pour plus d’informations.
 
 ## Création d’une règle qui met à jour les informations de consentement
 

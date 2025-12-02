@@ -47,7 +47,7 @@ Pour ce faire, la technologie requise se compose des deux applications Experienc
    * [Destinations](/help/destinations/home.md)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) : concevez des parcours, configurez des déclencheurs et créez les messages adéquats pour répondre aux besoins de vos visiteurs.
    * [Déclencheur d’événement ou d’audience](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
-   * [ Audiences et événements ](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=fr)
+   * [&#x200B; Audiences et événements &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=fr)
    * [Parcours](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ## Architecture de Real-Time CDP et de Journey Optimizer
@@ -131,7 +131,7 @@ Le schéma des attributs du client est représenté par une classe [!UICONTROL X
 
 +++Groupes de champs de consentement et de préférence (groupe de champs)
 
-Le groupe de champs [ Consentements et préférences ](/help/xdm/field-groups/profile/consents.md) fournit un seul champ de type objet, consentements, pour capturer les informations de consentement et de préférence.
+Le groupe de champs [&#x200B; Consentements et préférences &#x200B;](/help/xdm/field-groups/profile/consents.md) fournit un seul champ de type objet, consentements, pour capturer les informations de consentement et de préférence.
 
 +++
 
@@ -286,7 +286,7 @@ Envisagez d’ajouter et d’appliquer les [libellés de gouvernance des donnée
 
 #### Politiques marketing
 
-Aucune [ politique marketing ](/help/data-governance/policies/overview.md) n’est requise pour les parcours que vous créez dans le cadre de ce cas d’utilisation. Cependant, vous pouvez tenir compte des politiques suivantes selon vos besoins :
+Aucune [&#x200B; politique marketing &#x200B;](/help/data-governance/policies/overview.md) n’est requise pour les parcours que vous créez dans le cadre de ce cas d’utilisation. Cependant, vous pouvez tenir compte des politiques suivantes selon vos besoins :
 
 * Limitation Des Données Sensibles
 * Restreindre l’Advertising sur site
@@ -342,7 +342,7 @@ Cette audience est créée pour inclure les profils qui ont dépensé plus de 25
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer] n’englobe pas tout ce qui est indiqué dans les diagrammes. Toutes les [annonces publicitaires médias payantes](/help/destinations/catalog/social/overview.md) sont créées dans l’espace de travail [!UICONTROL destinations][](/help/destinations/ui/destinations-workspace.md).
+>[!DNL Adobe Journey Optimizer] n’englobe pas tout ce qui est indiqué dans les diagrammes. Toutes les [annonces publicitaires médias payantes](/help/destinations/catalog/social/overview.md) sont créées dans l’espace de travail [!UICONTROL destinations][&#128279;](/help/destinations/ui/destinations-workspace.md).
 
 [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) vous permet de proposer des expériences connectées, contextuelles et personnalisées à vos clients. Le parcours client est l’ensemble du processus d’interaction d’un client avec la marque. Chaque parcours de cas d’utilisation nécessite des informations spécifiques.
 
@@ -436,7 +436,7 @@ Utilisez les événements, champs et actions suggérés ci-dessous dans votre pa
 
 >[!ENDTABS]
 
-Pour plus d’informations sur la création de parcours dans [!DNL Adobe Journey Optimizer], consultez le guide [Prise en main des parcours ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) .
+Pour plus d’informations sur la création de parcours dans [!DNL Adobe Journey Optimizer], consultez le guide [Prise en main des parcours &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) .
 
 ### Configurer une destination pour l’affichage des publicités multimédia payantes {#paid-media-ads}
 

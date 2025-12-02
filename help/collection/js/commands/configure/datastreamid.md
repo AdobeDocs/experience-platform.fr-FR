@@ -38,4 +38,4 @@ alloy("configure", {
 
 ## Sélectionnez l’identifiant du flux de données à l’aide de l’extension de balise Web SDK
 
-Consultez [ Paramètres de configuration des flux de données ](/help/tags/extensions/client/web-sdk/configure/datastreams.md) dans la documentation de l’extension de balise Web SDK pour savoir comment définir le flux de données souhaité pour chaque environnement à l’aide de balises. Vous pouvez envoyer des données à différents flux de données pour les environnements de balises de production, d’évaluation et de développement.
+Consultez [&#x200B; Paramètres de configuration des flux de données &#x200B;](/help/tags/extensions/client/web-sdk/configure/datastreams.md) dans la documentation de l’extension de balise Web SDK pour savoir comment définir le flux de données souhaité pour chaque environnement à l’aide de balises. Vous pouvez envoyer des données à différents flux de données pour les environnements de balises de production, d’évaluation et de développement.

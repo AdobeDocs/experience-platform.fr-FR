@@ -29,7 +29,7 @@ Une fois le cookie contenant le [!DNL ECID] défini, chaque requête suivante g�
 Lors de l’utilisation de cookies pour l’identification d’un appareil, vous avez deux manières d’interagir avec Edge Network :
 
 1. Créez un CNAME sur votre propre domaine qui pointe vers `adobedc.net`. Cette méthode est appelée [collecte de données propriétaire](#first-party).
-1. Envoyez directement les données au `adobedc.net` de domaine Edge Network. Cette méthode est appelée [ collecte de données tierce ](#third-party).
+1. Envoyez directement les données au `adobedc.net` de domaine Edge Network. Cette méthode est appelée [&#x200B; collecte de données tierce &#x200B;](#third-party).
 
 Comme expliqué dans les sections ci-dessous, la méthode de collecte de données que vous choisissez d’utiliser a un impact direct sur la durée de vie des cookies dans les navigateurs.
 
@@ -162,7 +162,7 @@ Chaque objet d’identité du tableau d’identités contient les propriétés s
 | `authenticatedState` | Chaîne | **(Obligatoire)** État d’authentification de l’ID. Les valeurs possibles sont les suivantes : `ambiguous`, `authenticated` et `loggedOut`. |
 | `primary` | Booléen | Détermine si cette identité doit être utilisée comme fragment principal dans le profil. Par défaut, l’ECID est défini comme identifiant principal de l’utilisateur. Cette valeur est définie par défaut sur `false` si vous l’ignorez. |
 
-L’utilisation du champ `identityMap` pour identifier les appareils ou les utilisateurs aboutit au même résultat que l’utilisation de la méthode [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) du [!DNL ID Service API] . Pour plus d’informations[ consultez la documentation de l’API du service ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html)ID.
+L’utilisation du champ `identityMap` pour identifier les appareils ou les utilisateurs aboutit au même résultat que l’utilisation de la méthode [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) du [!DNL ID Service API] . Pour plus d’informations[&#x200B; consultez la documentation de l’API du service &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html)ID.
 
 ## Migration de l’API visiteur vers ECID {#migrating-visitor-api-ecid}
 

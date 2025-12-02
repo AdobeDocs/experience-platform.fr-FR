@@ -92,7 +92,7 @@ Une fois l’élément de données créé, revenez à la page de configuration d
 
 ### Déployez l’extension sur votre site web
 
-Une fois la configuration de l’extension terminée, elle peut être intégrée à votre site web. Pour obtenir des informations détaillées sur le déploiement de la version de bibliothèque mise à jour[ consultez le ](/help/tags/ui/publishing/overview.md) guide de publication dans la documentation sur les balises.
+Une fois la configuration de l’extension terminée, elle peut être intégrée à votre site web. Pour obtenir des informations détaillées sur le déploiement de la version de bibliothèque mise à jour[&#x200B; consultez le &#x200B;](/help/tags/ui/publishing/overview.md) guide de publication dans la documentation sur les balises.
 
 ## Exécution de commandes de modification du consentement {#commands}
 

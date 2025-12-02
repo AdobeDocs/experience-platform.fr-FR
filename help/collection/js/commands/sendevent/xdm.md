@@ -23,7 +23,7 @@ alloy("sendEvent", {
 });
 ```
 
-L’exemple suivant utilise le groupe de champs de schéma Détails de Commerce [](/help/xdm/field-groups/event/commerce-details.md) :
+L’exemple suivant utilise le groupe de champs de schéma Détails de Commerce [&#128279;](/help/xdm/field-groups/event/commerce-details.md) :
 
 ```javascript
 alloy("sendEvent",{

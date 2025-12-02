@@ -28,10 +28,10 @@ Ce document présente un aperçu de la configuration de vos opérations de donn�
 Ce guide nécessite une compréhension pratique des différents services Experience Platform impliqués dans le traitement des données de consentement :
 
 * [Modèle de données d’expérience (XDM)](/help/xdm/home.md) : framework normalisé selon lequel Experience Platform organise les données d’expérience client.
-* [Adobe Experience Platform Identity Service ](/help/identity-service/home.md) : résout le problème fondamental de la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
+* [Adobe Experience Platform Identity Service &#x200B;](/help/identity-service/home.md) : résout le problème fondamental de la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
 * [Real-Time Customer Profile](/help/profile/home.md) : utilise des fonctionnalités [!DNL Identity Service] pour créer des profils clients détaillés à partir de vos jeux de données en temps réel. Le profil client en temps réel extrait les données du lac de données et conserve les profils clients dans sa propre banque de données distincte.
 * [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) : bibliothèque JavaScript côté client qui vous permet d’intégrer divers services Experience Platform à votre site web destiné aux clients.
-   * [Commandes de consentement SDK ](/help/collection/js/commands/setconsent.md) : présentation du cas d’utilisation des commandes SDK liées au consentement présentées dans ce guide.
+   * [Commandes de consentement SDK &#x200B;](/help/collection/js/commands/setconsent.md) : présentation du cas d’utilisation des commandes SDK liées au consentement présentées dans ce guide.
 * [Adobe Experience Platform Segmentation Service](/help/segmentation/home.md) : permet de diviser les données du profil client en temps réel en groupes d’individus qui partagent des caractéristiques similaires et qui réagissent de la même manière aux stratégies marketing.
 
 ## Résumé du flux de traitement du consentement {#summary}
@@ -51,7 +51,7 @@ Dans la version actuelle de la prise en charge du traitement du consentement dan
 
 >[!NOTE]
 >
->Pour plus d’informations sur la structure des champs de consentement XDM mentionnés ci-dessus, reportez-vous au guide sur le type de données [[!UICONTROL Consents and Preferences] ](/help/xdm/data-types/consents.md) .
+>Pour plus d’informations sur la structure des champs de consentement XDM mentionnés ci-dessus, reportez-vous au guide sur le type de données [[!UICONTROL Consents and Preferences] &#x200B;](/help/xdm/data-types/consents.md) .
 
 Une fois le système configuré, Experience Platform Web SDK interprète la valeur de consentement de la collecte de données pour l’utilisateur actuel afin de déterminer si les données doivent être envoyées à Adobe Experience Platform Edge Network, supprimées du client ou conservées jusqu’à ce que l’autorisation de collecte de données soit définie sur oui ou non.
 
@@ -129,4 +129,4 @@ Customer Journey Management can also send consent-change signals back to Experie
 
 Ce guide explique comment configurer vos opérations Experience Platform pour traiter les données de consentement des clients à l’aide de la norme Adobe et faire en sorte que ces attributs soient représentés dans les profils clients. Vous pouvez désormais intégrer les préférences de consentement des clients en tant que facteur déterminant dans la qualification de segment et dans d’autres cas d’utilisation en aval.
 
-Pour plus d’informations sur les fonctionnalités Experience Platform relatives à la confidentialité, consultez la présentation de la [ gouvernance, confidentialité et sécurité dans Experience Platform](../../overview.md).
+Pour plus d’informations sur les fonctionnalités Experience Platform relatives à la confidentialité, consultez la présentation de la [&#x200B; gouvernance, confidentialité et sécurité dans Experience Platform](../../overview.md).

@@ -201,7 +201,7 @@ Non, le SDK Web n’est pas nécessaire pour activer les audiences dans [Adobe T
 
 Cependant, si [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) est utilisé à la place de Web SDK, seule la personnalisation de session suivante est prise en charge.
 
-Pour les cas d’utilisation de [personnalisation de la même page et de la page suivante](ui/activate-edge-personalization-destinations.md) vous devez utiliser Web SDK ou l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/). Pour plus d’informations sur l’implémentation[ consultez la documentation sur l’](ui/activate-edge-personalization-destinations.md)activation des audiences vers des destinations Edge.
+Pour les cas d’utilisation de [personnalisation de la même page et de la page suivante](ui/activate-edge-personalization-destinations.md) vous devez utiliser Web SDK ou l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/). Pour plus d’informations sur l’implémentation[&#x200B; consultez la documentation sur l’](ui/activate-edge-personalization-destinations.md)activation des audiences vers des destinations Edge.
 +++
 
 ### Y a-t-il une limite au nombre d’attributs que je peux envoyer de Real-time Customer Data Platform vers Adobe Target ou une destination Personalization personnalisée ?

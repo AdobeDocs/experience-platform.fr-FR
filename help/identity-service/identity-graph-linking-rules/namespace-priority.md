@@ -18,7 +18,7 @@ ht-degree: 3%
 
 Chaque implémentation client est unique et adaptée pour répondre aux objectifs d’une organisation particulière. Par conséquent, l’importance d’un espace de noms donné varie d’un client à l’autre. Voici quelques exemples concrets :
 
-* Votre entreprise peut considérer chaque adresse e-mail comme représentant une entité à une seule personne et utiliser donc les [ paramètres d’identité ](./identity-settings-ui.md) pour configurer l’espace de noms d’e-mail comme unique. Toutefois, une autre entreprise peut vouloir représenter des entités à personne unique comme ayant plusieurs adresses e-mail, et configurer ainsi l’espace de noms d’e-mail comme n’étant pas unique. Ces sociétés devraient utiliser un autre espace de noms d’identité comme espace de noms unique, tel qu’un espace de noms CRMID, de sorte qu’un identifiant de personne unique puisse être lié à plusieurs adresses e-mail.
+* Votre entreprise peut considérer chaque adresse e-mail comme représentant une entité à une seule personne et utiliser donc les [&#x200B; paramètres d’identité &#x200B;](./identity-settings-ui.md) pour configurer l’espace de noms d’e-mail comme unique. Toutefois, une autre entreprise peut vouloir représenter des entités à personne unique comme ayant plusieurs adresses e-mail, et configurer ainsi l’espace de noms d’e-mail comme n’étant pas unique. Ces sociétés devraient utiliser un autre espace de noms d’identité comme espace de noms unique, tel qu’un espace de noms CRMID, de sorte qu’un identifiant de personne unique puisse être lié à plusieurs adresses e-mail.
 * Vous pouvez collecter le comportement en ligne à l’aide d’un espace de noms « ID de connexion ». Cet identifiant de connexion peut avoir une relation 1:1 avec le CRMID, qui stocke ensuite les attributs d’un système CRM et peut être considéré comme l’espace de noms le plus important. Dans ce cas, vous déterminez alors que l’espace de noms CRMID est une représentation plus précise d’une personne, tandis que l’espace de noms d’identifiant de connexion est le deuxième plus important.
 
 Vous devez effectuer des configurations dans Identity Service qui reflètent l’importance de vos espaces de noms, car cela influence la manière dont les profils et leurs graphiques d’identités associés sont formés et divisés.
@@ -164,7 +164,7 @@ Le lac de données ne détermine pas l’identité principale en fonction de la 
 
 Tout schéma qui n’est pas un événement d’expérience XDM, comme les profils individuels XDM, continuera à honorer tous les [champs que vous marquez comme identité](/help/xdm/ui/fields/identity.md).
 
-Pour plus d’informations sur les schémas XDM, consultez la [ présentation des schémas ](/help/xdm/home.md).
+Pour plus d’informations sur les schémas XDM, consultez la [&#x200B; présentation des schémas &#x200B;](/help/xdm/home.md).
 
 ### Services intelligents
 

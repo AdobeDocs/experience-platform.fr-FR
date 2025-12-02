@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Configuration d’un fichier CSP
 
-Une [ Politique de sécurité du contenu ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) est utilisée pour restreindre les ressources qu’un navigateur est autorisé à utiliser. La CSP peut également limiter les fonctionnalités des ressources de script et de style. Adobe Experience Platform Web SDK ne nécessite pas de CSP, mais l’ajout d’un CSP peut réduire la surface d’attaque pour vous protéger contre les attaques malveillantes.
+Une [&#x200B; Politique de sécurité du contenu &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) est utilisée pour restreindre les ressources qu’un navigateur est autorisé à utiliser. La CSP peut également limiter les fonctionnalités des ressources de script et de style. Adobe Experience Platform Web SDK ne nécessite pas de CSP, mais l’ajout d’un CSP peut réduire la surface d’attaque pour vous protéger contre les attaques malveillantes.
 
 La CSP doit refléter la manière dont [!DNL Experience Platform Web SDK] est déployé et configuré. La CSP suivante indique les modifications qui peuvent être nécessaires au bon fonctionnement du SDK. D’autres paramètres de CSP seront probablement requis en fonction de votre environnement spécifique.
 

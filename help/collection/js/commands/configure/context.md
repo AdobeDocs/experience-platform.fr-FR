@@ -93,7 +93,7 @@ Si vous utilisez les recherches d’appareil lors de la [configuration de votre 
 | Nom du navigateur | Le navigateur utilisé. L’indice à faible entropie `Sec-CH-UA` collecte également cet élément. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` |
 | Version du navigateur | Version significative du navigateur. L’indice à faible entropie `Sec-CH-UA` collecte également cet élément. La version exacte du navigateur n’est pas collectée automatiquement. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` |
 
-Voir [ Indications du client de l’agent utilisateur](/help/collection/use-cases/client-hints.md) pour plus d’informations.
+Voir [&#x200B; Indications du client de l’agent utilisateur](/help/collection/use-cases/client-hints.md) pour plus d’informations.
 
 Définissez le tableau `context` de chaînes lors de l’exécution de la commande `configure`. Si vous omettez cette propriété lors de la configuration du SDK, toutes les informations contextuelles, à l’exception de `"highEntropyUserAgentHints"`, sont collectées par défaut. Définissez cette propriété si vous souhaitez collecter des indications du client à entropie élevée ou si vous souhaitez omettre d’autres informations contextuelles de la collecte de données. Les chaînes peuvent être incluses dans n’importe quel ordre.
 

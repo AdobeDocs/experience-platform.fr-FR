@@ -36,7 +36,8 @@ Le [modèle de données d’expérience (XDM)](/help/xdm/home.md) est une spéci
 
 ![Zone de travail des schémas](assets/getting-started/schema-structure.png)
 
->[!NOTE]\
+>[!NOTE]
+>\
 >Une fois enregistrés, les schémas n’autorisent que des modifications *additifs*. Voir [évolution des schémas](/help/xdm/schema/composition.md#evolution) pour plus d’informations.
 
 ## Création dʼun flux de données {#datastream}

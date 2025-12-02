@@ -27,4 +27,4 @@ alloy("configure", {
 
 ## Activer la migration des identifiants visiteur à l’aide de l’extension de balise Web SDK
 
-Ces paramètres peuvent être configurés dans l’extension de balise Web SDK à l’aide des [ Paramètres de configuration des identités ](/help/tags/extensions/client/web-sdk/configure/identity.md).
+Ces paramètres peuvent être configurés dans l’extension de balise Web SDK à l’aide des [&#x200B; Paramètres de configuration des identités &#x200B;](/help/tags/extensions/client/web-sdk/configure/identity.md).

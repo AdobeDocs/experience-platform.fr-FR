@@ -35,7 +35,7 @@ Vous ne devez pas fournir de [!DNL ECID] lors de la création d’un mappage d�
 
 L’élément de données de mappage d’identités est souvent utilisé avec l’élément de données [[!UICONTROL Variable]](#variable) et l’action [[!UICONTROL Set consent]](actions/set-consent.md).
 
-En savoir plus sur le service Adobe Experience Platform Identity [](/help/identity-service/home.md).
+En savoir plus sur le service Adobe Experience Platform Identity [&#128279;](/help/identity-service/home.md).
 
 ## Objet XDM {#xdm-object}
 
@@ -64,7 +64,7 @@ Après avoir créé cet élément de données, vous pouvez utiliser l’action [
 
 Un élément de données **[!UICONTROL Quality of Experience]** est utile lors de l’envoi d’événements de streaming multimédia à Adobe Experience Platform. Vous pouvez ajouter cet élément lors de la création d’une session multimédia et les événements multimédia suivants contiendront des données de qualité d’expérience mises à jour.
 
-![Image de l’interface utilisateur affichant l’écran Créer une qualité d’élément de données d’expérience ](assets/qoe-data-element.png).
+![Image de l’interface utilisateur affichant l’écran Créer une qualité d’élément de données d’expérience &#x200B;](assets/qoe-data-element.png).
 
 ## Étapes suivantes {#next-steps}
 

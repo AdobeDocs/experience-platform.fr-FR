@@ -17,8 +17,8 @@ Web SDK envoie les données indépendamment de la solution (XDM) à Experience P
 
 Vous pouvez implémenter le SDK Web de deux manières :
 
-* Implémentation manuelle à l’aide de la bibliothèque JavaScript [](install/library.md) (cette documentation)
-* L’extension de balise [ Web SDK ](/help/tags/extensions/client/web-sdk/overview.md)
+* Implémentation manuelle à l’aide de la bibliothèque JavaScript [&#128279;](install/library.md) (cette documentation)
+* L’extension de balise [&#x200B; Web SDK &#x200B;](/help/tags/extensions/client/web-sdk/overview.md)
 
 Ce guide comprend des instructions pour interagir avec les solutions Experience Cloud à l’aide de la bibliothèque JavaScript Web SDK.
 

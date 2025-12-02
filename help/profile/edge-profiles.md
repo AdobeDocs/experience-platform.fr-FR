@@ -55,7 +55,7 @@ Le service XPS (Express Profile Service) récupère les profils sur les différe
 
 ## Étapes suivantes
 
-Après lecture de ce guide, vous devriez avoir une compréhension de base des profils Edge, y compris des informations sur les régions et services disponibles pour les profils Edge. Pour plus d’informations sur Adobe Experience Edge, voir [ Présentation de la collecte de données ](/help/collection/home.md).
+Après lecture de ce guide, vous devriez avoir une compréhension de base des profils Edge, y compris des informations sur les régions et services disponibles pour les profils Edge. Pour plus d’informations sur Adobe Experience Edge, voir [&#x200B; Présentation de la collecte de données &#x200B;](/help/collection/home.md).
 
 ## Annexe
 

@@ -63,7 +63,7 @@ Pour inclure des filtres [globaux](./filters/global-filter.md) ou [date](./filte
 >
 >Si vous souhaitez utiliser un filtre global, vous devez placer un paramètre de requête dans votre SQL, puis lier ce paramètre de requête au filtre global dans le compositeur de widgets. Dans la capture d’écran ci-dessous, `CONSENT_VALUE_FILTER` est utilisé dans le SQL comme paramètre de requête pour un filtre global. Consultez la [documentation sur les filtres globaux](./filters/global-filter.md#enable-global-filter) pour plus d’informations sur la procédure à suivre.
 
-Pour exécuter votre requête, sélectionnez l’icône d’exécution (![ L’icône d’exécution .](/help/images/icons/play.png)). Le Query Editor affiche l’onglet des résultats . Ensuite, pour confirmer votre configuration et ouvrir le compositeur de widgets, sélectionnez **[!UICONTROL Select]**.
+Pour exécuter votre requête, sélectionnez l’icône d’exécution (![&#x200B; L’icône d’exécution .](/help/images/icons/play.png)). Le Query Editor affiche l’onglet des résultats . Ensuite, pour confirmer votre configuration et ouvrir le compositeur de widgets, sélectionnez **[!UICONTROL Select]**.
 
 >[!TIP]
 >
@@ -113,7 +113,7 @@ Pour activer le tri pour n’importe quelle colonne, cochez les cases **[!UICONT
 
 ![Page d’édition du tableau avec les cases à cocher triables mises en surbrillance.](../images/sql-insights-query-pro-mode/advanced-table-sortable.png)
 
-Sélectionnez l’icône des propriétés (![ Icône Propriétés .](/help/images/icons/properties.png)) dans le rail de droite pour ouvrir le panneau [!UICONTROL Properties]. Dans le panneau **[!UICONTROL Properties]**, utilisez la liste déroulante pour sélectionner la colonne **[!UICONTROL Default sort]**, puis utilisez la liste déroulante pour sélectionner la **[!UICONTROL Sort direction]**. Enfin, sélectionnez **[!UICONTROL Save and close]**.
+Sélectionnez l’icône des propriétés (![&#x200B; Icône Propriétés .](/help/images/icons/properties.png)) dans le rail de droite pour ouvrir le panneau [!UICONTROL Properties]. Dans le panneau **[!UICONTROL Properties]**, utilisez la liste déroulante pour sélectionner la colonne **[!UICONTROL Default sort]**, puis utilisez la liste déroulante pour sélectionner la **[!UICONTROL Sort direction]**. Enfin, sélectionnez **[!UICONTROL Save and close]**.
 
 ![Le compositeur de widget avec l’icône de propriétés, le tri par défaut, l’ordre de tri, l’enregistrement et la fermeture mis en surbrillance.](../images/sql-insights-query-pro-mode/advanced-table-properties.png)
 
@@ -121,7 +121,7 @@ Pour en savoir plus sur l’utilisation des fonctionnalités de tri, de redimens
 
 ## Propriétés du widget {#properties}
 
-Sélectionnez l’icône des propriétés (![ Icône Propriétés .](/help/images/icons/properties.png)) dans le rail de droite pour ouvrir le panneau propriétés . Dans le panneau [!UICONTROL Properties], saisissez le nom du widget dans le champ de texte **[!UICONTROL Widget title]** . Vous pouvez également renommer divers aspects de votre graphique.
+Sélectionnez l’icône des propriétés (![&#x200B; Icône Propriétés .](/help/images/icons/properties.png)) dans le rail de droite pour ouvrir le panneau propriétés . Dans le panneau [!UICONTROL Properties], saisissez le nom du widget dans le champ de texte **[!UICONTROL Widget title]** . Vous pouvez également renommer divers aspects de votre graphique.
 
 >[!NOTE]
 >

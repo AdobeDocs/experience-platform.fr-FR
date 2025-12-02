@@ -33,4 +33,4 @@ Cette action est l’extension de balise équivalente à la commande [`sendPushS
 >
 >* [Configurer les notifications push](../configure/push-notifications.md)
 >* [Spécification de l’API Web Push](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)
->* [ API Service Worker ](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+>* [&#x200B; API Service Worker &#x200B;](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)

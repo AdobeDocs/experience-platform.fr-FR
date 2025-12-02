@@ -97,4 +97,4 @@ alloy("configure", {
 
 ## Remplacements de configuration à l’aide de l’extension de balise Web SDK
 
-L’équivalent de l’extension de balise Web SDK de ce champ se trouve sous [ Remplacements de configuration ](/help/tags/extensions/client/web-sdk/configure/configuration-overrides.md) lors de la configuration de l’extension de balise.
+L’équivalent de l’extension de balise Web SDK de ce champ se trouve sous [&#x200B; Remplacements de configuration &#x200B;](/help/tags/extensions/client/web-sdk/configure/configuration-overrides.md) lors de la configuration de l’extension de balise.

@@ -49,4 +49,4 @@ alloy("configure", {
 
 ## Configuration des médias en flux continu à l’aide de l’extension de balise Web SDK
 
-Ces paramètres peuvent être configurés dans l’extension de balise Web SDK à l’aide des [ Paramètres de configuration des médias en flux continu ](/help/tags/extensions/client/web-sdk/configure/streaming-media.md).
+Ces paramètres peuvent être configurés dans l’extension de balise Web SDK à l’aide des [&#x200B; Paramètres de configuration des médias en flux continu &#x200B;](/help/tags/extensions/client/web-sdk/configure/streaming-media.md).

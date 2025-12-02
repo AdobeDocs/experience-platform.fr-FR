@@ -33,4 +33,4 @@ alloy("configure", {
 
 ## Définir l’ID d’organisation à l’aide de l’extension de balise Web SDK
 
-Ce paramètre peut être configuré dans l’extension de balise Web SDK à l’aide des paramètres de configuration de l’instance SDK [](/help/tags/extensions/client/web-sdk/configure/general.md). Le champ est automatiquement renseigné en fonction de l’organisation sous laquelle la propriété de balise a été créée.
+Ce paramètre peut être configuré dans l’extension de balise Web SDK à l’aide des paramètres de configuration de l’instance SDK [&#128279;](/help/tags/extensions/client/web-sdk/configure/general.md). Le champ est automatiquement renseigné en fonction de l’organisation sous laquelle la propriété de balise a été créée.

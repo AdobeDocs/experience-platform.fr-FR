@@ -72,4 +72,4 @@ alloy("configure", {
 
 ## Configuration de la collecte des clics pour l’extension de balises Web SDK
 
-Ces paramètres peuvent être configurés dans l’extension de balise Web SDK à l’aide des [ Paramètres de configuration de la collecte de données ](/help/tags/extensions/client/web-sdk/configure/data-collection.md).
+Ces paramètres peuvent être configurés dans l’extension de balise Web SDK à l’aide des [&#x200B; Paramètres de configuration de la collecte de données &#x200B;](/help/tags/extensions/client/web-sdk/configure/data-collection.md).

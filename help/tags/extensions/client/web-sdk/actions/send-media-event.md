@@ -115,7 +115,7 @@ Permet de configurer les détails de session multimédia.
 * **[!UICONTROL Stream format]** : format du flux, tel que HD ou SD.
 * **[!UICONTROL Station]** : nom ou ID de la station radio.
 
-Ce type d’événement prend également en charge la possibilité de fournir des métadonnées personnalisées dans le cadre de la payload d’événement multimédia. Il permet également des remplacements de la configuration du train de données, ce qui vous permet de contrôler les applications et services qui reçoivent ces données. Lorsque vous définissez un remplacement de configuration de train de données à la fois dans une commande individuelle et dans les paramètres de configuration de l’extension de balise, la commande individuelle est prioritaire. Consultez [ Remplacements de configuration de train de données ](../configure/configuration-overrides.md) pour plus d’informations.
+Ce type d’événement prend également en charge la possibilité de fournir des métadonnées personnalisées dans le cadre de la payload d’événement multimédia. Il permet également des remplacements de la configuration du train de données, ce qui vous permet de contrôler les applications et services qui reçoivent ces données. Lorsque vous définissez un remplacement de configuration de train de données à la fois dans une commande individuelle et dans les paramètres de configuration de l’extension de balise, la commande individuelle est prioritaire. Consultez [&#x200B; Remplacements de configuration de train de données &#x200B;](../configure/configuration-overrides.md) pour plus d’informations.
 
 ## [!UICONTROL States update]
 

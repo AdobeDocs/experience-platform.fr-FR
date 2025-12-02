@@ -221,7 +221,7 @@ Gérez les paramètres d’expiration et de rétention des jeux de données à l
 >
 >Pour appliquer ou mettre à jour des règles de conservation pour un jeu de données ExperienceEvent, votre rôle d’utilisateur doit inclure l’autorisation **[!UICONTROL Manage datasets]**. Ce contrôle d’accès basé sur les rôles garantit que seuls les utilisateurs autorisés peuvent modifier les paramètres de conservation des jeux de données.
 >
->Pour plus d’informations sur l’attribution d’autorisations dans Adobe Experience Platform[ reportez-vous à la ](../../access-control/home.md#platform-permissions) Présentation du contrôle d’accès .
+>Pour plus d’informations sur l’attribution d’autorisations dans Adobe Experience Platform[&#x200B; reportez-vous à la &#x200B;](../../access-control/home.md#platform-permissions) Présentation du contrôle d’accès .
 
 >[!TIP]
 >
@@ -312,7 +312,7 @@ La boîte de dialogue [!UICONTROL Move] le jeu de données au dossier s’affich
 
 >[!TIP]
 >
->Vous pouvez également créer des dossiers directement à partir de la boîte de dialogue Déplacer le jeu de données . Pour créer un dossier, sélectionnez l’icône Créer un dossier (![ Icône Créer un dossier .](/help/images/icons/folder-add.png)) en haut à droite de la boîte de dialogue.
+>Vous pouvez également créer des dossiers directement à partir de la boîte de dialogue Déplacer le jeu de données . Pour créer un dossier, sélectionnez l’icône Créer un dossier (![&#x200B; Icône Créer un dossier .](/help/images/icons/folder-add.png)) en haut à droite de la boîte de dialogue.
 >
 >![Boîte de dialogue [!UICONTROL Move] le jeu de données avec l’icône de création de dossier mise en surbrillance.](/help/catalog/images/datasets/user-guide/create-folder.png)
 
@@ -348,7 +348,7 @@ Vous pouvez supprimer les données de profil associées à un jeu de données du
 
 ## Rechercher et filtrer des jeux de données {#search-and-filter}
 
-Pour rechercher ou filtrer la liste des jeux de données disponibles, sélectionnez l’icône de filtre (![ L’icône de filtre .](/help/images/icons/filter.png)) en haut à gauche de l’espace de travail. Un ensemble d’options de filtre s’affiche dans le rail de gauche. Il existe plusieurs méthodes pour filtrer les jeux de données disponibles. Il s’agit notamment de [[!UICONTROL Show System Datasets]](#show-system-datasets), [[!UICONTROL Included in profile]](#filter-profile-enabled-datasets), [[!UICONTROL Tags]](#filter-by-tag), [[!UICONTROL Creation date]](#filter-by-creation-date), [[!UICONTROL Modified date], [!UICONTROL Created by]](#filter-by-creation-date) et [[!UICONTROL Schema]](#filter-by-schema).
+Pour rechercher ou filtrer la liste des jeux de données disponibles, sélectionnez l’icône de filtre (![&#x200B; L’icône de filtre .](/help/images/icons/filter.png)) en haut à gauche de l’espace de travail. Un ensemble d’options de filtre s’affiche dans le rail de gauche. Il existe plusieurs méthodes pour filtrer les jeux de données disponibles. Il s’agit notamment de [[!UICONTROL Show System Datasets]](#show-system-datasets), [[!UICONTROL Included in profile]](#filter-profile-enabled-datasets), [[!UICONTROL Tags]](#filter-by-tag), [[!UICONTROL Creation date]](#filter-by-creation-date), [[!UICONTROL Modified date], [!UICONTROL Created by]](#filter-by-creation-date) et [[!UICONTROL Schema]](#filter-by-schema).
 
 La liste des filtres appliqués s’affiche au-dessus des résultats filtrés.
 
