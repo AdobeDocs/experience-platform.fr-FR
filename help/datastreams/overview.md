@@ -45,7 +45,7 @@ Les flux de données utilisent les fonctionnalités de gouvernance des données 
 
 La vidéo suivante présente une brève vue d’ensemble de la manière dont les restrictions d’utilisation des données sont configurées et appliquées pour les trains de données dans l’interface utilisateur :
 
->[!VIDEO](https://video.tv.adobe.com/v/3409588/?quality=12&learn=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413102/?captions=fre_fr&quality=12&learn=on&speedcontrol=on)
 
 Dans Experience Platform, vous pouvez appliquer des [libellés d’utilisation des données sensibles](../data-governance/labels/reference.md#sensitive) aux schémas et aux champs contenant des données que votre organisation juge sensibles. Par exemple, le libellé `RHD` est utilisé pour désigner les informations protégées sur la santé ; le libellé `S1` représente les données de géolocalisation.
 
