@@ -1,10 +1,10 @@
 ---
 title: Accès à l’ECID
-description: Découvrez comment accéder à l’ID d’Experience Cloud à partir de la préparation de données ou des balises.
+description: Découvrez comment accéder à l’Experience Cloud ID à partir de la préparation des données ou des balises
 exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
-source-git-commit: e53ae6053a4b00e7e75242b95496c6795953005a
+source-git-commit: 19e85ef4dbaeb90712ad9cd6ad4cb9a1a6b0c6a5
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '279'
 ht-degree: 3%
 
 ---
@@ -12,17 +12,17 @@ ht-degree: 3%
 
 # Accès à l’ECID
 
-[!DNL Experience Cloud Identity (ECID)] est un identifiant persistant attribué à un utilisateur lorsqu’il visite votre site web. Dans certains cas, vous préférerez peut-être accéder au [!DNL ECID] (pour l’envoyer à un tiers, par exemple). Un autre cas d’utilisation consiste à définir le [!DNL ECID] dans un champ XDM personnalisé, en plus de le placer dans la carte d’identité.
+Le [!DNL Experience Cloud Identity (ECID)] est un identifiant persistant attribué à un utilisateur ou une utilisatrice qui visite votre site web. Dans certains cas, vous pouvez préférer accéder au [!DNL ECID] (l’envoyer à un tiers, par exemple). Un autre cas d’utilisation consiste à définir le [!DNL ECID] dans un champ XDM personnalisé, en plus de l’avoir dans le mappage d’identité.
 
-Vous pouvez accéder à l’ECID par l’intermédiaire de l’option [Préparation de données pour la collecte de données](../../../../datastreams/data-prep.md) (recommandée) ou par l’intermédiaire de balises.
+Vous pouvez accéder à l’ECID par le biais de [Préparation des données pour la collecte de données](/help/datastreams/data-prep.md) (recommandé) ou par le biais de balises.
 
-## Accès à l’ECID via la préparation des données (méthode préférée) {#accessing-ecid-data-prep}
+## Accès à l’ECID par le biais de la préparation des données (méthode préférée) {#accessing-ecid-data-prep}
 
-Cette méthode utilise [Préparation de données pour la collecte de données](../../../../datastreams/data-prep.md) pour configurer un mappage personnalisé pour `ECID`.
+Cette méthode utilise [Préparation des données pour la collecte de données](/help/datastreams/data-prep.md) pour configurer un mappage personnalisé pour la `ECID`.
 
-Pour découvrir comment utiliser cette fonctionnalité, consultez la documentation [Préparation de données pour la collecte de données](../../../../datastreams/data-prep.md) .
+Consultez la documentation [Préparation des données pour la collecte de données](/help/datastreams/data-prep.md) pour savoir comment utiliser cette fonctionnalité.
 
-Si vous souhaitez définir l’ECID dans un champ XDM personnalisé, en plus de l’avoir dans la carte d’identité, vous pouvez le faire en définissant le `source` sur le chemin suivant :
+Si vous souhaitez définir l’ECID dans un champ XDM personnalisé, en plus de l’avoir dans le mappage d’identités, vous pouvez le faire en définissant l’`source` sur le chemin suivant :
 
 ```js
 xdm.identityMap.ECID[0].id
@@ -36,10 +36,10 @@ Définissez ensuite la cible sur un chemin XDM où le champ est de type `string`
 
 Si vous devez accéder au [!DNL ECID] côté client, utilisez l’approche des balises comme décrit ci-dessous.
 
-1. Assurez-vous que votre propriété est configurée avec l’option [de séquencement des composants de règle](../../../ui/managing-resources/rules.md#sequencing) activée.
-1. Créez une règle. Cette règle doit être utilisée exclusivement pour capturer le [!DNL ECID] sans aucune autre action importante.
-1. Ajoutez un événement [!UICONTROL Library Loaded] (Bibliothèque chargée) à la règle.
-1. Ajoutez une action [!UICONTROL Custom Code] à la règle avec le code suivant (en supposant que le nom que vous avez configuré pour l’instance du SDK soit `alloy` et qu’il n’existe pas encore d’élément de données du même nom) :
+1. Assurez-vous que votre propriété est configurée avec le [séquencement des composants de règle](/help/tags/ui/managing-resources/rules.md#sequencing) activé.
+1. Créez une règle. Cette règle doit être utilisée exclusivement pour capturer le [!DNL ECID] sans autre action importante.
+1. Ajoutez un événement [!UICONTROL Library Loaded] à la règle.
+1. Ajoutez une action [!UICONTROL Custom Code] à la règle avec le code suivant (en supposant que le nom que vous avez configuré pour l’instance SDK soit `alloy` et qu’il n’existe pas déjà un élément de données du même nom) :
 
    ```js
     return alloy("getIdentity")
@@ -50,4 +50,4 @@ Si vous devez accéder au [!DNL ECID] côté client, utilisez l’approche des b
 
 1. Enregistrez la règle.
 
-Vous devriez ensuite pouvoir accéder à [!DNL ECID] dans les règles suivantes en utilisant `%ECID%` ou `_satellite.getVar("ECID")`, comme vous pourriez accéder à tout autre élément de données.
+Vous devriez ensuite pouvoir accéder au [!DNL ECID] dans les règles suivantes à l’aide de `%ECID%` ou `_satellite.getVar("ECID")`, comme vous le feriez pour tout autre élément de données.

@@ -3,7 +3,7 @@ title: Personnaliser des expériences sur site pour les visiteurs inconnus à l�
 description: Découvrez comment utiliser la reconnaissance des visiteurs et visiteuses par les partenaires pour personnaliser les expériences sur site de vos visiteurs et visiteuses.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
 source-wordcount: '2568'
 ht-degree: 72%
@@ -47,7 +47,7 @@ Lorsque vous envisagez d’utiliser des attributs fournis par les partenaires po
 Pour mettre en œuvre ce cas d’utilisation avec succès, vous devez utiliser plusieurs zones de Real-time Customer Data Platform et d’autres solutions Experience Cloud. Assurez-vous que vous disposez des [autorisations de contrôle d’accès basées sur des attributs](/help/access-control/abac/overview.md) pour toutes ces zones ou demandez à votre administrateur ou administratrice système de vous accorder les autorisations nécessaires.
 
 * Collecte de données
-   * [SDK Web Adobe Experience Platform](/help/web-sdk/home.md)
+   * [SDK Web Adobe Experience Platform](/help/collection/js/js-overview.md)
    * [Balises](/help/tags/home.md)
    * [Flux de données](/help/datastreams/overview.md)
 * Gestion des données sur Real-Time CDP
@@ -64,7 +64,7 @@ Pour mettre en œuvre ce cas d’utilisation avec succès, vous devez utiliser p
 
 Regardez le tutoriel vidéo ci-dessous pour une présentation détaillée de la personnalisation des expériences sur site pour les visiteurs inconnus :
 
->[!VIDEO](https://video.tv.adobe.com/v/3449254/?captions=fre_fr&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
 
 ## Comment réaliser le cas d’utilisation : vue d’ensemble de haut niveau {#achieve-the-use-case-high-level}
 

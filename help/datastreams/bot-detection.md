@@ -2,7 +2,7 @@
 title: Configuration de la détection des robots pour les flux de données
 description: Découvrez comment configurer la détection des robots pour les flux de données, afin de différencier le trafic humain et non humain.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 9a60212a9a9fa01ef8a73cfa2c16088c196788d4
+source-git-commit: 5f599b8572c4cebcdfb9ab85027211da4d8a020c
 workflow-type: tm+mt
 source-wordcount: '1374'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Le trafic non humain provenant de programmes automatisés, de web scrapers, d’araignées et de scanners scriptés peut rendre difficile l’identification d’événements provenant de visiteurs humains. Ce type de trafic peut avoir un impact négatif sur des mesures commerciales importantes, ce qui entraîne des rapports de trafic incorrects.
 
-La détection des robots vous permet d’identifier les événements générés par les [Web SDK](../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) et [[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/api/) comme étant générés par des araignées et des robots connus.
+La détection des robots vous permet d’identifier les événements générés par les [Web SDK](/help/collection/js/js-overview.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) et [[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/api/) comme étant générés par des araignées et des robots connus.
 
 En configurant la détection des robots pour vos flux de données, vous pouvez identifier des adresses IP spécifiques, des plages d’adresses IP et des en-têtes de requête à classer en tant qu’événements de robots. Vous obtiendrez ainsi une mesure plus précise de l’activité des utilisateurs sur votre site ou application mobile.
 
@@ -33,7 +33,7 @@ Ce score de robots aide les solutions recevant la demande à identifier correcte
 >
 >La détection des robots ne supprime aucune requête de robot. Il met uniquement à jour le schéma XDM avec le score des robots et transfère l’événement au service [datastream](configure.md) que vous avez configuré.
 >
->Les solutions Adobe peuvent gérer la notation des robots de différentes manières. Par exemple, Adobe Analytics utilise son propre service [de filtrage des robots](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=fr) et n’utilise pas le score défini par Edge Network. Les deux services utilisent la même [liste de robots IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), de sorte que la notation des robots est identique.
+>Les solutions Adobe peuvent gérer la notation des robots de différentes manières. Par exemple, Adobe Analytics utilise son propre service [de filtrage des robots](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) et n’utilise pas le score défini par Edge Network. Les deux services utilisent la même [liste de robots IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), de sorte que la notation des robots est identique.
 
 ## Considérations techniques {#technical-considerations}
 
@@ -65,7 +65,7 @@ La page **[!UICONTROL Bot Detection Rules]** s’affiche.
 
 Sur la page Règles de détection des robots , vous pouvez configurer la détection des robots à l’aide des fonctionnalités suivantes :
 
-* Utilisation de l’[[!DNL [IAB/ABC International Spiders and Bots List]]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) .
+* Utilisation de l’[!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) .
 * Création de vos propres règles de détection des robots.
 
 ### Utiliser la liste internationale d&#39;araignées et de robots IAB/ABC {#iab-list}

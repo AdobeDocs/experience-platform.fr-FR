@@ -1,20 +1,20 @@
 ---
-title: Présentation de lʼextension SDK Web
-description: Découvrez lʼextension de balise SDK Web dʼAdobe Experience Platform.
+title: Présentation de l’extension de balise Web SDK
+description: Découvrez l’extension de balise Web SDK dans la collecte de données Adobe Experience Platform.
 exl-id: 2bc738b9-5939-47a6-a829-429937e4c673
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 70%
+source-wordcount: '110'
+ht-degree: 0%
 
 ---
 
-# Présentation de l’extension SDK Web d’Adobe Experience Platform
+# Présentation de l’extension de balise Adobe Experience Platform Web SDK
 
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+L’extension de balise Adobe Experience Platform Web SDK envoie des données au Adobe Experience Cloud à partir des propriétés web, via Adobe Experience Platform Edge Network. L’extension Experience Platform Web SDK permet la diffusion en continu de données dans la plateforme, la synchronisation d’identités, l’accord préalable et la collecte automatique de données contextuelles.
 
-Lʼextension SDK Web dʼAdobe Experience Platform envoie des données à Adobe Experience Cloud à partir de propriétés web, via Adobe Experience Platform Edge Network. L’extension Experience Platform Web SDK permet la diffusion en continu de données dans la plateforme, la synchronisation d’identités, l’accord préalable et la collecte automatique de données contextuelles.
+Consultez [Prise en main](getting-started.md) pour savoir comment configurer et déployer cette extension de balise pour commencer à collecter des données.
 
-Pour plus d’informations sur la configuration de l’extension Experience Platform Web SDK, consultez la [Configuration de l’extension de balise Web SDK](web-sdk-extension-configuration.md).
+Regardez la vidéo ci-dessous pour voir les [!DNL Web SDK] et les [!DNL Edge Network] de Adobe Experience Platform en action, à l’aide d’un seul appel pour envoyer des données à [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager] et [!DNL Target].
+
+>[!VIDEO](https://video.tv.adobe.com/v/34148)

@@ -3,9 +3,9 @@ keywords: destinations ; questions ; questions fréquentes ; faq ; faq sur les d
 title: Questions fréquentes
 description: Réponses aux questions les plus fréquemment posées sur les destinations Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1673'
+source-wordcount: '1670'
 ht-degree: 3%
 
 ---
@@ -92,7 +92,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 +++Réponse
 Avant d’envoyer vos audiences à [!DNL Facebook], veillez à respecter les exigences suivantes :
 
-* L’autorisation **[!DNL Manage campaigns]** doit être activée pour votre compte utilisateur [!DNL Facebook] pour le compte publicitaire que vous prévoyez d’utiliser.
+* L’autorisation [!DNL Facebook] doit être activée pour votre compte utilisateur **[!DNL Manage campaigns]** pour le compte publicitaire que vous prévoyez d’utiliser.
 * Le compte professionnel **Adobe Experience Cloud** doit être ajouté en tant que partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Voir [Ajouter des partenaires à votre Business Manager](https://www.facebook.com/business/help/1717412048538897) dans la documentation Facebook pour plus d’informations.
 
   >[!IMPORTANT]
@@ -150,7 +150,7 @@ Pour des explications détaillées sur les exigences de correspondance des ident
 ### Puis-je créer plusieurs destinations Facebook dans l’interface utilisateur d’Experience Platform pour des comptes Facebook distincts ?
 
 +++Réponse
-Oui. Une destination Facebook dans Experience Platform est 1:1 pour un compte publicitaire dans Facebook. Vous pouvez créer une destination Facebook distincte pour chaque compte publicitaire Facebook de votre entreprise. Suivez le [tutoriel de connexion à la destination](/help/destinations/ui/connect-destination.md) et connectez-vous à un compte Facebook distinct pour chaque nouvelle destination Facebook dans l’interface utilisateur d’Experience Platform. Le nombre de comptes publicitaires Facebook auxquels vous pouvez vous connecter n’est pas limité.
+Oui. Une destination Facebook dans Experience Platform est 1:1 vers un compte publicitaire dans Facebook. Vous pouvez créer une destination Facebook distincte pour chaque compte publicitaire Facebook de votre entreprise. Suivez le [tutoriel de connexion à la destination](/help/destinations/ui/connect-destination.md) et connectez-vous à un compte Facebook distinct pour chaque nouvelle destination Facebook dans l’interface utilisateur d’Experience Platform. Le nombre de comptes publicitaires Facebook auxquels vous pouvez vous connecter n’est pas limité.
 +++
 
 ## Ciblage par liste de clients Google {#google-customer-match}
@@ -172,7 +172,7 @@ Non. Comme il ne s’agit pas d’une intégration basée sur les pixels, il n�
 ### Que dois-je faire avant de pouvoir activer des audiences dans [!DNL LinkedIn Matched Audiences] ?
 
 +++Réponse
-Avant de pouvoir utiliser la destination [!UICONTROL Audience appariée LinkedIn], assurez-vous que votre compte [!DNL LinkedIn Campaign Manager] dispose du niveau d’autorisation [!DNL Creative Manager] ou supérieur.
+Avant de pouvoir utiliser la destination [!UICONTROL LinkedIn Matched Audience], assurez-vous que votre compte [!DNL LinkedIn Campaign Manager] dispose du niveau d’autorisation [!DNL Creative Manager] ou supérieur.
 
 Pour savoir comment modifier vos autorisations d’utilisateur [!DNL LinkedIn Campaign Manager], voir [Ajouter, modifier et supprimer des autorisations d’utilisateur sur les comptes Advertising](https://www.linkedin.com/help/lms/answer/5753) dans la documentation LinkedIn.
 +++
@@ -197,11 +197,11 @@ Pour des explications détaillées sur les exigences de correspondance des ident
 ### Dois-je utiliser Experience Platform Web SDK pour envoyer des audiences et des attributs à Adobe Target ?
 
 +++Réponse
-Non, [Web SDK](../web-sdk/home.md) n’est pas nécessaire pour activer les audiences dans [Adobe Target](catalog/personalization/adobe-target-connection.md).
+Non, le SDK Web n’est pas nécessaire pour activer les audiences dans [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
-Cependant, si [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=fr) est utilisé à la place de Web SDK, seule la personnalisation de session suivante est prise en charge.
+Cependant, si [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) est utilisé à la place de Web SDK, seule la personnalisation de session suivante est prise en charge.
 
-Pour les cas d’utilisation de [personnalisation de la même page et de la page suivante](ui/activate-edge-personalization-destinations.md) vous devez utiliser [Web SDK](../web-sdk/home.md) ou l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/). Pour plus d’informations sur l’implémentation[&#128279;](ui/activate-edge-personalization-destinations.md) consultez la documentation sur l’activation des audiences vers des destinations Edge.
+Pour les cas d’utilisation de [personnalisation de la même page et de la page suivante](ui/activate-edge-personalization-destinations.md) vous devez utiliser Web SDK ou l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/). Pour plus d’informations sur l’implémentation[ consultez la documentation sur l’](ui/activate-edge-personalization-destinations.md)activation des audiences vers des destinations Edge.
 +++
 
 ### Y a-t-il une limite au nombre d’attributs que je peux envoyer de Real-time Customer Data Platform vers Adobe Target ou une destination Personalization personnalisée ?
@@ -223,13 +223,13 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### Après la création d’une audience dans Experience Platform, combien de temps faudra-t-il pour que cette audience soit disponible pour les cas d’utilisation de segmentation Edge ?
 
 +++Réponse
-Les définitions d’audience sont propagées à [Edge Network](../web-sdk/home.md) en une heure maximum. Cependant, si une audience est activée au cours de cette première heure, certains visiteurs qui se seraient qualifiés pour l’audience peuvent être manqués.
+Les définitions d’audience sont propagées à Edge Network en une heure maximum. Cependant, si une audience est activée au cours de cette première heure, certains visiteurs qui se seraient qualifiés pour l’audience peuvent être manqués.
 +++
 
 ### Où puis-je voir les attributs activés dans Adobe Target ?
 
 +++Réponse
-Les attributs pourront être utilisés dans Target dans les offres [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=fr) et [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=fr).
+Les attributs pourront être utilisés dans Target dans les offres [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) et [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html).
 +++
 
 ### Puis-je créer une destination sans flux de données, puis ajouter un flux de données à la même destination à un moment ultérieur ?
@@ -265,7 +265,7 @@ Oui. Les [politiques de gouvernance des données et de consentement](../data-gov
 ### Les destinations [!DNL Adobe Target] et [!DNL Custom Personalization] sont-elles conformes au [!DNL HIPAA] ?
 
 +++Réponse
-[!DNL Adobe Target] n’est pas [!DNL HIPPA] conforme à [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/fr/solutions/industries/healthcare.html). Les clients doivent consulter leurs propres équipes juridiques pour en savoir plus sur la préparation du [!DNL HIPPA] aux canaux d’optimisation personnalisés avant d’utiliser la personnalisation Edge via [!DNL Adobe Target] ou les destinations [!DNL Custom Personalization].
+[!DNL Adobe Target] n’est pas [!DNL HIPPA] conforme à [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/solutions/industries/healthcare.html). Les clients doivent consulter leurs propres équipes juridiques pour en savoir plus sur la préparation du [!DNL HIPPA] aux canaux d’optimisation personnalisés avant d’utiliser la personnalisation Edge via [!DNL Adobe Target] ou les destinations [!DNL Custom Personalization].
 
 Pour les cas d’utilisation où la gestion des politiques de consentement doit être appliquée à grande échelle, les clients doivent acheter des [!DNL Adobe Privacy & Security Shield]. [!DNL Adobe Privacy & Security Shield] fonctionnalités sont vendues en tant que suite avancée de fonctionnalités et ne peuvent pas être achetées séparément.
 

@@ -4,9 +4,9 @@ description: Découvrez comment intégrer Adobe Experience Platform Web SDK pour
 role: Developer
 feature: Consent, Web SDK
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1322'
+source-wordcount: '1293'
 ht-degree: 2%
 
 ---
@@ -27,8 +27,8 @@ Ce tutoriel suppose que vous avez déjà déterminé comment générer des donn�
 Ce guide suit le processus de configuration de SDK à l’aide de l’extension de balise dans l’interface utilisateur. Si vous ne souhaitez pas utiliser l’extension et que vous préférez incorporer directement la version autonome du SDK sur votre site, reportez-vous à la documentation suivante au lieu de ce guide :
 
 * [Configurer un trains de données](/help/datastreams/overview.md)
-* [Installation du SDK](/help/web-sdk/install/overview.md)
-* [Configuration du SDK pour les commandes de consentement](/help/web-sdk/commands/configure/defaultconsent.md)
+* [Installation du SDK](/help/collection/js/install/overview.md)
+* [Configuration du SDK pour les commandes de consentement](/help/collection/js/commands/configure/defaultconsent.md)
 
 Les étapes d’installation de ce guide nécessitent une compréhension pratique des extensions de balises et de leur installation dans des applications web. Pour plus d’informations, reportez-vous à la documentation suivante :
 
@@ -38,7 +38,7 @@ Les étapes d’installation de ce guide nécessitent une compréhension pratiqu
 
 ## Configurer un flux de données
 
-Pour que le SDK envoie des données à Experience Platform, vous devez d’abord configurer un flux de données. Dans l’interface utilisateur de collecte de données ou d’Experience Platform, sélectionnez **[!UICONTROL Flux de données]** dans le volet de navigation de gauche.
+Pour que le SDK envoie des données à Experience Platform, vous devez d’abord configurer un flux de données. Dans l’interface utilisateur de collecte de données ou d’Experience Platform, sélectionnez **[!UICONTROL Datastreams]** dans le volet de navigation de gauche.
 
 Après avoir créé un flux de données ou sélectionné un flux de données existant à modifier, cliquez sur le bouton de basculement en regard de **[!UICONTROL Adobe Experience Platform]**. Ensuite, utilisez les valeurs répertoriées ci-dessous pour remplir le formulaire.
 
@@ -46,23 +46,23 @@ Après avoir créé un flux de données ou sélectionné un flux de données exi
 
 | Champ du flux de données | Valeur |
 | --- | --- |
-| [!UICONTROL &#x200B; Sandbox &#x200B;] | Nom de l’Experience Platform [sandbox](../../../sandboxes/home.md) qui contient la connexion en continu requise et les jeux de données pour configurer le flux de données. |
-| [!UICONTROL Jeu de données d’événement] | Jeu de données [!DNL XDM ExperienceEvent] que vous prévoyez d’envoyer à à l’aide de SDK. Bien que vous deviez fournir un jeu de données d’événement pour créer un flux de données Experience Platform, les données de consentement envoyées par le biais d’événements ne sont pas respectées dans les workflows d’application en aval. |
-| [!UICONTROL Jeu de données de profil] | Le jeu de données [!DNL Profile] avec les champs de consentement client que vous avez créé [précédemment](#prerequisites). |
+| [!UICONTROL Sandbox] | Nom de l’Experience Platform [sandbox](/help/sandboxes/home.md) qui contient la connexion en continu requise et les jeux de données pour configurer le flux de données. |
+| [!UICONTROL Event Dataset] | Jeu de données [!DNL XDM ExperienceEvent] que vous prévoyez d’envoyer à à l’aide de SDK. Bien que vous deviez fournir un jeu de données d’événement pour créer un flux de données Experience Platform, les données de consentement envoyées par le biais d’événements ne sont pas respectées dans les workflows d’application en aval. |
+| [!UICONTROL Profile Dataset] | Le jeu de données [!DNL Profile] avec les champs de consentement client que vous avez créé [précédemment](#prerequisites). |
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]** en bas de l’écran et continuez à suivre les invites supplémentaires pour terminer la configuration.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]** en bas de l’écran et continuez à suivre les invites supplémentaires pour terminer la configuration.
 
 ## Installation et configuration d’Experience Platform Web SDK
 
-Une fois que vous avez créé un flux de données comme décrit dans la section précédente, vous devez configurer l’extension Experience Platform Web SDK que vous déploierez finalement sur votre site. Si l’extension SDK n’est pas installée sur votre propriété de balise, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche, suivi de l’onglet **[!UICONTROL Catalogue]**. Sélectionnez ensuite **[!UICONTROL Installer]** sous l’extension Experience Platform SDK dans la liste des extensions disponibles.
+Une fois que vous avez créé un flux de données comme décrit dans la section précédente, vous devez configurer l’extension Experience Platform Web SDK que vous déploierez finalement sur votre site. Si l’extension SDK n’est pas installée sur votre propriété de balise, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche, suivi de l’onglet **[!UICONTROL Catalog]** . Sélectionnez ensuite **[!UICONTROL Install]** sous l’extension Experience Platform SDK dans la liste des extensions disponibles.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/install.png)
 
-Lors de la configuration du SDK, sous **[!UICONTROL Configurations d’Edge]**, sélectionnez le flux de données que vous avez créé à l’étape précédente.
+Lors de la configuration du SDK, sous **[!UICONTROL Edge Configurations]**, sélectionnez le flux de données que vous avez créé à l’étape précédente.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/config-sdk.png)
 
-Sélectionnez **[!UICONTROL Enregistrer]** pour installer l’extension.
+Sélectionnez **[!UICONTROL Save]** pour installer l’extension.
 
 ### Créer un élément de données pour définir le consentement par défaut
 
@@ -80,19 +80,19 @@ Si la région de l’utilisateur est déterminée par une CMP, vous pouvez suivr
 1. Dans le gestionnaire d’événements , définissez une variable `adobeDefaultConsent` en fonction de la région de l’utilisateur, puis chargez le script de la bibliothèque de balises à l’aide de JavaScript.
 1. Configurez un élément de données qui utilise la variable JavaScript `adobeDefaultConsent` et utilisez cet élément de données comme valeur de consentement par défaut pour l’utilisateur.
 
-Pour créer un élément de données dans l’interface utilisateur, sélectionnez **[!UICONTROL Éléments de données]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Ajouter un élément de données]** pour accéder à la boîte de dialogue de création d’élément de données.
+Pour créer un élément de données dans l’interface utilisateur, sélectionnez **[!UICONTROL Data Elements]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Add Data Element]** pour accéder à la boîte de dialogue de création d’élément de données.
 
-À partir de là, vous devez créer un élément de données Variable JavaScript  basé sur `adobeDefaultConsent`. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Enregistrer]**.
+À partir de là, vous devez créer un élément de données [!UICONTROL JavaScript Variable] basé sur `adobeDefaultConsent`. Sélectionnez **[!UICONTROL Save]** (Enregistrer) une fois terminé.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/data-element.png)
 
-Une fois l’élément de données créé, revenez à la page de configuration de l’extension Web SDK. Dans la section [!UICONTROL Confidentialité], sélectionnez **[!UICONTROL Fourni par l’élément de données]** et utilisez la boîte de dialogue fournie pour sélectionner l’élément de données de consentement par défaut que vous avez créé précédemment.
+Une fois l’élément de données créé, revenez à la page de configuration de l’extension Web SDK. Sous la section [!UICONTROL Privacy] , sélectionnez **[!UICONTROL Provided by data element]** et utilisez la boîte de dialogue fournie pour sélectionner l’élément de données de consentement par défaut que vous avez créé précédemment.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/default-consent.png)
 
 ### Déployez l’extension sur votre site web
 
-Une fois la configuration de l’extension terminée, elle peut être intégrée à votre site web. Pour obtenir des informations détaillées sur le déploiement de la version de bibliothèque mise à jour[&#128279;](../../../tags/ui/publishing/overview.md) consultez le  guide de publication dans la documentation sur les balises.
+Une fois la configuration de l’extension terminée, elle peut être intégrée à votre site web. Pour obtenir des informations détaillées sur le déploiement de la version de bibliothèque mise à jour[ consultez le ](/help/tags/ui/publishing/overview.md) guide de publication dans la documentation sur les balises.
 
 ## Exécution de commandes de modification du consentement {#commands}
 
@@ -101,7 +101,7 @@ Une fois que vous avez intégré l’extension SDK à votre site web, vous pouve
 La commande `setConsent` effectue deux actions :
 
 1. Met à jour les attributs de profil de l’utilisateur directement dans la banque de profils. Cela n’envoie aucune donnée au lac de données.
-1. Crée un [événement d’expérience](../../../xdm/classes/experienceevent.md) qui enregistre un compte horodaté de l’événement de changement de consentement. Ces données sont envoyées directement au lac de données et peuvent être utilisées pour suivre les modifications des préférences de consentement au fil du temps.
+1. Crée un [événement d’expérience](/help/xdm/classes/experienceevent.md) qui enregistre un compte horodaté de l’événement de changement de consentement. Ces données sont envoyées directement au lac de données et peuvent être utilisées pour suivre les modifications des préférences de consentement au fil du temps.
 
 ### Quand appeler `setConsent`
 
@@ -112,7 +112,7 @@ Il existe deux scénarios dans lesquels `setConsent` doit être appelé sur votr
 
 ### syntaxe `setConsent`
 
-La commande [`setConsent`](/help/web-sdk/commands/setconsent.md) exige un objet de payload contenant une seule propriété de type tableau : `consent`. Le tableau `consent` doit contenir au moins un objet qui fournit les champs de consentement requis pour la norme Adobe.
+La commande [`setConsent`](/help/collection/js/commands/setconsent.md) exige un objet de payload contenant une seule propriété de type tableau : `consent`. Le tableau `consent` doit contenir au moins un objet qui fournit les champs de consentement requis pour la norme Adobe.
 
 Les champs de consentement requis pour la norme Adobe sont affichés dans l’exemple d’appel de `setConsent` suivant :
 
@@ -195,9 +195,9 @@ var setConsent = function () {
 
 ## Gestion des réponses SDK
 
-Toutes les commandes [!DNL Experience Platform SDK] renvoient des promesses indiquant si l’appel a réussi ou échoué. Vous pouvez ensuite utiliser ces réponses pour une logique supplémentaire, telle que l’affichage de messages de confirmation au client. Voir [Réponses des commandes](/help/web-sdk/commands/command-responses.md) pour plus d’informations.
+Toutes les commandes [!DNL Experience Platform SDK] renvoient des promesses indiquant si l’appel a réussi ou échoué. Vous pouvez ensuite utiliser ces réponses pour une logique supplémentaire, telle que l’affichage de messages de confirmation au client. Voir [Réponses des commandes](/help/collection/js/commands/command-responses.md) pour plus d’informations.
 
-Une fois que vous avez effectué `setConsent` appels avec le SDK, vous pouvez utiliser la visionneuse de profils dans l’interface utilisateur d’Experience Platform pour vérifier si les données arrivent dans la banque de profils. Pour plus d’informations, consultez la section sur la [navigation dans les profils par identité](../../../profile/ui/user-guide.md#browse-identity).
+Une fois que vous avez effectué `setConsent` appels avec le SDK, vous pouvez utiliser la visionneuse de profils dans l’interface utilisateur d’Experience Platform pour vérifier si les données arrivent dans la banque de profils. Pour plus d’informations, consultez la section sur la [navigation dans les profils par identité](/help/profile/ui/user-guide.md#browse-identity).
 
 ## Étapes suivantes
 

@@ -3,9 +3,9 @@ title: Faire évoluer la valeur client unique vers la valeur de durée de vie
 description: Découvrez comment créer des campagnes personnalisées pour offrir les meilleurs produits ou services complémentaires en fonction des attributs, du comportement et des achats passés d’un client spécifique.
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
-source-wordcount: '3181'
+source-wordcount: '3156'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ Implémentez le cas d’utilisation de valeur client unique à valeur de durée 
 
 Les personnes que vous ciblez sont les visiteurs occasionnels de vos propriétés qui ont effectué des achats au cours des trois derniers mois.
 
-Pensez à ces clients qui visitent vos propriétés et qui achètent de façon sporadique les produits ou services que vous offrez. Vous pouvez créer des campagnes personnalisées pour séduire ces clients afin que votre marque puisse leur offrir une valeur à plus long terme plutôt qu’une valeur unique. Découvrez comment :
+Pensez à ces clients qui visitent vos propriétés et qui achètent de façon sporadique les produits ou services que vous offrez. Vous pouvez créer des campagnes personnalisées pour séduire ces clients afin que votre marque puisse leur offrir une valeur à plus long terme plutôt qu’une valeur unique. Découvrez comment faire ce qui suit :
 
 * Collecter et gérer des données
 * Créer des audiences
@@ -39,16 +39,16 @@ Pour ce faire, la technologie requise se compose des deux applications Experienc
 >
 >Assurez-vous que vous disposez des [autorisations de contrôle d’accès basées sur des attributs](/help/access-control/abac/end-to-end-guide.md) pour toutes ces zones ou demandez à votre administrateur ou administratrice système de vous accorder les autorisations nécessaires.
 
-* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html?lang=fr) : Intégrez des données entre les sources de données pour alimenter la campagne. Ces données sont ensuite utilisées pour créer les audiences de la campagne et les éléments de données personnalisés de la surface utilisés dans l’e-mail et les vignettes de promotion web (par exemple, les informations relatives au nom ou au compte). Enfin, Real-Time CDP est également utilisé pour activer des audiences vers des destinations de médias achetés.
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) : Intégrez des données entre les sources de données pour alimenter la campagne. Ces données sont ensuite utilisées pour créer les audiences de la campagne et les éléments de données personnalisés de la surface utilisés dans l’e-mail et les vignettes de promotion web (par exemple, les informations relatives au nom ou au compte). Enfin, Real-Time CDP est également utilisé pour activer des audiences vers des destinations de médias achetés.
    * [Schémas](/help/xdm/home.md)
    * [Profils](/help/profile/home.md)
    * [Jeux de données](/help/catalog/datasets/overview.md)
    * [Audiences](/help/segmentation/home.md)
    * [Destinations](/help/destinations/home.md)
-* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=fr) : concevez des parcours, configurez des déclencheurs et créez les messages adéquats pour répondre aux besoins de vos visiteurs.
-   * [Déclencheur d’événement ou d’audience](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=fr)
-   * [&#x200B; Audiences et événements &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=fr)
-   * [Parcours](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=fr)
+* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) : concevez des parcours, configurez des déclencheurs et créez les messages adéquats pour répondre aux besoins de vos visiteurs.
+   * [Déclencheur d’événement ou d’audience](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
+   * [ Audiences et événements ](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=fr)
+   * [Parcours](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ## Architecture de Real-Time CDP et de Journey Optimizer
 
@@ -72,7 +72,7 @@ Commencez par envoyer un message à votre audience de clients à forte valeur aj
 
 ![Faites évoluer pas à pas la valeur unique vers la valeur de durée de vie. Aperçu visuel de haut niveau.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){zoomable="yes"}
 
-1. Vous créez des schémas et des jeux de données, puis vous les marquez pour [!UICONTROL Profil].
+1. Vous créez des schémas et des jeux de données, puis vous les marquez pour [!UICONTROL Profile].
 2. Les données sont collectées et intégrées dans Experience Platform via Web SDK, Mobile Edge SDK ou l’API. Analytics Data Connector peut également être utilisé, mais peut entraîner une latence du parcours.
 3. Vous chargez des profils dans Real-Time CDP et créez des politiques de gouvernance pour en assurer une utilisation responsable.
 4. Vous créez des audiences ciblées à partir de la liste des profils pour rechercher des clients à forte valeur ajoutée et à faible fréquence.
@@ -91,9 +91,9 @@ Au fur et à mesure que vous mettrez en œuvre le cas d’utilisation, vous util
 
 ### Créer une conception de schéma et spécifier des groupes de champs {#schema-design}
 
-Les ressources du modèle de données d’expérience (XDM) sont gérées dans l’espace de travail [!UICONTROL Schémas] de [!DNL Adobe Experience Platform]. Vous pouvez afficher et explorer les ressources de base fournies par [!DNL Adobe] (par exemple, [!UICONTROL groupes de champs]) et créer des ressources et des schémas personnalisés pour votre organisation.
+Les ressources du modèle de données d’expérience (XDM) sont gérées dans l’espace de travail [!UICONTROL Schemas] de [!DNL Adobe Experience Platform]. Vous pouvez afficher et explorer les ressources de base fournies par [!DNL Adobe] (par exemple, [!UICONTROL field groups]) et créer des ressources et des schémas personnalisés pour votre organisation.
 
-Pour plus d’informations sur la création de [schémas](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=fr), consultez le tutoriel [création de schémas](/help/xdm/tutorials/create-schema-ui.md).
+Pour plus d’informations sur la création de [schémas](https://experienceleague.adobe.com/fr/docs/experience-platform/xdm/home), consultez le tutoriel [création de schémas](/help/xdm/tutorials/create-schema-ui.md).
 
 Il existe plusieurs conceptions de schéma que vous pouvez utiliser dans cet exemple d’implémentation pour le cas d’utilisation afin de transformer une valeur unique en valeur de durée de vie. Chaque schéma comprend des champs spécifiques requis à configurer, ainsi que certains champs suggérés.
 
@@ -109,7 +109,7 @@ Utilisez ce schéma pour structurer et référencer les données de profil qui c
 
 ![Schéma Attributs du client avec les groupes de champs mis en surbrillance](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-attributes-schema.png)
 
-Le schéma des attributs du client est représenté par une classe [!UICONTROL XDM Individual Profile] qui comprend les groupes de champs suivants :
+Le schéma des attributs du client est représenté par une classe [!UICONTROL XDM Individual Profile], qui comprend les groupes de champs suivants :
 
 +++Détails démographiques (groupe de champs)
 
@@ -117,7 +117,7 @@ Le schéma des attributs du client est représenté par une classe [!UICONTROL X
 
 +++
 
-+++Coordonnées personnelles (groupe de champs)
++++Coordonnées Personnelles (Groupe De Champs)
 
 [Coordonnées personnelles](/help/xdm/field-groups/profile/personal-contact-details.md) est un groupe de champs de schéma standard pour la classe XDM Individual Profile, qui décrit les informations de contact d’une personne individuelle.
 
@@ -131,19 +131,19 @@ Le schéma des attributs du client est représenté par une classe [!UICONTROL X
 
 +++Groupes de champs de consentement et de préférence (groupe de champs)
 
-Le groupe de champs [&#x200B; Consentements et préférences &#x200B;](/help/xdm/field-groups/profile/consents.md) fournit un seul champ de type objet, consentements, pour capturer les informations de consentement et de préférence.
+Le groupe de champs [ Consentements et préférences ](/help/xdm/field-groups/profile/consents.md) fournit un seul champ de type objet, consentements, pour capturer les informations de consentement et de préférence.
 
 +++
 
 #### Schéma des transactions numériques client {#customer-digital-transactions-schema}
 
-Ce schéma est utilisé pour structurer et référencer les données d’événement qui composent l’activité de votre client ou cliente qui se produit sur votre site web ou sur d’autres plateformes numériques associées. Ces données sont généralement ingérées dans [!DNL Adobe Experience Platform] via [Web SDK](/help/web-sdk/home.md) et sont nécessaires pour référencer les différents événements de navigation et de conversion utilisés pour le déclenchement de parcours, l’analyse détaillée des clients en ligne et les fonctionnalités améliorées de segmentation.
+Ce schéma est utilisé pour structurer et référencer les données d’événement qui composent l’activité de votre client ou cliente qui se produit sur votre site web ou sur d’autres plateformes numériques associées. Ces données sont généralement ingérées dans [!DNL Adobe Experience Platform] via [Web SDK](/help/collection/js/js-overview.md) et sont nécessaires pour référencer les différents événements de navigation et de conversion utilisés pour le déclenchement de parcours, l’analyse détaillée des clients en ligne et les fonctionnalités améliorées de segmentation.
 
 ![Schéma de transactions numériques client avec les groupes de champs mis en surbrillance](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-digital-transactions-schema.png)
 
-Le schéma des transactions numériques client est représenté par une classe [!UICONTROL XDM ExperienceEvent] qui comprend les groupes de champs suivants :
+Le schéma de transactions numériques client est représenté par une classe [!UICONTROL XDM ExperienceEvent], qui comprend les groupes de champs suivants :
 
-ExperienceEvent Adobe Experience Platform Web SDK (groupe de champs)
++++ExperienceEvent Adobe Experience Platform Web SDK (groupe de champs)
 
 | Champs | Exigence |
 | --- | --- |
@@ -158,7 +158,7 @@ ExperienceEvent Adobe Experience Platform Web SDK (groupe de champs)
 
 +++
 
-+++Événement d’expérience client (groupe de champs)
++++Événement D’Expérience Client (Groupe De Champs)
 
 Ce groupe de champs comprend diverses informations sur les actions (comme les événements d’achat ou de navigation) effectuées par les utilisateurs sur votre propriété web.
 
@@ -214,21 +214,21 @@ Ce schéma est utilisé pour structurer et référencer les données d’événe
 
 ![Schéma des transactions hors ligne du client avec les groupes de champs mis en surbrillance](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-offline-transactions-schema.png)
 
-Le schéma des transactions hors ligne du client est représenté par une classe [!UICONTROL XDM ExperienceEvent] qui comprend les groupes de champs suivants :
+Le schéma des transactions client hors ligne est représenté par une classe [!UICONTROL XDM ExperienceEvent], qui comprend les groupes de champs suivants :
 
-Détails du Commerce (groupe de champs)
++++Détails du Commerce (groupe de champs)
 
 [Détails Commerce](/help/xdm/field-groups/event/commerce-details.md) est un groupe de champs de schéma standard pour la classe [!DNL XDM ExperienceEvent], utilisé pour décrire des données commerciales telles que des informations sur le produit (SKU, nom, quantité) et des opérations de panier standard (commande, passage en caisse, abandon).
 
 +++
 
-+++Coordonnées personnelles (groupe de champs)
++++Coordonnées Personnelles (Groupe De Champs)
 
-[[!UICONTROL Coordonnées personnelles]](/help/xdm/field-groups/profile/personal-contact-details.md) est un groupe de champs de schéma standard pour la classe [!DNL XDM Individual Profile], qui décrit les informations de contact d’une personne individuelle.
+[[!UICONTROL Personal Contact Details]](/help/xdm/field-groups/profile/personal-contact-details.md) est un groupe de champs de schéma standard pour la classe [!DNL XDM Individual Profile], qui décrit les coordonnées d’une personne individuelle.
 
 +++
 
-+++Détails de l’audit du système Source externe (groupe de champs)
++++Détails de l’audit du système Source externe (groupe de champs) 
 
 Attributs d’audit du système Source externe est un type de données standard des modèles de données d’expérience (XDM) qui capture les détails d’audit d’un système source externe.
 
@@ -244,11 +244,11 @@ Ce schéma est utilisé pour structurer et référencer les données d’événe
 
 ![Schéma du connecteur web Adobe avec groupes de champs mis en surbrillance](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/adobe-web-schema.png)
 
-Le schéma de connecteur web [!DNL Adobe] est représenté par une classe [!UICONTROL XDM ExperienceEvent] qui comprend les groupes de champs suivants :
+Le schéma de connecteur web [!DNL Adobe] est représenté par une classe [!UICONTROL XDM ExperienceEvent], qui inclut les groupes de champs suivants :
 
-Modèle ExperienceEvent Adobe Analytics (groupe de champs)
++++Modèle Adobe Analytics ExperienceEvent (groupe de champs)
 
-[[!UICONTROL Extension complète Adobe Analytics ExperienceEvent]](/help/xdm/field-groups/event/analytics-full-extension.md) est un groupe de champs de schéma standard, qui capture les mesures courantes collectées par Adobe Analytics.
+[[!UICONTROL Adobe Analytics ExperienceEvent Full Extension]](/help/xdm/field-groups/event/analytics-full-extension.md) est un groupe de champs de schéma standard, qui capture les mesures courantes collectées par Adobe Analytics.
 
 +++
 
@@ -268,9 +268,9 @@ Pour plus d’informations sur la création d’un [jeu de données](/help/catal
 
 >[!IMPORTANT]
 >
->La possibilité pour les clients de se désabonner de la réception des communications d’une marque, ainsi que le respect de ce choix, sont des exigences légales. Pour en savoir plus sur la législation applicable, consultez la [présentation des réglementations relatives à la confidentialité](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html?lang=fr).
+>La possibilité pour les clients de se désabonner de la réception des communications d’une marque, ainsi que le respect de ce choix, sont des exigences légales. Pour en savoir plus sur la législation applicable, consultez la [présentation des réglementations relatives à la confidentialité](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
-Pensez à mettre en œuvre les [politiques de consentement](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html?lang=fr) suivantes et à demander le consentement de vos visiteurs avant de communiquer avec eux :
+Pensez à mettre en œuvre les [politiques de consentement](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) suivantes et à demander le consentement de vos visiteurs avant de communiquer avec eux :
 
 * Si `consents.marketing.email.val = "Y"`, peut envoyer un e-mail à
 * Si `consents.marketing.sms.val = "Y"`, peut envoyer des SMS.
@@ -286,7 +286,7 @@ Envisagez d’ajouter et d’appliquer les [libellés de gouvernance des donnée
 
 #### Politiques marketing
 
-Aucune [&#x200B; politique marketing &#x200B;](/help/data-governance/policies/overview.md) n’est requise pour les parcours que vous créez dans le cadre de ce cas d’utilisation. Cependant, vous pouvez tenir compte des politiques suivantes selon vos besoins :
+Aucune [ politique marketing ](/help/data-governance/policies/overview.md) n’est requise pour les parcours que vous créez dans le cadre de ce cas d’utilisation. Cependant, vous pouvez tenir compte des politiques suivantes selon vos besoins :
 
 * Limitation Des Données Sensibles
 * Restreindre l’Advertising sur site
@@ -298,7 +298,7 @@ Aucune [&#x200B; politique marketing &#x200B;](/help/data-governance/policies/ov
 
 Ce cas d’utilisation nécessite la création de deux audiences pour définir des attributs ou des comportements spécifiques partagés par un sous-ensemble de profils de votre banque de profils afin de distinguer un groupe de clients potentiels. Les audiences peuvent être créées de plusieurs manières dans Adobe Experience Platform :
 
-* Pour plus d’informations sur la création d’une audience, consultez le [guide de l’interface utilisateur du service d’audience](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=fr#create-audience).
+* Pour plus d’informations sur la création d’une audience, consultez le [guide de l’interface utilisateur du service d’audience](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 * Pour plus d’informations sur la composition d’audiences [audiences](/help/segmentation/home.md), consultez le [guide de l’interface utilisateur sur la composition d’audiences](/help/segmentation/ui/audience-composition.md).
 * Pour plus d’informations sur la création d’audiences par le biais de définitions de segment dérivées d’Experience Platform, consultez le [guide de l’interface utilisateur du créateur d’audience](/help/segmentation/ui/segment-builder.md).
 
@@ -342,9 +342,9 @@ Cette audience est créée pour inclure les profils qui ont dépensé plus de 25
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer] n’englobe pas tout ce qui est indiqué dans les diagrammes. Toutes les [annonces publicitaires médias payantes](/help/destinations/catalog/social/overview.md) sont créées dans l’espace de travail [!UICONTROL destinations] [. &#x200B;](/help/destinations/ui/destinations-workspace.md)
+>[!DNL Adobe Journey Optimizer] n’englobe pas tout ce qui est indiqué dans les diagrammes. Toutes les [annonces publicitaires médias payantes](/help/destinations/catalog/social/overview.md) sont créées dans l’espace de travail [!UICONTROL destinations][](/help/destinations/ui/destinations-workspace.md).
 
-[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=fr) vous permet de proposer des expériences connectées, contextuelles et personnalisées à vos clients. Le parcours client est l’ensemble du processus d’interaction d’un client avec la marque. Chaque parcours de cas d’utilisation nécessite des informations spécifiques.
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) vous permet de proposer des expériences connectées, contextuelles et personnalisées à vos clients. Le parcours client est l’ensemble du processus d’interaction d’un client avec la marque. Chaque parcours de cas d’utilisation nécessite des informations spécifiques.
 
 Pour accomplir ce cas d’utilisation, vous devez créer deux parcours distincts :
 
@@ -367,15 +367,15 @@ Le parcours de durée de vie s’adresse à l’audience des clients à forte va
 
 Le parcours illustré ci-dessus suit la logique suivante.
 
-1. Lecture d’audience : utilisez une [activité Lecture d’audience](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=fr) pour la première audience créée dans la section audiences ci-dessus.
+1. Lecture d’audience : utilisez une [activité Lecture d’audience](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=en) pour la première audience créée dans la section audiences ci-dessus.
 
-2. Condition - Canal préféré : utilisez une [activité de condition](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html?lang=fr) pour déterminer comment contacter les clients, que ce soit par e-mail, SMS ou notifications push. Utilisez trois activités d’action pour créer les trois branches.
+2. Condition - Canal préféré : utilisez une [activité de condition](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html) pour déterminer comment contacter les clients, que ce soit par e-mail, SMS ou notifications push. Utilisez trois activités d’action pour créer les trois branches.
 
-3. Attente : utilisez une [activité d’attente](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=fr) pour attendre d’écouter les achats.
+3. Attente : utilisez une [activité d’attente](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html) pour attendre d’écouter les achats.
 
 4. Condition - Abonnement acheté au cours des 7 derniers jours ? : utilisez une activité de condition pour écouter les achats de produits au cours des 7 derniers jours.
 
-5. JourneyStepEventTracker - Abonnement non acheté : utilisez une [action personnalisée](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html?lang=fr) pour les visiteurs qui n’ont pas encore acheté votre abonnement, bien qu’ils aient reçu votre message. Dans le cadre de la condition personnalisée en fin de parcours, créez un événement `journey.feedback` et ajoutez-le à un jeu de données basé sur le schéma [!UICONTROL Événement d’étape de Parcours &#x200B;]. Vous utiliserez cet événement pour segmenter l’audience qui n’a pas acheté l’abonnement et que vous pouvez cibler via des annonces médias payantes.
+5. JourneyStepEventTracker - Abonnement non acheté : utilisez une [action personnalisée](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html) pour les visiteurs qui n’ont pas encore acheté votre abonnement, bien qu’ils aient reçu votre message. Dans le cadre de la condition personnalisée de fin de parcours, créez un événement `journey.feedback` et ajoutez-le à un jeu de données en fonction du schéma [!UICONTROL Journey Step Event]. Vous utiliserez cet événement pour segmenter l’audience qui n’a pas acheté l’abonnement et que vous pouvez cibler via des annonces médias payantes.
 
 +++
 
@@ -385,7 +385,7 @@ Le parcours de confirmation de commande se concentre sur le fait de savoir si un
 
 ![Présentation visuelle de haut niveau du parcours de confirmation de commande client.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "Présentation visuelle de haut niveau du parcours de confirmation de commande client."){zoomable="yes"}
 
-Logique de Parcours ++
++++logique de parcours
 
 Utilisez les événements, champs et actions suggérés ci-dessous dans votre parcours de confirmation :
 
@@ -436,7 +436,7 @@ Utilisez les événements, champs et actions suggérés ci-dessous dans votre pa
 
 >[!ENDTABS]
 
-Pour plus d’informations sur la création de parcours dans [!DNL Adobe Journey Optimizer], consultez le guide [Prise en main des parcours &#x200B;](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=fr) .
+Pour plus d’informations sur la création de parcours dans [!DNL Adobe Journey Optimizer], consultez le guide [Prise en main des parcours ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) .
 
 ### Configurer une destination pour l’affichage des publicités multimédia payantes {#paid-media-ads}
 

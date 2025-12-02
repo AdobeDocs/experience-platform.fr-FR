@@ -2,10 +2,10 @@
 description: Découvrez comment configurer les identités cibles prises en charge pour les destinations créées avec Destination SDK.
 title: Configuration de l’espace de noms d’identité
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '925'
-ht-degree: 60%
+source-wordcount: '918'
+ht-degree: 56%
 
 ---
 
@@ -61,9 +61,9 @@ Pendant la définition des identités cibles prises en charge par la destination
 |---------|----------|---|------|
 | `acceptsAttributes` | Booléen | Facultatif | Indique si la clientèle peut mapper des attributs de profil standard à l’identité que vous configurez. |
 | `acceptsCustomNamespaces` | Booléen | Facultatif | Indique si la clientèle peut mapper des espaces de noms d’identité personnalisés à l’espace de noms d’identité que vous configurez. |
-| `acceptedGlobalNamespaces` | - | Facultatif | Indique quels [espaces de noms d’identité standard](../../../../identity-service/features/namespaces.md#standard) (par exemple, la clientèle [!UICONTROL IDFA]) peut mapper l’identité que vous configurez. |
-| `transformation` | Chaîne | Facultatif | Affiche la case [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) dans l’interface utilisateur d’Experience Platform, lorsque le champ source est un attribut XDM ou un espace de noms d’identité personnalisée. Utilisez cette option pour permettre aux utilisateurs de hacher les attributs sources au moment de l’exportation. Pour activer cette option, définissez la valeur sur `sha256(lower($))`. |
-| `requiredTransformation` | Chaîne | Facultatif | Quand la clientèle sélectionne cet espace de noms d’identité source, la case [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) (Appliquer la transformation) est automatiquement cochée pour le mappage et il n’est pas possible de la décocher. Pour activer cette option, définissez la valeur sur `sha256(lower($))`. |
+| `acceptedGlobalNamespaces` | - | Facultatif | Indique quels [espaces de noms d’identité standard](../../../../identity-service/features/namespaces.md#standard) (par exemple, [!UICONTROL IDFA]) la clientèle peut mapper l’identité que vous configurez. |
+| `transformation` | Chaîne | Facultatif | Affiche la case à cocher [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) dans l’interface utilisateur d’Experience Platform, lorsque le champ source est un attribut XDM ou un espace de noms d’identité personnalisée. Utilisez cette option pour permettre aux utilisateurs de hacher les attributs sources au moment de l’exportation. Pour activer cette option, définissez la valeur sur `sha256(lower($))`. |
+| `requiredTransformation` | Chaîne | Facultatif | Lorsque la clientèle sélectionne cet espace de noms d’identité source, la case à cocher [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) est automatiquement appliquée au mappage et il n’est pas possible de la désactiver. Pour activer cette option, définissez la valeur sur `sha256(lower($))`. |
 
 {style="table-layout:auto"}
 
@@ -87,7 +87,7 @@ Pendant la définition des identités cibles prises en charge par la destination
 
 Vous devez indiquer quelles identités [!DNL Experience Platform] les clients peuvent exporter vers votre destination. Voici quelques exemples : [!DNL Experience Cloud ID], e-mail haché, identifiant de l’appareil ([!DNL IDFA], [!DNL GAID]). Ces valeurs sont des espaces de noms d’identité [!DNL Experience Platform] que la clientèle peut mapper aux espaces de noms d’identité de la destination.
 
-Une correspondance 1 à 1 entre [!DNL Experience Platform] et votre destination n’est pas obligatoire dans les espaces de noms d’identités. Par exemple, les clients peuvent mapper un espace de noms [!DNL IDFA] [!DNL Experience Platform] à un espace de noms [!DNL IDFA] de votre destination ou mapper le même espace de noms [!DNL IDFA] [!DNL Experience Platform] à un espace de noms [!DNL Customer ID] de votre destination.
+Une correspondance 1 à 1 entre [!DNL Experience Platform] et votre destination n’est pas obligatoire dans les espaces de noms d’identités. Par exemple, les clients peuvent mapper un espace de noms [!DNL Experience Platform] [!DNL IDFA] à un espace de noms [!DNL IDFA] de votre destination ou mapper le même espace de noms [!DNL Experience Platform] [!DNL IDFA] à un espace de noms [!DNL Customer ID] de votre destination.
 
 Apprenez-en plus sur les identités dans la [présentation des espaces de noms d’identité](../../../../identity-service/features/namespaces.md).
 

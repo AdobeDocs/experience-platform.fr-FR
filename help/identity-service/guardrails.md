@@ -3,9 +3,9 @@ keywords: Experience Platform;identité;identity service;dépannage;mécanismes 
 title: Mécanismes de sécurisation pour Identity Service
 description: Ce document fournit des informations sur les limites d’utilisation et de débit pour les données Identity Service afin de vous aider à optimiser l’utilisation du graphique d’identités.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1576'
 ht-degree: 39%
 
 ---
@@ -109,7 +109,7 @@ La suppression ne concerne que les données du service d’identités et non le 
 Si vous souhaitez conserver vos événements authentifiés par rapport au CRMID, il est recommandé de modifier vos identifiants principaux d’ECID en CRMID. Lisez les documents suivants pour savoir comment mettre en œuvre cette modification :
 
 * [Configurer le mappage d’identités pour les balises Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Données d’identité dans Experience Platform Web SDK](../web-sdk/identity/overview.md#using-identitymap)
+* [Données d’identité dans Experience Platform Web SDK](/help/collection/use-cases/identity/id-overview.md)
 
 ### Exemples de scénarios
 
@@ -143,13 +143,13 @@ Dans cet exemple, ECID:32110 est ingéré et lié à un graphique volumineux à 
 
 >[!TAB  Processus de suppression ]
 
-Par conséquent, Identity Service supprime l’identité la plus ancienne en fonction de la date et de l’heure et du type d’identité. Dans ce cas, ECID:35577 n’est supprimé que du graphique d’identité.
+Par conséquent, Identity Service supprime l’identité la plus ancienne en fonction de la date et de l’heure et du type d’identité. Dans ce cas, ECID:35577 est uniquement supprimé du graphique d’identité.
 
 ![](./images/guardrails/during-split.png)
 
 >[!TAB Sortie du graphique]
 
-Suite à la suppression d’ECID:35577, les périphéries qui liaient CRMID:60013 et CRMID:25212 à l’ECID:35577 maintenant supprimé sont également supprimées. Ce processus de suppression entraîne la division du graphique en deux graphiques plus petits.
+Suite à la suppression d’ECID:35577, les périphéries qui liaient CRMID:60013 et CRMID:25212 à l’ECID maintenant supprimé:35577 sont également supprimées. Ce processus de suppression entraîne la division du graphique en deux graphiques plus petits.
 
 ![](./images/guardrails/after-split.png)
 
@@ -174,9 +174,9 @@ Dans l’exemple ci-dessous, ECID:21011 est ingéré et lié au graphique à `ti
 
 >[!TAB  Processus de suppression ]
 
-Par conséquent, Identity Service supprime uniquement l’identité la plus ancienne du graphique d’identités, qui est dans ce cas ECID:35577. La suppression d’ECID:35577 entraîne également la suppression des éléments suivants :
+Par conséquent, Identity Service supprime uniquement l’identité la plus ancienne du graphique d’identités, qui est dans ce cas ECID:35577. La suppression de l’ECID:35577 entraîne également la suppression des éléments suivants :
 
-* Le lien entre CRMID : 60013 et l’ECID : 35577 maintenant supprimé, entraînant ainsi un scénario de partage du graphique.
+* Lien entre CRMID : 60013 et l’ECID :35577 supprimé, entraînant ainsi un scénario de partage du graphique.
 * IDFA : 32110, IDFA : 02383 et les identités restantes représentées par `(...)`. Ces identités sont supprimées, car, individuellement, elles ne sont liées à aucune autre identité et ne peuvent donc pas être représentées dans un graphique.
 
 ![](./images/guardrails/hub-and-spoke-process.png)
@@ -199,7 +199,7 @@ Pour plus d’informations sur [!DNL Identity Service], consultez la documentati
 Consultez la documentation suivante pour plus d’informations sur les autres mécanismes de sécurisation des services Experience Platform, sur les informations de latence de bout en bout et les informations de licence dans les documents de description du produit Real-Time CDP :
 
 * [Mécanismes de sécurisation de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=fr#end-to-end-latency-diagrams) pour divers services Experience Platform.
-* [Real-Time Customer Data Platform (édition B2C - packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

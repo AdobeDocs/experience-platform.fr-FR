@@ -6,9 +6,9 @@ description: Découvrez comment configurer vos opérations et schémas de donné
 role: Developer
 feature: Consent
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
-source-wordcount: '2524'
+source-wordcount: '2509'
 ht-degree: 1%
 
 ---
@@ -40,10 +40,10 @@ Pour suivre ce guide, vous devez utiliser un CMP, commercial ou personnel, qui e
 Ce guide nécessite également une compréhension pratique des services Experience Platform suivants :
 
 * [Modèle de données d’expérience (XDM)](/help/xdm/home.md) : framework normalisé selon lequel Experience Platform organise les données d’expérience client.
-* [Adobe Experience Platform Identity Service &#x200B;](/help/identity-service/home.md) : résout le problème fondamental de la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
+* [Adobe Experience Platform Identity Service ](/help/identity-service/home.md) : résout le problème fondamental de la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
 * [Real-Time Customer Profile](/help/profile/home.md) : utilise des [!DNL Identity Service] pour créer des profils clients détaillés à partir de vos jeux de données en temps réel. [!DNL Real-Time Customer Profile] extrait les données du lac de données et conserve les profils clients dans sa propre banque de données distincte.
-* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) : bibliothèque JavaScript côté client qui vous permet d’intégrer divers services Experience Platform à votre site web destiné aux clients.
-   * [Commandes de consentement SDK &#x200B;](../../../../web-sdk/commands/setconsent.md) : présentation du cas d’utilisation des commandes SDK liées au consentement présentées dans ce guide.
+* [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) : bibliothèque JavaScript côté client qui vous permet d’intégrer divers services Experience Platform à votre site web destiné aux clients.
+   * [Commandes de consentement SDK ](/help/collection/js/commands/setconsent.md) : présentation du cas d’utilisation des commandes SDK liées au consentement présentées dans ce guide.
 * [Adobe Experience Platform Segmentation Service](/help/segmentation/home.md) : permet de diviser les données [!DNL Real-Time Customer Profile] en groupes d’individus qui partagent des caractéristiques similaires et qui réagissent de la même manière aux stratégies marketing.
 
 Outre les services Experience Platform répertoriés ci-dessus, vous devez également connaître [destinations](/help/data-governance/home.md) ainsi que leur rôle dans l’écosystème Experience Platform.
@@ -104,7 +104,7 @@ Les données de consentement du client doivent être envoyées aux jeux de donn�
 
 Une fois que vous avez créé un jeu de données compatible avec [!DNL Profile] pour la collecte des données de consentement, vous devez vous assurer que vos politiques de fusion ont été configurées pour toujours inclure les champs de consentement TCF dans vos profils de clients. Cela implique de définir la priorité du jeu de données afin que votre jeu de données de consentement soit prioritaire sur les autres jeux de données potentiellement conflictuels.
 
-Pour plus d’informations sur l’utilisation des politiques de fusion, reportez-vous à la [&#x200B; présentation des politiques de fusion &#x200B;](/help/profile/merge-policies/overview.md). Lors de la configuration de vos politiques de fusion, vous devez vous assurer que vos segments incluent tous les attributs de consentement requis fournis par le [groupe de champs de schéma de confidentialité XDM](./dataset.md#privacy-field-group), comme indiqué dans le guide sur la préparation des jeux de données.
+Pour plus d’informations sur l’utilisation des politiques de fusion, reportez-vous à la [ présentation des politiques de fusion ](/help/profile/merge-policies/overview.md). Lors de la configuration de vos politiques de fusion, vous devez vous assurer que vos segments incluent tous les attributs de consentement requis fournis par le [groupe de champs de schéma de confidentialité XDM](./dataset.md#privacy-field-group), comme indiqué dans le guide sur la préparation des jeux de données.
 
 ## Intégrer Experience Platform Web SDK pour collecter les données de consentement des clients {#sdk}
 
@@ -112,7 +112,7 @@ Pour plus d’informations sur l’utilisation des politiques de fusion, reporte
 >
 >L’utilisation d’Experience Platform Web SDK est nécessaire pour traiter les données de consentement directement dans Adobe Experience Platform. [!DNL Experience Cloud Identity Service] n’est pas pris en charge.
 >
->Cependant, [!DNL Experience Cloud Identity Service] est toujours pris en charge pour le traitement du consentement dans Adobe Audience Manager et la conformité à TCF 2.0 nécessite uniquement que la bibliothèque soit mise à jour vers [&#x200B; version 5.0](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
+>Cependant, [!DNL Experience Cloud Identity Service] est toujours pris en charge pour le traitement du consentement dans Adobe Audience Manager et la conformité à TCF 2.0 nécessite uniquement que la bibliothèque soit mise à jour vers [ version 5.0](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
 
 Une fois que vous avez configuré votre CMP pour générer des chaînes de consentement, vous devez intégrer Experience Platform Web SDK pour collecter ces chaînes et les envoyer à Experience Platform. Experience Platform SDK fournit deux commandes qui peuvent être utilisées pour envoyer des données de consentement TCF à Experience Platform (expliquées dans les sous-sections ci-dessous). Ces commandes doivent être utilisées lorsqu’un client ou une cliente fournit des informations de consentement pour la première fois, et chaque fois que le consentement change par la suite.
 
@@ -126,14 +126,14 @@ Après avoir fourni un nom unique pour le flux de données, sélectionnez le bou
 
 | Champ du flux de données | Valeur |
 | --- | --- |
-| [!UICONTROL &#x200B; Sandbox &#x200B;] | Nom de l’Experience Platform [sandbox](/help/sandboxes/home.md) qui contient la connexion en continu requise et les jeux de données pour configurer le flux de données. |
-| [!UICONTROL Entrée de diffusion en continu] | Une connexion en continu valide pour Experience Platform. Consultez le tutoriel sur la [création d’une connexion en continu](/help/ingestion/tutorials/create-streaming-connection-ui.md) si vous ne disposez pas d’une entrée de flux en continu existante. |
-| [!UICONTROL Jeu de données d’événement] | Sélectionnez le jeu de données [!DNL XDM ExperienceEvent] créé à l’[étape précédente](#datasets). Si vous avez inclus le groupe de champs [[!UICONTROL Consentement IAB TCF 2.0] dans le schéma de ce jeu de données](/help/xdm/field-groups/event/iab.md) vous pouvez effectuer le suivi des événements de changement de consentement au fil du temps à l’aide de la commande [`sendEvent`](#sendEvent) et stocker ces données dans ce jeu de données. Gardez à l’esprit que les valeurs de consentement stockées dans ce jeu de données ne sont **pas** utilisées dans les workflows d’application automatiques. |
-| [!UICONTROL Jeu de données de profil] | Sélectionnez le jeu de données [!DNL XDM Individual Profile] créé à l’[étape précédente](#datasets). Lors de la réponse aux hooks de changement de consentement CMP à l’aide de la commande [`setConsent`](#setConsent), les données collectées sont stockées dans ce jeu de données. Comme ce jeu de données est activé pour Profil, les valeurs de consentement stockées dans ce jeu de données sont respectées lors des workflows d’application automatiques. |
+| [!UICONTROL Sandbox] | Nom de l’Experience Platform [sandbox](/help/sandboxes/home.md) qui contient la connexion en continu requise et les jeux de données pour configurer le flux de données. |
+| [!UICONTROL Streaming Inlet] | Une connexion en continu valide pour Experience Platform. Consultez le tutoriel sur la [création d’une connexion en continu](/help/ingestion/tutorials/create-streaming-connection-ui.md) si vous ne disposez pas d’une entrée de flux en continu existante. |
+| [!UICONTROL Event Dataset] | Sélectionnez le jeu de données [!DNL XDM ExperienceEvent] créé à l’[étape précédente](#datasets). Si vous avez inclus le groupe de champs [[!UICONTROL IAB TCF 2.0 Consent]](/help/xdm/field-groups/event/iab.md) dans le schéma de ce jeu de données, vous pouvez suivre les événements de changement de consentement au fil du temps à l’aide de la commande [`sendEvent`](#sendEvent) et stocker ces données dans ce jeu de données. Gardez à l’esprit que les valeurs de consentement stockées dans ce jeu de données ne sont **pas** utilisées dans les workflows d’application automatiques. |
+| [!UICONTROL Profile Dataset] | Sélectionnez le jeu de données [!DNL XDM Individual Profile] créé à l’[étape précédente](#datasets). Lors de la réponse aux hooks de changement de consentement CMP à l’aide de la commande [`setConsent`](#setConsent), les données collectées sont stockées dans ce jeu de données. Comme ce jeu de données est activé pour Profil, les valeurs de consentement stockées dans ce jeu de données sont respectées lors des workflows d’application automatiques. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]** en bas de l’écran et continuez à suivre les invites supplémentaires pour terminer la configuration.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]** en bas de l’écran et continuez à suivre les invites supplémentaires pour terminer la configuration.
 
 ### Exécution de commandes de modification du consentement
 
@@ -141,7 +141,7 @@ Une fois que vous avez créé le flux de données décrit dans la section préc�
 
 #### Utilisation de hooks de modification du consentement CMP {#setConsent}
 
-De nombreuses CMP fournissent des hooks prêts à l’emploi qui écoutent les événements de changement de consentement. Lorsque ces événements se produisent, vous pouvez utiliser la commande [`setConsent`](/help/web-sdk/commands/setconsent.md) pour mettre à jour les données de consentement de ce client.
+De nombreuses CMP fournissent des hooks prêts à l’emploi qui écoutent les événements de changement de consentement. Lorsque ces événements se produisent, vous pouvez utiliser la commande [`setConsent`](/help/collection/js/commands/setconsent.md) pour mettre à jour les données de consentement de ce client.
 
 La commande `setConsent` attend deux arguments :
 
@@ -197,7 +197,7 @@ Vous pouvez également collecter des données de consentement TCF 2.0 sur chaque
 
 >[!NOTE]
 >
->Pour utiliser cette méthode, vous devez avoir ajouté le groupe de champs Confidentialité des événements d’expérience à votre schéma de [!DNL XDM ExperienceEvent] activé pour [!DNL Profile]. Voir la section [mise à jour du schéma ExperienceEvent](./dataset.md#event-schema) dans le guide de préparation des jeux de données pour savoir comment configurer cela.
+>Pour utiliser cette méthode, vous devez avoir ajouté le groupe de champs Confidentialité des événements d’expérience à votre schéma de [!DNL Profile] activé pour [!DNL XDM ExperienceEvent]. Voir la section [mise à jour du schéma ExperienceEvent](./dataset.md#event-schema) dans le guide de préparation des jeux de données pour savoir comment configurer cela.
 
 La commande `sendEvent` doit être utilisée comme rappel dans les écouteurs d’événement appropriés sur votre site web. La commande attend deux arguments : (1) une chaîne qui indique le type de commande (dans ce cas, `sendEvent`), et (2) une payload contenant un objet `xdm` qui fournit les champs de consentement requis au format JSON :
 
@@ -224,7 +224,7 @@ alloy("sendEvent", {
 
 ### Gestion des réponses SDK
 
-De nombreuses commandes Web SDK renvoient des promesses indiquant si l’appel a réussi ou échoué. Vous pouvez ensuite utiliser ces réponses pour une logique supplémentaire, telle que l’affichage de messages de confirmation au client. Voir [Réponses des commandes](/help/web-sdk/commands/command-responses.md) pour plus d’informations.
+De nombreuses commandes Web SDK renvoient des promesses indiquant si l’appel a réussi ou échoué. Vous pouvez ensuite utiliser ces réponses pour une logique supplémentaire, telle que l’affichage de messages de confirmation au client. Voir [Réponses des commandes](/help/collection/js/commands/command-responses.md) pour plus d’informations.
 
 ## Exporter les segments {#export}
 

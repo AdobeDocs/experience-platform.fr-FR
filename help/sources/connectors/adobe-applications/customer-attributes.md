@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Présentation du connecteur Source des attributs du client
 description: Découvrez comment connecter les attributs du client à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 12%
+source-wordcount: '382'
+ht-degree: 19%
 
 ---
 
 # Connecteur Attributs du client
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
-[[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html?lang=fr) dans Experience Cloud vous permet de télécharger vos données d’entreprise capturées à partir d’une base de données de gestion de la relation client (GRC). Vous pouvez charger les données dans une source de données d’attributs du client dans Experience Cloud, puis les utiliser dans Adobe Analytics et Adobe Target.
+[[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html) dans Experience Cloud vous permet de télécharger vos données d’entreprise capturées à partir d’une base de données de gestion de la relation client (GRC). Vous pouvez charger les données dans une source de données d’attributs du client dans Experience Cloud, puis les utiliser dans Adobe Analytics et Adobe Target.
 
 Experience Platform prend en charge l’ingestion de données de profil [!DNL Customer Attributes] dans Adobe Experience Platform.
 
@@ -31,7 +31,7 @@ Vous ne pouvez pas sélectionner d’espace de noms existant pour l’identité 
 
 Pour que les données [!DNL Customer Attributes] soient liées à d’autres jeux de données [!DNL Profile], leurs données et identités doivent pouvoir être associées à un Experience Cloud ID.
 
-Vous pouvez établir l’espace de noms `CORE` en définissant l’Experience Cloud ID pour le visiteur à l’aide de [Web SDK](/help/web-sdk/identity/overview.md), [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/) ou de l’API [du service Experience Cloud ID](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=fr).
+Vous pouvez établir l’espace de noms `CORE` en définissant l’Experience Cloud ID pour le visiteur à l’aide de l’[Web SDK](/help/collection/use-cases/identity/id-overview.md), [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/) ou de l’API [du service Experience Cloud ID](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=fr).
 
 Le fichier [!DNL Customer Attributes] ne renseigne pas d’autres relations d’identité. Par exemple, si un jeu de données source [!DNL Customer Attributes] contient un champ **E-mail** et **Identifiant de fidélité**, ces champs doivent être libellés comme des champs d’identité dans le schéma afin d’être traités en [!DNL Identity Service].
 

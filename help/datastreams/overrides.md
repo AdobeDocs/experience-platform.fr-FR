@@ -2,10 +2,10 @@
 title: Configurer les remplacements de trains de données
 description: Découvrez comment configurer les remplacements de trains de données dans l’interface utilisateur des trains de données et les activer via le Web SDK ou le Mobile SDK.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1083'
-ht-degree: 57%
+source-wordcount: '1045'
+ht-degree: 53%
 
 ---
 
@@ -20,14 +20,14 @@ Le remplacement de la configuration des trains de données est un processus en d
 1. Tout d’abord, vous devez définir le remplacement de votre configuration de train de données sur la page [configuration du train de données](configure.md).
 2. Ensuite, vous devez envoyer les remplacements à Edge Network de l’une des manières suivantes :
    * Via les commandes `sendEvent` ou `configure` [Web SDK](#send-overrides).
-   * Via le SDK Web [extension de balise](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+   * Via le SDK Web [extension de balise](../tags/extensions/client/web-sdk/configure/configuration-overrides.md).
    * Via l’API Mobile SDK [sendEvent](#send-overrides) ou à l’aide de [Rules](#send-overrides).
 
 Cet article décrit le processus de remplacement de configuration des trains de données de bout en bout pour chaque type de remplacement pris en charge.
 
 >[!IMPORTANT]
 >
->Les remplacements de flux de données ne sont pris en charge que pour les intégrations [Web SDK](../web-sdk/home.md) et [Mobile SDK](https://developer.adobe.com/client-sdks/home/). [Les intégrations de l’API Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) ne prennent actuellement pas en charge les remplacements de trains de données.
+>[Les intégrations de l’API Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) ne prennent actuellement pas en charge les remplacements de trains de données.
 ><br>
 >Utilisez les remplacements de trains de données pour envoyer différentes données à différents trains de données. N’utilisez pas de remplacements de flux de données pour les cas d’utilisation de personnalisation ou les données de consentement.
 
@@ -62,7 +62,7 @@ Les remplacements de configuration des trains de données vous permettent de mod
 
 Pour configurer les remplacements de trains de données pour un train de données Adobe Target, vous devez d’abord créer un train de données Adobe Target. Suivez la procédure pour [configurer un train de données](configure.md) avec le service [Adobe Target](configure.md#target).
 
-Une fois que vous avez créé le flux de données, modifiez le service [Adobe Target](configure.md#target) que vous avez ajouté et utilisez la section **[!UICONTROL Remplacements de jeton de propriété]** pour ajouter les remplacements de flux de données souhaités, comme illustré dans l’image ci-dessous. Ajoutez un jeton de propriété par ligne.
+Une fois que vous avez créé le flux de données, modifiez le service [Adobe Target](configure.md#target) que vous avez ajouté et utilisez la section **[!UICONTROL Property Token Overrides]** pour ajouter les remplacements de flux de données souhaités, comme illustré dans l’image ci-dessous. Ajoutez un jeton de propriété par ligne.
 
 ![Copie d’écran de l’interface utilisateur des trains de données montrant les paramètres du service Adobe Target, avec les remplacements de jetons de propriété mis en surbrillance.](assets/overrides/override-target.png)
 
@@ -74,9 +74,9 @@ La configuration des remplacements de trains de données pour Adobe Target est 
 
 Pour configurer les remplacements de trains de données d’un train de données Adobe Analytics, vous devez d’abord créer un train de données [Adobe Analytics](configure.md#analytics). Suivez la procédure pour [configurer un train de données](configure.md) avec le service [Adobe Analytics](configure.md#analytics).
 
-Une fois que vous avez créé le flux de données, modifiez le service [Adobe Analytics](configure.md#target) que vous avez ajouté et utilisez la section **[!UICONTROL Remplacements de suites de rapports]** pour ajouter les remplacements de flux de données souhaités, comme illustré dans l’image ci-dessous.
+Une fois que vous avez créé le flux de données, modifiez le service [Adobe Analytics](configure.md#target) que vous avez ajouté et utilisez la section **[!UICONTROL Report Suite Overrides]** pour ajouter les remplacements de flux de données souhaités, comme illustré dans l’image ci-dessous.
 
-Sélectionnez **[!UICONTROL Afficher le mode par lots]** pour activer la modification par lots des remplacements de suites de rapports. Vous pouvez copier et coller une liste de remplacements de suites de rapports. Saisissez une suite de rapports par ligne.
+Sélectionnez **[!UICONTROL Show Batch Mode]** pour activer la modification par lots des remplacements de suites de rapports. Vous pouvez copier et coller une liste de remplacements de suites de rapports. Saisissez une suite de rapports par ligne.
 
 ![Copie d’écran de l’interface utilisateur des trains de données montrant les paramètres du service Adobe Analytics, avec les remplacements de suites de rapports mis en surbrillance.](assets/overrides/override-analytics.png)
 
@@ -88,7 +88,7 @@ La configuration des remplacements de trains de données Adobe Analytics est te
 
 Pour configurer les remplacements de trains de données pour les jeux de données d’événements Experience Platform, vous devez d’abord créer un train de données [Adobe Experience Platform](configure.md#aep). Suivez la procédure pour [configurer un train de données](configure.md) avec le service [Adobe Experience Platform](configure.md#aep).
 
-Une fois que vous avez créé le flux de données, modifiez le service [Adobe Experience Platform](configure.md#aep) que vous avez ajouté et sélectionnez l’option **[!UICONTROL Ajouter un jeu de données d’événement]** pour ajouter un ou plusieurs jeux de données d’événement de remplacement, comme illustré dans l’image ci-dessous.
+Une fois que vous avez créé le flux de données, modifiez le service [Adobe Experience Platform](configure.md#aep) que vous avez ajouté et sélectionnez l’option **[!UICONTROL Add Event Dataset]** pour ajouter un ou plusieurs jeux de données d’événement de remplacement, comme illustré dans l’image ci-dessous.
 
 ![Copie d’écran de l’interface utilisateur des trains de données présentant les paramètres du service Adobe Experience Platform, avec les remplacements de jeux de données d’événement mis en surbrillance.](assets/overrides/override-aep.png)
 
@@ -100,9 +100,9 @@ Vous avez terminé la configuration des remplacements de trains de données Adob
 
 Avant de configurer les remplacements de trains de données pour les conteneurs de synchronisation d’identifiants tiers, vous devez créer un train de données. Pour ce faire, consultez la section [Configurer un train de données](configure.md).
 
-Une fois que vous avez créé le train de données, accédez aux **[!UICONTROL Options avancées]** et activez l’option **[!UICONTROL Synchronisation des identifiants tiers]**.
+Une fois le flux de données créé, accédez à **[!UICONTROL Advanced Options]** et activez l’option **[!UICONTROL Third Party ID Sync]** .
 
-Consultez ensuite la section **[!UICONTROL Remplacements d’ID de conteneur]** pour ajouter les ID de conteneur que vous souhaitez remplacer par le paramètre par défaut, comme illustré dans l’image ci-dessous.
+Ensuite, utilisez la section **[!UICONTROL Container ID Overrides]** pour ajouter les identifiants de conteneur dont vous souhaitez remplacer le paramètre par défaut, comme illustré dans l’image ci-dessous.
 
 >[!IMPORTANT]
 >
@@ -118,7 +118,7 @@ Vous avez terminé la configuration des remplacements de conteneurs de synchroni
 
 Après avoir configuré les remplacements de train de données dans l’interface utilisateur de collecte de données, vous pouvez envoyer les remplacements à Edge Network via le SDK web ou le SDK mobile.
 
-* **Web SDK** : voir [remplacements de configuration des trains de données](../web-sdk/commands/datastream-overrides.md#library) pour obtenir des instructions sur les extensions de balises et des exemples de code de bibliothèque JavaScript.
+* **Web SDK** : voir [remplacements de configuration des trains de données](/help/collection/js/commands/configure/edgeconfigoverrides.md) pour obtenir des exemples de code de bibliothèque JavaScript.
 * **Mobile SDK** : vous pouvez envoyer des remplacements d’ID de train de données à l’aide de l’API [sendEvent](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/) ou à l’aide de [Rules](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/).
 
 ## Exemple de payload {#payload-example}

@@ -3,7 +3,7 @@ keywords: personnalisation personnalisée;destination;destination personnalisée
 title: Connexion de personnalisation personnalisée
 description: Cette destination fournit une personnalisation externe, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur votre site pour récupérer les informations d’audience à partir de Adobe Experience Platform. Cette destination fournit une personnalisation en temps réel basée sur l’appartenance à l’audience du profil utilisateur.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 44a4d5c592e13cdd1d4d75787dee5e1763fae9a4
+source-git-commit: d252fc30d93fa4440c6ef47146830d0423e1839a
 workflow-type: tm+mt
 source-wordcount: '992'
 ht-degree: 45%
@@ -37,9 +37,9 @@ Configurez cette destination pour permettre aux plateformes de personnalisation 
 
 Cette destination nécessite l’utilisation de l’une des méthodes de collecte de données suivantes, selon votre implémentation :
 
-* Utilisez [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) si vous souhaitez collecter des données sur votre site Web.
+* Utilisez [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) si vous souhaitez collecter des données sur votre site Web.
 * Utilisez [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) si vous souhaitez collecter des données à partir de votre application mobile.
-* Utilisez l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/) si vous n’utilisez ni [Web SDK](/help/web-sdk/home.md) ni [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/), ou si vous souhaitez personnaliser l’expérience utilisateur en fonction des attributs de profil.
+* Utilisez l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/) si vous n’utilisez pas Web SDK ou Mobile SDK, ou si vous souhaitez personnaliser l’expérience utilisateur en fonction des attributs de profil.
 
 >[!IMPORTANT]
 >
@@ -108,7 +108,7 @@ Lisez [Activer des destinations de personnalisation Edge de profils et d’audie
 
 ## Données exportées {#exported-data}
 
-Si vous utilisez des [balises dans Adobe Experience Platform](../../../tags/home.md) pour déployer le SDK web Experience Platform, utilisez la fonctionnalité [Envoi de l’événement terminé](../../../tags/extensions/client/web-sdk/event-types.md) et votre action de code personnalisé contiendra une variable `event.destinations` que vous pourrez utiliser pour afficher les données exportées.
+Si vous utilisez des [balises dans Adobe Experience Platform](/help/tags/home.md) pour déployer le SDK web Experience Platform, utilisez la fonctionnalité [Envoi de l’événement terminé](/help/tags/extensions/client/web-sdk/event-types.md) et votre action de code personnalisé contiendra une variable `event.destinations` que vous pourrez utiliser pour afficher les données exportées.
 
 Voici un exemple de valeur pour la variable `event.destinations` :
 
@@ -130,7 +130,7 @@ Voici un exemple de valeur pour la variable `event.destinations` :
 ]
 ```
 
-Si vous n’utilisez pas [Balises](/help/tags/home.md) pour déployer Experience Platform Web SDK, utilisez [réponses des commandes](/help/web-sdk/commands/command-responses.md) pour afficher les données exportées.
+Si vous n’utilisez pas [Balises](/help/tags/home.md) pour déployer Experience Platform Web SDK, utilisez [réponses des commandes](/help/collection/js/commands/command-responses.md) pour afficher les données exportées.
 
 Vous pouvez analyser la réponse JSON d’Adobe Experience Platform pour trouver l’alias d’intégration correspondant à l’application que vous intégrez dans Adobe Experience Platform. Les identifiants d’audience peuvent être transmis dans le code de l’application en tant que paramètres de ciblage. Vous trouverez ci-dessous un exemple de ce à quoi cela ressemblerait dans le cas spécifique de la réponse de destination.
 

@@ -2,7 +2,7 @@
 title: Priorité d’espace de noms
 description: Découvrez la priorité des espaces de noms dans Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 7df0d0c7eb97760190ac8b20d1b74472b87e8b6a
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
 source-wordcount: '2119'
 ht-degree: 3%
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 Chaque implémentation client est unique et adaptée pour répondre aux objectifs d’une organisation particulière. Par conséquent, l’importance d’un espace de noms donné varie d’un client à l’autre. Voici quelques exemples concrets :
 
-* Votre entreprise peut considérer chaque adresse e-mail comme représentant une entité à une seule personne et utiliser donc les [&#x200B; paramètres d’identité &#x200B;](./identity-settings-ui.md) pour configurer l’espace de noms d’e-mail comme unique. Toutefois, une autre entreprise peut vouloir représenter des entités à personne unique comme ayant plusieurs adresses e-mail, et configurer ainsi l’espace de noms d’e-mail comme n’étant pas unique. Ces sociétés devraient utiliser un autre espace de noms d’identité comme espace de noms unique, tel qu’un espace de noms CRMID, de sorte qu’un identifiant de personne unique puisse être lié à plusieurs adresses e-mail.
+* Votre entreprise peut considérer chaque adresse e-mail comme représentant une entité à une seule personne et utiliser donc les [ paramètres d’identité ](./identity-settings-ui.md) pour configurer l’espace de noms d’e-mail comme unique. Toutefois, une autre entreprise peut vouloir représenter des entités à personne unique comme ayant plusieurs adresses e-mail, et configurer ainsi l’espace de noms d’e-mail comme n’étant pas unique. Ces sociétés devraient utiliser un autre espace de noms d’identité comme espace de noms unique, tel qu’un espace de noms CRMID, de sorte qu’un identifiant de personne unique puisse être lié à plusieurs adresses e-mail.
 * Vous pouvez collecter le comportement en ligne à l’aide d’un espace de noms « ID de connexion ». Cet identifiant de connexion peut avoir une relation 1:1 avec le CRMID, qui stocke ensuite les attributs d’un système CRM et peut être considéré comme l’espace de noms le plus important. Dans ce cas, vous déterminez alors que l’espace de noms CRMID est une représentation plus précise d’une personne, tandis que l’espace de noms d’identifiant de connexion est le deuxième plus important.
 
 Vous devez effectuer des configurations dans Identity Service qui reflètent l’importance de vos espaces de noms, car cela influence la manière dont les profils et leurs graphiques d’identités associés sont formés et divisés.
@@ -65,7 +65,7 @@ La priorité des espaces de noms peut être configurée à l’aide de l’inter
 
 ## Utilisation de la priorité de l’espace de noms
 
-Actuellement, la priorité de l’espace de noms influence le comportement du système du profil client en temps réel. Le diagramme ci-dessous illustre ce concept. Pour plus d&#39;informations, consultez le guide sur les diagrammes d&#39;architecture de [Adobe Experience Platform et des applications](https://experienceleague.adobe.com/fr/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+Actuellement, la priorité de l’espace de noms influence le comportement du système du profil client en temps réel. Le diagramme ci-dessous illustre ce concept. Pour plus d&#39;informations, consultez le guide sur les diagrammes d&#39;architecture de [Adobe Experience Platform et des applications](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
 ![Diagramme de la portée de l’application de priorité d’espace de noms.](../images/namespace-priority/application-scope.png "Diagramme de la portée de l’application de priorité d’espace de noms."){zoomable="yes"}
 
@@ -82,7 +82,7 @@ Pour les structures de graphique relativement complexes, la priorité de l’esp
    * Tous les champs marqués comme identité principale dans un schéma de classe d’événement d’expérience XDM.
    * Paramètres d’identité principale par défaut dans le connecteur source Adobe Analytics (ECID ou AAID).
 * D’un autre côté, la priorité **espace de noms) ne détermine pas l’identité principale des enregistrements de profil**.
-   * Pour les enregistrements de profil, vous devez continuer à définir vos champs d’identité dans le schéma, y compris l’identité principale. Pour plus d’informations, consultez le guide sur la [définition de champs d’identité dans l’interface utilisateur](../../xdm/ui/fields/identity.md).
+   * Pour les enregistrements de profil, vous devez continuer à définir vos champs d’identité dans le schéma, y compris l’identité principale. Pour plus d’informations, consultez le guide sur la [définition de champs d’identité dans l’interface utilisateur](/help/xdm/ui/fields/identity.md).
 
 >[!TIP]
 >
@@ -148,23 +148,23 @@ Les requêtes de suppression d’enregistrements d’hygiène des données fonct
 * Real-Time Customer Profile : supprime tout fragment de profil présentant l’identité spécifiée comme identité principale. **L’identité principale sur le profil sera désormais déterminée en fonction de la priorité de l’espace de noms.**
 * Lac de données : supprime tout enregistrement ayant l’identité spécifiée comme identité principale. Contrairement au profil client en temps réel, l’identité principale dans le lac de données est basée sur l’identité principale spécifiée dans le WebSDK (`primary=true`) ou sur un champ marqué comme identité principale
 
-Pour plus d’informations, consultez la [présentation de la gestion avancée du cycle de vie](../../hygiene/home.md).
+Pour plus d’informations, consultez la [présentation de la gestion avancée du cycle de vie](/help/hygiene/home.md).
 
 ### Attributs calculés
 
-Si les paramètres d’identité sont activés, les attributs calculés utilisent la priorité de l’espace de noms pour stocker la valeur d’attribut calculée. Pour un événement donné, la valeur de l’attribut calculé sera écrite en fonction de l’identité ayant la priorité d’espace de noms la plus élevée. Pour plus d’informations, consultez le [guide de l’interface utilisateur des attributs calculés](../../profile/computed-attributes/ui.md).
+Si les paramètres d’identité sont activés, les attributs calculés utilisent la priorité de l’espace de noms pour stocker la valeur d’attribut calculée. Pour un événement donné, la valeur de l’attribut calculé sera écrite en fonction de l’identité ayant la priorité d’espace de noms la plus élevée. Pour plus d’informations, consultez le [guide de l’interface utilisateur des attributs calculés](/help/profile/computed-attributes/ui.md).
 
 ### Lac de données
 
-L’ingestion des données dans le lac de données continuera à respecter les paramètres d’identité principale configurés sur les schémas [Web SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) et .
+L’ingestion des données dans le lac de données continuera à respecter les paramètres d’identité principale configurés sur les schémas [Web SDK](/help/tags/extensions/client/web-sdk/data-element-types.md#identity-map) et .
 
 Le lac de données ne détermine pas l’identité principale en fonction de la priorité de l’espace de noms. Par exemple, Adobe Customer Journey Analytics continuera à utiliser les valeurs dans le mappage d’identités même après l’activation de la priorité de l’espace de noms (comme l’ajout d’un jeu de données à une nouvelle connexion), car Customer Journey Analytics utilise ses données du lac de données.
 
 ### Schémas de modèle de données d’expérience (XDM)
 
-Tout schéma qui n’est pas un événement d’expérience XDM, comme les profils individuels XDM, continuera à honorer tous les [champs que vous marquez comme identité](../../xdm/ui/fields/identity.md).
+Tout schéma qui n’est pas un événement d’expérience XDM, comme les profils individuels XDM, continuera à honorer tous les [champs que vous marquez comme identité](/help/xdm/ui/fields/identity.md).
 
-Pour plus d’informations sur les schémas XDM, consultez la [&#x200B; présentation des schémas &#x200B;](../../xdm/home.md).
+Pour plus d’informations sur les schémas XDM, consultez la [ présentation des schémas ](/help/xdm/home.md).
 
 ### Services intelligents
 
@@ -175,7 +175,7 @@ Lors de la sélection de vos données, vous devez spécifier un espace de noms, 
 
 Cette configuration permet de calculer les scores uniquement à l’aide d’événements authentifiés.
 
-Pour plus d’informations, consultez les documents sur l’[IA dédiée à l’attribution](../../intelligent-services/attribution-ai/overview.md) et l’[IA dédiée aux clients](../../intelligent-services/customer-ai/overview.md).
+Pour plus d’informations, consultez les documents sur l’[IA dédiée à l’attribution](/help/intelligent-services/attribution-ai/overview.md) et l’[IA dédiée aux clients](/help/intelligent-services/customer-ai/overview.md).
 
 ### Destinations créées par les partenaires
 
@@ -184,7 +184,7 @@ Les résultats de disqualification d’audience mis à jour pour les profils ass
 * La qualification de l’audience est basée uniquement sur une activité anonyme.
 * Les connexions à plusieurs profils se produisent en peu de temps.
 
-Pour plus d’informations sur les destinations créées par les partenaires, lisez la [présentation des destinations](../../destinations/home.md#adobe-built-and-partner-built-destinations).
+Pour plus d’informations sur les destinations créées par les partenaires, lisez la [présentation des destinations](/help/destinations/home.md#adobe-built-and-partner-built-destinations).
 
 ### Privacy Service
 
@@ -193,7 +193,7 @@ Les [demandes de suppression de Privacy Service](../privacy.md) fonctionnent de 
 * Real-Time Customer Profile : supprime tout fragment de profil avec une valeur d’identité spécifiée comme identité principale. **L’identité principale sur le profil sera désormais déterminée en fonction de la priorité de l’espace de noms.**
 * Lac de données : supprime tout enregistrement ayant l’identité spécifiée comme identité principale ou secondaire.
 
-Pour plus d’informations, consultez la [présentation de Privacy Service](../../privacy-service/home.md).
+Pour plus d’informations, consultez la [présentation de Privacy Service](/help/privacy-service/home.md).
 
 ### Segmentation Edge et applications Edge Network
 
@@ -204,17 +204,17 @@ Dans le cadre de la [!DNL Identity Graph Linking Rules], il existe deux changeme
 
 #### Segmentation Edge
 
-Dans un événement donné, assurez-vous que tous vos espaces de noms qui représentent une entité de personne sont inclus dans le `identityMap`, car les [identités envoyées sous forme de champs XDM](../../xdm/ui/fields/identity.md) sont ignorées et ne sont pas utilisées pour le stockage des métadonnées d’appartenance à un segment.
+Dans un événement donné, assurez-vous que tous vos espaces de noms qui représentent une entité de personne sont inclus dans le `identityMap`, car les [identités envoyées sous forme de champs XDM](/help/xdm/ui/fields/identity.md) sont ignorées et ne sont pas utilisées pour le stockage des métadonnées d’appartenance à un segment.
 
-* **Applicabilité des événements** : ce comportement s’applique uniquement aux événements envoyés directement à Edge Network (tels que WebSDK et Mobile SDK). Les événements ingérés à partir du [hub Experience Platform](../../landing/edge-and-hub-comparison.md) tels que ceux ingérés avec la source d’API HTTP, d’autres sources de diffusion en continu et des sources par lots, ne sont pas soumis à cette limitation.
-* **Spécificité de la segmentation Edge** : ce comportement est spécifique à la segmentation Edge. La segmentation par lots et en flux continu sont des services distincts évalués sur le hub et ne suivent pas le même processus. Lisez le [guide de segmentation Edge](../../segmentation/methods/edge-segmentation.md) pour plus d’informations.
-* Lisez les pages [Diagrammes d’architecture Adobe Experience Platform et applications](https://experienceleague.adobe.com/fr/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) et [Comparaison Edge Network et hub](../../landing/edge-and-hub-comparison.md) pour plus d’informations.
+* **Applicabilité des événements** : ce comportement s’applique uniquement aux événements envoyés directement à Edge Network (tels que WebSDK et Mobile SDK). Les événements ingérés à partir du [hub Experience Platform](/help/landing/edge-and-hub-comparison.md) tels que ceux ingérés avec la source d’API HTTP, d’autres sources de diffusion en continu et des sources par lots, ne sont pas soumis à cette limitation.
+* **Spécificité de la segmentation Edge** : ce comportement est spécifique à la segmentation Edge. La segmentation par lots et en flux continu sont des services distincts évalués sur le hub et ne suivent pas le même processus. Lisez le [guide de segmentation Edge](/help/segmentation/methods/edge-segmentation.md) pour plus d’informations.
+* Lisez les pages [Diagrammes d’architecture Adobe Experience Platform et applications](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) et [Comparaison Edge Network et hub](/help/landing/edge-and-hub-comparison.md) pour plus d’informations.
 
 #### Applications Edge Network
 
 Pour vous assurer que les applications sur l’Edge Network ont accès au profil Edge sans délai, assurez-vous que vos événements incluent des `primary=true` sur le CRMID. Cela garantit une disponibilité immédiate sans attendre les mises à jour des graphiques d’identités du hub.
 
 * Les applications sur Edge Network telles qu’Adobe Target, Offer Decisioning et les destinations Personalization personnalisées continueront à dépendre de l’identité principale dans les événements pour accéder aux profils à partir du profil Edge.
-* Lisez le [diagramme d’architecture d’Experience Platform Web SDK et d’Edge Network](https://experienceleague.adobe.com/fr/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) pour plus d’informations sur le comportement d’Edge Network.
-* Lisez la documentation sur [Types d’éléments de données](../../tags/extensions/client/web-sdk/data-element-types.md) et [Données d’identité dans Web SDK](../../web-sdk/identity/overview.md) pour plus d’informations sur la configuration de l’identité principale dans Web SDK.
+* Lisez le [diagramme d’architecture d’Experience Platform Web SDK et d’Edge Network](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) pour plus d’informations sur le comportement d’Edge Network.
+* Lisez la documentation sur [Types d’éléments de données](/help/tags/extensions/client/web-sdk/data-element-types.md) et [Données d’identité dans Web SDK](/help/collection/use-cases/identity/id-overview.md) pour plus d’informations sur la configuration de l’identité principale dans Web SDK.
 * Assurez-vous que l’ECID est inclus dans l’événement d’expérience. Si l’ECID est manquant, il est ajouté à la payload de l’événement avec `primary=true`, ce qui peut entraîner des résultats inattendus.

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation du service d’identités
 description: Le service d’identités d’Adobe Experience Platform vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences digitales personnelles et percutantes en temps réel.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 8dc4393232f5e256f375d2104d4fe0eaffc1d716
+source-git-commit: d252fc30d93fa4440c6ef47146830d0423e1839a
 workflow-type: tm+mt
-source-wordcount: '1574'
+source-wordcount: '1580'
 ht-degree: 8%
 
 ---
@@ -105,7 +105,7 @@ Un graphique d’identités est une carte des relations entre différents espace
 
 La vidéo suivante est destinée à étayer votre compréhension des identités et des graphiques dʼidentité.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422771?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
 ## Comprendre le rôle d’Identity Service dans l’infrastructure Experience Platform
 
@@ -113,7 +113,7 @@ Identity Service joue un rôle essentiel dans Experience Platform. Voici quelque
 
 * [Schémas](../xdm/home.md) : dans un schéma donné, les champs de schéma marqués comme identités permettent de créer des graphiques d’identités.
 * [Jeux de données](../catalog/datasets/overview.md) : lorsqu’un jeu de données est activé pour l’ingestion dans le profil client en temps réel, des graphiques d’identités sont générés à partir du jeu de données, étant donné que le jeu de données comporte au moins deux champs marqués comme identité.
-* [Web SDK](../web-sdk/home.md) : Web SDK envoie des événements d’expérience à Adobe Experience Platform et Identity Service génère un graphique lorsqu’il existe plusieurs identités dans l’événement.
+* [Collecte de données](/help/collection/home.md) : les bibliothèques de collecte de données (telles que le SDK Web) envoient des événements d’expérience à Adobe Experience Platform. Identity Service génère un graphique lorsqu’il existe plusieurs identités dans l’événement.
 * [Real-Time Customer Profile](../profile/home.md) : avant la fusion des attributs et des événements d’un profil donné, le profil client en temps réel peut référencer le graphique d’identité. Pour plus d’informations, consultez le guide sur la [compréhension de la relation entre Identity Service et le profil client en temps réel](./identity-and-profile.md).
 * [Destinations](../destinations/home.md) : les destinations peuvent envoyer des informations de profil à d’autres systèmes en fonction d’un espace de noms d’identité, tel qu’un e-mail haché.
 * [Correspondance de segments](../segmentation/ui/segment-match/overview.md) : la correspondance de segments correspond à deux profils dans deux sandbox différents qui ont le même espace de noms d’identité et la même valeur d’identité.

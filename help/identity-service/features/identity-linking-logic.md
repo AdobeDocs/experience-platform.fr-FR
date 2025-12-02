@@ -2,7 +2,7 @@
 title: Logique de liaison du service d’identités
 description: Découvrez comment Identity Service lie des identités disparates pour créer une vue d’ensemble complète d’un client.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: bbfc1d749fbe0e74489a48e0c962d9f51d19ccde
+source-git-commit: 5d08a6d90e53aa2f5b1fb72c36e19156e3ac5299
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 3%
@@ -102,7 +102,7 @@ Vous avez également implémenté WebSDK et ingéré un jeu de données WebSDK (
 | `t=3` | ECID :44675 | Afficher la page d’accueil |
 | `t=4` | ECID:44675, CRMID : 31260XYZ | Afficher l&#39;historique des achats |
 
-L’identité principale de chaque événement sera déterminée en fonction de la [configuration des types d’éléments de données](../../tags/extensions/client/web-sdk/data-element-types.md).
+L’identité principale de chaque événement sera déterminée en fonction de la [configuration des types d’éléments de données](/help/tags/extensions/client/web-sdk/data-element-types.md).
 
 >[!NOTE]
 >

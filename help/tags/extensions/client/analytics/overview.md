@@ -2,10 +2,10 @@
 title: Présentation de lʼextension Adobe Analytics
 description: Découvrez lʼextension de balise Adobe Analytics dans Adobe Experience Platform.
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 764a9a29df0be6064d36f952d2e8a61acfa9bd33
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '2331'
-ht-degree: 83%
+source-wordcount: '2308'
+ht-degree: 82%
 
 ---
 
@@ -21,9 +21,9 @@ Cette référence vous permet d’obtenir plus d’informations sur la configura
 
 Cette section fournit des informations sur les options disponibles lors de la configuration de l’extension Adobe Analytics.
 
-Si lʼextension Adobe Analytics nʼest pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, survolez lʼextension Adobe Analytics et cliquez sur **[!UICONTROL Installer]**.
+Si l’extension Adobe Analytics n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalog]**, survolez l’extension Adobe Analytics et cliquez sur  **[!UICONTROL Install]**.
 
-Pour configurer l’extension, ouvrez l’onglet Extensions, survolez-la avec la souris, puis cliquez sur **[!UICONTROL Configurer]**.
+Pour configurer l’extension, ouvrez l’onglet Extensions, survolez l’extension avec la souris, puis cliquez sur **[!UICONTROL Configure]**.
 
 ![](../../../images/ext-analytics-config.png)
 
@@ -111,7 +111,7 @@ Sélectionnez une option dans la section General (Général) de la page de confi
 
 Permet d’activer ou de désactiver le suivi selon le cookie de confidentialité de l’UE.
 
-Lorsque vous cochez la case Conformité UE, le champ [!UICONTROL Nom du cookie de suivi] sʼaffiche. Le cookie de suivi remplace le nom du cookie de suivi par défaut. Vous pouvez personnaliser le nom utilisé par les balises pour effectuer le suivi de votre statut dʼexclusion pour la réception dʼautres cookies.
+Lorsque vous activez la case à cocher Conformité UE, le champ [!UICONTROL Tracking Cookie Name] s’affiche. Le cookie de suivi remplace le nom du cookie de suivi par défaut. Vous pouvez personnaliser le nom utilisé par les balises pour effectuer le suivi de votre statut dʼexclusion pour la réception dʼautres cookies.
 
 Lorsqu’une page est chargée, le système vérifie si un cookie appelé sat\_track est défini (ou le nom du cookie personnalisé spécifié dans la page Edit Property (Modifier une propriété)). Prenez en compte les points suivants :
 
@@ -124,7 +124,7 @@ Il vous incombe de définir le cookie sat\_track (ou le cookie personnalisé) su
 _satellite.cookie.set("sat_track", "false");
 ```
 
-Vous devez également disposer d’un mécanisme pour définir ce cookie sur true si vous souhaitez qu’un visiteur puisse opt-in ultérieurement :
+Vous devez également disposer d’un mécanisme pour définir ce cookie sur « true » si vous souhaitez qu’un visiteur puisse opt-in ultérieurement :
 
 ```javascript
 _satellite.cookie.set("sat_track", "true");
@@ -291,17 +291,17 @@ L’extension Analytics fournit les actions suivantes :
 
 >[!IMPORTANT]
 >
->Vous ne pouvez pas envoyer la balise avec l’action &quot;set variables&quot; (définir des variables). Pour envoyer la balise, vous devez sélectionner l’action &quot;envoyer la balise&quot;.
+>Vous ne pouvez pas envoyer la balise avec l’action « définir des variables ». Pour envoyer la balise, vous devez sélectionner l’action « envoyer la balise ».
 
-Vous pouvez choisir entre deux vues différentes dans **Définir des variables** :
+Vous pouvez choisir entre deux vues différentes dans **Définir les variables** :
 
 >[!BEGINTABS]
 
 >[!TAB Fournir des attributs individuels]
 
-Dans cette vue, vous pouvez spécifier différentes variables telles que `eVars`, `Props`, `Events`.
+Dans cet affichage, vous pouvez spécifier différentes variables telles que `eVars`, `Props`, `Events`.
 
-![&#x200B; Page de vue de formulaire Adobe Analytics, où des attributs supplémentaires sont répertoriés.](../../../images/adobe_analytics_extension_form_view.png)
+![Page de vue de formulaire Adobe Analytics, où les attributs supplémentaires sont répertoriés.](../../../images/adobe_analytics_extension_form_view.png)
 
 #### eVars
 
@@ -311,7 +311,7 @@ Définissez une ou plusieurs [eVars](https://experienceleague.adobe.com/docs/ana
 1. Indiquez si vous souhaitez définir l’eVar comme valeur (Set As) ou copier une autre eVar (Duplicate From).
 1. Fournissez une valeur à définir, ou sélectionnez l’eVar à dupliquer.
 1. (Facultatif) Cliquez sur Ajouter une eVar pour définir d’autres eVars.
-1. Sélectionnez **[!UICONTROL Conserver les modifications]**.
+1. Sélectionner **[!UICONTROL Keep Changes]**.
 
 #### Props
 
@@ -320,8 +320,8 @@ Définissez une ou plusieurs [props](https://experienceleague.adobe.com/docs/ana
 1. Sélectionnez une prop dans la liste déroulante.
 1. Indiquez si vous souhaitez définir la prop comme valeur (Set As) ou copier une autre eVar (Duplicate From).
 1. Fournissez une valeur à définir, ou sélectionnez l’eVar dont vous souhaitez dupliquer la prop.
-1. (Facultatif) Cliquez sur **[!UICONTROL Ajouter une prop]** pour définir dʼautres props.
-1. Sélectionnez **[!UICONTROL Conserver les modifications]**.
+1. (Facultatif) Cliquez sur **[!UICONTROL Add prop]** pour définir d’autres props.
+1. Sélectionner **[!UICONTROL Keep Changes]**.
 
 #### Événements
 
@@ -329,25 +329,25 @@ Définissez un ou plusieurs [événements](https://experienceleague.adobe.com/do
 
 1. Sélectionnez un événement dans la liste déroulante.
 1. (Facultatif) Sélectionnez ou spécifiez un élément de données utilisé pour la [sérialisation des événements](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/event-serialization.html?lang=fr).
-1. (Facultatif) Cliquez sur **[!UICONTROL Ajouter un événement]** pour définir dʼautres événements.
-1. Sélectionnez **[!UICONTROL Conserver les modifications]**.
+1. (Facultatif) Cliquez sur **[!UICONTROL Add event]** pour définir d’autres événements.
+1. Sélectionner **[!UICONTROL Keep Changes]**.
 
 >[!TAB Vue JSON]
 
-Dans cette vue, vous pouvez afficher et modifier une version JSON de l’action **Définir les variables**.
+Dans cet affichage, vous pouvez afficher et modifier une version JSON de l’action **Définir les variables**.
 
 ![Vue représentant la configuration actuelle des variables définies au format JSON dans l’extension Adobe Analytics.](../../../images/adobe_analytics_extension_json_view.png)
 
 #### JSON
 
-Dans l’action **Set Variables** (Définir des variables), utilisez la vue JSON pour charger, copier ou télécharger des données JSON et les stocker sur votre appareil.
+Dans l’action **Définir des variables**, utilisez la vue JSON pour charger, copier ou télécharger des données JSON et les stocker sur votre appareil.
 
-Cependant, certaines limites existent :
+Cependant, certaines limitations existent :
 
-* **Code personnalisé** : si vous utilisez du code personnalisé pour renseigner des variables, il ne s’affichera pas dans la vue JSON. À la place, une alerte s’affiche lors de l’affichage, de la copie ou du téléchargement du fichier JSON, indiquant que les modifications effectuées via le code personnalisé ne seront pas incluses.
+* **Code personnalisé** : si vous utilisez un code personnalisé pour renseigner les variables, il n’apparaîtra pas dans la vue JSON. Au lieu de cela, une alerte s’affiche lors de l’affichage, de la copie ou du téléchargement du fichier JSON indiquant que les modifications apportées par le biais d’un code personnalisé ne seront pas incluses.
 * **Copier à partir de l’attribut d’URL** : la copie d’une valeur à partir d’une URL n’est pas prise en charge dans la vue JSON. Une alerte s’affiche pour indiquer cette limitation.
-* **Variables abandonnées** : les variables abandonnées ou obsolètes s’affichent dans la vue JSON et une alerte s’affiche pour informer que les variables retirées ont été définies.
-* **Éléments de données** : les éléments de données sont représentés dans la vue JSON. Si les données JSON sont copiées vers une autre propriété de balises, les éléments de données correspondants peuvent ne pas y être définis et ne se résolvent pas correctement lorsqu’ils sont exécutés.
+* **Variables retirées** : les variables retirées ou obsolètes sont affichées dans la vue JSON et une alerte s’affiche pour vous informer que les variables retirées ont été définies.
+* **Éléments de données** : les éléments de données sont représentés dans la vue JSON. Si les données JSON sont copiées dans une autre propriété Balises, les éléments de données correspondants peuvent ne pas y être définis et ne seront pas résolus correctement lorsqu’ils seront exécutés.
 
 >[!ENDTABS]
 
@@ -361,13 +361,13 @@ Si vous le souhaitez, configurez des hiérarchies supplémentaires.
 
 #### Nom de la page
 
-Cette valeur fait référence au nom d’une page donnée et correspond à la variable [`pageName`](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html?lang=fr) dans Analytics.
+Cette valeur fait référence au nom d’une page donnée et correspond à la variable [`pageName`](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) dans Analytics.
 
 >[!IMPORTANT]
 >
->Dans les implémentations Adobe Experience Manager, cette variable indique à AEM où stocker le rapport Analytics récupéré. Pour que les rapports soient correctement conservés, la chaîne de nom de page doit être formatée en tant que chemin d’accès au site séparé par des deux-points.
+>Dans les implémentations Adobe Experience Manager, cette variable indique à AEM où stocker le rapport Analytics récupéré. Pour que les rapports soient correctement conservés, la chaîne de nom de page doit être formatée en tant que chemin d’accès au site séparé par des points-virgules.
 >
->Par exemple, une page web à `content/we-retail/language-masters/en/men.html` doit avoir une valeur de nom de page `content:we-retail:language-masters:en:men`.
+>Par exemple, une page web sur `content/we-retail/language-masters/en/men.html` doit avoir la valeur de nom de page `content:we-retail:language-masters:en:men`.
 
 #### Other information (Autres informations)
 
@@ -398,9 +398,9 @@ Utilisez l’éditeur pour spécifier le code personnalisé de votre page.
 
 **Settings** (Paramètres)
 
-1. Sélectionnez **[!UICONTROL Ouvrir lʼéditeur]**.
+1. Sélectionner **[!UICONTROL Open Editor]**.
 1. Saisissez le Custom Code.
-1. Sélectionnez **[!UICONTROL Enregistrer]**.
+1. Sélectionner **[!UICONTROL Save]**.
 
 ### Send Beacon (Envoyer la balise) {#send-beacon}
 
@@ -426,7 +426,7 @@ Sélectionnez cette option si vous ne souhaitez pas incrémenter une page vue.
    * Custom Link (Lien personnalisé) : spécifiez le nom du lien.
    * Download Link (Lien de téléchargement) : spécifiez un nom de fichier.
    * Exit Link (Lien de sortie) : spécifiez l’URL de destination.
-1. Sélectionnez **[!UICONTROL Conserver les modifications]**.
+1. Sélectionner **[!UICONTROL Keep Changes]**.
 
 ### Effacer des variables {#clear-variables}
 

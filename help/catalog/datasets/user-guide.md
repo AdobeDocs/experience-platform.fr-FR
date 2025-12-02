@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur des jeux de données
 description: Découvrez comment effectuer des actions courantes lorsque vous utilisez des jeux de données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 17825151f58548ab82d0ac44beacab06386f0a2d
+source-git-commit: 9bfad453b74afce848ca3b00cd66a2336edf8479
 workflow-type: tm+mt
-source-wordcount: '4295'
+source-wordcount: '4294'
 ht-degree: 11%
 
 ---
@@ -58,13 +58,13 @@ Ce guide d’utilisation nécessite une compréhension professionnelle des compo
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="Campagnes orchestrées"
 >abstract="Activez ce bouton pour permettre l’utilisation du jeu de données sélectionné dans les campagnes orchestrées par Adobe Journey Optimizer. Le jeu de données doit utiliser un schéma relationnel et un seul jeu de données peut être créé par schéma."
->additional-url="https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="Activer le jeu de données pour les campagnes orchestrées"
+>additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="Activer le jeu de données pour les campagnes orchestrées"
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_enableforlookup_toggle"
 >title="Activer pour la recherche"
 >abstract="Activez ce jeu de données pour la recherche afin d’utiliser ses données dans Journey Optimizer pour la personnalisation, la prise de décision et l’orchestration des parcours."
->additional-url="https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Utilisation des données Adobe Experience Platform dans Journey Optimizer"
+>additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Utilisation des données Adobe Experience Platform dans Journey Optimizer"
 
 Dans l’interface utilisateur de [!DNL Experience Platform], sélectionnez **[!UICONTROL Datasets]** dans le volet de navigation de gauche pour ouvrir le tableau de bord **[!UICONTROL Datasets]**. Le tableau de bord répertorie tous les jeux de données disponibles pour votre organisation. Des détails s’affichent pour chaque jeu de données répertorié, notamment son nom, le schéma auquel le jeu de données adhère et le statut de l’exécution d’ingestion la plus récente.
 
@@ -221,7 +221,7 @@ Gérez les paramètres d’expiration et de rétention des jeux de données à l
 >
 >Pour appliquer ou mettre à jour des règles de conservation pour un jeu de données ExperienceEvent, votre rôle d’utilisateur doit inclure l’autorisation **[!UICONTROL Manage datasets]**. Ce contrôle d’accès basé sur les rôles garantit que seuls les utilisateurs autorisés peuvent modifier les paramètres de conservation des jeux de données.
 >
->Pour plus d’informations sur l’attribution d’autorisations dans Adobe Experience Platform[&#x200B; reportez-vous à la &#x200B;](../../access-control/home.md#platform-permissions) Présentation du contrôle d’accès .
+>Pour plus d’informations sur l’attribution d’autorisations dans Adobe Experience Platform[ reportez-vous à la ](../../access-control/home.md#platform-permissions) Présentation du contrôle d’accès .
 
 >[!TIP]
 >
@@ -312,7 +312,7 @@ La boîte de dialogue [!UICONTROL Move] le jeu de données au dossier s’affich
 
 >[!TIP]
 >
->Vous pouvez également créer des dossiers directement à partir de la boîte de dialogue Déplacer le jeu de données . Pour créer un dossier, sélectionnez l’icône Créer un dossier (![&#x200B; Icône Créer un dossier .](/help/images/icons/folder-add.png)) en haut à droite de la boîte de dialogue.
+>Vous pouvez également créer des dossiers directement à partir de la boîte de dialogue Déplacer le jeu de données . Pour créer un dossier, sélectionnez l’icône Créer un dossier (![ Icône Créer un dossier .](/help/images/icons/folder-add.png)) en haut à droite de la boîte de dialogue.
 >
 >![Boîte de dialogue [!UICONTROL Move] le jeu de données avec l’icône de création de dossier mise en surbrillance.](/help/catalog/images/datasets/user-guide/create-folder.png)
 
@@ -348,7 +348,7 @@ Vous pouvez supprimer les données de profil associées à un jeu de données du
 
 ## Rechercher et filtrer des jeux de données {#search-and-filter}
 
-Pour rechercher ou filtrer la liste des jeux de données disponibles, sélectionnez l’icône de filtre (![&#x200B; L’icône de filtre .](/help/images/icons/filter.png)) en haut à gauche de l’espace de travail. Un ensemble d’options de filtre s’affiche dans le rail de gauche. Il existe plusieurs méthodes pour filtrer les jeux de données disponibles. Il s’agit notamment de [[!UICONTROL Show System Datasets]](#show-system-datasets), [[!UICONTROL Included in profile]](#filter-profile-enabled-datasets), [[!UICONTROL Tags]](#filter-by-tag), [[!UICONTROL Creation date]](#filter-by-creation-date), [[!UICONTROL Modified date], [!UICONTROL Created by]](#filter-by-creation-date) et [[!UICONTROL Schema]](#filter-by-schema).
+Pour rechercher ou filtrer la liste des jeux de données disponibles, sélectionnez l’icône de filtre (![ L’icône de filtre .](/help/images/icons/filter.png)) en haut à gauche de l’espace de travail. Un ensemble d’options de filtre s’affiche dans le rail de gauche. Il existe plusieurs méthodes pour filtrer les jeux de données disponibles. Il s’agit notamment de [[!UICONTROL Show System Datasets]](#show-system-datasets), [[!UICONTROL Included in profile]](#filter-profile-enabled-datasets), [[!UICONTROL Tags]](#filter-by-tag), [[!UICONTROL Creation date]](#filter-by-creation-date), [[!UICONTROL Modified date], [!UICONTROL Created by]](#filter-by-creation-date) et [[!UICONTROL Schema]](#filter-by-schema).
 
 La liste des filtres appliqués s’affiche au-dessus des résultats filtrés.
 

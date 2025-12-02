@@ -3,7 +3,7 @@ title: Présentation du transfert dʼévénements
 description: Découvrez le transfert d’événements dans Adobe Experience Platform, qui vous permet d’utiliser Experience Platform Edge Network afin d’exécuter des tâches sans modifier votre mise en œuvre de balises.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 88995c933bf067fe3d077d1be8b92b076e461707
 workflow-type: tm+mt
 source-wordcount: '1181'
 ht-degree: 48%
@@ -24,13 +24,13 @@ Le transfert d’événement dans Adobe Experience Platform vous permet d’en
 
 Ce document présente de manière générale le transfert d’événement dans Experience Platform.
 
-![Transfert d’événement dans l’écosystème de collecte de données.](../../../collection/images/home/event-forwarding.png)
+![Transfert d’événement dans l’écosystème de collecte de données.](/help/collection/assets/event-forwarding.png)
 
 >[!NOTE]
 >
->Pour plus d’informations sur la place du transfert d’événement dans l’écosystème de collecte de données d’Experience Platform, consultez la [présentation de la collecte de données](../../../collection/home.md).
+>Pour plus d’informations sur la place du transfert d’événement dans l’écosystème de collecte de données d’Experience Platform, consultez la [présentation de la collecte de données](/help/collection/home.md).
 
-Le transfert d’événement associé au [SDK Web](/help/web-sdk/home.md) et [SDK Mobile](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=fr) Adobe Experience Platform offre les avantages suivants :
+Le transfert d’événement associé au [SDK Web](/help/collection/js/js-overview.md) et [SDK Mobile](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=fr) Adobe Experience Platform offre les avantages suivants :
 
 **Performances** :
 
@@ -89,7 +89,7 @@ Vous pouvez afficher les ressources supplémentaires disponibles pour en savoir 
 
 ### Règles {#rules}
 
-La création de règles dans les propriétés de transfert d’événement fonctionne de la même manière que les balises. La principale différence réside dans le fait que vous ne pouvez pas sélectionner d’événements en tant que composants de règle. À la place, une règle de transfert d’événement traite tous les événements qu’elle reçoit du [flux de données](../../../datastreams/overview.md) et transfère ces événements vers les destinations si certaines conditions sont remplies.
+La création de règles dans les propriétés de transfert d’événement fonctionne de la même manière que les balises. La principale différence réside dans le fait que vous ne pouvez pas sélectionner d’événements en tant que composants de règle. À la place, une règle de transfert d’événement traite tous les événements qu’elle reçoit du [flux de données](/help/datastreams/overview.md) et transfère ces événements vers les destinations si certaines conditions sont remplies.
 
 En outre, une temporisation de 30 secondes s’applique à un seul événement, car il est traité dans toutes les règles (et donc toutes les actions) au sein d’une propriété de transfert d’événement. Cela signifie que toutes les règles et toutes les actions d’un seul événement doivent être terminées au cours de cette période.
 

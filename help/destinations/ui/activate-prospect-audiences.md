@@ -3,10 +3,10 @@ title: Activer les audiences de prospects vers des destinations
 type: Tutorial
 description: Découvrez comment activer les audiences de prospects vers les destinations
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 25%
+source-wordcount: '595'
+ht-degree: 24%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 25%
 
 >[!AVAILABILITY]
 >
->Cette fonctionnalité est disponible pour les clients qui ont acheté les packages Real-Time CDP Prime et Ultimate. Pour plus d’informations, contactez votre représentant Adobe.
+>Cette fonctionnalité est disponible pour les clients qui ont acheté les packages Real-Time CDP Prime et Ultimate. Contactez votre représentant ou représentante Adobe pour plus d’informations.
 
 Cet article explique le processus requis pour exporter des [audiences de prospects](/help/segmentation/types/prospect-audiences.md) de Adobe Experience Platform vers votre destination préférée.
 
 ## Destinations prises en charge {#supported-destinations}
 
-Accédez à **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**. Utilisez le filtre **[!UICONTROL Types de données]** et sélectionnez **[!UICONTROL Prospects]** pour afficher les destinations qui prennent en charge l’activation des audiences de prospects. Actuellement, l’exportation des audiences de prospects n’est disponible que pour les destinations de stockage dans le cloud.
+Accédez à **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalog]** . Utilisez le filtre **[!UICONTROL Data types]** et sélectionnez **[!UICONTROL Prospects]** pour afficher les destinations qui prennent en charge l’activation des audiences de prospects. Actuellement, l’exportation des audiences de prospects n’est disponible que pour les destinations de stockage dans le cloud.
 
 ![Destinations qui prennent en charge les audiences de prospects.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
@@ -31,19 +31,19 @@ Accédez à **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, puis s
 
 ### Autorisations nécessaires {#permissions}
 
-Pour activer les audiences de prospects, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Activer les destinations]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+Pour activer les audiences de prospects, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Activate Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
-Pour vous assurer que vous disposez des autorisations nécessaires pour activer les audiences de prospects, parcourez le catalogue des destinations. Si une destination comporte un contrôle **[!UICONTROL Activer]**, vous disposez des autorisations appropriées.
+Pour vous assurer que vous disposez des autorisations nécessaires pour activer les audiences de prospects, parcourez le catalogue des destinations. Si une destination dispose d’un contrôle **[!UICONTROL Activate]**, vous disposez des autorisations appropriées.
 
 ## Sélectionner votre destination {#select-destination}
 
 Suivez les instructions pour sélectionner une destination vers laquelle vous pouvez exporter vos jeux de données :
 
-1. Accédez à **[!UICONTROL Connexions > Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**.
+1. Accédez à **[!UICONTROL Connections > Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalog]** .
 
    ![Onglet Catalogue de destination avec le contrôle Catalogue mise en surbrillance.](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
 
-2. Sélectionnez **[!UICONTROL Activer]** sur la vignette correspondant à la destination vers laquelle vous souhaitez exporter des jeux de données.
+2. Sélectionnez **[!UICONTROL Activate]** sur la carte correspondant à la destination vers laquelle vous souhaitez exporter des jeux de données.
 
 >[!TIP]
 >
@@ -51,11 +51,11 @@ Suivez les instructions pour sélectionner une destination vers laquelle vous po
 
 ![Page de destination Amazon S3 pouvant exporter les audiences de profil mises en surbrillance.](/help/destinations/assets/ui/activate-prospect-audiences/amazon-s3-icon-activate-prospect-audiences.png)
 
-1. Sélectionnez **[!UICONTROL Prospects de type de données]**, puis la connexion de destination vers laquelle vous souhaitez exporter les jeux de données, puis sélectionnez **[!UICONTROL Suivant]**.
+1. Sélectionnez **[!UICONTROL Data type Prospects]**, suivi de la connexion de destination vers laquelle vous souhaitez exporter les jeux de données, puis sélectionnez **[!UICONTROL Next]**.
 
 >[!TIP]
 > 
->Si vous souhaitez configurer une nouvelle destination pour activer les audiences de prospects, sélectionnez **[!UICONTROL Configurer une nouvelle destination]** pour déclencher le workflow [Se connecter à la destination](/help/destinations/ui/connect-destination.md).
+>Si vous souhaitez configurer une nouvelle destination pour activer les audiences de prospects, sélectionnez **[!UICONTROL Configure new destination]** pour déclencher le workflow [Se connecter à la destination](/help/destinations/ui/connect-destination.md).
 
 ![Workflow d’activation de destination avec le contrôle Prospects mis en surbrillance.](/help/destinations/assets/ui/activate-prospect-audiences/activate-prospects-highlighted.png)
 
@@ -63,7 +63,7 @@ Suivez les instructions pour sélectionner une destination vers laquelle vous po
 
 ## Sélectionner les audiences de prospects {#select-prospect-audiences}
 
-Utilisez les cases à cocher situées à gauche des noms des audiences de prospects pour sélectionner les audiences que vous souhaitez exporter vers la destination, puis sélectionnez **[!UICONTROL Suivant]**. Notez que seules les audiences du prospect s&#39;affichent dans cette vue, et aucune autre audience ne s&#39;affiche.
+Utilisez les cases à cocher situées à gauche des noms des audiences de prospects pour sélectionner les audiences que vous souhaitez exporter vers la destination, puis sélectionnez **[!UICONTROL Next]**. Notez que seules les audiences du prospect s&#39;affichent dans cette vue, et aucune autre audience ne s&#39;affiche.
 
 ![Workflow d’exportation des jeux de données présentant l’étape de sélection des audiences dans laquelle vous pouvez sélectionner les audiences de prospects à exporter.](/help/destinations/assets/ui/activate-prospect-audiences/select-prospect-audiences.png)
 

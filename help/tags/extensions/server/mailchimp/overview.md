@@ -7,9 +7,9 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1251'
 ht-degree: 6%
 
 ---
@@ -26,7 +26,7 @@ Ce document explique comment configurer l’extension et les règles à l’aide
 
 ## Conditions préalables
 
-Ce document suppose que vous connaissez les produits Mailchimp pertinents utilisés par l’extension. Pour plus d’informations, consultez la documentation d’aide Mailchimp pour [campagnes](https://mailchimp.com/help/getting-started-with-campaigns/), [parcours &#x200B;](https://mailchimp.com/help/about-customer-journeys/) et [transactions](https://mailchimp.com/help/transactional/).
+Ce document suppose que vous connaissez les produits Mailchimp pertinents utilisés par l’extension. Pour plus d’informations, consultez la documentation d’aide Mailchimp pour [campagnes](https://mailchimp.com/help/getting-started-with-campaigns/), [parcours ](https://mailchimp.com/help/about-customer-journeys/) et [transactions](https://mailchimp.com/help/transactional/).
 
 Un compte Mailchimp est requis pour utiliser cette extension. Vous pouvez créer un compte [ici](https://login.mailchimp.com/signup/). Dans le tableau de bord du compte Mailchimp, notez les valeurs suivantes à utiliser dans ce guide :
 
@@ -85,11 +85,11 @@ Ensuite, [créez un élément de données](../../../ui/managing-resources/data-e
 
 ### Installation et configuration de l’extension 
 
-Dans la même propriété de transfert d’événement, sélectionnez **[!UICONTROL Extensions],** puis **[!UICONTROL Catalogue]** pour afficher les extensions disponibles à l’installation. À partir de là, recherchez l’extension Mailchimp et sélectionnez **[!UICONTROL Installer]**.
+Dans la même propriété de transfert d’événement, sélectionnez **[!UICONTROL Extensions],** puis **[!UICONTROL Catalog]** pour afficher les extensions disponibles à l’installation. À partir de là, recherchez l’extension Mailchimp et sélectionnez **[!UICONTROL Install]**.
 
 ![Installer l’extension Mailchimp](../../../images/extensions/server/mailchimp/install.png)
 
-L’écran de configuration s’affiche. Sous **[!UICONTROL Nom de domaine du préfixe du serveur Mailchimp]**, saisissez le domaine que vous avez copié précédemment à partir de votre compte Mailchimp, y compris votre préfixe de domaine unique.
+L’écran de configuration s’affiche. Sous **[!UICONTROL Mailchimp Server Prefix Domain Name]**, saisissez le domaine que vous avez copié précédemment à partir de votre compte Mailchimp, y compris votre préfixe de domaine unique.
 
 >[!IMPORTANT]
 >
@@ -97,7 +97,7 @@ L’écran de configuration s’affiche. Sous **[!UICONTROL Nom de domaine du pr
 
 ![Configurations d’extension](../../../images/extensions/server/mailchimp/mailchimp-domain.png)
 
-Sous **[!UICONTROL Jeton Mailchimp]**, sélectionnez l’icône de l’élément de données et choisissez l’élément de données `Mailchimp Token` que vous avez créé précédemment. Sélectionnez **[!UICONTROL Enregistrer]** pour enregistrer les modifications.
+Sous **[!UICONTROL Mailchimp token]**, sélectionnez l’icône de l’élément de données et choisissez l’élément de données `Mailchimp Token` que vous avez créé précédemment. Sélectionnez **[!UICONTROL Save]** pour enregistrer les modifications.
 
 L’extension est maintenant installée et configurée pour être utilisée dans votre propriété.
 
@@ -105,7 +105,7 @@ L’extension est maintenant installée et configurée pour être utilisée dans
 
 Lors de l’utilisation de cette extension dans une [règle](../../../ui/managing-resources/rules.md), il existe plusieurs valeurs de données que l’extension envoie à Mailchimp avec chaque événement. Pour une implémentation standard, vous pouvez configurer l’extension [Adobe Experience Platform Web SDK](../../client/web-sdk/overview.md) pour envoyer ces données à [!DNL Experience Platform Edge Network] en vue de leur utilisation par l’extension dans la propriété de transfert d’événement.
 
-Les données requises par cette extension peuvent être envoyées à partir de Web SDK sous la forme de données XDM (à l’aide de l’objet [`xdm`](/help/web-sdk/commands/sendevent/xdm.md) ) ou de données non XDM (à l’aide de l’objet [`data`](/help/web-sdk/commands/sendevent/data.md) ).
+Les données requises par cette extension peuvent être envoyées à partir de Web SDK sous la forme de données XDM (à l’aide de l’objet [`xdm`](/help/collection/js/commands/sendevent/xdm.md) ) ou de données non XDM (à l’aide de l’objet [`data`](/help/collection/js/commands/sendevent/data.md) ).
 
 Par exemple, si un client effectue un achat ou s’inscrit à un événement sur votre site, vous pouvez envoyer un e-mail de confirmation via Mailchimp avec cette extension. Une fois que vous avez envoyé les informations requises de Web SDK à Edge Network, l’extension déclenche l’e-mail avec Mailchimp.
 
@@ -132,7 +132,7 @@ Le tableau ci-dessous fournit plus de détails sur chaque valeur possible.
 >  
 >Les valeurs **Exemple de chemin** ci-dessus sont données à titre d’exemple uniquement. Les noms de champ et les [chemins](../../../ui/event-forwarding/overview.md#data-element-path) référencés dans ces éléments de données peuvent être différents dans votre propriété, selon la manière dont vous avez nommé et configuré Web SDK dans les étapes ci-dessus.
 
-Dans votre propriété de transfert d’événement , vous pouvez créer un élément de données pour chacun des champs décrits ci-dessus. Une fois créés, vous pouvez référencer les éléments de données dans l’action [!UICONTROL Ajouter un événement] de cette extension.
+Dans votre propriété de transfert d’événement , vous pouvez créer un élément de données pour chacun des champs décrits ci-dessus. Une fois créés, vous pouvez référencer les éléments de données dans l’action [!UICONTROL Add Event] de cette extension.
 
 ![Ajouter une configuration d’action d’événement](../../../images/extensions/server/mailchimp/action-configurations.png)
 

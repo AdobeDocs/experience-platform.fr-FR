@@ -4,24 +4,24 @@ solution: Experience Platform
 title: Vue d’ensemble de l’ingestion en flux continu
 description: L’ingestion par flux pour Adobe Experience Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données d’appareils côté client et côté serveur vers Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: f5ae9170b312d9f24c863a14b8cc2310fcaf1cb2
+source-git-commit: ea693cb4bb732c829d9a477cbd3dcb209da524f3
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 15%
 
 ---
 
-# Présentation de l’ingestion par flux
+# Présentation de l’ingestion en flux continu
 
 L’ingestion par flux pour Adobe Experience Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données d’appareils côté client et côté serveur vers [!DNL Experience Platform].
 
-## Que pouvez-vous faire avec l’ingestion par flux ?
+## Que pouvez-vous faire avec l’ingestion en flux continu ?
 
 Adobe Experience Platform vous permet de générer des expériences coordonnées, cohérentes et pertinentes en générant une [!DNL Real-Time Customer Profile] pour chacun de vos clients. L’ingestion par flux joue un rôle clé dans la création de ces profils en vous permettant de diffuser des données [!DNL Profile] dans le [!DNL Data Lake] avec le moins de latence possible.
 
 La vidéo suivante est conçue pour vous aider à comprendre l’ingestion par flux et décrit les concepts ci-dessus.
 
->[!VIDEO](https://video.tv.adobe.com/v/31636?quality=12&learn=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### Diffusion d’enregistrements de profil et de [!DNL ExperienceEvents]
 
@@ -33,13 +33,13 @@ Pour plus d’informations, consultez le [guide de création d’une connexion e
 
 Une fois que vous êtes certain que vos données sont nettoyées, vous pouvez activer vos jeux de données pour [!DNL Real-Time Customer Profile] et [!DNL Identity Service].
 
-Pour plus d’informations sur l’activation d’un jeu de données pour [!DNL Profile] et [!DNL Identity Service], veuillez lire le guide [Configurer un jeu de données](../../profile/tutorials/dataset-configuration.md).
+Pour plus d’informations sur l’activation d’un jeu de données pour [!DNL Profile] et [!DNL Identity Service], veuillez lire le guide [Configurer un jeu de données](/help/profile/tutorials/dataset-configuration.md).
 
 ## Quelle est la latence attendue pour l’ingestion en flux continu sur Experience Platform ?
 
 >[!IMPORTANT]
 >
->Les mécanismes de sécurisation pour l’ingestion en flux continu sont liés au droit total d’utilisation de licence qui correspond à l’ensemble de votre organisation. En outre, l’utilisation des données dans les sandbox de développement est limitée à 10 % du total de vos profils. Pour plus d’informations sur les droits d’utilisation de licence, consultez le [guide des bonnes pratiques de gestion des données](../../landing/license-usage-and-guardrails/data-management-best-practices.md). Pour savoir comment définir des limites au débit de diffusion en continu, lisez la [présentation de la capacité](../../landing/license-usage-and-guardrails/capacity.md).
+>Les mécanismes de sécurisation pour l’ingestion en flux continu sont liés au droit total d’utilisation de licence qui correspond à l’ensemble de votre organisation. En outre, l’utilisation des données dans les sandbox de développement est limitée à 10 % du total de vos profils. Pour plus d’informations sur les droits d’utilisation de licence, consultez le [guide des bonnes pratiques de gestion des données](/help/landing/license-usage-and-guardrails/data-management-best-practices.md). Pour savoir comment définir des limites au débit de diffusion en continu, lisez la [présentation de la capacité](../../landing/license-usage-and-guardrails/capacity.md).
 
 | Destination | Latence attendue |
 | --------- | ---------------- |
@@ -50,7 +50,7 @@ Pour plus d’informations sur l’activation d’un jeu de données pour [!DNL 
 
 Le tableau ci-dessous donne des conseils sur les limites de requête par seconde pour l’ingestion en flux continu.
 
-| Limite RPS | Notes |
+| Limite RPS | Remarques |
 | --- | --- |
 | 1 000 requêtes par seconde | Ils peuvent contenir plusieurs messages lors de l’utilisation du point d’entrée `/collection/batch`. |
 | 10000 messages individuels par seconde | Les messages peuvent être regroupés en moins de requêtes réelles lors de l’utilisation du point d’entrée `/collection/`. |
@@ -61,4 +61,4 @@ Le tableau ci-dessous donne des conseils sur les limites de requête par seconde
 
 ## Extension Adobe Experience Platform
 
-Vous pouvez utiliser l’extension Adobe Experience Platform pour créer une connexion en continu. L’extension [!DNL Experience Platform] fournit des actions permettant d’envoyer des balises formatées en [!DNL Experience Data Model] (XDM) pour l’ingestion en temps réel vers [!DNL Experience Platform]. Pour plus d’informations, consultez la documentation de [l’extension Experience Platform](../../tags/extensions/client/web-sdk/overview.md).
+Vous pouvez utiliser l’extension Adobe Experience Platform pour créer une connexion en continu. L’extension [!DNL Experience Platform] fournit des actions permettant d’envoyer des balises formatées en [!DNL Experience Data Model] (XDM) pour l’ingestion en temps réel vers [!DNL Experience Platform]. Pour plus d’informations, consultez la documentation de [l’extension Experience Platform](/help/tags/extensions/client/web-sdk/overview.md).

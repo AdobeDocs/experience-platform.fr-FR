@@ -6,10 +6,10 @@ user-guide-description: Découvrez comment déployer et gérer des balises d’a
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: cc89bf68011499e69f4ed8c7dc891ec02a34d361
+source-git-commit: c7bedcdb04d5c5483d0239a9fb99388d5e1e1fe5
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 85%
+source-wordcount: '834'
+ht-degree: 80%
 
 ---
 
@@ -50,7 +50,6 @@ ht-degree: 85%
 * Informations côté client {#client-side}
    * [Aperçu](./ui/client-side/overview.md)
    * [Déploiement asynchrone](./ui/client-side/asynchronous-deployment.md)
-   * [Référence d’objet par satellite](./ui/client-side/satellite-object.md)
    * [Déploiement de balises JavaScript pour la gestion du consentement client](./ui/client-side/consent.md)
    * [Prise en charge de la politique de sécurité du contenu (CSP)](./ui/client-side/content-security-policy.md)
    * [Prise en charge de l’intégrité des sous-ressources (SRI)](./ui/client-side/sri.md)
@@ -99,21 +98,46 @@ ht-degree: 85%
       * Service Adobe Experience Cloud ID {#id-service}
          * [Aperçu](./extensions/client/id-service/overview.md)
          * [Notes de mise à jour](./extensions/client/id-service/release-notes.md)
-      * Démo Adobe Experience Platform {#platform-demo}
-         * [Vue d’ensemble](./extensions/client/platform-demo/overview.md)
-      * SDK Web Adobe Experience Platform {#web-sdk}
-         * [Vue d’ensemble](./extensions/client/web-sdk/overview.md)
-         * [Configuration de l’extension de balise du SDK Web](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
-         * [Types d’événements](./extensions/client/web-sdk/event-types.md)
-         * [Types d’actions](./extensions/client/web-sdk/action-types.md)
-         * [Types d’éléments de données](./extensions/client/web-sdk/data-element-types.md)
-         * [Accès à l’ECID](./extensions/client/web-sdk/accessing-the-ecid.md)
-         * [Plug-ins SDK Web](./extensions/client/web-sdk/web-sdk-plugins.md)
-         * [Notes de mise à jour de l’extension SDK Web](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
-         * [Notes de mise à jour des plug-ins SDK Web](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
       * Adobe Experience Manager Asset Insights {#asset-insights}
          * [Aperçu](./extensions/client/asset-insights/overview.md)
          * [Notes de mise à jour](./extensions/client/asset-insights/release-notes.md)
+      * Démo Adobe Experience Platform {#platform-demo}
+         * [Vue d’ensemble](./extensions/client/platform-demo/overview.md)
+      * SDK Web Adobe Experience Platform {#web-sdk}
+         * [Vue d’ensemble](extensions/client/web-sdk/overview.md)
+         * [Prise en main](extensions/client/web-sdk/getting-started.md)
+         * Configuration {#configure}
+            * [Vue d’ensemble](extensions/client/web-sdk/configure/config-overview.md)
+            * [Composants de build personnalisés](extensions/client/web-sdk/configure/custom-build-components.md)
+            * [Instance SDK](extensions/client/web-sdk/configure/general.md)
+            * [Trains de données](extensions/client/web-sdk/configure/datastreams.md)
+            * [Consentement](extensions/client/web-sdk/configure/consent.md)
+            * [Identité](extensions/client/web-sdk/configure/identity.md)
+            * [Personnalisation](extensions/client/web-sdk/configure/personalization.md)
+            * [Collecte de données](extensions/client/web-sdk/configure/data-collection.md)
+            * [Streaming de médias](extensions/client/web-sdk/configure/streaming-media.md)
+            * [Notifications push](extensions/client/web-sdk/configure/push-notifications.md)
+            * [Advertising](extensions/client/web-sdk/configure/advertising.md)
+            * [Remplacements de configuration](extensions/client/web-sdk/configure/configuration-overrides.md)
+            * [Paramètres avancés](extensions/client/web-sdk/configure/advanced-settings.md)
+         * [Types d’événements](extensions/client/web-sdk/event-types.md)
+         * Types d’actions {#actions}
+            * [Vue d’ensemble](extensions/client/web-sdk/actions/actions-overview.md)
+            * [Appliquer les propositions](extensions/client/web-sdk/actions/apply-propositions.md)
+            * [Appliquer la réponse](extensions/client/web-sdk/actions/apply-response.md)
+            * [Évaluation d’ensembles de règles](extensions/client/web-sdk/actions/evaluate-rulesets.md)
+            * [Obtention du suivi Media Analytics](extensions/client/web-sdk/actions/get-media-analytics-tracker.md)
+            * [Rediriger avec identité](extensions/client/web-sdk/actions/redirect-with-identity.md)
+            * [Réinitialiser l’ID de fusion d’événements](extensions/client/web-sdk/actions/reset-event-merge-id.md)
+            * [Événement d’envoi](extensions/client/web-sdk/actions/send-event.md)
+            * [Envoyer l’événement multimédia](extensions/client/web-sdk/actions/send-media-event.md)
+            * [Envoyer un abonnement push](extensions/client/web-sdk/actions/send-push-subscription.md)
+            * [Définir le consentement](extensions/client/web-sdk/actions/set-consent.md)
+            * [Mettre à jour la variable](extensions/client/web-sdk/actions/update-variable.md)
+         * [Types d’éléments de données](extensions/client/web-sdk/data-element-types.md)
+         * [Accès à l’ECID](extensions/client/web-sdk/accessing-the-ecid.md)
+         * [Notes de mise à jour de l’extension SDK web](extensions/client/web-sdk/web-sdk-ext-release-notes.md)
+      * [Plug-ins de Adobe Experience Platform Web SDK](extensions/client/web-sdk-plugins/web-sdk-plugins.md)
       * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)
       * Adobe Media Analytics for Audio and Video {#media-analytics}
          * [Aperçu](./extensions/client/media-analytics/overview.md)

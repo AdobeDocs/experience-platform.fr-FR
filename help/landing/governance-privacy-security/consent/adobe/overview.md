@@ -6,9 +6,9 @@ description: Découvrez comment traiter les signaux de consentement des clients 
 role: Developer
 feature: Consent
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1562'
 ht-degree: 1%
 
 ---
@@ -28,10 +28,10 @@ Ce document présente un aperçu de la configuration de vos opérations de donn�
 Ce guide nécessite une compréhension pratique des différents services Experience Platform impliqués dans le traitement des données de consentement :
 
 * [Modèle de données d’expérience (XDM)](/help/xdm/home.md) : framework normalisé selon lequel Experience Platform organise les données d’expérience client.
-* [Adobe Experience Platform Identity Service &#x200B;](/help/identity-service/home.md) : résout le problème fondamental de la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
+* [Adobe Experience Platform Identity Service ](/help/identity-service/home.md) : résout le problème fondamental de la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
 * [Real-Time Customer Profile](/help/profile/home.md) : utilise des fonctionnalités [!DNL Identity Service] pour créer des profils clients détaillés à partir de vos jeux de données en temps réel. Le profil client en temps réel extrait les données du lac de données et conserve les profils clients dans sa propre banque de données distincte.
-* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) : bibliothèque JavaScript côté client qui vous permet d’intégrer divers services Experience Platform à votre site web destiné aux clients.
-   * [Commandes de consentement SDK &#x200B;](../../../../web-sdk/commands/setconsent.md) : présentation du cas d’utilisation des commandes SDK liées au consentement présentées dans ce guide.
+* [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) : bibliothèque JavaScript côté client qui vous permet d’intégrer divers services Experience Platform à votre site web destiné aux clients.
+   * [Commandes de consentement SDK ](/help/collection/js/commands/setconsent.md) : présentation du cas d’utilisation des commandes SDK liées au consentement présentées dans ce guide.
 * [Adobe Experience Platform Segmentation Service](/help/segmentation/home.md) : permet de diviser les données du profil client en temps réel en groupes d’individus qui partagent des caractéristiques similaires et qui réagissent de la même manière aux stratégies marketing.
 
 ## Résumé du flux de traitement du consentement {#summary}
@@ -51,7 +51,7 @@ Dans la version actuelle de la prise en charge du traitement du consentement dan
 
 >[!NOTE]
 >
->Pour plus d’informations sur la structure des champs de consentement XDM mentionnés ci-dessus, reportez-vous au guide sur le type de données [[!UICONTROL Consentements et préférences]](/help/xdm/data-types/consents.md).
+>Pour plus d’informations sur la structure des champs de consentement XDM mentionnés ci-dessus, reportez-vous au guide sur le type de données [[!UICONTROL Consents and Preferences] ](/help/xdm/data-types/consents.md) .
 
 Une fois le système configuré, Experience Platform Web SDK interprète la valeur de consentement de la collecte de données pour l’utilisateur actuel afin de déterminer si les données doivent être envoyées à Adobe Experience Platform Edge Network, supprimées du client ou conservées jusqu’à ce que l’autorisation de collecte de données soit définie sur oui ou non.
 
@@ -77,7 +77,7 @@ Une fois que vous avez créé un jeu de données compatible avec [!DNL Profile] 
 >
 >Si vous ne disposez d’aucun jeu de données en conflit, vous devez définir la priorité d’horodatage pour votre politique de fusion à la place. Cela permet de s’assurer que le dernier consentement spécifié par un client correspond au paramètre de consentement utilisé.
 
-Pour plus d’informations sur l’utilisation des politiques de fusion, commencez par lire la [présentation des politiques de fusion](../../../../profile/merge-policies/overview.md). Lors de la configuration de vos politiques de fusion, vous devez vous assurer que vos profils incluent tous les attributs de consentement requis fournis par le groupe de champs de schéma [!UICONTROL Consentements et préférences], comme indiqué dans le guide sur la [préparation des jeux de données](./dataset.md).
+Pour plus d’informations sur l’utilisation des politiques de fusion, commencez par lire la [présentation des politiques de fusion](../../../../profile/merge-policies/overview.md). Lors de la configuration de vos politiques de fusion, vous devez vous assurer que vos profils incluent tous les attributs de consentement requis fournis par le groupe de champs de schéma [!UICONTROL Consents and Preferences], comme indiqué dans le guide sur la [préparation des jeux de données](./dataset.md).
 
 ## Importation de données de consentement dans Experience Platform
 
@@ -101,7 +101,7 @@ Consultez la documentation de Mobile SDK pour [configurer l’extension mobile d
 
 Vous pouvez ingérer des données de consentement conformes à XDM à partir d’un fichier CSV à l’aide de l’ingestion par lots. Cela peut s’avérer utile si vous disposez d’une liste d’attente de données de consentement précédemment collectées qui n’ont pas encore été intégrées à vos profils clients.
 
-Suivez le tutoriel sur [le mappage d’un fichier CSV à XDM](../../../../ingestion/tutorials/map-csv/overview.md) pour savoir comment convertir vos champs de données en XDM et les ingérer dans Experience Platform. Lors de la sélection de la [!UICONTROL Destination] pour le mappage, veillez à sélectionner l’option **[!UICONTROL Utiliser un jeu de données existant]** et à choisir le jeu de données de consentement activé pour le [!DNL Profile] que vous avez créé précédemment.
+Suivez le tutoriel sur [le mappage d’un fichier CSV à XDM](../../../../ingestion/tutorials/map-csv/overview.md) pour savoir comment convertir vos champs de données en XDM et les ingérer dans Experience Platform. Lors de la sélection du [!UICONTROL Destination] pour le mappage, veillez à sélectionner l’option **[!UICONTROL Use existing dataset]** et à choisir le jeu de données de consentement activé pour le [!DNL Profile] que vous avez créé précédemment.
 
 ## Tester votre implémentation {#test-implementation}
 
@@ -115,7 +115,7 @@ Une fois que vous avez ingéré des données de consentement client dans votre j
 
 Consultez la section sur la [navigation dans les profils par identité](../../../../profile/ui/user-guide.md#browse) dans le guide de l’interface utilisateur [!DNL Profile] pour obtenir des instructions spécifiques sur la recherche des détails d’un profil.
 
-Par défaut, les nouveaux attributs de consentement n’apparaissent pas dans le tableau de bord d’un profil. Par conséquent, vous devez accéder à l’onglet **[!UICONTROL Attributs]** sur la page de détails d’un profil afin de confirmer qu’ils ont été ingérés comme prévu. Consultez le guide sur le [tableau de bord des profils](../../../../profile/ui/profile-dashboard.md) pour savoir comment personnaliser le tableau de bord en fonction de vos besoins.
+Par défaut, les nouveaux attributs de consentement n’apparaissent pas dans le tableau de bord d’un profil. Par conséquent, vous devez accéder à l’onglet **[!UICONTROL Attributes]** dans la page de détails d’un profil afin de confirmer qu’ils ont été ingérés comme prévu. Consultez le guide sur le [tableau de bord des profils](../../../../profile/ui/profile-dashboard.md) pour savoir comment personnaliser le tableau de bord en fonction de vos besoins.
 
 <!-- (To be included once CJM is GA)
 ## Handling consent in Customer Journey Management
@@ -129,4 +129,4 @@ Customer Journey Management can also send consent-change signals back to Experie
 
 Ce guide explique comment configurer vos opérations Experience Platform pour traiter les données de consentement des clients à l’aide de la norme Adobe et faire en sorte que ces attributs soient représentés dans les profils clients. Vous pouvez désormais intégrer les préférences de consentement des clients en tant que facteur déterminant dans la qualification de segment et dans d’autres cas d’utilisation en aval.
 
-Pour plus d’informations sur les fonctionnalités Experience Platform relatives à la confidentialité, consultez la présentation de la [&#x200B; gouvernance, confidentialité et sécurité dans Experience Platform](../../overview.md).
+Pour plus d’informations sur les fonctionnalités Experience Platform relatives à la confidentialité, consultez la présentation de la [ gouvernance, confidentialité et sécurité dans Experience Platform](../../overview.md).

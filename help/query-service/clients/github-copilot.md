@@ -2,9 +2,9 @@
 title: Connecter le pilote GitHub et Visual Studio Code à Query Service
 description: Découvrez comment connecter le Copilote GitHub et Visual Studio Code à Adobe Experience Platform Query Service.
 exl-id: c5b71cc8-1d30-48c0-a8e2-135445a66639
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '1378'
+source-wordcount: '1370'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Ce document décrit les étapes à suivre pour connecter [!DNL GitHub Copilot] e
 
 Ce guide nécessite que vous ayez déjà accès à un compte GitHub et que vous vous soyez inscrit pour [!DNL GitHub Copilot]. Vous pouvez vous [inscrire sur le site web GitHub](https://github.com/github-copilot/signup). Vous avez également besoin de [!DNL VS Code]. Vous pouvez [télécharger [!DNL VS Code] depuis leur site officiel](https://code.visualstudio.com/download).
 
-Une fois que vous avez installé [!DNL VS Code] et activé votre abonnement [!DNL Copilot], obtenez vos informations d’identification de connexion pour Experience Platform. Ces informations d’identification se trouvent dans l’onglet [!UICONTROL &#x200B; Informations d’identification &#x200B;] de l’espace de travail [!UICONTROL Requêtes] de l’interface utilisateur d’Experience Platform. Lisez le guide des informations d’identification pour [savoir comment trouver ces valeurs dans l’interface utilisateur d’Experience Platform](../ui/credentials.md). Veuillez contacter l’administrateur de votre organisation si vous n’avez pas actuellement accès à l’espace de travail [!UICONTROL Requêtes].
+Une fois que vous avez installé [!DNL VS Code] et activé votre abonnement [!DNL Copilot], obtenez vos informations d’identification de connexion pour Experience Platform. Ces informations d’identification se trouvent dans l’onglet [!UICONTROL Credentials] de l’espace de travail [!UICONTROL Queries] de l’interface utilisateur d’Experience Platform. Lisez le guide des informations d’identification pour [savoir comment trouver ces valeurs dans l’interface utilisateur d’Experience Platform](../ui/credentials.md). Contactez l’administrateur ou administratrice de votre organisation si vous n’avez pas actuellement accès à l’espace de travail [!UICONTROL Queries].
 
 ### Extensions de [!DNL Visual Studio Code] requises {#required-extensions}
 
@@ -55,11 +55,11 @@ La vue [!DNL Connection Settings] s’affiche. Saisissez vos informations d’id
 | --- |--- |
 | [!DNL Connection name] | Fournissez un « [!DNL Connection name] » comme `Prod_MySQL_Server`, qui est descriptif et indique clairement son objectif (par exemple, un environnement de production pour un serveur MySQL). Les bonnes pratiques incluent <br><ul><li>Respectez les conventions de dénomination de votre organisation pour vous assurer qu’elle est unique dans le système.</li><li>Veillez à ce qu’il soit concis pour maintenir la clarté et éviter toute confusion avec d’autres connexions.</li><li>Incluez des détails pertinents sur la fonction ou l’environnement de la connexion dans le nom.</li></ul> |
 | [!DNL Connect using] | Utilisez l’option **[!DNL Server and Port]** pour spécifier l’adresse du serveur (nom d’hôte) et le numéro de port afin d’établir une connexion directe à Experience Platform |
-| [!DNL Server address] | Saisissez la valeur **[!UICONTROL Host]** fournie dans vos informations d’identification Experience Platform Postgres, telles que `acmeprod.platform-query.adobe.io`. |
+| [!DNL Server address] | Saisissez la valeur **[!UICONTROL Host]** fournie dans vos informations d’identification Experience Platform Postgres, par exemple `acmeprod.platform-query.adobe.io`. |
 | [!DNL Port] | Cette valeur est généralement `80` pour les services Experience Platform. |
-| [!DNL Database] | Saisissez la valeur **[!UICONTROL Base de données]** fournie dans vos informations d’identification Experience Platform Postgres, par exemple `prod:all`. |
-| [!DNL Username] | Cette propriété fait référence à votre ID d’organisation. Saisissez la valeur **[!UICONTROL Nom d’utilisateur]** fournie dans vos informations d’identification Experience Platform Postgres. |
-| [!DNL Password] | Cette propriété est votre jeton d’accès. Saisissez la valeur **[!UICONTROL Mot de passe]** fournie dans vos informations d’identification Experience Platform Postgres. |
+| [!DNL Database] | Saisissez la valeur **[!UICONTROL Database]** fournie dans vos informations d’identification Experience Platform Postgres, par exemple `prod:all`. |
+| [!DNL Username] | Cette propriété fait référence à votre ID d’organisation. Saisissez la valeur **[!UICONTROL Username]** fournie dans vos informations d’identification Experience Platform Postgres. |
+| [!DNL Password] | Cette propriété est votre jeton d’accès. Saisissez la valeur **[!UICONTROL Password]** fournie dans vos informations d’identification Experience Platform Postgres. |
 
 ![Espace de travail de l’assistant Connexion avec plusieurs paramètres mis en surbrillance.](../images/clients/github-copilot/connection-settings.png)
 
@@ -99,9 +99,9 @@ Tout d’abord, assurez-vous que la dernière version de [!DNL VS Code] est inst
 
 ![Éditeur de [!DNL VS Code] avec la [!DNL GitHub Copilot Menu] affichée et l’icône [!DNL Copilot] et les paramètres d’édition mis en surbrillance.](../images/clients/github-copilot/github-copilot-menu.png)
 
-Faites défiler les options vers le bas et assurez-vous que la case est cochée pour le paramètre [!DNL Enable Auto Completions].
+Faites défiler les options vers le bas et assurez-vous que la case est cochée pour le paramètre [!DNL Enable Auto Completions] .
 
-![Le panneau des paramètres de [!DNL GitHub Copilot] avec la case à cocher Activer les déclarations de production automatiques sélectionnée et mise en surbrillance.](../images/clients/github-copilot/enable-auto-completions.png)
+![Panneau des paramètres pour [!DNL GitHub Copilot] avec la case à cocher Activer les auto-compléments sélectionnée et mise en surbrillance.](../images/clients/github-copilot/enable-auto-completions.png)
 
 ## Saisies de code {#code-completions}
 
@@ -147,7 +147,7 @@ Vous pouvez utiliser une interface de chat plus traditionnelle avec une barre la
 
 ![Barre latérale de conversation [!DNL GitHub Copilot] avec l’icône de conversation mise en surbrillance.](../images/clients/github-copilot/chat-sidebar.png)
 
-Vous pouvez également accéder à l’historique de la conversation en sélectionnant l’icône d’historique (![&#x200B; L’icône d’historique.](../images/clients/github-copilot/history-icon.png)) en haut du panneau de conversation.
+Vous pouvez également accéder à l’historique de la conversation en sélectionnant l’icône d’historique (![ L’icône d’historique.](../images/clients/github-copilot/history-icon.png)) en haut du panneau de conversation.
 
 ## Étapes suivantes
 

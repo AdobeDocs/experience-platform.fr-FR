@@ -2,9 +2,9 @@
 title: Présentation de l’extension Core
 description: Découvrez lʼextension de balise Core dans Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c76b64e76229db8f9da544a79aed903a134f7351
 workflow-type: tm+mt
-source-wordcount: '5447'
+source-wordcount: '5425'
 ht-degree: 95%
 
 ---
@@ -178,8 +178,8 @@ Chacun des types d’événements de formulaire utilise les paramètres suivants
 
 #### Specific Elements \| Any Element
 
-* Si vous choisissez **[!UICONTROL Éléments spécifiques]**, les options permettant de sélectionner les éléments et les valeurs de propriété s’affichent.
-* Si vous choisissez **[!UICONTROL N’importe quel élément]**, aucune autre option n’est nécessaire pour réduire les éléments.
+* Si vous choisissez **[!UICONTROL Specific Elements]**, les options permettant de sélectionner les éléments et les valeurs de propriété s’affichent.
+* Si vous choisissez **[!UICONTROL Any Element]**, aucune autre option n’est nécessaire pour réduire les éléments.
 
 #### Elements matching the CSS selector
 
@@ -231,9 +231,9 @@ Spécifiez un code personnalisé qui doit exister comme condition de l’événe
 
 Utilisez l’éditeur de code intégré pour saisir le code personnalisé :
 
-1. Sélectionnez **[!UICONTROL Ouvrir l’éditeur]**.
+1. Sélectionner **[!UICONTROL Open Editor]**.
 1. Saisissez le Custom Code.
-1. Sélectionnez **[!UICONTROL Enregistrer]**.
+1. Sélectionner **[!UICONTROL Save]**.
 
 Une variable nommée `event` sera automatiquement disponible et vous pouvez y faire référence à partir de votre Custom Code. L’objet `event` contient des informations utiles sur l’événement qui a déclenché la règle. Le moyen le plus simple de déterminer les données d’événement disponibles consiste à connecter `event` à la console à partir du code personnalisé :
 
@@ -519,7 +519,7 @@ Indiquez un ou plusieurs sous-domaines qui doivent exister dans l’URL.
 
 Spécifiez une plage de dates. Sélectionnez la date et l’heure auxquelles l’événement se produit après, la date à laquelle il se produit avant et le fuseau horaire.
 
-#### Max Frequency
+#### Fréquence max
 
 Indiquez le nombre maximal de fois où la condition renvoie true (vrai). Vous avez les choix suivants :
 
@@ -557,8 +557,8 @@ Fournissez le code qui s’exécute une fois que l’événement est déclenché
    * JavaScript
    * HTML
 1. Indiquez si le code d’action doit être exécuté globalement.
-1. Sélectionnez **[!UICONTROL Ouvrir l’éditeur]**.
-1. Modifiez le code, puis cliquez sur **[!UICONTROL Enregistrer]**.
+1. Sélectionner **[!UICONTROL Open Editor]**.
+1. Modifiez le code, puis cliquez sur **[!UICONTROL Save]**.
 
 Lorsque JavaScript est sélectionné comme langage, une variable nommée `event` est automatiquement disponible et vous pouvez y faire référence à partir de votre Custom Code. L’objet `event` contient des informations utiles sur l’événement qui a déclenché la règle. Le moyen le plus simple de déterminer les données d’événement disponibles consiste à connecter `event` à la console à partir du code personnalisé :
 
@@ -636,7 +636,7 @@ Cette action déclenche toutes les règles qui utilisent un [événement dʼappe
 
 ![Capture d’écran d’une action Déclencher lʼappel direct dans l’interface utilisateur de la collecte de données](../../../images/extensions/client/core/direct-call-action.png)
 
-L’action mappe directement à la méthode [`track`](../../../ui/client-side/satellite-object.md#track) dans lʼobjet `satellite`, accessible par le code côté client.
+Cette action est directement mappée à [`_satellite.track()`](/help/collection/tags/track.md).
 
 ## Types d’éléments de données de l’extension Core
 

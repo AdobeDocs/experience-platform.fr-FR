@@ -2,10 +2,10 @@
 title: Propriétés
 description: Découvrez comment vos extensions, environnements et bibliothèques sont organisés et regroupés pour votre organisation dans Adobe Experience Platform.
 exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '1178'
-ht-degree: 94%
+source-wordcount: '1153'
+ht-degree: 90%
 
 ---
 
@@ -71,7 +71,7 @@ Les fonctionnalités de gestion des utilisateurs permettent d’affecter des rô
 
 ## Page Propriétés
 
-Une propriété est un ensemble de règles, d’éléments de données, d’extensions configurées, d’environnements et de bibliothèques. Pour le Web, il nʼy a quʼun seul code incorporé de publication par propriété. Pour les propriétés mobiles, il y a un identifiant dʼapplication de configuration par propriété.
+Une propriété est un ensemble de règles, d’éléments de données, d’extensions configurées, d’environnements et de bibliothèques. Pour le Web, il nʼy a quʼun seul code intégré de publication par propriété. Pour les propriétés mobiles, il y a un identifiant dʼapplication de configuration par propriété.
 
 Une propriété peut être n’importe quel regroupement d’un ou de plusieurs domaines et sous-domaines. Vous pouvez gérer ces ressources et en effectuer le suivi de manière similaire. Par exemple, supposons que vous disposez de plusieurs sites web reposant sur un modèle et que vous souhaitez effectuer le suivi des mêmes ressources sur tous les sites. Vous pouvez appliquer une propriété à plusieurs domaines.
 
@@ -97,7 +97,7 @@ Cette section fournit des conseils sur la création ou la configuration d’une 
 
 Avant de commencer, consultez les [Bonnes pratiques pour la planification des propriétés](companies-and-properties.md#best-practices-for-planning-properties).
 
-Accédez à la page de votre entreprise, puis cliquez sur **[!UICONTROL Ajouter une propriété]** ou sélectionnez une propriété existante dans la liste et cliquez sur **[!UICONTROL Configurer]**.
+Accédez à la page de votre société, puis cliquez sur **[!UICONTROL Add Property]** ou sélectionnez une propriété existante dans la liste et cliquez sur **[!UICONTROL Configure]**.
 
 ![](../../images/property-settings.png)
 
@@ -111,10 +111,10 @@ Suivez les instructions pour créer une propriété web.
 
    **Domaines :** URL de base de tous les sites sur lesquels vous prévoyez de déployer cette propriété.
 
-1. (Avancé) **[!UICONTROL Exécution des composants de règles en séquence :]** cochez cette case pour que les conditions et actions attendent que la précédente soit achevée avant de s’exécuter.
-1. (Avancé) **[!UICONTROL Renvoi d’une chaîne vide pour les éléments de données manquants :]** si vous référencez un élément de données qui n’existe pas dans une bibliothèque, cela renvoie normalement `undefined`.  Cochez cette case si vous souhaitez que ce scénario renvoie une chaîne vide à la place.
-1. (Avancé) **[!UICONTROL Configuration pour le développement d’extensions :]** cochez cette case si vous envisagez d’installer des extensions de développement sur lesquelles votre société travaille activement.
-1. Sélectionnez **[!UICONTROL Enregistrer]**.
+1. (Avancé) :**[!UICONTROL Run rule components in sequence]** Cochez cette case pour que les conditions et actions attendent que la précédente soit achevée avant de s’exécuter.
+1. (Avancé) **[!UICONTROL Return an empty string for missing data elements:]** Si vous référencez un élément de données qui n’existe pas dans une bibliothèque, cela renvoie normalement `undefined`. Cochez cette case si vous souhaitez que ce scénario renvoie une chaîne vide à la place.
+1. (Avancé) **[!UICONTROL Configure for extension development:]** Activez cette case à cocher si vous prévoyez d’installer des extensions de développement sur lesquelles votre société travaille activement
+1. Sélectionner **[!UICONTROL Save]**.
 
 ### Pour les propriétés mobiles
 
@@ -131,7 +131,7 @@ Suivez les instructions pour créer une propriété mobile.
 
    * **Use HTTPS :** sélectionnez ce paramètre selon que toutes les communications de données doivent être envoyées via HTTP ou via HTTPS.
 
-1. Sélectionnez **[!UICONTROL Enregistrer]**.
+1. Sélectionner **[!UICONTROL Save]**.
 
 Une fois votre propriété créée, Experience Platform ajoute automatiquement un hôte par défaut, un ensemble d’environnements (Développement, Évaluation et Production) et les extensions par défaut.
 
@@ -147,4 +147,4 @@ Suivez les étapes ci-dessous pour supprimer une propriété de balise.
 
    Vous pouvez sélectionner et supprimer plusieurs propriétés.
 
-1. Cliquez sur **[!UICONTROL Supprimer]**, puis confirmez la suppression de la propriété.
+1. Cliquez sur **[!UICONTROL Delete]**, puis confirmez la suppression de la propriété.
