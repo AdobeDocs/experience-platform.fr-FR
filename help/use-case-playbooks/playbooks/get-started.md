@@ -89,13 +89,13 @@ Une fois que vous avez [créé un nouveau rôle](/help/access-control/abac/ui/pe
 
 ## Configuration des surfaces de canal et de sandbox dans Journey Optimizer {#configure-channel-surfaces}
 
-Si votre organisation dispose d’une licence pour [Adobe Journey Optimizer](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/ajo-home) et que vous souhaitez utiliser les playbooks conçus pour Journey Optimizer, configurez les surfaces de canal dans votre sandbox. Les surfaces de canal définissent tous les paramètres techniques requis pour vos messages, tels que le type d’e-mail, le nom et l’adresse e-mail de l’expéditeur, les applications mobiles, la configuration des SMS, etc. [Découvrez comment configurer les surfaces de canal dans Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/channel-surfaces).
+Si votre organisation dispose d’une licence pour [Adobe Journey Optimizer](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/ajo-home) et que vous souhaitez utiliser les playbooks conçus pour Journey Optimizer, configurez les surfaces de canal dans votre sandbox. Les surfaces de canal définissent tous les paramètres techniques requis pour vos messages, tels que le type d’e-mail, le nom et l’adresse e-mail de l’expéditeur, les applications mobiles, la configuration des SMS, etc. [Découvrez comment configurer les surfaces de canal dans Adobe Journey Optimizer](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/configuration/channel-surfaces).
 
 Pour créer des instances de playbooks dans Journey Optimizer, vous devez configurer les surfaces des canaux pour les notifications par e-mail, push et SMS.
 
 ### Surface du canal e-mail
 
-Accédez à `Channels` dans l’interface de Journey Optimizer. Configurez des sous-domaines et des pools d&#39;adresses IP distincts pour les e-mails marketing et les messages transactionnels, s&#39;ils ne sont pas déjà configurés. Il s’agit des bonnes pratiques pour s’assurer que les messages transactionnels tels que les e-mails de confirmation de commande, parviennent à vos clients. Saisissez les noms, adresses e-mail et paramètres supplémentaires. Sélectionnez **Envoyer** en haut à droite de la page pour créer la surface du canal marketing. Lisez la documentation sur [comment configurer des surfaces de canal e-mail](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
+Accédez à `Channels` dans l’interface de Journey Optimizer. Configurez des sous-domaines et des pools d&#39;adresses IP distincts pour les e-mails marketing et les messages transactionnels, s&#39;ils ne sont pas déjà configurés. Il s’agit des bonnes pratiques pour s’assurer que les messages transactionnels tels que les e-mails de confirmation de commande, parviennent à vos clients. Saisissez les noms, adresses e-mail et paramètres supplémentaires. Sélectionnez **Envoyer** en haut à droite de la page pour créer la surface du canal marketing. Lisez la documentation sur [comment configurer des surfaces de canal e-mail](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=fr).
 
 ### Surface du canal SMS
 
@@ -111,7 +111,7 @@ Vérifiez que les configurations de canal sont configurées à partir de l’int
 
 Sélectionnez ensuite le canal, les plateformes et les applications que vous avez examinés dans les configurations de canal. Sélectionnez **Envoyer** pour créer la surface de canal push.
 
-Lisez la documentation sur [comment configurer des surfaces de canal push](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html).
+Lisez la documentation sur [comment configurer des surfaces de canal push](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=fr).
 
 ## Étapes suivantes {#next-steps}
 
