@@ -16,7 +16,7 @@ La méthode `_satellite.getVisitorId()` renvoie une instance du service d’ID [
 >
 >Cette méthode s’applique uniquement aux propriétés qui incluent l’extension de balise de service Experience Cloud ID autonome. Elle ne s’applique pas aux fonctionnalités du service d’ID implicite disponibles dans l’extension de balise Web SDK. Voir la commande [`getIdentity`](/help/collection/js/commands/getidentity.md) si vous devez obtenir une identité de visiteur à l’aide des fonctionnalités du service d’ID implicite de SDK Web.
 
-Si vous appelez cette méthode avec l’extension du service d’ID installée et publiée, un objet est renvoyé, similaire à l’objet obtenu après avoir appelé la méthode [`Visitor.getInstance()`](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/getinstance). Si vous appelez cette méthode alors que l’extension du service d’ID n’est ni installée ni publiée, la méthode renvoie `null`.
+Si vous appelez cette méthode avec l’extension du service d’ID installée et publiée, un objet est renvoyé, similaire à l’objet obtenu après avoir appelé la méthode [`Visitor.getInstance()`](https://experienceleague.adobe.com/fr/docs/id-service/using/id-service-api/methods/getinstance). Si vous appelez cette méthode alors que l’extension du service d’ID n’est ni installée ni publiée, la méthode renvoie `null`.
 
 ```ts
 _satellite.getVisitorId(): Visitor | null
@@ -24,7 +24,7 @@ _satellite.getVisitorId(): Visitor | null
 
 ## Champs et méthodes disponibles
 
-Consultez le service Experience Cloud ID [Méthodes](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/get-set) dans la documentation du service d’identification des visiteurs Experience Cloud pour savoir quels champs et méthodes sont disponibles.
+Consultez le service Experience Cloud ID [Méthodes](https://experienceleague.adobe.com/fr/docs/id-service/using/id-service-api/methods/get-set) dans la documentation du service d’identification des visiteurs Experience Cloud pour savoir quels champs et méthodes sont disponibles.
 
 ```js
 // Retrieve a visitor's ECID

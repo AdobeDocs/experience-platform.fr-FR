@@ -50,7 +50,7 @@ Aucune configuration n’est nécessaire pour initialiser ou ajouter un module e
 >
 >Cet élément de données définit les cookies et permet de stocker les valeurs générées par l’utilisateur dans les cookies. Reportez-vous à la documentation spécifique au plug-in pour plus d’informations.
 
-Permet d’installer et de configurer le plug-in [`getAndPersistValue` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getandpersistvalue.html). L’élément de données `getAndPersistValue` stocke une valeur dans un cookie qui peut être récupérée ultérieurement au cours d’une visite.
+Permet d’installer et de configurer le plug-in [`getAndPersistValue` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getandpersistvalue.html?lang=fr). L’élément de données `getAndPersistValue` stocke une valeur dans un cookie qui peut être récupérée ultérieurement au cours d’une visite.
 
 L’élément de données `getAndPersistValue` fournit les arguments suivants :
 
@@ -66,7 +66,7 @@ Si la variable dans l’argument `vtp` est définie, l’élément de données d
 >
 >Ce plug-in nécessite un accès à l’emplacement sur le client, mais ne renvoie pas d’exception s’il ne l’obtient pas.
 
-Permet d’installer et de configurer le plug-in [`getGeoCoordinates` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getgeocoordinates.html). L’élément de données `getGeoCoordinates` capture la latitude et la longitude des appareils des visiteurs.
+Permet d’installer et de configurer le plug-in [`getGeoCoordinates` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getgeocoordinates.html?lang=fr). L’élément de données `getGeoCoordinates` capture la latitude et la longitude des appareils des visiteurs.
 
 L’élément de données `getGeoCoordinates` n’utilise aucun argument. Elle renvoie l’une des valeurs suivantes :
 
@@ -80,7 +80,7 @@ L’élément de données `getGeoCoordinates` n’utilise aucun argument. Elle r
 >
 >Cet élément de données définit les cookies. Reportez-vous à la documentation spécifique au plug-in pour plus d’informations.
 
-Permet d’installer et de configurer le plug-in [`getNewRepeat` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getnewrepeat.html). L’élément de données `getNewRepeat` détermine si un visiteur ou une visiteuse sur le site est un nouveau visiteur ou un visiteur récurrent au cours du nombre de jours souhaité.
+Permet d’installer et de configurer le plug-in [`getNewRepeat` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getnewrepeat.html?lang=fr). L’élément de données `getNewRepeat` détermine si un visiteur ou une visiteuse sur le site est un nouveau visiteur ou un visiteur récurrent au cours du nombre de jours souhaité.
 
 L’élément de données `getNewRepeat` utilise les arguments suivants :
 
@@ -90,7 +90,7 @@ Cet élément de données renvoie la valeur de `"New"` si le cookie défini par 
 
 ### `getPageName`
 
-Permet d’installer et de configurer le plug-in [`getPageName` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpagename.html). L’élément de données `getPageName` crée une version formatée conviviale et facile à lire de l’URL actuelle.
+Permet d’installer et de configurer le plug-in [`getPageName` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpagename.html?lang=fr). L’élément de données `getPageName` crée une version formatée conviviale et facile à lire de l’URL actuelle.
 
 L’élément de données `getPageName` utilise les arguments suivants :
 
@@ -107,7 +107,7 @@ L’élément de données renvoie une chaîne contenant une version formatée co
 >
 >Cet élément de données définit les cookies et permet de stocker les valeurs générées par l’utilisateur dans les cookies. Reportez-vous à la documentation spécifique au plug-in pour plus d’informations.
 
-Permet d’installer et de configurer le plug-in [`getPreviousValue` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpreviousvalue.html). L’élément de données `getPreviousValue` définit une variable sur une valeur définie sur un accès précédent.
+Permet d’installer et de configurer le plug-in [`getPreviousValue` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpreviousvalue.html?lang=fr). L’élément de données `getPreviousValue` définit une variable sur une valeur définie sur un accès précédent.
 
 L’élément de données `getPreviousValue` utilise les arguments suivants :
 
@@ -118,7 +118,7 @@ Lorsque vous appelez cet élément de données, il renvoie la valeur de chaîne 
 
 ### `getQueryParam`
 
-Permet d’installer et de configurer le plug-in [`getQueryParam` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getqueryparam.html). L’élément de données `getQueryParam` extrait la valeur de tout paramètre de chaîne de requête contenu dans une URL. Elle est utile pour extraire des codes de campagne, internes et externes, à partir des URL de page de destination. Il est également utile lors de l’extraction de termes de recherche ou d’autres paramètres de chaîne de requête. Cet élément de données fournit des fonctionnalités fiables pour l’analyse d’URL complexes, y compris des hachages et des URL contenant plusieurs paramètres de chaîne de requête.
+Permet d’installer et de configurer le plug-in [`getQueryParam` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getqueryparam.html?lang=fr). L’élément de données `getQueryParam` extrait la valeur de tout paramètre de chaîne de requête contenu dans une URL. Elle est utile pour extraire des codes de campagne, internes et externes, à partir des URL de page de destination. Il est également utile lors de l’extraction de termes de recherche ou d’autres paramètres de chaîne de requête. Cet élément de données fournit des fonctionnalités fiables pour l’analyse d’URL complexes, y compris des hachages et des URL contenant plusieurs paramètres de chaîne de requête.
 
 L’élément de données `getQueryParam` utilise les arguments suivants :
 
@@ -135,7 +135,7 @@ L’appel de cet élément de données renvoie une valeur en fonction des argume
 
 ### `getTimeParting`
 
-Permet d’installer et de configurer le plug-in [`getTimeParting` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimeparting.html). L’élément de données `getTimeParting` capture les détails du moment où une activité mesurable a lieu sur votre site. Cet élément de données est utile lorsque vous souhaitez ventiler les mesures selon une division du temps répétable sur une période donnée. Par exemple, vous pouvez comparer les taux de conversion entre deux jours différents de la semaine, comme tous les dimanches par rapport à tous les jeudis. Vous pouvez également comparer les périodes de la journée, par exemple tous les matins par rapport à tous les soirs.
+Permet d’installer et de configurer le plug-in [`getTimeParting` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimeparting.html?lang=fr). L’élément de données `getTimeParting` capture les détails du moment où une activité mesurable a lieu sur votre site. Cet élément de données est utile lorsque vous souhaitez ventiler les mesures selon une division du temps répétable sur une période donnée. Par exemple, vous pouvez comparer les taux de conversion entre deux jours différents de la semaine, comme tous les dimanches par rapport à tous les jeudis. Vous pouvez également comparer les périodes de la journée, par exemple tous les matins par rapport à tous les soirs.
 
 L’élément de données `getTimeParting` utilise l’argument suivant :
 
@@ -162,7 +162,7 @@ L’appel de cet élément de données renvoie une chaîne contenant les éléme
 >
 >Cet élément de données définit les cookies. Reportez-vous à la documentation spécifique au plug-in pour plus d’informations.
 
-Permet d’installer et de configurer le plug-in [`getTimeSinceLastVisit` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimesincelastvisit.html). L’élément de données `getTimeSinceLastVisit` effectue le suivi du temps pris par un visiteur pour revenir sur votre site après sa dernière visite.
+Permet d’installer et de configurer le plug-in [`getTimeSinceLastVisit` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimesincelastvisit.html?lang=fr). L’élément de données `getTimeSinceLastVisit` effectue le suivi du temps pris par un visiteur pour revenir sur votre site après sa dernière visite.
 
 L’élément de données `getTimeSinceLastVisit` n’utilise aucun argument. Elle renvoie la durée écoulée depuis la dernière visite du visiteur sur le site, regroupée au format suivant :
 
@@ -177,7 +177,7 @@ L’élément de données `getTimeSinceLastVisit` n’utilise aucun argument. El
 >
 >Cet élément de données définit les cookies et permet de stocker les valeurs générées par l’utilisateur dans les cookies. Reportez-vous à la documentation spécifique au plug-in pour plus d’informations.
 
-Permet d’installer et de configurer le plug-in [`getValOnce` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvalonce.html). L’élément de données `getValOnce` empêche qu’une variable soit définie sur la même valeur plusieurs fois.
+Permet d’installer et de configurer le plug-in [`getValOnce` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvalonce.html?lang=fr). L’élément de données `getValOnce` empêche qu’une variable soit définie sur la même valeur plusieurs fois.
 
 L’élément de données `getValOnce` utilise les arguments suivants :
 
@@ -194,7 +194,7 @@ Si l’argument `vtc` et la valeur du cookie correspondent, cette méthode renvo
 >
 >Cet élément de données définit les cookies. Reportez-vous à la documentation spécifique au plug-in pour plus d’informations.
 
-Permet d’installer et de configurer le plug-in [`getVisitDuration` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitduration.html). L’élément de données `getVisitDuration` effectue le suivi de la durée, en minutes, pendant laquelle le visiteur a séjourné sur le site jusqu’à ce point.
+Permet d’installer et de configurer le plug-in [`getVisitDuration` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitduration.html?lang=fr). L’élément de données `getVisitDuration` effectue le suivi de la durée, en minutes, pendant laquelle le visiteur a séjourné sur le site jusqu’à ce point.
 
 L’élément de données `getVisitDuration` n’utilise aucun argument. Elle renvoie l’une des valeurs suivantes :
 
@@ -209,7 +209,7 @@ L’élément de données `getVisitDuration` n’utilise aucun argument. Elle re
 >
 >Cet élément de données définit les cookies. Reportez-vous à la documentation spécifique au plug-in pour plus d’informations.
 
-Permet d’installer et de configurer le plug-in [`getVisitNum` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitnum.html). L’élément de données `getVisitNum` renvoie le nombre de visites pour tous les visiteurs qui se rendent sur le site au cours du nombre de jours souhaité.
+Permet d’installer et de configurer le plug-in [`getVisitNum` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitnum.html?lang=fr). L’élément de données `getVisitNum` renvoie le nombre de visites pour tous les visiteurs qui se rendent sur le site au cours du nombre de jours souhaité.
 
 L’élément de données `getVisitNum` utilise les arguments suivants :
 
@@ -223,7 +223,7 @@ Incrément du nombre de visites chaque fois que le visiteur revient sur votre si
 
 ### `p_fo` (Page First Uniquement)
 
-Permet d’installer et de configurer le plug-in [`p_fo` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/p-fo.html). L’élément de données `p_fo` est un utilitaire qui vérifie l’existence d’un objet JavaScript spécifique. Si l’objet n’existe pas, le plug-in crée l’objet et renvoie `true`. Si l’objet JavaScript existe déjà sur la page, il renvoie `false`. Cet élément de données est utile pour exécuter le code exactement une fois sur une page.
+Permet d’installer et de configurer le plug-in [`p_fo` Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/p-fo.html?lang=fr). L’élément de données `p_fo` est un utilitaire qui vérifie l’existence d’un objet JavaScript spécifique. Si l’objet n’existe pas, le plug-in crée l’objet et renvoie `true`. Si l’objet JavaScript existe déjà sur la page, il renvoie `false`. Cet élément de données est utile pour exécuter le code exactement une fois sur une page.
 
 L’élément de données `p_fo` utilise les arguments suivants :
 

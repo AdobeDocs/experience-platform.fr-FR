@@ -115,7 +115,7 @@ Pour illustrer ce processus, prenons l’exemple d’un client qui a déjà visi
 
 | Visite | Description |
 | --- | --- |
-| Première visite | Supposons que vous n’ayez pas encore commencé à définir le cookie [!DNL FPID]. Le [!DNL ECID] contenu dans le cookie [AMCV](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) est l’identifiant utilisé pour identifier le visiteur. |
+| Première visite | Supposons que vous n’ayez pas encore commencé à définir le cookie [!DNL FPID]. Le [!DNL ECID] contenu dans le cookie [AMCV](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=fr#section-c55af54828dc4cce89f6118655d694c8) est l’identifiant utilisé pour identifier le visiteur. |
 | Deuxième visite | Le déploiement de la solution [!DNL FPID] a commencé. Le [!DNL ECID] existant est toujours présent et reste l’identifiant principal pour l’identification des visiteurs. |
 | Troisième visite | Entre la deuxième et la troisième visite, un délai suffisant s’est écoulé avant que le [!DNL ECID] ne soit supprimé en raison d’une politique de navigateur. Cependant, comme le [!DNL FPID] a été défini à l’aide d’un enregistrement [!DNL DNS] [!DNL A], le [!DNL FPID] persiste. Le [!DNL FPID] est désormais considéré comme l’ID principal et utilisé pour amorcer le [!DNL ECID], qui est écrit sur l’appareil de l’utilisateur final. L’utilisateur serait désormais considéré comme un nouveau visiteur dans les solutions Adobe Experience Platform et Experience Cloud. |
 | Quatrième visite | Entre la troisième et la quatrième visite, il s’est écoulé suffisamment de temps pour que le [!DNL ECID] ait été supprimé en raison d’une politique de navigateur. Comme lors de la précédente visite, la [!DNL FPID] reste due à la manière dont elle a été conçue. Cette fois, la même [!DNL ECID] est générée que la visite précédente. L’utilisateur est vu dans toutes les solutions Experience Platform et Experience Cloud comme le même utilisateur que la visite précédente. |
@@ -131,7 +131,7 @@ Les identifiants d’appareil propriétaires ([!DNL FPIDs]) effectuent le suivi 
 >
 >Les enregistrements [!DNL A] ou [!DNL AAAA] ne sont pris en charge que pour la définition et le suivi des cookies. La principale méthode de collecte de données consiste à utiliser un [!DNL DNS CNAME]. Les [!DNL FPIDs] sont définis à l’aide d’un enregistrement [!DNL A] ou [!DNL AAAA] et envoyés à Adobe à l’aide d’un [!DNL CNAME].
 >
->Le programme de certificat géré par Adobe [&#128279;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) est également pris en charge pour la collecte de données propriétaires.
+>Le programme de certificat géré par Adobe [&#128279;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=fr#adobe-managed-certificate-program) est également pris en charge pour la collecte de données propriétaires.
 
 Une fois qu’un cookie [!DNL FPID] est défini, sa valeur peut être récupérée et envoyée à Adobe au fur et à mesure de la collecte des données d’événement. Les [!DNL FPIDs] collectées sont utilisées pour générer des [!DNL ECIDs], qui sont les identifiants principaux dans les applications Adobe Experience Cloud.
 
@@ -162,7 +162,7 @@ Pour utiliser cette fonctionnalité, vous devez définir le cookie [!DNL FPID] a
 
 >[!IMPORTANT]
 >
->Cette fonctionnalité nécessite que la [collecte de données propriétaire](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en) soit activée.
+>Cette fonctionnalité nécessite que la [collecte de données propriétaire](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=fr) soit activée.
 
 **Étape 2. Activez &#x200B;** [!UICONTROL First Party ID Cookie]&#x200B;**fonctionnalité pour votre flux de données**
 
@@ -179,7 +179,7 @@ Lors de l’activation de ce paramètre, vous devez indiquer le nom du cookie da
 >[!NOTE]
 >
 >Lorsque vous utilisez des identifiants propriétaires, vous ne pouvez pas effectuer de synchronisations des identifiants tiers. Les synchronisations des identifiants tiers reposent sur le service [!DNL Visitor ID] et les `UUID` générés par ce service. Lors de l’utilisation de la fonctionnalité d’identifiant propriétaire, l’[!DNL ECID] est générée sans l’utilisation du service [!DNL Visitor ID], ce qui rend les synchronisations d’identifiants tiers impossibles.
-><br> Lorsque vous utilisez des identifiants propriétaires, les fonctionnalités [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager) ciblées vers l’activation dans les plateformes partenaires ne sont pas prises en charge, car les synchronisations des identifiants partenaires Audience Manager sont principalement basées sur `UUIDs` ou `DIDs`. Le [!DNL ECID] dérivé d’un identifiant propriétaire n’est pas lié à un `UUID`, ce qui le rend impossible à résoudre.
+><br> Lorsque vous utilisez des identifiants propriétaires, les fonctionnalités [Audience Manager](https://experienceleague.adobe.com/fr/docs/audience-manager) ciblées vers l’activation dans les plateformes partenaires ne sont pas prises en charge, car les synchronisations des identifiants partenaires Audience Manager sont principalement basées sur `UUIDs` ou `DIDs`. Le [!DNL ECID] dérivé d’un identifiant propriétaire n’est pas lié à un `UUID`, ce qui le rend impossible à résoudre.
 
 ## Méthode 2 : utiliser des FPID dans `identityMap` {#identityMap}
 

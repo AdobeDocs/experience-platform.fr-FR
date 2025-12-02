@@ -53,7 +53,7 @@ Le paramètre de chaîne de requête comprend :
 
 Le partage d’identifiants entre appareils mobiles et sites web utilise le paramètre `adobe_mc` . Lorsque le paramètre `adobe_mc` est présent et valide, le `ECID` de la chaîne de requête est automatiquement ajouté au mappage d’identité dans la première requête envoyée à Edge Network. Toutes les interactions Edge Network suivantes utiliseront ce `ECID`.
 
-Pour plus d’informations sur la manière de transmettre des identifiants visiteur d’une application mobile à un WebView, consultez la documentation sur la [gestion des WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation).
+Pour plus d’informations sur la manière de transmettre des identifiants visiteur d’une application mobile à un WebView, consultez la documentation sur la [gestion des WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html?lang=fr#implementation).
 
 ## Implémenter le partage d’ID entre domaines {#cross-domain-sharing}
 

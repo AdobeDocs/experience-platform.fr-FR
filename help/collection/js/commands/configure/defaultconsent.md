@@ -61,7 +61,7 @@ Consultez le tableau ci-dessous pour comprendre à quel moment la collecte de do
 | `out` | `out` | Non | Oui |
 | `out` | Non défini | Non | Non |
 
-Consultez [Cookies Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) pour obtenir la liste des cookies définis par la bibliothèque.
+Consultez [Cookies Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/fr/docs/core-services/interface/data-collection/cookies/web-sdk) pour obtenir la liste des cookies définis par la bibliothèque.
 
 >[!NOTE]
 >
