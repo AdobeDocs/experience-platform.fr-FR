@@ -37,7 +37,7 @@ Côté serveur, une passerelle de périphérie unifiée et un framework de servi
 
 Un système de périphérie consolidé vous permet de gérer des campagnes publicitaires, marketing et de personnalisation sur tous les canaux. Il réduit le coût total de possession et prend en charge divers types de données, ce qui vous permet de mapper votre modèle de données pour l’utiliser avec plusieurs produits Experience Cloud.
 
->[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37259?captions=fre_fr&quality=12&learn=on)
 
 ## Bibliothèques remplacées par le SDK Web {#sdks}
 
