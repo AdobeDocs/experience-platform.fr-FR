@@ -17,8 +17,8 @@ Web SDK envoie les données indépendamment de la solution (XDM) à Experience P
 
 Vous pouvez implémenter le SDK Web de deux manières :
 
-* Implémentation manuelle à l’aide de la bibliothèque JavaScript [&#128279;](install/library.md) (cette documentation)
-* L’extension de balise [&#x200B; Web SDK &#x200B;](/help/tags/extensions/client/web-sdk/overview.md)
+* Implémentation manuelle à l’aide de la bibliothèque JavaScript [](install/library.md) (cette documentation)
+* L’extension de balise [ Web SDK ](/help/tags/extensions/client/web-sdk/overview.md)
 
 Ce guide comprend des instructions pour interagir avec les solutions Experience Cloud à l’aide de la bibliothèque JavaScript Web SDK.
 
@@ -37,7 +37,7 @@ Côté serveur, une passerelle de périphérie unifiée et un framework de servi
 
 Un système de périphérie consolidé vous permet de gérer des campagnes publicitaires, marketing et de personnalisation sur tous les canaux. Il réduit le coût total de possession et prend en charge divers types de données, ce qui vous permet de mapper votre modèle de données pour l’utiliser avec plusieurs produits Experience Cloud.
 
->[!VIDEO](https://video.tv.adobe.com/v/37259?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
 ## Bibliothèques remplacées par le SDK Web {#sdks}
 
