@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Surveillance des flux de données pour les destinations dans l’interface utilisateur
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: d537284b804214fa8a37febab5f78335a590e9f5
+source-git-commit: 4faa15431fe069b5be964f0f8643a73633338a89
 workflow-type: tm+mt
-source-wordcount: '3541'
+source-wordcount: '3550'
 ht-degree: 11%
 
 ---
@@ -91,7 +91,8 @@ Une liste d’exécutions individuelles et de leurs mesures spécifiques s’aff
 Chaque exécution de flux de données affiche les détails suivants :
 
 - **[!UICONTROL Dataflow run start]** : heure de démarrage de l’exécution du flux de données. Pour les exécutions de flux de données en continu, Experience Platform capture les mesures en fonction du début de l’exécution du flux de données, sous la forme de mesures horaires. Cela signifie que pour les exécutions de flux de données en continu, si une exécution de flux de données a démarré, par exemple à 10 :30PM, la mesure affiche l’heure de début à 10 :00 dans l’interface utilisateur.
-- **[!UICONTROL Processing time]** : temps nécessaire à l’exécution du flux de données pour le traitement.
+- **[!UICONTROL Audience]** : nombre d’audiences associées à chaque exécution du flux de données.
+- **[!UICONTROL Processing duration]** : temps nécessaire à l’exécution du flux de données pour le traitement.
    - Pour les exécutions **[!UICONTROL completed]**, la mesure Temps de traitement affiche toujours une heure.
    - Pour les exécutions de flux de données qui sont toujours dans un état **[!UICONTROL processing]**, la fenêtre permettant de capturer toutes les mesures reste ouverte pendant plus d’une heure, afin de traiter toutes les mesures qui correspondent à l’exécution du flux de données. Par exemple, une exécution de flux de données ayant démarré à 9 :30 peut rester en état de traitement pendant une heure et trente minutes pour capturer et traiter toutes les mesures. La durée du temps de traitement est directement affectée par les reprises effectuées en raison de l’échec de la réponse de la destination. Ensuite, une fois la fenêtre de traitement fermée et le statut de l’exécution du flux de données mis à jour sur **terminé**, le temps de traitement affiché est remplacé par une heure.
 - **[!UICONTROL Profiles received]** : nombre total de profils reçus dans le flux de données.
@@ -169,7 +170,7 @@ Chaque exécution de flux de données affiche les détails suivants :
 
 - **[!UICONTROL Dataflow run start]** : heure de démarrage de l’exécution du flux de données.
 - **[!UICONTROL Audience]** : nom de l’audience associée à chaque exécution du flux de données.
-- **[!UICONTROL Processing time]** : temps nécessaire au traitement de l’exécution du flux de données.
+- **[!UICONTROL Processing duration]** : temps nécessaire au traitement de l’exécution du flux de données.
 - **[!UICONTROL Profiles received]** : nombre total de profils reçus dans le flux de données. Cette valeur est mise à jour toutes les 60 minutes.
 - **[!UICONTROL Identities activated]** : nombre total d’identités de profil activées avec succès vers la destination sélectionnée dans le cadre de l’exécution du flux de données. Cette mesure inclut les identités qui sont créées, mises à jour et supprimées dans les audiences exportées.
 - **[!UICONTROL Identities excluded]** : nombre total d’identités de profil qui sont exclues de l’activation en fonction des attributs manquants et de la violation du consentement.
@@ -199,7 +200,7 @@ Vous pouvez également choisir d’afficher des informations riches sur un certa
 
 1. Accédez à **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** > onglet **[!UICONTROL Browse]** .
 2. Accédez au flux de données à inspecter.
-3. Sélectionnez le symbole représentant des points de suspension et l’![&#x200B; &#x200B;](/help/images/icons/monitoring.png)icône de surveillance **[!UICONTROL View in monitoring]**.
+3. Sélectionnez le symbole représentant des points de suspension et l’![ ](/help/images/icons/monitoring.png)icône de surveillance **[!UICONTROL View in monitoring]**.
 
 ![Sélectionnez Afficher dans la surveillance dans le workflow des destinations pour obtenir plus d’informations sur un flux de données.](/help/dataflows/assets/ui/monitor-destinations/view-in-monitoring.png)
 
@@ -222,7 +223,7 @@ Pour accéder au tableau de bord [!UICONTROL Monitoring], sélectionnez **[!UICO
 
 Utilisez le tableau de bord [!UICONTROL Destinations] pour avoir une idée globale de l’intégrité de vos flux d’activation. Commencez par obtenir des informations à un niveau agrégé pour toutes les destinations par lots et de diffusion en continu, puis explorez les vues détaillées pour les flux de données, les exécutions de flux de données et les audiences activées pour une analyse approfondie de vos données d’activation. Les écrans du tableau de bord [!UICONTROL Monitoring] fournissent des informations exploitables par le biais de mesures et de descriptions d’erreur afin de vous aider à résoudre les problèmes susceptibles de se produire dans vos scénarios d’activation.
 
-Vous pouvez filtrer les informations affichées par type de données : clients, comptes (pour le B2B edition Adobe Real-Time CDP uniquement), prospects et enrichissement du compte. Pour en savoir plus sur ces options, consultez le [&#x200B; guide du tableau de bord de surveillance &#x200B;](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview).
+Vous pouvez filtrer les informations affichées par type de données : clients, comptes (pour le B2B edition Adobe Real-Time CDP uniquement), prospects et enrichissement du compte. Pour en savoir plus sur ces options, consultez le [ guide du tableau de bord de surveillance ](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview).
 
 ![Filtre de type de données mis en surbrillance dans la vue du tableau de bord de surveillance.](/help/dataflows/assets/ui/monitor-destinations/add-data-filter.png)
 
@@ -374,7 +375,7 @@ La page de détails comporte également un bouton (bascule) pour basculer entre 
 
 La vue Erreurs d’exécution du flux de données affiche une liste des enregistrements ayant échoué et des enregistrements ayant été ignorés. Les informations relatives aux enregistrements ayant échoué et ignorés s’affichent, y compris le code d’erreur, le nombre d’identités et la description. Par défaut, la liste affiche les enregistrements ayant échoué. Pour afficher les enregistrements ignorés, activez le bouton (bascule) **[!UICONTROL Records skipped]**.
 
-![&#x200B; Basculement des identités exclues mis en surbrillance dans la vue de surveillance](../assets/ui/monitor-destinations/identities-excluded.png)
+![ Basculement des identités exclues mis en surbrillance dans la vue de surveillance](../assets/ui/monitor-destinations/identities-excluded.png)
 
 Lorsque **[!UICONTROL Audiences]** est sélectionné, la liste des audiences qui ont été activées dans l’exécution du flux de données sélectionné s’affiche. Cet écran comprend des informations au niveau de l’audience sur les enregistrements activés, les enregistrements exclus, ainsi que le statut et l’heure de la dernière exécution du flux de données.
 
