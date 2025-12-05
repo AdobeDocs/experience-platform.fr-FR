@@ -2,14 +2,16 @@
 title: Référence dʼobjet satellite
 description: Découvrez lʼobjet _satellite côté client et les différentes fonctions quʼil offre dans les balises.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: a36e5af39f904370c1e97a9ee1badad7a2eac32e
+source-git-commit: 05bf3a8c92aa221af153b4ce9949f0fdfc3c86ab
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 13%
+source-wordcount: '208'
+ht-degree: 10%
 
 ---
 
 # `_satellite` référence d’objet
+
+_Ces pages décrivent comment utiliser l’objet `_satellite`, ce qui vous permet de gérer et de personnaliser votre logique de balise à l’aide de JavaScript. Consultez [Extension de balise Adobe Experience Platform Web SDK](/help/tags/extensions/client/web-sdk/overview.md) pour plus d’informations sur la configuration de votre implémentation dans l’interface utilisateur de la collecte de données._
 
 L’objet `_satellite` expose plusieurs points d’entrée pris en charge qui vous aident à interagir avec la bibliothèque de balises publiée sur votre site. Tous les déploiements de balises exposent `_satellite` si la balise de chargement est implémentée correctement. Il existe plusieurs cas d’utilisation principaux pour cet objet :
 
@@ -26,16 +28,18 @@ L’objet `_satellite` expose plusieurs points d’entrée pris en charge qui vo
 ## Exemples d’utilisation courants
 
 ```js
-// Read and write a temporary data element value
-const region = _satellite.getVar('user_region');
-_satellite.setVar('promo_code', code);
+// Read and write a temporary data element value (guarded)
+if(window._satellite?.getVar && window._satellite?.setVar) {
+  const region = _satellite.getVar('user_region');
+  _satellite.setVar('promo_code', code);
+}
 
-// Local debugging
-_satellite.setDebug(true);
-_satellite.logger.log('Rule evaluated');
-
-// Manually trigger a rule configured in your tag property
+// Manually trigger a rule configured in your tag property (guarded)
 if (window._satellite?.track) {
   _satellite.track('cart_add', { sku: '123', qty: 2 });
 }
+
+// Local console debugging (guarding not needed)
+_satellite.setDebug(true);
+_satellite.logger.log('Rule evaluated');
 ```
