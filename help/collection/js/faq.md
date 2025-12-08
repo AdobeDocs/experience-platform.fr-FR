@@ -144,7 +144,7 @@ Si vous utilisez nos SDK et envoyez XDM à Edge Network, ces nouvelles fonctionn
 
 ## Qu’est-ce qu’un CNAME ou un domaine propriétaire et pourquoi est-ce important ?
 
-Pour plus d’informations sur les CNAME, consultez la documentation d’[Adobe ](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html?lang=fr)
+Pour plus d’informations sur les CNAME, consultez la documentation d’[Adobe &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html?lang=fr)
 
 ## Le Adobe Experience Platform Web SDK utilise-t-il des cookies ? Dans l&#39;affirmative, quels cookies utilise-t-elle ?
 
