@@ -2,13 +2,13 @@
 title: Demandbase Intent
 description: Découvrez la source Demandbase Intent sur Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions newtab=true"
-badgeB2P: label="Édition B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Édition B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
+source-git-commit: e223ea754a250956e65c3f526119a3ebd7bb067c
 workflow-type: tm+mt
-source-wordcount: '1478'
-ht-degree: 12%
+source-wordcount: '1504'
+ht-degree: 11%
 
 ---
 
@@ -30,7 +30,7 @@ Une liste d’adresses IP doit être ajoutée à un place sur la liste autorisé
 
 ### Configuration des autorisations sur Experience Platform
 
-Pour connecter votre compte **[!UICONTROL à Experience Platform]** les autorisations **[!UICONTROL Afficher les sources et]** Gérer les sources[!DNL Demandbase] doivent être activées. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/abac/ui/permissions.md).
+Les autorisations **[!UICONTROL View Sources]** et **[!UICONTROL Manage Sources]** doivent être activées pour votre compte afin de connecter votre compte [!DNL Demandbase] à Experience Platform. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/abac/ui/permissions.md).
 
 ### Contraintes de dénomination pour fichiers et répertoires
 
@@ -57,6 +57,10 @@ Les restrictions répertoriées ci-dessous doivent être prises en compte lors d
 Pour plus d’informations sur ces informations d’identification, consultez le [[!DNL Google Cloud Storage] guide des clés HMAC](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Pour savoir comment générer votre propre clé d’accès, lisez le guide [prérequis [!DNL Google Cloud Storage]  dans la présentation de la source](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account).
 
 ## [!DNL Demandbase] le schéma
+
+>[!IMPORTANT]
+>
+>Lors de la création d’un schéma d’intention de compte Demandbase B2B dans l’interface utilisateur d’Experience Platform, veillez à activer l’ingestion de profil pour le schéma. Pour plus d’informations, consultez le guide sur la [création et modification de schémas dans l’interface utilisateur](../../../xdm/ui/resources/schemas.md).
 
 Lisez cette section pour plus d’informations sur le schéma [!DNL Demandbase] et la structure des données.
 
