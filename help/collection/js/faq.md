@@ -2,7 +2,7 @@
 title: FAQ sur Adobe Experience Platform Web SDK
 description: Obtenez des réponses aux questions fréquentes sur Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
 source-wordcount: '1999'
 ht-degree: 2%
@@ -67,9 +67,9 @@ Adobe Experience Platform Web SDK peut également envoyer des données directeme
 
 **Délai de rentabilisation :** Adobe a travaillé dur (et continuera à le faire) pour faciliter autant que possible le déploiement de Web SDK par le biais de balises et le mappage des données côté client à XDM. Une fois ce travail terminé, toutes les autres solutions Adobe et tous les autres services Adobe Experience Platform peuvent être activés ou désactivés côté serveur. Par exemple, si vous l’utilisez pour Adobe Analytics et que vous souhaitez activer Target ou Experience Platform, vous pouvez simplement activer la configuration du flux de données et afficher ces cas d’utilisation.
 
-## Qu’est-ce que [!DNL alloy.js] ?
+## Qu’est-ce que `alloy.js` ?
 
-[!DNL alloy.js] est le nom de la bibliothèque JavaScript Web SDK. Il est référencé dans le code source et le nom de fichier SDK.
+`alloy.js` est le nom de la bibliothèque JavaScript Web SDK. Il est référencé dans le code source et le nom de fichier SDK.
 
 ## Les clients doivent-ils acheter Adobe Experience Platform pour utiliser le [!DNL Web SDK] ?
 
@@ -78,7 +78,7 @@ Non. Tout client Adobe Digital Experience peut utiliser Adobe Experience Platfor
 * Les clients qui n’ont *accès* à Experience Platform ou à la plateforme de données clients en temps réel et qui souhaitent utiliser le [!DNL Web SDK] doivent configurer les autorisations appropriées pour créer des schémas et des flux de données dans l’interface utilisateur de collecte de données ou d’Experience Platform.
 * Les clients qui ont accès à Experience Platform ou à Real-Time CDP et souhaitent utiliser le [!DNL Web SDK] devront configurer les autorisations appropriées pour créer des schémas, des jeux de données, des espaces de noms d’identité et des flux de données dans l’interface utilisateur de collecte de données ou dans l’interface utilisateur Experience Platform.
 
-Pour plus d’informations sur la configuration de ces autorisations, consultez notre documentation sur la [gestion des autorisations relatives à la collecte de données](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=fr).
+Pour plus d’informations sur la configuration de ces autorisations, consultez notre documentation sur la [gestion des autorisations relatives à la collecte de données](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
 
 ## Qui doit utiliser le SDK web ?
 
@@ -144,7 +144,7 @@ Si vous utilisez nos SDK et envoyez XDM à Edge Network, ces nouvelles fonctionn
 
 ## Qu’est-ce qu’un CNAME ou un domaine propriétaire et pourquoi est-ce important ?
 
-Pour plus d’informations sur les CNAME, consultez la documentation d’[Adobe &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html?lang=fr)
+Pour plus d’informations sur les CNAME, consultez la documentation d’[Adobe ](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html?lang=fr)
 
 ## Le Adobe Experience Platform Web SDK utilise-t-il des cookies ? Dans l&#39;affirmative, quels cookies utilise-t-elle ?
 

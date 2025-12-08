@@ -1,15 +1,15 @@
 ---
-title: Référence dʼobjet satellite
+title: Présentation du JavaScript côté client des balises (_satellite)
 description: Découvrez lʼobjet _satellite côté client et les différentes fonctions quʼil offre dans les balises.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 05bf3a8c92aa221af153b4ce9949f0fdfc3c86ab
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 10%
+source-wordcount: '212'
+ht-degree: 8%
 
 ---
 
-# `_satellite` référence d’objet
+# Présentation du JavaScript côté client des balises (`_satellite`)
 
 _Ces pages décrivent comment utiliser l’objet `_satellite`, ce qui vous permet de gérer et de personnaliser votre logique de balise à l’aide de JavaScript. Consultez [Extension de balise Adobe Experience Platform Web SDK](/help/tags/extensions/client/web-sdk/overview.md) pour plus d’informations sur la configuration de votre implémentation dans l’interface utilisateur de la collecte de données._
 

@@ -3,9 +3,9 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: dc333f30f9a2cb7cd485d1cb13272c078da0bd76
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '2585'
+source-wordcount: '2584'
 ht-degree: 63%
 
 ---
@@ -152,7 +152,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 **Nouvelles fonctionnalités**
 
 - Ajout de la prise en charge du suivi automatique des interactions de propositions.
-- Ajout d’un script de build personnalisé qui fournit un fichier alloy.js.
+- Ajout d’un script de build personnalisé qui fournit un fichier `alloy.js`.
 - Amélioration de la collecte de clics avec la prise en charge d’Activity Map et du regroupement d’événements.
 
 ## Version 2.20.0 - mercredi 21 mai 2024

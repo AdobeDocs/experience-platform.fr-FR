@@ -1,26 +1,19 @@
 ---
-title: Présentation de JavaScript
+title: Présentation de la bibliothèque JavaScript Web SDK
 description: Envoyez des données à Adobe Experience Platform Edge Network à l’aide de JavaScript.
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 09799847c61d82ed5b7cd372d92aa436697d54f3
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '440'
 ht-degree: 3%
 
 ---
 
-# Présentation de JavaScript
+# Présentation de la bibliothèque JavaScript Web SDK
 
-**Adobe Experience Platform Web SDK** est une bibliothèque JavaScript côté client qui vous permet d’envoyer des données à Adobe Experience Platform Edge Network.
+**Adobe Experience Platform Web SDK** est une bibliothèque JavaScript côté client qui vous permet d’envoyer des données à Adobe Experience Platform Edge Network. Ce guide décrit le chemin d’implémentation de la bibliothèque JavaScript Web SDK (`alloy.js`), y compris les concepts de base, l’installation, la configuration et les commandes. Pour connaître l’extension de balise Web SDK dans l’interface utilisateur de collecte de données, reportez-vous à la section [Extension de balise Web SDK](/help/tags/extensions/client/web-sdk/overview.md).
 
 Web SDK envoie les données indépendamment de la solution (XDM) à Experience Platform Edge Network, qui les mappe ensuite aux formats et destinations spécifiques à la solution et les envoie en temps réel.
-
-Vous pouvez implémenter le SDK Web de deux manières :
-
-* Implémentation manuelle à l’aide de la bibliothèque JavaScript [&#128279;](install/library.md) (cette documentation)
-* L’extension de balise [&#x200B; Web SDK &#x200B;](/help/tags/extensions/client/web-sdk/overview.md)
-
-Ce guide comprend des instructions pour interagir avec les solutions Experience Cloud à l’aide de la bibliothèque JavaScript Web SDK.
 
 ## Experience Platform Edge Network {#edge-network}
 
@@ -37,7 +30,7 @@ Côté serveur, une passerelle de périphérie unifiée et un framework de servi
 
 Un système de périphérie consolidé vous permet de gérer des campagnes publicitaires, marketing et de personnalisation sur tous les canaux. Il réduit le coût total de possession et prend en charge divers types de données, ce qui vous permet de mapper votre modèle de données pour l’utiliser avec plusieurs produits Experience Cloud.
 
->[!VIDEO](https://video.tv.adobe.com/v/37259?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
 ## Bibliothèques remplacées par le SDK Web {#sdks}
 
