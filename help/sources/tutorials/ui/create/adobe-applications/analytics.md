@@ -2,9 +2,9 @@
 title: Connexion D’Adobe Analytics À Experience Platform
 description: Découvrez comment importer les données de votre suite de rapports Adobe Analytics dans Experience Platform
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 789d00912edd0ce8e2871b7e22445a043868ccf5
+source-git-commit: dfc8a1d51e6dd25210a0b6f24dad4d0f00052414
 workflow-type: tm+mt
-source-wordcount: '2745'
+source-wordcount: '2754'
 ht-degree: 14%
 
 ---
@@ -26,7 +26,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 Il est important de comprendre les termes clés suivants utilisés dans ce document :
 
 * **Attribut standard :** les attributs standard sont tous les attributs prédéfinis par Adobe. Ils renferment la même signification pour tous les clients et sont disponibles dans les groupes de champs des données sources et du schéma Analytics d’Analytics .
-* **Attribut personnalisé** : les attributs personnalisés sont tout attribut de la hiérarchie des variables personnalisées dans Analytics. Les attributs personnalisés sont utilisés dans une implémentation d’Adobe Analytics pour capturer des informations spécifiques dans une suite de rapports. Leur utilisation peut varier d’une suite de rapports à l’autre. Les attributs personnalisés comprennent les eVars, les props et les listes. Pour plus d’informations sur les eVars[&#x200B; consultez la &#x200B;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=fr)documentation Analytics sur les variables de conversion .
+* **Attribut personnalisé** : les attributs personnalisés sont tout attribut de la hiérarchie des variables personnalisées dans Analytics. Les attributs personnalisés sont utilisés dans une implémentation d’Adobe Analytics pour capturer des informations spécifiques dans une suite de rapports. Leur utilisation peut varier d’une suite de rapports à l’autre. Les attributs personnalisés comprennent les eVars, les props et les listes. Pour plus d’informations sur les eVars[ consultez la ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)documentation Analytics sur les variables de conversion .
 * **Tout attribut dans les groupes de champs personnalisés :** les attributs qui proviennent de groupes de champs créés par les clients sont tous définis par l’utilisateur et sont considérés comme des attributs ni standard ni personnalisés.
 
 ## Parcourir le catalogue des sources
@@ -55,7 +55,7 @@ Vous pouvez ingérer des suites de rapports à partir de n’importe quelle rég
 
 Il est possible d’établir plusieurs connexions entrantes pour importer plusieurs suites de rapports dans le même sandbox. Si les suites de rapports comportent des schémas différents pour les variables (telles que des eVars ou des événements), elles doivent être mappées à des champs spécifiques dans les groupes de champs personnalisés et éviter les conflits de données à l’aide de [Préparation de données](../../../../../data-prep/ui/mapping.md). Les suites de rapports ne peuvent être ajoutées qu’à un seul sandbox.
 
-Sélectionnez **[!UICONTROL Report suite]** puis utilisez l’interface *[!UICONTROL Analytics source add data]* pour parcourir la liste et identifier la suite de rapports Analytics à ingérer dans Experience Platform. Sélectionnez **[!UICONTROL Next]** pour continuer.
+Sélectionnez **[!UICONTROL Report suite]** puis utilisez l’interface *[!UICONTROL Analytics source add data]* pour parcourir la liste et identifier la suite de rapports Analytics à ingérer dans Experience Platform. Vous pouvez également rechercher une suite de rapports spécifique. Sélectionnez **[!UICONTROL Next]** pour continuer.
 
 ![Une suite de rapports Analytics est sélectionnée pour l’ingestion et le bouton « Suivant » est mis en surbrillance](../../../../images/tutorials/create/analytics/add-data.png)
 
@@ -117,7 +117,7 @@ Experience Platform détecte automatiquement tout conflit de nom dans votre mapp
 >id="platform_analytics_import_mapping"
 >title="Télécharger le modèle"
 >abstract="Téléchargez le modèle csv pour effectuer le mappage hors ligne."
->additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/data-prep/ui/mapping#import-mapping" text="Importer le mapping"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/ui/mapping#import-mapping" text="Importer le mapping"
 
 Vous pouvez utiliser les fonctions de préparation de données pour ajouter de nouveaux mappages personnalisés ou des champs calculés pour les attributs personnalisés. Pour ajouter des mappages personnalisés, sélectionnez **[!UICONTROL Custom]**.
 
@@ -325,5 +325,5 @@ La vidéo suivante est destinée à vous aider à comprendre l’ingestion de do
 >
 > Lʼinterface utilisateur de [!DNL Experience Platform] affichée dans la vidéo suivante est obsolète. Consultez la documentation pour découvrir les dernières captures dʼécran et fonctionnalités de lʼinterface utilisateur.
 
->[!VIDEO](https://video.tv.adobe.com/v/3430255?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
 

@@ -2,10 +2,10 @@
 description: Découvrez comment créer un connecteur source Adobe Analytics dans l’interface utilisateur pour importer les données de classification dans Adobe Experience Platform.
 title: Créer une connexion Adobe Analytics Source pour les données de classification dans l’interface utilisateur
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: dfc8a1d51e6dd25210a0b6f24dad4d0f00052414
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 15%
+source-wordcount: '508'
+ht-degree: 16%
 
 ---
 
@@ -31,29 +31,29 @@ Le connecteur source des classifications Analytics nécessite que vos données a
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Dans la catégorie *Applications Adobe*, sélectionnez **[!UICONTROL Adobe Analytics]**, puis **[!UICONTROL Configurer]**.
+Dans la catégorie *Applications Adobe*, sélectionnez **[!UICONTROL Adobe Analytics]**, puis **[!UICONTROL Set up]**.
 
 >[!TIP]
 >
->Les sources du catalogue de sources affichent l’option **[!UICONTROL Configurer]** s’il n’existe aucun compte authentifié. Une fois un compte authentifié, l’option est remplacée par **[!UICONTROL Ajouter des données]**.
+>Les sources du catalogue de sources affichent l’option **[!UICONTROL Set up]** s’il n’existe aucun compte authentifié. Une fois qu’un compte est authentifié, l’option est remplacée par **[!UICONTROL Add data]**.
 
 ![Le catalogue des sources dans l’interface utilisateur d’Experience Platform avec la source Adobe Analytics sélectionnée.](../../../../images/tutorials/create/classifications/catalog.png)
 
-Sélectionnez ensuite [!UICONTROL Classifications] puis sélectionnez les jeux de données de classifications à ingérer dans Experience Platform.
+Sélectionnez ensuite [!UICONTROL Classifications], puis sélectionnez les jeux de données de classifications à ingérer dans Experience Platform. Vous pouvez également utiliser la fonction de recherche pour filtrer et sélectionner des classifications spécifiques.
 
-Vous pouvez sélectionner jusqu’à 30 jeux de données de classifications différents à importer dans Experience Platform. Tous les jeux de données que vous sélectionnez s’affichent dans le rail de droite. Lorsque vous avez terminé, sélectionnez [!UICONTROL Suivant] pour continuer.
+Vous pouvez sélectionner jusqu’à 30 jeux de données de classifications différents à importer dans Experience Platform. Tous les jeux de données que vous sélectionnez s’affichent dans le rail de droite. Lorsque vous avez terminé, sélectionnez [!UICONTROL Next] pour continuer.
 
 ![Page de classifications avec plusieurs jeux de données de classification sélectionnés.](../../../../images/tutorials/create/classifications/select.png)
 
 ## Vérifier vos classifications
 
-L’étape **[!UICONTROL Réviser]** s’affiche, vous permettant de réviser les jeux de données de classifications sélectionnés avant leur création. Les détails sont regroupés dans les catégories suivantes :
+L’étape **[!UICONTROL Review]** s’affiche, vous permettant de passer en revue les jeux de données de classifications sélectionnés avant leur création. Les détails sont regroupés dans les catégories suivantes :
 
-* **[!UICONTROL Connexion]** : affiche la plateforme source et le statut de la connexion.
-* **[!UICONTROL Type de données]** : affiche le nombre de classifications sélectionnées.
-* **[!UICONTROL Planification]** : affiche la fréquence de synchronisation des données de classification. **Remarque** : les données de classification sont mises à jour chaque semaine.
+* **[!UICONTROL Connection]** : affiche la plateforme source et le statut de la connexion.
+* **[!UICONTROL Data type]** : affiche le nombre de classifications sélectionnées.
+* **[!UICONTROL Scheduling]** : affiche la fréquence de synchronisation des données de classification. **Remarque** : les données de classification sont mises à jour chaque semaine.
 
-Une fois que vous avez révisé votre flux de données, cliquez sur **[!UICONTROL Terminer]** et patientez quelques instants le temps que le flux de données soit créé.
+Une fois que vous avez révisé votre flux de données, cliquez sur **[!UICONTROL Finish]** et patientez quelques instants le temps que le flux de données soit créé.
 
 ![Page de révision des données de classification Adobe Analytics.](../../../../images/tutorials/create/classifications/review.png)
 
@@ -63,4 +63,4 @@ Ce tutoriel vous a permis de créer un connecteur de données de classifications
 
 * [Présentation du connecteur source Adobe Analytics](../../../../connectors/adobe-applications/analytics.md)
 * [Créer une connexion source Analytics pour les données de suite de rapports dans l’interface utilisateur](./analytics.md)
-* [À propos des classifications](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html?lang=fr)
+* [À propos des classifications](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
