@@ -63,4 +63,4 @@ Ce tutoriel vous a permis de créer un connecteur de données de classifications
 
 * [Présentation du connecteur source Adobe Analytics](../../../../connectors/adobe-applications/analytics.md)
 * [Créer une connexion source Analytics pour les données de suite de rapports dans l’interface utilisateur](./analytics.md)
-* [À propos des classifications](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
+* [À propos des classifications](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html?lang=fr)
