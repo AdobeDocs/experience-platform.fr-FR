@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Point d’entrée de l’API Descriptors
 description: Le point d’entrée /descriptors dans l’API Schema Registry vous permet de gérer par programmation les descripteurs XDM dans votre application d’expérience.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2916'
+source-wordcount: '2882'
 ht-degree: 25%
 
 ---
@@ -23,22 +23,18 @@ Dans Adobe Experience Platform, un descripteur est une métadonnée qui ajoute d
 Il existe plusieurs types de descripteurs, notamment :
 
 - [Descripteur d’identité](#identity-descriptor) - marque un champ comme identité
-- [descripteur de clé de Principal &#x200B;](#primary-key-descriptor) - applique l&#39;unicité
+- [descripteur de clé de Principal ](#primary-key-descriptor) - applique l&#39;unicité
 - [Descripteur de relation](#relationship-descriptor) - Définit une jointure de clé étrangère.
-- [&#x200B; Autre descripteur d’informations d’affichage &#x200B;](#friendly-name) - permet de renommer un champ de l’interface utilisateur
+- [ Autre descripteur d’informations d’affichage ](#friendly-name) - permet de renommer un champ de l’interface utilisateur
 - Descripteurs [Version](#version-descriptor) et [horodatage](#timestamp-descriptor) : suivez l’ordre des événements et la détection des modifications
 
 Le point d’entrée `/descriptors` de l’API [!DNL Schema Registry] vous permet de gérer par programmation les descripteurs dans votre application d’expérience.
 
 ## Commencer
 
-Le point d’entrée utilisé dans ce guide fait partie de l’API [[!DNL Schema Registry] &#x200B;](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
+Le point d’entrée utilisé dans ce guide fait partie de l’API [[!DNL Schema Registry] ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
-Outre les descripteurs standard, le [!DNL Schema Registry] prend en charge les types de descripteurs pour les schémas relationnels, tels que **clé primaire**, **version** et **horodatage**. Ils assurent l’unicité, contrôlent le contrôle de version et définissent des champs de série temporelle au niveau du schéma. Si vous ne connaissez pas les schémas relationnels, consultez la présentation de Data Mirror [&#128279;](../data-mirror/overview.md) et la [référence technique des schémas relationnels](../schema/relational.md) avant de continuer.
-
->[!NOTE]
->
->Dans les versions antérieures de la documentation de Adobe Experience Platform, les schémas relationnels étaient auparavant appelés schémas basés sur des modèles. La fonctionnalité de descripteur et les points d’entrée de l’API restent inchangés. Seule la terminologie a été mise à jour pour plus de clarté.
+Outre les descripteurs standard, le [!DNL Schema Registry] prend en charge les types de descripteurs pour les schémas relationnels, tels que **clé primaire**, **version** et **horodatage**. Ils assurent l’unicité, contrôlent le contrôle de version et définissent des champs de série temporelle au niveau du schéma. Si vous ne connaissez pas les schémas relationnels, consultez la présentation de Data Mirror [](../data-mirror/overview.md) et la [référence technique des schémas relationnels](../schema/relational.md) avant de continuer.
 
 >[!IMPORTANT]
 >
@@ -631,7 +627,7 @@ Les descripteurs d’identité de référence fournissent un contexte de référ
 
 #### Descripteur de champ obsolète
 
-Vous pouvez [rendre obsolète un champ dans une ressource XDM personnalisée](../tutorials/field-deprecation-api.md#custom) en ajoutant un attribut `meta:status` défini sur `deprecated` au champ en question. Toutefois, si vous souhaitez rendre obsolètes les champs fournis par les ressources XDM standard dans vos schémas, vous pouvez affecter un descripteur de champ obsolète au schéma en question pour obtenir le même effet. À l’aide de l’en-tête de [&#x200B; `Accept` correct &#x200B;](../tutorials/field-deprecation-api.md#verify-deprecation), vous pouvez ensuite afficher les champs standard obsolètes d’un schéma lors de la recherche dans l’API.
+Vous pouvez [rendre obsolète un champ dans une ressource XDM personnalisée](../tutorials/field-deprecation-api.md#custom) en ajoutant un attribut `meta:status` défini sur `deprecated` au champ en question. Toutefois, si vous souhaitez rendre obsolètes les champs fournis par les ressources XDM standard dans vos schémas, vous pouvez affecter un descripteur de champ obsolète au schéma en question pour obtenir le même effet. À l’aide de l’en-tête de [ `Accept` correct ](../tutorials/field-deprecation-api.md#verify-deprecation), vous pouvez ensuite afficher les champs standard obsolètes d’un schéma lors de la recherche dans l’API.
 
 ```json
 {

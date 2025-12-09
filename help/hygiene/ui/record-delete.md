@@ -2,16 +2,16 @@
 title: Demandes de suppression d’enregistrements (workflow de l’interface utilisateur)
 description: Découvrez comment supprimer des enregistrements dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 83aed6a79d47ee4043a8303ec8f8c8c20482e12a
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2383'
+source-wordcount: '2358'
 ht-degree: 13%
 
 ---
 
 # Demandes de suppression d’enregistrements (workflow de l’interface utilisateur) {#record-delete}
 
-Utilisez l’espace de travail [[!UICONTROL Data Lifecycle] pour supprimer &#x200B;](./overview.md) enregistrements dans Adobe Experience Platform en fonction de leur identité principale. Ces enregistrements peuvent être liés à des consommateurs individuels ou à toute autre entité incluse dans le graphique d’identité.
+Utilisez l’espace de travail [[!UICONTROL Data Lifecycle] pour supprimer ](./overview.md) enregistrements dans Adobe Experience Platform en fonction de leur identité principale. Ces enregistrements peuvent être liés à des consommateurs individuels ou à toute autre entité incluse dans le graphique d’identité.
 
 >[!IMPORTANT]
 >
@@ -88,7 +88,7 @@ Comme tous les champs d’identité d’Experience Platform, un espace de noms d
 >
 >Si vous ne connaissez pas l’espace de noms d’identité d’un jeu de données spécifique, vous pouvez le trouver dans l’interface utilisateur d’Experience Platform. Dans l’espace de travail **[!UICONTROL Datasets]** , sélectionnez le jeu de données en question dans la liste. Sur la page des détails du jeu de données, passez la souris sur le nom du schéma du jeu de données dans le rail de droite. L’espace de noms d’identité s’affiche avec le nom et la description du schéma.
 >
->![&#x200B; Tableau de bord Jeux de données avec un jeu de données sélectionné et une boîte de dialogue de schéma ouverte à partir du panneau des détails du jeu de données. L’identifiant principal du jeu de données est mis en surbrillance.](../images/ui/record-delete/dataset-primary-identity.png)
+>![ Tableau de bord Jeux de données avec un jeu de données sélectionné et une boîte de dialogue de schéma ouverte à partir du panneau des détails du jeu de données. L’identifiant principal du jeu de données est mis en surbrillance.](../images/ui/record-delete/dataset-primary-identity.png)
 
 Il existe deux options pour fournir des identités lors de la suppression d’enregistrements :
 
@@ -209,10 +209,6 @@ Une fois la requête soumise, un ordre de travail est créé et s’affiche dans
 
 Si le jeu de données que vous supprimez est basé sur un schéma relationnel, passez en revue les points suivants pour vous assurer que les enregistrements sont supprimés correctement et ne sont pas réingérés en raison d’incohérences entre Experience Platform et votre système source.
 
->[!NOTE]
->
->Les schémas relationnels étaient auparavant appelés schémas basés sur des modèles dans les versions antérieures de la documentation de Adobe Experience Platform. La fonctionnalité et le comportement de suppression restent les mêmes.
-
 ### Comportement de suppression d’enregistrement
 
 Le tableau suivant décrit le comportement des suppressions d’enregistrements sur Experience Platform et les systèmes sources, en fonction de la méthode d’ingestion et de la configuration de la capture de données.
@@ -275,6 +271,6 @@ Pour découvrir comment la capture de données de modification fonctionne avec l
 
 ## Étapes suivantes
 
-Ce document explique comment supprimer des enregistrements dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’exécution d’autres tâches de gestion du cycle de vie des données dans l’interface utilisateur, reportez-vous à la section [&#x200B; Présentation de l’interface utilisateur du cycle de vie des données](./overview.md).
+Ce document explique comment supprimer des enregistrements dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’exécution d’autres tâches de gestion du cycle de vie des données dans l’interface utilisateur, reportez-vous à la section [ Présentation de l’interface utilisateur du cycle de vie des données](./overview.md).
 
-Pour savoir comment supprimer des enregistrements à l’aide de l’API Data Hygiene, reportez-vous au guide de point d’entrée d’ordre de travail [&#128279;](../api/workorder.md).
+Pour savoir comment supprimer des enregistrements à l’aide de l’API Data Hygiene, reportez-vous au guide de point d’entrée d’ordre de travail [](../api/workorder.md).

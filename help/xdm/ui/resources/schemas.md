@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création et modification de schémas dans l’interface utilisateur
 description: Découvrez les bases de la création et de la modification de schémas dans l’interface utilisateur d’Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: dc5ac5427e1eeef47434c3974235a1900d29b085
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '4652'
+source-wordcount: '4635'
 ht-degree: 3%
 
 ---
@@ -36,10 +36,6 @@ Dans l’espace de travail [!UICONTROL Schemas], sélectionnez **[!UICONTROL Cre
 >[!AVAILABILITY]
 >
 >Les schémas Data Mirror et relationnels sont disponibles pour les détenteurs de licence Adobe Journey Optimizer **Campagnes orchestrées**. Ils sont également disponibles en tant que **version limitée** pour les utilisateurs de Customer Journey Analytics, selon votre licence et l’activation des fonctionnalités. Contactez votre représentant Adobe pour obtenir l’accès.
-
->[!NOTE]
->
->Les schémas relationnels étaient auparavant appelés schémas basés sur des modèles dans les versions antérieures de la documentation de Adobe Experience Platform.
 
 Sélectionnez **[!UICONTROL Relational]** pour définir des schémas de style relationnel structurés avec un contrôle précis des enregistrements. Les schémas relationnels prennent en charge l’application des clés primaires, le contrôle de version au niveau des enregistrements et les relations au niveau du schéma par le biais de clés primaires et étrangères. Ils sont également optimisés pour l’ingestion incrémentielle à l’aide de la capture de données de modification et prennent en charge plusieurs modèles de données utilisés dans les implémentations Campaign Orchestration, Data Distiller et B2B.
 
@@ -83,7 +79,7 @@ Ensuite, passez à [définir des clés primaires](../fields/identity.md#define-a
 
 >[!NOTE]
 >
->Une fois enregistré, le champ [!UICONTROL Type] de la barre latérale [!UICONTROL &#x200B; Schema properties] indique qu’il s’agit d’un schéma [!UICONTROL Relational]. Cela est également indiqué dans la barre latérale des détails dans la vue d’inventaire des schémas.
+>Une fois enregistré, le champ [!UICONTROL Type] de la barre latérale [!UICONTROL  Schema properties] indique qu’il s’agit d’un schéma [!UICONTROL Relational]. Cela est également indiqué dans la barre latérale des détails dans la vue d’inventaire des schémas.
 >![Zone de travail de l’éditeur de schémas présentant une structure de schéma relationnel vide avec le type relationnel mis en surbrillance.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### Charger un fichier DDL {#upload-ddl-file}
@@ -125,7 +121,7 @@ Si vous sélectionnez « Type de schéma standard » dans le menu déroulant « 
 
 ![La boîte de dialogue Créer un schéma avec les options de workflow et sélectionnez en surbrillance.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
-### [!BADGE Beta &#x200B;]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
+### [!BADGE Beta ]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
 
 Pour découvrir comment utiliser un algorithme ML afin de recommander une structure de schéma basée sur un fichier csv, consultez le guide de création de schéma assisté par machine learning [machine learning](../ml-assisted-schema-creation.md). Ce guide de l’interface utilisateur se concentre sur le workflow de création manuelle .
 
@@ -275,7 +271,7 @@ Une boîte de dialogue s’affiche, affichant la structure du groupe de champs. 
 Sélectionnez **[!UICONTROL Confirm]** pour mettre à jour la zone de travail et refléter vos champs sélectionnés.
 
 
-![Champs ajoutés &#x200B;](../../images/ui/resources/schemas/fields-added.png)
+![Champs ajoutés ](../../images/ui/resources/schemas/fields-added.png)
 
 ### Comportement des champs lors de la suppression ou de l’obsolescence de champs {#field-removal-deprecation-behavior}
 
@@ -335,7 +331,7 @@ Tout comme pour le workflow des champs standard, vous pouvez également ajouter 
 
 Pour ajouter des champs au niveau racine d’un schéma, sélectionnez l’icône plus (**+**) à côté du nom du schéma dans la zone de travail. Un espace réservé **[!UICONTROL Untitled Field]** apparaît dans la structure du schéma et le rail de droite se met à jour pour afficher les commandes permettant de configurer le champ.
 
-![&#x200B; Champ personnalisé racine &#x200B;](../../images/ui/resources/schemas/root-custom-field.png)
+![ Champ personnalisé racine ](../../images/ui/resources/schemas/root-custom-field.png)
 
 Commencez à saisir le nom du champ que vous souhaitez ajouter et le système lance automatiquement la recherche des champs standard correspondants. Pour créer un champ personnalisé à la place, sélectionnez l’option supérieure avec **([!UICONTROL New Field])** ajouté.
 

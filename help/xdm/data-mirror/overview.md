@@ -5,9 +5,9 @@ title: Présentation de Data Mirror
 description: Découvrez comment Data Mirror permet l’ingestion de modifications au niveau des lignes à partir de bases de données externes dans Adobe Experience Platform à l’aide de schémas relationnels avec une unicité, des relations et un contrôle de version appliqués.
 badge: Disponibilité limitée
 exl-id: bb92c77a-6c7a-47df-885a-794cf55811dd
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1334'
 ht-degree: 1%
 
 ---
@@ -17,10 +17,6 @@ ht-degree: 1%
 >[!AVAILABILITY]
 >
 >Les schémas Data Mirror et relationnels sont disponibles pour les détenteurs de licence Adobe Journey Optimizer **Campagnes orchestrées**. Ils sont également disponibles en tant que **version limitée** pour les utilisateurs de Customer Journey Analytics, selon votre licence et l’activation des fonctionnalités. Contactez votre représentant Adobe pour obtenir l’accès.
-
->[!NOTE]
->
->Les schémas relationnels étaient auparavant appelés schémas basés sur des modèles dans les versions antérieures de la documentation de Adobe Experience Platform. La fonctionnalité reste la même.
 
 Data Mirror est une fonctionnalité de Adobe Experience Platform qui permet l’ingestion de modifications au niveau des lignes à partir de bases de données externes dans le lac de données à l’aide de schémas relationnels. Il préserve les relations de données, applique l’unicité et prend en charge le contrôle de version sans nécessiter de processus d’extraction, de transformation et de chargement (ETL) en amont.
 
@@ -92,7 +88,7 @@ Configurez des connexions de capture de données de modification avec les entrep
 
 * **Modifier la capture de données** : [Activer la capture de données de modification dans les connexions source](../../sources/tutorials/api/change-data-capture.md)
 
-## Cas d&#39;utilisation courants {#use-cases}
+## Cas d’utilisation courants {#use-cases}
 
 Examinez les cas d’utilisation courants répertoriés ci-dessous dans lesquels Data Mirror prend en charge la synchronisation précise des données et la conservation des relations. Chaque scénario montre comment Data Mirror prend en charge les besoins courants de l’entreprise en matière d’analyse, d’orchestration et de conformité.
 

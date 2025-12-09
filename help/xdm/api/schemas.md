@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Point d’entrée de l’API Schemas
 description: Le point d’entrée /schemas de l’API Schema Registry vous permet de gérer les schémas XDM par programmation dans votre application d’expérience.
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: dc5ac5427e1eeef47434c3974235a1900d29b085
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2122'
+source-wordcount: '2091'
 ht-degree: 15%
 
 ---
@@ -287,10 +287,6 @@ Pour ajouter des champs supplémentaires à un schéma, vous pouvez effectuer un
 >
 >Les schémas Data Mirror et relationnels sont disponibles pour les détenteurs de licence Adobe Journey Optimizer **Campagnes orchestrées**. Ils sont également disponibles en tant que **version limitée** pour les utilisateurs de Customer Journey Analytics, selon votre licence et l’activation des fonctionnalités. Contactez votre représentant Adobe pour obtenir l’accès.
 
->[!NOTE]
->
->Les schémas relationnels étaient auparavant appelés schémas basés sur des modèles dans des versions antérieures de la documentation de l’API Adobe Experience Platform. La fonctionnalité reste la même : seule la terminologie a été modifiée pour plus de clarté.
-
 Créez un schéma relationnel en adressant une requête POST au point d’entrée `/schemas`. Les schémas relationnels stockent des données structurées de style relationnel **sans** classes ni groupes de champs. Définissez les champs directement sur le schéma et identifiez le schéma comme relationnel à l’aide d’une balise de comportement logique.
 
 >[!IMPORTANT]
@@ -299,7 +295,7 @@ Créez un schéma relationnel en adressant une requête POST au point d’entré
 
 Créez d’abord le schéma avec `POST /tenant/schemas`. Ajoutez ensuite les descripteurs requis avec l’[API Descriptors (`POST /tenant/descriptors`)](../api/descriptors.md) :
 
-- [descripteur de clé de Principal &#x200B;](../api/descriptors.md#primary-key-descriptor) : un champ de clé primaire doit être au **niveau racine** et **marqué comme requis**.
+- [descripteur de clé de Principal ](../api/descriptors.md#primary-key-descriptor) : un champ de clé primaire doit être au **niveau racine** et **marqué comme requis**.
 - [Descripteur de version](../api/descriptors.md#version-descriptor) : **obligatoire** lorsqu’il existe une clé primaire.
 - [Descripteur de relation](../api/descriptors.md#relationship-descriptor) : facultatif, définit les jointures ; la cardinalité n’est pas appliquée lors de l’ingestion.
 - [Descripteur d’horodatage](../api/descriptors.md#timestamp-descriptor) : pour les schémas de série temporelle, la clé primaire doit être une clé **composite** qui inclut le champ d’horodatage.
@@ -310,7 +306,7 @@ Créez d’abord le schéma avec `POST /tenant/schemas`. Ajoutez ensuite les des
 
 >[!CAUTION]
 >
->Les schémas relationnels ne sont **pas compatibles avec les schémas d’union**. N’appliquez pas la balise `union` à `meta:immutableTags` lorsque vous utilisez des schémas relationnels. Cette configuration est bloquée dans l’interface utilisateur, mais n’est pas actuellement bloquée par l’API. Pour plus d’informations sur le comportement du schéma d’union[&#x200B; consultez le &#x200B;](./unions.md) guide des points d’entrée des unions .
+>Les schémas relationnels ne sont **pas compatibles avec les schémas d’union**. N’appliquez pas la balise `union` à `meta:immutableTags` lorsque vous utilisez des schémas relationnels. Cette configuration est bloquée dans l’interface utilisateur, mais n’est pas actuellement bloquée par l’API. Pour plus d’informations sur le comportement du schéma d’union[ consultez le ](./unions.md) guide des points d’entrée des unions .
 
 **Format d’API**
 
@@ -726,7 +722,7 @@ Une réponse réussie renvoie les détails du schéma mis à jour, indiquant que
 }
 ```
 
-Vous pouvez maintenant afficher l’union pour la classe de ce schéma afin de confirmer que les champs du schéma sont représentés. Pour plus d’informations, consultez le [&#x200B; guide des points d’entrée des unions &#x200B;](./unions.md) .
+Vous pouvez maintenant afficher l’union pour la classe de ce schéma afin de confirmer que les champs du schéma sont représentés. Pour plus d’informations, consultez le [ guide des points d’entrée des unions ](./unions.md) .
 
 ## Supprimer un schéma {#delete}
 

@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;schéma relationnel;schémas relationnels;schéma;schéma;xdm;modèle de données d’expérience;
 solution: Experience Platform
 title: Schémas relationnels
-description: Découvrez les schémas relationnels (anciennement appelés schémas basés sur des modèles) dans Adobe Experience Platform, y compris les fonctionnalités, les champs obligatoires, les relations et les limitations.
+description: Découvrez les schémas relationnels dans Adobe Experience Platform, notamment les fonctionnalités, les champs obligatoires, les relations et les limitations.
 badge: Disponibilité limitée
 exl-id: 397e5937-b892-4fd3-b90e-29ed9229dc69
-source-git-commit: 605c169c9de7a978e6d2f0bdc809371c82cd3280
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1280'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,6 @@ Les schémas relationnels fournissent un modèle de modélisation contrôlé et 
 >
 >Les considérations relatives à la suppression des données s’appliquent à toutes les implémentations de schéma relationnel. Les applications qui utilisent ces schémas doivent comprendre comment les suppressions affectent les jeux de données associés, les exigences de conformité et les processus en aval. Planifiez les scénarios de suppression et examinez les [conseils d’hygiène des données](../../hygiene/ui/record-delete.md#relational-record-delete) avant la mise en œuvre.
 
->[!NOTE]
->
->Dans les versions antérieures de la documentation de Adobe Experience Platform, les schémas relationnels étaient auparavant appelés schémas basés sur des modèles.
-
 Utilisez des schémas relationnels pour :
 
 * Assurer l’intégrité des données à l’aide de clés primaires composites ou à champ unique appliquées.
@@ -38,9 +34,9 @@ Utilisez des schémas relationnels pour :
 
 ## Différences entre les schémas relationnels et les schémas XDM standard
 
-Les schémas XDM standard d’Experience Platform adoptent l’un des trois comportements de données suivants : enregistrement, série temporelle ou ad hoc. Pour obtenir des définitions et des détails, voir [Comportements des données XDM](https://experienceleague.adobe.com/fr/docs/experience-platform/xdm/home#data-behaviors).
+Les schémas XDM standard d’Experience Platform adoptent l’un des trois comportements de données suivants : enregistrement, série temporelle ou ad hoc. Pour obtenir des définitions et des détails, voir [Comportements des données XDM](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors).
 
-Dans le modèle traditionnel, les schémas d’enregistrement et de série temporelle participent aux [schémas d’union](../api/unions.md) (consultez également le guide de l’interface utilisateur du schéma d’union [&#128279;](../../profile/ui/union-schema.md)). Ces schémas évoluent automatiquement à mesure que les [groupes de champs](./composition.md#field-group) partagés sont mis à jour et que les champs personnalisés doivent être imbriqués sous un espace de noms client. Bien que puissant, ce modèle peut ralentir l’intégration, produire des schémas trop complexes avec des champs inutilisés et nécessiter un mappage ou une transformation des données supplémentaires. Ces facteurs augmentent la courbe d’apprentissage et l’effort de maintenance continu.
+Dans le modèle traditionnel, les schémas d’enregistrement et de série temporelle participent aux [schémas d’union](../api/unions.md) (consultez également le guide de l’interface utilisateur du schéma d’union [](../../profile/ui/union-schema.md)). Ces schémas évoluent automatiquement à mesure que les [groupes de champs](./composition.md#field-group) partagés sont mis à jour et que les champs personnalisés doivent être imbriqués sous un espace de noms client. Bien que puissant, ce modèle peut ralentir l’intégration, produire des schémas trop complexes avec des champs inutilisés et nécessiter un mappage ou une transformation des données supplémentaires. Ces facteurs augmentent la courbe d’apprentissage et l’effort de maintenance continu.
 
 Les schémas relationnels suppriment les dépendances de schéma d’union, ce qui élimine les mises à jour automatiques des groupes de champs partagés et permet de définir directement des champs sans restriction d’espace de noms client. Vous avez un contrôle explicite sur les clés primaires, les relations et la conception initiale du schéma, ce qui facilite la modélisation des données en fonction de vos besoins au moment de la création.
 
@@ -189,9 +185,9 @@ Toutes les applications qui utilisent des schémas relationnels doivent tenir co
 * **Cohérence des données** : les jeux de données associés doivent maintenir la cohérence pendant les opérations de suppression
 * **Planification des suppressions** : tenez compte des impacts en aval sur tous les jeux de données et applications connectés pendant la phase de conception
 
-Pour obtenir des conseils d’implémentation, voir [&#x200B; Suppression d’enregistrements des jeux de données en fonction de schémas relationnels &#x200B;](../../hygiene/ui/record-delete.md#relational-record-delete).
+Pour obtenir des conseils d’implémentation, voir [ Suppression d’enregistrements des jeux de données en fonction de schémas relationnels ](../../hygiene/ui/record-delete.md#relational-record-delete).
 
-## Restrictions et considérations {#limitations}
+## Limitations et considérations {#limitations}
 
 Examinez les limites suivantes avant d’utiliser des schémas relationnels :
 
