@@ -77,7 +77,7 @@ Les profils moins identifiés peuvent n’être constitués que de signaux compo
 
 Au fur et à mesure qu’un profil croît, il devient un solide référentiel des informations personnelles, des informations d’identification, des coordonnées et des préférences de communication d’une personne.
 
-Pour plus d’informations sur la structure et le cas d’utilisation des champs fournis par la classe[[!UICONTROL XDM Individual Profile] consultez le guide de référence des ](./classes/individual-profile.md) .
+Pour plus d’informations sur la structure et le cas d’utilisation des champs fournis par la classe[[!UICONTROL XDM Individual Profile] consultez le guide de référence des &#x200B;](./classes/individual-profile.md) .
 
 ### [!UICONTROL XDM ExperienceEvent] {#xdm-experience-event}
 
@@ -89,7 +89,7 @@ Bien qu’il ne soit pas facile de classer tous les événements de toutes les s
 
 ![Infographie du Parcours client visualisée avec les événements d’expérience au fil du temps.](images/overview/experience-event-journey.png)
 
-Pour plus d’informations sur la structure et le cas d’utilisation des champs fournis par la classe[[!UICONTROL XDM ExperienceEvent] consultez le guide de référence des ](./classes/experienceevent.md) .
+Pour plus d’informations sur la structure et le cas d’utilisation des champs fournis par la classe[[!UICONTROL XDM ExperienceEvent] consultez le guide de référence des &#x200B;](./classes/experienceevent.md) .
 
 ## Schémas XDM et services Experience Platform {#schemas-and-platform-services}
 
@@ -111,7 +111,7 @@ Pour plus d’informations, consultez la [présentation du service de catalogue]
 >
 >Les schémas Data Mirror et relationnels sont disponibles pour les détenteurs de licence Adobe Journey Optimizer **Campagnes orchestrées**. Ils sont également disponibles en tant que **version limitée** pour les utilisateurs de Customer Journey Analytics, selon votre licence et l’activation des fonctionnalités. Contactez votre représentant Adobe pour obtenir l’accès.
 
-Data Mirror est une fonctionnalité de Adobe Experience Platform qui permet une synchronisation avancée des bases de données à l’aide de schémas relationnels. Pour une présentation complète des fonctionnalités et des cas d’utilisation de Data Mirror, consultez la présentation de Data Mirror [](./data-mirror/overview.md).
+Data Mirror est une fonctionnalité de Adobe Experience Platform qui permet une synchronisation avancée des bases de données à l’aide de schémas relationnels. Pour une présentation complète des fonctionnalités et des cas d’utilisation de Data Mirror, consultez la présentation de Data Mirror [&#128279;](./data-mirror/overview.md).
 
 Data Mirror fonctionne par le biais de schémas relationnels, qui sont conçus pour des modèles de données structurés de style relationnel. Ils appliquent des clés primaires, prennent en charge les identifiants de version et définissent des relations schéma à schéma à l’aide de clés primaires et étrangères. Contrairement aux schémas XDM standard, ils ne nécessitent pas de classes ou de groupes de champs et sont optimisés pour les workflows de capture de données de modification.
 
@@ -132,7 +132,7 @@ Pour créer un schéma relationnel, sélectionnez **[!UICONTROL Relational]** lo
 
 Pour obtenir des instructions détaillées et des conseils de cas d’utilisation, voir :
 
-* [Présentation de Data Mirror ](./data-mirror/overview.md) - Fonctionnalités, cas d’utilisation et planification de l’implémentation
+* [Présentation de Data Mirror &#x200B;](./data-mirror/overview.md) - Fonctionnalités, cas d’utilisation et planification de l’implémentation
 * [Référence technique du schéma relationnel](./schema/relational.md) - Spécifications et contraintes techniques
 * [Tutoriel sur l’interface utilisateur](./ui/resources/schemas.md#create-relational-schema)
 * [Tutoriel sur les API](./api/schemas.md#create-relational-schema)

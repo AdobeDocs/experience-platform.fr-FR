@@ -295,7 +295,7 @@ Créez un schéma relationnel en adressant une requête POST au point d’entré
 
 Créez d’abord le schéma avec `POST /tenant/schemas`. Ajoutez ensuite les descripteurs requis avec l’[API Descriptors (`POST /tenant/descriptors`)](../api/descriptors.md) :
 
-- [descripteur de clé de Principal ](../api/descriptors.md#primary-key-descriptor) : un champ de clé primaire doit être au **niveau racine** et **marqué comme requis**.
+- [descripteur de clé de Principal &#x200B;](../api/descriptors.md#primary-key-descriptor) : un champ de clé primaire doit être au **niveau racine** et **marqué comme requis**.
 - [Descripteur de version](../api/descriptors.md#version-descriptor) : **obligatoire** lorsqu’il existe une clé primaire.
 - [Descripteur de relation](../api/descriptors.md#relationship-descriptor) : facultatif, définit les jointures ; la cardinalité n’est pas appliquée lors de l’ingestion.
 - [Descripteur d’horodatage](../api/descriptors.md#timestamp-descriptor) : pour les schémas de série temporelle, la clé primaire doit être une clé **composite** qui inclut le champ d’horodatage.
@@ -306,7 +306,7 @@ Créez d’abord le schéma avec `POST /tenant/schemas`. Ajoutez ensuite les des
 
 >[!CAUTION]
 >
->Les schémas relationnels ne sont **pas compatibles avec les schémas d’union**. N’appliquez pas la balise `union` à `meta:immutableTags` lorsque vous utilisez des schémas relationnels. Cette configuration est bloquée dans l’interface utilisateur, mais n’est pas actuellement bloquée par l’API. Pour plus d’informations sur le comportement du schéma d’union[ consultez le ](./unions.md) guide des points d’entrée des unions .
+>Les schémas relationnels ne sont **pas compatibles avec les schémas d’union**. N’appliquez pas la balise `union` à `meta:immutableTags` lorsque vous utilisez des schémas relationnels. Cette configuration est bloquée dans l’interface utilisateur, mais n’est pas actuellement bloquée par l’API. Pour plus d’informations sur le comportement du schéma d’union[&#x200B; consultez le &#x200B;](./unions.md) guide des points d’entrée des unions .
 
 **Format d’API**
 
@@ -722,7 +722,7 @@ Une réponse réussie renvoie les détails du schéma mis à jour, indiquant que
 }
 ```
 
-Vous pouvez maintenant afficher l’union pour la classe de ce schéma afin de confirmer que les champs du schéma sont représentés. Pour plus d’informations, consultez le [ guide des points d’entrée des unions ](./unions.md) .
+Vous pouvez maintenant afficher l’union pour la classe de ce schéma afin de confirmer que les champs du schéma sont représentés. Pour plus d’informations, consultez le [&#x200B; guide des points d’entrée des unions &#x200B;](./unions.md) .
 
 ## Supprimer un schéma {#delete}
 
