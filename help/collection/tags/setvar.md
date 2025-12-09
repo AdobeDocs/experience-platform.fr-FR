@@ -1,9 +1,9 @@
 ---
 title: setVar()
 description: Définit une valeur que vous pouvez récupérer ultérieurement à l’aide de getVar().
-source-git-commit: 6f8bdfd09023ea48962a40a9539afe017bc108cc
+source-git-commit: 54c32803136bf37a13bb9ca14b1d1c7b09a2041c
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '208'
 ht-degree: 0%
 
 ---
@@ -67,3 +67,7 @@ _satellite.getVar('title'); // Blinding Light
 _satellite.getVar('category'); // Game
 _satellite.getVar('genre'); // Tower defense
 ```
+
+>[!NOTE]
+>
+>Évitez d’utiliser des points (`.`) lors de la définition de noms de variable à l’aide de cette méthode. La méthode `getVar()` ne reconnaît pas les variables qui contiennent des périodes définies à l’aide de `setVar()`. Toutefois, `getVar()` _reconnaît_ les éléments de données qui utilisent des périodes lorsqu’ils sont définis dans l’interface utilisateur des balises.
