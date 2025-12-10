@@ -22,7 +22,7 @@ Web SDK prend en charge les normes suivantes :
    1. Le schéma Événement d’expérience contient le groupe de champs de consentement [IAB TCF 2.0](/help/xdm/field-groups/event/iab.md).
    1. Vous incluez les informations de consentement IAB dans l’événement [objet XDM](sendevent/xdm.md). Le SDK Web n’inclut pas automatiquement les informations de consentement lors de l’envoi des données d’événement.
 
-Lors de l’utilisation de cette commande, le SDK Web écrit les préférences de l’utilisateur dans le cookie [`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk). Ce cookie est défini quelles que soient les préférences de consentement du visiteur, car il stocke ses préférences de consentement. La prochaine fois que l’utilisateur charge votre site web dans le navigateur , le SDK récupère ces préférences persistantes afin de déterminer si des événements peuvent être envoyés à Adobe.
+Lors de l’utilisation de cette commande, le SDK Web écrit les préférences de l’utilisateur dans le cookie [`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/fr/docs/core-services/interface/data-collection/cookies/web-sdk). Ce cookie est défini quelles que soient les préférences de consentement du visiteur, car il stocke ses préférences de consentement. La prochaine fois que l’utilisateur charge votre site web dans le navigateur , le SDK récupère ces préférences persistantes afin de déterminer si des événements peuvent être envoyés à Adobe.
 
 Adobe vous recommande de stocker les préférences de boîte de dialogue de consentement séparément du consentement de Web SDK. Le SDK Web ne permet pas de récupérer le consentement. Pour vous assurer que les préférences utilisateur restent synchronisées avec le SDK, vous pouvez appeler la commande `setConsent` à chaque chargement de page. Web SDK effectue uniquement un appel au serveur lorsque le consentement est modifié.
 
@@ -51,7 +51,7 @@ Utilisés conjointement, ces paramètres peuvent donner lieu à différents rés
 | `out` | `out` | Non | Oui |
 | `out` | Non défini | Non | Non |
 
-Voir [Cookies Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) dans le guide des services principaux pour obtenir une liste complète des cookies pouvant être définis.
+Voir [Cookies Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/fr/docs/core-services/interface/data-collection/cookies/web-sdk) dans le guide des services principaux pour obtenir une liste complète des cookies pouvant être définis.
 
 ## Utilisation de la commande `setConsent`
 
