@@ -2,10 +2,10 @@
 title: setConsent
 description: Utilisé sur chaque page pour suivre les préférences de consentement de vos utilisateurs.
 exl-id: d01a6ef1-4fa7-4a60-a3a1-19568b4e0d23
-source-git-commit: 364b9adc406f732ea5ba450730397c4ce1bf03cf
+source-git-commit: 66105ca19ff1c75f1185b08b70634b7d4a6fd639
 workflow-type: tm+mt
-source-wordcount: '1289'
-ht-degree: 3%
+source-wordcount: '1117'
+ht-degree: 2%
 
 ---
 
@@ -22,7 +22,7 @@ Web SDK prend en charge les normes suivantes :
    1. Le schéma Événement d’expérience contient le groupe de champs de consentement [IAB TCF 2.0](/help/xdm/field-groups/event/iab.md).
    1. Vous incluez les informations de consentement IAB dans l’événement [objet XDM](sendevent/xdm.md). Le SDK Web n’inclut pas automatiquement les informations de consentement lors de l’envoi des données d’événement.
 
-Après avoir utilisé cette commande, le SDK Web écrit les préférences de l’utilisateur dans un cookie. La prochaine fois que l’utilisateur charge votre site web dans le navigateur , le SDK récupère ces préférences persistantes afin de déterminer si des événements peuvent être envoyés à Adobe.
+Lors de l’utilisation de cette commande, le SDK Web écrit les préférences de l’utilisateur dans le cookie [`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk). Ce cookie est défini quelles que soient les préférences de consentement du visiteur, car il stocke ses préférences de consentement. La prochaine fois que l’utilisateur charge votre site web dans le navigateur , le SDK récupère ces préférences persistantes afin de déterminer si des événements peuvent être envoyés à Adobe.
 
 Adobe vous recommande de stocker les préférences de boîte de dialogue de consentement séparément du consentement de Web SDK. Le SDK Web ne permet pas de récupérer le consentement. Pour vous assurer que les préférences utilisateur restent synchronisées avec le SDK, vous pouvez appeler la commande `setConsent` à chaque chargement de page. Web SDK effectue uniquement un appel au serveur lorsque le consentement est modifié.
 
@@ -34,15 +34,13 @@ La commande `setConsent` utilise uniquement le `ECID` du mappage d’identités,
 
 Web SDK propose deux commandes de configuration de consentement complémentaires :
 
-* [`defaultConsent`](configure/defaultconsent.md) : cette commande est destinée à capturer les préférences de consentement des clients Adobe utilisant Web SDK.
-* [`setConsent`](setconsent.md) : cette commande est destinée à capturer les préférences de consentement des visiteurs de votre site.
+* [`defaultConsent`](configure/defaultconsent.md) : cette commande définit automatiquement la préférence de consentement par défaut du visiteur avant d’appeler `setConsent`.
+* `setConsent` (page active) : cette commande définit explicitement la préférence de consentement du visiteur.
 
-Utilisés conjointement, ces paramètres peuvent donner lieu à différents résultats de collecte de données et de définition de cookies, en fonction de leurs valeurs configurées.
-
-Consultez le tableau ci-dessous pour comprendre à quel moment la collecte de données a lieu et quand les cookies sont définis, en fonction des paramètres de consentement.
+Utilisés conjointement, ces paramètres peuvent donner lieu à différents résultats de collecte de données et de configuration des cookies, en fonction de leurs valeurs configurées :
 
 | `defaultConsent` | `setConsent` | Collecte de données | Web SDK définit les cookies de navigateur |
-|---------|----------|---------|---------|
+| --- | --- | --- | --- |
 | `in` | `in` | Oui | Oui |
 | `in` | `out` | Non | Oui |
 | `in` | Non défini | Oui | Oui |
@@ -53,16 +51,9 @@ Consultez le tableau ci-dessous pour comprendre à quel moment la collecte de do
 | `out` | `out` | Non | Oui |
 | `out` | Non défini | Non | Non |
 
-Les cookies suivants sont définis lorsque la configuration du consentement le permet :
+Voir [Cookies Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) dans le guide des services principaux pour obtenir une liste complète des cookies pouvant être définis.
 
-| Nom | Âge max. | Description |
-|---|---|---|
-| **`AMCV_###@AdobeOrg`** | 34128000 (395 jours) | Présent lorsque le [`idMigrationEnabled`](configure/idmigrationenabled.md) est activé. Cela s’avère utile lors de la transition vers Web SDK lorsque certaines parties du site utilisent encore `visitor.js`. |
-| **`Demdex cookie`** | 15552000 (180 jours) | Présent si la synchronisation des identifiants est activée. Audience Manager définit ce cookie pour attribuer un identifiant unique à un visiteur du site. Le cookie demdex aide Audience Manager à effectuer des fonctions de base, telles que l’identification des visiteurs, la synchronisation des identifiants, la segmentation, la modélisation, le compte rendu des performances, etc. |
-| **`kndctr_orgid_cluster`** | 1 800 (30 minutes) | Stocke la région Edge Network qui répond aux demandes de l’utilisateur actuel. La région est utilisée dans le chemin de l’URL afin que l’Edge Network puisse acheminer la requête vers la bonne région. Si un utilisateur se connecte avec une adresse IP différente ou dans une session différente, la requête est à nouveau acheminée vers la région la plus proche. |
-| **`kndct_orgid_identity`** | 34128000 (395 jours) | Stocke l’ECID, ainsi que d’autres informations relatives à l’ECID. |
-| **`kndctr_orgid_consent`** | 15552000 (180 jours) | Stocke la préférence de consentement des utilisateurs pour le site web. |
-| **`s_ecid`** | 63115200 (2 ans) | Contient une copie de l’Experience Cloud ID ([!DNL ECID]) ou du MID. Le MID est stocké dans une paire clé-valeur qui suit la syntaxe suivante, `s_ecid=MCMID\|<ECID>`. |
+## Utilisation de la commande `setConsent`
 
 Exécutez la commande `setConsent` lors de l’appel de votre instance configurée de Web SDK. Vous pouvez inclure les objets suivants dans cette commande :
 

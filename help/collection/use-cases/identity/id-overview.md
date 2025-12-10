@@ -2,9 +2,9 @@
 title: Données d’identité dans le SDK Web
 description: Découvrez comment récupérer et gérer les Adobe Experience Cloud ID (ECID) à l’aide de Adobe Experience Platform Web SDK.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 66105ca19ff1c75f1185b08b70634b7d4a6fd639
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1559'
 ht-degree: 1%
 
 ---
@@ -22,20 +22,20 @@ Le SDK Web attribue et suit les [!DNL ECIDs] à l’aide de cookies, avec plusie
 Lorsqu’un nouvel utilisateur arrive sur votre site web, le service d’identités [Adobe Experience Cloud](/help/identity-service/home.md) tente de définir un cookie d’identification d’appareil pour cet utilisateur.
 
 * Pour les nouveaux visiteurs, une [!DNL ECID] est générée et renvoyée dans la première réponse d’Experience Platform Edge Network.
-* Pour les visiteurs réguliers, la [!DNL ECID] est récupérée à partir du cookie `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` et ajoutée à la payload de la requête par Edge Network.
+* Pour les visiteurs réguliers, la [!DNL ECID] est récupérée à partir du cookie [`kndctr_<orgId>_identity`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) et ajoutée à la payload de la requête par Edge Network.
 
-Une fois le cookie contenant le [!DNL ECID] défini, chaque requête suivante générée par le SDK Web inclut un [!DNL ECID] codé dans le cookie `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity`.
+Une fois le cookie contenant le [!DNL ECID] défini, chaque requête suivante générée par le SDK Web inclut un [!DNL ECID] codé dans le cookie `kndctr_<orgId>_identity`.
 
 Lors de l’utilisation de cookies pour l’identification d’un appareil, vous avez deux manières d’interagir avec Edge Network :
 
 1. Créez un CNAME sur votre propre domaine qui pointe vers `adobedc.net`. Cette méthode est appelée [collecte de données propriétaire](#first-party).
-1. Envoyez directement les données au `adobedc.net` de domaine Edge Network. Cette méthode est appelée [&#x200B; collecte de données tierce &#x200B;](#third-party).
+1. Envoyez directement les données au `adobedc.net` de domaine Edge Network. Cette méthode est appelée [ collecte de données tierce ](#third-party).
 
 Comme expliqué dans les sections ci-dessous, la méthode de collecte de données que vous choisissez d’utiliser a un impact direct sur la durée de vie des cookies dans les navigateurs.
 
 ## Suivi des identifiants CORE à l’aide de Web SDK {#tracking-coreid-web-sdk}
 
-Lors de l’utilisation de Google Chrome avec des cookies tiers activés et qu’aucun cookie `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` n’est défini, la première requête Edge Network passe par un domaine `demdex.net`, qui définit un cookie demdex. Ce cookie contient un [!DNL CORE ID]. Il s’agit d’un identifiant utilisateur unique, différent du [!DNL ECID].
+Lors de l’utilisation de Google Chrome avec des cookies tiers activés et qu’aucun cookie `kndctr_<orgId>_identity` n’est défini, la première requête Edge Network passe par un domaine `demdex.net`, qui définit un cookie demdex. Ce cookie contient un [!DNL CORE ID]. Il s’agit d’un identifiant utilisateur unique, différent du [!DNL ECID].
 
 Selon votre implémentation, vous pouvez [accéder au  [!DNL CORE ID]](#retrieve-coreid).
 
@@ -55,7 +55,7 @@ En outre, lorsque vous utilisez la collecte de données tierce, certains bloqueu
 
 ### Effets de la durée de vie des cookies sur les applications Adobe Experience Cloud {#lifespans}
 
-Que vous choisissiez la collecte de données propriétaire ou tierce, la durée pendant laquelle un cookie peut persister a un impact direct sur le nombre de visiteurs dans [Adobe Analytics](https://experienceleague.adobe.com/fr/docs/analytics) et [Customer Journey Analytics](https://experienceleague.adobe.com/fr/docs/customer-journey-analytics). En outre, les utilisateurs finaux peuvent rencontrer des expériences de personnalisation incohérentes lorsque [Adobe Target](https://experienceleague.adobe.com/fr/docs/target) ou [Offer Decisioning](https://experienceleague.adobe.com/fr/docs/target/using/integrate/ajo/offer-decision) sont utilisés sur le site.
+Que vous choisissiez la collecte de données propriétaire ou tierce, la durée pendant laquelle un cookie peut persister a un impact direct sur le nombre de visiteurs dans [Adobe Analytics](https://experienceleague.adobe.com/fr/docs/analytics) et [Customer Journey Analytics](https://experienceleague.adobe.com/fr/docs/customer-journey-analytics). En outre, les utilisateurs finaux peuvent rencontrer des expériences de personnalisation incohérentes lorsque [Adobe Target](https://experienceleague.adobe.com/en/docs/target) ou [Offer Decisioning](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision) sont utilisés sur le site.
 
 Supposons, par exemple, que vous ayez créé une expérience de personnalisation qui promeut n’importe quel élément sur la page d’accueil si un utilisateur l’a consulté trois fois au cours des sept derniers jours.
 
@@ -162,7 +162,7 @@ Chaque objet d’identité du tableau d’identités contient les propriétés s
 | `authenticatedState` | Chaîne | **(Obligatoire)** État d’authentification de l’ID. Les valeurs possibles sont les suivantes : `ambiguous`, `authenticated` et `loggedOut`. |
 | `primary` | Booléen | Détermine si cette identité doit être utilisée comme fragment principal dans le profil. Par défaut, l’ECID est défini comme identifiant principal de l’utilisateur. Cette valeur est définie par défaut sur `false` si vous l’ignorez. |
 
-L’utilisation du champ `identityMap` pour identifier les appareils ou les utilisateurs aboutit au même résultat que l’utilisation de la méthode [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=fr) du [!DNL ID Service API] . Pour plus d’informations[&#x200B; consultez la documentation de l’API du service &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=fr)ID.
+L’utilisation du champ `identityMap` pour identifier les appareils ou les utilisateurs aboutit au même résultat que l’utilisation de la méthode [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) du [!DNL ID Service API] . Pour plus d’informations[ consultez la documentation de l’API du service ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html)ID.
 
 ## Migration de l’API visiteur vers ECID {#migrating-visitor-api-ecid}
 
@@ -174,7 +174,7 @@ Lors de la migration à partir de à l’aide de l’API visiteur, vous pouvez �
 
 ### Mise à jour des caractéristiques pour la migration
 
-Lorsque des données au format XDM sont envoyées dans Audience Manager, elles doivent être converties en signaux lors de la migration. Vos caractéristiques doivent être mises à jour pour refléter les nouvelles clés fournies par XDM. Ce processus est facilité par l’utilisation de l’outil [BAAAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html?lang=fr#getting-started-with-bulk-management) créé par Audience Manager.
+Lorsque des données au format XDM sont envoyées dans Audience Manager, elles doivent être converties en signaux lors de la migration. Vos caractéristiques doivent être mises à jour pour refléter les nouvelles clés fournies par XDM. Ce processus est facilité par l’utilisation de l’outil [BAAAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) créé par Audience Manager.
 
 ## Utilisation dans le transfert d’événement
 
