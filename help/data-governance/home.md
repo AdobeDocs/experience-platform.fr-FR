@@ -136,8 +136,8 @@ La vidéo suivante a pour but de vous aider à comprendre le cadre de gouvernanc
 >
 >La vidéo fait référence à l’application de libellés à des champs de jeux de données individuels. Ce workflow est obsolète. [Les libellés doivent maintenant être appliqués au niveau du champ de schéma](./e2e.md#labels). Les concepts présentés dans la vidéo restent exacts, mais le processus d’étiquetage a changé.
 
->[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33154?captions=fre_fr&quality=12&enable10seconds=on&speedcontrol=on)
 
 La vidéo suivante explique comment appliquer des libellés d’utilisation des données à vos schémas ou à l’intégralité d’un jeu de données dans Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422795/?captions=fre_fr&learn=on)
