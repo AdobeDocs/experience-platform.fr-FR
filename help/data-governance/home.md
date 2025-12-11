@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation de la gouvernance des données
 description: La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Elle joue un rôle clé dans Experience Platform à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les politiques d’utilisation des données et le contrôle de l’utilisation des données lors d’actions marketing.
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9b1630a4876c0bcd7331f8da264e4f19ce00b59a
 workflow-type: tm+mt
-source-wordcount: '1619'
-ht-degree: 63%
+source-wordcount: '1656'
+ht-degree: 62%
 
 ---
 
@@ -132,8 +132,12 @@ Le tableau suivant présente les termes clés liés à la gouvernance des donné
 
 La vidéo suivante a pour but de vous aider à comprendre le cadre de gouvernance des données. 
 
->[!VIDEO](https://video.tv.adobe.com/v/33154?captions=fre_fr&quality=12&enable10seconds=on&speedcontrol=on)
+>[!IMPORTANT]
+>
+>La vidéo fait référence à l’application de libellés à des champs de jeux de données individuels. Ce workflow est obsolète. [Les libellés doivent maintenant être appliqués au niveau du champ de schéma](./e2e.md#labels). Les concepts présentés dans la vidéo restent exacts, mais le processus d’étiquetage a changé.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
 La vidéo suivante explique comment appliquer des libellés d’utilisation des données à vos schémas ou à l’intégralité d’un jeu de données dans Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422795/?captions=fre_fr&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)
