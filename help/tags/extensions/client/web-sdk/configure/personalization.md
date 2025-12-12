@@ -1,9 +1,9 @@
 ---
 title: Paramètres de configuration de Personalization
 description: Configurez les paramètres de personnalisation dans l’extension de balise Web SDK.
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 9a617b6e97aec22a6726266f2628bd2c2a05da19
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '454'
 ht-degree: 1%
 
 ---
@@ -25,6 +25,8 @@ Les options disponibles sont les suivantes :
 ## [!UICONTROL Migrate Target from at.js to the Web SDK]**
 
 Utilisez cette option pour permettre à Web SDK de lire et d’écrire les `mbox` hérités et les cookies `mboxEdgeCluster` utilisés par les bibliothèques `at.js` 1.x ou 2.x. Ce paramètre permet de conserver les profils des visiteurs intacts lorsqu’ils se déplacent entre les pages à l’aide de Web SDK ou de `at.js` sur le même site Web. Si aucune `at.js` n’est implémentée sur votre site, il n’est pas nécessaire d’activer cette case à cocher. La bibliothèque JavaScript équivalente à cette case à cocher est [`targetMigrationEnabled`](/help/collection/js/commands/configure/targetmigrationenabled.md).
+
+Lors de l’activation de cette option, veillez à activer également le [`overrideMboxEdgeServer`](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) dans `targetGlobalSettings()`.
 
 ## [!UICONTROL Prehiding style] {#prehiding-style}
 
