@@ -14,7 +14,7 @@ ht-degree: 55%
 
 >[!BEGINSHADEBOX]
 
-Si vous êtes un client Adobe Journey Optimizer, veuillez lire le guide [Prise en main de la composition de l’audience](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html) dans la documentation de Adobe Journey Optimizer pour plus d’informations sur l’utilisation de la composition de l’audience dans ce contexte.
+Si vous êtes un client Adobe Journey Optimizer, veuillez lire le guide [Prise en main de la composition de l’audience](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html?lang=fr) dans la documentation de Adobe Journey Optimizer pour plus d’informations sur l’utilisation de la composition de l’audience dans ce contexte.
 
 >[!ENDSHADEBOX]
 
