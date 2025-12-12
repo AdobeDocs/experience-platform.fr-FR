@@ -13,7 +13,7 @@ ht-degree: 21%
 
 Une extension est un ensemble empaqueté de codes qui étend les fonctionnalités fournies par les balises ou le transfert d’événement. Si vous installez une extension dans une bibliothèque, l’extension ajoute un ensemble d’événements, de conditions et/ou d’actions uniques qui peuvent être utilisés dans les [configurations de règles](../ui/managing-resources/rules.md) de cette bibliothèque.
 
-Pour plus d’informations sur le fonctionnement des extensions dans les structures de balises et de transfert d’événement, consultez la [ présentation des extensions](../ui/managing-resources/extensions/overview.md).
+Pour plus d’informations sur le fonctionnement des extensions dans les structures de balises et de transfert d’événement, consultez la [&#x200B; présentation des extensions](../ui/managing-resources/extensions/overview.md).
 
 Pour obtenir de la documentation sur l’installation et l’utilisation des extensions disponibles, reportez-vous aux catalogues suivants :
 

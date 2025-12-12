@@ -16,10 +16,10 @@ ht-degree: 77%
 Chaque propriété de balise dans Adobe Experience Platform requiert que les extensions suivantes soient installées et configurées à partir de lʼécran Extensions :
 
 * Adobe Analytics
-*  du service d’identification des visiteurs Experience Cloud
+* du service d’identification des visiteurs Experience Cloud
 * Extension Core
 
-Utilisez la [ « Incorporer un lecteur à l’aide d’une balise \&lt;iframe\> »](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) extrait de code de la documentation Google destinée aux développeurs dans l’HTML de chaque page web sur laquelle un lecteur vidéo doit être rendu.
+Utilisez la [&#x200B; « Incorporer un lecteur à l’aide d’une balise \&lt;iframe\> »](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) extrait de code de la documentation Google destinée aux développeurs dans l’HTML de chaque page web sur laquelle un lecteur vidéo doit être rendu.
 
 Cette extension, la version 2.0.1, prend en charge l’incorporation d’une ou de plusieurs vidéos YouTube sur une seule page web via l’insertion d’un attribut `id` avec une valeur unique dans la balise de script iframe, et l’ajout de `enablejsapi=1` et `rel=0` à la fin de la valeur de l’attribut `src`, si le code ne s’y trouve pas déjà. Par exemple :
 

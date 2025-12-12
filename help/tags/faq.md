@@ -89,4 +89,4 @@ Consultez le guide sur la [gestion des autorisations](../collection/permissions.
 
 ## Et si j’ai d’autres questions ?
 
-Si vous avez d’autres questions, vous pouvez consulter la page de la communauté Collecte de données Adobe Experience Platform [](https://adobe.com/go/launchme) sur Experience League, ou rejoindre la [communauté de l’espace de travail Slack](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) pour les rubriques destinées aux développeurs et à l’implémentation technique.
+Si vous avez d’autres questions, vous pouvez consulter la page de la communauté Collecte de données Adobe Experience Platform [&#128279;](https://adobe.com/go/launchme) sur Experience League, ou rejoindre la [communauté de l’espace de travail Slack](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) pour les rubriques destinées aux développeurs et à l’implémentation technique.

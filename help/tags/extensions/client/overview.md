@@ -48,7 +48,7 @@ Voici une liste reprenant la documentation relative aux extensions de balises c√
 * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)*
 * [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)*
 * [Notificateur Airbreak JS](https://exchange.adobe.com/apps/ec/103342)*
-* [ Amplitude ](https://exchange.adobe.com/apps/ec/108010)*
+* [&#x200B; Amplitude &#x200B;](https://exchange.adobe.com/apps/ec/108010)*
 * [Apollo QAX](https://exchange.adobe.com/apps/ec/105068)*
 * [Awin Advertiser MasterTag](https://exchange.adobe.com/apps/ec/103176)*
 * [Awin Conversion Tag](https://exchange.adobe.com/apps/ec/103240)*
@@ -58,7 +58,7 @@ Voici une liste reprenant la documentation relative aux extensions de balises c√
 * [[!DNL BrightCove] du suivi vid√©o](./brightcove/overview.md)
 * [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)*
 * [Identifiant Source du canal](https://exchange.adobe.com/apps/ec/101412)*
-* [ Cheetah Experiences ](https://exchange.adobe.com/apps/ec/102759)*
+* [&#x200B; Cheetah Experiences &#x200B;](https://exchange.adobe.com/apps/ec/102759)*
 * [Clicktale](https://exchange.adobe.com/apps/ec/100082)*
 * [Plug-ins Analytics courants](./plugins/overview.md)
 * [Plug-ins Web SDK courants](web-sdk-plugins/web-sdk-plugins.md)
@@ -76,7 +76,7 @@ Voici une liste reprenant la documentation relative aux extensions de balises c√
 * [Visionneuses Dynamic Media](https://exchange.adobe.com/apps/ec/103048)*
 * [Assistant EDDL](https://exchange.adobe.com/apps/ec/107691)*
 * [Flashtalking OneTag](https://exchange.adobe.com/apps/ec/101392)*
-* [ForeSee ](https://exchange.adobe.com/apps/ec/100164)*
+* [ForeSee &#x200B;](https://exchange.adobe.com/apps/ec/100164)*
 * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)*
 * [Engagement pr√©dictif Genesys](https://exchange.adobe.com/apps/ec/106148)*
 * [Couche de donn√©es Google](./google-data-layer/overview.md)
@@ -88,9 +88,9 @@ Voici une liste reprenant la documentation relative aux extensions de balises c√
 * [Table de mappage](https://exchange.adobe.com/apps/ec/103136)*
 * [Merkury Tag](https://exchange.adobe.com/apps/ec/600027/merkury-tag)*
 * [[!DNL Marketo Munchkin]](./marketo/overview.md)
-* [Gestionnaire de propri√©t√©s de Principal ](https://exchange.adobe.com/apps/ec/102992)*
+* [Gestionnaire de propri√©t√©s de Principal &#x200B;](https://exchange.adobe.com/apps/ec/102992)*
 * [Monita](https://exchange.adobe.com/apps/ec/106544)*
-* [ Nielsen Digital SDK ](https://exchange.adobe.com/apps/ec/101361)*
+* [&#x200B; Nielsen Digital SDK &#x200B;](https://exchange.adobe.com/apps/ec/101361)*
 * [Gestion du consentement OneTrust pour les cookies](https://exchange.adobe.com/apps/ec/100340)*
 * [Pepperjam](https://exchange.adobe.com/apps/ec/103587)*
 * [Persado Connect](https://exchange.adobe.com/apps/ec/103745)*
@@ -113,7 +113,7 @@ Voici une liste reprenant la documentation relative aux extensions de balises c√
 * [Lecture Vimeo](https://exchange.adobe.com/apps/ec/108937)*
 * [Web Vitals](https://exchange.adobe.com/apps/ec/106769)*
 * [Compositeur XDM](https://exchange.adobe.com/apps/ec/106062)*
-* [ Yahoo Dot ](https://exchange.adobe.com/apps/ec/106062)*
+* [&#x200B; Yahoo Dot &#x200B;](https://exchange.adobe.com/apps/ec/106062)*
 * [Yext Conversion Tracking](https://exchange.adobe.com/apps/ec/103174)*
 * [[!DNL Youtube] Lecture](https://exchange.adobe.com/apps/ec/103174)*
 * [[!DNL YouTube] du suivi vid√©o](./youtube/overview.md)

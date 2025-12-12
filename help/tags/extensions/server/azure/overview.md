@@ -18,7 +18,7 @@ L’extension [!DNL Microsoft Azure] [transfert d’événement](../../../ui/eve
 
 ## Conditions préalables
 
-Pour utiliser cette extension, vous devez disposer d’un compte [!DNL Azure] valide avec un accès à [!DNL Event Hubs]. Vous devez également [créer un hub d’événements à l’aide du portail [!DNL Azure] ](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create) avant de suivre les étapes ci-dessous.
+Pour utiliser cette extension, vous devez disposer d’un compte [!DNL Azure] valide avec un accès à [!DNL Event Hubs]. Vous devez également [créer un hub d’événements à l’aide du portail [!DNL Azure] &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create) avant de suivre les étapes ci-dessous.
 
 ## Installation l’extension
 

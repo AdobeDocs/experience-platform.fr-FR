@@ -22,7 +22,7 @@ Ce document explique comment configurer l’extension et les règles à l’aide
 
 ## Conditions préalables
 
-Ce document suppose que vous connaissez les produits Mailchimp pertinents utilisés par l’extension. Pour plus d’informations, consultez la documentation d’aide Mailchimp pour [campagnes](https://mailchimp.com/help/getting-started-with-campaigns/), [parcours ](https://mailchimp.com/help/about-customer-journeys/) et [transactions](https://mailchimp.com/help/transactional/).
+Ce document suppose que vous connaissez les produits Mailchimp pertinents utilisés par l’extension. Pour plus d’informations, consultez la documentation d’aide Mailchimp pour [campagnes](https://mailchimp.com/help/getting-started-with-campaigns/), [parcours &#x200B;](https://mailchimp.com/help/about-customer-journeys/) et [transactions](https://mailchimp.com/help/transactional/).
 
 Un compte Mailchimp est requis pour utiliser cette extension. Vous pouvez créer un compte [ici](https://login.mailchimp.com/signup/). Dans le tableau de bord du compte Mailchimp, notez les valeurs suivantes à utiliser dans ce guide :
 

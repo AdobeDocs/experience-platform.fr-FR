@@ -17,7 +17,7 @@ Experience Platform vous permet de diffuser les versions de bibliothèque de bal
 >
 >Vous pouvez également choisir d’utiliser un hôte géré par Adobe à la place. Pour plus d’informations, consultez le guide sur les [hôtes gérés par Adobe](./managed-by-adobe-host.md).
 >
->Pour plus d’informations sur les avantages et les limites des bibliothèques d’auto-hébergement, consultez le [ guide d’auto-hébergement ](./self-hosting-libraries.md).
+>Pour plus d’informations sur les avantages et les limites des bibliothèques d’auto-hébergement, consultez le [&#x200B; guide d’auto-hébergement &#x200B;](./self-hosting-libraries.md).
 
 ## Configurer une clé d’accès pour votre serveur {#access-key}
 

@@ -22,4 +22,4 @@ Pour plus d’informations sur chaque type d’hôte, veuillez utiliser les lien
 
 Un même hôte peut être utilisé pour plusieurs environnements au sein de la même propriété.
 
-Pour plus d’informations afin de vous aider à choisir entre l’auto-hébergement et la gestion de l’hébergement par Adobe, consultez le [ guide d’auto-hébergement ](./self-hosting-libraries.md).
+Pour plus d’informations afin de vous aider à choisir entre l’auto-hébergement et la gestion de l’hébergement par Adobe, consultez le [&#x200B; guide d’auto-hébergement &#x200B;](./self-hosting-libraries.md).
