@@ -2,28 +2,24 @@
 title: Présentation de l’extension de suivi vidéo YouTube
 description: Découvrez lʼextension de balise de suivi vidéo YouTube dans Adobe Experience Platform.
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '897'
-ht-degree: 78%
+source-wordcount: '852'
+ht-degree: 77%
 
 ---
 
 # Présentation de l’extension de suivi vidéo YouTube
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 **Conditions préalables**
 
 Chaque propriété de balise dans Adobe Experience Platform requiert que les extensions suivantes soient installées et configurées à partir de lʼécran Extensions :
 
 * Adobe Analytics
-* du service d’identification des visiteurs Experience Cloud
+*  du service d’identification des visiteurs Experience Cloud
 * Extension Core
 
-Utilisez la [&#x200B; « Incorporer un lecteur à l’aide d’une balise \&lt;iframe\> »](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) extrait de code de la documentation Google destinée aux développeurs dans l’HTML de chaque page web sur laquelle un lecteur vidéo doit être rendu.
+Utilisez la [ « Incorporer un lecteur à l’aide d’une balise \&lt;iframe\> »](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) extrait de code de la documentation Google destinée aux développeurs dans l’HTML de chaque page web sur laquelle un lecteur vidéo doit être rendu.
 
 Cette extension, la version 2.0.1, prend en charge l’incorporation d’une ou de plusieurs vidéos YouTube sur une seule page web via l’insertion d’un attribut `id` avec une valeur unique dans la balise de script iframe, et l’ajout de `enablejsapi=1` et `rel=0` à la fin de la valeur de l’attribut `src`, si le code ne s’y trouve pas déjà. Par exemple :
 
@@ -98,9 +94,9 @@ Les objets dʼextension vidéo suivants doivent être inclus.
 
 >[!TIP]
 > 
->Pour les implémentations dans lesquelles il est impossible d’utiliser plusieurs eVars ou props pour chaque élément vidéo, les valeurs des éléments de données peuvent être concaténées dans Experience Platform, analysées dans les rapports de classification à l’aide de l’outil Créateur de règles de classification, comme expliqué dans [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=fr](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=fr), puis appliquées en tant que segment dans Analysis Workspace.
+>Pour les implémentations dans lesquelles il est impossible d’utiliser plusieurs eVars ou props pour chaque élément vidéo, les valeurs des éléments de données peuvent être concaténées dans Experience Platform, analysées dans les rapports de classification à l’aide de l’outil Créateur de règles de classification, comme expliqué dans [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=fr), puis appliquées en tant que segment dans Analysis Workspace.
 
-Pour concaténer des valeurs d’informations vidéo, créez un nouvel élément de données appelé « Métadonnées vidéo », puis programmez-le à extraire tous les éléments de données vidéo (répertoriés ci-dessus) et à les assembler. Par exemple :
+Pour concaténer des valeurs d’informations vidéo, créez un nouvel élément de données appelé « Données de Meta vidéo », puis programmez-le à extraire tous les éléments de données vidéo (répertoriés ci-dessus) et à les assembler. Par exemple :
 
 ```javascript
 var r = [];

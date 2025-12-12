@@ -2,38 +2,34 @@
 title: Comparaison des révisions des ressources
 description: Découvrez comment afficher l’historique de révisions d’une ressource de balise dans Adobe Experience Platform.
 exl-id: 95b22641-9f6f-4aac-a727-d99098f040a4
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '859'
 ht-degree: 100%
 
 ---
 
 # Comparaison des révisions des ressources
 
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
-
-Comparez des révisions des ressources pour afficher l’historique d’une ressource individuelle. Vous pouvez comparer l’état actuel de la ressource à des versions plus anciennes ou comparer la version actuellement publiée d’une ressource au jeu de modifications le plus récent qui a été enregistré.
+Comparez des révisions des ressources pour afficher l’historique d’une ressource individuelle.  Vous pouvez comparer l’état actuel de la ressource à des versions plus anciennes ou comparer la version actuellement publiée d’une ressource au jeu de modifications le plus récent qui a été enregistré.
 
 ## Lancer une comparaison
 
-Le lancement d’une comparaison est le même pour tous les types de ressources. Ouvrez la vue Modifier d’une ressource individuelle, puis recherchez l’icône des trois points située en regard du bouton **[!UICONTROL Enregistrer]** pour afficher les actions disponibles pour cette ressource.  Sélectionnez **[!UICONTROL Comparer les révisions]** dans la liste.
+Le lancement d’une comparaison est le même pour tous les types de ressources. Ouvrez la vue Edit (Modifier) d’une ressource individuelle, puis recherchez l’icône de trois points située en regard du bouton **[!UICONTROL Save]** pour afficher les actions disponibles pour cette ressource.  Sélectionnez **[!UICONTROL Compare Revisions]** dans la liste.
 
 ![Lancer une comparaison pour une extension](../../images/compare-initiate-extension.png)
 
-Pour les extensions, accédez à la vue détaillée en cliquant sur le bouton **[!UICONTROL Configurer]** lors de l’affichage de votre liste d’extensions installées.  Pour les éléments de données et les règles, sélectionnez-en un dans la liste.
+Pour les extensions, accédez à la vue détaillée en cliquant sur le bouton **[!UICONTROL Configure]** lors de l’affichage de votre liste d’extensions installées.  Pour les éléments de données et les règles, sélectionnez-en un dans la liste.
 
 ## Utilisation de la vue Compare (Comparer)
 
-Lorsque vous lancez une comparaison, la vue par défaut affiche la dernière version sur la droite. Cette version comprend toutes les modifications non enregistrées que vous avez apportées à la ressource dans la vue Edit (Modifier). (Notez l’étiquette « Unsaved Changes » (Modifications non enregistrées) sur la partie droite de l’image ci-dessous.)
+Lorsque vous lancez une comparaison, la vue par défaut affiche la dernière version sur la droite. Cette version comprend toutes les modifications non enregistrées que vous avez apportées à la ressource dans la vue Edit (Modifier). (Notez le libellé « Unsaved Changes » (Modifications non enregistrées) sur la partie droite de l’image ci-dessous.)
 
 Sur la gauche, vous pouvez sélectionner l’une des révisions existantes pour comparer la valeur Latest (Le plus récent).
 
 ![Comparaison des versions de l’extension Analytics](../../images/compare-interpret-extension.png)
 
-Cliquez sur **[!UICONTROL Utiliser ces modifications]** pour copier les paramètres de votre révision sélectionnée (à gauche) vers la version la plus récente (à droite).  Cette opération copie les paramètres de l’ancienne révision vers les modifications non enregistrées les plus récentes. Si vous souhaitez que ces modifications soient conservées, veillez à **[!UICONTROL Enregistrer]** après avoir quitté la vue Comparer.
+Cliquez sur **[!UICONTROL Use These Changes]** pour copier les paramètres de votre révision sélectionnée (à gauche) à la version la plus récente (à droite).  Cette opération copie les paramètres de l’ancienne révision vers les modifications non enregistrées les plus récentes.  Si vous souhaitez que ces modifications soient conservées, veillez à **[!UICONTROL Save]** après avoir quitté la vue Compare (Comparer).
 
 >[!TIP]
 >Les ressources individuelles peuvent avoir à la fois des attributs et des paramètres. Ces paramètres sont stockés sous la forme de bloc JSON, qui est une méthode structurée de stockage des données, mais suffisamment flexible pour que les développeurs d’extensions puissent y placer ce dont ils ont besoin pour que leurs extensions effectuent les opérations souhaitées.

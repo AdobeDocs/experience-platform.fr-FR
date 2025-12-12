@@ -2,18 +2,14 @@
 title: Bibliothèques
 description: Découvrez le concept des bibliothèques de balises et leur fonctionnement dans Adobe Experience Platform.
 exl-id: 4d6f86e6-5684-4635-aaf1-87ba10cd7d94
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 100%
+source-wordcount: '711'
+ht-degree: 97%
 
 ---
 
 # Bibliothèques
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Une bibliothèque est un ensemble d’instructions qui définit la façon dont les extensions, les éléments de données et les règles interagissent les uns avec les autres après leur déploiement. Lors de la création d’une bibliothèque, vous indiquez les modifications que vous souhaitez apporter à votre bibliothèque. Lors de la création, ces modifications sont combinées avec tout ce qui a été soumis, approuvé ou publié dans les bibliothèques précédentes.
 
@@ -29,18 +25,18 @@ Les bibliothèques doivent être affectées à un environnement avant de pouvoir
 
 Pour créer une bibliothèque, procédez comme suit :
 
-1. Ouvrez lʼonglet [!UICONTROL Publication].
+1. Ouvrez l’onglet [!UICONTROL Publishing].
 
-   La page [!UICONTROL Publication] répertorie les bibliothèques de développement et fournit les moyens nécessaires pour les soumettre pour approbation, pour les déplacer vers lʼévaluation ou pour les publier en production.
+   La page [!UICONTROL Publishing] répertorie les bibliothèques de développement et fournit les moyens nécessaires pour les soumettre pour approbation, pour les déplacer vers l’évaluation ou pour les publier en production.
 
-1. Cliquez sur **[!UICONTROL Ajouter une bibliothèque]**.
+1. Sélectionner **[!UICONTROL Add New Library]**.
 
    ![](../../images/library-create.jpg)
 
 1. Donnez un nom à la bibliothèque.
 1. Affectez la bibliothèque à un environnement de développement.
 1. Ajoutez une modification à la bibliothèque.
-Pour ajouter un élément, cliquez sur **[!UICONTROL Ajouter une modification]**, puis choisissez les éléments à ajouter. Tout élément qui a été modifié ou supprimé peut être ajouté à la bibliothèque choisie.
+Pour ajouter un élément, cliquez sur **[!UICONTROL Add a Change]**, puis choisissez les éléments à ajouter. Tout élément qui a été modifié ou supprimé peut être ajouté à la bibliothèque choisie.
 
    ![](../../images/library-add-change.jpg)
 
@@ -50,8 +46,8 @@ Pour ajouter un élément, cliquez sur **[!UICONTROL Ajouter une modification]**
    * Éléments de données
    * Configuration d’extension
 
-1. Pour ajouter des ressources qui ont été modifiées, sélectionnez **[!UICONTROL Ajouter toutes les ressources modifiées]**.
-1. Sélectionnez **[!UICONTROL Enregistrer]** ou **[!UICONTROL Enregistrer et créer pour le développement]**.
+1. Pour ajouter des ressources qui ont été modifiées, cliquez sur **[!UICONTROL Add All Changed Resources]**.
+1. Sélectionnez **[!UICONTROL Save]** ou **[!UICONTROL Save and Build for Development]**.
 
    Le déploiement compile une version et la déploie dans l’environnement affecté.
 
@@ -73,8 +69,8 @@ Pour ajouter un élément à une bibliothèque, procédez comme suit.
 
 1. Installez les [extensions](../managing-resources/extensions/overview.md) que vous souhaitez ajouter.
 1. Créez les [éléments de données](../managing-resources/data-elements.md) et les règles à ajouter.
-1. Ouvrez lʼonglet **[!UICONTROL Publication]**.
-1. Sélectionnez la [bibliothèque](libraries.md) à modifier, puis cliquez sur **[!UICONTROL Modifier]**.
+1. Ouvrez l’onglet **[!UICONTROL Publishing]**.
+1. Sélectionnez la [bibliothèque](libraries.md) à modifier, puis cliquez sur **[!UICONTROL Edit]**.
 1. Utilisez les boutons de règles, d’éléments de données et d’extensions pour sélectionner les éléments à ajouter à la bibliothèque.
 1. Enregistrez les modifications.
 
@@ -90,7 +86,7 @@ Pour supprimer un élément d’une bibliothèque, vous devez d’abord le désa
 
 1. Désactivez les extensions à supprimer, sans oublier les éléments de données et les règles qui dépendent de ces extensions.
 1. Désactivez les éléments de données et les règles à supprimer.
-1. Ouvrez lʼonglet **[!UICONTROL Publication]**.
+1. Ouvrez l’onglet **[!UICONTROL Publishing]**.
 1. Sélectionnez la bibliothèque que vous souhaitez modifier.
 1. Utilisez les boutons de règles, d’éléments de données et d’extensions pour sélectionner les éléments à supprimer de la bibliothèque.
 1. Enregistrez les modifications.
@@ -99,7 +95,7 @@ Pour supprimer un élément d’une bibliothèque, vous devez d’abord le désa
 
 Pour modifier les options d’une bibliothèque, procédez comme suit.
 
-1. Cliquez sur une bibliothèque et sélectionnez **[!UICONTROL Modifier]** pour afficher les modifications apportées à la bibliothèque. Toutes les modifications sont répertoriées dans la liste [!UICONTROL Contenu de la bibliothèque].
+1. Cliquez sur une bibliothèque et sélectionnez **[!UICONTROL Edit]** pour afficher les modifications apportées à la bibliothèque. Toutes les modifications sont répertoriées dans la liste [!UICONTROL Library Contents].
 
    ![](../../images/library-contents.jpg)
 
@@ -108,14 +104,14 @@ Pour modifier les options d’une bibliothèque, procédez comme suit.
    ![](../../images/library-contents-revision.jpg)
 
 1. Choisissez d’afficher **tous** les éléments ou les éléments **modifiés**. 
-1. Sélectionnez la révision, puis cliquez sur **[!UICONTROL Sélectionner la révision]**.
-1. Sélectionnez **[!UICONTROL Ajouter une modification]** ou **[!UICONTROL Ajouter toutes les ressources modifiées]**.
+1. Sélectionnez la révision, puis cliquez sur **[!UICONTROL Select Revision]**.
+1. Sélectionnez **[!UICONTROL Add a Change]** ou **[!UICONTROL Add All Changed Resources]**.
 
 ## Bibliothèque active {#active-library}
 
 Les bibliothèques regroupent un ensemble de modifications que vous souhaitez apporter à votre code déployé. La bibliothèque active facilite cette opération, ce qui vous permet d’effectuer rapidement une itération des modifications et de voir leur impact.
 
-Les extensions, les règles et les éléments de données peuvent désormais être enregistrés directement dans la bibliothèque sur laquelle vous travaillez. Si nécessaire, une nouvelle version peut également être créée ou même une nouvelle bibliothèque à partir de la liste déroulante [!UICONTROL Bibliothèque principale].
+Les extensions, les règles et les éléments de données peuvent désormais être enregistrés directement dans la bibliothèque sur laquelle vous travaillez. Si nécessaire, une nouvelle version peut également être créée ou même une nouvelle bibliothèque à partir de la liste déroulante [!UICONTROL Active Library] .
 
 La liste suivante fournit des informations supplémentaires sur la gestion d’une bibliothèque active.
 

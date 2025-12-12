@@ -2,18 +2,14 @@
 title: Vues dans les extensions web
 description: Découvrez comment définir des vues pour les modules de bibliothèque dans vos extensions web Adobe Experience Platform.
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: 1bfa2e27e554dc899efc8a32900a926e787a58ac
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2148'
+source-wordcount: '2103'
 ht-degree: 92%
 
 ---
 
 # Vues dans les extensions web
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Chaque type d’événement, de condition, d’action ou d’élément de données peut fournir une vue permettant à un utilisateur de fournir des paramètres. L’extension peut également avoir une [vue de configuration d’extension](../configuration.md) de niveau supérieur permettant aux utilisateurs de fournir des paramètres globaux pour l’extension entière. Le processus de création d’une vue est identique pour tous les types de vues.
 
@@ -76,7 +72,7 @@ La méthode `init` sera appelée par les balises dès que la vue aura été char
 | `company` | Objet contenant les `orgId` (votre identifiant Adobe Experience Cloud de 24 caractères), `id` (l’identifiant unique de votre société dans l’API Reactor) et `tenantId` (l’identifiant unique d’une organisation dans le système Identity Management d’Adobe). |
 | `schema` | Objet au format [Schéma JSON](https://json-schema.org/). Cet objet provient du [manifeste d’extension](../manifest.md) et peut s’avérer utile pour valider votre formulaire. |
 | `apiEndpoints` | Un objet contenant `reactor` qui contient une référence à l’adresse Web de l’API Reactor. |
-| `userConsentPermissions` | Objet contenant les indicateurs de consentement d’Adobe [Données d’utilisation du produit](https://experienceleague.adobe.com/fr/docs/core-services/interface/features/account-preferences#product-usage-data). Utilisez l’indicateur stocké dans `globalDataCollectionAndUsage` pour comprendre si votre extension est autorisée à collecter des données client *n’importe lesquelles*. |
+| `userConsentPermissions` | Objet contenant les indicateurs de consentement d’Adobe [Données d’utilisation du produit](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data). Utilisez l’indicateur stocké dans `globalDataCollectionAndUsage` pour comprendre si votre extension est autorisée à collecter des données client *n’importe lesquelles*. |
 | `preferredLanguages` | Tableau de chaînes de langue. |
 
 Votre vue doit utiliser ces informations pour générer et gérer son formulaire. Il est probable que vous n’aurez affaire qu’à `info.settings`, mais d’autres informations sont fournies en cas de besoin.

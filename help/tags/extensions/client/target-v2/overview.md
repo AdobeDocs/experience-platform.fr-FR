@@ -2,18 +2,14 @@
 title: Présentation de l’extension Adobe Target v2
 description: Découvrez l’extension de balise Adobe Target v2 dans Adobe Experience Platform.
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
-source-git-commit: 5b88692117c984cd6331e7886d5bf0846309acee
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1351'
-ht-degree: 88%
+source-wordcount: '1298'
+ht-degree: 87%
 
 ---
 
 # Présentation de l’extension Adobe Target v2
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Utilisez cette référence pour obtenir des informations sur les options disponibles lors de l’utilisation de cette extension pour créer une règle.
 
@@ -23,9 +19,9 @@ Utilisez cette référence pour obtenir des informations sur les options disponi
 >
 >L’extension Adobe Target requiert le fichier at.js 2.x.
 
-Si l’extension Adobe Target n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, survolez l’extension Target et cliquez sur **[!UICONTROL Installer]**.
+Si l’extension Adobe Target n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalog]**, survolez l’extension Target et cliquez sur **[!UICONTROL Install]**.
 
-Pour configurer l’extension, ouvrez l’onglet Extensions, survolez-la avec la souris, puis cliquez sur **[!UICONTROL Configurer]**.
+Pour configurer l’extension, ouvrez l’onglet Extensions, survolez l’extension avec la souris, puis cliquez sur **[!UICONTROL Configure]**.
 
 ![](../../../images/targetv2config.png)
 
@@ -53,7 +49,7 @@ Lorsque cette option est activée, Adobe Target fournit une fonctionnalité d�
 
 #### Timeout (Délai d’expiration) (ms)
 
-Si la réponse de Target n’est pas reçue au cours de la période définie, la demande expire et le contenu par défaut s’affiche. Des tentatives de requêtes supplémentaires sont effectuées pendant la session du visiteur. La valeur par défaut de 3 000 ms peut différer du délai configuré dans l’interface utilisateur de Target.
+Si la réponse de Target n’est pas reçue au cours de la période définie, la demande expire et le contenu par défaut s’affiche. Des tentatives de requêtes supplémentaires sont effectuées pendant la session du visiteur. La valeur par défaut de 3 000 ms peut différer du délai d’expiration configuré dans l’interface utilisateur de Target.
 
 Pour plus d’informations sur le fonctionnement du délai d’expiration, consultez l’[aide d’Adobe Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html?lang=fr).
 
@@ -71,7 +67,7 @@ Aucune configuration n’est nécessaire.
 
 ### Chargement de Target avec prise de décision sur l’appareil
 
-Ajoutez cette action à votre règle de balise pour charger Target avec [la prise de décision sur l’appareil](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=fr) activée dans le cadre de votre règle. Cela charge la bibliothèque at.js sur la page avec la prise de décision sur l’appareil activée. Dans la plupart des mises en œuvre, Target doit être chargé sur chacune des pages de votre site. L’Adobe recommande d’utiliser l’action Charger Target avec la prise de décision sur l’appareil uniquement si elle est précédée d’un appel de Target. Dans le cas contraire, vous pourriez rencontrer des problèmes, comme un retard de l’appel d’Analytics.
+Ajoutez cette action à votre règle de balise pour charger Target avec [la prise de décision sur l’appareil](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=fr) activée dans le cadre de votre règle. Cela charge la bibliothèque at.js sur la page avec la prise de décision sur l’appareil activée. Dans la plupart des mises en œuvre, Target doit être chargé sur chacune des pages de votre site. Adobe recommande d’utiliser l’action Charger Target avec la prise de décision sur l’appareil uniquement si elle est précédée d’un appel de Target. Dans le cas contraire, vous pourriez rencontrer des problèmes, comme un retard de l’appel d’Analytics.
 
 >[!IMPORTANT]
 >
@@ -98,13 +94,13 @@ Ce type d’action permet à Target de déclencher une requête au chargement de
 Vous devez spécifier si vous souhaitez activer le masquage du corps pour éviter le scintillement, ainsi que le style utilisé lors du masquage de l’élément de corps. Les options disponibles sont les suivantes :
 
 * **Body Hiding** (Masquage du corps) : vous pouvez activer ou désactiver ce paramètre. La valeur par défaut est Enabled (Activé), ce qui signifie que la balise HTML BODY est masquée.
-* **Body Hidden Style** (Style masqué de l’élément corps) : la valeur par défaut est body{opacity:0}. Cette valeur peut être modifiée et remplacée par autre chose, par exemple body{display:none}.
+* **Style masqué du corps :** la valeur par défaut est body{opacity:0}. Cette valeur peut être changée en autre chose, comme body{display:none}.
 
 Pour plus d’informations, reportez-vous à la [documentation d’aide en ligne de Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html?lang=fr).
 
 ### Trigger View (Déclenchement d’affichage)
 
-L&#39;action Vue Trigger peut être appelée à chaque nouveau chargement de page ou lorsqu’un composant fait l’objet d’un nouveau rendu sur une page. La vue Trigger doit être implémentée pour les applications d’une seule page.
+L’action Vue Déclencheur peut être appelée à chaque nouveau chargement de page ou lorsqu’un composant fait l’objet d’un nouveau rendu sur une page. La vue Déclencheur doit être implémentée pour les applications d’une seule page.
 
 1. Spécifiez le nom d’affichage qui doit être déclenché.
 1. Précisez si le déclenchement de la vue doit être attribué à une impression de reporting en cochant la case Page. Si l’affichage est corrélé à un composant qui est à nouveau rendu et n’est pas attribué à une impression de reporting, ne cochez pas la case Page.
@@ -129,7 +125,7 @@ Avec les déploiements asynchrones, il est possible que la page termine de rendr
 
 Voici quelques éléments à garder à l’esprit lors de l’utilisation du fragment de code de masquage préalable :
 
-* Le code doit être ajouté avant de charger le code incorporé d’en-tête de balise.
+* Le code doit être ajouté avant de charger le code intégré d’en-tête de balise.
 * Ce code ne peut pas être géré par des balises. Il doit donc être ajouté directement à la page.
 * La page s’affiche lorsque le premier des événements suivants se produit :
    * Lorsque la réponse de chargement de page a été reçue

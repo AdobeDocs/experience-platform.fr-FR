@@ -2,18 +2,14 @@
 title: Présentation de l’extension AEM Asset Insights
 description: Découvrez lʼextension de balise AEM Asset Insights dans Adobe Experience Platform.
 exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1001'
 ht-degree: 98%
 
 ---
 
 # Présentation de l’extension AEM Asset Insights
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Cette extension est destinée à être utilisée avec [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=fr). Plus précisément, elle remplace le processus « pageTracker » et le code intégré. Lorsqu’elle est configurée, cette extension envoie les mesures *Impression* et *Clic* sur les ressources à Adobe Analytics, après quoi elles sont importées dans les rapports AEM Asset Insights. Les mesures sur les ressources peuvent ensuite faire l’objet de rapports à l’aide des espaces de travail AEM Asset Insights et Projet Adobe Analytics.
 

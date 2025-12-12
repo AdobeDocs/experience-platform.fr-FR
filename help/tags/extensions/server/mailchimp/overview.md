@@ -7,18 +7,14 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1251'
-ht-degree: 6%
+source-wordcount: '1205'
+ht-degree: 3%
 
 ---
 
 # Présentation de l’extension de transfert d’événement Mailchimp
-
->[!NOTE]
->  
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=fr) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 L’extension Mailchimp [transfert d’événement](../../../ui/event-forwarding/overview.md) envoie des événements à l’API marketing Mailchimp qui peut déclencher des e-mails pour les campagnes marketing, les parcours ou les transactions Mailchimp.
 
@@ -26,7 +22,7 @@ Ce document explique comment configurer l’extension et les règles à l’aide
 
 ## Conditions préalables
 
-Ce document suppose que vous connaissez les produits Mailchimp pertinents utilisés par l’extension. Pour plus d’informations, consultez la documentation d’aide Mailchimp pour [campagnes](https://mailchimp.com/help/getting-started-with-campaigns/), [parcours &#x200B;](https://mailchimp.com/help/about-customer-journeys/) et [transactions](https://mailchimp.com/help/transactional/).
+Ce document suppose que vous connaissez les produits Mailchimp pertinents utilisés par l’extension. Pour plus d’informations, consultez la documentation d’aide Mailchimp pour [campagnes](https://mailchimp.com/help/getting-started-with-campaigns/), [parcours ](https://mailchimp.com/help/about-customer-journeys/) et [transactions](https://mailchimp.com/help/transactional/).
 
 Un compte Mailchimp est requis pour utiliser cette extension. Vous pouvez créer un compte [ici](https://login.mailchimp.com/signup/). Dans le tableau de bord du compte Mailchimp, notez les valeurs suivantes à utiliser dans ce guide :
 

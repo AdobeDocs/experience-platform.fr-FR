@@ -2,18 +2,14 @@
 title: Modules de bibliothèque dans les extensions web
 description: Découvrez comment formater des modules de bibliothèque pour les extensions web dans Adobe Experience Platform.
 exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
-source-git-commit: b3754c94843f32ba58aa1e020dface1179372de3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '327'
 ht-degree: 100%
 
 ---
 
 # Modules de bibliothèque dans les extensions web
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 >[!IMPORTANT]
 >

@@ -2,18 +2,14 @@
 title: Types d’actions pour les extensions Edge
 description: Découvrez comment définir un module de bibliothèque de type action pour une extension de balise dans une propriété edge.
 exl-id: c0b058aa-f0fe-4fd8-a873-018482c3e4db
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 94%
+source-wordcount: '332'
+ht-degree: 93%
 
 ---
 
 # Types d’actions pour les extensions Edge
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Dans une règle de balise, une action est exécutée après que les conditions de la règle ont satisfait à lʼévaluation. Les types dʼactions sont fournis par les extensions et leurs effets sont entièrement définis par lʼauteur de lʼextension.
 
@@ -29,7 +25,7 @@ Ce document explique comment définir des types dʼaction pour une extension Edg
 
 Les types d’actions sont généralement les suivants :
 
-1. Vue affichée dans l’interface utilisateur de l’Experience Platform et dans l’interface utilisateur de collecte de données qui permet aux utilisateurs de modifier les paramètres de l’action.
+1. Une vue affichée dans l’interface utilisateur d’Experience Platform et l’interface utilisateur de la collecte de données qui permet aux utilisateurs de modifier les paramètres de l’action.
 2. Un module de bibliothèque émis dans la bibliothèque d’exécution de balise pour interpréter les paramètres et effectuer une action.
 
 Par exemple, un module permettant de transférer certaines données vers un point d’entrée tiers peut ressembler à ceci.

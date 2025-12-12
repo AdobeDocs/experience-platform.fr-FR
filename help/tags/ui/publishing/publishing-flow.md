@@ -2,9 +2,9 @@
 title: Flux de publication
 description: Découvrez le processus de création des bibliothèques, de test et d’approbation des versions pour la production dans Adobe Experience Platform.
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
-source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1407'
+source-wordcount: '1362'
 ht-degree: 84%
 
 ---
@@ -15,10 +15,6 @@ ht-degree: 84%
 >id="platform_tags_publishing_flow"
 >title="Flux de publication"
 >abstract="Découvrez les niveaux d’autorisation requis des utilisateurs et utilisatrices pour le flux de publication, y compris les droits de développement, d’approbation et de publication."
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Le flux de publication des balises dans Adobe Experience Platform fait référence au processus de création de bibliothèques, de test des versions et dʼapprobation pour la production.
 

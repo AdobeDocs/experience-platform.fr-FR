@@ -2,18 +2,14 @@
 title: Norme de rétrocompatibilité
 description: Découvrez la norme de rétrocompatibilité dans Adobe Experience Platform, qui garantit que les versions mises à jour des extensions de balises sont compatibles avec les versions précédentes.
 exl-id: 325390f1-88c7-4b9e-a484-5442ca649bdf
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '788'
 ht-degree: 100%
 
 ---
 
 # Norme de rétrocompatibilité
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Les mises à jour dʼune extension de balise dans Adobe Experience Platform doivent être rétrocompatibles avec les versions précédentes de lʼextension. Cela signifie que :
 

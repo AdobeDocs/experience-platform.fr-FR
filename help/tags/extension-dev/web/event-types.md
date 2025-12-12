@@ -2,18 +2,14 @@
 title: Types d’événements pour les extensions web
 description: Découvrez comment définir un module de bibliothèque relatif aux types d’événements pour une extension web dans Adobe Experience Platform.
 exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1007'
 ht-degree: 97%
 
 ---
 
 # Types d’événements pour les extensions web
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Dans une règle de balise, un événement est une activité qui doit se produire pour qu’une règle se déclenche. Par exemple, une extension web peut fournir un type d’événement « mouvement » qui surveille un certain mouvement de souris ou de toucher. Une fois le mouvement effectué, la logique de l’événement déclenche la règle.
 
@@ -61,7 +57,7 @@ Si vous souhaitez que l’utilisateur Adobe Experience Platform puisse configu
 }
 ```
 
-Pour fonctionner selon la durée définie par l’utilisateur, notre module devrait être modifié pour devenir ceci :
+Pour fonctionner selon la durée définie par l’utilisateur ou l’utilisatrice, notre module devrait être mis à jour pour devenir ceci :
 
 ```js
 module.exports = function(settings, trigger) {

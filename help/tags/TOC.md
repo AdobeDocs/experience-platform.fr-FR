@@ -6,9 +6,9 @@ user-guide-description: Découvrez comment déployer et gérer des balises d’a
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: c7bedcdb04d5c5483d0239a9fb99388d5e1e1fe5
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '824'
 ht-degree: 80%
 
 ---
@@ -365,8 +365,6 @@ ht-degree: 80%
       * [Relations](./api/guides/relationships.md)
       * [Recherche de ressources](./api/guides/search.md)
       * [Secrets](./api/guides/secrets.md)
-* [FAQ](./faq.md)
-* [Mises à jour de terminologie](./term-updates.md)
-* [Obsolescence de la prise en charge d’Internet Explorer 10 et 11](./ie-deprecation.md)
+* [Questions fréquentes](./faq.md)
 * [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
 

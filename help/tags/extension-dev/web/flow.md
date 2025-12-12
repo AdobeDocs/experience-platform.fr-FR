@@ -2,18 +2,14 @@
 title: Flux d’extension web
 description: Découvrez comment les composants d’extension web interagissent les uns avec les autres au moment de l’exécution dans Adobe Experience Platform.
 exl-id: 90a0c64c-d240-4e2c-876b-22f05d6f3f82
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '272'
-ht-degree: 89%
+source-wordcount: '227'
+ht-degree: 77%
 
 ---
 
 # Flux d’extension web
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Dans les extensions web, chaque type d’événement, de condition, d’action et d’élément de données comporte à la fois une vue qui permet aux utilisateurs de modifier les paramètres et un module de bibliothèque leur permettant d’agir sur ces paramètres définis par l’utilisateur.
 
@@ -29,6 +25,6 @@ Le flux de traitement des règles contient les phases suivantes :
 
 1. La méthode `settings` et la méthode `trigger` sont fournies au module de bibliothèque d’événements au démarrage.
 1. Lorsque le module de bibliothèque d’événements détermine que l’événement s’est produit, le module de bibliothèque d’événements appelle `trigger`.
-1. Les balises transmettent `settings` dans les modules de bibliothèque de conditions de la règle où les conditions sont évaluées.
+1. Les balises transmettent les `settings` dans les modules de bibliothèque de conditions de la règle où les conditions sont évaluées.
 1. Chaque module de bibliothèque de conditions renvoie si une condition est évaluée comme vraie.
 1. Si toutes les conditions sont remplies, les actions de la règle sont exécutées.

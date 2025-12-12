@@ -2,22 +2,18 @@
 title: Présentation des hôtes gérés par Adobe
 description: Découvrez l’option d’hébergement par défaut pour le déploiement des versions de bibliothèques de balises dans Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1129'
 ht-degree: 82%
 
 ---
 
 # Présentation des hôtes gérés par Adobe
 
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
-
 Les hôtes gérés par Adobe sont le paramètre d’hôte par défaut pour le déploiement des versions de bibliothèques de balises dans Adobe Experience Platform. Lorsque vous créez une propriété dans l’interface utilisateur de la collecte de données, un hôte géré par Adobe par défaut est créé pour vous.
 
-Avec les hôtes gérés par Adobe, les versions de bibliothèque sont diffusées à un réseau de diffusion de contenu (CDN) tiers avec lequel Adobe a conclu un contrat. Ces réseaux de diffusion de contenu fonctionnent indépendamment d’Adobe. Ainsi, même lorsqu’Experience Platform est en cours de maintenance ou est hors service, votre code déployé continuera à fonctionner normalement sur vos sites et applications. Le code incorporé pour un hôte géré par Adobe indique l’emplacement du fichier de bibliothèque principal sur le réseau de diffusion de contenu afin qu’un appareil client puisse récupérer les fichiers au moment de l’exécution.
+Avec les hôtes gérés par Adobe, les versions de bibliothèque sont diffusées à un réseau de diffusion de contenu (CDN) tiers avec lequel Adobe a conclu un contrat. Ces réseaux de diffusion de contenu fonctionnent indépendamment d’Adobe. Ainsi, même lorsqu’Experience Platform est en cours de maintenance ou est hors service, votre code déployé continuera à fonctionner normalement sur vos sites et applications. Le code intégré pour un hôte géré par Adobe fait référence au fichier de bibliothèque principal sur le réseau de diffusion de contenu afin qu’un appareil client puisse récupérer les fichiers au moment de l’exécution.
 
 Ce document présente une vue d’ensemble des hôtes gérés par Adobe dans Experience Platform et décrit la procédure à suivre pour créer un hôte géré par Adobe dans l’interface utilisateur.
 
@@ -84,7 +80,7 @@ Le délai d’expiration de la version de votre bibliothèque mise en cache par 
 | Évaluation | `max-age=0, no-cache, no-store` |
 | Production | `max-age=3600` |
 
-Comme l’indique le tableau ci-dessus, le caching du navigateur n’est pas pris en charge sur les environnements de développement et d’évaluation. Par conséquent, vous ne devez pas utiliser les codes incorporés de développement ou intermédiaires dans les contextes à trafic élevé ou de production.
+Comme l’indique le tableau ci-dessus, le caching du navigateur n’est pas pris en charge sur les environnements de développement et d’évaluation. Par conséquent, vous ne devez pas utiliser les codes intégrés de développement ou intermédiaires dans les contextes à trafic élevé ou de production.
 
 Les en-têtes de contrôle du cache ne sont appliqués que pour la version de la bibliothèque principale. Toutes les sous-ressources situées sous la bibliothèque principale sont toujours considérées comme des sous-ressources nouvelles et il n’est donc pas nécessaire de les mettre en cache dans le navigateur.
 
@@ -96,8 +92,8 @@ Lorsque vous créez une propriété pour la première fois dans l’interface ut
 >
 >Si l’affectation de l’hôte géré par Adobe par défaut est supprimée de tous les environnements, l’hôte peut être supprimé. Si vous souhaitez revenir à un hôte géré par Adobe après cette opération, vous pouvez créer un nouvel hôte en procédant comme suit :
 >
->1. Sélectionnez l’onglet **[!UICONTROL Hôtes]** sur votre propriété, puis cliquez sur **[!UICONTROL Ajouter l’hôte]**.
->1. Attribuez un nom à l’hôte, sélectionnez **[!UICONTROL Géré par Adobe]** comme type d’hôte, puis cliquez sur **[!UICONTROL Enregistrer]**.
+>1. Sélectionnez l’onglet **[!UICONTROL Hosts]** de votre propriété, puis sélectionnez **[!UICONTROL Add Host]**.
+>1. Attribuez un nom à l’hôte, sélectionnez **[!UICONTROL Managed by Adobe]** comme type d’hôte, puis sélectionnez **[!UICONTROL Save]**.
 >
 >Vous pouvez ensuite réaffecter vos environnements à l’hôte géré par Adobe selon vos besoins.
 

@@ -2,18 +2,14 @@
 title: Modules de bibliothèque dans les extensions Edge
 description: Mise en forme des modules de bibliothèque pour les extensions de balise dans une propriété Edge.
 exl-id: 82b98972-6fa2-4143-bcf4-c5dac1ca0e7f
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '256'
 ht-degree: 100%
 
 ---
 
 # Modules de bibliothèque dans les extensions Edge
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 >[!IMPORTANT]
 >

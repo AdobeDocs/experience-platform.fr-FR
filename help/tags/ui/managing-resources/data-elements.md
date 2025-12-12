@@ -2,18 +2,14 @@
 title: Éléments de données
 description: Les éléments de données sont les blocs de construction de votre dictionnaire de données (ou mappage de données). Utilisez des éléments de données pour recueillir, organiser et diffuser des données dans les technologies marketing et publicitaires.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1615'
-ht-degree: 89%
+source-wordcount: '1549'
+ht-degree: 88%
 
 ---
 
 # Éléments de données
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Les éléments de données sont les blocs de construction de votre dictionnaire de données (ou mappage de données). Utilisez des éléments de données pour recueillir, organiser et diffuser des données dans les technologies marketing et publicitaires.
 
@@ -56,7 +52,7 @@ Vous pouvez utiliser des éléments de données dans des scripts personnalisés 
 
 Les éléments de données constituent les blocs de construction des règles. Ils vous permettent de créer un dictionnaire de données (ou mappage de données) des éléments utilisés couramment sur une page, indépendamment de leur origine (chaînes de requête, URL ou valeurs de cookie), pour n’importe quel objet contenu sur le site.
 
-1. Sur une page Propriété, ouvrez lʼonglet [!UICONTROL Éléments de données], puis sélectionnez **[!UICONTROL Créer un élément de données]**.
+1. Dans une page Propriété, ouvrez l’onglet [!UICONTROL Data Elements], puis cliquez sur **[!UICONTROL Create New Data Element]**.
 1. Nommez l’élément de données.
 1. Sélectionnez une extension et un type.
 
@@ -85,9 +81,9 @@ Les éléments de données constituent les blocs de construction des règles. Il
    * Visitor
       * La valeur est stockée indéfiniment dans le stockage local du navigateur.
 
-1. Sélectionnez **[!UICONTROL Enregistrer]**.
+1. Sélectionner **[!UICONTROL Save]**.
 
-Lors de la création ou de la modification d’éléments, vous pouvez enregistrer et créer une [bibliothèque active](../publishing/libraries.md#active-library). Cette opération enregistre immédiatement votre modification dans votre bibliothèque et exécute une version. Le statut de la version s’affiche. Vous pouvez également créer une bibliothèque à partir de la liste déroulante [!UICONTROL Bibliothèque active].
+Lors de la création ou de la modification d’éléments, vous pouvez enregistrer et créer une [bibliothèque active](../publishing/libraries.md#active-library). Cette opération enregistre immédiatement votre modification dans votre bibliothèque et exécute une version. Le statut de la version s’affiche. Vous pouvez également créer une bibliothèque à partir de la liste déroulante [!UICONTROL Active Library] .
 
 ## Types d’éléments de données {#types-of-data-elements}
 
@@ -107,7 +103,7 @@ Tout cookie de domaine disponible peut être référencé dans le champ du nom d
 
 ### Custom code
 
-Il est possible dʼentrer du code JavaScript personnalisé dans lʼinterface utilisateur en cliquant sur [!UICONTROL Ouvrir lʼéditeur] et en insérant le code dans la fenêtre de lʼéditeur.
+Il est possible d’entrer du code JavaScript personnalisé dans l’interface utilisateur en cliquant sur [!UICONTROL Open Editor] et en insérant le code dans la fenêtre de l’éditeur.
 
 Une instruction de retour est nécessaire dans la fenêtre de l’éditeur afin d’indiquer quelle valeur doit être définie en tant que valeur de l’élément de données. Si aucune instruction de retour n’est incluse, l’élément de données est résolu sur `undefined`. Cela déclenche une recherche de secours pour une valeur stockée, puis pour une valeur par défaut si aucune valeur stockée n’est présente.
 
@@ -203,9 +199,9 @@ Vous pouvez sélectionner l’un des attributs de page suivants à utiliser dans
 * Référent
 * Title
 
-### Query String Parameter
+### Paramètre de chaîne de requête
 
-Spécifiez un paramètre dʼURL unique dans le champ [!UICONTROL URL Parameter].
+Spécifiez un paramètre d’URL unique dans le champ [!UICONTROL URL Parameter].
 
 Seule la section de nom est nécessaire. Les indicateurs spéciaux tels que « ? » ou « = » doivent être omis.
 

@@ -3,10 +3,10 @@ title: Présentation du transfert dʼévénements
 description: Découvrez le transfert d’événements dans Adobe Experience Platform, qui vous permet d’utiliser Experience Platform Edge Network afin d’exécuter des tâches sans modifier votre mise en œuvre de balises.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 88995c933bf067fe3d077d1be8b92b076e461707
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1181'
-ht-degree: 48%
+source-wordcount: '1144'
+ht-degree: 44%
 
 ---
 
@@ -16,11 +16,7 @@ ht-degree: 48%
 >
 >Le transfert d’événement est une fonctionnalité payante uniquement incluse dans les offres Connections, Prime, ou Ultimate d’Adobe Real-Time Customer Data Platform.
 
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
-
-Le transfert d’événement dans Adobe Experience Platform vous permet d’envoyer les données d’événement collectées vers une destination pour le traitement côté serveur. Le transfert dʼévénements réduit le poids de la page web et de lʼapplication en utilisant Adobe Experience Platform Edge Network pour exécuter les tâches normalement exécutées sur le client. Mises en œuvre de la même manière que les balises, les règles de transfert d’événement peuvent transformer et envoyer des données vers de nouvelles destinations. Cependant, au lieu d’envoyer ces données depuis une application cliente comme un navigateur web, elles sont envoyées depuis les serveurs d’Adobe.
+Le transfert d’événement dans Adobe Experience Platform (anciennement appelé Adobe Experience Platform Launch côté serveur) vous permet d’envoyer les données d’événement collectées vers une destination pour le traitement côté serveur. Le transfert dʼévénements réduit le poids de la page web et de lʼapplication en utilisant Adobe Experience Platform Edge Network pour exécuter les tâches normalement exécutées sur le client. Mises en œuvre de la même manière que les balises, les règles de transfert d’événement peuvent transformer et envoyer des données vers de nouvelles destinations. Cependant, au lieu d’envoyer ces données depuis une application cliente comme un navigateur web, elles sont envoyées depuis les serveurs d’Adobe.
 
 Ce document présente de manière générale le transfert d’événement dans Experience Platform.
 

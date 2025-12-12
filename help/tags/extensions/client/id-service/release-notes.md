@@ -2,45 +2,41 @@
 title: Notes de mise à jour de l’extension Service d’identités d’Adobe Experience Cloud
 description: Dernières notes de mise à jour pour l’extension Service d’identités d’Adobe Experience Cloud dans Adobe Experience Platform.
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 78%
+source-wordcount: '643'
+ht-degree: 76%
 
 ---
 
 # Notes de mise à jour de l’extension Service d’identités d’Adobe Experience Cloud
 
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+Ce document contient les notes de mise à jour de l’extension Adobe Experience Cloud Identity Service pour les balises. Pour les notes de mise à jour d’Experience Cloud Identity Service lui-même, reportez-vous à la [documentation d’Identity Service](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=fr).
 
-Ce document couvre les notes de mise à jour de l’extension de balise Adobe Experience Cloud Identity Service. Pour les notes de mise à jour sur le service Identity Experience Cloud lui-même, reportez-vous à la [documentation du service Identity](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=fr).
-
-## 17 octobre 2022
+## 17 Oct 2022
 
 ### Extension 5.5.0 d’Experience Cloud ID
 
-* L’extension prend désormais en charge la version 5.5.0 du [client JavaScript du visiteur](https://github.com/Adobe-Marketing-Cloud/id-service). Pour des mises à jour spécifiques, reportez-vous aux [notes de mise à jour du visiteur](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) .
+* L’extension prend désormais en charge la version 5.5.0 du [client JS visiteur](https://github.com/Adobe-Marketing-Cloud/id-service). Reportez-vous aux [notes de mise à jour des visiteurs](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) pour obtenir des informations spécifiques.
 
-## 9 mars 2022
+## 9 Mars 2022
 
 ### Extension 5.4.0 d’Experience Cloud ID
 
-* Cette version contient la dernière version 5.4.0 du visiteur, qui comprend les mises à jour suivantes :
+* Cette version contient la dernière version 5.4.0 de Visitor, avec les mises à jour suivantes :
 
    * Possibilité de configurer la durée de vie du cookie `s_ecid` à l’aide de la configuration cookieLifetime
-   * Mise à jour d’un problème de navigateur Firefox qui se produit lorsqu’une page est chargée dans un iFrame enfant
+   * Mise à jour pour un problème de navigateur Firefox qui se produit lorsqu’une page est chargée dans un iFrame enfant
 
-## 10 octobre 2021
+## 10 Oct 2021
 
 ### Extension 5.3.1 d’Experience Cloud ID
 
-* Cette version contient la dernière version 5.3.0 du visiteur, qui comporte les nouvelles mises à jour suivantes :
+* Cette version contient la dernière version de Visitor 5.3.0, qui comporte les nouvelles mises à jour suivantes :
 
-   * Mise à jour de l’algorithme pour générer l’ECID local
-   * Dernière Opt-in avec les indicateurs `Secure` et `SameSite` pour le cookie de confidentialité
-   * Correction d’un problème de navigateur Firefox lorsqu’une page est chargée dans un iFrame enfant.
+   * Algorithme mis à jour pour générer l’ECID local.
+   * Dernier accord préalable avec les indicateurs `Secure` et `SameSite` pour le cookie de confidentialité
+   * Correction d’un problème de navigateur Firefox lorsqu’une page est chargée dans un iFrame enfant
 
 ## 12 janvier 2021
 

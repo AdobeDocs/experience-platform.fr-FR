@@ -2,18 +2,14 @@
 title: Création dʼune liste Exchange pour une extension
 description: Découvrez comment ajouter votre extension au catalogue public dans Adobe Experience Platform.
 exl-id: 0395fc99-5e2b-46d6-a067-f8f167733e02
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1194'
-ht-degree: 71%
+source-wordcount: '1147'
+ht-degree: 67%
 
 ---
 
 # Création dʼune liste Exchange pour une extension
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Adobe Experience Platform comporte un catalogue unique et unifié dans lequel les utilisateurs peuvent afficher les extensions de balises disponibles pour lʼinstallation. Ce catalogue est disponible dans le produit et contient des extensions de trois types :
 
@@ -43,18 +39,17 @@ Si vous disposez déjà d’un compte d’entreprise ou si vous n’avez pas bes
 
 1. Connectez-vous au [site Exchange Partner](https://partners.adobe.com/exchangeprogram/experiencecloud). Une fois connecté, cliquez sur le lien **App Manager** en regard de votre nom.
 1. Sélectionnez lʼonglet **Créer une application**, puis sélectionnez **Créer une application** pour une solution personnalisée ou sélectionnez un modèle approprié.
-1. Fournissez les informations relatives à votre liste. Pour plus d’informations sur App Manager, consultez l’article complet [&#128279;](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360024197931). La description de lʼextension doit renseigner précisément sur les fonctionnalités et lʼutilité de celle-ci. La description constitue votre espace marketing pour lʼapplication. Faites connaître votre extension ici au moyen de descriptions claires, de liens vers des pages de destination de votre site, des documents dʼaide ou des adresses e-mail de support, etc. Bien que lʼespace réservé pour lʼextension soit limité, votre liste Exchange vous offre lʼopportunité de promouvoir à la fois votre extension et votre société. Voici quelques suggestions pour mettre en valeur votre extension :
-   - **Icône d’application** - Assurez-vous que l’icône de la liste Exchange présente les dimensions appropriées, 512 x 512 pour png ou proportions 1:1 pour jpg.
+1. Fournissez les informations relatives à votre liste. Pour plus d’informations sur App Manager, consultez l’article complet [](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360024197931). La description de lʼextension doit renseigner précisément sur les fonctionnalités et lʼutilité de celle-ci. La description constitue votre espace marketing pour lʼapplication. Faites connaître votre extension ici au moyen de descriptions claires, de liens vers des pages de destination de votre site, des documents dʼaide ou des adresses e-mail de support, etc. Bien que lʼespace réservé pour lʼextension soit limité, votre liste Exchange vous offre lʼopportunité de promouvoir à la fois votre extension et votre société. Voici quelques suggestions pour mettre en valeur votre extension :
+   - **Icône de l’application** - Assurez-vous que l’icône de la liste Exchange présente les dimensions appropriées, 512 x 512 pour png ou 1:1 proportions pour jpg.
 
      >[!NOTE]
      >
      >Il sʼagit dʼun format de fichier différent de celui que vous utilisez dans votre code dʼextension. L’extension elle-même contiendra un fichier svg en tant qu’[icône](../manifest.md).
 
    - **Image en vedette** - Attirez l’attention à l’aide d’une image autonome permettant de présenter votre marque et de mettre en avant votre application. L’image en vedette est celle qui s’affiche lorsqu’une personne partage un lien vers votre liste Exchange ou publie des articles à ce sujet sur les médias sociaux. Elle doit donc représenter fidèlement votre marque.
-   - **Logo de l’éditeur de l’appli** : il s’agit du logo de votre entreprise. Vérifiez que l’icône a les dimensions appropriées, soit 1 280 x 720 ou 2 560 x 1 440 (16:9) au format png ou jpg.
+   - **Logo de l’éditeur de l’application** - Il s’agit du logo de votre entreprise. Vérifiez que l’icône a les dimensions appropriées, soit 1 280 x 720 ou 2 560 x 1 440 (16:9) au format png ou jpg.
    - **Instructions de configuration** : informez les clients sur la manière de configurer votre extension Adobe Experience Platform. Assurez-vous qu’ils comprennent les paramètres requis et les étapes suivantes lorsque votre [vue de configuration](../configuration.md) s’affiche immédiatement après l’installation de votre extension dans une propriété.
    - **Balises** : sur la première page de la modification de votre liste, veillez à inclure le mot « Launch » dans le champ « Balises personnalisées ». Votre extension apparaîtra alors dans les résultats de recherche de balises dans le marketplace Exchange :
-
      ![](../images/getting-started/custom-tags.jpg)
    - **Sandbox** : lʼaccès aux solutions Adobe sʼeffectue via un compte Sandbox, au moyen duquel vous avez accès à une version fonctionnelle dʼAdobe Experience Platform. Ces comptes sandbox sont demandés lorsque vous créez votre liste d’applications. Dans la section **Connexions**, sélectionnez les connexions spécifiques relatives à l’application que vous avez créée (votre extension Balise) et lorsque vous appuyez sur **Enregistrer**, la demande de sandbox est générée si nécessaire.
 1. Soumettez votre liste. L’équipe Adobe Exchange examinera votre application et fournira des commentaires si des mises à jour sont requises. Si vous cochez la case **publier immédiatement** lorsque vous soumettez votre liste, elle sera publiée immédiatement après approbation. Si vous souhaitez publier votre application ultérieurement, ne cochez pas cette case. Une fois votre liste d’extensions approuvée, un bouton bleu **Publier** s’affiche en regard de celle-ci sur votre page de liste d’applications (extension).

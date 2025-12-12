@@ -2,18 +2,14 @@
 title: Supprimer des ressources d’une bibliothèque
 description: Découvrez comment supprimer des ressources dʼune bibliothèque de balises.
 exl-id: ad1dd093-962c-4f6d-85eb-c5ed1b644927
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '268'
 ht-degree: 100%
 
 ---
 
 # Supprimer des ressources d’une bibliothèque
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Lorsque vous ne souhaitez plus qu’une ressource ait de l’effet dans une version, vous devez la supprimer de la bibliothèque qui contient cette ressource et créer une version.
 
@@ -47,7 +43,7 @@ Vous devez plutôt désactiver la ressource. Cette désactivation est une modifi
 
 1. Désactivez la ressource.
    1. Sélectionnez la ressource dans la vue Liste.
-   1. Sélectionnez **[!UICONTROL Désactiver]**.
+   1. Sélectionner **[!UICONTROL Disable]**.
 1. Créez une bibliothèque de développement.
 1. Ajoutez la `latest` version de la ressource désactivée.
 1. Enregistrez et générez.

@@ -2,18 +2,14 @@
 title: Configuration des organisations Experience Cloud
 description: Découvrez comment enregistrer une organisation Adobe Experience Cloud afin de commencer à développer des extensions pour Adobe Experience Platform.
 exl-id: ee36319d-5de8-462e-879b-311445cf334c
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '573'
-ht-degree: 90%
+source-wordcount: '528'
+ht-degree: 89%
 
 ---
 
 # Configuration des organisations Experience Cloud
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Pour développer des extensions de balise dans Adobe Experience Platform, il est nécessaire d’enregistrer une organisation Adobe Experience Cloud.
 
@@ -41,9 +37,9 @@ Ce programme est destiné aux sociétés de conseil qui aident les clients Adobe
 >
 >Actuellement, votre adresse email professionnelle ne peut être utilisée que dans un seul programme de partenariat à la fois. Vous devez donc utiliser une autre adresse email professionnelle comme contact enregistré pour chacun des programmes.
 
-Une fois que votre société a rejoint le programme Partenaires en Exchange, vous pouvez demander l’accès aux solutions Adobe en vous connectant au [site Partenaires en Exchange](https://partners.adobe.com/exchangeprogram/experiencecloud) et en suivant les étapes ci-dessous.
+Une fois que votre société est inscrite au programme Partenaires Exchange, vous pouvez demander l’accès aux solutions Adobe en vous connectant au [site Partenaires Exchange](https://partners.adobe.com/exchangeprogram/experiencecloud) et en suivant les étapes ci-dessous.
 
-Si vous disposez d’un compte Experience Cloud qui nécessite l’accès à l’interface utilisateur de collecte de données et à l’interface utilisateur Experience Platform, consultez le [&#x200B; guide des autorisations de collecte de données](../../../collection/permissions.md).
+Si vous disposez d’un compte Experience Cloud et que vous devez accéder à l’interface utilisateur de la collecte de données et à l’interface utilisateur d’Experience Platform, reportez-vous au guide [autorisations relatives à la collecte de données](../../../collection/permissions.md).
 
 ## Pour les développeurs indépendants
 

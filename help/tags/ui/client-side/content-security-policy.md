@@ -2,18 +2,14 @@
 title: Prise en charge de la politique de sécurité du contenu (CSP)
 description: Découvrez comment gérer les restrictions de la politique de sécurité du contenu (CSP) lors de lʼintégration de votre site web au moyen de balises dans Adobe Experience Platform.
 exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1076'
-ht-degree: 97%
+source-wordcount: '1031'
+ht-degree: 96%
 
 ---
 
 # Prise en charge de la politique de sécurité du contenu (CSP)
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Une politique de sécurité du contenu (CSP) est une fonctionnalité de sécurité qui aide à prévenir les attaques de type « cross-site scripting » (XSS). Elles se produisent lorsque le navigateur est amené à exécuter du contenu malveillant qui semble provenir dʼune source de confiance, mais qui vient en réalité dʼailleurs. La stratégie de sécurité du contenu permet au navigateur (au nom de l’utilisateur) de vérifier que le script provient bien d’une source de confiance.
 

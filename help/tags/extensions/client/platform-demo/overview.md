@@ -2,18 +2,14 @@
 title: Présentation de l’extension Adobe Experience Platform Demo
 description: Découvrez l’extension Adobe Experience Platform Demo dans Adobe Experience Platform.
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 99%
+source-wordcount: '1009'
+ht-degree: 97%
 
 ---
 
 # Extension Adobe Experience Platform Demo
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 >[!NOTE]
 >
@@ -37,21 +33,21 @@ Les fonctionnalités de cette extension sont transférées vers une nouvelle ext
 
 Cette section fournit une référence pour les options disponibles lors de la configuration de l’extension Adobe Experience Platform.
 
-Si l’extension Adobe Experience Platform n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, placez le curseur sur l’extension Adobe Experience Platform et cliquez sur **[!UICONTROL Installer]**.
+Si l’extension Adobe Experience Platform n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalog]**, survolez l’extension Adobe Experience Platform et cliquez sur **[!UICONTROL Install]**.
 
-Pour configurer l’extension, ouvrez l’onglet [!UICONTROL Extensions], placez le curseur sur l’extension, puis cliquez sur **[!UICONTROL Configurer]**.
+Pour configurer l’extension, ouvrez l’onglet [!UICONTROL Extensions], survolez l’extension avec la souris, puis cliquez sur **[!UICONTROL Configure]**.
 
 ![](../../../images/adobe-experience-platform-extension-configuration.png)
 
 ### Connexion en continu
 
-Le choix d’une connexion en continu est la première étape pour commencer à envoyer des données en continu vers Adobe Experience Platform. Vous pouvez sélectionner une connexion dans la zone de liste déroulante de connexion en continu. Connexion en continu est un champ obligatoire. Si aucune connexion en continu n’est créée, vous pouvez en créer une en cliquant sur le bouton **[!UICONTROL Créer une connexion en continu]**.
+Le choix d’une connexion en continu est la première étape pour commencer à envoyer des données en continu vers Adobe Experience Platform. Vous pouvez sélectionner une connexion dans la zone de liste déroulante de connexion en continu. Connexion en continu est un champ obligatoire. Si aucune connexion en continu n’est créée, vous pouvez en créer une en cliquant sur le bouton **[!UICONTROL Create a streaming connection]**.
 
-Si vous sélectionnez **[!UICONTROL Créer une connexion en continu]**, une fenêtre modale s’affiche.
+Si vous sélectionnez **[!UICONTROL Create a streaming connection]**, une fenêtre modale s’affiche.
 
 ![](../../../images/adobe-experienc-platform-create-streaming-connection.png)
 
-Le modal contient les champs avec des valeurs préremplies qui peuvent être modifiées en fonction de vos besoins. Si vous prévoyez de créer plus d’une connexion en continu, sachez que le champ **[!UICONTROL Source de données]** doit être unique. Toute tentative visant à créer une autre connexion en continu à l’aide d’une **[!UICONTROL Source de données]** utilisée sur une autre connexion échouera.
+Le modal contient les champs avec des valeurs préremplies qui peuvent être modifiées en fonction de vos besoins. Si vous prévoyez de créer plusieurs connexions en continu, n’oubliez pas que le champ **[!UICONTROL Data Source]** doit être unique. Toute tentative pour créer une autre connexion en continu à l’aide d’une **[!UICONTROL Data Source]** utilisée sur une autre connexion échouera.
 
 Une fois que vous avez sélectionné un point d’entrée de connexion en continu, l’URL et la source du point d’entrée de connexion en continu s’affichent.
 
@@ -95,7 +91,7 @@ Les schémas de données d’enregistrement et les schémas de données de séri
 
 Les champs d’identité peuvent être définis de deux manières au sein du schéma :
 
-1. Les schémas d’enregistrement et de séries chronologiques contiennent tous deux un champ spécial appelé `xdm:identityMap` contenant une carte des identités.
+1. Les schémas d’enregistrement et de séries temporelles contiennent tous deux un champ spécial appelé `xdm:identityMap` contenant une carte des identités.
 1. Les champs clés peuvent être marqués comme des champs « Identité » au sein du schéma.
 
 ### Champs d’identité au sein de l’extension Adobe Experience Platform

@@ -2,18 +2,14 @@
 title: Propriétés
 description: Découvrez comment vos extensions, environnements et bibliothèques sont organisés et regroupés pour votre organisation dans Adobe Experience Platform.
 exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1108'
 ht-degree: 90%
 
 ---
 
 # Propriétés
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 ## Propriétés web
 

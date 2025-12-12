@@ -2,18 +2,14 @@
 title: Informations côté client
 description: Découvrez comment gérer les opérations sur les balises du côté client de votre application web ou mobile.
 exl-id: 54c66066-93f7-4311-a255-0825055d0dec
-source-git-commit: c76b64e76229db8f9da544a79aed903a134f7351
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '131'
 ht-degree: 100%
 
 ---
 
 # Informations côté client
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Cette section contient des informations utiles concernant la gestion des opérations de balises côté client dans Adobe Experience Platform.
 

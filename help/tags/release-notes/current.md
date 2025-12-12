@@ -2,10 +2,10 @@
 title: Notes de mise à jour relatives aux balises et au transfert d’événements
 description: Dernières notes de mise à jour concernant les balises et le transfert d’événement dans Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 95%
+source-wordcount: '770'
+ht-degree: 93%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 95%
 
 >[!IMPORTANT]
 >
->À l&#39;avenir, les balises et les notes de mise à jour du transfert d’événement ne seront plus fournis sur cette page. Consultez les dernières [notes de mise à jour d&#39;Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=fr#data-collection) pour obtenir des mises à jour détaillées sur les balises et le transfert d’événement.
+>À l&#39;avenir, les balises et les notes de mise à jour du transfert d’événement ne seront plus fournis sur cette page. Consultez les dernières [notes de mise à jour d&#39;Adobe Experience Platform](/help/release-notes/latest/latest.md) pour obtenir des mises à jour détaillées sur les balises et le transfert d’événement.
 
 ## 26 avril 2023
 
@@ -63,12 +63,12 @@ De nouvelles extensions ont été publiées :
 
 * **Intégration à la navigation de gauche de Adobe Experience Platform** : toutes les fonctionnalités qui étaient auparavant exclusives à l’interface utilisateur de la collecte de données (y compris les balises et le transfert d’événement) sont désormais également disponibles via la navigation de gauche dans l’interface utilisateur d’Experience Platform, sous la catégorie **[!UICONTROL Data Collection]**. Il n’est donc pas nécessaire de basculer entre les IU lors de l’utilisation des fonctionnalités de collecte de données dans Experience Platform.
 * **Attribution utilisateur dans les balises et le transfert d’événement** : lors de l’énumération des propriétés disponibles dans les balises et le transfert d’événement, chaque propriété répertoriée indique désormais la date de sa dernière mise à jour et la personne qui l’a effectuée.
-* Extension **[[!DNL Snap Conversions API] &#x200B;](https://exchange.adobe.com/apps/ec/108550) pour le transfert d’événement** : vous pouvez désormais envoyer des données à l’[!DNL Snapchat Conversions API] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations sur la configuration et l’utilisation de l’API, voir la [[!DNL Snapchat Marketing API] documentation dédiée](https://marketingapi.snapchat.com/docs/conversion.html).
+* Extension **[[!DNL Snap Conversions API] ](https://exchange.adobe.com/apps/ec/108550) pour le transfert d’événement** : vous pouvez désormais envoyer des données à l’[!DNL Snapchat Conversions API] à l’aide d’une extension de [transfert d’événement](../../tags/ui/event-forwarding/overview.md). Pour plus d’informations sur la configuration et l’utilisation de l’API, voir la [[!DNL Snapchat Marketing API] documentation dédiée](https://marketingapi.snapchat.com/docs/conversion.html).
 
 ## 27 juillet 2022
 
 * L’accès aux fonctionnalités de balises et de transfert d’événement est désormais géré via Adobe Admin Console, sous la vignette correspondant à la collecte de données d’Adobe Experience Platform. Pour en savoir plus, consultez le guide des [autorisations relatives à la collecte de données](../../collection/permissions.md).
-* La prise en charge d’Internet Explorer 10 et 11 est [obsolète](../ie-deprecation.md).
+* La prise en charge d’Internet Explorer 10 et 11 est obsolète.
 
 ## 22 juin 2022
 

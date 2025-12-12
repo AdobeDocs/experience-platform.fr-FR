@@ -2,18 +2,14 @@
 title: Notes
 description: Découvrez comment ajouter des annotations textuelles à certaines ressources de balises dans Adobe Experience Platform.
 exl-id: 14d6b6a1-3bd0-4181-8181-e6b35c197a44
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: '262'
 ht-degree: 99%
 
 ---
 
 # Notes
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Les notes sont des annotations textuelles que vous pouvez ajouter à certaines ressources de balises dans Adobe Experience Platform. Des notes peuvent être ajoutées aux ressources suivantes :
 
@@ -39,7 +35,7 @@ Les notes sont des commentaires qui n’ont aucun impact sur le comportement des
 
 Les ressources qui peuvent être annotées ont un rail fin sur le côté droit de l’écran. Ce rail comprend une icône pour l’annotation. Cette icône indique le nombre actuel de notes jointes à la ressource.
 
-Cliquez sur l’icône **[!UICONTROL Notes]** pour développer le rail de droite et afficher les notes. Les notes les plus récentes sont affichées en haut.  Pour ajouter une nouvelle note, saisissez votre texte dans la zone située en haut et cliquez sur **[!UICONTROL Ajouter une note]**.
+Cliquez sur l’icône **[!UICONTROL Notes]** pour développer le rail de droite et afficher les notes. Les notes les plus récentes sont affichées en haut.  Pour ajouter une nouvelle note, saisissez votre texte dans la zone située en haut et cliquez sur **[!UICONTROL Add Note]**.
 
 ## Autre
 

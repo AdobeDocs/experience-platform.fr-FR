@@ -2,18 +2,14 @@
 title: Navigateurs pris en charge
 description: Liste des navigateurs compatibles avec lʼexécution dʼune balise Adobe Experience Platform.
 exl-id: fc9ff6f5-7d54-4f13-8286-44791499d704
-source-git-commit: 32aa453ca40c0500da0fec8957db978c319a3dbe
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '97'
 ht-degree: 100%
 
 ---
 
 # Navigateurs pris en charge
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Lʼexécution des balises dans Adobe Experience Platform (diffusée sur les sites web des clients) est compatible avec différents navigateurs :
 

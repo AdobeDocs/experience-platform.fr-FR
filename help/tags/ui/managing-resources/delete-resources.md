@@ -2,20 +2,16 @@
 title: Suppression de ressources
 description: Découvrez comment supprimer des ressources de balises dans Adobe Experience Platform.
 exl-id: c8e26720-1976-48ec-8490-3d4ce587831e
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '512'
 ht-degree: 93%
 
 ---
 
 # Suppression de ressources
 
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
-
-La suppression d’une ressource entraîne la suppression définitive de cette ressource dans Adobe Experience Platform. Si vous souhaitez supprimer une ressource d’une bibliothèque de balises spécifique tout en souhaitant que cette ressource soit disponible dans d’autres bibliothèques, consultez le guide sur la [suppression de ressources d’une bibliothèque](remove-resources-from-library.md).
+La suppression d’une ressource entraîne la suppression définitive de cette ressource dans Adobe Experience Platform. Si vous souhaitez supprimer une ressource d’une bibliothèque de balises spécifique tout en souhaitant que cette ressource puisse être utilisée dans d’autres bibliothèques, consultez le guide sur la [suppression de ressources d’une bibliothèque](remove-resources-from-library.md).
 
 Vous pouvez supprimer des éléments de données, des règles, des extensions, des hôtes, des environnements et des propriétés. Une fois supprimées, il n’est pas possible de récupérer ces ressources.
 
@@ -78,4 +74,4 @@ Avant de pouvoir supprimer une ressource, vous devez la supprimer des bibliothè
 
 ## Supprimer une ressource
 
-Dans la vue Liste appropriée, sélectionnez la ressource à supprimer, puis cliquez sur **[!UICONTROL Supprimer]**.
+Dans la vue Liste appropriée, sélectionnez la ressource à supprimer, puis cliquez sur **[!UICONTROL Delete]**.

@@ -2,20 +2,16 @@
 title: Notes de mise à jour de l’extension Core
 description: Notes de mise à jour les plus récentes pour l’extension Core dans Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 1dab2b2778844ac08c1fbc013405dc81fa7dc0b5
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1723'
+source-wordcount: '1678'
 ht-degree: 98%
 
 ---
 
 # Notes de mise à jour de l’extension Core
 
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
-
-## 25 septembre 2025
+## vendredi 25 septembre 2025
 
 v3.4.4
 
@@ -140,7 +136,7 @@ v2.0.4
 
 * Ajout de la prise en charge des éléments de données dans plusieurs champs - La prise en charge des éléments de données a été ajoutée aux événements suivants : « Temps sur la page », « Entrée dans la fenêtre dʼaffichage », « Survol » et « Temps de lecture du média ». En plus des conditions suivantes : « Temps passé sur le site » et « Comparaison de valeur »
 * Ajout de la prise en charge du comportement par défaut pour Ctrl/Cmd + Clic et pour le clic central de la souris lors de lʼutilisation du délai de lien
-* **Le délai sur les liens pour lʼévénement Clic a été indiqué comme « nʼest plus pris en charge ».** - Vous trouverez plus d’informations sur le [blog de collecte de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403?profile.language=fr) pour Adobe Experience Platform.
+* **Le délai sur les liens pour lʼévénement Clic a été indiqué comme « nʼest plus pris en charge ».** - Vous trouverez plus d’informations sur le [blog de collecte de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) pour Adobe Experience Platform.
 
 ## 6 janvier 2021
 

@@ -2,18 +2,14 @@
 title: Republication de bibliothèque
 description: Découvrez comment republier une ancienne bibliothèque de balises dans Adobe Experience Platform.
 exl-id: 026b01f2-a93d-4e8a-9ed2-47c4f011e70f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 81%
+source-wordcount: '604'
+ht-degree: 80%
 
 ---
 
 # Republication de bibliothèque
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Les cinq bibliothèques les plus récentes qui ont été publiées dans votre environnement de production sur une propriété Web peuvent être récupérées ultérieurement. Cette fonctionnalité est utile lorsque vous trouvez un bogue dans votre bibliothèque de production et que vous devez restaurer immédiatement un état que vous savez correct.
 
@@ -57,7 +53,7 @@ Dans l’écran Publication :
 
 1. Dans la colonne Publié, recherchez la bibliothèque que vous souhaitez republier.
 1. Sélectionnez les points de suspension (`...`) dans le coin supérieur droit de la Carte de bibliothèque.
-1. Sélectionnez **[!UICONTROL Republier]**.
+1. Sélectionner **[!UICONTROL Republish]**.
 
 ## Téléchargement
 
@@ -71,4 +67,4 @@ Dans l’écran Publication :
 
 1. Dans la colonne Publié, recherchez la bibliothèque que vous souhaitez télécharger.
 1. Sélectionnez les points de suspension (`...`) dans le coin supérieur droit de la carte Bibliothèque.
-1. Sélectionnez **[!UICONTROL Télécharger]**.
+1. Sélectionner **[!UICONTROL Download]**.

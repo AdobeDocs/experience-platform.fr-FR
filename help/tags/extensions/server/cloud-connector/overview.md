@@ -2,18 +2,14 @@
 title: Présentation de l’extension Cloud Connector
 description: Découvrez l’extension de transfert d’événements Cloud Connector dans Adobe Experience Platform.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1681'
+source-wordcount: '1636'
 ht-degree: 75%
 
 ---
 
 # Présentation de l’extension Cloud Connector
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 L’extension de transfert d’événement Cloud Connector vous permet de créer des requêtes HTTP personnalisées pour envoyer des données à une destination ou récupérer des données d’une destination. L’extension Cloud Connector est semblable à Postman sur Adobe Experience Platform Edge Network et peut être utilisée pour envoyer des données à un point d’entrée qui n’a pas encore d’extension dédiée.
 
@@ -160,6 +156,6 @@ Votre nouvelle règle est maintenant prête. Sélectionnez **[!UICONTROL Save to
 
 ## Étapes suivantes
 
-Ce guide explique comment configurer des règles mTLS dans le transfert d’événement. Pour plus d’informations sur la configuration de mTLS pour un environnement, reportez-vous au guide [&#x200B; Mutual Transport Layer Security ([!DNL mTLS])](../cloud-connector/mtls.md).
+Ce guide explique comment configurer des règles mTLS dans le transfert d’événement. Pour plus d’informations sur la configuration de mTLS pour un environnement, reportez-vous au guide [ Mutual Transport Layer Security ([!DNL mTLS])](../cloud-connector/mtls.md).
 
 Pour plus d’informations sur les fonctionnalités de transfert d’événement d’Experience Platform, consultez la [présentation du transfert d’événement](../../../ui/event-forwarding/overview.md).

@@ -2,18 +2,14 @@
 title: Présentation de l’extension Adobe Target
 description: Découvrez l’extension de balise pour Adobe Target dans Adobe Experience Platform.
 exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1179'
-ht-degree: 95%
+source-wordcount: '1126'
+ht-degree: 93%
 
 ---
 
 # Présentation de l’extension Adobe Target
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Utilisez cette référence pour obtenir des informations sur les options disponibles lors de l’utilisation de cette extension pour créer une règle.
 
@@ -23,15 +19,15 @@ Utilisez cette référence pour obtenir des informations sur les options disponi
 >
 > L’extension Adobe Target requiert at.js. Elle ne prend pas en charge mbox.js.
 
-Si l’extension Adobe Target n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalogue]**, survolez l’extension Target et cliquez sur **[!UICONTROL Installer]**.
+Si l’extension Adobe Target n’est pas encore installée, ouvrez votre propriété, puis cliquez sur **[!UICONTROL Extensions > Catalog]**, survolez l’extension Target et cliquez sur **[!UICONTROL Install]**.
 
-Pour configurer l’extension, ouvrez l’onglet [!UICONTROL Extensions], placez votre curseur sur l’extension, puis cliquez sur **[!UICONTROL Configurer]**.
+Pour configurer l’extension, ouvrez l’onglet [!UICONTROL Extensions], survolez l’extension, puis cliquez sur **[!UICONTROL Configure]**.
 
 ![](../../../images/ext-target-config.png)
 
 ### Paramètres at.js
 
-Tous les paramètres at.js, à l’exception de la temporisation, sont automatiquement extraits de la configuration at.js de l’interface utilisateur Target. L’extension récupère uniquement les paramètres de l’interface utilisateur de Target lors de son premier ajout. De ce fait, tous les paramètres doivent être gérés dans l’interface utilisateur si d’autres mises à jour sont nécessaires.
+Tous les paramètres at.js, à l’exception de la temporisation, sont automatiquement extraits de la configuration at.js de l’interface utilisateur Target. L’extension récupère les paramètres de l’interface utilisateur de Target uniquement lors de l’ajout initial. De ce fait, tous les paramètres doivent être gérés dans l’interface utilisateur si d’autres mises à jour sont nécessaires.
 
 Les options de configuration disponibles sont les suivantes :
 
@@ -66,13 +62,13 @@ Détermine où Target définit des cookies dans les navigateurs.
 
 #### Timeout (Délai d’expiration) (ms)
 
-Si la réponse de Target n’est pas reçue au cours de la période définie, la demande expire et le contenu par défaut s’affiche. Des tentatives de requêtes supplémentaires sont effectuées pendant la session du visiteur. La valeur par défaut de 3 000 ms peut différer du délai configuré dans l’interface utilisateur de Target.
+Si la réponse de Target n’est pas reçue au cours de la période définie, la demande expire et le contenu par défaut s’affiche. Des tentatives de requêtes supplémentaires sont effectuées pendant la session du visiteur. La valeur par défaut de 3 000 ms peut différer du délai d’expiration configuré dans l’interface utilisateur de Target.
 
 Pour plus d’informations sur le fonctionnement du délai d’expiration, consultez l’[aide d’Adobe Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html?lang=fr).
 
 #### Autres paramètres at.js disponibles dans l’interface utilisateur de Target
 
-Plusieurs des paramètres disponibles sur la page [!UICONTROL Paramètres Edit at.js] de l’interface utilisateur Target ne font pas partie de l’extension Target. Voici quelques solutions suggérées :
+Plusieurs paramètres disponibles sur la page [!UICONTROL Edit at.js settings] de l’interface utilisateur de Target ne font pas partie de l’extension Target. Voici quelques solutions suggérées :
 
 * Auto-create global mbox (Créer automatiquement la mbox globale) : ce paramètre est remplacé par l’action Fire Global Mbox (Déclencher la mbox globale) dans l’extension Target.
 * Library Header (En-tête de bibliothèque) : ce paramètre ne fait pas partie de l’extension Target. Placez le code devant être chargé avant at.js dans une action Core Extension (Extension Core) > Custom Code (Code personnalisé) avant d’utiliser l’action Load Target (Charger Target).
@@ -135,13 +131,13 @@ Avec les déploiements asynchrones, il est possible que la page termine de rendr
 
 Voici quelques éléments à garder à l’esprit lors de l’utilisation du fragment de code de masquage préalable :
 
-* Le code doit être ajouté avant de charger le code incorporé d’en-tête de balise.
+* Le code doit être ajouté avant de charger le code intégré d’en-tête de balise.
 * Ce code ne peut pas être géré par des balises. Il doit donc être ajouté directement à la page.
 * La page s’affiche lorsque l’un des événements suivants se produit en premier lieu :
    * Lorsque la réponse mbox globale a été reçue.
    * Lorsque la demande de mbox globale expire.
    * Lorsque le fragment lui-même arrive à expiration.
-* L’action &quot;Fire Global Mbox&quot; (Déclencher la mbox globale) doit être utilisée sur toutes les pages à l’aide du fragment de code de masquage préalable afin de minimiser la durée du masquage préalable.
+* L’action « Déclencher la mbox globale » doit être utilisée sur toutes les pages utilisant le fragment de code de masquage préalable afin de réduire la durée de ce dernier.
 
 Le fragment de code de masquage préalable se présente comme suit et peut être réduit. Les options configurables se trouvent à la fin :
 

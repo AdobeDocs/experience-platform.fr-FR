@@ -2,20 +2,16 @@
 title: Présentation des balises
 description: Les balises dans Adobe Experience Platform Launch représentent la nouvelle génération des fonctionnalités de gestion des balises dʼAdobe. Les balises offrent aux clients un moyen simple de déployer et de gérer toutes les balises dʼanalyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
 exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
-source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 94%
+source-wordcount: '550'
+ht-degree: 90%
 
 ---
 
 # Présentation des balises
 
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](./term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
-
-Les balises dans Adobe Experience Platform Launch représentent la nouvelle génération des fonctionnalités de gestion des balises dʼAdobe. Les balises offrent aux clients un moyen simple de déployer et de gérer toutes les balises dʼanalyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
+Les balises dans Adobe Experience Platform (anciennement appelé Adobe Experience Platform Launch) représentent la nouvelle génération des fonctionnalités de gestion des balises d’Adobe. Les balises offrent aux clients un moyen simple de déployer et de gérer toutes les balises dʼanalyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
 
 Les balises permettent à tous les utilisateurs de créer et de gérer leurs propres intégrations, appelées *extensions*. Ces extensions sont disponibles pour les clients [!DNL Adobe Experience Cloud] sous la forme d’une expérience d’app store qui leur permet d’installer, de configurer et de déployer rapidement leurs balises.
 
@@ -23,13 +19,13 @@ Les balises sont proposées aux clients [!DNL Adobe Experience Cloud] en tant qu
 
 ## Avantages clés {#key-benefits}
 
-* Délai de valorisation plus rapide.
+* Retour sur investissement plus rapide.
 * Données fiables grâce à la collecte, l’organisation et la transmission centralisées, fondées sur les éléments de données.
 * Expériences attrayantes grâce à l’intégration de technologies d’analyse des données et de marketing à l’aide du créateur de règles.
 
 ## Principales fonctionnalités {#key-features}
 
-Utilisez l’ aide du produit dans le panneau de droite pour en savoir plus sur les balises et afficher d’autres ressources disponibles.
+Utilisez l’aide du produit dans le panneau de droite pour en savoir plus sur les balises et afficher les ressources supplémentaires disponibles.
 
 ![Propriétés des balises dans l’interface utilisateur de la collecte de données.](./images/ui/tags-overview/tags-properties.png)
 

@@ -2,18 +2,14 @@
 title: Manifeste d’extensions
 description: Découvrez comment configurer un fichier de manifeste JSON informant Adobe Experience Platform quant à la manière correcte de consommer votre extension.
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: a7c66b9172421510510b6acf3466334c33cdaa3d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2652'
+source-wordcount: '2607'
 ht-degree: 85%
 
 ---
 
 # Manifeste d’extensions
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Dans le répertoire de base de votre extension, vous devez créer un fichier appelé `extension.json`. Cette section contient des détails importants sur votre extension, ce qui permet à Adobe Experience Platform de l’utiliser correctement. Certains contenus sont formés à l’instar du [npm `package.json`](https://docs.npmjs.com/files/package.json) de npm.
 
@@ -75,20 +71,20 @@ L’objet de configuration doit être structuré comme suit :
       <td><code>schema</code></td>
       <td>Un objet du <a href="https://json-schema.org/">Schéma JSON</a> décrivant le format d’un objet valide enregistré à partir de la vue de configuration de l’extension. Puisque vous êtes le développeur de la vue de configuration, il est de votre responsabilité de vous assurer que tout objet settings enregistré correspond à ce schéma. Ce schéma sera également utilisé à des fins de validation lorsque les utilisateurs tentent d’enregistrer des données à l’aide des services Experience Platform.<br><br>Voici un exemple d’objet schéma :
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       Nous vous recommandons d’utiliser un outil tel que le <a href="https://www.jsonschemavalidator.net/">Validateur de schémas JSON</a> pour tester manuellement votre schéma.</td>
     </tr>
@@ -135,20 +131,20 @@ Une définition de type est un objet utilisé pour décrire un type d’événem
       <td><code>schema</code></td>
       <td>Objet de <a href="https://json-schema.org/">Schéma JSON</a> décrivant le format d’un objet de paramètres valide qui peut être enregistré par l’utilisateur. Les paramètres sont généralement configurés et enregistrés par un utilisateur à lʼaide de lʼinterface utilisateur de la collecte de données. Dans ce cas, la vue de l’extension peut prendre les mesures nécessaires pour valider les paramètres fournis par l’utilisateur. Dʼun autre côté, certains utilisateurs choisissent dʼutiliser les API de balises directement sans lʼaide dʼaucune interface utilisateur. Ce schéma permet à Experience Platform de vérifier correctement que les objets settings enregistrés par les utilisateurs, qu’une interface utilisateur soit ou non utilisée, sont dans un format compatible avec le module Bibliothèque qui agira sur l’objet settings lors de l’exécution.<br><br>Voici un exemple d’objet schéma :<br>
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       Nous vous recommandons d’utiliser un outil tel que le <a href="https://www.jsonschemavalidator.net/">Validateur de schémas JSON</a> pour tester manuellement votre schéma.</td>
     </tr>

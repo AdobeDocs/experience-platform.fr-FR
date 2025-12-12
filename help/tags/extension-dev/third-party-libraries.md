@@ -2,20 +2,16 @@
 title: Implémentation de bibliothèques tierces
 description: Découvrez les différentes méthodes dʼhébergement de bibliothèques tierces dans vos extensions de balises Adobe Experience Platform.
 exl-id: d8eaf814-cce8-499d-9f02-b2ed3c5ee4d0
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1270'
 ht-degree: 100%
 
 ---
 
 # Implémentation de bibliothèques tierces
 
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
-
-Lʼun des principaux objectifs des extensions de balises dans Adobe Experience Platform est de vous permettre de mettre en œuvre en toute facilité les technologies de marketing (bibliothèques) existantes dans votre site web. Utilisez les extensions pour implémenter les bibliothèques fournies par les réseaux de diffusion de contenu de tiers (Content diffusion Network) sans avoir à modifier manuellement le code HTML de votre site web.
+Lʼun des principaux objectifs des extensions de balises dans Adobe Experience Platform est de vous permettre de mettre en œuvre en toute facilité les technologies de marketing (bibliothèques) existantes dans votre site web. Utilisez les extensions pour implémenter les bibliothèques fournies par les réseaux de diffusion de contenu (CDN) tiers sans avoir à modifier manuellement le code HTML de votre site web.
 
 Il existe plusieurs méthodes pour héberger des bibliothèques tierces (fournisseurs) dans vos extensions. Ce document présente un aperçu de ces différentes méthodes d’implémentation, y compris les avantages et les inconvénients de chacune de ces méthodes.
 
@@ -98,7 +94,7 @@ Les méthodes suivantes sont couvertes :
    - [Processus de chargement du code de base](#base-code-loading-process)
       - [Exemple de code de base](#base-code-example)
    - [Options dʼimplémentation des balises](#tags-implementation-options)
-      - [Chargement au moment de l’exécution à partir de l’hôte fournisseur {#vendor-host}](#load-at-runtime-from-the-vendor-host-vendor-host)
+      - [Chargement au moment de l’exécution à partir de l’hôte fournisseur](#load-at-runtime-from-the-vendor-host-vendor-host)
       - [Chargement au moment de lʼexécution à partir de lʼhôte de bibliothèque de balises](#load-at-runtime-from-the-tag-library-host)
       - [Incorporer directement la bibliothèque](#embed-the-library-directly)
    - [Étapes suivantes](#next-steps)

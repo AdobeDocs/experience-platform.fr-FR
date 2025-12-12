@@ -2,18 +2,14 @@
 title: Présentation de l’extension Adobe Audience Manager
 description: Découvrez lʼextension de balises d’Adobe Audience Manager dans Adobe Experience Platform.
 exl-id: d345e145-fdb9-4ca3-88c2-9c2a247ea59a
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '395'
 ht-degree: 100%
 
 ---
 
 # Présentation de l’extension Adobe Audience Manager
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Avec l’extension de balises d’Audience Manager, vous pouvez intégrer le code DIL utilisé par Audience Manager à vos propriétés dans Adobe Experience Platform 
 

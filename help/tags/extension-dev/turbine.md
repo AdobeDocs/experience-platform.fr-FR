@@ -2,18 +2,14 @@
 title: Variable sans Turbine
 description: Découvrez l’objet turbine, une variable libre qui fournit des informations et des utilitaires spécifiques à l’exécution de balise d’Adobe Experience Platform.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '561'
 ht-degree: 97%
 
 ---
 
 # Variable sans Turbine
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 L’objet `turbine` est une « variable libre » dans la portée des modules de bibliothèque de votre extension. Il fournit des informations et des utilitaires spécifiques à l’exécution de balise Adobe Experience Platform et est toujours disponible pour les modules de bibliothèque sans utiliser `require()`.
 
@@ -112,7 +108,7 @@ Récupère un module qui a été partagé depuis une autre extension. Si aucun m
 turbine.logger.error('Error!');
 ```
 
-Lʼutilitaire de journalisation est utilisé pour consigner les messages dans la console. Les messages s’affichent uniquement dans la console si le débogage est activé par l’utilisateur. La méthode recommandée pour activer le débogage consiste à utiliser l’ [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob). Lʼutilisateur peut également exécuter la commande suivante `_satellite.setDebug(true)` dans la console de développeur du navigateur. La journalisation utilise les méthodes suivantes :
+Lʼutilitaire de journalisation est utilisé pour consigner les messages dans la console. Les messages s’affichent uniquement dans la console si le débogage est activé par l’utilisateur. La méthode recommandée pour activer le débogage consiste à utiliser [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob). Lʼutilisateur peut également exécuter la commande suivante `_satellite.setDebug(true)` dans la console de développeur du navigateur. La journalisation utilise les méthodes suivantes :
 
 * `logger.log(message: string)` : consigne un message sur la console.
 * `logger.info(message: string)` : consigne un message d’information dans la console.

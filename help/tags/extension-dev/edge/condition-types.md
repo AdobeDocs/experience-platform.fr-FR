@@ -2,18 +2,14 @@
 title: Types de conditions pour les extensions Edge
 description: Découvrez comment définir un module de bibliothèque relatif aux types de conditions pour une extension Edge dans Adobe Experience Platform.
 exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '358'
 ht-degree: 94%
 
 ---
 
 # Types de conditions pour les extensions Edge
-
->[!NOTE]
->
-> Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Dans une règle de balise, une condition est évaluée suite à l’apparition d’un événement. Toutes les conditions doivent renvoyer la valeur vraie pour que la règle continue son traitement. Les types de conditions sont fournis par les extensions et évaluent si un élément est vrai ou faux, renvoyant une valeur booléenne.
 
@@ -29,7 +25,7 @@ Ce document explique comment définir des types de conditions pour une extension
 
 Les types de conditions se composent généralement des éléments suivants :
 
-1. Vue affichée dans l’interface utilisateur de l’Experience Platform et dans l’interface utilisateur de collecte de données qui permet aux utilisateurs de modifier les paramètres de la condition.
+1. Une vue affichée dans l’interface utilisateur d’Experience Platform et l’interface utilisateur de la collecte de données qui permet aux utilisateurs de modifier les paramètres de la condition.
 2. Un module de bibliothèque émis dans la bibliothèque d’exécution de balise pour interpréter les paramètres et évaluer une condition.
 
 Par exemple, si vous souhaitez évaluer si l’utilisateur se trouve sur l’hôte `example.com`, votre module pourra ressembler à ceci.

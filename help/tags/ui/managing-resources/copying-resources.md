@@ -2,18 +2,14 @@
 title: Copie des ressources
 description: Découvrez comment créer une ressource de balise à lʼaide des paramètres dʼune ressource de balise existante dans Adobe Experience Platform.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: 319496975bcdbfd0a670cf8d36fb7e562b2ef2de
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '785'
 ht-degree: 87%
 
 ---
 
 # Copie des ressources
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Parfois, il peut s’avérer pratique de créer une nouvelle ressource à l’aide des paramètres d’une ressource existante. Dans ce cas, vous pouvez en faire une copie.
 
@@ -23,11 +19,11 @@ La copie d’une ressource crée un double de cette ressource dans la destinatio
 
 ## Lancer une copie
 
-Vous pouvez lancer une copie d’une extension en affichant vos extensions installées, puis en cliquant sur la flèche de liste déroulante sur le bouton **[!UICONTROL Configurer]** et en sélectionnant **[!UICONTROL Copier]**.
+Vous pouvez lancer une copie d’une extension en affichant vos extensions installées, en cliquant sur la flèche de liste déroulante sur le bouton **[!UICONTROL Configure]** et en sélectionnant **[!UICONTROL Copy]**.
 
 ![Copie de l’extension Analytics](../../images/copy-initiate-extension.png)
 
-Pour les propriétés, les règles et les éléments de données, sélectionnez simplement la ressource que vous voulez copier, puis cliquez sur **[!UICONTROL Copier]** dans le menu d’actions.
+Pour les propriétés, les règles et les éléments de données, sélectionnez simplement la ressource que vous voulez copier, puis cliquez sur **[!UICONTROL Copy]** dans le menu d’actions.
 
 ![Copie de ma règle Analytics](../../images/copy-initiate-rule.png)
 
@@ -37,7 +33,7 @@ Si vous copiez une règle ou un élément de données, vous pouvez utiliser le m
 >
 >Il n’est pas possible de copier des ressources vers une autre propriété si une propriété est configurée pour le développement d’extensions et que l’autre propriété ne l’est pas.
 
-Après avoir configuré le comportement souhaité, cliquez sur **[!UICONTROL Copier]**.
+Après avoir configuré le comportement souhaité, cliquez sur **[!UICONTROL Copy]**.
 
 ## Copie de propriétés
 

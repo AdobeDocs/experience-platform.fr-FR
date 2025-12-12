@@ -2,18 +2,14 @@
 title: Présentation de l’extension Core
 description: Découvrez lʼextension de balise Core dans Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: c76b64e76229db8f9da544a79aed903a134f7351
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '5425'
+source-wordcount: '5380'
 ht-degree: 95%
 
 ---
 
 # Présentation de l’extension Core
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 L’extension de balise Core est l’extension par défaut disponible avec Adobe Experience Platform.
 

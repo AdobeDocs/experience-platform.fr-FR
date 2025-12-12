@@ -2,36 +2,32 @@
 title: Présentation de l’extension de suivi vidéo BrightCove
 description: Découvrez lʼextension de balise de suivi vidéo BrightCove dans Adobe Experience Platform.
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '853'
 ht-degree: 97%
 
 ---
 
 # Présentation de l’extension de suivi vidéo BrightCove
 
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
-
 ## Prérequis
 
 Pour chaque propriété de balise Adobe Experience Platform, les extensions suivantes doivent être installées et configurées dans l’écran Extension :
 
 * Adobe Analytics
-* du service d’identification des visiteurs Experience Cloud
+*  du service d’identification des visiteurs Experience Cloud
 * Extensions Core installées
 
-Utilisez le fragment de code « Code incorporé sur la page (avancé) » dans le code HTML de chaque page web sur laquelle un lecteur vidéo doit apparaître. Le fragment de code HTML « Code incorporé sur la page (avancé) » se trouve dans la [documentation Brightcove](https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html#inpage). Le lien suivant fournit des informations supplémentaires sur [la manière de générer du code incorporé pour les lecteurs vidéo d’aperçu et de vidéos publiées](https://fr.studio.support.brightcove.com/players/generating-player-embed-code.html).
+Utilisez le fragment de code « code intégré sur la page (avancé) » dans le code HTML de chaque page web sur laquelle un lecteur vidéo doit apparaître. Lʼextrait de code HTML « code intégré sur la page (avancé) » se trouve dans la [documentation Brightcove](https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html#inpage). Le lien suivant fournit des informations supplémentaires sur [la manière de générer du code incorporé pour les lecteurs vidéo d’aperçu et de vidéos publiées](https://fr.studio.support.brightcove.com/players/generating-player-embed-code.html).
 
-Cette extension version 1.1.0 prend en charge l’incorporation de plusieurs vidéos BrightCove sur une seule page web. S’il existe plusieurs propriétés `id` dans les balises incorporées avancées, assurez-vous qu’elles possèdent chacune des valeurs uniques. Par exemple, `player1`, `player2`, etc.
+Cette extension version 1.1.0 prend en charge l’incorporation de plusieurs vidéos BrightCove sur une seule page web. Sʼil existe plusieurs propriétés `id` parmi les balises d’incorporation avancées, assurez-vous quʼelles possèdent toutes des valeurs uniques. Par exemple, `player1`, `player2`, etc.
 
 >[!NOTE]
 >
 >Sur les pages comportant plusieurs vidéos, chaque vidéo utilise le même jeu de configuration défini dans la règle de balise qui s’exécute sur cette page. Par exemple, si vous créez une règle avec un événement qui se déclenche lorsque la vidéo est terminée à 50 %, chaque vidéo de la page déclenche la règle au point de repère de 50 %.
 
-Si la page web qui utilise cette extension interagit avec la vidéo avant que le script approprié ne soit complètement chargé, vous pouvez prendre deux mesures pour résoudre le problème. Vous pouvez tout d’abord charger la bibliothèque de balises de manière synchrone, puis placer l’élément `<script type="text/javascript">\_satellite.pageBottom();\</script\>` avant l’intégration de la vidéo dans la page.
+Si la page web qui utilise cette extension interagit avec la vidéo avant que le script approprié ne soit complètement chargé, vous pouvez prendre deux mesures pour résoudre le problème. Vous pouvez tout d’abord charger la bibliothèque de balises de manière synchrone, puis placer l’élément `<script type="text/javascript">\_satellite.pageBottom();\</script\>` avant l’incorporation de la vidéo dans la page.
 
 Voir la [documentation de l’API BrightCove](https://docs.brightcove.com/brightcove-player/1.x/Player.html#vjsplayer) pour plus d’informations sur les méthodes de composants et les événements utilisés dans cette extension.
 
@@ -100,7 +96,7 @@ Les objets d’extension vidéo suivants doivent être inclus :
 
 >[!TIP]
 >
->Pour ceux qui ne souhaitent pas configurer plusieurs eVars ou props pour chaque élément vidéo, les valeurs des éléments de données sont concaténées en tant que méthode alternative. Ils sont ensuite analysés dans les rapports de classification à l’aide de l’outil Créateur de règles de classification. Pour plus d’informations, voir la documentation [Outil Créateur de règles de classification](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=fr). Enfin, elles sont appliquées en tant que segment dans Analysis Workspace.
+>Pour ceux qui ne souhaitent pas configurer plusieurs eVars ou props pour chaque élément vidéo, les valeurs des éléments de données sont concaténées comme méthode alternative. Ils sont ensuite analysés dans les rapports de classification à l’aide de l’outil Créateur de règles de classification. Pour plus d’informations, voir la documentation [Outil Créateur de règles de classification](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=fr). Enfin, elles sont appliquées en tant que segment dans Analysis Workspace.
 >
 >Pour ce faire, créez un nouvel élément de données appelé par exemple « Métadonnées vidéo » et programmez-le pour extraire tous les éléments de données vidéo (répertoriés ci-dessus) et les concaténer.
 

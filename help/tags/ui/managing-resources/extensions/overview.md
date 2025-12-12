@@ -2,18 +2,14 @@
 title: Extensions
 description: Découvrez le fonctionnement des extensions de balises dans Adobe Experience Platform.
 exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
-source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '471'
 ht-degree: 94%
 
 ---
 
 # Extensions
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Une extension est un jeu de codes empaqueté qui étend les fonctionnalités fournies par les balises ou le transfert dʼévénements.
 
@@ -27,13 +23,13 @@ Les extensions déterminent les éléments disponibles lors de la création de p
 
 Utilisez les liens situés en haut de la liste Extensions pour afficher les extensions installées, le catalogue des extensions ou les mises à jour.
 
-Sélectionnez une extension, puis cliquez sur [!UICONTROL Configurer] pour afficher et modifier les paramètres de l’extension. Pour plus dʼinformations sur les options des extensions, voir la section sur lʼ[ajout dʼune nouvelle extension](#add-a-new-extension).
+Sélectionnez une extension, puis cliquez sur [!UICONTROL Configure] pour afficher et modifier les paramètres de l’extension. Pour plus dʼinformations sur les options des extensions, voir la section sur lʼ[ajout dʼune nouvelle extension](#add-a-new-extension).
 
 >[!IMPORTANT]
 >
 >Les modifications ne prennent effet que lorsqu’elles sont [publiées](../../publishing/overview.md).
 
-Par défaut, Adobe fournit des extensions qui prennent en charge les intégrations courantes. Les extensions peuvent être modifiées par des configurations personnalisées. Les configurations sont fournies par le biais des extensions. Pour créer une configuration, cliquez sur la carte d’extension, puis sélectionnez **[!UICONTROL Ajouter une nouvelle configuration]**.
+Par défaut, Adobe fournit des extensions qui prennent en charge les intégrations courantes. Les extensions peuvent être modifiées par des configurations personnalisées. Les configurations sont fournies par le biais des extensions. Pour créer une configuration, cliquez sur la carte d’extension, puis cliquez sur **[!UICONTROL Add New Configuration]**.
 
 ## Catalogue d’extensions
 
@@ -61,12 +57,12 @@ Nombre de fonctionnalités peuvent être ajoutées aux balises. Les extensions a
 
 >[!TIP]
 >
->Utilisez l’ aide du produit dans le panneau de droite pour en savoir plus sur les extensions et afficher d’autres ressources disponibles.
+>Utilisez l’aide du produit dans le panneau de droite pour en savoir plus sur les extensions et afficher les ressources supplémentaires disponibles.
 
-1. Ouvrez l’onglet **[!UICONTROL Extensions]** à partir de la page d’aperçu de la propriété.
+1. Ouvrez l’onglet **[!UICONTROL Extensions]** à partir de la page overview (aperçu) de la propriété.
 1. Sélectionnez l’extension.
 
-   ![Onglet Catalogue présentant les extensions principales dans l’onglet des extensions.](../../../images/extensions.png)
+   ![Onglet Catalogue affichant les extensions principales dans l’onglet Extensions.](../../../images/extensions.png)
 
    * Si l’extension existe, sélectionnez-la dans le catalogue des extensions.
    * Placez le pointeur de la souris sur une extension de votre liste pour la configurer ou la désactiver.
@@ -80,11 +76,11 @@ Nombre de fonctionnalités peuvent être ajoutées aux balises. Les extensions a
 
    Ces valeurs par défaut sont la base des règles personnalisées que vous allez créer pour créer votre extension.
 
-Lors de la création ou de la modification d’éléments, vous pouvez enregistrer et créer une [bibliothèque active](../../publishing/libraries.md#active-library). Cette opération enregistre immédiatement votre modification dans votre bibliothèque et exécute une version. Le statut de la version s’affiche. Vous pouvez également créer une bibliothèque à partir de la liste déroulante Active Library (Bibliothèque active).
+Lors de la création ou de la modification d’éléments, vous pouvez enregistrer et créer une [bibliothèque active](../../publishing/libraries.md#active-library). Cette opération enregistre immédiatement votre modification dans votre bibliothèque et exécute une version. Le statut de la version s’affiche. Vous pouvez également créer une bibliothèque à partir de la liste déroulante Bibliothèque active.
 
 ## Configuration d’une extension
 
-Placez le pointeur de la souris sur une extension installée et cliquez sur **[!UICONTROL Configurer]**.
+Placez le pointeur de la souris sur une extension installée et cliquez sur **[!UICONTROL Configure]**.
 
 >[!NOTE]
 >

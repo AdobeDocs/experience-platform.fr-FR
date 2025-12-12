@@ -2,18 +2,14 @@
 title: Types d’éléments de données pour les extensions web
 description: Découvrez comment définir un module Bibliothèque de type élément de données pour une extension de balise dans une propriété web.
 exl-id: 3aa79322-2237-492f-82ff-0ba4d4902f70
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '555'
 ht-degree: 96%
 
 ---
 
 # Types d’éléments de données pour les extensions web
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Dans les balises de la collecte de données, les éléments de données sont essentiellement des alias vers des éléments de données sur une page. Ces données se trouvent dans des paramètres de chaîne de requête, des cookies, des éléments DOM ou d’autres emplacements. Un élément de données peut être référencé par des règles et agit comme une abstraction pour l’accès à ces données.
 
@@ -29,7 +25,7 @@ Ce document explique comment définir des types d’éléments de données pour 
 
 Les types d’éléments de données sont généralement les suivants :
 
-1. Une [vue](./views.md) affichée dans l’interface utilisateur Experience Platform et l’interface utilisateur de collecte de données qui permet aux utilisateurs de modifier les paramètres de l’élément de données.
+1. Une [vue](./views.md) affichée dans l’interface utilisateur d’Experience Platform et l’interface utilisateur de la collecte de données, qui permet aux utilisateurs de modifier les paramètres de l’élément de données.
 2. Un module de bibliothèque émis dans la bibliothèque d’exécution de balise pour interpréter les paramètres et récupérer des éléments de données.
 
 Supposons que vous souhaitiez autoriser les utilisateurs à récupérer cette donnée dans un élément d’enregistrement local nommé `productName`. Votre module peut se présenter comme suit :

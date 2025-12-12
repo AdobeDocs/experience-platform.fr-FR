@@ -2,18 +2,14 @@
 title: Guide de démarrage rapide
 description: Découvrez comment vous familiariser rapidement avec les balises dans Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1522'
+source-wordcount: '1473'
 ht-degree: 89%
 
 ---
 
 # Guide de démarrage rapide
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Les balises représentent la nouvelle génération de la technologie de gestion des balises d’Adobe Experience Platform. Elles sont conçues de zéro de manière à prendre en charge un réseau ouvert et durable, où chacun peut construire ses propres intégrations que les clients Adobe peuvent déployer sur leurs sites. Il s’agit de la première application d’une API, donc tout ce que vous pouvez faire par le biais de l’interface utilisateur, vous pouvez également le faire par programmation via une API.
 
@@ -37,13 +33,13 @@ Pour obtenir des instructions détaillées sur la création de groupes et l’aj
 
 ## 2. Connexion
 
-Une fois les droits de balise ajoutés à votre Adobe ID, vous devez vous connecter à l’interface utilisateur d’Experience Platform ou à l’interface utilisateur de la collecte de données. Pour ce faire, accédez directement à l’écran de connexion [Experience Cloud](https://experience.adobe.com/), puis sélectionnez **[!UICONTROL Collecte de données]** ou **[!UICONTROL Experience Platform]**.
+Une fois les droits de balise ajoutés à votre Adobe ID, vous devez vous connecter à l’interface utilisateur d’Experience Platform ou à l’interface utilisateur de la collecte de données. Pour ce faire, accédez directement à l’écran de connexion [Experience Cloud](https://experience.adobe.com/) puis sélectionnez **[!UICONTROL Data Collection]** ou **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >
 >Si vous disposez dʼun compte unique avec des droits auprès de plusieurs organisations, vous pouvez modifier lʼorganisation en sélectionnant son nom dans la barre de contrôle située en haut de lʼécran et en choisissant une autre organisation dans la liste déroulante.
 
-## 3. Création d’une propriété
+## &#x200B;3. Création d’une propriété
 
 Une fois la connexion à l’interface utilisateur effectuée, la première chose à faire est de créer une propriété . Une propriété est essentiellement un conteneur que vous remplissez avec des extensions, des règles, des éléments de données et des bibliothèques lorsque vous déployez des balises sur votre site. De nombreuses personnes créent une propriété pour chaque site web (ou groupe de sites étroitement liés) où elles souhaitent déployer le même ensemble de balises.
 
@@ -83,11 +79,11 @@ Il est important de comprendre la relation entre votre page web, votre emplaceme
 
    Chaque environnement entretient une relation avec un hôte et l’hôte fournit un point d’entrée indiquant où diffuser la version. L’hôte ne peut appartenir qu’à une seule propriété, mais une propriété peut avoir de nombreux hôtes.
 
-2. Un code incorporé est fourni dans la balise `<script>` de formulaire qui se trouve dans les sections `<head>` du code HTML de votre site web.
+2. Un code intégré est fourni dans la balise `<script>` de formulaire qui se trouve dans les sections `<head>` du code HTML de votre site web.
 
-   Lorsque vous créez un environnement et joignez un hôte, l’environnement génère automatiquement un code incorporé unique qui vous permet d’intégrer la version qui lui est assignée dans votre site. Le code `<script>` est utilisé pour déployer la version de bibliothèque au moment de l’exécution.
+   Lorsque vous créez un environnement et que vous joignez un hôte, lʼenvironnement génère automatiquement un code intégré unique qui vous permet dʼintégrer la version qui lui est attribuée dans votre site. Le code `<script>` est utilisé pour déployer la version de bibliothèque au moment de l’exécution.
 
-3. Lorsqu’un utilisateur parcourt votre site, la balise `<script>` de code incorporé récupère la version à partir du serveur d’hébergement et exécute dans le navigateur les actions que vous avez définies.
+3. Lorsquʼun utilisateur parcourt votre site, la balise `<script>` de code intégré récupère la version à partir du serveur hôte et exécute les actions que vous avez définies dans le navigateur.
 
 ### Hôtes
 
@@ -104,7 +100,7 @@ Chaque bibliothèque est créée dans un environnement. Un environnement défini
 * **Hôte :** chaque environnement a besoin d’un hôte qui détermine le point d’entrée où toutes les versions créées dans cet environnement seront poussées.
 * **Archive :** le paramètre par défaut consiste à déployer votre version sous la forme d’un fichier .js miniaturisé. Si vous utilisez du code personnalisé, plusieurs fichiers peuvent s’y faire référence. Ils peuvent être combinés en un seul fichier zip et chiffrés.
 
-Après avoir enregistré votre environnement, il génère le code incorporé que vous pouvez copier et coller dans votre site web. Veuillez noter que le code incorporé ne fonctionnera pas tant que vous n’aurez pas créé une bibliothèque et compilé une version. Pour plus d’informations, reportez-vous à la section [Environnements](../ui/publishing/environments.md).
+Après avoir enregistré votre environnement, il génère le code intégré que vous pouvez copier et coller dans votre site web. Veuillez noter que le code intégré ne fonctionnera pas tant que vous nʼaurez pas créé une bibliothèque et produit une version. Pour plus d’informations, reportez-vous à la section [Environnements](../ui/publishing/environments.md).
 
 ### Publication d’une version pour développement
 
@@ -112,13 +108,13 @@ Voici une description des étapes du processus de publication.
 
 1. Créez un hôte.
 1. créer un environnement de développement à l’aide de l’hôte que vous avez créé ;
-1. déployer le code incorporé de votre environnement de développement vers votre site de test de développement ;
+1. déployer le code intégré de votre environnement de développement vers votre site de test de développement ;
 1. créer une bibliothèque et l’affecter à l’environnement de développement que vous avez créé ;
 1. créer votre bibliothèque.
 
 ## 7. Promotion de la production
 
-Après avoir testé votre version dans votre environnement de développement, veillez à créer vos environnements d’évaluation et de production et à placer les codes incorporés aux emplacements nécessaires. Pour le faire, vous pouvez réutiliser des hôtes existants.
+Après avoir testé votre version dans votre environnement de développement, assurez-vous de créer vos environnements dʼévaluation et de production et de placer les codes intégrés aux emplacements adéquats. Pour le faire, vous pouvez réutiliser des hôtes existants.
 
 La promotion d’une bibliothèque jusqu’à la production exige généralement une coordination entre différentes personnes disposant des droits appropriés.
 
@@ -134,6 +130,6 @@ Pour plus d’informations sur les différents états et options disponibles pen
 
 Pour en savoir plus sur les balises, consultez les ressources suivantes :
 
-* **[Communauté de la collecte de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community?profile.language=fr)** : posez vos questions et répondez à celles des autres, proposez des idées, prononcez-vous sur les idées des autres. Connectez-vous avec votre Adobe ID.
+* **[Communauté de la collecte de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)** : posez vos questions et répondez à celles des autres, proposez des idées, prononcez-vous sur les idées des autres. Connectez-vous avec votre Adobe ID.
 * **[Developer Docs](../api/overview.md)** : rejoignez la communauté des développeurs de balises pour créer des extensions ou utiliser les API de balises.
 * **[Présentation des tutoriels](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=fr)** : ces documents vous présentent les concepts de balises, y compris le transfert d’événement et le SDK mobile dans les applications Android.

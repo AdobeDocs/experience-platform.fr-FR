@@ -2,18 +2,14 @@
 title: Règles
 description: Découvrez le fonctionnement des extensions de balises dans Adobe Experience Platform.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: 77190e4acf7aad448bbfdebd8ada4dbe9a55f8e0
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2028'
+source-wordcount: '1962'
 ht-degree: 93%
 
 ---
 
 # Règles
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Dans Adobe Experience Platform, les balises obéissent à un système basé sur des règles. Elles recherchent les interactions utilisateur et les données associées. Lorsque les critères définis dans votre règle sont satisfaits, la règle déclenche l’extension, le script ou le code côté client que vous avez identifié.
 
@@ -53,17 +49,17 @@ Créez une règle en indiquant les actions qui se produisent si une condition es
 
 >[!TIP]
 >
->Vous pouvez afficher d’autres ressources disponibles pour en savoir plus sur cette fonctionnalité en sélectionnant ![about](../../images/ui/event-forwarding/overview/about.png) dans le panneau de droite.
+>Vous pouvez afficher les ressources supplémentaires disponibles pour en savoir plus sur cette fonctionnalité en sélectionnant ![à propos](../../images/ui/event-forwarding/overview/about.png) dans le panneau de droite.
 
-1. Ouvrez lʼonglet [!UICONTROL Règles], puis sélectionnez **[!UICONTROL Créer une règle]**.
+1. Ouvrez l’onglet [!UICONTROL Rules], puis cliquez sur **[!UICONTROL Create New Rule]**.
 
-   ![Onglet Règles surlignant le champ de nom.](../../images/launch-rule-builder.png)
+   ![Onglet Règles mettant en surbrillance le champ Nom.](../../images/launch-rule-builder.png)
 
 1. Attribuez un nom à la règle.
-1. Cliquez sur lʼicône **[!UICONTROL Ajouter]** sous Événements.
+1. Cliquez sur l’icône **[!UICONTROL Add]** pour les événements.
 1. Sélectionnez votre extension et l’un des types d’événements disponibles pour cette extension, puis configurez les paramètres de l’événement.
 
-   ![Page de configuration des événements de règles.](../../images/rule-event-config.png)
+   ![Page de configuration de l’événement de règles.](../../images/rule-event-config.png)
 
    Les types d’événement disponibles dépendent de l’extension sélectionnée. Les paramètres de l’événement diffèrent en fonction du type d’événement. Certains événements ne comportent aucun paramètre à configurer.
 
@@ -81,7 +77,7 @@ Créez une règle en indiquant les actions qui se produisent si une condition es
    >
    >Si ce chemin d’accès n’est pas spécifié correctement, les données ne sont pas collectées.
 
-1. Définissez le paramètre Ordre, puis cliquez sur **[!UICONTROL Conserver les modifications]**.
+1. Définissez le paramètre Ordre, puis cliquez sur **[!UICONTROL Keep Changes]**.
 
    L’ordre par défaut pour tous les composants de règle est 50. Si vous souhaitez l’exécuter plus tôt, attribuez-lui un nombre inférieur à 50.
 
@@ -91,9 +87,9 @@ Créez une règle en indiquant les actions qui se produisent si une condition es
 
      Si vous souhaitez qu’elle s’exécute plus tard, attribuez-lui un nombre supérieur à 50. Pour plus d’informations sur l’ordre, reportez-vous à [Ordre des règles](rules.md#rule-ordering).
 
-1. Sélectionnez l’icône **[!UICONTROL Ajouter]** de Conditions, puis sélectionnez un type de logique, une extension, un type de condition et configurez les paramètres de votre condition. Sélectionnez ensuite **[!UICONTROL Conserver les modifications]**.
+1. Sélectionnez l’icône **[!UICONTROL Add]** des conditions , puis sélectionnez un type de logique, une extension et un type de condition et configurez les paramètres de votre condition. Ensuite, sélectionnez **[!UICONTROL Keep Changes]**.
 
-   ![&#x200B; Page de configuration des conditions des règles.](../../images/condition-settings.png)
+   ![Page de configuration de la condition des règles.](../../images/condition-settings.png)
 
    Les types de conditions disponibles dépendent de l’extension sélectionnée. Les paramètres de conditions diffèrent en fonction du type de condition.
 
@@ -106,18 +102,18 @@ Créez une règle en indiquant les actions qui se produisent si une condition es
 
    Vous pouvez ajouter autant de conditions que vous le souhaitez. Plusieurs conditions dans la même règle sont jointes avec AND.
 
-1. Sélectionnez l’icône Actions **[!UICONTROL Ajouter]** , puis sélectionnez votre extension et l’un des types d’actions disponibles pour cette extension, configurez les paramètres de l’action, puis sélectionnez **[!UICONTROL Conserver les modifications]**.
+1. Sélectionnez l’icône **[!UICONTROL Add]** Actions , puis sélectionnez votre extension et l’un des types d’actions disponibles pour cette extension, configurez les paramètres de l’action, puis sélectionnez **[!UICONTROL Keep Changes]**.
 
-   ![Page de configuration de l’action Règles.](../../images/action-settings.png)
+   ![Page de configuration de l’action de règles.](../../images/action-settings.png)
 
    Les types d’action disponibles dépendent de l’extension que vous avez sélectionnée. Les paramètres d’action diffèrent selon le type d’action.
 
-   (Avancé) Attendre avant d’exécuter l’action suivante : Cette option est disponible lorsque le séquencement des composants de règle est activé sur votre propriété. Lorsque cette option est cochée, les balises n’appellent pas l’action suivante tant que celle-ci n’est pas terminée. Lorsque cette option est désactivée, l’action suivante commence à s’exécuter immédiatement. La valeur par défaut est **[!UICONTROL Activé]**.
+   (Avancé) Attendre avant d’exécuter l’action suivante : Cette option est disponible lorsque le séquencement des composants de règle est activé sur votre propriété. Lorsque cette option est cochée, les balises n’appellent pas l’action suivante tant que celle-ci n’est pas terminée. Lorsque cette option est désactivée, l’action suivante commence à s’exécuter immédiatement. La valeur par défaut est de **[!UICONTROL Checked]**.
 
    (Avancé) Délai d’expiration : Cette option est disponible lorsque le séquencement des composants de règle est activé sur votre propriété. Il définit la durée maximale autorisée pour l’achèvement de l’action. Si le délai d’expiration est atteint, l’action échoue et toutes les actions suivantes de cette règle sont supprimées de la file d’attente de traitement. La valeur par défaut est de 2 000 ms.
 
 
-1. Vérifiez votre règle, puis sélectionnez **[!UICONTROL Enregistrer la règle]**.
+1. Vérifiez votre règle, puis cliquez sur **[!UICONTROL Save Rule]**.
 
    Ultérieurement, lorsque vous [publierez](../publishing/overview.md), vous ajouterez cette règle à une bibliothèque et vous la déploierez.
 
@@ -152,7 +148,7 @@ Les événements et conditions des règles sont toujours regroupés dans la bibl
 
 ### Règles avec événements « Core - Library Loaded » (Core - Bibliothèque chargée) ou « Core - Page Top » (Core - Haut de page)
 
-Ces événements doivent être presque toujours exécutés (à moins que les conditions n’aient la valeur false). Par souci d’efficacité, ils sont donc regroupés dans la bibliothèque principale, le fichier référencé par votre code incorporé.
+Ces événements doivent être presque toujours exécutés (à moins que les conditions n’aient la valeur false). Par souci d’efficacité, ils sont donc regroupés dans la bibliothèque principale, le fichier référencé par votre code intégré.
 
 * **Javascript :** le code JavaScript est intégré à la bibliothèque de balises principale. Le script personnalisé est encapsulé dans une balise de script et écrit dans le document à l’aide de `document.write`. Si la règle comporte plusieurs scripts personnalisés, ils sont écrits dans l’ordre.
 
@@ -167,7 +163,7 @@ Adobe ne peut garantir qu’aucune autre règle sera réellement déclenchée et
 
 ## Séquencement des composants de règle {#sequencing}
 
-Le comportement de lʼenvironnement dʼexécution dépend de si **[!UICONTROL Exécuter les composants de règle en séquence]** est activé ou non pour votre propriété. Ce paramètre détermine si les composants d’une règle peuvent être évalués en parallèle (de manière asynchrone) ou s’ils doivent l’être en séquence.
+Le comportement de l’environnement d’exécution dépend de l’activation ou de la désactivation de **[!UICONTROL Run rule components in sequence]** pour votre propriété. Ce paramètre détermine si les composants d’une règle peuvent être évalués en parallèle (de manière asynchrone) ou s’ils doivent l’être en séquence.
 
 >[!IMPORTANT]
 >

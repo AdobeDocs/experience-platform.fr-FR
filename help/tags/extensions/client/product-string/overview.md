@@ -2,18 +2,14 @@
 title: Présentation de l’extension Adobe Analytics Product String
 description: Découvrez l’extension de balise Adobe Analytics Product String présente dans Adobe Experience Platform.
 exl-id: a49feb4e-f166-41d2-9f85-639f6ff8bb8f
-source-git-commit: 36ca1e63c043baa776f27b627cdbe493b2ced674
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '470'
 ht-degree: 100%
 
 ---
 
 # Présentation de l’extension Adobe Analytics Product String
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 La variable `products` surveille la manière dont les utilisateurs interagissent avec les produits de votre site. Par exemple, la variable `products` peut surveiller le nombre de fois où un produit est affiché, ajouté au panier, passé en caisse et acheté. Elle peut également surveiller l’efficacité relative des catégories de marchandisage de votre site.
 
@@ -81,7 +77,7 @@ Le paramètre `price` de la chaîne de produit [!DNL Adobe Analytics] doit corre
 
 Si votre mise en œuvre utilise des événements personnalisés ou des eVars de marchandisage, procédez comme suit :
 
-1. Cliquez sur le bouton **[!UICONTROL Ajouter]** associé.
+1. Cliquez sur le bouton **[!UICONTROL Add]** associé.
 1. Sélectionnez l’événement ou l’eVar que vous devez définir dans la liste déroulante.
 1. Saisissez le chemin d’accès à la variable de couche de données appropriée en utilisant la même syntaxe que celle décrite ci-dessus.
 

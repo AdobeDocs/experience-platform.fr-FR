@@ -2,18 +2,14 @@
 title: Notes de mise à jour de l’extension Adobe Media Analytics (SDK 3.x) for Audio and Video
 description: Dernières notes de mise à jour pour l’extension Adobe Media Analytics (SDK 3.x) for Audio and Video dans Adobe Experience Platform.
 exl-id: 1ed0504d-d13c-4e7b-8eb1-78c54e62a523
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '130'
 ht-degree: 100%
 
 ---
 
 # Notes de mise à jour d’Adobe Media Analytics (SDK 3.x) for Audio and Video
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 ## 5 avril 2021
 

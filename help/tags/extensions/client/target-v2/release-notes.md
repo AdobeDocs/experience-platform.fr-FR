@@ -2,18 +2,14 @@
 title: Notes de mise à jour de l’extension Adobe Target v2
 description: Notes de mise à jour les plus récentes pour l’extension de balise Adobe Target v2 dans Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: a062305e3ed0eb4d127f93ff37efe15e41eaa601
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '834'
-ht-degree: 100%
+source-wordcount: '788'
+ht-degree: 99%
 
 ---
 
 # Notes de mise à jour de l’extension Adobe Target v2
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 ## v0.20.3 (23 janvier 2024)
 
@@ -34,7 +30,7 @@ ht-degree: 100%
 
 - Mise à jour pour la prise en charge d’`at.js` 2.11.0.
 - Ajout de la prise en charge de la définition des sandboxId et sandboxName Adobe Experience Platform personnalisés dans targetGlobalSettings, qui seront transmis à l’API Delivery lors des appels getOffer/getOffers.
-- Correctif des sélecteurs DOM fantômes pour enchaîner :eq() dans le sélecteur.
+- Correctif DOM fantôme pour le chaînage de :eq() dans le sélecteur.
 
 ## v0.19.3 (18 septembre 2023)
 

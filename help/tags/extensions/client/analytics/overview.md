@@ -2,18 +2,14 @@
 title: Présentation de lʼextension Adobe Analytics
 description: Découvrez lʼextension de balise Adobe Analytics dans Adobe Experience Platform.
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2308'
+source-wordcount: '2263'
 ht-degree: 82%
 
 ---
 
 # Présentation de lʼextension Adobe Analytics
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Cette référence vous permet d’obtenir plus d’informations sur la configuration de l’extension Adobe Analytics et sur les options disponibles lors de l’utilisation de cette extension pour créer une règle.
 
@@ -361,7 +357,7 @@ Si vous le souhaitez, configurez des hiérarchies supplémentaires.
 
 #### Nom de la page
 
-Cette valeur fait référence au nom d’une page donnée et correspond à la variable [`pageName`](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html?lang=fr) dans Analytics.
+Cette valeur fait référence au nom d’une page donnée et correspond à la variable [`pageName`](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) dans Analytics.
 
 >[!IMPORTANT]
 >

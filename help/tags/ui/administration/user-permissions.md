@@ -2,18 +2,14 @@
 title: Autorisations d’utilisateur relatives aux balises
 description: Découvrez les différents types d’autorisations relatives aux balises disponibles et quelques stratégies d’implémentation de base pour différents cas d’utilisation commerciale.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1260'
 ht-degree: 91%
 
 ---
 
 # Autorisations d’utilisateur relatives aux balises
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Les autorisations d’utilisateur relatives aux balises dans Adobe Experience Platform sont attribuées aux utilisateurs via Adobe Admin Console. Plutôt que d’être attribuées à chaque utilisateur, les autorisations sont configurées séparément en différents jeux, sous forme de profils de produit. Les utilisateurs sont ensuite affectés à ces profils de produit afin d’obtenir les autorisations pour lesquelles ces derniers ont été configurés.
 
@@ -21,7 +17,7 @@ Ce guide présente un aperçu des différents types d’autorisations relatives 
 
 >[!NOTE]
 >
->Pour savoir comment configurer les autorisations pour les utilisateurs qui utilisent Admin Console, reportez-vous au tutoriel sur la [gestion des autorisations pour la collecte de données](../../../collection/permissions.md).
+>Pour connaître la procédure de configuration des autorisations d’utilisateurs à l’aide d’Admin Console, consultez le tutoriel sur la [gestion des autorisations pour la collecte de données](../../../collection/permissions.md).
 
 ## Types d’autorisations
 
@@ -52,7 +48,7 @@ Le tableau suivant décrit les droits de propriété disponibles et les fonction
 
 | Droit de propriété | Description |
 | --- | --- |
-| **Développer** | Ce droit autorise les actions suivantes :<ul><li>Création de règles et d’éléments de données</li><li>Création de bibliothèques et intégration dans des environnements de développement existants</li><li>Envoi de bibliothèque pour approbation</li></ul>La plupart des tâches quotidiennes dans l’interface utilisateur exigent ce droit. |
+| **Développer** | Ce droit autorise les actions suivantes :<ul><li>Création de règles et d’éléments de données</li><li>Création de bibliothèques et intégration dans des environnements de développement existants</li><li>Envoi de bibliothèque pour approbation</li></ul>La plupart des tâches quotidiennes dans l’interface utilisateur requièrent ce droit. |
 | **Approuver** | Cela vous permet de prendre une bibliothèque envoyée et de l’intégrer dans l’environnement d’évaluation. Vous pouvez également approuver une bibliothèque en vue de la publier une fois le test terminé. |
 | **Publier** | Cela vous permet de publier des bibliothèques approuvées dans l’environnement de production. |
 | **Gérer les extensions** | Ce droit autorise les actions suivantes : <ul><li>Installation de nouvelles extensions sur une propriété</li><li>Modification de la configuration d’une extension déjà installée</li><li>Suppression d’une extension</li></ul>Consultez la documentation de présentation des extensions pour [plus dʼinformations sur les extensions](../managing-resources/extensions/overview.md). Ce rôle appartient généralement au service informatique ou au marketing, selon votre organisation. |
@@ -68,7 +64,7 @@ Les droits d’entreprise s’appliquent aux autorisations qui s’appliquent à
 | --- | --- |
 | **Gérer les propriétés** | Ce droit autorise les actions suivantes :<ul><li>Création de propriétés</li><li>Modification des métadonnées et des paramètres au niveau de la propriété</li><li>Suppression des propriétés</li></ul>Les administrateurs assument généralement ce rôle. Pour plus dʼinformations, voir la [documentation sur les propriétés](companies-and-properties.md). |
 | **Développer des extensions** | Permet de créer et de modifier des packages dʼextensions dont lʼentreprise dispose, y compris les versions privées et les demandes de version publique. |
-| **Gérer les configurations d&#39;application** | Cette option n’est disponible que si vous disposez d’une licence pour Adobe Journey Optimizer ou d’une autre solution qui accorde l’accès à la messagerie intégrée (in-app) mobile et push.  Cela permet de gérer les applications dont Experience Cloud a connaissance, ainsi que les informations d’identification push nécessaires pour communiquer avec le service Firebase Cloud Messaging et le service de notification push Apple. |
+| **Gérer les configurations d&#39;application** | Cette option n’est disponible que si vous disposez d’une licence pour Adobe Journey Optimizer ou une autre solution qui accorde l’accès aux messages in-app et aux notifications push.  Cela permet de gérer les applications dont Experience Cloud a connaissance, ainsi que les informations d’identification push nécessaires pour communiquer avec le service Firebase Cloud Messaging et le service de notification push Apple. |
 
 {style="table-layout:auto"}
 
@@ -111,9 +107,9 @@ Le tableau suivant fournit quelques exemples des types de rôles que vous pouvez
 | Rôle | Description | Propriétés | Droits de propriété | Droits d’entreprise |
 | --- | --- | --- | --- | --- |
 | Le gestionnaire | souhaite voir ce qui se passe dans le système, mais ne peut pas y apporter de modifications. | Inclusion automatique | (Aucun) | (Aucun) |
-| Le spécialiste marketing | peut installer des extensions et configurer de nouvelles balises pour des propriétés existantes, mais ne peut pas publier dans les environnements dʼévaluation ou de production. | Inclusion automatique | <ul><li>Développer</li><li>Gérer les extensions</li></ul> | <ul><li>Gérer les propriétés</li></ul> |
+| Le spécialiste marketing | Peut installer des extensions et configurer de nouvelles balises pour des propriétés existantes, mais ne peut pas publier dans les environnements dʼévaluation ou de production. | Inclusion automatique | <ul><li>Développer</li><li>Gérer les extensions</li></ul> | <ul><li>Gérer les propriétés</li></ul> |
 | Le développeur d’applications mobiles | est responsable de la mise en œuvre de solutions Adobe et tierces dans une application mobile native. | Inclusion automatique | <ul><li>Développer</li><li>Gérer les extensions</li></ul> | <li>Gérer les propriétés</li><li>Gérer les configurations d’application</li> |
-| L’équipe informatique | ne modifie aucune balise, mais contrôle totalement les environnements dʼévaluation et de production, et ce quʼils contiennent. | Inclusion automatique | (Aucun) | <ul><li>Approuver</li><li>Publier</li><li>Gérer les environnements</li></ul> |
+| L’équipe informatique | Ne modifie aucune balise, mais contrôle totalement les environnements dʼévaluation et de production, et ce quʼils contiennent. | Inclusion automatique | (Aucun) | <ul><li>Approuver</li><li>Publier</li><li>Gérer les environnements</li></ul> |
 | Le développeur d’extensions | développe des extensions et peut les soumettre pour approbation, mais ne peut pas les publier ni les ajouter aux propriétés existantes. | Inclusion automatique | <ul><li>Développer</li></ul> | <ul><li>Gérer les propriétés</li><li>Développement dʼextensions</li></ul> |
 | Le super utilisateur | fait tout. | Inclusion automatique | <ul><li>Développer</li><li>Approuver</li><li>Publier</li><li>Gérer les extensions</li><li>Gérer les environnements</li></ul> | <ul><li>Gérer les propriétés</li></ul> |
 
@@ -121,4 +117,4 @@ Le tableau suivant fournit quelques exemples des types de rôles que vous pouvez
 
 ## Étapes suivantes
 
-Ce document fournit un aperçu des autorisations disponibles pour les balises dans Experience Platform. Pour obtenir des instructions sur la configuration des profils de produit pour les balises dans Adobe Admin Console, consultez le guide sur la [gestion des autorisations d’utilisateur pour la collecte de données](../../../collection/permissions.md).
+Ce document fournit un aperçu des autorisations disponibles pour les balises dans Experience Platform. Pour savoir comment configurer les profils de produit pour les balises dans Adobe Admin Console, consultez le guide sur la [gestion des autorisations utilisateur pour la collecte de données](../../../collection/permissions.md).

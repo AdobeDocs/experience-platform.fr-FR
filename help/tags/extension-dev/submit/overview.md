@@ -2,18 +2,14 @@
 title: Présentation du processus d’envoi des extensions
 description: Découvrez la procédure qui vous permettra d’envoyer votre extension Adobe Experience Platform du développement à la publication.
 exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
-source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '186'
 ht-degree: 97%
 
 ---
 
 # Présentation du processus d’envoi des extensions
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 L’envoi d’une extension au catalogue de collecte de données dans Adobe Experience Platform peut sembler une tâche ardue. Ce document fournit un guide détaillé pour envoyer votre extension à lʼaide de guides individuels pour chaque étape du processus. Pour envoyer votre extension, vous devez effectuer les étapes suivantes :
 
@@ -21,7 +17,7 @@ L’envoi d’une extension au catalogue de collecte de données dans Adobe Exp
 1. [Octroyer un accès utilisateur pour le développement d’extensions](./access.md)
 1. [Développement d’une extension](./develop.md)
 1. [Créer une liste Exchange](./create-listing.md)
-1. [Créer le fichier zip de votre package d’extension](./create-extension-package-zip.md)
+1. [Créez votre package d’extension zip](./create-extension-package-zip.md)
 1. [Télécharger et tester votre extension](./upload-and-test.md)
 1. [Publier votre extension](./release.md)
 

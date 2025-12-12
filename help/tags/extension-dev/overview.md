@@ -2,18 +2,14 @@
 title: Présentation du développement d’extension
 description: Découvrez les principaux composants des différents types d’extensions de balise ainsi que le processus de développement des extensions dans Adobe Experience Platform.
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '938'
-ht-degree: 91%
+source-wordcount: '893'
+ht-degree: 90%
 
 ---
 
 # Présentation du développement d’extension
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 L’un des principaux objectifs des balises dans Adobe Experience Platform est de créer un réseau ouvert où les ingénieurs extérieurs à Adobe peuvent exposer des fonctionnalités supplémentaires sur leurs sites web et applications mobiles. Les extensions de balises permettent cela. Une fois qu’une extension a été installée sur une propriété de balise, cette fonctionnalité d’extension est alors disponible auprès de tous les utilisateurs de la propriété.
 

@@ -2,18 +2,14 @@
 title: Contexte dans les modules d’extension Edge
 description: Découvrez l’objet Contexte ainsi que son rôle dans l’interaction avec les modules Bibliothèque dans les extensions de balises des propriétés Edge.
 exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '681'
 ht-degree: 100%
 
 ---
 
 # Contexte dans les modules d’extension Edge
-
->[!NOTE]
->
-> Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Tous les modules de bibliothèque des extensions Edge reçoivent un objet `context` lorsqu’ils sont exécutés. Ce document couvre les propriétés fournies par l’objet `context` et le rôle qu’ils jouent dans les modules de bibliothèque.
 
@@ -42,7 +38,7 @@ logger.log(context.arc.event);
 logger.log(context.arc.request)
 ```
 
-L’objet `request` présente deux propriétés de niveau supérieur : `body` et `head`. La propriété `body` contient des informations sur le modèle de données d’expérience (XDM) et peut être inspectée dans Adobe Experience Platform Debugger lorsque vous accédez à **[!UICONTROL Launch]** et sélectionnez l’onglet **[!UICONTROL Edge Trace]**.
+L’objet `request` présente deux propriétés de niveau supérieur : `body` et `head`. La propriété `body` contient des informations sur le modèle de données d’expérience (XDM) et peut être inspectée dans le débogueur Adobe Experience Platform lorsque vous accédez à **[!UICONTROL Launch]** et sélectionnez l’onglet **[!UICONTROL Edge Trace]**.
 
 ### [!DNL ruleStash] {#rulestash}
 

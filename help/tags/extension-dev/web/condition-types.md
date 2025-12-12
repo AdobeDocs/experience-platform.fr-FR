@@ -2,18 +2,14 @@
 title: Types de conditions pour les extensions web
 description: Découvrez comment définir un module de bibliothèque de types de conditions pour une extension de balise dans une propriété web.
 exl-id: db504455-858b-4ac8-aa42-de516b0f1d5a
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '457'
 ht-degree: 95%
 
 ---
 
 # Types de conditions pour les extensions web
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Dans le contexte d’une règle, une condition est évaluée une fois qu’un événement s’est produit. Toutes les conditions doivent renvoyer la valeur vraie pour que la règle continue son traitement. Une exception survient lorsque les utilisateurs placent explicitement des conditions dans un compartiment « exception », auquel cas toutes les conditions du compartiment doivent renvoyer la valeur false pour que la règle puisse continuer le traitement.
 
@@ -29,7 +25,7 @@ Ce document explique comment définir des types de conditions pour une extension
 
 Les types de conditions se composent généralement des éléments suivants :
 
-1. Une [vue](./views.md) affichée dans l’interface utilisateur de l’Experience Platform et l’interface utilisateur de collecte de données qui permet aux utilisateurs de modifier les paramètres de la condition.
+1. Une [vue](./views.md) affichée dans l’interface utilisateur d’Experience Platform et l’interface utilisateur de la collecte de données, qui permet aux utilisateurs de modifier les paramètres de la condition.
 2. Un module de bibliothèque émis dans la bibliothèque d’exécution de balise pour interpréter les paramètres et évaluer une condition.
 
 Un module de bibliothèque de type de condition a un seul objectif : évaluer si quelque chose est vrai ou faux. Ce qu’il évalue ne dépend que de vous.

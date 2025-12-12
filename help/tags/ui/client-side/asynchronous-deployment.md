@@ -2,9 +2,9 @@
 title: Déploiement asynchrone
 description: Découvrez comment déployer les bibliothèques de balises d’Adobe Experience Platform de manière asynchrone sur votre site web.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1001'
 ht-degree: 98%
 
 ---
@@ -15,10 +15,6 @@ ht-degree: 98%
 >id="platform_tags_asynchronous_deployment"
 >title="Déploiement asynchrone"
 >abstract="Si cette option est activée, lorsque cette balise script est analysée, le navigateur commencera à charger le fichier JavaScript, mais au lieu d’attendre que la bibliothèque soit chargée et exécutée, il continuera à analyser et à rendre le reste du document. Cela peut améliorer les performances des pages web, mais a des implications importantes en ce qui concerne l’exécution de certaines règles. Voir la documentation pour plus de détails."
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Les performances et le déploiement sans blocage des bibliothèques JavaScript exigés par nos produits sont de plus en plus importants pour les utilisateurs dʼAdobe Experience Cloud. Des outils tels que [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) recommandent aux utilisateurs de modifier leur manière de déployer les bibliothèques Adobe sur leur site. Cet article explique comment utiliser les bibliothèques JavaScript dʼAdobe de manière asynchrone.
 

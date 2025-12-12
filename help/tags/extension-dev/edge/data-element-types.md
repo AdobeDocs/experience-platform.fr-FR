@@ -2,18 +2,14 @@
 title: Types dʼéléments de données pour les extensions Edge
 description: Découvrez comment définir un module de bibliothèque de type élément de données pour une extension de balise dans une propriété Edge.
 exl-id: ddbc3912-1c25-4d21-bde8-e40e583b4278
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '394'
 ht-degree: 94%
 
 ---
 
 # Types d’éléments de données dans les extensions Edge
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Dans les balises, les éléments de données sont des alias de données sur une page web ou mobile, quel que soit l’emplacement de ces données dans l’événement reçu par le serveur. Un élément de données peut être référencé par des règles et agit comme une abstraction pour l’accès à ces données. À l’avenir, lors du changement d’emplacement des données (notamment en cas de modification de la clé de l’événement contenant la valeur), un seul élément de données pourra être reconfiguré tandis que toutes les règles référençant cet élément de données pourront rester inchangées.
 
@@ -29,7 +25,7 @@ Ce document explique comment définir des types d’éléments de données pour 
 
 Les types d’éléments de données sont généralement les suivants :
 
-1. Vue affichée dans l’interface utilisateur de l’Experience Platform et dans l’interface utilisateur de collecte de données qui permet aux utilisateurs de modifier les paramètres de l’élément de données.
+1. Une vue affichée dans l’interface utilisateur d’Experience Platform et l’interface utilisateur de la collecte de données qui permet aux utilisateurs de modifier les paramètres de l’élément de données.
 2. Un module de bibliothèque émis dans la bibliothèque d’exécution de balise pour interpréter les paramètres et récupérer des éléments de données.
 
 Si vous souhaitez permettre aux utilisateurs de récupérer un élément de donnée de la couche de données personnalisée, votre module peut ressembler à cet exemple.

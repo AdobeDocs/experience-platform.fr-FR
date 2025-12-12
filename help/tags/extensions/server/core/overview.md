@@ -3,18 +3,14 @@ title: Présentation de lʼextension Core Event Forwarding
 description: Découvrez lʼextension Core Event Forwarding dans Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: 2ba02f94ff20281953d74b3213033e5f0a7fa111
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 99%
+source-wordcount: '1662'
+ht-degree: 97%
 
 ---
 
 # Présentation de lʼextension Core Event Forwarding
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Lʼextension Core Event Forwarding fournit les événements, conditions et types de données par défaut pour les transferts dʼévénements dans Adobe Experience Platform.
 
@@ -26,11 +22,11 @@ Cette section décrit les types de conditions disponibles dans l’extension Cor
 
 ### Custom code
 
-Spécifiez un Custom Code qui doit exister comme condition de l’événement. Utilisez l’éditeur de code intégré pour saisir le code personnalisé. Le transfert d’événements dans Adobe Experience Platform prend en charge ES13.
+Spécifiez un Custom Code qui doit exister comme condition de l’événement. Utilisez l’éditeur de code intégré pour saisir le code personnalisé. Le transfert d’événement dans Adobe Experience Platform prend en charge ES13.
 
-1. Sélectionnez **[!UICONTROL Ouvrir l’éditeur]**.
+1. Sélectionner **[!UICONTROL Open Editor]**.
 1. Saisissez le Custom Code.
-1. Sélectionnez **[!UICONTROL Enregistrer]**.
+1. Sélectionner **[!UICONTROL Save]**.
 
 Pour accéder à la valeur d’un élément de données dans le code personnalisé, utilisez la méthode `getDataElementValue`. Par exemple, pour récupérer la valeur d’un élément de données nommé `productName`, écrivez ce qui suit : 
 
@@ -155,11 +151,11 @@ Cette section décrit les types d’actions disponibles dans l’extension Core.
 
 ### Custom Code
 
-Fournissez le code qui s’exécute une fois que l’événement est déclenché et que les conditions sont évaluées. Le transfert d’événements dans Adobe Experience Platform prend en charge ES13.
+Fournissez le code qui s’exécute une fois que l’événement est déclenché et que les conditions sont évaluées. Le transfert d’événement dans Adobe Experience Platform prend en charge ES13.
 
 1. Nommez le code d’action.
-1. Sélectionnez **[!UICONTROL Ouvrir l’éditeur]**.
-1. Modifiez le code, puis cliquez sur **[!UICONTROL Enregistrer]**.
+1. Sélectionner **[!UICONTROL Open Editor]**.
+1. Modifiez le code, puis cliquez sur **[!UICONTROL Save]**.
 
 Pour accéder à la valeur d’un élément de données dans le code personnalisé, utilisez la méthode `getDataElementValue`. Par exemple, pour récupérer la valeur d’un élément de données nommé `productName`, écrivez ce qui suit : 
 
@@ -183,9 +179,9 @@ Les sections suivantes décrivent les types d’éléments de données disponibl
 
 ### Custom code
 
-Il est possible de saisir du code JavaScript personnalisé dans l’interface utilisateur en cliquant sur **[!UICONTROL Ouvrir l’éditeur]** et en insérant le code dans la fenêtre de l’éditeur.
+Il est possible d’entrer du code JavaScript personnalisé dans l’interface utilisateur en cliquant sur **[!UICONTROL Open Editor]** et en insérant le code dans la fenêtre de l’éditeur.
 
-Une instruction de retour est nécessaire dans la fenêtre de l’éditeur afin d’indiquer quelle valeur doit être utilisée en tant que valeur de l’élément de données. Si une instruction de retour n’est pas incluse ou si la valeur `null` ou `undefined` est renvoyée, la valeur par défaut de l’élément de données reflète `null` ou `undefined`.
+Une instruction de retour est nécessaire dans la fenêtre de l’éditeur afin d’indiquer quelle valeur doit être utilisée en tant que valeur de l’élément de données. Si aucune instruction de retour n’est incluse ou si la valeur `null` ou `undefined` est renvoyée, la valeur par défaut de l’élément de données reflète `null` ou `undefined`.
 
 Pour accéder à la valeur d’un élément de données dans le code personnalisé, utilisez la méthode `getDataElementValue`. Par exemple, pour récupérer la valeur d’un élément de données nommé `productName`, écrivez ce qui suit : 
 

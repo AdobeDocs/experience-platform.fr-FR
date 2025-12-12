@@ -2,18 +2,14 @@
 title: Bibliothèques auto-hébergées
 description: Découvrez comment mettre en œuvre l’auto-hébergement pour vos versions de bibliothèque de balises dans Adobe Experience Platform.
 exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 90%
+source-wordcount: '446'
+ht-degree: 89%
 
 ---
 
 # Bibliothèques auto-hébergées
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 La fonctionnalité Balises dans Adobe Experience Platform permet la production d’un ensemble de fichiers appelé [version](../builds.md). Cet ensemble de fichiers contrôle le comportement de votre application au moment de l’exécution.
 

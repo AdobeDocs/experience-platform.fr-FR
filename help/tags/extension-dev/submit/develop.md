@@ -2,18 +2,14 @@
 title: Développement d’une extension
 description: Ce document offre un aperçu général du processus de développement dʼune extension de balise et contient des liens vers dʼautres documents présentant des processus plus détaillés.
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: 3f5e432ef381c10d8197724783135637d01a120e
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 92%
+source-wordcount: '391'
+ht-degree: 91%
 
 ---
 
 # Développement d’une extension
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Une extension de balise doit être considérée comme un (petit) produit ayant ses propres besoins. Déterminer comment un utilisateur Adobe Experience Platform souhaite utiliser votre extension peut vous permettre de trier les fonctionnalités en fonction des types d’événement, de condition, d’action et d’éléments de données que votre extension doit fournir.
 

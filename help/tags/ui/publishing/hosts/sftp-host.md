@@ -2,18 +2,14 @@
 title: Hôtes SFTP
 description: Découvrez comment configurer les balises dans Adobe Experience Platform pour diffuser des versions de bibliothèque sur un serveur SFTP sécurisé et auto-hébergé.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: a077d3a1b14d9b7786d3181a556c49e940a42c2f
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 37%
+source-wordcount: '751'
+ht-degree: 31%
 
 ---
 
 # Hôtes SFTP
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Experience Platform vous permet de diffuser les versions de bibliothèque de balises sur un serveur SFTP sécurisé que vous hébergez, ce qui vous permet de mieux contrôler le stockage et la gestion de vos versions. Ce guide explique comment configurer un hôte SFTP pour une propriété de balise dans l’interface utilisateur d’Experience Platform ou l’interface utilisateur de la collecte de données.
 
@@ -21,7 +17,7 @@ Experience Platform vous permet de diffuser les versions de bibliothèque de bal
 >
 >Vous pouvez également choisir d’utiliser un hôte géré par Adobe à la place. Pour plus d’informations, consultez le guide sur les [hôtes gérés par Adobe](./managed-by-adobe-host.md).
 >
->Pour plus d’informations sur les avantages et les limites des bibliothèques d’auto-hébergement, consultez le [&#x200B; guide d’auto-hébergement &#x200B;](./self-hosting-libraries.md).
+>Pour plus d’informations sur les avantages et les limites des bibliothèques d’auto-hébergement, consultez le [ guide d’auto-hébergement ](./self-hosting-libraries.md).
 
 ## Configurer une clé d’accès pour votre serveur {#access-key}
 
@@ -51,11 +47,11 @@ Pour plus d’informations détaillées, reportez-vous à l’article Medium sui
 
 ## Création d’un hôte SFTP {#create}
 
-Sélectionnez **[!UICONTROL Hôtes]** dans le volet de navigation de gauche, puis **[!UICONTROL Ajouter un hôte]**.
+Sélectionnez **[!UICONTROL Hosts]** dans le volet de navigation de gauche, puis **[!UICONTROL Add Host]**.
 
 ![Image illustrant le bouton Ajouter l’hôte sélectionné dans l’interface utilisateur](../../../images/ui/publishing/sftp-hosts/add-host-button.png)
 
-La boîte de dialogue de création de l’hôte s’affiche. Attribuez un nom à l’hôte et sous **[!UICONTROL Type]**, sélectionnez **[!UICONTROL SFTP]**.
+La boîte de dialogue de création de l’hôte s’affiche. Attribuez un nom à l’hôte et, sous **[!UICONTROL Type]**, sélectionnez **[!UICONTROL SFTP]**.
 
 ![Image illustrant l’option d’hébergement SFTP sélectionnée](../../../images/ui/publishing/sftp-hosts/select-sftp.png)
 
@@ -67,18 +63,18 @@ La boîte de dialogue se développe pour inclure des options de configuration su
 
 | Champ de configuration | Description |
 | --- | --- |
-| [!UICONTROL Ne pas utiliser de liens symboliques] | Par défaut, tous les hôtes SFTP utilisent des liens symboliques (symlinks) pour référencer la bibliothèque [versions](../builds.md) qui sont enregistrés sur le serveur. Cependant, tous les serveurs ne prennent pas en charge l’utilisation de liens symboliques. Lorsque cette option est sélectionnée, l’hôte utilise une opération de copie pour mettre à jour directement les ressources de build au lieu d’utiliser des liens symboliques. |
-| [!UICONTROL &#x200B; URL du serveur SFTP &#x200B;] | Chemin d’accès de base de l’URL de votre serveur . |
-| [!UICONTROL Chemin] | Chemin d’accès à ajouter à l’URL du serveur de base pour cet hôte. |
+| [!UICONTROL Don't Use Symlinks] | Par défaut, tous les hôtes SFTP utilisent des liens symboliques (symlinks) pour référencer la bibliothèque [versions](../builds.md) qui sont enregistrés sur le serveur. Cependant, tous les serveurs ne prennent pas en charge l’utilisation de liens symboliques. Lorsque cette option est sélectionnée, l’hôte utilise une opération de copie pour mettre à jour directement les ressources de build au lieu d’utiliser des liens symboliques. |
+| [!UICONTROL SFTP Server URL] | Chemin d’accès de base de l’URL de votre serveur . |
+| [!UICONTROL Path] | Chemin d’accès à ajouter à l’URL du serveur de base pour cet hôte. |
 | [!UICONTROL Port] | Le port doit être l’un des ports suivants :<ul><li>`21`</li><li>`22`</li><li>`201`</li><li>`200`</li><li>`2002`</li><li>`2018`</li><li>`2022`</li><li>`2200`</li><li>`2222`</li><li>`2333`</li><li>`2939`</li><li>`443`</li><li>`4343`</li><li>`80`</li><li>`8080`</li><li>`8888`</li></ul>En règle générale, Adobe limite le nombre de ports pouvant être utilisés pour le trafic sortant. Les ports sélectionnés sont généralement autorisés à passer par les pare-feu d’entreprise et incluent certaines plages pour plus de flexibilité. |
-| [!UICONTROL Nom d’utilisateur] | Nom d’utilisateur à utiliser lors de l’accès au serveur. |
-| [!UICONTROL Clé privée chiffrée] | La clé privée chiffrée que vous avez créée lors d’une [étape précédente](#access-key). |
+| [!UICONTROL Username] | Nom d’utilisateur à utiliser lors de l’accès au serveur. |
+| [!UICONTROL Encrypted Private Key] | La clé privée chiffrée que vous avez créée lors d’une [étape précédente](#access-key). |
 
-Sélectionnez **[!UICONTROL Enregistrer]** pour créer l’hôte avec la configuration sélectionnée.
+Sélectionnez **[!UICONTROL Save]** pour créer l’hôte avec la configuration sélectionnée.
 
 ![Image montrant l’hôte SFTP en cours d’enregistrement](../../../images/ui/publishing/sftp-hosts/save-host.png)
 
-Cliquer sur **[!UICONTROL Enregistrer]** entraîne le test de la connexion et de la capacité de diffusion des fichiers sur votre serveur SFTP. Experience Platform crée un dossier, écrit un fichier dans ce dossier, vérifie que le fichier est bien là, puis supprime le tout. Si le compte utilisateur de votre serveur SFTP (celui associé au certificat sécurisé que vous avez fourni à Experience Platform) ne dispose pas des autorisations nécessaires pour effectuer cette action, l’hôte passe en état « Failed » (Échec).
+Lorsque vous sélectionnez **[!UICONTROL Save]**, la connexion et la capacité à envoyer les fichiers sur votre serveur SFTP sont testées. Experience Platform crée un dossier, écrit un fichier dans ce dossier, vérifie que le fichier est bien là, puis supprime le tout. Si le compte utilisateur de votre serveur SFTP (celui associé au certificat sécurisé que vous avez fourni à Experience Platform) ne dispose pas des autorisations nécessaires pour effectuer cette action, l’hôte passe en état « Failed » (Échec).
 
 ## Étapes suivantes
 

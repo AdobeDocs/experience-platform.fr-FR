@@ -2,18 +2,14 @@
 title: Guide de dépannage des balises
 description: Obtenez des réponses aux questions les plus fréquentes à propos des balises dans Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: 9701a14dc2915e0d6dcc6051c15d5113f305487f
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '987'
 ht-degree: 89%
 
 ---
 
 # Guide de dépannage des balises
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](./term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 Ce document apporte des réponses aux questions fréquentes à propos des balises dans Adobe Experience Platform.
 
@@ -53,7 +49,7 @@ Les balises sont certifiées SOC-2 et conformes à la loi Gramm-Leach-Bliley Act
 
 ## Quand puis-je migrer vers les balises ?
 
-C’est maintenant le meilleur moment pour migrer vers les balises. Le processus de migration facilite la copie de vos propriétés DTM dans les balises. Nous recommandons des tests approfondis, mais nous avons automatisé autant de processus que possible (aucun changement de code incorporé sur la page, et migration automatisée des règles et des éléments de données).
+C’est maintenant le meilleur moment pour migrer vers les balises. Le processus de migration facilite la copie de vos propriétés DTM dans les balises. Nous recommandons des tests approfondis, mais nous avons automatisé autant de processus que possible (aucun changement de code intégré sur la page, et migration automatisée des règles et des éléments de données).
 
 ## Les balises prennent-elles en charge les applications monopage et mon framework préféré ?
 
@@ -73,7 +69,7 @@ Les balises sont conçues pour fournir et exécuter des technologies publicitair
 
 ## Quels navigateurs les balises prennent-elles en charge ?
 
-Consultez les navigateurs [ici](./extension-dev/browsers.md) pris en charge.
+Voir les navigateurs pris en charge [ici](./extension-dev/browsers.md).
 
 La plupart des clients exploitent désormais des fonctionnalités de plateforme web plus modernes dans les navigateurs actuels et génèrent de meilleures expériences utilisateur, y compris des applications d’une seule page et des sites web et pages interactifs à utilisation lourde Ajax. Comme la plupart des clients optent pour des approches plus modernes de leurs sites, ils ont besoin d’une solution comme Balises permettant ces approches.
 
@@ -83,14 +79,14 @@ Oui! Balises prend désormais en charge les propriétés et la configuration des
 
 ## Pourquoi l’interface utilisateur indique-t-elle qu’une erreur s’est produite lors du chargement de mon compte ?
 
-Si vous recevez un message indiquant qu’une erreur s’est produite lors du chargement de votre compte, cela signifie que votre compte n’appartient à aucun profil de produit pour les balises. Consultez le guide sur la [gestion des autorisations](../collection/permissions.md) pour savoir comment configurer un profil de produit dans Adobe Admin Console pour accorder l’accès aux fonctionnalités de collecte de données dans l’interface utilisateur.
+Si vous recevez un message indiquant qu’une erreur s’est produite lors du chargement de votre compte, cela signifie que votre compte n’appartient à aucun profil de produit pour les balises. Consultez le guide sur la [gestion des autorisations](../collection/permissions.md) pour savoir comment configurer un profil de produit dans Adobe Admin Console afin d’accorder l’accès aux fonctionnalités de collecte de données dans l’interface utilisateur.
 
 ## Pourquoi m’est-il impossible d’ajouter des propriétés dans l’interface utilisateur ?
 
-Si vous ne pouvez pas créer de propriétés lors de la connexion à l’interface utilisateur, cela signifie que votre compte n’appartient pas à un profil de produit disposant du droit Manage Properties (Gérer les propriétés).
+Si vous ne pouvez pas créer de propriétés lorsque vous êtes connecté à l’interface utilisateur, cela signifie que votre compte n’appartient pas à un profil de produit disposant du droit Gérer les propriétés.
 
 Consultez le guide sur la [gestion des autorisations](../collection/permissions.md) pour savoir comment configurer un profil de produit dans Adobe Admin Console de manière à octroyer le droit Gérer les propriétés. Pour plus d’informations sur les différents droits relatifs aux balises, consultez la présentation des [autorisations d’utilisateur pour les balises](./ui/administration/user-permissions.md).
 
 ## Et si j’ai d’autres questions ?
 
-Si vous avez d’autres questions, vous pouvez poser la question sur la [page de la communauté de collecte de données Adobe Experience Platform](https://adobe.com/go/launchme) sur Experience League ou rejoindre l’ [&#x200B; espace de travail du Slack de communauté](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) pour les développeurs et les rubriques de mise en oeuvre technique.
+Si vous avez d’autres questions, vous pouvez consulter la page de la communauté Collecte de données Adobe Experience Platform [](https://adobe.com/go/launchme) sur Experience League, ou rejoindre la [communauté de l’espace de travail Slack](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) pour les rubriques destinées aux développeurs et à l’implémentation technique.

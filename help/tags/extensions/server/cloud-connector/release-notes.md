@@ -2,18 +2,14 @@
 title: Notes de mise à jour de l’extension Connecteur cloud dans Adobe Experience Platform
 description: Notes de mise à jour les plus récentes de l’extension Connecteur cloud dans Adobe Experience Platform.
 exl-id: 5ee85d9f-71f4-46ee-9064-4ceee1cf90e7
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
-source-wordcount: '128'
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+workflow-type: tm+mt
+source-wordcount: '83'
 ht-degree: 100%
 
 ---
 
 # Notes de mise à jour de l’extension Connecteur cloud dans Adobe Experience Platform
-
->[!NOTE]
->
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
 ## 17 janvier 2023
 
