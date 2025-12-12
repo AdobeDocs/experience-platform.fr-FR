@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;query service;Query service;structures de données imbriquées;données imbriquées;aplatir;aplatir les données imbriquées;
+keywords: Experience Platform;service de requête;Service de requête;structures de données imbriquées;données imbriquées;aplatir;aplatir les données imbriquées;
 title: Aplatir les structures de données imbriquées à utiliser avec les outils BI
-description: Ce document explique comment aplatir les schémas XDM pour toutes les tables et vues au cours d’une session lors de l’utilisation d’outils BI tiers avec Query Service.
+description: Ce document explique comment aplatir les schémas XDM pour toutes les tables et vues au cours d’une session lors de l’utilisation d’outils BI tiers avec le service de requête.
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fc98b111aa15cdeb64eacdc05cac33a00ee98d80
 workflow-type: tm+mt
-source-wordcount: '858'
-ht-degree: 97%
+source-wordcount: '854'
+ht-degree: 93%
 
 ---
 
 # Aplatir les structures de données imbriquées à utiliser avec des outils BI tiers
 
-Adobe Experience Platform Query Service prend en charge le paramètre `FLATTEN` lors de la connexion à une base de données par le biais d’outils BI tiers. Cette fonctionnalité aplatit les structures de données imbriquées dans des outils BI tiers pour améliorer leur utilisation et réduire la charge de travail requise pour récupérer, analyser, transformer et présenter des données.
+Le service de requête Adobe Experience Platform prend en charge le paramètre `FLATTEN` lors de la connexion à une base de données par le biais d’outils BI tiers. Cette fonctionnalité aplatit les structures de données imbriquées dans des outils BI tiers pour améliorer leur utilisation et réduire la charge de travail requise pour récupérer, analyser, transformer et présenter des données.
 
-De nombreux outils BI comme [!DNL Tableau] et [!DNL Power BI] ne prennent pas en charge les structures de données imbriquées de manière native. Le paramètre `FLATTEN` supprime la nécessité de créer des vues SQL en plus de vos données pour fournir une version aplatie ou d’utiliser les tâches `CTAS` ou `INSERT INTO` de Query Service pour dupliquer vos jeux de données en versions aplaties lors de l’utilisation de schémas ad hoc.
+De nombreux outils BI comme [!DNL Tableau] et [!DNL Power BI] ne prennent pas en charge les structures de données imbriquées de manière native. Le paramètre `FLATTEN` supprime la nécessité de créer des vues SQL en plus de vos données pour fournir une version aplatie ou d’utiliser les tâches `CTAS` ou `INSERT INTO` du service de requête pour dupliquer vos jeux de données en versions aplaties lors de l’utilisation de schémas ad hoc.
 
 Le paramètre `FLATTEN` extrait la structure de chaque champ feuille dans la racine de la table et nomme le champ selon l’espace de noms d’origine. Vous pouvez ainsi utiliser la notation par points pour faire correspondre un champ à son chemin d’accès de modèle de données d’expérience (XDM) tout en préservant le contexte du champ.
 
@@ -34,7 +34,7 @@ L’utilisation du paramètre `FLATTEN` nécessite une compréhension du fonctio
 
 Le paramètre `FLATTEN` aplatit les structures de données imbriquées dans des colonnes distinctes où le nom de l’attribut devient le nom de la colonne qui contient les valeurs de ligne. Lorsque vous utilisez des données dans des outils BI qui ne prennent pas en charge les structures de données imbriquées, ce paramètre améliore l’utilisation des schémas ad hoc et réduit la charge de travail nécessaire.
 
-Lorsque vous vous connectez à Query Service avec le client tiers de votre choix, ajoutez le paramètre `FLATTEN` au nom de la base de données. Pour plus d’informations sur la connexion à un outil BI spécifique, consultez sa documentation respective dans la [présentation de la connexion des clients à Query Service](../clients/overview.md). La chaîne de connexion doit contenir :
+Lorsque vous vous connectez au service de requête avec le client tiers de votre choix, ajoutez le paramètre `FLATTEN` au nom de la base de données. Pour plus d’informations sur la connexion à un outil BI spécifique, consultez sa documentation respective dans la [présentation de la connexion des clients au service de requête](../clients/overview.md). La chaîne de connexion doit contenir :
 
 * Le nom du sandbox.
 * Un signe deux-points suivi de `all` ou un identifiant de jeu de données, un identifiant d’affichage ou un nom de base de données spécifique.
@@ -42,19 +42,19 @@ Lorsque vous vous connectez à Query Service avec le client tiers de votre choix
 
 L’entrée doit avoir le format suivant :
 
-```terminal
+```bash
 {sandbox_name}:{all/ID/database_name}?FLATTEN
 ```
 
 Voici un exemple de chaîne de connexion :
 
-```terminal
+```bash
 prod:all?FLATTEN
 ```
 
 ## Exemple {#example}
 
-L’exemple de schéma utilisé dans ce guide a recours au groupe de champs standard [!UICONTROL Détails du commerce], qui utilise la structure de l’objet `commerce` et la table `productListItems`. Consultez la documentation XDM pour [en savoir plus sur le groupe de champs [!UICONTROL Détails du commerce]](../../xdm/field-groups/event/commerce-details.md). Une représentation de la structure du schéma est visible dans l’image ci-dessous.
+L’exemple de schéma utilisé dans ce guide utilise le groupe de champs standard [!UICONTROL Commerce Details], qui utilise la structure d’objet `commerce` et le tableau `productListItems` . Consultez la documentation XDM pour [plus d’informations sur le groupe de champs [!UICONTROL Commerce Details]](../../xdm/field-groups/event/commerce-details.md). Une représentation de la structure du schéma est visible dans l’image ci-dessous.
 
 ![Schéma du groupe de champs Détails du commerce comprenant les structures `commerce` et `productListItems`.](../images/key-concepts/commerce-details.png)
 
@@ -62,13 +62,13 @@ Si votre outil BI ne prend pas en charge les structures de données imbriquées,
 
 Les valeurs suivantes représentent `commerce.order.priceTotal` (3018.0), `commerce.order.purchaseID` (c9b5aff9-25de-450b-98f4-4484a2170180) et `commerce.purchases.value`(1.0) dans les champs imbriqués mal formatés.
 
-```terminal
+```bash
 ("(3018.0,c9b5aff9-25de-450b-98f4-4484a2170180)","(1.0)")
 ```
 
 En utilisant le paramètre `FLATTEN`, vous pouvez accéder à des champs distincts dans votre schéma ou à des sections entières de la structure de données imbriquées à l’aide de la notation par points et de leur nom de chemin d’accès d’origine. Un exemple de ce format utilisant le group de champs `commerce` est donné ci-dessous.
 
-```terminal
+```bash
 commerce.order.priceTotal
 commerce.order.purchaseID
 commerce.purchases.value
