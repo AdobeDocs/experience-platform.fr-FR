@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Présentation du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform.
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 14028928362d8396c30babfc2279135011dd7c6f
 workflow-type: tm+mt
-source-wordcount: '1874'
-ht-degree: 71%
+source-wordcount: '1929'
+ht-degree: 70%
 
 ---
 
@@ -24,7 +24,7 @@ Grâce au contrôle d’accès basé sur les attributs, les administrateurs de v
 
 La vidéo suivante est destinée à vous aider à comprendre le contrôle d’accès basé sur les attributs et explique comment configurer des rôles, des ressources et des politiques.
 
->[!VIDEO](https://video.tv.adobe.com/v/3451829?learn=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
 
 ## Terminologie du contrôle d’accès basé sur les attributs
 
@@ -64,7 +64,7 @@ Les sections suivantes fournissent des informations sur la manière dont le cont
 
 Experience Platform exploite les rôles [Adobe Admin Console](https://adminconsole.adobe.com) pour lier les utilisateurs à des autorisations et des sandbox. Les autorisations contrôlent l’accès à de nombreuses fonctionnalités d’Experience Platform, notamment la modélisation des données, la gestion des profils et l’administration des sandbox. Une fois que votre organisation a activé le contrôle d’accès basé sur les attributs, vous pouvez commencer à utiliser les autorisations sur Adobe Experience Cloud, au lieu des rôles dans Adobe Admin Console, pour gérer les autorisations des utilisateurs, les fonctionnalités, les libellés et autres ressources de votre organisation.
 
-La disponibilité du contrôle d’accès basé sur les attributs est limitée pour les clients qui achètent des offres Healthcare et/ou Privacy Shield. Cette fonctionnalité inclut les éléments suivants :
+La disponibilité du contrôle d’accès basé sur les attributs est limitée pour les personnes qui achètent des offres Healthcare et/ou Privacy Shield. Cette fonctionnalité inclut les éléments suivants :
 
 * Interface des autorisations : permet de définir les rôles utilisateur, les autorisations et les politiques pour le contrôle d’accès basé sur les attributs.
 
@@ -80,13 +80,13 @@ Pour plus d’informations sur le contrôle d’accès, consultez la [présentat
 
 ### Destinations {#destinations}
 
-[!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 
 En tant qu’administrateur, vous pouvez utiliser des fonctionnalités de contrôle d’accès basé sur les attributs pour :
 
-* Configurer l’accès des utilisateurs et utilisatrices pour afficher des segments spécifiques dans le processus d’activation, en fonction du rôle, des autorisations et des étiquettes ;
+* Configurer l’accès des utilisateurs et utilisatrices pour afficher des segments spécifiques dans le processus d’activation, en fonction du rôle, des autorisations et des libellés ;
    * Le processus d’activation peut inclure pour les utilisateurs la sélection obligatoire des segments qu’ils souhaitent activer vers une destination. En tant qu’administrateur, vous pouvez configurer les utilisateurs et utilisatrices de votre organisation pour qu’ils voient uniquement les segments ayant des étiquettes auxquelles ils ont accès, et les segments non étiquetés.
-* Configurer l’accès des utilisateurs et utilisatrices pour afficher des champs spécifiques dans le processus d’activation, en fonction du rôle, des autorisations et des étiquettes ;
+* Configurer l’accès des utilisateurs et utilisatrices pour afficher des champs spécifiques dans le processus d’activation, en fonction du rôle, des autorisations et des libellés ;
    * Dans le processus d’activation, les utilisateurs et utilisatrices peuvent avoir l’obligation de sélectionner les champs qu’ils souhaitent activer vers une destination. En tant qu’administrateur ou administratrice, vous pouvez configurer les utilisateurs et utilisatrices de votre organisation pour qu’ils ne voient que les champs étiquetés avec des étiquettes auxquelles ils ont accès et les champs ne contenant aucune étiquette.
 
 >[!IMPORTANT]
@@ -113,7 +113,7 @@ Experience Platform vous permet d’offrir aux clients des expériences coordonn
 
 En tant qu’administrateur, vous pouvez utiliser des fonctionnalités de contrôle d’accès basé sur les attributs pour :
 
-* Configurer l’accès des utilisateurs et utilisatrices avec des attributs de profil spécifiques en fonction du rôle, des autorisations et des étiquettes ;
+* Configurer l’accès des utilisateurs et utilisatrices avec des attributs de profil spécifiques en fonction du rôle, des autorisations et des libellés ;
    * En tant qu’administrateur ou administratrice, vous pouvez configurer les utilisateurs et utilisatrices de votre organisation pour qu’ils voient uniquement les attributs de profil étiquetés avec des étiquettes auxquelles ils ont accès, et les attributs de profil non étiquetés ;
    * En tant qu’administrateur ou administratrice, vous pouvez configurer les utilisateurs et utilisatrices de votre organisation pour qu’ils voient uniquement les attributs de profil étiquetés avec des étiquettes auxquelles ils ont accès lors de la création de segments ;
 * Configurer l’accès des utilisateurs et utilisatrices à l’aperçu des données en étiquetant les champs de données spécifiques utilisés dans le schéma XDM du modèle de données.
@@ -122,22 +122,28 @@ Pour plus d’informations sur Profil, consultez la [Présentation des profils](
 
 ### Service de segmentation
 
-[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
+[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions de la clientèle avec votre marque.
 
 En tant qu’administrateur, vous pouvez utiliser des fonctionnalités de contrôle d’accès basé sur les attributs pour :
 
-* Configurer l’accès des utilisateurs et utilisatrices à l’affichage et à la gestion de segments spécifiques, en fonction du rôle, des autorisations et des étiquettes ;
+* Configurer l’accès des utilisateurs et utilisatrices à l’affichage et à la gestion de segments spécifiques, en fonction du rôle, des autorisations et des libellés ;
    * En tant qu’administrateur ou administratrice, vous pouvez configurer les utilisateurs et utilisatrices de votre organisation pour qu’ils voient uniquement les attributs de profil étiquetés avec des étiquettes auxquelles ils ont accès et les segments sans aucune étiquette, lors de l’utilisation de l’interface utilisateur Segmentation.
 
 Pour plus d’informations sur [!DNL Segmentation Service], consultez la [[!DNL Segmentation Service] présentation](../../segmentation/home.md).
 
 ### XDM
 
-Le modèle de données d’expérience (XDM) est une spécification open source conçue pour améliorer la puissance des expériences digitales. Il fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+Le modèle de données d’expérience (XDM) est une spécification open source conçue pour améliorer la puissance des expériences digitales. Il fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types d’audiences clientes par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
 Avec le contrôle d’accès basé sur les attributs, vous pouvez :
 
-* [appliquer des étiquettes d’utilisation des données aux groupes et classes de champs](../../xdm/tutorials/labels.md). Cela permet d’avoir plusieurs schémas avec les mêmes groupes ou classes de champs et ayant des champs balisés avec les mêmes attributs, selon les configurations au niveau du groupe ou de la classe des champs ;
+* [appliquer des libellés d’utilisation des données aux groupes et classes de champs](../../xdm/tutorials/labels.md). Cela permet d’avoir plusieurs schémas avec les mêmes groupes ou classes de champs et ayant des champs balisés avec les mêmes attributs, selon les configurations au niveau du groupe ou de la classe des champs ;
 * Configurer l’accès des utilisateurs et utilisatrices avec des champs de schéma XDM spécifiques en fonction des jeux d’autorisations appliqués aux rôles affectés aux utilisateurs et utilisatrices.
 
 Pour plus d’informations sur XDM, consultez la [présentation du système XDM](../../xdm/home.md).
+
+### Customer Journey Analytics (CJA)
+
+Les autorisations d’accès à Customer Journey Analytics (CJA) sont gérées au niveau de l’application dans CJA. CJA utilise ses propres contrôles d’accès basés sur les attributs et n’hérite ni n’applique les contrôles d’accès basés sur les attributs définis dans Adobe Experience Platform.
+
+Pour plus d’informations sur le contrôle d’accès de CJA, consultez la documentation sur le contrôle d’accès de CJA [](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/technotes/access-control).
