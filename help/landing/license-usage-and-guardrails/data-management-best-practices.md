@@ -2,10 +2,10 @@
 title: Bonnes pratiques relatives aux droits de licence de gestion des données
 description: Découvrez les bonnes pratiques à suivre et les outils que vous pouvez utiliser pour mieux gérer vos droits de licence avec Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 1f3cf3cc57342a23dae2d69c883b5768ec2bba57
+source-git-commit: 163ff97da651ac3a68b5e37e8745b10440519e6f
 workflow-type: tm+mt
-source-wordcount: '2957'
-ht-degree: 43%
+source-wordcount: '3390'
+ht-degree: 38%
 
 ---
 
@@ -71,7 +71,7 @@ La disponibilité de ces mesures et la définition spécifique de chacune d’el
 
 L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher un instantané des données liées aux licences de l’entreprise pour Experience Platform. Les données du tableau de bord s’affichent exactement comme elles apparaissent au moment précis où l’instantané a été pris. L’instantané n’est ni une approximation ni un échantillon des données et le tableau de bord n’est pas mis à jour en temps réel.
 
-Pour plus d’informations, consultez le guide sur l’utilisation [&#x200B; du tableau de bord d’utilisation des licences dans l’interface utilisateur d’Experience Platform](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
+Pour plus d’informations, consultez le guide sur l’utilisation [ du tableau de bord d’utilisation des licences dans l’interface utilisateur d’Experience Platform](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
 
 ## Bonnes pratiques relatives à la gestion des données
 
@@ -100,6 +100,38 @@ Les données peuvent être ingérées dans un ou plusieurs systèmes dans Experi
 >[!NOTE]
 >
 >Votre accès au [!DNL data lake] peut dépendre du SKU de produit que vous avez acheté. Pour plus d’informations sur les SKU de produit, contactez votre représentant Adobe.
+
+Vous devez également décider d’activer ou non les jeux de données de recherche pour le profil client en temps réel, en plus de les utiliser à des fins de recherche générale. Suivez les conseils ci-dessous pour éviter de dépasser vos limites de licence.
+
+#### Activation du profil pour les jeux de données de recherche {#profile-enablement-lookup-datasets}
+
+Un jeu de données de recherche est un jeu de données que vous activez dans Experience Platform afin que les applications puissent le référencer au moment de l’exécution. Utilisez des jeux de données de recherche pour stocker des informations clés relativement statiques telles que des détails de produit, des métadonnées de magasin ou des configurations d’offre, plutôt que des jeux de données dont l’objectif principal est de contribuer aux attributs de profil (par exemple, nom, e-mail ou niveau de fidélité) ou aux événements d’expérience (par exemple, pages vues ou achats).
+
+Les applications Experience Platform telles que les applications [!DNL Journey Optimizer] et autres applications de prise de décision utilisent ces jeux de données pour récupérer des champs supplémentaires en fonction d’une clé (par exemple, l’ID de produit ou l’ID de magasin) et enrichir les workflows de personnalisation, de prise de décision et d’orchestration. L’activation des jeux de données de recherche pour le profil client en temps réel affecte le volume de données de votre profil. Suivez donc les conseils suivants pour respecter vos droits de licence.
+
+Lorsque vous configurez des jeux de données à des fins de recherche, tenez compte des deux rôles qu’un jeu de données peut jouer dans Experience Platform :
+
+* **Jeux de données de recherche** : autorisez les applications à récupérer des données de référence pour des services tels que la personnalisation et la prise de décision dans [!DNL Journey Optimizer].
+* **Jeux de données activés pour Profil** : contribuez des attributs et des événements aux profils clients unifiés dans le profil client en temps réel. Ces jeux de données rendent leurs champs disponibles pour les cas d’utilisation de segmentation et d’activation.
+
+>[!IMPORTANT]
+>
+>Activez uniquement un jeu de données de recherche pour le profil client en temps réel lorsque vous devez utiliser des champs de ce jeu de données dans le profil client en temps réel (par exemple, pour les définitions d’audience, l’activation ou la segmentation d’entités multiples). L’activation d’un jeu de données de recherche pour le profil client en temps réel augmente le volume des données de profil. Pour plus d’informations, consultez le tutoriel sur la [segmentation d’entités multiples](../../segmentation/tutorials/multi-entity-segmentation.md).
+
+**Quand activer des jeux de données pour le profil client en temps réel**
+
+Activez un jeu de données pour le profil client en temps réel dans les cas suivants :
+
+* Le jeu de données contient des attributs du client que vous devez unifier en profils de clients (par exemple, niveau de fidélité, préférences, informations de compte).
+* Le jeu de données contient des événements d’expérience qui contribuent à l’analyse et à la segmentation du comportement des clients.
+* Le jeu de données contient des attributs de référence ou d’enrichissement (par exemple, les attributs de produit, de magasin ou de compte) que vous devez utiliser dans les définitions d’audience, y compris la segmentation d’entités multiples ou l’activation en aval.
+
+**Si vous ne souhaitez PAS activer de jeux de données pour le profil client en temps réel :**
+
+Évitez d’activer un jeu de données pour le profil client en temps réel dans les cas suivants :
+
+* Le jeu de données contient des données de référence telles que des catalogues de produits, des détails de SKU, des emplacements de magasin ou d’autres données non client. Vous n’avez pas besoin de ces attributs dans le profil client en temps réel pour la segmentation ou l’activation, y compris la segmentation d’entités multiples.
+* Le jeu de données contient des données d’enrichissement qui ne sont utilisées que dans les recherches au moment de l’exécution et qui ne sont pas requises dans le cadre de l’identité du client ou dans les définitions d’audience.
 
 ### Quelles données conserver ?
 
@@ -155,11 +187,11 @@ Plusieurs rapports sont disponibles pour vous aider à comprendre la composition
 
 ### Expirations des données de profils pseudonymes {#pseudonymous-profile-expirations}
 
-Utilisez la fonctionnalité d’expiration des données de profils pseudonymes pour supprimer automatiquement de la banque de profils les données qui ne sont plus valides ou utiles pour vos cas d’utilisation. L’expiration des données de profils pseudonymes supprime les enregistrements d’événement et de profil. Par conséquent, ce paramètre réduira les volumes d’audiences adressables. Pour plus d’informations sur cette fonctionnalité, veuillez lire la [&#x200B; Présentation de l’expiration des données de profils pseudonymes &#x200B;](../../profile/pseudonymous-profiles.md).
+Utilisez la fonctionnalité d’expiration des données de profils pseudonymes pour supprimer automatiquement de la banque de profils les données qui ne sont plus valides ou utiles pour vos cas d’utilisation. L’expiration des données de profils pseudonymes supprime les enregistrements d’événement et de profil. Par conséquent, ce paramètre réduira les volumes d’audiences adressables. Pour plus d’informations sur cette fonctionnalité, veuillez lire la [ Présentation de l’expiration des données de profils pseudonymes ](../../profile/pseudonymous-profiles.md).
 
 ### Interface utilisateur du jeu de données - Conservation du jeu de données d’événement d’expérience {#data-retention}
 
-Configurez les paramètres d’expiration et de conservation des jeux de données pour imposer une période de conservation fixe pour vos données dans le lac de données et le magasin de profils. Une fois la période de conservation terminée, les données sont supprimées. L’expiration des données d’événements d’expérience supprime uniquement les événements et non les données de classe de profil, ce qui réduit le [&#x200B; volume total de données &#x200B;](total-data-volume.md) dans les mesures d’utilisation de licence. Pour plus d’informations, consultez le guide sur la [définition d’une politique de conservation des données](../../catalog/datasets/user-guide.md#data-retention-policy).
+Configurez les paramètres d’expiration et de conservation des jeux de données pour imposer une période de conservation fixe pour vos données dans le lac de données et le magasin de profils. Une fois la période de conservation terminée, les données sont supprimées. L’expiration des données d’événements d’expérience supprime uniquement les événements et non les données de classe de profil, ce qui réduit le [ volume total de données ](total-data-volume.md) dans les mesures d’utilisation de licence. Pour plus d’informations, consultez le guide sur la [définition d’une politique de conservation des données](../../catalog/datasets/user-guide.md#data-retention-policy).
 
 ### Expirations des événements d’expérience de profil {#event-expirations}
 

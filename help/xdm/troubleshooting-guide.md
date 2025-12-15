@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de dépannage du système XDM
 description: Trouvez des réponses aux questions fréquentes sur le modèle de données d’expérience (XDM), y compris les étapes pour résoudre les erreurs d’API courantes.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: fa856644a106469f0cafe7f8c0a61219dc7deac7
+source-git-commit: 8ba80a1cc4529f9d4693e3f7cbd7584193915410
 workflow-type: tm+mt
-source-wordcount: '2378'
-ht-degree: 81%
+source-wordcount: '2368'
+ht-degree: 77%
 
 ---
 
@@ -108,7 +108,7 @@ Pour plus d’informations sur la création de descripteurs d’identité dans l
 
 ### Définition des identités dans l’interface utilisateur
 
-Une fois votre schéma ouvert dans l’éditeur de schémas, sélectionnez le champ de la section **[!UICONTROL Structure]** de l’éditeur que vous souhaitez marquer comme identité. Sous **[!UICONTROL Propriétés du champ]** à droite, cochez la case **[!UICONTROL Identité]**.
+Une fois votre schéma ouvert dans l’éditeur de schémas, sélectionnez le champ de la section **[!UICONTROL Structure]** de l’éditeur que vous souhaitez marquer comme identité. Sous **[!UICONTROL Field Properties]** sur le côté droit, cochez la case **[!UICONTROL Identity]** .
 
 Pour plus d’informations sur la gestion des identités dans l’interface utilisateur, consultez la section sur la [définition des champs d’identité](./tutorials/create-schema-ui.md#identity-field) dans le tutoriel de l’éditeur de schémas.
 
@@ -132,17 +132,17 @@ Pour plus d’informations sur l’utilisation de l’API pour activer un schém
 
 ### Activation d’un schéma existant pour [!DNL Profile] à l’aide de l’interface utilisateur
 
-Dans [!DNL Experience Platform], cliquez sur **[!UICONTROL Schémas]** dans le volet de navigation de gauche, et sélectionnez le nom du schéma que vous souhaitez activer dans la liste des schémas. Ensuite, dans la partie droite de l’éditeur, sous **[!UICONTROL Propriétés du schéma]**, sélectionnez **[!UICONTROL Profile]** pour l’activer.
+Dans [!DNL Experience Platform], sélectionnez **[!UICONTROL Schemas]** dans le volet de navigation de gauche, puis sélectionnez le nom du schéma à activer dans la liste des schémas. Ensuite, dans la partie droite de l’éditeur, sous **[!UICONTROL Schema Properties]**, sélectionnez **[!UICONTROL Profile]** pour l’activer.
 
-Pour plus d’informations, consultez la section sur l’[utilisation dans le profil client en temps réel](./tutorials/create-schema-ui.md#profile) dans le tutoriel de l’[!UICONTROL éditeur de schémas].
+Pour plus d’informations, consultez la section sur [l’utilisation dans le profil client en temps réel](./tutorials/create-schema-ui.md#profile) dans le tutoriel [!UICONTROL Schema Editor].
 
 ### Lorsque les données Adobe Analytics sont importées en tant que source, le schéma créé automatiquement est-il activé pour Profile ?
 
 Le schéma n’est pas automatiquement activé pour le profil client en temps réel. Vous devez activer explicitement le jeu de données pour Profil en fonction du schéma activé pour Profil. Consultez la documentation pour découvrir les [étapes et exigences nécessaires pour activer un jeu de données à utiliser dans le profil client en temps réel](../catalog/datasets/user-guide.md#enable-profile).
 
-### Puis-je supprimer des schémas activés pour Profile ?
+### Puis-je supprimer des schémas activés pour Profile ? {#delete-profile-enabled}
 
-Vous ne pouvez pas supprimer un schéma une fois qu’il a été activé pour le profil client en temps réel. Une fois qu’un schéma est activé pour Profil, il ne peut pas être désactivé ni supprimé, et les champs ne peuvent pas être supprimés du schéma. Par conséquent, il est essentiel de planifier et de vérifier soigneusement la configuration du schéma avant de l’activer pour Profile. Vous pouvez toutefois supprimer un jeu de données activé pour Profil. Vous trouverez des informations ici : <https://experienceleague.adobe.com/fr/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+Vous ne pouvez pas supprimer un schéma une fois qu’il a été activé pour le profil client en temps réel. Une fois qu’un schéma est activé pour Profil, il ne peut pas être désactivé ni supprimé, et les champs ne peuvent pas être supprimés du schéma. Par conséquent, il est essentiel de planifier et de vérifier soigneusement la configuration du schéma avant de l’activer pour Profile. Vous pouvez toutefois supprimer un jeu de données activé pour Profil. Vous trouverez des informations ici : <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
 Si vous ne souhaitez plus qu’un schéma activé pour Profile soit utilisé, il est recommandé de renommer le schéma pour inclure **Ne pas utiliser** ou **Inactif**.
 
