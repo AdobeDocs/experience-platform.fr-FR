@@ -2,10 +2,10 @@
 description: Découvrez comment le système Experience Platform gère les différents types d’erreurs renvoyés par les destinations de diffusion en streaming et comment il tente à nouveau d’envoyer des données à la plateforme de destination.
 title: Politique de limitation du débit et de nouvelle tentative pour les destinations de diffusion en streaming créées avec Destination SDK
 exl-id: aad10039-9957-4e9e-a0b7-7bf65eb3eaa9
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 75bee8fde648101335df7a66eae1907b267b4eb6
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 100%
+source-wordcount: '477'
+ht-degree: 81%
 
 ---
 
@@ -17,7 +17,14 @@ Pendant la configuration d’une destination à l’aide de Destination SDK, vou
 
 ## Agrégation des meilleurs efforts {#best-effort-aggregation}
 
-Pour tous les appels HTTP effectués vers la destination qui échouent, Experience Platform tente de passer une nouvelle fois un appel immédiatement après le premier. Si l’appel échoue encore à la deuxième tentative, Experience Platform interrompt l’appel et ne le retente pas une troisième fois.
+Experience Platform relance les appels qui renvoient les codes de réponse HTTP suivants : **403, 408, 409, 429, 500, 502, 503, 504**. Deux reprises sont effectuées aux intervalles suivants :
+
+* Première tentative : après 15 secondes
+* Deuxième tentative : après 30 secondes
+
+Experience Platform ne relance *pas* les appels qui renvoient d’autres codes de réponse HTTP, tels que 400 (Bad Request). Si l’appel échoue toujours après les deux nouvelles tentatives, Experience Platform interrompt l’activation et ne la tente pas à nouveau.
+
+Vous pouvez demander une politique de reprise différente pour des flux de données spécifiques en contactant le service clientèle.
 
 ## Agrégation configurable {#configurable-aggregation}
 

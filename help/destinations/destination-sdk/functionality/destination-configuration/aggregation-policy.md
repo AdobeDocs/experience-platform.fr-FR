@@ -2,10 +2,10 @@
 description: Découvrez comment configurer une politique d’agrégation pour déterminer comment les requêtes HTTP vers la destination doivent être associées et regroupées par lot.
 title: Politique d’agrégation
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: d5d7841cc8799e7f7d4b607bfb8adea63a7eb1db
+source-git-commit: 92d7abcbd642cea4e0fa041d2926ba8868f506e5
 workflow-type: tm+mt
-source-wordcount: '1007'
-ht-degree: 94%
+source-wordcount: '1235'
+ht-degree: 83%
 
 ---
 
@@ -52,7 +52,26 @@ L’exemple de configuration ci-dessous montre une configuration d’agrégation
    "aggregationType":"BEST_EFFORT",
    "bestEffortAggregation":{
       "maxUsersPerRequest":10,
-      "splitUserById":false
+      "splitUserById":false,
+      "aggregationKey":{
+         "includeSegmentId":true,
+         "includeSegmentStatus":true,
+         "includeIdentity":true,
+         "oneIdentityPerGroup":true,
+         "groups":[
+            {
+               "namespaces":[
+                  "IDFA",
+                  "GAID"
+               ]
+            },
+            {
+               "namespaces":[
+                  "EMAIL"
+               ]
+            }
+         ]
+      }
    }
 }
 ```
@@ -61,7 +80,13 @@ L’exemple de configuration ci-dessous montre une configuration d’agrégation
 |---------|----------|------|
 | `aggregationType` | Chaîne | Indique le type de politique d’agrégation que la destination doit utiliser. Types d’agrégation pris en charge : <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `bestEffortAggregation.maxUsersPerRequest` | Nombre entier | Experience Platform peut agréger plusieurs profils exportés en un seul appel HTTP. <br><br>Cette valeur indique le nombre maximal de profils que le point d’entrée doit recevoir dans un seul appel HTTP. Notez qu’il s’agit d’une agrégation des meilleurs efforts. Par exemple, si vous spécifiez la valeur 100, Experience Platform peut envoyer n’importe quel nombre de profils inférieur à 100 lors d’un appel. <br><br> Si le serveur n’accepte pas plusieurs utilisateurs par requête, définissez cette valeur sur `1`. |
-| `bestEffortAggregation.splitUserById` | Booléen | Utilisez cet indicateur si l’appel à la destination doit être partagé par identité. Définissez cet indicateur sur `true` si le serveur n’accepte qu’une seule identité par appel, pour un espace de nom d’identité donné. |
+| `bestEffortAggregation.splitUserById` | Booléen | Utilisez cet indicateur si l’appel à la destination doit être partagé par identité. Définissez cet indicateur sur `true` si le serveur n’accepte qu’une seule identité par appel, pour un espace de noms d’identité donné. |
+| `bestEffortAggregation.aggregationKey` | Objet | *Facultatif*. Permet d’agréger les profils exportés mappés à la destination en fonction des paramètres décrits ci-dessous. Ce paramètre peut être omis ou défini sur `null` si l’agrégation n’est pas nécessaire. Lorsqu’elle est fournie, elle fonctionne de manière identique à la clé d’agrégation dans l’agrégation configurable. |
+| `bestEffortAggregation.aggregationKey.includeSegmentId` | Booléen | Définissez ce paramètre sur `true` pour regrouper les profils exportés vers votre destination par identifiant d’audience. |
+| `bestEffortAggregation.aggregationKey.includeSegmentStatus` | Booléen | Définissez ce paramètre ainsi qu’`includeSegmentId` sur `true` pour regrouper les profils exportés vers votre destination par identifiant et statut d’audience. |
+| `bestEffortAggregation.aggregationKey.includeIdentity` | Booléen | Définissez ce paramètre sur `true` si vous souhaitez regrouper les profils exportés vers la destination par espace de noms d’identité. |
+| `bestEffortAggregation.aggregationKey.oneIdentityPerGroup` | Booléen | Définissez ce paramètre sur `true` si vous souhaitez que les profils exportés soient agrégés en groupes d’une seule identité (GAID, IDFA, numéros de téléphone, e-mail, etc.). Définissez-le sur `false` si vous souhaitez utiliser le paramètre `groups` pour définir des regroupements d’espaces de noms d’identité personnalisés. |
+| `bestEffortAggregation.aggregationKey.groups` | Tableau | Utilisez ce paramètre lorsque `oneIdentityPerGroup` est défini sur `false`. Créez des listes de groupes d’identités si vous souhaitez regrouper les profils exportés vers la destination par groupes d’espace de noms d’identité. Par exemple, vous pouvez combiner des profils contenant les identifiants mobiles IDFA et GAID dans un appel vers la destination et des e-mails dans un autre en utilisant la configuration montrée dans l’exemple ci-dessus. |
 
 {style="table-layout:auto"}
 
@@ -108,15 +133,15 @@ L’exemple de configuration ci-dessous montre une configuration d’agrégation
 | Paramètre | Type | Description |
 |---------|----------|------|
 | `aggregationType` | Chaîne | Indique le type de politique d’agrégation que la destination doit utiliser. Types d’agrégation pris en charge : <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
-| `configurableAggregation.splitUserById` | Booléen | Utilisez cet indicateur si l’appel à la destination doit être partagé par identité. Définissez cet indicateur sur `true` si le serveur n’accepte qu’une seule identité par appel, pour un espace de nom d’identité donné. |
+| `configurableAggregation.splitUserById` | Booléen | Utilisez cet indicateur si l’appel à la destination doit être partagé par identité. Définissez cet indicateur sur `true` si le serveur n’accepte qu’une seule identité par appel, pour un espace de noms d’identité donné. |
 | `configurableAggregation.maxBatchAgeInSecs` | Nombre entier | Associé à `maxNumEventsInBatch`, ce paramètre détermine combien de temps Experience Platform doit attendre avant d’envoyer un appel API vers le point d’entrée. <ul><li>Valeur minimale (secondes) : 301</li><li>Valeur maximale (secondes) : 3 600</li></ul> Par exemple, si vous utilisez la valeur maximale pour les deux paramètres, Experience Platform attend 3 600 secondes où qu’il y ait 10 000 profils qualifiés avant d’effectuer l’appel API, selon ce qui se produit en premier. |
 | `configurableAggregation.maxNumEventsInBatch` | Nombre entier | Associé à `maxBatchAgeInSecs`, ce paramètre détermine le nombre de profils qualifiés qui doivent être agrégés dans un appel API. <ul><li>Valeur minimale : 1 000</li><li>Valeur maximale : 10 000</li></ul> Par exemple, si vous utilisez la valeur maximale pour les deux paramètres, Experience Platform attend 3 600 secondes où qu’il y ait 10 000 profils qualifiés avant d’effectuer l’appel API, selon ce qui se produit en premier. |
 | `configurableAggregation.aggregationKey` | - | Permet d’agréger les profils exportés mappés à la destination en fonction des paramètres décrits ci-dessous. |
 | `configurableAggregation.aggregationKey.includeSegmentId` | Booléen | Définissez ce paramètre sur `true` pour regrouper les profils exportés vers votre destination par identifiant d’audience. |
 | `configurableAggregation.aggregationKey.includeSegmentStatus` | Booléen | Définissez ce paramètre ainsi qu’`includeSegmentId` sur `true` pour regrouper les profils exportés vers votre destination par identifiant et statut d’audience. |
 | `configurableAggregation.aggregationKey.includeIdentity` | Booléen | Définissez ce paramètre sur `true` si vous souhaitez regrouper les profils exportés vers la destination par espace de noms d’identité. |
-| `configurableAggregation.aggregationKey.oneIdentityPerGroup` | Booléen | Définissez ce paramètre sur `true` si vous souhaitez que les profils exportés soient agrégés en groupes d’une seule identité (GAID, IDFA, numéros de téléphone, e-mail, etc.). |
-| `configurableAggregation.aggregationKey.groups` | Tableau | Créez des listes de groupes d’identités si vous souhaitez regrouper les profils exportés vers la destination par groupes d’espace de noms d’identité. Par exemple, vous pouvez combiner des profils contenant les identifiants mobiles IDFA et GAID dans un appel vers la destination et des e-mails dans un autre en utilisant la configuration montrée dans l’exemple ci-dessus. |
+| `configurableAggregation.aggregationKey.oneIdentityPerGroup` | Booléen | Définissez ce paramètre sur `true` si vous souhaitez que les profils exportés soient agrégés en groupes d’une seule identité (GAID, IDFA, numéros de téléphone, e-mail, etc.). Définissez-le sur `false` si vous souhaitez utiliser le paramètre `groups` pour définir des regroupements d’espaces de noms d’identité personnalisés. |
+| `configurableAggregation.aggregationKey.groups` | Tableau | Utilisez ce paramètre lorsque `oneIdentityPerGroup` est défini sur `false`. Créez des listes de groupes d’identités si vous souhaitez regrouper les profils exportés vers la destination par groupes d’espace de noms d’identité. Par exemple, vous pouvez combiner des profils contenant les identifiants mobiles IDFA et GAID dans un appel vers la destination et des e-mails dans un autre en utilisant la configuration montrée dans l’exemple ci-dessus. |
 
 {style="table-layout:auto"}
 
