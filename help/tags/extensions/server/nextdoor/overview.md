@@ -18,7 +18,7 @@ ht-degree: 9%
 
 Utilisez l’extension [[!DNL Nextdoor] API de conversion](https://help.nextdoor.com/s/article/About-the-Nextdoor-Conversion-API) pour envoyer directement des événements de conversion à [!DNL Nextdoor's]’API de conversion. Cette extension vous permet de suivre et de mesurer les performances de vos campagnes publicitaires [!DNL Nextdoor] en envoyant des données de conversion côté serveur.
 
-Ce guide vous explique comment installer, configurer et utiliser l’extension d’API de conversion [!DNL Nextdoor] dans vos [règles](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules) de transfert d’événement.
+Ce guide vous explique comment installer, configurer et utiliser l’extension d’API de conversion [!DNL Nextdoor] dans vos [règles](https://experienceleague.adobe.com/fr/docs/experience-platform/tags/ui/rules) de transfert d’événement.
 
 ## Conditions préalables {#prerequisites}
 
