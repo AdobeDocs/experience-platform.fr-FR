@@ -188,8 +188,8 @@ Une gestion appropriée des données est essentielle pour optimiser la précisio
    * Respectez les préférences de désinscription des utilisateurs et les demandes de suppression de données.
    * Utilisez les paramètres d’utilisation des données restreintes pour les utilisateurs qui se sont désinscrits.
    * **Ressources** :
-      * [ Guide de conformité au RGPD ](https://gdpr.eu/compliance/)
-      * [ Exigences de confidentialité du CCPA ](https://oag.ca.gov/privacy/ccpa)
+      * [&#x200B; Guide de conformité au RGPD &#x200B;](https://gdpr.eu/compliance/)
+      * [&#x200B; Exigences de confidentialité du CCPA &#x200B;](https://oag.ca.gov/privacy/ccpa)
 
 * **Minimisation des données** : envoyez uniquement les données nécessaires au suivi des conversions :
 
