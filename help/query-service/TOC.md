@@ -1,7 +1,7 @@
 ---
 audience: user
-user-guide-title: Aide d’Adobe Experience Platform Query Service
-breadcrumb-title: Guide de Query Service
+user-guide-title: Aide du service de requête Adobe Experience Platform
+breadcrumb-title: Guide du service de requête
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
 role: User,Developer
@@ -13,11 +13,11 @@ ht-degree: 69%
 ---
 
 
-# Adobe Experience Platform Query Service {#query}
+# Service de requête Adobe Experience Platform {#query}
 
-- [Présentation de Query Service](home.md)
-- [Package Query Service](packaging.md)
-- [Mécanismes de sécurisation de Query Service](guardrails.md)
+- [Présentation du service de requête](home.md)
+- [Package du service de requête](packaging.md)
+- [Mécanismes de sécurisation du service de requête](guardrails.md)
 - Commencer {#get-started}
    - [Conditions préalables](get-started/prerequisites.md)
 - Data Distiller {#data-distiller}
@@ -88,7 +88,7 @@ ht-degree: 69%
    - [Calcul des statistiques des jeux de données](key-concepts/dataset-statistics.md)
 - Hypercubes de Distiller de données {#hypercubes}
    - [Analyse Big Data efficace avec des hypercubes](hypercubes/overview.md)
-- Connexion des clients à Query Service {#clients}
+- Connexion des clients au service de requête {#clients}
    - [Présentation de la connexion des clients](clients/overview.md)
    - [Modes SSL](./clients/ssl-modes.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
