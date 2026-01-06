@@ -6,9 +6,9 @@ user-guide-description: Découvrez comment déployer et gérer des balises d’a
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 321cb9b2b9add2460cbde2dfe571ad41a9be163b
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '825'
 ht-degree: 80%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 80%
    * [Transport Layer Security (sécurité de la couche de transport)](./ui/client-side/transport-layer-security.md)
 * Transfert d’événement {#event-forwarding}
    * [Vue d’ensemble](./ui/event-forwarding/overview.md)
-   * [Prise en main](./ui/event-forwarding/getting-started.md)
+   * [Commencer](./ui/event-forwarding/getting-started.md)
    * [Configuration des secrets](./ui/event-forwarding/secrets.md)
    * [Surveillance (Beta)](./ui/event-forwarding/monitoring.md)
 * Administration {#admin}
@@ -105,7 +105,7 @@ ht-degree: 80%
          * [Vue d’ensemble](./extensions/client/platform-demo/overview.md)
       * SDK Web Adobe Experience Platform {#web-sdk}
          * [Vue d’ensemble](extensions/client/web-sdk/overview.md)
-         * [Prise en main](extensions/client/web-sdk/getting-started.md)
+         * [Commencer](extensions/client/web-sdk/getting-started.md)
          * Configuration {#configure}
             * [Vue d’ensemble](extensions/client/web-sdk/configure/config-overview.md)
             * [Composants de build personnalisés](extensions/client/web-sdk/configure/custom-build-components.md)
@@ -276,6 +276,8 @@ ht-degree: 80%
          * [Aperçu](./extensions/server/azure/overview.md)
       * [!DNL Mixpanel] {#mixpanel}
          * [Aperçu](./extensions/server/mixpanel/overview.md)
+      * [!DNL Nextdoor] {#nextdoor}
+         * [Aperçu](./extensions/server/nextdoor/overview.md)
       * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
       * [!DNL Pinterest] {#pinterest}
          * [Présentation](./extensions/server/pinterest/overview.md)
@@ -297,7 +299,7 @@ ht-degree: 80%
          * [Vue d’ensemble](./extensions/server/zendesk/overview.md)
 * Développement d’extension {#extension-dev}
    * [Vue d’ensemble](./extension-dev/overview.md)
-   * [Prise en main](./extension-dev/getting-started.md)
+   * [Commencer](./extension-dev/getting-started.md)
    * [Navigateurs pris en charge](./extension-dev/browsers.md)
    * Processus de soumission {#submit}
       * [Vue d’ensemble](./extension-dev/submit/overview.md)
