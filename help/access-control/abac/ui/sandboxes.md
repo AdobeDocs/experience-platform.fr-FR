@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;contrôle d’accès basé sur les attributs;ABAC
-title: Sandbox de contrôle d’accès basé sur les attributs
-description: Ce document fournit des informations sur la gestion des sandbox via l’interface Autorisations dans Adobe Experience Cloud
+title: Gestion des sandbox de contrôle d’accès basé sur les attributs
+description: Gérez les sandbox via l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 8c9503c9923372ef919d485d4ec0e3ebda5a2413
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 40%
+source-wordcount: '304'
+ht-degree: 26%
 
 ---
 
@@ -16,26 +16,33 @@ ht-degree: 40%
 >id="platform_permissions_sandboxes_about"
 >title="Que sont les sandbox ?"
 >abstract="Les sandbox sont des partitions virtuelles au sein d’une instance unique d’Experience Platform. Tout le contenu et les actions réalisés dans un sandbox sont limités à celui-ci et n’en affectent aucun autre. L’accès aux sandbox est géré par l’intermédiaire des rôles."
->additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/sandbox/home" text="Présentation des sandbox"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home" text="Présentation des sandbox"
 
-Les sandbox constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience digitale. Tout le contenu et les actions réalisés dans un sandbox sont limités à celui-ci et n’en affectent aucun autre. Pour plus d’informations sur les sandbox, consultez la [présentation des sandbox](../../../sandboxes/home.md).
+Les sandbox sont des partitions virtuelles au sein d’une seule instance de Adobe Experience Platform qui intègrent de manière transparente le processus de développement de vos applications d’expérience digitale. Tout le contenu et les actions réalisés dans un sandbox sont limités à celui-ci et n’en affectent aucun autre. Pour plus d’informations sur les sandbox, consultez la [présentation des sandbox](../../../sandboxes/home.md).
 
-## Configuration des sandbox
+## Explorer les sandbox {#explore-sandboxes}
 
-Pour afficher les détails et les rôles auxquels un sandbox est affecté/avec, sélectionnez l’onglet **[!UICONTROL Sandboxes]** .
+Pour afficher les détails d’un sandbox et les rôles associés, accédez à **[!UICONTROL Permissions]** dans [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}. Sélectionnez **[!UICONTROL Sandboxes]** dans la section **[!UICONTROL Resources]** du panneau de gauche.
 
-![flac-sandboxes-tab](../../images/flac-ui/flac-sandboxes-tab.png)
+Une liste des sandbox de votre organisation s’affiche. Sélectionnez le sandbox à afficher dans la liste. Vous pouvez également rechercher un sandbox en saisissant son nom dans la barre de recherche ou le filtrer par type en sélectionnant l’icône de filtre (![icône de filtre](../../../images/icons/filter.png)) et en utilisant le menu déroulant **[!UICONTROL Sandbox Type]**.
 
-Une liste de sandbox s’affiche. Sélectionnez le sandbox à afficher dans la liste. Vous pouvez également utiliser la barre de recherche pour rechercher le sandbox en saisissant son nom.
+![Espaces de travail Sandbox dans Autorisations.](../../images/ui/sandboxes/sandboxes-overview.png){zoomable="yes"}
 
-L’onglet Détails donne un aperçu du sandbox. La présentation affiche le nom, le type, la région, la date de modification, l’auteur de la modification et le statut du sandbox.
+>[!NOTE]
+>
+>L’espace de travail Sandbox dans Autorisations n’autorise aucune action de gestion des sandbox. Pour gérer les sandbox, sélectionnez l’option **[!UICONTROL Open sandbox manager]** dans le coin supérieur droit de l’espace de travail.
 
-![flac-sandboxes-details](../../images/flac-ui/flac-sandboxes-details.png)
+L’onglet **[!UICONTROL Details]** donne un aperçu du sandbox. La vue d’ensemble affiche les **[!UICONTROL Title]**, **[!UICONTROL Sandbox Name]**, **[!UICONTROL Type]**, **[!UICONTROL Region]**, **[!UICONTROL Modified]** date, **[!UICONTROL Modified by]** et les **[!UICONTROL Status]** du sandbox.
 
-Sélectionnez l’onglet **[!UICONTROL Roles]** pour afficher les rôles affectés au sandbox.
+![Espace de travail Détails du sandbox.](../../images/ui/sandboxes/sandbox-details.png){zoomable="yes"}
 
-![flac-sandboxes-roles](../../images/flac-ui/flac-sandboxes-roles.png)
+Sélectionnez l’onglet **[!UICONTROL Roles]** pour afficher les rôles affectés au sandbox. Sélectionner un rôle vous amènera à l’espace de travail du rôle.
+
+<!-- To manage the role's sandboxes, follow the [](./roles.md) guide. -->
+
+![Espace de travail Rôles du sandbox.](../../images/ui/sandboxes/sandbox-roles.png){zoomable="yes"}
+
 
 ## Étapes suivantes
 
-Vous avez maintenant appris à afficher les détails du sandbox et les rôles qui lui sont actuellement attribués. Pour une présentation générale des sandbox dans Experience Platform, reportez-vous à la [documentation de présentation des sandbox](../../sanboxes/../ui/overview.md).
+Vous savez maintenant comment afficher les détails et les rôles d’un sandbox. Pour en savoir plus sur le contrôle d’accès basé sur les attributs, consultez la [présentation du contrôle d’accès basé sur les attributs](../overview.md).
