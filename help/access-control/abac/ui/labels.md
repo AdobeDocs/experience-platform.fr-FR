@@ -30,9 +30,9 @@ Les libellés sont classés par type et appartiennent à l’une des catégories
 
 | Type | Description |
 | --- | --- |
-| [&#x200B; Contrat &#x200B;](../../../data-governance/labels/reference.md#contract){target="_blank"} | Cette catégorie est utilisée pour classer les données contenant des obligations contractuelles ou liées aux politiques de gouvernance des données de votre organisation. |
+| [ Contrat ](../../../data-governance/labels/reference.md#contract){target="_blank"} | Cette catégorie est utilisée pour classer les données contenant des obligations contractuelles ou liées aux politiques de gouvernance des données de votre organisation. |
 | [Identité](../../../data-governance/labels/reference.md#identity){target="_blank"} | Cette catégorie est utilisée pour classer les données qui peuvent identifier directement ou indirectement une personne. |
-| [&#x200B; Sensible &#x200B;](../../../data-governance/labels/reference.md#sensitive){target="_blank"} | Cette catégorie est utilisée pour classer les données que votre organisation considère comme sensibles. |
+| [ Sensible ](../../../data-governance/labels/reference.md#sensitive){target="_blank"} | Cette catégorie est utilisée pour classer les données que votre organisation considère comme sensibles. |
 | [Réseau Partenaires](../../../data-governance/labels/reference.md#partner){target="_blank"} | Cette catégorie est utilisée pour classer les données obtenues à partir de sources externes à votre organisation. |
 | Engagement responsable | Cette catégorie contient une étiquette unique, **[!UICONTROL Potential for Bias]**, qui reflète les données susceptibles d&#39;introduire un biais. |
 | Valeur personnalisée | Cette catégorie comprend les libellés créés par votre organisation. |

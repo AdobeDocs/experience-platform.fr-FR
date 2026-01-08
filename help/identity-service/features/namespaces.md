@@ -99,12 +99,12 @@ Les espaces de noms standard fournis sont les suivants. Ils peuvent être utilis
 | Nom d’affichage | Description |
 | ------------ | ----------- |
 | AdCloud | Un espace de noms représentant Adobe AdCloud. |
-| Adobe Analytics (ancien ID) | Un espace de noms représentant Adobe Analytics. Consultez le document suivant sur les [espaces de noms Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=fr#namespaces) pour plus d’informations. |
+| Adobe Analytics (ancien ID) | Un espace de noms représentant Adobe Analytics. Consultez le document suivant sur les [espaces de noms Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces) pour plus d’informations. |
 | IDFA Apple (ID pour les annonceurs) | Un espace de noms représentant l’ID Apple pour les annonceurs. Pour plus d’informations, consultez le document sur les [annonces basées sur les intérêts](https://support.apple.com/fr-fr/HT202074). |
 | Service de notification push Apple | Un espace de noms représentant les identités collectées à l’aide du service Apple Push Notification. Pour plus d’informations, consultez le document suivant sur le service [Notification push Apple](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) . |
 | ECID | Un espace de noms représentant l’ECID. Cet espace de noms peut également être référencé par les alias suivants : « ID Adobe Marketing Cloud », « ID Adobe Experience Cloud », « ID Adobe Experience Platform ». Pour plus d’informations, consultez le document suivant sur [ECID](./ecid.md) . |
 | E-mail | Un espace de noms représentant une adresse e-mail. Ce type d’espace de noms est souvent associé à une seule personne et peut donc être utilisé pour identifier cette personne sur différents canaux. |
-| E-mails (SHA256, en minuscules) | Un espace de noms pour adresse électronique préhachée. Les valeurs fournies dans cet espace de noms sont converties en minuscules avant le hachage en SHA-256. Les espaces de début et de fin doivent être supprimés avant qu’une adresse e-mail ne soit normalisée. Ce paramètre ne peut pas être modifié rétroactivement. Pour plus d’informations[&#x200B; consultez le document suivant sur la prise en charge du hachage &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=fr#hashing-support)SHA256 . |
+| E-mails (SHA256, en minuscules) | Un espace de noms pour adresse électronique préhachée. Les valeurs fournies dans cet espace de noms sont converties en minuscules avant le hachage en SHA-256. Les espaces de début et de fin doivent être supprimés avant qu’une adresse e-mail ne soit normalisée. Ce paramètre ne peut pas être modifié rétroactivement. Pour plus d’informations[ consultez le document suivant sur la prise en charge du hachage ](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support)SHA256 . |
 | Firebase Cloud Messaging | Un espace de noms représentant les identités collectées à l’aide de Google Firebase Cloud Messaging pour les notifications push. Pour plus d’informations, consultez le document suivant sur [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging). |
 | ID d’annonce Google (GAID) | Un espace de noms représentant un ID Google Advertising. Pour plus d’informations, consultez le document suivant sur l’[ID Google Advertising](https://support.google.com/googleplay/android-developer/answer/6048248?hl=fr). |
 | Téléphone | Un espace de noms représentant un numéro de téléphone. Ce type d’espace de noms est souvent associé à une seule personne et peut donc être utilisé pour identifier cette personne sur différents canaux. |
@@ -114,12 +114,12 @@ Les espaces de noms standard fournis sont les suivants. Ils peuvent être utilis
 | TNTID | Un espace de noms représentant Adobe Target. Pour plus d’informations, consultez le document suivant sur [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=fr). |
 | Windows AID | Un espace de noms représentant un identifiant Windows Advertising. Pour plus d’informations, consultez le document suivant sur [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041). |
 
-### Afficher des espaces de noms d’identités {#view-identity-namespaces}
+### Afficher des espaces de noms d’identité {#view-identity-namespaces}
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_view_integration_identities"
 >title="Affichage des identités d&#39;intégration"
->abstract="Les identités d&#39;intégration sont des espaces de noms utilisés pour établir une connexion avec d&#39;autres systèmes et ne sont pas utilisés dans la résolution d&#39;identité ou pour assembler des identités. <br> Ces identités sont masquées par défaut. Utilisez le bouton pour afficher les espaces de noms d&#39;intégration."
+>abstract="Les identités d’intégration sont des espaces de noms utilisés pour établir une connexion avec d’autres systèmes et ne sont pas utilisés dans la résolution d’identité ou pour assembler des identités. <br> Ces identités sont masquées par défaut. Utilisez le bouton pour afficher les espaces de noms d’intégration."
 
 Pour afficher les espaces de noms d’identité dans l’interface utilisateur, sélectionnez **[!UICONTROL Identities]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Browse]**.
 
