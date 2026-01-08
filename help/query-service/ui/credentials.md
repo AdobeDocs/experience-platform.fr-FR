@@ -46,7 +46,7 @@ La section **[!UICONTROL Expiring credentials]** fournit les informations suivan
 >
 >![Onglet Paramètres d’Admin Console avec Confidentialité et sécurité, Paramètres d’authentification et Durée de vie maximale de la session mis en surbrillance.](../images/ui/credentials/max-session-life.png)
 >
->Consultez la documentation d’aide d’Adobe pour plus d’informations sur les [&#x200B; Paramètres avancés &#x200B;](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) proposés par Admin Console.
+>Consultez la documentation d’aide d’Adobe pour plus d’informations sur les [&#x200B; Paramètres avancés &#x200B;](https://helpx.adobe.com/fr/enterprise/using/authentication-settings.html#advanced-settings) proposés par Admin Console.
 
 ### Connexion aux données Customer Journey Analytics dans les sessions de requête {#connect-to-customer-journey-analytics}
 
@@ -68,7 +68,7 @@ Pour accéder à vos données Customer Journey Analytics dans Power BI ou Tablea
 
 Vous pouvez également accéder à vos données Customer Journey Analytics directement à partir de Query Editor ou de l’interface de ligne de commande Postgres. Pour ce faire, référencez la base de données `cja` lors de l’écriture de votre requête. Pour plus d’informations sur l’écriture, l’exécution et l’enregistrement de requêtes[&#x200B; consultez le guide de création de requêtes &#x200B;](./user-guide.md#query-authoring)Query Editor).
 
-Consultez le guide d’extension [BI](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) pour obtenir des instructions complètes sur l’accès à vos vues de données Customer Journey Analytics avec SQL.
+Consultez le guide d’extension [BI](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/cja-dataviews/bi-extension) pour obtenir des instructions complètes sur l’accès à vos vues de données Customer Journey Analytics avec SQL.
 
 ## Informations d’identification n’expirant pas {#non-expiring-credentials}
 

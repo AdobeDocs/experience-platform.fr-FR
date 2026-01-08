@@ -58,13 +58,13 @@ Ce guide d’utilisation nécessite une compréhension professionnelle des compo
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="Campagnes orchestrées"
 >abstract="Activez ce bouton pour permettre l’utilisation du jeu de données sélectionné dans les campagnes orchestrées par Adobe Journey Optimizer. Le jeu de données doit utiliser un schéma relationnel et un seul jeu de données peut être créé par schéma."
->additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="Activer le jeu de données pour les campagnes orchestrées"
+>additional-url="https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="Activer le jeu de données pour les campagnes orchestrées"
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_enableforlookup_toggle"
 >title="Activer pour la recherche"
 >abstract="Activez ce jeu de données pour la recherche afin d’utiliser ses données dans Journey Optimizer pour la personnalisation, la prise de décision et l’orchestration des parcours."
->additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Utilisation des données Adobe Experience Platform dans Journey Optimizer"
+>additional-url="https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Utilisation des données Adobe Experience Platform dans Journey Optimizer"
 
 Dans l’interface utilisateur de [!DNL Experience Platform], sélectionnez **[!UICONTROL Datasets]** dans le volet de navigation de gauche pour ouvrir le tableau de bord **[!UICONTROL Datasets]**. Le tableau de bord répertorie tous les jeux de données disponibles pour votre organisation. Des détails s’affichent pour chaque jeu de données répertorié, notamment son nom, le schéma auquel le jeu de données adhère et le statut de l’exécution d’ingestion la plus récente.
 
