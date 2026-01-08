@@ -3,10 +3,10 @@ title: Supprimer les ordres de travail d'enregistrement
 description: Découvrez comment utiliser le point d’entrée /workorder dans l’API Data Hygiene pour gérer les ordres de travail de suppression d’enregistrements dans Adobe Experience Platform. Ce guide couvre les quotas, la chronologie de traitement et l’utilisation des API.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: f1f37439bd4d77faf1015741e604eee7188c58d7
+source-git-commit: 1d923e6c4a344959176abb30a8757095c711a601
 workflow-type: tm+mt
-source-wordcount: '2440'
-ht-degree: 3%
+source-wordcount: '2541'
+ht-degree: 2%
 
 ---
 
@@ -202,6 +202,14 @@ POST /workorder
 >[!NOTE]
 >
 >Vous pouvez uniquement supprimer des enregistrements des jeux de données dont le schéma XDM associé définit une identité principale ou un mappage d’identités.
+
+>[!IMPORTANT]
+>
+>Les ordres de travail de suppression des enregistrements agissent exclusivement sur le champ **identité principale**. Les restrictions suivantes s’appliquent :
+>
+>- **Les identités Secondaires ne sont pas analysées.** Si un jeu de données contient plusieurs champs d’identité, seule l’identité principale est utilisée pour la correspondance. Les enregistrements ne peuvent pas être ciblés ou supprimés en fonction d&#39;identités non principales.
+>- **Les enregistrements sans identité principale renseignée sont ignorés.** Si aucune métadonnée d’identité principale n’est renseignée pour un enregistrement, celui-ci ne peut pas être supprimé.
+>- **Les données ingérées avant la configuration de l’identité ne sont pas éligibles.** Si le champ Identité principale a été ajouté à un schéma après l’ingestion des données, les enregistrements précédemment ingérés ne peuvent pas être supprimés via les ordres de travail de suppression d’enregistrements.
 
 >[!NOTE]
 >

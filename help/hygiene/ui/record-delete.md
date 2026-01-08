@@ -2,16 +2,16 @@
 title: Demandes de suppression d’enregistrements (workflow de l’interface utilisateur)
 description: Découvrez comment supprimer des enregistrements dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
+source-git-commit: 56ae47f511a7392286c4f85173dba30e93fc07d0
 workflow-type: tm+mt
-source-wordcount: '2358'
-ht-degree: 13%
+source-wordcount: '2520'
+ht-degree: 10%
 
 ---
 
 # Demandes de suppression d’enregistrements (workflow de l’interface utilisateur) {#record-delete}
 
-Utilisez l’espace de travail [[!UICONTROL Data Lifecycle] pour supprimer &#x200B;](./overview.md) enregistrements dans Adobe Experience Platform en fonction de leur identité principale. Ces enregistrements peuvent être liés à des consommateurs individuels ou à toute autre entité incluse dans le graphique d’identité.
+Utilisez l’espace de travail [[!UICONTROL Data Lifecycle] pour supprimer ](./overview.md) enregistrements dans Adobe Experience Platform en fonction de leur identité principale. Ces enregistrements peuvent être liés à des consommateurs individuels ou à toute autre entité incluse dans le graphique d’identité.
 
 >[!IMPORTANT]
 >
@@ -19,7 +19,7 @@ Utilisez l’espace de travail [[!UICONTROL Data Lifecycle] pour supprimer &#x20
 
 ## Conditions préalables {#prerequisites}
 
-La suppression d’enregistrements nécessite une compréhension pratique du fonctionnement des champs d’identité dans Experience Platform. Plus précisément, vous devez connaître les valeurs d’espace de noms d’identité des entités dont vous souhaitez supprimer les enregistrements, en fonction du jeu de données (ou des jeux de données) à partir duquel vous les supprimez.
+La suppression d’enregistrements nécessite une compréhension pratique du fonctionnement des champs d’identité dans Experience Platform. Plus précisément, vous devez connaître l’espace de noms d’identité principal et les valeurs des entités dont vous souhaitez supprimer les enregistrements, en fonction du jeu de données (ou des jeux de données) à partir duquel vous les supprimez.
 
 Pour plus d’informations sur les identités dans Experience Platform, consultez la documentation suivante :
 
@@ -28,6 +28,14 @@ Pour plus d’informations sur les identités dans Experience Platform, consulte
 * [Real-Time Customer Profile](../../profile/home.md) : utilise des graphiques d’identités pour fournir des profils de clients unifiés basés sur des données agrégées issues de plusieurs sources et mis à jour pratiquement en temps réel.
 * [Modèle de données d’expérience (XDM)](../../xdm/home.md) : fournit des structures et des définitions standard pour les données Experience Platform à l’aide de schémas. Tous les jeux de données Experience Platform sont conformes à un schéma XDM spécifique et le schéma définit les champs qui sont des identités.
 * [Champs d’identité](../../xdm/ui/fields/identity.md) : découvrez la définition d’un champ d’identité dans un schéma XDM.
+
+>[!IMPORTANT]
+>
+>Les suppressions d’enregistrements agissent exclusivement sur le champ **identité principale** défini dans le schéma du jeu de données. Les restrictions suivantes s’appliquent :
+>
+>* **Les identités Secondaires ne sont pas analysées.** Si un jeu de données contient plusieurs champs d’identité, seule l’identité principale est utilisée pour la correspondance. Les enregistrements ne peuvent pas être ciblés ou supprimés en fonction d&#39;identités non principales.
+>* **Les enregistrements sans identité principale renseignée sont ignorés.** Si aucune métadonnée d’identité principale n’est renseignée pour un enregistrement, celui-ci ne peut pas être supprimé.
+>* **Les données ingérées avant la configuration de l’identité ne sont pas éligibles.** Si le champ Identité principale a été ajouté à un schéma après l’ingestion des données, les enregistrements précédemment ingérés ne peuvent pas être supprimés par ce workflow.
 
 ## Création d’une requête {#create-request}
 
@@ -53,13 +61,13 @@ Pour effectuer une suppression dans un jeu de données spécifique, sélectionne
 
 ![Boîte de dialogue [!UICONTROL Select dataset] avec un jeu de données sélectionné et [!UICONTROL Done] mis en surbrillance.](../images/ui/record-delete/select-dataset.png)
 
-Pour supprimer de tous les jeux de données, sélectionnez **[!UICONTROL All datasets]**. Cette option augmente la portée de l’opération et nécessite que vous fournissiez tous les types d’identité pertinents.
+Pour supprimer de tous les jeux de données, sélectionnez **[!UICONTROL All datasets]**. Cette option augmente la portée de l’opération et nécessite de fournir le type d’identité principale pour chaque jeu de données que vous souhaitez cibler.
 
 ![Boîte de dialogue [!UICONTROL Select dataset] avec l’option [!UICONTROL All datasets] sélectionnée.](../images/ui/record-delete/all-datasets.png)
 
 >[!WARNING]
 >
->La sélection de **[!UICONTROL All datasets]** étend l’opération à tous les jeux de données de votre organisation. Chaque jeu de données peut utiliser un type d’identité principale différent. Vous devez fournir **tous les types d’identité requis** pour garantir une correspondance précise.
+>La sélection de **[!UICONTROL All datasets]** étend l’opération à tous les jeux de données de votre organisation. Chaque jeu de données peut utiliser un type d’identité principale différent. Vous devez fournir **le type d’identité principale pour chaque jeu de données** afin d’assurer une correspondance précise.
 >
 >Si un type d’identité est manquant, certains enregistrements peuvent être ignorés lors de la suppression. Cela peut ralentir le traitement et conduire à des résultats **partiels**.
 
@@ -72,23 +80,27 @@ Chaque jeu de données d’Experience Platform ne prend en charge qu’un seul t
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
->title="Espace de noms d’identité"
->abstract="Un espace de noms d’identité est un attribut qui lie un enregistrement au profil d’un client ou d’une cliente dans Experience Platform. Le champ Espace de noms d’identité d’un jeu de données est défini par le schéma sur lequel le jeu de données est basé. Dans cette colonne, vous devez indiquer le type (ou l’espace de nommage) de l’espace de noms d’identité de l’enregistrement, par exemple `email` pour les adresses e-mail et `ecid` pour les identifiants Experience Cloud. Pour en savoir plus, consultez le guide de l’interface d’utilisation du cycle de vie des données."
+>title="Espace de noms d’identité principal"
+>abstract="L’espace de noms d’identité principal est l’attribut qui lie de manière unique un enregistrement au profil d’un client dans Experience Platform. Le champ d’identité principale d’un jeu de données est défini par le schéma sur lequel le jeu de données est basé. Dans cette colonne, vous devez indiquer l’espace de noms d’identité principal (par exemple `email` pour les adresses e-mail ou `ecid` pour les Experience Cloud ID) qui correspond au schéma du jeu de données. Pour en savoir plus, consultez le guide de l’interface d’utilisation du cycle de vie des données."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Valeur d’identité principale"
 >abstract="Dans cette colonne, vous devez indiquer la valeur de l’espace de noms d’identité de l’enregistrement, qui doit correspondre au type d’identité fourni dans la colonne de gauche. Si l’espace de noms d’identité est `email`, la valeur doit correspondre à l’adresse e-mail de l’enregistrement. Pour en savoir plus, consultez le guide de l’interface d’utilisation du cycle de vie des données."
 
-Lors de la suppression d&#39;enregistrements, vous devez fournir des informations d&#39;identité afin que le système puisse déterminer les enregistrements à supprimer. Pour les jeux de données d’Experience Platform, les enregistrements sont supprimés en fonction du champ **espace de noms d’identité** défini par le schéma du jeu de données.
+Lors de la suppression d&#39;enregistrements, vous devez fournir des informations d&#39;identité afin que le système puisse déterminer les enregistrements à supprimer. Pour les jeux de données d’Experience Platform, les enregistrements sont supprimés en fonction du champ **identité principale** défini par le schéma du jeu de données.
 
-Comme tous les champs d’identité d’Experience Platform, un espace de noms d’identité se compose de deux éléments : un **type** (parfois appelé espace de noms d’identité) et un **valeur**. Le type d’identité fournit un contexte sur la manière dont le champ identifie un enregistrement (une adresse e-mail, par exemple). La valeur représente l&#39;identité spécifique d&#39;un enregistrement pour ce type (par exemple, `jdoe@example.com` pour le type d&#39;identité `email`). Les champs courants utilisés comme identités comprennent les informations de compte, les identifiants d’appareil et les identifiants de cookie.
+>[!NOTE]
+>
+>Bien que l’interface utilisateur vous permette de sélectionner un espace de noms d’identité, seule l’**identité principale** configurée dans le schéma du jeu de données est utilisée au moment de l’exécution. Assurez-vous que les valeurs d’identité que vous fournissez correspondent au champ d’identité principale du jeu de données.
+
+Comme tous les champs d’identité d’Experience Platform, une identité principale se compose de deux éléments : un **type** (l’espace de noms d’identité) et un **valeur**. Le type d’identité fournit un contexte sur la manière dont le champ identifie un enregistrement (une adresse e-mail, par exemple). La valeur représente l&#39;identité spécifique d&#39;un enregistrement pour ce type (par exemple, `jdoe@example.com` pour le type d&#39;identité `email`). Les champs courants utilisés comme identités principales comprennent les informations de compte, les identifiants d’appareil et les identifiants de cookie.
 
 >[!TIP]
 >
 >Si vous ne connaissez pas l’espace de noms d’identité d’un jeu de données spécifique, vous pouvez le trouver dans l’interface utilisateur d’Experience Platform. Dans l’espace de travail **[!UICONTROL Datasets]** , sélectionnez le jeu de données en question dans la liste. Sur la page des détails du jeu de données, passez la souris sur le nom du schéma du jeu de données dans le rail de droite. L’espace de noms d’identité s’affiche avec le nom et la description du schéma.
 >
->![&#x200B; Tableau de bord Jeux de données avec un jeu de données sélectionné et une boîte de dialogue de schéma ouverte à partir du panneau des détails du jeu de données. L’identifiant principal du jeu de données est mis en surbrillance.](../images/ui/record-delete/dataset-primary-identity.png)
+>![ Tableau de bord Jeux de données avec un jeu de données sélectionné et une boîte de dialogue de schéma ouverte à partir du panneau des détails du jeu de données. L’identifiant principal du jeu de données est mis en surbrillance.](../images/ui/record-delete/dataset-primary-identity.png)
 
 Il existe deux options pour fournir des identités lors de la suppression d’enregistrements :
 
@@ -101,7 +113,7 @@ Pour charger un fichier JSON, vous pouvez le faire glisser et le déposer dans l
 
 ![Workflow de création de requête avec l’interface de sélection de fichiers et de glisser-déposer pour charger des fichiers JSON mise en surbrillance.](../images/ui/record-delete/upload-json.png)
 
-Le fichier JSON doit être formaté sous la forme d’un tableau d’objets, chaque objet représentant une identité.
+Le fichier JSON doit être formaté sous la forme d’un tableau d’objets, chaque objet représentant une valeur d’identité principale pour le jeu de données cible.
 
 ```json
 [
@@ -118,7 +130,7 @@ Le fichier JSON doit être formaté sous la forme d’un tableau d’objets, cha
 
 | Propriété | Description |
 | --- | --- |
-| `namespaceCode` | Type d’identité. |
+| `namespaceCode` | Espace de noms d’identité principal du jeu de données cible. |
 | `value` | Valeur de l’identité principale telle qu’elle est indiquée par le type. |
 
 Une fois le fichier chargé, vous pouvez continuer à [envoyer la requête](#submit).
@@ -271,6 +283,6 @@ Pour découvrir comment la capture de données de modification fonctionne avec l
 
 ## Étapes suivantes
 
-Ce document explique comment supprimer des enregistrements dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’exécution d’autres tâches de gestion du cycle de vie des données dans l’interface utilisateur, reportez-vous à la section [&#x200B; Présentation de l’interface utilisateur du cycle de vie des données](./overview.md).
+Ce document explique comment supprimer des enregistrements dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’exécution d’autres tâches de gestion du cycle de vie des données dans l’interface utilisateur, reportez-vous à la section [ Présentation de l’interface utilisateur du cycle de vie des données](./overview.md).
 
-Pour savoir comment supprimer des enregistrements à l’aide de l’API Data Hygiene, reportez-vous au guide de point d’entrée d’ordre de travail [&#128279;](../api/workorder.md).
+Pour savoir comment supprimer des enregistrements à l’aide de l’API Data Hygiene, reportez-vous au guide de point d’entrée d’ordre de travail [](../api/workorder.md).
