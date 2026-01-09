@@ -43,7 +43,7 @@ Ce document couvrait les conditions préalables requises pour utiliser les fonct
 - [Syntaxe SQL dans Query Service](../sql/syntax.md)
 - [Créer des jeux de données dérivés avec SQL](../data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
-Vous pouvez également consulter la présentation du cas d’utilisation de navigation abandonnée [ pour en savoir plus sur les avantages du traitement des données par Query Service dans Experience Platform](../use-cases/abandoned-browse.md#video-example).
+Vous pouvez également consulter la présentation du cas d’utilisation de navigation abandonnée [&#x200B; pour en savoir plus sur les avantages du traitement des données par Query Service dans Experience Platform](../use-cases/abandoned-browse.md#video-example).
 
 Les ressources suivantes sont utiles pour améliorer votre compréhension des [!DNL Query Service] :
 
