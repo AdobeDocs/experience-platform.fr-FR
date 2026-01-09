@@ -21,7 +21,7 @@ Avant de commencer à interroger des données, vérifiez que vous disposez des �
 - **Autorisations requises** : votre compte utilisateur a accès à Query Service dans Experience Platform. Si le service n’est pas disponible dans l’interface utilisateur, consultez la [documentation sur les autorisations](../../access-control/home.md#permissions) et contactez votre administrateur système.
 - **Ingestion des données** : vous avez ingéré des données dans Experience Platform.
 
-Si vous devez ingérer des données, consultez le tutoriel vidéo [ingestion de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) pour obtenir un aperçu de la création de jeux de données, du mappage de schéma, de l’ingestion et de la validation. Lisez la [documentation de présentation de l’ingestion](../../ingestion/home.md) pour obtenir des informations plus détaillées et des liens vers d’autres ressources d’apprentissage.
+Si vous devez ingérer des données, consultez le tutoriel vidéo [ingestion de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr) pour obtenir un aperçu de la création de jeux de données, du mappage de schéma, de l’ingestion et de la validation. Lisez la [documentation de présentation de l’ingestion](../../ingestion/home.md) pour obtenir des informations plus détaillées et des liens vers d’autres ressources d’apprentissage.
 
 ## Chemins de démarrage rapide
 
