@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Bonnes pratiques de modélisation des données
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
+source-git-commit: 7a763a978443c0a074e6368448320056759f72bb
 workflow-type: tm+mt
-source-wordcount: '3236'
-ht-degree: 56%
+source-wordcount: '3429'
+ht-degree: 49%
 
 ---
 
@@ -83,10 +83,10 @@ Si vous souhaitez analyser la manière dont certains attributs au sein d’une e
 
 | Identifiant client | Type | ID de produit | Quantité | Date et heure |
 | --- | --- | --- | --- | --- |
-| 1234567 | Ajouter | 275098 | 2 | 1er oct., 10 h 32 |
-| 1234567 | Supprimer | 275098 | 1 | 1er oct., 10 h 33 |
-| 1234567 | Ajouter | 486502 | 1 | 1er oct., 10 h 41 |
-| 1234567 | Ajouter | 910482 | 5 | 3 oct., 14 h 15 |
+| 1234567 | Ajouter | 275098 | 2 | 1er octobre 10:32 |
+| 1234567 | Supprimer | 275098 | 1 | 1er octobre 10:33 |
+| 1234567 | Ajouter | 486502 | 1 | 1er octobre 10:41 |
+| 1234567 | Ajouter | 910482 | 5 | 3 octobre, 14:15 |
 
 {style="table-layout:auto"}
 
@@ -127,7 +127,7 @@ Le tableau suivant décrit certaines relations d’entité courantes et les cat�
 
 | Relation | Cardinalité | Catégories d’entité |
 | --- | --- | --- |
-| Passage en caisse du client et du panier | Un à plusieurs | Un seul client peut avoir plusieurs passages en caisse, c’est-à-dire des événements qui peuvent être suivis au fil du temps. Le client serait donc une entité de profil, tandis que le passage en caisse serait une entité d’événement. |
+| Passage en caisse du client et du panier | Un à plusieurs | Une même personne peut avoir plusieurs passages en caisse, c’est-à-dire des événements qui peuvent être suivis au fil du temps. Le client serait donc une entité de profil, tandis que le passage en caisse serait une entité d’événement. |
 | Compte client et de fidélité | Un à un | Un seul client ne peut avoir qu’un seul compte de fidélité, et un compte de fidélité ne peut appartenir qu’à un seul client. Comme il s’agit d’une relation un-à-un, les comptes client et de fidélité représentent tous deux des entités de profil. |
 | Client et abonnement | Un à plusieurs | Un seul client peut avoir plusieurs abonnements. Puisque l’entreprise ne s’intéresse qu’aux abonnements actuels d’un client, le client est une entité de profil, tandis que l’abonnement est une entité de recherche. |
 
@@ -214,12 +214,12 @@ Experience Platform fournit plusieurs groupes de champs de schéma XDM prêts à
 
 * Adobe Analytics
 * Adobe Audience Manager
-* Adobe Campaign
+* Adobe Campaign
 * Adobe Target
 
-Par exemple, vous pouvez utiliser le groupe de champs [[!UICONTROL Modèle Adobe Analytics ExperienceEvent] &#x200B;](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) pour mapper les champs spécifiques à [!DNL Analytics] à vos schémas XDM. Selon les applications d’Adobe que vous utilisez, vous devez utiliser ces groupes de champs fournis par Adobe dans vos schémas.
+Par exemple, vous pouvez utiliser le groupe de champs [[!UICONTROL Adobe Analytics ExperienceEvent Template] pour mapper ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) schémas XDM des champs spécifiques à [!DNL Analytics]. Selon les applications d’Adobe que vous utilisez, vous devez utiliser ces groupes de champs fournis par Adobe dans vos schémas.
 
-![Schéma du [!UICONTROL modèle Adobe Analytics ExperienceEvent].](../images/best-practices/analytics-field-group.png)
+![Schéma du [!UICONTROL Adobe Analytics ExperienceEvent Template].](../images/best-practices/analytics-field-group.png)
 
 Les groupes de champs d’application Adobe attribuent automatiquement une identité principale par défaut grâce à l’utilisation du champ `identityMap`, qui est un objet généré par le système et en lecture seule qui mappe les valeurs d’identité standard pour un client individuel.
 
@@ -231,35 +231,55 @@ Pour Adobe Analytics, ECID est l’identité principale par défaut. Si une vale
 
 ## Champs de validation des données {#data-validation-fields}
 
-Lorsque vous ingérez des données dans le lac de données, la validation des données n’est appliquée que pour les champs limités. Pour valider un champ particulier lors de l’ingestion d’un lot, vous devez marquer le champ comme étant contraint dans le schéma XDM. Pour empêcher l’ingestion de données erronées dans Experience Platform, il est recommandé de définir les critères de validation au niveau du champ lors de la création des schémas.
+Lorsque vous ingérez des données dans le lac de données, la validation des données n’est appliquée que pour les champs limités. Pour valider un champ particulier lors de l’ingestion par lots, vous devez marquer le champ comme étant contraint dans le schéma XDM. Pour empêcher les données incorrectes d’entrer dans Experience Platform, définissez vos exigences de validation lors de la création de vos schémas.
 
 >[!IMPORTANT]
 >
 >La validation ne s’applique pas aux colonnes imbriquées. Si le format du champ se trouve dans une colonne de tableau, les données ne sont pas validées.
 
-Pour définir des contraintes sur un champ particulier, sélectionnez le champ dans l’éditeur de schémas afin d’ouvrir la barre latérale **[!UICONTROL Propriétés du champ]**. Consultez la documentation sur les [propriétés de champ spécifiques à un type](../ui/fields/overview.md#type-specific-properties) pour obtenir une description exacte des champs disponibles.
+Pour définir des contraintes sur un champ, sélectionnez le champ dans l’éditeur de schémas afin d’ouvrir la barre latérale **[!UICONTROL Field properties]**. Consultez la documentation sur les [propriétés de champ spécifiques à un type](../ui/fields/overview.md#type-specific-properties) pour obtenir une description exacte des champs disponibles.
 
-![Éditeur de schémas avec les champs de contrainte mis en surbrillance dans la barre latérale [!UICONTROL Propriétés du champ].](../images/best-practices/data-validation-fields.png)
+![Éditeur de schémas avec les champs de contrainte mis en surbrillance dans la barre latérale [!UICONTROL Field properties].](../images/best-practices/data-validation-fields.png)
 
 ### Conseils pour maintenir l’intégrité des données {#data-integrity-tips}
 
-Vous trouverez ci-dessous un ensemble de suggestions pour maintenir l’intégrité des données lors de la création d’un schéma.
+Les suggestions suivantes vous aident à maintenir l’intégrité des données lors de la création d’un schéma.
 
 * **Tenez compte des identités principales** : pour les produits Adobe tels que SDK web, Mobile SDK, Adobe Analytics et Adobe Journey Optimizer, le champ `identityMap` sert souvent d’identité principale. Évitez de désigner des champs supplémentaires en tant qu’identités principales pour ce schéma.
 * **Assurez-vous que `_id` n’est pas utilisé comme identité** : le champ `_id` dans les schémas Événement d’expérience ne peut pas être utilisé comme identité, car il est destiné à l’unicité des enregistrements.
 * **Définir des contraintes de longueur** : il est recommandé de définir des longueurs minimale et maximale sur les champs marqués comme identités. Un avertissement se déclenche si vous essayez d’attribuer un espace de noms personnalisé à un champ d’identité sans respecter les contraintes de longueur minimale et maximale. Ces limitations permettent de maintenir la cohérence et la qualité des données.
-* **Appliquer des modèles pour des valeurs cohérentes** : si vos valeurs d’identité suivent un modèle spécifique, vous devez utiliser le paramètre **[!UICONTROL Modèle]** pour appliquer cette contrainte. Ce paramètre peut inclure des règles telles que les chiffres uniquement, les majuscules ou les minuscules, ou des combinaisons de caractères spécifiques. Utilisez des expressions régulières pour faire correspondre des modèles dans vos chaînes.
+* **Appliquer des modèles pour des valeurs cohérentes** : si vos valeurs d’identité suivent un modèle spécifique, utilisez le paramètre **[!UICONTROL Pattern]** pour appliquer des contraintes. Ce paramètre peut inclure des règles telles que les chiffres uniquement, les majuscules ou les minuscules, ou des combinaisons de caractères spécifiques. Utilisez des expressions régulières pour faire correspondre des modèles dans vos chaînes.
 * **Limiter les eVars dans les schémas Analytics** : en règle générale, un schéma Analytics ne doit comporter qu’une seule eVar désignée comme identité. Si vous envisagez d’utiliser plusieurs eVar en tant qu’identité, vous devez vérifier si la structure des données peut être optimisée.
 * **Garantir l’unicité d’un champ sélectionné** : le champ sélectionné doit être unique par rapport à l’identité principale dans le schéma. Si ce n’est pas le cas, ne le marquez pas comme identité. Par exemple, si plusieurs clients peuvent fournir la même adresse e-mail, cet espace de noms n’est pas une identité appropriée. Ce principe s’applique également aux autres espaces de noms d’identité tels que les numéros de téléphone. Le marquage d’un champ non unique en tant qu’identité peut entraîner une réduction indésirable du profil.
 * **Vérifier les longueurs de chaîne minimales** : tous les champs de chaîne doivent comporter au moins un caractère, car les valeurs de chaîne ne doivent jamais être vides. Les valeurs nulles pour les champs non obligatoires sont toutefois acceptables. Par défaut, les nouveaux champs de chaîne ont une longueur minimale d’un.
 
+## Gestion des schémas activés pour Profile {#managing-profile-enabled-schemas}
+
+Cette section explique comment gérer les schémas déjà activés pour le profil client en temps réel. Une fois qu’un schéma est activé, vous ne pouvez pas le désactiver ni le supprimer. Vous devez déterminer comment empêcher toute utilisation ultérieure et comment gérer les jeux de données que vous ne pouvez pas supprimer.
+
+Une fois qu’un schéma est activé pour Profile, la configuration ne peut pas être inversée. Si un schéma ne doit plus être utilisé, renommez-le pour clarifier son statut et créer un schéma de remplacement avec la structure et la configuration d’identité correctes. Cela permet d’éviter la réutilisation accidentelle du schéma obsolète lorsque les utilisateurs créent de nouveaux jeux de données ou configurent des workflows d’ingestion.
+
+Les jeux de données système apparaissent parfois avec les schémas activés pour Real-Time Customer Profile. Vous ne pouvez pas supprimer des jeux de données système, même si le schéma associé est obsolète. Pour éviter toute utilisation involontaire, renommez le schéma obsolète activé pour Profile et confirmez qu’aucun workflow d’ingestion ne pointe vers le jeu de données système qui reste en place.
+
+Appliquez les bonnes pratiques suivantes pour éviter la réutilisation accidentelle de schémas activés pour Profile obsolètes :
+
+* Utilisez une convention de nommage claire lorsque vous rendez un schéma obsolète. Incluez des libellés tels que « Obsolète », « Ne pas utiliser » ou une balise de version.
+* Arrêtez d’ingérer des données dans un jeu de données en fonction du schéma que vous souhaitez supprimer.
+* Créez un schéma avec la structure, la configuration d’identité et le modèle de dénomination corrects.
+* Passez en revue les jeux de données système qui ne peuvent pas être supprimés et vérifiez qu’aucun workflow d’ingestion ne les référence.
+* Documentez la modification en interne afin que d’autres utilisateurs comprennent pourquoi le schéma est obsolète.
+
+>[!TIP]
+>
+>Consultez le [guide de dépannage XDM](../troubleshooting-guide.md#delete-profile-enabled) pour plus d’informations sur les schémas activés pour Profile et les limites associées.
+
 ## Étapes suivantes
 
-Ce document couvrait les directives générales et les bonnes pratiques pour la conception de votre modèle de données pour Experience Platform. Pour résumer :
+Ce document présente les instructions générales et les bonnes pratiques pour la conception de votre modèle de données pour Experience Platform. Pour résumer :
 
-* Utilisez une approche descendante en triant vos tableaux de données en catégories de profil, de recherche et d’événement avant de créer vos schémas.
-* Il existe souvent plusieurs approches et options lorsqu’il s’agit de concevoir des schémas à des fins différentes.
-* Votre modèle de données doit prendre en charge vos cas d’utilisation métier, tels que la segmentation ou l’analyse du parcours client.
-* Rendez vos schémas aussi simples que possible et ajoutez uniquement de nouveaux champs lorsque cela est absolument nécessaire.
+* Triez vos tableaux de données en catégories de profil, de recherche et d’événement avant de créer vos schémas.
+* Évaluez plusieurs approches lorsque vous concevez des schémas pour différents cas d’utilisation.
+* Assurez-vous que votre modèle de données prend en charge votre segmentation ou les objectifs du parcours client.
+* Veillez à ce que les schémas restent aussi simples que possible. Ajoutez de nouveaux champs uniquement lorsque cela est nécessaire.
 
-Une fois que vous êtes prêt, consultez le tutoriel concernant la [création d’un schéma dans l’interface utilisateur](../tutorials/create-schema-ui.md) pour obtenir des instructions détaillées sur la création d’un schéma, attribuez la classe appropriée à l’entité et ajoutez des champs auxquels mapper vos données.
+Lorsque vous êtes prêt, consultez le tutoriel sur la [création d’un schéma dans l’interface utilisateur](../tutorials/create-schema-ui.md) pour obtenir des instructions détaillées sur la création de schémas, l’affectation de classe et le mappage de champs.
