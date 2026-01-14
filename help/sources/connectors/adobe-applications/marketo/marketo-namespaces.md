@@ -2,9 +2,9 @@
 title: Espaces de noms et schémas B2B
 description: Ce document présente les espaces de noms personnalisés requis lors de la création d’un connecteur source B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 5eeb0397ddc96a224919a776f94058ae3a539b69
 workflow-type: tm+mt
-source-wordcount: '1500'
+source-wordcount: '1538'
 ht-degree: 12%
 
 ---
@@ -13,7 +13,9 @@ ht-degree: 12%
 
 >[!AVAILABILITY]
 >
->Vous devez avoir accès à [Adobe Real-Time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md) pour que vos schémas B2B soient qualifiés dans [Real-Time Customer Profile](../../../../profile/home.md).
+>- Vous devez avoir accès à [Adobe Real-Time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md) pour que vos schémas B2B soient qualifiés dans [Real-Time Customer Profile](../../../../profile/home.md).
+>
+>- À compter de janvier 2026, Real-Time CDP B2B edition ne prendra plus en charge les relations **non standard** entre les entités B2B. Par conséquent, nous vous recommandons de mettre à jour vos entités B2B pour utiliser les relations standard décrites dans le guide [ Espaces de noms et schémas B2B ](../../../../rtcdp/schemas/b2b.md).
 
 >[!NOTE]
 >
@@ -40,9 +42,9 @@ Le tableau suivant contient des exemples de valeurs ainsi que des informations s
 
 | Variable | Description | Exemple |
 | --- | --- | --- |
-| `CLIENT_SECRET` | Identifiant unique utilisé pour générer votre `{ACCESS_TOKEN}`. Pour plus d’informations sur la récupération de vos [, consultez le tutoriel sur &#x200B;](../../../../landing/api-authentication.md)l’authentification et l’accès aux API Experience Platform`{CLIENT_SECRET}`. | `{CLIENT_SECRET}` |
-| `API_KEY` | Identifiant unique utilisé pour authentifier les appels aux API Experience Platform. Pour plus d’informations sur la récupération de vos [, consultez le tutoriel sur &#x200B;](../../../../landing/api-authentication.md)l’authentification et l’accès aux API Experience Platform`{API_KEY}`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
-| `ACCESS_TOKEN` | Jeton d’autorisation requis pour effectuer des appels vers les API Experience Platform. Pour plus d’informations sur la récupération de vos [, consultez le tutoriel sur &#x200B;](../../../../landing/api-authentication.md)l’authentification et l’accès aux API Experience Platform`{ACCESS_TOKEN}`. | `Bearer {ACCESS_TOKEN}` |
+| `CLIENT_SECRET` | Identifiant unique utilisé pour générer votre `{ACCESS_TOKEN}`. Pour plus d’informations sur la récupération de vos [, consultez le tutoriel sur ](../../../../landing/api-authentication.md)l’authentification et l’accès aux API Experience Platform`{CLIENT_SECRET}`. | `{CLIENT_SECRET}` |
+| `API_KEY` | Identifiant unique utilisé pour authentifier les appels aux API Experience Platform. Pour plus d’informations sur la récupération de vos [, consultez le tutoriel sur ](../../../../landing/api-authentication.md)l’authentification et l’accès aux API Experience Platform`{API_KEY}`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `ACCESS_TOKEN` | Jeton d’autorisation requis pour effectuer des appels vers les API Experience Platform. Pour plus d’informations sur la récupération de vos [, consultez le tutoriel sur ](../../../../landing/api-authentication.md)l’authentification et l’accès aux API Experience Platform`{ACCESS_TOKEN}`. | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | En ce qui concerne [!DNL Marketo], cette valeur est fixe et est toujours définie sur : `ent_dataservices_sdk`. | `ent_dataservices_sdk` |
 | `CONTAINER_ID` | Le conteneur `global` contient toutes les classes, groupes de champs de schéma, types de données et schémas fournis par les partenaires standard d’Adobe et d’Experience Platform. En ce qui concerne [!DNL Marketo], cette valeur est fixe et est toujours définie sur `global`. | `global` |
 | `TECHNICAL_ACCOUNT_ID` | Informations d’identification utilisées pour intégrer à Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
@@ -70,7 +72,7 @@ Une requête réussie crée les espaces de noms et les schémas requis pour B2B.
 
 ## Espaces de noms B2B
 
-Les espaces de noms d’identité sont des composants d’[[!DNL Identity Service]](../../../../identity-service/home.md) qui servent à distinguer le contexte d’une identité. Une identité complète comprend une valeur d’identité et un espace de noms. Lisez la [&#x200B; Présentation des espaces de noms &#x200B;](../../../../identity-service/features/namespaces.md) pour plus d’informations.
+Les espaces de noms d’identité sont des composants d’[[!DNL Identity Service]](../../../../identity-service/home.md) qui servent à distinguer le contexte d’une identité. Une identité complète comprend une valeur d’identité et un espace de noms. Lisez la [ Présentation des espaces de noms ](../../../../identity-service/features/namespaces.md) pour plus d’informations.
 
 Les espaces de noms B2B sont utilisés dans l’identité principale de l’entité.
 
@@ -108,9 +110,9 @@ Le tableau suivant contient des informations sur la configuration sous-jacente d
 >
 >Veuillez faire défiler la page vers la gauche/droite pour consulter le contenu complet du tableau.
 
-| Nom du schéma | Classe de base | Groupes de champs | [!DNL Profile] dans le schéma | Identité principale | Espace de noms d’identité principale | identité Secondaire | Espace de noms d’identité Secondaire | Relation | Remarques |
+| Nom du schéma | Classe de base | Groupes de champs | [!DNL Profile] dans le schéma | Identité principale | Espace de noms d’identité principal | identité Secondaire | Espace de noms d’identité Secondaire | Relation | Remarques |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Compte B2B | [&#x200B; Compte professionnel XDM &#x200B;](../../../../xdm/classes/b2b/business-account.md) | Détails du compte professionnel XDM | Activé | `accountKey.sourceKey` dans la classe de base | Compte B2B | `extSourceSystemAudit.externalKey.sourceKey` dans la classe de base | Compte B2B | <ul><li>`accountParentKey.sourceKey` dans le groupe de champs Détails du compte professionnel XDM</li><li>Propriété de destination : `/accountKey/sourceKey`</li><li>Type : un à un</li><li>Schéma de référence : compte B2B</li><li>Espace De Noms : Compte B2B</li></ul> |  |
+| Compte B2B | [ Compte professionnel XDM ](../../../../xdm/classes/b2b/business-account.md) | Détails du compte professionnel XDM | Activé | `accountKey.sourceKey` dans la classe de base | Compte B2B | `extSourceSystemAudit.externalKey.sourceKey` dans la classe de base | Compte B2B | <ul><li>`accountParentKey.sourceKey` dans le groupe de champs Détails du compte professionnel XDM</li><li>Propriété de destination : `/accountKey/sourceKey`</li><li>Type : un à un</li><li>Schéma de référence : compte B2B</li><li>Espace De Noms : Compte B2B</li></ul> |  |
 | Personne B2B | [XDM Individual Profile](../../../../xdm/classes/individual-profile.md) | <ul><li>Détails de professionnel XDM</li><li>Composants de professionnel XDM</li><li>IdentityMap</li><li>Détails relatifs au consentement et aux préférences</li></ul> | Activé | `b2b.personKey.sourceKey` dans le groupe de champs Détails professionnels XDM | Personne B2B | <ol><li>`extSourceSystemAudit.externalKey.sourceKey` du groupe de champs Détails professionnels XDM</li><li>`workEmail.address` du groupe de champs Détails professionnels XDM</ol></li> | <ol><li>Personne B2B</li><li>E-mail</li></ol> | <ul><li>`personComponents.sourceAccountKey.sourceKey` du groupe de champs Composants professionnels XDM .</li><li>Type : plusieurs à un</li><li>Schéma De Référence : Compte B2B</li><li>Espace De Noms : Compte B2B</li><li>Propriété de destination : accountKey.sourceKey</li><li>Nom de la relation à partir du schéma actuel : Compte</li><li>Nom de la relation du schéma de référence : Personnes</li></ul> |  |
 | Opportunité B2B | [Opportunité commerciale XDM](../../../../xdm/classes/b2b/business-opportunity.md) | Détails de l’opportunité commerciale XDM | Activé | `opportunityKey.sourceKey` dans la classe de base | Opportunité B2B | `extSourceSystemAudit.externalKey.sourceKey` dans la classe de base | Opportunité B2B | <ul><li>`accountKey.sourceKey` dans la classe de base</li><li>Type : plusieurs à un</li><li>Schéma De Référence : Compte B2B</li><li>Espace De Noms : Compte B2B</li><li>Propriété de destination : `accountKey.sourceKey`</li><li>Nom de la relation à partir du schéma actuel : Compte</li><li>Nom de la relation du schéma de référence : Opportunités</li></ul> |  |
 | Relation de la personne avec l’opportunité B2B | [Relation de la personne avec l’opportunité commerciale XDM](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) | Aucune | Activé | `opportunityPersonKey.sourceKey` dans la classe de base | Relation de la personne avec l’opportunité B2B | | | **Première relation**<ul><li>`personKey.sourceKey` dans la classe de base</li><li>Type : plusieurs à un</li><li>Schéma De Référence : Personne B2B</li><li>Espace De Noms : Personne B2B</li><li>Propriété de destination : b2b.personKey.sourceKey</li><li>Nom de la relation à partir du schéma actuel : Personne</li><li>Nom de la relation du schéma de référence : Opportunités</li></ul>**Deuxième relation**<ul><li>`opportunityKey.sourceKey` dans la classe de base</li><li>Type : plusieurs à un</li><li>Schéma De Référence : Opportunité B2B </li><li>Espace de noms : opportunité B2B </li><li>Propriété de destination : `opportunityKey.sourceKey`</li><li>Nom de la relation à partir du schéma actuel : opportunité</li><li>Nom de la relation du schéma de référence : Personnes</li></ul> |  |
