@@ -4,9 +4,9 @@ title: Présentation des alertes
 description: Découvrez les alertes dans Adobe Experience Platform, y compris la structure de la définition des règles d’alerte.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f33bcf982216d25e514992d5ebf978b5535abd77
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '791'
 ht-degree: 59%
 
 ---
@@ -31,7 +31,7 @@ Les alertes Experience Platform peuvent être envoyées une seule fois ou se ré
 | --- | --- |
 | N’indique pas nécessairement un problème. | Indique un état potentiellement indésirable. |
 | Ne se répète pas. | Peut se répéter si la condition anormale persiste. |
-| Par exemple :<ul><li>L’ingestion des données s’est terminée avec succès.</li><li>Une exécution de requête est terminée.</li><li>Les données ont été supprimées.</li></ul> | Par exemple :<ul><li>La durée d’ingestion dépasse le contrat de niveau de service (SLA).</li><li>L’ingestion quotidienne n’a pas eu lieu au cours des dernières 24 heures.</li><li>Le taux d’erreur du processeur de flux est supérieur au seuil configuré.</li><li>Le nombre total de profils dépasse les droits.</li></ul> |
+| Par exemple :<ul><li>L’ingestion des données s’est terminée avec succès.</li><li>Une exécution de requête est terminée.</li><li>Les données ont été supprimées.</li></ul> | Par exemple :<ul><li>La durée d’ingestion dépasse le contrat de niveau de service (SLA).</li><li>L’ingestion quotidienne n’a pas eu lieu au cours des dernières 24 heures.</li><li>Le taux d’erreur du processeur de flux est supérieur au seuil configuré.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -64,7 +64,7 @@ Des alertes peuvent être envoyées vers un webhook configuré afin de faciliter
 
 L’interface utilisateur d’Experience Platform vous permet d’afficher les alertes reçues et de gérer les règles d’alerte. La vidéo ci-après présente ces capacités.
 
->[!VIDEO](https://video.tv.adobe.com/v/3423919?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
 Pour utiliser des alertes dans l’interface utilisateur d’Experience Platform, vous devez disposer des autorisations de contrôle d’accès suivantes activées via Adobe Admin Console :
 
