@@ -3,9 +3,9 @@ title: Connexion CRM The Trade Desk
 description: Activez les profils sur votre compte Trade Desk pour le ciblage et la suppression d'audiences en fonction des données CRM.
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: b9713d5155f89ee895d9fb623088eda77b931d89
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1140'
 ht-degree: 15%
 
 ---
@@ -77,7 +77,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 | Élément | Type | Notes |
 |---------|----------|---------|
 | Type d’exportation | **[!UICONTROL Audience export]** | Vous exportez tous les membres d’une audience avec les identifiants (e-mail ou e-mail haché) utilisés dans la destination Trade Desk. |
-| Fréquence des exportations | **[!UICONTROL Daily Batch]** | Lorsqu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation de l’audience, le profil (les identités) est mis à jour une fois par jour en aval de la plateforme de destination. En savoir plus sur les [&#x200B; exportations par lots &#x200B;](/help/destinations/destination-types.md#file-based). |
+| Fréquence des exportations | **[!UICONTROL Daily Batch]** | Lorsqu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation de l’audience, le profil (les identités) est mis à jour une fois par jour en aval de la plateforme de destination. En savoir plus sur les [ exportations par lots ](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -102,10 +102,15 @@ Lors de la connexion à la destination , la définition d’une politique de gou
 
 ## Activer des audiences vers cette destination {#activate}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_required_mappings_ttdg"
+>title="Jeux de mappages préconfigurés"
+>abstract="Nous avons préconfiguré ces quatre jeux de mappages pour vous. Lorsque vous activez des données dans Trade Desk, les profils qualifiés pour les audiences activées n’ont pas nécessairement besoin que les quatre identités soient présentes sur les profils, car cette destination fonctionnera avec l’une des identités cibles affichées ici."
+
 >[!IMPORTANT]
 > 
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Lisez [Activer les données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers une destination.
 

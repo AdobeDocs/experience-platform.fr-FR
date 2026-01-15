@@ -3,16 +3,16 @@ keywords: publicité ; bing ;
 title: Connexion Microsoft Bing
 description: Avec la destination de connexion Microsoft Bing, vous pouvez exécuter des campagnes numériques de reciblage et d’audience ciblées sur l’ensemble du réseau Microsoft Advertising, y compris l’affichage publicitaire, la recherche et le natif.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: b9713d5155f89ee895d9fb623088eda77b931d89
 workflow-type: tm+mt
-source-wordcount: '851'
-ht-degree: 32%
+source-wordcount: '897'
+ht-degree: 30%
 
 ---
 
 # Connexion [!DNL Microsoft Bing] {#bing-destination}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 
 >[!IMPORTANT]
@@ -33,7 +33,7 @@ ht-degree: 32%
 
 Utilisez la destination [!DNL Microsoft Bing] pour envoyer des données de profil à l’ensemble du [!DNL Microsoft Advertising Network], y compris [!DNL Display Advertising], [!DNL Search] et [!DNL Native].
 
-La destination [!DNL Microsoft Bing] crée des *[!DNL Custom Audiences]* dans Microsoft. Ils sont disponibles dans les [!DNL Microsoft Search Network] et [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]), comme indiqué dans la documentation Microsoft Advertising [&#128279;](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
+La destination [!DNL Microsoft Bing] crée des *[!DNL Custom Audiences]* dans Microsoft. Ils sont disponibles dans les [!DNL Microsoft Search Network] et [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]), comme indiqué dans la documentation Microsoft Advertising [](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
 
 Pour envoyer des données de profil à [!DNL Microsoft Bing], vous devez d’abord vous connecter à la destination .
 
@@ -114,6 +114,11 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >id="platform_destinations_bing_mapping_id"
 >title="Identifiant de mappage"
 >abstract="Saisissez l’identifiant numérique de l’audience Bing auquel vous souhaitez mapper le segment sélectionné. Si le [!UICONTROL Mapping ID] fourni ne correspond pas à un ID d&#39;audience dans la destination Bing, vous ne verrez pas les données d&#39;audience attendues dans votre compte Bing."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_required_mappings_bing"
+>title="Jeux de mappages préconfigurés"
+>abstract="Nous avons préconfiguré ces deux jeux de mappages pour vous. Lorsque vous activez des données vers Microsoft Bing, les profils qualifiés pour les audiences activées doivent avoir au moins une identité ECID associée à leur profil, afin de pouvoir être exportés vers la destination."
 
 >[!IMPORTANT]
 > 
