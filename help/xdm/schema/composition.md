@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Principes de base de la composition des schémas
 description: Découvrez les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques pour la composition de schémas dans Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: dcb6770d739d0da5cfa339584a769f5311a8c7e1
+source-git-commit: 5b59d491834854829a89a240ccd612367cf558d4
 workflow-type: tm+mt
-source-wordcount: '4308'
-ht-degree: 25%
+source-wordcount: '4291'
+ht-degree: 24%
 
 ---
 
 # Principes de base de la composition des schémas
 
-Découvrez les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques pour la composition de schémas dans Adobe Experience Platform. Pour obtenir des informations générales sur XDM et son utilisation dans [!DNL Experience Platform], reportez-vous à la présentation du système [XDM](../home.md).
+Découvrez les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques pour la composition de schémas dans Adobe Experience Platform. Pour obtenir des informations générales sur XDM et son utilisation dans Experience Platform, consultez la [ présentation du système XDM ](../home.md).
 
 ## Compréhension des schémas {#understanding-schemas}
 
@@ -44,7 +44,7 @@ Les données pouvant être utilisées dans Experience Platform sont regroupées
 * **Enregistrer les données** : fournit des informations sur les attributs d’un sujet. Un sujet peut être une organisation ou un individu.
 * **Données de série temporelle** : fournit un instantané du système au moment où une action a été entreprise directement ou indirectement par un objet d’enregistrement.
 
-Tous les schémas XDM décrivent des données pouvant être catégorisées en tant qu’enregistrement ou série temporelle. Le comportement des données d’un schéma est défini par la classe du schéma attribuée à celui-ci lorsqu’il est créé pour la première fois. Les classes XDM sont décrites en détail par la suite dans ce document.
+Tous les schémas XDM décrivent des données pouvant être catégorisées en tant qu’enregistrement ou série temporelle. Le comportement des données d’un schéma est défini par la classe du schéma attribuée à ce dernier lors de sa création initiale.
 
 Les schémas d’enregistrement et de série temporelle contiennent tous deux une carte des identités (`xdm:identityMap`). Ce champ contient la représentation de l’identité d’un objet tiré des champs marqués comme « Identité » décrit à la section suivante.
 
@@ -61,7 +61,7 @@ Pour faciliter ce processus, les champs clés de vos schémas peuvent être marq
 
 Les champs généralement désignés comme champs « [!UICONTROL Identity] » sont les suivants : adresse e-mail, numéro de téléphone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=fr), identifiant CRM ou d’autres champs d’identification uniques. Tenez compte des identifiants uniques spécifiques à votre organisation, car il peut également s’agir de bons champs « [!UICONTROL Identity] ».
 
-Pour en savoir plus sur la manière dont les informations d’identité peuvent vous aider à proposer des expériences digitales à vos clients, consultez la [&#x200B; présentation d’Identity Service](../../identity-service/home.md). Consultez le document des bonnes pratiques de modélisation des données pour obtenir des [&#x200B; sur l’utilisation des identités lors de la création d’un schéma](./best-practices.md#data-validation-fields).
+Pour en savoir plus sur la manière dont les informations d’identité peuvent vous aider à proposer des expériences digitales à vos clients, consultez la [ présentation d’Identity Service](../../identity-service/home.md). Consultez le document des bonnes pratiques de modélisation des données pour obtenir des [ sur l’utilisation des identités lors de la création d’un schéma](./best-practices.md#data-validation-fields).
 
 Il existe deux manières d’envoyer des données d’identité à Experience Platform :
 
@@ -78,7 +78,7 @@ L’inconvénient principal de l’utilisation de `identityMap` est que les vale
 >
 >Un schéma qui utilise `identityMap` peut être utilisé comme schéma source dans une relation, mais ne peut pas être utilisé comme schéma de référence. En effet, tous les schémas de référence doivent avoir une identité visible qui peut être mappée dans un champ de référence au sein du schéma source. Reportez-vous au guide de l’interface utilisateur sur [les relations](../tutorials/relationship-ui.md) pour plus d’informations sur les exigences des schémas source et de référence.
 
-Cependant, les mappages d’identités peuvent s’avérer utiles s’il existe un nombre variable d’identités pour un schéma ou si vous importez des données provenant de sources qui stockent des identités ensemble (telles que [!DNL Airship] ou Adobe Audience Manager). En outre, des mappages d’identité sont requis si vous utilisez le Adobe Experience Platform Mobile SDK [&#128279;](https://developer.adobe.com/client-sdks/home/).
+Cependant, les mappages d’identités peuvent s’avérer utiles s’il existe un nombre variable d’identités pour un schéma ou si vous importez des données provenant de sources qui stockent des identités ensemble (telles que [!DNL Airship] ou Adobe Audience Manager). En outre, des mappages d’identité sont requis si vous utilisez [Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/).
 
 Voici un exemple de mappage d’identités simple :
 
@@ -109,11 +109,11 @@ Voici un exemple de mappage d’identités simple :
 }
 ```
 
-Comme le montre l’exemple ci-dessus, chaque clé de l’objet `identityMap` représente un espace de noms d’identité. La valeur de chaque clé est un tableau d’objets représentant les valeurs d’identité (`id`) de l’espace de noms correspondant. Reportez-vous à la documentation [!DNL Identity Service] pour obtenir une [&#x200B; liste des espaces de noms d’identité standard](../../identity-service/troubleshooting-guide.md#standard-namespaces) reconnus par les applications Adobe.
+Comme le montre l’exemple ci-dessus, chaque clé de l’objet `identityMap` représente un espace de noms d’identité. La valeur de chaque clé est un tableau d’objets représentant les valeurs d’identité (`id`) de l’espace de noms correspondant. Reportez-vous à la documentation [!DNL Identity Service] pour obtenir une [ liste des espaces de noms d’identité standard](../../identity-service/troubleshooting-guide.md#standard-namespaces) reconnus par les applications Adobe.
 
 >[!NOTE]
 >
->Une valeur booléenne indiquant si la valeur est une identité principale (`primary`) peut également être fournie pour chaque valeur d’identité. Il vous suffit de définir des identités principales pour les schémas destinés à être utilisés dans [!DNL Real-Time Customer Profile]. Pour plus d’informations, consultez la section sur les [schémas d’union](#union).
+>Une valeur booléenne indiquant si la valeur est une identité principale (`primary`) peut également être fournie pour chaque valeur d’identité. Il vous suffit de définir des identités principales pour les schémas destinés à être utilisés dans [!DNL Real-Time Customer Profile].
 
 ### Principes d’évolution des schémas {#evolution}
 
@@ -123,7 +123,7 @@ Le maintien de la rétrocompatibilité étant essentiel à l’évolution des sc
 
 >[!NOTE]
 >
->Vous ne pouvez introduire une modification avec rupture dans un schéma que s’il n’a pas encore été utilisé pour ingérer des données dans Experience Platform et n’a pas été activé pour une utilisation dans le profil client en temps réel. Cependant, une fois que le schéma a été utilisé dans [!DNL Experience Platform], il doit respecter la politique de contrôle de version additif.
+>Vous ne pouvez introduire une modification avec rupture dans un schéma que s’il n’a pas encore été utilisé pour ingérer des données dans Experience Platform et n’a pas été activé pour une utilisation dans le profil client en temps réel. Cependant, une fois le schéma utilisé dans Experience Platform, il doit respecter la politique de contrôle de version additif.
 
 Le tableau suivant détaille les modifications prises en charge lors de la modification de schémas, de groupes de champs et de types de données :
 
@@ -148,22 +148,22 @@ Si un champ a été utilisé pour ingérer des données et n’a pas été défi
 Lorsque vous définissez un champ précédemment facultatif selon les besoins, tenez compte des points suivants :
 
 1. Si vous interrogez des données historiques et que vous écrivez les résultats dans un nouveau jeu de données, certaines lignes échoueront, car elles contiennent des valeurs nulles pour le champ obligatoire.
-1. Si le champ participe au [profil client en temps réel](../../profile/home.md) et que vous exportez des données avant de le définir selon les besoins, il peut être nul pour certains profils.
+1. Si le champ participe au profil client en temps réel et que vous exportez des données avant de le définir selon les besoins, il peut être nul pour certains profils.
 1. Vous pouvez utiliser l’API Schema Registry pour afficher un journal des modifications horodaté pour toutes les ressources XDM d’Experience Platform, y compris les nouveaux champs obligatoires. Pour plus d’informations, consultez le guide sur le point d’entrée [journal d’audit](../api/audit-log.md).
 
 ### Schémas et ingestion de données
 
-Pour ingérer des données dans Experience Platform, vous devez d’abord créer un jeu de données. Les jeux de données sont les blocs de création de la transformation des données et du suivi des [[!DNL Catalog Service]](../../catalog/home.md). Ils représentent généralement des tables ou des fichiers contenant des données ingérées. Tous les jeux de données sont basés sur des schémas XDM existants qui fournissent des contraintes sur ce que les données ingérées doivent contenir et sur la manière dont elles doivent être structurées. Pour plus d’informations, consultez la présentation d’[Adobe Experience Platform Data Ingestion](../../ingestion/home.md).
+Pour ingérer des données dans Experience Platform, vous devez d’abord créer un jeu de données. Les jeux de données sont les blocs de création de la transformation des données et du suivi des [[!DNL Catalog Service]](../../catalog/home.md). Ils représentent généralement des tables ou des fichiers contenant des données ingérées. Tous les jeux de données sont basés sur des schémas XDM existants qui fournissent des contraintes sur ce que les données ingérées doivent contenir et sur la manière dont elles doivent être structurées. Pour plus d’informations, consultez la présentation d’[Experience Platform Data Ingestion](../../ingestion/home.md).
 
 ## Blocs de création d’un schéma {#schema-building-blocks}
 
-Experience Platform utilise une approche de composition dans laquelle des blocs de création standard sont associés pour créer des schémas. Cette approche favorise la réutilisation des composants existants et stimule la normalisation dans l’ensemble du secteur afin de prendre en charge les schémas de fournisseur et les composants dans [!DNL Experience Platform].
+Experience Platform utilise une approche de composition dans laquelle des blocs de création standard sont associés pour créer des schémas. Cette approche favorise la réutilisation des composants existants et stimule la normalisation dans l’ensemble du secteur afin de prendre en charge les schémas de fournisseur et les composants dans Experience Platform.
 
 Les schémas sont composés à l’aide de la formule suivante :
 
-**Classe + Groupe de champs de schéma&ast; = Schéma XDM**
+**Classe + Groupe de champs de schéma&amp;ast; = Schéma XDM**
 
-&ast;Un schéma est composé d’une classe et de zéro ou de plusieurs groupes de champs de schéma. Cela signifie que vous pouvez composer un schéma de jeu de données sans utiliser de groupes de champs.
+&amp;ast;Un schéma est composé d’une classe et de zéro ou de plusieurs groupes de champs de schéma. Cela signifie que vous pouvez composer un schéma de jeu de données sans utiliser de groupes de champs.
 
 ### Classe {#class}
 
@@ -179,7 +179,7 @@ Les schémas sont composés à l’aide de la formule suivante :
 
 La composition d’un schéma commence par l’attribution d’une classe. Les classes définissent les aspects comportementaux des données que le schéma contiendra (enregistrement ou série temporelle). En outre, les classes décrivent le plus petit de nombres de propriétés communes que tous les schémas basés sur cette classe doivent inclure et fournir une manière de fusionner plusieurs jeux de données compatibles.
 
-La classe d’un schéma détermine les groupes de champs éligibles à l’utilisation dans ce schéma. Ce point est abordé plus en détail dans la [section suivante](#field-group).
+La classe d’un schéma détermine les groupes de champs éligibles à l’utilisation dans ce schéma.
 
 Adobe fournit plusieurs classes XDM standard (« principales »). Deux de ces classes, [!DNL XDM Individual Profile] et [!DNL XDM ExperienceEvent], sont requises pour presque tous les processus Experience Platform en aval. Outre ces classes principales, vous pouvez également créer vos propres classes personnalisées pour décrire des cas d’utilisation plus spécifiques pour votre organisation. Les classes personnalisées sont définies par une organisation lorsqu’aucune classe principale définie par Adobe n’est disponible pour décrire un cas d’utilisation unique.
 
@@ -211,11 +211,11 @@ Par exemple, pour capturer des détails tels que « [!UICONTROL First Name] » e
 
 >[!NOTE]
 >
->Il est vivement recommandé d’utiliser des groupes de champs standard chaque fois que cela est possible dans vos schémas, car ces champs sont compris implicitement par les services Experience Platform et fournissent une meilleure cohérence lorsqu’ils sont utilisés sur [!DNL Experience Platform] composants.
+>Il est vivement recommandé d’utiliser des groupes de champs standard chaque fois que cela est possible dans vos schémas, car ces champs sont compris implicitement par les services Experience Platform et fournissent une meilleure cohérence lorsqu’ils sont utilisés sur les composants Experience Platform.
 >
->Les champs fournis par les composants standard (tels que « Prénom » et « Adresse e-mail ») contiennent des connotations supplémentaires au-delà des types de champ scalaire de base. Ils indiquent [!DNL Experience Platform] que tous les champs partageant le même type de données se comporteront de la même manière. On peut faire confiance à ce comportement pour être cohérent, quelle que soit l’origine des données ou le service dans lequel [!DNL Experience Platform] les données sont utilisées.
+>Les champs fournis par les composants standard (tels que « Prénom » et « Adresse e-mail ») contiennent des connotations ajoutées au-delà des types de champs scalaires de base. Ils indiquent à Experience Platform que tous les champs partageant le même type de données se comporteront de la même manière. Ce comportement peut s’avérer cohérent quelle que soit la provenance des données ou le service Experience Platform dans lequel les données sont utilisées.
 
-N’oubliez pas que les schémas sont composés de « zéro ou plusieurs » groupes de champs, ce qui signifie que vous pouvez composer un schéma valide sans utiliser aucun groupe de champs.
+N’oubliez pas que les schémas sont composés de groupes de champs « zéro ou plus ». Cela signifie que vous pouvez composer un schéma valide sans utiliser de groupes de champs.
 
 La capture d’écran suivante montre comment les groupes de champs sont représentés dans l’interface utilisateur d’Experience Platform. Dans cet exemple, un seul groupe de champs ([!UICONTROL Demographic Details]) est ajouté à un schéma, ce qui fournit un regroupement de champs à la structure du schéma.
 
@@ -241,15 +241,15 @@ La capture d’écran suivante montre comment les types de données sont représ
 
 ![Diagramme dans l’éditeur de schémas pour une personne individuelle avec l’objet Nom complet et les attributs mis en surbrillance.](../images/schema-composition/data-type.png)
 
-Pour obtenir la liste la plus récente des types de données XDM standard disponibles, reportez-vous au [référentiel](https://github.com/adobe/xdm/tree/master/components/datatypes) XDM officiel. Vous pouvez également vous référer au guide sur l’exploration [des composants](../ui/explore.md) XDM si vous préférez afficher les ressources dans l’interface utilisateur.
+Pour obtenir la liste la plus récente des types de données XDM standard disponibles, reportez-vous au [référentiel XDM officiel](https://github.com/adobe/xdm/tree/master/components/datatypes). Si vous préférez afficher les ressources dans l’interface utilisateur, vous pouvez également consulter le guide sur l’[exploration des composants XDM](../ui/explore.md).
 
 >[!NOTE]
 >
-> Les types de données XDM standard évoluent constamment et certains types de données sont obsolètes. Pour obtenir la liste la plus récente des types de données obsolètes, reportez-vous à la section [types de données obsolètes](https://github.com/adobe/xdm/tree/master/components/datatypes/deprecated) dans le référentiel XDM officiel.
+> Les types de données XDM standard évoluent constamment et certains types de données ont été abandonnés. Pour obtenir la liste la plus mise à jour des types de données obsolètes, reportez-vous à la section [types de données obsolètes](https://github.com/adobe/xdm/tree/master/components/datatypes/deprecated) dans le référentiel XDM officiel.
 
 ### Champ {#field}
 
-Un champ est le bloc de création le plus basique d’un schéma. Les champs fournissent des contraintes concernant le type de données qu’ils peuvent contenir en définissant un type de données spécifique. Ces types de données de base définissent un seul champ, tandis que les [types de données](#data-type) mentionnés précédemment vous permettent de définir plusieurs sous-champs et de réutiliser la même structure à champs multiples dans différents schémas. Donc, en plus de définir le « type de données » d’un champ comme l’un des types de données défini dans le registre, Experience Platform prend en charge des types scalaires de base comme :
+Un champ est le bloc de création le plus basique d’un schéma. Les champs fournissent des contraintes concernant le type de données qu’ils peuvent contenir en définissant un type de données spécifique. Ces types de données de base définissent un seul champ, tandis que les types de données mentionnés précédemment vous permettent de définir plusieurs sous-champs et de réutiliser la même structure à champs multiples dans différents schémas. Donc, en plus de définir le « type de données » d’un champ comme l’un des types de données défini dans le registre, Experience Platform prend en charge des types scalaires de base comme :
 
 * Chaîne
 * Entier
@@ -278,7 +278,7 @@ Les plages valides de ces types scalaires peuvent être limitées davantage à c
 
 ## Exemple de composition {#composition-example}
 
-Les schémas sont créés à l’aide d’un modèle de composition et représentent le format et la structure des données à ingérer dans [!DNL Experience Platform]. Comme mentionné précédemment, ces schémas sont composés d’une classe et de zéro ou plusieurs groupes de champs compatibles avec cette classe.
+Les schémas sont créés à l’aide d’un modèle de composition et représentent le format et la structure des données à ingérer dans Experience Platform. Comme mentionné précédemment, ces schémas sont composés d’une classe et de zéro ou plusieurs groupes de champs compatibles avec cette classe.
 
 Par exemple, un schéma décrivant les achats effectués dans un magasin de vente au détail peut être appelé « [!UICONTROL Store Transactions] ». Le schéma implémente la classe [!DNL XDM ExperienceEvent] combinée avec le groupe de champs [!UICONTROL Commerce] standard et un groupe de champs [!UICONTROL Product Info] défini par l’utilisateur.
 
@@ -294,7 +294,7 @@ Experience Platform vous permet non seulement de composer des schémas pour des
 
 ![Diagramme de flux de schéma d’union qui décrit les champs qui les composent.](../images/schema-composition/union.png)
 
-En activant un schéma à utiliser avec [!DNL Real-Time Customer Profile], il est inclus dans l’union pour ce type de classe. [!DNL Profile] fournit des profils fiables et centralisés des attributs du client ainsi qu’un compte horodaté de chaque événement que le client a eu sur un système intégré à [!DNL Experience Platform]. [!DNL Profile] utilise la vue union pour représenter ces données et fournir une vue holistique de chaque client individuel.
+En activant un schéma à utiliser avec [!DNL Real-Time Customer Profile], il est inclus dans l’union pour ce type de classe. [!DNL Profile] fournit des profils robustes et centralisés des attributs du client ainsi qu’un compte horodaté de chaque événement que le client a eu sur un système intégré à Experience Platform. [!DNL Profile] utilise la vue union pour représenter ces données et fournir une vue holistique de chaque client individuel.
 
 Pour plus d’informations sur l’utilisation de [!DNL Profile], consultez la [présentation du profil client en temps réel](../../profile/home.md).
 
@@ -304,10 +304,10 @@ Tous les fichiers de données ingérés dans Experience Platform doivent être 
 
 ## Schémas pour les audiences externes
 
-Si vous apportez des audiences de systèmes externes dans Experience Platform, vous devez utiliser les composants suivants pour les capturer dans vos schémas :
+Si vous importez des audiences de systèmes externes dans Experience Platform, vous devez utiliser les composants suivants pour les capturer dans vos schémas :
 
-* [[!UICONTROL Segment definition] class](../classes/segment-definition.md) : utilisez cette classe standard pour capturer les attributs clés d’une définition de segment externe.
-* [[!UICONTROL Segment Membership Details] le groupe de champs &#x200B;](../field-groups/profile/segmentation.md) : ajoutez ce groupe de champs à votre schéma [!UICONTROL XDM Individual Profile] pour associer des profils client à des audiences spécifiques.
+* [[!UICONTROL Segment definition] class ](../classes/segment-definition.md) : utilisez cette classe standard pour capturer les attributs clés d’une définition de segment externe.
+* [[!UICONTROL Segment Membership Details] le groupe de champs ](../field-groups/profile/segmentation.md) : ajoutez ce groupe de champs à votre schéma [!UICONTROL XDM Individual Profile] pour associer des profils client à des audiences spécifiques.
 
 ## Étapes suivantes
 
@@ -318,7 +318,7 @@ Pour passer en revue la structure des deux classes XDM principales et leurs grou
 * [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
 * [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
-Le [!DNL Schema Registry] permet d’accéder au [!DNL Schema Library] dans Adobe Experience Platform et fournit une interface utilisateur et une API RESTful à partir desquelles toutes les ressources de bibliothèque disponibles sont accessibles. Le [!DNL Schema Library] contient les ressources du secteur définies par Adobe, les ressources du fournisseur définies par les partenaires Experience Platform, ainsi que les classes, groupes de champs, types de données et schémas composés par des membres de votre organisation.
+Le [!DNL Schema Registry] permet d’accéder au [!DNL Schema Library] dans Experience Platform et fournit une interface utilisateur et une API RESTful à partir desquelles toutes les ressources de bibliothèque disponibles sont accessibles. Le [!DNL Schema Library] contient les ressources du secteur définies par Adobe, les ressources du fournisseur définies par les partenaires Experience Platform, ainsi que les classes, groupes de champs, types de données et schémas composés par des membres de votre organisation.
 
 Pour commencer à composer un schéma à l’aide de l’interface d’utilisation, suivez le [tutoriel de l’éditeur de schémas](../tutorials/create-schema-ui.md) pour créer le schéma « Loyalty Members » mentionné tout au long de ce document.
 
@@ -364,7 +364,7 @@ Les avantages et inconvénients de l’utilisation d’objets sur des champs à 
 **Inconvénients** :
 
 * Les champs deviennent plus imbriqués.
-* Lors de l’utilisation de [Adobe Experience Platform Query Service](../../query-service/home.md), des chaînes de référence plus longues doivent être fournies aux champs de requête imbriqués dans des objets.
+* Lors de l’utilisation d’Experience Platform Query Service [](../../query-service/home.md), des chaînes de référence plus longues doivent être fournies aux champs de requête imbriqués dans des objets.
 
 #### Champs à structure libre
 
