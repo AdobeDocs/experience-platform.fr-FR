@@ -1,12 +1,12 @@
 ---
 title: Audiences du compte
 description: Découvrez comment créer et utiliser des audiences de compte pour cibler les profils de compte dans les destinations en aval.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
+source-git-commit: 6cb5afb78502c34e0eba99af29d7a67119b7e05a
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1461'
 ht-degree: 23%
 
 ---
@@ -23,7 +23,7 @@ Les audiences de compte peuvent être utilisées comme entrée pour les destinat
 
 >[!NOTE]
 >
->Dans le cadre de la mise à niveau de l’architecture B2B, les estimations de taille d’audience pour les audiences avec des entités B2B sont désormais calculées avec une précision exacte. Ces estimations sont disponibles lors de la prévisualisation et fournissent des informations plus précises et plus fiables pour les audiences qui impliquent des relations B2B complexes. <br>Pour plus d’informations, consultez la présentation des mises à niveau de l’architecture de Real-Time CDP B2B edition [&#128279;](../../rtcdp/b2b-architecture-upgrade.md).
+>Dans le cadre de la mise à niveau de l’architecture B2B, les estimations de taille d’audience pour les audiences avec des entités B2B sont désormais calculées avec une précision exacte. Ces estimations sont disponibles lors de la prévisualisation et fournissent des informations plus précises et plus fiables pour les audiences qui impliquent des relations B2B complexes. <br>Pour plus d’informations, consultez la présentation des mises à niveau de l’architecture de Real-Time CDP B2B edition [](../../rtcdp/b2b-architecture-upgrade.md).
 
 ## Terminologie {#terminology}
 
@@ -60,10 +60,6 @@ Pour créer une audience de compte, sélectionnez **[!UICONTROL Create audience]
 Le créateur de segments s’affiche. Les attributs de compte et les audiences s’affichent dans la barre de navigation de gauche. Sous l’onglet [!UICONTROL Attributes] , vous pouvez ajouter des attributs créés par Experience Platform et des attributs personnalisés.
 
 ![Le créateur de segments s’affiche. Notez que seuls les attributs et les audiences s’affichent.](../images/types/account/segment-builder.png)
-
-Lors de la création d’audiences de compte, notez que les événements sont répertoriés sous **[!UICONTROL People]**, plutôt que d’être leur propre onglet, car ces attributs sont associés aux personnes.
-
-![L’emplacement pour rechercher des événements, qui se trouve dans le dossier [!UICONTROL People], est mis en surbrillance.](../images/types/account/attributes.png)
 
 Sous l’onglet [!UICONTROL Audiences] , vous pouvez ajouter des audiences basées sur les personnes créées précédemment à partir desquelles vous pouvez créer votre propre audience de compte.
 
@@ -208,8 +204,8 @@ Lors de l’utilisation des audiences de compte, l’audience **doit** doit resp
    - « Entité croisée » désigne le fait de changer d’entités au sein de votre audience. Vous pouvez notamment passer d’un compte à une personne et d’une personne à une liste marketing.
 - Le nombre maximal de valeurs pouvant être cochées pour un champ est de **50**.
    - Par exemple, si vous disposez d’un champ « Nom de ville », vous pouvez comparer cette valeur à 50 noms de ville.
-- Les audiences de compte **impossible** utilisent des événements séquentiels.
 - Les audiences de compte **impossible** utilisent des mappages.
+- Les audiences de compte **impossible** utilisent des événements.
 - La profondeur maximale des tableaux imbriqués est de **5**.
 - Le nombre maximal d’objets imbriqués est de **10**.
 
