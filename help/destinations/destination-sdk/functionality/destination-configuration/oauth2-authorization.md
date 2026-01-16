@@ -2,10 +2,10 @@
 description: Cette page décrit les différents flux d’autorisation OAuth 2 pris en charge par Destination SDK et fournit des instructions pour configurer l’autorisation OAuth 2 pour la destination.
 title: Autorisation OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 0cde918c693d06d735397aad721fd3cd5c4e760e
+source-git-commit: 720f599810d119ac4997d24d400199d8efe087c2
 workflow-type: tm+mt
-source-wordcount: '2182'
-ht-degree: 77%
+source-wordcount: '2273'
+ht-degree: 74%
 
 ---
 
@@ -109,7 +109,10 @@ Pour configurer cette méthode d’autorisation pour la destination, ajoutez les
       "refreshTokenUrl": "https://api.moviestar.com/OAuth/refresh_token",
       "clientId": "Experience-Platform-client-id",
       "clientSecret": "Experience-Platform-client-secret",
-      "scope": ["read", "write"]
+      "scope": ["read", "write"],
+      "options": {
+          "useBasicAuth": true 
+      }
     }
   ]
 //...
@@ -126,6 +129,7 @@ Pour configurer cette méthode d’autorisation pour la destination, ajoutez les
 | `clientId` | Chaîne | L’identifiant client que votre système attribue à Adobe Experience Platform. |
 | `clientSecret` | Chaîne | Le secret client que votre système attribue à Adobe Experience Platform. |
 | `scope` | Liste de chaînes | *Facultatif*. Définissez la portée de ce que le jeton d’accès permet à Experience Platform d’effectuer sur vos ressources. Exemple : « lire, écrire ». |
+| `options.useBasicAuth` | Booléen | *Facultatif*. Valeur booléenne qui contrôle la manière dont les informations d’identification du client (identifiant client et secret client) sont envoyées au point d’entrée du jeton du fournisseur OAuth lors de l’échange d’un code d’autorisation pour un jeton d’accès. <ul><li>Si elles sont définies sur `false` ou non définies, les informations d’identification sont envoyées en tant que paramètres `client_id` et `client_secret` dans le corps de la requête POST (comportement par défaut).</li><li>Si ce paramètre est défini sur `true`, les informations d’identification sont envoyées dans l’en-tête du `Authorization` HTTP à l’aide du format d’authentification de base : `Authorization: Basic base64(clientID:clientSecret)`.</li></ul> Définissez `useBasicAuth` sur `true` lorsque votre fournisseur OAuth exige que les informations d’identification du client soient envoyées dans l’en-tête `Authorization` plutôt que dans le corps de la requête. |
 
 {style="table-layout:auto"}
 
