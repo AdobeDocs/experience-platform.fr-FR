@@ -2,10 +2,10 @@
 title: Notes de mise à jour préliminaires d’Experience Platform
 description: Aperçu des dernières notes de mise à jour de Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: de95e9a51c979e9249ddf9ceb262fc521d2b38f4
+source-git-commit: acb8303673c3271794dcda87b149b473328a7a21
 workflow-type: tm+mt
-source-wordcount: '1008'
-ht-degree: 31%
+source-wordcount: '1150'
+ht-degree: 27%
 
 ---
 
@@ -25,52 +25,72 @@ ht-degree: 31%
 >- [Composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/e-release-notes)
 >- [Collaboration dans Real-Time CDP](https://experienceleague.adobe.com/fr/docs/real-time-cdp-collaboration/using/latest)
 
-**Date de publication : octobre 2025**
+**Date de publication : janvier 2026**
 
 Nouvelles fonctionnalités et mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-- [Alertes](#alerts)
+- [Agent Orchestrator](#agent-orchestrator)
 - [Destinations](#destinations)
+- [Profil client en temps réel](#real-time-customer-profile)
+- [Schémas](#schemas)
 - [Service de segmentation](#segmentation-service)
 - [Sources](#sources)
 
-## Alertes {#alerts}
+## Agent Orchestrator {#agent-orchestrator}
 
-Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités Experience Platform. Vous pouvez vous abonner à différentes règles d’alerte à l’aide de l’onglet [!UICONTROL Alertes] dans l’interface d’utilisation d’Experience Platform. Vous pouvez aussi choisir de recevoir les messages d’alerte dans l’UI elle-même ou par le biais de notifications par e-mail.
+Agent Orchestrator vous permet de créer et de déployer des agents optimisés par l’IA qui peuvent automatiser les workflows et interagir avec les clients sur plusieurs canaux.
 
 **Fonctionnalités nouvelles ou mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Alerte relative au taux d’échec de destination | Une nouvelle alerte a été ajoutée pour les destinations : **Le taux d’échec de la destination dépasse le seuil**. Cette alerte vous avertit lorsque le nombre d’enregistrements ayant échoué lors de l’activation des données a dépassé le seuil autorisé, ce qui vous permet de répondre rapidement aux problèmes d’activation. |
+| Requête d’essai pour Agent Orchestrator | Agent Orchestrator propose désormais une version d’essai, qui permet aux clients d’explorer et de tester le service avant de s’engager à effectuer un achat complet. Cette option d’essai avant achat permet aux entreprises d’évaluer les fonctionnalités d’Agent Orchestrator, y compris les compétences et les fonctionnalités d’orchestration, dans leur propre environnement. L’essai offre une expérience pratique dans la création d’agents optimisés par l’IA et la compréhension de la manière dont ils peuvent être intégrés dans les workflows existants. |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur les alertes, consultez la [[!DNL Observability Insights] vue d’ensemble](../observability/home.md).
+Pour plus d’informations, consultez la [documentation d’Agent Orchestrator](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
 
 ## Destinations {#destinations}
 
 Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 
-**Fonctionnalités nouvelles ou mises à jour**
-
-| Destination | Description |
-| --- | --- |
-| [!DNL AdForm] | Utilisez cette destination pour envoyer des audiences Adobe Real-Time CDP à [!DNL AdForm] pour activation en fonction de l’Experience Cloud ID (ECID) et de l’ID Fusion de [!DNL AdForm]. ID Fusion de [!DNL AdForm] est un service de résolution d’ID qui vous permet d’activer vos audiences propriétaires en fonction de l’Experience Cloud ID (ECID). |
-| [!DNL Amazon Ads] | Nous avons ajouté la prise en charge d’identifiants personnels supplémentaires tels que `firstName`, `lastName`, `street`, `city`, `state`, `zip` et `country`. Le mappage de ces champs en tant qu’identités cibles peut améliorer les taux de correspondance d’audience. |
-| [!DNL Snowflake Batch] (Disponibilité limitée) | Créez un partage de données Live [!DNL Snowflake] pour recevoir des mises à jour quotidiennes de l’audience directement sous forme de tables partagées dans votre compte . Cette intégration est actuellement disponible pour les organisations clientes configurées dans la région VA7. |
-| [!DNL Snowflake Streaming] (Disponibilité limitée) | Créez un partage de données Live [!DNL Snowflake] pour recevoir des mises à jour d’audience en flux continu directement sous forme de tables partagées dans votre compte . Cette intégration est actuellement disponible pour les organisations clientes configurées dans la région VA7. |
-
 **Fonctionnalité nouvelle ou mise à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Prise en charge du chiffrement côté serveur [!DNL AES256] dans les destinations [!DNL Amazon S3] | Les destinations [!DNL Amazon S3] prennent désormais en charge [!DNL AES256] chiffrement côté serveur, ce qui renforce la sécurité des données exportées. Vous pouvez configurer cette méthode de chiffrement lors de la configuration ou de la mise à jour de vos connexions de destination [!DNL Amazon S3], en veillant à ce que vos données soient chiffrées au repos à l’aide d’algorithmes de chiffrement [!DNL AES256] standard. Pour plus d’informations, consultez la [[!DNL Amazon] documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingEncryption.html). |
-| [Plusieurs nouvelles destinations qui prennent en charge la surveillance au niveau de l’audience](../dataflows/ui/monitor-destinations.md#audience-level-view) | Les destinations suivantes prennent désormais en charge la surveillance au niveau de l’audience : <ul><li>[!DNL Airship Tags]</li><li>[!DNL Salesforce Marketing Cloud] (API)</li><li>[!DNL Marketo Engage]</li><li>[!DNL Microsoft Bing]</li><li>(V1) [!DNL Pega CDH Realtime Audience]</li><li>(V2) [!DNL Pega CDH Realtime Audience]</li><li>Engagement de compte [!DNL Salesforce Marketing Cloud]</li><li>[!DNL The Trade Desk]</li></ul> |
-| Correctif des mécanismes de sécurisation de l’exportation des jeux de données | Un correctif a été implémenté pour les mécanismes de sécurisation d’exportation des jeux de données. Auparavant, certains jeux de données qui incluaient une colonne d’horodatage mais n’étaient _pas_ basés sur le schéma XDM Experience Events étaient incorrectement traités comme des jeux de données Experience Events, ce qui limitait les exportations à un intervalle de recherche en amont de 365 jours. Le mécanisme de sécurisation de recherche en amont documenté de 365 jours s’applique désormais exclusivement aux jeux de données d’événements d’expérience. Les jeux de données utilisant un schéma autre que le schéma XDM Experience Events sont désormais régis par le mécanisme de sécurisation de 10 milliards d’enregistrements. Certains clients peuvent voir des nombres d’exportation accrus pour les jeux de données qui se trouvaient par erreur sous l’intervalle de recherche en amont de 365 jours. Vous pouvez ainsi exporter des jeux de données pour les workflows prédictifs disposant d’un long intervalle de recherche en amont. Pour plus d’informations, consultez la section [&#x200B; Mécanismes de sécurisation d’exportation de jeux de données &#x200B;](../destinations/guardrails.md#dataset-exports). |
-| Rapports améliorés au niveau de l’audience pour les destinations d’entreprise | Amélioration de la logique de création de rapports au niveau des audiences pour les destinations d’entreprise. Après cette version, les clients verront des chiffres de création de rapports d’audience plus précis qui incluent uniquement les audiences pertinentes pour la destination sélectionnée. Cet ajustement de surveillance garantit que les rapports incluent uniquement les audiences mappées sur le flux de données, ce qui fournit des informations plus claires sur l’activation réelle des données. Cela n’a aucune incidence sur la quantité de données activées. Il s’agit simplement d’une amélioration de la surveillance visant à améliorer la précision des rapports. |
+| Mise à jour des limites du mécanisme de sécurisation pour la destination Adobe Target | Le nombre maximal d’audiences pouvant être mappées à une seule destination Adobe Target est passé de 50 à 250. Cela aligne Adobe Target sur la limite d’audience standard pour d’autres destinations, offrant ainsi une plus grande flexibilité pour les workflows d’activation des audiences. Les clients peuvent désormais activer davantage d’audiences vers les destinations Adobe Target sans avoir à créer plusieurs flux de données. |
+
+{style="table-layout:auto"}
 
 Pour plus d’informations, consultez la [vue d’ensemble des destinations](../destinations/home.md).
+
+## Profil client en temps réel {#real-time-customer-profile}
+
+Le profil client en temps réel offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le profil vous permet de consolider vos données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Application de la capacité de diffusion en continu | Experience Platform applique désormais les capacités de débit en flux continu pour le profil client en temps réel et le service d’identités. Lorsque les clients dépassent leur capacité de diffusion en continu convenue, les données sont placées en file d’attente et traitées selon le principe du premier entré, premier sorti. Cela garantit des performances système prévisibles et empêche les violations de capacité d’avoir un impact sur la qualité de l’ingestion des données. Remarques importantes : les upserts en flux continu ne seront pas disponibles sur le lac de données lorsque la capacité est dépassée. Cette application ne s’applique pas aux clients disposant de licences Adobe Journey Optimizer et les données placées en file d’attente seront traitées de manière séquentielle une fois que la capacité sera disponible. |
+| Obsolescence de l’accès à l’API pour Real-Time CDP Prime | L’accès aux API pour les événements d’expérience est désormais obsolète pour tous les clients Real-Time CDP Prime. Cette modification affecte la possibilité d’interroger les événements d’expérience directement via l’API. Les clients Real-Time CDP Ultimate peuvent demander une exception par le biais d’un processus d’exception formel pour activer l’accès à l’API des événements d’expérience, si nécessaire, pour leurs cas d’utilisation. Cette obsolescence permet d’optimiser les performances du système et s’aligne sur les bonnes pratiques pour les modèles d’accès aux données. |
+| Surveillance de l’exécution du flux de données | Vous pouvez désormais surveiller la progression et la préparation des exécutions de flux de données dans Profile. |
+
+{style="table-layout:auto"}
+
+Pour plus d’informations, consultez la [[!DNL Real-Time Customer Profile] vue d’ensemble](../profile/home.md).
+
+## Schémas {#schemas}
+
+Experience Platform utilise des schémas pour décrire la structure des données de manière cohérente et réutilisable. En définissant les données de manière cohérente sur l’ensemble des systèmes, il est plus simple de leur donner du sens et donc d’en tirer profit. Les schémas sont composés d’une classe de base et de zéro ou plusieurs groupes de champs de schéma.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Modernisation de l’inventaire des schémas avec la recherche, le filtre, les balises et les dossiers | Modernisation de la page de navigation des schémas afin d’améliorer les fonctionnalités d’organisation et de découverte. Les nouvelles fonctionnalités comprennent des options de recherche et de filtrage avancées, la prise en charge de balises et de dossiers générés par l’utilisateur pour organiser les schémas, ainsi que des actions intégrées pour rationaliser les workflows. Les principales améliorations incluent : des colonnes mises à jour (nom, classe, jeux de données, identités, relations, activer pour le profil, comportement, type de schéma, balises, date de création, dernière modification), des filtres avancés (afficher les profils, type de schéma, classe, a une balise, créé par, date de création, date de modification, a une identité principale, a une relation, espace de noms d’identité de Principal), des actions intégrées (modifier, supprimer, appliquer des libellés, créer un jeu de données pour les schémas non relationnels, gérer les balises, déplacer vers un dossier, ajouter au package, copier la structure JSON, télécharger un fichier d’exemple) et la possibilité d’organiser les schémas à l’aide de balises et de dossiers. Ces améliorations offrent une visibilité complète sur les ressources de schéma et permettent une gestion plus efficace des schémas au niveau du sandbox. |
+
+Pour plus d’informations, consultez la [[!DNL Schemas] vue d’ensemble](../xdm/home.md).
 
 ## Service de segmentation {#segmentation-service}
 
@@ -81,6 +101,7 @@ Pour plus d’informations, consultez la [vue d’ensemble des destinations](../
 | Fonctionnalité | Description |
 | ------- | ----------- |
 | Surveillance de la segmentation en flux continu | La surveillance en temps réel de la segmentation en flux continu offre une transparence sur les mesures de taux d’évaluation, de latence et de qualité des données au niveau des sandbox, des jeux de données et de l’audience. Cela participe à des alertes proactives et à des informations exploitables pour aider les ingénieures et ingénieurs de données à identifier les violations de capacité et les problèmes d’ingestion. Les mesures de surveillance incluent le taux d’évaluation, la latence d’ingestion P95, ainsi que les enregistrements reçus, évalués, en échec et ignorés. Les fonctionnalités d’affichage par jeu de données et d’affichage par audience offrent une visibilité complète sur les nouveaux profils qualifiés et disqualifiés. |
+| Actualisation de la TTL de l’audience externe | Les audiences externes (telles que les chargements de fichiers CSV) prennent désormais en charge une fonctionnalité d’actualisation forcée pour les paramètres de durée de vie (TTL). Cette fonctionnalité permet aux utilisateurs d’actualiser manuellement l’expiration de la TTL pour les audiences externes, offrant ainsi un meilleur contrôle sur la gestion du cycle de vie des audiences. Cela s’avère particulièrement utile pour les audiences qui doivent persister au-delà de leur période de TTL initiale ou qui nécessitent une réactivation sans charger à nouveau les données. |
 
 Pour plus d’informations, consultez la [[!DNL Segmentation Service] vue d’ensemble](../segmentation/home.md).
 
@@ -92,13 +113,8 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 
 | Source | Description |
 | --- | --- |
-| [!BADGE Beta &#x200B;]{type=Informative} sources de [!DNL Talon.one] pour les données de fidélité | Utilisez les sources de [!DNL Talon.One] pour ingérer des données de fidélité par lots et par flux dans Experience Platform. Le connecteur prend en charge la diffusion en continu des données de profil, des données de transaction et des données de fidélité, y compris les points gagnés, les points échangés, les points expirés et les données de niveau. |
-
-**Sources mises à jour**
-
-| Source | Description |
-| --- | --- |
-| Disponibilité générale de la source [!DNL Google Ads] (API uniquement) | La version de l’API de la source [!DNL Google Ads] est désormais en disponibilité générale. La documentation de l’API a été mise à jour afin de refléter le fait que la dernière version est désormais `v21` et qu’Experience Platform prend en charge toutes les versions v19 et ultérieures. La version de l’interface utilisateur reste en version bêta et ne prend en charge qu’une ingestion unique. Pour utiliser l’ingestion de données incrémentielle, utilisez l’itinéraire d’API. |
-| Prise en charge du réseau virtuel [!DNL Azure Event Hubs] | Adobe prend désormais explicitement en charge les connexions réseau virtuelles à Azure Event Hubs, ce qui permet le transfert de données sur des réseaux privés plutôt que publics. Placer sur la liste autorisée Les clients peuvent utiliser Experience Platform VNet pour acheminer le trafic Event Hubs de manière privée via la dorsale principale privée Azure, offrant ainsi une sécurité et une conformité améliorées aux workflows d’ingestion de données. |
+| Source [!DNL Oracle Eloqua] V2 | Un nouveau connecteur source [!DNL Oracle Eloqua] est désormais disponible, remplaçant le connecteur obsolète. Ce connecteur mis à jour offre des fonctionnalités améliorées et une fiabilité améliorée pour l’ingestion de données à partir de [!DNL Oracle Eloqua] dans Experience Platform. Les clients qui utilisent le connecteur existant doivent migrer vers la nouvelle mise en œuvre, car les connexions existantes ne fonctionneront plus. Le nouveau connecteur prend en charge toutes les étapes d’installation et de configuration nécessaires pour se connecter à [!DNL Oracle Eloqua] et ingérer des données d’automatisation du marketing. |
+| Source [!DNL Salesforce Marketing Cloud] V2 | Un nouveau connecteur source [!DNL Salesforce Marketing Cloud] est désormais disponible, remplaçant le connecteur obsolète. Ce connecteur mis à jour offre des performances améliorées et des fonctionnalités supplémentaires pour l’ingestion de données à partir de [!DNL Salesforce Marketing Cloud] dans Experience Platform. Les clients qui utilisent le connecteur existant doivent passer à la nouvelle mise en œuvre. Le nouveau connecteur comprend des instructions de configuration complètes pour la connexion à [!DNL Salesforce Marketing Cloud] et l’ingestion de données d’automatisation du marketing. |
 
 Pour plus d’informations, consultez la [vue d’ensemble des sources](../sources/home.md).
+
