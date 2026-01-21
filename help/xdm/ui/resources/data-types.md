@@ -12,7 +12,7 @@ ht-degree: 7%
 
 ---
 
-# Créer et modifier des types de données à l’aide de l’interface utilisateur {#ui-create-and-edit}
+# Créer et modifier des types de données à l’aide de l’interface d’utilisation {#ui-create-and-edit}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_datatype_filter"
