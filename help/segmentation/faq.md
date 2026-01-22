@@ -2,10 +2,10 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 56bf7ae20c33b013a1710fba8c04d9edc23baf89
+source-git-commit: a55272e3124c3fceedcadc33883445132bfec6bd
 workflow-type: tm+mt
-source-wordcount: '4849'
-ht-degree: 27%
+source-wordcount: '4853'
+ht-degree: 25%
 
 ---
 
@@ -87,7 +87,7 @@ Une audience générée de manière externe peut être mappée à n’importe qu
 
 ### Puis-je supprimer une audience générée en externe ?
 
-Oui! Les audiences générées en externe peuvent être supprimées dans Audience Portal.
+Oui ! Les audiences générées en externe peuvent être supprimées dans Audience Portal.
 
 ### Que dois-je faire si j’ai accidentellement chargé une audience générée en externe ?
 
@@ -107,7 +107,7 @@ Le nombre d’audiences générées en externe que vous pouvez importer n’est 
 
 Le portail d’audience et la composition d’audiences interagissent avec les données du partenaire de deux manières :
 
-1. Si vous ingérez une liste de prospects fournie par le partenaire à l’aide de la classe et du workflow Prospect Profile, les prospects seront conservés **séparément** des profils clients de fusion dans le Profile Service. Cela signifie que les listes de prospects ne seront **pas** disponibles dans le portail d’audience ou dans la composition d’audiences.
+1. Si vous ingérez une liste de prospects fournie par le partenaire à l’aide de la classe et du workflow Prospect Profile, les prospects seront conservés **séparément** des profils clients de fusion dans le service Profile. Cela signifie que les listes de prospects ne seront **pas** disponibles dans le portail d’audience ou dans la composition d’audiences.
 2. Si vous tirez parti des attributs fournis par le partenaire pour enrichir les profils propriétaires **existants**, ces audiences enrichies en données de partenaire **seront** disponibles dans le portail d’audience et dans la composition d’audiences pour être utilisées.
 
 ### Comment utiliser des attributs supplémentaires avec mes audiences ?
@@ -170,7 +170,7 @@ Si une audience évaluée à l’aide de la segmentation par lots est republiée
 
 La méthode pour mettre une audience à l’état de brouillon dépend de l’origine de l’audience.
 
-Pour les audiences créées à l’aide du créateur de segments, vous pouvez définir l’audience sur l’état de brouillon en sélectionnant « [!UICONTROL Enregistrer en tant que brouillon] » dans le créateur de segments.
+Pour les audiences créées à l’aide du créateur de segments, vous pouvez définir l’audience sur l’état de brouillon en sélectionnant « [!UICONTROL Save as draft] » dans le créateur de segments.
 
 Pour les audiences créées dans Composition de l’audience, les audiences sont automatiquement enregistrées en tant que brouillon jusqu’à leur publication.
 
@@ -180,13 +180,13 @@ Une fois qu’une audience est à l’état publié, vous **pouvez pas** l’aud
 
 ### Comment puis-je placer une audience à l’état publié ?
 
-Pour les audiences créées à l’aide du créateur de segments ou de la composition de l’audience, vous pouvez définir l’audience sur l’état publié en sélectionnant « [!UICONTROL Publier] » dans leurs interfaces utilisateur respectives.
+Pour les audiences créées à l’aide du créateur de segments ou de la composition de l’audience, vous pouvez définir l’audience sur l’état publié en sélectionnant « [!UICONTROL Publish] » dans leurs interfaces utilisateur respectives.
 
 Les audiences créées en externe sont automatiquement définies sur publiées.
 
 ### Comment mettre une audience à l’état inactif ?
 
-Vous pouvez mettre une audience publiée en statut inactif en ouvrant le menu d’actions rapides dans Audience Portal et en sélectionnant « [!UICONTROL &#x200B; Désactiver &#x200B;].
+Vous pouvez mettre une audience publiée en statut inactif en ouvrant le menu d’actions rapides dans Audience Portal et en sélectionnant « [!UICONTROL Deactivate] ».
 
 ### Comment republier une audience ?
 
@@ -194,7 +194,7 @@ Vous pouvez mettre une audience publiée en statut inactif en ouvrant le menu d�
 >
 >L’état « republié » est le même que l’état publié pour le comportement de l’audience.
 
-Vous pouvez republier une audience en sélectionnant une audience dont le statut est inactif, en ouvrant le menu d’actions rapides sur Audience Portal et en sélectionnant [!UICONTROL Publier].
+Vous pouvez republier une audience en sélectionnant une audience qui est inactive, en ouvrant le menu d’actions rapides sur Audience Portal et en sélectionnant [!UICONTROL Publish].
 
 ### Comment mettre une audience à l’état supprimé ?
 
@@ -202,7 +202,7 @@ Vous pouvez republier une audience en sélectionnant une audience dont le statut
 >
 >Vous pouvez uniquement supprimer les audiences qui ne sont **pas** utilisées dans les activations en aval. De plus, vous ne pouvez pas supprimer une audience référencée dans une autre audience. Si vous ne pouvez pas supprimer votre audience, assurez-vous de ne **pas** l’utiliser dans des services en aval ou comme bloc de création d’une autre audience.
 
-Pour supprimer une audience, ouvrez le menu des actions rapides dans Audience Portal et sélectionnez [!UICONTROL Supprimer].
+Vous pouvez mettre une audience en état de suppression en ouvrant le menu d’actions rapides dans Audience Portal et en sélectionnant [!UICONTROL Delete].
 
 ### Existe-t-il des avertissements pour les transitions d’état de cycle de vie ?
 
@@ -232,7 +232,7 @@ Pour que l’audience parente soit déplacée vers l’état inactif ou supprim�
 
 ### Puis-je faire référence à une audience dont l’état de cycle de vie est différent ?
 
-Oui! Si votre audience est actuellement à l’état de brouillon, vous pouvez vous y référer dans l’état de brouillon ou publié. Toutefois, pour publier cette audience, vous **devez** publier les autres audiences parentes.
+Oui ! Si votre audience est actuellement à l’état de brouillon, vous pouvez vous y référer dans l’état de brouillon ou publié. Toutefois, pour publier cette audience, vous **devez** publier les autres audiences parentes.
 
 ## Inventaire des audiences
 
@@ -252,7 +252,7 @@ Non, le nombre de balises pouvant être ajoutées à une audience n’est pas li
 
 ### Y a-t-il une limite au nombre de balises que je peux créer ?
 
-Non, le nombre de balises que vous pouvez créer n’est pas limité. Cependant, vous pouvez créer un maximum de 100 catégories **&#x200B;**&#x200B;à appliquer aux balises. Pour plus d’informations sur la gestion des balises, consultez le [guide de gestion des balises](../administrative-tags/ui/managing-tags.md).
+Non, le nombre de balises que vous pouvez créer n’est pas limité. Cependant, vous pouvez créer un maximum de 100 catégories **** à appliquer aux balises. Pour plus d’informations sur la gestion des balises, consultez le [guide de gestion des balises](../administrative-tags/ui/managing-tags.md).
 
 ### Lorsque je recherche une audience par nom ou balise dans un dossier parent, puis-je également effectuer une recherche dans les dossiers enfants associés ?
 
@@ -290,13 +290,13 @@ Pour en savoir plus sur le créateur de segments, consultez le [guide du créate
 
 ### Puis-je envoyer des audiences de la composition d’audiences à toutes les destinations et tous les canaux en aval ?
 
-Oui! Vous pouvez utiliser des audiences à partir de la composition de l’audience dans des campagnes Adobe Journey Optimizer, des destinations Real-Time CDP et des Parcours Adobe Journey Optimizer.
+Oui ! Vous pouvez utiliser des audiences à partir de la composition de l’audience dans des campagnes Adobe Journey Optimizer, des destinations Real-Time CDP et des Parcours Adobe Journey Optimizer.
 
 ### Existe-t-il des barrières de sécurité qui limitent le nombre de compositions ?
 
 >[!IMPORTANT]
 >
->Ce mécanisme de sécurisation s’applique uniquement aux compositions créées avec la composition d’audience et ne s’applique **&#x200B;**&#x200B;aux compositions créées avec la composition d’audience fédérée.
+>Ce mécanisme de sécurisation s’applique uniquement aux compositions créées avec la composition d’audience et ne s’applique **** aux compositions créées avec la composition d’audience fédérée.
 
 À ce stade, la limite est fixée à **10** compositions publiées par sandbox. Ce nombre devrait augmenter dans une prochaine version.
 
@@ -304,11 +304,11 @@ Oui! Vous pouvez utiliser des audiences à partir de la composition de l’audie
 
 Le placement du composant de composition suit une structure rigide comme suit :
 
-1. Vous commencez **toujours** par le bloc [!UICONTROL Audience] pour sélectionner votre activité de départ. Vous pouvez avoir un maximum d’**un** bloc [!UICONTROL Audience].
-2. Vous pouvez éventuellement ajouter un bloc [!UICONTROL Exclure] qui suit le bloc [!UICONTROL Audience].
-3. Vous pouvez éventuellement ajouter un bloc [!UICONTROL Enrichir] qui suit le bloc [!UICONTROL Exclure]. Vous ne pouvez utiliser qu’un seul bloc **one** [!UICONTROL Enrich] par composition.
-4. Vous pouvez éventuellement ajouter un bloc [!UICONTROL Classer] ou [!UICONTROL Partager]. Vous pouvez **uniquement** avoir l’un de ces blocs par composition.
-5. Vous terminez **toujours** par un bloc [!UICONTROL Enregistrer] pour enregistrer votre audience.
+1. Vous **toujours** commencer par le bloc de [!UICONTROL Audience] pour sélectionner votre activité de départ. Vous pouvez avoir un maximum de **un** bloc [!UICONTROL Audience].
+2. Vous pouvez éventuellement ajouter un bloc de [!UICONTROL Exclude] qui suit le bloc de [!UICONTROL Audience].
+3. Vous pouvez éventuellement ajouter un bloc de [!UICONTROL Enrich] qui suit le bloc de [!UICONTROL Exclude]. Vous ne pouvez utiliser qu’**un** bloc de [!UICONTROL Enrich] par composition.
+4. Vous pouvez éventuellement ajouter un bloc de [!UICONTROL Rank] ou de [!UICONTROL Split]. Vous pouvez **uniquement** avoir l’un de ces blocs par composition.
+5. Vous **toujours** vous terminez par un bloc de [!UICONTROL Save] pour enregistrer votre audience.
 
 En outre, les restrictions suivantes s’appliquent lors de l’utilisation de ces blocs :
 
@@ -360,7 +360,7 @@ La section suivante répertorie les questions relatives à l’appartenance à u
 
 ### Comment puis-je confirmer l’appartenance d’un profil à une audience ?
 
-Pour confirmer l’appartenance à l’audience d’un profil, consultez la page des détails de profil du profil que vous souhaitez confirmer. Sélectionnez **[!UICONTROL Attributs]**, puis **[!UICONTROL Afficher JSON]**, et vous pouvez confirmer que l’objet `segmentMembership` contient l’identifiant de l’audience.
+Pour confirmer l’appartenance d’un profil à une audience, consultez la page des détails du profil que vous souhaitez confirmer. Sélectionnez **[!UICONTROL Attributes]**, suivi de **[!UICONTROL View JSON]**, et vous pouvez confirmer que l’objet `segmentMembership` contient l’identifiant de l’audience.
 
 ### L’adhésion à l’audience peut-elle dériver entre l’adhésion idéale et l’adhésion réelle ?
 
@@ -408,7 +408,7 @@ La section suivante répertorie les questions relatives à la segmentation en fl
 
 ### La « disqualification » de la segmentation en flux continu est-elle également effectuée en temps réel ?
 
-Pour la plupart des instances, la disqualification de la segmentation en fux continu se produit en temps réel. Toutefois, les segments en flux continu qui utilisent des segments de segments ne sont **pas** disqualifiés en temps réel, mais sont disqualifiés après 24 heures.
+La disqualification de la segmentation en flux continu se produit en fonction de la composition de l’audience. Pour les audiences basées sur un événement, la disqualification se produit en temps réel à l’expiration de l’intervalle de recherche en amont. Pour les audiences basées sur des profils ou celles qui utilisent des attributs de profil, la disqualification se produit lorsque les valeurs d’attribut de profil sont modifiées via une source de diffusion en continu ou au cours de la tâche d’évaluation par lots quotidienne.
 
 ### Sur quelles données la segmentation en flux continu fonctionne-t-elle ?
 

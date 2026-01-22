@@ -2,10 +2,10 @@
 title: Notes de mise à jour préliminaires d’Experience Platform
 description: Aperçu des dernières notes de mise à jour de Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: d401707e263f09ccd8575f02a71d7e74899e02db
+source-git-commit: 26dabf21959fde0b6ce7111524a20e3f342aec75
 workflow-type: tm+mt
-source-wordcount: '1395'
-ht-degree: 22%
+source-wordcount: '1389'
+ht-degree: 23%
 
 ---
 
@@ -86,7 +86,7 @@ Le profil client en temps réel offre une vue d’ensemble de chaque client en c
 | Fonctionnalité | Description |
 | --- | --- |
 | Application de la capacité de diffusion en continu | Experience Platform applique désormais les capacités de débit en flux continu pour le profil client en temps réel et le service d’identités. Lorsque les clients dépassent leur capacité de diffusion en continu convenue, les données sont placées en file d’attente et traitées selon le principe du premier entré, premier sorti. Cela garantit des performances système prévisibles et empêche les violations de capacité d’avoir un impact sur la qualité de l’ingestion des données. Remarques importantes : les upserts en flux continu ne seront pas disponibles sur le lac de données lorsque la capacité est dépassée. Cette application ne s’applique pas aux clients disposant de licences Adobe Journey Optimizer et les données placées en file d’attente seront traitées de manière séquentielle une fois que la capacité sera disponible. |
-| Obsolescence de l’accès à l’API pour Real-Time CDP Prime | L’accès aux API pour les événements d’expérience est désormais obsolète pour tous les clients Real-Time CDP Prime. Cette modification affecte la possibilité d’interroger les événements d’expérience directement via l’API. Les clients Real-Time CDP Ultimate peuvent demander une exception par le biais d’un processus d’exception formel pour activer l’accès à l’API des événements d’expérience, si nécessaire, pour leurs cas d’utilisation. Cette obsolescence permet d’optimiser les performances du système et s’aligne sur les bonnes pratiques pour les modèles d’accès aux données. |
+| Obsolescence de l’accès à l’API pour Real-Time CDP Prime | L’accès aux API pour les événements d’expérience est désormais obsolète pour tous les clients Real-Time CDP Prime. Cette modification affecte la possibilité d’interroger les événements d’expérience directement via l’API. Les clients Real-Time CDP Ultimate peuvent demander une exception par le biais d’un processus d’exception formel pour activer l’accès à l’API des événements d’expérience, si nécessaire, pour leurs cas d’utilisation. Cette obsolescence permet d’aligner Real-Time CDP sur les fonctionnalités de licence. |
 | Surveillance de l’exécution du flux de données | Vous pouvez désormais surveiller la progression et la préparation des exécutions de flux de données dans Profile. |
 
 {style="table-layout:auto"}
