@@ -4,10 +4,10 @@ description: Découvrez comment diffuser des données de Talon.One vers Adobe Ex
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 558a9d6ff3222acbf77edea0a82ef50725cd6203
+source-git-commit: 554d86e2f07966ee08940a30fe06050570129e41
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 15%
+source-wordcount: '961'
+ht-degree: 14%
 
 ---
 
@@ -34,19 +34,19 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 ## Parcourir le catalogue des sources
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Sélectionnez la catégorie appropriée dans le panneau *[!UICONTROL Catégories]*. Vous pouvez également utiliser la barre de recherche pour accéder à la source spécifique que vous souhaitez utiliser.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Sélectionnez la catégorie appropriée dans le panneau *[!UICONTROL Categories]*. Vous pouvez également utiliser la barre de recherche pour accéder à la source spécifique que vous souhaitez utiliser.
 
-Pour diffuser des données à partir de [!DNL Talon.One], sélectionnez la carte source **[!UICONTROL Événements de streaming Talon.One]** sous *[!UICONTROL Fidélité]*, puis sélectionnez **[!UICONTROL Ajouter des données]**.
+Pour diffuser des données à partir de [!DNL Talon.One], sélectionnez la carte source **[!UICONTROL Talon.One Streaming Events]** sous *[!UICONTROL Loyalty]*, puis sélectionnez **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
->Les sources du catalogue affichent l’option **[!UICONTROL Configurer]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Ajouter des données]**.
+>Les sources du catalogue affichent l’option **[!UICONTROL Set up]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois un compte authentifié créé, cette option devient **[!UICONTROL Add data]**.
 
 ![Le catalogue de sources dans l’interface utilisateur avec la carte Événements de streaming Talon.One sélectionnée.](../../../../images/tutorials/create/talon-one-streaming/catalog.png)
 
 ## Sélectionner les données
 
-Utilisez ensuite l’interface *[!UICONTROL Sélectionner des données]* pour charger un exemple de fichier JSON afin de définir votre schéma source. Au cours de cette étape, vous pouvez utiliser l’interface de prévisualisation pour afficher la structure de fichiers de la payload. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
+Ensuite, utilisez l’interface *[!UICONTROL Select data]* pour charger un exemple de fichier JSON afin de définir votre schéma source. Au cours de cette étape, vous pouvez utiliser l’interface de prévisualisation pour afficher la structure de fichiers de la payload. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]**.
 
 ![Étape de sélection des données du workflow des sources](../../../../images/tutorials/create/talon-one-streaming/select-data.png)
 
@@ -66,10 +66,10 @@ Au cours de cette étape, vous pouvez utiliser un jeu de données existant ou en
 
 +++Sélectionnez pour connaître les étapes d’activation de l’ingestion de profil, des diagnostics d’erreur et de l’ingestion partielle.
 
-Si votre jeu de données est activé pour le profil client en temps réel, au cours de cette étape, vous pouvez activer/désactiver le **[!UICONTROL jeu de données de profil]** pour activer vos données pour l’ingestion de profils. Vous pouvez également utiliser cette étape pour activer les **[!UICONTROL diagnostics d’erreur]** et **[!UICONTROL ingestion partielle]**.
+Si votre jeu de données est activé pour le profil client en temps réel, au cours de cette étape, vous pouvez activer **[!UICONTROL Profile dataset]** données pour l’ingestion de profils. Vous pouvez également utiliser cette étape pour activer **[!UICONTROL Error diagnostics]** et **[!UICONTROL Partial ingestion]**.
 
-* **[!UICONTROL Diagnostics d’erreur]** : sélectionnez **[!UICONTROL Diagnostics d’erreur]** pour demander à la source de générer des diagnostics d’erreur que vous pourrez référencer ultérieurement lors de la surveillance de l’activité du jeu de données et du statut du flux de données.
-* **[!UICONTROL Ingestion partielle]** : l’ingestion par lots partielle est la possibilité d’ingérer des données contenant des erreurs, jusqu’à un certain seuil configurable. Cette fonctionnalité vous permet d’ingérer toutes vos données exactes dans Experience Platform, tandis que toutes vos données incorrectes sont traitées par lots séparément avec des informations sur les raisons de leur non-validité.
+* **[!UICONTROL Error diagnostics]** : sélectionnez **[!UICONTROL Error diagnostics]** pour demander à la source de générer des diagnostics d’erreur que vous pourrez référencer ultérieurement lors de la surveillance de l’activité du jeu de données et du statut du flux de données.
+* **[!UICONTROL Partial ingestion]** : l’ingestion par lots partielle est la possibilité d’ingérer des données contenant des erreurs, jusqu’à un certain seuil configurable. Cette fonctionnalité vous permet d’ingérer toutes vos données exactes dans Experience Platform, tandis que toutes vos données incorrectes sont traitées par lots séparément avec des informations sur les raisons de leur non-validité.
 
 +++
 
@@ -83,13 +83,13 @@ Une fois votre jeu de données configuré, vous devez fournir des détails sur v
 | --- | --- |
 | Nom du flux de données | Nom du flux de données. Par défaut, le nom du fichier importé est utilisé. |
 | Description | (Facultatif) Brève description de votre flux de données. |
-| Alertes | Experience Platform peut générer des alertes basées sur des événements auxquelles les utilisateurs et utilisatrices peuvent s’abonner. Ces options permettent à un flux de données en cours d’exécution de les déclencher.  Pour plus d’informations, reportez-vous à la présentation des alertes [&#128279;](../../alerts.md) <ul><li>**Début d’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification lorsque l’exécution du flux de données commence.</li><li>**Succès de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si votre flux de données se termine sans erreur.</li><li>**Échec de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si l’exécution de votre flux de données se termine par des erreurs.</li></ul> |
+| Alertes | Experience Platform peut générer des alertes basées sur des événements auxquelles les utilisateurs et utilisatrices peuvent s’abonner. Ces options permettent à un flux de données en cours d’exécution de les déclencher.  Pour plus d’informations, reportez-vous à la présentation des alertes [](../../alerts.md) <ul><li>**Début d’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification lorsque l’exécution du flux de données commence.</li><li>**Succès de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si votre flux de données se termine sans erreur.</li><li>**Échec de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si l’exécution de votre flux de données se termine par des erreurs.</li></ul> |
 
 {style="table-layout:auto"}
 
 ## Mappage
 
-Utilisez l’interface de mappage pour mapper vos données source aux champs de schéma appropriés avant d’ingérer des données vers Experience Platform. Pour plus d’informations, consultez le guide de mappage [&#x200B; dans l’interface utilisateur](../../../../../data-prep/ui/mapping.md).
+Utilisez l’interface de mappage pour mapper vos données source aux champs de schéma appropriés avant d’ingérer des données vers Experience Platform. Pour plus d’informations, consultez le guide de mappage [ dans l’interface utilisateur](../../../../../data-prep/ui/mapping.md).
 
 <!--
 >[!TIP]
@@ -101,12 +101,12 @@ Utilisez l’interface de mappage pour mapper vos données source aux champs de 
 
 ## Réviser
 
-L’étape *[!UICONTROL Révision]* s’affiche et vous permet de consulter les détails de votre flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
+L’étape *[!UICONTROL Review]* s’affiche, vous permettant de consulter les détails de votre flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
-* **[!UICONTROL Connexion]** : affiche le nom du compte, la plateforme source et le nom de la source.
-* **[!UICONTROL Attribuer des champs de jeu de données et de mappage]** : affiche le jeu de données cible et le schéma auquel le jeu de données se conforme.
+* **[!UICONTROL Connection]** : affiche le nom du compte, la plateforme source et le nom de la source.
+* **[!UICONTROL Assign dataset and map fields]** : affiche le jeu de données cible et le schéma auquel le jeu de données se conforme.
 
-Après avoir confirmé que les détails sont corrects, sélectionnez **[!UICONTROL Terminer]**.
+Après avoir confirmé que les détails sont corrects, sélectionnez **[!UICONTROL Finish]**.
 
 ![Étape de révision dans le workflow des sources.](../../../../images/tutorials/create/talon-one-streaming/review.png)
 
@@ -118,4 +118,8 @@ Une fois la connexion créée, la page des détails des sources s’affiche. Cet
 
 ## Surveiller votre flux de données
 
-Une fois votre flux de données créé, vous pouvez surveiller les données ingérées et afficher les informations relatives au taux d’ingestion, aux succès et aux erreurs. Pour plus d’informations sur la surveillance des flux de données, consultez le tutoriel sur la [surveillance des comptes et des flux de données dans l’interface utilisateur](../../monitor-streaming.md)
+Une fois votre flux de données créé, vous pouvez surveiller les données ingérées et afficher les informations relatives au taux d’ingestion, aux succès et aux erreurs. Pour plus d’informations sur la surveillance des flux de données, consultez le tutoriel sur la [surveillance des comptes et des flux de données dans l’interface utilisateur](../../monitor-streaming.md).
+
+## Limites connues
+
+Pour garantir une ingestion de données précise, vous devez envoyer au connecteur des données provenant des points de fidélité modifiés de [!DNL Talon.One], des notifications de mise à niveau et de rétrogradation de niveau. Comme la notification de modification des points de fidélité n’inclut pas d’informations sur le niveau, vous devez envoyer ces notifications à un jeu de données de profil distinct. Si vous combinez des données modifiées de points avec des notifications de mise à niveau ou de rétrogradation dans le même jeu de données, les informations de niveau seront perdues ou remplacées par des valeurs nulles. Les notifications de mise à niveau de niveau et de rétrogradation peuvent utiliser le même jeu de données, car elles incluent toutes deux des détails de niveau. Après l’ingestion, les règles de fusion de profil mettent automatiquement à jour le profil fusionné pour refléter les informations de niveau et les points les plus récents.
