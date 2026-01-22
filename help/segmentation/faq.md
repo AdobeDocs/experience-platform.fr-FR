@@ -252,7 +252,7 @@ Non, le nombre de balises pouvant être ajoutées à une audience n’est pas li
 
 ### Y a-t-il une limite au nombre de balises que je peux créer ?
 
-Non, le nombre de balises que vous pouvez créer n’est pas limité. Cependant, vous pouvez créer un maximum de 100 catégories **** à appliquer aux balises. Pour plus d’informations sur la gestion des balises, consultez le [guide de gestion des balises](../administrative-tags/ui/managing-tags.md).
+Non, le nombre de balises que vous pouvez créer n’est pas limité. Cependant, vous pouvez créer un maximum de 100 catégories **&#x200B;**&#x200B;à appliquer aux balises. Pour plus d’informations sur la gestion des balises, consultez le [guide de gestion des balises](../administrative-tags/ui/managing-tags.md).
 
 ### Lorsque je recherche une audience par nom ou balise dans un dossier parent, puis-je également effectuer une recherche dans les dossiers enfants associés ?
 
@@ -296,7 +296,7 @@ Oui ! Vous pouvez utiliser des audiences à partir de la composition de l’aud
 
 >[!IMPORTANT]
 >
->Ce mécanisme de sécurisation s’applique uniquement aux compositions créées avec la composition d’audience et ne s’applique **** aux compositions créées avec la composition d’audience fédérée.
+>Ce mécanisme de sécurisation s’applique uniquement aux compositions créées avec la composition d’audience et ne s’applique **&#x200B;**&#x200B;aux compositions créées avec la composition d’audience fédérée.
 
 À ce stade, la limite est fixée à **10** compositions publiées par sandbox. Ce nombre devrait augmenter dans une prochaine version.
 
