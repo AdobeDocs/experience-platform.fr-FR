@@ -79,7 +79,7 @@ Ensuite, passez à [définir des clés primaires](../fields/identity.md#define-a
 
 >[!NOTE]
 >
->Une fois enregistré, le champ [!UICONTROL Type] de la barre latérale [!UICONTROL &#x200B; Schema properties] indique qu’il s’agit d’un schéma [!UICONTROL Relational]. Cela est également indiqué dans la barre latérale des détails dans la vue d’inventaire des schémas.
+>Une fois enregistré, le champ [!UICONTROL Type] de la barre latérale [!UICONTROL  Schema properties] indique qu’il s’agit d’un schéma [!UICONTROL Relational]. Cela est également indiqué dans la barre latérale des détails dans la vue d’inventaire des schémas.
 >![Zone de travail de l’éditeur de schémas présentant une structure de schéma relationnel vide avec le type relationnel mis en surbrillance.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### Charger un fichier DDL {#upload-ddl-file}
@@ -121,7 +121,7 @@ Si vous sélectionnez « Type de schéma standard » dans le menu déroulant « 
 
 ![La boîte de dialogue Créer un schéma avec les options de workflow et sélectionnez en surbrillance.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
-### [!BADGE Beta &#x200B;]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
+### [!BADGE Beta ]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
 
 Pour découvrir comment utiliser un algorithme ML afin de recommander une structure de schéma basée sur un fichier csv, consultez le guide de création de schéma assisté par machine learning [machine learning](../ml-assisted-schema-creation.md). Ce guide de l’interface utilisateur se concentre sur le workflow de création manuelle .
 
@@ -271,7 +271,7 @@ Une boîte de dialogue s’affiche, affichant la structure du groupe de champs. 
 Sélectionnez **[!UICONTROL Confirm]** pour mettre à jour la zone de travail et refléter vos champs sélectionnés.
 
 
-![Champs ajoutés &#x200B;](../../images/ui/resources/schemas/fields-added.png)
+![Champs ajoutés ](../../images/ui/resources/schemas/fields-added.png)
 
 ### Comportement des champs lors de la suppression ou de l’obsolescence de champs {#field-removal-deprecation-behavior}
 
@@ -331,7 +331,7 @@ Tout comme pour le workflow des champs standard, vous pouvez également ajouter 
 
 Pour ajouter des champs au niveau racine d’un schéma, sélectionnez l’icône plus (**+**) à côté du nom du schéma dans la zone de travail. Un espace réservé **[!UICONTROL Untitled Field]** apparaît dans la structure du schéma et le rail de droite se met à jour pour afficher les commandes permettant de configurer le champ.
 
-![&#x200B; Champ personnalisé racine &#x200B;](../../images/ui/resources/schemas/root-custom-field.png)
+![ Champ personnalisé racine ](../../images/ui/resources/schemas/root-custom-field.png)
 
 Commencez à saisir le nom du champ que vous souhaitez ajouter et le système lance automatiquement la recherche des champs standard correspondants. Pour créer un champ personnalisé à la place, sélectionnez l’option supérieure avec **([!UICONTROL New Field])** ajouté.
 
@@ -414,7 +414,7 @@ Après avoir appliqué vos modifications, le nouveau champ s’affiche sous l’
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
 >title="Activation d&#39;un schéma pour Profil"
->abstract="Lorsqu&#39;un schéma est activé pour Profil, tous les jeux de données créés à partir de ce schéma participent au profil client en temps réel, qui fusionne les données de différentes sources pour créer une vue complète de chaque client. Une fois qu&#39;un schéma est utilisé pour ingérer des données dans Profil, il ne peut pas être désactivé. Pour plus d&#39;informations, consultez la documentation."
+>abstract="Lorsqu’un schéma est activé pour Profil, tous les jeux de données créés à partir de ce schéma participent au profil client en temps réel, qui fusionne les données de différentes sources pour créer une vue complète de chaque client ou cliente. Une fois qu&#39;un schéma est utilisé pour ingérer des données dans Profil, il ne peut pas être désactivé. Pour plus d&#39;informations, consultez la documentation."
 
 Le [profil client en temps réel](../../../profile/home.md) fusionne des données provenant de sources disparates afin de créer une vue complète de chaque client individuel. Si vous souhaitez que les données capturées par un schéma participent à ce processus, vous devez activer le schéma pour une utilisation dans [!DNL Profile].
 
