@@ -5,10 +5,10 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
+source-git-commit: ded7a095f95bd43a34e694fb0a6fd4b468b4e246
 workflow-type: tm+mt
-source-wordcount: '1072'
-ht-degree: 90%
+source-wordcount: '1080'
+ht-degree: 89%
 
 ---
 
@@ -116,6 +116,7 @@ ht-degree: 90%
       - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
       - [PathFactory](connectors/marketing-automation/pathfactory.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
+      - [Salesforce Marketing Cloud (V2)](connectors/marketing-automation/sfmc.md)
    - Paiements {#payments}
       - [Connecteur Square](connectors/payments/square.md)
       - [Connecteur Stripe](connectors/payments/stripe.md)
@@ -142,7 +143,7 @@ ht-degree: 90%
          - [Azure File Storage](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Data Landing Zone](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
-         - [Google Cloud Storage](tutorials/api/create/cloud-storage/google.md)
+         - [Google Cloud Storage](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
          - [Oracle Object Storage](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
@@ -159,14 +160,14 @@ ht-degree: 90%
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
       - Bases de données {#databases}
-         - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
+         - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Apache Hive sur Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark sur Azure HDInsights](tutorials/api/create/databases/spark.md)
          - [Azure Databricks](tutorials/api/create/databases/databricks.md)
          - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/api/create/databases/ats.md)
-         - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
+         - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
          - [Greenplum](tutorials/api/create/databases/greenplum.md)
          - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/api/create/databases/ibm-db2.md)
@@ -263,7 +264,7 @@ ht-degree: 90%
          - [Azure File Storage](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [Data Landing Zone](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
-         - [Google Cloud Storage](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [Google Cloud Storage](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
          - [Oracle Object Storage](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
@@ -282,7 +283,7 @@ ht-degree: 90%
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
       - Bases de données {#databases}
-         - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
+         - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Apache Hive sur Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark sur Azure HDInsights](tutorials/ui/create/databases/spark.md)
          - [Azure Databricks](tutorials/ui/create/databases/databricks.md)
@@ -331,6 +332,7 @@ ht-degree: 90%
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
          - [Connecteur Relais](tutorials/ui/create/marketing-automation/relay-connector.md)
          - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
+         - [Salesforce Marketing Cloud (V2)](tutorials/ui/create/marketing-automation/sfmc.md)
       - Paiements {#payments}
          - [Square](tutorials/ui/create/payments/square.md)
          - [Stripe](tutorials/ui/create/payments/stripe.md)
