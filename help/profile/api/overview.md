@@ -4,10 +4,10 @@ title: Guide de l’API Real-Time Customer Profile
 description: L’API Real-Time Customer Profile permet aux développeurs d’explorer et d’utiliser les données de profil, notamment d’afficher les profils, de créer et de mettre à jour des politiques de fusion, d’exporter ou des exemples de données de profil et de supprimer les données de profil qui ne sont plus nécessaires ou qui ont été ajoutées par erreur. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82a9b405a1d36155c84cd27a005c7ec469164ef3
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 19%
+source-wordcount: '874'
+ht-degree: 18%
 
 ---
 
@@ -30,6 +30,10 @@ Chaque attribut calculé contient une expression, ou « règle », qui évalue l
 Vous pouvez créer, afficher, modifier et supprimer des attributs calculés à l’aide du point d’entrée `ca/attributes/`. Pour savoir comment utiliser les attributs calculés, reportez-vous à la [présentation des attributs calculés](../computed-attributes/overview.md). Pour les opérations de l’API, consultez le [guide des points d’entrée de l’API des attributs calculés](../computed-attributes/api.md).
 
 ## Entités (accès au [!DNL Profile]) {#entities}
+
+>[!NOTE]
+>
+>Vous ne pouvez utiliser ces points d’entrée que si vous disposez de Real-Time CDP Ultimate.
 
 Adobe Experience Platform vous permet d’accéder aux données [!DNL Real-Time Customer Profile] à l’aide des API RESTful ou de l’interface utilisateur. Pour savoir comment accéder aux entités, plus communément appelées « profils », à l’aide de l’API, suivez les étapes décrites dans le guide [Guide des points d’entrée d’entités](entities.md). Pour accéder aux profils à l’aide de l’interface utilisateur de [!DNL Experience Platform], reportez-vous au guide d’utilisation [Profile](../ui/user-guide.md).
 
@@ -57,4 +61,4 @@ Il peut parfois être nécessaire de mettre à jour les données du magasin de p
 
 ## Étapes suivantes {#next-steps}
 
-Pour commencer à effectuer des appels à l’aide de l’API [!DNL Real-Time Customer Profile], lisez le guide de prise en main [&#128279;](getting-started.md), puis sélectionnez l’un des guides des points d’entrée pour savoir comment utiliser des points d’entrée spécifiques liés à l’[!DNL Profile]. Pour utiliser les données [!DNL Profile] à l’aide de l’interface utilisateur de [!DNL Experience Platform], reportez-vous au [guide d’utilisation du profil client en temps réel](../ui/user-guide.md).
+Pour commencer à effectuer des appels à l’aide de l’API [!DNL Real-Time Customer Profile], lisez le guide de prise en main [ ](getting-started.md), puis sélectionnez l’un des guides des points d’entrée pour savoir comment utiliser des points d’entrée spécifiques liés à l’[!DNL Profile]. Pour utiliser les données [!DNL Profile] à l’aide de l’interface utilisateur de [!DNL Experience Platform], reportez-vous au [guide d’utilisation du profil client en temps réel](../ui/user-guide.md).

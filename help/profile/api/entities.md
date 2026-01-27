@@ -5,14 +5,22 @@ type: Documentation
 description: Adobe Experience Platform vous permet d’accéder aux données du profil client en temps réel à l’aide des API RESTful ou de l’interface utilisateur. Ce guide explique comment accéder aux entités, plus communément appelées « profils », à l’aide de l’API Profile.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 2f32cae89d69f6dc2930c3908c87b79e1b724f4b
+source-git-commit: 17bd3494c2d9b2a05ca86903297ebec85c9350f2
 workflow-type: tm+mt
-source-wordcount: '2211'
-ht-degree: 29%
+source-wordcount: '2290'
+ht-degree: 28%
 
 ---
 
 # Point d&#39;entrée des entités (accès au profil)
+
+>[!IMPORTANT]
+>
+>Vous pouvez **uniquement** utiliser ces points d’entrée si vous disposez de Real-Time CDP Ultimate.
+>
+>Si vous disposez de Real-Time CDP Prime, vous pouvez continuer à ingérer et à utiliser des événements d’expérience pour les cas d’utilisation de la personnalisation, ainsi qu’à afficher des événements dans l’interface utilisateur d’Experience Platform. Cependant **vous ne pourrez** pas rechercher des événements d’expérience par programmation à l’aide de l’API.
+>
+>Si vous disposez de Real-Time CDP Ultimate et que vous ne recherchez **pas** actuellement les événements par programmation, contactez l’assistance clientèle d’Adobe pour activer cette fonctionnalité.
 
 Adobe Experience Platform vous permet d’accéder aux données [!DNL Real-Time Customer Profile] à l’aide des API RESTful ou de l’interface utilisateur. Ce guide explique comment accéder aux entités, plus communément appelées « profils », à l’aide de l’API. Pour plus d’informations sur l’accès aux profils à l’aide de l’interface utilisateur de [!DNL Experience Platform], reportez-vous au guide d’utilisation [Profile](../ui/user-guide.md).
 
@@ -1224,7 +1232,7 @@ Une réponse réussie renvoie la page de résultats suivante. Cette réponse ne 
 
 >[!IMPORTANT]
 >
->Le point d’entrée de suppression d’entité sera abandonné d’ici la fin octobre 2025. Si vous souhaitez effectuer des opérations de suppression d’enregistrements, vous pouvez utiliser le workflow [&#x200B; API de suppression des enregistrements du cycle de vie des données &#x200B;](/help/hygiene/api/workorder.md) ou le workflow de l’interface utilisateur de suppression des enregistrements du cycle de vie des données [&#128279;](/help/hygiene/ui/record-delete.md) à la place.
+>Le point d’entrée de suppression d’entité sera abandonné d’ici la fin octobre 2025. Si vous souhaitez effectuer des opérations de suppression d’enregistrements, vous pouvez utiliser le workflow [ API de suppression des enregistrements du cycle de vie des données ](/help/hygiene/api/workorder.md) ou le workflow de l’interface utilisateur de suppression des enregistrements du cycle de vie des données [](/help/hygiene/ui/record-delete.md) à la place.
 >
 >En outre, les requêtes de suppression pour les entités B2B suivantes ont déjà été abandonnées :
 >
