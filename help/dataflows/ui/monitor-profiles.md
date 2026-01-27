@@ -4,10 +4,10 @@ description: Le profil client en temps réel offre une vue d’ensemble de chaqu
 title: Surveillance des flux de données pour les profils dans l’interface utilisateur
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1d60afdf486642398a2d31302db339eb9cb45130
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 13%
+source-wordcount: '1240'
+ht-degree: 11%
 
 ---
 
@@ -19,7 +19,7 @@ Le tableau de bord de surveillance vous fournit une représentation visuelle de 
 
 ## Prise en main {#getting-started}
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 - [Flux de données](../home.md) : les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Experience Platform. Les flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers des jeux de données cibles, vers [!DNL Identity] et [!DNL Profile], et vers [!DNL Destinations].
    - [Exécutions de flux de données](../../sources/notifications.md) : les exécutions de flux de données sont les tâches planifiées récurrentes en fonction de la configuration de la fréquence des flux de données sélectionnés.
@@ -65,8 +65,6 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 
 Vous pouvez sélectionner l’icône de filtre ![icône de filtre](/help/images/icons/filter.png) à côté du nom de la source pour afficher les informations de traitement du profil pour les flux de données de cette source sélectionnée.
 
-![L’icône de filtre est mise en surbrillance. En sélectionnant cette icône, vous pouvez afficher les flux de données de la source sélectionnée.](../assets/ui/monitor-profiles/sources-filter.png)
-
 Vous pouvez également sélectionner **[!UICONTROL Dataflows]** sur le bouton (bascule) pour afficher les détails du traitement du profil pour les flux de données de votre entreprise au cours des dernières 24 heures.
 
 ![Le tableau de bord Profils . Des informations sur le nombre d’enregistrements de profil reçus par flux de données s’affichent.](../assets/ui/monitor-profiles/dataflows.png)
@@ -78,6 +76,7 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | **[!UICONTROL Dataflow]** | Nom du flux de données. |
 | **[!UICONTROL Dataset]** | Nom du jeu de données vers lequel le flux de données est inséré. |
 | **[!UICONTROL Source name]** | Nom de la source à laquelle appartient le flux de données. |
+| **[!UICONTROL Data type]** | Type de données reçu du jeu de données. |
 | **[!UICONTROL Records received**] | Nombre d’enregistrements reçus du lac de données. |
 | **[!UICONTROL Records failed]** | Nombre d’enregistrements ingérés, mais non intégrés dans [!DNL Profile] en raison d’erreurs. |
 | **[!UICONTROL Profile fragments created]** | Nombre de nouveaux fragments de [!DNL Profile] nets ajoutés. |
@@ -88,7 +87,31 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 
 Sélectionnez l’icône de filtre ![filtre](/help/images/icons/filter.png) à côté de l’heure de début de l’exécution du flux de données pour afficher plus d’informations sur votre exécution de flux de données [!DNL Profile].
 
-![L’icône de filtre est mise en surbrillance. En sélectionnant cette icône, vous pouvez afficher des détails sur le flux de données sélectionné.](../assets/ui/monitor-profiles/dataflows-filter.png)
+Un tableau de bord affichant toutes les exécutions de flux de données s’affiche. Ce tableau de bord contient des mesures sur les exécutions de flux de données ainsi que des graphiques qui montrent le taux de succès, les fragments de profil créés et les fragments de profil mis à jour.
+
+![Le flux de données exécute le tableau de bord. Des informations sur les exécutions de flux de données s’affichent.](../assets/ui/monitor-profiles/dataflow-run.png)
+
+Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
+
+>[!NOTE]
+>
+>Lorsque l’exécution du flux de données est à l’état **[!UICONTROL Processing]**, vous pouvez consulter des informations sur la préparation en consultant les statuts des points de contrôle dans le processus d’ingestion.
+>
+>![La bulle de préparation à l’ingestion du profil s’affiche.](../assets/ui/monitor-profiles/profile-ingestion-readiness.png){zoomable="yes" width="300"}
+
+| Mesure | Description |
+| ------ | ----------- |
+| **[!UICONTROL Dataflow run start]** | Heure à laquelle l’exécution du flux de données a démarré en UTC. |
+| **[!UICONTROL Data type]** | Type de données reçu par le flux de données. |
+| **[!UICONTROL Records received]** | Nombre d’enregistrements reçus du lac de données. |
+| **[!UICONTROL Records failed]** | Nombre d’enregistrements ingérés, mais non intégrés dans [!DNL Profile] en raison d’erreurs. |
+| **[!UICONTROL Profile fragments created]** | Nombre de nouveaux fragments de [!DNL Profile] nets ajoutés. |
+| **[!UICONTROL Profile fragments updated]** | Nombre de fragments de [!DNL Profile] existants mis à jour. |
+| **[!UICONTROL Total profile fragments]** | Nombre total d’enregistrements écrits dans [!DNL Profile], y compris tous les fragments de [!DNL Profile] existants mis à jour et les nouveaux fragments de [!DNL Profile] créés. |
+| **[!UICONTROL Processing time]** | Temps nécessaire à l’exécution du flux de données pour le traitement. |
+| **[!UICONTROL Status]** | Statut de l’exécution du flux de données. Les valeurs possibles sont [!UICONTROL Success], [!UICONTROL Failed], [!UICONTROL Queued] et [!UICONTROL Processing]. |
+| **[!UICONTROL Ready for customer segmentation]** | Un statut indiquant si les enregistrements ingérés sont prêts à être utilisés dans la segmentation client. Les valeurs possibles sont [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued] et [!UICONTROL Processing]. Même si le **Statut** du flux de données est en cours de traitement, si la valeur de ce champ est Oui, vous pouvez utiliser les profils dans la segmentation de la clientèle. |
+| **[!UICONTROL Ready for lookup]** | Statut indiquant si les enregistrements ingérés sont prêts à être utilisés dans la recherche Adobe Journey Optimizer.  Les valeurs possibles sont [!UICONTROL Yes], [!UICONTROL Failed], [!UICONTROL Queued] et [!UICONTROL Processing]. Même si le **Statut** du flux de données est en cours de traitement, si la valeur de ce champ est Oui, vous pouvez utiliser les profils dans la recherche Journey Optimizer. |
 
 La page [!UICONTROL Dataflow run details] affiche plus d’informations sur votre exécution de flux de données [!DNL Profile], y compris son identifiant d’organisation et son identifiant d’exécution de flux de données. Cette page affiche également le code d’erreur et le message d’erreur correspondants fournis par [!DNL Profile] en cas d’erreur dans le processus d’ingestion.
 
