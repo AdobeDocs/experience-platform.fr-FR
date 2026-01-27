@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 66f117ee5818618794a20561484eae21dd420899
+source-git-commit: 17bc44d4c7e21f6d8fe544b3052fed32453002b6
 workflow-type: tm+mt
-source-wordcount: '1328'
+source-wordcount: '1330'
 ht-degree: 73%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 73%
    * [Supprimer les comptes de destination](./api/delete-destination-account.md)
    * [Supprimer les flux de données de destination](./api/delete-destination-dataflow.md)
    * [Exporter des jeux de données](/help/destinations/api/export-datasets.md)
-   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=fr#use-cases)
+   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
    * [Créer une connexion à une destination](./ui/connect-destination.md)
@@ -100,6 +100,7 @@ ht-degree: 73%
       * [Connexion Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
       * [Extension Google gtag](./catalog/advertising/gtag-advertising.md)
       * [Connexion à l&#39;échange d&#39;index](./catalog/advertising/index-exchange.md)
+      * [Niveler la connexion](./catalog/advertising/kevel.md)
       * [Extension LinkedIn Insight Tag](./catalog/advertising/linkedin.md)
       * [LiveRamp - Connexion pour l’intégration](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp - Connexion de distribution](./catalog/advertising/liveramp-distribution.md)
