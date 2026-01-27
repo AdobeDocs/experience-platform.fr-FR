@@ -185,7 +185,7 @@ En outre, vous pouvez consulter vos flux de données et voir si vous pouvez opti
 
 La vidéo suivante présente un aperçu de la capacité.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475275/?captions=fre_fr&learn=on&enablevpops)
 
 ## Questions fréquentes {#faq}
 
