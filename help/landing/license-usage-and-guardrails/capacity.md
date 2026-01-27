@@ -2,10 +2,10 @@
 title: Utilisation et capacité des licences
 description: Découvrez les limites d’utilisation et de capacité de votre licence dans Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: 5520e449b4cbe45eb9664ce3c913dd5d544e088c
+source-git-commit: 8cef502f60a42de9c89c29923811215b3a8086c6
 workflow-type: tm+mt
-source-wordcount: '1603'
-ht-degree: 7%
+source-wordcount: '1670'
+ht-degree: 6%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 7%
 >   - Cette autorisation vous permet de **modifier** vos allocations de capacité.
 >   - En outre, vous **devez** avoir accès à tous les sandbox pour modifier la capacité de **n’importe quel** sandbox.
 >
->Vous trouverez plus d’informations sur les autorisations dans Experience Platform dans la [&#x200B; présentation du contrôle d’accès &#x200B;](/help/access-control/home.md#permissions)
+>Vous trouverez plus d’informations sur les autorisations dans Experience Platform dans la [ présentation du contrôle d’accès ](/help/access-control/home.md#permissions)
 >
 >De plus, si vous avez acheté Segmentation par flux à haut débit, vous **ne pourrez pas** allouer vos capacités à l’aide de la capacité. Pour mettre à jour vos capacités, contactez l’Assistance clientèle d’Adobe.
 
@@ -68,7 +68,17 @@ Experience Platform calcule le débit du sandbox par intervalles de 15 minutes c
 
 Si votre utilisation atteint 80 % et 90 % de votre capacité sous licence, Experience Platform émet une alerte pour vous informer que vous atteignez la capacité maximale spécifiée. Vous pouvez modifier les paramètres pour personnaliser le pourcentage de capacité à recevoir l’alerte ou supprimer entièrement l’alerte.
 
-Si votre utilisation dépasse 100 % de votre capacité sous licence, vous serez considéré comme en violation de votre capacité. À ce stade, vous ferez l’expérience d’une latence de performances et vos cibles de niveau de service (SLT) ne seront **pas** garanties.
+Si votre utilisation dépasse 100 % de votre capacité sous licence, vous serez considéré comme en violation de votre capacité. Si vous n&#39;êtes pas en mesure de le faire, les restrictions suivantes seront appliquées :
+
+>[!NOTE]
+>
+>Si vous avez accès à Adobe Journey Optimizer, les restrictions suivantes ne s’appliquent **pas**.
+
+- Les données d’événement **peuvent** peuvent être supprimées de la personnalisation en flux continu si la file d’attente de traitement des événements dépasse 12 heures
+- Les données d’événement supprimées **ne seront pas** ingérées dans le profil
+   - Vous pourrez voir quand les événements ont été supprimés
+   - Les événements seront disponibles dans le lac de données, selon vos droits
+   - Vous *pouvez* utiliser Query Service pour réingérer directement les données, si nécessaire
 
 ## Accès {#access}
 
@@ -175,7 +185,7 @@ En outre, vous pouvez consulter vos flux de données et voir si vous pouvez opti
 
 La vidéo suivante présente un aperçu de la capacité.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475275/?captions=fre_fr&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## Questions fréquentes {#faq}
 
