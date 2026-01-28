@@ -4,10 +4,10 @@ type: Tutorial
 description: Découvrez comment activer les données d’audience disponibles dans Adobe Experience Platform en envoyant des audiences vers des destinations basées sur des profils de diffusion en continu.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 99bac2ea71003b678a25b3afc10a68d36472bfbc
 workflow-type: tm+mt
-source-wordcount: '717'
-ht-degree: 13%
+source-wordcount: '762'
+ht-degree: 12%
 
 ---
 
@@ -16,12 +16,12 @@ ht-degree: 13%
 
 >[!IMPORTANT]
 > 
-> * Pour activer les données et activer l’[étape de mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
-> * Pour activer les données sans passer par l’étape [mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
+> * Pour activer les données et activer l’[étape de mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
+> * Pour activer les données sans passer par l’étape [mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
 > 
 > Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 Cet article explique le processus requis pour activer des données d’audience dans Adobe Experience Platform vers des destinations basées sur des profils de diffusion en continu (également appelées [destinations d’entreprise](/help/destinations/destination-types.md#advanced-enterprise-destinations)).
 
@@ -75,9 +75,15 @@ Vous pouvez effectuer un choix parmi plusieurs types d’audiences, selon leur o
 
    ![Image mettant en surbrillance le processus de sélection d’un champ source dans l’étape de mappage.](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
 
-1. Dans la page **[!UICONTROL Select field]**, sélectionnez les attributs XDM à envoyer à la destination, puis choisissez **[!UICONTROL Select]**.
+1. Dans la page **[!UICONTROL Select source field]**, sélectionnez les attributs XDM à envoyer à la destination, puis choisissez **[!UICONTROL Save]**.
 
-   ![Image montrant une sélection de champs XDM que vous pouvez sélectionner comme champs source.](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
+   ![Image montrant une sélection de champs XDM que vous pouvez sélectionner comme champs source.](../assets/ui/activate-streaming-profile-destinations/select-source-field-modal.png)
+
+   Utilisez le bouton **[!UICONTROL Show only fields with data]** pour afficher uniquement les champs de schéma remplis de valeurs. Par défaut, seuls les champs de schéma renseignés s’affichent.
+
+   Utilisez le bouton **[!UICONTROL Show display names for fields]** pour afficher les noms conviviaux des champs, au lieu des noms des champs de schéma.
+
+   ![Sélectionnez la page du champ source affichant le bouton bascule des noms d’affichage.](../assets/ui/activate-batch-profile-destinations/show-display-names.gif)
 
 1. Pour ajouter d’autres champs, répétez les étapes 1 à 3, puis sélectionnez **[!UICONTROL Next]**.
 
