@@ -2,14 +2,18 @@
 title: Activer la capture de données de modification pour les connexions source dans l’API
 description: Découvrez comment activer la capture de données de modification pour les connexions source dans l’API
 exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
-source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
+source-git-commit: bd28d5be932823b8bf9c98280f97694ff221d76d
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1291'
 ht-degree: 0%
 
 ---
 
 # Activer la capture de données de modification pour les connexions source dans l’API
+
+>[!AVAILABILITY]
+>
+>Vous pouvez désormais utiliser la capture de données de modification pour les sources [!DNL Amazon S3] et [!DNL Data Landing Zone] lors de l’exécution de Adobe Experience Platform sur Amazon Web Services (AWS) en étant connecté à un centre de données VA6. Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la [présentation multi-cloud d’Experience Platform](../../../landing/multi-cloud.md).
 
 Utilisez la capture de données de modification dans les sources Adobe Experience Platform pour que vos systèmes source et de destination restent synchronisés en temps quasi réel.
 
@@ -38,7 +42,7 @@ Data Mirror utilise des schémas relationnels pour étendre la capture de donné
 
 Les schémas relationnels étendent Experience Platform pour appliquer l’unicité des clés primaires, suivre les modifications au niveau des lignes et définir des relations au niveau du schéma. Avec la capture de données de modification, ils appliquent les insertions, les mises à jour et les suppressions directement dans le lac de données, réduisant ainsi le besoin d&#39;extraire, de transformer, de charger (ETL) ou de réconciliation manuelle.
 
-Consultez [&#x200B; Présentation des schémas relationnels &#x200B;](../../../xdm/schema/relational.md) pour plus d’informations.
+Consultez [ Présentation des schémas relationnels ](../../../xdm/schema/relational.md) pour plus d’informations.
 
 ### Schéma relationnel requis pour la capture de données de modification
 
@@ -165,7 +169,7 @@ Pour utiliser la capture de données de modification avec [!DNL Google BigQuery]
 
 Pour activer l’historique des modifications dans votre connexion source [!DNL Google BigQuery], accédez à la page [!DNL Google BigQuery] dans la console [!DNL Google Cloud] et définissez `enable_change_history` sur `TRUE`. Cette propriété active l&#39;historique des modifications de votre tableau de données.
 
-Pour plus d’informations, consultez le guide sur les instructions de langage de définition de données dans [&#x200B; [!DNL GoogleSQL]](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list).
+Pour plus d’informations, consultez le guide sur les instructions de langage de définition de données dans [ [!DNL GoogleSQL]](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list).
 
 Lisez la documentation suivante pour savoir comment activer la capture de données de modification pour votre connexion source [!DNL Google BigQuery] :
 
@@ -182,7 +186,7 @@ Dans [!DNL Snowflake], activez le suivi des modifications à l’aide de l’`AL
 ALTER TABLE mytable SET CHANGE_TRACKING = TRUE
 ```
 
-Pour plus d’informations, consultez le guide [[!DNL Snowflake]  sur l’utilisation de la clause de modification &#x200B;](https://docs.snowflake.com/en/sql-reference/constructs/changes#usage-notes).
+Pour plus d’informations, consultez le guide [[!DNL Snowflake]  sur l’utilisation de la clause de modification ](https://docs.snowflake.com/en/sql-reference/constructs/changes#usage-notes).
 
 Lisez la documentation suivante pour savoir comment activer la capture de données de modification pour votre connexion source [!DNL Snowflake] :
 
