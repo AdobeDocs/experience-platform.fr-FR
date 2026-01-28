@@ -2,9 +2,9 @@
 title: Notes de mise à jour préliminaires d’Experience Platform
 description: Aperçu des dernières notes de mise à jour de Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 26dabf21959fde0b6ce7111524a20e3f342aec75
+source-git-commit: 6fa71c48151e937f2e18d8b9761aad94eca85ade
 workflow-type: tm+mt
-source-wordcount: '1389'
+source-wordcount: '1316'
 ht-degree: 23%
 
 ---
@@ -113,7 +113,6 @@ Pour plus d’informations, consultez la [[!DNL Schemas] vue d’ensemble](../xd
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Surveillance de la segmentation en flux continu | La surveillance en temps réel de la segmentation en flux continu offre une transparence sur les mesures de taux d’évaluation, de latence et de qualité des données au niveau des sandbox, des jeux de données et de l’audience. Cela participe à des alertes proactives et à des informations exploitables pour aider les ingénieures et ingénieurs de données à identifier les violations de capacité et les problèmes d’ingestion. Les mesures de surveillance incluent le taux d’évaluation, la latence d’ingestion P95, ainsi que les enregistrements reçus, évalués, en échec et ignorés. Les fonctionnalités d’affichage par jeu de données et d’affichage par audience offrent une visibilité complète sur les nouveaux profils qualifiés et disqualifiés. |
 | Actualisation de la TTL de l’audience externe | Les audiences externes (telles que les chargements de fichiers CSV) prennent désormais en charge une fonctionnalité d’actualisation forcée pour les paramètres de durée de vie (TTL). Cette fonctionnalité permet aux utilisateurs d’actualiser manuellement l’expiration de la TTL pour les audiences externes, offrant ainsi un meilleur contrôle sur la gestion du cycle de vie des audiences. Cela s’avère particulièrement utile pour les audiences qui doivent persister au-delà de leur période de TTL initiale ou qui nécessitent une réactivation sans charger à nouveau les données. |
 
 Pour plus d’informations, consultez la [[!DNL Segmentation Service] vue d’ensemble](../segmentation/home.md).
