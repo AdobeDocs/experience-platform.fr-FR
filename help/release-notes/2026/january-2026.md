@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Janvier 2026
 description: Notes de mise à jour de janvier 2026 pour Adobe Experience Platform.
-source-git-commit: 8ce256234be0917242f117ee7e9b806abe90888c
+source-git-commit: cbe9dd4babb31061405dee3ebe4bd40acad82e90
 workflow-type: tm+mt
-source-wordcount: '1287'
-ht-degree: 21%
+source-wordcount: '1454'
+ht-degree: 19%
 
 ---
 
@@ -25,27 +25,26 @@ ht-degree: 21%
 
 Nouvelles fonctionnalités et mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-<!-- - [Agent Orchestrator](#agent-orchestrator) -->
-
+- [Agent Orchestrator](#agent-orchestrator)
 - [Destinations](#destinations)
 - [Profil client en temps réel](#real-time-customer-profile)
 - [Schémas](#schemas)
 - [Service de segmentation](#segmentation-service)
 - [Sources](#sources)
 
-<!-- ## Agent Orchestrator {#agent-orchestrator}
+## Agent Orchestrator {#agent-orchestrator}
 
-Agent Orchestrator enables you to build and deploy AI-powered agents that can automate workflows and interact with customers across multiple channels.
+Agent Orchestrator vous permet de créer et de déployer des agents optimisés par l’IA qui peuvent automatiser les workflows et interagir avec les clients sur plusieurs canaux.
 
-**New or updated features**
+**Fonctionnalités nouvelles ou mises à jour**
 
-| Feature | Description |
+| Fonctionnalité | Description |
 | --- | --- |
-| Trial motion for Adobe Experience Platform Agents | **Select customers now have access to Adobe Experience Platform Agents for a complimentary trial**, enabling them to explore and interact with these Agents through the AI Assistant interface powered by Adobe Experience Platform Agent Orchestrator. The trial offers hands-on experience with AI Agents that operate within the context of customers' existing Experience Cloud products and environments, allowing teams to evaluate value before committing to a full purchase. Adobe Experience Platform Agents are guided by user input and oversight and respect existing product-level access controls, ensuring users can only perform actions or view data for which they are authorized within the underlying Experience Cloud applications.|
+| Essai des agents Adobe Experience Platform lié à l’utilisation | **Certains clients bénéficient désormais d’un accès gratuit à titre d’essai aux agents Adobe Experience Platform**. Vous pouvez utiliser la version d&#39;évaluation pour explorer les agents et interagir avec eux par le biais de l&#39;interface de l&#39;assistant AI optimisée par Adobe Experience Platform Agent Orchestrator. L’essai offre une expérience pratique avec des agents d’IA qui fonctionnent dans le cadre des produits et environnements Experience Cloud existants des clients, ce qui permet aux équipes d’évaluer la valeur avant de s’engager à effectuer un achat complet. Les agents Adobe Experience Platform sont guidés par les entrées et la supervision des utilisateurs et respectent les contrôles d’accès existants au niveau du produit, ce qui garantit que les utilisateurs et utilisatrices ne peuvent effectuer que des actions ou afficher des données pour lesquelles ils sont autorisés dans les applications Experience Cloud sous-jacentes. Lisez la présentation de l’essai lié à l’utilisation des agents Experience Platform [](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) pour plus d’informations sur la prise en main. |
 
 {style="table-layout:auto"}
 
-For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). -->
+Pour plus d’informations, consultez la [documentation d’Agent Orchestrator](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
 
 ## Destinations {#destinations}
 
@@ -61,7 +60,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Prise en charge de la planification hebdomadaire et mensuelle pour l’intégration [Liveramp](../../destinations/catalog/advertising/liveramp-onboarding.md#scheduling) | Vous pouvez désormais configurer des plannings d’exportation hebdomadaires et mensuels pour la destination d’intégration Liveramp. <br> Cette version est déployée progressivement et sera terminée d’ici le 30 janvier. |
 | Expérience d’activation améliorée pour les destinations [The Trade Desk](../../destinations/catalog/advertising/tradedesk.md) et [Microsoft Bing](../../destinations/catalog/advertising/bing.md) | Les destinations Trade Desk et Microsoft Bing incluent désormais des mappages obligatoires prédéfinis pour une expérience d’activation optimisée.  <br> Cette version est déployée progressivement et sera terminée d’ici le 30 janvier. ![Image montrant les mappages prédéfinis pour The Trade Desk](assets/january/mandatory-mappings-ttd.png) {width="150" align="center" zoomable="yes"} <br> ![Image montrant les mappages prédéfinis pour Microsoft Bing](assets/january/mandatory-mappings-bing.png) {width="150" align="center" zoomable="yes"} |
 | Prise en charge du chiffrement AES256 pour les destinations [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) | Vous pouvez désormais configurer le chiffrement AES256 pour vos exportations Amazon S3. Deux options sont disponibles : <ul><li>**[!UICONTROL Default]** : les données seront chiffrées au repos avec l’algorithme de chiffrement par défaut défini sur votre compartiment.</li><li>**[!UICONTROL SSE-S3/AES256]** : Experience Platform ajoute l’en-tête `s3:x-amz-server-side-encryption": "AES256` dans l’exportation et les données seront chiffrées au repos avec l’algorithme AES256 lorsqu’elles arrivent dans S3. **Cette option est prioritaire sur tout algorithme de chiffrement par défaut configuré sur votre compartiment S3**.</li></ul> Cette version est déployée progressivement et sera terminée d’ici le 30 janvier. |
-| Prise en charge de l’activation des numéros de téléphone pour la connexion [&#x200B; The Trade Desk - CRM &#x200B;](../../destinations/catalog/advertising/tradedesk-emails.md#phone-hashing) | La destination Trade Desk - CRM prend désormais en charge l’activation des numéros de téléphone en plus des adresses e-mail. Vous pouvez activer les numéros de téléphone non hachés au format E.164 et les numéros de téléphone hachés (format SHA256_E.164) sur votre compte Trade Desk pour le ciblage et la suppression d’audiences en fonction des données CRM. Les numéros de téléphone doivent être normalisés au format E.164 avant activation. |
+| Prise en charge de l’activation des numéros de téléphone pour la connexion [ The Trade Desk - CRM ](../../destinations/catalog/advertising/tradedesk-emails.md#phone-hashing) | La destination Trade Desk - CRM prend désormais en charge l’activation des numéros de téléphone en plus des adresses e-mail. Vous pouvez activer les numéros de téléphone non hachés au format E.164 et les numéros de téléphone hachés (format SHA256_E.164) sur votre compte Trade Desk pour le ciblage et la suppression d’audiences en fonction des données CRM. Les numéros de téléphone doivent être normalisés au format E.164 avant activation. |
 
 
 **Fonctionnalité nouvelle ou mise à jour**
@@ -70,7 +69,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | --- | --- |
 | Mise à jour des limites du mécanisme de sécurisation pour les destinations [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) | Le nombre maximal d’audiences pouvant être mappées à une seule destination Adobe Target est passé de 50 à 250. Cela aligne Adobe Target sur la limite d’audience standard pour d’autres destinations, offrant ainsi une plus grande flexibilité pour les workflows d’activation des audiences. Vous pouvez désormais activer davantage d’audiences vers les destinations Adobe Target sans avoir à créer plusieurs flux de données. |
 | [Modifier les destinations](/help/destinations/ui/edit-destination.md) et [modifier les actions marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) disponibilité générale | L’option permettant de modifier les destinations et les actions marketing est désormais disponible pour tous les utilisateurs et utilisatrices. |
-| Activez/désactivez les noms d’affichage des champs dans l’[&#x200B; Mappage &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) | Lors du mappage des champs de schéma à une destination, vous pouvez désormais basculer entre l’affichage du nom complet du champ XDM et l’affichage uniquement du nom d’affichage. <br> ![Enregistrement d’écran affichant le bouton bascule du nom d’affichage.](/help/release-notes/2026/assets/january/show-display-names.gif) |
+| Activez/désactivez les noms d’affichage des champs dans l’[ Mappage ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) | Lors du mappage des champs de schéma à une destination, vous pouvez désormais basculer entre l’affichage du nom complet du champ XDM et l’affichage uniquement du nom d’affichage. <br> ![Enregistrement d’écran affichant le bouton bascule du nom d’affichage.](/help/release-notes/2026/assets/january/show-display-names.gif) |
 
 {style="table-layout:auto"}
 
