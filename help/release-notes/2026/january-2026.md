@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Janvier 2026
 description: Notes de mise à jour de janvier 2026 pour Adobe Experience Platform.
-source-git-commit: 54be4d5c309f60e6c3e2a96ab1fea700cc79a608
+source-git-commit: 436e65f22b8866fb9922afcf51811f537c05fc9f
 workflow-type: tm+mt
-source-wordcount: '1231'
-ht-degree: 22%
+source-wordcount: '1272'
+ht-degree: 21%
 
 ---
 
@@ -45,7 +45,7 @@ Agent Orchestrator enables you to build and deploy AI-powered agents that can au
 
 {style="table-layout:auto"}
 
-For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). -->
+For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). -->
 
 ## Destinations {#destinations}
 
@@ -60,7 +60,8 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Prise en charge des points d’entrée régionaux pour les connexions Braze | Tous les points d’entrée [spécifiques à une région](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) pris en charge par [!DNL Braze] peuvent désormais être sélectionnés pendant le flux de configuration de destination. Demandez à votre représentant [!DNL Braze] quelle instance de point d’entrée vous devez utiliser. |
 | Prise en charge de la planification hebdomadaire et mensuelle pour l’intégration [Liveramp](../../destinations/catalog/advertising/liveramp-onboarding.md#scheduling) | Vous pouvez désormais configurer des plannings d’exportation hebdomadaires et mensuels pour la destination d’intégration Liveramp. <br> Cette version est déployée progressivement et sera terminée d’ici le 30 janvier. |
 | Expérience d’activation améliorée pour les destinations [The Trade Desk](../../destinations/catalog/advertising/tradedesk.md) et [Microsoft Bing](../../destinations/catalog/advertising/bing.md) | Les destinations Trade Desk et Microsoft Bing incluent désormais des mappages obligatoires prédéfinis pour une expérience d’activation optimisée.  <br> Cette version est déployée progressivement et sera terminée d’ici le 30 janvier. |
-| Prise en charge du chiffrement AES256 pour les destinations [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) | Vous pouvez désormais configurer le chiffrement AES256 pour vos exportations Amazon S3. Deux options sont disponibles : <ul><li>**[!UICONTROL Default]** : si aucune politique personnalisée n’est appliquée à vos compartiments, les données sont chiffrées au repos lorsqu’elles arrivent dans S3 avec l’algorithme AES256. Cependant, si des politiques personnalisées sont appliquées, Experience Platform les respecte et Amazon S3 continue d’appliquer les politiques de chiffrement personnalisées que vous avez configurées.</li><li>**[!UICONTROL SSE-S3/AES256]** : Experience Platform ajoute l’en-tête `s3:x-amz-server-side-encryption": "AES256` dans l’export et les données seront chiffrées au repos lorsqu’elles arrivent dans S3 avec l’algorithme AES256.</li></ul>  <br> Cette version est déployée progressivement et sera terminée d’ici le 30 janvier. |
+| Prise en charge du chiffrement AES256 pour les destinations [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) | Vous pouvez désormais configurer le chiffrement AES256 pour vos exportations Amazon S3. Deux options sont disponibles : <ul><li>**[!UICONTROL Default]** : les données seront chiffrées au repos avec l’algorithme de chiffrement par défaut défini sur votre compartiment.</li><li>**[!UICONTROL SSE-S3/AES256]** : Experience Platform ajoute l’en-tête `s3:x-amz-server-side-encryption": "AES256` dans l’exportation et les données seront chiffrées au repos avec l’algorithme AES256 lorsqu’elles arrivent dans S3. **Cette option est prioritaire sur tout algorithme de chiffrement par défaut configuré sur votre compartiment S3**.</li></ul> Cette version est déployée progressivement et sera terminée d’ici le 30 janvier. |
+| Prise en charge de l’activation des numéros de téléphone pour la connexion [ The Trade Desk - CRM ](../../destinations/catalog/advertising/tradedesk-emails.md#phone-hashing) | La destination Trade Desk - CRM prend désormais en charge l’activation des numéros de téléphone en plus des adresses e-mail. Vous pouvez activer les numéros de téléphone non hachés au format E.164 et les numéros de téléphone hachés (format SHA256_E.164) sur votre compte Trade Desk pour le ciblage et la suppression d’audiences en fonction des données CRM. Les numéros de téléphone doivent être normalisés au format E.164 avant activation. |
 
 
 **Fonctionnalité nouvelle ou mise à jour**
@@ -69,7 +70,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | --- | --- |
 | Mise à jour des limites du mécanisme de sécurisation pour les destinations [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) | Le nombre maximal d’audiences pouvant être mappées à une seule destination Adobe Target est passé de 50 à 250. Cela aligne Adobe Target sur la limite d’audience standard pour d’autres destinations, offrant ainsi une plus grande flexibilité pour les workflows d’activation des audiences. Vous pouvez désormais activer davantage d’audiences vers les destinations Adobe Target sans avoir à créer plusieurs flux de données. |
 | [Modifier les destinations](/help/destinations/ui/edit-destination.md) et [modifier les actions marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) disponibilité générale | L’option permettant de modifier les destinations et les actions marketing est désormais disponible pour tous les utilisateurs et utilisatrices. |
-| Activez/désactivez les noms d’affichage des champs dans l’[&#x200B; Mappage &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) | Lors du mappage des champs de schéma à une destination, vous pouvez désormais basculer entre l’affichage du nom complet du champ XDM et l’affichage uniquement du nom d’affichage. <br> ![Enregistrement d’écran affichant le bouton bascule du nom d’affichage.](/help/release-notes/2026/assets/january/show-display-names.gif) |
+| Activez/désactivez les noms d’affichage des champs dans l’[ Mappage ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) | Lors du mappage des champs de schéma à une destination, vous pouvez désormais basculer entre l’affichage du nom complet du champ XDM et l’affichage uniquement du nom d’affichage. <br> ![Enregistrement d’écran affichant le bouton bascule du nom d’affichage.](/help/release-notes/2026/assets/january/show-display-names.gif) |
 
 {style="table-layout:auto"}
 
