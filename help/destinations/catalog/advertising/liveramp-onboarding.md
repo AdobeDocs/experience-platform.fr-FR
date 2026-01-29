@@ -3,10 +3,10 @@ title: LiveRamp - Connexion pour l’intégration
 description: Découvrez comment utiliser le connecteur LiveRamp pour intégrer des audiences d’Adobe Real-time Customer Data Platform vers LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: b8540eb20838e7f2228d71bfc002392d07daffe4
 workflow-type: tm+mt
-source-wordcount: '1849'
-ht-degree: 64%
+source-wordcount: '1872'
+ht-degree: 62%
 
 ---
 
@@ -50,7 +50,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 | Élément | Type | Notes |
 |---------|----------|---------|
 | Type d’exportation | **[!UICONTROL Audience export]** | Vous exportez tous les profils membres d’une audience ainsi que les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination [!DNL LiveRamp - Onboarding]. |
-| Fréquence des exportations | **[!UICONTROL Daily batch]** | Étant donné que les profils sont mis à jour dans Experience Platform en fonction de l’évaluation des audiences, les profils (identités) sont mis à jour une fois par jour en aval de la plateforme de destination. En savoir plus sur les [destinations basées sur des fichiers par lots](/help/destinations/destination-types.md#file-based). |
+| Fréquence des exportations | **[!UICONTROL Batch]** | Comme les profils sont mis à jour dans Experience Platform en fonction de l’évaluation de l’audience, les profils (identités) sont mis à jour et peuvent être diffusés en aval de la plateforme de destination à une cadence quotidienne, hebdomadaire ou mensuelle. En savoir plus sur les [destinations basées sur des fichiers par lots](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -77,7 +77,7 @@ Pour vous authentifier auprès de la destination, renseignez les champs requis e
 * **[!UICONTROL Password]** : mot de passe de votre emplacement de stockage [!DNL LiveRamp - Onboarding].
 * **[!UICONTROL PGP/GPG encryption key]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
   ![Image montrant un exemple de clé PGP correctement formatée dans l’interface utilisateur](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* **[!UICONTROL Subkey ID]**:Ifvous fournissez une clé de chiffrement, vous devez également fournir un **[!UICONTROL Subkey ID]**&#x200B;de chiffrement. Consultez la [documentation sur le chiffrement](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) de [!DNL LiveRamp] pour savoir comment obtenir l’ID de sous-clé.
+* **[!UICONTROL Subkey ID]**:Ifvous fournissez une clé de chiffrement, vous devez également fournir un **[!UICONTROL Subkey ID]**de chiffrement. Consultez la [documentation sur le chiffrement](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) de [!DNL LiveRamp] pour savoir comment obtenir l’ID de sous-clé.
 
 **SFTP avec authentification par clé SSH** {#sftp-ssh}
 
@@ -92,7 +92,7 @@ Pour vous authentifier auprès de la destination, renseignez les champs requis e
 
 * **[!UICONTROL PGP/GPG encryption key]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
   ![Image montrant un exemple de clé PGP correctement formatée dans l’interface utilisateur](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
-* **[!UICONTROL Subkey ID]**:Ifvous fournissez une clé de chiffrement, vous devez également fournir un **[!UICONTROL Subkey ID]**&#x200B;de chiffrement. Consultez la [documentation sur le chiffrement](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) de [!DNL LiveRamp] pour savoir comment obtenir l’ID de sous-clé.
+* **[!UICONTROL Subkey ID]**:Ifvous fournissez une clé de chiffrement, vous devez également fournir un **[!UICONTROL Subkey ID]**de chiffrement. Consultez la [documentation sur le chiffrement](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) de [!DNL LiveRamp] pour savoir comment obtenir l’ID de sous-clé.
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -132,7 +132,7 @@ Consultez la section [Activer des données d’audience vers des destinations d�
 À l’étape [!UICONTROL Scheduling], créez un planning d’exportation pour chaque audience, avec les paramètres présentés ci-dessous.
 
 * **[!UICONTROL File export options]** : [!UICONTROL Export full files]. Les [exportations de fichiers incrémentiels](../../ui/activate-batch-profile-destinations.md#export-incremental-files) ne sont actuellement pas prises en charge pour la destination [!DNL LiveRamp].
-* **[!UICONTROL Frequency]** : [!UICONTROL Daily]
+* **[!UICONTROL Frequency]** : [!UICONTROL Daily], [!UICONTROL Weekly] ou [!UICONTROL Monthly]
 * **[!UICONTROL Date]** : sélectionnez les heures de début et de fin de l’exportation comme vous le souhaitez.
 
 ![Capture d’écran de l’interface utilisateur d’Experience Platform montrant l’étape de planification des audiences.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
@@ -255,6 +255,7 @@ Cette section répertorie les nouvelles fonctionnalités et les mises à jour im
 
 | Mois de publication | Type de mise à jour | Description |
 |---|---|---|
+| Février 2025 | Nouvelles fonctionnalités et mise à jour de la documentation | <ul><li> Ajout de la prise en charge des cadences de diffusion hebdomadaires et mensuelles. |
 | Mars 2024 | Nouvelles fonctionnalités et mise à jour de la documentation | <ul><li>Ajout de la prise en charge des diffusions vers l’Europe et l’Australie [!DNL LiveRamp] les instances [!DNL SFTP].</li><li>Mise à jour de la documentation afin de décrire les configurations spécifiques pour les régions nouvellement prises en charge.</li><li>Augmentation de la taille maximale du fichier à 10 millions de lignes (contre 5 millions auparavant).</li><li>Mise à jour de la documentation pour prendre en compte l’augmentation de la taille des fichiers.</li></ul> |
 | Juillet 2023 | Version initiale | Publication de la destination initiale et de la documentation. |
 
