@@ -2,10 +2,10 @@
 title: Notes de mise à jour préliminaires d’Experience Platform
 description: Aperçu des dernières notes de mise à jour de Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 6fa71c48151e937f2e18d8b9761aad94eca85ade
+source-git-commit: 76e8f0678c4634258170ca1161134dd1176c24e7
 workflow-type: tm+mt
-source-wordcount: '1316'
-ht-degree: 23%
+source-wordcount: '1110'
+ht-degree: 22%
 
 ---
 
@@ -32,8 +32,7 @@ Nouvelles fonctionnalités et mises à jour des fonctionnalités existantes dans
 - [Agent Orchestrator](#agent-orchestrator)
 - [Destinations](#destinations)
 - [Profil client en temps réel](#real-time-customer-profile)
-- [Schémas](#schemas)
-- [Service de segmentation](#segmentation-service)
+- [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
 ## Agent Orchestrator {#agent-orchestrator}
@@ -92,18 +91,6 @@ Le profil client en temps réel offre une vue d’ensemble de chaque client en c
 {style="table-layout:auto"}
 
 Pour plus d’informations, consultez la [[!DNL Real-Time Customer Profile] vue d’ensemble](../profile/home.md).
-
-## Schémas {#schemas}
-
-Experience Platform utilise des schémas pour décrire la structure des données de manière cohérente et réutilisable. En définissant les données de manière cohérente sur l’ensemble des systèmes, il est plus simple de leur donner du sens et donc d’en tirer profit. Les schémas sont composés d’une classe de base et de zéro ou plusieurs groupes de champs de schéma.
-
-**Fonctionnalités nouvelles ou mises à jour**
-
-| Fonctionnalité | Description |
-| ------- | ----------- |
-| Modernisation de l’inventaire des schémas avec la recherche, le filtre, les balises et les dossiers | Modernisation de la page de navigation des schémas afin d’améliorer les fonctionnalités d’organisation et de découverte. Les nouvelles fonctionnalités comprennent des options de recherche et de filtrage avancées, la prise en charge de balises et de dossiers générés par l’utilisateur pour organiser les schémas, ainsi que des actions intégrées pour rationaliser les workflows. Les principales améliorations incluent : des colonnes mises à jour (nom, classe, jeux de données, identités, relations, activer pour le profil, comportement, type de schéma, balises, date de création, dernière modification), des filtres avancés (afficher les profils, type de schéma, classe, a une balise, créé par, date de création, date de modification, a une identité principale, a une relation, espace de noms d’identité de Principal), des actions intégrées (modifier, supprimer, appliquer des libellés, créer un jeu de données pour les schémas non relationnels, gérer les balises, déplacer vers un dossier, ajouter au package, copier la structure JSON, télécharger un fichier d’exemple) et la possibilité d’organiser les schémas à l’aide de balises et de dossiers. Ces améliorations offrent une visibilité complète sur les ressources de schéma et permettent une gestion plus efficace des schémas au niveau du sandbox. |
-
-Pour plus d’informations, consultez la [[!DNL Schemas] vue d’ensemble](../xdm/home.md).
 
 ## Service de segmentation {#segmentation-service}
 
