@@ -18,7 +18,7 @@ ht-degree: 5%
 
 Ce guide de l’interface utilisateur nécessite une compréhension des différents services de [!DNL Experience Platform] impliqués dans la gestion des [!DNL Real-Time Customer Profiles]. Avant de lire ce guide ou de travailler dans l’interface utilisateur, consultez la documentation relative aux services suivants :
 
-* [[!DNL Real-Time Customer Profile] présentation ](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [[!DNL Real-Time Customer Profile] présentation &#x200B;](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [[!DNL Identity Service]](../../identity-service/home.md) : permet l’[!DNL Real-Time Customer Profile] en établissant un lien entre les identités de sources de données disparates lors de leur ingestion dans [!DNL Experience Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
 
@@ -68,7 +68,7 @@ Pour afficher les détails de l’un des profils types, sélectionnez l’**[!UI
 
 ![Des exemples de profils correspondant à la politique de fusion s’affichent.](../images/user-guide/profile-browse-table.png)
 
-Pour en savoir plus sur les politiques de fusion et leur rôle dans Experience Platform, consultez la [ présentation des politiques de fusion ](../merge-policies/overview.md).
+Pour en savoir plus sur les politiques de fusion et leur rôle dans Experience Platform, consultez la [&#x200B; présentation des politiques de fusion &#x200B;](../merge-policies/overview.md).
 
 ### Parcourir par [!UICONTROL Identity] {#browse-identity}
 
@@ -151,7 +151,7 @@ Vous pouvez également choisir d’afficher ou non les noms des attributs sous f
 
 La section **[!UICONTROL Auto-classified widgets]** affiche des widgets qui exploitent le schéma d’union pour déterminer les groupes de champs sources auxquels appartient un attribut, fournissant ainsi un contexte plus clair sur l’origine des données. Vous pouvez utiliser la barre de recherche pour rechercher plus facilement des mots-clés dans vos widgets.
 
-Ces widgets combinent les données d’événement (avec le widget Événements d’expérience) et les données d’attribut, ce qui vous permet d’avoir une vue unifiée de votre profil. Vous pouvez utiliser ces widgets pour explorer la structure des données de votre profil afin de mieux structurer vos [ widgets personnalisables ](#customizable-widgets).
+Ces widgets combinent les données d’événement (avec le widget Événements d’expérience) et les données d’attribut, ce qui vous permet d’avoir une vue unifiée de votre profil. Vous pouvez utiliser ces widgets pour explorer la structure des données de votre profil afin de mieux structurer vos [&#x200B; widgets personnalisables &#x200B;](#customizable-widgets).
 
 >[!NOTE]
 >
@@ -215,7 +215,7 @@ Dans le menu **[!UICONTROL Profiles]** principal, sélectionnez l’onglet **[!U
 
 ![L’onglet Attributs calculés est mis en surbrillance.](../images/user-guide/computed-attributes.png)
 
-Pour plus d’informations sur les attributs calculés, consultez la [présentation des attributs calculés](../computed-attributes/overview.md). Pour plus d’informations sur l’utilisation des attributs calculés dans l’interface utilisateur d’Experience Platform, consultez le [ guide de l’interface utilisateur des attributs calculés](../computed-attributes/ui.md).
+Pour plus d’informations sur les attributs calculés, consultez la [présentation des attributs calculés](../computed-attributes/overview.md). Pour plus d’informations sur l’utilisation des attributs calculés dans l’interface utilisateur d’Experience Platform, consultez le [&#x200B; guide de l’interface utilisateur des attributs calculés](../computed-attributes/ui.md).
 
 ## Étapes suivantes
 
