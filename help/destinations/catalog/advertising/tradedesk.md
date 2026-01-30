@@ -3,9 +3,9 @@ keywords: publicité ; trade desk ; advertising trade desk
 title: Connexion à The Trade Desk
 description: Trade Desk est une plateforme en libre-service permettant aux acheteurs de publicités d’exécuter des campagnes numériques de reciblage et de ciblage d’audience sur des sources d’affichage, de vidéo et d’inventaire mobile.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: e145dc91fca471078cf94d84ce1012f659d70293
+source-git-commit: 138bfe721bb20fe3ba614a73ffffca3e00979acb
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1242'
 ht-degree: 22%
 
 ---
@@ -13,22 +13,6 @@ ht-degree: 22%
 # Connexion [!DNL The Trade Desk]
 
 ## Vue d’ensemble {#overview}
-
-
->[!IMPORTANT]
->
-> Suite à la [mise à niveau interne](../../../release-notes/2025/july-2025.md#destinations) du service de destinations de juillet 2025, vous remarquerez peut-être une **diminution du nombre de profils activés** dans vos flux de données à [!DNL The Trade Desk].
-> Cette baisse est due à l’amélioration de la visibilité de la surveillance. Les profils sans ECID sont désormais correctement comptabilisés comme déposés dans les mesures d’activation. Pour plus d’informations, consultez la section [mappage obligatoire](#mandatory-mappings) de cette page.
->
->**Changements :**
->
->* Le service de destinations signale désormais correctement lorsque des profils sans ECID sont supprimés de l’activation.
->* **Important :** profils sans ECID n’ont jamais été [!DNL The Trade Desk] avant même cette mise à niveau. L’intégration a toujours nécessité un ECID. Cette mise à niveau corrige un bug qui empêchait auparavant la visibilité de ces abandons dans vos mesures.
->
->**Ce que vous devez faire**
->
->* Vérifiez les données de votre audience pour vous assurer que les profils possèdent des valeurs ECID valides.
->* Surveillez vos mesures d’activation pour vérifier le nombre de profils attendu. Des nombres plus faibles reflètent des rapports précis, pas un changement de comportement de destination.
 
 Utilisez ce connecteur de destination pour envoyer des données de profil à [!DNL The Trade Desk]. Ce connecteur envoie des données au point d’entrée propriétaire [!DNL The Trade Desk]. L’intégration entre Adobe Experience Platform et [!DNL The Trade Desk] ne prend pas en charge l’exportation de données vers le point d’entrée tiers [!DNL The Trade Desk].
 
@@ -46,14 +30,14 @@ En tant que spécialiste marketing, je souhaite pouvoir utiliser des audiences c
 
 Vous trouverez ci-dessous les identités prises en charge par [!DNL The Trade Desk] destination. Ces identités peuvent être utilisées pour activer des audiences à [!DNL The Trade Desk].
 
-Toutes les identités du tableau ci-dessous sont des mappages obligatoires.
+Toutes les identités du tableau ci-dessous sont préconfigurées et automatiquement mappées lors de l’activation. Vous n’avez pas besoin de configurer manuellement ces mappages dans le workflow d’activation.
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| [!DNL GAID] | GOOGLE ADVERTISING ID | Sélectionnez l’identité cible GAID lorsque votre identité source est un espace de noms GAID. |
-| [!DNL IDFA] | Identifiant Apple pour les annonceurs | Sélectionnez l’identité cible IDFA lorsque votre identité source est un espace de noms IDFA. |
-| [!DNL ECID] | Experience Cloud ID | Cette identité est obligatoire pour que l’intégration fonctionne correctement, mais elle n’est pas utilisée pour l’activation de l’audience. |
-| [!DNL Tradedesk] | [!DNL TDID] dans la plateforme [!DNL The Trade Desk] | Utilisez cette identité lors de l&#39;activation des audiences en fonction de l&#39;identifiant propriétaire de The Trade Desk. |
+| GAID | GOOGLE ADVERTISING ID | Activé lorsqu’un GAID est présent sur le profil. |
+| IDFA | Identifiant Apple pour les annonceurs | Activé lorsqu’un IDFA est présent sur le profil. |
+| ECID | Experience Cloud ID | Un espace de noms représentant l’ECID. Cet espace de noms peut également être référencé par les alias suivants : « ID Adobe Marketing Cloud », « ID Adobe Experience Cloud », « ID Adobe Experience Platform ». Lisez le document suivant sur [ECID](/help/identity-service/features/ecid.md) pour plus d’informations. |
+| [!DNL Tradedesk] | [!DNL TDID] dans la plateforme [!DNL The Trade Desk] | Activé lorsqu’un profil possède un ECID et qu’il existe un mappage ECID vers ID de bureau d’échanges dans Experience Platform. |
 
 {style="table-layout:auto"}
 
@@ -81,9 +65,16 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 ## Conditions préalables {#prerequisites}
 
->[!IMPORTANT]
->
->Si vous souhaitez créer votre première destination avec [!DNL The Trade Desk] sans jamais avoir activé la fonctionnalité de synchronisation des identifiants [ID](https://experienceleague.adobe.com/fr/docs/id-service/using/id-service-api/methods/idsync) dans le service Experience Cloud ID par le passé (avec Adobe Audience Manager ou d’autres applications), contactez Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants. Si vous avez configuré précédemment des intégrations [!DNL The Trade Desk] dans Audience Manager, les synchronisations d’identifiant que vous aviez configurées sont transférées vers Experience Platform.
+Les conditions préalables dépendent des types d’identité que vous prévoyez d’utiliser pour l’activation de l’audience :
+
+**Pour l’activation des ID mobiles uniquement** il n’y a pas de conditions préalables. Tant que vous collectez et gérez des identifiants (GAID et/ou IDFA) pour vos clients, vous pouvez commencer à activer les audiences sur [!DNL The Trade Desk].
+
+**Pour le ciblage basé sur les cookies sur[!DNL The Trade Desk]**, assurez-vous qu’un mappage entre ECID et [!DNL Trade Desk ID] est établi. Procédez comme suit :
+
+1. **Activer la fonctionnalité de synchronisation des identifiants** : si c’est la première fois que vous configurez [!DNL The Trade Desk ID] activation et que vous n’avez pas activé la fonctionnalité de synchronisation des [identifiants](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) dans le service Experience Cloud ID dans le passé (avec Adobe Audience Manager ou d’autres applications), contactez Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants.
+   * Si vous avez précédemment configuré des intégrations [!DNL The Trade Desk] dans Audience Manager, les synchronisations d’identifiant existantes sont automatiquement transférées vers Experience Platform.
+
+2. **Instrumenter vos pages web** : implémentez du code sur vos pages web pour créer des mappages entre [!DNL The Trade Desk ID] et l’ECID Adobe. Experience Platform peut ainsi associer des identifiants Trade Desk à vos profils client.
 
 ## Se connecter à la destination {#connect}
 
@@ -120,7 +111,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 > 
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
@@ -128,41 +119,43 @@ Dans l’étape [Planning des audiences](../../ui/activate-segment-streaming-des
 
 Lors du mappage des audiences, Adobe vous recommande d’utiliser le nom de l’audience Experience Platform ou une forme plus courte de celui-ci, pour plus de facilité d’utilisation. Cependant, l’identifiant ou le nom de l’audience dans la destination n’a pas besoin de correspondre à celui de votre compte Experience Platform. Toute valeur que vous insérez dans le champ de mappage est reflétée par la destination.
 
-### Mappages obligatoires {#mandatory-mappings}
+### Mappages préconfigurés {#preconfigured-mappings}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_ttd"
 >title="Jeux de mappages préconfigurés"
 >abstract="Nous avons préconfiguré ces quatre jeux de mappages pour vous. Lorsque vous activez des données vers The Trade Desk, les profils qualifiés pour les audiences activées n’ont pas nécessairement besoin que les quatre identités soient présentes sur les profils, car cette destination fonctionnera avec l’une des identités cibles affichées ici. <br> Pour le ciblage par cookies basé sur l’identifiant Trade Desk, vous devez disposer d’un ECID présent sur le profil et d’un mappage de synchronisation des identifiants entre l’identifiant Trade Desk et l’ECID."
->additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="En savoir plus sur les mappages préconfigurés"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="En savoir plus sur les mappages préconfigurés"
 
-Toutes les identités cibles décrites dans la section [identités prises en charge](#supported-identities) doivent être mappées à l’étape de mappage du workflow d’activation de l’audience. Cela inclut :
+Les mappages d’identité suivants sont **préconfigurés et automatiquement renseignés** pour vous dans le workflow d’activation des audiences :
 
-* [!DNL GAID] (Google Advertising ID)
-* [!DNL IDFA] (Apple ID pour les annonceurs)
-* [!DNL ECID] (Experience Cloud ID)
+* GAID (Google Advertising ID)
+* IDFA (Apple ID pour les annonceurs)
+* ECID (Experience Cloud ID)
 * [!DNL The Trade Desk ID]
 
 ![Capture d’écran affichant les mappages obligatoires](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
 
-Le mappage de toutes les identités cibles garantit que l’activation peut correctement fractionner et diffuser des profils à l’aide de n’importe quelle identité présente. Cela ne signifie pas que toutes les identités doivent être présentes sur chaque profil.
+Ces mappages sont grisés et en lecture seule. Dans cette étape, vous n’avez rien à configurer. Sélectionnez **[!UICONTROL Next]** pour continuer.
 
-Pour que l&#39;exportation vers The Trade Desk réussisse, un profil doit contenir :
+Experience Platform vérifie automatiquement tous les types d’identité pris en charge pour chaque profil appartenant aux audiences mappées dans le workflow d’activation, puis active le profil à l’aide des identités présentes.
 
-* [!DNL ECID], et
-* au moins un des éléments suivants : [!DNL GAID], [!DNL IDFA] ou [!DNL The Trade Desk ID]
+### Exigences d’identité par type d’activation
 
-Exemples :
+**Activation des ID mobiles (GAID/IDFA) :** profils utilisant uniquement GAID ou IDFA sont suffisants pour l’activation. Aucune identité ou condition préalable supplémentaire n’est requise.
 
-* [!DNL ECID] uniquement : non exporté
-* [!DNL ECID] + [!DNL The Trade Desk ID] : exporté
-* [!DNL ECID] + [!DNL IDFA] : exporté
-* [!DNL ECID] + [!DNL GAID] : exporté
-* [!DNL IDFA] + [!DNL The Trade Desk ID] (pas de [!DNL ECID]) : non exporté
+**Ciblage basé sur les cookies ([!DNL Trade Desk ID]) :** requiert les deux éléments suivants :
 
->[!NOTE]
-> 
->Suite à la mise à niveau de [juillet 2025](/help/release-notes/2025/july-2025.md#destinations) vers le service de destinations, les profils manquants [!DNL ECID] désormais correctement signalés comme abandonnés dans les mesures d’activation. Cela a toujours été le comportement de l’intégration (les profils sans [!DNL ECID] n’ont jamais atteint [!DNL The Trade Desk]), mais les abandons sont désormais correctement visibles dans la surveillance de votre flux de données. Un nombre d’activations plus faible reflète des rapports précis, et non un changement de fonctionnalité de destination.
+* ECID présent sur le profil
+* Mappage de synchronisation des identifiants entre le [!DNL Trade Desk ID] et l’ECID (configuré comme décrit dans la section [conditions préalables](#prerequisites))
+
+**Comportement avec plusieurs identifiants :** si un profil contient plusieurs identités prises en charge, chaque identité sera activée séparément pour [!DNL The Trade Desk]. Cela garantit une portée et une flexibilité maximales dans l’activation de votre audience.
+
+### Exemples d’activation
+
+* **Profils d’ID mobiles :** les profils avec GAID et/ou IDFA sont activés à l’aide de leurs ID publicitaires respectifs. Si un profil contient à la fois GAID et IDFA, chaque identifiant est activé séparément.
+* **Profil basé sur les cookies :** un profil doté d’un ECID et d’un mappage [!DNL Trade Desk ID] correspondant sera activé à l’aide de l’ID Trade Desk pour le ciblage basé sur les cookies.
+* **Profil ECID uniquement :** un profil avec ECID uniquement et sans mappage [!DNL Trade Desk ID] ne sera **pas exporté**. L’ECID seul est insuffisant pour l’activation.
 
 ## Données exportées {#exported-data}
 

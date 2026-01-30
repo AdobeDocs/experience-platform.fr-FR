@@ -3,9 +3,9 @@ keywords: publicité ; bing ;
 title: Connexion Microsoft Bing
 description: Avec la destination de connexion Microsoft Bing, vous pouvez exécuter des campagnes numériques de reciblage et d’audience ciblées sur l’ensemble du réseau Microsoft Advertising, y compris l’affichage publicitaire, la recherche et le natif.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: e75a5562820490bc56adaa1d21e4066fc649cc44
+source-git-commit: ec31c1d967be4764b22f735429e2f9437f31ed20
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '918'
 ht-degree: 30%
 
 ---
@@ -14,26 +14,9 @@ ht-degree: 30%
 
 ## Vue d’ensemble {#overview}
 
-
->[!IMPORTANT]
->
->Suite à une mise à niveau interne vers le service de destinations à partir d’août 2025, il se peut que vous subissiez une **baisse du nombre de profils activés** dans vos flux de données à [!DNL Microsoft Bing].
->
-> Cette baisse est due à l’introduction de l’exigence de mappage **ECID** pour toutes les activations sur cette plateforme de destination. Pour plus d’informations, consultez la section [mappage obligatoire](#mandatory-mappings) de cette page.
->
->**Changements :**
->
->* Le mappage ECID (Experience Cloud ID) est désormais **obligatoire** pour toutes les activations de profil.
->* Les profils sans mappage ECID seront **supprimés** des flux de données d’activation existants.
->
->**Ce que vous devez faire**
->
->* Vérifiez les données de votre audience pour vous assurer que les profils possèdent des valeurs ECID valides.
->* Surveillez vos mesures d’activation pour vérifier le nombre de profils attendu.
-
 Utilisez la destination [!DNL Microsoft Bing] pour envoyer des données de profil à l’ensemble du [!DNL Microsoft Advertising Network], y compris [!DNL Display Advertising], [!DNL Search] et [!DNL Native].
 
-La destination [!DNL Microsoft Bing] crée des *[!DNL Custom Audiences]* dans Microsoft. Ils sont disponibles dans les [!DNL Microsoft Search Network] et [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]), comme indiqué dans la documentation Microsoft Advertising [&#128279;](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
+La destination [!DNL Microsoft Bing] crée des *[!DNL Custom Audiences]* dans Microsoft. Ils sont disponibles dans les [!DNL Microsoft Search Network] et [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]), comme indiqué dans la documentation Microsoft Advertising [](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
 
 Pour envoyer des données de profil à [!DNL Microsoft Bing], vous devez d’abord vous connecter à la destination .
 
@@ -45,10 +28,12 @@ En tant que spécialiste marketing, je souhaite pouvoir utiliser des audiences c
 
 [!DNL Microsoft Bing] prend en charge l’activation des audiences en fonction des identités présentées dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/features/namespaces.md).
 
-| Identité | Description |
-|---|---|
-| MAID | MICROSOFT ADVERTISING ID |
-| ECID | Experience Cloud ID. Cette identité est obligatoire pour que l’intégration fonctionne correctement, mais elle n’est pas utilisée pour l’activation de l’audience. |
+Toutes les identités du tableau ci-dessous sont préconfigurées et automatiquement mappées lors de l’activation. Vous n’avez pas besoin de configurer manuellement ces mappages.
+
+| Identité | Description | Considérations |
+|---|---|---|
+| MAID | MICROSOFT ADVERTISING ID | Activé lorsqu’un Microsoft Advertising ID est présent sur le profil. |
+| ECID | Experience Cloud ID | **Obligatoire.** Tous les profils doivent disposer d’un ECID avec un mappage d’Advertising ID Microsoft correspondant à exporter. |
 
 {style="table-layout:auto"}
 
@@ -78,9 +63,12 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 ## Conditions préalables {#prerequisites}
 
->[!IMPORTANT]
->
->Si vous souhaitez créer votre première destination avec [!DNL Microsoft Bing] sans jamais avoir activé la fonctionnalité de synchronisation des identifiants [ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=fr) dans le service Experience Cloud ID par le passé (avec Adobe Audience Manager ou d’autres applications), contactez Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants. Si vous avez configuré précédemment des intégrations [!DNL Microsoft Bing] dans Audience Manager, les synchronisations d’identifiant que vous aviez configurées sont transférées vers Experience Platform.
+La destination [!DNL Microsoft Bing] nécessite la configuration suivante pour fonctionner correctement :
+
+1. **Activer la fonctionnalité de synchronisation des identifiants** : si c’est la première fois que vous configurez [!DNL Microsoft Bing] activation et que vous n’avez pas activé la fonctionnalité de synchronisation des [identifiants](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=fr) dans le service Experience Cloud ID dans le passé (avec Adobe Audience Manager ou d’autres applications), contactez Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants.
+   * Si vous avez configuré précédemment des intégrations [!DNL Microsoft Bing] dans Audience Manager, les synchronisations des identifiants existantes sont automatiquement transférées vers Experience Platform.
+
+2. **Assurez-vous que l’ECID est présent sur les profils** : tous les profils doivent avoir un ECID présent pour pouvoir être exportés. L’ECID est **obligatoire** pour cette destination.
 
 Lors de la configuration de la destination, vous devez fournir les informations suivantes :
 
@@ -119,7 +107,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >id="platform_destinations_required_mappings_bing"
 >title="Jeux de mappages préconfigurés"
 >abstract="Nous avons préconfiguré ces deux jeux de mappages pour vous. Lorsque vous activez des données vers Microsoft Bing, les profils qualifiés pour les audiences activées doivent avoir au moins une identité ECID associée à leur profil, afin de pouvoir être exportés vers la destination."
->additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="En savoir plus sur les mappages préconfigurés"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="En savoir plus sur les mappages préconfigurés"
 
 >[!IMPORTANT]
 > 
@@ -131,14 +119,24 @@ Dans l’étape [Planning des audiences](../../ui/activate-segment-streaming-des
 
 ![Image de l’interface utilisateur affichant l’écran du planning d’audience avec un exemple de la manière de mapper le nom de l’audience à l’identifiant de mappage Bing.](../../assets/catalog/advertising/bing/mapping-id.png)
 
-### Mappages obligatoires {#mandatory-mappings}
+### Mappages préconfigurés {#preconfigured-mappings}
 
-Toutes les identités cibles décrites dans la section [identités prises en charge](#supported-identities) sont obligatoires et doivent être mappées pendant le processus d’activation de l’audience. Cela inclut :
+Les mappages d’identité suivants sont **préconfigurés et automatiquement renseignés** pendant le workflow d’activation de l’audience :
 
 * **MAID** (Microsoft Advertising ID)
 * **ECID** (Experience Cloud ID)
 
-L’échec du mappage de toutes les identités requises vous empêche de terminer le workflow d’activation. Chaque identité remplit un rôle spécifique dans l’intégration et toutes sont nécessaires au bon fonctionnement de la destination.
+Ces mappages sont grisés et en lecture seule. Dans cette étape, vous n’avez rien à configurer. Sélectionnez **[!UICONTROL Next]** pour continuer.
+
+>[!IMPORTANT]
+>
+>**ECID est requis pour que l’exportation réussisse.** Les profils sans ECID ou sans mappage de synchronisation des identifiants entre ECID et l’Advertising ID Microsoft ne seront pas exportés.
+
+### Exemples d’activation
+
+* **Profil avec mappage ECID et Microsoft Advertising ID :** le profil a bien été exporté et activé
+* **Profil avec ECID uniquement (pas de mappage Microsoft Advertising ID) :** profil n’est **pas exporté**. Le mappage de synchronisation des identifiants entre ECID et MAID est obligatoire.
+* **Profil sans ECID :** le profil n’est **pas exporté**. L’ECID est obligatoire pour cette destination.
 
 ## Données exportées {#exported-data}
 
