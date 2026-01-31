@@ -207,4 +207,4 @@ Par défaut, si une audience de base n’a pas de libellés de contrat, le proce
 
 ## Étapes suivantes
 
-Après lecture de ce guide, vous avez appris à afficher des informations semblables et à créer des audiences semblables en fonction de ces informations. Pour plus d’informations sur les audiences dans l’interface utilisateur de Adobe Experience Platform, veuillez lire le [ Guide de l’interface utilisateur de Segmentation Service](./overview.md).
+Après lecture de ce guide, vous avez appris à afficher des informations semblables et à créer des audiences semblables en fonction de ces informations. Pour plus d’informations sur les audiences dans l’interface utilisateur de Adobe Experience Platform, veuillez lire le [&#x200B; Guide de l’interface utilisateur de Segmentation Service](./overview.md).
