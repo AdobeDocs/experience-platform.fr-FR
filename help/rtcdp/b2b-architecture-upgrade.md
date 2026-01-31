@@ -1,12 +1,12 @@
 ---
 title: Mises à niveau de l’architecture vers Real-Time CDP B2B edition
 description: Lisez ce document pour en savoir plus sur les mises à niveau complètes de l’architecture vers Real-Time CDP B2B edition.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: d958a947-e195-4dd4-a04c-63ad82829728
-source-git-commit: 1a3be99ca3c270dda6e8dc559359cbe21bb8f4fb
+source-git-commit: da288d1a917df85b3c003bc6592fda7a6f1eafe7
 workflow-type: tm+mt
-source-wordcount: '1074'
-ht-degree: 0%
+source-wordcount: '1096'
+ht-degree: 1%
 
 ---
 
@@ -39,7 +39,7 @@ Grâce à cette mise à niveau, vous pouvez désormais :
 
 Pour plus d’informations, consultez la documentation sur les [audiences de compte](../segmentation/types/account-audiences.md).
 
-### Nombre d’audiences pour les audiences qui incluent des entités B2B
+### Nombres de profils des audiences pour les audiences qui incluent des entités B2B
 
 Les estimations de taille d’audience pour les audiences avec des entités B2B sont désormais calculées avec précision. Ces estimations sont disponibles lors de la prévisualisation et fournissent des informations plus précises et plus fiables pour les audiences qui impliquent des relations B2B complexes.
 
@@ -59,7 +59,7 @@ Les fonctionnalités suivantes ont été mises à jour dans le cadre des mises �
 
 Dans le cadre de la nouvelle mise à niveau de l’architecture, les filtres d’événement d’expérience ne peuvent plus être utilisés dans une audience unique à entités multiples qui inclut des attributs B2B.
 
-Pour appliquer la même logique d’audience, vous pouvez utiliser le créateur de segments pour [&#x200B; ajouter des audiences et des audiences de référence &#x200B;](../segmentation/ui/segment-builder.md#adding-audiences)
+Pour appliquer la même logique d’audience, vous pouvez utiliser le créateur de segments pour [ ajouter des audiences et des audiences de référence ](../segmentation/ui/segment-builder.md#adding-audiences)
 
 Par exemple :
 
@@ -123,6 +123,10 @@ Les requêtes de suppression pour les entités B2B suivantes utilisant l’API [
 * Membres de la liste marketing
 
 Lisez la [[!DNL Profile Access] API](../profile/api/entities.md) pour plus d’informations.
+
+### Obsolescence de l’API de tâche de segmentation
+
+Dans la nouvelle architecture, le point d’entrée « créer une tâche de segmentation » et l’évaluation d’audience flexible ne sont *pas pris en charge.
 
 ### Recherches de profils de compte et d’opportunité
 

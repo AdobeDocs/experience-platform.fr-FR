@@ -4,10 +4,10 @@ description: Découvrez comment créer des métadonnées pour une audience exter
 hide: true
 hidefromtoc: true
 exl-id: e841a5f6-f406-4e1d-9e8a-acb861ba6587
-source-git-commit: a3b82eb1efaf257723208504c90210850a44b4a4
+source-git-commit: ea7fd13675a95941be7267f1cf75056b224efcd3
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 35%
+source-wordcount: '264'
+ht-degree: 33%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 35%
 
 Le point d’entrée de `/audiences` POST peut être utilisé pour créer les métadonnées d’une audience externe, ce qui permet à l’audience d’être visible dans Audience Portal. Vous devez utiliser ce point d’entrée si l’ingestion de l’audience sera gérée dans un service distinct, tel que l’ingestion par lots.
 
-## Commencer
+## Prise en main
 
 >[!IMPORTANT]
 >
@@ -61,7 +61,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMet
  -H 'Accept: application/vnd.adobe.external.audiences+json; version=2'
  -d '{
     "name": "Sample audience name",
-    "description" "A sample description for the audience.",
+    "description": "A sample description for the audience.",
+    "audienceId": "4a815904-f2f9-4237-82fb-55605bcc2ad7",
     "namespace": "agora",
     "originName": "Agora_Collaboration"
  }'
@@ -71,6 +72,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMet
 | -------- | ---- | ----------- |
 | `name` | Chaîne | Nom de l’audience. |
 | `description` | Chaîne | Description facultative de l’audience. |
+| `audienceId` | Chaîne | Identifiant généré en externe pour l’audience. |
 | `namespace` | Chaîne | Espace de noms de l’audience. |
 | `originName` | Chaîne | Nom de l’origine de l’audience. |
 
@@ -80,6 +82,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur l’au
 
 ```json
 {
+    "id": "6bb1ee15-8f64-49fd-bce3-d5c2f22f1f14",
     "name": "Sample audience name",
     "audienceId": "4a815904-f2f9-4237-82fb-55605bcc2ad7"
 }
@@ -87,5 +90,6 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur l’au
 
 | Propriété | Type | Description |
 | -------- | ---- | ----------- |
+| `id` | Chaîne | L’identifiant généré par le système pour l’audience. |
 | `name` | Chaîne | Nom de l’audience que vous avez créée. |
-| `audienceId` | Chaîne | Identifiant de l’audience que vous avez créée. |
+| `audienceId` | Chaîne | Identifiant fourni en externe de l’audience que vous avez créée. |
