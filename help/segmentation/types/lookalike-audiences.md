@@ -98,7 +98,7 @@ La page Détails de l’audience s’affiche. Sélectionnez **[!UICONTROL Look-a
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
 >title="Similarité et portée"
->abstract="Le graphique de similarité et de portée trace la portée attendue d’une audience analogue composée de profils au-dessus d’un score de similarité donné. Vous pouvez pointer sur un point spécifique du graphique pour afficher le pourcentage de similarité et le nombre de profils attendu pour le point actuellement surligné."
+>abstract="Le graphique de similarité et de portée trace la portée attendue d’une audience similaire composée de profils au-dessus d’un score de similarité donné. Vous pouvez pointer sur un point spécifique du graphique pour afficher le pourcentage de similarité et le nombre de profils attendu pour le point actuellement surligné."
 
 La section Similarité et portée affiche un graphique qui trace la portée attendue d’une audience semblable composée de profils au-dessus d’un score de similarité donné. Le score de similarité représente la **distance** de similarité entre le profil de l’audience de base et le profil insight similaire.
 
@@ -207,4 +207,4 @@ Par défaut, si une audience de base n’a pas de libellés de contrat, le proce
 
 ## Étapes suivantes
 
-Après lecture de ce guide, vous avez appris à afficher des informations semblables et à créer des audiences semblables en fonction de ces informations. Pour plus d’informations sur les audiences dans l’interface utilisateur de Adobe Experience Platform, veuillez lire le [&#x200B; Guide de l’interface utilisateur de Segmentation Service](./overview.md).
+Après lecture de ce guide, vous avez appris à afficher des informations semblables et à créer des audiences semblables en fonction de ces informations. Pour plus d’informations sur les audiences dans l’interface utilisateur de Adobe Experience Platform, veuillez lire le [ Guide de l’interface utilisateur de Segmentation Service](./overview.md).

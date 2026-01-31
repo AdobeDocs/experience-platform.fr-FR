@@ -71,7 +71,7 @@ Les conditions préalables dépendent des types d’identité que vous prévoyez
 
 **Pour le ciblage basé sur les cookies sur[!DNL The Trade Desk]**, assurez-vous qu’un mappage entre ECID et [!DNL Trade Desk ID] est établi. Procédez comme suit :
 
-1. **Activer la fonctionnalité de synchronisation des identifiants** : si c’est la première fois que vous configurez [!DNL The Trade Desk ID] activation et que vous n’avez pas activé la fonctionnalité de synchronisation des [identifiants](https://experienceleague.adobe.com/fr/docs/id-service/using/id-service-api/methods/idsync) dans le service Experience Cloud ID dans le passé (avec Adobe Audience Manager ou d’autres applications), contactez Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants.
+1. **Activer la fonctionnalité de synchronisation des identifiants** : si c’est la première fois que vous configurez [!DNL The Trade Desk ID] activation et que vous n’avez pas activé la fonctionnalité de synchronisation des [identifiants](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) dans le service Experience Cloud ID dans le passé (avec Adobe Audience Manager ou d’autres applications), contactez Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants.
    * Si vous avez précédemment configuré des intégrations [!DNL The Trade Desk] dans Audience Manager, les synchronisations d’identifiant existantes sont automatiquement transférées vers Experience Platform.
 
 2. **Instrumenter vos pages web** : implémentez du code sur vos pages web pour créer des mappages entre [!DNL The Trade Desk ID] et l’ECID Adobe. Experience Platform peut ainsi associer des identifiants Trade Desk à vos profils client.
@@ -111,7 +111,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 > 
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
@@ -125,7 +125,7 @@ Lors du mappage des audiences, Adobe vous recommande d’utiliser le nom de l’
 >id="platform_destinations_required_mappings_ttd"
 >title="Jeux de mappages préconfigurés"
 >abstract="Nous avons préconfiguré ces quatre jeux de mappages pour vous. Lorsque vous activez des données vers The Trade Desk, les profils qualifiés pour les audiences activées n’ont pas nécessairement besoin que les quatre identités soient présentes sur les profils, car cette destination fonctionnera avec l’une des identités cibles affichées ici. <br> Pour le ciblage par cookies basé sur l’identifiant Trade Desk, vous devez disposer d’un ECID présent sur le profil et d’un mappage de synchronisation des identifiants entre l’identifiant Trade Desk et l’ECID."
->additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="En savoir plus sur les mappages préconfigurés"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="En savoir plus sur les mappages préconfigurés"
 
 Les mappages d’identité suivants sont **préconfigurés et automatiquement renseignés** pour vous dans le workflow d’activation des audiences :
 
