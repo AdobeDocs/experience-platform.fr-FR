@@ -2,7 +2,7 @@
 keywords: rtcdp b2b;b2b;compte;profil de compte;profils de compte rtcdp;real-time customer data platform;
 title: Profils de compte dans Real-Time CDP B2B edition
 description: Découvrez comment l’édition B2B d’Adobe Real-Time Customer Data Platform vous permet d’unifier les informations de compte issues de plusieurs sources à l’aide de profils de compte.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
 source-git-commit: 769d83155ae70516a296b71baec37d797dd81f34
