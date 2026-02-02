@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Surveillance des flux de données pour les destinations dans l’interface utilisateur
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 4faa15431fe069b5be964f0f8643a73633338a89
+source-git-commit: 5b36722e5c2ca0cc8a4fb8667ceb3dc4a3568b02
 workflow-type: tm+mt
-source-wordcount: '3550'
+source-wordcount: '3542'
 ht-degree: 11%
 
 ---
@@ -21,7 +21,7 @@ Ce tutoriel vous explique comment surveiller les flux de données directement da
 
 ## Prise en main {#getting-started}
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 - [Flux de données](../home.md) : les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Experience Platform. Les flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers des jeux de données cibles, vers [!DNL Identity] et [!DNL Profile], et vers [!DNL Destinations].
    - [Exécutions de flux de données](../../sources/notifications.md) : les exécutions de flux de données sont les tâches planifiées récurrentes en fonction de la configuration de la fréquence des flux de données sélectionnés.
@@ -200,7 +200,7 @@ Vous pouvez également choisir d’afficher des informations riches sur un certa
 
 1. Accédez à **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** > onglet **[!UICONTROL Browse]** .
 2. Accédez au flux de données à inspecter.
-3. Sélectionnez le symbole représentant des points de suspension et l’![&#x200B; &#x200B;](/help/images/icons/monitoring.png)icône de surveillance **[!UICONTROL View in monitoring]**.
+3. Sélectionnez le symbole représentant des points de suspension et l’![ ](/help/images/icons/monitoring.png)icône de surveillance **[!UICONTROL View in monitoring]**.
 
 ![Sélectionnez Afficher dans la surveillance dans le workflow des destinations pour obtenir plus d’informations sur un flux de données.](/help/dataflows/assets/ui/monitor-destinations/view-in-monitoring.png)
 
@@ -223,7 +223,7 @@ Pour accéder au tableau de bord [!UICONTROL Monitoring], sélectionnez **[!UICO
 
 Utilisez le tableau de bord [!UICONTROL Destinations] pour avoir une idée globale de l’intégrité de vos flux d’activation. Commencez par obtenir des informations à un niveau agrégé pour toutes les destinations par lots et de diffusion en continu, puis explorez les vues détaillées pour les flux de données, les exécutions de flux de données et les audiences activées pour une analyse approfondie de vos données d’activation. Les écrans du tableau de bord [!UICONTROL Monitoring] fournissent des informations exploitables par le biais de mesures et de descriptions d’erreur afin de vous aider à résoudre les problèmes susceptibles de se produire dans vos scénarios d’activation.
 
-Vous pouvez filtrer les informations affichées par type de données : clients, comptes (pour le B2B edition Adobe Real-Time CDP uniquement), prospects et enrichissement du compte. Pour en savoir plus sur ces options, consultez le [&#x200B; guide du tableau de bord de surveillance &#x200B;](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview).
+Vous pouvez filtrer les informations affichées par type de données : clients, comptes (pour le B2B edition Adobe Real-Time CDP uniquement), prospects et enrichissement du compte. Pour en savoir plus sur ces options, consultez le [ guide du tableau de bord de surveillance ](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview).
 
 ![Filtre de type de données mis en surbrillance dans la vue du tableau de bord de surveillance.](/help/dataflows/assets/ui/monitor-destinations/add-data-filter.png)
 
@@ -371,11 +371,11 @@ La page des détails de l’exécution du flux de données, en plus des détails
 - **[!UICONTROL IMS org ID]** : organisation à laquelle appartient le flux de données.
 - **[!UICONTROL Last updated]** : heure de la dernière mise à jour de l’exécution du flux de données.
 
-La page de détails comporte également un bouton (bascule) pour basculer entre les erreurs d’exécution du flux de données et les audiences. Cette option est disponible uniquement pour les exécutions de flux de données dans les destinations par lots et pour la destination de diffusion en continu [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md).
+La page de détails comporte également un bouton (bascule) pour basculer entre les erreurs d’exécution du flux de données et les audiences. Cette option est disponible pour les destinations répertoriées dans la section [vue au niveau de l’audience](#segment-level-view).
 
 La vue Erreurs d’exécution du flux de données affiche une liste des enregistrements ayant échoué et des enregistrements ayant été ignorés. Les informations relatives aux enregistrements ayant échoué et ignorés s’affichent, y compris le code d’erreur, le nombre d’identités et la description. Par défaut, la liste affiche les enregistrements ayant échoué. Pour afficher les enregistrements ignorés, activez le bouton (bascule) **[!UICONTROL Records skipped]**.
 
-![&#x200B; Basculement des identités exclues mis en surbrillance dans la vue de surveillance](../assets/ui/monitor-destinations/identities-excluded.png)
+![ Basculement des identités exclues mis en surbrillance dans la vue de surveillance](../assets/ui/monitor-destinations/identities-excluded.png)
 
 Lorsque **[!UICONTROL Audiences]** est sélectionné, la liste des audiences qui ont été activées dans l’exécution du flux de données sélectionné s’affiche. Cet écran comprend des informations au niveau de l’audience sur les enregistrements activés, les enregistrements exclus, ainsi que le statut et l’heure de la dernière exécution du flux de données.
 
