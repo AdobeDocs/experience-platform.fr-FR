@@ -1,7 +1,8 @@
 ---
 title: Niveau de connexion
 description: Utilisez la destination de diffusion en continu Niveau pour activer les audiences directement dans la base de données utilisateur de niveau et les API de gestion des segments, et prendre en charge le ciblage en temps réel au moment de la décision.
-source-git-commit: d820485fd81efd08d8626f8476338558c4585c20
+last-substantial-update: 2026-01-27T00:00:00Z
+source-git-commit: 04d01b2deafb1b8f1b0c256f31475bb75989a2c4
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 9%
@@ -53,7 +54,7 @@ La destination [!DNL Kevel] prend en charge l’activation de toute identité qu
 
 La destination [!DNL Kevel] **accepte également les espaces de noms personnalisés**, tels que définis dans votre implémentation Experience Platform.
 
-Cela signifie :
+Autrement dit :
 
 - Vous pouvez mapper des **espaces de noms d’identité spécifiques au client** (par exemple : `loyalty_id`, `gigya_id` ou toute identité personnalisée que vous avez définie dans Identity Service).
 - Ces espaces de noms peuvent être affectés à des `kevel_user_key1`, des `kevel_user_key2` ou des `kevel_user_key3` de la même manière que les espaces de noms globaux.
