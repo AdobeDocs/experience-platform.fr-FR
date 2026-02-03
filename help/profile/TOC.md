@@ -1,7 +1,7 @@
 ---
 audience: user
 user-guide-title: Guide du profil client en temps réel
-user-guide-description: Fusionnez les données client pour créer une vue unifiée des interactions client entre les canaux.
+user-guide-description: Fusionnez les données clients pour créer une vue unifiée des interactions clients entre les canaux.
 feature: Profiles
 role: User
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
@@ -39,7 +39,7 @@ ht-degree: 91%
    * [Guide de l’interface utilisateur des attributs calculés](computed-attributes/ui.md)
    * [Questions fréquentes](computed-attributes/faq.md)
 * Politiques de fusion {#merge-policies}
-   * [Présentation](merge-policies/overview.md)
+   * [Vue d’ensemble](merge-policies/overview.md)
    * [API des politiques de fusion](api/merge-policies.md)
    * [Guide de l’interface utilisateur des politiques de fusion](merge-policies/ui-guide.md)
    * [Création de politiques de fusion (vidéo)](video/create-merge-policies.md)

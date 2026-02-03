@@ -24,7 +24,7 @@ ht-degree: 73%
    * [Schéma relationnel](./schema/relational.md)
    * [Espace de noms dans XDM](./schema/namespaces.md)
    * Modèles de données du secteur {#industries}
-      * [Aperçu](./schema/industries/overview.md)
+      * [Vue d’ensemble](./schema/industries/overview.md)
       * [Vente au détail](./schema/industries/retail.md)
       * [Services financiers](./schema/industries/financial.md)
       * [Soins de santé](./schema/industries/healthcare.md)
@@ -235,7 +235,7 @@ ht-degree: 73%
    * [Interaction web](./data-types/web-interaction.md)
    * [Détails de la page web](./data-types/webpage-details.md)
 * [!UICONTROL Schemas] Interface utilisateur {#ui}
-   * [Aperçu](./ui/overview.md)
+   * [Vue d’ensemble](./ui/overview.md)
    * [Explorer des ressources XDM](./ui/explore.md)
    * Créer et modifier des ressources {#resources}
       * [Schémas](./ui/resources/schemas.md)
