@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Vue d’ensemble de l’ingestion en flux continu
 description: L’ingestion par flux pour Adobe Experience Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données d’appareils côté client et côté serveur vers Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: ea693cb4bb732c829d9a477cbd3dcb209da524f3
+source-git-commit: a77be4ef97540b929192fa6f367830f4a29e5af7
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '433'
 ht-degree: 15%
 
 ---
@@ -21,7 +21,7 @@ Adobe Experience Platform vous permet de générer des expériences coordonnées
 
 La vidéo suivante est conçue pour vous aider à comprendre l’ingestion par flux et décrit les concepts ci-dessus.
 
->[!VIDEO](https://video.tv.adobe.com/v/31636?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### Diffusion d’enregistrements de profil et de [!DNL ExperienceEvents]
 
@@ -43,7 +43,7 @@ Pour plus d’informations sur l’activation d’un jeu de données pour [!DNL 
 
 | Destination | Latence attendue |
 | --------- | ---------------- |
-| Profil client en temps réel | &lt; 15 min au 95e percentile |
+| Profil client en temps réel | <ul><li>&lt; 15 minutes au 95e centile pour l’ingestion de données B2C.</li><li>&lt; 30 minutes au 95e centile pour l’ingestion de données B2B.</li></ul> |
 | Lac de données | &lt; 60 minutes |
 
 ## Conseils sur les demandes par seconde (RPS) pour l’ingestion en flux continu
