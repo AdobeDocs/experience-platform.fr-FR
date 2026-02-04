@@ -102,7 +102,7 @@ L’onglet **[!UICONTROL Browse]** réapparaît, qui répertorie désormais la n
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_instructions"
 >title="Instructions"
->abstract="<ul><li>Assurez-vous d’ingérer les données relatives aux préférences dans vos schémas d’union via le connecteur source OneTrust ou le schéma XDM standard pour le consentement.</li><li>Sélectionnez <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=fr">Stratégies</a> dans le volet de navigation de gauche, puis cliquez sur <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=fr#create-governance-policy">Créer une stratégie</a>.</li><li>Dans la section <b>Si</b>, indiquez les conditions ou actions qui déclencheront la vérification de la stratégie.</li><li>Dans la section <b>Alors</b>, indiquez les attributs de consentement devant être présents pour qu’un profil soit inclus dans l’action qui a déclenché la stratégie.</li><li>Sélectionnez <b>Enregistrer</b> pour créer la stratégie. Pour activer immédiatement la stratégie, activez le bouton (bascule) <b>Statut</b> dans le rail de droite.</li><li>Experience Platform applique automatiquement vos stratégies de consentement activées lorsque vous activez des segments vers des destinations et fournit des détails sur la manière dont chaque stratégie affecte la taille de votre audience.</li><li>Pour obtenir de l’aide sur cette fonctionnalité, consultez le guide sur la <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#consent-policy?lang=fr">création de stratégies de consentement</a> sur Experience League.</li></ul>"
+>abstract="<ul><li>Assurez-vous d’ingérer les données relatives aux préférences dans vos schémas d’union via le connecteur source OneTrust ou le schéma XDM standard pour le consentement.</li><li>Sélectionnez <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=fr">Stratégies</a> dans le volet de navigation de gauche, puis cliquez sur <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=fr#create-governance-policy">Créer une stratégie</a>.</li><li>Dans la section <b>Si</b>, indiquez les conditions ou actions qui déclencheront la vérification de la stratégie.</li><li>Dans la section <b>Alors</b>, indiquez les attributs de consentement devant être présents pour qu’un profil soit inclus dans l’action qui a déclenché la stratégie.</li><li>Sélectionnez <b>Enregistrer</b> pour créer la stratégie. Pour activer immédiatement la stratégie, activez le bouton (bascule) <b>Statut</b> dans le rail de droite.</li><li>Experience Platform applique automatiquement vos stratégies de consentement activées lorsque vous activez des segments vers des destinations et fournit des détails sur la manière dont chaque stratégie affecte la taille de votre audience.</li><li>Pour obtenir de l’aide sur cette fonctionnalité, consultez le guide sur la <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=fr#consent-policy">création de stratégies de consentement</a> sur Experience League.</li></ul>"
 
 >[!IMPORTANT]
 >
@@ -177,7 +177,7 @@ Pour maintenir la qualité et la cohérence des données, l’interface utilisat
 
 Pour définir la condition, cochez les cases correspondant aux valeurs que la politique doit évaluer.
 
-![&#x200B; La boîte de dialogue « Sélectionner le champ de schéma d’union » avec un champ de schéma et les cases à cocher à valeur fixe disponibles en surbrillance.](../images/policies/select-schema-field.png)
+![ La boîte de dialogue « Sélectionner le champ de schéma d’union » avec un champ de schéma et les cases à cocher à valeur fixe disponibles en surbrillance.](../images/policies/select-schema-field.png)
 
 #### Mapper des champs de type données pour une condition de politique {#map-data-type-fields}
 
@@ -285,4 +285,4 @@ Ce document offre un aperçu de la gestion des politiques d’utilisation des do
 
 La vidéo qui suit montre comment utiliser les politiques d’utilisation dans l’interface utilisateur [!DNL Experience Platform] :
 
->[!VIDEO](https://video.tv.adobe.com/v/37130?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
