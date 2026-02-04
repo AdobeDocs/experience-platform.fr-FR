@@ -17,7 +17,7 @@ ht-degree: 73%
 
 - [Présentation de Segmentation Service](home.md)
 - [Types de données de segmentation](data-types.md)
-- [&#x200B; Mécanismes de sécurisation de la segmentation &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [&#x200B; Mécanismes de sécurisation de la segmentation &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=fr#segmentation-guardrails)
 - [Validation de l’audience](./validation.md)
 - API Segmentation {#api}
    - [Vue d’ensemble](api/overview.md)
