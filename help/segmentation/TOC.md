@@ -5,10 +5,10 @@ breadcrumb-title: Guide de Segmentation Service
 user-guide-description: Créez des audiences à partir de vos données de profil client en temps réel à l’aide des définitions de segment générées par Adobe Experience Platform ou de sources externes.
 feature: Segments
 role: User
-source-git-commit: 60775eeeb0a07a95f3fac86dc4ecc8603328ed49
+source-git-commit: d70aa03400362bb5609623ca5eceefeadd6fe1ce
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 74%
+source-wordcount: '212'
+ht-degree: 73%
 
 ---
 
@@ -17,7 +17,8 @@ ht-degree: 74%
 
 - [Présentation de Segmentation Service](home.md)
 - [Types de données de segmentation](data-types.md)
-- [&#x200B; Mécanismes de sécurisation de la segmentation &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=fr#segmentation-guardrails)
+- [ Mécanismes de sécurisation de la segmentation ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [Validation de l’audience](./validation.md)
 - API Segmentation {#api}
    - [Vue d’ensemble](api/overview.md)
    - [Prise en main](api/getting-started.md)
@@ -42,7 +43,7 @@ ht-degree: 74%
    - [Remaniement des contraintes de temps](ui/segment-refactoring.md)
    - Segment Match {#segment-match}
       - [Vue d’ensemble de la correspondance de segments](ui/segment-match/overview.md)
-      - [Dépannage](ui/segment-match/troubleshooting.md)
+      - [Résolution des problèmes](ui/segment-match/troubleshooting.md)
 - Méthodes de segmentation {#methods}
    - [Vue d’ensemble](methods/overview.md)
    - [Segmentation par lots](methods/batch-segmentation.md)
@@ -67,7 +68,7 @@ ht-degree: 74%
    - [Création d’un jeu de données pour exporter des données](tutorials/create-dataset-export-segment.md)
    - [Application de la conformité d’utilisation des données aux audiences](tutorials/governance.md)
 - Profile Query Language {#pql}
-   - [Présentation](pql/overview.md)
+   - [Vue d’ensemble](pql/overview.md)
    - [Fonctions booléennes](pql/boolean-functions.md)
    - [Fonctions de comparaison](pql/comparison-functions.md)
    - [Fonctions de tableau, de liste et d’ensemble](pql/array-functions.md)

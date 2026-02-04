@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 054b34875a0eb2676bcb4a8a8a555b4465410d66
+source-git-commit: 1b836a86a6b55a4e80a7fd3a52160f3974e4c9a4
 workflow-type: tm+mt
-source-wordcount: '5355'
+source-wordcount: '5354'
 ht-degree: 53%
 
 ---
@@ -189,34 +189,9 @@ Veuillez noter qu’un maximum de 250 valeurs est autorisé. Si vous dépassez 
 
 ![Un avertissement indiquant que vous avez atteint le nombre maximum de valeurs s’affiche.](../images/ui/segment-builder/maximum-values.png)
 
-### Validation des requêtes {#query-validation}
+### Validation de l’audience {#audience-validation}
 
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
->title="Complexité logique"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_chaincountcheck"
->title="Limite de séquence d’événements"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_rewritescheck"
->title="Alerte relative à l’efficacité des requêtes"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_countaggregationcheck"
->title="Avertissement du filtre de comptage"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_arraydepthcheck"
->title="Avertissement relatif aux données imbriquées"
->abstract=""
-
-Le créateur de segments analyse et valide automatiquement vos requêtes d’audience afin de vous assurer que vous appliquez les bonnes pratiques en matière de définition d’audience. Ces bonnes pratiques peuvent être classées en deux catégories : validation des éléments critiques et optimisation des performances.
+Le créateur de segments analyse et valide automatiquement la définition de votre audience afin de vous assurer que vous appliquez les bonnes pratiques en matière de définition d’audience. Ces bonnes pratiques peuvent être classées en deux catégories : validation des éléments critiques et optimisation des performances.
 
 Si une définition d’audience enfreint une bonne pratique de validation critique, vous ne pourrez **pas** enregistrer vos modifications afin de maintenir la stabilité de votre sandbox. Si une définition d’audience enfreint une bonne pratique d’optimisation des performances, vous pourrez enregistrer vos modifications, mais il est *vivement recommandé* de mettre à jour votre définition d’audience pour éviter des problèmes de performances.
 
@@ -227,6 +202,8 @@ Si une définition d’audience enfreint une bonne pratique de validation critiq
 | Comptage agrégé | Optimisation des performances | Il existe plus de 3 fonctions d’agrégation dans une définition d’audience. |
 | Données imbriquées | Optimisation des performances | Il existe plus de 2 niveaux de profondeur de données imbriquées (types de données de tableau ou de mappage) dans une définition d’audience. |
 | Taille de l’audience | Optimisation des performances | La taille de qualification de l’audience est supérieure à 30 % du nombre total de profils dans le sandbox. |
+
+Pour plus d’informations sur le fonctionnement de la validation des audiences, consultez le [guide de validation des audiences](/help/segmentation/validation.md).
 
 ### Ajout d’audiences
 
@@ -255,7 +232,7 @@ Vous pouvez également afficher une version codée d’une règle créée dans l
 
 L’affichage du code fournit un bouton qui vous permet de copier la valeur de la définition de segment à utiliser dans les appels d’API. Pour obtenir la dernière version de la définition de segment, assurez-vous d’avoir enregistré vos dernières modifications apportées à la définition de segment.
 
-![Le bouton « Copier le code » est mis en surbrillance, ce qui vous permet de &#x200B;](../images/ui/segment-builder/copy-code.png)
+![Le bouton « Copier le code » est mis en surbrillance, ce qui vous permet de ](../images/ui/segment-builder/copy-code.png)
 
 ### Fonctions d’agrégation
 
