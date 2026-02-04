@@ -171,7 +171,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `entityType` | Type d’entité dont l’ID est indiqué dans la propriété `entityId` voisine. Actuellement, la seule valeur acceptée est `dataSet`. |
-| `entityId` | ID d’un jeu de données en fonction duquel tester l’action marketing. Une liste de jeux de données et de leurs ID correspondants peut être obtenue en effectuant une requête GET au point d’entrée `/dataSets` de l’API [!DNL Catalog Service]. Pour plus d’informations, consultez le guide sur la façon de [répertorier les objets du  [!DNL Catalog] ](../../catalog/api/list-objects.md). |
+| `entityId` | ID d’un jeu de données en fonction duquel tester l’action marketing. Une liste de jeux de données et de leurs ID correspondants peut être obtenue en effectuant une requête GET au point d’entrée `/dataSets` de l’API [!DNL Catalog Service]. Pour plus d’informations, consultez le guide sur la façon de [répertorier les objets du  [!DNL Catalog] &#x200B;](../../catalog/api/list-objects.md). |
 
 **Réponse**
 
@@ -419,7 +419,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `entityType` | Type d’entité dont l’ID est indiqué dans la propriété `entityId` voisine. Actuellement, la seule valeur acceptée est `dataSet`. |
-| `entityId` | ID d’un jeu de données dont les champs doivent être évalués par rapport à l’action marketing. Une liste de jeux de données et de leurs ID correspondants peut être obtenue en effectuant une requête GET au point d’entrée `/dataSets` de l’API [!DNL Catalog Service]. Pour plus d’informations, consultez le guide sur la façon de [répertorier les objets du  [!DNL Catalog] ](../../catalog/api/list-objects.md). |
+| `entityId` | ID d’un jeu de données dont les champs doivent être évalués par rapport à l’action marketing. Une liste de jeux de données et de leurs ID correspondants peut être obtenue en effectuant une requête GET au point d’entrée `/dataSets` de l’API [!DNL Catalog Service]. Pour plus d’informations, consultez le guide sur la façon de [répertorier les objets du  [!DNL Catalog] &#x200B;](../../catalog/api/list-objects.md). |
 | `entityMeta.fields` | Tableau de chemins d’accès à des champs spécifiques dans le schéma du jeu de données, fourni sous la forme de chaînes de pointeurs JSON. Consultez la section sur les [pointeurs JSON](../../landing/api-fundamentals.md#json-pointer) dans le guide des principes de base de l’API pour obtenir plus d’informations sur la syntaxe acceptée pour ces chaînes. |
 
 **Réponse**
