@@ -68,7 +68,7 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 >[!IMPORTANT]
 > 
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
@@ -96,7 +96,7 @@ Pour que la destination [!DNL Acxiom Audience Connection] reçoive correctement 
 | E-mail | E-mail de Principal Par défaut, ce champ est utilisé comme clé de déduplication pour rendre les enregistrements uniques | Non | 10 | 255 |
 | Téléphone | Numéro de téléphone de l’individu (indicatif + numéro)<br> Par défaut, ce champ est utilisé comme clé de déduplication pour rendre les enregistrements uniques. | Non | 11 | 10 |
 
-Dans la colonne **[!UICONTROL Source Field]** , saisissez le nom de chacun des attributs sources à mapper au champ cible correspondant ou sélectionnez l’icône de flèche pour ouvrir l’écran de **[!UICONTROL  Select source field]**.<br>
+Dans la colonne **[!UICONTROL Source Field]** , saisissez le nom de chacun des attributs sources à mapper au champ cible correspondant ou sélectionnez l’icône de flèche pour ouvrir l’écran de **[!UICONTROL &#x200B; Select source field]**.<br>
 ![Écran Mappage](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png)
 
 Après avoir mappé tous les champs, sélectionnez **[!UICONTROL Next]**.
