@@ -31,7 +31,7 @@ Ce document présente le connecteur source [!DNL Marketo Engage], y compris des 
 
 ## Configurer le mappage d’organisation Adobe
 
-Avant de pouvoir établir des jeux de mappages pour [!DNL Marketo Engage], vous devez d’abord configurer le mappage d’organisation d’Adobe. Pour obtenir des instructions détaillées sur la manière d’effectuer cette opération, consultez le guide sur la [configuration du mappage d’organisation d’Adobe pour [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
+Avant de pouvoir établir des jeux de mappages pour [!DNL Marketo Engage], vous devez d’abord configurer le mappage d’organisation d’Adobe. Pour obtenir des instructions détaillées sur la manière d’effectuer cette opération, consultez le guide sur la [configuration du mappage d’organisation d’Adobe pour [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=fr).
 
 ## Authentification de votre connecteur [!DNL Marketo Engage]
 

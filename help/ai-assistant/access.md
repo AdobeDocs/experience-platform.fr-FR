@@ -46,13 +46,13 @@ Si votre entreprise est légalement autorisée à utiliser l’assistant AI et q
 
 L’accès à l’assistant d’IA est régi par les paramètres suivants :
 
-* **Accéder à l’application :** vous pouvez accéder à l’assistant AI dans Adobe Experience Platform, Adobe Real-Time CDP, Adobe Journey Optimizer et [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
+* **Accéder à l’application :** vous pouvez accéder à l’assistant AI dans Adobe Experience Platform, Adobe Real-Time CDP, Adobe Journey Optimizer et [Customer Journey Analytics](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/ai-assistant).
 <!-- * **Contractual access:** Your company must agree to certain [!DNL GenAI]-related legal terms before your organization can use AI Assistant. Contact your organization's administrator or your Adobe Account Team if you are not able to access AI Assistant.  -->
 * **Autorisations :** utilisez l’[interface utilisateur des autorisations](../access-control/abac/ui/permissions.md) pour accorder ou révoquer l’accès à l’assistant AI dans votre entreprise. Pour utiliser l’assistant AI, un utilisateur donné doit appartenir à un rôle disposant des autorisations **Activer l’assistant AI** et **Afficher les informations opérationnelles**.
    * En tant qu’administrateur ou administratrice, vous pouvez ajouter l’**Activer l’assistant AI** à un rôle donné et ajouter un utilisateur ou une utilisatrice à ce rôle, pour lui permettre d’accéder à l’assistant AI dans votre entreprise. **Remarque** : cette autorisation permet audit utilisateur d&#39;accéder à AI Assistant, elle ne lui accorde aucune capacité administrative pour donner ensuite accès à AI Assistant à d&#39;autres utilisateurs.
    * En tant qu’administrateur, vous pouvez ajouter l’**Afficher les informations opérationnelles** à un rôle donné et ajouter un utilisateur à ce rôle, pour lui permettre d’utiliser les fonctionnalités d’informations opérationnelles de l’assistant AI.
 
-Utilisez l’[interface utilisateur des autorisations](../access-control/abac/ui/roles.md) pour accorder des autorisations d’utilisation de l’assistant AI dans Experience Platform et Journey Optimizer. Pour plus d’informations sur l’accès à l’assistant AI dans Customer Journey Analytics. Lisez la documentation dans [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
+Utilisez l’[interface utilisateur des autorisations](../access-control/abac/ui/roles.md) pour accorder des autorisations d’utilisation de l’assistant AI dans Experience Platform et Journey Optimizer. Pour plus d’informations sur l’accès à l’assistant AI dans Customer Journey Analytics. Lisez la documentation dans [Customer Journey Analytics](https://experienceleague.adobe.com/fr/docs/analytics-platform/using/ai-assistant).
 
 ![Page de l’interface utilisateur des autorisations avec les autorisations Activer l’assistant AI et Afficher les informations opérationnelles incluses dans un rôle donné.](./images/access/access-permissions.png)
 
