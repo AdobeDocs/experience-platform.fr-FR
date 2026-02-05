@@ -4,9 +4,9 @@ title: Prévisualiser l’exemple de point d’entrée de l’API Statut (Aperç
 description: Le point d’entrée d’aperçu de statut d’échantillon de l’API Real-Time Customer Profile vous permet de prévisualiser le dernier exemple réussi de vos données de profil, de répertorier la distribution des profils par jeu de données et par identité et de générer des rapports présentant le chevauchement des jeux de données, le chevauchement des identités et les profils désassemblés.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: bb2cfb479031f9e204006ba489281b389e6c6c04
+source-git-commit: 399b76f260732015f691fd199c977d6f7e772b01
 workflow-type: tm+mt
-source-wordcount: '2306'
+source-wordcount: '2119'
 ht-degree: 6%
 
 ---
@@ -29,7 +29,7 @@ Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL Rea
 
 Ce guide fait référence à la fois aux « fragments de profil » et aux « profils fusionnés ». Il est important de comprendre la différence entre ces termes avant de continuer.
 
-Chaque profil client est composé de plusieurs fragments de profil qui ont été fusionnés dans le but de former une vue unique pour ce client. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre organisation dispose probablement de plusieurs fragments de profil associés à ce client unique apparaissant dans plusieurs jeux de données.
+Chaque profil client est composé de plusieurs fragments de profil qui ont été fusionnés dans le but de former une vue unique de ce client ou cette cliente. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre organisation dispose probablement de plusieurs fragments de profil associés à ce client unique apparaissant dans plusieurs jeux de données.
 
 Lorsque des fragments de profil sont ingérés dans Experience Platform, ils sont fusionnés (en fonction d’une politique de fusion) afin de créer un profil unique pour ce client. Par conséquent, il est probable que le nombre total de fragments de profil soit toujours supérieur au nombre total de profils fusionnés, chaque profil étant composé de fragments multiples.
 
@@ -232,7 +232,7 @@ Les espaces de noms d’identité sont des composants importants du Adobe Experi
 
 >[!NOTE]
 >
->Le nombre total de profils par espace de noms (en additionnant les valeurs affichées pour chaque espace de noms) peut être supérieur à la mesure du nombre de profils, car un profil peut être associé à plusieurs espaces de noms. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de noms seront associés à ce client individuel.
+>Le nombre total de profils par espace de noms (en additionnant les valeurs affichées pour chaque espace de noms) peut être supérieur à la mesure du nombre de profils, car un profil peut être associé à plusieurs espaces de noms. Par exemple, si un client ou une cliente interagit avec votre marque sur plusieurs canaux, plusieurs espaces de noms seront associés à cette personne.
 
 **Format d’API**
 
@@ -323,7 +323,7 @@ Une réponse réussie renvoie le statut HTTP 200 et inclut un tableau `data`, av
 | `fullIDsFragmentCount` | Nombre total de fragments de profil dans l’espace de noms. |
 | `fullIDsCount` | Nombre total de profils fusionnés dans l’espace de noms. |
 | `fullIDsPercentage` | Le `fullIDsCount` en pourcentage du total des profils fusionnés (la valeur `totalRows` telle qu’elle est renvoyée dans le [dernier état d’échantillon](#view-last-sample-status)), exprimé au format décimal. |
-| `code` | `code` de l’espace de noms. Vous pouvez le trouver lors de l’utilisation d’espaces de noms à l’aide de l’API Adobe Experience Platform Identity Service [&#128279;](../../identity-service/api/list-namespaces.md). Il est également appelé [!UICONTROL Identity symbol] dans l’interface utilisateur d’Experience Platform. Pour en savoir plus, consultez la [présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md). |
+| `code` | `code` de l’espace de noms. Vous pouvez le trouver lors de l’utilisation d’espaces de noms à l’aide de l’API Adobe Experience Platform Identity Service [](../../identity-service/api/list-namespaces.md). Il est également appelé [!UICONTROL Identity symbol] dans l’interface utilisateur d’Experience Platform. Pour en savoir plus, consultez la [présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md). |
 | `value` | Valeur `id` pour l’espace de noms . Vous pouvez le trouver lorsque vous utilisez des espaces de noms à l’aide de l’[API Identity Service](../../identity-service/api/list-namespaces.md). |
 
 +++
@@ -434,110 +434,6 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur les st
 | `profileFragments` | Nombre total de fragments de profil qui existent dans le jeu de données. |
 | `records` | Nombre total d’enregistrements de profil ingérés dans le jeu de données. |
 | `totalProfiles` | Nombre total de profils ingérés dans le jeu de données. |
-
-+++
-
-## Obtenir la taille du jeu de données {#character-count}
-
-Vous pouvez utiliser ce point d’entrée pour obtenir la taille du jeu de données en octets semaine par semaine.
-
-**Format d’API**
-
-```http
-GET /previewsamplestatus/report/character_count
-```
-
-**Requête**
-
-+++Exemple de requête pour générer le rapport de nombre de caractères.
-
-```shell
-curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/character_count \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-```
-
-+++
-
-**Réponse**
-
-Une réponse réussie renvoie un état HTTP 200 avec des informations sur la taille du jeu de données tout au long des semaines.
-
-+++ Exemple de réponse contenant des informations sur la taille du jeu de données après l’expiration des données.
-
->[!NOTE]
->
->La réponse suivante a été tronquée pour afficher trois jeux de données.
-
-```json
-{
-    "data": [
-        {
-            "datasetIds": [
-                {
-                    "datasetId": "67aba91a453f7d298cd2a643",
-                    "recordType": "keyvalue",
-                    "weeks": [
-                        {
-                            "size": 107773533894,
-                            "week": "2025-10-26"
-                        }
-                    ]
-                },
-                {
-                    "datasetId": "67aa6c867c3110298b017f0e",
-                    "recordType": "timeseries",
-                    "weeks": [
-                        {
-                            "size": 242902062440,
-                            "week": "2025-10-26"
-                        },
-                        {
-                            "size": 837539413062,
-                            "week": "2025-10-19"
-                        },
-                        {
-                            "size": 479253986484,
-                            "week": "2025-10-12"
-                        },
-                        {
-                            "size": 358911988990,
-                            "week": "2025-10-05"
-                        },
-                        {
-                            "size": 349701073042,
-                            "week": "2025-09-28"
-                        }
-                    ]
-                },
-                {
-                    "datasetId": "680c043667c0d7298c9ea275",
-                    "recordType": "keyvalue",
-                    "weeks": [
-                        {
-                            "size": 18392459832,
-                            "week": "2025-10-26"
-                        }
-                    ]
-                }
-            ],
-            "modelName": "_xdm.context.profile",
-            "reportTimestamp": "2025-10-30T00:28:30.069Z"
-        }
-    ],
-    "reportTimestamp": "2025-10-30T00:28:30.069Z"
-}
-```
-
-| Propriété | Description |
-| -------- | ----------- |
-| `datasetId` | Identifiant du jeu de données. |
-| `recordType` | Type de données dans le jeu de données. Le type d’enregistrement affecte la valeur de la variable `weeks`. Les valeurs prises en charge comprennent `keyvalue` et `timeseries`. |
-| `weeks` | Un tableau contenant les informations de taille sur le jeu de données. Pour les jeux de données de type enregistrement `keyvalue`, il contient la semaine la plus récente ainsi que la taille totale du jeu de données en octets. Pour les jeux de données de type enregistrement `timeseries`, il contient chaque semaine depuis l’ingestion du jeu de données jusqu’à la semaine la plus récente et la taille totale du jeu de données en octets pour chacune de ces semaines. |
-| `modelName` | Nom du modèle du jeu de données. Les valeurs possibles sont `_xdm.context.profile` et `_xdm.context.experienceevent`. |
-| `reportTimestamp` | Date et heure auxquelles le rapport a été généré. |
 
 +++
 
