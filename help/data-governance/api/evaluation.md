@@ -5,7 +5,7 @@ title: Points d’entrée de l’API Policy Evaluation
 description: Une fois les actions marketing créées et les politiques définies, vous pouvez utiliser l’API Policy Service pour déterminer si certaines actions ne respectent pas les politiques. Les contraintes renvoyées prennent la forme d’un ensemble de politiques qui seraient enfreintes si l’action marketing était appliquée aux données spécifiées contenant les libellés d’utilisation des données.
 role: Developer
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 32e5b2ba04554ba8ed2a73009fae2ea3a3f5328a
+source-git-commit: f8995ff1e460038b0e254cb500a6d23badeaa991
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 98%
@@ -125,7 +125,7 @@ Une réponse réussie comprend un tableau `violatedPolicies`, qui contient les d
 
 >[!WARNING]
 >
->Le point d’entrée `/constraints` pour l’évaluation basée sur un jeu de données est obsolète. Pour évaluer une violation de politique ou effectuer plusieurs tâches d’évaluation, utilisez plutôt l’API [bulk evaluation API (`/bulk-eval`)](#evaluate-policies-in-bulk).
+>Le point d’entrée `/constraints` pour l’évaluation basée sur un jeu de données est obsolète. Pour évaluer une violation de politique ou effectuer plusieurs tâches d’évaluation, utilisez plutôt l’API [bulk evaluation API (`/bulk-eval`)](#bulk).
 
 Vous pouvez évaluer les violations de politique en fonction d’un ensemble constitué d’un ou de plusieurs jeux de données à partir desquels collecter les libellés d’utilisation des données. Pour ce faire, une requête POST est exécutée au point d’entrée `/constraints` pour une action marketing spécifique et une liste d’ID de jeu de données est fournie dans le corps de la requête.
 
@@ -171,7 +171,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `entityType` | Type d’entité dont l’ID est indiqué dans la propriété `entityId` voisine. Actuellement, la seule valeur acceptée est `dataSet`. |
-| `entityId` | ID d’un jeu de données en fonction duquel tester l’action marketing. Une liste de jeux de données et de leurs ID correspondants peut être obtenue en effectuant une requête GET au point d’entrée `/dataSets` de l’API [!DNL Catalog Service]. Pour plus d’informations, consultez le guide sur la façon de [répertorier les objets du  [!DNL Catalog] &#x200B;](../../catalog/api/list-objects.md). |
+| `entityId` | ID d’un jeu de données en fonction duquel tester l’action marketing. Une liste de jeux de données et de leurs ID correspondants peut être obtenue en effectuant une requête GET au point d’entrée `/dataSets` de l’API [!DNL Catalog Service]. Pour plus d’informations, consultez le guide sur la façon de [répertorier les objets du  [!DNL Catalog] ](../../catalog/api/list-objects.md). |
 
 **Réponse**
 
@@ -419,7 +419,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `entityType` | Type d’entité dont l’ID est indiqué dans la propriété `entityId` voisine. Actuellement, la seule valeur acceptée est `dataSet`. |
-| `entityId` | ID d’un jeu de données dont les champs doivent être évalués par rapport à l’action marketing. Une liste de jeux de données et de leurs ID correspondants peut être obtenue en effectuant une requête GET au point d’entrée `/dataSets` de l’API [!DNL Catalog Service]. Pour plus d’informations, consultez le guide sur la façon de [répertorier les objets du  [!DNL Catalog] &#x200B;](../../catalog/api/list-objects.md). |
+| `entityId` | ID d’un jeu de données dont les champs doivent être évalués par rapport à l’action marketing. Une liste de jeux de données et de leurs ID correspondants peut être obtenue en effectuant une requête GET au point d’entrée `/dataSets` de l’API [!DNL Catalog Service]. Pour plus d’informations, consultez le guide sur la façon de [répertorier les objets du  [!DNL Catalog] ](../../catalog/api/list-objects.md). |
 | `entityMeta.fields` | Tableau de chemins d’accès à des champs spécifiques dans le schéma du jeu de données, fourni sous la forme de chaînes de pointeurs JSON. Consultez la section sur les [pointeurs JSON](../../landing/api-fundamentals.md#json-pointer) dans le guide des principes de base de l’API pour obtenir plus d’informations sur la syntaxe acceptée pour ces chaînes. |
 
 **Réponse**

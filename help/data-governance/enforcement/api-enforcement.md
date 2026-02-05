@@ -5,7 +5,7 @@ title: Application des politiques d’utilisation des données à l’aide de l�
 type: Tutorial
 description: Une fois que vous avez créé des libellés d’utilisation pour vos données et des politiques d’utilisation pour les actions marketing en fonction de ces libellés, vous pouvez utiliser l’API Policy Service pour évaluer si une action marketing effectuée sur un jeu de données ou sur un groupe arbitraire de libellés constitue une violation de la politique. Vous pouvez ensuite configurer vos propres protocoles internes pour gérer les violations de politique en fonction de la réponse de l’API.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-source-git-commit: c3e12c17967ad46bf2eb8bcbfd00a92317aec8a2
+source-git-commit: f8995ff1e460038b0e254cb500a6d23badeaa991
 workflow-type: tm+mt
 source-wordcount: '1021'
 ht-degree: 95%
@@ -134,7 +134,7 @@ Une réponse réussie renvoie l’URL de l’action marketing, les libellés en 
 
 >[!WARNING]
 >
->Le point d’entrée `/constraints` pour l’évaluation basée sur un jeu de données est obsolète. Pour évaluer une violation de politique ou effectuer plusieurs tâches d’évaluation, utilisez plutôt l’API [bulk evaluation API (`/bulk-eval`)](../api/evaluation.md#evaluate-policies-in-bulk).
+>Le point d’entrée `/constraints` pour l’évaluation basée sur un jeu de données est obsolète. Pour évaluer une violation de politique ou effectuer plusieurs tâches d’évaluation, utilisez plutôt l’API [bulk evaluation API (`/bulk-eval`)](../api/evaluation.md#bulk).
 
 Vous pouvez évaluer une politique d’utilisation des données en testant une action marketing en fonction d’un ou de plusieurs jeux de données à partir desquels il est possible de collecter les libellés. Pour ce faire, vous devez envoyer une requête POST à `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` et fournir des identifiants de jeux de données dans le corps de la requête, comme indiqué dans l’exemple ci-dessous.
 
