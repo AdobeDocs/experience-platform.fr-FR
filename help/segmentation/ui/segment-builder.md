@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 1b836a86a6b55a4e80a7fd3a52160f3974e4c9a4
+source-git-commit: 2341b02ecbd93965654bdbc38bbacadeae5be0ed
 workflow-type: tm+mt
-source-wordcount: '5354'
-ht-degree: 53%
+source-wordcount: '6311'
+ht-degree: 46%
 
 ---
 
@@ -61,6 +61,97 @@ Vous pouvez voir ces blocs de création dans la section **[!UICONTROL Fields]** 
 L’onglet **[!UICONTROL Attributes]** vous permet de parcourir [!DNL Profile] attributs appartenant à la classe [!DNL XDM Individual Profile]. Chaque dossier peut être développé pour afficher des attributs supplémentaires, où chaque attribut est une mosaïque qui peut être glissée sur la zone de travail du créateur de règles au centre de l’espace de travail. La [zone de travail du créateur de règles](#rule-builder-canvas) est abordée plus en détail dans la suite de ce guide.
 
 ![La section Attributs des champs du créateur de segments est mise en surbrillance.](../images/ui/segment-builder/attributes.png)
+
+Les attributs que vous ajoutez peuvent être de l’un des types de données suivants :
+
+| Type de données | Cas d’utilisation courants |
+| --------- | ---------------- |
+| Chaîne | Noms, adresses e-mail, catégories de produits |
+| Numérique | Âge, chiffre d’affaires, quantités de produits, scores de fidélité |
+| Booléen | Préférences, indicateurs de statut, indicateurs d&#39;utilisateur |
+| Énumération | Listes prédéfinies telles que le genre ou le statut |
+| Date/Heure | Dates d’achat, heures de visite, anniversaire |
+
+Vous pouvez utiliser les opérateurs suivants pour les types de données respectifs :
+
++++ Opérateurs de chaîne
+
+| Opérateur | Description | Exemple |
+| -------- | ----------- | ------- |
+| Égal à | Recherche d’une correspondance exacte avec la valeur spécifiée | E-mail **égal à** « sample@example.com » |
+| Différent de | Exclut la valeur spécifiée | Statut **n’est pas égal à** « Annulé » |
+| Contient | Le texte inclut la valeur spécifiée | Nom du produit **contient** « iPhone » |
+| Ne contient pas | Le texte n’inclut pas la valeur spécifiée | Description **ne contient pas** « arrêté » |
+| Commence par | Le texte commence par la valeur spécifiée | ID de client **commence par** « PREM » |
+| Se termine par | Le texte se termine avec la valeur spécifiée | E-mail **se termine par** « @company.com » |
+| Existe | La valeur existe | Deuxième prénom **existe** |
+| N’existe pas | La valeur n’existe pas | Statut de fidélité **n’existe pas** |
+
++++
+
++++ Opérateurs numériques
+
+| Opérateur | Description | Exemple |
+| -------- | ----------- | ------- |
+| Égal à | Recherche d’une correspondance exacte avec la valeur spécifiée | Âge **égal** 25 ans |
+| Différent de | Exclut la valeur spécifiée | Nombre de commandes **différent de** 0 |
+| Supérieur à | Le nombre est **plus grand** que la valeur spécifiée. Cette valeur est **exclusive** du nombre spécifié. | Chiffre d’affaires annuel **supérieur à** 50000 |
+| Supérieur ou égal à | Le nombre est **plus grand** que la valeur spécifiée. Cette valeur est **incluse** du nombre spécifié. | Âge **supérieur ou égal** 21 |
+| Inférieur à | Le nombre est **plus petit** que la valeur spécifiée. Cette valeur est **exclusive** du nombre spécifié. | Jours depuis l’achat **moins de** 30 |
+| Inférieur ou égal à | Le nombre est **plus petit** que la valeur spécifiée. Cette valeur est **incluse** du nombre spécifié. | Valeur du panier **inférieure ou égale** 100 |
+| Entre | Le nombre est compris **entre** les valeurs spécifiées. Ces valeurs sont **inclusives** des nombres spécifiés. | Âge **entre** 25 et 45 ans |
+| Existe | La valeur existe | cote de crédit **existe** |
+| N’existe pas | La valeur n’existe pas | Note de crédit **inexistante** |
+
++++
+
++++ Opérateurs booléens
+
+| Opérateur | Description | Exemple |
+| -------- | ----------- | ------- |
+| Égal à | La valeur booléenne est définie sur la valeur spécifiée (True ou False) | Souscription aux e-mails **est égal à Vrai** |
+| Différent de | La valeur booléenne est **non** définie sur la valeur spécifiée (True ou False) | Application mobile installée **différent de Vrai** |
+
++++
+
++++ Opérateurs d’énumération
+
+| Opérateur | Description | Exemple |
+| -------- | ----------- | ------- |
+| Égal à | La valeur est égale aux valeurs d’énumération spécifiées | Sexe **égal** Féminin |
+| Différent de | La valeur ne correspond pas à la valeur d’énumération spécifiée | Statut de la commande **différent de** Annulée |
+| Existe | La valeur d’énumération a été définie | Langue préférée **existe** |
+| N’existe pas | La valeur d’énumération n’a pas été définie | La langue préférée **n’existe pas** |
+
++++
+
++++ Opérateurs Date/Heure
+
+| Opérateur | Description | Exemple |
+| -------- | ----------- | ------- |
+| Today | La valeur est survenue aujourd’hui. Vous pouvez cocher la case **Ignorer l’année** pour que la comparaison ignore l’année. | Date de naissance **est** Aujourd&#39;hui |
+| Hier | La valeur s’est produite hier. | Achat au panier **est** Hier |
+| Ce mois-ci | La valeur s’est produite ce mois civil. | Mois de naissance **est** Ce mois |
+| Cette année | La valeur s’est produite cette année civile. | Date d’inscription **is** Cette année |
+| Date personnalisée | La valeur s’est produite à la date donnée. | Date d’achat **est le** Date personnalisée |
+| Au cours des | La valeur s’est produite au cours de la dernière période choisie. Anniversaire **is** Le mois dernier |
+| De (vers) | La valeur s’est produite au cours des deux dates calendaires sélectionnées. Cette période est **incluse** des deux dates. | La date de création du compte **est** du 20 avril au 13 juillet |
+| Pendant | La valeur s’est produite au cours du mois ou de l’année sélectionné. | Vente **is** En mars |
+| Dans (+/-) | La valeur s’est produite dans les jours, semaines, mois ou années suivant la date sélectionnée. Cette période est **incluse** des deux dates. | L’abandon du panier est **Dans** 3 jours |
+| Avant | La valeur s’est produite avant la date sélectionnée. | La date d’adhésion est **avant** le 3 janvier 2025 |
+| Après | La valeur s’est produite après la date sélectionnée. | La date d’achat est **après** le 14 mars 2024 |
+| Plage de roulement | La valeur s’est produite entre les deux dates relatives. | La date du dernier achat est comprise entre sept jours et trois jours. |
+| Dans suivant | La valeur est survenue au cours de la période suivante sélectionnée. | L’abandon du panier aura lieu dans 2 jours |
+
+Pour plus d’informations sur les fonctions d’heure et de date, consultez la section [ Contraintes de temps ](#time-constraints).
+
++++
+
+#### Attributs calculés {#computed-attributes}
+
+Les attributs calculés sont des champs calculés à partir d’autres attributs à l’aide d’agrégations ou de formules. Vous pouvez utiliser des attributs calculés si vous avez besoin de données agrégées telles que des sommes, des décomptes ou des moyennes sur plusieurs événements ou si vous créez des audiences fréquemment utilisées qui nécessitent des calculs complexes.
+
+Pour plus d’informations sur les attributs calculés, notamment sur la manière de les créer, les fonctions que vous pouvez utiliser dans ces attributs et la manière de les gérer, consultez la [ présentation des attributs calculés ](/help/profile/computed-attributes/overview.md).
 
 ### Événements
 
@@ -232,7 +323,7 @@ Vous pouvez également afficher une version codée d’une règle créée dans l
 
 L’affichage du code fournit un bouton qui vous permet de copier la valeur de la définition de segment à utiliser dans les appels d’API. Pour obtenir la dernière version de la définition de segment, assurez-vous d’avoir enregistré vos dernières modifications apportées à la définition de segment.
 
-![Le bouton « Copier le code » est mis en surbrillance, ce qui vous permet de &#x200B;](../images/ui/segment-builder/copy-code.png)
+![Le bouton « Copier le code » est mis en surbrillance, ce qui vous permet de ](../images/ui/segment-builder/copy-code.png)
 
 ### Fonctions d’agrégation
 
@@ -356,7 +447,7 @@ La liste des contraintes de temps disponibles pour cette opération diffère de 
 
 ## Conteneurs {#containers}
 
-Les règles de segmentation sont évaluées dans l’ordre dans lequel elles sont répertoriées. Les conteneurs permettent de contrôler l’ordre d’exécution grâce à l’utilisation de requêtes imbriquées.
+Les audiences sont évaluées dans l’ordre dans lequel elles sont répertoriées. Les conteneurs permettent de contrôler l’ordre d’exécution grâce à l’utilisation de requêtes imbriquées.
 
 Une fois que vous avez ajouté au moins une mosaïque à la zone de travail du créateur de règles, vous pouvez commencer à ajouter des conteneurs. Pour créer un nouveau conteneur, sélectionnez les points de suspension (...) dans le coin supérieur droit du volet, puis sélectionnez **[!UICONTROL Add container]**.
 
@@ -375,6 +466,36 @@ Une fois que vous avez sélectionné **[!UICONTROL Unwrap container]** le conten
 >Lorsque vous extrayez des conteneurs, veillez à ce que la logique continue de correspondre à la définition de segment souhaitée.
 
 ![Le conteneur s’affiche après avoir été déplié.](../images/ui/segment-builder/unwrapped-container.png)
+
+### Exemples {#container-examples}
+
+Vous pouvez utiliser vos conteneurs dans le créateur de segments de trois manières différentes : pour regrouper vos règles avec une logique booléenne, pour décider d’inclure ou d’exclure des profils correspondant aux critères du conteneur et pour définir des séquences d’événements avec des contraintes de temps.
+
++++ Logique booléenne mixte
+
+L’exemple suivant mélange les logiques **à la fois** ET et OU dans une seule expression. Sans utiliser de conteneurs, vous ne pouvez pas mélanger à la fois la logique AND avec la logique OR dans un seul niveau.
+
+![Image montrant comment utiliser des conteneurs pour mélanger une logique booléenne et utiliser la logique d’inclusion/exclusion.](/help/segmentation/images/ui/segment-builder/mixed-boolean-container.png)
+
++++
+
++++ Séquence d’événements
+
+L’exemple suivant utilise des conteneurs pour créer la séquence d’événements.
+
+![Image montrant comment séquencer des événements à l’aide de conteneurs.](/help/segmentation/images/ui/segment-builder/event-sequence-container.png)
+
++++
+
+### Bonnes pratiques {#container-best-practices}
+
+Lorsque vous ajoutez des conteneurs à votre audience, tenez compte des instructions suivantes :
+
+- Créez vos conteneurs de manière incrémentielle, en testant la logique avec chaque étape que vous ajoutez
+   - Cela est particulièrement important si vous utilisez la logique « Exclure », car cela peut modifier considérablement vos résultats
+- Nommez clairement vos conteneurs pour comprendre ce qu’ils sont censés faire
+- Évitez d’avoir trop de niveaux de conteneurs imbriqués, car cela réduit les performances
+- Assurez-vous que l’ordre des conteneurs est précis, car l’ordre des événements affecte considérablement les conteneurs de séquence
 
 ## Politiques de fusion
 
@@ -461,7 +582,7 @@ Vous trouverez plus d’informations sur les différentes méthodes d’évaluat
 Le créateur de segments fournit un workflow complet qui vous permet d’isoler les audiences commercialisables des données [!DNL Real-Time Customer Profile]. Après avoir lu ce guide, vous devriez maintenant pouvoir :
 
 - créer des définitions de segment en utilisant une combinaison d’attributs, d’événements et d’audiences existants comme blocs de création ;
-- utiliser les conteneurs et les zones de travail du créateur de règles pour contrôler l’ordre d’exécution des règles de segmentation ;
+- Utilisez la zone de travail et les conteneurs du créateur de règles pour contrôler l’ordre dans lequel les règles d’audience sont exécutées.
 - visualiser les estimations de votre audience potentielle, ce qui vous permet d’ajuster vos définitions de segment selon vos besoins ;
 - activer toutes les définitions de segment pour la segmentation planifiée ;
 - activer des définitions de segment spécifiques pour la segmentation par flux.
