@@ -2,7 +2,7 @@
 title: Destinations dans Real-Time Customer Data Platform B2B edition
 description: Présentation du rôle des destinations dans Adobe Real-Time Customer Data Platform B2B edition.
 feature: Destinations
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
 source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
@@ -27,4 +27,4 @@ Les documents suivants apportent des informations supplémentaires sur l’utili
 
 - Pour plus d’informations sur l’une des destinations disponibles pour Real-Time Customer Data Platform B2B edition, consultez le [catalogue des destinations](../../destinations/catalog/overview.md).
 - Pour plus d’informations sur les identités qui peuvent être exportées vers Marketo Engage, consultez la documentation sur la destination Marketo Engage [&#128279;](../../destinations/catalog/adobe/marketo-engage.md).
-- Pour plus d’informations sur la connexion à la destination Marketo Engage dans l’interface utilisateur d’Experience Platform et l’exportation de données, lisez [’Envoi d’un segment Adobe Experience Platform vers une liste statique Marketo’](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html).
+- Pour plus d’informations sur la connexion à la destination Marketo Engage dans l’interface utilisateur d’Experience Platform et l’exportation de données, lisez [’Envoi d’un segment Adobe Experience Platform vers une liste statique Marketo’](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=fr).

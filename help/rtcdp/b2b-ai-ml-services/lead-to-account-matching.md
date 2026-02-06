@@ -3,7 +3,7 @@ title: Correspondance des prospects et des comptes dans Real-Time CDP B2B
 type: Documentation
 description: Présentation et plus d’informations sur la fonctionnalité de correspondance des prospects et des comptes dans Experience Platform CDP B2B.
 feature: Get Started, Profiles, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
 source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt

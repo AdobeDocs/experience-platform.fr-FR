@@ -1,7 +1,7 @@
 ---
 title: Mises à niveau de l’architecture vers Real-Time CDP B2B edition
 description: Lisez ce document pour en savoir plus sur les mises à niveau complètes de l’architecture vers Real-Time CDP B2B edition.
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
 exl-id: d958a947-e195-4dd4-a04c-63ad82829728
 source-git-commit: a48196d369cec9e9927d9320475e06457e575691
 workflow-type: tm+mt

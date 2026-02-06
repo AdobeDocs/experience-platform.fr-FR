@@ -2,7 +2,7 @@
 title: Contrôle d’accès dans Real-Time Customer Data Platform B2B edition
 description: Présentation du rôle du contrôle d’accès dans Adobe Real-Time Customer Data Platform B2B edition.
 feature: Access Control, Sandboxes
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
 source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
 source-wordcount: '146'
