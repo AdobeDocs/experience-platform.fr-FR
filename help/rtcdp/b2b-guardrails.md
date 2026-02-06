@@ -1,14 +1,14 @@
 ---
-keywords: profil;profil client en temps réel;dépannage;mécanismes de sécurisation;directives;limite;entité;entité principale;entité de dimension;RTCDP;CDP;B2B edition;Real-Time Customer Data Platform;plateforme de données client en temps réel;cdp en temps réel;b2b;cdp;
+keywords: profil;profil client en temps réel;dépannage;mécanismes de sécurisation;instructions;limite;entité;entité principale;entité de dimension;RTCDP;CDP;B2B edition;Real-Time Customer Data Platform;plateforme de données client en temps réel;cdp en temps réel;b2b;cdp;
 title: Mécanismes de sécurisation par défaut pour Real-Time Customer Data Platform B2B edition
 type: Documentation
 description: Adobe Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel. Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données pour optimiser les performances du système à l’aide d’Adobe Real-Time Customer Data Platform B2B edition.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: bc399f3af0524232671af780ea1380f1a71a5b7e
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '1817'
+source-wordcount: '1815'
 ht-degree: 46%
 
 ---
@@ -138,7 +138,7 @@ Les attributs indépendants du temps, également appelés « données d’enreg
 
 #### Entité Dimension
 
-Bien que la banque de données de profil conservant les données de profil ne soit pas un magasin relationnel, Profile permet l’intégration à de petites entités de dimension afin de créer des audiences d’une manière simplifiée et intuitive. Cette intégration est connue sous le nom de [&#x200B; segmentation d’entités multiples &#x200B;](../segmentation/tutorials/multi-entity-segmentation.md).
+Bien que la banque de données de profil conservant les données de profil ne soit pas un magasin relationnel, Profile permet l’intégration à de petites entités de dimension afin de créer des audiences d’une manière simplifiée et intuitive. Cette intégration est connue sous le nom de [ segmentation d’entités multiples ](../segmentation/tutorials/multi-entity-segmentation.md).
 
 Votre entreprise peut également définir des classes XDM pour décrire des éléments autres que des individus, tels que des magasins, des produits ou des propriétés. Ces schémas non [!DNL XDM Individual Profile] sont appelés « entités de dimension » (également appelées « entités de recherche ») et ne contiennent pas de données de série temporelle. Les schémas qui représentent des entités de dimension sont liés à des entités de profil par le biais de l’utilisation de [relations de schéma](../xdm/tutorials/relationship-ui.md).
 

@@ -1,33 +1,32 @@
 ---
-title: Informations sur le profil du compte
-description: Découvrez le code SQL qui alimente vos informations de profil de compte et utilisez ces requêtes pour générer des informations personnalisées qui explorent davantage vos clients et leurs expériences client.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+title: Informations sur le profil de compte
+description: Découvrez le langage SQL qui alimente les informations de profil de votre compte et utilisez ces requêtes pour générer des informations personnalisées qui explorent davantage vos clients et leurs expériences client.
+badgeB2B: null
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: a32064848809d1cad07f769f04d82c35df451e38
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
 
-# Informations sur le profil du compte
+# Informations sur le profil de compte
 
-Les [profils de compte](../../rtcdp/accounts/account-profile-overview.md) sont utilisés pour consolider les informations de compte provenant de diverses sources, y compris de plusieurs canaux marketing et systèmes organisationnels. Cette vue unifiée permet une compréhension complète des comptes clients, améliorant ainsi les campagnes marketing B2B. Les insights dérivés de l’analyse de votre modèle de données rendent vos données Adobe Real-Time CDP B2B plus accessibles, plus compréhensibles et plus efficaces pour la prise de décision.
+Les [profils de compte](../../rtcdp/accounts/account-profile-overview.md) sont utilisés pour consolider les informations de compte provenant de diverses sources, y compris de plusieurs canaux marketing et systèmes d’organisation. Cette vue unifiée permet une compréhension complète des comptes client, ce qui améliore les campagnes marketing B2B. Les informations dérivées de l’analyse de votre modèle de données rendent vos données B2B Adobe Real-Time CDP plus accessibles, compréhensibles et percutantes pour la prise de décision.
 
-Grâce à l’accès au code SQL qui alimente vos informations, vous pouvez mieux comprendre vos données B2B et générer vos propres informations réutilisables hautement personnalisées pour explorer plus en détail les informations de votre compte client. Transformez vos données brutes en nouvelles informations exploitables en utilisant le modèle de données Real-Time CDP SQL existant comme source d’inspiration pour créer des requêtes en fonction de vos besoins professionnels uniques.
+Grâce à l’accès au SQL qui alimente vos informations, vous pouvez mieux comprendre vos données B2B et générer vos propres informations réutilisables hautement personnalisées pour explorer plus en détail les informations de votre compte client. Transformez vos données brutes en nouvelles informations exploitables en utilisant le modèle de données Real-Time CDP existant SQL comme inspiration pour créer des requêtes correspondant aux besoins uniques de votre entreprise.
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-Les informations suivantes sont toutes disponibles pour que vous puissiez les utiliser dans le [tableau de bord Profils de compte](../guides/account-profiles.md) ou dans un [tableau de bord personnalisé](../standard-dashboards.md). Consultez la [présentation de la personnalisation](../customize/overview.md) pour obtenir des instructions sur la personnalisation de votre tableau de bord ou la [création et modification de nouveaux widgets](../customize/custom-widgets.md) dans la bibliothèque de widgets et [tableau de bord défini par l’utilisateur](../standard-dashboards.md#create-widget).
+Vous pouvez tous utiliser les informations suivantes dans le [tableau de bord des profils de compte](../guides/account-profiles.md) ou un [tableau de bord personnalisé](../standard-dashboards.md). Consultez la [présentation de la personnalisation](../customize/overview.md) pour obtenir des instructions sur la personnalisation de votre tableau de bord ou [créer et modifier de nouveaux widgets](../customize/custom-widgets.md) dans la bibliothèque de widgets et dans le tableau de bord [défini par l’utilisateur](../standard-dashboards.md#create-widget).
 
 ## Profils de compte ajoutés {#account-profiles-added}
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
 - Combien de profils de compte ont été ajoutés sur une période donnée ?
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 WITH accounts_by_mm_dd AS
@@ -49,11 +48,11 @@ ORDER BY date_key limit 5000;
 
 ## Nouveaux comptes par secteur {#accounts-by-industry}
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
-- À quels sont les cinq principaux secteurs d’activité auxquels appartiennent les profils de compte ?
+- Quels sont les cinq principaux secteurs d’activité auxquels appartiennent les profils de compte ?
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 WITH rankedindustries AS
@@ -85,11 +84,11 @@ ORDER BY total_accounts DESC limit 5000;
 
 ## Nouveaux comptes par type {#accounts-by-type}
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
 - Quel est le nombre de comptes par type ?
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT t.account_type,
@@ -108,11 +107,11 @@ LIMIT  5000;
 
 ## Opportunités ajoutées {#opportunities-added}
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
-- Combien d&#39;opportunités ont été ajoutées sur une période donnée ?
+- Combien d’opportunités ont été ajoutées sur une période donnée ?
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT d.date_key,
@@ -129,13 +128,13 @@ LIMIT  5000;
 
 +++
 
-## Nouvelles opportunités par rôle individuel {#opportunities-by-person-role}
+## Nouvelles opportunités par rôle de personne {#opportunities-by-person-role}
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
-- Quelle est la taille et le nombre relatifs des différents rôles dans une opportunité ?
+- Quelle est la taille relative et le nombre des différents rôles dans une opportunité ?
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 SELECT p.person_role,
@@ -151,13 +150,13 @@ LIMIT  5000;
 
 +++
 
-## Nouvelles opportunités par recettes {#opportunities-by-revenue}
+## Nouvelles opportunités par chiffre d’affaires {#opportunities-by-revenue}
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
-- Quelles sont les 20 meilleures opportunités classées en fonction de leurs recettes (en dollars américains) ?
+- Quelles sont les 20 meilleures opportunités classées en fonction de leur chiffre d’affaires (en dollars américains) ?
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 WITH ranked_opportunities AS
@@ -193,12 +192,12 @@ ORDER BY total_expected_revenue DESC limit 5000;
 
 ## Nouvelles opportunités par statut et étape {#opportunities-by-status-and-stage}
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
-- Quelles sont les opportunités ouvertes et à quel stade de l&#39;entonnoir de vente ou de marketing ?
-- Quelles sont les opportunités fermées et à quel stade de l&#39;entonnoir de vente ou de marketing ?
+- Quelles sont les opportunités existantes et à quel stade du funnel de vente ou de marketing se trouvent-elles ?
+- Quelles sont les opportunités fermées et à quelle étape du funnel de vente ou de marketing se trouvent-elles ?
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 WITH opportunities_by_isclosed AS
@@ -224,13 +223,13 @@ FROM   opportunities_by_isclosed limit 5000;
 
 +++
 
-## De nouvelles opportunités gagnées {#opportunities-won}
+## Nouvelles opportunités confirmées {#opportunities-won}
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
-- Quel est le nombre d&#39;opportunités qui ont été terminées ou qui ont été correctement clôturées ?
+- Combien d’opportunités ont été clôturées ou finalisées avec succès ?
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 WITH opportunities_by_iswon AS
@@ -251,15 +250,15 @@ FROM   opportunities_by_iswon limit 5000;
 
 +++
 
-## Opportunités gagnées (graphique linéaire) {#opportunities-won-line-graph}
+## Opportunités confirmées (graphique linéaire) {#opportunities-won-line-graph}
 
 <!-- Q) Can we change this name? -->
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
-- Combien d’opportunités ont été finalisées ou bien terminées (gagnées) sur une période donnée ?
+- Combien d’opportunités ont été clôturées ou finalisées avec succès (gagnées) sur une période donnée ?
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 WITH opportunities_won_counts AS
@@ -285,13 +284,13 @@ ORDER BY  d.date_key limit 5000;
 
 >[!NOTE]
 >
->Le graphique [!UICONTROL &#x200B; Customers per Account Overview] comprend trois insights d’analyse : [!UICONTROL Customers per Account Detail], [!UICONTROL Opportunités par Account Overview] et [!UICONTROL Opportunités par Account Detail]. Ces explorations publicitaires fournissent des informations plus granulaires, ventilant le nombre de clients et d’opportunités par catégories (comme les clients directs et indirects) et plages (comme les plages de nombres de clients et d’opportunités). Ces graphiques ne sont pas affectés par les filtres de date globaux que vous avez peut-être définis.
+>Le graphique [!UICONTROL Customers per Account Overview] comprend trois informations d’exploration amont : [!UICONTROL Customers per Account Detail], [!UICONTROL Opportunities per Account Overview] et [!UICONTROL Opportunities per Account Detail]. Ces analyses détaillées fournissent des informations plus granulaires, en répartissant le nombre de clients et d’opportunités par catégories (par exemple, clients directs et indirects) et par plages (comme les tranches de nombre de clients et d’opportunités). Ces graphiques ne sont pas affectés par les filtres de date globaux que vous avez peut-être définis.
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
 - Quelle est la répartition des comptes selon qu&#39;ils ont des clients directs ou indirects ?
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 WITH LatestDate AS (SELECT MAX(inserted_date) AS max_inserted_date FROM adwh_b2b_account_person_association),
@@ -325,17 +324,17 @@ ORDER BY ac.Account_Category;
 
 +++
 
-## Clients par détail de compte {#customers-per-account-detail}
+## Détails des clients par compte {#customers-per-account-detail}
 
 >[!NOTE]
 >
->Cet aperçu n’est pas affecté par les filtres de dates globaux.
+>Cet insight n’est pas affecté par les filtres de date globaux.
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
-- Combien de comptes ont des plages de clients directs ou indirects différentes ?
+- Combien de comptes ont différentes plages de clients directs ou indirects ?
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 WITH customer_ranges AS (
@@ -403,13 +402,13 @@ ORDER BY cr.customer_type,
 
 >[!NOTE]
 >
->Cet aperçu n’est pas affecté par les filtres de dates globaux.
+>Cet insight n’est pas affecté par les filtres de date globaux.
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
-- Quelle est la distribution des comptes en fonction des opportunités qui leur sont associées ?
+- Quelle est la répartition des comptes selon qu’ils présentent ou non des opportunités associées ?
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 WITH LatestDate AS (
@@ -449,17 +448,17 @@ ORDER BY ac.Opportunity_Category;
 
 +++
 
-## Opportunités par détail de compte {#opportunities-per-account-detail}
+## Détails des opportunités par compte {#opportunities-per-account-detail}
 
 >[!NOTE]
 >
->Cet aperçu n’est pas affecté par les filtres de dates globaux.
+>Cet insight n’est pas affecté par les filtres de date globaux.
 
-Questions auxquelles répond cet aperçu :
+Questions traitées par cette insight :
 
-- Combien de comptes présentent différentes plages d’opportunités associées ?
+- Combien de comptes ont des plages d’opportunités associées différentes ?
 
-+++Sélectionnez cette option pour afficher le code SQL qui génère cette information.
++++Sélectionnez cette option pour afficher le code SQL qui génère cette insight
 
 ```sql
 WITH opportunity_ranges AS (
@@ -507,6 +506,6 @@ ORDER BY CASE opportunity_ranges.opportunity_range
 
 ## Étapes suivantes
 
-En lisant ce document, vous comprenez désormais le code SQL qui génère les informations du tableau de bord des profils de compte et les questions courantes que cette analyse résout. Vous pouvez désormais modifier et itérer sur le SQL pour générer vos propres informations. Reportez-vous à la [présentation du mode Query Pro](../sql-insights-query-pro-mode/overview.md) pour savoir comment générer des insights personnalisés avec SQL.
+En lisant ce document, vous comprenez maintenant le langage SQL qui génère des informations sur le tableau de bord des profils de compte et les questions courantes que cette analyse résout. Vous pouvez désormais modifier et effectuer une itération sur le code SQL pour générer vos propres informations. Reportez-vous à la présentation du mode [Query Pro](../sql-insights-query-pro-mode/overview.md) pour savoir comment générer des informations personnalisées avec SQL.
 
-Vous pouvez également lire et comprendre le code SQL qui génère des insights pour les tableaux de bord [Profils](./profiles.md), [Audiences](./audiences.md) et [Destinations](./destinations.md).
+Vous pouvez également lire et comprendre le langage SQL qui génère des informations pour les tableaux de bord [Profils](./profiles.md), [Audiences](./audiences.md) et [Destinations](./destinations.md).

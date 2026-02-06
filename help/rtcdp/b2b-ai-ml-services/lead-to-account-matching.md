@@ -1,13 +1,13 @@
 ---
 title: Correspondance des prospects et des comptes dans Real-Time CDP B2B
 type: Documentation
-description: Présentation et plus d’informations sur la fonctionnalité de correspondance des prospects et des comptes dans le B2B de CDP Experience Platform.
+description: Présentation et plus d’informations sur la fonctionnalité de correspondance des prospects et des comptes dans Experience Platform CDP B2B.
 feature: Get Started, Profiles, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
-source-git-commit: 4ba609e777716b1b38f5b143587e5476d851e344
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '402'
 ht-degree: 3%
 
 ---
@@ -62,11 +62,11 @@ Le service de correspondance des prospects et des comptes s’exécute lorsqu’
 
 Après l’exécution de la tâche, les résultats sont enregistrés dans un nouveau jeu de données du XDM relation compte/personne existant.
 
-Pour prévisualiser le jeu de données, sélectionnez **[!UICONTROL Prévisualiser le jeu de données]** en haut à droite.
+Pour prévisualiser le jeu de données, sélectionnez **[!UICONTROL Preview dataset]** en haut à droite.
 
 ![Nouveau jeu de données](/help/rtcdp/accounts/images/b2b-dataset-output.png)
 
-Le jeu de données comprend les informations de compte correspondantes ainsi que le score de correspondance pour le jeu de données sélectionné. Le champ **[!UICONTROL Source de relation]** indique s’il provient du processus de correspondance entre le prospect et le compte.
+Le jeu de données comprend les informations de compte correspondantes ainsi que le score de correspondance pour le jeu de données sélectionné. Le champ **[!UICONTROL Relationship Source]** indique s’il provient du processus de correspondance entre le prospect et le compte.
 
 ![Prévisualiser les scores de confiance et la sortie du jeu de données](/help/rtcdp/accounts/images/b2b-dataset-preview.png)
 

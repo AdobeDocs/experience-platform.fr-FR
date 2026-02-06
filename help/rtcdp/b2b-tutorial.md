@@ -4,11 +4,11 @@ solution: Experience Platform
 title: Prise en main de Real-Time Customer Data Platform B2B edition
 description: Utilisez cet exemple de scénario comme exemple lors de la configuration de votre implémentation d’Adobe Real-Time Customer Data Platform B2B edition.
 feature: Get Started, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: ed655be7ad274c06deea1e50001c28c58f68796e
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1158'
 ht-degree: 43%
 
 ---
@@ -19,7 +19,7 @@ Ce document fournit un workflow de haut niveau de bout en bout pour la prise en 
 
 La société de technologie Bodea souhaite combiner des données relatives aux personnes et aux comptes provenant de différentes sources de données cloisonnées afin de cibler efficacement les clients avec un e-mail et une campagne publicitaire LinkedIn pour son nouveau produit. Bodea utilise une plateforme d’automatisation du marketing et doit segmenter une audience spécifique au B2B à partir de plusieurs CRM contenant des données client.
 
-## Commencer
+## Prise en main
 
 Ce workflow de tutoriel repose sur plusieurs services Adobe Experience Platform dans le cadre de la démonstration. Si vous souhaitez suivre cette procédure, il est recommandé de bien comprendre les services suivants :
 

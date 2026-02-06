@@ -1,13 +1,11 @@
 ---
 title: Connecter Demandbase Intent à Experience Platform à l’aide de l’interface utilisateur
 description: Découvrez comment connecter Demandbase Intent à Experience Platform
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions newtab=true"
-badgeB2P: label="Édition B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions newtab=true"
 exl-id: 7dc87067-cdf6-4dde-b077-19666dcb12e2
-source-git-commit: a1af85c6b76cc7bded07ab4acaec9c3213a94397
+source-git-commit: 04af34d439ba76b0d0053ba9de45ca962458d3e8
 workflow-type: tm+mt
-source-wordcount: '1017'
-ht-degree: 9%
+source-wordcount: '986'
+ht-degree: 7%
 
 ---
 
@@ -29,13 +27,13 @@ Lisez la [[!DNL Demandbase Intent] présentation](../../../../connectors/data-pa
 
 ## Parcourir le catalogue des sources {#navigate}
 
-Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Vous pouvez sélectionner la catégorie appropriée dans le panneau *[!UICONTROL Catégories]*. Vous pouvez également utiliser la barre de recherche pour accéder à la source spécifique que vous souhaitez utiliser.
+Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]*. Vous pouvez sélectionner la catégorie appropriée dans le panneau *[!UICONTROL Categories]*. Vous pouvez également utiliser la barre de recherche pour accéder à la source spécifique que vous souhaitez utiliser.
 
-Pour utiliser [!DNL Demandbase], sélectionnez la carte source **[!UICONTROL Intention Demandbase]** sous [!UICONTROL Partenaires de données et d’identité], puis sélectionnez **[!UICONTROL Ajouter des données]**.
+Pour utiliser [!DNL Demandbase], sélectionnez la carte source **[!UICONTROL Demandbase Intent]** sous [!UICONTROL Data & Identity Partners], puis sélectionnez **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
->Les sources du catalogue affichent l’option **[!UICONTROL Configurer]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois qu’un compte authentifié existe, cette option devient **[!UICONTROL Ajouter des données]**.
+>Les sources du catalogue affichent l’option **[!UICONTROL Set up]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois qu’un compte authentifié existe, cette option devient **[!UICONTROL Add data]**.
 
 ![Le catalogue des sources avec la vignette « Demandbase Intent » sélectionnée.](../../../../images/tutorials/create/demandbase/catalog.png)
 
@@ -43,9 +41,9 @@ Pour utiliser [!DNL Demandbase], sélectionnez la carte source **[!UICONTROL Int
 
 ### Utiliser un compte existant {#existing}
 
-Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]** puis sélectionnez le compte à utiliser dans la liste des comptes de l’interface.
+Pour utiliser un compte existant, sélectionnez **[!UICONTROL Existing account]**, puis sélectionnez le compte à utiliser dans la liste des comptes de l’interface.
 
-Une fois votre compte sélectionné, sélectionnez **[!UICONTROL Suivant]** pour passer à l’étape suivante.
+Une fois votre compte sélectionné, sélectionnez **[!UICONTROL Next]** pour passer à l’étape suivante.
 
 ![Interface de compte existante du workflow des sources.](../../../../images/tutorials/create/demandbase/existing.png)
 
@@ -53,7 +51,7 @@ Une fois votre compte sélectionné, sélectionnez **[!UICONTROL Suivant]** pour
 
 Si vous ne disposez pas d’un compte existant, vous devez créer un compte en fournissant les informations d’authentification nécessaires qui correspondent à votre source.
 
-Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** puis indiquez un nom de compte et éventuellement une description pour les détails de votre compte. Indiquez ensuite les valeurs d’authentification appropriées pour authentifier votre source par rapport à Experience Platform. Pour connecter votre compte [!DNL Demandbase Intent], vous devez disposer des informations d’identification suivantes :
+Pour créer un compte, sélectionnez **[!UICONTROL New account]**, puis fournissez un nom de compte et, éventuellement, une description pour les détails de votre compte. Indiquez ensuite les valeurs d’authentification appropriées pour authentifier votre source par rapport à Experience Platform. Pour connecter votre compte [!DNL Demandbase Intent], vous devez disposer des informations d’identification suivantes :
 
 * **ID de la clé d’accès** : votre ID de clé d’accès [!DNL Demandbase]. Il s’agit d’une chaîne alphanumérique de 61 caractères requise pour authentifier votre compte auprès d’Experience Platform.
 * **Clé d’accès secrète** : votre clé d’accès secrète [!DNL Demandbase]. Il s’agit d’une chaîne codée en base 64 de 40 caractères requise pour authentifier votre compte auprès d’Experience Platform.
@@ -77,16 +75,16 @@ Ensuite, utilisez l’interface de planification pour configurer un planning d�
 
 * **Fréquence** : configurez la fréquence pour indiquer la fréquence d’exécution du flux de données. Vous pouvez planifier votre flux de données [!DNL Demandbase] pour ingérer des données à une fréquence hebdomadaire.
 * **Intervalle** : l’intervalle représente la durée écoulée entre chaque cycle d’ingestion. Le seul intervalle pris en charge pour un flux de données [!DNL Demandbase] est `1`. Cela signifie que votre flux de données ingérera des données une fois par semaine, toutes les semaines.
-* **Heure de début** : l’heure de début détermine à quel moment la première itération d’exécution de votre flux de données se produira. [!DNL Demandbase] envoie les données à Adobe une fois par semaine, le lundi, à 12 h 00 UTC. Par conséquent, vous devez définir l’heure de début de l’ingestion après 12h00 UTC. En outre, vous devez confirmer l’heure d’ingestion avec [!DNL Demandbase], car ils peuvent modifier leur planning lors de l’envoi de fichiers vers Adobe.
+* **Heure de début** : l’heure de début détermine à quel moment la première itération d’exécution de votre flux de données se produira. [!DNL Demandbase] envoie les données à Adobe une fois par semaine, le lundi, à 12 :00 UTC. Par conséquent, vous devez définir l’heure de début de l’ingestion après 12 :00 UTC. En outre, vous devez confirmer l’heure d’ingestion avec [!DNL Demandbase], car ils peuvent modifier leur planning lors de l’envoi de fichiers vers Adobe.
 * **Renvoi** : le renvoi détermine les données initialement ingérées. Si le renvoi est activé, tous les fichiers actuels du chemin spécifié seront ingérés lors de la première ingestion planifiée. Si le renvoi est désactivé, seuls les fichiers chargés entre la première exécution de l’ingestion et l’heure de début sont ingérés. Les fichiers chargés avant l’heure de début ne seront pas ingérés.
 
-Une fois que vous avez configuré le planning d’ingestion de votre flux de données, sélectionnez **[!UICONTROL Suivant]**.
+Une fois que vous avez configuré le planning d’ingestion du flux de données, sélectionnez **[!UICONTROL Next]**.
 
 ![Interface de planification du workflow des sources.](../../../../images/tutorials/create/demandbase/scheduling.png)
 
 ## Vérifier le flux de données {#review-dataflow}
 
-La dernière étape du processus de création de flux de données consiste à vérifier votre flux de données avant de l’exécuter. Utilisez l’étape *[!UICONTROL Réviser]* pour passer en revue les détails de votre nouveau flux de données avant son exécution. Les détails sont regroupés dans les catégories suivantes :
+La dernière étape du processus de création de flux de données consiste à vérifier votre flux de données avant de l’exécuter. Utilisez l’étape *[!UICONTROL Review]* pour passer en revue les détails de votre nouveau flux de données avant son exécution. Les détails sont regroupés dans les catégories suivantes :
 
 * **Connexion** : affiche le type de source, le chemin d’accès correspondant au fichier source choisi et le nombre de colonnes au sein de ce fichier source.
 * **Planification** : affiche la période active, la fréquence et l’intervalle du planning d’ingestion.
@@ -107,4 +105,4 @@ Pour mettre à jour les configurations pour la planification, le mappage et les 
 
 ### Supprimer le flux de données
 
-Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui ont été créés de manière incorrecte à l’aide de la fonction **[!UICONTROL Supprimer]**, disponible dans l’espace de travail **[!UICONTROL Flux de données]**. Pour plus d’informations sur la suppression des flux de données, consultez le tutoriel sur la [suppression de flux de données dans l’interface utilisateur](../../delete.md).
+Vous pouvez supprimer les flux de données qui ne sont plus nécessaires ou qui ont été créés de manière incorrecte à l’aide de la fonction **[!UICONTROL Delete]** disponible dans l’espace de travail **[!UICONTROL Dataflows]**. Pour plus d’informations sur la suppression des flux de données, consultez le tutoriel sur la [suppression de flux de données dans l’interface utilisateur](../../delete.md).
