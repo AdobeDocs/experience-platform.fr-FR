@@ -59,7 +59,7 @@ Les fonctionnalités suivantes ont été mises à jour dans le cadre des mises �
 
 Dans le cadre de la nouvelle mise à niveau de l’architecture, les filtres d’événement d’expérience ne peuvent plus être utilisés dans une audience unique à entités multiples qui inclut des attributs B2B.
 
-Pour appliquer la même logique d’audience, vous pouvez utiliser le créateur de segments pour [ ajouter des audiences et des audiences de référence ](../segmentation/ui/segment-builder.md#adding-audiences)
+Pour appliquer la même logique d’audience, vous pouvez utiliser le créateur de segments pour [&#x200B; ajouter des audiences et des audiences de référence &#x200B;](../segmentation/ui/segment-builder.md#adding-audiences)
 
 Par exemple :
 

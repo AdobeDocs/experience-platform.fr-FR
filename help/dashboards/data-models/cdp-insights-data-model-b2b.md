@@ -51,7 +51,7 @@ Le diagramme ci-dessous affiche les champs de données pertinents dans chaque je
 
 #### Cas pratique des nouveaux comptes par secteur {#accounts-by-industry}
 
-La logique utilisée pour le [!UICONTROL New accounts by industry] insight renvoie les cinq principaux secteurs d’activité en fonction de leur nombre de profils de compte et de leur taille relative les uns par rapport aux autres. Pour plus d’informations[[!UICONTROL New accounts By Industry] consultez la documentation sur le widget ](../guides/account-profiles.md#accounts-by-industry) .
+La logique utilisée pour le [!UICONTROL New accounts by industry] insight renvoie les cinq principaux secteurs d’activité en fonction de leur nombre de profils de compte et de leur taille relative les uns par rapport aux autres. Pour plus d’informations[[!UICONTROL New accounts By Industry] consultez la documentation sur le widget &#x200B;](../guides/account-profiles.md#accounts-by-industry) .
 
 >[!TIP]
 >
@@ -96,7 +96,7 @@ LIMIT 5000;
 
 #### Cas d’utilisation des nouveaux comptes par type {#accounts-by-type}
 
-La logique utilisée par [!UICONTROL New accounts by type] insight renvoie la répartition numérique des comptes par type. Cette insight peut vous aider à orienter la stratégie commerciale et les opérations, y compris l’allocation des ressources ou les stratégies marketing. Pour plus d’informations[[!UICONTROL New accounts by type] consultez la documentation sur le widget ](../guides/account-profiles.md#accounts-by-type) .
+La logique utilisée par [!UICONTROL New accounts by type] insight renvoie la répartition numérique des comptes par type. Cette insight peut vous aider à orienter la stratégie commerciale et les opérations, y compris l’allocation des ressources ou les stratégies marketing. Pour plus d’informations[[!UICONTROL New accounts by type] consultez la documentation sur le widget &#x200B;](../guides/account-profiles.md#accounts-by-type) .
 
 Le code SQL qui génère le [!UICONTROL New accounts by type] insight est visible dans la section réductible ci-dessous.
 
