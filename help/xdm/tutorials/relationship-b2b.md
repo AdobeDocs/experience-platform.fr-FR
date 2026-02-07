@@ -1,10 +1,11 @@
 ---
 title: Définition d’une relation entre deux schémas dans Real-Time Customer Data Platform B2B edition
 description: Découvrez comment définir une relation multiple-à-un entre deux schémas dans Adobe Real-Time Customer Data Platform B2B edition.
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cb036262ff81d245fe436fc337b3911170c61425
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '1729'
 ht-degree: 14%
 
 ---
@@ -57,7 +58,7 @@ Pour établir une relation, le schéma de référence doit avoir une identité p
 
 Pour en tenir compte, toutes les classes B2B standard contiennent des champs « clé » conformes au type de données [[!UICONTROL B2B Source]](../data-types/b2b-source.md). Ce type de données fournit des champs pour un identifiant de chaîne pour l’entité B2B ainsi que d’autres informations contextuelles sur la source de l’identifiant. L’un de ces champs, `sourceKey`, concatène les valeurs des autres champs du type de données afin de produire un identifiant totalement unique pour l’entité. Ce champ doit toujours être utilisé comme identité principale pour les schémas d’entité B2B.
 
-![&#x200B; champ sourceKey &#x200B;](../images/tutorials/relationship-b2b/sourcekey.png)
+![ champ sourceKey ](../images/tutorials/relationship-b2b/sourcekey.png)
 
 >[!NOTE]
 >

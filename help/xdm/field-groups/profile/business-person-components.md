@@ -1,17 +1,22 @@
 ---
 title: Groupe de champs de schéma des composants Business Person XDM
 description: Découvrez le groupe de champs de schéma Composants professionnels XDM .
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3fafccef44823b80938db96a7751edbff5a2fd02
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '516'
 ht-degree: 4%
 
 ---
 
-# [!UICONTROL Composants professionnels XDM] groupe de champs de schéma
+# [!UICONTROL XDM Business Person Components] groupe de champs de schéma
 
-[!UICONTROL Composants professionnels XDM] est un groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) qui capture plusieurs enregistrements sources pour une personne et d’autres attributs requis pour la segmentation de personnes.
+>[!AVAILABILITY]
+>
+>Ce groupe de champs n’est disponible que pour les organisations ayant accès au B2B edition Real-Time CDP.
+
+[!UICONTROL XDM Business Person Components] est un groupe de champs de schéma standard pour la classe [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) qui capture plusieurs enregistrements sources pour une personne, ainsi que d’autres attributs requis pour la segmentation de la personne.
 
 Lorsqu’un profil est créé pour une personne par l’intermédiaire du [profil client en temps réel](../../../profile/home.md) dans le B2B edition de Real-Time CDP, les informations utilisées pour créer ce profil peuvent provenir de nombreux enregistrements sources. Par exemple, si une personne travaille pour deux sociétés différentes, de nombreux systèmes de gestion de la relation client (CRM) dupliquent intentionnellement une copie de cette personne, de sorte qu’une copie est liée à la société A, tandis que l’autre est liée à la société B. Lors de l’importation de ces données dans Adobe Experience Platform, ce groupe de champs est utilisé pour fusionner ces différents enregistrements sources en une seule représentation.
 
@@ -30,11 +35,11 @@ Le groupe de champs fournit un champ de `personComponents` au niveau racine, qui
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `sourceAccountKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Identifiant composite du compte associé à la personne. |
-| `sourceConvertedContactKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Identifiant composite du contact associé si ce prospect a été converti. |
-| `sourceExternalKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Identifiant composite du système source d’où proviennent les données de la personne. |
-| `sourcePersonKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Identifiant composite de la personne. |
-| `workEmail` | [[!UICONTROL Adresse électronique]](../../data-types/b2b-source.md) | ID d’e-mail professionnel de la personne. |
+| `sourceAccountKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Identifiant composite du compte associé à la personne. |
+| `sourceConvertedContactKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Identifiant composite du contact associé si ce prospect a été converti. |
+| `sourceExternalKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Identifiant composite du système source d’où proviennent les données de la personne. |
+| `sourcePersonKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Identifiant composite de la personne. |
+| `workEmail` | [[!UICONTROL Email address]](../../data-types/b2b-source.md) | ID d’e-mail professionnel de la personne. |
 | `personGroupID` | Chaîne | Identifiant de groupe de la personne. |
 | `personScore` | Chaîne | Score généré pour la personne par un système CRM. |
 | `personSource` | Chaîne | Identifiant unique basé sur une chaîne pour le système source d’où proviennent les données de la personne. |
@@ -49,5 +54,5 @@ Le groupe de champs fournit un champ de `personComponents` au niveau racine, qui
 
 Pour plus d’informations sur le groupe de champs , consultez le référentiel XDM public :
 
-* [&#x200B; Exemple renseigné &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-components.example.1.json)
+* [ Exemple renseigné ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-components.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-components.schema.json)
