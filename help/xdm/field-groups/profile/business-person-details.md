@@ -52,7 +52,7 @@ ht-degree: 11%
 | `mobilePhone` | [Numéro de téléphone](../../data-types/phone-number.md) | Numéro de téléphone mobile de la personne. |
 | `otherAddress` | [Adresse postale](../../data-types/postal-address.md) | Adresse de remplacement de la personne. |
 | `otherPhone` | [Numéro de téléphone](../../data-types/phone-number.md) | Autre numéro de téléphone de la personne. |
-| `person` | [ Personne ](../../data-types/person.md) | Acteur, contact ou propriétaire individuel. |
+| `person` | [&#x200B; Personne &#x200B;](../../data-types/person.md) | Acteur, contact ou propriétaire individuel. |
 | `personalEmail` | [Adresse électronique](../../data-types/email-address.md) | Adresse e-mail personnelle de la personne. |
 | `workAddress` | [Adresse postale](../../data-types/postal-address.md) | Adresse professionnelle de la personne. |
 | `workEmail` | [Adresse électronique](../../data-types/email-address.md) | Adresse e-mail professionnelle de la personne. |
@@ -65,5 +65,5 @@ ht-degree: 11%
 
 Pour plus d’informations sur le groupe de champs , consultez le référentiel XDM public :
 
-* [ Exemple renseigné ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-details.example.1.json)
+* [&#x200B; Exemple renseigné &#x200B;](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-details.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-details.schema.json)
