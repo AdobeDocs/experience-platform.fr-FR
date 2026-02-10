@@ -2,9 +2,9 @@
 title: Point d’entrée de l’API Audiences externes
 description: Découvrez comment utiliser l’API des audiences externes pour créer, mettre à jour, activer et supprimer vos audiences externes de Adobe Experience Platform.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: 0a37ef2f5fc08eb515c7c5056936fd904ea6d360
+source-git-commit: ff58324446f28cbdca369ecbb58d8261614ae684
 workflow-type: tm+mt
-source-wordcount: '2253'
+source-wordcount: '2340'
 ht-degree: 9%
 
 ---
@@ -13,7 +13,17 @@ ht-degree: 9%
 
 Les audiences externes vous permettent de charger des données de profil à partir de vos sources externes dans Adobe Experience Platform. Vous pouvez utiliser le point d’entrée `/external-audience` dans l’API Segmentation Service pour ingérer une audience externe vers Experience Platform, afficher les détails et mettre à jour vos audiences externes, ainsi que supprimer vos audiences externes.
 
-## Commencer
+## Mécanismes de sécurisation
+
+À compter de la version de mars, les mécanismes de sécurisation suivants seront appliqués lors de l’utilisation du point d’entrée d’audiences externes :
+
+| Mécanisme de sécurisation | Limite | Type de limite | Description |
+| --------- | ----- | ---------- | ----------- |
+| Nombre d’exécutions d’ingestion d’audience par jour | 100 | Mécanisme de sécurisation mis en œuvre par le système | Nombre maximal d’exécutions d’ingestion d’audience autorisées par jour. Cette limite est de au niveau **sandbox**. |
+| Nombre d’ingestions par audience | 10 | Mécanisme de sécurisation mis en œuvre par le système | Nombre d’ingestions pouvant être effectuées sur une audience spécifiée. |
+| Taille de l’audience externe | 10 GO | Mécanisme de sécurisation des performances | La taille totale recommandée de l’audience externe est de 10 Go. |
+
+## Prise en main
 
 >[!IMPORTANT]
 >
@@ -99,7 +109,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `customAudienceId` | Chaîne | Identifiant facultatif de votre audience externe. |
 | `fields` | Tableau d’objets | La liste des champs et leurs types de données. Lors de la création de la liste des champs, vous pouvez ajouter les éléments suivants : <ul><li>`name` : **Obligatoire** nom du champ qui fait partie de la spécification de l’audience externe.</li><li>`type` : **Obligatoire** type de données qui entre dans le champ. Les valeurs prises en charge sont les suivantes : `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) et `boolean`.</li><li>`identityNs` : **Obligatoire pour le champ d’identité** Espace de noms utilisé par le champ d’identité. Les valeurs prises en charge incluent tous les espaces de noms valides, tels que `ECID` ou `email`.</li><li>`labels` : *facultatif* tableau de libellés de contrôle d’accès pour le champ. Vous trouverez plus d’informations sur les libellés de contrôle d’accès disponibles dans le [glossaire des libellés d’utilisation des données](/help/data-governance/labels/reference.md). </li></ul> |
 | `sourceSpec` | Objet | Objet contenant les informations sur l’emplacement de l’audience externe. Lors de l’utilisation de cet objet, vous **devez** inclure les informations suivantes : <ul><li>`path` : **Obligatoire** : emplacement de l’audience externe ou du dossier contenant l’audience externe dans la source. Le chemin d’accès au fichier **ne peut pas** contenir d’espaces. Par exemple, si votre chemin d’accès est `activation/sample-source/Example CSV File.csv`, définissez-le sur `activation/sample-source/ExampleCSVFile.csv`. Le chemin d’accès à votre source se trouve dans la colonne **Données Source** de la section des flux de données.</li><li>`type`: **Obligatoire** type de l’objet que vous récupérez à partir de la source. Cette valeur peut être `file` ou `folder`.</li><li>`sourceType` : *facultatif* type de source à partir de laquelle vous effectuez une récupération. Actuellement, la seule valeur prise en charge est `Cloud Storage`.</li><li>`cloudType` : **obligatoire** type d’espace de stockage dans le cloud, basé sur le type de source. Les valeurs prises en charge sont `S3`, `DLZ`, `GCS`, `Azure` et `SFTP`.</li><li>`baseConnectionId` : identifiant de la connexion de base. Il est fourni par votre fournisseur source. Cette valeur est **obligatoire** si vous utilisez une valeur `cloudType` de `S3`, `GCS` ou `SFTP`. Dans le cas contraire **vous n’avez** besoin d’inclure ce paramètre. Pour plus d’informations, consultez la [présentation des connecteurs source](../../sources/home.md).</li></ul> |
-| `ttlInDays` | Nombre entier | Expiration des données de l’audience externe, en jours. Cette valeur peut être définie de 1 à 90. Par défaut, l’expiration des données est définie sur 30 jours. |
+| `ttlInDays` | Entier | Expiration des données de l’audience externe, en jours. Cette valeur peut être définie de 1 à 90. Par défaut, l’expiration des données est définie sur 30 jours. |
 | `audienceType` | Chaîne | Type d’audience pour l’audience externe. Actuellement, seul `people` est pris en charge. |
 | `originName` | Chaîne | **Obligatoire** Origine de l’audience. Cette information indique d’où vient l’audience. Pour les audiences externes, vous devez utiliser `CUSTOM_UPLOAD`. |
 | `namespace` | Chaîne | Espace de noms de l’audience. Par défaut, cette valeur est définie sur `CustomerAudienceUpload`. |
@@ -164,7 +174,7 @@ Une réponse réussie renvoie le statut HTTP 202 avec les détails de votre audi
 | `description` | Chaîne | Description de l’audience externe. |
 | `fields` | Tableau d’objets | La liste des champs et leurs types de données. Ce tableau détermine les champs dont vous avez besoin dans votre audience externe. |
 | `sourceSpec` | Objet | Objet contenant les informations sur l’emplacement de l’audience externe. |
-| `ttlInDays` | Nombre entier | Expiration des données de l’audience externe, en jours. Cette valeur peut être définie de 1 à 90. Par défaut, l’expiration des données est définie sur 30 jours. |
+| `ttlInDays` | Entier | Expiration des données de l’audience externe, en jours. Cette valeur peut être définie de 1 à 90. Par défaut, l’expiration des données est définie sur 30 jours. |
 | `audienceType` | Chaîne | Type d’audience pour l’audience externe. |
 | `originName` | Chaîne | **Obligatoire** Origine de l’audience. Indique d’où provient l’audience. |
 | `namespace` | Chaîne | Espace de noms de l’audience. |
@@ -317,7 +327,7 @@ De plus, vous pouvez mettre à jour les paramètres suivants :
 | -------- | ---- | ----------- |
 | `labels` | Tableau | Un tableau contenant la liste mise à jour des libellés d’accès pour l’audience. Vous trouverez plus d’informations sur les libellés de contrôle d’accès disponibles dans le [glossaire des libellés d’utilisation des données](/help/data-governance/labels/reference.md). |
 | `fields` | Tableau d’objets | Tableau contenant les champs et leurs libellés associés pour l’audience externe. Seuls les champs répertoriés dans la demande PATCH seront mis à jour. Vous trouverez plus d’informations sur les libellés de contrôle d’accès disponibles dans le [glossaire des libellés d’utilisation des données](/help/data-governance/labels/reference.md). |
-| `ttlInDays` | Nombre entier | Expiration des données de l’audience externe, en jours. Cette valeur peut être définie de 1 à 90. |
+| `ttlInDays` | Entier | Expiration des données de l’audience externe, en jours. Cette valeur peut être définie de 1 à 90. |
 
 +++
 
