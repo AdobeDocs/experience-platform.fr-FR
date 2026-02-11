@@ -79,7 +79,7 @@ La collecte de données Adobe Experience Platform fournit un ensemble de technol
 
 {style="table-layout:auto"}
 
-Pour plus d’informations, consultez la [documentation sur la collecte de données](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
+Pour plus d’informations, consultez la [documentation sur la collecte de données](https://experienceleague.adobe.com/fr/docs/experience-platform/collection/home).
 
 ## Destinations {#destinations}
 
