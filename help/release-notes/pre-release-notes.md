@@ -1,11 +1,11 @@
 ---
 title: Notes de mise à jour préliminaires d’Experience Platform
 description: Aperçu des dernières notes de mise à jour de Adobe Experience Platform.
-exl-id: a1b52e9f-1c4d-4a2b-9d3e-5f6a7b8c9d0e
-source-git-commit: 3a45b3aadb08af98d6d379ecfc858474ea1e55db
+exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
+source-git-commit: 695b8486211c2fee03bc29243d65d5bbf6d561db
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 32%
+source-wordcount: '1050'
+ht-degree: 33%
 
 ---
 
@@ -79,7 +79,7 @@ La collecte de données Adobe Experience Platform fournit un ensemble de technol
 
 {style="table-layout:auto"}
 
-Pour plus d’informations, consultez la [documentation sur la collecte de données](https://experienceleague.adobe.com/fr/docs/experience-platform/collection/home).
+Pour plus d’informations, consultez la [documentation sur la collecte de données](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
 
 ## Destinations {#destinations}
 
@@ -107,7 +107,7 @@ XDM est une spécification Open Source qui fournit des structures et des défin
 | ------- | ----------- |
 | Schéma Organisation et recherche d&#39;inventaire | La page de navigation des schémas comprend désormais une recherche et un filtrage améliorés, des actions intégrées et la prise en charge des balises et des dossiers définis par l’utilisateur. Ces mises à jour facilitent la recherche, l’organisation et la gestion des schémas sur les sandbox tout en réduisant la navigation manuelle et les efforts de maintenance. |
 
-Pour plus d’informations, consultez la [présentation [!DNL Schemas]] (../xdm/home.md).
+Pour plus d’informations, consultez la [[!DNL XDM] vue d’ensemble](../xdm/home.md).
 
 ## Service de requête {#query-service}
 
