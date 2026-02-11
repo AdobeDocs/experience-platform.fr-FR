@@ -2,10 +2,10 @@
 title: Notes de mise à jour préliminaires d’Experience Platform
 description: Aperçu des dernières notes de mise à jour de Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 695b8486211c2fee03bc29243d65d5bbf6d561db
+source-git-commit: b8c257ad9ab4e7ee085687f6c03cf55d7fb83ef0
 workflow-type: tm+mt
-source-wordcount: '1050'
-ht-degree: 33%
+source-wordcount: '1022'
+ht-degree: 34%
 
 ---
 
@@ -79,7 +79,7 @@ La collecte de données Adobe Experience Platform fournit un ensemble de technol
 
 {style="table-layout:auto"}
 
-Pour plus d’informations, consultez la [documentation sur la collecte de données](https://experienceleague.adobe.com/fr/docs/experience-platform/collection/home).
+Pour plus d’informations, consultez la [documentation sur la collecte de données](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
 
 ## Destinations {#destinations}
 
@@ -89,7 +89,6 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | --- | --- |
-| Destination du compte [!DNL ZoomInfo] | Les utilisateurs et utilisatrices de la plateforme de données clients B2B peuvent désormais activer les données au niveau du compte pour les [!DNL ZoomInfo] via le nouveau connecteur de destination du compte [!DNL ZoomInfo]. Configurez le connecteur pour commencer à envoyer les audiences de votre compte à [!DNL ZoomInfo]. |
 | [!DNL Snowflake] lot généralement disponible | La destination [!DNL Snowflake] par lots a été déplacée vers la disponibilité générale. Vous pouvez désormais afficher la colonne ID de la politique de fusion dans vos données exportées avec les colonnes existantes telles que la date et l’heure, les attributs de mappage et l’appartenance à l’audience. |
 | Prise en charge du chiffrement AES256 pour les destinations [Amazon S3](../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) | Vous pouvez désormais configurer le chiffrement AES256 pour vos exportations Amazon S3. Choisissez parmi deux options : <ul><li>**[!UICONTROL Default]** : Experience Platform chiffre les données au repos avec l’algorithme de chiffrement par défaut défini sur votre compartiment.</li><li>**[!UICONTROL SSE-S3/AES256]** : Experience Platform ajoute l’en-tête `s3:x-amz-server-side-encryption": "AES256` à l’exportation et chiffre les données au repos avec l’algorithme AES256 lorsqu’elles arrivent dans S3. **Cette option est prioritaire sur tout algorithme de chiffrement par défaut que vous configurez sur votre compartiment S3**.</li></ul> |
 
