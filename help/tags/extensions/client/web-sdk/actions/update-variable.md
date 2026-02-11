@@ -1,7 +1,8 @@
 ---
 title: Mettre à jour la variable
 description: Modifie le contenu d’un élément de données variable.
-source-git-commit: f87e6a0e969aa0924656cdb2ea56aa79d2d7c841
+exl-id: 6c558d1e-85b4-45f9-ba4d-5fed1ec6e308
+source-git-commit: 50881ef9498196f2de5519f050800334019a2586
 workflow-type: tm+mt
 source-wordcount: '263'
 ht-degree: 0%
@@ -20,6 +21,6 @@ Le schéma XDM utilisé dans l’éditeur correspond au schéma sélectionné da
 
 ![Capture d’écran de l’interface de configuration des actions présentant une propriété mise à jour](../assets/update-variable-set-property.png)
 
-Si vous sélectionnez un élément de données variable qui utilise un objet de données au lieu d’un objet XDM, les champs disponibles dépendent des produits sélectionnés lors de la configuration de l’élément de données. Par exemple, si vous créez un objet de données qui inclut Adobe Analytics, champs , la sélection de l’élément de données variable dans cette interface utilisateur fournit des champs que vous pouvez remplir spécifiques à Adobe Analytics.
+Si vous sélectionnez un élément de données variable qui utilise un objet de données au lieu d’un objet XDM, les champs disponibles dépendent des produits sélectionnés lors de la configuration de l’élément de données. Par exemple, si vous créez un objet de données qui inclut Adobe Analytics, champs , puis que vous sélectionnez l’élément de données variable dans cette interface utilisateur, vous obtiendrez les champs que vous pouvez remplir spécifiques à Adobe Analytics.
 
 ![Copie d’écran de l’interface de configuration des actions présentant un élément de données variable basé sur un objet de données](../assets/variable-data-element-data.png)

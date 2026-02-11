@@ -2,9 +2,9 @@
 title: clickCollectionEnabled
 description: Découvrez comment configurer Web SDK pour déterminer si les données relatives aux clics sur les liens sont automatiquement collectées.
 exl-id: e91b5bc6-8880-4884-87f9-60ec8787027e
-source-git-commit: 364b9adc406f732ea5ba450730397c4ce1bf03cf
+source-git-commit: 4d251ff7323e83ac5c47b5817f81e8fde64cb7d9
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,21 @@ Le SDK Web suit tous les clics sur les éléments `<a>` et `<area>` d’HTML s�
 1. Si le domaine cible du lien diffère du `window.location.hostname` actuel, `xdm.web.webInteraction.type` est défini sur `"exit"` (si `clickCollection.exitLinkEnabled` est activé).
 1. Si le lien ne répond aux critères d’aucune des options `"download"` ou `"exit"`, `xdm.web.webInteraction.type` est défini sur `"other"`.
 
-Dans tous les cas, `xdm.web.webInteraction.name` est défini sur le libellé du texte du lien et `xdm.web.webInteraction.URL` sur l’URL de destination du lien. Si vous souhaitez également définir le nom du lien sur l’URL, vous pouvez remplacer ce champ XDM à l’aide du rappel `filterClickDetails` dans l’objet `clickCollection` .
+Dans tous les cas, `xdm.web.webInteraction.name` recherche la première valeur non vide dans l’ordre suivant dans l’élément sur lequel l’utilisateur a cliqué et ses descendants :
+
+1. `innerText` (revient à `textContent`)
+1. `nodeValue` concaténés à partir des nœuds de texte descendants pris en charge
+1. attribut `alt`
+1. attribut `title`
+1. attribut `<input value="...">`
+1. attribut `<img src="...">`
+1. attribut `aria-label`
+1. attribut `name`
+1. Chaîne vide
+
+Le champ `xdm.web.webInteraction.URL` est défini sur l’URL de destination du lien. Si vous souhaitez également définir le nom du lien sur l’URL, vous pouvez remplacer ce champ XDM à l’aide du rappel `filterClickDetails` dans l’objet `clickCollection` .
+
+## Mise en œuvre
 
 Définissez la valeur booléenne `clickCollectionEnabled` lors de l’exécution de la commande `configure`. Si vous omettez cette propriété lors de la configuration de Web SDK, elle est définie par défaut sur `true`. Définissez cette valeur sur `false` si vous préférez définir `xdm.web.webInteraction.type` et `xdm.web.webInteraction.value` manuellement.
 
@@ -45,7 +59,7 @@ alloy(configure, {
 
 Web SDK prend en charge le suivi automatique des clics pour les liens à l’intérieur des éléments **Shadow DOM** ouverts.
 
-De nombreux sites web modernes utilisent des [composants web](https://developer.mozilla.org/en-US/docs/Web/Web_Components) pour créer des éléments d’interface utilisateur réutilisables et encapsulés. Ces composants utilisent souvent une technologie appelée [**Shadow DOM**](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM) pour séparer leur structure interne et leurs styles du reste de la page.
+De nombreux sites web modernes utilisent des [composants web](https://developer.mozilla.org/fr/docs/Web/Web_Components) pour créer des éléments d’interface utilisateur réutilisables et encapsulés. Ces composants utilisent souvent une technologie appelée [**Shadow DOM**](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM) pour séparer leur structure interne et leurs styles du reste de la page.
 
 Il existe deux types de Shadow DOM :
 

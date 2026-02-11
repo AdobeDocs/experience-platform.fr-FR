@@ -3,10 +3,10 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '2584'
-ht-degree: 63%
+source-wordcount: '2673'
+ht-degree: 61%
 
 ---
 
@@ -15,6 +15,22 @@ ht-degree: 63%
 
 Ce document présente les notes de mise à jour du SDK web d’Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Version 2.31.0 - mardi 9 février 2026
+
+**Nouvelles fonctionnalités**
+
+- Ajout de la disponibilité de `"oneTimeAnalyticsReferrer"` au tableau de chaînes [`context`](commands/configure/context.md).
+- Ajout du composant Brand Concierge .
+- Ajout de `meta.queueTimeMillis` à la requête réseau pour enregistrer le temps entre la création de l’événement et l’heure d’envoi.
+- Possibilité de conserver le mappage d’identités afin qu’il puisse être renseigné avec les appels suivants.
+
+**Correctifs et améliorations**
+
+- Les attributs `aria-label` et `name` sont désormais pris en compte dans [collecte automatique de liens](commands/configure/clickcollectionenabled.md).
+- Correction d’une condition de concurrence possible avec les intégrations de mappages d’identités.
+- Correction d’un problème en raison duquel la date et l’heure n’étaient pas incluses dans `streamingMedia`.
+- Correction d’un problème en raison duquel les actions de code personnalisé n’étaient exécutées qu’une seule fois.
 
 ## Version 2.30.0 - jeudi 24 septembre 2025
 

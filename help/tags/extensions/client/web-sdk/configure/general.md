@@ -1,9 +1,10 @@
 ---
 title: Paramètres de configuration des instances SDK
 description: Configurez les paramètres généraux de l’instance Web SDK.
-source-git-commit: 09799847c61d82ed5b7cd372d92aa436697d54f3
+exl-id: cc22b8b3-88c6-4030-91b4-60e14a3b0f42
+source-git-commit: 50881ef9498196f2de5519f050800334019a2586
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '261'
 ht-degree: 3%
 
 ---
@@ -32,4 +33,6 @@ L’identifiant de l’organisation à laquelle vous souhaitez que les données 
 
 ## [!UICONTROL Edge domain]
 
-Domaine vers lequel/à partir duquel l’extension envoie et reçoit des données. Tandis que la valeur par défaut de `edge.adobedc.net` fonctionne, Adobe recommande d’utiliser un domaine propriétaire dans la plupart des cas. Consultez le [programme de certificat géré par Adobe](https://experienceleague.adobe.com/fr/docs/core-services/interface/data-collection/adobe-managed-cert) pour obtenir des instructions sur la configuration d’un domaine propriétaire adapté à la collecte de données. Voir aussi [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md) dans la documentation de la bibliothèque JavaScript pour obtenir des conseils sur la définition de cette valeur.
+Domaine vers lequel/à partir duquel l’extension envoie et reçoit des données. Par défaut, le champ contient `<COMPANYID>.data.adobedc.net`. Les implémentations plus anciennes peuvent contenir une valeur par défaut de `edge.adobedc.net`, qui est également valide.
+
+Adobe recommande dans la plupart des cas d’utiliser un domaine propriétaire. Consultez le [programme de certificat géré par Adobe](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) pour obtenir des instructions sur la configuration d’un domaine propriétaire adapté à la collecte de données. Voir aussi [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md) dans la documentation de la bibliothèque JavaScript pour obtenir des conseils sur la définition de cette valeur.

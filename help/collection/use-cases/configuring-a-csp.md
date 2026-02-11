@@ -5,16 +5,16 @@ description: Découvrez comment configurer une CSP pour Experience Platform Web 
 seo-description: Learn how to configure a CSP for the Experience Platform Web SDK
 keywords: configuration;configuration;SDK;edge;Web SDK;configurer;contexte;web;appareil;environnement;paramètres du sdk web;politique de sécurité du contenu;
 exl-id: 661d0001-9e10-479e-84c1-80e58f0e9c0b
-source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
+source-git-commit: 010192e91185c11d5454d4153913c06b90fe2122
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '341'
 ht-degree: 0%
 
 ---
 
 # Configuration d’un fichier CSP
 
-Une [&#x200B; Politique de sécurité du contenu &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) est utilisée pour restreindre les ressources qu’un navigateur est autorisé à utiliser. La CSP peut également limiter les fonctionnalités des ressources de script et de style. Adobe Experience Platform Web SDK ne nécessite pas de CSP, mais l’ajout d’un CSP peut réduire la surface d’attaque pour vous protéger contre les attaques malveillantes.
+Une [ Politique de sécurité du contenu ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) est utilisée pour restreindre les ressources qu’un navigateur est autorisé à utiliser. La CSP peut également limiter les fonctionnalités des ressources de script et de style. Adobe Experience Platform Web SDK ne nécessite pas de CSP, mais l’ajout d’un CSP peut réduire la surface d’attaque pour vous protéger contre les attaques malveillantes.
 
 La CSP doit refléter la manière dont [!DNL Experience Platform Web SDK] est déployé et configuré. La CSP suivante indique les modifications qui peuvent être nécessaires au bon fonctionnement du SDK. D’autres paramètres de CSP seront probablement requis en fonction de votre environnement spécifique.
 
@@ -39,7 +39,7 @@ Dans l’exemple ci-dessus, `EDGE-DOMAIN` doit être remplacé par le domaine pr
 default-src 'nonce-SERVER-GENERATED-NONCE'
 ```
 
-En outre, la valeur à usage unique de la CSP doit être ajoutée en tant qu’attribut à la balise de script [!DNL Experience Platform Web SDK] [code de base](../js/install/library.md). [!DNL Experience Platform Web SDK] utilisera ensuite cette valeur à usage unique lors de l’ajout de balises de script ou de style intégrées à la page :
+En outre, la valeur à usage unique de la CSP doit être ajoutée en tant qu’attribut au SDK Web [code de base](../js/install/base-code.md). Web SDK utilise ensuite cette valeur à usage unique lors de l’ajout de balises de style ou de script intégré à la page :
 
 ```html
 <script nonce="SERVER-GENERATED-NONCE">

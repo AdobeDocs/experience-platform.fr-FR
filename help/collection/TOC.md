@@ -6,9 +6,9 @@ breadcrumb-title: Collecte de données
 user-guide-description: Découvrez comment envoyer des données à Adobe Experience Platform.
 feature: Data Collection
 role: Developer
-source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '142'
 ht-degree: 38%
 
 ---
@@ -25,6 +25,7 @@ ht-degree: 38%
    + [Notes de mise à jour](js/release-notes.md)
    + Installation {#install}
       + [Présentation de l’installation](js/install/overview.md)
+      + [Code de base](js/install/base-code.md)
       + [Bibliothèque](js/install/library.md)
       + [NPM](js/install/npm.md)
       + [Version personnalisée](js/install/create-custom-build.md)
@@ -38,6 +39,7 @@ ht-degree: 38%
          + [clickCollection](js/commands/configure/clickcollection.md)
          + [clickCollectionEnabled](js/commands/configure/clickcollectionenabled.md)
          + [contexte](js/commands/configure/context.md)
+         + [conversation](js/commands/configure/conversation.md)
          + [datastreamId](js/commands/configure/datastreamid.md)
          + [debugEnabled](js/commands/configure/debugenabled.md)
          + [defaultConsent](js/commands/configure/defaultconsent.md)
@@ -88,7 +90,7 @@ ht-degree: 38%
    + [_moniteurs](tags/monitors.md)
    + [setDebug](tags/setdebug.md)
    + [setVar](tags/setvar.md)
-   + [track](tags/track.md)
+   + [suivre](tags/track.md)
 + Cas d’utilisation {#use-cases}
    + [Vue d’ensemble](use-cases/overview.md)
    + [Client hints](use-cases/client-hints.md)
@@ -98,7 +100,7 @@ ht-degree: 38%
    + [Débogage](use-cases/debugging.md)
    + [Déduplication des événements](use-cases/event-duplication.md)
    + Identité {#identity}
-      + [Aperçu](use-cases/identity/id-overview.md)
+      + [Vue d’ensemble](use-cases/identity/id-overview.md)
       + [Identifiants d’appareils propriétaires](use-cases/identity/first-party-device-ids.md)
       + [Partage d’identifiants](use-cases/identity/id-sharing.md)
    + [Plusieurs instances SDK](use-cases/multiple-instances.md)

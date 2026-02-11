@@ -1,9 +1,10 @@
 ---
 title: Paramètres de configuration de la collecte de données
 description: Configurez les paramètres de collecte de données dans l’extension de balise Web SDK.
-source-git-commit: 46c8748e9ab972705b8283c174c285e571acb2ed
+exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
+source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '702'
 ht-degree: 1%
 
 ---
@@ -119,3 +120,4 @@ Collectez automatiquement les informations sur les visiteurs, qui renseignent de
 * **[!UICONTROL Environment]** : collecte des informations sur le navigateur de l’utilisateur.
 * **[!UICONTROL Place context]** : collecte des informations sur l’emplacement de l’utilisateur.
 * **[!UICONTROL High entropy user-agent hints]** : collecte des informations plus détaillées sur l’appareil de l’utilisateur.
+* **[!UICONTROL Send referrer to Adobe Analytics only once per page view]** : empêcher l’envoi de données de référent en double à Adobe Analytics.

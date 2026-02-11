@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 0b3f4ec51cac182b637c79b9fcb883e5f8f78d02
+source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
 workflow-type: tm+mt
-source-wordcount: '2949'
-ht-degree: 95%
+source-wordcount: '3118'
+ht-degree: 90%
 
 ---
 
@@ -13,6 +13,29 @@ ht-degree: 95%
 # Notes de mise à jour de l’extension SDK Web
 
 Ce document contient les notes de mise à jour de l’extension de balises du SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, voir les [notes de mise à jour du SDK web d’Experience Platform](/help/collection/js/release-notes.md).
+
+## Version 2.34.0 - mardi 9 février 2026
+
+**Nouvelles fonctionnalités**
+
+- Contient [version 2.31.0](/help/collection/js/release-notes.md#2-31-0) du SDK Web Adobe Experience Platform.
+- Ajout de la mention [Prise en charge du code de base](/help/collection/js/install/base-code.md) pour l’extension de balise.
+- Ajout de **[!UICONTROL Send referrer to Adobe Analytics only once per page view]** [context](configure/data-collection.md#context-settings) aux paramètres de l’extension.
+- Ajout du composant Brand Concierge .
+- Ajout d’une option permettant d’utiliser une instance d’alliage auto-hébergée avec des balises.
+
+**Correctifs et améliorations**
+
+- Mise à jour de [domaine Edge par défaut](configure/general.md#edge-domain) pour inclure l’ID de société comme sous-domaine.
+- Ajout d’une option **[!UICONTROL No overrides]** à [ Remplacements de la configuration des trains de données ](configure/configuration-overrides.md).
+- Ajout du bouton d’actualisation pour renseigner à nouveau les éléments sur certains champs de saisie.
+- Les noms d’instance uniques sont désormais générés automatiquement chaque fois qu’une instance est créée.
+- Correction d’une erreur en raison de laquelle `combinedValidator` renvoyait une erreur lorsque la valeur était `undefined` ou `null`.
+- Correction d’une erreur qui s’affichait lorsqu’une instance était supprimée.
+- Correction d’un problème en raison duquel une erreur lors de la récupération des schémas rendait l’élément de données de l’objet XDM inutilisable.
+- Correction des paramètres d’enregistrement dans l’action [ Envoyer l’événement multimédia ](actions/send-media-event.md).
+- Correction d’un problème en raison duquel les champs de médias en flux continu dans la vue de configuration n’étaient pas restaurés correctement.
+- Correction des alertes de remplissage automatique erronées dans l’éditeur d’objets XDM pour les valeurs imbriquées.
 
 ## Version 2.33.0 - jeudi 24 septembre 2025
 
@@ -125,13 +148,13 @@ Contient la version 2.23.0 du SDK web d’Adobe Experience Platform.
 
 **Nouvelles fonctionnalités**
 
-- Ajout du point de contrôle de l’événement `triggered`.
+- Ajout du point de surveillance de l’événement `triggered`.
 - Les fonctionnalités [Événements guidés](actions/actions-overview.md), [Demander une personnalisation par défaut](configure/personalization.md), [S’abonner aux éléments de l’ensemble de règles](event-types.md#subscribe-ruleset-items), et [Évaluer les ensembles de règles](actions/evaluate-rulesets.md) sont désormais généralement disponibles.
 
 **Correctifs et améliorations**
 
 - Correction d’un problème où des éléments de données variables dupliqués pouvaient se remplacer les uns les autres.
-- En utilisant l’événement guidé [&#x200B; Demander la personnalisation par défaut](configure/personalization.md), les choix de personnalisation visuelle sont maintenant activés automatiquement.
+- En utilisant l’événement guidé [ Demander la personnalisation par défaut](configure/personalization.md), les choix de personnalisation visuelle sont maintenant activés automatiquement.
 
 Contient la version 2.22.0 du SDK web d’Adobe Experience Platform.
 

@@ -2,10 +2,10 @@
 title: contexte
 description: Collectez automatiquement les données relatives à l’appareil, à l’environnement ou à l’emplacement.
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
-source-git-commit: c2564f1b9ff036a49c9fa4b9e9ffbdbc598a07a8
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '821'
-ht-degree: 14%
+source-wordcount: '998'
+ht-degree: 12%
 
 ---
 
@@ -83,7 +83,7 @@ Le mot-clé `"highEntropyUserAgentHints"` collecte des informations détaillées
 
 Si vous utilisez les recherches d’appareil lors de la [configuration de votre flux de données](/help/datastreams/configure.md), les données peuvent être effacées au profit des valeurs de recherche d’appareil. Certains champs d’indications du client et champs de recherche de l’appareil ne peuvent pas exister dans le même accès.
 
-| Propriété | Description | En-tête HTTP | Chemin XDM | Exemple |
+| Propriété | Description | En-tête HTTP | Chemin XDM | Exemple |
 | --- | --- | --- | --- | --- |
 | Version du système d’exploitation | Version du système d’exploitation. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` |
 | Architecture | Architecture CPU sous-jacente. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` |
@@ -93,19 +93,30 @@ Si vous utilisez les recherches d’appareil lors de la [configuration de votre 
 | Nom du navigateur | Le navigateur utilisé. L’indice à faible entropie `Sec-CH-UA` collecte également cet élément. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` |
 | Version du navigateur | Version significative du navigateur. L’indice à faible entropie `Sec-CH-UA` collecte également cet élément. La version exacte du navigateur n’est pas collectée automatiquement. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` |
 
-Voir [&#x200B; Indications du client de l’agent utilisateur](/help/collection/use-cases/client-hints.md) pour plus d’informations.
+Voir [ Indications du client de l’agent utilisateur](/help/collection/use-cases/client-hints.md) pour plus d’informations.
 
-Définissez le tableau `context` de chaînes lors de l’exécution de la commande `configure`. Si vous omettez cette propriété lors de la configuration du SDK, toutes les informations contextuelles, à l’exception de `"highEntropyUserAgentHints"`, sont collectées par défaut. Définissez cette propriété si vous souhaitez collecter des indications du client à entropie élevée ou si vous souhaitez omettre d’autres informations contextuelles de la collecte de données. Les chaînes peuvent être incluses dans n’importe quel ordre.
+### Référent unique pour Analytics {#one-time-analytics-referrer}
 
->[!NOTE]
+Le mot-clé `"oneTimeAnalyticsReferrer"` envoie une valeur de référent à Adobe Analytics uniquement lors du premier appel de `sendEvent` non décisionnelle pour une page. Le principal cas d’utilisation de ce mot-clé de contexte consiste à empêcher le gonflement de la dimension [Référent](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer) dans Adobe Analytics par les accès principalement utilisés dans les intégrations Analytics et Target.
+
+Si une commande de `sendEvent` donnée utilise un type d’événement de prise de décision (`decisioning.propositionFetch`, `decisioning.propositionDisplay`, `decisioning.propositionInteract`), elle est ignorée lors du calcul de la première `sendEvent` d’une page. Si la valeur du référent change sur la page et qu’une autre `sendEvent` est déclenchée, la nouvelle valeur du référent est incluse dans la payload. Cette condition permet d’utiliser la fonction avec des applications monopages.
+
+Lorsqu’une valeur de référent en double est détectée, la bibliothèque définit `data.__adobe.analytics.referrer` sur une chaîne vide (`""`).
+La définition de ce champ d’objet de données sur une chaîne vide efface efficacement la valeur lorsqu’un accès arrive à Adobe Analytics, car l’objet de données remplace tout champ équivalent de l’objet XDM. Cela n’a aucun impact sur l’objet XDM, ce qui permet à ces données de continuer à être envoyées à un jeu de données Experience Platform si vous incluez plusieurs services dans un flux de données.
+
+## Mise en œuvre
+
+Définissez le tableau `context` de chaînes lors de l’exécution de la commande `configure`. Si vous omettez cette propriété lors de la configuration du SDK, toutes les informations contextuelles, à l’exception de `"highEntropyUserAgentHints"` et `"oneTimeAnalyticsReferrer"`, sont collectées par défaut. Définissez cette propriété si vous souhaitez collecter des indications du client à entropie élevée ou si vous souhaitez omettre d’autres informations contextuelles de la collecte de données. Les chaînes peuvent être incluses dans n’importe quel ordre.
+
+>[!TIP]
 >
->Si vous souhaitez collecter toutes les informations contextuelles, y compris les indications du client à entropie élevée, vous devez inclure chaque valeur dans la chaîne du tableau `context`. La valeur de `context` par défaut omet les `highEntropyUserAgentHints`, et si vous définissez la propriété `context` , les valeurs omises ne collectent pas de données.
+>Si vous souhaitez collecter toutes les informations contextuelles, y compris les indications du client à entropie élevée, vous devez inclure chaque valeur dans la chaîne du tableau `context`. La valeur de `context` par défaut omet `"highEntropyUserAgentHints"` et `"oneTimeAnalyticsReferrer"` ; si vous définissez la propriété `context` , les valeurs omises ne collectent pas de données.
 
 ```js
 alloy("configure", {
   datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"]
+  context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints", "oneTimeAnalyticsReferrer"]
 });
 ```
 
