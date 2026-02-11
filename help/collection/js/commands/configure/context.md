@@ -97,7 +97,7 @@ Voir [&#x200B; Indications du client de l’agent utilisateur](/help/collection/
 
 ### Référent unique pour Analytics {#one-time-analytics-referrer}
 
-Le mot-clé `"oneTimeAnalyticsReferrer"` envoie une valeur de référent à Adobe Analytics uniquement lors du premier appel de `sendEvent` non décisionnelle pour une page. Le principal cas d’utilisation de ce mot-clé de contexte consiste à empêcher le gonflement de la dimension [Référent](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer) dans Adobe Analytics par les accès principalement utilisés dans les intégrations Analytics et Target.
+Le mot-clé `"oneTimeAnalyticsReferrer"` envoie une valeur de référent à Adobe Analytics uniquement lors du premier appel de `sendEvent` non décisionnelle pour une page. Le principal cas d’utilisation de ce mot-clé de contexte consiste à empêcher le gonflement de la dimension [Référent](https://experienceleague.adobe.com/fr/docs/analytics/components/dimensions/referrer) dans Adobe Analytics par les accès principalement utilisés dans les intégrations Analytics et Target.
 
 Si une commande de `sendEvent` donnée utilise un type d’événement de prise de décision (`decisioning.propositionFetch`, `decisioning.propositionDisplay`, `decisioning.propositionInteract`), elle est ignorée lors du calcul de la première `sendEvent` d’une page. Si la valeur du référent change sur la page et qu’une autre `sendEvent` est déclenchée, la nouvelle valeur du référent est incluse dans la payload. Cette condition permet d’utiliser la fonction avec des applications monopages.
 
