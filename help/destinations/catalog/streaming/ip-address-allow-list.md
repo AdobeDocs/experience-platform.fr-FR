@@ -2,12 +2,12 @@
 keywords: Adresses IP, plage d’adresses IP, destinations de liste autorisée placer sur la liste autorisée place sur la liste autorisée,,
 title: Liste autorisée d’adresses IP pour les destinations en flux continu
 type: Documentation
-description: Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre liste autorisée de données pour exporter en toute sécurité des données d’Experience Platform vers votre point d’entrée de l’API HTTP REST, Amazon Kinesis ou votre instance Azure Event Hubs.
+description: Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre liste autorisée de données pour exporter en toute sécurité des données d’Experience Platform vers votre point d’entrée de l’API HTTP REST ou votre instance Amazon Kinesis.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 851565b4c40452d102eff134533c9d44ea19ca76
+source-git-commit: 6d59d0555dda124acfd16483e11c2899ff5c846e
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 4%
+source-wordcount: '425'
+ht-degree: 5%
 
 ---
 
@@ -22,9 +22,14 @@ ht-degree: 4%
 
 Les plages d’adresses IP documentées sur cette page s’appliquent aux destinations suivantes :
 
-* [Destinations d’entreprise avancées](../../destination-types.md#advanced-enterprise-destinations) : [destination d’API HTTP](./http-destination.md), [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [Destinations d’entreprise avancées](../../destination-types.md#advanced-enterprise-destinations) : [destination d’API HTTP](./http-destination.md) et [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
 * [Destinations d’exportation d’audiences en flux continu](../../destination-types.md#streaming-destinations) telles que [Audience en temps réel Pega CDH](/help/destinations/catalog/personalization/pega-v2.md), intégrations basées sur les API avec [Salesforce Marketing Cloud](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) et [Oracle Eloqua](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)
-* Destinations publiques ou privées créées via [Destination SDK](../../destination-sdk/getting-started.md)
+* Destinations publiques ou privées créées via [Destination SDK](../../destination-sdk/getting-started.md)
+
+>[!IMPORTANT]
+>
+>Les plages d’adresses IP documentées sur cette page ne sont *pas* prises en charge pour les destinations [!DNL Azure Event Hubs] et les destinations basées sur les API de streaming hébergées sur Microsoft Azure.
+
 
 Le trafic sortant d’Experience Platform vers ces destinations passe toujours par les adresses IP répertoriées sur cette page.
 
@@ -36,7 +41,7 @@ Vous pouvez définir des contrôles d’accès réseau via votre pare-feu résea
 
 Si votre politique d’organisation exige que vous ajoutiez des adresses IP pour le trafic entrant, vous devez ajouter les plages d’adresses IP des catégories suivantes à votre placer sur la liste autorisée place sur la liste autorisée avant d’utiliser les destinations mentionnées ci-dessus sur cette page :
 
-1. Toutes les [&#x200B; adresses IP globales &#x200B;](#global)
+1. Toutes les [ adresses IP globales ](#global)
 2. Outre les adresses IP globales, ajoutez les adresses IP correspondant à la région dans laquelle vous avez reçu les privilèges d’accès, à partir de la liste située plus bas sur la page. Si vous n’ajoutez pas votre plage d’adresses IP spécifique à une région à votre place sur la liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de ces destinations de diffusion en streaming.
 
 ## Adresses IP globales {#global}
