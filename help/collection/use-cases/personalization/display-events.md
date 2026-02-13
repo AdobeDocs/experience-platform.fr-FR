@@ -40,7 +40,7 @@ alloy("sendEvent", {
 
 ## Envoi d’événements d’affichage dans les appels de `sendEvent` suivants
 
-L’inclusion d’événements d’affichage dans un appel de `sendEvent` ultérieur est utile lorsque vous souhaitez joindre des données de chargement de page supplémentaires qui ne sont pas disponibles lors de la demande de personnalisation. Elle est généralement utilisée lors de l’implémentation d’[événements de page supérieure et inférieure](/help/collection/use-cases/personalization/top-bottom-page-events.md). Cette implémentation correcte des événements d’affichage permet d’éviter les problèmes liés au [Taux de rebond](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/bounce-rate) dans Adobe Analytics.
+L’inclusion d’événements d’affichage dans un appel de `sendEvent` ultérieur est utile lorsque vous souhaitez joindre des données de chargement de page supplémentaires qui ne sont pas disponibles lors de la demande de personnalisation. Elle est généralement utilisée lors de l’implémentation d’[événements de page supérieure et inférieure](/help/collection/use-cases/personalization/top-bottom-page-events.md). Cette implémentation correcte des événements d’affichage permet d’éviter les problèmes liés au [Taux de rebond](https://experienceleague.adobe.com/fr/docs/analytics/components/metrics/bounce-rate) dans Adobe Analytics.
 
 1. Lors de l’appel `sendEvent` initial (souvent en haut de la page), demandez et effectuez le rendu du contenu, mais supprimez les événements d’affichage automatique en définissant `renderDecisions` sur `true` et `personalization.sendDisplayEvent` sur `false` :
 
