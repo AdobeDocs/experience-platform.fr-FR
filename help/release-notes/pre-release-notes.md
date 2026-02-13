@@ -2,10 +2,10 @@
 title: Notes de mise à jour préliminaires d’Experience Platform
 description: Aperçu des dernières notes de mise à jour de Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: b8c257ad9ab4e7ee085687f6c03cf55d7fb83ef0
+source-git-commit: eceafa1852fc7c17660263d6ef7878a3e7bd0841
 workflow-type: tm+mt
-source-wordcount: '1022'
-ht-degree: 34%
+source-wordcount: '1086'
+ht-degree: 32%
 
 ---
 
@@ -79,7 +79,7 @@ La collecte de données Adobe Experience Platform fournit un ensemble de technol
 
 {style="table-layout:auto"}
 
-Pour plus d’informations, consultez la [documentation sur la collecte de données](https://experienceleague.adobe.com/fr/docs/experience-platform/collection/home).
+Pour plus d’informations, consultez la [documentation sur la collecte de données](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
 
 ## Destinations {#destinations}
 
@@ -105,6 +105,7 @@ XDM est une spécification Open Source qui fournit des structures et des défin
 | Fonctionnalité | Description |
 | ------- | ----------- |
 | Schéma Organisation et recherche d&#39;inventaire | La page de navigation des schémas comprend désormais une recherche et un filtrage améliorés, des actions intégrées et la prise en charge des balises et des dossiers définis par l’utilisateur. Ces mises à jour facilitent la recherche, l’organisation et la gestion des schémas sur les sandbox tout en réduisant la navigation manuelle et les efforts de maintenance. |
+| Modification restreinte des schémas avec des jeux de données | Les opérations de modification qui entraînent des modifications avec rupture sont désormais limitées une fois qu’un jeu de données existe pour un schéma. Lorsqu’un jeu de données est associé, vous ne pouvez plus renommer ou supprimer des champs, modifier des types ou des formats de données de champ, modifier des descripteurs d’identité, gérer des champs associés pour supprimer des champs existants ou modifier la classe affectée. D’autres modifications et l’obsolescence des champs restent prises en charge. |
 
 Pour plus d’informations, consultez la [[!DNL XDM] vue d’ensemble](../xdm/home.md).
 
