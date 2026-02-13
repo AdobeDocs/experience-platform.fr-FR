@@ -2,14 +2,19 @@
 title: Paramètres de configuration de la collecte de données
 description: Configurez les paramètres de collecte de données dans l’extension de balise Web SDK.
 exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
-source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '719'
 ht-degree: 1%
 
 ---
 
-# Paramètres de configuration de la collecte de données
+# Paramètres de configuration de la collecte de données {#data-collection}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_datacollection"
+>title="Collecte de données"
+>abstract="Déterminez les données à collecter et la manière dont elles sont collectées dans l’extension de balises."
 
 Cette section de configuration vous permet de déterminer comment les données sont collectées dans l’extension.
 

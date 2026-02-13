@@ -1,14 +1,20 @@
 ---
 title: Paramètres de configuration des flux de données
 description: Configurez le flux de données pour envoyer des données à à l’aide de l’extension de balise Web SDK.
-source-git-commit: 46e5d007b27eaa67c9ee49e35a711424de383d68
+exl-id: 2d2504c6-b3f9-4e7b-aff4-a8d8d6c4e3dd
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '251'
 ht-degree: 1%
 
 ---
 
-# Paramètres de configuration des flux de données
+# Paramètres de configuration des flux de données {#datastreams}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_datastreams"
+>title="Flux de données"
+>abstract="Obligatoire. Définit le flux de données dans l’Edge Network auquel vous souhaitez envoyer des données."
 
 Cette section de configuration vous permet de déterminer à quel [flux de données](/help/datastreams/overview.md) vous souhaitez envoyer des données. **Un identifiant de flux de données est requis pour toutes les données envoyées à Edge Network.**
 

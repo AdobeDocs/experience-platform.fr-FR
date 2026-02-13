@@ -1,14 +1,15 @@
 ---
 title: Présentation des paramètres de configuration
 description: Découvrez les options disponibles lors de la configuration de l’extension de balise Web SDK.
-source-git-commit: 5f0203cfff3cb5c8b892142ff9b1c121925c3c46
+exl-id: 03f7bc0a-05c9-48ae-ae57-478db6d18f52
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 1%
 
 ---
 
-# Présentation des paramètres de configuration
+# Présentation des paramètres de configuration {#config-overview}
 
 L’extension de balise Adobe Experience Platform Web SDK propose plusieurs options que vous pouvez personnaliser. Ces paramètres de configuration sont l’équivalent de balise de l’utilisation de la commande [`configure`](/help/collection/js/commands/configure/overview.md) dans la bibliothèque JavaScript.
 

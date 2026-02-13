@@ -1,14 +1,20 @@
 ---
 title: Paramètres de configuration du consentement
 description: Configurez les paramètres de consentement et de confidentialité par défaut pour l’extension de balise.
-source-git-commit: 46e5d007b27eaa67c9ee49e35a711424de383d68
+exl-id: 93913a8b-0351-409d-b26a-8dc2ac0296c5
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '208'
 ht-degree: 1%
 
 ---
 
-# Paramètres de configuration du consentement
+# Paramètres de configuration du consentement {#consent}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_consent"
+>title="Consentement"
+>abstract="Sélectionne le niveau de consentement par défaut supposé si aucune autre préférence de consentement explicite n’est fournie."
 
 La section **[!UICONTROL Consent]** vous permet de sélectionner le niveau de consentement par défaut supposé si aucune autre préférence de consentement explicite n’est fournie. Le niveau de consentement par défaut n’est pas enregistré dans les profils utilisateur.
 

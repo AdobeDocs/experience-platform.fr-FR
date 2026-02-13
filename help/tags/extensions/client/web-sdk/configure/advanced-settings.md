@@ -1,14 +1,20 @@
 ---
 title: Paramètres de configuration avancés
 description: Configurez les paramètres avancés de l’extension de balise Web SDK.
-source-git-commit: d6aea91d6989775ff5b6038b216ed2518f4a7d98
+exl-id: d830a210-77ab-4823-b5fa-c1194a01bea3
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '136'
-ht-degree: 2%
+source-wordcount: '150'
+ht-degree: 3%
 
 ---
 
-# Paramètres de configuration avancés
+# Paramètres de configuration avancés {#advanced}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_advanced"
+>title="Paramètres avancés"
+>abstract="Paramètres de configuration avancés. Adobe recommande de conserver ces options en l’état pour la plupart des implémentations."
 
 Cette section de configuration vous permet de modifier les paramètres avancés. Adobe recommande de conserver ces options en l’état pour la plupart des implémentations.
 

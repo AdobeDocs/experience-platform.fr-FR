@@ -3,10 +3,10 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+source-git-commit: d61deb73493200bc10ada4745f725bb656f3e802
 workflow-type: tm+mt
-source-wordcount: '2673'
-ht-degree: 61%
+source-wordcount: '2725'
+ht-degree: 60%
 
 ---
 
@@ -15,6 +15,12 @@ ht-degree: 61%
 
 Ce document présente les notes de mise à jour du SDK web d’Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Version 2.31.1 - jeudi 11 février 2026
+
+- Correction d’un problème en raison duquel le SDK web se bloquait lorsqu’il y avait plusieurs paramètres de `s_kwcid` ou de `ef_id` liés à la publicité dans l’URL.
+- Correction d’un problème en raison duquel les données Advertising étaient envoyées et les cookies créés avant que le consentement ne soit donné.
+- Correction d’un problème dans Safari en raison duquel les flux Brand Concierge n’étaient pas analysés correctement.
 
 ## Version 2.31.0 - mardi 9 février 2026
 

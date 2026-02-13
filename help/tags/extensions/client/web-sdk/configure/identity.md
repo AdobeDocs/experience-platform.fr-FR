@@ -1,14 +1,20 @@
 ---
 title: Paramètres de configuration des identités
 description: Définissez la manière dont l’extension de balise identifie les visiteurs.
-source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
+exl-id: 12e707f4-c37b-4c02-bfec-5ef7b98c2d3b
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '290'
-ht-degree: 2%
+source-wordcount: '298'
+ht-degree: 3%
 
 ---
 
-# Paramètres de configuration des identités
+# Paramètres de configuration des identités {#identity}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_identity"
+>title="Identité"
+>abstract="Définissez la manière dont l’extension de balise identifie les visiteurs."
 
 Cette section de configuration vous permet de définir le comportement de Web SDK en ce qui concerne la gestion de l’identification des utilisateurs.
 

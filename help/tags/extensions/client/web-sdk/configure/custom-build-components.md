@@ -1,15 +1,20 @@
 ---
-title: Composants de build personnalisés
+title: Options de build
 description: Créez une version Web SDK personnalisée qui désactive les fonctionnalités pour réduire la taille de la version.
 exl-id: 853e0a6c-0953-4e08-9a7d-334aab022583
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '277'
 ht-degree: 1%
 
 ---
 
-# Composants de build personnalisés
+# Options de build {#build-options}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_buildoptions"
+>title="Options de build"
+>abstract="Incluez ou excluez de manière sélective des modules de la bibliothèque JavaScript, ce qui réduit la taille de la bibliothèque et améliore les performances."
 
 La bibliothèque Web SDK comprend plusieurs modules pour différentes fonctionnalités telles que la personnalisation, l’identité, le suivi des liens, etc. Selon vos cas d’utilisation, il se peut que vous n’ayez besoin que de fonctionnalités spécifiques au lieu de l’ensemble de la bibliothèque. La désactivation des composants de version vous permet d’utiliser uniquement les modules dont vous avez besoin, ce qui réduit la taille de la bibliothèque et améliore les performances.
 

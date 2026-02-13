@@ -1,14 +1,20 @@
 ---
 title: Paramètres de remplacement de la configuration du flux de données
 description: Modifier les paramètres de configuration lorsque certaines conditions sont remplies
-source-git-commit: 46e5d007b27eaa67c9ee49e35a711424de383d68
+exl-id: 68227148-3d74-4807-836c-14acd8a9c1dc
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '600'
 ht-degree: 3%
 
 ---
 
-# Paramètres de remplacement de la configuration du flux de données
+# Paramètres de remplacement de la configuration du flux de données {#config-overrides}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_overrides"
+>title="Remplacements de la configuration des trains de données"
+>abstract="Déclenchez de manière conditionnelle différents comportements de flux de données sans avoir besoin d’un flux de données distinct. La définition de toute configuration de train de données côté client remplace pour un environnement dans cette section remplace toute configuration de train de données dynamique côté serveur et les règles pour cet environnement."
 
 Les remplacements de flux de données vous permettent de définir des configurations supplémentaires pour vos flux de données, qui sont transmises à Edge Network via le SDK Web. Cette fonctionnalité vous permet de déclencher de manière conditionnelle différents comportements de flux de données sans créer de flux de données ni modifier vos paramètres existants.
 
