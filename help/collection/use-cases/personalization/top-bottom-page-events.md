@@ -2,9 +2,9 @@
 title: Configurer les événements haut et bas de page dans Web SDK
 description: Cet article explique comment utiliser les événements de haut et de bas de page dans Web SDK.
 exl-id: 43c6d53a-6bf9-45f8-b001-d148adaff829
-source-git-commit: db7e6df1b1a0eb19518d9c6ccd6e6bb9131d5a3e
+source-git-commit: e150fa51953edbb0e21de962e066deedaf8bd2d7
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '790'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ En utilisant les événements en haut et en bas de page dans Web SDK, l’équip
 
 ## Exemple d’événement en haut de page {#top-of-page}
 
-L’exemple de code ci-dessous illustre une configuration d’événement en haut de page qui demande une personnalisation, mais n’[&#x200B; pas d’événements d’affichage](../personalization/display-events.md#send-sendEvent-calls) pour les propositions générées automatiquement. Les [événements d’affichage](../personalization/display-events.md#send-sendEvent-calls) sont envoyés dans le cadre de l’événement du bas de page.
+L’exemple de code ci-dessous illustre une configuration d’événement en haut de page qui demande une personnalisation, mais n’[ pas d’événements d’affichage](../personalization/display-events.md#send-sendEvent-calls) pour les propositions générées automatiquement. Les [événements d’affichage](../personalization/display-events.md#send-sendEvent-calls) sont envoyés dans le cadre de l’événement du bas de page.
 
 >[!BEGINTABS]
 
@@ -117,7 +117,7 @@ alloy("sendEvent", {
 
 | Paramètre | Obligatoire / Facultatif | Description |
 |---|---|---|
-| `xdm._experience.decisioning.propositions` | Obligatoire | Cette section définit les propositions générées manuellement. Vous devez inclure les `ID` de proposition, les `scope` et les `scopeDetails`. Pour plus d’informations sur l’enregistrement des événements d’affichage pour le contenu rendu manuellement[&#x200B; consultez la documentation sur la &#x200B;](../personalization/rendering-personalization-content.md#manually)génération manuelle de la personnalisation. Le contenu de personnalisation généré manuellement doit être inclus au bas de l’accès à la page. |
+| `xdm._experience.decisioning.propositions` | Obligatoire | Cette section définit les propositions générées manuellement. Vous devez inclure les `ID` de proposition, les `scope` et les `scopeDetails`. Voir [Gérer les événements d’affichage](display-events.md) pour plus d’informations. Le contenu de personnalisation généré manuellement doit être inclus au bas de l’accès à la page. |
 | `xdm._experience.decisioning.propositionEventType` | Obligatoire | Définissez ce paramètre sur `display: 1`. |
 | `xdm` | Facultatif | Utilisez cette section pour inclure toutes les données dont vous avez besoin pour l’événement de bas de page. |
 

@@ -2,9 +2,9 @@
 title: applyPropositions
 description: Restituer des propositions qui ont déjà été rendues avec sendEvent.
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: db7e6df1b1a0eb19518d9c6ccd6e6bb9131d5a3e
+source-git-commit: e150fa51953edbb0e21de962e066deedaf8bd2d7
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,10 @@ Cette commande prend en charge les champs suivants :
    * Portée
    * Sélecteur
    * Type de l’action
+
+>[!NOTE]
+>
+>La commande `applyPropositions` n’envoie pas automatiquement d’événements d’affichage. Si vous souhaitez enregistrer les affichages, utilisez la commande `sendEvent` décrite dans la section [Gérer les événements d’affichage](/help/collection/use-cases/personalization/display-events.md).
 
 Exécutez la commande `applyPropositions` lors de l’appel de votre instance configurée de Web SDK. L’objet contenant les options de configuration prend en charge les champs suivants :
 

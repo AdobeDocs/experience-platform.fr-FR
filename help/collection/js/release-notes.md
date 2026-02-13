@@ -3,9 +3,9 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: d61deb73493200bc10ada4745f725bb656f3e802
+source-git-commit: 5ef0b97d6908753be738d7ad2dfd423d02f87c8d
 workflow-type: tm+mt
-source-wordcount: '2725'
+source-wordcount: '2718'
 ht-degree: 60%
 
 ---
@@ -293,7 +293,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 **Nouvelles fonctionnalités**
 
 - Vous pouvez désormais diffuser des expériences personnalisées plus précisément, en partageant les identifiants de visiteurs et visiteuses entre les applications mobiles et le contenu web mobile, ainsi qu’entre les domaines. Consultez la [documentation dédiée](../use-cases/identity/id-sharing.md) pour en savoir plus.
-- Vous pouvez désormais rendre ou exécuter un tableau de propositions à partir de [!DNL Adobe Target] dans des applications monopages, sans incrémenter les mesures d’analyse. Cela réduit les erreurs de création de rapports et augmente la précision des analyses. Consultez la [documentation dédiée](../use-cases/personalization/rendering-personalization-content.md) pour en savoir plus.
+- Vous pouvez désormais rendre ou exécuter un tableau de propositions à partir de [!DNL Adobe Target] dans des applications monopages, sans incrémenter les mesures d’analyse. Cela réduit les erreurs de création de rapports et augmente la précision des analyses.
 - Ajout d’informations supplémentaires à la commande `getLibraryInfo`, y compris les commandes disponibles et la configuration finale de l’instance.
 
 **Correctifs et améliorations**
