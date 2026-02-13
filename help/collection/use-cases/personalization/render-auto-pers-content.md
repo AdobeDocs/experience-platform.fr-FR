@@ -109,4 +109,4 @@ Voir [`applyPropositions`](/help/collection/js/commands/applypropositions.md) po
 
 >[!NOTE]
 >
->La commande `applyPropositions` n’envoie pas automatiquement d’événements d’affichage. Si vous devez enregistrer « display » pour des scénarios de nouveau rendu, reportez-vous à la section [ Gérer les événements d’affichage ](display-events.md).
+>La commande `applyPropositions` n’envoie pas automatiquement d’événements d’affichage. Si vous devez enregistrer « display » pour des scénarios de nouveau rendu, reportez-vous à la section [&#x200B; Gérer les événements d’affichage &#x200B;](display-events.md).

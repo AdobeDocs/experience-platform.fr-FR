@@ -33,7 +33,7 @@ En utilisant les événements en haut et en bas de page dans Web SDK, l’équip
 
 ## Exemple d’événement en haut de page {#top-of-page}
 
-L’exemple de code ci-dessous illustre une configuration d’événement en haut de page qui demande une personnalisation, mais n’[ pas d’événements d’affichage](../personalization/display-events.md#send-sendEvent-calls) pour les propositions générées automatiquement. Les [événements d’affichage](../personalization/display-events.md#send-sendEvent-calls) sont envoyés dans le cadre de l’événement du bas de page.
+L’exemple de code ci-dessous illustre une configuration d’événement en haut de page qui demande une personnalisation, mais n’[&#x200B; pas d’événements d’affichage](../personalization/display-events.md#send-sendEvent-calls) pour les propositions générées automatiquement. Les [événements d’affichage](../personalization/display-events.md#send-sendEvent-calls) sont envoyés dans le cadre de l’événement du bas de page.
 
 >[!BEGINTABS]
 
