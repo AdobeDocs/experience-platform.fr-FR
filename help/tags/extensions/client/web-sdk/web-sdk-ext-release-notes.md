@@ -17,7 +17,7 @@ Ce document contient les notes de mise à jour de l’extension de balises du SD
 ## Version 2.34.1 - jeudi 11 février 2026
 
 - Contient [version 2.31.1](/help/collection/js/release-notes.md) de Adobe Experience Platform Web SDK.
-- Correction d’un problème en raison duquel les paramètres de configuration d’Adobe Advertising [](configure/advertising.md) ne pouvaient pas être modifiés dans les actions [Envoyer l’événement](actions/send-event.md).
+- Correction d’un problème en raison duquel les paramètres de configuration d’Adobe Advertising [&#128279;](configure/advertising.md) ne pouvaient pas être modifiés dans les actions [Envoyer l’événement](actions/send-event.md).
 - Ajout d’une version de secours à `edge.adobedc.net` pour le paramètre de configuration [domaine Edge](configure/general.md) lorsqu’un `tenant-id` n’est pas disponible.
 
 ## Version 2.34.0 - mardi 9 février 2026
@@ -33,13 +33,13 @@ Ce document contient les notes de mise à jour de l’extension de balises du SD
 **Correctifs et améliorations**
 
 - Mise à jour de [domaine Edge par défaut](configure/general.md#edge-domain) pour inclure l’ID de société comme sous-domaine.
-- Ajout d’une option **[!UICONTROL No overrides]** à [ Remplacements de la configuration des trains de données ](configure/configuration-overrides.md).
+- Ajout d’une option **[!UICONTROL No overrides]** à [&#x200B; Remplacements de la configuration des trains de données &#x200B;](configure/configuration-overrides.md).
 - Ajout du bouton d’actualisation pour renseigner à nouveau les éléments sur certains champs de saisie.
 - Les noms d’instance uniques sont désormais générés automatiquement chaque fois qu’une instance est créée.
 - Correction d’une erreur en raison de laquelle `combinedValidator` renvoyait une erreur lorsque la valeur était `undefined` ou `null`.
 - Correction d’une erreur qui s’affichait lorsqu’une instance était supprimée.
 - Correction d’un problème en raison duquel une erreur lors de la récupération des schémas rendait l’élément de données de l’objet XDM inutilisable.
-- Correction des paramètres d’enregistrement dans l’action [ Envoyer l’événement multimédia ](actions/send-media-event.md).
+- Correction des paramètres d’enregistrement dans l’action [&#x200B; Envoyer l’événement multimédia &#x200B;](actions/send-media-event.md).
 - Correction d’un problème en raison duquel les champs de médias en flux continu dans la vue de configuration n’étaient pas restaurés correctement.
 - Correction des alertes de remplissage automatique erronées dans l’éditeur d’objets XDM pour les valeurs imbriquées.
 
@@ -160,7 +160,7 @@ Contient la version 2.23.0 du SDK web d’Adobe Experience Platform.
 **Correctifs et améliorations**
 
 - Correction d’un problème où des éléments de données variables dupliqués pouvaient se remplacer les uns les autres.
-- En utilisant l’événement guidé [ Demander la personnalisation par défaut](configure/personalization.md), les choix de personnalisation visuelle sont maintenant activés automatiquement.
+- En utilisant l’événement guidé [&#x200B; Demander la personnalisation par défaut](configure/personalization.md), les choix de personnalisation visuelle sont maintenant activés automatiquement.
 
 Contient la version 2.22.0 du SDK web d’Adobe Experience Platform.
 
