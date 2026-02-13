@@ -2,38 +2,38 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;ingestion de données;données ingérées;diffusion en continu;présentation;ingestion en flux continu;latence;latence en flux continu;
 solution: Experience Platform
 title: Vue d’ensemble de l’ingestion en flux continu
-description: L’ingestion par flux pour Adobe Experience Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données d’appareils côté client et côté serveur vers Experience Platform.
+description: Découvrez l’ingestion par flux dans Adobe Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: a77be4ef97540b929192fa6f367830f4a29e5af7
+source-git-commit: 568208c9b2cb774bbbeed74ae2d456c87e99bca9
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '431'
 ht-degree: 15%
 
 ---
 
 # Présentation de l’ingestion en flux continu
 
-L’ingestion par flux pour Adobe Experience Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données d’appareils côté client et côté serveur vers [!DNL Experience Platform].
+L’ingestion par flux pour Adobe Experience Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données d’appareils côté client et côté serveur vers Experience Platform.
 
 ## Que pouvez-vous faire avec l’ingestion en flux continu ?
 
-Adobe Experience Platform vous permet de générer des expériences coordonnées, cohérentes et pertinentes en générant une [!DNL Real-Time Customer Profile] pour chacun de vos clients. L’ingestion par flux joue un rôle clé dans la création de ces profils en vous permettant de diffuser des données [!DNL Profile] dans le [!DNL Data Lake] avec le moins de latence possible.
+Adobe Experience Platform vous permet de générer des expériences coordonnées, cohérentes et pertinentes en générant un profil client en temps réel pour chacun de vos clients. L’ingestion par flux joue un rôle clé dans la création de ces profils en vous permettant de diffuser des données de profil dans le lac de données avec le moins de latence possible.
 
 La vidéo suivante est conçue pour vous aider à comprendre l’ingestion par flux et décrit les concepts ci-dessus.
 
->[!VIDEO](https://video.tv.adobe.com/v/31636?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### Diffusion d’enregistrements de profil et de [!DNL ExperienceEvents]
 
-Grâce à l’ingestion par flux, les utilisateurs et utilisatrices peuvent diffuser des enregistrements de profil et des [!DNL ExperienceEvents] à [!DNL Experience Platform] en quelques secondes pour orienter la personnalisation en temps réel. Toutes les données envoyées aux API d’ingestion en flux continu sont automatiquement conservées dans le [!DNL Data Lake].
+Grâce à l’ingestion par flux, les utilisateurs peuvent diffuser des enregistrements de profil et des [!DNL ExperienceEvents] à Experience Platform en quelques secondes afin d’orienter la personnalisation en temps réel. Toutes les données envoyées aux API d’ingestion en flux continu sont automatiquement conservées dans le lac de données.
 
 Pour plus d’informations, consultez le [guide de création d’une connexion en continu](../tutorials/create-streaming-connection.md).
 
 ### Diffusion vers les jeux de données
 
-Une fois que vous êtes certain que vos données sont nettoyées, vous pouvez activer vos jeux de données pour [!DNL Real-Time Customer Profile] et [!DNL Identity Service].
+Une fois que vous êtes certain que vos données sont nettoyées, vous pouvez activer vos jeux de données pour le profil client en temps réel et les [!DNL Identity Service].
 
-Pour plus d’informations sur l’activation d’un jeu de données pour [!DNL Profile] et [!DNL Identity Service], veuillez lire le guide [Configurer un jeu de données](/help/profile/tutorials/dataset-configuration.md).
+Pour plus d’informations sur l’activation d’un jeu de données pour Profile et [!DNL Identity Service], veuillez lire le guide [Configurer un jeu de données](/help/profile/tutorials/dataset-configuration.md).
 
 ## Quelle est la latence attendue pour l’ingestion en flux continu sur Experience Platform ?
 
