@@ -4,8 +4,7 @@ solution: Experience Platform
 title: Identifier les modèles antiprogramme de travail
 type: Tutorial
 hide: true
-hidefromtoc: true
-source-git-commit: 3696ebffc4bd1e588a04e5789ff0c7971e636b56
+source-git-commit: 9d170fec9b80f0f2e17fc39e8f573cbad515f823
 workflow-type: tm+mt
 source-wordcount: '986'
 ht-degree: 0%
@@ -31,7 +30,7 @@ La vue chronologique [Planifications de tâches](job-schedules.md) vous permet d
 Avant d’identifier les anti-modèles, vous devez :
 
 * Ayez accès à [!UICONTROL Job Schedules] avec l’**[!UICONTROL View Job Schedules]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions).
-* Familiarisez-vous avec l’interface [&#x200B; Planifications de tâches &#x200B;](job-schedules.md#understanding-interface) et avec la lecture de la vue chronologique.
+* Familiarisez-vous avec l’interface [ Planifications de tâches ](job-schedules.md#understanding-interface) et avec la lecture de la vue chronologique.
 * comprendre les concepts de base [ingestion par lots](../ingestion/batch-ingestion/overview.md), [segmentation](../segmentation/home.md) et [traitement des profils](../profile/home.md) ;
 
 ## Référence rapide {#anti-pattern-quick-reference}

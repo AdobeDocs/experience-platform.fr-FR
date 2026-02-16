@@ -3,12 +3,13 @@ product: adobe experience platform
 solution: Experience Platform
 audience: user
 user-guide-title: Guide d’exécution et d’exploitation
-user-guide-description: null
-role: Admin
-source-git-commit: b4f1ac5b0afa0afc6a40884e5e7d1bb0d3d4b435
+user-guide-description: Inspectez, dépannez et optimisez vos implémentations Adobe Experience Platform à l’aide des outils Exécuter et exploiter . Gagnez de la visibilité sur les activations par lots planifiées, identifiez les problèmes de configuration et améliorez la fiabilité du système.
+description: Ce document répertorie la table des matières des outils Adobe Experience Platform Run et Operate
+role: Admin, User
+source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
 workflow-type: tm+mt
-source-wordcount: '20'
-ht-degree: 20%
+source-wordcount: '63'
+ht-degree: 6%
 
 ---
 

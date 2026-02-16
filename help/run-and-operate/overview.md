@@ -2,8 +2,7 @@
 title: Présentation de l’exécution et du fonctionnement
 description: Inspectez, dépannez et optimisez vos implémentations Adobe Experience Platform à l’aide des outils Exécuter et exploiter . Gagnez de la visibilité sur les activations par lots planifiées, identifiez les problèmes de configuration et améliorez la fiabilité du système.
 hide: true
-hidefromtoc: true
-source-git-commit: 3696ebffc4bd1e588a04e5789ff0c7971e636b56
+source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
 workflow-type: tm+mt
 source-wordcount: '544'
 ht-degree: 1%
@@ -50,13 +49,13 @@ Pour accéder aux outils Exécuter et utiliser à partir de l’interface utilis
    >
    >Actuellement, la seule fonctionnalité disponible est [planifications de tâches](job-schedules.md).
 
-![Interface utilisateur d’Experience Platform affichant le volet de navigation Exécuter et utiliser à gauche.](assets/overview/run-and-operate.png)
+![Interface utilisateur d’Experience Platform affichant le volet de navigation de gauche Exécuter et utiliser.](assets/overview/run-and-operate.png)
 
 ## Outils disponibles {#available-tools}
 
 Les outils suivants vous aident à inspecter et optimiser vos opérations de données.
 
-### Plannings de tâches {#job-schedules}
+### Plannings de traitement {#job-schedules}
 
 >[!IMPORTANT]
 >

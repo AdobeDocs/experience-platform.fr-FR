@@ -4,10 +4,9 @@ solution: Experience Platform
 title: Afficher les détails de planification des tâches
 type: Tutorial
 hide: true
-hidefromtoc: true
-source-git-commit: 3696ebffc4bd1e588a04e5789ff0c7971e636b56
+source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1783'
 ht-degree: 1%
 
 ---
@@ -67,6 +66,8 @@ La vue chronologique utilise une disposition horizontale et verticale pour vous 
 Cette disposition vous permet d’identifier rapidement les relations de minutage entre vos tâches de pipeline de données et le traitement en aval. Idéalement, les tâches en amont (telles que l’ingestion du lac de données et du profil) doivent se terminer à gauche de ces marqueurs verticaux, en s’assurant que les données sont prêtes avant le début de la segmentation et de l’activation. Les tâches qui s’étendent au-delà de ces marqueurs indiquent des problèmes de minutage potentiels lorsque les processus en aval peuvent commencer avant que les données ne soient entièrement préparées.
 
 ### Quelle vue dois-je utiliser ? {#which-view}
+
+Utilisez le tableau ci-dessous pour choisir la vue qui convient à votre tâche. Conservez les majuscules et les minuscules nécessaires dans la vue recommandée pour naviguer efficacement.
 
 | Je dois... | Utiliser cette vue |
 |--------------|---------------|

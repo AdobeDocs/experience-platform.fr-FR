@@ -4,11 +4,10 @@ solution: Experience Platform
 title: Inspecter les planifications de tâches
 type: Tutorial
 hide: true
-hidefromtoc: true
-source-git-commit: 3696ebffc4bd1e588a04e5789ff0c7971e636b56
+source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
 workflow-type: tm+mt
 source-wordcount: '828'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -45,7 +44,7 @@ Avant d’utiliser [!UICONTROL Job Schedules], vous devez connaître les concept
 
 La compréhension de ces composants vous aide à interpréter les modèles d’exécution de tâche et à diagnostiquer les problèmes lorsqu’ils se produisent.
 
-## Présentation de l’interface des planifications de tâches {#understanding-interface}
+## Présentation de l&#39;interface des planifications de tâches {#understanding-interface}
 
 Pour accéder à [!UICONTROL Job Schedules] :
 
