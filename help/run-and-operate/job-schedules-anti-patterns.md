@@ -31,7 +31,7 @@ La vue chronologique [Planifications de tâches](job-schedules.md) vous permet d
 Avant d’identifier les anti-modèles, vous devez :
 
 * Ayez accès à [!UICONTROL Job Schedules] avec l’**[!UICONTROL View Job Schedules]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions).
-* Familiarisez-vous avec l’interface [ Planifications de tâches ](job-schedules.md#understanding-interface) et avec la lecture de la vue chronologique.
+* Familiarisez-vous avec l’interface [&#x200B; Planifications de tâches &#x200B;](job-schedules.md#understanding-interface) et avec la lecture de la vue chronologique.
 * comprendre les concepts de base [ingestion par lots](../ingestion/batch-ingestion/overview.md), [segmentation](../segmentation/home.md) et [traitement des profils](../profile/home.md) ;
 
 ## Référence rapide {#anti-pattern-quick-reference}
