@@ -22,7 +22,7 @@ ht-degree: 91%
 * Alertes {#alerts}
    * [Vue d’ensemble](./alerts/overview.md)
    * [Règles d’alerte standard](./alerts/rules.md)
-   * [Guide de l’interface utilisateur du ](./alerts/ui.md)
+   * [Guide de l’interface utilisateur du &#x200B;](./alerts/ui.md)
    * [Abonnement aux notifications d’événement I/O](./alerts/subscribe.md)
    * [Intégration de Slack](./alerts/slack-integration.md)
 * [Référence d’API](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
