@@ -1,21 +1,17 @@
 ---
 title: Connexion par lots à Snowflake
 description: Créez un partage de données Snowflake en direct pour recevoir des mises à jour quotidiennes de l’audience directement sous forme de tables partagées dans votre compte.
-last-substantial-update: 2025-10-23T00:00:00Z
+last-substantial-update: 2026-02-17T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: 271700625e8cc1d2b5e737e89435c543caa86264
+source-git-commit: 89968d4e4c552b7c6b339a39f7a7224133446116
 workflow-type: tm+mt
-source-wordcount: '1662'
-ht-degree: 18%
+source-wordcount: '1708'
+ht-degree: 17%
 
 ---
 
 # Connexion par lots à Snowflake {#snowflake-destination}
-
->[!AVAILABILITY]
->
->Ce connecteur de destination est en disponibilité limitée et disponible uniquement pour les clients Real-Time CDP Ultimate configurés dans la région [VA7](/help/landing/multi-cloud.md#azure-regions).
 
 ## Vue d’ensemble {#overview}
 
@@ -51,7 +47,7 @@ Lorsqu’un flux de données s’exécute pour une audience pour la première fo
 
 Experience Platform fournit deux types de destinations Snowflake : [Diffusion en continu Snowflake](snowflake.md) et [Lot Snowflake](snowflake-batch.md).
 
-Bien que les deux destinations vous donnent accès à vos données dans Snowflake en mode copie nulle, il existe quelques bonnes pratiques recommandées en termes de cas d’utilisation pour chaque connecteur.
+Bien que les deux destinations vous donnent accès à vos données dans Snowflake sans les copier physiquement dans votre compte, il existe quelques bonnes pratiques recommandées en termes de cas d’utilisation de chaque connecteur.
 
 Le tableau ci-dessous vous aidera à choisir le connecteur à utiliser en décrivant les scénarios où chaque méthode de partage de données est la plus appropriée.
 
@@ -63,7 +59,7 @@ Le tableau ci-dessous vous aidera à choisir le connecteur à utiliser en décri
 | **Gestion des données** | Toujours afficher le dernier instantané complet | Mises à jour incrémentielles en fonction des modifications de l’appartenance à une audience |
 | **Exemples de scénarios** | Création de rapports d’entreprise, analyse de données, formation au modèle ML | Suppression des campagnes marketing, personnalisation en temps réel |
 
-Pour plus d’informations sur le partage de données en flux continu, consultez la documentation Connexion en flux continu Snowflake [&#128279;](snowflake.md).
+Pour plus d’informations sur le partage de données en flux continu, consultez la documentation Connexion en flux continu Snowflake [](snowflake.md).
 
 ## Cas d’utilisation {#use-cases}
 
@@ -83,8 +79,13 @@ Avant de configurer votre connexion Snowflake, veillez à respecter les conditio
 
 * Vous avez accès à un compte [!DNL Snowflake].
 * Votre compte Snowflake est abonné à des annonces privées. Vous ou un membre de votre société disposant de droits d’administrateur de compte sur Snowflake pouvez configurer cette option.
+* Vous connaissez le fournisseur de cloud et la région de votre compte Snowflake. Vous devrez entrer les deux lorsque vous vous connecterez à la destination.
 
 Lisez la [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing) pour plus d’informations sur les autorisations nécessaires.
+
+>[!IMPORTANT]
+>
+>Cette destination ne prend pas en charge les comptes Snowflake qui se trouvent derrière un pare-feu ou qui utilisent [[!DNL Azure Private Link]](https://docs.snowflake.com/en/user-guide/privatelink-azure).
 
 ## Audiences prises en charge {#supported-audiences}
 
@@ -103,7 +104,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | ✓ | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -137,7 +138,7 @@ Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Co
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_batch_accountid"
->title="Saisir votre identifiant de compte Snowflake"
+>title="Saisissez votre identifiant de compte de partage de données Snowflake"
 >abstract="Si votre compte est lié à une organisation, utilisez le format suivant : `OrganizationName.AccountName`<br><br>. Si votre compte n’est pas lié à une organisation, utilisez le format suivant : `AccountName`."
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
@@ -146,10 +147,10 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 * **[!UICONTROL Name]** : nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Snowflake Account ID]** : identifiant de votre compte Snowflake. Utilisez le format d’identifiant de compte suivant selon que votre compte est lié ou non à une organisation :
-   * Si votre compte est lié à une organisation, procédez comme suit `OrganizationName.AccountName`.
-   * Si votre compte n’est pas lié à une organisation, `AccountName`.
-* **[!UICONTROL Select Snowflake Region]** : sélectionnez la région dans laquelle votre instance Snowflake est configurée. Consultez la [documentation](https://docs.snowflake.com/en/user-guide/intro-regions) de Snowflake pour plus d’informations sur les régions cloud prises en charge.
+* **[!UICONTROL Snowflake Account ID]** : Identifiant De Votre Compte De Partage De Données [Snowflake](https://docs.snowflake.com/en/user-guide/admin-account-identifier#label-account-name-data-sharing). Utilisez le format suivant selon que votre compte est lié ou non à une organisation :
+   * Si votre compte est lié à une organisation : saisissez le nom de l’organisation et le nom du compte séparés par un **point** (`.`). Par exemple, si le nom de votre organisation est ACME et le nom de votre compte AsiaRegion, saisissez `ACME.AsiaRegion`.
+   * Si votre compte n’est pas lié à une organisation : `AccountName`.
+* **[!UICONTROL Snowflake Region]** : sélectionnez la région dans laquelle votre instance Snowflake est configurée. Consultez la [documentation](https://docs.snowflake.com/en/user-guide/intro-regions) de Snowflake pour plus d’informations sur les régions cloud prises en charge.
 * **[!UICONTROL Account acknowledgment]** : après avoir saisi votre **[!UICONTROL Snowflake Account ID]**, sélectionnez **[!UICONTROL Yes]** dans cette liste déroulante pour confirmer que votre **[!UICONTROL Snowflake Account ID]** est correcte et qu’elle vous appartient.
 
 >[!IMPORTANT]
@@ -167,7 +168,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 > 
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
@@ -189,17 +190,12 @@ Les données sont transférées dans votre compte Snowflake par le biais d’un 
 
 Le tableau dynamique contient les colonnes suivantes :
 
-* **TS** : colonne de date et heure qui représente la date de la dernière mise à jour de chaque ligne
+* **TS** : colonne d’horodatage indiquant la date de la dernière mise à jour de chaque ligne de la table partagée
+* **ID de la politique de fusion** : ID de la [politique de fusion](../../../profile/merge-policies/overview.md) à laquelle appartient l’audience activée
 * **Attributs de mappage** : chaque attribut de mappage que vous sélectionnez pendant le workflow d’activation est représenté sous la forme d’un en-tête de colonne dans Snowflake
 * **Appartenance à une audience** : l’appartenance à une audience mappée au flux de données est indiquée par une entrée `active` dans la cellule correspondante
 
-![Capture d’écran montrant l’interface de Snowflake avec des données de tableau dynamique](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png)
-
-## Limites connues {#known-limitations}
-
-### Disponibilité régionale {#regional-availability}
-
-Actuellement, la destination par lots [!DNL Snowflake] n’est disponible que pour les clients Real-Time CDP configurés dans la région Experience Platform VA7.
+![Capture d’écran montrant l’interface de Snowflake avec des données de tableau dynamique](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png) {align="center" zoomable="yes"}
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
