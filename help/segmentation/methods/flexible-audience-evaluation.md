@@ -6,7 +6,7 @@ exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
 source-git-commit: 7a0a98ea035892943a0e9a9a2b059701f6f1f612
 workflow-type: tm+mt
 source-wordcount: '1124'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -326,7 +326,7 @@ Une fois les audiences correctes répertoriées, vous pouvez poursuivre la requ�
 
 La vidéo suivante montre comment accéder à l’évaluation d’audience flexible et l’utiliser dans Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453642?captions=fre_fr&)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Questions fréquentes {#faq}
 

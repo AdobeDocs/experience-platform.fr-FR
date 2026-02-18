@@ -32,7 +32,7 @@ Les options disponibles sont les suivantes :
 
 Utilisez cette option pour permettre à Web SDK de lire et d’écrire les `mbox` hérités et les cookies `mboxEdgeCluster` utilisés par les bibliothèques `at.js` 1.x ou 2.x. Ce paramètre permet de conserver les profils des visiteurs intacts lorsqu’ils se déplacent entre les pages à l’aide de Web SDK ou de `at.js` sur le même site Web. Si aucune `at.js` n’est implémentée sur votre site, il n’est pas nécessaire d’activer cette case à cocher. La bibliothèque JavaScript équivalente à cette case à cocher est [`targetMigrationEnabled`](/help/collection/js/commands/configure/targetmigrationenabled.md).
 
-Lors de l’activation de cette option, veillez à activer également le [`overrideMboxEdgeServer`](https://experienceleague.adobe.com/fr/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) dans `targetGlobalSettings()`.
+Lors de l’activation de cette option, veillez à activer également le [`overrideMboxEdgeServer`](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) dans `targetGlobalSettings()`.
 
 ## [!UICONTROL Prehiding style] {#prehiding-style}
 

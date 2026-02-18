@@ -7,7 +7,7 @@ exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1522'
-ht-degree: 12%
+ht-degree: 13%
 
 ---
 
@@ -21,7 +21,7 @@ Cette fonctionnalité vous permet de classer les champs de schéma, les audience
 >
 >Ce document se concentre sur le cas d’utilisation des politiques de contrôle d’accès. Si vous tentez de configurer des politiques pour régir l’**utilisation** des données plutôt que de déterminer à qui les utilisateurs d’Experience Platform ont accès, consultez plutôt le guide complet sur la [gouvernance des données](../../data-governance/e2e.md) .
 
-## Commencer
+## Prise en main
 
 Ce tutoriel nécessite une connaissance pratique des composants Experience Platform suivants :
 
@@ -30,7 +30,7 @@ Ce tutoriel nécessite une connaissance pratique des composants Experience Platf
    * [Tutoriel sur l’éditeur de schémas](../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
 * [Service de segmentation Adobe Experience Platform](../../segmentation/home.md) : moteur de segmentation de [!DNL Experience Platform] utilisé pour créer des segments d’audience à partir de vos profils clients en fonction du comportement et des attributs des clients.
 
-### Présentation du cas d’utilisation
+### Vue d’ensemble de cas d’utilisation
 
 Vous allez passer en revue un exemple de workflow de contrôle d’accès basé sur les attributs dans lequel vous allez créer et attribuer des rôles, des libellés et des politiques afin de configurer si vos utilisateurs peuvent ou non accéder à des ressources spécifiques de votre organisation. Ce guide utilise un exemple de restriction de l’accès aux données sensibles pour démontrer le workflow. Ce cas d’utilisation est décrit ci-dessous :
 
@@ -77,7 +77,7 @@ Pour commencer, sélectionnez **[!UICONTROL Roles]** dans le volet de navigation
 
 Sélectionnez ensuite **[!UICONTROL Labels]**, puis sélectionnez **[!UICONTROL Add Labels]**.
 
-![Image illustrant la sélection de l’option Ajouter des libellés dans l’onglet Libellés &#x200B;](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
+![Image illustrant la sélection de l’option Ajouter des libellés dans l’onglet Libellés ](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
 
 Une liste de tous les libellés de votre organisation s’affiche. Sélectionnez **[!UICONTROL RHD]** pour ajouter le libellé à **[!UICONTROL PHI/Regulated Health Data]**, puis sélectionnez **[!UICONTROL Save]**.
 
@@ -97,7 +97,7 @@ Dans le volet de navigation supérieur, sélectionnez le **sélecteur d’applic
 
 Sélectionnez **[!UICONTROL Schemas]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL ACME Healthcare]** dans la liste des schémas qui s’affichent.
 
-![Image illustrant le schéma ACME Healthcare sélectionné dans l’onglet Schémas &#x200B;](../images/abac-end-to-end-user-guide/abac-select-schema.png)
+![Image illustrant le schéma ACME Healthcare sélectionné dans l’onglet Schémas ](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
 Sélectionnez ensuite **[!UICONTROL Labels]** pour afficher une liste qui affiche les champs associés à votre schéma. À partir de là, vous pouvez attribuer des libellés à un ou plusieurs champs à la fois. Sélectionnez les champs **[!UICONTROL BloodGlucose]** et **[!UICONTROL InsulinLevel]**, puis sélectionnez **[!UICONTROL Apply access and data governance labels]**.
 
@@ -140,7 +140,7 @@ Répétez les étapes ci-dessus avec **[!UICONTROL Insulin <50]**.
 
 >[!NOTE]
 >
-> Attribuez les libellés créés dans l’espace de travail [!UICONTROL Permissions] (comme les libellés de segment ci-dessus) à divers objets dans Adobe Journey Optimizer à l’aide du [contrôle d’accès au niveau de l’objet](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/access-control/object-based-access). »
+> Attribuez les libellés créés dans l’espace de travail [!UICONTROL Permissions] (comme les libellés de segment ci-dessus) à divers objets dans Adobe Journey Optimizer à l’aide du [contrôle d’accès au niveau de l’objet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access). »
 
 ## Activer la politique de contrôle d’accès {#policy}
 
@@ -148,7 +148,7 @@ La politique de contrôle d’accès par défaut utilise des libellés pour déf
 
 Pour activer la politique de contrôle d’accès, sélectionnez [!UICONTROL Permissions] dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Policies]**.
 
-![&#x200B; Liste des politiques affichées &#x200B;](../images/abac-end-to-end-user-guide/abac-policies-page.png)
+![ Liste des politiques affichées ](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
 Sélectionnez ensuite les points de suspension (`...`) à côté du **[!UICONTROL Default-Field-Level-Access-Control-Policy]**. Une liste déroulante affiche alors les commandes permettant de modifier, activer, supprimer ou dupliquer le rôle. Sélectionnez **[!UICONTROL Activate]** dans la liste déroulante.
 
@@ -168,19 +168,19 @@ Une confirmation d’activation de la politique est reçue et vous revenez à la
 >id="platform_permissions_policies_about"
 >title="What are policies?"
 >abstract="Policies are statements that bring attributes together to establish permissible and impermissible actions. Every organization comes with a default policy that you must activate to define rules for resources like segments and schema fields. Default policies can neither be edited nor deleted. However, default policies can be activated or deactivated."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=fr" text="Manage policies"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html" text="Manage policies"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about_create"
 >title="Create a policy"
 >abstract="Create a policy to define the actions that your users can and cannot take against your segments and schema fields."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=fr#create-a-new-policy" text="Create a policy"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html#create-a-new-policy" text="Create a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Configure permissible and impermissible actions for a policy"
 >abstract="A <b>deny access to</b> policy will deny users access when the criteria is met. Combined with <b>The following being false</b> - all users will be denied access unless they meet the matching criteria set. This type of policy allows you to protect a sensitive resource and only allow access to users with matching labels. <br>A <b>permit access to</b> policy will permit users access when the criteria are met. When combined with <b>The following being true</b> - users will be given access if they meet the matching criteria set. This does not explicitly deny access to users, but adds a permit access. This type of policy allows you to give additional access to resource and in addition to those users who might already have access through role permissions."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=fr#edit-a-policy" text="Edit a policy"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html#edit-a-policy" text="Edit a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_resource"
@@ -247,4 +247,4 @@ Pour plus d’informations sur le contrôle d’accès basé sur les attributs, 
 
 La vidéo suivante est destinée à vous aider à comprendre le contrôle d’accès basé sur les attributs et explique comment configurer des rôles, des ressources et des politiques.
 
->[!VIDEO](https://video.tv.adobe.com/v/3451829?captions=fre_fr&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)

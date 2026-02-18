@@ -69,7 +69,7 @@ Les attributs que vous ajoutez peuvent être de l’un des types de données sui
 | Chaîne | Noms, adresses e-mail, catégories de produits |
 | Numérique | Âge, chiffre d’affaires, quantités de produits, scores de fidélité |
 | Booléen | Préférences, indicateurs de statut, indicateurs d&#39;utilisateur |
-| Énumération | Listes prédéfinies telles que le genre ou le statut |
+| Enum | Listes prédéfinies telles que le genre ou le statut |
 | Date/Heure | Dates d’achat, heures de visite, anniversaire |
 
 Vous pouvez utiliser les opérateurs suivants pour les types de données respectifs :
@@ -143,7 +143,7 @@ Vous pouvez utiliser les opérateurs suivants pour les types de données respect
 | Plage de roulement | La valeur s’est produite entre les deux dates relatives. | La date du dernier achat est comprise entre sept jours et trois jours. |
 | Dans suivant | La valeur est survenue au cours de la période suivante sélectionnée. | L’abandon du panier aura lieu dans 2 jours |
 
-Pour plus d’informations sur les fonctions d’heure et de date, consultez la section [&#x200B; Contraintes de temps &#x200B;](#time-constraints).
+Pour plus d’informations sur les fonctions d’heure et de date, consultez la section [ Contraintes de temps ](#time-constraints).
 
 +++
 
@@ -151,7 +151,7 @@ Pour plus d’informations sur les fonctions d’heure et de date, consultez la 
 
 Les attributs calculés sont des champs calculés à partir d’autres attributs à l’aide d’agrégations ou de formules. Vous pouvez utiliser des attributs calculés si vous avez besoin de données agrégées telles que des sommes, des décomptes ou des moyennes sur plusieurs événements ou si vous créez des audiences fréquemment utilisées qui nécessitent des calculs complexes.
 
-Pour plus d’informations sur les attributs calculés, notamment sur la manière de les créer, les fonctions que vous pouvez utiliser dans ces attributs et la manière de les gérer, consultez la [&#x200B; présentation des attributs calculés &#x200B;](/help/profile/computed-attributes/overview.md).
+Pour plus d’informations sur les attributs calculés, notamment sur la manière de les créer, les fonctions que vous pouvez utiliser dans ces attributs et la manière de les gérer, consultez la [ présentation des attributs calculés ](/help/profile/computed-attributes/overview.md).
 
 ### Événements
 
@@ -323,7 +323,7 @@ Vous pouvez également afficher une version codée d’une règle créée dans l
 
 L’affichage du code fournit un bouton qui vous permet de copier la valeur de la définition de segment à utiliser dans les appels d’API. Pour obtenir la dernière version de la définition de segment, assurez-vous d’avoir enregistré vos dernières modifications apportées à la définition de segment.
 
-![Le bouton « Copier le code » est mis en surbrillance, ce qui vous permet de &#x200B;](../images/ui/segment-builder/copy-code.png)
+![Le bouton « Copier le code » est mis en surbrillance, ce qui vous permet de ](../images/ui/segment-builder/copy-code.png)
 
 ### Fonctions d’agrégation
 
