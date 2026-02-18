@@ -5,10 +5,10 @@ breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Découvrez une vue d’ensemble du système de modèle de données d’expérience (XDM) dans Experience Platform et apprenez à utiliser les classes et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schemas
 role: Developer
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 511c93342d112056ead54c0d82184cc262a43383
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 73%
+source-wordcount: '711'
+ht-degree: 72%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 73%
 * Schémas {#schema}
    * [Principes de base de la composition des schémas](schema/composition.md)
    * [Bonnes pratiques de modélisation des données](schema/best-practices.md)
+   * [Planification de l’activation du profil](./schema/profile-enablement-planning.md)
    * [Données sensibles et personnelles](./schema/sensitive-and-personal-data.md)
    * [Contraintes des types de champs XDM](schema/field-constraints.md)
    * [Schéma relationnel](./schema/relational.md)
