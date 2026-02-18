@@ -1,8 +1,8 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform - Janvier 2026
-description: Notes de mise à jour de janvier 2026 pour Adobe Experience Platform.
+title: Notes de mise à jour d’Adobe Experience Platform - Février 2026
+description: Les notes de mise à jour de février 2026 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fda9bb00dd77115c8085492cbf5883c0533588d8
+source-git-commit: 7cb35f5b35878b655dc668c0b26e22a41d675161
 workflow-type: tm+mt
 source-wordcount: '460'
 ht-degree: 47%
