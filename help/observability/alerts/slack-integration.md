@@ -1,9 +1,9 @@
 ---
 title: Intégration de Slack pour les alertes destinées aux clients
 description: Découvrez comment connecter Adobe I/O Events à Slack à l’aide d’Adobe App Builder.
-source-git-commit: 11f95eb16110155f8675ee5c83824b790a68f06a
+source-git-commit: c0fa0320b32e1bfe286d47a2e1af5ea1dcf74cb9
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '946'
 ht-degree: 0%
 
 ---
@@ -51,9 +51,13 @@ Une fois le projet modélisé configuré, initialisez-le.
    aio app init slack-webhook-proxy
    ```
 
-1. Sélectionnez votre `Organization` à l’aide des touches fléchées, puis sélectionnez le `Project` que vous avez créé précédemment dans le Developer Console. Sélectionnez `Only Templates Supported By My Org` pour les modèles à rechercher. Ensuite, appuyez sur **Entrée** pour ignorer les modèles et installer une application autonome.
+1. Sélectionnez votre `Organization` à l’aide des touches fléchées, puis sélectionnez le `Project` que vous avez créé précédemment dans le Developer Console. Sélectionnez `Only Templates Supported By My Org` pour les modèles à rechercher.
 
    ![Terminal affichant la sélection d’organisations et de projets, et uniquement les modèles pris en charge par mon organisation.](../images/alerts/slack-integration/terminal-organization-project.png)
+
+1. Ensuite, appuyez sur **Entrée** pour ignorer les modèles et installer une application autonome.
+
+   ![Terminal affichant la sélection d’organisations et de projets, et uniquement les modèles pris en charge par mon organisation.](../images/alerts/slack-integration/terminal-skip-templates.png)
 
 1. Spécifiez les fonctionnalités de l’application Adobe I/O à activer pour ce projet. Utilisez les touches fléchées pour faire défiler l’écran et sélectionner `Actions: Deploy Runtime actions`.
 
