@@ -3,10 +3,10 @@ title: Exporter des fichiers à la demande vers des destinations par lots à l�
 type: Tutorial
 description: Découvrez comment exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur d’Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 111f6d5093a0b66a683745b1da8d8909eb17f7eb
+source-git-commit: c7e6de2db416592ca9340fefadd53709fe71b058
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 15%
+source-wordcount: '805'
+ht-degree: 12%
 
 ---
 
@@ -26,9 +26,26 @@ ht-degree: 15%
 
 Cet article explique comment utiliser l’interface utilisateur d’Experience Platform pour exporter des fichiers à la demande vers des destinations par lots telles que [espace de stockage dans le cloud](/help/destinations/catalog/cloud-storage/overview.md) et [marketing par e-mail](/help/destinations/catalog/email-marketing/overview.md).
 
-Le contrôle **[!UICONTROL Export file now]** vous permet d’exporter un fichier complet sans interrompre le planning d’exportation actuel d’une audience précédemment planifiée. Cette exportation s’ajoute aux exportations précédemment planifiées. Elle ne modifie pas la fréquence d’exportation de l’audience. L&#39;exportation du fichier est déclenchée immédiatement et récupère les derniers résultats des exécutions de segmentation d&#39;Experience Platform.
+Le contrôle **[!UICONTROL Export file now]** vous permet d’exporter un fichier complet sans interrompre le planning d’exportation actuel d’une audience précédemment planifiée. Cette exportation s’ajoute aux exportations précédemment planifiées. Elle ne modifie pas la fréquence d’exportation de l’audience.
+
+L’exportation du fichier est déclenchée immédiatement et utilise uniquement les données de l’instantané d’évaluation d’audience le plus récent. Elle n’inclut pas les modifications de profil ou d’identité qui se produisent après la création d’instantanés. En revanche, les exportations planifiées incluent à la fois les données d’instantané et les modifications incrémentielles qui se produisent entre la création de l’instantané et l’heure d’exportation.
 
 Vous pouvez également utiliser les API d’Experience Platform à cet effet. Découvrez comment [activer des audiences à la demande vers des destinations par lots via l’API d’activation ad hoc](/help/destinations/api/ad-hoc-activation-api.md).
+
+## Exportations planifiées par rapport aux exportations à la demande {#scheduled-vs-ondemand}
+
+Les exportations à la demande et les exportations planifiées utilisent différentes sources de données, ce qui peut entraîner des différences dans les données exportées. Reportez-vous au tableau ci-dessous pour comprendre ce qui est exporté dans chaque cas.
+
+|  | Exporter le fichier maintenant | Exportations planifiées |
+|--------|-----------------|-------------------|
+| **Source de données** | Capture instantanée uniquement | Capture instantanée + modifications incrémentielles |
+| **Attributs de profil** | Valeurs au moment de l’instantané | Valeurs actuelles au moment de l’exportation |
+
+>[!NOTE]
+>
+>Les exportations planifiées peuvent afficher un nombre de profils ou des valeurs d’attribut différents des exportations à la demande, car elles incluent des mises à jour de profil qui se produisent après l’évaluation de l’audience.
+
+Pour plus d’informations, voir [Comprendre le comportement d’exportation planifiée](/help/destinations/ui/activate-batch-profile-destinations.md#export-behavior).
 
 ## Conditions préalables {#prerequisites}
 
