@@ -2,9 +2,9 @@
 description: Cette page traite du format du message et de la transformation des profils dans les données exportées d’Adobe Experience Platform vers les destinations.
 title: Format des messages
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: b5d8a1c31705ffe72dadc4fff8626acb7081444a
 workflow-type: tm+mt
-source-wordcount: '2489'
+source-wordcount: '2488'
 ht-degree: 87%
 
 ---
@@ -178,7 +178,7 @@ Cette section fournit plusieurs exemples de la manière dont ces transformations
 
 1. Exemples de transformation simples. Découvrez comment le modèle fonctionne avec des transformations simples pour les champs [Attributs de profil](#attributes), [Appartenance à une audience](#segment-membership) et [Identité](#identities).
 2. Exemples de modèles plus complexes combinant les champs ci-dessus : [Création d’un modèle qui envoie des audiences et des identités](./message-format.md#segments-and-identities) et [Création d’un modèle qui envoie des audiences, des identités et des attributs de profil](#segments-identities-attributes).
-3. Modèles contenant la clé d’agrégation. Quand vous utilisez l’[agrégation configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) dans la configuration de destination, Experience Platform groupe les profils exportés vers la destination en fonction de critères tels que l’identifiant de l’audience, le statut de l’audience ou les espaces de noms d’identité.
+3. Modèles contenant la clé d’agrégation. Quand vous utilisez l’[agrégation configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) dans la configuration de destination, Experience Platform regroupe les profils exportés vers la destination en fonction de critères tels que l’identifiant de l’audience, le statut de l’audience ou les espaces de noms d’identité.
 
 ### Attributs de profil {#attributes}
 
@@ -859,7 +859,7 @@ Le `json` ci-dessous représente les données exportées depuis Adobe Experience
 
 ### Ajout de la clé d’agrégation dans votre modèle pour accéder aux profils exportés regroupés selon différents critères {#template-aggregation-key}
 
-Quand vous utilisez l’[agrégation configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) dans la configuration de destination, vous pouvez grouper les profils exportés vers la destination en fonction de critères tels que l’identifiant de l’audience, l’alias de l’audience, l’appartenance à une audience ou les espaces de noms d’identité.
+Quand vous utilisez l’[agrégation configurable](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) dans la configuration de destination, vous pouvez regrouper les profils exportés vers la destination en fonction de critères tels que l’identifiant de l’audience, l’alias de l’audience, l’appartenance à une audience ou les espaces de noms d’identité.
 
 Dans le modèle de transformation des messages, vous pouvez accéder aux clés d’agrégation mentionnées ci-dessus, comme illustré dans les exemples des sections suivantes. Utilisez des clés d’agrégation pour structurer le message HTTP exporté hors d’Experience Platform afin qu’il corresponde aux limites de format et de taux attendues par la destination.
 
@@ -1032,7 +1032,6 @@ Si vous utilisez l’[agrégation configurable](../../functionality/destination-
 Les valeurs possibles sont les suivantes :
 
 * réalisé
-* existant
 * abandonné
 
 Ajoutez la ligne ci-dessous au modèle pour ajouter ou supprimer des profils des segments en fonction des valeurs ci-dessus :
