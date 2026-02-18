@@ -17,7 +17,7 @@ Adobe Experience Platform ingère des données à partir de sources diverses. 
 
 Vous pouvez utiliser Query Service pour connecter le parcours client en ligne à hors ligne et comprendre l’attribution omnicanale pour votre marque. La vidéo suivante montre comment une entreprise d’expérience peut utiliser Query Service pour résoudre des cas d’utilisation clés et explique le fonctionnement de Query Service.
 
->[!VIDEO](https://video.tv.adobe.com/v/29795?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33589?captions=fre_fr&quality=12&learn=on)
 
 ## Utilisation du service de requête {#usage}
 
@@ -66,4 +66,4 @@ Ce document vous a initié au service de requête et à son fonctionnement dans 
 
 Pour mieux vous préparer à exécuter des requêtes, regardez la vidéo suivante. Cette vidéo présente des conseils et des bonnes pratiques pour lʼexécution de requêtes dans lʼinterface du requêteur, les clients PSQL, les solutions Business Intelligence (BI) et lʼAPI HTTP.
 
->[!VIDEO](https://video.tv.adobe.com/v/29811?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33587?captions=fre_fr&quality=12&learn=on)
