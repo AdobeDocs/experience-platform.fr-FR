@@ -247,4 +247,4 @@ Pour plus d’informations sur le contrôle d’accès basé sur les attributs, 
 
 La vidéo suivante est destinée à vous aider à comprendre le contrôle d’accès basé sur les attributs et explique comment configurer des rôles, des ressources et des politiques.
 
->[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3451829?captions=fre_fr&learn=on)
