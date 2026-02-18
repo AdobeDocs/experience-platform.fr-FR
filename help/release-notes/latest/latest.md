@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Février 2026
 description: Les notes de mise à jour de février 2026 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7cb35f5b35878b655dc668c0b26e22a41d675161
+source-git-commit: a11c00c218ffbbd5618616f401613a604c35859a
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 47%
+source-wordcount: '606'
+ht-degree: 49%
 
 ---
 
@@ -28,6 +28,7 @@ Nouvelles fonctionnalités et mises à jour des fonctionnalités existantes dans
 - [Alertes](#alerts)
 - [Destinations](#destinations)
 - [Sources](#sources)
+- [Modèle de données d’expérience (XDM)](#xdm)
 
 ## Alertes {#alerts}
 
@@ -79,3 +80,14 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 {style="table-layout:auto"}
 
 Pour plus d’informations, consultez la [vue d’ensemble des sources](../../sources/home.md).
+
+## Modèle de données d’expérience (XDM) {#xdm}
+
+XDM est une spécification Open Source qui fournit des structures et des définitions communes (schémas) pour les données introduites dans Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types d’audiences clientes par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Modification restreinte des schémas avec des jeux de données | Les opérations de modification qui entraînent des modifications avec rupture sont désormais limitées une fois qu’un jeu de données existe pour un schéma. Lorsqu’un jeu de données est associé, vous ne pouvez plus renommer ou supprimer des champs, modifier des types ou des formats de données de champ, modifier des descripteurs d’identité, gérer des champs associés pour supprimer des champs existants ou modifier la classe affectée. D’autres modifications et l’obsolescence des champs restent prises en charge. |
+
+Pour plus d’informations, consultez la [vue d’ensemble XDM](../../xdm/home.md).
+
