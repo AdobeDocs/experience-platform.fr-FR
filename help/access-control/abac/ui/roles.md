@@ -67,7 +67,7 @@ Le nouveau rôle a été créé avec succès et vous êtes redirigé vers la pag
 
 La duplication d’un rôle entraîne la copie sur les détails, les autorisations, les libellés et les sandbox. Les utilisateurs, les groupes d’utilisateurs et d’utilisatrices et les informations d’identification d’API **ne sont pas** copiés et devront être ajoutés manuellement au rôle.
 
-Pour dupliquer un rôle existant, recherchez le rôle que vous souhaitez dupliquer dans l’onglet **[!UICONTROL Roles]** . Sélectionnez l’icône ![ Plus ](/help/images/icons/more.png) à côté du nom du rôle, puis sélectionnez **[!UICONTROL Duplicate]** dans le menu déroulant.
+Pour dupliquer un rôle existant, recherchez le rôle que vous souhaitez dupliquer dans l’onglet **[!UICONTROL Roles]** . Sélectionnez l’icône ![&#x200B; Plus &#x200B;](/help/images/icons/more.png) à côté du nom du rôle, puis sélectionnez **[!UICONTROL Duplicate]** dans le menu déroulant.
 
 ![Espace de travail Rôles avec le menu déroulant d’un rôle développé et l’option Dupliquer mise en surbrillance.](../../images/ui/roles/role-duplicate.png)
 
@@ -85,7 +85,7 @@ La boîte de dialogue de confirmation de duplication s’affiche. Sélectionnez 
 
 ## Supprimer un rôle
 
-Pour supprimer un rôle, recherchez le rôle que vous souhaitez supprimer dans l’onglet **[!UICONTROL Roles]** . Sélectionnez l’icône ![ Plus ](/help/images/icons/more.png) à côté du nom du rôle, puis sélectionnez **[!UICONTROL Delete]** dans le menu déroulant.
+Pour supprimer un rôle, recherchez le rôle que vous souhaitez supprimer dans l’onglet **[!UICONTROL Roles]** . Sélectionnez l’icône ![&#x200B; Plus &#x200B;](/help/images/icons/more.png) à côté du nom du rôle, puis sélectionnez **[!UICONTROL Delete]** dans le menu déroulant.
 
 ![Espace de travail Rôles avec le menu déroulant d’un rôle développé et l’option Dupliquer mise en surbrillance.](../../images/ui/roles/role-delete.png)
 
