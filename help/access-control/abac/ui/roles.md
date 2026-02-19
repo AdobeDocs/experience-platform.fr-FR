@@ -61,7 +61,7 @@ Le nouveau rôle a été créé avec succès et vous êtes redirigé vers la pag
 
 <!-- The following video is intended to support your understanding of creating a new role and managing users for that role.
 
->[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on) -->
+>[!VIDEO](https://video.tv.adobe.com/v/3475975/?captions=fre_fr&learn=on) -->
 
 ## Dupliquer un rôle
 
