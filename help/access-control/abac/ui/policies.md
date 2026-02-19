@@ -3,80 +3,74 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès
 title: Gestion des politiques de contrôle d’accès
 description: Gérez les politiques de contrôle d’accès via l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 2a26c8786adc412dc643c8a0c94b966e439e034b
+source-git-commit: b0094920720c54990953f79de32ab95c2a5c7e1c
 workflow-type: tm+mt
-source-wordcount: '725'
-ht-degree: 10%
+source-wordcount: '625'
+ht-degree: 12%
 
 ---
 
 # Gestion des politiques de contrôle d’accès
 
-Les politiques de contrôle d’accès sont des instructions qui rassemblent des attributs pour établir des actions admissibles et non admissibles. Adobe fournit une politique par défaut qui peut être activée immédiatement ou lorsque votre organisation est prête à commencer à contrôler l’accès à des objets spécifiques en fonction de [&#x200B; libellés &#x200B;](./labels.md){target="_blank"}. La politique par défaut, **[!UICONTROL Default-Label-Based-Access-Control-Policy]**, utilise les libellés appliqués aux ressources pour refuser l’accès à moins que les utilisateurs et utilisatrices ne soient dans un rôle avec un libellé correspondant.
+Les politiques de contrôle d’accès sont des instructions qui rassemblent des attributs pour établir des actions admissibles et non admissibles. Adobe fournit une politique par défaut qui peut être activée immédiatement ou lorsque votre organisation est prête à commencer à contrôler l’accès à des objets spécifiques en fonction de [ libellés ](./labels.md){target="_blank"}. La politique par défaut, **[!UICONTROL Default-Label-Based-Access-Control-Policy]**, utilise les libellés appliqués aux ressources pour refuser l’accès à moins que les utilisateurs et utilisatrices ne soient dans un rôle avec un libellé correspondant.
 
 >[!IMPORTANT]
 >
 >Les politiques de contrôle d’accès ne doivent pas être confondues avec les politiques d’utilisation des données, qui contrôlent la manière dont les données sont utilisées dans Adobe Experience Platform. Pour plus d’informations, consultez le guide sur la création de [politiques d’utilisation des données](../../../data-governance/policies/create.md){target="_blank"}.
 
-## Configuration des sandbox pour une politique {#configure-policy}
-
-Les politiques sont appliquées au niveau du sandbox pour contrôler quels sandbox appliquent le contrôle d’accès basé sur les libellés. Par défaut, la fonction **[!UICONTROL Auto-include]** est activée, ce qui signifie que tous les sandbox actuels et futurs sont automatiquement ajoutés à la politique. Lorsque **[!UICONTROL Auto-include]** est désactivé, seuls les sandbox que vous ajoutez manuellement sont soumis aux règles de contrôle d’accès de la politique.
+## Configuration de la politique d’un sandbox {#configure-policy}
 
 >[!NOTE]
 >
 >La politique **[!UICONTROL Default-Label-Based-Access-Control-Policy]** est actuellement la seule disponible pour configuration.
 
-Pour configurer les sandbox d’une politique, accédez à **[!UICONTROL Permissions]** dans [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}. Sélectionnez **[!UICONTROL Policies]** dans le panneau de gauche, puis sélectionnez le **[!UICONTROL Default-Label-Based-Access-Control-Policy]** dans la liste.
+Pour commencer à configurer une politique, accédez à **[!UICONTROL Permissions]** dans [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}. Sélectionnez **[!UICONTROL Policies]** dans le panneau de gauche. Sélectionnez le **[!UICONTROL Default-Label-Based-Access-Control-Policy]** dans la liste.
 
 ![Espace de travail Politiques affichant une liste des politiques existantes.](../../images/ui/policies/policies-home.png){zoomable="yes"}
 
-L’espace de travail Détails de la politique s’affiche. Sélectionnez l’onglet **[!UICONTROL Sandboxes]** pour afficher la liste des sandbox associés à la politique et accéder aux options de configuration des sandbox.
+L’espace de travail Détails de la politique s’affiche. Sélectionnez le **[!UICONTROL Sandboxes]**. Une liste des sandbox associés à la politique s’affiche.
 
 ![Espace de travail du sandbox de la politique présentant une liste des sandbox associés.](../../images/ui/policies/policy-sandbox.png){zoomable="yes"}
 
-### Gérer l’inclusion automatique {#manage-auto-include}
+### Ajouter une politique à tous les sandbox {#add-policy-to-all}
 
 >[!IMPORTANT]
 >
 >Par défaut, **[!UICONTROL Auto-include]** est activé, ce qui signifie que tous les sandbox actuels et futurs sont automatiquement ajoutés à la politique.
 
-Pour contrôler quels sandbox sont inclus dans une politique, vous pouvez activer ou désactiver la fonction **[!UICONTROL Auto-include]**. Lorsque vous désactivez cette option, **[!UICONTROL Auto-include]** sandbox futurs ne sont pas automatiquement ajoutés à la politique. Toutefois, le fait de désactiver la fonctionnalité **ne supprime pas** les sandbox déjà inclus dans la politique.
+Désactivez la fonction **[!UICONTROL Auto-include]** pour empêcher l’ajout automatique de futurs sandbox à la politique. Le fait de désactiver la fonctionnalité **ne supprime pas** les sandbox de la politique.
 
 ![Onglet Sandbox de la politique avec le bouton (bascule) Inclusion automatique mis en surbrillance et à l’état « désactivé ».](../../images/ui/policies/policy-auto-include.png){zoomable="yes"}
 
-Pour réactiver le **[!UICONTROL Auto-include]**, utilisez le bouton (bascule) pour le réactiver. La boîte de dialogue **[!UICONTROL Enable Auto-include]** s’affiche et vous invite à confirmer votre sélection. Sélectionnez **[!UICONTROL Enable]** pour terminer la configuration.
+Si **[!UICONTROL Auto-include]** n’est pas actif dans une politique, vous pouvez réactiver à l’aide du bouton (bascule). La boîte de dialogue **[!UICONTROL Enable Auto-include]** s’affiche et vous invite à confirmer votre sélection. Sélectionnez **[!UICONTROL Enable]** pour terminer la configuration.
 
 >[!NOTE]
 >
->Lorsque vous réactivez **[!UICONTROL Auto-include]**, tous les sandbox que vous avez précédemment supprimés de la politique sont à nouveau ajoutés.
+>Tous les sandbox que vous avez supprimés de la politique lors de la désactivation de **[!UICONTROL Auto-include]** seront ajoutés à nouveau.
 
 ![Boîte de dialogue Activer l’inclusion automatique avec l’option Activer mise en surbrillance.](../../images/ui/policies/policy-enable-auto-include.png){zoomable="yes"}
 
-### Gestion manuelle des sandbox {#manually-manage-sandboxes}
+### Sélection manuelle de sandbox pour une politique {#manually-select-sandboxes}
 
-Lorsque l’option **[!UICONTROL Auto-include]** est désactivée, vous pouvez ajouter ou supprimer manuellement des sandbox spécifiques de la politique. Vous avez ainsi un contrôle précis sur les sandbox qui appliquent les règles de contrôle d’accès de la politique.
+Pour ajouter ou supprimer manuellement des sandbox à une politique, le bouton (bascule) **[!UICONTROL Auto-include]** **doit** doit être désactivé.
 
->[!NOTE]
->
->Pour ajouter ou supprimer manuellement des sandbox, le bouton (bascule) **[!UICONTROL Auto-include]** **doit** doit être désactivé.
+#### Ajouter des sandbox
 
-**Pour ajouter des sandbox :**
-
-Sélectionnez **[!UICONTROL Add Sandboxes]** dans l’espace de travail Sandbox de la politique.
+Pour ajouter des sandbox à une politique, sélectionnez **[!UICONTROL Add Sandboxes]**.
 
 ![Espace de travail de la politique avec l’option Ajouter des sandbox mise en surbrillance.](../../images/ui/policies/policy-add-sandboxes.png){zoomable="yes"}
 
-La boîte de dialogue **[!UICONTROL Add Sandboxes]** s’affiche, affichant votre bibliothèque de sandbox disponibles. Sélectionnez le ou les sandbox à ajouter à la politique, puis sélectionnez **[!UICONTROL Save]**.
+La boîte de dialogue **[!UICONTROL Add Sandboxes]** s’affiche. Sélectionnez le ou les sandbox à ajouter à la politique, puis sélectionnez **[!UICONTROL Save]**.
 
 ![La boîte de dialogue Ajouter des sandbox avec un sandbox sélectionné et l’option Enregistrer mise en surbrillance.](../../images/ui/policies/policy-add-sandboxes-select.png){zoomable="yes"}
 
 >[!NOTE]
 >
->Si tous les sandbox disponibles sont déjà inclus dans la politique, un message « Vous n’avez rien dans votre bibliothèque » s’affiche dans la boîte de dialogue.
+>Si tous les sandbox disponibles sont déjà ajoutés à la politique, un message « Vous n’avez rien dans votre bibliothèque » s’affiche dans la boîte de dialogue.
 
-**Pour supprimer des sandbox :**
+#### Supprimer des sandbox
 
-Recherchez le sandbox à supprimer de la liste et sélectionnez l’icône **X** en regard de son nom.
+Pour supprimer des sandbox d’une politique, recherchez le sandbox à supprimer de la liste, puis sélectionnez l’icône **X**.
 
 ![Liste sandbox de la politique avec un « x » en surbrillance pour supprimer un sandbox.](../../images/ui/policies/policy-remove-sandbox.png){zoomable="yes"}
 
@@ -107,3 +101,45 @@ La boîte de dialogue **[!UICONTROL Activate Policy]** s’affiche. Sélectionne
 ## Étapes suivantes
 
 Une fois la politique activée, vous pouvez passer à l’étape suivante pour [gérer les autorisations pour un rôle](permissions.md).
+
+<!--Policies are applied at the sandbox level to control which sandboxes enforce label-based access control. By default, the **[!UICONTROL Auto-include]** feature is turned on, which means all current and future sandboxes are automatically added to the policy. When **[!UICONTROL Auto-include]** is turned off, only the sandboxes you manually add will be subject to the policy's access control rules.
+
+To begin configuring a policy's sandboxes, navigate to **[!UICONTROL Permissions]** in [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}. Select **[!UICONTROL Policies]** from the left panel, then select the **[!UICONTROL Default-Label-Based-Access-Control-Policy]** from the list.
+
+The policy's details workspace appears. Select the **[!UICONTROL Sandboxes]** tab to view the list of sandboxes associated with the policy and access the sandbox configuration options.
+
+### Manage Auto-include {#manage-auto-include}
+
+To control which sandboxes are included in a policy, you can toggle the **[!UICONTROL Auto-include]** feature on or off. When you toggle off **[!UICONTROL Auto-include]**, future sandboxes will not be automatically added to the policy. However, toggling off the feature **will not** remove any sandboxes that are already included in the policy.
+
+To re-enable **[!UICONTROL Auto-include]**, use the toggle to turn it back on. The **[!UICONTROL Enable Auto-include]** dialog appears prompting you to confirm your selection. Select **[!UICONTROL Enable]** to complete the configuration setting.
+
+>[!NOTE]
+>
+>When you re-enable **[!UICONTROL Auto-include]**, any sandboxes you previously removed from the policy will be re-added.
+
+### Manually manage sandboxes {#manually-manage-sandboxes}
+
+When **[!UICONTROL Auto-include]**is turned off, you can manually add or remove specific sandboxes from the policy. This gives you precise control over which sandboxes enforce the policy's access control rules.
+
+>[!NOTE]
+>
+>To manually add or remove sandboxes, the **[!UICONTROL Auto-include]** toggle **must** be off.
+
+**To add sandboxes:**
+
+Select **[!UICONTROL Add Sandboxes]** from the policy's sandbox workspace.
+
+The **[!UICONTROL Add Sandboxes]** dialog appears, displaying your library of available sandboxes. Select the sandbox(es) you wish to add to the policy and then select **[!UICONTROL Save]**.
+
+>[!NOTE]
+>
+>If all available sandboxes are already included in the policy, you will see a "You have nothing in your library" message within the dialog.
+
+**To remove sandboxes:**
+
+Find the sandbox you wish to remove from the list and select the **X** icon next to its name.
+
+A confirmation dialog will appear. Select **[!UICONTROL Confirm]** to finish removing the sandbox from the policy.
+
+-->
