@@ -13,7 +13,7 @@ ht-degree: 24%
 
 # Principes de base de la composition des schémas
 
-Découvrez les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques pour la composition de schémas dans Adobe Experience Platform. Pour obtenir des informations générales sur XDM et son utilisation dans Experience Platform, consultez la [ présentation du système XDM ](../home.md).
+Découvrez les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques pour la composition de schémas dans Adobe Experience Platform. Pour obtenir des informations générales sur XDM et son utilisation dans Experience Platform, consultez la [&#x200B; présentation du système XDM &#x200B;](../home.md).
 
 ## Compréhension des schémas {#understanding-schemas}
 
@@ -61,7 +61,7 @@ Pour faciliter ce processus, les champs clés de vos schémas peuvent être marq
 
 Les champs généralement désignés comme champs « [!UICONTROL Identity] » sont les suivants : adresse e-mail, numéro de téléphone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=fr), identifiant CRM ou d’autres champs d’identification uniques. Tenez compte des identifiants uniques spécifiques à votre organisation, car il peut également s’agir de bons champs « [!UICONTROL Identity] ».
 
-Pour en savoir plus sur la manière dont les informations d’identité peuvent vous aider à proposer des expériences digitales à vos clients, consultez la [ présentation d’Identity Service](../../identity-service/home.md). Consultez le document des bonnes pratiques de modélisation des données pour obtenir des [ sur l’utilisation des identités lors de la création d’un schéma](./best-practices.md#data-validation-fields).
+Pour en savoir plus sur la manière dont les informations d’identité peuvent vous aider à proposer des expériences digitales à vos clients, consultez la [&#x200B; présentation d’Identity Service](../../identity-service/home.md). Consultez le document des bonnes pratiques de modélisation des données pour obtenir des [&#x200B; sur l’utilisation des identités lors de la création d’un schéma](./best-practices.md#data-validation-fields).
 
 Il existe deux manières d’envoyer des données d’identité à Experience Platform :
 
@@ -109,7 +109,7 @@ Voici un exemple de mappage d’identités simple :
 }
 ```
 
-Comme le montre l’exemple ci-dessus, chaque clé de l’objet `identityMap` représente un espace de noms d’identité. La valeur de chaque clé est un tableau d’objets représentant les valeurs d’identité (`id`) de l’espace de noms correspondant. Reportez-vous à la documentation [!DNL Identity Service] pour obtenir une [ liste des espaces de noms d’identité standard](../../identity-service/troubleshooting-guide.md#standard-namespaces) reconnus par les applications Adobe.
+Comme le montre l’exemple ci-dessus, chaque clé de l’objet `identityMap` représente un espace de noms d’identité. La valeur de chaque clé est un tableau d’objets représentant les valeurs d’identité (`id`) de l’espace de noms correspondant. Reportez-vous à la documentation [!DNL Identity Service] pour obtenir une [&#x200B; liste des espaces de noms d’identité standard](../../identity-service/troubleshooting-guide.md#standard-namespaces) reconnus par les applications Adobe.
 
 >[!NOTE]
 >
@@ -161,9 +161,9 @@ Experience Platform utilise une approche de composition dans laquelle des blocs
 
 Les schémas sont composés à l’aide de la formule suivante :
 
-**Classe + Groupe de champs de schéma&amp;ast; = Schéma XDM**
+**Classe + Groupe de champs de schéma&ast; = Schéma XDM**
 
-&amp;ast;Un schéma est composé d’une classe et de zéro ou de plusieurs groupes de champs de schéma. Cela signifie que vous pouvez composer un schéma de jeu de données sans utiliser de groupes de champs.
+&ast;Un schéma est composé d’une classe et de zéro ou de plusieurs groupes de champs de schéma. Cela signifie que vous pouvez composer un schéma de jeu de données sans utiliser de groupes de champs.
 
 ### Classe {#class}
 
@@ -306,8 +306,8 @@ Tous les fichiers de données ingérés dans Experience Platform doivent être 
 
 Si vous importez des audiences de systèmes externes dans Experience Platform, vous devez utiliser les composants suivants pour les capturer dans vos schémas :
 
-* [[!UICONTROL Segment definition] class ](../classes/segment-definition.md) : utilisez cette classe standard pour capturer les attributs clés d’une définition de segment externe.
-* [[!UICONTROL Segment Membership Details] le groupe de champs ](../field-groups/profile/segmentation.md) : ajoutez ce groupe de champs à votre schéma [!UICONTROL XDM Individual Profile] pour associer des profils client à des audiences spécifiques.
+* [[!UICONTROL Segment definition] class &#x200B;](../classes/segment-definition.md) : utilisez cette classe standard pour capturer les attributs clés d’une définition de segment externe.
+* [[!UICONTROL Segment Membership Details] le groupe de champs &#x200B;](../field-groups/profile/segmentation.md) : ajoutez ce groupe de champs à votre schéma [!UICONTROL XDM Individual Profile] pour associer des profils client à des audiences spécifiques.
 
 ## Étapes suivantes
 
@@ -364,7 +364,7 @@ Les avantages et inconvénients de l’utilisation d’objets sur des champs à 
 **Inconvénients** :
 
 * Les champs deviennent plus imbriqués.
-* Lors de l’utilisation d’Experience Platform Query Service [](../../query-service/home.md), des chaînes de référence plus longues doivent être fournies aux champs de requête imbriqués dans des objets.
+* Lors de l’utilisation d’Experience Platform Query Service [&#128279;](../../query-service/home.md), des chaînes de référence plus longues doivent être fournies aux champs de requête imbriqués dans des objets.
 
 #### Champs à structure libre
 
