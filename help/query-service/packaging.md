@@ -2,14 +2,14 @@
 title: Package Query Service
 description: Le document suivant décrit l’emballage des fonctionnalités et des produits disponibles pour Query Service et met en évidence les différences entre les requêtes ad hoc et par lots.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 33b3534a2c3f9b5da54fa4f3897d1e107f7c1976
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '990'
 ht-degree: 5%
 
 ---
 
-# Package Query Service
+# Package du service de requête
 
 Ce document décrit les différents types de package et les fonctionnalités d’exécution de requête disponibles dans Query Service.
 
@@ -33,7 +33,7 @@ Le tableau suivant décrit les droits clés de Query Service en fonction de leur
 | Cas d’utilisation pris en charge | <ul><li>Exploration&#x200B;</li><li>Découverte de données&#x200B;</li><li>Validation des données</li><li>Expérimentation</li></ul> | <ul><li>Nettoyage</li><li>Mise en forme</li><li>Manipulation</li><li>Enrichissement</li></ul> |
 | Sémantique prise en charge | <ul><li>Requêtes SELECT</li></ul> | <ul><li>Requêtes CTAS et ITAS</li></ul> |
 | Durée Maximale D’Exécution | 10 minutes | 24 heures |
-| Mesure de licence | **Simultanéité de l&#39;utilisateur de requête** : <ul><li>1 utilisateur simultané (Real-Time CDP, Adobe Journey Optimizer) &#x200B;</li><li>5 utilisateurs simultanés (Customer Journey Analytics) &#x200B;</li></ul> **Simultanéité des requêtes** : <ul><li>1 requête en cours d’exécution (toutes les applications) &#x200B;</li></ul> **Vous pouvez acheter un module complémentaire supplémentaire de package d’utilisateurs de requêtes ad hoc** pour augmenter vos droits de requête ad hoc autorisés. <ul><li>+5 utilisateurs simultanés supplémentaires par pack</li><li>+1 requête d’exécution simultanée supplémentaire par pack</li></ul> | **Heures de calcul** : <ul><li>Variable (étendue en fonction des droits de votre application)</li></ul> Le **nombre d’heures de calcul** est une mesure du temps pris par le moteur de Query Service pour lire, traiter et écrire des données dans le lac de données lorsqu’une requête par lots est exécutée. <br>Avec le SKU Data Distiller, vous obtenez également un utilisateur supplémentaire et une simultanéité des requêtes, qui peut être utilisée pour l’exécution de requêtes ad hoc.  Le SKU de Data Distiller comprend les éléments suivants <br><ul><li>+5 utilisateurs simultanés supplémentaires</li><li>+1 requête supplémentaire en cours d’exécution</li></ul> |
+| Mesure de licence | **Simultanéité de l&#39;utilisateur de requête** : <ul><li>1 utilisateur simultané (Real-Time CDP, Adobe Journey Optimizer) &#x200B;</li><li>5 utilisateurs simultanés (Customer Journey Analytics, Adobe Mix Modeler) &#x200B;</li></ul> **Simultanéité des requêtes** : <ul><li>1 requête en cours d’exécution (toutes les applications) &#x200B;</li></ul> **Vous pouvez acheter un module complémentaire supplémentaire de package d’utilisateurs de requêtes ad hoc** pour augmenter vos droits de requête ad hoc autorisés. <ul><li>+5 utilisateurs simultanés supplémentaires par pack</li><li>+1 requête d’exécution simultanée supplémentaire par pack</li></ul> | **Heures de calcul** : <ul><li>Variable (étendue en fonction des droits de votre application)</li></ul> Le **nombre d’heures de calcul** est une mesure du temps pris par le moteur de Query Service pour lire, traiter et écrire des données dans le lac de données lorsqu’une requête par lots est exécutée. <br>Avec le SKU Data Distiller, vous obtenez également un utilisateur supplémentaire et une simultanéité des requêtes, qui peut être utilisée pour l’exécution de requêtes ad hoc.  Le SKU de Data Distiller comprend les éléments suivants <br><ul><li>+5 utilisateurs simultanés supplémentaires</li><li>+1 requête supplémentaire en cours d’exécution</li></ul> |
 | Utilisation accélérée des requêtes et des rapports | Non | Oui - Les requêtes accélérées simultanées vous permettent de lire les données de la boutique accélérée et de les afficher dans vos tableaux de bord. Un droit dédié pour le stockage des modèles de création de rapports et des jeux de données dans la boutique accélérée est également fourni. |
 | Capacité de stockage du lac de données | Le droit total au stockage dépend de vos licences d’applications basées sur la plateforme. Par exemple, Real-Time CDP, AJO, CJA, etc. | Oui - Un droit d’enregistrement supplémentaire est fourni pour conserver vos jeux de données bruts et dérivés pour les cas d’utilisation de Data Distiller au-delà d’une date d’expiration de sept jours.<br>La capacité de stockage de votre lac de données est mesurée en téraoctets (To) et dépend de la quantité d’heures de calcul que vous avez achetées. Pour plus d’informations, consultez la description du produit . |
 | Allocation d&#39;exportation de données | Le droit d’exportation total dépend de vos licences d’applications basées sur Platform. Par exemple, Real-Time CDP, AJO, CJA, etc. | Oui - Un droit d’exportation supplémentaire est fourni pour permettre l’exportation de jeux de données dérivés créés à l’aide de Data Distiller.<br>Votre allocation annuelle d’exportation de données est mesurée en téraoctets (To) et dépend de la quantité d’heures de calcul que vous avez achetées. Veuillez consulter la description du produit pour plus de détails. |
@@ -84,5 +84,5 @@ Les sandbox sont des partitions virtuelles au sein d’une instance unique d’E
 
 ## Étapes suivantes
 
-En lisant ce document, vous devriez mieux comprendre les différents types de packages et les fonctionnalités d’exécution de requête disponibles dans Query Service. Pour en savoir plus sur Query Service, tel que les cas d’utilisation bien connus du secteur, consultez la [&#x200B; documentation sur les cas d’utilisation &#x200B;](./use-cases/abandoned-browse.md). Pour des informations plus générales, consultez la [présentation de Query Service](./home.md).
+En lisant ce document, vous devriez mieux comprendre les différents types de packages et les fonctionnalités d’exécution de requête disponibles dans Query Service. Pour en savoir plus sur Query Service, tel que les cas d’utilisation bien connus du secteur, consultez la [ documentation sur les cas d’utilisation ](./use-cases/abandoned-browse.md). Pour des informations plus générales, consultez la [présentation de Query Service](./home.md).
 
