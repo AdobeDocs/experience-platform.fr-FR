@@ -170,5 +170,5 @@ Vous savez maintenant comment afficher les détails et les rôles d’un utilisa
 <!--
 The following video is intended to support your understanding of developer and API credentials.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446400/?captions=fre_fr&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
 -->
