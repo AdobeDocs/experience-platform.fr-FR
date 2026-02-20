@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Février 2026
 description: Les notes de mise à jour de février 2026 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a11c00c218ffbbd5618616f401613a604c35859a
+source-git-commit: 05c9a99132d1385f9ec043bb667a72304b17a9b5
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '731'
 ht-degree: 49%
 
 ---
@@ -27,6 +27,7 @@ Nouvelles fonctionnalités et mises à jour des fonctionnalités existantes dans
 
 - [Alertes](#alerts)
 - [Destinations](#destinations)
+- [Service de segmentation](#segmentation-service)
 - [Sources](#sources)
 - [Modèle de données d’expérience (XDM)](#xdm)
 
@@ -66,6 +67,19 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 {style="table-layout:auto"}
 
 Pour plus d’informations, consultez la [vue d’ensemble des destinations](../../destinations/home.md).
+
+## Service de segmentation {#segmentation-service}
+
+[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les audiences peuvent être basées sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions de la clientèle avec votre marque.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Audiences d’API modifiables | Vous pouvez désormais modifier les audiences créées à l’aide de l’API Segmentation Service ou d’Audience Agent dans le créateur de segments. **Remarque :** les audiences qui contiennent des données de série temporelle **ne peuvent pas** être modifiées à l’aide du créateur de segments pour le moment. |
+| Actualisation de l’expiration des données d’audience externe | Vous pouvez utiliser l’API Segmentation Service pour étendre l’expiration des données de vos audiences externes. Pour plus d’informations, consultez le [guide de l’API destiné aux audiences externes](/help/segmentation/api/external-audiences.md#extend-data-expiration). |
+
+Pour plus d’informations, consultez la [[!DNL Segmentation Service] vue d’ensemble](../../segmentation/home.md).
 
 ## Sources {#sources}
 
