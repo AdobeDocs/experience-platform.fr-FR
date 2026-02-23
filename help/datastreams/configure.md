@@ -153,7 +153,7 @@ Ce service contrôle si et comment les données sont envoyées à Adobe Analytic
 | [!UICONTROL Visitor ID namespace] | (Facultatif) Espace de noms à utiliser pour l’Adobe Analytics [visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html?lang=fr). Lorsque vous envoyez un événement avec une valeur spécifiée pour cet espace de noms, il est automatiquement utilisé comme `visitorID` dans Analytics. |
 | [!UICONTROL Report Suite Overrides] | Dans cette section, vous pouvez ajouter d’autres identifiants de suites de rapports que vous pouvez utiliser pour remplacer celui par défaut. |
 
-Voir [ Implémentation d’Adobe Analytics avec Edge Network ](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/overview) dans le guide de mise en œuvre d’Analytics pour plus d’informations.
+Voir [&#x200B; Implémentation d’Adobe Analytics avec Edge Network &#x200B;](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/overview) dans le guide de mise en œuvre d’Analytics pour plus d’informations.
 
 ### Paramètres d’Adobe Audience Manager {#audience-manager}
 
