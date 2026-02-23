@@ -1,11 +1,11 @@
 ---
 title: Mises à niveau de l’architecture vers Real-Time CDP B2B edition
 description: Lisez ce document pour en savoir plus sur les mises à niveau complètes de l’architecture vers Real-Time CDP B2B edition.
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: d958a947-e195-4dd4-a04c-63ad82829728
-source-git-commit: a48196d369cec9e9927d9320475e06457e575691
+source-git-commit: 056a7ff98e335b238fc03ab84b11c9a97221ddaa
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1155'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,13 @@ Utilisez l’architecture améliorée pour bénéficier des avantages suivants :
 
 * **Évolutivité de l’ingestion des données** : prise en charge améliorée des relations B2B à cardinalité élevée, telles que les comptes connectés à des milliers de personnes.
 * **Évaluation d’audience performante et fiable** : segmentation plus rapide et plus résiliente pour les audiences B2B complexes.
-* **résolution d’entité** : résolution d’identité améliorée pour les entités B2B, qualité des données améliorée et duplication réduite pour permettre une segmentation et une agrégation plus précises.
+* **Résolution d’entité** : résolution d’identité améliorée pour les entités B2B, qualité des données améliorée et duplication réduite pour permettre une segmentation et une agrégation plus précises.
+
+>[!TIP]
+>
+>Selon la taille et la complexité de l’audience, vous pouvez rencontrer des modifications mineures dans le temps nécessaire à l’évaluation de l’audience et à l’activation de l’audience.
+>
+>Nous vous recommandons de surveiller les temps d’exécution de la segmentation, en particulier si vos processus métier reposent sur l’achèvement de la segmentation et de l’activation dans les délais. Cela permet de s’assurer que vos workflows continuent de s’exécuter correctement et de répondre de manière proactive à toute modification inattendue.
 
 ## Nouvelles fonctionnalités
 
@@ -59,7 +65,7 @@ Les fonctionnalités suivantes ont été mises à jour dans le cadre des mises �
 
 Dans le cadre de la nouvelle mise à niveau de l’architecture, les filtres d’événement d’expérience ne peuvent plus être utilisés dans une audience unique à entités multiples qui inclut des attributs B2B.
 
-Pour appliquer la même logique d’audience, vous pouvez utiliser le créateur de segments pour [&#x200B; ajouter des audiences et des audiences de référence &#x200B;](../segmentation/ui/segment-builder.md#adding-audiences)
+Pour appliquer la même logique d’audience, vous pouvez utiliser le créateur de segments pour [ ajouter des audiences et des audiences de référence ](../segmentation/ui/segment-builder.md#adding-audiences)
 
 Par exemple :
 
@@ -106,7 +112,7 @@ Les fonctionnalités de recherche suivantes pour les entités B2B à l’aide de
 
 * Relation Compte-Personne
 * Relation Opportunité-Personne
-* Campagne
+* Campaign
 * Membre de la campagne
 * Liste marketing
 * Membres de la liste marketing
@@ -117,7 +123,7 @@ Les requêtes de suppression pour les entités B2B suivantes utilisant l’API [
 * Relation Compte-Personne
 * Opportunité
 * Relation Opportunité-Personne
-* Campagne
+* Campaign
 * Membre de la campagne
 * Liste marketing
 * Membres de la liste marketing
