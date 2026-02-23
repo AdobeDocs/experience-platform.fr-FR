@@ -153,7 +153,7 @@ Ce service contrôle si et comment les données sont envoyées à Adobe Analytic
 | [!UICONTROL Visitor ID namespace] | (Facultatif) Espace de noms à utiliser pour l’Adobe Analytics [visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html?lang=fr). Lorsque vous envoyez un événement avec une valeur spécifiée pour cet espace de noms, il est automatiquement utilisé comme `visitorID` dans Analytics. <br> Lorsque le champ est renseigné, le flux de données envoie la valeur `visitorID` à Adobe Analytics. Que l’identifiant visiteur soit inclus ou non dans le `identityMap`, le `ECID` est toujours généré et inclus avec les requêtes sortantes. Analytics prend en charge l’inclusion de plusieurs identifiants. Les identifiants sont évalués dans l’ordre décrit sur cette page : [ordre des opérations d’identification d’Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/id/overview#adobe-analytics-identification-order-of-operations). |
 | [!UICONTROL Report Suite Overrides] | Dans cette section, vous pouvez ajouter d’autres identifiants de suites de rapports que vous pouvez utiliser pour remplacer celui par défaut. |
 
-Voir [ Implémentation d’Adobe Analytics avec Edge Network ](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/overview) dans le guide de mise en œuvre d’Analytics pour plus d’informations.
+Voir [&#x200B; Implémentation d’Adobe Analytics avec Edge Network &#x200B;](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/overview) dans le guide de mise en œuvre d’Analytics pour plus d’informations.
 
 ### Paramètres d’Adobe Audience Manager {#audience-manager}
 
