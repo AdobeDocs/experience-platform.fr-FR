@@ -13,7 +13,7 @@ ht-degree: 32%
 
 Adobe Experience Platform offre un ensemble d’outils fiables pour gérer des opérations de données complexes et volumineuses afin d’orchestrer les expériences client. Les données étant ingérées dans le système au fil du temps, il devient de plus en plus important de gérer les banques de données pour que les données soient utilisées comme prévu, mises à jour lorsque des données incorrectes doivent être corrigées et supprimées lorsque les politiques d’entreprise le jugent nécessaire.
 
-Ces activités peuvent être effectuées à l’aide de l’espace de travail de l’interface utilisateur [[!UICONTROL Data Lifecycle] ](#ui) ou de l’[API Data Hygiene](#api). Lorsqu’une tâche du cycle de vie des données s’exécute, le système fournit des mises à jour de transparence à chaque étape du processus. Pour plus d’informations sur la représentation de chaque type de traitement dans le système, consultez la section sur [la chronologie et la transparence](#timelines-and-transparency).
+Ces activités peuvent être effectuées à l’aide de l’espace de travail de l’interface utilisateur [[!UICONTROL Data Lifecycle] &#x200B;](#ui) ou de l’[API Data Hygiene](#api). Lorsqu’une tâche du cycle de vie des données s’exécute, le système fournit des mises à jour de transparence à chaque étape du processus. Pour plus d’informations sur la représentation de chaque type de traitement dans le système, consultez la section sur [la chronologie et la transparence](#timelines-and-transparency).
 
 >[!NOTE]
 >
@@ -53,4 +53,4 @@ Ce qui suit se produit lorsqu’une [requête d’expiration de jeu de données]
 
 ## Étapes suivantes
 
-Ce document présente un aperçu des fonctionnalités d’Experience Platform relatives au cycle de vie des données. Pour commencer à effectuer des demandes d’hygiène des données dans l’interface utilisateur, reportez-vous au [guide de l’interface utilisateur](./ui/overview.md). Pour savoir comment créer des tâches de cycle de vie des données par programmation, reportez-vous au guide de l’API [ Data Hygiene ](./api/overview.md)
+Ce document présente un aperçu des fonctionnalités d’Experience Platform relatives au cycle de vie des données. Pour commencer à effectuer des demandes d’hygiène des données dans l’interface utilisateur, reportez-vous au [guide de l’interface utilisateur](./ui/overview.md). Pour savoir comment créer des tâches de cycle de vie des données par programmation, reportez-vous au guide de l’API [&#x200B; Data Hygiene &#x200B;](./api/overview.md)
