@@ -3,10 +3,10 @@ title: Connexion HubSpot
 description: La destination HubSpot vous permet de gérer les enregistrements de contact dans votre compte HubSpot.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1499'
-ht-degree: 32%
+source-wordcount: '1642'
+ht-degree: 29%
 
 ---
 
@@ -30,7 +30,7 @@ Reportez-vous aux sections ci-dessous pour connaître les conditions préalables
 
 ### Conditions préalables d’Experience Platform {#prerequisites-in-experience-platform}
 
-Avant d’activer des données dans la destination [!DNL HubSpot], vous devez avoir créé un [schéma](/help/xdm/schema/composition.md), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr) et des [audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=fr) dans [!DNL Experience Platform].
+Avant d’activer des données dans la destination [!DNL HubSpot], vous devez avoir créé un [schéma](/help/xdm/schema/composition.md), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) et des [audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) dans [!DNL Experience Platform].
 
 Reportez-vous à la documentation Experience Platform pour le [groupe de champs de schéma Détails sur l’appartenance à une audience](/help/xdm/field-groups/profile/segmentation.md) si vous avez besoin de conseils sur les statuts de l’audience.
 
@@ -46,13 +46,13 @@ Pour exporter des données d’Experience Platform vers votre compte [!DNL Hubsp
 
 Vous avez besoin de votre [!DNL HubSpot] `Access token` pour permettre à la destination [!DNL HubSpot] d’effectuer des appels API via votre application privée [!DNL HubSpot] dans votre compte [!DNL HubSpot]. Le `Access token` sert de `Bearer token` lorsque vous [authentifiez la destination](#authenticate).
 
-Si vous ne disposez pas d’une application privée, consultez la documentation pour [&#x200B; Créer une application privée dans  [!DNL HubSpot]](https://developers.hubspot.com/docs/api/private-apps).
+Si vous ne disposez pas d’une application privée, consultez la documentation pour [ Créer une application privée dans  [!DNL HubSpot]](https://developers.hubspot.com/docs/api/private-apps).
 
 >[!IMPORTANT]
 >
 > Les portées ci-dessous doivent être attribuées à l’application privée :
-> &#x200B;> `crm.objects.contacts.write`, `crm.objects.contacts.read`
-> &#x200B;> `crm.schemas.contacts.write`, `crm.schemas.contacts.read`
+> `crm.objects.contacts.write`, `crm.objects.contacts.read`
+> `crm.schemas.contacts.write`, `crm.schemas.contacts.read`
 
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
@@ -60,7 +60,7 @@ Si vous ne disposez pas d’une application privée, consultez la documentation 
 
 ## Mécanismes de sécurisation {#guardrails}
 
-[!DNL HubSpot] applications privées sont soumises à des [limites de taux](https://developers.hubspot.com/docs/api/usage-details). Le nombre d’appels que votre application privée peut effectuer est basé sur votre abonnement au compte [!DNL HubSpot] et sur le fait que vous ayez ou non acheté le module complémentaire API. Reportez-vous également à la section [&#x200B; Autres limites &#x200B;](https://developers.hubspot.com/docs/api/usage-details#other-limits).
+[!DNL HubSpot] applications privées sont soumises à des [limites de taux](https://developers.hubspot.com/docs/api/usage-details). Le nombre d’appels que votre application privée peut effectuer est basé sur votre abonnement au compte [!DNL HubSpot] et sur le fait que vous ayez ou non acheté le module complémentaire API. Reportez-vous également à la section [ Autres limites ](https://developers.hubspot.com/docs/api/usage-details#other-limits).
 
 ## Identités prises en charge {#supported-identities}
 
@@ -78,11 +78,26 @@ Cette destination prend en charge l’activation de toutes les audiences génér
 
 Cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
 
-| Type d’audience | Description |
-|---------|----------|
-| Chargements personnalisés | Audiences [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
+| Origine de l’audience | Pris en charge | Description |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Oui | Audiences générées via Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Toutes les autres origines d’audience | Oui | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform telles que Adobe Journey Optimizer, </li><li> et plus encore. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Audiences prises en charge par type de données d’audience :
+
+| Type de données d’audience | Pris en charge | Description | Cas d’utilisation |
+|--------------------|-----------|-------------|-----------|
+| [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
+| [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
+
+{style="table-layout:auto"}
+
 
 ## Type et fréquence d’exportation {#export-type-frequency}
 

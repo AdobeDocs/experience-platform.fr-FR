@@ -2,10 +2,10 @@
 title: Connecteur de destination Adobe Commerce
 description: Découvrez comment les commerçants Adobe Commerce et Real-Time CDP peuvent personnaliser l’expérience d’achat en proposant du contenu et des promotions de sites hautement pertinents, personnalisés en fonction des audiences de clients créées et gérées dans Real-Time CDP.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: 70556134a96260ae111c71ee288d4d646481270b
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '668'
-ht-degree: 42%
+source-wordcount: '839'
+ht-degree: 35%
 
 ---
 
@@ -22,16 +22,41 @@ Ce connecteur est disponible dans le catalogue des destinations pour les clients
 Pour utiliser cette connexion de destination, vérifiez que vous avez accès aux éléments suivants :
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
-- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Grâce à l’accès à Developer Console, vous pouvez afficher le compte de service et les informations d’identification nécessaires pour [terminer la configuration](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=fr#configure-the-extension) de l’extension dans Adobe Commerce.
-- [Adobe Commerce version 2.4.4 ou ultérieure](https://business.adobe.com/fr/products/commerce.html)
+- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Grâce à l’accès à Developer Console, vous pouvez afficher le compte de service et les informations d’identification nécessaires pour [terminer la configuration](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension) de l’extension dans Adobe Commerce.
+- [Adobe Commerce version 2.4.4 ou ultérieure](https://business.adobe.com/products/commerce.html)
 
 Dans Experience Platform, créez les éléments suivants :
 
-- [Schéma](../../../xdm/schema/composition.md). Le schéma que vous créez représente les données que vous prévoyez d’ingérer à partir d’Adobe Commerce. [En savoir plus](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html?lang=fr) sur la création d’un schéma contenant des groupes de champs spécifiques à Commerce.
+- [Schéma](../../../xdm/schema/composition.md). Le schéma que vous créez représente les données que vous prévoyez d’ingérer à partir d’Adobe Commerce. [En savoir plus](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html) sur la création d’un schéma contenant des groupes de champs spécifiques à Commerce.
 - [Jeu de données](../../../catalog/datasets/user-guide.md#create). Un jeu de données est une structure de stockage et de gestion pour une collecte de données. Vous créez ce jeu de données à partir du schéma que vous avez créé ci-dessus.
 - [Flux de données](../../../datastreams/overview.md#create). Identifiant qui permet aux données de passer d’Adobe Experience Platform à d’autres produits DX d’Adobe. Cet identifiant doit être associé à un site web spécifique au sein de votre instance Adobe Commerce spécifique. Lorsque vous créez ce train de données, spécifiez le schéma XDM que vous avez créé ci-dessus.
 
 Une fois les conditions préalables remplies, connectez-vous à la destination [!DNL Commerce].
+
+## Audiences prises en charge {#supported-audiences}
+
+Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination.
+
+| Origine de l’audience | Pris en charge | Description |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Oui | Audiences générées via Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Toutes les autres origines d’audience | Oui | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform telles que Adobe Journey Optimizer, </li><li> et plus encore. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Audiences prises en charge par type de données d’audience :
+
+| Type de données d’audience | Pris en charge | Description | Cas d’utilisation |
+|--------------------|-----------|-------------|-----------|
+| [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
+| [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
+
+{style="table-layout:auto"}
+
 
 ## Se connecter à la destination {#connect}
 
@@ -71,7 +96,7 @@ Lisez [Activer des profils et des audiences vers les destinations de requête de
 
 ## Étapes suivantes dans [!DNL Adobe Commerce]
 
-Maintenant que vous avez configuré la destination [!DNL Commerce] dans Experience Platform, vous devez installer l’extension [!DNL Audience Activation] dans [!DNL Commerce] et configurer le [!DNL Commerce Admin] pour importer les audiences Real-Time CDP que vous avez créées. Consultez la [[!DNL Commerce] documentation](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=fr) pour en savoir plus.
+Maintenant que vous avez configuré la destination [!DNL Commerce] dans Experience Platform, vous devez installer l’extension [!DNL Audience Activation] dans [!DNL Commerce] et configurer le [!DNL Commerce Admin] pour importer les audiences Real-Time CDP que vous avez créées. Consultez la [[!DNL Commerce] documentation](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html) pour en savoir plus.
 
 ## Valider l’activation de l’audience dans Commerce {#exported-data}
 

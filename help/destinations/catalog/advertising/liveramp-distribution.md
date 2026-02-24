@@ -2,10 +2,10 @@
 title: LiveRamp - Connexion de distribution
 description: Découvrez comment utiliser LiveRamp - Connecteur de distribution pour orchestrer et activer des audiences précédemment intégrées à LiveRamp, vers des destinations publicitaires en aval.
 exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '2645'
-ht-degree: 45%
+source-wordcount: '2816'
+ht-degree: 43%
 
 ---
 
@@ -48,13 +48,38 @@ Pour mieux comprendre quand et comment utiliser la destination [!DNL LiveRamp - 
 
 L’équipe marketing d’un retailer de vêtements de sport a utilisé la connexion [LiveRamp - Intégration](liveramp-onboarding.md) pour envoyer des audiences d’Experience Platform à leur compte LiveRamp.
 
-Grâce à la connexion [!DNL LiveRamp - Distribution], ils peuvent désormais déclencher l’activation des audiences intégrées vers les [&#x200B; destinations prises en charge &#x200B;](#supported-destinations). Ensuite, ils peuvent cibler les utilisateurs sur les plateformes mobiles, web, sociales et [!DNL CTV] ouvertes.
+Grâce à la connexion [!DNL LiveRamp - Distribution], ils peuvent désormais déclencher l’activation des audiences intégrées vers les [ destinations prises en charge ](#supported-destinations). Ensuite, ils peuvent cibler les utilisateurs sur les plateformes mobiles, web, sociales et [!DNL CTV] ouvertes.
 
 ## Intégration d’audiences à LiveRamp {#onboarding}
 
 Avant d’activer des audiences via la connexion [!DNL LiveRamp - Distribution], utilisez la connexion [LiveRamp - Intégration](liveramp-onboarding.md) pour exporter vos audiences Experience Platform vers LiveRamp.
 
 Une fois que vous avez intégré vos audiences à LiveRamp, poursuivez le processus d’activation à partir de l’étape [se connecter à la destination](#connect) pour sélectionner et configurer vos plateformes de destination cibles pour l’activation des données.
+
+## Audiences prises en charge {#supported-audiences}
+
+Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination.
+
+| Origine de l’audience | Pris en charge | Description |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Oui | Audiences générées via Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Toutes les autres origines d’audience | Non | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform telles que Adobe Journey Optimizer, </li><li> et plus encore. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Audiences prises en charge par type de données d’audience :
+
+| Type de données d’audience | Pris en charge | Description | Cas d’utilisation |
+|--------------------|-----------|-------------|-----------|
+| [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
+| [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
+
+{style="table-layout:auto"}
+
 
 ## Se connecter à la destination {#connect}
 
@@ -90,7 +115,7 @@ Une fois la connexion à votre compte LiveRamp établie, saisissez les informati
 
 >[!NOTE]
 >
->Lorsque vous attribuez un nom à une destination, Adobe recommande de suivre le format suivant : `LiveRamp - Downstream Destination Name`. Ce modèle de dénomination vous permet d’identifier rapidement vos destinations dans l’onglet [&#x200B; Parcourir &#x200B;](../../ui/destinations-workspace.md#browse) de l’espace de travail des destinations.
+>Lorsque vous attribuez un nom à une destination, Adobe recommande de suivre le format suivant : `LiveRamp - Downstream Destination Name`. Ce modèle de dénomination vous permet d’identifier rapidement vos destinations dans l’onglet [ Parcourir ](../../ui/destinations-workspace.md#browse) de l’espace de travail des destinations.
 ><br>
 >Exemple : `LiveRamp - Roku`.
 

@@ -4,10 +4,10 @@ description: Utilisez le connecteur de synchronisation des personnes Marketo Eng
 last-substantial-update: 2025-01-14T00:00:00Z
 badgeBeta: label="Beta" type="Informative"
 exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
-source-git-commit: 7d9f06f77f2265f3ae62542fd7fc1bd09d34d078
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1127'
-ht-degree: 19%
+source-wordcount: '1228'
+ht-degree: 13%
 
 ---
 
@@ -19,12 +19,12 @@ ht-degree: 19%
 
 >[!IMPORTANT]
 >
->La carte de destination **[!UICONTROL Synchronisation des personnes Marketo Engage]** sera abandonnée en **octobre 2025**.
+>La carte de destination **[!UICONTROL Marketo Engage Person Sync]** sera abandonnée en **octobre 2025**.
 >
->Pour garantir une transition en douceur vers la nouvelle destination **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)**, passez en revue les points clés et les actions requises suivants :
+>Pour garantir une transition en douceur vers la nouvelle destination **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)**, passez en revue les points clés suivants et les actions requises :
 >
 >* Tous les utilisateurs doivent **cesser d’utiliser la destination de synchronisation des personnes de Marketo Engage** et migrer vers la nouvelle destination **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** d’ici octobre 2025.
->* **Les flux de données existants ne seront pas migrés automatiquement.** Vous devez [configurer une nouvelle connexion](marketo-engage-connection.md#connect-to-the-destination) vers la nouvelle destination **[!UICONTROL Marketo Engage]** et y activer vos audiences.
+>* **Les flux de données existants ne seront pas migrés automatiquement.** Vous devez [configurer une nouvelle connexion](marketo-engage-connection.md#connect-to-the-destination) vers la nouvelle destination **[!UICONTROL Marketo Engage]** et y activer vos audiences.
 
 
 ## Vue d’ensemble {#overview}
@@ -55,8 +55,21 @@ Cette section décrit les types d’audiences que vous pouvez exporter vers cett
 
 | Origine de l’audience | Pris en charge | Description |
 | -------------------- | :-------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Service de segmentation | ✓ | Audiences générées via Experience Platform [Segmentation Service](https://experienceleague.adobe.com/fr/docs/experience-platform/segmentation/home). |
-| Chargements personnalisés | ✓ | Audiences importées dans Experience Platform à partir de fichiers CSV. |
+| Service de segmentation | Oui | Audiences générées via Experience Platform [Segmentation Service](https://experienceleague.adobe.com/fr/docs/experience-platform/segmentation/home). |
+| Toutes les autres origines d’audience | Oui | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform telles que Adobe Journey Optimizer, </li><li> et plus encore. </li></ul> |
+
+{style="table-layout:auto"}
+
+Audiences prises en charge par type de données d’audience :
+
+| Type de données d’audience | Pris en charge | Description | Cas d’utilisation |
+|--------------------|-----------|-------------|-----------|
+| [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
+| [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
+
+{style="table-layout:auto"}
 
 ## Type et fréquence d’exportation {#export-type-and-frequency}
 
@@ -72,24 +85,24 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->* Pour vous connecter à la destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions).
+>* Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
 
 Si votre société a accès à plusieurs organisations, veillez à utiliser la même organisation dans Marketo Engage et Real-Time CDP, où vous configurez le connecteur de destination vers Marketo.  Si vous avez déjà configuré une destination, vous pouvez sélectionner un compte Marketo existant à utiliser avec votre nouvelle configuration.  Si ce n’est pas le cas, cliquez sur l’invite Connecteur vers la destination , qui vous permet de définir le nom, la description et l’identifiant Marketo Munchkin de la destination souhaitée.  L’identifiant Munchkin de votre instance Marketo se trouve dans le menu Admin->Munchkin .
 
 >[!IMPORTANT]
 >
->L’utilisateur configurant la destination doit disposer de l’autorisation [&#x200B; Modifier la personne &#x200B;](https://experienceleague.adobe.com/fr/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) dans l’instance et la partition Marketo.
+>L’utilisateur configurant la destination doit disposer de l’autorisation [ Modifier la personne ](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) dans l’instance et la partition Marketo.
 
 ![Se connecter à la destination](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
-* **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
-* **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Munchkin ID]** : Munchkin ID est l’identifiant unique d’une instance Marketo spécifique.
-* **[!UICONTROL Partition]** : concept dans Marketo Engage utilisé pour séparer les enregistrements de prospect par préoccupation commerciale
-* **[!UICONTROL Premier champ consultable]** : champ à dédupliquer. Le champ doit être présent dans chaque enregistrement de prospect de l’entrée. La valeur par défaut est e-mail.
-* **[!UICONTROL Premier champ consultable]** : champ secondaire à dédupliquer. Le champ doit être présent dans chaque enregistrement de prospect de l’entrée. Facultatif
+* **[!UICONTROL Name]** : nom par lequel vous reconnaîtrez cette destination à l’avenir.
+* **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
+* **[!UICONTROL Munchkin ID]** : l’identifiant Munchkin est l’identifiant unique d’une instance Marketo spécifique.
+* **[!UICONTROL Partition]** : concept dans Marketo Engage utilisé pour séparer les enregistrements de prospect par entreprise
+* **[!UICONTROL First searchable field]** : champ à dédupliquer. Le champ doit être présent dans chaque enregistrement de prospect de l’entrée. La valeur par défaut est e-mail.
+* **[!UICONTROL First searchable field]** : champ secondaire à dédupliquer. Le champ doit être présent dans chaque enregistrement de prospect de l’entrée. Facultatif
 
-Une fois que vous avez sélectionné votre instance, vous devez également sélectionner la partition de lead à laquelle vous souhaitez que la configuration s’intègre. Dans Marketo Engage[&#x200B; une &#x200B;](https://experienceleague.adobe.com/fr/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) partition de lead est un concept utilisé pour séparer les enregistrements de lead par entreprise (marque ou région de vente, par exemple). Si votre abonnement Marketo ne dispose pas de la fonctionnalité Espaces de travail et partitions, ou si aucune partition supplémentaire n’a été créée dans votre abonnement, seule la partition Par défaut est disponible. Une configuration unique ne peut mettre à jour que les enregistrements de prospect qui existent dans sa partition configurée.
+Une fois que vous avez sélectionné votre instance, vous devez également sélectionner la partition de lead à laquelle vous souhaitez que la configuration s’intègre. Dans Marketo Engage[ une ](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) partition de lead est un concept utilisé pour séparer les enregistrements de lead par entreprise (marque ou région de vente, par exemple). Si votre abonnement Marketo ne dispose pas de la fonctionnalité Espaces de travail et partitions, ou si aucune partition supplémentaire n’a été créée dans votre abonnement, seule la partition Par défaut est disponible. Une configuration unique ne peut mettre à jour que les enregistrements de prospect qui existent dans sa partition configurée.
 
 >[!IMPORTANT]
 > 
@@ -111,7 +124,7 @@ Si aucun enregistrement de prospect correspondant n’est trouvé, un nouvel enr
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Consultez [Activer les profils et les segments vers les destinations d’exportation de segments de diffusion en continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 

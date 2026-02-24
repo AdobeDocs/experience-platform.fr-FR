@@ -2,10 +2,10 @@
 title: Connexion à Medallia
 description: Activez les profils pour les enquêtes et la collecte de commentaires Medallia ciblées afin de mieux comprendre les besoins et les attentes des clients.
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1098'
-ht-degree: 29%
+source-wordcount: '1269'
+ht-degree: 26%
 
 ---
 
@@ -49,10 +49,35 @@ Medallia prend en charge l’activation des identités décrites dans le tableau
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| e-mail | Adresse e-mail | Sélectionnez l’identité cible de l’e-mail lorsque vous souhaitez envoyer des questionnaires d’invitation par e-mail. Lorsqu’un profil est associé à plusieurs adresses e-mail, Medallia déclenche uniquement l’invitation au premier e-mail. |
+| E-mail | Adresse e-mail | Sélectionnez l’identité cible de l’e-mail lorsque vous souhaitez envoyer des questionnaires d’invitation par e-mail. Lorsqu’un profil est associé à plusieurs adresses e-mail, Medallia déclenche uniquement l’invitation au premier e-mail. |
 | phone | Numéros de téléphone hachés au format E.164 | Sélectionnez l’identité de la cible téléphonique lorsque vous souhaitez envoyer des questionnaires par SMS. Le numéro de téléphone doit être au format E.164, qui comprend un signe plus (+), un indicatif national international, un indicatif régional et un numéro de téléphone. Par exemple : (+)(indicatif du pays)(indicatif régional)(numéro de téléphone). Lorsqu’un profil est associé à plusieurs numéros de téléphone, Medallia déclenche l’invitation au premier numéro de téléphone uniquement. |
 
 {style="table-layout:auto"}
+
+## Audiences prises en charge {#supported-audiences}
+
+Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination.
+
+| Origine de l’audience | Pris en charge | Description |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Oui | Audiences générées via Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Toutes les autres origines d’audience | Non | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform telles que Adobe Journey Optimizer, </li><li> et plus encore. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Audiences prises en charge par type de données d’audience :
+
+| Type de données d’audience | Pris en charge | Description | Cas d’utilisation |
+|--------------------|-----------|-------------|-----------|
+| [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
+| [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
+
+{style="table-layout:auto"}
+
 
 ## Type et fréquence d’exportation {#export-type-frequency}
 
@@ -105,7 +130,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 > 
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 

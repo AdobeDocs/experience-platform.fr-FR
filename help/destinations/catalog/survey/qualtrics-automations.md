@@ -4,10 +4,10 @@ title: Automatisations de Qualtrics
 description: Synchronisez les données client opérationnelles et d’expérience pour déverrouiller la personnalisation à grande échelle. Utilisez l’agrégation de plusieurs sources de données opérationnelles dans Adobe Experience Platform comme entrée dans Qualtrics Experience ID pour mieux comprendre vos clients et permettre une sensibilisation ciblée afin de combler l’écart en matière de compréhension des moteurs d’intention, d’émotion et d’expérience.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1120'
-ht-degree: 26%
+source-wordcount: '1291'
+ht-degree: 24%
 
 ---
 
@@ -61,10 +61,35 @@ Vous trouverez ci-dessous les étapes nécessaires pour obtenir un jeton API aup
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| e-mail | Adresses e-mail en clair | Seules les adresses e-mail en texte brut sont prises en charge par Qualtrics. |
+| E-mail | Adresses e-mail en clair | Seules les adresses e-mail en texte brut sont prises en charge par Qualtrics. |
 | external_id | ID d’utilisateur personnalisés | Sélectionnez cette identité cible lorsque votre identité source est un espace de noms personnalisé. |
 
 {style="table-layout:auto"}
+
+## Audiences prises en charge {#supported-audiences}
+
+Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination.
+
+| Origine de l’audience | Pris en charge | Description |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Oui | Audiences générées via Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Toutes les autres origines d’audience | Non | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform telles que Adobe Journey Optimizer, </li><li> et plus encore. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Audiences prises en charge par type de données d’audience :
+
+| Type de données d’audience | Pris en charge | Description | Cas d’utilisation |
+|--------------------|-----------|-------------|-----------|
+| [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
+| [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
+
+{style="table-layout:auto"}
+
 
 ## Type et fréquence d’exportation {#export-type-frequency}
 
@@ -123,7 +148,7 @@ Cette destination a un schéma ouvert. Vous pouvez donc envoyer n’importe quel
 
 Pour ajouter un attribut à votre mappage, sélectionnez simplement **attributs personnalisés** lors de l’ajout d’un nouveau mappage. Vous pouvez saisir n’importe quel nom pour votre attribut. Qualtrics applique la convention de dénomination *camelCase* pour les noms d’attribut (voir la capture d’écran ci-dessous pour obtenir un exemple).
 
-![&#x200B; Attribut personnalisé &#x200B;](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
+![ Attribut personnalisé ](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
 
 Consultez la capture d’écran ci-dessous pour obtenir un exemple de mappages d’attributs possibles.
 

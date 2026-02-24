@@ -3,10 +3,10 @@ title: Catégories d’intérêt Mailchimp
 description: Mailchimp (également appelé Intuit Mailchimp) est une plateforme d’automatisation du marketing et un service de marketing par e-mail utilisé par les entreprises pour gérer et communiquer avec des contacts (clients ou autres parties intéressées) à l’aide de listes de diffusion et de campagnes de marketing par e-mail. Utilisez ce connecteur pour trier vos contacts en fonction de leurs centres d’intérêt et de leurs préférences.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '2218'
-ht-degree: 18%
+source-wordcount: '2409'
+ht-degree: 17%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 18%
 
 [[!DNL Mailchimp]](https://mailchimp.com) est une plateforme d’automatisation du marketing et un service de marketing par e-mail utilisé par les entreprises pour gérer et communiquer avec des contacts *(clients ou autres parties intéressées)* à l’aide de listes de diffusion et de campagnes de marketing par e-mail. Utilisez ce connecteur pour trier vos contacts en fonction de leurs centres d’intérêt et de leurs préférences.
 
-[!DNL Mailchimp Interest Categories] utilise les [&#x200B; &#x200B;](https://mailchimp.com/help/getting-started-audience/)audiences[, &#x200B;](https://mailchimp.com/help/getting-started-with-groups/)groupes *et catégories d’intérêt (également appelées noms de groupe ou titres de groupe)*. Chaque groupe de [!DNL Mailchimp] est une liste de catégories d’intérêt. Les contacts sont associés à une catégorie d’intérêt lorsqu’ils s’abonnent à une ou plusieurs catégories d’intérêt par le biais d’un formulaire d’inscription sur votre site web. Au sein d’une audience, vous pouvez également organiser les contacts en groupes et les associer à des catégories d’intérêt, qui pourront ensuite être utilisées pour créer des segments. Vous pouvez utiliser ces audiences pour diffuser des e-mails de campagne ciblés aux contacts abonnés.
+[!DNL Mailchimp Interest Categories] utilise les [ ](https://mailchimp.com/help/getting-started-audience/)audiences[, ](https://mailchimp.com/help/getting-started-with-groups/)groupes *et catégories d’intérêt (également appelées noms de groupe ou titres de groupe)*. Chaque groupe de [!DNL Mailchimp] est une liste de catégories d’intérêt. Les contacts sont associés à une catégorie d’intérêt lorsqu’ils s’abonnent à une ou plusieurs catégories d’intérêt par le biais d’un formulaire d’inscription sur votre site web. Au sein d’une audience, vous pouvez également organiser les contacts en groupes et les associer à des catégories d’intérêt, qui pourront ensuite être utilisées pour créer des segments. Vous pouvez utiliser ces audiences pour diffuser des e-mails de campagne ciblés aux contacts abonnés.
 
 <!--
 Compared to [!DNL Mailchimp Tags] which you would use for internal classification, [!DNL Mailchimp Interest Categories] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Tags], you can check it out on the [[!DNL Mailchimp Tags]](/help/destinations/catalog/email-marketing/mailchimp-tags.md) page.*
@@ -36,7 +36,7 @@ Reportez-vous aux sections ci-dessous pour connaître les conditions préalables
 
 ### Conditions préalables dans Experience Platform {#prerequisites-in-experience-platform}
 
-Avant d’activer des données dans la destination [!DNL Mailchimp Interest Categories], vous devez avoir un [schéma](/help/xdm/schema/composition.md), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr), ainsi que des [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=fr) créés dans [!DNL Experience Platform].
+Avant d’activer des données dans la destination [!DNL Mailchimp Interest Categories], vous devez avoir un [schéma](/help/xdm/schema/composition.md), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), ainsi que des [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) créés dans [!DNL Experience Platform].
 
 ### Conditions préalables pour la destination [!DNL Mailchimp Interest Categories] {#prerequisites-destination}
 
@@ -83,6 +83,28 @@ En outre, reportez-vous à la [!DNL Mailchimp] [limites de débit](https://mailc
 | Identité cible | Description | Considérations |
 |---|---|---|
 | E-mail | Adresse e-mail du contact | Obligatoire |
+
+{style="table-layout:auto"}
+
+## Audiences prises en charge {#supported-audiences}
+
+Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination. Les deux tableaux ci-dessous indiquent les audiences prises en charge par ce connecteur, par _origine de l’audience_ et _types de profil inclus dans l’audience_ :
+
+| Origine de l’audience | Pris en charge | Description |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Oui | Audiences générées via Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Toutes les autres origines d’audience | Oui | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform telles que Adobe Journey Optimizer, </li><li> et plus encore. </li></ul> |
+
+{style="table-layout:auto"}
+
+Audiences prises en charge par type de données d’audience :
+
+| Type de données d’audience | Pris en charge | Description | Cas d’utilisation |
+|--------------------|-----------|-------------|-----------|
+| [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
+| [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
 
@@ -153,7 +175,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 > 
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -205,7 +227,7 @@ Pour vérifier que vous avez correctement configuré la destination, procédez c
 ![Capture d’écran de l’interface utilisateur Mailchimp montrant la page du groupe d’audiences.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 
 * Sélectionnez le groupe et vérifiez si les audiences sélectionnées sont créées sous la forme de catégories avec le nom de l’audience d’Experience Platform, qui peut être suivi d’un suffixe généré automatiquement.
-   * Cette destination utilise les noms des segments sélectionnés pour créer la catégorie d’intérêt à l’aide de l’API [[!DNL Mailchimp]  Ajouter une catégorie d’intérêt &#x200B;](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). Si vous créez une nouvelle destination et activez à nouveau les mêmes audiences, [!DNL Mailchimp] ajoute un suffixe pour distinguer les segments existants des nouveaux segments.
+   * Cette destination utilise les noms des segments sélectionnés pour créer la catégorie d’intérêt à l’aide de l’API [[!DNL Mailchimp]  Ajouter une catégorie d’intérêt ](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). Si vous créez une nouvelle destination et activez à nouveau les mêmes audiences, [!DNL Mailchimp] ajoute un suffixe pour distinguer les segments existants des nouveaux segments.
 * Les contacts dont les e-mails n’existaient pas dans le groupe sont ajoutés à la catégorie nouvellement créée.
 * Pour les contacts qui existent déjà dans le groupe, les données du champ d’attribut sont mises à jour et le contact est ajouté à la catégorie nouvellement créée.
 
@@ -228,7 +250,7 @@ Sections [Rassembler [!DNL Mailchimp] Clé API](#gather-credentials) si vous ave
 
 ### Erreur rencontrée si [!DNL Mailchimp] limite de nom de groupe est dépassée {#group-name-limits-error}
 
-Pendant la création de la destination, vous pouvez recevoir les messages d’erreur suivants : *`Cannot have more than 60 interests per list (Across all categories)`* ou *`400 BAD_REQUEST`*. Cela se produit lorsque vous dépassez les 60 noms de groupe (ou catégories d’intérêt) dans un seul groupe ou dans plusieurs groupes au sein de la même limite d’audience, comme décrit dans la section [&#x200B; Mécanismes de sécurisation &#x200B;](#guardrails). Pour corriger cette erreur, veillez à ne pas dépasser la limite de noms de groupe dans [!DNL Mailchimp].
+Pendant la création de la destination, vous pouvez recevoir les messages d’erreur suivants : *`Cannot have more than 60 interests per list (Across all categories)`* ou *`400 BAD_REQUEST`*. Cela se produit lorsque vous dépassez les 60 noms de groupe (ou catégories d’intérêt) dans un seul groupe ou dans plusieurs groupes au sein de la même limite d’audience, comme décrit dans la section [ Mécanismes de sécurisation ](#guardrails). Pour corriger cette erreur, veillez à ne pas dépasser la limite de noms de groupe dans [!DNL Mailchimp].
 
 ### Statut de [!DNL Mailchimp] et codes d’erreur
 
@@ -240,8 +262,8 @@ Retrouvez d’autres informations utiles de la documentation [!DNL Mailchimp] ci
 
 * [Prise en main de  [!DNL Mailchimp]](https://mailchimp.com/help/getting-started-with-mailchimp/)
 * [Prise en main des audiences](https://mailchimp.com/help/getting-started-audience/)
-* [Créer une audience](https://mailchimp.com/help/create-audience/)
+* [Création d’un audience](https://mailchimp.com/help/create-audience/)
 * [Prise en main des groupes](https://mailchimp.com/help/getting-started-with-groups/)
 * [Créer un groupe d’audiences](https://mailchimp.com/help/create-new-audience-group/)
 * [Catégories d’intérêt](https://mailchimp.com/developer/marketing/api/interest-categories/)
-* [&#x200B; API marketing &#x200B;](https://mailchimp.com/developer/marketing/api/)
+* [ API marketing ](https://mailchimp.com/developer/marketing/api/)
