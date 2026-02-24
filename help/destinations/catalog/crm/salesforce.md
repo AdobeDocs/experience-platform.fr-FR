@@ -66,7 +66,7 @@ Enfin, assurez-vous que l’octroi de `password` est activé dans votre compte [
 
 >[!IMPORTANT]
 >
->Si l’administrateur de votre compte [!DNL Salesforce] a limité l’accès aux plages d’adresses IP de confiance, vous devez le contacter pour obtenir [les adresses IP d’Experience Platformplacer sur la liste autorisée ](/help/destinations/catalog/streaming/ip-address-allow-list.md). Reportez-vous à la documentation [!DNL Salesforce] [Limiter l’accès aux plages d’adresses IP de confiance pour une application connectée](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) si vous avez besoin de conseils supplémentaires.
+>Si l’administrateur de votre compte [!DNL Salesforce] a limité l’accès aux plages d’adresses IP de confiance, vous devez le contacter pour obtenir [les adresses IP d’Experience Platformplacer sur la liste autorisée &#x200B;](/help/destinations/catalog/streaming/ip-address-allow-list.md). Reportez-vous à la documentation [!DNL Salesforce] [Limiter l’accès aux plages d’adresses IP de confiance pour une application connectée](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) si vous avez besoin de conseils supplémentaires.
 
 #### Créer des champs personnalisés dans [!DNL Salesforce] {#prerequisites-custom-field}
 
@@ -148,7 +148,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -215,7 +215,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 > 
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -271,7 +271,7 @@ Lorsque vous avez terminé de fournir les mappages pour votre connexion de desti
 
 ### Planifier l’exportation de l’audience et exemple {#schedule-segment-export-example}
 
-Lors de l’exécution de l’étape [ Planifier l’exportation d’audiences ](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling), vous devez mapper manuellement les audiences activées depuis Experience Platform à leur champ personnalisé correspondant dans [!DNL Salesforce].
+Lors de l’exécution de l’étape [&#x200B; Planifier l’exportation d’audiences &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling), vous devez mapper manuellement les audiences activées depuis Experience Platform à leur champ personnalisé correspondant dans [!DNL Salesforce].
 
 Pour ce faire, sélectionnez chaque segment, puis saisissez le nom du champ personnalisé à partir de [!DNL Salesforce] dans le champ [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** . Reportez-vous à la section [Créer des champs personnalisés dans [!DNL Salesforce]](#prerequisites-custom-field) pour obtenir des conseils et connaître les bonnes pratiques sur la création de champs personnalisés dans [!DNL Salesforce].
 
@@ -350,6 +350,6 @@ Retrouvez d’autres informations utiles du portail de développement [Salesforc
 
 * [Démarrage rapide](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart.htm)
 * [Créer un enregistrement](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_sobject_create.htm)
-* [ Audiences de recommandations personnalisées ](https://developer.salesforce.com/docs/atlas.en-us.236.0.chatterapi.meta/chatterapi/connect_resources_recommendation_audiences_list.htm)
+* [&#x200B; Audiences de recommandations personnalisées &#x200B;](https://developer.salesforce.com/docs/atlas.en-us.236.0.chatterapi.meta/chatterapi/connect_resources_recommendation_audiences_list.htm)
 * [Utilisation de ressources composites](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/using_composite_resources.htm?q=composite)
 * Cette destination utilise l’API [Upsert Multiple Records](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_composite_sobjects_collections_update.htm) au lieu de l’appel API [Upsert Single Record](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts).

@@ -48,7 +48,7 @@ Pour mieux comprendre quand et comment utiliser la destination [!DNL LiveRamp - 
 
 L’équipe marketing d’un retailer de vêtements de sport a utilisé la connexion [LiveRamp - Intégration](liveramp-onboarding.md) pour envoyer des audiences d’Experience Platform à leur compte LiveRamp.
 
-Grâce à la connexion [!DNL LiveRamp - Distribution], ils peuvent désormais déclencher l’activation des audiences intégrées vers les [ destinations prises en charge ](#supported-destinations). Ensuite, ils peuvent cibler les utilisateurs sur les plateformes mobiles, web, sociales et [!DNL CTV] ouvertes.
+Grâce à la connexion [!DNL LiveRamp - Distribution], ils peuvent désormais déclencher l’activation des audiences intégrées vers les [&#x200B; destinations prises en charge &#x200B;](#supported-destinations). Ensuite, ils peuvent cibler les utilisateurs sur les plateformes mobiles, web, sociales et [!DNL CTV] ouvertes.
 
 ## Intégration d’audiences à LiveRamp {#onboarding}
 
@@ -75,7 +75,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -115,7 +115,7 @@ Une fois la connexion à votre compte LiveRamp établie, saisissez les informati
 
 >[!NOTE]
 >
->Lorsque vous attribuez un nom à une destination, Adobe recommande de suivre le format suivant : `LiveRamp - Downstream Destination Name`. Ce modèle de dénomination vous permet d’identifier rapidement vos destinations dans l’onglet [ Parcourir ](../../ui/destinations-workspace.md#browse) de l’espace de travail des destinations.
+>Lorsque vous attribuez un nom à une destination, Adobe recommande de suivre le format suivant : `LiveRamp - Downstream Destination Name`. Ce modèle de dénomination vous permet d’identifier rapidement vos destinations dans l’onglet [&#x200B; Parcourir &#x200B;](../../ui/destinations-workspace.md#browse) de l’espace de travail des destinations.
 ><br>
 >Exemple : `LiveRamp - Roku`.
 

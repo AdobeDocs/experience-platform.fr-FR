@@ -46,7 +46,7 @@ Pour exporter des données d’Experience Platform vers votre compte [!DNL Hubsp
 
 Vous avez besoin de votre [!DNL HubSpot] `Access token` pour permettre à la destination [!DNL HubSpot] d’effectuer des appels API via votre application privée [!DNL HubSpot] dans votre compte [!DNL HubSpot]. Le `Access token` sert de `Bearer token` lorsque vous [authentifiez la destination](#authenticate).
 
-Si vous ne disposez pas d’une application privée, consultez la documentation pour [ Créer une application privée dans  [!DNL HubSpot]](https://developers.hubspot.com/docs/api/private-apps).
+Si vous ne disposez pas d’une application privée, consultez la documentation pour [&#x200B; Créer une application privée dans  [!DNL HubSpot]](https://developers.hubspot.com/docs/api/private-apps).
 
 >[!IMPORTANT]
 >
@@ -60,7 +60,7 @@ Si vous ne disposez pas d’une application privée, consultez la documentation 
 
 ## Mécanismes de sécurisation {#guardrails}
 
-[!DNL HubSpot] applications privées sont soumises à des [limites de taux](https://developers.hubspot.com/docs/api/usage-details). Le nombre d’appels que votre application privée peut effectuer est basé sur votre abonnement au compte [!DNL HubSpot] et sur le fait que vous ayez ou non acheté le module complémentaire API. Reportez-vous également à la section [ Autres limites ](https://developers.hubspot.com/docs/api/usage-details#other-limits).
+[!DNL HubSpot] applications privées sont soumises à des [limites de taux](https://developers.hubspot.com/docs/api/usage-details). Le nombre d’appels que votre application privée peut effectuer est basé sur votre abonnement au compte [!DNL HubSpot] et sur le fait que vous ayez ou non acheté le module complémentaire API. Reportez-vous également à la section [&#x200B; Autres limites &#x200B;](https://developers.hubspot.com/docs/api/usage-details#other-limits).
 
 ## Identités prises en charge {#supported-identities}
 
@@ -93,7 +93,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}

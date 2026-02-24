@@ -85,7 +85,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -148,7 +148,7 @@ Cette destination a un schéma ouvert. Vous pouvez donc envoyer n’importe quel
 
 Pour ajouter un attribut à votre mappage, sélectionnez simplement **attributs personnalisés** lors de l’ajout d’un nouveau mappage. Vous pouvez saisir n’importe quel nom pour votre attribut. Qualtrics applique la convention de dénomination *camelCase* pour les noms d’attribut (voir la capture d’écran ci-dessous pour obtenir un exemple).
 
-![ Attribut personnalisé ](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
+![&#x200B; Attribut personnalisé &#x200B;](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
 
 Consultez la capture d’écran ci-dessous pour obtenir un exemple de mappages d’attributs possibles.
 
