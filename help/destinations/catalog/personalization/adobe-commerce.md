@@ -22,12 +22,12 @@ Ce connecteur est disponible dans le catalogue des destinations pour les clients
 Pour utiliser cette connexion de destination, vérifiez que vous avez accès aux éléments suivants :
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
-- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Grâce à l’accès à Developer Console, vous pouvez afficher le compte de service et les informations d’identification nécessaires pour [terminer la configuration](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension) de l’extension dans Adobe Commerce.
-- [Adobe Commerce version 2.4.4 ou ultérieure](https://business.adobe.com/products/commerce.html)
+- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Grâce à l’accès à Developer Console, vous pouvez afficher le compte de service et les informations d’identification nécessaires pour [terminer la configuration](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=fr#configure-the-extension) de l’extension dans Adobe Commerce.
+- [Adobe Commerce version 2.4.4 ou ultérieure](https://business.adobe.com/fr/products/commerce.html)
 
 Dans Experience Platform, créez les éléments suivants :
 
-- [Schéma](../../../xdm/schema/composition.md). Le schéma que vous créez représente les données que vous prévoyez d’ingérer à partir d’Adobe Commerce. [En savoir plus](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html) sur la création d’un schéma contenant des groupes de champs spécifiques à Commerce.
+- [Schéma](../../../xdm/schema/composition.md). Le schéma que vous créez représente les données que vous prévoyez d’ingérer à partir d’Adobe Commerce. [En savoir plus](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html?lang=fr) sur la création d’un schéma contenant des groupes de champs spécifiques à Commerce.
 - [Jeu de données](../../../catalog/datasets/user-guide.md#create). Un jeu de données est une structure de stockage et de gestion pour une collecte de données. Vous créez ce jeu de données à partir du schéma que vous avez créé ci-dessus.
 - [Flux de données](../../../datastreams/overview.md#create). Identifiant qui permet aux données de passer d’Adobe Experience Platform à d’autres produits DX d’Adobe. Cet identifiant doit être associé à un site web spécifique au sein de votre instance Adobe Commerce spécifique. Lorsque vous créez ce train de données, spécifiez le schéma XDM que vous avez créé ci-dessus.
 
@@ -96,7 +96,7 @@ Lisez [Activer des profils et des audiences vers les destinations de requête de
 
 ## Étapes suivantes dans [!DNL Adobe Commerce]
 
-Maintenant que vous avez configuré la destination [!DNL Commerce] dans Experience Platform, vous devez installer l’extension [!DNL Audience Activation] dans [!DNL Commerce] et configurer le [!DNL Commerce Admin] pour importer les audiences Real-Time CDP que vous avez créées. Consultez la [[!DNL Commerce] documentation](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html) pour en savoir plus.
+Maintenant que vous avez configuré la destination [!DNL Commerce] dans Experience Platform, vous devez installer l’extension [!DNL Audience Activation] dans [!DNL Commerce] et configurer le [!DNL Commerce Admin] pour importer les audiences Real-Time CDP que vous avez créées. Consultez la [[!DNL Commerce] documentation](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=fr) pour en savoir plus.
 
 ## Valider l’activation de l’audience dans Commerce {#exported-data}
 

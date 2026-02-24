@@ -121,7 +121,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >id="platform_destinations_required_mappings_bing"
 >title="Jeux de mappages préconfigurés"
 >abstract="Nous avons préconfiguré ces deux jeux de mappages pour vous. Lorsque vous activez des données vers Microsoft Bing, les profils qualifiés pour les audiences activées doivent avoir au moins une identité ECID associée à leur profil, afin de pouvoir être exportés vers la destination."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="En savoir plus sur les mappages préconfigurés"
+>additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="En savoir plus sur les mappages préconfigurés"
 
 >[!IMPORTANT]
 > 
