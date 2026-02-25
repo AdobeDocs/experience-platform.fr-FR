@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;confidentialité du lac de données;espaces de noms dʼidentité;confidentialité;lac de données
+keywords: Experience Platform;accueil;rubriques populaires;confidentialité du lac de données;espaces de noms dʼidentités;confidentialité;lac de données
 solution: Experience Platform
 title: Traitement des demandes dʼaccès à des informations personnelles dans le lac de données
 description: Adobe Experience Platform Privacy Service traite les demandes des clients en matière dʼaccès, d’opt-out de vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité. Ce document couvre les concepts essentiels liés au traitement des demandes d’accès à des informations personnelles pour les données client stockées dans le lac de données.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: db781526fc7b9813b9982f45b8a5aa36175a1f34
 workflow-type: tm+mt
-source-wordcount: '1430'
-ht-degree: 72%
+source-wordcount: '1446'
+ht-degree: 69%
 
 ---
 
@@ -61,7 +61,7 @@ Il existe deux méthodes pour ajouter un descripteur dʼidentité à un schéma 
 
 ### Utilisation de l’interface utilisateur {#identity-ui}
 
-Dans lʼinterface utilisateur dʼ[!DNL Experience Platform], lʼespace de travail **[!UICONTROL Schémas]** vous permet de modifier vos schémas XDM existants. Pour ajouter un descripteur dʼidentité à un schéma, sélectionnez le schéma dans la liste et suivez les étapes pour [définir un champ de schéma en tant que champ dʼidentité](../xdm/tutorials/create-schema-ui.md#identity-field) dans le tutoriel de [!DNL Schema Editor].
+Dans l’interface utilisateur [!DNL Experience Platform], l’espace de travail **[!UICONTROL Schemas]** vous permet de modifier vos schémas XDM existants. Pour ajouter un descripteur dʼidentité à un schéma, sélectionnez le schéma dans la liste et suivez les étapes pour [définir un champ de schéma en tant que champ dʼidentité](../xdm/tutorials/create-schema-ui.md#identity-field) dans le tutoriel de [!DNL Schema Editor].
 
 Une fois que vous avez défini les champs appropriés dans le schéma en tant que champs dʼidentité, vous pouvez passer à la section suivante sur lʼ[envoi de demandes dʼaccès à des informations personnelles](#submit).
 
@@ -69,7 +69,7 @@ Une fois que vous avez défini les champs appropriés dans le schéma en tant qu
 
 >[!NOTE]
 >
->Cette section suppose que vous connaissez la valeur unique de lʼidentifiant URI du schéma XDM de votre jeu de données. Si vous ne connaissez pas cette valeur, vous pouvez la récupérer à lʼaide de lʼAPI [!DNL Catalog Service]. Après avoir lu la section [prise en main](./api/getting-started.md) du guide du développeur, suivez les étapes décrites dans la section pour [répertorier](./api/list-objects.md) ou [rechercher des objets &#x200B;](./api/look-up-object.md) [!DNL Catalog] pour trouver votre jeu de données. Lʼidentifiant de schéma se trouve sous `schemaRef.id`
+>Cette section suppose que vous connaissez la valeur unique de lʼidentifiant URI du schéma XDM de votre jeu de données. Si vous ne connaissez pas cette valeur, vous pouvez la récupérer à lʼaide de lʼAPI [!DNL Catalog Service]. Après avoir lu la section [prise en main](./api/getting-started.md) du guide du développeur, suivez les étapes décrites dans la section pour [répertorier](./api/list-objects.md) ou [rechercher des objets ](./api/look-up-object.md) [!DNL Catalog] pour trouver votre jeu de données. Lʼidentifiant de schéma se trouve sous `schemaRef.id`
 >
 >Cette section suppose également que vous savez comment effectuer des appels vers l’API Registre de schémas. Pour obtenir des informations importantes sur lʼutilisation de lʼAPI, y compris la connaissance de votre `{TENANT_ID}` et du concept des conteneurs, consultez la section [prise en main](../xdm/api/getting-started.md) du guide API. 
 
@@ -107,12 +107,12 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `@type` | Le type de descripteur en cours de création. Pour les descripteurs dʼidentité, la valeur doit être « xdm:descriptorIdentity ». |
+| `@type` | Le type de descripteur en cours de création. Pour les descripteurs d’identité, la valeur doit être « xdm :descriptorIdentity ». |
 | `xdm:sourceSchema` | Lʼidentifiant URI unique du schéma XDM de votre jeu de données. |
 | `xdm:sourceVersion` | Version du schéma XDM spécifiée dans `xdm:sourceSchema`. |
 | `xdm:sourceProperty` | Chemin du champ de schéma auquel le descripteur est appliqué. |
-| `xdm:namespace` | Lʼun des [espaces de noms dʼidentité standard](../privacy-service/api/appendix.md#standard-namespaces) reconnus par [!DNL Privacy Service], ou un espace de noms personnalisé défini par votre organisation. |
-| `xdm:property` | « xdm:id » ou « xdm:code », selon lʼespace de noms utilisé sous `xdm:namespace`. |
+| `xdm:namespace` | Lʼun des [espaces de noms dʼidentités standard](../privacy-service/api/appendix.md#standard-namespaces) reconnus par [!DNL Privacy Service], ou un espace de noms personnalisé défini par votre organisation. |
+| `xdm:property` | « xdm :id » ou « xdm :code », selon l’espace de noms utilisé sous `xdm:namespace`. |
 | `xdm:isPrimary` | Une valeur booléenne facultative. Lorsque la valeur est « true », cela indique que le champ est une identité principale. Les schémas ne peuvent contenir qu’une seule identité principale. La valeur par défaut est « false » si elle nʼest pas incluse. |
 
 **Réponse**
@@ -147,13 +147,15 @@ La section suivante décrit comment effectuer des demandes d’accès à des inf
 
 ### Utilisation de l’interface utilisateur
 
-Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à sélectionner **[!UICONTROL Lac de données AEP]** sous **[!UICONTROL Produits]** afin de traiter les tâches pour les données stockées dans le lac de données.
+Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à sélectionner **[!UICONTROL AEP Data Lake]** sous **[!UICONTROL Products]** afin de traiter les tâches pour les données stockées dans le lac de données.
 
 ![Image montrant le produit de lac de données sélectionné dans la boîte de dialogue de création de demande d’accès à des informations personnelles](./images/privacy/product-value.png)
 
 ### Utilisation de l’API
 
-Lors de la création de requêtes de tâche dans l’API, tout `userIDs` fourni doit utiliser un `namespace` et un `type` spécifiques en fonction de la banque de données concernée. Les identifiants du lac de données doivent utiliser des `unregistered` pour leur valeur de `type` et une valeur de `namespace` correspondant à l’une des [&#x200B; étiquettes de confidentialité &#x200B;](#privacy-labels) qui ont été ajoutées aux jeux de données applicables.
+Lors de la création de requêtes de tâche dans l’API, tout `userIDs` fourni doit utiliser un `namespace` et un `type` spécifiques en fonction de la banque de données concernée. Un espace de noms d’identité valide reconnu par Identity Service doit être fourni pour la valeur d’espace de noms. Utilisez `standard` pour les espaces de noms standard et `custom` pour les espaces de noms personnalisés.
+
+Les identifiants du lac de données doivent utiliser des `unregistered` pour leur valeur de `type` et une valeur de `namespace` correspondant à l’une des [ étiquettes de confidentialité ](#privacy-labels) qui ont été ajoutées aux jeux de données applicables.
 
 En outre, le tableau `include` de la payload de requête doit inclure les valeurs de produit pour les différentes banques de données vers lesquelles la requête est effectuée. Lors de l’exécution de requêtes vers le lac de données, le tableau doit inclure la valeur `aepDataLake`.
 
@@ -181,12 +183,12 @@ curl -X POST \
           {
             "namespace": "email_label",
             "value": "ajones@acme.com",
-            "type": "unregistered"
+            "type": "custom"
           },
           {
             "namespace": "email_label",
             "value": "jdoe@example.com",
-            "type": "unregistered"
+            "type": "custom"
           }
         ]
       }

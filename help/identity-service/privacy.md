@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires
 title: Traitement des demandes d’accès à des informations personnelles dans le service d’identités
 description: Adobe Experience Platform Privacy Service traite les demandes des clients en matière dʼaccès, d’opt-out de vente ou de suppression de leurs données personnelles conformément aux nombreuses réglementations en matière de confidentialité. Ce document couvre les concepts essentiels associés au traitement des demandes d’accès à des informations personnelles pour le service d’identités.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: db781526fc7b9813b9982f45b8a5aa36175a1f34
 workflow-type: tm+mt
-source-wordcount: '1005'
-ht-degree: 59%
+source-wordcount: '1006'
+ht-degree: 53%
 
 ---
 
@@ -34,7 +34,7 @@ Une connaissance concrète des services [!DNL Experience Platform] suivants est 
 
 Adobe Experience Platform [!DNL Identity Service] rapproche les données dʼidentité client entre les systèmes et les appareils. [!DNL Identity Service] utilise les **espaces de noms d’identité** pour fournir un contexte aux valeurs d’identité en les reliant à leur système d’origine. Un espace de noms peut représenter un concept générique tel qu’une adresse e-mail (« E-mail ») ou associer l’identité à une application spécifique telle qu’un identifiant Adobe Advertising Cloud ID (« AdCloud ») ou un identifiant Adobe Target (« TNTID »).
 
-Le service d’identités conserve un stock d’espaces de nom d’identité définis globalement (standard) et par l’utilisateur (personnalisés). Les espaces de noms standard sont disponibles pour toutes les organisations (par exemple, « E-mail » et « ECID »), tandis que votre organisation peut aussi créer des espaces de noms personnalisés adaptés à ses besoins spécifiques.
+Le service d’identités conserve un stock d’espaces de noms d’identité définis globalement (standard) et par l’utilisateur ou l’utilisatrice (personnalisés). Les espaces de noms standard sont disponibles pour toutes les organisations (par exemple, « E-mail » et « ECID »), tandis que votre organisation peut aussi créer des espaces de noms personnalisés adaptés à ses besoins spécifiques.
 
 Pour plus dʼinformations sur les espaces de noms dʼidentité dans [!DNL Experience Platform], consultez la [présentation de lʼespace de noms dʼidentité](../identity-service/features/namespaces.md).
 
@@ -44,11 +44,11 @@ Les sections ci-dessous décrivent comment effectuer des demandes d’accès à 
 
 ### Utilisation de l’API
 
-Lors de la création de requêtes de tâche dans l’API, les identifiants fournis dans `userIDs` doivent utiliser un `namespace` et `type`. Un [espace de noms d’identité](#namespaces) valide reconnu par [!DNL Identity Service] doit être fourni pour la variable `namespace`, tandis que la variable `type` doit être `standard` ou `unregistered` (pour les espaces de noms standard et personnalisés, respectivement).
+Lors de la création de requêtes de tâche dans l’API , les identifiants fournis dans les ID utilisateur doivent utiliser un espace de noms et un type spécifiques. Un espace de noms d’identité valide reconnu par Identity Service doit être fourni pour la valeur d’espace de noms. Utilisez `standard` pour les espaces de noms standard et `custom` pour les espaces de noms personnalisés.
 
 En outre, le tableau `include` de la payload de requête doit inclure les valeurs de produit pour les différentes banques de données vers lesquelles la requête est effectuée. Lorsque vous réalisez des requêtes vers [!DNL Identity], le tableau doit inclure la valeur `Identity`.
 
-La requête suivante crée une tâche de confidentialité dans le cadre du RGPD pour les données d’un seul client dans la banque [!DNL Identity]. Deux valeurs d’identité sont fournies pour le client dans le tableau `userIDs` ; une utilisant la norme `Email` espace de noms d’identité et l’autre à l’aide d’un espace de noms `ECID`, il inclut également la valeur de produit pour [!DNL Identity] (`Identity`) dans le tableau `include` :
+La requête suivante crée une tâche de confidentialité dans le cadre du RGPD pour les données d’un client ou d’une cliente unique dans le magasin [!DNL Identity]. Deux valeurs d’identité sont fournies pour le client dans le tableau `userIDs` ; une utilisant la norme `Email` espace de noms d’identité et l’autre à l’aide d’un espace de noms `ECID`, il inclut également la valeur de produit pour [!DNL Identity] (`Identity`) dans le tableau `include` :
 
 >[!TIP]
 >
@@ -98,7 +98,7 @@ curl -X POST \
 >
 >Lors de la suppression d’identités à l’aide de la suppression conforme au RGPD, vous devez spécifier le symbole d’identité comme espace de noms et non comme nom d’affichage.
 
-Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à sélectionner **[!UICONTROL Identité]** sous **[!UICONTROL Produits]** afin de traiter les tâches pour les données stockées dans [!DNL Identity Service].
+Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à sélectionner **[!UICONTROL Identity]** sous **[!UICONTROL Products]** afin de traiter les tâches pour les données stockées dans [!DNL Identity Service].
 
 ![identity-gdpr](./images/identity-gdpr.png)
 

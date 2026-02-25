@@ -5,10 +5,10 @@ title: Traitement des demandes d’accès à des informations personnelles dans 
 type: Documentation
 description: Adobe Experience Platform Privacy Service traite les demandes des clients en matière dʼaccès, d’opt-out de vente ou de suppression de leurs données personnelles conformément aux nombreuses réglementations en matière de confidentialité. Ce document couvre les concepts essentiels liés au traitement des demandes d’accès à des informations personnelles pour le profil client en temps réel.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 6eaa384feb1b84e6081f03cb4de9687ad26f437d
+source-git-commit: db781526fc7b9813b9982f45b8a5aa36175a1f34
 workflow-type: tm+mt
-source-wordcount: '1757'
-ht-degree: 24%
+source-wordcount: '1746'
+ht-degree: 22%
 
 ---
 
@@ -28,7 +28,7 @@ Ce document couvre les concepts essentiels associés au traitement des demandes 
 >
 >La demande d’accès à des informations personnelles dans ce guide ne couvre **pas** les entités non-personnes B2B.
 
-## Commencer
+## Prise en main
 
 Ce guide nécessite une connaissance pratique des composants [!DNL Experience Platform] suivants :
 
@@ -40,7 +40,7 @@ Ce guide nécessite une connaissance pratique des composants [!DNL Experience Pl
 
 Adobe Experience Platform [!DNL Identity Service] rapproche les données dʼidentité client entre les systèmes et les appareils. [!DNL Identity Service] utilise les **espaces de noms d’identité** pour fournir un contexte aux valeurs d’identité en les reliant à leur système d’origine. Un espace de noms peut représenter un concept générique tel qu’une adresse e-mail (« E-mail ») ou associer l’identité à une application spécifique telle qu’un identifiant Adobe Advertising Cloud ID (« AdCloud ») ou un identifiant Adobe Target (« TNTID »).
 
-Le service d’identités conserve un stock d’espaces de nom d’identité définis globalement (standard) et par l’utilisateur (personnalisés). Les espaces de noms standard sont disponibles pour toutes les organisations (par exemple, « E-mail » et « ECID »), tandis que votre organisation peut aussi créer des espaces de noms personnalisés adaptés à ses besoins spécifiques.
+Le service d’identités conserve un stock d’espaces de noms d’identité définis globalement (standard) et par l’utilisateur ou l’utilisatrice (personnalisés). Les espaces de noms standard sont disponibles pour toutes les organisations (par exemple, « E-mail » et « ECID »), tandis que votre organisation peut aussi créer des espaces de noms personnalisés adaptés à ses besoins spécifiques.
 
 Pour plus dʼinformations sur les espaces de noms dʼidentité dans [!DNL Experience Platform], consultez la [présentation de lʼespace de noms dʼidentité](../identity-service/features/namespaces.md).
 
@@ -57,7 +57,7 @@ Les sections ci-dessous décrivent comment effectuer des demandes d’accès à 
 
 ### Utilisation de l’API
 
-Lors de la création de requêtes de tâche dans l’API, les identifiants fournis dans `userIDs` doivent utiliser un `namespace` et `type`. Un [espace de noms d’identité](#namespaces) valide reconnu par [!DNL Identity Service] doit être fourni pour la variable `namespace`, tandis que la variable `type` doit être `standard` ou `unregistered` (pour les espaces de noms standard et personnalisés, respectivement).
+Lors de la création de requêtes de tâche dans l’API, les identifiants fournis dans `userIDs` doivent utiliser un `namespace` et `type`. Un [espace de noms d’identité](#namespaces) valide reconnu par Identity Service doit être fourni pour la valeur d’espace de noms. Utilisez `standard` pour les espaces de noms standard et `custom` pour les espaces de noms personnalisés.
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ En outre, le tableau `include` de la payload de requête doit inclure les valeur
 
 >[!NOTE]
 >
->Pour plus d’informations sur les effets de l’utilisation de `ProfileService` et de `identity` dans le tableau de `include`[&#128279;](#profile-v-identity) reportez-vous à la section sur les requêtes de profil et requêtes d’identité plus loin dans ce document.
+>Pour plus d’informations sur les effets de l’utilisation de [ et de ](#profile-v-identity) dans le tableau de `ProfileService``identity` reportez-vous à la section sur les `include`requêtes de profil et requêtes d’identité plus loin dans ce document.
 
 La requête suivante crée une tâche de confidentialité pour les données d’un seul client dans la banque de [!DNL Profile]. Deux valeurs d’identité sont fournies pour le client dans le tableau `userIDs` ; une utilisant l’espace de noms d’identité `Email` standard et l’autre à l’aide d’un espace de noms d’identité `Customer_ID` personnalisé. Elle inclut également la valeur de produit pour [!DNL Profile] (`ProfileService`) dans le tableau `include` :
 
@@ -168,7 +168,7 @@ Pour le service de profil, une fois la tâche de confidentialité terminée, une
 
 ### Utilisation de l’interface utilisateur
 
-Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à sélectionner **[!UICONTROL Lac de données AEP]** et/ou **[!UICONTROL Profil]** sous **[!UICONTROL Produits]** afin de traiter les tâches pour les données stockées respectivement dans le lac de données ou le [!DNL Real-Time Customer Profile].
+Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à sélectionner **[!UICONTROL AEP Data Lake]** et/ou **[!UICONTROL Profile]** sous **[!UICONTROL Products]** afin de traiter les tâches pour les données stockées respectivement dans le lac de données ou le [!DNL Real-Time Customer Profile].
 
 ![Une demande d’accès à la tâche en cours de création dans l’interface utilisateur, avec l’option Profil sélectionnée sous Produits](./images/privacy/product-value.png)
 
@@ -186,7 +186,7 @@ Supposons, par exemple, que vous stockiez des données d’attributs du client d
 
 L’un des jeux de données utilise `customer_id` comme identifiant principal, tandis que les deux autres utilisent `email_id`. Si vous deviez envoyer une demande d’accès à des informations personnelles (accès ou suppression) en utilisant uniquement `email_id` comme valeur d’ID utilisateur, seuls les attributs `firstName`, `lastName` et `mlScore` seraient traités, tandis que `address` ne seraient pas affectés.
 
-Pour vous assurer que vos demandes d’accès à des informations personnelles traitent tous les attributs clients pertinents, vous devez fournir les valeurs d’identité principale pour tous les jeux de données applicables où ces attributs peuvent être stockés (jusqu’à neuf identifiants par client). Pour plus d’informations sur les champs généralement désignés comme identités, consultez la section sur les champs d’identité dans la [&#x200B; principes de base de la composition des schémas &#x200B;](../xdm/schema/composition.md#identity).
+Pour vous assurer que vos demandes d’accès à des informations personnelles traitent tous les attributs clients pertinents, vous devez fournir les valeurs d’identité principale pour tous les jeux de données applicables où ces attributs peuvent être stockés (jusqu’à neuf identifiants par client). Pour plus d’informations sur les champs généralement désignés comme identités, consultez la section sur les champs d’identité dans la [ principes de base de la composition des schémas ](../xdm/schema/composition.md#identity).
 
 ## Traitement des demandes de suppression {#delete}
 
@@ -217,7 +217,7 @@ Pour supprimer le profil et toutes les associations d’identités pour un clien
 
 ### Limites des politiques de fusion {#merge-policy-limitations}
 
-Privacy Service ne peut traiter les données [!DNL Profile] qu’à l’aide d’une politique de fusion qui n’effectue pas de combinaison d’identités. Si vous utilisez l’interface utilisateur pour confirmer que vos demandes d’accès à des informations personnelles sont en cours de traitement, assurez-vous d’utiliser une politique dont le type [!UICONTROL assemblage des identifiants] est **[!DNL None]**. En d’autres termes, vous ne pouvez pas utiliser de politique de fusion dans laquelle [!UICONTROL l’assemblage des identifiants] est défini sur [!UICONTROL graphique privé].
+Privacy Service ne peut traiter les données [!DNL Profile] qu’à l’aide d’une politique de fusion qui n’effectue pas de combinaison d’identités. Si vous utilisez l’interface utilisateur pour confirmer que vos demandes d’accès à des informations personnelles sont en cours de traitement, assurez-vous d’utiliser une politique dont le type de **[!DNL None]** est [!UICONTROL ID stitching]. En d’autres termes, vous ne pouvez pas utiliser de politique de fusion où [!UICONTROL ID stitching] est défini sur [!UICONTROL Private graph].
 
 >![L’assemblage des identifiants de la politique de fusion est défini sur Aucun](./images/privacy/no-id-stitch.png)
 
