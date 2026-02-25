@@ -2,9 +2,9 @@
 title: Guide de questions pour l’assistant IA
 description: Lisez ce document pour découvrir des exemples de questions que vous pouvez utiliser lors de l’interrogation de l’assistant AI.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 7268895d0b1924f9d3e7cee24e549c79245ef099
+source-git-commit: ae4bc8b86e63bf950bc1d05a9c9e76ee4e541f9a
 workflow-type: tm+mt
-source-wordcount: '2105'
+source-wordcount: '2063'
 ht-degree: 0%
 
 ---
@@ -19,10 +19,10 @@ Vous pouvez également utiliser ce document pour obtenir des conseils sur [comme
 
 Les exemples de questions suivants sont regroupés par objectifs que vous pouvez atteindre lors de l’utilisation de l’assistant AI :
 
-| Objectif | Description | Exemple |
+| Intention | Description | Exemple |
 | --- | --- | --- |
 | Apprendre les concepts et poursuivre les workflows | <ul><li>En tant qu’utilisateur débutant, vous pouvez utiliser l’assistant AI pour apprendre les concepts de Real-Time CDP et de Adobe Journey Optimizer et vous intégrer à des produits et fonctionnalités que vous ne connaissez pas.</li><li>En tant qu’utilisateur expérimenté, vous pouvez utiliser l’assistant AI pour résoudre un cas de figure susceptible de bloquer votre workflow. | <ul><li>Comment configurer un tableau de bord dans Parcours Analytics ?</li><li>Racontez-moi quelques cas d’utilisation pour Real-Time CDP.</li></ul> |
-| Dépannage | Utilisez l’assistant AI pour savoir comment déboguer les erreurs de base que vous pouvez rencontrer dans votre workflow. | <ul><li>Que signifie cette erreur {ERROR_MESSAGE} ?</li><li>Pourquoi ne puis-je pas supprimer l’audience nommée « Luma : audience de l’e-mail » ?</li></ul> |
+| Résolution des problèmes | Utilisez l’assistant AI pour savoir comment déboguer les erreurs de base que vous pouvez rencontrer dans votre workflow. | <ul><li>Que signifie cette erreur {ERROR_MESSAGE} ?</li><li>Pourquoi ne puis-je pas supprimer l’audience nommée « Luma : audience de l’e-mail » ?</li></ul> |
 | Hygiène des sandbox | Utilisez l’assistant AI pour identifier les doublons ou les objets inutilisés afin de gérer efficacement votre sandbox. | <ul><li>Pouvez-vous m’afficher des audiences similaires ?</li><li>Existe-t-il des schémas auxquels aucun jeu de données n’est associé ?</li></ul> |
 | Analyse des valeurs | Utilisez l’assistant AI pour identifier les objets de données les plus utilisés et évaluer les indicateurs de performance ou trouver les objets de données les plus précieux. | <ul><li>Combien de profils se trouvent dans notre définition de segment « Luma : Audience d’e-mail » ?</li><li>Quand les audiences ont-elles été activées vers la destination Audiences Experience Cloud ?</li></ul> |
 | Recherche | Utilisez l’assistant AI pour rechercher les objets Experience Platform pris en charge tels que les audiences, les jeux de données, les destinations, les schémas et les sources. | <ul><li>Répertoriez les audiences dont le nom contient « Luma » et qui ont été créées au cours du dernier trimestre.</li><li>Quels sont les attributs du schéma XDM « Luma : actions personnalisées » ?</li></ul> |
@@ -81,7 +81,7 @@ Les questions suivantes sont regroupées par objet de données et sont classées
    * Quand dois-je utiliser un type de données par rapport à un groupe de champs ?
    * Quelle est la différence entre une identité et une clé primaire ou étrangère ?
 * **Dépannage - Connaissance des produits (Real-Time CDP et Journey Optimizer)**
-   * En quoi l’assistant IA peut-il vous aider ?
+   * En quoi l’Assistant IA peut-il vous aider ?
    * Puis-je supprimer un schéma activé pour le profil après l’ingestion des données ?
    * Pourquoi ne puis-je pas supprimer une audience ?
    * Combien de temps faut-il pour que les audiences soient évaluées et que les résultats soient disponibles pour le ciblage ?
@@ -98,15 +98,15 @@ Lisez les tableaux ci-dessous pour obtenir de plus amples conseils sur les bonne
 
 Les tableaux suivants décrivent les bonnes pratiques que vous pouvez suivre lors de l’utilisation de l’assistant AI :
 
-| Faire | Exemple |
+| Conseils | Exemple |
 | --- | --- |
 | <ul><li>Soyez précis quant à l’objet ou aux informations que vous souhaitez récupérer ou analyser.</li><li>Essayez de placer les noms des objets de données entre guillemets. Si vous ne connaissez qu’une partie du nom de l’objet, vous pouvez également la spécifier dans la question.</li><li>Utilisez la [saisie automatique d’objet](./ui-guide.md#use-auto-complete) pour aider l’assistant AI à mieux comprendre le contexte de votre requête.</li></ul> | <ul><li>Quels jeux de données utilisent le schéma « Luma - Fidélité » ?</li><li>Afficher les segments activés dont le nom contient « Luma ». Classez-les par nombre de profils.</li></ul> |
-| <ul><li>Évitez toute ambiguïté et utilisez un langage clair</li><li>Utilisez une terminologie précise pour garantir une meilleure clarté dans votre requête.</li><li>Lorsque vous posez des questions concernant Adobe Experience Platform, utilisez une terminologie spécifique à l’Experience Platform afin d’améliorer la pertinence des réponses.</li></ul> | <ul><li>Combien de profils ai-je dans « Audience ACME » ?</li><li>Afficher les 5 principaux attributs XDM utilisés dans les audiences activées.</li></ul> |
+| <ul><li>Évitez toute ambiguïté et utilisez un langage clair</li><li>Utilisez une terminologie précise pour garantir une meilleure clarté dans votre requête.</li><li>Lorsque vous posez des questions concernant Adobe Experience Platform, utilisez une terminologie spécifique à Experience Platform afin d’améliorer la pertinence des réponses.</li></ul> | <ul><li>Combien de profils ai-je dans « Audience ACME » ?</li><li>Afficher les 5 principaux attributs XDM utilisés dans les audiences activées.</li></ul> |
 | <ul><li>Fournissez un contexte ou spécifiez un critère pour filtrer vos résultats.</li><li>Utilisez un critère de filtre dans les questions pour limiter le volume de données dans la réponse.</li></ul> | <ul><li>Afficher les audiences qui n’ont pas été activées et qui ont été créées il y a plus de 6 mois et qui n’ont jamais été modifiées.</li><li>Montrez-moi les audiences activées vers la « destination ACME » et qui ont plus de 10000 profils.</li></ul> |
 
 {style="table-layout:auto"}
 
-| Ne pas | Exemple |
+| Erreurs à éviter | Exemple |
 | --- | --- |
 | Utilisez un langage vague ou ambigu. | <ul><li>Me donner des informations sur les jeux de données.</li><li>Combien d’utilisateurs ai-je dans « Audience ACME » ?</li><li>Afficher les segments.</li><li>Attributs de liste.</li></ul> |
 | Effectuer des demandes incomplètes | « Luma - Jeu De Données De Fidélité » |
@@ -197,9 +197,7 @@ Vous trouverez ci-dessous une liste d’exemples de questions qui ne sont actuel
 * Quels sont les segments dans lesquels se trouve ce profil {PROFILE_INFO/ATTRIBUTE_VALUE} ?
 * Combien de profils du jeu de données ont un e-mail ?
 * Quel jeu de données constitue le nombre maximal de profils dans ce sandbox ?
-* Quel jeu de données comporte le plus grand nombre d’enregistrements ?
 * Combien de segments ont été supprimés en {RELATIVE_DATE} ?
-* Lequel de mes jeux de données a la plus grande taille ?
 * Donnez-moi un profil dans la {AUDIENCE_NAME}.
 * Quel est le nombre total de profils dans mon sandbox ?
 * Combien d’espaces de noms d’identité sont associés aux {AUDIENCE_NAME} d’audience ?
@@ -212,7 +210,7 @@ Vous trouverez ci-dessous une liste d’exemples de questions qui ne sont actuel
 * Quel est le jeu de données ou la source de données le plus volumineux ?
 * Puis-je obtenir la liste des utilisateurs qui ont créé ces schémas ?
 
-### Dépannage
+### Résolution des problèmes
 
 * Pourquoi ce lot {BATCH_NAME/BATCH_ID} est-il toujours en cours de traitement ?
 * Pourquoi personne ne se qualifie-t-il pour ce {AUDIENCE_NAME} d’audience ?
