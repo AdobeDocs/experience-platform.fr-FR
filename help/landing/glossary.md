@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossaire Adobe Experience Platform
 description: Glossaire reprenant la terminologie principale d’Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 0ff9adc8869528f9e13ee384b866b8dcc3d781bd
+source-git-commit: bdd0039249366ceabebe52694046ec01906ced3c
 workflow-type: tm+mt
-source-wordcount: '8169'
+source-wordcount: '8224'
 ht-degree: 12%
 
 ---
@@ -177,7 +177,7 @@ ht-degree: 12%
 
 **Libellés d’utilisation des données** : les libellés d’utilisation des données vous permettent de classer les données en fonction des considérations liées à la confidentialité et des conditions contractuelles afin de les rendre conformes aux réglementations et aux politiques d’entreprise. Les libellés d’utilisation des données ajoutés à un jeu de données sont hérités ou appliqués à tous les champs de ce jeu. Les libellés d’utilisation des données peuvent également être appliqués directement aux champs.
 
-**Flux de données** : un flux de données est un pipeline virtuel de données qui entre dans Experience Platform à partir d’une source et vers des destinations.
+**Flux de données** : un flux de données est un pipeline virtuel de données qui entre dans Experience Platform à partir d’une source et vers des destinations. Dans le contexte des destinations, un flux de données est synonyme d’une [instance de destination](#destination-instance). {#dataflow}
 
 **Exécution du flux de données** : une exécution de flux de données est un flux de données qui arrive dans Experience Platform selon un planning spécifié par l’utilisateur.
 
@@ -200,6 +200,8 @@ ht-degree: 12%
 **Catégorie de destination** : une catégorie de destination est un groupe de destinations ayant des caractéristiques similaires.
 
 **Catalogue de destinations** : un catalogue de destinations est une liste de destinations disponibles dans Experience Platform.
+
+**Instance de destination** : une instance de destination est une connexion individuelle configurée vers une destination spécifique dans Experience Platform, créée via l’interface utilisateur ou l’API. Il représente un pipeline d’activation unique d’Experience Platform vers un point d’entrée de destination. Également appelé [flux de données](#dataflow). {#destination-instance}
 
 **Règles d’appel direct** : dans le contexte des balises, une règle d’appel direct est une règle qui s’exécute lorsqu’elle est appelée directement à partir de la page, en contournant les systèmes de détection des événements et de recherche.
 
@@ -327,7 +329,7 @@ ht-degree: 12%
 
 **Bibliothèque** : dans le contexte des balises, une bibliothèque est un ensemble de logiques commerciales qui contient des instructions sur le comportement de la bibliothèque de balises sur l’appareil client.
 
-**Entités de recherche** : dans le contexte de la modélisation des données, les entités de recherche représentent des concepts qui peuvent être associés à une personne individuelle, mais qui ne peuvent pas être directement utilisés pour identifier la personne. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur des classes de modèle de données d’expérience (XDM) personnalisées et liées à une entité de profil par le biais d’une [&#x200B; relation de schéma &#x200B;](../xdm/tutorials/relationship-ui.md).
+**Entités de recherche** : dans le contexte de la modélisation des données, les entités de recherche représentent des concepts qui peuvent être associés à une personne individuelle, mais qui ne peuvent pas être directement utilisés pour identifier la personne. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur des classes de modèle de données d’expérience (XDM) personnalisées et liées à une entité de profil par le biais d’une [ relation de schéma ](../xdm/tutorials/relationship-ui.md).
 
 ## M
 
