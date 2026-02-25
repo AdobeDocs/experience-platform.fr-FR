@@ -69,7 +69,7 @@ Une fois que vous avez défini les champs appropriés dans le schéma en tant qu
 
 >[!NOTE]
 >
->Cette section suppose que vous connaissez la valeur unique de lʼidentifiant URI du schéma XDM de votre jeu de données. Si vous ne connaissez pas cette valeur, vous pouvez la récupérer à lʼaide de lʼAPI [!DNL Catalog Service]. Après avoir lu la section [prise en main](./api/getting-started.md) du guide du développeur, suivez les étapes décrites dans la section pour [répertorier](./api/list-objects.md) ou [rechercher des objets ](./api/look-up-object.md) [!DNL Catalog] pour trouver votre jeu de données. Lʼidentifiant de schéma se trouve sous `schemaRef.id`
+>Cette section suppose que vous connaissez la valeur unique de lʼidentifiant URI du schéma XDM de votre jeu de données. Si vous ne connaissez pas cette valeur, vous pouvez la récupérer à lʼaide de lʼAPI [!DNL Catalog Service]. Après avoir lu la section [prise en main](./api/getting-started.md) du guide du développeur, suivez les étapes décrites dans la section pour [répertorier](./api/list-objects.md) ou [rechercher des objets &#x200B;](./api/look-up-object.md) [!DNL Catalog] pour trouver votre jeu de données. Lʼidentifiant de schéma se trouve sous `schemaRef.id`
 >
 >Cette section suppose également que vous savez comment effectuer des appels vers l’API Registre de schémas. Pour obtenir des informations importantes sur lʼutilisation de lʼAPI, y compris la connaissance de votre `{TENANT_ID}` et du concept des conteneurs, consultez la section [prise en main](../xdm/api/getting-started.md) du guide API. 
 
@@ -155,7 +155,7 @@ Lors de la création de requêtes de tâche dans l’interface utilisateur, veil
 
 Lors de la création de requêtes de tâche dans l’API, tout `userIDs` fourni doit utiliser un `namespace` et un `type` spécifiques en fonction de la banque de données concernée. Un espace de noms d’identité valide reconnu par Identity Service doit être fourni pour la valeur d’espace de noms. Utilisez `standard` pour les espaces de noms standard et `custom` pour les espaces de noms personnalisés.
 
-Les identifiants du lac de données doivent utiliser des `unregistered` pour leur valeur de `type` et une valeur de `namespace` correspondant à l’une des [ étiquettes de confidentialité ](#privacy-labels) qui ont été ajoutées aux jeux de données applicables.
+Les identifiants du lac de données doivent utiliser des `unregistered` pour leur valeur de `type` et une valeur de `namespace` correspondant à l’une des [&#x200B; étiquettes de confidentialité &#x200B;](#privacy-labels) qui ont été ajoutées aux jeux de données applicables.
 
 En outre, le tableau `include` de la payload de requête doit inclure les valeurs de produit pour les différentes banques de données vers lesquelles la requête est effectuée. Lors de l’exécution de requêtes vers le lac de données, le tableau doit inclure la valeur `aepDataLake`.
 
