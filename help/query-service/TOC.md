@@ -5,10 +5,10 @@ breadcrumb-title: Guide du service de requête
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 8b33d9231aeebd454fd614a81b356a9e971b757c
+source-git-commit: d3b73124795cfdeb5f8f1890105bf9c174711b36
 workflow-type: tm+mt
-source-wordcount: '409'
-ht-degree: 69%
+source-wordcount: '411'
+ht-degree: 68%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 69%
 - Commencer {#get-started}
    - [Conditions préalables](get-started/prerequisites.md)
 - Data Distiller {#data-distiller}
-   - [Aperçu](data-distiller/overview.md)
+   - [Vue d’ensemble](data-distiller/overview.md)
    - [Utilisation des licences](data-distiller/license-usage.md)
    - Jeux de données dérivés {#derived-datasets}
       - [Vue d’ensemble](data-distiller/derived-datasets/overview.md)
@@ -109,6 +109,7 @@ ht-degree: 69%
    - [Plannings de requête](ui/query-schedules.md)
    - [Journaux de requête](ui/query-logs.md)
    - [Surveiller les requêtes planifiées](ui/monitor-queries.md)
+   - [Gérer les sessions](ui/session-management.md)
    - [Guide sur les informations d’identification](ui/credentials.md)
    - [Migration des informations d’identification JWT vers OAuth](ui/migrate-jwt-to-oauth.md)
    - [Générer des jeux de données de sortie à partir des résultats de requête](ui/create-datasets.md)
@@ -127,7 +128,7 @@ ht-degree: 69%
    - [Accès à l’adresse IP](auth-api/ip-access.md)
    - [Valider](auth-api/validate.md)
 - Gouvernance des données {#data-governance}
-   - [Aperçu](data-governance/overview.md)
+   - [Vue d’ensemble](data-governance/overview.md)
    - [Guide du journal d’audit](data-governance/audit-log-guide.md)
    - [Identités dans les jeux de données à schéma ad hoc](data-governance/ad-hoc-schema-identities.md)
    - [Prise en charge du contrôle d’accès basé sur les attributs pour les schémas ad hoc](./data-governance/ad-hoc-schema-labels.md)
