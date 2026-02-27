@@ -93,4 +93,4 @@ Les filtres disponibles varient en fonction de la catégorie sélectionnée dans
 
 Grâce à la lecture de ce document, vous comprenez mieux la fonctionnalité de journal d’audit [!DNL Query Service] et comment elle peut être utilisée pour filtrer vos actions utilisateur [!DNL Query Service].
 
-Si vous utilisez la fonctionnalité de journal d’audit [!DNL Query Service] à des fins de dépannage, nous vous recommandons de lire le guide de dépannage [](../troubleshooting-guide.md).
+Si vous utilisez la fonctionnalité de journal d’audit [!DNL Query Service] à des fins de dépannage, nous vous recommandons de lire le guide de dépannage [&#128279;](../troubleshooting-guide.md).
