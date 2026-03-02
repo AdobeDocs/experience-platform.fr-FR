@@ -2,9 +2,9 @@
 title: Connexion Demandbase People
 description: Utilisez cette destination pour activer vos audiences et les enrichir avec des données tierces Demandbase, pour d’autres cas d’utilisation en aval dans le marketing et les ventes.
 exl-id: 748f5518-7cc1-4d65-ab70-4a129d9e2066
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 1ceafcccf3f95e401fdce8e00b1755fafe004343
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1018'
 ht-degree: 21%
 
 ---
@@ -54,7 +54,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -110,25 +110,25 @@ Vous êtes maintenant prêt à activer vos audiences dans Demandbase People.
 >[!IMPORTANT]
 > 
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Mappages obligatoires {#mandatory-mappings}
 
-Lors de l’activation des audiences vers la destination [!DNL Demandbase People], vous devez configurer le mappage obligatoire des champs suivant à l’étape de mappage :
+Lors de l’activation des audiences vers la destination [!DNL Demandbase People], vous devez configurer les mappages des champs obligatoires suivants à l’étape de mappage :
 
 | Champ source | Champ cible | Description |
 |--------------|--------------|-------------|
 | `xdm: workEmail.address` | `Identity: email` | Adresse électronique professionnelle de la personne |
+| `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | Identifiant unique de la personne |
 
 ### Mappages recommandés {#recommended-mappings}
 
-Pour une précision de correspondance optimale, incluez les mappages facultatifs suivants dans votre flux d’activation, en plus du [mappage obligatoire](#mandatory-mappings) ci-dessus.
+Pour une précision de correspondance optimale, incluez les mappages facultatifs suivants dans votre flux d’activation, en plus des [mappages obligatoires](#mandatory-mappings) ci-dessus.
 
 | Champ source | Champ cible | Description |
 |--------------|--------------|-------------|
-| `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | Identifiant unique de la personne |
 | `xdm: person.name.lastName` | `xdm: lastName` | Nom de la personne |
 | `xdm: person.name.firstName` | `xdm: firstName` | Prénom de la personne |
 
@@ -136,9 +136,9 @@ Pour une précision de correspondance optimale, incluez les mappages facultatifs
 
 Lors du mappage de champs à des [!DNL Demandbase People], tenez compte du comportement correspondant suivant :
 
-* **Correspondance de Principal** : si `externalPersonId` est présent, Demandbase l&#39;utilise comme identifiant principal pour la correspondance de personnes.
+* **Correspondance de Principal** : Demandbase utilise `externalPersonId` comme identifiant principal pour la correspondance de personnes.
 * **Correspondance de secours** : si `externalPersonId` n&#39;est pas disponible, Demandbase utilise le champ `email` pour l&#39;identification.
-* **Obligatoire ou recommandé** : bien que Demandbase n’exige que du `email`, Adobe recommande de mapper tous les champs disponibles à partir du tableau de mappages recommandé ci-dessus, afin d’améliorer la précision des correspondances et les performances de la campagne.
+* **Champs recommandés** : bien que seuls `email` et `externalPersonId` soient requis, Adobe recommande de mapper tous les champs disponibles à partir du tableau de mappages recommandé ci-dessus, afin d’améliorer la précision des correspondances et les performances de la campagne.
 
 ![Mappages de personnes Demandbase](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
 
