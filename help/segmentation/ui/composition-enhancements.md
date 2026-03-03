@@ -3,13 +3,13 @@ title: Améliorations de la composition de l’audience
 description: Découvrez les améliorations apportées à la composition de l’audience avec l’enrichissement de l’audience et une activation plus rapide.
 hide: true
 hidefromtoc: true
-source-git-commit: 42e639b403edbaf666d8bc21eb35b2b75530d6b0
+exl-id: 068a178e-ef50-45f1-bcce-c207ebcd5ef1
+source-git-commit: 2d16cc990ea15c1596aae92d8768cddc77a30efd
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
-
 
 # Améliorations de la composition de l’audience
 
@@ -26,15 +26,15 @@ Pour ajouter des enrichissements d’audience à votre composition, sélectionne
 
 ![Le bloc Audience est mis en surbrillance, ainsi que le bouton Créer une règle.](/help/segmentation/images/ui/composition-enhancements/select-build-rule.png)
 
-La zone de travail du créateur de règles s’affiche. Vous pouvez maintenant créer un critère de filtre pour l’enrichissement de votre audience. Ce critère de filtre **doit** inclut un attribut qui se trouve dans un tableau. L’attribut étant un tableau dépend de la structure de schéma de votre organisation. Après avoir créé vos critères de filtre, sélectionnez **[!UICONTROL Delivery]** dans le panneau de droite.
+La zone de travail du créateur de règles s’affiche. Vous pouvez maintenant créer un critère de filtre pour l’enrichissement de votre audience. Ce critère de filtre **doit** inclut un attribut qui se trouve dans un tableau. L’attribut étant un tableau dépend de la structure de schéma de votre organisation. Après avoir créé vos critères de filtre, sélectionnez **[!UICONTROL View enrichment]** dans le panneau de droite.
 
-![La zone de travail du créateur de règles présente un exemple d’audience pouvant avoir des enrichissements. Le bouton Diffusion est également mis en surbrillance.](/help/segmentation/images/ui/composition-enhancements/view-delivery.png)
+![La zone de travail du créateur de règles présente un exemple d’audience pouvant avoir des enrichissements. Le bouton Diffusion est également mis en surbrillance.](/help/segmentation/images/ui/composition-enhancements/view-enrichment.png)
 
-Sélectionnez le tableau d’objets à utiliser pour l’enrichissement dans la liste du panneau de gauche. S’il n’y a qu’un seul tableau sur le profil, le tableau est automatiquement sélectionné pour vous. Sélectionnez **[!UICONTROL Save]** pour revenir à la composition de l’audience.
+Sélectionnez le tableau d’objets, ainsi que les champs que vous souhaitez utiliser dans l’enrichissement, dans la liste du panneau de gauche. S’il n’y a qu’un seul tableau sur le profil, le tableau est automatiquement sélectionné pour vous. Sélectionnez **[!UICONTROL Save]** pour revenir à la composition de l’audience.
 
 <!-- , as well as the fields you want to be used in the enrichment. -->
 
-![L’arborescence du schéma pour l’arborescence d’enrichissement s’affiche.](/help/segmentation/images/ui/composition-enhancements/view-schema-tree.png)
+![L’arborescence du schéma pour l’arborescence d’enrichissement s’affiche.](/help/segmentation/images/ui/composition-enhancements/enrichment-tree.png)
 
 Dans la composition de l’audience, votre bloc de [!UICONTROL Audience] est désormais de type « [!UICONTROL Rule builder with enhancement] ». Sélectionnez **[!UICONTROL Publish]** pour activer votre audience avec le lot quotidien suivant.
 
