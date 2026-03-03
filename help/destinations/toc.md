@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 5b36722e5c2ca0cc8a4fb8667ceb3dc4a3568b02
+source-git-commit: ba61d129e7686dd7239b5225b9ae28281d90ce4e
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1334'
 ht-degree: 73%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 73%
    * [Supprimer les comptes de destination](./api/delete-destination-account.md)
    * [Supprimer les flux de données de destination](./api/delete-destination-dataflow.md)
    * [Exporter des jeux de données](/help/destinations/api/export-datasets.md)
-   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=fr#use-cases)
+   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
    * [Créer une connexion à une destination](./ui/connect-destination.md)
@@ -106,6 +106,7 @@ ht-degree: 73%
       * [LiveRamp - Connexion de distribution](./catalog/advertising/liveramp-distribution.md)
       * [Lot Magnite](/help/destinations/catalog/advertising/magnite-batch.md)
       * [Connexion en temps réel en flux continu Magnite](/help/destinations/catalog/advertising/magnite-streaming.md)
+      * [Connexion à Microsoft Ads Customer Match](./catalog/advertising/microsoft-ads-customer-match.md)
       * [Connexion Microsoft Bing](./catalog/advertising/bing.md)
       * [Extension Pinterest Conversion Tracking](./catalog/advertising/pinterest-extension.md)
       * [Connexion Liste des Clients Pinterest](./catalog/advertising/pinterest.md)
