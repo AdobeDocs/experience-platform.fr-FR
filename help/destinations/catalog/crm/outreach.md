@@ -38,7 +38,7 @@ Notez les conditions préalables suivantes dans [!DNL Outreach], afin d’export
 
 #### Vous devez disposer d’un compte d’extension {#prerequisites-account}
 
-Accédez à la page [!DNL Outreach] [Connexion](https://accounts.outreach.io/users/sign_in) pour vous enregistrer et créer un compte, le cas échéant. Pour plus d’informations, consultez également la [!DNL Outreach]page[ Prise en charge des ](https://support.outreach.io/hc/en-us/articles/207238607-Claim-Your-Outreach-Account) .
+Accédez à la page [!DNL Outreach] [Connexion](https://accounts.outreach.io/users/sign_in) pour vous enregistrer et créer un compte, le cas échéant. Pour plus d’informations, consultez également la [!DNL Outreach]page[&#x200B; Prise en charge des &#x200B;](https://support.outreach.io/hc/en-us/articles/207238607-Claim-Your-Outreach-Account) .
 
 Notez les éléments ci-dessous avant de vous authentifier à la destination CRM [!DNL Outreach] :
 
@@ -49,7 +49,7 @@ Notez les éléments ci-dessous avant de vous authentifier à la destination CRM
 
 #### Configurer des libellés de champ personnalisé {#prerequisites-custom-fields}
 
-[!DNL Outreach] prend en charge les champs personnalisés pour les [prospects](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). Pour plus d’informations[ voir ](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach)Comment ajouter un champ personnalisé dans la portée . Pour faciliter l’identification, il est recommandé de mettre à jour manuellement les libellés avec leurs noms d’audience correspondants au lieu de conserver les valeurs par défaut. Par exemple, comme ci-dessous :
+[!DNL Outreach] prend en charge les champs personnalisés pour les [prospects](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). Pour plus d’informations[&#x200B; voir &#x200B;](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach)Comment ajouter un champ personnalisé dans la portée . Pour faciliter l’identification, il est recommandé de mettre à jour manuellement les libellés avec leurs noms d’audience correspondants au lieu de conserver les valeurs par défaut. Par exemple, comme ci-dessous :
 
 [!DNL Outreach] page des paramètres pour les prospects affichant des champs personnalisés.
 ![Capture d’écran de l’interface utilisateur de diffusion montrant les champs personnalisés sur la page des paramètres.](../../assets/catalog/crm/outreach/outreach-custom-fields.png)
@@ -75,7 +75,7 @@ Reportez-vous à la [[!DNL Outreach] documentation](https://api.outreach.io/api/
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| `OutreachId` | <ul><li>Identifiant du [!DNL Outreach]. Il s’agit d’une valeur numérique correspondant au profil du prospect.</li><li>L’ID doit correspondre à l’ID dans l’URL [!DNL Outreach] pour le prospect mis à jour.</li><li>Reportez-vous à la documentation de [[!DNL Outreach] ](https://api.outreach.io/api/v2/docs#update-an-existing-resource) pour plus d’informations.</li></ul> | Obligatoire |
+| `OutreachId` | <ul><li>Identifiant du [!DNL Outreach]. Il s’agit d’une valeur numérique correspondant au profil du prospect.</li><li>L’ID doit correspondre à l’ID dans l’URL [!DNL Outreach] pour le prospect mis à jour.</li><li>Reportez-vous à la documentation de [[!DNL Outreach] &#x200B;](https://api.outreach.io/api/v2/docs#update-an-existing-resource) pour plus d’informations.</li></ul> | Obligatoire |
 
 ## Audiences prises en charge {#supported-audiences}
 
@@ -96,7 +96,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -161,7 +161,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 > 
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -200,7 +200,7 @@ Pour envoyer correctement vos données d’audience d’Adobe Experience Platf
 
 ### Planifier l’exportation de l’audience et exemple {#schedule-segment-export-example}
 
-* Lors de l’exécution de l’étape [ Planifier l’exportation d’audiences ](../../ui/activate-segment-streaming-destinations.md), vous devez mapper manuellement les audiences Experience Platform à l’attribut de champ personnalisé dans [!DNL Outreach].
+* Lors de l’exécution de l’étape [&#x200B; Planifier l’exportation d’audiences &#x200B;](../../ui/activate-segment-streaming-destinations.md), vous devez mapper manuellement les audiences Experience Platform à l’attribut de champ personnalisé dans [!DNL Outreach].
 
 * Pour ce faire, sélectionnez chaque segment, puis saisissez la valeur numérique correspondante qui correspond au champ *Libellé `N` du champ personnalisé* à partir du [!DNL Outreach] dans le champ **[!UICONTROL Mapping ID]** .
 
