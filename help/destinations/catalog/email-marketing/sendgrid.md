@@ -34,7 +34,7 @@ Les éléments suivants sont requis avant de commencer la configuration de la de
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-Avant d’activer des données vers la destination SendGrid, vous devez avoir créé un [schéma](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=fr), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) et des [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) dans [!DNL Experience Platform]. Reportez-vous également à la section [limites](#limits) plus bas sur cette page.
+Avant d’activer des données vers la destination SendGrid, vous devez avoir créé un [schéma](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=fr), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr) et des [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=fr) dans [!DNL Experience Platform]. Reportez-vous également à la section [limites](#limits) plus bas sur cette page.
 
 >[!IMPORTANT]
 >
