@@ -3,9 +3,9 @@ title: Activer les audiences de compte vers les destinations
 type: Tutorial
 description: Découvrez comment activer les audiences de compte vers les destinations
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 044306709747c32c4ce265d03d3908bbae169edc
+source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '779'
 ht-degree: 6%
 
 ---
@@ -20,7 +20,7 @@ Cet article explique le processus requis pour exporter des [audiences de compte]
 
 ## Destinations prises en charge {#supported-destinations}
 
-Accédez à **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalog]** . Utilisez le filtre **[!UICONTROL Data types]** et sélectionnez **[!UICONTROL Accounts]** pour afficher les destinations qui prennent en charge l’activation des audiences de compte. Actuellement, l’exportation des audiences de compte n’est disponible que pour certaines destinations d’espace de stockage dans le cloud ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Stockage Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Zone d’atterrissage des données](/help/destinations/catalog/cloud-storage/data-landing-zone.md) et [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) et la destination de diffusion en continu [Demandbase](/help/destinations/catalog/advertising/demandbase.md) et [(Entreprises) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin-b2b.md).
+Accédez à **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalog]** . Utilisez le filtre **[!UICONTROL Data types]** et sélectionnez **[!UICONTROL Accounts]** pour afficher les destinations qui prennent en charge l’activation des audiences de compte. Actuellement, l’exportation des audiences de compte n’est disponible que pour certaines destinations d’espace de stockage dans le cloud ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) et [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) et les destinations de diffusion en continu [Bombora](/help/destinations/catalog/advertising/bombora.md), [Demandbase](/help/destinations/catalog/advertising/demandbase.md) et [(Companies) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin-b2b.md).
 
 ![Destinations qui prennent en charge les audiences de compte.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 

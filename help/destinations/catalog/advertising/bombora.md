@@ -1,21 +1,21 @@
 ---
-title: Connexion Bombora
+title: Connexion à Bombora ABM Audiences
 description: Activez les profils de vos campagnes Bombora pour le ciblage, la personnalisation et la suppression des audiences, en fonction des audiences du compte.
 exl-id: a2f8e399-e192-4104-876a-fe60f8403143
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
 workflow-type: tm+mt
-source-wordcount: '969'
-ht-degree: 22%
+source-wordcount: '1170'
+ht-degree: 18%
 
 ---
 
-# Connexion Bombora {#bombora}
+# Connexion à Bombora ABM Audiences {#bombora}
 
 >[!AVAILABILITY]
 >
->La fonctionnalité d’activation des audiences de compte vers la destination Bombora est disponible pour les sociétés qui achètent les éditions [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) et [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) de Real-Time Customer Data Platform.
+>La fonctionnalité d’activation des audiences de compte vers la destination Bombora ABM Audiences est disponible pour les sociétés qui achètent les éditions [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) et [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) de Real-Time Customer Data Platform.
 
-Activez les profils de vos campagnes Bombora pour le ciblage, la personnalisation et la suppression des audiences, en fonction des [&#x200B; audiences de compte &#x200B;](/help/segmentation/types/account-audiences.md).
+Activez les profils de vos campagnes Bombora pour le ciblage, la personnalisation et la suppression des audiences, en fonction des [ audiences de compte ](/help/segmentation/types/account-audiences.md).
 
 ## Cas d’utilisation {#use-case}
 
@@ -52,15 +52,13 @@ Cette section décrit le type d’audiences que vous pouvez exporter vers cette 
 
 {style="table-layout:auto"}
 
-
-
 Audiences prises en charge par type de données d’audience :
 
 | Type de données d’audience | Pris en charge | Description | Cas d’utilisation |
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -91,8 +89,9 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 Pour exporter des audiences de compte vers Bombora, vous avez besoin des informations suivantes.
 
-1. Un compte Bombora.
+1. Un compte Bombora. Si vous n&#39;en avez pas, vous pouvez demander un compte Bombora en utilisant le [formulaire de demande d&#39;activation d&#39;audience Bombora](https://customers.bombora.com/artcdp/audience-activation-request).
 2. Un **[!UICONTROL client ID]** et un **[!UICONTROL client secret]** Bombora.
+3. Les données envoyées à Bombora doivent provenir de jeux de données **activés pour Profil**, de sorte que le jeu de données soit inclus dans Profil. Assurez-vous que vos jeux de données sont [activés pour le profil](/help/catalog/datasets/enable-for-profile.md) avant d’activer des audiences vers cette destination.
 
 ## Se connecter à la destination {#connect}
 
@@ -127,15 +126,13 @@ Vous êtes maintenant prêt à activer vos audiences dans Bombora.
 >[!IMPORTANT]
 > 
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Lisez [Activer les audiences de compte](/help/destinations/ui/activate-account-audiences.md) pour obtenir des instructions sur l’activation des audiences de compte vers cette destination.
 
 ### Mappages obligatoires {#mapping}
 
 La destination Bombora nécessite que vous configuriez les mappages suivants pour une activation réussie des données.
-
-
 
 | Champ source | Champ cible | Description |
 |---------|----------|---------|
@@ -144,6 +141,17 @@ La destination Bombora nécessite que vous configuriez les mappages suivants pou
 
 ![Ajouter des mappages obligatoires](../..//assets/catalog/advertising/bombora/mappings.png)
 
+## Comportement de synchronisation des audiences {#sync-behavior}
+
+Après l’activation initiale de l’audience, les mises à jour suivantes de l’audience dans Experience Platform sont synchronisées de manière incrémentielle avec Bombora. Les comportements suivants s’appliquent :
+
+* **Compte ajouté à l&#39;audience** : lorsqu&#39;un compte est ajouté à l&#39;audience dans Experience Platform, il est automatiquement ajouté à l&#39;audience correspondante dans Bombora.
+* **Compte supprimé ou ne remplit plus les critères** : lorsqu’un compte n’est plus éligible à l’audience ou est supprimé de l’audience dans Experience Platform, il est supprimé de l’audience correspondante dans Bombora.
+* **Compte ou profil supprimé** : lorsqu’un compte ou un profil est supprimé d’Experience Platform et qu’il n’est plus éligible à l’audience, il est supprimé de l’audience correspondante dans Bombora.
+
+### Suppression d’une audience et comportement de déconnexion {#deletion-disconnect}
+
+La suppression d’une audience dans Experience Platform ou la suppression d’une audience d’un flux de données d’activation Bombora supprime l’audience de votre compte Bombora.
 
 ## Notes supplémentaires et légendes importantes {#additional-notes}
 
