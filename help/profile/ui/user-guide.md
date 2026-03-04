@@ -3,9 +3,9 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Guide de l’interface utilisateur du profil client en temps réel
 description: Le profil client en temps réel offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec le profil client en temps réel dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 5db5d0763b1d1456ba184bd24e7ef4c3047e25d1
+source-git-commit: cf975ec6747438a034fcedb51a4b25b0acd46d2f
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '2123'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 5%
 
 Ce guide de l’interface utilisateur nécessite une compréhension des différents services de [!DNL Experience Platform] impliqués dans la gestion des [!DNL Real-Time Customer Profiles]. Avant de lire ce guide ou de travailler dans l’interface utilisateur, consultez la documentation relative aux services suivants :
 
-* [[!DNL Real-Time Customer Profile] présentation &#x200B;](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [[!DNL Real-Time Customer Profile] présentation ](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [[!DNL Identity Service]](../../identity-service/home.md) : permet l’[!DNL Real-Time Customer Profile] en établissant un lien entre les identités de sources de données disparates lors de leur ingestion dans [!DNL Experience Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
 
@@ -40,9 +40,9 @@ Pour en savoir plus, consultez le [guide du tableau de bord des profils](../../d
 
 ## onglet [!UICONTROL Browse]
 
-Dans l’onglet **[!UICONTROL Browse]** , vous pouvez afficher vos profils dans une vue **carte** ou **graphique** en cliquant sur le bouton (bascule).
+Dans l’onglet **[!UICONTROL Browse]** , vous pouvez afficher vos profils dans une vue **carte** ou **tableau** en cliquant sur le bouton (bascule).
 
-![Le bouton (bascule) d’affichage Carte et Graphique est mis en surbrillance.](../images/user-guide/change-browse-view.png)
+![Le bouton (bascule) Afficher les cartes et les tableaux est mis en surbrillance.](../images/user-guide/change-browse-view.png)
 
 De plus, vous pouvez parcourir vos profils à l’aide d’une politique de fusion ou rechercher des profils spécifiques à l’aide d’un espace de noms d’identité et d’une valeur.
 
@@ -68,7 +68,7 @@ Pour afficher les détails de l’un des profils types, sélectionnez l’**[!UI
 
 ![Des exemples de profils correspondant à la politique de fusion s’affichent.](../images/user-guide/profile-browse-table.png)
 
-Pour en savoir plus sur les politiques de fusion et leur rôle dans Experience Platform, consultez la [&#x200B; présentation des politiques de fusion &#x200B;](../merge-policies/overview.md).
+Pour en savoir plus sur les politiques de fusion et leur rôle dans Experience Platform, consultez la [ présentation des politiques de fusion ](../merge-policies/overview.md).
 
 ### Parcourir par [!UICONTROL Identity] {#browse-identity}
 
@@ -111,11 +111,11 @@ En outre, vous pouvez afficher d’autres détails sur les profils, tels que ses
 
 ### Onglet Détails {#profile-detail}
 
-L’onglet **[!UICONTROL Details]** fournit des informations plus détaillées sur le profil sélectionné et est divisé en quatre sections : informations sur le profil client, widgets AI insight, widgets personnalisables et widgets auto-classés.
+L’onglet **[!UICONTROL Details]** fournit des informations plus détaillées sur le profil sélectionné. L’onglet Détails est divisé en différentes sections, selon que vous êtes en mode Carte ou Graphique. En mode Carte, les informations sur le profil client, les widgets AI insight, les widgets personnalisables et les widgets classés automatiquement s’affichent, tandis qu’en mode Graphique, les sections Attributs de profil et Événements d’expérience s’affichent.
 
 ![La page de détails du profil s’affiche.](../images/user-guide/profile-details.png)
 
-De plus, vous pouvez activer ou désactiver l’affichage des informations générées par l’IA, afficher les détails de hub par rapport à edge et afficher les détails dans la vue graphique.
+De plus, vous pouvez activer/désactiver l’affichage des informations générées par l’IA, l’affichage des détails du hub par rapport à edge, ainsi que le choix entre les vues carte ou graphique.
 
 ![Les bascules répertoriées ci-dessus (informations générées par l’IA, données Hub ou Edge, et vue Carte ou Graphique) sont mises en surbrillance.](../images/user-guide/profile-toggles.png)
 
@@ -151,13 +151,31 @@ Vous pouvez également choisir d’afficher ou non les noms des attributs sous f
 
 La section **[!UICONTROL Auto-classified widgets]** affiche des widgets qui exploitent le schéma d’union pour déterminer les groupes de champs sources auxquels appartient un attribut, fournissant ainsi un contexte plus clair sur l’origine des données. Vous pouvez utiliser la barre de recherche pour rechercher plus facilement des mots-clés dans vos widgets.
 
-Ces widgets combinent les données d’événement (avec le widget Événements d’expérience) et les données d’attribut, ce qui vous permet d’avoir une vue unifiée de votre profil. Vous pouvez utiliser ces widgets pour explorer la structure des données de votre profil afin de mieux structurer vos [&#x200B; widgets personnalisables &#x200B;](#customizable-widgets).
+Ces widgets combinent les données d’événement (avec le widget Événements d’expérience) et les données d’attribut, ce qui vous permet d’avoir une vue unifiée de votre profil. Vous pouvez utiliser ces widgets pour explorer la structure des données de votre profil afin de mieux structurer vos [ widgets personnalisables ](#customizable-widgets).
 
 >[!NOTE]
 >
 >S’il existe plusieurs groupes de champs source, les widgets n’utilisent que **une** des options disponibles.
 
 ![La section widgets classés automatiquement s’affiche.](../images/user-guide/auto-classified-widgets.png)
+
+#### Attributs de profil {#profile-attributes}
+
+La section **[!UICONTROL Profile attributes]** affiche une représentation graphique hiérarchique des données de profil. Dans cette vue, le nœud central représente le profil lui-même, les nœuds secondaires représentent les groupes de champs et les nœuds restants représentent les propriétés au sein de chaque groupe de champs.
+
+Dans la vue graphique, vous pouvez faire glisser et déposer les nœuds pour réorganiser l’ordre des nœuds, réduire et développer les nœuds pour afficher plus de détails sur les attributs, rechercher et filtrer par attribut, ainsi que zoomer en avant et en arrière pour mieux afficher les détails des attributs.
+
+![La vue graphique du profil s’affiche, présentant les différents nœuds qui constituent le profil.](/help/profile/images/user-guide/profile-attribute-graph.png)
+
+#### Événements d’expérience {#experience-events}
+
+La section **[!UICONTROL Experience events]** affiche une chronologie des événements d’expérience contenant le profil.
+
+![La section Événements d’expérience s’affiche, présentant une chronologie des événements d’expérience contenant le profil.](/help/profile/images/user-guide/experience-event-graph.png)
+
+Si vous sélectionnez **[!UICONTROL View event]**, vous pouvez voir les attributs d’événement liés à l’événement sélectionné. Ces détails incluent le chemin d’accès, l’attribut, le nom d’affichage et la valeur.
+
+![La fenêtre contextuelle Attributs d’événement s’affiche, affichant des détails supplémentaires liés à l’événement.](/help/profile/images/user-guide/event-attributes-graph.png)
 
 ### Onglet Attributs {#attributes}
 
@@ -215,7 +233,7 @@ Dans le menu **[!UICONTROL Profiles]** principal, sélectionnez l’onglet **[!U
 
 ![L’onglet Attributs calculés est mis en surbrillance.](../images/user-guide/computed-attributes.png)
 
-Pour plus d’informations sur les attributs calculés, consultez la [présentation des attributs calculés](../computed-attributes/overview.md). Pour plus d’informations sur l’utilisation des attributs calculés dans l’interface utilisateur d’Experience Platform, consultez le [&#x200B; guide de l’interface utilisateur des attributs calculés](../computed-attributes/ui.md).
+Pour plus d’informations sur les attributs calculés, consultez la [présentation des attributs calculés](../computed-attributes/overview.md). Pour plus d’informations sur l’utilisation des attributs calculés dans l’interface utilisateur d’Experience Platform, consultez le [ guide de l’interface utilisateur des attributs calculés](../computed-attributes/ui.md).
 
 ## Étapes suivantes
 
