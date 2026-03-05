@@ -64,7 +64,7 @@ Des alertes peuvent être envoyées vers un webhook configuré afin de faciliter
 
 L’interface utilisateur d’Experience Platform vous permet d’afficher les alertes reçues et de gérer les règles d’alerte. La vidéo ci-après présente ces capacités.
 
->[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423919?captions=fre_fr&quality=12&learn=on)
 
 Pour utiliser des alertes dans l’interface utilisateur d’Experience Platform, vous devez disposer des autorisations de contrôle d’accès suivantes activées via Adobe Admin Console :
 
@@ -97,7 +97,7 @@ En outre, l’onglet [!UICONTROL Alerts] de l’interface utilisateur permet à 
 
 Vous pouvez utiliser un proxy webhook sur [Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app) pour recevoir [Adobe I/O Events](https://developer.adobe.com/events/docs/guides/) d’Experience Platform vers votre [!DNL Slack]. Le proxy gère l’établissement de liaison de vérification d’Adobe et transforme les payloads des événements en messages [!DNL Slack], de sorte que vous puissiez recevoir des alertes destinées aux clients directement dans votre espace de travail.
 
->[!VIDEO](https://video.tv.adobe.com/v/3480183?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3480197?captions=fre_fr&learn=on)
 
 Pour plus d’informations sur la manière de recevoir des notifications Experience Platform dans [!DNL Slack] en intégrant un proxy webhook Adobe App Builder, voir [surveiller les événements Experience Platform dans [!DNL Slack]](https://experienceleague.adobe.com/fr/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack).
 
