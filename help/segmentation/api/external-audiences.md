@@ -2,9 +2,9 @@
 title: Point d’entrée de l’API Audiences externes
 description: Découvrez comment utiliser l’API des audiences externes pour créer, mettre à jour, activer et supprimer vos audiences externes de Adobe Experience Platform.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: de18b8292f07c143d63d26a45ca541e50b2ed2f3
+source-git-commit: b024571a33c8c9313e0814c090e496a8ffa98009
 workflow-type: tm+mt
-source-wordcount: '2528'
+source-wordcount: '2622'
 ht-degree: 8%
 
 ---
@@ -92,7 +92,11 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
                 "path": "activation/sample-source/example.csv",
                 "type": "file",
                 "sourceType": "Cloud Storage",
-                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b",
+                "encryption": {
+                    "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2",
+                    "signVerificationId": "ZTMxYWU4OTUtNzg5Ni00NjlhLThlMDYtZWI5MjA3ZGRmMWMy"
+                }
             }
         },
         "ttlInDays": "40",
@@ -108,7 +112,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `description` | Chaîne | Description facultative de l’audience externe. |
 | `customAudienceId` | Chaîne | Identifiant facultatif de votre audience externe. |
 | `fields` | Tableau d’objets | La liste des champs et leurs types de données. Votre tableau doit comporter au minimum 1 champ et au maximum 41 champs. L’un des champs **doit** doit être un champ d’identité et inclure le `identityNs`. Lors de la création de la liste des champs, vous pouvez ajouter les éléments suivants : <ul><li>`name` : **Obligatoire** nom du champ qui fait partie de la spécification de l’audience externe.</li><li>`type` : **Obligatoire** type de données qui entre dans le champ. Les valeurs prises en charge sont les suivantes : `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) et `boolean`.</li><li>`identityNs` : **Obligatoire pour le champ d’identité** Espace de noms utilisé par le champ d’identité. Les valeurs prises en charge incluent tous les espaces de noms valides, tels que `ECID` ou `email`.</li><li>`labels` : *facultatif* tableau de libellés de contrôle d’accès pour le champ. Vous trouverez plus d’informations sur les libellés de contrôle d’accès disponibles dans le [glossaire des libellés d’utilisation des données](/help/data-governance/labels/reference.md). </li></ul> |
-| `sourceSpec` | Objet | Objet contenant les informations sur l’emplacement de l’audience externe. Lors de l’utilisation de cet objet, vous **devez** inclure les informations suivantes : <ul><li>`path` : **Obligatoire** : emplacement de l’audience externe ou du dossier contenant l’audience externe dans la source. Le chemin d’accès au fichier **ne peut pas** contenir d’espaces. Par exemple, si votre chemin d’accès est `activation/sample-source/Example CSV File.csv`, définissez-le sur `activation/sample-source/ExampleCSVFile.csv`. Le chemin d’accès à votre source se trouve dans la colonne **Données Source** de la section des flux de données.</li><li>`type`: **Obligatoire** type de l’objet que vous récupérez à partir de la source. Cette valeur peut être `file` ou `folder`.</li><li>`sourceType` : *facultatif* type de source à partir de laquelle vous effectuez une récupération. Actuellement, la seule valeur prise en charge est `Cloud Storage`.</li><li>`cloudType` : **obligatoire** type d’espace de stockage dans le cloud, basé sur le type de source. Les valeurs prises en charge sont `S3`, `DLZ`, `GCS`, `Azure` et `SFTP`.</li><li>`baseConnectionId` : identifiant de la connexion de base. Il est fourni par votre fournisseur source. Cette valeur est **obligatoire** si vous utilisez une valeur `cloudType` de `S3`, `GCS` ou `SFTP`. Dans le cas contraire **vous n’avez** besoin d’inclure ce paramètre. Pour plus d’informations, consultez la [présentation des connecteurs source](../../sources/home.md).</li></ul> |
+| `sourceSpec` | Objet | Objet contenant les informations sur l’emplacement de l’audience externe. Lors de l’utilisation de cet objet, vous **devez** inclure les informations suivantes : <ul><li>`path` : **Obligatoire** : emplacement de l’audience externe ou du dossier contenant l’audience externe dans la source. Le chemin d’accès au fichier **ne peut pas** contenir d’espaces. Par exemple, si votre chemin d’accès est `activation/sample-source/Example CSV File.csv`, définissez-le sur `activation/sample-source/ExampleCSVFile.csv`. Le chemin d’accès à votre source se trouve dans la colonne **Données Source** de la section des flux de données.</li><li>`type`: **Obligatoire** type de l’objet que vous récupérez à partir de la source. Cette valeur peut être `file` ou `folder`.</li><li>`sourceType` : *facultatif* type de source à partir de laquelle vous effectuez une récupération. Actuellement, la seule valeur prise en charge est `Cloud Storage`.</li><li>`cloudType` : **obligatoire** type d’espace de stockage dans le cloud, basé sur le type de source. Les valeurs prises en charge sont `S3`, `DLZ`, `GCS`, `Azure` et `SFTP`.</li><li>`baseConnectionId` : identifiant de la connexion de base. Il est fourni par votre fournisseur source. Cette valeur est **obligatoire** si vous utilisez une valeur `cloudType` de `S3`, `GCS` ou `SFTP`. Dans le cas contraire **vous n’avez** besoin d’inclure ce paramètre. Pour plus d’informations, consultez la [présentation des connecteurs source](../../sources/home.md).</li><li>`encryption` : *facultatif* objet contenant la clé de chiffrement requise pour l’ingestion de données chiffrées asynchrones.</li><ul><li>`publicKeyId` : **obligatoire** : ID de clé publique renvoyé lorsque vous avez généré la paire de clés de chiffrement. Pour plus d’informations, consultez le [guide de chiffrement des données](/help/sources/tutorials/api/encrypt-data.md#create-encryption-key-pair). </li><li>`signVerificationKeyId` : *facultatif* : ID de clé publique renvoyé lorsque vous avez partagé votre clé gérée par le client avec Experience Platform. **Remarque :** ce champ est libellé comme `publicKeyId` dans la réponse à cette requête API. Pour plus d’informations, consultez le [guide de chiffrement des données](/help/sources/tutorials/api/encrypt-data.md##share-your-public-key-to-experience-platform).</li></ul></ul> |
 | `ttlInDays` | Entier | Expiration des données de l’audience externe, en jours. Cette valeur peut être définie de 1 à 90. Par défaut, l’expiration des données est définie sur 30 jours. |
 | `audienceType` | Chaîne | Type d’audience pour l’audience externe. Actuellement, seul `people` est pris en charge. |
 | `originName` | Chaîne | **Obligatoire** Origine de l’audience. Cette information indique d’où vient l’audience. Pour les audiences externes, vous devez utiliser `CUSTOM_UPLOAD`. |
@@ -155,7 +159,11 @@ Une réponse réussie renvoie le statut HTTP 202 avec les détails de votre audi
                 "path": "activation/sample-source/example.csv",
                 "type": "file",
                 "sourceType": "Cloud Storage",
-                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b",
+                "encryption": {
+                    "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2",
+                    "signVerificationId": "ZTMxYWU4OTUtNzg5Ni00NjlhLThlMDYtZWI5MjA3ZGRmMWMy"
+                }
             }
         },
         "ttlInDays": 40,
@@ -390,6 +398,8 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de l’audienc
 >[!NOTE]
 >
 >Pour utiliser le point d’entrée suivant, vous devez disposer de la `audienceId` de votre audience externe. Vous pouvez obtenir votre `audienceId` d’un appel réussi au point d’entrée `GET /external-audiences/operations/{OPERATION_ID}`.
+>
+>De plus, ce point d’entrée peut être utilisé pour actualiser les données de l’audience si elles ont déjà été ingérées.
 
 Vous pouvez démarrer une ingestion d’audience en adressant une requête POST au point d’entrée suivant tout en fournissant l’identifiant d’audience.
 
