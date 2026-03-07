@@ -7,7 +7,7 @@ exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: 364a92bde1a1629d2811e7ff16bd6a4fb5287249
 workflow-type: tm+mt
 source-wordcount: '2380'
-ht-degree: 46%
+ht-degree: 48%
 
 ---
 
@@ -128,7 +128,7 @@ Les politiques de consentement se composent de deux éléments logiques :
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentif"
 >title="Condition Si"
->abstract="Définissez d’abord les conditions qui déclencheront la vérification de la politique. Les conditions peuvent inclure certaines actions marketing entreprises, certaines étiquettes de gouvernance des données présentes ou une combinaison des deux. Utilisez la logique AND/OR pour créer des relations conditionnelles complexes entre plusieurs conditions."
+>abstract="Définissez d’abord les conditions qui déclencheront la vérification de la politique. Les conditions peuvent inclure certaines actions marketing entreprises, certaines étiquettes de gouvernance des données présentes ou une combinaison des deux. Utilisez la logique ET/OU pour créer des relations conditionnelles complexes entre plusieurs conditions."
 
 Sous la section **[!UICONTROL If]** , sélectionnez les actions marketing et/ou les libellés d’utilisation des données qui doivent déclencher cette politique. Sélectionnez **[!UICONTROL View all]** et **[!UICONTROL Select labels]** pour afficher les listes complètes des actions marketing et des libellés disponibles, respectivement.
 
@@ -145,7 +145,7 @@ Si vous sélectionnez plusieurs conditions, vous pouvez utiliser l’icône qui 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentthen"
 >title="Condition Alors"
->abstract="Une fois votre condition « Si » définie, utilisez la section « Alors » pour sélectionner au moins un attribut de consentement dans le schéma d’union. Vous devez parcourir les champs de conteneur (objet, mappage, tableau) pour atteindre les champs primitifs (chaîne, nombre, valeur booléenne, etc.) pour la création de règles. Ce champ primitif est l’attribut qui doit être présent pour que les profils soient inclus dans l’action régie par cette politique."
+>abstract="Une fois votre condition « Si » définie, utilisez la section « Alors » pour sélectionner au moins un attribut de consentement dans le schéma d’union. Vous devez parcourir les champs de conteneur (objet, mappage, tableau) pour atteindre les champs primitifs (chaîne, nombre, valeur booléenne, etc.) pour la création de règles. Cet attribut primitif est l’attribut qui doit être présent pour que les profils soient inclus dans l’action régie par cette politique."
 
 Sous la section **[!UICONTROL Then]** , sélectionnez au moins un attribut de consentement dans le schéma d’union. Il s’agit de l’attribut qui doit être présent pour que les profils soient inclus dans l’action régie par cette politique. Vous pouvez choisir l’une des options suggérées ou sélectionner **[!UICONTROL View all]** pour sélectionner directement l’attribut dans le schéma d’union.
 
@@ -177,7 +177,7 @@ Pour maintenir la qualité et la cohérence des données, l’interface utilisat
 
 Pour définir la condition, cochez les cases correspondant aux valeurs que la politique doit évaluer.
 
-![&#x200B; La boîte de dialogue « Sélectionner le champ de schéma d’union » avec un champ de schéma et les cases à cocher à valeur fixe disponibles en surbrillance.](../images/policies/select-schema-field.png)
+![ La boîte de dialogue « Sélectionner le champ de schéma d’union » avec un champ de schéma et les cases à cocher à valeur fixe disponibles en surbrillance.](../images/policies/select-schema-field.png)
 
 #### Mapper des champs de type données pour une condition de politique {#map-data-type-fields}
 
@@ -285,4 +285,4 @@ Ce document offre un aperçu de la gestion des politiques d’utilisation des do
 
 La vidéo qui suit montre comment utiliser les politiques d’utilisation dans l’interface utilisateur [!DNL Experience Platform] :
 
->[!VIDEO](https://video.tv.adobe.com/v/37130?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)

@@ -3,13 +3,13 @@ title: Surveiller les audiences en flux continu
 description: Découvrez comment utiliser le tableau de bord de surveillance pour surveiller les audiences évaluées à l’aide de la segmentation en flux continu
 hide: true
 hidefromtoc: true
-source-git-commit: 6fe0a36a8f2ac2cb954935ee8fe64432442b6e84
+exl-id: b47325fb-7768-4bc0-92d2-5541729e636d
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
 source-wordcount: '368'
-ht-degree: 9%
+ht-degree: 19%
 
 ---
-
 
 # Surveiller les audiences en flux continu
 
@@ -23,7 +23,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [Segmentation Service](../../segmentation/home.md) :
 * [Capacités](../../landing/license-usage-and-guardrails/capacity.md) : dans Experience Platform, les capacités vous permettent de savoir si votre organisation a dépassé l’un de vos mécanismes de sécurisation et vous donnent des informations sur la manière de résoudre ces problèmes.
 
-## Surveillance des mesures pour les audiences en flux continu {#streaming-audience-metrics}
+## Surveiller des mesures pour les audiences en streaming {#streaming-audience-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_audience_evaluation_rate"
@@ -34,7 +34,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_audience_p95_latency"
 >title="Latence d’ingestion P95"
->abstract="Cette mesure mesure mesure la latence du 95e centile d’un événement arrivant dans Adobe Experience Platform pour une évaluation réussie dans l’audience."
+>abstract="Cette mesure mesure la latence du 95e centile d’un événement arrivant dans Adobe Experience Platform pour une évaluation réussie dans l’audience."
 >text="Learn more in documentation"
 
 Le tableau suivant fournit des informations plus détaillées sur les mesures utilisées pour les audiences en flux continu.

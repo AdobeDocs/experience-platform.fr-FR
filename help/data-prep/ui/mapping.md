@@ -6,7 +6,7 @@ exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
 source-git-commit: 789d00912edd0ce8e2871b7e22445a043868ccf5
 workflow-type: tm+mt
 source-wordcount: '1416'
-ht-degree: 27%
+ht-degree: 28%
 
 ---
 
@@ -14,8 +14,8 @@ ht-degree: 27%
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_import_mapping"
->title="Télécharger le modèle"
->abstract="Téléchargez le modèle csv pour effectuer le mappage hors ligne."
+>title="Télécharger un modèle"
+>abstract="Téléchargez le modèle CSV pour effectuer le mapping hors ligne."
 
 Lisez ce guide pour savoir comment utiliser les fonctions de mappage [préparation des données](../home.md) dans l’interface utilisateur de Adobe Experience Platform pour mapper des fichiers CSV à un schéma [modèle de données d’expérience (XDM)](../../xdm/home.md).
 
@@ -169,4 +169,4 @@ Vous pouvez désormais mapper un fichier CSV à un schéma XDM cible à l’aide
 
 * [Présentation de la préparation des données](../home.md)
 * [Présentation des sources](../../sources/home.md)
-* [Surveillance des flux de données des sources dans l’interface utilisateur](../../dataflows/ui/monitor-sources.md)
+* [Surveillance des flux de données des sources dans l’UI](../../dataflows/ui/monitor-sources.md)

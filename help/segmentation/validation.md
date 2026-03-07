@@ -1,13 +1,13 @@
 ---
 title: Validation de l’audience
 description: Découvrez comment Experience Platform valide vos audiences pour s’assurer qu’elles fonctionnent bien en aval.
-source-git-commit: 52439e55d3c48631488b17b6b04256bcbbe37bcb
+exl-id: 55877ad5-757f-4928-853c-3b211ece0a45
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
 source-wordcount: '1630'
-ht-degree: 1%
+ht-degree: 14%
 
 ---
-
 
 # Validation de l’audience
 
@@ -105,12 +105,12 @@ plan.equals("trial") AND region.equals("canada")
 
 +++
 
-### [!BADGE Validation critique]{type=Negative} complexité des événements séquentiels {#sequential-event-complexity}
+### [!BADGE Validation critique]{type=Negative} Complexité d’événement séquentiel {#sequential-event-complexity}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_chaincountcheck"
 >title="Limite de séquence d’événements"
->abstract="Votre audience contient trop d’événements séquentiels. Vous ne pouvez avoir qu’un maximum de 6 événements séquentiels dans votre définition d’audience. Supprimez certains événements séquentiels de votre définition d’audience avant de continuer."
+>abstract="Votre audience contient trop d’événements séquentiels. Vous ne pouvez avoir qu’un maximum de 6 événements séquentiels dans votre définition d’audience. Supprimez certains événements séquentiels de votre définition d’audience avant de continuer."
 
 La validation de la complexité des événements séquentiels limite le nombre d’événements séquentiels dans une séquence à 6 événements.
 
@@ -140,12 +140,12 @@ chain(xEvent, timestamp, [ A: WHAT(eventType = "productView"), B: WHAT(eventType
 
 +++
 
-### [!BADGE Optimisation des performances]{type=Caution} Nombre agrégé {#aggregated-count}
+### [!BADGE Optimisation des performances]{type=Caution} Compte agrégé {#aggregated-count}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_countaggregationcheck"
 >title="Avertissement du filtre de comptage"
->abstract="Votre audience comporte trop d’événements d’agrégation. Vous devez utiliser un maximum de 3 événements d’agrégation dans votre audience. Pour éviter tout problème de performances, vous devez supprimer certains événements d’agrégation de votre définition d’audience."
+>abstract="Votre audience comporte trop d’événements d’agrégation. Vous devez utiliser un maximum de 3 événements d’agrégation dans votre audience. Pour éviter tout problème de performances, vous devez supprimer certains événements d’agrégation de votre définition d’audience."
 
 La vérification du nombre agrégé limite à 3 conditions le nombre d’événements d’agrégation utilisés dans votre audience.
 
@@ -153,12 +153,12 @@ Un événement standard ne doit trouver qu’un seul événement correspondant p
 
 Pour éviter de déclencher cette validation, n’utilisez des nombres spécifiques que lorsque cela est strictement nécessaire pour la définition de l’audience. Par exemple, si vous devez uniquement savoir si un utilisateur s’est engagé une seule fois, vous pouvez utiliser la logique « Existe » standard, plutôt qu’un événement « Comptage > 0 ».
 
-### [!BADGE Optimisation des performances]{type=Caution} complexité des données imbriquées {#nested-data-complexity}
+### [!BADGE Optimisation des performances]{type=Caution} Complexité des données imbriquées {#nested-data-complexity}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_arraydepthcheck"
 >title="Avertissement relatif aux données imbriquées"
->abstract="Votre audience comporte trop de couches de données imbriquées. Vous devez utiliser un maximum de 2 couches de données au sein de votre audience. Pour éviter tout problème de performances, aplatissez votre définition d’audience."
+>abstract="Votre audience comporte trop de couches de données imbriquées. Vous devez utiliser un maximum de 2 couches de données au sein de votre audience. Pour éviter tout problème de performances, aplatissez votre définition d’audience."
 
 La validation de la complexité des données imbriquées limite à 2 calques le nombre de données imbriquées dans une définition d’audience.
 
@@ -166,12 +166,12 @@ Bien qu’Experience Platform prenne en charge l’utilisation d’objets de tab
 
 Si vous effectuez fréquemment une segmentation sur un attribut profondément imbriqué, vous devrez peut-être contacter votre équipe d’ingénierie de données pour copier l’attribut à un niveau supérieur dans le schéma de profil pour un accès plus facile.
 
-### [!BADGE Optimisation des performances]{type=Caution} Taille de l’audience {#audience-size}
+### [!BADGE Optimisation des performances]{type=Caution} Taille d’audience {#audience-size}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_profilestorecheck"
 >title="Avertissement relatif à la taille de l’audience"
->abstract="Votre audience est écrite de manière trop large. Évitez d’écrire une définition d’audience qui qualifie plus de 30 % du total des profils de votre sandbox. Pour éviter tout problème de performances, il est recommandé de renforcer la définition de votre audience."
+>abstract="Votre audience est écrite de manière trop générale. Évitez d’écrire une définition d’audience qui qualifie plus de 30 % du total des profils de votre sandbox. Pour éviter tout problème de performances, il est recommandé de renforcer la définition de votre audience."
 
 La validation de la taille de l’audience vérifie si votre définition d’audience est si large que plus de 30 % du total des profils de votre sandbox remplissent les critères pour l’audience.
 

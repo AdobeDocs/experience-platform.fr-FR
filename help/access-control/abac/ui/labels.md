@@ -6,7 +6,7 @@ exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 source-git-commit: 855f0a1384f658d39aa9d4fbb6bcb032933e59db
 workflow-type: tm+mt
 source-wordcount: '588'
-ht-degree: 13%
+ht-degree: 14%
 
 ---
 
@@ -30,9 +30,9 @@ Les libellés sont classés par type et appartiennent à l’une des catégories
 
 | Type | Description |
 | --- | --- |
-| [&#x200B; Contrat &#x200B;](../../../data-governance/labels/reference.md#contract){target="_blank"} | Cette catégorie est utilisée pour classer les données contenant des obligations contractuelles ou liées aux politiques de gouvernance des données de votre organisation. |
+| [ Contrat ](../../../data-governance/labels/reference.md#contract){target="_blank"} | Cette catégorie est utilisée pour classer les données contenant des obligations contractuelles ou liées aux politiques de gouvernance des données de votre organisation. |
 | [Identité](../../../data-governance/labels/reference.md#identity){target="_blank"} | Cette catégorie est utilisée pour classer les données qui peuvent identifier directement ou indirectement une personne. |
-| [&#x200B; Sensible &#x200B;](../../../data-governance/labels/reference.md#sensitive){target="_blank"} | Cette catégorie est utilisée pour classer les données que votre organisation considère comme sensibles. |
+| [ Sensible ](../../../data-governance/labels/reference.md#sensitive){target="_blank"} | Cette catégorie est utilisée pour classer les données que votre organisation considère comme sensibles. |
 | [Réseau Partenaires](../../../data-governance/labels/reference.md#partner){target="_blank"} | Cette catégorie est utilisée pour classer les données obtenues à partir de sources externes à votre organisation. |
 | Engagement responsable | Cette catégorie contient une étiquette unique, **[!UICONTROL Potential for Bias]**, qui reflète les données susceptibles d&#39;introduire un biais. |
 | Valeur personnalisée | Cette catégorie comprend les libellés créés par votre organisation. |
@@ -45,7 +45,7 @@ Pour afficher une étiquette individuelle, sélectionnez son nom dans la liste. 
 
 ![Page de détails d’une étiquette individuelle.](../../images/ui/labels/label-details.png){zoomable="yes"}
 
-## Création d’un libellé personnalisé {#create-custom-label}
+## Créer un libellé personnalisé {#create-custom-label}
 
 >[!CONTEXTUALHELP]
 >id="platform_abac_labelusage"
