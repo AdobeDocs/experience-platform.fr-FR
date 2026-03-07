@@ -33,14 +33,14 @@ ht-degree: 39%
 >title="Tableau de bord d’utilisation des licences"
 >abstract="Le tableau de bord d’utilisation des licences donne des informations sur les produits Adobe Experience Platform que vous avez achetés. La vue d’ensemble du tableau de bord affiche les mesures principales pour vos produits, notamment votre utilisation pour chacune d’entre elles et la quantité de licences contractées. L’espace de travail des détails affiche une répartition de vos mesures pour chaque produit dans des sandbox spécifiques."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=fr" text="Expirations automatisées des jeux de données"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=fr" text="Expiration des données de profils pseudonymes"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage"
 >title="Tableau de bord d’utilisation des licences"
 >abstract="Le tableau de bord d’utilisation des licences donne des informations sur les produits Adobe Experience Platform que vous avez achetés. La vue d’ensemble du tableau de bord affiche les mesures principales pour vos produits, notamment votre utilisation pour chacune d’entre elles et la quantité de licences contractées. L’espace de travail des détails affiche une répartition de vos mesures pour chaque produit dans des sandbox spécifiques."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=fr" text="Expirations automatisées des jeux de données"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=fr" text="Expiration des données de profils pseudonymes"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
@@ -53,84 +53,84 @@ ht-degree: 39%
 >title="Audience adressable prévue"
 >abstract="L’audience adressable est l’ensemble des profils de personnes dans le profil client en temps réel que votre entreprise est autorisée à engager. Cette mesure inclut les profils directement identifiables et pseudonymes.<br>Votre utilisation est susceptible d’atteindre la quantité autorisée sous licence. Pour réduire l’utilisation, configurez l’expiration des données de jeux de données ou de profils pseudonymes."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=fr" text="Expirations des événements d’expérience"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=fr" text="Expiration des données de profils pseudonymes"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_engageableprofiles"
 >title="Profils prévus pouvant permettre un engagement"
 >abstract="Les profils pouvant permettre un engagement sont des profils de personnes dans le profil client en temps réel que votre entreprise a tenté d’engager à l’aide de Journey Optimizer au cours des 12 derniers mois.<br>Votre utilisation est susceptible d’atteindre la quantité autorisée sous licence. Pour réduire l’utilisation, configurez l’expiration des données de jeux de données ou de profils pseudonymes."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=fr" text="Expirations des événements d’expérience"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=fr" text="Expiration des données de profils pseudonymes"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_businesspersonprofile"
 >title="Profil de personnes commerciales prédit"
 >abstract="Les profils de personnes commerciales sont des enregistrements dans le profil client en temps réel représentant des personnes dans un contexte B2B.<br>Votre utilisation est susceptible d’atteindre la quantité autorisée sous licence. Pour réduire l’utilisation, configurez l’expiration des données de jeux de données ou de profils pseudonymes."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=fr" text="Expirations des événements d’expérience"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=fr" text="Expiration des données de profils pseudonymes"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_corehours"
 >title="Heures principales prévues"
 >abstract="Les heures principales représentent le temps de traitement consommé dans les services Experience Platform.<br>Votre utilisation est susceptible d’atteindre la quantité autorisée sous licence. Pour réduire l’utilisation, configurez l’expiration des données de jeux de données ou de profils pseudonymes."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=fr" text="Expirations des événements d’expérience"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=fr" text="Expiration des données de profils pseudonymes"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_totaldatavolume"
 >title="Volume total de données prévu"
 >abstract="Le volume total de données est la quantité de données disponible dans le profil client en temps réel pour une utilisation dans les workflows d’engagement et de personnalisation.<br>Votre utilisation est susceptible d’atteindre la quantité autorisée sous licence. Pour réduire l’utilisation, configurez l’expiration des données de jeux de données ou de profils pseudonymes."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=fr" text="Expirations des événements d’expérience"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=fr" text="Expiration des données de profils pseudonymes"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_cjaRowsAvailable"
 >title="Lignes CJA prédites disponibles"
 >abstract="Les lignes CJA disponibles désignent les lignes de données moyennes quotidiennes disponibles pour analyse dans Customer Journey Analytics.<br>Votre utilisation est susceptible d’atteindre la quantité autorisée sous licence. Pour réduire l’utilisation, configurez l’expiration des données de jeux de données ou de profils pseudonymes."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=fr" text="Expirations des événements d’expérience"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=fr" text="Expiration des données de profils pseudonymes"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_exceededusage_addressableaudience"
 >title="Audience adressable prévue"
 >abstract="L’audience adressable est l’ensemble des profils de personnes dans le profil client en temps réel que votre entreprise est autorisée à engager. Cela inclut les profils directement identifiables et pseudonymes.<br>Votre utilisation a dépassé la quantité autorisée sous licence. Pour réduire l’utilisation, configurez l’expiration des données de jeux de données ou de profils pseudonymes."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=fr" text="Expirations des événements d’expérience"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=fr" text="Expiration des données de profils pseudonymes"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_exceededusage_engageableprofiles"
 >title="Profils prévus pouvant permettre un engagement"
 >abstract="Les profils pouvant permettre un engagement sont des profils de personnes dans le profil client en temps réel que votre entreprise a tenté d’engager à l’aide de Journey Optimizer au cours des 12 derniers mois.<br>Votre utilisation a dépassé la quantité autorisée sous licence. Pour réduire l’utilisation, configurez l’expiration des données de jeux de données ou de profils pseudonymes."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=fr" text="Expirations des événements d’expérience"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=fr" text="Expiration des données de profils pseudonymes"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_exceededusage_businesspersonprofile"
 >title="Profil de personnes commerciales prédit"
 >abstract="Les profils de personnes commerciales sont des enregistrements dans le profil client en temps réel représentant des personnes dans un contexte B2B.<br>Votre utilisation a dépassé la quantité autorisée sous licence. Pour réduire l’utilisation, configurez l’expiration des données de jeux de données ou de profils pseudonymes."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=fr" text="Expirations des événements d’expérience"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=fr" text="Expiration des données de profils pseudonymes"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_exceededusage_corehours"
 >title="Heures principales prévues"
 >abstract="Les heures principales représentent le temps de traitement consommé dans les services Experience Platform.<br>Votre utilisation a dépassé la quantité autorisée sous licence. Pour réduire l’utilisation, configurez l’expiration des données de jeux de données ou de profils pseudonymes."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=fr" text="Expirations des événements d’expérience"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=fr" text="Expiration des données de profils pseudonymes"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_exceededusage_totaldatavolume"
 >title="Volume total de données prévu"
 >abstract="Le volume total de données est la quantité de données disponible dans le profil client en temps réel pour une utilisation dans les workflows d’engagement et de personnalisation.<br>Votre utilisation a dépassé la quantité autorisée sous licence. Pour réduire l’utilisation, configurez l’expiration des données de jeux de données ou de profils pseudonymes."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=fr" text="Expirations des événements d’expérience"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=fr" text="Expiration des données de profils pseudonymes"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_exceededusage_cjaRowsAvailable"
 >title="Lignes CJA prédites disponibles"
 >abstract="Les lignes CJA disponibles désignent les lignes de données moyennes quotidiennes disponibles pour analyse dans Customer Journey Analytics.<br>Votre utilisation a dépassé la quantité autorisée sous licence. Pour réduire l’utilisation, configurez l’expiration des données de jeux de données ou de profils pseudonymes."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=fr" text="Expirations des événements d’expérience"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=fr" text="Expiration des données de profils pseudonymes"
 
 Vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise via le tableau de bord **[!UICONTROL License usage]**. Le tableau de bord est disponible pour les organisations Experience Cloud éligibles, y compris celles qui disposent d’une licence Adobe Experience Platform et celles qui n’en disposent pas. Les informations affichées sont capturées lors d’un instantané quotidien de l’environnement de votre organisation et ne sont pas mises à jour en temps réel.
 
@@ -247,14 +247,14 @@ L’onglet **[!UICONTROL Products]** présente les données d’utilisation des 
 >title="Utilisation prédite"
 >abstract="Les prédictions sont basées sur l’utilisation des 6 à 7 derniers mois et sont générées chaque semaine le vendredi. Notez que les prédictions d’utilisation des licences sont des approximations basées sur l’utilisation passée. Il vous incombe de comprendre l’utilisation réelle de votre entreprise et de vous assurer que cette utilisation ne dépasse pas la portée de la licence obtenue par votre entreprise auprès d’Adobe. Pour réduire l’utilisation, vous pouvez configurer l’expiration des données des jeux de données ou des profils pseudonymes pour les sandbox et les jeux de données."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=fr" text="Expirations automatisées des jeux de données"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=fr" text="Expiration des données de profils pseudonymes"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
 >title="Utilisation prédite"
 >abstract="Les prédictions sont basées sur l’utilisation des 6 à 7 derniers mois et sont générées le 15 de chaque mois. Notez que les prédictions d’utilisation des licences sont des approximations basées sur l’utilisation passée. Il vous incombe de comprendre l’utilisation réelle de votre entreprise et de vous assurer que cette utilisation ne dépasse pas la portée de la licence obtenue par votre entreprise auprès d’Adobe. Pour réduire l’utilisation, vous pouvez configurer l’expiration des données des jeux de données ou des profils pseudonymes pour les sandbox et les jeux de données."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=fr" text="Expirations automatisées des jeux de données"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=fr" text="Expiration des données de profils pseudonymes"
 
 Gérez et optimisez vos ressources de licence de manière proactive avec des prévisions d’utilisation précises et à jour. La colonne [!UICONTROL Predicted Usage] prévoit l’utilisation future des licences au niveau du sandbox pour tous les sandbox de production et de développement pour tous les produits achetés. Les prévisions sont désormais mises à jour chaque semaine, fournissant des prévisions sur six semaines basées sur les dernières données d’utilisation. Chaque prédiction comprend une limite inférieure et une limite supérieure pour prendre en charge une planification éclairée.
 
@@ -295,7 +295,7 @@ La fonctionnalité d’utilisation prévue prend en charge les mesures suivantes
 >
 >À compter du 20 août, les clients disposant de droits pour « [!UICONTROL Average Profile Richness] » et « [!UICONTROL Total Storage] » ont vu « [!UICONTROL Total Data Volume] » dans le tableau de bord d’utilisation de la licence. Les droits des clients n’ont pas été modifiés, mais les mesures de suivi ont été simplifiées. [!UICONTROL Total Data Volume] représente les données disponibles dans le profil client en temps réel pour les workflows d’engagement et de personnalisation. Cette mesure simplifiée a amélioré la gestion et la mesure de l’utilisation du profil client en temps réel. Nous recommandons aux clients de contacter leur représentant Adobe pour plus d’informations sur cette modification.
 
-Les mesures qui s’affichent dans votre tableau de bord dépendent des produits et des droits associés à votre organisation. Si votre entreprise participe à la version d’évaluation des agents Adobe Experience Platform liés à l’utilisation [&#128279;](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) ou si elle obtient des licences pour les agents Adobe Experience Platform, le tableau de bord inclut la mesure [!UICONTROL AI credits]. Si votre entreprise ne dispose pas d’une licence Adobe Experience Platform, l’utilisation du crédit IA s’affiche en tant que mesure principale.
+Les mesures qui s’affichent dans votre tableau de bord dépendent des produits et des droits associés à votre organisation. Si votre entreprise participe à la version d’évaluation des agents Adobe Experience Platform liés à l’utilisation [&#128279;](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) ou si elle obtient des licences pour les agents Adobe Experience Platform, le tableau de bord inclut la mesure [!UICONTROL AI credits]. Si votre entreprise ne dispose pas d’une licence Adobe Experience Platform, l’utilisation du crédit IA s’affiche en tant que mesure principale.
 
 | Mesure | Description |
 |---|---|
@@ -330,11 +330,11 @@ La disponibilité de ces mesures et la définition spécifique de chacune d’el
 
 | Licence | Description du produit |
 | --- | --- |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM :OD LOURD</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>ADOBE EXPERIENCE PLATFORM :OD</li></ul> | [Experience Platform, App Services et Intelligent Services](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM :OD LOURD</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/fr/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM :OD</li></ul> | [Experience Platform, App Services et Intelligent Services](https://helpx.adobe.com/fr/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT PLATEFORME DE DONNÉES CLIENTS :OD PRFL À 10 MILLIONS</li><li>RT PLATEFORME DE DONNÉES CLIENTS:OD PRFL À 50 MILLIONS</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:OD ACTIVATION</li><li>AEP:OD ACTIVATION PRFL À 10M</li><li>AEP:OD PRFL D’ACTIVATION JUSQU’À 50 MILLIONS</li></ul> | [Activation de Adobe Experience Platform](https://helpx.adobe.com/fr/legal/product-descriptions/adobe-experience-platform0.html) |
-| <ul><li>AEP :OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+| <ul><li>AEP :OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/fr/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 | <ul><li>JOURNEY OPTIMIZER SELECT :OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE :OD</li><li>DÉPLOYER AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>REAL-TIME CDP UNP :OD PROFILE ORCHESTRATION</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/fr/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
