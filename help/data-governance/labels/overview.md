@@ -38,7 +38,7 @@ Tous les segments d’audience créés par le [service de segmentation d’Adobe
 
 Outre l’héritage de libellés au niveau des jeux de données, les segments héritent par défaut de tous les libellés au niveau des champs de leurs jeux de données associés. Par conséquent, vous pouvez identifier plus facilement les attributs à exclure de vos segments et les empêcher d’hériter des libellés de champs exclus.
 
-Pour plus d’informations sur le fonctionnement de l’application automatique dans Experience Platform, consultez la présentation de l’[ application automatique des politiques ](../enforcement/auto-enforcement.md).
+Pour plus d’informations sur le fonctionnement de l’application automatique dans Experience Platform, consultez la présentation de l’[&#x200B; application automatique des politiques &#x200B;](../enforcement/auto-enforcement.md).
 
 ### Héritage des contrôles d’exportation de données d’Adobe Audience Manager
 

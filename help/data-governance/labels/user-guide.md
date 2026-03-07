@@ -36,7 +36,7 @@ Vous pouvez ajouter des libellés directement à un schéma ou à des champs de 
 >
 >![Boîte de dialogue Non-respect des règles de gouvernance des données détecté avec le résumé des violations et le diagramme de traçabilité des données en surbrillance.](../images/labels/policy-violation-dialog.png)
 >
->Pour plus d’informations sur les violations de politique[ consultez la ](../enforcement/auto-enforcement.md#data-usage-violation) documentation sur les violations de politique d’utilisation des données .
+>Pour plus d’informations sur les violations de politique[&#x200B; consultez la &#x200B;](../enforcement/auto-enforcement.md#data-usage-violation) documentation sur les violations de politique d’utilisation des données .
 
 Pour gérer les libellés d’utilisation des données au niveau du schéma, vous devez sélectionner un schéma existant ou en créer un nouveau. Après vous être connecté à Adobe Experience Platform, sélectionnez **[!UICONTROL Schemas]** dans le volet de navigation de gauche pour ouvrir l’espace de travail **[!UICONTROL Schemas]**. Cette page répertorie tous les schémas créés appartenant à votre organisation, ainsi que des détails utiles relatifs à chaque schéma.
 
