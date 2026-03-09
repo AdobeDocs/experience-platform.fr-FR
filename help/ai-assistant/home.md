@@ -75,7 +75,7 @@ La connaissance des produits fait référence aux concepts et aux sujets reposan
 
 Regardez la vidéo suivante pour plus d’informations sur les connaissances des produits de l’assistant AI (hérité) :
 
->[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475932/?captions=fre_fr&learn=on)
 
 ### Informations opérationnelles {#operational-insights}
 
@@ -104,7 +104,7 @@ Pour les questions relatives aux informations opérationnelles, les réponses pe
 
 Regardez la vidéo suivante pour plus d’informations sur les insights opérationnels de l’assistant d’IA (hérité) :
 
->[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444034?captions=fre_fr&learn=on&enablevpops)
 
 ### Périmètre de la fonctionnalité {#feature-scope}
 
