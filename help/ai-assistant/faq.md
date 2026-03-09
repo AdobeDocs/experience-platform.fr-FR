@@ -1,43 +1,43 @@
 ---
 title: Questions fréquentes sur l’assistant AI
-description: En savoir plus sur les réponses aux questions fréquentes concernant l’assistant AI
+description: Découvrez les réponses aux questions fréquentes sur l’assistant d’IA (hérité).
 exl-id: 17a07c11-7bc6-4cba-be0a-d75fdb567053
-source-git-commit: 74734711c4c7561523f4e93c5c85c261c2d31afa
+source-git-commit: 077c42f2190316a00168bbeca685c08677c2b13a
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
 
-# FAQ
+# Questions fréquentes
 
-Vous trouverez ci-dessous une liste de réponses aux questions les plus fréquemment posées à propos de l’assistant AI.
+Vous trouverez ci-dessous une liste de réponses aux questions fréquentes sur l’assistant AI (hérité).
 
 ## Les informations de l’assistant AI sont-elles fournies en temps réel ?
 
-Les données présentées dans les réponses de l’assistant AI sont mises à jour quotidiennement. Cela signifie que les données des réponses peuvent être jusqu’à 24 heures plus anciennes que les données que vous pouvez voir sur l’interface utilisateur d’Experience Platform au moment de la réponse.
+Les données présentées dans les réponses de l’assistant d’IA (héritées) sont mises à jour quotidiennement. Cela signifie que les données des réponses peuvent être jusqu’à 24 heures plus anciennes que les données que vous pouvez voir sur l’interface utilisateur d’Experience Platform au moment de la réponse.
 
-Les mêmes principes s&#39;appliquent au contrôle d&#39;accès. L’assistant AI peut prendre jusqu’à 24 heures pour refléter toutes les modifications apportées aux configurations du contrôle d’accès et des autorisations. Pour plus d’informations, consultez le guide sur la [confidentialité dans l’assistant AI](./privacy.md).
+Les mêmes principes s&#39;appliquent au contrôle d&#39;accès. L’assistant d’IA (hérité) peut prendre jusqu’à 24 heures pour refléter les modifications apportées aux configurations de contrôle d’accès et d’autorisations. Pour plus d’informations, consultez le guide sur la [confidentialité dans l’assistant AI](./privacy.md).
 
 ## Quelles applications Adobe l’assistant AI prend-il en charge ?
 
-Actuellement, la portée de l’assistant AI est la suivante :
+Actuellement, la portée de l’assistant d’IA (hérité) est la suivante :
 
-* [Connaissance des produits](./home.md#product-knowledge) : l’assistant AI peut répondre aux questions sur la connaissance des produits pour Experience Platform, Real-Time Customer Data Platform et Adobe Journey Optimizer. Vous pouvez également approfondir les rubriques de connaissance des produits Customer Journey Analytics, mais uniquement via l’interface utilisateur de Customer Journey Analytics.
-* [Informations opérationnelles &#x200B;](./home.md#operational-insights) : vous pouvez poser des questions à l’assistant AI sur les informations opérationnelles relatives aux objets de données suivants : attributs, audiences, flux de données, jeux de données, destinations, parcours, schémas et sources.
+* [Connaissance des produits](./home.md#product-knowledge) : l’assistant AI (hérité) peut répondre aux questions sur la connaissance des produits pour Experience Platform, Real-Time Customer Data Platform et Adobe Journey Optimizer. Vous pouvez également approfondir les rubriques de connaissance des produits Customer Journey Analytics, mais uniquement via l’interface utilisateur de Customer Journey Analytics.
+* [Informations opérationnelles ](./home.md#operational-insights) : vous pouvez poser des questions à l’assistant d’IA (hérité) sur les informations opérationnelles des objets de données suivants : attributs, audiences, flux de données, jeux de données, destinations, parcours, schémas et sources.
 
 ## Quelles sont les fonctionnalités de l’assistant d’IA ?
 
-L’assistant AI peut répondre aux requêtes sur les connaissances des produits Adobe et aux questions liées aux informations opérationnelles sur vos objets de données. (Par exemple, « Combien d’audiences sont activées ? »).
+L’assistant d’IA (hérité) peut répondre aux requêtes sur les connaissances sur les produits Adobe et aux questions relatives aux informations opérationnelles sur vos objets de données. (Par exemple, « Combien d’audiences sont activées ? »).
 
 ## L’assistant AI peut-il fournir des informations sur les données de profil ?
 
-Non. L’assistant AI n’a pas accès aux données au niveau du profil et elles ne sont donc pas consultées ni utilisées par l’assistant AI.
+Non. L’assistant AI (hérité) n’a pas accès aux données au niveau du profil et elles ne sont donc pas consultées ni utilisées par l’assistant AI (hérité).
 
 ## Mes informations personnelles seront-elles utilisées dans les données de formation de l’assistant AI ?
 
-AI Assistant n’utilise pas d’informations personnelles à des fins de formation. Ne fournissez aucune information personnelle sur vous-même (y compris votre nom ou vos coordonnées) ou toute autre partie à AI Assistant.
+L’assistant AI (hérité) n’utilise pas d’informations personnelles à des fins de formation. Ne fournissez aucune information personnelle vous concernant (y compris votre nom ou vos coordonnées) ou concernant d’autres parties à AI Assistant (Legacy).
 
 ## Puis-je exécuter la requête SQL renvoyée par l’assistant AI lors de la vérification d’une réponse ?
 
-Non. Cette requête SQL est en lecture seule et ne peut pas être exécutée sur l’assistant AI ou sur Query Service.
+Non. Cette requête SQL est en lecture seule et ne peut pas être exécutée sur l’assistant AI (hérité) ou sur Query Service.
