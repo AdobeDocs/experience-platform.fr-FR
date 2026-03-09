@@ -230,4 +230,4 @@ Voici une liste d’exemples de questions qui ne sont actuellement pas prises en
 
 ## Étapes suivantes
 
-En lisant ce document, vous comprenez désormais comment optimiser vos questions pour l’assistant d’IA (hérité). Pour plus d’informations sur l’utilisation de cette fonctionnalité au cours de vos workflows, consultez le guide de l’interface utilisateur de l’assistant [ AI (hérité)](ui-guide.md).
+En lisant ce document, vous comprenez désormais comment optimiser vos questions pour l’assistant d’IA (hérité). Pour plus d’informations sur l’utilisation de cette fonctionnalité au cours de vos workflows, consultez le guide de l’interface utilisateur de l’assistant [&#x200B; AI (hérité)](ui-guide.md).
