@@ -1,12 +1,12 @@
 ---
-keywords: destinations d’analyse;destination d’analyse
+keywords: destinations analytics;destination analytics
 title: Présentation des destinations Analytics
 description: Les destinations d’analyse effectuent le suivi de la manière dont les visiteurs interagissent avec le contenu de votre site et collectent des données afin de comprendre le comportement de votre audience. Ces plateformes vous fournissent des informations uniques sur l’engagement et la conversion de vos visiteurs les plus précieux.
 exl-id: d7a2351b-c2ce-4776-a2b7-f8bb5e73b45b
-source-git-commit: 767ebd1ef693f9484e11facc7e8b73d91f632956
+source-git-commit: 8b29e4c06300244a72addc7ae4807425a405b56f
 workflow-type: tm+mt
-source-wordcount: '176'
-ht-degree: 84%
+source-wordcount: '173'
+ht-degree: 83%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 84%
 
 Les destinations d’analyse effectuent le suivi de la manière dont les visiteurs interagissent avec le contenu de votre site et collectent des données afin de comprendre le comportement de votre audience. Ces plateformes vous fournissent des informations uniques sur l’engagement et la conversion de vos visiteurs les plus précieux.
 
-## Destinations d’analyse prises en charge {#supported-destinations}
+## Destinations Analytics prises en charge {#supported-destinations}
 
 Actuellement, Adobe Experience Platform prend en charge les destinations d’analyse répertoriées ci-dessous. Pour en savoir plus sur la connexion à ces destinations, consultez les liens individuels :
 
@@ -28,14 +28,13 @@ Actuellement, Adobe Experience Platform prend en charge les destinations d’ana
 * [Extension Decibel](decibel.md)
 * [Extension Demandbase](demandbase.md)
 * [Extension Dialogtech](dialogtech.md)
-* [Connexion de Gainsight PX](gainsight-px.md)
-* [Extension d’analyse des balises de site global Google](gtag-analytics.md)
+* [Connexion PX Gainsight](gainsight-px.md)
+* [Extension Google Global Site Tag Analytics](gtag-analytics.md)
 * [Extension Google Universal Analytics](google-universal-analytics.md)
 * [Extension JW Player Analytics (version Beta)](jw-player-analytics.md)
 * [Extension Nielsen BSDK](nielsen-bsdk.md)
 * [Extension Nielsen IMA Handler](nielsen-ima.md)
 * [Extension Nielsen VideoJS Player Handler](nielsen-videojs.md)
-* [Extension Parse.ly Analytics](parsely.md)
 * [Extension Quantum Metric](quantum-metric.md)
 * [Extension SessionCam](sessioncam.md)
 * [Extension TMMData](tmmdata.md)

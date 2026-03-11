@@ -5,10 +5,10 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: ba61d129e7686dd7239b5225b9ae28281d90ce4e
+source-git-commit: 8b29e4c06300244a72addc7ae4807425a405b56f
 workflow-type: tm+mt
-source-wordcount: '1334'
-ht-degree: 73%
+source-wordcount: '1331'
+ht-degree: 72%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 73%
    * [Supprimer les comptes de destination](./api/delete-destination-account.md)
    * [Supprimer les flux de données de destination](./api/delete-destination-dataflow.md)
    * [Exporter des jeux de données](/help/destinations/api/export-datasets.md)
-   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=fr#use-cases)
+   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
    * [Créer une connexion à une destination](./ui/connect-destination.md)
@@ -134,7 +134,6 @@ ht-degree: 73%
       * [Extension Nielsen BSDK](./catalog/analytics/nielsen-bsdk.md)
       * [Extension Nielsen IMA Handler](./catalog/analytics/nielsen-ima.md)
       * [Extension Nielsen VideoJS Player Handler](./catalog/analytics/nielsen-videojs.md)
-      * [Extension Parse.ly Analytics](./catalog/analytics/parsely.md)
       * [Extension Quantum Metric](./catalog/analytics/quantum-metric.md)
       * [Extension SessionCam](./catalog/analytics/sessioncam.md)
       * [Extension TMMData](./catalog/analytics/tmmdata.md)
