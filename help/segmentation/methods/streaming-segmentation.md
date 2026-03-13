@@ -1,35 +1,35 @@
 ---
 solution: Experience Platform
-title: Guide de segmentation en flux continu
-description: Découvrez la segmentation en flux continu, notamment en quoi elle consiste, comment créer une audience évaluée à l’aide de la segmentation en flux continu et comment afficher vos audiences créées à l’aide de la segmentation en flux continu.
+title: Guide de segmentation des flux de données entrants
+description: Découvrez la segmentation en streaming, notamment ce qu’elle est, comment créer une audience évaluée à l’aide de la segmentation en streaming et comment afficher vos audiences créées à l’aide de la segmentation en streaming.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: c009eb89331758c512abd8ff7ef185489063b48f
+source-git-commit: 518afcfaabb9867452dc6ee94bef103ec167da78
 workflow-type: tm+mt
-source-wordcount: '2051'
-ht-degree: 19%
+source-wordcount: '2033'
+ht-degree: 20%
 
 ---
 
-# Guide de segmentation en flux continu
+# Guide de segmentation des flux de données entrants
 
 >[!BEGINSHADEBOX]
 
 >[!NOTE]
 >
->Les critères d’éligibilité de la segmentation en flux continu ont été mis à jour le 20 mai 2025.
+>Les critères d’éligibilité de la segmentation en streaming ont été mis à jour le 20 mai 2025.
 
 +++Mises à jour d’éligibilité
 
 >[!IMPORTANT]
 >
->Toutes les définitions de segment existantes qui sont actuellement évaluées à l’aide de la segmentation Edge ou en flux continu continueront à fonctionner en l’état, sauf si elles sont modifiées ou mises à jour.
+>Toutes les définitions de segment existantes qui sont actuellement évaluées à l’aide de la diffusion en continu ou de la segmentation Edge continueront de fonctionner telles quelles, sauf si elles sont modifiées ou mises à jour.
 
 ## Ensemble de règles {#ruleset}
 
-Les définitions de segment **nouvelles ou modifiées** qui correspondent aux ensembles de règles suivants **plus** seront évaluées à l’aide de la segmentation Edge ou en flux continu. Au lieu de cela, elles seront évaluées à l’aide de la segmentation par lots.
+Toutes les définitions de segment **nouvelles ou modifiées** qui correspondent aux ensembles de règles suivants **ne seront plus** évaluées à l&#39;aide de la diffusion en continu ou de la segmentation edge. Ils seront évalués à l’aide de la segmentation par lots.
 
-- Un événement unique avec une fenêtre temporelle de plus de 24 heures.
-   - Activez une audience avec tous les profils qui ont consulté une page web au cours des 3 derniers jours.
+- Événement unique avec une fenêtre temporelle de plus de 24 heures
+   - Activez une audience avec tous les profils qui ont consulté une page Web au cours des 3 derniers jours.
 - Un événement unique sans fenêtre temporelle
    - Activez une audience avec tous les profils qui ont consulté une page web.
 
@@ -41,22 +41,22 @@ Pour évaluer une audience avec segmentation en flux continu, elle **doit** êtr
 
 >[!NOTE]
 >
->Pour que la segmentation en flux continu reste précise lors de l’utilisation des données par lot, assurez-vous que les données par lot sont **uniquement** conservées dans l’audience par lot et sont référencées dans l’audience en flux continu.
+>Pour garantir la précision de la segmentation de la diffusion en continu lors de l&#39;utilisation de données par lots, assurez-vous que les données par lots sont **uniquement** conservées dans l&#39;audience de diffusion en continu et qu&#39;elles sont référencées dans cette audience.
 
-Avant cette mise à jour, vous pouviez créer une définition d’audience de diffusion en continu qui combinait des sources de données par lots et en flux continu. Cependant, avec la dernière mise à jour, la création d’une audience avec des sources de données par lots et par flux sera évaluée à l’aide de la segmentation par lots.
+Avant cette mise à jour, vous pouviez créer une définition d’audience de diffusion en continu qui combinait des sources de données de diffusion en continu et par lots. Cependant, avec la dernière mise à jour, la création d’une audience avec des sources de données en flux continu et par lots sera évaluée à l’aide de la segmentation par lots.
 
-Si vous devez évaluer une définition de segment à l’aide de la segmentation en flux continu ou Edge qui correspond à l’ensemble de règles mis à jour, vous devez créer explicitement un lot et un ensemble de règles en flux continu et les combiner à l’aide d’un segment de segments. Ce jeu de règles par lot **doit** est basé sur un schéma de profil.
+Si vous devez évaluer une définition de segment à l’aide de la diffusion en continu ou d’une segmentation Edge qui correspond au jeu de règles mis à jour, vous devez créer explicitement un lot et un jeu de règles de diffusion en continu et les combiner à l’aide d’un segment de segments. Ce jeu de règles par lot **doit** est basé sur un schéma de profil.
 
 Supposons, par exemple, que vous ayez deux audiences, avec une audience contenant des données de schéma de profil et l’autre des données de schéma d’événement d’expérience de logement :
 
-| Audience | Schéma | Type de source | Query definition | ID de l’audience |
+| Audience | Schéma | Type de source | Définition de la requête | ID de l’audience |
 | -------- | ------ | ----------- | ---------------- | ----------- |
 | Résidents californiens | Profile | Lot | L&#39;adresse personnelle est dans l&#39;état de la Californie | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
 | Passages en caisse récents | Événement d’expérience | Diffusion en continu | A effectué au moins un passage en caisse au cours des dernières 24 heures | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 Si vous souhaitez utiliser le composant par lot dans votre audience de diffusion en continu, vous devez faire référence à l’audience par lot à l’aide d’un segment de segments.
 
-Voici un exemple d’ensemble de règles qui combine les deux audiences :
+Ainsi, un exemple d’ensemble de règles qui combinerait les deux publics se présenterait comme suit :
 
 ```
 inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and 
@@ -64,16 +64,16 @@ CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)
 WHEN(<= 24 hours before now)])
 ```
 
-L’audience résultante *sera* évaluée à l’aide de la segmentation en flux continu, car elle exploite l’appartenance de l’audience par lots en se référant au composant d’audience par lots.
+L&#39;audience résultante *sera* évaluée à l&#39;aide de la segmentation en continu, car elle exploite l&#39;appartenance de l&#39;audience du lot en se référant au composant d&#39;audience du lot.
 
-Cependant, si vous souhaitez combiner deux audiences avec des données d’événement, vous **ne pouvez pas** vous contenter de combiner les deux événements. Vous devez créer les deux audiences, puis créer une autre audience qui utilise `inSegment` pour faire référence à ces deux audiences.
+Toutefois, si vous souhaitez combiner deux audiences avec des données d&#39;événements, vous **ne pouvez pas** combiner uniquement les deux événements. Vous devez créer les deux audiences, puis créer une autre audience qui utilise `inSegment` pour faire référence à ces deux audiences.
 
 Supposons, par exemple, que vous ayez deux audiences, avec les deux audiences hébergeant des données de schéma d’événement d’expérience :
 
-| Audience | Schéma | Type de source | Query definition | ID de l’audience |
+| Audience | Schéma | Type de source | Définition de la requête | ID de l’audience |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| Abandons récents | Événement d’expérience | Lot | A au moins un événement d’abandon au cours des dernières 24 heures | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
-| Passages en caisse récents | Événement d’expérience | Diffusion en continu | A effectué au moins un passage en caisse au cours des dernières 24 heures | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+| Abandons récents | Événement d’expérience | Lot | A au moins un événement d&#39;abandon au cours des dernières 24 heures | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Extractions récentes | Événement d’expérience | Diffusion en continu | A effectué au moins un passage en caisse au cours des dernières 24 heures | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 Dans ce cas, vous devez créer une troisième audience comme suit :
 
@@ -100,26 +100,26 @@ S’il n’existe aucun jeu de politiques de fusion actif, vous devez [configure
 
 La segmentation en flux continu est la possibilité d’évaluer les audiences dans Adobe Experience Platform en temps quasi réel tout en se concentrant sur la richesse des données.
 
-Avec la segmentation en flux continu, la qualification d’audience se produit désormais lorsque les données en flux continu entrent dans Experience Platform, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Vous pouvez ainsi évaluer les données telles qu’elles sont transmises à Experience Platform, ce qui permet de maintenir automatiquement à jour l’appartenance à une audience.
+Avec la segmentation en flux continu, la qualification d’audience se produit désormais lorsque les données en flux continu entrent dans Experience Platform, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Cela vous permet d&#39;évaluer les données au fur et à mesure qu&#39;elles sont transmises à l&#39;Experience Platform, ce qui permet à l&#39;abonnement du public d&#39;être automatiquement tenu à jour.
 
-## Jeux de règles éligibles {#rulesets}
+## Ensembles de règles éligibles {#rulesets}
 
 >[!IMPORTANT]
 >
->Pour utiliser la segmentation en flux continu, vous **devez** utiliser une politique de fusion « Active-on-Edge ». Pour plus d’informations sur les politiques de fusion, consultez la [présentation des politiques de fusion](../../profile/merge-policies/overview.md).
+>Pour utiliser la segmentation de diffusion en continu, vous **devez** utiliser une stratégie de fusion « Active on Edge ». Pour plus d’informations sur les politiques de fusion, consultez la [vue d’ensemble des politiques de fusion](../../profile/merge-policies/overview.md).
 
-Un ensemble de règles peut être segmenté en flux continu s’il répond à l’un des critères décrits dans le tableau suivant.
+Un ensemble de règles peut être segmenté en streaming s’il répond à l’un des critères décrits dans le tableau suivant.
 
 >[!NOTE]
 >
->Pour que la segmentation en flux continu fonctionne, vous devez activer la segmentation planifiée pour l’organisation. Pour plus d’informations sur l’activation de la segmentation planifiée, reportez-vous à [présentation d’Audience Portal](../ui/audience-portal.md#scheduled-segmentation).
+>Pour que la segmentation en flux continu fonctionne, vous devez activer la segmentation planifiée pour l’organisation. Pour plus d&#39;informations sur l&#39;activation de la segmentation planifiée, consultez [Présentation du portail d&#39;audience](../ui/audience-portal.md#scheduled-segmentation).
 
 | Type de requête | Détails | Requête | Exemple |
 | ---------- | ------- | ----- | ------- |
 | Événement unique dans une fenêtre temporelle de moins de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant dans une fenêtre temporelle de moins de 24 heures. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Un exemple d’événement unique dans une fenêtre temporelle relative s’affiche.](../images/methods/streaming/single-event.png) |
-| Profil uniquement | Toute définition de segment qui ne fait référence qu’à un attribut de profil. | `homeAddress.country.equals("US", false)` | ![Exemple d’attribut de profil affiché.](../images/methods/streaming/profile-attribute.png) |
-| Événement unique avec un attribut de profil dans une fenêtre temporelle relative de moins de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant, avec un ou plusieurs attributs de profil, et qui se produit dans une fenêtre temporelle relative de moins de 24 heures. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Un exemple d’événement unique avec un attribut de profil dans une fenêtre temporelle relative s’affiche.](../images/methods/streaming/single-event-with-profile-attribute.png) |
-| Plusieurs événements dans une fenêtre temporelle relative de 24 heures | Toute définition de segment qui fait référence à plusieurs événements **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Un exemple de plusieurs événements avec un attribut de profil s’affiche.](../images/methods/streaming/multiple-events-with-profile-attribute.png) |
+| Profil uniquement | Toute définition de segment qui ne fait référence qu’à un attribut de profil. | `homeAddress.country.equals("Canada", false)` | ![Exemple d’attribut de profil affiché.](../images/methods/streaming/profile-attribute.png) |
+| Événement unique avec un attribut de profil dans une fenêtre temporelle relative de moins de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant, avec un ou plusieurs attributs de profil, et qui se produit dans une fenêtre temporelle relative de moins de 24 heures. | `workAddress.country.equals("Canada", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Un exemple d’événement unique avec un attribut de profil dans une fenêtre temporelle relative s’affiche.](../images/methods/streaming/single-event-with-profile-attribute.png) |
+| Événements multiples dans une fenêtre de temps relative de 24 heures | Toute définition de segment qui fait référence à plusieurs événements **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Un exemple de plusieurs événements avec un attribut de profil s’affiche.](../images/methods/streaming/multiple-events-with-profile-attribute.png) |
 
 Une définition de segment **non** est éligible pour la segmentation en flux continu dans les scénarios suivants :
 
@@ -140,7 +140,7 @@ Si une définition de segment est modifiée de sorte qu’elle ne répond plus a
 
 De plus, la disqualification de segment, tout comme la qualification de segment, se produit en temps réel. Par conséquent, si une audience n’est plus admissible pour être un segment, elle sera immédiatement disqualifiée. Par exemple, si la définition de segment demande « Tous les utilisateurs et utilisatrices qui ont acheté des chaussures rouges au cours des trois dernières heures », tous les profils initialement qualifiés pour la définition de segment seront disqualifiés après trois heures.
 
-### Combinaison d’audiences {#combine-audiences}
+### Combiner les audiences {#combine-audiences}
 
 Pour combiner des données provenant de sources par lots et en flux continu, vous devez séparer les composants par lots et en flux continu en audiences distinctes.
 
@@ -148,7 +148,7 @@ Pour combiner des données provenant de sources par lots et en flux continu, vou
 
 Par exemple, prenons en compte les deux exemples d’audiences suivants :
 
-| Audience | Schéma | Type de source | Query definition | ID de l’audience |
+| Audience | Schéma | Type de source | Définition de la requête | ID de l’audience |
 | -------- | ------ | ----------- | ---------------- | ----------- |
 | Résidents californiens | Profile | Lot | L&#39;adresse personnelle est dans l&#39;état de la Californie | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
 | Passages en caisse récents | Événement d’expérience | Diffusion en continu | A effectué au moins un passage en caisse au cours des dernières 24 heures | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
@@ -165,18 +165,18 @@ WHEN(<= 24 hours before now)])
 
 L’audience résultante *sera* évaluée à l’aide de la segmentation en flux continu, car elle exploite l’appartenance de l’audience par lots en se référant au composant d’audience par lots.
 
-### Plusieurs événements d’expérience {#two-events}
+### Événements d’expérience multiples {#two-events}
 
-Si vous souhaitez combiner plusieurs audiences avec des données d’événement, vous **ne pouvez pas** vous contenter de combiner les événements. Vous devrez créer une audience pour chaque événement, puis créer une autre audience qui utilise `inSegment` pour faire référence à toutes les audiences.
+Si vous souhaitez combiner plusieurs audiences avec des données d&#39;événements, vous **ne pouvez pas** combiner uniquement les événements. Vous devrez créer une audience pour chaque événement, puis en créer une autre qui utilise `inSegment` pour faire référence à tous les publics.
 
-Supposons, par exemple, que vous ayez deux audiences, avec les deux audiences hébergeant des données de schéma d’événement d’expérience :
+Par exemple, supposons que vous ayez deux audiences, avec les deux audiences abritant des données de schéma d’événement d’expérience de logement :
 
-| Audience | Schéma | Type de source | Query definition | ID de l’audience |
+| Audience | Schéma | Type de source | Définition de la requête | ID de l’audience |
 | -------- | ------ | ----------- | ---------------- | ----------- |
 | Abandons récents | Événement d’expérience | Lot | A au moins un événement d’abandon au cours des dernières 48 heures | `7deb246a-49b4-4687-95f9-6316df049948` |
 | Passages en caisse récents | Événement d’expérience | Diffusion en continu | A effectué au moins un passage en caisse au cours des dernières 24 heures | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
-Dans ce cas, vous devez créer une troisième audience comme suit :
+Dans ce cas, vous devez créer un troisième public comme suit :
 
 ```
 inSegment("7deb246a-49b4-4687-95f9-6316df049948) and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
@@ -184,7 +184,7 @@ inSegment("7deb246a-49b4-4687-95f9-6316df049948) and inSegment("9e1646bb-57ff-43
 
 ## Créer une audience {#create-audience}
 
-Vous pouvez créer une audience évaluée à l’aide de la segmentation en flux continu à l’aide de l’API Segmentation Service ou via Audience Portal dans l’interface utilisateur.
+Vous pouvez créer une audience évaluée à l’aide de la segmentation en streaming à l’aide de l’API du service de segmentation ou via le portail d’audience dans l’interface utilisateur.
 
 Une définition de segment peut être activée pour le streaming si elle correspond à l’un des [ensembles de règles éligibles](#eligible-rulesets).
 
@@ -289,17 +289,17 @@ Vous trouverez plus d’informations sur l’utilisation de ce point d’entrée
 
 >[!TAB Audience Portal]
 
-Dans Audience Portal, sélectionnez **[!UICONTROL Créer une audience]**.
+Dans Audience Portal, sélectionnez **[!UICONTROL Create audience]**.
 
 ![Le bouton Créer une audience est mis en surbrillance dans le portail d’audiences.](../images/methods/streaming/select-create-audience.png)
 
-Une fenêtre contextuelle s’affiche. Sélectionnez **[!UICONTROL Créer des règles]** pour accéder au créateur de segments.
+Une fenêtre contextuelle s’affiche. Sélectionnez **[!UICONTROL Build rules]** pour accéder au créateur de segments.
 
 ![Le bouton Créer des règles est mis en surbrillance dans la fenêtre contextuelle de création d’audience.](../images/methods/streaming/select-build-rules.png)
 
-Dans le créateur de segments, créez une définition de segment qui correspond à l’un des [ensembles de règles éligibles](#eligible-rulesets). Si la définition de segment est admissible pour la segmentation en flux continu, vous pourrez sélectionner **[!UICONTROL Diffusion en flux continu]** comme **[!UICONTROL Méthode d’évaluation]**.
+Dans le créateur de segments, créez une définition de segment correspondant à l’un des [ensembles de règles éligibles](#eligible-rulesets). Si la définition de segment est éligible pour la segmentation de diffusion en continu, vous pourrez sélectionner **[!UICONTROL Streaming]** en tant que **[!UICONTROL Evaluation method]**.
 
-![La définition de segment s’affiche. Le type d’évaluation est mis en surbrillance, montrant que la définition de segment peut être évaluée à l’aide de la segmentation en flux continu.](../images/methods/streaming/streaming-evaluation-method.png)
+![La définition de segment s&#39;affiche. Le type d’évaluation est mis en surbrillance, montrant que la définition de segment peut être évaluée à l’aide de la segmentation en flux continu.](../images/methods/streaming/streaming-evaluation-method.png)
 
 Pour en savoir plus sur la création de définitions de segment, consultez le [guide du créateur de segments](../ui/segment-builder.md)
 
@@ -439,7 +439,7 @@ Vous pouvez récupérer toutes les audiences activées pour la segmentation en f
 
 ![L’icône de filtre est mise en surbrillance dans Audience Portal.](../images/methods/filter-audiences.png)
 
-Dans les filtres disponibles, accédez à **[!UICONTROL Fréquence des mises à jour]** et sélectionnez « [!UICONTROL &#x200B; Diffusion en continu &#x200B;]. L’utilisation de ce filtre affiche toutes les audiences de votre organisation qui sont évaluées à l’aide de la segmentation en flux continu.
+Dans les filtres disponibles, accédez à **[!UICONTROL Update frequency]** et sélectionnez « [!UICONTROL Streaming] ». L’utilisation de ce filtre affiche tous les publics de votre organisation qui sont évalués à l’aide de la segmentation de diffusion en continu.
 
 ![La fréquence de mise à jour en flux continu est sélectionnée, affichant toutes les audiences de l’organisation qui sont évaluées à l’aide de la segmentation en flux continu.](../images/methods/streaming/filter-streaming.png)
 
@@ -453,22 +453,22 @@ Vous pouvez afficher les détails d’une audience spécifique évaluée à l’
 
 Après avoir sélectionné une audience sur Audience Portal, la page des détails de l’audience s’affiche. Elle affiche des informations sur l’audience, notamment un résumé des détails de l’audience, la quantité de profils qualifiés au fil du temps, ainsi que les destinations vers lesquelles l’audience a été activée.
 
-![La page Détails de l’audience s’affiche pour une audience évaluée à l’aide de la segmentation en flux continu.](../images/methods/streaming/audience-details.png)
+![La page de détails d’audience s’affiche pour une audience évaluée à l’aide de la segmentation de diffusion en continu.](../images/methods/streaming/audience-details.png)
 
-Pour les audiences activées pour la diffusion en continu, la vignette **[!UICONTROL Profils au fil du temps]** s’affiche, affichant le total des mesures qualifiées et les nouvelles mesures d’audience mises à jour.
+Pour les audiences activées pour la diffusion en continu, la carte **[!UICONTROL Profiles over time]** s&#39;affiche. Elle indique le nombre total de mesures qualifiées et la nouvelle audience mise à jour.
 
-La mesure **[!UICONTROL Total qualifié]** représente le nombre total d’audiences qualifiées, en fonction des évaluations de lot et de flux continu pour cette audience.
+La mesure **[!UICONTROL Total qualified]** représente le nombre total d&#39;audiences qualifiées, en fonction des évaluations par lots et en streaming pour cette audience.
 
-La mesure **[!UICONTROL Nouvelle audience mise à jour]** est représentée par un graphique linéaire qui indique le changement de taille d’audience par le biais de la segmentation en flux continu. Vous pouvez ajuster la liste déroulante pour afficher les dernières 24 heures, la semaine dernière ou les 30 derniers jours.
+La mesure **[!UICONTROL New audience updated]** est représentée par un graphique linéaire qui montre la modification de la taille de l&#39;audience via la segmentation de la diffusion en continu. Vous pouvez ajuster la liste déroulante pour afficher les 24 dernières heures, la semaine dernière ou les 30 derniers jours.
 
-![La carte Profils au fil du temps est mise en surbrillance.](../images/methods/streaming/profiles-over-time.png)
+![La carte Profils dans le temps est mise en surbrillance.](../images/methods/streaming/profiles-over-time.png)
 
-Pour plus d’informations sur les détails de l’audience, veuillez lire la [présentation du portail Audience](../ui/audience-portal.md#audience-details).
+Pour plus de détails sur le public, veuillez lire la [vue d&#39;ensemble du portail Public](../ui/audience-portal.md#audience-details).
 
 ## Étapes suivantes
 
-Ce guide explique le fonctionnement des définitions de segment activées pour la diffusion en continu sur Adobe Experience Platform et comment surveiller les définitions de segment activées pour la diffusion en continu.
+Ce guide explique comment les définitions de segments activées pour la diffusion en continu fonctionnent dans Adobe Experience Platform et comment surveiller les définitions de segments activées pour la diffusion en continu.
 
 Pour en savoir plus sur l’utilisation de l’interface utilisateur d’Adobe Experience Platform, veuillez lire le [guide d’utilisation de la segmentation](./overview.md).
 
-Pour les questions fréquentes sur la segmentation en flux continu, veuillez lire la section [segmentation en flux continu) de la FAQ](../faq.md#streaming-segmentation).
+Pour consulter la section [Segmentation de la diffusion en continu](../faq.md#streaming-segmentation) des questions fréquentes sur la segmentation de la diffusion en continu, consultez la rubrique.
