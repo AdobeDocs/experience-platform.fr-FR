@@ -2,7 +2,7 @@
 title: Package Query Service
 description: Le document suivant décrit l’emballage des fonctionnalités et des produits disponibles pour Query Service et met en évidence les différences entre les requêtes ad hoc et par lots.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 33b3534a2c3f9b5da54fa4f3897d1e107f7c1976
+source-git-commit: 2117b7ad0f507b5a35595d702cb8a70e2e09f39d
 workflow-type: tm+mt
 source-wordcount: '990'
 ht-degree: 5%
@@ -39,7 +39,7 @@ Le tableau suivant décrit les droits clés de Query Service en fonction de leur
 | Allocation d&#39;exportation de données | Le droit d’exportation total dépend de vos licences d’applications basées sur Platform. Par exemple, Real-Time CDP, AJO, CJA, etc. | Oui - Un droit d’exportation supplémentaire est fourni pour permettre l’exportation de jeux de données dérivés créés à l’aide de Data Distiller.<br>Votre allocation annuelle d’exportation de données est mesurée en téraoctets (To) et dépend de la quantité d’heures de calcul que vous avez achetées. Veuillez consulter la description du produit pour plus de détails. |
 | Interface d’exécution de requête | <ul><li>Interface utilisateur de Query Service</li><li>Interface utilisateur du client tiers</li><li>Interface utilisateur du client [!DNL PostgresSQL]</li></ul> | <ul><li>Interface utilisateur de Query Service </li><li>Interface utilisateur du client tiers</li><li>Interface utilisateur du client [!DNL PostgresSQL]</li><li>API REST</li></ul> |
 | Résultats De La Requête Renvoyés Via | Interface utilisateur du client | Jeu de données dérivé stocké dans le lac de données |
-| Limite de résultat | <ul><li>Interface utilisateur de Query Service - Le nombre de lignes de sortie peut être [configuré avec un paramètre d’interface utilisateur](./ui/user-guide.md#result-count) compris entre 50 et 500 lignes.</li><li>Clients tiers - 50 000</li><li>[!DNL PostgresSQL] client - 50 000</li></ul> | Les requêtes CTAS et ITAS ne génèrent que des messages de réussite, car la sortie de la requête est stockée dans des jeux de données dérivés. |
+| Limite de résultat | <ul><li>Interface utilisateur de Query Service - Le nombre de lignes de sortie peut être [configuré avec un paramètre d’interface utilisateur](./ui/user-guide.md#result-count) compris entre 50 et 1 000 lignes.</li><li>Clients tiers - 50 000</li><li>[!DNL PostgresSQL] client - 50 000</li></ul> | Les requêtes CTAS et ITAS ne génèrent que des messages de réussite, car la sortie de la requête est stockée dans des jeux de données dérivés. |
 | Capacité de lecture du jeu de données | Oui | Oui |
 | Capacité en écriture du jeu de données | Non | Oui |
 | Capacité de planification | Non | Oui |
@@ -84,5 +84,5 @@ Les sandbox sont des partitions virtuelles au sein d’une instance unique d’E
 
 ## Étapes suivantes
 
-En lisant ce document, vous devriez mieux comprendre les différents types de packages et les fonctionnalités d’exécution de requête disponibles dans Query Service. Pour en savoir plus sur Query Service, tel que les cas d’utilisation bien connus du secteur, consultez la [&#x200B; documentation sur les cas d’utilisation &#x200B;](./use-cases/abandoned-browse.md). Pour des informations plus générales, consultez la [présentation de Query Service](./home.md).
+En lisant ce document, vous devriez mieux comprendre les différents types de packages et les fonctionnalités d’exécution de requête disponibles dans Query Service. Pour en savoir plus sur Query Service, tel que les cas d’utilisation bien connus du secteur, consultez la [ documentation sur les cas d’utilisation ](./use-cases/abandoned-browse.md). Pour des informations plus générales, consultez la [présentation de Query Service](./home.md).
 
