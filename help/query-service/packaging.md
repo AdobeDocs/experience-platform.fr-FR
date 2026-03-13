@@ -84,5 +84,5 @@ Les sandbox sont des partitions virtuelles au sein d’une instance unique d’E
 
 ## Étapes suivantes
 
-En lisant ce document, vous devriez mieux comprendre les différents types de packages et les fonctionnalités d’exécution de requête disponibles dans Query Service. Pour en savoir plus sur Query Service, tel que les cas d’utilisation bien connus du secteur, consultez la [ documentation sur les cas d’utilisation ](./use-cases/abandoned-browse.md). Pour des informations plus générales, consultez la [présentation de Query Service](./home.md).
+En lisant ce document, vous devriez mieux comprendre les différents types de packages et les fonctionnalités d’exécution de requête disponibles dans Query Service. Pour en savoir plus sur Query Service, tel que les cas d’utilisation bien connus du secteur, consultez la [&#x200B; documentation sur les cas d’utilisation &#x200B;](./use-cases/abandoned-browse.md). Pour des informations plus générales, consultez la [présentation de Query Service](./home.md).
 
