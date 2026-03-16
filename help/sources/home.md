@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation des connecteurs source
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
+source-git-commit: 73244fe6f7413fc66773789da2b5491a1ed49f15
 workflow-type: tm+mt
-source-wordcount: '1667'
-ht-degree: 49%
+source-wordcount: '1678'
+ht-degree: 48%
 
 ---
 
@@ -61,7 +61,7 @@ Experience Platform permet d’ingérer des données provenant d’autres applic
 
 ### Sources d’entreprise avancées {#advanced-enterprise-sources}
 
-Les sources suivantes sont disponibles uniquement pour les clients [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Les sources suivantes ne sont disponibles que pour [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) ou les clients qui disposent d’une licence pour le SKU autonome des connecteurs avancés d’Enterprise Source.
 
 | Source | Catégorie | Type d’ingestion | Cloud |
 | --- | --- | --- | --- |
