@@ -5,10 +5,10 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: fe5faaeb026fa10d185f43408b122104ecd42196
+source-git-commit: 2c7cc6d29eae13cd8caa387063ae9ab80ca65e1e
 workflow-type: tm+mt
-source-wordcount: '1083'
-ht-degree: 89%
+source-wordcount: '1089'
+ht-degree: 88%
 
 ---
 
@@ -97,6 +97,8 @@ ht-degree: 89%
       - [Intention de Bombora](connectors/data-partners/bombora.md)
       - [Demandbase Intent](connectors/data-partners/demandbase.md)
       - [Résolution d’identité d’entreprise Merkury](connectors/data-partners/merkury.md)
+   - Partage de données {#data-sharing}
+      - [Deltashare](connectors/data-sharing/deltashare.md)
    - eCommerce {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
@@ -310,6 +312,8 @@ ht-degree: 89%
          - [Intention de Bombora](tutorials/ui/create/data-partners/bombora.md)
          - [Demandbase Intent](tutorials/ui/create/data-partners/demandbase.md)
          - [Résolution d’identité d’entreprise Merkury](tutorials/ui/create/data-partners/merkury.md)
+      - Partage de données {#data-sharing}
+         - [Deltashare](tutorials/ui/create/data-sharing/deltashare.md)
       - eCommerce {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
