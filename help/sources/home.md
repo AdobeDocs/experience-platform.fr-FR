@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation des connecteurs source
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 73244fe6f7413fc66773789da2b5491a1ed49f15
+source-git-commit: 6142801c9008c10a3d1a0a11976a2c99fb6cee86
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 48%
+source-wordcount: '1721'
+ht-degree: 47%
 
 ---
 
@@ -37,6 +37,10 @@ Pour les connecteurs créés et gérés par un partenaire, les problèmes liés 
 >[!ENDSHADEBOX]
 
 ## Catalogue des sources
+
+>[!NOTE]
+>
+>Les flux de données d’ingestion Source qui échouent en continu pendant 30 jours sont automatiquement désactivés. Utilisez [Tableau de bord de surveillance](/help/dataflows/ui/monitor-sources.md) pour passer en revue votre flux de données, identifier la raison de son échec (par exemple, les informations d’identification, les autorisations ou les modifications de schéma ou de mappage), appliquer les mises à jour nécessaires et réactiver le flux de données une fois résolu.
 
 Lisez les sections suivantes pour obtenir la liste de toutes les sources disponibles dans le catalogue des sources.
 
