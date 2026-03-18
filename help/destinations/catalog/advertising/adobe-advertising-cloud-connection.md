@@ -58,9 +58,9 @@ Les annonceurs ont le choix de partager des segments avec des identifiants propr
 
 * Identifiant d’organisation Experience Cloud du compte Experience Platform. Votre identifiant figure sur la page de votre profil utilisateur Adobe Real-Time Customer Data Platform (Real-Time CDP).
 
-* Une source [Real-Time CDP dans DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) pour recevoir les audiences pour l’activation de la campagne. L’équipe de votre compte Adobe crée la source à l’aide de votre ID d’organisation Experience Cloud.
+* Une source [Real-Time CDP dans DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=fr) pour recevoir les audiences pour l’activation de la campagne. L’équipe de votre compte Adobe crée la source à l’aide de votre ID d’organisation Experience Cloud.
 
-* Clé source du compte [!DNL DSP] ou de l’annonceur, générée lors de la création d’une source Real-Time CDP [dans [!DNL DSP]](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). L’équipe de votre compte [!DNL DSP] partagera cette clé avec vous. Vous l’utiliserez dans Experience Platform pour créer une connexion de destination à la destination Advertising Cloud DSP, comme expliqué ci-dessous.
+* Clé source du compte [!DNL DSP] ou de l’annonceur, générée lors de la création d’une source Real-Time CDP [dans [!DNL DSP]](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=fr). L’équipe de votre compte [!DNL DSP] partagera cette clé avec vous. Vous l’utiliserez dans Experience Platform pour créer une connexion de destination à la destination Advertising Cloud DSP, comme expliqué ci-dessous.
 
 ### Configurer la synchronisation des identifiants pour partager des cookies {#cookie-sync}
 
@@ -133,7 +133,7 @@ Pour vous connecter à la destination, suivez les instructions [création d’un
 
 Pour vous connecter à la destination, indiquez le paramètre suivant dans la section [!UICONTROL Connection type], puis sélectionnez **[!UICONTROL Connect to destination]** :
 
-* **[!UICONTROL Account or Advertiser Key]** : ce [!UICONTROL Source Key] est généré lorsqu’une source [Real-Time CDP est créée dans l’interface utilisateur de DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). L’équipe de votre compte Adobe partagera cette clé avec vous après la création de la source.
+* **[!UICONTROL Account or Advertiser Key]** : ce [!UICONTROL Source Key] est généré lorsqu’une source [Real-Time CDP est créée dans l’interface utilisateur de DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=fr). L’équipe de votre compte Adobe partagera cette clé avec vous après la création de la source.
 
 ![Copie d’écran de la section Type de connexion affichant le champ Compte ou clé de l’annonceur.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
