@@ -39,11 +39,11 @@ Pour un bref aperçu sur la configuration de la connexion Adobe Target pour la p
 >
 >L’interface utilisateur d’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, reportez-vous aux étapes de configuration décrites dans les sections ci-dessous.
 
->[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449795/?captions=fre_fr&quality=12&learn=on)
 
 Pour un bref aperçu sur le partage d’audiences et d’attributs de profil vers des destinations Adobe Target et de personnalisation personnalisée, regardez la vidéo ci-dessous.
 
->[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447357/?captions=fre_fr&quality=12&learn=on)
 
 ## Cas d’utilisation {#use-cases}
 
