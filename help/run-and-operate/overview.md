@@ -2,13 +2,13 @@
 title: Présentation de l’exécution et du fonctionnement
 description: Inspectez, dépannez et optimisez vos implémentations Experience Platform à l’aide des outils Exécuter et exploiter . Gagnez de la visibilité sur les activations par lots planifiées, identifiez les problèmes de configuration et améliorez la fiabilité du système.
 hide: true
-source-git-commit: 4733fae23c5029f4bc2c405376b1a52212dc0440
+exl-id: 7f44cdf3-4db1-47f9-bcde-401f6dcfc551
+source-git-commit: a36f984e56f37e4769e54eab182a8c54e891e32f
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '676'
 ht-degree: 1%
 
 ---
-
 
 # Présentation de l’exécution et du fonctionnement
 
@@ -47,7 +47,7 @@ Pour accéder aux outils Exécuter et utiliser à partir de l’interface utilis
 
    >[!NOTE]
    >
-   >Actuellement, la seule fonctionnalité disponible est [planifications de tâches](job-schedules.md).
+   >Actuellement, les fonctionnalités disponibles sont les suivantes : [Planification des tâches](job-schedules.md) et [Contrôles d’intégrité](health-checks.md).
 
 ![Interface utilisateur d’Experience Platform affichant le volet de navigation de gauche Exécuter et utiliser.](assets/overview/run-and-operate.png)
 
@@ -78,12 +78,28 @@ Job Schedules propose trois niveaux d’investigation :
 
 Vous pouvez également comprendre les dépendances entre les étapes de traitement des données, ce qui vous permet d’assurer un flux de données fiable tout au long des workflows Experience Platform.
 
+### Contrôles d’intégrité {#health-checks}
+
+>[!IMPORTANT]
+>
+>[!UICONTROL Health checks] sont actuellement disponibles en version limitée.
+
+Grâce aux [contrôles de l’intégrité](health-checks.md), vous pouvez détecter de manière proactive les problèmes de configuration des schémas et des identités avant qu’ils n’affectent les opérations de votre entreprise. À ce stade, les contrôles d’intégrité exécutent des analyses statiques quotidiennes sur vos schémas et espaces de noms d’identité, faisant apparaître les bonnes pratiques manquantes, les configurations incorrectes et les modèles qui entraînent des échecs en aval.
+
+Les contrôles de l’intégrité évaluent actuellement cinq domaines fondamentaux :
+
+* **[Validation des champs d’identité](health-checks.md#identity-field-validation)** : vérifiez que les champs d’identité présentent des contraintes de longueur et de modèle appropriées.
+* **[Règles de liaison des graphiques d’identités](health-checks.md#identity-graph-linking-rules)** : vérifiez que les règles de liaison sont configurées pour empêcher la réduction du profil.
+* **[Configuration des identités des personnes et des personnes autres que les personnes](health-checks.md#people-non-people-identity)** : validez l’utilisation correcte du type d’identité dans les classes de schéma.
+* **[Descriptions des espaces de noms d’identité personnalisés](health-checks.md#namespace-missing-description)** : assurez-vous que les métadonnées des espaces de noms sont complètes.
+* **[Espaces de noms d’identité obsolètes](health-checks.md#deprecated-namespace)** : détectez les espaces de noms obsolètes à nettoyer.
+
 ## Étapes suivantes {#next-steps}
 
 Maintenant que vous comprenez l’objectif et les fonctionnalités de [!UICONTROL Run and Operate] outils, explorez les ressources suivantes pour approfondir vos connaissances :
 
-* Découvrez [ingestion par lots](../ingestion/batch-ingestion/overview.md) pour comprendre comment les données sont ingérées dans Experience Platform
+* Découvrez comment utiliser les [ contrôles d’intégrité ](health-checks.md) pour détecter les problèmes de configuration des schémas et des identités
 * Découvrez comment [inspecter les planifications de tâches](job-schedules.md) pour l’ingestion et les activations par lots
+* Découvrez [ingestion par lots](../ingestion/batch-ingestion/overview.md) pour comprendre comment les données sont ingérées dans Experience Platform
 * Découvrez comment [configurer des activations planifiées](../destinations/ui/activate-batch-profile-destinations.md) pour les destinations par lots
 * Explorer [surveillance des flux de données](../dataflows/ui/monitor-destinations.md) pour les destinations
-
