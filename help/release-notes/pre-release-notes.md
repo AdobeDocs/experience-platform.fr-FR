@@ -46,7 +46,7 @@ Experience Platform offre toute une gamme de fonctionnalités de nettoyage des 
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Suppression d’enregistrements multi-jeux de données et profil uniquement (API uniquement) | Vous pouvez envoyer un seul identifiant de jeu de données, une liste d’identifiants de jeux de données séparés par des virgules ou l’`ALL` littérale dans `datasetId` de supprimer des identités dans un, plusieurs ou tous les jeux de données. Vous pouvez également limiter la suppression aux services de profil en définissant `targetServices` sur `["identity","profile","ajo"]`, ce qui laisse le lac de données inchangé. Pour plus d’informations[ consultez le guide ](../hygiene/api/workorder.md)Enregistrement des ordres de travail de suppression. |
+| Suppression d’enregistrements multi-jeux de données et profil uniquement (API uniquement) | Vous pouvez envoyer un seul identifiant de jeu de données, une liste d’identifiants de jeux de données séparés par des virgules ou l’`ALL` littérale dans `datasetId` de supprimer des identités dans un, plusieurs ou tous les jeux de données. Vous pouvez également limiter la suppression aux services de profil en définissant `targetServices` sur `["identity","profile","ajo"]`, ce qui laisse le lac de données inchangé. Pour plus d’informations[&#x200B; consultez le guide &#x200B;](../hygiene/api/workorder.md)Enregistrement des ordres de travail de suppression. |
 
 {style="table-layout:auto"}
 
