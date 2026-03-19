@@ -98,7 +98,7 @@ Les contrôles de l’intégrité évaluent actuellement cinq domaines fondament
 
 Maintenant que vous comprenez l’objectif et les fonctionnalités de [!UICONTROL Run and Operate] outils, explorez les ressources suivantes pour approfondir vos connaissances :
 
-* Découvrez comment utiliser les [ contrôles d’intégrité ](health-checks.md) pour détecter les problèmes de configuration des schémas et des identités
+* Découvrez comment utiliser les [&#x200B; contrôles d’intégrité &#x200B;](health-checks.md) pour détecter les problèmes de configuration des schémas et des identités
 * Découvrez comment [inspecter les planifications de tâches](job-schedules.md) pour l’ingestion et les activations par lots
 * Découvrez [ingestion par lots](../ingestion/batch-ingestion/overview.md) pour comprendre comment les données sont ingérées dans Experience Platform
 * Découvrez comment [configurer des activations planifiées](../destinations/ui/activate-batch-profile-destinations.md) pour les destinations par lots
