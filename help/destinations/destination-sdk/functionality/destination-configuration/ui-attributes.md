@@ -2,10 +2,10 @@
 description: Découvrez comment configurer les attributs de l’interface utilisateur, tels que le lien de documentation, la catégorie de carte de destination, ainsi que le type et la fréquence de connexion à la destination, pour les destinations créées avec Destination SDK.
 title: Attributs de l’interface utilisateur
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '802'
-ht-degree: 83%
+source-wordcount: '796'
+ht-degree: 79%
 
 ---
 
@@ -48,6 +48,8 @@ Pour en savoir plus sur les types d’intégration qui prennent en charge les fo
 | Intégrations en temps réel (streaming) | Oui |
 | Intégrations basées sur des fichiers (par lots) | Oui |
 
+{style="table-layout:auto"}
+
 ## Paramètres pris en charge {#supported-parameters}
 
 ```json
@@ -66,7 +68,7 @@ Pour en savoir plus sur les types d’intégration qui prennent en charge les fo
 
 Utilisez le format suivant : `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, où `YOURDESTINATION` est le nom de la destination. Par exemple, pour une destination appelée Moviestar, procédez comme suit : `http://www.adobe.com/go/destinations-moviestar-en`.
 
-Les utilisateurs peuvent voir et consulter votre lien vers votre documentation à partir de la page de catalogue des destinations de l’interface utilisateur. Ils doivent accéder à votre carte de destination, sélectionner **[!UICONTROL Autres actions]**, puis **[!UICONTROL Afficher la documentation]**, comme illustrée dans l’image ci-dessous.
+Les utilisateurs peuvent voir et consulter votre lien vers votre documentation à partir de la page de catalogue des destinations de l’interface utilisateur. Ils doivent accéder à votre carte de destination, sélectionner **[!UICONTROL More actions]**, puis **[!UICONTROL View documentation]**, comme illustré dans l’image ci-dessous.
 
 ![Image de l’interface utilisateur de montrant l’emplacement du lien vers la documentation.](../../assets/functionality/destination-configuration/ui-attributes-doc-link.png)
 
@@ -94,17 +96,17 @@ Les utilisateurs peuvent voir le type de connexion de destination dans l’ongle
 
 `frequency` est un paramètre de chaîne qui fait référence au type d’exportation de données pris en charge par la destination. Définissez-le sur `Streaming` quand les intégrations sont basées sur des API, ou sur `Batch` lorsque vous exportez des fichiers vers les destinations.
 
-Les utilisateurs peuvent voir le type de fréquence sur la page **[!UICONTROL Exécutions de flux de données]** de chaque connexion à la destination.
+Les utilisateurs peuvent voir le type de fréquence sur la page **[!UICONTROL Dataflow runs]** de chaque connexion à la destination.
 
 ![Image de l’interface utilisateur indiquant l’emplacement du type de fréquence dans l’interface utilisateur.](../../assets/functionality/destination-configuration/ui-attributes-frequency.png)
 
 ### `isBeta` {#isbeta}
 
-Si la destination que vous créez avec Destination SDK est disponible pour un nombre limité de personnes, vous pouvez marquer la carte de destination du catalogue de destination comme étant en version bêta.
+Si la destination que vous créez avec Destination SDK est disponible pour un nombre limité de personnes, vous pouvez marquer la carte de destination du catalogue de destination comme étant en version Beta.
 
 Pour ce faire, vous pouvez utiliser le paramètre `isBeta: "true"` dans la section Attributs de l’interface utilisateur de la configuration de destination afin de marquer la carte de destination de manière appropriée.
 
-![Image de l’interface utilisateur montrant une carte de destination marquée comme bêta.](../../assets/functionality/destination-configuration/ui-attributes-isbeta.png)
+![Image de l’interface d’utilisation montrant une carte de destination marquée comme Beta.](../../assets/functionality/destination-configuration/ui-attributes-isbeta.png)
 
 ### `icon` {#icon}
 
@@ -112,7 +114,7 @@ Vous pouvez ajouter une icône de logo à la destination, comme illustré dans l
 
 ![Image de l’interface utilisateur affichant l’emplacement de l’icône.](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
 
-Pour ajouter un logo à votre carte de destination, vous devez partager l’image souhaitée avec l’équipe d’Adobe au moment de l’envoi de la destination [&#x200B; révision](../../guides/submit-destination.md#logo).
+Pour ajouter un logo à votre carte de destination, vous devez partager l’image souhaitée avec l’équipe d’Adobe au moment de l’envoi de la destination [ révision](../../guides/submit-destination.md#logo).
 
 ## Étapes suivantes {#next-steps}
 

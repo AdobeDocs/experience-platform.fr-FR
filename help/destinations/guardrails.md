@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: En savoir plus sur l’utilisation par défaut de l’activation des données et les limites de débit.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: bdd0039249366ceabebe52694046ec01906ced3c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1747'
+source-wordcount: '1749'
 ht-degree: 42%
 
 ---
@@ -76,7 +76,7 @@ Les mécanismes de sécurisation ci-dessous s’appliquent à l’activation par
 | Fréquence d’activation | Exportation complète quotidienne ou exportation incrémentielle plus fréquente toutes les 3, 6, 8 ou 12 heures. | Mécanisme de sécurisation mis en œuvre par le système | Consultez les sections de documentation [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) pour plus d’informations sur les incréments de fréquence pour les exportations par lots. |
 | Nombre maximal d’audiences pouvant être exportées à une heure donnée | 100 | Mécanisme de sécurisation des performances | Il est recommandé d’ajouter un maximum de 100 audiences aux instances de destination par lots. |
 | Nombre maximum de lignes (enregistrements) par fichier à activer | 5 million | Mécanisme de sécurisation mis en œuvre par le système | Adobe Experience Platform fractionne automatiquement les fichiers exportés à raison de 5 millions d’enregistrements (lignes) par fichier. Chaque ligne représente un profil. Les noms de fichiers fractionnés sont ajoutés avec un nombre indiquant que le fichier fait partie d’une exportation plus importante, comme : `filename.csv`, `filename_2.csv`, `filename_3.csv`. Pour plus d’informations, reportez-vous à la [section de planification](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) du tutoriel d’activation des destinations par lot. |
-| Nombre maximal d’audiences externes (par exemple, AEC, chargement personnalisé, composition de l’audience) pouvant être activées dans une instance de destination | 10 | Mécanisme de sécurisation mis en œuvre par le système | Lors de l’activation d’audiences externes (par exemple, [Composition d’audience fédérée](/help/segmentation/ui/audience-portal.md#fac), [chargement personnalisé](/help/segmentation/ui/audience-portal.md#import-audience), [Composition d’audience](/help/segmentation/ui/audience-portal.md#audience-composition)) vers des destinations basées sur des fichiers par lots, il existe une limite de 10 audiences de ce type que vous pouvez activer dans une instance de destination. Voir [Types et personnalisation d’audience](/help/segmentation/ui/audience-portal.md#customize) pour plus d’informations sur ces types d’audience. En savoir plus sur le workflow d’[activation des audiences externes vers des destinations basées sur des fichiers par lots](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
+| Nombre maximal d’audiences externes (par exemple, chargement personnalisé, composition de l’audience) pouvant être activées dans une instance de destination | 10 | Mécanisme de sécurisation mis en œuvre par le système | Lors de l’activation d’audiences externes (par exemple [Composition d’audience fédérée](/help/segmentation/ui/audience-portal.md#fac), [chargement personnalisé](/help/segmentation/ui/audience-portal.md#import-audience), [Composition d’audience](/help/segmentation/ui/audience-portal.md#audience-composition)) vers des destinations basées sur des fichiers par lots, il existe une limite de 10 audiences de ce type que vous pouvez activer dans une instance de destination. Voir [Types et personnalisation d’audience](/help/segmentation/ui/audience-portal.md#customize) pour plus d’informations sur ces types d’audience. En savoir plus sur le workflow d’[activation des audiences externes vers des destinations basées sur des fichiers par lots](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
 
 {style="table-layout:auto"}
 
@@ -132,7 +132,7 @@ Le mécanisme de sécurisation logiciel ci-dessous s’applique à tous les jeux
 
 {style="table-layout:auto"}
 
-#### Mécanismes de sécurisation pour les exportations de jeux de données planifiées
+#### Mécanismes de sécurisation pour les exportations de jeux de données planifiées {#scheduled-dataset-exports}
 
 Pour les exportations de jeux de données planifiées ou récurrentes, les mécanismes de sécurisation ci-dessous sont identiques pour les deux formats du fichier exporté (JSON ou parquet) et sont regroupés par type de jeu de données.
 
@@ -191,12 +191,12 @@ Détails sur les seuils de limitations ou les limites pour des destinations donn
 
 {style="table-layout:auto"}
 
-## Étapes suivantes
+## Étapes suivantes {#next-steps}
 
 Consultez la documentation suivante pour plus d’informations sur les autres mécanismes de sécurisation des services Experience Platform, sur les informations de latence de bout en bout et les informations de licence dans les documents de description du produit Real-Time CDP :
 
 * [Mécanismes de sécurisation de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=fr#end-to-end-latency-diagrams) pour divers services Experience Platform.
+* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.
 * [Real-Time Customer Data Platform (B2C Edition - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

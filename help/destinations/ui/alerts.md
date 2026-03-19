@@ -3,22 +3,22 @@ keywords: Experience Platform;accueil;rubriques les plus consultées; alertes;de
 description: Vous pouvez vous abonner à des alertes lors de la création d’un flux de données pour recevoir des messages d’alerte concernant le statut, le succès ou l’échec de l’exécution de votre flux de données.
 title: S’abonner aux alertes de destination contextuelles
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '935'
-ht-degree: 17%
+source-wordcount: '931'
+ht-degree: 13%
 
 ---
 
 # S’abonner aux alertes de destination contextuelles
 
-Adobe Experience Platform vous permet de vous abonner à des alertes basées sur des événements concernant les activités Adobe Experience Platform. Les alertes réduisent ou éliminent la nécessité d’interroger l’[[!DNL Observability Insights] API](../../observability/api/overview.md) afin de vérifier si une tâche est terminée, si un certain jalon a été atteint dans un processus ou si des erreurs se sont produites.
+Adobe Experience Platform vous permet de vous abonner à des alertes basées sur des événements concernant les activités Adobe Experience Platform. Les alertes réduisent ou éliminent la nécessité d’interroger l’[[!DNL Observability Insights] API](../../observability/api/overview.md) pour vérifier si une tâche est terminée, si un certain jalon a été atteint dans un workflow ou si des erreurs se sont produites.
 
 Vous pouvez vous abonner à des alertes lors de la création d’un flux de données pour recevoir des messages d’alerte concernant le statut, le succès ou l’échec de l’exécution de votre flux.
 
 Ce document décrit les étapes à suivre pour vous abonner à des messages d’alerte pour vos flux de données de destination.
 
-## Commencer
+## Prise en main {#getting-started}
 
 Ce document nécessite une compréhension du fonctionnement des composants suivants de Adobe Experience Platform :
 
@@ -36,7 +36,7 @@ Ce document nécessite une compréhension du fonctionnement des composants suiva
 
 >[!IMPORTANT]
 >
->Vous devez activer les notifications instantanées d’e-mails pour votre compte Experience Platform afin de recevoir des notifications d’alerte par e-mail pour vos flux de données.
+>Vous devez activer les notifications instantanées des e-mails pour que votre compte Experience Platform reçoive des notifications d’alerte par e-mail pour vos flux de données.
 
 Vous pouvez activer les alertes pour vos flux de données au cours de l’étape de [!UICONTROL Configure new destination] du workflow [connexion à la destination](connect-destination.md).
 
@@ -56,6 +56,8 @@ Les alertes disponibles pour les flux de données de destination sont décrites 
 | Succès de l’exécution du flux de destinations | Cette alerte vous avertit lorsqu’une audience est activée avec succès vers une destination. |
 | Début de l’exécution du flux de destinations | Cette alerte vous avertit lorsqu’une exécution du flux de destinations commence à activer une audience. |
 | Taux d’activations ignorées dépassé | Cette alerte vous avertit lorsque le taux d’omission de l’activation a dépassé 1 % du total des activations. Les identités sont ignorées lors de l’activation lorsqu’elles ont des attributs manquants ou une violation du consentement. |
+
+{style="table-layout:auto"}
 
 ## Recevoir des alertes {#receiving-alerts}
 

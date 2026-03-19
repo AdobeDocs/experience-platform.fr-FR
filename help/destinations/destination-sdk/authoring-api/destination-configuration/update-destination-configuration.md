@@ -2,10 +2,10 @@
 description: Cette page illustre l’appel API utilisé pour mettre à jour une configuration de destination existante avec Adobe Experience Platform Destination SDK.
 title: Mise à jour d’une configuration de destination
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
-source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '371'
-ht-degree: 95%
+source-wordcount: '369'
+ht-degree: 85%
 
 ---
 
@@ -38,7 +38,7 @@ Pour une description détaillée des fonctionnalités de configuration de la des
 
 ## Prise en main des opérations dʼAPI de configuration de destinations {#get-started}
 
-Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
+Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
 
 ## Mise à jour d’une configuration de destination {#update}
 
@@ -59,6 +59,8 @@ PUT /authoring/destinations/{INSTANCE_ID}
 | Paramètre | Description |
 | -------- | ----------- |
 | `{INSTANCE_ID}` | Identifiant de la configuration de destination à mettre à jour. Pour obtenir une configuration de destination existante et son `{INSTANCE_ID}` correspondant, consultez la section [Récupération d’une configuration de destination](retrieve-destination-configuration.md). |
+
+{style="table-layout:auto"}
 
 +++Requête
 
@@ -209,7 +211,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec les détails de la config
 
 Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes d’état API](../../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
-## Étapes suivantes
+## Étapes suivantes {#next-steps}
 
 Vous êtes arrivé au bout de ce document. À présent, vous savez comment mettre à jour une configuration de destination avec le point d’entrée `/authoring/destinations` Destination SDK de l’API.
 

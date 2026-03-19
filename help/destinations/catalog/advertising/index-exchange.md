@@ -3,9 +3,9 @@ title: Échange d'index
 description: Connectez-vous à Index Exchange (Index) et activez vos données afin que vos segments d’audience puissent être ciblés par les offres créées dans l’interface utilisateur d’Index.
 last-substantial-update: 2026-01-27T00:00:00Z
 exl-id: 6d2a8553-5e8c-4eeb-ac25-5e4c2bdc5758
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1215'
 ht-degree: 15%
 
 ---
@@ -44,7 +44,9 @@ Les segments d’audience doivent être enregistrés auprès de [!DNL Index] à 
 
 [!DNL Index] prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/features/namespaces.md).
 
-Notez que les destinations [!DNL Index Exchange] ne prennent en charge qu’un seul type d’identité par chargement. Vous devez spécifier le type d’identifiant approprié lors de la configuration des détails de destination (voir la section [« Renseigner les détails de destination »](#destination-details) ci-dessous).
+>[!NOTE]
+>
+>[!DNL Index Exchange] destinations ne prennent en charge qu’un seul type d’identité par chargement. Vous devez spécifier le type d’identifiant approprié lors de la configuration des détails de destination (voir la section [« Renseigner les détails de destination »](#destination-details) ci-dessous).
 
 Pour charger plusieurs types d’identité, créez des instances distinctes de la destination [!DNL Index Exchange] pour chaque type d’identité.
 
@@ -76,7 +78,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -96,7 +98,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 ## Se connecter à la destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Pour vous connecter à la destination, vous avez besoin des autorisations **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
@@ -112,7 +114,7 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 * [!UICONTROL Identifier Type] : sélectionnez le type d’identifiant fourni par l’index qui correspond à l’identifiant que vous envoyez à [!DNL Index]. Consultez le tableau des types d’identifiants pris en charge ci-dessous. Si vous ne savez pas quel type d’identifiant utiliser, contactez votre représentant [!DNL Index]. Pour envoyer plusieurs types d’identifiants, créez des instances distinctes de cette destination.
 * [!UICONTROL Account ID] : saisissez votre ID de compte [!DNL Index]. Il ne s’agit pas du même que votre ID d’éditeur. Si vous n’êtes pas sûr de l’ID à utiliser, contactez votre représentant [!DNL Index].
 
-#### Types d’identifiants pris en charge
+#### Types d’identifiants pris en charge {#supported-identifier-types}
 
 | Type d’identifiant | Description |
 |------------------ | ------------- |
@@ -131,12 +133,12 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers cette destination. Sélectionnez une ou plusieurs alertes dans la liste pour vous abonner aux notifications de statut de votre flux de données. Pour plus d’informations, consultez le guide sur [l’abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
 
-## Activer des segments vers cette destination {#activate}
+## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 

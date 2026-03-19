@@ -3,9 +3,9 @@ title: Utilisez l’attribut XDM de la dernière qualification dans les nouvelle
 description: Découvrez comment utiliser l’attribut XDM de la dernière qualification dans les nouvelles destinations bêta de stockage dans le cloud
 badgeBeta: label="Beta" type="Informative"
 exl-id: d077ea10-5ff2-4acc-8ee6-78ea6cd752d1
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '285'
 ht-degree: 10%
 
 ---
@@ -13,8 +13,8 @@ ht-degree: 10%
 # Utilisez l’attribut XDM de la dernière qualification dans les nouvelles destinations bêta de stockage dans le cloud {#last-qualification-time}
 
 >[!IMPORTANT]
-> 
->Cette page décrit les fonctionnalités de la version bêta. Les fonctionnalités et la documentation sont susceptibles d’être modifiées. Contactez votre représentant Adobe ou l’assistance clientèle si vous souhaitez accéder à ce programme bêta.
+>
+>Cette page décrit les fonctionnalités de la version bêta. Les fonctionnalités et la documentation sont susceptibles d’être modifiées. Contactez votre représentant ou représentante Adobe ou l’assistance clientèle si vous souhaitez accéder à ce programme Beta.
 
 ## Conditions préalables {#prerequisites}
 
@@ -31,7 +31,9 @@ Pour utiliser l’attribut XDM Heure de la dernière qualification (`lastQualifi
 
 Si vous utilisez l’un des six connecteurs d’espace de stockage répertoriés ci-dessus, vous pouvez utiliser l’attribut XDM Heure de la dernière qualification à l’étape [mappage](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) du workflow d’activation pour créer une colonne dans le fichier exporté avec la date et l’heure les plus récentes auxquelles un profil s’est qualifié pour un segment. Cela peut vous aider dans certains cas d’utilisation de mesures ou d’analyses et vous donner une meilleure idée du moment où activer certaines audiences.
 
-Notez que pour ajouter des `lastQualificationTime` à vos exportations de fichiers, vous devez actuellement insérer manuellement la valeur `xdm: segmentMembership.ups.seg_id.lastQualificationTime` dans le champ source, comme illustré ci-dessous. Vous pouvez également modifier le champ cible en `lastQualificationTime` ou toute autre valeur que vous souhaitez attribuer à cette colonne. Notez que puisqu’il s’agit d’une fonctionnalité bêta, la syntaxe de la valeur `xdm: segmentMembership.ups.seg_id.lastQualificationTime` peut changer à l’avenir.
+>[!NOTE]
+>
+>Pour ajouter des `lastQualificationTime` à vos exportations de fichiers, vous devez actuellement insérer manuellement la valeur `xdm: segmentMembership.ups.seg_id.lastQualificationTime` dans le champ source, comme illustré ci-dessous. Vous pouvez également modifier le champ cible en `lastQualificationTime` ou toute autre valeur que vous souhaitez attribuer à cette colonne. Puisqu’il s’agit d’une fonctionnalité en version Beta, la syntaxe de la valeur `xdm: segmentMembership.ups.seg_id.lastQualificationTime` peut changer à l’avenir.
 
 ![Enregistrement de l’écran affichant l’attribut XDM de la dernière qualification collé dans l’étape de mappage](/help/destinations/ui/last-qualification-time.gif)
 

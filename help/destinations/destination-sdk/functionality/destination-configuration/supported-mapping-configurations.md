@@ -2,7 +2,7 @@
 description: Découvrez comment configurer la destination pour les configurations de mappage d’identité et d’attributs prises en charge.
 title: Configurations de mappage prises en charge
 exl-id: a477a3f2-a229-4b22-8588-ee58bd5436c6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '670'
 ht-degree: 77%
@@ -19,7 +19,7 @@ Cet article décrit toutes les configurations de mappage prises en charge que vo
 >
 >Toute configuration de mappage qui ne figure pas dans cet article n’est pas prise en charge par Destination SDK.
 
-Pendant la création de la destination, configurez vos espaces de noms de schéma et d’identité en fonction de l’une des configurations de mappage décrites sur cette page.
+Pendant la création de la destination, configurez le schéma et l’espaces de noms d’identité en fonction de l’une des configurations de mappage décrites sur cette page.
 
 >[!IMPORTANT]
 >
@@ -33,6 +33,8 @@ Les destinations en temps réel (streaming) créé avec Destination SDK prennent
 | --- | --- |
 | Attribut XDM | Attribut personnalisé |
 | Espace de noms d’identité | Espace de noms d’identité |
+
+{style="table-layout:auto"}
 
 L’exemple de configuration suivant permet d’utiliser les deux mappages dans le tableau ci-dessus.
 
@@ -87,6 +89,8 @@ Les destinations basées sur des fichiers créés avec Destination SDK prennent 
 | Attribut XDM | Attribut/attribut personnalisé |
 | Espace de noms d’identité | Attribut/attribut personnalisé |
 | Espace de noms d’identité | Espace de noms d’identité |
+
+{style="table-layout:auto"}
 
 L’exemple de configuration ci-dessous permet d’utiliser tous les mappages du tableau ci-dessus.
 

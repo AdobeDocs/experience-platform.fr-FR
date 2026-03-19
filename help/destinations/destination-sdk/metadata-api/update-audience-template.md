@@ -2,10 +2,10 @@
 description: Cette page illustre comment l’appel API est utilisé pour mettre à jour un modèle d’audience avec Adobe Experience Platform Destination SDK.
 title: Mise à jour d’un modèle d’audience
 exl-id: 8185a015-256d-46a7-af33-8475832fb6c1
-source-git-commit: fda542e62c448788099d63951277278a146fdfc8
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '321'
-ht-degree: 95%
+source-wordcount: '319'
+ht-degree: 84%
 
 ---
 
@@ -25,7 +25,7 @@ Pour obtenir une description détaillée des fonctionnalités configurables avec
 
 ## Prise en main des opérations de l’API des modèles d’audience {#get-started}
 
-Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
+Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
 
 ## Mise à jour d’un modèle d’audience {#create}
 
@@ -42,6 +42,8 @@ PUT /authoring/audience-templates/{INSTANCE_ID}
 | Paramètre | Description |
 | -------- | ----------- |
 | `{INSTANCE_ID}` | Identifiant du modèle d’audience à mettre à jour. Pour obtenir un modèle d’audience existant et son `{INSTANCE_ID}` correspondant, consultez la section [Récupération d’un modèle d’audience](retrieve-audience-template.md). |
+
+{style="table-layout:auto"}
 
 La requête suivante met à jour un modèle de métadonnées d’audience existant, configuré par les paramètres fournis dans la payload.
 
@@ -268,10 +270,10 @@ Une réponse réussie renvoie le statut HTTP 200 avec les détails du modèle d
 
 +++
 
-## Gestion des erreurs d’API
+## Gestion des erreurs d’API {#error-handling}
 
 Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes d’état API](../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
-## Étapes suivantes
+## Étapes suivantes {#next-steps}
 
 Vous êtes arrivé au bout de ce document. À présent, vous savez quand utiliser les modèles d’audience et comment mettre à jour un modèle d’audience à l’aide du point dʼentrée `/authoring/audience-templates` de l’API. Consultez la documentation [Comment utiliser Destination SDK pour configurer la destination](../guides/configure-destination-instructions.md) afin de comprendre la place de cette étape dans le processus de configuration de la destination.

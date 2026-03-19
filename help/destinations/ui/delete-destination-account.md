@@ -1,13 +1,13 @@
 ---
-keywords: supprimer un compte de destination, des comptes de destination, comment supprimer des comptes ;
+keywords: supprimer le compte de destination, comptes de destination, comment supprimer des comptes
 title: Supprimer les comptes de destination
 type: Tutorial
-description: Ce tutoriel répertorie les étapes de suppression des comptes de destination dans l’interface utilisateur de Adobe Experience Platform.
+description: Ce tutoriel décrit les étapes à suivre pour supprimer des comptes de destination dans l’interface utilisateur de Adobe Experience Platform
 exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 18%
+source-wordcount: '294'
+ht-degree: 13%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 18%
 
 ## Vue d’ensemble {#overview}
 
-L’onglet **[!UICONTROL Comptes]** vous montre des détails sur les connexions que vous avez établies avec différentes destinations. Reportez-vous à la [présentation des comptes](../ui/destinations-workspace.md#accounts) pour toutes les informations que vous pouvez obtenir sur chaque compte de destination.
+L’onglet **[!UICONTROL Accounts]** vous montre les détails des connexions que vous avez établies avec diverses destinations. Reportez-vous à la [ Présentation des comptes ](../ui/destinations-workspace.md#accounts) pour obtenir toutes les informations disponibles sur chaque compte de destination.
 
-Ce tutoriel décrit les étapes à suivre pour supprimer les comptes de destination qui ne sont plus nécessaires à l’aide de l’interface utilisateur de l’Experience Platform.
+Ce tutoriel décrit les étapes à suivre pour supprimer des comptes de destination qui ne sont plus nécessaires à l’aide de l’interface utilisateur d’Experience Platform.
 
 ![Onglet Comptes](../assets/ui/update-accounts/destination-accounts.png)
 
@@ -25,11 +25,11 @@ Ce tutoriel décrit les étapes à suivre pour supprimer les comptes de destinat
 
 >[!TIP]
 >
->Avant de supprimer le compte de destination, vous devez d’abord supprimer tout flux de données existant associé au compte de destination. Pour supprimer des flux de données de destination existants, reportez-vous au tutoriel sur la [suppression des flux de données de destination dans l’interface utilisateur](./delete-destinations.md).
+>Avant de supprimer le compte de destination, vous devez d’abord supprimer les flux de données existants associés au compte de destination. Pour supprimer des flux de données de destination existants, reportez-vous au tutoriel sur la [suppression de flux de données de destination dans l’interface utilisateur](./delete-destinations.md).
 
-Suivez les étapes ci-dessous pour supprimer des comptes de destination existants.
+Pour supprimer des comptes de destination existants, procédez comme suit.
 
-1. Connectez-vous à l’[interface utilisateur Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Comptes]** dans l’en-tête supérieur pour afficher vos comptes existants.
+1. Connectez-vous à l’[interface utilisateur d’Experience Platform](https://platform.adobe.com/) puis sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Accounts]** dans l’en-tête supérieur pour afficher vos comptes existants.
 
    ![Onglet Comptes](../assets/ui/delete-accounts/accounts-tab.png)
 
@@ -37,16 +37,16 @@ Suivez les étapes ci-dessous pour supprimer des comptes de destination existant
 
    ![Filtrer les destinations](../assets/ui/delete-accounts/filter-accounts.png)
 
-3. Sélectionnez les points de suspension (`...`) à côté du nom du compte que vous avez l’intention de supprimer. Un panneau contextuel s’affiche, fournissant des options pour **[!UICONTROL Activer les audiences]**, **[!UICONTROL Modifier les détails]** et **[!UICONTROL Supprimer]** du compte. Sélectionnez le bouton ![Supprimer](/help/images/icons/delete.png) **[!UICONTROL Supprimer]** pour supprimer le compte de votre choix.
+3. Sélectionnez les points de suspension (`...`) à côté du nom du compte que vous souhaitez supprimer. Un panneau pop-up s’affiche, fournissant des options pour **[!UICONTROL Activate audiences]**, **[!UICONTROL Edit details]** et **[!UICONTROL Delete]** le compte. Sélectionnez le bouton ![Supprimer](/help/images/icons/delete.png) **[!UICONTROL Delete]** pour supprimer le compte souhaité.
 
    ![Supprimer le compte de destination](../assets/ui/delete-accounts/delete-accounts.png)
 
-4. Une boîte de dialogue de confirmation finale s’affiche. Sélectionnez **[!UICONTROL Supprimer]** pour terminer le processus.
+4. Une boîte de dialogue de confirmation finale s’affiche. Sélectionnez **[!UICONTROL Delete]** pour terminer le processus.
 
-![Confirmer la suppression de compte](../assets/ui/delete-accounts/confirm-account-deletion.png)
+![Confirmer la suppression du compte](../assets/ui/delete-accounts/confirm-account-deletion.png)
 
-## Étapes suivantes
+## Étapes suivantes {#next-steps}
 
-En suivant ce tutoriel, vous avez correctement utilisé l’espace de travail des destinations pour supprimer des comptes existants.
+Ce tutoriel vous a permis d’utiliser l’espace de travail des destinations pour supprimer des comptes existants.
 
-Pour savoir comment effectuer ces opérations par programmation à l’aide de l’API [!DNL Flow Service], reportez-vous au tutoriel sur la [&#x200B; suppression des connexions à l’aide de l’API Flow Service](../api/delete-destination-account.md).
+Pour savoir comment effectuer ces opérations par programmation à l’aide de l’API [!DNL Flow Service], reportez-vous au tutoriel sur la [suppression de connexions à l’aide de l’API Flow Service](../api/delete-destination-account.md)

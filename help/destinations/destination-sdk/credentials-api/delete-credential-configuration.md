@@ -2,10 +2,10 @@
 description: Cette page illustre comment l’appel API est utilisé pour supprimer une configuration d’informations d’identification Adobe Experience Platform Destination SDK.
 title: Suppression d’une configuration d’informations d’identification
 exl-id: a540e349-043c-4f04-8ca8-f650b9943492
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 86%
+source-wordcount: '416'
+ht-degree: 78%
 
 ---
 
@@ -35,7 +35,7 @@ Lors de l’utilisation d’un système d’authentification global, vous devez 
 
 ## Prise en main des opérations de l’API des informations d’identification {#get-started}
 
-Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
+Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
 
 ## Suppression d’une configuration d’informations d’identification {#delete}
 
@@ -52,6 +52,8 @@ DELETE /authoring/credentials/{INSTANCE_ID}
 | Paramètre | Description |
 | --------- | ----------- |
 | `{INSTANCE_ID}` | Valeur `ID` de la configuration d’informations d’identification que vous souhaitez supprimer. |
+
+{style="table-layout:auto"}
 
 La requête suivante supprime une configuration d’informations d’identification définie par le paramètre `{INSTANCE_ID}`.
 

@@ -3,7 +3,7 @@ keywords: connexion facebook;connexion facebook;destinations facebook;facebook;i
 title: Connexion Facebook
 description: Activez les profils dans vos campagnes Facebook pour cibler votre audience et effectuer des personnalisat ions ou encore des suppressions reposant sur les e-mails hachés.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '2770'
 ht-degree: 17%
@@ -20,15 +20,15 @@ Vous pouvez utiliser cette destination pour le ciblage d’audience dans [!DNL F
 
 ![Destination Facebook dans l’interface utilisateur de Adobe Experience Platform.](../../assets/catalog/social/facebook/catalog.png)
 
-## Cas d’utilisation
+## Cas d’utilisation {#use-cases}
 
 Pour mieux comprendre quand et comment utiliser la destination [!DNL Facebook], consultez les deux exemples de cas d’utilisation ci-dessous que la clientèle Adobe Experience Platform peut résoudre.
 
-### Cas d’utilisation #1
+### Cas d’utilisation #1 {#use-case-1}
 
 Un retailer en ligne souhaite atteindre les clients existants par le biais de plateformes sociales et leur présenter des offres personnalisées en fonction de leurs commandes précédentes. Le retailer en ligne peut ingérer des adresses e-mail de son propre CRM vers Adobe Experience Platform, créer des audiences à partir de ses propres données hors ligne et envoyer ces audiences à la plateforme sociale [!DNL Facebook], ce qui optimise ses dépenses publicitaires.
 
-### Cas d’utilisation #2
+### Cas d’utilisation #2 {#use-case-2}
 
 Une compagnie aérienne a différents niveaux de clients (bronze, argent et or) et souhaite fournir à chacun des niveaux des offres personnalisées via des plateformes sociales. Cependant, tous les clients n&#39;utilisent pas l&#39;application mobile de la compagnie aérienne et certains d&#39;entre eux ne se sont pas connectés au site Web de la compagnie. Les seuls identifiants dont dispose l’entreprise à propos de ces clients sont les identifiants d’abonnement et les adresses e-mail.
 
@@ -76,7 +76,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -164,14 +164,14 @@ Avant de pouvoir utiliser l’espace de noms `Extern_ID` pour envoyer des donné
 ## Se connecter à la destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
 La vidéo ci-dessous montre également les étapes à suivre pour configurer une destination [!DNL Facebook] et activer des audiences.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411785/?quality=12&learn=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -190,9 +190,9 @@ Les jetons d’authentification Facebook expirent tous les 60 jours. Une fois le
 
 Vous pouvez surveiller les dates d’expiration de votre jeton à partir de la colonne **[!UICONTROL Account expiration date]** dans les onglets **[[!UICONTROL Accounts]](../../ui/destinations-workspace.md#accounts)** ou **[[!UICONTROL Browse]](../../ui/destinations-workspace.md#browse)** .
 
-![Colonne de date d’expiration du jeton de compte Facebook dans l’onglet Parcourir &#x200B;](../../assets/catalog/social/facebook/account-expiration-browse.png)
+![Colonne de date d’expiration du jeton de compte Facebook dans l’onglet Parcourir ](../../assets/catalog/social/facebook/account-expiration-browse.png)
 
-![Colonne de date d’expiration du jeton de compte Facebook dans l’onglet Comptes &#x200B;](../../assets/catalog/social/facebook/account-expiration-accounts.png)
+![Colonne de date d’expiration du jeton de compte Facebook dans l’onglet Comptes ](../../assets/catalog/social/facebook/account-expiration-accounts.png)
 
 Pour éviter que l’expiration du jeton ne provoque des interruptions dans vos flux de données d’activation, réauthentifiez-vous en procédant comme suit :
 
@@ -202,10 +202,10 @@ Pour éviter que l’expiration du jeton ne provoque des interruptions dans vos 
 3. Sélectionnez le compte à actualiser, puis les points de suspension et sélectionnez **[!UICONTROL Edit details]**.
    ![Sélectionnez Modifier les détails](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
 4. Dans la fenêtre modale, sélectionnez **[!UICONTROL Reconnect OAuth]** et réauthentifiez-vous à l’aide de vos informations d’identification Facebook.
-   ![Fenêtre modale avec l’option Reconnecter OAuth &#x200B;](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
+   ![Fenêtre modale avec l’option Reconnecter OAuth ](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
 
 >[!SUCCESS]
-> 
+>
 >Vos informations d’authentification sont actualisées et leur délai d’expiration est réinitialisé à 60 jours.
 
 ### Renseigner les détails de la destination {#destination-details}
@@ -250,9 +250,9 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >abstract="Les annonceurs ont collecté des données directement auprès de leurs clients et partenaires."
 
 >[!IMPORTANT]
-> 
+>
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 

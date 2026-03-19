@@ -1,13 +1,13 @@
 ---
-keywords: mettre à jour le compte de destination, les comptes de destination, comment mettre à jour les comptes, mettre à jour la destination
+keywords: mettre à jour le compte de destination, comptes de destination, comment mettre à jour les comptes, mettre à jour la destination
 title: Mettre à jour les comptes de destination
 type: Tutorial
-description: Ce tutoriel répertorie les étapes de mise à jour des comptes de destination dans l’interface utilisateur de Adobe Experience Platform.
+description: Ce tutoriel décrit les étapes à suivre pour mettre à jour les comptes de destination dans l’interface utilisateur de Adobe Experience Platform
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 10%
+source-wordcount: '490'
+ht-degree: 8%
 
 ---
 
@@ -15,21 +15,21 @@ ht-degree: 10%
 
 ## Vue d’ensemble {#overview}
 
-L’onglet **[!UICONTROL Comptes]** vous montre des détails sur les connexions que vous avez établies avec différentes destinations. Reportez-vous à la [présentation des comptes](../ui/destinations-workspace.md#accounts) pour toutes les informations que vous pouvez obtenir sur chaque compte de destination.
+L’onglet **[!UICONTROL Accounts]** vous montre les détails des connexions que vous avez établies avec diverses destinations. Reportez-vous à la [ Présentation des comptes ](../ui/destinations-workspace.md#accounts) pour obtenir toutes les informations disponibles sur chaque compte de destination.
 
-Ce tutoriel décrit les étapes à suivre pour mettre à jour les détails du compte de destination à l’aide de l’interface utilisateur Experience Platform.
+Ce tutoriel décrit les étapes à suivre pour mettre à jour les détails du compte de destination à l’aide de l’interface utilisateur d’Experience Platform.
 
-Vous pouvez mettre à jour les détails du compte de destination afin d’actualiser et de réauthentifier les informations d’identification de vos comptes actuels ou expirés pour les destinations que vous utilisez actuellement. En règle générale, les jetons OAuth et porteur ont une durée de vie limitée, selon la plateforme de destination. Lorsque ces jetons expirent, vous pouvez les actualiser dans le workflow décrit ci-dessous. Ce workflow vous invite à passer par le workflow OAuth ou à réinsérer un jeton. De même, si un mot de passe ou un accès utilisateur a changé sur la plateforme en aval, vous pouvez actualiser les informations d’identification.
+Vous pouvez mettre à jour les détails du compte de destination afin d’actualiser et de réauthentifier les informations d’identification de vos comptes actuels ou expirés pour les destinations que vous utilisez actuellement. En règle générale, les jetons OAuth et porteur ont une durée de vie limitée, en fonction de la plateforme de destination. Une fois ces jetons expirés, vous pouvez les actualiser dans le workflow décrit plus en détail ci-dessous. Ce workflow vous demande de passer par le workflow OAuth ou de réinsérer un jeton. De même, si un mot de passe ou un accès utilisateur a été modifié dans la plateforme en aval, vous pouvez actualiser les informations d’identification.
 
-Pour les destinations par lot, vous pouvez mettre à jour la clé d’accès ou secrète, si l’une d’elles a été modifiée. En outre, si vous souhaitez chiffrer vos fichiers à partir de maintenant, vous pouvez insérer une clé publique RSA et vos fichiers exportés seront chiffrés à partir de maintenant.
+Pour les destinations par lots, vous pouvez mettre à jour l’accès ou la clé secrète, si l’une de ces options a été modifiée. De plus, si vous souhaitez chiffrer vos fichiers à l’avenir, vous pouvez insérer une clé publique RSA et les fichiers exportés seront chiffrés à l’avenir.
 
 ![Onglet Comptes](../assets/ui/update-accounts/destination-accounts.png)
 
 ## Mettre à jour des comptes {#update}
 
-Suivez les étapes ci-dessous pour mettre à jour les détails de connexion vers les destinations existantes.
+Suivez les étapes ci-dessous pour mettre à jour les détails de connexion vers des destinations existantes.
 
-1. Connectez-vous à l’[interface utilisateur Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Comptes]** dans l’en-tête supérieur pour afficher vos comptes existants.
+1. Connectez-vous à l’[interface utilisateur d’Experience Platform](https://platform.adobe.com/) puis sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Accounts]** dans l’en-tête supérieur pour afficher vos comptes existants.
 
    ![Onglet Comptes](../assets/ui/update-accounts/accounts-tab.png)
 
@@ -37,32 +37,32 @@ Suivez les étapes ci-dessous pour mettre à jour les détails de connexion vers
 
    ![Filtrer les comptes de destination](../assets/ui/update-accounts/filter-accounts.png)
 
-3. Sélectionnez les points de suspension (`...`) en regard du nom du compte que vous avez l’intention de mettre à jour. Un panneau contextuel s’affiche, fournissant des options pour **[!UICONTROL Activer les audiences]**, **[!UICONTROL Modifier les détails]** et **[!UICONTROL Supprimer]** du compte. Sélectionnez le bouton ![Modifier les détails](/help/images/icons/edit.png) **[!UICONTROL Modifier les détails]** pour modifier les informations du compte.
+3. Sélectionnez les points de suspension (`...`) à côté du nom du compte que vous prévoyez de mettre à jour. Un panneau pop-up s’affiche, fournissant des options pour **[!UICONTROL Activate audiences]**, **[!UICONTROL Edit details]** et **[!UICONTROL Delete]** le compte. Sélectionnez le bouton ![Modifier les détails](/help/images/icons/edit.png) **[!UICONTROL Edit details]** pour modifier les informations du compte.
 
    ![Modifier le compte](../assets/ui/update-accounts/accounts-edit.png)
 
-4. Entrez vos informations d’identification de compte mises à jour.
+4. Saisissez les informations d’identification de votre compte mis à jour.
 
-   * Pour les comptes qui utilisent un type de connexion `OAuth1` ou `OAuth2`, sélectionnez **[!UICONTROL Reconnecter OAuth]** pour renouveler les informations d’identification de votre compte. Vous pouvez également mettre à jour le nom et la description de votre compte.
+   * Pour les comptes qui utilisent un type de connexion `OAuth1` ou `OAuth2`, sélectionnez **[!UICONTROL Reconnect OAuth]** pour renouveler les informations d’identification de votre compte. Vous pouvez également mettre à jour le nom et la description de votre compte .
 
    ![Modifier les détails OAuth](../assets/ui/update-accounts/edit-details-oauth.png)
 
-   * Pour les comptes qui utilisent un type de connexion `Access Key` ou `ConnectionString`, vous pouvez modifier les informations d’authentification de votre compte, y compris les informations telles que l’identifiant d’accès, les clés secrètes ou les chaînes de connexion. Vous pouvez également mettre à jour le nom et la description de votre compte.
+   * Pour les comptes qui utilisent un type de connexion `Access Key` ou `ConnectionString`, vous pouvez modifier les informations d’authentification de votre compte, y compris les informations telles que l’identifiant d’accès, les clés secrètes ou les chaînes de connexion. Vous pouvez également mettre à jour le nom et la description de votre compte .
 
-   ![Modifier la clé d’accès des détails](../assets/ui/update-accounts/edit-details-key.png)
+   ![Modifier la clé d’accès aux détails](../assets/ui/update-accounts/edit-details-key.png)
 
-   * Pour les comptes qui utilisent un type de connexion `Bearer token`, vous pouvez saisir un nouveau jeton porteur, si nécessaire. Vous pouvez également mettre à jour le nom et la description de votre compte.
+   * Pour les comptes qui utilisent un type de connexion `Bearer token`, vous pouvez saisir un nouveau jeton du porteur, si nécessaire. Vous pouvez également mettre à jour le nom et la description de votre compte .
 
-   ![Modifier les détails Jeton de porteur](../assets/ui/update-accounts/edit-details-bearer.png)
+   ![Modifier les détails Jeton porteur](../assets/ui/update-accounts/edit-details-bearer.png)
 
    * Pour les comptes qui utilisent un type de connexion `Server to server`, vous pouvez mettre à jour le nom et la description de votre compte.
 
-   ![Modifier les détails Serveur à serveur](../assets/ui/update-accounts/edit-details-s2s.png)
+   ![Modifier les détails de serveur à serveur](../assets/ui/update-accounts/edit-details-s2s.png)
 
-5. Sélectionnez **[!UICONTROL Enregistrer]** pour terminer la mise à jour des détails du compte.
+5. Sélectionnez **[!UICONTROL Save]** pour terminer la mise à jour des détails du compte.
 
-## Étapes suivantes
+## Étapes suivantes {#next-steps}
 
-En suivant ce tutoriel, vous avez utilisé l’espace de travail **[!UICONTROL destinations]** pour mettre à jour les comptes existants.
+Ce tutoriel vous a permis d’utiliser l’espace de travail **[!UICONTROL destinations]** pour mettre à jour les comptes existants.
 
 Pour plus d’informations sur les destinations, consultez la [présentation des destinations](../catalog/overview.md).

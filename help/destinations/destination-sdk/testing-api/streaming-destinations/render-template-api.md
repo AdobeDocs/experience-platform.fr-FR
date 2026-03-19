@@ -2,10 +2,10 @@
 description: Découvrez comment utiliser l’API de test de destination pour valider la sortie vers la destination de diffusion en streaming, en fonction de votre modèle de transformation de message.
 title: Validation de la structure de profil exportée
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 98%
+source-wordcount: '792'
+ht-degree: 93%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 98%
 
 >[!IMPORTANT]
 >
->**Point d’entrée de l’API &#x200B;** : `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
+>**Point d’entrée de l’API ** : `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
 
 Cette page répertorie toutes les opérations d’API que vous pouvez effectuer à l’aide du point d’entrée de l’API `/authoring/testing/template/render` et fournit leur description. Effectuez le rendu des profils exportés correspondant au format de destination attendu, en fonction de votre [modèle de transformation de message](../../functionality/destination-server/message-format.md#using-templating). Pour une description des fonctionnalités prises en charge par ce point d’entrée, consultez la section [Créer un modèle](create-template.md).
 
 ## Prise en main des opérations de l’API de modèle de rendu {#get-started}
 
-Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
+Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
 
 ## Effectuer le rendu des profils exportés en fonction du modèle de transformation des messages {#render-exported-data}
 

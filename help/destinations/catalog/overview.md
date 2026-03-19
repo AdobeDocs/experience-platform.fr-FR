@@ -3,7 +3,7 @@ keywords: Catalogue;catalogue
 title: Présentation du catalogue des destinations
 description: Le catalogue des destinations fournit une liste des destinations disponibles prêtes à recevoir des données. Ces destinations incluent des solutions Adobe, des plateformes publicitaires, d’enquête et de marketing par e-mail, et bien plus encore.
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
-source-git-commit: 212faadcc31e064c4b74cef2f10906003ab1e781
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 35%
@@ -23,7 +23,7 @@ Parcourez le catalogue pour déterminer les plateformes de destination les mieux
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
-## Catégories de destination
+## Catégories de destination {#destination-categories}
 
 Vous pouvez activer vos données dans différentes catégories de destination dans Adobe Experience Platform. Les liens ci-dessous fournissent des informations supplémentaires sur chaque catégorie de destination :
 

@@ -3,7 +3,7 @@ title: Activer les audiences vers des destinations d’export de profils par lot
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations de profils par lots.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 8019f7426f6e6dd3faef131ada8e307c1d075556
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '4783'
 ht-degree: 38%
@@ -14,11 +14,11 @@ ht-degree: 38%
 # Activer les audiences vers des destinations d’export de profils par lots
 
 >[!IMPORTANT]
-> 
->* Pour activer les audiences et activer l’[étape de mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
->* Pour activer les audiences sans passer par l’étape [mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
-> 
+>
+>* Pour activer les audiences et activer l’[étape de mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
+>* Pour activer les audiences sans passer par l’étape [mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>
 > Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 ## Vue d’ensemble {#overview}
@@ -64,7 +64,7 @@ Pour sélectionner les audiences à activer vers la destination, utilisez les ca
 Vous pouvez effectuer un choix parmi plusieurs types d’audiences, selon leur origine :
 
 * **[!UICONTROL Segmentation Service]** : audiences générées dans Experience Platform par Segmentation Service. Voir la [documentation sur la segmentation](../../segmentation/ui/overview.md) pour plus d’informations.
-* **[!UICONTROL Custom upload]** : audiences générées en dehors d’Experience Platform et chargées dans Experience Platform au format CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [importation d’une audience](../../segmentation/ui/audience-portal.md#import-audience). La sélection des audiences issues de **[!UICONTROL Custom uploads]** active automatiquement l’étape [&#x200B; Sélectionner des attributs d’enrichissement &#x200B;](#select-enrichment-attributes).
+* **[!UICONTROL Custom upload]** : audiences générées en dehors d’Experience Platform et chargées dans Experience Platform au format CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [importation d’une audience](../../segmentation/ui/audience-portal.md#import-audience). La sélection des audiences issues de **[!UICONTROL Custom uploads]** active automatiquement l’étape [ Sélectionner des attributs d’enrichissement ](#select-enrichment-attributes).
 * Autres types d’audiences, provenant d’autres solutions Adobe, telles que [!DNL Audience Manager].
 
 >[!IMPORTANT]
@@ -205,7 +205,7 @@ Si les profils sont mis à jour après l’évaluation de l’audience, les expo
 
 Pour les exportations à la demande, consultez la documentation sur [exportation de fichiers à la demande](/help/destinations/ui/export-file-now.md#scheduled-vs-ondemand).
 
-### Exporter des fichiers incrémentiels
+### Exporter des fichiers incrémentiels {#export-incremental-files}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_something"
@@ -278,7 +278,7 @@ Pour modifier plusieurs noms de fichier en même temps, sélectionnez les audien
 Sélectionnez **[!UICONTROL Apply changes]** pour confirmer votre sélection.
 
 >[!IMPORTANT]
-> 
+>
 >Si vous ne sélectionnez pas le composant **[!UICONTROL Date and Time]**, les noms de fichier seront statiques et le nouveau fichier exporté remplacera le fichier précédent de votre emplacement de stockage à chaque exportation. L’option recommandée consiste à exécuter une tâche d’importation récurrente depuis un emplacement de stockage vers une plateforme de marketing par e-mail.
 
 Une fois toutes les audiences configurées, sélectionnez **[!UICONTROL Next]** pour continuer.
@@ -298,7 +298,7 @@ Au cours de cette étape, vous devez sélectionner les attributs de profil à aj
 1. Dans la page **[!UICONTROL Select source field]**, sélectionnez les attributs et les identités de profil à inclure dans les fichiers exportés vers la destination, puis choisissez **[!UICONTROL Select]**.
 
    >[!TIP]
-   > 
+   >
    >Vous pouvez utiliser le champ de recherche pour affiner votre sélection, comme illustré dans l’image ci-dessous.
 
    Utilisez le bouton **[!UICONTROL Show only fields with data]** pour afficher uniquement les champs de schéma remplis de valeurs. Par défaut, seuls les champs de schéma renseignés s’affichent.
@@ -496,9 +496,9 @@ Adobe recommande de sélectionner un espace de noms d’identité, tel qu’un [
 
 ### Comportement de déduplication pour les profils ayant le même horodatage {#deduplication-same-timestamp}
 
-Lors de l’export de profils vers des destinations basées sur des fichiers, la déduplication garantit qu’un seul profil est exporté lorsque plusieurs profils partagent la même clé de déduplication et le même horodatage de référence. Cet horodatage représente le moment où l’appartenance à l’audience ou le graphique d’identité d’un profil a été mis à jour pour la dernière fois. Pour plus d’informations sur la mise à jour et l’exportation des profils, consultez le document [comportement d’exportation des profils](https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Lors de l’export de profils vers des destinations basées sur des fichiers, la déduplication garantit qu’un seul profil est exporté lorsque plusieurs profils partagent la même clé de déduplication et le même horodatage de référence. Cet horodatage représente le moment où l’appartenance à l’audience ou le graphique d’identité d’un profil a été mis à jour pour la dernière fois. Pour plus d’informations sur la mise à jour et l’exportation des profils, consultez le document [comportement d’exportation des profils](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
-#### Considérations principales
+#### Considérations principales {#key-considerations}
 
 * **Sélection déterministe** : lorsque plusieurs profils ont des clés de déduplication identiques et la même date et heure de référence, la logique de déduplication détermine le profil à exporter en triant les valeurs d’autres colonnes sélectionnées (à l’exclusion des types complexes tels que les tableaux, les mappages ou les objets). Les valeurs triées sont évaluées dans l&#39;ordre lexicographique, et le premier profil est sélectionné.
 
@@ -535,7 +535,7 @@ Vous pouvez utiliser le contrôle [Champs calculés](/help/destinations/ui/data-
 
 La nouvelle page **[!UICONTROL Mapping]** présente les limites connues suivantes :
 
-#### L’attribut d’appartenance à une audience ne peut pas être sélectionné par le biais du workflow de mappage
+#### L’attribut d’appartenance à une audience ne peut pas être sélectionné par le biais du workflow de mappage {#audience-membership-attribute-mapping}
 
 En raison d’une limitation connue, vous ne pouvez actuellement pas utiliser la fenêtre **[!UICONTROL Select field]** pour ajouter des `segmentMembership.seg_namespace.seg_id.status` à vos exportations de fichiers. Vous devez plutôt coller manuellement la valeur `xdm: segmentMembership.seg_namespace.seg_id.status` dans le champ de schéma, comme illustré ci-dessous.
 
@@ -556,7 +556,7 @@ Les exportations de fichiers varient comme suit, selon que `segmentMembership.se
 
 En savoir plus sur [le comportement d’exportation de profils pour les destinations basées sur des fichiers](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
-#### Les espaces de noms d’identité ne peuvent actuellement pas être sélectionnés pour les exportations.
+#### Les espaces de noms d’identité ne peuvent actuellement pas être sélectionnés pour les exportations. {#identity-namespaces-export-limitation}
 
 La sélection des espaces de noms d’identité à exporter, comme illustrée dans l’image ci-dessous, n’est actuellement pas prise en charge. La sélection des espaces de noms d’identité à exporter entraîne une erreur dans l’étape de **[!UICONTROL Review]**.
 
@@ -570,7 +570,7 @@ En tant que solution temporaire, si vous devez ajouter des espaces de noms d’i
 ## Sélectionner des attributs de profil {#select-attributes}
 
 >[!IMPORTANT]
-> 
+>
 >Toutes les destinations de stockage dans le cloud du catalogue peuvent afficher une étape de [[!UICONTROL Mapping] améliorée](#mapping) qui remplace l’étape **[!UICONTROL Select attributes]** décrite dans cette section.
 >
 >Cette étape **[!UICONTROL Select attributes]** s’affiche toujours pour les destinations de marketing par e-mail d’Adobe Campaign, d’Oracle Responsys, d’Oracle Eloqua et de Salesforce Marketing Cloud.
@@ -636,14 +636,14 @@ Pour sélectionner des attributs d’enrichissement pour chaque audience externe
 
 Si vous souhaitez activer des audiences externes vers vos destinations sans exporter d’attribut, activez le bouton (bascule) **[!UICONTROL Exclude enrichment attributes]** . Cette option exporte les profils des audiences externes, mais aucun de leurs attributs correspondants n’est envoyé à votre destination.
 
-![&#x200B; Image de l’interface utilisateur affichant le bouton (bascule) Exclure les attributs d’enrichissement &#x200B;](../assets/ui/activate-batch-profile-destinations/exclude-enrichment-attributes.png).
+![ Image de l’interface utilisateur affichant le bouton (bascule) Exclure les attributs d’enrichissement ](../assets/ui/activate-batch-profile-destinations/exclude-enrichment-attributes.png).
 
 Sélectionnez **[!UICONTROL Next]** pour passer à l’étape [Révision](#review).
 
 ## Réviser {#review}
 
 >[!NOTE]
-> 
+>
 >Si des libellés d’utilisation des données ont été appliqués à certains champs d’un jeu de données (plutôt qu’à l’ensemble du jeu), l’application de ces libellés au niveau du champ sur l’activation se fait dans les conditions suivantes :
 >
 >* Les champs sont utilisés dans la définition de l’audience.
@@ -662,7 +662,7 @@ Sur la page **[!UICONTROL Review]**, vous pouvez voir un résumé de votre séle
 >title="Affichage des politiques de consentement applicables"
 >abstract="Si votre organisation a acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL View applicable consent policies]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l’activation qui en résulte. Ce contrôle est désactivé si votre entreprise n&#39;a pas accès aux SKU mentionnés ci-dessus."
 
-Si votre organisation a acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL View applicable consent policies]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l’activation qui en résulte. Pour plus d’informations, consultez [&#x200B; Évaluation des politiques de consentement &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
+Si votre organisation a acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL View applicable consent policies]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l’activation qui en résulte. Pour plus d’informations, consultez [ Évaluation des politiques de consentement ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
 
 ### Vérifications des politiques d’utilisation des données {#data-usage-policy-checks}
 

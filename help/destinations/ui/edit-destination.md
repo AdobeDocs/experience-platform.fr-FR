@@ -3,7 +3,7 @@ title: Modifier les destinations
 type: Tutorial
 description: Découvrez comment modifier et mettre à jour les comptes de destinations existants dans l’interface utilisateur de Adobe Experience Platform
 exl-id: f3298836-668b-43fb-b4f3-85a650766f05
-source-git-commit: f91551c460c7d6fd4f98111210f29cf16ec5b565
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 5%
@@ -28,7 +28,7 @@ Pour modifier différents composants d’une connexion de destination existante 
 
 1. Accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**.
 2. Sélectionnez la destination que vous souhaitez modifier.
-3. Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande ![Modifier la destination &#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;pour modifier les connexions de destination existantes.
+3. Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande ![Modifier la destination ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**pour modifier les connexions de destination existantes.
 4. Dans la fenêtre modale, modifiez tous les paramètres souhaités. Sélectionnez **[!UICONTROL Save]** lorsque vous avez terminé.
 
 Dans la fenêtre Modifier la destination , vous pouvez mettre à jour les paramètres que vous avez configurés lors de la connexion initiale à la destination. Ces paramètres sont différents en fonction de la plateforme de destination que vous mettez à jour.
@@ -41,7 +41,7 @@ Vous trouverez ci-dessous quelques exemples de paramètres que vous pouvez mettr
 
 <div style="display: flex; gap: 12px; justify-content: flex-start; align-items: flex-start;">
   <img class="modal-image" src="../assets/ui/edit-destinations/edit-amazon-s3-connection.png" alt="Écran de modification de la destination pour la destination Amazon S3." style="max-width: 200px; height: auto; border: 1px solid #ccc;">
-  <img class="modal-image" src="../assets/ui/edit-destinations/edit-eventhubs-connection.png" alt="Écran de destination de modification pour la destination Azure EventHubs." style="max-width: 200px; height: auto; border: 1px solid #ccc;">
+  <img class="modal-image" src="../assets/ui/edit-destinations/edit-eventhubs-connection.png" alt="Écran de destination Modifier pour la destination Azure EventHubs." style="max-width: 200px; height: auto; border: 1px solid #ccc;">
   <img class="modal-image" src="../assets/ui/edit-destinations/edit-google-ads-connection.png" alt="Écran de destination Modifier pour la destination Google Ads ." style="max-width: 200px; height: auto; border: 1px solid #ccc;">
 </div>
 
@@ -49,7 +49,7 @@ Vous trouverez ci-dessous quelques exemples de paramètres que vous pouvez mettr
 >
 >Vos paramètres de connexion de destination sont maintenant mis à jour.
 
-## Autres options de modification
+## Autres options de modification {#other-editing-options}
 
 À l’aide de l’interface utilisateur d’Experience Platform ou de l’API Flow Service, vous pouvez modifier diverses configurations de destination, comme indiqué dans les liens ci-dessous :
 
@@ -59,7 +59,7 @@ Vous trouverez ci-dessous quelques exemples de paramètres que vous pouvez mettr
 | [Modifier les comptes](/help/destinations/ui/update-accounts.md) | [Modifier les composants de connexion de base (paramètres d’authentification et autres composants)](/help/destinations/api/edit-destination.md#patch-base-connection) |
 | [Modifier les flux de données d’activation](/help/destinations/ui/edit-activation.md) | [Mettre à jour les flux de données de destination](/help/destinations/api/update-destination-dataflows.md) |
 
-## Étapes suivantes
+## Étapes suivantes {#next-steps}
 
 Ce tutoriel vous a permis d’utiliser l’espace de travail **[!UICONTROL destinations]** pour mettre à jour les connexions de destination existantes.
 

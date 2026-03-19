@@ -2,10 +2,10 @@
 description: Cette page illustre comment l’appel API est utilisé pour récupérer un modèle d’audience à partir d’Adobe Experience Platform Destination SDK.
 title: Récupération d’un modèle d’audience
 exl-id: 44f2d571-49c5-4112-b3ee-bc839f2b0874
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '421'
-ht-degree: 96%
+source-wordcount: '419'
+ht-degree: 88%
 
 ---
 
@@ -25,7 +25,7 @@ Pour obtenir une description détaillée des fonctionnalités configurables avec
 
 ## Prise en main des opérations de l’API des modèles d’audience {#get-started}
 
-Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
+Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
 
 ## Récupération d’un modèle d’audience {#retrieve}
 
@@ -197,6 +197,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 | Paramètre | Description |
 | -------- | ----------- |
 | `{INSTANCE_ID}` | Identifiant du modèle d’audience à récupérer. |
+
+{style="table-layout:auto"}
 
 +++
 

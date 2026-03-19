@@ -3,10 +3,10 @@ keywords: Marketo;marketo;extension Marketo;extension marketo
 title: Extension Marketo
 description: L’extension Marketo est une destination de messagerie dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 3841eb19-a17e-4c28-a101-7332d178af34
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 76%
+source-wordcount: '438'
+ht-degree: 66%
 
 ---
 
@@ -18,23 +18,23 @@ Le puissant logiciel d&#39;automatisation du marketing d&#39;[!DNL Marketo] aide
 
 [!DNL Marketo] est une extension d’e-mail dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la [page de l’extension dans Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.106250.bounteous-extension-for-adobe-launch-and-marketo.html).
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension Marketo](../../assets/catalog/email/marketo/catalog.png)
 
-## Conditions préalables  {#prerequisites}
+## Conditions préalables {#prerequisites}
 
 Cette extension est disponible dans le catalogue [!DNL Destinations] pour tous les clients qui ont acheté Experience Platform.
 
-Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Experience Platform. Les balises sont proposées aux clients Adobe Experience Cloud en tant que fonctionnalité à valeur ajoutée incluse. Contactez l’administrateur ou l’administratrice de votre organisation pour accéder aux balises et demandez-lui de vous accorder l’autorisation **[!UICONTROL manage_properties]** afin que vous puissiez installer les extensions.
+Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Experience Platform. Les balises sont proposées aux clients Adobe Experience Cloud en tant que fonctionnalité à valeur ajoutée incluse. Contactez l’administrateur ou l’administratrice de votre organisation pour accéder aux balises et demandez-lui de vous accorder l’autorisation **[!UICONTROL manage_properties]** afin que vous puissiez installer des extensions.
 
 ## Installation l’extension {#install-extension}
 
 Pour installer l’extension [!DNL Marketo], procédez comme suit :
 
-1. Dans l’interface [Experience Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
+1. Dans l’interface d’[Experience Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 2. Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
-3. Cliquez sur la destination pour la mettre en surbrillance, puis sélectionnez **[!UICONTROL Configurer]** dans le rail droit. Si la commande **[!UICONTROL Configurer]** est grisée, vous ne disposez pas de l’autorisation **[!UICONTROL manage_properties]**. Voir les [Conditions préalables](#prerequisites).
+3. Sélectionnez la destination, puis sélectionnez **[!UICONTROL Configure]** dans le rail de droite. Si le contrôle **[!UICONTROL Configure]** est grisé, vous ne disposez pas de l’autorisation **[!UICONTROL manage_properties]**. Voir les [Conditions préalables](#prerequisites).
 4. Sélectionnez la propriété dans laquelle vous souhaitez installer l’extension. Vous pouvez aussi créer une propriété. Une propriété est un ensemble de règles, d’éléments de données, d’extensions configurées, d’environnements et de bibliothèques. Pour en savoir plus sur les propriétés, consultez la [section de la page propriétés](../../../tags/ui/administration/companies-and-properties.md#properties-page) de la documentation sur les balises.
 5. Le workflow vous guide tout au long des étapes nécessaires pour terminer l’installation.
 
@@ -54,6 +54,6 @@ Vous pouvez configurer, mettre à niveau et supprimer des extensions dans l’in
 
 >[!TIP]
 >
->Si l’extension est déjà installée sur l’une de vos propriétés, l’interface utilisateur d’Experience Platform continue d’afficher **[!UICONTROL Installer]** pour l’extension. Démarrez le workflow d’installation comme décrit dans [Installation de l’extension](#install-extension) pour configurer ou supprimer votre extension.
+>Si l’extension est déjà installée sur l’une de vos propriétés, l’interface utilisateur d’Experience Platform continue d’afficher **[!UICONTROL Install]** pour cette extension. Démarrez le workflow d’installation comme décrit dans [Installation de l’extension](#install-extension) pour configurer ou supprimer votre extension.
 
 Pour mettre à niveau votre extension, consultez le guide sur le [processus de mise à niveau d’extension](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) dans la documentation sur les balises.

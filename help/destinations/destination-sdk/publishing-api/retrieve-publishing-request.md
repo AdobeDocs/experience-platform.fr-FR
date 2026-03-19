@@ -2,10 +2,10 @@
 description: Cette page illustre comment l’appel API est utilisé pour récupérer des détails sur une requête de publication de destination avec Adobe Experience Platform Destination SDK.
 title: Récupération d’une requête de publication de destination
 exl-id: fceef12d-a52c-4259-a91e-7af88b132800
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 98%
+source-wordcount: '835'
+ht-degree: 94%
 
 ---
 
@@ -32,7 +32,7 @@ Utilisez le point d’entrée de lʼAPI de publication des destinations pour env
 
 ## Prise en main des opérations dʼAPI de publication de destinations {#get-started}
 
-Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
+Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
 
 ## Liste des requêtes de publication de destination {#retrieve-list}
 
@@ -181,6 +181,6 @@ Si vous avez transmis un `DESTINATION_ID` dans l’appel API, la réponse renvoi
 
 >[!ENDTABS]
 
-## Gestion des erreurs d’API
+## Gestion des erreurs d’API {#error-handling}
 
 Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes d’état API](../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.

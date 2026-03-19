@@ -2,9 +2,9 @@
 title: Connexion Google Ads
 description: Google Ads, appelé auparavant Google AdWords, est un service de publicité en ligne qui permet aux entreprises de faire de la publicité avec paiement par clic sur des recherches textuelles, des affichages graphiques, des vidéos YouTube et des affichages mobiles in-app.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1060'
 ht-degree: 64%
 
 ---
@@ -61,7 +61,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -80,7 +80,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 ## Conditions préalables {#prerequisites}
 
-### Compte [!DNL Google Ads] existant
+### Compte [!DNL Google Ads] existant {#existing-google-ads-account}
 
 >[!IMPORTANT]
 >
@@ -103,7 +103,7 @@ Avant de créer la destination [!DNL Google Ads] dans Experience Platform, vous 
 ## Se connecter à la destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
@@ -126,12 +126,12 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
-## Données exportées
+## Données exportées {#exported-data}
 
 Pour vérifier si les données ont bien été exportées vers la destination [!DNL Google Ads], vérifiez votre compte [!DNL Google Ads]. Si l’activation a réussi, les audiences sont renseignées dans votre compte.
 
@@ -145,6 +145,6 @@ Lors de la configuration de cette destination, vous risquez de recevoir l’erre
 
 Cette erreur se produit lorsque les comptes clients ne respectent pas les [conditions préalables](#prerequisites) ou lorsque les clientes et clients tentent de configurer la destination sans un compte [!DNL Google Ads] existant.
 
-[!DNL Google] a abandonné les nouvelles intégrations de cookies [!DNL Google Ads] avec des fournisseurs tiers. Pour effectuer les étapes de [place sur la liste autorisée &#x200B;](#allow-listing), vous devez disposer d&#39;une intégration existante avec [!DNL Google Ads].
+[!DNL Google] a abandonné les nouvelles intégrations de cookies [!DNL Google Ads] avec des fournisseurs tiers. Pour effectuer les étapes de [place sur la liste autorisée ](#allow-listing), vous devez disposer d&#39;une intégration existante avec [!DNL Google Ads].
 
 L’approche recommandée pour l’utilisation de [!DNL Google Ads] est de configurer une intégration [[!DNL Google Customer Match]](google-customer-match.md).

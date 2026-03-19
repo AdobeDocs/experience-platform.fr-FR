@@ -1,8 +1,8 @@
 ---
-description: Découvrez comment configurer les spécifications de serveur de destination dans Adobe Experience Platform Destination SDK via le point d’entrée &grave;/authoring/destination-servers&grave;.
+description: Découvrez comment configurer les spécifications de serveur de destination dans Adobe Experience Platform Destination SDK via le point d’entrée `/authoring/destination-servers`.
 title: Spécifications de serveur pour les destinations créées avec Destination SDK
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: 455886806d46a227eddb5ba060c15e1a00e13edf
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '2775'
 ht-degree: 88%
@@ -57,7 +57,7 @@ Les paramètres du serveur de destination comportent deux champs configurables. 
 
 {style="table-layout:auto"}
 
-### Quand préférer les champs codés en dur aux champs modélisés ?
+### Quand préférer les champs codés en dur aux champs modélisés ? {#when-to-use-hard-coded-vs-templatized}
 
 Les champs codés en dur et modélisés ont chacun leur propre utilité dans Destination SDK, selon le type d’intégration que vous créez.
 
@@ -225,7 +225,7 @@ L’exemple ci-dessous montre un modèle de configuration de serveur de destinat
 | `fileBasedSFTPDestination.rootDirectory.value` | Chaîne | Chemin d’accès au répertoire qui hébergera les fichiers exportés. Il peut s’agir d’un champ modélisé qui lit la valeur des [champs de données client](../destination-configuration/customer-data-fields.md) renseignés par l’utilisateur (comme illustré dans l’exemple ci-dessus) ou une valeur codée en dur, telle que `"value":"Storage/MyDirectory"` |
 | `fileBasedSFTPDestination.hostName.templatingStrategy` | Chaîne | *Obligatoire*. Définissez cette valeur en fonction du type de valeur utilisé dans le champ `hostName.value`.<ul><li>Si vous souhaitez que vos utilisateurs saisissent leur propre nom d’hôte dans l’interface utilisateur d’Experience Platform, définissez cette valeur sur `PEBBLE_V1`. Dans ce cas, vous devez modéliser le champ `hostName.value` pour lire une valeur fournie par l’utilisateur à partir des [champs de données client](../destination-configuration/customer-data-fields.md) renseigné. Ce cas d’utilisation est illustré dans l’exemple ci-dessus.</li><li>Si vous utilisez un nom d’hôte codé en dur pour votre intégration, tel que `"hostName.value":"my.hostname.com"`, définissez cette valeur sur `NONE`.</li></ul> |
 | `fileBasedSFTPDestination.hostName.value` | Chaîne | Nom d’hôte de votre serveur SFTP. Il peut s’agir d’un champ modélisé qui lit la valeur des [champs de données client](../destination-configuration/customer-data-fields.md) renseignés par l’utilisateur (comme illustré dans l’exemple ci-dessus) ou une valeur codée en dur, telle que `"hostName.value":"my.hostname.com"`. |
-| `port` | Nombre entier | Port du serveur de fichiers SFTP. |
+| `port` | Entier | Port du serveur de fichiers SFTP. |
 | `encryptionMode` | Chaîne | Indique s’il faut utiliser le chiffrement de fichier. Valeurs prises en charge : <ul><li>PGP</li><li>Aucun</li></ul> |
 
 {style="table-layout:auto"}

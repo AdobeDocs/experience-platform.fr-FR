@@ -3,9 +3,9 @@ title: Exporter des jeux de données vers des destinations d’espace de stockag
 type: Tutorial
 description: Découvrez comment exporter des jeux de données d’Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: d252fc30d93fa4440c6ef47146830d0423e1839a
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '3004'
+source-wordcount: '3003'
 ht-degree: 23%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 23%
 >
 >Pour l’un de ces flux de données, vous devez mettre à jour manuellement la date de fin du flux de données avant la date de fin, sinon vos exportations s’arrêteront à cette date. Utilisez l’interface utilisateur d’Experience Platform pour afficher les flux de données qui seront définis pour s’arrêter le 1er septembre 2025.
 >
->Pour plus d’informations sur la modification de la date de fin d’un flux de données d’exportation de jeux de données[&#x200B; consultez la section &#x200B;](#scheduling)planification.
+>Pour plus d’informations sur la modification de la date de fin d’un flux de données d’exportation de jeux de données[ consultez la section ](#scheduling)planification.
 
 Cet article explique le processus requis pour exporter des [jeux de données](/help/catalog/datasets/overview.md) de Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix, comme des [!DNL Amazon S3], des emplacements SFTP ou des [!DNL Google Cloud Storage] à l’aide de l’interface utilisateur d’Experience Platform.
 
@@ -50,16 +50,16 @@ Utilisez le tableau ci-dessous pour comprendre quels types de jeux de données v
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Jeux de données de profil et d’événement d’expérience créés dans l’interface utilisateur d’Experience Platform après l’ingestion ou la collecte de données par le biais de sources, de Web SDK, de Mobile SDK, du connecteur de données Analytics et d’Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=fr#profile-attribute-datasets">Jeu de données d’instantanés de profil généré par le système</a>.</li></td>
+    <td><ul><li>Jeux de données de profil et d’événement d’expérience créés dans l’interface utilisateur d’Experience Platform après l’ingestion ou la collecte de données par le biais de sources, de Web SDK, de Mobile SDK, du connecteur de données Analytics et d’Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">Jeu de données d’instantanés de profil généré par le système</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>Reportez-vous à la documentation de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=fr#datasets"> Adobe Journey Optimizer</a> .</td>
+    <td>Reportez-vous à la documentation de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> .</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Reportez-vous à la documentation de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=fr#datasets"> Adobe Journey Optimizer</a> .</td>
+    <td>Reportez-vous à la documentation de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> .</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ Utilisez le tableau ci-dessous pour comprendre quels types de jeux de données v
 
 Regardez la vidéo ci-dessous pour une explication de bout en bout du workflow décrit sur cette page, des avantages de l’utilisation de la fonctionnalité d’exportation du jeu de données et de certains cas d’utilisation suggérés.
 
->[!VIDEO](https://video.tv.adobe.com/v/3448820?captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## Destinations prises en charge {#supported-destinations}
 
@@ -208,7 +208,7 @@ L’option **[!UICONTROL Export incremental files]** est sélectionnée par déf
 4. Sélectionnez **[!UICONTROL Save]** pour enregistrer le planning et passer à l’étape **[!UICONTROL Review]**.
 
 >[!NOTE]
-> 
+>
 >Pour les exportations de jeu de données, les noms de fichiers ont un paramètre prédéfini, format par défaut, qui ne peut être modifié. Voir la section [Vérification de l’exportation réussie d’un jeu de données](#verify) pour plus d’informations et d’exemples de fichiers exportés.
 
 ## Modifier le chemin du dossier {#edit-folder-path}
@@ -254,11 +254,11 @@ Sur la page **[!UICONTROL Review]**, vous pouvez voir un résumé de votre séle
 
 Lors de l’exportation de jeux de données, Experience Platform crée un ou plusieurs fichiers `.json` ou `.parquet` dans l’emplacement de stockage que vous avez fourni. Attendez-vous à ce que de nouveaux fichiers soient déposés dans votre emplacement de stockage en fonction du planning d’exportation que vous avez fourni.
 
-Experience Platform crée une structure de dossiers dans l’emplacement de stockage que vous avez spécifié, où il dépose les fichiers de jeu de données exportés. Le modèle d’exportation de dossier par défaut est illustré ci-dessous, mais vous pouvez [&#x200B; personnaliser la structure de dossiers à l’aide de vos macros préférées](#edit-folder-path).
+Experience Platform crée une structure de dossiers dans l’emplacement de stockage que vous avez spécifié, où il dépose les fichiers de jeu de données exportés. Le modèle d’exportation de dossier par défaut est illustré ci-dessous, mais vous pouvez [ personnaliser la structure de dossiers à l’aide de vos macros préférées](#edit-folder-path).
 
 >[!TIP]
-> 
->Le premier niveau de cette structure de dossiers, `folder-name-you-provided`, représente le **[!UICONTROL Folder path]** que vous avez indiqué lorsque vous [connecté à la destination](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) pour exporter des jeux de données.
+>
+>Le premier niveau de cette structure de dossiers, `folder-name-you-provided`, représente le **[!UICONTROL Folder path]** que vous avez indiqué lorsque vous [connecté à la destination](/help/destinations/ui/connect-destination.md#set-up-connection-parameters) pour exporter des jeux de données.
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
@@ -290,7 +290,7 @@ Pour supprimer des jeux de données d’un flux de données existant, procédez 
    ![La vue de navigation de destination avec une connexion de destination affichée et le reste s’est estompée.](../assets/ui/export-datasets/browse-dataset-connections.png)
 
    >[!TIP]
-   > 
+   >
    >Sélectionnez l’icône filtre ![Icône Filtre](/help/images/icons/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de flux de données associés à la destination sélectionnée.
 
 2. Dans la colonne **[!UICONTROL Activation data]** , sélectionnez le contrôle des jeux de données pour afficher tous les jeux de données mappés à ce flux de données d’exportation.
@@ -357,7 +357,7 @@ Le fichier manifeste est au format .json.
 Aucune API n’est disponible pour le fichier manifeste, mais elle inclut une liste de fichiers comprenant l’exportation.
 +++
 
-**Pouvons-nous ajouter des détails supplémentaires au fichier manifeste (c.-à-d. le nombre d’enregistrements) ? Si oui, comment ?**
+**Pouvons-nous ajouter des détails supplémentaires au fichier manifeste (c’est-à-dire au nombre d’enregistrements) ? Si oui, comment ?**
 
 +++Réponse
 Il n&#39;est pas possible d&#39;ajouter des informations supplémentaires au fichier manifeste. Le nombre d’enregistrements est disponible via l’entité `flowRun` (interrogeable via l’API). En savoir plus sur la surveillance des destinations.

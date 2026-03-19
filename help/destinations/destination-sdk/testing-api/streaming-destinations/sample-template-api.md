@@ -2,10 +2,10 @@
 description: Découvrez comment utiliser l’API de test de destination pour générer un modèle de transformation de message de test pour la destination.
 title: Génération d’un modèle type de transformation des messages
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 96%
+source-wordcount: '375'
+ht-degree: 86%
 
 ---
 
@@ -20,7 +20,7 @@ Cette page répertorie et décrit toutes les opérations de l’API que vous pou
 
 ## Prise en main des opérations de l’API des modèles type {#get-started}
 
-Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
+Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
 
 ## Obtention d’un modèle type {#generate-sample-template}
 
@@ -39,6 +39,8 @@ GET authoring/testing/template/sample/{DESTINATION_ID}
 | Paramètre | Description |
 | -------- | ----------- |
 | `{DESTINATION_ID}` | Identifiant de la configuration de destination pour laquelle vous générez un modèle de transformation de message. |
+
+{style="table-layout:auto"}
 
 **Requête**
 

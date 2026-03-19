@@ -2,7 +2,7 @@
 description: Découvrez comment configurer les identités cibles prises en charge pour les destinations créées avec Destination SDK.
 title: Configuration de l’espace de noms d’identité
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '918'
 ht-degree: 56%
@@ -85,17 +85,18 @@ Pendant la définition des identités cibles prises en charge par la destination
    }
 ```
 
-Vous devez indiquer quelles identités [!DNL Experience Platform] les clients peuvent exporter vers votre destination. Voici quelques exemples : [!DNL Experience Cloud ID], e-mail haché, identifiant de l’appareil ([!DNL IDFA], [!DNL GAID]). Ces valeurs sont des espaces de noms d’identité [!DNL Experience Platform] que la clientèle peut mapper aux espaces de noms d’identité de la destination.
+Vous devez indiquer quelles identités [!DNL Experience Platform] les clients peuvent exporter vers votre destination. Voici quelques exemples : [!DNL Experience Cloud ID], e-mail haché, identifiant de l’appareil ([!DNL IDFA], [!DNL GAID]). Ces valeurs sont les suivantes : espaces de noms d’identité [!DNL Experience Platform] que les clientes et clients peuvent mapper aux espaces de noms d’identité de votre destination.
 
-Une correspondance 1 à 1 entre [!DNL Experience Platform] et votre destination n’est pas obligatoire dans les espaces de noms d’identités. Par exemple, les clients peuvent mapper un espace de noms [!DNL Experience Platform] [!DNL IDFA] à un espace de noms [!DNL IDFA] de votre destination ou mapper le même espace de noms [!DNL Experience Platform] [!DNL IDFA] à un espace de noms [!DNL Customer ID] de votre destination.
+Les espaces de noms d’identité ne nécessitent pas de correspondance 1-1 entre [!DNL Experience Platform] et votre destination.
+Par exemple, les clients peuvent mapper un espace de noms [!DNL Experience Platform] [!DNL IDFA] à un espace de noms [!DNL IDFA] de votre destination ou mapper le même espace de noms [!DNL Experience Platform] [!DNL IDFA] à un espace de noms [!DNL Customer ID] de votre destination.
 
 Apprenez-en plus sur les identités dans la [présentation des espaces de noms d’identité](../../../../identity-service/features/namespaces.md).
 
-## Considérations relatives au mappage
+## Considérations relatives au mappage {#mapping-considerations}
 
 Si la clientèle sélectionne un espace de noms d’identité source, mais pas de mapping de ciblage, Experience Platform le renseigne automatiquement avec un attribut du même nom.
 
-## Configuration du hachage facultatif des champs sources
+## Configuration du hachage facultatif des champs sources {#configure-optional-hashing}
 
 Les clients Experience Platform peuvent choisir d’ingérer des données dans Experience Platform au format haché ou en texte brut. Si votre plateforme de destination accepte les données hachées et non hachées, vous pouvez permettre à la clientèle de choisir si Experience Platform doit hacher les valeurs des champs sources au moment de l’exportation vers la destination.
 
@@ -121,7 +122,7 @@ Cochez cette option lorsque vous utilisez des champs sources non hachés afin qu
 
 Quand vous mappez des attributs source non hachés avec des attributs cibles qui sont censés être hachés (par exemple, `email_lc_sha256` ou `phone_sha256`), cochez l’option **Apply transformation** (Appliquer la transformation) pour qu’Adobe Experience Platform hache automatiquement les attributs source au moment de l’activation.
 
-## Configuration du hachage obligatoire des champs sources
+## Configuration du hachage obligatoire des champs sources {#configure-mandatory-hashing}
 
 Si la destination accepte uniquement les données hachées, vous pouvez configurer les attributs exportés pour qu’ils soient automatiquement hachés par Experience Platform. La configuration ci-dessous vérifie automatiquement l’option **Apply transformation** (Appliquer la transformation) quand les identités `Email` et `Phone` sont mappées.
 

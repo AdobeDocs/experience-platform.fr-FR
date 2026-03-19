@@ -3,16 +3,16 @@ keywords: balises airship;destination airship
 title: Connexion Balises Airship
 description: Transmettez facilement les données d’audience Adobe à Airship sous la forme de balises d’audience pour le ciblage dans Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1070'
 ht-degree: 25%
 
 ---
 
 # Connexion [!DNL Airship Tags] {#airship-tags-destination}
 
-## Vue d’ensemble
+## Vue d’ensemble {#overview}
 
 [!DNL Airship] est la principale plateforme d’engagement des clients. Elle vous permet de fournir à vos utilisateurs des messages omnicanal pertinents et personnalisés à chaque étape du cycle de vie du client.
 
@@ -23,9 +23,9 @@ Pour en savoir plus sur [!DNL Airship], consultez les [documents relatifs aux di
 
 >[!TIP]
 >
->Ce connecteur de destination et cette page de documentation sont créés et gérés par l’équipe [!DNL Airship]. Pour toute demande ou information, contactez directement l&#39;équipe d&#39;assistance technique [support.airship.com](https://support.airship.com/).
+>Ce connecteur de destination et cette page de documentation sont créés et gérés par l’équipe [!DNL Airship]. Pour toute demande ou information, contactez directement le service d&#39;assistance [airship.com](https://support.airship.com/).
 
-## Conditions préalables
+## Conditions préalables {#prerequisites}
 
 Avant d’envoyer vos audiences Adobe Experience Platform à [!DNL Airship], vous devez :
 
@@ -33,7 +33,7 @@ Avant d’envoyer vos audiences Adobe Experience Platform à [!DNL Airship], vou
 * Générez un jeton porteur pour l’authentification.
 
 >[!TIP]
-> 
+>
 >Créez un compte [!DNL Airship] via [ce lien d’inscription](https://go.airship.eu/accounts/register/plan/starter/) si ce n’est pas déjà fait.
 
 ## Audiences prises en charge {#supported-audiences}
@@ -55,7 +55,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -72,7 +72,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 {style="table-layout:auto"}
 
-## Groupes de balises
+## Groupes de balises {#tag-groups}
 
 Le concept d’audiences dans Adobe Experience Platform est similaire à [Balises](https://docs.airship.com/guides/audience/tags/) dans Airship, avec de légères différences d’implémentation. Cette intégration mappe le statut de l’[appartenance d’un utilisateur à un segment Experience Platform](../../../xdm/field-groups/profile/segmentation.md) à la présence ou à la non-présence d’une balise [!DNL Airship]. Par exemple, dans une audience Experience Platform où la `xdm:status` est remplacée par `realized`, la balise est ajoutée au canal [!DNL Airship] ou à l’utilisateur nommé auquel ce profil est mappé. Si la `xdm:status` devient `exited`, la balise est supprimée.
 
@@ -84,7 +84,7 @@ Pour activer cette intégration, créez un *groupe de balises* dans [!DNL Airshi
 
 Voir [Gérer les groupes de balises](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups) pour obtenir des instructions sur la création du groupe de balises.
 
-## Générer un jeton du porteur
+## Générer un jeton du porteur {#generate-bearer-token}
 
 Accédez à la **[!UICONTROL Settings]** « **[!UICONTROL APIs & Integrations]** » dans le [tableau de bord Airship](https://go.airship.com) et sélectionnez **[!UICONTROL Tokens]** dans le menu de gauche.
 
@@ -94,15 +94,15 @@ Attribuez un nom convivial à votre jeton, par exemple « Destination Adobe Tags
 
 Cliquez sur **[!UICONTROL Create Token]** et enregistrez les détails comme confidentiels.
 
-## Cas d’utilisation
+## Cas d’utilisation {#use-cases}
 
 Pour mieux comprendre quand et comment utiliser la destination [!DNL Airship Tags], consultez les exemples de cas d’utilisation ci-dessous que la clientèle de Adobe Experience Platform peut résoudre.
 
-### Cas d’utilisation #1
+### Cas d’utilisation #1 {#use-case-1}
 
 Les détaillants ou les plateformes de divertissement peuvent créer des profils d’utilisateurs sur leurs clients fidèles et transmettre ces audiences dans des [!DNL Airship] pour le ciblage des messages sur les campagnes mobiles.
 
-### Cas d’utilisation #2
+### Cas d’utilisation #2 {#use-case-2}
 
 Déclenchez des messages un-à-un en temps réel lorsque les utilisateurs appartiennent ou non à des audiences spécifiques dans Adobe Experience Platform.
 
@@ -111,7 +111,7 @@ Par exemple, un retailer configure une audience spécifique à la marque Jeans d
 ## Se connecter à la destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
@@ -139,7 +139,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.

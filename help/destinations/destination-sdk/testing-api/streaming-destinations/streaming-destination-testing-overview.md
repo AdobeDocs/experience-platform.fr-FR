@@ -2,7 +2,7 @@
 description: Découvrez comment utiliser l’API de test de destination pour tester votre configuration de destination de diffusion en streaming avant de la publier.
 title: Vue d’ensemble de l’API de test de destination en streaming
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 100%
@@ -233,6 +233,6 @@ Notez que le contenu du paramètre `results.httpCalls` est spécifique à votre 
 
 Pour les descriptions des paramètres de requête et de réponse, consultez les [opérations de l’API de test de destination](../../testing-api/streaming-destinations/destination-testing-api.md).
 
-## Étapes suivantes
+## Étapes suivantes {#next-steps}
 
 Après avoir testé la destination et confirmé qu’elle est correctement configurée, utilisez l’[API de publication de destination](../../publishing-api/create-publishing-request.md) pour envoyer votre configuration à Adobe pour révision.

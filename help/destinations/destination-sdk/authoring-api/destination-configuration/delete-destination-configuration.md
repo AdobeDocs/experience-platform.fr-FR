@@ -2,10 +2,10 @@
 description: Cette page illustre comment l’appel API est utilisé pour supprimer une configuration de destination existante avec Adobe Experience Platform Destination SDK.
 title: Suppression d’une configuration de destination
 exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
-source-git-commit: fda542e62c448788099d63951277278a146fdfc8
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 85%
+source-wordcount: '277'
+ht-degree: 72%
 
 ---
 
@@ -19,7 +19,7 @@ Cette page illustre la requête d’API et la payload que vous pouvez utiliser p
 
 ## Prise en main des opérations dʼAPI de configuration de destinations {#get-started}
 
-Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
+Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
 
 ## Suppression d’une configuration de destination {#delete}
 
@@ -41,6 +41,8 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 | --------- | ----------- |
 | `{INSTANCE_ID}` | Valeur `ID` de la configuration de destination à supprimer. |
 
+{style="table-layout:auto"}
+
 +++Requête
 
 ```shell
@@ -60,7 +62,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec une réponse HTTP vide.
 
 Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes d’état API](../../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
-## Étapes suivantes
+## Étapes suivantes {#next-steps}
 
 Vous êtes arrivé au bout de ce document. À présent, vous savez comment supprimer une configuration de destination existante avec le point d’entrée `/authoring/destinations` Destination SDK de l’API.
 

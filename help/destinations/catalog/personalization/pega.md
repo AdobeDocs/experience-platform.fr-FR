@@ -2,9 +2,9 @@
 title: (V1) Connexion à l’audience en temps réel Pega CDH
 description: Utilisez la destination Audience en temps réel de Pega Customer Decision Hub dans Adobe Experience Platform pour envoyer des attributs de profil et des données d'appartenance à l'audience au Pega Customer Decision Hub pour la prise de décision la plus appropriée.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1214'
+source-wordcount: '1213'
 ht-degree: 13%
 
 ---
@@ -23,17 +23,17 @@ L’appartenance à une audience de profil depuis Adobe Experience Platform, lor
 
 >[!IMPORTANT]
 >
->Ce connecteur de destination et cette page de documentation sont créés et gérés par Pegasystems. Pour toute demande ou information, veuillez contacter Pega directement [ici](mailto:support@pega.com).
+>Ce connecteur de destination et cette page de documentation sont créés et gérés par Pegasystems. Pour toute demande ou information, contactez Pega directement [ici](mailto:support@pega.com).
 
-## Cas d’utilisation
+## Cas d’utilisation {#use-cases}
 
 Pour mieux comprendre quand et comment utiliser la destination [!DNL Customer Decision Hub], consultez les exemples de cas d’utilisation ci-dessous que la clientèle de Adobe Experience Platform peut résoudre.
 
-### Télécommunications
+### Télécommunications {#telecommunications}
 
 Un spécialiste marketing souhaite tirer parti des informations issues de la meilleure action suivante basée sur un modèle de science des données, fournie par [!DNL Pega Customer Decision Hub] pour l’engagement du client. [!DNL Pega Customer Decision Hub] dépend fortement de l’intention du client, par exemple, « Interested_In_5G », « Interested_in_Unlimited_Dataplan » ou « Interest_in_iPhone_accessoires ».
 
-### Services financiers
+### Services financiers {#financial-services}
 
 Un spécialiste du marketing souhaite optimiser les offres pour les clients qui se sont inscrits ou désinscrits à des bulletins d’information sur un régime de retraite ou un régime de retraite. Les sociétés de services financiers peuvent ingérer plusieurs ID de client de leurs propres CRM dans Adobe Experience Platform, créer des audiences à partir de leurs propres données hors ligne et envoyer des profils qui entrent dans les audiences et en sortent pour [!DNL Pega Customer Decision Hub] la prise de décision de meilleure action (NBA) dans les canaux sortants.
 
@@ -41,7 +41,7 @@ Un spécialiste du marketing souhaite optimiser les offres pour les clients qui 
 
 Avant de pouvoir utiliser cette destination pour exporter des données en dehors de Adobe Experience Platform, veillez à remplir les conditions préalables suivantes en [!DNL Pega Customer Decision Hub] :
 
-* Configurez le composant d’intégration Profil Adobe Experience Platform et Appartenance à une audience [&#128279;](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html) dans votre instance [!DNL Pega Customer Decision Hub].
+* Configurez le composant d’intégration Profil Adobe Experience Platform et Appartenance à une audience [](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html) dans votre instance [!DNL Pega Customer Decision Hub].
 * Configurez OAuth 2.0 [Enregistrement du client à l’aide des informations d’identification client](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html) type d’octroi dans votre instance [!DNL Pega Customer Decision Hub].
 * Configurez le [flux de données d’exécution en temps réel](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html) pour le flux de données d’appartenance à une audience Adobe dans votre instance de [!DNL Pega Customer Decision Hub].
 
@@ -74,7 +74,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -122,11 +122,11 @@ Pour configurer les détails de la destination, renseignez les champs requis et 
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
-Consultez [&#x200B; Activer les données d’audience vers des destinations d’exportation de profil de diffusion en continu &#x200B;](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Consultez [ Activer les données d’audience vers des destinations d’exportation de profil de diffusion en continu ](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Attributs de destination {#attributes}
 

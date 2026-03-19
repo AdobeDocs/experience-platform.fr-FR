@@ -1,12 +1,12 @@
 ---
-title: LISTE AUTORISÉE d’adresses IP pour les destinations de stockage dans le cloud basées sur des fichiers
+title: PLACE SUR LA LISTE AUTORISÉE d’adresse IP pour les destinations de stockage dans le cloud basées sur des fichiers
 type: Documentation
-description: Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre liste autorisée pour exporter en toute sécurité des données d’Experience Platform vers des destinations d’espace de stockage.
+description: Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre place sur la liste autorisée pour exporter en toute sécurité des données d’Experience Platform vers des destinations d’espace de stockage.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 4ae7ff58d02b46f1b213bd382d3e98b3f63819e8
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 5%
+source-wordcount: '288'
+ht-degree: 4%
 
 ---
 
@@ -21,13 +21,13 @@ ht-degree: 5%
 
 Les informations sur la plage d’adresses IP de cette page s’appliquent aux connecteurs de stockage dans le cloud basés sur des fichiers suivants du catalogue des destinations :
 
-* [[!UICONTROL Amazon S3]](./amazon-s3.md)
+* [[!UICONTROL Amazon S3]](./amazon-s3.md)
 * [[!UICONTROL Google Cloud Storage]](google-cloud-storage.md)
 * [SFTP](./sftp.md)
 
 >[!IMPORTANT]
 >
->Les plages d’adresses IP documentées sur cette page ne sont *pas* prises en charge pour les destinations d’espace de stockage dans le cloud basées sur des fichiers suivantes : [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2], [!UICONTROL Data Landing Zone] et serveurs SFTP hébergés sur Microsoft Azure.
+>Les plages d’adresses IP documentées sur cette page ne sont *pas* prises en charge pour les destinations de stockage dans le cloud basées sur des fichiers : [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2], [!UICONTROL Data Landing Zone] et serveurs SFTP hébergés sur Microsoft Azure.
 
 ## Vue d’ensemble {#overview}
 

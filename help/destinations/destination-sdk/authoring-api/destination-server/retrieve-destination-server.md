@@ -2,10 +2,10 @@
 description: Cette page illustre comment l’appel API est utilisé pour récupérer une configuration de serveur de destination avec Adobe Experience Platform Destination SDK.
 title: Récupération d’une configuration de serveur de destination
 exl-id: 1b375343-e793-4c91-856f-af66fe71822e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 96%
+source-wordcount: '465'
+ht-degree: 89%
 
 ---
 
@@ -26,7 +26,7 @@ Pour une description détaillée des fonctionnalités utilisées par les serveur
 
 ## Prise en main des opérations de l’API du serveur de destination {#get-started}
 
-Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
+Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
 
 ## Récupération d’une configuration de serveur de destination {#retrieve}
 
@@ -168,6 +168,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | Paramètre | Description |
 | -------- | ----------- |
 | `{INSTANCE_ID}` | Identifiant de la configuration de serveur de destination que vous souhaitez récupérer. |
+
+{style="table-layout:auto"}
 
 +++
 

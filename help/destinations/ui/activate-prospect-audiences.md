@@ -3,9 +3,9 @@ title: Activer les audiences de prospects vers des destinations
 type: Tutorial
 description: Découvrez comment activer les audiences de prospects vers les destinations
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '593'
 ht-degree: 24%
 
 ---
@@ -63,11 +63,15 @@ Suivez les instructions pour sélectionner une destination vers laquelle vous po
 
 ## Sélectionner les audiences de prospects {#select-prospect-audiences}
 
-Utilisez les cases à cocher situées à gauche des noms des audiences de prospects pour sélectionner les audiences que vous souhaitez exporter vers la destination, puis sélectionnez **[!UICONTROL Next]**. Notez que seules les audiences du prospect s&#39;affichent dans cette vue, et aucune autre audience ne s&#39;affiche.
+Utilisez les cases à cocher situées à gauche des noms des audiences de prospects pour sélectionner les audiences que vous souhaitez exporter vers la destination, puis sélectionnez **[!UICONTROL Next]**.
+
+>[!NOTE]
+>
+>Seules les audiences de prospects sont affichées dans cette vue, aucune autre audience n’est affichée.
 
 ![Workflow d’exportation des jeux de données présentant l’étape de sélection des audiences dans laquelle vous pouvez sélectionner les audiences de prospects à exporter.](/help/destinations/assets/ui/activate-prospect-audiences/select-prospect-audiences.png)
 
-## Planification et étapes suivantes
+## Planification et étapes suivantes {#scheduling-and-next-steps}
 
 Pour le reste du workflow d’activation afin d’exporter les audiences de prospects, consultez le tutoriel sur l’activation des données vers des destinations basées sur des fichiers. Continuez à partir de l’étape [planifier l’exportation de l’audience](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 

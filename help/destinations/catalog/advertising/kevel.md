@@ -3,9 +3,9 @@ title: Niveau de connexion
 description: Utilisez la destination de diffusion en continu Niveau pour activer les audiences directement dans la base de données utilisateur de niveau et les API de gestion des segments, et prendre en charge le ciblage en temps réel au moment de la décision.
 last-substantial-update: 2026-01-27T00:00:00Z
 exl-id: 53ce2864-6a3b-4859-b14d-a03c2ce18884
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1168'
 ht-degree: 8%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 8%
 La destination de diffusion en continu [!DNL Kevel] pour Adobe Experience Platform permet aux clients d’activer les audiences Adobe directement dans la base de données des utilisateurs d’[!DNL Kevel] et les API de gestion des segments afin de prendre en charge le ciblage en temps réel au moment de la décision de publicité.
 
 >[!IMPORTANT]
-> 
+>
 >Si vous avez des questions ou souhaitez demander une mise à jour concernant la destination [!DNL Kevel] ou sa documentation, envoyez un e-mail à l’équipe [!DNL Kevel] à l’adresse [support@kevel.com](mailto:support@kevel.com).
 
 ## Cas d’utilisation {#use-cases}
@@ -50,7 +50,7 @@ La destination [!DNL Kevel] prend en charge l’activation de toute identité qu
 
 {style="table-layout:auto"}
 
-### Prise en charge des espaces de noms d’identité personnalisés
+### Prise en charge des espaces de noms d’identité personnalisés {#custom-identity-namespaces}
 
 La destination [!DNL Kevel] **accepte également les espaces de noms personnalisés**, tels que définis dans votre implémentation Experience Platform.
 
@@ -60,7 +60,7 @@ Autrement dit :
 - Ces espaces de noms peuvent être affectés à des `kevel_user_key1`, des `kevel_user_key2` ou des `kevel_user_key3` de la même manière que les espaces de noms globaux.
 - [!DNL Kevel] génère **un enregistrement UserDB par instance de chaque identité mappée**, ce qui permet la correspondance en temps réel au moment de la décision publicitaire pour chaque identifiant envoyé par vos systèmes.
 
-### Comportement du mappage d’identités
+### Comportement du mappage d’identités {#identity-mapping-behavior}
 
 - Vous pouvez mapper **jusqu’à trois** espaces de noms d’identité Experience Platform aux trois emplacements d’identités d’[!DNL Kevel].
 - Pour chaque profil activé, [!DNL Kevel] reçoit **un enregistrement UserDB par instance de chaque identité mappée**.
@@ -85,7 +85,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -105,7 +105,7 @@ Audiences prises en charge par type de données d’audience :
 Suivez le workflow standard Experience Platform [connecter une destination](../../ui/connect-destination.md).
 
 >[!IMPORTANT]
-> 
+>
 >Vous devez disposer des autorisations **Afficher les destinations** et **Gérer les destinations**.
 
 ### S’authentifier auprès de la destination {#authenticate}
@@ -126,10 +126,9 @@ Après l’authentification, configurez :
 
 ![Détails de la destination pour Niveler la destination](/help/destinations/assets/catalog/advertising/kevel-destination-details.png)
 
-## Activer des segments vers cette destination {#activate}
+## Activer des audiences vers cette destination {#activate}
 
-Pour envoyer des audiences à [!DNL Kevel], suivez le workflow dans\
-[Activer des profils et des segments vers des destinations d’exportation de segments de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md).
+Pour envoyer des audiences à [!DNL Kevel], suivez le workflow dans [Activer les audiences vers des destinations de diffusion en streaming](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 ### Désactiver les audiences {#deactivate}
 
@@ -155,7 +154,7 @@ Lors de l’activation, sélectionnez les espaces de noms d’identité que vous
 
 Lorsqu’un profil est éligible ou quitte une audience, Experience Platform envoie une mise à jour en flux continu à [!DNL Kevel].
 
-### Exemple de payload reçue par [!DNL Kevel] UserDB
+### Exemple de payload reçue par [!DNL Kevel] UserDB {#sample-payload}
 
 ```json
 PUT /udb/{networkId}/segments?userKey=ECID-12345
@@ -213,7 +212,7 @@ Voici un exemple de profil exporté affichant :
 }
 ```
 
-#### Comment [!DNL Kevel] ce profil
+#### Comment [!DNL Kevel] ce profil {#kevel-profile-interpretation}
 
 Avec la configuration de destination [!DNL Kevel], chaque identité mappée génère un enregistrement UserDB distinct, ce qui signifie que [!DNL Kevel] reçoit :
 

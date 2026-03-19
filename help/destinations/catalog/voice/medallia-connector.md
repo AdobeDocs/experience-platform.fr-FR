@@ -2,9 +2,9 @@
 title: Connexion à Medallia
 description: Activez les profils pour les enquêtes et la collecte de commentaires Medallia ciblées afin de mieux comprendre les besoins et les attentes des clients.
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1269'
+source-wordcount: '1268'
 ht-degree: 26%
 
 ---
@@ -17,17 +17,17 @@ Activez les profils pour les enquêtes et la collecte de commentaires Medallia c
 
 >[!IMPORTANT]
 >
->Ce connecteur de destination et cette page de documentation sont créés et conservés par l’équipe Medallia. Pour toute demande ou information, contactez directement l&#39;équipe à l&#39;adresse adobe-integrations@medallia.com.
+>Ce connecteur de destination et cette page de documentation sont créés et conservés par l’équipe Medallia. Pour toute demande ou information, contactez directement l’équipe d’Amazon Ads à l’adresse adobe-integrations@medallia.com.
 
 ## Cas d’utilisation {#use-cases}
 
 Pour mieux comprendre quand et comment utiliser la destination Medallia, consultez les exemples de cas d’utilisation ci-dessous que la clientèle de Adobe Experience Platform peut résoudre.
 
-### Cas d’utilisation #1
+### Cas d’utilisation #1 {#use-case-1}
 
 Une marque B2B souhaite évaluer et rationaliser son programme d’intégration. Ils souhaitent envoyer des questionnaires personnalisés en temps réel aux clients qui viennent de terminer le processus d’intégration.
 
-### Cas d’utilisation #2
+### Cas d’utilisation #2 {#use-case-2}
 
 Un retailer cherche à mieux comprendre les préférences des clients en matière d’exécution des commandes. Ils souhaitent envoyer un court questionnaire par SMS en une seule question aux clients qui ont effectué des achats en ligne et en magasin au cours du dernier mois.
 
@@ -73,7 +73,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -93,7 +93,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 ## Se connecter à la destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
@@ -128,9 +128,9 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -153,7 +153,7 @@ Il est vivement recommandé de mapper également des attributs personnalisés ci
 ![Image montrant un exemple de mappage pour les identités et les attributs.](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)
 
 >[!IMPORTANT]
-> 
+>
 > Partagez avec votre équipe de diffusion Medallia les **Noms d’attributs** exacts pour chaque attribut personnalisé cible que vous mappez à l’aide de **Champ cible** > **Sélectionner des attributs personnalisés** > **Nom de l’attribut**. Vous pouvez effectuer une capture d’écran de la page de mappage pour la partager directement.
 
 ## Données exportées {#exported-data}

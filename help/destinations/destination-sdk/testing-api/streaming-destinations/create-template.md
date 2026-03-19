@@ -2,7 +2,7 @@
 description: Découvrez comment utiliser l’API de test de destination pour tester votre modèle de transformation de message de destination de diffusion en streaming avant de publier la destination.
 title: Création et test d’un modèle de transformation de message
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 100%
@@ -167,6 +167,6 @@ Consultez la référence d’API pour obtenir des exemples d’appels que vous p
 
 Modifiez le modèle et effectuez des appels vers le point d’entrée de l’API du modèle de rendu jusqu’à ce que les profils exportés correspondent au format de données attendu de la destination.
 
-## Ajoutez votre modèle avec caractères d’échappement à la configuration du serveur de destination
+## Ajoutez votre modèle avec caractères d’échappement à la configuration du serveur de destination {#add-template-to-server-config}
 
 Une fois que votre modèle de transformation de messages vous satisfait, ajoutez-le à la [configuration du serveur de destination](../../authoring-api/destination-server/create-destination-server.md), dans `httpTemplate.requestBody.value`.

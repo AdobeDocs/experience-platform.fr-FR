@@ -3,9 +3,9 @@ title: Connexion SAP Commerce
 description: Utilisez le connecteur de destination SAP Commerce pour mettre à jour les enregistrements client dans votre compte SAP.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2309'
+source-wordcount: '2306'
 ht-degree: 20%
 
 ---
@@ -30,7 +30,7 @@ Reportez-vous aux sections ci-dessous pour connaître les conditions préalables
 
 ### Conditions préalables d’Experience Platform {#prerequisites-in-experience-platform}
 
-Avant d’activer des données dans la destination [!DNL SAP Commerce], vous devez avoir créé un [schéma](/help/xdm/schema/composition.md), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr) et des [audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=fr) dans [!DNL Experience Platform].
+Avant d’activer des données dans la destination [!DNL SAP Commerce], vous devez avoir créé un [schéma](/help/xdm/schema/composition.md), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) et des [audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) dans [!DNL Experience Platform].
 
 Reportez-vous à la documentation Experience Platform pour le [groupe de champs de schéma Détails sur l’appartenance à une audience](/help/xdm/field-groups/profile/segmentation.md) si vous avez besoin de conseils sur les statuts de l’audience.
 
@@ -134,7 +134,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -195,9 +195,9 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -205,7 +205,7 @@ Consultez la section [Activer les profils et les audiences vers les destinations
 
 Pour envoyer correctement vos données d’audience de Adobe Experience Platform vers la destination [!DNL SAP Commerce], vous devez passer par l’étape de mappage des champs. Le mappage consiste à créer un lien entre vos champs de schéma de modèle de données d’expérience (XDM) dans votre compte Experience Platform et leurs équivalents issus de la destination cible. Pour mapper correctement vos champs XDM vers les champs de destination [!DNL SAP Commerce], procédez comme suit :
 
-#### Mapper l’identité `customerNumberSAP`
+#### Mapper l’identité `customerNumberSAP` {#map-customer-number-sap}
 
 L’identité `customerNumberSAP` est un mappage obligatoire pour cette destination. Suivez les étapes ci-dessous pour le mapper :
 
@@ -223,7 +223,7 @@ L’identité `customerNumberSAP` est un mappage obligatoire pour cette destinat
 Un exemple avec le mappage d’identité est illustré ci-dessous :
 ![Image de l’interface utilisateur d’Experience Platform montrant un exemple de mappage d’identité customerNumber.](../../assets/catalog/ecommerce/sap-commerce/mapping-identities.png)
 
-#### Attributs de mappage
+#### Attributs de mappage {#mapping-attributes}
 
 Pour ajouter d’autres attributs à mettre à jour entre votre schéma de profil XDM et votre compte [!DNL SAP Subscription Billing], répétez les étapes ci-dessous :
 
@@ -238,7 +238,7 @@ Pour ajouter d’autres attributs à mettre à jour entre votre schéma de profi
 >
 > Les noms des champs cibles sont sensibles à la casse et doivent correspondre aux noms des attributs [!DNL SAP Subscription Billing]. La seule exception à cette règle est `country`’emplacement où vous devez utiliser `countryCode` à la place. [!DNL SAP Subscription Billing] prend en charge les codes de pays alpha-2 (ISO 3166). La valeur respecte la casse et doit comporter entre 0 et 3 caractères. Veillez donc à indiquer exactement comme défini, faute de quoi vous rencontrerez des erreurs : `The country code {} does not exist` ou `size must be between 0 and 3`.
 
-#### Mapper les attributs de `mandatory` pour le type de client sélectionné
+#### Mapper les attributs de `mandatory` pour le type de client sélectionné {#map-mandatory-attributes}
 
 Les mappages d’attributs obligatoires dépendent du **[!UICONTROL Type of Customer]** que vous avez sélectionné. Pour mapper les attributs obligatoires, sélectionnez l’un des éléments suivants :
 
@@ -251,6 +251,8 @@ Les mappages d’attributs obligatoires dépendent du **[!UICONTROL Type of Cust
 | `xdm: person.lastName` | `Attribute: lastName` | Oui |
 | `xdm: workAddress.countryCode` | `Attribute: countryCode` | Oui |
 
+{style="table-layout:auto"}
+
 >[!TAB Client d’entreprise]
 
 | Champ source | Champ cible | Obligatoire |
@@ -258,9 +260,11 @@ Les mappages d’attributs obligatoires dépendent du **[!UICONTROL Type of Cust
 | `xdm: b2b.companyName` | `Attribute: company` | Oui |
 | `xdm: workAddress.countryCode` | `Attribute: countryCode` | Oui |
 
+{style="table-layout:auto"}
+
 >[!ENDTABS]
 
-#### Mappage d’attributs supplémentaires
+#### Mappage d’attributs supplémentaires {#mapping-additional-attributes}
 
 Vous pouvez ensuite ajouter d’autres mappages entre votre schéma de profil XDM et les attributs [!DNL SAP Subscription Billing] [schema](https://api.sap.com/api/BusinessPartner_APIs/schema) pour un client, comme illustré ci-dessous :
 
@@ -274,6 +278,8 @@ Vous pouvez ensuite ajouter d’autres mappages entre votre schéma de profil XD
 | `xdm: workAddress.street1` | `Attribute: street` | Non |
 | `xdm: workAddress.city` | `Attribute: city` | Non |
 
+{style="table-layout:auto"}
+
 Un exemple avec des mappages d’attributs obligatoires et facultatifs où le client est une personne est illustré ci-dessous :
 ![Image de l’interface utilisateur d’Experience Platform montrant un exemple avec des mappages d’attributs obligatoires et facultatifs où le client est une personne.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-individual.png)
 
@@ -284,6 +290,8 @@ Un exemple avec des mappages d’attributs obligatoires et facultatifs où le cl
 | `xdm: workAddress.street1` | `Attribute: street` | Non |
 | `xdm: workAddress.city` | `Attribute: city` | Non |
 
+{style="table-layout:auto"}
+
 Un exemple avec des mappages d’attributs obligatoires et facultatifs où le client est une entreprise est illustré ci-dessous :
 ![Image de l’interface utilisateur d’Experience Platform montrant un exemple avec des mappages d’attributs obligatoires et facultatifs où le client est une entreprise.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-corporate.png)
 
@@ -293,7 +301,7 @@ Lorsque vous avez terminé de fournir les mappages pour votre connexion de desti
 
 ### Planifier l’exportation de l’audience et exemple {#schedule-segment-export-example}
 
-Lors de l’exécution de l’étape [&#x200B; Planifier l’exportation d’audience &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling), vous devez mapper manuellement les audiences Experience Platform aux [&#x200B; attributs &#x200B;](#prerequisites-attribute) dans [!DNL SAP Subscription Billing].
+Lors de l’exécution de l’étape [ Planifier l’exportation d’audience ](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling), vous devez mapper manuellement les audiences Experience Platform aux [ attributs ](#prerequisites-attribute) dans [!DNL SAP Subscription Billing].
 
 Un exemple de l’étape Planifier l’exportation de l’audience, avec l’emplacement du [!DNL SAP Commerce] de **[!UICONTROL Mapping ID]** en surbrillance, est illustré ci-dessous :
 ![Image d’Experience Platform montrant l’exportation de l’audience planifiée avec les ID de mappage renseignés.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
@@ -345,7 +353,7 @@ Retrouvez d’autres informations utiles de la documentation [!DNL SAP] ci-desso
 
 * [Facturation des abonnements SAP intégrés](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/e4b8badf7d124026991e4ab6b57d2a33.html)
 
-### Journal des modifications
+### Journal des modifications {#changelog}
 
 Cette section répertorie les nouvelles fonctionnalités et les mises à jour importantes de la documentation consacrée au connecteur de destination.
 

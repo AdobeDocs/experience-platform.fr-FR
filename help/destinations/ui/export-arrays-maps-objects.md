@@ -3,7 +3,7 @@ title: Exporter des tableaux, des mappages et des objets à partir de Real-Time 
 type: Tutorial
 description: Découvrez comment exporter des tableaux, des mappages et des objets de Real-Time CDP vers des destinations d’espace de stockage.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: f7ff10dd6489842adb8de49b3f8634c20d77cc71
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1062'
 ht-degree: 14%
@@ -23,7 +23,7 @@ Découvrez comment exporter des tableaux, des mappages et des objets de Real-Tim
 
 | Type de destination | Possibilité d’exporter des tableaux, mappages et autres objets personnalisés |
 |---|---|
-| Destinations de stockage dans le cloud créées par Adobe (Amazon S3, Azure Blob, Azure Data Lake Storage Gen2, zone d’atterrissage des données, stockage dans le cloud Google, SFTP) | Oui, avec le bouton (bascule) Activer l’exportation de tableaux, de mappages et d’objets lors de la configuration d’une connexion de destination. |
+| Destinations de stockage dans le cloud créées par Adobe (Amazon S3, Azure Blob, Azure Data Lake Storage Gen2, Data Landing Zone, Google Cloud Storage, SFTP) | Oui, avec le bouton (bascule) Activer l’exportation de tableaux, de mappages et d’objets lors de la configuration d’une connexion de destination. |
 | Destinations de marketing par e-mail basées sur des fichiers (Adobe Campaign, Oracle Eloqua, Oracle Responsys, Salesforce Marketing Cloud) | Non |
 | Destinations de stockage dans le cloud existantes personnalisées créées par les partenaires (destinations personnalisées basées sur des fichiers créées via Destination SDK) | Non |
 | Destinations d’entreprise (Amazon Kinesis, Azure Event Hubs, API HTTP) | Partiellement. Vous pouvez sélectionner et exporter des objets de type map à l’étape de mapping du workflow d’activation. |
@@ -34,7 +34,7 @@ Découvrez comment exporter des tableaux, des mappages et des objets de Real-Tim
 
 Utilisez cette page comme référence pour tout ce que vous souhaitez savoir sur l’exportation de tableaux, de mappages et d’autres types d’objets à partir d’Experience Platform.
 
-## Ligne du bas vers le haut
+## Ligne du bas vers le haut {#bottom-line}
 
 Obtenez les informations les plus importantes sur les fonctionnalités de cette section, et continuez ci-dessous vers les autres sections du document pour obtenir des informations détaillées.
 

@@ -4,13 +4,13 @@ type: Tutorial
 hide: true
 hidefromtoc: true
 description: Découvrez comment mettre à jour la date de fin des flux de données d’exportation de jeux de données avec une date de fin actuelle fixée au 1er mai 2025.
-source-git-commit: aeabbb56002f8640b79ff3a7e3dc532d01ebbadf
+exl-id: 3f8ff535-3c54-47ac-b297-32f8298881db
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
 
 ---
-
 
 # Mettre à jour la date de fin des flux de données d’exportation de jeux de données (Action requise pour le 1er mai 2025)
 
@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >Les actions de cette page s’appliquent si votre organisation a configuré des flux de données d’exportation de jeux de données avant la version de septembre 2024 d’Experience Platform.
 
-## Que se passe-t-il ?
+## Que se passe-t-il ? {#what-is-happening}
 
 La version [septembre 2024 d’Experience Platform](/help/release-notes/latest/latest.md#destinations) a introduit l’option permettant de définir une date `endTime` pour l’exportation des flux de données de jeux de données. Adobe a également introduit une date de fin par défaut du 1er mai 2025 pour tous les flux de données d’exportation de jeux de données créés *avant la version de septembre 2024*. Ces flux de données affichent actuellement un message similaire à celui illustré ci-dessous.
 
@@ -26,21 +26,21 @@ La version [septembre 2024 d’Experience Platform](/help/release-notes/latest/l
 
 **Élément d’action** : pour l’un de ces flux de données, vous devez mettre à jour manuellement la date de fin avant son expiration ; sinon, vos exportations s’arrêteront. Utilisez l’interface utilisateur d’Experience Platform pour identifier les flux de données qui doivent s’arrêter le 1er mai 2025.
 
-## Pourquoi suis-je averti ?
+## Pourquoi suis-je averti ? {#why-notified}
 
 Votre organisation a été identifiée comme ayant des flux de données d’exportation de jeux de données actifs avec une date de fin fixée au 1er mai 2025.
 
-## Utiliser l’interface utilisateur pour mettre à jour la date de fin
+## Utiliser l’interface utilisateur pour mettre à jour la date de fin {#use-ui}
 
 Utilisez l’interface utilisateur d’Experience Platform pour identifier les flux de données dont la date de fin est le 1er mai 2025 et les mettre à jour à une date ultérieure.
 
-### Rechercher les flux de données à mettre à jour
+### Rechercher les flux de données à mettre à jour {#find-dataflows}
 
 Accédez à **Destinations > Parcourir** et recherchez le type de données **Jeux de données** dans la colonne **Type de données**, comme illustré ci-dessous. Sélectionnez les flux de données de votre choix pour les examiner.
 
 ![Flux de données d’exportation de jeu de données surligné dans l’onglet Parcourir.](/help/destinations/assets/ui/export-datasets/view-dataset-dataflows.png)
 
-### Mettre à jour la date de fin des flux de données
+### Mettre à jour la date de fin des flux de données {#update-end-date}
 
 Pour mettre à jour la date de fin des flux de données :
 
@@ -54,8 +54,8 @@ Pour mettre à jour la date de fin des flux de données :
 
 Pour obtenir des informations détaillées sur l’étape de planification, consultez le tutoriel [interface utilisateur d’exportation de jeux de données](/help/destinations/api/export-datasets.md#scheduling).
 
-## Utiliser l’API pour mettre à jour la date de fin
+## Utiliser l’API pour mettre à jour la date de fin {#use-api}
 
-### Rechercher les flux de données à mettre à jour
+### Rechercher les flux de données à mettre à jour {#find-dataflows-api}
 
-### Mettre à jour la date de fin des flux de données
+### Mettre à jour la date de fin des flux de données {#update-end-date-api}

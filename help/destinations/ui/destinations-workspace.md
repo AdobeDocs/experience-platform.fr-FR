@@ -3,9 +3,9 @@ keywords: platform;destinations;espace de travail des destinations;espace de tra
 title: Espace de travail des destinations
 description: 'L’espace de travail des destinations se compose de cinq sections : Vue d’ensemble, Catalogue, Parcourir, Comptes et Vue du système. Elles sont décrites dans les sections ci-dessous.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2150'
+source-wordcount: '2162'
 ht-degree: 22%
 
 ---
@@ -24,7 +24,7 @@ L’onglet **[!UICONTROL Overview]** affiche le tableau de bord [!UICONTROL Dest
 
 >[!NOTE]
 >
->Si votre organisation débute dans l’utilisation d’Experience Platform et n’a pas encore de destinations actives, le tableau de bord [!UICONTROL Destinations] et l’onglet [!UICONTROL Overview] ne sont pas visibles. À la place, sélectionnez [!UICONTROL Destinations] dans le volet de navigation de gauche pour afficher l’onglet [[!UICONTROL Catalog] &#x200B;](#catalog).
+>Si votre organisation débute dans l’utilisation d’Experience Platform et n’a pas encore de destinations actives, le tableau de bord [!UICONTROL Destinations] et l’onglet [!UICONTROL Overview] ne sont pas visibles. À la place, sélectionnez [!UICONTROL Destinations] dans le volet de navigation de gauche pour afficher l’onglet [[!UICONTROL Catalog] ](#catalog).
 
 ![L’onglet Vue d’ensemble du tableau de bord des Destinations.](../../dashboards/images/destinations/dashboard-overview.png)
 
@@ -68,7 +68,7 @@ Pour plus d’informations sur les catégories de destination et les information
 
 >[!NOTE]
 >
->En raison des configurations des libellés d’accès, les flux de données de destination auxquels un utilisateur n’a pas accès peuvent apparaître dans l’interface utilisateur en grisé. Pour plus d’informations, consultez la documentation sur l’[utilisation de libellés d’accès pour gérer l’accès des utilisateurs aux flux de données de destination](../../access-control/abac/apply-access-labels-destinations.md#important-callouts-and-items-to-know).
+>En raison des configurations des libellés d’accès, les flux de données de destination auxquels un utilisateur n’a pas accès peuvent apparaître dans l’interface utilisateur sous une forme grisée. Pour plus d’informations, consultez la documentation sur l’[utilisation de libellés d’accès pour gérer l’accès des utilisateurs aux flux de données de destination](../../access-control/abac/apply-access-labels-destinations.md#important-callouts-and-items-to-know).
 
 L’onglet **[!UICONTROL Browse]** affiche les destinations avec lesquelles vous avez établi une connexion.
 
@@ -82,13 +82,13 @@ Les destinations dont le bouton (bascule) **[!UICONTROL Enabled/Disabled]** est 
 >
 > ![Onglet Parcourir](../assets/ui/workspace/browse-tab.png)
 > 
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande ![&#x200B; &#x200B;](/help/images/icons/data-add.png) Activer les audiences **[!UICONTROL Activate audiences]** pour exporter des audiences ou des jeux de données vers cette destination.
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande ![Modifier la destination &#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;pour modifier les connexions de destination existantes. Pour plus d’informations, consultez le tutoriel sur la [modification des destinations](/help/destinations/ui/edit-destination.md).
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande ![&#x200B; &#x200B;](/help/images/icons/edit-marketing-actions.svg)Modifier les actions marketing **[!UICONTROL Edit marketing actions]** pour [modifier les actions marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) pour la destination sélectionnée.
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande de ![&#x200B; &#x200B;](/help/images/icons/delete.png)Supprimer **[!UICONTROL Delete]** pour [supprimer](delete-destinations.md) une connexion existante à une destination.
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande de ![&#x200B; &#x200B;](/help/images/icons/monitoring.png)Affichage dans la surveillance **[!UICONTROL View in monitoring]** pour afficher les informations d’activation de cette destination dans le [tableau de bord de surveillance](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande de ![&#x200B; &#x200B;](/help/images/icons/alert-add.png)S’abonner aux alertes **[!UICONTROL Subscribe to alerts]** pour vous abonner aux alertes de flux de données de destination. Vous pouvez vous abonner à des alertes pour recevoir des messages concernant l’état, la réussite ou l’échec de votre exécution de flux. Consultez [S’abonner aux alertes de destination contextuelles](alerts.md) pour des informations détaillées sur les alertes de flux de données de destination.
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande de ![&#x200B; &#x200B;](/help/images/icons/manage-tags.png)Gérer les balises **[!UICONTROL Manage tags]** pour ajouter ou supprimer des balises d’une destination. Consultez la section [&#x200B; Gérer les balises de destination &#x200B;](#manage-tags) pour plus d’informations sur l’utilisation des balises.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande ![ ](/help/images/icons/data-add.png) Activer les audiences **[!UICONTROL Activate audiences]** pour exporter des audiences ou des jeux de données vers cette destination.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande ![Modifier la destination ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**pour modifier les connexions de destination existantes. Pour plus d’informations, consultez le tutoriel sur la [modification des destinations](/help/destinations/ui/edit-destination.md).
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande ![ ](/help/images/icons/edit-marketing-actions.svg)Modifier les actions marketing **[!UICONTROL Edit marketing actions]** pour [modifier les actions marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) pour la destination sélectionnée.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande de ![ ](/help/images/icons/delete.png)Supprimer **[!UICONTROL Delete]** pour [supprimer](delete-destinations.md) une connexion existante à une destination.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande de ![ ](/help/images/icons/monitoring.png)Affichage dans la surveillance **[!UICONTROL View in monitoring]** pour afficher les informations d’activation de cette destination dans le [tableau de bord de surveillance](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande de ![ ](/help/images/icons/alert-add.png)S’abonner aux alertes **[!UICONTROL Subscribe to alerts]** pour vous abonner aux alertes de flux de données de destination. Vous pouvez vous abonner à des alertes pour recevoir des messages concernant l’état, la réussite ou l’échec de votre exécution de flux. Consultez [S’abonner aux alertes de destination contextuelles](alerts.md) pour des informations détaillées sur les alertes de flux de données de destination.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande de ![ ](/help/images/icons/manage-tags.png)Gérer les balises **[!UICONTROL Manage tags]** pour ajouter ou supprimer des balises d’une destination. Consultez la section [ Gérer les balises de destination ](#manage-tags) pour plus d’informations sur l’utilisation des balises.
 
 Consultez le tableau ci-dessous pour toutes les informations fournies pour chaque destination dans l’onglet [!UICONTROL Browse] .
 
@@ -101,12 +101,14 @@ Consultez le tableau ci-dessous pour toutes les informations fournies pour chaqu
 | [!UICONTROL Destination] | La plateforme de destination que vous avez sélectionnée pour votre flux d’activation. |
 | [!UICONTROL Account Expiration Date] | Date d’expiration de l’autorisation de connexion à cette destination. <br> Une icône d’avertissement ![Avertissement : icône d’expiration de compte](/help/images/icons/alert-expiration.png) s’affiche avant la date d’expiration pour vous avertir que la connexion va expirer et peut nécessiter un renouvellement. Les flux de données vers les connexions expirées sont arrêtés et vous devez vous réauthentifier pour reprendre vos workflows d’activation. <br>**Important** : cette colonne est actuellement disponible uniquement pour les connexions [Pinterest](../catalog/advertising/pinterest.md), [LinkedIn](../catalog/social/linkedin.md) et [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md). <br> ![Exemple d’avertissement d’expiration de compte dans l’onglet Parcourir](../assets/ui/workspace/account-expiration-browse.png){width="100" zoomable="yes" alt="Screenshot showing the account expiration warning icon and expiration date in the Browse tab."} |
 | [!UICONTROL Username] | Les informations d’identification de compte que vous avez sélectionnées pour le flux de destination. |
-| [!UICONTROL Activation Data] | Indique le nombre d’audiences activées vers cette destination. Sélectionnez cette commande pour en savoir plus sur les audiences activées. Pour plus d’informations sur les audiences activées[&#x200B; reportez-vous à la section &#x200B;](/help/destinations/ui/destination-details-page.md#activation-data)Données d’activation de la page de détails de la destination. |
+| [!UICONTROL Activation Data] | Indique le nombre d’audiences activées vers cette destination. Sélectionnez cette commande pour en savoir plus sur les audiences activées. Pour plus d’informations sur les audiences activées[ reportez-vous à la section ](/help/destinations/ui/destination-details-page.md#activation-data)Données d’activation de la page de détails de la destination. |
 | [!UICONTROL Created] | Date et heure de création du flux d’activation vers la destination. Sélectionnez les flèches haut/bas pour trier les flux d’activation en fonction du plus récent ou du plus ancien. |
 | [!UICONTROL Modified] | Date et heure de la dernière modification du flux d’activation vers la destination. |
 | [!UICONTROL Status] | `Enabled` ou `Disabled`. Indique si les données sont activées vers cette destination. |
 | [!UICONTROL Access labels] | Affiche les libellés d’accès qui ont été ajoutés à ce flux de données de destination. En savoir plus sur [l’application de libellés d’accès aux flux de données de destination](/help/access-control/abac/apply-access-labels-destinations.md). |
 | [!UICONTROL Tags] | Affiche toutes les balises qui ont été ajoutées à ce flux de données de destination. Utilisez des balises pour organiser et classer vos flux de données pour une gestion plus facile. |
+
+{style="table-layout:auto"}
 
 Cliquez sur une ligne de destination pour afficher plus d’informations sur la destination dans le rail de droite, telles que l’identifiant de destination, la description, le nombre d’audiences activées, etc.
 
@@ -154,7 +156,7 @@ Lorsque vous appliquez des filtres, ils s’affichent sous la forme de balises s
 Vous pouvez :
 
 * Afficher tous les filtres actuellement actifs
-* Supprimez des filtres individuels en cliquant sur l’icône `X` de chaque balise de filtre
+* Supprimez des filtres individuels en sélectionnant l’icône `X` sur chaque balise de filtre
 * Effacez tous les filtres à la fois à l’aide de l’option **[!UICONTROL Clear all]**
 
 ### Gérer les balises de destination {#manage-tags}
@@ -175,7 +177,7 @@ Veillez à ce que vos flux de données de destination restent organisés, facile
 * **Utiliser des noms descriptifs** : créez des balises qui indiquent clairement l’objectif ou la catégorie du flux de données (par exemple, « Campagnes marketing », « Rétention des clients », « Promotions saisonnières »)
 * **Soyez cohérent** : utilisez une convention de nommage cohérente dans l’ensemble de votre organisation
 * **Restez simple** : évitez de créer trop de balises, car cela peut rendre le filtrage moins efficace
-* **Utiliser des balises hiérarchiques** : envisagez d’utiliser des préfixes pour regrouper les balises associées (par exemple, « Campaign-Q4 », « Campaign-Q1 »)
+* **Utiliser des balises hiérarchiques** : pensez à utiliser des préfixes pour regrouper les balises associées (par exemple, « Campaign-Q4 », « Campaign-Q1 »)
 
 ## [!UICONTROL Accounts] {#accounts}
 
@@ -183,21 +185,21 @@ L’onglet **[!UICONTROL Accounts]** vous montre les détails des connexions que
 
 >[!TIP]
 >
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la commande ![Activer &#x200B;](/help/images/icons/data-add.png)**[!UICONTROL Activate]**/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]**&#x200B;pour exporter des audiences ou des jeux de données vers cette destination.
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la commande ![Modifier les détails &#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit details]**&#x200B;pour [mettre à jour](update-accounts.md) les détails d’un compte de destination existant.
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la commande ![Supprimer &#x200B;](/help/images/icons/delete.png)**[!UICONTROL Delete]**&#x200B;pour [supprimer](delete-destination-account.md) un compte de destination existant.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la commande ![Activer ](/help/images/icons/data-add.png)**[!UICONTROL Activate]**/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]**pour exporter des audiences ou des jeux de données vers cette destination.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la commande ![Modifier les détails ](/help/images/icons/edit.png)**[!UICONTROL Edit details]**pour [mettre à jour](update-accounts.md) les détails d’un compte de destination existant.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la commande ![Supprimer ](/help/images/icons/delete.png)**[!UICONTROL Delete]**pour [supprimer](delete-destination-account.md) un compte de destination existant.
 
 ![Onglet Comptes](../assets/ui/workspace/accounts-tab.png)
 
 | Élément | Description |
 |---|---|
-| [!UICONTROL Name] | Nom attribué au compte de destination lors de la [&#x200B; configuration &#x200B;](connect-destination.md#authenticate) la destination. Sélectionnez l’en-tête de colonne pour accéder aux options de tri (**[!UICONTROL Sort Ascending]**, **[!UICONTROL Sort Descending]**). |
+| [!UICONTROL Name] | Nom attribué au compte de destination lors de la [ configuration ](connect-destination.md#authenticate) la destination. Sélectionnez l’en-tête de colonne pour accéder aux options de tri (**[!UICONTROL Sort Ascending]**, **[!UICONTROL Sort Descending]**). |
 | [!UICONTROL Destination] | Connecteur de destination pour lequel vous avez configuré la connexion. |
 | [!UICONTROL Connection Type] | Représente le type de connexion de compte à votre compartiment de stockage ou à votre destination. Selon la destination, les options d’authentification sont les suivantes : <ul><li>Pour les destinations de marketing par e-mail : il peut s’agir de S3, FTP ou Azure Blob.</li><li>Pour les destinations publicitaires en temps réel : serveur à serveur</li><li>Pour les destinations de stockage dans le cloud Amazon S3 : clé d’accès </li><li>Pour les destinations de stockage dans le cloud SFTP : authentification de base pour SFTP</li><li>Authentification OAuth 1 ou OAuth 2</li><li>Authentification par jeton porteur</li></ul> |
 | [!UICONTROL Username] | Nom d’utilisateur que vous avez sélectionné dans le [workflow de connexion à la destination](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Connections] | Représente le nombre de flux de données de destination uniques réussis et connectés avec des informations de base créées pour une destination. |
 | [!UICONTROL Authorization date] | La date à laquelle la connexion à cette destination a été autorisée. |
-| [!UICONTROL Expiration date] | Date d’expiration de l’autorisation de connexion à cette destination. <br> Icône d’avertissement ![icône d’avertissement Compte ayant expiré.](/help/images/icons/alert-expiration.png) s’affiche avant la date d’expiration pour vous avertir que la connexion va expirer et peut nécessiter un renouvellement. Les flux de données vers les connexions expirées sont arrêtés et vous devez vous réauthentifier pour reprendre vos workflows d’activation. <br>**Important** : cette colonne est actuellement disponible uniquement pour les connexions [Pinterest](../catalog/advertising/pinterest.md), [LinkedIn](../catalog/social/linkedin.md) et [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md). <br> ![](../assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
+| [!UICONTROL Expiration date] | Date d’expiration de l’autorisation de connexion à cette destination. <br> Icône d’avertissement ![icône d’avertissement Compte ayant expiré.](/help/images/icons/alert-expiration.png) s’affiche avant la date d’expiration pour vous avertir que la connexion va expirer et peut nécessiter un renouvellement. Les flux de données vers les connexions expirées sont arrêtés et vous devez vous réauthentifier pour reprendre vos workflows d’activation. <br>**Important** : cette colonne est actuellement disponible uniquement pour les connexions [Pinterest](../catalog/advertising/pinterest.md), [LinkedIn](../catalog/social/linkedin.md) et [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md). <br> ![Comptes de destination expirés mis en surbrillance dans l’espace de travail des destinations.](../assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -215,7 +217,7 @@ Utilisez la barre de recherche située en haut du tableau pour rechercher rapide
 
 Utilisez les filtres de la barre latérale gauche pour affiner votre recherche.
 
-![Filtres de compte dans l’onglet Comptes &#x200B;](../assets/ui/workspace/account-filters.png)
+![Filtres de compte dans l’onglet Comptes ](../assets/ui/workspace/account-filters.png)
 
 * **[!UICONTROL Destination platform]** : filtrez les comptes en fonction de plateformes de destination spécifiques (par exemple : [!DNL Microsoft Bing], [!DNL Amazon S3], [!DNL Facebook Custom Audiences], [!DNL LinkedIn Matched Audiences], etc.). Vous pouvez sélectionner plusieurs plateformes simultanément.
 * **[!UICONTROL Created by]** : filtrez les comptes selon l’utilisateur ou l’utilisatrice qui les a créés. Utilisez ce filtre pour rechercher les comptes créés par des membres de l’équipe spécifiques.
@@ -229,7 +231,7 @@ Lorsque vous appliquez des filtres, ils s’affichent sous la forme de balises s
 Vous pouvez :
 
 * Afficher tous les filtres actuellement actifs
-* Supprimez des filtres individuels en cliquant sur l’icône `X` de chaque balise de filtre
+* Supprimez des filtres individuels en sélectionnant l’icône `X` sur chaque balise de filtre
 * Effacez tous les filtres à la fois à l’aide de l’option **[!UICONTROL Clear all]**
 
 ## [!UICONTROL System View] {#system-view}
@@ -238,6 +240,6 @@ L’onglet **[!UICONTROL System View]** affiche une représentation graphique de
 
 ![Flux de données 1](../assets/ui/workspace/system-view-dataflows.png)
 
-Sélectionnez l’une des destinations affichées sur la page et cliquez sur **[!UICONTROL View dataflows]** pour afficher les informations sur toutes les connexions que vous avez configurées pour chaque destination.
+Sélectionnez l’une des destinations affichées sur la page et sélectionnez **[!UICONTROL View dataflows]** pour afficher les informations sur toutes les connexions que vous avez configurées pour chaque destination.
 
 ![Flux de données 2](../assets/ui/workspace/system-view-dataflows-2.png)

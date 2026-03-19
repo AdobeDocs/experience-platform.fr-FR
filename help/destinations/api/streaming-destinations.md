@@ -5,9 +5,9 @@ title: Connectez-vous aux destinations de diffusion en continu et activez les do
 description: Ce document couvre la création de destinations de diffusion en continu à l’aide de l’API Adobe Experience Platform
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2219'
+source-wordcount: '2203'
 ht-degree: 41%
 
 ---
@@ -15,14 +15,14 @@ ht-degree: 41%
 # Se connecter aux destinations de diffusion en continu et activer les données à l’aide de l’API Flow Service
 
 >[!IMPORTANT]
-> 
->Pour vous connecter à une destination, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]** et **[!UICONTROL Gérer les destinations]** [&#128279;](/help/access-control/home.md#permissions).
 >
->Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions).
+>Pour vous connecter à une destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
+>
+>Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions).
 >
 >Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
-Ce tutoriel vous explique comment utiliser les appels API pour vous connecter à vos données Adobe Experience Platform, créer une connexion à une destination de stockage en flux continu dans le cloud ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) ou [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md)), créer un flux de données vers votre nouvelle destination et activer les données vers cette dernière.
+Ce tutoriel vous explique comment utiliser les appels API pour vous connecter à vos données Adobe Experience Platform, créer une connexion à une destination d’espace de stockage en flux continu ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) ou [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md)), créer un flux de données vers votre nouvelle destination et activer les données vers cette dernière.
 
 Ce tutoriel utilise la destination [!DNL Amazon Kinesis] dans tous ses exemples, mais les étapes sont identiques pour [!DNL Azure Event Hubs].
 
@@ -30,30 +30,30 @@ Ce tutoriel utilise la destination [!DNL Amazon Kinesis] dans tous ses exemples,
 
 Si vous préférez utiliser l’interface utilisateur dans Experience Platform pour vous connecter à une destination et activer des données, reportez-vous aux tutoriels [Se connecter à une destination](../ui/connect-destination.md) et [Activer des données d’audience vers des destinations d’exportation d’audience en flux continu](../ui/activate-segment-streaming-destinations.md).
 
-## Prise en main
+## Commencer {#get-started}
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : framework normalisé selon lequel Experience Platform organise les données de l’expérience client.
 * [[!DNL Catalog Service]](../../catalog/home.md) : [!DNL Catalog] est le système d’enregistrement de l’emplacement et de la traçabilité des données dans Experience Platform.
 * [Sandbox](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin afin d’activer des données vers des destinations de diffusion en streaming dans Experience Platform.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour activer des données vers des destinations de diffusion en streaming dans Experience Platform.
 
-### Collecter les informations d’identification requises
+### Collecter les informations d’identification requises {#gather-credentials}
 
 Pour suivre les étapes de ce tutoriel, vous devez disposer des informations d’identification suivantes, selon le type de destinations auxquelles vous vous connectez et sur lesquelles vous activez des audiences.
 
 * Pour les connexions [!DNL Amazon Kinesis] : `accessKeyId`, `secretKey`, `region` ou `connectionUrl`
 * Pour les connexions [!DNL Azure Event Hubs] : `sasKeyName`, `sasKey`, `namespace`
 
-### Lecture d’exemples d’appels API {#reading-sample-api-calls}
+### Lecture d&#39;exemples d&#39;appels API {#reading-sample-api-calls}
 
 Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage d’Experience Platform.
 
 ### Collecte de valeurs pour les en-têtes requis et facultatifs {#gather-values}
 
-Pour lancer des appels aux API Experience Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
+Pour lancer des appels aux API Experience Platform, vous devez d’abord suivre le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`
@@ -129,7 +129,7 @@ Ensuite, vous devez vous connecter à vos données Experience Platform afin de 
 2. Ensuite, à l’aide de l’identifiant de connexion de base, vous passerez un autre appel au cours duquel vous créerez une connexion source, qui établira la connexion avec vos données Experience Platform.
 
 
-### Autorisation d’accès à vos données dans Experience Platform
+### Autorisation d’accès à vos données dans Experience Platform {#authorize-access-experience-platform}
 
 **Format d’API**
 
@@ -224,7 +224,7 @@ Au cours de cette étape, vous établissez une connexion à la destination de di
 1. Tout d’abord, vous devez effectuer un appel pour autoriser l’accès à la destination de diffusion en streaming, en établissant une connexion de base.
 2. Ensuite, à l’aide de l’identifiant de connexion de base, vous passerez un autre appel au cours duquel vous créerez une connexion cible, qui spécifie l’emplacement de votre compte de stockage où les données exportées seront transmises, ainsi que le format des données qui seront exportées.
 
-### Autoriser l’accès à la destination de diffusion en streaming
+### Autoriser l’accès à la destination de diffusion en streaming {#authorize-access-streaming-destination}
 
 **Format d’API**
 
@@ -287,7 +287,7 @@ Une réponse réussie contient l’identifiant unique de la connexion de base (`
 }
 ```
 
-### Indication de l’emplacement de stockage et du format des données
+### Indication de l’emplacement de stockage et du format des données {#specify-storage-location-data-format}
 
 **Format d’API**
 
@@ -344,7 +344,7 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
 }
 ```
 
-## Créer un flux de données
+## Créer un flux de données {#create-data-flow}
 
 ![Présentation des étapes de la destination : étape 4](../assets/api/streaming-destination/step4.png)
 
@@ -482,11 +482,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `id` | Indiquez l’identifiant de l’audience que vous ajoutez au flux de données de destination. |
 | `name` | *Facultatif*. Indiquez le nom de l’audience que vous ajoutez au flux de données de destination. Notez que ce champ n’est pas obligatoire et que vous pouvez ajouter une audience au flux de données de destination sans indiquer son nom. |
 
+{style="table-layout:auto"}
+
 **Réponse**
 
 Recherchez une réponse 202 OK. Aucun corps de réponse n’est renvoyé. Pour vérifier que la requête était correcte, reportez-vous à l’étape suivante : validation du flux de données.
 
-## Validation du flux de données
+## Validation du flux de données {#validate-data-flow}
 
 ![Présentation des étapes de la destination : étape 6](../assets/api/streaming-destination/step6.png)
 
@@ -563,7 +565,7 @@ La réponse renvoyée doit inclure dans le paramètre `transformations` les audi
 
 >[!IMPORTANT]
 >
-> Outre les attributs de profil et les audiences de l’étape [Activer les données vers votre nouvelle destination](#activate-data), les données exportées dans [!DNL AWS Kinesis] et [!DNL Azure Event Hubs] contiendront également des informations sur le mappage d’identités. Cela représente les identités des profils exportés (par exemple [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=fr), identifiant mobile, identifiant Google, adresse e-mail, etc.). Voir un exemple ci-dessous.
+> Outre les attributs de profil et les audiences de l’étape [Activer les données vers votre nouvelle destination](#activate-data), les données exportées dans [!DNL AWS Kinesis] et [!DNL Azure Event Hubs] contiendront également des informations sur le mappage d’identités. Cela représente les identités des profils exportés (par exemple [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), identifiant mobile, identifiant Google, adresse e-mail, etc.). Voir un exemple ci-dessous.
 
 ```json
 {
@@ -630,7 +632,7 @@ Pour établir une connexion aux destinations à l’aide des collections de [!DN
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[&#128279;](/help/landing/troubleshooting.md#api-status-codes) consultez les sections Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[ consultez les sections ](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 

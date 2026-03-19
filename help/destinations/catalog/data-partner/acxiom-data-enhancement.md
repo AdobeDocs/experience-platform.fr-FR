@@ -2,12 +2,12 @@
 title: Amélioration des données Acxiom
 description: Utilisez ce connecteur pour activer les profils Adobe propriétaires dans Real-Time CDP vers Acxiom pour l’enrichissement des données et leur utilisation sur les canaux marketing. Vous pouvez ensuite utiliser la source Acxiom pour importer les profils avec des données améliorées et les utiliser dans Real-Time CDP.
 last-substantial-update: 2024-03-14T00:00:00Z
-badge: Beta
+badge: label="Beta" type="Informative"
 exl-id: 59edc43d-ae8e-4c3d-820c-b5be1c4483f9
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1439'
-ht-degree: 24%
+source-wordcount: '1436'
+ht-degree: 25%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 24%
 
 >[!NOTE]
 >
->La destination [!DNL Acxiom Data Enhancement] est en version bêta.  Ce connecteur de destination et cette page de documentation sont créés et gérés par l’équipe d’Acxiom. Pour toute demande ou information, contactez directement l&#39;équipe à l&#39;adresse acxiom-adobe-help@acxiom.com.
+>La destination [!DNL Acxiom Data Enhancement] est en version bêta.  Ce connecteur de destination et cette page de documentation sont créés et gérés par l’équipe d’Acxiom. Pour toute demande ou information, contactez directement l’équipe d’Amazon Ads à l’adresse acxiom-adobe-help@acxiom.com.
 
 ## Vue d’ensemble {#overview}
 
@@ -48,7 +48,7 @@ Le client utilisera alors la carte source [Acxiom Data Ingestion](/help/sources/
 >[!IMPORTANT]
 >
 >* Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 ## Audiences prises en charge {#supported-audiences}
 
@@ -70,7 +70,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -107,13 +107,13 @@ Pour accéder à votre compartiment sur Experience Platform, vous devez fournir 
 | Clé secrète S3 | L’identifiant de clé secrète pour votre compartiment. Vous pouvez récupérer cette valeur auprès de l’équipe [!DNL Acxiom]. |
 | Nom du compartiment | Il s’agit de votre compartiment où les fichiers seront partagés. Vous pouvez récupérer cette valeur auprès de l’équipe [!DNL Acxiom]. |
 
-### Nouveau compte
+### Nouveau compte {#new-account}
 
 Pour définir un nouvel emplacement Acxiom Managed S3 :
 
 ![Nouveau compte](../../assets/catalog/data-partner/acxiom/image-destination-new-account.png)
 
-### Compte existant
+### Compte existant {#existing-account}
 
 Les comptes déjà définis à l’aide de la destination [!DNL Acxiom Data Enhancement] apparaissent dans un pop-up de liste. Lorsque cette option est sélectionnée, les détails du compte s’affichent dans le rail de droite. Affichez l’exemple à partir de l’interface utilisateur, lorsque vous accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]** ;
 
@@ -135,7 +135,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 >
 >Lors de la sélection de l’option CSV, les options *Délimiteur*, *Citation*, *Caractère d’échappement*, *Valeur vide*, *Valeur nulle*, *Format de compression* et *Inclure le fichier manifeste* sont présentées. Le document suivant explique ces paramètres de manière plus détaillée [configurer les options de formatage](../../ui/batch-destinations-file-formatting-options.md).
 
-![&#x200B; Options CSV &#x200B;](../../assets/catalog/data-partner/acxiom/image-destination-csv-options.png)
+![ Options CSV ](../../assets/catalog/data-partner/acxiom/image-destination-csv-options.png)
 
 ### Activer les alertes {#enable-alerts}
 
@@ -148,11 +148,11 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
-### Suggestions de mappage
+### Suggestions de mappage {#mapping-suggestions}
 
 Le traitement correct des fichiers côté Acxiom nécessite des éléments de nom et d’adresse. Bien que tous les éléments ne soient pas nécessaires, fournir autant d’éléments que possible aidera à une mise en correspondance réussie.
 
@@ -177,7 +177,7 @@ Le tableau ci-dessous fournit des suggestions de mappage. Il répertorie les att
 
 Pour contrôler que l’exportation des données a bien réussi, vérifiez votre compartiment [!DNL Amazon S3 Storage] et assurez-vous que les fichiers exportés contiennent les populations de profils attendues.
 
-## Étapes suivantes
+## Étapes suivantes {#next-steps}
 
 Ce tutoriel vous a permis de créer un flux de données pour exporter les données de profil d’Experience Platform vers votre emplacement S3 géré par [!DNL Acxiom]. Ensuite, vous devez contacter votre représentant Acxiom avec le nom du compte, les noms de fichier et le chemin d’accès au compartiment afin que le traitement puisse s’installer.
 

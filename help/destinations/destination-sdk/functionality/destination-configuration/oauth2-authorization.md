@@ -2,7 +2,7 @@
 description: Cette page décrit les différents flux d’autorisation OAuth 2 pris en charge par Destination SDK et fournit des instructions pour configurer l’autorisation OAuth 2 pour la destination.
 title: Autorisation OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 720f599810d119ac4997d24d400199d8efe087c2
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '2273'
 ht-degree: 74%
@@ -133,7 +133,7 @@ Pour configurer cette méthode d’autorisation pour la destination, ajoutez les
 
 {style="table-layout:auto"}
 
-## OAuth 2 avec octroi de mot de passe
+## OAuth 2 avec octroi de mot de passe {#oauth2-password-grant}
 
 Pour octroyer le mot de passe OAuth 2 (lisez la section [Spécifications des normes RFC](https://tools.ietf.org/html/rfc6749#section-4.3)), Experience Platform demande le nom d’utilisateur et le mot de passe de l’utilisateur. Dans le flux d’autorisation, Experience Platform échange ces informations d’identification contre un jeton d’accès et, éventuellement, un jeton d’actualisation.
 Adobe utilise les entrées standard ci-dessous pour simplifier la configuration de destination, avec la possibilité de remplacer des valeurs :
@@ -176,7 +176,7 @@ Pour configurer cette méthode d’autorisation pour la destination, ajoutez les
 
 {style="table-layout:auto"}
 
-## OAuth 2 avec octroi dʼinformations d’identification du client
+## OAuth 2 avec octroi dʼinformations d’identification du client {#oauth2-client-credentials-grant}
 
 Vous pouvez configurer des informations d’identification du client OAuth 2 (consultez la section [Spécifications des normes RFC](https://tools.ietf.org/html/rfc6749#section-4.4)), qui prend en charge les entrées et sorties standard répertoriées ci-dessous. Vous pouvez personnaliser les valeurs. Pour en savoir plus, consultez la section [Personnaliser votre configuration OAuth 2](#customize-configuration).
 
@@ -373,7 +373,7 @@ Vous pouvez utiliser les paramètres suivants dans `authenticationDataFields` po
 | `authenticationDataFields.isRequired` | Booléen | Indique si le champ de données personnalisé est obligatoire dans le flux d’autorisation. |
 | `authenticationDataFields.format` | Chaîne | Lorsque vous sélectionnez `"format":"password"`, Adobe chiffre la valeur du champ de données d’autorisation. Utilisé avec `"fieldType": "CUSTOMER"`, cela masque également l’entrée dans l’interface utilisateur quand l’utilisateur saisit le champ. |
 | `authenticationDataFields.fieldType` | Chaîne | Indique si l’entrée provient du partenaire (vous) ou de l’utilisateur, quand il configure la destination dans Experience Platform. |
-| `authenticationDataFields.value` | Chaîne. Booléen. Nombre entier | Valeur du champ de données personnalisé. La valeur correspond au type sélectionné parmi `authenticationDataFields.type`. |
+| `authenticationDataFields.value` | Chaîne. Booléen. Entier | Valeur du champ de données personnalisé. La valeur correspond au type sélectionné parmi `authenticationDataFields.type`. |
 | `authenticationDataFields.authenticationResponsePath` | Chaîne | Indique le champ du chemin de réponse de l’API que vous référencez. |
 
 {style="table-layout:auto"}

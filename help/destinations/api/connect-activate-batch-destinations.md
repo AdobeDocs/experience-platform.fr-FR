@@ -5,9 +5,9 @@ title: Se connecter aux destinations par lots et activer des données à l’aid
 description: Cette section contient des instructions détaillées sur l’utilisation de l’API Flow Service pour créer un espace de stockage par lots dans le cloud ou une destination de marketing par e-mail dans Experience Platform et activer les données.
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '3435'
+source-wordcount: '3431'
 ht-degree: 71%
 
 ---
@@ -15,19 +15,19 @@ ht-degree: 71%
 # Connectez-vous à des destinations de marketing par e-mail basées sur des fichiers et activez les données à l’aide de l’API Flow Service
 
 >[!IMPORTANT]
-> 
+>
 >* Pour vous connecter à une destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions).
 >
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 >
 >Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Ce tutoriel explique comment utiliser l’API Flow Service pour créer une [destination de marketing par e-mail](../catalog/email-marketing/overview.md) basée sur des fichiers, créer un flux de données vers la destination que vous venez de créer et exporter les données vers cette dernière au moyen de fichiers CSV.
 
 >[!TIP]
-> 
+>
 >Pour savoir comment activer des données vers des destinations d’espace de stockage à l’aide de l’API Flow Service, consultez le tutoriel [API dédiée](/help/destinations/api/activate-segments-file-based-destinations.md).
 
 Ce tutoriel utilise la destination [!DNL Adobe Campaign] dans tous ses exemples, mais les étapes sont identiques pour les destinations de marketing par e-mail basées sur des fichiers.
@@ -38,13 +38,13 @@ Si vous préférez utiliser l’interface utilisateur d’Experience Platform po
 
 ## Prise en main {#get-started}
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md) : [!DNL Adobe Experience Platform Segmentation Service] permet de créer des audiences dans [!DNL Adobe Experience Platform] à partir de vos données [!DNL Real-Time Customer Profile].
 * [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin afin d’activer des données vers des destinations par lots dans Experience Platform.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour activer des données vers des destinations par lots dans Experience Platform.
 
 ### Collecter les informations d’identification requises {#gather-required-credentials}
 
@@ -59,13 +59,13 @@ Pour suivre les étapes de ce tutoriel, vous devez disposer des informations d�
 >
 >Les informations d’identification `accessId`, `secretKey` pour les connexions [!DNL Amazon S3] et `accessId`, `secretKey` pour les connexions [!DNL Amazon S3] à [!DNL Adobe Campaign] sont identiques.
 
-### Lecture d’exemples d’appels API {#reading-sample-api-calls}
+### Lecture d&#39;exemples d&#39;appels API {#reading-sample-api-calls}
 
 Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
 
 ### Collecter des valeurs pour les en-têtes obligatoires et facultatifs {#gather-values-headers}
 
-Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`
@@ -144,7 +144,7 @@ Ensuite, vous devez vous connecter à vos données [!DNL Experience Platform] af
 1. Tout d’abord, vous devez effectuer un appel pour autoriser l’accès à vos données dans [!DNL Experience Platform], en établissant une connexion de base.
 2. Ensuite, à l’aide de l’identifiant de connexion de base, vous passerez un autre appel au cours duquel vous créerez une *connexion source* qui établira la connexion avec vos données [!DNL Experience Platform].
 
-### Autoriser l’accès à vos données dans [!DNL Experience Platform]
+### Autoriser l’accès à vos données dans [!DNL Experience Platform] {#authorize-access-experience-platform}
 
 **Format d’API**
 
@@ -551,7 +551,7 @@ Une réponse réussie contient l’identifiant unique de la connexion de base (`
 [!DNL Adobe Experience Platform] exporte des données pour les destinations de marketing par e-mail et de stockage dans le cloud sous la forme de fichiers [!DNL CSV]. Au cours de cette étape, vous pouvez déterminer le chemin d’accès à l’emplacement de stockage où les fichiers seront exportés.
 
 >[!IMPORTANT]
-> 
+>
 >[!DNL Adobe Experience Platform] divise automatiquement les fichiers d’exportation à 5 millions d’enregistrements (lignes) par fichier. Chaque ligne représente un profil.
 >
 >Les noms de fichiers fractionnés sont ajoutés avec un nombre indiquant que le fichier fait partie d’une exportation plus importante, comme : `filename.csv`, `filename_2.csv`, `filename_3.csv`.
@@ -1253,7 +1253,7 @@ La réponse renvoyée doit inclure dans le paramètre `transformations` les audi
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[&#x200B; consultez les sections &#x200B;](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[ consultez les sections ](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 

@@ -2,10 +2,10 @@
 description: Découvrez comment structurer un appel API pour créer une configuration de destination avec Adobe Experience Platform Destination SDK.
 title: Création d’une configuration de destination
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1213'
-ht-degree: 92%
+source-wordcount: '1210'
+ht-degree: 89%
 
 ---
 
@@ -34,7 +34,7 @@ Pour obtenir une description détaillée des fonctionnalités configurables avec
 
 ## Prise en main des opérations dʼAPI de configuration de destinations {#get-started}
 
-Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
+Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
 
 ## Création d’une configuration de destination {#create}
 
@@ -203,8 +203,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `customerDataFields.enum` | Chaîne | Rend le champ personnalisé sous forme de menu déroulant et répertorie les options disponibles pour l’utilisateur. <br/><br/> Pour en savoir plus sur les types d’authentification pris en charge, consultez les [champs de données client](../../functionality/destination-configuration/customer-data-fields.md). |
 | `customerDataFields.default` | Chaîne | Définit la valeur par défaut d’une liste `enum`. |
 | `customerDataFields.pattern` | Chaîne | Impose un modèle pour le champ personnalisé, le cas échéant. Utilisez des expressions régulières pour appliquer un modèle. Par exemple, si vos identifiants de client n’incluent pas de chiffres ou de traits de soulignement, saisissez `^[A-Za-z]+$` dans ce champ. <br/><br/> Pour en savoir plus sur les types d’authentification pris en charge, consultez les [champs de données client](../../functionality/destination-configuration/customer-data-fields.md). |
-| `uiAttributes.documentationLink` | Chaîne | Fait référence à la page de documentation du [Catalogue des destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=fr#catalog) pour votre destination. Utilisez `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, où `YOURDESTINATION` est le nom de votre destination. Par exemple, pour une destination appelée Moviestar, vous utiliseriez `https://www.adobe.com/go/destinations-moviestar-en`. Notez que ce lien ne fonctionne qu’une fois la destination mise en ligne par Adobe et la documentation publiée. <br/><br/> Pour en savoir plus sur ces paramètres, consultez les [attributs de l’interface utilisateur](../../functionality/destination-configuration/ui-attributes.md). ![Image de l’interface utilisateur Experience Platform montrant le lien vers la documentation.](../../assets/authoring-api/destination-configuration/documentation-url.png "URL de documentation"){width="100" zoomable="yes"} |
-| `uiAttributes.category` | Chaîne | Fait référence à la catégorie affectée à votre destination dans Adobe Experience Platform. Pour plus d’informations, consultez la section [Catégories de destinations](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=fr#destination-categories). Utilisez l’une des valeurs suivantes : `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. <br/><br/> Pour en savoir plus sur ces paramètres, consultez les [attributs de l’interface utilisateur](../../functionality/destination-configuration/ui-attributes.md). |
+| `uiAttributes.documentationLink` | Chaîne | Fait référence à la page de documentation du [Catalogue des destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html#catalog) pour votre destination. Utilisez `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, où `YOURDESTINATION` est le nom de votre destination. Par exemple, pour une destination appelée Moviestar, vous utiliseriez `https://www.adobe.com/go/destinations-moviestar-en`. Notez que ce lien ne fonctionne qu’une fois la destination mise en ligne par Adobe et la documentation publiée. <br/><br/> Pour en savoir plus sur ces paramètres, consultez les [attributs de l’interface utilisateur](../../functionality/destination-configuration/ui-attributes.md). ![Image de l’interface utilisateur Experience Platform montrant le lien vers la documentation.](../../assets/authoring-api/destination-configuration/documentation-url.png "URL de documentation"){width="100" zoomable="yes"} |
+| `uiAttributes.category` | Chaîne | Fait référence à la catégorie affectée à votre destination dans Adobe Experience Platform. Pour plus d’informations, consultez la section [Catégories de destinations](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html#destination-categories). Utilisez l’une des valeurs suivantes : `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. <br/><br/> Pour en savoir plus sur ces paramètres, consultez les [attributs de l’interface utilisateur](../../functionality/destination-configuration/ui-attributes.md). |
 | `uiAttributes.connectionType` | Chaîne | Type de connexion en fonction de la destination. Valeurs prises en charge : <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul> |
 | `uiAttributes.frequency` | Chaîne | Fait référence au type d’exportation des données pris en charge par la destination. Définissez-le sur `Streaming` quand les intégrations sont basées sur des API, ou sur `Batch` lorsque vous exportez des fichiers vers les destinations. |
 | `identityNamespaces.externalId.acceptsAttributes` | Booléen | Indique si la clientèle peut mapper des attributs de profil standard à l’identité que vous configurez. |
@@ -221,7 +221,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `schemaConfig.profileFields` | Tableau | Lorsque vous ajoutez des champs `profileFields` prédéfinis, comme illustré dans la configuration ci-dessus, les utilisateurs ont la possibilité de mapper les attributs Experience Platform aux attributs prédéfinis du côté de votre destination. |
 | `schemaConfig.profileRequired` | Booléen | Utilisez `true` si les utilisateurs doivent être en mesure de mapper les attributs de profil d’Experience Platform aux attributs personnalisés du côté de votre destination, comme indiqué dans l’exemple de configuration ci-dessus. |
 | `schemaConfig.segmentRequired` | Booléen | Utilisez toujours `segmentRequired:true`. |
-| `schemaConfig.identityRequired` | Booléen | Utilisez `true` si vous souhaitez que les utilisateurs puissent mapper des espaces de noms d’identité d’Experience Platform au schéma souhaité. |
+| `schemaConfig.identityRequired` | Booléen | Utilisez `true` si les utilisateurs et utilisatrices doivent être en mesure de mapper des espaces de noms d’identité d’Experience Platform à votre schéma souhaité. |
 
 {style="table-layout:auto"}
 
@@ -233,11 +233,11 @@ Une réponse réussie renvoie le statut HTTP 200 avec les détails de la config
 
 +++
 
-## Gestion des erreurs d’API
+## Gestion des erreurs d’API {#error-handling}
 
 Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes d’état API](../../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
-## Étapes suivantes
+## Étapes suivantes {#next-steps}
 
 Vous êtes arrivé au bout de ce document. À présent, vous savez comment créer une configuration de destination avec le point d’entrée `/authoring/destinations` Destination SDK de l’API.
 

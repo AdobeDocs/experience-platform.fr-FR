@@ -3,10 +3,10 @@ keywords: destinations;destination;page de détails des destinations;page de dé
 title: Afficher les détails de la destination
 description: La page de détails d’une destination individuelle fournit un aperçu des détails de la destination. Les détails de la destination incluent le nom de la destination, l’identifiant, les audiences mappées à la destination et les commandes permettant de modifier l’activation et d’activer et de désactiver le flux de données.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1286'
-ht-degree: 8%
+source-wordcount: '1222'
+ht-degree: 6%
 
 ---
 
@@ -18,13 +18,13 @@ Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez affiche
 
 >[!NOTE]
 >
->La page de détails des destinations fait partie de l’espace de travail [!UICONTROL Destinations] dans le [!DNL UI] [!DNL Experience Platform]. Consultez la présentation de l’espace de travail [[!UICONTROL Destinations]](./destinations-workspace.md) pour plus d’informations.
+>La page de détails des destinations fait partie de l’espace de travail [!UICONTROL Destinations] dans le [!DNL Experience Platform] de [!DNL UI]. Pour plus d’informations[[!UICONTROL Destinations] consultez la présentation de l’espace de travail ](./destinations-workspace.md) .
 
 ## Afficher les détails de la destination {#view-details}
 
 Suivez les étapes ci-dessous pour afficher plus de détails sur une destination existante. Vous pouvez trouver l’identifiant de destination d’une destination, l’utilisateur ou l’utilisatrice qui a créé la destination, la date de création, etc.
 
-1. Connectez-vous à l’[interface utilisateur Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Parcourir]** dans l’en-tête supérieur pour afficher vos destinations existantes.
+1. Connectez-vous à l’[interface utilisateur d’Experience Platform](https://platform.adobe.com/) puis sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Browse]** dans l’en-tête supérieur pour afficher vos destinations existantes.
 
    ![Parcourir les destinations](../assets/ui/details-page/browse-destinations.png)
 
@@ -54,31 +54,31 @@ Le tableau suivant couvre les commandes et les détails fournis par le rail de d
 
 | Élément du rail de droite | Description |
 | --- | --- |
-| [!UICONTROL Activer les audiences] | Sélectionnez ce contrôle pour modifier les audiences mappées à la destination, mettre à jour les plannings d’exportation ou ajouter et supprimer des attributs et des identités mappés. Pour plus d’informations[&#128279;](./activate-segment-streaming-destinations.md) consultez les guides sur l’activation des données d’audience vers des destinations de diffusion en continu d’audience, [l’activation des données d’audience vers des destinations basées sur des profils par lots](./activate-batch-profile-destinations.md) et [l’activation des données d’audience vers des destinations basées sur des profils de diffusion en continu](./activate-streaming-profile-destinations.md). |
-| [!UICONTROL Supprimer] | Permet de supprimer ce flux de données et de démapper les audiences qui ont été précédemment activées, le cas échéant. |
-| [!UICONTROL Nom de la destination] | Ce champ peut être modifié afin de mettre à jour le nom de la destination. |
-| [!UICONTROL Description] | Ce champ peut être modifié afin de mettre à jour ou d’ajouter une description facultative à la destination. |
+| [!UICONTROL Activate audiences] | Sélectionnez ce contrôle pour modifier les audiences mappées à la destination, mettre à jour les plannings d’exportation ou ajouter et supprimer des attributs et des identités mappés. Pour plus d’informations[ consultez les guides sur ](./activate-segment-streaming-destinations.md)l’activation des données d’audience vers des destinations de diffusion en continu d’audience, [l’activation des données d’audience vers des destinations basées sur des profils par lots](./activate-batch-profile-destinations.md) et [l’activation des données d’audience vers des destinations basées sur des profils de diffusion en continu](./activate-streaming-profile-destinations.md). |
+| [!UICONTROL Delete] | Permet de supprimer ce flux de données et de démapper les audiences qui ont été précédemment activées, le cas échéant. |
+| [!UICONTROL Destination name] | Ce champ peut être modifié pour mettre à jour le nom de la destination. |
+| [!UICONTROL Description] | Ce champ peut être modifié pour mettre à jour ou ajouter une description facultative à la destination. |
 | [!UICONTROL Destination] | Représente la plateforme de destination vers laquelle les audiences sont envoyées. Voir le [catalogue des destinations](../catalog/overview.md) pour plus d’informations. |
-| [!UICONTROL Statut] | Indique si la destination est activée ou désactivée. |
-| [!UICONTROL Actions marketing] | Indique les actions marketing (cas d’utilisation) qui s’appliquent à cette destination à des fins de gouvernance des données. |
-| [!UICONTROL Catégorie] | Indique le type de destination. Voir le [catalogue des destinations](../catalog/overview.md) pour plus d’informations. |
-| [!UICONTROL &#x200B; Type de connexion &#x200B;] | Indique le formulaire par lequel vos audiences sont envoyées à la destination. Les valeurs possibles sont les suivantes : [!UICONTROL Cookie] et [!UICONTROL Basé sur un profil]. |
-| [!UICONTROL Fréquence] | Indique la fréquence d’envoi des audiences vers la destination. Les valeurs possibles sont les suivantes : [!UICONTROL Streaming] et [!UICONTROL Batch]. |
-| [!UICONTROL Identité] | Représente l’espace de noms d’identité accepté par la destination, tel que `GAID`, `IDFA` ou `email`. Pour plus d’informations sur les espaces de noms d’identité acceptés, consultez la [&#x200B; présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md). |
-| [!UICONTROL Créé par] | Indique l’utilisateur ou l’utilisatrice qui a créé cette destination. |
-| [!UICONTROL Créé] | Indique la date et l’heure UTC auxquelles cette destination a été créée. |
+| [!UICONTROL Status] | Indique si la destination est activée ou désactivée. |
+| [!UICONTROL Marketing actions] | Indique les actions marketing (cas d’utilisation) qui s’appliquent à cette destination à des fins de gouvernance des données. |
+| [!UICONTROL Category] | Indique le type de destination. Voir le [catalogue des destinations](../catalog/overview.md) pour plus d’informations. |
+| [!UICONTROL Connection type] | Indique le formulaire par lequel vos audiences sont envoyées à la destination. Les valeurs possibles sont [!UICONTROL Cookie] et [!UICONTROL Profile-based]. |
+| [!UICONTROL Frequency] | Indique la fréquence d’envoi des audiences vers la destination. Les valeurs possibles sont [!UICONTROL Streaming] et [!UICONTROL Batch]. |
+| [!UICONTROL Identity] | Représente l’espace de noms d’identité accepté par la destination, tel que `GAID`, `IDFA` ou `email`. Pour plus d’informations sur les espaces de noms d’identité acceptés, consultez la [ présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md). |
+| [!UICONTROL Created by] | Indique l’utilisateur ou l’utilisatrice qui a créé cette destination. |
+| [!UICONTROL Created] | Indique la date et l’heure UTC auxquelles cette destination a été créée. |
 
 {style="table-layout:auto"}
 
-## Basculement [!UICONTROL Activé]/[!UICONTROL Désactivé] {#enabled-disabled-toggle}
+## Basculement [!UICONTROL Enabled]/[!UICONTROL Disabled] {#enabled-disabled-toggle}
 
-Vous pouvez utiliser le bouton (bascule) **[!UICONTROL Activé]/[!UICONTROL Désactivé]** pour démarrer et suspendre toutes les exportations de données vers la destination.
+Vous pouvez utiliser le bouton (bascule) **[!UICONTROL Enabled]/[!UICONTROL Disabled]** pour démarrer et suspendre toutes les exportations de données vers la destination.
 
 ![Activer ou désactiver le bouton (bascule) du flux de données](../assets/ui/details-page/enable-disable.png)
 
-## [!UICONTROL Exécutions de flux de données] {#dataflow-runs}
+## [!UICONTROL Dataflow runs] {#dataflow-runs}
 
-L’onglet [!UICONTROL Exécutions de flux de données] fournit des données de mesure sur vos exécutions de flux de données vers des destinations par lots et de diffusion en continu. Voir [Surveillance des flux de données](monitor-dataflows.md) pour obtenir des détails et des définitions de mesures.
+L’onglet [!UICONTROL Dataflow runs] fournit des données de mesure sur vos exécutions de flux de données vers des destinations par lots et de diffusion en continu. Voir [Surveillance des flux de données](monitor-dataflows.md) pour obtenir des détails et des définitions de mesures.
 
 >[!NOTE]
 >
@@ -93,31 +93,31 @@ Il existe une différence dans la durée affichée des exécutions de flux de do
 
 ### Destinations de diffusion en continu {#streaming}
 
-Bien que la **[!UICONTROL durée de traitement]** indiquée pour la plupart des exécutions de flux de données en continu soit d’environ quatre heures, comme illustré dans l’image ci-dessous, le temps de traitement réel de toute exécution de flux de données est beaucoup plus court. Les fenêtres d’exécution du flux de données restent ouvertes plus longtemps au cas où Experience Platform doit réessayer d’effectuer des appels vers la destination et s’assurer également de ne pas rater d’autres données en retard pour la même fenêtre temporelle.
+Bien que la **[!UICONTROL Processing duration]** indiquée pour la plupart des exécutions de flux de données en continu soit d’environ quatre heures, comme illustré dans l’image ci-dessous, le temps de traitement réel de toute exécution de flux de données est beaucoup plus court. Les fenêtres d’exécution du flux de données restent ouvertes plus longtemps au cas où Experience Platform doit réessayer d’effectuer des appels vers la destination et s’assurer également de ne pas rater d’autres données en retard pour la même fenêtre temporelle.
 
 ![Image de la page Exécutions de flux de données avec la colonne Heure de traitement mise en surbrillance pour une destination de diffusion en continu.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
 
-Pour plus d’informations, consultez la documentation sur la surveillance [&#x200B; sur les exécutions de flux de données vers des destinations de diffusion en streaming &#x200B;](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations).
+Pour plus d’informations, consultez la documentation sur la surveillance [ sur les exécutions de flux de données vers des destinations de diffusion en streaming ](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations).
 
 ### Destinations basées sur des fichiers {#file-based}
 
-Pour les exécutions de flux de données vers des destinations basées sur des fichiers, la **[!UICONTROL Durée du traitement]** dépend de la taille des données exportées et de la charge du système. Notez également que le flux de données s’exécute vers des destinations basées sur des fichiers et est réparti par audience.
+Pour les exécutions de flux de données vers des destinations basées sur des fichiers, la **[!UICONTROL Processing duration]** dépend de la taille des données exportées et du chargement du système. Notez également que le flux de données s’exécute vers des destinations basées sur des fichiers et est réparti par audience.
 
 ![Image de la page Exécution du flux de données avec la colonne Heure de traitement mise en surbrillance pour une destination basée sur des fichiers.](../assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
 Pour plus d’informations, consultez la documentation sur la surveillance [exécution de flux de données vers des destinations par lots (basées sur des fichiers)](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
 
-## [!UICONTROL Données d’activation] {#activation-data}
+## [!UICONTROL Activation data] {#activation-data}
 
-L’onglet **[!UICONTROL Données d’activation]** affiche la liste des audiences qui ont été mappées à la destination, y compris leur date de début et de fin (le cas échéant), ainsi que d’autres informations pertinentes pour l’exportation des données, telles que le type d’exportation, la planification et la fréquence. Pour afficher les détails d’une audience spécifique, sélectionnez son nom dans la liste.
+L’onglet **[!UICONTROL Activation data]** affiche une liste des audiences qui ont été mappées à la destination, y compris leur date de début et de fin (le cas échéant), ainsi que d’autres informations pertinentes pour l’exportation des données, telles que le type d’exportation, la planification et la fréquence. Pour afficher les détails d’une audience spécifique, sélectionnez son nom dans la liste.
 
 >[!TIP]
 >
->Pour afficher et modifier des détails sur les attributs et les identités mappés à une destination, sélectionnez **[!UICONTROL Activer les audiences]** dans le [rail de droite](#right-rail).
+>Pour afficher et modifier des détails sur les attributs et les identités mappés à une destination, sélectionnez **[!UICONTROL Activate audiences]** dans le [rail de droite](#right-rail).
 
 >[!BEGINSHADEBOX]
 
-Onglet **[!UICONTROL Données d’activation]** pour une destination basée sur des fichiers.
+Onglet **[!UICONTROL Activation data]** d’une destination basée sur des fichiers.
 
 ![Destination par lots de la vue de données d’activation](../assets/ui/details-page/activation-data-batch.png)
 
@@ -126,7 +126,7 @@ Onglet **[!UICONTROL Données d’activation]** pour une destination basée sur 
 
 >[!BEGINSHADEBOX]
 
-Onglet **[!UICONTROL Données d’activation]** pour une destination de diffusion en streaming.
+Onglet **[!UICONTROL Activation data]** d’une destination de diffusion en continu.
 
 ![Destination de diffusion en continu de la vue de données d’activation](../assets/ui/details-page/activation-data-streaming.png)
 
@@ -140,19 +140,19 @@ Pour filtrer la liste des audiences activées vers une destination, saisissez un
 
 ### Supprimer plusieurs audiences des flux d’activation {#bulk-remove}
 
-Pour supprimer plusieurs audiences des flux d’activation existants, sélectionnez les audiences, puis sélectionnez **[!UICONTROL Supprimer des audiences]**.
+Pour supprimer plusieurs audiences des flux d’activation existants, sélectionnez les audiences, puis sélectionnez **[!UICONTROL Remove audiences]**.
 
 ![Écran de données d’activation mettant en surbrillance l’option Supprimer des audiences.](../assets/ui/details-page/bulk-remove-audiences.png)
 
 ### Exporter plusieurs fichiers à la demande vers des destinations par lots {#bulk-export}
 
-Vous pouvez [exporter plusieurs fichiers à la demande](../ui/export-file-now.md) à partir de la page **[!UICONTROL Données d’activation]**. Pour ce faire, sélectionnez les audiences pour lesquelles vous souhaitez exporter des fichiers à la demande et sélectionnez le contrôle **[!UICONTROL Exporter le fichier maintenant]** pour déclencher une exportation unique qui enverra un fichier pour chaque audience sélectionnée vers votre destination par lots.
+Vous pouvez [exporter plusieurs fichiers à la demande](../ui/export-file-now.md) à partir de la page de **[!UICONTROL Activation data]**. Pour ce faire, sélectionnez les audiences pour lesquelles vous souhaitez exporter des fichiers à la demande et sélectionnez le contrôle **[!UICONTROL Export file now]** pour déclencher une exportation unique qui diffusera un fichier pour chaque audience sélectionnée vers votre destination par lots.
 
 ![Image mettant en surbrillance le bouton Exporter le fichier maintenant.](../assets/ui/details-page/bulk-export-file-now.png)
 
 ### Modifier les plannings d’activation pour plusieurs audiences exportées vers des destinations par lots {#bulk-edit-schedule}
 
-Pour modifier le planning d’activation existant de plusieurs audiences en même temps, sélectionnez les audiences souhaitées, puis sélectionnez **[!UICONTROL Modifier le planning]**. Pour plus d’informations sur la définition ou la modification d’un planning d’exportation, consultez la section [planifier l’exportation d’audiences](../ui/activate-batch-profile-destinations.md#scheduling).
+Pour modifier le planning d’activation existant de plusieurs audiences en même temps, sélectionnez les audiences de votre choix, puis sélectionnez **[!UICONTROL Edit schedule]**. Pour plus d’informations sur la définition ou la modification d’un planning d’exportation, consultez la section [planifier l’exportation d’audiences](../ui/activate-batch-profile-destinations.md#scheduling).
 
 ![Écran de données d’activation mettant en surbrillance l’option de modification des plannings d’activation pour plusieurs audiences.](../assets/ui/details-page/bulk-edit-schedule.png)
 
@@ -162,6 +162,6 @@ Pour modifier le planning d’activation existant de plusieurs audiences en mêm
 
 ### Modifier les noms de fichier pour plusieurs audiences exportées vers des destinations par lots {#bulk-edit-file-names}
 
-Pour modifier simultanément les noms de fichiers exportés de plusieurs audiences, sélectionnez les audiences souhaitées, puis sélectionnez **[!UICONTROL Modifier le nom du fichier]**. Pour plus d’informations sur la définition ou la modification d’un nom de fichier, consultez la section sur la [configuration des noms de fichier](../ui/activate-batch-profile-destinations.md#configure-file-names).
+Pour modifier simultanément les noms de fichiers exportés de plusieurs audiences, sélectionnez les audiences souhaitées, puis sélectionnez **[!UICONTROL Edit file name]**. Pour plus d’informations sur la définition ou la modification d’un nom de fichier, consultez la section sur la [configuration des noms de fichier](../ui/activate-batch-profile-destinations.md#configure-file-names).
 
 ![Écran de données d’activation mettant en surbrillance l’option de modification des noms de fichier pour plusieurs audiences.](../assets/ui/details-page/bulk-edit-file-name.png)

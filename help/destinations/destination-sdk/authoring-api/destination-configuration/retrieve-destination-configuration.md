@@ -2,10 +2,10 @@
 description: Cette page illustre comment l’appel API est utilisé pour récupérer une configuration de destination avec Adobe Experience Platform Destination SDK.
 title: Récupération d’une configuration de destination
 exl-id: aaf4cfa0-3e90-4fcc-b506-b84ff62b3027
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '368'
-ht-degree: 95%
+source-wordcount: '366'
+ht-degree: 86%
 
 ---
 
@@ -19,7 +19,7 @@ Cette page illustre la requête d’API et la payload que vous pouvez utiliser p
 
 ## Prise en main des opérations dʼAPI de configuration de destinations {#get-started}
 
-Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
+Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
 
 ## Récupération d’une configuration de destination {#retrieve}
 
@@ -190,6 +190,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | -------- | ----------- |
 | `{INSTANCE_ID}` | Identifiant de la configuration de destination à récupérer. |
 
+{style="table-layout:auto"}
+
 +++
 
 +++Réponse
@@ -308,7 +310,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec les détails de la config
 
 Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes d’état API](../../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
-## Étapes suivantes
+## Étapes suivantes {#next-steps}
 
 Vous êtes arrivé au bout de ce document. À présent, vous savez comment récupérer une configuration de destination avec le point d’entrée `/authoring/destinations` Destination SDK de l’API.
 

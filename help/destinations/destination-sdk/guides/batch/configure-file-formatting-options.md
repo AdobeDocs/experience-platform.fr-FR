@@ -1,36 +1,36 @@
 ---
-description: Configuration des options de formatage de fichier pour les destinations basées sur des fichiers
-title: Découvrez comment utiliser Destination SDK pour configurer les options de formatage de fichier pour les destinations basées sur des fichiers.
+description: Configurer des options de formatage de fichier pour les destinations basées sur des fichiers
+title: Découvrez comment utiliser Destination SDK pour configurer des options de formatage de fichier pour les destinations basées sur des fichiers.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '902'
 ht-degree: 22%
 
 ---
 
-# Configuration des options de formatage de fichier pour les destinations basées sur des fichiers
+# Configurer des options de formatage de fichier pour les destinations basées sur des fichiers
 
 ## Vue d’ensemble {#overview}
 
-Destination SDK vous permet d’ajuster considérablement les options de formatage et de compression de vos fichiers exportés, afin de répondre à toutes les exigences en aval de votre emplacement de stockage.
+Destination SDK vous permet d’ajuster considérablement les options de formatage et de compression des fichiers exportés, afin de répondre à toutes les exigences en aval de votre emplacement de stockage.
 
-Cette page décrit comment utiliser la Destination SDK pour configurer les options de formatage de fichier pour les destinations basées sur des fichiers.
+Cette page décrit comment utiliser Destination SDK pour configurer les options de formatage de fichier pour les destinations basées sur des fichiers.
 
 ## Conditions préalables {#prerequisites}
 
-Avant de passer aux étapes décrites ci-dessous, consultez la page [Prise en main de la Destination SDK](../../getting-started.md) pour plus d’informations sur l’obtention des informations d’identification d’authentification d’Adobe I/O nécessaires et d’autres conditions préalables requises pour utiliser les API Destination SDK.
+Avant de passer aux étapes décrites ci-dessous, veuillez lire la page de prise en main de Destination SDK [](../../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification Adobe I/O nécessaires et d’autres conditions préalables pour travailler avec les API Destination SDK.
 
-Adobe vous recommande également de lire et de vous familiariser avec la documentation suivante avant de poursuivre :
+Adobe vous recommande également de lire et de vous familiariser avec la documentation suivante avant de continuer :
 
-* Chaque option de mise en forme de fichier disponible est documentée en détail dans la section [configuration de mise en forme de fichier](../../functionality/destination-server/file-formatting.md) .
-* Suivez les étapes pour [configurer une destination basée sur un fichier](../../guides/configure-file-based-destination-instructions.md) à l’aide de Destination SDK.
+* Chaque option de formatage de fichier disponible est décrite en détail dans la section [configuration du formatage de fichier](../../functionality/destination-server/file-formatting.md).
+* Suivez les étapes de [configuration d’une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md) à l’aide de Destination SDK.
 
-## Création d’une configuration de serveur et de fichier {#create-server-file-configuration}
+## Créer une configuration de serveur et de fichier {#create-server-file-configuration}
 
-Commencez par utiliser le point de terminaison `/destination-server` pour déterminer les options de configuration de formatage de fichier que vous souhaitez configurer pour les fichiers exportés.
+Commencez par utiliser le point d’entrée `/destination-server` pour déterminer les options de configuration de formatage de fichier à configurer pour les fichiers exportés.
 
-Vous trouverez ci-dessous un exemple de configuration de serveur de destination pour une destination [!DNL Amazon S3], avec plusieurs options de mise en forme de fichier sélectionnées.
+Vous trouverez ci-dessous un exemple de configuration de serveur de destination pour une destination [!DNL Amazon S3], avec plusieurs options de formatage de fichier sélectionnées.
 
 **Format d’API**
 
@@ -98,25 +98,25 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }'
 ```
 
-## Ajouter les options de formatage de fichier à la configuration de destination {#create-destination-configuration}
+## Ajoutez les options de formatage de fichier à la configuration de destination {#create-destination-configuration}
 
 >[!TIP]
 >
->**Vérifiez l’interface utilisateur Experience Platform**. Lorsque vous configurez les options de formatage de fichier avec les configurations illustrées dans les sections ci-dessous, vous devez vérifier le rendu de ces options dans l’interface utilisateur de l’Experience Platform.
+>**Vérifier l’interface utilisateur d’Experience Platform**. Lorsque vous configurez les options de formatage de fichier avec les configurations présentées dans les sections ci-dessous, vous devez vérifier l’interface utilisateur d’Experience Platform pour savoir comment ces options sont rendues.
 
-Après avoir ajouté les options de formatage de fichier souhaitées à la configuration du serveur de destination et du formatage des fichiers à l’étape précédente, vous pouvez désormais utiliser le point de terminaison de l’API `/destinations` pour ajouter les champs de votre choix en tant que champs de données client à la configuration de destination.
+Après avoir ajouté les options de formatage de fichier souhaitées au serveur de destination et à la configuration de formatage de fichier à l’étape précédente, vous pouvez maintenant utiliser le point d’entrée de l’API `/destinations` pour ajouter les champs souhaités en tant que champs de données client à la configuration de destination.
 
 >[!IMPORTANT]
 >
->Cette étape est facultative et détermine uniquement les options de formatage de fichier qui doivent être affichées pour les utilisateurs dans l’interface utilisateur de l’Experience Platform. Si vous ne configurez pas les options de formatage de fichier en tant que champs de données client, les exportations de fichiers se dérouleront avec les valeurs par défaut configurées dans la [configuration du serveur et du fichier](#create-server-file-configuration).
+>Cette étape est facultative et elle détermine uniquement laquelle des options de formatage de fichier doit être présentée aux utilisateurs dans l’interface utilisateur d’Experience Platform. Si vous ne définissez pas d’options de formatage de fichier en tant que champs de données client, les exportations de fichiers se dérouleront avec les valeurs par défaut configurées dans la [configuration du serveur et du fichier](#create-server-file-configuration).
 
-Au cours de cette étape, vous pouvez regrouper les options affichées dans l’ordre de votre choix. Vous pouvez ainsi créer des regroupements personnalisés, des champs de liste déroulante et des regroupements conditionnels en fonction des types de fichiers sélectionnés. Tous ces paramètres sont affichés dans l’enregistrement et dans les sections ci-dessous.
+Au cours de cette étape, vous pouvez regrouper les options affichées dans l’ordre de votre choix, créer des regroupements personnalisés, des champs de liste déroulante et des regroupements conditionnels en fonction des types de fichiers sélectionnés. Tous ces paramètres sont affichés dans l’enregistrement et dans les sections ci-dessous.
 
-![Enregistrement d’écran présentant diverses options de formatage de fichier pour les fichiers de lot.](../../assets/guides/batch/file-formatting-options.gif)
+![Enregistrement d’écran affichant diverses options de formatage de fichier pour les fichiers par lots.](../../assets/guides/batch/file-formatting-options.gif)
 
-### Classer les options de formatage du fichier {#ordering}
+### Classer les options de formatage des fichiers {#ordering}
 
-L’ordre dans lequel vous ajoutez les options de formatage de fichier en tant que champs de données client dans la configuration de destination est reflété dans l’interface utilisateur. Par exemple, la configuration ci-dessous est reflétée en conséquence dans l’interface utilisateur, avec les options qui s’affichent dans l’ordre **[!UICONTROL Délimiteur]**, **[!UICONTROL Caractère de citation]**, **[!UICONTROL Caractère d’échappement]**, **[!UICONTROL Valeur vide]**, **[!UICONTROL Valeur nulle]**.
+L’ordre dans lequel vous ajoutez les options de formatage de fichier en tant que champs de données client dans la configuration de destination est reflété dans l’interface utilisateur. Par exemple, la configuration ci-dessous est reflétée en conséquence dans l’interface utilisateur, avec les options affichées dans l’ordre **[!UICONTROL Delimiter]**, **[!UICONTROL Quote Character]**, **[!UICONTROL Escape Character]**, **[!UICONTROL Empty Value]**, **[!UICONTROL Null Value]**.
 
 ![Image indiquant l’ordre des options de formatage de fichier dans l’interface utilisateur d’Experience Platform.](../../assets/guides/batch/file-formatting-order.png)
 
@@ -237,11 +237,11 @@ L’ordre dans lequel vous ajoutez les options de formatage de fichier en tant q
                 }
 ```
 
-### Regrouper les options de formatage de fichier {#grouping}
+### Regrouper les options de formatage des fichiers {#grouping}
 
-Vous pouvez regrouper plusieurs options de formatage de fichier dans une seule section. Lors de la configuration de la connexion à la destination dans l’interface utilisateur, l’utilisateur peut voir et bénéficier d’un regroupement visuel de champs similaires.
+Vous pouvez regrouper plusieurs options de formatage de fichier dans une seule section. Pendant la configuration de la connexion à la destination dans l’interface utilisateur, l’utilisateur peut voir et bénéficier d’un regroupement visuel par champs similaires.
 
-Pour ce faire, utilisez `"type": "object"` pour créer le groupe et collecter les options de formatage de fichier souhaitées dans un paramètre `properties`, comme illustré dans l’exemple ci-dessous, où le regroupement **[!UICONTROL CSV Options]** est mis en surbrillance.
+Pour ce faire, utilisez `"type": "object"` pour créer le groupe et collecter les options de formatage de fichier de votre choix dans un paramètre de `properties`, comme illustré dans l’exemple ci-dessous, où le **[!UICONTROL CSV Options]** de regroupement est mis en surbrillance.
 
 ```json {line-numbers="true" start-number="100" highlight="106-128"}
 "customerDataFields":[
@@ -279,7 +279,7 @@ Pour ce faire, utilisez `"type": "object"` pour créer le groupe et collecter le
 ]
 ```
 
-![Image présentant le regroupement des options CSV dans l’interface utilisateur.](../../assets/guides/batch/file-formatting-grouping.png)
+![Image illustrant le regroupement des options CSV dans l’interface utilisateur.](../../assets/guides/batch/file-formatting-grouping.png)
 
 ### Création de sélecteurs de liste déroulante pour les options de formatage de fichier {#dropdown-selectors}
 
@@ -326,9 +326,9 @@ Pour ce faire, utilisez l’objet `namedEnum` comme illustré ci-dessous et conf
 
 ![Enregistrement d’écran montrant un exemple de sélecteurs de liste déroulante créée avec la configuration affichée ci-dessus.](../../assets/guides/batch/dropdown-options-file-formatting.gif)
 
-### Création d’options de mise en forme de fichier conditionnelle {#conditional-options}
+### Créer des options de formatage de fichier conditionnel {#conditional-options}
 
-Vous pouvez créer des options de mise en forme de fichier conditionnel qui s’affichent dans le workflow d’activation uniquement lorsque l’utilisateur sélectionne un certain type de fichier à exporter. Par exemple, la configuration ci-dessous crée un regroupement conditionnel pour les options de fichier CSV. Les options de fichier CSV s’affichent uniquement quand l’utilisateur sélectionne CSV comme type de fichier souhaité pour l’exportation.
+Vous pouvez créer des options de formatage de fichier conditionnel qui s’affichent dans le workflow d’activation uniquement lorsque l’utilisateur sélectionne un certain type de fichier à exporter. Par exemple, la configuration ci-dessous crée un regroupement conditionnel pour les options de fichier CSV. Les options de fichier CSV s’affichent uniquement quand l’utilisateur sélectionne CSV comme type de fichier souhaité pour l’exportation.
 
 Pour définir un champ comme conditionnel, utilisez le paramètre `conditional` comme illustré ci-dessous :
 
@@ -487,7 +487,7 @@ Vous trouverez ci-dessous l’écran de l’interface utilisateur qui en résult
 
 ![Enregistrement d’écran affichant l’option de formatage de fichier conditionnel pour les fichiers CSV.](../../assets/guides/batch/conditional-file-formatting.gif)
 
-### Demande d’API complète incluant toutes les options ci-dessus
+### Effectuer la requête API qui inclut toutes les options affichées ci-dessus {#complete-api-request}
 
 La requête d’API ci-dessous combine dans une configuration toutes les options décrites dans les sections ci-dessus.
 
@@ -715,7 +715,7 @@ Une réponse réussie renvoie la configuration de destination, y compris l’ide
 
 ## Limites connues {#known-limitations}
 
-Une certaine combinaison d’options de formatage de fichier peut entraîner des résultats d’exportation de fichier indésirables.
+Une certaine combinaison d’options de formatage de fichier peut entraîner des résultats d’exportation de fichiers indésirables.
 Adobe recommande de ne pas sélectionner la combinaison d’options CSV suivante :
 
 ```
@@ -724,16 +724,16 @@ quote -> "
 emptyValue -> ""
 ```
 
-Pour illustrer cette limitation, envisagez d’exporter un fichier avec les valeurs ci-dessous :
+Pour illustrer la limitation, considérez l’exportation d’un fichier avec les valeurs ci-dessous :
 
 | prénom | nom | pays | state |
 |---------|----------|---------|--------|
-| Michael | Rose | USA | NY |
+| Michael | Rose | États-Unis | NY |
 | James | Smith |  | null |
 
 {style="table-layout:auto"}
 
-Cela entraînerait une sortie comme illustré ci-dessous. Notez comment la valeur nulle de la table est incorrectement exportée sous forme de guillemet avec échappement.
+Vous obtiendrez alors un résultat, comme illustré ci-dessous. Notez que la valeur nulle du tableau est incorrectement exportée en tant que guillemet d’échappement.
 
 ```csv
 Michael,Rose,USA,NY 
@@ -742,4 +742,4 @@ James,Smith,"","\"\""
 
 ## Étapes suivantes {#next-steps}
 
-En lisant cet article, vous savez maintenant comment configurer des options de formatage de fichier personnalisées pour vos fichiers exportés, à l’aide de Destination SDK. Ensuite, votre équipe peut utiliser le [workflow d’activation pour les destinations basées sur des fichiers](../../../ui/activate-batch-profile-destinations.md) pour exporter des données vers la destination.
+Vous êtes arrivé au bout de cet article. À présent, vous savez comment configurer des options de formatage de fichier personnalisées pour les fichiers exportés à l’aide de Destination SDK. Ensuite, votre équipe peut utiliser le [workflow d’activation pour les destinations basées sur des fichiers](../../../ui/activate-batch-profile-destinations.md) pour exporter des données vers la destination.

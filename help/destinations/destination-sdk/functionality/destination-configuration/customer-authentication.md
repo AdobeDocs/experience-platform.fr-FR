@@ -2,10 +2,10 @@
 description: Découvrez comment configurer un mécanisme d’authentification pour la destination et déterminez ce que les utilisateurs verront dans l’interface utilisateur en fonction de la méthode d’authentification que vous sélectionnez.
 title: Configuration de l’authentification du client
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1103'
-ht-degree: 91%
+source-wordcount: '1094'
+ht-degree: 88%
 
 ---
 
@@ -53,6 +53,8 @@ Pour en savoir plus sur les types d’intégration qui prennent en charge les fo
 |---|---|
 | Intégrations en temps réel (streaming) | Oui |
 | Intégrations basées sur des fichiers (par lots) | Oui |
+
+{style="table-layout:auto"}
 
 ## Configuration des règles d’authentification {#authentication-rule}
 
@@ -103,9 +105,9 @@ Pour configurer l’authentification de type porteur pour la destination, config
 ]
 ```
 
-## Authentification OAuth 2 {#oauth2}
+## Authentification OAuth 2 {#oauth2}
 
-Les utilisateurs sélectionnent **[!UICONTROL Se connecter à la destination]** pour déclencher le flux d’authentification OAuth 2 vers votre destination, comme illustré dans l’exemple ci-dessous pour la destination Audiences personnalisées de Twitter. Pour plus d’informations sur la configuration de l’authentification OAuth 2 à votre point d’entrée de destination, consultez la page [Authentification OAuth 2 de Destination SDK](oauth2-authorization.md).
+Les utilisateurs sélectionnent **[!UICONTROL Connect to destination]** pour déclencher le flux d’authentification OAuth 2 vers votre destination, comme illustré dans l’exemple ci-dessous pour la destination Audiences personnalisées de Twitter. Pour plus d’informations sur la configuration de l’authentification OAuth 2 à votre point d’entrée de destination, consultez la page [Authentification OAuth 2 de Destination SDK](oauth2-authorization.md).
 
 ![Rendu de l’interface utilisateur avec authentification OAuth 2](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
@@ -161,7 +163,7 @@ L’authentification [!DNL Azure Data Lake Storage] est prise en charge pour les
 
 Quand vous configurez le type d’authentification[!DNL Azure Data Lake Storage], les utilisateurs doivent saisir les informations d’identification d’Azure Service Principal et leurs informations de client.
 
-![[!DNL Azure Data Lake Storage]Rendu de l’interface utilisateur avec authentification &#x200B;](../../assets/functionality/destination-configuration/adls-authentication-ui.png)
+![[!DNL Azure Data Lake Storage]Rendu de l’interface utilisateur avec authentification ](../../assets/functionality/destination-configuration/adls-authentication-ui.png)
 
 Pour configurer l’authentification [!DNL Azure Data Lake Storage] (ADLS) de la destination, configurez le paramètre `customerAuthenticationConfigurations` du point d’entrée `/destinations` comme illustré ci-dessous :
 
@@ -173,7 +175,7 @@ Pour configurer l’authentification [!DNL Azure Data Lake Storage] (ADLS) de la
 ]
 ```
 
-## SFTP avec authentification par mot de passe
+## SFTP avec authentification par mot de passe {#sftp-password-auth}
 
 L’authentification [!DNL SFTP] avec mot de passe est prise en charge pour les destinations basées sur des fichiers dans Experience Platform.
 
@@ -191,7 +193,7 @@ Pour configurer l’authentification SFTP avec le mot de passe de la destination
 ]
 ```
 
-## SFTP avec authentification par clé SSH
+## SFTP avec authentification par clé SSH {#sftp-ssh-key-auth}
 
 L’authentification [!DNL SFTP] avec la clé [!DNL SSH] est prise en charge pour les destinations basées sur des fichiers dans Experience Platform.
 
@@ -213,7 +215,7 @@ Pour configurer l’authentification SFTP avec la clé SSH pour la destination, 
 
 L’authentification [!DNL Google Cloud Storage] est prise en charge pour les destinations basées sur des fichiers dans Experience Platform.
 
-Quand vous configurez le type d’authentification [!DNL Google Cloud Storage], les utilisateurs doivent saisir leur [!UICONTROL identifiant de clé d’accès] [!DNL Google Cloud Storage] et leur [!UICONTROL clé d’accès secrète].
+Lorsque vous configurez le type d’authentification [!DNL Google Cloud Storage], les utilisateurs doivent saisir leurs [!DNL Google Cloud Storage] et [!UICONTROL access key ID] [!UICONTROL secret access key].
 
 ![Rendu de l’interface utilisateur avec l’authentification Google Cloud Storage](../../assets/functionality/destination-configuration/google-cloud-storage-ui.png)
 

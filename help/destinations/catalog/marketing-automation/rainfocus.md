@@ -3,10 +3,10 @@ title: Profils des participants à Rainfocus
 description: Découvrez comment utiliser le connecteur de destination Profils de participants RainFocus pour synchroniser les profils d’audience avec le profil de participant global RainFocus.
 last-substantial-update: 2024-12-17T00:00:00Z
 exl-id: 27c3848c-411a-4305-a5d5-00b145b95287
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1101'
-ht-degree: 34%
+source-wordcount: '1091'
+ht-degree: 31%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 34%
 
 ## Vue d’ensemble {#overview}
 
-Utilisez la destination [!DNL RainFocus Attendee Profiles] pour diffuser des profils clientèle d’Adobe Experience Platform vers la plateforme [!DNL RainFocus] afin de créer et de mettre à jour des profils de participantes et participants.
+Utilisez la destination [!DNL RainFocus Attendee Profiles] pour diffuser des profils clients de Adobe Experience Platform vers la plateforme [!DNL RainFocus] afin de créer et de mettre à jour des profils de participants.
 
 >[!IMPORTANT]
 >
->Le connecteur de destination et la page de documentation sont créés et gérés par l’équipe [!DNL RainFocus]. Pour toute demande de renseignements ou de mise à jour, veuillez communiquer directement avec eux à l&#39;adresse `clientcare@rainfocus.com` ou visiter le Centre d&#39;aide [RainFocus](https://help.rainfocus.com/hc/en-us).
+>Le connecteur de destination et la page de documentation sont créés et gérés par l’équipe [!DNL RainFocus]. Pour toute demande de renseignements ou de mise à jour, communiquez directement avec eux à l&#39;adresse `clientcare@rainfocus.com` ou visitez le Centre d&#39;aide [RainFocus](https://help.rainfocus.com/hc/en-us).
 
 ## Cas d’utilisation {#use-cases}
 
@@ -26,7 +26,7 @@ Pour mieux comprendre quand et comment utiliser la destination RainFocus, consul
 
 ### Cas d’utilisation #1 {#use-case-1}
 
-Une grande entreprise technologique est sur le point de s’inscrire pour sa prochaine exposition internationale et souhaite envoyer les profils clients vers [!DNL RainFocus] afin de rationaliser le processus d’inscription.
+Une grande entreprise technologique est sur le point de s’inscrire pour sa prochaine exposition internationale et souhaite inciter les profils clients à [!DNL RainFocus] afin de rationaliser le processus d’inscription.
 
 ### Cas d’utilisation #2 {#use-case-2}
 
@@ -71,7 +71,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -91,7 +91,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 ## Se connecter à la destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Pour vous connecter à la destination, vous avez besoin des autorisations **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
@@ -123,13 +123,13 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
 
-## Activer des segments vers cette destination {#activate}
+## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
-> 
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>
+>* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
-Consultez [Activer les profils et les segments vers les destinations d’exportation de segments de diffusion en continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Lisez [Activer des audiences vers des destinations de diffusion en streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Mapper les attributs et les identités {#map}
 
@@ -172,4 +172,4 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ## Ressources supplémentaires {#additional-resources}
 
-* [&#x200B; Connecteur Source de streaming RainFocus &#x200B;](https://experienceleague.adobe.com/fr/docs/experience-platform/sources/connectors/analytics/rainfocus)
+* [ Connecteur Source de streaming RainFocus ](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/analytics/rainfocus)

@@ -3,9 +3,9 @@ title: Activer les audiences de compte vers les destinations
 type: Tutorial
 description: Découvrez comment activer les audiences de compte vers les destinations
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '772'
 ht-degree: 6%
 
 ---
@@ -24,7 +24,7 @@ Accédez à **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, puis s
 
 ![Destinations qui prennent en charge les audiences de compte.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
-## Vue d’ensemble des vidéos
+## Vue d’ensemble des vidéos {#video-overview}
 
 Regardez la vidéo ci-dessous pour obtenir un aperçu sur la création et l’activation des audiences de compte, ainsi que sur les cas d’utilisation pris en charge lors de l’activation des audiences de compte.
 
@@ -69,17 +69,21 @@ Suivez les instructions pour sélectionner une destination vers laquelle vous po
 
 ## Sélectionner les audiences de votre compte {#select-account-audiences}
 
-Utilisez les cases à cocher situées à gauche des noms des audiences de compte pour sélectionner les audiences que vous souhaitez exporter vers la destination, puis sélectionnez **[!UICONTROL Next]**. Notez que seules les *audiences de compte* s’affichent dans cette vue, et aucun autre type d’audience ne s’affiche.
+Utilisez les cases à cocher situées à gauche des noms des audiences de compte pour sélectionner les audiences que vous souhaitez exporter vers la destination, puis sélectionnez **[!UICONTROL Next]**.
+
+>[!NOTE]
+>
+>Seules les *audiences de compte* s’affichent dans cette vue, et aucun autre type d’audience ne s’affiche.
 
 ![Workflow d’exportation des jeux de données présentant l’étape de sélection des audiences permettant de sélectionner les audiences de compte à exporter.](/help/destinations/assets/ui/activate-account-audiences/select-account-audiences.png)
 
-## Planification et étapes suivantes
+## Planification et étapes suivantes {#scheduling-and-next-steps}
 
 Pour le reste du workflow d’activation afin d’exporter les audiences de compte, consultez le tutoriel sur l’activation des données vers des destinations basées sur des fichiers. Continuez à partir de l’étape [planifier l’exportation de l’audience](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling). Si vous activez des audiences de compte vers la destination **[!UICONTROL (Companies) LinkedIn Matched Audiences]**, consultez le tutoriel sur l’activation des destinations de diffusion en streaming. Passez à l’étape [Mappage](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
 
 >[!NOTE]
 >
->Notez que lors de l’étape de planification lors de l’exportation d’audiences de compte vers des destinations d’espace de stockage, le workflow d’activation des audiences de compte ne vous permet d’exporter que des [fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et des [fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _selon un planning quotidien_. Les exportations horaires ne sont pas prises en charge. Notez également que **[!UICONTROL After audience evaluation]** est le seul type d’évaluation pris en charge.
+>À l’étape de planification lors de l’exportation d’audiences de compte vers des destinations d’espace de stockage, le workflow d’activation des audiences de compte vous permet uniquement d’exporter des [fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et des [fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _selon un planning quotidien_. Les exportations horaires ne sont pas prises en charge. **[!UICONTROL After audience evaluation]** est le seul type d’évaluation pris en charge.
 
 ## Légendes importantes et limites connues {#important-callouts-known-limitations}
 
@@ -95,6 +99,8 @@ Lors de l’activation des audiences de compte vers la destination **[!UICONTROL
 |---------|----------|
 | `accountName` | `companyName` |
 | `accountKey.sourceKey` | `primaryId` (sélectionnez ce champ dans la vue **[!UICONTROL Select Identity namespace]** lors de la sélection du **[!UICONTROL Target Field]**). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences de compte vers les destinations.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences de compte vers les destinations."){width="100" zoomable="yes"} |
+
+{style="table-layout:auto"}
 
 ### Application de la gouvernance des données {#data-governance-enforcement}
 

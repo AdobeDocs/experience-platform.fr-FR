@@ -3,16 +3,16 @@ title: Activer les audiences vers des destinations sélectionnées en fonction d
 type: Tutorial
 description: Découvrez comment activer des audiences de Adobe Experience Platform vers des destinations TV et audio connectées, ainsi que d’autres intégrations à l’aide de l’identifiant de rampe LiveRamp.
 exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '660'
 ht-degree: 1%
 
 ---
 
 # Activer les audiences vers des destinations sélectionnées en fonction des identifiants LiveRamp
 
-Utilisez l’intégration d’Adobe Real-Time CDP à [!DNL LiveRamp] pour activer les audiences vers une liste sélectionnée de destinations qui utilisent [[!DNL [LiveRamp RampID]]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) pour l’activation, y compris les destinations TV et audio connectées, telles que celles répertoriées ci-dessous.
+Utilisez l’intégration d’Adobe Real-Time CDP à [!DNL LiveRamp] pour activer les audiences vers une liste sélectionnée de destinations qui utilisent [!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) pour l’activation, y compris les destinations TV et audio connectées, telles que celles répertoriées ci-dessous.
 
 >[!IMPORTANT]
 >
@@ -62,7 +62,7 @@ Après avoir exporté vos audiences, vous pouvez les activer à l’aide de la d
 
 Regardez la vidéo ci-dessous pour une explication de bout en bout du workflow décrit dans cette page.
 
->[!VIDEO](https://video.tv.adobe.com/v/3452657?captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/3425367)
 
 ### Étape 1 : envoyer vos audiences d’Experience Platform vers LiveRamp, via la destination [!DNL LiveRamp - Onboarding] {#onboarding}
 
@@ -103,7 +103,7 @@ Lorsque vous configurez la destination **[!DNL LiveRamp - Distribution]**, vous 
 
 >[!TIP]
 >
->Lorsque vous attribuez un nom à une destination, Adobe recommande de suivre le format suivant : `LiveRamp - Downstream Destination Name`. Ce modèle de dénomination vous permet d’identifier rapidement vos destinations dans l’onglet [&#x200B; Parcourir &#x200B;](../ui/destinations-workspace.md#browse) de l’espace de travail des destinations.
+>Lorsque vous attribuez un nom à une destination, Adobe recommande de suivre le format suivant : `LiveRamp - Downstream Destination Name`. Ce modèle de dénomination vous permet d’identifier rapidement vos destinations dans l’onglet [ Parcourir ](../ui/destinations-workspace.md#browse) de l’espace de travail des destinations.
 ><br>
 >Exemple : `LiveRamp - Roku`.
 

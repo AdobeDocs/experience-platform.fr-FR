@@ -4,22 +4,22 @@ title: Modifier des connexions de destination à l’aide de l’API Flow Servic
 type: Tutorial
 description: Découvrez comment modifier divers composants d’une connexion de destination à l’aide de l’API Flow Service.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: ea397360e5277bef478b2173bfb5e4be4ac1fab4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 26%
+source-wordcount: '1610'
+ht-degree: 25%
 
 ---
 
 # Modifier des connexions de destination à l’aide de l’API Flow Service
 
-Ce tutoriel décrit les étapes à suivre pour modifier divers composants d’une connexion à la destination. Découvrez comment mettre à jour les informations d’authentification, l’emplacement d’exportation, etc. à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour modifier divers composants d’une connexion à la destination. Découvrez comment mettre à jour les informations d’authentification, l’emplacement d’exportation, etc. à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
 > Les opérations de modification décrites dans ce tutoriel sont également prises en charge dans l’interface utilisateur d’Experience Platform. Pour plus d’informations, consultez le tutoriel sur la [modification de destinations dans l’interface utilisateur](/help/destinations/ui/edit-destination.md).
 
-## Commencer {#get-started}
+## Prise en main {#get-started}
 
 Ce tutoriel nécessite que vous disposiez d’un identifiant de flux de données valide. Si vous ne disposez pas d’un identifiant de flux de données valide, sélectionnez la destination de votre choix dans le [catalogue des destinations](../catalog/overview.md) et suivez les étapes décrites pour [se connecter à la destination](../ui/connect-destination.md) et [activer les données](../ui/activation-overview.md) avant de lancer ce tutoriel.
 
@@ -32,15 +32,15 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 * [Destinations](../home.md) : les [!DNL Destinations] sont des intégrations préconfigurées aux plateformes de destination qui permettent l’activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 * [Sandbox](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour réussir la mise à jour de votre flux de données à l’aide de l’API [!DNL Flow Service].
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour réussir la mise à jour de votre flux de données à l’aide de l’API [!DNL Flow Service].
 
-### Lecture d’exemples d’appels API {#reading-sample-api-calls}
+### Lecture d&#39;exemples d&#39;appels API {#reading-sample-api-calls}
 
 Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage d’Experience Platform.
 
 ### Collecte des valeurs des en-têtes requis {#gather-values-for-required-headers}
 
-Pour lancer des appels aux API Experience Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
+Pour lancer des appels aux API Experience Platform, vous devez d’abord suivre le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -64,7 +64,7 @@ La première étape de la modification de votre connexion de destination consist
 
 >[!TIP]
 >
->Vous pouvez utiliser l’interface utilisateur d’Experience Platform pour obtenir l’identifiant de flux de données souhaité d’une destination. Accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]**, sélectionnez le flux de données de destination souhaité et recherchez l’identifiant de destination dans le rail de droite. L’identifiant de destination est la valeur que vous utiliserez comme identifiant de flux à l’étape suivante.
+>Vous pouvez utiliser l’interface utilisateur d’Experience Platform pour obtenir l’identifiant de flux de données souhaité d’une destination. Accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, sélectionnez le flux de données de destination souhaité et recherchez l’identifiant de destination dans le rail de droite. L’identifiant de destination est la valeur que vous utiliserez comme identifiant de flux à l’étape suivante.
 >
 > ![Obtenir l’identifiant de destination à l’aide de l’interface utilisateur d’Experience Platform](/help/destinations/assets/api/edit-destination/get-destination-id.png)
 
@@ -79,6 +79,8 @@ GET /flows/{FLOW_ID}
 | Paramètre | Description |
 | --------- | ----------- |
 | `{FLOW_ID}` | Valeur `id` unique pour le flux de données de destination que vous souhaitez récupérer. |
+
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -233,6 +235,8 @@ curl -X PATCH \
 | `path` | Définit la partie du flux à mettre à jour. |
 | `value` | Nouvelle valeur avec laquelle vous souhaitez mettre à jour votre paramètre. |
 
+{style="table-layout:auto"}
+
 **Réponse**
 
 Une réponse réussie renvoie votre identifiant de connexion cible et une Etag mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à l’API [!DNL Flow Service] et en fournissant votre identifiant de connexion cible.
@@ -248,7 +252,7 @@ Une réponse réussie renvoie votre identifiant de connexion cible et une Etag m
 
 **Requête**
 
-La requête suivante met à jour les paramètres d’une connexion [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) ou [[!DNL Google Ad Manager 360] destination](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) pour ajouter le nouveau champ [**[!UICONTROL Ajouter l’ID d’audience au nom de l’audience]**](/help/release-notes/2023/april-2023.md#destinations).
+La requête suivante met à jour les paramètres d’une connexion [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) ou [[!DNL Google Ad Manager 360] destination](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) pour ajouter le nouveau champ [**[!UICONTROL Append audience ID to audience name]**](/help/release-notes/2023/april-2023.md#destinations).
 
 ```shell
 curl -X PATCH \
@@ -273,6 +277,8 @@ curl -X PATCH \
 | `path` | Définit la partie du flux à mettre à jour. |
 | `value` | Nouvelle valeur avec laquelle vous souhaitez mettre à jour votre paramètre. |
 
+{style="table-layout:auto"}
+
 **Réponse**
 
 Une réponse réussie renvoie votre identifiant de connexion cible et une etag mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à l’API [!DNL Flow Service] et en fournissant votre identifiant de connexion cible.
@@ -288,7 +294,7 @@ Une réponse réussie renvoie votre identifiant de connexion cible et une etag m
 
 **Requête**
 
-La requête suivante met à jour le paramètre `advertiserId` d’une [[!DNL Pinterest]  connexion de destination &#x200B;](/help/destinations/catalog/advertising/pinterest.md#parameters).
+La requête suivante met à jour le paramètre `advertiserId` d’une [[!DNL Pinterest]  connexion de destination ](/help/destinations/catalog/advertising/pinterest.md#parameters).
 
 ```shell
 curl -X PATCH \
@@ -314,6 +320,8 @@ curl -X PATCH \
 | `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. |
 | `path` | Définit la partie du flux à mettre à jour. |
 | `value` | Nouvelle valeur avec laquelle vous souhaitez mettre à jour votre paramètre. |
+
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -392,6 +400,8 @@ curl -X PATCH \
 | `path` | Définit la partie du flux à mettre à jour. |
 | `value` | Nouvelle valeur avec laquelle vous souhaitez mettre à jour votre paramètre. |
 
+{style="table-layout:auto"}
+
 **Réponse**
 
 Une réponse réussie renvoie votre identifiant de connexion de base et une balise dʼentité mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à l’API [!DNL Flow Service] et en fournissant votre identifiant de connexion de base.
@@ -434,6 +444,8 @@ curl -X PATCH \
 | `path` | Définit la partie du flux à mettre à jour. |
 | `value` | Nouvelle valeur avec laquelle vous souhaitez mettre à jour votre paramètre. |
 
+{style="table-layout:auto"}
+
 **Réponse**
 
 Une réponse réussie renvoie votre identifiant de connexion de base et une balise dʼentité mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à l’API [!DNL Flow Service] et en fournissant votre identifiant de connexion de base.
@@ -451,7 +463,7 @@ Une réponse réussie renvoie votre identifiant de connexion de base et une bali
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[&#x200B; consultez les sections &#x200B;](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[ consultez les sections ](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 

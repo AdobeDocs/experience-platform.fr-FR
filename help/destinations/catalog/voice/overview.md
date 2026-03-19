@@ -3,7 +3,7 @@ keywords: destinations vocales;destinations vocales
 title: Présentation des destinations de voix du client
 description: Les plateformes vocales collectent et regroupent des données issues de diverses sources, y compris des messages vocaux, des données d’appel et des conversations en ligne. Les informations regroupées peuvent être filtrées et analysées pour permettre aux entreprises d’optimiser leur site web en fonction de leurs besoins.
 exl-id: f4e9ffea-5429-42ca-9075-562686ba3179
-source-git-commit: be2d4e5d1f204feefc7acb7cb4518044ab3f153a
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 83%
@@ -12,7 +12,7 @@ ht-degree: 83%
 
 # Présentation des destinations de voix du client {#voice-of-customer-destinations}
 
-## Vue d’ensemble
+## Vue d’ensemble {#overview}
 
 Les plateformes vocales collectent et regroupent des données issues de diverses sources, y compris des messages vocaux, des données d’appel et des conversations en ligne. Les informations regroupées peuvent être filtrées et analysées pour permettre aux entreprises d’optimiser leur site web en fonction de leurs besoins.
 

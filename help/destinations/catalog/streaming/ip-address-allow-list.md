@@ -2,11 +2,11 @@
 keywords: Adresses IP, plage d’adresses IP, destinations de liste autorisée placer sur la liste autorisée place sur la liste autorisée,,
 title: Liste autorisée d’adresses IP pour les destinations en flux continu
 type: Documentation
-description: Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre liste autorisée de données pour exporter en toute sécurité des données d’Experience Platform vers votre point d’entrée de l’API HTTP REST ou votre instance Amazon Kinesis.
+description: Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre place sur la liste autorisée pour exporter en toute sécurité des données d’Experience Platform vers votre point d’entrée de l’API HTTP REST ou votre instance Amazon Kinesis.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 6d59d0555dda124acfd16483e11c2899ff5c846e
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '424'
 ht-degree: 5%
 
 ---
@@ -41,7 +41,7 @@ Vous pouvez définir des contrôles d’accès réseau via votre pare-feu résea
 
 Si votre politique d’organisation exige que vous ajoutiez des adresses IP pour le trafic entrant, vous devez ajouter les plages d’adresses IP des catégories suivantes à votre placer sur la liste autorisée place sur la liste autorisée avant d’utiliser les destinations mentionnées ci-dessus sur cette page :
 
-1. Toutes les [&#x200B; adresses IP globales &#x200B;](#global)
+1. Toutes les [ adresses IP globales ](#global)
 2. Outre les adresses IP globales, ajoutez les adresses IP correspondant à la région dans laquelle vous avez reçu les privilèges d’accès, à partir de la liste située plus bas sur la page. Si vous n’ajoutez pas votre plage d’adresses IP spécifique à une région à votre place sur la liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de ces destinations de diffusion en streaming.
 
 ## Adresses IP globales {#global}

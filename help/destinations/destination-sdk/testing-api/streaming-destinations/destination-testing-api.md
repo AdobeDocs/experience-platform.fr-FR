@@ -2,10 +2,10 @@
 description: Découvrez comment utiliser l’API de test de destination pour tester si la destination de diffusion en streaming est configurée correctement et pour vérifier l’intégrité des flux de données vers la destination configurée.
 title: Test de la destination de diffusion en streaming avec des profils types
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '607'
-ht-degree: 99%
+source-wordcount: '603'
+ht-degree: 90%
 
 ---
 
@@ -26,13 +26,13 @@ Vous pouvez utiliser la [génération de ’profils types API](sample-profile-ge
 
 >[!IMPORTANT]
 >
->* Pour utiliser cette API, vous devez disposer d’une connexion existante vers la destination dans l’interface utilisateur d’Experience Platform. Pour plus d’informations, consultez la documentation [Se connecter à la destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=fr) et [Activer des profils et des audiences vers cette destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=fr).
->* Après avoir établi la connexion à la destination, obtenez l’identifiant d’instance de destination que vous devez utiliser dans les appels API vers ce point d’entrée pendant la [recherche d’une connexion avec la destination &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=fr).
->  &#x200B;>![Image de l’interface illustrant comment obtenir l’identifiant d’instance de destination](../../assets/testing-api/get-destination-instance-id.png)
+>* Pour utiliser cette API, vous devez disposer d’une connexion existante vers la destination dans l’interface utilisateur d’Experience Platform. Pour plus d’informations, consultez la documentation [Se connecter à la destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=fr) et [Activer des profils et des audiences vers cette destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html).
+>* Après avoir établi la connexion à la destination, obtenez l’identifiant d’instance de destination que vous devez utiliser dans les appels API vers ce point d’entrée pendant la [recherche d’une connexion avec la destination ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
+>![Image de l’interface illustrant comment obtenir l’identifiant d’instance de destination](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Prise en main des opérations dʼAPI de test de destination {#get-started}
 
-Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
+Avant de poursuivre, consultez le [guide de prise en main](../../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
 
 ## Test de la configuration de la destination sans ajout de profils à l’appel {#test-without-adding-profiles}
 
@@ -324,6 +324,6 @@ Une réponse réussie renvoie le statut HTTP 200 avec la réponse de l’API pr
 
 Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes dʼétat d’API](../../../../landing/troubleshooting.md#api-status-codes) et [Erreurs dʼen-tête de requête](../../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.
 
-## Étapes suivantes
+## Étapes suivantes {#next-steps}
 
 Vous êtes arrivé au bout de ce document. À présent, vous savez comment tester la destination. Vous pouvez désormais utiliser le [processus de documentation en libre-service](../../docs-framework/documentation-instructions.md) d’Adobe pour créer une page de documentation pour la destination.

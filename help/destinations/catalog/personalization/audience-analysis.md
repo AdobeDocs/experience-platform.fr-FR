@@ -5,7 +5,7 @@ badgeLimitedAvailability: label="Disponibilité limitée" type="Informative"
 exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
 hide: true
 hidefromtoc: true
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '892'
 ht-degree: 28%
@@ -14,13 +14,13 @@ ht-degree: 28%
 
 # Destination de l’analyse de l’audience
 
-La destination [!UICONTROL Audience Analysis] vous permet d’enrichir les données d’audience Adobe Experience Platform en [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=fr). Vous pouvez sélectionner les audiences à inclure dans les données enrichies résultantes. Les qualifications d’audience sont alors disponibles en tant que dimensions dans les rapports [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=fr).
+La destination [!UICONTROL Audience Analysis] vous permet d’enrichir les données d’audience Adobe Experience Platform en [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=fr). Vous pouvez sélectionner les audiences à inclure dans les données enrichies résultantes. Les qualifications d’audience sont alors disponibles en tant que dimensions dans les rapports [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html).
 
 >[!AVAILABILITY]
 >
 >Cette destination se trouve dans une phase de test limitée. Si vous souhaitez utiliser cette destination, contactez l’équipe chargée de votre compte Adobe.
 
-## Conditions préalables
+## Conditions préalables {#prerequisites}
 
 Les éléments suivants sont requis avant d’utiliser cette destination :
 
@@ -28,7 +28,7 @@ Les éléments suivants sont requis avant d’utiliser cette destination :
 * Vous devez disposer des privilèges d’accès pour utiliser Customer Journey Analytics.
 * Au moins une audience doit être créée dans Adobe Experience Platform.
 
-## Identités prises en charge
+## Identités prises en charge {#supported-identities}
 
 L’analyse de l’audience prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/features/namespaces.md). L’Experience Cloud ID (ECID) est généralement utilisé.
 
@@ -43,7 +43,7 @@ L’analyse de l’audience prend en charge l’activation des identités décri
 
 {style="table-layout:auto"}
 
-## Audiences prises en charge
+## Audiences prises en charge {#supported-audiences}
 
 Les types d’audiences suivants sont pris en charge lors de l’utilisation de cette destination :
 
@@ -62,13 +62,13 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
 
 
-## Type et fréquence d’exportation
+## Type et fréquence d’exportation {#export-type-frequency}
 
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
@@ -79,15 +79,15 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 {style="table-layout:auto"}
 
-## Configurer une nouvelle destination
+## Configurer une nouvelle destination {#configure-destination}
 
 >[!IMPORTANT]
-> 
+>
 >Pour créer la destination , vous avez besoin des autorisations **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Pour créer cette destination, procédez comme décrit dans le tutoriel sur la configuration des destinations [destination](../../ui/connect-destination.md).
 
-### Détails de la destination
+### Détails de la destination {#destination-details}
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
@@ -96,7 +96,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 * **[!UICONTROL Datastream ID]** : identifiant du flux de données que vous souhaitez enrichir avec des audiences admissibles. Vous pouvez obtenir cet identifiant dans le [gestionnaire de flux de données](/help/datastreams/overview.md).
 * **[!UICONTROL Integration alias]** : alias de l’intégration.
 
-### Alertes
+### Alertes {#alerts}
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface d’utilisation](../../ui/alerts.md).
 
@@ -104,7 +104,7 @@ Vous pouvez activer les alertes pour recevoir des notifications sur le statut de
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Next]**.
 
-### Politique de gouvernance et mesures d’application
+### Politique de gouvernance et mesures d’application {#governance-policy}
 
 Cette section facultative vous permet de définir vos politiques de gouvernance des données et de vous assurer que les données utilisées sont conformes lorsque les audiences sont envoyées et actives.
 
@@ -113,7 +113,7 @@ Lorsque vous avez terminé de sélectionner les actions marketing souhaitées po
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Une fois la destination créée, vous pouvez activer les audiences de votre choix pour la destination.

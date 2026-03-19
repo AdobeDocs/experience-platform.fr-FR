@@ -2,10 +2,10 @@
 description: Cette page illustre comment l’appel API est utilisé pour supprimer un modèle d’audience existant avec Adobe Experience Platform Destination SDK.
 title: Suppression d’un modèle d’audience
 exl-id: 6eb07e3c-3269-4368-9b11-04bd993cc4ab
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '289'
-ht-degree: 94%
+source-wordcount: '287'
+ht-degree: 82%
 
 ---
 
@@ -25,7 +25,7 @@ Pour obtenir une description détaillée des fonctionnalités configurables avec
 
 ## Prise en main des opérations de l’API des modèles d’audience {#get-started}
 
-Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de la destination et les en-têtes obligatoires.
+Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes à connaître avant d’effectuer des appels vers l’API, notamment sur la manière d’obtenir l’autorisation de création de destination requise et les en-têtes requis.
 
 ## Suppression d’un modèle d’audience {#delete}
 
@@ -42,6 +42,8 @@ DELETE /authoring/audience-templates/{INSTANCE_ID}
 | Paramètre | Description |
 | --------- | ----------- |
 | `{INSTANCE_ID}` | Valeur `ID` du modèle d’audience à supprimer. |
+
+{style="table-layout:auto"}
 
 +++Requête
 

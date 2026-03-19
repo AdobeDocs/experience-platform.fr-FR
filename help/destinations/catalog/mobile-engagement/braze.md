@@ -4,7 +4,7 @@ title: Connexion Braze
 description: Braze est une plateforme d’engagement client complète qui alimente des expériences pertinentes et mémorables entre les clients et les marques qu’ils aiment.
 last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1212'
 ht-degree: 26%
@@ -41,7 +41,7 @@ En tant que spécialiste marketing, je souhaite cibler les utilisateurs et utili
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| external_id | Identifiant de [!DNL Braze] personnalisé qui prend en charge le mappage de n’importe quelle identité. | Vous pouvez envoyer n’importe quelle [identité](../../../identity-service/features/namespaces.md) à la destination [!DNL Braze], à condition de la mapper à la [!DNL Braze][`external_id` &#x200B;](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
+| external_id | Identifiant de [!DNL Braze] personnalisé qui prend en charge le mappage de n’importe quelle identité. | Vous pouvez envoyer n’importe quelle [identité](../../../identity-service/features/namespaces.md) à la destination [!DNL Braze], à condition de la mapper à la [!DNL Braze][`external_id` ](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
 
 {style="table-layout:auto"}
 
@@ -64,7 +64,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -84,7 +84,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 ## Se connecter à la destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
@@ -112,9 +112,9 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
@@ -126,7 +126,7 @@ Le mappage consiste à créer un lien entre vos champs de schéma [!DNL Experien
 
 Pour mapper correctement vos champs XDM vers les champs de destination [!DNL Braze], procédez comme suit :
 
-À l’étape [!UICONTROL Mapping], cliquez sur **[!UICONTROL Add new mapping]**.
+À l’étape [!UICONTROL Mapping], sélectionnez **[!UICONTROL Add new mapping]**.
 
 ![Braze Destination Ajouter Un Mappage](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
@@ -144,7 +144,7 @@ Dans la fenêtre [!UICONTROL Select source field] , vous pouvez choisir entre de
 
 ![Espace de noms Source du mappage de destination Braze](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
-Choisissez votre champ source, puis cliquez sur **[!UICONTROL Select]**.
+Choisissez votre champ source, puis sélectionnez **[!UICONTROL Select]**.
 
 Dans la section [!UICONTROL Target Field] , cliquez sur l’icône de mappage à droite du champ.
 
@@ -157,7 +157,7 @@ Dans la fenêtre [!UICONTROL Select target field] , vous pouvez choisir entre de
 
 ![Braze Champs De Mapping De Destination](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
-Choisissez votre champ cible, puis cliquez sur **[!UICONTROL Select]**.
+Choisissez votre champ cible, puis sélectionnez **[!UICONTROL Select]**.
 
 Votre mappage de champs doit maintenant s’afficher dans la liste.
 

@@ -4,9 +4,9 @@ title: Activez les audiences vers des destinations basées sur des fichiers à l
 description: Découvrez comment utiliser l’API Flow Service pour exporter des fichiers avec des profils qualifiés vers des destinations d’espace de stockage.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: ba2de112ba9f1fce35f847e9eb9396e65f2a9232
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '4976'
+source-wordcount: '4973'
 ht-degree: 9%
 
 ---
@@ -17,7 +17,7 @@ Utilisez les fonctionnalités améliorées d’exportation de fichiers pour acc�
 
 * [Options de dénomination de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) supplémentaires.
 * Possibilité de définir des en-têtes de fichier personnalisés dans vos fichiers exportés via l’[étape de mappage améliorée](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
-* Possibilité de sélectionner le [&#x200B; type de fichier &#x200B;](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) fichier exporté.
+* Possibilité de sélectionner le [ type de fichier ](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) fichier exporté.
 * [Possibilité de personnaliser le formatage des fichiers de données CSV exportés](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 Cette fonctionnalité est prise en charge par les six cartes de stockage dans le cloud répertoriées ci-dessous :
@@ -43,31 +43,31 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 -->
 
-## Commencer {#get-started}
+## Prise en main {#get-started}
 
 ![Étapes d’activation des audiences mettant en surbrillance l’étape actuelle de l’utilisateur](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md) : [!DNL Adobe Experience Platform Segmentation Service] permet de créer des audiences et de générer des audiences dans [!DNL Adobe Experience Platform] à partir de vos données [!DNL Real-Time Customer Profile].
 * [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin afin d’activer des données vers des destinations basées sur des fichiers dans Experience Platform.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour activer des données vers des destinations basées sur des fichiers dans Experience Platform.
 
 ### Autorisations nécessaires {#permissions}
 
 Pour exporter des profils, vous avez besoin des **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
-Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
-### Lecture d’exemples d’appels API {#reading-sample-api-calls}
+### Lecture d&#39;exemples d&#39;appels API {#reading-sample-api-calls}
 
 Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
 
 ### Collecter des valeurs pour les en-têtes obligatoires et facultatifs {#gather-values-headers}
 
-Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le tutoriel [Authentification Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le tutoriel [Authentification Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`
@@ -103,7 +103,7 @@ Avant de démarrer le workflow d’exportation de profils, identifiez la spécif
 |---------|----------|---------|
 | Amazon S3 | `4fce964d-3f37-408f-9778-e597338a21ee` | `1a0514a6-33d4-4c7f-aff8-594799c47549` |
 | Stockage Azure Blob | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `752d422f-b16f-4f0d-b1c6-26e448e3b388` |
-| Azure Data Lake Gen 2 (ADLS Gen2) | `be2c3209-53bc-47e7-ab25-145db8b873e1` | `17be2013-2549-41ce-96e7-a70363bec293` |
+| Azure Data Lake Gen2 (ADLS Gen2) | `be2c3209-53bc-47e7-ab25-145db8b873e1` | `17be2013-2549-41ce-96e7-a70363bec293` |
 | Zone d’atterrissage des données (DLZ) | `10440537-2a7b-4583-ac39-ed38d4b848e8` | `cd2fc47e-e838-4f38-a581-8fff2f99b63a` |
 | Google Cloud Storage | `c5d93acb-ea8b-4b14-8f53-02138444ae99` | `585c15c4-6cbf-4126-8f87-e26bff78b657` |
 | SFTP | `36965a81-b1c6-401b-99f8-22508f1e6a26` | `fd36aaa4-bf2b-43fb-9387-43785eeeb799` |
@@ -182,7 +182,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Azure Data Lake Gen 2 (ADLS Gen2)]
+>[!TAB Azure Data Lake Gen2 (ADLS Gen2)]
 
 **Requête**
 
@@ -488,7 +488,7 @@ Notez la ligne en surbrillance avec des commentaires intégrés dans l’exemple
 +++
 
 
->[!TAB Azure Data Lake Gen 2 (ADLS Gen2)]
+>[!TAB Azure Data Lake Gen2 (ADLS Gen2)]
 
 +++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] des [!DNL auth spec]
 
@@ -703,7 +703,7 @@ Notez la ligne en surbrillance avec des commentaires intégrés dans l’exemple
 
 >[!ENDTABS]
 
-À l’aide des propriétés spécifiées dans la spécification d’authentification (c’est-à-dire `authSpec` à partir de la réponse), vous pouvez créer une connexion de base avec les informations d’identification requises, spécifiques à chaque type de destination, comme illustré dans les exemples ci-dessous :
+À l’aide des propriétés spécifiées dans la spécification d’authentification (qui est `authSpec` à partir de la réponse), vous pouvez créer une connexion de base avec les informations d’identification requises, spécifiques à chaque type de destination, comme illustré dans les exemples ci-dessous :
 
 >[!BEGINTABS]
 
@@ -799,7 +799,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des informations d’authentification requises, reportez-vous à la section [Authentifier à la destination](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) de la page de documentation sur la destination Azure Blob Storage.
+>Pour plus d’informations sur l’obtention des informations d’authentification requises, reportez-vous à la section [Authentification à la destination](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) de la page de documentation sur la destination de stockage Blob Azure.
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
@@ -841,7 +841,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Data Lake Gen 2 (ADLS Gen2)]
+>[!TAB Azure Data Lake Gen2 (ADLS Gen2)]
 
 **Requête**
 
@@ -849,7 +849,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des informations d’authentification requises, reportez-vous à la section [Authentifier à la destination](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) de la page de documentation de destination Azure Data Lake Gen 2 (ADLS Gen2) .
+>Pour plus d’informations sur l’obtention des informations d’authentification requises, reportez-vous à la section [Authentifier à la destination](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) de la page de documentation sur la destination Azure Data Lake Gen 2 (ADLS Gen2) .
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
@@ -1094,7 +1094,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-### Ajouter un chiffrement aux fichiers exportés
+### Ajouter un chiffrement aux fichiers exportés {#add-encryption}
 
 Vous pouvez éventuellement ajouter un chiffrement à vos fichiers exportés. Pour ce faire, vous devez ajouter des éléments à partir de l’objet `encryption`. Consultez l’exemple de requête ci-dessous avec les paramètres obligatoires mis en surbrillance :
 
@@ -1617,7 +1617,7 @@ Notez les lignes mises en surbrillance avec des commentaires intégrés dans l�
 +++
 
 
->[!TAB Azure Data Lake Gen 2 (ADLS Gen2)]
+>[!TAB Azure Data Lake Gen2 (ADLS Gen2)]
 
 +++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] affichant les paramètres de connexion cible
 
@@ -2582,7 +2582,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Data Lake Gen 2 (ADLS Gen2)]
+>[!TAB Azure Data Lake Gen2 (ADLS Gen2)]
 
 **Requête**
 
@@ -3077,7 +3077,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Data Lake Gen 2 (ADLS Gen2)]
+>[!TAB Azure Data Lake Gen2 (ADLS Gen2)]
 
 **Requête**
 
@@ -3273,9 +3273,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 Notez l’identifiant du flux de données dans la réponse. Cet identifiant sera requis lors des étapes suivantes.
 
-### Ajouter des audiences à l’exportation
+### Ajouter des audiences à l’exportation {#add-audiences}
 
-Au cours de cette étape, vous pouvez également sélectionner les audiences que vous souhaitez exporter vers la destination. Pour obtenir des informations détaillées sur cette étape et le format de requête permettant d’ajouter une audience au flux de données, consultez les exemples dans la section [&#x200B; Mettre à jour un flux de données de destination &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) de la documentation de référence de l’API.
+Au cours de cette étape, vous pouvez également sélectionner les audiences que vous souhaitez exporter vers la destination. Pour obtenir des informations détaillées sur cette étape et le format de requête permettant d’ajouter une audience au flux de données, consultez les exemples dans la section [ Mettre à jour un flux de données de destination ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) de la documentation de référence de l’API.
 
 
 ## Configurer le mappage des attributs et des identités {#attribute-and-identity-mapping}
@@ -3292,7 +3292,7 @@ Par exemple, pour obtenir le mappage suivant illustré dans l’interface utilis
 
 ![Exemple d’étape de mapping](/help/destinations/assets/api/file-based-segment-export/mapping-example.png)
 
-### Création d’un schéma d’entrée
+### Création d’un schéma d’entrée {#create-input-schema}
 
 Pour créer un schéma d’entrée, vous devez d’abord récupérer votre [schéma d’union](/help/profile/ui/union-schema.md) et les identités qui peuvent être exportées vers la destination. Il s’agit du schéma des attributs et des identités que vous pouvez sélectionner comme mappage source.
 
@@ -3730,7 +3730,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 L’identifiant dans la réponse représente l’identifiant unique du schéma d’entrée que vous avez créé. Copiez l’identifiant de la réponse, car vous le réutiliserez à une étape ultérieure.
 
-### Création d’un schéma de sortie
+### Création d’un schéma de sortie {#create-output-schema}
 
 Vous devez ensuite configurer le schéma de sortie pour votre exportation. Tout d’abord, vous devez rechercher et inspecter votre schéma de partenaire existant.
 
@@ -4536,7 +4536,7 @@ Pour ajouter une [action marketing](/help/data-governance/api/marketing-actions.
 
 >[!TIP]
 >
->Avant d’ajouter une action marketing à un flux de données, vous pouvez rechercher vos actions marketing de base et personnalisées existantes. Affichez [&#x200B; comment récupérer une liste d’actions marketing existantes &#x200B;](/help/data-governance/api/marketing-actions.md#list).
+>Avant d’ajouter une action marketing à un flux de données, vous pouvez rechercher vos actions marketing de base et personnalisées existantes. Affichez [ comment récupérer une liste d’actions marketing existantes ](/help/data-governance/api/marketing-actions.md#list).
 
 +++Ajouter une action marketing à un flux de données de destination - Requête
 
@@ -4875,7 +4875,7 @@ Vous trouverez des informations sur les [différents paramètres renvoyés par l
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[&#x200B; consultez les sections &#x200B;](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[ consultez les sections ](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 

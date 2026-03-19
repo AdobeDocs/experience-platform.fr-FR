@@ -5,10 +5,10 @@ title: Supprimer un compte de destination à l’aide de l’API Flow Service
 type: Tutorial
 description: Découvrez comment supprimer un compte de destination à l’aide de l’API Flow Service.
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '762'
-ht-degree: 38%
+source-wordcount: '758'
+ht-degree: 36%
 
 ---
 
@@ -31,15 +31,15 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 * [Destinations](../home.md) : les [!DNL Destinations] sont des intégrations préconfigurées aux plateformes de destination qui permettent l’activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 * [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin afin de supprimer un compte de destination à l’aide de l’API [!DNL Flow Service].
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour supprimer un compte de destination à l’aide de l’API [!DNL Flow Service].
 
-### Lecture d’exemples d’appels API {#reading-sample-api-calls}
+### Lecture d&#39;exemples d&#39;appels API {#reading-sample-api-calls}
 
 Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage [!DNL Experience Platform].
 
 ### Collecte des valeurs des en-têtes requis {#gather-values-for-required-headers}
 
-Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -87,6 +87,8 @@ GET /connections/{CONNECTION_ID}
 | Parameter | Description |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | The unique `id` value for the connection you want to retrieve. |
+
+{style="table-layout:auto"}
 
 **Request**
 
@@ -147,7 +149,7 @@ A successful response returns the current details of your connection including i
 >[!IMPORTANT]
 >
 >Avant de supprimer le compte de destination, vous devez supprimer tous les flux de données existants vers le compte de destination.
->&#x200B;>Pour supprimer des flux de données existants, reportez-vous aux pages ci-dessous :
+>Pour supprimer des flux de données existants, reportez-vous aux pages ci-dessous :
 >
 >* [utiliser l’interface utilisateur d’Experience Platform](../ui/delete-destinations.md) pour supprimer des flux de données existants ;
 >* [Utilisez l’API Flow Service](delete-destination-dataflow.md) pour supprimer les flux de données existants.
@@ -183,6 +185,6 @@ Une réponse réussie renvoie un état HTTP 204 (pas de contenu) et un corps vi
 
 Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes d’état API](../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
-## Étapes suivantes
+## Étapes suivantes {#next-steps}
 
 Ce tutoriel vous a permis d’utiliser l’API [!DNL Flow Service] pour supprimer des comptes de destination existants. Pour plus d’informations sur l’utilisation des destinations, consultez la [présentation des destinations](/help/destinations/home.md).

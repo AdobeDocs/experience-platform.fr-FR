@@ -5,16 +5,16 @@ title: Mettre à jour des flux de données de destination à l’aide de l’API
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour mettre à jour un flux de données de destination. Découvrez comment activer ou désactiver le flux de données, mettre à jour ses informations de base ou ajouter et supprimer des audiences et des attributs à l’aide de l’API Flow Service.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 7f8fbbec8927dffb3c8456b2a1d908d27d4b03c2
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2471'
-ht-degree: 30%
+source-wordcount: '2467'
+ht-degree: 29%
 
 ---
 
 # Mettre à jour des flux de données de destination à l’aide de l’API Flow Service
 
-Ce tutoriel décrit les étapes à suivre pour mettre à jour un flux de données de destination. Découvrez comment activer ou désactiver le flux de données, mettre à jour ses informations de base ou ajouter et supprimer des audiences et des attributs à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/). Pour plus d’informations sur la modification des flux de données de destination à l’aide de l’interface utilisateur d’Experience Platform, consultez [&#x200B; Modifier les flux d’activation &#x200B;](/help/destinations/ui/edit-activation.md).
+Ce tutoriel décrit les étapes à suivre pour mettre à jour un flux de données de destination. Découvrez comment activer ou désactiver le flux de données, mettre à jour ses informations de base ou ajouter et supprimer des audiences et des attributs à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/). Pour plus d’informations sur la modification des flux de données de destination à l’aide de l’interface utilisateur d’Experience Platform, consultez [ Modifier les flux d’activation ](/help/destinations/ui/edit-activation.md).
 
 ## Prise en main {#get-started}
 
@@ -29,15 +29,15 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 * [Destinations](../home.md) : les [!DNL Destinations] sont des intégrations préconfigurées aux plateformes de destination qui permettent l’activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 * [Sandbox](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour réussir la mise à jour de votre flux de données à l’aide de l’API [!DNL Flow Service].
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour réussir la mise à jour de votre flux de données à l’aide de l’API [!DNL Flow Service].
 
-### Lecture d’exemples d’appels API {#reading-sample-api-calls}
+### Lecture d&#39;exemples d&#39;appels API {#reading-sample-api-calls}
 
 Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage d’Experience Platform.
 
 ### Collecte des valeurs des en-têtes requis {#gather-values-for-required-headers}
 
-Pour lancer des appels aux API Experience Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
+Pour lancer des appels aux API Experience Platform, vous devez d’abord suivre le tutoriel [authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -68,6 +68,8 @@ GET /flows/{FLOW_ID}
 | Paramètre | Description |
 | --------- | ----------- |
 | `{FLOW_ID}` | Valeur `id` unique pour le flux de données de destination que vous souhaitez récupérer. |
+
+{style="table-layout:auto"}
 
 **Requête**
 
@@ -389,6 +391,8 @@ curl -X PATCH \
 | `path` | Définit la partie du flux à mettre à jour. |
 | `value` | Nouvelle valeur avec laquelle vous souhaitez mettre à jour votre paramètre. |
 
+{style="table-layout:auto"}
+
 **Réponse**
 
 Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à l’API [!DNL Flow Service] et en y indiquant votre identifiant de flux.
@@ -507,6 +511,8 @@ curl -X PATCH \
 | `endDate` | Pour les *destinations par lots* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Non applicable lors de la sélection de `"exportMode":"DAILY_FULL_EXPORT"` et de `"frequency":"ONCE"`. <br> Définit la date à laquelle les membres de l’audience cessent d’être exportés vers la destination. |
 | `startTime` | Pour les *destinations par lots* uniquement. Ce champ est obligatoire uniquement lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots telles qu’Amazon S3, SFTP ou Azure Blob. <br> Obligatoire. Sélectionnez l’heure à laquelle les fichiers contenant des membres de l’audience doivent être générés et exportés vers votre destination. |
 
+{style="table-layout:auto"}
+
 **Réponse**
 
 Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à l’API [!DNL Flow Service] et en y indiquant votre identifiant de flux.
@@ -567,6 +573,7 @@ curl -X PATCH \
 | `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour supprimer une audience d’un flux de données, utilisez l’opération `remove` . |
 | `path` | Indique l’audience existante à supprimer du flux de données de destination, en fonction de l’index du sélecteur d’audience. Pour récupérer l’ordre des audiences dans un flux de données, effectuez un appel GET au point d’entrée `/flows` et examinez la propriété `transformations.segmentSelectors` . Pour supprimer la première audience du flux de données, utilisez `"path":"/transformations/0/params/segmentSelectors/selectors/0"`. |
 
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -796,6 +803,8 @@ curl -X PATCH \
 | `path` | Définit la partie du flux à mettre à jour. Lors de l’ajout d’un attribut de profil à un flux de données, utilisez le chemin spécifié dans l’exemple. |
 | `value.path` | Valeur de l’attribut de profil que vous ajoutez au flux de données. |
 
+{style="table-layout:auto"}
+
 **Réponse**
 
 Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité mise à jour. Vous pouvez vérifier la mise à jour en adressant une requête GET à l’API [!DNL Flow Service] et en y indiquant votre identifiant de flux.
@@ -849,6 +858,7 @@ curl -X PATCH \
 | `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour supprimer une audience d’un flux de données, utilisez l’opération `remove` . |
 | `path` | Indique quel attribut de profil existant doit être supprimé du flux de données de destination, en fonction de l’index du sélecteur d’audience. Pour récupérer l’ordre des attributs de profil dans un flux de données, effectuez un appel GET au point d’entrée `/flows` et inspectez la propriété `transformations.profileSelectors`. Pour supprimer la première audience du flux de données, utilisez `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
+{style="table-layout:auto"}
 
 **Réponse**
 
@@ -863,7 +873,7 @@ Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[&#x200B; consultez les sections &#x200B;](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[ consultez les sections ](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 

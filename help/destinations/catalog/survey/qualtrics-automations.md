@@ -4,10 +4,10 @@ title: Automatisations de Qualtrics
 description: Synchronisez les données client opérationnelles et d’expérience pour déverrouiller la personnalisation à grande échelle. Utilisez l’agrégation de plusieurs sources de données opérationnelles dans Adobe Experience Platform comme entrée dans Qualtrics Experience ID pour mieux comprendre vos clients et permettre une sensibilisation ciblée afin de combler l’écart en matière de compréhension des moteurs d’intention, d’émotion et d’expérience.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1291'
-ht-degree: 24%
+source-wordcount: '1283'
+ht-degree: 22%
 
 ---
 
@@ -39,14 +39,14 @@ Pour mieux comprendre quand et comment utiliser la destination *Automatisations 
 
 **Résultat** : La rétroaction continue permet à l&#39;organisation d&#39;adapter et d&#39;améliorer le processus d&#39;intégration, ce qui se traduit par une meilleure mobilisation et une meilleure productivité parmi les nouveaux employés.
 
-## Conditions préalables
+## Conditions préalables {#prerequisites}
 
-Avant de configurer la destination Qualtrics dans Adobe Experience Platform, vérifiez que les conditions préalables suivantes sont remplies :
+Avant de configurer la destination Qualtrics dans Adobe Experience Platform, assurez-vous que les conditions préalables suivantes sont remplies :
 
 * Vous disposez d’un compte Qualtrics.
 * Vous avez obtenu le jeton API nécessaire auprès de Qualtrics.
 
-### Obtention d’un jeton API
+### Obtention d’un jeton API {#obtaining-api-token}
 
 Vous trouverez ci-dessous les étapes nécessaires pour obtenir un jeton API auprès de Qualtrics.
 
@@ -85,7 +85,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -105,7 +105,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 ## Se connecter à la destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
@@ -135,26 +135,26 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 ## Activer des audiences vers cette destination {#activate}
 
 >[!IMPORTANT]
-> 
->Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>
+>Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
-Consultez [Activer les profils et les segments vers les destinations d’exportation de segments de diffusion en continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
+Lisez [Activer des audiences vers des destinations de diffusion en streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Mapper les attributs et les identités {#map}
 
 Cette destination a un schéma ouvert. Vous pouvez donc envoyer n’importe quelle propriété à Qualtrics.
 
-#### Attributs de mappage
+#### Attributs de mappage {#map-attributes}
 
-Pour ajouter un attribut à votre mappage, sélectionnez simplement **attributs personnalisés** lors de l’ajout d’un nouveau mappage. Vous pouvez saisir n’importe quel nom pour votre attribut. Qualtrics applique la convention de dénomination *camelCase* pour les noms d’attribut (voir la capture d’écran ci-dessous pour obtenir un exemple).
+Pour ajouter un attribut à votre mappage, sélectionnez **attributs personnalisés** lors de l’ajout d’un nouveau mappage. Vous pouvez saisir n’importe quel nom pour votre attribut. Qualtrics applique la convention de dénomination *camelCase* pour les noms d’attribut (voir la capture d’écran ci-dessous pour obtenir un exemple).
 
-![&#x200B; Attribut personnalisé &#x200B;](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
+![ Attribut personnalisé ](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
 
 Consultez la capture d’écran ci-dessous pour obtenir un exemple de mappages d’attributs possibles.
 
 ![Exemples de mappages](/help/destinations/assets/catalog/survey/qualtrics/example-mappings.png)
 
-#### Mapping d’identités
+#### Mapping d’identités {#map-identities}
 
 Il est obligatoire de sélectionner un espace de noms d’identité pour cette destination. Les deux mappages possibles champ source vers champ cible sont les suivants :
 
