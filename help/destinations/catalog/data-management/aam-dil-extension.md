@@ -18,7 +18,7 @@ Il s’agit de l’extension de la bibliothèque d’intégration des données (
 
 [!DNL Audience Manager] DIL est une extension de plateforme de gestion des données (DMP) disponible dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension [Audience Manager](../../../tags/extensions/client/audience-manager/overview.md) dans la documentation sur les balises.
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension Audience Manager DIL](../../assets/catalog/data-management-platform/aam-dil-extension/configure.png)
 

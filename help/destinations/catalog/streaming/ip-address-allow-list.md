@@ -41,7 +41,7 @@ Vous pouvez définir des contrôles d’accès réseau via votre pare-feu résea
 
 Si votre politique d’organisation exige que vous ajoutiez des adresses IP pour le trafic entrant, vous devez ajouter les plages d’adresses IP des catégories suivantes à votre placer sur la liste autorisée place sur la liste autorisée avant d’utiliser les destinations mentionnées ci-dessus sur cette page :
 
-1. Toutes les [ adresses IP globales ](#global)
+1. Toutes les [&#x200B; adresses IP globales &#x200B;](#global)
 2. Outre les adresses IP globales, ajoutez les adresses IP correspondant à la région dans laquelle vous avez reçu les privilèges d’accès, à partir de la liste située plus bas sur la page. Si vous n’ajoutez pas votre plage d’adresses IP spécifique à une région à votre place sur la liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de ces destinations de diffusion en streaming.
 
 ## Adresses IP globales {#global}

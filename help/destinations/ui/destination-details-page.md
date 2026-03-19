@@ -18,7 +18,7 @@ Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez affiche
 
 >[!NOTE]
 >
->La page de détails des destinations fait partie de l’espace de travail [!UICONTROL Destinations] dans le [!DNL Experience Platform] de [!DNL UI]. Pour plus d’informations[[!UICONTROL Destinations] consultez la présentation de l’espace de travail ](./destinations-workspace.md) .
+>La page de détails des destinations fait partie de l’espace de travail [!UICONTROL Destinations] dans le [!DNL Experience Platform] de [!DNL UI]. Pour plus d’informations[[!UICONTROL Destinations] consultez la présentation de l’espace de travail &#x200B;](./destinations-workspace.md) .
 
 ## Afficher les détails de la destination {#view-details}
 
@@ -54,7 +54,7 @@ Le tableau suivant couvre les commandes et les détails fournis par le rail de d
 
 | Élément du rail de droite | Description |
 | --- | --- |
-| [!UICONTROL Activate audiences] | Sélectionnez ce contrôle pour modifier les audiences mappées à la destination, mettre à jour les plannings d’exportation ou ajouter et supprimer des attributs et des identités mappés. Pour plus d’informations[ consultez les guides sur ](./activate-segment-streaming-destinations.md)l’activation des données d’audience vers des destinations de diffusion en continu d’audience, [l’activation des données d’audience vers des destinations basées sur des profils par lots](./activate-batch-profile-destinations.md) et [l’activation des données d’audience vers des destinations basées sur des profils de diffusion en continu](./activate-streaming-profile-destinations.md). |
+| [!UICONTROL Activate audiences] | Sélectionnez ce contrôle pour modifier les audiences mappées à la destination, mettre à jour les plannings d’exportation ou ajouter et supprimer des attributs et des identités mappés. Pour plus d’informations[&#x200B; consultez les guides sur &#x200B;](./activate-segment-streaming-destinations.md)l’activation des données d’audience vers des destinations de diffusion en continu d’audience, [l’activation des données d’audience vers des destinations basées sur des profils par lots](./activate-batch-profile-destinations.md) et [l’activation des données d’audience vers des destinations basées sur des profils de diffusion en continu](./activate-streaming-profile-destinations.md). |
 | [!UICONTROL Delete] | Permet de supprimer ce flux de données et de démapper les audiences qui ont été précédemment activées, le cas échéant. |
 | [!UICONTROL Destination name] | Ce champ peut être modifié pour mettre à jour le nom de la destination. |
 | [!UICONTROL Description] | Ce champ peut être modifié pour mettre à jour ou ajouter une description facultative à la destination. |
@@ -64,7 +64,7 @@ Le tableau suivant couvre les commandes et les détails fournis par le rail de d
 | [!UICONTROL Category] | Indique le type de destination. Voir le [catalogue des destinations](../catalog/overview.md) pour plus d’informations. |
 | [!UICONTROL Connection type] | Indique le formulaire par lequel vos audiences sont envoyées à la destination. Les valeurs possibles sont [!UICONTROL Cookie] et [!UICONTROL Profile-based]. |
 | [!UICONTROL Frequency] | Indique la fréquence d’envoi des audiences vers la destination. Les valeurs possibles sont [!UICONTROL Streaming] et [!UICONTROL Batch]. |
-| [!UICONTROL Identity] | Représente l’espace de noms d’identité accepté par la destination, tel que `GAID`, `IDFA` ou `email`. Pour plus d’informations sur les espaces de noms d’identité acceptés, consultez la [ présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md). |
+| [!UICONTROL Identity] | Représente l’espace de noms d’identité accepté par la destination, tel que `GAID`, `IDFA` ou `email`. Pour plus d’informations sur les espaces de noms d’identité acceptés, consultez la [&#x200B; présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md). |
 | [!UICONTROL Created by] | Indique l’utilisateur ou l’utilisatrice qui a créé cette destination. |
 | [!UICONTROL Created] | Indique la date et l’heure UTC auxquelles cette destination a été créée. |
 
@@ -97,7 +97,7 @@ Bien que la **[!UICONTROL Processing duration]** indiquée pour la plupart des e
 
 ![Image de la page Exécutions de flux de données avec la colonne Heure de traitement mise en surbrillance pour une destination de diffusion en continu.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
 
-Pour plus d’informations, consultez la documentation sur la surveillance [ sur les exécutions de flux de données vers des destinations de diffusion en streaming ](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations).
+Pour plus d’informations, consultez la documentation sur la surveillance [&#x200B; sur les exécutions de flux de données vers des destinations de diffusion en streaming &#x200B;](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations).
 
 ### Destinations basées sur des fichiers {#file-based}
 

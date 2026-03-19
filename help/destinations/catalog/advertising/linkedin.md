@@ -18,7 +18,7 @@ Installez le [!DNL LinkedIn Insight Tag] pour utiliser les fonctionnalités de s
 
 [!DNL LinkedIn Insight Tag] est une extension publicitaire dans Adobe Experience Platform. Pour plus d’informations sur la fonctionnalité de l’extension, voir [LinkedIn Insight Tag](https://business.linkedin.com/fr-fr/marketing-solutions/insight-tag).
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension LinkedIn Insight Tag](../../assets/catalog/advertising/linkedin/catalog.png)
 

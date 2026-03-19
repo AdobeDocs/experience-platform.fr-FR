@@ -101,7 +101,7 @@ Les fonctions ci-dessous, spécifiques à la gestion des exportations de tableau
 
 ## Exemples de fonctions utilisées pour effectuer des transformations de données {#examples}
 
-Consultez des exemples et des informations supplémentaires dans les sections ci-dessous pour certaines des fonctions répertoriées ci-dessus. Pour le reste des fonctions répertoriées, reportez-vous à la documentation sur les fonctions [générales) dans la section Préparation des données ](/help/data-prep/functions.md).
+Consultez des exemples et des informations supplémentaires dans les sections ci-dessous pour certaines des fonctions répertoriées ci-dessus. Pour le reste des fonctions répertoriées, reportez-vous à la documentation sur les fonctions [générales) dans la section Préparation des données &#x200B;](/help/data-prep/functions.md).
 
 ### `array_to_string` fonction pour exporter des tableaux {#array-to-string-function-export-arrays}
 

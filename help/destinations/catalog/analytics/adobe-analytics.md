@@ -18,7 +18,7 @@ Adobe Analytics est une solution de pointe qui vous permet de comprendre vos cl
 
 Adobe Analytics est une extension d’analyse de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la présentation de l’extension [Adobe Analytics](/help/tags/extensions/client/analytics/overview.md) dans la documentation sur les balises.
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension Adobe Analytics](../../assets/catalog/analytics/adobe-analytics/catalog.png)
 

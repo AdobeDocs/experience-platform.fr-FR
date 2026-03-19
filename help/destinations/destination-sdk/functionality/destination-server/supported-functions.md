@@ -11,7 +11,7 @@ ht-degree: 96%
 
 # Fonctions de transformation prises en charge dans Destination SDK
 
-Experience Platform Destination SDK utilise des modèles [[!DNL Pebble] ](https://pebbletemplates.io/), ce qui vous permet de transformer les données exportées d’Experience Platform au format demandé par la destination.
+Experience Platform Destination SDK utilise des modèles [[!DNL Pebble] &#x200B;](https://pebbletemplates.io/), ce qui vous permet de transformer les données exportées d’Experience Platform au format demandé par la destination.
 
 L’implémentation [!DNL Pebble] d’Experience Platform comporte quelques modifications par rapport à la version prête à l’emploi fournie par [!DNL Pebble]. En outre, en plus des fonctions prêtes à l’emploi fournies par [!DNL Pebble], Adobe a créé des fonctions supplémentaires que vous pouvez utiliser avec Destination SDK.
 

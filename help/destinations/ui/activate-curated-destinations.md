@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Activer les audiences vers des destinations sélectionnées en fonction des identifiants LiveRamp
 
-Utilisez l’intégration d’Adobe Real-Time CDP à [!DNL LiveRamp] pour activer les audiences vers une liste sélectionnée de destinations qui utilisent [!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) pour l’activation, y compris les destinations TV et audio connectées, telles que celles répertoriées ci-dessous.
+Utilisez l’intégration d’Adobe Real-Time CDP à [!DNL LiveRamp] pour activer les audiences vers une liste sélectionnée de destinations qui utilisent [[!DNL [LiveRamp RampID]]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) pour l’activation, y compris les destinations TV et audio connectées, telles que celles répertoriées ci-dessous.
 
 >[!IMPORTANT]
 >
@@ -103,7 +103,7 @@ Lorsque vous configurez la destination **[!DNL LiveRamp - Distribution]**, vous 
 
 >[!TIP]
 >
->Lorsque vous attribuez un nom à une destination, Adobe recommande de suivre le format suivant : `LiveRamp - Downstream Destination Name`. Ce modèle de dénomination vous permet d’identifier rapidement vos destinations dans l’onglet [ Parcourir ](../ui/destinations-workspace.md#browse) de l’espace de travail des destinations.
+>Lorsque vous attribuez un nom à une destination, Adobe recommande de suivre le format suivant : `LiveRamp - Downstream Destination Name`. Ce modèle de dénomination vous permet d’identifier rapidement vos destinations dans l’onglet [&#x200B; Parcourir &#x200B;](../ui/destinations-workspace.md#browse) de l’espace de travail des destinations.
 ><br>
 >Exemple : `LiveRamp - Roku`.
 

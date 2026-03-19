@@ -18,7 +18,7 @@ Branch fournit des liens et des solutions puissants qui vous aident à acquérir
 
 Branch est une extension publicitaire dans Adobe Experience Platform. Pour plus d’informations sur la fonctionnalité d’extension, consultez la [page des fonctionnalités](https://branch.io/features/) du site web dédié à Branch.
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension Branch](../../assets/catalog/advertising/branch/catalog.png)
 
