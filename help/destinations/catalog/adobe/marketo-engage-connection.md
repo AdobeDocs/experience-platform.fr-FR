@@ -45,7 +45,7 @@ Ils peuvent activer leurs audiences dans Marketo Engage et utiliser le type de s
 
 ## Conditions préalables {#prerequisites}
 
-* L’utilisateur configurant la destination doit disposer de l’autorisation [&#x200B; Modifier la personne &#x200B;](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) dans son instance et sa partition Marketo.
+* L’utilisateur configurant la destination doit disposer de l’autorisation [&#x200B; Modifier la personne &#x200B;](https://experienceleague.adobe.com/fr/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) dans son instance et sa partition Marketo.
 * Seules les instances Marketo Engage de la même organisation Adobe Real-Time CDP seront disponibles lors de la configuration de cette destination.
 * Seules les instances Marketo Engage dont les utilisateurs sont gérés dans le Adobe Admin Console peuvent utiliser cette destination.
 
@@ -146,7 +146,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
    * **[!UICONTROL Profile only]** : sélectionnez cette option lorsque vous souhaitez que les profils de prospect Marketo soient à jour avec les dernières informations d’Experience Platform.
    * **[!UICONTROL Audience only]** : sélectionnez cette option lorsque vous souhaitez ajouter des membres de l’audience aux listes Marketo sans mettre à jour leurs informations de profil.
 * **[!UICONTROL Partition]** : *la sélection de partition est disponible uniquement lors du choix des types de synchronisation **[!UICONTROL Profile only]**&#x200B;ou **[!UICONTROL Audience and profile]***. Sélectionnez un ID de partition Marketo associé à l’espace de travail de votre choix. Cela vous permet de spécifier quelle partition de prospect dans Marketo recevra les données exportées. Si vous ne choisissez pas de partition spécifique, vos données seront envoyées à la partition **[!UICONTROL Default]** dans Marketo.
-* **[!UICONTROL Marketo deduplication field]** : sélectionnez le champ Déduplication Marketo à utiliser lors de la mise à jour des prospects Marketo existants. Ce sélecteur affiche les champs que vous avez marqués comme champs de déduplication dans Marketo. Si vous souhaitez qu’un champ spécifique de Marketo s’affiche en tant que champ de déduplication, vous devez le marquer comme un [champ consultable](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) dans Marketo.
+* **[!UICONTROL Marketo deduplication field]** : sélectionnez le champ Déduplication Marketo à utiliser lors de la mise à jour des prospects Marketo existants. Ce sélecteur affiche les champs que vous avez marqués comme champs de déduplication dans Marketo. Si vous souhaitez qu’un champ spécifique de Marketo s’affiche en tant que champ de déduplication, vous devez le marquer comme un [champ consultable](https://experienceleague.adobe.com/fr/docs/marketo-developer/marketo/rest/lead-database/lead-database) dans Marketo.
 
   >[!NOTE]
   >

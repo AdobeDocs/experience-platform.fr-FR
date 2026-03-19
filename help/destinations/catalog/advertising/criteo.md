@@ -35,7 +35,7 @@ Criteo permet de proposer des publicités fiables et percutantes afin d’offrir
 
 ## Identités prises en charge {#supported-identities}
 
-Criteo prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
+Criteo prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=fr#getting-started).
 
 | Identité cible | Description | Considérations |
 | --- | --- | --- |
