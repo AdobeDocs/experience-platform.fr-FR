@@ -2,10 +2,10 @@
 title: Notes de mise à jour préliminaires d’Experience Platform
 description: Aperçu des dernières notes de mise à jour de Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: efa50881315d986940f7cb3afcbfcc30ef67c3a7
+source-git-commit: 5cbf63cc0a149d54de63e3e1797cae4098498fe8
 workflow-type: tm+mt
-source-wordcount: '1411'
-ht-degree: 28%
+source-wordcount: '1322'
+ht-degree: 29%
 
 ---
 
@@ -46,7 +46,7 @@ Experience Platform offre toute une gamme de fonctionnalités de nettoyage des 
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Suppression d’enregistrements multi-jeux de données et profil uniquement (API uniquement) | Vous pouvez envoyer un seul identifiant de jeu de données, une liste d’identifiants de jeux de données séparés par des virgules ou l’`ALL` littérale dans `datasetId` de supprimer des identités dans un, plusieurs ou tous les jeux de données. Vous pouvez également limiter la suppression aux services de profil en définissant `targetServices` sur `["identity","profile","ajo"]`, ce qui laisse le lac de données inchangé. Pour plus d’informations[&#x200B; consultez le guide &#x200B;](../hygiene/api/workorder.md)Enregistrement des ordres de travail de suppression. |
+| Suppression d’enregistrements multi-jeux de données et profil uniquement (API uniquement) | Vous pouvez envoyer un seul identifiant de jeu de données, une liste d’identifiants de jeux de données séparés par des virgules ou l’`ALL` littérale dans `datasetId` de supprimer des identités dans un, plusieurs ou tous les jeux de données. Vous pouvez également limiter la suppression aux services de profil en définissant `targetServices` sur `["identity","profile","ajo"]`, ce qui laisse le lac de données inchangé. Pour plus d’informations[ consultez le guide ](../hygiene/api/workorder.md)Enregistrement des ordres de travail de suppression. |
 
 {style="table-layout:auto"}
 
@@ -74,12 +74,10 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | --- | --- |
-| [Diffusion en continu Snowflake](../destinations/catalog/warehouses/snowflake.md) prise en charge multi-région | Le connecteur de streaming Snowflake est désormais disponible pour les clients situés en dehors de la région VA7 des États-Unis. Utilisez le sélecteur de liste déroulante Région pour sélectionner la région Snowflake dans laquelle se trouve votre compte. Mise à jour de la documentation avec la structure de données attendue pour les tables de streaming Snowflake. |
-| Sélecteur de zone géographique [Diffusion en continu Snowflake](../destinations/catalog/warehouses/snowflake.md) et [Lot Snowflake](../destinations/catalog/warehouses/snowflake-batch.md) | Vous pouvez désormais trouver plus facilement votre région avec la nouvelle liste déroulante consultable, qui combine la recherche et la liste déroulante en un seul contrôle. |
+| Sélecteur de zone géographique [Lot Snowflake](../destinations/catalog/warehouses/snowflake-batch.md) | Vous pouvez désormais trouver plus facilement votre région avec la nouvelle liste déroulante consultable, qui combine la recherche et la liste déroulante en un seul contrôle. |
 | Exporter les métadonnées d’audience vers des destinations [Snowflake Batch](../destinations/catalog/warehouses/snowflake-batch.md) | Les fichiers exportés vers cette destination incluent désormais des métadonnées d’audience. La nouvelle structure de tableau s’applique à toutes les nouvelles connexions de destination configurées à l’avenir. L’ancienne structure de tables sera conservée pendant trois mois supplémentaires avant d’être abandonnée. |
 | Connexion [!DNL Adobe Advertising Cloud DSP] | La nouvelle connexion Adobe Advertising DSP offre la même fonctionnalité que la connexion héritée, ainsi que la prise en charge d’identités supplémentaires. |
 | Prise en charge des audiences externes pour [The Trade Desk CRM](../destinations/catalog/advertising/tradedesk-emails.md), [Criteo](../destinations/catalog/advertising/criteo.md) et [Pinterest](../destinations/catalog/advertising/pinterest.md) | Vous pouvez désormais activer des audiences au-delà des segments Segmentation Service vers The Trade Desk CRM, Criteo et Pinterest, y compris les audiences de chargement personnalisées (importées depuis CSV), les audiences semblables, les audiences fédérées et les audiences créées dans d’autres applications Experience Platform telles que Adobe Journey Optimizer. Pour plus d’informations, consultez la section [audiences prises en charge](../destinations/catalog/advertising/criteo.md#supported-audiences) sur la page de catalogue de chaque destination. |
-| Filtrage des audiences dans le workflow d’activation | Vous pouvez désormais rechercher et filtrer des audiences dans l’étape **[!UICONTROL Select audiences]** avec la même expérience que la page Audiences . Par exemple, vous pouvez filtrer par origine d’audience pour trouver facilement l’audience que vous recherchez. |
 | Augmentation de la limite des audiences de chargement personnalisées | Vous pouvez désormais activer jusqu’à 20 audiences de chargement personnalisées par instance de destination. Auparavant, cette limite était de 10. |
 | Prise en charge de l’[Exporter le fichier maintenant](../destinations/ui/export-file-now.md) et de l’[API d’activation ad hoc](../destinations/api/ad-hoc-activation-api.md) pour les audiences externes | Vous pouvez désormais utiliser Exporter le fichier maintenant (interface utilisateur) et l’API d’activation ad hoc avec des audiences externes (telles que le chargement personnalisé, les audiences semblables, fédérées et provenant d’autres applications Experience Platform) lors de l’activation vers des destinations basées sur des fichiers par lots. |
 | Destinations d’API HTTP avec OAuth 2 et mTLS | Vous pouvez désormais créer et authentifier des destinations d’API HTTP qui utilisent OAuth 2 lorsque le point d’entrée d’authentification nécessite un protocole TLS mutuel (mTLS) ; la récupération de jetons lors de la configuration de la destination prend désormais en charge le protocole mTLS. |
@@ -181,5 +179,8 @@ Pour plus d’informations, consultez la [vue d’ensemble des sources](../sourc
 <!--
 
 | Data Engineering Agent | The following new and updated skills are available in the Data Engineering Agent:<br><br><ul><li><strong>Data onboarding:</strong> Follow step-by-step workflows and example prompts to connect sources, check data quality, enrich data semantically, and ingest data for B2C and B2B flows, with expected outputs and troubleshooting guidance in the docs.</li><li><strong>Data quality and validation:</strong> Validate data fields and datasets using two new skills (DataField and DataSet).</li><li><strong>Data collection:</strong> Get in-context guidance for complex Data Collection configurations and use conversational insights to explore lineage, dependencies, and relationships across your data collection objects.</li></ul> |
+
+| [Snowflake Streaming](../destinations/catalog/warehouses/snowflake.md) multiregion support | The Snowflake Streaming connector is now available to customers beyond the US VA7 region. Use the region dropdown selector to select which Snowflake region your account is in. The documentation has been updated with the expected data structure for Snowflake streaming tables. |
+| Audience filtering in activation workflow | You can now find and filter audiences in the **[!UICONTROL Select audiences]** step with the same experience as the Audiences page; for example, you can filter on audience origin to easily find the audience you are looking for. |
 
 -->
