@@ -4,10 +4,11 @@ description: En savoir plus sur les sources Talon.One sur Adobe Experience Platf
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 558a9d6ff3222acbf77edea0a82ef50725cd6203
+exl-id: 92ed180a-6175-45e2-a831-0f40fd8606b0
+source-git-commit: 5ceef18d479854aa4b633e7e5e393a6698a05b2e
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 3%
+source-wordcount: '439'
+ht-degree: 2%
 
 ---
 
@@ -40,6 +41,28 @@ Fournissez des valeurs pour les informations d’identification suivantes afin d
 ## Mappage {#mapping}
 
 Pour vous aider à mapper chaque objet d’effet en fonction de sa valeur de `effectType` unique, vous pouvez utiliser la fonction de `array_to_map` de préparation de données. Vous pouvez ainsi convertir facilement un tableau non ordonné d’effets en paires clé-valeur correspondant à vos besoins. Consultez l’exemple ci-dessous pour obtenir des conseils.
+
+Vous pouvez également utiliser les groupes de champs de fidélité normalisés fournis par Adobe pour modéliser vos concepts de programme de fidélité de manière cohérente.
+
+>[!BEGINTABS]
+
+>[!TAB Détails de fidélité]
+
+Il s’agit d’un groupe de champs XDM standard pour XDM Individual Profile, utilisé pour décrire le statut d’adhésion de fidélité d’une personne en capturant ses attributs d’enregistrement, plutôt que des données d’événement. Utilisez ce groupe de champs dans vos schémas de profil pour capturer :
+
+* **Qui** le membre participe au programme (`loyaltyID`, `program`, `status`, `tier`)
+* Leurs **soldes actuels et de durée de vie** (`points`, `lifetimePoints`, `expiredPoints`, etc.)
+* Clé **dates d’adhésion** (`joinDate`, `upgradeDate`, `tierExpiryDate`)
+
+>[!TAB Détails de l’événement de fidélité]
+
+Le groupe de champs Détails de l’événement de fidélité est conçu pour capturer l’activité de fidélité au niveau de l’événement, comme les points gagnés ou échangés dans une transaction spécifique. Ce groupe de champs comprend des champs tels que `xdm:points`, `xdm:pointsRedeemed`, `xdm:pointsAsOfDate` et `xdm:program`. Utilisez ce groupe de champs au niveau de l’événement dans vos schémas d’événement d’expérience pour capturer :
+
+* **Mouvements par événement** en points (gagnés, échangés, expirés)
+* **Remises** qui étaient générées par des coupons de fidélité ou des recommandations
+* **ID de programme** et ID de transaction pour la réconciliation avec le fournisseur de fidélité.
+
+>[!ENDTABS]
 
 | Source | Destination |
 | ---- | --- |

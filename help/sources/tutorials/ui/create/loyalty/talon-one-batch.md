@@ -4,9 +4,10 @@ description: Découvrez comment ingérer des données par lot de Talon.One dans 
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: d8b8143da3a67bba690229b1f8e88eb86f3fe804
+exl-id: 65a8ae42-0c0f-4bc5-b99e-52b02ab2130a
+source-git-commit: 9c4c4a3bce2329e65abf5e8cfcc2f20ec2799045
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1518'
 ht-degree: 9%
 
 ---
@@ -17,7 +18,9 @@ ht-degree: 9%
 >
 >La source [!DNL Talon.One] est en version Beta. Lisez les [termes et conditions](../../../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Lisez ce tutoriel pour savoir comment ingérer des données par lots de votre compte [!DNL Talon.One] dans Adobe Experience Platform à l’aide de l’espace de travail des sources dans l’interface utilisateur.
+La source de [!DNL Talon.One] des données par lot reçoit les événements enregistrés pour une application [!DNL Talon.One]. Un cas d’utilisation courant consiste à filtrer les `talon_session_closed` de réception des transactions terminées, y compris les points de fidélité gagnés ou échangés, les coupons échangés, les remises accordées, etc. Lisez la [[!DNL Talon.One] Référence de l’API Management](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount) pour plus d’informations sur l’API.
+
+Suivez ce tutoriel pour savoir comment ingérer des données par lots de votre compte [!DNL Talon.One] dans Adobe Experience Platform à l’aide de l’espace de travail des sources dans l’interface utilisateur.
 
 ## Prise en main
 
@@ -46,6 +49,10 @@ Pour ingérer des données à partir de [!DNL Talon.One], sélectionnez la carte
 
 ### Créer un nouveau compte
 
+>[!TIP]
+>
+>Avant de créer un compte, consultez les [conditions préalables](../../../../connectors/loyalty/talon-one.md#prerequisites) de la présentation des [!DNL Talon.One] pour savoir quelles informations d’authentification sont requises.
+
 Pour créer un compte pour votre source de [!DNL Talon.One], sélectionnez **[!UICONTROL New account]** et indiquez un nom et une description facultative pour votre compte. Indiquez ensuite votre domaine [!DNL Talon.One] et votre [!UICONTROL Talon.One Management API Key]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect to source]** et patientez quelques instants le temps d’établir la connexion.
 
 ![L’étape Créer un compte du workflow des sources.](../../../../images/tutorials/create/talon-one-batch/new.png)
@@ -57,6 +64,10 @@ Pour utiliser un compte existant, sélectionnez **[!UICONTROL Existing account]*
 ## Sélectionner les données
 
 Une fois l’authentification effectuée, saisissez les valeurs pour vos **applicationId** et **sessionType**. Au cours de cette étape, vous pouvez utiliser les fonctionnalités de prévisualisation pour inspecter la structure de vos données. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Next]** pour continuer.
+
+>[!TIP]
+>
+>Pour capturer les transactions terminées (y compris les points de fidélité gagnés ou échangés, les coupons échangés et les remises accordées), sélectionnez le type d’événement `talon_session_closed`. Pour plus d&#39;informations sur le filtrage des événements par type, reportez-vous au paramètre de requête [ « type » dans la documentation  [!DNL Talon.One]  l&#39;API ](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount).
 
 ![Les étapes de sélection des données et de prévisualisation du workflow des sources.](../../../../images/tutorials/create/talon-one-batch/select-data.png)
 
@@ -93,13 +104,13 @@ Une fois votre jeu de données configuré, vous devez fournir des détails sur v
 | --- | --- |
 | Nom du flux de données | Nom du flux de données. Par défaut, le nom du fichier importé est utilisé. |
 | Description | (Facultatif) Brève description de votre flux de données. |
-| Alertes | Experience Platform peut générer des alertes basées sur des événements auxquelles les utilisateurs et utilisatrices peuvent s’abonner. Ces options permettent à un flux de données en cours d’exécution de les déclencher.  Pour plus d’informations, reportez-vous à la présentation des alertes [&#128279;](../../alerts.md) <ul><li>**Début d’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification lorsque l’exécution du flux de données commence.</li><li>**Succès de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si votre flux de données se termine sans erreur.</li><li>**Échec de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si l’exécution de votre flux de données se termine par des erreurs.</li></ul> |
+| Alertes | Experience Platform peut générer des alertes basées sur des événements auxquelles les utilisateurs et utilisatrices peuvent s’abonner. Ces options permettent à un flux de données en cours d’exécution de les déclencher.  Pour plus d’informations, reportez-vous à la présentation des alertes [](../../alerts.md) <ul><li>**Début d’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification lorsque l’exécution du flux de données commence.</li><li>**Succès de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si votre flux de données se termine sans erreur.</li><li>**Échec de l’exécution du flux de données des sources** : sélectionnez cette alerte pour recevoir une notification si l’exécution de votre flux de données se termine par des erreurs.</li></ul> |
 
 {style="table-layout:auto"}
 
 ## Mappage
 
-Une fois les détails de votre jeu de données et de votre flux de données configurés, vous pouvez procéder au mappage de vos champs de données sources à leurs champs XDM cibles appropriés. Utilisez l’interface de mappage pour mapper vos données source aux champs de schéma appropriés avant d’ingérer des données vers Experience Platform. Pour plus d’informations, consultez le guide de mappage [&#x200B; dans l’interface utilisateur](../../../../../data-prep/ui/mapping.md).
+Une fois les détails de votre jeu de données et de votre flux de données configurés, vous pouvez procéder au mappage de vos champs de données sources à leurs champs XDM cibles appropriés. Utilisez l’interface de mappage pour mapper vos données source aux champs de schéma appropriés avant d’ingérer des données vers Experience Platform. Pour plus d’informations, consultez le guide de mappage [ dans l’interface utilisateur](../../../../../data-prep/ui/mapping.md).
 
 >[!IMPORTANT]
 >
