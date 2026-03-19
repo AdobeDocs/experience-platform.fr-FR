@@ -4,7 +4,7 @@ description: Découvrez comment créer une connexion source et un flux de donné
 badge: Beta
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: ae991913-68b5-4bbb-b8a5-e566d67a4c1a
-source-git-commit: 4c7b23592a1784a5f2daa5518b512fa458a2c3ad
+source-git-commit: 6ab7c5c2e1f800c82d8906fba78fb897f8639877
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 3%
@@ -27,7 +27,7 @@ Vous devez disposer d’un compte partenaire [!DNL Shopify] valide pour vous con
 
 ### Création de votre application
 
-Avec un compte partenaire [!DNL Shopify] valide, vous pouvez maintenant continuer et créer votre application à l’aide du tableau de bord des partenaires. Pour obtenir des instructions complètes sur la création de votre application dans [!DNL Shopify], consultez le guide [[!DNL Shopify]  de prise en main &#x200B;](https://www.shopify.com/partners/blog/17056443-how-to-generate-a-shopify-api-token).
+Avec un compte partenaire [!DNL Shopify] valide, vous pouvez maintenant continuer et créer votre application à l’aide du tableau de bord des partenaires. Pour obtenir des instructions complètes sur la création de votre application dans [!DNL Shopify], consultez le guide [[!DNL Shopify]  de prise en main ](https://www.shopify.com/partners/blog/17056443-how-to-generate-a-shopify-api-token).
 
 Une fois votre application créée, récupérez vos **identifiant client** et **secret client** dans l’onglet **informations d’identification du client** du tableau de bord des partenaires [!DNL Shopify]. L’identifiant client et le secret client seront utilisés dans les étapes suivantes pour récupérer votre code d’autorisation et votre jeton d’accès.
 
@@ -126,7 +126,7 @@ curl -X POST \
 
 | Paramètre | Description |
 | --- | --- | 
-| `webhook.address` | Point d’entrée http où les messages en flux continu sont envoyés. Le modèle du webhook est le suivant : `https://dcs.adobedc.net/collection/%7BINLET_ID%7D?{x-adobe-flow-id}={FLOW_ID}.` |
+| `webhook.address` | Point d’entrée http où les messages en flux continu sont envoyés. Le modèle du webhook est le suivant : `https://dcs.adobedc.net/collection/{INLET_ID}?{X_ADOBE_FLOW_ID}={FLOW_ID}.` |
 | `webhook.topic` | Rubrique de votre abonnement webhook. Pour plus d’informations, consultez le [[!DNL Shopify] guide des rubriques des événements webhook](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics). |
 | `webhook.format` | Format des données. |
 
