@@ -1,20 +1,20 @@
 ---
 title: Connexion Adobe Advertising DSP
-description: Découvrez comment partager des audiences propriétaires authentifiées et non authentifiées avec Adobe Advertising Cloud Demand-Side Platform (DSP) à l’aide de plusieurs types d’identité.
+description: Découvrez comment partager des audiences propriétaires authentifiées et non authentifiées avec Adobe Advertising Demand-Side Platform (DSP) à l’aide de plusieurs types d’identité.
 feature: Destinations
-source-git-commit: 5513e95637c1016caeb6abe699e1807cc234ed40
+exl-id: 0ff80d38-993f-4609-bf2a-01a3e6cfe10b
+source-git-commit: 8d9cf177b306350d232ec8918376211a098f396f
 workflow-type: tm+mt
-source-wordcount: '1342'
-ht-degree: 16%
+source-wordcount: '1491'
+ht-degree: 15%
 
 ---
-
 
 # Connexion Adobe Advertising DSP
 
 ## Vue d’ensemble {#overview}
 
-La destination Adobe Advertising Cloud Demand-Side Platform (DSP) permet aux utilisateurs de partager des audiences propriétaires authentifiées et non authentifiées avec un compte DSP ou un annonceur spécifique au sein d’un compte.
+La destination Adobe Advertising Demand-Side Platform (DSP) permet aux utilisateurs de partager des audiences propriétaires authentifiées et non authentifiées avec un compte DSP ou un annonceur spécifique au sein d’un compte.
 
 Cette destination permet aux clients de partager des audiences propriétaires avec l’un de ces identifiants ou tous :
 
@@ -32,7 +32,7 @@ Cette connexion remplace l’ancienne [connexion Adobe Advertising Cloud DSP](ad
 
 >[!IMPORTANT]
 >
->Cette page a été créée par l’équipe Adobe Advertising [!DNL DSP]. Pour toute demande ou information, contactez directement l’assistance Advertising Cloud à l’adresse `adcloud_support@adobe.com`.
+>Cette page a été créée par l’équipe Adobe Advertising [!DNL DSP]. Pour toute demande ou information, contactez directement l’assistance Advertising à l’adresse `adcloud_support@adobe.com`.
 
 ## Cas d’utilisation {#use-cases}
 
@@ -42,7 +42,7 @@ Les annonceurs ont le choix de partager des segments avec des identifiants propr
 
 ## Conditions préalables {#prerequisites}
 
-* Par [!DNL RampID activation], [!DNL DSP] les paramètres au niveau du compte et de la campagne pour activer le partage d’audience avec [!DNL LiveRamp RampID], qui convertit les données client en [!DNL RampIDs] pour créer des segments cibles. Votre équipe de compte Adobe effectuera cette configuration. [!DNL RampID] est disponible via un partenariat entre [!DNL DSP] et [!DNL LiveRamp], et vous n&#39;avez pas besoin de votre propre adhésion [!DNL LiveRamp] pour l&#39;utiliser.
+* Par [!DNL RampID activation], [!DNL DSP] les paramètres au niveau du compte et de la campagne pour activer le partage d’audience avec [!DNL LiveRamp RampID], qui convertit les données client en [!DNL RampIDs] pour créer des segments cibles. Votre équipe de compte Adobe effectuera cette configuration. [!DNL RampID] est disponible via un partenariat entre [!DNL DSP] et [!DNL LiveRamp], et vous n’avez pas besoin de votre propre adhésion à [!DNL LiveRamp] pour l’utiliser.
 
 * ID d’audience :
 
@@ -58,9 +58,9 @@ Les annonceurs ont le choix de partager des segments avec des identifiants propr
 
 * Identifiant d’organisation Experience Cloud du compte Experience Platform. Votre identifiant figure sur la page de votre profil utilisateur Adobe Real-Time Customer Data Platform (Real-Time CDP).
 
-* Une source [Real-Time CDP dans DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=fr) pour recevoir les audiences pour l’activation de la campagne. L’équipe de votre compte Adobe crée la source à l’aide de votre ID d’organisation Experience Cloud.
+* Une source [Real-Time CDP dans DSP](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage) pour recevoir les audiences pour l’activation de la campagne. L’équipe de votre compte Adobe crée la source à l’aide de votre ID d’organisation Experience Cloud.
 
-* Clé source du compte [!DNL DSP] ou de l’annonceur, générée lors de la création d’une source Real-Time CDP [dans [!DNL DSP]](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=fr). L’équipe de votre compte [!DNL DSP] partagera cette clé avec vous. Vous l’utiliserez dans Experience Platform pour créer une connexion de destination à la destination Advertising Cloud DSP, comme expliqué ci-dessous.
+* Clé source du compte [!DNL DSP] ou de l’annonceur, générée lors de la création d’une source Real-Time CDP [dans [!DNL DSP]](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). L’équipe de votre compte [!DNL DSP] partagera cette clé avec vous. Vous l’utiliserez dans Experience Platform pour créer une connexion de destination à la destination Advertising DSP, comme expliqué ci-dessous.
 
 ### Configurer la synchronisation des identifiants pour partager des cookies {#cookie-sync}
 
@@ -72,17 +72,17 @@ Si vous utilisez [!DNL Experience Platform Web SDK], activez la synchronisation 
 
 **Activer la synchronisation des identifiants tiers avec le[!DNL Experience Cloud ID Service]**
 
-Si vous utilisez des balises [!DNL Experience Platform] avec le [!DNL Experience Cloud ID Service], configurez la synchronisation des identifiants tiers à l’aide de l’extension du service Experience Cloud ID [&#128279;](/help/tags/extensions/client/id-service/overview.md). Cela permet au cookie Adobe Advertising correspondant à l’ECID donné d’être disponible lorsque vous activez l’audience à partir de Real-Time CDP.
+Si vous utilisez des balises [!DNL Experience Platform] avec le [!DNL Experience Cloud ID Service], configurez la synchronisation des identifiants tiers à l’aide de l’extension du service Experience Cloud ID [](/help/tags/extensions/client/id-service/overview.md). Cela permet au cookie Adobe Advertising correspondant à l’ECID donné d’être disponible lorsque vous activez l’audience à partir de Real-Time CDP.
 
 ## Identités prises en charge {#supported-identities}
 
-La destination Adobe Advertising Cloud DSP prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/features/namespaces.md).
+La destination Adobe Advertising DSP prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/features/namespaces.md).
 
 | Identité cible | Description | Considérations |
 | --------------- | ----------- | -------------- |
 | `email_lc_sha256` | Adresses e-mail hachées avec l’algorithme SHA256 | Experience Platform prend en charge le texte brut et les adresses e-mail hachées SHA256. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Apply transformation]** pour qu’Experience Platform hache automatiquement les données lors de l’activation. |
 | `ECID` | Cookie propriétaire pour Experience Cloud | Obligatoire pour créer des segments basés sur des cookies. |
-| `Everesttech cookie` | Cookie tiers pour Adobe Advertising | Obligatoire pour créer des segments basés sur des cookies. |
+| `adcloud` | Cookie tiers pour Adobe Advertising | Obligatoire pour créer des segments basés sur des cookies. |
 | `GAID` | ID d’appareil [!DNL Android] | Requis pour le ciblage des appareils [!DNL Android]. |
 | `IDFA` | ID d’appareil [!DNL iOS] | Requis pour le ciblage des appareils [!DNL iOS]. |
 
@@ -105,7 +105,7 @@ Audiences prises en charge par type de données d’audience :
 | -------------------- | --------- | ----------- | --------- |
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -133,7 +133,7 @@ Pour vous connecter à la destination, suivez les instructions [création d’un
 
 Pour vous connecter à la destination, indiquez le paramètre suivant dans la section [!UICONTROL Connection type], puis sélectionnez **[!UICONTROL Connect to destination]** :
 
-* **[!UICONTROL Account or Advertiser Key]** : ce [!UICONTROL Source Key] est généré lorsqu’une source [Real-Time CDP est créée dans l’interface utilisateur de DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=fr). L’équipe de votre compte Adobe partagera cette clé avec vous après la création de la source.
+* **[!UICONTROL Account or Advertiser Key]** : ce [!UICONTROL Source Key] est généré lorsqu’une source [Real-Time CDP est créée dans l’interface utilisateur de DSP](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). L’équipe de votre compte Adobe partagera cette clé avec vous après la création de la source.
 
 ![Copie d’écran de la section Type de connexion affichant le champ Compte ou clé de l’annonceur.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
@@ -154,6 +154,12 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 ## Activer des audiences vers cette destination {#activate}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_required_mappings_adcloud_dsp"
+>title="Jeux de mappages préconfigurés"
+>abstract="Nous avons préconfiguré pour vous ces deux jeux de mappages : ECID et cookie [!DNL adcloud]. Lorsque vous activez des données vers Adobe Advertising DSP, les profils qualifiés pour les audiences activées doivent avoir au moins une identité ECID associée à leur profil, pour être exportés vers la destination."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/adobe-advertising-cloud-connection#preconfigured-mappings" text="En savoir plus sur les mappages préconfigurés"
+
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
@@ -163,21 +169,40 @@ Consultez la section [Activer les profils et les audiences vers les destinations
 
 ### Mapper les attributs et les identités {#map}
 
-Vous pouvez choisir les identifiants à envoyer à Adobe Advertising DSP. Par défaut, les identifiants de cookie sont sélectionnés pour l’annonceur. Vous pouvez également choisir d’ajouter des [!UICONTROL Hashed Email], des [!UICONTROL IDFA] et des [!UICONTROL GAID].
+Les mappages d’identité pour cette destination sont partiellement préconfigurés. Passez en revue les mappages préconfigurés ci-dessous et ajoutez toutes les identités facultatives que vous souhaitez inclure.
 
-Pour obtenir des instructions, voir [Mappage des attributs et des identités](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
+### Mappages préconfigurés {#preconfigured-mappings}
+
+Les mappages d’identité suivants sont **préconfigurés et automatiquement renseignés** pendant le workflow d’activation de l’audience :
+
+* **`ECID`** (Experience Cloud ID)
+* **`adcloud`** (cookie tiers Adobe Advertising)
 
 ![Capture d’écran de la section de mappage d’identité présentant les identifiants de cookie, les e-mails hachés, les options IDFA et GAID.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/identity-mapping.png)
 
+Ces mappages sont grisés et en lecture seule. Dans cette étape, vous n’avez rien à configurer. Vous pouvez éventuellement ajouter les mappages suivants :
+
+* **`email_lc_sha256`** (e-mail haché)
+* **IDFA** (ID [!DNL Apple iOS]’appareil)
+* **GAID** (ID [!DNL Android]’appareil)
+
+Sélectionnez **[!UICONTROL Next]** pour continuer.
+
+>[!IMPORTANT]
+>
+>**ECID est requis pour que l’exportation basée sur les cookies réussisse.** Les profils sans ECID ne seront pas inclus dans les segments basés sur des cookies. Pour les segments d’audience authentifiés utilisant [!DNL RampID] ou [!DNL UID2.0], les profils doivent contenir des identifiants d’e-mail hachés.
+
+Pour obtenir des instructions, voir [Mappage des attributs et des identités](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
+
 ## Valider l’exportation des données {#exported-data}
 
-Pour vérifier que les données d’audience ont été partagées avec Advertising Cloud, vérifiez les éléments suivants :
+Pour vérifier que les données d’audience ont été partagées avec Adobe Advertising, vérifiez les points suivants :
 
 * Le flux de données dans la destination [!DNL Real-Time CDP] a réussi.
 
 * Dans DSP, l’audience est disponible lorsque vous créez ou modifiez une audience à partir de **[!UICONTROL Audiences]** > **[!UICONTROL All Audiences]** ou dans la section **[!UICONTROL Audience Targeting]** des paramètres d’emplacement. L’audience doit être visible dans l’onglet [!UICONTROL Adobe Segments] sous le dossier [!UICONTROL Real-Time CDP] .
 
-![audiences Real-Time CDP dans les paramètres d’audience DSP](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
+![Copie d’écran de l’interface Audiences DSP présentant un dossier Real-Time CDP avec des segments d’audience importés répertoriés sous l’onglet Segments Adobe.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
