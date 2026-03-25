@@ -4,22 +4,22 @@ title: Présentation des destinations du marketing par e-mail
 type: Tutorial
 description: Les fournisseurs de service de messagerie (ESP) vous permettent de gérer vos activités de marketing par e-mail, par exemple pour l’envoi de campagnes promotionnelles par e-mail. Découvrez les fournisseurs de service de messagerie pris en charge en tant que destinations Experience Platform.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 60%
+source-wordcount: '371'
+ht-degree: 59%
 
 ---
 
 # Présentation des destinations du marketing par e-mail {#email-marketing-destinations}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-Les fournisseurs de service e-mail (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes par e-mail promotionnelles. Adobe Experience Platform s’intègre aux ESP en vous permettant d’activer des audiences vers des destinations de marketing par e-mail.
+Les fournisseurs de service e-mail (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes par e-mail promotionnelles. [!DNL Adobe Experience Platform] s’intègre aux ESP en vous permettant d’activer des audiences vers des destinations de marketing par e-mail.
 
 ## Destinations de marketing par e-mail prises en charge {#supported-destinations}
 
-Adobe Experience Platform prend en charge les destinations de marketing par e-mail suivantes :
+[!DNL Adobe Experience Platform] prend en charge les destinations de marketing par e-mail suivantes :
 
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)

@@ -4,16 +4,16 @@ title: Modifier des connexions de destination à l’aide de l’API Flow Servic
 type: Tutorial
 description: Découvrez comment modifier divers composants d’une connexion de destination à l’aide de l’API Flow Service.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1610'
-ht-degree: 25%
+source-wordcount: '1604'
+ht-degree: 24%
 
 ---
 
 # Modifier des connexions de destination à l’aide de l’API Flow Service
 
-Ce tutoriel décrit les étapes à suivre pour modifier divers composants d’une connexion à la destination. Découvrez comment mettre à jour les informations d’authentification, l’emplacement d’exportation, etc. à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour modifier divers composants d’une connexion à la destination. Découvrez comment mettre à jour les informations d’authentification, l’emplacement d’exportation, etc. à l’aide de l’API [[!DNL Flow Service] .](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 
 >[!NOTE]
 >
@@ -27,9 +27,9 @@ Ce tutoriel nécessite que vous disposiez d’un identifiant de flux de données
 >
 > Les termes *flux* et *flux de données* sont utilisés de manière interchangeable dans ce tutoriel. Dans le cadre de ce tutoriel, ils ont la même signification.
 
-Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
+Ce tutoriel nécessite également une compréhension du fonctionnement des composants suivants de [!DNL Adobe Experience Platform] :
 
-* [Destinations](../home.md) : les [!DNL Destinations] sont des intégrations préconfigurées aux plateformes de destination qui permettent l’activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+* [Destinations](../home.md) : les [!DNL Destinations] sont des intégrations préconfigurées aux plateformes de destination qui permettent l’activation transparente des données de [!DNL Adobe Experience Platform]. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 * [Sandbox](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance Experience Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour réussir la mise à jour de votre flux de données à l’aide de l’API [!DNL Flow Service].
@@ -290,11 +290,11 @@ Une réponse réussie renvoie votre identifiant de connexion cible et une etag m
 }
 ```
 
->[!TAB Pinterest]
+>[!TAB ]
 
 **Requête**
 
-La requête suivante met à jour le paramètre `advertiserId` d’une [[!DNL Pinterest]  connexion de destination &#x200B;](/help/destinations/catalog/advertising/pinterest.md#parameters).
+La requête suivante met à jour le paramètre `advertiserId` d’une [[!DNL Pinterest]  connexion de destination ](/help/destinations/catalog/advertising/pinterest.md#parameters).
 
 ```shell
 curl -X PATCH \
@@ -463,7 +463,7 @@ Une réponse réussie renvoie votre identifiant de connexion de base et une bali
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[&#x200B; consultez les sections &#x200B;](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[ consultez les sections ](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 

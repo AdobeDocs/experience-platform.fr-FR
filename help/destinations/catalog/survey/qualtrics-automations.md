@@ -4,10 +4,10 @@ title: Automatisations de Qualtrics
 description: Synchronisez les données client opérationnelles et d’expérience pour déverrouiller la personnalisation à grande échelle. Utilisez l’agrégation de plusieurs sources de données opérationnelles dans Adobe Experience Platform comme entrée dans Qualtrics Experience ID pour mieux comprendre vos clients et permettre une sensibilisation ciblée afin de combler l’écart en matière de compréhension des moteurs d’intention, d’émotion et d’expérience.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1283'
-ht-degree: 22%
+source-wordcount: '1259'
+ht-degree: 23%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 22%
 
 Synchronisez les données client opérationnelles et d’expérience pour déverrouiller la personnalisation à grande échelle.
 
-Utilisez l’agrégation de plusieurs sources de données opérationnelles dans Adobe Experience Platform comme entrée dans Qualtrics Experience ID pour mieux comprendre vos clients et permettre une sensibilisation ciblée afin de combler l’écart en matière de compréhension des moteurs d’intention, d’émotion et d’expérience.
+Utilisez l’agrégation de plusieurs sources de données opérationnelles dans [!DNL Adobe Experience Platform] comme entrée dans Qualtrics Experience ID pour mieux comprendre vos clients et permettre une sensibilisation ciblée afin de combler l’écart en matière de compréhension des moteurs d’intention, d’émotion et d’expérience.
 
 >[!IMPORTANT]
 >
@@ -25,23 +25,23 @@ Utilisez l’agrégation de plusieurs sources de données opérationnelles dans 
 
 ## Cas d’utilisation {#use-cases}
 
-Pour mieux comprendre quand et comment utiliser la destination *Automatisations Qualtrics*, consultez les exemples de cas d’utilisation ci-dessous que la clientèle Adobe Experience Platform peut résoudre.
+Pour mieux comprendre quand et comment utiliser la destination *Automatisations Qualtrics*, consultez les exemples de cas d’utilisation suivants que [!DNL Adobe Experience Platform] clients peuvent résoudre à l’aide de cette destination.
 
 ### Cas d’utilisation #1 {#use-case-1}
 
-**Scénario** : une entreprise souhaite mesurer la satisfaction de sa clientèle à travers différents points de contact numériques, tels que son site web et son application mobile. Ils utilisent Adobe Experience Platform pour déclencher des enquêtes Qualtrics en fonction des interactions utilisateur, telles que la réalisation d’un achat ou la visite d’une page web spécifique.
+**Scénario** : une entreprise souhaite mesurer la satisfaction de sa clientèle à travers différents points de contact numériques, tels que son site web et son application mobile. Ils utilisent des [!DNL Adobe Experience Platform] pour déclencher des enquêtes Qualtrics en fonction des interactions utilisateur, telles que la réalisation d’un achat ou la visite d’une page web spécifique.
 
 **Résultat** : en recueillant des commentaires en temps réel, l’entreprise peut améliorer l’expérience de ses clients en fonction des données, ce qui lui permet d’accroître sa satisfaction et sa fidélité.
 
 ### Cas d’utilisation #2 {#use-case-2}
 
-**Scénario** : une organisation vise à améliorer son processus d’intégration des employés. Ils utilisent Adobe Experience Platform pour recueillir les commentaires des nouvelles recrues par le biais d’enquêtes Qualtrics. Les questionnaires sont automatiquement déclenchés après une période d’intégration prédéfinie.
+**Scénario** : une organisation vise à améliorer son processus d’intégration des employés. Ils utilisent [!DNL Adobe Experience Platform] pour recueillir les commentaires des nouvelles recrues au moyen d&#39;enquêtes Qualtrics. Les questionnaires sont automatiquement déclenchés après une période d’intégration prédéfinie.
 
 **Résultat** : La rétroaction continue permet à l&#39;organisation d&#39;adapter et d&#39;améliorer le processus d&#39;intégration, ce qui se traduit par une meilleure mobilisation et une meilleure productivité parmi les nouveaux employés.
 
 ## Conditions préalables {#prerequisites}
 
-Avant de configurer la destination Qualtrics dans Adobe Experience Platform, assurez-vous que les conditions préalables suivantes sont remplies :
+Avant de configurer la destination Qualtrics dans [!DNL Adobe Experience Platform], vérifiez que les conditions préalables suivantes sont remplies :
 
 * Vous disposez d’un compte Qualtrics.
 * Vous avez obtenu le jeton API nécessaire auprès de Qualtrics.
@@ -73,7 +73,7 @@ Cette section décrit les types d’audiences que vous pouvez exporter vers cett
 | Origine de l’audience | Pris en charge | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Oui | Audiences générées via Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Toutes les autres origines d’audience | Non | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform telles que Adobe Journey Optimizer, </li><li> et plus encore. </li></ul> |
+| Toutes les autres origines d’audience | Non | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform, telles que [!DNL Adobe Journey Optimizer], </li><li> et plus encore. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -85,8 +85,8 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
-| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
 
@@ -148,7 +148,7 @@ Cette destination a un schéma ouvert. Vous pouvez donc envoyer n’importe quel
 
 Pour ajouter un attribut à votre mappage, sélectionnez **attributs personnalisés** lors de l’ajout d’un nouveau mappage. Vous pouvez saisir n’importe quel nom pour votre attribut. Qualtrics applique la convention de dénomination *camelCase* pour les noms d’attribut (voir la capture d’écran ci-dessous pour obtenir un exemple).
 
-![&#x200B; Attribut personnalisé &#x200B;](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
+![ Attribut personnalisé ](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
 
 Consultez la capture d’écran ci-dessous pour obtenir un exemple de mappages d’attributs possibles.
 
@@ -205,7 +205,7 @@ Comme mentionné précédemment, cette destination utilise un schéma ouvert. To
 
 Pour vérifier que les données ont été ingérées dans Qualtrics, accédez au workflow contenant votre **Événement JSON**, puis accédez à **Historique d’exécution** où vous devriez voir les exécutions de votre workflow. Chaque workflow présente le statut **Réussi** ou **Échec**. La sélection d’une exécution spécifique affiche plus d’informations à son sujet, ce qui vous permet de résoudre les problèmes éventuels.
 
-Si aucune exécution n’est visible dans l’**historique d’exécution**, cela signifie que le workflow n’a pas encore été déclenché, ce qui indique qu’il peut y avoir un problème. Assurez-vous que le workflow est activé et que l’**URL** de la destination dans Adobe Experience Platform est correcte. Les exécutions de workflows ne sont pas instantanées, vous devrez donc peut-être attendre quelques instants avant qu’elles ne se terminent.
+Si aucune exécution n’est visible dans l’**historique d’exécution**, cela signifie que le workflow n’a pas encore été déclenché, ce qui indique qu’il peut y avoir un problème. Assurez-vous que le workflow est activé et que l’**URL** de la destination dans [!DNL Adobe Experience Platform] est correcte. Les exécutions de workflows ne sont pas instantanées, vous devrez donc peut-être attendre quelques instants avant qu’elles ne se terminent.
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

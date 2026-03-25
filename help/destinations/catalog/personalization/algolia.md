@@ -2,10 +2,10 @@
 title: Algolie
 description: Utilisez ce connecteur pour activer les audiences en Algérie à des fins de personnalisation et d’utilisation dans les recherches et les recommandations. Vous pouvez ensuite utiliser le connecteur source Profil utilisateur Algolia pour importer les profils dans Real-Time CDP afin de créer des audiences riches.
 exl-id: 116a051a-1b47-4789-826e-c8f0fee60def
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1140'
-ht-degree: 30%
+source-wordcount: '1112'
+ht-degree: 31%
 
 ---
 
@@ -15,36 +15,36 @@ ht-degree: 30%
 
 >[!IMPORTANT]
 >
->Le connecteur de destination [!DNL Algolia] et la page de documentation sont créés et conservés par l’équipe des services d’intégration d’Algolia. Pour toute demande ou information, contactez-les à l’adresse [adobe-algolia-solutions@algolia.com](mailto:adobe-algolia-solutions@algolia.com).
+>Le connecteur de destination [!DNL Algolia] et la page de documentation sont créés et conservés par l’équipe des services d’intégration d’Algolia. Pour toute demande ou information, contactez-les à l’adresse [](mailto:adobe-algolia-solutions@algolia.com).
 
-Utilisez la connexion de destination [!DNL Algolia] pour envoyer des audiences Adobe Experience Platform en Algérie à des fins de recherche personnalisée et de recommandations. Avant de pouvoir utiliser le connecteur de destination [!DNL Algolia], vous devez d’abord configurer le connecteur source [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md). Pendant le tutoriel de configuration du connecteur source, vous allez créer l’identité du jeton d’utilisateur Algolia. Cette identité est requise pour le mappage lorsque vous configurez le connecteur de destination.
+Utilisez la connexion de destination [!DNL Algolia] pour envoyer des audiences [!DNL Adobe Experience Platform] en Algérie afin d’effectuer des recherches et des recommandations personnalisées. Avant de pouvoir utiliser le connecteur de destination [!DNL Algolia], vous devez d’abord configurer le connecteur source [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md). Pendant le tutoriel de configuration du connecteur source, vous allez créer l’identité du jeton d’utilisateur Algolia. Cette identité est requise pour le mappage lorsque vous configurez le connecteur de destination.
 
-Ce tutoriel décrit les étapes à suivre pour créer une connexion de destination et un flux de données [!DNL Algolia] à l’aide de l’interface utilisateur de Adobe Experience Platform.
+Ce tutoriel décrit les étapes à suivre pour créer une connexion de destination et un flux de données [!DNL Algolia] à l’aide de l’interface utilisateur [!DNL Adobe Experience Platform].
 
 ![Le catalogue des destinations avec la destination Algolie.](../../assets/catalog/personalization/algolia/catalog.png)
 
 ## Cas d’utilisation {#use-cases}
 
-Pour mieux comprendre quand et comment utiliser la destination [!DNL Algolia], consultez les exemples de cas d’utilisation ci-dessous que la clientèle de Adobe Experience Platform peut résoudre.
+Pour mieux comprendre quand et comment utiliser la destination [!DNL Algolia], consultez les exemples de cas d’utilisation ci-dessous que [!DNL Adobe Experience Platform] clients peuvent résoudre à l’aide de cette destination.
 
 ### Cohérence de Personalization {#personalization-consistency}
 
 Utilisez ce connecteur de destination pour offrir une personnalisation cohérente sur l’ensemble de votre site, de la page d’accueil à la recherche.
 
-Par exemple, en tant que spécialiste marketing, vous pouvez créer des audiences enrichies dans Adobe Experience Platform à partir de plusieurs sources de données utilisateur, y compris l’Algérie. Vous pouvez utiliser le connecteur de destination [!DNL Algolia] pour partager les audiences pour les stratégies de ciblage, ce qui permet d’améliorer la personnalisation et la conversion des campagnes.
+Par exemple, en tant que spécialiste marketing, vous pouvez créer des audiences riches en [!DNL Adobe Experience Platform] à partir de plusieurs sources de données utilisateur, y compris en Algolie. Vous pouvez utiliser le connecteur de destination [!DNL Algolia] pour partager les audiences pour les stratégies de ciblage, ce qui permet d’améliorer la personnalisation et la conversion des campagnes.
 
 Pour mettre en œuvre ce cas d’utilisation, vous devez utiliser les connecteurs source [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md) et de destination [!DNL Algolia].
 
-Commencez par importer vos profils d’utilisateurs [!DNL Algolia] existants dans Adobe Experience Platform Real-Time CDP et d’autres sources pour commencer à créer des audiences riches avec le connecteur source. Les marketeurs créent des audiences à l’aide des données de profil qui peuvent être envoyées à Algolia pour la personnalisation de la recherche et des recommandations.
+Commencez par importer vos profils d’utilisateurs [!DNL Algolia] existants dans [!DNL Adobe Experience Platform] [!DNL Real-Time CDP] et d’autres sources pour commencer à créer des audiences riches avec le connecteur source. Les marketeurs créent des audiences à l’aide des données de profil qui peuvent être envoyées à Algolia pour la personnalisation de la recherche et des recommandations.
 
-Ensuite, utilisez le connecteur source [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md) correspondant pour ingérer et augmenter les profils clients dans Real-Time CDP.
+Ensuite, utilisez le connecteur source de [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md) correspondant pour ingérer et augmenter à nouveau les profils client dans [!DNL Real-Time CDP].
 
 ## Conditions préalables {#prerequisites}
 
 >[!IMPORTANT]
 >
 >* Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 ## Identités prises en charge {#supported-identities}
 
@@ -63,7 +63,7 @@ Cette section décrit le type d’audiences que vous pouvez exporter vers cette 
 | Origine de l’audience | Pris en charge | Description |
 |---------|---------|----------|
 | [!DNL Segmentation Service] | Oui | Audiences générées via Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Toutes les autres origines d’audience | Oui | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform telles que Adobe Journey Optimizer, </li><li> et plus encore. </li></ul> |
+| Toutes les autres origines d’audience | Oui | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform, telles que [!DNL Adobe Journey Optimizer], </li><li> et plus encore. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -75,8 +75,8 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
-| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
 
@@ -133,9 +133,9 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des identités, vous devez disposer de l’autorisation de contrôle d’accès Afficher le graphique [d’identités](https://experienceleague.adobe.com/fr/docs/experience-platform/access-control/home#permissions).
+>* Pour exporter des identités, vous devez disposer de l’autorisation de contrôle d’accès Afficher le graphique [d’identités](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).
 
-Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Mapper les attributs et les identités {#mapping-attributes-identities}
 
@@ -145,7 +145,7 @@ Pendant l’[!UICONTROL Mapping step], vous devez mapper l’identité source Al
 
 ## Valider l’exportation des données {#exported-data}
 
-Pour vérifier si l’exportation des audiences vers les profils utilisateur a réussi, vérifiez le tableau de bord de votre [!DNL Algolia], accédez à **[!UICONTROL Advanced Personalization]** et cliquez sur **[!UICONTROL User Inspector]**. Recherchez un profil utilisateur associé à l’audience Adobe Experience Platform exportée et recherchez-le dans l’Inspecteur d’utilisateur. L’identifiant d’audience s’affiche dans la section de segment.
+Pour vérifier si l’exportation des audiences vers les profils utilisateur a réussi, vérifiez le tableau de bord de votre [!DNL Algolia], accédez à **[!UICONTROL Advanced Personalization]** et cliquez sur **[!UICONTROL User Inspector]**. Recherchez un profil utilisateur associé à l’audience [!DNL Adobe Experience Platform] exportée et recherchez-le dans l’Inspecteur d’utilisateur. L’identifiant d’audience s’affiche dans la section de segment.
 
 ![Inspecteur des utilisateurs d’Algolie](../../assets/catalog/personalization/algolia/verify-segment-user-profile.png)
 

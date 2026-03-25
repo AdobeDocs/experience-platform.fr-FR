@@ -3,10 +3,10 @@ title: Profils des participants à Rainfocus
 description: Découvrez comment utiliser le connecteur de destination Profils de participants RainFocus pour synchroniser les profils d’audience avec le profil de participant global RainFocus.
 last-substantial-update: 2024-12-17T00:00:00Z
 exl-id: 27c3848c-411a-4305-a5d5-00b145b95287
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1091'
-ht-degree: 31%
+source-wordcount: '1073'
+ht-degree: 30%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 31%
 
 ## Vue d’ensemble {#overview}
 
-Utilisez la destination [!DNL RainFocus Attendee Profiles] pour diffuser des profils clients de Adobe Experience Platform vers la plateforme [!DNL RainFocus] afin de créer et de mettre à jour des profils de participants.
+Utilisez la destination [!DNL RainFocus Attendee Profiles] pour diffuser des profils clients depuis [!DNL Adobe Experience Platform] vers la plateforme [!DNL RainFocus] afin de créer et de mettre à jour des profils de participants.
 
 >[!IMPORTANT]
 >
@@ -22,7 +22,7 @@ Utilisez la destination [!DNL RainFocus Attendee Profiles] pour diffuser des pro
 
 ## Cas d’utilisation {#use-cases}
 
-Pour mieux comprendre quand et comment utiliser la destination RainFocus, consultez les exemples de cas d’utilisation ci-dessous que la clientèle de Adobe Experience Platform peut résoudre.
+Pour mieux comprendre quand et comment utiliser la destination RainFocus, consultez les exemples de cas d’utilisation ci-dessous que [!DNL Adobe Experience Platform] clients peuvent résoudre.
 
 ### Cas d’utilisation #1 {#use-case-1}
 
@@ -30,7 +30,7 @@ Une grande entreprise technologique est sur le point de s’inscrire pour sa pro
 
 ### Cas d’utilisation #2 {#use-case-2}
 
-Une marque de services financiers doit organiser une série de tournées destinées aux nouveaux clients et aux clients existants. Ils disposent d’une série de segments ciblés avec les clients cibles dans Adobe Experience Platform. À l’aide du connecteur de destination [!DNL RainFocus], ils peuvent facilement envoyer ces profils à [!DNL RainFocus] pour activation.
+Une marque de services financiers doit organiser une série de tournées destinées aux nouveaux clients et aux clients existants. Il dispose d’une série de segments ciblés avec des clients cibles dans [!DNL Adobe Experience Platform]. À l’aide du connecteur de destination [!DNL RainFocus], ils peuvent facilement envoyer ces profils à [!DNL RainFocus] pour activation.
 
 ## Conditions préalables {#prerequisites}
 
@@ -48,7 +48,7 @@ Vous devez également disposer d’un identifiant RainFocus **code d’événeme
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| email_lc_sha256 | Adresses e-mail hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses e-mail hachées avec SHA256. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Apply transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
+| email_lc_sha256 | Adresses e-mail hachées avec l’algorithme SHA256 | Le texte brut et les adresses e-mail hachées SHA256 sont pris en charge par [!DNL Adobe Experience Platform]. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Apply transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
 
 {style="table-layout:auto"}
 
@@ -59,7 +59,7 @@ Cette section décrit le type d’audiences que vous pouvez exporter vers cette 
 | Origine de l’audience | Pris en charge | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Oui | Audiences générées via Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Toutes les autres origines d’audience | Non | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform telles que Adobe Journey Optimizer, </li><li> et plus encore. </li></ul> |
+| Toutes les autres origines d’audience | Non | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform, telles que [!DNL Adobe Journey Optimizer], </li><li> et plus encore. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -71,8 +71,8 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
-| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
 
@@ -172,4 +172,4 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ## Ressources supplémentaires {#additional-resources}
 
-* [&#x200B; Connecteur Source de streaming RainFocus &#x200B;](https://experienceleague.adobe.com/fr/docs/experience-platform/sources/connectors/analytics/rainfocus)
+* [ Connecteur Source de streaming RainFocus ](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/analytics/rainfocus)

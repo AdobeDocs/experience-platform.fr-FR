@@ -3,10 +3,10 @@ keywords: Destinations d’enquête;enquête;prévoir;instantané;enquêtes d’
 title: Présentation des destinations d’enquête
 description: Les plateformes d’enquête détectent les événements d’enquête, capturent les commentaires des clients en temps réel au moyen d’éléments de données et partagent les données avec Adobe Experience Platform.
 exl-id: 0358a73b-9f4a-4362-a7ed-e49ece6e5f02
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 28%
+source-wordcount: '98'
+ht-degree: 29%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 28%
 
 ## Vue d’ensemble {#overview}
 
-Les plateformes d’enquête détectent les événements d’enquête, capturent les commentaires des clients en temps réel au moyen d’éléments de données et partagent les données avec Adobe Experience Platform.
+Les plateformes d’enquête détectent les événements d’enquête, capturent les commentaires des clients en temps réel au moyen d’éléments de données et partagent les données avec [!DNL Adobe Experience Platform].
 
 ## Destinations d’enquête prises en charge {#supported-destinations}
 

@@ -3,22 +3,22 @@ keywords: destinations;destination;types de destinations
 title: Types et catégories de destination
 description: Découvrez les différents types et catégories de destinations dans Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: d57af88cc9507e0164b044a7203c66fe9fd9240e
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '831'
-ht-degree: 51%
+source-wordcount: '812'
+ht-degree: 47%
 
 ---
 
 # Types et catégories de destination
 
-Lisez cette page pour comprendre les différentes catégories et types de destinations d’Adobe Experience Platform.
+Lisez cette page pour comprendre les différents types et catégories de destinations [!DNL Adobe Experience Platform].
 
 ## Types de destinations {#destination-types}
 
-Dans Adobe Experience Platform, nous faisons la distinction entre différents types de destinations : connexions, exportations de jeux de données et extensions. Il existe plusieurs types de destinations de connexion, ce qui vous permet d’exporter des données vers des destinations basées sur des API, des destinations de réseaux sociaux, des plateformes CRM, etc.
+Dans [!DNL Adobe Experience Platform], nous faisons la distinction entre différents types de destinations : connexions, exportations de jeux de données et extensions. Il existe plusieurs types de destinations de connexion, ce qui vous permet d’exporter des données vers des destinations basées sur des API, des destinations de réseaux sociaux, des plateformes CRM, etc.
 
-Enfin, les connexions peuvent également être distinguées entre les destinations publiques disponibles dans toutes les organisations du catalogue des destinations, et les destinations privées que les clients Real-Time CDP Ultimate peuvent créer pour répondre à leurs cas d’utilisation d’exportation spécifiques.
+Enfin, les connexions peuvent également être distinguées entre les destinations publiques disponibles dans toutes les organisations du catalogue des destinations, et les destinations privées que [!DNL Real-Time CDP] clients Ultimate peuvent créer pour répondre à leurs cas d’utilisation d’exportation spécifiques.
 
 >[!BEGINSHADEBOX]
 
@@ -28,7 +28,7 @@ Diagramme ![Types de destinations).](./assets/destination-types/types-of-destina
 
 ## Connexions {#connections}
 
-Les destinations **[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Audience Export]** et **[!DNL Edge Personalization]** de Adobe Experience Platform capturent des données d’événement, les combinent à d’autres sources de données pour former le [profil client en temps réel](../profile/home.md), appliquent une segmentation et exportent des audiences et des profils qualifiés vers des destinations.
+Les destinations **[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Audience Export]** et **[!DNL Edge Personalization]** d’[!DNL Adobe Experience Platform] capturent des données d’événement, les combinent avec d’autres sources de données pour former le [profil client en temps réel](../profile/home.md), appliquent une segmentation et exportent des audiences et des profils qualifiés vers des destinations.
 
 ## Destinations d’exportation de profils {#profile-export}
 
@@ -43,7 +43,7 @@ Les destinations d’exportation de profils reçoivent des données brutes, souv
 >
 >Les destinations d’entreprise avancées, ou destinations d’exportation de profil de diffusion en continu, sont disponibles uniquement pour les clients [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html).
 
-Utilisez les connecteurs de données de destination d’entreprise avancés pour transmettre les profils Adobe Real-Time Customer Data Platform en temps quasi réel à des systèmes internes ou à des systèmes tiers à des fins de synchronisation des données, d’analyse et d’enrichissement des profils.
+Utilisez les connecteurs de données de destination d’entreprise avancés pour transmettre les profils Adobe [!DNL Real-Time Customer Data Platform] en temps quasi réel à des systèmes internes ou à des systèmes tiers à des fins de synchronisation des données, d’analyse et d’enrichissement des profils.
 
 Ces destinations reçoivent des données d’audience et de profil en tant que flux de données Experience Platform.
 
@@ -77,7 +77,7 @@ En savoir plus sur la façon de [configurer des destinations de personnalisation
 
 La vidéo ci-dessous vous montre les particularités des deux types de destinations :
 
->[!VIDEO](https://video.tv.adobe.com/v/33171?captions=fre_fr&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
 ## Types d’audiences exportées {#exported-audiences-types}
 
@@ -118,7 +118,7 @@ En tant que spécialiste marketing, vous pouvez utiliser une combinaison de conn
 
 Les connexions sont utiles lorsqu’il est nécessaire d’utiliser un profil client centralisé complet ou une audience client pour l’activation. Utilisez, par exemple, des connexions si vous joignez des données comportementales à partir d’un système d’analyse avec des données CRM chargées afin de qualifier un utilisateur pour une audience donnée avant de lui diffuser un message personnalisé.
 
-Les extensions s’avèrent utiles lorsque des données d’événement sont utilisées pour déclencher une action ou pour effectuer une segmentation dans un environnement externe. Par exemple, si les données comportementales doivent être transférées vers un système externe sans être jointes à d’autres sources de données dans un fichier pour un utilisateur donné.
+Les extensions s’avèrent utiles lorsque les données d’événement déclenchent une action ou effectuent une segmentation dans un environnement externe. Par exemple, si les données comportementales doivent être transférées vers un système externe sans être jointes à d’autres sources de données dans un fichier pour un utilisateur donné.
 
 ## Catégories de destination {#categories}
 

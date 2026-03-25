@@ -2,9 +2,9 @@
 description: Configurer des options de formatage de fichier pour les destinations basées sur des fichiers
 title: Découvrez comment utiliser Destination SDK pour configurer des options de formatage de fichier pour les destinations basées sur des fichiers.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '901'
 ht-degree: 22%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 22%
 
 ## Vue d’ensemble {#overview}
 
-Destination SDK vous permet d’ajuster considérablement les options de formatage et de compression des fichiers exportés, afin de répondre à toutes les exigences en aval de votre emplacement de stockage.
+Destination SDK vous permet d’ajuster considérablement les options de formatage et de compression de vos fichiers exportés, afin de répondre à toutes les exigences en aval de votre emplacement de stockage.
 
 Cette page décrit comment utiliser Destination SDK pour configurer les options de formatage de fichier pour les destinations basées sur des fichiers.
 
 ## Conditions préalables {#prerequisites}
 
-Avant de passer aux étapes décrites ci-dessous, veuillez lire la page de prise en main de Destination SDK [&#128279;](../../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification Adobe I/O nécessaires et d’autres conditions préalables pour travailler avec les API Destination SDK.
+Avant de passer aux étapes décrites ci-dessous, veuillez lire la page de prise en main de Destination SDK [](../../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification Adobe I/O nécessaires et d’autres conditions préalables pour travailler avec les API Destination SDK.
 
 Adobe vous recommande également de lire et de vous familiariser avec la documentation suivante avant de continuer :
 
@@ -718,7 +718,7 @@ Une réponse réussie renvoie la configuration de destination, y compris l’ide
 Une certaine combinaison d’options de formatage de fichier peut entraîner des résultats d’exportation de fichiers indésirables.
 Adobe recommande de ne pas sélectionner la combinaison d’options CSV suivante :
 
-```
+```properties
 nullValue -> ""
 quote -> "
 emptyValue -> ""

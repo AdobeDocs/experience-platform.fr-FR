@@ -2,7 +2,7 @@
 description: Cette page illustre comment l’appel API est utilisé pour créer un modèle d’audience avec Adobe Experience Platform Destination SDK.
 title: Création d’un modèle d’audience
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 83%
@@ -262,9 +262,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | `headers.header` | Chaîne | Spécifie les en-têtes HTTP à ajouter à l’appel de votre API. Par exemple : `"Content-Type"`. |
 | `headers.value` | Chaîne | Indique la valeur des en-têtes HTTP à ajouter à l’appel de votre API. Par exemple : `"application/x-www-form-urlencoded"`. |
 | `requestBody` | Chaîne | Indique le contenu du corps du message qui doit être envoyé à votre API. Les paramètres qui doivent être ajoutés à l’objet `requestBody` dépendent des champs que votre API accepte. Reportez-vous à la [documentation des macros prises en charge](../functionality/audience-metadata-management.md#macros) pour savoir ce que vous pouvez inclure dans le corps du message. |
-| `responseFields.name` | Chaîne | Spécifie les champs de réponse que votre API renvoie lorsqu’elle est appelée. Pour obtenir un exemple, consultez les [exemples de modèles](../functionality/audience-metadata-management.md#examples) dans le document sur les fonctionnalités des métadonnées d’audience. |
+| `responseFields.name` | Chaîne | Spécifie les champs de réponse que votre API renvoie lorsqu’elle est appelée. Pour obtenir un exemple, consultez les [exemples de modèles](../functionality/audience-metadata-management.md#configuration-examples) dans le document sur les fonctionnalités des métadonnées d’audience. |
 | `responseFields.value` | Chaîne | Spécifie la valeur de tout champ de réponse que votre API renvoie lorsqu’elle est appelée. |
-| `responseErrorFields.name` | Chaîne | Spécifie les champs de réponse que votre API renvoie lorsqu’elle est appelée. Pour obtenir un exemple, consultez les [exemples de modèles](../functionality/audience-metadata-management.md#examples) dans le document sur les fonctionnalités des métadonnées d’audience. |
+| `responseErrorFields.name` | Chaîne | Spécifie les champs de réponse que votre API renvoie lorsqu’elle est appelée. Pour obtenir un exemple, consultez les [exemples de modèles](../functionality/audience-metadata-management.md#configuration-examples) dans le document sur les fonctionnalités des métadonnées d’audience. |
 | `responseErrorFields.value` | Chaîne | Analyse tous les messages d’erreur renvoyés par les réponses d’appel API de la destination. Ces messages d’erreur seront affichés aux utilisateurs dans l’interface utilisateur d’Experience Platform. |
 | `validations.field` | Chaîne | Indique si les validations doivent être exécutées pour tout champ avant que des appels d’API ne soient effectués vers votre destination. Par exemple, vous pouvez utiliser `{{validations.accountId}}` pour valider l’identifiant de compte de l’utilisateur. |
 | `validations.regex` | Chaîne | Indique la structure du champ pour que la validation soit réussie. |

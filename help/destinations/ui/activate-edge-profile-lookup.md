@@ -3,16 +3,16 @@ title: Recherche d’attributs de profil Edge en temps réel
 description: Découvrez comment rechercher des attributs de profil Edge en temps réel à l’aide de la destination Personalization personnalisée et de l’API Edge Network
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1836'
+source-wordcount: '1833'
 ht-degree: 3%
 
 ---
 
 # Recherche d’attributs de profil sur le serveur Edge en temps réel
 
-Adobe Experience Platform utilise le [profil client en temps réel](../../profile/home.md) comme source unique de vérité pour toutes les données de profil. Pour une récupération rapide des données en temps réel, il utilise des [profils Edge](../../profile/edge-profiles.md), qui sont des profils légers répartis dans [Edge Network](../../collection/home.md#edge). Cela permet d’obtenir des cas d’utilisation de personnalisation rapides et en temps réel.
+[!DNL Adobe Experience Platform] utilise le [profil client en temps réel](../../profile/home.md) comme source unique de vérité pour toutes les données de profil. Pour une récupération rapide des données en temps réel, il utilise des [profils Edge](../../profile/edge-profiles.md), qui sont des profils légers répartis dans [Edge Network](../../collection/home.md). Cela permet d’obtenir des cas d’utilisation de personnalisation rapides et en temps réel.
 
 ## Cas d’utilisation {#use-cases}
 
@@ -30,7 +30,7 @@ Lors de la configuration du cas d’utilisation décrit sur cette page, vous uti
 * [Flux de données](../../datastreams/overview.md) : un flux de données reçoit des données d’événement entrantes de Web SDK et répond avec des données de profil Edge.
 * [Politiques de fusion](../../segmentation/ui/segment-builder.md#merge-policies) : vous allez créer une politique de fusion [!UICONTROL Active-On-Edge] pour vous assurer que les profils Edge utilisent les données de profil correctes.
 * [Connexion Personalization personnalisée](../catalog/personalization/custom-personalization.md) : vous allez configurer une nouvelle connexion de personnalisation personnalisée qui enverra les attributs de profil à Edge Network.
-* [API Edge Network &#x200B;](https://developer.adobe.com/data-collection-apis/docs/) : vous utiliserez la fonctionnalité d’API Edge Network [collecte de données interactive](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) pour récupérer rapidement les attributs de profil des profils Edge.
+* [API Edge Network ](https://developer.adobe.com/data-collection-apis/docs/) : vous utiliserez la fonctionnalité d’API Edge Network [collecte de données interactive](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) pour récupérer rapidement les attributs de profil des profils Edge.
 
 ## Mécanismes de sécurisation des performances {#guardrails}
 
@@ -91,7 +91,7 @@ Après avoir créé une connexion **[!UICONTROL Custom Personalization With Attr
 
 >[!IMPORTANT]
 >
-> * Pour activer les données et activer l’[étape de mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
+> * Pour activer les données et activer l’[étape de mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
 > 
 > Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
@@ -112,7 +112,7 @@ Après avoir créé une connexion **[!UICONTROL Custom Personalization With Attr
    Vous pouvez effectuer un choix parmi plusieurs types d’audiences, selon leur origine :
 
    * **[!UICONTROL Segmentation Service]** : audiences générées dans Experience Platform par Segmentation Service. Voir la [documentation sur la segmentation](../../segmentation/ui/overview.md) pour plus d’informations.
-   * **[!UICONTROL Custom upload]** : audiences générées en dehors d’Experience Platform et chargées dans Experience Platform au format CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [importation d’une audience](../../segmentation/ui/overview.md#import-audience).
+   * **[!UICONTROL Custom upload]** : audiences générées en dehors d’Experience Platform et chargées dans Experience Platform au format CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [importation d’une audience](../../segmentation/ui/audience-portal.md#import-audience).
    * Autres types d’audiences, provenant d’autres solutions Adobe, telles que [!DNL Audience Manager].
 
      ![L’étape Sélectionner les audiences du workflow d’activation avec plusieurs audiences mises en surbrillance.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
@@ -137,7 +137,7 @@ Sur la page **[!UICONTROL Review]**, vous pouvez voir un résumé de votre séle
 
 +++Évaluation des politiques de consentement
 
-Si votre organisation a acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL View applicable consent policies]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l’activation qui en résulte. Pour plus d’informations, consultez [&#x200B; Évaluation des politiques de consentement &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
+Si votre organisation a acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL View applicable consent policies]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l’activation qui en résulte. Pour plus d’informations, consultez [ Évaluation des politiques de consentement ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
 
 **Vérifications des politiques d’utilisation des données**
 
@@ -166,7 +166,7 @@ L’étape suivante consiste à configurer votre solution de personnalisation po
 
 >[!IMPORTANT]
 >
->Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, vous devez récupérer les attributs de profil via l’[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/). De plus, vous devez récupérer les attributs de profil via l’API Edge Network [point d’entrée de la collecte de données interactive](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) pour que les appels API soient authentifiés.
+>Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, vous devez récupérer les attributs de profil via l’[API ](https://developer.adobe.com/data-collection-apis/docs/getting-started/). De plus, vous devez récupérer les attributs de profil via l’API Edge Network [point d’entrée de la collecte de données interactive](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) pour que les appels API soient authentifiés.
 >
 >Si vous ne suivez pas les exigences ci-dessus, la personnalisation sera basée sur l’appartenance à l’audience uniquement et les attributs de profil ne seront pas disponibles pour vous.
 

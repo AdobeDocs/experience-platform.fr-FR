@@ -3,9 +3,9 @@ title: Échange d'index
 description: Connectez-vous à Index Exchange (Index) et activez vos données afin que vos segments d’audience puissent être ciblés par les offres créées dans l’interface utilisateur d’Index.
 last-substantial-update: 2026-01-27T00:00:00Z
 exl-id: 6d2a8553-5e8c-4eeb-ac25-5e4c2bdc5758
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1202'
 ht-degree: 15%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 15%
 
 [!DNL Index] est une plateforme publicitaire mondiale axée sur l’offre qui aide les propriétaires de médias à maximiser la valeur de leur contenu sur chaque écran. Fort de plus de 20 ans de leadership dans le secteur, [!DNL Index] met en relation les plus grandes marques du monde avec des créateurs d’expériences haut de gamme afin de proposer des expériences client de haute qualité.
 
-Utilisez ce connecteur de destination pour exporter des segments d’audience de Adobe Experience Platform directement vers la plateforme de publicité programmatique d’[!DNL Index Exchange].
+Utilisez ce connecteur de destination pour exporter des segments d’audience de [!DNL Adobe Experience Platform] directement vers la plateforme publicitaire programmatique d’[!DNL Index Exchange].
 
-Une fois exportés, ces segments d’audience peuvent être utilisés pour cibler les offres des propriétaires de médias, des partenaires de marketplace, ou partagés avec les éditeurs et les conservateurs par les fournisseurs de marketplace.
+Une fois exportés, ces segments d’audience ciblent les offres des propriétaires de médias, des partenaires de marketplace ou partagées avec les éditeurs et les conservateurs par les fournisseurs de marketplace.
 
 >[!IMPORTANT]
 >
->Le connecteur de destination et la page de documentation sont créés et gérés par l’équipe [!DNL Index]. Pour toute question ou demande de mise à jour, contactez-les directement à l’adresse [technical_am_marketplace@indexexchange.com](mailto:technical_am_marketplace@indexexchange.com).
+>Le connecteur de destination et la page de documentation sont créés et gérés par l’équipe [!DNL Index]. Pour toute question ou demande de mise à jour, contactez-les directement à l’adresse [](mailto:technical_am_marketplace@indexexchange.com).
 
 ## Cas d’utilisation {#use-cases}
 
@@ -66,7 +66,7 @@ Cette section explique les types d’audience que vous pouvez exporter vers cett
 | Origine de l’audience | Pris en charge | Description |
 | --------- | ---------- | ---------- |
 | [!DNL Segmentation Service] | Oui | Audiences générées via Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Toutes les autres origines d’audience | Oui | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform telles que Adobe Journey Optimizer, </li><li> et plus encore. </li></ul> |
+| Toutes les autres origines d’audience | Oui | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform, telles que [!DNL Adobe Journey Optimizer], </li><li> et plus encore. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -78,8 +78,8 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
-| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
 
@@ -138,7 +138,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 

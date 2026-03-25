@@ -2,10 +2,10 @@
 description: Cette page fournit toutes les informations dont vous avez besoin pour envoyer une destination personnalisée pour révision lorsqu’elle est créée à l’aide de Destination SDK.
 title: Envoyer une destination personnalisée pour révision
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 35%
+source-wordcount: '1039'
+ht-degree: 32%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 35%
 
 Pour que votre destination puisse être publiée dans le [catalogue des destinations Experience Platform](/help/destinations/catalog/overview.md), vous devez fournir à Adobe certaines informations sur la destination et les tests effectués. Cela permet de sʼassurer que les utilisateurs bénéficient de la meilleure expérience possible lors de l’activation des données vers votre plateforme.
 
-Cette page répertorie toutes les informations dont vous avez besoin pour envoyer ou mettre à jour une destination créée à l’aide dʼAdobe Experience Platform Destination SDK. Pour envoyer une destination dans Adobe Experience Platform, adressez un e-mail à <aepdestsdk@adobe.com> et précisez les informations suivantes :
+Cette page répertorie toutes les informations que vous devez fournir lors de l’envoi ou de la mise à jour d’une destination que vous avez créée à l’aide de [!DNL Adobe Experience Platform] Destination SDK. Pour envoyer une destination dans [!DNL Adobe Experience Platform], envoyez un e-mail à <aepdestsdk@adobe.com> contenant les informations suivantes :
 
 * Une description des cas d’utilisation que votre destination résout. Cela n’est nécessaire que si vous envoyez une nouvelle configuration de destination.
 * Une description du motif de l’envoi de la destination. Cela n’est nécessaire que si vous mettez à jour une configuration de destination existante.
@@ -47,7 +47,7 @@ Vous trouverez des informations détaillées sur chaque élément dans les secti
 
 Fournissez une description des cas d’utilisation que votre destination résout pour les clients Experience Platform. Vos descriptions peuvent être similaires aux cas d’utilisation des partenaires existants :
 
-* [Pinterest &#x200B;](/help/destinations/catalog/advertising/pinterest.md) : créez des audiences à partir de vos listes de clients, des personnes qui ont visité votre site ou de celles qui ont déjà interagi avec votre contenu sur Pinterest.
+* [Pinterest ](/help/destinations/catalog/advertising/pinterest.md) : créez des audiences à partir de vos listes de clients, des personnes qui ont visité votre site ou de celles qui ont déjà interagi avec votre contenu sur Pinterest.
 * [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases) : les API DataX sont disponibles pour les annonceurs qui souhaitent cibler un groupe d’audiences spécifique dont les adresses e-mail sont désactivées dans Verizon Media (VMG). Ils peuvent rapidement créer une nouvelle audience et envoyer le groupe d’audiences souhaité à l’aide de l’API en temps quasi réel de VMG.
 
 ## Motif de la mise à jour {#reason-for-update}

@@ -3,9 +3,9 @@ title: Créer une connexion à une destination
 type: Tutorial
 description: Découvrez comment vous connecter à une destination dans Adobe Experience Platform, activer des alertes et configurer des actions marketing pour votre destination connectée.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '1233'
 ht-degree: 64%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 64%
 
 ## Vue d’ensemble {#overview}
 
-Avant d’envoyer des données d’audience vers une destination, vous devez configurer une connexion à votre plateforme de destination. Cet article vous explique comment configurer une nouvelle connexion de destination, à laquelle vous pouvez ensuite activer des audiences ou exporter des jeux de données à l’aide de l’interface utilisateur de Adobe Experience Platform.
+Avant d’envoyer des données d’audience vers une destination, vous devez configurer une connexion à votre plateforme de destination. Cet article vous explique comment configurer une nouvelle connexion de destination, à laquelle vous pouvez ensuite activer des audiences ou exporter des jeux de données à l’aide de l’interface utilisateur [!DNL Adobe Experience Platform].
 
 ## Rechercher la destination souhaitée dans le catalogue {#setup}
 
@@ -39,7 +39,7 @@ Avant d’envoyer des données d’audience vers une destination, vous devez con
 
    ![Copie d’écran de l’interface utilisateur d’Experience Platform présentant la page du catalogue des destinations avec l’option Configurer mise en surbrillance.](../assets/ui/connect-destinations/set-up.png)
 
-   ![&#x200B; Copie d’écran de l’interface utilisateur d’Experience Platform affichant la page du catalogue des destinations avec le contrôle Activer les audiences en surbrillance.](../assets/ui/connect-destinations/activate-segments.png)
+   ![ Copie d’écran de l’interface utilisateur d’Experience Platform affichant la page du catalogue des destinations avec le contrôle Activer les audiences en surbrillance.](../assets/ui/connect-destinations/activate-segments.png)
 
 3. Si vous avez sélectionné **[!UICONTROL Set up]**, passez à l’étape suivante, pour [s’authentifier](#authenticate) à la destination.
 

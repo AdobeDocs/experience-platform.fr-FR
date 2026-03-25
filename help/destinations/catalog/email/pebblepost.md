@@ -3,10 +3,10 @@ keywords: PebblePost;pebblepost;publipostage direct programmatique PebblePost;pu
 title: Extension PebblePost
 description: L’extension PebblePost est une destination de messagerie dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '441'
-ht-degree: 59%
+source-wordcount: '432'
+ht-degree: 54%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 59%
 
 [!DNL PebblePost's Programmatic Direct Mail] solution aide les spécialistes du marketing numérique à connecter l’intérêt et l’intention en ligne à des médias tangibles hors ligne qui convertissent. Les marketeurs peuvent tirer parti des audiences de données personnalisées qu&#39;ils ont créées dans Adobe pour cibler désormais les consommateurs avec une impression multimédia à domicile pertinente et plus durable. Analysez les performances en temps réel en fonction de l’activité du chemin de réponse et des conversions sur site.
 
-[!DNL PebblePost] est une extension d’e-mail dans Adobe Experience Platform.
+[!DNL PebblePost] est une extension d’e-mail dans [!DNL Adobe Experience Platform].
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension PebblePost](../../assets/catalog/email/pebblepost/catalog.png)
 
@@ -26,13 +26,13 @@ Cette destination est une extension de balise. Pour plus d’informations sur le
 
 Cette extension est disponible dans le catalogue [!DNL Destinations] pour tous les clients qui ont acheté Experience Platform.
 
-Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Experience Platform. Les balises sont proposées aux clients Adobe Experience Cloud en tant que fonctionnalité à valeur ajoutée incluse. Contactez l’administrateur ou l’administratrice de votre organisation pour accéder aux balises et demandez-lui de vous accorder l’autorisation **[!UICONTROL manage_properties]** afin que vous puissiez installer des extensions.
+Pour utiliser cette extension, vous devez accéder aux balises dans [!DNL Adobe Experience Platform]. Les balises sont proposées aux clients [!DNL Adobe Experience Cloud] en tant que fonctionnalité à valeur ajoutée incluse. Contactez l’administrateur ou l’administratrice de votre organisation pour accéder aux balises et demandez-lui de vous accorder l’autorisation **[!UICONTROL manage_properties]** afin que vous puissiez installer des extensions.
 
 ## Installation l’extension {#install-extension}
 
 Pour installer l’extension [!DNL PebblePost], procédez comme suit :
 
-Dans l’interface d’[Experience Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+Dans l’interface d’[](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 

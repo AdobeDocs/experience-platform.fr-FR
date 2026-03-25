@@ -3,10 +3,10 @@ keywords: destinations publicitaires;destinations;destinations platform
 title: Présentation des destinations publicitaires
 description: Connectez Adobe Experience Platform à une plateforme publicitaire tierce (par exemple, DSP, réseau publicitaire, SSP) et partagez des audiences pseudonymes sur ces plateformes.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '289'
-ht-degree: 43%
+source-wordcount: '286'
+ht-degree: 44%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 43%
 
 ## Vue d’ensemble {#overview}
 
-Connectez Adobe Experience Platform à des plateformes publicitaires telles que les plateformes côté demande (DSP), les plateformes côté offre (SSP) et les réseaux publicitaires pour partager des audiences connues et pseudonymes avec ces plateformes.
+Connectez-vous [!DNL Adobe Experience Platform] à des plateformes publicitaires telles que les plateformes côté demande (DSP), les plateformes côté offre (SSP) et les réseaux publicitaires pour partager des audiences connues et pseudonymes avec ces plateformes.
 
 Lors de la connexion à une destination publicitaire, vos audiences sont envoyées sous forme d’identifiants à la plateforme de destination, où elles sont mappées à un identifiant connu par la plateforme de destination.
 

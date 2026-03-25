@@ -3,9 +3,9 @@ title: Niveau de connexion
 description: Utilisez la destination de diffusion en continu Niveau pour activer les audiences directement dans la base de données utilisateur de niveau et les API de gestion des segments, et prendre en charge le ciblage en temps réel au moment de la décision.
 last-substantial-update: 2026-01-27T00:00:00Z
 exl-id: 53ce2864-6a3b-4859-b14d-a03c2ce18884
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1159'
 ht-degree: 8%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 8%
 
 [[!DNL Kevel]](https://www.kevel.com/) fournit la technologie activée par l’IA et des conseils d’experts qui aident les leaders du commerce innovants à lancer, développer et réussir dans les médias de détail. [!DNL Kevel]’s Retail Media Cloud optimise les formats publicitaires ciblés, attribuables et personnalisables pour la publicité sur site et hors site.
 
-La destination de diffusion en continu [!DNL Kevel] pour Adobe Experience Platform permet aux clients d’activer les audiences Adobe directement dans la base de données des utilisateurs d’[!DNL Kevel] et les API de gestion des segments afin de prendre en charge le ciblage en temps réel au moment de la décision de publicité.
+La destination de diffusion en continu [!DNL Kevel] pour [!DNL Adobe Experience Platform] permet aux clients d’activer les audiences Adobe directement dans la base de données utilisateur et les API de gestion des segments d’[!DNL Kevel] afin de prendre en charge le ciblage en temps réel au moment de la décision de publicité.
 
 >[!IMPORTANT]
 >
@@ -31,7 +31,7 @@ Vous pouvez activer les audiences comportementales propriétaires riches dans vo
 Pour vous préparer à l’utilisation de la destination [!DNL Kevel], assurez-vous que les conditions préalables suivantes sont remplies :
 
 - Vous devez disposer d’un réseau **[!DNL Kevel]actif** ainsi que d’un accès API.
-- Vous avez besoin d’une clé API **[!DNL Kevel]** avec les autorisations pour créer des segments et mettre à jour les enregistrements UserDB.
+- Vous avez besoin d’une clé API **[!DNL Kevel]avec les autorisations pour créer des segments et mettre à jour les enregistrements UserDB.**
 - Vous devez configurer des espaces de noms d’identité dans Experience Platform qui correspondent aux identités envoyées par votre site ou votre application lors des demandes d’annonces [!DNL Kevel] (par exemple, ECID, GAID, IDFA, identifiant de fidélité, etc.).
 - Les clients Adobe ne doivent mapper que les identités utilisées lors des requêtes publicitaires en temps réel, car chaque identité entraîne un enregistrement UserDB.
 
@@ -73,7 +73,7 @@ Autrement dit :
 | Origine de l’audience | Pris en charge | Description |
 |-----------------------|-----------|---------------------------------------------------------- |
 | Service de segmentation | Oui | Audiences du profil Adobe évaluées par le moteur de segmentation. |
-| Toutes les autres origines d’audience | Oui | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform telles que Adobe Journey Optimizer, </li><li> et plus encore. </li></ul> |
+| Toutes les autres origines d’audience | Oui | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform, telles que [!DNL Adobe Journey Optimizer], </li><li> et plus encore. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -85,8 +85,8 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
-| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
 

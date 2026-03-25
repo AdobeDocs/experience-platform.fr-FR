@@ -3,10 +3,10 @@ title: Activer les audiences de prospects vers des destinations
 type: Tutorial
 description: Découvrez comment activer les audiences de prospects vers les destinations
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '593'
-ht-degree: 24%
+source-wordcount: '583'
+ht-degree: 15%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 24%
 
 >[!AVAILABILITY]
 >
->Cette fonctionnalité est disponible pour les clients qui ont acheté les packages Real-Time CDP Prime et Ultimate. Contactez votre représentant ou représentante Adobe pour plus d’informations.
+>Cette fonctionnalité est disponible pour les clients qui ont acheté les packages [!DNL Real-Time CDP] Prime et Ultimate. Contactez votre représentant ou représentante Adobe pour plus d’informations.
 
-Cet article explique le processus requis pour exporter des [audiences de prospects](/help/segmentation/types/prospect-audiences.md) de Adobe Experience Platform vers votre destination préférée.
+Cet article explique le workflow requis pour exporter des [audiences de prospects](/help/segmentation/types/prospect-audiences.md) de [!DNL Adobe Experience Platform] vers votre destination préférée.
 
 ## Destinations prises en charge {#supported-destinations}
 
@@ -77,7 +77,7 @@ Pour le reste du workflow d’activation afin d’exporter les audiences de pros
 
 >[!NOTE]
 >
->Notez que dans l&#39;étape de planification, le workflow d&#39;activation des audiences de prospects ne vous permet d&#39;[exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files). Les exportations de fichiers incrémentiels ne sont pas prises en charge.
+>Notez que dans l&#39;étape de planification, le workflow d&#39;activation des audiences de prospects permet uniquement d&#39;[exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files). Les exportations de fichiers incrémentiels ne sont pas prises en charge.
 
 <!--
 
@@ -87,8 +87,8 @@ Note that we will need to add links to other destination types here as more dest
 
 ## Autres cas d’utilisation réalisés grâce à la prise en charge des données des partenaires {#other-use-cases}
 
-Explorez d’autres cas d’utilisation activés grâce à la prise en charge des données des partenaires dans Real-Time CDP :
+Explorez d’autres cas d’utilisation activés par le biais de la prise en charge des données des partenaires dans [!DNL Real-Time CDP] :
 
 * [Complétez les profils propriétaires avec les attributs des partenaires de données de confiance pour améliorer votre base de données, obtenir de nouvelles informations sur votre base de clientèle et optimiser l’audience.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* Utilisez la prise en charge de données tierces dans Real-Time CDP pour [développer votre base de profils avec les profils de prospects des partenaires de données et interagissez avec eux pour acquérir ou atteindre une nouvelle clientèle](/help/rtcdp/partner-data/prospecting.md).
+* Utilisez la prise en charge de données tierces dans [!DNL Real-Time CDP] pour [étendre votre base de profils avec les profils de prospects des partenaires de données et interagir avec eux pour acquérir ou atteindre de nouveaux clients](/help/rtcdp/partner-data/prospecting.md).
 * [Tirez parti de la reconnaissance assistée par un partenaire pour personnaliser les expériences sur site](/help/rtcdp/partner-data/onsite-personalization.md) au cours de la visite sans que l’utilisateur ne s’authentifie ou n’ait d’historique avec votre marque.

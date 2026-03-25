@@ -3,10 +3,10 @@ title: Connexion PX Gainsight
 description: Utilisez la destination Gainsight PX pour envoyer des informations de segmentation à la plateforme Gainsight PX.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0ca0d34f-f866-4f59-80f8-60198fbb86be
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '983'
-ht-degree: 22%
+source-wordcount: '968'
+ht-degree: 23%
 
 ---
 
@@ -22,11 +22,11 @@ ht-degree: 22%
 
 ## Cas d’utilisation {#use-cases}
 
-Pour mieux comprendre quand et comment utiliser la destination *Gainsight PX*, consultez les exemples de cas d’utilisation ci-dessous que la clientèle Adobe Experience Platform peut résoudre.
+Pour mieux comprendre quand et comment utiliser la destination *Gainsight PX*, consultez les exemples de cas d’utilisation ci-dessous que [!DNL Adobe Experience Platform] clients peuvent résoudre.
 
 ### Ciblage des engagements In-App {#targeting-in-app-engagements}
 
-Une entreprise SaaS souhaite interagir avec ses clients au moyen d&#39;un guide intégré à l&#39;application conçu sur Gainsight PX. Une audience pour recevoir cet engagement a été créée sur Adobe Experience Platform. La destination de Gainsight PX reçoit l’audience et la rend disponible dans l’environnement Gainsight PX.
+Une entreprise SaaS souhaite interagir avec ses clients au moyen d&#39;un guide intégré à l&#39;application conçu sur Gainsight PX. Une audience pour recevoir cet engagement a été créée sur [!DNL Adobe Experience Platform]. La destination de Gainsight PX reçoit l’audience et la rend disponible dans l’environnement Gainsight PX.
 
 ## Conditions préalables {#prerequisites}
 
@@ -40,7 +40,7 @@ Gainsight PX prend en charge l’activation des identités décrites dans le tab
 
 | Identité cible | Description |
 |---|----|
-| IdentifiantID | Identifiant utilisateur commun qui identifie de manière unique un utilisateur dans Gainsight PX et Adobe Experience Platform |
+| IdentifiantID | Identifiant utilisateur commun qui identifie de manière unique un utilisateur dans Gainsight PX et [!DNL Adobe Experience Platform] |
 
 {style="table-layout:auto"}
 
@@ -51,7 +51,7 @@ Cette section décrit le type d’audience que vous pouvez exporter vers cette d
 | Origine de l’audience | Pris en charge | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Oui | Audiences générées via Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Toutes les autres origines d’audience | Non | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform telles que Adobe Journey Optimizer, </li><li> et plus encore. </li></ul> |
+| Toutes les autres origines d’audience | Non | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform, telles que [!DNL Adobe Journey Optimizer], </li><li> et plus encore. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -63,8 +63,8 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
-| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
 
@@ -95,7 +95,7 @@ Pour vous authentifier auprès de la destination, renseignez les champs requis e
 ![Capture d’écran d’authentification](../../assets/catalog/analytics/gainsight-px/auth-screen.png)
 
 * **[!UICONTROL Password]** : mot de passe utilisé pour se connecter à [[!DNL Gainsight PX]](https://app.aptrinsic.com)
-* **[!UICONTROL Client ID]** : ID d’abonnement Gainsight PX sur la page [&#x200B; Détails de l’entreprise &#x200B;](https://app.aptrinsic.com/settings/subscription)
+* **[!UICONTROL Client ID]** : ID d’abonnement Gainsight PX sur la page [ Détails de l’entreprise ](https://app.aptrinsic.com/settings/subscription)
 * **[!UICONTROL Client secret]** : secret OAuth généré au bas de la page [Détails de l’entreprise](https://app.aptrinsic.com/settings/subscription) dans l’interface utilisateur de [!DNL Gainsight PX].
 * **[!UICONTROL Username]** : adresse e-mail utilisée pour se connecter à l’interface utilisateur de [[!DNL Gainsight PX]](https://app.aptrinsic.com)
 
@@ -115,7 +115,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Lisez [Activer des audiences vers des destinations de diffusion en streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 

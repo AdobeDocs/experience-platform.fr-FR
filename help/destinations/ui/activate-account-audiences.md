@@ -3,9 +3,9 @@ title: Activer les audiences de compte vers les destinations
 type: Tutorial
 description: Découvrez comment activer les audiences de compte vers les destinations
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '762'
 ht-degree: 6%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 6%
 
 >[!AVAILABILITY]
 >
->La fonctionnalité d’activation des audiences de compte vers les destinations est disponible pour les sociétés qui achètent les éditions [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) et [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) de Real-Time Customer Data Platform.
+>La fonctionnalité d’activation des audiences de compte vers les destinations est disponible pour les sociétés qui achètent les éditions [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) et [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) de [!DNL Real-Time Customer Data Platform].
 
-Cet article explique le processus requis pour exporter des [audiences de compte](/help/segmentation/types/account-audiences.md) de Adobe Experience Platform vers votre destination préférée.
+Cet article explique le processus requis pour exporter des [audiences de compte](/help/segmentation/types/account-audiences.md) de [!DNL Adobe Experience Platform] vers votre destination préférée.
 
 ## Destinations prises en charge {#supported-destinations}
 
@@ -83,7 +83,7 @@ Pour le reste du workflow d’activation afin d’exporter les audiences de comp
 
 >[!NOTE]
 >
->À l’étape de planification lors de l’exportation d’audiences de compte vers des destinations d’espace de stockage, le workflow d’activation des audiences de compte vous permet uniquement d’exporter des [fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et des [fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _selon un planning quotidien_. Les exportations horaires ne sont pas prises en charge. **[!UICONTROL After audience evaluation]** est le seul type d’évaluation pris en charge.
+>À l’étape de planification lors de l’exportation d’audiences de compte vers des destinations d’espace de stockage, le workflow d’activation des audiences de compte vous permet d’exporter uniquement des [fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et des [fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _selon un planning quotidien_. Les exportations horaires ne sont pas prises en charge. **[!UICONTROL After audience evaluation]** est le seul type d’évaluation pris en charge.
 
 ## Légendes importantes et limites connues {#important-callouts-known-limitations}
 
@@ -108,4 +108,4 @@ Le consentement est appliqué au niveau de la personne ou du profil pour les *au
 
 ![L’étape Vérifier du workflow d’activation des audiences de compte avec le contrôle d’application du consentement grisé.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
 
-D’autres mécanismes de gouvernance des données dans Real-Time CDP, tels que [contrôles des politiques d’utilisation des données](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) et [contrôle d’accès basé sur les attributs](/help/destinations/home.md#attribute-based-access) sont pris en charge.
+D’autres mécanismes de gouvernance des données dans les [!DNL Real-Time CDP] tels que [contrôles des politiques d’utilisation des données](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) et [contrôle d’accès basé sur les attributs](/help/destinations/home.md#attribute-based-access) sont pris en charge.

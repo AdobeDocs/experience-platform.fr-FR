@@ -3,10 +3,10 @@ keywords: destinations analytics;destination analytics
 title: Présentation des destinations Analytics
 description: Les destinations d’analyse effectuent le suivi de la manière dont les visiteurs interagissent avec le contenu de votre site et collectent des données afin de comprendre le comportement de votre audience. Ces plateformes vous fournissent des informations uniques sur l’engagement et la conversion de vos visiteurs les plus précieux.
 exl-id: d7a2351b-c2ce-4776-a2b7-f8bb5e73b45b
-source-git-commit: 8b29e4c06300244a72addc7ae4807425a405b56f
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 83%
+source-wordcount: '170'
+ht-degree: 85%
 
 ---
 
@@ -18,7 +18,7 @@ Les destinations d’analyse effectuent le suivi de la manière dont les visiteu
 
 ## Destinations Analytics prises en charge {#supported-destinations}
 
-Actuellement, Adobe Experience Platform prend en charge les destinations d’analyse répertoriées ci-dessous. Pour en savoir plus sur la connexion à ces destinations, consultez les liens individuels :
+Actuellement, [!DNL Adobe Experience Platform] prend en charge les destinations d’analyse répertoriées ci-dessous. Pour en savoir plus sur la connexion à ces destinations, consultez les liens individuels :
 
 * [Extension Adform Website Tracking](adform.md)
 * [Extension Adobe Analytics](adobe-analytics.md)

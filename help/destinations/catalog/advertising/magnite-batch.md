@@ -3,9 +3,9 @@ title: Destination par lots Magnite
 description: Utilisez cette destination pour diffuser des audiences Adobe CDP vers la plateforme de streaming Magnite par lots.
 last-substantial-update: 2024-11-18T00:00:00Z
 exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1779'
+source-wordcount: '1756'
 ht-degree: 12%
 
 ---
@@ -16,16 +16,16 @@ ht-degree: 12%
 
 Ce document décrit la destination Magnite : par lots et fournit des exemples de cas d’utilisation pour vous aider à mieux comprendre comment activer et exporter des audiences vers celle-ci.
 
-Les audiences Adobe Real-Time CDP peuvent être diffusées sur la plateforme de streaming Magnite de deux manières : elles peuvent être diffusées une fois par jour ou en temps réel :
+Les audiences Adobe [!DNL Real-Time CDP] peuvent être diffusées sur la plateforme de streaming Magnite de deux manières : elles peuvent être diffusées une fois par jour ou en temps réel :
 
 1. Si vous souhaitez et/ou devez uniquement diffuser des audiences une fois par jour, vous pouvez utiliser la destination Magnite : Batch , qui diffuse des audiences vers Magnite Streaming via une diffusion quotidienne de fichiers par lots S3. Ces audiences par lots sont stockées indéfiniment sur la plateforme Magnite, contrairement aux audiences en temps réel, qui ne sont stockées que pendant quelques jours.
 
 2. Cependant, si vous souhaitez ou devez diffuser des audiences plus fréquemment, vous devez utiliser la destination [Magnite Real-Time](/help/destinations/catalog/advertising/magnite-streaming.md). Lors de l’utilisation de la destination en temps réel, Magnite Streaming recevra les audiences en temps réel, mais Magnite ne peut stocker les audiences en temps réel que temporairement dans sa plateforme et elles seront supprimées du système dans un délai de deux jours. Pour cette raison, si vous souhaitez utiliser la destination en temps réel Magnite, vous devez *également* utiliser la destination Magnite : lot . Pour chaque audience que vous activez vers la destination en temps réel, vous devez également activer vers la destination par lots .
 
-En résumé : si vous souhaitez diffuser des audiences Adobe Real-Time CDP une seule fois par jour, vous utiliserez la destination Magnite : Batch uniquement et les audiences seront diffusées une fois par jour. Si vous souhaitez diffuser des audiences Adobe Real-Time CDP en temps réel, vous utiliserez *à la fois* la destination Magnite : par lots et la destination Magnite en temps réel. Pour plus d’informations, contactez Magnite : Streaming.
+En résumé : si vous souhaitez diffuser les audiences Adobe [!DNL Real-Time CDP] une seule fois par jour, vous utiliserez la destination Magnite : Batch uniquement et les audiences seront diffusées une fois par jour. Si vous souhaitez diffuser des audiences Adobe [!DNL Real-Time CDP] en temps réel, vous utiliserez *à la fois* la destination Magnite : par lots et la destination Magnite en temps réel. Pour plus d’informations, contactez Magnite : Streaming.
 
 
-Poursuivez la lecture ci-dessous pour plus d’informations sur la destination Magnite : par lots, comment vous y connecter et comment y activer les audiences Adobe Real-Time CDP.
+Poursuivez la lecture ci-dessous pour plus d’informations sur la destination Magnite : Batch, sur la manière de s’y connecter et d’activer Adobe [!DNL Real-Time CDP] les audiences qui s’y connectent.
 Pour plus d’informations sur la destination en temps réel, voir [cette page de documentation](magnite-streaming.md) à la place.
 
 >[!IMPORTANT]
@@ -34,7 +34,7 @@ Pour plus d’informations sur la destination en temps réel, voir [cette page d
 
 ## Cas d’utilisation {#use-cases}
 
-Pour mieux comprendre quand et comment utiliser la destination Magnite : Batch , consultez les exemples de cas d’utilisation ci-dessous que la clientèle de Adobe Experience Platform peut résoudre.
+Pour mieux comprendre quand et comment utiliser la destination Magnite : Batch , consultez les exemples de cas d’utilisation ci-dessous que [!DNL Adobe Experience Platform] clients peuvent résoudre à l’aide de cette destination.
 
 ### Cas d’utilisation #1 {#use-case-1}
 
@@ -50,7 +50,7 @@ Toute audience activée via la destination Magnite : lot sera diffusée à une c
 
 ## Conditions préalables {#prerequisites}
 
-Pour utiliser les destinations [!DNL Magnite] dans Adobe Experience Platform, vous devez d’abord disposer d’un compte de streaming Magnite. Si vous disposez d’un compte [!DNL Magnite Streaming], contactez votre gestionnaire de compte [!DNL Magnite] afin d’obtenir des informations d’identification pour accéder aux destinations [!DNL Magnite's]. Si vous n’avez pas de compte [!DNL Magnite Streaming], veuillez contacter adobe-tech@magnite.com
+Pour utiliser les destinations [!DNL Magnite] dans [!DNL Adobe Experience Platform], vous devez d’abord disposer d’un compte de streaming Magnite. Si vous disposez d’un compte [!DNL Magnite Streaming], contactez votre gestionnaire de compte [!DNL Magnite] afin d’obtenir des informations d’identification pour accéder aux destinations [!DNL Magnite's]. Si vous n’avez pas de compte [!DNL Magnite Streaming], veuillez contacter adobe-tech@magnite.com
 
 ## Identités prises en charge {#supported-identities}
 
@@ -73,7 +73,7 @@ La destination Magnite : lot peut recevoir *toutes* sources d’identité du CDP
 | Origine de l’audience | Pris en charge | Description |
 |-----------------------------|----------|----------|
 | [!DNL Segmentation Service] | Oui | Audiences générées via Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Toutes les autres origines d’audience | Oui | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform telles que Adobe Journey Optimizer, </li><li> et plus encore. </li></ul> |
+| Toutes les autres origines d’audience | Oui | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform, telles que [!DNL Adobe Journey Optimizer], </li><li> et plus encore. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -85,8 +85,8 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
-| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
 
@@ -157,7 +157,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
@@ -189,7 +189,7 @@ Sur l’écran « Configurer un nom de fichier et un planning d’exportation po
 
 Une fois vos audiences chargées, vous pouvez vérifier qu’elles ont été créées et chargées correctement.
 
-* La destination Magnite : Batch diffuse des fichiers S3 en flux continu Magnite à une cadence quotidienne. Après la diffusion et l’ingestion, les audiences/segments doivent apparaître dans la diffusion en continu Magnite et peuvent être appliqués à une offre. Vous pouvez le confirmer en recherchant l’identifiant du segment ou le nom du segment qui a été partagé lors des étapes d’activation dans le Adobe Experience Platform.
+* La destination Magnite : Batch diffuse des fichiers S3 en flux continu Magnite à une cadence quotidienne. Après la diffusion et l’ingestion, les audiences/segments doivent apparaître dans la diffusion en continu Magnite et peuvent être appliqués à une offre. Vous pouvez le confirmer en recherchant l’identifiant du segment ou le nom du segment qui a été partagé lors des étapes d’activation dans la [!DNL Adobe Experience Platform].
 
 >[!NOTE]
 >

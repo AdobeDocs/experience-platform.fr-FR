@@ -3,10 +3,10 @@ keywords: balises airship;destination airship
 title: Connexion Balises Airship
 description: Transmettez facilement les données d’audience Adobe à Airship sous la forme de balises d’audience pour le ciblage dans Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1070'
-ht-degree: 25%
+source-wordcount: '1052'
+ht-degree: 26%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 25%
 
 [!DNL Airship] est la principale plateforme d’engagement des clients. Elle vous permet de fournir à vos utilisateurs des messages omnicanal pertinents et personnalisés à chaque étape du cycle de vie du client.
 
-Cette intégration transmet les données d’audience Adobe Experience Platform dans des [!DNL Airship] sous la forme de [Balises](https://docs.airship.com/guides/audience/tags/) à des fins de ciblage ou de déclenchement.
+Cette intégration transmet [!DNL Adobe Experience Platform] données d’audience dans des [!DNL Airship] en tant que [Balises](https://docs.airship.com/guides/audience/tags/) pour le ciblage ou le déclenchement.
 
 Pour en savoir plus sur [!DNL Airship], consultez les [documents relatifs aux dirigeables](https://docs.airship.com).
 
@@ -27,7 +27,7 @@ Pour en savoir plus sur [!DNL Airship], consultez les [documents relatifs aux di
 
 ## Conditions préalables {#prerequisites}
 
-Avant d’envoyer vos audiences Adobe Experience Platform à [!DNL Airship], vous devez :
+Avant d’envoyer vos audiences [!DNL Adobe Experience Platform] à [!DNL Airship], vous devez effectuer les opérations suivantes :
 
 * Créez un groupe de balises dans votre projet [!DNL Airship].
 * Générez un jeton porteur pour l’authentification.
@@ -43,7 +43,7 @@ Cette section décrit les types d’audiences que vous pouvez exporter vers cett
 | Origine de l’audience | Pris en charge | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Oui | Audiences générées via Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Toutes les autres origines d’audience | Oui | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform telles que Adobe Journey Optimizer, </li><li> et plus encore. </li></ul> |
+| Toutes les autres origines d’audience | Oui | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform, telles que [!DNL Adobe Journey Optimizer], </li><li> et plus encore. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -55,8 +55,8 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
-| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
 
@@ -96,7 +96,7 @@ Cliquez sur **[!UICONTROL Create Token]** et enregistrez les détails comme conf
 
 ## Cas d’utilisation {#use-cases}
 
-Pour mieux comprendre quand et comment utiliser la destination [!DNL Airship Tags], consultez les exemples de cas d’utilisation ci-dessous que la clientèle de Adobe Experience Platform peut résoudre.
+Pour mieux comprendre quand et comment utiliser la destination [!DNL Airship Tags], consultez les exemples de cas d’utilisation ci-dessous que [!DNL Adobe Experience Platform] clients peuvent résoudre à l’aide de cette destination.
 
 ### Cas d’utilisation #1 {#use-case-1}
 
@@ -104,7 +104,7 @@ Les détaillants ou les plateformes de divertissement peuvent créer des profils
 
 ### Cas d’utilisation #2 {#use-case-2}
 
-Déclenchez des messages un-à-un en temps réel lorsque les utilisateurs appartiennent ou non à des audiences spécifiques dans Adobe Experience Platform.
+Déclenchez des messages un-à-un en temps réel lorsque les utilisateurs entrent ou sortent d’audiences spécifiques dans [!DNL Adobe Experience Platform].
 
 Par exemple, un retailer configure une audience spécifique à la marque Jeans dans Experience Platform. Ce retailer peut désormais déclencher un message mobile dès que quelqu’un définit sa préférence de jeans sur une marque spécifique.
 

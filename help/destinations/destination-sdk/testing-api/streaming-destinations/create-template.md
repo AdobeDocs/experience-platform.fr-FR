@@ -2,10 +2,10 @@
 description: Découvrez comment utiliser l’API de test de destination pour tester votre modèle de transformation de message de destination de diffusion en streaming avant de publier la destination.
 title: Création et test d’un modèle de transformation de message
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '948'
-ht-degree: 100%
+source-wordcount: '937'
+ht-degree: 88%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 Dans le cadre de Destination SDK, Adobe fournit des outils de développement pour vous aider à configurer et tester la destination. Cette page décrit comment créer et tester un modèle de transformation de messages. Pour en savoir plus sur la manière de tester la destination, consultez la documentation [Tester la configuration de destination](streaming-destination-testing-overview.md).
 
-Pour **créer et tester un modèle de transformation de message** entre le schéma cible d’Adobe Experience Platform et le format de message pris en charge par la destination, utilisez la méthode *Outil de création de modèles* décrite plus en détail ci-après.  Consultez le[Document du format du message](../../functionality/destination-server/message-format.md#using-templating) pour en savoir plus sur la transformation des données entre le schéma source et le schéma cible.
+Pour **créer et tester un modèle de transformation de message** entre le schéma cible dans [!DNL Adobe Experience Platform] et le format de message pris en charge par la destination, utilisez l’outil *de création de modèles* décrit plus en détail ci-dessous.  Consultez le[Document du format du message](../../functionality/destination-server/message-format.md#using-templating) pour en savoir plus sur la transformation des données entre le schéma source et le schéma cible.
 
 L’illustration ci-dessous montre comment la création et le test d’un modèle de transformation de message s’intègrent dans le [workflow de configuration de la destination](../../guides/configure-destination-instructions.md) de Destination SDK :
 
@@ -24,7 +24,7 @@ L’illustration ci-dessous montre comment la création et le test d’un modèl
 
 ## Pourquoi créer et tester un modèle de transformation de messages {#why-create-message-transformation-template}
 
-L’une des premières étapes de la création de la destination dans Destination SDK consiste à réfléchir à la manière dont le format de données pour l’appartenance à une audience, les identités et les attributs de profil est transformé au moment de l’exportation d’Adobe Experience Platform vers la destination. Pour plus d’informations sur la transformation entre le schéma XDM d’Adobe et votre schéma de destination, consultez le [Document du format du message](../../functionality/destination-server/message-format.md#using-templating).
+L’une des premières étapes de la création de la destination dans Destination SDK consiste à réfléchir à la manière dont le format de données pour l’appartenance à une audience, les identités et les attributs de profil est transformé lors de l’exportation de [!DNL Adobe Experience Platform] vers la destination. Pour plus d’informations sur la transformation entre le schéma XDM d’Adobe et votre schéma de destination, consultez le [Document du format du message](../../functionality/destination-server/message-format.md#using-templating).
 
 Pour que la transformation réussisse, vous devez fournir un modèle de transformation semblable au modèle suivant : [Création d’un modèle qui envoie des segments, des identités et des attributs de profil](../../functionality/destination-server/message-format.md#segments-identities-attributes).
 
@@ -158,12 +158,12 @@ Vous pouvez utiliser un outil d’échappement de caractères en ligne. La méth
 
 ## API du modèle de rendu {#render-template-api}
 
-Après avoir créé un modèle de transformation de message à l’aide de l’[API du modèle type](create-template.md#sample-template-api), vous pouvez [effectuer le rendu du modèle](render-template-api.md) pour générer les données exportées en fonction de celle-ci. Cela vous permet de vérifier si les profils qu’Adobe Experience Platform exporterait vers la destination correspondent au format prévu de la destination.
+Après avoir créé un modèle de transformation de message à l’aide de l’[API du modèle type](create-template.md#sample-template-api), vous pouvez [effectuer le rendu du modèle](render-template-api.md) pour générer les données exportées en fonction de celle-ci. Vous pouvez ainsi vérifier si les profils que [!DNL Adobe Experience Platform] exporteriez vers la destination correspondent au format attendu de la destination.
 
 Consultez la référence d’API pour obtenir des exemples d’appels que vous pouvez effectuer :
 
-* [Rendu d’un modèle sans profils envoyés dans le corps](render-template-api.md#multiple-profiles-no-body)
-* [Rendu d’un modèle avec des profils envoyés dans le corps](render-template-api.md#multiple-profiles-with-body)
+* [Rendu d’un modèle sans profils envoyés dans le corps](render-template-api.md#best-effort)
+* [Rendu d’un modèle avec des profils envoyés dans le corps](render-template-api.md#configurable-aggregation)
 
 Modifiez le modèle et effectuez des appels vers le point d’entrée de l’API du modèle de rendu jusqu’à ce que les profils exportés correspondent au format de données attendu de la destination.
 

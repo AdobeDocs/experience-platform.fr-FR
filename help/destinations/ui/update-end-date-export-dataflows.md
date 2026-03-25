@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 description: Découvrez comment mettre à jour la date de fin des flux de données d’exportation de jeux de données avec une date de fin actuelle fixée au 1er mai 2025.
 exl-id: 3f8ff535-3c54-47ac-b297-32f8298881db
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Pour mettre à jour la date de fin des flux de données :
    ![Sélectionnez le contrôle de date de fin en surbrillance à l’étape Planification.](/help/destinations/assets/ui/export-datasets/select-end-date.png)
 4. Passez à la fin du workflow et enregistrez vos mises à jour.
 
-Pour obtenir des informations détaillées sur l’étape de planification, consultez le tutoriel [interface utilisateur d’exportation de jeux de données](/help/destinations/api/export-datasets.md#scheduling).
+Pour obtenir des informations détaillées sur l’étape de planification, consultez le tutoriel [interface utilisateur d’exportation de jeux de données](/help/destinations/api/export-datasets.md#export-datasets-by-using-the).
 
 ## Utiliser l’API pour mettre à jour la date de fin {#use-api}
 

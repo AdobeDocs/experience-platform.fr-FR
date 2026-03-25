@@ -3,14 +3,14 @@ title: Exporter des tableaux, des mappages et des objets à partir de Real-Time 
 type: Tutorial
 description: Découvrez comment exporter des tableaux, des mappages et des objets de Real-Time CDP vers des destinations d’espace de stockage.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1056'
 ht-degree: 14%
 
 ---
 
-# Exporter des tableaux, des mappages et des objets à partir de Real-Time CDP {#export-arrays-cloud-storage}
+# Exporter des tableaux, des mappages et des objets depuis [!DNL Real-Time CDP] {#export-arrays-cloud-storage}
 
 >[!AVAILABILITY]
 >
@@ -19,12 +19,12 @@ ht-degree: 14%
 >De plus, vous pouvez exporter des champs de type mappage vers les destinations suivantes : [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [API HTTP](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md).
 
 
-Découvrez comment exporter des tableaux, des mappages et des objets de Real-Time CDP vers des [destinations d’espace de stockage](/help/destinations/catalog/cloud-storage/overview.md). De plus, vous pouvez exporter des champs de type mappage vers des [destinations d’entreprise](/help/destinations/destination-types.md#advanced-enterprise-destinations) et des [destinations de personnalisation Edge limitées](/help/destinations/destination-types.md#edge-personalization-destinations). Lisez ce document pour comprendre le workflow d’exportation, les cas d’utilisation activés par cette fonctionnalité et les limites connues. Consultez le tableau ci-dessous pour comprendre les fonctionnalités disponibles par type de destination.
+Découvrez comment exporter des tableaux, des mappages et des objets de [!DNL Real-Time CDP] vers des [destinations d’espace de stockage](/help/destinations/catalog/cloud-storage/overview.md). De plus, vous pouvez exporter des champs de type mappage vers des [destinations d’entreprise](/help/destinations/destination-types.md#advanced-enterprise-destinations) et des [destinations de personnalisation Edge limitées](/help/destinations/destination-types.md#edge-personalization-destinations). Lisez ce document pour comprendre le workflow d’exportation, les cas d’utilisation activés par cette fonctionnalité et les limites connues. Consultez le tableau ci-dessous pour comprendre les fonctionnalités disponibles par type de destination.
 
 | Type de destination | Possibilité d’exporter des tableaux, mappages et autres objets personnalisés |
 |---|---|
 | Destinations de stockage dans le cloud créées par Adobe (Amazon S3, Azure Blob, Azure Data Lake Storage Gen2, Data Landing Zone, Google Cloud Storage, SFTP) | Oui, avec le bouton (bascule) Activer l’exportation de tableaux, de mappages et d’objets lors de la configuration d’une connexion de destination. |
-| Destinations de marketing par e-mail basées sur des fichiers (Adobe Campaign, Oracle Eloqua, Oracle Responsys, Salesforce Marketing Cloud) | Non |
+| Destinations de marketing par e-mail basées sur des fichiers ([!DNL Adobe Campaign], Oracle Eloqua, Oracle Responsys, Salesforce Marketing Cloud) | Non |
 | Destinations de stockage dans le cloud existantes personnalisées créées par les partenaires (destinations personnalisées basées sur des fichiers créées via Destination SDK) | Non |
 | Destinations d’entreprise (Amazon Kinesis, Azure Event Hubs, API HTTP) | Partiellement. Vous pouvez sélectionner et exporter des objets de type map à l’étape de mapping du workflow d’activation. |
 | Destinations de streaming (par exemple : Facebook, Braze, le ciblage par liste de clients de Google, etc.) | Non |
@@ -48,7 +48,7 @@ Dans Experience Platform, vous pouvez utiliser des [schémas XDM](/help/xdm/home
 
 Les autres types de champs d’Experience Platform incluent les champs de tableau. En savoir plus sur la [gestion des champs de tableau dans l’interface utilisateur d’Experience Platform](/help/xdm/ui/fields/array.md). Vous pouvez désormais exporter des objets de tableau, comme dans l’exemple ci-dessous.
 
-```
+```js
 organizations = [{
   id: 123,
   orgName: "Acme Inc",

@@ -3,24 +3,24 @@ keywords: destination de stockage dans le cloud;espace de stockage dans le cloud
 title: Présentation des destinations de stockage dans le cloud
 description: Adobe Experience Platform peut diffuser vos audiences sous forme de fichiers de données vers vos emplacements de stockage dans le cloud Amazon S3, AWS Kinesis, Azure Event Hubs ou SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 39%
+source-wordcount: '457'
+ht-degree: 40%
 
 ---
 
 # Présentation des destinations de stockage dans le cloud {#cloud-storage-destinations}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-Adobe Experience Platform peut diffuser vos audiences sous forme de fichiers de données vers vos emplacements de stockage dans le cloud. Vous pouvez ainsi envoyer des audiences et leurs attributs de profils à vos systèmes internes au moyen de fichiers CSV pour [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage], et SFTP. Pour les destinations [!DNL Amazon Kinesis] et [!DNL Azure Event Hubs], les données sont diffusées en continu hors Experience Platform au format [!DNL JSON].
+[!DNL Adobe Experience Platform] pouvez diffuser vos audiences sous forme de fichiers de données vers vos emplacements de stockage dans le cloud. Vous pouvez ainsi envoyer des audiences et leurs attributs de profils à vos systèmes internes au moyen de fichiers CSV pour [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage], et SFTP. Pour les destinations [!DNL Amazon Kinesis] et [!DNL Azure Event Hubs], les données sont diffusées en continu hors Experience Platform au format [!DNL JSON].
 
 ![Destinations de stockage dans le cloud Adobe](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
 ## Destinations de stockage dans le cloud prises en charge {#supported-destinations}
 
-Adobe Experience Platform prend en charge les exportations de données vers les destinations d’espace de stockage suivantes :
+[!DNL Adobe Experience Platform] prend en charge les exportations de données vers les destinations d’espace de stockage suivantes :
 
 * [Connexion Amazon Kinesis](amazon-kinesis.md)
 * [Connexion Amazon S3](amazon-s3.md)

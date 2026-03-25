@@ -5,10 +5,10 @@ title: Se connecter aux destinations par lots et activer des données à l’aid
 description: Cette section contient des instructions détaillées sur l’utilisation de l’API Flow Service pour créer un espace de stockage par lots dans le cloud ou une destination de marketing par e-mail dans Experience Platform et activer les données.
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '3431'
-ht-degree: 71%
+source-wordcount: '3423'
+ht-degree: 70%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 71%
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions).
 >
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 >
 >Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
@@ -38,9 +38,9 @@ Si vous préférez utiliser l’interface utilisateur d’Experience Platform po
 
 ## Prise en main {#get-started}
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
+Ce guide nécessite une compréhension du fonctionnement des composants suivants de [!DNL Adobe Experience Platform] :
 
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md) : [!DNL Adobe Experience Platform Segmentation Service] permet de créer des audiences dans [!DNL Adobe Experience Platform] à partir de vos données [!DNL Real-Time Customer Profile].
 * [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
@@ -531,7 +531,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `name` | Attribuez un nom à la connexion de base à la destination par lots. |
 | `description` | Vous pouvez éventuellement fournir une description de la connexion de base. |
 | `connectionSpec.id` | Utilisez l’identifiant de spécification de connexion pour la destination par lots de votre choix. Vous avez obtenu cet identifiant à l’étape [Obtenir la liste des destinations disponibles](#get-the-list-of-available-destinations). |
-| `auth.specname` | Indique le format d’authentification de la destination. Pour connaître le specName de votre destination, effectuez un [appel GET au point d’entrée des spécifications de connexion](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), en précisant la spécification de connexion de la destination souhaitée. Recherchez le paramètre `authSpec.name` dans la réponse. <br> Par exemple, pour les destinations Adobe Campaign, vous pouvez utiliser un des formats d’authentification suivants : `S3`, `SFTP with Password` ou `SFTP with SSH Key`. |
+| `auth.specname` | Indique le format d’authentification de la destination. Pour connaître le specName de votre destination, effectuez un [appel GET au point d’entrée des spécifications de connexion](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), en précisant la spécification de connexion de la destination souhaitée. Recherchez le paramètre `authSpec.name` dans la réponse. <br> Par exemple, pour les destinations [!DNL Adobe Campaign], vous pouvez utiliser l’une des options `S3`, `SFTP with Password` ou `SFTP with SSH Key`. |
 | `params` | Selon la destination à laquelle vous vous connectez, vous devez fournir différents paramètres d’authentification requis. Pour les connexions Amazon S3, vous devez fournir votre identifiant d’accès et votre clé secrète à votre emplacement de stockage Amazon S3. <br> Pour connaître les paramètres requis pour votre destination, effectuez un [appel GET au point d’entrée des spécifications de connexion](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), en précisant la spécification de connexion de la destination souhaitée. Recherchez le paramètre `authSpec.spec.required` dans la réponse. |
 
 {style="table-layout:auto"}
@@ -934,7 +934,7 @@ curl -X POST \
 | --------- | ----------- |
 | `name` | Attribuez un nom au flux de données que vous êtes en train de créer. |
 | `description` | Vous pouvez éventuellement fournir une description du flux de données. |
-| `flowSpec.Id` | Utilisez l’identifiant de spécification de flux pour la destination par lots à laquelle vous souhaitez vous connecter. Pour récupérer l’identifiant de spécification du flux, effectuez une opération GET sur le point d’entrée `flowspecs`, tel qu’indiqué dans la section [Documentation de référence de l’API des spécifications de flux](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec). Dans la réponse, recherchez `upsTo` et copiez l’identifiant correspondant à la destination par lots à laquelle vous souhaitez vous connecter. Par exemple, pour Adobe Campaign, recherchez `upsToCampaign` et copiez le paramètre `id`. |
+| `flowSpec.Id` | Utilisez l’identifiant de spécification de flux pour la destination par lots à laquelle vous souhaitez vous connecter. Pour récupérer l’identifiant de spécification du flux, effectuez une opération GET sur le point d’entrée `flowspecs`, tel qu’indiqué dans la section [Documentation de référence de l’API des spécifications de flux](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec). Dans la réponse, recherchez `upsTo` et copiez l’identifiant correspondant à la destination par lots à laquelle vous souhaitez vous connecter. Par exemple, pour [!DNL Adobe Campaign], recherchez `upsToCampaign` et copiez le paramètre `id` . |
 | `sourceConnectionIds` | Utilisez l’identifiant de connexion source obtenu à l’étape [Se connecter aux données Experience Platform](#connect-to-your-experience-platform-data). |
 | `targetConnectionIds` | Utilisez l’identifiant de connexion cible obtenu à l’étape [Seconnecter à une destination par lots](#connect-to-batch-destination). |
 | `transformations` | À l’étape suivante, vous allez remplir cette section avec les audiences et les attributs de profil à activer. |
@@ -965,7 +965,7 @@ Une réponse réussie renvoie l’identifiant (`id`) du nouveau flux de données
 
 Après avoir créé toutes les connexions et le flux de données, vous pouvez maintenant activer vos données de profil sur la plateforme de destination. Au cours de cette étape, vous sélectionnez les audiences et les attributs de profil à exporter vers la destination.
 
-Vous pouvez également déterminer le format de dénomination des fichiers exportés et les attributs à utiliser comme [clés de déduplication](../ui/activate-batch-profile-destinations.md#mandatory-keys) ou [attributs obligatoires](../ui/activate-batch-profile-destinations.md#mandatory-attributes). Au cours de cette étape, vous pouvez également déterminer le planning d’envoi des données vers la destination.
+Vous pouvez également déterminer le format de dénomination des fichiers exportés et les attributs à utiliser comme [clés de déduplication](../ui/activate-batch-profile-destinations.md#mandatory-attributes) ou [attributs obligatoires](../ui/activate-batch-profile-destinations.md#mandatory-attributes). Au cours de cette étape, vous pouvez également déterminer le planning d’envoi des données vers la destination.
 
 Pour activer des audiences vers votre nouvelle destination, vous devez effectuer une opération JSON PATCH, similaire à l’exemple ci-dessous. Vous pouvez activer plusieurs audiences et attributs de profil en un seul appel. Pour en savoir plus sur le JSON PATCH, consultez la [spécification RFC](https://tools.ietf.org/html/rfc6902).
 
@@ -1049,7 +1049,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `value` | Nouvelle valeur avec laquelle vous souhaitez mettre à jour votre paramètre. |
 | `id` | Indiquez l’identifiant de l’audience que vous ajoutez au flux de données de destination. |
 | `name` | *Facultatif*. Indiquez le nom de l’audience que vous ajoutez au flux de données de destination. Notez que ce champ n’est pas obligatoire et que vous pouvez ajouter une audience au flux de données de destination sans indiquer son nom. |
-| `filenameTemplate` | Ce champ détermine le format du nom des fichiers exportés vers votre destination. <br>Les options suivantes sont disponibles :<br> <ul><li>`%DESTINATION_NAME%` : obligatoire. Les fichiers exportés contiennent le nom de destination.</li><li>`%SEGMENT_ID%` : obligatoire. Les fichiers exportés contiennent l’identifiant de l’audience exportée.</li><li>`%SEGMENT_NAME%` : facultatif. Les fichiers exportés contiennent le nom de l’audience exportée.</li><li>`DATETIME(YYYYMMdd_HHmmss)` ou `%TIMESTAMP%` : facultatif. Sélectionnez l’une de ces deux options pour que vos fichiers incluent l’heure à laquelle ils sont générés par Experience Platform.</li><li>`custom-text` : facultatif. Remplacez cet espace réservé par tout texte personnalisé que vous souhaitez ajouter à la fin de vos noms de fichier.</li></ul> <br> Pour plus d’informations sur la configuration des noms de fichier, reportez-vous à la section [Configurer des noms de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) dans le tutoriel consacré à l’activation des destinations par lot. |
+| `filenameTemplate` | Ce champ détermine le format du nom des fichiers exportés vers votre destination. <br>Les options suivantes sont disponibles :<br> <ul><li>`%DESTINATION_NAME%` : obligatoire. Les fichiers exportés contiennent le nom de destination.</li><li>`%SEGMENT_ID%` : obligatoire. Les fichiers exportés contiennent l’identifiant de l’audience exportée.</li><li>`%SEGMENT_NAME%` : facultatif. Les fichiers exportés contiennent le nom de l’audience exportée.</li><li>`DATETIME(YYYYMMdd_HHmmss)` ou `%TIMESTAMP%` : facultatif. Sélectionnez l’une de ces deux options pour que vos fichiers incluent l’heure à laquelle ils sont générés par Experience Platform.</li><li>`custom-text` : facultatif. Remplacez cet espace réservé par tout texte personnalisé que vous souhaitez ajouter à la fin de vos noms de fichier.</li></ul> <br> Pour plus d’informations sur la configuration des noms de fichier, reportez-vous à la section [Configurer des noms de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) dans le tutoriel consacré à l’activation des destinations par lot. |
 | `exportMode` | Obligatoire. Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. |
 | `startDate` | Sélectionnez la date à laquelle l’audience doit commencer à exporter les profils vers votre destination. |
 | `frequency` | Obligatoire. <br> <ul><li>Pour le mode d’exportation `"DAILY_FULL_EXPORT"`, vous pouvez sélectionner `ONCE`, `DAILY`, `WEEKLY` ou `MONTHLY`.</li><li>Pour le mode d’exportation `"FIRST_FULL_THEN_INCREMENTAL"`, vous pouvez sélectionner `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"` ou `"EVERY_12_HOURS"`.</li></ul> |
@@ -1253,7 +1253,7 @@ La réponse renvoyée doit inclure dans le paramètre `transformations` les audi
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[&#x200B; consultez les sections &#x200B;](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[ consultez les sections ](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 

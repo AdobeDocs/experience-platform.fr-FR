@@ -3,10 +3,10 @@ keywords: Catalogue;catalogue
 title: Présentation du catalogue des destinations
 description: Le catalogue des destinations fournit une liste des destinations disponibles prêtes à recevoir des données. Ces destinations incluent des solutions Adobe, des plateformes publicitaires, d’enquête et de marketing par e-mail, et bien plus encore.
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '140'
-ht-degree: 35%
+source-wordcount: '137'
+ht-degree: 36%
 
 ---
 
@@ -25,7 +25,7 @@ Parcourez le catalogue pour déterminer les plateformes de destination les mieux
 
 ## Catégories de destination {#destination-categories}
 
-Vous pouvez activer vos données dans différentes catégories de destination dans Adobe Experience Platform. Les liens ci-dessous fournissent des informations supplémentaires sur chaque catégorie de destination :
+Vous pouvez activer vos données dans différentes catégories de destination dans [!DNL Adobe Experience Platform]. Les liens ci-dessous fournissent des informations supplémentaires sur chaque catégorie de destination :
 
 - [Présentation d’Adobe [!UICONTROL destinations]](adobe/overview.md)
 - [Présentation de [!UICONTROL Advertising] [!UICONTROL destinations]](advertising/overview.md)

@@ -5,10 +5,10 @@ title: Connectez-vous aux destinations de diffusion en continu et activez les do
 description: Ce document couvre la création de destinations de diffusion en continu à l’aide de l’API Adobe Experience Platform
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2203'
-ht-degree: 41%
+source-wordcount: '2197'
+ht-degree: 40%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 41%
 >
 >Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
-Ce tutoriel vous explique comment utiliser les appels API pour vous connecter à vos données Adobe Experience Platform, créer une connexion à une destination d’espace de stockage en flux continu ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) ou [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md)), créer un flux de données vers votre nouvelle destination et activer les données vers cette dernière.
+Ce tutoriel vous explique comment utiliser les appels API pour vous connecter à vos données [!DNL Adobe Experience Platform], créer une connexion à une destination d’espace de stockage en flux continu ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) ou [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md)), créer un flux de données vers votre nouvelle destination et activer les données vers cette dernière.
 
 Ce tutoriel utilise la destination [!DNL Amazon Kinesis] dans tous ses exemples, mais les étapes sont identiques pour [!DNL Azure Event Hubs].
 
@@ -32,7 +32,7 @@ Si vous préférez utiliser l’interface utilisateur dans Experience Platform p
 
 ## Commencer {#get-started}
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
+Ce guide nécessite une compréhension du fonctionnement des composants suivants de [!DNL Adobe Experience Platform] :
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : framework normalisé selon lequel Experience Platform organise les données de l’expérience client.
 * [[!DNL Catalog Service]](../../catalog/home.md) : [!DNL Catalog] est le système d’enregistrement de l’emplacement et de la traçabilité des données dans Experience Platform.
@@ -565,7 +565,7 @@ La réponse renvoyée doit inclure dans le paramètre `transformations` les audi
 
 >[!IMPORTANT]
 >
-> Outre les attributs de profil et les audiences de l’étape [Activer les données vers votre nouvelle destination](#activate-data), les données exportées dans [!DNL AWS Kinesis] et [!DNL Azure Event Hubs] contiendront également des informations sur le mappage d’identités. Cela représente les identités des profils exportés (par exemple [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=fr), identifiant mobile, identifiant Google, adresse e-mail, etc.). Voir un exemple ci-dessous.
+> Outre les attributs de profil et les audiences de l’étape [Activer les données vers votre nouvelle destination](#activate-data), les données exportées dans [!DNL AWS Kinesis] et [!DNL Azure Event Hubs] contiendront également des informations sur le mappage d’identités. Cela représente les identités des profils exportés (par exemple [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), identifiant mobile, identifiant Google, adresse e-mail, etc.). Voir un exemple ci-dessous.
 
 ```json
 {
@@ -632,7 +632,7 @@ Pour établir une connexion aux destinations à l’aide des collections de [!DN
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[&#x200B; consultez les sections &#x200B;](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[ consultez les sections ](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 

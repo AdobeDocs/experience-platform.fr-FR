@@ -2,10 +2,10 @@
 description: Cette page illustre comment l’appel API est utilisé pour créer une configuration d’informations d’identification avec Adobe Experience Platform Destination SDK.
 title: Création d’une configuration d’informations d’identification
 exl-id: 9844c9c5-d2dc-4d4b-ae93-759bf23b87fa
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '584'
-ht-degree: 84%
+ht-degree: 76%
 
 ---
 
@@ -250,4 +250,4 @@ Les points d’entrée de l’API Destination SDK suivent les principes généra
 
 ## Étapes suivantes {#next-steps}
 
-Vous êtes arrivé au bout de ce document. À présent, vous savez quand utiliser le point d’entrée des informations d’identification et comment configurer les informations d’identification à l’aide du point d’entrée `/authoring/credentials` de l’API. Découvrez [comment utiliser Destination SDK pour configurer la destination](../guides/configure-destination-instructions.md) afin de comprendre la place de cette étape dans le processus de configuration de la destination.
+Vous êtes arrivé au bout de ce document. À présent, vous savez quand utiliser le point d’entrée des informations d’identification et comment configurer les informations d’identification à l’aide du point d’entrée de l’API `/authoring/credentials`. Découvrez [comment utiliser Destination SDK pour configurer la destination](../guides/configure-destination-instructions.md) pour comprendre la place de cette étape dans le processus de configuration de la destination.

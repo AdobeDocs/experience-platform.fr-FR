@@ -2,9 +2,9 @@
 title: (V2) Connexion à l’audience en temps réel Pega CDH
 description: Utilisez la destination Audience en temps réel de Pega Customer Decision Hub dans Adobe Experience Platform pour envoyer des attributs de profil et des données d'appartenance à l'audience au Pega Customer Decision Hub pour la prise de décision la plus appropriée.
 exl-id: cbb998f9-c268-4d65-87d8-fab56c0844dc
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1143'
 ht-degree: 13%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 13%
 
 ## Vue d’ensemble {#overview}
 
-Utilisez la destination [!DNL Pega CDH Realtime Audience] (V2) dans Adobe Experience Platform pour envoyer les attributs de profil et les données d’appartenance à l’audience à [!DNL Pega Customer Decision Hub] pour la prise de décision la plus appropriée.
+Utilisez la destination [!DNL Pega CDH Realtime Audience] (V2) dans [!DNL Adobe Experience Platform] pour envoyer des attributs de profil et des données d’appartenance à une audience à [!DNL Pega Customer Decision Hub] pour la prise de décision la plus appropriée.
 
-L’appartenance à une audience de profil depuis Adobe Experience Platform, lorsqu’elle est chargée dans [!DNL Pega Customer Decision Hub], peut être utilisée comme prédicteur dans les modèles adaptatifs et contribuer à fournir les données contextuelles et comportementales appropriées pour la prise de décision la plus appropriée.
+L’appartenance à une audience de profil depuis [!DNL Adobe Experience Platform], lorsqu’elle est chargée dans [!DNL Pega Customer Decision Hub], peut être utilisée comme prédicteur dans les modèles adaptatifs et permettre de fournir les données contextuelles et comportementales appropriées pour la prise de décision la plus appropriée.
 
 >[!IMPORTANT]
 >
@@ -23,7 +23,7 @@ L’appartenance à une audience de profil depuis Adobe Experience Platform, lor
 
 ## Cas d’utilisation {#use-cases}
 
-Pour mieux comprendre quand et comment utiliser la destination [!DNL Customer Decision Hub], consultez les exemples de cas d’utilisation ci-dessous que la clientèle de Adobe Experience Platform peut résoudre.
+Pour mieux comprendre quand et comment utiliser la destination [!DNL Customer Decision Hub], consultez les exemples de cas d’utilisation ci-dessous que [!DNL Adobe Experience Platform] clients peuvent résoudre à l’aide de cette destination.
 
 ### Télécommunications {#telecommunications}
 
@@ -31,13 +31,13 @@ Un spécialiste marketing souhaite tirer parti des informations issues de la mei
 
 ### Services financiers {#financial-services}
 
-Un spécialiste du marketing souhaite optimiser les offres pour les clients qui se sont inscrits ou désinscrits à des bulletins d’information sur un régime de retraite ou un régime de retraite. Les sociétés de services financiers peuvent ingérer plusieurs ID de client de leurs propres CRM dans Adobe Experience Platform, créer des audiences à partir de leurs propres données hors ligne et envoyer des profils qui entrent dans les audiences et en sortent pour [!DNL Pega Customer Decision Hub] la prise de décision de meilleure action (NBA) dans les canaux sortants.
+Un spécialiste du marketing souhaite optimiser les offres pour les clients qui se sont inscrits ou désinscrits à des bulletins d’information sur un régime de retraite ou un régime de retraite. Les sociétés de services financiers peuvent ingérer plusieurs ID de client de leurs propres CRM dans [!DNL Adobe Experience Platform], créer des audiences à partir de leurs propres données hors ligne et envoyer des profils qui entrent dans les audiences et en sortent pour [!DNL Pega Customer Decision Hub] la prise de décision de meilleure action (NBA) dans les canaux sortants.
 
 ## Conditions préalables {#prerequisites}
 
-Avant de pouvoir utiliser cette destination pour exporter des données en dehors de Adobe Experience Platform, veillez à remplir les conditions préalables suivantes en [!DNL Pega Customer Decision Hub] :
+Avant de pouvoir utiliser cette destination pour exporter des données en dehors de [!DNL Adobe Experience Platform], veillez à remplir les conditions préalables suivantes dans [!DNL Pega Customer Decision Hub] :
 
-* Configurez le composant d’intégration Profil Adobe Experience Platform et Appartenance à une audience [&#128279;](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html) dans votre instance [!DNL Pega Customer Decision Hub].
+* Configurez le composant d’intégration Profil Adobe Experience Platform et Appartenance à une audience [](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html) dans votre instance [!DNL Pega Customer Decision Hub].
 * Configurez OAuth 2.0 [Enregistrement du client à l’aide des informations d’identification client](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html) type d’octroi dans votre instance [!DNL Pega Customer Decision Hub].
 * Configurez le [flux de données d’exécution en temps réel](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html) pour le flux de données d’appartenance à une audience Adobe dans votre instance de [!DNL Pega Customer Decision Hub].
 
@@ -47,7 +47,7 @@ Avant de pouvoir utiliser cette destination pour exporter des données en dehors
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| `CustomerID` | Identifiant client | Identifiant utilisateur commun qui identifie de manière unique un profil dans [!DNL Pega Customer Decision Hub] et Adobe Experience Platform. |
+| `CustomerID` | Identifiant client | Identifiant d’utilisateur commun qui identifie de manière unique un profil dans [!DNL Pega Customer Decision Hub] et [!DNL Adobe Experience Platform]. |
 
 {style="table-layout:auto"}
 
@@ -58,7 +58,7 @@ Cette section décrit les types d’audiences que vous pouvez exporter vers cett
 | Origine de l’audience | Pris en charge | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Oui | Audiences générées via Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Toutes les autres origines d’audience | Non | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform telles que Adobe Journey Optimizer, </li><li> et plus encore. </li></ul> |
+| Toutes les autres origines d’audience | Non | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform, telles que [!DNL Adobe Journey Optimizer], </li><li> et plus encore. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -70,8 +70,8 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
-| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
 
@@ -121,9 +121,9 @@ Pour configurer les détails de la destination, renseignez les champs requis et 
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
-Consultez [&#x200B; Activer les données d’audience vers des destinations d’exportation de profil de diffusion en continu &#x200B;](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Consultez [ Activer les données d’audience vers des destinations d’exportation de profil de diffusion en continu ](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Mappage {#mapping}
 
@@ -133,7 +133,7 @@ Consultez [&#x200B; Activer les données d’audience vers des destinations d’
 
 Vous trouverez ci-dessous un exemple de mappage d’identité correct lors de l’exportation de profils vers [!DNL Pega Customer Decision Hub].
 
-* Sélectionnez une identité source qui identifie de manière unique un profil dans Adobe Experience Platform et [!DNL Pega Customer Decision Hub]. Par exemple : `CustomerID`.
+* Sélectionnez une identité source qui identifie de manière unique un profil dans [!DNL Adobe Experience Platform] et [!DNL Pega Customer Decision Hub]. Par exemple : `CustomerID`.
 * Sélectionnez les attributs de profil de destination auxquels vous souhaitez mapper les attributs de profil source sélectionnés.
 
 ![Mappage d’identité](../../assets/catalog/personalization/pega/pega-source-destination-mapping.png)

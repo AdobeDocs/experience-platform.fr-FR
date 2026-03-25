@@ -2,16 +2,16 @@
 description: Le service de destinations dans Adobe Experience Platform utilise des points d’entrée de configuration pour plusieurs composants qui créent la fonctionnalité de destinations. Découvrez comment ces composants combinés permettent à Experience Platform de se connecter à des partenaires de destination, d’envoyer des messages personnalisés et d’activer des données de profil dans l’écosystème numérique.
 title: Options de configuration dans Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '829'
-ht-degree: 92%
+source-wordcount: '821'
+ht-degree: 82%
 
 ---
 
 # Options de configuration dans Destination SDK
 
-Le service de destinations dans Adobe Experience Platform utilise des points d’entrée de configuration pour plusieurs composants qui créent la fonctionnalité de destinations.
+Le service de destinations dans [!DNL Adobe Experience Platform] utilise des points d’entrée de configuration pour plusieurs composants qui créent la fonctionnalité de destinations.
 
 Combinés, ces composants permettent à Experience Platform de se connecter à des plateformes de destination, d’envoyer des messages personnalisés, d’exporter des fichiers personnalisés et d’activer des données de profil dans l’écosystème numérique.
 
@@ -38,7 +38,7 @@ Pour les destinations basées sur des fichiers, cette configuration inclut égal
 
 ## Configuration de la destination {#destination-configuration}
 
-Ce point d’entrée de configuration contient des informations de base et avancées sur la destination. Par exemple, c’est là que vous spécifiez les types d’identité que la destination peut prendre en charge, le format souhaité des fichiers exportés (pour les destinations basées sur des fichiers) et divers attributs d’interface utilisateur pour la carte de destination dans l’interface utilisateur d’Adobe Experience Platform.
+Ce point d’entrée de configuration contient des informations de base et avancées sur la destination. Par exemple, c’est là que vous spécifiez les types d’identité que la destination peut prendre en charge, le format souhaité des fichiers exportés (pour les destinations basées sur des fichiers) et divers attributs d’interface utilisateur pour la carte de destination dans l’interface utilisateur [!DNL Adobe Experience Platform].
 
 Pour en savoir plus sur chacun des composants de configuration de destination, consultez la documentation ci-dessous. Vous pouvez configurer les fonctionnalités décrites ci-dessous via le [point d’entrée des destinations](../authoring-api/destination-configuration/create-destination-configuration.md).
 

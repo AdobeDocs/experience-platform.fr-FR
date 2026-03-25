@@ -5,10 +5,10 @@ title: Activer des audiences vers des destinations par lots via l’API d’acti
 description: Cet article illustre le workflow de bout en bout pour activer des audiences via l’API d’activation ad hoc, y compris les tâches de segmentation qui ont lieu avant l’activation.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1689'
-ht-degree: 7%
+source-wordcount: '1671'
+ht-degree: 8%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 7%
 >
 >Une fois la phase Beta terminée, la [!DNL ad-hoc activation API] est désormais disponible pour tous les clients Experience Platform. Dans la version mise à disposition générale, l’API a été mise à niveau vers la version 2. L’étape 4 ([Obtention du dernier identifiant de tâche d’exportation d’audience](#segment-export-id)) n’est plus nécessaire, car l’API ne nécessite plus l’identifiant d’exportation.
 >
->Pour plus d’informations[&#x200B; consultez la section &#x200B;](#activation-job)Exécution de la tâche d’activation ad hoc plus bas dans ce tutoriel.
+>Pour plus d’informations[ consultez la section ](#activation-job)Exécution de la tâche d’activation ad hoc plus bas dans ce tutoriel.
 
 ## Vue d’ensemble {#overview}
 
@@ -42,26 +42,26 @@ Un hôtel s&#39;attend à un mauvais temps les jours suivants, et l&#39;équipe 
 
 ### Test de l’intégration {#integration-testing}
 
-Les responsables informatiques peuvent utiliser l’API d’activation ad hoc d’Experience Platform pour exporter des audiences à la demande, afin de pouvoir tester leur intégration personnalisée à Adobe Experience Platform et s’assurer que tout fonctionne correctement.
+Les responsables informatiques peuvent utiliser l’API d’activation ad hoc d’Experience Platform pour exporter des audiences à la demande, afin de pouvoir tester leur intégration personnalisée à [!DNL Adobe Experience Platform] et s’assurer que tout fonctionne correctement.
 
 ## Mécanismes de sécurisation {#guardrails}
 
 Gardez à l’esprit les mécanismes de sécurisation suivants lors de l’utilisation de l’API d’activation ad hoc .
 
 * Actuellement, chaque traitement d’activation ad hoc peut activer jusqu’à 80 audiences. Si vous tentez d’activer plus de 80 audiences par traitement, celui-ci échouera. Ce comportement peut faire l’objet de modifications dans les prochaines versions.
-* Les traitements d’activation ad hoc ne peuvent pas s’exécuter en parallèle avec les traitements d’exportation d’audiences [&#x200B; planifiés](../../segmentation/api/export-jobs.md). Avant d’exécuter une tâche d’activation ad hoc, assurez-vous que la tâche d’exportation de l’audience planifiée est terminée. Consultez [surveillance des flux de données de destination](../../dataflows/ui/monitor-destinations.md) pour plus d’informations sur la surveillance du statut des flux d’activation. Par exemple, si votre flux de données d’activation affiche un statut **[!UICONTROL Processing]**, attendez qu’il se termine avant d’exécuter la tâche d’activation ad hoc.
+* Les traitements d’activation ad hoc ne peuvent pas s’exécuter en parallèle avec les traitements d’exportation d’audiences [ planifiés](../../segmentation/api/export-jobs.md). Avant d’exécuter une tâche d’activation ad hoc, assurez-vous que la tâche d’exportation de l’audience planifiée est terminée. Consultez [surveillance des flux de données de destination](../../dataflows/ui/monitor-destinations.md) pour plus d’informations sur la surveillance du statut des flux d’activation. Par exemple, si votre flux de données d’activation affiche un statut **[!UICONTROL Processing]**, attendez qu’il se termine avant d’exécuter la tâche d’activation ad hoc.
 * N’exécutez pas plusieurs traitements d’activation ad hoc simultanés par audience.
 
 ## Considérations relatives à la segmentation {#segmentation-considerations}
 
-Adobe Experience Platform exécute des tâches de segmentation planifiées une fois toutes les 24 heures. L’API d’activation ad hoc s’exécute en fonction des derniers résultats de segmentation.
+[!DNL Adobe Experience Platform] exécute des tâches de segmentation planifiées une fois toutes les 24 heures. L’API d’activation ad hoc s’exécute en fonction des derniers résultats de segmentation.
 
 ## Etape 1 : prérequis {#prerequisites}
 
-Avant d’effectuer des appels vers les API Adobe Experience Platform, veillez à respecter les conditions préalables suivantes :
+Avant d’effectuer des appels vers les API [!DNL Adobe Experience Platform], veillez à respecter les conditions préalables suivantes :
 
-* Vous disposez d’un compte d’organisation avec un accès à Adobe Experience Platform.
-* Les rôles `developer` et `user` sont activés pour le profil de produit API Adobe Experience Platform de votre compte Experience Platform. Contactez votre administrateur [Admin Console](../../access-control/home.md) pour activer ces rôles pour votre compte.
+* Vous disposez d’un compte d’organisation avec un accès à [!DNL Adobe Experience Platform].
+* Les rôles `developer` et `user` sont activés pour le profil de produit API [!DNL Adobe Experience Platform] de votre compte Experience Platform. Contactez votre administrateur [](../../access-control/home.md) pour activer ces rôles pour votre compte.
 * Vous disposez d’une Adobe ID. Si vous ne disposez pas d’un Adobe ID, accédez au [Adobe Developer Console](https://developer.adobe.com/console) et créez un compte.
 
 ## Étape 2 : collecter les informations d’identification {#credentials}
@@ -107,7 +107,7 @@ Suivez les instructions décrites [ici](../../segmentation/api/export-jobs.md#re
 
 Dans la réponse, recherchez le premier enregistrement qui inclut la propriété de schéma ci-dessous.
 
-```
+```json
 "schema":{
    "name":"_xdm.context.profile"
 }
@@ -120,7 +120,7 @@ L’identifiant de la tâche d’exportation d’audience se trouve dans la prop
 
 ## Étape 5 : exécuter la tâche d’activation ad hoc {#activation-job}
 
-Adobe Experience Platform exécute des tâches de segmentation planifiées une fois toutes les 24 heures. L’API d’activation ad hoc s’exécute en fonction des derniers résultats de segmentation.
+[!DNL Adobe Experience Platform] exécute des tâches de segmentation planifiées une fois toutes les 24 heures. L’API d’activation ad hoc s’exécute en fonction des derniers résultats de segmentation.
 
 >[!IMPORTANT]
 >

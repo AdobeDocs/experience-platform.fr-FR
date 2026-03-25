@@ -4,10 +4,10 @@ title: Présentation de l’activation
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform vers différents types de destinations.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 26%
+source-wordcount: '337'
+ht-degree: 27%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 26%
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
-Adobe Experience Platform prend en charge un large éventail de destinations. Le workflow d’activation des audiences varie entre les destinations, en fonction du type de données d’audience qu’elles prennent en charge, et de la fréquence d’exportation des données.
+[!DNL Adobe Experience Platform] prend en charge un large éventail de destinations. Le workflow d’activation des audiences varie entre les destinations, en fonction du type de données d’audience qu’elles prennent en charge, et de la fréquence d’exportation des données.
 
 ## Méthodes d’activation {#activation-methods}
 

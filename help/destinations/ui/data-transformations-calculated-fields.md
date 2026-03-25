@@ -3,7 +3,7 @@ title: Effectuer des transformations sur les données exportées vers des destin
 type: Tutorial
 description: Découvrez comment utiliser la fonctionnalité de champs calculés pour effectuer des transformations sur les données exportées vers des destinations d’espace de stockage
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '1604'
 ht-degree: 9%
@@ -101,7 +101,7 @@ Les fonctions ci-dessous, spécifiques à la gestion des exportations de tableau
 
 ## Exemples de fonctions utilisées pour effectuer des transformations de données {#examples}
 
-Consultez des exemples et des informations supplémentaires dans les sections ci-dessous pour certaines des fonctions répertoriées ci-dessus. Pour le reste des fonctions répertoriées, reportez-vous à la documentation sur les fonctions [générales) dans la section Préparation des données &#x200B;](/help/data-prep/functions.md).
+Consultez des exemples et des informations supplémentaires dans les sections ci-dessous pour certaines des fonctions répertoriées ci-dessus. Pour le reste des fonctions répertoriées, reportez-vous à la documentation sur les fonctions [générales) dans la section Préparation des données ](/help/data-prep/functions.md).
 
 ### `array_to_string` fonction pour exporter des tableaux {#array-to-string-function-export-arrays}
 
@@ -118,7 +118,7 @@ Par exemple, vous pouvez combiner les champs XDM suivants comme illustré dans l
 
 Dans ce cas, votre fichier de sortie ressemble à ce qui suit. Notez comment les éléments du tableau sont concaténés en une seule chaîne à l’aide du caractère `_` .
 
-```
+```csv
 First_Name,Last_Name,Personal_Email,Organization
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
@@ -133,7 +133,7 @@ En poursuivant avec l’objet de tableau `organizations` ci-dessus, vous pouvez 
 
 Dans ce cas, votre fichier de sortie ressemble à ce qui suit. Notez comment les deux éléments du tableau qui répondent au critère sont concaténés en une seule chaîne à l’aide du caractère `_` .
 
-```
+```csv
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
 
@@ -147,7 +147,7 @@ En poursuivant avec l’objet de tableau `organizations` ci-dessus, vous pouvez 
 
 Dans ce cas, votre fichier de sortie ressemble à ce qui suit. Notez comment les trois éléments du tableau sont transformés et concaténés en une seule chaîne à l’aide du caractère `_` .
 
-```
+```csv
 John,Doe,johndoe@acme.org,ACME INC_SUPERSTAR INC_ENERGY CORP
 ```
 
@@ -159,7 +159,7 @@ Utilisez la fonction `iif` pour exporter des éléments d&#39;un tableau sous ce
 
 Dans ce cas, votre fichier de sortie ressemble à ce qui suit. Dans ce cas, le premier élément du tableau est Marketing. Par conséquent, la personne est membre du service marketing.
 
-```
+```csv
 `First_Name,Last_Name, Personal_Email, Is_Member_Of_Marketing_Dept
 John,Doe, johndoe@acme.org, "isMarketing"
 ```
@@ -174,7 +174,7 @@ En poursuivant avec l’objet de tableau `organizations` ci-dessus, vous pouvez 
 
 Dans ce cas, votre fichier de sortie ressemble à ce qui suit. Remarquez comment les trois éléments du tableau sont concaténés en une seule chaîne à l’aide du caractère `_` et 2023 est également ajouté à la fin de la chaîne.
 
-```
+```csv
 `First_Name,Last_Name,Personal_Email,Organization_Member_2023
 John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 ```
@@ -202,7 +202,7 @@ Par exemple, vous pouvez combiner les champs XDM ci-dessous comme illustré dans
 
 Dans ce cas, votre fichier de sortie ressemble à ce qui suit. Notez comment la première valeur de `true` non nulle du tableau est exportée dans le fichier .
 
-```
+```csv
 First_Name,Last_Name,hasPromotion
 John,Doe,true
 ```
@@ -220,7 +220,7 @@ Par exemple, vous pouvez combiner les champs XDM ci-dessous comme illustré dans
 
 Dans ce cas, votre fichier de sortie ressemble à ce qui suit. Notez que la deuxième colonne indique le nombre d’éléments dans le tableau, correspondant au nombre d’achats distincts effectués par le client.
 
-```
+```csv
 `Personal_Email,Times_Purchased
 johndoe@acme.org,"5"
 ```
@@ -237,7 +237,7 @@ Vous pouvez accéder à un index d’un tableau pour exporter un seul élément 
 
 Dans ce cas, votre fichier de sortie ressemble à ce qui suit, en exportant le premier achat du client :
 
-```
+```csv
 `Personal_Email,First_Purchase
 johndoe@acme.org,"1538097126"
 ```
@@ -250,7 +250,7 @@ Utilisez les fonctions `first` et `last` pour exporter le premier ou le dernier 
 
 Dans ce cas, votre fichier de sortie ressemble à ce qui suit, en exportant le premier et le dernier achat du client :
 
-```
+```csv
 `Personal_Email,First_Purchase, Last_Purchase
 johndoe@acme.org,"1538097126","1664327526"
 ```

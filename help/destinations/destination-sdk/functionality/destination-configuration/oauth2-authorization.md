@@ -2,10 +2,10 @@
 description: Cette page décrit les différents flux d’autorisation OAuth 2 pris en charge par Destination SDK et fournit des instructions pour configurer l’autorisation OAuth 2 pour la destination.
 title: Autorisation OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2273'
-ht-degree: 74%
+source-wordcount: '2243'
+ht-degree: 69%
 
 ---
 
@@ -33,9 +33,9 @@ Pour en savoir plus sur les types d’intégration qui prennent en charge les fo
 
 ### Conditions préalables dans votre système {#prerequisites}
 
-Pour commencer, vous devez créer une application dans votre système pour Adobe Experience Platform ou enregistrer Experience Platform dans votre système. L’objectif est de générer un identifiant client et un secret client, qui sont nécessaires pour authentifier Experience Platform à la destination.
+Pour commencer, vous devez créer une application dans votre système pour la [!DNL Adobe Experience Platform] ou enregistrer Experience Platform dans votre système. L’objectif est de générer un identifiant client et un secret client, qui sont nécessaires pour authentifier Experience Platform à la destination.
 
-Dans le cadre de cette configuration, vous avez besoin des adresses URL de redirection/rappel OAuth 2 d’Adobe Experience Platform, que vous pouvez obtenir à partir de la liste ci-dessous.
+Dans le cadre de cette configuration dans votre système, vous avez besoin des URL de redirection/rappel OAuth 2 [!DNL Adobe Experience Platform], que vous pouvez obtenir à partir de la liste ci-dessous.
 
 * `https://platform-va7.adobe.io/data/core/activation/oauth/api/v1/callback`
 * `https://platform-nld2.adobe.io/data/core/activation/oauth/api/v1/callback`
@@ -46,7 +46,7 @@ Dans le cadre de cette configuration, vous avez besoin des adresses URL de redir
 
 >[!IMPORTANT]
 >
->L’étape d’enregistrement d’une URL de redirection/rappel pour Adobe Experience Platform dans votre système n’est obligatoire que pour le type d’octroi [OAuth 2 avec code d’autorisation](#authorization-code). Pour les deux autres types d’octrois pris en charge (mot de passe et informations d’identification du client), vous pouvez ignorer cette étape.
+>L’étape d’enregistrement d’une URL de redirection/rappel pour [!DNL Adobe Experience Platform] dans votre système n’est nécessaire que pour le type d’octroi [OAuth 2 avec code d’autorisation](#authorization-code). Pour les deux autres types d’octrois pris en charge (mot de passe et informations d’identification du client), vous pouvez ignorer cette étape.
 
 À la fin de cette étape, vous devez disposer des éléments suivants :
 
@@ -126,8 +126,8 @@ Pour configurer cette méthode d’autorisation pour la destination, ajoutez les
 | `accessTokenUrl` | Chaîne | URL de votre côté qui émet des jetons d’accès et, éventuellement, actualise les jetons. |
 | `authorizationUrl` | Chaîne | URL de votre serveur d’autorisation, dans lequel vous redirigez l’utilisateur pour qu’il se connecte à votre application. |
 | `refreshTokenUrl` | Chaîne | *Facultatif.* URL de votre côté, qui émet des jetons d’actualisation. Souvent, l’URL de jeton d’actualisation `refreshTokenUrl` est identique à l’URL de jeton d’accès `accessTokenUrl`. |
-| `clientId` | Chaîne | L’identifiant client que votre système attribue à Adobe Experience Platform. |
-| `clientSecret` | Chaîne | Le secret client que votre système attribue à Adobe Experience Platform. |
+| `clientId` | Chaîne | Identifiant client que votre système attribue à [!DNL Adobe Experience Platform]. |
+| `clientSecret` | Chaîne | Secret client que votre système attribue à [!DNL Adobe Experience Platform]. |
 | `scope` | Liste de chaînes | *Facultatif*. Définissez la portée de ce que le jeton d’accès permet à Experience Platform d’effectuer sur vos ressources. Exemple : « lire, écrire ». |
 | `options.useBasicAuth` | Booléen | *Facultatif*. Valeur booléenne qui contrôle la manière dont les informations d’identification du client (identifiant client et secret client) sont envoyées au point d’entrée du jeton du fournisseur OAuth lors de l’échange d’un code d’autorisation pour un jeton d’accès. <ul><li>Si elles sont définies sur `false` ou non définies, les informations d’identification sont envoyées en tant que paramètres `client_id` et `client_secret` dans le corps de la requête POST (comportement par défaut).</li><li>Si ce paramètre est défini sur `true`, les informations d’identification sont envoyées dans l’en-tête du `Authorization` HTTP à l’aide du format d’authentification de base : `Authorization: Basic base64(clientID:clientSecret)`.</li></ul> Définissez `useBasicAuth` sur `true` lorsque votre fournisseur OAuth exige que les informations d’identification du client soient envoyées dans l’en-tête `Authorization` plutôt que dans le corps de la requête. |
 
@@ -170,8 +170,8 @@ Pour configurer cette méthode d’autorisation pour la destination, ajoutez les
 | `authType` | Chaîne | Utilisez « OAUTH2 ». |
 | `grant` | Chaîne | Utilisez « OAUTH2_PASSWORD ». |
 | `accessTokenUrl` | Chaîne | URL de votre côté qui émet des jetons d’accès et, éventuellement, actualise les jetons. |
-| `clientId` | Chaîne | L’identifiant client que votre système attribue à Adobe Experience Platform. |
-| `clientSecret` | Chaîne | Le secret client que votre système attribue à Adobe Experience Platform. |
+| `clientId` | Chaîne | Identifiant client que votre système attribue à [!DNL Adobe Experience Platform]. |
+| `clientSecret` | Chaîne | Secret client que votre système attribue à [!DNL Adobe Experience Platform]. |
 | `scope` | Liste de chaînes | *Facultatif*. Définissez la portée de ce que le jeton d’accès permet à Experience Platform d’effectuer sur vos ressources. Exemple : « lire, écrire ». |
 
 {style="table-layout:auto"}
@@ -212,8 +212,8 @@ Pour configurer cette méthode d’autorisation pour la destination, ajoutez les
 | `grant` | Chaîne | Utilisez « OAUTH2_CLIENT_CREDENTIALS ». |
 | `accessTokenUrl` | Chaîne | URL du serveur d’autorisations, qui émet un jeton d’accès et un jeton d’actualisation facultatif. |
 | `refreshTokenUrl` | Chaîne | *Facultatif.* URL de votre côté, qui émet des jetons d’actualisation. Souvent, l’URL de jeton d’actualisation `refreshTokenUrl` est identique à l’URL de jeton d’accès `accessTokenUrl`. |
-| `clientId` | Chaîne | L’identifiant client que votre système attribue à Adobe Experience Platform. |
-| `clientSecret` | Chaîne | Le secret client que votre système attribue à Adobe Experience Platform. |
+| `clientId` | Chaîne | Identifiant client que votre système attribue à [!DNL Adobe Experience Platform]. |
+| `clientSecret` | Chaîne | Secret client que votre système attribue à [!DNL Adobe Experience Platform]. |
 | `scope` | Liste de chaînes | *Facultatif*. Définissez la portée de ce que le jeton d’accès permet à Experience Platform d’effectuer sur vos ressources. Exemple : « lire, écrire ». |
 
 {style="table-layout:auto"}
@@ -491,4 +491,4 @@ Selon la personnalisation de votre autorisation, vous devrez peut-être accéder
 
 ## Étapes suivantes {#next-steps}
 
-En lisant cet article, vous avez maintenant une compréhension des modèles d’autorisation OAuth 2 pris en charge par Adobe Experience Platform et vous savez comment configurer la destination avec la prise en charge de l’autorisation OAuth 2. Vous pouvez désormais configurer la destination avec prise en charge d’OAuth 2 à l’aide de Destination SDK. Pour connaître les étapes suivantes, consultez la documentation [Utilisation de Destination SDK pour configurer la destination](../../guides/configure-destination-instructions.md).
+En lisant cet article, vous avez maintenant une compréhension des modèles d’autorisation OAuth 2 pris en charge par [!DNL Adobe Experience Platform] et vous savez comment configurer la destination avec la prise en charge de l’autorisation OAuth 2. Vous pouvez désormais configurer la destination avec prise en charge d’OAuth 2 à l’aide de Destination SDK. Pour connaître les étapes suivantes, consultez la documentation [Utilisation de Destination SDK pour configurer la destination](../../guides/configure-destination-instructions.md).

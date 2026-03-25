@@ -2,7 +2,7 @@
 description: Découvrez comment utiliser l’API de test de destination pour générer des profils types pour la destination de diffusion en streaming, que vous pouvez utiliser dans les tests de destination.
 title: Génération de profils types en fonction d’un schéma source
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 92%
@@ -47,8 +47,8 @@ Pour obtenir l’identifiant d’une instance de destination, vous devez d’abo
 
 >[!IMPORTANT]
 >
->* Pour utiliser cette API, vous devez disposer d’une connexion existante vers la destination dans l’interface utilisateur d’Experience Platform. Pour plus d’informations, consultez la documentation [Se connecter à la destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=fr) et [Activer des profils et des audiences vers cette destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=fr).
->* Après avoir établi la connexion à la destination, obtenez l’identifiant d’instance de destination que vous devez utiliser dans les appels API vers ce point d’entrée pendant la [recherche d’une connexion avec la destination &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=fr).
+>* Pour utiliser cette API, vous devez disposer d’une connexion existante vers la destination dans l’interface utilisateur d’Experience Platform. Pour plus d’informations, consultez la documentation [Se connecter à la destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=fr) et [Activer des profils et des audiences vers cette destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html).
+>* Après avoir établi la connexion à la destination, obtenez l’identifiant d’instance de destination que vous devez utiliser dans les appels API vers ce point d’entrée pendant la [recherche d’une connexion avec la destination ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
 >
 >![Image de l’interface illustrant comment obtenir l’identifiant d’instance de destination](../../assets/testing-api/get-destination-instance-id.png)
 
@@ -185,7 +185,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec le nombre spécifié d’
 | `segmentMembership` | Objet de mappage décrivant les appartenances à des audiences d’un individu. Pour plus d’informations sur `segmentMembership`, consultez [Détails de l’appartenance à une audience](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=fr). |
 | `lastQualificationTime` | Date et heure de la dernière qualification de ce profil pour le segment. |
 | `xdm:status` | Champ de type chaîne indiquant si l’appartenance à l’audience a été établie dans le cadre de la requête actuelle. Les valeurs suivantes sont acceptées : <ul><li>`realized` : le profil fait partie du segment.</li><li>`exited` : le profil quitte l’audience dans le cadre de la requête actuelle.</li></ul> |
-| `identityMap` | Champ de type map qui décrit les différentes valeurs d’identité d’un individu, ainsi que les espaces de noms qui lui sont associés. Pour plus d’informations sur `identityMap`, consultez [Base de la composition des schémas](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=fr#identityMap). |
+| `identityMap` | Champ de type map qui décrit les différentes valeurs d’identité d’un individu, ainsi que les espaces de noms qui lui sont associés. Pour plus d’informations sur `identityMap`, consultez [Base de la composition des schémas](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#identityMap). |
 
 {style="table-layout:auto"}
 
@@ -193,7 +193,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec le nombre spécifié d’
 
 >[!IMPORTANT]
 >
->Utilisez les profils types générés ici au moment de la conception de votre modèle, dans l’[étape du modèle de rendu](render-template-api.md#multiple-profiles-with-body).
+>Utilisez les profils types générés ici au moment de la conception de votre modèle, dans l’[étape du modèle de rendu](render-template-api.md#configurable-aggregation).
 
 Vous pouvez générer des profils types en fonction du schéma cible en adressant une requête GET au point d’entrée `authoring/sample-profiles/` et en fournissant l’identifiant de destination de la configuration de destination à partir de laquelle vous créez votre modèle.
 

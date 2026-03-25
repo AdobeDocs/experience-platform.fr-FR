@@ -3,10 +3,10 @@ title: Connexion Moengage
 description: Moengage est une plateforme d’engagement client qui alimente en temps réel les interactions axées sur les clients entre les consommateurs et les marques.
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1156'
-ht-degree: 28%
+source-wordcount: '1132'
+ht-degree: 29%
 
 ---
 
@@ -24,13 +24,13 @@ Avec Adobe, l’intégration est très simple et intuitive. Prenez n’importe q
 
 ## Cas d’utilisation {#use-cases}
 
-Un spécialiste marketing souhaite cibler un segment d’utilisateurs (intégré à Adobe Experience Platform) par le biais de campagnes [!DNL Moengage]. En outre, ils souhaitent personnaliser le contenu de la campagne en fonction des attributs des profils Adobe Experience Platform. Avec cette intégration, les utilisateurs et les attributs sont mis à jour dans MoEngage dès que les segments et les profils sont mis à jour dans Adobe Experience Platform.
+Un spécialiste marketing souhaite cibler un segment d’utilisateurs ([!DNL Adobe Experience Platform] intégré) par le biais de campagnes [!DNL Moengage]. En outre, ils souhaitent personnaliser le contenu de la campagne en fonction des attributs des profils [!DNL Adobe Experience Platform]. Avec cette intégration, les utilisateurs et les attributs sont mis à jour dans MoEngage dès que les segments et les profils sont mis à jour dans [!DNL Adobe Experience Platform].
 
 ## Conditions préalables {#prerequisites}
 
-Avant d’envoyer vos données Adobe Experience Platform à [!DNL Moengage], notez les conditions préalables suivantes :
+Avant d’envoyer vos données [!DNL Adobe Experience Platform] à [!DNL Moengage], notez les conditions préalables suivantes :
 
-* Pour utiliser la destination MoEngage avec Adobe Experience Platform, les utilisateurs doivent d’abord avoir accès à leur compte [!DNL Moengage]. Consultez la page suivante pour vous inscrire ou vous connecter à votre compte MoEngage : https://app.moengage.com
+* Pour utiliser la destination MoEngage avec [!DNL Adobe Experience Platform], les utilisateurs doivent d’abord avoir accès à leur compte [!DNL Moengage]. Consultez la page suivante pour vous inscrire ou vous connecter à votre compte MoEngage : https://app.moengage.com
 
 
 ## Identités prises en charge {#supported-identities}
@@ -51,7 +51,7 @@ Cette section décrit les types d’audiences que vous pouvez exporter vers cett
 | Origine de l’audience | Pris en charge | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Oui | Audiences générées via Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Toutes les autres origines d’audience | Non | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform telles que Adobe Journey Optimizer, </li><li> et plus encore. </li></ul> |
+| Toutes les autres origines d’audience | Non | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform, telles que [!DNL Adobe Journey Optimizer], </li><li> et plus encore. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -63,8 +63,8 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
-| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
 
@@ -171,7 +171,7 @@ Pour ajouter d’autres mappages, répétez les étapes précédentes.
 
 ## Données exportées / Valider l’exportation des données {#exported-data}
 
-Pour vérifier si l’exportation des données vers la destination [!DNL Moengage] a réussi, accédez au profil utilisateur dans votre compte [!DNL Moengage]. Ici, vous devriez trouver un attribut utilisateur nommé `AEPSegments`, créé automatiquement, ainsi que les autres attributs personnalisés qui ont été mappés lors des étapes précédentes dans Adobe Experience Platform.
+Pour vérifier si l’exportation des données vers la destination [!DNL Moengage] a réussi, accédez au profil utilisateur dans votre compte [!DNL Moengage]. Ici, vous devriez trouver un attribut utilisateur nommé `AEPSegments`, créé automatiquement, ainsi que les autres attributs personnalisés qui ont été mappés lors des étapes précédentes de [!DNL Adobe Experience Platform].
 
 `AEPSegments` est un attribut de type tableau dans [!DNL Moengage]. Il répertorie tous les noms d’audience Adobe auxquels l’utilisateur est associé dans Experience Platform.
 

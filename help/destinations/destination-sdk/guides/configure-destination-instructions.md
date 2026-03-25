@@ -2,22 +2,22 @@
 description: Cette page répertorie et décrit les étapes de configuration d’une destination de diffusion en continu à l’aide de Destination SDK.
 title: Utiliser Destination SDK pour configurer une destination de diffusion en continu
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '879'
-ht-degree: 57%
+source-wordcount: '876'
+ht-degree: 53%
 
 ---
 
 # Utiliser Destination SDK pour configurer une destination de diffusion en continu
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 Cette page décrit comment utiliser les informations dans la section [Options de configuration de Destination SDK](../functionality/configuration-options.md) et dans d’autres documents de référence sur les fonctionnalités et l’API Destination SDK pour configurer une [destination de diffusion en continu](../../destination-types.md#streaming-destinations). Les étapes sont présentées dans l’ordre séquentiel ci-dessous.
 
 ## Conditions préalables {#prerequisites}
 
-Avant de passer aux étapes illustrées ci-dessous, veuillez lire la page de prise en main de Destination SDK [&#128279;](../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification Adobe I/O nécessaires et d’autres conditions préalables pour travailler avec les API Destination SDK. Cela suppose que vous ayez rempli les conditions préalables de partenariat et d’autorisation et que vous soyez prêt à commencer à développer votre destination.
+Avant de passer aux étapes illustrées ci-dessous, veuillez lire la page de prise en main de Destination SDK [](../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification Adobe I/O nécessaires et d’autres conditions préalables pour travailler avec les API Destination SDK. Cela suppose que vous ayez rempli les conditions préalables de partenariat et d’autorisation et que vous soyez prêt à commencer à développer votre destination.
 
 ## Étapes à suivre pour utiliser les options de configuration de Destination SDK afin de configurer votre destination. {#steps}
 
@@ -152,7 +152,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## Étape 3 : créer un modèle de transformation de message : utilisez un langage de modèle pour spécifier le format de sortie du message {#create-transformation-template}
 
-En fonction des payloads pris en charge par votre destination, vous devez créer un modèle qui transforme le format des données exportées à partir du format XDM d’Adobe dans un format pris en charge par votre destination. Consultez les exemples de modèles dans la section [Utilisation d’une langue de modèle pour les transformations d’identité, d’attributs et d’appartenance à une audience](../functionality/destination-server/message-format.md#using-templating) et utilisez l’outil de création de modèles [&#x200B; fourni par Adobe](../testing-api/streaming-destinations/create-template.md).
+En fonction des payloads pris en charge par votre destination, vous devez créer un modèle qui transforme le format des données exportées à partir du format XDM d’Adobe dans un format pris en charge par votre destination. Consultez les exemples de modèles dans la section [Utilisation d’une langue de modèle pour les transformations d’identité, d’attributs et d’appartenance à une audience](../functionality/destination-server/message-format.md#using-templating) et utilisez l’outil de création de modèles [ fourni par Adobe](../testing-api/streaming-destinations/create-template.md).
 
 Une fois que vous avez conçu un modèle de transformation de messages qui vous convient, ajoutez-le à la configuration de serveur et de modèle que vous avez créée à l’étape 1.
 
@@ -279,12 +279,12 @@ Si vous avez sélectionné `"authenticationRule": "PLATFORM_AUTHENTICATION"`, vo
 
 ## Étape 6 : tester votre destination {#test-destination}
 
-Une fois votre destination configurée à l’aide des points d’entrée de configuration dans les étapes précédentes, vous pouvez utiliser l’[outil de test des destinations](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) afin de tester l’intégration entre Adobe Experience Platform et votre destination.
+Une fois votre destination configurée à l’aide des points d’entrée de configuration dans les étapes précédentes, vous pouvez utiliser l’outil de test de destination [destination](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) pour tester l’intégration entre [!DNL Adobe Experience Platform] et votre destination.
 
 Dans le cadre du processus de test de votre destination, vous devez utiliser l’interface utilisateur d’Experience Platform pour créer des segments que vous activerez vers votre destination. Reportez-vous aux deux ressources ci-dessous pour obtenir des instructions sur la création d’audiences dans Experience Platform :
 
 * [Création d’une page de documentation sur les audiences](/help/segmentation/ui/audience-portal.md#create-audience)
-* [Présentation vidéo Créer une audience](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=fr)
+* [Présentation vidéo Créer une audience](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Étape 7 : publier votre destination {#publish-destination}
 

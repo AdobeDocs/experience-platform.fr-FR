@@ -4,9 +4,9 @@ title: Exporter des jeux de données à l’aide de l’API Flow Service
 description: Découvrez comment utiliser l’API Flow Service pour exporter des jeux de données vers des destinations sélectionnées.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '5203'
+source-wordcount: '5178'
 ht-degree: 12%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 12%
 
 >[!AVAILABILITY]
 >
->* Cette fonctionnalité est disponible pour les clients qui ont acheté le package Real-Time CDP Prime et Ultimate, Adobe Journey Optimizer ou Customer Journey Analytics. Contactez votre représentant ou représentante Adobe pour plus d’informations.
+>* Cette fonctionnalité est disponible pour les clients qui ont acheté le package [!DNL Real-Time CDP] Prime et Ultimate, [!DNL Adobe Journey Optimizer] ou Customer Journey Analytics. Contactez votre représentant ou représentante Adobe pour plus d’informations.
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ ht-degree: 12%
 
 -->
 
-Cet article explique le processus requis pour utiliser l’[!DNL Flow Service API] afin d’exporter des [jeux de données](/help/catalog/datasets/overview.md) de Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix, comme des [!DNL Amazon S3], des emplacements SFTP ou des [!DNL Google Cloud Storage].
+Cet article explique le processus requis pour utiliser l’[!DNL Flow Service API] afin d’exporter des [jeux de données](/help/catalog/datasets/overview.md) de [!DNL Adobe Experience Platform] vers l’emplacement d’espace de stockage de votre choix, comme des [!DNL Amazon S3], des emplacements SFTP ou des [!DNL Google Cloud Storage].
 
 >[!TIP]
 >
@@ -40,7 +40,7 @@ Cet article explique le processus requis pour utiliser l’[!DNL Flow Service AP
 
 ## Jeux de données disponibles pour l’exportation {#datasets-to-export}
 
-Les jeux de données que vous pouvez exporter dépendent de l’application Experience Platform (Real-Time CDP, Adobe Journey Optimizer), du niveau (Prime ou Ultimate) et des modules complémentaires que vous avez achetés (par exemple : Data Distiller).
+Les jeux de données que vous pouvez exporter dépendent de l’application Experience Platform ([!DNL Real-Time CDP], [!DNL Adobe Journey Optimizer]), du niveau (Prime ou Ultimate) et des modules complémentaires que vous avez achetés (par exemple : Data Distiller).
 
 Reportez-vous au [tableau de la page du tutoriel de l’interface utilisateur](/help/destinations/ui/export-datasets.md#datasets-to-export) pour comprendre les jeux de données que vous pouvez exporter.
 
@@ -68,9 +68,9 @@ Notez les conditions préalables suivantes pour exporter des jeux de données :
 
 ![Présentation - Étapes de création d’une destination et d’exportation de jeux de données](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
+Ce guide nécessite une compréhension du fonctionnement des composants suivants de [!DNL Adobe Experience Platform] :
 
-* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md) : toutes les données correctement ingérées par Adobe Experience Platform sont conservées sous forme de jeux de données dans le [!DNL Data Lake]. Un jeu de données est une structure de stockage et de gestion pour une collection de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les jeux de données contiennent également des métadonnées qui décrivent divers aspects des données stockées.
+* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md) : toutes les données correctement ingérées par [!DNL Adobe Experience Platform] sont conservées sous forme de jeux de données dans le [!DNL Data Lake]. Un jeu de données est une structure de stockage et de gestion pour une collection de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les jeux de données contiennent également des métadonnées qui décrivent divers aspects des données stockées.
    * [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour exporter des jeux de données vers des destinations d’espace de stockage dans Experience Platform.
@@ -1994,7 +1994,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, ce qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
+Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
 
 | Paramètre | Description |
 |---------|----------|
@@ -2063,7 +2063,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, ce qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
+Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
 
 | Paramètre | Description |
 |---------|----------|
@@ -2133,7 +2133,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, ce qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
+Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
 
 | Paramètre | Description |
 |---------|----------|
@@ -2203,7 +2203,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, ce qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
+Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
 
 | Paramètre | Description |
 |---------|----------|
@@ -2272,7 +2272,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, ce qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
+Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
 
 | Paramètre | Description |
 |---------|----------|
@@ -2342,7 +2342,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, ce qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
+Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
 
 | Paramètre | Description |
 |---------|----------|
@@ -2477,7 +2477,7 @@ Notez la différence de format de fichier entre les deux types de fichiers lorsq
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[&#x200B; consultez les sections &#x200B;](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[ consultez les sections ](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Limites connues {#known-limitations}
 

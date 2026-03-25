@@ -3,9 +3,9 @@ keywords: attributs airship;destination airship
 title: Connexion Attributs Airship
 description: Transmettez facilement les données d’audience Adobe à Airship en tant qu’attributs d’audience pour le ciblage dans Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1121'
 ht-degree: 25%
 
 ---
@@ -42,7 +42,7 @@ Cette section décrit les types d’audiences que vous pouvez exporter vers cett
 | Origine de l’audience | Pris en charge | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Oui | Audiences générées via Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Toutes les autres origines d’audience | Oui | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform telles que Adobe Journey Optimizer, </li><li> et plus encore. </li></ul> |
+| Toutes les autres origines d’audience | Oui | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform, telles que [!DNL Adobe Journey Optimizer], </li><li> et plus encore. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -54,8 +54,8 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
-| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 ## Activer les attributs {#enable-attributes}
 
-les attributs de profil Adobe Experience Platform sont similaires aux attributs [!DNL Airship] et peuvent être facilement mappés les uns aux autres dans Experience Platform à l’aide de l’outil de mappage illustré plus bas sur cette page.
+[!DNL Adobe Experience Platform] attributs de profil sont similaires aux attributs de [!DNL Airship] et peuvent être facilement mappés les uns aux autres dans Experience Platform à l’aide de l’outil de mappage illustré plus bas sur cette page.
 
 [!DNL Airship] projets ont plusieurs attributs prédéfinis et par défaut. Si vous disposez d’un attribut personnalisé, vous devez d’abord le définir dans [!DNL Airship]. Voir [Configurer et gérer les attributs](https://docs.airship.com/tutorials/audience/attributes/) pour plus d’informations.
 
@@ -89,15 +89,15 @@ Cliquez sur **[!UICONTROL Create Token]** et enregistrez les détails comme conf
 
 ## Cas d’utilisation {#use-cases}
 
-Pour mieux comprendre quand et comment utiliser la destination [!DNL Airship Attributes], consultez les exemples de cas d’utilisation ci-dessous que la clientèle de Adobe Experience Platform peut résoudre.
+Pour mieux comprendre quand et comment utiliser la destination [!DNL Airship Attributes], consultez les exemples de cas d’utilisation ci-dessous que [!DNL Adobe Experience Platform] clients peuvent résoudre à l’aide de cette destination.
 
 ### Cas d’utilisation #1 {#use-case-1}
 
-Tirez parti des données de profil collectées dans Adobe Experience Platform pour la personnalisation du message et du contenu riche dans l’un des canaux de [!DNL Airship]. Par exemple, utilisez les données de profil [!DNL Experience Platform] pour définir les attributs d’emplacement dans [!DNL Airship]. Cela permettra à une marque d’hôtel d’afficher une image de l’emplacement de l’hôtel le plus proche pour chaque utilisateur.
+Tirez parti des données de profil collectées dans [!DNL Adobe Experience Platform] pour la personnalisation du message et du contenu riche dans l’un des canaux de [!DNL Airship]. Par exemple, utilisez les données de profil [!DNL Experience Platform] pour définir les attributs d’emplacement dans [!DNL Airship]. Cela permettra à une marque d’hôtel d’afficher une image de l’emplacement de l’hôtel le plus proche pour chaque utilisateur.
 
 ### Cas d’utilisation #2 {#use-case-2}
 
-Tirez parti des attributs de Adobe Experience Platform pour enrichir davantage les profils de [!DNL Airship] et les combiner avec des données prédictives SDK ou [!DNL Airship]. Par exemple, un retailer peut créer une audience avec des données de statut de fidélité et d’emplacement (attributs d’Experience Platform) et [!DNL Airship] prédites pour l’attrition des données afin d’envoyer des messages très ciblés aux utilisateurs avec le statut de fidélité Gold qui vivent à Las Vegas, NV et qui ont une forte probabilité d’attrition.
+Tirez parti des attributs de [!DNL Adobe Experience Platform] pour enrichir davantage les profils de [!DNL Airship] et les combiner avec des données prédictives SDK ou [!DNL Airship]. Par exemple, un retailer peut créer une audience avec des données de statut de fidélité et d’emplacement (attributs d’Experience Platform) et [!DNL Airship] prédites pour l’attrition des données afin d’envoyer des messages très ciblés aux utilisateurs avec le statut de fidélité Gold qui vivent à Las Vegas, NV et qui ont une forte probabilité d’attrition.
 
 ## Se connecter à la destination {#connect}
 
@@ -132,7 +132,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 

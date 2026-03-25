@@ -2,16 +2,16 @@
 description: Experience Platform Destination SDK utilise des modèles Pebble, ce qui vous permet de transformer les données exportées d’Experience Platform au format demandé par la destination.
 title: Fonctions de transformation prises en charge dans Destination SDK
 exl-id: 36f761c7-9d76-41fe-b05f-d4cad655ddd2
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 96%
+source-wordcount: '548'
+ht-degree: 91%
 
 ---
 
 # Fonctions de transformation prises en charge dans Destination SDK
 
-Experience Platform Destination SDK utilise des modèles [[!DNL Pebble] &#x200B;](https://pebbletemplates.io/), ce qui vous permet de transformer les données exportées d’Experience Platform au format demandé par la destination.
+Experience Platform Destination SDK utilise des modèles [[!DNL Pebble] ](https://pebbletemplates.io/), ce qui vous permet de transformer les données exportées d’Experience Platform au format demandé par la destination.
 
 L’implémentation [!DNL Pebble] d’Experience Platform comporte quelques modifications par rapport à la version prête à l’emploi fournie par [!DNL Pebble]. En outre, en plus des fonctions prêtes à l’emploi fournies par [!DNL Pebble], Adobe a créé des fonctions supplémentaires que vous pouvez utiliser avec Destination SDK.
 
@@ -45,7 +45,7 @@ Dans la section de balise [!DNL Pebble], Destination SDK ne prend en charge que 
 >L’utilisation de `for` est différente quand il s’agit de parcourir les éléments d’un *tableau* ou d’une *map* dans un modèle. Quand vous parcourez un tableau, vous pouvez obtenir l’élément directement. Quand vous parcourez une map, vous obtenez chaque entrée de map qui comporte une paire clé-valeur.
 >
 > * Pour obtenir un exemple d’élément de tableau, pensez aux identités d’un espace de noms [identityMap](message-format.md#identities), où vous pouvez parcourir des éléments tels que `identityMap.gaid`, `identityMap.email` ou similaires.
-> * Pour obtenir un exemple d’élément map, pensez à [segmentMembership](message-format.md#segment-membership).
+> * Pour obtenir un exemple d’élément map, pensez à [segmentMembership](message-format.md#audience-membership).
 
 Dans la section de filtre [!DNL Pebble], Destination SDK prend en charge toutes les fonctions. Un exemple ci-dessous montre comment la fonction `date` peut être utilisée dans Destination SDK.
 
@@ -53,7 +53,7 @@ Dans la section de fonction [!DNL Pebble], Adobe *ne prend pas* en charge la fon
 
 ## Exemple de la manière dont la fonction `date` est utilisée {#date-function}
 
-Pour illustrer comment les fonctions [!DNL Pebble] sont utilisées dans Destination SDK, consultez ci-dessous la manière dont la fonction de date ([lien dans la documentation Pebble](https://pebbletemplates.io/wiki/filter/date/)) est utilisée pour transformer le format d’une date et heure.
+Pour illustrer comment les fonctions de [!DNL Pebble] sont utilisées dans Destination SDK, consultez ci-dessous la manière dont la fonction de date ([lien dans la documentation Pebble](https://pebbletemplates.io/wiki/filter/date/)) transforme le format d’une date et heure.
 
 ### Cas d’utilisation {#date-use-case}
 

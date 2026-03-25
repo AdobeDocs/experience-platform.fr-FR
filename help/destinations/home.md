@@ -2,10 +2,10 @@
 title: Présentation des destinations
 description: Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant dʼAdobe Experience Platform. Vous pouvez utiliser les destinations dans Adobe Experience Platform pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1308'
-ht-degree: 48%
+source-wordcount: '1299'
+ht-degree: 46%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 48%
 
 ![Bannière de présentation des destinations.](./assets/overview/destinations-overview-banner.png)
 
-Les **[!DNL Destinations]** sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+**[!DNL Destinations]** sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant de [!DNL Adobe Experience Platform]. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -55,7 +55,7 @@ Pour les connecteurs créés et gérés par un partenaire, les problèmes liés 
 
 ## Destinations et contrôles d’accès {#access-controls}
 
-La fonctionnalité de destinations d’Experience Platform fonctionne avec les autorisations de contrôle d’accès de Adobe Experience Platform. Selon le niveau d’autorisation de l’utilisateur, vous pouvez afficher, gérer et activer les destinations. Pour plus d’informations sur les autorisations individuelles, accédez à [contrôle d’accès dans Adobe Experience Platform](../access-control/home.md) et faites défiler la page vers le bas, jusqu’au tableau.
+La fonctionnalité de destinations d’Experience Platform fonctionne avec des autorisations de contrôle d’accès [!DNL Adobe Experience Platform]. Selon le niveau d’autorisation de l’utilisateur, vous pouvez afficher, gérer et activer les destinations. Pour plus d’informations sur les autorisations individuelles, accédez à [contrôle d’accès dans Adobe Experience Platform](../access-control/home.md) et faites défiler la page vers le bas, jusqu’au tableau.
 
 Le tableau suivant décrit les autorisations et combinaisons d’autorisations requises pour effectuer certaines actions sur les destinations.
 
@@ -63,10 +63,10 @@ Le tableau suivant décrit les autorisations et combinaisons d’autorisations r
 | ---- | ---- |
 | **[!UICONTROL View Destinations]** | Pour accéder à l’onglet Destinations dans l’interface utilisateur d’Experience Platform, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Destinations]** [Access Control](/help/access-control/home.md#permissions). |
 | **[!UICONTROL View Destinations]**, **[!UICONTROL Manage Destinations]** | Pour vous connecter aux destinations, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). |
-| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, et **[!UICONTROL View Segments]** | Pour activer les audiences vers les destinations et activer l’[étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions). |
-| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, et **[!UICONTROL View Segments]** | Pour ajouter ou supprimer des audiences de flux de données existants sans avoir accès à l’[étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous devez disposer des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, et **[!UICONTROL View Segments]** | Pour activer les audiences vers les destinations et activer l’[étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, et **[!UICONTROL View Segments]** | Pour ajouter ou supprimer des audiences de flux de données existants sans avoir accès à l’[étape de mappage](ui/activate-batch-profile-destinations.md#mapping) du workflow, vous devez disposer des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions). |
 | **[!UICONTROL View Destinations]**, **[!UICONTROL Manage and Activate Dataset Destinations]** | Pour exporter des jeux de données vers des destinations, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage and Activate Dataset Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). |
-| **[!UICONTROL View Identity Graph]** | Pour exporter des *identités* vers des destinations, vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#x200B; access control](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"} |
+| **[!UICONTROL View Identity Graph]** | Pour exporter des *identités* vers des destinations, vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[ access control](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -78,7 +78,7 @@ Pour plus d’informations sur les contrôles d’accès, consultez le [Guide de
 
 ### Contrôle d’accès basé sur les attributs pour les destinations {#attribute-based-access}
 
-Le contrôle d’accès basé sur les attributs est une fonctionnalité d’Adobe Experience Platform qui permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs.
+Dans [!DNL Adobe Experience Platform], le contrôle d’accès basé sur les attributs permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs.
 
 Grâce au contrôle d’accès basé sur les attributs, vous pouvez appliquer des configurations de mappage aux champs pour lesquels vous disposez d’autorisations. En outre, vous ne pouvez pas exporter de données vers une destination si vous n’avez pas accès à tous les champs du jeu de données.
 
@@ -117,7 +117,7 @@ Pour plus d’informations sur la sélection d’actions marketing dans le workf
 * [Destinations de compte Advertising - Connexion d’audience Bombora ABM](./catalog/advertising/bombora.md)
 * [Destinations du compte Advertising - Connexion à Demandbase](./catalog/advertising/demandbase.md)
 * [Destinations de stockage dans le cloud](./catalog/cloud-storage/overview.md)
-* [Destinations de marketing par e-mail &#x200B;](./catalog/email-marketing/overview.md)
+* [Destinations de marketing par e-mail ](./catalog/email-marketing/overview.md)
 * [Destinations sociales](./catalog/social/overview.md)
 
 Pour plus d’informations sur les violations de politique de données dans le workflow d’activation d’audience, consultez l’étape **[!UICONTROL Review]** dans les guides suivants :

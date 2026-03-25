@@ -2,10 +2,10 @@
 title: Gestion des identités dans le workflow d’activation des destinations
 description: Découvrez comment l’exportation d’identités est gérée dans le workflow d’activation, en fonction du type de destination.
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1134'
-ht-degree: 83%
+source-wordcount: '1132'
+ht-degree: 81%
 
 ---
 
@@ -71,7 +71,7 @@ N’oubliez pas que le nombre d’enregistrements que vous exportez dépend de v
 
 ## Destinations de streaming basées sur les API {#streaming-destinations}
 
-Les [destinations de streaming basées sur les API](/help/destinations/destination-types.md#streaming-destination) créées avec [Destination SDK](/help/destinations/destination-sdk/overview.md) (par exemple, [!DNL Facebook], [!DNL Google Customer Match], [!DNL Pinterest], [!DNL Braze], etc.) ne prennent en charge que des identifiants spécifiques pour l’exportation. Pour plus d’informations sur les identités spécifiques qui peuvent être exportées vers chaque destination, reportez-vous à la section *identités prises en charge* dans chaque page de documentation de destination (voir par exemple la [section des identités prises en charge](/help/destinations/catalog/advertising/pinterest.md) dans la page de destination [!DNL Pinterest]).
+Les [destinations de streaming basées sur les API](/help/destinations/destination-types.md#streaming-audience-export-destinations) créées avec [Destination SDK](/help/destinations/destination-sdk/overview.md) (par exemple, [!DNL Facebook], [!DNL Google Customer Match], [!DNL Pinterest], [!DNL Braze], etc.) ne prennent en charge que des identifiants spécifiques pour l’exportation. Pour plus d’informations sur les identités spécifiques qui peuvent être exportées vers chaque destination, reportez-vous à la section *identités prises en charge* dans chaque page de documentation de destination (voir par exemple la [section des identités prises en charge](/help/destinations/catalog/advertising/pinterest.md) dans la page de destination [!DNL Pinterest]).
 
 Notez toutefois que vous avez la possibilité d’utiliser les données de [graphiques privés](/help/profile/merge-policies/overview.md#id-stitching) ou d’attributs en tant qu’identités. Cela signifie que vous pouvez mapper les attributs XDM au champ d’identité requis par la destination. Vous trouverez ci-dessous un exemple pour la destination [!DNL Pinterest], où l’attribut XDM `personalEmail.address` est mappé sur l’identité [!DNL Pinterest] `pinterest_audience` requise.
 
@@ -93,7 +93,7 @@ Lors de la configuration d’un flux de données comme décrit dans la documenta
 
 >[!NOTE]
 >
->La plupart de ces destinations publicitaires sont prises en charge dans Audience Manager (ces types de destinations sont connus dans Audience Manager en tant que destinations basées sur des appareils. Voir une [liste de toutes les destinations basées sur des appareils prises en charge dans Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html?lang=fr)). Seules quelques-unes sont répertoriées dans Experience Platform. Pour plus d’informations sur le partage de données entre Experience Platform et Audience Manager, consultez la section sur l’[activation du partage de données entre Experience Platform et Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr#enable-aep-to-aam-data). Actuellement, il n’est pas prévu de prendre en charge d’autres destinations de cookie tiers.
+>La plupart de ces destinations publicitaires sont prises en charge dans Audience Manager (ces types de destinations sont connus dans Audience Manager en tant que destinations basées sur des appareils. Voir une [liste de toutes les destinations basées sur des appareils prises en charge dans Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html)). Seules quelques-unes sont répertoriées dans Experience Platform. Pour plus d’informations sur le partage de données entre Experience Platform et Audience Manager, consultez la section sur l’[activation du partage de données entre Experience Platform et Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#enable-aep-to-aam-data). Actuellement, il n’est pas prévu de prendre en charge d’autres destinations de cookie tiers.
 
 ## Destinations d’entreprise {#enterprise-destinations}
 
@@ -101,7 +101,7 @@ Lors de la configuration d’un flux de données comme décrit dans la documenta
 
 ## Destinations de personnalisation {#personalization-destinations}
 
-Les [Destinations de personnalisation (ou Edge)](/help/destinations/destination-types.md#edge-personalization-destinations) (par exemple : Adobe Target, [!DNL Custom Personalization]) ne nécessitent aucune sélection d’identité dans le workflow d’activation, car l’intégration est une recherche de profil. Le client ou la cliente ([!DNL Target], [!DNL Web SDK] ou autres) interroge le [[!UICONTROL Edge]](/help/collection/home.md#edge) et extrait les informations de profil dont il a besoin pour la personnalisation sur site.
+Les destinations [Personalization (ou edge)](/help/destinations/destination-types.md#edge-personalization-destinations) (par exemple : [!DNL Adobe Target], [!DNL Custom Personalization]) ne nécessitent aucune sélection d’identité dans le workflow d’activation, car l’intégration est une recherche de profil. Le client ou la cliente ([!DNL Target], [!DNL Web SDK] ou autres) interroge le [[!UICONTROL Edge]](/help/collection/home.md) et extrait les informations de profil dont il a besoin pour la personnalisation sur site.
 
 <!--
 ![Table with all supported identities](/help/destinations/assets/how-destinations-work/identities-table.png)

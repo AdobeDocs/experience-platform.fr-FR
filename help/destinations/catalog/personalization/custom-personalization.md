@@ -3,10 +3,10 @@ keywords: personnalisation personnalisée;destination;destination personnalisée
 title: Connexion de personnalisation personnalisée
 description: Cette destination fournit une personnalisation externe, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur votre site pour récupérer les informations d’audience à partir de Adobe Experience Platform. Cette destination fournit une personnalisation en temps réel basée sur l’appartenance à l’audience du profil utilisateur.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1126'
-ht-degree: 40%
+source-wordcount: '1111'
+ht-degree: 38%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 40%
 
 >[!IMPORTANT]
 >
->Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, vous devez utiliser l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/) lors de la configuration de la destination **[!UICONTROL Custom Personalization]** pour la personnalisation basée sur les attributs. Tous les appels API d’Edge Network doivent être effectués dans un [contexte authentifié](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication).
+>Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, vous devez utiliser l’API [](https://developer.adobe.com/data-collection-apis/docs/) lors de la configuration de la destination **[!UICONTROL Custom Personalization]** pour la personnalisation basée sur les attributs. Tous les appels API d’Edge Network doivent être effectués dans un [contexte authentifié](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication).
 >
 ><br>Vous pouvez récupérer les attributs de profil via l’[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/) en ajoutant une intégration côté serveur qui utilise le même flux de données que celui que vous utilisez déjà pour votre implémentation de Web ou Mobile SDK.
 >
@@ -31,7 +31,7 @@ ht-degree: 40%
 
 ## Vue d’ensemble {#overview}
 
-Configurez cette destination pour permettre aux plateformes de personnalisation externes, aux systèmes de gestion de contenu, aux serveurs de publicités et aux autres applications s’exécutant sur les sites web des clients de récupérer les informations d’audience à partir de Adobe Experience Platform.
+Configurez cette destination pour permettre aux plateformes de personnalisation externes, aux systèmes de gestion de contenu, aux serveurs de publicités et aux autres applications s’exécutant sur les sites web des clients de récupérer les informations d’audience à partir de [!DNL Adobe Experience Platform].
 
 ## Conditions préalables {#prerequisites}
 
@@ -39,7 +39,7 @@ Cette destination nécessite l’utilisation de l’une des méthodes de collect
 
 * Utilisez [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) si vous souhaitez collecter des données sur votre site Web.
 * Utilisez [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) si vous souhaitez collecter des données à partir de votre application mobile.
-* Utilisez l’API [Edge Network](https://developer.adobe.com/data-collection-apis/docs/) si vous n’utilisez pas Web SDK ou Mobile SDK, ou si vous souhaitez personnaliser l’expérience utilisateur en fonction des attributs de profil.
+* Utilisez l’API [](https://developer.adobe.com/data-collection-apis/docs/) si vous n’utilisez pas Web SDK ou Mobile SDK, ou si vous souhaitez personnaliser l’expérience utilisateur en fonction des attributs de profil.
 
 >[!IMPORTANT]
 >
@@ -58,7 +58,7 @@ Cette section décrit les types d’audiences que vous pouvez exporter vers cett
 | Origine de l’audience | Pris en charge | Description |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Oui | Audiences générées via Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Toutes les autres origines d’audience | Oui | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform telles que Adobe Journey Optimizer, </li><li> et plus encore. </li></ul> |
+| Toutes les autres origines d’audience | Oui | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform, telles que [!DNL Adobe Journey Optimizer], </li><li> et plus encore. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -70,8 +70,8 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
-| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
 
@@ -126,7 +126,7 @@ Si vous utilisez des [balises dans Adobe Experience Platform](/help/tags/home.md
 
 Voici un exemple de valeur pour la variable `event.destinations` :
 
-```
+```json
 [
    {
       "type":"profileLookup",
@@ -146,9 +146,9 @@ Voici un exemple de valeur pour la variable `event.destinations` :
 
 Si vous n’utilisez pas [Balises](/help/tags/home.md) pour déployer Experience Platform Web SDK, utilisez [réponses des commandes](/help/collection/js/commands/command-responses.md) pour afficher les données exportées.
 
-Vous pouvez analyser la réponse JSON d’Adobe Experience Platform pour trouver l’alias d’intégration correspondant à l’application que vous intégrez dans Adobe Experience Platform. Les identifiants d’audience peuvent être transmis dans le code de l’application en tant que paramètres de ciblage. Vous trouverez ci-dessous un exemple de ce à quoi cela ressemblerait dans le cas spécifique de la réponse de destination.
+Vous pouvez analyser la réponse JSON de [!DNL Adobe Experience Platform] pour trouver l’alias d’intégration correspondant à l’application que vous intégrez [!DNL Adobe Experience Platform]. Les identifiants d’audience peuvent être transmis dans le code de l’application en tant que paramètres de ciblage. Vous trouverez ci-dessous un exemple de ce à quoi cela ressemblerait dans le cas spécifique de la réponse de destination.
 
-```
+```js
 alloy("sendEvent", {
   "renderDecisions": true,
   "xdm": {

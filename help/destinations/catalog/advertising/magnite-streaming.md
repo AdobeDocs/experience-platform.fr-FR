@@ -3,10 +3,10 @@ title: Connexion à la destination en temps réel Magnite
 description: Utilisez cette destination pour diffuser des audiences Adobe CDP vers la plateforme de streaming Magnite en temps réel.
 last-substantial-update: 2024-11-18T00:00:00Z
 exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1403'
-ht-degree: 24%
+source-wordcount: '1379'
+ht-degree: 22%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 24%
 
 ## Vue d’ensemble {#overview}
 
-Les destinations [!DNL Magnite: Real-Time] et [Magnite : lot](/help/destinations/catalog/advertising/magnite-batch.md) de Adobe Experience Platform vous permettent de mapper et d’exporter des audiences pour le ciblage et l’activation sur la plateforme de streaming Magnite.
+Les destinations [!DNL Magnite: Real-Time] et [Magnite : lot](/help/destinations/catalog/advertising/magnite-batch.md) de [!DNL Adobe Experience Platform] vous permettent de mapper et d’exporter des audiences pour le ciblage et l’activation sur la plateforme de streaming Magnite.
 
 L’activation des audiences sur la plateforme [!DNL Magnite Streaming] est un processus en deux étapes qui nécessite l’utilisation des destinations Magnite : Real-Time et Magnite : Batch .
 
@@ -33,15 +33,15 @@ Pour activer vos audiences dans [!DNL Magnite Streaming], vous devez :
 
 ## Cas d’utilisation {#use-cases}
 
-Pour mieux comprendre quand et comment utiliser la destination [!DNL Magnite: Real-Time], consultez l’exemple de cas d’utilisation ci-dessous que les clientes et clients d’Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
+Pour mieux comprendre quand et comment utiliser la destination [!DNL Magnite: Real-Time], consultez l’exemple de cas d’utilisation ci-dessous que [!DNL Adobe Experience Platform] clients peuvent résoudre à l’aide de cette destination.
 
 ### Activation et ciblage {#activation-and-targeting}
 
-Cette intégration à Magnite permet aux clients de transmettre leurs audiences CDP de Adobe Experience Platform à Magnite pour le ciblage publicitaire. Les audiences peuvent être sélectionnées dans Magnite pour le ciblage positif et le ciblage négatif (suppression).
+Cette intégration à Magnite permet aux clients de transmettre leurs audiences CDP de [!DNL Adobe Experience Platform] à Magnite pour le ciblage publicitaire. Les audiences peuvent être sélectionnées dans Magnite pour le ciblage positif et le ciblage négatif (suppression).
 
 ## Conditions préalables {#prerequisites}
 
-Pour utiliser les destinations [!DNL Magnite] dans Adobe Experience Platform, vous devez d’abord disposer d’un compte [!DNL Magnite Streaming]. Si vous disposez d’un compte [!DNL Magnite Streaming], contactez votre gestionnaire de compte [!DNL Magnite] afin d’obtenir des informations d’identification pour accéder aux destinations [!DNL Magnite's].
+Pour utiliser les destinations [!DNL Magnite] dans [!DNL Adobe Experience Platform], vous devez d’abord disposer d’un compte [!DNL Magnite Streaming]. Si vous disposez d’un compte [!DNL Magnite Streaming], contactez votre gestionnaire de compte [!DNL Magnite] afin d’obtenir des informations d’identification pour accéder aux destinations [!DNL Magnite's].
 Si vous n’avez pas de compte [!DNL Magnite Streaming], veuillez contacter adobe-tech@magnite.com
 
 ## Identités prises en charge {#supported-identities}
@@ -61,7 +61,7 @@ Cette section décrit le type d’audiences que vous pouvez exporter vers cette 
 | Origine de l’audience | Pris en charge | Description |
 |-----------------------------|----------|----------|
 | [!DNL Segmentation Service] | Oui | Audiences générées via Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Toutes les autres origines d’audience | Oui | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform telles que Adobe Journey Optimizer, </li><li> et plus encore. </li></ul> |
+| Toutes les autres origines d’audience | Oui | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform, telles que [!DNL Adobe Journey Optimizer], </li><li> et plus encore. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -73,8 +73,8 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
-| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données Adobe Experience Platform. | Rapports, workflows de science des données |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
 
@@ -136,7 +136,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View destinations]**, **[!UICONTROL Activate destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Lisez [Activer des audiences vers des destinations de diffusion en streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -178,11 +178,11 @@ Une fois vos audiences chargées, vous pouvez vérifier qu’elles ont été cr�
 
 -->
 
-* Après l’ingestion, les audiences doivent apparaître dans [!DNL Magnite Streaming] dans les minutes qui suivent et peuvent être appliquées à une transaction. Vous pouvez le confirmer en recherchant l’identifiant du segment qui a été partagé lors des étapes d’activation dans le Adobe Experience Platform.
+* Après l’ingestion, les audiences doivent apparaître dans [!DNL Magnite Streaming] dans les minutes qui suivent et peuvent être appliquées à une transaction. Vous pouvez le confirmer en recherchant l’identifiant du segment qui a été partagé lors des étapes d’activation dans la [!DNL Adobe Experience Platform].
 
 ## Activer les mêmes audiences via la [!DNL Magnite: Batch]destination {#activate-magnite-batch}
 
-Les audiences partagées avec [!DNL Magnite Streaming] à l’aide de la destination en temps réel devront également être partagées à l’aide de la destination Magnite : Batch . Lorsque la configuration est correcte, les noms de segment dans l’interface utilisateur de [!DNL Magnite Streaming] sont mis à jour pour refléter ceux utilisés dans la mise à jour post-quotidienne de Adobe Experience Platform.
+Les audiences partagées avec [!DNL Magnite Streaming] à l’aide de la destination en temps réel devront également être partagées à l’aide de la destination Magnite : Batch . Lorsque la configuration est correcte, les noms de segment dans l’interface utilisateur de [!DNL Magnite Streaming] sont mis à jour pour refléter ceux utilisés dans la [!DNL Adobe Experience Platform] mise à jour post-quotidienne.
 
 Enfin, si une destination par lots n’a pas été configurée pour votre intégration, configurez-la maintenant via le document Magnite : Destination par lots .
 

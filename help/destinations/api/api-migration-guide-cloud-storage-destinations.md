@@ -4,9 +4,9 @@ title: Guide de migration des API pour les destinations de stockage dans le clou
 description: Découvrez les modifications apportées au workflow d’activation des destinations de stockage dans le cloud dans le cadre de la migration vers les nouvelles cartes de destination de stockage dans le cloud avec des fonctionnalités supplémentaires.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1328'
 ht-degree: 3%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->* La fonctionnalité décrite sur cette page est disponible pour les clients qui ont acheté les packages Real-Time CDP Prime et Ultimate. Contactez votre représentant ou représentante Adobe pour plus d’informations.
+>* La fonctionnalité décrite sur cette page est disponible pour les clients qui ont acheté les packages Prime et Ultimate [!DNL Real-Time CDP]. Contactez votre représentant ou représentante Adobe pour plus d’informations.
 
 ## Contexte de migration {#migration-context}
 
 À compter d’[octobre 2022](/help/release-notes/2022/october-2022.md#new-or-updated-destinations), vous pouvez utiliser les nouvelles fonctionnalités d’exportation de fichiers pour accéder à une fonctionnalité de personnalisation améliorée lors de l’exportation de fichiers en dehors d’Experience Platform :
 
-* [Options de dénomination de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) supplémentaires.
+* [Options de dénomination de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) supplémentaires.
 * Possibilité de définir des en-têtes de fichier personnalisés dans vos fichiers exportés via la [nouvelle étape de mappage](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
-* Possibilité de sélectionner le [&#x200B; type de fichier &#x200B;](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) fichier exporté.
+* Possibilité de sélectionner le [ type de fichier ](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) fichier exporté.
 * Possibilité de [personnaliser le formatage des fichiers de données CSV exportés](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 Cette fonctionnalité est prise en charge par les cartes de stockage cloud Beta répertoriées ci-dessous :
@@ -42,11 +42,11 @@ Commenting out the three net new cloud storage destinations
 
 -->
 
-Notez que l’interface utilisateur d’Experience Platform affiche actuellement deux cartes de destination côte à côte pour les trois destinations. Vous trouverez ci-dessous les [!DNL Amazon S3] destinations héritées et nouvelles. Dans tous les cas, les cartes marquées de **Beta** sont les nouvelles cartes de destination.
+Notez que l’interface utilisateur d’Experience Platform affiche actuellement deux cartes de destination côte à côte pour les trois destinations. Vous trouverez ci-dessous les [!DNL Amazon S3] destinations héritées et nouvelles. Dans tous les cas, les cartes marquées de **** sont les nouvelles cartes de destination.
 
 ![Image des deux cartes de destination Amazon S3 dans une vue côte à côte.](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
-Alors que ces destinations avec des fonctionnalités améliorées étaient initialement proposées en version bêta, *Adobe déplace désormais tous les clients Real-Time CDP vers les nouvelles destinations d’espace de stockage*. Pour les clients qui utilisaient déjà [!DNL Amazon S3], [!DNL Azure Blob] ou SFTP, cela signifie que les flux de données existants seront migrés vers les nouvelles cartes. Lisez la suite pour plus d’informations sur les modifications spécifiques dans le cadre de la migration.
+Alors que ces destinations avec des fonctionnalités améliorées étaient initialement proposées en version bêta, *Adobe déplace désormais tous [!DNL Real-Time CDP] clients vers les nouvelles destinations d’espace de stockage*. Pour les clients qui utilisaient déjà [!DNL Amazon S3], [!DNL Azure Blob] ou SFTP, cela signifie que les flux de données existants seront migrés vers les nouvelles cartes. Lisez la suite pour plus d’informations sur les modifications spécifiques dans le cadre de la migration.
 
 ## À qui s’applique cette page {#who-this-applies-to}
 
@@ -60,13 +60,6 @@ Par exemple, si vous utilisiez un script pour filtrer les flux de données de de
 
 Cette section comprend le tutoriel d’API approprié et la documentation de référence pour la fonctionnalité améliorée d’exportation de données vers des destinations d’espace de stockage.
 
-<!--
-
-TBD if we keep this link but will likely remove it
-
-[Legacy API tutorial to export data to cloud storage destinations](/help/destinations/api/connect-activate-batch-destinations.md) (outdated, do not use anymore)
-
--->
 * [Tutoriel sur l’API pour exporter des audiences vers des destinations d’espace de stockage](/help/destinations/api/activate-segments-file-based-destinations.md)
 * [Documentation de référence de l’API de service de flux Destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/)
 
@@ -668,7 +661,7 @@ Affichez l’ensemble des exemples de connexion de base et de connexion cible et
 
 ### Modifications non rétrocompatibles communes aux destinations [!DNL Amazon S3], [!DNL Azure Blob] et SFTP {#changes-all-destinations}
 
-L’étape du sélecteur de profil dans les trois destinations est remplacée par une étape de mappage qui vous permet de renommer les en-têtes de colonne dans vos fichiers exportés, si vous le souhaitez. Consultez l’image côte à côte ci-dessous avec l’ancienne étape de sélecteur d’attributs sur la gauche et la nouvelle étape de mappage sur la droite.
+L’étape du sélecteur de profil dans les trois destinations est remplacée par une étape de mappage qui vous permet de renommer les en-têtes de colonne dans vos fichiers exportés, le cas échéant. Consultez l’image côte à côte ci-dessous avec l’ancienne étape de sélecteur d’attributs sur la gauche et la nouvelle étape de mappage sur la droite.
 
 ![Image de présentation du guide de migration](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
 

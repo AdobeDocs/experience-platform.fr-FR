@@ -2,22 +2,22 @@
 title: Connexion DSP Adobe Advertising Cloud héritée
 description: Adobe Advertising Cloud DSP est une destination intégrée pour Adobe Real-Time Customer Data Platform, ce qui vous permet de partager des audiences propriétaires authentifiées avec des annonceurs et des utilisateurs approuvés pour l’activation de la campagne.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1035'
 ht-degree: 21%
 
 ---
 
-# Connexion DSP Adobe Advertising Cloud héritée
+# Connexion DSP [!DNL Adobe Advertising Cloud] héritée
 
 >[!NOTE]
 >
->Cette connexion était auparavant appelée connexion Adobe Advertising DSP. La nouvelle [connexion Adobe Advertising DSP](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md) contient la même fonctionnalité que la connexion héritée et prend en charge des types d’identité supplémentaires. La bonne pratique consiste à utiliser la nouvelle connexion Adobe Advertising DSP.
+>Cette connexion était auparavant appelée connexion Adobe Advertising DSP. La nouvelle [connexion ](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md) contient la même fonctionnalité que la connexion héritée et prend en charge des types d’identité supplémentaires. La bonne pratique consiste à utiliser la nouvelle connexion Adobe Advertising DSP.
 
 ## Vue d’ensemble {#overview}
 
-La destination Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) vous permet de partager des audiences propriétaires authentifiées avec des annonceurs et des utilisateurs approuvés pour l’activation de la campagne avec DSP. Pour en savoir plus sur l’intégration de Real-Time CDP à DSP, voir [À propos de l’activation d’audiences authentifiées à partir de sources d’audience](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html?lang=fr).
+La destination [!DNL Adobe Advertising Cloud] [!DNL Demand-Side Platform] (DSP) vous permet de partager des audiences propriétaires authentifiées avec des annonceurs et des utilisateurs approuvés pour l’activation de la campagne avec DSP. Pour en savoir plus sur l’intégration d’[!DNL Real-Time CDP] à DSP, voir [À propos de l’activation d’audiences authentifiées à partir de sources d’audience](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
 
 >[!IMPORTANT]
 >
@@ -25,11 +25,11 @@ La destination Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) vous pe
 
 ## Cas d’utilisation {#use-cases}
 
-Pour mieux comprendre quand et comment utiliser la destination Advertising Cloud DSP, consultez les exemples de cas d’utilisation ci-dessous que la clientèle Adobe Experience Platform peut résoudre.
+Pour mieux comprendre quand et comment utiliser la destination Advertising Cloud DSP, consultez les exemples de cas d’utilisation ci-dessous que [!DNL Adobe Experience Platform] clients peuvent résoudre à l’aide de cette destination.
 
 ### Cas d’utilisation de Brand Advertising {#brand-advertising}
 
-Un retailer en ligne souhaite recibler ses clients à forte valeur ajoutée par le biais d’une campagne d’affichage sans utiliser de cookies de ciblage. Le retailer partage une audience composée des ID d’e-mail hachés de ses clients à forte valeur ajoutée depuis son compte Adobe Real-Time Customer Data Platform (Real-Time CDP) vers son compte DSP. DSP convertit ensuite les identifiants d’e-mail hachés en [!DNL RampIDs] authentifiés grâce à un partenariat entre DSP et LiveRamp. Le [!DNL RampIDs] obtenu peut être utilisé dans une campagne d’affichage pour cibler l’audience.
+Un retailer en ligne souhaite recibler ses clients à forte valeur ajoutée par le biais d’une campagne d’affichage sans utiliser de cookies de ciblage. Le retailer partage une audience composée des ID d’e-mail hachés de ses clients à forte valeur ajoutée, depuis son compte Adobe [!DNL Real-Time Customer Data Platform] ([!DNL Real-Time CDP]) jusqu’à son compte DSP. DSP convertit ensuite les identifiants d’e-mail hachés en [!DNL RampIDs] authentifiés grâce à un partenariat entre DSP et LiveRamp. Le [!DNL RampIDs] obtenu peut être utilisé dans une campagne d’affichage pour cibler l’audience.
 
 ### Cas d’utilisation de l’agence {#agency-use-case}
 
@@ -39,13 +39,13 @@ Une agence de médias disposant d’un compte DSP mène une campagne de reciblag
 
 * Paramètres au niveau du compte DSP et au niveau de la campagne pour activer le partage d’audience avec [!DNL LiveRamp RampID], qui traduira les données client en [!DNL RampIDs] afin de créer des segments cibles. Votre équipe de compte DSP effectuera cette configuration. [!DNL RampID] est disponible via un partenariat entre DSP et [!DNL LiveRamp], et vous n’avez pas besoin de votre propre adhésion [!DNL LiveRamp] pour l’utiliser.
 * Identifiant d’organisation Experience Cloud du compte Experience Platform. Votre identifiant figure sur la page de votre profil utilisateur [!DNL Real-Time CDP].
-* Une [[!DNL Real-Time CDP] source dans DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=fr) pour recevoir les audiences pour l’activation de la campagne. Votre équipe de compte DSP créera la source à l’aide de votre ID d’organisation Experience Cloud.
-* La clé source du compte ou de l’annonceur DSP, qui est générée lorsqu’une [[!DNL Real-Time CDP] source est créée dans DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=fr). L’équipe de votre compte DSP partagera cette clé avec vous. Vous l’utiliserez dans Experience Platform pour créer une connexion de destination à la destination Advertising Cloud DSP, comme [expliqué ci-dessous](#authenticate).
+* Une [[!DNL Real-Time CDP] source dans DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) pour recevoir les audiences pour l’activation de la campagne. Votre équipe de compte DSP créera la source à l’aide de votre ID d’organisation Experience Cloud.
+* La clé source du compte ou de l’annonceur DSP, qui est générée lorsqu’une [[!DNL Real-Time CDP] source est créée dans DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). L’équipe de votre compte DSP partagera cette clé avec vous. Vous l’utiliserez dans Experience Platform pour créer une connexion de destination à la destination Advertising Cloud DSP, comme [expliqué ci-dessous](#authenticate).
 * Données client composées d’e-mails ou d’e-mails hachés.
 
 ## Identités prises en charge {#supported-identities}
 
-La destination Adobe Advertising Cloud DSP prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/features/namespaces.md).
+La destination [!DNL Adobe Advertising Cloud] DSP prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/features/namespaces.md).
 
 | Identité cible | Description | Considérations |
 |---|---|---|
@@ -76,9 +76,9 @@ Pour vous connecter à la destination, suivez les instructions [création d’un
 
 Pour vous connecter à la destination, indiquez le paramètre suivant dans la section [!UICONTROL Connection type], puis sélectionnez **[!UICONTROL Connect to destination]**. :
 
-* **[!UICONTROL Account or Advertiser Key]** : ce [!UICONTROL Source Key] est généré lorsqu’une [[!DNL Real-Time CDP]  source est créée dans l’interface utilisateur de DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=fr). L’équipe de votre compte DSP partagera cette clé avec vous après la création de la source.
+* **[!UICONTROL Account or Advertiser Key]** : ce [!UICONTROL Source Key] est généré lorsqu’une [[!DNL Real-Time CDP]  source est créée dans l’interface utilisateur de DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). L’équipe de votre compte DSP partagera cette clé avec vous après la création de la source.
 
-![&#x200B; Champ de type de connexion &#x200B;](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
+![ Champ de type de connexion ](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -100,7 +100,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 

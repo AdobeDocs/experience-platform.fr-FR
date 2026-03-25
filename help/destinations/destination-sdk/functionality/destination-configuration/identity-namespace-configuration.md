@@ -2,10 +2,10 @@
 description: Découvrez comment configurer les identités cibles prises en charge pour les destinations créées avec Destination SDK.
 title: Configuration de l’espace de noms d’identité
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '918'
-ht-degree: 56%
+source-wordcount: '912'
+ht-degree: 50%
 
 ---
 
@@ -29,7 +29,7 @@ Pendant la configuration des espaces de noms d’identité pour la destination, 
 
 * Permettre aux utilisateurs de mapper des attributs XDM aux espaces de noms d’identité.
 * Autoriser les utilisateurs à mapper les [espaces de noms d’identité standard](../../../../identity-service/features/namespaces.md#standard) à vos propres espaces de noms d’identité.
-* Autoriser les utilisateurs à mapper les [espaces de noms d’identité personnalisés](../../../../identity-service/features/namespaces.md#manage-namespaces) à vos propres espaces de noms d’identité.
+* Autoriser les utilisateurs à mapper les [espaces de noms d’identité personnalisés](../../../../identity-service/features/namespaces.md#create-namespaces) à vos propres espaces de noms d’identité.
 
 Pour comprendre la place de ce composant dans une intégration créée avec Destination SDK, consultez le diagramme de la documentation [options de configuration](../configuration-options.md) ou consultez le guide sur la [utilisation de Destination SDK pour configurer une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
@@ -118,9 +118,9 @@ La configuration ci-dessous active l’option facultative [Apply transformation]
    }
 ```
 
-Cochez cette option lorsque vous utilisez des champs sources non hachés afin qu’Adobe Experience Platform les hache automatiquement au moment de l’activation.
+Cochez cette option lorsque vous utilisez des champs sources non hachés afin que les [!DNL Adobe Experience Platform] les hachent automatiquement lors de l’activation.
 
-Quand vous mappez des attributs source non hachés avec des attributs cibles qui sont censés être hachés (par exemple, `email_lc_sha256` ou `phone_sha256`), cochez l’option **Apply transformation** (Appliquer la transformation) pour qu’Adobe Experience Platform hache automatiquement les attributs source au moment de l’activation.
+Lorsque vous mappez des attributs source non hachés avec des attributs cibles qui sont censés être hachés (par exemple : `email_lc_sha256` ou `phone_sha256`), cochez l’option **Apply transformation** pour que [!DNL Adobe Experience Platform] hache automatiquement les attributs source au moment de l’activation.
 
 ## Configuration du hachage obligatoire des champs sources {#configure-mandatory-hashing}
 

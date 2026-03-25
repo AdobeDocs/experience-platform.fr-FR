@@ -3,9 +3,9 @@ title: Activer les audiences vers des destinations de personnalisation Edge
 description: Découvrez comment activer des audiences de Adobe Experience Platform vers des destinations de personnalisation Edge pour des cas d’utilisation de la personnalisation de la même page et de la page suivante.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1881'
+source-wordcount: '1854'
 ht-degree: 8%
 
 ---
@@ -15,43 +15,43 @@ ht-degree: 8%
 
 ## Vue d’ensemble {#overview}
 
-Adobe Experience Platform utilise la [segmentation edge](../../segmentation/methods/edge-segmentation.md) ainsi que les [destinations edge](/help/destinations/destination-types.md#edge-personalization-destinations) pour permettre aux clients de créer et de cibler des audiences à grande échelle et en temps réel. Cette fonctionnalité vous permet de configurer des cas d’utilisation de personnalisation de la même page et de la page suivante.
+[!DNL Adobe Experience Platform] utilise la [segmentation edge](../../segmentation/methods/edge-segmentation.md) ainsi que les [destinations edge](/help/destinations/destination-types.md#edge-personalization-destinations) pour permettre aux clients de créer et de cibler des audiences à grande échelle et en temps réel. Cette fonctionnalité vous permet de configurer des cas d’utilisation de personnalisation de la même page et de la page suivante.
 
-Les connexions [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) et [Personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md) sont des exemples de destinations Edge.
+Les connexions [[!DNL Adobe Target]](../../destinations/catalog/personalization/adobe-target-connection.md) et [Personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md) sont des exemples de destinations Edge.
 
 >[!NOTE]
 >
->Lors de la [configuration de la connexion Adobe Target](../catalog/personalization/adobe-target-connection.md) *sans* à l’aide d’un identifiant de flux de données, les cas d’utilisation décrits dans cet article ne sont pas pris en charge. Seuls les cas d’utilisation de la personnalisation de session suivante sont pris en charge en l’absence de flux de données.
+>Lors de la [configuration de la  [!DNL Adobe Target] connexion](../catalog/personalization/adobe-target-connection.md) *sans* à l’aide d’un identifiant de flux de données, les cas d’utilisation décrits dans cet article ne sont pas pris en charge. Seuls les cas d’utilisation de la personnalisation de session suivante sont pris en charge en l’absence de flux de données.
 
 >[!IMPORTANT]
 >
->* Pour activer les données et activer l’[étape de mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
->* Pour activer les données sans passer par l’étape [mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données et activer l’[étape de mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
+>* Pour activer les données sans passer par l’étape [mappage](#mapping) du workflow, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 > 
 > Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
-Cet article explique le processus requis pour activer des audiences vers des destinations Edge de Adobe Experience Platform. Utilisées conjointement avec la [segmentation Edge](../../segmentation/methods/edge-segmentation.md) et le mappage facultatif [attributs de profil](#mapping), ces destinations permettent des cas d’utilisation de la personnalisation sur une même page et sur la page suivante sur vos propriétés web et mobiles.
+Cet article explique le processus requis pour activer des audiences vers des destinations Edge [!DNL Adobe Experience Platform]. Utilisées conjointement avec la [segmentation Edge](../../segmentation/methods/edge-segmentation.md) et le mappage facultatif [attributs de profil](#mapping), ces destinations permettent des cas d’utilisation de la personnalisation sur une même page et sur la page suivante sur vos propriétés web et mobiles.
 
-Pour un bref aperçu sur la configuration de la connexion Adobe Target pour la personnalisation Edge, regardez la vidéo ci-dessous.
+Pour un bref aperçu sur la configuration de la connexion [!DNL Adobe Target] pour la personnalisation Edge, regardez la vidéo ci-dessous.
 
 >[!NOTE]
 >
 >L’interface utilisateur d’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, reportez-vous aux étapes de configuration décrites dans les sections ci-dessous.
 
->[!VIDEO](https://video.tv.adobe.com/v/3449795/?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
-Pour un bref aperçu sur le partage d’audiences et d’attributs de profil vers des destinations Adobe Target et de personnalisation personnalisée, regardez la vidéo ci-dessous.
+Pour un bref aperçu de la manière de partager des audiences et des attributs de profil vers des destinations de personnalisation [!DNL Adobe Target] et personnalisées, regardez la vidéo ci-dessous.
 
->[!VIDEO](https://video.tv.adobe.com/v/3447357/?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
 
 ## Cas d’utilisation {#use-cases}
 
-Utilisez les solutions de personnalisation Adobe, telles qu’Adobe Target, ou vos propres plateformes de partenaires de personnalisation (par exemple, [!DNL Optimizely], [!DNL Pega]), ainsi que des systèmes propriétaires (par exemple, CMS interne) pour améliorer l’expérience de personnalisation des clients via la destination [Custom Personalization](../catalog/personalization/custom-personalization.md). Tout cela en exploitant les fonctionnalités de collecte de données et de segmentation d’Experience Platform Edge Network.
+Utilisez les solutions de personnalisation Adobe, telles que [!DNL Adobe Target], ou vos propres plateformes de partenaires de personnalisation (par exemple, [!DNL Optimizely], [!DNL Pega]), ainsi que des systèmes propriétaires (par exemple, CMS interne) pour offrir une expérience de personnalisation client plus approfondie via la destination [Custom Personalization](../catalog/personalization/custom-personalization.md). Tout cela en exploitant les fonctionnalités de collecte de données et de segmentation d’Experience Platform Edge Network.
 
 Les cas d’utilisation décrits ci-dessous incluent à la fois la personnalisation du site et la publicité sur site ciblée.
 
-Pour activer ces cas d’utilisation, les clients ont besoin d’un moyen rapide et simplifié de récupérer les audiences et les informations d’attribut de profil d’Experience Platform, et d’envoyer ces informations aux connexions [Adobe Target](../catalog/personalization/adobe-target-connection.md) ou [Custom Personalization](../catalog/personalization/custom-personalization.md) dans l’interface utilisateur d’Experience Platform.
+Pour activer ces cas d’utilisation, les clients ont besoin d’un moyen rapide et simplifié de récupérer les audiences et les informations d’attribut de profil d’Experience Platform, et d’envoyer ces informations aux connexions [[!DNL Adobe Target]](../catalog/personalization/adobe-target-connection.md) ou [Personalization personnalisé](../catalog/personalization/custom-personalization.md) dans l’interface utilisateur d’Experience Platform.
 
 ### Personnalisation de la même page {#same-page}
 
@@ -69,7 +69,7 @@ Le lendemain, l’utilisateur revient sur le même site web client. Les audience
 
 ### Personnaliser une bannière de page d’accueil {#home-page-banner}
 
-Une société de location et de vente d’habitations souhaite personnaliser sa page d’accueil avec une bannière, en fonction des qualifications d’audience dans Adobe Experience Platform. L’entreprise peut sélectionner les audiences qui doivent bénéficier d’une expérience personnalisée et les envoyer à Adobe Target en tant que critères de ciblage pour son offre Target.
+Une société de location et de vente d’habitations souhaite personnaliser sa page d’accueil avec une bannière, en fonction des qualifications d’audience dans [!DNL Adobe Experience Platform]. L’entreprise peut sélectionner les audiences qui doivent bénéficier d’une expérience personnalisée et les envoyer à [!DNL Adobe Target] en tant que critères de ciblage pour son offre Target.
 
 ## Conditions préalables {#prerequisites}
 
@@ -81,7 +81,7 @@ Lors de la configuration du flux de données, sous **[!UICONTROL Adobe Experienc
 
 >[!TIP]
 >
->À compter de la version d’avril 2024, il n’est pas nécessaire de cocher la case Segmentation Edge lors de la [configuration de la connexion à Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md). Dans ce cas, la [personnalisation de session suivante](#next-session) est le seul cas d’utilisation de personnalisation disponible.
+>À compter de la version d’avril 2024, il n’est pas nécessaire de cocher la case Segmentation Edge lors de la [configuration de la connexion à [!DNL Adobe Target]](/help/destinations/catalog/personalization/adobe-target-connection.md). Dans ce cas, la [personnalisation de session suivante](#next-session) est le seul cas d’utilisation de personnalisation disponible.
 
 ![Configuration des flux de données avec la segmentation Edge et les destinations Personalization mises en surbrillance !](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
@@ -111,7 +111,7 @@ Suivez le [tutoriel sur la création de connexion de destination](../ui/connect-
 
 Selon la destination configurée, reportez-vous aux articles suivants pour connaître les conditions préalables spécifiques à une destination et les informations connexes :
 
-* [Connexion Adobe Target](../catalog/personalization/adobe-target-connection.md#parameters)
+* [Connexion [!DNL Adobe Target]](../catalog/personalization/adobe-target-connection.md#parameters)
 * [Connexion de personnalisation personnalisée](../catalog/personalization/custom-personalization.md#parameters)
 
 ## Sélectionner votre destination {#select-destination}
@@ -200,7 +200,7 @@ Sur la page **[!UICONTROL Review]**, vous pouvez voir un résumé de votre séle
 
 ### Évaluation des politiques de consentement {#consent-policy-evaluation}
 
-Si votre organisation a acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL View applicable consent policies]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l’activation qui en résulte. Pour plus d’informations, consultez [&#x200B; Évaluation des politiques de consentement &#x200B;](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
+Si votre organisation a acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL View applicable consent policies]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l’activation qui en résulte. Pour plus d’informations, consultez [ Évaluation des politiques de consentement ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) .
 
 ### Vérifications des politiques d’utilisation des données {#data-usage-policy-checks}
 
