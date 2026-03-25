@@ -5,10 +5,10 @@ title: Créer un schéma à l’aide de l’éditeur de schémas
 type: Tutorial
 description: Ce tutoriel décrit les étapes de création d’un schéma à l’aide de l’éditeur de schémas d’Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '4670'
-ht-degree: 60%
+source-wordcount: '4740'
+ht-degree: 59%
 
 ---
 
@@ -50,7 +50,7 @@ La boîte de dialogue [!UICONTROL Create a schema] s’affiche. Dans cette boît
 
 ![La boîte de dialogue Créer un schéma avec les options de workflow et sélectionnez en surbrillance.](../images/tutorials/create-schema/create-a-schema-dialog.png)
 
-### [!BADGE Beta &#x200B;]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
+### [!BADGE Beta ]{type=Informative} création manuelle ou assistée par machine learning de schéma {#manual-or-assisted}
 
 Pour découvrir comment utiliser un algorithme ML afin de recommander une structure de schéma basée sur un fichier chargé, consultez le guide de création de schéma assisté par machine learning [machine learning](../ui/ml-assisted-schema-creation.md). Ce guide de l’interface utilisateur se concentre sur le workflow de création manuelle .
 
@@ -159,7 +159,7 @@ Le schéma [!UICONTROL Loyalty Members] est destiné à capturer des données re
 Cependant, il peut arriver que vous souhaitiez inclure d’autres champs personnalisés non couverts par des groupes de champs standard afin d’atteindre vos cas d’utilisation. Dans le cas de l’ajout de champs de fidélité personnalisés, vous disposez de deux options :
 
 1. Créer un groupe de champs personnalisé pour capturer ces champs. Il s’agit de la méthode qui sera abordée dans ce tutoriel.
-1. Étendez le groupe de champs standard [!UICONTROL Loyalty Details] avec des champs personnalisés. Cela entraîne la conversion de [!UICONTROL Loyalty Details] en un groupe de champs personnalisés et le groupe de champs standard d’origine ne sera plus disponible. Pour plus d’informations sur [!UICONTROL Schemas]l’ajout de champs personnalisés à la structure des groupes de champs standard[, consultez le guide de l’interface utilisateur &#x200B;](../ui/resources/schemas.md#custom-fields-for-standard-groups) .
+1. Étendez le groupe de champs standard [!UICONTROL Loyalty Details] avec des champs personnalisés. Cela entraîne la conversion de [!UICONTROL Loyalty Details] en un groupe de champs personnalisés et le groupe de champs standard d’origine ne sera plus disponible. Pour plus d’informations sur [!UICONTROL Schemas]l’ajout de champs personnalisés à la structure des groupes de champs standard[, consultez le guide de l’interface utilisateur ](../ui/resources/schemas.md#custom-fields-for-standard-groups) .
 
 Pour créer un groupe de champs, sélectionnez **[!UICONTROL Add]** dans la sous-section **[!UICONTROL Field groups]** comme avant, mais cette fois, sélectionnez **[!UICONTROL Create New Field group]** dans la partie supérieure de la boîte de dialogue qui s’affiche. Vous êtes alors invité à fournir un nom d’affichage et une description pour le nouveau groupe de champs. Pour ce tutoriel, nommez le nouveau groupe de champs « [!DNL Custom Loyalty Details] », puis sélectionnez **[!UICONTROL Add field groups]**.
 
@@ -360,6 +360,10 @@ Sélectionnez **[!UICONTROL Enable]** pour confirmer votre choix. Vous pouvez de
 
 ## Actions supplémentaires {#more}
 
+>[!NOTE]
+>
+>Lorsque vous travaillez avec des ressources XDM, les actions sont disponibles à partir du tableau d’inventaire (menu de ligne) et de la vue détaillée des ressources (**[!UICONTROL More]**). Pour accéder à l’ensemble complet des actions, notamment **Supprimer**, **Copier la structure JSON** et **Ajouter au package**, vous devez sélectionner une ressource personnalisée (définie par le client). Les ressources standard (fournies par Adobe) comportent des actions limitées. Pour obtenir un aperçu complet des actions, des contraintes et des autorisations, consultez [Gestion des schémas, des classes, des groupes de champs et des types de données : actions et suppression](../ui/explore.md#xdm-resource-actions).
+
 Dans l’éditeur de schémas, vous pouvez également effectuer des actions rapides pour copier la structure JSON du schéma ou supprimer le schéma. Sélectionnez [!UICONTROL More] en haut de la vue pour afficher une liste déroulante avec des actions rapides.
 
 ![Éditeur de schémas avec le bouton Plus en surbrillance et les options de liste déroulante affichées.](../images/tutorials/create-schema/more-actions.png)
@@ -409,11 +413,11 @@ Vous pouvez également consulter et gérer le schéma « Membres du programme d
 
 La vidéo suivante montre comment créer un schéma simple dans l’interface utilisateur [!DNL Experience Platform].
 
->[!VIDEO](https://video.tv.adobe.com/v/3430220?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
 
 La vidéo suivante est destinée à vous aider à mieux comprendre l’utilisation des groupes et classes de champ.
 
->[!VIDEO](https://video.tv.adobe.com/v/3413606?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
 ## Annexe
 

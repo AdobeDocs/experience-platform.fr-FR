@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Génération de données d’exemple pour un schéma XDM dans l’interface utilisateur
 description: Découvrez comment générer des exemples de données JSON en fonction d’un schéma existant dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: e60eedb2-2245-42cd-b574-43caf9e3426c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 15%
+source-wordcount: '449'
+ht-degree: 13%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 15%
 Pour ingérer des données dans Adobe Experience Platform, leur format et structure doivent être conformes à un schéma de modèle de données d’expérience (XDM) existant. En fonction de la complexité du schéma pour un jeu de données spécifique, il peut être difficile de déterminer la forme exacte des données attendues par le jeu de données lors de l’ingestion.
 
 Pour tout schéma que vous définissez dans l’interface utilisateur d’Experience Platform, vous pouvez générer un exemple d’objet JSON conforme à la structure du schéma. Cet objet peut servir de modèle pour toutes les données ingérées dans les jeux de données qui utilisent le schéma en question.
+
+>[!NOTE]
+>
+>Si vous ne trouvez pas d’actions telles que **Supprimer** ou **Copier la structure JSON**, assurez-vous que vous utilisez une ressource personnalisée (définie par le client) et y accédez à partir du menu de ligne du tableau ou de la vue détaillée (**[!UICONTROL More]**). La disponibilité des actions dépend également des autorisations et des contraintes d’utilisation. Voir [Gérer les schémas, les classes, les groupes de champs et les types de données : actions et suppression](./explore.md#xdm-resource-actions).
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Schemas]** dans le volet de navigation de gauche. Sous l’onglet **[!UICONTROL Browse]** , recherchez le schéma pour lequel vous souhaitez générer des données d’exemple. Sélectionnez-le dans la liste, et le rail de droite se met à jour pour afficher les détails du schéma. À partir de là, sélectionnez **[!UICONTROL Download sample file]**.
 

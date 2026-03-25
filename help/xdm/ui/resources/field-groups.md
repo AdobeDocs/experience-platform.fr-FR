@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création et modification de groupes de champs de schéma dans l’interface utilisateur
 description: Découvrez comment créer et modifier des groupes de champs de schéma dans l’interface utilisateur Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '966'
+source-wordcount: '1004'
 ht-degree: 9%
 
 ---
@@ -23,6 +23,10 @@ Dans le modèle de données d’expérience (XDM), les groupes de champs de sch�
 Un groupe de champs définit la ou les classes avec lesquelles il est compatible, en fonction du comportement des données que le groupe de champs représente (enregistrement ou série temporelle). Cela signifie que tous les groupes de champs ne sont pas disponibles pour être utilisés avec toutes les classes.
 
 Adobe Experience Platform fournit de nombreux groupes de champs standard qui couvrent un large éventail de cas d’utilisation marketing. Cependant, vous pouvez également créer et modifier vos propres groupes de champs personnalisés pour définir des concepts supplémentaires liés à votre entreprise dans vos schémas XDM. Ce guide présente la création, la modification et la gestion de groupes de champs personnalisés pour votre organisation dans l’interface utilisateur d’Experience Platform.
+
+>[!NOTE]
+>
+>Les actions XDM sont disponibles à partir du tableau d’inventaire et de la vue des détails de la ressource (**[!UICONTROL More]**). Les actions complètes s’appliquent uniquement aux ressources personnalisées (définies par le client) ; les ressources standard ont des options limitées. Voir [Gérer les schémas, les classes, les groupes de champs et les types de données : actions et suppression](../explore.md#xdm-resource-actions).
 
 ## Conditions préalables {#prerequisites}
 

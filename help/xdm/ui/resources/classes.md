@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Créer et modifier des classes dans l’interface utilisateur
 description: Découvrez comment créer et modifier des classes dans l’interface utilisateur Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: a05ee385694b028b513e2fa632079e665ba815bb
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '1562'
+source-wordcount: '1600'
 ht-degree: 8%
 
 ---
@@ -24,13 +24,17 @@ Adobe fournit plusieurs classes de modèle de données d’expérience (XDM) sta
 
 Ce document présente la création, la modification et la gestion de classes personnalisées dans l’interface utilisateur d’Experience Platform.
 
+>[!NOTE]
+>
+>Les actions XDM sont disponibles à partir du tableau d’inventaire et de la vue des détails de la ressource (**[!UICONTROL More]**). Les actions complètes s’appliquent uniquement aux ressources personnalisées (définies par le client) ; les ressources standard ont des options limitées. Voir [Gérer les schémas, les classes, les groupes de champs et les types de données : actions et suppression](../explore.md#xdm-resource-actions).
+
 ## Conditions préalables {#prerequisites}
 
 Ce guide nécessite une compréhension pratique du système XDM. Reportez-vous à la [présentation de XDM](../../home.md) pour une introduction au rôle de XDM dans l’écosystème Experience Platform et aux [principes de base de la composition de schémas](../../schema/composition.md) afin de découvrir comment les classes contribuent aux schémas XDM.
 
 Bien que cela ne soit pas obligatoire pour ce guide, il est recommandé de suivre également le tutoriel sur la [composition d’un schéma dans l’interface utilisateur](../../tutorials/create-schema-ui.md) pour vous familiariser avec les différentes fonctionnalités de l’éditeur de schémas.
 
-## Commencer {#getting-started}
+## Prise en main {#getting-started}
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Schemas]** dans le volet de navigation de gauche pour ouvrir l’espace de travail [!UICONTROL Schemas], puis sélectionnez l’onglet **[!UICONTROL Classes]** . Une liste des classes disponibles s’affiche.
 
@@ -141,7 +145,7 @@ Apportez les modifications souhaitées au champ, en faisant défiler le rail de 
 
 >[!IMPORTANT]
 >
-> Toutes les mises à jour que vous apportez aux champs seront appliquées dans tous les schémas qui utilisent cette classe, conformément aux [&#x200B; règles d’évolution des schémas &#x200B;](../../schema/composition.md#evolution).
+> Toutes les mises à jour que vous apportez aux champs seront appliquées dans tous les schémas qui utilisent cette classe, conformément aux [ règles d’évolution des schémas ](../../schema/composition.md#evolution).
 
 ![Éditeur de schémas avec un champ sélectionné et le rail de droite exposé, mettant en surbrillance [!UICONTROL Apply].](../../images/ui/resources/classes/save-changes.png)
 

@@ -4,10 +4,10 @@ title: Exporter des schémas XDM dans l’interface utilisateur
 description: Découvrez comment exporter un schéma existant vers une autre sandbox ou organisation dans l’interface utilisateur de Adobe Experience Platform.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 11%
+source-wordcount: '690'
+ht-degree: 10%
 
 ---
 
@@ -29,6 +29,10 @@ Pour répondre à ce besoin, l’espace de travail [!UICONTROL Schemas] de l’i
 ## Conditions préalables
 
 Bien que l’interface utilisateur d’Experience Platform vous permette d’exporter des ressources XDM, vous devez utiliser l’API Schema Registry pour importer ces ressources dans d’autres sandbox ou organisations afin de terminer le workflow. Reportez-vous au guide sur la [prise en main de l’API Schema Registry](../api/getting-started.md) pour obtenir des informations importantes sur les en-têtes d’authentification requis avant de suivre ce guide.
+
+>[!NOTE]
+>
+>Si vous ne trouvez pas d’actions telles que **Supprimer** ou **Copier la structure JSON**, assurez-vous que vous utilisez une ressource personnalisée (définie par le client) et y accédez à partir du menu de ligne du tableau ou de la vue détaillée (**[!UICONTROL More]**). La disponibilité des actions dépend également des autorisations et des contraintes d’utilisation. Voir [Gérer les schémas, les classes, les groupes de champs et les types de données : actions et suppression](./explore.md#xdm-resource-actions).
 
 ## Générer une payload d&#39;export {#generate-export-payload}
 
@@ -226,8 +230,8 @@ Notez que chaque instance de l’identifiant du client de votre organisation app
 
 ## Importer la ressource à l’aide de l’API {#import-resource-with-api}
 
-Une fois que vous avez copié le fichier JSON d’exportation pour le schéma, vous pouvez l’utiliser comme payload pour une requête POST vers le point d’entrée `/rpc/import` dans l’API Schema Registry. Pour plus d’informations sur la configuration de l’appel pour envoyer le schéma à l’organisation et au sandbox souhaités[&#x200B; consultez le &#x200B;](../api/import.md) guide du point d’entrée d’importation .
+Une fois que vous avez copié le fichier JSON d’exportation pour le schéma, vous pouvez l’utiliser comme payload pour une requête POST vers le point d’entrée `/rpc/import` dans l’API Schema Registry. Pour plus d’informations sur la configuration de l’appel pour envoyer le schéma à l’organisation et au sandbox souhaités[ consultez le ](../api/import.md) guide du point d’entrée d’importation .
 
 ## Étapes suivantes
 
-En suivant ce guide, vous avez réussi à exporter un schéma XDM vers une autre organisation ou un autre sandbox. Pour plus d’informations sur les fonctionnalités de l’interface utilisateur de [!UICONTROL Schemas], reportez-vous à la présentation de l’interface utilisateur de [[!UICONTROL Schemas] &#x200B;](./overview.md).
+En suivant ce guide, vous avez réussi à exporter un schéma XDM vers une autre organisation ou un autre sandbox. Pour plus d’informations sur les fonctionnalités de l’interface utilisateur de [!UICONTROL Schemas], reportez-vous à la présentation de l’interface utilisateur de [[!UICONTROL Schemas] ](./overview.md).

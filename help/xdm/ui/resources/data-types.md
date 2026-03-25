@@ -5,10 +5,10 @@ title: Créer et modifier des types de données à l’aide de l’interface uti
 type: Tutorial
 description: Découvrez comment créer et modifier des types de données dans l’interface utilisateur Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '1333'
-ht-degree: 7%
+source-wordcount: '1371'
+ht-degree: 6%
 
 ---
 
@@ -46,6 +46,10 @@ Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONT
 - [Créer un nouveau type de données](#create)
 - [Filtrer les types de données](#filter)
 - [Sélectionner un type de données existant à modifier](#edit)
+
+>[!NOTE]
+>
+>Les actions XDM sont disponibles à partir du tableau d’inventaire et de la vue des détails de la ressource (**[!UICONTROL More]**). Les actions complètes s’appliquent uniquement aux ressources personnalisées (définies par le client) ; les ressources standard ont des options limitées. Voir [Gérer les schémas, les classes, les groupes de champs et les types de données : actions et suppression](../explore.md#xdm-resource-actions).
 
 ### Créer un nouveau type de données {#create}
 
