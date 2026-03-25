@@ -3,25 +3,24 @@ description: Découvrez comment afficher des informations détaillées sur les j
 solution: Experience Platform
 title: Afficher les détails de planification des tâches
 type: Tutorial
-hide: true
-source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
+exl-id: e568bfc3-f0e1-4305-94e7-070928459a87
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '1783'
-ht-degree: 1%
+source-wordcount: '1778'
+ht-degree: 2%
 
 ---
 
-
 # Afficher les détails de la planification des tâches
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->[!UICONTROL Job schedules] sont actuellement disponibles en tant que version limitée et uniquement pour les tâches Real-Time CDP suivantes :
+>Actuellement, les [!UICONTROL Job schedules] ne sont disponibles que pour les tâches Real-Time CDP suivantes :
 >
 > * Ingestion du lac de données par lots
 > * Ingestion de profils par lots
 > * Segmentation par lots
-> * Activation de la destination par lots.
+> * Activation de la destination par lots
 
 Lors du dépannage des échecs de tâche ou de l’examen des problèmes de performances, vous avez besoin d’informations détaillées sur des jeux de données spécifiques et leurs exécutions de tâche. L’interface [Planifications de tâches](job-schedules.md) vous permet d’analyser en profondeur les jeux de données et les tâches individuels à partir de la vue chronologique afin de comprendre l’historique d’exécution, la synchronisation et le statut.
 
@@ -37,7 +36,7 @@ Utilisez cette vue détaillée pour :
 
 Avant d’afficher les détails de la tâche, vous devez :
 
-* Disposer d’un accès à [!UICONTROL Job Schedules] avec les **[!UICONTROL View Job Schedules]** et **[!UICONTROL View Profile Management]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
+* Disposer d’un accès à **[!UICONTROL Job Schedules]** avec les **[!UICONTROL View Job Schedules]** et **[!UICONTROL View Profile Management]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
 * Familiarisez-vous avec l’[interface des planifications de tâches](job-schedules.md#understanding-interface) et la vue chronologique.
 * comprendre les différents [types de tâche](job-schedules.md#job-schedules-details) (ingestion de lac, ingestion de profil, segmentation, activation) ;
 

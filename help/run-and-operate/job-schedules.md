@@ -3,27 +3,26 @@ description: Découvrez comment inspecter et résoudre les problèmes liés aux 
 solution: Experience Platform
 title: Inspecter les planifications de tâches
 type: Tutorial
-hide: true
-source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
+exl-id: ce855b19-66ab-4d3d-924e-fb9928676aa2
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 0%
+source-wordcount: '824'
+ht-degree: 1%
 
 ---
 
-
 # Inspecter les plannings de tâches
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->[!UICONTROL Job schedules] sont actuellement disponibles en tant que version limitée et uniquement pour les tâches Real-Time CDP suivantes :
+>Actuellement, les [!UICONTROL Job schedules] ne sont disponibles que pour les tâches Real-Time CDP suivantes :
 >
 > * Ingestion du lac de données par lots
 > * Ingestion de profils par lots
 > * Segmentation par lots
-> * Activation de la destination par lots.
+> * Activation de la destination par lots
 
-[!UICONTROL Job Schedules] offre une vue unifiée de toutes les tâches de traitement par lots planifiées sur votre pipeline de données, de l’ingestion à l’activation de la destination. Inspectez le statut d’exécution, identifiez les conflits de planification et diagnostiquez les problèmes de configuration avant qu’ils n’affectent les opérations de votre entreprise.
+[!UICONTROL Job Schedules] fournit une vue unifiée de toutes les tâches de traitement par lots planifiées sur votre pipeline de données, de l’ingestion à l’activation de la destination. Inspectez le statut d’exécution, identifiez les conflits de planification et diagnostiquez les problèmes de configuration avant qu’ils n’affectent les opérations de votre entreprise.
 
 Utilisez les planifications de tâches pour enquêter sur les échecs, optimiser la synchronisation des tâches et comprendre les dépendances entre l’ingestion du lac de données, le traitement des profils, la segmentation et l’activation de destination. Pour obtenir des conseils sur la résolution de problèmes de configuration courants, consultez la documentation sur l&#39;[identification des antimodèles de planification des tâches](job-schedules-anti-patterns.md).
 
@@ -107,7 +106,6 @@ En examinant les planifications de tâches, vous remarquerez peut-être des moti
 Ces modèles peuvent entraîner des échecs de tâche, un traitement des données incomplet et de mauvaises performances du système. Pour savoir comment identifier et résoudre ces problèmes, consultez la documentation sur l’[identification des modèles de planification des tâches](job-schedules-anti-patterns.md).
 
 Lorsque vous devez examiner des jeux de données ou des exécutions de tâches spécifiques, vous pouvez accéder à des vues détaillées pour afficher l’historique d’exécution, les messages d’erreur, les mesures de performances et les dépendances. Pour plus d’informations sur l’affichage de ces données détaillées, consultez la documentation sur la [affichage des détails de la tâche](job-schedules-details.md).
-
 
 ## Étapes suivantes {#next-steps}
 

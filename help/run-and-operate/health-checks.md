@@ -4,8 +4,8 @@ description: Découvrez comment utiliser les contrôles d’intégrité dans Ado
 solution: Experience Platform
 type: Documentation
 role: Admin, User
-hide: true
-source-git-commit: ab2420b898dc38d19187cee627b5c44e7fb44a6c
+exl-id: b35aef7c-54f4-4758-9b36-a981510ae21b
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
 source-wordcount: '1590'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Contrôles d’intégrité
 
-Les contrôles d’intégrité analysent vos schémas et identités utilisés dans votre sandbox et fournissent un résumé des problèmes que vous pouvez utiliser pour explorer et résoudre les problèmes liés à [!UICONTROL AI Assistant]. À l’avenir, davantage d’objets pourront être analysés pour obtenir un rapport plus complet.
+Les contrôles d’intégrité analysent vos schémas et identités utilisés dans votre sandbox et fournissent un résumé des problèmes que vous pouvez utiliser pour explorer et résoudre les problèmes avec l’assistant AI. À l’avenir, davantage d’objets pourront être analysés pour obtenir un rapport plus complet.
 
 Des configurations de schéma et d’identité médiocres entraînent d’importants problèmes en aval, notamment une création de profil incorrecte, un échec de la qualification du segment et une activation inexacte. Ces problèmes sont difficiles à détecter et nécessitent souvent une expertise spécialisée pour les diagnostiquer. Les contrôles d’intégrité font évoluer votre approche du dépannage réactif vers une maintenance proactive et préventive.
 
@@ -22,7 +22,7 @@ Grâce aux contrôles d’intégrité, vous pouvez :
 
 * **Détection précoce des problèmes de configuration** : identifiez les bonnes pratiques manquantes, les configurations incorrectes et les modèles qui entraînent des inefficacités dans la personnalisation, l’activation, etc.
 * **Recevoir une résolution guidée** : obtenez des conseils clairs sur chaque problème et sur ce qu’il faut faire.
-* **Surveiller en permanence** : à ce stade, les contrôles d’intégrité exécutent des analyses automatiques quotidiennes afin que vous puissiez détecter les problèmes avant qu’ils ne deviennent des échecs critiques. La planification peut changer dans les prochaines versions.
+* **Surveiller en permanence** : actuellement, les contrôles d’intégrité exécutent des analyses automatiques quotidiennes afin que vous puissiez détecter les problèmes avant qu’ils ne deviennent des échecs critiques. La planification peut changer dans les prochaines versions.
 
 ## Conditions préalables {#prerequisites}
 
@@ -72,14 +72,14 @@ Analyses visant à garantir que les champs d’identité comportent des contrain
 | Détail | Description |
 | --- | --- |
 | **Problème** | Les champs marqués comme identités n’ont pas de validation de longueur minimale/maximale ou de modèle. |
-| **Impact** | Sans validation, les valeurs de la mémoire peuvent entrer des [!UICONTROL Identity Service]. Des valeurs telles que « 0 », « Invité » ou une casse incompatible (par exemple, « xyz123 » par rapport à « XYZ123 ») compromettent l’intégrité du profil qui est assemblé pendant la segmentation et l’activation. |
+| **Impact** | Sans validation, les valeurs de la mémoire peuvent entrer des [!DNL Identity Service]. Des valeurs telles que « 0 », « Invité » ou une casse incompatible (par exemple, « xyz123 » par rapport à « XYZ123 ») compromettent l’intégrité du profil qui est assemblé pendant la segmentation et l’activation. |
 | **Correction** | Définissez des contraintes de longueur minimale/maximale et de motif sur les champs personnalisés marqués comme identités. Utilisez des expressions régulières pour appliquer des règles telles que les chiffres uniquement, les majuscules ou les minuscules, ou des combinaisons de caractères spécifiques. |
 
 Lorsque vous sélectionnez la carte **[!UICONTROL Identity Field Validation]**, un panneau de détails s’ouvre à droite. Le panneau affiche les éléments suivants :
 
 * **[!UICONTROL Description]** : analyses pour s’assurer que les champs d’identité ont des longueurs minimale et maximale et des règles de modèle regex pour l’intégrité des données. Répertorie les schémas et champs concernés.
 * **[!UICONTROL Impact]** : si les champs d’identité des schémas n’ont pas de longueurs min./max. et de validations de modèle définies, cela peut entraîner des données incohérentes, ce qui peut compromettre l’intégrité et la qualité des données.
-* **[!UICONTROL General areas of impact]** : identifiants de mauvaise qualité dans [!UICONTROL Identity Service] ; assemblage peu fiable.
+* **[!UICONTROL General areas of impact]** : identifiants de mauvaise qualité dans [!DNL Identity Service] ; assemblage peu fiable.
 * **[!UICONTROL Experience League Documentation]** : lien vers les bonnes pratiques pour la modélisation des données.
 * **[!UICONTROL Affected Schemas]** : liste des schémas concernés, chacun doté d’un expandeur pour afficher plus de détails et d’un lien pour ouvrir le schéma.
 
@@ -107,7 +107,7 @@ Lorsque vous sélectionnez la carte **[!UICONTROL Identity Graph Linking Rules]*
 
 ![Panneau détaillé Règles de liaison du graphique d’identités présentant la description, l’impact et le bouton Configurer les règles de liaison](assets/health-checks/identity-graph-linking-detail.png)
 
-Pour plus d’informations, consultez la présentation des règles de liaison de graphiques d’identités [présentation](/help/identity-service/identity-graph-linking-rules/overview.md) et le [&#x200B; guide d’implémentation](/help/identity-service/identity-graph-linking-rules/implementation-guide.md).
+Pour plus d’informations, consultez la présentation des règles de liaison de graphiques d’identités [présentation](/help/identity-service/identity-graph-linking-rules/overview.md) et le [ guide d’implémentation](/help/identity-service/identity-graph-linking-rules/implementation-guide.md).
 
 ### Configuration des identités des personnes et des non-personnes {#people-non-people-identity}
 
@@ -172,13 +172,13 @@ Lorsque vous sélectionnez la carte **[!UICONTROL Deprecated Identity Namespace]
 
 ![Panneau des détails Espace de noms d’identité obsolète présentant la description, l’impact et la liste des espaces de noms affectés](assets/health-checks/deprecated-namespace-detail.png)
 
-Pour plus d’informations, consultez l’article de la base de connaissances [Experience Cloud sur les espaces de noms obsolètes](https://experienceleague.adobe.com/fr/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
+Pour plus d’informations, consultez l’article de la base de connaissances [Experience Cloud sur les espaces de noms obsolètes](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
 
 ## Étapes suivantes {#next-steps}
 
 Après avoir examiné les résultats de votre contrôle de l’intégrité, explorez les ressources suivantes pour mieux comprendre :
 
 * Découvrez les [bonnes pratiques relatives aux schémas](/help/xdm/schema/best-practices.md) pour concevoir des modèles de données fiables.
-* Comprenez [&#x200B; règles de liaison des graphiques d’identités &#x200B;](/help/identity-service/identity-graph-linking-rules/overview.md) pour éviter la réduction du profil.
+* Comprenez [ règles de liaison des graphiques d’identités ](/help/identity-service/identity-graph-linking-rules/overview.md) pour éviter la réduction du profil.
 * Consultez la [documentation sur les espaces de noms d’identité](/help/identity-service/features/namespaces.md) pour connaître les bonnes pratiques de gestion des espaces de noms.
 * Explorez d’autres [outils d’exécution et d’exploitation](/help/run-and-operate/overview.md) y compris des [[!UICONTROL Job Schedules]](/help/run-and-operate/job-schedules.md) pour la visibilité des opérations par lots.

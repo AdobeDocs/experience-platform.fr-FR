@@ -3,25 +3,24 @@ description: Découvrez comment identifier et résoudre les antimodèles courant
 solution: Experience Platform
 title: Identifier les modèles antiprogramme de travail
 type: Tutorial
-hide: true
-source-git-commit: 9d170fec9b80f0f2e17fc39e8f573cbad515f823
+exl-id: f94e3ef3-2252-46f5-8075-45b5483d9d83
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '974'
 ht-degree: 0%
 
 ---
 
-
 # Identifier les modèles de planification des tâches
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->[!UICONTROL Job schedules] sont actuellement disponibles en tant que version limitée et uniquement pour les tâches Real-Time CDP suivantes :
+>Actuellement, les [!UICONTROL Job schedules] ne sont disponibles que pour les tâches Real-Time CDP suivantes :
 >
 > * Ingestion du lac de données par lots
 > * Ingestion de profils par lots
 > * Segmentation par lots
-> * Activation de la destination par lots.
+> * Activation de la destination par lots
 
 La vue chronologique [Planifications de tâches](job-schedules.md) vous permet d’identifier les problèmes de configuration courants susceptibles de nuire aux performances et à la fiabilité de votre pipeline de données. Ces antimodèles entraînent souvent des échecs de tâche, des incohérences de données ou une dégradation des performances du système. En repérant ces modèles dès le début, vous pouvez reconfigurer vos tâches afin d’éviter les problèmes avant qu’ils n’affectent vos activités commerciales.
 
@@ -30,7 +29,7 @@ La vue chronologique [Planifications de tâches](job-schedules.md) vous permet d
 Avant d’identifier les anti-modèles, vous devez :
 
 * Ayez accès à [!UICONTROL Job Schedules] avec l’**[!UICONTROL View Job Schedules]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions).
-* Familiarisez-vous avec l’interface [&#x200B; Planifications de tâches &#x200B;](job-schedules.md#understanding-interface) et avec la lecture de la vue chronologique.
+* Familiarisez-vous avec l’interface [ Planifications de tâches ](job-schedules.md#understanding-interface) et avec la lecture de la vue chronologique.
 * comprendre les concepts de base [ingestion par lots](../ingestion/batch-ingestion/overview.md), [segmentation](../segmentation/home.md) et [traitement des profils](../profile/home.md) ;
 
 ## Référence rapide {#anti-pattern-quick-reference}
@@ -47,7 +46,7 @@ Avant d’identifier les anti-modèles, vous devez :
 
 **Que rechercher** : plusieurs tâches planifiées pour s’exécuter en même temps ou en succession étroite, en particulier lorsque des tâches gourmandes en ressources se chevauchent.
 
-Dans cet exemple, vous pouvez voir les tâches d’ingestion par lots s’exécuter en même temps qu’une tâche de segmentation planifiée. Cela crée des conflits de ressources car les deux opérations nécessitent une puissance de traitement et une mémoire importantes.
+Un exemple courant est celui des tâches d’ingestion par lots s’exécutant en même temps qu’une tâche de segmentation planifiée. Cela crée des conflits de ressources car les deux opérations nécessitent une puissance de traitement et une mémoire importantes.
 
 **Pourquoi cela pose problème** :
 
@@ -68,7 +67,7 @@ Dans cet exemple, vous pouvez voir les tâches d’ingestion par lots s’exécu
 
 **Que rechercher** : trop de jeux de données avec plusieurs lots planifiés au cours d’une même heure, en particulier lorsque ces lots sont empilés de manière rapprochée et planifiés à des fenêtres de traitement critiques, telles que les heures de début de la segmentation.
 
-Dans ce modèle, vous verrez :
+Ce modèle comprend généralement :
 
 * Plusieurs jeux de données exécutant chacun plusieurs lots par jour
 * Tâches ETL (ingestion du lac de données et ingestion du profil) en cluster dans la même heure
@@ -80,7 +79,7 @@ Dans ce modèle, vous verrez :
 * **Disponibilité de profil retardée** : les tâches d’ingestion de profil qui s’exécutent trop près des heures de début de la segmentation peuvent ne pas se terminer à temps, ce qui entraîne des évaluations d’audience incomplètes ou obsolètes.
 * **Segmentation imprévisible** : si les traitements d’ingestion en amont sont toujours en cours d’exécution lorsque la segmentation commence, vous risquez d’évaluer les audiences par rapport à des données incomplètes, ce qui entraînerait une appartenance incorrecte aux audiences.
 * **Échecs en cascade** : un seul lot retardé dans un planning empilé de manière dense peut provoquer un effet domino, retardant tous les lots suivants et les processus en aval.
-* **Mise à rude épreuve des ressources** : le système peut avoir du mal à allouer suffisamment de ressources lors du traitement d’un trop grand nombre de tâches d’ingestion simultanées, ce qui ralentit les temps de traitement ou entraîne des échecs.
+* **Tension des ressources** : le système peut avoir du mal à allouer suffisamment de ressources lors du traitement d’un trop grand nombre de tâches d’ingestion simultanées, ce qui entraîne des temps de traitement plus lents ou des échecs.
 
 **Comment résoudre ce problème** :
 
@@ -95,7 +94,7 @@ Dans ce modèle, vous verrez :
 
 **Que rechercher** : un seul jeu de données avec un nombre excessif de traitements par lots individuels planifiés toute la journée, créant une longue pile verticale de traitements sur la chronologie.
 
-Dans ce modèle, vous verrez une ligne de jeu de données avec de nombreuses tâches d’ingestion par lots individuelles planifiées à intervalles fréquents, parfois des dizaines de lots par jour pour un seul jeu de données.
+Ce modèle implique un seul jeu de données avec de nombreuses tâches d’ingestion par lots individuelles planifiées à intervalles fréquents, parfois des dizaines de lots par jour.
 
 **Pourquoi cela pose problème** :
 
