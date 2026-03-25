@@ -15,7 +15,7 @@ ht-degree: 31%
 
 >[!IMPORTANT]
 >
->Le connecteur de destination [!DNL Algolia] et la page de documentation sont créés et conservés par l’équipe des services d’intégration d’Algolia. Pour toute demande ou information, contactez-les à l’adresse [](mailto:adobe-algolia-solutions@algolia.com).
+>Le connecteur de destination [!DNL Algolia] et la page de documentation sont créés et conservés par l’équipe des services d’intégration d’Algolia. Pour toute demande ou information, contactez-les à l’adresse [&#128279;](mailto:adobe-algolia-solutions@algolia.com).
 
 Utilisez la connexion de destination [!DNL Algolia] pour envoyer des audiences [!DNL Adobe Experience Platform] en Algérie afin d’effectuer des recherches et des recommandations personnalisées. Avant de pouvoir utiliser le connecteur de destination [!DNL Algolia], vous devez d’abord configurer le connecteur source [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md). Pendant le tutoriel de configuration du connecteur source, vous allez créer l’identité du jeton d’utilisateur Algolia. Cette identité est requise pour le mappage lorsque vous configurez le connecteur de destination.
 
@@ -44,7 +44,7 @@ Ensuite, utilisez le connecteur source de [[!DNL Algolia User Profiles]](/help/s
 >[!IMPORTANT]
 >
 >* Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 ## Identités prises en charge {#supported-identities}
 
@@ -75,7 +75,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}

@@ -21,7 +21,7 @@ Pour une description détaillée des paramètres utilisés ci-dessous, voir [opt
 
 ## Conditions préalables {#prerequisites}
 
-Avant de passer aux étapes décrites ci-dessous, lisez la page de prise en main de Destination SDK [](../../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification Adobe I/O nécessaires et d’autres conditions préalables pour travailler avec les API Destination SDK.
+Avant de passer aux étapes décrites ci-dessous, lisez la page de prise en main de Destination SDK [&#128279;](../../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification Adobe I/O nécessaires et d’autres conditions préalables pour travailler avec les API Destination SDK.
 
 ## Étape 1 : créer une configuration de serveur et de fichier {#create-server-file-configuration}
 
@@ -412,7 +412,7 @@ En fonction des configurations ci-dessus, le catalogue Experience Platform affic
 
 ![Enregistrement de l’écran affichant la page de catalogue des destinations avec une carte de destination sélectionnée.](../../assets/guides/batch/blob-destination-card.gif)
 
-Dans les images et les enregistrements ci-dessous, remarquez comment les options du [ workflow d’activation pour les destinations basées sur des fichiers ](/help/destinations/ui/activate-batch-profile-destinations.md) correspondent aux options que vous avez sélectionnées dans la configuration de destination.
+Dans les images et les enregistrements ci-dessous, remarquez comment les options du [&#x200B; workflow d’activation pour les destinations basées sur des fichiers &#x200B;](/help/destinations/ui/activate-batch-profile-destinations.md) correspondent aux options que vous avez sélectionnées dans la configuration de destination.
 
 Lorsque vous renseignez les détails sur la destination, remarquez comment les champs surfacés sont les champs de données personnalisés que vous configurez dans la configuration.
 

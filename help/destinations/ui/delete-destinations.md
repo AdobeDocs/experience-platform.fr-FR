@@ -36,7 +36,7 @@ Suivez les étapes ci-dessous pour supprimer une destination de l’onglet [!UIC
 
    ![Filtrer les destinations](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Sélectionnez le bouton ![ Plus ](/help/images/icons/more.png) dans la colonne Nom , puis sélectionnez ![Bouton Supprimer](/help/images/icons/delete.png) **[!UICONTROL Delete]** pour supprimer une connexion de destination existante.
+3. Sélectionnez le bouton ![&#x200B; Plus &#x200B;](/help/images/icons/more.png) dans la colonne Nom , puis sélectionnez ![Bouton Supprimer](/help/images/icons/delete.png) **[!UICONTROL Delete]** pour supprimer une connexion de destination existante.
    ![Supprimer des destinations](../assets/ui/delete-destinations/delete-destinations.png)
 
 4. Sélectionnez **[!UICONTROL Delete]** pour confirmer la suppression de la connexion de destination.
@@ -61,7 +61,7 @@ Suivez les étapes ci-dessous pour supprimer une destination de la page de déta
 
    * Si la destination comporte des flux de données existants, vous êtes redirigé(e) vers l’onglet [!UICONTROL Dataflow runs] .
 
-     ![ Onglet Exécutions de flux de données ](../assets/ui/delete-destinations/destination-details-dataflows.png)
+     ![&#x200B; Onglet Exécutions de flux de données &#x200B;](../assets/ui/delete-destinations/destination-details-dataflows.png)
 
    * Si la destination ne comporte pas de flux de données existants, vous accédez à une page vide où vous pouvez commencer à activer les audiences.
 

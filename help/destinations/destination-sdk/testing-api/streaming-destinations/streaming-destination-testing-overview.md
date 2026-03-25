@@ -38,7 +38,7 @@ Avec cet outil, après avoir configuré la destination, vous pouvez :
 
 >[!NOTE]
 >
->Pour consulter la documentation de référence complète sur l’API, consultez les [opérations d’API de test de destination ](../../testing-api/streaming-destinations/destination-testing-api.md).
+>Pour consulter la documentation de référence complète sur l’API, consultez les [opérations d’API de test de destination &#x200B;](../../testing-api/streaming-destinations/destination-testing-api.md).
 
 Vous pouvez appeler le point d’entrée de l’API de test de destination avec ou sans ajout de profils à la requête.
 

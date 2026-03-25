@@ -15,7 +15,7 @@ ht-degree: 14%
 
 ## Vue d’ensemble {#overview}
 
-L’onglet **[!UICONTROL Accounts]** affiche des détails sur les connexions que vous avez établies avec diverses destinations. Consultez la [ Présentation des comptes ](../ui/destinations-workspace.md#accounts) pour obtenir toutes les informations disponibles pour chaque compte de destination.
+L’onglet **[!UICONTROL Accounts]** affiche des détails sur les connexions que vous avez établies avec diverses destinations. Consultez la [&#x200B; Présentation des comptes &#x200B;](../ui/destinations-workspace.md#accounts) pour obtenir toutes les informations disponibles pour chaque compte de destination.
 
 Ce tutoriel décrit les étapes à suivre pour supprimer des comptes de destination qui ne sont plus nécessaires à l’aide de l’interface utilisateur d’Experience Platform.
 

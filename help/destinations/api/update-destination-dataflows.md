@@ -14,7 +14,7 @@ ht-degree: 27%
 
 # Mettre à jour des flux de données de destination à l’aide de l’API Flow Service
 
-Ce tutoriel décrit les étapes à suivre pour mettre à jour un flux de données de destination. Découvrez comment activer ou désactiver le flux de données, mettre à jour ses informations de base ou ajouter et supprimer des audiences et des attributs à l’aide de l’API [[!DNL Flow Service] . ](https://www.adobe.io/experience-platform-apis/references/flow-service/) Pour plus d’informations sur la modification des flux de données de destination à l’aide de l’interface utilisateur d’Experience Platform, consultez [ Modifier les flux d’activation ](/help/destinations/ui/edit-activation.md).
+Ce tutoriel décrit les étapes à suivre pour mettre à jour un flux de données de destination. Découvrez comment activer ou désactiver le flux de données, mettre à jour ses informations de base ou ajouter et supprimer des audiences et des attributs à l’aide de l’API [[!DNL Flow Service] . &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/) Pour plus d’informations sur la modification des flux de données de destination à l’aide de l’interface utilisateur d’Experience Platform, consultez [&#x200B; Modifier les flux d’activation &#x200B;](/help/destinations/ui/edit-activation.md).
 
 ## Prise en main {#get-started}
 

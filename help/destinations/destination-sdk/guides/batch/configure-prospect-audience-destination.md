@@ -15,7 +15,7 @@ ht-degree: 8%
 
 Cette page décrit comment utiliser Destination SDK pour configurer une destination basée sur des fichiers avec des [options de formatage de fichier](configure-file-formatting-options.md) et une [configuration de nom de fichier](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) personnalisées pour exporter des [audiences de prospects](/help/destinations/ui/activate-prospect-audiences.md). Les exemples de ce guide décrivent comment exporter des audiences de profils de prospects vers un emplacement Amazon S3.
 
-Vous pouvez également configurer STFP ou d&#39;autres emplacements de stockage pour exporter les audiences de prospects. N’oubliez pas d’ajouter le fragment de code ci-dessous à la configuration de destination à l’étape 2 [étape 2](#create-destination-configuration) pour permettre au workflow [ d’exporter les audiences de prospects](/help/destinations/ui/activate-prospect-audiences.md) vers la destination.
+Vous pouvez également configurer STFP ou d&#39;autres emplacements de stockage pour exporter les audiences de prospects. N’oubliez pas d’ajouter le fragment de code ci-dessous à la configuration de destination à l’étape 2 [étape 2](#create-destination-configuration) pour permettre au workflow [&#x200B; d’exporter les audiences de prospects](/help/destinations/ui/activate-prospect-audiences.md) vers la destination.
 
 ```json
   "sources": [
@@ -27,7 +27,7 @@ Pour une description détaillée des paramètres utilisés ci-dessous, voir [opt
 
 ## Conditions préalables {#prerequisites}
 
-Avant de passer aux étapes décrites ci-dessous, lisez la page Prise en main de Destination SDK [](../../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification nécessaires et d’autres conditions préalables pour travailler avec les API Destination SDK.
+Avant de passer aux étapes décrites ci-dessous, lisez la page Prise en main de Destination SDK [&#128279;](../../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification nécessaires et d’autres conditions préalables pour travailler avec les API Destination SDK.
 
 ## Étape 1 : créer une configuration de serveur et de fichier {#create-server-file-configuration}
 
@@ -419,7 +419,7 @@ En fonction des configurations ci-dessus, le catalogue Experience Platform affic
 
 ![Enregistrement de l’écran affichant la page de catalogue des destinations avec une carte de destination sélectionnée.](../../assets/guides/batch/destination-card.gif)
 
-Dans les images et les enregistrements ci-dessous, remarquez comment les options du [ workflow d’activation pour les destinations basées sur des fichiers ](../../../ui/activate-batch-profile-destinations.md) correspondent aux options que vous avez sélectionnées dans la configuration de destination.
+Dans les images et les enregistrements ci-dessous, remarquez comment les options du [&#x200B; workflow d’activation pour les destinations basées sur des fichiers &#x200B;](../../../ui/activate-batch-profile-destinations.md) correspondent aux options que vous avez sélectionnées dans la configuration de destination.
 
 Lorsque vous renseignez les détails sur la destination, remarquez comment les champs surfacés sont les champs de données personnalisés que vous configurez dans la configuration.
 
