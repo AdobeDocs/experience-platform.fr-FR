@@ -2,9 +2,9 @@
 description: Découvrez comment formater un appel API pour soumettre une requête de publication de destination avec Adobe Experience Platform Destination SDK.
 title: Création d’une requête de publication de destination
 exl-id: 913be9de-a699-4756-885d-b3761ec729cb
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '443'
 ht-degree: 85%
 
 ---
@@ -79,7 +79,7 @@ Une réponse réussie renvoie le statut HTTP 201 avec les détails de la requê
 
 ## Gestion des erreurs d’API {#error-handling}
 
-Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes d’état API](../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état API](../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 

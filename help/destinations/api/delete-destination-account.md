@@ -5,9 +5,9 @@ title: Supprimer un compte de destination à l’aide de l’API Flow Service
 type: Tutorial
 description: Découvrez comment supprimer un compte de destination à l’aide de l’API Flow Service.
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '743'
 ht-degree: 32%
 
 ---
@@ -183,8 +183,8 @@ Une réponse réussie renvoie un état HTTP 204 (pas de contenu) et un corps vi
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes d’état API](../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état API](../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 
-Ce tutoriel vous a permis d’utiliser l’API [!DNL Flow Service] pour supprimer des comptes de destination existants. Pour plus d’informations sur l’utilisation des destinations, consultez la [présentation des destinations](/help/destinations/home.md).
+Vous avez correctement utilisé l’API [!DNL Flow Service] pour supprimer les comptes de destination existants. Pour plus d’informations sur l’utilisation des destinations, consultez la [présentation des destinations](/help/destinations/home.md).

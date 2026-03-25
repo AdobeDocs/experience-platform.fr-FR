@@ -2,10 +2,10 @@
 description: Découvrez comment utiliser l’API de test de destination pour tester votre modèle de transformation de message de destination de diffusion en streaming avant de publier la destination.
 title: Création et test d’un modèle de transformation de message
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 88%
+source-wordcount: '934'
+ht-degree: 87%
 
 ---
 
@@ -28,7 +28,7 @@ L’une des premières étapes de la création de la destination dans Destinatio
 
 Pour que la transformation réussisse, vous devez fournir un modèle de transformation semblable au modèle suivant : [Création d’un modèle qui envoie des segments, des identités et des attributs de profil](../../functionality/destination-server/message-format.md#segments-identities-attributes).
 
-Adobe fournit un outil de modèle qui vous permet de créer et de tester le modèle de message transformant les données du format XDM d’Adobe en un format pris en charge par la destination. L’outil comporte deux points d’entrée API que vous pouvez utiliser :
+Adobe fournit un outil de modèle pour la création et le test du modèle de message qui transforme les données du format XDM d’Adobe en un format pris en charge par la destination. L’outil comporte deux points d’entrée API que vous pouvez utiliser :
 
 * Utilisez l’*l’API du modèle type* pour obtenir un modèle type.
 * Utilisez l’*API du modèle de rendu* pour obtenir l’exemple du modèle de rendu afin de comparer le résultat au format de données attendu de la destination. Après avoir comparé les données exportées au format de données attendu par la destination, vous pouvez modifier le modèle. Ainsi, les données exportées que vous générez correspondent au format de données attendu par la destination.
@@ -158,9 +158,9 @@ Vous pouvez utiliser un outil d’échappement de caractères en ligne. La méth
 
 ## API du modèle de rendu {#render-template-api}
 
-Après avoir créé un modèle de transformation de message à l’aide de l’[API du modèle type](create-template.md#sample-template-api), vous pouvez [effectuer le rendu du modèle](render-template-api.md) pour générer les données exportées en fonction de celle-ci. Vous pouvez ainsi vérifier si les profils que [!DNL Adobe Experience Platform] exporteriez vers la destination correspondent au format attendu de la destination.
+Après avoir créé un modèle de transformation de message à l’aide de l’[API du modèle type](create-template.md#sample-template-api), vous pouvez [effectuer le rendu du modèle](render-template-api.md) pour générer les données exportées en fonction de celle-ci. Utilisez ceci pour vérifier si les profils que [!DNL Adobe Experience Platform] exporterais vers la destination correspondent au format attendu de la destination.
 
-Consultez la référence d’API pour obtenir des exemples d’appels que vous pouvez effectuer :
+Consultez la référence d’API pour obtenir des exemples d’appels que vous pouvez effectuer :
 
 * [Rendu d’un modèle sans profils envoyés dans le corps](render-template-api.md#best-effort)
 * [Rendu d’un modèle avec des profils envoyés dans le corps](render-template-api.md#configurable-aggregation)

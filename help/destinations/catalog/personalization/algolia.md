@@ -2,9 +2,9 @@
 title: Algolie
 description: Utilisez ce connecteur pour activer les audiences en Algérie à des fins de personnalisation et d’utilisation dans les recherches et les recommandations. Vous pouvez ensuite utiliser le connecteur source Profil utilisateur Algolia pour importer les profils dans Real-Time CDP afin de créer des audiences riches.
 exl-id: 116a051a-1b47-4789-826e-c8f0fee60def
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1108'
 ht-degree: 31%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 31%
 
 >[!IMPORTANT]
 >
->Le connecteur de destination [!DNL Algolia] et la page de documentation sont créés et conservés par l’équipe des services d’intégration d’Algolia. Pour toute demande ou information, contactez-les à l’adresse [&#128279;](mailto:adobe-algolia-solutions@algolia.com).
+>Le connecteur de destination [!DNL Algolia] et la page de documentation sont créés et conservés par l’équipe des services d’intégration d’Algolia. Pour toute demande ou information, contactez-les à l’adresse [](mailto:adobe-algolia-solutions@algolia.com).
 
 Utilisez la connexion de destination [!DNL Algolia] pour envoyer des audiences [!DNL Adobe Experience Platform] en Algérie afin d’effectuer des recherches et des recommandations personnalisées. Avant de pouvoir utiliser le connecteur de destination [!DNL Algolia], vous devez d’abord configurer le connecteur source [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md). Pendant le tutoriel de configuration du connecteur source, vous allez créer l’identité du jeton d’utilisateur Algolia. Cette identité est requise pour le mappage lorsque vous configurez le connecteur de destination.
 
@@ -44,7 +44,7 @@ Ensuite, utilisez le connecteur source de [[!DNL Algolia User Profiles]](/help/s
 >[!IMPORTANT]
 >
 >* Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 ## Identités prises en charge {#supported-identities}
 
@@ -75,7 +75,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -133,9 +133,9 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des identités, vous devez disposer de l’autorisation de contrôle d’accès Afficher le graphique [d’identités](https://experienceleague.adobe.com/fr/docs/experience-platform/access-control/home#permissions).
+>* Pour exporter des identités, vous devez disposer de l’autorisation de contrôle d’accès Afficher le graphique [d’identités](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).
 
-Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Mapper les attributs et les identités {#mapping-attributes-identities}
 
@@ -163,4 +163,4 @@ Pour plus d’informations, consultez la documentation [!DNL Algolia] suivante :
 
 ## Étapes suivantes {#next-steps}
 
-Ce tutoriel vous a permis de créer un flux de données pour exporter des audiences d’Experience Platform vers votre application [!DNL Algolia]. Pour plus d’informations sur la plateforme [!DNL Algolia], consultez la documentation [Algolia](https://www.algolia.com/doc/).
+Vous avez créé un flux de données pour exporter des audiences d’Experience Platform vers votre application [!DNL Algolia]. Pour plus d’informations sur la plateforme [!DNL Algolia], consultez la documentation [Algolia](https://www.algolia.com/doc/).

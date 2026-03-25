@@ -3,9 +3,9 @@ keywords: extensions de balises;extension de balises;destinations launch;extensi
 title: Extensions de balises dans Adobe Experience Platform
 description: Adobe Experience Platform offre la nouvelle génération de fonctionnalités de gestion des balises d’Adobe. Experience Platform vous offre un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '477'
 ht-degree: 22%
 
 ---
@@ -27,7 +27,7 @@ Pour rechercher les extensions dans l’interface d’Experience Platform, accé
 
 ## Fonctionnement des extensions de balises {#how-extensions-work}
 
-Une [extension de balise](../../../tags/home.md#extensions) est un package de code qui améliore les fonctionnalités d’un site web ou d’une application mobile. Il peut s’agir de l’envoi de données d’événement brutes vers une destination telle que [&#128279;](/help/destinations/catalog/analytics/google-universal-analytics.md) mais elles peuvent également servir à d’autres fonctions.
+Une [extension de balise](../../../tags/home.md#extensions) est un package de code qui améliore les fonctionnalités d’un site web ou d’une application mobile. Il peut s’agir de l’envoi de données d’événement brutes vers une destination telle que [](/help/destinations/catalog/analytics/google-universal-analytics.md) mais elles peuvent également servir à d’autres fonctions.
 
 Il est important de faire la distinction entre les extensions de transfert de balises et d’événements. Les extensions affichées dans l’interface utilisateur des destinations Experience Platform sont des *extensions de balise*. Reportez-vous à la présentation du transfert d’événement pour plus d’informations sur les [différences entre les balises et le transfert d’événement](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags).
 
@@ -45,7 +45,7 @@ Extensions forward raw event data to several types of destinations. Think of ext
 
 ## Avantages de l’utilisation des extensions de balises {#extensions-benefits}
 
-Les fonctionnalités de balises Experience Platform sont gratuites pour les clients Experience Cloud existants. Le système simplifie le déploiement des balises sur votre site web au moyen d’extensions conviviales que vous pouvez installer, configurer, mettre à jour et supprimer. Les balises laissent une petite empreinte sur votre site web et vous permettent de charger rapidement vos pages.
+Les fonctionnalités de balises Experience Platform sont gratuites pour les clients Experience Cloud existants. Le système simplifie le déploiement des balises sur votre site web au moyen d’extensions conviviales que vous pouvez installer, configurer, mettre à jour et supprimer. Les balises laissent une petite empreinte sur votre site web et permettent à vos pages de se charger rapidement.
 
 Bien que vous ne puissiez pas activer les audiences pour les extensions de balises, vous pouvez configurer des règles pour ne transférer les données d’événement que dans certains cas. Cette puissante fonctionnalité vous permet de transférer les données d’événement uniquement dans certaines situations, plutôt que d’envoyer les données d’événement à chaque interaction. Pour plus d’informations, consultez la section consacrée aux règles dans la [documentation sur les balises](../../../tags/ui/managing-resources/rules.md).
 
@@ -64,7 +64,7 @@ Les extensions peuvent appartenir aux catégories suivantes dans Experience Plat
 - [Advertising](../advertising/overview.md)
 - [Analytics](../analytics/overview.md)
 - [Plateforme de gestion des données](../data-management/overview.md)
-- [Destinations de marketing par e-mail &#x200B;](../email-marketing/overview.md)
+- [Destinations de marketing par e-mail ](../email-marketing/overview.md)
 - [Personnalisation](../personalization/overview.md)
 - [Questionnaires](../survey/overview.md)
 - [Voix du client](../voice/overview.md)

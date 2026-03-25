@@ -1,11 +1,11 @@
 ---
 keywords: e-mail;E-mail;e-mail;destinations d’e-mail;sendgrid;destination sendgrid
 title: Connexion à SendGrid
-description: La destination SendGrid vous permet d’exporter vos données propriétaires et de les activer dans SendGrid en fonction des besoins de votre entreprise.
+description: Utilisez la destination SendGrid pour exporter vos données propriétaires et les activer dans SendGrid en fonction des besoins de votre entreprise.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1933'
+source-wordcount: '1928'
 ht-degree: 18%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 18%
 
 [SendGrid](https://www.sendgrid.com) est une plateforme de communication client populaire pour les e-mails transactionnels et marketing.
 
-Cette [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) exploite le [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts) , qui vous permet d’exporter vos profils d’e-mail propriétaires et de les activer dans une nouvelle audience SendGrid adaptée aux besoins de votre entreprise.
+Cette [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) tire parti de l’[[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts) pour exporter vos profils d’e-mail propriétaires et les activer dans une nouvelle audience SendGrid adaptée aux besoins de votre entreprise.
 
 SendGrid utilise des jetons du porteur d&#39;API comme mécanisme d&#39;authentification pour communiquer avec l&#39;API SendGrid.
 
@@ -27,14 +27,14 @@ Les éléments suivants sont requis avant de commencer la configuration de la de
 1. Vous devez disposer d&#39;un compte SendGrid.
    * Accédez à la page SendGrid [signup](https://signup.sendgrid.com/) pour vous enregistrer et créer un compte SendGrid, si ce n&#39;est pas déjà fait.
 1. Après vous être connecté au portail SendGrid, vous devez également générer un jeton API.
-1. Accédez au site web SendGrid et à la page **[!DNL Settings]** > **[!DNL API Keys]** . Reportez-vous également à la documentation [SendGrid](https://app.sendgrid.com/settings/api_keys) pour accéder à la section appropriée dans l’application SendGrid.
+1. Accédez au site web SendGrid et à la page **[!DNL Settings]** > **[!DNL API Keys]** . Vous pouvez également consulter la [documentation SendGrid](https://app.sendgrid.com/settings/api_keys) pour accéder à la section appropriée dans l’application SendGrid.
 1. Enfin, sélectionnez le bouton **[!DNL Create API Key]** .
    * Reportez-vous à la [documentation SendGrid](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key), si vous avez besoin de conseils sur les actions à effectuer.
-   * Si vous souhaitez générer votre clé API par programmation, reportez-vous à la documentation [SendGrid](https://docs.sendgrid.com/api-reference/api-keys/create-api-keys).
+   * Si vous souhaitez générer votre clé API par programmation, consultez la [documentation SendGrid](https://docs.sendgrid.com/api-reference/api-keys/create-api-keys).
 
 ![Page des paramètres des clés API SendGrid affichant le bouton Créer une clé API.](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-Avant d’activer des données vers la destination SendGrid, vous devez avoir créé un [schéma](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=fr), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr) et des [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=fr) dans [!DNL Experience Platform]. Reportez-vous également à la section [limites](#limits) plus bas sur cette page.
+Avant d’activer des données vers la destination SendGrid, vous devez avoir créé un [schéma](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=fr), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) et des [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) dans [!DNL Experience Platform]. Reportez-vous également à la section [limites](#limits) plus bas sur cette page.
 
 >[!IMPORTANT]
 >
@@ -71,7 +71,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -141,7 +141,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 

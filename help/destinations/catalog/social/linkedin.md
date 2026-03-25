@@ -3,9 +3,9 @@ keywords: linkedin;connexion linkedin;destinations linkedin;linkedin;
 title: Connexion des audiences correspondantes LinkedIn
 description: Activez les profils de vos campagnes LinkedIn pour le ciblage, la personnalisation et la suppression des audiences, en fonction des e-mails hachés.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1311'
 ht-degree: 24%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 24%
 
 Activez les profils de vos campagnes [!DNL LinkedIn] pour le ciblage, la personnalisation et la suppression des audiences, en fonction des e-mails hachés et des identifiants mobiles.
 
-![&#x200B; Destination LinkedIn dans l’interface utilisateur de Adobe Experience Platform &#x200B;](../../assets/catalog/social/linkedin/catalog.png)
+![ Destination LinkedIn dans l’interface utilisateur de Adobe Experience Platform ](../../assets/catalog/social/linkedin/catalog.png)
 
 ## Cas d’utilisation {#use-cases}
 
@@ -59,7 +59,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -124,11 +124,11 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 La vidéo ci-dessous montre également les étapes à suivre pour configurer une destination [!DNL LinkedIn Matched Audiences] et activer des audiences.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411785/?quality=12&learn=on&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
->L’interface utilisateur d’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, reportez-vous au tutoriel [configuration de destination](../../ui/connect-destination.md).
+>L’interface utilisateur d’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, consultez le tutoriel [configuration de destination](../../ui/connect-destination.md).
 
 ### S’authentifier auprès de la destination {#authenticate}
 
@@ -149,7 +149,7 @@ Une fois le jeton expiré, les exportations de données vers la destination cess
 3. Sélectionnez le compte à actualiser, puis les points de suspension et sélectionnez **[!UICONTROL Edit details]**.
    ![Sélectionnez Modifier les détails](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
 4. Dans la fenêtre modale, sélectionnez **[!UICONTROL Reconnect OAuth]** et réauthentifiez-vous à l’aide de vos informations d’identification LinkedIn.
-   ![Fenêtre modale avec l’option Reconnecter OAuth &#x200B;](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
+   ![Fenêtre modale avec l’option Reconnecter OAuth ](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
 
 >[!SUCCESS]
 >
@@ -179,7 +179,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 

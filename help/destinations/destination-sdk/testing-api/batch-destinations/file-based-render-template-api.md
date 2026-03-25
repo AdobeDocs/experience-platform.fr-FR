@@ -2,10 +2,10 @@
 description: Cette page explique comment utiliser le point d’entrée /authoring/testing/template/render pour visualiser à quoi ressembleraient les champs de données clients modélisés définis dans votre configuration de destination.
 title: Validation des champs client générés par le modèle
 exl-id: 8ed93f0c-3439-4d11-bb2f-d417a1e0b6a8
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 79%
+source-wordcount: '385'
+ht-degree: 80%
 
 ---
 
@@ -100,7 +100,7 @@ Cette réponse peut vous aider à valider la structure sémantique des champs de
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes d’état API](../../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état API](../../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 

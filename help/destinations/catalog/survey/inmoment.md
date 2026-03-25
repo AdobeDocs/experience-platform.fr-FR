@@ -3,10 +3,10 @@ keywords: InMoment;inmoment;Inmoment;intégration de Launch
 title: Extension InMoment
 description: L’extension InMoment est une destination d’enquête dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 61f32bc1-97a6-45ff-a962-990a2e522735
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 64%
+source-wordcount: '445'
+ht-degree: 65%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 64%
 
 ## Vue d’ensemble {#overview}
 
-L&#39;extension de balise [!DNL InMoment] permet d&#39;activer rapidement et facilement les retours en ligne via le produit Digital Intercept. Dans l’application, les interceptions peuvent être configurées et gérées à l’aide de l’administrateur CXI Cloud, ce qui permet aux gestionnaires CX de mieux contrôler leur programme.
+L&#39;extension de balise [!DNL InMoment] permet de faire des commentaires en ligne rapidement et facilement via le produit Digital Intercept. Dans l’application, les interceptions peuvent être configurées et gérées à l’aide de l’administrateur CXI Cloud, ce qui permet aux gestionnaires CX de mieux contrôler leur programme.
 
 [!DNL InMoment] est une extension d’enquête dans [!DNL Adobe Experience Platform]. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100847.html).
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension Inmoment](../../assets/catalog/survey/inmoment/catalog.png)
 
@@ -32,7 +32,7 @@ Pour utiliser cette extension, vous devez accéder aux balises dans [!DNL Adobe 
 
 Pour installer l’extension [!DNL InMoment], procédez comme suit :
 
-Dans l’interface d’[&#128279;](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+Dans l’interface d’[](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 

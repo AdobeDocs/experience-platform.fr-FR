@@ -4,9 +4,9 @@ title: Modifier des flux de données d’activation
 type: Tutorial
 description: Suivez les étapes de cet article pour modifier un flux de données d’activation existant dans Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '915'
 ht-degree: 8%
 
 ---
@@ -28,7 +28,7 @@ Dans [!DNL Adobe Experience Platform], vous pouvez configurer différents compos
 
 Suivez les étapes ci-dessous pour parcourir vos flux de données d’activation existants et identifier celui que vous souhaitez modifier.
 
-1. Connectez-vous à l’[interface utilisateur d’](https://platform.adobe.com/) puis sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Browse]** dans l’en-tête supérieur pour afficher vos flux de données de destination existants.
+1. Accédez à l’[interface utilisateur d’](https://platform.adobe.com/) puis sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Browse]** dans l’en-tête supérieur pour afficher vos flux de données de destination existants.
 
    ![Parcourir les destinations](../assets/ui/edit-activation/browse-destinations.png)
 
@@ -58,7 +58,7 @@ Dans l’étape **[!UICONTROL Select audiences]** du workflow d’activation, vo
 
 Le workflow d’activation diffère légèrement en fonction du type de destination. Pour plus d’informations sur les workflows d’activation pour chaque type de destination, lisez les guides suivants :
 
-* [&#x200B; Activer les audiences vers des destinations de diffusion en continu (par exemple, Facebook ou Twitter](./activate-segment-streaming-destinations.md)
+* [ Activer les audiences vers des destinations de diffusion en continu (par exemple, Facebook ou Twitter](./activate-segment-streaming-destinations.md)
 * [Activer les audiences vers des destinations d’exportation de profils par lots](./activate-batch-profile-destinations.md) (par exemple, Amazon S3 ou Oracle Eloqua) ;
 * [Activez les audiences vers des destinations d’exportation de profil de diffusion en continu](./activate-streaming-profile-destinations.md) (par exemple, API HTTP ou Amazon Kinesis).
 
@@ -68,7 +68,7 @@ Sélectionnez **[!UICONTROL Activate audiences]** dans le rail de droite. Cette 
 
 ![Image de l’interface utilisateur d’Experience Platform montrant l’option Activer le flux de données des audiences.](../assets/ui/edit-activation/activate-audiences.png)
 
-Sélectionnez l’étape **[!UICONTROL Scheduling]** du workflow d’activation pour modifier le planning d’activation et la fréquence d’exportation de votre flux de données. Cette étape vous permet de configurer la fréquence d’exportation des données vers la destination.
+Sélectionnez l’étape **[!UICONTROL Scheduling]** du workflow d’activation pour modifier le planning d’activation et la fréquence d’exportation de votre flux de données. Utilisez cette étape pour configurer la fréquence d’exportation des données vers la destination.
 
 Dans l’étape **[!UICONTROL Scheduling]** du workflow d’activation, vous pouvez :
 
@@ -77,7 +77,7 @@ Dans l’étape **[!UICONTROL Scheduling]** du workflow d’activation, vous pou
 
 Les opérations de planification que vous pouvez effectuer varient légèrement en fonction du type de destination. Pour plus d’informations sur les workflows d’activation pour chaque type de destination, lisez les guides suivants :
 
-* [&#x200B; Activer les audiences vers des destinations de diffusion en continu (par exemple, Facebook ou Twitter](./activate-segment-streaming-destinations.md)
+* [ Activer les audiences vers des destinations de diffusion en continu (par exemple, Facebook ou Twitter](./activate-segment-streaming-destinations.md)
 * [Activer les audiences vers des destinations d’exportation de profils par lots](./activate-batch-profile-destinations.md) (par exemple, Amazon S3 ou Oracle Eloqua) ;
 * [Activez les audiences vers des destinations d’exportation de profil de diffusion en continu](./activate-streaming-profile-destinations.md) (par exemple, API HTTP ou Amazon Kinesis).
 
@@ -87,7 +87,7 @@ Sélectionnez **[!UICONTROL Activate audiences]** dans le rail de droite. Cette 
 
 ![Image de l’interface utilisateur d’Experience Platform montrant l’option Activer le flux de données des audiences.](../assets/ui/edit-activation/activate-audiences.png)
 
-Sélectionnez l’étape **[!UICONTROL Mapping]** dans le workflow d’activation pour modifier les attributs et les identités mappés pour votre flux de données d’activation. Vous pouvez ainsi ajuster les attributs de profil et les identités à exporter vers la destination.
+Sélectionnez l’étape **[!UICONTROL Mapping]** dans le workflow d’activation pour modifier les attributs et les identités mappés pour votre flux de données d’activation. Utilisez cette étape pour ajuster les attributs de profil et les identités exportés vers la destination.
 
 Dans l’étape **[!UICONTROL Mapping]** du workflow d’activation, vous pouvez :
 
@@ -97,7 +97,7 @@ Dans l’étape **[!UICONTROL Mapping]** du workflow d’activation, vous pouvez
 
 Le workflow d’activation diffère légèrement en fonction du type de destination. Pour plus d’informations sur les workflows d’activation pour chaque type de destination, lisez les guides suivants :
 
-* [&#x200B; Activer les audiences vers des destinations de diffusion en continu (par exemple, Facebook ou Twitter](./activate-segment-streaming-destinations.md)
+* [ Activer les audiences vers des destinations de diffusion en continu (par exemple, Facebook ou Twitter](./activate-segment-streaming-destinations.md)
 * [Activer les audiences vers des destinations d’exportation de profils par lots](./activate-batch-profile-destinations.md) (par exemple, Amazon S3 ou Oracle Eloqua) ;
 * [Activez les audiences vers des destinations d’exportation de profil de diffusion en continu](./activate-streaming-profile-destinations.md) (par exemple, API HTTP ou Amazon Kinesis).
 
@@ -130,7 +130,7 @@ Sélectionnez les actions marketing applicables, puis cliquez sur **[!UICONTROL 
 
 ## Appliquer les libellés d’accès {#apply-access-labels}
 
-Sélectionnez **[!UICONTROL Apply access labels]** pour modifier les libellés d’utilisation des données exportées. Pour en savoir plus[&#x200B; consultez la documentation sur les &#x200B;](../../data-governance/labels/overview.md) libellés d’utilisation des données .
+Sélectionnez **[!UICONTROL Apply access labels]** pour modifier les libellés d’utilisation des données exportées. Pour en savoir plus[ consultez la documentation sur les ](../../data-governance/labels/overview.md) libellés d’utilisation des données .
 
 ![Image de l’interface utilisateur d’Experience Platform montrant l’option d’exécution Exporter le flux de données des jeux de données.](../assets/ui/edit-activation/apply-access-labels.png)
 
@@ -142,6 +142,6 @@ Pour modifier le nom et la description du flux de données d’activation, utili
 
 ## Étapes suivantes {#next-steps}
 
-Ce tutoriel vous a permis d’utiliser l’espace de travail **[!UICONTROL destinations]** pour mettre à jour les flux de données de destination existants.
+Vous avez correctement mis à jour vos flux de données de destination à l’aide de l’espace de travail **[!UICONTROL destinations]**.
 
 Pour plus d’informations sur les destinations, consultez la [présentation des destinations](../catalog/overview.md).

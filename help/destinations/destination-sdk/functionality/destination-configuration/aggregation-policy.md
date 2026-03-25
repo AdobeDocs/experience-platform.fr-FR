@@ -2,16 +2,16 @@
 description: Découvrez comment configurer une politique d’agrégation pour déterminer comment les requêtes HTTP vers la destination doivent être associées et regroupées par lot.
 title: Politique d’agrégation
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1233'
-ht-degree: 80%
+source-wordcount: '1225'
+ht-degree: 75%
 
 ---
 
 # Politique d’agrégation
 
-Pour garantir une efficacité maximale pendant l’exportation des données vers le point d’entrée de l’API, vous pouvez agréger à l’aide de divers paramètres les profils exportés en lots plus ou moins petits, les regrouper par identité et d’autres cas d’utilisation. Vous pouvez également adapter les exportations de données à toutes les limitations en aval du point d’entrée de l’API (limitation de débit, nombre d’identités par appel API, etc.).
+Pour garantir une efficacité maximale pendant l’exportation des données vers le point d’entrée de l’API, vous pouvez agréger à l’aide de divers paramètres les profils exportés en lots plus ou moins petits, les regrouper par identité et d’autres cas d’utilisation. Cela vous permet également d’adapter les exportations de données à toutes les limitations en aval du point d’entrée de l’API (limitation de débit, nombre d’identités par appel API, etc.).
 
 Utilisez l’agrégation configurable pour vous plonger dans les paramètres de Destination SDK ou utilisez l’agrégation des meilleurs efforts pour indiquer à Destination SDK de traiter le mieux possible les appels API par lots.
 
@@ -26,7 +26,7 @@ Vous pouvez configurer les paramètres de la politique d’agrégation via le po
 
 Cet article décrit tous les paramètres de politique d’agrégation pris en charge que vous pouvez utiliser pour la destination.
 
-Vous êtes arrivé au bout de ce document. À présent, consultez la documentation relative à l’[utilisation de modèles](../../functionality/destination-server/message-format.md#using-templating) ainsi que les [exemples de clés d’agrégation](../../functionality/destination-server/message-format.md#template-aggregation-key) pour comprendre comment inclure la politique d’agrégation dans le modèle de transformation des messages en fonction de la politique d’agrégation que vous avez sélectionnée.
+Vous êtes arrivé au bout de ce document. À présent, consultez la documentation sur [l’utilisation de modèles](../../functionality/destination-server/message-format.md#using-templating) et les [exemples de clés d’agrégation](../../functionality/destination-server/message-format.md#template-aggregation-key) pour comprendre comment inclure la politique d’agrégation dans le modèle de transformation des messages en fonction de la politique d’agrégation que vous avez sélectionnée.
 
 >[!IMPORTANT]
 >
@@ -81,7 +81,7 @@ L’exemple de configuration ci-dessous montre une configuration d’agrégation
 | `aggregationType` | Chaîne | Indique le type de politique d’agrégation que la destination doit utiliser. Types d’agrégation pris en charge : <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `bestEffortAggregation.maxUsersPerRequest` | Entier | Experience Platform peut agréger plusieurs profils exportés en un seul appel HTTP. <br><br>Cette valeur indique le nombre maximal de profils que le point d’entrée doit recevoir dans un seul appel HTTP. Notez qu’il s’agit d’une agrégation des meilleurs efforts. Par exemple, si vous spécifiez la valeur 100, Experience Platform peut envoyer n’importe quel nombre de profils inférieur à 100 lors d’un appel. <br><br> Si le serveur n’accepte pas plusieurs utilisateurs par requête, définissez cette valeur sur `1`. |
 | `bestEffortAggregation.splitUserById` | Booléen | Utilisez cet indicateur si l’appel à la destination doit être partagé par identité. Définissez cet indicateur sur `true` si le serveur n’accepte qu’une seule identité par appel, pour un espace de noms d’identité donné. |
-| `bestEffortAggregation.aggregationKey` | Objet | *Facultatif*. Permet d’agréger les profils exportés mappés à la destination en fonction des paramètres décrits ci-dessous. Ce paramètre peut être omis ou défini sur `null` si l’agrégation n’est pas nécessaire. Lorsqu’elle est fournie, elle fonctionne de manière identique à la clé d’agrégation dans l’agrégation configurable. |
+| `bestEffortAggregation.aggregationKey` | Objet | *Facultatif*. Agrège les profils exportés mappés à la destination en fonction des paramètres décrits ci-dessous. Ce paramètre peut être omis ou défini sur `null` si l’agrégation n’est pas nécessaire. Lorsqu’elle est fournie, elle fonctionne de manière identique à la clé d’agrégation dans l’agrégation configurable. |
 | `bestEffortAggregation.aggregationKey.includeSegmentId` | Booléen | Définissez ce paramètre sur `true` pour regrouper les profils exportés vers votre destination par identifiant d’audience. |
 | `bestEffortAggregation.aggregationKey.includeSegmentStatus` | Booléen | Définissez ce paramètre ainsi qu’`includeSegmentId` sur `true` pour regrouper les profils exportés vers votre destination par identifiant et statut d’audience. |
 | `bestEffortAggregation.aggregationKey.includeIdentity` | Booléen | Définissez ce paramètre sur `true` si vous souhaitez regrouper les profils exportés vers la destination par espace de noms d’identité. |
@@ -96,7 +96,7 @@ L’exemple de configuration ci-dessous montre une configuration d’agrégation
 
 ## Agrégation configurable {#configurable-aggregation}
 
-L’agrégation configurable fonctionne mieux si vous préférez accepter des lots volumineux, avec des milliers de profils sur le même appel. Cette option permet également d’agréger les profils exportés en fonction de règles d’agrégation complexes.
+L’agrégation configurable fonctionne mieux si vous préférez accepter des lots volumineux, avec des milliers de profils sur le même appel. Cette option prend également en charge l’agrégation des profils exportés en fonction de règles d’agrégation complexes.
 
 L’exemple de configuration ci-dessous montre une configuration d’agrégation configurable. Pour obtenir un exemple d’agrégation des meilleurs efforts, consultez la section [Agrégation des meilleurs efforts](#best-effort-aggregation). Les paramètres applicables à l’agrégation configurable sont présentés dans le tableau ci-dessous.
 
@@ -136,7 +136,7 @@ L’exemple de configuration ci-dessous montre une configuration d’agrégation
 | `configurableAggregation.splitUserById` | Booléen | Utilisez cet indicateur si l’appel à la destination doit être partagé par identité. Définissez cet indicateur sur `true` si le serveur n’accepte qu’une seule identité par appel, pour un espace de noms d’identité donné. |
 | `configurableAggregation.maxBatchAgeInSecs` | Entier | Associé à `maxNumEventsInBatch`, ce paramètre détermine combien de temps Experience Platform doit attendre avant d’envoyer un appel API vers le point d’entrée. <ul><li>Valeur minimale (secondes) : 301</li><li>Valeur maximale (secondes) : 3 600</li></ul> Par exemple, si vous utilisez la valeur maximale pour les deux paramètres, Experience Platform attend 3 600 secondes où qu’il y ait 10 000 profils qualifiés avant d’effectuer l’appel API, selon ce qui se produit en premier. |
 | `configurableAggregation.maxNumEventsInBatch` | Entier | Associé à `maxBatchAgeInSecs`, ce paramètre détermine le nombre de profils qualifiés qui doivent être agrégés dans un appel API. <ul><li>Valeur minimale : 1 000</li><li>Valeur maximale : 10 000</li></ul> Par exemple, si vous utilisez la valeur maximale pour les deux paramètres, Experience Platform attend 3 600 secondes où qu’il y ait 10 000 profils qualifiés avant d’effectuer l’appel API, selon ce qui se produit en premier. |
-| `configurableAggregation.aggregationKey` | - | Permet d’agréger les profils exportés mappés à la destination en fonction des paramètres décrits ci-dessous. |
+| `configurableAggregation.aggregationKey` | - | Agrège les profils exportés mappés à la destination en fonction des paramètres décrits ci-dessous. |
 | `configurableAggregation.aggregationKey.includeSegmentId` | Booléen | Définissez ce paramètre sur `true` pour regrouper les profils exportés vers votre destination par identifiant d’audience. |
 | `configurableAggregation.aggregationKey.includeSegmentStatus` | Booléen | Définissez ce paramètre ainsi qu’`includeSegmentId` sur `true` pour regrouper les profils exportés vers votre destination par identifiant et statut d’audience. |
 | `configurableAggregation.aggregationKey.includeIdentity` | Booléen | Définissez ce paramètre sur `true` si vous souhaitez regrouper les profils exportés vers la destination par espace de noms d’identité. |

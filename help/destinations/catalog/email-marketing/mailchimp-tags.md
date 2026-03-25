@@ -1,11 +1,11 @@
 ---
 title: Balises Mailchimp
-description: La destination Balises Mailchimp vous permet d’exporter les données de votre compte et de les activer dans Mailchimp pour interagir avec les contacts.
+description: Utilisez la destination Balises Mailchimp pour exporter les données de votre compte et les activer dans Mailchimp pour interagir avec les contacts.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1719'
+source-wordcount: '1714'
 ht-degree: 19%
 
 ---
@@ -34,7 +34,7 @@ Reportez-vous aux sections ci-dessous pour connaître les conditions préalables
 
 ### Conditions préalables dans Experience Platform {#prerequisites-in-experience-platform}
 
-Avant d’activer des données dans la destination [!DNL Mailchimp Tags], vous devez avoir créé un [schéma](/help/xdm/schema/composition.md), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr) et des [audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=fr) dans [!DNL Experience Platform].
+Avant d’activer des données dans la destination [!DNL Mailchimp Tags], vous devez avoir créé un [schéma](/help/xdm/schema/composition.md), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr) et des [audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) dans [!DNL Experience Platform].
 
 ### Conditions préalables pour la destination [!DNL Mailchimp Tags] {#prerequisites-destination}
 
@@ -48,7 +48,7 @@ Avant de pouvoir créer une destination [!DNL Mailchimp Tags], vous devez d’ab
 
 Vous avez besoin de votre [!DNL Mailchimp] **clé API** pour authentifier la destination [!DNL Mailchimp Interest Categories] sur votre compte [!DNL Mailchimp]. La **clé API** sert de **mot de passe** lorsque vous [authentifiez la destination](#authenticate).
 
-Si vous ne disposez pas de votre **clé API**, connectez-vous à votre compte [!DNL Mailchimp] et reportez-vous à la documentation [!DNL Mailchimp] sur [comment générer votre clé API](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key).
+Si vous ne disposez pas de votre **clé API**, connectez-vous à votre compte [!DNL Mailchimp] et consultez la documentation [!DNL Mailchimp] sur [comment générer votre clé API](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key).
 
 Un exemple de clé API est `0123456789abcdef0123456789abcde-us14`.
 
@@ -70,7 +70,7 @@ Si vous avez besoin de conseils supplémentaires, consultez la [[!DNL Mailchimp]
 
 ### Mécanismes de sécurisation {#guardrails}
 
-Reportez-vous à la section [!DNL Mailchimp] [limites de débit](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits) pour plus d’informations sur les limites imposées par l’API [!DNL Mailchimp].
+Pour plus d’informations sur les limites imposées par l’API [!DNL Mailchimp], consultez la [ ](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits)limites de débit[!DNL Mailchimp].
 
 ## Identités prises en charge {#supported-identities}
 
@@ -101,7 +101,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -169,7 +169,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Lisez [Activer des audiences vers des destinations de diffusion en streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -203,7 +203,7 @@ Lorsque vous avez terminé de fournir les mappages pour votre connexion de desti
 
 Pour vérifier que vous avez correctement configuré la destination, procédez comme suit :
 
-1. Connectez-vous à votre compte [[!DNL Mailchimp]](https://login.mailchimp.com/). Accédez ensuite à la page **[!DNL Audience]** > **[!DNL All Contacts]** et vérifiez si les contacts de l’audience ont été ajoutés et si les contacts de l’audience ont été mis à jour avec le nom de l’audience.
+1. Accédez à votre compte [[!DNL Mailchimp]](https://login.mailchimp.com/). Accédez ensuite à la page **[!DNL Audience]** > **[!DNL All Contacts]** et vérifiez si les contacts de l’audience ont été ajoutés et si les contacts de l’audience ont été mis à jour avec le nom de l’audience.
    ![Capture d’écran de l’interface utilisateur Mailchimp montrant la page Audience.](../../assets/catalog/email-marketing/mailchimp-tags/contacts.png)
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
@@ -222,4 +222,4 @@ Retrouvez d’autres informations utiles de la documentation [!DNL Mailchimp] ci
 * [Prise en main des audiences](https://mailchimp.com/help/getting-started-audience/)
 * [Création d’un audience](https://mailchimp.com/help/create-audience/)
 * [Prise en main des balises](https://mailchimp.com/help/getting-started-tags/)
-* [&#x200B; API marketing &#x200B;](https://mailchimp.com/developer/marketing/api/)
+* [ API marketing ](https://mailchimp.com/developer/marketing/api/)

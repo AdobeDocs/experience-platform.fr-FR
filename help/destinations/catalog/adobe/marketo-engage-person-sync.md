@@ -4,9 +4,9 @@ description: Utilisez le connecteur de synchronisation des personnes Marketo Eng
 last-substantial-update: 2025-01-14T00:00:00Z
 badgeBeta: label="Beta" type="Informative"
 exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1196'
 ht-degree: 13%
 
 ---
@@ -66,7 +66,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -87,11 +87,11 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 >
 >* Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
 
-Si votre société a accès à plusieurs organisations, veillez à utiliser la même organisation dans Marketo Engage et [!DNL Real-Time CDP], où vous configurez le connecteur de destination vers Marketo.  Si vous avez déjà configuré une destination, vous pouvez sélectionner un compte Marketo existant à utiliser avec votre nouvelle configuration.  Si ce n’est pas le cas, cliquez sur l’invite Connecteur vers la destination , qui vous permet de définir le nom, la description et l’identifiant Marketo Munchkin de la destination souhaitée.  L’identifiant Munchkin de votre instance Marketo se trouve dans le menu Admin->Munchkin .
+Si votre société a accès à plusieurs organisations, veillez à utiliser la même organisation dans Marketo Engage et [!DNL Real-Time CDP], où vous configurez le connecteur de destination vers Marketo.  Si vous avez déjà configuré une destination, vous pouvez sélectionner un compte Marketo existant à utiliser avec votre nouvelle configuration.  Si ce n’est pas le cas, cliquez sur l’invite Connecteur vers la destination pour définir le nom, la description et l’identifiant Marketo Munchkin de la destination souhaitée.  L’identifiant Munchkin de votre instance Marketo se trouve dans le menu Admin->Munchkin .
 
 >[!IMPORTANT]
 >
->L’utilisateur configurant la destination doit disposer de l’autorisation [&#x200B; Modifier la personne &#x200B;](https://experienceleague.adobe.com/fr/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) dans l’instance et la partition Marketo.
+>L’utilisateur configurant la destination doit disposer de l’autorisation [ Modifier la personne ](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) dans l’instance et la partition Marketo.
 
 ![Se connecter à la destination](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
@@ -102,7 +102,7 @@ Si votre société a accès à plusieurs organisations, veillez à utiliser la m
 * **[!UICONTROL First searchable field]** : champ à dédupliquer. Le champ doit être présent dans chaque enregistrement de prospect de l’entrée. La valeur par défaut est e-mail.
 * **[!UICONTROL First searchable field]** : champ secondaire à dédupliquer. Le champ doit être présent dans chaque enregistrement de prospect de l’entrée. Facultatif
 
-Une fois que vous avez sélectionné votre instance, vous devez également sélectionner la partition de lead à laquelle vous souhaitez que la configuration s’intègre. Dans [&#x200B; une &#x200B;](https://experienceleague.adobe.com/fr/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) partition de lead est un concept utilisé pour séparer les enregistrements de lead par entreprise (marque ou région de vente, par exemple). Si votre abonnement Marketo ne dispose pas de la fonctionnalité Espaces de travail et partitions, ou si aucune partition supplémentaire n’a été créée dans votre abonnement, seule la partition Par défaut est disponible. Une configuration unique ne peut mettre à jour que les enregistrements de prospect qui existent dans sa partition configurée.
+Une fois que vous avez sélectionné votre instance, vous devez également sélectionner la partition de lead à laquelle vous souhaitez que la configuration s’intègre. Dans [ une ](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) partition de lead est un concept utilisé pour séparer les enregistrements de lead par entreprise (marque ou région de vente, par exemple). Si votre abonnement Marketo ne dispose pas de la fonctionnalité Espaces de travail et partitions, ou si aucune partition supplémentaire n’a été créée dans votre abonnement, seule la partition Par défaut est disponible. Une configuration unique ne peut mettre à jour que les enregistrements de prospect qui existent dans sa partition configurée.
 
 >[!IMPORTANT]
 >

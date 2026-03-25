@@ -1,18 +1,18 @@
 ---
 title: Connexion HubSpot
-description: La destination HubSpot vous permet de gérer les enregistrements de contact dans votre compte HubSpot.
+description: Utilisez la destination HubSpot pour gérer les enregistrements de contact dans votre compte HubSpot.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1625'
-ht-degree: 27%
+source-wordcount: '1619'
+ht-degree: 26%
 
 ---
 
 # Connexion [!DNL HubSpot]
 
-[[!DNL HubSpot]](https://www.hubspot.com) est une plateforme CRM proposant l’ensemble des logiciels, intégrations et ressources dont vous avez besoin pour connecter les services marketing, ventes, gestion de contenu et clientèle. Il vous permet de connecter vos données, vos équipes et vos clients sur une seule plateforme CRM.
+[[!DNL HubSpot]](https://www.hubspot.com) est une plateforme CRM proposant l’ensemble des logiciels, intégrations et ressources dont vous avez besoin pour connecter les services marketing, ventes, gestion de contenu et clientèle. Utilisez-le pour connecter vos données, vos équipes et vos clients sur une seule plateforme CRM.
 
 Cette [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) utilise l’API [[!DNL HubSpot] Contacts](https://developers.hubspot.com/docs/api/crm/contacts) pour mettre à jour les contacts dans [!DNL HubSpot] à partir d’une audience Experience Platform existante après activation.
 
@@ -26,11 +26,11 @@ Pour mieux comprendre quand et comment utiliser la destination [!DNL HubSpot], c
 
 ## Conditions préalables {#prerequisites}
 
-Reportez-vous aux sections ci-dessous pour connaître les conditions préalables à configurer dans Experience Platform et [!DNL HubSpot] et pour obtenir des informations que vous devez rassembler avant d’utiliser la destination [!DNL HubSpot].
+Consultez les sections ci-dessous pour connaître les conditions préalables à configurer dans Experience Platform et [!DNL HubSpot] et pour obtenir des informations que vous devez rassembler avant d’utiliser la destination [!DNL HubSpot].
 
 ### Conditions préalables d’Experience Platform {#prerequisites-in-experience-platform}
 
-Avant d’activer des données dans la destination [!DNL HubSpot], vous devez avoir créé un [schéma](/help/xdm/schema/composition.md), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr) et des [audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=fr) dans [!DNL Experience Platform].
+Avant d’activer des données dans la destination [!DNL HubSpot], vous devez avoir créé un [schéma](/help/xdm/schema/composition.md), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) et des [audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) dans [!DNL Experience Platform].
 
 Reportez-vous à la documentation Experience Platform pour le [groupe de champs de schéma Détails sur l’appartenance à une audience](/help/xdm/field-groups/profile/segmentation.md) si vous avez besoin de conseils sur les statuts de l’audience.
 
@@ -46,7 +46,7 @@ Pour exporter des données d’Experience Platform vers votre compte [!DNL Hubsp
 
 Vous avez besoin de votre [!DNL HubSpot] `Access token` pour permettre à la destination [!DNL HubSpot] d’effectuer des appels API via votre application privée [!DNL HubSpot] dans votre compte [!DNL HubSpot]. Le `Access token` sert de `Bearer token` lorsque vous [authentifiez la destination](#authenticate).
 
-Si vous ne disposez pas d’une application privée, consultez la documentation pour [&#x200B; Créer une application privée dans  [!DNL HubSpot]](https://developers.hubspot.com/docs/api/private-apps).
+Si vous ne disposez pas d’une application privée, consultez la documentation pour [ Créer une application privée dans  [!DNL HubSpot]](https://developers.hubspot.com/docs/api/private-apps).
 
 >[!IMPORTANT]
 >
@@ -60,7 +60,7 @@ Si vous ne disposez pas d’une application privée, consultez la documentation 
 
 ## Mécanismes de sécurisation {#guardrails}
 
-[!DNL HubSpot] applications privées sont soumises à des [limites de taux](https://developers.hubspot.com/docs/api/usage-details). Le nombre d’appels que votre application privée peut effectuer est basé sur votre abonnement au compte [!DNL HubSpot] et sur le fait que vous ayez ou non acheté le module complémentaire API. Reportez-vous également à la section [&#x200B; Autres limites &#x200B;](https://developers.hubspot.com/docs/api/usage-details#other-limits).
+[!DNL HubSpot] applications privées sont soumises à des [limites de taux](https://developers.hubspot.com/docs/api/usage-details). Le nombre d’appels que votre application privée peut effectuer est basé sur votre abonnement au compte [!DNL HubSpot] et sur le fait que vous ayez ou non acheté le module complémentaire API. Voir aussi [Autres limites](https://developers.hubspot.com/docs/api/usage-details#other-limits).
 
 ## Identités prises en charge {#supported-identities}
 
@@ -93,7 +93,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -101,7 +101,7 @@ Audiences prises en charge par type de données d’audience :
 
 ## Type et fréquence d’exportation {#export-type-frequency}
 
-Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
+Consultez le tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
 |---------|----------|---------|
@@ -122,7 +122,7 @@ Dans **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, recherchez [!DNL 
 
 ### S’authentifier auprès de la destination {#authenticate}
 
-Renseignez les champs obligatoires ci-dessous. Reportez-vous à la section [Collecter le jeton  [!DNL HubSpot] ’accès d’application privée](#gather-credentials) pour obtenir des conseils.
+Renseignez les champs obligatoires ci-dessous. Pour obtenir des conseils, consultez la section [Collecter le jeton  [!DNL HubSpot] ’accès à l’application privée](#gather-credentials) .
 
 * **[!UICONTROL Bearer token]** : jeton d’accès pour votre application privée [!DNL HubSpot].
 
@@ -207,7 +207,7 @@ Lorsque vous avez terminé de fournir les mappages pour votre connexion de desti
 
 Pour vérifier que vous avez correctement configuré la destination, procédez comme suit :
 
-1. Connectez-vous au site web [!DNL HubSpot], puis accédez à la page **[!UICONTROL Contacts]** pour vérifier les statuts de l’audience. Cette liste peut être configurée pour afficher des colonnes pour les propriétés personnalisées créées avec le nom de l’audience et dont la valeur est le statut de l’audience.
+1. Accédez au site web [!DNL HubSpot], puis à la page **[!UICONTROL Contacts]** pour vérifier les statuts de l’audience. Cette liste peut être configurée pour afficher des colonnes pour les propriétés personnalisées créées avec le nom de l’audience et dont la valeur est le statut de l’audience.
    Capture d’écran de l’interface utilisateur ![HubSpot) montrant la page Contacts avec des en-têtes de colonne indiquant le nom de l’audience et les cellules des statuts d’audience](../../assets/catalog/crm/hubspot/contacts.png)
 
 1. Vous pouvez également explorer une page de **[!UICONTROL Person]** individuelle et accéder aux propriétés affichant le nom de l’audience et les statuts de l’audience.

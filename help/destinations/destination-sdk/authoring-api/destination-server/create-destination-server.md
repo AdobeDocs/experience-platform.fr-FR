@@ -2,10 +2,10 @@
 description: Cette page illustre comment l’appel API est utilisé pour créer un serveur de destination avec Adobe Experience Platform Destination SDK.
 title: Création d’une configuration de serveur de destination
 exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2038'
-ht-degree: 84%
+source-wordcount: '2029'
+ht-degree: 80%
 
 ---
 
@@ -100,7 +100,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `urlBasedDestination.url.value` | Chaîne | *Obligatoire.* Renseignez l’adresse du point d’entrée d’API auquel Experience Platform doit se connecter. |
 | `httpTemplate.httpMethod` | Chaîne | *Obligatoire.* Méthode qu’Adobe utilise dans les appels vers votre serveur. Les options sont les suivantes : `GET`, `PUT`, `POST`, `DELETE` ou `PATCH`. |
 | `httpTemplate.requestBody.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
-| `httpTemplate.requestBody.value` | Chaîne | *Obligatoire.* Cette chaîne est la version avec caractères d’échappement qui transforme les données des clients Experience Platform au format attendu par votre service. <br> <ul><li> Pour plus d’informations sur l’écriture du modèle, lisez la section [Utilisation des modèles](../../functionality/destination-server/message-format.md#using-templating). </li><li> Pour plus d’informations sur l’échappement des caractères, reportez-vous à la section [Norme RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Pour obtenir un exemple de transformation simple, consultez la transformation des [attributs de profil](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
+| `httpTemplate.requestBody.value` | Chaîne | *Obligatoire.* Cette chaîne est la version avec caractères d’échappement qui transforme les données des clients Experience Platform au format attendu par votre service. <br> <ul><li> Pour plus d’informations sur l’écriture du modèle, lisez la section [Utilisation des modèles](../../functionality/destination-server/message-format.md#using-templating). </li><li> Pour plus d’informations sur les caractères d’échappement, consultez la section Norme [RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Pour obtenir un exemple de transformation simple, reportez-vous à la transformation [Attributs de profil](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
 | `httpTemplate.contentType` | Chaîne | *Obligatoire.* Type de contenu que votre serveur accepte. Cette valeur est probablement `application/json`. |
 
 {style="table-layout:auto"}
@@ -782,7 +782,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec les détails de la config
 
 ### Créer des serveurs de destination de schéma dynamique {#dynamic-schema-servers}
 
-Les schémas dynamiques vous permettent de récupérer dynamiquement les attributs cibles pris en charge et de générer des schémas basés sur votre propre API. Vous devez configurer un serveur de destination pour les schémas dynamiques avant de pouvoir configurer le schéma.
+Les schémas dynamiques récupèrent de manière dynamique les attributs cibles pris en charge et génèrent des schémas en fonction de votre propre API. Vous devez configurer un serveur de destination pour les schémas dynamiques avant de pouvoir configurer le schéma.
 
 Consultez dans l’onglet ci-dessous un exemple de serveur de destination pour les destinations qui utilisent les [schémas dynamiques](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration).
 
@@ -836,7 +836,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `urlBasedDestination.url.value` | Chaîne | *Obligatoire.* Renseignez l’adresse du point d’entrée de l’API auquel Experience Platform doit se connecter et récupérez les champs de schéma à remplir en tant que champs cibles dans l’étape de mappage du workflow d’activation. |
 | `httpTemplate.httpMethod` | Chaîne | *Obligatoire.* Méthode qu’Adobe utilise dans les appels vers votre serveur. Quand les serveurs de schéma sont dynamiques, utilisez `GET`. |
 | `responseFields.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
-| `responseFields.value` | Chaîne | *Obligatoire.* Cette chaîne est le modèle de transformation de caractères d’échappement transformant la réponse reçue de l’API du partenaire en schéma du partenaire qui s’affichera dans l’interface utilisateur d’Experience Platform. <br> <ul><li> Pour plus d’informations sur l’écriture du modèle, lisez la section [Utilisation des modèles](../../functionality/destination-server/message-format.md#using-templating). </li><li> Pour plus d’informations sur l’échappement des caractères, reportez-vous à la section [Norme RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Pour obtenir un exemple de transformation simple, consultez la transformation des [attributs de profil](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
+| `responseFields.value` | Chaîne | *Obligatoire.* Cette chaîne est le modèle de transformation de caractères d’échappement transformant la réponse reçue de l’API du partenaire en schéma du partenaire qui s’affichera dans l’interface utilisateur d’Experience Platform. <br> <ul><li> Pour plus d’informations sur l’écriture du modèle, lisez la section [Utilisation des modèles](../../functionality/destination-server/message-format.md#using-templating). </li><li> Pour plus d’informations sur les caractères d’échappement, consultez la section Norme [RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Pour obtenir un exemple de transformation simple, reportez-vous à la transformation [Attributs de profil](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -934,7 +934,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `httpTemplate.httpMethod` | Chaîne | *Obligatoire.* Méthode qu’Adobe utilise dans les appels vers votre serveur. Pour les serveurs de liste déroulante dynamique, utilisez `GET`. |
 | `httpTemplate.headers` | Objet | *Facultatif.l* Incluez les en-têtes requis pour la connexion au serveur de liste déroulante dynamique. |
 | `responseFields.templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
-| `responseFields.value` | Chaîne | *Obligatoire.* Cette chaîne est le modèle de transformation de caractères d’échappement transformant la réponse reçue de votre API en valeurs qui s’afficheront dans l’interface utilisateur d’Experience Platform. <br> <ul><li> Pour plus d’informations sur l’écriture du modèle, lisez la section [Utilisation des modèles](../../functionality/destination-server/message-format.md#using-templating). </li><li> Pour plus d’informations sur l’échappement des caractères, reportez-vous à la section [Norme RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). |
+| `responseFields.value` | Chaîne | *Obligatoire.* Cette chaîne est le modèle de transformation de caractères d’échappement transformant la réponse reçue de votre API en valeurs qui s’afficheront dans l’interface utilisateur d’Experience Platform. <br> <ul><li> Pour plus d’informations sur l’écriture du modèle, lisez la section [Utilisation des modèles](../../functionality/destination-server/message-format.md#using-templating). </li><li> Pour plus d’informations sur les caractères d’échappement, consultez la section Norme [RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). |
 
 {style="table-layout:auto"}
 
@@ -950,7 +950,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec les détails de la config
 
 ## Gestion des erreurs d’API {#error-handling}
 
-Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes d’état API](../../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état API](../../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 

@@ -3,9 +3,9 @@ keywords: extensions de pixels facebook;extension de pixels facebook;destination
 title: Extension Pixel Facebook
 description: L’extension Facebook Pixel est une destination publicitaire dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 6a2c661f-1ad0-4d96-b1bb-bf8c158c8521
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '419'
 ht-degree: 59%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 59%
 
 ## Vue d’ensemble {#overview}
 
-Le [!DNL Facebook Pixel] est un outil d&#39;analyse qui vous permet de mesurer l&#39;efficacité de votre publicité en comprenant les actions que les gens font sur votre site Web.
+Le [!DNL Facebook Pixel] est un outil d&#39;analyse qui permet de mesurer l&#39;efficacité de votre publicité en comprenant les actions que les gens font sur votre site Web.
 
 [!DNL Facebook Pixel] est une extension publicitaire en [!DNL Adobe Experience Platform]. Pour plus d’informations sur la fonctionnalité de l’extension, voir le [site web Pixel Facebook](https://developers.facebook.com/docs/facebook-pixel/).
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension Pixel Facebook](../../assets/catalog/advertising/facebook-pixel/catalog.png)
 
@@ -32,7 +32,7 @@ Pour utiliser cette extension, vous devez accéder aux balises dans [!DNL Adobe 
 
 Pour installer l’extension [!DNL Facebook Pixel], procédez comme suit :
 
-Dans l’interface d’[&#128279;](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+Dans l’interface d’[](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 

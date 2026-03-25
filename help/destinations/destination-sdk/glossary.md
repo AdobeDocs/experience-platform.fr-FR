@@ -3,16 +3,16 @@ solution: Experience Platform
 title: Glossaire Adobe Experience Platform Destination SDK
 description: comprendre la terminologie importante lors de la création d’une destination à l’aide d’Experience Platform Destination SDK ;
 exl-id: d65f390a-a980-49b8-9570-840f03534553
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '669'
 ht-degree: 3%
 
 ---
 
 # Glossaire [!DNL Adobe Experience Platform] Destination SDK
 
-Reportez-vous à ce glossaire pour connaître la définition des termes utilisés dans Destination SDK. Pour d’autres termes [!DNL Adobe Experience Platform], reportez-vous au glossaire [Experience Platform](/help/landing/glossary.md).
+Voir ce glossaire pour connaître la définition des termes utilisés dans Destination SDK. Pour d’autres termes [!DNL Adobe Experience Platform], voir le glossaire [Experience Platform](/help/landing/glossary.md).
 
 ## A {#a}
 
@@ -44,6 +44,6 @@ Reportez-vous à ce glossaire pour connaître la définition des termes utilisé
 
 **Spécifications de modèle et stratégies de modèle** : les spécifications de modèle sont des configurations utilisées pour formater les requêtes HTTP envoyées de [!DNL Adobe Experience Platform] vers une destination. Ils transforment les champs d’attribut de profil du schéma XDM en un format pris en charge par la plateforme de destination. En utilisant un langage de modèle similaire à [!DNL Jinja], ces spécifications permettent des transformations de données dynamiques basées sur des règles spécifiques et des données d’entrée. [En savoir plus](/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md).
 
-**API de test** : l’API de test vous permet de valider les configurations de destination avant d’envoyer une demande de publication. Il fournit des outils pour générer des profils types et tester le flux de données, en s’assurant que la configuration correspond aux exigences de la destination. L’API prend en charge les destinations en flux continu et basées sur des fichiers (par lots), offrant un moyen de simuler les données et de résoudre les problèmes potentiels dans le processus de configuration. En savoir plus sur l’API de test pour les destinations [en flux continu](/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md) et [basées sur des fichiers](/help/destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md).
+**API de test** : utilisez l’API de test pour valider les configurations de destination avant d’envoyer une demande de publication. Il fournit des outils pour générer des profils types et tester le flux de données, en s’assurant que la configuration correspond aux exigences de la destination. L’API prend en charge les destinations en flux continu et basées sur des fichiers (par lots), offrant un moyen de simuler les données et de résoudre les problèmes potentiels dans le processus de configuration. En savoir plus sur l’API de test pour les destinations [en flux continu](/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md) et [basées sur des fichiers](/help/destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md).
 
 **Modèle de transformation** : un modèle de transformation personnalise le format des données du schéma XDM d’Adobe au format attendu de la destination. [En savoir plus](/help/destinations/destination-sdk/functionality/destination-server/message-format.md).

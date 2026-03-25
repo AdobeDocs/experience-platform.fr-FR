@@ -1,10 +1,10 @@
 ---
-description: Découvrez comment configurer les spécifications de serveur de destination dans Adobe Experience Platform Destination SDK via le point d’entrée &grave;/authoring/destination-servers&grave;.
+description: Découvrez comment configurer les spécifications de serveur de destination dans Adobe Experience Platform Destination SDK via le point d’entrée `/authoring/destination-servers`.
 title: Spécifications de serveur pour les destinations créées avec Destination SDK
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2748'
+source-wordcount: '2745'
 ht-degree: 85%
 
 ---
@@ -46,7 +46,7 @@ Pendant la [création](../../authoring-api/destination-server/create-destination
 
 ## Champs codés en dur ou modélisés {#templatized-fields}
 
-Pendant la création d’un serveur de destination avec Destination SDK, vous pouvez définir des valeurs de paramètre de configuration en les codant en dur dans la configuration ou en utilisant des champs modélisés. Les champs modélisés vous permettent de lire les valeurs fournies par l’utilisateur à partir de l’interface utilisateur d’Experience Platform.
+Pendant la création d’un serveur de destination avec Destination SDK, vous pouvez définir des valeurs de paramètre de configuration en les codant en dur dans la configuration ou en utilisant des champs modélisés. Les champs modélisés lisent les valeurs fournies par l’utilisateur dans l’interface utilisateur d’Experience Platform.
 
 Les paramètres du serveur de destination comportent deux champs configurables. Ces options indiquent si vous utilisez des valeurs codées en dur ou modélisées.
 
@@ -160,7 +160,7 @@ L’exemple ci-dessous montre un modèle de configuration de serveur de destinat
 
 ## Serveur de destination [!DNL Amazon S3] {#s3-example}
 
-Ce serveur de destination vous permet d’exporter des fichiers contenant des données [!DNL Adobe Experience Platform] vers votre stockage Amazon S3.
+Utilisez ce serveur de destination pour exporter des fichiers contenant des données [!DNL Adobe Experience Platform] vers votre stockage Amazon S3.
 
 L’exemple ci-dessous montre un modèle de configuration de serveur de destination pour une destination Amazon S3.
 
@@ -194,7 +194,7 @@ L’exemple ci-dessous montre un modèle de configuration de serveur de destinat
 
 ## Serveur de destination [!DNL SFTP] {#sftp-example}
 
-Ce serveur de destination vous permet d’exporter des fichiers contenant des données [!DNL Adobe Experience Platform] vers votre serveur de stockage [!DNL SFTP].
+Utilisez ce serveur de destination pour exporter des fichiers contenant des données [!DNL Adobe Experience Platform] vers votre serveur de stockage [!DNL SFTP].
 
 L’exemple ci-dessous montre un modèle de configuration de serveur de destination pour une destination SFTP.
 
@@ -232,7 +232,7 @@ L’exemple ci-dessous montre un modèle de configuration de serveur de destinat
 
 ## Serveur de destination [!DNL Azure Data Lake Storage] ([!DNL ADLS]) {#adls-example}
 
-Ce serveur de destination vous permet d’exporter des fichiers contenant des données [!DNL Adobe Experience Platform] vers votre compte [!DNL Azure Data Lake Storage].
+Utilisez ce serveur de destination pour exporter des fichiers contenant des données [!DNL Adobe Experience Platform] vers votre compte [!DNL Azure Data Lake Storage].
 
 L’exemple ci-dessous montre un modèle de configuration de serveur de destination pour une destination [!DNL Azure Data Lake Storage].
 
@@ -260,7 +260,7 @@ L’exemple ci-dessous montre un modèle de configuration de serveur de destinat
 
 ## Serveur de destination [!DNL Azure Blob Storage] {#blob-example}
 
-Ce serveur de destination vous permet d’exporter des fichiers contenant des données [!DNL Adobe Experience Platform] vers votre conteneur [!DNL Azure Blob Storage].
+Utilisez ce serveur de destination pour exporter des fichiers contenant des données [!DNL Adobe Experience Platform] vers votre conteneur [!DNL Azure Blob Storage].
 
 L’exemple ci-dessous montre un modèle de configuration de serveur de destination pour une destination [!DNL Azure Blob Storage].
 
@@ -294,7 +294,7 @@ L’exemple ci-dessous montre un modèle de configuration de serveur de destinat
 
 ## Serveur de destination [!DNL Data Landing Zone] ([!DNL DLZ]) {#dlz-example}
 
-Ce serveur de destination vous permet d’exporter des fichiers contenant des données Experience Platform vers un espace de stockage [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md).
+Utilisez ce serveur de destination pour exporter des fichiers contenant des données Experience Platform vers un espace de stockage [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md).
 
 L’exemple ci-dessous montre un modèle de configuration de serveur de destination pour une destination [!DNL Data Landing Zone] ([!DNL DLZ]).
 
@@ -324,7 +324,7 @@ L’exemple ci-dessous montre un modèle de configuration de serveur de destinat
 
 ## Serveur de destination [!DNL Google Cloud Storage] {#gcs-example}
 
-Ce serveur de destination vous permet d’exporter des fichiers contenant des données Experience Platform vers votre compte [!DNL Google Cloud Storage].
+Utilisez ce serveur de destination pour exporter des fichiers contenant des données Experience Platform vers votre compte [!DNL Google Cloud Storage].
 
 L’exemple ci-dessous montre un modèle de configuration de serveur de destination pour une destination [!DNL Google Cloud Storage].
 

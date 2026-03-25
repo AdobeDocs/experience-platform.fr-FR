@@ -2,16 +2,16 @@
 description: Découvrez comment configurer les paramètres de diffusion de destination pour les destinations créées avec Destination SDK afin d’indiquer où vont les données exportées et quelle règle d’authentification est utilisée à l’emplacement où les données seront envoyées.
 title: Diffusion de destination
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 79%
+source-wordcount: '639'
+ht-degree: 76%
 
 ---
 
 # Diffusion de destination
 
-Pour mieux contrôler où se trouvent les données exportées vers la destination, Destination SDK vous permet de définir les paramètres de diffusion de destination.
+Pour mieux contrôler où se trouvent les données exportées vers la destination, utilisez Destination SDK afin de spécifier les paramètres de diffusion de destination.
 
 La section de diffusion de destination indique l’emplacement des données exportées et la règle d’authentification utilisée à l’emplacement d’entrée des données.
 

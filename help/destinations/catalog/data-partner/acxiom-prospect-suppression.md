@@ -4,10 +4,10 @@ description: Exportez vos audiences propriétaires vers la destination Acxiom po
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: label="Beta" type="Informative"
 exl-id: d82e8cd3-970c-44af-99b0-ea154eb3655e
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1536'
-ht-degree: 23%
+source-wordcount: '1531'
+ht-degree: 22%
 
 ---
 
@@ -50,7 +50,7 @@ Le service d’Acxiom recherche le fichier, le récupère et l’utilise avec de
 >[!IMPORTANT]
 >
 >* Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL View Destinations]** et **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 ## Audiences prises en charge {#supported-audiences}
 
@@ -72,7 +72,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -80,7 +80,7 @@ Audiences prises en charge par type de données d’audience :
 
 ## Type et fréquence d’exportation {#export-type-frequency}
 
-Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
+Consultez le tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
 |------------------|--------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -137,7 +137,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 >
 >Lors de la sélection de l’option CSV, les options *Délimiteur*, *Citation*, *Caractère d’échappement*, *Valeur vide*, *Valeur nulle*, *Format de compression* et *Inclure le fichier manifeste* sont présentées. Le document suivant explique ces paramètres de manière plus détaillée [configurer les options de formatage](../../ui/batch-destinations-file-formatting-options.md).
 
-![&#x200B; Options CSV &#x200B;](../../assets/catalog/data-partner/acxiom/image-destination-csv-options.png)
+![ Options CSV ](../../assets/catalog/data-partner/acxiom/image-destination-csv-options.png)
 
 ### Activer les alertes {#enable-alerts}
 
@@ -150,7 +150,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
@@ -187,7 +187,7 @@ Pour contrôler que l’exportation des données a bien réussi, vérifiez votre
 
 ## Étapes suivantes {#next-steps}
 
-Ce tutoriel vous a permis de créer un flux de données pour exporter des données par lots d’Experience Platform vers votre emplacement S3 géré par [!DNL Acxiom]. Vous devez contacter votre représentant Acxiom avec le nom du compte, le nom de fichier et le chemin d’accès au compartiment afin que le traitement puisse s’installer.
+Vous avez créé un flux de données pour exporter des données par lots d’Experience Platform vers votre emplacement S3 géré par [!DNL Acxiom]. Vous devez contacter votre représentant Acxiom avec le nom du compte, le nom de fichier et le chemin d’accès au compartiment afin que le traitement puisse s’installer.
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

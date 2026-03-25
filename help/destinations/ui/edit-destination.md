@@ -3,9 +3,9 @@ title: Modifier les destinations
 type: Tutorial
 description: Découvrez comment modifier et mettre à jour les comptes de destinations existants dans l’interface utilisateur de Adobe Experience Platform
 exl-id: f3298836-668b-43fb-b4f3-85a650766f05
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '364'
 ht-degree: 5%
 
 ---
@@ -28,7 +28,7 @@ Pour modifier différents composants d’une connexion de destination existante 
 
 1. Accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**.
 2. Sélectionnez la destination que vous souhaitez modifier.
-3. Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande ![Modifier la destination &#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;pour modifier les connexions de destination existantes.
+3. Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Name] et utilisez la commande ![Modifier la destination ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**pour modifier les connexions de destination existantes.
 4. Dans la fenêtre modale, modifiez tous les paramètres souhaités. Sélectionnez **[!UICONTROL Save]** lorsque vous avez terminé.
 
 Dans la fenêtre Modifier la destination , vous pouvez mettre à jour les paramètres que vous avez configurés lors de la connexion initiale à la destination. Ces paramètres sont différents en fonction de la plateforme de destination que vous mettez à jour.
@@ -61,6 +61,6 @@ Vous trouverez ci-dessous quelques exemples de paramètres que vous pouvez mettr
 
 ## Étapes suivantes {#next-steps}
 
-Ce tutoriel vous a permis d’utiliser l’espace de travail **[!UICONTROL destinations]** pour mettre à jour les connexions de destination existantes.
+Vous avez correctement mis à jour les connexions de destination existantes à l’aide de l’espace de travail **[!UICONTROL destinations]**.
 
 Pour plus d’informations sur les destinations, consultez la [présentation des destinations](../catalog/overview.md).

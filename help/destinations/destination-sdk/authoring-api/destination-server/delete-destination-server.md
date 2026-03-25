@@ -2,10 +2,10 @@
 description: Cette page illustre comment l’appel API est utilisé pour supprimer une configuration de serveur de destination existante avec Adobe Experience Platform Destination SDK.
 title: Suppression d’une configuration de serveur de destination
 exl-id: 2322a2ce-220e-4590-a553-b15152412752
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 84%
+source-wordcount: '328'
+ht-degree: 85%
 
 ---
 
@@ -66,7 +66,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec une réponse HTTP vide.
 
 ## Gestion des erreurs d’API {#error-handling}
 
-Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes d’état API](../../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état API](../../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 

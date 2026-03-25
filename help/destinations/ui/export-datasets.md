@@ -3,9 +3,9 @@ title: Exporter des jeux de données vers des destinations d’espace de stockag
 type: Tutorial
 description: Découvrez comment exporter des jeux de données d’Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2968'
+source-wordcount: '2966'
 ht-degree: 23%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 23%
 >
 >Pour l’un de ces flux de données, vous devez mettre à jour manuellement la date de fin du flux de données avant la date de fin, sinon vos exportations s’arrêteront à cette date. Utilisez l’interface utilisateur d’Experience Platform pour afficher les flux de données qui seront définis pour s’arrêter le 1er septembre 2025.
 >
->Pour plus d’informations sur la modification de la date de fin d’un flux de données d’exportation de jeux de données[&#x200B; consultez la section &#x200B;](#scheduling)planification.
+>Consultez la [section de planification](#scheduling) pour plus d’informations sur la modification de la date de fin d’un flux de données d’exportation de jeu de données.
 
 Cet article explique le processus requis pour exporter des [jeux de données](/help/catalog/datasets/overview.md) de [!DNL Adobe Experience Platform] vers l’emplacement de l’espace de stockage de votre choix, comme des [!DNL Amazon S3], des emplacements SFTP ou des [!DNL Google Cloud Storage] à l’aide de l’interface utilisateur d’Experience Platform.
 
@@ -50,16 +50,16 @@ Utilisez le tableau ci-dessous pour comprendre quels types de jeux de données v
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Jeux de données de profil et d’événement d’expérience créés dans l’interface utilisateur d’Experience Platform après l’ingestion ou la collecte de données par le biais de sources, de Web SDK, de Mobile SDK, du connecteur de données Analytics et d’Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=fr#profile-attribute-datasets">Jeu de données d’instantanés de profil généré par le système</a>.</li></td>
+    <td><ul><li>Jeux de données de profil et d’événement d’expérience créés dans l’interface utilisateur d’Experience Platform après l’ingestion ou la collecte de données par le biais de sources, de Web SDK, de Mobile SDK, du connecteur de données Analytics et d’Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">Jeu de données d’instantanés de profil généré par le système</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">[!DNL Adobe Journey Optimizer]</td>
     <td>Prime</td>
-    <td>Reportez-vous à la documentation <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=fr#datasets"> [!DNL Adobe Journey Optimizer]</a> .</td>
+    <td>Reportez-vous à la documentation <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> [!DNL Adobe Journey Optimizer]</a> .</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Reportez-vous à la documentation <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=fr#datasets"> [!DNL Adobe Journey Optimizer]</a> .</td>
+    <td>Reportez-vous à la documentation <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> [!DNL Adobe Journey Optimizer]</a> .</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ Utilisez le tableau ci-dessous pour comprendre quels types de jeux de données v
 
 Regardez la vidéo ci-dessous pour une explication de bout en bout du workflow décrit sur cette page, des avantages de l’utilisation de la fonctionnalité d’exportation du jeu de données et de certains cas d’utilisation suggérés.
 
->[!VIDEO](https://video.tv.adobe.com/v/3448820?captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## Destinations prises en charge {#supported-destinations}
 
@@ -254,7 +254,7 @@ Sur la page **[!UICONTROL Review]**, vous pouvez voir un résumé de votre séle
 
 Lors de l’exportation de jeux de données, Experience Platform crée un ou plusieurs fichiers `.json` ou `.parquet` dans l’emplacement de stockage que vous avez fourni. Attendez-vous à ce que de nouveaux fichiers soient déposés dans votre emplacement de stockage en fonction du planning d’exportation que vous avez fourni.
 
-Experience Platform crée une structure de dossiers dans l’emplacement de stockage que vous avez spécifié, où il dépose les fichiers de jeu de données exportés. Le modèle d’exportation de dossier par défaut est illustré ci-dessous, mais vous pouvez [&#x200B; personnaliser la structure de dossiers à l’aide de vos macros préférées](#edit-folder-path).
+Experience Platform crée une structure de dossiers dans l’emplacement de stockage que vous avez spécifié, où il dépose les fichiers de jeu de données exportés. Le modèle d’exportation de dossier par défaut est illustré ci-dessous, mais vous pouvez [ personnaliser la structure de dossiers à l’aide de vos macros préférées](#edit-folder-path).
 
 >[!TIP]
 >
@@ -285,7 +285,7 @@ Les exportations vers des fichiers JSON sont prises en charge *en mode compress�
 
 Pour supprimer des jeux de données d’un flux de données existant, procédez comme suit :
 
-1. Connectez-vous à l’[interface utilisateur d’](https://experience.adobe.com/platform/) puis sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Browse]** dans l’en-tête supérieur pour afficher vos flux de données de destination existants.
+1. Accédez à l’[interface utilisateur d’](https://experience.adobe.com/platform/) puis sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Browse]** dans l’en-tête supérieur pour afficher vos flux de données de destination existants.
 
    ![La vue de navigation de destination avec une connexion de destination affichée et le reste s’est estompée.](../assets/ui/export-datasets/browse-dataset-connections.png)
 

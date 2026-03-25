@@ -3,7 +3,7 @@ title: Exporter des fichiers à la demande vers des destinations par lots à l�
 type: Tutorial
 description: Découvrez comment exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur d’Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '804'
 ht-degree: 12%
@@ -26,7 +26,7 @@ ht-degree: 12%
 
 Cet article explique comment utiliser l’interface utilisateur d’Experience Platform pour exporter des fichiers à la demande vers des destinations par lots telles que [espace de stockage dans le cloud](/help/destinations/catalog/cloud-storage/overview.md) et [marketing par e-mail](/help/destinations/catalog/email-marketing/overview.md).
 
-Le contrôle **[!UICONTROL Export file now]** vous permet d’exporter un fichier complet sans interrompre le planning d’exportation actuel d’une audience précédemment planifiée. Cette exportation s’ajoute aux exportations précédemment planifiées. Elle ne modifie pas la fréquence d’exportation de l’audience.
+Utilisez le contrôle **[!UICONTROL Export file now]** pour exporter un fichier complet sans interrompre le planning d’exportation actuel d’une audience précédemment planifiée. Cette exportation s’ajoute aux exportations précédemment planifiées. Elle ne modifie pas la fréquence d’exportation de l’audience.
 
 L’exportation du fichier est déclenchée immédiatement et utilise uniquement les données de l’instantané d’évaluation d’audience le plus récent. Elle n’inclut pas les modifications de profil ou d’identité qui se produisent après la création d’instantanés. En revanche, les exportations planifiées incluent à la fois les données d’instantané et les modifications incrémentielles qui se produisent entre la création de l’instantané et l’heure d’exportation.
 

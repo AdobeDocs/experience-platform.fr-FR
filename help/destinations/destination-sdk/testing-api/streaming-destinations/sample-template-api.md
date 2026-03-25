@@ -2,10 +2,10 @@
 description: Découvrez comment utiliser l’API de test de destination pour générer un modèle de transformation de message de test pour la destination.
 title: Génération d’un modèle type de transformation des messages
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '375'
-ht-degree: 86%
+source-wordcount: '373'
+ht-degree: 84%
 
 ---
 
@@ -28,7 +28,7 @@ Vous pouvez obtenir un modèle type en adressant une requête GET au point d’
 
 >[!TIP]
 >
->* L’identifiant de destination que vous devez utiliser ici est `instanceId`, qui correspond à une configuration de destination, créée à l’aide du point d’entrée `/destinations`. Pour en savoir plus, consultez [Récupération d’une configuration de destination](../../authoring-api/destination-configuration/retrieve-destination-configuration.md).
+>* L’identifiant de destination que vous devez utiliser ici est `instanceId`, qui correspond à une configuration de destination, créée à l’aide du point d’entrée `/destinations`. Pour plus d’informations, consultez la [récupération d’une configuration de destination](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) .
 
 **Format d’API**
 
@@ -134,7 +134,7 @@ Si l’identifiant de destination que vous fournissez correspond à un modèle d
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes d’état API](../../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état API](../../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 

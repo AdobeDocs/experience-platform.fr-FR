@@ -4,9 +4,9 @@ title: Modifier des connexions de destination à l’aide de l’API Flow Servic
 type: Tutorial
 description: Découvrez comment modifier divers composants d’une connexion de destination à l’aide de l’API Flow Service.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1599'
 ht-degree: 24%
 
 ---
@@ -294,7 +294,7 @@ Une réponse réussie renvoie votre identifiant de connexion cible et une etag m
 
 **Requête**
 
-La requête suivante met à jour le paramètre `advertiserId` d’une [[!DNL Pinterest]  connexion de destination &#x200B;](/help/destinations/catalog/advertising/pinterest.md#parameters).
+La requête suivante met à jour le paramètre `advertiserId` d’une [[!DNL Pinterest]  connexion de destination ](/help/destinations/catalog/advertising/pinterest.md#parameters).
 
 ```shell
 curl -X PATCH \
@@ -463,8 +463,8 @@ Une réponse réussie renvoie votre identifiant de connexion de base et une bali
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[&#x200B; consultez les sections &#x200B;](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état de l’API](/help/landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform pour plus d’informations sur l’interprétation des réponses d’erreur.
 
 ## Étapes suivantes {#next-steps}
 
-En suivant ce tutoriel, vous avez appris à mettre à jour divers composants d’une connexion à la destination à l’aide de l’API [!DNL Flow Service]. Pour plus d’informations sur les destinations, consultez la [présentation des destinations](../home.md).
+Vous avez appris à mettre à jour divers composants d’une connexion de destination à l’aide de l’API [!DNL Flow Service]. Pour plus d’informations sur les destinations, consultez la [présentation des destinations](../home.md).

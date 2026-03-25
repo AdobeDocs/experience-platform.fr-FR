@@ -3,9 +3,9 @@ title: Amazon Ads
 description: Amazon Ads offre toute une gamme de solutions pour vous aider à atteindre vos objectifs publicitaires. Les partenaires de vente enregistrés, les vendeurs et vendeuses, les marchands de livres, les auteures et auteurs Kindle Direct Publishing (KDP), les personnes développant des applications et/ou les agences peuvent tirer parti du connecteur. L’intégration d’Amazon Ads à Adobe Experience Platform offre une intégration clé en main aux produits Amazon Ads, y compris Amazon DSP (ADSP). À l’aide de la destination Amazon Ads dans Adobe Experience Platform, les utilisateurs et utilisatrices peuvent définir des audiences d’annonceurs pour le ciblage et l’activation sur Amazon DSP.
 last-substantial-update: 2025-10-08T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2128'
+source-wordcount: '2127'
 ht-degree: 34%
 
 ---
@@ -59,7 +59,7 @@ La connexion *[!DNL Amazon Ads]* prend en charge l’activation des identités d
 | email_lc_sha256 | Adresses e-mail hachées avec l’algorithme SHA256 | Le texte brut et les adresses e-mail hachées SHA256 sont pris en charge par [!DNL Adobe Experience Platform]. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Apply transformation]** pour que [!DNL Experience Platform] hache automatiquement les données lors de l’activation. |
 | `firstName` | Prénom de l’utilisateur | Prend en charge le texte brut ou le SHA256. Si du texte brut est utilisé, activez [!UICONTROL Apply transformation] dans l’interface utilisateur d’Adobe. |
 | `lastName` | Nom de famille de l&#39;utilisateur | Prend en charge le texte brut ou le SHA256. Si du texte brut est utilisé, activez [!UICONTROL Apply transformation] dans l’interface utilisateur d’Adobe. |
-| `street` | Adresse de l’utilisateur au niveau de la rue | Seule SHA256 entrée hachée est prise en charge. Normalisez avant de procéder au hachage. N’activez **&#x200B;**&#x200B;la transformation côté Adobe. |
+| `street` | Adresse de l’utilisateur au niveau de la rue | Seule SHA256 entrée hachée est prise en charge. Normalisez avant de procéder au hachage. N’activez **** la transformation côté Adobe. |
 | `city` | Ville de l’utilisateur | Prend en charge le texte brut ou le SHA256. Si du texte brut est utilisé, activez [!UICONTROL Apply transformation] dans l’interface utilisateur d’Adobe. |
 | `state` | Département ou province de l&#39;utilisateur | Prend en charge le texte brut ou le SHA256. Si du texte brut est utilisé, activez [!UICONTROL Apply transformation] dans l’interface utilisateur d’Adobe. |
 | `zip` | Code postal de l’utilisateur | Prend en charge le texte brut ou le SHA256. Si du texte brut est utilisé, activez [!UICONTROL Apply transformation] dans l’interface utilisateur d’Adobe. |
@@ -84,7 +84,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -143,7 +143,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -162,7 +162,7 @@ La connexion [!DNL Amazon Ads] prend en charge les adresses e-mail et numéros d
 >
 >Pour utiliser ces champs :
 > 
->* Toutes les valeurs d’identité doivent être normalisées avant l’ingestion. Reportez-vous au [guide de normalisation](https://advertising.amazon.com/help/GCCXMZYCK4RXWS6C).
+>* Toutes les valeurs d’identité doivent être normalisées avant l’ingestion. Voir le [guide de normalisation](https://advertising.amazon.com/help/GCCXMZYCK4RXWS6C).
 >* SHA256 hachage est requis, soit du côté client, soit en activant le paramètre de transformation d’Adobe.
 >* L’interface utilisateur d’Adobe fournit une case à cocher pour appliquer une transformation par champ d’identité lors de la configuration du connecteur.
 

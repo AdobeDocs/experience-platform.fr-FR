@@ -2,9 +2,9 @@
 description: Cette page explique comment utiliser le point d’entrée /testing/destinationInstance de l’API pour afficher les détails complets de vos résultats de test. Ce point d’entrée de l’API renvoie le même résultat que celui obtenu pendant l’utilisation de l’API Flow Service pour surveiller les flux de données.
 title: Consulter les résultats détaillés de l’activation
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '544'
 ht-degree: 85%
 
 ---
@@ -217,7 +217,7 @@ La réponse contient les détails complets du flux d’activation. Vous pouvez o
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes d’état API](../../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état API](../../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 

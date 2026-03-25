@@ -2,9 +2,9 @@
 description: Cette page illustre comment l’appel API est utilisé pour supprimer un modèle d’audience existant avec Adobe Experience Platform Destination SDK.
 title: Suppression d’un modèle d’audience
 exl-id: 6eb07e3c-3269-4368-9b11-04bd993cc4ab
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '286'
 ht-degree: 82%
 
 ---
@@ -65,7 +65,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec une réponse HTTP vide.
 
 ## Gestion des erreurs d’API {#error-handling}
 
-Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes d’état API](../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état API](../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 

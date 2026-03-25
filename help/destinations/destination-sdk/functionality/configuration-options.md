@@ -2,10 +2,10 @@
 description: Le service de destinations dans Adobe Experience Platform utilise des points d’entrée de configuration pour plusieurs composants qui créent la fonctionnalité de destinations. Découvrez comment ces composants combinés permettent à Experience Platform de se connecter à des partenaires de destination, d’envoyer des messages personnalisés et d’activer des données de profil dans l’écosystème numérique.
 title: Options de configuration dans Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '821'
-ht-degree: 82%
+source-wordcount: '817'
+ht-degree: 79%
 
 ---
 
@@ -56,8 +56,8 @@ Pour en savoir plus sur chacun des composants de configuration de destination, c
 
 ## Configuration des métadonnées d’audience {#audience-metadata-configuration}
 
-Ce composant vous permet de configurer la manière dont les audiences sont créées, mises à jour ou supprimées par programmation dans la destination. Pour les destinations basées sur des fichiers, il vous permet de configurer une notification chaque fois que les fichiers sont correctement diffusés vers la destination. Vous pouvez configurer cette fonctionnalité via le [point d’entrée audience-modèles](../metadata-api/create-audience-template.md).
+Utilisez ce composant pour configurer la manière dont les audiences sont créées, mises à jour ou supprimées par programmation dans la destination. Pour les destinations basées sur des fichiers, utilisez-la pour configurer une notification chaque fois que les fichiers sont correctement diffusés vers votre destination. Vous pouvez configurer cette fonctionnalité via le [point d’entrée audience-modèles](../metadata-api/create-audience-template.md).
 
 ## Étapes suivantes {#next-steps}
 
-Grâce à cet article, vous disposez désormais d’une vue d’ensemble sur les fonctionnalités de Destination SDK et des pages à lire pour plus d’informations sur les configurations spécifiques. Vous pouvez à présent lire les guides qui détaillent toutes les étapes pour [configurer une diffusion en streaming](../guides/configure-destination-instructions.md) ou une [destination basée sur les fichiers](../guides/configure-file-based-destination-instructions.md) à l’aide de Destination SDK.
+Vous disposez désormais d’une vue d’ensemble sur les fonctionnalités de Destination SDK et des pages à lire pour plus d’informations sur les configurations spécifiques. Vous pouvez à présent lire les guides qui détaillent toutes les étapes pour [configurer une diffusion en streaming](../guides/configure-destination-instructions.md) ou une [destination basée sur les fichiers](../guides/configure-file-based-destination-instructions.md) à l’aide de Destination SDK.

@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: En savoir plus sur l’utilisation par défaut de l’activation des données et les limites de débit.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: c550186c9cb3bc580a227633e0d7c0b574ecc2e8
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1744'
-ht-degree: 42%
+source-wordcount: '1741'
+ht-degree: 40%
 
 ---
 
@@ -171,7 +171,7 @@ En savoir plus sur l’[export de jeux de données](/help/destinations/ui/export
 
 ### Mécanismes de sécurisation de Destination SDK {#destination-sdk-guardrails}
 
-[Destination SDK](/help/destinations/destination-sdk/overview.md) est une suite dʼAPI de configuration permettant de configurer des modèles dʼintégration de destination, afin quʼExperience Platform puisse envoyer des données dʼaudience et de profil à votre point dʼentrée, selon les formats de données et dʼauthentification choisis. Les mécanismes de sécurisation ci-dessous s’appliquent aux destinations que vous configurez à l’aide de Destination SDK.
+[](/help/destinations/destination-sdk/overview.md) est une suite d’API de configuration permettant de configurer des modèles d’intégration de destination pour qu’Experience Platform diffuse des données d’audience et de profil vers votre point d’entrée, en fonction des données et des formats d’authentification de votre choix. Les mécanismes de sécurisation ci-dessous s’appliquent aux destinations que vous configurez à l’aide de Destination SDK.
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
@@ -196,7 +196,7 @@ Détails sur les seuils de limitations ou les limites pour des destinations donn
 Consultez la documentation suivante pour plus d’informations sur les autres mécanismes de sécurisation des services Experience Platform, sur les informations de latence de bout en bout et les informations de licence à partir des documents de description [!DNL Real-Time CDP] produit :
 
 * [Mécanismes de sécurisation de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=fr#end-to-end-latency-diagrams) pour divers services Experience Platform.
+* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.
 * [Real-Time Customer Data Platform (B2C Edition - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

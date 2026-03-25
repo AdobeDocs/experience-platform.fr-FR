@@ -5,16 +5,16 @@ solution: Experience Platform
 title: Surveiller les flux de données
 type: Tutorial
 exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '126'
 ht-degree: 35%
 
 ---
 
 # Surveiller les flux de données
 
-[!UICONTROL Destinations] vous permet d’activer vos données de [!DNL Adobe Experience Platform] à d’innombrables partenaires externes.
+Utilisez [!UICONTROL Destinations] pour activer vos données de [!DNL Adobe Experience Platform] à d’innombrables partenaires externes.
 
 Les flux de données sont une représentation des tâches de données qui déplacent ces dernières entre les [!DNL Experience Platform]. Ces flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers des jeux de données cibles, où elles sont ensuite utilisées par les [!DNL Identity Service] et [!DNL Real-Time Customer Profile] avant d’être finalement activées vers les destinations.
 

@@ -3,9 +3,9 @@ keywords: kickfire;Kickfire;extension kickfire;Extension Kickfire
 title: Extension KickFire
 description: L’extension KickFire est une destination de personnalisation de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: c2313474-05d5-4c06-8aa5-ed10e9e9226e
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '418'
 ht-degree: 58%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 58%
 
 ## Vue d’ensemble {#overview}
 
-L’intelligence [!DNL KickFire's] des adresses IP et les données firmographiques B2B vous permettent de traduire des adresses IP vers des entreprises, d’identifier des visiteurs web anonymes et d’intégrer des données de compte dans votre pile technologique, le tout en fonction de l’adresse IP d’une entreprise.
+[!DNL KickFire's]’intelligence relative aux adresses IP et les données firmographiques B2B traduisent les adresses IP en adresses aux entreprises, identifient les visiteurs web anonymes et intègrent les données de compte dans votre pile technologique, le tout en fonction de l’adresse IP d’une entreprise.
 
 [!DNL KickFire] est une extension de personnalisation dans [!DNL Adobe Experience Platform]. Pour plus d’informations sur les fonctionnalités de l’extension, consultez le [site web de KickFire](https://www.kickfire.com/).
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension KickFire](../../assets/catalog/personalization/kickfire/catalog.png)
 
@@ -32,7 +32,7 @@ Pour utiliser cette extension, vous devez accéder aux balises dans [!DNL Adobe 
 
 Pour installer l’extension [!DNL KickFire], procédez comme suit :
 
-Dans l’interface d’[&#128279;](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+Dans l’interface d’[](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 

@@ -5,10 +5,10 @@ title: Supprimer un flux de données de destination à l’aide de l’API Flow 
 type: Tutorial
 description: Découvrez comment supprimer des flux de données vers des destinations par lots et en flux continu à l’aide de l’API Flow Service.
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '557'
-ht-degree: 44%
+source-wordcount: '552'
+ht-degree: 45%
 
 ---
 
@@ -86,11 +86,11 @@ Une réponse réussie renvoie un état HTTP 202 (pas de contenu) et un corps vi
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[&#x200B; consultez les sections &#x200B;](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état de l’API](/help/landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform pour plus d’informations sur l’interprétation des réponses d’erreur.
 
 ## Étapes suivantes {#next-steps}
 
-Ce tutoriel vous a permis d’utiliser l’API [!DNL Flow Service] pour supprimer un flux de données existant vers une destination.
+Vous avez correctement utilisé l’API [!DNL Flow Service] pour supprimer un flux de données existant vers une destination.
 
 Pour savoir comment effectuer ces opérations à l’aide de l’interface utilisateur, reportez-vous au tutoriel sur la [suppression de flux de données dans l’interface utilisateur](../ui/delete-destinations.md).
 

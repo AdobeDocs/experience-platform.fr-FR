@@ -5,9 +5,9 @@ title: Connectez-vous aux destinations de diffusion en continu et activez les do
 description: Ce document couvre la création de destinations de diffusion en continu à l’aide de l’API Adobe Experience Platform
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2197'
+source-wordcount: '2192'
 ht-degree: 40%
 
 ---
@@ -565,7 +565,7 @@ La réponse renvoyée doit inclure dans le paramètre `transformations` les audi
 
 >[!IMPORTANT]
 >
-> Outre les attributs de profil et les audiences de l’étape [Activer les données vers votre nouvelle destination](#activate-data), les données exportées dans [!DNL AWS Kinesis] et [!DNL Azure Event Hubs] contiendront également des informations sur le mappage d’identités. Cela représente les identités des profils exportés (par exemple [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=fr), identifiant mobile, identifiant Google, adresse e-mail, etc.). Voir un exemple ci-dessous.
+> Outre les attributs de profil et les audiences de l’étape [Activer les données vers votre nouvelle destination](#activate-data), les données exportées dans [!DNL AWS Kinesis] et [!DNL Azure Event Hubs] contiendront également des informations sur le mappage d’identités. Cela représente les identités des profils exportés (par exemple [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), identifiant mobile, identifiant Google, adresse e-mail, etc.). Voir un exemple ci-dessous.
 
 ```json
 {
@@ -632,11 +632,11 @@ Pour établir une connexion aux destinations à l’aide des collections de [!DN
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[&#x200B; consultez les sections &#x200B;](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état de l’API](/help/landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform pour plus d’informations sur l’interprétation des réponses d’erreur.
 
 ## Étapes suivantes {#next-steps}
 
-En suivant ce tutoriel, vous avez réussi à connecter Experience Platform à l’une de vos destinations de diffusion en continu préférées et à configurer un flux de données vers la destination correspondante. Les données sortantes peuvent désormais être utilisées dans la destination pour Customer Analytics ou toute autre opération de données que vous souhaitez effectuer. Pour plus d’informations, consultez les pages suivantes :
+Vous avez réussi à connecter Experience Platform à l’une de vos destinations de diffusion en continu préférées et à configurer un flux de données vers la destination correspondante. Les données sortantes peuvent désormais être utilisées dans la destination pour Customer Analytics ou toute autre opération de données que vous souhaitez effectuer. Pour plus d’informations, consultez les pages suivantes :
 
 * [Présentation des destinations](../home.md)
 * [Présentation du catalogue des destinations](../catalog/overview.md)

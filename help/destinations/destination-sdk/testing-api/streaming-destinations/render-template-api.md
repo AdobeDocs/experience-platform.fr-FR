@@ -2,10 +2,10 @@
 description: Découvrez comment utiliser l’API de test de destination pour valider la sortie vers la destination de diffusion en streaming, en fonction de votre modèle de transformation de message.
 title: Validation de la structure de profil exportée
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 93%
+source-wordcount: '790'
+ht-degree: 92%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 93%
 
 >[!IMPORTANT]
 >
->**Point d’entrée de l’API &#x200B;** : `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
+>**Point d’entrée de l’API ** : `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
 
 Cette page répertorie toutes les opérations d’API que vous pouvez effectuer à l’aide du point d’entrée de l’API `/authoring/testing/template/render` et fournit leur description. Effectuez le rendu des profils exportés correspondant au format de destination attendu, en fonction de votre [modèle de transformation de message](../../functionality/destination-server/message-format.md#using-templating). Pour une description des fonctionnalités prises en charge par ce point d’entrée, consultez la section [Créer un modèle](create-template.md).
 
@@ -30,7 +30,7 @@ Commencez par utiliser un modèle simple qui exporte vos profils bruts sans appl
 
 >[!TIP]
 >
->* L’identifiant de destination que vous devez utiliser ici est `instanceId`, qui correspond à une configuration de destination, créée à l’aide du point d’entrée `/destinations`. Pour plus d’informations, consultez la [récupération d’une configuration de destination](../../authoring-api/destination-configuration/retrieve-destination-configuration.md).
+>* L’identifiant de destination que vous devez utiliser ici est `instanceId`, qui correspond à une configuration de destination, créée à l’aide du point d’entrée `/destinations`. Voir [récupération d’une configuration de destination](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) pour plus d’informations.
 
 **Format d’API**
 
@@ -1066,7 +1066,7 @@ Une réponse non réussie renvoie un état HTTP 400 avec la description des err
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes d’état API](../../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état API](../../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 

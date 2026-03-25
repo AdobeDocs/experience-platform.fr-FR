@@ -2,9 +2,9 @@
 description: Configurer des options de formatage de fichier pour les destinations basées sur des fichiers
 title: Découvrez comment utiliser Destination SDK pour configurer des options de formatage de fichier pour les destinations basées sur des fichiers.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '896'
 ht-degree: 22%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 22%
 
 ## Vue d’ensemble {#overview}
 
-Destination SDK vous permet d’ajuster considérablement les options de formatage et de compression de vos fichiers exportés, afin de répondre à toutes les exigences en aval de votre emplacement de stockage.
+Utilisez Destination SDK pour ajuster de manière approfondie les options de formatage et de compression des fichiers exportés, afin de répondre à toutes les exigences en aval de votre emplacement de stockage.
 
 Cette page décrit comment utiliser Destination SDK pour configurer les options de formatage de fichier pour les destinations basées sur des fichiers.
 
 ## Conditions préalables {#prerequisites}
 
-Avant de passer aux étapes décrites ci-dessous, veuillez lire la page de prise en main de Destination SDK [&#128279;](../../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification Adobe I/O nécessaires et d’autres conditions préalables pour travailler avec les API Destination SDK.
+Avant de passer aux étapes décrites ci-dessous, lisez la page de prise en main de Destination SDK [](../../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification Adobe I/O nécessaires et d’autres conditions préalables pour travailler avec les API Destination SDK.
 
 Adobe vous recommande également de lire et de vous familiariser avec la documentation suivante avant de continuer :
 
@@ -742,4 +742,4 @@ James,Smith,"","\"\""
 
 ## Étapes suivantes {#next-steps}
 
-Vous êtes arrivé au bout de cet article. À présent, vous savez comment configurer des options de formatage de fichier personnalisées pour les fichiers exportés à l’aide de Destination SDK. Ensuite, votre équipe peut utiliser le [workflow d’activation pour les destinations basées sur des fichiers](../../../ui/activate-batch-profile-destinations.md) pour exporter des données vers la destination.
+Vous savez désormais comment configurer des options de formatage de fichier personnalisées pour vos fichiers exportés à l’aide de Destination SDK. Ensuite, votre équipe peut utiliser le [workflow d’activation pour les destinations basées sur des fichiers](../../../ui/activate-batch-profile-destinations.md) pour exporter des données vers la destination.

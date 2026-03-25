@@ -3,10 +3,10 @@ title: Créer une connexion à une destination
 type: Tutorial
 description: Découvrez comment vous connecter à une destination dans Adobe Experience Platform, activer des alertes et configurer des actions marketing pour votre destination connectée.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1233'
-ht-degree: 64%
+source-wordcount: '1215'
+ht-degree: 56%
 
 ---
 
@@ -33,13 +33,13 @@ Avant d’envoyer des données d’audience vers une destination, vous devez con
    * **[!UICONTROL Activate]**. Une connexion a déjà été configurée vers cette destination. Cette destination prend en charge l’activation des audiences et les exportations de jeux de données.
    * **[!UICONTROL Activate audiences]**. Une connexion a déjà été configurée vers cette destination. Cette destination prend uniquement en charge l’activation des audiences.
 
-   Pour plus d’informations sur la différence entre ces options, vous pouvez également vous reporter à la section [Catalogue](../ui/destinations-workspace.md#catalog) de la documentation de l’espace de travail de destination.
+   Pour plus d’informations sur la différence entre ces commandes, consultez la section [Catalogue](../ui/destinations-workspace.md#catalog) de la documentation de l’espace de travail de destination.
 
    Sélectionnez **[!UICONTROL Set up]**, **[!UICONTROL Activate]** ou **[!UICONTROL Activate audiences]**, selon le contrôle disponible.
 
    ![Copie d’écran de l’interface utilisateur d’Experience Platform présentant la page du catalogue des destinations avec l’option Configurer mise en surbrillance.](../assets/ui/connect-destinations/set-up.png)
 
-   ![&#x200B; Copie d’écran de l’interface utilisateur d’Experience Platform affichant la page du catalogue des destinations avec le contrôle Activer les audiences en surbrillance.](../assets/ui/connect-destinations/activate-segments.png)
+   ![ Copie d’écran de l’interface utilisateur d’Experience Platform affichant la page du catalogue des destinations avec le contrôle Activer les audiences en surbrillance.](../assets/ui/connect-destinations/activate-segments.png)
 
 3. Si vous avez sélectionné **[!UICONTROL Set up]**, passez à l’étape suivante, pour [s’authentifier](#authenticate) à la destination.
 
@@ -109,7 +109,7 @@ Certaines destinations basées sur des fichiers prennent en charge l’activatio
 
 ### Activer les alertes de destination {#enable-alerts}
 
-1. (Facultatif) Sélectionnez les alertes de flux de données de destination auxquelles vous souhaitez vous abonner. Vous pouvez vous abonner aux alertes lors de la création d’un flux de données pour recevoir des messages d’alerte concernant le statut, le succès ou l’échec de l’exécution de votre flux de données. Les alertes disponibles varient en fonction du type de destination (basé sur un fichier ou par diffusion en continu) à laquelle vous vous connectez. Consultez [S’abonner aux alertes de destination contextuelles](alerts.md) pour obtenir des informations détaillées sur les alertes de flux de données de destination.
+1. (Facultatif) Sélectionnez les alertes de flux de données de destination auxquelles vous souhaitez vous abonner. Abonnez-vous aux alertes lors de la création d’un flux de données pour recevoir des messages d’alerte concernant le statut, le succès ou l’échec de l’exécution de votre flux de données. Les alertes disponibles varient en fonction du type de destination (basé sur un fichier ou par diffusion en continu) à laquelle vous vous connectez. Consultez [S’abonner aux alertes de destination contextuelles](alerts.md) pour obtenir des informations détaillées sur les alertes de flux de données de destination.
 
    ![La boîte de dialogue Configurer une nouvelle destination avec les options d’abonnement aux alertes de destination contextuelles mises en surbrillance.](../assets/ui/connect-destinations/subscribe-to-alerts.png)
 
@@ -127,6 +127,6 @@ Certaines destinations basées sur des fichiers prennent en charge l’activatio
 
 ## Étapes suivantes {#next-steps}
 
-En lisant ce document, vous avez appris à utiliser l’interface utilisateur d’Experience Platform pour établir une connexion à une destination. Pour rappel, les paramètres de connexion disponibles et requis varient d’une destination à l’autre. Consultez également la page de documentation sur la destination dans le [catalogues des destinations](/help/destinations/catalog/overview.md) pour obtenir des informations spécifiques sur les entrées requises et les options disponibles par type de destination.
+Vous savez désormais comment utiliser l’interface utilisateur d’Experience Platform pour établir une connexion à une destination. Les paramètres de connexion disponibles et requis varient d’une destination à l’autre. Consultez la page de documentation sur la destination dans le [catalogue des destinations](/help/destinations/catalog/overview.md) pour obtenir des informations spécifiques sur les entrées requises et les options disponibles par type de destination.
 
-Ensuite, vous pouvez passer à [l’activation des audiences](/help/destinations/ui/activation-overview.md) ou [l’exportation de jeux de données](/help/destinations/ui/export-datasets.md) vers votre destination.
+Ensuite, passez à [activation des audiences](/help/destinations/ui/activation-overview.md) ou [exportation de jeux de données](/help/destinations/ui/export-datasets.md) vers votre destination.

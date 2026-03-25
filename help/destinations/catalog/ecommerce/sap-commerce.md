@@ -3,9 +3,9 @@ title: Connexion SAP Commerce
 description: Utilisez le connecteur de destination SAP Commerce pour mettre à jour les enregistrements client dans votre compte SAP.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2293'
+source-wordcount: '2289'
 ht-degree: 19%
 
 ---
@@ -30,7 +30,7 @@ Reportez-vous aux sections ci-dessous pour connaître les conditions préalables
 
 ### Conditions préalables d’Experience Platform {#prerequisites-in-experience-platform}
 
-Avant d’activer des données dans la destination [!DNL SAP Commerce], vous devez avoir créé un [schéma](/help/xdm/schema/composition.md), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr) et des [audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=fr) dans [!DNL Experience Platform].
+Avant d’activer des données dans la destination [!DNL SAP Commerce], vous devez avoir créé un [schéma](/help/xdm/schema/composition.md), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) et des [audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) dans [!DNL Experience Platform].
 
 Reportez-vous à la documentation Experience Platform pour le [groupe de champs de schéma Détails sur l’appartenance à une audience](/help/xdm/field-groups/profile/segmentation.md) si vous avez besoin de conseils sur les statuts de l’audience.
 
@@ -44,7 +44,7 @@ Pour exporter des données d’Experience Platform vers votre compte [!DNL SAP C
 
 #### Générer une clé de service {#prerequisites-service-key}
 
-* La clé de service [!DNL SAP Commerce] permet d’accéder à l’API [!DNL SAP Subscription Billing] via Experience Platform. Reportez-vous à la [!DNL SAP Commerce] [créer une clé de service avec l’ID client et le secret client](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret) pour créer une clé de service. [!DNL SAP Commerce] requiert ce qui suit :
+* La clé de service [!DNL SAP Commerce] permet d’accéder à l’API [!DNL SAP Subscription Billing] via Experience Platform. Voir la [!DNL SAP Commerce] [créer une clé de service avec l’ID client et le secret client](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret) pour créer une clé de service. [!DNL SAP Commerce] requiert ce qui suit :
    * Identifiant client
    * Secret client
    * URL. Le modèle d’URL est le suivant : `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. Cette valeur sera utilisée ultérieurement pour obtenir des valeurs pour `Region` et `Endpoint`.
@@ -86,7 +86,7 @@ Pour créer les références personnalisées, connectez-vous à votre compte [!D
 Vous trouverez ci-dessous un exemple de création d’un **[!UICONTROL Reference Type]** personnalisé dans [!DNL SAP Subscription Billing] :
 ![Image illustrant où créer une référence personnalisée dans la facturation d’abonnement SAP.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
 
-Pour plus d’informations, reportez-vous à la documentation [!DNL SAP Subscription Billing] [références personnalisées](https://help.sap.com/docs/CLOUD_TO_CASH_OD/80d121f216af43648e79664efe5595f7/85696a63c8d8453a934e86c9413a25cf.html?version=2023-11-27).
+Pour plus d’informations, consultez la documentation [!DNL SAP Subscription Billing] [références personnalisées](https://help.sap.com/docs/CLOUD_TO_CASH_OD/80d121f216af43648e79664efe5595f7/85696a63c8d8453a934e86c9413a25cf.html?version=2023-11-27).
 
 ### Collecter les informations d’identification requises {#gather-credentials}
 
@@ -134,7 +134,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -197,7 +197,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -301,12 +301,12 @@ Lorsque vous avez terminé de fournir les mappages pour votre connexion de desti
 
 ### Planifier l’exportation de l’audience et exemple {#schedule-segment-export-example}
 
-Lors de l’exécution de l’étape [&#x200B; Planifier l’exportation d’audience &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling), vous devez mapper manuellement les audiences Experience Platform aux [&#x200B; attributs &#x200B;](#prerequisites-attribute) dans [!DNL SAP Subscription Billing].
+Lors de l’exécution de l’étape [ Planifier l’exportation d’audience ](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling), vous devez mapper manuellement les audiences Experience Platform aux [ attributs ](#prerequisites-attribute) dans [!DNL SAP Subscription Billing].
 
 Un exemple de l’étape Planifier l’exportation de l’audience, avec l’emplacement du [!DNL SAP Commerce] de **[!UICONTROL Mapping ID]** en surbrillance, est illustré ci-dessous :
 ![Image d’Experience Platform montrant l’exportation de l’audience planifiée avec les ID de mappage renseignés.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
 
-Pour ce faire, sélectionnez chaque segment, puis saisissez le nom de la référence personnalisée à partir de [!DNL SAP Subscription Billing] dans le champ Connecteur de destination [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** . Pour plus d’informations sur la création de références personnalisées, reportez-vous à la section [Créer des références personnalisées dans [!DNL SAP Subscription Billing]](#prerequisites-custom-reference).
+Pour ce faire, sélectionnez chaque segment, puis saisissez le nom de la référence personnalisée à partir de [!DNL SAP Subscription Billing] dans le champ Connecteur de destination [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** . Pour plus d’informations sur la création de références personnalisées, consultez la section [Créer des références personnalisées dans [!DNL SAP Subscription Billing]](#prerequisites-custom-reference).
 
 >[!IMPORTANT]
 >
@@ -336,7 +336,7 @@ En fonction de l’image ci-dessus dans laquelle vous avez sélectionné deux au
 
 Pour vérifier que vous avez correctement configuré la destination, procédez comme suit :
 
-Connectez-vous au compte [!DNL SAP Subscription Billing], puis accédez à la page **[!UICONTROL Contacts]** pour vérifier les statuts de l’audience. La liste peut être configurée pour afficher des colonnes pour les références personnalisées et afficher les statuts d’audience correspondants.
+Accédez au compte [!DNL SAP Subscription Billing], puis à la page **[!UICONTROL Contacts]** pour vérifier les statuts de l’audience. La liste peut être configurée pour afficher des colonnes pour les références personnalisées et afficher les statuts d’audience correspondants.
 ![Image de la page SAP Subscription Billing présentant la page de présentation du client avec des en-têtes de colonnes indiquant le nom de l’audience et les cellules des statuts de l’audience](../../assets/catalog/ecommerce/sap-commerce/customer-overview.png)
 
 ## Utilisation et gouvernance des données {#data-usage-governance}

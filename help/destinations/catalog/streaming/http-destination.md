@@ -4,10 +4,10 @@ title: Connexion API HTTP
 description: Utilisez la destination API HTTP dans Adobe Experience Platform pour envoyer des données de profil vers un point d’entrée HTTP tiers afin d’exécuter vos propres analyses ou toute autre opération dont vous pourriez avoir besoin sur les données de profil exportées hors d’Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '3020'
-ht-degree: 48%
+source-wordcount: '3017'
+ht-degree: 47%
 
 ---
 
@@ -25,7 +25,7 @@ Pour envoyer des données de profil à des points d’entrée HTTP, vous devez d
 
 ## Cas d’utilisation {#use-cases}
 
-La destination API HTTP vous permet d’exporter des données de profil XDM et des audiences vers des points d’entrée HTTP génériques. Vous pouvez y lancer vos propres analyses ou effectuer toute autre opération dont vous pourriez avoir besoin sur les données de profil exportées hors d’Experience Platform.
+Utilisez la destination API HTTP pour exporter des données de profil XDM et des audiences vers des points d’entrée HTTP génériques. Vous pouvez y lancer vos propres analyses ou effectuer toute autre opération dont vous pourriez avoir besoin sur les données de profil exportées hors d’Experience Platform.
 
 Les points d’entrée HTTP peuvent être les systèmes des client(e)s ou des solutions tierces.
 
@@ -48,7 +48,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -103,7 +103,7 @@ Pour plus d’informations, consultez la [documentation sur les points d’entr�
 
 ## Liste autorisée d’adresses IP {#ip-address-allowlist}
 
-Pour répondre aux exigences de sécurité et de conformité des clients, Experience Platform fournit une liste des adresses IP statiques que vous pouvez inscrire sur la liste autorisée pour la destination de l’API HTTP. Pour obtenir la liste complète des adresses IP à placer sur la liste autorisée [&#x200B; consultez la section &#x200B;](/help/destinations/catalog/streaming/ip-address-allow-list.md)Adresses IP à configurer pour les destinations de diffusion en continu.
+Pour répondre aux exigences de sécurité et de conformité des clients, Experience Platform fournit une liste des adresses IP statiques que vous pouvez inscrire sur la liste autorisée pour la destination de l’API HTTP. Consultez place sur la liste autorisée d’adresse IP pour les destinations de diffusion en continu[ pour obtenir la liste complète des adresses IP à placer sur la liste autorisée.](/help/destinations/catalog/streaming/ip-address-allow-list.md)
 
 ## Types d’authentification pris en charge {#supported-authentication-types}
 
@@ -252,7 +252,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 >* L’[évaluation de la politique de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) n’est actuellement pas prise en charge dans les exportations vers la destination API HTTP. [En savoir plus](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
-Consultez [&#x200B; Activer les données d’audience vers des destinations d’exportation de profil de diffusion en continu &#x200B;](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Consultez [ Activer les données d’audience vers des destinations d’exportation de profil de diffusion en continu ](../../ui/activate-streaming-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Attributs de destination {#attributes}
 

@@ -4,9 +4,9 @@ title: Guide de migration des API pour les destinations de stockage dans le clou
 description: Découvrez les modifications apportées au workflow d’activation des destinations de stockage dans le cloud dans le cadre de la migration vers les nouvelles cartes de destination de stockage dans le cloud avec des fonctionnalités supplémentaires.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1328'
+source-wordcount: '1322'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 * [Options de dénomination de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) supplémentaires.
 * Possibilité de définir des en-têtes de fichier personnalisés dans vos fichiers exportés via la [nouvelle étape de mappage](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
-* Possibilité de sélectionner le [&#x200B; type de fichier &#x200B;](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) fichier exporté.
+* Possibilité de sélectionner le [ type de fichier ](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) fichier exporté.
 * Possibilité de [personnaliser le formatage des fichiers de données CSV exportés](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 Cette fonctionnalité est prise en charge par les cartes de stockage cloud Beta répertoriées ci-dessous :
@@ -42,7 +42,7 @@ Commenting out the three net new cloud storage destinations
 
 -->
 
-Notez que l’interface utilisateur d’Experience Platform affiche actuellement deux cartes de destination côte à côte pour les trois destinations. Vous trouverez ci-dessous les [!DNL Amazon S3] destinations héritées et nouvelles. Dans tous les cas, les cartes marquées de **&#x200B;**&#x200B;sont les nouvelles cartes de destination.
+Notez que l’interface utilisateur d’Experience Platform affiche actuellement deux cartes de destination côte à côte pour les trois destinations. Vous trouverez ci-dessous les [!DNL Amazon S3] destinations héritées et nouvelles. Dans tous les cas, les cartes marquées de **** sont les nouvelles cartes de destination.
 
 ![Image des deux cartes de destination Amazon S3 dans une vue côte à côte.](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
@@ -661,7 +661,7 @@ Affichez l’ensemble des exemples de connexion de base et de connexion cible et
 
 ### Modifications non rétrocompatibles communes aux destinations [!DNL Amazon S3], [!DNL Azure Blob] et SFTP {#changes-all-destinations}
 
-L’étape du sélecteur de profil dans les trois destinations est remplacée par une étape de mappage qui vous permet de renommer les en-têtes de colonne dans vos fichiers exportés, le cas échéant. Consultez l’image côte à côte ci-dessous avec l’ancienne étape de sélecteur d’attributs sur la gauche et la nouvelle étape de mappage sur la droite.
+L’étape du sélecteur de profil dans les trois destinations est remplacée par une étape de mappage pour renommer les en-têtes de colonne dans vos fichiers exportés, le cas échéant. Consultez l’image côte à côte ci-dessous avec l’ancienne étape de sélecteur d’attributs sur la gauche et la nouvelle étape de mappage sur la droite.
 
 ![Image de présentation du guide de migration](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
 
@@ -795,4 +795,4 @@ Notez qu’il n’y a aucun impact sur votre planning existant pour les exportat
 
 ## Étapes suivantes {#next-steps}
 
-En lisant cette page, vous savez maintenant si vous devez effectuer une action en vue de la migration des destinations de stockage dans le cloud. Vous savez également quelles pages de documentation référencer lorsque vous configurez des workflows basés sur des API pour exporter des fichiers en dehors d’Experience Platform vers vos destinations d’espace de stockage préférées. Vous pouvez ensuite consulter le tutoriel de l’API pour [exporter des données vers des destinations d’espace de stockage](/help/destinations/api/activate-segments-file-based-destinations.md).
+Vous savez maintenant si vous devez effectuer une action en vue de la migration des destinations de stockage dans le cloud. Vous savez également quelles pages de documentation référencer lorsque vous configurez des workflows basés sur des API pour exporter des fichiers en dehors d’Experience Platform vers vos destinations d’espace de stockage préférées. Vous pouvez ensuite consulter le tutoriel de l’API pour [exporter des données vers des destinations d’espace de stockage](/help/destinations/api/activate-segments-file-based-destinations.md).

@@ -2,10 +2,10 @@
 description: Cette page illustre comment l’appel API est utilisé pour créer un modèle d’audience avec Adobe Experience Platform Destination SDK.
 title: Création d’un modèle d’audience
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '621'
-ht-degree: 83%
+source-wordcount: '617'
+ht-degree: 79%
 
 ---
 
@@ -261,7 +261,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | `httpMethod` | Chaîne | Méthode utilisée sur votre point dʼentrée pour créer, mettre à jour, supprimer ou valider par programmation l’audience dans votre destination. Par exemple : `POST`, `PUT`, `DELETE`. |
 | `headers.header` | Chaîne | Spécifie les en-têtes HTTP à ajouter à l’appel de votre API. Par exemple : `"Content-Type"`. |
 | `headers.value` | Chaîne | Indique la valeur des en-têtes HTTP à ajouter à l’appel de votre API. Par exemple : `"application/x-www-form-urlencoded"`. |
-| `requestBody` | Chaîne | Indique le contenu du corps du message qui doit être envoyé à votre API. Les paramètres qui doivent être ajoutés à l’objet `requestBody` dépendent des champs que votre API accepte. Reportez-vous à la [documentation des macros prises en charge](../functionality/audience-metadata-management.md#macros) pour savoir ce que vous pouvez inclure dans le corps du message. |
+| `requestBody` | Chaîne | Indique le contenu du corps du message qui doit être envoyé à votre API. Les paramètres qui doivent être ajoutés à l’objet `requestBody` dépendent des champs que votre API accepte. Consultez la [documentation sur les macros prises en charge](../functionality/audience-metadata-management.md#macros) pour savoir ce que vous pouvez inclure dans le corps du message. |
 | `responseFields.name` | Chaîne | Spécifie les champs de réponse que votre API renvoie lorsqu’elle est appelée. Pour obtenir un exemple, consultez les [exemples de modèles](../functionality/audience-metadata-management.md#configuration-examples) dans le document sur les fonctionnalités des métadonnées d’audience. |
 | `responseFields.value` | Chaîne | Spécifie la valeur de tout champ de réponse que votre API renvoie lorsqu’elle est appelée. |
 | `responseErrorFields.name` | Chaîne | Spécifie les champs de réponse que votre API renvoie lorsqu’elle est appelée. Pour obtenir un exemple, consultez les [exemples de modèles](../functionality/audience-metadata-management.md#configuration-examples) dans le document sur les fonctionnalités des métadonnées d’audience. |
@@ -281,7 +281,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec les détails du modèle d
 
 ## Gestion des erreurs d’API {#error-handling}
 
-Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes d’état API](../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état API](../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 

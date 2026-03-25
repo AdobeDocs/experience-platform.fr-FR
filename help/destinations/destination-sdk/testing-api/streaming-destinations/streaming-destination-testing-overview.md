@@ -2,10 +2,10 @@
 description: Découvrez comment utiliser l’API de test de destination pour tester votre configuration de destination de diffusion en streaming avant de la publier.
 title: Vue d’ensemble de l’API de test de destination en streaming
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '512'
-ht-degree: 100%
+source-wordcount: '510'
+ht-degree: 93%
 
 ---
 
@@ -42,7 +42,7 @@ Avec cet outil, après avoir configuré la destination, vous pouvez :
 
 Vous pouvez appeler le point d’entrée de l’API de test de destination avec ou sans ajout de profils à la requête.
 
-Si vous n’ajoutez aucun profil à la requête, Adobe les génère en interne et les ajoute à la requête. Si vous souhaitez générer des profils à utiliser dans cette requête, consultez la [référence d’API de génération de profils types](../../testing-api/streaming-destinations/sample-profile-generation-api.md). Vous devez générer des profils en fonction du schéma XDM source, comme indiqué dans la [référence d’API](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema). Notez que le schéma source est le [schéma d’union](../../../../profile/ui/union-schema.md) du sandbox que vous utilisez.
+Si vous n’ajoutez aucun profil à la requête, Adobe les génère en interne et les ajoute à la requête. Si vous souhaitez générer des profils à utiliser dans cette requête, reportez-vous à la référence [API de génération de profils types](../../testing-api/streaming-destinations/sample-profile-generation-api.md). Vous devez générer des profils en fonction du schéma XDM source, comme indiqué dans la [référence d’API](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema). Notez que le schéma source est le [schéma d’union](../../../../profile/ui/union-schema.md) du sandbox que vous utilisez.
 
 La réponse contient le résultat du traitement de la requête de destination. La requête comprend trois sections principales :
 
@@ -231,7 +231,7 @@ Notez que le contenu du paramètre `results.httpCalls` est spécifique à votre 
 }
 ```
 
-Pour les descriptions des paramètres de requête et de réponse, consultez les [opérations de l’API de test de destination](../../testing-api/streaming-destinations/destination-testing-api.md).
+Pour les descriptions des paramètres de requête et de réponse, voir [Opérations de l’API de test de destination](../../testing-api/streaming-destinations/destination-testing-api.md).
 
 ## Étapes suivantes {#next-steps}
 

@@ -4,9 +4,9 @@ title: Mettre à jour les comptes de destination
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour mettre à jour les comptes de destination dans l’interface utilisateur de Adobe Experience Platform
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '479'
 ht-degree: 8%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 8%
 
 ## Vue d’ensemble {#overview}
 
-L’onglet **[!UICONTROL Accounts]** vous montre les détails des connexions que vous avez établies avec diverses destinations. Reportez-vous à la [&#x200B; Présentation des comptes &#x200B;](../ui/destinations-workspace.md#accounts) pour obtenir toutes les informations disponibles sur chaque compte de destination.
+L’onglet **[!UICONTROL Accounts]** affiche des détails sur les connexions que vous avez établies avec diverses destinations. Consultez la [ Présentation des comptes ](../ui/destinations-workspace.md#accounts) pour obtenir toutes les informations disponibles pour chaque compte de destination.
 
 Ce tutoriel décrit les étapes à suivre pour mettre à jour les détails du compte de destination à l’aide de l’interface utilisateur d’Experience Platform.
 
@@ -29,7 +29,7 @@ Pour les destinations par lots, vous pouvez mettre à jour l’accès ou la clé
 
 Suivez les étapes ci-dessous pour mettre à jour les détails de connexion vers des destinations existantes.
 
-1. Connectez-vous à l’[interface utilisateur d’Experience Platform](https://platform.adobe.com/) puis sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Accounts]** dans l’en-tête supérieur pour afficher vos comptes existants.
+1. Accédez à l’[interface utilisateur d’](https://platform.adobe.com/) puis sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Accounts]** dans l’en-tête supérieur pour afficher vos comptes existants.
 
    ![Onglet Comptes](../assets/ui/update-accounts/accounts-tab.png)
 
@@ -63,6 +63,6 @@ Suivez les étapes ci-dessous pour mettre à jour les détails de connexion vers
 
 ## Étapes suivantes {#next-steps}
 
-Ce tutoriel vous a permis d’utiliser l’espace de travail **[!UICONTROL destinations]** pour mettre à jour les comptes existants.
+Vous avez correctement mis à jour les comptes existants à l’aide de l’espace de travail **[!UICONTROL destinations]**.
 
 Pour plus d’informations sur les destinations, consultez la [présentation des destinations](../catalog/overview.md).

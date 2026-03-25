@@ -4,9 +4,9 @@ title: Exporter des jeux de données à l’aide de l’API Flow Service
 description: Découvrez comment utiliser l’API Flow Service pour exporter des jeux de données vers des destinations sélectionnées.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '5178'
+source-wordcount: '5137'
 ht-degree: 12%
 
 ---
@@ -42,7 +42,7 @@ Cet article explique le processus requis pour utiliser l’[!DNL Flow Service AP
 
 Les jeux de données que vous pouvez exporter dépendent de l’application Experience Platform ([!DNL Real-Time CDP], [!DNL Adobe Journey Optimizer]), du niveau (Prime ou Ultimate) et des modules complémentaires que vous avez achetés (par exemple : Data Distiller).
 
-Reportez-vous au [tableau de la page du tutoriel de l’interface utilisateur](/help/destinations/ui/export-datasets.md#datasets-to-export) pour comprendre les jeux de données que vous pouvez exporter.
+Consultez le [tableau sur la page du tutoriel de l’interface utilisateur](/help/destinations/ui/export-datasets.md#datasets-to-export) pour comprendre les jeux de données que vous pouvez exporter.
 
 ## Destinations prises en charge {#supported-destinations}
 
@@ -107,7 +107,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ### Documentation de référence sur les API {#api-reference-documentation}
 
-Ce tutoriel vous permet de trouver la documentation de référence relative à toutes les opérations API. Reportez-vous à la section [[!DNL Flow Service]  - Documentation de l’API Destinations sur le site web d’Adobe Developer](https://developer.adobe.com/experience-platform-apis/references/destinations/). Nous vous recommandons de consulter ce tutoriel et la documentation de référence sur les API en parallèle.
+Ce tutoriel vous permet de trouver la documentation de référence relative à toutes les opérations API. Consultez la documentation de l’API [[!DNL Flow Service] - Destinations sur le site web d’Adobe Developer](https://developer.adobe.com/experience-platform-apis/references/destinations/). Nous vous recommandons de consulter ce tutoriel et la documentation de référence sur les API en parallèle.
 
 ### Glossaire {#glossary}
 
@@ -129,7 +129,7 @@ Avant de démarrer le workflow pour exporter un jeu de données, identifiez la s
 
 {style="table-layout:auto"}
 
-Vous avez besoin de ces identifiants pour construire différentes entités [!DNL Flow Service]. Vous devez également vous reporter à des parties du [!DNL Connection Spec] lui-même pour configurer certaines entités afin de pouvoir récupérer les [!DNL Connection Spec] à partir de [!DNL Flow Service APIs]. Consultez les exemples ci-dessous de récupération des spécifications de connexion pour toutes les destinations du tableau :
+Vous avez besoin de ces identifiants pour construire différentes entités [!DNL Flow Service]. Vous devez également référencer des parties du [!DNL Connection Spec] lui-même pour configurer certaines entités afin de pouvoir récupérer les [!DNL Connection Spec] à partir de [!DNL Flow Service APIs]. Consultez les exemples ci-dessous de récupération des spécifications de connexion pour toutes les destinations du tableau :
 
 >[!BEGINTABS]
 
@@ -840,7 +840,7 @@ Notez la ligne en surbrillance avec des commentaires intégrés dans l’exemple
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des informations d’authentification requises, reportez-vous à la section [Authentifier à la destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) de la page de documentation sur la destination Amazon S3.
+>Pour plus d’informations sur l’obtention des informations d’authentification requises, consultez la section [S’authentifier à la destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) de la page de documentation sur la destination Amazon S3.
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
@@ -891,7 +891,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des informations d’authentification requises, reportez-vous à la section [Authentification à la destination](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) de la page de documentation sur la destination de stockage Blob Azure.
+>Pour plus d’informations sur l’obtention des informations d’authentification requises, consultez la section [S’authentifier à la destination](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) de la page de documentation sur la destination Azure Blob Storage.
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
@@ -941,7 +941,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des informations d’authentification requises, reportez-vous à la section [Authentifier à la destination](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) de la page de documentation sur la destination Azure Data Lake Gen 2 (ADLS Gen2) .
+>Pour plus d’informations sur l’obtention des informations d’authentification requises, consultez la section [S’authentifier à la destination](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) de la page de documentation sur la destination du lac de données Azure Gen 2 (ADLS Gen2) .
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
@@ -994,7 +994,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Aucune information d’authentification n’est requise pour la destination Data Landing Zone. Pour plus d’informations, reportez-vous à la section [authentification à la destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) de la page de documentation sur la destination Data Landing Zone.
+>Aucune information d’authentification n’est requise pour la destination Data Landing Zone. Pour plus d’informations, consultez la section [s’authentifier à la destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) de la page de documentation sur la destination Data Landing Zone.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -1036,7 +1036,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des informations d’authentification requises, reportez-vous à la section [S’authentifier à la destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) de la page de documentation sur la destination Google Cloud Storage.
+>Pour plus d’informations sur l’obtention des informations d’authentification requises, consultez la section [S’authentifier à la destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) de la page de documentation sur la destination Google Cloud Storage.
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
@@ -1087,7 +1087,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des informations d’authentification requises, reportez-vous à la section [Authentifier à la destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) de la page de documentation de la destination SFTP.
+>Pour plus d’informations sur l’obtention des informations d’authentification requises, consultez la section [S’authentifier à la destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) de la page de documentation sur la destination SFTP.
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
@@ -1122,7 +1122,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des informations d’authentification requises, reportez-vous à la section [Authentifier à la destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) de la page de documentation de la destination SFTP.
+>Pour plus d’informations sur l’obtention des informations d’authentification requises, consultez la section [S’authentifier à la destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) de la page de documentation sur la destination SFTP.
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
@@ -1174,7 +1174,7 @@ Notez l’ID de connexion à partir de la réponse. Cet identifiant sera requis 
 
 ![Diagramme présentant l’étape 4 du workflow d’exportation des jeux de données](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
 
-Ensuite, vous devez créer une connexion cible qui stocke les paramètres d’exportation de vos jeux de données. Les paramètres d’exportation incluent l’emplacement, le format de fichier, la compression et d’autres détails. Reportez-vous aux propriétés `targetSpec` fournies dans la spécification de connexion de la destination pour comprendre les propriétés prises en charge pour chaque type de destination. Référencez les onglets ci-dessous pour les propriétés `targetSpec` de toutes les destinations prises en charge.
+Ensuite, vous devez créer une connexion cible qui stocke les paramètres d’exportation de vos jeux de données. Les paramètres d’exportation incluent l’emplacement, le format de fichier, la compression et d’autres détails. Consultez les propriétés `targetSpec` fournies dans la spécification de connexion de la destination pour comprendre les propriétés prises en charge pour chaque type de destination. Référencez les onglets ci-dessous pour les propriétés `targetSpec` de toutes les destinations prises en charge.
 
 >[!IMPORTANT]
 >
@@ -1631,7 +1631,7 @@ En utilisant la spécification ci-dessus, vous pouvez créer une demande de conn
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des paramètres cibles requis, reportez-vous à la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) de la page de documentation sur la destination [!DNL Amazon S3].
+>Pour plus d’informations sur l’obtention des paramètres cibles requis, consultez la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) de la page de documentation sur la destination [!DNL Amazon S3].
 >Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
@@ -1684,7 +1684,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des paramètres cibles requis, reportez-vous à la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) de la page de documentation sur la destination [!DNL Azure Blob Storage].
+>Pour plus d’informations sur l’obtention des paramètres cibles requis, consultez la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) de la page de documentation sur la destination [!DNL Azure Blob Storage].
 >Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
 
@@ -1738,7 +1738,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des paramètres cibles requis, reportez-vous à la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) de la page de documentation sur la destination Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
+>Pour plus d’informations sur l’obtention des paramètres cibles requis, voir la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) de la page de documentation sur la destination Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
 >Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
@@ -1790,7 +1790,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des paramètres cibles requis, reportez-vous à la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) de la page de documentation sur la destination [!DNL Data Landing Zone].
+>Pour plus d’informations sur l’obtention des paramètres cibles requis, consultez la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) de la page de documentation sur la destination [!DNL Data Landing Zone].
 >Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
@@ -1842,7 +1842,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des paramètres cibles requis, reportez-vous à la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) de la page de documentation sur la destination [!DNL Google Cloud Storage].
+>Pour plus d’informations sur l’obtention des paramètres cibles requis, consultez la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) de la page de documentation sur la destination [!DNL Google Cloud Storage].
 >Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
 
@@ -1896,7 +1896,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Pour plus d’informations sur l’obtention des paramètres cibles requis, reportez-vous à la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) de la page de documentation sur la destination SFTP.
+>Pour plus d’informations sur l’obtention des paramètres cibles requis, voir la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) de la page de documentation sur la destination SFTP.
 >Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
 Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
@@ -1994,11 +1994,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
+Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams` pour personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
 
 | Paramètre | Description |
 |---------|----------|
-| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. Les trois options d’exportation disponibles sont les suivantes : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` peut uniquement être utilisé en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes de jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle . <br> **Exportations incrémentielles quotidiennes** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` :`1` pour les exportations incrémentielles quotidiennes. <br> **Exportations incrémentielles par heure** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles par heure. |
+| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, voir [exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. Les trois options d’exportation disponibles sont les suivantes : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` peut uniquement être utilisé en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes de jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle . <br> **Exportations incrémentielles quotidiennes** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` :`1` pour les exportations incrémentielles quotidiennes. <br> **Exportations incrémentielles par heure** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles par heure. |
 | `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeu de données. |
 | `interval` | Sélectionnez `1` lorsque l’`timeUnit` est jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
 | `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
@@ -2063,11 +2063,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
+Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams` pour personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
 
 | Paramètre | Description |
 |---------|----------|
-| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. Les trois options d’exportation disponibles sont les suivantes : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` peut uniquement être utilisé en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes de jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle . <br> **Exportations incrémentielles quotidiennes** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` :`1` pour les exportations incrémentielles quotidiennes. <br> **Exportations incrémentielles par heure** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles par heure. |
+| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, voir [exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. Les trois options d’exportation disponibles sont les suivantes : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` peut uniquement être utilisé en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes de jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle . <br> **Exportations incrémentielles quotidiennes** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` :`1` pour les exportations incrémentielles quotidiennes. <br> **Exportations incrémentielles par heure** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles par heure. |
 | `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeu de données. |
 | `interval` | Sélectionnez `1` lorsque l’`timeUnit` est jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
 | `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
@@ -2133,11 +2133,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
+Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams` pour personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
 
 | Paramètre | Description |
 |---------|----------|
-| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. Les trois options d’exportation disponibles sont les suivantes : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` peut uniquement être utilisé en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes de jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle . <br> **Exportations incrémentielles quotidiennes** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` :`1` pour les exportations incrémentielles quotidiennes. <br> **Exportations incrémentielles par heure** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles par heure. |
+| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, voir [exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. Les trois options d’exportation disponibles sont les suivantes : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` peut uniquement être utilisé en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes de jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle . <br> **Exportations incrémentielles quotidiennes** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` :`1` pour les exportations incrémentielles quotidiennes. <br> **Exportations incrémentielles par heure** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles par heure. |
 | `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeu de données. |
 | `interval` | Sélectionnez `1` lorsque l’`timeUnit` est jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
 | `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
@@ -2203,11 +2203,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
+Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams` pour personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
 
 | Paramètre | Description |
 |---------|----------|
-| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. Les trois options d’exportation disponibles sont les suivantes : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` peut uniquement être utilisé en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes de jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle . <br> **Exportations incrémentielles quotidiennes** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` :`1` pour les exportations incrémentielles quotidiennes. <br> **Exportations incrémentielles par heure** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles par heure. |
+| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, voir [exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. Les trois options d’exportation disponibles sont les suivantes : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` peut uniquement être utilisé en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes de jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle . <br> **Exportations incrémentielles quotidiennes** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` :`1` pour les exportations incrémentielles quotidiennes. <br> **Exportations incrémentielles par heure** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles par heure. |
 | `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeu de données. |
 | `interval` | Sélectionnez `1` lorsque l’`timeUnit` est jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
 | `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
@@ -2272,11 +2272,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
+Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams` pour personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
 
 | Paramètre | Description |
 |---------|----------|
-| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. Les trois options d’exportation disponibles sont les suivantes : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` peut uniquement être utilisé en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes de jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle . <br> **Exportations incrémentielles quotidiennes** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` :`1` pour les exportations incrémentielles quotidiennes. <br> **Exportations incrémentielles par heure** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles par heure. |
+| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, voir [exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. Les trois options d’exportation disponibles sont les suivantes : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` peut uniquement être utilisé en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes de jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle . <br> **Exportations incrémentielles quotidiennes** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` :`1` pour les exportations incrémentielles quotidiennes. <br> **Exportations incrémentielles par heure** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles par heure. |
 | `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeu de données. |
 | `interval` | Sélectionnez `1` lorsque l’`timeUnit` est jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
 | `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
@@ -2342,11 +2342,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
+Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams` pour personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
 
 | Paramètre | Description |
 |---------|----------|
-| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. Les trois options d’exportation disponibles sont les suivantes : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` peut uniquement être utilisé en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes de jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle . <br> **Exportations incrémentielles quotidiennes** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` :`1` pour les exportations incrémentielles quotidiennes. <br> **Exportations incrémentielles par heure** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles par heure. |
+| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, voir [exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. Les trois options d’exportation disponibles sont les suivantes : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` peut uniquement être utilisé en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes de jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle . <br> **Exportations incrémentielles quotidiennes** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` :`1` pour les exportations incrémentielles quotidiennes. <br> **Exportations incrémentielles par heure** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles par heure. |
 | `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeu de données. |
 | `interval` | Sélectionnez `1` lorsque l’`timeUnit` est jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
 | `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
@@ -2477,7 +2477,7 @@ Notez la différence de format de fichier entre les deux types de fichiers lorsq
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur[&#x200B; consultez les sections &#x200B;](/help/landing/troubleshooting.md#api-status-codes)Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état de l’API](/help/landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform pour plus d’informations sur l’interprétation des réponses d’erreur.
 
 ## Limites connues {#known-limitations}
 
@@ -2489,7 +2489,7 @@ Consultez une [liste de questions fréquentes](/help/destinations/ui/export-data
 
 ## Étapes suivantes {#next-steps}
 
-En suivant ce tutoriel, vous avez réussi à connecter Experience Platform à l’une de vos destinations préférées d’espace de stockage par lots dans le cloud et à configurer un flux de données vers la destination correspondante pour exporter des jeux de données. Consultez les pages suivantes pour plus d’informations, telles que la modification des flux de données existants à l’aide de l’API Flow Service :
+Vous avez réussi à connecter Experience Platform à l’une de vos destinations préférées d’espace de stockage par lots dans le cloud et à configurer un flux de données vers la destination correspondante pour exporter les jeux de données. Consultez les pages suivantes pour plus d’informations, telles que la modification des flux de données existants à l’aide de l’API Flow Service :
 
 * [Présentation des destinations](../home.md)
 * [Présentation du catalogue des destinations](../catalog/overview.md)

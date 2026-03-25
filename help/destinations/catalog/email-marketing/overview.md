@@ -4,10 +4,10 @@ title: Présentation des destinations du marketing par e-mail
 type: Tutorial
 description: Les fournisseurs de service de messagerie (ESP) vous permettent de gérer vos activités de marketing par e-mail, par exemple pour l’envoi de campagnes promotionnelles par e-mail. Découvrez les fournisseurs de service de messagerie pris en charge en tant que destinations Experience Platform.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '371'
-ht-degree: 59%
+source-wordcount: '370'
+ht-degree: 54%
 
 ---
 

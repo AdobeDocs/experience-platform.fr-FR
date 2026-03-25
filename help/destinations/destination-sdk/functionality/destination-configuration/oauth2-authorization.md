@@ -2,10 +2,10 @@
 description: Cette page décrit les différents flux d’autorisation OAuth 2 pris en charge par Destination SDK et fournit des instructions pour configurer l’autorisation OAuth 2 pour la destination.
 title: Autorisation OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2243'
-ht-degree: 69%
+source-wordcount: '2234'
+ht-degree: 66%
 
 ---
 
@@ -124,7 +124,7 @@ Pour configurer cette méthode d’autorisation pour la destination, ajoutez les
 | `authType` | Chaîne | Utilisez « OAUTH2 ». |
 | `grant` | Chaîne | Utilisez « OAUTH2_AUTHORIZATION_CODE ». |
 | `accessTokenUrl` | Chaîne | URL de votre côté qui émet des jetons d’accès et, éventuellement, actualise les jetons. |
-| `authorizationUrl` | Chaîne | URL de votre serveur d’autorisation, dans lequel vous redirigez l’utilisateur pour qu’il se connecte à votre application. |
+| `authorizationUrl` | Chaîne | URL de votre serveur d’autorisation, dans lequel vous redirigez l’utilisateur vers votre application. |
 | `refreshTokenUrl` | Chaîne | *Facultatif.* URL de votre côté, qui émet des jetons d’actualisation. Souvent, l’URL de jeton d’actualisation `refreshTokenUrl` est identique à l’URL de jeton d’accès `accessTokenUrl`. |
 | `clientId` | Chaîne | Identifiant client que votre système attribue à [!DNL Adobe Experience Platform]. |
 | `clientSecret` | Chaîne | Secret client que votre système attribue à [!DNL Adobe Experience Platform]. |
@@ -491,4 +491,4 @@ Selon la personnalisation de votre autorisation, vous devrez peut-être accéder
 
 ## Étapes suivantes {#next-steps}
 
-En lisant cet article, vous avez maintenant une compréhension des modèles d’autorisation OAuth 2 pris en charge par [!DNL Adobe Experience Platform] et vous savez comment configurer la destination avec la prise en charge de l’autorisation OAuth 2. Vous pouvez désormais configurer la destination avec prise en charge d’OAuth 2 à l’aide de Destination SDK. Pour connaître les étapes suivantes, consultez la documentation [Utilisation de Destination SDK pour configurer la destination](../../guides/configure-destination-instructions.md).
+Vous connaissez désormais les modèles d’autorisation OAuth 2 pris en charge par [!DNL Adobe Experience Platform] et savez comment configurer la destination avec la prise en charge de l’autorisation OAuth 2. Vous pouvez désormais configurer la destination avec prise en charge d’OAuth 2 à l’aide de Destination SDK. Pour connaître les étapes suivantes, consultez la documentation [Utilisation de Destination SDK pour configurer la destination](../../guides/configure-destination-instructions.md).

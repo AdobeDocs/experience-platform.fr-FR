@@ -2,10 +2,10 @@
 description: Découvrez comment formater les requêtes HTTP envoyées à votre point d’entrée. Utilisez le point d’entrée /authoring/destination-servers pour configurer les spécifications de modèle de serveur de destination dans Adobe Experience Platform Destination SDK.
 title: Spécifications de modèle pour les destinations créées avec Destination SDK
 exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '512'
-ht-degree: 88%
+source-wordcount: '510'
+ht-degree: 83%
 
 ---
 
@@ -71,7 +71,7 @@ Consultez ci-dessous un modèle type de requête HTTP, ainsi que des descriptio
 |---|---|---|
 | `httpMethod` | Chaîne | *Obligatoire.* Méthode qu’Adobe utilise dans les appels vers votre serveur. Méthodes prises en charge : `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 | `templatingStrategy` | Chaîne | *Obligatoire.* Utilisez `PEBBLE_V1`. |
-| `value` | Chaîne | *Obligatoire.* Cette chaîne est la version avec caractères d’échappement du modèle qui formate les requêtes HTTP envoyées par Experience Platform au format attendu par la destination. <br> Pour plus d’informations sur l’écriture du modèle, consultez la section [Utilisation des modèles](message-format.md#using-templating). <br> Pour plus d’informations sur les caractères d’échappement, consultez la section [Norme RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). <br> Pour obtenir un exemple de transformation simple, consultez la transformation des [attributs de profil](message-format.md#attributes). |
+| `value` | Chaîne | *Obligatoire.* Cette chaîne est la version avec caractères d’échappement du modèle qui formate les requêtes HTTP envoyées par Experience Platform au format attendu par la destination. <br> Pour plus d’informations sur l’écriture du modèle, consultez la section [Utilisation des modèles](message-format.md#using-templating). <br> Pour plus d’informations sur les caractères d’échappement, consultez la section Norme [RFC JSON, section 7](https://tools.ietf.org/html/rfc8259#section-7). <br> Pour obtenir un exemple de transformation simple, reportez-vous à la transformation [attributs de profil](message-format.md#attributes). |
 | `contentType` | Chaîne | *Obligatoire.* Type de contenu que votre serveur accepte. Selon le type de sortie produit par votre modèle de transformation, il peut s’agir de l’un des [types de contenu d’applications HTTP](https://www.iana.org/assignments/media-types/media-types.xhtml#application) pris en charge. Dans la plupart des cas, cette valeur doit être définie sur `application/json`. |
 
 {style="table-layout:auto"}

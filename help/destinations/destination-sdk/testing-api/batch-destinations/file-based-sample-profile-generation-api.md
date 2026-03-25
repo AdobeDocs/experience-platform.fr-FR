@@ -2,9 +2,9 @@
 description: Cette page explique comment utiliser le point d’entrée de l’API /sample-profiles depuis Destination SDK pour générer des profils types en fonction d’un schéma source. Vous pouvez utiliser ces profils types pour tester votre configuration de destination basée sur des fichiers.
 title: Génération de profils types en fonction d’un schéma source
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '651'
 ht-degree: 88%
 
 ---
@@ -114,7 +114,7 @@ Une réponse réussie renvoie le statut HTTP 200 avec le nombre spécifié d’
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Consultez les sections [Codes d’état API](../../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
+Les points d’entrée de l’API Destination SDK suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état API](../../../../landing/troubleshooting.md#api-status-codes) et [Erreurs d’en-tête de requête](../../../../landing/troubleshooting.md#request-header-errors) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 

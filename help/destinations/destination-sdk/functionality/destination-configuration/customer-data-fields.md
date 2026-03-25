@@ -2,7 +2,7 @@
 description: Découvrez comment créer des champs d’entrée dans l’interface utilisateur d’Experience Platform qui permettent à vos utilisateurs de spécifier diverses informations relatives à la connexion et à l’exportation des données vers la destination.
 title: Champs de données client
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '1729'
 ht-degree: 64%
@@ -342,7 +342,7 @@ Définissez le paramètre `destinationServerId` sur l’identifiant du serveur d
 
 ## Créer des champs de données client imbriqués {#nested-fields}
 
-Vous pouvez créer des champs de données client imbriqués pour les modèles d’intégration complexes. Vous pouvez ainsi enchaîner une série de sélections pour le client.
+Vous pouvez créer des champs de données client imbriqués pour les modèles d’intégration complexes. Utilisez-les pour enchaîner une série de sélections pour le client.
 
 Par exemple, vous pouvez ajouter des champs de données client imbriqués pour obliger les clients à sélectionner un type d’intégration avec votre destination, suivi immédiatement d’une autre sélection. La deuxième sélection est un champ imbriqué dans le type d’intégration.
 
