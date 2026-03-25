@@ -2,9 +2,9 @@
 title: Créateur d’audience dans Real-Time Customer Data Platform
 description: Découvrez comment utiliser le Créateur d’audience dans Real-Time Customer Data Platform pour créer des audiences.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
+source-git-commit: 809f80c721d6eedf5ee88dbb1cf4bf7e5a413614
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 9%
@@ -64,7 +64,7 @@ La section **[!UICONTROL Top values]** affiche les valeurs les plus fréquentes 
 
 Vous pouvez également voir la distribution de vos données avec les valeurs minimale, moyenne (moyenne) et maximale affichées.
 
-![Fenêtre contextuelle qui affiche les statistiques pour un attribut, y compris les valeurs minimales, moyennes et maximales.](../assets/segmentation/audience-builder/statistics.png)
+![Fenêtre contextuelle qui affiche les statistiques pour un attribut, y compris les valeurs minimales, moyennes et maximales.](../assets/segmentation/audience-builder/statistics.png){width="300"}
 
 Si un attribut est renseigné par moins de 25 % des comptes, l’icône ![avis de données](../../images/icons/data-notice.png) s’affiche à la place. Les mêmes données de résumé s’affichent pour l’attribut, quelles que soient les conditions.
 
@@ -78,7 +78,7 @@ Si un attribut est renseigné par moins de 25 % des comptes, l’icône ![avis d
 
 En outre, l’attribut comporte un **[!UICONTROL Ingestion Type]**. Le type d’ingestion vous permet de connaître l’origine des données. Il peut s’agir de l’une des valeurs suivantes : **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** ou **[!UICONTROL No Data Ingested]**.
 
-![Le type d’ingestion de l’attribut s’affiche.](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png)
+![Le type d’ingestion de l’attribut s’affiche.](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png){width="300"}
 
 Pour obtenir des informations plus détaillées sur les attributs dans le créateur d’audience, consultez le [guide d’utilisation du créateur d’audience](../../segmentation/ui/segment-builder.md){target="_blank"}.
 

@@ -4,10 +4,10 @@ user-guide-title: Guide des flux de données
 user-guide-description: Découvrez les flux de données et comment les configurer sur différents services.
 feature: Dataflows
 role: Developer
-source-git-commit: 13fc8603cb490ff59e76c18cbb03b68488ebd005
+source-git-commit: ba32ad207654709e4af6ed1ea0dd4d0cf3748486
 workflow-type: tm+mt
-source-wordcount: '71'
-ht-degree: 46%
+source-wordcount: '75'
+ht-degree: 44%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 46%
    - [Surveillance des flux de données dans les destinations](./ui/monitor-destinations.md)
    - [Surveiller les flux de données pour l’ingestion de profils en flux continu](./ui/monitor-streaming-profile.md)
    - [Surveiller les flux de données pour la segmentation en flux continu](./ui/monitor-streaming-audiences.md)
+   - [Surveiller les flux de données dans Edge](./ui/monitor-edge.md)
    - Surveillance B2B {#b2b}
       - [Surveillance des tâches d’enrichissement des profils](./ui/b2b/monitor-profile-enrichment.md)
 - [API Flow Service](https://www.adobe.io/experience-platform-apis/references/flow-service/)
