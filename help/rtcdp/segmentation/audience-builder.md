@@ -2,12 +2,12 @@
 title: Créateur d’audience dans Real-Time Customer Data Platform
 description: Découvrez comment utiliser le Créateur d’audience dans Real-Time Customer Data Platform pour créer des audiences.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
+source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 11%
+source-wordcount: '1079'
+ht-degree: 9%
 
 ---
 
@@ -40,10 +40,6 @@ Vous pouvez sélectionner l’icône ![paramètres](../../images/icons/settings.
 
 ![L’icône des paramètres est mise en surbrillance dans le Créateur d’audience.](../assets/segmentation/audience-builder/select-settings.png){zoomable="yes"}
 
->[!NOTE]
->
->La section **[!UICONTROL Field options]** est actuellement en version bêta et est disponible uniquement pour certains clients. Pour plus dʼinformations, contactez l’assistance clientèle Adobe.
-
 La section [!UICONTROL Settings] s’affiche. Dans cette section, vous pouvez mettre à jour les champs affichés ainsi que la relation des champs.
 
 Pour le **[!UICONTROL Field options]**, vous pouvez afficher uniquement les champs contenant des données ou le schéma XDM complet.
@@ -58,9 +54,17 @@ L’onglet [!UICONTROL Attributes] vous permet de parcourir les attributs de com
 
 ![L’onglet Attributs s’affiche dans le Créateur d’audience](../assets/segmentation/audience-builder/attributes.png)
 
-Lors de la sélection d’un attribut, vous pouvez afficher des données de résumé en sélectionnant l’icône [informations](../../images/icons/info.png). Les données de synthèse comprennent des informations telles que les valeurs principales, une explication du champ, ainsi que le pourcentage de comptes contenant des valeurs pour cet attribut.
+Lors de la sélection d’un attribut, vous pouvez afficher des données de résumé en sélectionnant l’icône [informations](../../images/icons/info.png). Les données récapitulatives incluent des informations telles que les principales valeurs, une explication du champ, le nombre d’enregistrements des valeurs, ainsi que le pourcentage de comptes contenant des valeurs pour cet attribut.
+
+La section **[!UICONTROL Populated]** indique le nombre d’enregistrements sur lesquels l’attribut est renseigné par rapport au nombre total d’enregistrements disponibles, ainsi que le pourcentage de comptes ayant une valeur pour ce champ.
+
+La section **[!UICONTROL Top values]** affiche les valeurs les plus fréquentes pour l’attribut et inclut des détails tels que la valeur, le nombre d’enregistrements ayant la valeur, ainsi que le pourcentage du total des enregistrements que la valeur représente.
 
 ![Fenêtre contextuelle qui affiche une version entièrement remplie des données de résumé pour un attribut.](../assets/segmentation/audience-builder/full-summary-data.png){width="300"}
+
+Vous pouvez également voir la distribution de vos données avec les valeurs minimale, moyenne (moyenne) et maximale affichées.
+
+![Fenêtre contextuelle qui affiche les statistiques pour un attribut, y compris les valeurs minimales, moyennes et maximales.](../assets/segmentation/audience-builder/statistics.png)
 
 Si un attribut est renseigné par moins de 25 % des comptes, l’icône ![avis de données](../../images/icons/data-notice.png) s’affiche à la place. Les mêmes données de résumé s’affichent pour l’attribut, quelles que soient les conditions.
 
@@ -72,7 +76,11 @@ Si un attribut est renseigné par moins de 25 % des comptes, l’icône ![avis d
 >
 >Ces données récapitulatives sont mises à jour **quotidiennement**.
 
-Pour obtenir un guide plus détaillé sur le Créateur d’audience, consultez le [guide d’utilisation du Créateur d’audience](../../segmentation/ui/segment-builder.md){target="_blank"}.
+En outre, l’attribut comporte un **[!UICONTROL Ingestion Type]**. Le type d’ingestion vous permet de connaître l’origine des données. Il peut s’agir de l’une des valeurs suivantes : **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** ou **[!UICONTROL No Data Ingested]**.
+
+![Le type d’ingestion de l’attribut s’affiche.](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png)
+
+Pour obtenir des informations plus détaillées sur les attributs dans le créateur d’audience, consultez le [guide d’utilisation du créateur d’audience](../../segmentation/ui/segment-builder.md){target="_blank"}.
 
 ### Audiences {#audiences}
 

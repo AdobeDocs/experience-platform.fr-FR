@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 2341b02ecbd93965654bdbc38bbacadeae5be0ed
+source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
 workflow-type: tm+mt
-source-wordcount: '6311'
-ht-degree: 46%
+source-wordcount: '6574'
+ht-degree: 44%
 
 ---
 
@@ -55,6 +55,16 @@ Les blocs de création de base des définitions de segment sont les attributs et
 Vous pouvez voir ces blocs de création dans la section **[!UICONTROL Fields]** sur le côté gauche de l’espace de travail [!DNL Segment Builder]. **[!UICONTROL Fields]** contient un onglet pour chacun des blocs de création principaux : « [!UICONTROL Attributes] », « [!UICONTROL Events] » et « [!UICONTROL Audiences] ».
 
 ![La section des champs du créateur de segments est mise en surbrillance.](../images/ui/segment-builder/segment-fields.png)
+
+Vous pouvez sélectionner l’icône ![paramètres](/help/images/icons/settings.png) pour ajuster les paramètres des champs affichés.
+
+Pour le **[!UICONTROL Available fields]**, vous pouvez afficher uniquement les champs contenant des données ou le schéma XDM complet.
+
+Pour le **[!UICONTROL Data sources]**, vous pouvez filtrer pour afficher les attributs provenant des types d’ingestion spécifiés. Les valeurs prises en charge sont **[!UICONTROL Show batch data]**, **[!UICONTROL Show streaming/edge data]** et **[!UICONTROL Show fields with no ingested data]**.
+
+Pour la **[!UICONTROL Merge policy]**, vous pouvez choisir la politique de fusion à laquelle les champs appartiennent.
+
+![La zone des paramètres s’affiche dans le créateur de segments.](../images/ui/segment-builder/settings.png)
 
 ### Attributs
 
@@ -143,15 +153,31 @@ Vous pouvez utiliser les opérateurs suivants pour les types de données respect
 | Plage de roulement | La valeur s’est produite entre les deux dates relatives. | La date du dernier achat est comprise entre sept jours et trois jours. |
 | Dans suivant | La valeur est survenue au cours de la période suivante sélectionnée. | L’abandon du panier aura lieu dans 2 jours |
 
-Pour plus d’informations sur les fonctions d’heure et de date, consultez la section [&#x200B; Contraintes de temps &#x200B;](#time-constraints).
+Pour plus d’informations sur les fonctions d’heure et de date, consultez la section [ Contraintes de temps ](#time-constraints).
 
 +++
+
+Lorsque vous sélectionnez un attribut, vous pouvez afficher les données de synthèse en sélectionnant l’icône [informations](../../images/icons/info.png). Les données récapitulatives incluent des informations telles qu’une explication du champ, le nombre d’enregistrements des valeurs, ainsi que le pourcentage de comptes contenant des valeurs pour cet attribut.
+
+La section **[!UICONTROL Top values]** affiche les valeurs les plus fréquentes pour l’attribut et inclut des détails tels que la valeur, le nombre d’enregistrements ayant la valeur, ainsi que le pourcentage du total des enregistrements que la valeur représente.
+
+![Fenêtre contextuelle qui affiche les données récapitulatives d’un attribut](/help/segmentation/images/ui/segment-builder/summary-data.png)
+
+Si un attribut est renseigné par moins de 25 % des profils, l’icône ![avis de données](../../images/icons/data-notice.png) s’affiche à la place. Les mêmes données de résumé s’affichent pour l’attribut, quelles que soient les conditions.
+
+>[!NOTE]
+>
+>Les premières valeurs ne s’affichent que si le champ ne contient **pas** trop de valeurs différentes et si les valeurs de ces champs sont généralement répétées. En outre, ces données récapitulatives sont mises à jour **quotidiennement**.
+
+En outre, l’attribut comporte un **[!UICONTROL Ingestion Type]**. Le type d’ingestion vous permet de connaître l’origine des données. Il peut s’agir de l’une des valeurs suivantes : **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** ou **[!UICONTROL No Data Ingested]**.
+
+![Le type d’ingestion de l’attribut s’affiche.](/help/segmentation/images/ui/segment-builder/ingestion-type.png)
 
 #### Attributs calculés {#computed-attributes}
 
 Les attributs calculés sont des champs calculés à partir d’autres attributs à l’aide d’agrégations ou de formules. Vous pouvez utiliser des attributs calculés si vous avez besoin de données agrégées telles que des sommes, des décomptes ou des moyennes sur plusieurs événements ou si vous créez des audiences fréquemment utilisées qui nécessitent des calculs complexes.
 
-Pour plus d’informations sur les attributs calculés, notamment sur la manière de les créer, les fonctions que vous pouvez utiliser dans ces attributs et la manière de les gérer, consultez la [&#x200B; présentation des attributs calculés &#x200B;](/help/profile/computed-attributes/overview.md).
+Pour plus d’informations sur les attributs calculés, notamment sur la manière de les créer, les fonctions que vous pouvez utiliser dans ces attributs et la manière de les gérer, consultez la [ présentation des attributs calculés ](/help/profile/computed-attributes/overview.md).
 
 ### Événements
 
@@ -323,7 +349,7 @@ Vous pouvez également afficher une version codée d’une règle créée dans l
 
 L’affichage du code fournit un bouton qui vous permet de copier la valeur de la définition de segment à utiliser dans les appels d’API. Pour obtenir la dernière version de la définition de segment, assurez-vous d’avoir enregistré vos dernières modifications apportées à la définition de segment.
 
-![Le bouton « Copier le code » est mis en surbrillance, ce qui vous permet de &#x200B;](../images/ui/segment-builder/copy-code.png)
+![Le bouton « Copier le code » est mis en surbrillance, ce qui vous permet de ](../images/ui/segment-builder/copy-code.png)
 
 ### Fonctions d’agrégation
 
