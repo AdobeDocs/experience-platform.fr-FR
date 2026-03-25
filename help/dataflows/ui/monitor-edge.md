@@ -19,7 +19,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 * [Flux de données](../../datastreams/overview.md) : les flux de données vous permettent de connecter Experience Platform Edge Network à votre jeu de données.
 * [Capacités](../../landing/license-usage-and-guardrails/capacity.md) : dans Experience Platform, les capacités vous permettent de savoir si votre organisation a dépassé l’un de vos mécanismes de sécurisation et vous donnent des informations sur la manière de résoudre ces problèmes.
-* [segmentation Edge ](../../segmentation/methods/edge-segmentation.md) : la segmentation Edge permet d’évaluer instantanément les définitions de segment dans Adobe Experience Platform [sur le serveur Edge](../../landing/edge-and-hub-comparison.md), en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
+* [segmentation Edge &#x200B;](../../segmentation/methods/edge-segmentation.md) : la segmentation Edge permet d’évaluer instantanément les définitions de segment dans Adobe Experience Platform [sur le serveur Edge](../../landing/edge-and-hub-comparison.md), en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
 
 ## Accès {#access}
 
