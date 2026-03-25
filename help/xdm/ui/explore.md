@@ -75,7 +75,7 @@ Ces actions sont cohérentes sur les deux points d’entrée pour les types de r
 
 Selon le type de ressource et vos autorisations, les actions suivantes peuvent être disponibles :
 
-- **[!UICONTROL Delete]** — Supprimer définitivement une ressource personnalisée de votre organisation (lorsque les contraintes le permettent). Si la suppression est bloquée, voir [ Contraintes ](#delete-constraints).
+- **[!UICONTROL Delete]** — Supprimer définitivement une ressource personnalisée de votre organisation (lorsque les contraintes le permettent). Si la suppression est bloquée, voir [&#x200B; Contraintes &#x200B;](#delete-constraints).
 - **[!UICONTROL Download sample file]** — Générer un fichier de données d&#39;exemple en fonction de la structure des ressources. Étape par étape : [générer des exemples de données XDM](./sample.md).
 - **[!UICONTROL Copy JSON structure]** — Copiez la définition de la ressource au format JSON pour la réutilisation, l&#39;exportation ou le contrôle. Procédure pas à pas : [Exporter des schémas XDM](./export.md).
 - **[!UICONTROL Add to package]** — Incluez la ressource dans un package sandbox pour l&#39;exportation ou l&#39;importation dans des sandbox. Etape par étape : [Exporter des objets dans un package](../../sandboxes/ui/sandbox-tooling.md#export-objects).
@@ -148,7 +148,7 @@ Consultez la documentation [Ajouter des champs personnalisés aux groupes de cha
 
 Certains noms de champ sont précédés d’un trait de soulignement, tels que `_repo` et `_id`. Il s’agit d’espaces réservés pour les champs que le système génère et attribue automatiquement au fur et à mesure de l’ingestion des données.
 
-Par conséquent, la plupart de ces champs doivent être exclus de la structure de vos données lors de l’ingestion dans Experience Platform. La principale exception à cette règle est le champ [`_{TENANT_ID}` , sous lequel tous les champs XDM créés sous votre organisation doivent ](../api/getting-started.md#know-your-tenant_id) un espace de noms.
+Par conséquent, la plupart de ces champs doivent être exclus de la structure de vos données lors de l’ingestion dans Experience Platform. La principale exception à cette règle est le champ [`_{TENANT_ID}` , sous lequel tous les champs XDM créés sous votre organisation doivent &#x200B;](../api/getting-started.md#know-your-tenant_id) un espace de noms.
 
 ### Types de données {#data-types}
 
@@ -182,7 +182,7 @@ Les champs d’identité sont mis en surbrillance dans la zone de travail avec u
 
 >[!NOTE]
 >
->Pour plus d’informations sur les champs d’identité et leur relation avec les services Experience Platform en aval[ consultez le guide sur la ](./fields/identity.md) définition des champs d’identité .
+>Pour plus d’informations sur les champs d’identité et leur relation avec les services Experience Platform en aval[&#x200B; consultez le guide sur la &#x200B;](./fields/identity.md) définition des champs d’identité .
 
 ### Champs de relation {#relationship}
 
