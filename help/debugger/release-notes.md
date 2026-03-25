@@ -4,24 +4,24 @@ description: Dernières notes de mise à jour pour Adobe Experience Platform 
 keywords: debugger ; extension experience cloud debugger ; chrome ; extension ; notes de mise à jour
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: c4048b83c916f4b3b4b5acb3cccb957b65ee25c8
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 100%
+source-wordcount: '846'
+ht-degree: 98%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform Debugger
 
-## Version 1.6.4 - 6 mai 2025
+## Version 1.6.5 - mercredi 24 mars 2026
 
-### Correctifs et améliorations
+* Correction d’un problème qui empêchait l’envoi d’événements d’AppMeasurement dans les sessions Assurance actives.
+
+## Version 1.6.4 - 6 mai 2025
 
 * Correction d’un problème en raison duquel la connexion n’était pas disponible.
 
 ## Version 1.6.3 - 30 avril 2025
-
-### Correctifs et améliorations
 
 * Correction d’un problème en raison duquel le débogueur empêchait le fonctionnement des fonctions DTM et Tags.
 * Correction d’un problème en raison duquel les accès post-traités Analytics n’apparaissaient pas dans les journaux.
@@ -29,24 +29,15 @@ ht-degree: 100%
 
 ## Version 1.6.2 - 1er octobre 2024
 
-### Correctifs et améliorations
-
 * Correction d’un problème qui rendait le Debugger trop réactif à toutes les erreurs CSP.
 
 ## Version 1.6.1 - 25 juillet 2024
-
-### Correctifs et améliorations
 
 * Correction d’un problème qui empêchait les utilisateurs et utilisatrices d’ajouter de nouveaux codes intégrés de balises aux pages sans ces codes.
 
 ## Version 1.6.0 - 11 juillet 2024
 
-### Nouvelles fonctionnalités
-
 * Permettre aux utilisateurs et utilisatrices d’accepter ou de refuser la collecte de données techniques et personnelles.
-
-### Correctifs et améliorations
-
 * Correction de l’injection de script dans Firefox et du lien vers la politique de confidentialité.
 * Capture des requêtes Analytics manquantes.
 * Correction des blocages sur les pages contenant de nombreux messages de console complexes.
@@ -54,19 +45,12 @@ ht-degree: 100%
 
 ## Version 1.5.4 - 19 décembre 2023
 
-### Correctifs et améliorations
-
 * Correction d’un problème en raison duquel les paramètres n’étaient pas conservés.
 * Correction d’un problème en raison duquel le débogueur se bloquait lors de l’affichage des accès Analytics après traitement.
 
 ## Version 1.5.3 - 6 décembre 2023
 
-### Nouvelles fonctionnalités
-
 * Ajout d’un paramètre « Verrouillage sur l’onglet actif lors de l’ouverture du débogueur ».
-
-### Correctifs et améliorations
-
 * Correction d’un problème en raison duquel les requêtes Analytics étaient absentes sur les domaines privés.
 * Correction d’un problème en raison duquel les données Activity Map manquaient dans le tableau des requêtes Analytics.
 * Correction d’un problème en raison duquel l’affichage de Target Trace provoquait un blocage.
@@ -76,13 +60,9 @@ ht-degree: 100%
 
 (Firefox uniquement)
 
-### Correctifs et améliorations
-
 * Mise à jour de l’organisation des fichiers.
 
 ## Version 1.5.1 - 2 novembre 2023
-
-### Correctifs et améliorations
 
 * Correction de problèmes où les événements Analytics étaient ignorés ou dupliqués.
 * Correction d’un problème de dépassement de la taille maximale de stockage de l’état.
@@ -90,12 +70,7 @@ ht-degree: 100%
 
 ## Version 1.5.0 - 19 octobre 2023
 
-### Nouvelles fonctionnalités
-
 * Affichez les liens vers la propriété, l’environnement et les règles dans le résumé et les journaux des balises.
-
-### Correctifs et améliorations
-
 * Correction d’un problème en raison duquel les données de résumé des balises n’étaient pas envoyées.
 * Correction d’un problème en raison duquel les sessions d’Assurance généraient une erreur CORS.
 * Correction d’un problème qui empêchait l’affichage de Target Trace.
