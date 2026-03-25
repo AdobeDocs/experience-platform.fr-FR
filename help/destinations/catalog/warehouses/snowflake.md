@@ -1,13 +1,13 @@
 ---
 title: Connexion en continu Snowflake
 description: Créez un partage de données Snowflake en direct pour recevoir des mises à jour d’audience en flux continu directement sous forme de tables partagées dans votre compte .
-last-substantial-update: 2025-10-23T00:00:00Z
+last-substantial-update: 2026-03-24T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: f74680fa35490f0e8b2d371739ecf8ef3eed74c9
 workflow-type: tm+mt
-source-wordcount: '1547'
-ht-degree: 21%
+source-wordcount: '1637'
+ht-degree: 17%
 
 ---
 
@@ -29,7 +29,7 @@ Cette destination utilise un partage de données [!DNL Snowflake], ce qui signif
 
 La première fois que vous partagez des données de l’instance Adobe Snowflake vers la vôtre, vous êtes invité à accepter la liste privée d’Adobe.
 
-![Capture d’écran affichant l’écran d’acceptation de la liste privée Snowflake](../../assets/catalog/cloud-storage/snowflake/snowflake-accept-listing.png)
+![Capture d’écran affichant l’écran d’acceptation de la liste privée Snowflake](../../assets/catalog/warehouses/snowflake/snowflake-accept-listing.png)
 
 ### Conservation des données et durée de vie (TTL) {#ttl}
 
@@ -45,7 +45,7 @@ Lorsqu’un flux de données s’exécute pour une audience pour la première fo
 
 ## Partage de données par lots ou en flux continu {#batch-vs-streaming}
 
-Experience Platform fournit deux types de destinations Snowflake : [Diffusion en continu Snowflake](snowflake.md) et [Lot Snowflake](snowflake-batch.md).
+[!DNL Adobe Experience Platform] fournit deux types de destinations [!DNL Snowflake] : [Diffusion en continu Snowflake](snowflake.md) et [Lot Snowflake](snowflake-batch.md).
 
 Le tableau ci-dessous vous aidera à choisir la destination à utiliser en décrivant les scénarios où chaque méthode de partage de données est la plus appropriée.
 
@@ -57,7 +57,7 @@ Le tableau ci-dessous vous aidera à choisir la destination à utiliser en décr
 | **Gestion des données** | Toujours afficher le dernier instantané complet | Mises à jour incrémentielles en fonction des modifications de l’appartenance à une audience |
 | **Exemples de scénarios** | Création de rapports d’entreprise, analyse de données, formation au modèle ML | Suppression des campagnes marketing, personnalisation en temps réel |
 
-Pour plus d’informations sur le partage de données par lots, consultez la documentation sur la connexion par lots de [&#128279;](snowflake-batch.md) .
+Pour plus d’informations sur le partage de données par lots, consultez la documentation sur la connexion par lots de [](snowflake-batch.md) .
 
 ## Cas d’utilisation {#use-cases}
 
@@ -69,14 +69,15 @@ Le partage de données en flux continu est idéal pour les scénarios où vous a
 * **Efficacité et nuance** : augmentez l’efficacité et la nuance des efforts marketing en permettant une réponse rapide aux changements de comportement des utilisateurs et utilisatrices
 * **Optimisation du parcours client en temps réel** : mettez immédiatement à jour les expériences client lorsque l’appartenance à un segment ou les attributs de profil changent
 
-Le partage de données en flux continu fournit des mises à jour continues en fonction des modifications de segment, des modifications de mappage d’identités ou des modifications d’attributs, ce qui le rend adapté aux scénarios où la latence est critique et où des mises à jour immédiates sont requises.
+Le partage de données en flux continu fournit des mises à jour continues basées sur les modifications de segment, les modifications de mappage d’identités ou les modifications d’attributs, ce qui le rend approprié lorsque une faible latence est importante.
 
 ## Conditions préalables {#prerequisites}
 
 Avant de configurer votre connexion Snowflake, veillez à respecter les conditions préalables suivantes :
 
 * Vous avez accès à un compte [!DNL Snowflake].
-* Votre compte Snowflake est abonné à des annonces privées. Vous ou un membre de votre société disposant de droits d’administrateur de compte sur Snowflake pouvez configurer cette option.
+* Votre compte [!DNL Snowflake] est abonné à des annonces privées. Vous ou un membre de votre société disposant de droits d’administrateur de compte sur [!DNL Snowflake] pouvez configurer cette option.
+* Vous connaissez la région de votre compte [!DNL Snowflake], que vous sélectionnerez dans une liste déroulante lors de la connexion à la destination.
 
 Lisez la [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing) pour plus d’informations sur les autorisations nécessaires.
 
@@ -86,12 +87,10 @@ Cette section décrit les types d’audiences que vous pouvez exporter vers cett
 
 | Origine de l’audience | Pris en charge | Description |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Oui | Audiences générées via Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Toutes les autres origines d’audience | Oui | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications Experience Platform, telles que [!DNL Adobe Journey Optimizer], </li><li> et plus encore. </li></ul> |
+| [!DNL Segmentation Service] | Oui | Audiences générées via le [!DNL Adobe Experience Platform] [Segmentation Service](../../../segmentation/home.md). |
+| Toutes les autres origines d’audience | Oui | Cette catégorie inclut toutes les origines d’audience en dehors des audiences générées par le [!DNL Segmentation Service]. Découvrez les [différentes origines d’audience](/help/segmentation/ui/audience-portal.md#customize). Voici quelques exemples : <ul><li> audiences de chargement personnalisées [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans [!DNL Adobe Experience Platform] à partir de fichiers CSV,</li><li> les audiences semblables, </li><li> les audiences fédérées, </li><li> les audiences générées dans d’autres applications [!DNL Adobe Experience Platform] telles que [!DNL Adobe Journey Optimizer], </li><li> et plus encore. </li></ul> |
 
 {style="table-layout:auto"}
-
-
 
 Audiences prises en charge par type de données d’audience :
 
@@ -99,11 +98,10 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
-
 
 ## Type et fréquence d’exportation {#export-type-frequency}
 
@@ -112,7 +110,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 | Élément | Type | Notes |
 |---------|----------|---------|
 | Type d’exportation | **[!UICONTROL Audience export]** | Vous exportez tous les profils membres d’une audience ainsi que les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination [!DNL Snowflake]. |
-| Fréquence des exportations | **[!UICONTROL Streaming]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
+| Fréquence des exportations | **[!UICONTROL Streaming]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans [!DNL Adobe Experience Platform] en fonction de l’évaluation de l’audience, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -128,18 +126,18 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Connect to destination]**.
 
-![Exemple de capture d’écran montrant comment s’authentifier à la destination](../../assets/catalog/cloud-storage/snowflake/authenticate-destination.png)
+![Exemple de capture d’écran montrant comment s’authentifier à la destination](../../assets/catalog/warehouses/snowflake/authenticate-destination.png)
 
 ### Renseigner les détails de la destination {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_accountID"
 >title="Saisir votre identifiant de compte Snowflake"
->abstract="Si votre compte est lié à une organisation, utilisez le format suivant : `OrganizationName.AccountName`<br><br>. Si votre compte n’est pas lié à une organisation, utilisez le format suivant : `AccountName`."
+>abstract="Si votre compte est lié à une organisation, utilisez le format suivant : `OrganizationName.AccountName`<br><br>Si votre compte n’est pas lié à une organisation, utilisez le format suivant : `AccountName`"
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
-![Exemple de capture d’écran montrant comment remplir les détails pour votre destination](../../assets/catalog/cloud-storage/snowflake/configure-destination-details.png)
+![Exemple de capture d’écran montrant comment remplir les détails pour votre destination](../../assets/catalog/warehouses/snowflake/configure-destination-details.png)
 
 * **[!UICONTROL Name]** : nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
@@ -148,9 +146,13 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
    * Si votre compte n’est pas lié à une organisation, `AccountName`.
 * **[!UICONTROL Account acknowledgment]** : activez/désactivez l’accusé de réception de l’ID de compte Snowflake pour confirmer que l’ID de compte est correct et qu’il vous appartient.
 
+>[!NOTE]
+>
+> Le **[!UICONTROL Snowflake Account ID]** ne peut pas être modifié par le biais du workflow [modifier la destination](../../ui/edit-destination.md) après avoir créé la destination. Pour utiliser un autre compte, [créez une connexion de destination](../../ui/connect-destination.md).
+
 >[!IMPORTANT]
 >
-> Les caractères spéciaux utilisés dans le nom de la destination et le nom du sandbox Experience Platform sont automatiquement convertis en traits de soulignement (`_`) dans Snowflake. Pour éviter toute confusion, n’utilisez pas de caractères spéciaux dans la destination et le nom du sandbox.
+> Les caractères spéciaux utilisés dans le nom de la destination et [!DNL Adobe Experience Platform] nom du sandbox sont automatiquement convertis en traits de soulignement (`_`) dans [!DNL Snowflake]. Pour éviter toute confusion, n’utilisez pas de caractères spéciaux dans la destination et le nom du sandbox.
 
 ### Activer les alertes {#enable-alerts}
 
@@ -163,7 +165,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -171,23 +173,25 @@ Consultez la section [Activer les profils et les audiences vers les destinations
 
 La destination Snowflake prend en charge le mappage des attributs de profil aux attributs personnalisés.
 
-![Image de l’interface utilisateur d’Experience Platform montrant l’écran de mappage pour la destination Snowflake.](../../assets/catalog/cloud-storage/snowflake/mapping.png)
+![Image de l’interface utilisateur d’Experience Platform montrant l’écran de mappage pour la destination Snowflake.](../../assets/catalog/warehouses/snowflake/mapping.png)
 
 Les attributs de la cible sont automatiquement créés dans Snowflake à l’aide du nom d’attribut que vous fournissez dans le champ **[!UICONTROL Attribute name]** .
 
 ## Données exportées / Valider l’exportation des données {#exported-data}
 
-Vérifiez votre compte Snowflake pour vous assurer que les données ont été correctement exportées.
+Les données sont partagées dans votre compte Snowflake via une table partagée. Vérifiez votre compte Snowflake pour vous assurer que les données ont été correctement exportées.
 
-## Limites connues {#known-limitations}
+L’exemple suivant montre des lignes d’exemple d’un tableau partagé : certaines colonnes stockent les identités et l’appartenance à un segment au format JSON ; les attributs de profil mappés apparaissent sous la forme de colonnes de chaîne distinctes.
 
-### Restriction de la politique de fusion par défaut {#default-merge-policy-restriction}
+![Exemples de lignes de feuille de calcul Snowflake affichant les colonnes IDENTITYMAP, SEGMENT_MEMBERSHIP et d’attributs mappés](../../assets/catalog/warehouses/snowflake/snowflake-streaming-exported-data.png) {align="center" zoomable="yes"}
 
-Actuellement, seules les audiences mappées à la politique de fusion par défaut peuvent être exportées.
+### Structure des données {#data-structure}
 
-### Disponibilité régionale {#regional-availability}
+La capture d’écran ci-dessus montre les colonnes suivantes :
 
-Actuellement, la destination de diffusion en continu [!DNL Snowflake] n’est disponible que pour [!DNL Real-Time CDP] clients configurés dans la région Experience Platform VA7.
+* **IDENTITYMAP** : objet JSON pour chaque mappage d’identité de profil.
+* **SEGMENT_MEMBERSHIP** : objet JSON pour chaque audience activée sur le flux de données. La valeur comprend `lastQualificationTime` et `status` (par exemple, `realized` lorsque le profil est qualifié pour le segment).
+* **Attributs de mappage** : chaque attribut de mappage que vous sélectionnez pendant le workflow d’activation est représenté sous la forme d’un en-tête de colonne dans [!DNL Snowflake].
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
