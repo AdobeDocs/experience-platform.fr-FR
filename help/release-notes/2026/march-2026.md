@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Mars 2026
 description: Les notes de mise à jour de mars 2026 pour Adobe Experience Platform.
 exl-id: 66b948fd-caa0-4e5e-83dd-3b15b77c09fa
-source-git-commit: 0bbbd46f8f82dcab1da69f46e6bc4d95efbff5c2
+source-git-commit: 30b66420e9cee6b4d85cf41a31e9595d5a240fda
 workflow-type: tm+mt
-source-wordcount: '1266'
-ht-degree: 34%
+source-wordcount: '1369'
+ht-degree: 32%
 
 ---
 
@@ -27,6 +27,7 @@ Nouvelles fonctionnalités et mises à jour des fonctionnalités existantes dans
 
 - [Gestion avancée du cycle de vie des données](#advanced-data-lifecycle-management)
 - [Agent Orchestrator](#agent-orchestrator)
+- [Flux de données](#datastreams)
 - [Destinations](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Profil client en temps réel](#real-time-customer-profile)
@@ -53,11 +54,23 @@ Agent Orchestrator vous permet de créer et de déployer des agents optimisés p
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [Adobe Marketing Agent pour  [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | Adobe Marketing Agent for [!DNL Microsoft 365 Copilot] est votre agent intégré qui apporte des informations marketing Adobe directement dans les outils quotidiens tels que les applications [!DNL Teams], [!DNL Word], [!DNL PowerPoint] et d’autres applications [!DNL Microsoft 365]. Vous pouvez utiliser cet agent pour extraire des informations de campagne approuvées à partir des applications Adobe pendant que vous planifiez des campagnes, révisez des audiences, collaborez avec des collègues pour répondre aux questions des clients et prenez des décisions informées basées sur les données sans quitter votre workflow [!DNL Microsoft 365]. |
+| [Adobe Marketing Agent pour  [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | Adobe Marketing Agent for [!DNL Microsoft 365 Copilot] est votre agent intégré qui apporte des informations marketing Adobe directement dans les outils quotidiens tels que les applications [!DNL Teams], [!DNL Word], [!DNL PowerPoint] et d’autres applications [!DNL Microsoft 365]. Vous pouvez utiliser cet agent pour extraire des informations de campagne approuvées à partir des applications Adobe pendant que vous planifiez des campagnes, révisez des audiences, collaborez avec des collègues pour répondre aux questions des clients et prenez des décisions informées basées sur les données sans quitter votre workflow [!DNL Microsoft 365]. |
 
 {style="table-layout:auto"}
 
 Pour en savoir plus, consultez la [documentation d’Agent Orchestrator](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
+
+## Flux de données {#datastreams}
+
+Un flux de données représente la configuration côté serveur lors de l’implémentation des SDK Web et Mobile Adobe Experience Platform et de l’API du serveur Edge Network Adobe Experience Platform. La commande de configuration du train de données dans les SDK gère tous les services avec lesquels un client interagit.
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Disponibilité générale des configurations de trains de données dynamiques | Les configurations de train de données dynamiques sont désormais disponibles. Les configurations dynamiques de train de données vous permettent de définir des ensembles de règles configurables par l’utilisateur pour chaque service activé pour votre train de données, qui déterminent quelle solution Experience Cloud doit recevoir chaque type de données. Pour plus d’informations, consultez le [guide de configuration des trains de données dynamiques](../../datastreams/configure-dynamic-datastream.md). |
+
+{style="table-layout:auto"}
+
+Pour plus d’informations, consultez la [présentation des flux de données](../../datastreams/overview.md).
 
 ## Destinations {#destinations}
 
@@ -67,10 +80,10 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | --- | --- |
-| Connexion à [&#128279;](../../destinations/catalog/advertising/adobe-advertising-cloud-connection.md) | La nouvelle connexion Adobe Advertising DSP offre la même fonctionnalité que la connexion héritée, ainsi que la prise en charge d’identités supplémentaires. Avec le nouveau connecteur, vous pouvez également exporter des identités basées sur des cookies vers Adobe Advertising DSP. |
+| Connexion à [](../../destinations/catalog/advertising/adobe-advertising-cloud-connection.md) | La nouvelle connexion Adobe Advertising DSP offre la même fonctionnalité que la connexion héritée, ainsi que la prise en charge d’identités supplémentaires. Avec le nouveau connecteur, vous pouvez également exporter des identités basées sur des cookies vers Adobe Advertising DSP. |
 | Connexion [FreeWheel](../../destinations/catalog/advertising/freewheel.md) | Envoyez des audiences [!DNL Real-Time CDP] à FreeWheel sous forme de fichiers par lots quotidiens afin de les cibler dans les offres et campagnes FreeWheel sur CTV, les vidéos et les écrans. Contactez votre équipe de compte Adobe pour obtenir l’accès. |
 | Prise en charge des audiences externes pour [The Trade Desk CRM](../../destinations/catalog/advertising/tradedesk-emails.md) et [Pinterest](../../destinations/catalog/advertising/pinterest.md) | Vous pouvez désormais activer des audiences d’origines autres que Segmentation Service vers The Trade Desk CRM, Criteo et Pinterest, y compris les audiences de chargement personnalisées (importées depuis CSV), les audiences semblables, les audiences fédérées et les audiences créées dans d’autres applications Experience Platform telles que [!DNL Adobe Journey Optimizer]. Cette mise à jour sera déployée jusqu’à la fin du mois de mars. Pour plus d’informations, consultez la section [audiences prises en charge](../../destinations/catalog/advertising/criteo.md#supported-audiences) sur la page de catalogue de chaque destination. |
-| Augmentation de la limite des audiences de chargement personnalisées | Vous pouvez désormais activer jusqu’à 20 audiences de chargement personnalisées par instance de destination. Auparavant, cette limite était de 10. Pour plus d’informations, consultez la section [&#x200B; Mécanismes de sécurisation des destinations &#x200B;](../../destinations/guardrails.md#batch-file-based-activation) . |
+| Augmentation de la limite des audiences de chargement personnalisées | Vous pouvez désormais activer jusqu’à 20 audiences de chargement personnalisées par instance de destination. Auparavant, cette limite était de 10. Pour plus d’informations, consultez la section [ Mécanismes de sécurisation des destinations ](../../destinations/guardrails.md#batch-file-based-activation) . |
 | Prise en charge de l’[Exporter le fichier maintenant](../../destinations/ui/export-file-now.md) et de l’[API d’activation ad hoc](../../destinations/api/ad-hoc-activation-api.md) pour les audiences externes | Vous pouvez désormais utiliser Exporter le fichier maintenant (interface utilisateur) et l’API d’activation ad hoc avec des audiences externes (telles que le chargement personnalisé, les audiences semblables, fédérées et provenant d’autres applications Experience Platform) lors de l’activation vers des destinations basées sur des fichiers par lots. Cette mise à jour sera déployée jusqu’à la fin du mois de mars. |
 
 {style="table-layout:auto"}
@@ -79,7 +92,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Correction | Description |
 | --- | --- |
-| [&#128279;](../../destinations/catalog/social/tiktok.md) hachage du numéro de téléphone du connecteur | Correction d’un problème en raison duquel une mauvaise configuration de la carte de destination signifiait que les identités saisies sur les numéros de téléphone n’étaient pas activées sur TikTok. Pour bénéficier de ce correctif, configurez un nouveau flux d’activation ou supprimez le mappage des numéros de téléphone de votre flux existant, enregistrez-le et ajoutez-le à nouveau. |
+| [](../../destinations/catalog/social/tiktok.md) hachage du numéro de téléphone du connecteur | Correction d’un problème en raison duquel une mauvaise configuration de la carte de destination signifiait que les identités saisies sur les numéros de téléphone n’étaient pas activées sur TikTok. Pour bénéficier de ce correctif, configurez un nouveau flux d’activation ou supprimez le mappage des numéros de téléphone de votre flux existant, enregistrez-le et ajoutez-le à nouveau. |
 
 {style="table-layout:auto"}
 

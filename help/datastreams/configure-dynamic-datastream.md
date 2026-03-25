@@ -1,22 +1,15 @@
 ---
 title: Créer des configurations de flux de données dynamiques
 description: Découvrez comment créer des configurations de flux de données dynamiques pour acheminer vos données vers divers services Experience Cloud en fonction de règles.
-hide: true
-hidefromtoc: true
-badge: label="Beta" type="Informative"
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: 8ce5b6718861d01731b9aab9f81645f2aeb2970f
+source-git-commit: 30b66420e9cee6b4d85cf41a31e9595d5a240fda
 workflow-type: tm+mt
-source-wordcount: '1160'
-ht-degree: 4%
+source-wordcount: '1098'
+ht-degree: 3%
 
 ---
 
 # Créer des configurations de flux de données dynamiques
-
->[!AVAILABILITY]
->
->* L’option permettant de définir des configurations de train de données dynamiques est actuellement dans Beta et disponible pour un nombre limité de clients. Pour accéder à cette fonctionnalité, contactez votre représentant Adobe. La documentation et les fonctionnalités peuvent changer.
 
 Par défaut, Experience Platform Edge Network envoie tous les événements qui atteignent un flux de données à tous les [services](configure.md#add-services) Experience Cloud que vous avez activés pour vos flux de données. Selon vos cas d’utilisation, ce workflow peut ne pas toujours être idéal pour vous.
 
@@ -47,7 +40,7 @@ Les configurations de flux de données dynamiques comportent des limites et des 
 
 ## Configurations de train de données dynamiques et remplacements de la configuration de train de données {#dynamic-versus-overrides}
 
-Les configurations dynamiques de train de données et [&#x200B; remplacements de configuration de train de données](overrides.md) sont des fonctionnalités qui s’excluent mutuellement.
+Les configurations dynamiques de train de données et [ remplacements de configuration de train de données](overrides.md) sont des fonctionnalités qui s’excluent mutuellement.
 
 Cela signifie que vous ne pouvez pas utiliser de configurations de train de données dynamiques avec des remplacements de configurations de train de données. Il faut choisir l&#39;un ou l&#39;autre.
 
@@ -57,33 +50,33 @@ Si vous activez à la fois les configurations de train de données dynamique et 
 
 Après avoir [créé un flux de données](configure.md) et [ajouté un service](configure.md#add-services), suivez les étapes ci-dessous pour ajouter une configuration dynamique au service.
 
-1. Accédez à la page **[!UICONTROL Collecte de données]** > **[!UICONTROL Flux de données]** et sélectionnez le flux de données que vous avez créé.
+1. Accédez à la page **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]** et sélectionnez le flux de données que vous avez créé.
 
    ![Image de l’interface utilisateur des flux de données affichant la liste des flux de données.](assets/configure-dynamic-datastream/select-datastream.png)
 
-1. Sélectionnez l&#39;option **[!UICONTROL Modifier]** sur le service pour lequel vous souhaitez définir une configuration dynamique.
+1. Sélectionnez l’option **[!UICONTROL Edit]** sur le service pour lequel vous souhaitez définir une configuration dynamique.
 
    ![Image de l’interface utilisateur des flux de données affichant les services ajoutés à un flux de données.](assets/configure-dynamic-datastream/select-service.png)
 
-1. Sur la page **[!UICONTROL Configurer]**, sélectionnez **[!UICONTROL Enregistrer et modifier la configuration dynamique]**.
+1. Dans la page **[!UICONTROL Configure]**, sélectionnez **[!UICONTROL Save and Edit Dynamic Configuration]**.
 
    ![Image de l’interface utilisateur des flux de données affichant la page de configuration des flux de données.](assets/configure-dynamic-datastream/save-and-edit.png)
 
-1. Sélectionnez **[!UICONTROL Ajouter une configuration dynamique]**.
+1. Sélectionnez **[!UICONTROL Add Dynamic Configuration]**.
 
-   ![Image de l’interface utilisateur des flux de données affichant le message configuration dynamique sans règle ajoutée &#x200B;](assets/configure-dynamic-datastream/add-dynamic-config.png).
+   ![Image de l’interface utilisateur des flux de données affichant le message configuration dynamique sans règle ajoutée ](assets/configure-dynamic-datastream/add-dynamic-config.png).
 
-1. Dans le panneau **[!UICONTROL Ressources]**, faites glisser et déposez les éléments avec lesquels vous souhaitez créer votre règle sur le côté droit de la fenêtre. Vous pouvez combiner plusieurs ressources pour créer des règles complexes.
+1. Dans le panneau **[!UICONTROL Resources]**, faites glisser et déposez les éléments avec lesquels vous souhaitez créer votre règle sur le côté droit de la fenêtre. Vous pouvez combiner plusieurs ressources pour créer des règles complexes.
 
-   Utilisez les options de chaque ressource, telles que **[!UICONTROL égal à]**, **[!UICONTROL n’est pas égal à]**, **[!UICONTROL existe]**, etc. pour affiner vos règles.
+   Utilisez les options de chaque ressource, telles que **[!UICONTROL equals]**, **[!UICONTROL does not equal]**, **[!UICONTROL exists]**, etc., pour affiner vos règles.
 
    ![Image de l’interface utilisateur des flux de données présentant la règle de configuration dynamique.](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. Dans la section **[!UICONTROL Configuration]**, activez/désactivez les services que vous souhaitez activer ou désactiver pour chaque règle, selon que vous souhaitez ou non envoyer les données à chaque service. Si vous désactivez ce bouton, le routage des services est désactivé et *aucune donnée* n’est envoyée au service en amont.
+1. Dans la section **[!UICONTROL Configuration]** , activez/désactivez les services que vous souhaitez activer ou désactiver pour chaque règle, selon que vous souhaitez ou non envoyer les données à chaque service. Si vous désactivez ce bouton, le routage des services est désactivé et *aucune donnée* n’est envoyée au service en amont.
 
    ![Image de l’interface utilisateur des flux de données présentant la règle de configuration dynamique.](assets/configure-dynamic-datastream/enable-service.png)
 
-1. Une fois la configuration des règles terminée, sélectionnez **[!UICONTROL Enregistrer]**.
+1. Une fois la configuration des règles terminée, sélectionnez **[!UICONTROL Save]**.
 
 ## Considérations sur la priorité des règles {#considerations}
 
@@ -103,7 +96,7 @@ Les configurations de train de données dynamiques doivent répondre à des crit
 
 Les règles de configuration des trains de données dynamiques fonctionnent avec des types de données spécifiques pour garantir des performances optimales et un routage des données fiable. Comprendre quels types de données sont pris en charge vous permet de créer des règles efficaces pour traiter vos données efficacement.
 
-| Type de données | Statut | Notes |
+| Type de données | Statut | Remarques |
 |-----------|--------|-------|
 | Chaîne | Autorisé | - |
 | Nombre (Entier, Long, Court, Octet) | Autorisé | - |
@@ -128,7 +121,7 @@ Les règles peuvent utiliser les opérateurs suivants, selon le type de données
 
 >[!NOTE]
 >
->L’opérateur **[!UICONTROL EXCLUDE]** n’est pas directement pris en charge, mais vous pouvez appliquer une logique équivalente en utilisant **[!UICONTROL INCLUDE]** avec des opérateurs de comparaison annulés (par exemple, « n’est pas égal à »).
+>L’opérateur **[!UICONTROL EXCLUDE]** n’est pas directement pris en charge, mais vous pouvez appliquer une logique équivalente en utilisant des **[!UICONTROL INCLUDE]** avec des opérateurs de comparaison annulés (par exemple, « n’est pas égal à »).
 
 ### Structure de règle {#rule-structure}
 
