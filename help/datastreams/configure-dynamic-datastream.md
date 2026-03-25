@@ -2,9 +2,9 @@
 title: Créer des configurations de flux de données dynamiques
 description: Découvrez comment créer des configurations de flux de données dynamiques pour acheminer vos données vers divers services Experience Cloud en fonction de règles.
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: 30b66420e9cee6b4d85cf41a31e9595d5a240fda
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1092'
 ht-degree: 3%
 
 ---
@@ -40,7 +40,7 @@ Les configurations de flux de données dynamiques comportent des limites et des 
 
 ## Configurations de train de données dynamiques et remplacements de la configuration de train de données {#dynamic-versus-overrides}
 
-Les configurations dynamiques de train de données et [&#x200B; remplacements de configuration de train de données](overrides.md) sont des fonctionnalités qui s’excluent mutuellement.
+Les configurations dynamiques de train de données et [ remplacements de configuration de train de données](overrides.md) sont des fonctionnalités qui s’excluent mutuellement.
 
 Cela signifie que vous ne pouvez pas utiliser de configurations de train de données dynamiques avec des remplacements de configurations de train de données. Il faut choisir l&#39;un ou l&#39;autre.
 
@@ -52,29 +52,29 @@ Après avoir [créé un flux de données](configure.md) et [ajouté un service](
 
 1. Accédez à la page **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]** et sélectionnez le flux de données que vous avez créé.
 
-   ![Image de l’interface utilisateur des flux de données affichant la liste des flux de données.](assets/configure-dynamic-datastream/select-datastream.png)
+   ![Interface utilisateur des flux de données affichant la liste des flux de données.](assets/configure-dynamic-datastream/select-datastream.png)
 
 1. Sélectionnez l’option **[!UICONTROL Edit]** sur le service pour lequel vous souhaitez définir une configuration dynamique.
 
-   ![Image de l’interface utilisateur des flux de données affichant les services ajoutés à un flux de données.](assets/configure-dynamic-datastream/select-service.png)
+   ![Interface utilisateur des flux de données affichant les services ajoutés à un flux de données.](assets/configure-dynamic-datastream/select-service.png)
 
 1. Dans la page **[!UICONTROL Configure]**, sélectionnez **[!UICONTROL Save and Edit Dynamic Configuration]**.
 
-   ![Image de l’interface utilisateur des flux de données affichant la page de configuration des flux de données.](assets/configure-dynamic-datastream/save-and-edit.png)
+   ![Interface utilisateur des flux de données affichant la page de configuration des flux de données.](assets/configure-dynamic-datastream/save-and-edit.png)
 
 1. Sélectionnez **[!UICONTROL Add Dynamic Configuration]**.
 
-   ![Image de l’interface utilisateur des flux de données affichant le message configuration dynamique sans règle ajoutée &#x200B;](assets/configure-dynamic-datastream/add-dynamic-config.png).
+   ![Interface utilisateur des flux de données affichant la page de configuration dynamique avant l’ajout de règles.](assets/configure-dynamic-datastream/add-dynamic-config.png)
 
 1. Dans le panneau **[!UICONTROL Resources]**, faites glisser et déposez les éléments avec lesquels vous souhaitez créer votre règle sur le côté droit de la fenêtre. Vous pouvez combiner plusieurs ressources pour créer des règles complexes.
 
    Utilisez les options de chaque ressource, telles que **[!UICONTROL equals]**, **[!UICONTROL does not equal]**, **[!UICONTROL exists]**, etc., pour affiner vos règles.
 
-   ![Image de l’interface utilisateur des flux de données présentant la règle de configuration dynamique.](assets/configure-dynamic-datastream/drag-resources.png)
+   ![Interface utilisateur des flux de données présentant le créateur de règles de configuration dynamique avec les ressources en cours de déplacement.](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. Dans la section **[!UICONTROL Configuration]** , activez/désactivez les services que vous souhaitez activer ou désactiver pour chaque règle, selon que vous souhaitez ou non envoyer les données à chaque service. Si vous désactivez ce bouton, le routage des services est désactivé et *aucune donnée* n’est envoyée au service en amont.
+1. Dans la section **[!UICONTROL Configuration]** , activez/désactivez les services que vous souhaitez activer ou désactiver pour chaque règle, selon que vous souhaitez ou non envoyer les données à chaque service. Si vous désactivez ce bouton, le routage des services est désactivé et *aucune donnée* n’est envoyée au service en aval.
 
-   ![Image de l’interface utilisateur des flux de données présentant la règle de configuration dynamique.](assets/configure-dynamic-datastream/enable-service.png)
+   ![Interface utilisateur des flux de données présentant la règle de configuration dynamique avec les bascules de service.](assets/configure-dynamic-datastream/enable-service.png)
 
 1. Une fois la configuration des règles terminée, sélectionnez **[!UICONTROL Save]**.
 
@@ -135,9 +135,9 @@ Prenons l’exemple de la règle complexe illustrée dans l’image ci-dessous.
 
 Vous pouvez décomposer cette règle en plusieurs règles plus simples :
 
-![Image de l’interface utilisateur de Platform montrant une règle complexe.](assets/configure-dynamic-datastream/simple-rule-1.png)
+![Image de l’interface utilisateur de Platform montrant la première règle simplifiée.](assets/configure-dynamic-datastream/simple-rule-1.png)
 
-![Image de l’interface utilisateur de Platform montrant une règle complexe.](assets/configure-dynamic-datastream/simple-rule-2.png)
+![Image de l’interface utilisateur de Platform montrant la deuxième règle simplifiée.](assets/configure-dynamic-datastream/simple-rule-2.png)
 
 **Évitez les règles complexes**. Des règles plus simples garantissent une évaluation plus rapide et une meilleure maintenabilité.
 

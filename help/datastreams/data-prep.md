@@ -2,16 +2,16 @@
 title: Préparation des données pour la collecte de données
 description: Découvrez comment mapper vos données à un schéma d’événement du modèle de données d’expérience (XDM) lors de la configuration d’un flux de données pour les SDK web et mobile d’Adobe Experience Platform.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '1166'
-ht-degree: 43%
+source-wordcount: '1167'
+ht-degree: 41%
 
 ---
 
 # Préparation des données pour la collecte de données
 
-La préparation des données est un service Adobe Experience Platform qui vous permet de mapper, transformer et valider des données depuis et vers le [modèle de données d’expérience (XDM)](../xdm/home.md). Lors de la configuration d’un [flux de données](./overview.md) compatible avec Experience Platform, vous pouvez utiliser les fonctionnalités de préparation des données pour mapper vos données source à XDM lors de leur envoi à Experience Platform Edge Network.
+La préparation des données est un service Adobe Experience Platform que vous pouvez utiliser pour mapper, transformer et valider des données depuis et vers le [modèle de données d’expérience (XDM)](../xdm/home.md). Lors de la configuration d’un [flux de données](./overview.md) compatible avec Experience Platform, vous pouvez utiliser les fonctionnalités de préparation des données pour mapper vos données source à XDM lors de leur envoi à Experience Platform Edge Network.
 
 Toutes les données envoyées à partir d’une page web doivent atterrir dans Experience Platform en tant que XDM. Il existe trois façons de traduire les données d’une couche de données sur la page vers le fichier XDM accepté par Experience Platform :
 
@@ -48,7 +48,7 @@ Ce guide explique comment mapper vos données dans l’interface utilisateur. Po
 
 Pour une démonstration rapide du processus de préparation des données pour la collecte de données, reportez-vous à la vidéo suivante :
 
->[!VIDEO](https://video.tv.adobe.com/v/345564?captions=fre_fr&quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
 ## [!UICONTROL Select data] {#select-data}
 
@@ -158,7 +158,7 @@ Vous pouvez sélectionner l’option pour charger l’objet sous forme de fichie
 
 >[!NOTE]
 >
-> Utilisez un exemple d’objet JSON qui représente chaque élément de couche de données pouvant être utilisé sur n’importe quelle page. Par exemple, toutes les pages n’utilisent pas les éléments de couche de données de panier. Toutefois, les éléments de couche de données du panier doivent être inclus dans cet exemple d’objet JSON.
+>Utilisez un exemple d’objet JSON qui représente chaque élément de couche de données pouvant être utilisé sur n’importe quelle page. Par exemple, toutes les pages n’utilisent pas les éléments de couche de données de panier. Toutefois, les éléments de couche de données du panier doivent être inclus dans cet exemple d’objet JSON.
 
 ## [!UICONTROL Mapping]
 
