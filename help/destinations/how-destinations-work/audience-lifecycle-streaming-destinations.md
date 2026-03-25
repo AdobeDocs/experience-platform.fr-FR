@@ -2,10 +2,10 @@
 title: Cycle de vie des audiences dans les destinations Experience Platform et de streaming
 description: Découvrez comment les noms d’audience et les mappages d’Experience Platform sont pris en compte dans les plateformes de destination de diffusion en streaming.
 exl-id: 8a9a9e2f-d52f-41c9-ae27-9d2cd797bb85
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 381d1f952067cece9f9a9618a00bbed304214906
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 3%
+source-wordcount: '466'
+ht-degree: 2%
 
 ---
 
@@ -28,7 +28,7 @@ Les destinations de diffusion en continu suivantes prennent en charge les mises 
 
 * [Connexion à l’audience Acxiom](../catalog/advertising/acxiom-audience-connection.md)
 * [Adobe Campaign Managed Cloud](../catalog/email-marketing/adobe-campaign-managed-services.md)
-* [Advertising Cloud DSP](../catalog/advertising/adobe-advertising-cloud-connection.md)
+* [Adobe Advertising DSP](../catalog/advertising/adobe-advertising-dsp-connection.md)
 * [Bombora](../catalog/advertising/bombora.md)
 * [Criteo](../catalog/advertising/criteo.md)
 * [Demandbase](../catalog/advertising/demandbase.md)
@@ -67,7 +67,7 @@ Les destinations de diffusion en continu suivantes prennent en charge la suppres
 * [(API) Oracle Eloqua](../catalog/email-marketing/oracle-eloqua-api.md)
 * [(Entreprises) LinkedIn Matched Audience](../catalog/social/linkedin-b2b.md)
 * [(Hérité) (V2) Marketo Engage](../catalog/adobe/marketo-engage.md)
-* [Adobe Advertising Cloud DSP](../catalog/advertising/adobe-advertising-cloud-connection.md)
+* [Adobe Advertising DSP](../catalog/advertising/adobe-advertising-dsp-connection.md)
 * [Audiences du compte Bombora](../catalog/advertising/bombora.md)
 * [Criteo](../catalog/advertising/criteo.md)
 * [Audiences Experience Cloud](../catalog/adobe/experience-cloud-audiences.md)

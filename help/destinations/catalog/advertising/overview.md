@@ -3,10 +3,10 @@ keywords: destinations publicitaires;destinations;destinations platform
 title: Présentation des destinations publicitaires
 description: Connectez Adobe Experience Platform à une plateforme publicitaire tierce (par exemple, DSP, réseau publicitaire, SSP) et partagez des audiences pseudonymes sur ces plateformes.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 2bbd36db21363b20575db6a5fc5ecce8b9a31224
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 44%
+source-wordcount: '287'
+ht-degree: 42%
 
 ---
 
@@ -28,8 +28,8 @@ Pour comprendre la différence entre les connexions et les extensions, consultez
 
 * [(Beta) Distribution d’audiences Acxiom](acxiom-audience-connection.md)
 * [(Beta) Connexion à l’audience Acxiom Real ID](acxiom-real-id-audience-connection.md)
-* [Connexion Adobe Advertising Cloud](adobe-advertising-cloud-connection.md)
-* [Connexion Adobe Advertising Cloud héritée](adobe-advertising-cloud-connection-legacy.md)
+* [Connexion Adobe Advertising DSP](adobe-advertising-dsp-connection.md)
+* [Connexion DSP Adobe Advertising Cloud héritée](adobe-advertising-cloud-dsp-connection-legacy.md)
 * [Connexion Amazon Ads](amazon-ads.md)
 * [Connexion Bombora](bombora.md)
 * [Connexion Criteo](criteo.md)

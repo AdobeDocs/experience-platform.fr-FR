@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: cca83a46d83137af658ed2f9500386b5036ff4ba
+source-git-commit: 2bbd36db21363b20575db6a5fc5ecce8b9a31224
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1340'
 ht-degree: 72%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 72%
    * [Supprimer les comptes de destination](./api/delete-destination-account.md)
    * [Supprimer les flux de données de destination](./api/delete-destination-dataflow.md)
    * [Exporter des jeux de données](/help/destinations/api/export-datasets.md)
-   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=fr#use-cases)
+   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
    * [Créer une connexion à une destination](./ui/connect-destination.md)
@@ -77,8 +77,8 @@ ht-degree: 72%
       * [(Beta) Connexion à l’audience Acxiom](./catalog/advertising/acxiom-audience-connection.md)
       * [(Beta) Connexion à l’audience Acxiom RealID](./catalog/advertising/acxiom-real-id-audience-connection.md)
       * [Présentation des destinations publicitaires](./catalog/advertising/overview.md)
-      * [Connexion Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)
-      * [Connexion Adobe Advertising Cloud héritée](./catalog/advertising/adobe-advertising-cloud-connection-legacy.md)
+      * [Connexion Adobe Advertising DSP](./catalog/advertising/adobe-advertising-dsp-connection.md)
+      * [Connexion DSP Adobe Advertising Cloud héritée](./catalog/advertising/adobe-advertising-cloud-dsp-connection-legacy.md)
       * [Extension Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)
       * [Connexion à Adform](./catalog/advertising/adform.md)
       * [Connexion Amazon Ads](./catalog/advertising/amazon-ads.md)
@@ -93,7 +93,7 @@ ht-degree: 72%
       * [Extension DoubleClick Floodlight (Version Beta)](./catalog/advertising/doubleclick-floodlight.md)
       * [Extension Pixel Facebook](./catalog/advertising/facebook-pixel.md)
       * [Extension Flashtalking OneTag](./catalog/advertising/flashtalking.md)
-      * {hide-from-toc}[&#x200B; (Beta) Connexion FreeWheel](./catalog/advertising/freewheel.md)
+      * {hide-from-toc}[ (Beta) Connexion FreeWheel](./catalog/advertising/freewheel.md)
       * [Connexion Google Ads](./catalog/advertising/google-ads-destination.md)
       * [Connexion Google Ad Manager](./catalog/advertising/google-ad-manager.md)
       * [(Beta) Connexion à Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
