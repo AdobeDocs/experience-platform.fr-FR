@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Mars 2026
 description: Les notes de mise à jour de mars 2026 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
+source-git-commit: 8c8b3b223c67dd6e9a00f9cf297f51fd09f3227f
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 36%
+source-wordcount: '1266'
+ht-degree: 34%
 
 ---
 
@@ -29,7 +29,8 @@ Nouvelles fonctionnalités et mises à jour des fonctionnalités existantes dans
 - [Agent Orchestrator](#agent-orchestrator)
 - [Destinations](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
-- [Service de segmentation](#segmentation-service)
+- [Profil client en temps réel](#real-time-customer-profile)
+- [Segmentation Service](#segmentation-service)
 - [Sources](#sources)
 
 ## Gestion avancée du cycle de vie des données {#advanced-data-lifecycle-management}
@@ -52,7 +53,7 @@ Agent Orchestrator vous permet de créer et de déployer des agents optimisés p
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [Adobe Marketing Agent pour  [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/fr/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | Adobe Marketing Agent for [!DNL Microsoft 365 Copilot] est votre agent intégré qui apporte des informations marketing Adobe directement dans les outils quotidiens tels que les applications [!DNL Teams], [!DNL Word], [!DNL PowerPoint] et d’autres applications [!DNL Microsoft 365]. Vous pouvez utiliser cet agent pour extraire des informations de campagne approuvées à partir des applications Adobe pendant que vous planifiez des campagnes, révisez des audiences, collaborez avec des collègues pour répondre aux questions des clients et prenez des décisions informées basées sur les données sans quitter votre workflow [!DNL Microsoft 365]. |
+| [Adobe Marketing Agent pour  [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | Adobe Marketing Agent for [!DNL Microsoft 365 Copilot] est votre agent intégré qui apporte des informations marketing Adobe directement dans les outils quotidiens tels que les applications [!DNL Teams], [!DNL Word], [!DNL PowerPoint] et d’autres applications [!DNL Microsoft 365]. Vous pouvez utiliser cet agent pour extraire des informations de campagne approuvées à partir des applications Adobe pendant que vous planifiez des campagnes, révisez des audiences, collaborez avec des collègues pour répondre aux questions des clients et prenez des décisions informées basées sur les données sans quitter votre workflow [!DNL Microsoft 365]. |
 
 {style="table-layout:auto"}
 
@@ -66,10 +67,10 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | --- | --- |
-| Connexion à [&#128279;](../../destinations/catalog/advertising/adobe-advertising-cloud-connection.md) | La nouvelle connexion Adobe Advertising DSP offre la même fonctionnalité que la connexion héritée, ainsi que la prise en charge d’identités supplémentaires. Avec le nouveau connecteur, vous pouvez également exporter des identités basées sur des cookies vers Adobe Advertising DSP. |
+| Connexion à [](../../destinations/catalog/advertising/adobe-advertising-cloud-connection.md) | La nouvelle connexion Adobe Advertising DSP offre la même fonctionnalité que la connexion héritée, ainsi que la prise en charge d’identités supplémentaires. Avec le nouveau connecteur, vous pouvez également exporter des identités basées sur des cookies vers Adobe Advertising DSP. |
 | Connexion [FreeWheel](../../destinations/catalog/advertising/freewheel.md) | Envoyez des audiences [!DNL Real-Time CDP] à FreeWheel sous forme de fichiers par lots quotidiens afin de les cibler dans les offres et campagnes FreeWheel sur CTV, les vidéos et les écrans. Contactez votre équipe de compte Adobe pour obtenir l’accès. |
 | Prise en charge des audiences externes pour [The Trade Desk CRM](../../destinations/catalog/advertising/tradedesk-emails.md) et [Pinterest](../../destinations/catalog/advertising/pinterest.md) | Vous pouvez désormais activer des audiences d’origines autres que Segmentation Service vers The Trade Desk CRM, Criteo et Pinterest, y compris les audiences de chargement personnalisées (importées depuis CSV), les audiences semblables, les audiences fédérées et les audiences créées dans d’autres applications Experience Platform telles que [!DNL Adobe Journey Optimizer]. Cette mise à jour sera déployée jusqu’à la fin du mois de mars. Pour plus d’informations, consultez la section [audiences prises en charge](../../destinations/catalog/advertising/criteo.md#supported-audiences) sur la page de catalogue de chaque destination. |
-| Augmentation de la limite des audiences de chargement personnalisées | Vous pouvez désormais activer jusqu’à 20 audiences de chargement personnalisées par instance de destination. Auparavant, cette limite était de 10. Pour plus d’informations, consultez la section [&#x200B; Mécanismes de sécurisation des destinations &#x200B;](../../destinations/guardrails.md#batch-file-based-activation) . |
+| Augmentation de la limite des audiences de chargement personnalisées | Vous pouvez désormais activer jusqu’à 20 audiences de chargement personnalisées par instance de destination. Auparavant, cette limite était de 10. Pour plus d’informations, consultez la section [ Mécanismes de sécurisation des destinations ](../../destinations/guardrails.md#batch-file-based-activation) . |
 | Prise en charge de l’[Exporter le fichier maintenant](../../destinations/ui/export-file-now.md) et de l’[API d’activation ad hoc](../../destinations/api/ad-hoc-activation-api.md) pour les audiences externes | Vous pouvez désormais utiliser Exporter le fichier maintenant (interface utilisateur) et l’API d’activation ad hoc avec des audiences externes (telles que le chargement personnalisé, les audiences semblables, fédérées et provenant d’autres applications Experience Platform) lors de l’activation vers des destinations basées sur des fichiers par lots. Cette mise à jour sera déployée jusqu’à la fin du mois de mars. |
 
 {style="table-layout:auto"}
@@ -78,7 +79,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Correction | Description |
 | --- | --- |
-| [&#128279;](../../destinations/catalog/social/tiktok.md) hachage du numéro de téléphone du connecteur | Correction d’un problème en raison duquel une mauvaise configuration de la carte de destination signifiait que les identités saisies sur les numéros de téléphone n’étaient pas activées sur TikTok. Pour bénéficier de ce correctif, configurez un nouveau flux d’activation ou supprimez le mappage des numéros de téléphone de votre flux existant, enregistrez-le et ajoutez-le à nouveau. |
+| [](../../destinations/catalog/social/tiktok.md) hachage du numéro de téléphone du connecteur | Correction d’un problème en raison duquel une mauvaise configuration de la carte de destination signifiait que les identités saisies sur les numéros de téléphone n’étaient pas activées sur TikTok. Pour bénéficier de ce correctif, configurez un nouveau flux d’activation ou supprimez le mappage des numéros de téléphone de votre flux existant, enregistrez-le et ajoutez-le à nouveau. |
 
 {style="table-layout:auto"}
 
@@ -93,6 +94,20 @@ XDM est une spécification Open Source qui fournit des structures et des défin
 | Prise en charge des actions d’entité XDM et de la suppression | Accédez aux actions des schémas, classes, groupes de champs et types de données directement à partir des menus de tableau intégrés et des menus d’en-tête de page de détail. Si vous disposez des autorisations requises, vous pouvez également supprimer les entités de votre organisation lorsqu’elles ne sont pas utilisées par des jeux de données et ne sont pas activées pour le profil. Pour plus d’informations, consultez le [guide de l’interface utilisateur XDM](../../xdm/ui/explore.md). |
 
 Pour plus d’informations, consultez la [vue d’ensemble XDM](../../xdm/home.md).
+
+## Profil client en temps réel {#real-time-customer-profile}
+
+Le profil client en temps réel offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le profil vous permet de consolider vos données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Événements | Vous pouvez désormais définir la période de recherche en amont des événements lors de la navigation dans vos profils. Vous pouvez ainsi voir les événements auxquels le profil est associé pendant la période spécifiée. Pour plus d’informations, consultez le [Guide de l’interface utilisateur de Profile](/help/profile/ui/user-guide.md#events). |
+
+{style="table-layout:auto"}
+
+Pour plus d’informations, consultez la [[!DNL Real-Time Customer Profile] vue d’ensemble](../../profile/home.md).
 
 <!-- 
 ## Run and Operate {#run-and-operate}

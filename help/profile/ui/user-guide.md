@@ -3,9 +3,9 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Guide de l’interface utilisateur du profil client en temps réel
 description: Le profil client en temps réel offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec le profil client en temps réel dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: cf975ec6747438a034fcedb51a4b25b0acd46d2f
+source-git-commit: faeb53bfc4eba815eb1d9d00c464da4dc1a3b016
 workflow-type: tm+mt
-source-wordcount: '2123'
+source-wordcount: '2177'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 5%
 
 Ce guide de l’interface utilisateur nécessite une compréhension des différents services de [!DNL Experience Platform] impliqués dans la gestion des [!DNL Real-Time Customer Profiles]. Avant de lire ce guide ou de travailler dans l’interface utilisateur, consultez la documentation relative aux services suivants :
 
-* [[!DNL Real-Time Customer Profile] présentation &#x200B;](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [[!DNL Real-Time Customer Profile] présentation ](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [[!DNL Identity Service]](../../identity-service/home.md) : permet l’[!DNL Real-Time Customer Profile] en établissant un lien entre les identités de sources de données disparates lors de leur ingestion dans [!DNL Experience Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
 
@@ -68,7 +68,7 @@ Pour afficher les détails de l’un des profils types, sélectionnez l’**[!UI
 
 ![Des exemples de profils correspondant à la politique de fusion s’affichent.](../images/user-guide/profile-browse-table.png)
 
-Pour en savoir plus sur les politiques de fusion et leur rôle dans Experience Platform, consultez la [&#x200B; présentation des politiques de fusion &#x200B;](../merge-policies/overview.md).
+Pour en savoir plus sur les politiques de fusion et leur rôle dans Experience Platform, consultez la [ présentation des politiques de fusion ](../merge-policies/overview.md).
 
 ### Parcourir par [!UICONTROL Identity] {#browse-identity}
 
@@ -151,7 +151,7 @@ Vous pouvez également choisir d’afficher ou non les noms des attributs sous f
 
 La section **[!UICONTROL Auto-classified widgets]** affiche des widgets qui exploitent le schéma d’union pour déterminer les groupes de champs sources auxquels appartient un attribut, fournissant ainsi un contexte plus clair sur l’origine des données. Vous pouvez utiliser la barre de recherche pour rechercher plus facilement des mots-clés dans vos widgets.
 
-Ces widgets combinent les données d’événement (avec le widget Événements d’expérience) et les données d’attribut, ce qui vous permet d’avoir une vue unifiée de votre profil. Vous pouvez utiliser ces widgets pour explorer la structure des données de votre profil afin de mieux structurer vos [&#x200B; widgets personnalisables &#x200B;](#customizable-widgets).
+Ces widgets combinent les données d’événement (avec le widget Événements d’expérience) et les données d’attribut, ce qui vous permet d’avoir une vue unifiée de votre profil. Vous pouvez utiliser ces widgets pour explorer la structure des données de votre profil afin de mieux structurer vos [ widgets personnalisables ](#customizable-widgets).
 
 >[!NOTE]
 >
@@ -169,7 +169,7 @@ Dans la vue graphique, vous pouvez faire glisser et déposer les nœuds pour ré
 
 #### Événements d’expérience {#experience-events}
 
-La section **[!UICONTROL Experience events]** affiche une chronologie des événements d’expérience contenant le profil.
+La section **[!UICONTROL Experience events]** affiche une chronologie des événements d’expérience contenant le profil. Par défaut, cette section affiche les événements d’expérience au cours des dernières 48 heures. Cependant, vous pouvez définir la période sur une période allant jusqu’à 30 jours.
 
 ![La section Événements d’expérience s’affiche, présentant une chronologie des événements d’expérience contenant le profil.](/help/profile/images/user-guide/experience-event-graph.png)
 
@@ -193,7 +193,11 @@ Pour plus d’informations sur les profils Edge, veuillez lire la [documentation
 
 ### Onglet Événements {#events}
 
-L’onglet **[!UICONTROL Events]** contient les données des 100 ExperienceEvent les plus récents associés au client. Ces données peuvent inclure les ouvertures d’e-mail, les activités de panier et les pages vues. La sélection de **[!UICONTROL View all]** pour un événement individuel fournit des champs supplémentaires et des valeurs capturées dans le cadre de l’événement.
+>[!NOTE]
+>
+>L’affichage des événements peut être retardé de 15 minutes au maximum.
+
+Par défaut, **[!UICONTROL Events]** onglet contient les données des 48 dernières heures avec les 100 ExperienceEvent les plus récents associés au client. Ces données peuvent inclure les ouvertures d’e-mail, les activités de panier et les pages vues. Vous pouvez également définir la période sur une durée maximale de 30 jours. La sélection de **[!UICONTROL View all]** pour un événement individuel fournit des champs supplémentaires et des valeurs capturées dans le cadre de l’événement.
 
 Les événements peuvent également être affichés en tant qu’objet JSON en sélectionnant pour **[!UICONTROL View JSON]**. Cela permet de comprendre comment les événements sont capturés dans Experience Platform.
 
@@ -233,7 +237,7 @@ Dans le menu **[!UICONTROL Profiles]** principal, sélectionnez l’onglet **[!U
 
 ![L’onglet Attributs calculés est mis en surbrillance.](../images/user-guide/computed-attributes.png)
 
-Pour plus d’informations sur les attributs calculés, consultez la [présentation des attributs calculés](../computed-attributes/overview.md). Pour plus d’informations sur l’utilisation des attributs calculés dans l’interface utilisateur d’Experience Platform, consultez le [&#x200B; guide de l’interface utilisateur des attributs calculés](../computed-attributes/ui.md).
+Pour plus d’informations sur les attributs calculés, consultez la [présentation des attributs calculés](../computed-attributes/overview.md). Pour plus d’informations sur l’utilisation des attributs calculés dans l’interface utilisateur d’Experience Platform, consultez le [ guide de l’interface utilisateur des attributs calculés](../computed-attributes/ui.md).
 
 ## Étapes suivantes
 
