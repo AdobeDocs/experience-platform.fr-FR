@@ -93,7 +93,7 @@ ht-degree: 72%
       * [Extension DoubleClick Floodlight (Version Beta)](./catalog/advertising/doubleclick-floodlight.md)
       * [Extension Pixel Facebook](./catalog/advertising/facebook-pixel.md)
       * [Extension Flashtalking OneTag](./catalog/advertising/flashtalking.md)
-      * {hide-from-toc}[ (Beta) Connexion FreeWheel](./catalog/advertising/freewheel.md)
+      * {hide-from-toc}[&#x200B; (Beta) Connexion FreeWheel](./catalog/advertising/freewheel.md)
       * [Connexion Google Ads](./catalog/advertising/google-ads-destination.md)
       * [Connexion Google Ad Manager](./catalog/advertising/google-ad-manager.md)
       * [(Beta) Connexion à Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
