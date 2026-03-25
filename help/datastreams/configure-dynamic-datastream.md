@@ -40,7 +40,7 @@ Les configurations de flux de données dynamiques comportent des limites et des 
 
 ## Configurations de train de données dynamiques et remplacements de la configuration de train de données {#dynamic-versus-overrides}
 
-Les configurations dynamiques de train de données et [ remplacements de configuration de train de données](overrides.md) sont des fonctionnalités qui s’excluent mutuellement.
+Les configurations dynamiques de train de données et [&#x200B; remplacements de configuration de train de données](overrides.md) sont des fonctionnalités qui s’excluent mutuellement.
 
 Cela signifie que vous ne pouvez pas utiliser de configurations de train de données dynamiques avec des remplacements de configurations de train de données. Il faut choisir l&#39;un ou l&#39;autre.
 
