@@ -37,7 +37,7 @@ Oui, avant le 18 janvier 2024, vous devez vous authentifier auprès de la nouvel
 
 1. Accédez à **[!UICONTROL Destinations > Accounts]** et utilisez le filtre à l’écran pour filtrer la destination Pinterest uniquement.
    ![Filtrer les comptes Pinterest uniquement](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-acconts-only.png)
-2. Sur la destination ****, sélectionnez le symbole des trois points ... et sélectionnez **[!UICONTROL Edit details]**.
+2. Sur la destination **&#x200B;**, sélectionnez le symbole des trois points ... et sélectionnez **[!UICONTROL Edit details]**.
    ![Sélectionnez Modifier les détails](/help/destinations/assets/catalog/advertising/pinterest-migration/edit-details-pinterest.png)
 3. Sélectionnez **[!UICONTROL Reconnect OAuth]** et connectez-vous à votre compte Pinterest.
    ![Sélectionnez Reconnecter OAuth](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)

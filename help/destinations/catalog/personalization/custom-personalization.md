@@ -23,7 +23,7 @@ ht-degree: 38%
 
 >[!IMPORTANT]
 >
->Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, vous devez utiliser l’API [](https://developer.adobe.com/data-collection-apis/docs/) lors de la configuration de la destination **[!UICONTROL Custom Personalization]** pour la personnalisation basée sur les attributs. Tous les appels API d’Edge Network doivent être effectués dans un [contexte authentifié](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication).
+>Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, vous devez utiliser l’API [&#128279;](https://developer.adobe.com/data-collection-apis/docs/) lors de la configuration de la destination **[!UICONTROL Custom Personalization]** pour la personnalisation basée sur les attributs. Tous les appels API d’Edge Network doivent être effectués dans un [contexte authentifié](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication).
 >
 ><br>Vous pouvez récupérer les attributs de profil via l’[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/) en ajoutant une intégration côté serveur qui utilise le même flux de données que celui que vous utilisez déjà pour votre implémentation de Web ou Mobile SDK.
 >
@@ -39,7 +39,7 @@ Cette destination nécessite l’utilisation de l’une des méthodes de collect
 
 * Utilisez [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) si vous souhaitez collecter des données sur votre site Web.
 * Utilisez [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) si vous souhaitez collecter des données à partir de votre application mobile.
-* Utilisez l’API [](https://developer.adobe.com/data-collection-apis/docs/) si vous n’utilisez pas Web SDK ou Mobile SDK, ou si vous souhaitez personnaliser l’expérience utilisateur en fonction des attributs de profil.
+* Utilisez l’API [&#128279;](https://developer.adobe.com/data-collection-apis/docs/) si vous n’utilisez pas Web SDK ou Mobile SDK, ou si vous souhaitez personnaliser l’expérience utilisateur en fonction des attributs de profil.
 
 >[!IMPORTANT]
 >
@@ -70,7 +70,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}

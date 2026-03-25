@@ -27,7 +27,7 @@ Pour rechercher les extensions dans l’interface d’Experience Platform, accé
 
 ## Fonctionnement des extensions de balises {#how-extensions-work}
 
-Une [extension de balise](../../../tags/home.md#extensions) est un package de code qui améliore les fonctionnalités d’un site web ou d’une application mobile. Il peut s’agir de l’envoi de données d’événement brutes vers une destination telle que [](/help/destinations/catalog/analytics/google-universal-analytics.md) mais elles peuvent également servir à d’autres fonctions.
+Une [extension de balise](../../../tags/home.md#extensions) est un package de code qui améliore les fonctionnalités d’un site web ou d’une application mobile. Il peut s’agir de l’envoi de données d’événement brutes vers une destination telle que [&#128279;](/help/destinations/catalog/analytics/google-universal-analytics.md) mais elles peuvent également servir à d’autres fonctions.
 
 Il est important de faire la distinction entre les extensions de transfert de balises et d’événements. Les extensions affichées dans l’interface utilisateur des destinations Experience Platform sont des *extensions de balise*. Reportez-vous à la présentation du transfert d’événement pour plus d’informations sur les [différences entre les balises et le transfert d’événement](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags).
 
@@ -64,7 +64,7 @@ Les extensions peuvent appartenir aux catégories suivantes dans Experience Plat
 - [Advertising](../advertising/overview.md)
 - [Analytics](../analytics/overview.md)
 - [Plateforme de gestion des données](../data-management/overview.md)
-- [Destinations de marketing par e-mail ](../email-marketing/overview.md)
+- [Destinations de marketing par e-mail &#x200B;](../email-marketing/overview.md)
 - [Personnalisation](../personalization/overview.md)
 - [Questionnaires](../survey/overview.md)
 - [Voix du client](../voice/overview.md)

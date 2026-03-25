@@ -18,7 +18,7 @@ Le [!DNL Facebook Pixel] est un outil d&#39;analyse qui vous permet de mesurer l
 
 [!DNL Facebook Pixel] est une extension publicitaire en [!DNL Adobe Experience Platform]. Pour plus d’informations sur la fonctionnalité de l’extension, voir le [site web Pixel Facebook](https://developers.facebook.com/docs/facebook-pixel/).
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension Pixel Facebook](../../assets/catalog/advertising/facebook-pixel/catalog.png)
 
@@ -32,7 +32,7 @@ Pour utiliser cette extension, vous devez accéder aux balises dans [!DNL Adobe 
 
 Pour installer l’extension [!DNL Facebook Pixel], procédez comme suit :
 
-Dans l’interface d’[](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+Dans l’interface d’[&#128279;](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 

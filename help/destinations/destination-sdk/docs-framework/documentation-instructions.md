@@ -49,7 +49,7 @@ Pour créer de la documentation pour la destination conformément aux instructio
 
 ## Modèle de documentation {#documentation-template}
 
-Pour vous aider à créer votre page de documentation, Adobe a prérempli un [ modèle de documentation ](./self-service-template.md). Plus bas, vous trouverez des instructions sur la modification du modèle et l’ouverture d’une requête d’extraction. L’équipe de documentation d’Adobe examinera et publiera la documentation de votre nouvelle destination.
+Pour vous aider à créer votre page de documentation, Adobe a prérempli un [&#x200B; modèle de documentation &#x200B;](./self-service-template.md). Plus bas, vous trouverez des instructions sur la modification du modèle et l’ouverture d’une requête d’extraction. L’équipe de documentation d’Adobe examinera et publiera la documentation de votre nouvelle destination.
 
 [Téléchargez le modèle ici](../assets/docs-framework/yourdestination-template.zip) puis décompressez le fichier pour extraire le fichier `yourdestination.md`.
 
@@ -64,4 +64,4 @@ Vous pouvez utiliser l’interface web GitHub ou votre environnement local pour 
 
 ## Bonnes pratiques {#best-practices}
 
-Consultez les [ bonnes pratiques de création ](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) avant et pendant la création de la page de documentation de destination. Veillez également à lire le [guide de rédaction pour la documentation Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) pour obtenir d’autres conseils de rédaction que l’équipe de documentation Adobe utilise lors de la création de documentation.
+Consultez les [&#x200B; bonnes pratiques de création &#x200B;](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) avant et pendant la création de la page de documentation de destination. Veillez également à lire le [guide de rédaction pour la documentation Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) pour obtenir d’autres conseils de rédaction que l’équipe de documentation Adobe utilise lors de la création de documentation.

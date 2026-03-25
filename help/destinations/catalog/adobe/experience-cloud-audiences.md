@@ -19,7 +19,7 @@ ht-degree: 13%
 
 Utilisez cette destination pour activer des audiences de [!DNL Real-Time CDP] vers Audience Manager et [!DNL Adobe Analytics].
 
-Pour envoyer des audiences à [!DNL Adobe Analytics], vous avez besoin d&#39;une licence Audience Manager. Pour plus d’informations, consultez la présentation d’[](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=en).
+Pour envoyer des audiences à [!DNL Adobe Analytics], vous avez besoin d&#39;une licence Audience Manager. Pour plus d’informations, consultez la présentation d’[&#128279;](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=en).
 
 Pour envoyer des audiences à d’autres solutions Adobe, utilisez les connexions directes de [!DNL Real-Time CDP] à [Adobe Target](../personalization/adobe-target-connection.md), [Adobe Advertising](../advertising/adobe-advertising-cloud-connection.md), [Adobe Campaign](../email-marketing/adobe-campaign.md) et [Marketo Engage](../adobe/marketo-engage.md).
 
@@ -137,7 +137,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -183,7 +183,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 >
 >Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
-Lisez [Activer des profils et des audiences vers des destinations d’exportation d’audiences de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination. Aucune [ étape de mappage ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) n’est requise et aucune [ étape de planification ](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) n’est disponible pour cette destination.
+Lisez [Activer des profils et des audiences vers des destinations d’exportation d’audiences de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination. Aucune [&#x200B; étape de mappage &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) n’est requise et aucune [&#x200B; étape de planification &#x200B;](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) n’est disponible pour cette destination.
 
 ## Valider l’exportation des données {#exported-data}
 

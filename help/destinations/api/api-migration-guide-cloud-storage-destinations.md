@@ -23,7 +23,7 @@ ht-degree: 3%
 
 * [Options de dénomination de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) supplémentaires.
 * Possibilité de définir des en-têtes de fichier personnalisés dans vos fichiers exportés via la [nouvelle étape de mappage](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
-* Possibilité de sélectionner le [ type de fichier ](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) fichier exporté.
+* Possibilité de sélectionner le [&#x200B; type de fichier &#x200B;](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) fichier exporté.
 * Possibilité de [personnaliser le formatage des fichiers de données CSV exportés](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 Cette fonctionnalité est prise en charge par les cartes de stockage cloud Beta répertoriées ci-dessous :
@@ -42,7 +42,7 @@ Commenting out the three net new cloud storage destinations
 
 -->
 
-Notez que l’interface utilisateur d’Experience Platform affiche actuellement deux cartes de destination côte à côte pour les trois destinations. Vous trouverez ci-dessous les [!DNL Amazon S3] destinations héritées et nouvelles. Dans tous les cas, les cartes marquées de **** sont les nouvelles cartes de destination.
+Notez que l’interface utilisateur d’Experience Platform affiche actuellement deux cartes de destination côte à côte pour les trois destinations. Vous trouverez ci-dessous les [!DNL Amazon S3] destinations héritées et nouvelles. Dans tous les cas, les cartes marquées de **&#x200B;**&#x200B;sont les nouvelles cartes de destination.
 
 ![Image des deux cartes de destination Amazon S3 dans une vue côte à côte.](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 

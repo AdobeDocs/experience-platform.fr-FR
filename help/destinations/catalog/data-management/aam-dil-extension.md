@@ -16,9 +16,9 @@ ht-degree: 35%
 
 Il s’agit de l’extension de la bibliothèque d’intégration des données (mise en œuvre côté client) d’Adobe Audience Manager. Remarque : cette extension n’est pas destinée à être utilisée pour le transfert côté serveur (SSF) des données [!DNL Adobe Analytics]. Pour SSF, utilisez l’extension [!DNL Adobe Analytics]. Important : à partir de la version 8.0, DIL dépend fortement du service [!DNL Experience Cloud] ID, version 3.3 ou ultérieure. Mettez en œuvre [!DNL Experience Cloud] service d’ID et DIL pour des fonctionnalités d’intégration de données [!DNL Audience Manager] complètes.
 
-[!DNL Audience Manager] DIL est une extension de la plateforme de gestion des données (DMP) disponible dans [!DNL Adobe Experience Platform]. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension [](../../../tags/extensions/client/audience-manager/overview.md) dans la documentation sur les balises.
+[!DNL Audience Manager] DIL est une extension de la plateforme de gestion des données (DMP) disponible dans [!DNL Adobe Experience Platform]. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension [&#128279;](../../../tags/extensions/client/audience-manager/overview.md) dans la documentation sur les balises.
 
-Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions dans Experience Platform, consultez la [ présentation des extensions de balises](../launch-extensions/overview.md).
+Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions dans Experience Platform, consultez la [&#x200B; présentation des extensions de balises](../launch-extensions/overview.md).
 
 ![Extension Audience Manager DIL](../../assets/catalog/data-management-platform/aam-dil-extension/configure.png)
 
@@ -32,7 +32,7 @@ Pour utiliser cette extension, vous devez accéder aux balises dans [!DNL Adobe 
 
 Pour installer l’extension [!DNL Audience Manager] DIL :
 
-Dans l’interface d’[](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+Dans l’interface d’[&#128279;](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 
@@ -42,7 +42,7 @@ Sélectionnez la propriété dans laquelle vous souhaitez installer l’extensio
 
 Le workflow vous guide tout au long des étapes nécessaires pour terminer l’installation.
 
-Pour plus d’informations sur les options de configuration de l’extension, consultez la page de l’extension [](../../../tags/extensions/client/audience-manager/overview.md) dans la documentation sur les balises.
+Pour plus d’informations sur les options de configuration de l’extension, consultez la page de l’extension [&#128279;](../../../tags/extensions/client/audience-manager/overview.md) dans la documentation sur les balises.
 
 Vous pouvez également installer l’extension directement dans l’[interface utilisateur de la collecte de données](https://experience.adobe.com/#/data-collection/). Pour plus d’informations, consultez le guide sur [l’ajout d’une nouvelle extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension).
 
