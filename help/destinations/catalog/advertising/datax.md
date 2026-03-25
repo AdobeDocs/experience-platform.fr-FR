@@ -67,7 +67,7 @@ Pour en savoir plus sur la [Métadonnées de taxonomie](https://developer.verizo
 
 ## Identités prises en charge {#supported-identities}
 
-[!DNL Verizon Media] prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
+[!DNL Verizon Media] prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=fr#getting-started).
 
 | Identité cible | Description | Considérations |
 |---|---|---|

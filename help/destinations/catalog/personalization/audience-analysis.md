@@ -14,7 +14,7 @@ ht-degree: 23%
 
 # Destination de l’analyse de l’audience
 
-La destination [!UICONTROL Audience Analysis] vous permet d’enrichir [!DNL Adobe Experience Platform] données d’audience dans [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=fr). Vous pouvez sélectionner les audiences à inclure dans les données enrichies résultantes. Les qualifications d’audience sont alors disponibles en tant que dimensions dans les rapports [&#128279;](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html).
+La destination [!UICONTROL Audience Analysis] vous permet d’enrichir [!DNL Adobe Experience Platform] données d’audience dans [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=fr). Vous pouvez sélectionner les audiences à inclure dans les données enrichies résultantes. Les qualifications d’audience sont alors disponibles en tant que dimensions dans les rapports [&#128279;](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=fr).
 
 >[!AVAILABILITY]
 >

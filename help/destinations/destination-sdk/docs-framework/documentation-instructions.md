@@ -24,8 +24,8 @@ Cette section de documentation comprend les éléments suivants :
 
 * Cette section contient des instructions détaillées pour créer une page de documentation pour votre nouvelle destination.
 * un modèle à remplir pour votre destination ;
-* [Instructions générales sur l’utilisation de Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
-* [Instructions spécifiques pour la version Markdown d’Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions) (la version Markdown d’Adobe est très similaire à la version standard de Markdown).
+* [Instructions générales sur l’utilisation de Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=fr);
+* [Instructions spécifiques pour la version Markdown d’Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=fr#custom-markdown-extensions) (la version Markdown d’Adobe est très similaire à la version standard de Markdown).
 * Une [page des bonnes pratiques](./authoring-best-practices.md) pour vous aider à créer une page de documentation pour la page de destination, qui répond aux normes de qualité de la documentation Experience Platform.
 
 ## Conditions préalables {#prerequisites}
@@ -38,12 +38,12 @@ Pour créer de la documentation pour la destination conformément aux instructio
 
 ## Instructions générales pour créer de la documentation pour la destination dans [!DNL Adobe Experience Platform] {#high-level-instructions}
 
-À un niveau élevé, pour créer de la documentation pour la destination, vous devez [créer un branchement](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) du référentiel de documentation [!DNL Adobe Experience Platform] et modifier le [modèle de documentation fourni](./self-service-template.md) dans une nouvelle branche. Utilisez le modèle fourni par Adobe pour créer une page de destination. Ouvrez une requête de tirage (PR) lorsque vous êtes prêt. Pour ce faire, reportez-vous aux instructions ci-dessous, dans la section [Procédure de création de votre page de destination](./documentation-instructions.md#steps-to-create-docs-page).
+À un niveau élevé, pour créer de la documentation pour la destination, vous devez [créer un branchement](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=fr#fork-the-repository) du référentiel de documentation [!DNL Adobe Experience Platform] et modifier le [modèle de documentation fourni](./self-service-template.md) dans une nouvelle branche. Utilisez le modèle fourni par Adobe pour créer une page de destination. Ouvrez une requête de tirage (PR) lorsque vous êtes prêt. Pour ce faire, reportez-vous aux instructions ci-dessous, dans la section [Procédure de création de votre page de destination](./documentation-instructions.md#steps-to-create-docs-page).
 
 <!--
 
 * In the table of contents (TOC.md) `/help/rtcdp/TOC.md`, add a link to your new destination page. Place it within the category where your destination resides in the Adobe Experience Platform user interface (for example: mobile, social, advertising). 
-* In the overview page for the respective category, add a link to your new destination page. For example, for cloud storage destinations, you would add a link to [this page](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-cat/cloud-storage/cloud-storage-destinations.html). 
+* In the overview page for the respective category, add a link to your new destination page. For example, for cloud storage destinations, you would add a link to [this page](https://docs.adobe.com/content/help/fr-FR/experience-platform/rtcdp/destinations/destinations-cat/cloud-storage/cloud-storage-destinations.html). 
 
 -->
 
@@ -64,4 +64,4 @@ Vous pouvez utiliser l’interface web GitHub ou votre environnement local pour 
 
 ## Bonnes pratiques {#best-practices}
 
-Consultez les [&#x200B; bonnes pratiques de création &#x200B;](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) avant et pendant la création de la page de documentation de destination. Veillez également à lire le [guide de rédaction pour la documentation Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) pour obtenir d’autres conseils de rédaction que l’équipe de documentation Adobe utilise lors de la création de documentation.
+Consultez les [&#x200B; bonnes pratiques de création &#x200B;](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) avant et pendant la création de la page de documentation de destination. Veillez également à lire le [guide de rédaction pour la documentation Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=fr) pour obtenir d’autres conseils de rédaction que l’équipe de documentation Adobe utilise lors de la création de documentation.
