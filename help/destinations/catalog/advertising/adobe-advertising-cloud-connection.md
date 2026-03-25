@@ -58,9 +58,9 @@ Les annonceurs ont le choix de partager des segments avec des identifiants propr
 
 * Identifiant d’organisation Experience Cloud du compte Experience Platform. Votre identifiant figure sur la page de profil utilisateur d’Adobe [!DNL Real-Time Customer Data Platform] ([!DNL Real-Time CDP]).
 
-* Une [[!DNL Real-Time CDP] source dans DSP](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage) pour recevoir les audiences pour l’activation de la campagne. L’équipe de votre compte Adobe crée la source à l’aide de votre ID d’organisation Experience Cloud.
+* Une [[!DNL Real-Time CDP] source dans DSP](https://experienceleague.adobe.com/fr/docs/advertising/dsp/audiences/sources/source-manage) pour recevoir les audiences pour l’activation de la campagne. L’équipe de votre compte Adobe crée la source à l’aide de votre ID d’organisation Experience Cloud.
 
-* La clé source du compte [!DNL DSP] ou de l’annonceur, qui est générée lorsqu’une [[!DNL Real-Time CDP]  source est créée dans  [!DNL DSP]](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). L’équipe de votre compte [!DNL DSP] partagera cette clé avec vous. Vous l’utiliserez dans Experience Platform pour créer une connexion de destination à la destination Advertising DSP, comme expliqué ci-dessous.
+* La clé source du compte [!DNL DSP] ou de l’annonceur, qui est générée lorsqu’une [[!DNL Real-Time CDP]  source est créée dans  [!DNL DSP]](https://experienceleague.adobe.com/fr/docs/advertising/dsp/audiences/sources/source-manage). L’équipe de votre compte [!DNL DSP] partagera cette clé avec vous. Vous l’utiliserez dans Experience Platform pour créer une connexion de destination à la destination Advertising DSP, comme expliqué ci-dessous.
 
 ### Configurer la synchronisation des identifiants pour partager des cookies {#cookie-sync}
 
@@ -133,7 +133,7 @@ Pour vous connecter à la destination, suivez les instructions [création d’un
 
 Pour vous connecter à la destination, indiquez le paramètre suivant dans la section [!UICONTROL Connection type], puis sélectionnez **[!UICONTROL Connect to destination]** :
 
-* **[!UICONTROL Account or Advertiser Key]** : ce [!UICONTROL Source Key] est généré lorsqu’une [[!DNL Real-Time CDP]  source est créée dans l’interface utilisateur de DSP](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). L’équipe de votre compte Adobe partagera cette clé avec vous après la création de la source.
+* **[!UICONTROL Account or Advertiser Key]** : ce [!UICONTROL Source Key] est généré lorsqu’une [[!DNL Real-Time CDP]  source est créée dans l’interface utilisateur de DSP](https://experienceleague.adobe.com/fr/docs/advertising/dsp/audiences/sources/source-manage). L’équipe de votre compte Adobe partagera cette clé avec vous après la création de la source.
 
 ![Copie d’écran de la section Type de connexion affichant le champ Compte ou clé de l’annonceur.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
@@ -158,7 +158,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >id="platform_destinations_required_mappings_adcloud_dsp"
 >title="Jeux de mappages préconfigurés"
 >abstract="Nous avons préconfiguré pour vous ces deux jeux de mappages : ECID et cookie [!DNL adcloud]. Lorsque vous activez des données vers Adobe Advertising DSP, les profils qualifiés pour les audiences activées doivent avoir au moins une identité ECID associée à leur profil, pour être exportés vers la destination."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/adobe-advertising-cloud-connection#preconfigured-mappings" text="En savoir plus sur les mappages préconfigurés"
+>additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/catalog/advertising/adobe-advertising-cloud-connection#preconfigured-mappings" text="En savoir plus sur les mappages préconfigurés"
 
 >[!IMPORTANT]
 >
