@@ -6,10 +6,10 @@ badge: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 40a9ea68fd855b2f0d92a4fa336f1b68142f0649
 workflow-type: tm+mt
-source-wordcount: '1335'
-ht-degree: 31%
+source-wordcount: '1511'
+ht-degree: 27%
 
 ---
 
@@ -25,15 +25,15 @@ Utilisez la destination [!DNL Microsoft Ads Customer Match] pour faire correspon
 
 ## Cas d’utilisation {#use-cases}
 
-Pour mieux comprendre quand et comment utiliser la destination [!DNL Microsoft Ads Customer Match], consultez les exemples de cas d’utilisation ci-dessous que [!DNL Adobe Experience Platform] clients peuvent résoudre à l’aide de cette fonctionnalité.
+Pour mieux comprendre quand et comment utiliser la destination [!DNL Microsoft Ads Customer Match], consultez les exemples de cas d’utilisation ci-dessous que la clientèle Adobe Experience Platform peut résoudre.
 
-### Cas d’utilisation #1 {#use-case-1}
+### Recibler les clients existants avec des offres personnalisées {#use-case-1}
 
 Une marque d’e-commerce souhaite atteindre les clients existants par le biais de [!DNL Microsoft Search] et de [!DNL Microsoft Audience Network] afin de personnaliser les offres en fonction de leurs achats précédents et de leur historique de navigation. La marque peut ingérer des adresses e-mail dans Experience Platform à partir de son propre CRM, créer des audiences à partir de ses propres données hors ligne et envoyer ces audiences à [!DNL Microsoft Ads Customer Match] pour les utiliser dans les recherches et les annonces d’audience, optimisant ainsi ses dépenses publicitaires.
 
-### Cas d’utilisation #2 {#use-case-2}
+### Promouvoir de nouveaux produits auprès des clients existants {#use-case-2}
 
-Une entreprise de technologie a lancé un nouveau produit. Pour promouvoir ce nouveau produit, ils cherchent à sensibiliser les clients qui ont déjà acheté des produits connexes. Ils chargent les adresses e-mail de leur base de données CRM vers Experience Platform, en utilisant les adresses e-mail comme identifiants. Les audiences sont créées en fonction des clients qui possèdent des produits associés. Ces audiences sont envoyées à [!DNL Microsoft Ads Customer Match], afin que l’entreprise puisse cibler les clients actuels et les clients similaires dans l’ensemble du [!DNL Microsoft Advertising Network].
+Une entreprise de technologie a lancé un nouveau produit et souhaite sensibiliser les clients qui ont déjà acheté des produits connexes. Ils chargent les adresses e-mail de leur base de données CRM vers Experience Platform, en utilisant les adresses e-mail comme identifiants. Les audiences sont créées en fonction des clients qui possèdent des produits associés. Ces audiences sont envoyées à [!DNL Microsoft Ads Customer Match], afin que l’entreprise puisse cibler les clients actuels et les clients similaires dans l’ensemble du [!DNL Microsoft Advertising Network].
 
 ## Identités prises en charge {#supported-identities}
 
@@ -41,7 +41,7 @@ Une entreprise de technologie a lancé un nouveau produit. Pour promouvoir ce no
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| `email` | Adresses e-mail en clair | Seules les adresses e-mail en texte brut sont prises en charge par la connexion [!DNL Microsoft Ads Customer Match]. Experience Platform hache automatiquement les adresses e-mail à l’exportation pour répondre aux exigences de Microsoft. |
+| `email` | Adresses e-mail en clair | Seules les adresses e-mail en texte brut (non hachées) sont prises en charge en tant que champs **source** dans l’étape de mappage. Les champs sources préhachés ne sont pas pris en charge. Experience Platform hache toujours les adresses e-mail avant de les exporter vers [!DNL Microsoft Ads]. |
 
 {style="table-layout:auto"}
 
@@ -62,7 +62,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -85,6 +85,20 @@ Pour envoyer des données d’audience à [!DNL Microsoft Ads], vous devez dispo
 ### Accepter les conditions générales de la correspondance client {#accept-customer-match-terms}
 
 Avant d’activer des audiences via cette destination, vous devez d’abord créer manuellement une liste de correspondance de clients dans votre compte [!DNL Microsoft Advertising]. Cette première création manuelle est nécessaire pour accepter les conditions générales de correspondance client, ce qui permet de créer automatiquement des audiences envoyées depuis Experience Platform. L’échec de cette étape peut entraîner des erreurs lors de l’activation des audiences.
+
+### Approbation de l’administrateur informatique du compte de travail (MS Entra) {#work-account-admin-approval}
+
+Si vous vous authentifiez à l’aide d’un compte professionnel Microsoft (également appelé compte Microsoft Entra), l’administrateur informatique de votre entreprise devra peut-être accorder une approbation avant de pouvoir vous connecter à [!DNL Microsoft Advertising].
+
+Lorsque vous tentez de vous authentifier à l’aide d’un compte professionnel, vous pouvez être redirigé vers une page **Approbation requise**. Cette page demande une justification de la liaison de l’application et répertorie les autorisations requises, y compris les `ads.manage`. Envoyez la demande et votre administrateur informatique recevra une notification pour la réviser. Vous recevrez également un e-mail de confirmation confirmant que votre demande a été soumise.
+
+Une fois que l’administrateur informatique a approuvé la demande sur le portail Azure, vous pouvez revenir à Experience Platform et vous authentifier à l’aide de votre compte de travail. Pour obtenir des conseils, consultez la documentation de Microsoft :
+
+* [Examiner les demandes de consentement de l’administrateur et prendre des mesures](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/review-admin-consent-requests)
+* [Configurer le workflow de consentement administrateur](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-admin-consent-workflow)
+* [Configurer la manière dont les utilisateurs consentent aux applications](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent)
+
+Si l’administrateur informatique n’a pas encore approuvé la demande, l’authentification échoue avec l’erreur suivante : `AADSTS650052: The app needs access to a service ('https://ads.microsoft.com') that your organization has not subscribed to or enabled. Contact your IT Admin to review the configuration of your service subscriptions.`
 
 ### Configuration du compte {#account-configuration}
 
@@ -135,7 +149,7 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 * **[!UICONTROL Membership Duration]** : nombre de jours pendant lesquels un utilisateur reste dans la liste de correspondance client. Les valeurs acceptées sont comprises entre 1 et 390 jours.
 * **[!UICONTROL Customer Match List Availability]** : sélectionnez la disponibilité de la liste de correspondance des clients. En [!DNL Microsoft Advertising], un ID de client peut comporter plusieurs ID de compte client (comptes publicitaires). Sélectionnez **[!UICONTROL Customer ID (all advertising accounts)]** pour que la liste soit disponible pour tous les comptes d’annonceurs sous votre ID client ou **[!UICONTROL Customer Account ID (single advertising account)]** pour limiter la liste à l’ID de compte client spécifique que vous avez fourni ci-dessus. Consultez la [documentation Microsoft Advertising](https://help.ads.microsoft.com/apex/index/3/en/56727) pour plus d’informations.
 
-![Image de l’interface utilisateur de Platform montrant les champs de détails de destination pour la destination de correspondance client Microsoft Ads.](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
+  ![Image de l’interface utilisateur de Platform montrant les champs de détails de destination pour la destination de correspondance client Microsoft Ads.](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
 
 ### Activer les alertes {#enable-alerts}
 
@@ -148,7 +162,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités* vers des destinations, vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#x200B; access control](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités* vers des destinations, vous avez besoin de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[ access control](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
@@ -161,9 +175,9 @@ Voir [Activer les données d’audience vers des destinations d’export d’aud
 
 >[!IMPORTANT]
 >
->Vous devez utiliser des champs sources non hachés (texte brut). N’utilisez pas d’identités source préhachées telles que `Emails (SHA256, lowercased)`. Experience Platform hache automatiquement les adresses e-mail à l’exportation pour répondre aux exigences de Microsoft.
+>Vous devez mapper des adresses e-mail en texte brut (non hachées) en tant que champs **source**. Les identités source préhachées telles que `Emails (SHA256, lowercased)` ne sont pas prises en charge. Experience Platform hache toujours les adresses e-mail avant de les exporter vers [!DNL Microsoft Ads].
 
-Image de l’interface utilisateur ![&#x200B; montrant l’étape de mappage avec l’e-mail IdentityMap mappé à l’e-mail Identity.](../../assets/catalog/advertising/microsoft-ads-customer-match/mapping.png)
+Image de l’interface utilisateur ![ montrant l’étape de mappage avec l’e-mail IdentityMap mappé à l’e-mail Identity.](../../assets/catalog/advertising/microsoft-ads-customer-match/mapping.png)
 
 ## Données exportées {#exported-data}
 
