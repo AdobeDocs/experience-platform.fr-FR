@@ -1,9 +1,10 @@
 ---
 title: Connecter Oracle Eloqua (V2) à Experience Platform dans l’interface utilisateur
 description: Découvrez comment connecter votre compte Oracle Eloqua à Experience Platform dans l’interface utilisateur.
-source-git-commit: 180754969d4ae8dbd1308dfc85dae73baf64f759
+exl-id: 87b6d2e2-fd0b-4ca7-860c-01957712ec2a
+source-git-commit: 2ffffbae2d267c4db05e386a41eb8707c9e5b736
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1185'
 ht-degree: 7%
 
 ---
@@ -97,13 +98,13 @@ Pour utiliser l’éditeur de champ calculé, sélectionnez le champ source à m
 
 >[!BEGINTABS]
 
->[!TAB Salesforce]
+>[!TAB ]
 
 Pour les utilisateurs [!DNL Salesforce], utilisez l’éditeur de champ calculé et mettez à jour la `{CRM_INSTANCE_ID}` avec l’ID d’instance approprié.
 
 ![Champ calculé pour Salesforce.](../../../../images/tutorials/create/eloqua/sf-field.png)
 
->[!TAB Microsoft Dynamics]
+>[!TAB ]
 
 Pour les utilisateurs [!DNL Microsoft], utilisez l’éditeur de champ calculé et mettez à jour la `{CRM_INSTANCE_ID}` avec l’ID d’instance approprié.
 
@@ -124,7 +125,6 @@ Une fois la mise à jour des champs calculés terminée, sélectionnez **[!UICON
 >* **Contacts :** `C_DateModified`
 >* **Comptes:** `M_DateModified`
 >* **Activité:** `CreatedAt`
->* **Objets personnalisés :** `UpdatedAt`
 >* **Campaign:** `updatedAt`
 
 Une fois le mappage terminé, vous pouvez configurer un planning d’ingestion pour votre flux de données. Définissez votre [!UICONTROL Frequency] sur `Once` pour configurer une exécution d’ingestion unique. Pour une ingestion incrémentielle, vous pouvez définir votre [!UICONTROL Frequency] sur `Hour`, `Day` ou `Week`. Lors de l’utilisation de l’ingestion incrémentielle, vous devez également configurer le [!UICONTROL Interval] pour définir le temps écoulé entre les exécutions d’ingestion. Par exemple, une fréquence d’ingestion définie sur `Day` et un intervalle défini sur `15` signifie que votre flux de données est planifié pour ingérer des données tous les 15 jours.

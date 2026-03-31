@@ -2,9 +2,10 @@
 title: Présentation D’Oracle Eloqua (V2) Source
 description: Découvrez comment connecter Oracle Eloqua à Adobe Experience Platform.
 last-substantial-update: 2025-02-02T00:00:00Z
-source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
+exl-id: f63beebd-920c-41dd-a924-61511135a234
+source-git-commit: 2ffffbae2d267c4db05e386a41eb8707c9e5b736
 workflow-type: tm+mt
-source-wordcount: '1824'
+source-wordcount: '1822'
 ht-degree: 2%
 
 ---
@@ -102,7 +103,6 @@ Vous devez fournir des valeurs pour les informations d’identification suivante
 >- **Contacts :** `C_DateModified`
 >- **Comptes:** `M_DateModified`
 >- **Activité:** `CreatedAt`
->- **Objets personnalisés :** `UpdatedAt`
 >- **Campaign:** `updatedAt`
 
 Les tableaux suivants fournissent des mappages détaillés entre les champs source [!DNL Eloqua] et leurs champs de destination Modèle de données d’expérience (XDM) correspondants dans Experience Platform. Chaque ligne décrit la logique de transformation, si le champ est immuable, et fournit des notes supplémentaires pour vous aider à comprendre comment vos données [!DNL Eloqua] seront ingérées et structurées dans Experience Platform.
@@ -244,4 +244,3 @@ Les modèles de mappage utilisent les espaces réservés de variable suivants, q
 ## Connexion de [!DNL Eloqua] à Experience Platform
 
 Continuez pour configurer votre connexion source [!DNL Eloqua] dans Experience Platform. Pour obtenir un guide détaillé sur la configuration de la connexion via l’interface utilisateur, reportez-vous au [tutoriel ici](../../tutorials/ui/create/marketing-automation/eloqua.md). Lisez ce tutoriel pour en savoir plus sur la connexion de votre compte [!DNL Eloqua], la sélection des données, le mappage des champs, la planification des ingestions et la surveillance des flux de données.
-
