@@ -98,13 +98,13 @@ Pour utiliser l’éditeur de champ calculé, sélectionnez le champ source à m
 
 >[!BEGINTABS]
 
->[!TAB ]
+>[!TAB Tab]
 
 Pour les utilisateurs [!DNL Salesforce], utilisez l’éditeur de champ calculé et mettez à jour la `{CRM_INSTANCE_ID}` avec l’ID d’instance approprié.
 
 ![Champ calculé pour Salesforce.](../../../../images/tutorials/create/eloqua/sf-field.png)
 
->[!TAB ]
+>[!TAB Tab&#x200B;]
 
 Pour les utilisateurs [!DNL Microsoft], utilisez l’éditeur de champ calculé et mettez à jour la `{CRM_INSTANCE_ID}` avec l’ID d’instance approprié.
 
