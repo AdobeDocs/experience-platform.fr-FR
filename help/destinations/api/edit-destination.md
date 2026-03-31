@@ -290,11 +290,11 @@ Une réponse réussie renvoie votre identifiant de connexion cible et une etag m
 }
 ```
 
->[!TAB ]
+>[!TAB Tab]
 
 **Requête**
 
-La requête suivante met à jour le paramètre `advertiserId` d’une [[!DNL Pinterest]  connexion de destination ](/help/destinations/catalog/advertising/pinterest.md#parameters).
+La requête suivante met à jour le paramètre `advertiserId` d’une [[!DNL Pinterest]  connexion de destination &#x200B;](/help/destinations/catalog/advertising/pinterest.md#parameters).
 
 ```shell
 curl -X PATCH \
