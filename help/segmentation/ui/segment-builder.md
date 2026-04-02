@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '6574'
 ht-degree: 44%
@@ -144,7 +144,7 @@ Vous pouvez utiliser les opérateurs suivants pour les types de données respect
 | Ce mois-ci | La valeur s’est produite ce mois civil. | Mois de naissance **est** Ce mois |
 | Cette année | La valeur s’est produite cette année civile. | Date d’inscription **is** Cette année |
 | Date personnalisée | La valeur s’est produite à la date donnée. | Date d’achat **est le** Date personnalisée |
-| Au cours des | La valeur s’est produite au cours de la dernière période choisie. Anniversaire **is** Le mois dernier |
+| Au cours des | La valeur s’est produite au cours de la dernière période choisie. Anniversaire **is** Le mois dernier | |
 | De (vers) | La valeur s’est produite au cours des deux dates calendaires sélectionnées. Cette période est **incluse** des deux dates. | La date de création du compte **est** du 20 avril au 13 juillet |
 | Pendant | La valeur s’est produite au cours du mois ou de l’année sélectionné. | Vente **is** En mars |
 | Dans (+/-) | La valeur s’est produite dans les jours, semaines, mois ou années suivant la date sélectionnée. Cette période est **incluse** des deux dates. | L’abandon du panier est **Dans** 3 jours |
@@ -153,7 +153,7 @@ Vous pouvez utiliser les opérateurs suivants pour les types de données respect
 | Plage de roulement | La valeur s’est produite entre les deux dates relatives. | La date du dernier achat est comprise entre sept jours et trois jours. |
 | Dans suivant | La valeur est survenue au cours de la période suivante sélectionnée. | L’abandon du panier aura lieu dans 2 jours |
 
-Pour plus d’informations sur les fonctions d’heure et de date, consultez la section [&#x200B; Contraintes de temps &#x200B;](#time-constraints).
+Pour plus d’informations sur les fonctions d’heure et de date, consultez la section [ Contraintes de temps ](#time-constraints).
 
 +++
 
@@ -177,7 +177,7 @@ En outre, l’attribut comporte un **[!UICONTROL Ingestion Type]**. Le type d’
 
 Les attributs calculés sont des champs calculés à partir d’autres attributs à l’aide d’agrégations ou de formules. Vous pouvez utiliser des attributs calculés si vous avez besoin de données agrégées telles que des sommes, des décomptes ou des moyennes sur plusieurs événements ou si vous créez des audiences fréquemment utilisées qui nécessitent des calculs complexes.
 
-Pour plus d’informations sur les attributs calculés, notamment sur la manière de les créer, les fonctions que vous pouvez utiliser dans ces attributs et la manière de les gérer, consultez la [&#x200B; présentation des attributs calculés &#x200B;](/help/profile/computed-attributes/overview.md).
+Pour plus d’informations sur les attributs calculés, notamment sur la manière de les créer, les fonctions que vous pouvez utiliser dans ces attributs et la manière de les gérer, consultez la [ présentation des attributs calculés ](/help/profile/computed-attributes/overview.md).
 
 ### Événements
 
@@ -349,7 +349,7 @@ Vous pouvez également afficher une version codée d’une règle créée dans l
 
 L’affichage du code fournit un bouton qui vous permet de copier la valeur de la définition de segment à utiliser dans les appels d’API. Pour obtenir la dernière version de la définition de segment, assurez-vous d’avoir enregistré vos dernières modifications apportées à la définition de segment.
 
-![Le bouton « Copier le code » est mis en surbrillance, ce qui vous permet de &#x200B;](../images/ui/segment-builder/copy-code.png)
+![Le bouton « Copier le code » est mis en surbrillance, ce qui vous permet de ](../images/ui/segment-builder/copy-code.png)
 
 ### Fonctions d’agrégation
 
