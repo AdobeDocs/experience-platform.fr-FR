@@ -2,11 +2,11 @@
 title: Créateur d’audience dans Real-Time Customer Data Platform
 description: Découvrez comment utiliser le Créateur d’audience dans Real-Time Customer Data Platform pour créer des audiences.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: 809f80c721d6eedf5ee88dbb1cf4bf7e5a413614
+source-git-commit: ec31766ade15eb04907803c8cfe450fd9bdc1406
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1115'
 ht-degree: 9%
 
 ---
@@ -54,11 +54,15 @@ L’onglet [!UICONTROL Attributes] vous permet de parcourir les attributs de com
 
 ![L’onglet Attributs s’affiche dans le Créateur d’audience](../assets/segmentation/audience-builder/attributes.png)
 
+>[!NOTE]
+>
+>Les données récapitulatives sont en **disponibilité limitée**.
+
 Lors de la sélection d’un attribut, vous pouvez afficher des données de résumé en sélectionnant l’icône [informations](../../images/icons/info.png). Les données récapitulatives incluent des informations telles que les principales valeurs, une explication du champ, le nombre d’enregistrements des valeurs, ainsi que le pourcentage de comptes contenant des valeurs pour cet attribut.
 
 La section **[!UICONTROL Populated]** indique le nombre d’enregistrements sur lesquels l’attribut est renseigné par rapport au nombre total d’enregistrements disponibles, ainsi que le pourcentage de comptes ayant une valeur pour ce champ.
 
-La section **[!UICONTROL Top values]** affiche les valeurs les plus fréquentes pour l’attribut et inclut des détails tels que la valeur, le nombre d’enregistrements ayant la valeur, ainsi que le pourcentage du total des enregistrements que la valeur représente.
+La section **[!UICONTROL Top values]** affiche les valeurs les plus fréquentes pour l’attribut et inclut des détails tels que la valeur, le nombre d’enregistrements ayant la valeur, ainsi que le pourcentage du total des enregistrements que la valeur représente. Le nombre d’enregistrements pour chaque champ est déterminé par l’instantané de profil, qui fournit une vue consolidée des enregistrements une fois toutes les données du jeu de données de contribution fusionnées.
 
 ![Fenêtre contextuelle qui affiche une version entièrement remplie des données de résumé pour un attribut.](../assets/segmentation/audience-builder/full-summary-data.png){width="300"}
 
