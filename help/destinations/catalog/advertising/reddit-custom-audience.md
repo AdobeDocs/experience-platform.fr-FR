@@ -66,7 +66,7 @@ Audiences prises en charge par type de données :
 | --- | --- | --- | --- |
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -121,7 +121,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!IMPORTANT]
 >
 >* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** et **[!UICONTROL View Segments]** [Access control](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**[](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL View Identity Graph]**&#x200B;[&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -142,7 +142,7 @@ Vous devez mapper au moins une des identités.
 
 Une fois vos audiences activées, vous pouvez les voir dans votre compte [!DNL Reddit] Ads Manager.
 
-Les audiences nouvellement créées dans [!DNL Reddit] apparaissent dans un statut en attente. Une fois que votre flux de données s’exécute et que les profils sont exportés, [!DNL Reddit] compare les profils aux utilisateurs [!DNL Reddit]. Une fois les données traitées, le statut de l’audience passe à **[!UICONTROL Valid]**. La taille de l’audience doit atteindre 1 000 utilisateurs [ ou plus](https://ads-api.reddit.com/docs/v3/manage-customer-lists) pour être considérée comme valide. Les audiences qui ne répondent pas à la taille requise s’affichent sous la forme **[!UICONTROL Invalid]**.
+Les audiences nouvellement créées dans [!DNL Reddit] apparaissent dans un statut en attente. Une fois que votre flux de données s’exécute et que les profils sont exportés, [!DNL Reddit] compare les profils aux utilisateurs [!DNL Reddit]. Une fois les données traitées, le statut de l’audience passe à **[!UICONTROL Valid]**. La taille de l’audience doit atteindre 1 000 utilisateurs [&#x200B; ou plus](https://ads-api.reddit.com/docs/v3/manage-customer-lists) pour être considérée comme valide. Les audiences qui ne répondent pas à la taille requise s’affichent sous la forme **[!UICONTROL Invalid]**.
 
 ![Gestionnaire de publicités Reddit affichant une audience exportée et son statut.](../../assets/catalog/advertising/redditcustomaudience/see_audience_in_reddit.png)
 
