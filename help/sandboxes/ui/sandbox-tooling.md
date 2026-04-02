@@ -58,7 +58,7 @@ Les objets suivants sont importés mais ont le statut brouillon ou désactivé :
 
 ### Objets Adobe Journey Optimizer {#abobe-journey-optimizer-objects}
 
-Le tableau ci-dessous répertorie [!DNL Adobe Journey Optimizer] objets actuellement pris en charge pour les limites et les outils Sandbox. Pour obtenir la liste complète des bonnes pratiques, reportez-vous au guide des bonnes pratiques générales de [](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/connect-systems/sandbox/copy-objects-to-sandbox?#global).
+Le tableau ci-dessous répertorie [!DNL Adobe Journey Optimizer] objets actuellement pris en charge pour les limites et les outils Sandbox. Pour obtenir la liste complète des bonnes pratiques, reportez-vous au guide des bonnes pratiques générales de [&#128279;](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/connect-systems/sandbox/copy-objects-to-sandbox?#global).
 
 | Platform | Objet | Objets dépendants pris en charge | Détails |
 | --- | --- | --- | --- |
