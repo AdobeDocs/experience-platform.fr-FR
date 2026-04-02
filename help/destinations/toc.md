@@ -5,10 +5,10 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 2bbd36db21363b20575db6a5fc5ecce8b9a31224
+source-git-commit: 5408dd8a442e6ad47f6c1e12326d04b2390bffaa
 workflow-type: tm+mt
-source-wordcount: '1340'
-ht-degree: 72%
+source-wordcount: '1344'
+ht-degree: 71%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 72%
    * [Supprimer les comptes de destination](./api/delete-destination-account.md)
    * [Supprimer les flux de données de destination](./api/delete-destination-dataflow.md)
    * [Exporter des jeux de données](/help/destinations/api/export-datasets.md)
-   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=fr#use-cases)
+   * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
    * [Créer une connexion à une destination](./ui/connect-destination.md)
@@ -93,7 +93,7 @@ ht-degree: 72%
       * [Extension DoubleClick Floodlight (Version Beta)](./catalog/advertising/doubleclick-floodlight.md)
       * [Extension Pixel Facebook](./catalog/advertising/facebook-pixel.md)
       * [Extension Flashtalking OneTag](./catalog/advertising/flashtalking.md)
-      * {hide-from-toc}[&#x200B; (Beta) Connexion FreeWheel](./catalog/advertising/freewheel.md)
+      * {hide-from-toc}[ (Beta) Connexion FreeWheel](./catalog/advertising/freewheel.md)
       * [Connexion Google Ads](./catalog/advertising/google-ads-destination.md)
       * [Connexion Google Ad Manager](./catalog/advertising/google-ad-manager.md)
       * [(Beta) Connexion à Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
@@ -114,6 +114,7 @@ ht-degree: 72%
       * [Connexion Liste des Clients Pinterest](./catalog/advertising/pinterest.md)
       * [Mise à niveau de la connexion Pinterest](./catalog/advertising/pinterest-upgrade.md)
       * [Connexion PubMatic Connect](./catalog/advertising/pubmatic.md)
+      * [Connexion Reddit Custom Audience](./catalog/advertising/reddit-custom-audience.md)
       * [Connexion Snapchat Ads](./catalog/advertising/snap-inc.md)
       * [Connexion à The Trade Desk](./catalog/advertising/tradedesk.md)
       * [Connexion CRM à The Trade Desk](./catalog/advertising/tradedesk-emails.md)
