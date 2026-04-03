@@ -2,7 +2,7 @@
 title: Analyse de l’attribution
 description: Ce document explique comment utiliser Query Service pour créer une technique de mesure de l’efficacité marketing basée sur le modèle d’attribution marketing de première et dernière touche.
 exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 10%
@@ -13,14 +13,14 @@ ht-degree: 10%
 
 L’attribution est un concept analytique qui permet de déterminer les tactiques marketing telles que les canaux, les offres et les messages, qui contribuent aux ventes ou aux conversions de l’entreprise. Ce concept évalue le parcours du consommateur (processus par lequel un client interagit avec une société pour atteindre un objectif) qui aboutit à un achat ou une acquisition en fonction des points de contact du client (chaque fois qu’un client interagit avec votre marque). Grâce à l’analyse d’attribution, les professionnels du marketing peuvent évaluer le retour sur investissement des canaux qui les connectent à un client potentiel.
 
-## Commencer
+## Prise en main
 
 Les exemples SQL de ce document sont des requêtes couramment utilisées avec des données Adobe Analytics. Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants :
 
-* [&#x200B; Connecteur source Adobe Analytics pour la présentation des données de la suite de rapports](../../sources/connectors/adobe-applications/mapping/analytics.md).
+* [ Connecteur source Adobe Analytics pour la présentation des données de la suite de rapports](../../sources/connectors/adobe-applications/mapping/analytics.md).
 * [La documentation sur les mappages de champs d’Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) fournit plus d’informations sur l’ingestion et le mappage de données d’analyse à utiliser avec Query Service.
-* [Présentation d’Attribution IQ &#x200B;](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=fr)
-* [Guide du panneau Attribution Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=fr).
+* [Présentation d’Attribution IQ ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
+* [Guide du panneau Attribution Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html).
 
 Vous trouverez une explication des paramètres de la fonction `OVER()` dans la section [fonctions de fenêtre](../sql/adobe-defined-functions.md#window-functions). Le [Glossaire des termes Adobe Marketing et Commerce](https://business.adobe.com/glossary/index.html) peut également être utile.
 
@@ -59,7 +59,7 @@ Les résultats des requêtes d’attribution sont donnés dans la colonne `first
 
 | Paramètres | Description |
 | ---------- | ----------- |
-| `{NAME}` | Le `{CHANNEL_NAME}`, saisi sous forme de libellé dans Azure Data Factory (ADF). |
+| `{NAME}` | Le `{CHANNEL_NAME}`, saisi sous forme de libellé dans la fabrique de données Azure (ADF). |
 | `{VALUE}` | La valeur de `{CHANNEL_VALUE}` qui correspond à la Dernière touche dans l’intervalle `{EXP_TIMEOUT}` spécifié |
 | `{TIMESTAMP}` | Date et heure de la [!DNL Experience Event] à laquelle la dernière touche a été effectuée |
 | `{FRACTION}` | Attribution de la dernière touche, exprimée sous la forme d’une fraction décimale. |
