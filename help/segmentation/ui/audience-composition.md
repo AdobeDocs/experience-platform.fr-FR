@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur d’Audiences
 description: La composition d’audiences dans l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail propose des commandes intuitives pour créer et modifier des audiences pour votre organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 66084e9847cca7ce6afd6a5b8c67689c9deef580
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '2293'
 ht-degree: 55%
@@ -14,7 +14,7 @@ ht-degree: 55%
 
 >[!BEGINSHADEBOX]
 
-Si vous êtes un client Adobe Journey Optimizer, veuillez lire le guide [Prise en main de la composition de l’audience](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html?lang=fr) dans la documentation de Adobe Journey Optimizer pour plus d’informations sur l’utilisation de la composition de l’audience dans ce contexte.
+Si vous êtes un client Adobe Journey Optimizer, veuillez lire le guide [Prise en main de la composition de l’audience](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html) dans la documentation de Adobe Journey Optimizer pour plus d’informations sur l’utilisation de la composition de l’audience dans ce contexte.
 
 >[!ENDSHADEBOX]
 
@@ -208,7 +208,7 @@ Le bloc **[!UICONTROL Enrich]** est ajouté. Lors de la sélection du bloc, les 
 
 Pour sélectionner le jeu de données avec lequel enrichir l’audience, sélectionnez l’icône ![Filtrer](/help/images/icons/project-edit.png).
 
-![Le bouton de filtre est mis en surbrillance. En le sélectionnant, vous accédez à la fenêtre contextuelle [!UICONTROL Select dataset] . &#x200B;](../images/ui/audience-composition/enrich-select-dataset.png)
+![Le bouton de filtre est mis en surbrillance. En le sélectionnant, vous accédez à la fenêtre contextuelle [!UICONTROL Select dataset] . ](../images/ui/audience-composition/enrich-select-dataset.png)
 
 La fenêtre contextuelle **[!UICONTROL Select dataset]** s’affiche. Sélectionnez le jeu de données à ajouter pour l’enrichissement, puis **[!UICONTROL Select]** pour ajouter le jeu de données pour l’enrichissement.
 
@@ -244,7 +244,8 @@ La fenêtre contextuelle **[!UICONTROL Enrichment attributes]** s’affiche. Vou
 
 ![Les attributs d’enrichissement à ajouter sont mis en surbrillance.](../images/ui/audience-composition/select-enrichment-attribute.png)
 
-<!-- ## [!UICONTROL Join] {#join-block}
+<!-- 
+## [!UICONTROL Join] {#join-block}
 
 The **[!UICONTROL Join]** block type allows you to add in external audiences from datasets that have not yet been processed by Adobe Experience Platform.
 
@@ -262,7 +263,8 @@ After selecting **[!UICONTROL Add Audience]**, a list of audiences appears. Sele
 
 Your selected audiences now appear within the right rail when the **[!UICONTROL Join]** block is selected. 
 
-![The audiences that were added as part of the Join are shown.](../images/ui/audience-composition/selected-audiences.png) -->
+![The audiences that were added as part of the Join are shown.](../images/ui/audience-composition/selected-audiences.png) 
+-->
 
 ## [!UICONTROL Rank] {#rank-block}
 
