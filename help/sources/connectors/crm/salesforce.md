@@ -2,10 +2,10 @@
 title: Présentation du connecteur Source de Salesforce
 description: Découvrez comment connecter Salesforce à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1635'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 4%
 >
 >L’authentification de base de la source [!DNL Salesforce] sera abandonnée en janvier 2026. Vous devez passer à l’authentification des informations d’identification du client OAuth 2 pour continuer à utiliser la source et à ingérer des données à partir de votre compte [!DNL Salesforce] vers Experience Platform.
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services d’Experience Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
 Experience Platform prend en charge l’ingestion de données provenant d’un système tiers de gestion de la relation client (CRM). La prise en charge des fournisseurs de gestion de la relation client inclut [!DNL Salesforce].
 
@@ -27,9 +27,9 @@ Experience Platform prend en charge l’ingestion de données provenant d’un 
 
 Suivez les étapes ci-dessous pour savoir comment configurer votre compte [!DNL Salesforce] pour Experience Platform sur Azure.
 
-### PLACER SUR LA LISTE AUTORISÉE Adresse IP associée pour la connexion à Azure
+### Adresse IP utilisée pour la connexion à Azure
 
-Vous devez ajouter des adresses IP spécifiques à une région à votre place sur la liste autorisée de données avant de connecter vos sources à Experience Platform sur Azure. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre place sur la liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Pour plus d’informations, consultez la page [place sur la liste autorisée d’adresse IP](../../ip-address-allow-list.md) .
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform sur Azure. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre place sur la liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources. Pour plus d’informations, consultez la page place sur la liste autorisée d’adresse IP[ .](../../ip-address-allow-list.md)
 
 >[!BEGINTABS]
 
@@ -239,21 +239,21 @@ Le tableau suivant contient des exemples de valeurs ainsi que des informations s
 
 | Variable | Description | Exemple |
 | --- | --- | --- |
-| `CLIENT_SECRET` | Identifiant unique utilisé pour générer votre `{ACCESS_TOKEN}`. Pour plus d’informations sur la récupération de vos `{CLIENT_SECRET}`, consultez le tutoriel sur [l’authentification et l’accès aux API Experience Platform](../../../landing/api-authentication.md). | `{CLIENT_SECRET}` |
-| `JWT_TOKEN` | Le jeton Web JSON (JWT) est des informations d’authentification utilisées pour générer votre {ACCESS_TOKEN}. Pour plus d’informations sur la génération de vos `{JWT_TOKEN}`, consultez le tutoriel sur [l’authentification et l’accès aux API Experience Platform](../../../landing/api-authentication.md). | `{JWT_TOKEN}` |
-| `API_KEY` | Identifiant unique utilisé pour authentifier les appels aux API Experience Platform. Pour plus d’informations sur la récupération de vos `{API_KEY}`, consultez le tutoriel sur [l’authentification et l’accès aux API Experience Platform](../../../landing/api-authentication.md). | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
-| `ACCESS_TOKEN` | Jeton d’autorisation requis pour effectuer des appels vers les API Experience Platform. Pour plus d’informations sur la récupération de vos `{ACCESS_TOKEN}`, consultez le tutoriel sur [l’authentification et l’accès aux API Experience Platform](../../../landing/api-authentication.md). | `Bearer {ACCESS_TOKEN}` |
+| `CLIENT_SECRET` | Identifiant unique utilisé pour générer votre `{ACCESS_TOKEN}`. Pour plus d’informations sur la récupération de vos [, consultez le tutoriel sur ](../../../landing/api-authentication.md)l’authentification et l’accès aux API Experience Platform`{CLIENT_SECRET}`. | `{CLIENT_SECRET}` |
+| `JWT_TOKEN` | Le jeton Web JSON (JWT) est des informations d’authentification utilisées pour générer votre {ACCESS_TOKEN}. Pour plus d’informations sur la génération de vos [, consultez le tutoriel sur ](../../../landing/api-authentication.md)l’authentification et l’accès aux API Experience Platform`{JWT_TOKEN}`. | `{JWT_TOKEN}` |
+| `API_KEY` | Identifiant unique utilisé pour authentifier les appels aux API Experience Platform. Pour plus d’informations sur la récupération de vos [, consultez le tutoriel sur ](../../../landing/api-authentication.md)l’authentification et l’accès aux API Experience Platform`{API_KEY}`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `ACCESS_TOKEN` | Jeton d’autorisation requis pour effectuer des appels vers les API Experience Platform. Pour plus d’informations sur la récupération de vos [, consultez le tutoriel sur ](../../../landing/api-authentication.md)l’authentification et l’accès aux API Experience Platform`{ACCESS_TOKEN}`. | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | En ce qui concerne [!DNL Marketo], cette valeur est fixe et est toujours définie sur : `ent_dataservices_sdk`. | `ent_dataservices_sdk` |
 | `CONTAINER_ID` | Le conteneur `global` contient toutes les classes, groupes de champs de schéma, types de données et schémas fournis par les partenaires standard d’Adobe et d’Experience Platform. En ce qui concerne [!DNL Marketo], cette valeur est fixe et est toujours définie sur `global`. | `global` |
-| `PRIVATE_KEY` | Informations d’identification utilisées pour authentifier votre instance [!DNL Postman] auprès des API Experience Platform. Voir les tutoriels Configuration de Developer Console et [&#x200B; Configuration de Developer Console et  [!DNL Postman]](../../../landing/postman.md) pour obtenir des instructions sur la récupération de votre {PRIVATE_KEY}. | `{PRIVATE_KEY}` |
+| `PRIVATE_KEY` | Informations d’identification utilisées pour authentifier votre instance [!DNL Postman] auprès des API Experience Platform. Voir les tutoriels Configuration de Developer Console et [ Configuration de Developer Console et  [!DNL Postman]](../../../landing/postman.md) pour obtenir des instructions sur la récupération de votre {PRIVATE_KEY}. | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Informations d’identification utilisées pour intégrer à Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Le système Identity Management (IMS) fournit la structure pour l’authentification aux services Adobe. En ce qui concerne [!DNL Marketo], cette valeur est fixe et est toujours définie sur : `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
 | `IMS_ORG` | Entité d’entreprise pouvant posséder des produits et services ou en obtenir la licence et permettre l’accès à ses membres. Consultez le tutoriel sur [configuration de Developer Console et [!DNL Postman]](../../../landing/postman.md) pour obtenir des instructions sur la récupération de vos informations de `{ORG_ID}`. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | Nom de la partition de sandbox virtuelle que vous utilisez. | `prod` |
 | `TENANT_ID` | Identifiant utilisé pour s’assurer que les ressources que vous créez ont un espace de noms correct et sont contenues dans votre organisation. | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | Point d’entrée de l’URL vers lequel vous effectuez des appels API. Cette valeur est fixe et est toujours définie sur : `http://platform.adobe.io/`. | `http://platform.adobe.io/` |
-| `munchkinId` | ID unique de votre compte [!DNL Marketo]. Pour plus d’informations sur la récupération de votre `munchkinId`, consultez le tutoriel sur [l’authentification de votre instance [!DNL Marketo] &#x200B;](../adobe-applications/marketo/marketo-auth.md). | `123-ABC-456` |
-| `sfdc_org_id` | Identifiant d’organisation de votre compte [!DNL Salesforce]. Pour plus d’informations sur l’acquisition de votre ID d’organisation [!DNL Salesforce], consultez le [[!DNL Salesforce] guide](https://help.salesforce.com/articleView?id=000325251&type=1&mode=1) suivant. | `00D4W000000FgYJUA0` |
+| `munchkinId` | ID unique de votre compte [!DNL Marketo]. Pour plus d’informations sur la récupération de votre [, consultez le tutoriel sur  [!DNL Marketo] l’authentification de votre instance](../adobe-applications/marketo/marketo-auth.md)`munchkinId`. | `123-ABC-456` |
+| `sfdc_org_id` | Identifiant d’organisation de votre compte [!DNL Salesforce]. Pour plus d’informations sur l’acquisition de votre ID d’organisation [[!DNL Salesforce] , consultez le ](https://help.salesforce.com/articleView?id=000325251&type=1&mode=1)guide[!DNL Salesforce] suivant. | `00D4W000000FgYJUA0` |
 | `has_abm` | Valeur booléenne qui indique si vous êtes abonné aux [!DNL Marketo Account-Based Marketing]. | `false` |
 | `has_msi` | Valeur booléenne qui indique si vous êtes abonné aux [!DNL Marketo Sales Insight]. | `false` |
 
@@ -291,7 +291,7 @@ Pour connecter votre compte [!DNL Salesforce] à Experience Platform dans une r�
 - [!DNL Salesforce Connected App] que vous pouvez ensuite utiliser pour activer le flux OAuth JWT_BEARER.
 - Les autorisations nécessaires dans [!DNL Salesforce] d’accéder aux données.
 
-### PLACER SUR LA LISTE AUTORISÉE Adresse IP utilisée pour la connexion à AWS
+### Adresse IP utilisée pour la connexion à AWS
 
 Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform sur AWS. Pour plus d’informations, consultez le guide sur [la liste autorisée d’adresses IP pour se connecter à Experience Platform sur AWS](../../ip-address-allow-list.md).
 
@@ -435,7 +435,7 @@ public class Main {
 }
 ```
 
-| Propriété | Configurations  |
+| Propriété | Configurations |
 | --- | --- |
 | `claimArray[0]` | Mettez à jour `claimArray[0]` avec votre identifiant client. |
 | `claimArray[1]` | Mettez à jour `claimArray[1]` avec le nom d’utilisateur [!DNL Salesforce] autorisé pour l’application. |
