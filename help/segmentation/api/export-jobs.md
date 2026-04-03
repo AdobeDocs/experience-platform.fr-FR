@@ -4,7 +4,7 @@ title: Point d’entrée de l’API des tâches d’exportation de segments
 description: Les tâches d’exportation sont des processus asynchrones utilisés pour conserver les membres des segments d’audience dans les jeux de données. Vous pouvez utiliser le point d’entrée /export/jobs dans l’API Adobe Experience Platform Segmentation Service, qui vous permet de récupérer, de créer et d’annuler des traitements d’exportation par programmation.
 role: Developer
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 32%
@@ -17,9 +17,9 @@ Les tâches d’exportation sont des processus asynchrones utilisés pour conser
 
 >[!NOTE]
 >
->Ce guide traite de l’utilisation des tâches d’exportation dans le [!DNL Segmentation API]. Pour plus d’informations sur la gestion des tâches d’exportation pour les données [!DNL Real-Time Customer Profile], consultez le guide sur les [&#x200B; tâches d’exportation dans l’API Profile](../../profile/api/export-jobs.md)
+>Ce guide traite de l’utilisation des tâches d’exportation dans le [!DNL Segmentation API]. Pour plus d’informations sur la gestion des tâches d’exportation pour les données [!DNL Real-Time Customer Profile], consultez le guide sur les [ tâches d’exportation dans l’API Profile](../../profile/api/export-jobs.md)
 
-## Commencer
+## Prise en main
 
 Les points d’entrée utilisés dans ce guide font partie de l’API [!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, y compris les en-têtes requis et la manière de lire des exemples d’appels API.
 
