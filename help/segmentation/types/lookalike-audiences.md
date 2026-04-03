@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Audiences Similaires
 description: Découvrez comment cibler de nouvelles audiences à forte valeur ajoutée dans Adobe Experience Platform à l’aide d’audiences semblables.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: 03f8124f0fc750efa9b7bca0ff80de4c9263915d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2250'
 ht-degree: 10%
@@ -207,4 +207,4 @@ Par défaut, si une audience de base n’a pas de libellés de contrat, le proce
 
 ## Étapes suivantes
 
-Après lecture de ce guide, vous avez appris à afficher des informations semblables et à créer des audiences semblables en fonction de ces informations. Pour plus d’informations sur les audiences dans l’interface utilisateur de Adobe Experience Platform, veuillez lire le [&#x200B; Guide de l’interface utilisateur de Segmentation Service](./overview.md).
+Après lecture de ce guide, vous avez appris à afficher des informations semblables et à créer des audiences semblables en fonction de ces informations. Pour plus d’informations sur les audiences dans l’interface utilisateur de Adobe Experience Platform, veuillez lire le [ Guide de l’interface utilisateur de Segmentation Service](./overview.md).
