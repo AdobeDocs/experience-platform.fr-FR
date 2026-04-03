@@ -2,7 +2,7 @@
 title: Vue d’ensemble du profil client en temps réel
 description: Le profil client en temps réel fusionne des données provenant de diverses sources et permet d’accéder à ces données sous la forme de profils clients individuels et d’événements de séries temporelles associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1826'
 ht-degree: 90%
@@ -21,7 +21,7 @@ La relation entre le profil client en temps réel et les autres services dans Ex
 
 ## Présentation des profils
 
-Le [!DNL Real-Time Customer Profile] fusionne les données de divers systèmes d’entreprise, puis fournit un accès à ces données sous la forme de profils client avec des événements de série temporelle associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux. Les sections suivantes mettent en évidence certains concepts de base que vous devez connaître pour créer et gérer efficacement des profils au sein d’Experience Platform.
+Le [!DNL Real-Time Customer Profile] fusionne les données de divers systèmes d’entreprise, puis fournit un accès à ces données sous la forme de profils clients avec des événements de série temporelle associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux. Les sections suivantes mettent en évidence certains concepts de base que vous devez connaître pour créer et gérer efficacement des profils au sein d’Experience Platform.
 
 ### Composition de l’entité de profil
 
@@ -45,7 +45,7 @@ Les entités dimensionnelles et B2B sont liées à l’entité principale par le
 
 Bien que le [!DNL Real-Time Customer Profile] traite les données ingérées et utilise Adobe Experience Platform [!DNL Identity Service] pour fusionner les données associées par le biais du mappage d’identité, il conserve ses propres données dans le magasin de données du [!DNL Profile]. Le magasin du [!DNL Profile] est distinct des données du catalogue qui se trouvent dans le lac de données et des données du [!DNL Identity Service] qui se trouvent dans le graphique d’identités.
 
-Le magasin de profils utilise une infrastructure de base de données Microsoft Azure Cosmos et le lac de données Experience Platform utilise le stockage Microsoft Azure Data Lake.
+Le magasin de profils utilise une infrastructure de base de données Microsoft Azure Cosmos et le lac de données Experience Platform utilise le stockage du lac de données Microsoft Azure.
 
 ### Mécanismes de sécurisation de profil
 
@@ -57,7 +57,7 @@ L’interface utilisateur d’Experience Platform fournit un tableau de bord gr
 
 ### Fragments de profil contre profils fusionnés {#profile-fragments-vs-merged-profiles}
 
-Chaque profil client est composé de plusieurs fragments de profil qui ont été fusionnés dans le but de former une vue unique pour ce client. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre organisation dispose de plusieurs fragments de profil associés à ce client unique apparaissant dans plusieurs jeux de données. Lorsque ces fragments sont ingérés dans Experience Platform, ils sont fusionnés afin de créer un profil unique pour ce client.
+Chaque profil client est composé de plusieurs fragments de profil qui ont été fusionnés dans le but de former une vue unique de ce client ou cette cliente. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre organisation dispose de plusieurs fragments de profil associés à ce client unique apparaissant dans plusieurs jeux de données. Lorsque ces fragments sont ingérés dans Experience Platform, ils sont fusionnés afin de créer un profil unique pour ce client.
 
 En d’autres termes, les fragments de profil représentent une identité principale unique et les données [enregistrement](#record-data) ou [événement](#time-series-events) correspondantes pour cet identifiant au sein d’un jeu de données spécifique.
 
@@ -89,25 +89,27 @@ L’une des fonctionnalités clés du [!DNL Real-Time Customer Profile] est la p
 
 Pour en savoir plus sur les schémas d’union, notamment sur la façon d’y accéder dans l’interface utilisateur, consultez le [guide de l’interface utilisateur des schémas d’union](ui/union-schema.md).
 
-<!-- ### (Alpha) Computed attributes
+<!--
+### (Alpha) Computed attributes
 
 >[!IMPORTANT]
 >
 >Computed attribute functionality is in alpha. The documentation and functionality are subject to change.
 
-Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
+Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). 
+-->
 
 ## Profils et audiences
 
 Le [!DNL Segmentation Service] d’Adobe Experience Platform fournit les audiences nécessaires à l’optimisation de l’expérience de chaque client et cliente. Lorsqu’une audience est créée, l’identifiant de cette audience est ajouté à la liste d’appartenance à l’audience pour tous les profils éligibles. Les règles de segmentation sont créées et appliquées aux données du [!DNL Real-Time Customer Profile] à l’aide des API RESTful et de l’interface utilisateur du créateur de segments. Pour en savoir plus sur la segmentation, commencez pas lire la [Présentation de Segmentation Service](../segmentation/home.md).
 
-### Ingestion par flux et segmentation par flux
+### Ingestion en flux continu et segmentation par flux
 
-L’entrée en temps réel est possible grâce à un processus appelé ingestion par flux. À mesure que les données de profil et de série temporelle sont ingérées, le [!DNL Real-Time Customer Profile] décide automatiquement d’inclure ou d’exclure ces données des audiences par le biais d’un processus continu appelé la segmentation par flux, avant de les fusionner avec les données existantes et de mettre à jour la vue d’union. Par conséquent, vous pouvez instantanément effectuer des calculs et prendre des décisions pour offrir aux clients de meilleures expériences personnalisées lorsqu’ils interagissent avec votre marque. Lors de l’ingestion, les données sont également soumises à un processus de validation pour s’assurer qu’elles sont correctement ingérées et conformes au schéma sur lequel le jeu de données est basé. Pour plus d’informations sur la validation effectuée lors de l’ingestion, commencez par lire la [présentation de la qualité d’ingestion des données](../ingestion/quality/overview.md).
+L’entrée en temps réel est possible grâce à un processus appelé ingestion en flux continu. À mesure que les données de profil et de série temporelle sont ingérées, le [!DNL Real-Time Customer Profile] décide automatiquement d’inclure ou d’exclure ces données des audiences par le biais d’un processus continu appelé la segmentation par flux, avant de les fusionner avec les données existantes et de mettre à jour la vue d’union. Par conséquent, vous pouvez instantanément effectuer des calculs et prendre des décisions pour offrir aux clients de meilleures expériences personnalisées lorsqu’ils interagissent avec votre marque. Lors de l’ingestion, les données sont également soumises à un processus de validation pour s’assurer qu’elles sont correctement ingérées et conformes au schéma sur lequel le jeu de données est basé. Pour plus d’informations sur la validation effectuée lors de l’ingestion, commencez par lire la [présentation de la qualité d’ingestion des données](../ingestion/quality/overview.md).
 
 ## Ingestion de données dans le [!DNL Profile]
 
-Vous pouvez configurer [!DNL Experience Platform] pour envoyer les données d’enregistrement et de série temporelle au [!DNL Profile]. Cela est compatible avec l’ingestion par lots et l’ingestion par flux en temps réel. Pour plus d’informations, consultez le tutoriel décrivant comment [ajouter des données au profil client en temps réel](tutorials/add-profile-data.md).
+Vous pouvez configurer [!DNL Experience Platform] pour envoyer les données d’enregistrement et de série temporelle au [!DNL Profile]. Cela est compatible avec l’ingestion par lots et en flux continu en temps réel. Pour plus d’informations, consultez le tutoriel décrivant comment [ajouter des données au profil client en temps réel](tutorials/add-profile-data.md).
 
 >[!NOTE]
 >
