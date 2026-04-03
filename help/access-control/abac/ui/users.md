@@ -3,7 +3,7 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès
 title: Gestion des utilisateurs du contrôle d’accès basé sur les attributs
 description: Gérez les utilisateurs et les groupes d’utilisateurs via l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: b665d0edce713f1b252e07125aabab79d52a9cba
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '918'
 ht-degree: 7%
@@ -22,7 +22,8 @@ Les utilisateurs sont les personnes qui ont accès à Adobe Experience Platform.
 
 ## Gérer les utilisateurs et les utilisatrices
 
-<!-- ADD LINKS INTO IMPORTANT NOTE BELOW
+<!-- 
+ADD LINKS INTO IMPORTANT NOTE BELOW
 >[!IMPORTANT]
 >
 >[!UICONTROL Permissions] manages access control for existing Experience Platform users. To add users to Experience Platform, navigate to Adobe Admin Console through the **[!UICONTROL Edit in admin console]** option. To learn how to add users through the Admin Console, follow the [adding users to Experience Platform](...){#target="_blank"} guide.
@@ -56,7 +57,8 @@ La boîte de dialogue **[!UICONTROL Add Roles]** s’affiche. Sélectionnez le o
 
 Pour supprimer un rôle de l’utilisateur ou de l’utilisatrice, sélectionnez le **X** en regard du nom du rôle.
 
-<!-- ADD LINKS INTO IMPORTANT NOTE BELOW
+<!-- 
+ADD LINKS INTO IMPORTANT NOTE BELOW
 
 >[!NOTE]
 >
@@ -73,11 +75,12 @@ Une boîte de dialogue de confirmation s’affiche. Sélectionnez **[!UICONTROL 
 
 Les groupes d’utilisateurs consistent en plusieurs utilisateurs qui ont été regroupés et qui disposent des accès pour exécuter les mêmes fonctions.
 
-<!-- ADD LINKS INTO IMPORTANT NOTE BELOW
+<!-- 
+ADD LINKS INTO IMPORTANT NOTE BELOW
 >[!IMPORTANT]
 >
 >[!UICONTROL Permissions] manages access control for existing Experience Platform user groups. To add user groups to Experience Platform, navigate to Admin Console through the **[!UICONTROL Edit in admin console]** option. To learn how to add user groups in the Admin Console, follow the [adding user groups to Experience Platform](...){#target="_blank"} guide.
- -->
+-->
 
 Pour afficher les utilisateurs de votre organisation, accédez à **[!UICONTROL Permissions]** dans [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}.Sélectionnez **[!UICONTROL Groups]** dans la section **[!UICONTROL Users]** du panneau de gauche.
 
@@ -170,5 +173,5 @@ Vous savez maintenant comment afficher les détails et les rôles d’un utilisa
 <!--
 The following video is intended to support your understanding of developer and API credentials.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446400/?captions=fre_fr&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
 -->
