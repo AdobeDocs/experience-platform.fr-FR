@@ -5,7 +5,7 @@ title: Point d’entrée de l’API des politiques de gouvernance des données
 description: Les politiques de gouvernance des données sont des règles adoptées par votre organisation qui décrivent les types d’actions marketing que vous êtes autorisé(e) ou non à effectuer sur les données dans Experience Platform. Le point d’entrée « /policies » est utilisé pour tous les appels d’API liés à lʼaffichage, la création, la mise à jour ou la suppression des politiques de gouvernance des données.
 role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 98%
@@ -148,7 +148,7 @@ Une réponse réussie comprend un tableau `children` qui répertorie les détail
 | `status` | État actuel dʼune politique. Il existe trois états possibles : `DRAFT`, `ENABLED` ou `DISABLED`. Par défaut, seules les politiques `ENABLED` participent à lʼévaluation. Pour plus dʼinformations, consultez la présentation sur lʼ[évaluation des politiques](../enforcement/overview.md). |
 | `marketingActionRefs` | Tableau qui répertorie les URI de toutes les actions marketing applicables pour une politique. |
 | `description` | Description facultative qui fournit un contexte plus détaillé au cas dʼutilisation de la politique. |
-| `deny` | Objet qui décrit les étiquettes dʼutilisation des données spécifiques sur lesquelles lʼaction marketing associée à une politique ne peut pas être effectuée. Pour plus dʼinformations sur cette propriété, consultez la section [Création dʼune politique](#create-policy). |
+| `deny` | Objet qui décrit les libellés dʼutilisation des données spécifiques sur lesquels lʼaction marketing associée à une politique ne peut pas être effectuée. Pour plus dʼinformations sur cette propriété, consultez la section [Création dʼune politique](#create-policy). |
 
 ## Recherche dʼune politique {#look-up}
 
@@ -229,18 +229,18 @@ Une réponse réussie renvoie les détails de la politique.
 | `status` | État actuel de la politique. Il existe trois états possibles : `DRAFT`, `ENABLED` ou `DISABLED`. Par défaut, seules les politiques `ENABLED` participent à lʼévaluation. Pour plus dʼinformations, consultez la présentation sur lʼ[évaluation des politiques](../enforcement/overview.md). |
 | `marketingActionRefs` | Tableau qui répertorie les URI de toutes les actions marketing applicables pour la politique. |
 | `description` | Description facultative qui fournit un contexte plus détaillé au cas dʼutilisation de la politique. |
-| `deny` | Objet qui décrit les étiquettes dʼutilisation des données spécifiques sur lesquelles lʼaction marketing associée à la politique ne peut pas être effectuée. Pour plus dʼinformations sur cette propriété, consultez la section [Création dʼune politique](#create-policy). |
+| `deny` | Objet qui décrit les libellés dʼutilisation des données spécifiques sur lesquels lʼaction marketing associée à la politique ne peut pas être effectuée. Pour plus dʼinformations sur cette propriété, consultez la section [Création dʼune politique](#create-policy). |
 
 ## Création dʼune politique personnalisée {#create-policy}
 
 Dans lʼAPI [!DNL Policy Service], une politique est définie par les éléments suivants :
 
 * référence à une action marketing spécifique
-* expression décrivant les étiquettes dʼutilisation des données pour lesquelles lʼaction marketing ne peut pas être effectuée.
+* expression décrivant les libellés dʼutilisation des données pour lesquels lʼaction marketing ne peut pas être effectuée.
 
-Pour satisfaire à cette dernière exigence, les définitions des politiques doivent inclure une expression booléenne par rapport à la présence dʼétiquettes dʼutilisation des données. Cette expression sʼappelle une expression de politique.
+Pour satisfaire à cette dernière exigence, les définitions des politiques doivent inclure une expression booléenne par rapport à la présence de libellés dʼutilisation des données. Cette expression sʼappelle une expression de politique.
 
-Les expressions de politique sont fournies sous la forme dʼune propriété `deny` dans chaque définition de politique. Voici un exemple dʼobjet `deny` simple qui vérifie uniquement la présence dʼune seule étiquette :
+Les expressions de politique sont fournies sous la forme dʼune propriété `deny` dans chaque définition de politique. Voici un exemple dʼobjet `deny` simple qui vérifie uniquement la présence dʼun seul libellé :
 
 ```json
 "deny": {
@@ -248,9 +248,9 @@ Les expressions de politique sont fournies sous la forme dʼune propriété `den
 }
 ```
 
-Cependant, de nombreuses politiques spécifient des conditions plus complexes par rapport à la présence dʼétiquettes dʼutilisation des données. Pour prendre en charge ces cas dʼutilisation, vous pouvez également inclure des opérations booléennes pour décrire vos expressions de politique. Lʼobjet dʼexpression de politique doit contenir soit une étiquette soit un opérateur et des opérandes, mais pas les deux. De même, chaque opérande est également un objet d’expression de politique.
+Cependant, de nombreuses politiques spécifient des conditions plus complexes par rapport à la présence de libellés dʼutilisation des données. Pour prendre en charge ces cas dʼutilisation, vous pouvez également inclure des opérations booléennes pour décrire vos expressions de politique. Lʼobjet dʼexpression de politique doit contenir soit un libellé soit un opérateur et des opérandes, mais pas les deux. De même, chaque opérande est également un objet d’expression de politique.
 
-Par exemple, afin de définir une politique qui interdit lʼexécution dʼune action marketing sur des données contenant des étiquettes `C1 OR (C3 AND C7)`, la propriété `deny` de la politique est spécifiée comme suit :
+Par exemple, afin de définir une politique qui interdit lʼexécution dʼune action marketing sur des données contenant des libellés `C1 OR (C3 AND C7)`, la propriété `deny` de la politique est spécifiée comme suit :
 
 ```JSON
 "deny": {
@@ -270,9 +270,9 @@ Par exemple, afin de définir une politique qui interdit lʼexécution dʼune ac
 
 | Propriété | Description |
 | --- | --- |
-| `operator` | Indique la relation conditionnelle entre les étiquettes fournies dans le tableau `operands` frère. Les valeurs acceptées sont les suivantes : <ul><li>`OR` : lʼexpression est résolue en « true » si lʼune des étiquettes du tableau `operands` est présente.</li><li>`AND` : lʼexpression est résolue en « true » uniquement si toutes les étiquettes du tableau `operands` sont présentes.</li></ul> |
-| `operands` | Tableau dʼobjets, chaque objet représentant soit une seule étiquette, soit une paire supplémentaire de propriétés `operator` et `operands`. La présence des étiquettes et/ou des opérations dans un tableau `operands` est résolue en « true » ou « false » en fonction de la valeur de sa propriété `operator` frère. |
-| `label` | Nom dʼune étiquette unique dʼutilisation des données qui sʼapplique à la politique. |
+| `operator` | Indique la relation conditionnelle entre les libellés fournis dans le tableau `operands` frère. Les valeurs acceptées sont les suivantes : <ul><li>`OR` : lʼexpression est résolue en « true » si lʼun des libellés du tableau `operands` est présent.</li><li>`AND` : lʼexpression est résolue en « true » uniquement si tous les libellés du tableau `operands` sont présents.</li></ul> |
+| `operands` | Tableau dʼobjets, chaque objet représentant soit un seul libellé, soit une paire supplémentaire de propriétés `operator` et `operands`. La présence des libellés et/ou des opérations dans un tableau `operands` est résolue en « true » ou « false » en fonction de la valeur de sa propriété `operator` sœur. |
+| `label` | Nom dʼun libellé unique dʼutilisation des données qui sʼapplique à la politique. |
 
 Vous pouvez créer une nouvelle politique personnalisée en effectuant une requête POST vers le point d’entrée `/policies/custom`.
 
@@ -284,7 +284,7 @@ POST /policies/custom
 
 **Requête**
 
-La requête suivante crée une nouvelle politique qui limite lʼexécution de lʼaction marketing `exportToThirdParty` sur les données contenant des étiquettes `C1 OR (C3 AND C7)`.
+La requête suivante crée une nouvelle politique qui limite lʼexécution de lʼaction marketing `exportToThirdParty` sur les données contenant des libellés `C1 OR (C3 AND C7)`.
 
 ```shell
 curl -X POST \
@@ -323,7 +323,7 @@ curl -X POST \
 | `status` | État actuel de la politique. Il existe trois états possibles : `DRAFT`, `ENABLED` ou `DISABLED`. Par défaut, seules les politiques `ENABLED` participent à lʼévaluation. Pour plus dʼinformations, consultez la présentation sur lʼ[évaluation des politiques](../enforcement/overview.md). |
 | `marketingActionRefs` | Tableau qui répertorie les URI de toutes les actions marketing applicables pour la politique. LʼURI dʼune action marketing est indiqué sous `_links.self.href` dans la réponse pour la [recherche dʼune action marketing](./marketing-actions.md#look-up). |
 | `description` | Description facultative qui fournit un contexte plus détaillé au cas dʼutilisation de la politique. |
-| `deny` | Lʼexpression de politique qui décrit les étiquettes dʼutilisation des données spécifiques sur lesquelles lʼaction marketing associée à la politique ne peut pas être exécutée. |
+| `deny` | Lʼexpression de politique qui décrit les libellés dʼutilisation des données spécifiques sur lesquels lʼaction marketing associée à la politique ne peut pas être exécutée. |
 
 **Réponse**
 
@@ -396,7 +396,7 @@ PUT /policies/custom/{POLICY_ID}
 
 **Requête**
 
-Dans cet exemple, les conditions d’exportation des données vers un tiers ont été modifiées. Vous devez définir la politique créée de sorte qu’elle rejette cette action marketing en présence d’étiquettes de données `C1 AND C5`.
+Dans cet exemple, les conditions d’export des données vers un tiers ont été modifiées. Vous devez définir la politique créée de sorte qu’elle rejette cette action marketing en présence de libellés de données `C1 AND C5`.
 
 La requête suivante met à jour la politique existante pour inclure la nouvelle expression de politique. Remarquez que puisque cette requête réécrit essentiellement la politique, tous les champs doivent être inclus dans la payload, même si certaines de leurs valeurs ne sont pas mises à jour.
 
@@ -431,7 +431,7 @@ curl -X PUT \
 | `status` | État actuel de la politique. Il existe trois états possibles : `DRAFT`, `ENABLED` ou `DISABLED`. Par défaut, seules les politiques `ENABLED` participent à lʼévaluation. Pour plus dʼinformations, consultez la présentation sur lʼ[évaluation des politiques](../enforcement/overview.md). |
 | `marketingActionRefs` | Tableau qui répertorie les URI de toutes les actions marketing applicables pour la politique. LʼURI dʼune action marketing est indiqué sous `_links.self.href` dans la réponse pour la [recherche dʼune action marketing](./marketing-actions.md#look-up). |
 | `description` | Description facultative qui fournit un contexte plus détaillé au cas dʼutilisation de la politique. |
-| `deny` | Lʼexpression de politique qui décrit les étiquettes dʼutilisation des données spécifiques sur lesquelles lʼaction marketing associée à la politique ne peut pas être exécutée. Pour plus dʼinformations sur cette propriété, consultez la section [Création dʼune politique](#create-policy). |
+| `deny` | Lʼexpression de politique qui décrit les libellés dʼutilisation des données spécifiques sur lesquels lʼaction marketing associée à la politique ne peut pas être exécutée. Pour plus dʼinformations sur cette propriété, consultez la section [Création dʼune politique](#create-policy). |
 
 **Réponse**
 
@@ -729,4 +729,4 @@ Une réponse réussie renvoie la liste mise à jour des politiques de base activ
 
 ## Étapes suivantes
 
-Une fois que vous avez défini de nouvelles politiques ou mis à jour des politiques existantes, vous pouvez utiliser lʼAPI [!DNL Policy Service] pour tester les actions marketing par rapport à des étiquettes ou des jeux de données spécifiques et voir si vos politiques génèrent des violations comme prévu. Pour plus dʼinformations, consultez le guide sur les [points d’entrée dʼévaluation des politiques](./evaluation.md).
+Une fois que vous avez défini de nouvelles politiques ou mis à jour des politiques existantes, vous pouvez utiliser lʼAPI [!DNL Policy Service] pour tester les actions marketing par rapport à des libellés ou des jeux de données spécifiques et voir si vos politiques génèrent des violations comme prévu. Pour plus dʼinformations, consultez le guide sur les [points d’entrée dʼévaluation des politiques](./evaluation.md).
