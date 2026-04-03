@@ -2,9 +2,9 @@
 title: Prise en charge des liens privés pour les sources dans l’interface utilisateur
 description: Découvrez comment utiliser les liens privés Azure pour les sources dans l’interface utilisateur d’Experience Platform.
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
-source-git-commit: 4d82b0a7f5ae9e0a7607fe7cb75261e4d3489eff
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '789'
 ht-degree: 0%
 
 ---
@@ -39,11 +39,11 @@ Les mesures de droits d’utilisation de licence pour la prise en charge des lie
 
 ## Créer un point d’entrée privé
 
-Pour commencer à utiliser les liens privés, accédez au catalogue *[!UICONTROL Sources]* de l’interface utilisateur d’Experience Platform et sélectionnez **[!UICONTROL Points d’entrée privés]** dans le menu des onglets de l’espace de travail des sources.
+Pour commencer à utiliser les liens privés, accédez au catalogue *[!UICONTROL Sources]* de l’interface utilisateur d’Experience Platform et sélectionnez **[!UICONTROL Private endpoints]** dans le menu des onglets de l’espace de travail des sources.
 
 ![Le catalogue de sources avec des « points d’entrée privés ».](../../images/tutorials/private-links/catalog.png)
 
-Utilisez l’interface pour afficher des informations sur les points d’entrée privés existants, tels que leur identifiant, la source associée et le statut actuel. Pour créer un point d’entrée privé, sélectionnez **[!UICONTROL Créer un point d’entrée privé]**.
+Utilisez l’interface pour afficher des informations sur les points d’entrée privés existants, tels que leur identifiant, la source associée et le statut actuel. Pour créer un point d’entrée privé, sélectionnez **[!UICONTROL Create private endpoint]**.
 
 ![L’interface des points d’entrée privés avec « Créer un point d’entrée privé » sélectionné.](../../images/tutorials/private-links/private-endpoints.png)
 
@@ -58,7 +58,7 @@ Choisissez ensuite la source de votre choix, puis saisissez des valeurs pour les
 
 {style="table-layout:auto"}
 
-Lorsque vous avez terminé, sélectionnez **[!UICONTROL Soumettre]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Submit]**.
 
 ![Fenêtre d’authentification pour la création d’un point d’entrée privé dans l’espace de travail de l’interface utilisateur des sources.](../../images/tutorials/private-links/create-private-endpoint.png)
 
@@ -68,25 +68,25 @@ Un nouveau point d’entrée reste en attente jusqu’à ce qu’il soit approuv
 
 Pour approuver une demande de point d’entrée privé pour les sources [!DNL Azure Blob] et [!DNL Azure Data Lake Gen2], connectez-vous au [!DNL Azure Portal] . Dans le volet de navigation de gauche, sélectionnez **[!DNL Data storage]**, puis accédez à l’onglet **[!DNL Security + networking]** et choisissez **[!DNL Networking]**. Sélectionnez ensuite **[!DNL Private endpoints]** pour afficher la liste des points d’entrée privés associés à votre compte et leurs états de connexion actuels. Pour approuver une demande en attente, sélectionnez le point d’entrée souhaité, puis cliquez sur **[!DNL Approve]**.
 
-![Portail Azure avec une liste de points d’entrée privés en attente.](../../images/tutorials/private-links/azure.png)
+![Le portail Azure avec une liste de points d’entrée privés en attente.](../../images/tutorials/private-links/azure.png)
 
 ## Créer un compte avec un point d’entrée privé
 
-Accédez au catalogue de sources et sélectionnez une source qui prend en charge les points d’entrée privés. Créez ensuite un compte avec votre source et, lors de l’authentification du compte, activez le bouton (bascule) **[!UICONTROL Point d’entrée privé]**. Fournissez les informations d’authentification de votre source, puis sélectionnez **[!UICONTROL Se connecter à la source]** Patientez quelques minutes le temps que la connexion soit établie.
+Accédez au catalogue de sources et sélectionnez une source qui prend en charge les points d’entrée privés. Créez ensuite un compte avec votre source et, lors de l’authentification du compte, sélectionnez le bouton (bascule) **[!UICONTROL Private endpoint]** . Fournissez les informations d’authentification de votre source, puis sélectionnez **[!UICONTROL Connect to source]** Patientez quelques minutes le temps que la connexion soit établie.
 
 >[!NOTE]
 >
->Si l’option [!UICONTROL Point d’entrée privé] est activée, Experience Platform vérifie si un point d’entrée privé approuvé existe pour la source sélectionnée. Si aucun point d’entrée approuvé n’est trouvé, vous ne pourrez pas établir de connexion.
+>Si l’option [!UICONTROL Private endpoint] est activée, Experience Platform vérifie si un point d’entrée privé approuvé existe pour la source sélectionnée. Si aucun point d’entrée approuvé n’est trouvé, vous ne pourrez pas établir de connexion.
 
 ![L’étape d’authentification de nouveau compte avec les points d’entrée privés activés.](../../images/tutorials/private-links/new-account.png)
 
-Accédez ensuite à l’interface [!UICONTROL Compte existant] de votre source. Utilisez cette interface pour afficher la liste de vos comptes existants et leurs statuts correspondants. Vous pouvez sélectionner l’icône de filtre ![icône de filtre](../../../images/icons/filter.png) pour afficher uniquement les comptes qui ont été activés pour se connecter à un point d’entrée privé.
+Accédez ensuite à l’interface [!UICONTROL Existing account] de votre source. Utilisez cette interface pour afficher la liste de vos comptes existants et leurs statuts correspondants. Vous pouvez sélectionner l’icône de filtre ![icône de filtre](../../../images/icons/filter.png) pour afficher uniquement les comptes qui ont été activés pour se connecter à un point d’entrée privé.
 
 ![L’interface du compte existant dans le workflow des sources affiche uniquement les comptes filtrés activés pour les connexions de point d’entrée privées.](../../images/tutorials/private-links/existing-private-endpoints.png)
 
-Sélectionnez le compte à utiliser, puis activez la **[!UICONTROL création interactive]**. Ce bouton (bascule) active la [!UICONTROL création interactive], une fonctionnalité [!DNL Azure] qui vous permet de tester les connexions, de parcourir les listes de dossiers et de prévisualiser les données. L’activation de la [!UICONTROL création interactive] est requise pour les connexions de point d’entrée privé. Notez que vous ne pouvez pas désactiver manuellement ce bouton ; il se désactive automatiquement au bout de 60 minutes.
+Sélectionnez le compte à utiliser, puis activez **[!UICONTROL Interactive Authoring]**. Ce bouton (bascule) active [!UICONTROL Interactive Authoring], une fonctionnalité [!DNL Azure] qui vous permet de tester les connexions, de parcourir les listes de dossiers et de prévisualiser les données. L’activation de [!UICONTROL Interactive Authoring] est requise pour les connexions de point d’entrée privé. Notez que vous ne pouvez pas désactiver manuellement ce bouton ; il se désactive automatiquement au bout de 60 minutes.
 
-L’activation de la [!UICONTROL création interactive] prend quelques minutes. Une fois le paramètre activé, sélectionnez **[!UICONTROL Suivant]** pour passer à l’étape suivante et sélectionner les données à ingérer.
+L’activation de [!UICONTROL Interactive Authoring] prend quelques minutes. Une fois le paramètre activé, sélectionnez **[!UICONTROL Next]** pour passer à l’étape suivante et sélectionner les données à ingérer.
 
 ![Un compte existant est sélectionné et la création interactive est activée.](../../images/tutorials/private-links/interactive-authoring.png)
 
