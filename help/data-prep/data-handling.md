@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestion des formats de données avec la préparation des données
 description: Ce document donne un aperçu de la manière dont différents types de données sont traités dans la préparation des données.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: a49140853124f4f7beee87a739c8e670838947f4
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '626'
-ht-degree: 95%
+source-wordcount: '624'
+ht-degree: 93%
 
 ---
 
@@ -78,7 +78,7 @@ Lorsque les champs de chaîne des données entrantes sont mappés aux champs de 
 
 >[!TIP]
 >
->Actuellement, la fonction de date dans l’ingestion par lots supprime les millisecondes si les valeurs de date sont dans ce format : `2024-05-05 20:39:00.005` PST. Pour conserver les millisecondes, utilisez ce format : `2024-05-05 20:39:00.005-0800`
+>Actuellement, la fonction de date dans l’ingestion par lots supprime les millisecondes si les valeurs de date sont au format suivant : `2024-05-05 20:39:00.005` PST. Pour conserver les millisecondes, utilisez le format suivant : `2024-05-05 20:39:00.005-0800`
 
 Le tableau suivant indique les lettres de modèle définies pour les chaînes de format. Veuillez noter que les lettres sont sensibles à la casse.
 
@@ -103,7 +103,7 @@ Le tableau suivant indique les lettres de modèle définies pour les chaînes de
 | m | Minute dans l’heure | Nombre | 38 |
 | s | Seconde dans la minute | Nombre | 44 |
 | S | Milliseconde | Nombre | 245 |
-| z | Fuseau horaire | Fuseau horaire général | Pacifique (heure normale du Pacifique); PST; GMT-08:00 |
+| z | Fuseau horaire | Fuseau horaire général | Heure standard du Pacifique ; PST ; GMT-08:00 |
 | Z | Fuseau horaire | Fuseau horaire RFC 822 | -0800 |
 | X | Fuseau horaire | Fuseau horaire ISO 8601 | -08; -0800; -08:00 |
 | V | Identifiant de fuseau horaire | Texte | Amérique/Los_Angeles |
