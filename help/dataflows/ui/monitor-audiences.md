@@ -3,7 +3,7 @@ description: Découvrez comment surveiller les flux de données pendant la segme
 title: Surveillance des flux de données pour les audiences dans l’interface utilisateur
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1710'
 ht-degree: 6%
@@ -18,14 +18,14 @@ Utilisez le tableau de bord de surveillance pour afficher une représentation vi
 
 ## Prise en main {#getting-started}
 
-Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d&#39;Adobe Experience Platform :
 
 - [Flux de données](../home.md) : les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Experience Platform. Les flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers des jeux de données cibles, vers [!DNL Identity] et [!DNL Profile], et vers [!DNL Destinations].
    - [Exécutions de flux de données](../../sources/notifications.md) : les exécutions de flux de données sont les tâches planifiées récurrentes en fonction de la configuration de la fréquence des flux de données sélectionnés.
 - [Segmentation](../../segmentation/home.md) : la segmentation vous permet de créer des audiences à partir de vos données du profil client en temps réel.
    - [Tâches d’activation](../../destinations/ui/activation-overview.md) : une tâche d’activation est utilisée pour activer votre audience vers une destination spécifiée.
-   - [Tâches d’évaluation &#x200B;](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment) : une tâche d’évaluation est un processus asynchrone qui évalue l’audience.
-   - [&#x200B; Tâches d’exportation &#x200B;](../../segmentation/api/export-jobs.md) : une tâche d’exportation est un processus asynchrone utilisé pour conserver les membres de l’audience dans des jeux de données.
+   - [Tâches d’évaluation ](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment) : une tâche d’évaluation est un processus asynchrone qui évalue l’audience.
+   - [ Tâches d’exportation ](../../segmentation/api/export-jobs.md) : une tâche d’exportation est un processus asynchrone utilisé pour conserver les membres de l’audience dans des jeux de données.
 - [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Experience Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ## Tableau de bord de surveillance des audiences {#monitoring-audiences-dashboard}
@@ -64,7 +64,7 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | **[!UICONTROL Last activation identities]** | Nombre d’identités activées dans la dernière tâche d’activation de l’audience. |
 | **[!UICONTROL Last activation destination]** | Nom de la destination vers laquelle la dernière tâche d’activation de l’audience a été activée. |
 
-Vous pouvez filtrer les résultats pour une audience spécifique et afficher ses tâches de segmentation en sélectionnant l’icône de filtre (![&#x200B; L’icône de filtre .](/help/images/icons/filter-add.png)). Les tâches de segmentation sont triées par ordre chronologique, les tâches de segmentation les plus récentes apparaissant en premier.
+Vous pouvez filtrer les résultats pour une audience spécifique et afficher ses tâches de segmentation en sélectionnant l’icône de filtre (![ L’icône de filtre .](/help/images/icons/filter-add.png)). Les tâches de segmentation sont triées par ordre chronologique, les tâches de segmentation les plus récentes apparaissant en premier.
 
 ![L’icône de filtre est mise en surbrillance. En le sélectionnant, vous pouvez afficher les tâches de segmentation pour l’audience spécifiée.](../assets/ui/monitor-audiences/filter-audience.png)
 
@@ -89,7 +89,7 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | **[!UICONTROL Identity activated]** | Nombre d’identités activées par la tâche de segmentation. Chaque profil peut avoir plusieurs identités. Par exemple, un profil peut avoir comme identités une adresse e-mail, un numéro de téléphone et un numéro de fidélité. |
 | **[!UICONTROL Destination name]** | Nom de la destination vers laquelle la tâche de segmentation est activée. |
 
-Vous pouvez filtrer de manière plus détaillée une tâche de segmentation spécifique et consulter ses détails en sélectionnant l’icône de filtre (![&#x200B; L’icône de filtre .](/help/images/icons/filter.png)). Il existe deux types différents de tâches de segmentation qui peuvent être filtrées : les tâches d’activation et les tâches d’évaluation.
+Vous pouvez filtrer de manière plus détaillée une tâche de segmentation spécifique et consulter ses détails en sélectionnant l’icône de filtre (![ L’icône de filtre .](/help/images/icons/filter.png)). Il existe deux types différents de tâches de segmentation qui peuvent être filtrées : les tâches d’activation et les tâches d’évaluation.
 
 ### Détails du traitement d’activation {#activation-job-details}
 
