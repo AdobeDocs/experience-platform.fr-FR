@@ -1,40 +1,40 @@
 ---
-title: Point de terminaison des balises unifiées
-description: Découvrez comment créer, mettre à jour, gérer et supprimer des catégories et des balises à l’aide des API Adobe Experience Platform.
+title: Point d’entrée de balises unifiées
+description: Découvrez comment créer, mettre à jour, gérer et supprimer des catégories de balises et des balises à l’aide des API Adobe Experience Platform.
 role: Developer
 exl-id: 6687d1da-a5e4-435a-9f99-1b0f9ac98088
-source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1860'
 ht-degree: 4%
 
 ---
 
-# Point d’entrée des balises unifiées
+# Point d’entrée de balises unifiées
 
 >[!IMPORTANT]
 >
->L’URL de point d’entrée de cet ensemble de points d’entrée est `https://experience.adobe.io`.
+>L’URL du point d’entrée pour ce jeu de points d’entrée est `https://experience.adobe.io`.
 
-Les balises sont une fonctionnalité qui vous permet de gérer des taxonomies de métadonnées afin de classer les objets métier pour une découverte et une catégorisation plus simples. Vous pouvez ensuite organiser ces balises en d’autres groupes en les ajoutant aux catégories de balises.
+Les balises sont une fonctionnalité de gestion des taxonomies des métadonnées permettant de classer les objets d’entreprise pour une découverte et un classement plus faciles. Vous pouvez ensuite organiser ces balises en groupes supplémentaires en les ajoutant à des catégories de balises.
 
-Ce guide fournit des informations pour vous aider à mieux comprendre les balises et les catégories de balises et inclut des exemples d’appels API pour effectuer des actions de base à l’aide de l’API.
+Ce guide fournit des informations pour vous aider à mieux comprendre les balises et les catégories de balises. Il comprend des exemples d’appels API pour exécuter des actions de base à l’aide de l’API .
 
-## Commencer
+## Prise en main
 
-Les points de terminaison utilisés dans ce guide font partie des API Adobe Experience Platform. Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, notamment les en-têtes requis et la manière de lire des exemples d’appels API
+Les points d’entrée utilisés dans ce guide font partie des API Adobe Experience Platform. Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, y compris les en-têtes requis et la manière de lire des exemples d’appels API
 
 ### Glossaire
 
-Le glossaire suivant met en évidence la différence entre une **balise** et une **catégorie de balise**.
+Le glossaire suivant met en évidence la différence entre une **balise** et une **catégorie de balises**.
 
-- **Balise** : une balise vous permet de gérer la taxonomie des métadonnées pour les objets commerciaux, ce qui vous permet de classer ces objets pour une découverte et une catégorisation plus simples.
-   - **Balise non catégorisée** : une balise non catégorisée est une balise qui n’appartient pas à une catégorie de balise. Par défaut, les balises créées ne sont pas catégorisées.
+- **Balise** : une balise vous permet de gérer la taxonomie des métadonnées pour les objets métier, ce qui vous permet de classer ces objets pour une découverte et une catégorisation plus faciles.
+   - **Balise non classée** : une balise non classée est une balise qui n’appartient à aucune catégorie de balises. Par défaut, les balises créées ne sont pas classées.
 - **Catégorie de balises** : une catégorie de balises vous permet de regrouper vos balises dans des ensembles significatifs, ce qui vous permet de fournir plus de contexte à l’objectif de la balise.
 
 ## Récupération d’une liste de catégories de balises {#get-tag-categories}
 
-Vous pouvez récupérer une liste des catégories de balises appartenant à votre organisation en envoyant une requête de GET au point de terminaison `/tagCategory`.
+Vous pouvez récupérer une liste de catégories de balises appartenant à votre organisation en envoyant une requête GET au point d’entrée `/tagCategory`.
 
 **Format d’API**
 
@@ -43,15 +43,15 @@ GET /tagCategory
 GET /tagCategory?{QUERY_PARAMETERS}
 ```
 
-Les paramètres de requête facultatifs suivants peuvent être utilisés lors de la récupération des catégories de balises.
+Les paramètres de requête facultatifs suivants peuvent être utilisés lors de la récupération de catégories de balises.
 
 | Paramètre de requête | Description | Exemple |
 | --------------- | ----------- | ------- |
-| `start` | L’emplacement à partir duquel commence la liste de résultats. Vous pouvez l’utiliser pour indiquer l’index de départ pour la pagination des résultats. | `start=a` |
-| `limit` | Nombre maximal de catégories de balises que vous souhaitez récupérer par page. | `limit=20` |
-| `property` | L’attribut que vous souhaitez filtrer lors de la récupération des catégories de balises. Les valeurs prises en charge sont les suivantes : &lt;ul≥<li>`name` : nom de la catégorie de balises.</li></ul> | `property=name==category` |
-| `sortBy` | Ordre dans lequel les catégories de balises sont triées. Les valeurs prises en charge sont `name`, `createdAt` et `modifiedAt`. | `sortBy=name` |
-| `sortOrder` | Orientation du tri des catégories de balises. Les valeurs prises en charge sont `asc` et `desc`. | `sortOrder=asc` |
+| `start` | Emplacement de départ de la liste des résultats. Vous pouvez l’utiliser pour indiquer l’index de départ pour la pagination des résultats. | `start=a` |
+| `limit` | Nombre maximal de catégories de balises à récupérer par page. | `limit=20` |
+| `property` | Attribut selon lequel vous souhaitez filtrer lors de la récupération de catégories de balises. Les valeurs prises en charge sont : &lt;ul≥<li>`name` : nom de la catégorie de balises.</li></ul> | `property=name==category` |
+| `sortBy` | Ordre de tri des catégories de balises. Les valeurs prises en charge sont `name`, `createdAt` et `modifiedAt`. | `sortBy=name` |
+| `sortOrder` | Sens du tri des catégories de balises. Les valeurs prises en charge comprennent `asc` et `desc`. | `sortOrder=asc` |
 
 **Requête**
 
@@ -98,13 +98,13 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de toutes les cat
 
 +++
 
-## Création d’une catégorie de balise {#create-tag-category}
+## Créer une catégorie de balises {#create-tag-category}
 
 >[!IMPORTANT]
 >
->Seul l’administrateur système et l’administrateur de produit peuvent utiliser cet appel d’API.
+>Seuls l’administrateur système et l’administrateur produit peuvent utiliser cet appel API.
 
-Vous pouvez créer une catégorie de balises en envoyant une requête de POST au point de terminaison `/tagCategory`.
+Vous pouvez créer une catégorie de balises en effectuant une requête POST vers le point d’entrée `/tagCategory`.
 
 **Format d’API**
 
@@ -114,7 +114,7 @@ POST /tagCategory
 
 **Requête**
 
-+++Exemple de requête pour créer une catégorie de balise.
++++Exemple de requête pour créer une catégorie de balises.
 
 ```shell
 curl -X POST https://experience.adobe.io/unifiedtags/tagCategory
@@ -130,14 +130,14 @@ curl -X POST https://experience.adobe.io/unifiedtags/tagCategory
 
 | Propriété | Description |
 | -------- | ----------- |
-| `name` | Nom de la catégorie de balises que vous souhaitez créer. |
-| `description` | Description de la catégorie de balises à créer. |
+| `name` | Nom de la catégorie de balises à créer. |
+| `description` | Description de la catégorie de balises que vous souhaitez créer. |
 
 +++
 
 **Réponse**
 
-Un exemple de réponse renvoie un état HTTP 200 avec les détails de la catégorie de balise que vous venez de créer.
+Un exemple de réponse renvoie le statut HTTP 200 avec les détails de la catégorie de balises que vous venez de créer.
 
 +++Exemple de réponse contenant des détails sur la catégorie de balises que vous venez de créer.
 
@@ -157,9 +157,9 @@ Un exemple de réponse renvoie un état HTTP 200 avec les détails de la catégo
 
 +++
 
-## Récupération d’une catégorie de balise spécifique {#get-tag-category}
+## Récupération d’une catégorie de balises spécifique {#get-tag-category}
 
-Vous pouvez récupérer une catégorie de balises spécifique qui appartient à votre organisation en envoyant une requête de GET au point de terminaison `/tagCategory` et en spécifiant l’identifiant de la catégorie de balises.
+Vous pouvez récupérer une catégorie de balises spécifique qui appartient à votre organisation en adressant une requête GET au point d’entrée `/tagCategory` et en spécifiant l’identifiant de la catégorie de balises.
 
 **Format d’API**
 
@@ -169,11 +169,11 @@ GET /tagCategory/{TAG_CATEGORY_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{TAG_CATEGORY_ID}` | Identifiant de la catégorie de balises que vous récupérez. |
+| `{TAG_CATEGORY_ID}` | L’identifiant de la catégorie de balises que vous récupérez. |
 
 **Requête**
 
-+++Exemple de requête pour récupérer une catégorie de balise spécifique
++++Exemple de requête pour récupérer une catégorie de balises spécifique
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-4413-a366-adde0401df50 \
@@ -187,7 +187,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-44
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails de la catégorie de balise spécifiée.
+Une réponse réussie renvoie un état HTTP 200 avec les détails de la catégorie de balises spécifiée.
 
 +++Exemple de réponse contenant des détails sur la catégorie de balises spécifiée.
 
@@ -207,24 +207,24 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la catégor
 
 | Propriété | Description |
 | -------- | ----------- |
-| `id` | ID de la catégorie de balise demandée. |
+| `id` | L’identifiant de la catégorie de balises demandée. |
 | `name` | Nom de la catégorie de balises demandée. |
 | `description` | Description de la catégorie de balises demandée. |
-| `createdBy` | Identifiant de l’utilisateur qui a créé la catégorie de balises. |
-| `createdAt` | Horodatage de la création de la catégorie de balise. |
-| `modifiedBy` | ID de l’utilisateur qui a mis à jour la catégorie de balises pour la dernière fois. |
-| `modifiedAt` | Horodatage de la dernière mise à jour de la catégorie de balises. |
+| `createdBy` | ID de l’utilisateur qui a créé la catégorie de balises. |
+| `createdAt` | Date et heure de création de la catégorie de balises. |
+| `modifiedBy` | ID du dernier utilisateur à avoir mis à jour la catégorie de balises. |
+| `modifiedAt` | Date et heure de la dernière mise à jour de la catégorie de balises. |
 | `tagCount` | Nombre de balises appartenant à la catégorie de balises. |
 
 +++
 
-## Mise à jour d’une catégorie de balise spécifique {#update-tag-category}
+## Mise à jour d’une catégorie de balises spécifique {#update-tag-category}
 
 >[!IMPORTANT]
 >
->Seul l’administrateur système et l’administrateur de produit peuvent utiliser cet appel d’API.
+>Seuls l’administrateur système et l’administrateur produit peuvent utiliser cet appel API.
 
-Vous pouvez mettre à jour les détails d’une catégorie de balises spécifique appartenant à votre organisation en envoyant une requête de PATCH au point de terminaison `/tagCategory` et en spécifiant l’identifiant de la catégorie de balises.
+Vous pouvez mettre à jour les détails d’une catégorie de balises spécifique qui appartient à votre organisation en envoyant une requête PATCH au point d’entrée `/tagCategory` et en spécifiant l’identifiant de la catégorie de balises.
 
 **Format d’API**
 
@@ -234,11 +234,11 @@ PATCH /tagCategory/{TAG_CATEGORY_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{TAG_CATEGORY_ID}` | Identifiant de la catégorie de balises que vous récupérez. |
+| `{TAG_CATEGORY_ID}` | L’identifiant de la catégorie de balises que vous récupérez. |
 
 **Requête**
 
-+++Exemple de requête pour mettre à jour une catégorie de balise spécifique
++++Exemple de requête pour mettre à jour une catégorie de balises spécifique
 
 ```shell
 curl -X PATCH https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-4413-a366-adde0401df50 \
@@ -257,17 +257,17 @@ curl -X PATCH https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-
 | Paramètre | Description |
 | --------- | ----------- |
 | `op` | Opération terminée. Pour mettre à jour une catégorie de balises spécifique, définissez cette valeur sur `replace`. |
-| `path` | Chemin du champ qui sera mis à jour. Les valeurs prises en charge sont `name` et `description`. |
-| `value` | La valeur mise à jour du champ que vous souhaitez mettre à jour. |
-| `from` | La valeur d’origine du champ que vous souhaitez mettre à jour. |
+| `path` | Chemin d’accès au champ qui sera mis à jour. Les valeurs prises en charge comprennent `name` et `description`. |
+| `value` | Valeur mise à jour du champ à mettre à jour. |
+| `from` | Valeur d’origine du champ à mettre à jour. |
 
 +++
 
 **Réponse**
 
-Une réponse réussie : état HTTP 200 avec des informations sur votre nouvelle catégorie de balises mise à jour.
+Réponse réussie État HTTP 200 avec des informations sur votre catégorie de balises nouvellement mise à jour.
 
-+++Exemple de réponse contenant des détails sur la catégorie de balises que vous venez de mettre à jour.
++++Exemple de réponse contenant des détails sur votre catégorie de balises nouvellement mise à jour.
 
 ```json
 {
@@ -285,13 +285,13 @@ Une réponse réussie : état HTTP 200 avec des informations sur votre nouvelle 
 
 +++
 
-## Suppression d’une catégorie de balise spécifique {#delete-tag-category}
+## Supprimer une catégorie de balises spécifique {#delete-tag-category}
 
 >[!IMPORTANT]
 >
->Seul l’administrateur système et l’administrateur de produit peuvent utiliser cet appel d’API.
+>Seuls l’administrateur système et l’administrateur produit peuvent utiliser cet appel API.
 
-Vous pouvez supprimer une catégorie de balises spécifique qui appartient à votre organisation en envoyant une requête de DELETE au point de terminaison `/tagCategory` et en spécifiant l’identifiant de la catégorie de balises.
+Vous pouvez supprimer une catégorie de balises spécifique qui appartient à votre organisation en adressant une requête DELETE au point d’entrée `/tagCategory` et en spécifiant l’identifiant de la catégorie de balises.
 
 **Format d’API**
 
@@ -301,11 +301,11 @@ DELETE /tagCategory/{TAG_CATEGORY_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{TAG_CATEGORY_ID}` | Identifiant de la catégorie de balises que vous récupérez. |
+| `{TAG_CATEGORY_ID}` | L’identifiant de la catégorie de balises que vous récupérez. |
 
 **Requête**
 
-+++Exemple de requête pour supprimer une catégorie de balise spécifique
++++Exemple de requête pour supprimer une catégorie de balises spécifique
 
 ```shell
 curl -X DELETE https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-4413-a366-adde0401df50 \
@@ -321,9 +321,9 @@ curl -X DELETE https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b
 
 Une réponse réussie renvoie un état HTTP 200 avec une réponse vide.
 
-## Récupération d’une liste de balises {#get-tags}
+## Récupérer une liste de balises {#get-tags}
 
-Vous pouvez récupérer une liste de balises appartenant à votre organisation en effectuant une requête de GET sur le point de terminaison `/tags` et l’identifiant de la catégorie de balises.
+Vous pouvez récupérer une liste de balises appartenant à votre organisation en envoyant une requête GET au point d’entrée `/tags` et à l’identifiant de la catégorie de balises.
 
 **Format d’API**
 
@@ -336,16 +336,16 @@ Les paramètres de requête facultatifs suivants peuvent être utilisés lors de
 
 | Paramètre de requête | Description | Exemple |
 | --------------- | ----------- | ------- |
-| `start` | L’emplacement à partir duquel commence la liste de résultats. Vous pouvez l’utiliser pour indiquer l’index de départ pour la pagination des résultats. | `start=a` |
-| `limit` | Nombre maximal de balises que vous souhaitez récupérer par page. | `limit=20` |
-| `property` | L’attribut par lequel vous souhaitez filtrer lors de la récupération des balises. Les valeurs prises en charge sont les suivantes :<ul><li>`name` : nom de la balise.</li><li>`archived` : si les balises sont archivées ou non. Vous pouvez définir cette valeur sur `true` ou `false`.</li><li>`tagCategoryId` : identifiant de la catégorie de balise à laquelle la balise appartient.</li></ul> | <ul><li>`property=name==TestTag`</li><li>`property=archived==false`</li><li>`property=tagCategoryId==e2b7c656-067b-4413-a366-adde0401df50`</li> |
-| `sortBy` | Ordre dans lequel les balises sont triées. Les valeurs prises en charge sont `name`, `createdAt` et `modifiedAt`. | `sortBy=name` |
-| `sortOrder` | Orientation du tri des catégories de balises. Les valeurs prises en charge sont `asc` et `desc`. | `sortOrder=asc` |
+| `start` | Emplacement de départ de la liste des résultats. Vous pouvez l’utiliser pour indiquer l’index de départ pour la pagination des résultats. | `start=a` |
+| `limit` | Nombre maximal de balises à récupérer par page. | `limit=20` |
+| `property` | Attribut selon lequel vous souhaitez filtrer lors de la récupération de balises. Les valeurs prises en charge sont les suivantes :<ul><li>`name` : nom de la balise.</li><li>`archived` : indique si les balises sont archivées ou non. Vous pouvez définir cette valeur sur `true` ou `false`.</li><li>`tagCategoryId` : ID de la catégorie de balises à laquelle appartient la balise.</li></ul> | <ul><li>`property=name==TestTag`</li><li>`property=archived==false`</li><li>`property=tagCategoryId==e2b7c656-067b-4413-a366-adde0401df50`</li> |
+| `sortBy` | Ordre de tri des balises. Les valeurs prises en charge sont `name`, `createdAt` et `modifiedAt`. | `sortBy=name` |
+| `sortOrder` | Sens du tri des catégories de balises. Les valeurs prises en charge comprennent `asc` et `desc`. | `sortOrder=asc` |
 
 
 **Requête**
 
-+++Exemple de requête pour récupérer toutes les balises appartenant à une catégorie de balises spécifique
++++Exemple de requête permettant de récupérer toutes les balises appartenant à une catégorie de balises spécifique
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedtags/tags?property=tagCategoryId=e2b7c656-067b-4413-a366-adde0401df50
@@ -361,7 +361,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags?property=tagCategoryId=
 
 Une réponse réussie renvoie un état HTTP 200 avec les détails des balises appartenant à cette catégorie de balises.
 
-+++ Un exemple de réponse contenant les détails des balises demandées.
++++ Exemple de réponse contenant les détails des balises demandées.
 
 ```json
 {
@@ -500,15 +500,15 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails des balises ap
 
 +++
 
-## Création d’une balise {#create-tag}
+## Créer une balise {#create-tag}
 
 >[!IMPORTANT]
 >
->Seul l’administrateur système et l’administrateur de produit peuvent utiliser cet appel d’API pour créer une balise dans une catégorie de balise spécifiée.
+>Seuls l’administrateur système et l’administrateur de produit peuvent utiliser cet appel API pour créer une balise dans une catégorie de balises spécifiée.
 >
->Si vous créez une balise non catégorisée, vous n&#39;avez **pas** besoin d&#39;autorisations d&#39;administrateur.
+>Si vous créez une balise non classée, vous n’avez **besoin**’autorisations d’administrateur.
 
-Vous pouvez créer une balise en envoyant une requête de POST au point de terminaison `/tags`.
+Vous pouvez créer une balise en effectuant une requête POST vers le point d’entrée `/tags`.
 
 **Format d’API**
 
@@ -533,14 +533,14 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags
 
 | Propriété | Description |
 | -------- | ----------- |
-| `name` | **Obligatoire**. Nom de la balise que vous souhaitez créer. |
-| `tagCategoryId` | *Facultatif*. Identifiant de la catégorie de balises à laquelle vous souhaitez que la balise apparaisse. Si elle n’est pas spécifiée, la balise est créée dans la catégorie Non catégorisée. |
+| `name` | **Obligatoire**. Nom de la balise à créer. |
+| `tagCategoryId` | *Facultatif*. L’identifiant de la catégorie de balises à laquelle vous souhaitez que la balise appartienne. Si elle n’est pas spécifiée, la balise est créée dans la catégorie Non classé . |
 
 +++
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 201 avec les détails de la balise nouvellement créée.
+Une réponse réussie renvoie le statut HTTP 201 avec les détails de la balise que vous venez de créer.
 
 +++Exemple de réponse contenant les détails de la balise que vous venez de créer.
 
@@ -563,19 +563,19 @@ Une réponse réussie renvoie un état HTTP 201 avec les détails de la balise n
 | --------- | ----------- |
 | `name` | Nom de la balise nouvellement créée. |
 | `id` | L’identifiant de la balise nouvellement créée. |
-| `org` | ID de l’organisation à laquelle la balise appartient. |
-| `createdAt` | Horodatage de la création de la balise. |
+| `org` | Identifiant de l’organisation à laquelle appartient la balise. |
+| `createdAt` | Date et heure de création de la balise. |
 | `createdBy` | Identifiant de l’utilisateur qui a créé la balise. |
-| `modifiedAt` | Horodatage de la dernière mise à jour de la balise. |
-| `modifiedBy` | Identifiant de l’utilisateur qui a mis à jour la balise pour la dernière fois. |
-| `tagCategoryId` | Identifiant de la catégorie de balises à laquelle la balise appartient. |
-| `tagCategoryName` | Nom de la catégorie de balises à laquelle la balise appartient. |
+| `modifiedAt` | Date et heure de la dernière mise à jour de la balise. |
+| `modifiedBy` | ID du dernier utilisateur à avoir mis à jour la balise. |
+| `tagCategoryId` | Identifiant de la catégorie de balises à laquelle appartient la balise. |
+| `tagCategoryName` | Nom de la catégorie de balises à laquelle appartient la balise. |
 
 +++
 
 ## Récupération d’une balise spécifique {#get-tag}
 
-Vous pouvez récupérer une balise spécifique qui appartient à votre organisation en envoyant une requête de GET au point de terminaison `/tags` et en spécifiant l’identifiant de la balise que vous souhaitez récupérer.
+Vous pouvez récupérer une balise spécifique appartenant à votre organisation en adressant une requête GET au point d’entrée `/tags` et en spécifiant l’identifiant de la balise à récupérer.
 
 **Format d’API**
 
@@ -585,7 +585,7 @@ GET /tags/{TAG_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{TAG_ID}` | Identifiant de la balise que vous récupérez. |
+| `{TAG_ID}` | L’identifiant de la balise que vous récupérez. |
 
 **Requête**
 
@@ -605,7 +605,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 
 Une réponse réussie renvoie un état HTTP 200 avec les détails de la balise spécifiée.
 
-+++Exemple de réponse contenant les détails de la balise spécifiée.
++++Exemple de réponse contenant des détails sur la balise spécifiée. 
 
 ```json
 {
@@ -625,21 +625,21 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la balise s
 | Paramètre | Description |
 | --------- | ----------- |
 | `name` | Nom de la balise que vous avez récupérée. |
-| `id` | L’identifiant de la balise que vous avez récupérée. |
-| `org` | ID de l’organisation à laquelle la balise appartient. |
-| `createdAt` | Horodatage de la création de la balise. |
+| `id` | L’identifiant de la balise que vous avez récupéré. |
+| `org` | Identifiant de l’organisation à laquelle appartient la balise. |
+| `createdAt` | Date et heure de création de la balise. |
 | `createdBy` | Identifiant de l’utilisateur qui a créé la balise. |
-| `modifiedAt` | Horodatage de la dernière mise à jour de la balise. |
-| `modifiedBy` | Identifiant de l’utilisateur qui a mis à jour la balise pour la dernière fois. |
-| `tagCategoryId` | Identifiant de la catégorie de balises à laquelle la balise appartient. |
-| `tagCategoryName` | Nom de la catégorie de balises à laquelle la balise appartient. |
-| `archived` | État d’archivage de la balise. Si elle est définie sur `true`, la balise est archivée. |
+| `modifiedAt` | Date et heure de la dernière mise à jour de la balise. |
+| `modifiedBy` | ID du dernier utilisateur à avoir mis à jour la balise. |
+| `tagCategoryId` | Identifiant de la catégorie de balises à laquelle appartient la balise. |
+| `tagCategoryName` | Nom de la catégorie de balises à laquelle appartient la balise. |
+| `archived` | Statut d’archivage de la balise. Si elle est définie sur `true`, cela signifie que la balise est archivée. |
 
 +++
 
 ## Validation des balises {#validate-tags}
 
-Vous pouvez vérifier si des balises existent en effectuant une requête de POST sur le point de terminaison `/tags/validate`.
+Vous pouvez vérifier s’il existe des balises en effectuant une requête POST vers le point d’entrée `/tags/validate`.
 
 **Format d’API**
 
@@ -649,7 +649,7 @@ POST /tags/validate
 
 **Requête**
 
-+++Exemple de requête pour valider les ID de balise fournis.
++++Exemple de requête pour valider les identifiants de balise fournis.
 
 ```shell
 curl -X POST https://experience.adobe.io/unifiedtags/tags/validate
@@ -667,7 +667,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags/validate
 
 | Propriété | Description |
 | -------- | ----------- |
-| `ids` | Tableau contenant une liste d’ID de balise que vous souhaitez valider. |
+| `ids` | Un tableau contenant une liste d’ID de balise à valider. |
 | `entity` | L’entité qui demande la validation. Vous pouvez utiliser la valeur `{API_KEY}` pour ce paramètre. |
 
 +++
@@ -698,14 +698,14 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur les ba
 
 | Propriété | Description |
 | -------- | ----------- |
-| `invalidTags` | Tableau contenant une liste des ID de balise non valides. |
-| `validTags` | Tableau contenant une liste des ID de balise valides. |
+| `invalidTags` | Un tableau contenant une liste des ID de balise non valides. |
+| `validTags` | Un tableau contenant une liste des ID de balise valides. |
 
 +++
 
 ## Mettre à jour une balise spécifique {#update-tag}
 
-Vous pouvez mettre à jour une balise spécifique en envoyant une requête de PATCH au point de terminaison `/tags` et en fournissant l’identifiant de la balise que vous souhaitez mettre à jour.
+Vous pouvez mettre à jour une balise spécifiée en adressant une requête PATCH au point d’entrée `/tags` et en fournissant l’identifiant de la balise que vous souhaitez mettre à jour.
 
 **Format d’API**
 
@@ -715,7 +715,7 @@ PATCH /tags/{TAG_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{TAG_ID}` | Identifiant de la balise que vous mettez à jour. |
+| `{TAG_ID}` | L’identifiant de la balise que vous mettez à jour. |
 
 **Requête**
 
@@ -737,18 +737,18 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 
 | Propriété | Description |
 | -------- | ----------- |
-| `op` | L’opération qui doit être effectuée. Dans ce cas pratique, il sera toujours défini sur `replace`. |
-| `path` | Chemin du champ qui sera mis à jour. Les valeurs prises en charge sont `name`, `archived` et `tagCategoryId`. |
-| `value` | La valeur mise à jour du champ que vous souhaitez mettre à jour. |
-| `from` | La valeur d’origine du champ que vous souhaitez mettre à jour. |
+| `op` | Opération qui doit être effectuée. Dans ce cas d’utilisation, elle sera toujours définie sur `replace`. |
+| `path` | Chemin d’accès au champ qui sera mis à jour. Les valeurs prises en charge sont `name`, `archived` et `tagCategoryId`. |
+| `value` | Valeur mise à jour du champ à mettre à jour. |
+| `from` | Valeur d’origine du champ à mettre à jour. |
 
 +++
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails de la balise qui vient d’être mise à jour.
+Une réponse réussie renvoie un état HTTP 200 avec les détails de la balise nouvellement mise à jour.
 
-+++Exemple de réponse contenant les détails de la balise mise à jour.
++++Exemple de réponse contenant des détails sur la balise mise à jour.
 
 ```json
 {
@@ -771,11 +771,11 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la balise q
 
 >[!IMPORTANT]
 >
->Seul l’administrateur système et l’administrateur de produit peuvent utiliser cet appel d’API.
+>Seuls l’administrateur système et l’administrateur produit peuvent utiliser cet appel API.
 >
->De plus, la balise **ne peut pas** être associée à des objets commerciaux et **doit** être archivée avant de pouvoir supprimer la balise. Vous pouvez archiver la balise à l’aide du point de terminaison [update tag endpoint](#update-tag).
+>En outre, la balise **ne peut pas** être associée à des objets métier et **doit** être archivée avant de pouvoir la supprimer. Vous pouvez archiver la balise à l’aide du point d’entrée de balise [update](#update-tag).
 
-Vous pouvez supprimer une balise spécifique en effectuant une balise de DELETE sur le point de terminaison `/tags` et en spécifiant l’identifiant de la balise que vous souhaitez supprimer.
+Vous pouvez supprimer une balise spécifique en ajoutant une balise DELETE au point d’entrée `/tags` et en spécifiant l’identifiant de la balise à supprimer.
 
 **Format d’API**
 
@@ -785,7 +785,7 @@ DELETE /tags/{TAG_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{TAG_ID}` | Identifiant de la balise que vous supprimez. |
+| `{TAG_ID}` | L’identifiant de la balise que vous supprimez. |
 
 **Requête**
 
@@ -807,4 +807,4 @@ Une réponse réussie renvoie un état HTTP 200 avec une réponse vide.
 
 ## Étapes suivantes
 
-Après avoir lu ce guide, vous comprenez mieux comment créer, gérer et supprimer des balises et des catégories de balises à l’aide des API Adobe Experience Platform. Pour plus d’informations sur la gestion des balises à l’aide de l’interface utilisateur, consultez le [guide de gestion des balises](../ui/managing-tags.md). Pour plus d’informations sur la gestion des catégories de balises à l’aide de l’interface utilisateur, consultez le [guide des catégories de balises](../ui/tags-categories.md).
+Vous êtes arrivé au bout de ce guide. À présent, vous comprenez mieux comment créer, gérer et supprimer des balises et des catégories de balises à l’aide des API Adobe Experience Platform. Pour plus d’informations sur la gestion des balises à l’aide de l’interface utilisateur, consultez le [guide de gestion des balises](../ui/managing-tags.md). Pour plus d’informations sur la gestion des catégories de balises à l’aide de l’interface utilisateur, consultez le [ guide des catégories de balises](../ui/tags-categories.md).
