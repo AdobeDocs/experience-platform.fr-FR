@@ -5,10 +5,10 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: a796b58b-b36f-4277-870b-0d3939af8061
-source-git-commit: 6d1745b93d2ad7cf6ef96510bd5128a43de9ef03
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 4%
+source-wordcount: '520'
+ht-degree: 3%
 
 ---
 
@@ -34,27 +34,27 @@ Le tableau suivant décrit les types de données créés conformément aux spéc
 
 | Nom | Description |
 | --- | --- |
-| [[!UICONTROL Adresse]](./data-types/address.md) | Décrit une adresse exprimée à l’aide de conventions postales (par opposition au GPS ou à d’autres formats de définition d’emplacement). |
+| [[!UICONTROL Address]](./data-types/address.md) | Décrit une adresse exprimée à l’aide de conventions postales (par opposition au GPS ou à d’autres formats de définition d’emplacement). |
 | [[!UICONTROL Annotation]](./data-types/annotation.md) | Nœud de texte avec attribution à l’auteur. |
-| [[!UICONTROL Disponibilité]](./data-types/availability.md) | Données de disponibilité d&#39;un article. |
-| [[!UICONTROL Concept codable]](./data-types/codeable-concept.md) | Référence d’une ressource à une autre. |
-| [[!UICONTROL Référence codable]](./data-types/codeable-reference.md) | Référence à une ressource ou à un concept. |
-| [[!UICONTROL Codage]](./data-types/coding.md) | Référence à un code défini par un système terminologique. |
-| [[!UICONTROL &#x200B; Point de contact &#x200B;]](./data-types/contact-point.md) | Coordonnées d’une personne. |
-| [[!UICONTROL Posologie]](./data-types/dosage.md) | Comment le médicament est/a été pris ou doit être pris. |
-| [[!UICONTROL Durée]](./data-types/duration.md) | Une durée. |
-| [[!UICONTROL Détails de contact étendus]](./data-types/extended-contact-detail.md) | Informations sur le contact étendu. |
-| [[!UICONTROL Nom Humain]](./data-types/human-name.md) | Informations sur le nom d’un être humain ou d’une autre entité vivante. |
-| [[!UICONTROL Identifiant]](./data-types/identifier.md) | Identifiant destiné au calcul. |
-| [[!UICONTROL Argent]](./data-types/money.md) | Une quantité d&#39;utilité économique dans une monnaie reconnue. |
-| [[!UICONTROL Période]](./data-types/period.md) | Période définie par une date/heure de début et de fin. |
-| [[!UICONTROL &#x200B; Personne &#x200B;]](./data-types/person.md) | Informations sur un enregistrement de personne générique. |
-| [[!UICONTROL Quantité]](./data-types/quantity.md) | Une quantité mesurée ou mesurable. |
-| [[!UICONTROL Plage]](./data-types/range.md) | Ensemble de valeurs liées par des valeurs faibles et élevées. |
-| [[!UICONTROL Rapport]](./data-types/ratio.md) | Rapport de deux valeurs [[!UICONTROL Quantité]](./data-types/quantity.md) via un numérateur et un dénominateur. |
-| [[!UICONTROL Référence]](./data-types/reference.md) | Référence d’une ressource à une autre. |
-| [[!UICONTROL Répéter]](./data-types/repeat.md) | Ensemble de règles qui décrit le moment où un événement est planifié. |
-| [[!UICONTROL Quantité simple]](./data-types/simple-quantity.md) | Une quantité mesurée ou mesurable. |
-| [[!UICONTROL Planning]](./data-types/timing.md) | Informations sur un événement pouvant se produire plusieurs fois. |
-| [[!UICONTROL Détails du service virtuel]](./data-types/virtual-service-detail.md) | Détails de contact du service virtuel. |
+| [[!UICONTROL Availability]](./data-types/availability.md) | Données de disponibilité d&#39;un article. |
+| [[!UICONTROL Codeable Concept]](./data-types/codeable-concept.md) | Référence d’une ressource à une autre. |
+| [[!UICONTROL Codeable Reference]](./data-types/codeable-reference.md) | Référence à une ressource ou à un concept. |
+| [[!UICONTROL Coding]](./data-types/coding.md) | Référence à un code défini par un système terminologique. |
+| [[!UICONTROL Contact Point]](./data-types/contact-point.md) | Coordonnées d’une personne. |
+| [[!UICONTROL Dosage]](./data-types/dosage.md) | Comment le médicament est/a été pris ou doit être pris. |
+| [[!UICONTROL Duration]](./data-types/duration.md) | Une durée. |
+| [[!UICONTROL Extended Contact Details]](./data-types/extended-contact-detail.md) | Informations sur le contact étendu. |
+| [[!UICONTROL Human Name]](./data-types/human-name.md) | Informations sur le nom d’un être humain ou d’une autre entité vivante. |
+| [[!UICONTROL Identifier]](./data-types/identifier.md) | Identifiant destiné au calcul. |
+| [[!UICONTROL Money]](./data-types/money.md) | Une quantité d&#39;utilité économique dans une monnaie reconnue. |
+| [[!UICONTROL Period]](./data-types/period.md) | Période définie par une date/heure de début et de fin. |
+| [[!UICONTROL Person]](./data-types/person.md) | Informations sur un enregistrement de personne générique. |
+| [[!UICONTROL Quantity]](./data-types/quantity.md) | Une quantité mesurée ou mesurable. |
+| [[!UICONTROL Range]](./data-types/range.md) | Ensemble de valeurs liées par des valeurs faibles et élevées. |
+| [[!UICONTROL Ratio]](./data-types/ratio.md) | Rapport de deux valeurs [[!UICONTROL Quantity]](./data-types/quantity.md) via un numérateur et un dénominateur. |
+| [[!UICONTROL Reference]](./data-types/reference.md) | Référence d’une ressource à une autre. |
+| [[!UICONTROL Repeat]](./data-types/repeat.md) | Ensemble de règles qui décrit le moment où un événement est planifié. |
+| [[!UICONTROL Simple Quantity]](./data-types/simple-quantity.md) | Une quantité mesurée ou mesurable. |
+| [[!UICONTROL Timing]](./data-types/timing.md) | Informations sur un événement pouvant se produire plusieurs fois. |
+| [[!UICONTROL Virtual Service Detail]](./data-types/virtual-service-detail.md) | Détails de contact du service virtuel. |
 
