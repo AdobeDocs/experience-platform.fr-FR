@@ -3,7 +3,7 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Type de données Consentements et préférences
 description: Le type de données Consentement pour les préférences de confidentialité, de Personalization et de marketing est destiné à prendre en charge la collecte des autorisations et des préférences des clients générées par les plateformes de gestion du consentement (CMP) et d’autres sources à partir de vos opérations de données.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2305'
 ht-degree: 1%
@@ -257,7 +257,7 @@ Le fichier JSON suivant illustre un exemple du type de données que le type de d
 
 Pour utiliser le type de données [!UICONTROL Consents and Preferences] afin d’ingérer les données de consentement de vos clients, vous devez créer un jeu de données basé sur un schéma contenant ce type de données.
 
-Consultez le tutoriel sur la [création d’un schéma dans l’interface utilisateur](https://www.adobe.com/go/xdm-schema-editor-tutorial-en_fr) pour savoir comment attribuer des types de données aux champs. Une fois que vous avez créé un schéma contenant un champ avec le type de données [!UICONTROL Consents and Preferences], reportez-vous à la section sur la [création d’un jeu de données](../../catalog/datasets/user-guide.md#create) dans le guide d’utilisation des jeux de données, en suivant les étapes de création d’un jeu de données avec un schéma existant.
+Consultez le tutoriel sur la [création d’un schéma dans l’interface utilisateur](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) pour savoir comment attribuer des types de données aux champs. Une fois que vous avez créé un schéma contenant un champ avec le type de données [!UICONTROL Consents and Preferences], reportez-vous à la section sur la [création d’un jeu de données](../../catalog/datasets/user-guide.md#create) dans le guide d’utilisation des jeux de données, en suivant les étapes de création d’un jeu de données avec un schéma existant.
 
 >[!IMPORTANT]
 >
