@@ -1,32 +1,32 @@
 ---
-title: Point de terminaison des dossiers
+title: Point d’entrée des dossiers
 description: Découvrez comment créer, mettre à jour, gérer et supprimer des dossiers à l’aide des API Adobe Experience Platform.
 role: Developer
 exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
-source-git-commit: 78aa48701abaadea963b25e390aa96d7b31386f4
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 5%
 
 ---
 
-# Point de terminaison de dossiers
+# Point d’entrée des dossiers
 
 >[!IMPORTANT]
 >
->L’URL de point d’entrée de cet ensemble de points d’entrée est `https://experience.adobe.io`.
+>L’URL du point d’entrée pour ce jeu de points d’entrée est `https://experience.adobe.io`.
 
-Les dossiers sont une fonctionnalité qui vous permet de mieux organiser vos objets d’entreprise afin de faciliter la navigation et la catégorisation.
+Les dossiers sont une fonctionnalité qui vous permet de mieux organiser vos objets commerciaux pour une navigation et une catégorisation plus simples.
 
-Ce guide fournit des informations pour vous aider à mieux comprendre les dossiers et inclut des exemples d’appels API pour effectuer des actions de base à l’aide de l’API.
+Ce guide fournit des informations pour vous aider à mieux comprendre les dossiers et comprend des exemples d’appels API pour effectuer des actions de base à l’aide de l’API.
 
-## Commencer
+## Prise en main
 
-Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, y compris les en-têtes requis et comment lire des exemples d’appels API.
+Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, y compris les en-têtes requis et la manière de lire des exemples d’appels API.
 
 ## Récupération d’une liste de dossiers {#list}
 
-Vous pouvez récupérer une liste des dossiers appartenant à votre organisation en envoyant une requête de GET au point de terminaison `/folder` et en spécifiant le type de dossier et l’ID du dossier parent.
+Vous pouvez récupérer une liste de dossiers appartenant à votre organisation en envoyant une requête GET au point d’entrée `/folder` et en spécifiant le type de dossier et l’identifiant du dossier parent.
 
 **Format d’API**
 
@@ -36,8 +36,8 @@ GET /folders/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Type des objets contenus dans le dossier. Les valeurs prises en charge sont `segment` et `dataset`. |
-| `{PARENT_FOLDER_ID}` | L’identifiant du dossier parent à partir duquel vous récupérez la liste de dossiers. Pour afficher la liste de tous les dossiers parents, utilisez l’ID de dossier `root`. |
+| `{FOLDER_TYPE}` | Type d’objets contenus dans le dossier. Les valeurs prises en charge comprennent `segment` et `dataset`. |
+| `{PARENT_FOLDER_ID}` | L’identifiant du dossier parent à partir duquel vous récupérez la liste des dossiers. Pour afficher la liste de tous les dossiers parents, utilisez l’`root` d’ID de dossier. |
 
 **Requête**
 
@@ -56,7 +56,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/root/subf
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec une liste de tous les dossiers de niveau supérieur pour le jeu de données de votre organisation.
+Une réponse réussie renvoie le statut HTTP 200 avec une liste de tous les dossiers de niveau supérieur pour le jeu de données de votre organisation.
 
 +++Exemple de réponse contenant une liste de tous les dossiers de niveau supérieur pour le jeu de données de votre organisation.
 
@@ -113,7 +113,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de tous les dossi
 
 ## Créer un dossier {#create}
 
-Vous pouvez créer un dossier en envoyant une requête de POST au point de terminaison `/folder` et en spécifiant le type de dossier.
+Vous pouvez créer un dossier en adressant une requête POST au point d’entrée `/folder` et en spécifiant le type de dossier.
 
 **Format d’API**
 
@@ -123,7 +123,7 @@ POST /folders/{FOLDER_TYPE}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Type des objets contenus dans le dossier. Les valeurs prises en charge sont `segment` et `dataset`. |
+| `{FOLDER_TYPE}` | Type d’objets contenus dans le dossier. Les valeurs prises en charge comprennent `segment` et `dataset`. |
 
 **Requête**
 
@@ -144,7 +144,7 @@ curl -X POST https://experience.adobe.io/unifiedfolders/folders/dataset
 
 | Propriété | Description |
 | -------- | ----------- |
-| `name` | Nom du dossier que vous souhaitez créer. |
+| `name` | Nom du dossier à créer. |
 | `parentId` | L’identifiant du dossier parent. |
 
 +++
@@ -153,7 +153,7 @@ curl -X POST https://experience.adobe.io/unifiedfolders/folders/dataset
 
 Une réponse réussie renvoie un état HTTP 200 avec les détails du dossier que vous venez de créer.
 
-+++Un exemple de réponse contenant les détails du dossier que vous venez de créer.
++++Exemple de réponse contenant des détails sur le dossier que vous venez de créer.
 
 ```json
 {
@@ -176,16 +176,16 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails du dossier que
 | Propriété | Description |
 | -------- | ----------- |
 | `id` | L’identifiant du dossier nouvellement créé. |
-| `createdBy` | L’identifiant de l’utilisateur qui a créé le dossier. |
-| `createdAt` | Horodatage de la création du dossier. |
-| `modifiedBy` | L’identifiant de l’utilisateur qui a modifié le dossier pour la dernière fois. |
-| `modifiedAt` | Horodatage de la dernière mise à jour du dossier. |
+| `createdBy` | Identifiant de l’utilisateur qui a créé le dossier. |
+| `createdAt` | Date et heure de la création du dossier. |
+| `modifiedBy` | L’identifiant de la dernière personne ayant modifié le dossier. |
+| `modifiedAt` | Date et heure de la dernière mise à jour du dossier. |
 
 +++
 
 ## Récupération d’un dossier spécifique {#get}
 
-Vous pouvez récupérer un dossier spécifique qui appartient à votre organisation en envoyant une requête de GET au point de terminaison `/folder` et en spécifiant le type de dossier et l’identifiant du dossier.
+Vous pouvez récupérer un dossier spécifique qui appartient à votre organisation en adressant une requête GET au point d’entrée `/folder` et en spécifiant le type de dossier et l’identifiant du dossier.
 
 **Format d’API**
 
@@ -195,7 +195,7 @@ GET /folders/{FOLDER_TYPE}/{FOLDER_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Type des objets contenus dans le dossier. Les valeurs prises en charge sont `segment` et `dataset`. |
+| `{FOLDER_TYPE}` | Type d’objets contenus dans le dossier. Les valeurs prises en charge comprennent `segment` et `dataset`. |
 | `{FOLDER_ID}` | L’identifiant du dossier que vous récupérez. |
 
 **Requête**
@@ -217,7 +217,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-
 
 Une réponse réussie renvoie un état HTTP 200 avec les détails du dossier demandé.
 
-+++Exemple de réponse contenant les détails du dossier demandé.
++++Exemple de réponse contenant des détails sur le dossier demandé.
 
 ```json
 {
@@ -246,17 +246,17 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails du dossier dem
 | `id` | L’identifiant du dossier demandé. |
 | `name` | Nom du dossier demandé. |
 | `parentId` | L’identifiant du dossier parent. |
-| `createdBy` | L’identifiant de l’utilisateur qui a créé le dossier. |
-| `createdAt` | Horodatage de la création du dossier. |
-| `modifiedBy` | ID de l’utilisateur qui a mis à jour le dossier pour la dernière fois. |
-| `modifiedAt` | Horodatage de la dernière mise à jour du dossier. |
-| `status` | État du dossier demandé. Les valeurs prises en charge sont `IN_USE` et `ARCHIVED`. |
+| `createdBy` | Identifiant de l’utilisateur qui a créé le dossier. |
+| `createdAt` | Date et heure de la création du dossier. |
+| `modifiedBy` | ID du dernier utilisateur à avoir mis à jour le dossier. |
+| `modifiedAt` | Date et heure de la dernière mise à jour du dossier. |
+| `status` | Statut du dossier demandé. Les valeurs prises en charge comprennent `IN_USE` et `ARCHIVED`. |
 
 +++
 
-## Validation d’un dossier spécifique {#validate}
+## Validation d’un dossier spécifié {#validate}
 
-Vous pouvez vérifier si un dossier peut contenir des objets en envoyant une requête de GET au point de terminaison `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` et en fournissant le type et l’identifiant de dossier.
+Vous pouvez vérifier si un dossier est éligible pour contenir des objets en envoyant une requête GET au point d’entrée `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` et en fournissant le type de dossier et l’identifiant.
 
 **Format d’API**
 
@@ -266,7 +266,7 @@ GET /folders/{FOLDER_TYPE}/{FOLDER_ID}/validate
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Type des objets contenus dans le dossier. Les valeurs prises en charge sont `segment` et `dataset`. |
+| `{FOLDER_TYPE}` | Type d’objets contenus dans le dossier. Les valeurs prises en charge comprennent `segment` et `dataset`. |
 | `{FOLDER_ID}` | L’identifiant du dossier que vous validez. |
 
 **Requête**
@@ -286,9 +286,9 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-
 
 **Réponse**
 
-Un état réussi renvoie un état HTTP 200 avec les détails du dossier que vous validez.
+Un statut réussi renvoie un statut HTTP 200 avec les détails du dossier que vous validez.
 
-+++Un exemple de réponse contient les détails du dossier validé.
++++Un exemple de réponse contient les détails du dossier validé
 
 ```json
 {
@@ -314,9 +314,9 @@ Un état réussi renvoie un état HTTP 200 avec les détails du dossier que vous
 
 +++
 
-## Mise à jour d’un dossier spécifique {#update}
+## Mettre à jour un dossier spécifique {#update}
 
-Vous pouvez mettre à jour les détails d’un dossier spécifique qui appartient à votre organisation en envoyant une requête de PATCH au point de terminaison `/folder` et en spécifiant le type de dossier et l’identifiant du dossier.
+Vous pouvez mettre à jour les détails d’un dossier spécifique qui appartient à votre organisation en envoyant une requête PATCH au point d’entrée `/folder` et en spécifiant le type de dossier et l’identifiant du dossier.
 
 **Format d’API**
 
@@ -326,7 +326,7 @@ PATCH /folders/{FOLDER_TYPE}/{FOLDER_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Type des objets contenus dans le dossier. Les valeurs prises en charge sont `segment` et `dataset`. |
+| `{FOLDER_TYPE}` | Type d’objets contenus dans le dossier. Les valeurs prises en charge comprennent `segment` et `dataset`. |
 | `{FOLDER_ID}` | L’identifiant du dossier que vous mettez à jour. |
 
 **Requête**
@@ -376,11 +376,11 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur votre 
 }
 ```
 
-## Supprimer un dossier spécifique {#delete}
+## Suppression d’un dossier spécifique {#delete}
 
-Vous pouvez supprimer un dossier spécifique qui appartient à votre organisation en adressant une requête de DELETE à l’élément `/folder` et en spécifiant le type de dossier et l’identifiant du dossier.
+Vous pouvez supprimer un dossier spécifique qui appartient à votre organisation en adressant une requête DELETE au `/folder` et en spécifiant le type de dossier et l’identifiant du dossier.
 
-***Format d’API**
+***Format API**
 
 ```http
 DELETE /folders/{FOLDER_TYPE}/{FOLDER_ID}
@@ -388,7 +388,7 @@ DELETE /folders/{FOLDER_TYPE}/{FOLDER_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Type des objets contenus dans le dossier. Les valeurs prises en charge sont `segment` et `dataset`. |
+| `{FOLDER_TYPE}` | Type d’objets contenus dans le dossier. Les valeurs prises en charge comprennent `segment` et `dataset`. |
 | `{FOLDER_ID}` | L’identifiant du dossier que vous supprimez. |
 
 **Requête**
@@ -418,4 +418,4 @@ Une réponse réussie renvoie un état HTTP 200 avec un corps de message vous in
 
 ## Étapes suivantes
 
-Après avoir lu ce guide, vous comprenez mieux comment créer, gérer et supprimer des dossiers à l’aide de l’API Adobe Experience Platform.
+Vous êtes arrivé au bout de ce guide. À présent, vous comprenez mieux comment créer, gérer et supprimer des dossiers à l’aide de l’API Adobe Experience Platform.
