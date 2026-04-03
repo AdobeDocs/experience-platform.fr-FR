@@ -2,13 +2,13 @@
 solution: Experience Platform
 title: Présentation de Adobe Experience Platform multi-cloud
 description: Découvrez les différences entre l’exécution d’Experience Platform sur Microsoft Azure et Amazon Web Services.
-source-git-commit: d3654573cec338f173d151fd5e62ef5c8b893c11
+exl-id: da552311-6e50-4b09-bcc8-696a25325796
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '560'
-ht-degree: 5%
+ht-degree: 4%
 
 ---
-
 
 # Présentation de Adobe Experience Platform multi-cloud
 
@@ -39,7 +39,7 @@ Le choix de la région cloud appropriée est essentiel pour répondre aux exigen
 
 ![Image montrant la répartition géographique des sites d’hébergement.](assets/multi-cloud/hosting-locations-map.png){align="center" zoomable="yes"}
 
-Experience Platform est disponible dans six emplacements d’hébergement Microsoft Azure, un emplacement d’hébergement Amazon Web Services (AWS) et achemine les données vers les services Adobe via sept [nœuds Edge Network &#x200B;](../collection/home.md#edge) répartis dans le monde entier.
+Experience Platform est disponible dans six emplacements d’hébergement Microsoft Azure, un emplacement d’hébergement Amazon Web Services (AWS) et achemine les données vers les services Adobe via sept [nœuds Edge Network](../collection/home.md#edge) répartis dans le monde entier.
 
 ### Régions Microsoft Azure {#azure-regions}
 
@@ -68,7 +68,7 @@ Le tableau ci-dessous indique les régions AWS où Experience Platform est hébe
 
 ## Parité des fonctionnalités {#feature-parity}
 
-Adobe s’engage à offrir la parité des fonctionnalités sur les plateformes cloud, pour toutes les applications s’exécutant sur Experience Platform, telles que :
+Adobe s’engage à offrir la parité des fonctionnalités sur toutes les plateformes cloud, pour toutes les applications s’exécutant sur Experience Platform, notamment :
 
 * [Real-Time Customer Data Platform](../rtcdp/home.md)
 * [Adobe Journey Optimizer](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/ajo-home)
@@ -87,7 +87,8 @@ Le tableau ci-dessous met en évidence les différences majeures entre l’exéc
 
 {style="table-layout:auto"}
 
-<!-- To be determined if we need to add this part about the AI Assistant 
+<!-- 
+To be determined if we need to add this part about the AI Assistant 
 
 | [Experience Platform AI Assistant](/help/ai-assistant/home.md) | Supported | Not supported |
 
