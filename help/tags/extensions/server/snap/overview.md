@@ -3,7 +3,7 @@ title: Présentation de l’extension de l’API de conversions Snapchat
 description: Utilisez la conversion Snapchat pour envoyer des données d’événement côté serveur à Snap.
 last-substantial-update: 2025-01-20T00:00:00Z
 exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 4%
@@ -25,7 +25,7 @@ Créez un [flux de données](/help/tags/ui/event-forwarding/getting-started.md) 
 
 Un compte **[!DNL Snapchat]** [Business Manager](https://business.snapchat.com/) est requis pour utiliser l’API Conversions. Business Manager aide les annonceurs à intégrer les efforts marketing de **[!DNL Snapchat]** dans leur entreprise et avec des partenaires externes. Consultez l’article **[!DNL Snapchat]** [centre d’aide](https://businesshelp.snapchat.com/s/article/get-started?language=en_US) sur la création d’un compte Business Manager si vous n’en avez pas.
 
-Un [[!DNL [Snap Pixel]]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) doit être configuré dans le gestionnaire de publicités Snapchat et vous devez avoir accès à l’affichage du `Pixel ID`. Le `Pixel ID` se trouve dans la section [[!UICONTROL [Events Manager]]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US) .
+Un [!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) doit être configuré dans le gestionnaire de publicités Snapchat et vous devez avoir accès à l’affichage du `Pixel ID`. Le `Pixel ID` se trouve dans la section [!UICONTROL [Events Manager]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US) .
 
 Vous avez besoin d’un jeton API statique de longue durée. Pour obtenir ce jeton, consultez la [[!DNL Snapchat] documentation de l’API de conversion](https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted#access-token).
 
@@ -48,12 +48,14 @@ Une fois la propriété souhaitée sélectionnée, procédez comme suit :
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Save]**.
 
 ![Image illustrant l’ID de pixel et le bouton de jeton API](../../../images/extensions/server/snap/configure.png)
+
 <!-- 
-![[!DNL Snap] configuration screen for the [!DNL Snap] conversion API extension.](../../../images/extensions/server/snap/configure.png) -->
+![[!DNL Snap] configuration screen for the [!DNL Snap] conversion API extension.](../../../images/extensions/server/snap/configure.png) 
+-->
 
 ## Création d’éléments de données {#create-data-elements}
 
-Pour envoyer des données à l’extension d’API [!DNL Snapchat] Conversions, créez [éléments de données](https://experienceleague.adobe.com/fr/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) pour chaque paramètre de données. Procédez comme suit :
+Pour envoyer des données à l’extension d’API [!DNL Snapchat] Conversions, créez [éléments de données](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) pour chaque paramètre de données. Procédez comme suit :
 
 1. Accédez à **[!UICONTROL Authoring]**>**[!UICONTROL Data Elements]** dans l’écran **[!UICONTROL Property Info]** de votre propriété, puis sélectionnez **[!UICONTROL Add Data Element]**.
 
@@ -65,7 +67,7 @@ Pour envoyer des données à l’extension d’API [!DNL Snapchat] Conversions, 
 
 4. Dans le menu déroulant, sélectionnez l’élément approprié, puis remplissez le champ [!UICONTROL Path] dans le panneau de droite pour référencer les données souhaitées dans votre schéma.
 
-   ![Image illustrant l’écran Créer un élément de données &#x200B;](../../../images/extensions/server/snap/create_data_element.png)
+   ![Image illustrant l’écran Créer un élément de données ](../../../images/extensions/server/snap/create_data_element.png)
 
 Par exemple, si vous créez un élément de données qui fait référence à `snapClickId` dans le schéma illustré ci-dessous :
 
@@ -79,7 +81,7 @@ Consultez la [documentation des propriétés de transfert d’événement](/help
 
 ## Créer des règles pour envoyer des événements de conversion à Snap {#create-snap-rules}
 
-Les [règles](https://experienceleague.adobe.com/fr/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) sont utilisées pour déclencher des extensions dans Experience Platform. Cette section explique comment créer des règles dans votre propriété de transfert d’événement pour envoyer des événements de conversion à Snap à l’aide de l’extension de l’API Conversions.
+Les [règles](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) sont utilisées pour déclencher des extensions dans Experience Platform. Cette section explique comment créer des règles dans votre propriété de transfert d’événement pour envoyer des événements de conversion à Snap à l’aide de l’extension de l’API Conversions.
 
 ### Créer une règle
 
