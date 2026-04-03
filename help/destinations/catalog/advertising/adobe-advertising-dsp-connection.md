@@ -3,7 +3,7 @@ title: Connexion Adobe Advertising DSP
 description: Découvrez comment partager des audiences propriétaires authentifiées et non authentifiées avec Adobe Advertising Demand-Side Platform (DSP) à l’aide de plusieurs types d’identité.
 feature: Destinations
 exl-id: 0ff80d38-993f-4609-bf2a-01a3e6cfe10b
-source-git-commit: 60a8296d20a254f6c431c6986f8b2704dced3516
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1469'
 ht-degree: 16%
@@ -58,9 +58,9 @@ Les annonceurs ont le choix de partager des segments avec des identifiants propr
 
 * Identifiant d’organisation Experience Cloud du compte Experience Platform. Votre identifiant figure sur la page de profil utilisateur d’Adobe [!DNL Real-Time Customer Data Platform] ([!DNL Real-Time CDP]).
 
-* Une [[!DNL Real-Time CDP] source dans DSP](https://experienceleague.adobe.com/fr/docs/advertising/dsp/audiences/sources/source-manage) pour recevoir les audiences pour l’activation de la campagne. L’équipe de votre compte Adobe crée la source à l’aide de votre ID d’organisation Experience Cloud.
+* Une [[!DNL Real-Time CDP] source dans DSP](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage) pour recevoir les audiences pour l’activation de la campagne. L’équipe de votre compte Adobe crée la source à l’aide de votre ID d’organisation Experience Cloud.
 
-* La clé source du compte [!DNL DSP] ou de l’annonceur, qui est générée lorsqu’une [[!DNL Real-Time CDP]  source est créée dans  [!DNL DSP]](https://experienceleague.adobe.com/fr/docs/advertising/dsp/audiences/sources/source-manage). L’équipe de votre compte [!DNL DSP] partagera cette clé avec vous. Vous l’utiliserez dans Experience Platform pour créer une connexion de destination à la destination Advertising DSP, comme expliqué ci-dessous.
+* La clé source du compte [!DNL DSP] ou de l’annonceur, qui est générée lorsqu’une [[!DNL Real-Time CDP]  source est créée dans  [!DNL DSP]](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). L’équipe de votre compte [!DNL DSP] partagera cette clé avec vous. Vous l’utiliserez dans Experience Platform pour créer une connexion de destination à la destination Advertising DSP, comme expliqué ci-dessous.
 
 ### Configurer la synchronisation des identifiants pour partager des cookies {#cookie-sync}
 
@@ -72,7 +72,7 @@ Si vous utilisez [!DNL Experience Platform Web SDK], activez la synchronisation 
 
 **Activer la synchronisation des identifiants tiers avec le[!DNL Experience Cloud ID Service]**
 
-Si vous utilisez des balises [!DNL Experience Platform] avec le [!DNL Experience Cloud ID Service], configurez la synchronisation des identifiants tiers à l’aide de l’extension du service Experience Cloud ID [&#128279;](/help/tags/extensions/client/id-service/overview.md). Cela permet au cookie Adobe Advertising correspondant à l’ECID donné d’être disponible lorsque vous activez l’audience à partir de [!DNL Real-Time CDP].
+Si vous utilisez des balises [!DNL Experience Platform] avec le [!DNL Experience Cloud ID Service], configurez la synchronisation des identifiants tiers à l’aide de l’extension du service Experience Cloud ID [](/help/tags/extensions/client/id-service/overview.md). Cela permet au cookie Adobe Advertising correspondant à l’ECID donné d’être disponible lorsque vous activez l’audience à partir de [!DNL Real-Time CDP].
 
 ## Identités prises en charge {#supported-identities}
 
@@ -105,7 +105,7 @@ Audiences prises en charge par type de données d’audience :
 | -------------------- | --------- | ----------- | --------- |
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
@@ -133,7 +133,7 @@ Pour vous connecter à la destination, suivez les instructions [création d’un
 
 Pour vous connecter à la destination, indiquez le paramètre suivant dans la section [!UICONTROL Connection type], puis sélectionnez **[!UICONTROL Connect to destination]** :
 
-* **[!UICONTROL Account or Advertiser Key]** : ce [!UICONTROL Source Key] est généré lorsqu’une [[!DNL Real-Time CDP]  source est créée dans l’interface utilisateur de DSP](https://experienceleague.adobe.com/fr/docs/advertising/dsp/audiences/sources/source-manage). L’équipe de votre compte Adobe partagera cette clé avec vous après la création de la source.
+* **[!UICONTROL Account or Advertiser Key]** : ce [!UICONTROL Source Key] est généré lorsqu’une [[!DNL Real-Time CDP]  source est créée dans l’interface utilisateur de DSP](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). L’équipe de votre compte Adobe partagera cette clé avec vous après la création de la source.
 
 ![Copie d’écran de la section Type de connexion affichant le champ Compte ou clé de l’annonceur.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
