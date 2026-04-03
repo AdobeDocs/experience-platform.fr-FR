@@ -2,7 +2,7 @@
 title: Messages d’erreur liés aux sources
 description: Prenez connaissance des messages d’erreur que vous pouvez rencontrer lors de l’utilisation du service de flux pour les sources.
 exl-id: cfba9780-4ab9-447b-8c60-c9f813107d11
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '3057'
 ht-degree: 70%
@@ -185,7 +185,7 @@ Ce document fournit une liste des messages d’erreur liés aux sources, avec le
 | Code d’erreur | Titre | Message détaillé |
 | --- | --- | --- |
 | `1700-500` | Erreur interne | Une erreur interne sʼest produite. Réessayez. Si le problème persiste, contactez l’assistance clientèle. |
-| `1701-400` | Requête incorrecte | La zone d’atterrissage fournie est inactive. Veuillez activer la zone d’atterrissage et réessayer. |
+| `1701-400` | Requête incorrecte | La zone de dépôt fournie est inactive. Veuillez activer la zone d’atterrissage et réessayer. |
 | `1702-400` | Requête incorrecte | Le type SAS={sasType} fourni pour la zone d’atterrissage n’est pas autorisé. Veuillez fournir un SAS valide et réessayer. |
 | `1703-400` | Requête incorrecte | L’actualisation des informations d’identification n’est pas autorisée. |
 | `1704-400` | Requête incorrecte | Les clés renvoyées pour storageAccountName={accountName} dans subscriptionId={subscriptionId} et resourceGroupName={resourceGroupName} sont incorrectes. Vérifiez la requête et réessayez. Veuillez contacter le support si le problème persiste. |
