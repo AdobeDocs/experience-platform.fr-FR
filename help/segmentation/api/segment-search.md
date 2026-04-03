@@ -3,7 +3,7 @@ title: Point d’entrée de l’API de recherche de segments
 description: Dans l’API Adobe Experience Platform Segmentation Service, la recherche de segments permet de rechercher des champs contenus dans différentes sources de données et de les renvoyer en temps quasi réel. Ce guide fournit des informations pour vous aider à mieux comprendre la recherche de segments et comprend des exemples d’appels API pour exécuter des actions de base à l’aide de l’API .
 role: Developer
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1178'
 ht-degree: 45%
@@ -16,7 +16,7 @@ La recherche de segments permet de rechercher des champs contenus dans différen
 
 Ce guide fournit des informations pour vous aider à mieux comprendre la recherche de segments et comprend des exemples d’appels API pour exécuter des actions de base à l’aide de l’API .
 
-## Commencer
+## Prise en main
 
 Les points d’entrée utilisés dans ce guide font partie de l’API [!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, y compris les en-têtes requis et la manière de lire des exemples d’appels API.
 
@@ -36,7 +36,7 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 ```
 
 | Paramètres | Description |
-| ---------- | ----------- | 
+| ---------- | ----------- |
 | `schema.name={SCHEMA}` | **(Obligatoire)** Où {SCHEMA} représente la valeur de la classe de schéma associée aux objets de recherche. Actuellement, seul `_xdm.context.segmentdefinition` est pris en charge. |
 | `s={SEARCH_TERM}` | *(Facultatif)* Où {SEARCH_TERM} représente une requête conforme à l’implémentation de Microsoft de la syntaxe de recherche [Lucene](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax). Si aucun terme de recherche n’est spécifié, tous les enregistrements associés à `schema.name` seront renvoyés. Une explication plus détaillée se trouve dans l&#39;[annexe](#appendix) de ce document. |
 
@@ -96,7 +96,7 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 ```
 
 | Paramètres | Description |
-| ---------- | ----------- | 
+| ---------- | ----------- |
 | `schema.name={SCHEMA}` | **(Obligatoire)** Où {SCHEMA} contient la valeur de la classe de schéma associée aux objets de recherche. Actuellement, seul `_xdm.context.segmentdefinition` est pris en charge. |
 | `namespace={NAMESPACE}` | **(Obligatoire)** Où {NAMESPACE} contient l’espace de noms dans lequel vous souhaitez effectuer une recherche. |
 | `s={SEARCH_TERM}` | *(Facultatif)* Où {SEARCH_TERM} contient une requête conforme à l’implémentation de Microsoft de la syntaxe de recherche [Lucene](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax). Si aucun terme de recherche n’est spécifié, tous les enregistrements associés à `schema.name` seront renvoyés. Une explication plus détaillée se trouve dans l&#39;[annexe](#appendix) de ce document. |
@@ -167,7 +167,7 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 ```
 
 | Paramètres | Description |
-| ---------- | ----------- | 
+| ---------- | ----------- |
 | `schema.name={SCHEMA}` | **(Obligatoire)** Où {SCHEMA} contient la valeur de la classe de schéma associée aux objets de recherche. Actuellement, seul `_xdm.context.segmentdefinition` est pris en charge. |
 | `namespace={NAMESPACE}` | **(Obligatoire)** Où {NAMESPACE} contient l’espace de noms dans lequel vous souhaitez effectuer une recherche. |
 | `entityId={ENTITY_ID}` | **(Obligatoire)** Identifiant de l’objet de recherche à propos duquel vous souhaitez obtenir les informations structurelles, spécifié avec {ENTITY_ID}. |
