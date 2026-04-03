@@ -2,9 +2,9 @@
 title: Cas d’utilisation de segmentation pour Real-Time Customer Data Platform B2B edition
 description: Présentation des différents cas d’utilisation d’Adobe Real-Time Customer Data Platform B2B edition disponibles.
 feature: Get Started, Audiences, Segments, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1603'
 ht-degree: 1%
@@ -41,7 +41,7 @@ Avant de pouvoir utiliser les attributs de segmentation pour les classes B2B, vo
 
 1. Créez des schémas qui utilisent les classes B2B. Les classes B2B edition incluent Compte, Campagne, Opportunité, Liste marketing, etc. Pour plus d’informations sur [comment configurer des schémas à utiliser avec les classes B2B](../schemas/b2b.md) consultez la documentation sur les schémas.
 2. Créez des relations entre vos schémas B2B de modèle de données d’expérience (XDM). Les audiences basées sur des attributs B2B edition nécessitent des relations entre les classes pour utiliser pleinement la fonctionnalité de segmentation B2B étendue. Pour plus d’informations, consultez la documentation sur [comment définir une relation entre deux schémas B2B](../../xdm/tutorials/relationship-b2b.md).
-3. Ingérez des données à l’aide de jeux de données basés sur vos schémas B2B. Consultez la documentation sur les sources pour [&#x200B; d’informations sur l’ingestion de données &#x200B;](../../sources/connectors/adobe-applications/marketo/marketo.md).
+3. Ingérez des données à l’aide de jeux de données basés sur vos schémas B2B. Consultez la documentation sur les sources pour [ d’informations sur l’ingestion de données ](../../sources/connectors/adobe-applications/marketo/marketo.md).
 4. Lisez le [guide d’utilisation du créateur de segments](../../segmentation/ui/segment-builder.md) pour obtenir des conseils plus détaillés sur la création d’audiences.
 
 Une fois ces exigences remplies, vous pouvez combiner ces attributs pour des cas d’utilisation B2B courants.
@@ -56,7 +56,7 @@ Pour créer efficacement des audiences pour les cas d’utilisation B2B, il est 
 
 L’image ci-dessous illustre les relations entre les classes B2B disponibles dans Real-Time CDP B2B edition.
 
-![&#x200B; Classe B2B ERD &#x200B;](../assets/segmentation/b2b/b2b-classes.png)
+![ Classe B2B ERD ](../assets/segmentation/b2b/b2b-classes.png)
 
 Comme votre modèle de données peut être complexe, vous pouvez utiliser l’interface utilisateur de Platform pour afficher une représentation visuelle plus détaillée de votre modèle de données afin de trouver les attributs appropriés à votre cas d’utilisation. Pour commencer, accédez à l’interface utilisateur de Platform et sélectionnez Schémas dans le volet de navigation de gauche.
 
@@ -165,6 +165,7 @@ Recherchez toutes les personnes ciblées pour les campagnes où le coût réel a
 Recherchez toutes les personnes appartenant à la liste statique Marketo « Utilisateurs d&#39;anniversaire » où isDeleted=false.
 
 ![Interface utilisateur affichant l’organisation parente de segmentation](../assets/segmentation/b2b/example-13.png)
+
 <!-- 
 ### Example 14: Find "decision makers" by opportunity status using streaming or edge segmentation {#find-decision-makers-personalization}
 
@@ -180,7 +181,8 @@ To create this audience, you must use "segment of segments" by creating a base a
 
 After creating the first audience, you can combine that with another audience of  people who are a "Decision Maker" of any opportunity where both the "Closed Flag" is set to true and the "Lost Flag" is set to false.
 
-![UI displaying example 14 settings](../assets/segmentation/b2b/example-14.png) -->
+![UI displaying example 14 settings](../assets/segmentation/b2b/example-14.png) 
+-->
 
 ## Étapes suivantes {#next-steps}
 
