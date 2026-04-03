@@ -2,7 +2,7 @@
 title: Intégration du journal d’audit de Query Service
 description: Les journaux d’audit de Query Service conservent des enregistrements pour diverses actions des utilisateurs afin de former un journal d’audit pour résoudre les problèmes ou respecter les politiques de gestion des données d’entreprise et les exigences réglementaires. Ce tutoriel présente une vue d’ensemble des fonctionnalités du journal d’audit spécifiques à Query Service.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: d3b73124795cfdeb5f8f1890105bf9c174711b36
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 8%
@@ -93,4 +93,4 @@ Les filtres disponibles varient en fonction de la catégorie sélectionnée dans
 
 Grâce à la lecture de ce document, vous comprenez mieux la fonctionnalité de journal d’audit [!DNL Query Service] et comment elle peut être utilisée pour filtrer vos actions utilisateur [!DNL Query Service].
 
-Si vous utilisez la fonctionnalité de journal d’audit [!DNL Query Service] à des fins de dépannage, nous vous recommandons de lire le guide de dépannage [&#128279;](../troubleshooting-guide.md).
+Si vous utilisez la fonctionnalité de journal d’audit [!DNL Query Service] à des fins de dépannage, nous vous recommandons de lire le guide de dépannage [](../troubleshooting-guide.md).
