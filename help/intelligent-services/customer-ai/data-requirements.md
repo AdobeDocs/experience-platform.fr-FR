@@ -6,9 +6,9 @@ title: Exigences des données dans l’IA dédiée aux clientes et clients
 topic-legacy: Getting started
 description: Apprenez-en plus sur les événements, les entrées et les sorties requis utilisés par l’IA dédiée aux clientes et clients.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2552'
+source-wordcount: '2539'
 ht-degree: 91%
 
 ---
@@ -67,7 +67,7 @@ Le tableau suivant présente la terminologie courante utilisée dans ce document
 | [Classe XDM](../../xdm/schema/field-constraints.md) | Tous les schémas XDM décrivent des données qui peuvent être catégorisées comme `Experience Event`. Le comportement des données d’un schéma est défini par la classe du schéma attribuée à celui-ci lorsqu’il est créé pour la première fois. Les classes XDM décrivent le plus petit nombre de propriétés qu’un schéma doit contenir pour représenter un comportement de données spécifique. |
 | [Groupes de champs](../../xdm/schema/composition.md) | Un composant qui définit un ou plusieurs champs d’un schéma. Les groupes de champs imposent la manière dont leurs champs apparaissent dans la hiérarchie du schéma, et présentent donc la même structure dans chaque schéma dans lequel ils sont inclus. Les groupes de champs ne sont compatibles qu’avec des classes spécifiques, identifiées par leur attribut `meta:intendedToExtend`. |
 | [Type de données](../../xdm/schema/composition.md) | Un composant qui peut également fournir un ou plusieurs champs pour un schéma. Toutefois, contrairement aux groupes de champs, les types de données ne sont pas limités à une classe particulière. Ainsi, les types de données constituent une option plus souple pour décrire des structures de données communes réutilisables sur plusieurs schémas avec des classes potentiellement différentes. Les types de données décrits dans ce document sont pris en charge par les schémas CEE et Adobe Analytics. |
-| [Real-time Customer Profile](../../profile/home.md) | Le profil client en temps réel fournit un profil de consommateur centralisé pour une gestion d’expérience ciblée et personnalisée. Chaque profil contient des données agrégées sur tous les systèmes ainsi que des comptes horodatés exploitables d’événements impliquant les personnes concernées par l’un des systèmes que vous utilisez avec Experience Platform. |
+| [Profil client en temps réel](../../profile/home.md) | Le profil client en temps réel fournit un profil de consommateur centralisé pour une gestion d’expérience ciblée et personnalisée. Chaque profil contient des données agrégées sur tous les systèmes ainsi que des comptes horodatés exploitables d’événements impliquant les personnes concernées par l’un des systèmes que vous utilisez avec Experience Platform. |
 
 ## Données de sortie de l’IA dédiée aux clientes et clients {#customer-ai-input-data}
 
@@ -91,29 +91,29 @@ Les événements d’expérience sont utilisés pour déterminer divers comporte
 
 L’IA dédiée aux clientes et clients utilise par défaut les événements de ces quatre groupes de champs standards : Commerce, Web, Application et Recherche. Il n’est pas nécessaire d’avoir des données pour chaque événement dans les groupes de champs standards répertoriés ci-dessous, mais certains événements sont requis pour certains scénarios. Si des événements sont disponibles dans les groupes de champs standards, il est recommandé de les inclure dans votre schéma. Par exemple, si vous souhaitez créer un modèle d’IA dédiée aux clientes et clients pour prédire les événements d’achat, il est utile de disposer de données provenant des groupes de champs des détails des pages Commerce et Web.
 
-Pour afficher un groupe de champs dans l’interface utilisateur d’Experience Platform, sélectionnez l’onglet **[!UICONTROL Schémas]** dans le rail de gauche, puis sélectionnez l’onglet **[!UICONTROL Groupes de champs]**.
+Pour afficher un groupe de champs dans l’interface utilisateur d’Experience Platform, sélectionnez l’onglet **[!UICONTROL Schemas]** dans le rail de gauche, puis sélectionnez l’onglet **[!UICONTROL Field groups]** .
 
 | Groupe de champs | Type d’événement | Chemin d’accès au champ XDM |
 | --- | --- | --- |
-| [!UICONTROL Détails Commerce] | order | <li> `commerce.order.purchaseID` </li> <li> `productListItems.SKU` </li> |
+| [!UICONTROL Commerce Details] | order | <li> `commerce.order.purchaseID` </li> <li> `productListItems.SKU` </li> |
 |  | productListViews | <li> `commerce.productListViews.value` </li> <li> `productListItems.SKU` </li> |
 |  | checkouts | <li> `commerce.checkouts.value` </li> <li> `productListItems.SKU` </li> |
 |  | purchases | <li> `commerce.purchases.value` </li> <li> `productListItems.SKU` </li> |
 |  | productListRemovals | <li> `commerce.productListRemovals.value` </li> <li> `productListItems.SKU` </li> |
 |  | productListOpens | <li> `commerce.productListOpens.value` </li> <li> `productListItems.SKU` </li> |
 |  | productViews | <li> `commerce.productViews.value` </li> <li> `productListItems.SKU` </li> |
-| [!UICONTROL Détails Web] | webVisit | `web.webPageDetails.name` |
+| [!UICONTROL Web Details] | webVisit | `web.webPageDetails.name` |
 |  | webInteraction | `web.webInteraction.linkClicks.value` |
-| [!UICONTROL Détails Application] | applicationCloses | <li> `application.applicationCloses.value` </li> <li> `application.name` </li> |
+| [!UICONTROL Application Details] | applicationCloses | <li> `application.applicationCloses.value` </li> <li> `application.name` </li> |
 |  | applicationCrashes | <li> `application.crashes.value` </li> <li> `application.name` </li> |
 |  | applicationFeatureUsages | <li> `application.featureUsages.value` </li> <li> `application.name` </li> |
 |  | applicationFirstLaunches | <li> `application.firstLaunches.value` </li> <li> `application.name` </li> |
 |  | applicationInstalls | <li> application.installs.value </li> <li> `application.name` </li> |
 |  | applicationLaunches | <li> application.launches.value </li> <li> `application.name` </li> |
 |  | applicationUpgrades | <li> application.upgrades.value </li> <li> `application.name` </li> |
-| [!UICONTROL Détails Recherche] | search | `search.keywords` |
+| [!UICONTROL Search Details] | search | `search.keywords` |
 
-En outre, l’IA dédiée aux clientes et clients peut utiliser les données d’abonnement pour créer de meilleurs modèles d’attrition. Les données d’abonnement sont nécessaires pour chaque profil utilisant le format de type de données [[!UICONTROL Abonnement]](../../xdm/data-types/subscription.md). La plupart des champs sont facultatifs, cependant, pour un modèle d’attrition optimal, il est vivement recommandé de fournir des données pour autant de champs que possible, par exemple, `startDate`, `endDate`, ainsi que tout autre détail pertinent. Contactez l’équipe de votre compte pour obtenir une prise en charge supplémentaire de cette fonctionnalité.
+En outre, l’IA dédiée aux clientes et clients peut utiliser les données d’abonnement pour créer de meilleurs modèles d’attrition. Les données d’abonnement sont nécessaires pour chaque profil utilisant le format de type de données [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md). La plupart des champs sont facultatifs, cependant, pour un modèle d’attrition optimal, il est vivement recommandé de fournir des données pour autant de champs que possible, par exemple, `startDate`, `endDate`, ainsi que tout autre détail pertinent. Contactez l’équipe de votre compte pour obtenir une prise en charge supplémentaire de cette fonctionnalité.
 
 ### Ajouter des événements personnalisés et des attributs de profil {#add-custom-events}
 
