@@ -2,9 +2,9 @@
 title: Gestion de la conservation des jeux de données d’événements d’expérience dans le lac de données à l’aide de TTL
 description: Découvrez comment évaluer, définir et gérer la conservation des jeux de données d’événements d’expérience dans le lac de données à l’aide de configurations de durée de vie (TTL) avec des API Adobe Experience Platform. Ce guide explique comment l’expiration au niveau des lignes de TTL prend en charge les politiques de conservation des données, optimise l’efficacité du stockage et garantit une gestion efficace du cycle de vie des données. Elle fournit également des cas d’utilisation et des bonnes pratiques pour vous aider à appliquer efficacement la durée de vie.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: a4662d1042122fa9c3260c0e53c50bd78935cf31
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '2472'
+source-wordcount: '2471'
 ht-degree: 1%
 
 ---
@@ -46,7 +46,7 @@ Prenons l’exemple d’un service de diffusion en continu de vidéos qui effect
 
 ## Évaluation de l’adéquation de la TTL {#evaluate-ttl-suitability}
 
-Avant d’appliquer une politique de rétention, évaluez si votre jeu de données est un bon candidat pour l’expiration au niveau des lignes. Tenez compte des points suivants :
+Avant d’appliquer une politique de rétention, évaluez si votre jeu de données est un bon candidat pour l’expiration au niveau des lignes. Tenez compte des points suivants :
 
 - Pertinence des données au fil du temps : les données plus anciennes offrent-elles une valeur ajoutée ou deviennent-elles obsolètes ?
 - Impact sur les processus en aval : la suppression des données aura-t-elle une incidence sur les rapports, les analyses ou les intégrations ?
@@ -112,7 +112,7 @@ Utilisez le point d’entrée `/ttl/{DATASET_ID}` de l’API Data Hygiene pour p
 
 Pour plus d’informations, consultez la documentation d’Adobe Developer [API Data Hygiene](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/#operation/getTtl) .
 
-Pour [vérifier la TTL actuellement appliquée à un jeu de données](#check-applied-ttl-values), envoyez plutôt une requête GET au point d’entrée de [&#128279;](https://developer.adobe.com/experience-platform-apis/references/catalog/)API Catalog Service`/dataSets/{DATASET_ID}`.
+Pour [vérifier la TTL actuellement appliquée à un jeu de données](#check-applied-ttl-values), envoyez plutôt une requête GET au point d’entrée de [ ](https://developer.adobe.com/experience-platform-apis/references/catalog/)API Catalog Service`/dataSets/{DATASET_ID}`.
 
 >[!TIP]
 >
@@ -126,7 +126,7 @@ GET /ttl/{DATASET_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{DATASET_ID}` | Chaîne générée par le système qui identifie de manière unique un jeu de données. Pour trouver un identifiant de jeu de données, utilisez le point d’entrée `/datasets`. Pour obtenir des instructions sur le filtrage des réponses pour les jeux de données pertinents[&#x200B; consultez le guide &#x200B;](../api/list-objects.md)API list catalog objects). |
+| `{DATASET_ID}` | Chaîne générée par le système qui identifie de manière unique un jeu de données. Pour trouver un identifiant de jeu de données, utilisez le point d’entrée `/datasets`. Pour obtenir des instructions sur le filtrage des réponses pour les jeux de données pertinents[ consultez le guide ](../api/list-objects.md)API list catalog objects). |
 
 **Requête**
 
@@ -318,7 +318,8 @@ L’expiration au niveau des lignes nécessite les conditions techniques suivant
 Les TTL des jeux de données sont évaluées et traitées tous les 30 jours, supprimant tous les enregistrements expirés. Un événement est considéré comme ayant expiré s’il a été ingéré dans Experience Platform il y a plus de 30 jours (date d’ingestion > 30 jours) et si sa date d’événement dépasse la période de conservation définie (TTL).
 +++
 
-<!-- ### How soon will the Dataset Retention job delete data from Profile services?
+<!-- 
+### How soon will the Dataset Retention job delete data from Profile services?
 
 +++Answer
 Once a retention policy is set, existing events that already exceed the newly defined TTL are immediately deleted. Newer events remain until their timestamps surpass the retention period.
@@ -328,7 +329,8 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 - New events receive a 30-day expiration as they are ingested.
 - Existing events with a timestamp older than April 15th are immediately deleted.
 - Existing events with a timestamp after April 15th are set to expire 30 days after their timestamp (for example, an event from April 18th would be deleted on May 18th).
-+++ -->
++++ 
+-->
 
 ### Puis-je définir différentes politiques de conservation pour les services de lac de données et de profil ?
 
@@ -345,7 +347,7 @@ Oui, vous pouvez définir différentes politiques de conservation pour les servi
 ### Comment puis-je vérifier l’utilisation actuelle de mon jeu de données ?
 
 +++Réponse
-Vous pouvez vérifier la dernière taille de stockage du jeu de données pour le lac de données et les magasins de profils en tant que mesures distinctes sur l’espace de travail d’inventaire [!UICONTROL Jeu de données]. Triez les colonnes pour identifier les jeux de données les plus volumineux et vérifiez que les politiques de conservation sont appliquées.
+Vous pouvez vérifier la dernière taille de stockage du jeu de données pour le lac de données et les magasins de profils en tant que mesures distinctes dans l’espace de travail de l’inventaire des [!UICONTROL Dataset]. Triez les colonnes pour identifier les jeux de données les plus volumineux et vérifiez que les politiques de conservation sont appliquées.
 
 Pour plus d’informations sur l’utilisation au niveau du sandbox, consultez le tableau de bord Utilisation des licences . Pour plus d’informations, consultez la [documentation relative à l’utilisation des licences](../../dashboards/guides/license-usage.md).
 +++
@@ -388,6 +390,6 @@ Pour plus d’informations, consultez le guide [Créer des jeux de données dér
 
 Maintenant que vous avez appris à gérer les paramètres de TTL pour l’expiration au niveau des lignes, consultez la documentation suivante pour mieux comprendre la gestion des TTL :
 
-- Tâches de conservation : découvrez comment planifier et automatiser les expirations de jeux de données dans l’interface utilisateur d’Experience Platform à l’aide du [&#x200B; guide de l’interface utilisateur du cycle de vie des données &#x200B;](../../hygiene/ui/dataset-expiration.md) ou vérifiez les configurations de conservation des jeux de données et que les enregistrements expirés sont supprimés.
+- Tâches de conservation : découvrez comment planifier et automatiser les expirations de jeux de données dans l’interface utilisateur d’Experience Platform à l’aide du [ guide de l’interface utilisateur du cycle de vie des données ](../../hygiene/ui/dataset-expiration.md) ou vérifiez les configurations de conservation des jeux de données et que les enregistrements expirés sont supprimés.
 - [Guide du point d’entrée de l’API d’expiration de jeu de données](../../hygiene/api/dataset-expiration.md) : découvrez comment supprimer des jeux de données entiers plutôt que seulement des lignes. Découvrez comment planifier, gérer et automatiser l’expiration des jeux de données à l’aide de l’API pour garantir une conservation efficace des données.
 - [Présentation des politiques d’utilisation des données](../../data-governance/policies/overview.md) : découvrez comment aligner votre stratégie de conservation des données sur les exigences de conformité plus larges et les restrictions d’utilisation marketing.
