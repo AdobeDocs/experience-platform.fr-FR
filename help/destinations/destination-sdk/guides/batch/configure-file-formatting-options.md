@@ -2,7 +2,7 @@
 description: Configurer des options de formatage de fichier pour les destinations basées sur des fichiers
 title: Découvrez comment utiliser Destination SDK pour configurer des options de formatage de fichier pour les destinations basées sur des fichiers.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '896'
 ht-degree: 22%
@@ -19,7 +19,7 @@ Cette page décrit comment utiliser Destination SDK pour configurer les options 
 
 ## Conditions préalables {#prerequisites}
 
-Avant de passer aux étapes décrites ci-dessous, lisez la page de prise en main de Destination SDK [&#128279;](../../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification Adobe I/O nécessaires et d’autres conditions préalables pour travailler avec les API Destination SDK.
+Avant de passer aux étapes décrites ci-dessous, lisez la page de prise en main de Destination SDK [](../../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification Adobe I/O nécessaires et d’autres conditions préalables pour travailler avec les API Destination SDK.
 
 Adobe vous recommande également de lire et de vous familiariser avec la documentation suivante avant de continuer :
 
