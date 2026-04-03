@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;Teradata Vantage
 title: Création d’une connexion Teradata Vantage Source dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Teradata Vantage à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 21%
+source-wordcount: '399'
+ht-degree: 20%
 
 ---
 
@@ -35,25 +35,25 @@ Pour plus d’informations sur la prise en main, reportez-vous à ce [[!DNL Tera
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Dans la catégorie [!UICONTROL Bases de données], sélectionnez **[!UICONTROL Teradata Vantage]** puis **[!UICONTROL Configurer]**.
+Sous la catégorie [!UICONTROL Databases] , sélectionnez **[!UICONTROL Teradata Vantage]** puis **[!UICONTROL Set up]**.
 
 >[!TIP]
 >
->Les sources du catalogue affichent l’option **[!UICONTROL Configurer]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois qu’un compte authentifié existe, cette option devient **[!UICONTROL Ajouter des données]**.
+>Les sources du catalogue affichent l’option **[!UICONTROL Set up]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois qu’un compte authentifié existe, cette option devient **[!UICONTROL Add data]**.
 
 ![Le catalogue des sources avec la source Teradata Vantage sélectionnée.](../../../../images/tutorials/create/teradata/catalog.png)
 
-La page **[!UICONTROL Connexion à Teradata Vantage]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Connect to Teradata Vantage]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant
 
-Pour connecter un compte existant, sélectionnez le compte [!DNL Teradata Vantage] auquel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Pour connecter un compte existant, sélectionnez le compte [!DNL Teradata Vantage] auquel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Next]** pour continuer.
 
 ![Page des comptes existants dans l’espace de travail des sources.](../../../../images/tutorials/create/teradata/existing.png)
 
 ### Nouveau compte
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**.  Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification [!DNL Teradata Vantage]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion]** puis patientez quelques instants le temps d’établir la nouvelle connexion.
+Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL New account]**. Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification [!DNL Teradata Vantage]. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connect]** puis attendez que la nouvelle connexion s’établisse.
 
 ![Nouvelle interface de création de compte dans l’espace de travail des sources.](../../../../images/tutorials/create/teradata/new.png)
 
