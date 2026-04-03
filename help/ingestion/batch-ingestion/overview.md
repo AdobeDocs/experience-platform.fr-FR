@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de l’API d’ingestion par lots
 description: L’API Batch Ingestion de Adobe Experience Platform vous permet d’ingérer des données dans Experience Platform sous forme de fichiers de lots. Les données ingérées peuvent être les données de profil d’un fichier plat dans un système CRM (tel qu’un fichier Parquet) ou des données conformes à un schéma connu dans le registre du modèle de données d’expérience (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: dace7bc2f7940748422628b62f0f57854036ad3f
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1389'
 ht-degree: 65%
@@ -15,13 +15,13 @@ ht-degree: 65%
 
 L’API Batch Ingestion de Adobe Experience Platform vous permet d’ingérer des données dans Experience Platform sous forme de fichiers de lots. Les données ingérées peuvent être des données de profil d’un fichier plat (tel qu’un fichier Parquet) ou des données conformes à un schéma connu dans le registre [!DNL Experience Data Model] (XDM).
 
-La [&#x200B; Référence de l’API Batch Ingestion &#x200B;](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) fournit des informations supplémentaires sur ces appels API.
+La [ Référence de l’API Batch Ingestion ](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) fournit des informations supplémentaires sur ces appels API.
 
 Le diagramme suivant décrit le processus d’ingestion par lots :
 
 ![](../images/batch-ingestion/overview/batch_ingestion.png)
 
-## Commencer
+## Prise en main
 
 Les points d’entrée d’API utilisés dans ce guide font partie de l’[API Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
@@ -146,7 +146,7 @@ Vous pouvez charger des fichiers à l’aide de l’API Small File Upload. Cepen
 
 >[!NOTE]
 >
->L’ingestion par lots peut être utilisée pour mettre à jour de manière incrémentielle les données de la banque de profils. Pour plus d’informations, consultez la section sur la [mise à jour d’un lot](#patch-a-batch) dans le guide de développement de l’ingestion par lots [&#128279;](api-overview.md).
+>L’ingestion par lots peut être utilisée pour mettre à jour de manière incrémentielle les données de la banque de profils. Pour plus d’informations, consultez la section sur la [mise à jour d’un lot](#patch-a-batch) dans le guide de développement de l’ingestion par lots [](api-overview.md).
 
 >[!INFO]
 >
@@ -411,7 +411,7 @@ Le champ `"status"` indique l’état actuel du lot demandé. Les lots peuvent a
 | Interrompu | Une opération pour interrompre l’opération a été **explicitement** appelée (via l’API Batch Ingest) pour le lot spécifié. Une fois que le lot est à l’état « Chargé », il ne peut pas être abandonné. |
 | Actif | Le lot a été converti avec succès et est disponible pour la consommation en aval. Ce statut est interchangeable avec « Succès ». |
 | Supprimé | Les données du lot ont été entièrement supprimées. |
-| Échoué | État final résultant d’une configuration incorrecte et/ou de mauvaises données. Les données d’un lot qui a échoué **ne s’affichent pas**. Ce statut peut être utilisé de manière interchangeable avec « Échec ». |
+| Échec | État final résultant d’une configuration incorrecte et/ou de mauvaises données. Les données d’un lot qui a échoué **ne s’affichent pas**. Ce statut peut être utilisé de manière interchangeable avec « Échec ». |
 | Inactif | La conversion du lot a réussi, mais a été annulée ou a expiré. Le lot n’est plus disponible pour la consommation en aval. |
 | Chargé | Les données du lot sont transférées et le lot est prêt pour la promotion. |
 | Chargement | Les données de ce lot sont en cours de chargement et le lot **n’est actuellement pas** prêt à être converti. |
