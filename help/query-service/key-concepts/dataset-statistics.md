@@ -2,7 +2,7 @@
 title: Calcul des statistiques des jeux de données
 description: Ce document décrit comment calculer les statistiques au niveau des colonnes sur les jeux de données Azure Data Lake Storage (ADLS) avec des commandes SQL.
 exl-id: 66f11cd4-b115-40b8-ba8a-c4bb3606bbbf
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1085'
 ht-degree: 100%
@@ -57,12 +57,12 @@ La sortie de l’exemple ci-dessus est `SUCCESSFULLY COMPLETED, alias_name`. La 
 
 ## Afficher la sortie des statistiques calculées {#view-output-of-computed-statistics}
 
-Si vous n’indiquez pas de nom d’alias à l’avance, Query Service génère automatiquement un nom pour `Statistics ID` qui suit le format `<tableName_stats_{incremental_number}>`. Si un nom d’alias est fourni, il apparaît dans la colonne `Statistics ID`.
+Si vous n’indiquez pas de nom d’alias à l’avance, le service de requête génère automatiquement un nom pour `Statistics ID` qui suit le format `<tableName_stats_{incremental_number}>`. Si un nom d’alias est fourni, il apparaît dans la colonne `Statistics ID`.
 
 Consultez l’exemple de sortie d’une requête `COMPUTE STATISTICS` suivant :
 
 ```console
-| Statistics ID         | 
+| Statistics ID         |
 | --------------------- |
 | adc_geometric_stats_1 |
 (1 row)
@@ -152,4 +152,4 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 
 ## Étapes suivantes {#next-steps}
 
-Après avoir lu ce document, vous comprenez mieux comment générer des statistiques au niveau des colonnes à partir d’un jeu de données ADLS à l’aide d’une requête SQL. Il est recommandé de lire le [guide de syntaxe SQl](../sql/syntax.md) pour découvrir d’autres fonctionnalités d’Adobe Experience Platform Query Service.
+Après avoir lu ce document, vous comprenez mieux comment générer des statistiques au niveau des colonnes à partir d’un jeu de données ADLS à l’aide d’une requête SQL. Il est recommandé de lire le [guide de syntaxe SQl](../sql/syntax.md) pour découvrir d’autres fonctionnalités du service de requête Adobe Experience Platform.
