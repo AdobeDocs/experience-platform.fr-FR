@@ -2,7 +2,7 @@
 title: Tableaux de bord standard
 description: Découvrez comment créer et gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser des mesures clés.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1553'
 ht-degree: 1%
@@ -14,11 +14,13 @@ ht-degree: 1%
 Utilisez les tableaux de bord Adobe Experience Platform pour accélérer les informations et personnaliser la visualisation grâce à la fonctionnalité Tableaux de bord . Utilisez cette fonctionnalité pour créer et gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés afin de visualiser les mesures clés pertinentes pour votre organisation.
 
 
-<!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
+<!-- 
+Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
 ## Getting started
 
-To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. -->
+To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. 
+-->
 
 ## Créer un tableau de bord personnalisé
 
@@ -28,10 +30,12 @@ Pour créer un tableau de bord personnalisé, commencez par accéder à l’inve
 
 Avant d’ajouter un tableau de bord personnalisé, l’inventaire des tableaux de bord est vide et affiche un message « Aucun tableau de bord trouvé ». message. Une fois créés, tous vos tableaux de bord sont répertoriés dans l’inventaire des tableaux de bord.
 
-<!-- >[!NOTE]
+<!-- 
+>[!NOTE]
 >
 >To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](/help/images/icons/edit.png))
->![A custom inventory listed in the dashboard inventory.](./images/standard-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
+>![A custom inventory listed in the dashboard inventory.](./images/standard-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} 
+-->
 
 La boîte de dialogue [!UICONTROL Create dashboard] s’affiche. Saisissez un nom convivial et descriptif pour la collection de widgets que vous avez l’intention de créer, puis sélectionnez **[!UICONTROL Save]**.
 
@@ -100,7 +104,7 @@ Le modèle de données et le tableau actuellement sélectionné s’affichent en
 
 #### Ajouter et filtrer des attributs {#add-and-filter-attributes}
 
-Sélectionnez l’icône d’ajout (![&#x200B; Icône d’ajout .](/help/images/icons/add-circle.png)) à côté d’un nom d’attribut pour ajouter un attribut à votre widget. Le menu déroulant qui s’affiche vous permet d’ajouter un attribut en tant qu’axe X, axe Y, couleur ou filtre pour votre widget. L’attribut [!UICONTROL Color] vous permet de différencier les résultats des marques d’axe X et Y en fonction de la couleur. Pour ce faire, il divise les résultats en différentes couleurs en fonction de leur composition d’un troisième attribut.
+Sélectionnez l’icône d’ajout (![ Icône d’ajout .](/help/images/icons/add-circle.png)) à côté d’un nom d’attribut pour ajouter un attribut à votre widget. Le menu déroulant qui s’affiche vous permet d’ajouter un attribut en tant qu’axe X, axe Y, couleur ou filtre pour votre widget. L’attribut [!UICONTROL Color] vous permet de différencier les résultats des marques d’axe X et Y en fonction de la couleur. Pour ce faire, il divise les résultats en différentes couleurs en fonction de leur composition d’un troisième attribut.
 
 >[!TIP]
 >
@@ -132,7 +136,7 @@ Vous pouvez également créer une période personnalisée pour filtrer vos donn�
 
 ### Propriétés du widget
 
-Sélectionnez l’icône des propriétés (![&#x200B; Icône Propriétés .](/help/images/icons/properties.png)) dans le rail de droite pour ouvrir le panneau propriétés . Dans le panneau [!UICONTROL Properties], saisissez le nom du widget dans le champ de texte [!UICONTROL Widget title] .
+Sélectionnez l’icône des propriétés (![ Icône Propriétés .](/help/images/icons/properties.png)) dans le rail de droite pour ouvrir le panneau propriétés . Dans le panneau [!UICONTROL Properties], saisissez le nom du widget dans le champ de texte [!UICONTROL Widget title] .
 
 ![Le panneau des propriétés avec l’icône des propriétés et le champ Titre du widget mis en surbrillance.](./images/standard-dashboards/properties-panel.png)
 
@@ -146,7 +150,7 @@ L’enregistrement dans le compositeur de widgets enregistre le widget localemen
 
 >[!TIP]
 >
->Sélectionnez l’icône des propriétés (![&#x200B; Icône Propriétés .](/help/images/icons/properties.png)) à côté du nom du tableau de bord pour afficher les détails de sa création. Vous pouvez modifier le nom de votre tableau de bord dans la boîte de dialogue qui s’affiche.
+>Sélectionnez l’icône des propriétés (![ Icône Propriétés .](/help/images/icons/properties.png)) à côté du nom du tableau de bord pour afficher les détails de sa création. Vous pouvez modifier le nom de votre tableau de bord dans la boîte de dialogue qui s’affiche.
 
 Les widgets peuvent être réorganisés et redimensionnés dans cet espace de travail. Sélectionnez **[!UICONTROL Save]** pour conserver le nom du tableau de bord et la mise en page configurée.
 
@@ -182,4 +186,4 @@ Pour découvrir les mesures et visualisations préconfigurées disponibles pour 
 
 Pour mieux comprendre les tableaux de bord dans Experience Platform, regardez la vidéo suivante :
 
->[!VIDEO](https://video.tv.adobe.com/v/3413781?captions=fre_fr&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)
