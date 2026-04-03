@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gestion des libellés d’utilisation des données dans l’interface utilisateur
 description: Ce guide détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1495'
 ht-degree: 71%
@@ -24,7 +24,7 @@ Ce guide d’utilisation détaille la procédure d’utilisation des libellés d
 
 Pour appliquer des libellés à vos données, vous avez besoin de l’autorisation **[!UICONTROL Manage Usage Labels]** pour les utiliser sur le sandbox de production par défaut appelé « prod ». Pour créer un libellé personnalisé, vous devez également disposer de droits d’administration sur le profil de produit. Chaque organisation ne dispose que d’une seule liste de libellés applicables. Vous **ne pouvez pas** supprimer les libellés. Vous pouvez plutôt les supprimer des jeux de données ou des champs auxquels ils sont appliqués.
 
-Veuillez consulter le guide sur la façon de [configurer des autorisations](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=fr) ou la [vue d’ensemble du contrôle d’accès](../../access-control/home.md) pour plus d’informations sur l’attribution d’une autorisation. Si vous n’avez pas accès à Admin Console de votre organisation, contactez l’administrateur ou l’administratrice de cette dernière.
+Veuillez consulter le guide sur la façon de [configurer des autorisations](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) ou la [vue d’ensemble du contrôle d’accès](../../access-control/home.md) pour plus d’informations sur l’attribution d’une autorisation. Si vous n’avez pas accès à Admin Console de votre organisation, contactez l’administrateur ou l’administratrice de cette dernière.
 
 ## Gérer les libellés au niveau du schéma
 
@@ -36,7 +36,7 @@ Vous pouvez ajouter des libellés directement à un schéma ou à des champs de 
 >
 >![Boîte de dialogue Non-respect des règles de gouvernance des données détecté avec le résumé des violations et le diagramme de traçabilité des données en surbrillance.](../images/labels/policy-violation-dialog.png)
 >
->Pour plus d’informations sur les violations de politique[&#x200B; consultez la &#x200B;](../enforcement/auto-enforcement.md#data-usage-violation) documentation sur les violations de politique d’utilisation des données .
+>Pour plus d’informations sur les violations de politique[ consultez la ](../enforcement/auto-enforcement.md#data-usage-violation) documentation sur les violations de politique d’utilisation des données .
 
 Pour gérer les libellés d’utilisation des données au niveau du schéma, vous devez sélectionner un schéma existant ou en créer un nouveau. Après vous être connecté à Adobe Experience Platform, sélectionnez **[!UICONTROL Schemas]** dans le volet de navigation de gauche pour ouvrir l’espace de travail **[!UICONTROL Schemas]**. Cette page répertorie tous les schémas créés appartenant à votre organisation, ainsi que des détails utiles relatifs à chaque schéma.
 
@@ -89,7 +89,8 @@ Les libellés ajoutés au niveau du jeu de données comportent un « x » en r
 
 <!-- ## View labels at the dataset field level {#view-labels-at-dataset-field-level} -->
 
-<!-- To view labels inherited by the dataset from the schema level, select **[!UICONTROL Datasets]** to navigate to the datasets workspace and select the relevant dataset from the list. 
+<!-- 
+To view labels inherited by the dataset from the schema level, select **[!UICONTROL Datasets]** to navigate to the datasets workspace and select the relevant dataset from the list. 
 
 ![The Browse tab of the Datasets workspace with Datasets highlighted in the left sidebar.](../images/labels/dataset-navigation.png)
 
@@ -97,7 +98,8 @@ Next, select the **[!UICONTROL Data Governance]** tab to show the labels that ha
 
 ![Dataset Labels inherited by fields](../images/labels/dataset-labels-applied.png)
 
-The inherited labels beside each field do not have an "x" next to them and appear "greyed out" with no ability to remove or edit. This is because **inherited fields are read-only**, meaning they cannot be removed at the field level. -->
+The inherited labels beside each field do not have an "x" next to them and appear "greyed out" with no ability to remove or edit. This is because **inherited fields are read-only**, meaning they cannot be removed at the field level. 
+-->
 
 <!--Beleive can cut above here  -->
 
@@ -105,9 +107,11 @@ Le bouton (bascule) **[!UICONTROL Show Inherited Labels]** est activé par défa
 
 ![L’onglet Gouvernance des données de l’espace de travail des jeux de données affiche en surbrillance le bouton (bascule) Afficher les libellés hérités.](../images/labels/inherited-labels.png)
 
-<!-- Labels applied to the dataset appear in read-only form within the **[!UICONTROL Data Governance]** view for that dataset. 
+<!-- 
+Labels applied to the dataset appear in read-only form within the **[!UICONTROL Data Governance]** view for that dataset. 
 
-![The Data Governance tab of the Datasets workspace with labels highlighted.](../images/labels/read-only-governance-labels.png) -->
+![The Data Governance tab of the Datasets workspace with labels highlighted.](../images/labels/read-only-governance-labels.png) 
+-->
 
 >[!NOTE]
 >
@@ -150,10 +154,12 @@ Maintenant que vous avez ajouté des libellés d’utilisation des données aux 
 
 Désormais, vous pouvez également définir des politiques d’utilisation des données en fonction des libellés que vous avez appliqués. Pour plus d’informations, consultez la [présentation des politiques d’utilisation des données](../policies/overview.md).
 
-<!-- The workflow of this video is now outdated. This can be enabled once the video has been updated
+<!-- 
+The workflow of this video is now outdated. This can be enabled once the video has been updated
 
 ## Additional resources
 
 The following video is intended to support your understanding of Data Governance, and outlines how to apply labels to a dataset and individual fields.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422795?captions=fre_fr&quality=12&enable10seconds=on&speedcontrol=on) -->
+>[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on) 
+-->
