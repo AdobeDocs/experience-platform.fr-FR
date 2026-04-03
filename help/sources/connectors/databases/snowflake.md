@@ -3,7 +3,7 @@ title: Présentation du connecteur Source de Snowflake
 description: Découvrez comment connecter Snowflake à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 687363ab664e43cc854b535760dfbfc55acefd2c
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1570'
 ht-degree: 3%
@@ -28,7 +28,7 @@ Cette section décrit les tâches de configuration que vous devez effectuer avan
 
 ### Liste autorisée d’adresses IP
 
-Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Placer sur la liste autorisée Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à Experience Platform](../../ip-address-allow-list.md).
+Vous devez ajouter à votre place sur la liste autorisée des adresses IP spécifiques à une région avant de connecter vos sources à Experience Platform. Pour plus d’informations, consultez le guide sur la [connexion des adresses IP à ](../../ip-address-allow-list.md).
 
 ### Collecter les informations d’identification requises
 
@@ -42,7 +42,7 @@ Fournissez des valeurs pour les informations d’identification suivantes pour c
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `account` | Un nom de compte identifie de manière unique un compte de votre organisation. Dans ce cas, vous devez identifier de manière unique un compte dans différentes organisations [!DNL Snowflake]. Pour ce faire, vous devez ajouter le nom de votre organisation au nom du compte. Par exemple : `myorg-myaccount.snowflakecomputing.com`. Lisez la section sur la [récupération de l’identifiant  [!DNL Snowflake]  compte](#retrieve-your-account-identifier) pour plus d’informations. Pour plus d’informations, consultez la [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `account` | Un nom de compte identifie de manière unique un compte de votre organisation. Dans ce cas, vous devez identifier de manière unique un compte dans différentes organisations [!DNL Snowflake]. Pour ce faire, vous devez ajouter le nom de votre organisation au nom du compte. Par exemple :`myorg-myaccount.snowflakecomputing.com` Lisez la section sur la [récupération de l’identifiant  [!DNL Snowflake]  compte](#retrieve-your-account-identifier) pour plus d’informations. Pour plus d’informations, consultez la [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | `warehouse` | L’entrepôt de [!DNL Snowflake] gère le processus d’exécution de la requête pour l’application. Chaque entrepôt de [!DNL Snowflake] est indépendant les uns des autres et doit être accessible individuellement lors de l’importation de données dans Experience Platform. |
 | `database` | La base de données [!DNL Snowflake] contient les données que vous souhaitez importer dans Experience Platform. |
 | `username` | Nom d’utilisateur du compte [!DNL Snowflake]. |
@@ -56,7 +56,7 @@ Pour utiliser l’authentification par paire de clés, générez d’abord une p
 
 | Informations d’identification | Description |
 | --- | --- |
-| `account` | Un nom de compte identifie de manière unique un compte de votre organisation. Dans ce cas, vous devez identifier de manière unique un compte dans différentes organisations [!DNL Snowflake]. Pour ce faire, vous devez ajouter le nom de votre organisation au nom du compte. Par exemple : `myorg-myaccount.snowflakecomputing.com`. Lisez la section sur la [récupération de l’identifiant  [!DNL Snowflake]  compte](#retrieve-your-account-identifier) pour plus d’informations. Pour plus d’informations, consultez la [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `account` | Un nom de compte identifie de manière unique un compte de votre organisation. Dans ce cas, vous devez identifier de manière unique un compte dans différentes organisations [!DNL Snowflake]. Pour ce faire, vous devez ajouter le nom de votre organisation au nom du compte. Par exemple :`myorg-myaccount.snowflakecomputing.com` Lisez la section sur la [récupération de l’identifiant  [!DNL Snowflake]  compte](#retrieve-your-account-identifier) pour plus d’informations. Pour plus d’informations, consultez la [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | `username` | Nom d’utilisateur de votre compte [!DNL Snowflake]. |
 | `privateKey` | Clé privée [!DNL Base64-]encodée) de votre compte [!DNL Snowflake]. Vous pouvez générer des clés privées chiffrées ou non chiffrées. Si vous utilisez une clé privée chiffrée, vous devez également fournir une phrase secrète de clé privée lors de l’authentification auprès d’Experience Platform. Pour plus d’informations, consultez la section relative à la [récupération de votre clé privée](#retrieve-your-private-key). |
 | `privateKeyPassphrase` | La phrase secrète de la clé privée est une couche de sécurité supplémentaire que vous devez utiliser lors de l’authentification avec une clé privée chiffrée. Vous n’êtes pas tenu de fournir la phrase secrète si vous utilisez une clé privée non chiffrée. |
@@ -90,7 +90,7 @@ Pour utiliser l’authentification par paire de clés, générez d’abord une p
 
 | Informations d’identification | Description |
 | --- | --- |
-| `account` | Un nom de compte identifie de manière unique un compte de votre organisation. Dans ce cas, vous devez identifier de manière unique un compte dans différentes organisations [!DNL Snowflake]. Pour ce faire, vous devez ajouter le nom de votre organisation au nom du compte. Par exemple : `http://myorg-myaccount.snowflakecomputing.com/`. Lisez le guide sur la [récupération de l’identifiant  [!DNL Snowflake]  compte](#etrieve-your-account-identifier) pour obtenir des conseils supplémentaires. Pour plus d’informations, consultez la [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `account` | Un nom de compte identifie de manière unique un compte de votre organisation. Dans ce cas, vous devez identifier de manière unique un compte dans différentes organisations [!DNL Snowflake]. Pour ce faire, vous devez ajouter le nom de votre organisation au nom du compte. Par exemple :`http://myorg-myaccount.snowflakecomputing.com/` Lisez le guide sur la [récupération de l’identifiant  [!DNL Snowflake]  compte](#etrieve-your-account-identifier) pour obtenir des conseils supplémentaires. Pour plus d’informations, consultez la [[!DNL Snowflake] documentation](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | `username` | Nom d’utilisateur de votre compte [!DNL Snowflake]. |
 | `privateKey` | Clé privée de votre utilisateur [!DNL Snowflake], codée en base64 sur une seule ligne, sans en-têtes ni sauts de ligne. Pour le préparer, copiez le contenu de votre fichier PEM, supprimez les lignes `BEGIN`/`END` et tous les sauts de ligne, puis codez le résultat en base64. Pour plus d’informations, consultez la section relative à la [récupération de votre clé privée](#retrieve-your-private-key). **Remarque :** les clés privées chiffrées ne sont actuellement pas prises en charge pour une connexion AWS. |
 | `port` | Numéro de port utilisé par [!DNL Snowflake] lors de la connexion à un serveur via Internet. |
