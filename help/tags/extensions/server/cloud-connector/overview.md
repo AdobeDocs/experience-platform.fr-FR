@@ -2,7 +2,7 @@
 title: Présentation de l’extension Cloud Connector
 description: Découvrez l’extension de transfert d’événements Cloud Connector dans Adobe Experience Platform.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1636'
 ht-degree: 75%
@@ -67,7 +67,7 @@ Le tableau suivant répertorie les en-têtes prédéfinis. Vous n’êtes pas li
 | [Accept-Datetime](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Headers/Accept) | Transmis par un agent utilisateur pour indiquer qu’il souhaite avoir accès à un état passé d’une ressource originale. À cette fin, l’en-tête `Accept-Datetime` est transmis dans une requête HTTP émise par rapport à un TimeGate pour une ressource d’origine, et sa valeur indique la date et l’heure (datetime) de l’état passé recherché de la ressource d’origine. |
 | Access-Control-Request-Headers | Utilisé par les navigateurs lors de l’émission d’une demande de contrôle en amont de la [requête preflight](https://developer.mozilla.org/fr-FR/docs/Glossary/preflight_request), pour indiquer au serveur quels en-têtes [HTTP](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Headers) le client peut envoyer lorsque la demande réelle est effectuée. |
 | Access-Control-Request-Method | Utilisé par les navigateurs lors de l’émission d’une [requête preflight](https://developer.mozilla.org/fr-FR/docs/Glossary/preflight_request), pour indiquer au serveur la méthode [HTTP](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Methods) qui sera utilisée quand la demande réelle sera effectuée. Cet en-tête est nécessaire parce que la requête preflight est toujours une [OPTION](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Methods/OPTIONS) et n’utilise pas la même méthode que la requête réelle. |
-| Authorization | Contient les informations d’identification permettant d’authentifier un agent utilisateur auprès d’un serveur. |
+| Autorisation | Contient les informations d’identification permettant d’authentifier un agent utilisateur auprès d’un serveur. |
 | [Cache-Control](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Headers/Cache-Control) | Directives pour les mécanismes de mise en cache dans les requêtes et les réponses. |
 | [Connexion](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Headers/Connection) | Contrôle si la connexion réseau reste ouverte une fois la transaction en cours terminée. |
 | [Content-Length](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Headers/Content-Length) | Taille de la ressource, en nombre décimal d’octets. |
@@ -156,6 +156,6 @@ Votre nouvelle règle est maintenant prête. Sélectionnez **[!UICONTROL Save to
 
 ## Étapes suivantes
 
-Ce guide explique comment configurer des règles mTLS dans le transfert d’événement. Pour plus d’informations sur la configuration de mTLS pour un environnement, reportez-vous au guide [&#x200B; Mutual Transport Layer Security ([!DNL mTLS])](../cloud-connector/mtls.md).
+Ce guide explique comment configurer des règles mTLS dans le transfert d’événement. Pour plus d’informations sur la configuration de mTLS pour un environnement, reportez-vous au guide [ Mutual Transport Layer Security ([!DNL mTLS])](../cloud-connector/mtls.md).
 
 Pour plus d’informations sur les fonctionnalités de transfert d’événement d’Experience Platform, consultez la [présentation du transfert d’événement](../../../ui/event-forwarding/overview.md).
