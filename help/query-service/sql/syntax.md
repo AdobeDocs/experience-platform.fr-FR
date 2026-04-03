@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Syntaxe SQL dans Query Service
 description: Ce document détaille et explique la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '4686'
 ht-degree: 4%
@@ -223,8 +223,8 @@ AS (select_query)
 | `schema` | Titre du schéma XDM. N’utilisez cette clause que si vous souhaitez associer la nouvelle table à un schéma XDM existant. |
 | `rowvalidation` | (Facultatif) Active la validation au niveau des lignes pour chaque lot ingéré dans le jeu de données. La valeur par défaut est « true ». |
 | `label` | (Facultatif) Utilisez la valeur `PROFILE` pour étiqueter le jeu de données comme étant activé pour l’ingestion de profils. |
-| `transform` | (Facultatif) Applique des transformations d’ingénierie des fonctionnalités (telles que l’indexation de chaîne, l’encodage à chaud ou TF-IDF) avant de matérialiser le jeu de données. Cette clause est utilisée pour prévisualiser les fonctions transformées. Pour plus d’informations[`TRANSFORM` consultez la documentation de la clause &#x200B;](#transform) . |
-| `select_query` | Instruction `SELECT` standard qui définit le jeu de données. Pour plus d’informations[`SELECT` consultez la section &#x200B;](#select-queries) des requêtes . |
+| `transform` | (Facultatif) Applique des transformations d’ingénierie des fonctionnalités (telles que l’indexation de chaîne, l’encodage à chaud ou TF-IDF) avant de matérialiser le jeu de données. Cette clause est utilisée pour prévisualiser les fonctions transformées. Pour plus d’informations[`TRANSFORM` consultez la documentation de la clause ](#transform) . |
+| `select_query` | Instruction `SELECT` standard qui définit le jeu de données. Pour plus d’informations[`SELECT` consultez la section ](#select-queries) des requêtes . |
 
 >[!NOTE]
 >
@@ -397,7 +397,7 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 ## CRÉER UNE BASE DE DONNÉES
 
-La commande `CREATE DATABASE` crée une base de données Azure Data Lake Storage (ADLS).
+La commande `CREATE DATABASE` permet de créer une base de données Azure Data Lake Storage (ADLS).
 
 ```sql
 CREATE DATABASE [IF NOT EXISTS] db_name
@@ -887,12 +887,12 @@ La commande `FILTER CONTEXT` calcule les statistiques sur un sous-ensemble du je
 
 >[!NOTE]
 >
->Les `Statistics ID` et les statistiques générées ne sont valides que pour chaque session et ne sont pas accessibles dans différentes sessions PSQL.<br><br>Limites :<ul><li>La génération de statistiques n’est pas prise en charge pour les types de données de tableau ou de mappage</li><li>Les statistiques calculées ne sont **pas** conservées entre les sessions.</li></ul><br><br>Options:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>Par défaut, l’indicateur est défini sur « true ». Par conséquent, lorsque des statistiques sont demandées sur un type de données non pris en charge, elles ne génèrent pas d’erreur, mais ignorent silencieusement les champs contenant des types de données non pris en charge.<br>Pour activer les notifications sur les erreurs lorsque des statistiques sont demandées sur un type de données non pris en charge, utilisez : `SET skip_stats_for_complex_datatypes = false`.
+>Les `Statistics ID` et les statistiques générées ne sont valides que pour chaque session et ne sont pas accessibles dans différentes sessions PSQL.<br><br>Limites :<ul><li>La génération de statistiques n’est pas prise en charge pour les types de données de tableau ou de mappage</li><li>Les statistiques calculées ne sont **pas** conservées entre les sessions.</li></ul><br><br>Options :<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>Par défaut, l’indicateur est défini sur « true ». Par conséquent, lorsque des statistiques sont demandées sur un type de données non pris en charge, elles ne génèrent pas d’erreur, mais ignorent silencieusement les champs contenant des types de données non pris en charge.<br>Pour activer les notifications sur les erreurs lorsque des statistiques sont demandées sur un type de données non pris en charge, utilisez : `SET skip_stats_for_complex_datatypes = false`.
 
 La sortie de la console s’affiche comme illustré ci-dessous.
 
 ```console
-|     Statistics ID      | 
+|     Statistics ID      |
 | ---------------------- |
 | adc_geometric_stats_1  |
 (1 row)
