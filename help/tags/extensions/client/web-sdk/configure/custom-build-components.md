@@ -2,10 +2,10 @@
 title: Options de build
 description: Créez une version Web SDK personnalisée qui désactive les fonctionnalités pour réduire la taille de la version.
 exl-id: 853e0a6c-0953-4e08-9a7d-334aab022583
-source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '277'
-ht-degree: 1%
+ht-degree: 9%
 
 ---
 
@@ -37,7 +37,7 @@ Adobe permet de désactiver les composants de build Web SDK suivants :
 | **[!UICONTROL Activity collector]** | Permet la collecte automatique de liens et le suivi d’Activity Map. | |
 | **[!UICONTROL Advertising]** | Active l’intégration d’Adobe Advertising à Customer Journey Analytics. | |
 | **[!UICONTROL Audiences]** | Prend en charge l’intégration à Adobe Audience Manager, comme la synchronisation des identifiants. | |
-| **[!UICONTROL Brand concierge]** | Permet l’intégration à Brand Concierge. |
+| **[!UICONTROL Brand concierge]** | Permet l’intégration à Brand Concierge. | |
 | **[!UICONTROL Consent]** | Permet d’utiliser les fonctionnalités de consentement. | action [[!UICONTROL Set consent]](../actions/set-consent.md) |
 | **[!UICONTROL Event merge]** | Obsolète. | [[!UICONTROL Event merge ID]](../data-element-types.md) élément de données (obsolète)<br>[[!UICONTROL Reset event merge ID]](../actions/reset-event-merge-id.md) action (obsolète) |
 | **[!UICONTROL Media Analytics bridge]** | Prend en charge l’intégration à l’ancienne version de Media Analytics. | action [[!UICONTROL Get media analytics tracker]](../actions/get-media-analytics-tracker.md) |
