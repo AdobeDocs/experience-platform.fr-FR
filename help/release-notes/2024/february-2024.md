@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Février 2024
 description: Notes de mise à jour de février 2024 pour Adobe Experience Platform.
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1237'
 ht-degree: 33%
@@ -50,7 +50,8 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 
 Pour en savoir plus sur les collections de données, veuillez consulter la [vue d’ensemble des collections de données](/help/tags/home.md).
 
-<!-- ## Data Prep {#data-prep}
+<!-- 
+## Data Prep {#data-prep}
 
 Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
@@ -62,7 +63,8 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 
 {style="table-layout:auto"}
 
-For more information on Data Prep, read the [Data Prep overview](/help/data-prep/home.md). -->
+For more information on Data Prep, read the [Data Prep overview](/help/data-prep/home.md). 
+-->
 
 ## Destinations {#destinations}
 
@@ -84,10 +86,10 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | ----------- | ----------- |
 | Activer les audiences de compte généralement disponibles | La fonctionnalité d’activation des audiences de compte vers certaines destinations est désormais généralement disponible pour les sociétés qui achètent les éditions [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) et [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) de Real-Time Customer Data Platform. Lisez le tutoriel sur l’[activation des audiences de compte](/help/destinations/ui/activate-account-audiences.md) pour obtenir des informations complètes, y compris les destinations prises en charge. |
 | Outils d’application du consentement de la Loi sur les marchés numériques pour les destinations Google | Google publie des modifications de l’API [Google Ads](https://developers.google.com/google-ads/api/docs/start), de l’API [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) et de l’API [Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) afin de prendre en charge les exigences de conformité et de consentement définies dans le [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) de l’Union européenne ([EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/)). L&#39;application de ces modifications aux exigences en matière de consentement devrait entrer en vigueur à compter du 6 mars 2024. <br/><br/> Pour se conformer à la politique de consentement des utilisateurs de l’UE et continuer à créer des listes d’audience pour les utilisateurs dans l’Espace économique européen (EEE), les annonceurs et les partenaires doivent s’assurer de transmettre le consentement de l’utilisateur final lors du téléchargement des données d’audience. En tant que partenaire Google, Adobe vous fournit les outils nécessaires pour vous conformer à ces exigences de consentement en vertu de la DMA dans l’Union européenne.<br/><br/>Les clients qui ont acheté Adobe Privacy &amp; Security Shield et configuré une [politique de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) pour filtrer les profils non consentis n’ont aucune action à effectuer.<br/><br/>Les clients qui n’ont pas acheté Adobe Privacy &amp; Security Shield doivent utiliser les fonctionnalités [définition de segment](/help/segmentation/home.md#segment-definitions) du [créateur de segments](/help/segmentation/ui/segment-builder.md) pour filtrer les profils non consentis, afin de continuer à utiliser les destinations Real-Time CDP Google existantes sans interruption. |
-| [!BADGE Beta &#x200B;]{type=Informative} réorganiser les champs de mappage pour les destinations par lots | Vous pouvez désormais modifier l’ordre des colonnes dans vos exportations de fichiers CSV en faisant glisser les champs de mappage dans l’étape [mappage](/help/destinations/ui/activate-batch-profile-destinations.md#mapping). L’ordre des champs mappés dans l’interface utilisateur se reflète dans l’ordre des colonnes dans le fichier CSV exporté, du haut vers le bas, la ligne supérieure étant la colonne la plus à gauche du fichier CSV. <br/><br/> Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès à cette fonctionnalité, contactez votre représentant Adobe. |
-| [!BADGE Beta &#x200B;]{type=Informative} plannings d’exportation par défaut présélectionnés pour les destinations par lots | Experience Platform définit désormais automatiquement un planning par défaut pour chaque export de fichier. Consultez la documentation sur la [planification des exportations d’audience](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) pour savoir comment modifier la planification par défaut. <br/><br/> Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès à cette fonctionnalité, contactez votre représentant Adobe. |
-| [!BADGE Beta &#x200B;]{type=Informative} Modification en masse des plannings d’activation des audiences pour les destinations par lots | Vous pouvez désormais modifier le planning d’activation de plusieurs audiences en bloc, à partir de la page [Données d’activation](/help/destinations/ui/destination-details-page.md#bulk-edit-schedule). <br/><br/> Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès à cette fonctionnalité, contactez votre représentant Adobe. |
-| [!BADGE Beta &#x200B;]{type=Informative} Exporter des fichiers en bloc à la demande vers des destinations par lots | Vous pouvez désormais exporter des audiences en bloc vers des destinations par lots, grâce à la fonctionnalité [exporter des fichiers à la demande](/help/destinations/ui/export-file-now.md). <br/><br/> Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès à cette fonctionnalité, contactez votre représentant Adobe. |
+| [!BADGE Beta ]{type=Informative} réorganiser les champs de mappage pour les destinations par lots | Vous pouvez désormais modifier l’ordre des colonnes dans vos exportations de fichiers CSV en faisant glisser les champs de mappage dans l’étape [mappage](/help/destinations/ui/activate-batch-profile-destinations.md#mapping). L’ordre des champs mappés dans l’interface utilisateur se reflète dans l’ordre des colonnes dans le fichier CSV exporté, du haut vers le bas, la ligne supérieure étant la colonne la plus à gauche du fichier CSV. <br/><br/> Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès à cette fonctionnalité, contactez votre représentant Adobe. |
+| [!BADGE Beta ]{type=Informative} plannings d’exportation par défaut présélectionnés pour les destinations par lots | Experience Platform définit désormais automatiquement un planning par défaut pour chaque export de fichier. Consultez la documentation sur la [planification des exportations d’audience](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) pour savoir comment modifier la planification par défaut. <br/><br/> Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès à cette fonctionnalité, contactez votre représentant Adobe. |
+| [!BADGE Beta ]{type=Informative} Modification en masse des plannings d’activation des audiences pour les destinations par lots | Vous pouvez désormais modifier le planning d’activation de plusieurs audiences en bloc, à partir de la page [Données d’activation](/help/destinations/ui/destination-details-page.md#bulk-edit-schedule). <br/><br/> Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès à cette fonctionnalité, contactez votre représentant Adobe. |
+| [!BADGE Beta ]{type=Informative} Exporter des fichiers en bloc à la demande vers des destinations par lots | Vous pouvez désormais exporter des audiences en bloc vers des destinations par lots, grâce à la fonctionnalité [exporter des fichiers à la demande](/help/destinations/ui/export-file-now.md). <br/><br/> Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès à cette fonctionnalité, contactez votre représentant Adobe. |
 
 {style="table-layout:auto"}
 
@@ -115,7 +117,7 @@ Pour plus d’informations sur les sandbox, consultez la [vue d’ensemble des s
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Audiences de compte | Les audiences de compte sont désormais disponibles pour tous. Vous pouvez désormais utiliser la segmentation de compte pour apporter la facilité et la sophistication complètes de l’expérience de segmentation marketing, des audiences basées sur les personnes aux audiences basées sur les comptes dans les éditions B2B et B2P de Real-time Customer Experience Platform. Cette version vous permet d’utiliser les audiences basées sur les personnes comme prédicat pour les audiences basées sur les comptes, ajoute des fonctionnalités de recherche, prend en charge l’utilisation d’entités personnalisées et est conforme à la gouvernance des données. Pour plus d’informations sur cette fonctionnalité, consultez la [vue d’ensemble des audiences de compte](/help/segmentation/types/account-audiences.md). |
+| Audiences de compte | Les audiences de compte sont désormais disponibles pour tous. Vous pouvez désormais utiliser la segmentation de compte pour apporter la facilité et la sophistication complètes de l’expérience de segmentation marketing, des audiences basées sur les personnes aux audiences basées sur les comptes dans les éditions B2B et B2P de Real-time Customer Experience Platform. Cette version vous permet d’utiliser les audiences basées sur les personnes comme prédicat pour les audiences basées sur les comptes, ajoute des fonctionnalités de recherche, prend en charge l’utilisation d’entités personnalisées et est conforme à la gouvernance des données. Pour plus d’informations sur cette fonctionnalité, consultez la [vue d’ensemble des audiences de comptes](/help/segmentation/types/account-audiences.md). |
 
 {style="table-layout:auto"}
 
@@ -127,7 +129,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE Beta &#x200B;]{type=Informative} source [!DNL Acxiom] | Utilisez la [[!DNL Acxiom Prospecting Data Import] source](/help/sources/tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md) pour récupérer et mapper des données [!DNL Acxiom] service de prospect à Experience Platform. |
+| [!BADGE Beta ]{type=Informative} source [!DNL Acxiom] | Utilisez la [[!DNL Acxiom Prospecting Data Import] source](/help/sources/tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md) pour récupérer et mapper des données [!DNL Acxiom] service de prospect à Experience Platform. |
 
 {style="table-layout:auto"}
 
