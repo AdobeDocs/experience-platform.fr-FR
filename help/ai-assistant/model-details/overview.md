@@ -4,7 +4,7 @@ description: En savoir plus sur les détails des modèles dans Adobe Experience 
 hide: true
 hidefromtoc: true
 exl-id: 74a8ef82-cff9-4a7e-95c8-f915eb664eda
-source-git-commit: 6623c7dad0fc4ddb7cb79e8f474b824915f130fc
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '3171'
 ht-degree: 0%
@@ -37,7 +37,7 @@ La présentation du modèle contient des informations générales sur un modèle
 | Quel est l’objectif du modèle ? | Brève description de l’objectif du modèle. | Le modèle est conçu pour fournir aux professionnels du marketing et aux équipes de l’engagement client des informations exploitables en prédisant la probabilité qu’un client effectue une action donnée, comme effectuer un achat, s’inscrire à un abonnement ou participer à une campagne par e-mail. Les sorties permettent aux entreprises d’optimiser la segmentation de l’audience et de personnaliser les interactions des clients en fonction des comportements prévus. |
 | De quel type de modèle s&#39;agit-il ? | Type du modèle, tel que classification, régression, génératif, etc. | Il s’agit d’un modèle **classification d’apprentissage supervisé** qui prédit la probabilité qu’un événement se produise (par exemple, achat, résiliation, engagement) à partir des données client historiques. Il est entraîné à l’aide d’arbres de décision boostant le gradient (GBDT) avec une régression logistique pour modéliser les scores de propension. |
 | Qui sont les utilisateurs prévus ? | Les groupes d’utilisateurs internes et externes auxquels le modèle est destiné. | Les principaux utilisateurs de ce modèle sont les professionnels du marketing, les analystes de données et les équipes d’engagement des clients qui tirent parti de Adobe Experience Platform pour piloter les stratégies marketing axées sur les données. |
-| Comment ce modèle s’intègre-t-il à Adobe Experience Platform ? | Les détails sur l’intégration et les API utilisées, ainsi que leur compatibilité avec les workflows. | CustomerAI s’intègre directement dans les services d’IA de Adobe Experience Platform **&#x200B;**, ce qui permet aux utilisateurs d’accéder aux sorties du modèle par le biais d’API et de tableaux de bord préconfigurés. Les scores de propension générés par le modèle peuvent être utilisés dans **Adobe Journey Optimizer**, **et Adobe Real-Time CDP** afin d’affiner la segmentation de l’audience et d’adapter les stratégies marketing. |
+| Comment ce modèle s’intègre-t-il à Adobe Experience Platform ? | Les détails sur l’intégration et les API utilisées, ainsi que leur compatibilité avec les workflows. | CustomerAI s’intègre directement dans les services d’IA de Adobe Experience Platform ****, ce qui permet aux utilisateurs d’accéder aux sorties du modèle par le biais d’API et de tableaux de bord préconfigurés. Les scores de propension générés par le modèle peuvent être utilisés dans ****, **et Adobe Real-Time CDP** afin d’affiner la segmentation de l’audience et d’adapter les stratégies marketing. |
 
 {style="table-layout:auto"}
 
