@@ -1,13 +1,13 @@
 ---
 title: Surveiller la segmentation Edge
 description: Découvrez comment utiliser le tableau de bord de surveillance pour observer le débit de segmentation Edge.
-source-git-commit: 809f80c721d6eedf5ee88dbb1cf4bf7e5a413614
+exl-id: 7abba7e8-1f2d-4a21-a93f-8bda7aa4d849
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 6%
 
 ---
-
 
 # Surveiller la segmentation Edge
 
@@ -19,7 +19,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 * [Flux de données](../../datastreams/overview.md) : les flux de données vous permettent de connecter Experience Platform Edge Network à votre jeu de données.
 * [Capacités](../../landing/license-usage-and-guardrails/capacity.md) : dans Experience Platform, les capacités vous permettent de savoir si votre organisation a dépassé l’un de vos mécanismes de sécurisation et vous donnent des informations sur la manière de résoudre ces problèmes.
-* [segmentation Edge &#x200B;](../../segmentation/methods/edge-segmentation.md) : la segmentation Edge permet d’évaluer instantanément les définitions de segment dans Adobe Experience Platform [sur le serveur Edge](../../landing/edge-and-hub-comparison.md), en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
+* [segmentation Edge ](../../segmentation/methods/edge-segmentation.md) : la segmentation Edge permet d’évaluer instantanément les définitions de segment dans Adobe Experience Platform [sur le serveur Edge](../../landing/edge-and-hub-comparison.md), en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
 
 ## Accès {#access}
 
