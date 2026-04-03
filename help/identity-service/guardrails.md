@@ -3,9 +3,9 @@ keywords: Experience Platform;identité;identity service;dépannage;mécanismes 
 title: Mécanismes de sécurisation pour Identity Service
 description: Ce document fournit des informations sur les limites d’utilisation et de débit pour les données Identity Service afin de vous aider à optimiser l’utilisation du graphique d’identités.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1572'
 ht-degree: 39%
 
 ---
@@ -27,7 +27,7 @@ Les services Experience Platform suivants sont impliqués dans la modélisation
 
 ## Limites du modèle de données
 
-Les tableaux ci-dessous fournissent des conseils sur les barrières de sécurité des limites statiques et les règles de validation à prendre en compte pour les espaces de noms d’identité.
+Les tableaux ci-dessous fournissent des conseils sur les mécanismes de sécurisation des limites statiques et les règles de validation à prendre en compte pour les espaces de noms d’identité.
 
 ### Limites statiques
 
@@ -109,7 +109,7 @@ La suppression ne concerne que les données du service d’identités et non le 
 Si vous souhaitez conserver vos événements authentifiés par rapport au CRMID, il est recommandé de modifier vos identifiants principaux d’ECID en CRMID. Lisez les documents suivants pour savoir comment mettre en œuvre cette modification :
 
 * [Configurer le mappage d’identités pour les balises Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Données d’identité dans Experience Platform Web SDK](/help/collection/use-cases/identity/id-overview.md)
+* [Identité dans la collecte de données](/help/collection/identity/overview.md)
 
 ### Exemples de scénarios
 
@@ -199,7 +199,7 @@ Pour plus d’informations sur [!DNL Identity Service], consultez la documentati
 Consultez la documentation suivante pour plus d’informations sur les autres mécanismes de sécurisation des services Experience Platform, sur les informations de latence de bout en bout et les informations de licence dans les documents de description du produit Real-Time CDP :
 
 * [Mécanismes de sécurisation de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=fr#end-to-end-latency-diagrams) pour divers services Experience Platform.
+* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.
 * [Real-Time Customer Data Platform (B2C Edition - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

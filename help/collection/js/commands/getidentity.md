@@ -2,16 +2,20 @@
 title: getIdentity
 description: Obtenir l’identité d’un visiteur sans envoyer de données d’événement.
 exl-id: 28b99f62-14c4-4e52-a5c7-9f6fe9852a87
-source-git-commit: aea46e3804d315c1237fc853540771f1b5c2b767
+source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 2%
+source-wordcount: '331'
+ht-degree: 1%
 
 ---
 
 # `getIdentity`
 
 Lorsque vous exécutez la commande [`sendEvent`](sendevent/overview.md), le Web SDK récupère automatiquement l’identité du visiteur si elle n’est pas déjà présente. La commande `getIdentity` permet d’obtenir un identifiant visiteur sans envoyer de données d’événement. Si vous avez besoin d’appels distincts pour générer un identifiant visiteur et envoyer des données, vous pouvez utiliser cette commande.
+
+>[!IMPORTANT]
+>
+>Utilisez `getIdentity` lorsque vous avez besoin d’informations d’identité côté client. Si vous devez uniquement mapper l’ECID dans XDM, utilisez plutôt [Préparation des données pour la collecte de données](/help/datastreams/data-prep.md) ou les [conseils d’accès aux balises ECID](/help/tags/extensions/client/web-sdk/accessing-the-ecid.md).
 
 La commande `getIdentity` passe par le flux suivant pour récupérer le `ECID`.
 

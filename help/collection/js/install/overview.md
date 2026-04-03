@@ -3,7 +3,7 @@ title: Présentation de l’installation de Web SDK
 description: Découvrez comment installer Experience Platform Web SDK.
 keywords: installation du sdk web;installer le sdk web;internet explorer;promesse;package npm
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: a490c429047f5e5997d69f30a51e6b78debe2d5d
+source-git-commit: 696e5098ebf556bfc0fa4fc22ff637cb0835eee0
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%
@@ -24,4 +24,4 @@ Avant d’utiliser ou d’installer le SDK Web, vous devez respecter les conditi
 
 * L’architecture dans Adobe Experience Platform doit d’abord être configurée. Ces paramètres comprennent tous les schémas, identités et flux de données nécessaires.
 * Vous devez disposer des autorisations appropriées configurées pour accéder aux outils appropriés. Par exemple, si votre organisation décide d’utiliser l’extension de balise, vous devez disposer des autorisations appropriées pour accéder à l’interface utilisateur de la collecte de données. Pour plus d’informations, voir [Autorisations de collecte de données](../../permissions.md).
-* Il est recommandé d’avoir un domaine propriétaire (CNAME). Si vous disposez déjà d’un CNAME pour Adobe Analytics, vous pouvez l’utiliser. Les tests en développement fonctionnent sans CNAME, mais Adobe recommande d’en avoir un avant la publication en production. Voir [Identifiants d’appareils propriétaires](../../use-cases/identity/first-party-device-ids.md) pour plus d’informations.
+* Il est recommandé d’avoir un domaine propriétaire (CNAME). Si vous disposez déjà d’un CNAME pour Adobe Analytics, vous pouvez l’utiliser. Les tests en développement fonctionnent sans CNAME, mais Adobe recommande d’en avoir un avant la publication en production. Voir [Identifiants d’appareils propriétaires](../../identity/fpid.md) pour plus d’informations.

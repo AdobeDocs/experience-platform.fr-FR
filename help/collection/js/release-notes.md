@@ -3,9 +3,9 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: d6b2be2c7f7b5a3b002e565dce8cee8af85ffcc2
+source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
-source-wordcount: '2751'
+source-wordcount: '2752'
 ht-degree: 59%
 
 ---
@@ -18,7 +18,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 ## Version 2.32.0 - mardi 23 mars 2026
 
-- Les utilitaires principaux partagés sont désormais publiés sous la forme d’un package npm autonome ([&#128279;](https://www.npmjs.com/package/@adobe/alloy-core)) à utiliser par les extensions et les intégrations.
+- Les utilitaires principaux partagés sont désormais publiés sous la forme d’un package npm autonome ([](https://www.npmjs.com/package/@adobe/alloy-core)) à utiliser par les extensions et les intégrations.
 - Inclut désormais le fuseau horaire IANA dans le champ XDM `xdm.placeContext.ianaTimezone` lorsque `placeContext` est inclus dans la variable de configuration [`context`](/help/collection/js/commands/configure/context.md).
 - Brand Concierge : correction d’un problème d’ID de session lorsque [`stickyConversationSession`](/help/collection/js/commands/configure/conversation.md) est désactivé.
 
@@ -76,7 +76,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 **Correctifs et améliorations**
 
 - Correction d’une erreur dans le [dispositif de suivi Media Analytics](commands/getmediaanalyticstracker.md) en raison de laquelle la propriété `length` de l’objet média acceptait incorrectement des types de données non valides.
-- Amélioration de la [gestion des identités](../use-cases/identity/id-overview.md) de la gestion des erreurs pour traiter correctement les rejets de promesses en cas d’échec de la recherche d’identité.
+- Amélioration de la [gestion des identités](../identity/overview.md) de la gestion des erreurs pour traiter correctement les rejets de promesses en cas d’échec de la recherche d’identité.
 - Correction d’un problème où le rendu du contenu de personnalisation avec des éléments de contenu HTML échouait avec une erreur liée à un `renderStatusHandler` manquant.
 - Correction d’une Activity Map [collection d’URL](commands/configure/clickcollectionenabled.md) pour gérer correctement les URL non HTTP.
 
@@ -121,7 +121,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 **Correction et améliorations**
 
-- Correction d’un problème de dépendance lié au moteur de règles [&#128279;](https://github.com/adobe/aepsdk-rulesengine-typescript/), qui provoquait des erreurs dans certaines intégrations client. Web SDK nécessite désormais [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/) version 2.0.3 ou ultérieure.
+- Correction d’un problème de dépendance lié au moteur de règles [](https://github.com/adobe/aepsdk-rulesengine-typescript/), qui provoquait des erreurs dans certaines intégrations client. Web SDK nécessite désormais [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/) version 2.0.3 ou ultérieure.
 
 ## Version 2.24.0 - vendredi 31 octobre 2024
 
@@ -147,7 +147,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 **Nouvelles fonctionnalités**
 
-- Ajout de la prise en charge de la demande de l’[CORE ID](/help/collection/use-cases/identity/id-overview.md) dans la commande [getIdentity](commands/getidentity.md).
+- Ajout de la prise en charge de la demande de l’[CORE ID](/help/collection/identity/overview.md#core-id-and-third-party-identity) dans la commande [getIdentity](commands/getidentity.md).
 
 **Correctifs et améliorations**
 
@@ -276,7 +276,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 - Ajout de la prise en charge de la migration complète page par page. Le profil Adobe Target est désormais conservé lorsqu’un visiteur ou un visiteuse passe d’une page at.js à une page SDK web.
 - Ajout de la prise en charge configurable des [Indicateurs clients d’agent utilisateur à forte entropie](../use-cases/client-hints.md).
-- Ajout de la prise en charge de la commande [`applyResponse`](commands/applyresponse.md) . Cela permet une personnalisation hybride via l’API [&#128279;](https://developer.adobe.com/data-collection-apis/docs/api/).
+- Ajout de la prise en charge de la commande [`applyResponse`](commands/applyresponse.md) . Cela permet une personnalisation hybride via l’API [](https://developer.adobe.com/data-collection-apis/docs/api/).
 - Les liens du mode QA fonctionnent désormais sur plusieurs pages.
 
 **Correctifs et améliorations**
@@ -296,7 +296,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 **Nouvelles fonctionnalités**
 
-- Vous pouvez désormais diffuser des expériences personnalisées plus précisément, en partageant les identifiants de visiteurs et visiteuses entre les applications mobiles et le contenu web mobile, ainsi qu’entre les domaines. Consultez la [documentation dédiée](../use-cases/identity/id-sharing.md) pour en savoir plus.
+- Vous pouvez désormais diffuser des expériences personnalisées plus précisément, en partageant les identifiants de visiteurs et visiteuses entre les applications mobiles et le contenu web mobile, ainsi qu’entre les domaines. Voir [Identité dans la collecte de données](../identity/overview.md) pour en savoir plus.
 - Vous pouvez désormais rendre ou exécuter un tableau de propositions à partir de [!DNL Adobe Target] dans des applications monopages, sans incrémenter les mesures d’analyse. Cela réduit les erreurs de création de rapports et augmente la précision des analyses.
 - Ajout d’informations supplémentaires à la commande `getLibraryInfo`, y compris les commandes disponibles et la configuration finale de l’instance.
 

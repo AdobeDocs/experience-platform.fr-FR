@@ -2,10 +2,10 @@
 title: Aperçu de l’espace de noms des identités
 description: Découvrez les espaces de noms d’identité dans Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 384a67ac62eb56c4a0f8ac38593399afcc8b742e
+source-git-commit: 482991f0a7efdf4eae5a600ba0bd2a49baca7c37
 workflow-type: tm+mt
-source-wordcount: '1897'
-ht-degree: 28%
+source-wordcount: '1925'
+ht-degree: 27%
 
 ---
 
@@ -99,12 +99,12 @@ Les espaces de noms standard fournis sont les suivants. Ils peuvent être utilis
 | Nom d’affichage | Symbole D’Identité (Code) | Type d’identité | Description |
 | ------------ | ---------------------- | ------------- | ----------- |
 | AdCloud | AdCloud | ID de cookie | Un espace de noms représentant Adobe AdCloud. |
-| Adobe Analytics (ancien ID) | AAID | ID de cookie | Un espace de noms représentant Adobe Analytics. Consultez le document suivant sur les [espaces de noms &#x200B;](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=fr#namespaces) pour plus d’informations. |
+| Adobe Analytics (ancien ID) | AAID | ID de cookie | Un espace de noms représentant Adobe Analytics. Consultez le document suivant sur les [espaces de noms ](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces) pour plus d’informations. |
 | IDFA Apple (ID pour les annonceurs) | IDFA | ID d’appareil | Un espace de noms représentant l’ID Apple pour les annonceurs. Pour plus d’informations, consultez le document sur les [annonces basées sur les intérêts](https://support.apple.com/fr-fr/HT202074). |
-| Service de notification push Apple | APNS | ID d’appareil | Un espace de noms représentant les identités collectées à l’aide du service Apple Push Notification. Pour plus d’informations, consultez le document suivant sur le service [Notification push &#x200B;](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) . |
+| Service de notification push Apple | APNS | ID d’appareil | Un espace de noms représentant les identités collectées à l’aide du service Apple Push Notification. Pour plus d’informations, consultez le document suivant sur le service [Notification push ](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) . |
 | ECID | ECID | ID de cookie | Un espace de noms représentant l’ECID. Cet espace de noms peut également être référencé par les alias suivants : « ID Adobe Marketing Cloud », « ID Adobe Experience Cloud », « ID Adobe Experience Platform ». Pour plus d’informations, consultez le document suivant sur [ECID](./ecid.md) . |
 | E-mail | E-mail | E-mail | Un espace de noms représentant une adresse e-mail. Ce type d’espace de noms est souvent associé à une seule personne et peut donc être utilisé pour identifier cette personne sur différents canaux. |
-| E-mails (SHA256, en minuscules) | Email_LC_SHA256 | E-mail | Un espace de noms pour adresse électronique préhachée. Les valeurs fournies dans cet espace de noms sont converties en minuscules avant le hachage en SHA-256. Les espaces de début et de fin doivent être supprimés avant qu’une adresse e-mail ne soit normalisée. Ce paramètre ne peut pas être modifié rétroactivement. Pour plus d’informations[&#x200B; consultez le document suivant sur la prise en charge du hachage &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=fr#hashing-support)SHA256 . |
+| E-mails (SHA256, en minuscules) | Email_LC_SHA256 | E-mail | Un espace de noms pour adresse électronique préhachée. Les valeurs fournies dans cet espace de noms sont converties en minuscules avant le hachage en SHA-256. Les espaces de début et de fin doivent être supprimés avant qu’une adresse e-mail ne soit normalisée. Ce paramètre ne peut pas être modifié rétroactivement. Pour plus d’informations[ consultez le document suivant sur la prise en charge du hachage ](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support)SHA256 . |
 | Firebase Cloud Messaging | FCM | ID d’appareil | Un espace de noms représentant les identités collectées à l’aide de Google Firebase Cloud Messaging pour les notifications push. Pour plus d’informations, consultez le document suivant sur [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging). |
 | ID d’annonce Google (GAID) | GAID | ID d’appareil | Un espace de noms représentant un ID Google Advertising. Pour plus d’informations, consultez le document suivant sur l’[ID Google Advertising](https://support.google.com/googleplay/android-developer/answer/6048248?hl=fr). |
 | Téléphone | Téléphone | Numéro de téléphone | Un espace de noms représentant un numéro de téléphone. Ce type d’espace de noms est souvent associé à une seule personne et peut donc être utilisé pour identifier cette personne sur différents canaux. |
@@ -159,7 +159,7 @@ Sélectionnez ensuite le type d’identité à affecter à l’espace de noms pe
 
 ## Espaces de noms dans les données d’identité
 
-La délivrance de l’espace de noms pour une identité dépend de la méthode que vous utilisez pour fournir les données d’identité. Pour plus d’informations sur la fourniture de données d’identité, veuillez lire le [[!DNL Identity Service] guide d’implémentation](../implementation.md).
+La délivrance de l’espace de noms pour une identité dépend de la méthode que vous utilisez pour fournir les données d’identité. Pour plus d’informations sur la fourniture de données d’identité, veuillez lire le [[!DNL Identity Service] guide d’implémentation](../implementation.md). Si vous envoyez des identités par le biais du `identityMap` Web SDK, consultez [Utilisation d’identityMap dans la collecte de données](/help/collection/identity/identity-map.md) pour obtenir des conseils sur la préparation et le formatage des valeurs d’identité avant de les envoyer.
 
 ## Étapes suivantes
 

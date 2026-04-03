@@ -2,10 +2,10 @@
 title: Paramètres de configuration des identités
 description: Définissez la manière dont l’extension de balise identifie les visiteurs.
 exl-id: 12e707f4-c37b-4c02-bfec-5ef7b98c2d3b
-source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
+source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 3%
+source-wordcount: '265'
+ht-degree: 10%
 
 ---
 
@@ -35,7 +35,3 @@ Case à cocher qui permet au SDK Web de lire les cookies `AMCV` et `s_ecid` et d
 ## [!UICONTROL Use third-party cookies]
 
 Lorsque cette option est activée, Web SDK tente de stocker un identifiant utilisateur dans un cookie tiers. En cas de réussite, l’utilisateur est identifié comme un seul utilisateur lorsqu’il navigue sur plusieurs domaines, plutôt que comme un utilisateur distinct sur chaque domaine. Si cette option est activée, il se peut que le SDK ne puisse pas stocker l’identifiant de l’utilisateur dans un cookie tiers si le navigateur ne prend pas en charge les cookies tiers ou s’il a été configuré par l’utilisateur pour ne pas autoriser les cookies tiers. Dans ce cas, le SDK stocke uniquement l’identifiant dans le domaine propriétaire. La bibliothèque JavaScript équivalente à cette case à cocher est [`thirdPartyCookiesEnabled`](/help/collection/js/commands/configure/thirdpartycookiesenabled.md).
-
->[!IMPORTANT]
->
->Les cookies tiers ne sont pas compatibles avec la fonctionnalité [Identifiant d’appareil interne](/help/collection/use-cases/identity/first-party-device-ids.md) de Web SDK. Vous pouvez utiliser des identifiants d’appareil propriétaires ou des cookies tiers ; vous ne pouvez pas utiliser les deux fonctionnalités simultanément.
