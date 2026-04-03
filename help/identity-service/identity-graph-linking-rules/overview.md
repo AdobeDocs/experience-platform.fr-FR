@@ -2,7 +2,7 @@
 title: Règles de liaison des graphiques d’identités
 description: Découvrez les règles de liaison du graphique d’identités dans Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 38d331bd9265f25a3aebdcbd20ae5fc30a93e960
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1605'
 ht-degree: 11%
@@ -38,14 +38,15 @@ Les documents suivants sont essentiels à la compréhension des [!DNL Identity G
 
 Regardez les vidéos suivantes pour en savoir plus sur certains aspects fondamentaux des règles de liaison des graphiques d’identités.
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _blank}
-* https://experienceleague.adobe.com/fr/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
-* https://experienceleague.adobe.com/fr/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
 
     {description = Learn how to use the graph simulator to test out identity graph linking rules.}
 
-* https://experienceleague.adobe.com/fr/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
     {description = Learn how to enable and configure identity graph linking rules to build accurate customer profiles}
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -55,7 +56,7 @@ Regardez les vidéos suivantes pour en savoir plus sur certains aspects fondamen
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/fr/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="Vue d’ensemble des règles de liaison des graphiques d’identités" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448274/?captions=fre_fr&format=jpeg&nocache=1747851655227" alt="Vue d’ensemble des règles de liaison des graphiques d’identités"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="Vue d’ensemble des règles de liaison des graphiques d’identités"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -78,7 +79,7 @@ Regardez les vidéos suivantes pour en savoir plus sur certains aspects fondamen
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/fr/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="Règles de liaison des graphiques d’identités - Simulation de graphique" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444045/?captions=fre_fr&format=jpeg&nocache=1747851655237" alt="Règles de liaison des graphiques d’identités - Simulation de graphique"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="Règles de liaison des graphiques d’identités - Simulation de graphique"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -101,7 +102,7 @@ Regardez les vidéos suivantes pour en savoir plus sur certains aspects fondamen
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/fr/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="Règles de liaison des graphiques d’identités - Paramètres d’identité" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475964/?captions=fre_fr&format=jpeg&nocache=1747851655218" alt="Règles de liaison des graphiques d’identités - Paramètres d’identité"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="Règles de liaison des graphiques d’identités - Paramètres d’identité"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -195,7 +196,7 @@ Avec [!DNL Identity Graph Linking Rules], vous pouvez :
 
 Vous pouvez configurer un espace de noms comme étant unique à l’aide de l’espace de travail de l’interface utilisateur des paramètres d’identité. Ce faisant, informe l’algorithme d’optimisation des identités qu’un graphique donné ne peut avoir qu’une seule identité contenant cet espace de noms unique. Cela empêche la fusion de deux identifiants de personne disparates dans le même graphique.
 
-Considérez le scénario suivant :
+Prenons l’exemple suivant :
 
 * Scott utilise une tablette et ouvre son navigateur Google Chrome pour accéder à acme<span>.com, où il se connecte et recherche de nouvelles chaussures de basket-ball.
    * En coulisse, ce scénario consigne les identités suivantes :
