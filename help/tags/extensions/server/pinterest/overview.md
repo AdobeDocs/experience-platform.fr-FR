@@ -4,10 +4,10 @@ title: Extension de transfert d’événement Pinterest
 description: Cette extension de transfert d’événement Adobe Experience Platform vous permet d’ingérer des événements dans Pinterest en fonction des besoins de votre entreprise.
 last-substantial-update: 2023-04-27T00:00:00Z
 exl-id: 44f38a9b-0a28-4b51-bead-ee460eb8405e
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1427'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -33,7 +33,7 @@ Pour plus d’informations sur les cas d’utilisation spécifiques à [!DNL Pin
 
 Vous devez disposer d’un [!DNL Pinterest] [compte professionnel](https://help.pinterest.com/en/business/article/get-a-business-account) valide pour utiliser cette extension. Accédez à la [[!DNL Pinterest] page d’enregistrement](https://www.pinterest.com/business/create/) pour vous enregistrer et créer un compte si vous n’en avez pas déjà un.
 
-Vous aurez également besoin d’un compte de développeur [!DNL Pinterest], qui devra être associé à votre compte professionnel [!DNL Pinterest]. Pour associer votre compte de développeur à votre compte d’entreprise, reportez-vous à la section [[!DNL Pinterest &#x200B;] Compte de développeur](https://developers.pinterest.com/account-setup/).
+Vous aurez également besoin d’un compte de développeur [!DNL Pinterest], qui devra être associé à votre compte professionnel [!DNL Pinterest]. Pour associer votre compte de développeur à votre compte d’entreprise, reportez-vous à la section [[!DNL Pinterest ] Compte de développeur](https://developers.pinterest.com/account-setup/).
 
 ### Collecter les détails de configuration requis {#configuration-details}
 
@@ -41,7 +41,7 @@ Pour connecter Experience Platform à [!DNL Pinterest], les entrées suivantes s
 
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
-| ID de compte publicitaire | Identifiant De Votre Compte [!DNL Pinterest] Ads. Reportez-vous à la documentation de [[!DNL Pinterest] &#x200B;](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) pour obtenir des conseils. | 123456789012 |
+| ID de compte publicitaire | Identifiant De Votre Compte [!DNL Pinterest] Ads. Reportez-vous à la documentation de [[!DNL Pinterest] ](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) pour obtenir des conseils. | 123456789012 |
 | Jeton d’accès de conversion | Votre Jeton D’Accès À La Conversion [!DNL Pinterest]. Reportez-vous au document [[!DNL Pinterest] API de conversion](https://developers.pinterest.com/docs/conversions/conversions/#Get%20the%20conversion%20token) pour obtenir des conseils. <br> **Vous ne devrez effectuer cette opération qu’une seule fois, car ce jeton n’expire pas.** | {YOUR_PINTEREST_BEARER_TOKEN} |
 
 ## Installation et configuration de l’extension [!DNL Pinterest] {#install}
@@ -81,9 +81,9 @@ Après la sélection, des commandes supplémentaires apparaissent pour configure
 Les données d’événement suivantes seront nécessaires pour créer la règle :
 
 | Nom du champ | Description | Exemple |
-| --- | --- | --- | 
-| [!UICONTROL Event Name] | Type de l’événement utilisateur. Cependant, il peut s’agir de n’importe quel type d’événement. Pour tirer parti de [!DNL Pinterest Analytics], il est recommandé d’utiliser des [[!DNL Pinterest] codes d’événement](https://help.pinterest.com/en/business/article/add-event-codes) | &ast; checkout <br> &ast; add_to_cart <br> &ast; page_visit <br> &ast; signup <br> &ast; [événement défini par l’utilisateur] |
-| [!UICONTROL Action Source] | Source indiquant où l’événement de conversion s’est produit. | &ast; app_android <br> &ast; app_ios <br> &ast; <br> web &ast; hors ligne |
+| --- | --- | --- |
+| [!UICONTROL Event Name] | Type de l’événement utilisateur. Cependant, il peut s’agir de n’importe quel type d’événement. Pour tirer parti de [!DNL Pinterest Analytics], il est recommandé d’utiliser des [[!DNL Pinterest] codes d’événement](https://help.pinterest.com/en/business/article/add-event-codes) | &amp;ast; checkout <br> &amp;ast; add_to_cart <br> &amp;ast; page_visit <br> &amp;ast; signup <br> &amp;ast; [événement défini par l’utilisateur] |
+| [!UICONTROL Action Source] | Source indiquant où l’événement de conversion s’est produit. | &amp;ast; app_android <br> &amp;ast; app_ios <br> &amp;ast; <br> web &amp;ast; hors ligne |
 | [!UICONTROL Event Time] | Fait référence à l’heure de l’événement. Le format d’heure par défaut utilisé est UNIX, au format `<seconds>.<miliseconds>` en fonction du fuseau horaire local. Pour plus d’informations, consultez la section [[!DNL Pinterest] API](https://developers.pinterest.com/docs/api/v5/#operation/events/create). | 1433188255,500 indique 1433188255 secondes et 500 millisecondes après l’époque Unix, ou lundi 1er juin 2015 à 19:50:55 GMT. |
 | [!UICONTROL Event ID] | Chaîne d’identifiant unique qui identifie cet événement et qui peut être utilisée pour dédupliquer les événements ingérés à la fois par l’intermédiaire de l’API de conversion et du suivi Pinterest. Sans cela, les données de l&#39;événement seront probablement comptées deux fois et signaleront l&#39;inflation métrique. | ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad |
 | [!UICONTROL Event Properties] | Un objet JSON contenant les propriétés personnalisées de l’événement. Faites votre choix entre fournir du code JSON brut ou utiliser un ensemble simplifié d’entrées clé-valeur. | { « event_source_url »: « http://site.com » } |
@@ -100,7 +100,7 @@ Les propriétés d’événement suivantes peuvent être configurées :
 | Application Version | Version de l’application. |
 | Marque de l’appareil | Marque de l’appareil utilisé par l’utilisateur. |
 | Support d&#39;appareil | Opérateur mobile de l’utilisateur pour son appareil. |
-| Modèle d’appareil | Modèle de l’appareil de l’utilisateur. |
+| Modèle de périphérique | Modèle de l’appareil de l’utilisateur. |
 | Type d’appareil | Type d’appareil utilisé par l’utilisateur. |
 | Version du système d’exploitation | Version du système d’exploitation de l’appareil. |
 | Langue de l&#39;utilisateur | Code de langue ISO-639-1 à deux caractères indiquant la langue de l’utilisateur. |
@@ -110,7 +110,7 @@ Les propriétés d’événement suivantes peuvent être configurées :
 Les données utilisateur suivantes peuvent être saisies par : ne sont pas des champs obligatoires :
 
 | Nom du champ | Description | Exemple |
-| --- | --- | --- | 
+| --- | --- | --- |
 | [!UICONTROL Email] | Adresse e-mail de l’utilisateur ou hachage SHA256 de l’adresse e-mail de l’utilisateur. | ebd543592...f2b7e1 |
 | [!UICONTROL Mobile Adverstising IDs] | Hachages Sha256 des « ID Google Advertising » (GAID) ou « Identifiant Apple pour les annonceurs » (IDFA) de l’utilisateur | ebd543592...f2b7e1 |
 | [!UICONTROL Client IP Address] | L’adresse IP de l’utilisateur, qui peut être au format IPv4 ou IPv6. Utilisé pour la correspondance. | 192.168.0.1 |
@@ -171,5 +171,5 @@ Vous pouvez effectuer une analyse plus approfondie et afficher la distribution d
 
 Ce guide explique comment installer et configurer l’extension de transfert d’événement [!DNL Pinterest] dans l’interface utilisateur. Pour plus d’informations, consultez la documentation officielle :
 
-* [[!DNL Pinterest]  API &#x200B;](https://developers.pinterest.com/docs/api/v5/)
+* [[!DNL Pinterest] API](https://developers.pinterest.com/docs/api/v5/)
 * [[!DNL Pinterest] Présentation de l’API de conversion](https://help.pinterest.com/en/business/article/the-pinterest-api-for-conversions)
