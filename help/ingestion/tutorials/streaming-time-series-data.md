@@ -5,7 +5,7 @@ title: Diffusion de données de série temporelle à l’aide des API d’ingest
 type: Tutorial
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion en flux continu, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1214'
 ht-degree: 57%
